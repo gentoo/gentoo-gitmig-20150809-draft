@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.1 2004/10/11 18:48:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.2 2004/10/16 05:12:20 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -39,7 +39,7 @@ src_install() {
 	insinto ${dir}
 	doins README.linux ut2004.xpm
 	insinto /usr/share/pixmaps
-	doins ut2004.xpm
+	newins ut2004.xpm ut2004-demo.xpm
 
 	exeinto ${dir}
 	doexe bin/ut2004-demo
@@ -51,7 +51,7 @@ src_install() {
 	games_make_wrapper ut2004-demo ./ut2004-demo ${dir}
 
 	prepgamesdirs
-	make_desktop_entry ut2004-demo "UT2004 Demo" ut2004.xpm
+	make_desktop_entry ut2004-demo "UT2004 Demo" ut2004-demo.xpm
 }
 
 pkg_postinst() {
