@@ -40,7 +40,6 @@
 *sys-apps/sparc-utils
 *virtual/bootloader
 *dev-util/dialog
-*sys-devel/kgcc
 
 # default-sparc-1.4 pkgs 
 *>=sys-apps/baselayout-1.8.5.5
