@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.8 2002/08/08 08:13:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.9 2002/08/12 09:18:41 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
@@ -82,7 +82,7 @@ src_install() {
 	cd ${D}$QTBASE/lib
 	for x in libqt.so libqt-mt.so
 	do
-		ln -s $x.2.3.1 $x.2.3
+		ln -s $x.2.3.2 $x.2.3
 		ln -s $x.2.3 $x.2
 		ln -s $x.2 $x
 	done

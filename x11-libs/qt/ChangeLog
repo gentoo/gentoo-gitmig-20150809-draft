@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.24 2002/08/09 14:42:10 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.25 2002/08/12 09:18:41 danarmak Exp $
+
+  12 Aug 2002; Dan Armak <danarmak@gentoo.org> qt-2.3.2-r1.ebuild  :
+
+  Fix a typo that said 2.3.1 instead of 2.3.2. This may have caused some
+  library symlinks not to be installed.
 
   09 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
