@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.2 2005/03/11 20:36:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.0.ebuild,v 1.3 2005/03/12 20:29:41 joem Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=gnome-base/libbonobo-2.2
 	>=gnome-base/librsvg-2.0.1
 	>=gnome-base/orbit-2.4
-	>=x11-libs/startup-notification-0.5
+	>=x11-libs/startup-notification-0.8
 	>=media-libs/libexif-0.5.12
 	dev-libs/popt
 	virtual/fam
