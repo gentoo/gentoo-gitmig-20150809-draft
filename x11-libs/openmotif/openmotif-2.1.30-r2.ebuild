@@ -8,13 +8,12 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~amd64"
-SLOT="2.1"
-
-PROVIDE="virtual/motif"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc
 	virtual/x11"
+
+SLOT="0"
 
 #
 # glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
