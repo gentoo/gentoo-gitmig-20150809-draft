@@ -1,7 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.61 2003/12/08 16:23:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.62 2003/12/16 07:10:30 kumba Exp $
 
+  16 Dec 2003; Joshua Kinard <kumba@gentoo.org> openssl-0.9.7c-r1.ebuild:
+  Made a change to the mips detection so we can differentiate betweem mips and
+  mipsel machines, and pass the apropriate configure target, otherwise the
+  testsuite fails
 
 *openssl-0.9.6l (04 Nov 2003)
 *openssl-0.9.7c-r1 (04 Nov 2003)
