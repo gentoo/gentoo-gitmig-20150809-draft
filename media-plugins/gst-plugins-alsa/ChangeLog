@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.10 2004/06/29 16:12:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.11 2004/07/11 17:04:08 foser Exp $
+
+*gst-plugins-alsa-0.8.2-r1 (11 Jul 2004)
+
+  11 Jul 2004; foser <foser@gentoo.org> gst-plugins-alsa-0.8.2-r.ebuild :
+  Add patch to fix alsa seeking (#56215)
 
 *gst-plugins-alsa-0.8.2 (29 Jun 2004)
 
