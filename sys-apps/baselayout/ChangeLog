@@ -1,9 +1,17 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.125 2004/04/07 17:41:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.126 2004/04/08 22:22:08 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.8.8 (08 Apr 2004)
+
+  08 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/sysvinit-2.84-selinux1.patch, +baselayout-1.8.8.ebuild:
+  Update to rc-scripts-1.4.6 which contains checkroot patch for bug 38360. Fix a
+  typo in Gustavoz's previous patch for serial console. Add selinux patch from
+  bug 47139 to handle different versions of libselinux
 
 *baselayout-1.8.7 (07 Apr 2004)
 
