@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/posadis
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.9 2004/08/09 23:16:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.10 2004/12/08 15:06:32 matsuu Exp $
+
+*posadis-0.60.5-r1 (09 Dec 2004)
+
+  09 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> -posadis-0.60.4_p1.ebuild,
+  +posadis-0.60.5-r1.ebuild, -posadis-0.60.5.ebuild:
+  Fixed configure issue. bug #71931.
+  app-admin/fam -> virtual/fam, for bug #67170.
 
 *posadis-0.60.5 (10 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.5.ebuild,v 1.1 2004/08/09 23:16:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.5-r1.ebuild,v 1.1 2004/12/08 15:06:32 matsuu Exp $
 
 inherit libtool eutils
 
@@ -8,14 +8,18 @@ DESCRIPTION="An authoritative/caching Domain Name Server"
 HOMEPAGE="http://www.posadis.org/projects/posadis.php"
 SRC_URI="mirror://sourceforge/posadis/${P}.tar.gz
 	http://www.posadis.org/files/updates/20040724/posadis-update-20040724"
+#SRC_URI="http://www.posadis.org/files/updates/20040816/${P}-cachedump.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="fam"
 
-DEPEND=">=dev-cpp/poslib-1.0.4
-	fam? ( >=app-admin/fam-2.6.9 )"
+RDEPEND=">=dev-cpp/poslib-1.0.4
+	fam? ( virtual/fam )"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +28,7 @@ src_unpack() {
 
 	#fix makefile problem
 	cd ${S}/libltdl
-	autoconf -f
+	WANT_AUTOCONF="2.5" autoconf || die "libltdl autoconf failed"
 }
 
 src_compile() {
