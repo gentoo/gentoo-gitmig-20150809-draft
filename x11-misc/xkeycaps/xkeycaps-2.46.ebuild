@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.16 2004/12/18 20:06:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.17 2005/01/26 20:14:58 corsair Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.jwz.org/${PN}/${P}.tar.Z"
 HOMEPAGE="http://www.jwz.org/xkeycaps/"
 
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc ~amd64 ~ppc64"
+KEYWORDS="x86 sparc ppc ~amd64 ppc64"
 SLOT="0"
 IUSE=""
 
