@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.6 2003/09/04 01:07:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.7 2003/09/04 20:05:55 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -26,7 +26,7 @@ RESTRICT="nostrip"
 
 DEPEND="virtual/glibc
 	virtual/x11
-	sys-kernel/linux-headers
+	virtual/os-headers
 	>=dev-lang/perl-5
 	>=dev-lang/tcl-8.3.3"
 
