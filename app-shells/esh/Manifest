@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb483abce255a7a779a93859eb6b87e0 ChangeLog 1595
+MD5 1632c46f36317dd14578d9b3674ed965 ChangeLog 1715
+MD5 d34be926713da25c76bd7b164b29c8da esh-0.8.5.ebuild 1052
 MD5 9477cb36384eff91f1d59d5b7bdb6fb1 esh-0.8-r2.ebuild 896
-MD5 a060f5b4281c1ea792c5193091921908 esh-0.8.5.ebuild 1052
-MD5 997445899c25c702dde5dcd3f0686513 files/digest-esh-0.8-r2 58
 MD5 bec99ff5c3fa0239930b36a4e7d415a2 files/digest-esh-0.8.5 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4OgdHTu7gpaalycRAvllAKDNoLGnX+2uJtEqbgCZ4Fk5nqNd1gCggSCd
-7tRJAZpEQCqkCHv3OIC8BYA=
-=PDOK
------END PGP SIGNATURE-----
+MD5 997445899c25c702dde5dcd3f0686513 files/digest-esh-0.8-r2 58
