@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.25.ebuild,v 1.1 2005/03/02 15:06:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.0.25.ebuild,v 1.2 2005/03/02 15:09:53 foser Exp $
 
 DESCRIPTION="Library providing the FAM File Alteration Monitor API"
 HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
@@ -46,6 +46,7 @@ pkg_postinst() {
 
 	einfo "It is strongly suggested you use Gamin with an inotify enabled"
 	einfo "kernel for best performance. For this release of gamin you need"
-	einfo "at least inotify patch version 0.19 ."
+	einfo "at least an inotify 0.19 patched kernel, gentoo-dev-sources-2.6.11"
+	einfo "provides this patch for example."
 
 }
