@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.11 2004/08/08 00:24:30 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.12 2004/10/31 14:49:56 matsuu Exp $
+
+  31 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> scponly-3.11-r2.ebuild,
+  -scponly-3.7.ebuild, -scponly-3.8.ebuild:
+  Marked stable on x86 and amd64.
+  Removed old versions.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> scponly-3.11-r2.ebuild,
   scponly-3.7.ebuild, scponly-3.8.ebuild:
