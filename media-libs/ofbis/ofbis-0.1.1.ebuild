@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ofbis-0.1.1.ebuild,v 1.11 2004/07/01 08:02:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ofbis/ofbis-0.1.1.ebuild,v 1.12 2004/07/14 20:20:05 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Framebuffer graphical library"
 SRC_URI="ftp://ftp.nocrew.org/pub/osis/ofbis/${P}.tar.gz"
 HOMEPAGE="http://www.nocrew.org/pub/ofbis"
@@ -10,6 +9,7 @@ HOMEPAGE="http://www.nocrew.org/pub/ofbis"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 DEPEND="virtual/libc"
 
