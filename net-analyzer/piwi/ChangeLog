@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.2 2003/07/26 23:51:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.3 2003/07/27 00:53:04 solar Exp $
+
+  26 Jul 2003; <solar@gentoo.org> piwi-0.8.0.20030726.ebuild:
+  changed S=WORKDIR/P to S=WORKDIR
 
 *piwi-0.8.0.20030726 (26 Jul 2003)
 
