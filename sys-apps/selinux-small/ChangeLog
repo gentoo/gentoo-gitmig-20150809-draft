@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.19 2003/06/07 04:16:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.20 2003/06/07 20:34:13 pebenito Exp $
+
+  07 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003040709-r3.ebuild:
+  Mark stable
 
 *selinux-small-2003040709-r3 (06 Jun 2003)
 
