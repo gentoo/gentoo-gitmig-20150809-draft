@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.0.10.ebuild,v 1.2 2003/08/30 16:49:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.0.10.ebuild,v 1.3 2003/10/19 00:36:56 pyrania Exp $
 
 DESCRIPTION="The Free Pascal compiler"
 HOMEPAGE="http://www.freepascal.org/"
@@ -25,5 +25,8 @@ src_compile() {
 src_install() {
 	cd ${D}
 	tar -xzf ${WORKDIR}/${P}-0.i386.tar.gz
+	# correct paths where mans go
+	mv usr/share/man/man/* usr/share/man/
+	rmdir usr/share/man/man
 	chmod -R 755 usr/lib/* usr/share/*
 }
