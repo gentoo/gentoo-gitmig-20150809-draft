@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_pwdfile/pam_pwdfile-0.99.ebuild,v 1.1 2004/08/12 06:04:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_pwdfile/pam_pwdfile-0.99.ebuild,v 1.2 2004/08/30 23:24:40 dholm Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://cpbotha.net/pam_pwdfile.html"
 SRC_URI="http://cpbotha.net/files/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="sys-libs/pam"
 
