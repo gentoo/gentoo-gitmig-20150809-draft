@@ -5,9 +5,9 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="libole2"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
-HOMEPAGE="http://www.gnome.org/"
+DESCRIPTION="gda lib"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}"
+HOMEPAGE="http://www.gnome.org/gnome-db"
 
 src_unpack() {
   unpack ${A}
@@ -15,7 +15,8 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
+  try ./configure --host=${CHOST} --prefix=/opt/gnome \
+	--with-mysql=/usr --with-ldap=/usr --with-catgets
   try make
 }
 
@@ -23,7 +24,7 @@ src_install() {
   cd ${S}
   try make prefix=${D}/opt/gnome install
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+  dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
 
 

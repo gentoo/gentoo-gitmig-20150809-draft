@@ -3,11 +3,10 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # $Header
 
-P=libole2-0.1.6
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="libole2"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/libole2/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 src_unpack() {
@@ -16,7 +15,7 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --with-catgets
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 

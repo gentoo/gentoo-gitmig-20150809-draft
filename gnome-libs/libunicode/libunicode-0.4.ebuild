@@ -5,7 +5,7 @@
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="libole2"
+DESCRIPTION="The Gnome Application Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
@@ -23,7 +23,7 @@ src_install() {
   cd ${S}
   try make prefix=${D}/opt/gnome install
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+  dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
 
 
