@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-45.ebuild,v 1.2 2004/06/06 10:12:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-45.ebuild,v 1.3 2004/06/25 00:23:09 agriffis Exp $
 
 PN0=MigrationTools
 S=${WORKDIR}/${PN0}-${PV}

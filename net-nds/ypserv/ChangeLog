@@ -1,6 +1,6 @@
 # ChangeLog for net-nds/ypserv
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.17 2004/06/11 19:56:53 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.18 2004/06/25 00:24:03 agriffis Exp $
 
   11 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/rpc.yppasswdd-r1, ypserv-2.13-r1.ebuild:
