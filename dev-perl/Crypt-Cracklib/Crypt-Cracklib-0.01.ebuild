@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-0.01.ebuild,v 1.2 2003/11/07 23:27:45 robbat2 Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-0.01.ebuild,v 1.3 2003/11/07 23:28:00 robbat2 Exp $ 
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 mydoc="Changes"
 DEPEND="${DEPEND}
