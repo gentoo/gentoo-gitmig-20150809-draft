@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.7 2004/01/20 05:27:44 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.8 2004/02/23 21:58:07 zx Exp $
+
+  26 Feb 2004; Chris Aniszczyk <zx@gentoo.org> :
+  Updated to fix issues with Bug #42457
 
   20 Jan 2004; Adrian Almenar <strider@gentoo.org> bcel-5.1.ebuild:
   Stable on sparc.
