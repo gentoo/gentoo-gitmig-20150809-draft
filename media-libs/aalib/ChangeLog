@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.8 2003/06/11 22:26:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.9 2003/07/04 05:03:50 gmsoft Exp $
 
   11 Jun 2003; Alastair Tse <liquidx@gentoo.org> aalib-1.4_rc4-r2.ebuild:
   fix typo in DESCRIPTION
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *aalib-1.4_rc4-r2 (21 Jun 2002)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> aalib-1.4_rc4-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> aalib-1.4_rc4-r2.ebuild :
   Add alpha to KEYWORDS
