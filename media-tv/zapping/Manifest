@@ -1,10 +1,20 @@
-MD5 c5e0f5719a31ee9371bdb6e6007f4331 ChangeLog 2748
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b717c77d78a0c80f2018a60454ebc988 zapping-0.6.8.ebuild 1578
+MD5 1b7e234ef0400e48cabcfaa264fb7102 zapping-0.6.7.ebuild 1578
+MD5 fdacb148ab0d7c66595ef3772d8aaec8 zapping-0.7.ebuild 1484
+MD5 3ffde507bcbd595011f993525a830b07 ChangeLog 2855
 MD5 25406e1b2415880e9e5ac5a4df592573 metadata.xml 288
 MD5 6a7dba6be0ba99e56ecd203568e5bad6 zapping-0.6.6.ebuild 1575
-MD5 1b7e234ef0400e48cabcfaa264fb7102 zapping-0.6.7.ebuild 1578
-MD5 b717c77d78a0c80f2018a60454ebc988 zapping-0.6.8.ebuild 1578
-MD5 931241f9f6d169729f50d3317b72e201 zapping-0.7.ebuild 1485
+MD5 e143772d473200c54f049b11077e7021 files/digest-zapping-0.7 65
 MD5 7e8ba0ca527255f8447bdc6257875a69 files/digest-zapping-0.6.6 67
 MD5 6efdc1415977230537c69acb97977a5b files/digest-zapping-0.6.7 67
 MD5 70fb30116299da91bfa27deac7cf483e files/digest-zapping-0.6.8 67
-MD5 e143772d473200c54f049b11077e7021 files/digest-zapping-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrO+uI1lqEGTUzyQRAtm5AJsEHjG/km3rAkiOwE6jUwYLQEdvTACfYLWi
+2JHxVb5FB+naMpLfsFr6CKM=
+=1rnD
+-----END PGP SIGNATURE-----
