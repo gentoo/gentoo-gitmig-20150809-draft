@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.40 2004/07/18 17:19:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.41 2004/08/20 22:32:28 kugelfang Exp $
+
+  21 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> sip-4.0.1.ebuild:
+  Marked stable on amd64.
 
   18 Jul 2004; Jason Wever <weeve@gentoo.org> sip-3.10.2.ebuild:
   Stable on sparc wrt bug #56712.
