@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.9 2003/03/27 10:53:58 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.10 2003/03/31 07:40:42 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -29,3 +29,4 @@ sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:pic - If you want prelink support built into glibc
+app-admin/lcap:lids - If you have the Linux Intrusion Detection System
