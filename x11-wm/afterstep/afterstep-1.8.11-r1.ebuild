@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pete@gentoo.org>
 
 S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="A window manager based on the NeXTStep interface."

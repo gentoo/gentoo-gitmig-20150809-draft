@@ -1,6 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Doug Miller <orkim@kc.rr.com>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager"

@@ -1,6 +1,5 @@
 # Copyright 2001 theLeaf sprl/bvba
-# Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.3 2002/07/08 13:47:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.4 2002/07/11 06:31:00 drobbins Exp $
 
 MY_P=${P/-merlin/}
 S=${WORKDIR}/${MY_P}
