@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2.ebuild,v 1.1 2004/12/24 16:49:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.2.2.ebuild,v 1.2 2004/12/29 16:30:31 ribosome Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -14,8 +14,8 @@ KEYWORDS="x86 ~ppc amd64"
 IUSE="doc X"
 
 DEPEND="sys-devel/flex
-	app-sci/blas
-	app-sci/lapack
+	sci-libs/blas
+	sci-libs/lapack
 	dev-lang/perl
 	X? ( virtual/x11 )"
 
