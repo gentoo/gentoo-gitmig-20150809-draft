@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.1 2001/12/06 22:04:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7.ebuild,v 1.2 2001/12/06 22:57:05 azarah Exp $
 
-SV=1.2
+SV=1.2.1
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
@@ -208,9 +208,9 @@ src_install()
 
 	#this seems the best place for templates .. any ideas ?
 	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
-	keepdir /lib/ppp
-	insinto /lib/ppp
-	doins ${S}/ppp/chat-default
+	dodir /etc/ppp
+	insinto /etc/ppp
+	doins ${S}/etc/ppp/chat-default
 
 	#not the greatest location for this file; should move it on cvs at some	point
 	rm ${S}/init.d/runscript.c
@@ -260,7 +260,7 @@ pkg_postinst() {
 	[ -e /dev-state ] && rm -rf /dev-state
 	
 	#remove /lib/dev-state/{pts,shm}, as the .keep files cause init to lock
-	rm -rf /lib/dev-state/{pts,shm} >/dev/null 2>&1
+#	rm -rf /lib/dev-state/{pts,shm} >/dev/null 2>&1
 	
 	#force update of /etc/devfsd.conf
 	#just until everybody upgrade that is ...
