@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.4 2003/06/20 03:55:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.5 2003/07/07 20:27:07 vapier Exp $
+
+*uclibc-0.9.20 (09 Jul 2003)
+
+  09 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
 
 *uclibc-0.9.19 (19 Jun 2003)
 

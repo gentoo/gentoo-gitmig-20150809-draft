@@ -1,4 +1,6 @@
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
+MD5 7227b7137a1b4d3f80be2bb09463a468 files/digest-uclibc-0.9.20 67
 MD5 b246b045f083b8c20d349166ec4c26ea files/digest-uclibc-0.9.19 67
-MD5 9f8b543005963431c20e98ddb4a60369 ChangeLog 586
+MD5 89e9b187922d742632b9e6b544d54484 ChangeLog 688
 MD5 3a0f2f534ea45833b3444f4228c1c3d9 uclibc-0.9.19.ebuild 999
+MD5 ff22157f373b923e09662057fce8f887 uclibc-0.9.20.ebuild 1067
