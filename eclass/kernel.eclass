@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.37 2003/11/16 18:17:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.38 2003/11/18 19:26:07 johnm Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -15,7 +15,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 if [ -z "${EXTRAVERSION}" ]
 then
-	[ ! "${PN/-*/}" == "linux" ] && EXTRAVERSION="${PN/-*/}"
+	[ "${PN/-*/}" != "linux" -a "${PN/-*/}" != "vanilla" ] && EXTRAVERSION="${PN/-*/}"
 	[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	[ -n "${EXTRAVERSION}" ] && EXTRAVERSION="-${EXTRAVERSION}"
 	KV="${OKV}${EXTRAVERSION}"
