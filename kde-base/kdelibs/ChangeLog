@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.37 2002/12/21 14:02:39 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.38 2003/01/05 01:51:02 hannes Exp $
+
+  04 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.0.5a.ebuild:
+  included patch to have no crash if compiled with debug and clicking on
+  "Home" button in konqueror. no need to version bump cause most users
+  don't compile with debug and most users don't use the "Home" button.
 
 *kdelibs-3.0.5a (21 Dec 2002)
 

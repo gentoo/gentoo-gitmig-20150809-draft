@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a.ebuild,v 1.1 2002/12/21 13:48:19 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a.ebuild,v 1.2 2003/01/05 01:51:02 hannes Exp $
 inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -57,8 +57,10 @@ set-kdedir $PV
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
+	# fixes crash if kdelibs is compiled with debug and you
+	# click on "Home" button in konqueror
+	patch -p0 < ${FILESDIR}/${P}-dontcrash.diff
     kde_sandbox_patch ${S}/kio/misc/kpac
-
 }
 
 
