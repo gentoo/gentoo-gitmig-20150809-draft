@@ -1,11 +1,16 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.34 2003/02/12 05:48:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.35 2003/02/18 19:48:06 method Exp $
 
-  06 Feb 2003; Will Woods <wwoods@gentoo.org>: mysql-3.23.54a.ebuild, mysql-3.23.54a.ebuild
-  Disable berkdb on alpha, since it's not supported there.
+*mysql-4.0.7 (04 Jan 2003)
+
+  17 Feb 2003; Joshua Brindle <method@gentoo.org> : Latest 'gamma' release.
+  Version bump.
 
 *mysql-3.23.55 (29 Jan 2003)
+  
+  06 Feb 2003; Will Woods <wwoods@gentoo.org>: mysql-3.23.54a.ebuild, mysql-3.23.54a.ebuild
+  Disable berkdb on alpha, since it's not supported there.
 
   29 Jan 2003; Donny Davies <woodchip@gentoo.org> : New testing release.
   Fix #12933, #13429.
