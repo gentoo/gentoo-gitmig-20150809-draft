@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.6 2004/01/21 19:14:48 mboman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.7 2004/03/19 00:27:04 weeve Exp $
+
+  18 Mar 2004; Jason Wever <weeve@gentoo.org> prelude-lml-0.8.6.ebuild:
+  Added ~sparc keyword.
 
   17 Jan 2004; Michael Boman <mboman@gentoo.org> files/gentoo.init:
   Made init script less verbose
