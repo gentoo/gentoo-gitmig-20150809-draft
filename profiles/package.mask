@@ -929,9 +929,6 @@ dev-libs/libiconv
 <sys-apps/shadow-4.0.2-r4
 <sys-apps/util-linux-2.11o
 
-# bug #468
-net-www/zope
-
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
