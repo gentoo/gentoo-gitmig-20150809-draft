@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.27 2003/07/16 19:09:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.28 2003/08/16 02:58:41 bcowan Exp $
+
+*icewm-1.2.10 (15 Aug 2003)
+
+  15 Aug 2003; Brad Cowan <bcowan@gentoo.org> icewm-1.2.10.ebuild:
+  Version bump and fixes thanks to morfic from irc.
 
   16 Jul 2003; Hanno Boeck <hanno@gentoo.org> icewm-1.2.9.ebuild:
   Fixed Gnome support (see bug #24306).
