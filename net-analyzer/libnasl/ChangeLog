@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.36 2004/10/28 15:34:33 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.37 2004/12/29 02:49:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *libnasl-2.2.0 (28 Oct 2004)
 
@@ -14,7 +17,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> libnasl-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.0.12.ebuild:
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libnasl-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> libnasl-2.0.10a.ebuild:
@@ -70,7 +73,7 @@
   libnasl-2.0.9.ebuild:
   Added metadata, missing IUSEs
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.0.10a.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libnasl-2.0.10a.ebuild:
   Stable on alpha.
 
 *libnasl-2.0.10a (09 Feb 2004)

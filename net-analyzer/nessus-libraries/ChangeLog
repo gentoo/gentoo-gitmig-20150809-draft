@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.40 2004/10/28 15:31:46 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.41 2004/12/29 02:52:07 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *nessus-libraries-2.2.0 (28 Oct 2004)
 
@@ -19,7 +22,7 @@
   Changed optional ssl support to mandatory, since without it libnasl will not
   compile.
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
@@ -76,7 +79,7 @@
   nessus-libraries-2.0.10a.ebuild:
   marked x86 stable
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.10a.ebuild:
   Stable on alpha.
 

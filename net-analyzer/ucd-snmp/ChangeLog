@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.31 2004/10/12 19:20:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.32 2004/12/29 02:56:36 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
   Stable on hppa.
@@ -31,7 +34,7 @@
   ucd-snmp-4.2.6-r2.ebuild:
   Fix use invocation
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:

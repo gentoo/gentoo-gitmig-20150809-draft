@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.72 2004/12/01 03:53:59 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.73 2004/12/29 02:55:22 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Nov 2004; <j4rg0n@gentoo.org> nmap-3.55.ebuild:
   Keyworded ~ppc-macos.
@@ -35,7 +38,7 @@
   Version bump. Dropped the statistics patch as it does not apply to 3.70 and
   doesn't seem to be maintained upstream.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> nmap-3.55.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> nmap-3.55.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> nmap-3.55.ebuild:
@@ -65,7 +68,7 @@
   nmap-3.50.ebuild:
   Clean up and trim old ebuild
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> nmap-3.50-r1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> nmap-3.50-r1.ebuild:
   Stable on alpha.
 
   14 Feb 2004; Michal Januszewski <spock@gentoo.org> nmap-3.50-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.72 2004/12/19 10:56:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.73 2004/12/29 02:53:35 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   net-snmp-5.1.1-r1.ebuild:
@@ -65,7 +68,7 @@
   08 Aug 2004; Guy Martin <gmsoft@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   Stable on hppa.
 
-  08 Aug 2004; Bryan �stergaard <kloeri@gentoo.org> net-snmp-5.1.1.ebuild:
+  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> net-snmp-5.1.1.ebuild:
   Stable on alpha.
 
   26 Jul 2004; Tom Gall <tgall@gentoo.org> net-snmp-5.1.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.32 2004/11/30 18:32:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.33 2004/12/29 02:49:00 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Nov 2004; Guy Martin <gmsoft@gentoo.org> hping-2.0.0_rc3-r1.ebuild:
   Stable on hppa.
@@ -27,7 +30,7 @@
   Ethernet bridge interface fix: patch contributed by Nathan
   <nathan.stocks@gmail.com>. Closes #59534.
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> hping-2.0.0_rc3.ebuild:
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> hping-2.0.0_rc3.ebuild:
   Stable on alpha.
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> -files/amd64-header-fix.patch,
@@ -57,7 +60,7 @@
   hping-2.0.0_rc2-r1.ebuild, hping-2.0.0_rc2.ebuild, hping-2.0.0_rc3.ebuild:
   Fix use invocation
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> hping-2.0.0_rc2-r1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> hping-2.0.0_rc2-r1.ebuild:
   Stable on alpha.
 
 *hping-2.0.0_rc3 (14 May 2004)
