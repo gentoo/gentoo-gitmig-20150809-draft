@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/archive
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.1 2004/12/01 16:12:04 sergey Exp $
+
+*archive-1.9.4 (01 Dec 2004)
+
+  01 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +archive-1.9.4.ebuild:
+  First commit of archive rox app. Thanks to Alexander Simonov for the ebuild.
+  (Bug #51996).
+
