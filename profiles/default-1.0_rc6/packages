@@ -130,7 +130,7 @@
 #these ones have the new rc6 style init scripts
 *>=sys-apps/isapnptools-1.23-r6
 *>=sys-apps/dcron-2.7-r5
-*>=net-misc/openssh-2.9_p2-r2
+*>=net-misc/openssh-2.9_p2-r6
 *>=sys-apps/devfsd-1.3.16-r1
 #multiple support in portage needed for this
 #>=net-fs/samba-2.0.10-r6
