@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.25 2004/12/18 09:22:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.26 2004/12/23 12:14:06 karltk Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/bcel/"
 SRC_URI="mirror://apache/jakarta/bcel/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc amd64 ~ppc64 ~alpha"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.2
 	>=dev-java/regexp-1.3-r1

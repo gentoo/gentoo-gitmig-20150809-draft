@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jai-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.7 2004/10/17 18:36:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.8 2004/12/23 12:14:06 karltk Exp $
+
+  23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  -jai-bin-1.1.2-r2.ebuild, -jai-bin-1.1.2-r3.ebuild,
+  jai-bin-1.1.2.01.ebuild:
+  Dropped old revisions. Deprecated dev-java/jai-bin; moved to
+  dev-java/sun-jai-bin.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jai-bin-1.1.2.01.ebuild:
   keyword ~ppc

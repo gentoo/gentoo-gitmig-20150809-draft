@@ -1,11 +1,11 @@
-# ChangeLog for dev-java/sun-jimi-bin
+# ChangeLog for dev-java/sun-jimi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi-bin/ChangeLog,v 1.1 2004/12/23 12:08:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.1 2004/12/23 12:14:06 karltk Exp $
 
-*sun-jimi-bin-1.0 (23 Dec 2004)
+*sun-jimi-1.0 (23 Dec 2004)
 
   23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> +metadata.xml,
-  +sun-jimi-bin-1.0.ebuild:
+  +sun-jimi-1.0.ebuild:
   Moved from dev-java/jimi. Fixes #75427.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jimi-1.0.ebuild:

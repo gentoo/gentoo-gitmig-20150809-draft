@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r1.ebuild,v 1.1 2004/12/23 12:10:13 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r1.ebuild,v 1.2 2004/12/23 12:14:06 karltk Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64 ~ppc ~sparc"
 IUSE="doc jai jimi"
 DEPEND=">=virtual/jdk-1.4
 	jai? ( dev-java/sun-jai-bin )
-	jimi? ( dev-java/sun-jimi-bin )
+	jimi? ( dev-java/sun-jimi )
 	>=dev-java/ant-1.5.4
 	!dev-java/fop-bin"
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	use jai && java-pkg_jar-from sun-jai-bin
-	use jimi && java-pkg_jar-from sun-jimi-bin
+	use jimi && java-pkg_jar-from sun-jimi
 }
 
 src_compile() {

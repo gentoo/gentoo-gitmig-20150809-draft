@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.2 2004/12/18 09:04:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.3 2004/12/23 12:14:06 karltk Exp $
 
 inherit java-pkg
 
@@ -12,11 +12,11 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc64"
 IUSE="jikes doc javamail jmx jms"
 DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core
-		javamail? ( dev-java/sun-javamail-bin dev-java/sun-jaf-bin )
-		jmx? ( dev-java/jmx )
-		jms? ( =dev-java/openjms-bin-0.7.6 )
-		jikes? ( dev-java/jikes )"
+	dev-java/ant-core
+	javamail? ( dev-java/sun-javamail-bin dev-java/sun-jaf-bin )
+	jmx? ( dev-java/jmx )
+	jms? ( =dev-java/openjms-bin-0.7.6 )
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/logging-${P}"
