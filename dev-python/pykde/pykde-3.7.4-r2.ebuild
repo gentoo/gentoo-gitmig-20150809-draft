@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.4-r2.ebuild,v 1.3 2004/05/04 12:12:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.7.4-r2.ebuild,v 1.4 2004/05/25 12:13:35 carlo Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ MY_P=${MY_PN}-${MAJ_PV}-${MIN_PV}
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="set of Python bindings for the KDE libs"
-SRC_URI="http://www.river-bank.demon.co.uk/download/PyKDE2/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pykde/"
 
 SLOT="0"
@@ -29,6 +29,8 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	addwrite "${QTDIR}/etc/settings"
 
 	# bug #27401 and 27619
 	distutils_python_version

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.11 2004/05/04 12:12:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.12 2004/05/25 12:13:35 carlo Exp $
+
+  25 May 2004; Carsten Lohrke <carlo@gentoo.org> pykde-3.7.4-r1.ebuild,
+  pykde-3.7.4-r2.ebuild, files/pykde-3.5.2-sandbox-patch.diff,
+  files/pykde-3.7.4-sandbox-patch.diff:
+  fixing #33210, #44121 and cleanup
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pykde-3.7.4-r1.ebuild,
   pykde-3.7.4-r2.ebuild:
