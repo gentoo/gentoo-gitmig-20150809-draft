@@ -1,6 +1,9 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.32 2004/09/10 14:30:08 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.33 2004/09/13 00:56:51 weeve Exp $
+
+  12 Sep 2004; Jason Wever <weeve@gentoo.org> elinks-0.9.2_rc4.ebuild:
+  Stable on sparc.
 
   10 Sep 2004; Michal Januszewski <spock@gentoo.org> -elinks-0.4.2.ebuild,
   -elinks-0.4.3_rc2.ebuild, -elinks-0.9.1.ebuild, -elinks-0.9.2_rc3.ebuild,
