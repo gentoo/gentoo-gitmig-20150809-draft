@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <owen@gentoo.org> (02 Jul 2002)
+# masked for licencing reasons.
+# see myself or seemant before unmasking
+=net-im/ymessenger-0.99.19-r2
 # <chadh@gentoo.org> (01 Jul 2002)
 # new ebuilds that need to be tested
 >=sys-apps/pcmcia-cs-3.1.34
