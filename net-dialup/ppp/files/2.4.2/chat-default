@@ -1,0 +1,15 @@
+# /etc/ppp/chat-default:
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2/chat-default,v 1.1 2004/02/12 20:25:27 lanius Exp $
+
+'ABORT' 'BUSY'
+'ABORT' 'ERROR'
+'ABORT' 'NO ANSWER'
+'ABORT' 'NO CARRIER'
+'ABORT' 'NO DIALTONE'
+'ABORT' 'Invalid Login'
+'ABORT' 'Login incorrect'
+'' 'ATZ'
+'OK' 'ATDT$NUMBER'
+'CONNECT' ''
+'TIMEOUT' '5'
+'~--' ''
