@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r3.ebuild,v 1.2 2002/10/28 07:22:01 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r3.ebuild,v 1.3 2002/10/29 05:43:30 rphillips Exp $
 
 inherit vim
 DESCRIPTION="vim, gvim and kvim shared files"
@@ -28,7 +28,7 @@ src_compile() {
 	use gpm    || myconf="$myconf --disable-gpm"
 
 	# This should fix a sandbox violation. 
-	addwrite /dev/pty/*
+	addwrite "${SSH_TTY}"
 	
 	#
 	# Build a nogui version, this will install as /usr/bin/vim
