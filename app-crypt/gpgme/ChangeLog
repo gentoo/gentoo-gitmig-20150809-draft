@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.2 2002/05/20 10:35:45 seemant Exp $
+
+*gpgme-0.3.6 (20 May 2002)
+
+  20 May 2002; Seemant Kulleen <seemant@gentoo.org> gpgme-0.3.6.ebuild
+  files/digest-gpgme-0.3.6 :
+
+  Version bump
 
 *gpgme-0.2.3 (1 Feb 2002)
 
