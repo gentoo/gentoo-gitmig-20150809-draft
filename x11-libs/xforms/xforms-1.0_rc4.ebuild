@@ -1,6 +1,6 @@
 # Copyright 999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.4 2002/08/05 10:02:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.5 2002/08/12 22:15:08 danarmak Exp $
 
 MY_P=${P/_rc/RC}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11"
 
-PROVIDES="virtual/xforms"
+PROVIDE="virtual/xforms"
 
 src_unpack() {
 
