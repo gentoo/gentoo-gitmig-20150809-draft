@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimspell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.15 2004/10/22 19:42:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/ChangeLog,v 1.16 2004/11/24 17:50:39 ciaranm Exp $
+
+  24 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> vimspell-1.84-r2.ebuild:
+  mips, sparc, x86 stable
 
 *vimspell-1.84-r2 (22 Oct 2004)
 
