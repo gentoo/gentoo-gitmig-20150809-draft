@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.1 2003/03/16 18:18:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.2 2003/08/13 03:20:00 obz Exp $
+
+  13 Aug 2003; Mike Gardiner <obz@gentoo.org> gnome-light-2.2.1.ebuild:
+  added yelp to gnome-light, ref bug: #23909
 
 *gnome-light-2.2.1 (16 Mar 2003)
 
