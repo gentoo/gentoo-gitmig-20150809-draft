@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.ebuild,v 1.4 2004/10/19 21:05:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.ebuild,v 1.5 2005/01/09 21:07:33 weeve Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ SRC_URI="http://mamboforge.net/frs/download.php/1145/MamboV4.5-Stable-1.0.9.tar.
 HOMEPAGE="http://www.mamboserver.com/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 S=${WORKDIR}
 
 IUSE=""
