@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2.3 Portage system
 
+GRP_STAGE23_USE="x86 berkdb crypt readline nls ssl tcpd zlib pam"
+
 # <zhen@gentoo.org> defaults for a hardened system
 # <zhen@gentoo.org> pam added until bug 10135 is fixed
 USE="x86 berkdb crypt readline nls ssl tcpd zlib pam"
