@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting ircd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/ircd
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping ircd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/ircd/ircd.pid
+	eend ${?}
+}

@@ -1,3 +1,4 @@
-MD5 7c99a2155bffaa04fbff8b5c17a40172 irc-server-2.10.3_p3.ebuild 3019
+MD5 e738757da7b0732cd751572b5628b8f5 irc-server-2.10.3_p3.ebuild 3256
+MD5 868be06178c3f8dde8325e2d323c32bc ChangeLog 369
 MD5 11c6c72ebc4796aa655378f37a51cfa6 files/digest-irc-server-2.10.3_p3 60
 MD5 6e86745a672407755d050a20b426dc8e files/ircd.rc 261
