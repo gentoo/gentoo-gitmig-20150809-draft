@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.4 2002/03/07 13:21:06 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.5 2002/04/04 06:37:10 spider Exp $
+
+*ghostscript-6.53 (04 Apr 2002)
+  04 Apr 2002 Spider <spider@gentoo.org>
+  fix the static reference to /var/tmp/portage in the patch.
 
 *ghostscript-6.53 (7 Mar 2002)
 
