@@ -61,6 +61,8 @@ The second line would typically be:
 
 inherit <list of eclasses>
 
+3.1.1 inherit()
+
 This eclass defines the inherit() function which handles
 sourcing of eclasses:
 
@@ -83,10 +85,7 @@ If, in the future, we will decide to move eclasses to a
 different location, any name-to-file resolution code will
 go in here.
 
-3.2 virtual.eclass
-
-This is sourced from inherit.eclass, and thus should always
-be present before all other eclasses. It defines EXPORT_FUNCTIONS().
+3.1.2 EXPORT_FUNCTIONS()
 
 Explanation: suppose A.eclass and B.eclass both define src_compile.
 If you inherit both A and B you'll get a different src_compile
@@ -133,15 +132,7 @@ The EXPORT_FUNCTIONS will call eval on the following string:
 
 src_unpack() { foo_src_unpack() ; }
 
-virtual.eclass defines all the ebuild functions (src_unpack,
-src_compile, src_install, src_preinst, src_postinst, src_prerm,
-src_postrm) as empty functions that do nothing (except call
-debug_print_function, see debug.eclass).
-
-3.3 Function sections
-
-Although this is not an integral part of eclasses, this is
-a good place to introduce function sections. 
+3.2 Function sections
 
 One rarely uses predefined functions as-is; you usually want
 to extend them. Once they have unique names (foo_src_unpack)
@@ -246,13 +237,13 @@ when called with all or without parameters. Some sections
 may be non-standard and must be called explicitly. The only
 such section right now is base_src_compile patch.
 
-3.4 debug.eclass
+3.3 debug.eclass
 
 Adds verbose output debugging functions. Is inherited by
-virtual.eclass. All eclasses call these functions a lot,
+inherit.eclass. All eclasses call these functions a lot,
 which makes them look ugly but helps a great deal in tracing
 stuff, since there is no bash script debugger/ide/step-by-step
-interpreter AFAIK (if you know of one, tell me!).
+interpreter AFAIK (except for bash -x).
 
 Look at it to see the functions it provides, they are simplistic.
 
@@ -309,7 +300,7 @@ there is no $RESULT in this sample function
 
 }
 
-3.5 base.eclass
+3.4 base.eclass
 
 This eclass defines some default variables and functions,
 similar to those you'd get by default in a non-inheriting
@@ -326,20 +317,7 @@ cd ${S}
 
 patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 
-There is also a helper function provided by base.eclass,
-called newdepend(). It simply adds all parameters to both
-DEPEND and RDEPEND, saving you the trouble of writing and
-maintaining two lists of dependencies.
-
-3.6 c.eclass
-
-Adds gcc and glibc to DEPEND and RDEPEND.
-
-3.7 autoconf.eclass
-
-Adds make/automake/autoconf to DEPEND.
-
-3.8 autotools.eclass
+3.5 autotools.eclass
 
 This is made and maintained by Azarah. To quote his comments:
 
@@ -353,9 +331,9 @@ to get a problem.
 
 Read the eclass for more info. AFAIK it has no relationship
 whatsoever to an of the other eclasses. Contact Azarah for
-any further info. (Azarah, you're welcome to feel in here).
+any further info. (Azarah, you're welcome to fill in here).
 
-3.9 kde.eclass
+3.6 kde.eclass
 
 Used by all kde apps, whether directly or indirectly. (Not
 by apps with optional kde functionality though.) This is
@@ -381,7 +359,9 @@ not inherit c. These packages can then inherit straight
 from here. All other packages, which need to compile c code,
 should inherit from kde-base.eclass.
 
-3.10 kde-dirs.eclass
+3.7 functions.eclass
+
+3.7.1 kde-related (used to be kde-dirs.eclass)
 
 A short explanation about the current multi-kdedir scheme:
 
@@ -431,12 +411,34 @@ need-* and set-* yourself.
 kde-dirs.eclass also contains several helper functions you
 shouldn't need to use directly.
 
-3.11 kde-base.eclass
+3.7.2 newdepend()
+
+This function simply adds all parameters to both DEPEND and
+RDEPEND, saving you the trouble of writing and maintaining
+two lists of dependencies.
+
+If called with a special parameter, it adds predefined dependencies.
+These special parmeters exst as of now:
+
+"/autotools": add "sys-devel/autoconf
+  sys-devel/automake sys-devel/make"
+  to DEPEND (but not RDEPEND).
+
+"/c": add "virtual/glibc sys-devel/ld.so"
+  to both DEPEND and RDEPEND. Also, add "sys-devel/gcc"
+  to DEPEND.
+
+This function encourages developers to maintain comprehensive
+DPEND strings. Especially, many ebuilds have no RDEPEND
+strings, which will be a problem once we have unmerge functionality
+that knows about dependencies.
+
+3.8 kde-base.eclass
 
 Meant for standard kde apps; nearly all ebuilds use it. Inherits
-c, kde. Sets HOMEPAGE=apps.kde.com.
+kde. Calls newdepend /c. Sets HOMEPAGE=apps.kde.com.
 
-3.12 kde-i18n.eclass
+3.9 kde-i18n.eclass
 
 Meant for the kde-i18n-* packages. Niche use.
 
@@ -447,7 +449,7 @@ ${P} does the rest.
 Inherits kde, kde.org. Makes a few differences, such as PROVIDE
 virtual/kde-i18n, correct $S, HOMEPAGE and DESCRIPTION.
 
-3.13 koffice-i18n.eclass
+3.10 koffice-i18n.eclass
 
 Meant for the koffice-i18n-* packages. Niche use. Very similar
 to kde-i18n.eclass.
@@ -455,7 +457,7 @@ to kde-i18n.eclass.
 All kde-i18n ebuilds are completely identical and so all
 they have to do is inherit from this eclass.
 
-3.14 kde-dist.eclass
+3.11 kde-dist.eclass
 
 Meant for the base kde distribution packages in kde-base/*.
 Inherits kde-base, kde.org. Adds the correct DESCRIPTION
@@ -463,7 +465,7 @@ and HOMEPAGE and kdelibs-${PV} deps. The simpler/smaller
 kde-base/ packages (e.g. kdetoys) make no changes at all;
 most of those that do only add deps.
 
-3.15 kde-cvs
+3.12 kde-cvs
 
 This is only included with the kde3-pre ebuilds, and doesn't
 live in portage. See [http://www.gentoo.org/~danarmak/kde3-pre.html||http://www.gentoo.org/~danarmak/kde3-pre.html].
@@ -472,7 +474,11 @@ It provides a new src_unpack which sets SRC_URI=""
 and copies the sources from a location hardcoded in the
 eclass. Useful if you have a local copy of the kde cvs modules.
 
-3.16 kde-pre
+It does not run cvs.cvsup itself beacuse that would violate
+the sanbox. I plan to add a sanbox_allow command and implement
+that functionality.
+
+3.13 kde-pre
 
 This is only included with the kde3-pre ebuilds, and doesn't
 live in portage. See [http://www.gentoo.org/~danarmak/kde3-pre.html||http://www.gentoo.org/~danarmak/kde3-pre.html].
@@ -543,6 +549,8 @@ inherit kde-dirs
 need-kde $version # minimal version of kde your app needs
 
 If you only need (optional) qt support, do the same, but
-call need-qt.
+call need-qt. You can also disregard eclasses entirely,
+but make sure to add the correct QT dep; the correct format
+as of now is e.g. =x11-libs/qt-2* for qt2.x.
 
 Have fun! :-) - danarmak
