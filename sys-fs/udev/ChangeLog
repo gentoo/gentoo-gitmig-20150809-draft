@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.41 2004/03/25 00:51:24 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.42 2004/04/02 23:48:15 gregkh Exp $
+
+*udev-024-r1 (02 Apr 2004)
+
+  02 Apr 2004; Greg Kroah-Hartman <gregkh@gentoo.org> udev-024-r1.ebuild:
+  024 release bump
+  
+  Use the udev.rules.gentoo and udev.permissions.gentoo files from the main
+  udev tarball now, as they are synced up properly.
+  
+  Add the etc/dev.d/net/hotplug.dev script to properly handle renaming network
+  devices with udev.
 
   24 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org> :
   Took k the sysfsutils dependancy off, as it is onot needed.
