@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ntame/ntame-998020954.ebuild,v 1.6 2004/06/24 22:58:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ntame/ntame-998020954.ebuild,v 1.7 2004/07/15 00:18:33 agriffis Exp $
 
 S=${WORKDIR}/ntaim
 DESCRIPTION="Ncurses based AOL Instant Messenger"
@@ -11,6 +11,7 @@ DEPEND=">=sys-libs/ncurses-5.2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile () {
 
