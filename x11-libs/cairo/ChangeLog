@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/cairo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.1 2004/03/17 23:37:07 twp Exp $
+
+  18 Mar 2004; Tom Payne <twp@gentoo.org> cairo-0.1.18.ebuild :
+  Install xrender.pc.
+
+*cairo-0.1.18 (18 Mar 2004)
+
+  18 Mar 2004; Tom Payne <twp@gentoo.org> cairo-0.1.18.ebuild :
+  Initial commit.
