@@ -1,8 +1,8 @@
 #!/sbin/runscript
-# Copyright 2003 Justin "Nagash" Jones Distributed under the terms of the GNU
-# General Public License, v2 or later $Header:
-# /home/cvsroot//gentoo-x86/sys-apps/hdparm/files/hdparm-new-init,v 1.1
-# 2003/03/01 21:17:39 sethbc Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 2003 Justin "Nagash" Jones
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/files/hdparm-new-init,v 1.3 2003/10/03 18:42:34 vapier Exp $
 
 depend() {
 	need localmount
@@ -22,7 +22,7 @@ checkconfig() {
 			ewarn "Skipping $i hdparm does not support SCSI devices."
 		fi
 	done
-	for i in `dir /dev/cdroms`
+	for i in `dir /dev/cdroms 2>/dev/null`
 	do	
 		if [ ! -n "`ls -la /dev/cdroms/${i} | grep scsi`" ]
 		then
@@ -100,7 +100,5 @@ start() {
 
 stop() {
 	ebegin "Stopping hdparm"
-
 	eend $? "Failed to stop hdparm."
 }
-
