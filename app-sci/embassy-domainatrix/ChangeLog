@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/embassy-domainatrix
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy-domainatrix/ChangeLog,v 1.1 2004/07/20 00:53:33 ribosome Exp $
+
+* domainatrix-1.0.0 (19 Jul 2004)
+
+  14 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-domainatrix-1.0.0.ebuild, metadata.xml, ChangeLog
+  Initial import.
