@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.13 2002/11/07 20:40:16 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.14 2002/11/08 02:27:13 zhen Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -160,6 +160,22 @@ src_install() {
 		echo "<tr><ti>$line </ti></tr>" | sed 's/___/ /g'>> ${T}/main-use.xml
 	done
 	echo "</table></body></section></chapter></guide>" >> ${T}/main-use.xml
+
+	#create the lang description page
+	 echo "<?xml version='1.0'?>" > ${T}/main-lang.xml
+	 echo '<guide link="/lang.html"><title>Gentoo Linux LANG Descriptions</title><author title="Author"><mail link="zhen@gentoo.org">John P. Davis</mail></author>' >> ${T}/main-lang.xml
+	 echo "<version>1.0</version><date>${mydate}</date><chapter><title>LANG Descriptions</title>" >> ${T}/main-lang.xml
+	 echo "<section><body><p>A small table of currently available LANG variables and a short description of each</p><table>" >> ${T}/main-lang.xml
+	 echo '<tr><th>LANG</th><th>Description</th></tr>' >> ${T}/main-lang.xml
+	
+	# The following line is not the most elegant, but in this instance we go for readability over compactness
+	for line in `cat /usr/portage/profiles/lang.desc | grep -v \# | sed 's/ /___/g'|sed 's/___-___/\<\/ti>\<ti\>/'`
+	do
+		echo "<tr><ti>$line </ti></tr>" | sed 's/___/ /g'>> ${T}/main-lang.xml
+	done
+	echo "</table></body></section></chapter></guide>" >> ${T}/main-lang.xml
+				 
+	
 	
 	insinto ${WEBROOT}
 	xsltproc $TEMPLATE ${T}/main-news.xml > ${D}${WEBROOT}/index.html || die
@@ -171,6 +187,7 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-contract.xml > ${D}${WEBROOT}/index-contract.html || die
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	xsltproc $TEMPLATE ${T}/main-use.xml > ${D}${WEBROOT}/doc/use.html || die
+	xsltproc $TEMPLATE ${T}/main-lang.xml > ${D}${WEBROOT}/doc/lang.html || die
 	xsltproc $TEMPLATE xml/main-mirrors.xml > ${D}${WEBROOT}/index-mirrors.html || die
 	xsltproc $TEMPLATE xml/main-irc.xml > ${D}${WEBROOT}/index-irc.html || die
 	OLDROOT=${ROOT} ; unset ROOT
