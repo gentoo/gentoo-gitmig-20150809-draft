@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.10 2003/07/01 10:14:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/ChangeLog,v 1.11 2003/07/18 21:27:07 liquidx Exp $
+
+*gnome-db-0.2.96 (18 Jul 2003)
+
+  18 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-db-0.2.96.ebuild:
+  in a fit of insanity 0.2.96 was removed. it is back now.
 
   01 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-db-0.2.95-r2.ebuild:
   lock libgda deps
