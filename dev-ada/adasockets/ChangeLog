@@ -1,6 +1,12 @@
 # ChangeLog for dev-ada/adasockets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.1 2003/08/13 04:52:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.2 2003/08/15 16:57:23 dholm Exp $
+
+*adasockets-1.7-r1 (15 Aug 2003)
+
+  15 Aug 2003; David Holm <avatar@gentoo.org> adasockets-1.7-r1.ebuild:
+  The shared libraries are now symlinked into /usr/lib. adasockets-config will
+  now return valid compiler-flags.
 
 *adasockets-1.7 (12 Aug 2003)
 
