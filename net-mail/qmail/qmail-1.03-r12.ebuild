@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.13 2003/09/24 05:25:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.14 2003/09/24 05:50:20 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -221,7 +221,7 @@ src_install() {
 
 	into /usr
 	einfo "Installing manpages"
-	doman *.1 *.5 *.8
+	doman *.[1-8]
 
 	# use the correct maildirmake
 	# the courier-imap one has some extensions that are nicer
