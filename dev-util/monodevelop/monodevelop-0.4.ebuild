@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.4.ebuild,v 1.1 2004/06/02 16:08:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.4.ebuild,v 1.2 2004/06/02 21:49:34 dholm Exp $
 
 inherit mono
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-libs/icu-2.6
 	>=dev-util/monodoc-0.16
 	>=x11-libs/gtk-sharp-0.93"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 src_compile() {
