@@ -73,10 +73,6 @@ sybase-ct
 hardened
 djbfft
 
-# Added because of xmms-plugin.eclass.  Please test out
-# media-sound/beep-media-player and remove if
-bmp
-
 # Need to mask since no evolution-data-server support
 eds
 # aqua USE flag is only valid on Mac OS X
