@@ -3,6 +3,9 @@
 
 *apache-1.3.26-r4 (3 Jul 2002)
 
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ppc keyword
+
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26.ebuild :
   Added KEYWORDS.
 
