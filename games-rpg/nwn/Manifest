@@ -1,10 +1,20 @@
-MD5 d0e79e8698180947d3e4fde7e182acee nwn-1.62.ebuild 2851
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53ca9462fcba134ac0fc75569088ada0 ChangeLog 3496
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 1330dd0f889d308e814b0b0f8b1faa85 files/nwn 38
-MD5 daa6377ba568f3c2ad34ac0b80ded2db files/nwn-1.32-fixinstall 1709
-MD5 2319ead0a07ba828ca5086ef51efa4a2 files/digest-nwn-1.62 216
-MD5 54dce724c9a2ad7a1f063895e783c517 files/nwn-1.61-fixinstall 1703
+MD5 61c64b459efdba35000e3700f5f82255 nwn-1.62.ebuild 2913
 MD5 d05b3b73edd2b4beadbce95837e2ab20 files/nwn.png 4296
-MD5 54dce724c9a2ad7a1f063895e783c517 files/nwn-1.62-fixinstall 1703
+MD5 3eddaf5e88a92951762058756003c855 files/nwn 44
 MD5 0875406c242fb0889db6de2d3f4ace88 files/nwn-1.30-fixinstall 1684
+MD5 daa6377ba568f3c2ad34ac0b80ded2db files/nwn-1.32-fixinstall 1709
+MD5 54dce724c9a2ad7a1f063895e783c517 files/nwn-1.61-fixinstall 1703
+MD5 2319ead0a07ba828ca5086ef51efa4a2 files/digest-nwn-1.62 216
+MD5 54dce724c9a2ad7a1f063895e783c517 files/nwn-1.62-fixinstall 1703
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+fMDHTu7gpaalycRAqi+AKCZrRRs3NXvgdlITnuK1aAPLqazSACgmvSB
+WeeID6CYxKTrMiZm5swX4Yk=
+=76BU
+-----END PGP SIGNATURE-----

@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /opt/nwn
+cd GENTOO_DIR/nwn
 exec ./nwn ${@}
