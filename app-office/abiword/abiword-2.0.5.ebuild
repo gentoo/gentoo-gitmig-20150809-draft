@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.3 2004/04/18 01:43:06 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.4 2004/04/20 15:40:18 gmsoft Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~alpha ~ppc ~amd64 hppa"
 LICENSE="GPL-2"
 SLOT="2"
 
