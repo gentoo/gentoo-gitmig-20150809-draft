@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 d093c554335365adfc6da911c2a67ecf jal-bin-20031117.ebuild 662
-MD5 550391604383af7eb875818a29dbcfa7 ChangeLog 829
+MD5 44b43ae9a83e082b47ee4bf5b0602e3e jal-bin-20031117-r1.ebuild 697
+MD5 1508a350098037b9d887eb3b7bd91ec3 ChangeLog 955
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 97da6bc4d37e0d5227b1f3b97822ed32 files/digest-jal-bin-20031117 68
+MD5 97da6bc4d37e0d5227b1f3b97822ed32 files/digest-jal-bin-20031117-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBCqwQ/rLF9B432nYRAhuJAKCH92YiNl9u2e3g7bLw2e6dv0728gCgswaf
-mPb9LazKCo38Heqf2Npgd8Q=
-=2tIb
+iD4DBQFBJzMZ/rLF9B432nYRAiIaAJdq0z+bUSmIYSfnAJ/i+1dMTcWEAJ9wEYHl
+AXb7WCoqcdRXrrrcMIZHIQ==
+=otg9
 -----END PGP SIGNATURE-----

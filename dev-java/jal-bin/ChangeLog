@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/ChangeLog,v 1.1 2004/07/30 20:12:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/ChangeLog,v 1.2 2004/08/21 11:33:05 axxo Exp $
+
+*jal-bin-20031117-r1 (21 Aug 2004)
+
+  21 Aug 2004; Thomas Matthijs <axxo@gentoo.org> +jal-bin-20031117-r1.ebuild:
+  fix path
 
 *jal-bin-20031117 (30 Jul 2004)
 
