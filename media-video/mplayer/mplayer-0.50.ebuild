@@ -12,8 +12,8 @@ S="${WORKDIR}/MPlayer-${MY_VERSION}"
 # when included in release portage
 if [ "`use gtk`" ] ; then
 	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
-		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
-		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
+		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
+		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2"
 else		  
         SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
                  ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
@@ -154,10 +154,6 @@ src_install() {
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 
-	# Install the new divx.dll
-	insinto /usr/lib/win32
-	doins /usr/portage/distfiles/divx.dll
-	
 }
 
 pkg_postinst() {
