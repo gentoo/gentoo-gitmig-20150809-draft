@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/aaindex/aaindex-6.0.ebuild,v 1.4 2004/08/10 23:56:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/aaindex/aaindex-6.0.ebuild,v 1.5 2004/11/03 02:47:42 j4rg0n Exp $
 
 DESCRIPTION="Amino acid indices and similarity matrices"
 HOMEPAGE="http://www.genome.ad.jp/${PN}/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.genome.ad.jp/pub/db/genomenet/${PN}/${PN}.doc
 	ftp://ftp.genome.ad.jp/pub/db/genomenet/${PN}/list_of_indices"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~ppc-macos"
 IUSE="no-emboss no-rawdb"
 
 S=${WORKDIR}

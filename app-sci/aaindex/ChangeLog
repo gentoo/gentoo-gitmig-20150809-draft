@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/aaindex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/aaindex/ChangeLog,v 1.4 2004/08/10 23:56:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/aaindex/ChangeLog,v 1.5 2004/11/03 02:47:42 j4rg0n Exp $
+
+  2 Nov 2004; Lina Pezzella <j4rg0n@gentoo.org> aaindex-6.0.ebuild:
+  Keyworded ~ppc-macos.
 
   10 Aug 2004; Olivier Fisette <ribosome@gentoo.org> aaindex-6.0.ebuild:
   Added to x86.
