@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/lineak-xosdplugin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.1 2004/11/22 19:11:37 genstef Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-xosdplugin/ChangeLog,v 1.2 2005/03/12 14:24:50 genstef Exp $
+
+*lineak-xosdplugin-0.8.3 (12 Mar 2005)
+
+  12 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
+  +lineak-xosdplugin-0.8.3.ebuild:
+  Version bump thanks to Alexander Brüning <ab277@gmx.de> in bug 84964
 
 *lineak-xosdplugin-0.8.2 (22 Nov 2004)
 

@@ -1,4 +1,6 @@
+MD5 37687ca59867285f43245c1843c694f1 lineak-kdeplugins-0.8.3.ebuild 540
+MD5 b13bd347261bfb2ec1e800835091cab7 ChangeLog 1040
 MD5 9a7c58529f54db6737913da568c57e4a metadata.xml 270
-MD5 136b300b4967553d749f3c7a4c173347 ChangeLog 840
 MD5 37687ca59867285f43245c1843c694f1 lineak-kdeplugins-0.8.2.ebuild 540
 MD5 892ffaf33f08180052396387820d1c39 files/digest-lineak-kdeplugins-0.8.2 75
+MD5 1ee578a6c268965f653080ada78561cc files/digest-lineak-kdeplugins-0.8.3 75
