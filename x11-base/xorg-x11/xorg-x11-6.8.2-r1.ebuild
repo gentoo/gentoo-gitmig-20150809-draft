@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.13 2005/04/01 18:48:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.14 2005/04/06 05:57:09 gmsoft Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -679,12 +679,6 @@ host_def_setup() {
 		use_build opengl BuildGLULibrary
 
 
-		if use hppa; then
-			echo "#define DoLoadableServer NO" >> ${HOSTCONF}
-			echo "#define BuildXF86DRI NO" >> config/cf/host.def
-			echo "#undef DriDrivers" >> config/cf/host.def
-			echo "#define XF86CardDrivers fbdev" >> config/cf/host.def
-		fi
 
 		if use mips; then
 			echo "#define XF86CardDrivers fbdev newport" >> ${HOSTCONF}
@@ -697,6 +691,15 @@ host_def_setup() {
 		use_build xv BuildXF86RushExt
 		use_build xv BuildXF86RushLibrary
 
+		if use hppa; then
+			echo "#define DoLoadableServer NO" >> ${HOSTCONF}
+			echo "#define BuildXF86DRI NO" >> config/cf/host.def
+			echo "#undef DriDrivers" >> config/cf/host.def
+			echo "#define XF86CardDrivers fbdev" >> config/cf/host.def
+			echo "#define BuildXvExt YES" >> config/cf/host.def
+		fi
+
+		
 		if use alpha; then
 			echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
 				i740 tdfx cirrus tseng fbdev \
