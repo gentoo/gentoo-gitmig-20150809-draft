@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/koma-script
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/koma-script/ChangeLog,v 1.1 2004/01/31 14:48:38 usata Exp $
+
+*koma-script-20040111 (31 Jan 2004)
+
+  31 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> koma-script-20040111.ebuild,
+  metadata.xml:
+  Initial import. Ebuild submitted by Joerg Hoh <joerg@devone.org> in bug #20794
+
