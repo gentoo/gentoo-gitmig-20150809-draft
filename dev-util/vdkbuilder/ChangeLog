@@ -1,11 +1,14 @@
 # ChangeLog for dev-util/vdkbuilder
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.6 2003/02/12 06:47:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.7 2003/02/24 04:57:52 seemant Exp $
+
+*vdkbuilder-2.0.3 (12 Aug 2002)
+
+  23 Feb 2003; Seemant Kulleen <seemant@gentoo.org> vdkbuilder-2.0.3.ebuild :
+  fixed sandbox violation as reported by gerrynjr in #gentoo
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*vdkbuilder-2.0.3 (12 Aug 2002)
-
   12 Aug 2002; Joe Tennies <rotund@fatnsoft.com> vdkbuilder-2.0.3.ebuild:
 	Updated to build VDK Builder instead of the VDK library.  Also
 	updated to version 2.0.3.
