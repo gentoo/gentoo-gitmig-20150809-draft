@@ -1,0 +1,60 @@
+--- ext/fcgi/fcgi.c.orig	2003-08-27 20:28:35.000000000 +0900
++++ ext/fcgi/fcgi.c	2005-02-01 16:57:39.741372024 +0900
+@@ -37,6 +37,12 @@
+   rb_gc_mark(data->env);
+ }
+ 
++static void fcgi_free_req(fcgi_data *data)
++{
++  free(data->req);
++  free(data);
++}
++
+ static VALUE fcgi_s_accept(VALUE self)
+ {
+   int status;
+@@ -64,7 +70,7 @@
+     VALUE obj,key, value;
+     char *pkey,*pvalue;
+     
+-    obj = Data_Make_Struct(self, fcgi_data, fcgi_mark, 0, data);
++    obj = Data_Make_Struct(self, fcgi_data, fcgi_mark, fcgi_free_req, data);
+     data->req = req;
+     data->in  = Data_Wrap_Struct(cFCGIStream, 0, 0, req->in);
+     data->out = Data_Wrap_Struct(cFCGIStream, 0, 0, req->out);
+@@ -379,7 +385,10 @@
+     buff = ALLOC_N(char, 16384);
+     n = FCGX_GetStr(buff, 16384, stream);
+     CHECK_STREAM_ERROR(stream);
+-    if (n == 0) return Qnil;
++    if (n == 0) {
++      free(buff);
++      return  Qnil;
++    }
+     str = rb_str_new(buff, n);
+     OBJ_TAINT(str);
+     
+@@ -389,9 +398,11 @@
+       if (n > 0) {
+         rb_str_cat(str, buff, n);
+       } else {
++        free(buff);
+         return Qnil;
+       }
+     }
++    free(buff);
+     return str;
+   }
+ 
+@@ -404,9 +415,11 @@
+   if (n > 0) {
+     str = rb_str_new(buff, n);
+     OBJ_TAINT(str);
++    free(buff);
+     return str;
+   }
+   else {
++    free(buff);
+     return Qnil;
+   }
+ }

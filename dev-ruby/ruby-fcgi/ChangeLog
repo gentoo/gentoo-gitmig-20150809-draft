@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.3 2005/02/01 08:04:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.4 2005/03/23 12:15:51 caleb Exp $
+
+*ruby-fcgi-0.8.5-r1 (23 Mar 2005)
+
+  23 Mar 2005; Caleb Tennis <caleb@gentoo.org> +ruby-fcgi-0.8.5-r1.ebuild:
+  Bump for memory leak (Bug #86366)
 
 *ruby-fcgi-0.8.5 (01 Feb 2005)
 
