@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.19 2004/03/03 20:22:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.20 2004/03/27 19:08:35 tgall Exp $
+
+  27 Mar 2004; Tom Gall <tgall@gentoo.org> sash-3.6.ebuild:
+  fix for ppc64. (header issues)
 
 *sash-3.7 (03 Mar 2004)
 
