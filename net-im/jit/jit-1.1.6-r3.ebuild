@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.8 2004/06/10 19:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/jit-1.1.6-r3.ebuild,v 1.9 2004/06/19 20:33:46 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,10 +13,10 @@ SLOT="0"
 
 IUSE=""
 
-KEYWORDS="~x86 ~sparc ~ppc hppa"
+KEYWORDS="x86 ~sparc ~ppc hppa"
 
 DEPEND=""
-RDEPEND=">=net-im/jabberd-1.4.3"
+RDEPEND=">=net-im/jabberd-1.4.3-r3"
 
 
 src_compile() {
