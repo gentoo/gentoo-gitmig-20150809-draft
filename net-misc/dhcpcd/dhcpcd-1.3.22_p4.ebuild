@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.10 2003/07/16 14:26:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.11 2003/07/18 20:59:07 tester Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz"
 HOMEPAGE="http://www.phystech.com/download/"
 DEPEND=""
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa arm mips"
+KEYWORDS="x86 ppc sparc ~alpha hppa arm mips amd64"
 LICENSE="GPL-2"
 IUSE="build"
 
@@ -19,6 +19,7 @@ IUSE="build"
 src_unpack() {
 	unpack ${A} || die "unpack failed"
 	use alpha && gnuconfig_update
+	use amd64 && gnuconfig_update
 
 	#make the pidfile always goto /var/run (woodchip Dec 4 2002)
 	cd ${S}
