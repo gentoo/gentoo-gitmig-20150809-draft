@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.4 2003/09/06 22:02:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.0_pre20021217.ebuild,v 1.5 2003/09/10 04:56:48 msterret Exp $
 IUSE="kde esd ipv6 ssl"
 inherit kde-base
 
@@ -42,29 +42,29 @@ myconf="$myconf --with-aa-fonts" #--with-local-8bit"
 
 src_compile() {
 
-    use kde && kde_src_compile myconf
+	use kde && kde_src_compile myconf
 
-    # always install into /usr regardless of kde support
-    # kvirc doesn't have a kde-like installed file structure anyway
-    myconf="$myconf --prefix=/usr -v"
+	# always install into /usr regardless of kde support
+	# kvirc doesn't have a kde-like installed file structure anyway
+	myconf="$myconf --prefix=/usr -v"
 
-    # make sure we disable kde support as the configure script can auto-enable
-    # it when it isn't wanted
-    use kde || export KDEDIR=""
+	# make sure we disable kde support as the configure script can auto-enable
+	# it when it isn't wanted
+	use kde || export KDEDIR=""
 
-    need-automake 1.5
-    need-autoconf 2.5
-    ./autogen.sh
-    kde_src_compile configure make
+	need-automake 1.5
+	need-autoconf 2.5
+	./autogen.sh
+	kde_src_compile configure make
 
 }
 
 src_install () {
 
-    make install DESTDIR=${D} || die
-    make docs DESTDIR=${D} || die
+	make install DESTDIR=${D} || die
+	make docs DESTDIR=${D} || die
 
-    dodoc ChangeLog INSTALL README TODO
+	dodoc ChangeLog INSTALL README TODO
 
 }
 
