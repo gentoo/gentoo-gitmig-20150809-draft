@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-2.4a.ebuild,v 1.5 2004/08/30 13:10:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-2.4a.ebuild,v 1.6 2004/11/22 11:31:10 josejx Exp $
 
 inherit distutils eutils games
 
@@ -10,7 +10,7 @@ DESCRIPTION="math-version of the popular board game for children 4-10"
 HOMEPAGE="http://www.asymptopia.org/"
 SRC_URI="mirror://sourceforge/tuxmathscrabble/${MY_P}.tgz"
 
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

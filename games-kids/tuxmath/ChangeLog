@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxmath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.4 2004/08/30 23:40:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.5 2004/11/22 11:28:29 josejx Exp $
+
+  22 Nov 2004; Joseph Jezak <josejx@gentoo.org> tuxmath-20010907.ebuild:
+  Marked ppc stable.
 
   31 Aug 2004; David Holm <dholm@gentoo.org> tuxmath-20010907.ebuild:
   Added to ~ppc.
