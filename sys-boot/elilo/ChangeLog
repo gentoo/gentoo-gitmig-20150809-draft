@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/elilo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.6 2004/06/24 22:34:28 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.7 2005/01/22 13:29:32 plasmaroo Exp $
+
+  22 Jan 2005; <plasmaroo@gentoo.org> elilo-3.4.ebuild:
+  Fix total build breakage; inherit toolchain-funcs please...
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> elilo-3.4.ebuild:
   fix depend (bug #45110); tidy

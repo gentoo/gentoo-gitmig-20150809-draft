@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.7 2004/10/28 16:04:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.8 2005/01/22 13:29:32 plasmaroo Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://developer.intel.com/technology/efi"
