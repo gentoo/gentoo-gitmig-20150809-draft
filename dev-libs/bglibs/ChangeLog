@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.15 2004/08/22 05:40:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.16 2004/09/26 22:57:02 robbat2 Exp $
+
+  26 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> bglibs-1.017.ebuild:
+  Stable on x86.
 
 *bglibs-1.017 (21 Aug 2004)
 
