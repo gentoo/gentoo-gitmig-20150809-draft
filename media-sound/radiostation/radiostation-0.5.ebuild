@@ -1,10 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.3 2004/02/24 08:31:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.4 2004/02/24 09:52:24 mr_bones_ Exp $
 
 DESCRIPTION="Managements system for online audio streams"
 HOMEPAGE="http://mindx.dyndns.org/kde/radio/"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa"
 
 IUSE="debug kde"
 
@@ -17,8 +20,6 @@ DEPEND="kde? ( >=kde-base/kdelibs-3.1 )
 	net-www/lynx
 	net-misc/wget
 	media-sound/xmms"
-
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa"
 
 S=${WORKDIR}/kderadiostation-${PV}
 SRC_URI="http://mindx.dyndns.org/kde/radio/source/kderadiostation-${PV}.tar.gz
