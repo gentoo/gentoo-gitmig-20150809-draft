@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r2.ebuild,v 1.3 2002/04/15 04:01:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r2.ebuild,v 1.4 2002/04/15 04:02:58 azarah Exp $
 
 # NOTE TO MAINTAINER:  man pages and info pages gets nuked for multiple
 #                      version installs.  Ill fix later if i get a chance.
@@ -9,6 +9,7 @@
 TV=4.0
 GCC_SUFFIX=-3.0
 LOC=/usr
+SLOT="3.0"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2
