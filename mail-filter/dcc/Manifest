@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9f867b2ab02d8cc2a4b21a2389268912 ChangeLog 1470
+MD5 c60cbdb78b2334e2e9a2e7e4a5b9e067 dcc-1.2.28-r1.ebuild 3447
+MD5 faf4895d1addd7439a2b6a5d0ed17a32 dcc-1.2.28.ebuild 3117
+MD5 b4a4896027f1ec33184478c9c6291d19 ChangeLog 1624
 MD5 5e658b705b2985d36d82b2a5d218ec78 metadata.xml 224
-MD5 209e41cb9a092d06600e5986e4df664f dcc-1.2.28-r1.ebuild 3442
-MD5 39bf0f4bed58ec5abab11ebf05e09342 dcc-1.2.28.ebuild 3115
-MD5 f4024b299ddf4d0921ef9dc6cce1b0c3 files/digest-dcc-1.2.28-r1 67
 MD5 f4024b299ddf4d0921ef9dc6cce1b0c3 files/digest-dcc-1.2.28 67
+MD5 f4024b299ddf4d0921ef9dc6cce1b0c3 files/digest-dcc-1.2.28-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBWJKx10xuJSrg3/sRAgKRAJkBGRFRdeJTxlb0WYKD7VJ+ovax3QCfX2+T
-iyj3ZPcOEh5D6ggEg+MheCk=
-=WkUZ
+iD8DBQFCOdwhI1lqEGTUzyQRAljNAJ94CesrlIOhSc71R1w57UlsJg15yQCdHO1I
+0PFXN0XauVTBrsreKfWw0Es=
+=M32q
 -----END PGP SIGNATURE-----
