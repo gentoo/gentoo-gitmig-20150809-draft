@@ -1,0 +1,117 @@
+#!/usr/bin/env python
+
+from portage import *
+#import dbtools
+
+def testsame(my1,my2):
+	print my1,"and",my2,"have",
+	a=pkgsame(my1,my2)
+	if a:
+		print "the same package name"
+	else:
+		print "different package names"
+
+testsame("Mesa-3.02b","Mesa-6")
+testsame("foob-3.212.9_alpha","foob")
+testsame("foob-3.212.9_alpha","fo0ob")
+
+# Test driver code: 
+# Play around with it to get the feel of how it works
+
+def testcmp(my1,my2):
+	a=vercmp(my1,my2)
+	print my1,
+	if a==0:
+		print "=",
+	elif a<0:
+		print "<",
+	else:
+		print ">",
+	print my2
+
+testcmp("3.1","3.2")
+testcmp("3.2","3.1")
+testcmp("3.2","3.2a")
+testcmp("3.1_alpha6","3.2")
+testcmp("3.2_alpha","3.1")
+testcmp("3.3.2","3.2a")
+testcmp("3.1","3.1.0.2")
+testcmp("3.1","3.1_pre")
+testcmp("3.1_alpha1","3.1_alpha2")
+
+def testver(myv):
+	print "Is",myv,"valid?",
+	if ververify(myv):
+		print "Yes"
+	else:
+		print "No"
+
+testver("foo")
+testver("4foo")
+testver("4foo4")
+testver("4foo4.4")
+testver("4.b")
+testver("3.4")
+testver("3.4b")
+testver("3.4_alpha1")
+testver("1.2.3.6.70.3.4_beta10")
+testver("1_alpha")
+testver("2_pre50")
+testver("3.4_")
+testver("3.4ba")
+testver("3.4_alpha1a")
+testver("1.2.3.6.70.3.4__beta10")
+testver("1alpha")
+testver("2._pre50")
+
+def ver_expsplit(dep):
+	#fields: [ notflag, pkgname, equalflag, less/greaterthanflag ]
+	if dep[0:2]==">=":
+		return [0,dep[2:],1,1]
+	if dep[0:2]=="<=":
+		return [0,dep[2:],1,-1]
+	if dep[0]==">":
+		return [0,dep[1:],0,1]
+	if dep[0]=="<":
+		return [0,dep[1:],0,-1]
+	if dep[0]=="!":
+		return [1,dep[1:]]
+	#equal condition
+	return [0,dep,1,0]
+
+print pkg("Mesa-3.0_beta6")
+print ver("Mesa-3.0_beta6")
+
+"""
+
+def ver_dbcmp(cmp):
+	a=ver_expsplit(cmp)
+	newver=ver(a[1])
+	newpkg=pkg(a[1])
+	if not dbtools.pkgexists(newpkg):
+		return a[0]
+	print "package found"
+	if newver=="":
+		return not a[0]
+	oldver=dbtools.pkgversion(newpkg)
+	mycmp=vercmp(oldver,newver)
+	print "oldver mycmp",oldver,mycmp
+	if a[0]==1:
+		if mycmp==0:
+			return 0
+		else:
+			return 1
+	if mycmp==0:
+		return a[2]
+	elif mycmp<0:
+		if a[3]<0:	
+			return 1
+		else:		
+			return 0
+	else:
+		if a[3]>0:	
+			return 1
+		else:		
+			return 0
+
+"""

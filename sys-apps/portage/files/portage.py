@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #
-# StampedeLinux Dependency Checking Code
-# Copyright 1998 Daniel Robbins
+# Gentoo Linux Dependency Checking Code
+# Copyright 1998-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GNU Public License
-# Version 0.5 12/22/98
+# Version 1.0 7/31/2000
 #
 # Version comparison: Functionality
 #
@@ -97,6 +97,17 @@ def relparse(myver):
 	return [number,p1,p2]
 
 
+def revverify(myrev):
+	if len(myrev)==0:
+		return 0
+	if myrev[0]=="r":
+		try:
+			string.atoi(myrev[1:])
+			return 1
+		except: 
+			pass
+	return 0
+
 #returns 1 if valid version string, else 0
 # valid string in format: <v1>.<v2>...<vx>[a-z,_{alpha,beta,pre}[vy]]-vz
 
@@ -174,6 +185,40 @@ def ververify(myval):
 	else:
 		return 0
 
+# This function can be used as a package verification function, i.e.
+# "pkgsplit("foo-1.2-1") will return None if foo-1.2-1 isn't a valid
+# package (with version) name.  If it is a valid name, pkgsplit will
+# return a list containing: [ pkgname, pkgversion(norev), pkgrev ].
+# For foo-1.2-1, this list would be [ "foo", "1.2", "1" ].  For 
+# Mesa-3.0, this list would be [ "Mesa", "3.0", "0" ].
+
+def pkgsplit(mypkg):
+	myparts=string.split(mypkg,'-')
+	if len(myparts)<2:
+		return None
+	if revverify(myparts[-1]):
+		if ververify(myparts[-2]):
+			if len(myparts)==2:
+				return None
+			else:
+				for x in myparts[:-2]:
+					if ververify(x):
+						return None
+						#names can't have versiony looking parts
+				return [string.join(myparts[:-2],"-"),myparts[-2],myparts[-1]]
+		else:
+			return None
+
+	elif ververify(myparts[-1]):
+		if len(myparts)==1:
+			return None
+		else:
+			for x in myparts[:-1]:
+				if ververify(x):
+					return None
+			return [string.join(myparts[:-1],"-"),myparts[-1],"0"]
+	else:
+		return None
 
 # vercmp:
 # This takes two version strings and returns an integer to tell you whether
