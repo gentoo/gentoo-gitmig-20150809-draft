@@ -31,16 +31,30 @@
 
 # SPARC64 Profile
 
+# Alsa is not for Sparc
+#!media-libs/alsa-lib
+#!media-libs/alsa-oss
+#!media-plugins/alsa-xmms           
+#!media-plugins/xmms-aalsa           
+#!media-sound/alsa-driver           
+#!media-sound/alsa-patch-bay           
+#!media-sound/alsa-tools           
+#!media-sound/alsa-utils           
+#!media-sound/alsamixergui           
+#!media-sound/alsaplayer           
+#!x11-plugins/wmmixer-alsa
+
+
 # These don't make sense on sparc 
-~sys-devel/bin86
-~sys-apps/lilo
-~sys-apps/grub
+!sys-devel/bin86
+!sys-apps/lilo
+!sys-apps/grub
 
 # VNC is broken on sparc64, maintainer uses i386 specific makefile
-~net-misc/vnc
+!net-misc/vnc
 
 # Get a decent editor - BROKEN
-~app-editors/levee
+!app-editors/levee
 
 # sparc64 specfic pkgs
 *sys-apps/sparc-utils
@@ -124,4 +138,4 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-
+<=app-admin/portagemaster-0.1.5
