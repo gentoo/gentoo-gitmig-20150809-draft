@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 58cc8c2a5fedf97283750a769bd3917d ChangeLog 584
-MD5 3fd56e7547b0f35a37db19dd45932fef metadata.xml 792
+MD5 e0542c9d79cfbdd0eae93f879da46a13 metadata.xml 784
 MD5 5893a45b76cb9f8880abf53501986b9a mrbayes-3.0.ebuild 846
 MD5 98b5d381ba0621a27ffce26bf40da031 files/digest-mrbayes-3.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCA4xhI1lqEGTUzyQRAgUPAKCkq1OuQ3Dnt6lk7KPb955aRTuGvACeNVjN
-xjeJI1I8J+TneLeklYzJB0s=
-=iG+7
------END PGP SIGNATURE-----
