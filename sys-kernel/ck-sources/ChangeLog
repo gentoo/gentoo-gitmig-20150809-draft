@@ -1,6 +1,28 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.75 2004/12/24 16:08:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.76 2004/12/25 15:30:23 dsd Exp $
+
+*ck-sources-2.4.28-r1 (25 Dec 2004)
+
+  25 Dec 2004; Daniel Drake <dsd@gentoo.org>
+  -files/ck-sources-2.4.27.CAN-2004-0394.patch,
+  -files/ck-sources-2.4.27.CAN-2004-1016.patch,
+  -files/ck-sources-2.4.27.CAN-2004-1056.patch,
+  -files/ck-sources-2.4.27.CAN-2004-1137.patch,
+  -files/ck-sources-2.4.27.XDRWrapFix.patch,
+  -files/ck-sources-2.4.27.binfmt_a.out.patch,
+  -files/ck-sources-2.4.27.binfmt_elf.patch,
+  -files/ck-sources-2.4.27.cmdlineLeak.patch,
+  -files/ck-sources-2.4.27.smbfs.patch, -files/ck-sources-2.4.27.vma.patch,
+  +files/ck-sources-2.4.28.CAN-2004-1016.patch,
+  +files/ck-sources-2.4.28.CAN-2004-1056.patch,
+  +files/ck-sources-2.4.28.CAN-2004-1137.patch,
+  +files/ck-sources-2.4.28.binfmt_a.out.patch,
+  +files/ck-sources-2.4.28.cmdlineLeak.patch,
+  +files/ck-sources-2.4.28.compileFix.patch,
+  +files/ck-sources-2.4.28.vma.patch, -ck-sources-2.4.27-r5.ebuild,
+  +ck-sources-2.4.28-r1.ebuild:
+  Version bump
 
 *ck-sources-2.4.27-r5 (24 Dec 2004)
 

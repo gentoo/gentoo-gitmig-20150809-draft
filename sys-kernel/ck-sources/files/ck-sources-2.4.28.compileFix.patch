@@ -1,0 +1,68 @@
+Fix 2.4.28-lck1 compilation on GCC 3.4
+
+- Daniel Drake <dsd@gentoo.org>
+
+--- linux-dsd/kernel/sched.c.orig	2004-12-25 15:10:27.962556608 +0000
++++ linux-dsd/kernel/sched.c	2004-12-25 15:12:10.203013696 +0000
+@@ -611,12 +611,12 @@ repeat_lock_task:
+ 	return success;
+ }
+ 
+-int wake_up_process(task_t * p)
++int fastcall wake_up_process(task_t * p)
+ {
+ 	return try_to_wake_up(p, 0);
+ }
+ 
+-void wake_up_forked_process(task_t * p)
++void fastcall wake_up_forked_process(task_t * p)
+ {
+ 	runqueue_t *rq;
+ 	preempt_disable();
+@@ -653,7 +653,7 @@ void fastcall wake_up_forked_process(tas
+  * artificially, because any timeslice recovered here
+  * was given away by the parent in the first place.)
+  */
+-void sched_exit(task_t * p)
++void fastcall sched_exit(task_t * p)
+ {
+ 	__cli();
+ 	if (p->first_time_slice) {
+@@ -1427,7 +1427,7 @@ static inline void __wake_up_common(wait
+ 	}
+ }
+ 
+-void __wake_up(wait_queue_head_t *q, unsigned int mode, int nr_exclusive)
++void fastcall __wake_up(wait_queue_head_t *q, unsigned int mode, int nr_exclusive)
+ {
+ 	unsigned long flags;
+ 
+--- linux-dsd/kernel/timer.c.orig	2004-12-25 14:56:20.000000000 +0000
++++ linux-dsd/kernel/timer.c	2004-12-25 15:14:47.145154864 +0000
+@@ -110,7 +110,7 @@ static struct list_head * run_timer_list
+ 
+ #define NOOF_TVECS (sizeof(tvecs) / sizeof(tvecs[0]))
+ 
+-static inline void init_jiffieswrap_timer(void);
++static void init_jiffieswrap_timer(void);
+ 
+ void init_timervecs (void)
+ {
+@@ -727,7 +727,7 @@ static void check_jiffieswrap(unsigned l
+ 	                           ^ (jiffies>>(BITS_PER_LONG-1)));
+ }
+ 
+-static inline void init_jiffieswrap_timer(void)
++static void init_jiffieswrap_timer(void)
+ {
+ 	init_timer(&jiffieswrap_timer);
+ 	jiffieswrap_timer.expires = jiffies + CHECK_JIFFIESWRAP_INTERVAL;
+@@ -893,7 +893,7 @@ static void process_timeout(unsigned lon
+  *
+  * In all cases the return value is guaranteed to be non-negative.
+  */
+-signed long schedule_timeout(signed long timeout)
++signed long fastcall schedule_timeout(signed long timeout)
+ {
+ 	struct timer_list timer;
+ 	unsigned long expire;
