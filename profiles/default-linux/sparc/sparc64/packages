@@ -1,0 +1,8 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/packages,v 1.1 2004/11/29 12:59:30 eradicator Exp $
+
+# Sometimes necessary to trick programs into thinking we're really
+# a sparc32 system.
+*sys-devel/sparc32
+
