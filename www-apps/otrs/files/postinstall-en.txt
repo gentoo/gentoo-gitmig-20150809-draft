@@ -1,0 +1,20 @@
+
+
+***********************************************************
+Your installation is almost complete. 
+1. You now need to edit ${VHOST_ROOT}/Kernel/Config.pm and set some
+Kernel::Config options (FQDN, SystemID, TicketHook, Home, ...). Consult
+Config.pm.dist for a start.
+
+***********************************************************
+2. Configure and restart your webserver.
+Read /usr/share/doc/${P}/README.webserver.gz. Sample config files are in
+${VHOST_ROOT}/scripts
+
+***********************************************************
+3. Setup your database. Read /usr/share/doc/${P}/README.database.gz
+
+***********************************************************
+
+4. Read /usr/share/doc/${P}/INSTALL.gz to finish the installation. Cronjobs are
+in /var/otrs/cron

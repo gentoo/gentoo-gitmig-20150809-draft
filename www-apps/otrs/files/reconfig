@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $1 = "start" -o $1 = "install" ]; then
+	sed -i "s|/opt/otrs|${VHOST_ROOT}|" ${VHOST_ROOT}/Kernel/Config.pm.dist ${VHOST_ROOT}/scripts/*
+else
+	echo $1
+fi
