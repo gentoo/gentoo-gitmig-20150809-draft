@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/cedet
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.1 2004/07/23 03:18:21 mkennedy Exp $
+
+*cedet-1.0_beta3 (22 Jul 2004)
+
+  22 Jul 2004; <mkennedy@gentoo.org> +metadata.xml, +files/60cedet-gentoo.el,
+  +cedet-1.0_beta3.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
