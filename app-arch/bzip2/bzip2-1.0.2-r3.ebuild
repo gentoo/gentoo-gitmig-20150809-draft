@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.17 2004/11/12 15:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.18 2004/12/08 00:42:51 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 LICENSE="BZIP2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="build static debug cross"
+IUSE="build static debug"
 
 DEPEND="virtual/libc"
 
@@ -26,8 +26,8 @@ src_unpack() {
 
 	# bzip2 will to run itself after it has built itself which we
 	# can't do if we are cross compiling. -solar
-	use cross && if [ -e /bin/bzip2 ]; then
-		sed -i -e s:'./bzip2 -':'bzip2 -':g Makefile || die
+	if [ -e /bin/bzip2 ] && [[ ${CTARGET} != ${CHOST} ]] ; then
+		sed -i -e 's:./bzip2 -:bzip2 -:g' Makefile || die
 	fi
 	sed -i \
 		-e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
@@ -39,16 +39,19 @@ src_unpack() {
 }
 
 src_compile() {
-	if ! use build
-	then
-		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f Makefile-libbz2_so all || die "Make failed"
+	local makeopts="
+		CC=$(tc-getCC)
+		AR=$(tc-getAR)
+		RANLIB=$(tc-getRANLIB)
+	"
+	if ! use build ; then
+		emake ${makeopts} -f Makefile-libbz2_so all || die "Make failed libbz2"
 	fi
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" all || die "Make failed"
+	emake ${makeopts} all || die "Make failed"
 }
 
 src_install() {
-	if ! use build
-	then
+	if ! use build ; then
 		make PREFIX=${D}/usr install || die
 		mv ${D}/usr/bin ${D}
 

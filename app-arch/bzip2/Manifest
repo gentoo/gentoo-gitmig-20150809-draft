@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e751367e338078a681cd6f7c722d93b ChangeLog 4441
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0f4c88fd416d294b64d16f0d931b7822 bzip2-1.0.2-r3.ebuild 2333
+MD5 6f271e15b873b0ebc1056c2cdbe5a161 bzip2-1.0.2-r3.ebuild 2386
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtk4YroRuSHgZdywRAtkfAJ9iGIC1l8PJjciTGaOL6gghrPuyHQCfY4t1
+fTFx5V60oVcjVTIcSd/86eQ=
+=jLUr
+-----END PGP SIGNATURE-----
