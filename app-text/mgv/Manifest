@@ -1,4 +1,6 @@
 MD5 33d4d0795990fe0a537a424ceea98c4a mgv-3.1.5.ebuild 821
-MD5 70697b675ceedc109c85aad805de2174 ChangeLog 1230
+MD5 7f3cd88acdc8f5a8680c349e1c5659ab mgv-3.1.5-r1.ebuild 1088
+MD5 78f5d98db43f8dccac06423c92548921 ChangeLog 1330
 MD5 bd520677adbd1e3f716bd9074bc9cd83 files/digest-mgv-3.1.5 61
+MD5 bd520677adbd1e3f716bd9074bc9cd83 files/digest-mgv-3.1.5-r1 61
 MD5 cd17d72e2674842cecb8182a758620fc files/mgv-3.1.5-stderr.patch 376
