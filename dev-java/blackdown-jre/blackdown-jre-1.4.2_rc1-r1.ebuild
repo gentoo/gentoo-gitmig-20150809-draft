@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.9 2004/06/21 19:00:03 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1-r1.ebuild,v 1.1 2004/06/21 19:06:39 karltk Exp $
 
 IUSE="doc"
 
