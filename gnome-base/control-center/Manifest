@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e8c310622ecd9a789d41b9d1f43552c ChangeLog 10988
 MD5 5d0747c465a083e774f07f4d348fea2c control-center-2.8.1.ebuild 1838
-MD5 35adc764e969a2630ffcd21322c6ddab control-center-2.8.0.ebuild 1843
-MD5 6b5d3b0f0157eedc30e1456997b0b6f5 control-center-2.8.1-r1.ebuild 1851
 MD5 4451c102f231b8b62a631e19e2e9edb5 control-center-2.6.1.ebuild 1880
-MD5 33b394e0936edc187e0ca9481cc6a7c9 control-center-1.4.0.5-r1.ebuild 1259
-MD5 8f31826f704b348fdf03f6da2e1960aa ChangeLog 10881
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9bcc0018e381c541f6d38a9c7f819d34 control-center-2.8.0.ebuild 1845
+MD5 33b394e0936edc187e0ca9481cc6a7c9 control-center-1.4.0.5-r1.ebuild 1259
+MD5 6b5d3b0f0157eedc30e1456997b0b6f5 control-center-2.8.1-r1.ebuild 1851
+MD5 fdc3d7feea8b429588a2d193c9547dbf files/control-center-2.2.0.1-alpha_hack.patch 2997
+MD5 adbe3cf7b6918f7681569128f76a4b71 files/control-center-2.2-icons_install.patch 2943
+MD5 3c50bab26a7b8dd1ccb40514655a0a79 files/digest-control-center-2.8.1-r1 74
+MD5 3c50bab26a7b8dd1ccb40514655a0a79 files/digest-control-center-2.8.1 74
+MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
+MD5 cfecda4817a0252254abf7ee4d1a10ba files/control-center-2-logout.patch 12887
+MD5 38949ed5d795344f78a96af44764f896 files/digest-control-center-1.4.0.5-r1 76
+MD5 63670f480e3cafb0d9dc8b3423425071 files/control-center-2.6.0-remove-pmu.patch 1210
 MD5 3afae17cdd913d2de47ec8017cafe327 files/digest-control-center-2.6.1 74
 MD5 0ac36f350969840cdac6ab03ead02612 files/digest-control-center-2.8.0 74
-MD5 3c50bab26a7b8dd1ccb40514655a0a79 files/digest-control-center-2.8.1 74
-MD5 fdc3d7feea8b429588a2d193c9547dbf files/control-center-2.2.0.1-alpha_hack.patch 2997
-MD5 cfecda4817a0252254abf7ee4d1a10ba files/control-center-2-logout.patch 12887
-MD5 63670f480e3cafb0d9dc8b3423425071 files/control-center-2.6.0-remove-pmu.patch 1210
-MD5 adbe3cf7b6918f7681569128f76a4b71 files/control-center-2.2-icons_install.patch 2943
-MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
-MD5 3c50bab26a7b8dd1ccb40514655a0a79 files/digest-control-center-2.8.1-r1 74
-MD5 38949ed5d795344f78a96af44764f896 files/digest-control-center-1.4.0.5-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBusKmugEuf3OQ0akRAld4AJwNO1TxiQDfPRLXFqM51p5tGEEMCACeKV3F
+PgM0Oq4xH/9pYeu35ANTUmY=
+=P0vg
+-----END PGP SIGNATURE-----

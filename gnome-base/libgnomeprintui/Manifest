@@ -1,18 +1,28 @@
-MD5 72902405f73128ee57a4914c9e2aeabb ChangeLog 7875
-MD5 3fe94eada8b252a92b7640ffaf99ad68 libgnomeprintui-1.116.0.ebuild 787
-MD5 77f51e6d6ac2507e269dbf1a8a2576d2 libgnomeprintui-2.4.2.ebuild 661
-MD5 6c730c456611fbe832408cf330ef567e libgnomeprintui-2.6.0.ebuild 735
-MD5 ed1bd6c26371d7cc8453ebdb4c0dad50 libgnomeprintui-2.6.1.ebuild 742
-MD5 e466e2bee11137c8a300cf1225dde1ac libgnomeprintui-2.6.2.ebuild 741
-MD5 7386dbb4c1fd29165140ee4929927b3f libgnomeprintui-2.8.0.ebuild 744
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ae0fb0e02257013d6161dd7308f76c0b ChangeLog 7982
+MD5 33ac9ef95b8be129c89b9d7bcd48d48f libgnomeprintui-2.8.0.ebuild 746
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 3fe94eada8b252a92b7640ffaf99ad68 libgnomeprintui-1.116.0.ebuild 787
 MD5 6b10fa34c0b37bcf4d04671ec38bf540 libgnomeprintui-2.8.1.ebuild 740
-MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
-MD5 4bb0abca3932a751bb44db9d48c20b18 files/digest-libgnomeprintui-2.4.2 74
-MD5 36adff026f0569396631cc1428b7d199 files/digest-libgnomeprintui-2.6.0 74
+MD5 ed1bd6c26371d7cc8453ebdb4c0dad50 libgnomeprintui-2.6.1.ebuild 742
+MD5 6c730c456611fbe832408cf330ef567e libgnomeprintui-2.6.0.ebuild 735
+MD5 e466e2bee11137c8a300cf1225dde1ac libgnomeprintui-2.6.2.ebuild 741
+MD5 77f51e6d6ac2507e269dbf1a8a2576d2 libgnomeprintui-2.4.2.ebuild 661
 MD5 0fb6f1b0c3217961db073ca22f45c8cb files/digest-libgnomeprintui-2.6.1 74
 MD5 3e6417d9c932e4eeff43b723a35b1353 files/digest-libgnomeprintui-2.6.2 74
-MD5 659018dfa0d3363d94c08a76dbce5256 files/digest-libgnomeprintui-2.8.0 74
+MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
 MD5 5bfbd1dd041e8ac446b2964073f7cbb0 files/digest-libgnomeprintui-2.8.1 74
-MD5 f007d30bd0ba486b3d83d47cd460b4c9 files/libgnomeprintui-1-syntax_fix.patch 603
+MD5 36adff026f0569396631cc1428b7d199 files/digest-libgnomeprintui-2.6.0 74
 MD5 c19ecd012203d7a7f503ceb3d0c30f3a files/libgnomeprintui-2-syntax_fix.patch 895
+MD5 4bb0abca3932a751bb44db9d48c20b18 files/digest-libgnomeprintui-2.4.2 74
+MD5 f007d30bd0ba486b3d83d47cd460b4c9 files/libgnomeprintui-1-syntax_fix.patch 603
+MD5 659018dfa0d3363d94c08a76dbce5256 files/digest-libgnomeprintui-2.8.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBusTmugEuf3OQ0akRAralAKCDsYSFPErnIoT1yC2fTnoEL6oe2wCeITw7
+nFFLt1w+mo9He/WYjR14vgk=
+=f8et
+-----END PGP SIGNATURE-----
