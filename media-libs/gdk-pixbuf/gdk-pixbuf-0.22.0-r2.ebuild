@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r2.ebuild,v 1.6 2004/03/13 23:39:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r2.ebuild,v 1.7 2004/03/23 17:09:51 avenj Exp $
 
 inherit virtualx libtool gnome.org gnuconfig
 
@@ -13,7 +13,8 @@ RDEPEND="media-libs/jpeg
 	media-libs/tiff
 	=x11-libs/gtk+-1.2*
 	>=media-libs/libpng-1.2.1
-	amd64? sys-libs/db : <sys-libs/db-2
+	amd64? ( sys-libs/db )
+	!amd64? ( <sys-libs/db-2 )
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
 # We need gnome-libs here, else gnome support do not get compiled into
 # gdk-pixbuf (the GnomeCanvasPixbuf library )
