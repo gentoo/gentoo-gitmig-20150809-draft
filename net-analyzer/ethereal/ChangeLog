@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.76 2004/07/09 19:56:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.77 2004/07/09 21:51:57 pylon Exp $
+
+  09 Jul 2004; Lars Weiler <pylon@gentoo.org> ethereal-0.10.5-r1.ebuild:
+  Stable on ppc.
 
   09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> ethereal-0.10.5.ebuild:
   Stable on alpha, bug 56423.

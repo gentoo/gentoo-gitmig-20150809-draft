@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.48 2004/07/08 16:19:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.49 2004/07/09 21:49:16 pylon Exp $
+
+  09 Jul 2004; Lars Weiler <pylon@gentoo.org> net-snmp-5.1.1.ebuild:
+  Stable on ppc.
 
   08 Jul 2004; Jason Wever <weeve@gentoo.org> net-snmp-5.1.1.ebuild:
   Stable on sparc.
