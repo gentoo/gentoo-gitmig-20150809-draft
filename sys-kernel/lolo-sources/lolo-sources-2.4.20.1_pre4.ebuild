@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre4.ebuild,v 1.2 2002/12/09 04:37:28 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre4.ebuild,v 1.3 2002/12/16 03:35:12 lostlogic Exp $
 
 IUSE="build"
 
@@ -51,4 +51,7 @@ pkg_postinst() {
 	einfo "by assigning bugs on bugs.gentoo.org to"
 	einfo "lostlogic@gentoo.org"
 	einfo "Known issues: ext3 data=journalled mode doesn't work"
+	einfo "I've had reports of massive ext2 corruption on this"
+	einfo "kernel.  Be warned."
+
 }
