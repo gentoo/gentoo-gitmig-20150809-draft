@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.6 2003/02/12 09:44:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.7 2003/06/02 14:26:13 seemant Exp $
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> hanterm-3.1.6-r1.ebuild,
+  hanterm-3.1.6-r2.ebuild:
+  baekmuk fonts are in media-fonts now
 
 *hanterm-3.1.6-r2 (24 Jul 2002)
 

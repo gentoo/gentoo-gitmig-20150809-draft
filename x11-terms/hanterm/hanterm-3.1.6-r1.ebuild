@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r1.ebuild,v 1.6 2003/02/13 17:35:08 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r1.ebuild,v 1.7 2003/06/02 14:26:13 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hanterm -- Korean terminal"
@@ -14,7 +14,7 @@ LICENSE="X11"
 DEPEND="virtual/glibc
 	>=x11-libs/Xaw3d-1.5
 	virtual/x11
-	x11-misc/baekmuk-fonts"
+	media-fonts/baekmuk-fonts"
 
 src_compile() {
 	./configure \
