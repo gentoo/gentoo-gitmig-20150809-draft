@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.9 2004/06/24 22:50:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r4.ebuild,v 1.1 2004/07/08 13:43:31 wolf31o2 Exp $
 
 inherit games
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://www.unrealtournament.com/"
 SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://www.lokigames.com/sekrit/ut2004-lnx-demo-${PV}.run.bz2
 	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2
-	http://icculus.org/~icculus/tmp/${PN}-lnx-tts-pingpatch.tar.bz2 )
+	http://icculus.org/~icculus/tmp/${PN}-lnx-tts-pingpatch.tar.bz2
+	http://icculus.org/~icculus/tmp/please_test_with_ut2004-2.tar.bz2 )
 	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2
 	http://icculus.org/~icculus/tmp/${PN}-lnx64-tts-pingpatch2.tar.bz2 )"
 
@@ -20,9 +21,7 @@ SLOT="0"
 KEYWORDS="-* x86 amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )
-	alsa? ( >=media-libs/alsa-lib-1.0.2
-			>=media-libs/libsdl-1.2.6-r3
-			>=media-libs/openal-20040218 ) "
+	alsa? ( >=media-libs/alsa-lib-1.0.2 ) "
 
 S=${WORKDIR}
 
@@ -32,6 +31,8 @@ src_unpack() {
 	[ "${ARCH}" = "x86" ] && RNAME="ut2004-lnx-demo-${PV}.run"
 	unpack_makeself ${RNAME}
 	rm ${RNAME}
+	# We unpack this one again so the right files are in the right places
+	unpack please_test_with_ut2004-2.tar.bz2
 }
 
 src_install() {
@@ -54,8 +55,12 @@ src_install() {
 	doexe ut2004-bin
 	doins README-tts.txt tts-festival.pl
 
+	# Here we apply fix for bug #54726
+	dosed "s:UplinkToGamespy=True:UplinkToGamespy=False:" \
+		${dir}/System/Default.ini
+
 	# ALSA and VoIP
-	if use alsa; then
+	if use alsa && use amd64 ; then
 		rm ${D}/${dir}/System/{libSDL-1.2.so.0,openal.so} || die "removing libs"
 		dosym /usr/lib/libSDL-1.2.so.0 ${dir}/System/libSDL-1.2.so.0 || die "SDL symlink"
 		dosym /usr/lib/libopenal.so.0 ${dir}/System/openal.so || die "OpenAL symlink"

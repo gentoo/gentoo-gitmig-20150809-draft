@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.25 2004/06/24 22:50:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.26 2004/07/08 13:43:31 wolf31o2 Exp $
+
+*ut2004-demo-3120-r4 (08 Jul 2004)
+
+  08 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-demo-3120-r2.ebuild, -ut2004-demo-3120-r3.ebuild,
+  +ut2004-demo-3120-r4.ebuild:
+  Updated to close bug #54726.
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   ut2004-demo-3120-r2.ebuild, ut2004-demo-3120-r3.ebuild:
