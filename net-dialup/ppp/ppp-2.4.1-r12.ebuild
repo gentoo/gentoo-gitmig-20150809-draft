@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.7 2003/05/23 04:39:18 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r12.ebuild,v 1.8 2003/07/16 14:16:44 pvdabeel Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -15,7 +15,7 @@ PROVIDE="virtual/pppd"
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="x86 ~ppc ~sparc hppa ~alpha"
+KEYWORDS="x86 ppc ~sparc hppa ~alpha"
 
 src_compile() {
 
