@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 86661ba0ca338a2783dd95296df291f3 ChangeLog 55289
-MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
+MD5 142c4f0f1b36b7e57a99103c618ea5d9 gcc-2.95.3-r8.ebuild 9107
 MD5 b6a375116a668edbe10b2ac2e1f9fc6d gcc-3.0.4-r6.ebuild 8577
 MD5 3a2e4f5d5f2d94e5ee2a399ab3b0f32e gcc-3.3-r1.ebuild 16506
 MD5 68da62e17a31058a92822721b553eca9 gcc-3.1.1-r1.ebuild 9424
@@ -30,8 +30,8 @@ MD5 d8d35a54609911a201727872dc3ffe26 gcc-3.3.3_pre20040322.ebuild 22621
 MD5 4d2358f8de94b9f2e02b5ec5a0a66c3d gcc-3.3.3_pre20040408-r1.ebuild 22693
 MD5 3b2fd4637666e71aae9954782cd23016 gcc-3.3.3_pre20040426.ebuild 22633
 MD5 66229a95f7bb2856fd07dfd0d6589480 gcc-3.3.3-r5.ebuild 25326
-MD5 d70bcc196f1d68275346f067efcb9373 files/cc 20
-MD5 dcf3646d19d351cc4d95a8096c6eaf58 files/cpp 20
+MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
+MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 4a4be6eb294e00da7fef14ec597dcf13 files/digest-gcc-3.0.4-r6 128
 MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
@@ -49,10 +49,6 @@ MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r3 361
 MD5 29b68fb9b347114baf405bf67ebca0cd files/digest-gcc-3.3.2-r4 361
 MD5 b56b1fa94f82e5c569de7677b8a485e0 files/fix_libtool_files.sh 1738
-MD5 b1a242694f56184cbcdd40ba25800d50 files/gcc-2.95.3-alpha.diff 14345
-MD5 2d5af6fe0b03d39a94cb4c4d4b03e226 files/gcc-2.95.3-atexit.diff 1731
-MD5 73da03a8bd40327709e7850d9e2158e6 files/gcc-2.95.3-destructor-atexit.diff 3890
-MD5 523970c128b929fe7c7cf36508ebd1d5 files/gcc-2.95.3-new-atexit.diff 13604
 MD5 385267d11aa8b32522d1585b2d520476 files/gcc-3-deopt-doc.patch 819
 MD5 a84561f46d573c1c835b1c4d2510cc07 files/gcc-3-deopt.patch 588
 MD5 9c13e6b0d5770979430b76c578afa22c files/gcc3-program-transform.patch 9771
@@ -93,6 +89,8 @@ MD5 2f1d2c02b99aa182f1fd9b6328c8b77a files/3.1/gcc31-libstdc++-setrlim.patch.bz2
 MD5 df404bbcc95193a2591895758915e74e files/3.1/gcc31-pr6643.patch.bz2 421
 MD5 386ffd7fc3ca4a8af55155fe57871dc4 files/3.1/gcc31-test-rotate.patch.bz2 1060
 MD5 7f4bc242692c8e5a2ea0e3e865433d94 files/3.1/gcc31-trunc_int_for_mode.patch.bz2 826
+MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
+MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
 MD5 2b3b3b8637dc17eedce3b1ca1b68f1f1 files/3.2/gcc-3.2-glibc-2.3-compat.diff 5511
 MD5 a97a78f90c372855823b9facf1ba57b6 files/3.2/gcc-3.2.ctype.patch 3500
 MD5 7f884a426afe182c10d2a5fad94c73cc files/3.2/gcc-3.2.fix-copy.patch 2185
@@ -159,7 +157,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/reiser4-why-do-you-hate-me.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFAxPcvHTu7gpaalycRAtpEAJwLYXdKo7ZdGhXf51vGh2bHM9Hc0QCg+OE0
-jIEBnwttN1geYWacqvfDLiw=
-=GOCL
+iD8DBQFAxPgZHTu7gpaalycRArqzAKCYqMw2ZxMR53xRSlBn3xwyZRXuxwCg8UnD
+I0itDN1/neTcb8Zcz8J3FE4=
+=IEwg
 -----END PGP SIGNATURE-----

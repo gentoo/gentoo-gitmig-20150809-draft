@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.26 2004/04/22 02:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.27 2004/06/07 23:19:44 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -108,9 +108,9 @@ src_unpack() {
 	# Azarah - 30 Jun 2002
 	#
 	if ! use alpha ; then
-		epatch ${FILESDIR}/${P}-new-atexit.diff
+		epatch ${FILESDIR}/${PV}/${P}-new-atexit.diff
 	else
-		epatch ${FILESDIR}/${P}-alpha.diff
+		epatch ${FILESDIR}/${PV}/${P}-alpha.diff
 	fi
 
 	# Currently if any path is changed via the configure script, it breaks
