@@ -1,0 +1,65 @@
+diff -ur vmailmgr-0.96.9.orig/commands/vcheckquota.cc vmailmgr-0.96.9/commands/vcheckquota.cc
+--- vmailmgr-0.96.9.orig/commands/vcheckquota.cc	2000-08-19 19:05:57.000000000 +0200
++++ vmailmgr-0.96.9/commands/vcheckquota.cc	2003-12-06 13:06:22.293442000 +0100
+@@ -31,10 +31,10 @@
+ 
+ const char* cli_program = "vcheckquota";
+ const char* cli_help_prefix = "vmailmgr quota enforcement program\n";
+-const char* cli_help_suffix = "
+-Warning: the soft-message is linked into the users maildir once for each
+-message that is received while the account is over its soft quota.  This may
+-result in multiple warning messages.\n";
++const char* cli_help_suffix = "\n"
++"Warning: the soft-message is linked into the users maildir once for each\n"
++"message that is received while the account is over its soft quota.  This may\n"
++"result in multiple warning messages.\n";
+ const char* cli_args_usage = "";
+ const int cli_args_min = 0;
+ const int cli_args_max = 0;
+diff -ur vmailmgr-0.96.9.orig/commands/vchforwards.cc vmailmgr-0.96.9/commands/vchforwards.cc
+--- vmailmgr-0.96.9.orig/commands/vchforwards.cc	2000-08-16 04:08:35.000000000 +0200
++++ vmailmgr-0.96.9/commands/vchforwards.cc	2003-12-06 13:06:06.349761000 +0100
+@@ -25,8 +25,7 @@
+ const char* cli_help_prefix =
+ "Change virtual user forwarding addresses.\n";
+ const char* cli_help_suffix =
+-"If no forwarding addresses are given, forwarding is disabled.
+-";
++"If no forwarding addresses are given, forwarding is disabled.\n";
+ const char* cli_args_usage = "USERNAME [DESTINATION1 ...]";
+ const int cli_args_min = 1;
+ const int cli_args_max = -1;
+diff -ur vmailmgr-0.96.9.orig/commands/vpasswd2cdb.cc vmailmgr-0.96.9/commands/vpasswd2cdb.cc
+--- vmailmgr-0.96.9.orig/commands/vpasswd2cdb.cc	2000-08-16 04:02:01.000000000 +0200
++++ vmailmgr-0.96.9/commands/vpasswd2cdb.cc	2003-12-06 13:05:47.972435000 +0100
+@@ -26,10 +26,10 @@
+ 
+ const char* cli_program = "vpasswd2cdb";
+ const char* cli_help_prefix = "Converts text password tables to CDB format\n";
+-const char* cli_help_suffix =
+-"Reads in a standard virtual password table in the current directory,
+-and writes it out to a CDB table.  The file names for the text and CDB
+-tables are determined from the configuration file.";
++const char* cli_help_suffix = "\n"
++"Reads in a standard virtual password table in the current directory,\n"
++"and writes it out to a CDB table.  The file names for the text and CDB\n"
++"tables are determined from the configuration file.";
+ const char* cli_args_usage = "";
+ const int cli_args_min = 0;
+ const int cli_args_max = 0;
+diff -ur vmailmgr-0.96.9.orig/commands/vpasswd2db.cc vmailmgr-0.96.9/commands/vpasswd2db.cc
+--- vmailmgr-0.96.9.orig/commands/vpasswd2db.cc	2000-08-16 04:02:04.000000000 +0200
++++ vmailmgr-0.96.9/commands/vpasswd2db.cc	2003-12-06 13:06:36.300404000 +0100
+@@ -26,9 +26,9 @@
+ const char* cli_program = "vpasswd2db";
+ const char* cli_help_prefix = "Converts text password tables to current vpwtable DB format\n";
+ const char* cli_help_suffix =
+-"Reads in a standard virtual password table in the current directory,
+-and writes it out to a table.  The file names for the input and output
+-tables are determined from the configuration file.";
++"Reads in a standard virtual password table in the current directory,\n"
++"and writes it out to a table.  The file names for the input and output\n"
++"tables are determined from the configuration file.";
+ const char* cli_args_usage = "";
+ const int cli_args_min = 0;
+ const int cli_args_max = 0;

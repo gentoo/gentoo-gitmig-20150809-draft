@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.12 2004/07/01 22:37:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.13 2004/09/30 12:15:10 ticho Exp $
+
+  30 Sep 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/vmailmgr-0.96.9-gcc3.3.patch, vmailmgr-0.96.9-r1.ebuild:
+  Apply patch to fix multiline strings so we compile cleanly on >=gcc3.3.
+  Closes #65400, patch provided by Christophe Saout <christophe@saout.de>.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vmailmgr-0.96.9-r1.ebuild:

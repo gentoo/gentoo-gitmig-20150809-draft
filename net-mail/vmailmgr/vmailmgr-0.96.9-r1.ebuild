@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.20 2004/07/15 02:31:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.21 2004/09/30 12:15:10 ticho Exp $
 
 inherit gcc
 
@@ -29,6 +29,9 @@ src_compile() {
 
 	if [ "`gcc-major-version`" = "3" ]; then
 		export LIBS="-lcrypt -lsupc++"
+		if [ `gcc-minor-version` -ge 3 ]; then
+			epatch ${FILESDIR}/${P}-gcc3.3.patch
+		fi
 	fi
 
 	if [ "`gcc-major-version`" = "2" ]; then
