@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.56 2005/01/21 20:47:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.57 2005/01/22 19:29:21 brix Exp $
+
+*wireless-tools-24 (22 Jan 2005)
+
+  22 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +wireless-tools-24.ebuild:
+  Resurrected wireless-tool-24.ebuild for sparc.
 
   21 Jan 2005; Lars Weiler <pylon@gentoo.org> wireless-tools-27.ebuild:
   Stable on ppc.
