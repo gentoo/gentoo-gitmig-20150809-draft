@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r10.ebuild,v 1.1 2004/03/02 18:31:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r10.ebuild,v 1.2 2004/03/20 15:48:53 spock Exp $
 
 S=${WORKDIR}/${PF}
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
@@ -9,7 +9,7 @@ SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${PF}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 DEPEND=">=media-libs/freetype-2
 	media-libs/libmng"
