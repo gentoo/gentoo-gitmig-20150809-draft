@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.8.ebuild,v 1.1 2001/02/20 23:40:54 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.8.ebuild,v 1.2 2001/05/07 15:42:37 achim Exp $
 
 #P=
 A=AfterStep-${PV}.tar.bz2
@@ -31,10 +31,13 @@ src_compile() {
 src_install () {
     try make DESTDIR=${D} install
     rm -f ${D}/usr/X11R6/bin/sessreg
-    
+
+    exeinto /usr/X11R6/bin/wm
+    doexe ${FILESDIR}/afterstep
+
     dodoc COPYRIGHT ChangeLog NEW README README.HPUX
     dodoc README.RedHat README.SOLARIS TEAM UPGRADE
-    
+
     cd ${S}/TODO ; docinto TODO
     dodoc BUGLIST.1st BUGLIST.l8r TODO-WinList active.desk.gz
     dodoc autoconf.patch.gz classic.afterstep.gz classic.wharf.gz
