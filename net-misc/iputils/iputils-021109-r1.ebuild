@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r1.ebuild,v 1.5 2004/03/22 05:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r1.ebuild,v 1.6 2004/03/22 05:56:58 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -29,10 +29,15 @@ src_unpack() {
 	cd ${S}
 
 	cp ${FILESDIR}/${P}-pfkey.patch include-glibc/net/pfkeyv2.h || die
-	sed -e "27s:-O2:${CFLAGS}:;68s:./configure:unset CFLAGS\;./configure:" -i Makefile
-	sed -e "20d;21d;22d;23d;24d" -i Makefile
+	sed -i \
+		-e "27s:-O2:${CFLAGS}:;68s:./configure:unset CFLAGS\;./configure:" \
+		-e "20d;21d;22d;23d;24d" \
+		-e "/^CC=/s:gcc:$(gcc-getCC):" \
+		Makefile \
+		|| die
 
 	# not everybody wants ipv6 suids laying around on the filesystems
+
 	use ipv6 || sed -i -e s:"IPV6_TARGETS=":"#IPV6_TARGETS=":g Makefile
 }
 
@@ -40,16 +45,16 @@ src_compile() {
 	use static && append-ldflags -static
 
 	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ]; then
-		sed -e '1s:/usr/src/linux/include:${ROOT}/usr/include:' -i libipsec/Makefile
-		sed -e '1s:/usr/src/linux/include:${ROOT}/usr/include:' -i setkey/Makefile
-		sed -e '1s:/usr/src/linux/include:${ROOT}/usr/include:;10s:-ll:-lfl:' -i setkey/Makefile
-		sed -e "51s:ifdef:ifndef:;68d; 69d; 70d;" -i racoon/grabmyaddr.c
-		sed -e '461i\LIBS="$LIBS -lfl -lresolv"' -i racoon/configure.in
+		sed -i -e '1s:/usr/src/linux/include:${ROOT}/usr/include:' libipsec/Makefile
+		sed -i -e '1s:/usr/src/linux/include:${ROOT}/usr/include:' setkey/Makefile
+		sed -i -e "1s:/usr/src/linux/include:${ROOT}/usr/include:;10s:-ll:-lfl ${LDFLAGS}:" setkey/Makefile
+		sed -i -e "51s:ifdef:ifndef:;68d; 69d; 70d;" racoon/grabmyaddr.c
+		sed -i -e '461i\LIBS="$LIBS -lfl -lresolv"' racoon/configure.in
 		cd ${S}/libipsec && emake || die "libipsec failed"
 		cd ${S}/setkey && emake || die "setkey failed"
 
 		cd ${S}/racoon
-		autoconf || die "autoconf racoon failed"
+		autoconf
 		econf || die
 		emake || die "make racoon failed"
 	fi
