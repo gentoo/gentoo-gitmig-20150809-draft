@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/garlic
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/ChangeLog,v 1.1 2003/07/14 01:44:46 george Exp $
+
+*garlic-3.15p.ebuild (13 Jul 2003)
+
+  13 Jul 2003; George Shapovalov <george@gentoo.org> garlic-3.15p.ebuild, files/{digest-garlic-3.15p} :
+  initial release (# 23695)
+  The GNAT implementation of the ARM Annex for Distributed Systems.
+  ebuild submitted by David Holm <dholm@telia.com>
