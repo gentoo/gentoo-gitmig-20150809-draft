@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.1 2005/01/28 07:29:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.8.ebuild,v 1.2 2005/01/28 17:01:54 suka Exp $
 
 # Notes:
 #
@@ -450,14 +450,7 @@ src_compile() {
 	fi
 
 	# Now for our optimization flags ...	
-	export ARCH_FLAGS="${CFLAGS}"
-
-	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
-	then
-		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
-		export CCCOMP="$(tc-getCC)"
-		export CXXCOMP="$(tc-getCXX)"
-	fi
+	export ARCH_FLAGS="${CXXFLAGS}"
 
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
