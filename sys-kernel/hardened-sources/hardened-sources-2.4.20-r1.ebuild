@@ -10,7 +10,7 @@ ETYPE="sources"
 inherit kernel || die
 
 OKV=2.4.20
-EXTRAVERSION=-hardened
+EXTRAVERSION=-hardened-r1
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Special Security Hardened Gentoo Kernel (don't use this yet, it isn't ready)"
@@ -27,12 +27,28 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	
 	cd ${KV}
+	# We can't use LSM/SELinux and GRSec in the same kernel.  If USE=selinux, we will
+	# patch in LSM/SELinux and drop support for GRsec.  Otherwise we will include GRSec.
+	if [ "`use selinux`" ]; then
+		einfo "Enabling SELinux support.  This will drop GRSec support."
+		for file in *grsec*; do
+			einfo "Dropping ${file}.."
+			rm -f ${file}
+		done
+	else
+		einfo "Did not find \"selinux\" in use, building with GRSec support."
+		for file in *lsm* *selinux*; do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	fi
+	
 	kernel_src_unpack
 }
 
 pkg_postinst() {
 	kernel_pkg_postinst
-	einfo "This kernel contains LSM, GRSec2, and Systrace"
+	einfo "This kernel contains LSM/SElinux or GRSecurity, and Systrace"
 	einfo "This is not yet a production ready kernel.  If you experience problems with"
 	einfo "this kernel please report them by assigning bugs on bugs.gentoo.org to"
 	einfo "frogger@gentoo.org"
