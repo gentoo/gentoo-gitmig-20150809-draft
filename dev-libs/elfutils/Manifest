@@ -1,4 +1,4 @@
-MD5 ce4ca14c7339a3597a8f587855afd770 ChangeLog 4406
-MD5 9462316ce4f7ee855d171efb4c7857e5 elfutils-0.94-r1.ebuild 1421
+MD5 bc134d354f086a902c358ead74be5ae7 elfutils-0.94-r1.ebuild 1412
+MD5 67b5c5c2382f10328262e2eb78e750a1 ChangeLog 4397
 MD5 25da57fec6a38ed0c69ec6682b595398 files/elfutils-0.94-alpha-mips-atime.diff 699
 MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65

@@ -1,4 +1,4 @@
-MD5 b02398ceec501089da4a780d222a4375 ChangeLog 340
-MD5 60c63019b848e4b6f26b25f3f0108224 torch-3.ebuild 1901
+MD5 9e5add6c9a09ecd9cbfd75014330cb8f ChangeLog 332
+MD5 13ed3d471b0514ea42c71c7e68d5a861 torch-3.ebuild 1893
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 b783f0f266b5452761370caf0b78e7f3 files/digest-torch-3 117

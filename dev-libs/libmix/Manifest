@@ -1,4 +1,4 @@
-MD5 5425a96241f0cf0db47570a6035e4972 files/digest-libmix-2.05 58
-MD5 78904b52cd8e3ced5ec705713ed2545e libmix-2.05.ebuild 882
-MD5 f5e9da99f246dbcd6b9be3da243b02d5 ChangeLog 335
+MD5 708f943efae4ec6cae6679dd805c6b6e ChangeLog 328
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 08f85e58a9eb0ffdbd2aeab9e1396698 libmix-2.05.ebuild 875
+MD5 5425a96241f0cf0db47570a6035e4972 files/digest-libmix-2.05 58

@@ -1,5 +1,5 @@
-MD5 cad4cf5e163610cb6455583261985247 nss-3.8.ebuild 2528
-MD5 01ac3518e60f2f10fc2a887eb4efa72a ChangeLog 2466
+MD5 cea9d91fed5fee5b71e9af61be379f4b nss-3.8.ebuild 2521
+MD5 4ab57f14a68ca9f14c36025a764e7293 ChangeLog 2459
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 2bba753992f9510d4a440a2ca18858c4 files/nss-3.8-mips.patch 503
 MD5 ef044b71f9a324137ddae80c970ea246 files/nss-3.8-hppa.patch 4758
