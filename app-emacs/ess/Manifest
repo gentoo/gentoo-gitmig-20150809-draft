@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f7b9b661c96232fd6c11c4e1c5ebf64f ChangeLog 1185
 MD5 b664128eb1ac46dd0a7f2a551388bb9e ess-5.1.24.ebuild 1524
-MD5 0c359ef73caa5afb60a5846040e5f61c ChangeLog 1102
-MD5 6f109a47ca46a8f93a64ea8e0cf7ca9d ess-5.2.2-r1.ebuild 1582
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 bdd07c6ef4b007d48c4320e7308f0c04 files/digest-ess-5.1.24 63
+MD5 a3a30537532a40edd708df6dd9074678 ess-5.2.2-r1.ebuild 1586
 MD5 7dcd675529a342a66a000dd81f18574b files/50ess-gentoo.el 110
+MD5 bdd07c6ef4b007d48c4320e7308f0c04 files/digest-ess-5.1.24 63
 MD5 3082a761888394000f733ae91c38c278 files/digest-ess-5.2.2-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBNgq8CHk4+ZoBpvsRArbVAJ0a0N8I62q/z36TPdbfUCjk0PjcbwCgu3Yp
-mO6xkPxVIzb80laivvTyeJA=
-=D5iL
------END PGP SIGNATURE-----
