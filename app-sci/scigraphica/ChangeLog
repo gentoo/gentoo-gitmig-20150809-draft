@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/scigraphica
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.8 2004/06/24 22:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.9 2004/11/30 14:49:56 phosphan Exp $
+
+  30 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> +files/gcc3.4.patch,
+  scigraphica-0.8.0-r2.ebuild:
+  gcc 3.4 patch - bug #71875
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
   scigraphica-0.8.0-r1.ebuild, scigraphica-0.8.0-r2.ebuild,

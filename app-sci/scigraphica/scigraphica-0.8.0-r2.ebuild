@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.4 2004/08/21 15:37:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.5 2004/11/30 14:49:56 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="Scientific application for data analysis and technical graphics"
 SRC_URI="http://scigraphica.sourceforge.net/src/${P}.tar.gz"
@@ -28,6 +30,12 @@ pkg_setup() {
 		ewarn 'you had (best accomplished by running "emerge -u --deep world")'
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc3.4.patch
 }
 
 src_compile() {
