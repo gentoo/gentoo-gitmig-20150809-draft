@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.27 2004/10/05 06:44:50 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.28 2004/10/11 00:55:08 weeve Exp $
+
+  10 Oct 2004; Jason Wever <weeve@gentoo.org> fox-1.2.6-r2.ebuild:
+  Stable on sparc.
 
 *fox-1.2.6-r2 (05 Oct 2004)
 
