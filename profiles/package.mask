@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (22 Dec 2002)
+# until bug #12538 can be resolved
+=x11-libs/qt-3.1.1
+
 # <carpaski@gentoo.org> (21 Dec 2002)
 # Testing for UserPriv compile
 >=sys-apps/portage-2.0.47_pre1
