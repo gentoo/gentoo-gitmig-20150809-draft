@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.1 2004/03/25 02:56:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.2 2004/03/25 03:30:18 eradicator Exp $
 
 inherit eutils
 
@@ -17,14 +17,20 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X alsa"
 
-DEPEND=">=dev-lang/tcl-8.3.3
+RDEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	X? ( x11-base/xfree )"
 
+DEPEND="${RDEPEND}
+	sys-apps/sed"
+
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-exp.patch
+
+	# Fix install borkage
+	sed -i 's:\(cp -pr ../doc ../extra $(INSTDIR)/lib/pd/\):# \1:' ${S}/src/makefile.in
 }
 
 src_compile() {
@@ -34,9 +40,6 @@ src_compile() {
 		`use_with X x` \
 		`use_enable debug` \
 		|| die "./configure failed"
-
-	# Fix borkage
-	sed -i 's:cp -pr ../doc ../extra $(INSTDIR)/lib/pd/:#:' ${S}/src/makefile
 
 	emake || die "parallel make failed"
 }
