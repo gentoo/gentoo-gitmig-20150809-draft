@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.41 2003/10/19 22:43:39 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.42 2003/10/20 06:22:27 kumba Exp $
+
+*nmap-3.48 (20 Oct 2003)
+
+  20 Oct 2003; Joshua Kinard <kumba@gentoo.org> nmap-3.48.ebuild:
+  Added ~mips to KEYWORDS
 
   20 Oct 2003; Christian Birchinger <joker@gentoo.org> nmap-3.45.ebuild:
   Added sparc stable keyword
