@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.7 2003/05/21 20:30:28 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.8 2003/06/05 00:35:55 robh Exp $
+
+*wmmail-0.64-r3 (05 Jun 2003)
+
+  05 Jun 2003; robh <robh@gentoo.org> wmmail-0.64-r1.ebuild,
+  wmmail-0.64-r2.ebuild, wmmail-0.64-r3.ebuild, wmmail-0.64.ebuild:
+  fixed /usr/share/GNUstep sillyness.
 
 *wmmail-0.64-r2 (21 May 2003)
 
