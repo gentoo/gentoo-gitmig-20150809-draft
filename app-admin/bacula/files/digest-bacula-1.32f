@@ -1,0 +1,4 @@
+MD5 2c635cf693262fc946eb13aa271e0263 bacula-1.32f.tar.gz 3291702
+MD5 aba3c0108a7b301c99c8aa4f59a04081 1.32f-1-weekofmonth.patch 1879
+MD5 987a083ae5e20ab702e0c83cb219a772 1.32f-2-eom-nextvol.patch 9970
+MD5 47c1b8265c9a48ce53d8f0d6cbd3c89c 1.32f-4-run-crash.patch 17003
