@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.4 2003/02/12 06:05:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.5 2003/09/14 16:26:49 iggy Exp $
+
+*libevent-0.7a (14 Sep 2003)
+
+  14 Sep 2003; <iggy@gentoo.org> libevent-0.7a.ebuild:
+  version bump thanks to hillster
 
   07 Jan 2003; Kain <kain@kain.org> : This gets a ~ for ppc.  Builds for me!
 
