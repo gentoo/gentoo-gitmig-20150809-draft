@@ -1,4 +1,4 @@
-MD5 3d5d040703163f136d894666c6e30be8 ChangeLog 769
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 2f91103479eb23746f5aa5c25291ed16 gst-editor-0.5.0.ebuild 691
 MD5 922fb38d65a756b205acc6a4e188b77c files/digest-gst-editor-0.5.0 68
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 3d5d040703163f136d894666c6e30be8 ChangeLog 769
+MD5 24f1f6fcaae3c7d5381e10d925d791f6 gst-editor-0.5.0.ebuild 687

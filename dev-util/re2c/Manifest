@@ -1,4 +1,4 @@
-MD5 bfd94cb0b90e44fd4a65d708a04cb297 re2c-0.9.1.ebuild 848
-MD5 2a8eb5a5139983149681b7bb76cf9b71 ChangeLog 654
-MD5 63995d480a554e62b5d950e649397cea files/digest-re2c-0.9.1 62
 MD5 9ab079edcf8f22efe343fb3b1c4722b4 files/0.9.1-patch.gz 1466
+MD5 63995d480a554e62b5d950e649397cea files/digest-re2c-0.9.1 62
+MD5 4d29243ba44b596596ed918ffa17e165 ChangeLog 652
+MD5 bfd94cb0b90e44fd4a65d708a04cb297 re2c-0.9.1.ebuild 848
