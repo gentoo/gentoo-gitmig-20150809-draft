@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/eventwatcher
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.1 2004/03/13 21:08:51 centic Exp $
+
+*eventwatcher-0.2.1 (13 Mar 2004)
+
+  13 Mar 2004; Dominik Stadler <centic@gentoo.org> eventwatcher-0.2.1.ebuild,
+  metadata.xml:
+  New ebuild, thanks to Diego Pettenò <dgp85@users.sourceforge.net>, Bug 39480
+
