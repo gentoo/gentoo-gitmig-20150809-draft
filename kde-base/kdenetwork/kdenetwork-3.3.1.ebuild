@@ -1,25 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.3-r1.ebuild,v 1.9 2004/10/12 23:57:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.1.ebuild,v 1.1 2004/10/12 23:57:25 caleb Exp $
 
 inherit kde-dist eutils
 
-DESCRIPTION="KDE network apps: kopete, kppp, kget. kmail and knode are now in kdepim."
+DESCRIPTION="KDE network apps: kopete, kppp, kget..."
 
-KEYWORDS="x86 ppc ~amd64 sparc hppa alpha ~ia64"
-IUSE="slp samba wifi jabber ssl"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc ~hppa"
+IUSE="slp samba wifi ssl"
 
 DEPEND="~kde-base/kdebase-${PV}
 	slp? ( net-libs/openslp )
 	samba? ( net-fs/samba )
-	jabber? ( net-dns/libidn )
 	ssl? ( app-crypt/qca-tls )
 	!net-im/kopete
-	wifi? ( net-wireless/wireless-tools )"
+	wifi? ( net-wireless/wireless-tools )
+	!net-misc/ksambaplugin"
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/yahoo-fix-connect-062404.patch
 }
 
 src_compile() {
