@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.1-r1.ebuild,v 1.1 2002/02/20 07:23:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.2.ebuild,v 1.1 2002/03/03 22:13:51 azarah Exp $
 
-SV=1.2.6
+SV=1.2.7
 #sysvinit version
 SVIV=2.83
 S=${WORKDIR}/rc-scripts-${SV}
@@ -282,7 +282,7 @@ pkg_postinst() {
 	# is used, as this was the cause for all the devfs problems we had
 	if [ ! $altmerge -eq 1 ]
 	then
-		cd ${D}/lib/dev-state
+		cd ${D}/dev
 		#These devices are also needed by many people and should be included
 		echo "Making device nodes... (this could take a minute or so...)"
 		${S}/sbin/MAKEDEV generic-i386
@@ -306,22 +306,43 @@ pkg_postinst() {
 127.0.0.1	localhost
 EOF
 	fi
-	if [ -L ${ROOT}etc/mtab ]
+	if [ -L ${ROOT}/etc/mtab ]
 	then
 		rm -f ${ROOT}/etc/mtab
 		if [ "$ROOT" = "/" ]
 		then
-			cp /proc/mounts ${ROOT}etc/mtab
+			cp /proc/mounts ${ROOT}/etc/mtab
 		else
-			touch ${ROOT}etc/mtab
+			touch ${ROOT}/etc/mtab
 		fi
 	fi
 	#we should only install empty files if these files don't already exist.
 	local x
 	for x in log/lastlog run/utmp log/wtmp
 	do
-		[ -e ${ROOT}var/${x} ] || touch ${ROOT}var/${x}
+		[ -e ${ROOT}/var/${x} ] || touch ${ROOT}/var/${x}
 	done
+
+	#rather force the install of critical files to insure that there is no
+	#problems.
+	## add net.lo for now as well, as it is a problem case in this release.
+	for x in depscan.sh functions.sh runscript.sh checkroot net.lo
+	do
+		rm -f ${ROOT}/etc/init.d/._cfg*_${x}
+		cp -f ${S}/init.d/${x} ${ROOT}/etc/init.d/
+	done
+
+	#handle the ${svcdir} that changed in location
+	source ${ROOT}/etc/init.d/functions.sh
+	if [ ! -d ${ROOT}/${svcdir} ]
+	then
+		mkdir -p ${ROOT}/${svcdir}
+		mount -t tmpfs tmpfs ${ROOT}/${svcdir}
+		if [ -d ${ROOT}/dev/shm/.init.d ]
+		then
+			cp -ax ${ROOT}/dev/shm/.init.d/. ${ROOT}/${svcdir}
+		fi
+	fi
 
 	#kill the old /dev-state directory if it exists
 	if [ -e /dev-state ]
@@ -345,27 +366,6 @@ EOF
 			rm -rf /dev-state
 		fi
 	fi
-	
-#it should be ok now, and gets irritating to revert my changes all the time ;/
-#	#force update of /etc/devfsd.conf
-#	#just until everybody upgrade that is ...
-#	if [ -e /etc/devfsd.conf ]
-#	then
-#		mv /etc/devfsd.conf /etc/devfsd.conf.old
-#		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
-#
-#		echo
-#		echo "*********************************************************"
-#		echo "* This release use a new form of /dev management, so    *"
-#		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
-#		echo "* to this one.  Any old versions will be renamed to     *"
-#		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
-#		echo "* do not save your settings before adding entries, and  *"
-#		echo "* if you really need to, just add missing entries and   *"
-#		echo "* try not to delete lines from the new devfsd.conf.     *"
-#		echo "*********************************************************"
-#		echo
-#	fi
 	
 	#restart devfsd
 	#we dont want to restart devfsd when bootstrapping, because it will
