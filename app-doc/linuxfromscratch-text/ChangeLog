@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linuxfromscratch-text
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.3 2003/02/12 03:37:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.4 2003/05/15 00:42:12 spider Exp $
+
+*linuxfromscratch-text-4.0 (15 maj 2003)
+
+  15 maj 2003; <spider@gentoo.org> linuxfromscratch-text-4.0.ebuild:
+  Update to latest packaged release, 4.0 . 4.1 is avaiable on the web and as
+  paperback, but not for download.
 
 *linuxfromscratch-text-3.3 (09 Apr 2002)
 
