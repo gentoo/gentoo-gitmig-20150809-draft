@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2-r1.ebuild,v 1.4 2004/08/22 19:54:02 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2-r1.ebuild,v 1.5 2004/08/22 20:56:32 lisa Exp $
 
 inherit eutils gnome2
 
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}_xim.patch
+	epatch ${FILESDIR}/xim_patch.patch
 	epatch ${FILESDIR}/${P}-64bit.patch
 }
 
