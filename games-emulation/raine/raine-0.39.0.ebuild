@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.39.0.ebuild,v 1.3 2004/06/03 19:35:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.39.0.ebuild,v 1.4 2004/06/03 19:44:24 mr_bones_ Exp $
 
 inherit games
 
@@ -16,10 +16,11 @@ KEYWORDS="x86"
 IUSE="static debug nls"
 
 DEPEND="virtual/glibc
+	media-libs/allegro
 	sys-libs/zlib
 	media-libs/svgalib"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
