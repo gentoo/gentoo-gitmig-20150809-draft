@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.0_beta1.ebuild,v 1.3 2005/02/01 14:58:02 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.4.0_beta1.ebuild,v 1.4 2005/02/02 18:14:19 danarmak Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -29,7 +29,8 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    kdesktop/kdesktopbindings.cpp
 	    klipper/klipperbindings.cpp
 	    kxkb/kxkbbindings.cpp
-	    libkonq/"
+	    libkonq/
+	    kioslave/thumbnail/configure.in.in" # for the HAVE_LIBART test
 
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`"

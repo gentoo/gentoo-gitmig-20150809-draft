@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.1 2005/01/15 02:24:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.2 2005/02/02 18:16:39 danarmak Exp $
+
+  02 Feb 2005; Dan Armak <danarmak@gentoo.org> kdesktop-3.4.0_beta1.ebuild:
+  Add support for SVG files in the kdesktop background settings module; closes
+  bug #80272.
 
 *kdesktop-3.4.0_beta1 (15 Jan 2005)
 
