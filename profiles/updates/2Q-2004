@@ -21,3 +21,4 @@ move app-text/mlview app-editors/mlview
 move sys-apps/iproute sys-apps/iproute2
 move media-video/smpeg-xmms media-plugins/xmms-smpeg
 move media-sound/mppdec media-sound/musepack-tools
+move dev-lang/squeak-vm dev-lang/squeak-fullimage
