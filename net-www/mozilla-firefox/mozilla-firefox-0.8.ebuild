@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.9 2004/02/19 16:09:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.10 2004/03/25 08:29:23 mr_bones_ Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -27,8 +27,8 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	( gtk2? >=x11-libs/gtk+-2.1.1 :
-		=x11-libs/gtk+-1.2* )
+	gtk2? ( >=x11-libs/gtk+-2.1.1 )
+	!gtk2? ( =x11-libs/gtk+-1.2* )
 	java?  ( virtual/jre )
 	!net-www/mozilla-firefox-bin"
 

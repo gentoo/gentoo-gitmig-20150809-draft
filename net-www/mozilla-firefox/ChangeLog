@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.20 2004/03/19 05:29:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.21 2004/03/25 08:29:23 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  mozilla-firefox-0.8.ebuild:
+  don't use deprecated ? : use syntax
 
   19 Mar 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-0.8-r1.ebuild:
