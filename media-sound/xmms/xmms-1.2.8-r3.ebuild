@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.3 2003/11/21 16:42:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.4 2003/12/01 16:24:26 seemant Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -10,7 +10,8 @@ filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
-	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
+	mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2
+	mirror://gentoo/${PF}-gentoo-patches.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -29,30 +30,32 @@ RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
+PATCHDIR=${WORKDIR}/patches
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	# Patch to allow external programmes to have the "jump to" dialog box
-	epatch ${FILESDIR}/${P}-jump.patch
+	epatch ${PATCHDIR}/${P}-jump.patch
 
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
-	epatch ${FILESDIR}/${P}-sigterm.patch
+	epatch ${PATCHDIR}/${P}-sigterm.patch
 
 	#shadow Patch, bug #30420.
-	epatch ${FILESDIR}/${P}-shadow.patch
+	epatch ${PATCHDIR}/${P}-shadow.patch
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	# the Japanese patch and the Russian one overlap, so its one or the other
 	if use cjk; then
-		epatch ${FILESDIR}/${P}-mpg123j.patch
+		epatch ${PATCHDIR}/${P}-mpg123j.patch
 	else
 		# add russian charset support
-		epatch ${FILESDIR}/${P}-russian-charset-csa20.patch
+		epatch ${PATCHDIR}/${P}-russian-charset-csa20.patch
 	fi
 
 	# Add dynamic taste detection patch
-	epatch ${FILESDIR}/${P}-dtd.patch
+	epatch ${PATCHDIR}/${P}-dtd.patch
 
 	if [ ! -f ${S}/config.rpath ] ; then
 		touch ${S}/config.rpath
@@ -60,20 +63,20 @@ src_unpack() {
 	fi
 
 	# Add /usr/local/share/xmms/Skins to the search path for skins
-	epatch ${FILESDIR}/${PN}-fhs-skinsdir.patch
+	epatch ${PATCHDIR}/${PN}-fhs-skinsdir.patch
 
 	# This patch passes audio output through the output plugin
 	# before recording via the diskwriter plugin
 	# http://forum.xmms.org/viewtopic.php?t=500&sid=c286e1c01fb924a2f81f519969f33764
-	epatch ${FILESDIR}/xmms-diskwriter-audio.patch
+	epatch ${PATCHDIR}/${PN}-diskwriter-audio.patch
 
 	# Patch to enable superior randomised playlists:
-	epatch ${FILESDIR}/${P}-random.patch
+	epatch ${PATCHDIR}/${P}-random.patch
 
 	# This patch changes the search-bar's behaviour when playing
 	# sid tunes using xmms-sid plugin. It enables you to select the
 	# different tunes that are sometimes included in a single .sid file
-	epatch ${FILESDIR}/${P}-sid-songpos.patch
+	epatch ${PATCHDIR}/${P}-sid-songpos.patch
 
 	export WANT_AUTOCONF_2_5=1
 	for x in . libxmms ; do
