@@ -1,6 +1,0 @@
-MD5 bdff34d2cf676f21c811ffa29f73bed6 ChangeLog 1133
-MD5 8016e4b639b656c0901d90551aa4e2db avr-binutils-2.14.ebuild 646
-MD5 d05677e7bc0cae2e33f6a6736b9aca03 metadata.xml 486
-MD5 333157143b19fd25ce11cc1edcf94805 avr-binutils-2.15.ebuild 779
-MD5 347e7ec11146362721bb36dc694ffa0c files/digest-avr-binutils-2.14 68
-MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-avr-binutils-2.15 68
