@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.1 2005/01/03 16:46:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.2 2005/02/21 18:20:20 lanius Exp $
 
 inherit gnuconfig eutils
 
@@ -18,7 +18,7 @@ IUSE="nls tetex cjk vanilla"
 DEPEND=">=sys-devel/automake-1.6
 	>=sys-devel/autoconf-2.57
 	>=dev-util/gperf-2.7.2
-	>=dev-util/yacc-1.9.1
+	|| ( >=dev-util/yacc-1.9.1 sys-dev/bison )
 	virtual/ghostscript
 	>=app-text/psutils-1.17
 	tetex? ( virtual/tetex )"
@@ -47,10 +47,12 @@ src_unpack() {
 
 src_compile() {
 
-	export YACC=yacc
+	#export YACC=yacc
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \
 		`use_enable nls` || die "econf failed"
+
+	export LANG=C
 
 	# sometimes emake doesn't work
 	make || die "make failed"

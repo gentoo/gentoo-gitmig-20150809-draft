@@ -1,22 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92003be3cbff44d6f776e0bbef5c4c6e a2ps-4.13c-r2.ebuild 1867
-MD5 e613078fe797c81396d88cc0c7b57513 a2ps-4.13c-r1.ebuild 1763
-MD5 3a41da3ab49fc1976f0c24eb5ded70a8 ChangeLog 5474
+MD5 33a5cf697e66ca6275bd6b3c895484f4 a2ps-4.13c-r2.ebuild 1905
+MD5 07e110846ddc038076db292bd87ccdca ChangeLog 5633
 MD5 26dba0307103de2d599fe832e219de72 metadata.xml 178
 MD5 5a02e00e2362711886e28f0d28b299dd files/a2ps-4.13-stdout.diff 462
 MD5 df6bc895cc6fb0fd47f22fd1c36d1ed3 files/a2ps-4.13c-fixps.patch 549
 MD5 43277fd40996b817e369f9851aad66f5 files/a2ps-4.13c-locale-gentoo.diff 981
-MD5 b4a7c4e217ab8f2fa45b3282ea68069a files/digest-a2ps-4.13c-r1 133
 MD5 b4a7c4e217ab8f2fa45b3282ea68069a files/digest-a2ps-4.13c-r2 133
 MD5 b62538dbd828d995bdc3ce36188b0768 files/a2ps-4.13-select-freebsd.patch 1582
 MD5 d68d0bfab547ef1ce70576c7a5570f13 files/a2ps-4.13c-psmandup.diff 569
 MD5 449b2445dc0949a990a2b29cab89dc59 files/4.13c-gcc34.patch 348
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB2pV1I1lqEGTUzyQRAizDAJ4/azO/C+T2lIiPPvs+q/iR9DB3fwCfSBJE
-Sdf1S1xIAoDhuoiNMOPy/v8=
-=wjg4
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.37 2005/01/04 13:09:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.38 2005/02/21 18:20:20 lanius Exp $
+
+  21 Feb 2005; Heinrich Wendel <lanius@gentoo.org> -a2ps-4.13c-r1.ebuild,
+  a2ps-4.13c-r2.ebuild:
+  also builds with bison; fix compilation on non posix locale
 
   04 Jan 2005; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
