@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Test-Manifest
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.1 2003/10/03 11:34:01 mcummings Exp $
+
+*Test-Manifest-0.92 (03 Oct 2003)
+
+  03 Oct 2003; Michael Cummings <mcummings@gentoo.org> metadata.xml:
+  Fills dep for rss feed for Matsuu Takuto <matsuu@gentoo.org> in bug 26686
+
