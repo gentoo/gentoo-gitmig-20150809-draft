@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.7 2003/11/11 19:29:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.8 2003/12/06 21:52:08 mholzer Exp $
 
 inherit webapp-apache
 
@@ -19,11 +19,7 @@ RDEPEND=">=dev-php/mod_php-4.1.0
 	>=net-www/horde-pear-1.1"
 IUSE=""
 
-
 webapp-detect || NO_WEBSERVER=1
-
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
 
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/horde ] ; then
@@ -37,16 +33,18 @@ pkg_setup() {
 }
 
 src_install () {
-
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
 
 	dodoc COPYING README docs/*
 	rm -rf COPYING README docs
+	
 	dodir ${destdir}
 	cp -r . ${D}${destdir}
+	
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${PN}
+
 	# Fix permissions
 	find ${D}/${HTTPD_ROOT}/horde/ -type f -exec chmod 0640 {} \;
 	find ${D}/${HTTPD_ROOT}/horde/ -type d -exec chmod 0750 {} \;
