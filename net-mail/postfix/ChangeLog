@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.24 2002/07/23 16:36:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.25 2002/07/23 20:14:53 azarah Exp $
+
+*postfix-1.1.11-r5 (23 Jul 2002)
+
+  23 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Use the /etc/postfix/master.cf from the source *again*, as
+  they tend to differ between version.  Do NOT change, or if
+  you really need to use a custom version, please keep a version
+  updated from that version's source.  This should fix the:
+
+   warning: connect #3 to subsystem public/cleanup: Connection refused
+
+  problem.
 
 *postfix-1.1.11.20020613 (22 Jul 2002)
 
