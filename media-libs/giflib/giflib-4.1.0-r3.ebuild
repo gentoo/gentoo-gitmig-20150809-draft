@@ -1,52 +1,49 @@
-## Copyright 1999-2000 Gentoo Technologies, Inc.
+## Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.1 2001/05/07 20:08:03 aj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.2 2002/04/14 16:51:11 seemant Exp $
 
-P=giflib-4.1.0
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="giflib"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${A}
-	 ftp://prtr-13.ucsc.edu/pub/libungif/${A}"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
+	 ftp://prtr-13.ucsc.edu/pub/libungif/${P}.tar.gz"
 
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 
-DEPEND="virtual/glibc
-        X? ( virtual/x11 )"
+DEPEND="X? ( virtual/x11 )"
 
 src_compile() {
 
-  local myconf
-  if [ "`use X`" ]
-  then
-    myconf="--with-x"
-  else
-    myconf="--without-x"
-  fi
+	local myconf
 
-  try ./configure --host=${CHOST} --prefix=/usr ${myconf}
+	use X \
+		&& myconf="--with-x" \
+		|| myconf="--without-x"
 
-  try make
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		${myconf} || die
+
+	emake || die
 
 }
 
 src_install() {
 
-  try make prefix=${D}/usr install
-  if [ "`use ungif`" ]
-  then
-    rm -rf ${D}/usr/bin
-  fi
+	make \
+		prefix=${D}/usr	\
+		install || die
+	
+	# if gif is not in USE, then ungif is preferred
+	use gif || ( \
+		rm -rf ${D}/usr/bin
+	)
 
-  dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS ONEWS
-  dodoc PATENT_PROBLEMS README TODO
-  dodoc doc/*.txt
-  docinto html
-  dodoc doc/*.html doc/*.png
+	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL NEWS ONEWS
+	dodoc PATENT_PROBLEMS README TODO
+	dodoc doc/*.txt
+	dohtml -r doc
 
 }
-
-
-
