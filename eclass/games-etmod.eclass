@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.2 2005/01/13 18:13:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.3 2005/01/13 18:28:04 luckyduck Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ IUSE="opengl dedicated emul-linux-x86"
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/libc
 	games-fps/enemy-territory
-	emul-linux-x86? ( app-emulation/emul-linux-x86-baselibs
+	amd64? ( app-emulation/emul-linux-x86-baselibs
 		opengl? ( app-emulation/emul-linux-x86-xlibs ) )
 	dedicated? ( app-misc/screen )
 	opengl? ( virtual/opengl )"
