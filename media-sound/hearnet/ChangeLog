@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hearnet
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.3 2004/04/10 20:35:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.4 2004/04/22 09:13:11 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
+  Added IUSE.
 
   10 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> hearnet-0.0.2.ebuild:
   jack dep to virtual.  Stable x86.
