@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.11-r1.ebuild,v 1.2 2005/03/21 17:33:36 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.11-r1.ebuild,v 1.3 2005/03/26 16:14:01 kang Exp $
 
 IUSE=""
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
-DEPEND=">=sys-apps/rsbac-admin-1.2.4"
+#DEPEND=">=sys-apps/rsbac-admin-1.2.4"
 
 # rsbac versions
 RSBACV=1.2.4
