@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.03.ebuild,v 1.1 2002/09/27 10:05:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.03.ebuild,v 1.2 2002/09/30 22:36:01 seemant Exp $
 
 MY_P=${PN}-${PV/./_}
 S=${WORKDIR}/${MY_P}
@@ -21,7 +21,7 @@ src_compile() {
 src_install() {
 	dodir /usr/lib /usr/bin /usr/lib/tkcvs/ /usr/lib/tkcvs/bitmaps
 	
-	./doinstall.tcl -nox ${D}/usr || die
+	./doinstall.tcl -nox -finallib /usr/lib ${D}/usr || die
 
 	# Move man pages to FHS compliant locations
 	dodir /usr/share/man/man1
