@@ -1,23 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r1.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r1.ebuild,v 1.2 2003/09/24 01:47:44 vapier Exp $
 
 inherit games eutils
 
 MY_P=${PN}-030311
 DESCRIPTION="realtime strategy game engine for games like Warcraft/Starcraft/etc."
-HOMEPAGE="http://freecraft.sourceforge.net/"
-SRC_URI="mirror://sourceforge/freecraft/${MY_P}-src.tar.gz"
+HOMEPAGE="http://www.freecraft.org/"
+SRC_URI="${MY_P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+RESTRICT="fetch"
 
 DEPEND=">=media-libs/libpng-1.2.3
 	>=media-libs/libsdl-1.2.4
 	sys-libs/zlib"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_nofetch() {
+	einfo "Due to a Ceast and Desist given by Blizzard,"
+	einfo "you must obtain the sources for this game yourself."
+	einfo "For more information, please visit: ${HOMEPAGE}"
+	einfo "Also, you'll have to place the files ${A}"
+	einfo "into ${DISTDIR}"
+}
 
 src_unpack() {
 	unpack ${A}

@@ -1,24 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft-fcmp/freecraft-fcmp-1.18-r1.ebuild,v 1.2 2003/09/10 05:59:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft-fcmp/freecraft-fcmp-1.18-r1.ebuild,v 1.3 2003/09/24 01:49:30 vapier Exp $
 
 inherit games
 
 FCMP_VER=030311
 MUSIC_VER=030226
 DESCRIPTION="A collection of graphic/sound files to replace the data files from a real WarCraft CD"
-SRC_URI="mirror://sourceforge/freecraft/fcmp-${FCMP_VER}.tar.gz
-	music? ( mirror://sourceforge/freecraft/music-pack-${MUSIC_VER}.tar.gz )"
-HOMEPAGE="http://freecraft.sourceforge.org/"
+HOMEPAGE="http://www.freecraft.org/"
+SRC_URI="fcmp-${FCMP_VER}.tar.gz
+	music? ( music-pack-${MUSIC_VER}.tar.gz )"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="music"
+RESTRICT="fetch"
 
 DEPEND="=games-strategy/freecraft-1.18*"
 
 S=${WORKDIR}
+
+pkg_nofetch() {
+	einfo "Due to a Ceast and Desist given by Blizzard,"
+	einfo "you must obtain the sources for this game yourself."
+	einfo "For more information, please visit: ${HOMEPAGE}"
+	einfo "Also, you'll have to place the files ${A}"
+	einfo "into ${DISTDIR}"
+}
 
 src_install() {
 	dohtml data/ChangeLog.html && rm data/ChangeLog.html
