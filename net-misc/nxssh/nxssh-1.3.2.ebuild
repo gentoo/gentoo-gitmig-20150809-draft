@@ -1,14 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.2.2-r1.ebuild,v 1.1 2003/09/10 16:11:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.3.2.ebuild,v 1.1 2004/05/13 21:47:18 stuart Exp $
 
-MY_P="${P}-6"
+MY_P="${PN}-1.3.2-3"
 DESCRIPTION="Modified openssh client, used by nxclient"
 HOMEPAGE="http://www.nomachine.com/"
 SRC_URI="http://www.nomachine.com/download/nxsources/nxssh/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -mips -alpha"
+KEYWORDS="x86 ~ppc -sparc -mips -alpha"
 DEPEND=""
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
@@ -40,7 +40,7 @@ src_compile() {
 		--with-md5-passwords \
 		--host=${CHOST} ${myconf} || die "bad configure"
 
-	emake || die "compile problem"
+	DISTCC_HOSTS="localhost" CCACHE_DISABLE='1' emake || die "compile problem"
 }
 
 src_install() {

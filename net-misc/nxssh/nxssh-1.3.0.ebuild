@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.3.0.ebuild,v 1.2 2004/03/11 11:24:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.3.0.ebuild,v 1.3 2004/05/13 21:47:18 stuart Exp $
 
 MY_P="${PN}-1.3.0-4"
 DESCRIPTION="Modified openssh client, used by nxclient"
@@ -40,7 +40,7 @@ src_compile() {
 		--with-md5-passwords \
 		--host=${CHOST} ${myconf} || die "bad configure"
 
-	emake || die "compile problem"
+	DISTCC_HOSTS="localhost" CCACHE_DISABLE='1' emake || die "compile problem"
 }
 
 src_install() {

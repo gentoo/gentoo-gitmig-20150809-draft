@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.3.0_beta2.ebuild,v 1.1 2003/11/13 21:10:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.3.2.ebuild,v 1.1 2004/05/13 21:44:21 stuart Exp $
 
-MY_P="${PN}-1.3.0-6"
+MY_P="${PN}-1.3.2-1"
 DESCRIPTION="X11 protocol compression library wrapper"
 HOMEPAGE="http://www.nomachine.com/"
-SRC_URI="http://www.nomachine.com/download/beta/nxclient-sources-beta2/${MY_P}.tar.gz"
+SRC_URI="http://www.nomachine.com/download/nxsources/nxproxy/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-DEPEND=">=net-misc/nxcomp-1.3.0_beta2
+KEYWORDS="x86 ~ppc"
+DEPEND=">=net-misc/nxcomp-1.3.2
 	sys-devel/patch
 	>=media-libs/jpeg-6b-r3
 	>=sys-libs/glibc-2.3.2-r1
