@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-20.ebuild,v 1.1 2004/11/12 22:50:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-22.ebuild,v 1.1 2004/11/22 00:27:58 swegener Exp $
 
 DESCRIPTION="jIRCii - IRC client written in Java"
 HOMEPAGE="http://jirc.hick.org/"
