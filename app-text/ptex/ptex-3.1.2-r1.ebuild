@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.4 2003/10/24 18:32:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2-r1.ebuild,v 1.5 2003/11/03 22:28:27 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -75,7 +75,7 @@ src_compile() {
 	econf	--bindir=/usr/bin \
 		--datadir=${S} \
 		--with-system-wwwlib \
-		--with-libwww-include=/usr/linclude-w3c-libwww \
+		--with-libwww-include=/usr/include/w3c-libwww \
 		--with-system-ncurses \
 		--with-system-pnglib \
 		--without-texinfo \
