@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.5 2004/10/19 23:27:26 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.6 2004/11/06 14:32:20 lu_zero Exp $
 
 IUSE="sse xmms"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2 "
 SLOT="0"
-KEYWORDS="~x86 -ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
 
 RDEPEND=">=media-libs/libogg-1.0_rc2
 	xmms? ( media-sound/xmms )"
@@ -30,6 +30,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-m4.patch
 	epatch ${FILESDIR}/${P}-libtool.patch
+	epatch ${FILESDIR}/${P}-altivec.patch.gz
 
 	elibtoolize --reverse-deps
 }

@@ -1,9 +1,17 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.41 2004/10/19 23:27:26 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.42 2004/11/06 14:32:20 lu_zero Exp $
+
+  06 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/flac-1.1.1-altivec.patch.gz, flac-1.1.1.ebuild:
+  Altivec related fixes by John Steele Scott <toojays@toojays.net>
 
   19 Oct 2004; Kito Danya <keetz@gentoo.org> flac-1.1.1.ebuild:
   added ~ppc-macos
+
+  22 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/flac-1.1.1-altivec.patch, flac-1.1.1.ebuild:
+  Altivec related fixes by John Steele Scott <toojays@toojays.net>
 
   05 Oct 2004; Luca Barbato <lu_zero@gentoo.org> flac-1.1.1.ebuild:
   The "ppc" improvement, just broke everything, -ppc till they are fixed"
