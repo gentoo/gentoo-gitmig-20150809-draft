@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.22 2003/06/22 06:14:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.23 2003/06/22 06:14:39 drobbins Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	berkdb? ( =sys-libs/db-1.85-r1 )"
+	berkdb? ( amd64? sys-libs/db : =sys-libs/db-1.85-r1 )"
 
 RDEPEND="virtual/glibc"
 
