@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.2 2002/05/05 18:56:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.3 2002/08/01 04:05:43 cselkirk Exp $
 
 *PlRPC-0.2014-r1 (5 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> PlRPC-0.2014-r1.ebuild :
+
+  Added ppc to KEYWORDS.
 
   5 May 2002; Seemant Kulleen <seemant@gentoo.org> PlRPC-0.2014-r1.ebuild
   files/digest-PlRPC-0.2014-r1 :

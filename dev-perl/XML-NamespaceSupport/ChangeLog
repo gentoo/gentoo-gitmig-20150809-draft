@@ -1,8 +1,13 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.3 2002/05/06 17:29:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.4 2002/08/01 04:41:00 cselkirk Exp $
 
 *XML-NamespaceSupport-1.04-r1 (6 May 2002)
+  
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org>
+  XML-NamespaceSupport-1.04-r1.ebuild :
+
+  Added ppc to KEYWORDS.
 
   6 May 2002; Seemant Kulleen <seemant@gentoo.org>
   XML-NamespaceSupport-1.04-r1.ebuild

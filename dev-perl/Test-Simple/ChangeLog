@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.1 2002/06/14 14:46:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.2 2002/08/01 04:22:42 cselkirk Exp $
 
 *Test-Simple-0.42 (14 Jun 2002)
+
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> Test-Simple-0.42.ebuild :
+
+  Added ppc to KEYWORDS.
 
   14 Jun 2002; Seemant Kulleen <seemant@gentoo.org> Test-Simple-0.42.ebuild
   files/digest-Test-Simple-0.42 :

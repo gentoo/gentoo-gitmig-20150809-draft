@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.2 2002/05/06 23:13:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.3 2002/08/01 04:07:06 cselkirk Exp $
 
 *RPC-XML-0.40 (6 May 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> RPC-XML-0.40.ebuild :
+
+  Added ppc to KEYWORDS.
 
   6 May 2002; Seemant Kulleen <seemant@gentoo.org> RPC-XML-0.40.ebuild
   files/digest-RPC-XML-0.40 :

@@ -1,8 +1,12 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.2 2002/05/06 15:44:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.3 2002/08/01 04:12:34 cselkirk Exp $
 
 *SNMP_Session-0.92 (6 May 2002)
+
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> SNMP-Session-0.92.ebuild :
+
+  Added ppc to KEYWORDS.
 
   6 May 2002; Seemant Kulleen <seemant@gentoo.org> SNMP-Session-0.92.ebuild
   files/digest-SNMP-Session-0.92 :
