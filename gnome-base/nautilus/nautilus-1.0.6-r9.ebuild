@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.9 2002/08/16 04:09:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.10 2002/09/03 23:16:39 spider Exp $
 
 
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
 	>=gnome-base/bonobo-1.0.9-r1
 	>=gnome-base/libghttp-1.0.9-r1
 	=gnome-base/gnome-vfs-1.0*
-	>=gnome-base/librsvg-1.0.1
+	=gnome-base/librsvg-1*
 	=gnome-base/eel-1.0*
 	>=gnome-extra/medusa-0.5.1-r1
 	=gnome-base/gnome-panel-1.4*"
