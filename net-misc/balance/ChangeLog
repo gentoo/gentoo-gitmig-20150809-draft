@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/balance
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.1 2003/12/25 20:20:44 vapier Exp $
+
+*balance-3.11 (25 Dec 2003)
+
+  25 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Mark Dierolf <smark@3e0.com> #36172.
