@@ -5,13 +5,13 @@ MD5 26927d79dd72b931678211bf17bad7ec gkrellm-giFT-0.2.3.ebuild 702
 MD5 e4871aa492e7a74308a82472a081272b gkrellm-giFT-0.2.2.ebuild 828
 MD5 decf15770cb9c07d9bc7df2c2355a739 ChangeLog 1405
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 fdd8b5c2ace5046c4b048c241ea0189c files/digest-gkrellm-giFT-0.2.2 136
+MD5 5aa9d91290281fff4d6e791a7b1fbfd5 files/digest-gkrellm-giFT-0.2.2 70
 MD5 5b4dcd6562bc0f4d82e7834a82d6c93a files/digest-gkrellm-giFT-0.2.3 70
 MD5 ee4b37fceca0148a8b06a2e93faa7d96 files/gkrellm-gift-0.2.2.patch 354
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXObMcAgAdbxYsnERAs9cAKCZtA55hofckEBwVyCK24OybsHkHwCfVAqo
-fTXR5jfmBA4BveNH9hM/gKY=
-=e2Ge
+iD8DBQFBpQkGI1lqEGTUzyQRAh4BAKCRTa1/qxW/HsL5jNQ9jnR5ojbOBACghHyS
+UW4z1CTlKsQl9oyEEDqltlU=
+=hO0z
 -----END PGP SIGNATURE-----
