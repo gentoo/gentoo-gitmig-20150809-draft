@@ -1,8 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.17.2-r3.ebuild,v 1.4 2002/12/13 17:20:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.17.2-r3.ebuild,v 1.5 2002/12/26 04:38:19 azarah Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
+
+inherit eutils
+
+S="${WORKDIR}/${P}"
 DESCRIPTION="Text formatter used for man pages"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
@@ -16,13 +20,12 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 
-    # Fix the info pages to have .info extensions,
+	# Fix the info pages to have .info extensions,
 	# else they do not get gzipped.
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-infoext.patch || die
+	epatch ${FILESDIR}/${P}-infoext.patch
 
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
-
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
