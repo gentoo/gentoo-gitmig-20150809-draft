@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/gbuffy
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/ChangeLog,v 1.1 2004/11/02 16:00:07 agriffis Exp $
+
+*gbuffy-0.2.6 (02 Nov 2004)
+
+  02 Nov 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +gbuffy-0.2.6.ebuild:
+  New ebuild for gbuffy.  Thanks to Eivind Tagseth #37285
+
