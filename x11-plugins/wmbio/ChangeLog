@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmbio
 # Copyright 2001-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.5 2004/06/24 23:05:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.6 2004/08/23 19:36:44 s4t4n Exp $
+
+*wmbio-1.02 (23 Aug 2004)
+
+  23 Aug 2004; Michele Noberasc <s4t4n@gentoo.org> wmbio-1.02.ebuild:
+  Version Bump. General ebuild cleanup. Closes #61309
+  wmbio-1.01.ebuild:
+  Fox HOMEPAGE and SRC_URI...
 
   25 Jan 2004; Markus Nigbur <pyrania@gentoo.org> wmbio-1.01.ebuild:
   Marked stable on x86.
