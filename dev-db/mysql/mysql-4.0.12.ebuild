@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.11 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.12.ebuild,v 1.12 2004/06/29 16:28:50 agriffis Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -22,7 +22,7 @@ SRC_URI="ftp://mirror.mcs.anl.gov/pub/mysql/Downloads/${SDIR}/${NEWP}.tar.gz
 KEYWORDS="~x86 ~sparc ppc"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static readline innodb berkdb tcpd ssl debug"
+IUSE="berkdb debug innodb perl readline ssl static tcpd"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )

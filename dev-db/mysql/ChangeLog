@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.108 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.109 2004/06/29 16:28:50 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysql-3.23.56.ebuild,
+  mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild, mysql-4.0.12.ebuild:
+  sync IUSE (+perl)
 
   06 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysql-4.0.17.ebuild:
   Fix use invocation
