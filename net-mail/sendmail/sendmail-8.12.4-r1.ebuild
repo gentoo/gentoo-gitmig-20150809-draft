@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r1.ebuild,v 1.3 2002/06/24 21:03:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.4-r1.ebuild,v 1.4 2002/06/25 08:43:04 bangert Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
 HOMEPAGE="http://www.sendmail.org"
@@ -124,7 +124,7 @@ src_install () {
 			force-install -C ${OBJDIR}/${dir} \
 			|| die "install failed"
 	done
-	dosym /usr/lib/sendmail /usr/sbin/sendmail
+	dosym /usr/sbin/sendmail /usr/lib/sendmail
 	dosym /usr/sbin/makemap /usr/bin/makemap
 	dodoc FAQ LICENSE KNOWNBUGS README RELEASE_NOTES doc/op/op.ps
 	newdoc sendmail/README README.sendmail
