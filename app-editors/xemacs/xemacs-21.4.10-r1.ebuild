@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.5 2003/02/13 07:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.6 2003/07/08 19:13:27 rac Exp $
 
 IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
 
@@ -112,7 +112,7 @@ src_compile() {
 
 		use tiff && myconf="${myconf} --with-tiff" ||
 			myconf="${myconf} --without-tiff"
-		use png && mconf="${myconf} --with-png" ||
+		use png && myconf="${myconf} --with-png" ||
 			myconf="${myconf} --without-png"
 		use jpeg && myconf="${myconf} --with-jpeg" ||
 			myconf="${myconf} --without-jpeg"
