@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1.ebuild,v 1.16 2004/06/24 22:35:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gentoo-guide-xml-dtd/gentoo-guide-xml-dtd-2.1.ebuild,v 1.17 2004/07/13 21:13:25 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="DTD for Gentoo-Guide Style XML Files"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.gentoo.org"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND=">=app-text/sgml-common-0.6.1"
 

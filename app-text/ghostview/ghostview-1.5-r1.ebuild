@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.13 2004/07/01 11:58:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.14 2004/07/13 21:15:53 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
+IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11"
