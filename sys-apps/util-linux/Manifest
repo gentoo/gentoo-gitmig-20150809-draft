@@ -1,6 +1,7 @@
-MD5 f470c581d3116e3d51e0f6d1a81d65ea ChangeLog 17070
+MD5 e2f9e9fff90ff0424c87c133e173a44f ChangeLog 17196
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9f8c002969321662cd2615fbfce63f1a util-linux-2.12i-r1.ebuild 3589
+MD5 6c7e835940f8432f4548edd6238df025 util-linux-2.12q.ebuild 4312
 MD5 6be0cea4830adec0c3b4091efd27b63f util-linux-2.12p-r1.ebuild 4303
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
@@ -17,6 +18,7 @@ MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
 MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
 MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
 MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
+MD5 e2d566b683bb1b9b1c3e127b2bbd258b files/digest-util-linux-2.12q 294
 MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
