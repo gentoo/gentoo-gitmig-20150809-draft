@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.22 2004/08/31 12:43:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.23 2004/10/01 22:07:20 vapier Exp $
+
+*hppa-dev-sources-2.6.8.1_p11 (01 Oct 2004)
+
+  01 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +hppa-dev-sources-2.6.8.1_p11.ebuild:
+  Version bump to fix strace bugs with 2.6.8.1-pa7.
 
 *hppa-dev-sources-2.6.8.1_p7 (31 Aug 2004)
 
