@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.5-r3.ebuild,v 1.1 2001/01/16 03:41:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.5-r3.ebuild,v 1.2 2001/01/16 19:22:32 achim Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Accelerated X drivers for NVIDIA based cards"
@@ -21,7 +21,7 @@ src_unpack() {
 	local x
 	for x in patch-2.4.0-PR nvidia_devfs.diff  
 	do
-		cat $x | patch -p1
+		cat ${FILESDIR}/$x | patch -p1
 	done
 }
 
