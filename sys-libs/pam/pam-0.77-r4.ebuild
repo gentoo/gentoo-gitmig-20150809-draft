@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r4.ebuild,v 1.1 2004/12/13 19:04:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r4.ebuild,v 1.2 2005/01/08 07:30:50 vapier Exp $
 
 PATCH_LEVEL="1.4"
 BDB_VER="4.1.25"
@@ -273,7 +273,7 @@ src_install() {
 	done
 
 	cd ${S}
-	doman doc/man/*.[58]
+	doman doc/man/*.[0-9]
 
 	dodoc CHANGELOG Copyright README
 	docinto modules ; dodoc modules/README ; dodoc doc/txts/README.*
