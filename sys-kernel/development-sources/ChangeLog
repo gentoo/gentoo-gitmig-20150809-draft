@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.47 2003/10/12 13:03:34 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.48 2003/10/14 04:53:47 brad_mssw Exp $
+
+*development-sources-2.6.0_beta7-r5 (14 Oct 2003)
+
+  14 Oct 2003; Brad House <brad_mssw@gentoo.org>
+  development-sources-2.6.0_beta7-r5.ebuild:
+  add ebuild for bk5 and additional patches for drivers, especially
+  those specific to amd64.
 
 *development-sources-2.6.0_beta7-r3 (12 Oct 2003)
 
