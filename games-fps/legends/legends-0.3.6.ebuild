@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.5 2004/06/24 22:42:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.3.6.ebuild,v 1.6 2004/12/04 17:53:10 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="A fast-paced first-person-perspective online multiplayer game similar to Tribes"
-HOMEPAGE="http://hosted.tribalwar.com/legends/"
+HOMEPAGE="http://epsilon.serverseed.com/~legends/"
 SRC_URI="http://themasters.co.za/${P}.tar.gz"
 
 LICENSE="as-is"
