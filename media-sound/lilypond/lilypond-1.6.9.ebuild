@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.9 2004/04/20 17:25:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.10 2004/05/17 16:07:34 usata Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/python-2.2.1-r2
 	>=dev-lang/perl-5.6.1-r6
 	>=dev-util/guile-1.4-r3
 	>=sys-devel/bison-1.35
-	>=app-text/tetex-1.0.7-r12
+	virtual/tetex
 	>=sys-apps/texinfo-4.2-r5
 	>=sys-devel/flex-2.5.4a-r5
 	doc? ( >=app-text/mftrace-1.0.8
@@ -27,7 +27,7 @@ DEPEND=">=dev-lang/python-2.2.1-r2
 		>=media-libs/netpbm-9.12-r2 )"
 RDEPEND=">=dev-util/guile-1.4-r3
 	virtual/ghostscript
-	>=app-text/tetex-1.0.7-r10
+	virtual/tetex
 	>=dev-lang/python-2.2.1-r2"
 
 src_compile() {
