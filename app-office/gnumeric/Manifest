@@ -1,9 +1,9 @@
-MD5 9865ac424ad707459300ba5da5bde980 ChangeLog 6037
+MD5 1a8ef533f7637f2e40797b9166e39820 ChangeLog 6278
 MD5 5c9854c592e07c330b27b050b9aa088a gnumeric-1.0.13-r1.ebuild 2995
 MD5 d45d9d014b7f82c405b5574e1726a1fa gnumeric-1.0.8.ebuild 3245
 MD5 1a400e9413886f25b4ecd8b1f026b86b gnumeric-1.1.20.ebuild 1527
 MD5 984169fc382ec2b7a26cde2aae6fb3f9 gnumeric-1.1.90.ebuild 1665
-MD5 984169fc382ec2b7a26cde2aae6fb3f9 gnumeric-1.2.0.ebuild 1665
+MD5 e2daa02b1788742675d0ce2ef3252f38 gnumeric-1.2.0.ebuild 1666
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7843727e1fcde50a4a2283ba34da3c1d files/digest-gnumeric-1.0.13-r1 69
 MD5 a88fe4d27bf9a2579f4f3db0ca6f355f files/digest-gnumeric-1.0.8 69
@@ -13,3 +13,4 @@ MD5 9e7ac50a8f6681cf92cdacfbbaa3a4ee files/digest-gnumeric-1.2.0 69
 MD5 8a88ece514714721699de5346a0f4e1e files/gnumeric-1.0.8-docbuild.patch 728
 MD5 b4f77780f0a0a1a29df8c8b184b2c110 files/gnumeric-1.1.16-scrollkeeper.patch 493
 MD5 5f0ab43e853c3b6eee6e1982112da92f files/gnumeric-1.1.90-fix_doc_destdir_install.patch 680
+MD5 e3240d8a40c24a464b95631ef8c41727 files/gnumeric-1.2.0-fix_doc_destdir_install.patch 563
