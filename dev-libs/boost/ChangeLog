@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.39 2005/03/05 16:02:36 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.40 2005/03/06 08:48:54 morfic Exp $
+
+  06 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
+  fixed issue with links ending up in / if the target does not exist
 
   05 Mar 2005; Daniel Goller <morfic@gentoo.org> boost-1.32.0-r1.ebuild:
   making the symlinks work for gcc and icc by inserting a variable not a
