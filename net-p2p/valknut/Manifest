@@ -5,7 +5,7 @@ MD5 e0cfce6ea4b10357bd63fb6dd07ffc24 valknut-0.3.3.ebuild 859
 MD5 1e4a64917317168f24531ecff5dc7a49 valknut-0.3.0.ebuild 879
 MD5 1c33541584f4ce3c474e1cd063156759 valknut-0.2.21.ebuild 839
 MD5 be1a0db3351c08d3c88008bd9587a347 valknut-0.3.2.ebuild 894
-MD5 f13abd06f55f0f9062e1adae6329257b ChangeLog 6004
+MD5 70fcf411b73a34e68a87bfd5d3ebe7c7 ChangeLog 6051
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 cd73a79894ad5e374a6491dba9e64b9e valknut-0.2.20.ebuild 837
 MD5 2d270feb5ef8ced992337805e3771b46 files/digest-valknut-0.2.20 68
@@ -16,7 +16,7 @@ MD5 58f1e6aa0e0048f3a23f2af674d97ea5 files/digest-valknut-0.3.3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBKVC7cAgAdbxYsnERAlp8AKCjycsIIPPvFShqYiifxJvXL8QrHwCfR/NE
-p4WSH30lPwDeijhfO0RvIhU=
-=9MDr
+iD8DBQFBKVLVcAgAdbxYsnERAjnaAJ440/pqXHJZarnVEBZilgxfeje5yQCeOxWf
+w23dfiQ/7JUrxAtS8w6x/Ls=
+=KHuD
 -----END PGP SIGNATURE-----

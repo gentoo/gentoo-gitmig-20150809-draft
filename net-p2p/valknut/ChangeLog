@@ -1,14 +1,14 @@
 # ChangeLog for net-p2p/dcgui-qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.1 2004/08/23 02:04:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.2 2004/08/23 02:13:29 squinky86 Exp $
 
 *valknut-0.3.3 (22 Aug 2004)
 
   22 Aug 2004; Jon Hood <squinky86@gentoo.org> dcgui-qt-0.2.20.ebuild,
   dcgui-qt-0.2.21.ebuild, dcgui-qt-0.3.0.ebuild, dcgui-qt-0.3.2.ebuild,
-  +dcgui-qt-0.3.3.ebuild:
+  +valknut-0.3.3.ebuild:
   Version bump, closes #61192. Thanks go to colyte <colyte@crashmag.net> and
-  luke-jr.
+  luke-jr. Also moving net-p2p/dcgui-qt to net-p2p/valknut
 
   13 Aug 2004; Jon Hood <squinky86@gentoo.org> dcgui-qt-0.3.2.ebuild:
   Apply fix from bug #60174 from Peter <preach@home.se>.
