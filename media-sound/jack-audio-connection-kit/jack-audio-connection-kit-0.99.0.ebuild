@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.6 2004/09/23 15:22:16 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.99.0.ebuild,v 1.7 2004/09/23 15:29:00 kito Exp $
 
 IUSE="altivec alsa caps doc debug jack-tmpfs oss portaudio"
 
@@ -60,7 +60,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug"
 	myconf="${myconf} --enable-optimize --with-gnu-ld"
 
-	myconf="${myconf} `use_enable alitvec` `use_enable alsa` `use_enable oss` `use_enable portaudio`"
+	myconf="${myconf} `use_enable altivec` `use_enable alsa` `use_enable oss` `use_enable portaudio`"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "compilation failed"
