@@ -34,8 +34,8 @@
 		<tr>
 			<td valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><img src="/images/gtop-new.jpg"/></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><img src="/images/gbot-new.gif"/></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img src="/images/gtop-new.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img src="/images/gbot-new.gif"/></a></td></tr>
 				</table>
 			</td>
 			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
@@ -146,8 +146,8 @@
 		<tr>
 			<td rowspan="2" valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><img src="/images/gtop-new.jpg"/></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><img src="/images/gbot-new.gif"/></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img src="/images/gtop-new.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img src="/images/gbot-new.gif"/></a></td></tr>
 				</table>
 			</td>
 			
