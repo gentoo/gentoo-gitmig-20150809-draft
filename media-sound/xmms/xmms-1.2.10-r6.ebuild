@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.1 2004/09/30 23:09:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.2 2004/09/30 23:29:48 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc"
 
@@ -113,7 +113,7 @@ src_unpack() {
 	# Bug #55398 ... fix libjoy crash
 	epatch ${PATCHDIR}/${P}-joycrash.patch
 
-	# Bug #57755 ... remember playlist location
+	# Bug #57755 ... don't show in taskbar if status-plugin is enabled
 	epatch ${PATCHDIR}/${P}-status.patch
 
 	if [ ! -f ${S}/config.rpath ] ; then
