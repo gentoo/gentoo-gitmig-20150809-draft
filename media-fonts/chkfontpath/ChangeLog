@@ -1,0 +1,12 @@
+# ChangeLog for media-fonts/chkfontpath
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/chkfontpath/ChangeLog,v 1.1 2003/07/22 01:55:48 seemant Exp $
+
+*chkfontpath-1.9.10 (02 Jul 2003)
+
+  02 Jul 2003; Seemant Kulleen <seemant@gentoo.org> chkfontpath-1.9.10.ebuild:
+  New package to add and remove font paths to X's xfs and XF86Config files.
+  Matsuu Takuto <matsuu@gentoo.org> created a patch to adjust XF86Config as well.
+  He also created the ebuild. Sean P. Kane <spkane@genomatica.com> adjusted the
+  patch for this version. Thanks to both of them in bug #21932
+
