@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.0.0-r1.ebuild,v 1.1 2002/08/04 16:52:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.0.0-r1.ebuild,v 1.2 2002/08/04 22:06:58 spider Exp $
 
 inherit gnome2
 
@@ -22,5 +22,9 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
-
+src_compile () {
+	gnome2_src_configure 
+	make || die "serial make failure"
+		 
+}
 
