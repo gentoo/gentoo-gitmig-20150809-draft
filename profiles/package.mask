@@ -2,6 +2,7 @@
 #explanation of why something is getting masked
 
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
+# and evolution (azarah, 05 May 2002)
 dev-libs/libiconv
 
 # this cracklib is for testing currently (pvdabeel, 03 May 200):
