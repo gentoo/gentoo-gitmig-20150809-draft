@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20030405.ebuild,v 1.2 2004/02/18 18:00:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/quanta-docs-20030405.ebuild,v 1.3 2004/05/16 20:21:31 centic Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Lots of docs for quanta"
@@ -14,6 +14,7 @@ SRC_URI="mirror://sourceforge/quanta/css.tar.bz2
 HOMEPAGE="http://quanta.sourceforge.net"
 
 SLOT="0"
+IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc amd64"
 
