@@ -1,11 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.14 2004/06/24 22:42:00 agriffis Exp $
-inherit kde-base flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.15 2004/06/29 11:42:09 carlo Exp $
+inherit kde flag-o-matic
 
 filter-flags "-fomit-frame-pointer"
-
-need-kde 3
 
 DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment."
 HOMEPAGE="http://www.koffice.org/"
@@ -17,10 +15,10 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 SLOT="0"
 
-DEPEND="$DEPEND
-	>=dev-lang/python-2.2.1
+DEPEND=">=dev-lang/python-2.2.1
 	>=media-libs/libart_lgpl-2.3.9
 	>=media-gfx/imagemagick-5.4.5"
+need-kde 3
 
 PATCHES="$FILESDIR/${P}-kword-crashes.diff"
 
