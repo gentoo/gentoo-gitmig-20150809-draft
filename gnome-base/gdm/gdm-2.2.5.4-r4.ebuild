@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.1.ebuild,v 1.1 2001/11/03 16:26:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r4.ebuild,v 1.1 2002/01/27 14:01:33 azarah Exp $
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
@@ -14,6 +14,10 @@ DEPEND=">=sys-libs/pam-0.72
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	>=gnome-base/libglade-0.17-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1"
+
+RDEPEND="${DEPEND}
+	>=x11-base/xfree-4.2.0-r3
+	gnome? ( >=gnome-base/gnome-core-1.4.0.6 )"
 
 
 src_unpack() {
@@ -32,9 +36,6 @@ src_unpack() {
 }
 
 src_compile() {
-
-	CFLAGS="${CFLAGS} `gnome-config --cflags libglade`"
-
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc/X11				\
@@ -45,6 +46,11 @@ src_compile() {
 }
 
 src_install() {
+        cd omf-install
+        cp Makefile Makefile.old
+        sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+        rm Makefile.old
+        cd ${S}
 
 	make prefix=${D}/usr						\
 	     sysconfdir=${D}/etc/X11					\
@@ -95,11 +101,24 @@ src_install() {
 	rm gdm.conf.orig
 
 	cd ${S}
+
+	#support for new session stuff
+	rm -rf ${D}/etc/X11/gdm/Sessions
+	dosym ../Sessions /etc/X11/gdm/Sessions
 	
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
 
+pkg_preinst() {
+	#support for new session stuff
+	if [ -d /etc/X11/gdm/Sessions ] ; then
+		mv -f /etc/X11/gdm/Sessions /etc/X11/gdm/Sessions.old
+	fi
+}
+
 pkg_postinst() {
+        echo ">>> Updating Scrollkeeper database..."
+        scrollkeeper-update >/dev/null 2>&1
 
 	# Attempt to restart GDM softly by use of the fifo.  Wont work on older
 	# then 2.2.3.1 versions but should work nicely on later upgrades.
@@ -108,7 +127,7 @@ pkg_postinst() {
 	if test x$FIFOFILE = x ; then
 		FIFOFILE=%{localstatedir}/gdm/.gdmfifo
 	else
-	FIFOFILE="$FIFOFILE"/.gdmfifo
+		FIFOFILE="$FIFOFILE"/.gdmfifo
 	fi
 	PIDFILE=`grep '^PidFile=' /etc/X11/gdm/gdm.conf | sed -e 's/^PidFile=//'`
 	if test x$PIDFILE = x ; then
@@ -122,17 +141,25 @@ pkg_postinst() {
 		fi
 	fi
 
-
-	# Remove this line and next, and uncomment third when
-	# /etc/init.d/xdm has been fixed
-#	echo "To make GDM start at boot, edit /etc/rc.conf and then execute 'rc-update add xdm default'"
+	echo
+	echo "***********************************************************************"
+	echo "* To make GDM start at boot, edit /etc/rc.conf (or /etc/conf.d/basic) *"
+	echo "* and then execute 'rc-update add xdm default'.                       *"
+	echo "*                                                                     *"
+	echo "* NOTE:  you need xfree-4.1.0-r4 or later ...                         *"
+	echo "***********************************************************************"
+	echo
 }
 
-pkg_prerm() {
+pkg_postrm() {
+        echo ">>> Updating Scrollkeeper database..."
+        scrollkeeper-update >/dev/null 2>&1
 
-	# Remove this line and next two, and uncomment fourth when /etc/init.d/xdm has been fixed 
-	# and /etc/rc.conf updated
 	echo
-#	echo "To remove GDM from startup please execute 'rc-update del xdm default'"
+	echo "**********************************************"
+	echo "* To remove GDM from startup please execute  *"
+	echo "* 'rc-update del xdm default'                *"
+	echo "**********************************************"
+	echo
 }
 
