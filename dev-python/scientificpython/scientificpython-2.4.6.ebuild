@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.4.6.ebuild,v 1.2 2004/09/15 18:26:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.4.6.ebuild,v 1.3 2004/12/28 19:07:40 ribosome Exp $
 
 MY_P=${P/scientificpython/ScientificPython}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 
 DEPEND="virtual/python
 	>=dev-python/numeric-19.0
-	>=app-sci/netcdf-3.0"
+	>=sci-libs/netcdf-3.0"
 
 src_install() {
 	distutils_src_install

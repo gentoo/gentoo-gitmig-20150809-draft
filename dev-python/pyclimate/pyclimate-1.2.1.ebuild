@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1.ebuild,v 1.4 2004/07/24 00:38:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/pyclimate-1.2.1.ebuild,v 1.5 2004/12/28 19:08:52 ribosome Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 DEPEND="virtual/python
 	>=dev-python/numeric-19.0
 	dev-python/scientificpython
-	>=app-sci/netcdf-3.0"
+	>=sci-libs/netcdf-3.0"
 
 src_install() {
 	python setup.py install --prefix=${D}/usr || die "Python Install Failed"
