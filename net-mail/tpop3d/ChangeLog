@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.16 2005/02/16 16:45:36 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.17 2005/03/04 17:55:01 griffon26 Exp $
+
+*tpop3d-1.5.3-r1 (04 Mar 2005)
+
+  04 Mar 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +tpop3d-1.5.3-r1.ebuild:
+  Depend on mailbase and create tpop3d symlink for pam (bug #79240)
+  Depend on efence with debug use flag (bug #82988)
 
   16 Feb 2005; Tom Martin <slarti@gentoo.org> tpop3d-1.5.3.ebuild:
   Marked ~amd64.
