@@ -24,7 +24,7 @@ app-arch/gzip
 sys-apps/hdparm
 sys-apps/less
 sys-apps/lvm-user
-sys-apps/silo
+sys-boot/silo
 sys-apps/modutils
 sys-apps/net-tools
 sys-apps/xinetd

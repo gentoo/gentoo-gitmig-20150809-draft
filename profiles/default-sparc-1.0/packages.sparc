@@ -3,7 +3,7 @@
 #
 # SPARC specific packages
 *sys-apps/sparc-utils
-*sys-apps/silo
+*sys-boot/silo
 
 # Sed replacement
 *sys-apps/supersed

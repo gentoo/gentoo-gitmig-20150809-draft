@@ -18,12 +18,12 @@ sys-apps/fileutils
 sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
-sys-apps/grub
+sys-boot/grub
 app-arch/gzip
 sys-apps/hdparm
 sys-apps/isapnptools
 sys-apps/less
-sys-apps/lilo
+sys-boot/lilo
 sys-apps/modutils
 sys-apps/net-tools
 sys-apps/xinetd

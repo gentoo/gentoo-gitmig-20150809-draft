@@ -67,7 +67,7 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*sys-apps/grub
+*sys-boot/grub
 *app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/less

@@ -27,7 +27,7 @@ virtual/mda				net-mail/procmail
 virtual/xft				x11-base/xfree
 virtual/krb5			app-crypt/heimdal
 virtual/motif			x11-libs/openmotif
-virtual/bootloader		sys-apps/nettrom
+virtual/bootloader		sys-boot/nettrom
 virtual/editor			app-editors/vi
 virtual/jack			media-sound/jack-audio-connection-kit
 virtual/quicktime		media-libs/libquicktime

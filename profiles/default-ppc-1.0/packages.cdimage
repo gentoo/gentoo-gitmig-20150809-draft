@@ -19,7 +19,7 @@ sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
 sys-fs/hfsutils
-sys-apps/yaboot
+sys-boot/yaboot
 app-arch/gzip
 sys-apps/hdparm
 sys-apps/less

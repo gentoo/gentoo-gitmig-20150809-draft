@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.9 2002/07/04 13:40:53 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.10 2003/12/09 08:40:00 seemant Exp $
 #
 # New packages file
 NEWPACKAGESBUILD=packages.build
@@ -32,9 +32,9 @@ cp -p $NEWPACKAGES $KEEPPACKAGES
 echo "# This file created automagically by $0 on `date`" > $NEWPACKAGES
 echo "" >> $NEWPACKAGES
 	#-e 's:[^#]*x11-base/xfree.*:<x11-base/xfree-4.2.0:' \
-sed -e 's:.*sys-apps/grub:#*sys-apps/grub:' \
+sed -e 's:.*sys-boot/grub:#*sys-boot/grub:' \
 	-e 's:.*sys-devel/bin86:#*sys-devel/bin86:' \
-	-e 's:.*sys-apps/lilo:#*sys-apps/lilo:' \
+	-e 's:.*sys-boot/lilo:#*sys-boot/lilo:' \
 	-e 's:[^#]*sys-kernel/linux-headers.*:~sys-kernel/linux-headers-2.4.18:' \
 	${from_dir}/packages >> $NEWPACKAGES
 cat >> $NEWPACKAGES <<_EOF_

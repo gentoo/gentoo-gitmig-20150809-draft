@@ -34,8 +34,8 @@
 # PPC PROFILE
 
 # makes no sense on ppc
-sys-apps/lilo
-sys-apps/grub 
+sys-boot/lilo
+sys-boot/grub 
 
 #does not build with gcc-2.x
 <media-gfx/graphviz-1.9

@@ -232,8 +232,8 @@ net-misc/rsync
 ~media-video/realplayer
 
 # makes no sense on ppc
-~sys-apps/lilo
-~sys-apps/grub 
+~sys-boot/lilo
+~sys-boot/grub 
 
 # x86 and sparc only kernels (gerk)
 ~sys-kernel/gentoo-sources

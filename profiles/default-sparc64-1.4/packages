@@ -47,8 +47,8 @@
 
 # These don't make sense on sparc 
 !sys-devel/bin86
-!sys-apps/lilo
-!sys-apps/grub
+!sys-boot/lilo
+!sys-boot/grub
 
 # Get a decent editor - BROKEN
 !app-editors/levee
