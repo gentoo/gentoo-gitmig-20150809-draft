@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.9-r3.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.9-r4.ebuild,v 1.1 2002/07/09 01:53:21 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -48,7 +48,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-antialiasing" \
 		|| myconf="${myconf} --disable-antialiasing"
 
-	econf ${myconf} || die
+	econf ${myconf} --enable-xinerama || die
 
 	emake || die
 }

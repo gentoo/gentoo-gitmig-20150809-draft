@@ -1,8 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.15 2002/07/02 01:02:15 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.16 2002/07/09 01:53:21 drobbins Exp $
+
+*fluxbox-0.19-r4 (7 Jul 2002)
+  
+  7 Jul 2002; Daniel Robbins <drobbins@gentoo.org> : xinerama (multi-monitor
+  support) is now enabled by default.  This closes bug #4514.
 
 *fluxbox-0.19-r3 (1 Jul 2002)
+  
   1 Jul 2002; Owen Stampflee <owen@gentoo.org> fluxbox-0.19-r3.ebuild
   Fixed a slight syntax error in the -r2 ebuild.
 
