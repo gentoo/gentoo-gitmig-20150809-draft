@@ -1,10 +1,18 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.43 2004/01/02 20:55:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.44 2004/01/16 17:18:59 wmertens Exp $
 
+*mjpegtools-1.6.1.92 (16 Jan 2004)
+
+  16 Jan 2004; Wout Mertens <wmertens@gentoo.org> mjpegtools-1.6.1.92.ebuild:
+  Version bump and disabling -fPIC on x86 where it fails. Also first go at
+  making it work for Via C3-I chips (That don't have the cmov instruction)
+  Closing #37133, #36502 and #30345
+  
   02 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> mjpegtools-1.6.1.91.ebuild:
-  Added fPIC patch to make it compile on amd64. Also updated dependencies so that
-  mmx, 3dnow and sse dependencies only gets pulled in for x86. Closing #36843.
+  Added fPIC patch to make it compile on amd64. Also updated dependencies so
+  that mmx, 3dnow and sse dependencies only gets pulled in for x86. Closing
+  #36843.
 
   28 Dec 2003; Jason Wever <weeve@gentoo.org> mjpegtools-1.6.1.90-r1.ebuild:
   Fixed ebuild so it works better with non-x86 arches. Adding ~sparc keyword as
