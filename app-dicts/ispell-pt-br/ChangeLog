@@ -1,6 +1,13 @@
-# ChangeLog for app-dicts/ispell-br
+# ChangeLog for app-dicts/ispell-pt-br
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ChangeLog,v 1.6 2003/03/08 01:07:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ChangeLog,v 1.1 2003/06/13 13:12:56 seemant Exp $
+
+*ispell-pt-br-2.4-r2 (13 Jun 2003)
+
+  13 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  ispell-pt-br-2.4-r2.ebuild:
+  moved to ispell-pt-br, which accurately reflects the language -- Brazilian
+  Portugese. Thanks to: Lucas Roxo Mundim <el_mariel@uol.com.br> in bug #15240
 
 *ispell-br-2.4-r1 (18 Jan 2003)
 
