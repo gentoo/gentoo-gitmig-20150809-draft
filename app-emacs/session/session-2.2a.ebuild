@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/session-2.1c.ebuild,v 1.4 2003/12/27 04:24:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/session-2.2a.ebuild,v 1.1 2003/12/27 04:24:54 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://emacs-session.sourceforge.net/index.html"
 SRC_URI="mirror://sourceforge/emacs-session/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/emacs"
 
