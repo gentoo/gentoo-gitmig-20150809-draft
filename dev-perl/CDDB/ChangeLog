@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CDDB
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.4 2004/06/15 20:42:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.5 2004/06/16 19:21:04 eradicator Exp $
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> CDDB-1.12.ebuild:
+  Stable x86
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> CDDB-1.12.ebuild:
   ~amd64 added.
