@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.4.ebuild,v 1.1 2003/08/12 00:04:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.4.ebuild,v 1.2 2003/09/04 23:05:06 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -39,6 +39,19 @@ src_unpack() {
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 	Makefile >Makefile.new
 	mv Makefile.new Makefile
+	
+	if [ "`echo ${KV}|grep 2.6`" ] ; then
+	
+	cd ${WORKDIR}/lib/modules/fglrx/build_mod
+	einfo "creating Makefile for kernel 2.6"
+	patch -p1 < ${FILESDIR}/fglrx-2.6-makefile.patch
+	einfo "applying fglrx-2.6-fix-deprecated.patch"
+	patch -p1 < ${FILESDIR}/fglrx-2.6-fix-deprecated.patch
+	einfo "applying fglrx-2.6-amd-adv-spec-fix.patch"
+	patch -p1 < ${FILESDIR}/fglrx-2.6-amd-adv-spec-fix.patch
+	einfo "applying fglrx-2.6-vmalloc-vmaddr"
+	patch -p1 < ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
+	fi
 }
 
 pkg_setup(){
@@ -50,13 +63,7 @@ src_compile() {
 	einfo "building the glx module"
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 	if [ "`echo ${KV}|grep 2.6`" ] ; then
-	    einfo "creating Makefile for kernel 2.6"
-	    patch -p1 < ${FILESDIR}/fglrx-2.6-makefile.patch
-	    einfo "applying fglrx-2.6-fix-deprecated.patch"
-	    patch -p1 < ${FILESDIR}/fglrx-2.6-fix-deprecated.patch
-	    einfo "applying fglrx-2.6-amd-adv-spec-fix.patch"
-	    patch -p1 < ${FILESDIR}/fglrx-2.6-amd-adv-spec-fix.patch
-	    GENTOO_ARCH=${ARCH} unset ARCH
+		GENTOO_ARCH=${ARCH} unset ARCH
 	    addwrite "/usr/src/${FK}"
 	    make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
 	    ewarn "glx module not built"

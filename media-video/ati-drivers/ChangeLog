@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.14 2003/08/12 00:04:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.15 2003/09/04 23:05:06 lu_zero Exp $
+
+  05 Sep 2003 Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.2.4.ebuild,
+  files/fglrx-2.6-vmalloc-vmaddr.patch:
+  Added a workaround for mm-sources, cleaned a bit the ebuild.
+  thanks to wedge_ for the patch, solves bug #27912
 
 *ati-drivers-3.2.4 (12 Aug 2003)
 

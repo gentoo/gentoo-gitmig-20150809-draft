@@ -1,0 +1,14 @@
+diff -ruN build_mod.orig/firegl_public.c build_mod/firegl_public.c
+--- build_mod.orig/firegl_public.c	2003-09-05 00:45:33.539384168 +0200
++++ build_mod/firegl_public.c	2003-09-05 00:47:13.193234480 +0200
+@@ -129,7 +129,9 @@
+         #define pte_offset  pte_offset_map
+     #endif
+ #endif
+-
++#ifndef VMALLOC_VMADDR
++#define VMALLOC_VMADDR(x)  ((unsigned long)(x))
++#endif
+ // ============================================================
+ #ifndef TRUE
+ #define TRUE 1
