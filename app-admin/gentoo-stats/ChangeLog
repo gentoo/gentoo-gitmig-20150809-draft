@@ -1,10 +1,13 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.16 2003/02/28 15:41:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.17 2003/04/04 01:20:47 zwelch Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gentoo-stats-0.4 (25 Oct 2002)
+
+  03 Apr 2003; Zach Welch <zwelch@gentoo.org> gentoo-stats-0.4.ebuild:
+  add arm keyword
 
   28 Feb 2003: Guy Martin <gmsoft@gentoo.org> gentoo-stats-0.4.ebuild :
   Added hppa to keywords.
