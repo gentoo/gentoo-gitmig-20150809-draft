@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gaim-smileys
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.4 2003/07/24 18:26:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/ChangeLog,v 1.5 2003/07/24 18:41:50 rizzo Exp $
+
+  24 Jul 2003; Don Seiler <rizzo@gentoo.org>; gaim-smileys-20030724.ebuild:
+  Masking under testing for all arches.
 
 *gaim-smileys-20030724 (24 Jul 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030724.ebuild,v 1.1 2003/07/24 18:26:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gaim-smileys/gaim-smileys-20030724.ebuild,v 1.2 2003/07/24 18:41:50 rizzo Exp $
 
 RESTRICT="${RESTRICT} nostrip"
 
@@ -30,7 +30,7 @@ SRC_URI="http://www.ics.uci.edu/~swrobel/Jimmac.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 DEPEND=">=net-im/gaim-0.59"
 S=${WORKDIR}
