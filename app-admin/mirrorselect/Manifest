@@ -4,5 +4,5 @@ MD5 9d4fb4495264a19df784d06a7f767fdf files/mirrorselect 3575
 MD5 e2b5f0ef29d4f64ace205834b9df5170 files/digest-mirrorselect-0.6 64
 MD5 dd30b706484abd9900a7f2030caec074 mirrorselect-0.3.ebuild 582
 MD5 100d61a5fe0f28e65afbcad758984d6a ChangeLog 3306
-MD5 bc1982914044abdc5f429d075dd24ca6 mirrorselect-0.5.ebuild 625
-MD5 e50a2571c58276b8c1e7982751e31f4f mirrorselect-0.6.ebuild 626
+MD5 8a57e30ff144cf85d6a80bb25decc284 mirrorselect-0.5.ebuild 632
+MD5 345c168f9a9662d6fd36d3622dd27c88 mirrorselect-0.6.ebuild 633
