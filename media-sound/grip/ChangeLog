@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.14 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.15 2003/04/24 03:52:43 agenkin Exp $
+
+*grip-3.0.7 (23 Apr 2003)
+
+  23 Apr 2003;  Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *grip-3.0.6 (16 Feb 2003)
 
