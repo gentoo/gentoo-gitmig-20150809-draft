@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.7 2004/04/23 06:04:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.8 2004/04/27 20:51:17 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> cl-sql-2.8.2.ebuild,
+  cl-sql-2.9.2.ebuild:
+  Add inherit eutils
 
 *cl-sql-2.9.2 (23 Apr 2004)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-2.9.2.ebuild,v 1.1 2004/04/23 06:04:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-2.9.2.ebuild,v 1.2 2004/04/27 20:51:17 agriffis Exp $
 
-inherit common-lisp
+inherit common-lisp eutils
 
 DESCRIPTION="A multi-platform SQL interface for Common Lisp"
 HOMEPAGE="http://clsql.b9.com/

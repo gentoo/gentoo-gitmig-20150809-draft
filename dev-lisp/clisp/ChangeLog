@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.18 2004/04/11 06:28:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.19 2004/04/27 20:50:14 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> clisp-2.33-r1.ebuild,
+  clisp-2.33.ebuild:
+  Add inherit eutils
 
 *clisp-2.33-r1 (11 Apr 2004)
 

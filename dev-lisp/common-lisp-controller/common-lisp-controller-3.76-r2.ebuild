@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76-r2.ebuild,v 1.1 2003/12/21 19:58:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.76-r2.ebuild,v 1.2 2004/04/27 20:52:26 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
