@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.35 2002/12/11 17:39:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.36 2002/12/13 11:00:07 blizzy Exp $
 
   10 Dec 2002; foser <foser@gentoo.org> evolution-1.0.7.ebuild evolution-1.0.8-r2.ebuild evolution-1.2.0.ebuild evolution-1.2.0-r1.ebuild :
   Fixed gob deps (bug #11633)
@@ -13,7 +13,7 @@
   - Fix a crash in settings if some variables not initialized.
 
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   02 Dec 2002; foser <foser@gentoo.org> evolution-1.2.0.ebuild :
   Updated pda deps (bug #10307)

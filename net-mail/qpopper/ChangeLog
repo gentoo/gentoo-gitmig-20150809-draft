@@ -2,10 +2,9 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: Enrico Morelli <morelli@cerm.unifi.it>
 # Maintaniner: José Alberto Suárez López <bass@gentoo.org>
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.3 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.4 2002/12/13 11:00:08 blizzy Exp $
 
 *qpopper-4.0.4 (20 Jun 2002)
 
