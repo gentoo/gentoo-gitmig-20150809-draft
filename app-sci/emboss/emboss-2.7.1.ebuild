@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.7.1.ebuild,v 1.2 2003/09/06 22:23:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.7.1.ebuild,v 1.3 2003/10/20 22:26:35 george Exp $
 
 
 S=${WORKDIR}/EMBOSS-2.7.1
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.emboss.org/"
 SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-2.7.1.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="png X"
 DEPEND="X? ( virtual/x11 )
 	png? ( >=sys-libs/zlib-1.1.4
