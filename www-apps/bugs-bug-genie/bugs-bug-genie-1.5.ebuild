@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.5.ebuild,v 1.4 2005/01/10 03:56:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.5.ebuild,v 1.5 2005/02/17 17:20:43 robbat2 Exp $
 
 inherit webapp
 MY_PV=${PV/./_}
@@ -14,11 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/bugs_${MY_PV}.zip"
 
 KEYWORDS="~x86 ~ppc ~sparc"
 
-RDEPEND="
-	>=net-www/apache-1.3
-	>=virtual/php-4.2.1
-	>=dev-db/mysql-4
-"
+RDEPEND=">=net-www/apache-1.3
+		>=virtual/php-4.2.1
+		>=dev-db/mysql-4"
+DEPEND="app-arch/unzip
+		sys-apps/sed"
 
 LICENSE="MPL-1.1"
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugs-bug-genie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.4 2005/01/10 03:56:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/ChangeLog,v 1.5 2005/02/17 17:20:43 robbat2 Exp $
+
+  17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  bugs-bug-genie-1.5.ebuild:
+  Bug #69831: Ensure unzip is in DEPEND.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> bugs-bug-genie-1.5.ebuild:
   Added ~sparc keyword.

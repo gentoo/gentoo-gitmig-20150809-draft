@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phprojekt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.10 2004/12/29 13:01:25 stuart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.11 2005/02/17 17:21:29 robbat2 Exp $
+
+  17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  phprojekt-4.2-r1.ebuild, phprojekt-4.2-r2.ebuild:
+  Bug #69831: Ensure unzip is in DEPEND.
 
   29 Dec 2004; Stuart Herbert <stuart@gentoo.org> :
   Security fix; see bug #75858
