@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.4 2004/01/30 04:19:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r15.ebuild,v 1.5 2004/02/18 01:47:39 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -36,14 +36,14 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 # broken stuffs
 #http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+
 DEPEND="virtual/glibc
 	sys-apps/groff
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	>=net-mail/queue-fix-1.4-r1"
-
 RDEPEND="!virtual/mta
 	virtual/glibc
 	>=sys-apps/ucspi-tcp-0.88

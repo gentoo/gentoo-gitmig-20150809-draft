@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.8 2003/12/03 16:40:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.9 2004/02/18 01:45:35 vapier Exp $
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
 SRC_URI="http://members.elysium.pl/brush/cmd5checkpw/dist/${P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE=""
+
 DEPEND="virtual/glibc"
-S=${WORKDIR}/${P}
 
 pkg_preinst() {
 	if ! grep -q ^cmd5checkpw: /etc/passwd
