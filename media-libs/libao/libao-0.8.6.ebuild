@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.5.ebuild,v 1.16 2005/01/30 00:00:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6.ebuild,v 1.1 2005/01/30 00:00:26 chainsaw Exp $
 
 inherit libtool eutils
 
 DESCRIPTION="the audio output library"
 HOMEPAGE="http://www.xiph.org/ao/"
-SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
+SRC_URI="http://downloads.xiph.org/releases/ao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE="alsa arts esd nas mmap static"
 
 DEPEND="virtual/libc
@@ -22,7 +22,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
+	epatch ${FILESDIR}/${P}-ppc-macos.patch
 	elibtoolize
 }
 
