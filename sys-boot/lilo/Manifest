@@ -6,7 +6,7 @@ MD5 17d51bd1048874cfc6b693cf69d65113 lilo-22.5.1.ebuild 4573
 MD5 62c3935ec2e171f4b0e24dc45702c487 lilo-22.5.6-r2.ebuild 3436
 MD5 41063ae0aa3a80bb1a1ca2fd07b9487f lilo-22.5.8.ebuild 4041
 MD5 f8a0ee70d79cdbe758b30d623eb4ee8b lilo-22.3.4.ebuild 2004
-MD5 369a0c5df1179046152a0b7108498329 ChangeLog 6525
+MD5 e4cfce0ecb8626b0884f51a7be9f7d6c ChangeLog 6525
 MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
 MD5 ae8d44679d6ad635167141df89108f4a lilo-22.1-r3.ebuild 1581
 MD5 ca44cc6ec0aecfe30c49c455f74aacec files/lilo-22.5.6-glibc233.patch 640

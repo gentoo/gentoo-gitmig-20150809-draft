@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/syslinux
+# ChangeLog for sys-boot/syslinux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.1 2003/12/09 08:28:31 seemant Exp $
+# $Id: ChangeLog,v 1.2 2003/12/09 08:55:58 seemant Exp $
 
 *syslinux-2.06 (08 Dec 2003)
 
