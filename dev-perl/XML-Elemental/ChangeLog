@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-Elemental
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Elemental/ChangeLog,v 1.1 2005/02/07 10:14:24 mcummings Exp $
+
+*XML-Elemental-1.03 (07 Feb 2005)
+
+  07 Feb 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +XML-Elemental-1.03.ebuild:
+  dep for bug 80913
+

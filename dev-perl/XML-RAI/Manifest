@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e4bb6df9fcd983a6e41e46d5af896766 XML-RAI-1.2.ebuild 544
+MD5 b99e0ae0ce97b928695ed7ea93b1d931 ChangeLog 342
+MD5 eaca5dbe56407e78a5b44c54c1c83dc6 files/digest-XML-RAI-1.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBz/gtG5z4I8BtQoRAkBCAJ9ThqdbKomzjoTIZ220FmvOm4dopACdGPJ6
+Zk33MKC07WI+JT4nXqlWyAE=
+=7jDZ
+-----END PGP SIGNATURE-----
