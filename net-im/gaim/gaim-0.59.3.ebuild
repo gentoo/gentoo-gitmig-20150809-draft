@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.4 2002/10/05 05:39:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.3.ebuild,v 1.5 2002/10/08 15:13:33 kilroy Exp $
 
 IUSE="nas nls esd gnome arts gtk2 perl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gaim.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc64"
 
 DEPEND="=sys-libs/db-1*
 	esd? ( >=media-sound/esound-0.2.22-r2 )
