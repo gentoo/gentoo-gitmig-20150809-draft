@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdesktopwaves
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/ChangeLog,v 1.1 2004/11/19 12:54:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdesktopwaves/ChangeLog,v 1.2 2004/11/19 19:00:19 tester Exp $
+
+  19 Nov 2004; Olivier Crete <tester@gentoo.org> xdesktopwaves-1.0.ebuild:
+  Added ~x86 keyword
 
 *xdesktopwaves-1.0 (19 Nov 2004)
 
