@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libhttpd-persistent
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.9 2004/07/07 09:37:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.10 2004/08/18 20:56:46 eradicator Exp $
+
+*libhttpd-persistent-1.3p-r8 (18 Aug 2004)
+
+  18 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +libhttpd-persistent-1.3p-r8.ebuild:
+  Version bump closes bug #55201
 
 *libhttpd-persistent-1.3p-r7 (07 Jul 2004)
 
