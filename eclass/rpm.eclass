@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.3 2003/06/21 13:47:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.4 2003/06/21 14:22:18 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -58,11 +58,11 @@ rpm_src_unpack() {
 			if [ "${prefix##*.}" = "src" ]; then
 				OLD_DISTDIR=${DISTDIR}
 				DISTDIR=${WORKDIR}
-				findopts="-name *.tar"
+				findopts="* -maxdepth 0 -name *.tar"
 				for t in *.tar.gz *.tgz *.tbz2 *.tar.bz2 *.zip *.ZIP; do
 					findopts="${findopts} -o -name ${t}"
 				done
-				for t in $(find * ${findopts} | xargs); do
+				for t in $(find ${findopts} | xargs); do
 					unpack ${t}
 					rm -f ${t}
 				done
