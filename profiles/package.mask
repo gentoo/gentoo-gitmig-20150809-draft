@@ -18,7 +18,7 @@ app-admin/webconfig
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
-=sys-apps/portage-1.8.2
+sys-apps/portage-1.8.2
 >=sys-apps/portage-1.9
 
 #still need some testing, especially the XFS.
@@ -290,6 +290,5 @@ media-sound/gkrellmms
 net-misc/gkrellmwireless
 
 #Should be tested
->=dev-lang/python-2.2
 =net-mail/teapop-0.3.3
 media-gfx/pixieplus
