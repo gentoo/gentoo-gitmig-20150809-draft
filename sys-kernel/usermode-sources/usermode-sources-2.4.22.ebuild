@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.22.ebuild,v 1.1 2003/09/29 19:13:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.22.ebuild,v 1.2 2003/10/31 13:45:58 lanius Exp $
 
 UML_VERSION="${PV}"
 UML_PATCH="uml-patch-2.4.22-5"
@@ -15,7 +15,7 @@ mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${UML_VERSION}"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 #console-tools is needed to solve the loadkeys fiasco.
 #binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
