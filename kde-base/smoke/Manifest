@@ -1,4 +1,7 @@
-MD5 f691661f0be756b01317c001e26dc126 smoke-3.4.0_beta2.ebuild 1073
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba76952281d8c6ce8c85466ae8ed690b smoke-3.4.0_beta2.ebuild 1019
 MD5 4cbd049aff94ab6b76816d81b8adbd37 smoke-3.4.0_beta1.ebuild 597
 MD5 9a08c5e4a246f52c427df23e2451141c ChangeLog 1231
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
@@ -8,3 +11,10 @@ MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 4877266a41162d4c439090a71dcc66bc files/digest-smoke-3.4.0_beta1 225
 MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-smoke-3.4.0_beta2 307
 MD5 70e20b1b123bf8d012966ea1675c9306 files/digest-smoke-3.3.1 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDgg7I1lqEGTUzyQRAg04AKDJoSX2XPHBxZHr6RZA7t5lyZrsCwCfZrSd
+c+gYW3rjrRyVfh2uUjxpj38=
+=I9lr
+-----END PGP SIGNATURE-----
