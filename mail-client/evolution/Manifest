@@ -11,7 +11,7 @@ MD5 8ec4daeb3d6cfce98637075f33550b0b evolution-2.0.2-r1.ebuild 4079
 MD5 6ce020116cdfd530f866baff39b6ce5c evolution-2.0.3-r1.ebuild 4015
 MD5 fa55d72c98c24a18eb33912861f49857 evolution-2.0.3-r2.ebuild 4110
 MD5 bd65828630277b9584f936c26719e5c5 evolution-2.0.4.ebuild 3999
-MD5 671c01338267cb5b0e8d0ab4e65428cd evolution-2.2.0.ebuild 3984
+MD5 73ba14f02338cc5277ae9d5e546e3e23 evolution-2.2.0.ebuild 3984
 MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
 MD5 fe0cafc4040da525377526f4a1fa297f files/digest-evolution-1.4.6 132
 MD5 55cb14a4c3057ba1f6d91bea14ec28b6 files/digest-evolution-2.0.2 70
@@ -36,7 +36,7 @@ MD5 66cb81c792d948e4f84a47bb0247a403 files/digest-evolution-2.2.0 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLrgJXjcVihsel0ERAjLTAKCSOaQze9CfV2mqYnQayVyTmWxyUQCdElsf
-6u0euQIWlvJahx9YDljJUzU=
-=M1yW
+iD8DBQFCLsLVXjcVihsel0ERAsNXAJ97RstlX4OKPYRNajLplyvvR9Ij4wCffh4W
+mR6VkfykDW8qo0sNISiSr30=
+=7CZL
 -----END PGP SIGNATURE-----
