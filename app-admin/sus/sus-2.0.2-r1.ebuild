@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.2.ebuild,v 1.7 2004/06/25 23:00:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/sus-2.0.2-r1.ebuild,v 1.1 2004/09/13 20:39:01 kumba Exp $
 
 inherit gcc
 
@@ -10,11 +10,19 @@ SRC_URI="http://pdg.uow.edu.au/sus/${P}.tar.Z"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc mips"
+KEYWORDS="x86 sparc mips"
 IUSE="pam"
 
 DEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.73-r1 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fixes a local root vulnerability (Bug #63927)
+	epatch ${FILESDIR}/${P}-syslog-vuln-fix.patch
+}
 
 src_compile() {
 	local myconf

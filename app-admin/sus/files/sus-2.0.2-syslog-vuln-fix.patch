@@ -1,0 +1,12 @@
+diff -Naurp sus-2.0.2.orig/log.c sus-2.0.2/log.c
+--- sus-2.0.2.orig/log.c	2002-04-06 03:19:14.000000000 -0500
++++ sus-2.0.2/log.c	2004-09-13 16:16:39.376881320 -0400
+@@ -150,7 +150,7 @@ log(char * msg)
+ 		}
+ 
+ 		openlog(ident, LOG_PID|LOG_CONS, facility);
+-		syslog(level, msg);
++		syslog(level, "%s", msg);
+ #ifdef	DEBUG
+ 		if (g_debug)
+ 			(void) fprintf(stderr,"syslog: ident \"%s\", level %d, \"%s\"",

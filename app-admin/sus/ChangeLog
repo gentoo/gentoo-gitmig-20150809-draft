@@ -1,7 +1,13 @@
 # ChangeLog for app-admin/sus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/ChangeLog,v 1.4 2004/06/24 21:38:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sus/ChangeLog,v 1.5 2004/09/13 20:39:01 kumba Exp $
 
+*sus-2.0.2-r1 (13 Sep 2004)
+
+  13 Sep 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/sus-2.0.2-syslog-vuln-fix.patch, +sus-2.0.2-r1.ebuild,
+  -sus-2.0.2.ebuild:
+  Added patch to fix a local root exploit (Bug #63927)
 
 *sus-2.0.2 (10 Aug 2003)
 
