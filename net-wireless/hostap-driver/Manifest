@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21e03519360fbce8cc94ba353e3bbced hostap-driver-0.1.3.ebuild 2922
 MD5 0357db35292e4c201c1506437bb3cc14 hostap-driver-0.1.2-r1.ebuild 3837
 MD5 4edd5bce6a9f6b95029457b5c01aa712 hostap-driver-0.1.2.ebuild 3734
@@ -12,7 +15,14 @@ MD5 5c57e0825ccb41c219c9d86c6a9114e5 files/digest-hostap-driver-0.1.2-r1 71
 MD5 7404c72c79e3c743a94815cff4146633 files/digest-hostap-driver-0.1.2-r2 441
 MD5 75dda0e477834ba5a6c5c88cfb402fe7 files/digest-hostap-driver-0.1.1 71
 MD5 5c57e0825ccb41c219c9d86c6a9114e5 files/digest-hostap-driver-0.1.2 71
-MD5 44d9961555b48c6445ebe7bd24d33b4a files/digest-hostap-driver-0.1.3 515
+MD5 ca0acad8d1689a75901c99c700df0382 files/digest-hostap-driver-0.1.3 441
 MD5 fe9ca923fd63e570f4f47be989fd810f files/digest-hostap-driver-0.2.4 441
 MD5 702e5e315551f06833fde599816fd65a files/digest-hostap-driver-0.2.5 441
 MD5 afb604f5408986228ad8cc60236339dc files/hostap-driver-0.1.2.firmware.diff.bz2 590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpQURI1lqEGTUzyQRAhcRAJ43B+bdFe+6f/xVrGBumvftknVUSACfTMKn
+ucyrGX/kUP467NSmSNdA56g=
+=2APf
+-----END PGP SIGNATURE-----
