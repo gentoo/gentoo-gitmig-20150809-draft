@@ -1,8 +1,8 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.4 2003/06/15 13:13:10 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.5 2003/07/13 11:40:19 aliz Exp $
 
-*noip-update-2.0.12 (15 Jun 2003)
+*noip-updater-2.0.12 (15 Jun 2003)
 
   15 Jun 2003; Jared Hudson <jhhudso@gentoo.org> : Incremented to latest
   version and set older version as stable (x86). Credit goes to Low Zhen Lin
