@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r2.ebuild,v 1.1 2004/12/27 18:55:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r2.ebuild,v 1.2 2005/02/19 20:14:14 kingtaco Exp $
 
 inherit toolchain-funcs
 
@@ -31,7 +31,7 @@ SLOT="0"
 
 #ARCH: I only tested on x86, it's the only platform I have access, but it's
 #      supposed to work on other platforms, see HOMEPAGE
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE=""
 
