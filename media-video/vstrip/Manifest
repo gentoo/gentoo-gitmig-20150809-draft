@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0fc4178ae33869fc8ff4e2fb12cfb34e vstrip-0.8f.ebuild 778
+MD5 b17a6cf6781d80c556e5d84f3327ddc5 metadata.xml 336
+MD5 78903ce7fba9fcac7690779c4ce09f94 ChangeLog 451
+MD5 5e8b0123e4210ad51352ae95aca5832e files/vstrip-0.8f-gentoo.patch 2027
+MD5 1f3d4d7b3589e5de8e4bb357eb9a0f63 files/digest-vstrip-0.8f 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCR0HSFdQwWVoAgN4RAiJjAKDFUJicllcQk7B2862EDMxt2ILKyACggDLi
+RuJwn68sXka2rMeg1qjS880=
+=jSXc
+-----END PGP SIGNATURE-----

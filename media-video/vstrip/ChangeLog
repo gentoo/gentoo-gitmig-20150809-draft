@@ -1,0 +1,11 @@
+# ChangeLog for media-video/vstrip
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/ChangeLog,v 1.1 2005/03/28 00:01:53 chriswhite Exp $
+
+*vstrip-0.8f (28 Mar 2005)
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/vstrip-0.8f-gentoo.patch, +vstrip-0.8f.ebuild:
+  Initial import into the tree. Closes bug #31519. Thanks to swegner for the
+  ebuild!
+
