@@ -1,0 +1,11 @@
+--- dump/main.c~	Thu Dec 21 11:14:54 2000
++++ dump/main.c	Mon Apr  9 23:12:44 2001
+@@ -46,7 +46,7 @@
+ 
+ #include <config.h>
+ #include <sys/param.h>
+-#include <sys/time.h>
++#include <time.h>
+ #ifdef __linux__
+ #include <linux/ext2_fs.h>
+ #include <sys/stat.h>

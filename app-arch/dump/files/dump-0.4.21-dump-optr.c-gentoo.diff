@@ -1,0 +1,11 @@
+--- dump/optr.c~	Thu Dec 21 11:14:54 2000
++++ dump/optr.c	Mon Apr  9 23:12:54 2001
+@@ -47,7 +47,7 @@
+ #include <config.h>
+ #include <sys/param.h>
+ #include <sys/wait.h>
+-#include <sys/time.h>
++#include <time.h>
+ 
+ #include <errno.h>
+ #include <fstab.h>
