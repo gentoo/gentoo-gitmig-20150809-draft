@@ -1,9 +1,11 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.13 2002/09/16 01:00:35 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.14 2002/09/17 15:31:13 spider Exp $
 
 *esound-0.2.29 (06 Sep 2002)
-
+  17 Sep 2002; Spider <spider@gentoo.org> esound-0.2.29.ebuild :
+  added ppc keyword 
+  
   16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> esound-0.2.29.ebuild, ChangeLog :
   Adding sparc/sparc64 keywords. Revamping ChangeLog layout.
 
