@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52.ebuild,v 1.10 2004/11/01 01:29:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52.ebuild,v 1.11 2004/11/05 05:38:31 urilith Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -9,7 +9,8 @@ S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
-	http://dev.gentoo.org/~stuart/apache/apache-patches-${PVR}.tar.bz2"
+	http://dev.gentoo.org/~stuart/apache/apache-patches-${PVR}.tar.bz2
+	mirror://gentoo/apache2-conf.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
@@ -309,12 +310,12 @@ src_install () {
 	exeinto /etc/init.d; newexe ${FILESDIR}/2.0.49/apache2.initd apache2
 	insinto /etc/apache2; doins ${FILESDIR}/2.0.49/apache2-builtin-mods
 	insinto /etc/apache2/conf
-	doins ${FILESDIR}/2.0.49/commonapache2.conf
-	doins ${FILESDIR}/2.0.49/apache2.conf
+	doins ${WORKDIR}/commonapache2.conf
+	doins ${WORKDIR}/apache2.conf
 	insinto /etc/apache2/conf/vhosts
-	doins ${FILESDIR}/2.0.49/virtual-homepages.conf
-	doins ${FILESDIR}/2.0.49/dynamic-vhosts.conf
-	doins ${FILESDIR}/2.0.49/vhosts.conf
+	doins ${WORKDIR}/virtual-homepages.conf
+	doins ${WORKDIR}/dynamic-vhosts.conf
+	doins ${WORKDIR}/vhosts.conf
 
 	# Added by Jason Wever <weeve@gentoo.org>
 	# A little sedfu to fix bug #7172 for sparc64s
