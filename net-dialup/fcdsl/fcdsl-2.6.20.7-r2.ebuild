@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.6 2004/11/22 18:20:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r2.ebuild,v 1.1 2004/12/12 19:14:21 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -94,14 +94,26 @@ pkg_setup() {
 	kernel-mod_check_modules_supported
 
 	#Check existence of user selected cards
-	for USERCARD in ${FCDSL_CARDS} ; do
-		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
-			if [ "$USERCARD" = "${FCDSL_MODULES[CARD]}" ]; then
-				continue 2
-			fi
+	if [ -n "${FCDSL_CARDS}" ] ; then
+		for USERCARD in ${FCDSL_CARDS} ; do
+			for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+				if [ "$USERCARD" = "${FCDSL_MODULES[CARD]}" ]; then
+					continue 2
+				fi
+			done
+			die "Card ${USERCARD} not present in ${P}"
 		done
-		die "Card ${USERCARD} not present in ${P}"
-	done
+	else
+		einfo
+		einfo "You can control the modules which are built with the variable"
+		einfo "FCDSL_CARDS which should contain a blank separated list"
+		einfo "of a selection from the following cards:"
+		einfo "   ${FCDSL_MODULES[*]}"
+		einfo
+		ewarn "I give you the chance of hitting Ctrl-C and make the necessary"
+		ewarn "adjustments in /etc/make.conf."
+		ebeep
+	fi
 }
 
 src_compile() {
@@ -136,10 +148,13 @@ src_install() {
 			doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src/${FCDSL_MODULES[CARD]}.ko
 
 			insinto /lib/firmware
-			newins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]} ${PN}_${FCDSL_FIRMWARES[CARD]}
-			dosym /lib/firmware/${PN}_${FCDSL_FIRMWARES[CARD]} /usr/lib/isdn/${FCDSL_FIRMWARES[CARD]}
+			doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]}
 		fi
 	done
+
+	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
+	#Please remove it when it becomes obsolete
+	dosym firmware /lib/isdn
 
 	insinto /etc/drdsl
 	doins ${S}/drdsl.ini
@@ -149,7 +164,6 @@ src_install() {
 
 	dodoc ${S}/CAPI* ${S}/compile* ${S}/license.txt ${S}/release.txt
 	dohtml install_passive-*.html
-
 }
 
 pkg_postinst() {

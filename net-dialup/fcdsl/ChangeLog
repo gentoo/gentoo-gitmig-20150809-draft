@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.5 2004/11/22 18:20:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.6 2004/12/12 19:14:21 mrness Exp $
+
+*fcdsl-2.6.20.7-r2 (12 Dec 2004)
+
+  12 Dec 2004; Alin Nastac <mrness@gentoo.org> -fcdsl-2.6.20.7-r1.ebuild,
+  +fcdsl-2.6.20.7-r2.ebuild:
+  Move firmware files to /lib/firmware, the new FHS standard location for
+  firmware files.
 
   22 Nov 2004; Alin Nastac <mrness@gentoo.org> fcdsl-2.6.20.7-r1.ebuild:
   Add support for env variable FCDSL_CARDS. If is non-empty, only these modules
