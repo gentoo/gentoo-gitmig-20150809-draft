@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49bf41776ddf3967eb3d7d4f977e2191 ChangeLog 555
-MD5 f7cdcda1de7dac1d8ac84bdb135a9660 dvi2tty-5.3.1.ebuild 537
+MD5 796e9a00235a24092ff38cc450a48ab8 ChangeLog 663
+MD5 e7210fd4e1e2ce017c8020d7a01e659f dvi2tty-5.3.1.ebuild 623
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 e0fb360ac06c81780254234af41ae1ae files/digest-dvi2tty-5.3.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFTGVWNWqTUmv+0RAuPzAKCMROrWT5tboO1trdCNZDiv3CZ6xQCgiBXB
-8Lu0bUkqWZ0Uypx4e4UxUlk=
-=CPpk
------END PGP SIGNATURE-----
+MD5 b0e5354516b0ad484d6d3477424bd581 files/dvi2tty-gcc.patch 341
