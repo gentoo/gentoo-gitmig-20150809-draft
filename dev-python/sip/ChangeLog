@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.32 2004/05/25 13:10:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.33 2004/06/23 16:29:25 carlo Exp $
+
+*sip-4.0 (23 Jun 2004)
+
+  23 Jun 2004; Carsten Lohrke <carlo@gentoo.org> -files/license-3.5.diff,
+  sip-3.10.2.ebuild, -sip-3.5.ebuild, sip-3.8-r1.ebuild, +sip-4.0.ebuild,
+  -sip-4.0_rc2.ebuild, sip-4.0_rc4.ebuild:
+  version bump, QA
 
   25 May 2004; Carsten Lohrke <carlo@gentoo.org> sip-3.10.1.ebuild,
   sip-3.10.ebuild, sip-3.5.ebuild, sip-3.8-r1.ebuild, sip-3.8.ebuild,

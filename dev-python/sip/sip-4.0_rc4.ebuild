@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc4.ebuild,v 1.1 2004/05/22 19:54:14 carlo Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.0_rc4.ebuild,v 1.2 2004/06/23 16:29:25 carlo Exp $
 
 inherit distutils
 
@@ -16,6 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	x11-libs/qt
