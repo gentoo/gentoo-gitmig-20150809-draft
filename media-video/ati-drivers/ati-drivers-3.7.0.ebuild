@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.0.ebuild,v 1.1 2003/12/30 01:20:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.0.ebuild,v 1.2 2003/12/30 21:37:28 azarah Exp $
 
 IUSE="qt kde gnome"
 
@@ -162,6 +162,11 @@ src_install() {
 	if [ "`use qt`" ]
 	then
 		doexe ${WORKDIR}/extra/fglrx_panel/fireglcontrol
+
+		# Fix the paths in these
+		sed -e 's|/usr/X11R6/|/opt/ati/|g' \
+			-i ${WORKDIR}/usr/share/applnk/fireglcontrol.kdelnk \
+			-i ${WORKDIR}/usr/share/gnome/apps/fireglcontrol.desktop
 	else
 		# Removing unused stuff
 		rm -rf ${WORKDIR}/usr/share/{applnk,gnome,icons,pixmaps}
