@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.63 2005/02/25 01:10:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.64 2005/03/26 02:07:10 radek Exp $
+
+*zope-2.7.5 (26 Mar 2005)
+
+  26 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org> +zope-2.7.5.ebuild:
+  Version bump, downgraded all arches to ~
 
   24 Feb 2005; Jason Wever <weeve@gentoo.org> zope-2.7.4.ebuild:
   Stable on sparc.
