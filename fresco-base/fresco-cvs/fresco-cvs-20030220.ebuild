@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20030220.ebuild,v 1.3 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/fresco-base/fresco-cvs/fresco-cvs-20030220.ebuild,v 1.4 2003/04/07 06:02:18 lordvan Exp $
 
 ECVS_SERVER="cvs.fresco.org:/cvs/fresco"
 ECVS_MODULE="Fresco"
@@ -27,7 +27,8 @@ DEPEND="net-misc/omniORB
 	>=media-libs/freetype-2.0.0
 	sys-libs/zlib
 	media-libs/libpng
-	fresco-base/fresco-env"
+	fresco-base/fresco-env
+	>=dev-python/omniORBpy-2.0"
 
 
 src_compile() {
