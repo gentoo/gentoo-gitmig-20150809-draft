@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.18 2005/02/05 09:09:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.19 2005/02/07 20:10:03 cryos Exp $
+
+*emul-linux-x86-xlibs-1.2-r5 (07 Feb 2005)
+
+  07 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +emul-linux-x86-xlibs-1.2-r5.ebuild:
+  Ebuild patched to rectify locale problems, bumped to propagate fix, thanks to
+  Herbie Hopkins <herbie@hopkins.net> for the patch, bug 80420.
 
 *emul-linux-x86-xlibs-1.2-r4 (05 Feb 2005)
 
