@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2.ebuild,v 1.2 2003/05/20 09:46:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2.ebuild,v 1.3 2003/07/13 12:44:50 aliz Exp $
 
 IUSE="ssl kde"
 [ -n "`use kde`" ] && inherit kde-base
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz"
 HOMEPAGE="http://sim-icq.sourceforge.net"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 newdepend "ssl? ( dev-libs/openssl )"

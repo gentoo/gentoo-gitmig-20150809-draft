@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.7.ebuild,v 1.1 2003/04/23 21:51:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.7.ebuild,v 1.2 2003/07/13 12:44:50 aliz Exp $
 
 VA="`echo ${PV}|sed -e 's:^\([0-9]*\)\..*$:\1:'`"
 VB="`echo ${PV}|sed -e 's:^[0-9]*\.\([0-9]*\)\..*$:\1:'`"
@@ -16,7 +16,7 @@ HOMEPAGE="http://site.rpi-acm.org/info/naim/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

@@ -1,8 +1,8 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.9 2003/04/15 17:48:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.10 2003/07/13 12:44:49 aliz Exp $
 
-* amsn-0.71 (7 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+*amsn-0.71 (7 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
 
   15 Apr 2003: Jason Wever <weeve@gentoo.org> amsn-0.71.ebuild:
   Added ~sparc to keywords.
@@ -12,11 +12,11 @@
 
   New version
 
-* amsn-0.61.3 (26 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+*amsn-0.61.3 (26 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
 
   Another snapshot.. Only 3 days after the previous one, but hey :o)
 
-* amsn-0.61.2 (9 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+*amsn-0.61.2 (9 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
 
   Another snapshot, with quite a nice changelog. Brought to my attention 
   by Diego Palacios.
