@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/pvm
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.1 2003/06/22 20:56:33 tantive Exp $
+
+*xpvm-1.2.5 (22 Jun 2003)
+  
+  22 Jun 2003; Michael Imhof <tantive@gentoo.org>:
+  Initial release. Submitted by the <the@weird-birds.org>.
+  Should close #22689.
