@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/chillispot
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.4 2004/10/03 18:15:52 solar Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.5 2005/01/12 21:12:24 solar Exp $
+
+*chillispot-0.99 (12 Jan 2005)
+
+  12 Jan 2005; <solar@gentoo.org> +chillispot-0.99.ebuild:
+  - version bump
 
 *chillispot-0.97 (03 Oct 2004)
 
