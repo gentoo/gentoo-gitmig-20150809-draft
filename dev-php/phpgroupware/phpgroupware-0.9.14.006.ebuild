@@ -1,24 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.1 2003/07/24 16:33:20 mholzer Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.2 2003/08/07 02:27:23 vapier Exp $
 
 S=${WORKDIR}/${PN}
 HTTPD_ROOT="/home/httpd/htdocs"
 HTTPD_USER="apache"
 HTTPD_GROUP="apache"
 
-DESCRIPTION="The phpGroupWare intranet/groupware tool and application framework."
+DESCRIPTION="intranet/groupware tool and application framework"
+HOMEPAGE="http://www.phpgroupware.org/"
 SRC_URI="mirror://sourceforge/phpgroupware/${P}.tar.bz2"
-HOMEPAGE="http://www.phpgroupware.org"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa ~arm"
-IUSE=""
 
 DEPEND="virtual/php
 	dev-db/mysql"
-
 
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/phpgroupware ] ; then
@@ -34,7 +32,7 @@ src_compile() {
 	echo "Nothing to compile"
 }
 
-src_install () {
+src_install() {
 	dodir ${HTTPD_ROOT}/phpgroupware
 	cd ${WORKDIR} 
 	cp -r . ${D}/${HTTPD_ROOT}

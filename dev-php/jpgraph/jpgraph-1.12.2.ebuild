@@ -1,30 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Released under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.3 2003/08/04 23:43:56 stuart Exp $
-#
-# Based on the ebuild submitted by ??
-
-DESCRIPTION="JpGraph is a fully OO graph drawing library for PHP."
-HOMEPAGE="http://www.aditus.nu/jpgraph/"
-SRC_URI="http://www.aditus.nu/jpgraph/downloads/${P}.tar.gz"
-
-# QPL license for non-commercial use, regular commercial license available
-LICENSE="QPL-1.0"
-
-IUSE="truetype"
-
-SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-DEPEND=""
-RDEPEND="virtual/php
-	     >=media-libs/libgd-1.8"
-
-S="${WORKDIR}/${P}"
-JPGRAPH_CACHE_DIR="/var/cache/jpgraph"
+# Released under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.4 2003/08/07 02:31:32 vapier Exp $
 
 inherit php-lib
 
-# setup defaults in case we don't have a web server installed
+DESCRIPTION="fully OO graph drawing library for PHP"
+HOMEPAGE="http://www.aditus.nu/jpgraph/"
+SRC_URI="http://www.aditus.nu/jpgraph/downloads/${P}.tar.gz"
+
+LICENSE="QPL-1.0"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="truetype"
+
+DEPEND=""
+RDEPEND="virtual/php
+	>=media-libs/libgd-1.8"
+
+JPGRAPH_CACHE_DIR="/var/cache/jpgraph"
 
 HTTPD_USER=root
 HTTPD_GROUP=root
@@ -32,8 +25,7 @@ HTTPD_GROUP=root
 has_version "net-www/apache" && USE_APACHE=1 && inherit webapp-apache
 [ -n $"{USE_APACHE}" ] && webapp-detect || NO_WEBSERVER=1
 
-pkg_setup ()
-{
+pkg_setup() {
 	if [ "${NO_WEBSERVER}" = "1" ]; then
 		ewarn "No webserver detected - ${JPGRAPH_CACHE_DIR} will be"
 		ewarn "owned by ${HTTPD_USER} instead"
@@ -42,8 +34,7 @@ pkg_setup ()
 	fi
 }
 
-src_install ()
-{
+src_install() {
 	einfo "Patching jpgraph.php"
 	
 	# patch 1:
