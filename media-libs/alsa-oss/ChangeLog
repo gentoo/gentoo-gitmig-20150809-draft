@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.49 2005/03/16 11:56:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.50 2005/03/19 21:07:37 pylon Exp $
+
+  19 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-oss-1.0.7.ebuild:
+  Stable keyword disappeared due to deletion of alsa-1.0.6.  See bug #85571.
 
   16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-oss-1.0.6.ebuild:
