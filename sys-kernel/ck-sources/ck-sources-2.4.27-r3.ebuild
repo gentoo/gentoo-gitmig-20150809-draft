@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.27-r3.ebuild,v 1.1 2004/11/19 22:28:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.27-r3.ebuild,v 1.2 2004/11/25 22:41:14 dsd Exp $
 
 ETYPE="sources"
 inherit kernel-2
-detect_version
 
 # CKV=con kolivas release version
 CKV="1"
