@@ -1,6 +1,10 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.10 2005/01/25 18:30:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.11 2005/02/05 10:37:04 ka0ttic Exp $
+
+  05 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> -files/awstats-6.1-r1.diff,
+  -awstats-6.1.ebuild, awstats-6.3.ebuild:
+  Tidy old vulnerable version.
 
   25 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> awstats-6.3.ebuild:
   Stable on ppc.
