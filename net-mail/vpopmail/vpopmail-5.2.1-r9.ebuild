@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.2 2004/01/05 06:07:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.3 2004/03/08 22:52:21 robbat2 Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -63,9 +63,9 @@ src_unpack() {
 		einfo "Applying MySQL patch..."
 		# Thanks to Nicholas Jones (carpaski@gentoo.org)
 		epatch ${DISTDIR}/vpopmail-5.2.1-mysql.diff
-		# gcc3.3 fix
-		epatch ${FILESDIR}/vpopmail-5.2.1-gcc33mysql.diff
 	fi
+	# gcc3.3 fix
+	epatch ${FILESDIR}/vpopmail-5.2.1-gcc33mysql.diff
 
 	# Thanks to Vadim Berezniker (vadim@berezniker.com)
 	# This patch backports a bug fix from the devel version re: logons
