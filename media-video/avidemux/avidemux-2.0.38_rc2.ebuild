@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.1 2005/04/03 10:36:53 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2.ebuild,v 1.2 2005/04/05 18:55:05 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}b.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis pic sdl truetype xvid xv"
+IUSE="a52 aac alsa altivec arts debug encode mad mmx nls vorbis pic sdl truetype xvid xv"
 
 RDEPEND="virtual/x11
 	a52? ( >=media-libs/a52dec-0.7.4 )
@@ -25,7 +25,7 @@ RDEPEND="virtual/x11
 	xvid? ( >=media-libs/xvid-1.0.0 )
 	x86? ( dev-lang/nasm )
 	nls? ( >=sys-devel/gettext-0.12.1 )
-	oggvorbis? ( >=media-libs/libogg-1.0
+	vorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0.1 )
 	arts? ( >=kde-base/arts-1.2.3 )
 	truetype? ( >=media-libs/freetype-2.1.5 )
@@ -33,8 +33,9 @@ RDEPEND="virtual/x11
 	sdl? ( media-libs/libsdl )"
 # media-sound/toolame is supported as well
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58
-		>=sys-devel/automake-1.8.3"
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.8.3"
 
 filter-flags "-fno-default-inline"
 filter-flags "-funroll-loops"
@@ -45,12 +46,12 @@ S=${WORKDIR}/${MY_P}b
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${PV}-fix-faad.patch
 	cd ${S} || die
 }
 
 src_compile() {
 	local myconf
-	myconf="--with-gnu-ld --disable-warnings"
 
 	use arts || export ac_cv_path_ART_CONFIG=no
 	use alsa || export ac_cv_header_alsa_asoundlib_h=no
@@ -64,13 +65,14 @@ src_compile() {
 	use a52 || export ac_cv_header_a52dec_a52=no
 
 	use debug && myconf="${myconf} --enable-debug=full"
-	use aac || myconf="${myconf} --disable-faac --disable-faad"
-	use mmx || myconf="${myconf} --disable-mmx"
 
 	econf \
-		`use_enable nls` \
-		`use_enable altivec` \
-		`use_with pic` \
+		$(use_enable nls) \
+		$(use_enable altivec) \
+		$(use_enable mmx) \
+		$(use_enable aac faac) $(use_enable aac faad) \
+		$(use_with pic) \
+		--disable-warnings \
 		${myconf} || die "configure failed"
 	make || die "make failed"
 }

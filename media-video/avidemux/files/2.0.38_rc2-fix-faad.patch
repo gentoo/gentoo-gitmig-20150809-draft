@@ -1,0 +1,21 @@
+diff -ur avidemux-2.0.38rc2b.orig/avidemux/ADM_audiocodec/ADM_codecfaad.cpp avidemux-2.0.38rc2b/avidemux/ADM_audiocodec/ADM_codecfaad.cpp
+--- avidemux-2.0.38rc2b.orig/avidemux/ADM_audiocodec/ADM_codecfaad.cpp	2005-04-04 23:59:19.044987480 +0200
++++ avidemux-2.0.38rc2b/avidemux/ADM_audiocodec/ADM_codecfaad.cpp	2005-04-05 00:00:22.642319216 +0200
+@@ -33,7 +33,7 @@
+ ADM_faad::ADM_faad( uint32_t fourcc ,WAVHeader *info,uint32_t l,uint8_t *d) :   ADM_Audiocodec(fourcc)
+ {
+ faacDecConfigurationPtr conf;
+-unsigned long srate;
++unsigned int srate;
+ unsigned char chan;
+ 		_inited=0;
+ 		_instance=NULL;
+@@ -89,7 +89,7 @@
+ void *outbuf;
+ faacDecFrameInfo info;
+ int max=0;
+-unsigned long srate=0;
++unsigned int srate=0;
+ unsigned char chan=0;
+ uint8_t first=0;
+ 
