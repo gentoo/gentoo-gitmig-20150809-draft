@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.12 2002/03/11 06:37:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.13 2002/03/11 12:08:38 azarah Exp $
+
+  11 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.4-r2.ebuild,
+                                                      functions.sh :
+
+  Fix functions.sh using /usr/bin/basename for users that have /usr on seperate
+  partition.
 
   11 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.4-r1.ebuild,
                                                       depscan.sh :
