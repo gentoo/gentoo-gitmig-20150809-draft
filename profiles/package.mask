@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <kain@kain.org> (17 Sep 2002)
+# gcc 3.2 and kerberos v5 fixes for cyrus-sasl; still needs wider testing
+=dev-libs/cyrus-sasl-2.1.7-r2
+
 # <tantive@gentoo.org> (16 Sep 2002)
 # Version bumped, masked due to freeze
 =sys-kernel/openmosix-sources-2.4.18-r5
