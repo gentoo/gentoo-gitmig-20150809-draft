@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.7 2004/08/15 09:17:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.8 2004/08/15 09:18:26 vapier Exp $
 
 inherit eutils games
 
@@ -41,11 +41,11 @@ src_unpack() {
 	sed -i \
 		-e "s:packages/:${CUBE_DATADIR}packages/:" \
 		renderextras.cpp rendermd2.cpp sound.cpp worldio.cpp \
-			|| die "fixing data path failed"
+		|| die "fixing data path failed"
 	# enable parallel make
 	sed -i \
 		-e 's/make -C/$(MAKE) -C/' Makefile \
-			|| die "sed Makefile failed"
+		|| die "sed Makefile failed"
 	edos2unix *.cpp
 }
 

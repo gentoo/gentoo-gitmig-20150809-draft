@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 bb0298dd16616e353b5a46f601232fb7 ChangeLog 1240
-MD5 a74725f4045bbbcf5723ee4c59b6ef0b cube-20031223.ebuild 2471
-MD5 59e6104504a6662b8a87d11a9d7af0ce cube-20040522.ebuild 2589
+MD5 c8e0c63730b380db20a26828650f4175 cube-20031223.ebuild 2469
+MD5 0de292c05494927d0423215e51d99f9f cube-20040522.ebuild 2581
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 d27138da021db62a9bf34a7ed5cc4cbb files/cube_client-bin 64
 MD5 f57600187e8eaa8d782ffd82c4aca198 files/cube-20021020-add-custom-paths.patch 1423
@@ -16,7 +16,7 @@ MD5 f57600187e8eaa8d782ffd82c4aca198 files/20040522-gentoo-paths.patch 1423
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBHypxHTu7gpaalycRAs7VAJ0S5CcdrC2EZSsPZ6lfGSdudHb8cwCgtTTu
-CwiUHFqw2jBVu7sRHD/xGBI=
-=+SNu
+iD8DBQFBHyqfHTu7gpaalycRAhycAKCezJh1PE5ZsPse1pAKLhkdYHB/MQCeM81J
+6RLuHnqa82dBWRuE1jWudmk=
+=WlSU
 -----END PGP SIGNATURE-----
