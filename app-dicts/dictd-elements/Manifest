@@ -1,4 +1,14 @@
-MD5 a49fc64f0123921d4a38d14fa524aa2d ChangeLog 1388
-MD5 17989234ae63efe470c0c67ee7f9fdf1 dictd-elements-2000.22.07-r1.ebuild 608
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed921971445726f017f40b50733b17b9 ChangeLog 1485
+MD5 48217c4978666db9bd03b8afbaf19a2c dictd-elements-2000.22.07-r1.ebuild 611
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 f6d51b63efef995af0dacf7fecccdd3f files/digest-dictd-elements-2000.22.07-r1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIaw460LfUIagIAkRAiyGAKDfOEYm9w9coABwMxH5M8vhzvkfjgCgqsdL
+Cr5z8C4yCgViRjzz8XP/Xkk=
+=S2ZB
+-----END PGP SIGNATURE-----
