@@ -776,7 +776,8 @@ src_menu() {
  	merge)
 		merge_check
 	    dyn_check
-	    dyn_unpack
+		dyn_fetch
+		dyn_unpack
 	    dyn_compile
    		dyn_install
 		dyn_merge
