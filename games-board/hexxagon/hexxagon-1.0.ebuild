@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.1 2005/01/28 21:09:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.2 2005/01/29 14:47:52 wolf31o2 Exp $
 
 inherit games
 
@@ -14,6 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
+	>=dev-cpp/glibmm-2.4
 	>=dev-cpp/gtkmm-2.4
 	>=x11-libs/gtk+-2.0"
 

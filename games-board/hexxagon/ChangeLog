@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.10 2005/01/28 21:09:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.11 2005/01/29 14:47:52 wolf31o2 Exp $
+
+  29 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> hexxagon-1.0.ebuild:
+  Added dev-cpp/glibmm to DEPEND and closing bug #79922.
 
 *hexxagon-1.0 (28 Jan 2005)
 
