@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.1 2003/05/11 11:09:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.2 2003/05/16 16:50:12 liquidx Exp $
 
 inherit libtool
 inherit flag-o-matic
@@ -46,15 +46,15 @@ src_compile() {
 		|| myconf="${myconf} --disable-docs"
 		
 	econf ${myconf}
-	#emake || die
+	emake || die "make failed"
 }
 
 src_install() {
-	
-	einstall
-		gphotodocdir=${D}/usr/share/doc/${PF} \
-		HTML_DIR=${D}/usr/share/doc/${PF}/sgml \
-		|| die
+
+	make DESTDIR=${D} \
+		gphotodocdir=/usr/share/doc/${PF} \
+		HTML_DIR=/usr/share/doc/${PF}/sgml \
+		install || die "install failed"
 
 	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING CHANGES
 	rm -rf ${D}/usr/share/doc/${PF}/sgml/gphoto2
