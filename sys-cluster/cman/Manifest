@@ -8,11 +8,11 @@ MD5 ae358a4322e44f5fea139ef53e84b98f cman-1.0_pre31.ebuild 1003
 MD5 1b66cd669f2348b1e7cdb8f057be395a files/digest-cman-1.0_pre3 64
 MD5 0b1d2c6bdf0d0def6a2bdceb6d204832 files/digest-cman-1.0_pre31 65
 MD5 8172a95e3d5f28c037bf19d8da0ce449 files/cman.conf 966
-MD5 d1dd1b5881c2647896041a6c76c37951 files/cman.rc 1117
+MD5 d75a1ece66bfa889b7d8bee5ce9506a6 files/cman.rc 1066
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCPJwdgMUyd/cdjWsRAjeHAJ981DaKsbWiGQl497/3mkgHcroZuwCdErBV
-DexflHHcQleAuAtjXp5LQps=
-=xWHv
+iD8DBQFCPJ2cgMUyd/cdjWsRAn1HAJsFTv+m3lZ9j+TO/kOzjI3icVQcFgCeMOxB
+BeXn+XoWKNtRwRTPdr2ENKM=
+=85Xb
 -----END PGP SIGNATURE-----
