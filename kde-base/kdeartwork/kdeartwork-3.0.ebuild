@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.ebuild,v 1.1 2002/04/03 18:14:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.ebuild,v 1.2 2002/04/04 20:39:57 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist 
 
-#opengl doesn't work
-#newdepend "opengl? ( virtual/opengl )"
+newdepend "opengl? ( virtual/opengl )"
 
 DESCRIPTION="${DESCRIPTION}Artwork"
 
@@ -14,7 +13,7 @@ src_compile() {
     kde_src_compile myconf
     
     myconf="$myconf --with-dpms"
-    #use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl" 
+    use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl" 
     myconf="$myconf --without-gl"
     
     kde_src_compile configure make
