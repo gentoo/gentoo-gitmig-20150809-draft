@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.547 2004/08/12 02:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.548 2004/08/13 00:15:38 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -156,6 +156,7 @@ dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
 dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
+dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
