@@ -206,6 +206,8 @@ dev-java/jaxp
 #>=dev-libs/pwlib-1.3.0
 #this isn't available for download anymore from openh323.org
 =dev-libs/pwlib-1.2.20
+#1.9.1 depends on pwlib 1.2.20
+=net-libs/openh323-1.9.1
 =net-libs/openh323-1.8.11
 
 # <owen@gentoo.org> (02 Jul 2002)
