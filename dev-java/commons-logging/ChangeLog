@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.8 2003/04/06 07:48:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.9 2003/04/23 02:20:11 absinthe Exp $
+
+*commons-logging-1.0.3 (22 Apr 2003)
+
+  22 Apr 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-logging-1.0.3.ebuild:
+  Version bump.
 
 *commons-logging-1.0.2-r2 (22 Mar 2003)
 
