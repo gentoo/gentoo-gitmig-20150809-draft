@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/kakasi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.1 2003/04/30 22:54:09 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.2 2003/06/20 17:15:45 yakina Exp $
 
 *kakasi-2.3.4 (30 Apr 2003)
+
+  21 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> kakasi-2.3.4.ebuild:
+  unmasked for x86
 
   30 Apr 2003; Robert Coie <rac@gentoo.org> kakasi-2.3.4.ebuild:
   Initial import, based on ebuild submitted by Henry So, Jr. <henryso@panix.com>
