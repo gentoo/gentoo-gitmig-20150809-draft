@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.8 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.9 2004/06/24 22:58:25 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc debug"
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool gnuconfig
 
 # Compile problems with these (bug #6641 among others)...
 #filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -136,8 +136,8 @@ fi
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 DEPEND="virtual/glibc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	hardened? ( >=sys-libs/glibc-2.3.2-r9 )
+	!uclibc? ( !nptl? ( >=sys-libs/glibc-2.3.2-r3 ) )
+	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.2-r9 ) )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
@@ -147,8 +147,8 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	hardened? ( >=sys-libs/glibc-2.3.2-r9 )
+	!uclibc? ( !nptl? ( >=sys-libs/glibc-2.3.2-r3 ) )
+	!uclibc? ( hardened? ( >=sys-libs/glibc-2.3.2-r9 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -189,7 +189,9 @@ version_patch() {
 }
 
 glibc_have_ssp() {
-	local my_libc="${ROOT}/lib/libc.so.6"
+	use uclibc \
+		&& local my_libc="${ROOT}/lib/libc.so.0" \
+		|| local my_libc="${ROOT}/lib/libc.so.6"
 
 # Not necessary. lib64 is a symlink to /lib. -- avenj@gentoo.org  3 Apr 04
 #	case "${ARCH}" in
@@ -206,6 +208,16 @@ glibc_have_ssp() {
 	then
 		return 0
 	else
+		return 1
+	fi
+}
+
+glibc_have_pie() {
+	if [ ! -f ${ROOT}/usr/lib/Scrt1.o ] ; then
+		echo
+		ewarn "Your glibc does not have support for pie, the file Scrt1.o is missing"
+		ewarn "Please update your glibc to a proper version or disable hardened"
+		echo
 		return 1
 	fi
 }
@@ -274,6 +286,8 @@ src_unpack() {
 		check_glibc_ssp
 	fi
 
+	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
+
 	if [ -z "${SNAPSHOT}" ]
 	then
 		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
@@ -313,9 +327,6 @@ src_unpack() {
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
 
-		# do not enable it, the pie patches won't apply
-		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
-
 		if use multilib && [ "${ARCH}" = "amd64" ]
 		then
 			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
@@ -324,6 +335,8 @@ src_unpack() {
 		fi
 
 		epatch ${WORKDIR}/patch
+		mv ${S}/gcc-3.3.2/libstdc++-v3/config/os/uclibc ${S}/libstdc++-v3/config/os/ || die
+		mv ${S}/gcc-3.3.2/libstdc++-v3/config/locale/uclibc ${S}/libstdc++-v3/config/locale/ || die
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	fi
 
@@ -335,6 +348,8 @@ src_unpack() {
 		epatch ${WORKDIR}/piepatch/nondef
 		# adds default pie support for all archs less rs6000 if DEFAULT_PIE[_SSP] is defined
 		epatch ${WORKDIR}/piepatch/def
+		# disable relro/now
+		use uclibc && epatch ${FILESDIR}/gcc-3.3.3-norelro.patch
 	fi
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
@@ -363,13 +378,13 @@ src_unpack() {
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
-		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+		[ -n "${PATCH_VER}" ] && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 
 		# we apply only the needed parts of protectonly.dif
-		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector -fno-stack-protector-all |' \
+		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
 			-i gcc/Makefile.in || die "Failed to update crtstuff!"
-		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector -fno-stack-protector-all|' \
-			-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
+		#sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector -fno-stack-protector-all|' \
+		#	-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
 
 		release_version="${release_version}, ssp-${PP_FVER}"
 
@@ -409,6 +424,8 @@ src_unpack() {
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
+	use uclibc && gnuconfig_update
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.274 2004/06/24 22:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.275 2004/06/24 22:58:25 solar Exp $
+
+  24 Jun 2004; <solar@gentoo.org> gcc-3.3.3-r6.ebuild:
+  backport uclibc updates from 3.3.4
 
   24 Jun 2004; Aron Griffis <agriffis@gentoo.org> gcc-3.3-r1.ebuild,
   gcc-3.3.2-r1.ebuild, gcc-3.3.2-r2.ebuild, gcc-3.3.2-r3.ebuild,
