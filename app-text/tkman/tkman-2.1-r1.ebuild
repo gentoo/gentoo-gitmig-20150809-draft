@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.10 2004/06/24 22:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.11 2004/07/14 00:48:24 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://tkman.sourceforge.net/${PN}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND=">=app-text/rman-3.0.9
 	>=dev-lang/tcl-8.3.3

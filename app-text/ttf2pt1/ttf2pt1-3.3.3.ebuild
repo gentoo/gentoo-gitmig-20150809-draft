@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.20 2004/07/01 12:09:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.21 2004/07/14 00:49:03 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/ttf2pt1/${P}.tgz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 RDEPEND="virtual/libc
 	>=media-libs/freetype-2.0"

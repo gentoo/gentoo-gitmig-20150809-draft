@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1.ebuild,v 1.12 2004/06/24 22:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1.ebuild,v 1.13 2004/07/14 00:48:24 agriffis Exp $
 
 DESCRIPTION="TkMan man and info page browser"
 SRC_URI="http://tkman.sourceforge.net/${PN}.tar.gz"
 HOMEPAGE="http://tkman.sourceforge.net/"
 KEYWORDS="x86 ~ppc sparc"
+IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 
