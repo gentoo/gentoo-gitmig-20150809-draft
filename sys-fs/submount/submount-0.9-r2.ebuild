@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.4 2005/03/28 11:48:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.5 2005/03/28 15:11:02 genstef Exp $
 
 inherit linux-mod
 
@@ -29,7 +29,7 @@ pkg_setup() {
 	S="${WORKDIR}/${MY_P}"
 	MODULE_NAMES="subfs(fs:${S}/subfs-${MY_PV})"
 	BUILD_PARAMS="KDIR=${KV_OUT_DIR}"
-	BUILD_TARGETS="default"
+	BUILD_TARGETS=" "
 }
 
 src_unpack() {

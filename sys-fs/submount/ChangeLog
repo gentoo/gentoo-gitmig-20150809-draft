@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/submount
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.16 2005/03/28 11:48:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.17 2005/03/28 15:11:02 genstef Exp $
+
+  28 Mar 2005; Stefan Schweizer <genstef@gentoo.org> submount-0.9-r2.ebuild:
+  Fix 2.4 kernel compile: BUILD_TARGETS="default" -> BUILD_TARGETS=" " thanks
+  to Emilio <emilio@pink-panther-marburg.de> in bug 86650
 
   28 Mar 2005; Stefan Schweizer <genstef@gentoo.org> submount-0.9-r2.ebuild:
   Resolve bug 86650 by setting S in every ebuild stage, also change KV_DIR to
