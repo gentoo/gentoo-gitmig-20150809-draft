@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.3 2003/10/24 16:13:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.4 2003/10/25 15:52:46 lanius Exp $
 
 DESCRIPTION="High Level Firewall Language"
 SRC_URI="ftp://ftp.hlfl.org/pub/hlfl/${P}.tar.gz"
@@ -24,5 +24,5 @@ src_install () {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS \
 	TODO doc/RoadMap doc/sample_1.hlfl doc/sample_2.hlfl \
-	doc/test.hlfl doc/syntax.txt
+	doc/test.hlfl doc/syntax.txt doc/sample_3.hlfl doc/CodingStyle
 }

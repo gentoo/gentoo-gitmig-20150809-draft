@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hlfl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.7 2003/10/24 16:10:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.8 2003/10/25 15:52:46 lanius Exp $
+
+  25 Oct 2003; Heinrich Wendel <lanius@gentoo.org> hlfl-0.60.1.ebuild:
+  added additionaly docs
 
   24 Oct 2003; Heinrich Wendel <lanius@gentoo.org> hlfl-0.60.1.ebuild:
   fixed too many cleanups ;D
