@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.ebuild,v 1.5 2000/11/11 13:37:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.24.1.ebuild,v 1.1 2000/11/11 13:38:18 achim Exp $
 
 P=mod_perl-1.24
-A=${P}.tar.gz
-S=${WORKDIR}/${P}
+A=${P}_01.tar.gz
+S=${WORKDIR}/${P}_01
 CATEGORY="dev-perl"
 DESCRIPTION="A Perl Modul for Apache"
 SRC_URI="http://perl.apache.org/dist/${A}"
