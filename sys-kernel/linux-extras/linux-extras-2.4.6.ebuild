@@ -393,9 +393,10 @@ src_install() {
 			into /
 			dosbin setpe
 
-			cd ../tune
-			dosbin tune mtune tunepass tune_kernel prep_tune
-			doman tune.1
+#			Tune is missing a file so compilation aborts
+#			cd ../tune
+#			dosbin tune mtune tunepass tune_kernel prep_tune
+#			doman tune.1
 
 			cd ../../bin/mosrun
 			dobin mosrun nomig runhome runon cpujob iojob nodecay slowdecay fastdecay
