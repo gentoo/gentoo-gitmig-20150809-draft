@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021224.ebuild,v 1.1 2002/12/26 16:57:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021224.ebuild,v 1.2 2003/01/11 05:10:36 vapier Exp $
 
 ECVS_SERVER="cvs.enlightenment.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e17"
@@ -363,6 +363,7 @@ src_install() {
 	cp Makefile Makefile.old
 	sed -e 's:m4   ::' Makefile.old > Makefile
 	make || die "could not build e"
+	make install DESTDIR="${D}" >& /dev/null
 	make install DESTDIR="${D}" || die "could not install e"
 
 	# remove improper stuff
