@@ -1,5 +1,6 @@
 MD5 bca76a189aa94fbc745ad0adb4212f37 ChangeLog 694
 MD5 2723a03687d0bb8469e9bd049167fe97 mosix-sources-2.4.19.ebuild 3445
 MD5 2235daee24b5225244574a2173d965c8 mosix-sources-2.4.20.ebuild 3171
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 d3214f81fb35526e9d64cba9c8d8b7f0 files/digest-mosix-sources-2.4.19 229
 MD5 3adfe9d3a1872c001424fd95063352dc files/digest-mosix-sources-2.4.20 147
