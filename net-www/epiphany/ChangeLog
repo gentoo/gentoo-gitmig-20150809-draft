@@ -1,6 +1,15 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.68 2004/09/13 16:54:34 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.69 2004/09/16 14:48:00 foser Exp $
+
+*epiphany-1.4.0 (16 Sep 2004)
+*epiphany-1.2.9-r1 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> epiphany-1.2.9-r1.ebuild :
+  1.4.0 : gnome 2.8 release, remove deprecated gnome USE
+  Add patch to fix the buildtime include paths
+  1.2.9-r1,1.4.0 : Update mozilla dep to 1.7.3, security fix (#63996)
+  Add fix to make epi build with moz 1.7.3
 
 *epiphany-1.2.9 (14 Sep 2004)
 
