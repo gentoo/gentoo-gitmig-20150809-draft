@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.8 2005/01/01 18:14:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.9 2005/01/18 17:34:21 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,15 +11,14 @@ SRC_URI="mirror://apache/jakarta/commons/beanutils/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.4
 	>=dev-java/commons-collections-2.1
-	>=dev-java/commons-logging-1.0.2
-	junit? ( >=dev-java/junit-3.7 )"
+	>=dev-java/commons-logging-1.0.2"
 RDEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-IUSE="doc jikes junit"
+IUSE="doc jikes"
 
 src_compile() {
 	local myc
@@ -32,11 +31,6 @@ src_compile() {
 
 	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
-	fi
-
-	if use junit ; then
-		echo "junit.jar=`java-config --classpath=junit`" | sed  s/:.*// >> build.properties
-		ANT_OPTS=${myc} ant test || die "Testing Classes Failed"
 	fi
 
 	ANT_OPTS=${myc} ant jar || die "Compilation Failed"
