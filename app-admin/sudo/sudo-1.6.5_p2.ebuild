@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.5_p1.ebuild,v 1.1 2002/01/18 07:41:24 drobbins Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.5_p2.ebuild,v 1.1 2002/03/06 18:55:27 drobbins Exp $
 
-NP=sudo-1.6.5p1
+NP=sudo-1.6.5p2
 S=${WORKDIR}/${NP}
 DESCRIPTION="Allows certain users/groups to run commands as root"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${NP}.tar.gz"
