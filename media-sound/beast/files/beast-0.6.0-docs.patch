@@ -1,0 +1,11 @@
+--- configure.orig	2004-02-14 16:57:13.574042496 +0000
++++ configure	2004-02-14 16:57:45.240228504 +0000
+@@ -24099,7 +24099,7 @@
+ 
+     # --- BEAST paths ---
+     beastbasedir=\${datadir}/beast
+-    beastdocsdir=$beastbasedir/v$BSE_VERSION/docs
++    beastdocsdir=\${datadir}/doc/${PF}
+ 
+     beastimagesdir=$beastbasedir/v$BSE_VERSION/images
+ 

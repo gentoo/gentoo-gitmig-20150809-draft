@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/beast
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.9 2003/07/26 11:48:05 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.10 2004/02/15 11:26:03 liquidx Exp $
+
+*beast-0.6.0 (15 Feb 2004)
+
+  15 Feb 2004; Alastair Tse <liquidx@gentoo.org> beast-0.5.3.ebuild,
+  beast-0.6.0.ebuild, files/beast-0.6.0-docs.patch:
+  version bump. note that beast is continually in development release status.
 
 *beast-0.5.4 (26 Jul 2003)
 
