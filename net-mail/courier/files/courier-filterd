@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier-filterd
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting courier filterd"
+	/usr/sbin/courierfilter start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping courier filterd"
+	/usr/sbin/courierfilter stop
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting courier filterd"
+	/usr/sbin/courierfilter restart
+	eend $?
+}

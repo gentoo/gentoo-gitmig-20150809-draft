@@ -3,17 +3,26 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier
 
+DAEMONLIST="courier-authdaemond courier-filterd courier-mta courier-esmtpd courier-esmtpd-ssl courier-imapd courier-imapd-ssl courier-pop3d courier-pop3d-ssl"
+
 depend() {
-	need net courier-authdaemond courier-mta courier-esmtpd courier-esmtpd-ssl courier-imapd courier-imapd-ssl courier-pop3d courier-pop3d-ssl
+	need net
 }
 
 start() {
-	ebegin "Courier MTA started"
+	ebegin "Starting Courier MTA"
+	for d in $DAEMONLIST
+	do
+		[ -f /mnt/.init.d/started/$d ] || /etc/init.d/$d start || true
+	done
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Courier MTA"
-	/etc/init.d/courier-authdaemond stop
+	for d in $DAEMONLIST
+	do
+		[ -f /mnt/.init.d/started/$d ] && /etc/init.d/$d stop || true
+	done
 	eend $?
 }

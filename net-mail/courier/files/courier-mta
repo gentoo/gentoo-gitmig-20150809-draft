@@ -4,17 +4,17 @@
 # /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/files/courier-mta
 
 depend() {
-	need net courier-authdaemond
+	need net courier-authdaemond courier-filterd
 }
 
 start() {
-	ebegin "Starting courier-mta"
+	ebegin "Starting courier mta"
 	/usr/sbin/courier start
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping courier-mta"
+	ebegin "Stopping courier mta"
 	/usr/sbin/courier stop
 	eend $?
 }
