@@ -113,7 +113,8 @@
 *sys-apps/silo
 *dev-util/dialog
 # Kernel compiler
-*sys-devel/egcs64-sparc
+# Not needed on sparc32
+# *sys-devel/egcs64-sparc
 
 # VNC is broken on x86, maintainer uses i386 specific makefile
 !net-misc/vnc
