@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.15 2002/07/05 08:46:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.16 2002/07/12 09:23:16 cardoe Exp $
+
+*pcmcia-cs-3.1.34 (12 July 2002)
+
+  12 July 2002; Doug Goldstein <cardoe@gentoo.org> pcmcia-cs-3.1.34-r6.ebuild
+
+  Addressed bug #3400 about /etc/pcmcia/config needing all "ide_cs" renamed to "ide-cs"
+  It was also a bug on PCMCIA-CS's official site.
+  Updated orinoco to 0.12b and corrected another ebuild typo.
 
 *pcmcia-cs-3.1.34 (05 July 2002)
 
