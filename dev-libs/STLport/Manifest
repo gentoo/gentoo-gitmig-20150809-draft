@@ -1,13 +1,20 @@
-MD5 955b750e342081283f7497e621d2c31b ChangeLog 2876
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30127fb19fbfc9cbf1e98f1d8da75293 ChangeLog 2654
 MD5 3e474572fe4df01c7632a78f013c6d1e STLport-4.5.3-r3.ebuild 1086
 MD5 f3494ab6de09331256de03606375dddc STLport-4.6.2.ebuild 1046
-MD5 d98936cd9955a0317c230b82a83a7a57 STLport-4.6.2-r1.ebuild 1216
 MD5 a26aa0654153d685b61549c4290b540b files/50STLport-4.0 210
 MD5 7a319fa8b6dbaf6dbf5da8833f08892c files/STLport-4.5.3-gcc3.patch 695
 MD5 7949a0c399ae8cd1c8c6d7ada426848f files/STLport-4.5.3-optimize.patch 999
-MD5 23f0d4cef12b1a0dc10be56556de2cf2 files/4.6.2-gcc-includes.patch 728
-MD5 7949a0c399ae8cd1c8c6d7ada426848f files/4.6.2-optimize.patch 999
 MD5 71f426e2327ad577fdeaa14cf17f7b19 files/digest-STLport-4.5.3-r3 65
 MD5 2684edb96cbc495281b93fe12da5fcaf files/digest-STLport-4.6.2 65
-MD5 2260d745194f0f91b98198d838417262 files/stlport.pc 273
-MD5 2684edb96cbc495281b93fe12da5fcaf files/digest-STLport-4.6.2-r1 65
+MD5 23f0d4cef12b1a0dc10be56556de2cf2 files/4.6.2-gcc-includes.patch 728
+MD5 7949a0c399ae8cd1c8c6d7ada426848f files/4.6.2-optimize.patch 999
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA6yFYHTu7gpaalycRAkRNAJkBecNYdgrAuyLPkJruikE8WONaqgCeLLP4
+ocYpMVuFB6QCqPePgayQgaI=
+=+eIE
+-----END PGP SIGNATURE-----
