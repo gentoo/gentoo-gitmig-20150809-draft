@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.4 2001/09/02 20:06:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.5 2002/04/13 04:30:44 azarah Exp $
 
 A=${PN}-III-alpha9.8.src.tgz
 S=${WORKDIR}/${PN}-III-alpha9.8
@@ -21,7 +21,7 @@ src_compile() {
 
 src_install () {
     cd ${S}
-    dodir /usr/bin /usr/lib /usr/share/man1 /usr/include
+    dodir /usr/bin /usr/lib /usr/share/man/man1 /usr/include
     make prefix=${D}/usr MANDIR=${D}/usr/share/man install || die
     dodoc FAQ.txt GPL README
 }
