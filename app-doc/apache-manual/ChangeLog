@@ -1,6 +1,17 @@
 # ChangeLog for app-doc/apache-manual
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.1 2004/04/28 13:45:45 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.2 2004/04/28 17:28:27 zul Exp $
+
+*apache-manual-2.0.49-r1 (29 Apr 2004)
+
+  29 Apr 2004; Chuck Short <zul@gentoo.org> apache-manual-2.0.49-r1.ebuild,
+  apache-manual-2.0.49.ebuild, files/00_apache_manual.conf,
+  files/apache_manual.conf:
+  Added apache manual wrapper for 2.0.49-r1.
+
+  29 Apr 2004; Chuck Short <zul@gentoo.org> apache-manual-2.0.49.ebuild,
+  files/00_apache_manual.conf, files/apache_manual.conf:
+  Ebuild improvements.
 
 *apache-manual-2.0.49 (28 Apr 2004)
 
