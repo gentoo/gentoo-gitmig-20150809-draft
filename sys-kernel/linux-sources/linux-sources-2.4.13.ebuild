@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.13.ebuild,v 1.3 2001/11/24 01:53:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.13.ebuild,v 1.4 2001/11/25 18:36:25 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=${PV}
-KV=${KV}
+KV=${OKV}
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 if [ $PN = "linux-extras" ] 
