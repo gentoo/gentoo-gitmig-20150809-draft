@@ -1,15 +1,31 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.1.ebuild,v 1.2 2002/05/21 18:14:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.0.1.ebuild,v 1.3 2002/05/23 18:06:10 danarmak Exp $
 
 inherit kde-dist
 
 DESCRIPTION="${DESCRIPTION}Network"
 
+# copied from kde.org.eclass because I'm to lazy to change it, will change sometime though
+SRC_PATH="kde/stable/${PV}/src/post-3.0.1-kdenetwork.diff"
+SRC_URI="$SRC_URI
+		ftp://ftp.kde.org/pub/$SRC_PATH
+		ftp://download.us.kde.org/pub/kde/$SRC_PATH
+		ftp://download.uk.kde.org/pub/kde/$SRC_PATH
+		ftp://download.au.kde.org/pub/kde/$SRC_PATH
+		ftp://download.at.kde.org/pub/kde/$SRC_PATH
+		ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
+		ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+
+
 src_unpack() {
 
     base_src_unpack
+    
+    cd ${S}
+    patch -p1 < ${DISTDIR}/post-3.0.1-kdenetwork.diff || die
+    
     kde_sandbox_patch ${S}/kppp
 
 }
