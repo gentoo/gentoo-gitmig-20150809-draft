@@ -1,31 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.3 2003/07/22 11:17:03 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.4 2003/08/05 14:35:23 vapier Exp $
+
+inherit eutils
 
 TW_VER="2.3.1-2"
-DESCRIPTION="Tripwire is an Open Source File Integrity Checker and IDS."
+DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
 SRC_URI="http://flow.dl.sourceforge.net/sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 	http://non-us.debian.org/debian-non-US/pool/non-US/main/t/tripwire/tripwire_2.3.1.2-6.1.diff.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 -alpha"
 #NOTE:  im working on integrating debians portability fixes, alpha support (at least) 
 #		will be working soon.
-KEYWORDS="~x86 -alpha"
-
-IUSE=""
 
 DEPEND="virtual/glibc
 	dev-util/patchutils
 	sys-devel/automake
 	dev-libs/openssl"
-
 RDEPEND="virtual/glibc
 	virtual/cron
 	virtual/mta
 	dev-libs/openssl"
 
-S="${WORKDIR}/tripwire-${TW_VER}"
+S=${WORKDIR}/tripwire-${TW_VER}
 
 src_unpack() {
 	# unpack tripwire source tarball
@@ -42,8 +42,8 @@ src_unpack() {
 	
 	# pull out the interesting debian patches
 	filterdiff  -i '*/man/man8/twadmin.8' \
-				-z  --strip=1	\
-				${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
+		-z  --strip=1	\
+		${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
 	epatch ${T}/debian-patch.diff
 	
 	# cleanup ready for build
@@ -85,11 +85,9 @@ src_install() {
 	doexe ${FILESDIR}/twinstall.sh
 
 	fperms 755 /etc/tripwire/twinstall.sh /etc/cron.daily/tripwire.cron
-
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "After installing this package, you should run \"/etc/tripwire/twinstall.sh\""
 	einfo "to generate cryptographic keys, and \"tripwire --init\" to initialize the"
 	einfo "database Tripwire uses.  This must be done manually because the key used to"
