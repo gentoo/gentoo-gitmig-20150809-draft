@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.3_rc2.ebuild,v 1.2 2003/11/14 20:09:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.3_rc2.ebuild,v 1.3 2003/11/14 21:27:09 seemant Exp $
 
 IUSE="gpm zlib ssl ipv6 X nls lua"
 
@@ -28,7 +28,7 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc
 	>=app-arch/bzip2-1.0.2*
 	>=dev-libs/expat-1.95.4*
-	>=sys-apps/gzip-1.3.3
+	>=app-arch/gzip-1.3.3
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( =dev-lang/lua-4.0* )
