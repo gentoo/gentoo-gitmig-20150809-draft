@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.26 2002/12/24 16:35:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.27 2002/12/24 16:46:04 lostlogic Exp $
 
 *lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
 
@@ -24,6 +24,8 @@
   * Test away
   * Possibly switch encrypted loopback patches?
   * Possibly make the elevator.c changes a configurable option
+  * Possibly KT400 pci.ids
+  * Possibly latest I2C code
   * Whatever else I'm forgetting
 
 *lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
