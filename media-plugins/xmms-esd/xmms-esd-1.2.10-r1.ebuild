@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-esd/xmms-esd-1.2.10-r1.ebuild,v 1.3 2005/02/28 10:42:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-esd/xmms-esd-1.2.10-r1.ebuild,v 1.4 2005/03/16 05:59:53 eradicator Exp $
 
 IUSE="oss"
 SLOT="0"
@@ -13,7 +13,7 @@ PATCH_VER="2.2.2"
 
 PLUGIN_PATH="Output/esd"
 
-M4_VER="1.0"
+M4_VER="1.1"
 
 inherit xmms-plugin
 

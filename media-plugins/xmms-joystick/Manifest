@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 3c3a858f244facad7e0d4d6fefe42727 xmms-joystick-1.2.10.ebuild 434
-MD5 9be2a59565b8082edc4e7747ca3a73f3 xmms-joystick-1.2.10-r1.ebuild 452
+MD5 f516697efd3f7739082b87d22fe29b63 xmms-joystick-1.2.10.ebuild 434
+MD5 98ea9ecfb63c61e31ed3fe3895597218 xmms-joystick-1.2.10-r1.ebuild 452
 MD5 0346b2f02ea145f09abe24457e12dfcf ChangeLog 582
-MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-joystick-1.2.10 142
-MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-joystick-1.2.10-r1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIvcHArHZZzCEUG0RAh4bAJ9rNaezgTkAdoxmvu9BTsdwWyuI1QCeK3bW
-HImTMRRCI+0h3nQp7La9a4Q=
-=VOWP
------END PGP SIGNATURE-----
+MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-joystick-1.2.10 142
+MD5 29189a07ebf2ac1578898c2234dc1bce files/digest-xmms-joystick-1.2.10-r1 227
