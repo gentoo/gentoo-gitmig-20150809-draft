@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.22 2003/08/18 15:06:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.23 2003/09/23 15:49:29 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> intltool-0.26.ebuild:
+  set ppc in keywords
 
 *intltool-0.27.2 (18 Aug 2003)
 
