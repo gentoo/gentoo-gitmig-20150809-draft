@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.50 2004/06/23 03:41:33 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.51 2004/06/23 05:41:53 pythonhead Exp $
+
+*wxGTK-2.4.2-r1 (22 Jun 2004)
+
+  22 Jun 2004; Rob Cakebread <pythonhead@gentoo.org> +wxGTK-2.4.2-r1.ebuild:
+  Disable unicode for gtk. Closes bug# 52495
 
   22 Jun 2004; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.2.ebuild:
   Marked stable on x86
