@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.5 2004/07/10 15:40:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.6 2004/07/13 06:41:16 eldad Exp $
+
+  13 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml, vnstat-1.1.ebuild:
+  Added missing IUSE, added metadata
 
   10 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> vnstat-1.4.ebuild:
   Marked ~amd64.
