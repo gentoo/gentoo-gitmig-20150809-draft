@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.0.ebuild,v 1.1 2002/12/13 16:03:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.3.0.ebuild,v 1.2 2002/12/13 16:04:04 foser Exp $
 
 IUSE="sdl X"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://libmpeg2.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc  ~ppc"
+KEYWORDS="~x86 ~sparc  ~ppc"
 
 DEPEND="sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
