@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.4.ebuild,v 1.2 2004/10/28 15:44:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.4.ebuild,v 1.3 2004/10/30 20:47:14 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -25,7 +25,9 @@ RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
-	) )"
+	) )
+	>=sys-apps/coreutils-5.2.1
+	>=app-shells/bash-3.0-r7"
 DEPEND="virtual/os-headers"
 
 src_unpack() {

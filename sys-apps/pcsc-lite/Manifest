@@ -3,16 +3,13 @@ Hash: SHA1
 
 MD5 aa80d69036a6db8a2a0caa2c0c03a45a ChangeLog 1236
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8c7c89de6df358584438df4fb66c683e pcsc-lite-1.1.1.ebuild 1189
 MD5 cdf14fe2397249f9f71ed3d6ab7a2bdb pcsc-lite-1.2.0.ebuild 1221
-MD5 ee85abea70b6baf8ca660f3793ac27eb files/digest-pcsc-lite-1.1.1 67
-MD5 e3c00796256d8370fdf64ad258686427 files/pcsc-lite-1.1.1-gentoo.patch 1076
 MD5 8d679a8c6d76845932fedb2c29eb8749 files/pcscd-init 458
 MD5 aa81afb9cffef205c955fc1ab2a9bfd1 files/digest-pcsc-lite-1.2.0 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBa0nwHTu7gpaalycRAmP7AKCooNvXRazkSpJ8LUSsTFF1P2/TsgCePV4a
-AhXMimZ2RdCzAVkDtm8bhp0=
-=0pMc
+iD8DBQFBg/8ZHTu7gpaalycRAoOjAJ4iRnGtUcvpPn2qno2trWkhuuXXewCfQ/fi
+00GZt2Ix7CyZuvDdQ7ZD9y4=
+=qMHc
 -----END PGP SIGNATURE-----
