@@ -1,39 +1,37 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.2 2004/11/08 01:19:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.3 2005/03/07 06:19:45 mr_bones_ Exp $
 
 inherit games
 
 MY_P="ChickensForLinux-Linux-${PV}"
 DESCRIPTION="Target chickens with rockets and shotguns. Funny"
-HOMEPAGE="http://havoc.sourceforge.net/chickens"
+HOMEPAGE="http://kosmokrator.org/chickens/"
 SRC_URI="http://havoc.sourceforge.net/chickens/files/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11
+DEPEND="virtual/x11
 	media-libs/allegro"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
-S="${WORKDIR}/chickens"
+S=${WORKDIR}/chickens
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:HighScores:${GAMES_STATEDIR}/${PN}/HighScores:" \
 		-e "s:....\(.\)\(_\)\(.*.4x0\)\(.\):M\4\2\x42\x6Fn\1s\2:" \
 		highscore.cpp HighScores \
-		|| die "sed highscore.cpp failed"
+		|| die "sed failed"
 	sed -i \
 		-e "s:options.cfg:${GAMES_SYSCONFDIR}/${PN}/options.cfg:" \
 		-e "s:\"sound/:\"${GAMES_DATADIR}/${PN}/sound/:" \
 		-e "s:\"dat/:\"${GAMES_DATADIR}/${PN}/dat/:" main.cpp README \
-		|| die "sed main.cpp failed"
+		|| die "sed failed"
 	chmod a-x {dat,sound}/*
 }
 
@@ -49,5 +47,4 @@ src_install() {
 	doins options.cfg || die "doins failed"
 	fperms g+w "${GAMES_STATEDIR}/${PN}/HighScores"
 	prepgamesdirs
-
 }

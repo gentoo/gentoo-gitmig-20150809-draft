@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chickens
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.5 2004/11/08 01:19:02 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.6 2005/03/07 06:19:45 mr_bones_ Exp $
+
+  07 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> chickens-0.2.4.ebuild:
+  HOMEPAGE update
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> chickens-0.2.4.ebuild:
   Marked ppc stable.
