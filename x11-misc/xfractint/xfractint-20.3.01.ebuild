@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.01.ebuild,v 1.3 2004/04/26 05:53:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.01.ebuild,v 1.4 2004/04/26 09:34:32 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="The best fractal generator for X."
 HOMEPAGE="http://www.fractint.org"
 SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/${MY_P}.tar.bz2"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 LICENSE="freedist"
 IUSE=""
