@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.5 2004/06/28 12:29:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.6 2004/07/28 12:59:46 karltk Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
@@ -83,8 +83,10 @@ function eclipse-ext_install-features {
 	fi
 
 	for x in $* ; do
-		if [ -f $x/feature.xml ] ; then
+		if [ -d "$x" ] && [ -f $x/feature.xml ] ; then
 			cp -a $x ${D}/${eclipse_ext_basedir}/features
+		else
+			eerror "$x not a feature directory!"
 		fi
 	done
 }
@@ -111,10 +113,10 @@ function eclipse-ext_install-plugins {
 	fi
 
 	for x in $* ; do
-		if [ -d "$x" ] && [ -f "$x/plugin.xml" ] ; then
+		if [ -d "$x" ] && ( [ -f "$x/plugin.xml" ] || [ -f "$x/fragment.xml" ] ) ; then
 			cp -a $x ${D}/${eclipse_ext_basedir}/plugins
 		else
-			eerror "$x not a a plugin directory!"
+			eerror "$x not a plugin directory!"
 		fi
 	done
 }
