@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.7 2004/04/02 03:53:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a-r1.ebuild,v 1.1 2004/04/02 03:58:11 wolf31o2 Exp $
 
 inherit games
 
