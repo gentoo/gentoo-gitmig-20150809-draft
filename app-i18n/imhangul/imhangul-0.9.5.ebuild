@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.5.ebuild,v 1.5 2003/09/06 22:19:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.5.ebuild,v 1.6 2003/09/08 00:54:26 lanius Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
@@ -30,7 +30,7 @@ src_install() {
 }
 
 pkg_postinst() {
-    gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
+	gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
 
 	einfo ""
 	einfo "If you want to use one of the module as a default input method, "
@@ -41,5 +41,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-    gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
+	gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
 }

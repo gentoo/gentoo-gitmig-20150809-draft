@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.4 2003/08/19 00:09:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.5 2003/09/08 00:57:32 lanius Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha"
 
 DEPEND="virtual/glibc
-        >=app-i18n/skk-jisyo-200210"
+	>=app-i18n/skk-jisyo-200210"
 PROVIDE="virtual/skkserv"
 
 S="${WORKDIR}/skk-${PV}mu"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1.ebuild,v 1.4 2003/09/06 22:19:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1.ebuild,v 1.5 2003/09/08 00:55:12 lanius Exp $
 
 MY_P="${PN}-v${PV}"
 DESCRIPTION="A Japanese input server which supports the XIM protocol"
@@ -29,7 +29,7 @@ src_unpack() {
 	cp Kinput2.conf Kinput2.tmp
 	use canna && sed -e "s:\/\* \#define UseCanna \*\/:\#define UseCanna:" Kinput2.tmp > Kinput2.conf
 	cp Kinput2.conf Kinput2.tmp
- 	use freewnn && sed -e "s:\/\* \#define UseWnn \*\/:\#define UseWnn:" Kinput2.tmp > Kinput2.conf
+	use freewnn && sed -e "s:\/\* \#define UseWnn \*\/:\#define UseWnn:" Kinput2.tmp > Kinput2.conf
 	# default to UseCanna if we don't have freewnn in useflags
 	cp Kinput2.conf Kinput2.tmp
 	use freewnn || sed -e "s:\/\* \#define UseCanna \*\/:\#define UseCanna:" Kinput2.tmp > Kinput2.conf || die

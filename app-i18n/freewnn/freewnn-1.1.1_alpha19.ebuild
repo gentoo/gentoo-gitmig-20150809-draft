@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.6 2003/09/06 22:19:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.7 2003/09/08 00:53:16 lanius Exp $
 
 KEYWORDS="x86 sparc"
 
@@ -34,10 +34,10 @@ src_compile() {
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
-                --disable-cWnn \
-                --disable-kWnn \
-                --without-termcap \
-                --with-x \
+			--disable-cWnn \
+			--disable-kWnn \
+			--without-termcap \
+			--with-x \
 		--mandir=/usr/share/man || die "./configure failed"
 
 	emake || die

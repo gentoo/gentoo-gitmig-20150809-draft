@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6.ebuild,v 1.6 2003/08/05 15:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6.ebuild,v 1.7 2003/09/08 00:57:32 lanius Exp $
 
 MY_P="skk${PV}mu"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc
-        >=app-i18n/skk-jisyo-200210"
+	>=app-i18n/skk-jisyo-200210"
 
 S="${WORKDIR}/skk-${PV}mu"
 

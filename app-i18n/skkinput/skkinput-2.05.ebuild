@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-2.05.ebuild,v 1.5 2003/02/13 08:47:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkinput/skkinput-2.05.ebuild,v 1.6 2003/09/08 00:55:49 lanius Exp $
 
 S="${WORKDIR}/${P}"
 SLOT="0"
@@ -11,8 +11,8 @@ SRC_URI="http://downloads.sourceforge.jp/skkinput2/864/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.jp/projects/skkinput2"
 IUSE=""
 DEPEND="virtual/glibc
-        virtual/x11
-        app-i18n/skkserv"
+	virtual/x11
+	app-i18n/skkserv"
 
 src_unpack() {
 	unpack ${A}
