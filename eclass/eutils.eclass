@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.3 2002/11/11 19:51:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.4 2002/11/11 21:36:45 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselfs.
 #
@@ -96,6 +96,7 @@ epatch() {
 	local PIPE_CMD=""
 	local STDERR_TARGET="${T}/$$.out"
 	local SINGLE_PATCH="no"
+	local x=""
 
 	if [ "$#" -gt 1 ]
 	then
@@ -107,14 +108,14 @@ epatch() {
 	then
 		SINGLE_PATCH="yes"
 		
-		EPATCH_SOURCE="$1"
-		EPATCH_SUFFIX="${1##*\.}"
+		local EPATCH_SOURCE="$1"
+		local EPATCH_SUFFIX="${1##*\.}"
 		
 	elif [ -n "$1" -a -d "$1" ]
 	then
-		EPATCH_SOURCE="$1/*.${EPATCH_SUFFIX}"
+		local EPATCH_SOURCE="$1/*.${EPATCH_SUFFIX}"
 	else
-		EPATCH_SOURCE="${EPATCH_SOURCE}/*.${EPATCH_SUFFIX}"
+		local EPATCH_SOURCE="${EPATCH_SOURCE}/*.${EPATCH_SUFFIX}"
 	fi
 
 	case ${EPATCH_SUFFIX##*\.} in
