@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.9 2003/11/02 13:58:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.10 2003/11/03 03:29:47 mr_bones_ Exp $
 
 inherit nsplugins
 
@@ -67,7 +67,7 @@ src_unpack() {
 	if [ ! -r "${DISTDIR}/${MY_A}" ]; then
 		eerror "${DISTDIR}/${MY_A} is not readable. Please check the permissions"
 		die "unreadable ${MY_A}"
-	fi		
+	fi
 
 	if use x86 ; then
 		BYTECOUNT=4799691
