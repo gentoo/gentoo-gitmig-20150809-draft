@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.6 2003/06/28 06:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.7.37.ebuild,v 1.7 2003/07/02 08:35:21 phosphan Exp $
 
 S=${WORKDIR}/${PN}-${PV%.*}
 DESCRIPTION="Embedded database library"
@@ -41,7 +41,7 @@ src_install () {
 	local pydir
 	pydir=`python-config | cut -d" " -f1 | sed -e 's/-l//g'`/site-packages
 
-	make install DESTDIR=${D} || die
+	einstall  
 
 	if [ -n "`use python`" ]
 	then
