@@ -30,24 +30,24 @@ src_compile() {
     local myinteface
     myaudio="--enable-audio=oss"
     myinterface="--enable-interface=xaw,ncurses"
-    if [ "`use alsa`" ]
+    if [ -n "`use alsa`" ]
     then
       myconf="--with-alsa"
       myaudio="$myaudio,alsa"
     fi
-    if [ "`use nas`" ]
+    if [ -n "`use nas`" ]
     then
 	myaudio="$myaudio,nas"
     fi
-    if [ "`use esd`" ]
+    if [ -n "`use esd`" ]
     then
 	myaudio="$myaudio,esd"
     fi
-    if [ "`use motif`" ]
+    if [ -n "`use motif`" ]
     then
 	myinterface="$myinterface,motif"
     fi
-    if [ "`use gtk`" ]
+    if [ -n "`use gtk`" ]
     then
 	myinterface="$myinterface,gtk"
     fi
@@ -56,7 +56,7 @@ src_compile() {
 #    then
 #	myinterface="$myinterface,tcltk"
 #    fi
-    if [ "`use slang`" ]
+    if [ -n "`use slang`" ]
     then
 	myinterface="$myinterface,slang"
     fi
