@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/aranym
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.1 2004/02/11 10:17:21 dholm Exp $
+
+*aranym-0.8.6_beta (11 Feb 2004)
+
+  11 Feb 2004; David Holm <dholm@gentoo.org> aranym-0.8.6_beta.ebuild,
+  metadata.xml:
+  Initial import of ARAnyM.
+
