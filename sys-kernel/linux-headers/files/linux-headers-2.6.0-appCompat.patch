@@ -1,8 +1,7 @@
 ## BEGIN ##
 
 Copyright 2003 Tim Yamin <plasmaroo@gentoo.org>
-                         <plasmaroo@plasmaroo.squirrelserver.co.uk>
-All rights reserved.
+               Martin Schlemmer <azarah@gentoo.org>
 
 This file may freely be distributed under the conditions of the 
 GPLv2 as long as this header, and the following disclaimer is preserved.
@@ -20,21 +19,48 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## END ##
-diff -Naur linux-2.6.0/include/linux/blockgroup_lock.h linux-2.6.0/include/linux.plasmaroo/blockgroup_lock.h
---- linux-2.6.0/include/linux/blockgroup_lock.h	2003-12-26 22:19:45.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/blockgroup_lock.h	2003-12-26 19:37:37.000000000 +0000
-@@ -5,7 +5,7 @@
-  */
+diff -ur linux-2.6.0/include/linux/bitmap.h linux-2.6.0/include/linux.gentoo/bitmap.h
+--- linux-2.6.0/include/linux/bitmap.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/bitmap.h	2003-12-27 19:19:31.000000000 +0000
+@@ -1,6 +1,7 @@
+ #ifndef __LINUX_BITMAP_H
+ #define __LINUX_BITMAP_H
+ 
++#ifdef __KERNEL__
+ #ifndef __ASSEMBLY__
  
  #include <linux/config.h>
--#include <linux/spinlock.h>
-+#include <linux/spinlock_wrapper.h>
- #include <linux/cache.h>
+@@ -155,5 +156,5 @@
+ #endif
  
- #ifdef CONFIG_SMP
-diff -Naur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.plasmaroo/compiler-gcc2.h
---- linux-2.6.0/include/linux/compiler-gcc2.h	2003-12-26 22:19:44.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/compiler-gcc2.h	2003-12-26 19:37:36.000000000 +0000
+ #endif /* __ASSEMBLY__ */
+-
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_BITMAP_H */
+diff -ur linux-2.6.0/include/linux/buffer_head.h linux-2.6.0/include/linux.gentoo/buffer_head.h
+--- linux-2.6.0/include/linux/buffer_head.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/buffer_head.h	2003-12-27 19:19:31.000000000 +0000
+@@ -34,6 +34,8 @@
+ 
+ #define MAX_BUF_PER_PAGE (PAGE_CACHE_SIZE / 512)
+ 
++#ifdef __KERNEL__
++
+ struct page;
+ struct buffer_head;
+ struct address_space;
+@@ -283,6 +285,8 @@
+ 		__wait_on_buffer(bh);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ static inline void lock_buffer(struct buffer_head *bh)
+ {
+ 	while (test_set_buffer_locked(bh))
+diff -ur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.gentoo/compiler-gcc2.h
+--- linux-2.6.0/include/linux/compiler-gcc2.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/compiler-gcc2.h	2003-12-27 19:19:31.000000000 +0000
 @@ -12,7 +12,9 @@
  # define __builtin_expect(x, expected_value) (x)
  #endif
@@ -45,238 +71,198 @@ diff -Naur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.p
  
  /*
   * The attribute `pure' is not implemented in GCC versions earlier
-diff -Naur linux-2.6.0/include/linux/ext2_fs_sb.h linux-2.6.0/include/linux.plasmaroo/ext2_fs_sb.h
---- linux-2.6.0/include/linux/ext2_fs_sb.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/ext2_fs_sb.h	2003-12-26 19:37:38.000000000 +0000
-@@ -18,6 +18,7 @@
+diff -ur linux-2.6.0/include/linux/compiler-gcc3.h linux-2.6.0/include/linux.gentoo/compiler-gcc3.h
+--- linux-2.6.0/include/linux/compiler-gcc3.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/compiler-gcc3.h	2003-12-29 20:07:05.000000000 +0000
+@@ -6,7 +6,9 @@
+ #if __GNUC_MINOR__ >= 1
+ # define inline		__inline__ __attribute__((always_inline))
+ # define __inline__	__inline__ __attribute__((always_inline))
+-# define __inline	__inline__ __attribute__((always_inline))
++# ifndef __inline
++#   define __inline	__inline__ __attribute__((always_inline))
++# endif
+ #endif
  
- #include <linux/blockgroup_lock.h>
- #include <linux/percpu_counter.h>
-+#include <linux/redefine_types.h>
+ #if __GNUC_MINOR__ > 0
+diff -ur linux-2.6.0/include/linux/cpumask.h linux-2.6.0/include/linux.gentoo/cpumask.h
+--- linux-2.6.0/include/linux/cpumask.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/cpumask.h	2003-12-27 19:19:31.000000000 +0000
+@@ -1,6 +1,8 @@
+ #ifndef __LINUX_CPUMASK_H
+ #define __LINUX_CPUMASK_H
  
- /*
-  * second extended-fs super-block data in memory
-diff -Naur linux-2.6.0/include/linux/fb.h linux-2.6.0/include/linux.plasmaroo/fb.h
---- linux-2.6.0/include/linux/fb.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/fb.h	2003-12-26 19:37:38.000000000 +0000
-@@ -2,9 +2,7 @@
- #define _LINUX_FB_H
++#ifdef __KERNEL__
++
+ #include <linux/config.h>
+ #include <linux/kernel.h>
+ #include <linux/threads.h>
+@@ -68,4 +70,5 @@
+ 		cpu < NR_CPUS;						\
+ 		cpu = next_online_cpu(cpu,map))
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_CPUMASK_H */
+diff -ur linux-2.6.0/include/linux/ext2_fs_sb.h linux-2.6.0/include/linux.gentoo/ext2_fs_sb.h
+--- linux-2.6.0/include/linux/ext2_fs_sb.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/ext2_fs_sb.h	2003-12-27 19:19:31.000000000 +0000
+@@ -45,9 +45,9 @@
+ 	int s_desc_per_block_bits;
+ 	int s_inode_size;
+ 	int s_first_ino;
+-	u32 s_next_generation;
++	__u32 s_next_generation;
+ 	unsigned long s_dir_count;
+-	u8 *s_debts;
++	__u8 *s_debts;
+ 	struct percpu_counter s_freeblocks_counter;
+ 	struct percpu_counter s_freeinodes_counter;
+ 	struct percpu_counter s_dirs_counter;
+diff -ur linux-2.6.0/include/linux/fb.h linux-2.6.0/include/linux.gentoo/fb.h
+--- linux-2.6.0/include/linux/fb.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/fb.h	2003-12-27 19:19:31.000000000 +0000
+@@ -3,8 +3,8 @@
  
  #include <linux/tty.h>
--#include <linux/workqueue.h>
+ #include <linux/workqueue.h>
++#include <linux/spinlock.h>
  #include <asm/types.h>
 -#include <asm/io.h>
  
  /* Definitions of frame buffers						*/
  
-@@ -331,6 +329,8 @@
- #define FB_PIXMAP_IO      4     /* memory is iomapped       */
- #define FB_PIXMAP_SYNC    256   /* set if GPU can DMA       */
- 
-+#ifdef __KERNEL__
-+
- struct fb_pixmap {
-         __u8  *addr;                      /* pointer to memory             */  
- 	__u32 size;                       /* size of buffer in bytes       */
-@@ -344,7 +344,9 @@
+@@ -339,8 +339,8 @@
+ 	__u32 scan_align;                 /* alignment per scanline        */
+ 	__u32 flags;                      /* see FB_PIXMAP_*               */
+ 					  /* access methods                */
+-	void (*outbuf)(u8 *dst, u8 *addr, unsigned int size); 
+-	u8   (*inbuf) (u8 *addr);
++	void (*outbuf)(__u8 *dst, __u8 *addr, unsigned int size); 
++	__u8   (*inbuf) (__u8 *addr);
  	spinlock_t lock;                  /* spinlock                      */
  	atomic_t count;
  };
--#ifdef __KERNEL__
-+
-+#include <linux/workqueue.h>
-+#include <asm/io.h>
+@@ -348,6 +348,7 @@
  
  #include <linux/fs.h>
  #include <linux/init.h>
-diff -Naur linux-2.6.0/include/linux/fs.h linux-2.6.0/include/linux.plasmaroo/fs.h
---- linux-2.6.0/include/linux/fs.h	2003-12-26 22:19:45.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/fs.h	2003-12-26 19:37:37.000000000 +0000
-@@ -17,7 +17,15 @@
- #include <linux/dcache.h>
- #include <linux/stat.h>
- #include <linux/cache.h>
--#include <linux/radix-tree.h>
-+
-+/* This should fix any ``sys-fs'' items getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.7 2003/12/26 23:28:56 plasmaroo Exp $ 
-+*/
-+
-+#ifdef __KERNEL__
-+	#include <linux/radix-tree.h>
-+#endif
-+
- #include <linux/kobject.h>
- #include <asm/atomic.h>
++#include <asm/io.h>
  
-diff -Naur linux-2.6.0/include/linux/isdn.h linux-2.6.0/include/linux.plasmaroo/isdn.h
---- linux-2.6.0/include/linux/isdn.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/isdn.h	2003-12-26 19:37:37.000000000 +0000
-@@ -14,7 +14,13 @@
+ struct fb_info;
+ struct vm_area_struct;
+diff -ur linux-2.6.0/include/linux/isdn.h linux-2.6.0/include/linux.gentoo/isdn.h
+--- linux-2.6.0/include/linux/isdn.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/isdn.h	2003-12-27 19:19:31.000000000 +0000
+@@ -14,7 +14,10 @@
  #define __ISDN_H__
  
  #include <linux/ioctl.h>
--#include <linux/isdn/fsm.h>
 +
-+/* This should sort out ``ligtop'' from getting spinlocks.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.7 2003/12/26 23:28:56 plasmaroo Exp $
-+*/
 +#ifdef __KERNEL__
-+	#include <linux/isdn/fsm.h>
+ #include <linux/isdn/fsm.h>
 +#endif
  
  #ifdef CONFIG_COBALT_MICRO_SERVER
  /* Save memory */
-diff -Naur linux-2.6.0/include/linux/mod_devicetable.h linux-2.6.0/include/linux.plasmaroo/mod_devicetable.h
---- linux-2.6.0/include/linux/mod_devicetable.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/mod_devicetable.h	2003-12-26 19:37:38.000000000 +0000
-@@ -9,8 +9,10 @@
- 
+diff -ur linux-2.6.0/include/linux/list.h linux-2.6.0/include/linux.gentoo/list.h
+--- linux-2.6.0/include/linux/list.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/list.h	2003-12-27 19:19:31.000000000 +0000
+@@ -584,7 +584,6 @@
+ 	     pos && ({ n = pos->next; 1; }) && 				 \
+ 		({ tpos = hlist_entry(pos, typeof(*tpos), member); 1;}); \
+ 	     pos = n)
+-#else
+-#warning "don't include kernel headers in userspace"
++
+ #endif /* __KERNEL__ */
+ #endif
+diff -ur linux-2.6.0/include/linux/mod_devicetable.h linux-2.6.0/include/linux.gentoo/mod_devicetable.h
+--- linux-2.6.0/include/linux/mod_devicetable.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/mod_devicetable.h	2003-12-27 19:19:31.000000000 +0000
+@@ -10,7 +10,6 @@
  #ifdef __KERNEL__
  #include <linux/types.h>
--typedef unsigned long kernel_ulong_t;
-+#else
-+#include <linux/redefine_types.h>
- #endif
-+typedef unsigned long kernel_ulong_t;
+ typedef unsigned long kernel_ulong_t;
+-#endif
  
  #define PCI_ANY_ID (~0)
  
-diff -Naur linux-2.6.0/include/linux/msdos_fs.h linux-2.6.0/include/linux.plasmaroo/msdos_fs.h
---- linux-2.6.0/include/linux/msdos_fs.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/msdos_fs.h	2003-12-26 19:37:37.000000000 +0000
-@@ -4,7 +4,14 @@
- /*
-  * The MS-DOS filesystem constants/structures
-  */
--#include <linux/buffer_head.h>
-+
-+/* This should sort out any problems with ``dosfstools''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.7 2003/12/26 23:28:56 plasmaroo Exp $
-+*/
+@@ -147,5 +146,5 @@
+ #define CCW_DEVICE_ID_MATCH_DEVICE_TYPE		0x04
+ #define CCW_DEVICE_ID_MATCH_DEVICE_MODEL	0x08
+ 
+-
++#endif /* __KERNEL__ */
+ #endif /* LINUX_MOD_DEVICETABLE_H */
+diff -ur linux-2.6.0/include/linux/radix-tree.h linux-2.6.0/include/linux.gentoo/radix-tree.h
+--- linux-2.6.0/include/linux/radix-tree.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/radix-tree.h	2003-12-27 19:19:31.000000000 +0000
+@@ -41,6 +41,8 @@
+ 	(root)->rnode = NULL;		\
+ } while (0)
+ 
 +#ifdef __KERNEL__
-+	#include <linux/buffer_head.h>
-+#endif
 +
- #include <linux/string.h>
- #include <asm/byteorder.h>
+ extern int radix_tree_insert(struct radix_tree_root *, unsigned long, void *);
+ extern void *radix_tree_lookup(struct radix_tree_root *, unsigned long);
+ extern void *radix_tree_delete(struct radix_tree_root *, unsigned long);
+@@ -54,4 +56,5 @@
+ 	preempt_enable();
+ }
  
-diff -Naur linux-2.6.0/include/linux/percpu_counter.h linux-2.6.0/include/linux.plasmaroo/percpu_counter.h
---- linux-2.6.0/include/linux/percpu_counter.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/percpu_counter.h	2003-12-26 19:37:37.000000000 +0000
-@@ -5,10 +5,13 @@
++#endif /* __KERNEL__ */
+ #endif /* _LINUX_RADIX_TREE_H */
+diff -ur linux-2.6.0/include/linux/smp.h linux-2.6.0/include/linux.gentoo/smp.h
+--- linux-2.6.0/include/linux/smp.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/smp.h	2003-12-27 19:19:31.000000000 +0000
+@@ -6,6 +6,8 @@
+  *		Alan Cox. <alan@redhat.com>
   */
  
++
++#ifdef __KERNEL__
  #include <linux/config.h>
--#include <linux/spinlock.h>
--#include <linux/smp.h>
-+#include <linux/spinlock_wrapper.h>
- #include <linux/threads.h>
  
-+/* <smp.h> was removed as it brought in spinlocks and other
-+   bad things - no functionality is lost as all the necessary
-+   SMP data is still available. */
-+
  #ifdef CONFIG_SMP
+@@ -112,4 +114,5 @@
+ #define put_cpu()		preempt_enable()
+ #define put_cpu_no_resched()	preempt_enable_no_resched()
  
- struct __percpu_counter {
-diff -Naur linux-2.6.0/include/linux/redefine_types.h linux-2.6.0/include/linux.plasmaroo/redefine_types.h
---- linux-2.6.0/include/linux/redefine_types.h	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.6.0/include/linux.plasmaroo/redefine_types.h	2003-12-26 19:37:38.000000000 +0000
-@@ -0,0 +1,46 @@
-+/* This is a short macro to redefine any types which weren't included
-+   further down the tree as __KERNEL__ might have been unset. 
-+
-+   $>  find $path -name types.h -maxdepth 2 | xargs cat | grep \#ifndef | grep \
-+       TYPES | sed 's/ifndef/undef/'
-+
-+   plasmaroo@gentoo.org - This is an "as-is" Public Domain Item with 
-+                          no warranty of any kind */
-+
-+#ifndef __KERNEL__
-+	#define __KERNEL__
-+	#define __KERNEL_WAS_DEFINED__
-+#endif
-+
-+#undef __ASSEMBLY__ 
-+#undef _ALPHA_TYPES_H
-+#undef __ASM_ARM_TYPES_H
-+#undef _ASM_TYPES_H
-+#undef __UM_TYPES_H
-+#undef _LINUX_TYPES_H
-+#undef __BIT_TYPES_DEFINED__
-+#undef _ASM_IA64_TYPES_H
-+#undef _S390_TYPES_H
-+#undef _PPC_TYPES_H
-+#undef __ASM_SH_TYPES_H
-+#undef _SPARC64_TYPES_H
-+#undef _ASM_TYPES_H
-+#undef _SPARC_TYPES_H
-+#undef _LINUX_RXRPC_TYPES_H
-+#undef _PARISC_TYPES_H
-+#undef __ASM_ARM_TYPES_H
-+#undef _X86_64_TYPES_H
-+#undef _ALPHA_TYPES_H
-+#undef _M68K_TYPES_H
-+#undef __V850_TYPES_H__
-+#undef _ETRAX_TYPES_H
-+#undef _M68K_TYPES_H
-+#undef _I386_TYPES_H
-+#undef _H8300_TYPES_H
-+#undef _PPC64_TYPES_H
-+
-+#include <asm/types.h>
-+
-+#ifdef __KERNEL_WAS_DEFINED__
-+	#undef __KERNEL__
-+#endif
-diff -Naur linux-2.6.0/include/linux/spinlock_wrapper.h linux-2.6.0/include/linux.plasmaroo/spinlock_wrapper.h
---- linux-2.6.0/include/linux/spinlock_wrapper.h	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.6.0/include/linux.plasmaroo/spinlock_wrapper.h	2003-12-26 19:37:36.000000000 +0000
-@@ -0,0 +1,26 @@
-+#ifndef __LINUX_SPINLOCK_H_WRAPPER
-+#define __LINUX_SPINLOCK_H_WRAPPER
-+
-+#include <linux/preempt.h>
-+
-+#define SPINLOCK_MAGIC  0x1D244B3C
-+typedef struct {
-+	unsigned long magic;
-+	volatile unsigned long lock;
-+	volatile unsigned int babble;
-+	const char *module;
-+	char *owner;
-+	int oline;
-+} spinlock_t;
-+
-+#define spin_lock_init(x) \
-+	do { \
-+		(x)->magic = SPINLOCK_MAGIC; \
-+		(x)->lock = 0; \
-+		(x)->babble = 5; \
-+		(x)->module = __FILE__; \
-+		(x)->owner = NULL; \
-+		(x)->oline = 0; \
-+	} while (0)
-+
-+#endif
-diff -Naur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.plasmaroo/time.h
---- linux-2.6.0/include/linux/time.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/time.h	2003-12-26 19:37:38.000000000 +0000
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_SMP_H */
+diff -ur linux-2.6.0/include/linux/spinlock.h linux-2.6.0/include/linux.gentoo/spinlock.h
+--- linux-2.6.0/include/linux/spinlock.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/spinlock.h	2003-12-27 19:19:31.000000000 +0000
+@@ -183,6 +183,7 @@
+ #define _raw_write_trylock(lock) ({ (void)(lock); (1); })
+ 
+ #endif /* !SMP */
++#ifdef __KERNEL__
+ 
+ /*
+  * Define the various spin_lock and rw_lock methods.  Note we define these
+@@ -465,4 +466,5 @@
+ #endif
+ }
+ 
++#endif /* __KERNEL__ */
+ #endif /* __LINUX_SPINLOCK_H */
+diff -ur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.gentoo/time.h
+--- linux-2.6.0/include/linux/time.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/time.h	2003-12-27 19:19:31.000000000 +0000
 @@ -4,24 +4,31 @@
  #include <asm/param.h>
  #include <linux/types.h>
  
 +#ifndef _SYS_TIME_H
-+
  #ifndef _STRUCT_TIMESPEC
-+#ifndef __timespec_defined
++#ifndef _timespec_defined
  #define _STRUCT_TIMESPEC
  struct timespec {
  	time_t	tv_sec;		/* seconds */
  	long	tv_nsec;	/* nanoseconds */
  };
-+#endif /* __timespec_defined */
++#endif /* _timespec_defined */
  #endif /* _STRUCT_TIMESPEC */
  
 +#ifndef _STRUCT_TIMEVAL
@@ -292,48 +278,65 @@ diff -Naur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.plasmaroo/
  };
  
 +#endif /* _SYS_TIME_H */
++
  #ifdef __KERNEL__
  
  #include <linux/spinlock.h>
-@@ -351,16 +358,23 @@
+@@ -351,15 +358,19 @@
  #define	ITIMER_VIRTUAL	1
  #define	ITIMER_PROF	2
  
 +#ifndef _TIME_H
-+
  struct  itimerspec {
          struct  timespec it_interval;    /* timer period */
          struct  timespec it_value;       /* timer expiration */
  };
++#endif /* _TIME_H */
  
-+#endif
-+
 +#ifndef _SYS_TIME_H
-+
  struct	itimerval {
  	struct	timeval it_interval;	/* timer interval */
  	struct	timeval it_value;	/* current value */
  };
- 
 +#endif /* _SYS_TIME_H */
  
+ 
  /*
-  * The IDs of the various system clocks (for POSIX.1b interval timers).
-diff -Naur linux-2.6.0/include/linux/videodev.h linux-2.6.0/include/linux.plasmaroo/videodev.h
---- linux-2.6.0/include/linux/videodev.h	2003-12-26 22:19:46.000000000 +0000
-+++ linux-2.6.0/include/linux.plasmaroo/videodev.h	2003-12-26 19:37:37.000000000 +0000
-@@ -3,7 +3,13 @@
+diff -ur linux-2.6.0/include/linux/videodev.h linux-2.6.0/include/linux.gentoo/videodev.h
+--- linux-2.6.0/include/linux/videodev.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/videodev.h	2003-12-27 19:19:31.000000000 +0000
+@@ -3,13 +3,13 @@
  
  #include <linux/types.h>
  #include <linux/version.h>
 -#include <linux/device.h>
-+
-+/* Should sort out ``DirectFB''.
-+   $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/files/linux-headers-2.6.0-appCompat.patch,v 1.7 2003/12/26 23:28:56 plasmaroo Exp $
-+*/
-+#ifdef __KERNEL__
-+	#include <linux/device.h>
-+#endif
  
  #define HAVE_V4L2 1
  #include <linux/videodev2.h>
+ 
+ #ifdef __KERNEL__
+ 
++#include <linux/device.h>
+ #include <linux/poll.h>
+ #include <linux/mm.h>
+ 
+diff -ur linux-2.6.0/include/linux/workqueue.h linux-2.6.0/include/linux.gentoo/workqueue.h
+--- linux-2.6.0/include/linux/workqueue.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/workqueue.h	2003-12-27 19:19:31.000000000 +0000
+@@ -5,6 +5,8 @@
+ #ifndef _LINUX_WORKQUEUE_H
+ #define _LINUX_WORKQUEUE_H
+ 
++#ifdef __KERNEL__
++
+ #include <linux/timer.h>
+ #include <linux/linkage.h>
+ 
+@@ -73,5 +75,7 @@
+ 	return del_timer_sync(&work->timer);
+ }
+ 
++#endif /* __KERNEL__ */
++
+ #endif
+ 
