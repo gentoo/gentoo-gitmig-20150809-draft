@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.3 2004/04/05 03:10:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.4 2004/05/29 17:59:39 lv Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
+	cd ${S} ; epatch ${FILESDIR}/ddd-3.3.8-gcc34.patch
 }
 
 src_compile() {
