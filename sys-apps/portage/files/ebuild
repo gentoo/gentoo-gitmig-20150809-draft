@@ -382,8 +382,8 @@ doins() {
     do
 	if [ -L $x ]
 	then
-	    cp $x ${WORKDIR}
-	    mysrc=${WORKDIR}/`/usr/bin/basename ${x}`
+	    cp $x ${T}
+	    mysrc=${T}/`/usr/bin/basename ${x}`
 	elif [ -d $x ]
 	then
 	    echo "doins: warning, skipping directory ${x}"
