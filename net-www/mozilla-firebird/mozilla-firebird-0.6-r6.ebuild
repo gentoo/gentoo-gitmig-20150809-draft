@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.1 2003/07/03 17:59:13 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.2 2003/07/18 04:47:12 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -54,6 +54,10 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+
+	# Fix build with Linux 2.6
+	cp ${S}/security/coreconf/Linux2.5.mk ${S}/security/coreconf/Linux2.6.mk
+	
 }
 
 src_compile() {
