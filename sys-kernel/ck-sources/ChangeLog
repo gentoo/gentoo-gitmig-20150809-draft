@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.19 2004/02/16 12:08:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.20 2004/02/16 14:42:39 plasmaroo Exp $
+
+  16 Feb 2004; <plasmaroo@gentoo.org> ck-sources-2.4.24-r1.ebuild,
+  files/ck-sources-2.4.24.CAN-2004-0001.patch:
+  Added the fix for the ptrace vulnerability for AMD64 platforms. Users
+  of 2.6.2 are not affected by the vulnerability.
 
 *ck-sources-2.6.2-r1 (16 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.24-r1.ebuild,v 1.1 2004/01/09 12:12:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.4.24-r1.ebuild,v 1.2 2004/02/16 14:42:40 plasmaroo Exp $
 
 IUSE="build"
 
@@ -58,6 +58,7 @@ src_unpack() {
 	fi
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-ck patch failed"
+	epatch ${FILESDIR}/${P}.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 
 	kernel_universal_unpack
 }
