@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.54 2004/08/05 03:35:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.55 2004/08/05 12:34:23 agriffis Exp $
+
+  05 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-0.9.3.ebuild:
+  stable on amd64 per Lv
 
 *mozilla-firefox-0.9.3 (04 Aug 2004)
 
