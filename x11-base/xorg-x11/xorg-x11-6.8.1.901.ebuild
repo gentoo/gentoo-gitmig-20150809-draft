@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.16 2005/01/11 10:49:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.17 2005/01/11 23:24:11 geoman Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -766,6 +766,10 @@ host_def_setup() {
 			echo "#define BuildXF86DRI NO" >> config/cf/host.def
 			echo "#undef DriDrivers" >> config/cf/host.def
 			echo "#define XF86CardDrivers fbdev" >> config/cf/host.def
+		fi
+
+		if use mips; then
+			echo "#define XF86CardDrivers fbdev newport" >> ${HOSTCONF}
 		fi
 
 		# Make xv optional for more minimal builds
