@@ -1,0 +1,215 @@
+# ChangeLog for net-p2p/dcgui-qt
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.1 2004/08/23 02:04:40 squinky86 Exp $
+
+*valknut-0.3.3 (22 Aug 2004)
+
+  22 Aug 2004; Jon Hood <squinky86@gentoo.org> dcgui-qt-0.2.20.ebuild,
+  dcgui-qt-0.2.21.ebuild, dcgui-qt-0.3.0.ebuild, dcgui-qt-0.3.2.ebuild,
+  +dcgui-qt-0.3.3.ebuild:
+  Version bump, closes #61192. Thanks go to colyte <colyte@crashmag.net> and
+  luke-jr.
+
+  13 Aug 2004; Jon Hood <squinky86@gentoo.org> dcgui-qt-0.3.2.ebuild:
+  Apply fix from bug #60174 from Peter <preach@home.se>.
+
+  08 Aug 2004; Jon Hood <squinky86@gentoo.org> metadata.xml,
+  -dcgui-qt-0.2.22.ebuild, -dcgui-qt-0.3.1.ebuild, dcgui-qt-0.3.2.ebuild:
+  Stable on x86, ebuild cleanups, now under net-p2p herd.
+
+  03 Jul 2004; Guy Martin <gmsoft@gentoo.org> dcgui-qt-0.3.0.ebuild:
+  Marked stable on hppa.
+
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.3.0.ebuild:
+  Unmasked on x86 and amd64.
+
+  14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.22.ebuild:
+  Unmasked on x86 and amd64.
+
+*dcgui-qt-0.3.2 (05 Jun 2004)
+
+  05 Jun 2004; Jon Hood <squinky86@gentoo.org> +dcgui-qt-0.3.2.ebuild:
+  version bump found by Paulo Fidalgo <kanniball@zmail.pt>; #53028
+
+*dcgui-qt-0.3.1 (30 May 2004)
+
+  30 May 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.3.1.ebuild:
+  Version bump, found by Kris Overholt <virtuaspy@yahoo.com> in #52310.
+
+*dcgui-qt-0.3.0 (25 May 2004)
+
+  25 May 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.3.0.ebuild:
+  Version bump.
+
+  07 May 2004; Caleb Tennis <caleb@gentoo.org> :
+  Add an addwrite
+
+*dcgui-qt-0.2.22 (06 May 2004)
+
+  06 May 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.22.ebuild:
+  Version bump. Found by Tom Samstag <gentoo@modtwo.com> in #50064.
+
+*dcgui-qt-0.2.21 (28 Feb 2004)
+
+  28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #43155 by Paulo Fidalgo.
+
+*dcgui-qt-0.2.20 (06 Oct 2003)
+
+  06 Oct 2003; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.20.ebuild:
+  Version bump
+
+*dcgui-qt-0.2.19 (09 Sep 2003)
+
+  09 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.19.ebuild:
+  Version bump
+
+*dcgui-qt-0.2.18 (21 Aug 2003)
+
+  21 Aug 2003; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.18.ebuild:
+  version bump
+
+*dcgui-qt-0.2.4-r1 (06 May 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*dcgui-qt-0.2.16 (25 Jun 2003)
+
+  25 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.2.16.euild :
+  Version bump.
+
+*dcgui-qt-0.2.15 (08 Jun 2003)
+
+  17 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.15.ebuild :
+  Version bump. Deleted old files.
+
+*qt-dcgui-0.2.14 (08 Jun 2003)
+
+  08 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.14.ebuild :
+  Version bump. 
+
+*qt-dcgui-0.2.13 (06 May 2003)
+
+  06 May 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.13.ebuild :
+  Version bump. Removed old files and renamed package.
+
+  30 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.12.ebuild :
+  Added workaround for compilation error. Closes #20177.
+
+*qt-dcgui-0.2.12 (29 Apr 2003)
+
+  29 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.12.ebuild :
+  Version bump.
+
+*qt-dcgui-0.2.10 (17 Apr 2003)
+
+  17 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.10.ebuild :
+  Version bump.
+
+*qt-dcgui-0.2.9 (11 Apr 2003)
+
+  11 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.9.ebuild :
+  Version bump.
+
+*qt-dcgui-0.2.8 (31 Mar 2003)
+
+  31 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.8.ebuild :
+  Version bump.
+
+*qt-dcgui-0.2.7-r1 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> qt-dcgui-0.2.4-r1.ebuild,
+  qt-dcgui-0.2.7-r1.ebuild:
+  removed pic cruft
+
+*qt-dcgui-0.2.7 (14 Mar 2003)
+
+  14 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*qt-dcgui-0.2.6 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*qt-dcgui-0.2.5 (11 Feb 2003)
+
+  11 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #15459.
+
+*qt-dcgui-0.2.4 (02 Feb 2003)
+
+  04 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> qt-dcgui-0.2.4.ebuild :
+  Marked stable becuse of security.
+
+  02 Feb 2003; Joachim Blaabjerg <styx@gentoo.org> qt-dcgui-0.2.4.ebuild 
+  files/digest-qt-dcgui-0.2.4 ChangeLog :
+  Actual bump ;), and hopefully fixed bug #14893 by inheriting kde-functions.
+  Removed old ebuilds.
+
+  02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
+
+*qt-dcgui-0.2.3 (27 Jan 2003)
+
+  27 Jan 2003; Joachim Blaabjerg <styx@gentoo.org> qt-dcgui-0.2.3.ebuild
+  files/digest-qt-dcgui-0.2.3 ChangeLog :
+  Version bump to 0.2.3, fixes bug #14628
+
+*qt-dcgui-0.2.1 (20 Jan 2003)
+
+  20 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qt-dcgui-0.2_rc5 (10 Jan 2003)
+
+  10 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #13639.
+
+*qt-dcgui-0.2_rc4 (01 Jan 2003)
+
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qt-dcgui-0.2_rc3 (19 Dec 2002)
+
+  19 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qt-dcgui-0.2_rc1 (08 Dec 2002)
+
+  08 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qt-dcgui-0.2_beta5 (02 Dec 2002)
+
+  02 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qt-dcgui-0.2_beta4 (01 Dec 2002)
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #11284
+
+*qt-dcgui-0.2_beta1 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #9622
+
+*qt-dcgui-0.1 (07 Oct 2002)
+
+  02 Oct 2002; Mike Frysinger <vapier@gentoo.org> qt-dcgui-0.1.ebuild :
+  Version bump #8837
+
+*qt-dcgui-0.1_rc2 (02 Oct 2002)
+
+  02 Oct 2002; Mike Frysinger <vapier@gentoo.org> qt-dcgui-0.1_rc2.ebuild :
+  Version bump
+
+*qt-dcgui-0.1_beta8 (6 Jul 2002)
+
+  06 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  qt-dcgui-0.1_beta8.ebuild files/digest-qt-dcgui-0.1_beta8 :
+  New packge -- Qt client for DirectConnect. Submitted by:
+  mikael.grahn@telia.com (Mikael Grahn) in bug #4203
