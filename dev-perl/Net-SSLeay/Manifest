@@ -4,7 +4,9 @@ MD5 6cb1986d5511e086c6049d2a7e546fa2 Net-SSLeay-1.19.ebuild 632
 MD5 3cdf6d9bc5ef04b2d2a0494c794c84d8 Net-SSLeay-1.22.ebuild 638
 MD5 4894e639ebe81e5577d042b6ff0e8e19 Net-SSLeay-1.23.ebuild 649
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c8f46bfff05a5ec107de8f9e69c8f0da Net-SSLeay-1.25.ebuild 545
 MD5 493fb42f7a2330d5d17d438646d6b819 files/digest-Net-SSLeay-1.19 69
 MD5 493fb42f7a2330d5d17d438646d6b819 files/digest-Net-SSLeay-1.19-r1 69
 MD5 d92bd0819f351e5105034c8bdcd0364a files/digest-Net-SSLeay-1.22 69
 MD5 43e2f2b25f161b58fd39be9ccc00f2a4 files/digest-Net-SSLeay-1.23 69
+MD5 9b2a2b9cd9070ee75d0fef1b57e13bd2 files/digest-Net-SSLeay-1.25 69
