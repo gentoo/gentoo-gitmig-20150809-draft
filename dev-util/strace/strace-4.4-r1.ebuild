@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.6 2003/03/23 19:16:45 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4-r1.ebuild,v 1.7 2003/03/23 19:20:39 method Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -25,7 +25,7 @@ inherit eutils
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
-	selinux? ( >=sys-apps/selinux-small )"
+	selinux? ( sys-apps/selinux-small )"
 
 src_unpack() {
 	unpack ${A}
