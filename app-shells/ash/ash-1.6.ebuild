@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.12 2004/06/29 03:50:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.13 2004/08/20 23:19:01 seemant Exp $
 
 inherit eutils
 
@@ -38,8 +38,6 @@ src_compile() {
 
 src_install() {
 	into /
-	newbin sh ash || die
-
-	newman sh.1 ash.1
-	dosym /usr/share/man/man1/ash.1.gz /usr/share/man/man1/sh.1.gz
+	newbin ash || die
+	newman ash.1
 }
