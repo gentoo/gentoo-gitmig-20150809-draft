@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.8 2003/12/06 13:21:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.9 2003/12/27 16:23:47 caleb Exp $
+
+*knoda-0.6.3_alpha1 (27 Dec 2003)
+
+  27 Dec 2003; Caleb Tennis <caleb@gentoo.org> knoda-0.6.3_alpha1.ebuild:
+  new alpha version
 
 *knoda-0.6.2a (06 Dec 2003)
 
