@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.57 2004/03/16 18:39:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.58 2004/03/24 02:22:19 spyderous Exp $
+
+  23 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  screen-3.9.13-r4.ebuild, screen-3.9.15-r1.ebuild, screen-3.9.15.ebuild,
+  screen-4.0.1-r1.ebuild, screen-4.0.1.ebuild:
+  Pull old versions for #34599 and to clean up the directory.
 
   16 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> screen-4.0.1-r2.ebuild:
   fix borkage in screen-4.0.1-r2 by vapier, forgetting to close a "!
