@@ -2,7 +2,7 @@ MD5 6c30887c2a42268c31e4981d647f0fb4 ChangeLog 6544
 MD5 ee16a523a31174c4929aedc5d4e2b54b syslog-ng-1.4.16-r1.ebuild 1270
 MD5 b8c61936c368891c9b90bfd88fda3940 syslog-ng-1.5.26-r1.ebuild 1490
 MD5 a61a3e821f3ab890d4f9258f474e7c4b syslog-ng-1.6.0_rc1-r1.ebuild 2049
-MD5 a3168466f516880b716d9c9c17dc8d26 syslog-ng-1.6.0_rc3.ebuild 2047
+MD5 01749777ec48e86ed46064a90fdf40de syslog-ng-1.6.0_rc3.ebuild 2049
 MD5 aa65d1a88029fb91bf124cfa86de0bfe files/digest-syslog-ng-1.4.16-r1 67
 MD5 6d7dc2e2e3bac3a20dde8616c6dd2f22 files/digest-syslog-ng-1.5.26-r1 67
 MD5 50d7756f32c32672482ecf192dd69ce3 files/digest-syslog-ng-1.6.0_rc1-r1 70
