@@ -106,11 +106,11 @@ postgres - Adds support for the postgresql database
 python - Adds support/bindings for the Python language
 qt - Adds support for the Qt library.
 qtmt
-quicktime
+quicktime - Adds support for OpenQuickTime
 readline
 ruby - Adds support/bindings for the Ruby language
-samba
-sdl
+samba - Adds support for SAMBA
+sdl - Adds support for Simple Direct Layer (media library)
 slang
 slp
 snmp
@@ -118,11 +118,11 @@ socks5
 spell - Adds dictionary support
 sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
-static
+static - Causes things to be statically linked instead of dynamically.
 svga
 tcl
 tcltk
-tcpd
+tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
 truetype - Adds support for FreeType and/or FreeType2 fonts
 trusted
@@ -132,8 +132,8 @@ voodoo4
 voodoo5
 X - Adds support for XFree86
 xface
-xml
-xml2
-xmms
+xml - Check/Support flag for XML library (version 1)
+xml2 - Check/Support flag for XML library (version 2)
+xmms - Check/Support for XMMS (X MultiMedia System) player.
 xv
 zeo
