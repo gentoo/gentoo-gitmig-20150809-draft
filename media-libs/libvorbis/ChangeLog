@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.4 2002/07/19 23:26:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.5 2002/09/13 17:46:57 lostlogic Exp $
+
+*libvorbis-1.0-r1 (13 Sep 2002)
+
+  13 Sep 2002; Brandon Low <lostlogic@gentoo.org> libvorbis-1.0-r1.ebuild :
+
+  m4 fixes thanks to gentoo@liquidx.net (Alastair Tse) closes bug 6134.
 
 *libvorbis-1.0 (19 Jul 2002)
 

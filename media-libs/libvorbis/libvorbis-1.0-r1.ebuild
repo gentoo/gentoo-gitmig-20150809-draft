@@ -1,16 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3-r2.ebuild,v 1.4 2002/08/14 13:08:10 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r1.ebuild,v 1.1 2002/09/13 17:46:57 lostlogic Exp $
 
 inherit libtool
 
-MY_P=${P/_/}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 DESCRIPTION="the Ogg Vorbis sound file format library"
-SRC_URI="http://www.vorbis.com/files/rc3/unix/${MY_P}.tar.gz"
+SRC_URI="http://fatpipe.vorbis.com/files/1.0/unix/${P}.tar.gz"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
 
-DEPEND=">=media-libs/libogg-1.0_rc2"
+DEPEND=">=media-libs/libogg-1.0"
 
 SLOT="0"
 LICENSE="as-is"
@@ -20,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	patch -p1 < ${FILESDIR}/${P}-m4.patch || die "Patching failed"
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it do not handle -mno-ieee-fp too well.
 	cp configure configure.orig
@@ -48,4 +48,15 @@ src_install () {
 	docinto txt
 	dodoc doc/*.txt
 	dohtml -r doc
+}
+
+pkg_postinst() {
+	einfo 
+	einfo "Note the 1.0 version of libvorbis has been installed"
+	einfo "Applications that used pre-1.0 vorbis libraries will"
+	einfo "need to be recompiled for the new version."
+	einfo "Now that the vorbis folks have finalized the API"
+	einfo "this should be the last time for a while that"
+	einfo "recompilation is needed for these things."
+	einfo
 }
