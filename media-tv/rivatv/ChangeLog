@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/rivatv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.10 2004/10/04 03:37:54 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.11 2005/01/10 00:54:38 blauwers Exp $
+
+* rivatv-0.8.5-r2 (10 Jan 2005)
+
+  10 Jan 2005; Bart Lauwers <blauwers@gentoo.org> rivatv-0.8.5-r2:
+  Add patch + fix typo (Bug #59569 & Bug #74852)
 
   03 Oct 2004; <iggy@gentoo.org> rivatv-0.8.5-r1.ebuild:
   switched custom ARCH setting code to use set_arch_to_* from eutils

@@ -1,27 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d4ad281585e9fe8b749dfbc1e62cfe8 rivatv-0.8.5.ebuild 1027
-MD5 c27659e7abded9409f553aee80149440 rivatv-0.8.5-r1.ebuild 2458
-MD5 2529b8221049913d7daa60cf99ebda97 rivatv-0.8.2.ebuild 970
-MD5 91985a16ce121b0357f13cac7ff06f77 rivatv-0.8.0-r1.ebuild 1190
-MD5 81eb5a155668cc894508dee246c4f762 rivatv-0.8.4.ebuild 1028
-MD5 3ced533304f863eb0423aa83ca3ed2ad rivatv-0.8.1.ebuild 1187
-MD5 a7a03ed9eb82ab529416740b74667b33 ChangeLog 2841
+MD5 9bfb98be6c22d962f5309102223f3624 ChangeLog 2995
 MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
-MD5 2a1e65d98b76518fdc6d120b5801554c rivatv-0.8.3.ebuild 1130
+MD5 539050139ad47088e22b820c45b8929e rivatv-0.8.0-r1.ebuild 1190
+MD5 60321656d95456d87911c3aba0e70420 rivatv-0.8.1.ebuild 1187
+MD5 5131b86f70269727631f034136b8f1fb rivatv-0.8.2.ebuild 970
+MD5 89e07f3d4e95f231597e44102c3b766f rivatv-0.8.3.ebuild 1130
+MD5 ca7ce7d2ad86ccf15c8a4b3526e51715 rivatv-0.8.4.ebuild 1028
+MD5 8c97da3801ed7e16195ef11d41c737ce rivatv-0.8.5-r1.ebuild 2462
+MD5 375c91a64859a202ccbf714deffb09d2 rivatv-0.8.5.ebuild 1027
+MD5 1d80f10154a38357d9c788c1a1f3e6f7 rivatv-0.8.5-r2.ebuild 2509
+MD5 94dc3c0091e479d11d285de52267521d files/digest-rivatv-0.8.0-r1 63
 MD5 c70f4f5b9e57a7ab53345aa005ac3733 files/digest-rivatv-0.8.1 64
 MD5 675738a65f00503869783cd7f88ce0b1 files/digest-rivatv-0.8.2 64
 MD5 b8ad0ea54d8eaf1691d5e98e1bf8a15b files/digest-rivatv-0.8.3 64
 MD5 acf3e72cc79919b0614cf5b2970274a5 files/digest-rivatv-0.8.4 64
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5 64
-MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
-MD5 94dc3c0091e479d11d285de52267521d files/digest-rivatv-0.8.0-r1 63
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYMWTMSkoRwEucGERAjIpAJ9RqnsRcg6ouoDUsp4LU/+QLVxdjQCfZo6j
-AcW9BrICWQYz1RWgdVtlES0=
-=IImo
------END PGP SIGNATURE-----
+MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
+MD5 10cc1de4b118d3a016772dfc98c483e2 files/rivatv-0.8.5-configure.patch 622
+MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r2 64

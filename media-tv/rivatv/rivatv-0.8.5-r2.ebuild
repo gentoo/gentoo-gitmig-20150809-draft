@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r1.ebuild,v 1.4 2005/01/10 00:54:38 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r2.ebuild,v 1.1 2005/01/10 00:54:38 blauwers Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"
@@ -16,6 +16,8 @@ IUSE=""
 src_unpack() {
 	check_KV
 	unpack ${A}
+
+	epatch ${FILESDIR}/${P/_/-}-configure.patch
 
 	# Symlink kernel source to a directory we have permissions for
 	mkdir ${WORKDIR}/build
@@ -60,7 +62,7 @@ pkg_postinst() {
 	# If devfsd is not being used create devices
 	if [ "${ROOT}" = "/" ]
 	then
-		if [ ! -e /dev/.devfsd ] && [! -e /dev/video0 ]
+		if [ ! -e /dev/.devfsd ] && [ ! -e /dev/video0 ]
 		then
 			# Create devices
 			mknod /dev/video0 c 81 0
