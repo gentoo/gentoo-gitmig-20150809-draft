@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.101 2005/01/27 19:03:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.102 2005/02/03 05:43:51 compnerd Exp $
+
+  02 Feb 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  sun-jdk-1.4.2.07.ebuild:
+  Pushing 1.4.2_07 to stable; Closes bug #80288
 
 *sun-jdk-1.4.2.07 (27 Jan 2005)
 

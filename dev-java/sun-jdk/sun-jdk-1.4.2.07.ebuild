@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.07.ebuild,v 1.1 2005/01/27 19:03:37 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.07.ebuild,v 1.2 2005/02/03 05:43:51 compnerd Exp $
 
 inherit java eutils
 
@@ -18,7 +18,7 @@ SRC_URI="${At}
 		jce? ( ${jce_policy} )"
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 -*"
+KEYWORDS="x86 -*"
 RESTRICT="fetch"
 IUSE="doc gnome kde mozilla jce"
 
