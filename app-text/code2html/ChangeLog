@@ -1,0 +1,9 @@
+# ChangeLog for app-text/code2html
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.1 2003/03/27 03:13:44 leonardop Exp $
+
+*code2html-0.9.1 (26 Mar 2003)
+
+  26 Mar 2003; L. Boshell <leonardop@gentoo.org> code2html-0.9.1.ebuild :
+  Initial import. Thanks to Thomas Arnhold for his contribution on bug
+  #14170.
