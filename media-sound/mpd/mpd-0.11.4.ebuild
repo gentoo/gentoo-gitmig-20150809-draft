@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4.ebuild,v 1.4 2005/01/21 20:29:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4.ebuild,v 1.5 2005/02/14 02:05:34 ticho Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	mikmod? ( media-libs/libmikmod )
 	alsa? ( media-libs/alsa-lib )
 	>=media-libs/libao-0.8.4
-	sys-libs/zlib"
+	sys-libs/zlib
+	!media-sound/mpd"
 
 src_compile() {
 	#flip on/off the support, and test.
