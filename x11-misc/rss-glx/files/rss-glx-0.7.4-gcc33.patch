@@ -1,0 +1,294 @@
+diff -ur rss_glx-0.7.4/reallyslick/c_src/rsMath.c rss_glx-0.7.4-gcc3.3/reallyslick/c_src/rsMath.c
+--- rss_glx-0.7.4/reallyslick/c_src/rsMath.c	2003-03-01 15:56:28.000000000 -0800
++++ rss_glx-0.7.4-gcc3.3/reallyslick/c_src/rsMath.c	2003-06-01 18:17:56.000000000 -0700
+@@ -37,36 +37,36 @@
+ void rsCPUDetect() {
+ #ifdef DETECT_X86_EXTS
+ 	__asm__ (
+-	"
+-		xor	%%eax, %%eax
++	
++"		xor	%%eax, %%eax\n"
+ 
+-		cpuid
++"		cpuid\n"
+ 
+-		cmp	$0x68747541, %%ebx
+-		jne	not_amd
++"		cmp	$0x68747541, %%ebx\n"
++"		jne	not_amd\n"
+ 
+-		mov	$0x80000001, %%eax
+-		cpuid
++"		mov	$0x80000001, %%eax\n"
++"		cpuid\n"
+ 
+-		shr	$31, %%edx
+-		jmp	done
++"		shr	$31, %%edx\n"
++"		jmp	done\n"
+ 
+-not_amd:
+-		xor	%%edx, %%edx
+-		cmp	$1, %%eax
+-		jl	no_exts
++"not_amd:\n"
++"		xor	%%edx, %%edx\n"
++"		cmp	$1, %%eax\n"
++"		jl	no_exts\n"
+ 
+-		xor	%%eax, %%eax
+-		inc	%%eax
++"		xor	%%eax, %%eax\n"
++"		inc	%%eax\n"
+ 
+-		cpuid
++"		cpuid\n"
+ 
+-		shr	$24, %%edx
+-		and	$2, %%edx
++"		shr	$24, %%edx\n"
++"		and	$2, %%edx\n"
+ 
+-no_exts:
+-done:
+-	"
++"no_exts:\n"
++"done:\n"
++	
+ 	: "=d" (cpuid)
+ 	:
+ 	: "%eax", "%ebx", "%ecx"
+@@ -86,48 +86,48 @@
+ #ifdef USE_3DNOW
+ 	if (cpuid & FLAG_3DNOW) {
+ 		__asm__ (
+-		"
+-		femms
++		
++"		femms\n"
+ 
+-		movq            (%1), %%mm0             /* 1 | 0 */
+-		movq            8(%1), %%mm1            /* - | 2 */
++"		movq            (%1), %%mm0\n"          /* 1 | 0 */
++"		movq            8(%1), %%mm1\n"         /* - | 2 */
+ 
+-		movq            %%mm0, %%mm2            /* 1 | 0 */
+-		movq            %%mm1, %%mm3            /* - | 2 */
++"		movq            %%mm0, %%mm2\n"         /* 1 | 0 */
++"		movq            %%mm1, %%mm3\n"         /* - | 2 */
+ 
+-		pfmul           %%mm0, %%mm0            /* 1 * 1 | 0 * 0 */
+-		pfmul           %%mm1, %%mm1            /* -     | 2 * 2 */
++"		pfmul           %%mm0, %%mm0\n"         /* 1 * 1 | 0 * 0 */
++"		pfmul           %%mm1, %%mm1\n"         /* -     | 2 * 2 */
+ 
+-		movq            %%mm0, %%mm7            /* 1 * 1 | 0 * 0 */
+-		punpckhdq       %%mm7, %%mm7            /* 1 * 1 | 1 * 1 */
++"		movq            %%mm0, %%mm7\n"         /* 1 * 1 | 0 * 0 */
++"		punpckhdq       %%mm7, %%mm7\n"         /* 1 * 1 | 1 * 1 */
+ 
+-		pfadd           %%mm1, %%mm0            /* -     | 0 * 0 + 2 * 2 */
+-		pfadd           %%mm7, %%mm0            /* -     | 0 * 0 + 2 * 2 + 1 * 1 */
++"		pfadd           %%mm1, %%mm0\n"         /* -     | 0 * 0 + 2 * 2 */
++"		pfadd           %%mm7, %%mm0\n"         /* -     | 0 * 0 + 2 * 2 + 1 * 1 */
+ 
+-		pfrsqrt         %%mm0, %%mm1            /* 24-bit sqrt */
+-		movq            %%mm1, %%mm4
+-		pfmul           %%mm1, %%mm1
+-		punpckldq       %%mm0, %%mm0
+-		pfrsqit1        %%mm0, %%mm1
+-		pfrcpit2        %%mm4, %%mm1
+-		pfmul           %%mm1, %%mm0
++"		pfrsqrt         %%mm0, %%mm1\n"         /* 24-bit sqrt */
++"		movq            %%mm1, %%mm4\n"
++"		pfmul           %%mm1, %%mm1\n"
++"		punpckldq       %%mm0, %%mm0\n"
++"		pfrsqit1        %%mm0, %%mm1\n"
++"		pfrcpit2        %%mm4, %%mm1\n"
++"		pfmul           %%mm1, %%mm0\n"
+ 
+-		movd            %%mm0, %0               /* length */
++"		movd            %%mm0, %0\n"            /* length */
+ 
+-		pfrcp           %%mm0, %%mm1            /* 24-bit reciprocal */
+-		movq            %%mm0, %%mm4
+-		punpckldq       %%mm4, %%mm4
+-		pfrcpit1        %%mm1, %%mm4
+-		pfrcpit2        %%mm1, %%mm4
++"		pfrcp           %%mm0, %%mm1\n"         /* 24-bit reciprocal */
++"		movq            %%mm0, %%mm4\n"
++"		punpckldq       %%mm4, %%mm4\n"
++"		pfrcpit1        %%mm1, %%mm4\n"
++"		pfrcpit2        %%mm1, %%mm4\n"
+ 
+-		pfmul           %%mm4, %%mm2            /* 1 / length | 0 / length */
+-		pfmul           %%mm4, %%mm3            /* -          | 2 / length */
++"		pfmul           %%mm4, %%mm2\n"         /* 1 / length | 0 / length */
++"		pfmul           %%mm4, %%mm3\n"         /* -          | 2 / length */
+ 
+-		movq            %%mm2, (%1)             /* 1 | 0 */
+-		movq            %%mm3, 8(%1)            /* - | 2 */
++"		movq            %%mm2, (%1)\n"          /* 1 | 0 */
++"		movq            %%mm3, 8(%1)\n"         /* - | 2 */
++
++"		femms\n"
+ 
+-		femms
+-		"
+ 		: "=m" (length)
+ 		: "d" (v)
+ 		);
+@@ -139,27 +139,27 @@
+ #ifdef USE_SSE
+ 	if (cpuid & FLAG_SSE) {
+ 		__asm__ (
+-		"
+-		movups          (%1), %%xmm0            /* 0 | 1 | 2 | - */
+-		movups          %%xmm0, %%xmm1          /* 0 | 1 | 2 | - */
+-
+-		mulps           %%xmm0, %%xmm0          /* 0 * 0 | 1 * 1 | 2 * 2 | - */
+-		movups          %%xmm0, %%xmm2          /* 0 * 0 | 1 * 1 | 2 * 2 | - */
+-
+-		shufps          $9, %%xmm2, %%xmm2      /* 1 * 1                 | 2 * 2 | - | - */
+-		addss           %%xmm2, %%xmm0          /* 0 * 0 + 1 * 1         | -     | - | - */
+-		shufps          $1, %%xmm2, %%xmm2      /* 2 * 2                 | -     | - | - */
+-		addss           %%xmm2, %%xmm0          /* 0 * 0 + 1 * 1 + 2 * 2 | -     | - | - */
+-
+-		sqrtss          %%xmm0, %%xmm0          /* length | -      | -      | - */
+-		movss           %%xmm0, %0              /* length */
+-
+-		unpcklps        %%xmm0, %%xmm0          /* length | length | -      | - */
+-		unpcklps        %%xmm0, %%xmm0          /* length | length | length | length */
+-		divps           %%xmm0, %%xmm1          /* 1 / length | 2 / length | 3 / length | - */
++		
++"		movups          (%1), %%xmm0\n"         /* 0 | 1 | 2 | - */
++"		movups          %%xmm0, %%xmm1\n"       /* 0 | 1 | 2 | - */
++
++"		mulps           %%xmm0, %%xmm0\n"       /* 0 * 0 | 1 * 1 | 2 * 2 | - */
++"		movups          %%xmm0, %%xmm2\n"       /* 0 * 0 | 1 * 1 | 2 * 2 | - */
++
++"		shufps          $9, %%xmm2, %%xmm2\n"   /* 1 * 1                 | 2 * 2 | - | - */
++"		addss           %%xmm2, %%xmm0\n"       /* 0 * 0 + 1 * 1         | -     | - | - */
++"		shufps          $1, %%xmm2, %%xmm2\n"   /* 2 * 2                 | -     | - | - */
++"		addss           %%xmm2, %%xmm0\n"       /* 0 * 0 + 1 * 1 + 2 * 2 | -     | - | - */
++
++"		sqrtss          %%xmm0, %%xmm0\n"       /* length | -      | -      | - */
++"		movss           %%xmm0, %0\n"           /* length */
++
++"		unpcklps        %%xmm0, %%xmm0\n"       /* length | length | -      | - */
++"		unpcklps        %%xmm0, %%xmm0\n"       /* length | length | length | length */
++"		divps           %%xmm0, %%xmm1\n"       /* 1 / length | 2 / length | 3 / length | - */
+ 
+-		movups          %%xmm1, (%1)            /* 1 / length | 2 / length | 3 / length | - */
+-		"
++"		movups          %%xmm1, (%1)\n"         /* 1 / length | 2 / length | 3 / length | - */
++		
+ 		: "=m" (length)
+ 		: "d" (v)
+ 		);
+@@ -187,41 +187,41 @@
+ #ifdef USE_3DNOW
+ 	if (cpuid & FLAG_3DNOW) {
+ 		__asm__ (
+-		"
+-		femms
++		
++"		femms\n"
+ 
+-		movq            (%0), %%mm0             /* 1.1 | 1.0 */
+-		movq            8(%0), %%mm1            /* -   | 1.2 */
++"		movq            (%0), %%mm0\n"          /* 1.1 | 1.0 */
++"		movq            8(%0), %%mm1\n"         /* -   | 1.2 */
+ 
+-		movq            (%1), %%mm2             /* 2.1 | 2.0 */
+-		movq            8(%1), %%mm3            /* -   | 2.2 */
++"		movq            (%1), %%mm2\n"          /* 2.1 | 2.0 */
++"		movq            8(%1), %%mm3\n"         /* -   | 2.2 */
+ 
+-		movq            %%mm0, %%mm4            /* 1.1 | 1.0 */
+-		punpckhdq       %%mm4, %%mm4            /* 1.1 | 1.1 */
+-		punpckldq       %%mm1, %%mm4            /* 1.2 | 1.1 */
++"		movq            %%mm0, %%mm4\n"         /* 1.1 | 1.0 */
++"		punpckhdq       %%mm4, %%mm4\n"         /* 1.1 | 1.1 */
++"		punpckldq       %%mm1, %%mm4\n"         /* 1.2 | 1.1 */
+ 
+-		movq            %%mm2, %%mm5            /* 2.1 | 2.0 */
+-		punpckhdq       %%mm2, %%mm5            /* 2.1 | 2.1 */
+-		punpckldq       %%mm3, %%mm5            /* 2.2 | 2.1 */
++"		movq            %%mm2, %%mm5\n"         /* 2.1 | 2.0 */
++"		punpckhdq       %%mm2, %%mm5\n"         /* 2.1 | 2.1 */
++"		punpckldq       %%mm3, %%mm5\n"         /* 2.2 | 2.1 */
+ 
+-		pfmul           %%mm2, %%mm4            /* 1.2 * 2.1 | 2.0 * 1.1 */
+-		pfmul           %%mm0, %%mm5            /* 1.1 * 2.2 | 1.0 * 2.1 */
++"		pfmul           %%mm2, %%mm4\n"         /* 1.2 * 2.1 | 2.0 * 1.1 */
++"		pfmul           %%mm0, %%mm5\n"         /* 1.1 * 2.2 | 1.0 * 2.1 */
+ 
+-		pfmul           %%mm0, %%mm3            /* - | 1.0 * 2.2 */
+-		pfmul           %%mm2, %%mm1            /* - | 2.0 * 1.2 */
++"		pfmul           %%mm0, %%mm3\n"         /* - | 1.0 * 2.2 */
++"		pfmul           %%mm2, %%mm1\n"         /* - | 2.0 * 1.2 */
+ 
+-		pfsub           %%mm4, %%mm5            /* 0 | 2 */
+-		pfsub           %%mm3, %%mm1            /* - | 1 */
++"		pfsub           %%mm4, %%mm5\n"         /* 0 | 2 */
++"		pfsub           %%mm3, %%mm1\n"         /* - | 1 */
+ 
+-		movq            %%mm5, %%mm6            /* 0 | 2 */
+-		punpckldq       %%mm1, %%mm1            /* 1 | 1 */
+-		punpckhdq       %%mm1, %%mm6            /* 1 | 0 */
++"		movq            %%mm5, %%mm6\n"         /* 0 | 2 */
++"		punpckldq       %%mm1, %%mm1\n"         /* 1 | 1 */
++"		punpckhdq       %%mm1, %%mm6\n"         /* 1 | 0 */
+ 
+-		movq            %%mm6, (%2)             /* 1 | 0 */
+-		movq            %%mm5, 8(%2)            /* - | 2 */
++"		movq            %%mm6, (%2)\n"          /* 1 | 0 */
++"		movq            %%mm5, 8(%2)\n"         /* - | 2 */
+ 
+-		femms
+-		"
++"		femms\n"
++		
+ 		:
+ 		: "a" (vec1), "b" (vec2), "d" (v)
+ 		);
+@@ -233,24 +233,24 @@
+ #ifdef USE_SSE
+ 	if (cpuid & FLAG_SSE) {
+ 		__asm__ (
+-		"
+-		movups  (%0), %%xmm0                    /* 1.0 | 1.1 | 1.2 | - */
+-		movups  (%1), %%xmm1                    /* 2.0 | 2.1 | 2.2 | - */
++		
++"		movups  (%0), %%xmm0\n"                 /* 1.0 | 1.1 | 1.2 | - */
++"		movups  (%1), %%xmm1\n"                 /* 2.0 | 2.1 | 2.2 | - */
+ 
+-		movups  %%xmm0, %%xmm2                  /* 1.0 | 1.1 | 1.2 | - */
+-		shufps  $201, %%xmm2, %%xmm2            /* 1.1 | 1.2 | 1.0 | - */
+-		movups  %%xmm1, %%xmm3                  /* 2.0 | 2.1 | 2.2 | - */
+-		shufps  $201, %%xmm3, %%xmm3            /* 2.1 | 2.2 | 2.0 | - */
++"		movups  %%xmm0, %%xmm2\n"               /* 1.0 | 1.1 | 1.2 | - */
++"		shufps  $201, %%xmm2, %%xmm2\n"         /* 1.1 | 1.2 | 1.0 | - */
++"		movups  %%xmm1, %%xmm3\n"               /* 2.0 | 2.1 | 2.2 | - */
++"		shufps  $201, %%xmm3, %%xmm3\n"         /* 2.1 | 2.2 | 2.0 | - */
+ 
+-		mulps   %%xmm1, %%xmm2                  /* 1.1 * 2.0 | 1.2 * 2.1 | 1.0 * 2.2 | - */
+-		mulps   %%xmm0, %%xmm3                  /* 2.1 * 1.0 | 2.2 * 1.1 | 2.0 * 1.2 | - */
++"		mulps   %%xmm1, %%xmm2\n"               /* 1.1 * 2.0 | 1.2 * 2.1 | 1.0 * 2.2 | - */
++"		mulps   %%xmm0, %%xmm3\n"               /* 2.1 * 1.0 | 2.2 * 1.1 | 2.0 * 1.2 | - */
+ 
+-		subps   %%xmm2, %%xmm3                  /* 2 | 0 | 1 | - */
++"		subps   %%xmm2, %%xmm3\n"               /* 2 | 0 | 1 | - */
+ 
+-		shufps  $201, %%xmm3, %%xmm3            /* 0 | 1 | 2 | - */
++"		shufps  $201, %%xmm3, %%xmm3\n"         /* 0 | 1 | 2 | - */
+ 
+-		movups  %%xmm3, (%2)                    /* 0 | 1 | 2 | - */
+-		"
++"		movups  %%xmm3, (%2)\n"                 /* 0 | 1 | 2 | - */
++		
+ 		: 
+ 		: "a" (vec1), "c" (vec2), "d" (v)
+ 		);
