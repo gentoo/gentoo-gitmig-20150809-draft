@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.8 2004/07/22 05:46:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.9 2004/07/22 08:07:16 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,11 +36,15 @@ DEPEND="$RDEPEND >=sys-devel/autoconf-2.58
 
 S=${WORKDIR}/${MY_P}
 
-filter-flags "-fno-default-inline"
+filter-flags "-fno-default-inline -funroll-loops -funroll-all-loops \
+	    -maltivec -mabi=altivec"
 
 src_compile() {
 	# Fixes a possible automake error due to clock skew
 	touch -r *
+
+	# Small cosmetic correction of configure:
+	sed -i -e /^d$/d ${S}/configure ${S}/configure.in ${S}/configure.in.in
 
 	export WANT_AUTOCONF=2.5
 	autoconf
@@ -61,9 +65,6 @@ src_compile() {
 
 	use debug && myconf="${myconf} --enable-debug=full"
 	use nls || myconf="${myconf} --disable-nls"
-
-	filter-flags -funroll-loops -funroll-all-loops
-	filter-flags -maltivec -mabi=altivec
 
 	econf ${myconf} || die "configure failed"
 

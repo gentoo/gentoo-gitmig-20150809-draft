@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.46 2004/07/22 05:46:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.47 2004/07/22 08:07:16 zypher Exp $
+
+  22 Jul 2004; Marc Hildebrand <zypher@gentoo.org> metadata.xml,
+  avidemux-2.0.24.ebuild:
+  Changed package maintainer (Added myself).
+  Fixed configure and configure.in, closing bug #57831
 
   22 Jul 2004; Chris White <chriswhite@gentoo.org> metadata.xml,
   avidemux-2.0.24.ebuild:
