@@ -1,11 +1,14 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.20 2003/02/14 18:04:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.21 2003/02/27 22:37:05 agriffis Exp $
 
  14 Feb 2003; Guy Martin <gmsoft@gentoo.org> mutt-1.4-r3.ebuild :
  Added hppa to keywords.
 
-*mutt-1.4-r3 (03 Sept 2002) 
+*mutt-1.4-r3 (03 Sept 2002)
+
+  27 Feb 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.4-r3.ebuild:
+  Mark stable on alpha
 
   14 Feb 2003; Jungmin Seo <seo@gentoo.org> mutt-1.4-r3.ebuild :
   added pkg_setup. Now it needs WANT_JA variable to use the
