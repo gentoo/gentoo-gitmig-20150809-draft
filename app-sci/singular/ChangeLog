@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/singular
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.1 2003/10/24 10:13:41 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/ChangeLog,v 1.2 2003/10/29 16:26:57 phosphan Exp $
+
+*singular-2.0.4-r1 (29 Oct 2003)
+
+  29 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4-r1.ebuild,
+  files/fake_ssh:
+  Docs will be installed now if USE="doc"
 
 *singular-2.0.4 (24 Oct 2003)
 
