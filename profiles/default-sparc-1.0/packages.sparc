@@ -1,17 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages.sparc,v 1.4 2002/07/11 06:18:39 jtegart Exp $
-#
 # Please edit the file packages.sparc, it will be included in
-# packages the next time you run generate-packages.sh
+# packages the next time you run ../default-sparc-1.0/scripts/build.rel
 #
 # SPARC specific packages
 *sys-apps/sparc-utils
 *sys-apps/silo
 
-# In case we need a different 32 bit compiler.
-#*sys-devel/sparc-egcs32
-
-# Fixes bug#1726
->=sys-devel/patch-2.5.4-r4
-
-# Fix OpenSSL 0.9.6d issue
-#<dev-libs/openssl-0.9.6d
+# Sed replacement
+*sys-apps/supersed

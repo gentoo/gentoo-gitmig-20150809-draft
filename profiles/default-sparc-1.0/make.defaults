@@ -1,44 +1,13 @@
-# This file created automagically by scripts/generate-packages.sh on Thu Jul  4 16:44:11 CEST 2002
-
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
-
-USE="oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
-java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
-oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
-slang spell ssl svga tcpd truetype X xml2 xmms xv" 
-
-
-
-
-# These lines added by scripts/generate-packages.sh
-#
-# $Id: make.defaults,v 1.14 2002/09/03 22:41:02 drobbins Exp $
-#
-# $Log: not supported by cvs2svn $
-# Revision 1.13  2002/07/24 17:23:04  g2boojum
-# Removed "ipv6" from USE in make.defaults.  Some packages require
-# ipv6 support in the kernel if built w/ ipv6 support.
-#
-# Revision 1.12  2002/07/04 16:12:08  murphy
-# Merging in changes from x86
-#
-# Masking openssl 0.9.6d
-#
-# Revision 1.3  2002/05/08 22:08:22  murphy
-# More fixes to CD stuff.
-#
-# Added more flags to make.defaults.sparc.
-#
-# Regenerated files with the new make.defaults.sparc
-#
-# Revision 1.2  2002/04/18 21:05:52  murphy
-# YMCA: Yet More Changes Ah-ha (tm)
-#
+USE="oss sparc apm arts avi berkdb crypt cups encode gdbm gif gtk imlib
+java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
+opengl pam pdflib png python qt qtmt quicktime readline sdl slang spell ssl
+ tcpd truetype X xml2 xmms xv zlib"
 #
 ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
-PLATFORM=$CHOST
+PLATFORM=sparc-unknown-linux-gnu
 
 # Options passed to make during the build process
 # MAKEOPTS="-j2"
@@ -52,5 +21,5 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-# Use arch flag
-# End of lines added by scripts/generate-packages.sh
+# USE arch:xxx keyword
+ACCEPT_KEYWORDS="sparc"
