@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.98-r1.ebuild,v 1.2 2004/08/27 23:44:49 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.98-r1.ebuild,v 1.3 2005/03/17 00:06:19 vapier Exp $
 
 inherit eutils
 
@@ -11,10 +11,11 @@ SRC_URI="http://libtomcrypt.org/files/crypt-${PV}.tar.bz2
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 DEPEND="doc? ( virtual/tetex app-text/ghostscript )"
+RDEPEND=""
 
 src_unpack() {
 	unpack crypt-${PV}.tar.bz2
