@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.25.20030114.ebuild,v 1.2 2003/01/19 14:46:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.25.20030114.ebuild,v 1.3 2003/01/20 00:49:10 azarah Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
@@ -22,7 +22,6 @@ DEPEND=">=media-libs/divx4linux-20020418
 	qt? ( >=x11-libs/qt-3.0.3 )
 	nas? ( >=media-libs/nas-1.4.2 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
-	kde? ( kde-base/arts )
 	oggvorbis? ( media-libs/libvorbis )"
 
 SLOT="0.7"
