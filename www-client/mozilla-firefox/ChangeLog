@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.5 2005/03/23 20:05:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.6 2005/03/24 12:28:40 cryos Exp $
+
+  24 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  mozilla-firefox-1.0.2.ebuild:
+  Marked stable on amd64, bug 86148.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   mozilla-firefox-0.9.3.ebuild, mozilla-firefox-1.0_pre-r2.ebuild,
