@@ -73,6 +73,6 @@ app-text/sgml2x
 # broken
 >=media-gfx/autotrace-0.26
 # untested
-#>=x11-base/xfree-4.1.0-r1
+>=x11-base/xfree-4.1.0-r1
 # incompatible
 >=sys-devel/autoconf-2.50
