@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/cyrus-imap-dev
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.1 2002/10/11 05:33:35 raker Exp $
+
+*cyrus-imap-dev-2.1.9 (01 Oct 2002)
+
+  01 Oct 2002; Alexander Holler <holler@ahsoftware.de>
+  Initial checkin of this package.
+
