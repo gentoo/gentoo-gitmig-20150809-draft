@@ -1,4 +1,5 @@
-daemon_list="smbd nmbd winbind"
+#add "winbind" to the daemon_list if you also want winbind to start
+daemon_list="smbd nmbd"
 
 #----------------------------------------------------------------------------
 # Daemons calls: <daemon_name>_<command_option>
