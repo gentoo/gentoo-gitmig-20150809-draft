@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.13 2003/09/25 14:02:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.5.ebuild,v 1.1 2003/09/25 14:02:05 foser Exp $
 
 inherit eutils
 
-DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
+DESCRIPTION="Graphical IRC client"
 SRC_URI="http://www.xchat.org/files/source/2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE="perl tcltk python ssl mmx ipv6 nls"
 # Local use flag for the text frontend (bug #26427)
 IUSE="${IUSE} xchattext xchatnogtk"
@@ -73,4 +73,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog README*
 }
-
