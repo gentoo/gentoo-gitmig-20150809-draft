@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/popfile
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popfile/ChangeLog,v 1.1 2003/12/25 20:09:22 stuart Exp $
+
+*popfile-0.21.1 (25 Dec 2003)
+
+  25 Dec 2003; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  popfile-0.21.1.ebuild:
+  Initial import
+
