@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta8.ebuild,v 1.2 2004/03/29 23:22:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.1 2004/03/30 14:44:19 dholm Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}

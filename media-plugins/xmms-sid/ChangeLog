@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-sid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.6 2004/03/29 23:22:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.7 2004/03/30 14:44:19 dholm Exp $
+
+*xmms-sid-0.8.0_beta10 (30 Mar 2004)
+
+  30 Mar 2004; David Holm <dholm@gentoo.org> xmms-sid-0.8.0_beta10.ebuild,
+  xmms-sid-0.8.0_beta8.ebuild:
+  Version bump.
 
   30 Mar 2004; David Holm <dholm@gentoo.org> xmms-sid-0.8.0_beta8.ebuild:
   Added to ~ppc.
