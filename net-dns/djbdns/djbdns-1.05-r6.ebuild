@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.3 2003/02/13 08:42:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.4 2003/02/18 08:20:35 seemant Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ RDEPEND=">=sys-apps/daemontools-0.70
 
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
-	mirror://gentoo/${P}-ipv6-gentoo.diff.bz2
-	http://www.legend.co.uk/djb/dns/round-robin.patch"
+	http://www.legend.co.uk/djb/dns/round-robin.patch
+	ipv6? ( http://cvs.gentoo.org/~seemant/${P}-ipv6-gentoo.diff.bz2 )"
 
 src_unpack() {
 	unpack ${A}
@@ -29,9 +29,7 @@ src_unpack() {
 	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
 	epatch  ${DISTDIR}/round-robin.patch
 
-	if [ `use ipv6` ] ; then
-		patch -p1 < ${WORKDIR}/djbdns-1.05-ipv6-gentoo.diff || die
-	fi
+	use ipv6 && epatch ${WORKDIR}/djbdns-1.05-ipv6-gentoo.diff
 }
 
 src_compile() {
