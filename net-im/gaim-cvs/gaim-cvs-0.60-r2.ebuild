@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r2.ebuild,v 1.3 2002/12/22 21:29:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r2.ebuild,v 1.4 2002/12/30 18:12:32 sethbc Exp $
 
 IUSE="nas nls esd arts perl"
 
@@ -19,7 +19,8 @@ DEPEND="=sys-libs/db-1*
 	nls? ( sys-devel/gettext )
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	arts? ( >=kde-base/arts-0.9.5 )
-	perl? ( >=sys-devel/perl-5.6.1 )"
+	perl? ( >=sys-devel/perl-5.6.1 )
+	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 inherit cvs
 
@@ -35,6 +36,7 @@ src_compile() {
 	use perl || myconf="${myconf} --disable-perl"
 	use nas  && myconf="${myconf} --enable-nas" \
 		 || myconf="${myconf} --disable-nas"
+	use spell || myconf="${myconf} --disable-gtkspell"
 
 	if [ "` use arts`" ]; then
 	    inherit kde-functions
