@@ -1,0 +1,39 @@
+diff -cr balsa-sim-verilog-3.4.orig/configure balsa-sim-verilog-3.4/configure
+*** balsa-sim-verilog-3.4.orig/configure	Thu May 27 15:27:46 2004
+--- balsa-sim-verilog-3.4/configure	Mon Jul 26 23:12:21 2004
+***************
+*** 1800,1815 ****
+  
+  
+  
+! if test ${BALSA_CONFIG}; then :
+! else
+! 	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+!    { (exit 1); exit 1; }; }
+! fi
+  
+  echo "$as_me:$LINENO: checking installed Balsa directory" >&5
+  echo $ECHO_N "checking installed Balsa directory... $ECHO_C" >&6
+! ac_default_prefix=`${BALSA_CONFIG} -d`
+  prefix=${ac_default_prefix}
+  echo "$as_me:$LINENO: result: ${ac_default_prefix}" >&5
+  echo "${ECHO_T}${ac_default_prefix}" >&6
+--- 1800,1816 ----
+  
+  
+  
+! #if test ${BALSA_CONFIG}; then :
+! #else
+! #	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! #echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+! #   { (exit 1); exit 1; }; }
+! #fi
+  
+  echo "$as_me:$LINENO: checking installed Balsa directory" >&5
+  echo $ECHO_N "checking installed Balsa directory... $ECHO_C" >&6
+! #ac_default_prefix=`${BALSA_CONFIG} -d`
+! ac_default_prefix=/usr
+  prefix=${ac_default_prefix}
+  echo "$as_me:$LINENO: result: ${ac_default_prefix}" >&5
+  echo "${ECHO_T}${ac_default_prefix}" >&6

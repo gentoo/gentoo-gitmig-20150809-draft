@@ -1,0 +1,6 @@
+MD5 2b8f87b7ba66a5b4aeb8cf8bdebb1841 ChangeLog 2726
+MD5 7d780f1372df5e1d419a7ad58887313c balsa-3.4.ebuild 4326
+MD5 908723d5c00d782d13e41a90bc248860 metadata.xml 328
+MD5 d2a8ba154d8b6ef7c25c6ddb65d22e28 files/digest-balsa-3.4 341
+MD5 6e2f2e072a8cacfed8cbad91bae07088 files/balsa-sim-3.4-configure.patch 1507
+MD5 bcd70393f5c601c828613e1d1c630452 files/balsa-tech-3.4-configure.patch 1515

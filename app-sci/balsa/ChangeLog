@@ -1,0 +1,67 @@
+# ChangeLog for app-sci/balsa-async
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/balsa/ChangeLog,v 1.1 2004/07/27 00:34:52 chrb Exp $
+
+  26 Jul 2004; Chris Bainbridge <chrb@gentoo.org> :
+  New version (3.4), renamed package tbass->balsa
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  tbass-20030108.ebuild, tbass-20030725.3.3.ebuild:
+  virtual/glibc -> virtual/libc
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> tbass-20030108.ebuild:
+  Add die following econf for bug 48950
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> tbass-20030108.ebuild,
+  tbass-20030725.3.3.ebuild:
+  Add die following econf for bug 48950
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> tbass-20020729.ebuild,
+  tbass-20030204.ebuild, tbass-20030318.ebuild, tbass-20030725.3.3.ebuild:
+  Cleanup, moving patch -> epatch
+
+*tbass-20030725.3.3 (30 Jul 2003)
+
+  30 Jul 2003; George Shapovalov <george@gentoo.org> tbass-20030725.ebuild, files/tbass-20030725.3.3-{balsa-lard-configure.patch,tech-example-configure.patch,tech-verilog-configure.patch,tech-xilinx-configure.patch} :
+  new version (#25008),
+  some updates + fixes #24494, lard has been split off this package
+  Thanks to Chris Bainbridge <chrb@dcs.ed.ac.uk> for submission and updates
+
+*tbass-20030318 (12 May 2003)
+
+  11 May 2003; George Shapovalov <george@gentoo.org> tbass-20030318.ebuild :
+  a bug-fix update (#17514)
+  Thanks to Chris Bainbridge <chrb@dcs.ed.ac.uk> for submission.
+
+*tbass-20030204 (23 Apr 2003)
+
+  23 Apr 2003; George Shapovalov <george@gentoo.org> tbass-20030204.ebuild, files/tbass-20030204-tech-{xilinx-configure.patch,verilog-configure.patch} :
+  new version (#17514)
+  The AMS035 tech library is no longer distributed publically. ebuild modified accordingly and contains 
+  appropriate warning in pkg_postinst.
+  Thanks to Chris Bainbridge <chrb@dcs.ed.ac.uk> for submission.
+  
+
+*tbass-20030108 (06 Feb 2003)
+
+  06 Feb 2003; George Shapovalov <george@gentoo.org> tbass-20030108.ebuild :
+  new version (#13670)
+  thanks to Dave Nellans <dnellans@cs.utah.edu> for submission
+
+  07 Jan 2003; George Shapovalov <george@gentoo.org> tbass-20020729.ebuild :
+  added IUSE
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*tbass-20020729 (29 Oct 2002)
+  
+  29 Oct 2002; George Shapovalov <george@gentoo.org> tbass-20020729.ebuild :
+
+  initial release. 
+
+  The Balsa Asynchronous Synthesis System
+  Balsa is both a framework for synthesising asynchronous (clockless) hardware systems and the 
+  language for describing such systems. 
+  
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>,
+  updated by  Dave Nellans <dnellans@cs.utah.edu>
