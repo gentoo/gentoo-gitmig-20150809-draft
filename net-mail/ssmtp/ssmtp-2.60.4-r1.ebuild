@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.4-r1.ebuild,v 1.2 2004/03/17 23:14:00 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.60.4-r1.ebuild,v 1.3 2004/03/17 23:38:38 g2boojum Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.tar.gz"
@@ -54,8 +54,7 @@ src_install() {
 	#dosym /usr/sbin/ssmtp /usr/bin/mail
 	#The sendmail symlink is now handled by mailwrapper
 	#dosym /usr/sbin/ssmtp /usr/sbin/sendmail
-	#Removing the /usr/lib/sendmail symlink for multiple-mta support.
-	#dosym /usr/sbin/ssmtp /usr/lib/sendmail
+	dosym /usr/sbin/sendmail /usr/lib/sendmail
 	doman ssmtp.8
 	#removing the sendmail.8 symlink to support multiple installed mtas.
 	#dosym /usr/share/man/man8/ssmtp.8 /usr/share/man/man8/sendmail.8

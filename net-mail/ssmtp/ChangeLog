@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.22 2004/03/17 23:14:00 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.23 2004/03/17 23:38:27 g2boojum Exp $
+
+  17 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> ssmtp-2.60.4-r1.ebuild:
+  Put /usr/lib/sendmail symlink back in.
 
   17 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> ssmtp-2.60.4-r1.ebuild:
   Fixed missing 'inherit eutils'; thanks iggy!
