@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.22 2003/03/31 20:06:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.23 2003/04/22 02:34:45 drobbins Exp $
+
+*module-init-tools-0.9.11-r3 (21 Apr 2003)
+
+  21 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: removed pkg_setup "check
+  for kernel" vestige, closing bug #19183.
+  
+  21 Apr 2003; Daniel Robbins <drobbins@gentoo.org> two fixes: first, include a
+  modinfo.old for 2.4 modinfo compatibility. Second, add a /bin/lsmod.old
+  symlink to allow a normal user to list loaded modules rather than return a
+  "lsmod.old" not found error. These symlinks can be confusing, but it appears
+  to be working well now.
 
 *module-init-tools-0.9.11-r2 (30 Mar 2003)
 
