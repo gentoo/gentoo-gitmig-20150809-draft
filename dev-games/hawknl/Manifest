@@ -1,3 +1,6 @@
-MD5 1fbaceb5c93151b342a8849cf8e5d23e hawknl-1.66.ebuild 1040
 MD5 aebef359b5acc362cb63af22b8905bd2 ChangeLog 373
+MD5 1fbaceb5c93151b342a8849cf8e5d23e hawknl-1.66.ebuild 1040
+MD5 b704821d70b9e7b8956ec537e96cb567 metadata.xml 1049
+MD5 d933f87f33d44408b7fef7d7c7cfefda hawknl-1.68.ebuild 1113
 MD5 2039445f3163e3eceff4859a9f54d422 files/digest-hawknl-1.66 64
+MD5 a28b47c48b93202babc367b1b9e48527 files/digest-hawknl-1.68 64
