@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.0a.ebuild,v 1.2 2004/02/17 19:48:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.0a.ebuild,v 1.3 2004/02/19 13:03:27 mholzer Exp $
 
 IUSE="adns gtk ipv6 snmp ssl gtk2"
 
@@ -8,6 +8,7 @@ inherit libtool
 
 DESCRIPTION="A commercial-quality network protocol analyzer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.ethereal.com/"
 SLOT="0"
 LICENSE="GPL-2"
