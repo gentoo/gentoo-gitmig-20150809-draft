@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r7.ebuild,v 1.1 2001/12/13 20:09:42 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r7.ebuild,v 1.2 2002/02/04 15:15:18 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -20,7 +20,8 @@ DEPEND="virtual/glibc
 	>=sys-apps/ucspi-tcp-0.88
 	>=net-mail/checkpassword-0.90"
 
-RDEPEND="virtual/glibc
+RDEPEND="!virtual/mta
+	virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1
