@@ -1,20 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r1.ebuild,v 1.2 2002/07/16 08:41:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r1.ebuild,v 1.3 2002/07/23 03:05:06 rphillips Exp $
 
 SVER=${PV%.*}
-#normal releases:
+# normal releases:
 SDIR=MySQL-${SVER}
 #for a pre-release:
 #SDIR=MySQL-${SVER}-Pre
 
+S=${WORKDIR}/${P}
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${P}.tar.gz
 	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz"
-S=${WORKDIR}/${P}
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.49-r2.ebuild,v 1.1 2002/06/16 16:39:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.49-r2.ebuild,v 1.2 2002/07/23 03:05:05 rphillips Exp $
 
 # NB: Databases are now in /var/lib/mysql vs. the old /var/mysql.  If you are
 # upgrading from a recent mysql version, you should be able to simply move your
@@ -30,6 +30,7 @@ RDEPEND="virtual/glibc readline? ( >=sys-libs/readline-4.1 ) >=sys-libs/ncurses-
 DEPEND="${RDEPEND} tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) sys-devel/perl sys-apps/procps"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 

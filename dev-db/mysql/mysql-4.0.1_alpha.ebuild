@@ -21,6 +21,7 @@ DEPEND="virtual/glibc
 	sys-apps/procps"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

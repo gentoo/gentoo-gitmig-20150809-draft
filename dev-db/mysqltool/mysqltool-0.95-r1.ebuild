@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.1 2002/05/04 01:58:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.2 2002/07/23 03:08:12 rphillips Exp $
 
 S=${WORKDIR}/MysqlTool-${PV}
 DESCRIPTION="Web interface for managing one or more mysql server installations"
 SRC_URI="http://www.dajoba.com/projects/mysqltool/MysqlTool-${PV}.tar.gz"
 HOMEPAGE="http://www.dajoba.com/projects/mysqltool/"
-
 DEPEND="virtual/glibc sys-devel/perl"
-RDEPEND="${DEPEND} >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38
-	dev-perl/CGI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
+
+RDEPEND="${DEPEND} >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38
+	dev-perl/CGI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish"
 
 src_compile() {
 	perl Makefile.PL || die
