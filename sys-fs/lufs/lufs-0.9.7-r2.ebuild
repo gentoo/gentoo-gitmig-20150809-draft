@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.6 2004/07/16 18:57:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.7 2004/08/08 21:22:38 vapier Exp $
 
 inherit kmod eutils
 
@@ -61,7 +61,7 @@ src_install () {
 	env -u ARCH make DESTDIR=${D} install
 	if ! use disablekernelsupport; then
 		insinto ${ROOT}/lib/modules/${KV}/fs/lufs
-		doins kernel/Linux/2.${KV_PATCH}/lufs.$KV_OB
+		doins kernel/Linux/2.${KV_MINOR}/lufs.$KV_OBJ
 	fi
 }
 
