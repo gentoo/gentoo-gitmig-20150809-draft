@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030512.ebuild,v 1.6 2003/09/16 22:21:10 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://pfaedit.sourceforge.net/pfaedit_full-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 IUSE="png gif jpeg tiff truetype X"
 
 DEPEND="png? ( >=media-libs/libpng-1.2.4 )

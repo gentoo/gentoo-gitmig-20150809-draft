@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.8 2003/07/22 13:01:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.9 2003/09/16 22:21:10 agriffis Exp $
+
+  16 Sep 2003; Aron Griffis <agriffis@gentoo.org> pfaedit-030512.ebuild:
+  Add ~alpha
 
   22 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> pfaedit-*.ebuild :
   Changed cflags alteration.
