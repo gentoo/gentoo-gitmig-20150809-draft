@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.7 2004/01/29 23:43:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.8 2004/03/10 19:05:14 mholzer Exp $
 
 inherit eutils
 
-DESCRIPTION="Nagios $PV core - Host and service monitor cgi, docs etc..."
+DESCRIPTION="Nagios core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/nagios-1.1.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${P}.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
@@ -25,7 +25,7 @@ DEPEND=">=net-mail/mailx-8.1
 	mysql? ( >=dev-db/mysql-3.23.56 )
 	pgsql? ( >=dev-db/postgresql-7.3.2 )"
 
-S="${WORKDIR}/nagios-${PV}"
+S="${WORKDIR}/${P}"
 
 pkg_setup() {
 	enewgroup nagios
