@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: gentoo-pop3d-ssl.rc,v 1.1 2002/06/13 19:01:00 nitro Exp $
+# $Id: gentoo-pop3d-ssl.rc,v 1.2 2002/06/15 01:39:57 nitro Exp $
 #
 # Copyright 1998 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
@@ -30,5 +30,5 @@ eval `sed -n '/^#/d;/=/p' </etc/courier-imap/pop3d-ssl | \
 	-maxprocs=$MAXDAEMONS -maxperip=$MAXPERIP \
 	-pid=$SSLPIDFILE $TCPDOPTS \
 	$SSLPORT $COURIERTLS -server -tcpd \
-		${exec_prefix}/sbin/pop3login $LIBAUTHMODULES \
+	${exec_prefix}/sbin/pop3login $LIBAUTHMODULES \
 		/usr/sbin/courier-pop3d ${MAILDIR}
