@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 639b23db4e1514b4e55313be5605079e ChangeLog 1113
-MD5 9a69df0d5855ac0004faea1dc80514c7 ocamlsdl-0.6.3.ebuild 690
+MD5 3586b71fca00be394d5f813c95544a8e ocamlsdl-0.7.2.ebuild 1335
 MD5 982d0909f2774907a3fdac66390ffd44 ocamlsdl-0.7.1.ebuild 1341
+MD5 630e9a8f40e1d2bdfa167b870d0cd848 ChangeLog 1278
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 dc12fdb347282470f8819d9ef5db7fcf files/digest-ocamlsdl-0.7.1 66
-MD5 21cf2a31ec5ac945f54f9c9df0ff5603 files/digest-ocamlsdl-0.6.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNthVKRy60XGEcJIRAgmEAKCstUFRrcMJrsmd+9s413QLIYiVXwCgkv+H
-Ry8hrIzzc+e9qURYP8aZprg=
-=AXGw
------END PGP SIGNATURE-----
+MD5 377a8ee5b8eaa8477e7750741d3d3c3b files/digest-ocamlsdl-0.7.2 66

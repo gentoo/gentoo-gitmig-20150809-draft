@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocamlsdl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.7 2005/03/15 12:42:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.8 2005/03/18 16:47:50 mattam Exp $
+
+*ocamlsdl-0.7.2 (18 Mar 2005)
+
+  18 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> -ocamlsdl-0.6.3.ebuild,
+  +ocamlsdl-0.7.2.ebuild:
+  Version bump, remove older one.
 
   15 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> ocamlsdl-0.7.1.ebuild:
   Stable on sparc
