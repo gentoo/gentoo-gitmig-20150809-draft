@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.0.ebuild,v 1.4 2003/07/01 10:02:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.1.ebuild,v 1.1 2003/07/01 10:02:26 liquidx Exp $
 
 inherit gnome2
 
@@ -17,7 +17,8 @@ SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
-KEYWORDS="x86"
+KEYWORDS="~x86"
+
 
 DEPEND=">=gnome-base/libbonobo-2.2.0
 	>=gnome-base/libgnome-2.2.0
@@ -31,6 +32,13 @@ DEPEND=">=gnome-base/libbonobo-2.2.0
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix
+}
+
+src_install() {
+	gnome2_src_install
+	# dictionary index generation files
+	insinto /usr/share/stardict/tools
+	doins ${S}/tools/{dictd2dic,directory2dict,olddic2newdic,oxford2dic,pydict2dict,wquick2dict}
 }
 
 pkg_postinst() {
