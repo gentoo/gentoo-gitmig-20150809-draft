@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.61 2004/05/10 21:10:50 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.62 2004/05/28 20:58:52 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -22,8 +22,13 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # carries. in the meantime, since we have dumped support for MakeMaker
 # <6.11 and the associated broken DESTDIR handling, block here to save
 # people from sandbox trouble.
+#
+# 2004.05.25 rac
+# for the same reasons, make the perl dep >=5.8.2 to get everybody
+# with 5.8.0 and its 6.03 makemaker up to a version that can
+# understand DESTDIR
 
-DEPEND="dev-lang/perl !<dev-perl/ExtUtils-MakeMaker-6.17"
+DEPEND=">=dev-lang/perl-5.8.2 !<dev-perl/ExtUtils-MakeMaker-6.17"
 SRC_PREP="no"
 SRC_TEST="skip"
 
