@@ -1,0 +1,39 @@
+diff -Naur dia-0.92.2.origin/app/diapsft2renderer.c dia-0.92.2/app/diapsft2renderer.c
+--- dia-0.92.2.origin/app/diapsft2renderer.c	2003-08-25 17:15:03.000000000 +0200
++++ dia-0.92.2/app/diapsft2renderer.c	2004-03-08 19:51:29.706413024 +0100
+@@ -27,7 +27,8 @@
+ #include <pango/pango.h>
+ #include <pango/pangoft2.h>
+ /* I'd really rather avoid this */
+-#include <freetype/ftglyph.h>
++#include <ft2build.h>
++#include FT_GLYPH_H
+ 
+ #define DPI 300
+ 
+diff -Naur dia-0.92.2.origin/configure dia-0.92.2/configure
+--- dia-0.92.2.origin/configure	2003-11-01 12:26:01.000000000 +0100
++++ dia-0.92.2/configure	2004-03-08 23:00:20.733835024 +0100
+@@ -20119,7 +20119,8 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <freetype/freetype.h>
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ #if (FREETYPE_MAJOR*1000+FREETYPE_MINOR)*1000+FREETYPE_PATCH < 2000009
+ #error Freetype version too low.
+ #endif
+diff -Naur dia-0.92.2.origin/configure.in dia-0.92.2/configure.in
+--- dia-0.92.2.origin/configure.in	2003-11-01 12:23:46.000000000 +0100
++++ dia-0.92.2/configure.in	2004-03-08 23:01:52.331910000 +0100
+@@ -69,7 +69,8 @@
+     AC_MSG_CHECKING([if FreeType version is 2.0.9 or higher])
+     old_CPPFLAGS="$CPPFLAGS"
+     CPPFLAGS="$CPPFLAGS `freetype-config --cflags`"
+-    AC_TRY_CPP([#include <freetype/freetype.h>
++    AC_TRY_CPP([#include <ft2build.h>
++#include FT_FREETYPE_H
+ #if (FREETYPE_MAJOR*1000+FREETYPE_MINOR)*1000+FREETYPE_PATCH < 2000009
+ #error Freetype version too low.
+ #endif

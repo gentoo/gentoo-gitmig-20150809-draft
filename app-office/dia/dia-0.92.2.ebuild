@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.92.2.ebuild,v 1.9 2004/06/24 22:38:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.92.2.ebuild,v 1.10 2004/08/19 22:31:59 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Diagram/flowchart creation program"
 HOMEPAGE="http://www.gnome.org/projects/dia/"
@@ -32,3 +32,12 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} $(use_enable gnome) $(use_with python)"
 
 DOCS="AUTHORS COPYING ChangeLog KNOWN_BUGS README RELEASE* NEWS THANKS TODO"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-freetype_include.patch
+
+}
