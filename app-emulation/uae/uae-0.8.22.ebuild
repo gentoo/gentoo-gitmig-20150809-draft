@@ -1,18 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.9 2003/08/26 09:14:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.10 2003/09/03 00:03:54 vapier Exp $
 
 DESCRIPTION="An amiga emulator"
 HOMEPAGE="http://www.freiburg.linux.de/~uae/"
 SRC_URI="ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ~ppc"
 IUSE="X gtk svga sdl"
 
 DEPEND="X? ( virtual/x11 gtk? ( x11-libs/gtk+ ) ) : ( sys-libs/ncurses svga? ( media-libs/svgalib ) )
-		sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/uae-patch.diff
+}
 
 src_compile() {
 	local myconf=""
@@ -28,13 +34,12 @@ src_compile() {
 		fi
 	fi
 
-	patch -p0 < ${FILESDIR}/uae-patch.diff
 	econf \
 		--enable-threads \
 		--enable-scsi-device \
 		${myconf} || die "./configure failed"
 
-	emake || die "emake failed"
+	make || die "emake failed"
 }
 
 src_install() {

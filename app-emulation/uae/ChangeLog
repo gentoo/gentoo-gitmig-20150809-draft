@@ -1,11 +1,14 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.7 2003/08/26 09:14:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.8 2003/09/03 00:03:54 vapier Exp $
+
+*uae-0.8.22 (9 Oct 2002)
+
+  02 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Changed emake to make #27797.
 
   26 Aug 2003; Michael Sterrett <msterret@gentoo.org> uae-0.8.22.ebuild:
   tidy; add error messages
-
-*uae-0.8.22 (9 Oct 2002)
 
   02 Nov 2002; Mark Guertin <gerk@gentoo.org> uae-0.8.22.ebuild :
   added ~ppc to keywords
