@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.14 2002/12/21 23:29:29 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.15 2002/12/23 09:47:51 lostlogic Exp $
 
 *gentoo-0.11.34 (21 Dec 2002)
+
+  23 Dec 2002; Brandon Low <lostlogic@gentoo.org> gentoo-0.11.34.ebuild :
+  Marked stable, and ebuild fixes, it werks now :)
 
   21 Dec 2002; Brandon Low <lostlogic@gentoo.org> gentoo-0.11.34.ebuild
   files/digest-gentoo-0.11.34, ChangeLog :
