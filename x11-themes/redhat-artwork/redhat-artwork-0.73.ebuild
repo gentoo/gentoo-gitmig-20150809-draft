@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.6 2003/06/22 20:39:53 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.7 2003/09/06 07:28:56 msterret Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -17,7 +17,7 @@ DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
-        	=x11-libs/gtk+-1.2* )
+			=x11-libs/gtk+-1.2* )
 	kde? (	>=x11-libs/qt-3.0.5
 		>=kde-base/kdebase-3.0.2 )
 	gtk2? ( >=x11-libs/gtk+-2* )"
@@ -45,16 +45,16 @@ _replace() {
 
 src_unpack() {
 	rpm_src_unpack
-    cd ${S}
-    epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
+	cd ${S}
+	epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
 	epatch ${FILESDIR}/redhat-artwork-0.63-gcc2.patch || die
 }
 
 src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
-    # dies is LANG has UTF-8
-    export LANG=C 
+	# dies is LANG has UTF-8
+	export LANG=C
 
 	use kde || (
 
@@ -90,7 +90,7 @@ src_compile() {
 	mv configure.in configure.in.old
 	sed -e  "s|AM_PATH_GTK(1.2.9, ,||" \
 		-e  "s|AC_MSG_ERROR(.*GTK+-1.*||" \
- 		-e  "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
+		-e  "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
 		-e  "s|AC_MSG_ERROR(.*gtk_style.*||" \
 		-e  "s|             \$GTK_LIBS)||" \
 		-e  "s|AM_PATH_GDK_PIXBUF||" \
@@ -127,7 +127,7 @@ src_compile() {
 	chmod +x art/gtk/make-iconrc.sh
 
 	./configure || die
-        emake || die
+	emake || die
 }
 
 src_install () {

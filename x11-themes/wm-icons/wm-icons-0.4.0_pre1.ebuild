@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1.ebuild,v 1.1 2003/09/01 20:49:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1.ebuild,v 1.2 2003/09/06 07:28:56 msterret Exp $
 
-inherit gnuconfig 
+inherit gnuconfig
 
 DESCRIPTION="A Large Assortment of Beutiful Themed Icons, Created with FVWM in mind"
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/wm-icons
 
 src_unpack() {
 	unpack ${A}
-	
+
 	sed -i 's#$(bindir)/wm-icons-config#true#g' ${S}/Makefile.am
 	use alpha && gnuconfig_update
 }
@@ -37,7 +37,7 @@ src_compile() {
 		automake --add-missing
 		autoreconf ) 2>/dev/null
 	eend $?
-	
+
 	econf --enable-all-sets --enable-icondir=/usr/share/icons/wm-icons
 	emake
 }
@@ -45,14 +45,14 @@ src_compile() {
 src_install() {
 	# strange makefile...
 	einstall icondir=${D}/usr/share/icons/wm-icons DESTDIR=${D}
-	
+
 	dodir /usr/bin
 	mv ${D}/${D}/usr/bin/wm-icons-config ${D}/usr/bin/wm-icons-config
 	rm -rf ${D}/${D}/usr/bin
 
 	einfo "Setting default aliases..."
 	${D}/usr/bin/wm-icons-config --user-dir="${D}/usr/share/icons/wm-icons" --defaults
-	
+
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.2 2003/06/27 14:07:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.3 2003/09/06 07:28:56 msterret Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -23,7 +23,7 @@ src_compile(){
 }
 
 src_install(){
-        mkdir -p ${D}/${KDEDIR}/share/apps/kstyle
+	mkdir -p ${D}/${KDEDIR}/share/apps/kstyle
 	cp -R -f ${WORKDIR}/${MY_P}/pixmaps ${D}/${KDEDIR}/share/apps/kstyle/ || die
 	cp -R -f ${WORKDIR}/${MY_P}/themes ${D}/${KDEDIR}/share/apps/kstyle/ || die
 	mkdir -p ${D}/${KDEDIR}/share/apps/kwin

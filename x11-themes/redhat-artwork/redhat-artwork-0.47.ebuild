@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.6 2003/02/13 17:44:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.7 2003/09/06 07:28:56 msterret Exp $
 
 RH_EXTRAVERSION="3"
 
@@ -18,8 +18,8 @@ DEPEND="sys-devel/autoconf
 	app-arch/rpm2targz
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
-        	=x11-libs/gtk+-1.2* )
-	kde? (	>=x11-libs/qt-3.0.5	
+			=x11-libs/gtk+-1.2* )
+	kde? (	>=x11-libs/qt-3.0.5
 		>=kde-base/kdebase-3.0.2 )"
 
 # Because one may only want to use the theme with kde OR gtk OR Metacity
@@ -86,7 +86,7 @@ src_compile() {
 	mv configure.in configure.in.old
 	sed -e  "s|AM_PATH_GTK(1.2.9, ,||" \
 		-e  "s|AC_MSG_ERROR(.*GTK+-1.*||" \
- 		-e  "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
+		-e  "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
 		-e  "s|AC_MSG_ERROR(.*gtk_style.*||" \
 		-e  "s|             \$GTK_LIBS)||" \
 		-e  "s|AM_PATH_GDK_PIXBUF||" \
@@ -104,7 +104,7 @@ src_compile() {
 
 	# paths have to be fixed for kde
 	use kde && (
-	
+
 	# Fix paths...
 	_replace "/usr/lib/qt3"          "${QTDIR}"
 	_replace '${libdir}/qt3'         "${QTDIR}"
@@ -154,7 +154,7 @@ src_install () {
 	# Theme copyright notice left intact... do not modify it
 	sed -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop > GdmGreeterTheme.desktop.mod
 	mv GdmGreeterTheme.desktop.mod GdmGreeterTheme.desktop
-	
+
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
 }

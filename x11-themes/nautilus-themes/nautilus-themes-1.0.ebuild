@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.2 2003/02/13 17:44:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.3 2003/09/06 07:28:56 msterret Exp $
 
 DESCRIPTION="Some nice themes for Nautilus"
 S=${WORKDIR}
@@ -17,7 +17,7 @@ SRC_URI="${THEME_URI}Nautilus-Blue-Ripped.tar.bz2
 	${THEME_URI}Nautilus-World-of-Aqua-0.10.tar.gz
 	${THEME_URI}Nautilus-Ximian-North-0.9.1.tar.gz
 	${THEME_URI}Nautilus-Ximian-South-1.3.5.tar.gz"
-	
+
 HOMEPAGE="http://art.gnome.org/theme_list.php?category=nautilus"
 
 DEPEND=""
@@ -41,6 +41,6 @@ src_install() {
 	cd ${D}/usr/share/pixmaps/nautilus
 
 	unpack ${A}
-	
+
 	chmod -R ugo=rX *
 }

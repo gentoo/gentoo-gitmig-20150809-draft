@@ -1,5 +1,5 @@
-MD5 6227dc7c8c353d095b154bd024f8f35a qtpixmap-0.26.ebuild 707
-MD5 a5b1253cddb03a21e6778c87b0b434c2 qtpixmap-0.25.ebuild 710
 MD5 fcdd434bc00ebe527e9ee4c6aa724653 ChangeLog 570
+MD5 410901357f53ff8be09bbb2e925b3537 qtpixmap-0.25.ebuild 701
+MD5 407e01a66433d027d183f1a457c69543 qtpixmap-0.26.ebuild 704
 MD5 ceba151badaf6c45af4cbe68e732efa1 files/digest-qtpixmap-0.25 70
 MD5 adc4d4eee83455cd7c3c1962b59e0e74 files/digest-qtpixmap-0.26 70

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.8 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.9 2003/09/06 07:28:56 msterret Exp $
 
 DESCRIPTION="Some nice themes for Sawfish"
 S=${WORKDIR}
@@ -67,14 +67,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha"
 
 src_compile() {
-	
+
 	einfo "Nothing to compile"
 }
 
 src_install() {
-  
+
 	dodir /usr/share/sawfish/themes
-  
+
 	cp -a * ${D}/usr/share/sawfish/themes
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.2 2003/08/31 02:07:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xenophilia/gtk-engines-xenophilia-0.8-r1.ebuild,v 1.3 2003/09/06 07:28:56 msterret Exp $
 
 inherit gtk-engines2
 
@@ -31,6 +31,6 @@ src_install() {
 		|| die "Installation failed"
 
 	dodoc ${DEFAULT_DOCS}
-	
+
 	# FIXME: install fonts
 }

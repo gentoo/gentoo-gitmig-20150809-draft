@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.2 2003/08/22 13:34:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.26.0.6.1-r1.ebuild,v 1.3 2003/09/06 07:28:56 msterret Exp $
 
 inherit eutils rpm
 
-# bash magic to extract last 2 versions as XIMIAN_V, 
+# bash magic to extract last 2 versions as XIMIAN_V,
 # third last version as RPM_V and the rest as MY_PV
 MY_PV=${PV%.[0-9]*.[0-9]*.[0-9]*}
 END_V=${PV/${MY_PV}./}
@@ -59,14 +59,14 @@ src_install () {
 	rm -f ${D}/usr/share/gdm/themes/industrial/xd2logo.png
 	rm -rf ${D}/usr/share/pixmaps/ximian
 	rm -f ${D}/usr/share/pixmaps/ximian-desktop-stripe.png
-	
+
 	# Moving cursors
 	dodir /usr/share/cursors/xfree/Industrial
 	mv ${D}/usr/share/icons/Industrial/cursors ${D}/usr/share/cursors/xfree/Industrial
 
 	# remove xmms skin if unneeded
 	[ -n "`use xmms`" ] || rm -rf ${D}/usr/share/xmms
-	
+
 	cd ${S}
 	dodoc COPYING ChangeLog
 }

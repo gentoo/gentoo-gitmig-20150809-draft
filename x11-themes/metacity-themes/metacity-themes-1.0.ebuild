@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.3 2003/02/13 17:43:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.4 2003/09/06 07:28:56 msterret Exp $
 
 DESCRIPTION="Some nice themes for MetaCity"
 S=${WORKDIR}
@@ -24,7 +24,7 @@ SRC_URI="${THEME_URI}CityBox-0.10.tar.gz
 	${THEME_URI}MCity-McEazel-Blue.tar.gz
 	${THEME_URI}MCity-MetaMile-Marker-0.2.tar.gz
 	${THEME_URI}MCity-Outline.tar.gz
-	${THEME_URI}MCity-Posh.tar.gz 
+	${THEME_URI}MCity-Posh.tar.gz
 	${THEME_URI}MCity-PrettyMeta-Thin-0.1.tar.gz
 	${THEME_URI}MCity-Quiet-Purple.tar.gz
 	${THEME_URI}MCity-TigertCrack-1.2.1.tar.gz
@@ -55,9 +55,9 @@ src_install() {
 	cd ${D}/usr/share/themes
 
 	unpack ${A}
-	
+
 	find .  -exec touch "{}" \;
-	
+
 	for dir in *
 	do
 		# Fix directory names that contain spaces
@@ -67,7 +67,7 @@ src_install() {
 			mv "${dir}" $new_dir
 			dir=$new_dir
 		fi
-		
+
 		if [ ! -d ${dir}/metacity-1 ]
 		then
 			mkdir tmp
@@ -75,10 +75,10 @@ src_install() {
 			mv tmp ${dir}/metacity-1
 		fi
 	done
-	
+
 	# This patch corrects some XML files that are considered incomplete by
 	# Metacity
 	patch -p1 <${FILESDIR}/${P}-gentoo.diff
-	
+
 	chmod -R ugo=rX *
 }

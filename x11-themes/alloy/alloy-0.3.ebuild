@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.2 2003/07/22 20:16:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.3 2003/09/06 07:28:56 msterret Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -25,7 +25,7 @@ src_install(){
 
 pkg_postinst(){
 	ewarn "HOW TO USE THIS THEME FOR KDE:"
-	einfo ""	
+	einfo ""
 	einfo "Open the KDE-Menu and start the Control Center."
 	einfo "Select \"Look and Feel\"."
 	einfo "Select \"Style\" if the package you installed was a style, or select \"Theme Manager\" if the package you installed was a theme."

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.9 2003/02/13 17:44:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.10 2003/09/06 07:28:56 msterret Exp $
 
 IUSE="kde"
 
@@ -16,9 +16,9 @@ DEPEND="sys-devel/autoconf
 		sys-devel/automake
 		app-arch/rpm2targz
 		>=media-libs/gdk-pixbuf-0.2.5
-        =x11-libs/gtk+-1.2*
-        >=x11-libs/gtk+-2.0
-		kde? (	>=x11-libs/qt-3.0.5	
+		=x11-libs/gtk+-1.2*
+		>=x11-libs/gtk+-2.0
+		kde? (	>=x11-libs/qt-3.0.5
 				>=kde-base/kdebase-3.0.2 )"
 
 # Because one may only want to use the theme with kde OR gtk OR Metacity
@@ -81,7 +81,7 @@ src_compile() {
 
 	# paths have to be fixed for kde
 	use kde && (
-	
+
 	# Fix paths...
 	_replace "/usr/lib/qt3"          "${QTDIR}"
 	_replace '${libdir}/qt3'         "${QTDIR}"
@@ -93,7 +93,7 @@ src_compile() {
 	chmod +x configure
 
 	)
-	
+
 	econf || die
 	emake || die
 }
@@ -105,7 +105,7 @@ src_install () {
 		dodir ${KDEDIR}/share
 		mv ${D}/usr/share/apps ${D}/${KDEDIR}/share/apps
 		mv ${D}/usr/share/icons ${D}/${KDEDIR}/share/icons
-	
+
 	# Until someone makes a nice Gentoo-replacement for the
 	# RedHat-logo in the splash, we don't install the splash
 	# at all... :)
@@ -131,7 +131,7 @@ src_install () {
 	# Theme copyright notice left intact... do not modify it
 	sed -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop > GdmGreeterTheme.desktop.mod
 	mv GdmGreeterTheme.desktop.mod GdmGreeterTheme.desktop
-	
+
 	cd ${S}
 	dodoc AUTHORS NEWS README
 }
