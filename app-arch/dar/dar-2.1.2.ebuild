@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.0.ebuild,v 1.1 2004/02/10 16:58:50 matsuu Exp $
-
-inherit flag-o-matic
-strip-flags
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.2.ebuild,v 1.1 2004/04/01 23:54:44 matsuu Exp $
 
 DESCRIPTION="A full featured backup tool, aimed for disks (floppy,CDR(W),DVDR(W),zip,jazz etc.)"
 HOMEPAGE="http://dar.linux.free.fr/"
@@ -22,6 +19,9 @@ src_compile() {
 	local myconf=""
 
 	use acl && myconf="${myconf} --enable-ea-support"
+
+	# Replace -O[3-9] flags; because dar-2.1.0 could not compile.
+	replace-flags -O[3-9] -O2
 
 	econf ${myconf} || die
 	make || die

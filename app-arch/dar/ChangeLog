@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.7 2004/02/29 16:51:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.8 2004/04/01 23:54:44 matsuu Exp $
+
+*dar-2.1.2 (02 Apr 2004)
+
+  02 Apr 2004; <matsuu@gentoo.org> dar-2.1.0.ebuild, dar-2.1.2.ebuild:
+  Version bumped. Bug#46428.
+
+  21 Feb 2004; <matsuu@gentoo.org> dar-2.1.0.ebuild:
+  Removed dar-2.1.0.ebuild.
 
 *dar-2.1.0-r1 (14 Feb 2004)
 
