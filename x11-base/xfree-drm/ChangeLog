@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.45 2003/12/05 16:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.46 2003/12/08 07:34:00 spyderous Exp $
+
+*xfree-drm-4.3.0-r7 (08 Dec 2003)
+
+  08 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r7.ebuild:
+  20031202 snapshot. Adds support for mach64. Also adds initial support for
+  gatos, accompanied by USE=gatos in xfree and a coming ati-gatos ebuild.
+  Obsoletes USE for video cards, moving to VIDEO_CARDS.
 
   05 Dec 2003; <agriffis@gentoo.org> xfree-drm-4.3.0-r6.ebuild:
   Stable on ia64
