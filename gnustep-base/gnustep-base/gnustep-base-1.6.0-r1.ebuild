@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.6.0-r1.ebuild,v 1.1 2004/07/23 13:54:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.6.0-r1.ebuild,v 1.2 2004/07/23 15:00:38 fafhrd Exp $
 
 inherit gnustep-old
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 -ppc ~sparc"
 IUSE=""
-DEPEND="=dev-util/gnustep-make-1.6.0*
+DEPEND="=gnustep-base/gnustep-make-1.6.0*
 	>=dev-libs/libxml2-2.4.23"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.1 2004/07/23 14:01:07 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.2 2004/07/23 15:00:18 fafhrd Exp $
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"
@@ -9,7 +9,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc "
 IUSE=""
-DEPEND=">=dev-util/gnustep-gui-0.7.9
+DEPEND=">=gnustep-base/gnustep-gui-0.7.9
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2
 	virtual/x11

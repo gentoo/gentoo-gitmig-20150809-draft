@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.8.8.ebuild,v 1.1 2004/07/23 13:57:27 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.8.8.ebuild,v 1.2 2004/07/23 15:00:58 fafhrd Exp $
 
 IUSE=""
 
@@ -14,10 +14,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc alpha"
 
-DEPEND=">=dev-util/gnustep-base-1.7.2
+DEPEND=">=gnustep-base/gnustep-base-1.7.2
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2"
-PDEPEND="=dev-util/gnustep-back-${PV}*"
+PDEPEND="=gnustep-base/gnustep-back-${PV}*"
 
 src_compile() {
 	egnustepmake \
