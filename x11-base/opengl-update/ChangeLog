@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.2 2002/05/28 23:35:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.3 2002/05/29 01:13:52 azarah Exp $
+
+*opengl-update-1.2 (29 May 2002)
+
+  29 May 2002; Martin Schlemmer <azarah@gentoo.org> opengl-update-1.2.ebuild :
+
+  Ok, I promise to go to bed earlier ... removed the libGLU stuff again, as
+  it should not be moved.
 
 *opengl-update-1.1 (28 May 2002)
 
