@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.16 2002/07/09 01:53:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.17 2002/07/11 01:32:53 seemant Exp $
+
+*fluxbox-0.19-r5 (10 Jul 2002)
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.19-r5.ebuild
+  files/fluxbox-0.19-gentoo.diff files/digest-fluxbox-0.19-r5 :
+
+  Added transient window patch to avoid xine hardlocking things up.  Patch
+  from some fluxbox developer through: matt@oddprocess.org (Matthew
+  Daubenspeck) in bug #4837
 
 *fluxbox-0.19-r4 (7 Jul 2002)
   
