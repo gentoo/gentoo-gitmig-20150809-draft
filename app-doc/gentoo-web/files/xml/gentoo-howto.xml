@@ -1,0 +1,348 @@
+<?xml version='1.0'?>
+<guide>
+<title>Gentoo Linux HOWTO</title>
+
+<author title="Author" email="pete@gentoo.org">Peter Gavin</author>
+
+<abstract>This document is a work in progress, and is constantly being
+updated and changed. It is by no means complete.  </abstract><!--  blah, blah, blah... (I'll fill this in later) -->
+
+<version>0.4</version>
+<date>25 Feb 2001</date>
+
+<!--
+
+Contents
+
+I. Introduction
+II. The Portage Tree
+  A. What (Not) to Put in the Portage Tree
+  B. Categories
+  C. The files Directory
+III. .ebuild Files
+  A. Naming .ebuild Files
+  B. Contents of an .ebuild File
+  C. Rules for Writing an .ebuild File
+IV. Filesystem Locations
+  A. Introduction to the FHS
+  B. How to Fit Your Packages into the Filesystem
+V. The Portage Scripts and Utilities
+  A. Public Scripts
+    1. ebuild
+    2. portage-merge
+    3. portage-unmerge
+    4. portage-maintain
+    5. pkgmerge
+    6. pkgname
+  B. Private Scripts
+    1. dobin
+    2. dodeps
+    3. dodir
+    4. dodoc
+    5. doexe
+    6. dohard
+    7. doinfo
+    8. doins
+    9. dolib
+    10. dolib.a
+    11. dolib.so
+    12. doman
+    13. domo
+    14. donewins
+    15. dopython
+    16. dosbin
+    17. dosed
+    18. dosym
+    19. find-packages
+    20. find-requires
+    21. fowners
+    22. fperms
+    23. import-configsettings
+    24. import-settings
+    25. megadigest
+    26. megadownload
+    27. megatouch
+    28. newbin
+    29. newdoc
+    30. newexe
+    31. newins
+    32. newlib.a
+    33. newlib.so
+    34. newman
+    36. newsbin
+    37. pkgmerge
+    38. pmake
+    39. portage-maintain
+    40. prepall
+    41. prepalldocs
+    42. prepallinfo
+    43. prepallman
+    44. prepallstrip
+    45. prepinfo
+    46. preplib
+    47. preplib.so
+    48. prepman
+    49. prepstrip
+    50. unpack
+    51. use
+    
+-->
+
+
+<chapter link="chap1">
+<title>The Portage Tree</title>
+
+<section>
+<title>Introduction</title>
+<body><p>The portage tree is a heirarchy, in which the first level is the category,
+and the second is the name of the package.
+</p></body>
+</section>
+
+<section>
+<title> What (Not) to Put in the Portage Tree</title>
+<body><p>The portage tree should only include ebuild files, and other
+files in the 'files' directory for each package. No binary
+files should be placed in the portage tree. No files that can
+be downloaded from other sources (such as patches written by
+other people) should be put here. No patches you write
+yourself should be compressed.
+</p></body>
+</section>
+
+<section>
+<title>Categories</title>
+<body><p>The categories are defined as follows:</p>
+<ul>
+<li>app-admin - non-critical system administration utilities
+</li><li>app-arch - non-critical archival/compression utilities
+</li><li>app-cdr - CD recording utilities
+</li><li>app-doc - application documentation
+</li><li>app-editors - non-critical text editors
+</li><li>app-emulation - packages for emulating other systems/OSes
+</li><li>app-misc - applications that don't fit anywhere else
+</li><li>app-office - office-type (word processing, spreadsheet, etc.)
+                packages
+</li><li>app-shells - non-critical shells and command interpreters
+</li><li>app-text - text processing, spell checkers, and document
+                formatting packages
+</li><li>dev-db - database libraries
+</li><li>dev-java - java classes/packages/etc.
+</li><li>dev-lang - compilers and interpreters for different languages
+</li><li>dev-libs - miscellaneous developer's libraries
+</li><li>dev-perl - perl modules
+</li><li>dev-python - python modules
+</li><li>dev-ruby - ruby modules
+</li><li>dev-util - various developers utilities
+</li><li>gnome-apps - applications for gnome
+</li><li>gnome-base - base gnome packages
+</li><li>gnome-libs - non-essential gnome libraries
+</li><li>gnome-office - office packages for gnome
+</li><li>kde-apps - applications for kde
+</li><li>kde-base - base kde packages
+</li><li>kde-i18n - kde internationalization packages
+</li><li>media-gfx - graphics related programs
+</li><li>media-libs - libraries for manipulating different media,
+                including accessing multimedia peripherals of your
+                computer (sound card, video card, etc.)
+</li><li>media-sound - programs related to sound, including cd-audio
+                and sound encoding
+</li><li>media-video - programs related to video, including video
+                codecs and players
+</li><li>net-analyzer - network usage statistics monitors/analyzers
+</li><li>net-dialup - network dialup clients and servers such as pppd
+</li><li>net-fs - network filesystems
+</li><li>net-ftp - ftp servers and clients
+</li><li>net-irc - irc servers and clients
+</li><li>net-libs - networking related libraries
+</li><li>net-mail - mtas and muas
+</li><li>net-misc - miscellaneous servers, clients, firewalls, etc.
+</li><li>net-nds - NIS/NIS+ and other name services
+</li><li>net-print - print servers and clients
+</li><li>net-www - http/www servers and clients
+</li><li>sys-apps - system-critical applications and utilities
+</li><li>sys-devel - base development packages, such as gcc and make
+</li><li>sys-kernel - linux kernels
+</li><li>sys-libs - system-critical libraries such as glibc
+</li><li>x11-base - xfree86 and xfree86 drivers for various video cards
+</li><li>x11-libs - widget sets and other x11 specific libraries
+</li><li>x11-terms - x11 terminal emulators
+</li><li>x11-wm - x11 window managers
+</li></ul>
+</body>
+</section>
+
+<section>
+<title>The files Directory</title>
+<body><p>Under each package subdirectory is a 'files' directory. You
+should place any patches, configuration files, and other
+auxillary files your package might require in this
+directory. Patches you create yourself just to get your
+package to build should be called '${PF}-gentoo.diff'. You
+should not compress these diffs, since 1) they should not be big
+enough to require compressing, and 2) cvs does not play well
+with binary files.
+</p><p>Please add a suffix or prefix such as ${PV}-r${PR} (or just
+${PV} if ${PR} is 0) to the tail of every file you put into
+the files directory, so that the files used for each
+individual version of your ebuild scripts are distinguishable
+from one another, and so that the changes between different
+revisions are visible.
+</p><p>If you have many files that should go into the files
+directory, you should create a subdirectory files/${PV}-${PR}
+(or just files/${PV} if ${PR} is 0), and put all these files
+in there. If you use this method, you do not need to suffix
+the names of the files in this directory with the ebuild version.
+</p></body>
+</section>
+</chapter>
+	
+<chapter>
+<title>.ebuild Files</title>
+<section>
+<title>Introduction</title>
+<body><p>.ebuild files are the basis for the entire portage
+system. They contain all the information required to build a
+package, and every installed package requires one of these
+files. .ebuild files are essentially just bash scripts that
+contain a few functions and environment variable settings. The
+ebuild command takes care of the rest of the details, such as
+merging the package into the filesystem and recording the
+package into the package database.
+</p></body>
+</section>
+
+<section>
+<title>Naming .ebuild Files</title>
+<body><p>.ebuild file names are in four sections:</p>
+<p>The first section is the package name, which should only
+contain lowercase letters, the digits 0-9, and hyphen ('-')
+characters.
+</p><p>The second section is the version of the package, which should
+normally be the same as the version on the main source
+tarball. The version is normally made up of 2 or 3 numbers
+separated by periods, such as 1.2 or 4.5.2, and may have a
+single letter immidiately following the last digit, e.g., 1.4b
+or 2.6h. This letter should *not* be used to signify alpha or
+beta status for the package. There are 3 special suffixes that
+may be used for these packages: _alpha, _beta, and _pre. Each
+of these suffixes may be immediately followed my a number,
+e.g., 'linux-2.4.0_pre10'.
+</p><p>The third section of the package name is the revision number,
+which is specified by -r#, where '#' is a number,
+e.g. 'package-4.5.3-r3'. This revision number is independent of
+the version of the source tarball, but if you need to make
+non-trivial changes to your .ebuild file, you should copy the
+.ebuild file to a new file with the revision number
+incremented by 1. Initial releases normally have no revision
+number, e.g. 'package-4.5.3'.
+</p><p>The fourth section of the .ebuild file name is always the
+.ebuild extension.
+</p></body>
+</section>
+
+<section>
+<title>Contents of an .ebuild File</title>
+<body><p>1. Variable Settings:
+</p><p>The first part of every ebuild file is made up of a number of
+variable settings. The variables you can set are
+</p></body>
+</section>
+
+<section>
+<title>Rules for Writing an .ebuild File</title>
+<body><p><!-- todo -->
+</p></body>
+</section>	
+</chapter>
+
+<chapter>
+<title>Filesystem Locations</title>
+
+<section>
+<title>Introduction to the FHS</title>
+<body><p><!-- todo -->
+</p></body>
+</section>
+
+<section>
+<title>How to Fit Your Packages into the Filesystem</title>
+<body><p><!-- todo -->
+</p></body>
+</section>
+</chapter>
+
+<chapter>
+<title>The Portage Scripts and Utilities</title>
+
+<section>
+<title>Public Scripts</title>
+<body><p><ul>
+<li>ebuild
+</li><li>portage-merge
+</li><li>
+</li><li>portage-unmerge
+</li><li>portage-maintain
+</li><li>pkgmerge
+</li><li>pkgname
+</li></ul>
+</p></body>
+</section>
+
+<section>
+<title>Private Scripts</title>
+<body><p><ul>
+<li>dobin
+</li><li>dodeps
+</li><li>dodir
+</li><li>dodoc
+</li><li>doexe
+</li><li>dohard
+</li><li>doinfo
+</li><li>doins
+</li><li>dolib
+</li><li>dolib.a
+</li><li>dolib.so
+</li><li>doman
+</li><li>domo
+</li><li>donewins
+</li><li>dopython
+</li><li>dosbin
+</li><li>dosed
+</li><li>dosym
+</li><li>find-packages
+</li><li>find-requires
+</li><li>fowners
+</li><li>fperms
+</li><li>import-configsettings
+</li><li>import-settings
+</li><li>megadigest
+</li><li>megadownload
+</li><li>megatouch
+</li><li>newbin
+</li><li>newdoc
+</li><li>newexe
+</li><li>newins
+</li><li>newlib.a
+</li><li>newlib.so
+</li><li>newman
+</li><li>newsbin
+</li><li>pkgmerge
+</li><li>pmake
+</li><li>portage-maintain
+</li><li>prepall
+</li><li>prepalldocs
+</li><li>prepallinfo
+</li><li>prepallman
+</li><li>prepallstrip
+</li><li>prepinfo
+</li><li>preplib
+</li><li>preplib.so
+</li><li>prepman
+</li><li>prepstrip
+</li><li>unpack
+</li><li>use
+</li></ul></p></body>
+</section>
+</chapter>
+</guide>
