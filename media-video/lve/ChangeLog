@@ -1,0 +1,8 @@
+# ChangeLog for media-video/lve
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.1 2004/05/01 14:25:48 zypher Exp $
+
+*lve-040322 (22 Mar 2004)
+
+  01 May 2004; Marc Hildebrand <zypher@gentoo.org> lve-040322.ebuild :
+  Initial import. Ebuild submitted by Ian Haylock <haylocki@v21mail.co.uk>.
