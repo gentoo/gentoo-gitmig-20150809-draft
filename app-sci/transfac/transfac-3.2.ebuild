@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/transfac/transfac-3.2.ebuild,v 1.1 2004/06/25 03:42:08 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/transfac/transfac-3.2.ebuild,v 1.2 2004/06/26 13:11:20 dholm Exp $
 
 DESCRIPTION="A database of eucaryotic transcription factors"
 HOMEPAGE="http://www.gene-regulation.com/pub/databases.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/databases/${PN}/${PN}32.tar.Z"
 LICENSE="public-domain"
 
 SLOT="3"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="no-emboss no-rawdb"
 
 S=${WORKDIR}
