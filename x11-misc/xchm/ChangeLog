@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.8 2004/02/24 18:55:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.9 2004/02/24 18:56:57 mholzer Exp $
+
+  24 Feb 2004; Martin Holzer <mholzer@gentoo.org> xchm-0.8.11.ebuild:
+  x86 stable
 
 *xchm-0.9 (24 Feb 2004)
 
