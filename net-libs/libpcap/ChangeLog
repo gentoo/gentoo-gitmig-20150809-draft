@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.14 2003/03/30 19:15:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.15 2003/04/22 08:05:14 aliz Exp $
+
+  22 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Unmask to keep libpcap in sync to tcpdump. Closes #19517.
 
 *libpcap-0.7.2 (03 Mar 2003)
 
