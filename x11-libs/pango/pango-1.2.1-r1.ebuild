@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1-r1.ebuild,v 1.2 2003/03/01 14:45:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.1-r1.ebuild,v 1.3 2003/03/09 19:51:36 agriffis Exp $
 
 inherit eutils libtool
 
 IUSE="doc"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc alpha ~sparc"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Text rendering and Layout library"
