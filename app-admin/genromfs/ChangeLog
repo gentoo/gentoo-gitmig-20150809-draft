@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/genromfs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.1 2002/06/12 00:08:06 woodchip Exp $
+
+*genromfs-0.5.1 (11 Jun 2002)
+  11 June 2002; Donny Davies <woodchip@gentoo.org> :
+  Baked a fresh port for the genromfs program.
