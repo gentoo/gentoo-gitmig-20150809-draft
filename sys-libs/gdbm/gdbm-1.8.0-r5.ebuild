@@ -1,20 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-#        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.25 2003/09/17 22:39:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.26 2003/10/31 03:16:21 seemant Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils flag-o-matic
 
-IUSE="berkdb"
+IUSE="berkdb static"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/gdbm/${P}.tar.gz"
-
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
+SRC_URI="mirror://gnu/gdbm/${P}.tar.gz"
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa arm ia64"
-SLOT="0"
 
 DEPEND="virtual/glibc
 	berkdb? ( amd64? sys-libs/db : =sys-libs/db-1.85-r1 )"
@@ -24,7 +23,7 @@ RDEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 	use alpha && gnuconfig_update
 	use arm && gnuconfig_update
 	use hppa && gnuconfig_update
@@ -33,20 +32,25 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info || die
+	
 
-	emake CFLAGS="${CFLAGS} -fomit-frame-pointer" || die
+	if [ ! `is-flag "-fomit-frame-pointer"` ]
+	then
+		append-flags "-fomit-frame-pointer"
+	fi
+	
+	local myconf
+
+	use static && myconf="${myconf} --enable-static"
+
+	econf ${myconf} || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		man3dir=${D}/usr/share/man/man3 \
-		infodir=${D}/usr/share/info \
-		install || die
+		
+	einstall \
+		man3dir=${D}/usr/share/man/man3 || die
 
 	make includedir=${D}/usr/include/gdbm \
 		install-compat || die
