@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10-r1.ebuild,v 1.2 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10-r1.ebuild,v 1.3 2002/07/17 03:24:39 rphillips Exp $
 
 PL="pl3"
 S="${WORKDIR}/dbg-${PV}${PL}"
@@ -8,8 +8,11 @@ DESCRIPTION="A PHP debugger useable with some editors like phpedit."
 SRC_URI="http://dd.cron.ru/dbg/dnld/dbg-${PV}${PL}.tar.gz"
 HOMEPAGE="http://dd.cron.ru/dbg/"
 LICENSE="dbgphp"
+SLOT="0"
+DEPEND="virtual/php"
 
-DEPEND=">=dev-php/mod_php-4.2.1"
+# support for ppc or others?
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack "dbg-${PV}pl3.tar.gz"

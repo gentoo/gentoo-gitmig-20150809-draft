@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.1-r1.ebuild,v 1.3 2002/07/16 03:56:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.1-r1.ebuild,v 1.4 2002/07/17 03:26:54 rphillips Exp $
 
 A=php-${PV}.tar.gz
 S=${WORKDIR}/php-${PV}
@@ -10,6 +10,7 @@ SRC_URI="http://www.php.net/distributions/${A}"
 HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SLOT="0"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-libs/gmp-3.1.1
         freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
