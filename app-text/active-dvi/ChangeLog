@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.4 2004/04/26 13:51:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.5 2004/06/02 16:39:05 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> active-dvi-1.4.0.ebuild:
+  Fix use invocation
 
   26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> active-dvi-1.4.0.ebuild:
   Marked stable on x86

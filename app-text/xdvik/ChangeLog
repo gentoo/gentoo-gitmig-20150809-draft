@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.9 2004/05/08 09:46:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.10 2004/06/02 16:36:18 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> xdvik-22.40y-r1.ebuild,
+  xdvik-22.40y-r2.ebuild:
+  Fix use invocation
 
   08 May 2004; Mamoru KOMACHI <usata@gentoo.org> xdvik-22.40y-r1.ebuild:
   Stable on ppc

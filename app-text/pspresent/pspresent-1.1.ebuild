@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.3 2003/12/09 17:44:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.1.ebuild,v 1.4 2004/06/02 16:42:19 agriffis Exp $
 
 IUSE="xinerama"
 
@@ -23,7 +23,7 @@ KEYWORDS="~x86"
 
 src_compile()
 {
-	if [ ! "`use xinerama`" ] ; then
+	if ! use xinerama ; then
 		sed -i -e "/^XINERAMA/s/^/#/g" Makefile
 	fi
 	make pspresent || die "make failed"

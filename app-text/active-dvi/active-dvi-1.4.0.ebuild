@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.4 2004/04/26 13:51:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.5 2004/06/02 16:39:05 agriffis Exp $
 
 MY_PN=${PN/ctive-/}
 MY_P=${MY_PN}-${PV}
@@ -28,7 +28,7 @@ pkg_setup() {
 
 	# warn those who have USE="tcltk" but no ocaml tcltk support
 	# because we cant force ocaml to be build with tcltk.
-	if [ `use tcltk` ]; then
+	if use tcltk; then
 		if [ ! -d /usr/lib/ocaml/labltk ]; then
 
 			echo ""
@@ -56,7 +56,7 @@ src_unpack() {
 	# the sandbox if we try and run it during emerge
 	sed -i -e "s/texhash//" ${S}/Makefile
 
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		local fp=/usr/X11R6/lib/X11/fonts/truetype
 		sed -i -e "s%msmincho.ttc%${fp}/kochi-mincho-subst.ttf%g" \
 			-e "s%msgothic.ttc%${fp}/kochi-gothic-subst.ttf%g" \
@@ -93,7 +93,7 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ `use cjk` ]; then
+	if use cjk; then
 
 		echo ""
 		einfo "If you wish to use Japanese True Type fonts with"

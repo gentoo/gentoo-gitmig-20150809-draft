@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.1.ebuild,v 1.2 2004/04/09 18:30:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.1.ebuild,v 1.3 2004/06/02 16:39:49 agriffis Exp $
 
 inherit kde
 need-kde 3
@@ -16,7 +16,7 @@ newdepend ">=app-text/sword-1.5.7
 	>=net-misc/curl-7.10"
 
 pkg_preinst() {
-	if [ ! "`use curl`" ] ; then
+	if ! use curl ; then
 		ewarn
 		ewarn "You do not have \"curl\" support enabled in your USE variable."
 		ewarn "This means SWORD may not have been compiled with curl support."
@@ -37,7 +37,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if [ `use curl` ] ; then
+	if use curl ; then
 		einfo
 		einfo "To use BibleTime's ability to install modules from"
 		einfo "The SWORD Project's website, make sure that SWORD"

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pspresent
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.2 2003/12/09 17:38:34 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.3 2004/06/02 16:42:19 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> pspresent-1.1.ebuild:
+  Fix use invocation
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> pspresent-1.1.ebuild:
   changed app-text/ghostscript to virtual/ghostscript

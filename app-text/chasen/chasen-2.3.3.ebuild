@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3.ebuild,v 1.6 2004/04/25 15:00:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3.ebuild,v 1.7 2004/06/02 16:41:18 agriffis Exp $
 
-if [ `use perl` ] ; then
+if use perl ; then
 	inherit perl-module
 fi
 
@@ -22,7 +22,7 @@ PDEPEND=">=app-dicts/ipadic-2.6.1"
 src_unpack() {
 	unpack ${A}
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/perl
 		cp Makefile.PL ${T}
 		sed -e "s:'-lchasen':'-L/usr/lib -lchasen -lstdc++':" \
@@ -33,7 +33,7 @@ src_unpack() {
 src_compile() {
 	econf || die
 	emake || die
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/perl
 		perl-module_src_compile
 	fi
@@ -42,7 +42,7 @@ src_compile() {
 src_install () {
 	einstall || die
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/perl
 		perl-module_src_install
 	fi

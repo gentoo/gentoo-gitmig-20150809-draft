@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.1 2004/05/05 11:29:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.2 2004/06/02 16:36:18 agriffis Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/t1lib-1.3
 src_unpack () {
 
 	unpack ${MY_P}.tar.gz
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		epatch ${DISTDIR}/${XDVIK_JP}.patch.gz
 		sed -i -e "/\/usr\/local/s/^/%/g" \
 			-e "/kochi-.*-subst/s/%//g" \
@@ -41,7 +41,7 @@ src_compile () {
 
 	local myconf
 
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		 export CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
 		 myconf="${myconf} --with-vflib=vf2ft"
 	fi
@@ -67,7 +67,7 @@ src_install () {
 		|| die "install failed"
 
 	dodoc ANNOUNCE BUGS FAQ README.*
-	if [ -n "`use cjk`" ]; then
+	if use cjk; then
 		dodoc CHANGES.xdvik-jp
 		docinto READMEs
 		dodoc READMEs/*
