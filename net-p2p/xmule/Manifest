@@ -4,8 +4,10 @@ MD5 7127143724879968d57c3a57730b415a xmule-1.6.0a-r1.ebuild 1123
 MD5 85f3fcdf0ff0aa63a2676c6b946cb58d xmule-1.6.0a.ebuild 979
 MD5 c95d98ab2ae74cd53048300bea7a6abe xmule-1.6.1.ebuild 1130
 MD5 e7f1352199d7100fe73b74b48074ea56 xmule-1.7.1.ebuild 1276
+MD5 e7f1352199d7100fe73b74b48074ea56 xmule-1.7.2.ebuild 1276
 MD5 ae3ef316b6a6a3cc8b670289ed08ee79 files/digest-xmule-1.6.0a 65
 MD5 ae3ef316b6a6a3cc8b670289ed08ee79 files/digest-xmule-1.6.0a-r1 65
 MD5 88c461e77cc500b6238785f3b86edcb5 files/digest-xmule-1.6.1 65
 MD5 b3c0533ff137db01521716b9774738c1 files/digest-xmule-1.7.1 65
 MD5 d4e66918eaa0f6b42f988409ae3c218f files/rehash.patch 348
+MD5 57dd06596b3363680ad689cc05a3ad09 files/digest-xmule-1.7.2 65
