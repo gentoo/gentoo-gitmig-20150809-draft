@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/furball
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/furball/ChangeLog,v 1.7 2003/12/02 22:07:59 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/furball/ChangeLog,v 1.8 2004/06/06 10:43:01 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> furball-0.5.ebuild,
+  +metadata.xml:
+  QA -IUSE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
  
