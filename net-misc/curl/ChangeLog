@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.12 2004/07/28 18:52:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.13 2004/09/01 04:22:35 vapier Exp $
+
+  01 Sep 2004; Mike Frysinger <vapier@gentoo.org> curl-7.12.0-r2.ebuild:
+  Dont define the fputc() prototype since the header files from our libc do it
+  for us (triggers build failure on uclibc).
 
 *curl-7.12.0-r2 (28 Jul 2004)
 

@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.1 2004/07/28 18:52:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.2 2004/09/01 04:22:35 vapier Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
+
+inherit eutils
 
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
@@ -16,16 +18,27 @@ IUSE="ssl ipv6 ldap"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
 	ldap? ( net-nds/openldap )"
 
-src_compile() {
-	local myconf="--with-gnu-ld	--enable-http --enable-ftp --enable-gopher
-		--enable-file --enable-dict --enable-manual
-		--enable-telnet --enable-nonblocking --enable-largefile"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-no-fputc.patch
+}
 
-	econf ${myconf} \
+src_compile() {
+	econf \
 		`use_enable ipv6` \
 		`use_enable ldap` \
-		`use_with ssl` || die
-
+		`use_with ssl` \
+		--enable-http \
+		--enable-ftp \
+		--enable-gopher \
+		--enable-file \
+		--enable-dict \
+		--enable-manual \
+		--enable-telnet \
+		--enable-nonblocking \
+		--enable-largefile \
+		|| die
 	emake || die
 }
 
