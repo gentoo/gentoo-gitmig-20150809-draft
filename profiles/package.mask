@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2730 2004/03/03 17:15:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2731 2004/03/03 20:58:47 avenj Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -397,10 +397,6 @@ dev-lisp/cmucl-bin
 # msterret@gentoo.org (17 Sep 2003)
 # No need for the cvs snap anymore since the beta is out.
 =games-strategy/freeciv-1.15.0_alpha20030901
-
-# <avenj@gentoo.org> (16 Sep 2003)
-# Produces broken code. See bug 28875.
-=sys-devel/gcc-3.3.1-r2
 
 # <liquidx@gentoo.org> (29 Aug 2003)
 # initial testing for python 2.3.x. do not unmask unless you
