@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: koma-script-20040111-r1.ebuild,v 1.1 2004/02/19 17:09:28 usata Exp $
+# $Id: koma-script-20040111-r1.ebuild,v 1.2 2004/04/13 13:49:57 kugelfang Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/koma-script.html
 LICENSE="LPPL-1.2"
 #for License details see /usr/share/doc/latex-foiltex-2.1.3/foiltex.ins
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 src_compile() {
 	make -f Makefile.unx || die

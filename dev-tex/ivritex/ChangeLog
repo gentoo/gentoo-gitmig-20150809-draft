@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/ivritex
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.3 2003/10/06 14:35:58 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ivritex/ChangeLog,v 1.4 2004/04/13 13:46:09 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> ivritex-1.1.1.ebuild:
+  marked ~amd64
 
   06 Oct 2003; Mike Gardiner <obz@gentoo.org> ivritex-1.1.1.ebuild,
   metadata.xml:

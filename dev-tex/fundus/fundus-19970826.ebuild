@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/fundus-19970826.ebuild,v 1.1 2004/01/31 16:34:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/fundus-19970826.ebuild,v 1.2 2004/04/13 13:44:02 kugelfang Exp $
 
 inherit latex-package
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 src_unpack() {
 	unpack ${A}
