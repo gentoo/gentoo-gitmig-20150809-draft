@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.20 2004/01/18 00:53:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.21 2004/01/18 01:11:20 pythonhead Exp $
+
+*sip-3.10 (17 Jan 2004)
+
+  17 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> sip-3.10.ebuild:
+  Version bump. Bug# 38533. Thanks Carlo <current@myrealbox.com>
 
 *sip-4.0_rc2 (17 Jan 2004)
 
