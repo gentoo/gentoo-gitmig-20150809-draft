@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6cd26fd25ab685cbf5fe5f9e967bb4cc ruby-gconf2-0.8.0.ebuild 431
+MD5 f8a57fcf188bab2a7f5e1ea72197172d ruby-gconf2-0.8.0.ebuild 431
 MD5 d32a48b39a99aaadc81b4fbcceab729f ruby-gconf2-0.12.0.ebuild 639
-MD5 4288c36d29e830b65bf0bc65a0164fc4 ruby-gconf2-0.10.1.ebuild 642
-MD5 dca20ca32cd049bd5da2c6f17f1daa0e ruby-gconf2-0.8.1.ebuild 463
-MD5 689a39ab08d5ba5386c2bbf80668381b ruby-gconf2-0.11.0.ebuild 634
-MD5 06070f35fac1f288091b47c57c8ca78a ruby-gconf2-0.9.1.ebuild 480
-MD5 6a98496c3b132d864321a30db79e8cd9 ChangeLog 2370
+MD5 3ceb26b94ed07b4af53b5cc4f2dd3624 ruby-gconf2-0.10.1.ebuild 644
+MD5 a7e066b49e8b4521ded13cb2c05fa918 ruby-gconf2-0.8.1.ebuild 463
+MD5 a00969802530dbbfb5ef74e7da897c6e ruby-gconf2-0.11.0.ebuild 637
+MD5 12d67546cde1e2a0afe025661a3ee780 ruby-gconf2-0.9.1.ebuild 480
+MD5 6a5b3162462392bcc3c720e9b844ccc5 ChangeLog 2463
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gconf2-0.10.1 74
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gconf2-0.11.0 75
@@ -15,10 +12,3 @@ MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gconf2-0.12.0 75
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gconf2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gconf2-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gconf2-0.9.1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNMb+/UDVUK2NELYRApK1AKDZ9lHQI8VnMMLljtL0fpkVGqgA0ACfb/Ey
-ECrClnWDIanV2WYkw4uC7Ag=
-=O8yN
------END PGP SIGNATURE-----
