@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author: Dimitri Aivaliotis <dimitri@aivaliotis.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/coldsync/coldsync-2.2.5.ebuild,v 1.1 2002/05/27 23:16:04 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/coldsync/coldsync-2.2.5.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.0.ebuild,v 1.1 2001/12/06 20:37:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.0.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
 # specially modified from the 4.5 ebuild for openoffice - danarmak
 
 S=${WORKDIR}/${P}

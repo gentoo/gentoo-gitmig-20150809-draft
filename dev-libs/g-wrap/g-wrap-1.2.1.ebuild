@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1.ebuild,v 1.2 2002/03/28 09:09:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tool for exporting C libraries into Scheme"

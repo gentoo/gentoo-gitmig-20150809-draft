@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.0.ebuild,v 1.4 2002/04/29 19:49:34 verwilst Exp
 
 S=${WORKDIR}/${P}

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.6.13.ebuild,v 1.3 2001/06/23 21:34:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.6.13.ebuild,v 1.4 2002/07/11 06:30:20 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A minimal libc"

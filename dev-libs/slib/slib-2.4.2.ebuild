@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.2.ebuild,v 1.2 2002/04/27 10:30:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.2.ebuild,v 1.3 2002/07/11 06:30:21 drobbins Exp $
 
 MY_P=${PN}2d2
 S=${WORKDIR}/${PN}

@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Michael Nazaroff (Naz) <naz@themoonsofjupiter.net>
 #
 
 S=${WORKDIR}/CommonC++-1.9.7

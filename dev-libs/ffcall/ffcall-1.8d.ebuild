@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Nick Hadaway <raker@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.2 2002/07/04 04:59:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.3 2002/07/11 06:30:20 drobbins Exp $
 
 DESCRIPTION="foreign function call libraries"
 HOMEPAGE="http://www.gnu.org/directory/ffcall.html"

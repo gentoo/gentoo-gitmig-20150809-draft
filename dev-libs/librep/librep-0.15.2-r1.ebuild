@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.1 2002/03/17 21:46:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.2 2002/07/11 06:30:21 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Shared library implementing a Lisp dialect"

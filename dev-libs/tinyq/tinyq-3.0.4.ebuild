@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Geert Bevin <gbevin@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/dev-libs/tinyqt/tinyqt-3.0.3.ebuild,v 1.3 2002/04/27 10:31:46 seemant Exp
 
 DESCRIPTION="Stripped down version of qt ${PV} for console development"
