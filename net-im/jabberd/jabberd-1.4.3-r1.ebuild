@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.5 2004/02/10 23:06:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.6 2004/02/13 02:17:16 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -22,7 +22,8 @@ src_unpack() {
 	unpack jabberd-${PV}.tar.gz
 	cd ${S}
 	use ldap	&& unpack xdb_ldap-1.0.tar.gz
-
+	epatch ${FILESDIR}/multiple-xml-patch-00
+	mv jabber.xml multiple.xml
 }
 
 src_compile() {
@@ -75,7 +76,7 @@ src_install() {
 		doins xdb_ldap/src/xdb_ldap.so
 	fi
 	insinto /etc/jabber
-	doins ${FILESDIR}/multiple.xml
+	doins multiple.xml
 	exeinto /etc/jabber
 	doexe ${FILESDIR}/self-cert.sh
 

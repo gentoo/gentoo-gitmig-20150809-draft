@@ -1,0 +1,170 @@
+--- jabber.xml	2004-02-13 01:57:46.144389448 +0000
++++ jabber.xml2	2004-02-13 01:57:01.725142200 +0000
+@@ -133,13 +133,13 @@
+       a message after each valid registration if the notify
+       attribute is present.
+       -->
+-
++	<!-- commented out so no one can register!!!
+       <register notify="yes">
+         <instructions>Choose a username and password to register with this server.</instructions>
+         <name/>
+         <email/>
+       </register>
+-
++	-->
+       <!-- 
+       A welcome note that is sent to every new user who registers 
+       with your server. Comment it out to disable this function.
+@@ -178,7 +178,7 @@
+       sent in response to any admin messages.
+       -->
+ 
+-      <!--
++      
+       <admin>
+         <read>support@localhost</read>
+         <write>admin@localhost</write>
+@@ -187,7 +187,7 @@
+           <body>This is a special administrative address.  Your message was received and forwarded to server administrators.</body>
+         </reply>
+       </admin>
+-      -->
++      
+ 
+       <!--
+       This enables the server to automatically update the 
+@@ -295,21 +295,21 @@
+     -->
+ 
+     <load main="jsm">
+-      <jsm>./jsm/jsm.so</jsm>
+-      <mod_echo>./jsm/jsm.so</mod_echo>
+-      <mod_roster>./jsm/jsm.so</mod_roster>
+-      <mod_time>./jsm/jsm.so</mod_time>
+-      <mod_vcard>./jsm/jsm.so</mod_vcard>
+-      <mod_last>./jsm/jsm.so</mod_last>
+-      <mod_version>./jsm/jsm.so</mod_version>
+-      <mod_announce>./jsm/jsm.so</mod_announce>
+-      <mod_agents>./jsm/jsm.so</mod_agents>
+-      <mod_browse>./jsm/jsm.so</mod_browse>
+-      <mod_disco>./jsm/jsm.so</mod_disco>
+-      <mod_admin>./jsm/jsm.so</mod_admin>
+-      <mod_filter>./jsm/jsm.so</mod_filter>
+-      <mod_offline>./jsm/jsm.so</mod_offline>
+-      <mod_presence>./jsm/jsm.so</mod_presence>
++      <jsm>/usr/lib/jabberd/jsm.so</jsm>
++      <mod_echo>/usr/lib/jabberd/jsm.so</mod_echo>
++      <mod_roster>/usr/lib/jabberd/jsm.so</mod_roster>
++      <mod_time>/usr/lib/jabberd/jsm.so</mod_time>
++      <mod_vcard>/usr/lib/jabberd/jsm.so</mod_vcard>
++      <mod_last>/usr/lib/jabberd/jsm.so</mod_last>
++      <mod_version>/usr/lib/jabberd/jsm.so</mod_version>
++      <mod_announce>/usr/lib/jabberd/jsm.so</mod_announce>
++      <mod_agents>/usr/lib/jabberd/jsm.so</mod_agents>
++      <mod_browse>/usr/lib/jabberd/jsm.so</mod_browse>
++      <mod_disco>/usr/lib/jabberd/jsm.so</mod_disco>
++      <mod_admin>/usr/lib/jabberd/jsm.so</mod_admin>
++      <mod_filter>/usr/lib/jabberd/jsm.so</mod_filter>
++      <mod_offline>/usr/lib/jabberd/jsm.so</mod_offline>
++      <mod_presence>/usr/lib/jabberd/jsm.so</mod_presence>
+ 
+       <!--
+       Authentication
+@@ -325,19 +325,21 @@
+       -->
+       <!-- mod_auth_digest: Password in clear text in storage,
+            encrypted/hashed on the wire -->
+-      <mod_auth_digest>./jsm/jsm.so</mod_auth_digest>
++      <mod_auth_digest>/usr/lib/jabberd/jsm.so</mod_auth_digest>
+       <!-- mod_auth_plain: Password in clear text in storage
+            and on the wire. Disable this if you do not use clients
+            that need plaintext auth -->
+-      <mod_auth_plain>./jsm/jsm.so</mod_auth_plain>
++      <mod_auth_plain>/usr/lib/jabberd/jsm.so</mod_auth_plain>
+       <!-- mod_auth_crypt: Password encrypted/hashed in storage,
+            clear text on the wire. Disabled as this only makes
+            sense when used exclusively and with SSL mandatory
+-      <mod_auth_crypt>./jsm/jsm.so</mod_auth_crypt> -->
++      <mod_auth_crypt>/usr/lib/jabberd/jsm.so</mod_auth_crypt> -->
+ 
+-      <mod_log>./jsm/jsm.so</mod_log>
+-      <mod_register>./jsm/jsm.so</mod_register>
+-      <mod_xml>./jsm/jsm.so</mod_xml>
++      <mod_log>/usr/lib/jabberd/jsm.so</mod_log>
++      <!-- commented out so no one can register!!!
++      <mod_register>/usr/lib/jabberd/jsm.so</mod_register>
++      -->
++      <mod_xml>/usr/lib/jabberd/jsm.so</mod_xml>
+     </load>
+ 
+   </service>
+@@ -353,10 +355,10 @@
+   <xdb id="xdb">
+     <host/>
+     <load>
+-      <xdb_file>./xdb_file/xdb_file.so</xdb_file>
++      <xdb_file>/usr/lib/jabberd/xdb_file.so</xdb_file>
+     </load>
+     <xdb_file xmlns="jabber:config:xdb_file">
+-      <spool><jabberd:cmdline flag='s'>./spool</jabberd:cmdline></spool>
++      <spool><jabberd:cmdline flag='s'>/var/spool/jabber</jabberd:cmdline></spool>
+     </xdb_file>
+   </xdb>
+ 
+@@ -387,7 +389,7 @@
+ 
+   <service id="c2s">
+     <load>
+-      <pthsock_client>./pthsock/pthsock_client.so</pthsock_client>
++      <pthsock_client>/usr/lib/jabberd/pthsock_client.so</pthsock_client>
+     </load>
+     <pthcsock xmlns='jabber:config:pth-csock'>
+       <authtime/>
+@@ -430,7 +432,7 @@
+     <host/>
+     <logtype/>
+     <format>%d: [%t] (%h): %s</format>
+-    <file>error.log</file>
++    <file>/var/log/jabber/error.log</file>
+     <stderr/>
+   </log>
+ 
+@@ -443,7 +445,7 @@
+     <host/>
+     <logtype>record</logtype>
+     <format>%d %h %s</format>
+-    <file>record.log</file>
++    <file>/var/log/jabber/record.log</file>
+   </log>
+ 
+   <!-- The following two services are for handling server-to-server traffic. -->
+@@ -453,7 +455,7 @@
+   <service id="dnsrv">
+     <host/>
+     <load>
+-      <dnsrv>./dnsrv/dnsrv.so</dnsrv>
++      <dnsrv>/usr/lib/jabberd/dnsrv.so</dnsrv>
+     </load>
+     <dnsrv xmlns="jabber:config:dnsrv">
+     	<resend service="_xmpp-server._tcp">s2s</resend> <!-- for supporting XMPP compliant SRV records -->
+@@ -473,7 +475,7 @@
+ 
+   <service id="s2s">
+     <load>
+-      <dialback>./dialback/dialback.so</dialback>
++      <dialback>/usr/lib/jabberd/dialback.so</dialback>
+     </load>
+     <dialback xmlns='jabber:config:dialback'>
+       <legacy/>
+@@ -641,8 +643,8 @@
+     -->
+     <!--
+     <ssl>
+-      <key ip='192.168.1.1'>/path/to/cert_and_key.pem</key>
+-      <key ip='192.168.1.100'>/path/to/other/cert_and_key.pem</key>
++      <key ip='192.168.1.1'>/etc/jabber/gentoo.pem</key>
++      <key ip='192.168.1.100'>/etc/jabber/gentoo.pem</key>
+     </ssl>
+     -->
+ 

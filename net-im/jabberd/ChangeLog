@@ -1,6 +1,11 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.8 2004/02/11 02:48:59 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.9 2004/02/13 02:17:16 humpback Exp $
+
+  13 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  jabberd-1.4.3-r1.ebuild, files/multiple-xml-patch-00:
+  Ebuild now patches the oficial config file to the Gentoo path's instead of
+  using our own file
 
   11 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>; files/multiple.xml:
   Added comments to multiple.xml
