@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.26 2004/06/24 22:01:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.27 2004/07/12 17:12:06 bcowan Exp $
+
+*xfce4-mixer-4.0.6 (12 Jul 2004)
+
+  12 Jul 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-mixer-4.0.6.ebuild:
+  Version bump. Bugfix release on stable branch that fixes cropped icons with
+  gtk-2.4 along with many others.
 
   23 Jun 2004; <malc@gentoo.org> xfce4-mixer-4.0.5.ebuild:
   Mark stable on amd64
