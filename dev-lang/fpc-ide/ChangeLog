@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/fpc-ide
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.1 2005/03/31 01:58:21 chriswhite Exp $
+
+*fpc-ide-2.0.0_rc2 (31 Mar 2005)
+
+  31 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +fpc-ide-2.0.0_rc2.ebuild:
+  Initial import into the tree. Final closure of bug #87337. Thanks to
+  exposure for the ebuilds.
+
