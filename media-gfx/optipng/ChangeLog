@@ -1,0 +1,12 @@
+# ChangeLog for media-gfx/optipng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.1 2003/10/31 12:54:29 taviso Exp $
+
+*optipng-0.4.3 (31 Oct 2003)
+
+  31 Oct 2003; Tavis Ormandy <taviso@gentoo.org> optipng-0.4.3.ebuild,
+  files/optipng-more-makefile-options.diff:
+  Initial import, closing bug #23157. 
+  Thanks to brian@jubue.org, who provided the ebuild this was based 
+  on in #23157.
+
