@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xhkeys
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.5 2004/07/03 14:55:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.6 2004/07/04 11:32:02 dholm Exp $
+
+  04 Jul 2004; David Holm <dholm@gentoo.org> xhkeys-1.0.2.ebuild:
+  Added to ~ppc.
 
 *xhkeys-1.0.2 (03 Jul 2004)
 
