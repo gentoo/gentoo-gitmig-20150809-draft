@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-shion/canna-shion-20010916.ebuild,v 1.3 2004/08/14 12:26:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-shion/canna-shion-20010916.ebuild,v 1.4 2004/09/01 15:41:28 tgall Exp $
 
 inherit cannadic
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 alpha ppc"
+KEYWORDS="x86 alpha ppc ppc64"
 
 DEPEND="canna? ( >=canna-3.6_p3-r1 )"
 
