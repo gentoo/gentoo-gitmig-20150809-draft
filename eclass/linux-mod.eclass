@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.1 2004/11/24 16:36:38 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.2 2004/11/25 19:47:18 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -16,11 +16,8 @@ DEPEND="virtual/linux-sources
 		sys-apps/sed"
 
 
-
-
 # This eclass is designed to help ease the installation of external kernel
 # modules into the kernel tree.
-
 
 # eclass utilities
 # ----------------------------------

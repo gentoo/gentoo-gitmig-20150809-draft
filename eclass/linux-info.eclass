@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.1 2004/11/24 16:36:38 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.2 2004/11/25 19:47:18 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -12,7 +12,6 @@ INHERITED="$INHERITED $ECLASS"
 # Overwritable environment Var's
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
-
 
 
 # File Functions
@@ -67,7 +66,6 @@ local	RESULT
 # kernel_is 2 6		returns true
 # kernel_is 2 6 8	returns false
 # kernel_is 2 6 9	returns true
-#
 # got the jist yet?
 
 kernel_is() {
