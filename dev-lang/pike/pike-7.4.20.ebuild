@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Sköldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.10 2003/09/16 16:30:10 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.11 2003/09/20 15:50:05 scandium Exp $
 
 inherit flag-o-matic
 
@@ -36,13 +36,13 @@ src_compile() {
 	# disable ffmpeg support because it does not compile
 	emake CONFIGUREARGS="${myconf} --prefix=/usr --disable-make_conf --without-ffmpeg" || die
 
-	cd ${S}/refdoc
-	PATH="${S}/bin:${PATH}" make || die
+	# only build documentation if 'doc' is in USE
+	if use doc; then
+		PATH="${S}/bin:${PATH}" make doc || die
+	fi
 }
 
 src_install() {
-	# the installer should be stopped from removing files
-	sed -i s/rm\(mod\+\"\.o\"\)\;/\{\}/ ${S}/bin/install.pike || die "Failed to modify install.pike"
 	make INSTALLARGS="--traditional" buildroot="${D}" install || die
 
 	if use doc; then
