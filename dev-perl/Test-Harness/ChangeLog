@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.10 2003/04/06 16:17:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.11 2003/05/30 08:05:45 seemant Exp $
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  Test-Harness-2.24-r1.ebuild:
+  took out make test
 
 *Test-Harness-2.24-r1 (29 Oct 2002)
 

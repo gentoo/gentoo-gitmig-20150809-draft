@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.24-r1.ebuild,v 1.6 2003/04/06 16:17:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.24-r1.ebuild,v 1.7 2003/05/30 08:05:45 seemant Exp $
 
 inherit perl-module
 
@@ -17,5 +17,4 @@ mydoc="rfc*.txt"
 
 src_compile() {
 	perl-module_src_compile
-	perl-module_src_test || die "test failed"
 }
