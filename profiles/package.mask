@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3183 2004/09/24 02:37:48 fafhrd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3184 2004/09/24 02:53:22 fafhrd Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -40,7 +40,7 @@
 <=gnustep-base/gnustep-back-0.8.8
 =gnustep-base/gnustep-env-0.1
 # gnustep-apps
-#=gnustep-apps/affiche-0.6.0
+=gnustep-apps/affiche-0.6.0
 =gnustep-apps/easydiff-0.1
 =gnustep-apps/gnumail-1.1.0
 =gnustep-apps/gorm-0.3.0
