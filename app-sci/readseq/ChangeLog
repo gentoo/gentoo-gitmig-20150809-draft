@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/readseq
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/readseq/ChangeLog,v 1.1 2004/07/14 18:29:01 ribosome Exp $
+
+*readseq-19930201 (14 Jul 2004)
+
+  14 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  readseq-19930201.ebuild, metadata.xml
+  Initial import (#51992), suggested by Koen Deforche 
+  <koen.deforche@uz.kuleuven.ac.be>, with modifications.

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>ribosome@gentoo.org</email>
+		<name>Olivier Fisette</name>
+	</maintainer>
+	<herd>sci</herd>
+	<longdescription>
+		Reads and writes nucleic/protein sequences in various formats. Data
+		files may have multiple sequences.
+	</longdescription>
+</pkgmetadata>
