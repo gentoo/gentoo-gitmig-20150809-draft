@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.73 2005/02/10 19:15:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.74 2005/02/11 16:45:54 wolf31o2 Exp $
+
+*vmware-workstation-4.5.2.8848-r5 (11 Feb 2005)
+
+  11 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-4.5.2.8848-r4.ebuild,
+  +vmware-workstation-4.5.2.8848-r5.ebuild:
+  Improved fix for bug #81344, which requires no external libraries.
 
 *vmware-workstation-4.5.2.8848-r4 (10 Feb 2005)
 

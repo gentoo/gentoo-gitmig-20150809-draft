@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r4.ebuild,v 1.2 2005/02/11 00:06:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r5.ebuild,v 1.1 2005/02/11 16:45:54 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -26,15 +26,15 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
-	mirror://gentoo/vmware.png
-	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}-rpath-fix.tar.bz2
-	mirror://gentoo/${P}-rpath-fix.tar.bz2"
+	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
 KEYWORDS="-* x86 amd64"
 RESTRICT="nostrip"
+
+DEPEND=">=dev-lang/perl-5"
 
 RDEPEND=">=dev-lang/perl-5
 	sys-libs/glibc
@@ -69,9 +69,10 @@ src_install() {
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
-	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
-	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2/libpixbufloader-{png,xpm}.so.1.0.0
-	cp ${WORKDIR}/rpath-fix/* ${Ddir}/lib/lib/libgdk_pixbuf.so.2
+	# We also remove the rpath libgdk_pixbuf stuff, to resolve bug #81344.
+	perl -pi -e 's#/tmp/rrdharan/out#/opt/vmware/null/#sg' \
+		${Ddir}/lib/lib/libgdk_pixbuf.so.2/lib{gdk_pixbuf.so.2,pixbufloader-{xpm,png}.so.1.0.0} \
+		|| die "Removing rpath"
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -118,8 +119,8 @@ src_install() {
 	dodir /usr/bin
 	dosym ${dir}/bin/vmware /usr/bin/vmware
 
-	# this removes the group warnings
-	chgrp -R root ${Ddir}
+	# this removes the user/group warnings
+	chown -R root:root ${D}
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
