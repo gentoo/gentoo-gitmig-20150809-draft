@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.26 2003/12/17 00:30:46 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.27 2003/12/23 20:45:08 rac Exp $
+
+*mod_perl-1.29 (23 Dec 2003)
+
+  23 Dec 2003; <rac@gentoo.org> mod_perl-1.29.ebuild:
+  Upstream bump.
 
 *mod_perl-1.99.11 (16 Dec 2003)
 
