@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.25 2003/12/01 22:56:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.26 2004/01/02 20:19:09 solar Exp $
+
+  02 Jan 2004; <solar@gentoo.org> gradm-1.9.11.ebuild, gradm-1.9.12.ebuild,
+  gradm-1.9.13.ebuild:
+  Better way to get CC version when no CC= is set ( bug #36988 ). Added ssp
+  filtering for gcc CFLAGS as gradm requires static linking and ssp+static is
+  known to break with some versions of gcc-3.3.{1,2}
 
 *gradm-1.9.13 (01 Dec 2003)
 
