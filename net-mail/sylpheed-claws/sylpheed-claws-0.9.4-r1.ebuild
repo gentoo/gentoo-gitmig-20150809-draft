@@ -1,23 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4.ebuild,v 1.7 2003/09/06 15:05:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4-r1.ebuild,v 1.1 2003/09/06 15:05:18 seemant Exp $
 
-IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav"
+IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
 inherit eutils
 
+GS_PN=ghostscript-viewer
+GS_PV=0.4
+MY_GS=${GS_PN}-${GS_PV}
 MY_P="sylpheed-${PV}claws"
-S="${WORKDIR}/${MY_P}"
-
+S=${WORKDIR}/${MY_P}
+S2=${WORKDIR}/${MY_GS}
 DESCRIPTION="Bleeding edge version of Sylpheed"
-SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2)"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
-DEPEND="=x11-libs/gtk+-1.2*
+DEPEND=">=sys-apps/sed-4"
+
+RDEPEND="=x11-libs/gtk+-1.2*
+	app-misc/mime-types
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
@@ -28,8 +35,8 @@ DEPEND="=x11-libs/gtk+-1.2*
 	xface? ( >=media-libs/compface-1.4 )
 	clamav? ( net-mail/clamav )
 	gtkhtml? ( net-www/dillo )
+	pdflib? ( app-text/ghostscript )
 	x11-misc/shared-mime-info"
-	#xml? ( >=x11-libs/gtkmathview-0.4.2 )
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -41,9 +48,7 @@ src_unpack() {
 	# Change package name to sylpheed-claws ...
 	for i in `find ${S}/ -name 'configure*'`
 	do
-		cp $i ${i}.orig
-		sed -e "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" \
-			${i}.orig > ${i}
+		sed -i "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" ${i}
 	done
 
 	# use shared-mime-info
@@ -78,8 +83,6 @@ src_compile() {
 
 	use nls || myconf="${myconf} --disable-nls"
 
-	#use xml && myconf="${myconf} --enable-mathml-viewer-plugin"
-
 	#use gtkhtml \
 	#	&& myconf="${myconf} --enable-dillo-viewer-plugin" \
 	#	|| myconf="${myconf} --disable-dillo-viewer-plugin"
@@ -87,7 +90,6 @@ src_compile() {
 	#use clamav \
 	#	&& myconf="${myconf} --enable-clamav-plugin" \
 	#	|| myconf="${myconf} --disable-clamav-plugin"
-
 	echo ${myconf}
 
 	econf \
@@ -100,6 +102,16 @@ src_compile() {
 	# build the extra tools
 	cd ${S}/tools
 	emake || die
+
+	# build the ghostscript-viewer plugin
+	if use pdflib
+	then
+		cd ${S2}
+		econf \
+			--with-sylpheed-dir=${S} || die
+		emake || die
+	fi
+
 	cd ${S}
 }
 
@@ -127,6 +139,15 @@ src_install() {
 	exeinto /usr/lib/${PN}/tools
 	doexe *.pl *.py *.rc *.conf gpg-sign-syl
 	doexe launch_firebird tb2sylpheed update-po uudec
+
+	# install the ghostscipt-viewer plugin
+	if use pdflib
+	then
+		cd ${S2}
+		make plugindir=${D}/usr/lib/${PN}/plugins install || die
+		docinto ${MY_GS}
+		dodoc AUTHORS ChangeLog INSTALL NEWS README
+	fi
 }
 
 pkg_postinst() {
