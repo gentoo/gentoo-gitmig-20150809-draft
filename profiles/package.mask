@@ -49,6 +49,7 @@ app-editors/gtk-xemacs
 >=media-libs/libsdl-1.2.1
 >=media-libs/freetype-2.0.4
 >=dev-db/unixODBC-2.0.8
+=sys-devel/spython-2.0-r5
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
@@ -69,7 +70,3 @@ app-editors/gtk-xemacs
 #=sys-kernel/linux-sources-2.4.5.5
 #=sys-kernel/linux-2.4.5.5
 #=sys-kernel/linux-extras-2.4.5.5
-
-
-
-
