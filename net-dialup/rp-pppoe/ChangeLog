@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.26 2004/06/24 22:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.27 2004/09/24 00:40:36 dragonheart Exp $
+
+  24 Sep 2004; Daniel Black <dragonheart@gentoo.org> files/rp-pppoe.rc:
+  files/rp-pppoe.rc changed from need net to provide net as per bug #46906.
+  Thanks spanky.
 
 *rp-pppoe-3.5-r1 (14 Jun 2004)
 

@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d3c17283136c88f7004ae4e8e267e8b ChangeLog 3520
+MD5 18d78b2adc5de47302ecce21e26a6f9a ChangeLog 3689
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 6792768544a6e55c2cdfea0954c2cb52 rp-pppoe-3.5.ebuild 1252
 MD5 a7bdc9e540f5d575e7d42b8428fe8643 rp-pppoe-3.5-r1.ebuild 1524
 MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5 64
-MD5 a76945cf174898e4e2b0bc8d3cc7a293 files/rp-pppoe.rc 497
+MD5 5b5f33ce0a1197b7e246cd8af9ab5662 files/rp-pppoe.rc 503
 MD5 4d75ec30cff5b02997155a83a3c3ed9f files/digest-rp-pppoe-3.5-r1 64
 MD5 d90e4422c967ed2ba160c12b22f977b4 files/rp-pppoe-3.5-pidfile.patch 3266
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBMALiHTu7gpaalycRAhF1AKCxNjfeYlf1Jsq2WfxrMyMyxsSVEwCfWnlq
-2vdcDMAfALW+SaYPWJzqLHI=
-=+9cG
+iD8DBQFBU21vmdTrptrqvGERAlp5AKCDHudrZiNNel/LXyUwQ8Q1a7TBSACgmSWp
+nyRwudXSj3AjAR01JgEeGW0=
+=ouBV
 -----END PGP SIGNATURE-----
