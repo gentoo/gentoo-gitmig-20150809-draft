@@ -1,0 +1,4 @@
+78c78
+<   drawCDKEntry(inputBox, inputBox->box);
+---
+>   drawCDKEntry(inputBox, inputBox->BoxAttrib);
