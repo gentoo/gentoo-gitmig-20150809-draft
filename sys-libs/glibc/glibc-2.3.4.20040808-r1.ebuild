@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.21 2004/12/07 15:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.22 2004/12/13 10:10:46 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -50,7 +50,9 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
-KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips"
+#~sparc: This is only used by the sparc64-multilib PROFILE_ARCH as versions
+#        after ~2.3.3.20040420 break blackdown-jdk on sparc.
+KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips ~sparc"
 IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -132,6 +134,26 @@ setup_flags() {
 				export CTARGET="sparcv9-unknown-linux-gnu"
 			fi
 		fi
+
+		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+			# glibc isn't too smart about guessing our flags.  It
+			# also will default to -xarch=v9, but assembly in glibc
+			# needs to be v9a or greater...
+			if is-flag "-mcpu=ultrasparc3"; then
+				append-flags "-Wa,-xarch=v9b"
+				export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9b"
+
+				# Change CHOST to include us3 assembly
+				export CHOST="sparc64b-unknown-linux-gnu"
+			else
+				append-flags "-Wa,-xarch=v9a"
+				export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9a"
+			fi
+
+			# Get rid of flags known to fail
+			replace-flags "-mvis" ""
+		fi
+
 	fi
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
