@@ -1,6 +1,11 @@
 # ChangeLog for app-text/yudit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.8 2003/04/05 02:09:48 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.9 2003/08/24 12:43:33 mholzer Exp $
+
+*yudit-2.7.5 (24 Aug 2003)
+
+  24 Aug 2003; Martin Holzer <mholzer@gentoo.org> yudit-2.7.5.ebuild:
+  Version bumped.
 
 *yudit-2.7.2 (04 Apr 2003)
 
