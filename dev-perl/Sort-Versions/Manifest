@@ -1,4 +1,4 @@
-MD5 75f0aee82162f920cc4918c9815459c0 files/digest-Sort-Versions-1.4 67
-MD5 cc2ca540b62d18ddc9e47a6c59e83952 Sort-Versions-1.4.ebuild 536
-MD5 700f54615b50e7b8bb284cf2c102225b ChangeLog 384
+MD5 f150a0feec58be2fc3b17bd69d5c8b4d ChangeLog 510
+MD5 fc6a4ead1cfa46c4d700826765f4a27f Sort-Versions-1.4.ebuild 542
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 75f0aee82162f920cc4918c9815459c0 files/digest-Sort-Versions-1.4 67
