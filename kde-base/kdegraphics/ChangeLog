@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.79 2004/03/02 13:06:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.80 2004/03/09 12:37:58 caleb Exp $
+
+  09 Mar 2004; Caleb Tennis <caleb@gentoo.org> :
+  Version bump
 
   02 Mar 2004; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.2.0.ebuild:
   Turn off compilation of kpdf, as it breaks parallel make and is rather
