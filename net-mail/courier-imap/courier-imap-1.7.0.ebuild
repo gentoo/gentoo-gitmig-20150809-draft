@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.1 2003/02/01 09:13:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.0.ebuild,v 1.2 2003/02/05 05:03:18 raker Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam nls postgres"
@@ -36,7 +36,8 @@ src_compile() {
 		|| myconf="${myconf} --with-db=gdbm"
 	use ipv6 || myconf="${myconf} --without-ipv6"
 
-	if [ -f /var/vpopmail/etc/lib_deps ]; then
+	VPOPMAIL_DIR=`cat /etc/passwd | grep ^vpopmail | cut -d: -f6`
+	if [ -f ${VPOPMAIL_DIR}/etc/lib_deps ]; then
 		myconf="${myconf} --with-authvchkpw"
 	else
 		myconf="${myconf} --without-authvchkpw"
