@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegrogl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.5 2005/01/19 00:53:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/ChangeLog,v 1.6 2005/03/12 16:08:40 wolf31o2 Exp $
+
+*allegrogl-0.2.4-r1 (12 Mar 2005)
+
+  12 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/allegrogl-0.2.4-noasm.patch, +allegrogl-0.2.4-r1.ebuild:
+  Added noasm patch from bug #79923 by darkepaw@users.sourceforge.net and
+  resolving the bug.
 
   18 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   allegrogl-0.2.4.ebuild:
