@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.12 2004/07/31 11:31:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.13 2004/08/27 19:53:01 sejo Exp $
+
+  27 Aug 2004; <SeJo@gentoo.org> bcel-5.1.ebuild:
+  stable on ppc
 
   31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
   move regexp -> regexp-bin

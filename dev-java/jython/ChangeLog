@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.11 2004/08/24 03:35:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.12 2004/08/27 19:46:31 sejo Exp $
+
+  27 Aug 2004; <SeJo@gentoo.org> jython-2.1-r4.ebuild:
+  stable on ppc
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> jython-2.1-r4.ebuild:
   Marking x86

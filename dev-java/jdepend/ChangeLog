@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.11 2004/07/17 14:05:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.12 2004/08/27 19:42:24 sejo Exp $
+
+  27 Aug 2004; <SeJo@gentoo.org> jdepend-2.6.ebuild:
+  stable on ppc
 
 *jdepend-2.7 (17 Jul 2004)
 
