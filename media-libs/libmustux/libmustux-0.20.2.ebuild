@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2.ebuild,v 1.5 2004/09/01 17:13:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.2.ebuild,v 1.6 2005/03/21 16:27:31 luckyduck Exp $
 
 inherit kde-functions
 
@@ -27,12 +27,13 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-
 	export WANT_AUTOMAKE=1.7
 	export WANT_AUTOCONF=2.5
 	aclocal || die
 	automake || die
 	autoconf || die
+
+	libtoolize --copy --force
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.1.ebuild,v 1.7 2004/08/07 23:22:57 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.20.1.ebuild,v 1.8 2005/03/21 16:27:31 luckyduck Exp $
 
 inherit kde-functions
 
