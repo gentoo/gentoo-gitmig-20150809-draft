@@ -1,0 +1,9 @@
+# ChangeLog for net-wireless/blueproxy
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueproxy/ChangeLog,v 1.1 2004/10/09 19:22:15 liquidx Exp $
+
+*blueproxy-1.1 (09 Oct 2004)
+
+  09 Oct 2004; Alastair Tse <liquidx@gentoo.org> +blueproxy-1.1.ebuild:
+  initial release.
+
