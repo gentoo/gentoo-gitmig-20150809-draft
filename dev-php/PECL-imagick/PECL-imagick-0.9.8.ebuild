@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-imagick/PECL-imagick-0.9.8.ebuild,v 1.1 2003/10/11 18:24:56 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-imagick/PECL-imagick-0.9.8.ebuild,v 1.2 2004/05/30 18:23:09 kloeri Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_NAME="imagick"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-mailparse/PECL-mailparse-0.9.3.ebuild,v 1.2 2003/09/13 16:08:59 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-mailparse/PECL-mailparse-0.9.3.ebuild,v 1.3 2004/05/30 18:25:38 kloeri Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_NAME="mailparse"
