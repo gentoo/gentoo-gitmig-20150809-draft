@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.4 2002/11/30 22:00:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6-r1.ebuild,v 1.5 2003/02/13 09:15:50 vapier Exp $
 
 DESCRIPTION="A personal finance manager"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.2 2002/08/03 17:49:48 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.3 2003/02/13 09:16:49 vapier Exp $
 
 DESCRIPTION="Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
