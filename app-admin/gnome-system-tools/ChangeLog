@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.13 2004/10/03 22:45:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.14 2004/10/19 20:50:50 agriffis Exp $
+
+  21 Oct 2004; Aron Griffis <agriffis@gentoo.org>
+  gnome-system-tools-1.0.0.ebuild:
+  add ~ia64
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> gnome-system-tools-1.0.0.ebuild:
   Added ~hppa to KEYWORDS.
