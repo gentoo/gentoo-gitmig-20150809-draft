@@ -832,3 +832,8 @@ x11-base/xdirectfb
 #seemant@gentoo.org 27 Jun 2002
 # masked for testing
 =net-misc/bind-tools-9.2.1
+
+#g2boojum@gentoo.org 27 June 2002
+# masked until we get the cups ghostscript in portage
+>=net-print-cups-1.1.15
+
