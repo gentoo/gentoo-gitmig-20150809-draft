@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.6 2004/02/21 14:57:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.7 2004/02/22 10:29:22 aliz Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc ppc alpha hppa ia64 amd64"
 PROVIDE="virtual/krb5"
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
