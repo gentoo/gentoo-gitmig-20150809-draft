@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.7.ebuild,v 1.2 2004/11/22 02:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/glpk/glpk-4.7.ebuild,v 1.3 2004/11/23 14:18:58 sekretarz Exp $
 
 DESCRIPTION="GNU Linear Programming Kit"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnu.org/software/glpk/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 RDEPEND="sys-libs/glibc"
