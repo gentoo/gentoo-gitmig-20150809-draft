@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.5 2003/11/10 15:46:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.6 2003/11/12 22:17:30 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -107,16 +107,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if ! use caps; then
 		einfo "gpg is installed suid root to make use of protected memory space"
 		einfo "This is needed in order to have a secure place to store your"
 		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
-	else
-		# a quick blurb to explain the linux capabilities.
-		einfo "gpg has not been installed setuid, as you have the \"caps\" USE flag"
-		einfo "set, you should now configure gpg to use cap_ipc_lock+p capability"
-		einfo "to give non-root users access to locked memory pages."
-		einfo "please refer to the capabilities(7) manpage for more information."
 	fi
 }
