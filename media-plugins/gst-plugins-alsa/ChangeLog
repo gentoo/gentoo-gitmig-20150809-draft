@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.20 2004/11/11 18:26:57 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.21 2004/11/18 14:29:42 foser Exp $
+
+*gt-plugins-alsa-0.8.5-r1 (18 Nov 2004)
+
+  18 Nov 2004; foser <foser@gentoo.org> gst-plugins-alsa-0.8.5-r1.ebuild :
+  Version bump with fixes to make the alsa plugin much more reliable
+  Thanks to zaheerm for the works here
 
   11 Nov 2004; Mike Gardiner <obz@gentoo.org> gst-plugins-alsa-0.8.5.ebuild:
   Keyworded ppc for GNOME 2.8
