@@ -23,7 +23,7 @@
 
 # <lostlogic@gentoo.org> (03 Sep 2002)
 # New xfs-sources, please test.
-=sys-kernel/xfs-sources-2.4.19
+>=sys-kernel/xfs-sources-2.4.19
 
 # <raker@gentoo.org> (03 Sep 2002)
 # gnustep updates... unstable moved to stable branch
