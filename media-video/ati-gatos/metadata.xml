@@ -5,4 +5,5 @@
 <maintainer>
   <email>battousai@gentoo.org</email>
 </maintainer>
+<longdescription>GATOS provides tuning and capture capabilities to ATI cards with those features.</longdescription>
 </pkgmetadata>
