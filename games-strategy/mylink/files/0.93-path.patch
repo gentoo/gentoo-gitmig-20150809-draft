@@ -1,0 +1,29 @@
+--- MyLinkI18N.pm	2003-11-28 14:35:50.000000000 +0000
++++ MyLinkI18N.pm.new	2003-11-28 14:33:27.000000000 +0000
+@@ -7,13 +7,20 @@
+ our $DEFAULT_LANG = "en";
+ 
+ our %TEXTS = ();
+-for(< MyLinkI18N-*.txt >) {
+-	my $lang = $_;
+-	$lang =~ s/^MyLinkI18N-([^.]+)\.txt$/$1/;
+-	$TEXTS{$lang} = { do $_ };
++
++
++
++
++opendir DIR,"GENTOO_DIR";
++map {
++	m!^MyLinkI18N-([^.]+).txt$!;
++	$TEXTS{$1} = { do "GENTOO_DIR/$_" };
+ 	die $@ if $@;
+-	warn "Got language definition file: $_\n";
+-};
++	warn "Got language definition file: GENTOO_DIR/$_\n";
++} grep m!^MyLinkI18N-[^.]+\.txt$!, readdir DIR;
++closedir DIR;
++
++
+ 
+ 1;
+ 
