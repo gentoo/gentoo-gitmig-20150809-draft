@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.25 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.26 2002/12/20 03:48:29 alron Exp $
+
+  19 Dec 2002; Dean Bailey <alron@gentoo.org> :
+  Removed sparc64 keyword
 
 *balsa-2.0.3 (11 Dec 2002)
 
