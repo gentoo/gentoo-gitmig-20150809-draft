@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.2 2004/02/15 23:37:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.3 2004/03/19 21:16:58 wolf31o2 Exp $
 
 inherit games
 
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	mkdir ${S}/{a,b}
+	mkdir -p ${S}/{a,b}
 	cd ${S}/a
 	unpack_makeself ${PN}-1.4.0a-x86.run
 	cd ${S}/b
