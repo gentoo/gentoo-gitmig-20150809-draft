@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.13 2003/10/01 12:39:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.14 2003/10/07 17:45:39 hanno Exp $
+
+*dosemu-1.1.99.1-r1 (07 Oct 2003)
+
+  07 Oct 2003; Hanno Boeck <hanno@gentoo.org> dosemu-1.1.99.1-r1.ebuild,
+  files/dosemu_kernel26_patch:
+  Re-added dosemu-broken-links.diff and added patch for compatibility with
+  kernel 2.6.
 
 *dosemu-1.1.99.1 (01 Oct 2003)
 
