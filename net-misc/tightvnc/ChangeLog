@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.2 2002/03/25 10:55:39 verwilst Exp $
+
+*tightvnc-1.2.3 (25 March 2002)
+
+  25 March 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  Upgraded to 1.2.3, and removed the old 2 versions..
+  Since 1.2.2 never compiled, the TightVNC people assured me 1.2.3
+  fixes all the problems, and it does! :o) So we have a fully working 
+  version for Gentoo 1.0 :o)
 
 *tightvnc-1.2.1 (1 Feb 2002)
 
