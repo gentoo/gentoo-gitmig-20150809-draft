@@ -4,7 +4,7 @@
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Credits:  To all those I got ideas from :)
 # 
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.1 2003/05/23 04:45:18 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.2 2003/07/15 20:02:46 azarah Exp $
 
 # NB: Config is in /etc/conf.d/net.$IFACE
 
@@ -152,9 +152,12 @@ setup_cfg_files() {
 
 	if [ "${AUTOCFGFILES}" = "yes" ]
 	then
-		# Setup the peers file
-		echo "connect '/usr/sbin/chat -v -f /etc/ppp/chat-${PEER}'" \
-			>/etc/ppp/peers/${PEER}
+		if [ -n "${NUMBER}" ]
+		then
+			# Setup the peers file
+			echo "connect '/usr/sbin/chat -v -f /etc/ppp/chat-${PEER}'" \
+				>/etc/ppp/peers/${PEER}
+		fi
 
 		# Setup the secrets files
 		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/chap-secrets

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.25 2003/06/12 21:18:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.26 2003/07/15 20:02:46 azarah Exp $
+
+  15 Jul 2003; Martin Schlemmer <azarah@gentoo.org> files/net.ppp0:
+  Do not update /etc/ppp/peers if no NUMBER is set - this is for non
+  dialup users, thanks to Maciek Freudenheim <fahren@bochnia.pl>.
 
   12 Jun 2003; <msterret@gentoo.org> ppp-2.4.1-r13.ebuild,
   ppp-2.4.1-r14.ebuild:
