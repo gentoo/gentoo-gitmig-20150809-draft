@@ -259,3 +259,6 @@ gnome-apps/gnapster
 # parts of GNOME. 
 >=media-libs/imlib-1.9.11
 
+# Moved, use from app-text instead:
+app-doc/gmanedit
+app-doc/tkinfo
