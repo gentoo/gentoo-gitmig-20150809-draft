@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.4.ebuild,v 1.2 2003/11/27 15:11:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.4.ebuild,v 1.3 2004/02/22 20:02:02 agriffis Exp $
 
 inherit debug
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dmalloc.com/"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/glibc"
 

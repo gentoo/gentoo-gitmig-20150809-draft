@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8.ebuild,v 1.12 2004/01/11 13:43:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8.ebuild,v 1.13 2004/02/22 20:07:50 agriffis Exp $
 
 IUSE="X"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cbmamiga.demon.co.uk/mpatrol/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 # To use X, mpatrol requires Motif
 DEPEND="X? ( x11-libs/openmotif )"

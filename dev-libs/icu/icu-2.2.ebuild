@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.2.ebuild,v 1.3 2003/02/13 10:40:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.2.ebuild,v 1.4 2004/02/22 20:03:44 agriffis Exp $
 
 S=${WORKDIR}/${PN}/source
 DESCRIPTION="IBM Internationalization Components for Unicode"
@@ -9,7 +9,7 @@ HOMEPAGE="http://oss.software.ibm.com/icu/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.2 2004/01/12 17:03:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.3 2004/02/22 20:10:05 agriffis Exp $
 
 S=${WORKDIR}/${P}
 N=${S}/nad
@@ -11,7 +11,7 @@ SRC_URI="http://proj.maptools.org/dl/${P}.tar.gz
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"

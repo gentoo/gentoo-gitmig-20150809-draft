@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.9 2003/07/21 09:17:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.10 2004/02/22 20:03:27 agriffis Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnucash.org"
 # g-wrap should never have been slotted, since the files overlap significantly
 SLOT="1.3"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=dev-util/guile-1.4
 	>=dev-libs/slib-2.4.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.8 2003/10/28 13:07:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r2.ebuild,v 1.9 2004/02/22 20:01:29 agriffis Exp $
 
 S=${WORKDIR}/CommonC++-1.9.7
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
@@ -14,7 +14,7 @@ DEPEND="sys-libs/zlib
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_unpack() {
 
