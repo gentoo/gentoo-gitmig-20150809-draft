@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.23 2003/02/08 03:37:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.24 2003/02/09 18:13:01 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *util-linux-2.11z (03 Feb 2003)
 
