@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.ebuild,v 1.3 2004/06/25 03:21:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.ebuild,v 1.4 2004/09/11 09:47:01 blubb Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gl-117/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/x11
