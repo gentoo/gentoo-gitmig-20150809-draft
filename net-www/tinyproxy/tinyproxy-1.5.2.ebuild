@@ -8,7 +8,7 @@ HOMEPAGE="http://tinyproxy.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="socks5"
 
 DEPEND="socks5? ( net-misc/dante )"
