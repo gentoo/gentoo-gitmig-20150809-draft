@@ -1,6 +1,6 @@
 #!/bin/sh
 # jswat Launch Script
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/files/2.21/jswat2,v 1.1 2004/02/29 01:14:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/files/2.21/jswat2,v 1.2 2004/07/18 02:53:05 dragonheart Exp $
 
 JSWAT_VER="2.21"
 
