@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/xfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.15 2003/02/25 18:58:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.16 2003/03/28 20:09:36 gmsoft Exp $
 
 *xfsprogs-2.3.6-r2 (26 Dec 2002)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> xfsprogs-2.3.6-r2.ebuild :
+  Added ~hppa to KEYWORDS.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> xfsprogs-2.3.6-r2.ebuild :
   Marked as testing for mips.  Made ChangeLog compatible with echangelog.
