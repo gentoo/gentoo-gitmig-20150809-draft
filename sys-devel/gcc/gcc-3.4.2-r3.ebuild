@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.1 2004/10/26 02:27:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.2 2004/10/26 04:13:51 vapier Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64 boundschecking"
 
@@ -214,8 +214,6 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-
-	create_gcc_multilib_scripts
 
 	if [ "${SPLIT_SPECS}" == "true" ] ; then
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
