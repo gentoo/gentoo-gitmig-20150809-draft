@@ -101,7 +101,7 @@ sys-fs/reiserfsprogs
 *sys-libs/readline  
 *sys-libs/zlib
 
->=net-analyzer/ucd-snmp-4.1.2-r6
+>=net-analyzer/net-snmp-5.1.1
 
 >=net-dialup/ppp-2.4.1-r6
 

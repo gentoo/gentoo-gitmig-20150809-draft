@@ -13,7 +13,7 @@ qt		x11-libs/qt
 readline	sys-libs/readline
 ruby		dev-lang/ruby
 sdl		media-libs/libsdl
-snmp		net-analyzer/ucd-snmp
+snmp		net-analyzer/net-snmp
 ssl		dev-libs/openssl
 tcltk		dev-lang/tcl dev-lang/tk
 tcpd		sys-apps/tcp-wrappers

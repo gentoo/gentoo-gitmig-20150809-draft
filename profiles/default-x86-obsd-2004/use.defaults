@@ -49,7 +49,7 @@ opengl		virtual/opengl
 mozilla		net-www/mozilla
 gphoto2		media-gfx/gphoto2
 ldap		net-nds/openldap
-snmp		net-analyzer/ucd-snmp
+snmp		net-analyzer/net-snmp
 cdr		app-cdr/cdrtools
 scanner		media-gfx/sane-backends
 

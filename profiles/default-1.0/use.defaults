@@ -49,7 +49,7 @@ ruby		dev-lang/ruby
 scanner		media-gfx/sane-backends
 sdl		media-libs/libsdl
 slang		sys-libs/slang
-snmp		net-analyzer/ucd-snmp
+snmp		net-analyzer/net-snmp
 ssl		dev-libs/openssl
 svga		media-libs/svgalib
 tcltk		dev-lang/tcl dev-lang/tk

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.49 2005/02/01 14:20:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.50 2005/02/21 04:08:53 dragonheart Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -63,7 +63,6 @@ virtual/quicktime			media-libs/libquicktime
 virtual/ruby				dev-lang/ruby
 virtual/semi				app-emacs/semi
 virtual/skkserv				app-i18n/skkserv
-virtual/snmp				net-analyzer/net-snmp
 virtual/squeak-image		dev-lang/squeak-fullimage
 virtual/ssh					net-misc/openssh
 virtual/sylpheed			mail-client/sylpheed
