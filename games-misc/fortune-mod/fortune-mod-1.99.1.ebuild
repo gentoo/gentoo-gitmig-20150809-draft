@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.2 2004/05/13 07:52:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.3 2004/05/13 09:16:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,8 +16,6 @@ IUSE="offensive"
 DEPEND="virtual/glibc
 	app-text/recode"
 
-[ `use offensive` ] && off=1 || off=0
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -26,22 +24,29 @@ src_unpack() {
 		-e 's:/games::' \
 		-e 's:/fortunes:/fortune:' \
 		-e 's:FORTDIR=$(prefix)/usr:FORTDIR=$(prefix)/usr/bin:' \
-		-e "s:^CFLAGS=.*$:CFLAGS=\$(DEFINES) ${CFLAGS}:" \
-		Makefile
-	sed -i 's:char a, b;:short int a, b;:' util/rot.c
-
-	# fixes the '-m' segfault problem on _my_ computer, it might screw something else up i don't know about.
+		-e 's:^CFLAGS=.*$:CFLAGS=$(DEFINES) $(E_CFLAGS):' \
+		Makefile \
+		|| die "sed Makefile failed"
 	sed -i \
-		'/if (fp->utf8_charset)/{
+		-e 's:char a, b;:short int a, b;:' util/rot.c \
+		|| die "sed util/rot.c failed"
+
+	# fixes the '-m' segfault problem on _my_ computer,
+	# it might screw something else up i don't know about.
+	sed -i \
+		-e '/if (fp->utf8_charset)/{
 			N
 			/free (output);/d
-		}' fortune/fortune.c
+		}' fortune/fortune.c \
+		|| die "sed fortune/fortune.c failed"
+	use offensive && off=1 || off=0
 }
 
 src_compile() {
 	emake \
+		E_CFLAGS="${CFLAGS}" \
 		OFFENSIVE="${off}" \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
@@ -49,7 +54,7 @@ src_install() {
 		OFFENSIVE="${off}" \
 		prefix="${D}" \
 		install \
-		|| die
+		|| die "make install failed"
 
 	dodoc ChangeLog INDEX INSTALL Notes Offensive README TODO cookie-files
 }
