@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c8b65d3ba90cd64ca18929b4cebad9d ChangeLog 3476
-MD5 1b40385d511ef621838690233f0f825e nullmailer-1.00_rc7-r5.ebuild 4412
-MD5 168bac4c5bea8cf2db02faeafc447620 nullmailer-1.00_rc7-r2.ebuild 3530
-MD5 4a0ba7c75c29dc543543596959536f82 nullmailer-1.00_rc7-r4.ebuild 3827
-MD5 8503d82d63c16593181d2fdcf5498036 nullmailer-1.00_rc7-r1.ebuild 3179
-MD5 2fc76a6323b168ae1b13efa57d08a469 nullmailer-1.00_rc7.ebuild 3228
+MD5 a2d095c1c0e8ad7941e2906ab0a890b2 ChangeLog 3742
+MD5 0c0e050ec359f92b6a42c57ebe6b26b8 nullmailer-1.00_rc7-r5.ebuild 4415
+MD5 df1b62368f5f626e26eaf4b678948324 nullmailer-1.00_rc7-r2.ebuild 3533
+MD5 742c697dfe7b504eaa213fb5b20e7118 nullmailer-1.00_rc7-r4.ebuild 3830
+MD5 dd627bf2e85f34c159c4889a3503f70f nullmailer-1.00_rc7-r1.ebuild 3182
+MD5 c422882176b83baa82dc9ee2964f70f4 nullmailer-1.00_rc7.ebuild 3231
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 4a2517a7b69e06ec8f1dcc634f1f9f28 files/mailer.conf 1588
 MD5 ccc26a349646e55860dc06066004ce63 files/remotes.sample 301
@@ -18,7 +18,7 @@ MD5 4fbcdae998661648262584be8be8b7df files/digest-nullmailer-1.00_rc7-r1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCJ0jWLLFUmVNQ7rkRAv5CAJ91BjRzisQX9Abnb6eIDJen6TAoUgCgxsns
-Zhf2PyDOeRktZyQlTUxqAd8=
-=aB3j
+iD8DBQFCJ1oyLLFUmVNQ7rkRAs4CAKCCCu97JE2ka9qhiMfDpehkex/ecQCfRYb+
+YF2hvILwWn+pPt/hHtiTTWo=
+=bPdf
 -----END PGP SIGNATURE-----
