@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.6 2003/06/22 07:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.7 2003/07/18 22:01:13 tester Exp $
 
 IUSE="nls pic build nptl"
 
@@ -341,6 +341,12 @@ src_unpack() {
 	then
 		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-nptl-fix-include.patch
 	fi
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/2.3.2/glibc-2.3.2-amd64-nomultilib.patch
+	fi
 }
 
 setup_flags() {
@@ -522,21 +528,6 @@ EOF
 
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
-
-	if [ "$ARCH" = "amd64" ]
-	then
-		#/lib64 and /usr/lib64 fixups
-		cd ${D}
-		install -d lib
-		mv lib64/* lib/
-		rm -rf lib64
-		ln -s lib lib64
-		cd usr
-		install -d lib
-		mv lib64/* lib/
-		rm -rf lib64
-		ln -s lib lib64
-	fi
 
 }
 

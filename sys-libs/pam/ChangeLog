@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.28 2003/05/19 00:43:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.29 2003/07/18 22:01:13 tester Exp $
+
+  01 Jul 2003; Olivier Crete <tester@tester.ca> pam-0.75-r11.ebuild:
+  Configure finds db4
 
   18 May 2003; Tavis Ormandy <taviso@gentoo.org> pam-0.75-r11.ebuild:
   If glib was compiled with ccc, we need -lots.

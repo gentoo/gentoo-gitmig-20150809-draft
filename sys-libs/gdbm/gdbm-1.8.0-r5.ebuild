@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.23 2003/06/22 06:14:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.24 2003/07/18 22:01:13 tester Exp $
 
 inherit gnuconfig
 
@@ -28,6 +28,7 @@ src_unpack() {
 	use alpha && gnuconfig_update
 	use arm && gnuconfig_update
 	use hppa && gnuconfig_update
+	use amd64 && gnuconfig_update
 }
 
 src_compile() {
