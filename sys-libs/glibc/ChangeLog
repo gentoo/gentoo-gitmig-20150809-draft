@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.239 2004/08/16 04:57:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.240 2004/08/16 18:57:20 lv Exp $
+
+  16 Aug 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch, glibc-2.3.4.20040808.ebuild:
+  added ld.so brk patch, which should fix the upstream bug detailed at
+  http://sources.redhat.com/bugzilla/show_bug.cgi?id=227
 
   15 Aug 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.3_pre20040207.ebuild:
   removed ebuild now that alpha and ia64 dont use it
