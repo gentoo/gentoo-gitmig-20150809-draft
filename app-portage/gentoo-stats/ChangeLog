@@ -1,6 +1,6 @@
 # ChangeLog for app-portage/gentoo-stats
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.5 2004/06/24 21:49:53 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.6 2005/01/01 15:53:21 eradicator Exp $
 
 *gentoo-stats-0.5.1 (29 Mar 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/guitoo-0.47.0.ebuild,v 1.1 2004/10/24 22:05:54 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/guitoo-0.47.0.ebuild,v 1.2 2005/01/01 15:53:35 eradicator Exp $
 
 inherit kde
 need-kde 3.2

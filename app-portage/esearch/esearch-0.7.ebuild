@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.ebuild,v 1.9 2004/12/31 15:07:52 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.ebuild,v 1.10 2005/01/01 15:52:01 eradicator Exp $
 
 DESCRIPTION="Replacement for 'emerge --search' with search-index"
 HOMEPAGE="http://david-peter.de/esearch.html"
