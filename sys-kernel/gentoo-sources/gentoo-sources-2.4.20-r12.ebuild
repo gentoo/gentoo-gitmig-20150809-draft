@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r10.ebuild,v 1.1 2004/01/06 15:17:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r12.ebuild,v 1.1 2004/02/16 16:11:59 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -30,10 +30,10 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV/10/5}.tar.bz2"
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/12/11}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="-* ~amd64"
 SLOT="${KV}"
 
 
@@ -41,10 +41,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV/10/5}
-
-	# Move over new iptables-ROUTE patch
-	cp ${FILESDIR}/gentoo-sources-2.4.20-ipt-route.patch 727_iptables-ROUTE
+	cd ${WORKDIR}/${KV/12/11}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if [ -z "`use aavm`" ]; then
@@ -118,24 +115,18 @@ src_unpack() {
 		done
 	fi
 
-	kernel_src_unpack
+	kernel_exclude
+	./addpatches . ${WORKDIR}/linux-${KV} || die "Could not add patches!"
+	kernel_universal_unpack || die "Could not unpack!"
 
 	epatch ${FILESDIR}/security.patch1
 	epatch ${FILESDIR}/security.patch2
 	epatch ${FILESDIR}/security.patch3
 	epatch ${FILESDIR}/security.patch4
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-gcc33.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-cs46xx-gcc33.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-datasize_fix.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-disabled.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-sched-interrupt.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-mdcount.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-devfs-snd-fix.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-ipt-realm.patch
-	epatch ${FILESDIR}/gentoo-sources-2.4.20-hpt372.patch
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() fix!"
 	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2003-0985.patch || die "Failed to apply mremap() fix!"
+	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-rtc_fix.patch || die "Failed to apply RTC fix!"
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r11.ebuild,v 1.1 2004/02/08 16:05:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r11.ebuild,v 1.2 2004/02/16 16:11:59 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -126,6 +126,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() fix!"
 	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2003-0985.patch || die "Failed to apply mremap() fix!"
+	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-rtc_fix.patch || die "Failed to apply RTC fix!"
 
 }
