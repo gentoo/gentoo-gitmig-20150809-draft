@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc1.ebuild,v 1.1 2003/03/13 18:01:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc1.ebuild,v 1.2 2003/07/11 19:55:41 aliz Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://${PN}.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 		dev-libs/fftw
