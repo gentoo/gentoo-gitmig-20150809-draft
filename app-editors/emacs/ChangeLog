@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.38 2004/10/03 11:52:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.39 2004/10/06 11:41:44 gmsoft Exp $
+
+  06 Oct 2004; Guy Martin <gmsoft@gentoo.org> emacs-21.3-r3.ebuild,
+  emacs-21.3-r4.ebuild:
+  Stable on hppa.
 
   03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +files/60emacs-21.envd,
   -files/emacs-21.1-gentoo.diff, +files/emacs-21.desktop,
