@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r1.ebuild,v 1.5 2002/08/14 11:58:50 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.1 2002/09/26 15:59:00 karltk Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -44,14 +44,14 @@ src_install() {
 	
 	# fix the tkConfig.sh to eliminate refs to the build directory
 	sed -e "s,^TK_BUILD_LIB_SPEC='-L${S2}/unix,TCL_BUILD_LIB_SPEC='-L/usr/lib," \
-		-e "s,^TK_SRC_DIR='${S2}',TCL_SRC_DIR='/usr/lib/tk${V2}/include'," \
+		-e "s,^TK_SRC_DIR='${S2}',TCL_SRC_DIR='/usr/lib/tk${v1}/include'," \
 		-e "s,^TK_BUILD_STUB_LIB_SPEC='-L${S2}/unix,TCL_BUILD_STUB_LIB_SPEC='-L/usr/lib," \
 		-e "s,^TK_BUILD_STUB_LIB_PATH='${S2}/unix,TCL_BUILD_STUB_LIB_PATH='/usr/lib," \
 		${D}/usr/lib/tkConfig.sh > ${D}/usr/lib/tkConfig.sh.new
 	mv ${D}/usr/lib/tkConfig.sh.new ${D}/usr/lib/tkConfig.sh
 	
 	# install private headers
-	dodir /usr/lib/tk${V2}/include/unix
+	dodir /usr/lib/tk${v1}/include/unix
 	install -c -m0644 ${S}/unix/*.h ${D}/usr/lib/tk${v1}/include/unix
 	dodir /usr/lib/tk${v1}/include/generic
 	install -c -m0644 ${S}/generic/*.h ${D}/usr/lib/tk${v1}/include/generic
