@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/daphne
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.7 2004/07/01 11:13:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.8 2004/08/08 03:20:00 mr_bones_ Exp $
+
+  07 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  daphne-0.99.6-r2.ebuild:
+  filter flags before they're placed in the Makefile; error check sed; tidy
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   daphne-0.99.6-r2.ebuild:
