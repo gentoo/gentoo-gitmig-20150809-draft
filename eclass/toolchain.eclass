@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.15 2004/09/13 17:32:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.16 2004/09/13 20:58:38 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -443,13 +443,17 @@ create_vanilla_specs_file() {
 	if use hardened ; then
 		# if using hardened, then we need to move xgcc out of the way
 		# and recompile it
+		cp Makefile Makefile.orig
 		sed -i -e 's#ALL_CFLAGS = -DEFAULT_PIE_SSP#ALL_CFLAGS = #' Makefile
 		mv xgcc xgcc.hard
-		rm gcc.o
+		mv gcc.o gcc.o.hard
 		make xgcc
 		einfo "Creating a vanilla gcc specs file"
 		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+		# restore everything to normal
+		mv gcc.o.hard gcc.o
 		mv xgcc.hard xgcc
+		mv Makefile.orig Makefile
 	else
 		einfo "Creating a vanilla gcc specs file"
 		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
@@ -463,13 +467,17 @@ create_hardened_specs_file() {
 	if use !hardened ; then
 		# if not using hardened, then we need to move xgcc out of the way
 		# and recompile it
+		cp Makefile Makefile.orig
 		sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE_SSP #' Makefile
 		mv xgcc xgcc.vanilla
-		rm gcc.o
+		mv gcc.o gcc.o.vanilla
 		make xgcc
 		einfo "Creating a hardened gcc specs file"
 		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+		# restore everything to normal
+		mv gcc.o.vanilla gcc.o
 		mv xgcc.vanilla xgcc
+		mv Makefile.orig Makefile
 	else
 		einfo "Creating a hardened gcc specs file"
 		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
@@ -479,8 +487,8 @@ create_hardened_specs_file() {
 
 
 split_out_specs_files() {
-	create_vanilla_specs_file || die "failed to split out vanilla specs"
 	create_hardened_specs_file || die "failes to split out hardened specs"
+	create_vanilla_specs_file || die "failed to split out vanilla specs"
 }
 
 
