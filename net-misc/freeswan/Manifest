@@ -1,10 +1,11 @@
-MD5 824202e947735fbfea20b8ee0fc111df freeswan-1.99-r1.ebuild 1997
-MD5 94f018600eed9bae4b9282d6c41b2979 freeswan-2.04-r1.ebuild 2140
-MD5 bcb1ee913a0a68f0ada185caf54ebeda ChangeLog 4159
-MD5 c9d291df91d4b9f030745974c8dee122 metadata.xml 1949
-MD5 1ae4ab90e64587c2055c9b9389f868be files/ipsec 1533
-MD5 c744919016d382410c67a7e832720ac1 files/freeswan-1.99-spi.c.patch 356
-MD5 a6f751bad152788dfa4d33fab7fa1bb6 files/freeswan-gentoo-cflags.patch 2168
-MD5 d6148f9ab8bf549044beb2322ec64d1a files/digest-freeswan-1.99-r1 148
-MD5 6593745db1854b5a1fe8f043c951d402 files/freeswan-2.04-gentoo.patch 16820
-MD5 0ba9c9ac85a5211c4052ace018930a29 files/digest-freeswan-2.04-r1 142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5dc4c1e558cdca982913b6acb4c0b7c0 ChangeLog 4373
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+fnhmdTrptrqvGERAg92AJ0Qt8tTK50BCs8X1vxMREUbvJAuDgCfdehT
+RjW4sUIfk3g3LMXDVlCinZY=
+=g+7J
+-----END PGP SIGNATURE-----
