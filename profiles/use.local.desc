@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.832 2005/01/03 14:48:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.833 2005/01/03 21:20:03 gustavoz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -387,6 +387,7 @@ media-sound/beep-media-player:mp3 - Enable the MP3 input plugin (mpg123)
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bpmdj:mp3 - Add support for reading mp3 files
 media-sound/daapd:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
+media-sound/daapd:mpeg4 - Enable AAC metadata support
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
