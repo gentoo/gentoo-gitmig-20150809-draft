@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.44 2003/09/25 01:12:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.45 2003/11/01 13:03:20 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -19,12 +19,7 @@ case "$PV" in
 	2.2.2*)			SRC_PATH="2.2.2/src/${P}.tar.bz2" ;;
 	3.2.0_alpha1)		SRC_PATH="unstable/3.1.91/src/${P//3.2.0_alpha1/3.1.91}.tar.bz2" ;;
 	3.2.0_alpha2)		SRC_PATH="unstable/3.1.92/src/${P//3.2.0_alpha2/3.1.92}.tar.bz2" ;;
-	3.2_beta2)		SRC_PATH="unstable/kde-3.1-beta2/src/${P//3.1_beta2/3.0.8}.tar.bz2" ;;
-	3.2_rc1)		SRC_PATH="unstable/kde-3.1-rc1/src/${P//3.1_rc1/3.0.9}.tar.bz2" ;;
-	3.2_rc2)		SRC_PATH="unstable/kde-3.1-rc2/src/${P//3.1_rc2/3.0.98}.tar.bz2" ;;
-	3.2_rc3)		SRC_PATH="unstable/kde-3.1-rc3/src/${P//3.1_rc3/3.0.99}.tar.bz2" ;;
-	3.2_rc5)		SRC_PATH="unstable/kde-3.1-rc5/src/${P//_}.tar.bz2" ;;
-	3.1_rc6)		SRC_PATH="unstable/kde-3.1-rc6/src/${P//_}.tar.bz2" ;;
+	3.2.0_beta1)		SRC_PATH="unstable/3.1.93/src/${P//3.2.0_beta1/3.1.93}.tar.bz2" ;;
 	3.1.1a)			SRC_PATH="stable/$PV/src/${PN}-3.1.1.tar.bz2"
 				SRC_URI="$SRC_URI mirror://gentoo/${PN}-${PVR}.diff.bz2" ;;
 	3*)			SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
@@ -40,7 +35,7 @@ need-kde $PV
 # 3.2 prereleases
 [ "$PV" == "3.2.0_alpha1" ] && S=${WORKDIR}/${PN}-3.1.91
 [ "$PV" == "3.2.0_alpha2" ] && S=${WORKDIR}/${PN}-3.1.92
-[ "$PV" == "3.1_beta2" ] && S=${WORKDIR}/${PN}-3.0.8
+[ "$PV" == "3.2.0_beta1" ] && S=${WORKDIR}/${PN}-3.1.93
 [ "$PV" == "3.1_rc1" ] && S=${WORKDIR}/${PN}-3.0.9
 [ "$PV" == "3.1_rc2" ] && S=${WORKDIR}/${PN}-3.0.98
 [ "$PV" == "3.1_rc3" ] && S=${WORKDIR}/${PN}-3.0.99
