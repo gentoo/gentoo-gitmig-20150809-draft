@@ -6,9 +6,11 @@ MD5 56aa8e1c0831946575e45a4eb93321a9 binutils-2.14.90.0.6-r6.ebuild 6574
 MD5 8aabe081dcf8721ab9ec3c549e32359f binutils-2.14.90.0.6-r7.ebuild 6699
 MD5 b7455f9d08e1b8197df087bfd7b0dd54 binutils-2.15.90.0.1.1-r1.ebuild 4715
 MD5 2aade0291cfc9bf83249ec69e98dfefd binutils-2.15.90.0.1.1-r3.ebuild 4750
+MD5 ee1931e1a905ac742b6e33a03fe64fdc binutils-2.14.90.0.7.ebuild 5522
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 d4f868f9ec53c121c29bd354521187c0 binutils-2.14.90.0.7-r4.ebuild 6244
 MD5 ff2a0e13a819093f9c617a51b92baf9b binutils-2.14.90.0.8-r1.ebuild 5013
+MD5 74a378a02192d0a6844adbb0e79e8d11 binutils-2.14.90.0.8.ebuild 4477
 MD5 d95e29cfa911f690c2645ab2ffbc2d5f binutils-2.15.90.0.3-r3.ebuild 4937
 MD5 5af514431a384af812da84665ea8612a binutils-2.15.91.0.1.ebuild 4668
 MD5 5705246a4fb89bf4ef2da82e9ee5e713 binutils-2.15.91.0.1-r1.ebuild 4654
@@ -19,10 +21,12 @@ MD5 e028ff3d2a6829f26d2da9ab69715216 binutils-2.15.92.0.2-r1.ebuild 4960
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r6 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
+MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7 75
 MD5 d750e6ba22d43396a290e44d3b1f6c72 files/digest-binutils-2.15.90.0.1.1-r1 161
 MD5 f5cb20158fe6b87f03a2366b68866343 files/digest-binutils-2.15.90.0.1.1-r3 161
 MD5 83bd52b9c2e975443e2a8b11b59c7441 files/digest-binutils-2.15.90.0.3-r3 159
 MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7-r4 75
+MD5 4f815f7f13b34c24939c85733607774b files/digest-binutils-2.14.90.0.8 159
 MD5 9ee0463e60aaa51448aba92f5fc86f04 files/digest-binutils-2.15.91.0.1 159
 MD5 56997eac01c0ed47fd5e4e15149f7b6e files/digest-binutils-2.15.91.0.1-r1 159
 MD5 66df5567226338b7504bbd3c25cea92c files/libiberty-pic.patch 370
@@ -87,7 +91,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdomJHTu7gpaalycRAifIAJ9PXouhwZbmkcFW42CJ2ZL3M0kywwCgpbd8
-fiCjeVqOHl4f+xlNV+YmHfU=
-=urbS
+iD8DBQFBdokoHTu7gpaalycRAmREAJ9n128l8hUDr/HiOmUUZ/XG/iP9AQCfS9H1
+zbCOKfCIckeI62G5TFM97eA=
+=I/D6
 -----END PGP SIGNATURE-----
