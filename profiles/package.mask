@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (28 Sep 2002)
+# masking new lbreakout2 build to respect the freeze
+=app-games/lbreakout2-2.3.5
+
 # <bcowan@gentoo.org> (27 Sep 2002)
 # updated verion that includes all the patches and fixes over the last 2 years
 =sys-apps/procps-2.0.8
