@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-3.0.ebuild,v 1.3 2004/08/22 14:44:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-3.0.ebuild,v 1.4 2004/09/14 15:51:45 ribosome Exp $
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.scilab.org/"
 LICENSE="scilab"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="tcltk atlas gtk gtk2 Xaw3d"
+IUSE="ifc tcltk atlas gtk gtk2 Xaw3d"
 
 RDEPEND="virtual/x11
 	sys-libs/ncurses
@@ -31,8 +31,32 @@ RDEPEND="virtual/x11
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 DEPEND="${RDEPEND}
+	ifc? ( dev-lang/ifc )
 	app-text/sablotron
 	dev-libs/libxslt"
+
+pkg_setup() {
+	if ! which ${F77:-g77} &> /dev/null; then
+		echo
+		eerror "The Fortran compiler \"${F77:-g77}\" could not be found on your system."
+		if [ -z ${F77} ] || [ ${F77} = g77 ]; then
+			eerror 'Please reinstall "sys-devel/gcc" with the "f77" "USE" flag enabled.'
+		elif [ ${F77} = ifc ] && ! use ifc &> /dev/null; then
+			eerror 'Please set the "ifc" "USE" flag if you want to use the Intel Fortran'
+			eerror 'Compiler to build this package. This will ensure the "dev-lang/ifc"'
+			eerror 'package gets installed on your system.'
+		elif [ ${F77} = ifc ] && use ifc &> /dev/null; then
+			eerror 'Please ensure "ifc" is in a directory referenced in "PATH".'
+		else
+			eerror 'Please make sure the variable ${F77} is set to the name of a valid'
+			eerror 'Fortran compiler installed on your system. Make sure this executable'
+			eerror 'is in a directory referenced by "PATH", and that the corresponding'
+			eerror '"USE" flag is set if applicable (for example "ifc" if you use the'
+			eerror 'Intel Fortran Compiler).'
+		fi
+		die "Fortran compiler not found."
+	fi
+}
 
 src_compile() {
 	local myopts
