@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.10 2003/04/06 02:25:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.11 2003/08/15 06:00:29 strider Exp $
+
+  15 Aug 2003; Adrian Almenar <strider@gentoo.org> antlr-2.7.1-r3.ebuild,
+  antlr-2.7.2.ebuild, antlr-2.7.2_alpha2-r1.ebuild, antlr-2.7.2_alpha2.ebuild:
+  Fixes bug 21887, That makes the ebuild to build with jikes java compiler,
+  Thanks to Jonas Berlin <jberlin@cc.hut.fi> for the patch
 
 *antlr-2.7.2 (05 Apr 2003)
   02 Apr 2003; Robin Johnson <robbat2@gentoo.org> antlr-2.7.2.ebuild,

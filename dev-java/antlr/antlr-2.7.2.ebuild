@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.3 2003/04/06 02:25:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.2.ebuild,v 1.4 2003/08/15 06:00:29 strider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A parser generator for Java and C++, written in Java"
 SRC_URI="http://www.antlr.org/download/${P}.tar.gz"
 HOMEPAGE="http://www.antlr.org"
 DEPEND=">=virtual/jdk-1.2
-	>=dev-java/jikes-1.13"
+	jikes? ( >=dev-java/jikes-1.13 )"
 SLOT="2"
 LICENSE="ANTLR"
 KEYWORDS="x86"
-IUSE=""
+IUSE="jikes"
 
 src_unpack() {
 	unpack ${A}
@@ -19,7 +19,9 @@ src_unpack() {
 }
 
 src_compile() {
-	export JAVAC=jikes
+	if [ -n "`use jikes`" ] ; then
+		export JAVAC=jikes
+	fi
 	echo $CLASSPATH
 	econf || die	
 	make antlr.jar antlr.debug.jar antlrall.jar all || die
