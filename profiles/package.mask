@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3722 2005/03/13 13:26:04 motaboy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3723 2005/03/13 18:45:01 danarmak Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -726,6 +726,7 @@ media-video/cinelerra
 >=kde-base/networkstatus-3.4.0_beta
 >=kde-base/ksvg-3.4.0_beta
 >=kde-base/konq-plugins-3.4.0_beta
+>=kde-base/kdebase-data-3.4.0_beta
 
 # <greg_g@gentoo.org> (14 Jan 2005)
 # Beta release of KDE 3.4
