@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.8 2002/11/26 00:45:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.9 2002/12/02 10:50:56 azarah Exp $
+
+  02 Dec 2002; foser <foser@gentoo.org> fontconfig-2.0-r3.ebuild :
+  Depend on freetype-2.1.2-r2, as it fixes bug #10028.
 
 *fontconfig-2.0-r4 (26 Nov 2002)
 
