@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.1 2004/09/02 02:54:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.2 2004/10/07 02:17:48 eradicator Exp $
+
+IUSE=""
 
 inherit gcc eutils
 
@@ -15,8 +17,7 @@ HOMEPAGE="http://www.xfig.org"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-IUSE=""
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa amd64"
 
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
@@ -39,14 +40,14 @@ src_compile() {
 	xmkmf || die "xmkmf failed"
 	make Makefiles || die "make Makefiles failed"
 
-	emake BINDIR=/usr/bin LIBDIR=/usr/lib || die "emake failed"
+	emake BINDIR=/usr/bin LIBDIR=/usr/$(get_libdir) || die "emake failed"
 }
 
 src_install() {
 	make \
 		DESTDIR=${D} \
 		BINDIR=/usr/bin \
-		LIBDIR=/usr/lib \
+		LIBDIR=/usr/$(get_libdir) \
 		install || die
 
 	#Install docs
