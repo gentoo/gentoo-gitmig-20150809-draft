@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.6 2004/07/01 12:04:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/spellutils-0.7.ebuild,v 1.7 2004/09/12 15:54:21 slarti Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.worldonline.dk/byrial/spellutils/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64"
 
 DEPEND="virtual/libc"
 
