@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.1 2004/03/09 23:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.2 2004/03/13 01:29:26 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -27,7 +27,6 @@ src_unpack() {
 	cvs_src_unpack
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-kde-menu.patch
-	epatch ${FILESDIR}/${PV}-edox.patch
 	sed -i 's:$srcdir/configure.*::' autogen.sh
 	./autogen.sh
 }
