@@ -94,10 +94,6 @@ sys-devel/prelink
 # B0rks jabber-server, using 1.4.0 instead
 ~dev-libs/pth-1.4.1
 
-# <verwilst@gentoo.org> (12 Nov 2002)
-# Still under construction, DOES NOT WORK YET
-=net-im/jabber-server-1.4.2-r2
-
 # <danarmak@gentoo.org> (19 Nov 2002)
 # kde 3.1 final; masked because the tarballs are not yet generaly available
 ~kde-base/arts-1.1.0.4
