@@ -573,3 +573,7 @@ app-cdr/cddump
 # ugh, this package is just dirty with its installation
 # masking until the user and I can sort it out
 =net-irc/quirc-0.9.82
+
+#seemant@gentoo.org 26 Apr 2002
+# this package is obsolete
+>=media-sound/grip-id3v2-2.96
