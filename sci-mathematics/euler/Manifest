@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1901a8bbd3d3e910d377d1e6bac46981 euler-1.60.6.ebuild 1207
-MD5 715508f6f99063c47e0f9613eba768ac euler-1.60.6-r1.ebuild 1258
-MD5 3db7dc62d8392f50ee8573ffdc762c8d ChangeLog 2708
+MD5 66f470c890f30cfe34c401279571fa7b ChangeLog 2840
+MD5 9dcac711ca2014456bdd12d69a4e601b euler-1.60.6-r1.ebuild 1258
+MD5 d7e5c552e4ffc8be8ee04d8e76dea621 euler-1.60.6.ebuild 1208
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 25c07f2cd7585d6b674ba310cf33fafa files/digest-euler-1.60.6 64
-MD5 797a67ee56e452b239fbadb6a9a8c319 files/euler-1.60.6.patch 284
 MD5 25c07f2cd7585d6b674ba310cf33fafa files/digest-euler-1.60.6-r1 64
 MD5 9efb40aa017b65e543bc280229e78da6 files/euler-1.60-compound_statements.patch 851
+MD5 797a67ee56e452b239fbadb6a9a8c319 files/euler-1.60.6.patch 284
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0bzwI1lqEGTUzyQRArcNAJ9KI84IblwxqDoMMsSnA0Q1bJJeDACfbX8F
-JCDl69GDWVbGbOmoEDZ7L6M=
-=0zq/
+iD8DBQFB5AnwKRy60XGEcJIRArDeAKCj/UaqCVsuIH6B0QXVcxUUrjOwZQCgrIf0
+2qGcMkV7hztKrjr5T/inX9A=
+=vf2W
 -----END PGP SIGNATURE-----
