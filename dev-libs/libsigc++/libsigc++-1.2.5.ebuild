@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.12 2004/03/09 23:15:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.5.ebuild,v 1.13 2004/03/31 00:17:47 lv Exp $
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -15,11 +15,17 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf
-	[ "${ARCH}" = "amd64" ] && libtoolize -c -f
+	if [ "${ARCH}" = "amd64" ]; then
+		myconf="${myconf} --enabled-maintainer-mode"
+		libtoolize -c -f --automake
+		aclocal -I scripts $ACLOCAL_FLAGS
+		automake --add-missing --copy
+		autoconf
+	fi
 	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
-	econf ${myconf} --enable-threads || die
+	econf ${myconf} --enable-maintainer-mode --enable-threads || die
 	emake || die "emake failure"
 }
 
