@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.6 2003/05/26 21:17:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.7 2003/05/26 23:01:43 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -150,13 +150,13 @@ replace-cxx-hardcode()
 is-ccc()
 {
 	# return true if ccc is being used.
-	[ "${ARCH}:`basename ${CC}`" == "alpha:ccc" ]
+	[ "${ARCH}:`basename ${CC:-gcc}`" == "alpha:ccc" ]
 }
 
 is-cxx()
 {
 	# return true if cxx is being used
-	[ "${ARCH}:`basename ${CXX}`" == "alpha:cxx" ]
+	[ "${ARCH}:`basename ${CXX:-g++}`" == "alpha:cxx" ]
 }
 
 replace-ccc-g()
