@@ -1,9 +1,19 @@
-MD5 75c6ecea4a2509284967247335b2fe37 ChangeLog 1915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2ba299026c1029679affd5dcaaf8d2f2 ChangeLog 2036
 MD5 2d167648537163c673984e9ed47a4753 larswm-7.2.10.ebuild 727
 MD5 4b470e3e833fafd59c0a36e3290ea44d metadata.xml 604
-MD5 f3e1ee4e3bf2494212a6012da6ba1d46 larswm-7.5.3.ebuild 888
-MD5 0ef1907514f61021286f0170fd34efc2 larswm-7.5.2.ebuild 877
+MD5 ff39e78505e225d0878e5c706d657e97 larswm-7.5.3.ebuild 886
+MD5 43c6efb28a54cb0368ea2f25c99d0539 larswm-7.5.2.ebuild 873
 MD5 149f89980efd02462740c16d93dfb871 files/digest-larswm-7.2.10 64
 MD5 6f120345b5bf7816c3efcf73fe74266d files/digest-larswm-7.5.3 63
-MD5 503a5e0afa8702fb702b3a67648576e0 files/larswm.desktop 128
 MD5 4b53a7489368e57db5a58ac1a4961212 files/digest-larswm-7.5.2 63
+MD5 503a5e0afa8702fb702b3a67648576e0 files/larswm.desktop 128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBaDj6VWNWqTUmv+0RAri9AKCrLTlJqWLIymz7jyAsM28ZynysxwCgod+Z
+KDrNUSTYqEl18Qenj5W+rg8=
+=UmK8
+-----END PGP SIGNATURE-----
