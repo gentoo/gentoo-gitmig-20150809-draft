@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.10 2005/02/12 05:15:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.11 2005/02/12 10:20:19 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -938,6 +938,19 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
+
+if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
+	DEPEND="${DEPEND}
+	        >=${CATEGORY}/gcc-3.3.5-r1"
+
+	if [[ ${CATEGORY/mips} != ${CATEGORY} ]]; then
+		DEPEND="${DEPEND}
+		        >=${CATEGORY}/mips-headers-2.6.8.1"
+	else
+		DEPEND="${DEPEND}
+		        >=${CATEGORY}/linux-headers-2.6.8"
+	fi
+fi
 
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
