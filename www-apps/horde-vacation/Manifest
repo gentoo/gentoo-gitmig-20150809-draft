@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a64fe0de357b23f7e86e1722ee19049a ChangeLog 1071
 MD5 b2a2148f68a4e56f6272b505210b2fd4 horde-vacation-2.2.ebuild 433
 MD5 cea755126ddbd78c8e6ce1c63c1d0216 metadata.xml 992
-MD5 600b3c191e2c4e705616ee9aefbd0c6c ChangeLog 937
+MD5 02a286f51e4a79bda21bb26573cdc8f8 horde-vacation-2.2.1.ebuild 441
 MD5 520fdede856558ee941b0cae48b86e51 files/digest-horde-vacation-2.2 64
+MD5 5dfbda6e10d17e2476a95d01642353e0 files/digest-horde-vacation-2.2.1 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBOtIGI1lqEGTUzyQRArhHAJ4rluZz8QKuvSWiPlO2WJm+V5EOiwCfc+6d
-l9S6vlSsW4qFjU7EFLrxQxU=
-=YnjO
+iD8DBQFBy84WroRuSHgZdywRAuN3AJ9C37LJLUnu+hNpiDX6QIy7GsZeLgCgk6Sq
+rfVULyYWy1TiUf+j4I9zXO8=
+=JOj6
 -----END PGP SIGNATURE-----
