@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/adesklets
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.1 2005/03/08 16:49:39 s4t4n Exp $
+
+*adesklets-0.4.4 (08 Mar 2005)
+
+  08 Mar 2005; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.4.4.ebuild:
+  Initial import. Thanks to S.Fourmanoit bug #79927.
