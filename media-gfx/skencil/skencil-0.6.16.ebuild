@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.4 2004/06/24 22:49:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.5 2004/07/14 18:30:45 agriffis Exp $
 
 IUSE="nls"
-S=${WORKDIR}/${P}
 DESCRIPTION="Interactive X11 vector drawing program"
 SRC_URI="mirror://sourceforge/sketch/${P}.tar.gz"
 HOMEPAGE="http://sketch.sourceforge.net/"
