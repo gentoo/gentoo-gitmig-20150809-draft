@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.3 2005/03/29 06:35:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.4 2005/03/29 07:44:08 compnerd Exp $
 
 inherit java-pkg
 
@@ -15,6 +15,8 @@ IUSE="jikes"
 
 DEPEND="${RDEPEND}
 		virtual/jdk
+		dev-java/ant-core
+		jikes? ( dev-java/jikes )
 		app-arch/unzip"
 RDEPEND="virtual/jre
 		 dev-java/toolbar"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/toolbar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.3 2005/03/29 06:04:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.4 2005/03/29 07:41:30 compnerd Exp $
+
+  29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> toolbar-0.4.ebuild:
+  Adding ant-core to depend
 
   29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> toolbar-0.4.ebuild:
   Depend update, and QA fixes!
