@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p.ebuild,v 1.5 2005/01/19 00:47:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p.ebuild,v 1.6 2005/01/29 07:01:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -73,9 +73,6 @@ src_unpack() {
 
 	# Allow util-linux to be built with -fPIC
 	epatch ${FILESDIR}/${PN}-2.12i-pic.patch
-
-	# Install rdev on amd64 platform
-	epatch ${FILESDIR}/${PN}-2.12-amd64_rdev_installation.patch
 
 	# swapon gets confused by symlinks in /dev #69162
 	epatch ${FILESDIR}/${PN}-2.12p-swapon-check-symlinks.patch
