@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.0_beta1.ebuild,v 1.2 2005/01/17 09:13:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.0_beta1.ebuild,v 1.3 2005/01/18 15:47:34 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -17,8 +17,8 @@ DEPEND="media-libs/taglib
 KMEXTRACTONLY="arts/configure.in.in"
 
 pkg_setup() {
-	if ! useq arts; then
-		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
+	if ! useq arts && ! useq gstreamer; then
+		eerror "${PN} needs USE=\"arts\" (and kdelibs compiled with USE=\"arts\") or USE=\"gstreamer\""
 		die
 	fi
 }
