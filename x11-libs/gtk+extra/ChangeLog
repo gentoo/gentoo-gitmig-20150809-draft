@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.4 2003/02/12 09:22:55 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.5 2004/03/05 06:33:11 dragonheart Exp $
+
+  05 Mar 2004; Daniel Black <dragonheart@gentoo.org> gtk+extra-0.99.17.ebuild:
+  Added dev-libs/glib-1.2* to dependancies
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
