@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.2.ebuild,v 1.1 2004/04/21 20:51:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.2.ebuild,v 1.2 2004/04/21 21:33:17 squinky86 Exp $
 
 inherit libtool
 
@@ -29,9 +29,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "In order to run ${P}, please"
-	einfo "copy /usr/bin/overnet to the home directory"
-	einfo "of the user who will be using this program:"
-	einfo " cp /usr/bin/overnet ~/"
+	einfo "Please refer to ${HOMEPAGE} if you are"
+	einfo "unable to set up the client."
 	einfo
 }
