@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r2.ebuild,v 1.4 2001/08/15 11:50:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r2.ebuild,v 1.5 2001/08/15 11:51:58 hallski Exp $
 
 P=libgd-1.8.3
 A=gd-1.8.3.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.boutell.com/gd/"
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.0.7
-	~media-libs/freetype-1.3.1-r2
+	~media-libs/freetype-1.3.1
 	X? ( virtual/x11 )"
 
 src_unpack() {
