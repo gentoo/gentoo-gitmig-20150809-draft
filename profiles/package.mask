@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+# <max@gentoo.org> (30 Oct 2003)
+# Cyrus-imapd beta. Version 2.2.2_beta is planned to be the last release
+# before going final/stable.
+>=net-mail/cyrus-imapd-2.2
+>=net-mail/cyrus-imap-admin-2.2
+>=dev-libs/cyrus-imap-dev-2.2
+
 # <johnm@gentoo.org> (29 Oct 2003)
 # masking dev-sources-2.6.0-test9 until the next release goes out which will 
 # being development-sources back to vanilla only.
