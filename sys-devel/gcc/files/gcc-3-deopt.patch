@@ -1,0 +1,14 @@
+diff -Naur gcc-3.1.1/gcc/config/i386/i386.c gcc-3.1.1-optim/gcc/config/i386/i386.c
+--- gcc/config/i386/i386.c.orig	2002-07-15 01:54:35.000000000 -0500
++++ gcc/config/i386/i386.c	2002-08-13 21:08:43.000000000 -0500
+@@ -1187,10 +1187,6 @@
+       if (x86_3dnow_a & (1 << ix86_arch))
+ 	target_flags |= MASK_3DNOW_A;
+     }
+-  if ((x86_accumulate_outgoing_args & CPUMASK)
+-      && !(target_flags & MASK_ACCUMULATE_OUTGOING_ARGS_SET)
+-      && !optimize_size)
+-    target_flags |= MASK_ACCUMULATE_OUTGOING_ARGS;
+ 
+   /* Figure out what ASM_GENERATE_INTERNAL_LABEL builds as a prefix.  */
+   {

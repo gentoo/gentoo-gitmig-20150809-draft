@@ -1,6 +1,28 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.28 2002/07/30 20:30:36 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.29 2002/08/15 00:25:57 azarah Exp $
+
+*gcc-3.2_pre-r1 (15 Aug 2002)
+
+  15 Aug 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2_pre-r1 :
+  
+  New snapshot.
+
+  Fixes a bug in gcc-3.1 and above ... -maccumulate-outgoing-args flag (added
+  in gcc-3.1) causes gcc to misconstruct the function call frame in many cases.
+  Thanks to Ronald Hummelink <ronald@hummelink.xs4all.nl> for bringing it to
+  our attention.
+  
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0319.html
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0350.html
+    http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0410.html
+    http://gcc.gnu.org/ml/gcc/2002-08/msg00731.html
+
+  NOTE to myself: I still have to apply the patch to the manpage *after*
+  compile.
+
+  Add --enable-__cxa_atexit to ./configure, fixing bug #6430.
 
 *gcc-3.1.1-r1 (30 Jul 2002)
 
