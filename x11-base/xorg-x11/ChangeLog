@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.77 2004/07/16 19:28:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.78 2004/07/17 03:21:51 cyfred Exp $
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; xorg-x11-6.7.0-r2.ebuild:
+  Adding ~amd64 keyword, tested and inline for opengl-update commits
 
   16 Jul 2004; Tom Gall <tgall@gentoo.org> xorg-x11-6.7.0-r2.ebuild:
   stable on ppc64 baby!
