@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1.ebuild,v 1.3 2004/07/31 07:34:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8.1.ebuild,v 1.4 2004/08/21 10:58:45 seemant Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -12,7 +12,8 @@ KEYWORDS="~x86 amd64 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~ia64 ~ppc64"
 IUSE=""
 GLEXT="20040714"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	app-arch/bzip2"
 
 pkg_setup() {
 	# xfree has glext.h somewhere out of place so lets make the user move it
@@ -39,11 +40,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	bzcat ${FILESDIR}/glext.h-${GLEXT}.bz2 > ${WORKDIR}/glext.h || die
+}
+
 src_install() {
 	newsbin ${FILESDIR}/opengl-update-${PV} opengl-update || die
 
 	# Install default glext.h
 	dodir /usr/lib/opengl/global/include
 	insinto /usr/lib/opengl/global/include
-	newins ${FILESDIR}/glext.h-${GLEXT} glext.h || die
+	doins ${WORKDIR}/glext.h || die
 }

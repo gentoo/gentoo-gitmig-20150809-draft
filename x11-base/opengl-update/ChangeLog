@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.39 2004/07/31 07:34:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.40 2004/08/21 10:58:45 seemant Exp $
+
+  21 Aug 2004; Seemant Kulleen <seemant@gentoo.org> -files/glext.h-20040714,
+  +files/glext.h-20040714.bz2, opengl-update-1.8.1.ebuild:
+  use a bzip2 compressed version of glext.h to save on rsyncing bandwidth --
+  it's still a little big, and could do with mirror storing
 
   31 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
   opengl-update-1.8.1.ebuild:
