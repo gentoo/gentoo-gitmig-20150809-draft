@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r1.ebuild,v 1.1 2004/10/13 00:51:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r1.ebuild,v 1.2 2004/10/13 01:06:10 latexer Exp $
 
 inherit eutils kernel-mod
 
@@ -36,13 +36,16 @@ src_unpack()
 	cd ${S}
 	kernel-mod_getversion
 
-	if [ "${KV_MINOR}" -gt 5 ] && [ "${KV_PATCH}" -gt 5 ]
+	if [ "${KV_MINOR}" -gt 5 ]
 	then
-		sed -i "s:SUBDIRS=:M=:" \
-			${S}/subfs${EXTRA_V}-${PV}/Makefile
-	else
-		eerror "This version of submount requires a kernel of 2.6.6 or greater"
-		die "Too old of a kernel found."
+		if [ "${KV_PATCH}" -gt 5 ]
+		then
+			sed -i "s:SUBDIRS=:M=:" \
+				${S}/subfs${EXTRA_V}-${PV}/Makefile
+		else
+			eerror "This version of submount requires a kernel of 2.6.6 or greater"
+			die "Too old of a kernel found."
+		fi
 	fi
 }
 
