@@ -172,7 +172,9 @@ int main(void) {
 	}
 
 	printf("%sSuccess!%s\n",color,off);		
-	mount("/dev/loop0","/","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
+//	The kernel will mount the new root filesystem.  We just set real-root-dev
+//	unmount proc and exit -- drobbins
+//	mount("/dev/loop0","/","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
 
 	//set real root device to /dev/loop0 (major 7, minor 0)
 	writefile("/proc/sys/kernel/real-root-dev","0x700");

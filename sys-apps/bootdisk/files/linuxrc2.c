@@ -167,7 +167,9 @@ int main(void) {
 	}
 
 	printf("%sSuccess!%s\n",color,off);		
-	mount("/dev/loop0","/mnt/cdrom","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
+//	drobbins is certain that this line should not be here
+//	the kernel should mount the new root filesystem
+//	mount("/dev/loop0","/mnt/cdrom","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
 
 	//set real root device to /dev/loop0 (major 7, minor 0)
 //	writefile("/proc/sys/kernel/real-root-dev","0x700");
