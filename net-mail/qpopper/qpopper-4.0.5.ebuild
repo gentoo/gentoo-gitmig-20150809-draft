@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.7 2003/09/05 08:55:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5.ebuild,v 1.8 2004/01/20 19:19:15 mholzer Exp $
 
 IUSE="ssl pam"
 
@@ -75,11 +75,11 @@ src_install() {
 
 	if use ssl; then
 		dodir /etc/mail/certs
-		fowners root.mail /etc/mail/certs
+		fowners root:mail /etc/mail/certs
 		fperms 660 /etc/mail/certs
 		mv cert.pem ${D}/etc/mail/certs
 		fperms 600 /etc/mail/certs/cert.pem
-		fowners root.0 /etc/mail/certs/cert.pem
+		fowners root:0 /etc/mail/certs/cert.pem
 	fi
 
 	doman man/popauth.8 man/popper.8
@@ -123,5 +123,4 @@ pkg_postinst () {
 	einfo "pop-3 stream tcp nowait root	/usr/sbin/tcpd
 		/usr/sbin/in.qpopper -f /etc/qpopper.conf"
 	einfo "into your /etc/inetd.conf"
-
 }

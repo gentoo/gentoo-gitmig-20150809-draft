@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/qpopper
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.10 2003/06/14 20:46:22 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.11 2004/01/20 19:19:15 mholzer Exp $
+
+  20 Jan 2004; Martin Holzer <mholzer@gentoo.org> qpopper-4.0.5.ebuild:
+  fowner syntax. Closes 38037
+
+  20 Jan 2004; Martin Holzer <mholzer@gentoo.org> qpopper-4.0.5.ebuild:
+  fowner syntax. Closes 38037
+
+  20 Jan 2004; Martin Holzer <mholzer@gentoo.org> qpopper-4.0.5.ebuild:
+  fowner syntax. Closes 38037
 
   14 Jun 2003; <aliz@gentoo.org> qpopper-4.0.5.ebuild :
   Removed installation of poppassd man page becuse binary isn't installed. Made configuration cleaner.
