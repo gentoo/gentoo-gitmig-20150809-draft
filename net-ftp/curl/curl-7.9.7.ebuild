@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.5 2002/08/06 18:15:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.6 2002/08/16 14:24:44 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Client that groks URLs"
@@ -12,7 +12,7 @@ DEPEND=">=sys-libs/pam-0.75
 
 SLOT="0"
 LICENSE="MPL X11"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 
