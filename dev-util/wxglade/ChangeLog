@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.10 2004/08/30 20:14:57 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.11 2004/10/16 01:13:43 pythonhead Exp $
+
+  15 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> wxglade-0.3.4.ebuild:
+  Marked stable x86 and fixed bug# 67673 Thanks Vaclav Slavik
+  <vaclav.slavik@matfyz.cz>
 
 *wxglade-0.3.4 (30 Aug 2004)
 
