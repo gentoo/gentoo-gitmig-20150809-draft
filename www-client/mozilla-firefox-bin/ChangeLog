@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.3 2005/03/23 17:31:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.4 2005/03/23 20:05:19 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  mozilla-firefox-bin-1.0.ebuild, mozilla-firefox-bin-1.0.1.ebuild,
+  mozilla-firefox-bin-1.0.1-r1.ebuild:
+  mozilla-launcher to www-client from net-www
 
 *mozilla-firefox-bin-1.0.1-r1 (23 Mar 2005)
 
