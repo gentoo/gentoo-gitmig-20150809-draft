@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.07.ebuild,v 1.1 2003/10/21 20:57:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.07.ebuild,v 1.2 2004/01/05 21:32:10 aliz Exp $
 
 IUSE=""
 
 DESCRIPTION="HeVeA is a quite complete and fast LaTeX to HTML translator"
 HOMEPAGE="http://pauillac.inria.fr/~maranget/hevea/"
-SRC_URI="ftp://ftp.inria.fr/INRIA/moscova/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.inria.fr/INRIA/moscova/hevea/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
