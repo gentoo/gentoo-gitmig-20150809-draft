@@ -1,5 +1,5 @@
-MD5 e3d04b3501b7e09c5d124ce23a0423ec module-info-0.20.ebuild 591
-MD5 67e937e57043089b69a6a47d78278c17 module-info-0.24.ebuild 608
+MD5 082693dbae6408f84f90c1aaf952e2cf module-info-0.20.ebuild 598
+MD5 9e33f29a41c2033d56687e36a27770fc module-info-0.24.ebuild 616
 MD5 03071d10a82e47f8856c2c5240aada21 ChangeLog 832
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 18663cc44364f4bed4075ed501e97aeb files/digest-module-info-0.20 67
