@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.7 2003/10/03 19:36:08 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.8 2003/10/06 22:52:44 vapier Exp $
 
-inherit gnuconfig flag-o-matic
+inherit gnuconfig flag-o-matic eutils
 
 DESCRIPTION="A dhcp client only"
 HOMEPAGE="http://www.phystech.com/download/"
@@ -48,7 +48,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	einstall sbindir=${D}/sbin || die "Install failed"
 	if [ -z "`use build`" ]
 	then
