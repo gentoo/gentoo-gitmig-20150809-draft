@@ -1,0 +1,7 @@
+# ChangeLog for app-misc/zisofs-tools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.1 2002/06/06 19:21:42 woodchip Exp $
+
+*zisofs-tools-1.0.3 (6 May 2002)
+  6 June 2002; Donny Davies <woodchip@gentoo.org> :
+  Freshly baked port.
