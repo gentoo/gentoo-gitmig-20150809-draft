@@ -1,10 +1,10 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.14 2004/11/16 09:27:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.15 2004/11/16 09:44:59 dragonheart Exp $
 
-  16 Nov 2004; Daniel Black <dragonheart@gentoo.org> qca-tls-1.0.ebuild:
-  Put it big dodgy workaround for broken qmake solving bug #46805. Thanks to
-  Eduardo <eduardo@edubox.org> and others for the bug report.
+  16 Nov 2004; Daniel Black <dragonheart@gentoo.org> +files/qca-pathfix.patch,
+  qca-tls-1.0.ebuild:
+  added good fix thanks to Gregorio Guidi <g.guidi@sns.it> in bug #46805
 
   16 Aug 2004; Tom Gall <tgall@gentoo.org> qca-tls-1.0.ebuild:
   stable on ppc64, bug #58226
