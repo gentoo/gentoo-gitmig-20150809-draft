@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.61 2003/06/11 14:45:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.62 2003/07/01 17:55:56 mholzer Exp $
+
+*mplayer-0.90-r2 (01 Jul 2003)
+
+  01 Jul 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.90-r2.ebuild,
+  files/mplayer-0.90-divx.patch:
+  Adding logic to detect newer DivX Api and patching. Closes #23795.
 
   11 Jun 2003; Jason Wever <weeve@gentoo.org> mplayer-0.90-r1.ebuild:
   Added ~sparc to keywords.
