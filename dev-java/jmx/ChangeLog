@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmx
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.12 2004/12/20 17:40:18 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.13 2005/01/20 15:43:09 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jmx-1.2.1.ebuild:
+  added missing jikes dependency.
 
   20 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   +files/build.xml-jdk1.5.patch, jmx-1.2.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.1 2004/10/30 18:52:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/jms-1.1.ebuild,v 1.2 2005/01/20 15:41:52 luckyduck Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE="jikes doc"
 RDEPEND=">=virtual/jre-1.3"
 DEPEND="app-arch/unzip
-		>=virtual/jdk-1.3"
+	jikes? ( dev-java/jikes )
+	>=virtual/jdk-1.3"
 RESTRICT="fetch"
 
 S=${WORKDIR}/${PN}${PV}

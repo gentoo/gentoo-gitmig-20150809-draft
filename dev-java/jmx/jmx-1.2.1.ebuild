@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.11 2004/12/20 17:40:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.12 2005/01/20 15:43:09 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~ppc ~amd64 ~sparc ~ppc64"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
-		sys-apps/sed"
+		sys-apps/sed
+		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 RESTRICT="fetch"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.8.5_pre9.ebuild,v 1.2 2005/01/01 18:12:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.8.5_pre9.ebuild,v 1.3 2005/01/20 15:45:27 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,8 @@ DESCRIPTION="c3p0 is a java component to provide an jdbc database pool"
 HOMEPAGE="http://c3p0.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.src.tgz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4"
+	>=dev-java/ant-1.4
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="LGPL-2"
 SLOT="0"
