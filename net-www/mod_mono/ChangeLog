@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_mono
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mono/ChangeLog,v 1.4 2004/06/18 00:51:32 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mono/ChangeLog,v 1.5 2004/06/18 00:58:38 zul Exp $
+
+*mod_mono-0.11 (17 Jun 2004)
+
+  17 Jun 2004; Chuck Short <zul@gentoo.org> mod_mono-0.11.ebuild:
+  Version bump. Closes 54062.
 
   17 Jun 2004; Chuck Short <zul@gentoo.org> mod_mono-0.10.ebuild:
   Stable for x86.
