@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gtktalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.5 2002/04/13 08:27:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.6 2002/05/05 23:33:41 spider Exp $
+
+
+*gtktalog-0.99.20 (06 May 2002)
+  06 May 2002; Spider <spider@gentoo.org> gtktalog-0.99.20.ebuild :
+  Update version
 
 *gtktalog-0.99.19 (06 Apr 2002)
   06 Apr 2002; Spider <spider@gentoo.org> gtktalog-0.99.19.ebuild :
