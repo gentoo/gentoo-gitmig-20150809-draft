@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.7 2004/06/27 23:03:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.8 2004/09/22 12:15:22 mr_bones_ Exp $
 
 inherit eutils
 
@@ -89,7 +89,7 @@ einfo " Frodo or FrodoPC if your machine is too slow.                       "
 einfo "                                                                     "
 einfo " Most Commodore 64 applications load by first pointing to the D64    "
 einfo " file in preferences, then:                                          "
-einfo "      LOAD "*",8,1                                                   "
+einfo "      LOAD \"*\",8,1                                                 "
 einfo " then:                                                               "
 einfo "      RUN                                                            "
 einfo "                                                                     "
