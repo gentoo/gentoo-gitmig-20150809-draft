@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/blogtk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.6 2004/10/14 20:03:59 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.7 2005/01/16 19:46:15 humpback Exp $
+
+*blogtk-1.1 (16 Jan 2005)
+
+  16 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>; metadata.xml,
+  -blogtk-0.8.ebuild, -blogtk-0.9.ebuild, blogtk-1.0.ebuild,
+  +blogtk-1.1.ebuild:
+  Marked 1.0 x86, removed older versions, fixed date on 1.0 and added 1.1 that
+  closes bug 78166, thanks to Jason Oliveira for bringing this to our attention.
+  also added myself as maintainer in metadata.xml
 
   14 Oct 2004; David Holm <dholm@gentoo.org> blogtk-1.0.ebuild:
   Added to ~ppc.
