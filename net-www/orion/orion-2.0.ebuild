@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.1 2003/03/22 03:28:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.2 2003/03/22 04:07:30 absinthe Exp $
 
-inherit eutils
 
 S=${WORKDIR}/${PN}
 
@@ -34,10 +33,12 @@ src_unpack() {
 
 
 pkg_setup() {
-	enewgroup orion 260
-	enewuser orion 260 /bin/bash /opt/orion orion
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-        sleep 10
+	if ! groupmod orion ; then
+		groupadd -g 260 orion || die "problem adding group orion"
+	fi
+	if ! id orion; then
+		useradd -g orion -s /bin/bash -d /opt/orion -c "orion" orion || die "problem adding user orion"
+	fi
 }
 
 
@@ -71,13 +72,12 @@ src_install() {
 	doins ${S}/orion
 
 	# CREATE DUMMY LOG & PERSISTENCE DIR
-	touch ${S}/stdout.log
-	touch ${S}/dummy
+	touch ${S}/.keep
 	insinto /var/log/${PN}
 	insopts -o orion -g orion
-	doins ${S}/stdout.log
+	doins ${S}/.keep
 	insinto /opt/${PN}/persistence
-	doins ${S}/dummy
+	doins ${S}/.keep
 
 	# INSTALL EXTRA FILES
 	local dirs="applications database default-web-app demo lib persistence autoupdate.properties"
@@ -108,6 +108,7 @@ src_install() {
 pkg_postinst() {
 	einfo " "
 	einfo " NOTICE!"
+	einfo " User and group 'orion' have been added."
 	einfo " Please set a password for the user account 'orion'"
 	einfo " if you have not done so already."
 	einfo " "

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/files/2.0/orion.init,v 1.1 2003/03/22 03:28:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/files/2.0/orion.init,v 1.2 2003/03/22 04:07:30 absinthe Exp $
 
 depend() {
 	need net
@@ -9,6 +9,7 @@ depend() {
 
 start()	{
 	ebegin "Starting orion"
+	cd ${ORION_DIR}
 	su - orion -c /opt/orion/sbin/start_orion.sh 
 	eend $?
 }
