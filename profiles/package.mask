@@ -484,3 +484,9 @@ dev-lang/tcl-tk
 # unpack and try
 =media-sound/esound-0.2.24-r50
 
+#seemant@gentoo.org 28 Mar 2002
+# pwlib compile is failing for an, as yet, unknown reason
+# gnomemeeting depends on it, so both are being masked until we
+# can figure out things
+>=dev-libs/pwlib-1.2.12
+>=net-im/gnomemeeting-0.84.0
