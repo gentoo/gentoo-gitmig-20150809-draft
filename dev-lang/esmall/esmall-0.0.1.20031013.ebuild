@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20031013.ebuild,v 1.1 2003/10/14 03:13:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/esmall/esmall-0.0.1.20031013.ebuild,v 1.2 2003/11/05 12:35:19 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -8,7 +8,7 @@ inherit enlightenment
 DESCRIPTION="scripting language for use internally in enlightenment"
 
 src_compile() {
-	if [ "${ARCH}" == "ppc" ] ; then
+	if [ "${ARCH}" == "ppc" ] || [ "${ARCH}" == "sparc" ] ; then
 		for f in `grep sys/io src/* -l` ; do
 			cp ${f}{,.old}
 			sed -e 's:sys/io:asm/io:' ${f}.old > ${f}
