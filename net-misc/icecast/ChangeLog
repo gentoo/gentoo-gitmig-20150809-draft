@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.37 2004/11/06 04:53:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.38 2004/11/06 08:00:36 blubb Exp $
+
+  06 Nov 2004; Simon Stelling <blubb@gentoo.org> icecast-2.1.0.ebuild:
+  added ~amd64
 
   06 Nov 2004; Daniel Black <dragonheart@gentoo.org> icecast-2.1.0.ebuild:
   ~ppc keyworded as per bug #70096. Thanks Warren Dukes
