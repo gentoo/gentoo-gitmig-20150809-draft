@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.3 2003/09/23 01:21:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/texpower-0.0.9d.ebuild,v 1.4 2003/10/03 16:44:53 usata Exp $
 
 inherit latex-package
 
@@ -33,7 +33,8 @@ src_install() {
 
 	if use doc; then
 		S=${WORKDIR}/${P}/doc
-		latex-package_src_install
+		mkdir ${T}/fonts
+		VARTEXFONTS=${T}/fonts latex-package_src_install
 		dodoc *.tex
 	fi
 }
