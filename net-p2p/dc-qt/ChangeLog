@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/dc-qt
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-qt/ChangeLog,v 1.1 2004/08/08 02:52:49 squinky86 Exp $
+
+*dc-qt-0.1.1 (07 Aug 2004)
+
+  07 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +dc-qt-0.1.1.ebuild:
+  Initial import. Closes #59123. Thanks to James Barr <jagear69@yahoo.ca> for
+  the original ebuild.
+
