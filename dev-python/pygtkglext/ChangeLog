@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.1 2003/04/26 20:23:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.2 2003/05/05 10:28:51 liquidx Exp $
+
+*pygtkglext-0.1.0 (05 May 2003)
+
+  05 May 2003; Alastair Tse <liquidx@gentoo.org> pygtkglext-0.1.0.ebuild:
+  version bump
 
 *pygtkglext-0.0.2 (26 Apr 2003)
 
