@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.32 2003/12/03 19:00:18 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.33 2003/12/05 17:44:14 plasmaroo Exp $
 
 *xfs-sources-2.4.23 (03 Dec 2003)
 
@@ -11,35 +11,35 @@
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> xfs-sources-2.4.20-r2.ebuild,
   xfs-sources-2.4.20-r3.ebuild, xfs-sources-2.4.20-r4.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> xfs-sources-2.4.19-r2.ebuild,
   xfs-sources-2.4.20-r1.ebuild, xfs-sources-2.4.20-r2.ebuild,
   xfs-sources-2.4.20-r3.ebuild, xfs-sources-2.4.20.ebuild,
   xfs-sources-2.4.22.ebuild, files/xfs-sources-2.4.20-gcc33.patch:
-  fixup some of the do_brk stuff
+  Fix some of the 'do_brk' stuff.
 
   01 Dec 2003; Brandon Hale <tseng@gentoo.org> xfs-sources-2.4.19-r2.ebuild,
   xfs-sources-2.4.20-r1.ebuild, xfs-sources-2.4.20-r2.ebuild,
   xfs-sources-2.4.20-r3.ebuild, xfs-sources-2.4.20.ebuild,
   xfs-sources-2.4.22.ebuild, files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix 'do_brk' vulnerability.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   xfs-sources-2.4.19-r2.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
 *xfs-sources-2.4.22 (26 October 2003)
 
   26 October 2003; Bob Johnson <livewire@gentoo.org>
 
-  - bumped to 2.4.22
-  - xfs-2.4.22-all
-  - evms 1.2.1
-  - freeswan 2.03
-  - grsecurity 1.9.12-2.4.22
-  - v4l2-2.422
+  - Bumped to 2.4.22.
+  - XFS-2.4.22-all.
+  - EVMS 1.2.1.
+  - FreeSWAN 2.03.
+  - grsecurity 1.9.12-2.4.22.
+  - v4l2-2.422.
   
   11 Oct 2003; <plasmaroo@gentoo.org> xfs-sources-2.4.20-r3.ebuild,
   xfs-sources-2.4.20_pre6.ebuild, files/xfs-sources-2.4.20-gcc33.patch:
@@ -49,70 +49,70 @@
   xfs-sources-2.4.19-r2.ebuild, xfs-sources-2.4.20-r1.ebuild,
   xfs-sources-2.4.20-r2.ebuild, xfs-sources-2.4.20-r3.ebuild,
   xfs-sources-2.4.20.ebuild, xfs-sources-2.4.20_pre6.ebuild:
-  SRC now uses mirror://kernel
+  SRC now uses mirror://kernel.
 
 *xfs-sources-2.4.20-r3 (12 April 2003)
 
   12 April 2003; Bob Johnson <livewire@gentoo.org>
 
-  - Added Grsecurity 1.9.9f
-  - Xfs bumped to 20030406
-  - AIC79XX bumped to 20030410
-  - bootsplash bumped to 3.0.7
-  - added brlock fix
-  - win4lin support removed 
+  - Added Grsecurity 1.9.9f.
+  - Xfs bumped to 20030406.
+  - AIC79XX bumped to 20030410.
+  - bootsplash bumped to 3.0.7.
+  - Added brlock fix.
+  - Win4Lin support removed. 
   			
 *xfs-sources-2.4.20-r2 (18 March 2003)
 
   18 March 2003; Bob Johnson <livewire@gentoo.org>
 
-  - pulled kdb patch from XFS patchset
-  - bumped ntfs to 2.1.2a
-  - bumped aic7xxx to 20030318
-  - bumped acpi to 20030228-2.4.21_pre4
-  - ptrace root exploit patch
+  - Pulled kdb patch from XFS patchset.
+  - Bumped NTFS to 2.1.2a.
+  - Bumped aic7xxx to 20030318.
+  - Bumped ACPI to 20030228-2.4.21_pre4.
+  - Ptrace root exploit patch.
 
 *xfs-sources-2.4.20-r1 (17 March 2003)
 
   17 March 2003; Bob Johnson <livewire@gentoo.org>
 
-  - added 3/16/2003 XFS snapshot
+  - Added 3/16/2003 XFS snapshot
   
 *xfs-sources-2.4.20 (16 March 2003)
 
   16 March 2003; Bob Johnson <livewire@gentoo.org>
 
-  - bumped XFS to 03-09-2003 snapshot
-  - add preempt
-  - cleaned up lots of patches
-  - yanked DB's nic drivers
-  - added akpm's ext3 fixes
-  - dac960 root fs fix (pfeifer)
-  - ali15XX ide chipset fix
+  - Bumped XFS to 03-09-2003 snapshot.
+  - Add preempt.
+  - Cleaned up lots of patches.
+  - Yanked DB's nic drivers.
+  - Added akpm's ext3 fixes.
+  - Dac960 root fs fix (pfeifer).
+  - Ali15XX ide chipset fix.
 
 *xfs-sources-2.4.20_pre6 (30 Jan 2003)
 
   30 Jan 2003; Bob Johnson <livewire@gentoo.org>
 
-  - Newest Aic79xx and Aic7xxx
-  - bcm 4400 and 5700 nic drivers
-  - fixed mki adapter build
-  - preliminary Nforce2 ide support
-  - nforce 810 audio fix
-  - eepro100 compile fix
-  - Adaptec firmware patch
-  - in2000 and ncr scsi compile fixes
-  - pull via-rhine,winbond,yellowfin,starfire,hamachi updates
+  - Newest aic79xx and aic7xxx.
+  - BCM 4400 and 5700 NIC drivers.
+  - Fixed mki-adapter problems.
+  - preliminary Nforce2 ide support.
+  - nforce 810 audio fix.
+  - eepro100 compile fix.
+  - Adaptec firmware patch.
+  - in2000 and ncr scsi compile fixes.
+  - pull via-rhine,winbond,yellowfin,starfire,hamachi updates.
 	
 *xfs-sources-2.4.20_pre5 (14 Jan 2003)
 
   14 Jan 2003; Bob Johnson <livewire@gentoo.org>:
   
   Changes from _pre4
-  - Proconfig added
-  - Ntfs-2.1.0a read support added
-  - Segfault fix for vm86
-  - AC patch that may help some motherboards from crashing on bootup
+  - Proconfig added.
+  - NTFS-2.1.0a read support added.
+  - Segfault fix for vm86.
+  - AC patch that may help some motherboards from crashing on bootup.
   - Network card updates: 3c59x,cb_shim,eepro100,epic100,hamachi,intel-gige
   -	                 myson803,natsemi,ns820,rtl8139,starfire,sundance
   -                      tulip,via-rhine,winbond,yellowfin
@@ -130,10 +130,10 @@
 
   Changes from _pre3
   * Move to new IDE core.
-  * 3c509 Fix
-  * ext3-data-journal-fix
-  * aic7xx drivers fix
-  * Drop supermount incompatible with new IDE
+  * 3c509 fix.
+  * ext3-data-journal-fix.
+  * aic7xx driver fix.
+  * Drop supermount incompatible with new IDE.
 
   Ebuild changes:
   * Snag bits from lolo-sources to talk about what goes on
@@ -152,17 +152,16 @@
   
   New from xfs-sources-2.4.20_pre2:
 
-  - Add supermount support
-  - Add usbdnet support
-  - Add futexes support
-  - Add i2c support (recent patch for lm-sensors)
-  - Add KT400 AGP / pci.ids support (should close bug #12600)
-  - Add ECC support
-  - Add v4l2 (Video for Linux 2) support
-  - Add SuperFreeS/WAN Support
+  - Add supermount support.
+  - Add usbdnet support.
+  - Add futexes support.
+  - Add I2C support (recent patch for lm-sensors).
+  - Add KT400 AGP / pci.ids support (should close bug #12600).
+  - Add ECC support.
+  - Add v4l2 (Video for Linux 2) support.
+  - Add SuperFreeS/WAN Support.
   
   Enjoy and test :)
-
 
 *xfs-sources-2.4.29_pre2 (24 Dec 2002)
 
@@ -176,8 +175,8 @@
 
   New from xfs-sources-2.4.20_pre1:
 
-  - Update imon to recent version
-  - Removed openwall for further testing
+  - Update imon to recent version.
+  - Removed openwall for further testing.
   - I tried several configs this time ;)
 
   Please test and send bugreports.
@@ -195,24 +194,24 @@
   
   Features:
   
-  - Update 3.5 GB address space patch
-  - Update to latest XFS (full features)
-  - Update ACPI snapshot (12 Dec 2002)
-  - Update EVMS
-  - Add Win4Lin (including mki adapter patch)
-  - Add dc395x (Driver for older Tekram SCSI host adapters, fixes bug #12218)
-  - Add imon support (SGI's Inode Monitor)
-  - Update patch-int (aka CryptoAPI)
-  - Update loop-jari (for encrypted loopback devices)
+  - Update 3.5 GB address space patch.
+  - Update to latest XFS (full features).
+  - Update ACPI snapshot (12 Dec 2002).
+  - Update EVMS.
+  - Add Win4Lin (including the mki-adapter patch).
+  - Add dc395x (Driver for older Tekram SCSI host adapters, fixes bug #12218).
+  - Add imon support (SGI's Inode Monitor).
+  - Update patch-int (aka CryptoAPI).
+  - Update loop-jari (for encrypted loopback devices).
   - Add openwall (security related things 
-    like non-executable user stack area,etc.)
-  - Miscellaneous little patches
+    like non-executable user stack area,etc.).
+  - Miscellaneous little patches.
 
   
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
  
 *xfs-sources-2.4.19-r2 (06 Oct 2002)
 
@@ -226,29 +225,29 @@
   laptopers it is still there.
 
   New from xfs-sources-2.4.19-r1:
-  - Update to latest XFS patch
+  - Update to latest XFS patch.
   - Dropped ext3-htree due to corruption with current e2fsprogs
     this may bite some of you who are already using it, but
     hopefully it will be updated before you need to fsck your
     partitions a lot.
-  - Update EVMS
-  - Update JFS
-  - Fix for grsecurity compilation
+  - Update EVMS.
+  - Update JFS.
+  - Fix for grsecurity compilation.
   - Update patches.txt documentation and kernel.eclass (makes older
-    a little funky, but is more forward working)
+    a little funky, but is more forward working).
   - Fix processor type options to show gcc>31 rather than gcc31
-  - Add futexes support
-  - Add imon support
-  - Optional ACPI patch just set USE="acpi4linux"
-  - Redone ebuild setup now we have an eclass for these things
-  - Rename some patches to better names for use with KERNEL_EXCLUDE
-  - Add support for KERNEL_EXCLUDE
-  - Add and re-arrange VIA bugfixes
-  - Update grsecurity
-  - Switch to latest release IPSEC Free S/WAN
-  - Add usbdnet support for Zaurus handhelds
+  - Add futexes support.
+  - Add imon support.
+  - Optional ACPI patch just set USE="acpi4linux".
+  - Redone ebuild setup now we have an eclass for these things.
+  - Rename some patches to better names for use with KERNEL_EXCLUDE.
+  - Add support for KERNEL_EXCLUDE.
+  - Add and re-arrange VIA bugfixes.
+  - Update grsecurity.
+  - Switch to latest release IPSEC Free S/WAN.
+  - Add usbdnet support for Zaurus handhelds.
   - Add supermount patches.
-  - Incorportate the small fixes done to xfs-sources-2.4.19-r1
+  - Incorportate the small fixes done to xfs-sources-2.4.19-r1.
 
 *xfs-sources-2.4.19-r1 (03 Sep 2002)
 
@@ -268,10 +267,9 @@
 *xfs-sources-2.4.18 (25 Apr 2002)
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
-  Added arch keywords (-ppc -sparc -sparc64)
+  Added arch keywords (-ppc -sparc -sparc64).
 
   29 apr 2002; William McArthur <sandymac@gentoo.org> xfs-sources-2.4.18.ebuild:
 
   Added sys-apps/xfsprogs to DEPEND. These aren't stictly needed but the user
   will very likely want them.
-
