@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.9 2004/06/30 20:58:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.10 2004/08/24 03:22:51 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Mindi builds boot/root disk images using your existing kernel, modules, tools and libraries"
 HOMEPAGE="http://www.microwerks.net/~hugo/mindi/"
 SRC_URI="http://www.microwerks.net/~hugo/download/stable/final/${P}.tgz"
-RESTRICT="nouserpriv"
-
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,8 +40,7 @@ src_unpack() {
 }
 
 src_install() {
-	dodir /usr/share/mindi
-	dodir /usr/sbin
+	dodir /usr/share/mindi /usr/sbin
 	cp * --parents -rdf ${D}/usr/share/mindi/
 	rm ${D}/usr/share/mindi/{CHANGES,INSTALL,LICENSE,README,TODO}
 	dodoc CHANGES INSTALL LICENSE README TODO
