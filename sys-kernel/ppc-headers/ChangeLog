@@ -1,0 +1,9 @@
+# ChangeLog for sys-kernel/ppc-headers
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-headers/ChangeLog,v 1.1 2003/05/30 01:56:10 kain Exp $
+
+*ppc-headers-2.4.21-r1 (29 May 2003)
+
+  29 May 2003; Kain <kain@gentoo.org> ppc-headers-2.4.21-r1.ebuild:
+  PPC kernel headers for 2.4.21-based kernels
+
