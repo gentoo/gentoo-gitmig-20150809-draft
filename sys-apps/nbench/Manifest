@@ -1,6 +1,4 @@
 MD5 aaca895b290534cd4b1eb6148dc46ea5 ChangeLog 903
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5c7f1be4362b77ece33d0f38df33ae39 nbench-2.1.ebuild 927
-MD5 eed4849e7bae1418d2b46f7bcbdbbaf0 nbench-2.2.1.ebuild 923
-MD5 770bb21d087845e107375b67b4ee8993 files/digest-nbench-2.1 67
+MD5 beba78fb02f99e2c1061a4c823943a4b nbench-2.2.1.ebuild 920
 MD5 5c6e1c5a2f7f22dc451ad34130730183 files/digest-nbench-2.2.1 69
