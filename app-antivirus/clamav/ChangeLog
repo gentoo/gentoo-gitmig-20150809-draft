@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.36 2005/01/27 08:54:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.37 2005/01/27 10:13:21 ticho Exp $
+
+  27 Jan 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.81.ebuild:
+  Stable on x86, wrt #78656. Depend on fixed version of zlib (#61749) and
+  curl, according to configure.in.
 
 *clamav-0.81 (27 Jan 2005)
 

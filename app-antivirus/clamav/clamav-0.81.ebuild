@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.81.ebuild,v 1.2 2005/01/27 08:54:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.81.ebuild,v 1.3 2005/01/27 10:13:21 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,11 +10,13 @@ SRC_URI="mirror://sourceforge/clamav/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~hppa ~alpha ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~hppa ~alpha ~ppc64"
 IUSE="crypt milter selinux"
 
 DEPEND="virtual/libc
-	crypt? ( >=dev-libs/gmp-4.1.2 )"
+	crypt? ( >=dev-libs/gmp-4.1.2 )
+	>=sys-libs/zlib-1.2.1-r3
+	>=net-misc/curl-7.10.0"
 RDEPEND="selinux? ( sec-policy/selinux-clamav )"
 PROVIDE="virtual/antivirus"
 
@@ -31,7 +33,11 @@ src_compile() {
 
 	local myconf
 
-	use milter && myconf="--enable-milter"
+	# we depend on fixed zlib, so we can disable this check to prevent redundant
+	# warning (bug #61749)
+	myconf="${myconf} --disable-zlib-vcheck"
+
+	use milter && myconf="${myconf} --enable-milter"
 	econf ${myconf} --with-dbdir=/var/lib/clamav || die
 	emake || die
 }
