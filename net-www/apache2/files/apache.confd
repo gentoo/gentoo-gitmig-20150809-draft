@@ -1,0 +1,29 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/files/apache.confd,v 1.2 2002/05/04 23:23:00 woodchip Exp
+
+# Config file for /etc/init.d/apache
+
+# Here's an example from /etc/apache/conf/apache.conf using mod_ssl:
+#
+# <IfDefine SSL>
+# LoadModule ssl_module    extramodules/libssl.so
+# </IfDefine>
+#
+# This means that libssl.so is only loaded into the server when you
+# pass "-D SSL" to it at startup.
+#
+# Anything else in apache.conf which is guarded similarly, like:
+#
+# <IfDefine FOO> ... </IfDefine>
+#
+# can be easily turned on/off by editing APACHE_OPTS below to
+# include or to not include "-D FOO".
+#
+# If you installed mod_throttle, you can add "-D THROTTLE"; if you
+# installed mod_dav, then add "-D DAV".  For mod_gzip use "-D GZIP".
+# The mod_contribs package has several options you can use.  See
+# your apache.conf file for more details.
+
+
+#APACHE_OPTS="-D SSL -D PHP4"

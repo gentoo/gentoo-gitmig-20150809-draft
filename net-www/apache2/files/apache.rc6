@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.1 2002/04/09 23:51:39 woodchip Exp
+
+depend() {
+	need net
+	use mysql
+}
+
+start() {
+	ebegin "Starting apache"
+	/usr/local/apache2/bin/httpd -k start ${APACHE_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping apache"
+	/usr/local/apache2/bin/httpd -k stop ${APACHE_OPTS}
+	eend $?
+}
