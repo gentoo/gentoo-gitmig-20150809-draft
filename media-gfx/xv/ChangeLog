@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/xv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.40 2004/12/16 10:51:08 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.41 2005/01/04 14:10:17 taviso Exp $
+
+*xv-3.10a-r9 (04 Jan 2005)
+
+  04 Jan 2005; Tavis Ormandy <taviso@gentoo.org> +files/xv-optimize-jpeg.diff,
+  +files/xv-postscript-double-free.diff, +files/xv-smoothing-algorithm.diff,
+  +xv-3.10a-r9.ebuild:
+  everyone can use getcwd() instead of getwd().
+  apply patches from dave coffin, http://www.cybercom.net/~dcoffin/dcraw/.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> xv-3.10a-r8.ebuild:
   Stable on ppc64
