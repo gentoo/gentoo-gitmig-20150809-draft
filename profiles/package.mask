@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3123 2004/09/03 19:09:54 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3124 2004/09/03 19:13:09 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -805,8 +805,3 @@ app-admin/va-systemimager-client
 # not fit for release (working on it though)
 app-cdr/cddump
 
-# stroke@gentoo.org 11 Jul 2002
-# app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
-# lostlogic@gentoo.org 17 Jul 2002
-# masked because of sandbox problems in 2.0.12 and dep problems in 2.1.0
-<app-cdr/eroaster-2.1.0-r1
