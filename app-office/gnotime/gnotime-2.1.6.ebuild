@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.5 2003/11/18 05:43:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.6.ebuild,v 1.6 2004/06/19 06:16:33 weeve Exp $
 
 inherit gnome2
 

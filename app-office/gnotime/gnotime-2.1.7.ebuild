@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.7.ebuild,v 1.2 2004/03/19 14:17:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.1.7.ebuild,v 1.3 2004/06/19 06:16:33 weeve Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gttr/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0
