@@ -1,10 +1,19 @@
-MD5 ff8f24b66db89dfab9cc6c4e9242f49d ChangeLog 11682
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1a20317104b897e14cfa18cc1cf7a48a ChangeLog 11785
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 f42ae561b062b136306ded87d8b70318 tetex-1.0.7-r13.ebuild 4777
 MD5 132b2753da0877b097557588bdcfd7d3 tetex-2.0.2-r3.ebuild 565
-MD5 7c6b2802aa5d3ea38bcc94a91c4ac54e files/digest-tetex-2.0.2-r3 214
 MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
-MD5 cc0a84367e8c96d736ca42ba162594dd files/teTeX-1.0.dif 50852
+MD5 7c6b2802aa5d3ea38bcc94a91c4ac54e files/digest-tetex-2.0.2-r3 214
 MD5 476a1c8128397ff7a381c43fe723a522 files/tetex-2.0.2-dont-run-config.diff 1243
 MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
 MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBEFQSmdTrptrqvGERAnbdAJ9IrMz/jUjo60wK03j5/wUaqbrTMACfRoFz
+F8LypWbcBBcIQcrUC2/ri/4=
+=9NhE
+-----END PGP SIGNATURE-----
