@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.1 2004/09/22 20:51:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.2 2004/10/07 01:58:17 eradicator Exp $
 
-inherit libtool flag-o-matic gcc
+IUSE=""
+
+inherit libtool flag-o-matic gcc eutils
 
 DESCRIPTION="the Ogg Vorbis sound file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
@@ -11,8 +13,6 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~mips ~sparc ~hppa ~alpha ~ia64 ~ppc ~ppc64 ~macos ~ppc-macos"
-
-IUSE=""
 
 RDEPEND=">=media-libs/libogg-1.0"
 DEPEND="${RDEPEND}
@@ -60,16 +60,16 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	if use macos; then
-		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
-		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
+		dosym /usr/$(get_libdir)/libvorbisfile.3.1.0.dylib /usr/$(get_libdir)/libvorbisfile.0.dylib
+		dosym /usr/$(get_libdir)/libvorbisenc.2.0.0.dylib /usr/$(get_libdir)/libvorbisenc.0.dylib
 	elif use ppc-macos; then
-		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
-		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
+		dosym /usr/$(get_libdir)/libvorbisfile.3.1.0.dylib /usr/$(get_libdir)/libvorbisfile.0.dylib
+		dosym /usr/$(get_libdir)/libvorbisenc.2.0.0.dylib /usr/$(get_libdir)/libvorbisenc.0.dylib
 	else
-		dosym /usr/lib/libvorbisfile.so.3.1.0 /usr/lib/libvorbisfile.so.0
-		dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0
+		dosym /usr/$(get_libdir)/libvorbisfile.so.3.1.0 /usr/$(get_libdir)/libvorbisfile.so.0
+		dosym /usr/$(get_libdir)/libvorbisenc.so.2.0.0 /usr/$(get_libdir)/libvorbisenc.so.0
 	fi
 
 	rm -rf ${D}/usr/share/doc
