@@ -25,4 +25,4 @@ CXXFLAGS=${CFLAGS}
 
 # USE arch:xxx keyword
 ACCEPT_KEYWORDS="sparc"
-FEATURES="buildpkg sandbox ccache"
+FEATURES="sandbox ccache"
