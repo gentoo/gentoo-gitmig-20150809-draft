@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/f2py-2.32.225.1419.ebuild,v 1.6 2003/09/02 22:30:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/f2py-2.32.225.1419.ebuild,v 1.7 2004/04/17 13:18:32 kloeri Exp $
 
 inherit distutils
 
