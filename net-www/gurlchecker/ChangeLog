@@ -1,6 +1,13 @@
 # ChangeLog for net-www/gurlchecker
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gurlchecker/ChangeLog,v 1.1 2003/10/18 17:55:56 leonardop Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/gurlchecker/ChangeLog,v 1.2 2004/01/09 03:05:16 leonardop Exp $
+
+*gurlchecker-0.6.4 (08 Jan 2004)
+
+  08 Jan 2004; L. Boshell <leonardop@gentoo.org>
+  gurlchecker-0.6.2.ebuild, gurlchecker-0.6.4.ebuild,
+  gurlchecker-0.7.3.ebuild:
+  Version bump. SRC_URIs updated. Removing unstable version.
 
 *gurlchecker-0.7.3 (18 Oct 2003)
 
