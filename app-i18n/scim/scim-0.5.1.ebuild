@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.5.1.ebuild,v 1.2 2003/08/05 15:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.5.1.ebuild,v 1.3 2003/09/06 22:19:22 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 	cd ${S}/src
 	sed -i	-e "s:^\(scim_LDFLAGS.*\):\1 -ldl:" Makefile.in
 	cd ${S}/modules/Server
-	sed -i	-e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" Makefile.in	
+	sed -i	-e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" Makefile.in
 }
 
 src_install() {

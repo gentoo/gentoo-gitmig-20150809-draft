@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.7 2003/08/06 07:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.8 2003/09/06 22:19:22 msterret Exp $
 
 MY_P=${PN/pages/}
 S=${WORKDIR}/${MY_P}
@@ -21,7 +21,7 @@ src_compile() {
 		gzip ${S}/${x}/* || die
 	done
 }
-		
+
 src_install() {
 	for x in man?
 	do

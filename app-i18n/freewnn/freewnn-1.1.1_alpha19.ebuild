@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.5 2003/02/13 08:01:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.6 2003/09/06 22:19:21 msterret Exp $
 
 KEYWORDS="x86 sparc"
 
@@ -39,7 +39,7 @@ src_compile() {
                 --without-termcap \
                 --with-x \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	emake || die
 	#make || die
 }
@@ -50,7 +50,7 @@ src_install () {
 	# install man pages
 	make DESTDIR=${D} install.man || die "installation of manpages failed"
 	# install docs
-	dodoc ChangeLog ChangeLog.en INSTALL INSTALL.en CONTRIBUTORS 
+	dodoc ChangeLog ChangeLog.en INSTALL INSTALL.en CONTRIBUTORS
 	# install rc script
 	exeinto /etc/init.d ; newexe ${FILESDIR}/freewnn.initd freewnn
 }

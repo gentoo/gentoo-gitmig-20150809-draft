@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.9 2003/08/06 07:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.10 2003/09/06 22:19:22 msterret Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 src_compile() {
 	make || die
 }
-		
+
 src_install() {
 	make INSTALLPATH=${D}/usr/share/man LANG_SUBDIR=ru install || die
 	prepallman

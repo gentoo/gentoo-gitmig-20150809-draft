@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.4 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/xcin-2.5.3_pre2.ebuild,v 1.5 2003/09/06 22:19:22 msterret Exp $
 
 XCIN="${P/_/.}.tar.gz"
 CHEWING="chewing-2002Jan07-snapshot.tar.gz"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="nls"
 
-DEPEND="nls? ( sys-devel/gettext ) 
+DEPEND="nls? ( sys-devel/gettext )
 	>=app-i18n/libtabe-0.2.5"
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.2 2003/08/05 15:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.3 2003/09/06 22:19:22 msterret Exp $
 
 [ -n "`use kde`" ] && inherit kde
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	einfo "Patching ./configure to respect CFLAGS .."
 	sed -i -e "s/\(CFLAGS.*\)-O2/\1${CFLAGS}/" configure
@@ -42,11 +42,11 @@ src_install() {
 			xsim_binp=${D}/usr/bin \
 			xsim_etcp=${D}/etc \
 			install-data install || die "install failed"
-	
+
 	sed -i -e "s#DICT_LOCAL\(.*\)/usr/dat#DICT_LOCAL\1/usr/lib/xsim/dat#" \
 		-e "s#PLUGIN_LOCAL\(.*\)/usr/plugins#PLUGIN_LOCAL\1/usr/lib/xsim/plugins#" \
 		${D}/etc/xsimrc
-	
+
 	dodoc ChangeLog COPYING INSTALL README* TODO
 }
 

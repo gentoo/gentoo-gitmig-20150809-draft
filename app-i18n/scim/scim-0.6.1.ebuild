@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.6.1.ebuild,v 1.1 2003/08/29 18:11:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.6.1.ebuild,v 1.2 2003/09/06 22:19:22 msterret Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/x11
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	>=dev-libs/glib-2"
-	
+
 PDEPEND=">=app-i18n/scim-tables-0.2.2"
 
 DEPEND="${RDEPEND}
@@ -40,7 +40,7 @@ src_unpack() {
 	cd ${S}/src
 	sed -i	-e "s:^\(scim_LDFLAGS.*\):\1 -ldl:" Makefile.in
 	cd ${S}/modules/Server
-	sed -i	-e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" Makefile.in	
+	sed -i	-e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" Makefile.in
 }
 
 src_install() {

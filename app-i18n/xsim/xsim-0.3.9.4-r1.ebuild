@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.4 2003/08/05 15:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r1.ebuild,v 1.5 2003/09/06 22:19:22 msterret Exp $
 
 inherit eutils
 [ -n "`use kde`" ] && inherit kde
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
-	
+
 	epatch ${FILESDIR}/${P}-db3.patch
 
 	cd ${S}
@@ -47,11 +47,11 @@ src_install() {
 			xsim_binp=${D}/usr/bin \
 			xsim_etcp=${D}/etc \
 			install-data install || die "install failed"
-	
+
 	sed -i -e "s#DICT_LOCAL\(.*\)/usr/dat#DICT_LOCAL\1/usr/lib/xsim/dat#" \
 		-e "s#PLUGIN_LOCAL\(.*\)/usr/plugins#PLUGIN_LOCAL\1/usr/lib/xsim/plugins#" \
 		${D}/etc/xsimrc
-	
+
 	dodoc ChangeLog COPYING INSTALL README* TODO
 }
 

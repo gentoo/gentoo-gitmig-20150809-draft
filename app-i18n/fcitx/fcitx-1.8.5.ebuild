@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.2 2003/06/29 22:12:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-1.8.5.ebuild,v 1.3 2003/09/06 22:19:21 msterret Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -28,7 +28,7 @@ src_install() {
 	dobin fcitx
 	insinto /usr/share/fcitx
 	doins data/*.mb
-	
+
 	dodoc doc/ChangLog.txt doc/cjkvinput.txt
 	dohtml doc/*.htm
 }

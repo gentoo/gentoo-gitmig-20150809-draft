@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.2 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.3 2003/09/06 22:19:22 msterret Exp $
 
 inherit eutils
 
@@ -37,27 +37,27 @@ src_unpack() {
 
 src_compile() {
 	econf
-	
+
 	make || die "make failed"
 	make data || die "make data failed"
-	
+
 	cd ${S}/tools
 	make || die "make tools failed"
-	
+
 	# still has gcc-3.2 issues
 	# make -C sfonts/tools || die "make tools failed"
 }
 
 src_install() {
 	make prefix=${D}/usr install || die "install failed"
-	
+
 	# still has gcc-3.2 issues
 	# dobin sfonts/tools/sfont
 	dobin tools/uniconcfg
 	dobin tools/uniconctrl
-	
+
 	make prefix=${D}/usr data-install || die "install data failed"
-	
+
 	dobin scripts/unicon-start
-	
+
 }

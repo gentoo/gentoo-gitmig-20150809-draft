@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.5.ebuild,v 1.4 2003/03/02 21:46:03 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.5.ebuild,v 1.5 2003/09/06 22:19:21 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
@@ -19,7 +19,7 @@ src_compile() {
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.4.ebuild,v 1.1 2003/08/29 18:12:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/scim-chinese-0.2.4.ebuild,v 1.2 2003/09/06 22:19:22 msterret Exp $
 
 inherit rpm
 
@@ -20,13 +20,13 @@ S=${WORKDIR}
 
 src_compile() {
 	return
-}	
+}
 
 dosym_r() {
 	srcdir=$1
 	dstdir=$2
-		
-	for x in `find ${D}${srcdir}`; do	
+
+	for x in `find ${D}${srcdir}`; do
 		dst=${dstdir}${x#$D$srcdir}
 		src=${x#$D}
 		einfo "Linking $src to $dst"
@@ -35,16 +35,16 @@ dosym_r() {
 		fi
 		dosym $src $dst
 	done
-		
+
 }
 
 src_install() {
 	# get installed scim version
 	SCIM_VER=$(scim -h | grep "Smart Common Input Method" | awk '{print $5}')
-	
+
 	# install into /opt because this is binary-only
 	PREFIX=/opt/scim-chinese
-	
+
 	cd ${S}
 	insinto ${PREFIX}/lib/scim-1.0/Server
 	doins usr/lib/scim-1.0/Server/*
@@ -53,7 +53,7 @@ src_install() {
 	insinto ${PREFIX}/share/scim/chinese
 	doins usr/share/scim/chinese/*
 	dosym_r ${PREFIX}/share/scim/chinese /usr/share/scim/chinese
-	
+
 	insinto /etc/gconf/schemas
 	doins etc/gconf/schemas/*
 	dodoc usr/share/doc/packages/${PF}/{AUTHORS,COPYING,README}

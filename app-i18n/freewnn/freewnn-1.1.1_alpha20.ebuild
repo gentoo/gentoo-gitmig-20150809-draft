@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.2 2003/08/24 22:26:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.3 2003/09/06 22:19:21 msterret Exp $
 
 MY_P="FreeWnn-${PV/_alpha/-a0}"
 
@@ -34,7 +34,7 @@ src_compile() {
 		--without-termcap \
 		`use_with X x` \
 		`use_with ipv6` || die "./configure failed"
-	
+
 	emake || die
 	#make || die
 }
@@ -45,7 +45,7 @@ src_install () {
 	# install man pages
 	make DESTDIR=${D} install.man || die "installation of manpages failed"
 	# install docs
-	dodoc ChangeLog* INSTALL* CONTRIBUTORS 
+	dodoc ChangeLog* INSTALL* CONTRIBUTORS
 	# install rc script
 	exeinto /etc/init.d ; newexe ${FILESDIR}/freewnn.initd freewnn
 }
