@@ -4,10 +4,5 @@
 <herd>no-herd</herd>
 <maintainer>
   <email>spock@gentoo.org</email>
-  <name>Michal 'Spock' Januszewski</name>
-  <description>
-There was no metadata.xml file for nmap, and from what I saw in the Changelog - no single
-person was maintaining it, so I thought I could take care about it.
-  </description>
 </maintainer>
 </pkgmetadata>
