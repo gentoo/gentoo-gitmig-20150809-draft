@@ -186,3 +186,4 @@ move net-www/ochusha www-client/ochusha
 move net-www/kita www-client/kita
 move net-www/gorua www-client/gorua
 move net-www/dillo www-client/dillo
+move net-www/raggle www-client/raggle
