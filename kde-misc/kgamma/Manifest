@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4fd34561c7c790221bd65d1aa78e0cb0 kgamma-1.0.1.ebuild 503
-MD5 87c135f57c4c929403d4f9e21427d449 ChangeLog 1826
+MD5 5775a7d5b5a8e6faa44fec29287ff896 ChangeLog 1829
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 3914c08b61893a03ebe0a3fa7080f17a files/digest-kgamma-1.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBr4vkI1lqEGTUzyQRAkqrAJ0S3Y5j7X6hpkxxLg4UxBKTVsuGTQCgoD5F
+HvrPQzrQE7jRkosY16yA2S4=
+=ulcD
+-----END PGP SIGNATURE-----
