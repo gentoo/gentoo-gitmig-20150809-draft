@@ -1,11 +1,17 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.10 2002/10/31 22:25:56 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.11 2002/11/25 07:10:07 agenkin Exp $
+
+*opera-6.1-r1 (25 Nov 2002)
+
+  25 Nov 2002; Arcady Genkin <agenkin@gentoo.org> opera-6.1-r1.ebuild :
+  Updated the checksums for the latest tarballs.
+  Incorporated suggestions from Carsten Rietzschel <cr@daRav.de> to enable
+  Java plugin.
 
 *opera-6.1 (31 October 2002)
 
   31 October 2002; Arcady Genkin <agenkin@gentoo.org> opera-6.1.ebuild :
-
   First version of the unified Opera ebuild.
 
 *opera-6.0 (19 August 2002)
