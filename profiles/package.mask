@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+
+# <phoenix@gentoo.org> (29 jul 2002)
+# Masked new version of wine-doc for testing
+=app-doc/wine-doc-20020710
+
 # Spider <spider@gentoo.org> (29 Jul 2002)
 # New version, lots of different USE flags that I havent tested together.
 # needs testing as I just copied the old ebuild
