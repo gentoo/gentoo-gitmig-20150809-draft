@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.2 2001/12/08 22:57:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.3 2001/12/08 23:05:55 drobbins Exp $
 
 SV=1.2.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -261,7 +261,7 @@ pkg_postinst() {
 	done
 
 	#kill the old /dev-state directory if it exists
-	[ "`mount |grep 'on /dev-state'`" ] && umount /dev-state >/dev/null 2>&1
+	[ "`cat /proc/mounts |grep 'on /dev-state'`" ] && umount /dev-state >/dev/null 2>&1
 	[ -e /dev-state ] && rm -rf /dev-state
 	
 	#remove /lib/dev-state/{pts,shm}, as the .keep files cause init to lock
