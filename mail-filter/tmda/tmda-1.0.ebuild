@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.0.ebuild,v 1.3 2004/06/24 22:23:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.0.ebuild,v 1.4 2004/07/14 16:45:41 agriffis Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://www.tmda.net/"
@@ -14,8 +14,7 @@ SRC_URI="http://tmda.sf.net/releases/${P}.tgz
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
-
-S="${WORKDIR}/${P}"
+IUSE=""
 
 src_compile () {
 	./compileall || die

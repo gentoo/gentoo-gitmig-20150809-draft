@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.5.3-r1.ebuild,v 1.3 2004/06/24 22:21:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.5.3-r1.ebuild,v 1.4 2004/07/14 16:43:08 agriffis Exp $
 
 IUSE="mysql ldap gdbm"
 
@@ -8,7 +8,6 @@ inherit flag-o-matic
 filter-flags -funroll-loops
 filter-flags -fomit-frame-pointer
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
