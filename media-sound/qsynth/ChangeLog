@@ -1,6 +1,75 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.3 2004/06/20 14:38:19 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.4 2004/06/20 15:53:01 fvdpol Exp $
+
+*qsynth-0.2.1 (20 Jun 2004)
+
+  20 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +qsynth-0.2.1.ebuild:
+  Updated to new upstream version of qsynth.
+  Changed since previous gentoo package according to qsynth changelog:
+  
+  0.2.1   2004-04-30  Important internal fixes.
+  
+  - Channels window reset when switching engines isn't destructive
+    anymore; also reverb and chorus activation were not being correctly
+    updated; these were quite annoying bugs, now fixed.
+  
+  - Corrected MIDI/Audio driver settings that were being obliterated from
+    the setup dialog option lists; this was causing the impossibility to
+    choose an appropriate driver on certain systems where "alsa_seq" or
+    "jack" may not be available by default (e.g. MacOSX, thanks to Ebrahim
+    Mayat).
+    
+  - The dash (-) is now a legal character for preset names.
+  
+  - Translation support for the default preset name "(default)".
+  
+  - Delete preset confirmation warning message.
+  
+  - Messages window pops up whenever a critical error message is issued.
+  
+  
+  0.2.0   2004-03-21  Multi-instance comes to town.
+  
+  - Multiple fluidsynth engines can now be maintained, with different
+    settings, MIDI and Audio drivers, and more interestingly distinct
+    soundfont stacks. The main user interface has been minimally
+    improved to accomodate this new paradigm, but whole application
+    internals have been massively rewritten.
+    
+  
+  0.1.3   2004-02-29  More work in progress.
+  
+  - Message window line limit is now a configurable option on setup.
+  
+  - ALSA sequencer client name may now be internally set; not of great use
+    for now, but it opens the ground for future workings.
+  
+  - JACK multiple output port mode may now be configured on setup.
+  
+  - Makefile.cvs makes its late entrance on the build toolset.
+  
+  
+  0.1.2   2004-02-16  Work in progress.
+  
+  - Messages and Channels pop-up windows are not hinted as dialogs anymore
+    and thus are not centered relative to parent main window which has become
+    a strict Qt dialog widget behaviour (as of Qt 3.3+).
+  
+  - Soundfont setup dialog changed to open and load multiple files at once.
+  
+  - New setup option on wether all child windows are kept on top of the main
+    window, or otherwise floating with probable taskbar entries of their own.
+  
+  - Setup changes that are only effective next time the program is run gets
+    an informational message box shown to the user.
+  
+  
+  0.1.1   2004-01-22  Yet more minor bugfixes.
+  
+  - Messages color retouching.
+  
+  - Popup menus memory leak fixed.
 
   20 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> metadata.xml,
   qsynth-0.1.0.ebuild:
