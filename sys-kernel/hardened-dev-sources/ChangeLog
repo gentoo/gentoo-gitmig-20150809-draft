@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.8 2004/04/14 07:14:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.9 2004/04/15 14:31:12 tseng Exp $
+
+*hardened-dev-sources-2.6.4-r4 (15 Apr 2004)
+
+  15 Apr 2004; Brandon Hale <tseng@gentoo.org>
+  +files/hardened-dev-sources-2.6.5.CAN-2004-0109.patch,
+  +hardened-dev-sources-2.6.4-r4.ebuild:
+  Apply fix for CAN-2004-0109, ISO vuln.
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   hardened-dev-sources-2.6.4.ebuild:
