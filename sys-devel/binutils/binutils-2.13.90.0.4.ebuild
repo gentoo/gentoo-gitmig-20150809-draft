@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.4.ebuild,v 1.9 2003/02/13 16:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.4.ebuild,v 1.10 2003/03/01 22:19:43 lostlogic Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -10,7 +10,7 @@ IUSE="nls bootstrap static build"
 inherit libtool flag-o-matic
 
 # Generate borked binaries.  Bug #6730
-filter-flags "-fomit-frame-pointer"
+filter-flags "-fomit-frame-pointer -fssa"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
