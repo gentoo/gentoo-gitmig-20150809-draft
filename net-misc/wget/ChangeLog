@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.33 2003/12/01 17:54:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.34 2003/12/05 02:13:03 seemant Exp $
+
+*wget-1.9-r2 (04 Dec 2003)
+
+  04 Dec 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.9-r1.ebuild,
+  wget-1.9-r2.ebuild, wget-1.9.1-r1.ebuild:
+  fix the ipvmisc patch to allow name resolution as well as ipaddresses. The fix
+  was found by: Josh Grebe <josh@brokedown.net> in bug #33827 opened by Marcin
+  Kryczek <crytcheck@napisy.org>
 
   01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r2.ebuild:
   why was autoconf moved into nls USE check???? Closing bug #34411 by Daniel
