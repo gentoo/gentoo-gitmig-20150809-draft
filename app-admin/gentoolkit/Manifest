@@ -1,5 +1,5 @@
-MD5 26e31a01ceb8eef10962c114cfdbb53b ChangeLog 15409
-MD5 c034ff740e81b03e7bccdeb981858173 gentoolkit-0.1.19-r4.ebuild 2456
+MD5 9a0a061d50480e4ba49a78a7e710d9dd ChangeLog 15666
+MD5 813ce194de06a84659b74aaf3478094c gentoolkit-0.1.19-r4.ebuild 2456
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoolkit-0.1.19-r4 0
 MD5 e038e2f6bb81dc1e939eda7322535015 files/gentool/ChangeLog 483
 MD5 4465ed729e3e37c812bed62d9aa940e1 files/gentool/gentool-author-coverage 351
@@ -20,7 +20,7 @@ MD5 08871c6fedbd9385ef8a55e1f72f3a14 files/scripts/ekeyword 917
 MD5 8a01b5a884ddc44af62ddf32f44e4bde files/scripts/mkebuild 7806
 MD5 a7acade566ea2f6b9bb4e9e67871b49d files/scripts/pkg-clean 2861
 MD5 c60e5311fdbbfac79ea17c54dc8047b8 files/scripts/pkg-size 1224
-MD5 5e95c9dd8ec22e6a923acea52bd39ceb files/scripts/qpkg 12665
+MD5 c37f15d47fff40bdc38af94152263522 files/scripts/qpkg 12665
 MD5 ac41939247058bc3d14dadeb9026e494 files/scripts/qpkg.1 3476
 MD5 347e69e1c9fba8b60fa631d92ea0a8f2 files/scripts/useflag 16164
 MD5 0a120feea2b79a3731c7912926421a27 files/scripts/useflag.1 5461

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # qpkg - query portage package system for various information
 #
@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.19 2003/03/21 12:37:18 mholzer Exp $
-ID='$Id: qpkg,v 1.19 2003/03/21 12:37:18 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.20 2003/04/22 18:54:26 mholzer Exp $
+ID='$Id: qpkg,v 1.20 2003/04/22 18:54:26 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
