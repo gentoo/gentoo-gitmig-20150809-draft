@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eef1319ee7ba99a9c73df47116019c30 geoip-1.3.2.ebuild 724
+MD5 b8d6497861af3b6aff6d328e37e4e200 ChangeLog 2606
 MD5 34bd03d96005aa6c017b830a8db07cdc geoip-1.2.1.ebuild 886
-MD5 b4ed18a64f8e20a57b1afa00b42d35e2 geoip-1.3.1.ebuild 717
-MD5 a47dd856449a5a77a51d59bd7540929a ChangeLog 2512
-MD5 4a75325116da2379682ddae2149395b7 geoip-1.3.5.ebuild 719
 MD5 c55794e4531fa0f2b1af08cf66846284 geoip-1.3.0.ebuild 739
+MD5 b4ed18a64f8e20a57b1afa00b42d35e2 geoip-1.3.1.ebuild 717
+MD5 0c928442eb726d1ebd36147ef6ae99e4 geoip-1.3.2.ebuild 725
 MD5 c22e66ec9842f9bce82cbc63ffce3ec1 metadata.xml 277
+MD5 4a75325116da2379682ddae2149395b7 geoip-1.3.5.ebuild 719
 MD5 a7ff42dbfbcaea43eec4a9aabaeffe00 files/digest-geoip-1.2.1 63
 MD5 32d6bd55a58aa4c5fa4d50b3c3ab05b0 files/digest-geoip-1.3.0 63
 MD5 6b12c52bdf70d5bca54a40fa9e42945d files/digest-geoip-1.3.1 63
 MD5 e7070cf14e3efbfab5ab5d6ba3a1a6db files/digest-geoip-1.3.2 63
 MD5 e315282e7eb6885cfac3a5555f3aa146 files/digest-geoip-1.3.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+TdBT+MN7JbqCpMRAkE1AJ9I9ItckIVqn4fa4SKINqzmGjACZwCcDZPA
-JvNfo0TfAAbi2+2HqhvzyVU=
-=mtFK
------END PGP SIGNATURE-----
