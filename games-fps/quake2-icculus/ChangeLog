@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.9 2004/11/23 20:11:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.10 2004/11/27 15:46:27 wolf31o2 Exp $
+
+*quake2-icculus-0.15-r2 (27 Nov 2004)
+
+  27 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.15-Makefile-amd64.patch, +files/0.15-amd64.patch,
+  files/0.15-gentoo-path.patch, -quake2-icculus-0.15-r1.ebuild,
+  +quake2-icculus-0.15-r2.ebuild:
+  Fixed up the path patch, added initial amd64 support, and closing bugs
+  #61801 and #40328.
 
   23 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   quake2-icculus-0.15-r1.ebuild:

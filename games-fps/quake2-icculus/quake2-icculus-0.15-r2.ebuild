@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.10 2004/11/23 20:11:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r2.ebuild,v 1.1 2004/11/27 15:46:27 wolf31o2 Exp $
 
 inherit eutils gcc games
 
@@ -14,7 +14,7 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix"
 
 # default to X11 if svga/opengl/sdl/aalib/dedicated are not in USE
@@ -31,16 +31,45 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	if [ -e /etc/env.d/09opengl ]
+	then
+		# Set up X11 implementation
+		X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+		X11_IMPLEM="${X11_IMPLEM##*\/}"
+		einfo "X11 implementation is ${X11_IMPLEM}."
+
+		VOID=$(cat /etc/env.d/09opengl | grep ${X11_IMPLEM})
+
+		USING_X11=$?
+		if [ "${USING_X11}" -eq "1" ]
+		then
+			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
+			opengl-update ${X11_IMPLEM}
+		fi
+	else
+		die "Could not find /etc/env.d/09opengl. Please run opengl-update."
+	fi
+}
+
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-Makefile-noopts.patch"
 	epatch "${FILESDIR}/${PV}-Makefile-optflags.patch"
+	epatch "${FILESDIR}/${PV}-Makefile-amd64.patch"
 	epatch "${FILESDIR}/${PV}-gentoo-path.patch"
+	epatch "${FILESDIR}/${PV}-amd64.patch"
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" \
+		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/quake2-icculus:" \
 		src/qcommon/files.c \
 		|| die "sed src/qcommon/files.c failed"
+	sed -i \
+		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/quake2-icculus:" \
+		src/linux/vid_so.c \
+		|| die "sed src/linux/vid_so.c failed"
 
 	ln -s $(which echo) ${T}/more
 	for g in $(useq rogue && echo rogue) $(useq xatrix && echo xatrix); do
@@ -144,6 +173,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [ "${USING_X11}" -eq "1" ]
+	then
+		opengl-update ${GL_IMPLEM}
+	fi
 	games_pkg_postinst
 	einfo "Go read /usr/share/doc/${PF}/README-postinstall.gz right now!"
 	einfo "It's important- This install is just the engine, you still need"

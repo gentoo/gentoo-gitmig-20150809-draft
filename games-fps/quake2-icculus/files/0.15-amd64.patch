@@ -1,0 +1,11 @@
+--- src/linux/sys_linux.c.orig	2004-02-03 22:25:43.310829456 -0500
++++ src/linux/sys_linux.c	2004-02-03 22:27:03.922574608 -0500
+@@ -223,6 +223,8 @@
+ 	const char *gamename = "gameppc.so";
+ #elif defined __sparc__
+ 	const char *gamename = "gamesparc.so";
++#elif defined __x86_64__
++	const char *gamename = "gamex86_64.so";
+ #else
+ #error Unknown arch
+ #endif
