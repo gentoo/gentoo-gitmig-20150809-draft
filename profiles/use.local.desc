@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.858 2005/01/12 13:30:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.859 2005/01/12 17:37:51 pvdabeel Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -88,6 +88,7 @@ app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
+app-portage/basc:screenshot - Adds support for taking screenshots
 app-shells/dash:diet - Compile and link with dietlibc
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
