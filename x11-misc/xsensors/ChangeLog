@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.5 2004/06/24 22:44:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.6 2004/11/20 05:21:59 augustus Exp $
+
+*xsensors-0.46 (20 Nov 2004)
+
+  20 Nov 2004; <augustus@gentoo.org> +xsensors-0.46.ebuild:
+  Latest version of XSensors checked in to portage.
 
   15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> xsensors-0.20.ebuild:
   marked ~amd64
