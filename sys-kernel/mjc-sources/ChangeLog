@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mjc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.6 2002/10/29 03:17:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/ChangeLog,v 1.7 2002/11/30 18:15:25 sethbc Exp $
+
+*mjc-sources-2.4.20-r1 (30 Nov 2002)
+  30 Nov 2002; Seth Chandler <sethbc@gentoo.org> mjc-sources-2.4.20-r1.ebuild
+  bumped version
 
 *mjc-sources-2.4.20_pre10-r2 (28 Oct 2002)
 
