@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.5 2002/10/20 19:25:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.6 2002/11/18 03:08:42 raker Exp $
+
+*pine-4.44-r5 (17 Nov 2002)
+
+  17 Nov 2002; Nick Hadaway <raker@gentoo.org> pine-4.44-r5.ebuild,
+  files/fancy.patch.bz2, files/digest-pine-4.44-r5 :
+  New pine ebuild with the threaded index patch and got rid of some
+  compile warnings.
 
 *pine-4.44-r4 (15 Apr 2002)
 
