@@ -1,3 +1,4 @@
-MD5 a941f87f881cefabf98e5ef896a9c55c weex-3.0.0_pre20030508.ebuild 645
-MD5 8ad26cbb1adc42cd14b2f1ca5411393c ChangeLog 527
-MD5 295ac1573d3a5af7bb4d1ed2b006e405 files/digest-weex-3.0.0_pre20030508 75
+MD5 08a4401d2468e284455608c2cc81928f weex-2.6.1.5.ebuild 655
+MD5 b059d71d6c8b37b9e5325d208fe3a6f0 ChangeLog 959
+MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
+MD5 f1f9ddbb28fceadc880ed47de9560c6c files/digest-weex-2.6.1.5 64

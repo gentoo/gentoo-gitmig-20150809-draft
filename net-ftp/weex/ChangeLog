@@ -1,6 +1,18 @@
 # ChangeLog for net-ftp/weex
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.2 2003/06/24 08:16:08 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.3 2004/03/22 11:50:45 phosphan Exp $
+
+*weex-2.6.1.5 (22 Mar 2004)
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> weex-2.6.1.5.ebuild,
+  weex-3.0.0_pre20030508.ebuild:
+  Latest stable version from sourceforge.
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  weex-3.0.0_pre20030508.ebuild:
+  The sourceforge weex project finally released some files, and a developer
+  asked to use 2.6.1.5 instead of the old 3.x snapshot which is known to have
+  problems.
 
   24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
   weex-3.0.0_pre20030508.ebuild:
