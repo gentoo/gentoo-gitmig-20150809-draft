@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.27 2005/01/26 21:07:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.28 2005/03/12 16:43:25 luckyduck Exp $
+
+*commons-logging-1.0.4-r1 (12 Mar 2005)
+
+  12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +commons-logging-1.0.4-r1.ebuild:
+  package doesnt make use of binary dependencies any longer. fixes #75856
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> commons-logging-1.0.4.ebuild:
   Stable on ppc64
