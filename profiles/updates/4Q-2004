@@ -99,3 +99,4 @@ move app-sci/spectromatic media-gfx/spectromatic
 move app-sci/xd3d media-gfx/xd3d
 move app-sci/celestia sci-astronomy/celestia
 move app-sci/ksetispy sci-astronomy/ksetispy
+move app-sci/ksetiwatch sci-astronomy/ksetiwatch
