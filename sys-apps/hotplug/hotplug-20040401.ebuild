@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040401.ebuild,v 1.6 2004/06/24 22:10:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040401.ebuild,v 1.7 2004/06/30 16:36:05 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64 ~mips"
+IUSE=""
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND=">=sys-apps/pciutils-2.1.9
@@ -56,4 +57,3 @@ pkg_postinst() {
 	ewarn "WARNING: The fxload program was spliced off this package"
 	ewarn "WARNING: emerge fxload if you need it"
 }
-
