@@ -28,4 +28,3 @@
 ./app-editors/e3/e3-1.7-r2.ebuild
 ./net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild
 ./sys-apps/net-tools/net-tools-1.60-r1.ebuild 
-./net-dialup/ppp/ppp-2.4.1-r2.ebuild
