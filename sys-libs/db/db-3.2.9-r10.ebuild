@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.4 2004/02/26 18:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.5 2004/03/02 16:35:22 iggy Exp $
 
 IUSE="doc java"
 
@@ -17,7 +17,7 @@ SLOT="3"
 LICENSE="DB"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
-KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ia64 ppc64 s390"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
