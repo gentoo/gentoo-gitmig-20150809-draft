@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/palo
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/palo/ChangeLog,v 1.1 2003/02/05 18:59:22 gmsoft Exp $
+
+
+*palo-1.2_pre20030115 (05 Feb 2003)
+
+  05 Feb 2003; Guy Martin <gmsoft@gentoo.org> palo-1.2_pre20030115.ebuild :
+
+  Initial import.
+
