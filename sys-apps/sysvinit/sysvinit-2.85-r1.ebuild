@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.6 2004/08/24 03:37:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.7 2004/11/05 01:30:50 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="/sbin/init - parent of all processes"
 HOMEPAGE="http://freshmeat.net/projects/sysvinit/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="selinux bootstrap build"
 
 RDEPEND="selinux? ( >=sys-libs/libselinux-1.14 )"
@@ -35,7 +35,7 @@ src_compile() {
 	# the shared obj by default anyway!  The other option is to
 	# refrain from building sulogin, but that isn't a good option.
 	# (09 Jul 2004 agriffis)
-	emake -C ${S}/src CC="${CC:-gcc}" LD="${CC:-gcc}" \
+	emake -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC)" \
 		LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS} -D_GNU_SOURCE" \
 		LCRYPT="-lcrypt" || die
 }
@@ -43,9 +43,9 @@ src_compile() {
 src_install() {
 	cd ${S}/src
 	into /
-	dosbin init halt killall5 runlevel shutdown sulogin
+	dosbin init halt killall5 runlevel shutdown sulogin || die "dosbin"
 	dosym init /sbin/telinit
-	dobin last mesg utmpdump wall
+	dobin last mesg utmpdump wall || die "dobin"
 	dosym killall5 /sbin/pidof
 	dosym halt /sbin/reboot
 	dosym halt /sbin/poweroff
@@ -56,7 +56,7 @@ src_install() {
 	# sysvinit docs
 	cd ${S}
 	doman man/*.[1-9]
-	dodoc COPYRIGHT README doc/*
+	dodoc README doc/*
 
 	# install our inittab
 	insinto /etc

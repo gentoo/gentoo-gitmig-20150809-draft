@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.17 2004/10/23 05:45:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.18 2004/11/05 01:33:20 vapier Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
@@ -14,12 +14,13 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~ppc-macos sparc s390 x86"
 IUSE="ssl ipv6 selinux"
 
 DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
-RDEPEND="selinux? ( sec-policy/selinux-ucspi-tcp )"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-ucspi-tcp )"
 PROVIDE="virtual/inetd"
 
 src_unpack() {
@@ -41,8 +42,8 @@ src_unpack() {
 	epatch ${DISTDIR}/ucspi-rss.diff
 	epatch ${FILESDIR}/${PV}-head-1.patch
 
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr/" > conf-home
 
 	# allow larger responses

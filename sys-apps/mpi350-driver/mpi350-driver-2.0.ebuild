@@ -1,26 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.7 2004/07/15 02:00:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.8 2004/11/05 01:27:21 vapier Exp $
 
 DESCRIPTION="Cisco's wireless drivers and utilities"
-
 HOMEPAGE="http://www.cisco.com/"
-
-SRC_DOWNLOAD="http://www.cisco.com/public/sw-center/sw-wireless.shtml"
 SRC_URI="Linux-ACU-Driver-v2.0.tar.gz"
-RESTRICT="fetch"
 
 LICENSE="MPL-1.1"
-
 SLOT="0"
-KEYWORDS="x86 amd64 -ppc -sparc"
-
+KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="fetch"
 
 DEPEND=""
 
-MOD_DIR="/lib/modules/`uname -r`"
-KERNEL_SRC="/usr/src/linux"
+MOD_DIR="/lib/modules/${KV}"
+KERNEL_SRC="${ROOT}/usr/src/linux"
 
 # ------------------------------------------------- #
 # The script that Cisco provides is basically
@@ -31,14 +26,9 @@ KERNEL_SRC="/usr/src/linux"
 # ------------------------------------------------- #
 
 pkg_nofetch() {
-	eerror "Please download ${SRC_URI} from ${SRC_DOWNLOAD}"
-	eerror "and put it in ${DISTDIR}."
-}
-
-src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
+	einfo "Please download ${SRC_URI} from"
+	einfo "http://www.cisco.com/public/sw-center/sw-wireless.shtml"
+	einfo "and put it in ${DISTDIR}"
 }
 
 src_compile() {
@@ -47,8 +37,7 @@ src_compile() {
 	# Thus we compile them by hand here.
 
 	cd ${S}/driver
-	einfo "Compiling mpi350.o"
-	${CC} -MD -Wall -I${KERNEL_SRC}/include -D__KERNEL__ -DMODULE -c ${S}/driver/mpi350.c
+	$(tc-getCC) -MD -Wall -I${KERNEL_SRC}/include -D__KERNEL__ -DMODULE -c ${S}/driver/mpi350.c || die
 }
 
 src_install() {
@@ -80,6 +69,7 @@ src_install() {
 	cd ${S}
 	dodoc ethX.cfg readme.txt
 }
+
 pkg_postinst() {
 	einfo "The cisco utilities are placed in /opt/cisco/bin"
 	einfo "To use them either add them to your PATH, or"
