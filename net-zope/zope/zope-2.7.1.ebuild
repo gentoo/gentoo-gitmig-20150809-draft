@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.1 2004/07/13 23:51:28 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.1.ebuild,v 1.2 2004/07/14 23:25:55 batlogg Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="=dev-lang/python-2.3.3"
 python='python2.3'
 
 DEPEND="${RDEPEND}
-virtual/glibc
+virtual/libc
 >=sys-apps/sed-4.0.5
 >=app-admin/zope-config-0.3"
 
