@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.22 2003/08/11 22:18:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.23 2003/08/24 20:37:56 seemant Exp $
+
+*coreutils-5.0-r2 (24 Aug 2003)
+
+  24 Aug 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r2.ebuild:
+  adds a patch to display a progress bar for mv and cp (when invoked with the -g
+  option). Thanks to Haukkari in #gentoo for passing this on to us. The patch
+  was authored by: Miika Pekkarinen <miipekk@ihme.org>
 
   11 Aug 2003; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r1.ebuild:
   Mark stable on alpha
