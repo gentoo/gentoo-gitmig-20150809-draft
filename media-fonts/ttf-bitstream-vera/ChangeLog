@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ttf-bitstream-vera
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.4 2003/12/01 22:45:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-bitstream-vera/ChangeLog,v 1.5 2003/12/24 23:19:05 spider Exp $
+
+  25 Dec 2003; <spider@gentoo.org> metadata.xml:
+  metadata-ication.
 
   01 Dec 2003; Aron Griffis <agriffis@gentoo.org>
   ttf-bitstream-vera-1.10-r2.ebuild:
