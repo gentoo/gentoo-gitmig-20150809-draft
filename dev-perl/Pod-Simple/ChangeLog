@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Simple
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.4 2004/10/03 15:41:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.5 2004/10/19 07:54:19 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Pod-Simple-3.02.ebuild:
+  Stable on amd64.
 
   03 Oct 2004; Michael Cummings <mcummings@gentoo.org> Pod-Simple-3.02.ebuild:
   Marking stable on x86 and sparc

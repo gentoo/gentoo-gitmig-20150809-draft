@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-AutoInstall
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ChangeLog,v 1.10 2004/06/25 00:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ChangeLog,v 1.11 2004/10/19 07:43:48 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  ExtUtils-AutoInstall-0.56.ebuild:
+  Stable on amd64.
 
 *ExtUtils-AutoInstall-0.59 (05 Jun 2004)
 

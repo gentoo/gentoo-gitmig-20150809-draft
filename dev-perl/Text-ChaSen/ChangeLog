@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-ChaSen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-ChaSen/ChangeLog,v 1.5 2004/09/07 08:43:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-ChaSen/ChangeLog,v 1.6 2004/10/19 08:02:16 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  Text-ChaSen-1.03-r1.ebuild:
+  Stable on amd64.
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> Text-ChaSen-1.03-r1.ebuild:
   Added eutils for epatch.
