@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ICal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.14 2004/06/25 00:20:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.15 2004/12/23 11:44:18 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Date-ICal-1.72.ebuild:
+  added ~ppc64
 
   26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Date-ICal-1.72.ebuild:
   Stable on alpha.
