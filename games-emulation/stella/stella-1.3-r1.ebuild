@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.4 2004/03/02 10:21:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.3-r1.ebuild,v 1.5 2004/05/27 02:15:00 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="sdl oss X alsa"
+IUSE="sdl X alsa"
 
 DEPEND="|| (
 		X? ( virtual/x11 )
@@ -32,14 +32,14 @@ src_compile() {
 	# let's just default joystick & snapshot support to on
 	MYOPTS="JOYSTICK_SUPPORT=1 SNAPSHOT_SUPPORT=1"
 
-	if [ `use alsa` ] ; then
+	if use alsa ; then
 		MYOPTS="${MYOPTS} SOUND_ALSA=1"
 	fi
-	if [ `use X` ] || [ -z "`use X``use sdl`" ] ; then
+	if use X || [ -z "`use X``use sdl`" ] ; then
 		cd ${S}/src/build
 		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS linux-x || die
 	fi
-	if [ `use sdl` ] ; then
+	if use sdl ; then
 		cd ${S}/src/build
 		emake OPTIMIZATIONS="${CFLAGS}" $MYOPTS SOUND_SDL=1 linux-sdl || die
 	fi
