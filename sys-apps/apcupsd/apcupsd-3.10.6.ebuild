@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.9 2003/11/02 11:33:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.10 2003/11/06 15:44:17 tantive Exp $
 
 IUSE="doc snmp usb apache2"
 
@@ -30,6 +30,8 @@ XPWRFAILDIR=${XSYSCONFDIR}
 src_unpack() {
 	unpack ${A}
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
+	cd ${S}/platforms/gentoo
+	epatch ${FILESDIR}/${PV}/apcupsd.in.patch
 }
 
 src_compile() {
