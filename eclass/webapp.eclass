@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.8 2004/04/23 14:19:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.9 2004/04/23 22:02:27 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,7 +20,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.3"
+DEPEND="$DEPEND >=net-www/webapp-config-1.4"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -37,7 +37,11 @@ EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
 function webapp_checkfileexists ()
 {
-	if [ ! -e $1 ]; then
+	local my_prefix
+
+	[ -n "$2" ] && my_prefix="$2/" || my_prefix=
+
+	if [ ! -e ${my_prefix}$1 ]; then
 		msg="ebuild fault: file $1 not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
@@ -243,15 +247,18 @@ function webapp_pkg_setup ()
 		ewarn "Removing existing copy of ${PN}-${PVR}"
 		rm -rf "${D}${MY_APPROOT}/${MY_APPSUFFIX}"
 	fi
+}
 
+function webapp_src_preinst ()
+{
 	# create the directories that we need
 
-	mkdir -p ${D}${MY_HTDOCSDIR}
-	mkdir -p ${D}${MY_HOSTROOTDIR}
-	mkdir -p ${D}${MY_CGIBINDIR}
-	mkdir -p ${D}${MY_ICONSDIR}
-	mkdir -p ${D}${MY_ERRORSDIR}
-	mkdir -p ${D}${MY_SQLSCRIPTSDIR}
+	dodir ${MY_HTDOCSDIR}
+	dodir ${MY_HOSTROOTDIR}
+	dodir ${MY_CGIBINDIR}
+	dodir ${MY_ICONSDIR}
+	dodir ${MY_ERRORSDIR}
+	dodir ${MY_SQLSCRIPTSDIR}
 }
 
 function webapp_pkg_postinst ()
@@ -259,5 +266,5 @@ function webapp_pkg_postinst ()
 	G_HOSTNAME="localhost"
 	. /etc/vhosts/webapp-config
 
-	use vhosts || /usr/sbin/webapp-config -I -u root -d "${VHOST_ROOT}/htdocs/${PN}/" ${PN} ${PVR}
+	use vhosts || /usr/sbin/webapp-config -I -u root -h localhost -d "${VHOST_ROOT}/htdocs/${PN}/" ${PN} ${PVR}
 }
