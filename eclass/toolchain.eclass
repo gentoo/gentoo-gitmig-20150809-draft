@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.94 2005/01/27 20:26:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.95 2005/01/30 02:08:01 lv Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1449,7 +1449,7 @@ gcc_movelibs() {
 
 #----<< src_* >>----
 
-#---->> unorganised crap in need of refactoring follows
+#---->> unorganized crap in need of refactoring follows
 
 # This is only used by the backwards-compatible stuff above...
 fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
@@ -1808,3 +1808,4 @@ use_multilib() {
 		;;
 	esac
 }
+
