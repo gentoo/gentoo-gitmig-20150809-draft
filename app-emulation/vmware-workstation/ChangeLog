@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.37 2004/03/20 17:22:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.38 2004/04/28 20:40:29 wolf31o2 Exp $
+
+  28 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.1.7568.ebuild:
+  Adding more information in the comments about why amd64 is not a supported
+  platform and closing bug #49203.
 
   20 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-4.0.5.6030-r1.ebuild,
