@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7faba8a19b353cecc0fb6e270cac226b doom-data-1.ebuild 581
+MD5 6197caa929df0bed04dac0388585e2a5 doom-data-1.ebuild 596
 MD5 664d393ce2c056c10b77f1de646532fc metadata.xml 258
 MD5 aa0e1cdd58c53fafd647eb3dcf18da09 ChangeLog 342
 MD5 1dc295be4491635b1546c955518b491d files/digest-doom-data-1 118
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA/dRvHTu7gpaalycRAoK7AJ9Ccc0Y4RR9ONsj2KnsZ13dipWEIgCgvSQA
-u5xEE66rYM/pcbCHEZbksjI=
-=VLCR
+iD8DBQFA/dV8HTu7gpaalycRAj82AJ4rEtwALwSv+qr/EODJ4+6oJFnhOACeLSHx
+tjj/G5VdltlhadxK9ZTSp4g=
+=58T9
 -----END PGP SIGNATURE-----
