@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+
+	<herd>gfx-3d</herd>
+
+	<maintainer>
+		<email>malverian@gentoo.org</email>
+		<name>Philip Walls</name>
+	</maintainer>
+
+	<maintainer>
+		<email>lu_zero@gentoo.org</email>
+		<name>Luca Barbato</name>
+	</maintainer>
+
+	<longdescription>Blender, the open source software for 3D modeling, animation, rendering, post-production, interactive creation and playback. Available for Windows, Linux, Irix, Sun Solaris, FreeBSD or Mac OS X.</longdescription>
+
+</pkgmetadata>
