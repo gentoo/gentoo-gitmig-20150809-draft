@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.9 2003/02/12 08:17:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.10 2003/04/19 23:20:51 prez Exp $
 
 *vlnx-416 (13 Oct 2002)
+
+  04 Jan 2002; Preston A. Elder <prez@gentoo.org> vlnx-416e.ebuild :
+  Made ebuild satisfy virtual/virus
 
   04 Jan 2002; Martin Holzer <mholzer@gentoo.org> :
   Fixed SRC_URI.
