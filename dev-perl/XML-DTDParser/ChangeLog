@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DTDParser
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.1 2004/12/05 03:30:17 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.2 2005/04/01 17:56:26 blubb Exp $
+
+  01 Apr 2005; Simon Stelling <blubb@gentoo.org> XML-DTDParser-2.01.ebuild:
+  added ~amd64
 
 *XML-DTDParser-2.01 (04 Dec 2004)
 
