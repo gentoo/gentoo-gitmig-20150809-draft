@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.1 2004/09/10 12:21:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.8-r1.ebuild,v 1.2 2004/11/17 16:52:43 corsair Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="A fast Servlet 2.4 and JSP 2.0 engine with EJB and distributed session load balancing."
 SRC_URI="http://www.caucho.com/download/${P}.tar.gz"
 HOMEPAGE="http://www.caucho.com"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 LICENSE="CAUCHO"
 SLOT="0"
 DEPEND="!net-www/resin-ee"
