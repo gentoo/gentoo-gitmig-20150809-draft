@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ren
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.9 2004/07/26 04:20:13 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.10 2004/07/29 01:34:15 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> ren-1.0.ebuild:
+  stable on ppc64, bug #58300
 
   25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
   Stable macos per bug # 58306
