@@ -18,7 +18,7 @@ gdbm		sys-libs/gdbm
 berkdb		sys-libs/db
 slang		sys-libs/slang
 readline	sys-libs/readline
-arts		kde-base/kdelibs
+arts		kde-base/arts
 tetex		app-text/tetex
 aalib		media-libs/aalib	
 nas		media-libs/nas
@@ -45,7 +45,7 @@ oggvorbis	media-libs/libvorbis
 gnome		gnome-base/gnome
 gtk		x11-libs/gtk+
 qt		x11-libs/qt
-kde		kde-base/kde
+kde		kde-base/kdebase
 motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
