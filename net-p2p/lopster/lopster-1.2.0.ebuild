@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.0.ebuild,v 1.2 2003/03/09 12:01:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.0.ebuild,v 1.3 2003/06/12 22:32:27 seemant Exp $
 
 IUSE="gtk nls"
 
@@ -14,7 +14,7 @@ SRC_URI="http://lopster.sourceforge.net/download/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="nls? ( sys-devel/gettext )"

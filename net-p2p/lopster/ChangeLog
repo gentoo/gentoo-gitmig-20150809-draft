@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.8 2003/03/09 12:01:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.9 2003/06/12 22:32:27 seemant Exp $
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> lopster-1.2.0.ebuild:
+  unmasked on x86, thanks to Magnade in #gentoo-dev
 
 *lopster-1.2.0 (09 Mar 2003)
 
