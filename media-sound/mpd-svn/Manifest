@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b4b752465f9a9dfeb65fa8bc26f45603 mpd-svn-20041129.ebuild 3097
+MD5 abc4cbb02aa8c6d057319edcfe2b96ba ChangeLog 409
+MD5 28ed49040b6ddc36def2c2a536394b37 metadata.xml 251
+MD5 a34abcb2b1dc91b330a868d8145e0ac6 files/digest-mpd-svn-20041129 69
+MD5 9a261ba196424b0a0bb70293d0c9f164 files/mpd.rc6 870
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBq5rB10xuJSrg3/sRAthXAJ48VLZEPSz7oYxnzESlBJmegG+d1wCeLZUP
+EyAL8+1giSPnXOkox7ehidU=
+=rFxl
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/mpd-svn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.1 2004/11/29 21:55:04 ticho Exp $
+
+*mpd-svn-20041129 (29 Nov 2004)
+
+  29 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +files/mpd.rc6, +mpd-svn-20041129.ebuild:
+  Initial import. Ebuild based on media-sound/mpd ebuild.
+
