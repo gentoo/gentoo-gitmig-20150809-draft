@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.2 2005/01/31 14:23:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.1.ebuild,v 1.3 2005/02/10 18:13:58 ka0ttic Exp $
 
 inherit gnuconfig eutils
 
@@ -73,9 +73,7 @@ src_install() {
 	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
 	dodoc PORTING README SUPPORT_NTOP.txt THANKS docs/*
 
-	mv ${D}/usr/share/ntop/html ${D}/usr/share/doc/${PF}
-	rmdir ${D}/usr/share/ntop
-	chown -R root:root ${D}/etc/ntop ${D}/usr/share/doc/${PF}/html \
+	chown -R root:root ${D}/etc/ntop ${D}/usr/share/${PN}/html \
 		${D}/usr/lib/ntop
 
 	dohtml ntop.html
