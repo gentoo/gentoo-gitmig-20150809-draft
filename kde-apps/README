@@ -1,0 +1,43 @@
+Explanation of the KDE package move. Author: Dan Armak <danarmak@gentoo.org>.
+$Header: /var/cvsroot/gentoo-x86/kde-apps/README,v 1.1 2001/08/18 20:23:26 danarmak Exp $
+
+Summary
+-------
+All packages in kde-apps have been moved to other categories.
+Parts of the base KDE distribution (i.e. kdebase, kdenetwork, ...)
+have been moved to kde-base.
+All other packages have ben moved to the proper categories: app-*,
+media-*, net-*, dev-*. From now on, KDE applications will be categorized
+just like other apps.
+The old locations have been masked. If you still have packages under
+/usr/portage/kde-apps/, please run 'emerge --clean rsync' to get rid of them.
+A similar move of Gnome apps will follow shortly.
+
+Reasons
+-------
+Packages are now much easier to find and categorize. Someone who wants
+e.g. a list of cdr apps can now simply go to app-cdr and does not have to
+check in kde-apps and gnome-apps. This is much simpler, cleaner and more 
+logical.
+In addition, with the introduction of KDE2.2, the door has been opened for 
+the creation of ebuilds for a great amount of kde applications. There are
+currently over 1,000 KDE applications registered on apps.kde.com. To have
+such an amount of packages in one category would have been impossible.
+
+Side effects
+------------
+If KDE was installed before the move, i.e. from the old location, then
+merging any KDE app will cause kde-libs, and possibly several other base
+KDE packages, to be recompiled and remerged (just once).
+Apps already installed will continue to work. Also, because of Portage's
+config dir protection feature, the remerge will not affect any system
+settings. It will just take some time; an unavoidable consequence. Sorry
+for any inconvinience.
+
+BTW, whoever has heard about movepackage.sh, the package relocation script,
+or the new Portage Job System in this connection shoud know that the former
+has been cancelled and the latter put off.
+
+
+Dan Armak
+18/8/2001

@@ -1,3 +1,31 @@
+#moved away
+kde-apps/cervisia
+kde-apps/kbear
+kde-apps/kcpuload
+kde-apps/kdbg
+kde-apps/kdeaddons
+kde-apps/kdeadmin
+kde-apps/kdegraphics
+kde-apps/kdemultimedia
+kde-apps/kdenetwork
+kde-apps/kdepim
+kde-apps/kdesdk
+kde-apps/kdeutils
+kde-apps/kdedevelop
+kde-apps/kdoc
+kde-apps/kfilecoder
+kde-apps/kfilereplace
+kde-apps/kgraphspace
+kde-apps/kmago
+kde-apps/knteload
+kde-apps/koffice
+kde-apps/krusader
+kde-apps/ktelnet
+kde-apps/ktexmaker2
+kde-apps/kuickshow
+kde-apps/kvirc
+kde-apps/quanta
+kde-apps/webconfig
 
 #this is an RC6-only ebuild (no supervise support)
 =sys-apps/dcron-2.7-r5
