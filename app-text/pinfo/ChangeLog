@@ -1,13 +1,20 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.4 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.5 2002/08/07 14:43:08 cselkirk Exp $
 
 *pinfo-0.6.5_p2-r1 (22 Jul 2002)
 
+  07 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> pinfo-0.6.5_p2-r1.ebuild 
+  pinfo-0.6.3.ebuild :
+
+  Added ppc to KEYWORDS.
+  
   2 Aug 2002; phoen][x <phoenix@gentoo.org> pinfo-0.6.5_p2-r1.ebuild :
+  
   Added KEYWORDS.
 
-  22 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> pinfo-0.6.5_p2-r1.ebuild files/digest-pinfo-0.6.5_p2-r1:
+  22 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> pinfo-0.6.5_p2-r1.ebuild
+  files/digest-pinfo-0.6.5_p2-r1 :
 
   Configuration files are now installed in /etc/pinfo instead of /usr/etc.
 
