@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.5 2004/07/04 11:27:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.6 2004/07/14 17:29:20 carlo Exp $
+
+*baghira-0.4c (14 Jul 2004)
+
+  14 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +baghira-0.4c.ebuild:
+  version bump
 
   04 Jul 2004; Carsten Lohrke <carlo@gentoo.org> :
   version bump
