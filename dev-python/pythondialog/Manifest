@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 540c8038a942dee31206167c5e46018e ChangeLog 786
-MD5 f83a457e4e116166b9464d07a6fcd7f6 pythondialog-2.7.ebuild 619
+MD5 cb76866c7495984d75f6785c0ca03a9f ChangeLog 881
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 d7f1a2f0be0052518291b8a743c099f8 pythondialog-1.0.ebuild 769
+MD5 adbcf393144d3e2483d614bb5b27d687 pythondialog-2.7.ebuild 625
 MD5 80e5ace6de9868fe7574d8f566d85cdf files/00_all_setup.py.patch.bz2 322
-MD5 c7d5806c7aa14d3ef98bf70ac8e773fc files/digest-pythondialog-2.7 68
 MD5 8d47d64d3782fd31b429258c21b66dc5 files/digest-pythondialog-1.0 53
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjKyaugEuf3OQ0akRAq+3AJ9HKvgeq7ayU7MnbviCx43F4HuqdgCfTcXH
-jMT/OxTLwinIOF76G9hxTnY=
-=2fG3
------END PGP SIGNATURE-----
+MD5 c7d5806c7aa14d3ef98bf70ac8e773fc files/digest-pythondialog-2.7 68
