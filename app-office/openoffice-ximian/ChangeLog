@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.12 2004/01/14 10:48:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.13 2004/01/17 07:44:07 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  openoffice-ximian-1.1.46.ebuild:
+  set ppc in keywords
 
   14 Jan 2004; Paul de Vrieze <pauldv@gentoo.org>
   openoffice-ximian-1.1.49.2.ebuild:
