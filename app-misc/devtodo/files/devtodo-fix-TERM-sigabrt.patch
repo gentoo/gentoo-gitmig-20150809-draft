@@ -1,0 +1,23 @@
+--- src/todoterm.cc.orig	2004-08-13 00:11:52.095224000 -0400
++++ src/todoterm.cc	2004-08-13 01:15:38.901461024 -0400
+@@ -2,6 +2,7 @@
+ #include "todoterm.h"
+ 
+ #ifdef USETERMCAP
++#include <iostream>
+ #include <string>
+ #include <stdexcept>
+ #include <curses.h>
+@@ -14,7 +15,11 @@
+ int getWidth() {
+ 	if (!info[2047]) {
+ 	char const *termtype = getenv("TERM");
+-		if (!termtype) throw runtime_error("can't get terminal type, please set TERM envar");
++		if (!termtype) {
++			cerr << "can't get terminal type, defaulting to vt100." << endl;
++			cerr << "please set the TERM env variable." << endl;
++			setenv("TERM", "vt100", 0);
++		}
+ 	int result = tgetent(info, getenv("TERM"));
+ 		if (result < 0)
+ 			throw runtime_error("could not access termcap database");

@@ -1,0 +1,13 @@
+--- doc/scripts.sh.orig	2004-08-13 00:06:05.751876192 -0400
++++ doc/scripts.sh	2004-08-13 00:06:56.935095160 -0400
+@@ -22,7 +22,9 @@
+ 
+ cd ()
+ {
+-	builtin cd "$@" && [ -r .todo ] && devtodo ${TODO_OPTIONS}
++	builtin cd "$@"
++	RV=$?
++	[ -r .todo ] && devtodo ${TODO_OPTIONS} || return $RV
+ }
+ 
+ pushd ()

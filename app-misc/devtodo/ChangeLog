@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.15 2004/07/21 15:54:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.16 2004/08/21 23:26:06 kloeri Exp $
+
+*devtodo-0.1.17-r2 (22 Aug 2004)
+
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +files/devtodo-fix-TERM-sigabrt.patch, +files/devtodo-fix-cd-builtin.patch,
+  +devtodo-0.1.17-r2.ebuild:
+  Fix bugs 60206 and 60207, patches by Aaron Walker.
 
   21 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> devtodo-0.1.17-r1.ebuild:
   fix deps.
