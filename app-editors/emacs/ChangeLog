@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.29 2004/06/24 21:53:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.30 2004/07/04 14:15:47 usata Exp $
+
+*emacs-21.3-r4 (04 Jul 2004)
+
+  04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> -emacs-21.3-r1.ebuild,
+  emacs-21.3-r2.ebuild, emacs-21.3-r3.ebuild, +emacs-21.3-r4.ebuild:
+  Added partial SLOT support. Reversed Xaw3d and motif USE flag order,
+  see bug #18518
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> emacs-21.3-r2.ebuild,
   emacs-21.3-r3.ebuild:
