@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.1 2003/07/16 14:44:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-20030716.ebuild,v 1.2 2003/07/18 12:15:20 lanius Exp $
 
 DESCRIPTION="Foomatic printer database"
 HOMEPAGE="http://www.linuxprinting.org/foomatic"
@@ -36,6 +36,9 @@ src_compile() {
 	if [ `use ppds` ]; then
 		cd foomatic-db-engine-3.0.0
 		epatch ${FILESDIR}/perl-module.diff
+		cp Makefile.in Makefile.in.orig
+		sed s:'cp\ \$\${foomatic_filters_root}/\*\.1':'cp\ \*\.1': \
+		  < Makefile.in.orig > Makefile.in
 		econf
 		make inplace
 		rm foomatic-rip
