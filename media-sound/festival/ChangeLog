@@ -3,6 +3,9 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  10 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> festival-1.4.2-r3.ebuild:
+  Moving to ~sparc, thanks to gust4voz in #gentoo-sparc
+
 *festival-1.4.3 (20 Jul 2003)
 
   20 Jul 2003; jje <jje@gentoo.org> festival-1.4.3.ebuild:
