@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.2 2003/09/06 08:39:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.3 2003/09/14 22:40:17 nerdboy Exp $
 
 S=${WORKDIR}/build
 
 DESCRIPTION="Source-Navigator is a source code analysis tool"
-SRC_URI="mirror://sourceforge/sourcenav/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/sourcenav/${P}.tar.gz
+mirror://gentoo/${P}-gentoo.diff.gz"
 HOMEPAGE="http://sourcenav.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~sparc  ~ppc"
+KEYWORDS="x86 ~sparc  ~ppc"
 IUSE="X"
 DEPEND=">=sys-libs/glibc-2.2.4"
 SN="/opt/sourcenav"
@@ -20,7 +21,7 @@ src_unpack() {
 	mkdir ${WORKDIR}/build
 	cd ${WORKDIR}/${P}
 
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	zcat ${DISTDIR}/${PF}-gentoo.diff.gz | patch -p0 || die
 }
 
 src_compile() {
