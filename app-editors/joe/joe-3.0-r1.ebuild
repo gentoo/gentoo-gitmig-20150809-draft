@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.5 2004/05/18 00:27:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.6 2004/05/19 10:06:03 joker Exp $
 
 IUSE=""
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# Fix bug #50271 (joe 3.0 documentation doesn't reflect new config file location)
+	sed -e 's:${prefix}/etc/joerc:@sysconfdir@/joe/joerc:' -i joerc.in
 	for i in jmacsrc.in jpicorc.in jstarrc.in rjoerc.in joe.1.in
 	do
 		sed -e 's:@sysconfdir@/:@sysconfdir@/joe/:' -i ${i}
