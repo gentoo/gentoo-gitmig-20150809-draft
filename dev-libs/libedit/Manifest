@@ -1,0 +1,5 @@
+MD5 d32e09ca701f8d1aec6a8931dac2c249 files/digest-libedit-20031222 68
+MD5 737f1b11b30496ab584ed7c7ca7e92a4 files/20031222-debian-to-gentoo.patch 3834
+MD5 2d787f43a24588d72ca5188ad2ac7860 libedit-20031222.ebuild 732
+MD5 eb4aef2c6a040c12cf74f098373ebd7e ChangeLog 342
+MD5 dd9909c8d431d328b7f97b210f957592 metadata.xml 620
