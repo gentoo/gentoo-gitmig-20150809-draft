@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.12 2004/06/24 23:30:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.13 2004/06/29 03:44:22 merlin Exp $
+
+*teapop-0.3.8 (28 Jun 2004)
+
+  28 Jun 2004; Cory Visi <merlin@gentoo.org> teapop-0.3.8.ebuild:
+  Version bump to 0.3.8 to fix crlf header bug (Bug 33995) and java fix
 
 *teapop-0.3.7-r1 (30 Sep 2003)
 
