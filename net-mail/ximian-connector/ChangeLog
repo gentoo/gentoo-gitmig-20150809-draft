@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/ximian-connector
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.9 2003/02/12 08:18:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.10 2003/07/05 13:27:40 liquidx Exp $
+
+*ximian-connector-1.4.0.0.6.2 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  ximian-connector-1.2.0.ebuild, ximian-connector-1.2.1_p2-r1.ebuild,
+  ximian-connector-1.2.1_p2.ebuild, ximian-connector-1.2.2_p1.ebuild,
+  ximian-connector-1.4.0.0.6.2.ebuild:
+  version bump and cleanup.
+  fixed in 1.2.x : pegged deps at evolution-1.2.x
+  fixed in 1.4.x : gconf install, rpm eclass, krb4 dep, removed ppc option
 
 *ximian-connector-1.2.2_p1-r1 (11 Feb 2003)
 
