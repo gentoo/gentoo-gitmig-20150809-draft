@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.1 2003/09/19 05:47:34 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21.ebuild,v 1.2 2003/09/21 01:19:30 nerdboy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -33,7 +33,8 @@ S=${WORKDIR}/linux-${KV}
 DEPEND="${DEPEND} app-arch/rpm2targz"
 
 DESCRIPTION="Kernel source used in Planet CCRMA custom audio upgrade (based on RedHat)"
-SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm"
+SRC_URI="http://ccrma-www.stanford.edu/planetccrma/mirror/redhat/linux/planetcore/9/en/os/i386/kernel-source-${KV}.i386.rpm
+mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://ccrma-www.stanford.edu/ http://www.kernel.org/ http://www.redhat.com/"
 KEYWORDS="~x86"
 SLOT="${KV}"
@@ -46,12 +47,27 @@ src_unpack() {
 	# Portage probably shouldn't create any files outside of
 	# /var/tmp/portage just yet anyway. :)
 	TMPDIR=${T} rpm2targz ${DISTDIR}/kernel-source-${KV}.i386.rpm
-	tar xvzf kernel-source-${KV}.i386.tar.gz
+	tar xvzf kernel-source-${KV}.i386.tar.gz || die
 
-	mv usr/src/linux-${KV} ${WORKDIR}
+	tar xvzf ${DISTDIR}/${P}.tar.gz || die
+
+	mv usr/src/linux-${KV} ${WORKDIR} || die
 
 	cd ${S}
 
 	kernel_universal_unpack
+}
+
+pkg_postinst() {
+
+	ewarn "This kernel currently has an unresolved symbol error"
+	ewarn "with alsa, however, it works with the OSS drivers."
+
+	einfo "A default kernel config has been provided in"
+	einfo "distfiles/planet-ccrma-sources-2.4.21.tar.gz."
+	einfo "Copy it to /usr/src/linux/.config and run make oldconfig."
+	einfo "Then edit to taste, but be careful not to tweak too much."
+	einfo "Just make sure to enable the devfs support."
+	einfo "And never run with scissors..."
 }
 
