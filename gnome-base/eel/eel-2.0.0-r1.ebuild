@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.0-r1.ebuild,v 1.1 2002/06/11 18:26:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.0-r1.ebuild,v 1.2 2002/07/18 12:38:11 spider Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="EEL is the Eazel Extentions Library"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/eel/${P}.tar.bz2"
+SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 LGPL-2.1" 
+KEYWORDS="x86 ppc"
+
 
 RDEPEND=">=dev-libs/glib-2.0.0
 	>=gnome-base/gconf-1.1.11
