@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ganttproject
+Name[de]=Ganttproject Projektverwaltung
+Comment=Ganttproject Project Management
+Exec=ganttproject %F
+Icon=gnome-ganttproject.png
+Terminal=false
+Type=Application
+Categories=Application;Office;ProjectManagement;
+StartupNotify=true

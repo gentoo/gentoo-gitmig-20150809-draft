@@ -1,0 +1,10 @@
+Index: build.xml
+===================================================================
+RCS file: /cvsroot/ganttproject/ganttproject/build.xml,v
+retrieving revision 1.72
+diff -r1.72 build.xml
+161a162,163
+> 			encoding="ISO-8859-1"
+> 			source="1.4"
+395a398
+> 			encoding="ISO-8859-1"

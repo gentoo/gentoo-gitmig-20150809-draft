@@ -1,0 +1,7 @@
+MD5 e9a6f7d0d6b07e0004fc52ca0ecfbaa4 ganttproject-1.9.11.ebuild 1390
+MD5 ae272cead09e462384b983e3dc0fa818 ChangeLog 430
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 4a2e2fa0e3d18c41b5e92a279a829bdb files/ganttproject.desktop 278
+MD5 1a7ebb9c3b242f9ad9360f9c1c3c3098 files/digest-ganttproject-1.9.11 73
+MD5 5bf249fbdc82ec777581b234abb54d1e files/ganttcalendar.patch 494
+MD5 4da2a79a26daa7f76bcb5ed140ae2b44 files/build.xml.patch 281

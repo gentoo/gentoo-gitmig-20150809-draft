@@ -1,0 +1,9 @@
+# ChangeLog for app-office/ganttproject
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ChangeLog,v 1.1 2004/08/04 10:15:12 karltk Exp $
+
+*ganttproject-1.9.11 (04 Aug 2004)
+
+  04 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  ganttproject-1.9.11.ebuild: Initial import.  Ebuild submitted by Lars Trieloff
+  <lars@trieloff.net>. Fixes #56358.

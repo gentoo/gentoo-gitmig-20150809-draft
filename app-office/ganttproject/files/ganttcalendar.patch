@@ -1,0 +1,13 @@
+Index: src/net/sourceforge/ganttproject/GanttCalendar.java
+===================================================================
+RCS file: /cvsroot/ganttproject/ganttproject/src/net/sourceforge/ganttproject/GanttCalendar.java,v
+retrieving revision 1.14
+diff -r1.14 GanttCalendar.java
+249,251c249,251
+<     public int compareTo(Object o) {
+<         return compareTo((GanttCalendar)o);
+<     }
+---
+>     //public int compareTo(Object o) {
+>     //    return compareTo((GanttCalendar)o);
+>     //}
