@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.31 2003/03/28 02:21:36 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.32 2003/04/06 22:18:42 zwelch Exp $
+
+*gcc-config-1.3.1-r1 (06 Apr 2003)
+
+  06 Apr 2003; Zach Welch <zwelch@gentoo.org> gcc-config-1.3.1-r1.ebuild,
+  gcc-config-1.3.1.ebuild, files/gcc-config-1.3.1, files/gcc-config-1.4.1 :
+  change return to exit in gcc-config script, and minor fix for distcc
+   and cross-compiling compatibility.
+  Note: The latest gcc-config-1.4 is almost ready for production, but
+   these changes are still too experimental to commit an ebuild.  Even
+   so, I am also updating the gcc-config script to reflect the latest
+   status.  Still no ebuild for now.
 
   23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.4,
                                                     wrapper-1.4.c :
@@ -9,9 +20,9 @@
     on this, so not adding a ebuild for now.
   - Add wrapper-1.4.c that is borken up in functions.  This is also
     thanks to Zach Welch <zwelch@gentoo.org>.  I also tweaked it to
-	modify PATH by appending gcc's bin path to it ... this should
-	speed up calls gcc does to its tools.  I also fixed a few possible
-	memory leaks.
+    modify PATH by appending gcc's bin path to it ... this should
+    speed up calls gcc does to its tools.  I also fixed a few possible
+    memory leaks.
 
   19 Feb 2003; Guy Martin <gmsoft@gneoot.org> gcc-config-1.3.1.ebuild :
   Changed ~hppa to hppa.
