@@ -4,6 +4,7 @@ MD5 ebda6777ff6cfe7c689d56667d116461 sane-frontends-1.0.12.ebuild 1324
 MD5 016169fd1dacdbb452d49d35b3a47119 sane-frontends-1.0.8.ebuild 872
 MD5 36ec75d391ae6424c9e07c1bc572f79a sane-frontends-1.0.11.ebuild 869
 MD5 7df21563476ac0166ba76aab35393f6c ChangeLog 2308
+MD5 e3010e884705ab9dfe82a3663438d36b metadata.xml 383
 MD5 c2a091acb3718d20d61ef48703538552 files/digest-sane-frontends-1.0.10 73
 MD5 b60b7d0bcbc4a5edb89a0107ab8b1531 files/digest-sane-frontends-1.0.11 73
 MD5 aed79797fee4d1b0f14e4cc70857aea7 files/digest-sane-frontends-1.0.12 73
