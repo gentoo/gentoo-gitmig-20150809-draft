@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/bioperl-run-1.4.ebuild,v 1.4 2004/08/03 11:23:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/bioperl-run-1.4.ebuild,v 1.5 2004/09/23 19:48:15 sediener Exp $
 
 inherit perl-module eutils
 CATEGORY="app-sci"
@@ -12,7 +12,7 @@ SRC_URI="http://www.bioperl.org/ftp/DIST/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="

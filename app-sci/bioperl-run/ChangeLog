@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/bioperl-run
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/ChangeLog,v 1.6 2004/08/03 11:23:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/ChangeLog,v 1.7 2004/09/23 19:48:15 sediener Exp $
+
+  23 Sep 2004; Stephen Diener <sediener@gentoo.org> bioperl-run-1.4.ebuild:
+  Bumped 1.4 to stable on x86
 
   03 Aug 2004; David Holm <dholm@gentoo.org> bioperl-run-1.4.ebuild:
   Added to ~ppc.
