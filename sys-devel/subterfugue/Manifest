@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc829a1980f1c76c3c64781a13055a0f ChangeLog 1833
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 419f4da225335f83a14262afc1721465 subterfugue-0.2.1a.ebuild 1523
-MD5 280505cf0a93d7421f64d2e48f4ad419 files/digest-subterfugue-0.2.1a 66
+MD5 b2d78c8830999baf1c9d340c0ec561c5 ChangeLog 1835
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 7e3351bf87121d72b46ae2af34b6df22 files/subterfugue-0.2.1a-setup.py 460
 MD5 256769a72fc0352e9c2539b7f320cbea files/subterfugue-0.2.1a-gcc33.patch 591
+MD5 280505cf0a93d7421f64d2e48f4ad419 files/digest-subterfugue-0.2.1a 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFCKP33LLFUmVNQ7rkRAhyQAKCiZgQ0Qh8W1AMBOMRgFlrgtauBFACXRNkp
-QXO9qnU5ugROY0mheahB3Q==
-=hzLB
+iD8DBQFCKbYAI1lqEGTUzyQRAjmJAKCg39d4mBrs5Bg2LUd8WIv/UI0mlgCeIE/i
+3XOjzy2S3QKJjrHF5GK6gs4=
+=5LkP
 -----END PGP SIGNATURE-----
