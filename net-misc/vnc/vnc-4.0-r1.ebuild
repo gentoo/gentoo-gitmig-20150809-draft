@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0.ebuild,v 1.5 2005/01/07 18:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.1 2005/01/07 18:12:04 aliz Exp $
 
 inherit eutils toolchain-funcs
 
-X_VERSION="6.7.0"
+X_VERSION="6.8.1"
 
 MY_P="${P}-unixsrc"
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.realvnc.com/"
 SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz
-	 http://freedesktop.org/~xorg/X11R${X_VERSION}/src/X11R${X_VERSION}-src1.tar.gz
-	 http://freedesktop.org/~xorg/X11R${X_VERSION}/src/X11R${X_VERSION}-src2.tar.gz
-	 http://freedesktop.org/~xorg/X11R${X_VERSION}/src/X11R${X_VERSION}-src3.tar.gz"
+	 http://xorg.freedesktop.org/X11R${X_VERSION}/src/X11R${X_VERSION}-src1.tar.gz
+	 http://xorg.freedesktop.org/X11R${X_VERSION}/src/X11R${X_VERSION}-src2.tar.gz
+	 http://xorg.freedesktop.org/X11R${X_VERSION}/src/X11R${X_VERSION}-src3.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND="sys-libs/zlib
@@ -49,9 +49,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}/vnc-xclients.patch
 	epatch ${FILESDIR}/${P}/vnc-xorg-x11-fixes.patch
 	epatch ${FILESDIR}/${P}/vnc-xorg.patch
+	epatch ${FILESDIR}/${P}/imake-tmpdir.patch
 
 	epatch ${FILESDIR}/xc.patch-cfbglblt8.patch
 	epatch xc.patch
+
+	echo "#define CcCmd $(tc-getCC)" >> ${S}/xc/config/cf/vnc.def
 }
 
 src_compile() {

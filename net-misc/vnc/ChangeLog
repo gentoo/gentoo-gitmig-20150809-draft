@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/vnc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.29 2004/09/15 22:29:16 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.30 2005/01/07 18:12:04 aliz Exp $
+
+*vnc-4.0-r1 (07 Jan 2005)
+
+  07 Jan 2005; Daniel Ahlberg <aliz@gentoo.org>
+  files/vnc-4.0/vnc-xorg.patch, +vnc-4.0-r1.ebuild, vnc-4.0.ebuild, +imake-tmpdir.patch,
+  vnc-xorg-x11-fixes.patch:
+  Revision bump to use X.Org 6.8.1, closing #67565.
+  Create /usr/X11R6/lib/modules/extensions so that .so file gets installed, closing #63596.
+  Added patch to prevent /tmp execution, closing #71295.
+  Don't hardcode CC/CXX, closing #69277.
+  Updated SRC_URI to xorg.freedesktop.org.
 
   15 Sep 2004; <agriffis@gentoo.org> vnc-4.0.ebuild:
   stable on amd64

@@ -37,25 +37,6 @@
  #endif
  
  #if BuildXprint
---- vnc-4.0b4-unixsrc/xc.patch.xorg	2004-03-23 10:53:05.000000000 +0000
-+++ vnc-4.0b4-unixsrc/xc.patch	2004-03-23 10:53:42.000000000 +0000
-@@ -8,11 +8,11 @@
- + XCOMM
- + XCOMM X VNC server
- + XCOMM
--+ MFBDIR = mfb
--+ CFB8DIR = cfb
--+ CFB16DIR = cfb16
--+ CFB24DIR = cfb24
--+ CFB32DIR = cfb32
-++ MFBSUBDIR = mfb
-++ CFB8SUBDIR = cfb
-++ CFB16SUBDIR = cfb16
-++ CFB24SUBDIR = cfb24
-++ CFB32SUBDIR = cfb32
- + XVNCDDXDIR = vnc/Xvnc
- + XVNCDIRS = $(STDDIRS) $(MFBDIR) \
- + 	    $(CFB8DIR) $(CFB16DIR) $(CFB24DIR) $(CFB32DIR) \
 --- vnc-4.0b5-unixsrc/xc/programs/Xserver/vnc/RegionHelper.h.xorg	2003-05-30 11:42:38.000000000 +0100
 +++ vnc-4.0b5-unixsrc/xc/programs/Xserver/vnc/RegionHelper.h	2004-05-27 11:26:06.499536143 +0100
 @@ -36,7 +36,7 @@
@@ -78,3 +59,43 @@
      } else {
        REGION_INIT(pScreen, reg, rect, size);
      }
+--- vnc-4.0-unixsrc/xc.patch.xorg	2004-08-25 16:10:52.131987786 +0100
++++ vnc-4.0-unixsrc/xc.patch	2004-08-25 16:12:23.896276533 +0100
+@@ -8,11 +8,11 @@
+ + XCOMM
+ + XCOMM X VNC server
+ + XCOMM
+-+ MFBDIR = mfb
+-+ CFB8DIR = cfb
+-+ CFB16DIR = cfb16
+-+ CFB24DIR = cfb24
+-+ CFB32DIR = cfb32
+++ MFBSUBDIR = mfb
+++ CFB8SUBDIR = cfb
+++ CFB16SUBDIR = cfb16
+++ CFB24SUBDIR = cfb24
+++ CFB32SUBDIR = cfb32
+ + XVNCDDXDIR = vnc/Xvnc
+ + XVNCDIRS = $(STDDIRS) $(MFBDIR) \
+ +          $(CFB8DIR) $(CFB16DIR) $(CFB24DIR) $(CFB32DIR) \
+--- vnc-4.0-unixsrc/xc/programs/Xserver/vnc/Xvnc/xvnc.cc.xorg	2004-08-31 14:24:12.140503335 +0100
++++ vnc-4.0-unixsrc/xc/programs/Xserver/vnc/Xvnc/xvnc.cc	2004-08-31 14:24:45.189675775 +0100
+@@ -201,6 +201,7 @@
+ }
+ 
+ extern "C" {
++  void ddxInitGlobals() {}
+   void ddxGiveUp()
+   {
+     int i;
+--- vnc-4.0-unixsrc/xc/config/cf/vnc.def	2004-09-29 15:55:57.732303799 +0100
++++ vnc-4.0-unixsrc/xc/config/cf/vnc.def	2004-09-29 15:56:30.495034234 +0100
+@@ -9,6 +9,8 @@
+ #define XnestServer YES
+ #define XF86Server NO
+ #define XprtServer NO
++#define BuildXFree86ConfigTools NO
++#define BuildScanpci NO
+ 
+ #ifdef SunArchitecture
+ #define ProjectRoot /usr/openwin
