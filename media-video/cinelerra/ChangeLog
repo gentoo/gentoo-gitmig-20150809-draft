@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.11 2003/08/28 22:32:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.12 2003/09/01 16:28:11 lu_zero Exp $
+
+  01 Sep 2003; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.7.ebuild:
+  Pinned nasm version, should avoid bug 27704
 
   29 Aug 2003; Luca Barbato <lu_zero@gentoo.org> cinelerra-1.1.7.ebuild:
   Filtered some CFLAGS, should fix bug 27396
