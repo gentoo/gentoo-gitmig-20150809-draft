@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.16 2005/02/07 18:21:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.17 2005/02/07 21:10:03 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
+IUSE="aalib libcaca arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
 	theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0 samba dxr3 vidix png mng"
 RESTRICT="nostrip"
 
@@ -27,7 +27,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
-	media-libs/aalib
+	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9 dev-util/pkgconfig )
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 			dev-util/pkgconfig )
@@ -36,7 +36,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/libfame-0.9.0
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )
-	media-libs/libcaca
+	libcaca? ( media-libs/libcaca )
 	samba? ( net-fs/samba )
 	png? ( media-libs/libpng )
 	mng? ( media-libs/libmng )"
@@ -155,6 +155,11 @@ src_compile() {
 
 	# These use-flags hasn't a configure option, so we must export these by hand
 	use !sdl && export ac_cv_path_SDL_CONFIG=no
+	use !libcaca && export ac_cv_path_CACA_CONFIG=no
+	if use !aalib ; then
+		export ac_cv_path_AALIB_CONFIG=no
+		export ac_cv_path_AAINFO=no
+	fi
 	use !samba && export ac_cv_lib_smbclient_smbc_init=no
 	use !png && export ac_cv_lib_png_png_create_read_struct=no
 	use !mng && export ac_cv_header_libmng_h=no

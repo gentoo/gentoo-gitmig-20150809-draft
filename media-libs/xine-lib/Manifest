@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e5b0eef1ee0e2514c7f2976ee726498c ChangeLog 1658
+MD5 1c4b140f68eaf32aa13dddf5903b335e ChangeLog 1782
 MD5 af08cabbae4b191018ca153392a86bea metadata.xml 304
-MD5 ed1625e21a9d8bf9c817d7ad4244defd xine-lib-1.0.ebuild 8054
+MD5 7c2ccf6d65c16e4e8fd2a4f49fde24ca xine-lib-1.0.ebuild 8234
 MD5 fdda012c05b9d0425c290ba149c6e3e8 xine-lib-1_rc6-r1.ebuild 5699
 MD5 a8a49d7711a38b747c792b3979815f4c xine-lib-1_rc8-r1.ebuild 5731
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
@@ -43,7 +43,7 @@ MD5 ddf48f1eb00a6985b6fba5fff9386ad0 files/xine-lib-hardened-mmx.patch 2558
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCB7HdFdQwWVoAgN4RAlxMAKDsCT4RJc8AQkvIRYEIXWtixMMsLQCeJn5h
-O/+/kwnxmFb1qfVTSTikHwU=
-=ghdB
+iD8DBQFCB9lCFdQwWVoAgN4RAubbAKC5WYapzqme9c7+PX10L2a8Z7sm3QCfeN4p
+vdI2irw2RMuHzDlFEZFrQ+g=
+=rc4A
 -----END PGP SIGNATURE-----
