@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cbe7ec1dd36e438b7c3c5a052b018718 ChangeLog 3596
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 70a601a96c3e9cc558cb422f344437c9 setiathome-3.03-r1.ebuild 2191
 MD5 478dcb4a32299ed492f2201162d2326d setiathome-3.08-r3.ebuild 2420
+MD5 70a601a96c3e9cc558cb422f344437c9 setiathome-3.03-r1.ebuild 2191
+MD5 b7cb81867b23f3248ae93fbbaa162f66 ChangeLog 3801
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 a15f527eae2c2117aa8a56bcfe2f3c0c setiathome-3.08-r4.ebuild 2319
+MD5 40c346e90ce3b19f80ee7e10340e9da4 files/seti-init.d-r1 1396
 MD5 9a7e850d8e364823f360c347d3a37ff8 files/digest-setiathome-3.03-r1 342
 MD5 4383e568b5b768f6fa2f27b3d9a713b9 files/digest-setiathome-3.08-r3 166
-MD5 2d83ded4bcd8e9b28eb91fc883aec602 files/seti-conf.d-r1 349
-MD5 40c346e90ce3b19f80ee7e10340e9da4 files/seti-init.d-r1 1396
-MD5 55dbc721d10de13427eab449d82ed5e9 files/setiathome-wrapper 94
+MD5 4383e568b5b768f6fa2f27b3d9a713b9 files/digest-setiathome-3.08-r4 166
 MD5 274302d6ee3462c6362e7223ad35cc9f files/setiathome-wrapper-r1 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYyBsHTu7gpaalycRAnczAJ9IRuXehFHjmR36rtA7W6oeoLXp2QCg4qtT
-ll7dX4W0xXnOsnk63G7ONeY=
-=852D
------END PGP SIGNATURE-----
+MD5 2d83ded4bcd8e9b28eb91fc883aec602 files/seti-conf.d-r1 349
+MD5 55dbc721d10de13427eab449d82ed5e9 files/setiathome-wrapper 94

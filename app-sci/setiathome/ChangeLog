@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.23 2004/10/01 14:22:30 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.24 2004/11/07 20:15:21 ribosome Exp $
+
+*setiathome-3.08-r4 (07 Nov 2004)
+
+  07 Nov 2004; Olivier Fisette <ribosome@gentoo.org>
+  +setiathome-3.08-r4.ebuild:
+  Fixed insecure installation for version 3.08 (but not for 3.03)
+  (see bug #69868).
 
   01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
   +files/setiathome-wrapper-r1, -setiathome-3.08-r1.ebuild,
