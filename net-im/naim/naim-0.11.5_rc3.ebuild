@@ -1,15 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5_rc1.ebuild,v 1.2 2002/12/10 06:18:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5_rc3.ebuild,v 1.1 2002/12/10 06:18:27 lostlogic Exp $
 
 VA="`echo ${PV}|sed -e 's:^\([0-9]*\)\..*$:\1:'`"
 VB="`echo ${PV}|sed -e 's:^[0-9]*\.\([0-9]*\)\..*$:\1:'`"
 FOLDER="naim-0.11.5"
-SNAP="2002-12-08-1324"
-SRC_URI="http://128.113.139.111/~n/.${PN}_archive/${VA}/${VB}/${FOLDER}-snap/${FOLDER}-${SNAP}.tar.gz"
+SNAP="rc3"
+SRC_URI="http://128.113.139.111/~n/.${PN}_archive/${VA}/${VB}/${FOLDER}-snap/${FOLDER}${SNAP}.tar.gz"
 DESCRIPTION="An ncurses AOL Instant Messenger."
 HOMEPAGE="http://site.rpi-acm.org/info/naim/"
-P=${P/_rc1/}
+#P="`echo ${P}|sed -e 's:_.*$::'`"
+P="${P/_/}"
 
 SLOT="0"
 LICENSE="GPL-2"
