@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.68 2004/08/03 20:49:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.69 2004/08/05 18:48:23 gmsoft Exp $
+
+  05 Aug 2004; Guy Martin <gmsoft@gentoo.org> gstreamer-0.8.3-r1.ebuild:
+  Stable on hppa.
 
   03 Aug 2004; foser <foser@gentoo.org> gstreamer-0.8.3-r1.ebuild :
   Make the addpredict cover more ground (#57002)
