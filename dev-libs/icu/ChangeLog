@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-libs/icu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.1 2002/02/25 00:46:08 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.2 2002/10/05 22:28:46 seemant Exp $
 
 *icu-2.0 (24 Feb 2002)
 
