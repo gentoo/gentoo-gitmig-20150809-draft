@@ -1,5 +1,5 @@
-MD5 cf02d3a66a667f2cb18eb58b0b60dc13 ChangeLog 398
-MD5 08f62120423a2b2a683efefca913cd45 mylink-0.93.ebuild 1435
+MD5 b9ab1888612b31c46b09a3722c5977f7 mylink-0.93.ebuild 1425
+MD5 995b50fc66d40a38cb0179ec6bfcc650 ChangeLog 391
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 1e1d9ef1965d5fde083472a0d28c616d files/0.93-path.patch 605
 MD5 e4ea537bc07ee435b059ad298ebd653e files/digest-mylink-0.93 64
