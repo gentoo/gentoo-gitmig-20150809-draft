@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.48 2004/04/13 19:18:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.49 2004/04/14 11:08:15 swtaylor Exp $
+
+  14 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> files/symlink-bug.patch:
+  Bug 45448 - symlink-bug.patch tried to patch a file as well as the symlink to
+  itself
 
   13 Apr 2004; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.13-r1.ebuild,
   xine-ui-0.9.21-r1.ebuild, xine-ui-0.9.23-r1.ebuild, files/symlink-bug.patch:
