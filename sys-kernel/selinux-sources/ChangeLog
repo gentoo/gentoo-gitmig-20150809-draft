@@ -1,11 +1,11 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.7 2003/02/12 09:18:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.8 2003/03/17 15:38:23 method Exp $
 
-  03 Jan 2003; Joachim Blaabjerg <styx@gentoo.org>
-  selinux-sources-2.4.19.ebuild, selinux-sources-2.4.20.ebuild, ChangeLog:
+*selinux-sources-2.4.20-r1 (17 Mar 2003)
 
-  Changing SRC_URI, moving patches to ibiblio.
+  17 Mar 2003; Joshua Brindle <method@gentoo.org> selinux-sources-2.4.20-r1.ebuild:
+  revision bump to fix headers previously uninstalled
 
 *selinux-sources-2.4.20 (17 Dec 2002)
 

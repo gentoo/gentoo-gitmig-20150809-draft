@@ -37,3 +37,19 @@ src_unpack() {
 	cd ${KV}
 	kernel_src_unpack
 }
+
+src_install() {
+	insinto /usr/flask
+	doins ${S}/security/selinux/flask/access_vectors
+	doins ${S}/security/selinux/flask/security_classes 
+	doins ${S}/security/selinux/flask/initial_sids
+
+	insinto /usr/include/linux/flask
+	doins ${S}/security/selinux/include/linux/flask/*.h
+	
+	insinto /usr/include/asm/flask
+	doins ${S}/security/selinux/include/asm/flask/uninstd.h
+
+	kernel_src_install
+}
+	
