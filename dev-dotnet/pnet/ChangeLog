@@ -1,6 +1,6 @@
-# ChangeLog for dev-lang/pnet
+# ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.2 2003/07/26 07:18:42 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.3 2003/07/26 07:40:36 vapier Exp $
 
 *pnet-0.5.10 (26 Jul 2003)
 
