@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.5 2002/12/01 22:39:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0-r1.ebuild,v 1.6 2002/12/04 22:57:03 doctomoe Exp $
 
 PROVIDE="virtual/xft"
 DESCRIPTION="Xft2"
@@ -8,7 +8,7 @@ SRC_URI="http://fontconfig.org/release/fcpackage.${PV/\./_}.tar.gz"
 HOMEPAGE="http://fontconfig.org/" 
 LICENSE="fontconfig"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND="x11-base/xfree
