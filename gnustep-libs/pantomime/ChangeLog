@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.9 2004/12/04 20:21:54 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.10 2004/12/29 21:45:53 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *pantomime-1.2.0_pre20041203 (03 Dec 2004)
 
@@ -60,7 +63,7 @@
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> pantomime-1.1.0.ebuild:
   Fix use invocation
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pantomime-1.1.0.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pantomime-1.1.0.ebuild,
   pantomime-1.1.0_pre2.ebuild:
   Stable on alpha.
 
