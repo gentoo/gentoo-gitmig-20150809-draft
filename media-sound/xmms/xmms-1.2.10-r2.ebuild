@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r2.ebuild,v 1.1 2004/04/05 00:18:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r2.ebuild,v 1.2 2004/04/05 00:39:01 eradicator Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -184,12 +184,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	einfo "If you have been using the xmms-sid plugin before,"
-	einfo "it would be a good idea to re-emerge it now, to have"
-	einfo "the additional features introduced by the xmms-songpos patch"
-	einfo "which let's you select one of several tunes sometimes included"
-	einfo "in a single .sid file using the song-position slider."
 	echo
 	einfo "If you enjoy the dtd (Dynamic Taste Detection) patch, please"
 	einfo "visit the url below and vote for this patch's inclusion in"
