@@ -1,0 +1,31 @@
+--- build/build/BIF/build.bif~	2005-03-03 06:25:07.000000000 +0900
++++ build/build/BIF/build.bif	2005-03-27 11:11:41.000000000 +0900
+@@ -5379,6 +5379,28 @@
+       </source_dependlist>
+     </module>
+ 
++    <!-- PLAYER GENTOO -->
++    <module id="player_gentoo" name="player/app/gtk" group="player">
++	    <cvs root="helix"/>
++	    <cvstag id="hxclient_1_4_2_neptunex" type="tag"/>
++
++	    <attribute id="has_version_file"/>
++
++	    <includeplatforms>
++		    unix
++	    </includeplatforms>
++
++	    <defines>
++		    HELIX_FEATURE_NO_INTERNAL_PREFS=1
++	    </defines>
++	    <dependlist>
++		    player_mime_util player_widget common_runtime common_system common_container common_dbgtool common_util common_unittest player_installer_postinst player_installer_archive player_installer_stage1
++	    </dependlist>
++	    <source_dependlist>
++		    player_mime_include player_widget filesystem_http
++	    </source_dependlist>
++    </module>
++
+     <!-- PLAYER_HXCLIENTKIT -->
+     <module id="player_hxclientkit" name="player/hxclientkit" group="player">
+       <location file="/home/build/build/bif-cvs/helix/2005%2f03%2f01%2015%253a18%253a21/client/build/BIF/realplay_gtk_release.bif" line="0"/>

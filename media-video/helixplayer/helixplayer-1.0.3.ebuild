@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.1.ebuild,v 1.3 2005/03/27 06:21:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.3.ebuild,v 1.1 2005/03/27 06:21:38 chriswhite Exp $
 
 inherit nsplugins eutils
 
@@ -8,7 +8,7 @@ MY_PKG=${P/helixplayer/hxplay}
 
 DESCRIPTION="A free open-source media player by real"
 HOMEPAGE="http://www.helixplayer.org/"
-SRC_URI="https://helixcommunity.org/download.php/634/${MY_PKG}.tar.bz2"
+SRC_URI="https://helixcommunity.org/download.php/970/${MY_PKG}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
@@ -48,7 +48,7 @@ src_compile() {
 	export BUILD_ROOT="${S}/build"
 
 	#now we can begin the build
-	${S}/build/bin/build -m bingo-gold -trelease -k -P helix-client-all-defines-free player_gentoo || die
+	${S}/build/bin/build -m hxplay_gtk_release -trelease -k -P helix-client-all-defines-free player_gentoo || die
 }
 
 src_install() {

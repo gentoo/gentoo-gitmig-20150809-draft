@@ -1,24 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ce413f275c687aa44db0f53d2239b07 ChangeLog 1331
-MD5 846794dd6d8249d568c56a94b452d0a4 helixplayer-1.0_beta1.ebuild 3264
+MD5 cedd383b77c50786f3f7d140a6eb0c40 ChangeLog 1561
+MD5 a83dd765a5420e292b64b72dd966c4c6 helixplayer-1.0.1.ebuild 1858
+MD5 ddcf90658d1dc3fc40a7cb27cfac0ba7 helixplayer-1.0_beta1.ebuild 3264
 MD5 b545cb646f8e1ac50777745dfc1f380d metadata.xml 342
-MD5 3e53be68881aed7418463e1f231ec638 helixplayer-1.0.1.ebuild 1858
+MD5 61ba2636b3a3ee16bda913801dcb23f2 helixplayer-1.0.3.ebuild 1866
 MD5 6438303cb10431e6fe1fd8c1a24328d4 files/50helix 22
 MD5 9ff4380a6e2acce72f2685a5f5a03b2c files/buildrc 35
+MD5 cca1189dbb5ff1bc6e0fb9545a5e47ba files/digest-helixplayer-1.0.1 67
 MD5 d9d3bd60b0c7de98d93ccde45775936d files/digest-helixplayer-1.0_beta1 88
 MD5 b3efbf0d42d95ec571e60aaf9377d787 files/gcc_versioncheck.patch 502
-MD5 bded820ce4994950f10c24c5177f50fa files/installer-naming.patch 555
-MD5 cca1189dbb5ff1bc6e0fb9545a5e47ba files/digest-helixplayer-1.0.1 67
-MD5 b83696db32d29e1c07d27cb6ba16414e files/helixplayer-1.0_beta1-bif.patch 10461
+MD5 b83696db32d29e1c07d27cb6ba16414e files/gentoo_bif.patch 10461
 MD5 05e35dbf9a20d31273bd7677ee716ff6 files/helixplayer-1.0.1-bif.patch 10637
 MD5 d0e729f34bd20584c1359cb713433907 files/helixplayer-1.0.1-sem_t.patch 690
-MD5 b83696db32d29e1c07d27cb6ba16414e files/gentoo_bif.patch 10461
+MD5 b83696db32d29e1c07d27cb6ba16414e files/helixplayer-1.0_beta1-bif.patch 10461
+MD5 bded820ce4994950f10c24c5177f50fa files/installer-naming.patch 555
+MD5 260ceb9a6fbd75d0e1f64db95191a2fb files/digest-helixplayer-1.0.3 67
+MD5 b44d150d76f3f1654e11841d0f5f01ef files/helixplayer-1.0.3-bif.patch 1188
+MD5 d0e729f34bd20584c1359cb713433907 files/helixplayer-1.0.3-sem_t.patch 690
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBm+UtFdQwWVoAgN4RAlGqAKDHZJItQH+oiAddGZ9naUqiuUIIDwCeL73n
-dfkKvGH9peub0rd2AvWC3t8=
-=FSjR
+iD8DBQFCRklTFdQwWVoAgN4RAoe0AKDlOjCTQeVu7qJuexw4ArDaUqeWzwCdHK+W
+txHhkCrxU7O58prtZwRFWLI=
+=ziqn
 -----END PGP SIGNATURE-----
