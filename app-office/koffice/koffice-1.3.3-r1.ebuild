@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.3-r1.ebuild,v 1.1 2004/10/24 00:34:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.3-r1.ebuild,v 1.2 2004/10/24 15:28:52 weeve Exp $
 
 inherit kde eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.koffice.org/"
 SRC_URI="mirror://kde/stable/${P}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~ppc64"
+KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~ppc64"
 
 IUSE=""
 SLOT="0"
