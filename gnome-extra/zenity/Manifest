@@ -1,6 +1,7 @@
 MD5 4cef76fa0916de2e71deebf3bc2c79c1 zenity-1.8.ebuild 872
 MD5 3d80b2dd817da108b268a020541c715f zenity-2.8.0.ebuild 863
-MD5 dfeed2d1eb73921aaec10f7fe633fa38 ChangeLog 4358
+MD5 570f748f3b222c8e5e7c60adee0648b9 zenity-2.8.2.ebuild 850
+MD5 9bce1a2ffc2dfeef5414ceec6ddf03a6 ChangeLog 4470
 MD5 b6a6d547d426d8af0298e812f9bd802a zenity-2.8.1.ebuild 850
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9a61f47002cda7375a4bec79b61d71ae zenity-2.6.2.ebuild 862
@@ -10,3 +11,4 @@ MD5 0308ff19f6b68370739997806d23f4ac files/zenity-2.6.3-utf8_fix.patch 569
 MD5 8eec88827b7869265ff7ccf4f537af39 files/digest-zenity-2.6.2 65
 MD5 8bac9e3129dedd022b99ba45d50d3d36 files/digest-zenity-2.8.0 65
 MD5 8cde25f5e681088600fca7bb788465e7 files/digest-zenity-2.8.1 65
+MD5 8781799994ebd921407eabff1e2f8c22 files/digest-zenity-2.8.2 65
