@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.8.ebuild,v 1.1 2003/11/23 16:17:40 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.8.ebuild,v 1.2 2003/11/23 20:12:05 mholzer Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -33,6 +33,7 @@ src_unpack() {
 		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
 			die "sed doc/Makefile.in failed"
 
+	epatch ${FILESDIR}/${P}-configure.patch || die
 }
 
 src_compile() {
