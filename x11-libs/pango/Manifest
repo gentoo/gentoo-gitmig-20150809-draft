@@ -3,9 +3,9 @@ MD5 685fe3f780554e493da2653d3e4ec281 pango-1.2.5-r1.ebuild 1203
 MD5 2c505a1c43644d1bb1c512fe4f7c3eed pango-1.2.1-r1.ebuild 1352
 MD5 91ccea3449a97d2c35231b6e6023a16f pango-1.2.1.ebuild 1243
 MD5 e9b901845790516e2888aa0ed5fa5e37 pango-1.2.3.ebuild 1122
-MD5 f31238b38840908545c1cd33d3b3b159 ChangeLog 5423
+MD5 7ffd3a50a3f396e3c0299c94542e8d60 ChangeLog 5511
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 7efdc8d58a85200bf11bbddfe5d3ac42 pango-1.2.5.ebuild 1094
+MD5 861faf769b8e3ba1d3c625f57b136cfe pango-1.2.5.ebuild 1088
 MD5 1c60a9e92e200e3cbbf35cb04bef509a files/pango-1.2.0-slighthint-gentoo.patch 1551
 MD5 d138eae4f16dd08fcf0a7672f7f01aac files/pango-1.2.1-slighthint-gentoo.patch 1551
 MD5 3c7438764bd841669fe85d3d6e084ccb files/pango-1.2.1-cvs_fontset_caching.patch 21897
