@@ -1,10 +1,17 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/ChangeLog,v 1.1 2002/02/14 22:50:54 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/ChangeLog,v 1.2 2002/02/26 07:07:31 gbevin Exp $
+
+*arch-1.0_pre9 (26 Feb 2002)
+
+  26 Feb 2002; Geert Bevin <gbevin@uwyn.org> arch-1.0_pre9.ebuild:
+  
+  Bumped up version to arch-1.0_pre9.
+
 
 *arch-1.0_pre7 (14 Feb 2002)
 
   14 Feb 2002; Bruce A. Locke <blocke@shivan.org> arch-1.0_pre7.ebuild:
 
-  Added Arch 1.0-pre7
+  Added Arch 1.0-pre7.
 
