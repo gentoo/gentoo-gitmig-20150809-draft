@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6c2599eaed2afe42388429628b57001 djbdns-1.05-r14.ebuild 4804
-MD5 34ec8f83d249b70516532d9061ca5c1a ChangeLog 9598
-MD5 1d2065fbc2f1da45047580c3c92a7751 djbdns-1.05-r12.ebuild 4864
+MD5 5875d1c18edbd77b8c0b0eefde501eba djbdns-1.05-r14.ebuild 4809
+MD5 baf8f6a5ff25c0309ec06d5f84515d01 ChangeLog 10332
+MD5 db19c3234b97960339bb1a2e99242f22 djbdns-1.05-r12.ebuild 4867
 MD5 73bdc1e7df9176661af23ed1921a671e djbdns-1.05-r8.ebuild 2080
 MD5 41587a443cb11b372cf923bd90596784 djbdns-1.05-r7.ebuild 1976
-MD5 9dc7624c94d5665ae986626557e52235 djbdns-1.05-r11.ebuild 3223
+MD5 2dace0dbc114d9c94fa60ed25aed683f djbdns-1.05-r11.ebuild 3226
 MD5 977b1d879a78fadda53b40bbef0a7778 djbdns-1.05-r3.ebuild 1724
-MD5 f0dd82238aba2321870683a7d0fb63ec djbdns-1.05-r9.ebuild 2792
-MD5 05f530c579d1e3c621a22ea66850bfda djbdns-1.05-r13.ebuild 4794
+MD5 881c8c3d748728f87bf7e6dc78cf233a djbdns-1.05-r9.ebuild 2795
+MD5 29c572d1f122fae02fb13992247e67db djbdns-1.05-r13.ebuild 4798
 MD5 2438f5b001fb08758e57ea432651b4b7 djbdns-1.05-r10.ebuild 2845
 MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
 MD5 e978c483e32ec53b3eb8a2b703c89d6d files/djbdns-setup 11152
@@ -29,10 +26,3 @@ MD5 444830203a792b4a295ca8fee554b8d3 files/djbdns-1.05-ipv6arpa+BSDok-gentoo.dif
 MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
 MD5 ba558b4a61ed71c23083aa1ec32c7cc9 files/digest-djbdns-1.05-r8 270
 MD5 9127cff20924bbf9dfd84d3896a2510e files/digest-djbdns-1.05-r13 624
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ1UVLLFUmVNQ7rkRAqW4AJ0dn4jVeJkS7p2Y3Clhalc/zzXZxACeKliA
-80nQOAknj+oGyZGKLjHjYxo=
-=xMHS
------END PGP SIGNATURE-----
