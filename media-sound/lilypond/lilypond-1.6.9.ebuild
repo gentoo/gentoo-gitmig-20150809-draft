@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.1 2003/05/17 07:18:38 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.9.ebuild,v 1.2 2003/05/27 09:06:31 jje Exp $
 
 IUSE="doc"
 
@@ -55,7 +55,7 @@ src_compile() {
 			lilypond_data=${D}/usr/share/lilypond \
 			local_lilypond_datadir=${D}/usr/share/lilypond/${PV} \
 			topdir=${D}/usr \
-			web-doc || "make web-doc failed")
+			web-doc || die "make web-doc failed")
 }
 
 src_install () {
