@@ -1,0 +1,27 @@
+# ChangeLog for net-www/horde-mnemo
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.1 2004/08/15 12:29:14 stuart Exp $
+
+*horde-mnemo-1.1.2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +horde-mnemo-1.1.1.ebuild, +horde-mnemo-1.1.2.ebuild:
+  Moved from net-www/horde-mnemo to www-apps/horde-mnemo.
+
+*horde-mnemo-1.1.2 (08 Aug 2004)
+
+  08 Aug 2004; Mike Frysinger <vapier@gentoo.org> +horde-mnemo-1.1.2.ebuild:
+  Version bump.
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-mnemo-1.1.1.ebuild:
+  Marking ~hppa
+
+*horde-mnemo-1.1.1 (26 Feb 2004)
+
+  26 Feb 2004; Martin Holzer <mholzer@gentoo.org> horde-mnemo-1.1.1.ebuild:
+  version bumped.
+
+*horde-mnemo-1.1 (19 Jan 2004)
+
+  19 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild made by me.
