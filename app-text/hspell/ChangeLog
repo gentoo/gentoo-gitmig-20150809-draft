@@ -1,6 +1,11 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.4 2003/08/15 18:42:33 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.5 2003/12/22 22:22:27 coronalvr Exp $
+
+*hspell-0.7 (23 Dec 2003)
+
+  23 Dec 2003; Alex Veber <coronalvr@gentoo.org> hspell-0.7.ebuild:
+  Version Bump.
 
   15 Aug 2003; Alex Veber <coronalvr@gentoo.org> hspell-0.6.ebuild:
   move to stable

@@ -1,3 +1,4 @@
+MD5 bd98d52c2c8552b9d00523e46ec69e53 hspell-0.7.ebuild 716
 MD5 ec13a3068670423a339299a698fa5113 hspell-0.4.ebuild 651
 MD5 809fe6cf3589b238481d423f2dc5bd7e hspell-0.6.ebuild 712
 MD5 5530ef9cabbe8cffb4737b2f43b30b2f ChangeLog 683
@@ -6,3 +7,4 @@ MD5 fd0c9c33a55847b9ad262e879c4d4a5b hspell-0.5.ebuild 671
 MD5 a3add5004188510ae49094621f34b52b files/digest-hspell-0.4 61
 MD5 d2366a1445d9b6dff132730b00319e58 files/digest-hspell-0.5 62
 MD5 9487d61fb8e2cbe5b92a44f195d009ee files/digest-hspell-0.6 62
+MD5 2751b927997a55b6f77b9901b623e2f7 files/digest-hspell-0.7 62
