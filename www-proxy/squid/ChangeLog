@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.49 2005/03/06 20:52:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.50 2005/03/14 02:39:50 hardave Exp $
+
+  13 Mar 2005; Hardave Riar <hardave@gentoo.org> squid-2.5.9.ebuild:
+  Stable on mips, bug #83955.
 
 *squid-2.5.9-r1 (06 Mar 2005)
 
