@@ -1,6 +1,9 @@
-# ChangeLog for x11-themes/redhat-artwork 
+# ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.36 2004/08/13 22:34:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.37 2004/09/05 09:57:50 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   13 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   redhat-artwork-0.96.ebuild:
