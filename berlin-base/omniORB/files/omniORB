@@ -1,5 +1,5 @@
 #!/bin/sh
-#RCUPDATE:3 4:75:This line is required for script management
+#RCUPDATE:3 4:99:This line is required for script management
 
 . /etc/rc.d/config/functions
 
