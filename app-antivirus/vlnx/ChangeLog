@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/vlnx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.6 2004/07/27 01:22:51 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/ChangeLog,v 1.7 2004/12/06 15:18:19 ticho Exp $
+
+  06 Dec 2004; Andrej Kacian <ticho@gentoo.org> vlnx-432e-r2.ebuild:
+  Stable on x86.
 
 *vlnx-432e-r2 (26 Jul 2004)
 
