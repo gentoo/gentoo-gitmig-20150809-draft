@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chasen
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.3 2003/09/21 07:21:20 matsuu Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.4 2004/03/07 22:12:53 avenj Exp $
+
+  07 Mar 2004; Jon Portnoy <avenj@gentoo.org> chasen-2.3.3.ebuild :
+  AMD64 keywords.
 
 *chasen-2.3.3 (21 Sep 2003)
 
