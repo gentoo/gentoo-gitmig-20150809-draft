@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  02 Sep 2003; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r1.ebuild,
+  mc-4.6.0-r2.ebuild, mc-4.6.0.ebuild:
+  fixed bug #27212, marked -r2 stable
+
 *mc-4.6.0-r2 (21 Aug 2003)
 
   21 Aug 2003; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r2.ebuild,
