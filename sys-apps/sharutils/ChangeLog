@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.2 2002/03/18 02:39:33 seemant Exp $
+
+*sharutils-4.2.1-r5 (17 Mar 2002)
+
+  17 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sharutils-4.2.1-r5 :
+
+  Added USE dependent nls compilation.
 
 *sharutils-4.2.1-r4 (1 Feb 2002)
 
