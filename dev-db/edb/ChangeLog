@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.8 2003/03/11 17:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.9 2003/03/20 13:10:58 vladimir Exp $
+
+*edb-1.0.3.20030220-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  edb-1.0.3.20030220-r1.ebuild:
+  Removed usage of pic USE flag
 
 *edb-1.0.3.20030220 (20 Feb 2003)
 
