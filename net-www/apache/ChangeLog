@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.109 2004/03/29 13:19:26 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.110 2004/04/01 23:20:37 zul Exp $
+
+  01 Apr 2004; Chuck Short <zul@gentoo.org> apache-1.3.29-r1.ebuild,
+  files/apache-1.3.29_mod_auth_db.patch:
+  Added patch so that mod_auth_db will compile with db4.1 and above. This patch
+  should not be needed in the next release.
 
   29 Mar 2004; Chuck Short <zul@gentoo.org> files/conf/Vhosts.conf:
   Fixed typo in Vhosts.conf config file, closes #34335.

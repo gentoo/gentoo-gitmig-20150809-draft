@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.9 2004/03/12 05:43:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.10 2004/04/01 23:20:37 zul Exp $
 
 #IUSE="ipv6 pam"
 IUSE="pam"
@@ -67,6 +67,9 @@ src_unpack() {
 
 	# Detect db4 correctly
 	patch -p1 <${FILESDIR}/apache-1.3.27_db4_gentoo.patch || die
+
+	# Fixes mod_auth_db compile breakages with db4.0
+	epatch ${FILESDIR}/apache-1.3.29_mod_auth_db.patch
 }
 
 src_compile() {
