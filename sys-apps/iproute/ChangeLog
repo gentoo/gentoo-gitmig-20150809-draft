@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.18 2003/05/04 09:46:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.19 2003/05/27 11:20:04 msterret Exp $
+
+  27 May 2003; <msterret@gentoo.org> iproute-20010824-r3.ebuild:
+  Added tetex to IUSE since it's `use`d; use sed-4's -i; spell check
 
 *iproute-20010824-r3 (04 May 2003)
 
