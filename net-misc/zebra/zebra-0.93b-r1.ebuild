@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.7 2004/04/27 21:56:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.8 2004/06/09 22:36:45 agriffis Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	ln -s ${S} zebra
 
-	[ `use ospfapi` ] &&
+	use ospfapi &&
 	 	epatch ospfapi-release_*-200[3-9]-[0-9][0-9]-[0-9][0-9].patch
 
 	##################################
@@ -58,7 +58,7 @@ src_compile() {
 		die "econf failed"
 	emake || die "emake failed"
 
-	if [ `use ospfapi` ]  ; then
+	if use ospfapi  ; then
 		cd apiclient
 		econf --prefix=/usr --sysconfdir=/etc/zebra ${myconf} || \
 			die "econf failed in ospsapi-apiclient"

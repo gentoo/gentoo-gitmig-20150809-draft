@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/gnugk-2.0.6.ebuild,v 1.1 2003/10/26 19:45:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/gnugk-2.0.6.ebuild,v 1.2 2004/06/09 22:34:58 agriffis Exp $
 
 inherit eutils
 
@@ -25,8 +25,7 @@ DEPEND=">=net-libs/openh323-1.12.2-r1
 
 pkg_setup() {
 	# check if under_short does exist
-	if [ -n "`use mysql`" -a ! -f /usr/include/mysql++/undef_short ]
-	then
+	if use mysql && [ ! -f /usr/include/mysql++/undef_short ]; then
 		ewarn "mysql USE flag is set, but mysql++ is missing an"
 		ewarn "include file (\"/usr/include/mysql++/undef_short\")"
 		ewarn "if emerge fails, please try again with"
@@ -80,7 +79,7 @@ src_install() {
 	doins etc/*
 
 	# install ldap schema file
-	if [ -n "`use ldap`" ] && [ -d /etc/openldap/schema ]; then
+	if use ldap && [ -d /etc/openldap/schema ]; then
 		insinto /etc/openldap/schema
 		doins etc/voip.schema
 		rm -f ${D}/etc/gnugk/voip.schema

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.3 2004/04/27 21:20:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.4 2004/06/09 22:30:13 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-makefile.diff
 
-	if [ -z "`use debug`" ]; then
+	if ! use debug; then
 		sed -i -e "s:^\(DEBUG=-g\):#\1:" Makefile
 	fi
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.3 2003/10/31 22:01:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.4 2004/06/09 22:33:54 agriffis Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_compile() {
 	local myconf
 
 	# Fix for bug #32029.
-	if [ `use berkdb` ]; then
+	if use berkdb; then
 		cd ${S}
 		epatch ${FILESDIR}/jigdo-gentoo-db3.patch
 	fi
