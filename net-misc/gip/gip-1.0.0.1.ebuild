@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.0.0.1.ebuild,v 1.2 2004/06/26 13:10:29 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.0.0.1.ebuild,v 1.3 2004/07/08 23:41:41 mr_bones_ Exp $
 
 MY_PV=`echo ${PV} | sed -e 's/.\([0-9]\+\)$/-\1/' 2>/dev/null`
 MY_P="${PN}-${MY_PV}"
