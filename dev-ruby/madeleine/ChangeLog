@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/madeleine
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/madeleine/ChangeLog,v 1.1 2003/06/26 17:06:30 twp Exp $
+
+*madeleine-0.3 (26 Jun 2003)
+
+  26 Jun 2003; Tom Payne <twp@gentoo.org> madeleine-0.3.ebuild :
+  Initial version. Ebuild submitted by Alexander Kellett. Bug # 23512.
