@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pwm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/ChangeLog,v 1.6 2003/09/24 19:36:49 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/ChangeLog,v 1.7 2004/03/06 14:41:24 pyrania Exp $
+
+  06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> pwm-1.0.20010309.ebuild:
+  SRC_URI fixup.
 
 *pwm-1.0.20030617 (25 Sep 2003)
 
