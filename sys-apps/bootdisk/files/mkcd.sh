@@ -71,10 +71,14 @@ echo "Creating linuxrc"
 cd ${BOOTIMG}/initrd
 gcc -s -o linuxrc ${PORTDIR}/gentoo-x86/sys-apps/bootdisk/files/linuxrc.c
 
+echo "Creating other dirs for initrd"
 cd ${BOOTIMG}/initrd/var
 dodirs log run
 touch log/wtmp
 touch run/utmp
+cd ${BOOTIMG}/initrd/lib
+mkdir modules
+mkdir modules/current
 
 
 
@@ -164,11 +168,13 @@ cp -af /usr/share/terminfo .
 
 echo "Populating /lib/modules"
 cd ${BOOTIMG}/lib
-cp -af /lib/modules .
-cd ${BOOTIMG}/lib/modules/2*
+mkdir modules
+cd modules
+cp -af /lib/modules/`uname -r` .
+cd ${BOOTIMG}/lib/modules/`uname -r`
 for i in modules.* 
 do
-  rm $i
+  mv $i ../../../initrd/lib/modules/current/$i
   ln -sf ../../../initrd/lib/modules/current/$i .
 done
 
