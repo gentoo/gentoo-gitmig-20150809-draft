@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.23-r1.ebuild,v 1.1 2005/02/14 13:32:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.23-r1.ebuild,v 1.2 2005/02/15 20:13:05 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -136,7 +136,7 @@ src_compile() {
 	# enable slapd/slurpd servers
 	myconf="${myconf} --enable-ldap"
 	myconf="${myconf} --enable-slapd --enable-slurpd"
-	# basic stuff	
+	# basic stuff
 	myconf="${myconf} --enable-syslog"
 	use debug && myconf="${myconf} --enable-debug" # there is no disable-debug
 	# extra functionality
@@ -152,10 +152,10 @@ src_compile() {
 	myconf="${myconf} --enable-cleartext --enable-slapi"
 
 	# disabled options:
-	# --with-bdb-module=dynamic 
+	# --with-bdb-module=dynamic
 	# alas, for BSD only:
 	# --with-fetch
-	
+
 	for i in crypt ipv6 slp readline; do
 		myconf="${myconf} `use_enable ${i}`"
 	done
