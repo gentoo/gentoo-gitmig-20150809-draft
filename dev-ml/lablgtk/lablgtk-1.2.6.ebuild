@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.6.ebuild,v 1.2 2004/02/17 22:25:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-1.2.6.ebuild,v 1.3 2004/03/20 00:19:52 mattam Exp $
 
 IUSE="gnome opengl"
 
@@ -13,7 +13,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 		gnome? ( =gnome-base/libglade-0.17*
 			>=gnome-base/gnome-libs-1.4.1.7
 			media-libs/gdk-pixbuf )
-		opengl? ( >=dev-ml/lablgl-0.98
+		opengl? ( >=dev-ml/lablgl-1.00
 			=x11-libs/gtkglarea-1.2* )"
 
 RDEPEND=${DEPEND}
