@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r3.ebuild,v 1.2 2004/09/06 18:58:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r3.ebuild,v 1.3 2004/11/10 19:07:51 eldad Exp $
 
 inherit webapp eutils
 
@@ -32,7 +32,7 @@ RDEPEND="
 S=${WORKDIR}/
 
 src_compile() {
-	if ! use mysql && ! use postgres; then
+	if use !mysql && use !postgres; then
 		eerror "You must have either MySQL or PostgreSQL enabled to use this software."
 		eerror "You must put either 'mysql' or 'postgres' (or both) in your USE flags before emerging this."
 
