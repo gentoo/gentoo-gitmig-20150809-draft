@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.1 2002/08/08 22:51:25 danarmak Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r1.ebuild,v 1.2 2002/08/13 03:55:48 gerk Exp $ 
 
 inherit libtool || die "I lost my inheritance"
 
@@ -31,12 +31,16 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	# this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
+	# Gerk - Aug 12/02
+	use ppc && ( CFLAGS=`echo $CFLAGS | sed "s:-maltivec::g" | sed "s:-mabi=altivec::g"` )
 
 	patch -p1 < ${FILESDIR}/xine-lib-configure.patch || die "configure patch failed"
 	
