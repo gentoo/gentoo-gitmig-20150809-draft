@@ -7,7 +7,12 @@
 #mesa 3.5 apparently breaks source compatibilty with 3.4.2 and we should
 #stay with 3.4.2 'cause so many apps depend on it.  (drobbins, 26 Jan 2002)
 #sad but true, we're stuck at 3.4.2.
+#
+#think we should try mesa 4.0.1 sometime, although including glu in the xfree
+#ebuild seems to have good results.
+#azarah (29/01/2002)
 >=media-libs/mesa-3.5
+>=media-libs/mesa-glu-3.5
 
 #-mjc unstable
 >=sys-kernel/linux-sources-2.4.18_pre3
