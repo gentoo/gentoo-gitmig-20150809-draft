@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20041226_pre13.ebuild,v 1.1 2004/12/26 22:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20050116_pre13.ebuild,v 1.1 2005/01/19 01:21:50 vapier Exp $
 
 EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo"
 
 DEPEND="virtual/x11
-	>=media-libs/imlib2-1.1.2.20041031
-	>=dev-libs/eet-0.9.9.20041031
-	>=dev-db/edb-1.0.5.20041031
+	>=media-libs/imlib2-1.1.2.20041016
+	>=dev-libs/eet-0.9.9.20041016
+	>=dev-db/edb-1.0.5.20041016
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
-	cairo? ( >=x11-libs/cairo-0.1.23 )
+	cairo? ( >=x11-libs/cairo-0.2.0 )
 	dev-util/pkgconfig"
 
 src_compile() {
@@ -30,14 +30,14 @@ src_compile() {
 	#  --enable-scale-smooth           enable sampling scaler code
 	#  --enable-scale-trilinear        enable tri-linear scaler code
 	export MY_ECONF="
-		`use_enable mmx cpu-mmx` \
-		`use_enable sse cpu-mmx` \
-		`use_enable sse cpu-sse` \
-		`use_enable X software-x11` \
-		`use_enable opengl gl-x11` \
-		`use_enable cairo cairo-x11` \
-		`use_enable directfb` \
-		`use_enable fbcon fb` \
+		$(use_enable mmx cpu-mmx) \
+		$(use_enable sse cpu-mmx) \
+		$(use_enable sse cpu-sse) \
+		$(use_enable X software-x11) \
+		$(use_enable opengl gl-x11) \
+		$(use_enable cairo cairo-x11) \
+		$(use_enable directfb) \
+		$(use_enable fbcon fb) \
 		--enable-image-loader-eet \
 		--enable-image-loader-edb \
 		--enable-fmemopen \
@@ -65,8 +65,8 @@ src_compile() {
 		--enable-convert-32-rgb-rot-0 \
 		--enable-convert-32-rgb-rot-270 \
 		--enable-convert-32-rgb-rot-90 \
-		`use_enable png image-loader-png` \
-		`use_enable jpeg image-loader-jpeg`
+		$(use_enable png image-loader-png) \
+		$(use_enable jpeg image-loader-jpeg)
 	"
 	enlightenment_src_compile
 }
