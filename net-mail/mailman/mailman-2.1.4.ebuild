@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.2 2004/01/06 22:46:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.3 2004/01/08 23:27:13 mholzer Exp $
 
 IUSE="apache2"
 
@@ -42,6 +42,9 @@ src_compile() {
 	|| die "configure failed"
 
 	make || die "make failed"
+	sed -i -e 's:import japanese:#import japanese:' \
+		-e 's:import korean:#import korean:' \
+		-e 's:import korean.aliases:#import korean.aliases:' misc/paths.py 
 }
 
 src_install () {

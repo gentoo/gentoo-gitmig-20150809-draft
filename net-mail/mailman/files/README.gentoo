@@ -118,6 +118,20 @@ And the lines in /etc/mail/aliases which refer to
      <list-name>-subscribe:    "|mailman subscribe <list-name>"
      <list-name>-unsubscribe:  "|mailman unsubscribe <list-name>"
 
+If you need cjkcodecs support, emerge
+dev-python/japanesecodecs
+and
+dev-python/koreancodecs
+then enable it by comment out the following lines
+
+#import japanese 
+#import korean 
+#import korean.aliases 
+
+in
+/usr/local/mailman/bin/paths.py and /usr/local/mailman/scripts/paths.py 
+
+
 
 Other Helpful things to know...
 -------------------------------

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.26 2004/01/08 22:36:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.27 2004/01/08 23:27:13 mholzer Exp $
+
+  09 Jan 2004; Martin Holzer <mholzer@gentoo.org> mailman-2.1.4.ebuild:
+  disabling python languages. Closes 34727
 
   08 Jan 2004; Martin Holzer <mholzer@gentoo.org> files/README.gentoo:
   updating readme. Closes 36725
