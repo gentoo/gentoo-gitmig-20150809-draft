@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r1.ebuild,v 1.6 2004/02/10 22:42:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r1.ebuild,v 1.7 2004/02/25 01:36:22 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -35,10 +35,6 @@ DEPEND="virtual/glibc
 	>=dev-lang/perl-5
 	>=dev-lang/tcl-8.3.3"
 
-has_version \<sys-libs/glibc-2.3.2 \
-	&& GLIBC_232=0 \
-	|| GLIBC_232=1
-
 src_unpack() {
 	check_KV
 	unpack ${NP}.tar.gz
@@ -49,6 +45,11 @@ src_unpack() {
 }
 
 src_compile() {
+
+has_version \<sys-libs/glibc-2.3.2 \
+	&& GLIBC_232=0 \
+	|| GLIBC_232=1
+
 	if [ ${GLIBC_232} -eq 1 ] ; then
 		$(gcc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
 			${FILESDIR}/${PV}/vmware-glibc-2.3.2-compat.c \
