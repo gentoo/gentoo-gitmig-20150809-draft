@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 4380fef4dee07977eec358da3a63cc10 ChangeLog 335
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
-MD5 9b2d00fc545d8c9bf67d96f136d9a8a5 elicit-0.9.0.20040807.ebuild 514
-MD5 094d6cf82045b66068fe8e5348388c6b files/digest-elicit-0.9.0.20040807 74
+MD5 b6ce08504b964f23556452e8abeb530c elicit-0.9.0.20040828.ebuild 514
+MD5 14ce71a84a224d9321ef2f4ff2644c38 files/digest-elicit-0.9.0.20040828 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBGZtnHTu7gpaalycRAtwOAKCrJK0mB5XFFg2Livu4A87hd4rVMwCeKeqm
-0hO060hkraD22p7RF0/2Rps=
-=i6iv
+iD8DBQFBNUL/HTu7gpaalycRAtHyAJ0eNhTFNHf49Rhm86Z2oHkjaNZk3wCffQqy
+Kmx1mwguSJbb/547QpmBIro=
+=PQy6
 -----END PGP SIGNATURE-----

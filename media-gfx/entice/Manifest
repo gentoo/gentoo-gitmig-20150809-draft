@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 2fbf23fd277068fea549fcf6a5af9a54 ChangeLog 564
-MD5 bfc6ce76139b5064c9393e8680549c0a entice-0.9.3.20040807.ebuild 516
+MD5 b1729fafce1263baf2ad052c3588bb31 entice-0.9.3.20040828.ebuild 516
 MD5 2f04d0e18e32bd8fb05bcadc8114d3fa metadata.xml 307
-MD5 5c996b1811e0b9b4a4ef2130e224e176 files/digest-entice-0.9.3.20040807 74
+MD5 8ad925e6ec615d68a41e7135b64db239 files/digest-entice-0.9.3.20040828 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBGavsHTu7gpaalycRAvcOAJoDNgXwIJbiXi+t+3oCR5BxYOCqbgCg5wwZ
-n1HQUSBYpU60LFL25mtFfIQ=
-=7xhA
+iD8DBQFBNUMdHTu7gpaalycRAjsQAJoCP5gXFxNK20NpL3IuMZo/sU98NwCfQoDp
+qOxNJwwiYMEEPtgSFIjWosg=
+=2kFf
 -----END PGP SIGNATURE-----
