@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.1 2003/12/20 13:24:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.2 2003/12/26 15:59:13 mholzer Exp $
 
-IUSE="gtk gtk2 nls"
+IUSE="X nls ssl"
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
@@ -14,21 +14,23 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
 
 DEPEND=">=sys-apps/sed-4
-	gtk? (  >=x11-libs/gtk+-2.0.5 )
-	gtk2? ( >=x11-libs/gtk+-2.0.5 )"
+	ssl? ( dev-libs/openssl )
+	X? (  >=x11-libs/gtk+-2.0.5 )"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND} nls? ( sys-devel/gettext )"
 
 src_compile() {
+	local myconf
 	if [ ! "`use nls`" ]; then
 		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
 	fi
 
 	sed -i 's:INSTALLROOT ?= /usr/local:INSTALLROOT ?= ${D}/usr:' Makefile
 
-	if use gtk2 || use gtk
+	if use X
 	then
-		PREFIX=/usr emake || die
+	use ssl || myconf="without-ssl=yes"
+		PREFIX=/usr emake ${myconf} || die
 	else
 		cd ${S}/server
 		emake glib12=1 || die
@@ -38,7 +40,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{bin,include,share/man}
 
-	if use gtk2 || use gtk
+	if use X
 	then
 		keepdir /usr/share/gkrellm2/themes
 		keepdir /usr/lib/gkrellm2/plugins
