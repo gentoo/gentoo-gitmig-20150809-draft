@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r2.ebuild,v 1.2 2004/09/29 13:14:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00-r2.ebuild,v 1.3 2004/10/07 15:13:17 lanius Exp $
 
 inherit eutils
 
@@ -44,13 +44,13 @@ RDEPEND="${DEPEND}
 	!app-text/xpdf-thai
 	!app-text/xpdf-turkish"
 
-IUSE="motif"
+IUSE="motif nodrm"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/xpdf-3.00-truetype.diff.gz
-	epatch ${FILESDIR}/xpdf-3.00-nodrm.diff
+	use nodrm && epatch ${FILESDIR}/xpdf-3.00-nodrm.diff
 }
 
 src_compile() {

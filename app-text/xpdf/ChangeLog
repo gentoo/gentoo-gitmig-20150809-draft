@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.37 2004/09/29 13:12:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.38 2004/10/07 15:13:17 lanius Exp $
+
+  07 Oct 2004; Heinrich Wendel <lanius@gentoo.org> xpdf-3.00-r2.ebuild:
+  make nodrm patch depend on a useflag, bug #66082
 
 *xpdf-3.00-r2 (29 Sep 2004)
 
