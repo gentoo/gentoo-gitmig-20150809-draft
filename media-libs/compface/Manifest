@@ -8,12 +8,12 @@ MD5 eec73fbea3403356a034bd509fe1a022 metadata.xml 436
 MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
 MD5 9b8d9c4812b5caa0557fe8bc88a688d8 files/digest-compface-1.4 63
 MD5 92cd926808b9b818d1a0228938edd8e4 files/compface-1.4-destdir.diff 1759
-MD5 0915874039bca1668b62635761a30440 files/compface-1.5-destdir.diff 1658
+MD5 720fad6c1223bca1d00e936c92e470b4 files/compface-1.5-destdir.diff 1598
 MD5 278f048a005cd301b3ce122438229c6c files/digest-compface-1.5 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFB3w2gArHZZzCEUG0RAoAKAJ42eqi8dihT2wayoTchXuTlxjsT4QCWOGLK
-YyHJQivovJfLCXR1z7iggw==
-=1dRX
+iD8DBQFB3w65ArHZZzCEUG0RAn/MAJ9NWAmMsqLHsGoGHrwwnhO8k/9CbwCffRjk
+TDZSKY1JJIijPd1JMGbL41E=
+=na/W
 -----END PGP SIGNATURE-----

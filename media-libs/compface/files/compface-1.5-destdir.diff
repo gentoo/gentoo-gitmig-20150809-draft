@@ -22,9 +22,9 @@ diff -Naurp compface-1.5.orig/Makefile.in compface-1.5/Makefile.in
 +		$(INSTALL_PROGRAM) $(srcdir)/$(UNNAME) $(DESTDIR)$(UNEXECUTABLE)
 +		-chmod 0755 $(DESTDIR)$(UNEXECUTABLE)
 +		$(INSTALL_DATA) $(srcdir)/$(NAME).1 $(DESTDIR)$(MAN1DIR)/$(NAME).1
-+		$(LN_S) $(NAME).1 $(DESTDIR)$(UNNAME).1
++		$(LN_S) $(NAME).1 $(DESTDIR)$(MAN1DIR)/$(UNNAME).1
 +		$(INSTALL_DATA) $(srcdir)/$(NAME).3 $(DESTDIR)$(MAN3DIR)/$(NAME).3
-+		$(LN_S) $(NAME).3 $(DESTDIR)$(UNNAME).3
++		$(LN_S) $(NAME).3 $(DESTDIR)$(MAN3DIR)/$(UNNAME).3
 +		for hdr in $(INSTALLHEADERS); do $(INSTALL_DATA) $(srcdir)/$${hdr} $(DESTDIR)$(INCLUDEDIR)/$${hdr}; done
 +		$(INSTALL_DATA) $(srcdir)/$(LIBNAME) $(DESTDIR)$(LIBRARY)
  
