@@ -1,6 +1,8 @@
 # ChangeLog for app-admin/procman
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/ChangeLog,v 1.2 2002/02/17 01:41:28 azarah Exp $
+
+*procman-1.0 (17 Feb 2002)
 
 *procman-0.99.0 (1 Feb 2002)
 
