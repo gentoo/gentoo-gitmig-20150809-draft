@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.10 2003/02/27 01:48:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.11 2003/05/05 17:44:45 gmsoft Exp $
+
+  05 May 2003; Guy Martin <gmsoft@gentoo.org> gdbm-1.8.0-r5.ebuild :
+  Added gnuconfig_update fix in unpack. Fix #20485.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> gdbm-1.8.0-r5.ebuild :
   Added arm to keywords. Add gnuconfig_update fix in unpack.
