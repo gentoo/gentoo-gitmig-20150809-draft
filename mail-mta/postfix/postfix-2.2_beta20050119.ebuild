@@ -1,33 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2_beta20041230.ebuild,v 1.1 2005/01/05 23:39:41 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2_beta20050119.ebuild,v 1.1 2005/01/22 05:40:25 langthang Exp $
 
-inherit eutils ssl-cert toolchain-funcs
-IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux"
+inherit eutils ssl-cert toolchain-funcs flag-o-matic fixheadtails
+IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened"
 
 MY_PV=${PV/_beta/-}
-PROD_PV=${MY_PV}
-TLS_SRC=${PN}-${MY_PV}+tls-nonprod
-PROD_SRC=${PN}-${PROD_PV}
+MY_SRC=${PN}-${MY_PV}
 #VDA_P="${PN}-2.1.5-trash"
-#TLS_P="pfixtls-0.8.18-2.1.3-0.9.7d"
-#IPV6="1.25"
-#IPV6_P="ipv6-${IPV6}-pf-2.1.5"
-#IPV6_TLS_P="tls+${IPV6_P}"
-#PGSQL_P="postfix-pg.postfix-2.0.0.2"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
 HOMEPAGE="http://www.postfix.org/"
-SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${PROD_SRC}.tar.gz
-	ssl? ( ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${TLS_SRC}.tar.gz )"
+SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${MY_SRC}.tar.gz"
 #	vda? ( http://web.onda.com.br/nadal/postfix/VDA/${VDA_P}.patch.gz )
-#	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_P}.patch.gz )
-#	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_TLS_P}.patch.gz )"
 
 LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390 ~mips ~hppa"
-#IUSE="ipv6 pam ldap mysql postgres ssl sasl vda mailwrapper mbox selinux"
 
 PROVIDE="virtual/mta virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -43,13 +32,17 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-postfix )
 	!mailwrapper? ( !virtual/mta )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
-if use ssl; then
-	BASE_SRC=${TLS_SRC}
-else
-	BASE_SRC=${PROD_SRC}
-fi
 
-S=${WORKDIR}/${BASE_SRC}
+S=${WORKDIR}/${MY_SRC}
+
+group_user_check() {
+	einfo "checking for postfix group, create if missing."
+	enewgroup postfix 207
+	einfo "checking for postdrop group, create if missing."
+	enewgroup postdrop 208
+	einfo "checking for postfix user, create if missing."
+	enewuser postfix 207 /bin/false /var/spool/postfix postfix
+}
 
 pkg_setup() {
 	# developmental realease warn
@@ -61,9 +54,9 @@ pkg_setup() {
 	ewarn "\"vda\" will be added as soon as it's available."
 	ewarn "Bugs should be filed at \"http://bugs.gentoo.org\""
 	ewarn "assign to \"net-mail@gentoo.org\"."
-	einfo "Thanks for testing."
 	echo
 	epause 5
+
 	# put out warnings to work around bug #45764
 	if has_version '<=mail-mta/postfix-2.0.18'; then
 		echo
@@ -80,9 +73,17 @@ pkg_setup() {
 		ewarn "you have \"ssl\" in your USE flags"
 		ewarn "TLS will be enabled. This is a work in progress."
 		ewarn "Visit http://www.postfix.org/TLS_README.html for more info."
-		ewarn "You have been warned. Thanks for testing."
 		echo
 	epause 5
+	fi
+
+	# IPV6 non-prod warn
+	if use ipv6; then
+		echo
+		ewarn "you have \"ipv6\" in your USE flags"
+		ewarn "TLS will be enabled. This is a work in progress."
+		ewarn "Visit http://www.postfix.org/IPV6_README.html for more info."
+		echo
 	fi
 
 	# VDA error
@@ -90,8 +91,11 @@ pkg_setup() {
 		eerror "VDA patch is not available yet for this snapshot"
 		eerror "If you still want to update to this snapshot"
 		eerror "please remove \"vda\" from your USE flags."
-		die "VDA support is not available!"
+		die "VDA support is not available at this time!"
 	fi
+
+	# add postfix, postdrop user/group. Bug #77565.
+	group_user_check || die "failed to check/add needed user/group"
 
 	# logic to fix bug #53324
 	if [[ $(ps h -u postfix) ]]; then
@@ -116,29 +120,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	#if use ssl ; then
-	#	if use ipv6 ; then
-	#		epatch "${WORKDIR}/${IPV6_TLS_P}.patch"
-	#	else
-	#		epatch "${WORKDIR}/${TLS_P}/pfixtls.diff"
-	#		epatch "${DISTDIR}/${PN}-${MY_PV}-tls.tar.bz2" || die "patch failed"
-	#	fi
-	#elif use ipv6; then
-	#	epatch "${WORKDIR}/${IPV6_P}.patch"
-	#fi
+	ht_fix_all
 
 	#if use vda ; then
 	#	epatch "${WORKDIR}/${VDA_P}.patch"
 	#fi
-
-	# We don't need this patch anymore
-	# http://www.postfix.org/PGSQL_README.html
-	# if use postgres ; then
-	#	epatch "${DISTDIR}/${PGSQL_P}.patch"
-	# fi
-
-	# Verisign name services fixes. Do we need this anymore?
-	# epatch "${WORKDIR}/${PN}-2.0-ns-mx-acl-patch"
 
 	# Postfix does not get the FQDN if no hostname is configured.
 	epatch "${FILESDIR}/${PN}-2.0.9-get-FQDN.patch" || die "patch failed."
@@ -146,6 +132,10 @@ src_unpack() {
 	# Fix install paths.
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" \
 		-i src/global/mail_params.h -i conf/main.cf || die "sed failed"
+	# Fix hardcoded ALIAS_DB_MAP. Bug #75361.
+	sed -e "/^#define ALIAS_DB_MAP/s|hash:/etc/aliases|hash:/etc/mail/aliases|" \
+		-i.orig src/util/sys_defs.h || die "sed failed"
+
 }
 
 src_compile() {
@@ -196,6 +186,12 @@ src_compile() {
 
 	local my_cc=$(tc-getCC)
 	einfo "CC=${my_cc:=gcc}"
+
+	# workaround for bug #76512
+	[ "$(gcc-version)" == "3.4" ] && use hardened && replace-flags -O? -Os
+
+	#ht_fix_file ${S}/Makefile.in || die "failed to fix head/tail"
+	#epause 60
 
 	make CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
@@ -260,8 +256,8 @@ src_install () {
 	newins "${FILESDIR}/smtp.pass" saslpass
 	fperms 600 /etc/postfix/saslpass
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/postfix.rc6" postfix
+	newinitd "${FILESDIR}/postfix.rc6" postfix || \
+		die "newinitd failed"
 
 	mv "${S}/examples" "${D}/usr/share/doc/${PF}/"
 	dodoc *README COMPATIBILITY HISTORY INSTALL LICENSE PORTING RELEASE_NOTES*
@@ -284,6 +280,10 @@ src_install () {
 }
 
 pkg_postinst() {
+
+	# add postfix, postdrop user/group. Bug #77565.
+	group_user_check || die "failed to check/add needed user/group"
+
 	ebegin "Fixing queue directories and permissions"
 	"${ROOT}/etc/postfix/post-install" upgrade-permissions
 	echo

@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.42 2005/01/05 23:39:41 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.43 2005/01/22 05:40:25 langthang Exp $
+
+*postfix-2.2_beta20050119 (21 Jan 2005)
+
+  21 Jan 2005; Tuấn Văn <langthang@gentoo.org> files/postfix.rc6,
+  -postfix-2.2_beta20041230.ebuild, +postfix-2.2_beta20050119.ebuild:
+  add postgresql to postfix.rc6 use statement. Bug #70554.
+  add check for postfix, postdrop user/group. Bug #77565.
+  add workaround bug #76512.
 
 *postfix-2.2_beta20041230 (05 Jan 2005)
 
