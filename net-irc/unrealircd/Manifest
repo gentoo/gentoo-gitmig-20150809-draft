@@ -2,10 +2,8 @@ MD5 4aacbe2a257a52f6adf3628142d5fa22 files/digest-unrealircd-3.1.5.1 71
 MD5 2faabd524feebdf184243497848c4da9 files/unrealircd.confd 517
 MD5 9f943e90ba2bb847dd48f53153466eb2 files/unrealircd.rc 523
 MD5 5470c8e18506b99b25d63039b6b37f3a files/3.1.5.1-Config.patch 554
-MD5 f394cab9d31907d8982fdcff5a92e729 files/3.1.5.1-new-glibc-res.patch 390
 MD5 5470c8e18506b99b25d63039b6b37f3a files/3.1.6-Config.patch 554
-MD5 29231f1bfc54e22046be6bcf12585d2d files/3.1.6-new-glibc-res.patch 386
 MD5 0e5e4e0c025911074b2673b9a040aa57 files/digest-unrealircd-3.1.6 68
-MD5 cea557d10e093b026cf1f15993ef6ba1 unrealircd-3.1.5.1.ebuild 1939
+MD5 056c18ee866dbff3239229f3dec7ed28 unrealircd-3.1.5.1.ebuild 1953
 MD5 7ca55407412c27d84e7017e2c923455f ChangeLog 710
-MD5 31454723914770a2870116f373e96de8 unrealircd-3.1.6.ebuild 1943
+MD5 f795fce9a8d86129c090d0354b0bdc9d unrealircd-3.1.6.ebuild 1957
