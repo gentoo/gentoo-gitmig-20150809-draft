@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/ecore
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.6 2003/03/11 18:57:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.7 2003/03/20 13:05:58 seemant Exp $
+
+*ecore-0.0.2.20030220-r1 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  ecore-0.0.2.20030220-r1.ebuild:
+  version bump for removal of pic nonsense
 
 *ecore-0.0.2.20030220 (20 Feb 2003)
 
