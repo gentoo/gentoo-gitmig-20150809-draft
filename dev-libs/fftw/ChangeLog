@@ -1,11 +1,19 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.7 2003/02/12 06:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.8 2003/02/13 07:17:32 raker Exp $
+
+*fftw-2.1.3-r1.ebuild (13 Feb 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org> fftw-2.1.3-r1.ebuild,
+  files/digest-fftw-2.1.3 :
+  New ebuild which creates links to the standard fftw include/lib names.
+  If you specify SINGLE=yes on the emerge commandline the links will
+  be created to the single precision libs/includes, otherwise by default
+  to the double precision libs/includes.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-
 *fftw-2.1.3.ebuild (20 June 2002)
 
   10 Feb 2003; Peter Johanson <latexer@gentoo.org> fftw-2.1.3.ebuild :
