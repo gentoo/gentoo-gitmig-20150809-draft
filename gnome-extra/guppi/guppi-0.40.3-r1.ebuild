@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.6 2002/08/16 04:13:58 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r1.ebuild,v 1.7 2002/09/01 08:04:04 azarah Exp $
 
 MY_P=${P/guppi/Guppi}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ RDEPEND=">=sys-apps/portage-1.8.4
 	 =x11-libs/gtk+-1.2*
 	 >=gnome-base/gnome-libs-1.4.1.2
 	 >=gnome-base/oaf-0.6.7
-	 >=gnome-base/libglade-0.17
+	 <gnome-base/libglade-0.90
 	 >=gnome-base/gnome-print-0.31
 	 >=media-libs/gdk-pixbuf-0.13
 	 >=dev-util/guile-1.4
