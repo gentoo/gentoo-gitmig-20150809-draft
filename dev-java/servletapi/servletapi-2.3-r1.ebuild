@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r1.ebuild,v 1.5 2004/12/18 09:27:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r1.ebuild,v 1.6 2005/01/20 19:15:15 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,8 @@ DESCRIPTION="Servlet API ${PV} from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
 SRC_URI="mirror://gentoo/${PN}-${PV}-20021101.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4"
+	>=dev-java/ant-1.4
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="2.3"
