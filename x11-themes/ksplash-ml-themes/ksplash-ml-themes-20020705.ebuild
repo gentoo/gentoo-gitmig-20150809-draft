@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705.ebuild,v 1.11 2004/06/24 23:34:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksplash-ml-themes/ksplash-ml-themes-20020705.ebuild,v 1.12 2004/06/28 22:36:55 agriffis Exp $
 inherit kde-functions
 
 set-kdedir 3
@@ -11,6 +11,7 @@ DESCRIPTION="Extra theme packagse for ksplash-ml"
 SLOT="3"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha"
+IUSE=""
 
 newdepend "x11-misc/ksplash-ml"
 
