@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4-r1.ebuild,v 1.3 2004/10/20 05:32:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.4-r1.ebuild,v 1.4 2004/10/20 13:36:57 gmsoft Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa"
 
@@ -12,7 +12,7 @@ SRC_URI="http://mercury.chem.pitt.edu/~shank/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="amd64 hppa ~ppc sparc x86"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad
