@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.437 2004/06/14 19:15:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.438 2004/06/15 08:02:19 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -366,7 +366,6 @@ sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
-sys-apps/busybox:uclibc - Compile with uclibc
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/memtest86+:serial - Compile with serial console support
@@ -375,7 +374,6 @@ sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
-sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
@@ -385,18 +383,12 @@ sys-devel/gcc:hardened - activate default PIE (position independent executables)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 support on mips
 sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
 sys-devel/oskit:oskit-profiling - enable profiling support
-sys-devel/uclibc-buildroot:fullrpc - Defines xdr functions and some lesser used rpc stuff. Required for NFS
-sys-devel/uclibc-buildroot:nommu - No memory management unit on target architecture
-sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protection
-sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
-sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
