@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.9 2004/04/26 17:49:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.10 2004/06/03 16:01:49 agriffis Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/helium"
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${P}-src.tar.gz
 
 	# patch for readline support if requested
-	if [ "`use readline`" ]; then
+	if use readline; then
 		patch -p0 -i ${FILESDIR}/${P}-readline.patch || die
 	fi
 	# fix one file due to GHC 6.0's Template Haskell extension

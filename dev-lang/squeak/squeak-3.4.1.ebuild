@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.5 2004/04/28 16:19:19 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1.ebuild,v 1.6 2004/06/03 16:06:16 agriffis Exp $
 
 #Simply change these numbers for different versions
 MV=3.4
@@ -92,7 +92,7 @@ src_install() {
 	dodir /opt/netscape/plugins
 	dosym /usr/lib/squeak/${NV}/npsqueak.so /opt/netscape/plugins
 
-	if [ "`use mozilla`" ] ; then
+	if use mozilla ; then
 		dodir /usr/lib/mozilla/plugins
 		dosym /opt/netscape/plugins/npsqueak.so \
 		/usr/lib/mozilla/plugins/npsqueak.so

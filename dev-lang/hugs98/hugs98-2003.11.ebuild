@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.2 2003/12/17 15:19:41 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.3 2004/06/03 16:03:41 agriffis Exp $
 
 IUSE="opengl"
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	local myconf
-	if [ `use opengl` ]; then
+	if use opengl; then
 		myconf="--enable-hopengl"
 		# the nvidia drivers *seem* not to work together
 		# with pthreads

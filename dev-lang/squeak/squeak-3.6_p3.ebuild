@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.2 2004/05/09 15:23:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.3 2004/06/03 16:06:16 agriffis Exp $
 
 inherit nsplugins libtool flag-o-matic eutils
 
@@ -64,7 +64,7 @@ src_install() {
 	dosym /usr/lib/squeak/inisqueak /usr/bin/inisqueak
 
 	### the rest is all for the plugin
-	if [ "`use mozilla`" ] ; then
+	if use mozilla ; then
 		inst_plugin /usr/lib/squeak/${MY_PV}/npsqueak.so
 
 		dodoc nps/README.npsqueak

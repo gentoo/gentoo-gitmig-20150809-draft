@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.6 2004/04/26 17:49:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.7 2004/06/03 16:01:49 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> helium-1.1.ebuild,
+  helium-1.2.ebuild:
+  Fix use invocation
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> helium-1.1.ebuild,
   helium-1.2.ebuild:
