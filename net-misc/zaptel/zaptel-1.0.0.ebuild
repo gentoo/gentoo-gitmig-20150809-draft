@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.0.ebuild,v 1.1 2004/09/23 23:57:02 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.0.ebuild,v 1.2 2004/10/04 04:09:48 iggy Exp $
 
 IUSE="devfs26"
 
-inherit eutils
+inherit eutils kmod
 
 DESCRIPTION="Pseudo-TDM engine"
 HOMEPAGE="http://www.asterisk.org"
@@ -29,7 +29,7 @@ pkg_setup() {
 	einfo "Otherwise quit this ebuild, rebuild your kernel and reboot"
 
 	# show an nice warning message about zaptel not supporting devfs on 2.6
-	if [ $(echo $KV | cut -d. -f1) -eq 2 ] && [ $(echo $KV|cut -d. -f2) -eq 6 ]; then
+	if is_kernel 2 6 ; then
 		echo
 		einfo "You're using zaptel with linux-2.6:"
 		ewarn "   Zaptel doesn't support devfs with 2.6, you'll need to use udev or disable devfs"
@@ -37,7 +37,7 @@ pkg_setup() {
 		echo
 		ewarn "There's an experimental patch which adds devfs support when using linux-2.6, but:"
 		ewarn "  1. It's an ugly hack atm and needs a cleanup..."
-		ewarn "  2. I was only abled to test loding / unloading with the ztd-eth driver..."
+		ewarn "  2. I was only able to test loading / unloading with the ztd-eth driver..."
 		ewarn "  3. I _really_ don't know if it works with real hardware..."
 		echo
 		eerror "  4. And more important: This is not officially supported by Digium / the Asterisk project!!!"
@@ -80,16 +80,14 @@ src_unpack() {
 
 src_compile() {
 	# workaround for 2.6 build system
-	if [ $(echo $KV | cut -d. -f1) -eq 2 ] && [ $(echo $KV|cut -d. -f2) -eq 6 ]; then
+	if is_kernel 2 6 ; then
 		einfo "Enabled 2.6 module building workaround..."
 		addwrite /usr/src/linux
 	fi
 
-	if use x86; then
-		make ARCH="i386" || die
-	else
-		make || die
-	fi
+	set_arch_to_kernel
+	make || die
+	set_arch_to_portage
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.15 2004/09/23 23:57:02 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.16 2004/10/04 04:09:48 iggy Exp $
+
+  03 Oct 2004; <iggy@gentoo.org> zaptel-1.0.0.ebuild:
+  switched custom ARCH setting code to use set_arch_to_* from eutils, also
+  used some functions from kmod instead of homebrew stuff
 
 *zaptel-1.0.0 (24 Sep 2004)
 
