@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.19 2004/11/08 00:27:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.20 2004/11/21 16:58:56 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -110,13 +110,11 @@ IUSE="static nls bootstrap build X multilib gcj fortran objc pic hardened uclibc
 # their old gcc unmerged ...
 if [ "${CHOST}" == "${CCHOST}" ]
 then
-# GCC-3.3 is supposed to be binary compatible with 3.2..
 #	SLOT="${MY_PV}"
-	SLOT="3.2"
+	SLOT="3.3"
 else
-# GCC-3.3 is supposed to be binary compatible with 3.2..
 #	SLOT="${CCHOST}-${MY_PV}"
-	SLOT="${CCHOST}-3.2"
+	SLOT="${CCHOST}-3.3"
 fi
 
 # We need the later binutils for support of the new cleanup attribute.
