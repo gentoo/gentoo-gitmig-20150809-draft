@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.90 2004/06/25 16:25:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.91 2004/06/25 17:43:28 ciaranm Exp $
+
+  25 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> -vim-core-6.2-r4.ebuild,
+  -vim-core-6.2-r5.ebuild, -vim-core-6.2-r6.ebuild, -vim-core-6.2-r7.ebuild,
+  -vim-core-6.2-r8.ebuild:
+  Remove old versions for eclass updates, bug #53777
 
   25 Jun 2004; Tom Gall <tgall@gentoo.org> vim-core-6.3.ebuild:
   Stable on ppc64
