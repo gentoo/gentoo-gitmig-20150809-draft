@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.30 2005/02/07 20:03:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.31 2005/02/14 20:23:45 stkn Exp $
+
+  14 Feb 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.4-experimental-devfs26.diff, zaptel-1.0.4.ebuild:
+  Updated devfs26 patch (fixes devfs_mk_symlink errors and fixes devices node if
+  >1 card/interface), devfs26 disables zaptel's udev support to avoid conflicts.
+  Made the ebuild sleep once in pkg_setup(), not multiple times.
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org> zaptel-1.0.4.ebuild:
   added ~amd64

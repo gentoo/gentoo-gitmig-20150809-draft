@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.4 2005/02/07 20:03:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.5 2005/02/14 20:23:45 stkn Exp $
 
 IUSE="devfs26"
 
@@ -19,6 +19,7 @@ DEPEND="virtual/libc
 	>=dev-libs/newt-0.50.0"
 
 pkg_setup() {
+	local pause_sec=0
 	linux-info_pkg_setup
 
 	if ! linux_chkconfig_present PPP ; then
@@ -34,8 +35,7 @@ pkg_setup() {
 		einfo "CONFIG_PPP, CONFIG_PPP_ASYNC, CONFIG_PPP_DEFLATE"
 		einfo "and CONFIG_PPPOE."
 		einfo ""
-		einfo "Sleeping 20 Seconds..."
-		epause 20
+		pause_sec=10
 	fi
 
 	# show an nice warning message about zaptel not supporting devfs on 2.6
@@ -51,14 +51,20 @@ pkg_setup() {
 		einfo "  1. It's an ugly hack atm and needs a cleanup..."
 		einfo "  2. I was only abled to test loding / unloading with the ztd-eth driver..."
 		einfo "  3. I _really_ don't know if it works with real hardware..."
-		eerror "  4. And more important: This is not officially supported by Digium / the Asterisk project!!!"
+		einfo "  4. It disables udev support to avoid conflicts"
+		eerror "  5. And more important: This is not officially supported by Digium / the Asterisk project!"
 		einfo ""
 		einfo "If you're still interested, abort now (ctrl+c) and enable the devfs26 USE-flag"
 		einfo "Feedback and bug-reports should go to: stkn@gentoo.org"
 		einfo "You have been warned!"
 		echo
-		einfo "Sleeping 20 Seconds..."
-		epause 20
+		pause_sec=$(($pause_sec + 20))
+	fi
+
+	# wait once, not multiple times
+	if [[ $pause_sec -gt 0 ]]; then
+		einfo "Sleeping $pause_sec seconds"
+		epause $pause_sec
 	fi
 }
 
@@ -78,7 +84,11 @@ src_unpack() {
 	# devfs support
 	if use devfs26; then
 		einfo "Enabling experimental devfs support for linux-2.6..."
-		epatch ${FILESDIR}/${PN}-1.0.0-experimental-devfs26.diff
+		epatch ${FILESDIR}/${PN}-1.0.4-experimental-devfs26.diff
+
+		# disable udev
+		sed -i -e "s:#define[\t ]\+\(CONFIG_ZAP_UDEV\):#undef \1:" \
+			zconfig.h
 	fi
 
 	# apply patch for gcc-3.4.x if that's the compiler in use...
@@ -97,8 +107,8 @@ src_compile() {
 src_install() {
 	make INSTALL_PREFIX=${D} install || die
 
-	dodoc ChangeLog README README.udev README.Linux26 README.fxsusb zaptel.init zaptel.sysconfig
-	dodoc zaptel.conf.sample LICENSE
+	dodoc ChangeLog README README.udev README.Linux26 README.fxsusb zaptel.init
+	dodoc zaptel.conf.sample LICENSE zaptel.sysconfig
 
 	# additional tools
 	dobin ztmonitor ztspeed zttest
@@ -122,13 +132,17 @@ pkg_postinst() {
 	echo
 	einfo "Use the /etc/init.d/zaptel script to load zaptel.conf settings on startup!"
 	echo
+
+	# devfs26 disables udev ... so don't nag users
+	if ! use devfs26; then
 # FIXME!! Can we (we should) do this automatically
-	einfo "If you're using udev add the following to"
-	einfo "/etc/udev/rules.d/50-udev.rules (as in README.udev):"
-	einfo "# Section for zaptel device"
-	einfo "KERNEL=\"zapctl\",     NAME=\"zap/ctl\""
-	einfo "KERNEL=\"zaptimer\",   NAME=\"zap/timer\""
-	einfo "KERNEL=\"zapchannel\", NAME=\"zap/channel\""
-	einfo "KERNEL=\"zappseudo\",  NAME=\"zap/pseudo\""
-	einfo "KERNEL=\"zap[0-9]*\",  NAME=\"zap/%n\""
+		einfo "If you're using udev add the following to"
+		einfo "/etc/udev/rules.d/50-udev.rules (as in README.udev):"
+		einfo "# Section for zaptel device"
+		einfo "KERNEL=\"zapctl\",     NAME=\"zap/ctl\""
+		einfo "KERNEL=\"zaptimer\",   NAME=\"zap/timer\""
+		einfo "KERNEL=\"zapchannel\", NAME=\"zap/channel\""
+		einfo "KERNEL=\"zappseudo\",  NAME=\"zap/pseudo\""
+		einfo "KERNEL=\"zap[0-9]*\",  NAME=\"zap/%n\""
+	fi
 }
