@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/files/daapd.init.d,v 1.3 2004/10/05 08:49:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/files/daapd.init.d,v 1.4 2005/01/30 01:19:05 luckyduck Exp $
 
 depend() {
 	need net
@@ -24,7 +24,7 @@ start() {
 
 	start-stop-daemon --start --quiet --pidfile /var/run/daapd.pid \
 		--background --make-pidfile \
-		${SSD_OPTS} --startas /usr/bin/daapd ${DAAPD_OPTS}
+		${SSD_OPTS} --startas /usr/bin/daapd -- ${DAAPD_OPTS}
 	eend $? "Failed to start daapd"
 }
 
