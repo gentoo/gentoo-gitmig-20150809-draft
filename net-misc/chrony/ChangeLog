@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.18 2004/10/23 12:01:42 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.19 2004/10/23 16:56:51 wmertens Exp $
+
+  23 Oct 2004; Wout Mertens <wmertens@gentoo.org> chrony-1.20-r1.ebuild:
+  Depend on dns if available (#61700)
 
   23 Oct 2004; Wout Mertens <wmertens@gentoo.org> chrony-1.20-r1.ebuild:
   Include Alexander Papaspyrou's patch for CONFIG_HZ=200 support. (#21058)

@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.5 2004/07/14 23:55:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.6 2004/10/23 16:56:51 wmertens Exp $
 
 depend() {
 	need net
+	use dns
 }
 
 checkconfig() {
