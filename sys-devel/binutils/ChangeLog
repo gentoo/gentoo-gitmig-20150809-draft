@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.40 2003/03/28 07:39:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.41 2003/03/29 14:36:37 joker Exp $
 
   23 Mar 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.20.ebuild :
   Add '~x86' to KEYWORDS.
@@ -36,6 +36,10 @@
   Added hppa to keywords.
 
 *binutils-2.13.90.0.18 (26 Jan 2003)
+
+  29 Mar 2003; Christian Birchinger <joker@gentoo.org>
+  binutils-2.13.90.0.18.ebuild:
+  Added sparc stable keyword
 
   01 Mar 2003; Brandon Low <lostlogic@gentoo.org>
   binutils-2.13.90.0.10.ebuild, binutils-2.13.90.0.14.ebuild,
