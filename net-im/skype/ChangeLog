@@ -1,6 +1,13 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.27 2005/01/28 18:36:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.28 2005/01/29 17:37:56 humpback Exp $
+
+*skype-0.94.0.1 (29 Jan 2005)
+
+  29 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +skype-0.94.0.1.ebuild:
+  Adding new version, thanks to Kare Bastrupp for bringing this to our attention
+  in bug #79929.
 
   25 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> files/sDaemonWrapper:
   Removing references to KDEDIR, since it is being deprecated.

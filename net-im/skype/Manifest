@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79248b13e61e33e133ca08e6d7dd84e9 ChangeLog 5213
 MD5 dbaa6f09202bfea8c248e1f7c222d40f metadata.xml 488
-MD5 5cc09e16667e64cfce8c7469d9f5cbac ChangeLog 4998
 MD5 ce35eb7721f9cc53893006adfd5e4cf9 skype-0.93.0.3-r3.ebuild 3174
+MD5 7c6f6f20465a804a09956e254949babb skype-0.94.0.1.ebuild 2972
 MD5 1d81e190261e1a101fff0ecacaaa833d files/digest-skype-0.93.0.3-r3 211
+MD5 b18e999bbb15e91f97eaf10369b64ad7 files/digest-skype-0.94.0.1 211
 MD5 3ebd302142d17df643fa2055d99d0fc7 files/sDaemonWrapper 1740
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+8lQ8zY1VwezZiERAixXAJ0dJxRCi4ShxxSt4mMm4Nm7o/Jb7wCfaYxs
+JE1gmP/H6Y3i3QWQJHtbA+A=
+=N5HM
+-----END PGP SIGNATURE-----
