@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7.ebuild,v 1.1 2004/02/24 15:45:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7.ebuild,v 1.2 2004/02/24 15:56:17 vapier Exp $
 
 inherit fixheadtails eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-S="${WORKDIR}/SDL-${PV}"
+S=${WORKDIR}/SDL-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -38,20 +38,20 @@ src_unpack() {
 
 	ht_fix_file configure
 
-	if [ `use nas` ] && [ ! `use X` ] ; then #32447
+	if use nas && ! use X ; then #32447
 		sed -i \
 			-e 's:-laudio:-laudio -L/usr/X11R6/lib:' \
-				configure || die "nas sed hack failed"
+			configure || die "nas sed hack failed"
 	fi
 }
 
 src_compile() {
 	local myconf=""
-	[ `use noaudio` ] && myconf="${myconf} --disable-audio"
-	[ `use novideo` ] \
+	use noaudio && myconf="${myconf} --disable-audio"
+	use novideo \
 		&& myconf="${myconf} --disable-video" \
 		|| myconf="${myconf} --enable-video-dummy"
-	[ `use nojoystick` ] && myconf="${myconf} --disable-joystick"
+	use nojoystick && myconf="${myconf} --disable-joystick"
 
 	econf \
 		--enable-events \
