@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mixer_app
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.10 2004/04/16 00:19:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.11 2004/06/01 13:17:40 tseng Exp $
+
+  01 Jun 2004; Brandon Hale <tseng@gentoo.org> mixer_app-1.7.0.ebuild,
+  mixer_app-1.8.0.ebuild:
+  Add IUSE=
 
   15 Apr 2004; Jason Wever <weeve@gentoo.org> mixer_app-1.8.0.ebuild:
   Marked stable on sparc and changed the x11-base/xfree dep to virtual/x11.

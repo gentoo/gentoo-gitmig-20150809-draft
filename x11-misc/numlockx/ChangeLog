@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/numlockx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.7 2004/04/11 15:20:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.8 2004/06/01 13:20:04 tseng Exp $
+
+  01 Jun 2004; Brandon Hale <tseng@gentoo.org> numlockx-1.0.ebuild:
+  Add IUSE=
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> numlockx-1.0.ebuild:
   Ebuild fixup.
