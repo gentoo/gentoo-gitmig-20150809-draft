@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/fenris
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.12 2004/07/09 22:00:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.13 2004/07/24 17:35:30 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/fenris-0.07m-nls.patch, -fenris-0.07m-r1.ebuild,
+  fenris-0.07m-r2.ebuild, -fenris-0.07m.ebuild:
+  added workaround for non-ascii charsets (#56113) thanks to keiichi
 
   09 Jul 2004; Travis Tilley <lv@gentoo.org> fenris-0.07m-r1.ebuild,
   fenris-0.07m-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.6 2004/07/09 22:00:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r2.ebuild,v 1.7 2004/07/24 17:35:30 liquidx Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-dress.c.patch # update for latest binutils
 	epatch ${FILESDIR}/${P}-speedup.patch # to speed up makefile
 	epatch ${FILESDIR}/${P}-fnprints.patch # move fnprints to /etc/fenris
+	epatch ${FILESDIR}/${P}-nls.patch # allow build to run on non-ascii locales
 
 	cd ${S}/doc/man
 	sed -i 's:/etc/fnprints.dat:/etc/fenris/fnprints.dat:' -i *
