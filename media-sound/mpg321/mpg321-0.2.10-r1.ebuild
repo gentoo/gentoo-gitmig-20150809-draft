@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.15 2004/02/15 22:08:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.16 2004/04/20 17:00:33 eradicator Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
+
 DESCRIPTION="Free MP3 player, drop-in replacement for mpg123"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/mpg321/"
