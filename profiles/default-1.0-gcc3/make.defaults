@@ -8,4 +8,4 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="x86"
 
-FEATURES="-sandbox"
+
