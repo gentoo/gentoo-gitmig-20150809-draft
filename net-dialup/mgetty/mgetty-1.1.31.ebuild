@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.31.ebuild,v 1.1 2004/11/19 23:09:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.31.ebuild,v 1.2 2005/02/10 13:14:36 tove Exp $
 
 inherit flag-o-matic eutils
 
