@@ -1,4 +1,4 @@
-MD5 164e50f783897c8be1b4d0b91b2035f2 ChangeLog 921
-MD5 fd86a591d029cd1cb9b8bb671d521ca5 fesi-1.ebuild 629
+MD5 3ea329adcb8cc783f2d913dbb53e891f fesi-1.1.5.ebuild 692
+MD5 77585b279cc0bd19b223b91cc7d1d7df ChangeLog 1054
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 c26417cf7f016e3d6ab7b1a8f5981b08 files/digest-fesi-1 56
+MD5 8c4972f13d4dd1861d006b8738ec4f7c files/digest-fesi-1.1.5 62
