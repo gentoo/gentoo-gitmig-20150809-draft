@@ -9,7 +9,6 @@ virtual/x11             x11-base/xfree
 virtual/opengl          x11-base/xfree
 virtual/glu             x11-base/xfree
 virtual/glut            media-libs/glut
-virtual/imapd           net-mail/courier-imap
 virtual/imapUW          net-mail/uw-imap
 x11-libs/xaw            x11-libs/Xaw3d
 sys-apps/texinfo        sys-devel/gcc    
