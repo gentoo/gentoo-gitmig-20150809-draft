@@ -1,4 +1,14 @@
-MD5 cfcd943ad4039184faa41201f0e79aab ChangeLog 1028
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 995cf4925c92d920a9a44b8cb2b17798 ChangeLog 1138
 MD5 c7905dd20e49deed0bced0499a9f714c metadata.xml 222
-MD5 84d29a4c020e0630084391c0858e3f9a kiosktool-0.9.ebuild 467
+MD5 55acd58b87f6df76ecfdf29b15ca3731 kiosktool-0.9.ebuild 478
 MD5 0bdfe5dad286b683a2792962e6ac2bb6 files/digest-kiosktool-0.9 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoHuoZ/iYVBmujdURAmFbAKDcDX7V5D8lRMQEeYzmZa3Q8Sm4+gCgjdUM
+Nn4RcV7mXG2oUwVNdshV4zI=
+=7UCF
+-----END PGP SIGNATURE-----
