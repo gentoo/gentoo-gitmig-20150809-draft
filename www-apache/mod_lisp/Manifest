@@ -1,13 +1,23 @@
-MD5 fc8208e6f7bb42f5d5f0cc79c52bc7fd mod_lisp-2.33-r1.ebuild 685
-MD5 3098b7df164adc789f5d487bf34b23f4 mod_lisp-2.32.ebuild 731
-MD5 49f45a04caba5fda867f63109353e7f3 ChangeLog 1812
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e38c7632be982804aaec9febf82334fc ChangeLog 1907
 MD5 9cab60da15b81c488ecda9676fbd1e44 metadata.xml 251
-MD5 9b28a6cd51c0e1a7add3606e7f873ed6 mod_lisp-2.42.ebuild 654
+MD5 3098b7df164adc789f5d487bf34b23f4 mod_lisp-2.32.ebuild 731
+MD5 fc8208e6f7bb42f5d5f0cc79c52bc7fd mod_lisp-2.33-r1.ebuild 685
 MD5 e1a54cbed5ff007d27e979c6f1824f28 mod_lisp-2.33.ebuild 818
+MD5 9b28a6cd51c0e1a7add3606e7f873ed6 mod_lisp-2.42.ebuild 654
+MD5 0934df016f72c1014a1af3c23a98610f files/10_mod_lisp.conf 258
+MD5 b4eba66b6da346a960928c288bc2017c files/README.Gentoo 220
 MD5 9612cb5b42a552575760404670303d0f files/apache.conf 543
 MD5 848495fae43277daf91aee9c8e502437 files/digest-mod_lisp-2.32 59
+MD5 d8001ccbd2db0fc6173a2d35bb90a8d7 files/digest-mod_lisp-2.33-r1 59
 MD5 d8001ccbd2db0fc6173a2d35bb90a8d7 files/digest-mod_lisp-2.33 59
 MD5 7e99a1accb5a700127b29b9bba62770a files/digest-mod_lisp-2.42 59
-MD5 d8001ccbd2db0fc6173a2d35bb90a8d7 files/digest-mod_lisp-2.33-r1 59
-MD5 b4eba66b6da346a960928c288bc2017c files/README.Gentoo 220
-MD5 a0e9d08f278ce919b19a47753e64d66f files/10_mod_lisp.conf 267
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHxfbmPFBzbX68WERAojCAJsGWewl/KyufryvfFXrWqB4bZvVTACdEt19
++aQs1xMfWQfMOrQvUGnzf7k=
+=Xa70
+-----END PGP SIGNATURE-----
