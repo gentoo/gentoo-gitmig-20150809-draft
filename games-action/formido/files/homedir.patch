@@ -1,0 +1,150 @@
+diff -ru formido-1.0.orig/src/blend.cpp formido-1.0/src/blend.cpp
+--- formido-1.0.orig/src/blend.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/blend.cpp	2004-01-30 02:22:04.000000000 -0800
+@@ -218,7 +218,7 @@
+ 	// 8-bit tables
+ 	else {
+ 		// First, try to load tables from 'data/alpha8.tab'
+-		FILE *fin = fopen("data/alpha8.tab", "rb");
++		FILE *fin = fopen("./alpha8.tab", "rb");
+ 		if(fin) {
+ 			// Load the tables
+ 			fread(a_table8, sizeof(a_table8), 1, fin);
+@@ -251,7 +251,7 @@
+ 			}
+ 
+ 			// Save the table to disk
+-			FILE *fout = fopen("data/alpha8.tab", "wb");
++			FILE *fout = fopen("./alpha8.tab", "wb");
+ 			if(fout) {
+ 				fwrite(a_table8, sizeof(a_table8), 1, fout);
+ 				fclose(fout);
+diff -ru formido-1.0.orig/src/config.cpp formido-1.0/src/config.cpp
+--- formido-1.0.orig/src/config.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/config.cpp	2004-01-30 00:26:31.000000000 -0800
+@@ -30,8 +30,10 @@
+ void load_config(char *file, CONFIG *conf) {
+ 
+ 	FILE *f = fopen(file, "rt");
+-	if(!f)
+-		error_msg("Unable to load config file: %s!", file);
++	if(!f) {
++		if (!(f = fopen(CONFIG(file), "rt")))
++			error_msg("Unable to load config file: %s!", file);
++	}
+ 
+ 	fscanf(f, "video_mode_color_depth = %d\n", &(conf->vid_color_depth));
+ 	fscanf(f, "video_mode_fullscreen = %d\n", &(conf->fullscreen));
+diff -ru formido-1.0.orig/src/game.cpp formido-1.0/src/game.cpp
+--- formido-1.0.orig/src/game.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/game.cpp	2004-01-30 00:31:12.000000000 -0800
+@@ -173,15 +173,15 @@
+ 
+ 	char file[100] = "";
+ 	int num = 0;
+-	sprintf(file, "shot%03d.bmp", num);
++	sprintf(file, "./shot%03d.bmp", num);
+ 
+ 	game_paused = true;
+ 
+ 	// Check if exists
+-	FILE *f = fopen(CONFIG(file), "r");
++	FILE *f = fopen(file, "r");
+ 	if(!f) {
+ 		// Doesn't exist, save it.
+-		SDL_SaveBMP(screen, CONFIG(file));
++		SDL_SaveBMP(screen, file);
+ 	}
+ 	else {
+ 		fclose(f);
+@@ -189,14 +189,14 @@
+ 		// Exists, choose another name
+ 		while(num < 1000) {
+ 			num++;
+-			sprintf(file, "shot%03d.bmp", num);
++			sprintf(file, "./shot%03d.bmp", num);
+ 			
+ 
+ 			// Check if exists
+-			f = fopen(CONFIG(file), "r");
++			f = fopen(file, "r");
+ 			if(!f) {
+ 				// Doesn't exist, save it.
+-				SDL_SaveBMP(screen, CONFIG(file));
++				SDL_SaveBMP(screen, file);
+ 				break;
+ 			}
+ 			else
+diff -ru formido-1.0.orig/src/init.cpp formido-1.0/src/init.cpp
+--- formido-1.0.orig/src/init.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/init.cpp	2004-01-30 00:23:08.000000000 -0800
+@@ -80,8 +80,7 @@
+ void init_sdl() {
+ 
+ 	// Load the config
+-	//load_config("formido.cfg", &config);
+-	load_config(CONFIG("formido.cfg"), &config);
++	load_config("formido.cfg", &config);
+ 
+ 	// Initialize SDL with video and audio support
+ 	if(config.sound) {
+diff -ru formido-1.0.orig/src/main.cpp formido-1.0/src/main.cpp
+--- formido-1.0.orig/src/main.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/main.cpp	2004-01-30 00:29:09.000000000 -0800
+@@ -23,6 +23,9 @@
+ */
+ 
+ #include <stdlib.h>
++#include <sys/stat.h>
++#include <sys/types.h>
++#include <unistd.h>
+ #include "SDL.h"
+ #include "SDL_image.h"
+ #include "SDL_mixer.h"
+@@ -272,6 +275,15 @@
+ 
+ // The good old main()
+ int main(int argc, char *argv[]) {
++	if (!getenv("HOME")) {
++		    error_msg("Environment variable HOME not set.  Exiting.");
++	}
++	chdir(getenv("HOME"));
++	 /* Don't check the return here because it may already exist. */
++	mkdir(".formido", 0744);
++	if (chdir(".formido") != 0) {
++	    error_msg("Failed to change directories to ~/.formido");
++	}
+ 
+ 	// Initialize SDL
+ 	init_sdl();
+@@ -359,8 +371,7 @@
+ 
+ 
+ 	// Save the config
+-	//save_config("formido.cfg", &config);
+-	save_config(CONFIG("formido.cfg"), &config);
++	save_config("./formido.cfg", &config);
+ 
+ 	return 0;
+ }
+diff -ru formido-1.0.orig/src/menu.cpp formido-1.0/src/menu.cpp
+--- formido-1.0.orig/src/menu.cpp	2003-11-07 10:59:01.000000000 -0800
++++ formido-1.0/src/menu.cpp	2004-01-30 00:23:22.000000000 -0800
+@@ -262,7 +262,7 @@
+ 					menu_id = MENU_ID_MAIN;
+ 					menu_item = MENU_GAME_SETTINGS;
+ 					// Load back the initial settings from config
+-					load_config(CONFIG("formido.cfg"), &config);
++					load_config("formido.cfg", &config);
+ 					Mix_VolumeMusic(config.music_vol);
+ 				}
+ 				else if(menu_id == MENU_ID_HALL_OF_FAME) {
+@@ -305,7 +305,7 @@
+ 						menu_item = MENU_GAME_SETTINGS;
+ 						menu_id = MENU_ID_MAIN;
+ 						// Save config
+-						save_config(CONFIG("formido.cfg"), &config);
++						save_config("./formido.cfg", &config);
+ 						break;
+ 
+ 					// Keys
