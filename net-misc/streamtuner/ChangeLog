@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/streamtuner
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.1 2003/03/14 12:46:48 jje Exp $
+
+*streamtuner-0.9.1 (14 Mar 2003)
+
+  14 Mar 2003; jje <jje@gentoo.org> streamtuner-0.9.1.ebuild:
+  Initial revision.
+  
+  Submitted by: Ulli Ivens
+
