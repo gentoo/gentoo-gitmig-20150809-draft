@@ -2,9 +2,9 @@ MD5 4daa3597c62a9676fad4a07e543be9c3 xfs-sources-2.4.20-r1.ebuild 2132
 MD5 4fa4fca3767bc89c7c258ac3c382fc18 xfs-sources-2.4.19-r2.ebuild 1844
 MD5 b2fb282b21e82e7cac47f99c48017e54 xfs-sources-2.4.20.ebuild 2142
 MD5 7721ef109f2d111f961afe47a3baa0d9 xfs-sources-2.4.20-r3.ebuild 2185
-MD5 0f64323f9fbf3b5c3a17515fa5f18a12 xfs-sources-2.4.22.ebuild 2143
+MD5 8e0156afed80d85c166d9af22510592c xfs-sources-2.4.22.ebuild 2144
 MD5 03830a0019c2793faccebaf4de544435 xfs-sources-2.4.20-r2.ebuild 2131
-MD5 b13ce9305197a9d518bb36ee44dbae79 ChangeLog 7779
+MD5 092b7d1cc0e327cfd548c6a2a6b58a07 ChangeLog 7778
 MD5 a728d28dca69f5ae16aab56cd2fc6110 files/digest-xfs-sources-2.4.20 139
 MD5 26b986cdd4c24df8ad3d0f0b21e802be files/digest-xfs-sources-2.4.22 139
 MD5 ec7765fb708912e448a36dc6cf7cdce9 files/xfs-sources-2.4.20-gcc33.patch 11801
