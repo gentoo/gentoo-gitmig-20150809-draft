@@ -1,0 +1,53 @@
+--- Event.cc.old	2005-03-25 03:47:08.000000000 +0100
++++ src/Event.cc	2005-03-25 03:39:07.000000000 +0100
+@@ -31,6 +31,8 @@
+ #include <cairo-features.h>
+ #undef CAIRO_HAS_XCB_SURFACE
+ #include <cairo.h>
++
++#include <cairo-xlib.h>
+     
+ #ifdef    SHAPE
+ #  include <X11/extensions/shape.h>
+--- Render.cc.old	2005-03-25 03:47:19.000000000 +0100
++++ src/Render.cc	2005-03-25 03:39:13.000000000 +0100
+@@ -30,6 +30,7 @@
+ #  include <string.h>
+ #endif // STDC_HEADERS    
+ 
++#include <cairo-xlib.h>
+ #ifdef    HAVE_LIBGEN_H
+ #  include <libgen.h>
+ #else
+--- Screen.cc.old	2005-03-25 03:47:32.000000000 +0100
++++ src/Screen.cc	2005-03-25 03:39:18.000000000 +0100
+@@ -53,6 +53,8 @@
+ #ifdef    HAVE_ERRNO_H
+ #  include <errno.h>
+ #endif // HAVE_ERRNO_H
++
++#include <cairo-xlib.h>
+     
+ }
+ 
+--- Style.cc.old	2005-03-25 03:47:47.000000000 +0100
++++ src/Style.cc	2005-03-25 03:39:23.000000000 +0100
+@@ -26,6 +26,8 @@
+ extern "C" {
+ #include <X11/Xlib.h>
+ 
++#include <cairo-xlib.h>
++
+ #ifdef    STDC_HEADERS
+ #  include <stdlib.h>
+ #  include <string.h>
+--- Waimea.cc.old	2005-03-25 03:46:56.000000000 +0100
++++ src/Waimea.cc	2005-03-25 03:41:20.000000000 +0100
+@@ -28,6 +28,7 @@
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/Xlocale.h>
++#include <X11/extensions/Xrender.h>
+ 
+ #include <cairo-features.h>
+ #undef CAIRO_HAS_XCB_SURFACE

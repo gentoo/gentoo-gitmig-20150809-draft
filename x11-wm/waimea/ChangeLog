@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/waimea
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.25 2005/04/06 13:50:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/ChangeLog,v 1.26 2005/04/06 14:19:42 usata Exp $
+
+  06 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/waimea-0.5.0-includes.patch, waimea-0.5.0_pre040506.ebuild:
+  Fixed when compiled with cairo-3. Thanks to Francisco José Cañizares
+  Santofimia <telefrancisco@lycos.es>; bug #80977.
 
   06 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> waimea-0.4.0-r1.ebuild:
   Checks if imlib2 is built with X USE flag enabled. This closes bug #86496.
