@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.9 2004/04/27 21:05:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.10 2004/05/22 01:34:55 port001 Exp $
 
 DESCRIPTION="An utillity that displays its input in a text box on your root window"
 HOMEPAGE="http://de-fac.to/bob/xrootconsole/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc "
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 
 src_compile() {
 	emake || die "emake failed"
