@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.2 2001/04/28 23:34:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.1.1-r1.ebuild,v 1.3 2001/05/07 17:32:10 achim Exp $
 
 V="2.1"
 A=${P}.tar.bz2
@@ -56,6 +56,9 @@ src_install() {
   try make install DESTDIR=${D}
   insinto /etc/pam.d
   newins ${FILESDIR}/kscreensaver.pam kscreensaver
+  cd ${D}/etc/X11/xdm
+  mv Xsession Xsession.kde
+  cd ${S}
   dodoc AUTHORS ChangeLog README*
 }
 
