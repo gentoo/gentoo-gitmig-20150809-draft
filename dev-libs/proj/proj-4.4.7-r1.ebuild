@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.5 2004/04/19 13:20:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.6 2004/04/21 06:15:52 phosphan Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="http://proj.maptools.org/dl/${P}.tar.gz
 	http://proj.maptools.org/dl/proj-nad27-1.1.tar.gz"
 
 SLOT="0"
+IUSE=""
 LICENSE="MIT"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
