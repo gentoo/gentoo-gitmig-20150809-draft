@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tkseti
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.6 2004/02/28 19:19:17 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.7 2004/03/22 08:57:31 phosphan Exp $
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tkseti-3.06.ebuild:
+  removed DEPEND=${RDEPEND}
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
