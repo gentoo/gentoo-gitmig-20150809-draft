@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.1 2003/10/01 20:13:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.2 2003/11/04 03:03:07 brandy Exp $
 
 IUSE=""
 
@@ -10,18 +10,18 @@ SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/openobex"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=dev-libs/glib-1.2"
 
 src_compile() {
 	econf || die
-	emake || die
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
 
-	dodoc README AUTHORS NEWS
+	dodoc README AUTHORS NEWS ChangeLog
 }
