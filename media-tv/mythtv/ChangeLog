@@ -1,6 +1,18 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.39 2004/12/05 00:46:13 iggy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.40 2005/01/18 20:11:18 cardoe Exp $
+
+*mythtv-0.16.20050115 (18 Jan 2005)
+
+  18 Jan 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  -files/gcc-3.4-fix.patch, -files/mythtv-0.15-directfb.patch,
+  -files/tvformat.fix.0.13.diff, -mythtv-0.13-r1.ebuild,
+  -mythtv-0.14-r1.ebuild, -mythtv-0.15.1-r1.ebuild, -mythtv-0.15.1.ebuild,
+  +mythtv-0.16.20050115.ebuild:
+  rev dump to CVS snapshot for bug fixes and feature updates since upstream
+  won't release and won't suppport current stable merge changes from eclass
+  remove old revs fix up ebuild add XrandX extension since Gentoo X.org always
+  has it
 
   04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythtv-0.16.ebuild:
   I can't find any of the other media-tv guys, and it's been fairly bug free

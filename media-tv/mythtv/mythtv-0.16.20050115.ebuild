@@ -1,17 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.11 2005/01/18 20:11:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.20050115.ebuild,v 1.1 2005/01/18 20:11:18 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~cardoe/mythtv-0.16.20050115.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx nls"
+KEYWORDS="~x86 ~amd64"
+IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss mmx"
+
+S=${WORKDIR}/mythtv
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -25,7 +28,6 @@ DEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
-	cle266? ( media-libs/libddmpeg )
 	|| ( >=net-misc/wget-1.9.1 >=media-tv/xmltv-0.5.34 )"
 
 RDEPEND="${DEPEND}
@@ -56,6 +58,10 @@ pkg_setup() {
 }
 
 setup_pro() {
+	sed -e 's:EXTRA_LIBS += -L/usr/X11R6/lib -lXinerama -lXv -lX11 -lXext -lXxf86vm:EXTRA_LIBS += -lXinerama -lXv -lX11 -lXext -lXxf86vm:' \
+		-i 'settings.pro' || die "failed to remove extra library path"
+
+
 	if [ "${ARCH}" == "amd64" ] || ! use mmx; then
 		sed -i settings.pro \
 			-e "s:DEFINES += MMX:DEFINES -= MMX:"
@@ -68,7 +74,7 @@ setup_pro() {
 
 	if ! use xv ; then
 		sed -e 's:CONFIG += using_xv:#CONFIG += using_xv:' \
-			-e 's:EXTRA_LIBS += -L/usr/X11:#EXTRA_LIBS += -L/usr/X11:' \
+			-e 's:EXTRA_LIBS += -L/usr/X11R6/lib:#EXTRA_LIBS += -L/usr/X11R6/lib:' \
 			-i 'settings.pro' || die "disable xv failed"
 	fi
 
@@ -120,10 +126,14 @@ setup_pro() {
 	fi
 
 	if use cle266 ; then
-		sed -e 's:#CONFIG += using_viahwslice:CONFIG += using_viahwslice:' \
-			-e 's:#DEFINES += USING_VIASLICE:DEFINES += USING_VIASLICE:' \
-			-e 's:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:' \
+		sed -e 's:#EXTRA_LIBS += -lviaXvMC -lXvMC:EXTRA_LIBS += -lviaXvMC -lXvMC:' \
 			-i 'settings.pro' || die "enable cle266 sed failed"
+	fi
+
+	if ! use cle266 ; then
+		sed -e 's:CONFIG += using_xvmc using_xvmc_vld:#CONFIG += using_xvmc using_xvmc_vld:' \
+			-e 's:DEFINES += USING_XVMC USING_XVMC_VLD:#DEFINES += USING_XVMC USING_XVMC_VLD:' \
+			-i 'settings.pro' || die "disable VLD XvMC sed failed"
 	fi
 
 	if use directfb ; then
@@ -138,6 +148,11 @@ setup_pro() {
 			-e 's:#CONFIG += using_opengl:CONFIG += using_opengl:' \
 			-i 'settings.pro' || die "enable opengl sed failed"
 	fi
+
+	#Gentoo X ebuilds always have XrandrX
+	sed -e 's:#CONFIG += using_xrandr:CONFIG += using_xrandr:' \
+		-e 's:#DEFINES += USING_XRANDR:DEFINES += USING_XRANDR:' \
+		-i 'settings.pro' || die "enable xrandr sed failed"
 }
 
 src_unpack() {
@@ -148,11 +163,7 @@ src_unpack() {
 	is-flag "-march=pentium4" && replace-flags "-O3" "-O2"
 
 	myth_src_unpack
-
-	epatch ${FILESDIR}/${P}-cx88.patch
-	sed -i '32i #include <cmath>' ${S}/libs/libmythtv/dvbdiseqc.cpp
 }
-
 
 src_compile() {
 	export QMAKESPEC="linux-g++"
@@ -164,9 +175,11 @@ src_compile() {
 	make qmake || die
 	emake -C libs/libavcodec || die
 	emake -C libs/libavformat || die
+	emake -C libs/libmythsamplerate || die
+	emake -C libs/libmythsoundtouch || die
 	emake -C libs/libmyth || die
 	emake -C libs/libmythtv || die
-	emake -C libs || die
+	emake -C libs
 	emake || die
 }
 
