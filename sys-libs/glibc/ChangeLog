@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.262 2004/10/01 22:35:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.263 2004/10/01 22:39:18 kumba Exp $
+
+  01 Oct 2004; Joshua Kinard <kumba@gentoo.org> glibc-2.3.4.20040808.ebuild:
+  Added ~mips to keywords. Only n32 users should see this upgrade, but ONLY if
+  using the newer cascading profiles.
 
   01 Oct 2004; Joshua Kinard <kumba@gentoo.org>
   +files/2.3.4/glibc-2.3.4-mips-generate-syscall_h.patch,
