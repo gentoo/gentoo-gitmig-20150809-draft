@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111.ebuild,v 1.3 2005/02/20 02:30:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r1.ebuild,v 1.1 2005/03/18 00:53:24 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,15 +28,15 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	sys-devel/bison
-	sys-devel/gcc
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	sys-devel/flex"
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-upstream-registry-fix.patch.bz2 #85387
 
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in

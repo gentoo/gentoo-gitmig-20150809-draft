@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.89 2005/03/13 11:00:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.90 2005/03/18 00:53:24 vapier Exp $
+
+*wine-20050111-r1 (18 Mar 2005)
+
+  18 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-20050111-upstream-registry-fix.patch.bz2,
+  -wine-20050111.ebuild, +wine-20050111-r1.ebuild:
+  Add an upstream patch to fix a security issue with information leakage #85387.
 
 *wine-20050310 (13 Mar 2005)
 
