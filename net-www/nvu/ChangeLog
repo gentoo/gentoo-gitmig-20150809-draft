@@ -1,6 +1,9 @@
 # ChangeLog for net-www/nvu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.5 2004/10/17 22:27:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.6 2004/10/18 03:34:29 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org> nvu-0.50.ebuild:
+  Added ~sparc keyword.
 
   18 Oct 2004; Joseph Jezak <josejx@gentoo.org> nvu-0.50.ebuild:
   Added ~ppc.
