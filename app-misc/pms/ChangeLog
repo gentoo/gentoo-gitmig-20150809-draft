@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.6 2004/07/10 15:27:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.7 2004/10/24 16:16:18 stkn Exp $
+
+  24 Oct 2004; <stkn@gentoo.org> files/ui.diff, pms-0.94.ebuild:
+  using epatch now, replaced ui.diff with a version that works with newest cdk
+  in portage (#64688, thx to Urs Joss), tested with all cdk versions
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> pms-0.94.ebuild:
   Marked ~amd64.

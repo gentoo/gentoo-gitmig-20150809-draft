@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.8 2004/07/10 15:27:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.9 2004/10/24 16:16:18 stkn Exp $
+
+IUSE=""
+
+inherit eutils
 
 DESCRIPTION="Password Management System"
 HOMEPAGE="http://passwordms.sourceforge.net/"
@@ -17,7 +21,7 @@ DEPEND="sys-libs/ncurses
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch pms/ui.c "${FILESDIR}/ui.diff"
+	epatch ${FILESDIR}/ui.diff
 }
 
 src_install() {

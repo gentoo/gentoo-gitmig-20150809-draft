@@ -1,4 +1,11 @@
-78c78
-<   drawCDKEntry(inputBox, inputBox->box);
----
->   drawCDKEntry(inputBox, inputBox->BoxAttrib);
+--- pms-0.94/pms/ui.c.orig	2004-10-24 17:36:32.295703640 +0200
++++ pms-0.94/pms/ui.c	2004-10-24 17:36:51.638763048 +0200
+@@ -75,7 +75,7 @@
+   inputBox = newCDKEntry(cdkscreen, xpos, ypos, title, label, A_NORMAL, ' ', vMIXED, width, 0, maxLen, TRUE, TRUE);
+ 
+   /* Show box and process user input */
+-  drawCDKEntry(inputBox, inputBox->box);
++  drawCDKEntry(inputBox, ObjOf(inputBox)->box);
+   wgetnstr(inputBox->fieldWin, (char *) &ret, 70);
+   result = ret;
+ 
