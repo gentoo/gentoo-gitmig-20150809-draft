@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.3 2002/09/16 14:14:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901-r1.ebuild,v 1.4 2002/09/16 18:45:09 azarah Exp $
 
 TETEXSRC="teTeX-src-beta-${PV}.tar.gz"
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
@@ -166,7 +166,7 @@ pkg_postinst() {
 	then
 		einfo "Configuring teTeX..."
 		mktexlsr &> /dev/null
-        fmtutil --all &> /dev/null
+		fmtutil --all &> /dev/null
 		texlinks &> /dev/null
 		texconfig init &> /dev/null
 		texconfig confall &> /dev/null
