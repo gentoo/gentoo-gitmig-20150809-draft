@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.8 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.9 2004/09/19 01:51:40 morfic Exp $
+
+  18 Sep 2004; Daniel Goller <morfic@gentoo.org> +files/wmtz-0.7-gcc34.patch,
+  wmtz-0.7.ebuild:
+  applying Magnade's gcc3.4 patch to close bug #64556
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmtz-0.7.ebuild:
   Masked wmtz-0.7.ebuild stable for ppc
