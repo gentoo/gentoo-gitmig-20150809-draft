@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/piddle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.4 2004/06/25 01:36:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.5 2004/07/22 16:52:05 pythonhead Exp $
+
+  22 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> piddle-1.0.15.ebuild:
+  Stable on x86
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> piddle-1.0.15.ebuild:
   Remove default S.
