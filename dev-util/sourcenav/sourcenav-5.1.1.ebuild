@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.1.ebuild,v 1.1 2002/11/04 12:17:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.1.ebuild,v 1.2 2002/11/17 09:36:52 vapier Exp $
 
 S=${WORKDIR}/build
 
@@ -15,13 +15,12 @@ DEPEND=">=sys-libs/glibc-2.2.4"
 SN="/usr/snavigator"
 
 src_unpack() {
-    mkdir build
-    unpack ${A}
+	mkdir build
+	unpack ${A}
 
 	cd ${WORKDIR}/${P}
 
 	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-
 }
 
 src_compile() {
@@ -35,11 +34,11 @@ src_compile() {
 	make all-snavigator || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} \
 		install-snavigator || die
 	
 	chmod -Rf 755 ${D}/usr/share/doc/${P}/demos
-	mkdir -p ${D}/etc/env.d
+	dodir /etc/env.d
 	echo "PATH=/usr/snavigator/bin" > ${D}/etc/env.d/10snavigator	
 }

@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.ebuild,v 1.1 2002/11/16 06:38:37 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.ebuild,v 1.2 2002/11/17 09:35:59 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="BitKeeper is a scalable configuration management system."
+DESCRIPTION="BitKeeper is a scalable configuration management system"
 SRC_URI=""
-HOMEPAGE="http://www.bitkeeper.com"
+HOMEPAGE="http://www.bitkeeper.com/"
 DEPEND=">=virtual/glibc-2.2
 	>=dev-lang/tcl-8.3.3
 	X? ( >=dev-lang/tk-8.3.3 )"
@@ -45,7 +44,8 @@ src_unpack() {
 }
 
 src_install () {
-	mkdir -p ${D}/opt ${D}/etc/env.d
+	dodir /opt
+	dodir /etc/env.d
 	cd ${D}/opt && tar -xzf ${S}/archive
 	mv ${D}/opt/bitkeeper ${D}/opt/${P}
 	cat <<EOF >${D}/etc/env.d/10bitkeeper
