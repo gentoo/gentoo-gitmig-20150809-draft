@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r5.ebuild,v 1.2 2004/06/24 23:41:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r5.ebuild,v 1.3 2004/06/25 07:47:12 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,6 +68,8 @@ src_unpack() {
 	fi
 
 	# this patch adds an 'ShowOnlyIcons Never' option to FvwmIconMan.
+	# XXX: ShowNoIcons ever option added to official FvwmIconMan on 24 Jun 2004
+	# XXX: Remove this patch, and add ewarn about new Syntax.
 	cd ${S}; epatch ${FILESDIR}/fvwm-iconman.diff
 
 	# fix some issues reported since the 2.5.10 release.
