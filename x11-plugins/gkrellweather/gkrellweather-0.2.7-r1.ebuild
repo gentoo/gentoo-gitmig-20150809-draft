@@ -8,24 +8,22 @@ DESCRIPTION="GKrellM Plugin that monitors a METAR station and displays weather
 info"
 SRC_URI="http://www.cse.unsw.edu.au/~flam/repository/c/gkrellm/${P}.tar.gz"
 HOMEPAGE="http://www.cse.unsw.edu.au/~flam/programs/gkrellweather.html"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.2.9
+DEPEND=">=app-admin/gkrellm-1.2*
 	>=net-misc/wget-1.5.3"
 
 RDEPEND="${DEPEND}
 	>=sys-devel/perl-5.6.1"
 
 src_compile() {
-
 	emake || die
-
 }
 
 src_install () {
-
 	exeinto /usr/share/gkrellm
 	doexe GrabWeather 
 

@@ -7,11 +7,12 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A plugin for GKrellM that monitors your wireless network card"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.2.9"
+DEPEND="=app-admin/gkrellm-1.2*"
 
 src_compile() {
 	export PATH="${PATH}:/usr/X11R6/bin"
@@ -20,7 +21,6 @@ src_compile() {
 }
 
 src_install () {
-
 	insinto /usr/lib/gkrellm/plugins
 	doins wireless.so
 	dodoc README Changelog

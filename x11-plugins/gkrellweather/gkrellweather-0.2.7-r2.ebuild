@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.2.9
+DEPEND="=app-admin/gkrellm-1.2*
 	>=net-misc/wget-1.5.3"
 
 RDEPEND="${DEPEND}
@@ -27,13 +27,10 @@ src_unpack() {
 }
 
 src_compile() {
-
     emake || die
-
 }
 
 src_install () {
-
 	exeinto /usr/share/gkrellm
     doexe GrabWeather 
 

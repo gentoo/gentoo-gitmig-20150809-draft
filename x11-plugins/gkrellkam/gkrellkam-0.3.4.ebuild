@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.2.11"
+DEPEND="=app-admin/gkrellm-1.2*"
 
 src_compile() {
 	emake || die

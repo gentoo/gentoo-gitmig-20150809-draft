@@ -8,20 +8,18 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A mixer control plugin for gkrellm"
 SRC_URI="http://gkrellm.luon.net/files/${MY_P}-${PV}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/volume.phtml"
-LICENSE="GPL-2"
+
+DEPEND="=app-admin/gkrellm-1.2*"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.0.6"
-
 src_compile() {
-
 	make || die
-
 }
 
 src_install () {
-
 	insinto /usr/lib/gkrellm/plugins
 	doins volume.so
 	dodoc README Changelog

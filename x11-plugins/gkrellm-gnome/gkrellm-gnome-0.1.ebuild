@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 
-DEPEND=">=app-admin/gkrellm-1.2.2-r1
+DEPEND="=app-admin/gkrellm-1.2*
 	gnome-base/gnome-libs"
 
 src_compile() {
