@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.15 2004/06/24 23:34:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.16 2004/08/07 23:23:39 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> mythweather-0.13.ebuild,
+  mythweather-0.14.ebuild, mythweather-0.15.ebuild:
+  Typo in DESCRIPTION: forcast -> forecast. Bug 59717.
 
 *mythweather-0.15 (01 Jun 2004)
 

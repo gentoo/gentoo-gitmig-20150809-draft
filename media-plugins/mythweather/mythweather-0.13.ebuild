@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.13.ebuild,v 1.5 2004/06/24 23:34:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.13.ebuild,v 1.6 2004/08/07 23:23:39 slarti Exp $
 
 IUSE=""
 
 inherit flag-o-matic
 
-DESCRIPTION="Weather forcast module for MythTV."
+DESCRIPTION="Weather forecast module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
