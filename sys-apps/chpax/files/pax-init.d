@@ -23,7 +23,7 @@ start() {
 		[ -f ${x} ] && /sbin/chpax -e ${x} || eerror ${err_msg} ${x}
 	done
 
-	for x in ${MMAP_EXEMPT} ; do
+	for x in ${RANDMMAP_EXEMPT} ; do
 		[ -f ${x} ] && /sbin/chpax -r ${x} || eerror ${err_msg} ${x}
 	done
 
@@ -31,7 +31,7 @@ start() {
 		[ -f ${x} ] && /sbin/chpax -m ${x} || eerror ${err_msg} ${x}
 	done
 
-	for x in ${SEGEXEC_EXEMPT} ; do
+	for x in ${SEGMEXEC_EXEMPT} ; do
 		[ -f ${x} ] && /sbin/chpax -s ${x} || eerror ${err_msg} ${x}
 	done
 
