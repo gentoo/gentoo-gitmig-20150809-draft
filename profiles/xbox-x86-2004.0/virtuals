@@ -14,7 +14,6 @@ virtual/imapUW			net-mail/uw-imap
 virtual/jdk				dev-java/blackdown-jdk
 virtual/jre				dev-java/blackdown-jre
 virtual/imapd			net-mail/courier-imap
-sys-apps/console-tools	sys-apps/kbd
 virtual/blackbox		x11-wm/blackbox
 virtual/emacs			app-editors/emacs
 virtual/cron			sys-apps/dcron

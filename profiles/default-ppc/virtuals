@@ -16,7 +16,6 @@ virtual/jdk	      dev-java/ibm-jdk-bin
 virtual/jre	      dev-java/ibm-jre-bin
 virtual/imapd	    net-mail/courier-imap
 virtual/x11-web-browser  net-www/mozilla
-sys-apps/console-tools   sys-apps/kbd
 virtual/blackbox	 x11-wm/blackbox
 virtual/emacs	    app-editors/emacs
 sys-apps/reiserfs-utils  sys-fs/reiserfsprogs

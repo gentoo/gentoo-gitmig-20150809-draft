@@ -1,4 +1,3 @@
-sys-apps/console-tools		sys-apps/kbd
 virtual/alsa			media-sound/alsa-driver
 virtual/antivirus		app-antivirus/clamav
 virtual/aspell-dict		app-dicts/aspell-en
