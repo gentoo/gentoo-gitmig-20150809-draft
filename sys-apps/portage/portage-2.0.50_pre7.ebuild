@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre7.ebuild,v 1.1 2003/12/22 18:44:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50_pre7.ebuild,v 1.2 2003/12/24 07:07:42 carpaski Exp $
 
 IUSE="build"
 
@@ -191,25 +191,24 @@ pkg_postinst() {
 		fi
 	fi
 	echo
-	eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
-	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
+	if [ -e /etc/._cfg*make.globals ]; then
+		eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
+		eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
+		echo
+	fi
+	einfo "Feature additions are noted in help and make.conf descriptions."
 	echo
-	einfo "Feature additions are noted in help and make.conf descriptions. Update"
-	einfo "them using 'etc-update' please. Maintaining current configs for portage"
-	einfo "and other system packages is fairly important for the continued health"
-	einfo "of your system."
+	einfo "Update configs using 'etc-update' please. Maintaining current configs"
+	einfo "for portage and other system packages is fairly important for the"
+	einfo "continued health of your system."
 	echo
+
 	if [ -z "$PORTAGE_TEST" ]; then
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
+		for TICKER in 1 2 3 4 5; do
+			# Double beep here.
+			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a" ; sleep 1
+		done
 		sleep 8
 
 		# Kill the existing counter and generate a new one.
