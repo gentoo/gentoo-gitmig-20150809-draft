@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.1 2004/07/20 19:52:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.2 2004/07/30 03:37:29 tgall Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pyopengl/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE=""
 
 DEPEND="virtual/python

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.54 2004/07/29 21:23:39 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.55 2004/07/30 03:42:08 tgall Exp $
+
+  29 Jul 2004; Tom Gall <tgall@gentoo.org> pygtk-2.2.0.ebuild:
+  stable on ppc64, bug #57015
 
 *pygtk-2.3.94 (29 Jul 2004)
 
