@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.18 2004/09/13 04:05:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.19 2004/09/22 00:46:37 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -501,8 +501,12 @@ src_unpack() {
 
 	# Remaining patches
 	cd ${S}
+
 	# fix for http://sources.redhat.com/bugzilla/show_bug.cgi?id=227
 	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
+
+	# fix for using nptl's pthread.h with g++
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-pthread.h-g++-fix.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

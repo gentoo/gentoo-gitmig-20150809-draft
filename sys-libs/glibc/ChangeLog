@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.256 2004/09/21 19:19:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.257 2004/09/22 00:46:37 lv Exp $
+
+  21 Sep 2004; Travis Tilley <lv@gentoo.org>
+  -files/2.3.4/glibc-2.3.4-fix-broken-ldd.patch,
+  +files/2.3.4/glibc-2.3.4-nptl-pthread.h-g++-fix.patch,
+  glibc-2.3.4.20040808.ebuild, -glibc-2.3.4.20040918.ebuild:
+  removed 0918 snapshot, it will occasionally cause processes to not return.
+  fixes bug 64787. backported the necessary nptl pthread header fix from it to
+  0808.
 
   21 Sep 2004; Travis Tilley <lv@gentoo.org>
   +files/2.3.4/glibc-2.3.4-fix-broken-ldd.patch, glibc-2.3.4.20040918.ebuild:
