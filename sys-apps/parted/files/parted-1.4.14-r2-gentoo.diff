@@ -1,0 +1,2336 @@
+diff -urP parted-1.4.14.orig/Makefile.am parted-1.4.14/Makefile.am
+--- parted-1.4.14.orig/Makefile.am	Sat Apr  7 18:04:37 2001
++++ parted-1.4.14/Makefile.am	Wed Aug  1 19:26:25 2001
+@@ -1,4 +1,4 @@
+-SUBDIRS = intl po libparted parted include doc debug
++SUBDIRS = intl po libparted parted include doc debug @PYTHON_SUBDIR@
+ 
+ EXTRA_DIST =	ABOUT-NLS	\
+ 		AUTHORS		\
+diff -urP parted-1.4.14.orig/configure.in parted-1.4.14/configure.in
+--- parted-1.4.14.orig/configure.in	Wed May 30 06:42:20 2001
++++ parted-1.4.14/configure.in	Wed Aug  1 20:22:53 2001
+@@ -65,6 +65,12 @@
+ fi
+ AC_SUBST(PARTED_LDFLAGS)
+ 
++AC_ARG_WITH(python,
++	[  --with-python           build python module],
++	with_python=$withval,
++	with_python=no
++)
++
+ dnl make libc threadsafe (not required for us, but useful other users of
+ dnl libparted)
+ CFLAGS="$CFLAGS -D_REENTRANT"
+@@ -174,6 +180,33 @@
+  	LIBS="$OLD_LIBS"
+ fi
+ 
++dnl Check for python
++if test x$with_python = xyes; then
++	AC_PATH_PROG(PYTHON, python python2.1 python2.0 python1.6 python1.5, no)
++	if test x$PYTHON = xno; then
++		AC_MSG_ERROR(
++Python version 1.5 or higher could not be found which is required for
++the --with-python.  Either disable readline support with
++--without-python or downloaded and install it from:
++        http://www.python.org
++		)
++	fi
++	changequote(<<,>>)dnl
++	PYTHON_VERSION=`${PYTHON} -c "import sys; print sys.version[:3]"`
++	PYTHON_PREFIX=`${PYTHON} -c "import sys; print sys.prefix"`
++	PYTHON_EXEC_PREFIX=`${PYTHON} -c "import sys; print sys.exec_prefix"`
++	changequote([,])dnl
++	PYTHON_INCLUDES="-I${PYTHON_PREFIX}/include/python${PYTHON_VERSION} -I${PYTHON_PREFIX}/lib/python${PYTHON_VERSION}/config"
++	pydynmoduledir="${PYTHON_EXEC_PREFIX}/lib/python${PYTHON_VERSION}/site-packages"
++	PYTHON_SUBDIR=python
++fi
++AC_SUBST(PYTHON_PREFIX)
++AC_SUBST(PYTHON_EXEC_PREFIX)
++AC_SUBST(PYTHON_VERSION)
++AC_SUBST(PYTHON_INCLUDES)
++AC_SUBST(PYTHON_SUBDIR)
++AC_SUBST(pydynmoduledir)
++
+ AC_SUBST(PARTED_LIBS)
+ 
+ dnl One day, gettext might support libtool...
+@@ -256,7 +289,7 @@
+ 	LIBS="$OLD_LIBS"
+ fi
+ 
+-CFLAGS="$CFLAGS -W -Wall -Wno-unused -Wno-switch -Werror"
++CFLAGS="$CFLAGS -W -Wall -Wno-unused -Wno-switch"
+ 
+ AC_OUTPUT([
+ Makefile
+@@ -271,6 +304,7 @@
+ libparted/fs_reiserfs/Makefile
+ libparted/fs_ufs/Makefile
+ parted/Makefile
++python/Makefile
+ intl/Makefile
+ doc/Makefile
+ debug/Makefile
+diff -urP parted-1.4.14.orig/python/Makefile.am parted-1.4.14/python/Makefile.am
+--- parted-1.4.14.orig/python/Makefile.am	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/Makefile.am	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,29 @@
++AUTOMAKE_OPTIONS = 1.4 foreign
++
++partedincludedir      = -I$(top_srcdir)/include
++INCLUDES = $(partedincludedir) @PYTHON_INCLUDES@ @INTLINCS@
++
++noinst_LTLIBRARIES = libpartedmodule.la
++libpartedmodule_la_SOURCES = 	partedmodule.c	\
++				pydevice.c	\
++				pydisk.c	\
++				pygeometry.c	\
++				pyexception.c	\
++				pyfilesystem.c	\
++				pyconstraint.c  \
++				partedmodule.h \
++				pyconstraint.h \
++				pydevice.h \
++				pydisk.h \
++				pyexception.h \
++				pyfilesystem.h \
++				pygeometry.h
++
++pythondir = $(pydynmoduledir)
++python_PROGRAMS = partedmodule.so
++partedmodule_so_SOURCES =
++partedmodule_so_LDFLAGS = $(top_builddir)/libparted/libparted.la \
++	-shared -Wl,-soname,partedmodule.so
++
++partedmodule.so: $(libpartedmodule_la_OBJECTS)
++	$(LINK) -g -o $@ $^ $(partedmodule_so_LDFLAGS);
+diff -urP parted-1.4.14.orig/python/partedmodule.c parted-1.4.14/python/partedmodule.c
+--- parted-1.4.14.orig/python/partedmodule.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/partedmodule.c	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,334 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#include <Python.h>
++
++#include "parted/parted.h"
++
++#include "partedmodule.h"
++#include "pydevice.h"
++#include "pydisk.h"
++#include "pyexception.h"
++#include "pygeometry.h"
++#include "pyfilesystem.h"
++#include "pyconstraint.h"
++
++/* global error object */
++PyObject *PyPartedError;
++
++/* static global variables */
++static PyObject *PyExceptionHandler;
++static char *py_exception_string = NULL;
++
++/* common functions */
++int
++py_ped_exception_string_check (void)
++{
++        return (py_exception_string != NULL);
++}
++        
++
++void
++py_ped_exception_string_clear (void)
++{
++        if (py_exception_string != NULL) {
++                free (py_exception_string);
++                py_exception_string = NULL;
++        }
++}
++
++void
++py_ped_set_error_from_ped_exception (void)
++{
++        if (py_exception_string != NULL) {
++                PyErr_SetString(PyPartedError, py_exception_string);
++                py_ped_exception_string_clear ();
++                return;
++        }
++        PyErr_SetString(PyPartedError, "unknown error occured");
++}
++
++/* toplevel implementation */
++
++static PedExceptionOption
++py_exception_handler (PedException* ex)
++{
++        PyObject * result, * args = NULL;
++        long rc;
++        char * type;
++        char * buf;
++        int len;
++
++        if (py_exception_string != NULL)
++                free (py_exception_string);
++    
++        type = ped_exception_get_type_string (ex->type);
++        len = strlen (type) + strlen (ex->message) + 3;
++        buf = malloc (len);
++        snprintf (buf, len, "%s: %s", type, ex->message);
++        py_exception_string = buf;
++    
++        if (PyExceptionHandler == NULL) {
++                return PED_EXCEPTION_UNHANDLED;
++        }
++    
++        args = Py_BuildValue("(N)", (PyObject *) py_ped_exception_obj_new (ex));
++
++        result = PyEval_CallObject(PyExceptionHandler, args);
++        Py_XDECREF(args);
++
++        if (result == NULL) {
++                PyErr_Print();
++                PyErr_Clear();
++                return PED_EXCEPTION_UNHANDLED;
++        }
++
++        if (!PyInt_Check (result)) {
++                fprintf (stderr,
++                         "ERROR: python exception handler did not "
++                         "return expected int value\n");
++                return PED_EXCEPTION_UNHANDLED;
++        }
++    
++        rc = PyInt_AsLong (result);
++        Py_DECREF (result);
++        return (PedExceptionOption) rc;
++}
++
++static PyObject *
++py_ped_exception_set_handler (PyObject * self, PyObject * args)
++{
++        PyObject *cb;
++
++        /* if we already have a callback, releae it */
++        if (PyExceptionHandler != NULL) {
++                Py_DECREF (PyExceptionHandler);
++                PyExceptionHandler = NULL;
++        }
++    
++        if (!PyArg_ParseTuple(args, "O", &cb))
++                return NULL;
++
++        if (!PyCallable_Check (cb)) {
++                PyErr_SetString(PyExc_TypeError, "parameter must be callable");
++                return NULL;
++        }
++        Py_INCREF (cb);
++        PyExceptionHandler = cb;
++    
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_device_get (PyObject * self, PyObject * args)
++{
++        PyPedDevice *d;
++        PedDevice *dev;
++        char *path;
++
++        if (!PyArg_ParseTuple(args, "s", &path))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if ((dev = ped_device_get (path)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++    
++        d = (PyPedDevice *) PyObject_NEW(PyObject, &PyPedDeviceType);
++        d->dev = dev;
++        return (PyObject *) d;
++}
++
++static PyObject *
++py_ped_file_system_type_get (PyObject * self, PyObject * args)
++{
++        char *type;
++        PedFileSystemType *fst;
++    
++        if (!PyArg_ParseTuple(args, "s", &type)) {
++                return NULL;
++        }
++
++        if ((fst = ped_file_system_type_get (type)) == NULL) {
++                PyErr_SetString(PyPartedError, "unknown file system type");
++                return NULL;
++        }
++
++        return (PyObject *) py_ped_file_system_type_obj_new (fst);
++}
++
++static PyObject *
++py_ped_file_system_type_get_next (PyObject * self, PyObject * args)
++{
++        PyPedFileSystemTypeObj *pyfst = NULL;
++        PedFileSystemType *fst;
++     
++        if (!PyArg_ParseTuple(args, "|O!", &PyPedFileSystemTypeType, &pyfst)) {
++                PyErr_SetString(PyExc_TypeError,
++                                "optional parameter must be a "
++                                "PedFileSystemType");
++                return NULL;
++        }
++
++        fst = ped_file_system_type_get_next (pyfst ? pyfst->fs_type : NULL);
++        if (fst) 
++                return (PyObject *) py_ped_file_system_type_obj_new (fst);
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_partition_flag_next (PyObject *obj, PyObject * args)
++{
++        int flag, next;
++        
++        if (!PyArg_ParseTuple(args, "i", &flag))
++                return NULL;
++        
++        next = ped_partition_flag_next (flag);
++
++        return PyInt_FromLong (next);
++}
++
++static PyObject *
++py_ped_partition_flag_get_by_name (PyObject *obj, PyObject * args)
++{
++        char *name;
++        int flag;
++        
++        if (!PyArg_ParseTuple(args, "s", &name))
++                return NULL;
++        
++        flag = ped_partition_flag_get_by_name (name);
++
++        return PyInt_FromLong (flag);
++}
++
++static PyObject *
++py_ped_partition_flag_get_name (PyObject *obj, PyObject * args)
++{
++        int flag;
++        const char *name;
++        
++        if (!PyArg_ParseTuple(args, "i", &flag))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        name = ped_partition_flag_get_name (flag);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }                
++        
++        return PyString_FromString (name);
++}
++
++static struct PyMethodDef PyPedModuleMethods[] = {
++    	{ "device_get",
++          (PyCFunction) py_ped_device_get, METH_VARARGS, NULL },
++	{ "exception_set_handler",
++          (PyCFunction) py_ped_exception_set_handler,
++          METH_VARARGS, NULL },
++        { "file_system_type_get",
++          (PyCFunction) py_ped_file_system_type_get,
++          METH_VARARGS, NULL },
++        { "file_system_type_get_next",
++          (PyCFunction) py_ped_file_system_type_get_next,
++          METH_VARARGS, NULL },
++        { "partition_flag_next",
++          (PyCFunction) py_ped_partition_flag_next,
++          METH_VARARGS, NULL },
++        { "partition_flag_get_by_name",
++          (PyCFunction) py_ped_partition_flag_get_by_name,
++          METH_VARARGS, NULL },
++        { "partition_flag_get_name",
++          (PyCFunction) py_ped_partition_flag_get_name,
++          METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++void initparted(void) {
++        PyObject *m, *d, *o;
++
++        if (!ped_init ())
++                Py_FatalError("couldn't initialized parted");
++
++        m = Py_InitModule("parted", PyPedModuleMethods);
++        d = PyModule_GetDict(m);
++
++        /* enum registration */
++#define REGISTER_ENUM(val) \
++        PyDict_SetItemString(d, #val, o=PyInt_FromLong(PED_ ## val)); \
++        Py_DECREF(o);
++
++        REGISTER_ENUM(DEVICE_UNKNOWN);
++        REGISTER_ENUM(DEVICE_SCSI);
++        REGISTER_ENUM(DEVICE_IDE);
++        REGISTER_ENUM(DEVICE_DAC960);
++        REGISTER_ENUM(DEVICE_CPQARRAY);
++
++        REGISTER_ENUM(PARTITION_PRIMARY);
++        REGISTER_ENUM(PARTITION_LOGICAL);
++        REGISTER_ENUM(PARTITION_EXTENDED);
++        REGISTER_ENUM(PARTITION_FREESPACE);
++        REGISTER_ENUM(PARTITION_METADATA);
++
++        REGISTER_ENUM(PARTITION_BOOT);
++        REGISTER_ENUM(PARTITION_ROOT);
++        REGISTER_ENUM(PARTITION_SWAP);
++        REGISTER_ENUM(PARTITION_HIDDEN);
++        REGISTER_ENUM(PARTITION_RAID);
++        REGISTER_ENUM(PARTITION_LVM);
++        REGISTER_ENUM(PARTITION_LBA);
++
++        REGISTER_ENUM(PARTITION_FIRST_FLAG);
++        REGISTER_ENUM(PARTITION_LAST_FLAG);
++
++        REGISTER_ENUM(DISK_TYPE_EXTENDED);
++        REGISTER_ENUM(DISK_TYPE_PARTITION_NAME);
++
++        REGISTER_ENUM(EXCEPTION_INFORMATION);
++        REGISTER_ENUM(EXCEPTION_WARNING);
++        REGISTER_ENUM(EXCEPTION_ERROR);
++        REGISTER_ENUM(EXCEPTION_FATAL);
++        REGISTER_ENUM(EXCEPTION_BUG);
++        REGISTER_ENUM(EXCEPTION_NO_FEATURE);
++    
++        REGISTER_ENUM(EXCEPTION_UNHANDLED);
++        REGISTER_ENUM(EXCEPTION_YES);
++        REGISTER_ENUM(EXCEPTION_NO);
++        REGISTER_ENUM(EXCEPTION_OK);
++        REGISTER_ENUM(EXCEPTION_RETRY);
++        REGISTER_ENUM(EXCEPTION_IGNORE);
++        REGISTER_ENUM(EXCEPTION_CANCEL);
++
++        REGISTER_ENUM(EXCEPTION_OK_CANCEL);
++        REGISTER_ENUM(EXCEPTION_YES_NO);
++        REGISTER_ENUM(EXCEPTION_YES_NO_CANCEL);
++        REGISTER_ENUM(EXCEPTION_IGNORE_CANCEL);
++        REGISTER_ENUM(EXCEPTION_RETRY_CANCEL);
++        REGISTER_ENUM(EXCEPTION_RETRY_IGNORE_CANCEL);
++        /* end enum registration */
++
++        /* register the exception handler marhaller function */
++        ped_exception_set_handler (py_exception_handler);
++
++        /* set up our exception class */
++        PyPartedError = PyErr_NewException("parted.error", NULL, NULL);
++        PyDict_SetItemString(d, "error", PyPartedError);
++        Py_DECREF(PyPartedError);
++}
+diff -urP parted-1.4.14.orig/python/partedmodule.h parted-1.4.14/python/partedmodule.h
+--- parted-1.4.14.orig/python/partedmodule.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/partedmodule.h	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,25 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PARTEDMODULE_H_INCLUDED
++#define PARTEDMODULE_H_INCLUDED
++
++#include <Python.h>
++
++extern PyObject *PyPartedError;
++int py_ped_exception_string_check (void);
++void py_ped_exception_string_clear (void);
++extern void py_ped_set_error_from_ped_exception (void);
++
++#endif /* PARTEDMODULE_H_INCLUDED */
+diff -urP parted-1.4.14.orig/python/pyconstraint.c parted-1.4.14/python/pyconstraint.c
+--- parted-1.4.14.orig/python/pyconstraint.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyconstraint.c	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,109 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ *
++*/
++
++#include "partedmodule.h"
++#include "pygeometry.h"
++#include "pyconstraint.h"
++
++static void py_ped_constraint_dealloc (PyPedConstraint * c);
++static PyObject * py_ped_constraint_getattr (PyPedConstraint * c, char * name);
++
++static char PyPedConstraintType__doc__[] = "This is the PartEd constraint "
++                                           "object";
++PyTypeObject PyPedConstraintType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedConstraint",			/* tp_name */
++	sizeof(PyPedConstraint),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_constraint_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_constraint_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedConstraintType__doc__,
++	0L,0L,0L,0L
++};
++
++static PyObject * py_ped_constraint_duplicate (PyPedConstraint * c,
++                                               PyObject * args);
++
++static struct PyMethodDef PyPedConstraintMethods[] = {
++	{ "duplicate",
++          (PyCFunction) py_ped_constraint_duplicate,
++          METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++static void
++py_ped_constraint_dealloc (PyPedConstraint * c)
++{
++        if (!c->borrowed)
++                ped_constraint_destroy (c->constraint);
++        Py_XDECREF (c->disk);
++        PyMem_DEL(c);
++}
++
++static PyObject *
++py_ped_constraint_duplicate (PyPedConstraint * c, PyObject * args)
++{
++        PedConstraint *cst;
++
++        cst = ped_constraint_duplicate (c->constraint);
++        return (PyObject *) py_ped_constraint_obj_new (cst, c->disk, 0);
++}
++
++static PyObject *
++py_ped_constraint_getattr (PyPedConstraint * c, char * name)
++{
++        if (!strcmp (name, "start_range"))
++                return (PyObject *)
++                        py_ped_geometry_obj_new (c->constraint->start_range,
++                                                 c->disk, 1);
++        if (!strcmp (name, "end_range"))
++                return (PyObject *)
++                        py_ped_geometry_obj_new (c->constraint->end_range,
++                                                 c->disk, 1);
++        if (!strcmp (name, "min_size"))
++                return (PyObject *)
++                        PyLong_FromLongLong (c->constraint->min_size);
++        
++        return Py_FindMethod (PyPedConstraintMethods, (PyObject *) c, name);
++}
++
++PyPedConstraint *
++py_ped_constraint_obj_new (PedConstraint *c, PyPedDisk *disk, int borrowed)
++{
++        PyPedConstraint *con;
++    
++        con = (PyPedConstraint *) PyObject_NEW(PyObject, &PyPedConstraintType);
++        con->constraint = c;
++        con->borrowed = borrowed;
++        con->disk = disk;
++        Py_INCREF (disk);
++
++        return con;
++}
+diff -urP parted-1.4.14.orig/python/pyconstraint.h parted-1.4.14/python/pyconstraint.h
+--- parted-1.4.14.orig/python/pyconstraint.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyconstraint.h	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,38 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ *
++*/
++
++#ifndef PYCONSTRAINT_H_INCLUDED
++#define PYCONSTRAINT_H_INCLUDED
++
++#include <Python.h>
++#include "parted/constraint.h"
++#include "pydisk.h"
++
++typedef struct _PyPedConstraint PyPedConstraint;
++
++struct _PyPedConstraint {
++        PyObject_HEAD;
++        PedConstraint *constraint;
++        PyPedDisk *disk;
++        int borrowed;
++};
++
++extern PyTypeObject PyPedConstraintType;
++
++extern PyPedConstraint * py_ped_constraint_obj_new (PedConstraint *c,
++                                                    PyPedDisk *part,
++                                                    int borrowed);
++
++#endif /* PYCONSTRAINT_H_INCLUDED */
+diff -urP parted-1.4.14.orig/python/pydevice.c parted-1.4.14/python/pydevice.c
+--- parted-1.4.14.orig/python/pydevice.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pydevice.c	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,152 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++#include "partedmodule.h"
++#include "pydevice.h"
++#include "pydisk.h"
++
++static void py_ped_device_dealloc (PyPedDevice * s);
++static PyObject * py_ped_device_getattr (PyPedDevice * s, char * name);
++
++static char PyPedDeviceType__doc__[] = "This is the PartEd device object";
++PyTypeObject PyPedDeviceType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedDevice",			/* tp_name */
++	sizeof(PyPedDevice),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_device_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_device_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedDeviceType__doc__,
++	0L,0L,0L,0L
++};
++
++static PyObject * py_ped_device_open (PyPedDevice * s, PyObject * args);
++static PyObject * py_ped_device_close (PyPedDevice * s, PyObject * args);
++static PyObject * py_ped_device_sync (PyPedDevice * s, PyObject * args);
++static PyObject * py_ped_disk_open (PyPedDevice * s, PyObject * args);
++
++static struct PyMethodDef PyPedDeviceMethods[] = {
++	{ "open", (PyCFunction) py_ped_device_open, METH_VARARGS, NULL },
++	{ "close", (PyCFunction) py_ped_device_close, METH_VARARGS, NULL },
++	{ "sync", (PyCFunction) py_ped_device_sync, METH_VARARGS, NULL },
++	{ "disk_open", (PyCFunction) py_ped_disk_open, METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++/* device implementation */
++
++PyPedDevice * py_ped_device_new (PedDevice *dev)
++{
++        PyPedDevice *d;
++    
++        d = (PyPedDevice *) PyObject_NEW(PyObject, &PyPedDeviceType);
++        d->dev = dev;
++        return d;
++}
++
++static void
++py_ped_device_dealloc (PyPedDevice * s)
++{
++        /* s->dev will be destroyed if ped_device_free_all() is called */
++        /*      ped_device_destroy (s->dev); */
++        PyMem_DEL(s);
++}
++
++static PyObject *
++py_ped_device_getattr (PyPedDevice * d, char * name)
++{
++        if (!strcmp (name, "length"))
++                return PyLong_FromLongLong (d->dev->length);
++        else if (!strcmp (name, "model"))
++                return PyString_FromString (d->dev->model);
++        else if (!strcmp (name, "path"))
++                return PyString_FromString (d->dev->path);
++        else if (!strcmp (name, "sector_size"))
++                return PyInt_FromLong (d->dev->sector_size);
++        else if (!strcmp (name, "type"))
++                return PyInt_FromLong (d->dev->type);
++        return Py_FindMethod (PyPedDeviceMethods, (PyObject *) d, name);
++}
++
++static PyObject *
++py_ped_device_open (PyPedDevice * s, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_device_open (s->dev)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_device_close (PyPedDevice * s, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_device_close (s->dev)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++    
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_device_sync (PyPedDevice * s, PyObject * args)
++{
++        py_ped_exception_string_clear ();        
++        if (!ped_device_sync (s->dev)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_open (PyPedDevice * self, PyObject * args)
++{
++        PyPedDevice *dev;
++        PyPedDisk *d;
++        PedDisk *disk;
++
++        py_ped_exception_string_clear ();    
++        if ((disk = ped_disk_open (self->dev)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        d = (PyPedDisk *) PyObject_NEW(PyObject, &PyPedDiskType);
++        d->disk = disk;
++        return (PyObject *) d;
++}
++
+diff -urP parted-1.4.14.orig/python/pydevice.h parted-1.4.14/python/pydevice.h
+--- parted-1.4.14.orig/python/pydevice.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pydevice.h	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,33 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PYDEVICE_H_INCLUDED
++#define PYDEVICE_H_INCLUDED
++
++#include <Python.h>
++
++#include "parted/device.h"
++
++extern PyTypeObject PyPedDeviceType;
++typedef struct _PyPedDevice PyPedDevice;
++
++struct _PyPedDevice {
++        PyObject_HEAD;
++        PedDevice *dev;
++};
++
++PyPedDevice * py_ped_device_new (PedDevice *dev);
++
++#endif /* PYDEVICE_H_INCLUDED */
++
+diff -urP parted-1.4.14.orig/python/pydisk.c parted-1.4.14/python/pydisk.c
+--- parted-1.4.14.orig/python/pydisk.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pydisk.c	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,631 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#include "partedmodule.h"
++#include "pydisk.h"
++#include "pydevice.h"
++#include "pygeometry.h"
++#include "pyfilesystem.h"
++#include "pyconstraint.h"
++
++/* disk python object */
++static void py_ped_disk_dealloc (PyPedDisk * d);
++static PyObject * py_ped_disk_getattr (PyPedDisk * d, char * name);
++
++static char PyPedDiskType__doc__[] = "This is the PartEd disk object";
++PyTypeObject PyPedDiskType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedDisk",			/* tp_name */
++	sizeof(PyPedDisk),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_disk_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_disk_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedDiskType__doc__,
++	0L,0L,0L,0L
++};
++
++static PyObject * py_ped_disk_next_partition (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_write (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_read (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_delete_partition (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_delete_all (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_add_partition (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_disk_get_partition (PyPedDisk * d, PyObject * args);
++static PyObject * py_ped_constraint_any (PyPedDisk * self, PyObject * args);
++static PyObject * py_ped_geometry_new (PyPedDisk * self, PyObject * args);
++static PyObject * py_ped_partition_new (PyPedDisk * self, PyObject * args);
++static PyObject * py_ped_disk_minimize_extended_partition (PyPedDisk * self, PyObject * args);
++static PyObject * py_ped_disk_maximize_partition (PyPedDisk * self, PyObject * args);
++static PyObject * py_ped_disk_is_busy (PyPedDisk * d, PyObject * args);
++
++static struct PyMethodDef PyPedDiskMethods[] = {
++	{ "next_partition", (PyCFunction) py_ped_disk_next_partition, METH_VARARGS, NULL },
++        { "read", (PyCFunction) py_ped_disk_read, METH_VARARGS, NULL },
++        { "write", (PyCFunction) py_ped_disk_write, METH_VARARGS, NULL },
++	{ "delete_partition", (PyCFunction) py_ped_disk_delete_partition, METH_VARARGS, NULL },
++	{ "delete_all", (PyCFunction) py_ped_disk_delete_all, METH_VARARGS, NULL },
++	{ "add_partition", (PyCFunction) py_ped_disk_add_partition, METH_VARARGS, NULL },
++	{ "get_partition", (PyCFunction) py_ped_disk_get_partition, METH_VARARGS, NULL },
++        { "constraint_any", (PyCFunction) py_ped_constraint_any, METH_VARARGS, NULL },
++        { "geometry_new", (PyCFunction) py_ped_geometry_new, METH_VARARGS, NULL },
++        { "partition_new", (PyCFunction) py_ped_partition_new, METH_VARARGS, NULL },
++        { "minimize_extended_partition", (PyCFunction) py_ped_disk_minimize_extended_partition, METH_VARARGS, NULL },
++        { "maximize_partition", (PyCFunction) py_ped_disk_maximize_partition, METH_VARARGS, NULL },
++        { "is_busy", (PyCFunction) py_ped_disk_is_busy, METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++/* partition python object */
++
++static void py_ped_partition_dealloc (PyPedPartition * p);
++static PyObject * py_ped_partition_getattr (PyPedPartition * p, char * name);
++
++static char PyPedPartitionType__doc__[] = "This is the PartEd partition object";
++PyTypeObject PyPedPartitionType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedPartition",			/* tp_name */
++	sizeof(PyPedPartition),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_partition_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_partition_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedPartitionType__doc__,
++	0L,0L,0L,0L
++};
++
++static PyObject * py_ped_partition_is_flag_available (PyPedPartition *p, PyObject * args);
++static PyObject * py_ped_partition_set_flag (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_get_flag (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_is_active (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_set_system (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_set_name (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_get_name (PyPedPartition * self, PyObject * args);
++static PyObject * py_ped_partition_is_busy (PyPedPartition * self, PyObject * args);
++
++static struct PyMethodDef PyPedPartitionMethods[] = {
++        { "is_flag_available", (PyCFunction) py_ped_partition_is_flag_available, METH_VARARGS, NULL },
++        { "get_flag", (PyCFunction) py_ped_partition_get_flag, METH_VARARGS, NULL },
++        { "set_flag", (PyCFunction) py_ped_partition_set_flag, METH_VARARGS, NULL },
++        { "is_active", (PyCFunction) py_ped_partition_is_active, METH_VARARGS, NULL },
++        { "set_system", (PyCFunction) py_ped_partition_set_system, METH_VARARGS, NULL },
++        { "set_name", (PyCFunction) py_ped_partition_set_name, METH_VARARGS, NULL },
++        { "get_name", (PyCFunction) py_ped_partition_get_name, METH_VARARGS, NULL },
++        { "is_busy", (PyCFunction) py_ped_partition_is_busy, METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++/* disk implementation */
++
++static void
++py_ped_disk_dealloc (PyPedDisk * d)
++{
++        ped_disk_close (d->disk);
++        PyMem_DEL(d);
++}
++
++static PyObject *
++py_ped_disk_getattr (PyPedDisk * d, char * name)
++{
++        if (!strcmp (name, "dev"))
++                return (PyObject *) py_ped_device_new (d->disk->dev);
++        if (!strcmp (name, "max_primary_partition_count")) {
++                int num;
++
++                py_ped_exception_string_clear ();
++                num = ped_disk_get_max_primary_partition_count (d->disk);
++                if (num == 0) {
++                        py_ped_set_error_from_ped_exception ();
++                        return NULL;
++                }
++                return PyInt_FromLong (num);
++        }
++        if (!strcmp (name, "extended_partition")) {
++                PedPartition *ppart;
++
++                py_ped_exception_string_clear ();
++                ppart = ped_disk_extended_partition (d->disk);
++                if (ppart != NULL)
++                        return (PyObject *) py_ped_partition_obj_new (ppart, d, 1);
++
++                if (py_ped_exception_string_check ()) {
++                        py_ped_set_error_from_ped_exception ();
++                        return NULL;
++                }
++                Py_INCREF(Py_None);
++                return Py_None;
++        }
++
++        return Py_FindMethod (PyPedDiskMethods, (PyObject *) d, name);
++}
++
++static PyObject *
++py_ped_disk_next_partition (PyPedDisk * d, PyObject * args)
++{
++        PyPedPartition *part = NULL;
++        PedPartition *ppart;
++    
++        if (!PyArg_ParseTuple(args, "|O!", &PyPedPartitionType, &part)) {
++                PyErr_SetString(PyExc_TypeError,
++                                "optional parameter must be a PedPartition");
++                return NULL;
++        }
++    
++        ppart = ped_disk_next_partition (d->disk, part ? part->part : NULL);
++        if (ppart != NULL)
++                return (PyObject *) py_ped_partition_obj_new (ppart, d, 1);
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_read (PyPedDisk * d, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_disk_write (d->disk)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_write (PyPedDisk * d, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_disk_write (d->disk)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_delete_partition (PyPedDisk * d, PyObject * args)
++{
++        PyPedPartition *part;
++        
++        if (!PyArg_ParseTuple(args, "O!", &PyPedPartitionType, &part)) {
++                PyErr_SetString(PyExc_TypeError, "PedPartition expected");
++                return NULL;
++        }
++
++        py_ped_exception_string_clear ();
++        if (!ped_disk_delete_partition (d->disk, part->part)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        /* the partition structure is freed as part of the
++           delete_partition call.  Protect from the double free
++           by marking it borrowed */
++        part->borrowed = 1;
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++
++static PyObject *
++py_ped_disk_delete_all (PyPedDisk * d, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_disk_delete_all (d->disk)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_add_partition (PyPedDisk * d, PyObject * args)
++{
++        PyPedPartition *part;
++        PyPedConstraint *constraint;
++
++        if (!PyArg_ParseTuple(args, "O!O!", &PyPedPartitionType, &part,
++                              &PyPedConstraintType, &constraint)) {
++                PyErr_SetString(PyExc_TypeError, "bad argument");
++                return NULL;
++        }
++
++        py_ped_exception_string_clear ();
++        if (!ped_disk_add_partition (d->disk, part->part,
++                                     constraint->constraint)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        /* the disk takes ownership of the data in this partition
++           when added, protect from double free */
++        part->borrowed = 1;
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_get_partition_by_sector (PyPedDisk * d, PyObject * args)
++{
++        PedPartition *part;
++        PedSector sect;
++        
++        if (!PyArg_ParseTuple(args, "L", &sect))
++                return NULL;
++
++        if ((part = ped_disk_get_partition_by_sector (d->disk, sect)) == NULL) {
++                PyErr_SetString(PyPartedError, "partition not found");
++                return NULL;
++        }
++        
++        return (PyObject *) py_ped_partition_obj_new (part, d, 1);
++}
++
++static PyObject *
++py_ped_disk_get_partition (PyPedDisk * d, PyObject * args)
++{
++        PedPartition *part;
++        int num;
++        
++        if (!PyArg_ParseTuple(args, "i", &num))
++                return NULL;
++
++        if ((part = ped_disk_get_partition (d->disk, num)) == NULL) {
++                PyErr_SetString(PyPartedError, "partition not found");
++                return NULL;
++        }
++        
++        return (PyObject *) py_ped_partition_obj_new (part, d, 1);
++}
++
++static PyObject *
++py_ped_partition_new (PyPedDisk * self, PyObject * args)
++{
++        PyPedFileSystemTypeObj *fs_type;
++        PedSector start, end;
++        PedPartition *part;
++        PedPartitionType type;
++        PyPedPartition *pypart;
++
++        if (!PyArg_ParseTuple(args, "iO!LL",
++                              &type,
++                              &PyPedFileSystemTypeType, &fs_type,
++                              &start, &end)) {
++                return NULL;
++        }
++
++        py_ped_exception_string_clear ();
++        part = ped_partition_new (self->disk, type, fs_type->fs_type,
++                                  start, end);
++        if (part == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        pypart = py_ped_partition_obj_new (part, self, 0);
++
++        return (PyObject *) pypart;
++}
++
++static PyObject *
++py_ped_constraint_any (PyPedDisk * self, PyObject * args)
++{
++        PyPedDisk *disk;
++        PedConstraint *constraint;
++        PyPedConstraint *pyconstraint;
++        
++        py_ped_exception_string_clear ();
++        constraint = ped_constraint_any (self->disk);
++        if (constraint == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        pyconstraint = py_ped_constraint_obj_new (constraint, self, 0);
++
++        return (PyObject *) pyconstraint;
++}
++
++static PyObject *
++py_ped_geometry_new (PyPedDisk * self, PyObject * args)
++{
++        PedSector start, length;
++        PedGeometry *geom;
++        PyPedGeometry *pygeom;
++
++        if (!PyArg_ParseTuple(args, "LL", &start, &length)) {
++                return NULL;
++        }
++
++        py_ped_exception_string_clear ();
++        geom = ped_geometry_new (self->disk, start, length);
++        if (geom == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        pygeom = py_ped_geometry_obj_new (geom, self, 0);
++        pygeom->disk = self;
++        Py_INCREF (self);
++
++        return (PyObject *) pygeom;
++}
++
++static PyObject *
++py_ped_disk_minimize_extended_partition (PyPedDisk * self, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_disk_minimize_extended_partition (self->disk)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        Py_INCREF(Py_None);
++        return Py_None;
++        
++}
++
++static PyObject *
++py_ped_disk_maximize_partition (PyPedDisk * self, PyObject * args)
++{
++        PyPedPartition *part;
++        PyPedConstraint *constraint;
++
++        if (!PyArg_ParseTuple(args, "O!O!", &PyPedPartitionType, &part,
++                              &PyPedConstraintType, &constraint)) {
++                return NULL;
++        }
++
++        py_ped_exception_string_clear ();
++        if (!ped_disk_maximize_partition (self->disk, part->part,
++                                          constraint->constraint)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_disk_is_busy (PyPedDisk *d, PyObject * args)
++{
++        int state;
++        
++        py_ped_exception_string_clear ();
++        state = ped_disk_is_busy (d->disk);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyInt_FromLong (state);
++}
++
++/* partition implementation */
++
++PyPedPartition *
++py_ped_partition_obj_new (PedPartition *part, PyPedDisk *disk, int borrowed)
++{
++        PyPedPartition *p;
++    
++        p = (PyPedPartition *) PyObject_NEW(PyObject, &PyPedPartitionType);
++        p->part = part;
++        p->borrowed = borrowed;
++        p->disk = disk;
++        Py_INCREF (disk);
++
++        return p;
++}
++
++static void
++py_ped_partition_dealloc (PyPedPartition * p)
++{
++        if (!p->borrowed)
++                ped_partition_destroy (p->part);
++        Py_XDECREF (p->disk);
++        PyMem_DEL(p);
++}
++
++static PyObject *
++py_ped_partition_getattr (PyPedPartition * p, char * name)
++{
++        if (!strcmp (name, "num"))
++                return PyInt_FromLong (p->part->num);
++        if (!strcmp (name, "type"))
++                return PyInt_FromLong (p->part->type);
++        if (!strcmp (name, "type_name"))
++                return PyString_FromString (
++                        ped_partition_type_get_name (p->part->type));
++        if (!strcmp (name, "geom"))
++                return (PyObject *) py_ped_geometry_obj_new (&p->part->geom, p->disk, 1);
++        if (!strcmp (name, "fs_type")) {
++                if (p->part->fs_type)
++                        return (PyObject *)
++                                py_ped_file_system_type_obj_new (p->part->fs_type);
++                Py_INCREF(Py_None);
++                return Py_None;
++        }
++        return Py_FindMethod (PyPedPartitionMethods, (PyObject *) p, name);
++}
++
++static PyObject *
++py_ped_partition_is_flag_available (PyPedPartition *p, PyObject * args)
++{
++        int av, flag;
++        
++        if (!PyArg_ParseTuple(args, "i", &flag))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        av = ped_partition_is_flag_available (p->part, flag);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyInt_FromLong (av);
++}
++
++static PyObject *
++py_ped_partition_set_flag (PyPedPartition *p, PyObject * args)
++{
++        int flag, state;
++        
++        if (!PyArg_ParseTuple(args, "ii", &flag, &state))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if (!ped_partition_set_flag (p->part, flag, state)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_partition_get_flag (PyPedPartition *p, PyObject * args)
++{
++        int flag, state;
++        
++        if (!PyArg_ParseTuple(args, "i", &flag))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        state = ped_partition_get_flag (p->part, flag);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyInt_FromLong (state);
++}
++
++
++static PyObject *
++py_ped_partition_is_active (PyPedPartition *p, PyObject * args)
++{
++        int state;
++        
++        py_ped_exception_string_clear ();
++        state = ped_partition_is_active (p->part);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyInt_FromLong (state);
++}
++
++static PyObject *
++py_ped_partition_set_system (PyPedPartition *p, PyObject * args)
++{
++        PyPedFileSystemTypeObj *fs_type;
++
++        if (!PyArg_ParseTuple(args, "O!",
++                              &PyPedFileSystemTypeType, &fs_type))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if (!ped_partition_set_system (p->part, fs_type->fs_type)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++
++static PyObject *
++py_ped_partition_set_name (PyPedPartition *p, PyObject * args)
++{
++        char *name;
++
++        if (!PyArg_ParseTuple(args, "s", &name))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if (!ped_partition_set_name (p->part, name)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_partition_get_name (PyPedPartition *p, PyObject * args)
++{
++        const char *name;
++        
++        py_ped_exception_string_clear ();
++        if ((name = ped_partition_get_name (p->part)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyString_FromString (name);
++}
++
++
++static PyObject *
++py_ped_partition_is_busy (PyPedPartition *p, PyObject * args)
++{
++        int state;
++        
++        py_ped_exception_string_clear ();
++        state = ped_partition_is_busy (p->part);
++        if (py_ped_exception_string_check ()) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return PyInt_FromLong (state);
++}
+diff -urP parted-1.4.14.orig/python/pydisk.h parted-1.4.14/python/pydisk.h
+--- parted-1.4.14.orig/python/pydisk.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pydisk.h	Wed Aug  1 19:26:25 2001
+@@ -0,0 +1,45 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PYDISK_H_INCLUDED
++#define PYDISK_H_INCLUDED
++
++#include <Python.h>
++
++#include "parted/disk.h"
++
++typedef struct _PyPedDisk PyPedDisk;
++
++struct _PyPedDisk {
++        PyObject_HEAD;
++        PedDisk *disk;
++};
++
++extern PyTypeObject PyPedDiskType;
++
++typedef struct _PyPedPartition PyPedPartition;
++
++struct _PyPedPartition {
++        PyObject_HEAD;
++        PedPartition *part;
++        PyPedDisk *disk;
++        int borrowed;
++};
++
++extern PyTypeObject PyPedPartitionType;
++
++extern PyPedPartition * py_ped_partition_obj_new (PedPartition *part, PyPedDisk *disk,
++                                                  int borrowed);
++
++#endif /* PYDISK_H_INCLUDED */
+diff -urP parted-1.4.14.orig/python/pyexception.c parted-1.4.14/python/pyexception.c
+--- parted-1.4.14.orig/python/pyexception.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyexception.c	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,78 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#include "pyexception.h"
++
++static void py_ped_exception_dealloc (PyPedException * s);
++static PyObject * py_ped_exception_getattr (PyPedException * s, char * name);
++
++static char PyPedExceptionType__doc__[] = "This is the PartEd exception object";
++PyTypeObject PyPedExceptionType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedException",			/* tp_name */
++	sizeof(PyPedException),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_exception_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_exception_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/*tp_hash*/
++	0,                		/*tp_call*/
++	0,                    		/*tp_str*/
++	0,				/*tp_getattro*/
++	0,				/*tp_setattro*/
++	0,				/*tp_as_buffer*/
++	0L,	       			/*tp_flags*/
++	PyPedExceptionType__doc__,
++	0L,0L,0L,0L
++};
++
++
++/* exception implementation */
++
++static void
++py_ped_exception_dealloc (PyPedException * s)
++{
++        PyMem_DEL(s);
++}
++
++static PyObject *
++py_ped_exception_getattr (PyPedException * e, char * name)
++{
++        if (!strcmp (name, "message"))
++                return PyString_FromString (e->ex->message);
++        else if (!strcmp (name, "type"))
++                return PyInt_FromLong (e->ex->type);
++        else if (!strcmp (name, "type_string"))
++                return PyString_FromString (ped_exception_get_type_string (e->ex->type));
++        else if (!strcmp (name, "options"))
++                return PyInt_FromLong (e->ex->options);
++        return NULL;
++}
++
++PyPedException *
++py_ped_exception_obj_new (PedException *ex)
++{
++        PyPedException *e;
++    
++        e = (PyPedException *) PyObject_NEW(PyObject, &PyPedExceptionType);
++        e->ex = ex;
++        return e;
++}
+diff -urP parted-1.4.14.orig/python/pyexception.h parted-1.4.14/python/pyexception.h
+--- parted-1.4.14.orig/python/pyexception.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyexception.h	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,35 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PYEXCEPTION_H_INCLUDED
++#define PYEXCEPTION_H_INCLUDED
++
++#include <Python.h>
++
++#include "parted/exception.h"
++
++extern PyTypeObject PyPedExceptionType;
++
++typedef struct _PyPedException PyPedException;
++
++struct _PyPedException {
++        PyObject_HEAD;
++        PedException *ex;
++};
++
++PyPedException *
++py_ped_exception_obj_new (PedException *ex);
++
++#endif /* PYEXCEPTION_H_INCLUDED */
++
+diff -urP parted-1.4.14.orig/python/pyfilesystem.c parted-1.4.14/python/pyfilesystem.c
+--- parted-1.4.14.orig/python/pyfilesystem.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyfilesystem.c	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,228 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#include "partedmodule.h"
++
++#include "pyfilesystem.h"
++#include "pyconstraint.h"
++#include "pygeometry.h"
++
++/* filesystem python object */
++
++static void py_ped_file_system_dealloc (PyPedFileSystem* fs);
++static PyObject * py_ped_file_system_getattr (PyPedFileSystem * fs, char * name);
++
++static char PyPedFileSystemType__doc__[] = "This is the PartEd filesystem object";
++PyTypeObject PyPedFileSystemType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedFileSystem",			/* tp_name */
++	sizeof(PyPedFileSystem),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_file_system_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_file_system_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedFileSystemType__doc__,
++	0L,0L,0L,0L
++};
++
++static PyObject * py_ped_file_system_check (PyPedFileSystem * fs, PyObject * args);
++static PyObject * py_ped_file_system_copy (PyPedFileSystem * fs, PyObject * args);
++static PyObject * py_ped_file_system_resize (PyPedFileSystem * fs, PyObject * args);
++static PyObject * py_ped_file_system_get_resize_constraint (PyPedFileSystem * fs, PyObject * args);
++
++static struct PyMethodDef PyPedFileSystemMethods[] = {
++	{ "check", (PyCFunction) py_ped_file_system_check, METH_VARARGS, NULL },
++	{ "copy", (PyCFunction) py_ped_file_system_copy, METH_VARARGS, NULL },
++	{ "resize", (PyCFunction) py_ped_file_system_resize, METH_VARARGS, NULL },
++	{ "get_resize_constraint", (PyCFunction) py_ped_file_system_get_resize_constraint, METH_VARARGS, NULL },
++	{ NULL, NULL, 0, NULL }	
++};
++
++
++/* file system type python object */
++
++static void py_ped_file_system_type_dealloc (PyPedFileSystemTypeObj* fst);
++static PyObject * py_ped_file_system_type_getattr (PyPedFileSystemTypeObj* fst, char * name);
++
++static char PyPedFileSystemTypeType__doc__[] = "This is the PartEd filesystem object";
++PyTypeObject PyPedFileSystemTypeType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedFileSystemType",			/* tp_name */
++	sizeof(PyPedFileSystemType),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_file_system_type_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_file_system_type_getattr, 	/* tp_getattr */
++	0,				/* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedFileSystemTypeType__doc__,
++	0L,0L,0L,0L
++};
++
++static struct PyMethodDef PyPedFileSystemTypeMethods[] = {
++	{ NULL, NULL, 0, NULL }	
++};
++
++/*
++ * filesystem implementation
++ */
++
++PyPedFileSystem *
++py_ped_file_system_obj_new (PedFileSystem *filesys,
++                            PyPedGeometry *geom)
++{
++        PyPedFileSystem *fs;
++    
++        fs = (PyPedFileSystem *) PyObject_NEW(PyObject, &PyPedFileSystemType);
++        fs->fs = filesys;
++        fs->geom = geom;
++        Py_INCREF (geom);
++        return fs;
++}
++
++static void
++py_ped_file_system_dealloc (PyPedFileSystem * fs)
++{
++        ped_file_system_close (fs->fs);
++        Py_XDECREF (fs->geom);
++        PyMem_DEL(fs);
++}
++
++static PyObject *
++py_ped_file_system_getattr (PyPedFileSystem * fs, char * name)
++{
++        if (!strcmp (name, "type"))
++                return PyString_FromString (fs->fs->type->name);
++        if (!strcmp (name, "geom"))
++                return (PyObject *) py_ped_geometry_obj_new (fs->fs->geom, fs->geom->disk, 1);
++        return Py_FindMethod (PyPedFileSystemMethods, (PyObject *) fs, name);
++}
++
++static PyObject *
++py_ped_file_system_check (PyPedFileSystem * fs, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_file_system_check (fs->fs)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_file_system_copy (PyPedFileSystem * fs, PyObject * args)
++{
++        PyPedGeometry *geom;
++
++        if (!PyArg_ParseTuple(args, "O!", &PyPedGeometryType, &geom))
++                return NULL;                
++
++        py_ped_exception_string_clear ();
++        if (!ped_file_system_copy (fs->fs, geom->geom)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_file_system_resize (PyPedFileSystem * fs, PyObject * args)
++{
++        PyPedGeometry *geom;
++
++        if (!PyArg_ParseTuple(args, "O!", &PyPedGeometryType, &geom))
++                return NULL;                
++
++        py_ped_exception_string_clear ();
++        if (!ped_file_system_resize (fs->fs, geom->geom)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_file_system_get_resize_constraint (PyPedFileSystem * fs, PyObject * args)
++{
++        PedConstraint *constraint;
++
++        py_ped_exception_string_clear ();
++        if ((constraint = ped_file_system_get_resize_constraint (fs->fs)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return (PyObject *) py_ped_constraint_obj_new (constraint, fs->geom->disk, 0);
++}
++
++/*
++ * file system type implementation
++ */
++
++
++PyPedFileSystemTypeObj *
++py_ped_file_system_type_obj_new (const PedFileSystemType *fs_type)
++{
++        PyPedFileSystemTypeObj *fst;
++    
++        fst = (PyPedFileSystemTypeObj *) PyObject_NEW(PyObject, &PyPedFileSystemTypeType);
++        fst->fs_type = fs_type;
++        return fst;
++}
++
++static void
++py_ped_file_system_type_dealloc (PyPedFileSystemTypeObj* fst)
++{
++        PyMem_DEL(fst);
++}
++
++static PyObject *
++py_ped_file_system_type_getattr (PyPedFileSystemTypeObj * fst, char * name)
++{
++        if (!strcmp (name, "name"))
++                return PyString_FromString (fst->fs_type->name);
++        return NULL;
++}
+diff -urP parted-1.4.14.orig/python/pyfilesystem.h parted-1.4.14/python/pyfilesystem.h
+--- parted-1.4.14.orig/python/pyfilesystem.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pyfilesystem.h	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,49 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PYFILESYSTEM_H_INCLUDED
++#define PYFILESYSTEM_H_INCLUDED
++
++#include <Python.h>
++#include "parted/disk.h"
++#include "pygeometry.h"
++
++typedef struct _PyPedFileSystem PyPedFileSystem;
++
++struct _PyPedFileSystem {
++        PyObject_HEAD;
++        PedFileSystem* fs;
++        PyPedGeometry *geom;
++};
++
++extern PyTypeObject PyPedFileSystemType;
++
++PyPedFileSystem *
++py_ped_file_system_obj_new (PedFileSystem* fs,
++                            PyPedGeometry *geom);
++
++typedef struct _PyPedFileSystemTypeObj PyPedFileSystemTypeObj;
++
++struct _PyPedFileSystemTypeObj {
++        PyObject_HEAD;
++        const PedFileSystemType* fs_type;
++};
++
++extern PyTypeObject PyPedFileSystemTypeType;
++
++PyPedFileSystemTypeObj*
++py_ped_file_system_type_obj_new (const PedFileSystemType* fs_type);
++
++#endif /* PYFILESYSTEM_H_INCLUDED */
++
+diff -urP parted-1.4.14.orig/python/pygeometry.c parted-1.4.14/python/pygeometry.c
+--- parted-1.4.14.orig/python/pygeometry.c	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pygeometry.c	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,245 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#include "partedmodule.h"
++#include "pygeometry.h"
++#include "pyfilesystem.h"
++
++static void py_ped_geometry_dealloc (PyPedGeometry * g);
++static PyObject * py_ped_geometry_getattr (PyPedGeometry * g, char * name);
++static int py_ped_geometry_setattr (PyPedGeometry * g, char * name, PyObject *value);
++
++static char PyPedGeometryType__doc__[] = "This is the PartEd geometry object";
++PyTypeObject PyPedGeometryType = {
++	PyObject_HEAD_INIT(&PyType_Type)
++	0,				/* ob_size */
++	"PedGeometry",			/* tp_name */
++	sizeof(PyPedGeometry),		/* tp_size */
++	0,				/* tp_itemsize */
++	(destructor) py_ped_geometry_dealloc, 	/* tp_dealloc */
++	0,				/* tp_print */
++	(getattrfunc) py_ped_geometry_getattr, 	/* tp_getattr */
++	(setattrfunc) py_ped_geometry_setattr,  /* tp_setattr */
++	0,				/* tp_compare */
++	0,				/* tp_repr */
++	0,				/* tp_as_number */
++	0,	 			/* tp_as_sequence */
++	0,				/* tp_as_mapping */
++	0,           			/* tp_hash */
++	0,                		/* tp_call */
++	0,                    		/* tp_str */
++	0,				/* tp_getattro */
++	0,				/* tp_setattro */
++	0,				/* tp_as_buffer */
++	0L,	       			/* tp_flags */
++	PyPedGeometryType__doc__,
++	0L,0L,0L,0L
++};
++
++/* geometry implementation */
++
++PyPedGeometry *
++py_ped_geometry_obj_new (PedGeometry* geom, PyPedDisk *disk, int borrowed)
++{
++        PyPedGeometry *g;
++    
++        g = (PyPedGeometry *) PyObject_NEW (PyObject, &PyPedGeometryType);
++        g->geom = geom;
++        g->borrowed = borrowed;
++        g->disk = disk;
++        Py_INCREF (disk);
++        return g;
++}
++
++static void
++py_ped_geometry_dealloc (PyPedGeometry * g)
++{
++        if (!g->borrowed)
++                ped_geometry_destroy (g->geom);
++        Py_XDECREF (g->disk);
++        PyMem_DEL(g);
++}
++
++static PyObject *
++py_ped_file_system_open (PyPedGeometry * self, PyObject * args)
++{
++        PedFileSystem *fs;
++        PyPedFileSystem *pyfs;
++
++        py_ped_exception_string_clear ();
++        if ((fs = ped_file_system_open (self->geom)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        pyfs = py_ped_file_system_obj_new (fs, self);
++        return (PyObject *) pyfs;
++}
++
++static PyObject *
++py_ped_file_system_probe (PyPedGeometry * self, PyObject * args)
++{
++        PedFileSystemType *fst;
++
++        py_ped_exception_string_clear ();
++        if ((fst = ped_file_system_probe (self->geom)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return (PyObject *) py_ped_file_system_type_obj_new (fst);
++}
++
++static PyObject *
++py_ped_file_system_create (PyPedGeometry * self, PyObject * args)
++{
++        PedFileSystem *fs;
++        PyPedFileSystemTypeObj *fs_type;
++        PyPedFileSystem *pyfs;
++
++        if (!PyArg_ParseTuple(args, "O!",
++                              &PyPedFileSystemTypeType, &fs_type))
++                return NULL;
++
++        py_ped_exception_string_clear ();
++        if ((fs = ped_file_system_create (self->geom, fs_type->fs_type)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        pyfs = py_ped_file_system_obj_new (fs, self);
++        return (PyObject *) pyfs;
++}
++
++
++static PyObject *
++py_ped_file_system_clobber (PyPedGeometry * self, PyObject * args)
++{
++        py_ped_exception_string_clear ();
++        if (!ped_file_system_clobber (self->geom)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_geometry_set_end (PyPedGeometry * self, PyObject * args)
++{
++        PedSector end;
++
++        if (!PyArg_ParseTuple(args, "L", &end))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if (!ped_geometry_set_end (self->geom, end)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++
++static PyObject *
++py_ped_geometry_set_start (PyPedGeometry * self, PyObject * args)
++{
++        PedSector start;
++
++        if (!PyArg_ParseTuple(args, "L", &start))
++                return NULL;
++        
++        py_ped_exception_string_clear ();
++        if (!ped_geometry_set_start (self->geom, start)) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++        
++        Py_INCREF(Py_None);
++        return Py_None;
++}
++
++static PyObject *
++py_ped_geometry_duplicate (PyPedGeometry * self, PyObject * args)
++{
++        PedGeometry *geom;
++
++        py_ped_exception_string_clear ();
++        if ((geom = ped_geometry_duplicate (self->geom)) == NULL) {
++                py_ped_set_error_from_ped_exception ();
++                return NULL;
++        }
++
++        return (PyObject *) py_ped_geometry_obj_new (geom, self->disk, 0);
++}
++
++static struct PyMethodDef PyPedGeometryMethods[] = {
++	{ "file_system_open",
++          (PyCFunction) py_ped_file_system_open, METH_VARARGS, NULL },
++        { "file_system_probe",
++          (PyCFunction) py_ped_file_system_probe, METH_VARARGS, NULL },
++        { "file_system_create",
++          (PyCFunction) py_ped_file_system_create, METH_VARARGS, NULL },
++        { "file_system_clobber",
++          (PyCFunction) py_ped_file_system_clobber, METH_VARARGS, NULL },
++        { "set_start",
++          (PyCFunction) py_ped_geometry_set_start, METH_VARARGS, NULL },
++        { "set_end",
++          (PyCFunction) py_ped_geometry_set_end, METH_VARARGS, NULL },
++        { "duplicate",
++          (PyCFunction) py_ped_geometry_duplicate, METH_VARARGS, NULL },
++
++	{ NULL, NULL, 0, NULL }	
++};
++
++static PyObject *
++py_ped_geometry_getattr (PyPedGeometry * g, char * name)
++{
++
++#define RETURN_GEOM_VALUE(var) 					\
++        if (!strcmp (name, #var)) 				\
++		return PyLong_FromLongLong (g->geom->var)
++
++        RETURN_GEOM_VALUE(start);
++        RETURN_GEOM_VALUE(end);
++        RETURN_GEOM_VALUE(length);
++
++        return Py_FindMethod (PyPedGeometryMethods, (PyObject *) g, name);
++}
++
++static int
++py_ped_geometry_setattr (PyPedGeometry * g, char * name, PyObject *value)
++{
++#define SET_GEOM_VALUE(var) 					\
++        if (!strcmp (name, #var)) {				\
++                if (!PyLong_Check (value)) { 			\
++                        PyErr_SetString(PyExc_TypeError,	\
++                                         "expected long long");	\
++                        return -1; 				\
++		}						\
++                g->geom->var = PyLong_AsLongLong (value);	\
++                return 0; 					\
++        }
++        SET_GEOM_VALUE(start);
++        SET_GEOM_VALUE(end);
++        SET_GEOM_VALUE(length);
++        
++        PyErr_SetString( PyExc_AttributeError, "unknown attribute" );
++        return -1;
++}
++
++
+diff -urP parted-1.4.14.orig/python/pygeometry.h parted-1.4.14/python/pygeometry.h
+--- parted-1.4.14.orig/python/pygeometry.h	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/pygeometry.h	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,37 @@
++/* -*- Mode: c; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
++ * Matt Wilson <msw@redhat.com>
++ *
++ * Copyright 2000 Red Hat, Inc.
++ *
++ * This software may be freely redistributed under the terms of the GNU
++ * library public license.
++ *
++ * You should have received a copy of the GNU Library Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ */
++
++#ifndef PYGEOMETRY_H_INCLUDED
++#define PYGEOMETRY_H_INCLUDED
++
++#include <Python.h>
++
++#include "pydisk.h"
++
++typedef struct _PyPedGeometry PyPedGeometry;
++
++struct _PyPedGeometry {
++        PyObject_HEAD;
++        PedGeometry* geom;
++        PyPedDisk *disk;
++        int borrowed;
++};
++
++extern PyTypeObject PyPedGeometryType;
++
++PyPedGeometry *
++py_ped_geometry_obj_new (PedGeometry* geom, PyPedDisk *disk, int borrowed);
++
++#endif /* PYGEOMETRY_H_INCLUDED */
++
+diff -urP parted-1.4.14.orig/python/test.py parted-1.4.14/python/test.py
+--- parted-1.4.14.orig/python/test.py	Wed Dec 31 19:00:00 1969
++++ parted-1.4.14/python/test.py	Wed Aug  1 19:26:26 2001
+@@ -0,0 +1,128 @@
++#!/usr/bin/env python
++
++import sys
++for dir in ('.', ''):
++    try:
++        sys.path.remove(dir)
++    except ValueError:
++        pass
++sys.path = [ ".libs" ] + sys.path
++
++import parted
++
++def get_flags (part):
++    string=""
++    if not part.is_active ():
++        return string
++    first=1
++    flag = parted.partition_flag_next (0)
++    while flag:
++        if part.get_flag (flag):
++            string = string + parted.partition_flag_get_name (flag)
++            if first:
++                first = 0
++            else:
++                string = string + ", "
++        flag = parted.partition_flag_next (flag)
++    return string
++
++def do_print (disk):
++    goodparts = { parted.PARTITION_PRIMARY : None,
++                  parted.PARTITION_EXTENDED : None,
++                  parted.PARTITION_LOGICAL : None,
++                  parted.PARTITION_FREESPACE : None }
++
++    print ("%s: %s length %ld, maximum "
++           "primary partitions: %d" % (disk.dev.path, disk.dev.model,
++                                       disk.dev.length, disk.max_primary_partition_count))
++
++    part = disk.next_partition()
++    if part:
++        print "Device    Type         Filesystem   Start      End        Length        Flags"
++        print "------    ----         ----------   -----      ---        ------        -----"
++    while part:
++        if goodparts.has_key(part.type):
++            device = ""
++            fs_type_name = ""
++            if part.num > 0:
++                device = "%s%d" % (disk.dev.path,
++                                   part.num)
++            if part.fs_type:
++                fs_type_name = part.fs_type.name
++            flags = get_flags (part)
++            print ("%-9s %-12s %-12s %-10ld %-10ld %-10ld %7s"
++                   % (device, part.type_name, fs_type_name,
++                      part.geom.start, part.geom.end, part.geom.length,
++                      flags))
++        part = disk.next_partition(part)
++    print
++
++def exception_handler(exception):
++    print "%s: %s" % (exception.type_string, exception.message)
++    return parted.EXCEPTION_UNHANDLED
++
++parted.exception_set_handler (exception_handler)
++dev = parted.device_get ('/tmp/fstest')
++disk = dev.disk_open ()
++
++do_print (disk)
++part = disk.get_partition (0)
++fst = part.geom.file_system_probe ()
++print "%s filesystem probed on device %s%d" % (fst.name,
++                                               disk.dev.path,
++                                               part.num)
++
++fs = part.geom.file_system_open ()
++fs.check()
++const = fs.get_resize_constraint()
++print "minimum size for this filesystem is %d sectors" % const.min_size
++print "start range from %d to %d" % (const.start_range.start, const.start_range.end)
++print "end range from %d to %d" % (const.end_range.start, const.end_range.end)
++
++new_end = fs.geom.duplicate()
++#new_end.set_end (const.min_size + 512)
++new_end.set_end (const.end_range.end)
++fs.resize (new_end)
++
++def foo():
++    disk.delete_all ()
++    do_print (disk)
++
++    fs_type = parted.file_system_type_get ("ext2")
++
++    sections = disk.dev.length / 4
++
++    # add a partition
++    newp = disk.partition_new (parted.PARTITION_PRIMARY,
++                               fs_type, 0L, sections - 1)
++    newp.set_flag (parted.PARTITION_RAID, 1)
++    constraint = disk.constraint_any ()
++    disk.add_partition (newp, constraint)
++    do_print (disk)
++
++    # add another...
++    newp = disk.partition_new (parted.PARTITION_PRIMARY,
++                               fs_type, sections, 2 * sections - 1)
++    newp.set_flag (parted.PARTITION_RAID, 1)
++    constraint = disk.constraint_any ()
++    disk.add_partition (newp, constraint)
++    do_print (disk)
++
++    # another
++    newp = disk.partition_new (parted.PARTITION_PRIMARY,
++                               fs_type, 2 * sections, 3 * sections - 1)
++    newp.set_flag (parted.PARTITION_RAID, 1)
++    constraint = disk.constraint_any ()
++    disk.add_partition (newp, constraint)
++    do_print (disk)
++
++    # another...
++    newp = disk.partition_new (parted.PARTITION_PRIMARY,
++                               fs_type, 3 * sections, 4 * sections - 1)
++    newp.set_flag (parted.PARTITION_RAID, 1)
++    constraint = disk.constraint_any ()
++    disk.add_partition (newp, constraint)
++    do_print (disk)
++
++    disk.write()
++

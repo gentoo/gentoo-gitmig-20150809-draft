@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.7-r1.ebuild,v 1.1 2001/07/28 15:49:20 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.7-r1.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
 
 A="${P}.tar.gz wget-new-percentage-1.7-20010606.diff"
 S=${WORKDIR}/${P}
@@ -43,15 +43,15 @@ src_compile() {
 }
 
 src_install() {   
-      
-    if [ "`use build`" ] || [ "`use bootcd`" ] ; then
-        dobin src/wget
-    else                      
-        try make prefix=${D}/usr sysconfdir=${D}/etc/wget \
+	
+	try make prefix=${D}/usr sysconfdir=${D}/etc/wget \
 		mandir=${D}/usr/share/man infodir=${D}/usr/share/info install
-	 	
-        dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO 
-        dodoc doc/sample.wgetrc
+	
+    if [ "`use build`" ] || [ "`use bootcd`" ] ; then
+        rm -rf ${D}/usr
+    else                      
+		dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO 
+		dodoc doc/sample.wgetrc
     fi
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r4.ebuild,v 1.1 2001/07/28 15:49:20 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.3-r4.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -49,7 +49,7 @@ src_compile() {
 		# If we build for the build system we use the kernel headers from the target
 		myconf="--with-header=${ROOT}usr/include"
 	fi
-	if [ "`use gd`" ] && [ -z "`use bootstrap`" ]
+	if [ "`use gd`" ] && [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 	then
 		myconf="${myconf} --with-gd=yes"
 	else

@@ -8,15 +8,3 @@
 import portage
 import sys
 
-digraph = portage.digraph()
-
-if len(sys.argv) != 2:
-	print 'usage: %s packagelist' % sys.argv[0]
-
-try:
-	packagelist = open(sys.argv[1], "r")
-except:
-	sys.stderr.write("could not open %s\n" % sys.argv[1])
-	sys.exit(1)
-
-packages = packagelist.readlines()

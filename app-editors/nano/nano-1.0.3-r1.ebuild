@@ -24,6 +24,6 @@ src_install () {
 	then
 		dodoc COPYING ChangeLog README
 	else
-		rm -rf ${D}/usr/share/{man,info}
+		rm -rf ${D}/usr/share
 	fi
 }

@@ -24,7 +24,7 @@ sys-kernel/linux-sources-vanilla
 app-admin/powertweak
 media-video/avi-xmms
 app-text/sgml2x
->=sys-apps/procps-2.0.7
+#>=sys-apps/procps-2.0.7
 
 # unfinished
 app-admin/va-systemimager-server

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.4.6-r4.ebuild,v 1.1 2001/07/28 15:49:20 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.4.6-r4.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -34,13 +34,13 @@ src_compile() {
 }
 
 src_install () {
-
-    if [ -z "`use build`" ] && [ -z "`use bootcd`" ] ; then
-        try make prefix=${D}/usr mandir=${D}/usr/share/man install
+	
+	try make prefix=${D}/usr mandir=${D}/usr/share/man install 
+	if [ -z "`use build`" ] && [ -z "`use bootcd`" ] ; then
         dodir /etc/rsync
         dodoc COPYING README
     else
-        dobin rsync
+        rm -rf ${D}/usr/share
     fi
 
 }

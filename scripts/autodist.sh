@@ -17,6 +17,8 @@ ISOROOT="${AUTODISTDIR}/isoroot"
 INITRDROOT="${AUTODISTDIR}/initrdroot"
 [ -z "${BUILDTARBALL}" ] && BUILDTARBALL="build-${TODAY}.tbz2"
 [ -z "${SYSTARBALL}" ] && SYSTARBALL="sys-${TODAY}.tbz2"
+# shouldn't allow CFLAGS to be overridden
+export CFLAGS="-O2 -mcpu=i486 -march=i486"
 
 [ -d "${DISTRODIR}" ] || mkdir -p "${DISTRODIR}"
 
@@ -25,6 +27,9 @@ INITRDROOT="${AUTODISTDIR}/initrdroot"
 [ -z "${SYS_PACKAGES}" ] && SYS_PACKAGES=`ls -1 ${PORTDIR}/files/sys-*.packages | sort | tail -1`
 [ -z "${KERNEL_SRC}" ] && KERNEL_SRC="/usr/src/`readlink /usr/src/linux`"
 [ -z "${KERNEL_VERSION}" ] && KERNEL_VERSION="`echo ${KERNEL_SRC} | sed 's,.*-\([0-9]\.[0-9]\.[0-9]\+\(-ac[0-9]\+\)\?\)$,\1,'`"
+export PORTDIR
+export DISTRODIR
+export AUTODISTDIR
  
 if grep -qs "${AUTODISTDIR}" /proc/mounts
 then
@@ -56,14 +61,25 @@ echo ">>> Cleaning up ${AUTODISTDIR}..."
 rm -rf ${AUTODISTDIR}
 
 echo ">>> Creating ISO directory tree..."
-mkdir -p
-mkdir -v ${ISOROOT}/{doc,gentoo{,/distfiles,/packages{,/All}},isolinux{,/kernels},stuff}
+mkdir -pv ${ISOROOT}/{doc,gentoo{,/distfiles,/packages{,/All}},isolinux{,/kernels},stuff}
 
-echo ">>> Building initrd..."
-mkdir -p "${INITRDROOT}"
+echo ">>> Building initrd packages..."
+mkdir -p ${INITRDROOT}
 ERRQUIT=yes CHECK=no USE=bootcd ROOT="${INITRDROOT}" STEPS="clean unpack compile install qmerge clean" ${PORTDIR}/scripts/autocompile.sh ${ISOINITRD_PACKAGES}
 if [ ${?} != 0 ]
 then
-    echo "Error building initrd, quitting"
+    echo "Error building initrd packages, quitting"
     exit 1
 fi
+echo ">>> Cleaning up ${INITRDROOT}/tmp"
+rm -rf ${INITRDROOT}/tmp/*
+
+echo ">>> Setting up initrd..."
+find ${INITRDROOT}/etc -name "*._cfg_*" exec rm -vf {} \;
+for dir in etc{,/rc.d{,/config,/init.d,/rc{1,2,3,4,5,boot,halt}}.d}
+do
+  cp -v ${PORTDIR}/files/isoinitrd/${dir}/* ${INITRDROOT}/${dir}
+done
+ROOT=${INITRDROOT} rc-update autogen boot force
+ROOT=${INITRDROOT} rc-update autogen normal force
+ROOT=${INITRDROOT} rc-update autogen halt force

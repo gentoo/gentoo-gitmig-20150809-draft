@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.3 2001/08/04 16:53:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r4.ebuild,v 1.4 2001/08/04 18:22:45 pete Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -61,19 +61,23 @@ src_install() {
 	#Now using a new securetty with devfs device names added
 	#(compat names kept for non-devfs compatibility)
 	doins ${FILESDIR}/securetty
-
-        cd pam.d
-        insinto /etc/pam.d
-        insopts -m0644
-        doins ${FILESDIR}/shadow
-        newins ${FILESDIR}/shadow groupadd
-        newins ${FILESDIR}/shadow useradd
-
- 	cd ${S}/doc
-	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
-	docinto txt
-	dodoc HOWTO LSM README.* *.txt
-
+	
+	cd pam.d
+	insinto /etc/pam.d
+	insopts -m0644
+	doins ${FILESDIR}/shadow
+	newins ${FILESDIR}/shadow groupadd
+	newins ${FILESDIR}/shadow useradd
+	
+	if [ -z "`use bootcd`" ]
+	then
+		cd ${S}/doc
+		dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
+		docinto txt
+		dodoc HOWTO LSM README.* *.txt
+	else
+		rm -rf ${D}/usr/share ${D}/usr/lib/lib*.{a,la}
+	fi
 }
 
 

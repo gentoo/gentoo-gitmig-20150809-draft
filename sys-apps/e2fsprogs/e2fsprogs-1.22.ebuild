@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.22.ebuild,v 1.1 2001/07/09 21:55:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.22.ebuild,v 1.2 2001/08/04 18:22:45 pete Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 filesystem utilities"
@@ -58,23 +58,28 @@ src_install() {
       cd po
       try make DESTDIR=${D} install
     fi
-        dodir /sbin
-        mv ${D}/usr/sbin/fsck* ${D}/sbin
-	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
-	docinto e2fsck
-	dodoc e2fsck/ChangeLog e2fsck/CHANGES
-	for i in e2p et ext2fs ss uuid
-	do
-	  docinto lib/${i}
-	  dodoc lib/${i}/ChangeLog
-	done
-	docinto misc
-	dodoc misc/ChangeLog
-	docinto resize
-	dodoc resize/ChangeLog
-	docinto util
-	dodoc util/ChangeLog
-
+	dodir /sbin
+	mv ${D}/usr/sbin/fsck* ${D}/sbin
+	
+	if [ -z "`use bootcd`" ]
+	then
+		dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
+		docinto e2fsck
+		dodoc e2fsck/ChangeLog e2fsck/CHANGES
+		for i in e2p et ext2fs ss uuid
+		  do
+		  docinto lib/${i}
+		  dodoc lib/${i}/ChangeLog
+		done
+		docinto misc
+		dodoc misc/ChangeLog
+		docinto resize
+		dodoc resize/ChangeLog
+		docinto util
+		dodoc util/ChangeLog
+	else
+		rm -rf ${D}/usr/lib/lib*.a ${D}/usr/share ${D}/usr/include
+	fi	
 }
 
 
