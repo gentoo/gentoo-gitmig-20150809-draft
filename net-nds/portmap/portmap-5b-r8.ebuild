@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.1 2003/12/26 23:50:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.2 2003/12/28 10:52:25 azarah Exp $
 
 inherit eutils
 
@@ -39,9 +39,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local WRAP_DIR="${ROOT}/usr/lib"
+
+	[ -f "${ROOT}/lib/libwrap.a" ] && WRAP_DIR="${ROOT}/lib"
+
 	make FACILITY=LOG_AUTH \
 		ZOMBIES='-DIGNORE_SIGCHLD' \
-		WRAP_DIR="${ROOT}/lib" \
+		WRAP_DIR="${WRAP_DIR}" \
 		LIBS="-Wl,-Bstatic -lwrap -lutil -Wl,-Bdynamic -lnsl" \
 		AUX= || die
 }
