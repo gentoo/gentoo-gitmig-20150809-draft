@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.110 2004/10/02 17:47:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.111 2004/10/04 05:40:01 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1460,4 +1460,55 @@ set_arch_to_kernel() {
 # set's ARCH back to what portage expects
 set_arch_to_portage() {
 	export ARCH="${EUTILS_ECLASS_PORTAGE_ARCH}"
+}
+
+# Jeremy Huddleston <eradicator@gentoo.org>:
+# preserve_old_lib /path/to/libblah.so.0
+# preserve_old_lib_notify /path/to/libblah.so.0
+#
+# These functions are useful when a lib in your package changes --soname.  Such
+# an example might be from libogg.so.0 to libogg.so.1.  Removing libogg.so.0
+# would break packages that link against it.  Most people get around this
+# by using the portage SLOT mechanism, but that is not always a relevant
+# solution, so instead you can add the following to your ebuilds:
+#
+# src_install() {
+# ...
+# preserve_old_lib /usr/$(get_libdir)/libogg.so.0
+# ...
+# }
+#
+# pkg_postinst() {
+# ...
+# preserve_old_lib_notify /usr/$(get_libdir)/libogg.so.0
+# ...
+# }
+
+preserve_old_lib() {
+	LIB=$1
+
+	if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
+		SONAME=`basename ${LIB}`
+		DIRNAME=`dirname ${LIB}`
+
+		dodir ${DIRNAME}
+		cp ${ROOT}${LIB} ${D}${DIRNAME}
+		touch ${D}${LIB}
+	fi
+}
+
+preserve_old_lib_notify() {
+        LIB=$1
+
+        if [ -n "${LIB}" -a -f "${ROOT}${LIB}" ]; then
+                SONAME=`basename ${LIB}`
+
+		einfo "An old version of an installed library was detected on your system."
+		einfo "In order to avoid breaking packages that link against is, this older version"
+		einfo "is not being removed.  In order to make full use of this newer version,"
+		einfo "you will need to execute the following command:"
+		einfo "  revdep-rebuild --soname ${SONAME}"
+		einfo
+		einfo "After doing that, you can safely remove ${LIB}"
+        fi
 }
