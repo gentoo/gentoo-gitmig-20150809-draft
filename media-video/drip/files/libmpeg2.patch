@@ -1,0 +1,109 @@
+diff -urN drip/encoder/mpeg2_internal.h drip-modified/encoder/mpeg2_internal.h
+--- drip/encoder/mpeg2_internal.h	2003-03-20 06:01:05.000000000 -0600
++++ drip-modified/encoder/mpeg2_internal.h	2003-07-02 11:32:28.000000000 -0500
+@@ -1,6 +1,6 @@
+ /*
+  * mpeg2_internal.h
+- * Copyright (C) 2000-2002 Michel Lespinasse <walken@zoy.org>
++ * Copyright (C) 2000-2003 Michel Lespinasse <walken@zoy.org>
+  * Copyright (C) 1999-2000 Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
+  *
+  * This file is part of mpeg2dec, a free MPEG-2 video stream decoder.
+@@ -54,7 +54,7 @@
+     int f_code[2];
+ } motion_t;
+ 
+-struct decoder_s {
++struct mpeg2_decoder_s {
+     /* first, state that carries information from one macroblock to the */
+     /* next inside a slice, and is never used outside of mpeg2_slice() */
+ 
+@@ -138,18 +138,18 @@
+ };
+ 
+ typedef struct {
+-    fbuf_t fbuf;
++    mpeg2_fbuf_t fbuf;
+ } fbuf_alloc_t;
+ 
+ struct mpeg2dec_s {
+-    decoder_t decoder;
++    mpeg2_decoder_t decoder;
+ 
+     mpeg2_info_t info;
+ 
+     uint32_t shift;
+     int is_display_initialized;
+-    int (* action) (struct mpeg2dec_s * mpeg2dec);
+-    int state;
++    mpeg2_state_t (* action) (struct mpeg2dec_s * mpeg2dec);
++    mpeg2_state_t state;
+     uint32_t ext_state;
+ 
+     /* allocated in init - gcc has problems allocating such big structures */
+@@ -172,11 +172,12 @@
+     uint8_t first_decode_slice;
+     uint8_t nb_decode_slices;
+ 
+-    sequence_t new_sequence;
+-    sequence_t sequence;
+-    picture_t pictures[4];
+-    picture_t * picture;
+-    /*const*/ fbuf_t * fbuf[3];	/* 0: current fbuf, 1-2: prediction fbufs */
++    mpeg2_sequence_t new_sequence;
++    mpeg2_sequence_t sequence;
++    mpeg2_gop_t gop;
++    mpeg2_picture_t pictures[4];
++    mpeg2_picture_t * picture;
++    /*const*/ mpeg2_fbuf_t * fbuf[3];	/* 0: current fbuf, 1-2: prediction fbufs */
+ 
+     fbuf_alloc_t fbuf_alloc[3];
+     int custom_fbuf;
+@@ -193,6 +194,10 @@
+     uint8_t * buf_end;
+ 
+     int16_t display_offset_x, display_offset_y;
++
++    int copy_matrix;
++    uint8_t intra_quantizer_matrix [64];
++    uint8_t non_intra_quantizer_matrix [64];
+ };
+ 
+ typedef struct {
+@@ -218,21 +223,21 @@
+ void mpeg2_cpu_state_init (uint32_t accel);
+ 
+ /* decode.c */
+-int mpeg2_seek_sequence (mpeg2dec_t * mpeg2dec);
+-int mpeg2_seek_header (mpeg2dec_t * mpeg2dec);
+-int mpeg2_parse_header (mpeg2dec_t * mpeg2dec);
++mpeg2_state_t mpeg2_seek_sequence (mpeg2dec_t * mpeg2dec);
++mpeg2_state_t mpeg2_parse_header (mpeg2dec_t * mpeg2dec);
+ 
+ /* header.c */
+ void mpeg2_header_state_init (mpeg2dec_t * mpeg2dec);
+ int mpeg2_header_sequence (mpeg2dec_t * mpeg2dec);
+ int mpeg2_header_gop (mpeg2dec_t * mpeg2dec);
+-int mpeg2_header_picture_start (mpeg2dec_t * mpeg2dec);
++mpeg2_state_t mpeg2_header_picture_start (mpeg2dec_t * mpeg2dec);
+ int mpeg2_header_picture (mpeg2dec_t * mpeg2dec);
+ int mpeg2_header_extension (mpeg2dec_t * mpeg2dec);
+ int mpeg2_header_user_data (mpeg2dec_t * mpeg2dec);
++void mpeg2_header_matrix_finalize (mpeg2dec_t * mpeg2dec);
+ void mpeg2_header_sequence_finalize (mpeg2dec_t * mpeg2dec);
+-int mpeg2_header_slice_start (mpeg2dec_t * mpeg2dec);
+-int mpeg2_header_end (mpeg2dec_t * mpeg2dec);
++mpeg2_state_t mpeg2_header_slice_start (mpeg2dec_t * mpeg2dec);
++mpeg2_state_t mpeg2_header_end (mpeg2dec_t * mpeg2dec);
+ void mpeg2_set_fbuf (mpeg2dec_t * mpeg2dec, int coding_type);
+ 
+ /* idct.c */
+@@ -268,7 +273,7 @@
+ void mpeg2_idct_copy_alpha (int16_t * block, uint8_t * dest, int stride);
+ void mpeg2_idct_add_alpha (int last, int16_t * block,
+ 			   uint8_t * dest, int stride);
+-void mpeg2_idct_alpha_init(int no_mvi);
++void mpeg2_idct_alpha_init (void);
+ 
+ /* motion_comp.c */
+ void mpeg2_mc_init (uint32_t accel);

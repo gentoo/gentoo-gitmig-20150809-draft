@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_alpha3.ebuild,v 1.3 2003/07/06 08:38:40 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_rc1.ebuild,v 1.1 2003/07/06 08:38:40 raker Exp $
 
 inherit eutils libtool
 
 MY_P="${P/_}"
-MY_P="${MY_P/alpha/cvs}"
-S="${WORKDIR}/${PN}"
+MY_P="${MY_P/rc1/-RC1}"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Drip - A DVD to DIVX convertor frontend"
 SRC_URI="http://drip.sourceforge.net/files/${MY_P}.tar.gz"
 HOMEPAGE="http://drip.sourceforge.net/"
@@ -43,7 +43,9 @@ src_unpack() {
 	cd ${S} ; epatch ${FILESDIR}/${PN}-0.8.1-fix-dvd-symlink.patch
 
 	# patch for changing types in >libmpeg-0.3.1
-	epatch ${FILESDIR}/libmpeg2.patch
+	if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
+		epatch ${FILESDIR}/libmpeg2.patch
+	fi
 
 	# Remove stale script ... "automake --add-missing" will add it again
 	einfo "Rerunnig autoconf/automake..."
