@@ -1,7 +1,5 @@
 MD5 2e9492850abce30bd74a69647573b637 ChangeLog 885
 MD5 acccd1acb570a42d36aa7add3a446559 gMOO-0.4.8-r1.ebuild 969
-MD5 97808720e28d97a197231a85b1ac5793 gMOO-0.4.8.ebuild 966
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 2026ce51ab6d2a9390d03cc4681bad86 files/digest-gMOO-0.4.8 62
 MD5 2026ce51ab6d2a9390d03cc4681bad86 files/digest-gMOO-0.4.8-r1 62
 MD5 0a3b114c5c7635cc2abf16eb6bbd0c99 files/gMOO.patch 673
