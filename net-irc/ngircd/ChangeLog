@@ -1,0 +1,7 @@
+# ChangeLog for net-irc/ngircd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.1 2004/04/19 21:43:27 zul Exp $
+
+  19 Apr 2004; Chuck Short <zul@gentoo.org> :
+  Initial version, ebuild written by me. Closes #47945.
+
