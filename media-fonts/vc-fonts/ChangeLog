@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/vc-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.1 2004/07/05 08:32:48 usata Exp $
+
+*vc-fonts-20020207 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +vc-fonts-20020207.ebuild:
+  Initial import. Ebuild submitted by Joost Hillen <neeneelaatmaar@gmx.net>,
+  closing bug #45170
+
