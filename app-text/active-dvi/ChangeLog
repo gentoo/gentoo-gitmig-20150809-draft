@@ -1,8 +1,11 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.1 2003/11/06 15:43:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.2 2003/11/06 19:47:51 usata Exp $
 
 *active-dvi-1.4.0 (06 Nov 2003)
+
+  07 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> active-dvi-1.4.0.ebuild:
+  RDEPENDs on kochi-substitute if cjk is enabled.
 
   06 Nov 2003; Mike Gardiner <obz@gentoo.org> active-dvi-1.4.0.ebuild,
   metadata.xml:

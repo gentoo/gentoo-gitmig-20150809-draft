@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.1 2003/11/06 15:43:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.2 2003/11/06 19:47:51 usata Exp $
 
 MY_PN=${PN/ctive-/}
 MY_P=${MY_PN}-${PV}
@@ -19,6 +19,8 @@ DEPEND=">=dev-lang/ocaml-3.04
 	>=dev-ml/camlimages-2.11
 	virtual/tetex
 	>=app-text/ghostscript-6.52"
+RDEPEND="${DEPEND}
+	cjk? ( media-fonts/kochi-substitute )"
 
 DOCS="README TODO"
 
@@ -53,6 +55,13 @@ src_unpack() {
 	# need to remove texhash, it'll cause problems with
 	# the sandbox if we try and run it during emerge
 	sed -i -e "s/texhash//" ${S}/Makefile
+
+	if [ -n "`use cjk`" ] ; then
+		local fp=/usr/X11R6/lib/X11/fonts/truetype
+		sed -i -e "s%msmincho.ttc%${fp}/kochi-mincho-subst.ttf%g" \
+			-e "s%msgothic.ttc%${fp}/kochi-gothic-subst.ttf%g" \
+			${S}/conf/jpfonts.conf
+	fi
 
 }
 
