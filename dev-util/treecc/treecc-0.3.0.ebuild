@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.0.ebuild,v 1.8 2004/06/26 14:54:08 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.0.ebuild,v 1.9 2004/07/25 12:32:34 scandium Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
 HOMEPAGE="http://www.southern-storm.com.au/treecc.html"
@@ -16,7 +16,7 @@ DEPEND=""
 
 src_compile() {
 	econf || die
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die
+	emake -j1 || die
 }
 
 src_install() {
