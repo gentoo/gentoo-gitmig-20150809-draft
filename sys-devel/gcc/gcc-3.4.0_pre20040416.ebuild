@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0_pre20040416.ebuild,v 1.4 2004/04/21 14:35:03 aliz Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj hardened"
 
