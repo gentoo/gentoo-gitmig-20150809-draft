@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-osicat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-osicat/ChangeLog,v 1.6 2004/06/24 23:48:48 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-osicat/ChangeLog,v 1.7 2005/03/22 15:32:53 mkennedy Exp $
+
+  22 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-osicat-0.4.0.ebuild:
+  Keywording for ~amd64
 
 *cl-osicat-0.3.7 (09 May 2004)
 

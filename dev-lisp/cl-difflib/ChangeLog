@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-difflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-difflib/ChangeLog,v 1.1 2005/03/20 23:48:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-difflib/ChangeLog,v 1.2 2005/03/22 15:30:50 mkennedy Exp $
+
+  22 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-difflib-0.1.ebuild:
+  Keywording for ~amd64
 
 *cl-difflib-0.1 (20 Mar 2005)
 
