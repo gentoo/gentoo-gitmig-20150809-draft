@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linuxfromscratch-text
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.6 2004/04/18 01:59:14 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.7 2004/06/07 01:00:27 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  linuxfromscratch-text-3.3.ebuild, linuxfromscratch-text-4.0.ebuild:
+  QA - IUSE fix
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org>
   linuxfromscratch-text-4.0.ebuild:

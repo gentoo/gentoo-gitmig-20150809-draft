@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/linuxfromscratch-html
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.8 2004/04/18 02:00:21 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/ChangeLog,v 1.9 2004/06/07 00:59:25 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  linuxfromscratch-html-3.3.ebuild, linuxfromscratch-html-4.0.ebuild:
+  QA - IUSE fix
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org>
   linuxfromscratch-html-4.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/gimp-user-manual-2.0.ebuild,v 1.16 2004/05/06 21:25:05 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-user-manual/gimp-user-manual-2.0.ebuild,v 1.17 2004/06/07 00:51:53 dragonheart Exp $
 
 S=${WORKDIR}
 DESCRIPTION="A user manual for GIMP"
@@ -13,6 +13,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="OPL"
+IUSE=""
 KEYWORDS="x86 ppc sparc amd64"
 
 src_compile() {

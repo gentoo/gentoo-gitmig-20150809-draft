@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/howto-html
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.10 2004/03/18 03:55:45 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.11 2004/06/07 00:53:40 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  howto-html-20040317.ebuild:
+  QA - IUSE fix
 
 *howto-html-20040317 (17 Mar 2004)
 
