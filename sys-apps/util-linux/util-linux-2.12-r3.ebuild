@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r3.ebuild,v 1.1 2003/12/08 11:52:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r3.ebuild,v 1.2 2003/12/11 21:53:03 vapier Exp $
 
 IUSE="crypt nls static pam selinux"
 
@@ -79,6 +79,9 @@ src_unpack() {
 	# independent code so we can link our elf executables as shared
 	# objects. "prelink" should now also be able to take advantage
 	epatch ${FILESDIR}/${PN}-2.11z-pic.patch
+
+	# allow util-linux to compile with 2.6.x headers #31286
+	epatch ${FILESDIR}/${P}-kernel-2.6.patch
 
 	#enable pam only if we use it
 	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG
