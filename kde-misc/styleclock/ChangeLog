@@ -1,0 +1,7 @@
+# ChangeLog for kde-misc/styleclock
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.1 2005/01/15 17:24:10 centic Exp $
+
+  10 Jan 2005; Dominik Stadler <centic@gentoo.org> :
+  New package, fixes Bug 68297
+
