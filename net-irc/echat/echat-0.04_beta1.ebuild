@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.1 2004/03/06 13:40:09 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.2 2004/04/15 23:18:44 randy Exp $
 
 DESCRIPTION="Console vypress chat clone for *nix like systems."
 HOMEPAGE="http://deep.perm.ru/echat/"
@@ -8,7 +8,7 @@ SRC_URI="http://files.akl.lt/~x11/${P}.tar.gz
 	    http://gsk.vtu.lt:8080/~arturaz/soft/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~s390"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
