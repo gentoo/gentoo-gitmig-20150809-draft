@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.50 2004/05/12 13:26:01 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.51 2004/06/02 04:37:38 lv Exp $
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> pam-0.77-r1.ebuild:
+  stable on amd64
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> pam-0.75-r11.ebuild:
   changed hardened-gcc logic to use flag logic
