@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.7 2002/10/17 16:22:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.0.11-r3.ebuild,v 1.8 2002/12/09 12:02:53 jmorgan Exp $
 
 IUSE="opengl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fltk.org"
 
 SLOT="1.0"
 LICENSE="FLTK | GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11 
 	opengl? ( virtual/opengl )"
