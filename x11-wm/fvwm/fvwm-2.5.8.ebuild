@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.9 2003/11/11 12:01:42 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.10 2003/11/11 21:26:50 taviso Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug gtk2"
+IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama perl nls png bidi imlib tcltk debug gtk2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -130,13 +130,6 @@ src_compile() {
 		myconf="${myconf} --enable-xinerama"
 	else
 		myconf="${myconf} --disable-xinerama"
-	fi
-
-	# multibyte character support, chinese/japanese/korean/etc.
-	if use cjk; then
-		myconf="${myconf} --enable-multibyte"
-	else
-		myconf="${myconf} --disable-multibyte"
 	fi
 
 	# bidirectional writing support, eg hebrew
