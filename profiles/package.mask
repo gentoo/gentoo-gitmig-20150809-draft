@@ -23,6 +23,10 @@
 ##
 
 # <aliz@gentoo.org> 24 Jul 2002
+# needs some testing first
+=app-text/aspell-0.33.7.1-r2
+
+# <aliz@gentoo.org> 24 Jul 2002
 # masked for testing
 =sys-apps/groff-1.18
 
