@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.9-r1.ebuild,v 1.1 2004/06/16 18:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-0.9-r1.ebuild,v 1.2 2004/06/16 22:32:11 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -9,7 +9,11 @@ IUSE="gnome"
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/firefox
 DESCRIPTION="The Mozilla Firefox Web Browser"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/firefox-${PV}-i686-linux-gtk2+xft.tar.gz"
+# Mirrors have it in one of the following places, depending on what
+# mirror you check and when you check it... :-(
+SRC_URI="
+	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/firefox-${PV}-i686-linux-gtk2+xft.tar.gz
+	http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-${PV}-i686-linux-gtk2+xft.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/firefox"
 RESTRICT="nostrip"
 

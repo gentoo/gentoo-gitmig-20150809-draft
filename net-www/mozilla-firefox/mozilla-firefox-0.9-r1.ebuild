@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.2 2004/06/16 19:15:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.3 2004/06/16 22:30:39 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -8,7 +8,11 @@ S=${WORKDIR}/mozilla
 
 DESCRIPTION="The Mozilla Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
-SRC_URI="http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-${PV}-source.tar.bz2"
+# Mirrors have it in one of the following places, depending on what
+# mirror you check and when you check it... :-(
+SRC_URI="
+	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/firefox-${PV}-source.tar.bz2
+	http://ftp.mozilla.org/pub/firefox/releases/${PV}/firefox-${PV}-source.tar.bz2"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
@@ -49,15 +53,6 @@ src_unpack() {
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
 	use amd64 && epatch ${FILESDIR}/mozilla-firebird-amd64.patch
-
-	# Backward/Forward mouse button support, from
-	# http://bugzilla.mozilla.org/show_bug.cgi?id=64485
-	# See bug 44646 (26 Apr 2004 agriffis)
-	#epatch ${FILESDIR}/mozilla-firefox-mousebuttons.patch
-
-	# Fix compilation with gcc-3.4, bug 47870
-	# (26 Apr 2004 agriffis)
-	#epatch ${FILESDIR}/firefox-0.8-gcc-3.4.patch
 }
 
 src_compile() {
