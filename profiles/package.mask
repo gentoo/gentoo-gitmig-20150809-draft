@@ -839,3 +839,6 @@ net-mail/spamassassin
 # works, but can't log in (meaning it really _doesn't_ work)
 =net-mail/courier-imap-1.4.5-r1
 
+# naz@gentoo.org 16 Jun 2002
+# Works but needs some testing an finishing startxdfb script, hint hint :o).
+x11-base/xdirectfb
