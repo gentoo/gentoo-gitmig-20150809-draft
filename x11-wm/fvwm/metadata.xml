@@ -7,6 +7,6 @@
   <name>Tavis Ormandy</name>
 </maintainer>
 <longdescription>
-FVWM 2 is an extremely powerful, fully ICCCM-1.1 compliant window manager requiring relatively little memory and providing an awesomely configurable environment.
+fvwm is an ICCCM-compliant X window manager providing a 3D look for window decorations, multiple discontiguous virtual desktops, a high degree of configurability, and an external module interface for implementing functional extensions.
 </longdescription>
 </pkgmetadata>

@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.32 2003/09/17 11:55:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.33 2003/10/07 12:02:19 taviso Exp $
+
+  07 Oct 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild,
+  metadata.xml:
+  update metadata longdescription from fvwm.lsm
+
+  adding some extra documentation, examples and scripts from
+  utils directory.
+
+  apparently it annoys some developers if KEYWORDS is not in order,
+  so they are now in order, as dictated by arch.list :)
 
   17 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
   apparently noxpm and nosm are confusing, removing them from IUSE.
