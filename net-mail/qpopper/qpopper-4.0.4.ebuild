@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.4.ebuild,v 1.3 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.4.ebuild,v 1.4 2002/08/23 05:50:09 seemant Exp $
 
 PN0=qpopper
 S=${WORKDIR}/${PN0}4.0.4
@@ -78,12 +78,12 @@ src_install() {
 	dosbin popper/popper  popper/popauth 
 
 	if use ssl; then
-		dodir -p -m665 ${D}/etc/mail/certs
-		fowners root.mail ${D}/etc/mail/certs
-		fperms 660 ${D}/etc/mail/certs
-		mv cert.pem ${D}/etc/mail/certs
-		fperms 600 ${D}/etc/mail/certs/cert.pem
-		fowners root.0 ${D}/etc/mail/certs/cert.pem
+		dodir /etc/mail/certs
+		fowners root.mail /etc/mail/certs
+		fperms 660 /etc/mail/certs
+		mv cert.pem /etc/mail/certs
+		fperms 600 /etc/mail/certs/cert.pem
+		fowners root.0 /etc/mail/certs/cert.pem
 	fi
 
 	doman man/popauth.8  man/poppassd.8  man/popper.8
