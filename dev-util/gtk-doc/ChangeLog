@@ -1,7 +1,13 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.26 2004/03/04 18:06:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.27 2004/03/08 11:15:58 leonardop Exp $
 
+*gtk-doc-1.2 (08 Mar 2004)
+
+  08 Mar 2004; L. Boshell <leonardop@gentoo.org> gtk-doc-1.2.ebuild:
+  New version, dependencies adjustments, install examples, install .el
+  resource if the `emacs' USE var is active.
+  
   04 Mar 2004; Joshua Kinard <kumba@gentoo.org> gtk-doc-1.1.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
 
