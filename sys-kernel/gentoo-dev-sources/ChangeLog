@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.86 2004/08/19 01:22:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.87 2004/08/19 21:23:01 pvdabeel Exp $
+
+  20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gentoo-dev-sources-2.6.8(-r1).ebuild:
+  Masked until 60615 is fixed upstream. /dev/null is removed and replaced
+  with a regular file.
 
   19 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   gentoo-dev-sources-2.6.8-r1.ebuild, gentoo-dev-sources-2.6.8.ebuild:
