@@ -1,26 +1,28 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.7 2003/07/01 20:16:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.8 2003/08/18 05:36:43 kumba Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-  03 April 2002; M.Schlemmer <azarah@gentoo.org> : audiofile-0.2.3-r1.ebuild
-
-  Remove unneeded auto* tools.
 
 *audiofile-0.2.3-r1 (21 March 2002)
+
+  18 Aug 2003; Joshua Kinard <kumba@gentoo.org> audiofile-0.2.3-r1.ebuild:
+  Added ~mips to KEYWORDS
+  Cleaned up Changelog
 
   01 Jul 2003; Guy Martin <gmsoft@gentoo.org> audiofile-0.2.3-r1.ebuild :
   Added hppa to KEYWORDS.
 
-  21 March 2002; M.Schlemmer <azarah@gentoo.org> :
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  03 April 2002; M.Schlemmer <azarah@gentoo.org> : audiofile-0.2.3-r1.ebuild
+  Remove unneeded auto* tools.
 
+  21 March 2002; M.Schlemmer <azarah@gentoo.org> :
   Libtoolize to fix the "relink bug".
 
 *audiofile-0.2.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
