@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.16 2004/11/30 21:27:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.17 2004/12/08 12:07:36 genone Exp $
+
+  08 Dec 2004; Marius Mauch <genone@gentoo.org> -porthole-0.3.1.ebuild:
+  removing 0.3.1 as it's reported to break with portage-2.0.51
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> porthole-0.4.1.ebuild:
   Fixed invalid atoms in *DEPEND.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.2 2004/11/30 21:27:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.3 2004/12/08 12:07:36 genone Exp $
 
 inherit distutils
 
@@ -16,8 +16,7 @@ DEPEND=">=dev-lang/python-2.3
 		>=dev-python/pygtk-2.0.0
 		>=dev-python/pyxml-0.8.3"
 
-RDEPEND="${RDEPEND}
-	debug? ( >=dev-python/pycrash-0.4_pre3 )"
+RDEPEND="${DEPEND} debug? ( >=dev-python/pycrash-0.4_pre3 )"
 
 pkg_setup() {
 
