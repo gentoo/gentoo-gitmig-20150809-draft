@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85.ebuild,v 1.2 2000/11/17 06:38:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85.ebuild,v 1.3 2000/11/25 13:13:30 achim Exp $
 
 A=db.1.85.tar.gz
 S=${WORKDIR}/db.1.85
@@ -29,6 +29,7 @@ src_install () {
 	dolib.so libdb1.so.2
 	dosym libdb1.so.2 /usr/lib/libdb1.so
 	dosym libdb1.so.2 /usr/lib/libdb.so.2
+	dosym libdb1.so.2 /usr/lib/libndbm.so
 	dodir /usr/include/db1
 	insinto /usr/include/db1
 	doins ../include/ndbm.h ../../include/db.h ../../include/mpool.h
