@@ -1,8 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.22 2002/07/03 22:18:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.23 2002/07/06 15:36:34 azarah Exp $
 
 *gcc-3.1-r8 (03 Jul 2002)
+
+  6 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r8 :
+
+  Update the fix for bug #4411, as the old caused ncurses, among things
+  not to link properly if an older version was installed.  The sed
+  rule is now:
+
+  sed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" specs
+
 
   3 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r8 :
 

@@ -227,7 +227,7 @@ src_install() {
 	# Azarah - 3 Jul 2002
 	#
 	cd ${FULLPATH_D}
-	dosed -e "s:\!static\:--eh-frame-hdr:\!static\:--eh-frame-hdr -L/lib:" \
+	dosed -e "s:%{L\*} %(link_libgcc):%{L\*} -L/lib %(link_libgcc):" \
 		${FULLPATH}/specs
 
 	#make sure we dont have stuff lying around that
