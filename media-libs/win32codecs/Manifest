@@ -1,14 +1,24 @@
-MD5 f18e5bb86da433649a3a274a44ad08a3 ChangeLog 2792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 492e4097e6721451e214853993530d33 ChangeLog 2974
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 13989eb3f90b8d218484383afb488e32 win32codecs-0.90.1-r1.ebuild 731
 MD5 abc4603048e796bee72a21b38b167758 win32codecs-0.90.1-r2.ebuild 978
 MD5 997e6066dcd0c6e71570887f5e05e9b2 win32codecs-20031001.ebuild 772
 MD5 7b9f9cadd429b777c70c29ca226714bc win32codecs-20040427.ebuild 772
 MD5 a2510c34d332e34d0c81b54d19e9edc4 win32codecs-20040703.ebuild 906
-MD5 cf51a566b0303a390eff319ce7cbcc02 win32codecs-20040916.ebuild 818
+MD5 5941783a12204e522d8c183f53e3a605 win32codecs-20040916.ebuild 810
 MD5 76732e9260e5e2a7926ee46be894aa79 files/digest-win32codecs-0.90.1-r1 140
 MD5 a0766a5ca0b5ed037030e556bb0d6ff8 files/digest-win32codecs-0.90.1-r2 317
 MD5 43e971c7fc7e042e7d63ee36e2cd9f95 files/digest-win32codecs-20031001 290
 MD5 b8565217a038af6767ddb9112d59ab82 files/digest-win32codecs-20040427 290
 MD5 e8eb2fc9b4fc39755fe39f1f8e8771d9 files/digest-win32codecs-20040703 291
 MD5 03a0d60b85a63f2d544706e5e008cb05 files/digest-win32codecs-20040916 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBe8T6I1lqEGTUzyQRAqNuAJ9Mku2TUcxdCuZucpwK/etiqnkjdQCcCgcy
+IiPsDFCo/02SpjVQkF3quT0=
+=o/X6
+-----END PGP SIGNATURE-----
