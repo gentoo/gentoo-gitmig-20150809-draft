@@ -1,4 +1,14 @@
-MD5 45b1bed2d47f1849fa6bc126358d0ab2 ChangeLog 1141
-MD5 75a50e032d4d4b07946fe9725c2aa342 xblockout-1.1.2.ebuild 1190
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0599289144452d7200d6d838d7733291 ChangeLog 1271
+MD5 e9af2a188e9ce022dffe2c4fb7804b27 xblockout-1.1.2.ebuild 1290
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 129edbcc1cd1677ce05bd1ba1dc1d85b files/digest-xblockout-1.1.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGPQzCHk4+ZoBpvsRAgZUAJ4mkCh+eazU3HFF66T7TVtILDLtFQCfR2EO
+BTbRSSQRpAdQ23oDNy2PpA8=
+=xzLf
+-----END PGP SIGNATURE-----
