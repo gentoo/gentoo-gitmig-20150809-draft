@@ -1,3 +1,4 @@
+MD5 448989523237fb0afe8f0a64aba85498 openbox-3.0_alpha4.ebuild 627
 MD5 cd8e991ef4a7829c1a715bf68403ecdf openbox-2.1.3-r4.ebuild 874
 MD5 361ab57577c98f4fb489a3ccfcd22757 openbox-2.3.0.ebuild 1241
 MD5 5dfe3a3dad2d7e59ec7e5fc229b3997f openbox-1.2.4.ebuild 629
@@ -10,3 +11,4 @@ MD5 e8173797964d97d9293eee8faa1a95aa files/digest-openbox-2.3.0 65
 MD5 3e1e2a98c9d9ad020a2d31e32335631d files/digest-openbox-2.3.1 65
 MD5 14ea1589afa8d9807619faebdd1468b5 files/digest-openbox-2.1.3-r4 65
 MD5 0b79bdcff70f29cdaf7980382b34dee4 files/openbox-2.3.1-nls-codeset.patch 306
+MD5 ecae22f0219bc948e4f7a82f00ba8737 files/digest-openbox-3.0_alpha4 70

@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.40 2003/07/18 14:16:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.41 2003/08/02 10:55:14 seemant Exp $
+
+*openbox-3.0_alpha4 (02 Aug 2003)
+
+  02 Aug 2003; Seemant Kulleen <seemant@gentoo.org> openbox-3.0_alpha4.ebuild:
+  Brandon Hale <brandon@inclusivetech.net> fixed up the ebuild that mkeadle
+  wrote up for this alpha version of ob3
 
   18 Jul 2003; Seemant Kulleen <seemant@gentoo.org> openbox-2.3.0.ebuild:
   hacky fix to disable NLS being built in this version -- use the MYCONF to
