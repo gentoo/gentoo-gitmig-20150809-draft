@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.1 2004/10/15 22:52:40 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc1.ebuild,v 1.2 2004/10/18 04:14:26 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -33,6 +33,10 @@ DEPEND="lirc? ( app-misc/lirc )"
 
 src_unpack() {
 	unpack ${MY_P}.tgz
+	cd ${WORKDIR}/${MY_P}/driver
+	sed -i -e 's:$(MODDIR):$(DESTDIR)/$(MODDIR):g' \
+		-e 's:$(INCLUDEDIR):$(DESTDIR)/$(INCLUDEDIR):g' \
+		Makefile2.4 || die "sed failed"
 }
 
 src_compile() {
