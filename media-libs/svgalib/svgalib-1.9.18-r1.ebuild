@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.12 2004/07/02 02:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.13 2004/07/06 11:50:06 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -90,7 +90,7 @@ src_compile() {
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
 				make -f Makefile.alt INCLUDEDIR="/usr/src/linux/include" \
-					clean modules || die "Failed to build kernel module!"
+					clean modules || die "Failed to alt build kernel module!"
 		else
 			env -u ARCH make || die "Failed to build kernel module!"
 		fi
