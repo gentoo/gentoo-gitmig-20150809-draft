@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r13.ebuild,v 1.6 2002/10/05 18:09:06 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r13.ebuild,v 1.7 2002/10/12 11:30:28 seemant Exp $
 
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod"
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb"
 
 inherit libtool flag-o-matic
 
@@ -18,7 +18,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-RDEPEND="app-arch/unzip
+DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
 	mikmod? ( >=media-libs/libmikmod-3.1.6 )
 	esd? ( >=media-sound/esound-0.2.22 )
@@ -28,7 +28,8 @@ RDEPEND="app-arch/unzip
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 	
 
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
+	directfb ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
 src_unpack() {

@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.28 2002/09/16 01:10:17 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.29 2002/10/12 11:30:28 seemant Exp $
 
 *xmms-1.2.7-r13 (23 Aug 2002)
+
+  12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r13.ebuild :
+
+  Added directfb to IUSE.  XMMS doesn't need it, but will link to it if
+  present, so it needs to be recompiled if DirectFB is updated.
 
   16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> xmms-1.2.7-r13.ebuild : Added
   sparc/sparc64 keywords. Revamped ChangeLog layout.
