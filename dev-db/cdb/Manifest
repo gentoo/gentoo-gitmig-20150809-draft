@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 87a0c2eb2c6eece2cb0e951f7f0385d2 cdb-0.75.ebuild 1150
 MD5 255b8c7d00072f92491bbdceba7003b5 ChangeLog 1339
 MD5 1a3e347b6ebfe24f60f255100a2af4a0 files/cdb-0.75-errno.diff 243
-MD5 e12a5f4b22dc861bd7cc05280295e806 files/digest-cdb-0.75 186
+MD5 7f28ce1d896bd4416c27bb55d6f63cdf files/digest-cdb-0.75 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBo4ewI1lqEGTUzyQRAr5aAJwMHa8QKcJSXkMTWweq8ZAXENwJVACgg6VS
+ErFwQZTY3TmY+QMib/4zcGM=
+=Uhgq
+-----END PGP SIGNATURE-----
