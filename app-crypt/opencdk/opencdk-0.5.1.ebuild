@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.1.ebuild,v 1.9 2003/12/14 00:34:11 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.1.ebuild,v 1.10 2004/04/26 15:49:27 agriffis Exp $
 
 DESCRIPTION="Open Crypto Development Kit for basic OpenPGP message manipulation"
 HOMEPAGE="http://www.gnutls.org/"
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}
 		>=dev-lang/perl-5.6"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "make failed"
 }
 

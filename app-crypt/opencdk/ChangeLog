@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.16 2004/03/23 22:31:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.17 2004/04/26 15:49:27 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> opencdk-0.5.1.ebuild,
+  opencdk-0.5.3.ebuild:
+  Add die following econf for bug 48950
 
   23 Mar 2004; Luca Barbato <lu_zero@gentoo.org> opencdk-0.5.3.ebuild:
   Marked ~ppc

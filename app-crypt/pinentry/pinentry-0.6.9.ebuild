@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.9.ebuild,v 1.2 2004/03/13 21:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.6.9.ebuild,v 1.3 2004/04/26 15:51:58 agriffis Exp $
 
 DESCRIPTION="collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://www.gnupg.org/aegypten/"
@@ -24,7 +24,7 @@ src_compile() {
 			$(use_enable gtk pinentry-gtk) \
 			$(use_enable ncurses pinentry-curses) \
 			$(use_enable ncurses fallback-curses) \
-			--disable-dependency-tracking
+			--disable-dependency-tracking || die "econf failed"
 	make || die
 }
 
