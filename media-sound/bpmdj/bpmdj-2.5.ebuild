@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.5.ebuild,v 1.2 2004/09/03 09:50:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.5.ebuild,v 1.3 2004/10/30 10:49:46 eradicator Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Bpmdj, software for measuring the BPM of music and mixing"
 HOMEPAGE="http://bpmdj.sourceforge.net/"
@@ -24,7 +26,7 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	cp defines.gentoo defines
-	make ${MAKEOPTS} CPP=g++ CC=gcc VARTEXFONTS=${T}/fonts || die
+	make ${MAKEOPTS} CPP=$(tc-getCXX) CC=$(tc-getCC) VARTEXFONTS=${T}/fonts || die
 }
 
 src_install () {

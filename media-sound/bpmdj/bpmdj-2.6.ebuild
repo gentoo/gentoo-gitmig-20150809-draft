@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.2 2004/10/21 18:34:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.6.ebuild,v 1.3 2004/10/30 10:49:46 eradicator Exp $
 
 IUSE="mp3 oggvorbis"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Bpmdj, software for measuring the BPM of music and mixing"
 HOMEPAGE="http://bpmdj.sourceforge.net/"
@@ -33,7 +33,7 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	cp defines.gentoo defines
-	make ${MAKEOPTS} CPP=g++ CC=gcc VARTEXFONTS=${T}/fonts || die "make failed"
+	make ${MAKEOPTS} CPP=$(tc-getCXX) CC=$(tc-getCC) VARTEXFONTS=${T}/fonts || die "make failed"
 }
 
 src_install () {
