@@ -1,14 +1,19 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.6 2003/02/08 23:21:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.7 2003/02/10 07:34:58 seemant Exp $
+
+*ftp-0.17-r2 (12 Nov 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Sed expression delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org> and also changed to use epatch.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> ftp-0.17-r2.ebuild :
   Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*ftp-0.17-r2 (12 Nov 2002)
-
   05 Dec 2002; Nick Hadaway <raker@gentoo.org> ftp-0.17-r2.ebuild :
   Marked stable.
 

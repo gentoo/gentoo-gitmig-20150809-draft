@@ -1,33 +1,37 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.4 2003/01/16 02:25:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.5 2003/02/10 07:34:58 seemant Exp $
 
+inherit eutils
+
+IUSE="ssl"
+
+S=${WORKDIR}/linux-${P}
 DESCRIPTION="The netkit FTP server with optional SSL support"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/linux-${P}.tar.gz"
-LICENSE="as-is"
+
 SLOT="0"
+LICENSE="as-is"
 KEYWORDS="x86"
-IUSE="ssl"
-DEPEND="virtual/glibc
-	ssl? ( dev-libs/openssl )"
+
+DEPEND="ssl? ( dev-libs/openssl )"
+
 RDEPEND="${DEPEND}
 	sys-apps/xinetd"
-S=${WORKDIR}/linux-${P}
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if [ "`use ssl`" ]; then
-		epatch ${FILESDIR}/ssl.diff.gz || die
+		epatch ${FILESDIR}/ssl.diff.gz
 	fi
 }
 
 src_compile() {
 	./configure --prefix=/usr || die "configure failed"
 	cp MCONFIG MCONFIG.orig                                                 
-        sed -e "s/-pipe -O2/${CFLAGS}/" MCONFIG.orig > MCONFIG
+	sed -e "s:-pipe -O2:${CFLAGS}:" MCONFIG.orig > MCONFIG
 	emake || die "parallel make failed"
 }
 
