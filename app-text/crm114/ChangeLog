@@ -1,6 +1,17 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.10 2004/07/17 17:34:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.11 2004/09/01 01:59:57 seemant Exp $
+
+*crm114-20040820 (31 Aug 2004)
+
+  31 Aug 2004; Seemant Kulleen <seemant@gentoo.org> crm114-20040601.ebuild,
+  +crm114-20040820.ebuild:
+  move 20040601 to stable
+
+*crm114-20040820 (31 Aug 2004)
+
+  31 Aug 2004; Seemant Kulleen <seemant@gentoo.org> +crm114-20040820.ebuild:
+  version bump, thanks to: John Hampton <pacopablo@pacopablo.com> in bug #62452
 
 *crm114-20040627-r1 (17 Jul 2004)
 

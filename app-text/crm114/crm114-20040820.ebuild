@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.8 2004/09/01 01:59:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040820.ebuild,v 1.1 2004/09/01 01:59:57 seemant Exp $
 
 inherit eutils
 
 IUSE="emacs nls static"
 
-MY_P=${P}-BlameKyoto.src
+MY_P=${P}.BlameClockworkOrange.src
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A powerful text processing tools, mainly used for spam filtering"
 HOMEPAGE="http://crm114.sourceforge.net/"
@@ -14,7 +14,7 @@ SRC_URI="http://crm114.sourceforge.net/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 TREVERS="0.6.8"
 
@@ -37,8 +37,9 @@ src_unpack() {
 	else
 		sed -i "s#-static##g"  Makefile
 	fi
+	sed -i "s#ln -f -s crm114_tre crm114##" Makefile
 
-	epatch ${FILESDIR}/${P}-mailfilter.patch
+	epatch ${FILESDIR}/${PN}-20040601-mailfilter.patch
 
 	cd ${S}/tre-${TREVERS}
 	chmod +x configure
@@ -65,8 +66,9 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dobin crm114 cssutil cssdiff cssmerge
-	dosym crm114 /usr/bin/crm
+	dobin crm114_tre cssutil cssdiff cssmerge
+	dosym crm114_tre /usr/bin/crm114
+	dosym crm114_tre /usr/bin/crm
 
 	dodoc COLOPHON.txt CRM114_Mailfilter_HOWTO.txt FAQ.txt INTRO.txt
 	dodoc QUICKREF.txt classify_details.txt inoc_passwd.txt
