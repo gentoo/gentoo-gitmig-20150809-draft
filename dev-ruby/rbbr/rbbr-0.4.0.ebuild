@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.; acid DOT punk AT gmx DOT net
+# Copyright 1999-2004 Gentoo Technologies, Inc.; acid DOT punk AT gmx DOT net
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.4.0.ebuild,v 1.1 2003/10/31 03:44:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.4.0.ebuild,v 1.2 2004/03/24 23:30:30 mholzer Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"
@@ -11,11 +11,10 @@ KEYWORDS="~x86"
 SLOT="0"
 LICENSE="Ruby"
 
-RDEPEND=">=dev-lang/ruby-1.8.0
+DEPEND=">=dev-lang/ruby-1.8.0
 	>=dev-ruby/ruby-gnome2-0.7.0
 	>=dev-ruby/ri-0.8a"
 
-DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A} ruby-gnome2-api.tar.gz
