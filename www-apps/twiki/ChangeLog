@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.4 2004/09/28 01:59:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.5 2004/11/21 23:07:49 tigger Exp $
+
+*twiki-20040901 (22 Nov 2004)
+
+  22 Nov 2004; Rob Holland <tigger@gentoo.org> +twiki-20040901.ebuild:
+  Version bump to fix #71035.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org>
   .#twiki-20030201.ebuild.1.4, .#twiki-20030201.ebuild.1.6:
