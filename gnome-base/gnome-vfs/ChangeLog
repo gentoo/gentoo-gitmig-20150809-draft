@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.88 2004/04/20 14:47:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.89 2004/04/20 18:30:14 leonardop Exp $
+
+  20 Apr 2004; L. Boshell <leonardop@gentoo.org>
+  gnome-vfs-1.0.5-r3.ebuild:
+  Implement `doc' USE flag. Closes bug #46289, thanks to Antony Suter.
 
 *gnome-vfs-2.6.1.1 (20 Apr 2004)
 

@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.11 2004/04/19 16:06:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.12 2004/04/20 18:30:14 leonardop Exp $
 
-IUSE="ssl nls"
+IUSE="doc ssl nls"
 
 inherit eutils libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="GNOME Virtual File System."
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
@@ -26,7 +25,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.8.0
 	>=dev-util/intltool-0.11
 	>=gnome-base/gnome-common-1.2.4
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	doc? ( dev-util/gtk-doc )"
 # gnome-common is for m4 macros needed for patches ...
 
 
@@ -60,6 +60,8 @@ src_compile() {
 		mkdir intl
 		touch intl/libgettext.h
 	}
+
+	myconf="${myconf} $(use_enable doc gtk-doc)"
 
 	econf ${myconf} || die
 	emake || die
