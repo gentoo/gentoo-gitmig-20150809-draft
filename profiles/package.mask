@@ -44,16 +44,6 @@ media-gfx/k3studio
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
 
-# 3.23.51; lets see if this one is stable.. trying to support
-# both the default-1.0 and default-1.0-gcc3 profiles at the same
-# time with this ebuild. // woodchip - 22 June 2002
->=dev-db/mysql-3.23.50
-
-# openssh-3.3 uses a new privelage separation scheme by default.
-# i figure the group id for 'sshd' might be a political issue
-# so i'll mask this. // woodchip - 22 June 2002
->=net-misc/openssh-3.3_p1
-
 #the XMMS crash when activate the osd plugin, but osd_cat work's well
 #x11-libs/xosd
 
