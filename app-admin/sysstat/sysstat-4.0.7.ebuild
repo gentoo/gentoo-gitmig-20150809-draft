@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-4.0.7.ebuild,v 1.6 2003/11/04 08:09:59 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-4.0.7.ebuild,v 1.7 2004/01/02 21:00:23 plasmaroo Exp $
 
 DESCRIPTION="System performance tools for Linux"
 SRC_URI="http://perso.wanadoo.fr/sebastien.godard/${P}.tar.gz"
