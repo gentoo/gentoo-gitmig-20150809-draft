@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2.ebuild,v 1.2 2002/11/08 23:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r1.ebuild,v 1.1 2002/11/08 23:43:26 vapier Exp $
 
 MY_P="SNNSv${PV}"
 DESCRIPTION="Stuttgart Neural Network Simulator"
@@ -30,10 +30,10 @@ src_compile() {
 	local compileopts="compile-kernel compile-tools"
 
 	if [ `use X` ] ; then
-		myconf="${myconf} --without-x"
-	else
 		myconf="${myconf} --with-x"
 		compileopts="${compileopts} compile-xgui"
+	else
+		myconf="${myconf} --without-x"
 	fi
 
 	econf ${myconf}
