@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1.ebuild,v 1.1 2005/02/01 13:42:25 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1.ebuild,v 1.2 2005/02/03 21:41:37 humpback Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.gentoo-pt.org/~humpback/skype-avatars-${AVATARV}.tgz
 		static? ( http://download.skype.com/linux/${PN}_staticQT-${PV}.tar.bz2 )"
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="static arts esd"
 DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc
 		app-emulation/emul-linux-x86-xlibs
