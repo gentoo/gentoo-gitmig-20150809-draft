@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.ebuild,v 1.2 2003/02/03 05:37:56 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.ebuild,v 1.3 2003/02/05 00:48:25 azarah Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 IUSE="ncurses X libwww png"
 S=${WORKDIR}/tetex-src-${PV}
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${TETEXSRC}
 
 	cd ${S}
-	#patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	#epatch ${FILESDIR}/${PF}-gentoo.diff
 	
 	mkdir ${S}/texmf
 	cd ${S}/texmf
@@ -50,10 +50,10 @@ src_unpack() {
 	# Do not run config stuff
 	cd ${WORKDIR}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-dont-run-config.diff || die
+	epatch ${FILESDIR}/${P}-dont-run-config.diff
 
 	# Fix for dvips to print directly.
-	#patch -p1 < ${FILESDIR}/teTeX-1.0-dvips.diff || die
+	#epatch ${FILESDIR}/teTeX-1.0-dvips.diff
 
 }
 

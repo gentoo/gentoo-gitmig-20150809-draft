@@ -1,8 +1,11 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.27 2003/02/03 06:46:31 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.28 2003/02/05 00:48:25 azarah Exp $
 
-  03 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> tetex-2.0.ebuild :
+  Updated to use epatch.
+
+  03 Feb 2003; Matthew Turk <satai@gentoo.org> tetex-1.0.7-r12.ebuild :
   Fixed tetex-1.0.7-r12 to install manpages in correct location.  The make
   install function seems to be broken in 1.0.7, so I had to hardcode man1 into
   it.  This is not the case in 2.0.  Didn't bump revision so as to encourage
@@ -10,7 +13,7 @@
 
 *tetex-2.0 (02 Feb 2003)
 
-  02 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  02 Feb 2003; Matthew Turk <satai@gentoo.org> tetex-2.0.ebuild :
   teTeX-2.0 is released!  This should fix *so* many bugs it's just
   unbelievable...  Still leaving marked unstable for the freeze, however.
 
