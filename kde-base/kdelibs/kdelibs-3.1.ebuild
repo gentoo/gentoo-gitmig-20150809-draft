@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.1 2002/11/19 16:11:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.2 2002/11/20 14:06:55 danarmak Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
-DESCRIPTION="KDE $PV - base libraries needed by all kde programs" 
+DESCRIPTION="KDE libraries needed by all kde programs" 
 KEYWORDS="x86"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
@@ -46,9 +46,6 @@ qtver-from-kdever ${PV}
 need-qt $selected_version
 
 set-kdedir $PV
-
-# fix already in kde cvs; the tarballs will probably be updated soon
-PATCHES="$FILESDIR/$P-makefile.diff"
 
 src_unpack() {
 

@@ -1,8 +1,0 @@
---- pics/Makefile.am	19 Nov 2002 01:08:13 -0000	1.20
-+++ pics/Makefile.am	19 Nov 2002 12:25:15 -0000	1.21
-@@ -17,4 +17,5 @@ ksvgtopng_LDFLAGS = $(KDE_RPATH) $(all_l
- 
- install-data-local:
- 	-rm -f $(DESTDIR)$(kde_icondir)/default.kde
-+	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)
- 	$(LN_S) crystalsvg $(DESTDIR)$(kde_icondir)/default.kde

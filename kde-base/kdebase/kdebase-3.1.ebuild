@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.1 2002/11/19 19:24:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.ebuild,v 1.2 2002/11/20 14:06:54 danarmak Exp $
 inherit kde-dist 
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
-DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
+DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="x86"
 
