@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>ppc</herd>
+<maintainer>
+  <email>dholm@gentoo.org</email>
+  <name>David Holm</name>
+</maintainer>
+<longdescription>A version of fdisk able to create Amiga-style partition maps.</longdescription>
+</pkgmetadata>
