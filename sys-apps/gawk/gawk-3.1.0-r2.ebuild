@@ -1,33 +1,47 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0.ebuild,v 1.4 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r2.ebuild,v 1.1 2002/06/24 23:00:19 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU awk pattern-matching language"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+		nls? ( sys-devel/gettext )"
 
 src_compile() {
+
+	local myconf=""
+	use nls || myconf="${myconf} --disable-nls"
+
 	./configure --prefix=/usr \
 		--libexecdir=/usr/lib/awk \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
-		--host=${CHOST} || die
+		--host=${CHOST}  \
+		${myconf} || die
+
 	emake || die
 }
 
 src_install() {
+
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		libexecdir=${D}/usr/lib/awk \
 		install || die
+		
 	cd ${D}/usr/bin
-	rm gawk
+	rm -f gawk
 	ln -s gawk-${PV} gawk
+	#compat symlink
+	dodir /bin
+	cd ${D}/bin
+	ln -s /usr/bin/gawk-${PV} awk
+	
 	cd ${S}
 	if [ -z "`use build`" ] 
 	then
@@ -48,3 +62,4 @@ src_install() {
 		rm -rf ${D}/usr/share
 	fi
 }
+
