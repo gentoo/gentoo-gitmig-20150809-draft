@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/mapm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/ChangeLog,v 1.1 2004/02/03 02:07:52 vapier Exp $
+
+*mapm-4.9 (02 Feb 2004)
+
+  02 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Donald Giuliano #39949.
