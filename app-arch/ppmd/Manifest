@@ -1,4 +1,14 @@
-MD5 d36b9632a84e6026c105da10d06b5896 ChangeLog 1318
-MD5 9af6a904dca3da05c5e94bf94ffabf61 ppmd-9.1.ebuild 1108
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec453228d597210e33af8077ed040c4a ppmd-9.1.ebuild 1106
+MD5 0b6e09574eda7d7c968826b4cea392e1 ChangeLog 1428
 MD5 56e46532cb9aa08b89639cf3e16f1145 metadata.xml 251
 MD5 df4579e26fa5a155f60190d373501ab9 files/digest-ppmd-9.1 126
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+sq8LLFUmVNQ7rkRAjlJAKCKbk6LGb4FJoLDIO6RIXUwLy8PdACeOx4J
+7+JaJhxnW+Vuf7zPnedrevU=
+=xsJq
+-----END PGP SIGNATURE-----
