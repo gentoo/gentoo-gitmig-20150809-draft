@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.23.ebuild,v 1.3 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/rat-4.2.23.ebuild,v 1.4 2004/04/01 07:50:58 eradicator Exp $
 
 DESCRIPTION="Robust Audio Tool for audio conferencing and streaming"
 HOMEPAGE="http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/"
 SRC_URI="http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/releases/${PV}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="=dev-lang/tcl-8.3*
 	=dev-lang/tk-8.3*"
-RDEPEND="sys-apps/gawk"
+
+RDEPEND="${DEPEND}
+	 sys-apps/gawk"
 
 src_compile() {
 	cd ${S}/common

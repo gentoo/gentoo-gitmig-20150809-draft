@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.2 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rat/ChangeLog,v 1.3 2004/04/01 07:50:58 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> rat-4.2.23.ebuild:
+  Stable on x86.
 
 *rat-4.2.23 (10 Aug 2003)
 
