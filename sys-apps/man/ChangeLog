@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.29 2003/05/25 15:10:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.30 2003/05/31 08:58:10 msterret Exp $
+
+*man-1.5l-r4 (31 May 2003)
+
+  31 May 2003; <msterret@gentoo.org> man-1.5l-r4.ebuild:
+  Add nls to IUSE
+  Use sed -i and add sed to DEPEND
+  Use emake -j1 so it's clear it doesn't build right in parallel.
+  Error messages for die
+  Rearranged src_install() to cd less
+  Trim trailing white space
+  Masked all archs in case I messed something up
 
   25 May 2003; Martin Holzer <mholzer@gentoo.org> man-1.5i-r3.ebuild,
   man-1.5k-r1.ebuild, man-1.5l-r3.ebuild:
