@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.57 2005/03/18 23:28:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.58 2005/03/20 03:42:06 chriswhite Exp $
+
+  20 Mar 2005; Chris White <chriswhite@gentoo.org>
+  files/gentoo-ffmpeg001.patch, ffmpeg-0.4.9_p20050226-r2.ebuild:
+  Fixed a52 linking (again).  Closes bugs #85929 and #85952.
 
 *ffmpeg-0.4.9_p20050226-r2 (19 Mar 2005)
 
