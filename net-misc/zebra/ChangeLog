@@ -1,8 +1,12 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.1 2003/04/22 21:38:47 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.2 2003/04/23 01:40:08 method Exp $
 
 *zebra-0.93a (22 Apr 2003)
+
+  22 Apr 2003; Joshua Brindle <method@gentoo.org> zebra-0.93a.ebuild,
+  files/zebra.confd files/zebra.initd:
+  added init.d and conf.d files
 
   22 Apr 2003; Joshua Brindle <method@gentoo.org> zebra-0.93a.ebuild:
   Initial commit courtesy of solarx <solar@linbsd.net>
