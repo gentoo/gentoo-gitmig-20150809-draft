@@ -1,30 +1,40 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.6.5.ebuild,v 1.6 2003/01/17 03:08:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.7.0.ebuild,v 1.1 2003/05/29 09:13:03 seemant Exp $
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
+MY_P=${PN/-/_}-${PV}
+
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Hardware Sensors Monitoring by lm_sensors"
-SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
+SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="0"
+# gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
+# have support for this package, do not change these to ~ 
+# until your arch has i2c-2.7.0 in it's kernel.
+KEYWORDS="~x86 -ppc -sparc"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
 
-DEPEND="virtual/linux-sources"
+DEPEND="|| (
+	     >=sys-apps/i2c-2.7.0
+	     >=sys-kernel/gentoo-sources-2.4.20-r1
+	     >=sys-kernel/lolo-sources-2.4.20.1
+	     >=sys-kernel/xfs-sources-2.4.20_pre4
+	   )"
 
 src_compile()  {
+	check_KV
 
 	filter-flags -fPIC
 
-	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and i2c support built as a modules"
+	emake clean all || die "lm_sensors requires the source of a compatible kernel\nversion installed in /usr/src/linux and >=i2c-2.7.0 support built as a modules this support is included in gentoo-sources as of 2.4.20-r1"
 }
 
 src_install() {
-	emake DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man install \
-		|| die "Install failed"
+	einstall DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/rc_lm_sensors lm_sensors
 }
