@@ -1,11 +1,15 @@
-# ChangeLog for dev-utils/vdkbuilder
+# ChangeLog for dev-util/vdkbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.2 2002/08/11 22:41:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.3 2002/08/17 21:43:26 bass Exp $
+
+*vdkbuilder-2.0.3 (12 Aug 2002)
+
+  12 Aug 2002; Joe Tennies <rotund@fatnsoft.com> vdkbuilder-2.0.3.ebuild:
+	Updated to build VDK Builder instead of the VDK library.  Also
+	updated to version 2.0.3.
 
 *vdkbuilder-2.0.2 (20 Jun 2002)
 
   20 Jun 2002; J.Alberto S.L. <bass@gentoo.org> vdkbuilder-2.0.2.ebuild:
 	First relase.
-
-
 
