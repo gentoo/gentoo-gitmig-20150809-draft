@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.5 2004/03/09 14:46:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.6 2004/04/19 21:51:47 wolf31o2 Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lln.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lln/${PN}-media-0.1.9a.tar.gz
 	mirror://sourceforge/lln/${P}.tar.gz"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
