@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc5.ebuild,v 1.4 2004/08/08 03:02:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc5.ebuild,v 1.5 2004/08/24 17:37:32 squinky86 Exp $
 
 inherit wxwidgets
 
@@ -28,7 +28,8 @@ DEPEND="remote? ( =x11-libs/wxGTK-2.4* )
 	>=dev-libs/crypto++-5.1-r1
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26 )
-	gd? ( >=media-libs/gd-2.0.26 )"
+	gd? ( >=media-libs/gd-2.0.26 )
+	!net-p2p/xmule"
 
 pkg_setup() {
 
