@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.4 2003/12/08 23:09:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.5 2003/12/17 20:45:42 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=7
@@ -9,7 +9,7 @@ DESCRIPTION="PowerPC utils; nvsetenv"
 SRC_URI="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}-${DEBRV}.diff.gz"
 HOMEPAGE="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/"
-KEYWORDS="ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
+KEYWORDS="ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc ppc64"
 DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT="0"
