@@ -1,0 +1,62 @@
+diff -ru gnump3d-2.2-orig/Makefile gnump3d-2.2/Makefile
+--- gnump3d-2.2-orig/Makefile	2003-02-04 11:25:13.000000000 +0200
++++ gnump3d-2.2/Makefile	2003-02-22 04:07:20.000000000 +0200
+@@ -26,12 +26,10 @@
+ 	install -d $(PREFIX)/share/gnump3d
+ 	install -d $(PREFIX)/bin
+ 	install -d $(PREFIX)/man/man1
+-	install -d /var/log/gnump3d
+-	install -d /etc/gnump3d
+ 	cp lib/gnump3d/*.pm $(LIBDIR)/gnump3d
+ 	cp lib/gnump3d/plugins/*.pm $(LIBDIR)/gnump3d/plugins
+ 	cp bin/gnump3d2 $(PREFIX)/bin/
+-	-ln -s $(PREFIX)/bin/gnump3d2 $(PREFIX)/bin/gnump3d
++	-ln -s gnump3d2 $(PREFIX)/bin/gnump3d
+ 	cp bin/gnump3d-top $(PREFIX)/bin
+ 	cp man/gnump3d-top.1 $(PREFIX)/man/man1
+ 	cp man/gnump3d.1 $(PREFIX)/man/man1
+@@ -39,8 +37,6 @@
+ 	cp -R templates/* $(PREFIX)/share/gnump3d
+ 	chmod -R a+r $(PREFIX)/share/gnump3d/
+ 	chmod +rx $(PREFIX)/share/gnump3d/*/
+-	if [ ! -e /etc/gnump3d/gnump3d.conf ]; then cp etc/gnump3d.conf /etc/gnump3d ; fi
+-	cp etc/mime.types /etc/gnump3d
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/bin/gnump3d-top
+diff -ru gnump3d-2.2-orig/bin/gnump3d2 gnump3d-2.2/bin/gnump3d2
+--- gnump3d-2.2-orig/bin/gnump3d2	2003-02-04 11:25:13.000000000 +0200
++++ gnump3d-2.2/bin/gnump3d2	2003-02-22 03:43:12.000000000 +0200
+@@ -280,6 +280,11 @@
+ if ( ( not $DEBUG ) and ( $BACKGROUND ) )
+ {
+     fork() && exit;
++    # 2003-02-22 Jyrki Muukkonen
++    # we need a pidfile for /etc/init.d/gnump3d script
++    open( PIDFILE, ">/var/run/gnump3d.pid" );
++    print PIDFILE $PID;
++    close( PIDFILE );
+ }
+ 
+ 
+diff -ru gnump3d-2.2-orig/etc/gnump3d.conf gnump3d-2.2/etc/gnump3d.conf
+--- gnump3d-2.2-orig/etc/gnump3d.conf	2003-02-04 11:25:13.000000000 +0200
++++ gnump3d-2.2/etc/gnump3d.conf	2003-02-22 02:34:42.000000000 +0200
+@@ -93,7 +93,7 @@
+ #  If you're on a multi-user system its probably a good idea to
+ # make the audio files readable to other users anyway...
+ #
+-root = /home/mp3   
++# root = /home/mp3   
+ 
+ 
+ #
+@@ -611,7 +611,7 @@
+ #
+ # plugin_directory = /usr/lib/perl5/gnump3d/plugins
+ #
+-
++plugin_directory = /usr/lib/perl5/5.8.0/gnump3d/plugins
+ 
+ #
+ #  By default all the plugins which are shipped with this server are
