@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.13 2004/05/12 08:47:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.14 2004/06/13 20:09:01 mcummings Exp $
+
+*gtk2-perl-1.042 (13 Jun 2004)
+
+  13 Jun 2004; Michael Cummings <mcummings@gentoo.org> gtk2-perl-1.042.ebuild:
+  new version; dep for bug 52839
 
   06 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> gtk2-perl-1.040.ebuild:
   Stable on hppa and sparc
