@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/hpl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.1 2004/03/26 17:24:12 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.2 2004/04/27 21:43:19 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> hpl-1.0.ebuild:
+  Add inherit eutils
 
 *hpl-1.0 (26 Mar 2004)
 

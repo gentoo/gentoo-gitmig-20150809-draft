@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29.ebuild,v 1.1 2004/03/25 12:25:10 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29.ebuild,v 1.2 2004/04/27 21:46:46 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Util-Vserver s_context Management utilities"
 HOMEPAGE="http://savannah.nongnu.org/projects/util-vserver/"

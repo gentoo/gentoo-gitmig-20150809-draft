@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.3 2004/03/27 10:34:59 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-1.0.ebuild,v 1.4 2004/04/27 21:43:19 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="HPL - A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers"
 HOMEPAGE="http://www.netlib.org/benchmark/hpl/"

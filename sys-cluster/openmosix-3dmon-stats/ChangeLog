@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmosix-3dmon-stats
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/ChangeLog,v 1.1 2004/03/21 19:49:31 tantive Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/ChangeLog,v 1.2 2004/04/27 21:44:52 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  openmosix-3dmon-stats-0.2.1.ebuild:
+  Add inherit eutils
 
 *openmosix-3dmon-stats-0.2.1 (22 Mar 2004)
 

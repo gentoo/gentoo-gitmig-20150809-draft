@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/openmosix-3dmon-stats-0.2.1.ebuild,v 1.1 2004/03/21 19:49:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-3dmon-stats/openmosix-3dmon-stats-0.2.1.ebuild,v 1.2 2004/04/27 21:44:52 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/mosstatd-${PV}
 DESCRIPTION="Statistics daemon for three dimensional openmosix's monitoring tool"
