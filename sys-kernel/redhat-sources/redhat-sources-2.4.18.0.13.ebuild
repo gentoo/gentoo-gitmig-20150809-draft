@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.1 2002/04/28 04:28:02 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.2 2002/04/28 05:35:05 blocke Exp $
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
@@ -36,10 +36,7 @@ src_unpack() {
 	cd ${S}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
-	make mrproper || die
-
-	#this file is required for other things to build properly, so we autogenerate it
-	#ake include/linux/version.h || die
+	make distclean || die
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -49,7 +46,7 @@ src_unpack() {
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
+	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' -e 's|custom ||' \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
@@ -89,7 +86,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
-	cd ${ROOT}usr/src/linux-${KV}
+	cd ${ROOT}usr/src/linux-redhat-${KERNVER}
 	make mrproper
 	if [ -e "${ROOT}usr/src/linux/.config" ]
 	then
@@ -100,7 +97,7 @@ pkg_postinst() {
 		echo "Ignore any errors from the yes command above."
 		make dep
 	else
-		cp "${ROOT}usr/src/linux-${KV}/arch/i386/defconfig" .config
+		cp "${ROOT}usr/src/linux-redhat-${KERNVER}/arch/i386/defconfig" .config
 	fi
 	#remove /usr/src/linux symlink
 	rm -f ${ROOT}/usr/src/linux
