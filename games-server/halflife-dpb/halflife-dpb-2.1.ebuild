@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-dpb/halflife-dpb-2.1.ebuild,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-dpb/halflife-dpb-2.1.ebuild,v 1.2 2003/09/10 06:01:04 vapier Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ KEYWORDS="-* x86"
 IUSE="dedicated"
 RESTRICT="nostrip"
 
-RDEPEND="app-games/halflife-server
+RDEPEND="games-server/halflife-server
 	dedicated? ( app-misc/screen )"
 
 S=${WORKDIR}/dpb

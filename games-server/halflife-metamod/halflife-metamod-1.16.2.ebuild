@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/halflife-metamod-1.16.2.ebuild,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/halflife-metamod-1.16.2.ebuild,v 1.2 2003/09/10 06:01:04 vapier Exp $
 
 inherit games gcc
 
@@ -15,7 +15,7 @@ IUSE="src"
 
 DEPEND="src? ( dev-games/hlsdk )
 	>=sys-apps/sed-4"
-RDEPEND="app-games/halflife-server"
+RDEPEND="games-server/halflife-server"
 
 S=${WORKDIR}/metamod-${PV}
 

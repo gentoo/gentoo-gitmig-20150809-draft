@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/halflife-ns-2.0.ebuild,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/halflife-ns-2.0.ebuild,v 1.2 2003/09/10 06:01:05 vapier Exp $
 
 inherit games eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="dedicated"
 
-RDEPEND="app-games/halflife-server
+RDEPEND="games-server/halflife-server
 	dedicated? ( app-misc/screen )"
 
 S=${WORKDIR}/ns
