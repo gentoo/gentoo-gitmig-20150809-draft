@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.5-r2.ebuild,v 1.2 2004/08/24 03:19:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/henplus-0.9.5-r2.ebuild,v 1.3 2004/10/25 11:37:43 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -20,7 +20,8 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 
 src_unpack() {
-	base_src_unpack && cd ${S}
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/henplus.patch
 }
 
