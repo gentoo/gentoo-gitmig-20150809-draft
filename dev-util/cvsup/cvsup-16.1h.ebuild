@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.8 2004/02/17 20:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.9 2004/04/19 06:26:12 vapier Exp $
+
+inherit eutils
 
 MY_P="${P/-/-snap-}"
 EZM3="ezm3-1.1"
