@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	econf --enable-utf8 || die
-	emake || die
+	make || die 
 }
 
 src_install () {
