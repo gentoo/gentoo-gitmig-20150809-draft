@@ -35,6 +35,9 @@ src_unpack() {
 }
 
 src_install() {
+	cp fam/fam.conf fam/fam.conf.old
+	sed s:"local_only = false":"local_only = true":g fam/fam.conf.old >fam/fam.conf
+			
 	make DESTDIR=${D} \
 		install || die
 	     
