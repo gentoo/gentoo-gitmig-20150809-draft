@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyosd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.6 2005/01/25 20:22:42 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.7 2005/01/27 15:35:32 lucass Exp $
+
+*pyosd-0.2.12 (27 Jan 2005)
+
+  27 Jan 2005; Lukasz Strzygowski <lucass@gentoo.org> +pyosd-0.2.12.ebuild:
+  Version bump. Closing bug #79717.
 
 *pyosd-0.2.11 (25 Jan 2005)
 
