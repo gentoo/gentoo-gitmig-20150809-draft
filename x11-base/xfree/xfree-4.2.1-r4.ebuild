@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r4.ebuild,v 1.3 2004/03/19 10:51:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r4.ebuild,v 1.4 2004/03/27 21:23:15 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -52,7 +52,7 @@ BASE_PV="4.2.0"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
 S_XFT2="${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft"
-DESCRIPTION="Xfree86: famous and free X server"
+DESCRIPTION="XFree86: free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.12 2004/03/22 22:13:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.13 2004/03/27 21:23:15 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -128,7 +128,7 @@ PROVIDE="virtual/x11
 	virtual/glu
 	virtual/xft"
 
-DESCRIPTION="XFree86: famous and free X server"
+DESCRIPTION="XFree86: free X server"
 
 pkg_setup() {
 	# Whether to drop in external render, xrender and xft from freedesktop.org
