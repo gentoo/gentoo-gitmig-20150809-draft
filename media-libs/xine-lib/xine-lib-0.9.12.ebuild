@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12.ebuild,v 1.1 2002/06/23 15:49:00 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12.ebuild,v 1.2 2002/06/23 16:30:45 lostlogic Exp $ 
 
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -30,15 +30,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use directfb &&  ( \
-		# Patch for framebuffer support.
+	use directfb && ( \
 		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die
-	) || ( \
-		for file in `find . -iname "Makefile.*"`; do 
-			grep -i -v "directfb" ${file} > ${file}.hacked
-			mv ${file}.hacked ${file}
-		done 
-	)
+	) || patch -p1 < ${FILESDIR}/xine-lib-disable-directfb.patch || die
 }
 
 src_compile() {
