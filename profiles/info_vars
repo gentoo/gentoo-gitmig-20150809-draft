@@ -1,0 +1,21 @@
+##
+## These variables are printed with a standard 'emerge info' in
+## portage as of 2.0.51-r5. They are sorted regardless of order here.
+##
+ACCEPT_KEYWORDS
+AUTOCLEAN
+CFLAGS
+CHOST
+CONFIG_PROTECT
+CONFIG_PROTECT_MASK
+CXXFLAGS
+DISTDIR
+FEATURES
+GENTOO_MIRRORS
+MAKEOPTS
+PKGDIR
+PORTAGE_TMPDIR
+PORTDIR
+PORTDIR_OVERLAY
+SYNC
+USE

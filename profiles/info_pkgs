@@ -1,0 +1,10 @@
+##
+## These ATOMS are printed with a standard 'emerge info' in
+## portage as of 2.0.51-r5. Do not overcrowd the output please.
+##
+sys-devel/autoconf
+sys-devel/automake
+virtual/os-headers
+sys-devel/binutils
+sys-devel/libtool
+dev-lang/python
