@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/groupoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.4 2003/11/02 15:14:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.5 2003/11/23 00:58:24 mholzer Exp $
+
+*groupoffice-1.94 (23 Nov 2003)
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org> groupoffice-1.94.ebuild:
+  Version bumped.
 
   02 Nov 2003; Martin Holzer <mholzer@gentoo.org> groupoffice-1.93.ebuild:
   making webapps.eclass ability.
