@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.35 2004/09/02 16:08:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.36 2004/09/02 23:20:55 lu_zero Exp $
+
+  03 Sep 2004; Luca Barbato <lu_zero@gentoo.org> valgrind-2.2.0.ebuild:
+  Minor fix, thanks again to Olaf Freyer <aaron@cs.tu-berlin.de> for reporting it
 
 *valgrind-2.2.0 (02 Sep 2004)
 
