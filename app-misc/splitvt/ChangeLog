@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/splitvt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.9 2005/01/01 15:24:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.10 2005/01/29 18:24:12 slarti Exp $
+
+  29 Jan 2005; Tom Martin <slarti@gentoo.org> metadata.xml,
+  splitvt-1.6.5.ebuild:
+  Removing amd64 keyword -- will not run on amd64. Removing myself as maintainer.
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Taking over as maintainer, previously unmaintained. Added shell-tools as herd.

@@ -1,4 +1,14 @@
-MD5 3107926da058d9b2ec6370b3e618412b ChangeLog 1234
-MD5 02990cbf5cdb8476cad761a6eb183362 splitvt-1.6.5.ebuild 825
-MD5 da71d6fdb89bcc307620d8840a7faa2e metadata.xml 266
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c281d1ceed4b173118e9044ab1e3194 ChangeLog 1398
+MD5 6ccd0e22262e34cff1aa44e5d0ec5dfa splitvt-1.6.5.ebuild 815
+MD5 1152531db65d40cff4ce7511a24c9534 metadata.xml 166
 MD5 4675708dafd82ae94d6e1f37569c1a34 files/digest-splitvt-1.6.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+9V+CHk4+ZoBpvsRAi18AJ9z0BvxpHOmNJCyMSChhNwIwFXIAACeOTlB
+/6naUa2fm6R0m7G3AvpDUJY=
+=X7Ec
+-----END PGP SIGNATURE-----
