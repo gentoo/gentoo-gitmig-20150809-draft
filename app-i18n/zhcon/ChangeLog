@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.5 2005/01/01 14:44:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.6 2005/01/25 17:59:43 liquidx Exp $
+
+*zhcon-0.2.3-r1 (25 Jan 2005)
+
+  25 Jan 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/zhcon-0.2.3-CAN-2005-0072.patch, +zhcon-0.2.3-r1.ebuild:
+  security patch for unauthorised file access (CAN-2005-0072) bug #78117
 
   25 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/zhcon-0.2.3-gcc34.patch, zhcon-0.2.3.ebuild:

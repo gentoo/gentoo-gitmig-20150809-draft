@@ -1,0 +1,26 @@
+--- zhcon-0.2.orig/src/configfile.cpp
++++ zhcon-0.2/src/configfile.cpp
+@@ -19,13 +19,23 @@
+ #include <stdexcept>
+ #include <fstream>
+ #include <cstdlib>
++#include <unistd.h>
++#include <sys/types.h>
+ #include "configfile.h"
+ 
+ ConfigFile::ConfigFile(const char *fn) {
++    uid_t ruid, euid;
++
++    ruid = getuid();
++    euid = geteuid();
++
++    setreuid(euid, ruid);
++
+     ifstream in(fn);
+     if (!in)
+         throw runtime_error("Could not open config file!");
+     ParseFile(in);
++    setreuid(ruid, euid);
+ }
+ 
+ ConfigFile::~ConfigFile() {}
