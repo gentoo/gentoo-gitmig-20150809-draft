@@ -1,0 +1,8 @@
+# ChangeLog for net-www/mod_injection
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_injection/ChangeLog,v 1.1 2002/11/28 20:37:34 woodchip Exp $
+
+*mod_injection-0.3.0 (28 Nov 2002)
+
+  28 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Initial import; created by me.
