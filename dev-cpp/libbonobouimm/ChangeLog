@@ -1,0 +1,9 @@
+# ChangeLog for dev-cpp/libbonobouimm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbonobouimm/ChangeLog,v 1.1 2003/06/20 23:44:44 liquidx Exp $
+
+*libbonobouimm-1.3.5 (26 Apr 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> libbonobouimm-1.3.5.ebuild:
+  initial ebuild
+

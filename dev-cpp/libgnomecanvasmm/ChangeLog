@@ -1,0 +1,25 @@
+# ChangeLog for dev-cpp/libgnomecanvasmm
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.1 2003/06/20 23:44:44 liquidx Exp $
+
+*libgnomecanvas-2.0.0 (22 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> libgnomecanvas-2.0.0.ebuild :
+  new version, first stable gnome2 release
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*libgnomecanvasmm-1.3.9 (13 Sep 2002)
+  13 Sep 2002; Spider <spider@gentoo.org> libgnomecanvasmm-1.3.9.ebuild :
+  new version by Markus Bertheau <twanger@bluetwanger.de>
+  
+*libgnomecanvasmm-1.3.6 (17 Jun 2002)
+  17 Jun 2002; Spider <spider@gentoo.org> libgnomecanvasmm-1.3.6.ebuild :
+  version bump
+   
+*libgnomecanvasmm-1.3.5 (02 Jun 2002)
+  02 Jun 2002; Spider <spider@gentoo.org> ChangeLog libgnomecanvasmm-1.3.5.ebuild :
+  gnome2.eclass version of foser <foser@sesmar.eu.org> gnome-c++
+  bindings.
+  initial release
+
