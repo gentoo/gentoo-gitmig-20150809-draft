@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3495 2005/01/16 07:25:15 carpaski Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3496 2005/01/16 16:40:03 plasmaroo Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -17,10 +17,14 @@
 # the v4l stuff that does not work
 #=media-video/mplayer-0.90_pre5
 #=media-video/mplayer-0.90_pre5-r1
-
 ##
 ##   End example
 ##
+
+# <plasmaroo@gentoo.org> (16 Jan 2005)
+# Live CVS build, masking to keep the bunny rabbits happy.
+>=sci-mathematics/axiom-9999
+
 # <dragonheart@gentoo.org> (16 Jan 2005)
 # spurious SEGV
 =net-analyzer/ntop-3.1
