@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/alsa-xmms
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-xmms/ChangeLog,v 1.1 2002/05/03 06:15:43 seemant Exp $
+
+*media-sound/alsa-xmms-0.9 (2 May 2002)
+
+  2 May 2002; Seemant Kulleen <seemant@gentoo.org> alsa-xmms-0.9.ebuild
+  ChangeLog files/digest-alsa-xmms-0.9 :
+
+  New package which allows XMMS to interact with ALSA 0.9, since these have been
+  officially unmasked in portage.
