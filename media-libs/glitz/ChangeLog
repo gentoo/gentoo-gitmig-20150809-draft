@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glitz
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.4 2004/12/23 08:43:03 twp Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.5 2005/01/26 15:42:40 twp Exp $
+
+*glitz-0.4.0 (26 Jan 2005)
+
+  26 Jan 2005; Tom Payne <twp@gentoo.org> +glitz-0.4.0.ebuild:
+  Version bump. Bug # 79575.
 
   23 Dec 2004; Tom Payne <twp@gentoo.org> glitz-0.2.3.ebuild:
   Added missing backslash.
