@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ctx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ctx/ChangeLog,v 1.5 2004/06/24 23:01:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ctx/ChangeLog,v 1.6 2004/11/27 18:50:23 ciaranm Exp $
+
+  27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> ctx-1.17.ebuild:
+  Added help text, bug #63319
 
   16 Mar 2004; David Holm <dholm@gentoo.org> ctx-1.17.ebuild:
   Added to ~ppc.
