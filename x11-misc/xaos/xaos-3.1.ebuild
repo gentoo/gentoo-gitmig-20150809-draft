@@ -1,35 +1,37 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.3 2003/05/30 09:11:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.1 2003/05/30 09:11:21 seemant Exp $
 
-IUSE="X svga aalib"
+IUSE="X svga aalib ggi"
 
-MY_PN="XaoS"
-MY_P=${MY_PN}-${PV/_/}
+MY_PN=XaoS
+MY_P=${MY_PN}-${PV}
+
 S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="A very fast real-time fractal zoomer"
 HOMEPAGE="http://sourceforge.net/projects/xaos/"
 SRC_URI="mirror://sourceforge/xaos/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="X? ( virtual/x11 )
 	svga? ( >=media-libs/svgalib-1.4.3 )
 	aalib? ( media-libs/aalib )
 	sys-libs/zlib
 	media-libs/libpng"
+# xaos has ggi support, but it doesn't build
+#	ggi?   ( media-libs/libggi )
 
 
 src_compile() {
 	local myconf
 	use X     || myconf="--with-x11-driver=no"
 #	use dga   || myconf="${myconf} --with-dga-driver=no"
-
-# ggi support is broken
-#	use ggi   || myconf="${myconf} --with-ggi-driver=no"
+# ggi support removed due to upstream bug
+	#use ggi   || 
+	myconf="${myconf} --with-ggi-driver=no"
 	use svga  || myconf="${myconf} --with-svga-driver=no"
 #	use aalib || myconf="${myconf} --with-aa-driver=no"
 
