@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclcl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/ChangeLog,v 1.2 2004/01/11 04:17:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/ChangeLog,v 1.3 2004/04/04 22:31:33 zx Exp $
+
+  04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml,
+  tclcl-1.15.ebuild:
+  Clean up. Added missing metadata.xml
 
   10 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> tclcl-1.15.ebuild:
   clean up ebuild

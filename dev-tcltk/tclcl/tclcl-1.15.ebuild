@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.3 2004/02/28 21:19:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.4 2004/04/04 22:31:33 zx Exp $
 
 DESCRIPTION="Tcl/C++ interface library"
 SF_PN="otcl-tclcl"
@@ -14,7 +14,6 @@ IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.2
 		>=dev-lang/tk-8.3.2
 		>=dev-tcltk/otcl-1.0.8"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
