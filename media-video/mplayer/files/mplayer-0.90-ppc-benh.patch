@@ -46,10 +46,6 @@
 +      _march="-mcpu=604"
 +      _mcpu="-mtune=604"
 +    ;;
-+    7[45][50]*)
-+      _march="-mcpu=750"
-+      _mcpu="-mtune=750"
-+    ;;
 +    74[10]0*)
 +      _march="-mcpu=7400"
 +      _mcpu="-mtune=7400"
@@ -57,6 +53,10 @@
 +    745[570]*)
 +      _march="-mcpu=7450"
 +      _mcpu="-mtune=7450"
++    ;;
++    7[45][50]*)
++      _march="-mcpu=750"
++      _mcpu="-mtune=750"
 +    ;;
 +    82[46][50]*)
 +      _march="-mcpu=603e"

@@ -1,8 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.55 2003/04/09 22:06:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.56 2003/04/16 01:49:48 pylon Exp $
 
 *mplayer-0.90 (09 Apr 2003)
+
+  16 Apr 2003; Lars Weiler <pylon@gentoo.org> mplayer-0.90.ebuild,
+  files/mplayer-0.90-ppc-benh.patch:
+  No big change.
+  Added the mentioned patch in bug #18511 for the right order of the
+  ppc-processor-switch and some more ppc-related einfo-lines about the altivec
+  issue with DivX.
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90.ebuild :
   New version:

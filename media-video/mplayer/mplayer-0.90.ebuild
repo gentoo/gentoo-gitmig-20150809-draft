@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90.ebuild,v 1.1 2003/04/09 22:06:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90.ebuild,v 1.2 2003/04/16 01:49:48 pylon Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb"
 
@@ -48,7 +48,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
 	svga? ( media-libs/svgalib )
-	encode? ( media-sound/lame 
+	encode? ( media-sound/lame
 	          >=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
 	opengl? ( virtual/opengl )
@@ -98,13 +98,13 @@ src_unpack() {
 src_compile() {
 
 	use matrox && check_KV
-        
+
 	local myconf=""
 
 	use 3dnow \
 		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
 
-	use sse	\
+	use sse \
 		|| myconf="${myconf} --disable-sse --disable-sse2"
 
 	# Only disable MMX if 3DNOW or SSE is not in USE
@@ -115,10 +115,10 @@ src_compile() {
 	use X || use gtk \
 		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
 		                     --disable-xmga --disable-png"
-	
+
 	use jpeg \
 		|| myconf="${myconf} --disable-jpeg"
-	
+
 	use gif \
 		|| myconf="${myconf} --disable-gif"
 
@@ -160,7 +160,7 @@ src_compile() {
 
 	use esd \
 		|| myconf="${myconf} --disable-esd"
-		
+
 	use alsa \
 		|| myconf="${myconf} --disable-alsa"
 
@@ -196,7 +196,7 @@ src_compile() {
 	use dvb \
 		&& myconf="${myconf} --enable-dvb" \
 		|| myconf="${myconf} --disable-dvb"
-	
+
 	use nls \
 		&& myconf="${myconf} --enable-i18n" \
 		|| myconf="${myconf} --disable-i18n"
@@ -255,10 +255,10 @@ src_compile() {
 
 	# emake borks on fast boxes - Azarah (07 Aug 2002)
 	make all || die
-	
+
 	if [ -n "`use matrox`" ]
 	then
-		cd drivers 
+		cd drivers
 		make all || die
 	fi
 }
@@ -277,7 +277,7 @@ src_install() {
 	if [ -f ${S}/postproc/libpostproc.a ]
 	then
 		dolib ${S}/postproc/libpostproc.a
-		
+
 		if [ ! -f ${D}/usr/include/postproc/postprocess.h ]
 		then
 			insinto /usr/include/postproc
@@ -362,7 +362,7 @@ src_install() {
 	then
 		audio="oss"
 	fi
-	
+
 	# Note to myself:  do not change " into '
 	sed -e "s/^# vo=xv/vo=${video}/" \
 	    -e "s/^# ao=oss/ao=${audio}/" \
@@ -372,7 +372,7 @@ src_install() {
 	insinto /etc
 	doins ${T}/mplayer.conf
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
-	
+
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 	doins ${S}/etc/input.conf
@@ -392,6 +392,17 @@ pkg_postinst() {
 	then
 		einfo "Please note that with the new freetype support you need to"
 		einfo "copy a truetype (.ttf) font to ~/.mplayer/subfont.ttf"
+	fi
+
+	if [ -n "`use ppc`" ]
+	then
+		echo
+		einfo "When you see only GREEN salad on your G4 while playing"
+		einfo "a DivX, you should recompile _without_ altivec enabled."
+		einfo "Furher information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
+		echo
+		einfo "If everything functions fine with watching DivX and"
+		einfo "altivec enabled, please drop a comment on the mentioned bug!"
 	fi
 
 	depmod -a &>/dev/null || :
