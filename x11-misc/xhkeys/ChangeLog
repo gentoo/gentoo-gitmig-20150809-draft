@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xhkeys
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.2 2003/11/21 06:39:02 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xhkeys/ChangeLog,v 1.3 2004/04/19 07:19:40 mr_bones_ Exp $
+
+  19 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> xhkeys-1.0.0.ebuild:
+  IUSE; virtual/x11; use generic src_compile
 
 *xhkeys-1.0.0 (20 Nov 2003)
 
