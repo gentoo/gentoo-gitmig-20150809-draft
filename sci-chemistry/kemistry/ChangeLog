@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/kemistry
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.2 2004/12/24 20:15:02 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.3 2005/01/15 00:14:49 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> kemistry-0.6.ebuild,
+  kemistry-0.7.ebuild:
+  Changed dep on a kde-base monolithic package to accept the equivalent split
+  or -meta package. KDE 3.4 has 'split' packages as well as monolithic, and
+  either alternative may provide the same files. This dep may have to be
+  narrowed down in the future to the precise split packages required.
 
 *kemistry-0.6 (24 Dec 2004)
 

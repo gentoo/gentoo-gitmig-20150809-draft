@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.6.ebuild,v 1.1 2004/12/24 16:43:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.6.ebuild,v 1.2 2005/01/15 00:14:49 danarmak Exp $
 
 inherit kde
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="kde-base/kdesdk"
+DEPEND="|| ( kde-base/kdesdk-meta kde-base/kdesdk )"
 need-kde 3
 
 PATCHES="${FILESDIR}/${P}-gcc3.2.patch"
