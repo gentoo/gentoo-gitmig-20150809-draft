@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.2 2003/03/11 05:31:04 kutsuya Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords 
 
@@ -29,6 +29,9 @@
   /etc/conf.d/zope-2_6_0. Also added a DateTime patch. Improved security.
   
 *zope-2.6.0-r1 (23 Nov 2002)
+
+  10 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> zope-2.6.0-r1.ebuild:
+  Fixed some typos, and corrected stated location of ebuild.
 
   23 Nov 2002; Grant Goodyear <g2boojum@gentoo.org> zope-2.6.0-r1.ebuild :
   Added ebuild from Bug #10758 (thanks to Maurizio Disimino!) which should

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r1.ebuild,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.0-r1.ebuild,v 1.2 2003/03/11 05:31:04 kutsuya Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -56,11 +56,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To get zope running you must execure the following:"
-	einfo "\tebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config"
+	einfo "To get zope running you must execute the following:"
+	einfo "\tebuild /var/db/pkg/net-zope/${PF}/${PF}.ebuild config"
 }
 
 pkg_config() {	
-	einfo ">>> Create inital user..."
+	einfo ">>> Create initial user..."
 	python2.1 ${ROOT}${ZOPEDIR}zpasswd.py ${ROOT}${ZOPEDIR}inituser
 }
