@@ -9,7 +9,7 @@ opts="start stop"
 start() {
     ebegin "Starting ${SERVICE}"
 	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
-    eend $retval
+    eend $?
 }
 
 stop() {
