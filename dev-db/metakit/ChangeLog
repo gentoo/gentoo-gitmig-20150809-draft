@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.14 2004/02/22 19:23:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.15 2004/02/23 23:11:24 bazik Exp $
+
+  24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> metakit-2.4.9.3-r2.ebuild:
+  Stable on sparc, DEPEND of media-sound/zinf
 
   22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> metakit-2.4.9.3-r2.ebuild:
   Adding amd64 keyword.
