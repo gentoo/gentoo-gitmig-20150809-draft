@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.5 2002/05/26 13:58:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.6 2002/08/12 06:47:36 seemant Exp $
+
+*fvwm-2.4.8 (12 Aug 2002)
+
+  12 Aug 2002; Seemant Kulleen <seemant@gentoo.org> fvwm-2.4.8.ebuild
+  files/digest-fvwm-2.4.8 files/fvwm2 :
+
+  Moved the fvwm2 script into a dynamic thing within the ebuild.  Made a big
+  bz2ball of the patches to be applied to the source.  Version bump and
+  patches from: matt@zigg.com (Matt Behrens) in bug #5886
 
 *fvwm-2.4.7-r1 (26 May 2002)
 
