@@ -150,7 +150,6 @@
 >=net-mail/exim-3.32-r6
 >=net-misc/fakeidentd-1.4-r6
 >=net-nds/openldap-1.2.12-r6
-<net-nds/openldap-2.0.27
 >=net-nds/portmap-5b-r6
 #>=sys-apps/vcron-3.0_p1-r6
 >=media-sound/alsa-utils-0.5.10-r6
@@ -191,6 +190,7 @@
 
 # Needs >=readline-4.2
 <media-sound/cdcd-0.6.4
+<net-nds/openldap-2.0.27
 
 # blackdown-1.4.1 doesn't like old systems
 <dev-java/blackdown-jre-1.4.1
