@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.7 2003/11/14 20:11:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.47.ebuild,v 1.8 2003/12/09 19:44:36 mr_bones_ Exp $
 
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/daily/${PN/-rescue/}-${PV}_20021020.tgz"
@@ -20,7 +20,7 @@ DEPEND=">=app-arch/afio-2.4.7
 	>=app-arch/lzop-1.00
 	>=dev-libs/newt-0.50
 	>=sys-apps/buffer-1.19
-	>=sys-apps/syslinux-1.7"
+	>=sys-boot/syslinux-1.7"
 S=${WORKDIR}/${PN/-rescue/}-${PV}_20021020
 
 src_compile() {
