@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r6.ebuild,v 1.5 2003/09/20 19:10:30 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r6.ebuild,v 1.6 2003/10/03 17:44:03 pappy Exp $
 
 IUSE="crypt nls static pam"
 
@@ -93,8 +93,12 @@ src_unpack() {
 src_compile() {
 
 	if [ "`use static`" ] ; then
-		export LDFLAGS=-static
+		append-ldflags "-static"
 	fi
+
+	# /usr/lib/gcc-lib/i686-pc-linux-gnu/3.2.3/libgcc.a(_stack_smash_handler.oS)(.text+0xd9): In function `__stack_smash_handler':
+	# /var/tmp/portage/gcc-3.2.3-r1/work/gcc-3.2.3/gcc/libgcc2.c:2107: undefined reference to `sigfillset'
+	has_version "sys-devel/hardened-gcc" && append-ldflags "-lc"
 
 	econf || die "configure failed"
 
