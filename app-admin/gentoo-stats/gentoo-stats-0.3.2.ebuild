@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.3.2.ebuild,v 1.2 2002/11/02 17:18:10 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.3.2.ebuild,v 1.3 2002/11/30 02:14:53 vapier Exp $
 
 DESCRIPTION="Gentoo Linux usage statistics client daemon"
 HOMEPAGE="http://stats.gentoo.org"
 SRC_URI="ftp://stats.gentoo.org/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
-
 # devs: please do not change this, it wouldn't make much sense right now
 KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
@@ -18,9 +17,7 @@ RDEPEND=">=sys-devel/perl-5.6.1
 	sys-apps/pciutils"
 DEPEND=""
 
-S=${WORKDIR}/${P}
-
-src_install () {
+src_install() {
 	into /usr
 	dosbin gentoo-stats
 	insinto /etc/gentoo-stats
