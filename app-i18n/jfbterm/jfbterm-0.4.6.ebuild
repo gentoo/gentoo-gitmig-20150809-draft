@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.6.ebuild,v 1.6 2004/06/30 02:17:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.6.ebuild,v 1.7 2004/11/16 14:47:47 gustavoz Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/9710/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ppc64"
+KEYWORDS="x86 ppc sparc ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
