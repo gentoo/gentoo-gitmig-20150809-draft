@@ -1,7 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.5 2002/03/16 17:32:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.6 2002/03/17 00:14:33 karltk Exp $
 
+
+*gentoolkit-0.1.4-r1 (16 Mar 2002)
+
+  16 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/scripts/etc-update:
+
+  etc-update now informs the user when there are no config files to process,
+  to avoid confusion with our new users.
 
 *gentoolkit-0.1.4 (16 Mar 2002)
 
