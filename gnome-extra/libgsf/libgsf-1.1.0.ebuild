@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.1.0.ebuild,v 1.6 2002/10/19 22:12:24 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.1.0.ebuild,v 1.7 2002/10/20 18:48:25 vapier Exp $
 
 IUSE="gnome"
 
@@ -20,7 +20,6 @@ DEPEND=">=dev-libs/glib-2.0.4
 	gnome? ( >=gnome-base/libbonobo-2.0.0
 		>=gnome-base/gnome-vfs-2.0.1 )" 
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf 
