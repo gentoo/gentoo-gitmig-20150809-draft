@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/razor
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/ChangeLog,v 1.1 2002/07/09 14:42:48 blizzy Exp $
+
+*razor-2.12 (09 Jul 2002)
+
+  09 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
+
+  Initial import, also closes bug #3964.
+  ebuild submitted by Jeremiah Mahler <jmahler@pacbell.net>
