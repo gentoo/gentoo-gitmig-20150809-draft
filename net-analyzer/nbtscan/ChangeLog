@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.15 2005/01/18 17:02:04 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.16 2005/03/05 07:59:38 ka0ttic Exp $
+
+*nbtscan-1.5.1-r1 (05 Mar 2005)
+
+  05 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/nbtscan-1.5.1-script-whitespace.patch, +nbtscan-1.5.1-r1.ebuild:
+  Revision bump; add patch that fixes -s output (bug 84139). Thanks to Josh
+  Nichols <nichoj@rpi.edu> for the patch.
 
   18 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> nbtscan-1.5.1.ebuild:
   Stable ppc-macos.
