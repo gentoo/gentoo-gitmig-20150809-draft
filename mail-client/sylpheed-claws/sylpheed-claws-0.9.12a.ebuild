@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12a.ebuild,v 1.4 2004/10/02 20:27:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12a.ebuild,v 1.5 2004/10/17 19:48:06 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir mbox"
 
@@ -10,9 +10,6 @@ inherit eutils
 GS_PN=ghostscript-viewer
 GS_PV=0.7
 
-PGP_PN=pgpinline
-PGP_PV=0.1
-
 MAILDIR_PN=maildir
 MAILDIR_PV=0.6
 
@@ -20,7 +17,6 @@ MBOX_PN=mailmbox
 MBOX_PV=0.9
 
 MY_GS=${GS_PN}-${GS_PV}
-MY_PGP=${PGP_PN}-${PGP_PV}
 MY_MAILDIR=${MAILDIR_PN}-${MAILDIR_PV}
 MY_MBOX=${MBOX_PN}-${MBOX_PV}
 
@@ -33,7 +29,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc alpha ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~amd64"
 
 COMMONDEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-pda/jpilot-0.99 )

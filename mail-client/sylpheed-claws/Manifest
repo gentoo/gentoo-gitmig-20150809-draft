@@ -2,16 +2,12 @@
 Hash: SHA1
 
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 9b5c2966c57d0903d38cda82a6897c61 sylpheed-claws-0.9.7.ebuild 4664
 MD5 c403b75cf16546b72fd4ab913e73c6a3 sylpheed-claws-0.9.12a-r1.ebuild 6468
-MD5 4ed8df6ed6650749cc41855ad0272618 sylpheed-claws-0.9.12a.ebuild 4302
-MD5 ee3f6a62d8b3190808e4e69476efc5ea ChangeLog 16776
 MD5 608736abc5ce88ce79e42bf278927d1d sylpheed-claws-0.9.12b.ebuild 5137
-MD5 a691afd5b2c81c1d6f5113f6c221ebba sylpheed-claws-0.9.10.ebuild 3758
+MD5 71fea05f27be5ab0cc4cd521b1a3b4b5 ChangeLog 16891
 MD5 f366fed6a9d8af37e2a6958bd172da3f sylpheed-claws-0.9.11.ebuild 3757
-MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
+MD5 5509d107e381e5c8ec716dbd6dae6035 sylpheed-claws-0.9.12a.ebuild 4245
 MD5 8ca534b232f6988e9df8e9fd48563e43 files/digest-sylpheed-claws-0.9.11 149
-MD5 a44580928f3fa901eb944e739c070d44 files/digest-sylpheed-claws-0.9.7 148
 MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 db15d20129837459a3b58fc654301b7c files/digest-sylpheed-claws-0.9.12a 279
@@ -21,7 +17,7 @@ MD5 e4776c1d04bababc02a76a8102e18108 files/vcalendar-0.4-ical.patch 2292
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZbaD6J2i8a8J4okRAh+eAKCoNSDq8WbGVedZW1PVTa1I7BWt7wCgqx/Z
-7lfWErUIApqnNUyixvQVU40=
-=UIVF
+iD8DBQFBcsyD6J2i8a8J4okRAqA1AJ9WPlrQz25FzdU+WCwZlKcxFwM2DACg0LtF
+JxWaPIJpuQu9JG/9Sv9uFgg=
+=VT28
 -----END PGP SIGNATURE-----
