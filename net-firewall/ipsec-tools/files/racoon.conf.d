@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/files/racoon.conf.d,v 1.2 2004/04/12 07:00:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/files/racoon.conf.d,v 1.3 2004/07/14 23:29:57 agriffis Exp $
 
 # Config file for /etc/init.d/racoon
 
