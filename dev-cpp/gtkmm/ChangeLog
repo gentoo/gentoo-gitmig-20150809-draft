@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.22 2004/04/12 23:12:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.23 2004/04/26 02:41:22 lv Exp $
+
+  25 Apr 2004; Travis Tilley <lv@gentoo.org> gtkmm-2.2.10.ebuild,
+  gtkmm-2.2.11.ebuild:
+  stable on amd64 - see bug #34357 for more information
 
   12 Apr 2004; Guy Martin <gmsoft@gentoo.org> gtkmm-2.2.10.ebuild:
   Marked stable on hppa.
