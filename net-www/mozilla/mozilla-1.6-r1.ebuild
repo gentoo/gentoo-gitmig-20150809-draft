@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.9 2004/04/26 04:38:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.10 2004/04/26 18:30:32 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -147,6 +147,10 @@ src_unpack() {
 	# Fix logic error when using RAW target
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
+
+	# Fix compilation with gcc-3.4, bug 47870
+	# (26 Apr 2004 agriffis)
+	epatch ${FILESDIR}/mozilla-1.6-gcc-3.4.patch
 
 	export WANT_AUTOCONF=2.1
 	autoconf &> /dev/null
