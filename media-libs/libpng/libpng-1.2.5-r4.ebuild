@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.13 2004/04/02 16:11:00 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r4.ebuild,v 1.14 2004/04/28 22:36:19 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="Portable Network Graphics library"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.libpng.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-SLOT="1.2"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 s390"
+SLOT="1.2"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 DEPEND="sys-libs/zlib"
 
@@ -20,20 +21,17 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	replace-flags "-march=k6-3" "-march=i586"
-	replace-flags "-march=k6-2" "-march=i586"
-	replace-flags "-march=k6" "-march=i586"
-
-	sed -e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
+	sed \
+		-e "s:ZLIBLIB=.*:ZLIBLIB=/usr/lib:" \
 		-e "s:ZLIBINC=.*:ZLIBINC=/usr/include:" \
 		-e "s:-O3:${CFLAGS}:" \
 		-e "s:prefix=/usr/local:prefix=/usr:" \
 		-e "s:OBJSDLL = :OBJSDLL = -lz -lm :" \
-			scripts/makefile.linux > Makefile
+		scripts/makefile.linux > Makefile
 }
 
 src_compile() {
-	emake CC="${CC:-gcc}" CXX="${CXX:-g++}" || die "Make failed"
+	emake CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" || die "Make failed"
 }
 
 src_install() {
@@ -42,10 +40,10 @@ src_install() {
 	einstall MANPATH=${D}/usr/share/man|| die "Failed to install"
 
 	doman libpng.3 libpngpf.3 png.5
-	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
+	dodoc ANNOUNCE CHANGES KNOWNBUG README TODO Y2KINFO
 }
 
 pkg_postinst() {
 	# the libpng authors really screwed around between 1.2.1 and 1.2.3
-	[ -f /usr/lib/libpng.so.3.1.2.1 ] && rm /usr/lib/libpng.so.3.1.2.1
+	[ -f ${ROOT}/usr/lib/libpng.so.3.1.2.1 ] && rm ${ROOT}/usr/lib/libpng.so.3.1.2.1
 }
