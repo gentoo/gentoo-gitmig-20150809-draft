@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.45 2004/12/24 10:24:31 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.46 2005/03/02 01:07:00 vapier Exp $
+
+*DirectFB-0.9.22 (01 Mar 2005)
+
+  01 Mar 2005; Mike Frysinger <vapier@gentoo.org> +DirectFB-0.9.22.ebuild:
+  Version bump.
 
 *DirectFB-0.9.21 (24 Dec 2004)
 
