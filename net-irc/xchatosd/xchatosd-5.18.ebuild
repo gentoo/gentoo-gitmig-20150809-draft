@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.17-r1.ebuild,v 1.1 2005/02/19 23:40:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.18.ebuild,v 1.1 2005/02/20 17:51:13 swegener Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,9 +20,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	epatch ${FILESDIR}/${PV}-iconv-fix.patch
-	epatch ${FILESDIR}/${PV}-return-values.patch
 
 	# We have our own include file in /usr/include/xchat
 	einfo "Updating xchat-plugin.h from /usr/include/xchat/xchat-plugin.h"
