@@ -44,9 +44,10 @@ media-gfx/k3studio
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
 
-# This looks like it's going final soon, but it's still in their
-# -Pre directory.  Might as well mask briefly.  // woodchip - 8 Jun 2002
-=dev-db/mysql-3.23.50
+# 3.23.51; lets see if this one is stable.. trying to support
+# both the default-1.0 and default-1.0-gcc3 profiles at the same
+# time with this ebuild..  Please test.
+>=dev-db/mysql-3.23.50
 
 #the XMMS crash when activate the osd plugin, but osd_cat work's well
 #x11-libs/xosd
