@@ -1,8 +1,12 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.5 2002/09/30 03:46:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.6 2002/10/17 20:07:09 raker Exp $
 
 *gimp-print-4.2.2 (25 Sep 2002)
+
+  17 Oct 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild :
+  Added dependancy on foomatic and it now installs with a much simpler
+  make install routine.  Should fix bug #9014
 
   29 Sep 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild :
   Tightened gimp dependancy to the 1.2* series.
