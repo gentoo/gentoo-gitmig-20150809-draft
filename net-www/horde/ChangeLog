@@ -1,9 +1,14 @@
 # ChangeLog for net-www/horde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.7 2003/04/08 21:48:05 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.8 2003/04/10 22:19:00 alron Exp $
+
+*horde-2.2.1-r2 (10 Apr 2003)
+  10 Apr 2003;Dean Bailey <alron@gentoo.org> horde-2.2.1-r2 :
+  Added vfs.sql, a table needed to use hordes VFS functions. Was missing from the
+  horde 2.2.1 tarball.
 
 *horde-2.2.1-r1 (08 Apr 2003)
-  08 Apr 2003l Dean Bailey <alron@gentoo.org> horde-2.2.1-r1 :
+  08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-2.2.1-r1 :
   Fixed an issue where alot of the required pear files were missing or outdated.
   Added dependancy on horde-pear.
 
