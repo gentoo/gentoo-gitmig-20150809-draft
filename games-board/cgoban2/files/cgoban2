@@ -1,10 +1,12 @@
 #!/bin/sh
-cd GENTOO_DIR
-javabin="`which java 2>/dev/null`"
-if [ -z "${javabin}" ] ; then
-	echo "No 'java' binary found."
-	echo "You should run 'java-config' to choose your default VM."
-	exit 1
-else
-	exec java -jar cgoban.jar "$@"
-fi
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/files/cgoban2,v 1.2 2003/09/27 01:26:06 mr_bones_ Exp $
+
+which java > /dev/null 2>&1 && \
+	java -jar INSTALL_DIR/cgoban.jar $* && \
+	exit 0
+
+echo "No \"java\" binary found in your PATH."
+echo "You should run \"java-config\" to choose your default VM."
+exit 1
