@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>commonbox</herd>
+  <maintainer>
+	  <email>ka0ttic@gentoo.org</email>
+	  <name>Aaron Walker</name>
+  </maintainer>
   <longdescription>
   fbpanel is a light-weight X11 desktop panel.
   </longdescription>
