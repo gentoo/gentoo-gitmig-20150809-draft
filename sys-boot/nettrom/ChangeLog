@@ -1,9 +1,6 @@
 # ChangeLog for sys-boot/nettrom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/nettrom/ChangeLog,v 1.3 2004/04/21 04:35:25 mr_bones_ Exp $
-
-  20 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> nettrom-2.3.3.ebuild:
-  missing arm profile so no arm keyword yet.
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/nettrom/ChangeLog,v 1.4 2004/04/21 04:50:12 vapier Exp $
 
 *nettrom-2.3.3 (08 Dec 2003)
 
