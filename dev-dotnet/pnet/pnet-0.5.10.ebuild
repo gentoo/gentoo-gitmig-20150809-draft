@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.7 2003/10/02 21:06:17 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.5.10.ebuild,v 1.8 2003/10/04 09:06:52 scandium Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 IUSE=""
 
