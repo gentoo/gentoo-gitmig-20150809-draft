@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/bmp-scrobbler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-scrobbler/ChangeLog,v 1.1 2005/01/07 19:48:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-scrobbler/ChangeLog,v 1.2 2005/04/01 21:38:44 chainsaw Exp $
+
+*bmp-scrobbler-0.3.6-r1 (01 Apr 2005)
+
+  01 Apr 2005; Tony Vroon <chainsaw@gentoo.org> bmp-scrobbler-0.3.6.ebuild,
+  +bmp-scrobbler-0.3.6-r1.ebuild:
+  0.3.6 stable on x86. Bumped to -r1 with debug USE-flag, logic based on the
+  information by Tom Samstag <gentoo@modtwo.com> in bug #87334.
 
 *bmp-scrobbler-0.3.6 (07 Jan 2005)
 
