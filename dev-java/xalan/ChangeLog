@@ -1,9 +1,15 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.6 2002/11/26 04:30:22 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.7 2002/12/02 22:41:32 strider Exp $
 
 *xalan-2.4.1 (01 Nov 2002)
 
+  02 Dec 2002; Adrian Almenar <strider@gentoo.org> xalan-2.4.1.ebuild:
+  Changed Detection of jdk if >=virtual/jdk-1.4 It doesnt build javadocs.
+  Added pkg_postinst() with the URL to API for users with last line problem.
+  Reordered the ebuild so it can be read better. Added code for jars that
+  come with xalan can get into build classpath. Removed all jikes code.
+  
   26 Nov 2002; Adrian Almenar <strider@gentoo.org> xalan-2.4.1.ebuild:
   This ebuild doesnt compile well with jikes. Also to create xdocs i needed to
   use virtualx.class cause needs to connect to xserver. Removed generation
