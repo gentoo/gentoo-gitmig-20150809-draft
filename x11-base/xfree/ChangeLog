@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.38 2002/08/12 23:11:45 azarah Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.39 2002/08/25 14:38:08 danarmak Exp $
+
+  25 Aug 2002; Dan Armak <danarmak@gentoo.org> files/4.2.0-r12/Xsetup_0  :
+
+  Update the kdmrc location logic: look in /usr/kde/*, i.e. in all the
+  directories that actually exist under /usr/kde, instead of hardcoding a
+  list of possible locations.
 
   12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add XFree86-imake-tmpdir.patch, which should resolve bug #5736.
