@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.14 2004/06/25 02:09:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.15 2004/08/07 16:49:30 cardoe Exp $
+
+  07 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tclx-8.3.5.ebuild:
+  Fixes for bug #58730 and #46565.
+  Revision bump and this one resolves some previous problems.
+  Now will emerge without having to unmerge prior version
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> tclx-8.3-r1.ebuild,
   tclx-8.3.ebuild:
