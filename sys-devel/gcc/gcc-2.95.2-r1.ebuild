@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.4 2000/08/21 05:43:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.5 2000/08/23 07:00:07 drobbins Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz libg++-2.8.1.3.tar.gz libg++-2.8.1.3-20000816.diff.gz"
@@ -13,7 +13,7 @@ T=/usr
 DESCRIPTION="modern gcc c/c++ compiler"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz 
 	 ftp://ftp.leo.org/pub/comp/os/unix/gnu/gcc/gcc-2.95.2.tar.gz 
-	 ftp://ftp.freenet.de/pub//gnu/gcc/gcc-2.95.2.tar.gz 
+	 ftp://ftp.freenet.de/pub/ftp.gnu.org/gnu/gcc/gcc-2.95.2.tar.gz 
 	 ftp://sourceware.cygnus.com/pub/gcc/infrastructure/libg++-2.8.1.3.tar.gz
 	 ftp://sourceware.cygnus.com/pub/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
