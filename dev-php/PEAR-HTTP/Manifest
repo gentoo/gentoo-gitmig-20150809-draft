@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 72cfd26dbf89bf780dfc53a097aafb83 PEAR-HTTP-1.3.4.ebuild 363
+MD5 2117aadd308353e47b4063de9cd9dd7d ChangeLog 386
+MD5 12cad635af74bb9aff52ea1dbaf9ea6a files/digest-PEAR-HTTP-1.3.4 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCEu8XaGfFFLhbXWkRAqoHAJ4lHA8lQ5ZRZniWsTwvq2tZL1KtBgCfY/DI
+cJ7nzI2OKzfwRtatOYNDmls=
+=ASUY
+-----END PGP SIGNATURE-----
