@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.1 2002/08/27 00:33:31 gaarde Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.2 2002/10/17 01:23:22 vapier Exp $
 
 # Author:  Paul Belt <gaarde at gentoo dot org>
 
@@ -42,21 +42,21 @@ KEYWORDS="x86"
 
 # Runtime dependancies
 RDEPEND="virtual/glibc
-		 dev-util/dialog
-		 sys-apps/bash
-		 sys-apps/diffutils
-		 sys-apps/e2fsprogs
-		 sys-apps/fileutils
-		 sys-apps/grep
-		 sys-apps/modutils
-		 sys-apps/psmisc
-		 sys-apps/sed
-		 sys-apps/sh-utils
-		 sys-apps/textutils
-		 sys-apps/util-linux
-		 sys-devel/make
-		 sys-devel/perl
-		 sys-libs/ncurses"
+	 dev-util/dialog
+	 sys-apps/bash
+	 sys-apps/diffutils
+	 sys-apps/e2fsprogs
+	 sys-apps/fileutils
+	 sys-apps/grep
+	 sys-apps/modutils
+	 sys-apps/psmisc
+	 sys-apps/sed
+	 sys-apps/sh-utils
+	 sys-apps/textutils
+	 sys-apps/util-linux
+	 sys-devel/make
+	 sys-devel/perl
+	 sys-libs/ncurses"
 
 # Optional: app-admin/smartsuite  (depricated?)
 # Optional: sys-apps/lm_sensors
@@ -65,73 +65,43 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}"
 
 src_compile() {
-   # ./configure \
-   # --host=${CHOST} \
-   # --prefix=/usr \
-   # --infodir=/usr/share/info \
-   # --mandir=/usr/share/man || die "./configure failed"
-   #
-   # make || die
-
 #	econf || die
 	emake || die
 }
 
 src_install () {
-   # make DESTDIR=${D} install || die
-   #
-   # make \
-   #	prefix=${D}/usr \
-   #	mandir=${D}/usr/share/man \
-   #	infodir=${D}/usr/share/info \
-   #	install || die
+	dodoc CHANGELOG FAQ README.FIRST COPYING README README.TCF runin/README.runtest runin/README.tests
 
-   dodoc CHANGELOG FAQ README.FIRST COPYING README README.TCF runin/README.runtest runin/README.tests
+	mkdir -p ${D}/usr/ctcs/runin/bin/
 
-   mkdir -p ${D}/usr/ctcs/runin/bin/
+#	cp -R ${S}/runin ${D}/usr/ctcs/runin
+	cp -Rap ${S}/lib ${D}/usr/ctcs/lib
+	cp -Rap ${S}/selftest ${D}/usr/ctcs/selftest
+	cp -Rap ${S}/sample ${D}/usr/ctcs/sample
 
-#   cp -R ${S}/runin ${D}/usr/ctcs/runin
-   cp -Rap ${S}/lib ${D}/usr/ctcs/lib
-   cp -Rap ${S}/selftest ${D}/usr/ctcs/selftest
-   cp -Rap ${S}/sample ${D}/usr/ctcs/sample
+	# The 'binaries'
+	cp -ap ${S}/burnreset ${S}/check-requirements ${S}/check-syntax ${S}/color \
+		${S}/newburn ${S}/newburn-generator ${S}/report ${S}/run ${D}/usr/ctcs/
 
-   # The 'binaries'
-   cp -ap ${S}/burnreset ${S}/check-requirements ${S}/check-syntax ${S}/color \
-      ${S}/newburn ${S}/newburn-generator ${S}/report ${S}/run ${D}/usr/ctcs/
+	cp -ap ${S}/runin/src/random ${S}/runin/src/prandom ${D}/usr/ctcs/runin/bin/
+	cp -ap ${S}/runin/src/flushb ${D}/usr/ctcs/runin/bin/flushb.real
+	cp -ap ${S}/runin/src/chartst ${S}/runin/src/memtst.src/memtst \
+		${D}/usr/ctcs/runin/
 
-   cp -ap ${S}/runin/src/random ${S}/runin/src/prandom ${D}/usr/ctcs/runin/bin/
-   cp -ap ${S}/runin/src/flushb ${D}/usr/ctcs/runin/bin/flushb.real
-   cp -ap ${S}/runin/src/chartst ${S}/runin/src/memtst.src/memtst \
-          ${D}/usr/ctcs/runin/
-
-   for f in burnBX burnMMX burnP5 burnP6 burnK6 burnK7; do
-      cp ${S}/runin/src/cpuburn/${f} ${D}/usr/ctcs/runin/bin/
-   done
-
-#   einstall || die
-   # into   -- sets prefix for
-   # dobin
-   # dolib
-   # dolib.a
-   # dolib.so
-   # doman
-   # dosbin
-   # doinfo
-   # dosym
-   # dosed
-   # Again, verify the Makefiles!  We don't want anything falling
-   # outside of ${D}.
+	for f in burnBX burnMMX burnP5 burnP6 burnK6 burnK7; do
+		cp ${S}/runin/src/cpuburn/${f} ${D}/usr/ctcs/runin/bin/
+	done
 }
 
 src_postinst() {
-   cd /usr/ctcs/runin
-   dosym messages-info allmessages-info
-   dosym blockrdtst sblockrdtst
-   dosym blockrdtst-info sblockrdtst-info
-   dosym data sdata
-   dosym data-info sdata-info
-   dosym destructiveblocktst sdestructiveblocktst
-   dosym destructiveblocktst-info sdestructiveblocktst-info
-   dosym traverseread-info straverseread-info
-   dosym traverseread straverseread
+	cd /usr/ctcs/runin
+	dosym messages-info allmessages-info
+	dosym blockrdtst sblockrdtst
+	dosym blockrdtst-info sblockrdtst-info
+	dosym data sdata
+	dosym data-info sdata-info
+	dosym destructiveblocktst sdestructiveblocktst
+	dosym destructiveblocktst-info sdestructiveblocktst-info
+	dosym traverseread-info straverseread-info
+	dosym traverseread straverseread
 }
