@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc., Emil Sköldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.7 2003/08/31 21:50:37 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.8 2003/09/01 19:36:50 scandium Exp $
 
 inherit flag-o-matic
 
@@ -40,7 +40,7 @@ src_compile() {
 	PATH="${S}/bin:${PATH}" make || die
 }
 
-src_install () {
+src_install() {
 	# the installer should be stopped from removing files
 	sed -i s/rm\(mod\+\"\.o\"\)\;/\{\}/ ${S}/bin/install.pike || die "Failed to modify install.pike"
 	make INSTALLARGS="--traditional" buildroot="${D}" install || die
