@@ -1,5 +1,15 @@
-MD5 c1d11bbe2b2a6f8b5aa7b52137f6bc3e libnids-1.18.ebuild 1049
-MD5 3a16ac9a6e777fde32a6bccc6314e8d5 ChangeLog 1809
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb937b2beae7efc259d0bfb6616d98d6 libnids-1.18.ebuild 986
+MD5 336449356c187d7f842f58e01ad3ff7b ChangeLog 2141
+MD5 c9a3c259574bc6c3d7583402ad67e763 metadata.xml 311
 MD5 b8821b8ac4cbf9a8d5c0ce7eadc5f710 files/digest-libnids-1.18 64
-MD5 461dcf2a88008ece06f32599af5e7878 files/1.16-libnet-1.0.patch 2230
-MD5 2398bb37cb63ed70642a6e2fa23edbd5 files/libnids_gcc33_fix 4724
+MD5 4f1acaf2ec159ddfba1e456f21c99112 files/libnids-1.18-chksum.c-ebx.patch 615
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBws81T+MN7JbqCpMRAr3SAJ9M+RjiPMXrTU2TpcILNtW9jufddQCghmYV
+XFaxreSOckm5iUkHAgy8Yc4=
+=uKHo
+-----END PGP SIGNATURE-----

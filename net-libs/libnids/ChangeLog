@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.12 2004/09/03 19:59:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.13 2004/12/17 12:22:01 eldad Exp $
+
+  17 Dec 2004; Eldad Zack <eldad@gentoo.org> -files/1.16-libnet-1.0.patch,
+  +files/libnids-1.18-chksum.c-ebx.patch, -files/libnids_gcc33_fix,
+  libnids-1.18.ebuild:
+  Cleanup. Added patch to prevent clobbering of ebx, in order to compile cleanly
+  with gcc 3.5. Thanks to Thomas <Thomas.Eschenbacher@gmx.de>. Closes bug
+  #55906.
 
   03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -libnids-1.16-r1.ebuild,
   -libnids-1.16.ebuild, -libnids-1.17_rc1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.4 2004/07/15 00:56:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.5 2004/12/17 12:22:01 eldad Exp $
 
 inherit eutils
 
@@ -16,13 +16,10 @@ IUSE=""
 DEPEND="net-libs/libpcap
 	>=net-libs/libnet-1.1.0-r3"
 
-S=${WORKDIR}/${P/_rc1}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# patch no longer patches clean >=libnids-1.18
-	# epatch ${FILESDIR}/libnids_gcc33_fix
+	epatch ${FILESDIR}/libnids-1.18-chksum.c-ebx.patch
 }
 
 src_compile() {
