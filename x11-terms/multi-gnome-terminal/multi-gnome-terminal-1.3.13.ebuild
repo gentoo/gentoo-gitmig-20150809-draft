@@ -1,7 +1,8 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.3.10.ebuild,v 1.1 2002/01/29 01:27:48 azarah Exp $
+# Maintainer: Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.3.13.ebuild,v 1.1 2002/02/26 19:57:57 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended version of the Gnome Terminal."
@@ -34,6 +35,10 @@ src_compile() {
 
 src_install() {
 
+	cp ${S}/omf-install/Makefile ${S}/omf-install/Makefile.orig
+	sed -e "s:scrollkeeper-update.*::g" ${S}/omf-install/Makefile.orig \
+		> ${S}/omf-install/Makefile
+
 	make prefix=${D}/usr						\
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\
@@ -54,5 +59,15 @@ pkg_postinst() {
 	echo '*  "ctrl-l n" like stated in the docs, but "ctrl-F1 n".            *'
 	echo "********************************************************************"
 	echo
+	
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
 }
+
+pkg_postrm() {
+
+	echo ">>> Updating Scrollkeeper database..."
+	scrollkeeper-update >/dev/null 2>&1
+}
+				
 
