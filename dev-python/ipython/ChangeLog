@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.12 2005/01/29 13:36:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.13 2005/02/23 05:18:54 fserb Exp $
+
+*ipython-0.6.11 (23 Feb 2005)
+
+  23 Feb 2005; Fernando Serboncini <fserb@gentoo.org>
+  +ipython-0.6.11.ebuild:
+  Version Bump.
 
   29 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> -ipython-0.6.0.ebuild,
   -ipython-0.6.3.ebuild, -ipython-0.6.5.ebuild:
