@@ -1,3 +1,4 @@
+MD5 a37dac893ea2b05a2c58e0fb68b45268 gnome-terminal-2.4.0.1.ebuild 1327
 MD5 61f1ed4c5adec0486113818e1f1e5954 gnome-terminal-2.2.0.ebuild 861
 MD5 88997c73a698196a21f2b4572e72494c gnome-terminal-2.2.2.ebuild 1173
 MD5 507f219d22c5b4a807f5885ebd7d27b5 gnome-terminal-2.2.1-r1.ebuild 1172
@@ -12,3 +13,4 @@ MD5 e5fad4021ef10b03842a46119ae5e2b8 files/digest-gnome-terminal-2.3.2 74
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 MD5 4513cc772232b6e41dc1d057fa07d3a7 files/digest-gnome-terminal-2.2.1-r1 73
 MD5 206e36d5520f43272f029d6411af6332 files/gnome-terminal-2-dnd_url_add_space.patch 1000
+MD5 3c82681825a313b5d5342acb6f82cd8f files/digest-gnome-terminal-2.4.0.1 76
