@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.4 2003/10/08 23:36:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre1-r1.ebuild,v 1.5 2003/10/08 23:49:38 azarah Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
 
@@ -68,6 +68,19 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
+
+pkg_setup() {
+	echo
+	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
+	einfo "or the environment, as the MPlayer guys then do not give support"
+	einfo "in case of bug reports!."
+	echo
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	sleep 3
+}
 
 src_unpack() {
 
