@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2692 2004/02/12 22:12:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2693 2004/02/12 22:18:17 genone Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,13 @@
 ##
 ##   End example
 ##
+
+# <genone@gentoo.org> (12 Feb 2004)
+# masking stuff that depends on realplayer as it breaks the dependency chain
+# with realplayer being masked.
+media-sound/vsound
+media-plugins/rmxmms
+media-plugins/realvideo-codecs
 
 # <pauldv@gentoo.org> (08 Feb 2004)
 # Pre-release
