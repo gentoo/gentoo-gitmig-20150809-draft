@@ -1,31 +1,6 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.43 2004/09/03 21:03:23 pvdabeel Exp $
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild,
-  apcupsd-3.10.10.ebuild, apcupsd-3.10.13.ebuild, apcupsd-3.10.8.ebuild,
-  apcupsd-3.10.9.ebuild:
-  Masked apcupsd-3.10.9.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild,
-  apcupsd-3.10.10.ebuild, apcupsd-3.10.13.ebuild, apcupsd-3.10.8.ebuild:
-  Masked apcupsd-3.10.8.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild,
-  apcupsd-3.10.10.ebuild, apcupsd-3.10.13.ebuild:
-  Masked apcupsd-3.10.13.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild,
-  apcupsd-3.10.10.ebuild:
-  Masked apcupsd-3.10.10.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  apcupsd-3.10.10-r1.ebuild, apcupsd-3.10.10-r2.ebuild:
-  Masked apcupsd-3.10.10-r2.ebuild stable for ppc
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.44 2004/10/03 10:20:21 vapier Exp $
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   apcupsd-3.10.10-r1.ebuild:
