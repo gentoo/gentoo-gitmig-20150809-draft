@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p7.ebuild,v 1.3 2004/03/01 03:47:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.1 2004/04/24 18:11:34 max Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4"
@@ -50,11 +50,17 @@ S="${WORKDIR}/${PN}-${PV/_*/}"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/uid-as-string.patch"
+
+	# Allow address extension policies in per-user SQL lookups.
+	epatch "${FILESDIR}/addr_extensions_in_sql.patch"
+	# Add an SQL server timeout/reconnect setting.
+	epatch "${FILESDIR}/sql_timeout.patch"
+	# Catch an extra SQL server disconnection error.
+	epatch "${FILESDIR}/lost_connection.patch"
 }
 
 src_compile() {
-	if [ "`use milter`" ] ; then
+	if use milter ; then
 		cd "${S}/helper-progs"
 
 		econf --with-runtime-dir=/var/run/amavis \
@@ -99,7 +105,7 @@ src_install() {
 	dodoc AAAREADME.first INSTALL LDAP.schema LICENSE MANIFEST RELEASE_NOTES \
 		README_FILES/* test-messages/sample-*
 
-	if [ "`use milter`" ] ; then
+	if use milter ; then
 		cd "${S}/helper-progs"
 		einstall
 	fi

@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.11 2004/03/15 17:51:41 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.12 2004/04/24 18:11:34 max Exp $
+
+*amavisd-new-20030616_p9 (24 Apr 2004)
+
+  24 Apr 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p7.ebuild,
+  amavisd-new-20030616_p9.ebuild, files/addr_extensions_in_sql.patch,
+  files/lost_connection.patch, files/sql_timeout.patch,
+  files/uid-as-string.patch:
+  Bump to version _p9. Add 3 patches: allow address extensions (for virus, spam,
+  banned mails to go to a + address) in per-user SQL policies; catch another SQL
+  server going away error; add sql_timeout setting for allowing SQL server
+  reconnection after a configured period.
 
   15 Mar 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p8.ebuild:
   Bump to stable x86.
