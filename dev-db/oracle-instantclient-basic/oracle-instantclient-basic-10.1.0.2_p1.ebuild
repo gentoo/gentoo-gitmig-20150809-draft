@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.2_p1.ebuild,v 1.1 2004/06/21 18:04:18 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.1.0.2_p1.ebuild,v 1.2 2004/06/21 18:22:23 rizzo Exp $
 
 inherit eutils
 
-#MY_PV="${P}-1.i386"
 MY_PV=${PV/_p/-}
 MY_P="${PN}-${MY_PV}.i386"
 
@@ -35,7 +34,6 @@ src_unpack() {
 }
 
 src_install() {
-	#mv ${S}/usr ${D}
 	dodir /usr/lib/oracle/10.1.0.2/client/lib
 	cd ${S}/usr/lib/oracle/10.1.0.2/client/lib
 	insinto /usr/lib/oracle/10.1.0.2/client/lib
