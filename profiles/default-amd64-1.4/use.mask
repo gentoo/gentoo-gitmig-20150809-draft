@@ -3,7 +3,7 @@
 svga
 
 # There is no JDK for x86_64 yet
-java
+#java
 jikes
 junit
 
