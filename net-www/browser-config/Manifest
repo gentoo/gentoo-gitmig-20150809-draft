@@ -1,3 +1,5 @@
-MD5 72ea6f0354021b4191ec0f9b490c01a9 browser-config-1.0.ebuild 553
-MD5 1193f9a649049690fd2feb28f702067b ChangeLog 262
+MD5 4581c058b2f07556d3fdb9a213014044 browser-config-1.0.ebuild 666
+MD5 8780b79c3e6d86415ba246eca42155ff ChangeLog 488
+MD5 4581c058b2f07556d3fdb9a213014044 browser-config-1.1.ebuild 666
 MD5 14e7b15b23fe359fa1dded672c66e510 files/digest-browser-config-1.0 69
+MD5 5641217d4d94086694f1ae2e6e2a56a5 files/digest-browser-config-1.1 69
