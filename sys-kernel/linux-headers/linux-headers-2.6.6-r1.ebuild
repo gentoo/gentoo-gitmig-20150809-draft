@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6-r1.ebuild,v 1.2 2004/06/23 22:49:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6-r1.ebuild,v 1.3 2004/06/24 08:32:36 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -58,6 +58,7 @@ src_unpack() {
 	if use amd64; then
 		cd ${S}/include/asm-x86_64/
 		epatch ${FILESDIR}/linux-headers-2.6.4-unistd-nptl-fix.patch
+		cd ${S}
 	fi
 
 	# 2.6.7 structure change backport to get iproute2 to compile on
