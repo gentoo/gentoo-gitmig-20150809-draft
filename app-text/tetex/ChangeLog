@@ -1,9 +1,18 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.43 2003/08/14 14:52:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.44 2003/09/07 01:01:48 drobbins Exp $
 
-  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild:
-  Added virtual/tetex PROVIDE
+  06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> tetex-2.0.2-r1.ebuild,
+  tetex-1.0.7-r13.ebuild: removed png, libwww and ncurses USE variables, which
+  were off by default.  This fixes bugs 14709 and 20843.  We want tetex to use
+  *our* libpng, libwww and ncurses packages so that we can track dependencies
+  correctly. The internal libwww was using mysql sometimes, resulting in fried
+  compiles since it seemed to often mis-detect mysql availability. Our libwww
+  ebuild does much better. Also added an RDEPEND fix (tons of stuff was
+  missing.)
+  
+  14 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild: Added
+  virtual/tetex PROVIDE
 
   02 Aug 2003; Todd Sunderlin <todd@gentoo.org> tetex-2.0.2.ebuild:
   Marked stable for sparc
