@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.76 2004/07/17 09:54:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.77 2004/07/21 13:39:47 fmccor Exp $
+
+  21 Jul 2004; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.1-r7.ebuild:
+  Marked stable for sparc.
 
 *ruby-1.8.2_pre1 (17 Jul 2004)
 
