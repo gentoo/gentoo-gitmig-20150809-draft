@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/files/capisuite,v 1.1 2003/11/27 15:42:44 brandy Exp $
+
+depend() {
+	need capi
+}
+
+start() {
+	ebegin "Starting capisuite"
+	start-stop-daemon --start --quiet --pidfile /var/run/capisuite.pid --exec /usr/sbin/capisuite -- -d
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping capisuite"
+	killall -9 capisuite
+	eend $?
+}
