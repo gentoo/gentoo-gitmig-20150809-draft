@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.10 2002/12/20 21:37:29 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.11 2003/02/09 17:53:34 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> textutils-2.1.ebuild :
+  Added hppa to keywords.
 
 *textutils-2.1 (20 Dec 2002)
 
