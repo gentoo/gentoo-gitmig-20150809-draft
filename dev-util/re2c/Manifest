@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 540a60d3b00edb236fa134b7b13d99b9 ChangeLog 1451
-MD5 ac2b92d72e9a2bb03fb5547576a5f106 re2c-0.9.1.ebuild 840
-MD5 2f5a9090619e9dd29ac5f708d80a9c03 re2c-0.9.3.ebuild 768
+MD5 d79a5160c7498b6fb45dd46b4ce5b1a1 re2c-0.9.1.ebuild 774
+MD5 d14061886b9569106cf6149ff4788fc1 re2c-0.9.3.ebuild 705
 MD5 9ab079edcf8f22efe343fb3b1c4722b4 files/0.9.1-patch.gz 1466
 MD5 63995d480a554e62b5d950e649397cea files/digest-re2c-0.9.1 62
 MD5 7a14f80c1e008a42c699a8899bd290cc files/digest-re2c-0.9.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBU2OBHTu7gpaalycRAswNAJ4rouropBbIaiTQPs7WwPXul0a+uACg0H3B
+Cc6oy+Dk0iU3QxB/KV+cxrk=
+=E6YC
+-----END PGP SIGNATURE-----
