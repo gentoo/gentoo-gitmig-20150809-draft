@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.4 2002/08/16 04:13:57 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.96.ebuild,v 1.5 2002/09/20 23:43:56 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Framework for creating database applications"
@@ -29,6 +29,7 @@ src_compile() {
 	else
 		myopts="--disable-nls"
 	fi
+	# disabling gtk-doc since it was broken in documentation
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
@@ -36,6 +37,7 @@ src_compile() {
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
 		--disable-bonobotest \
+		--disable-gtk-doc \
 		${myopts} || die
 	emake || die
 }
