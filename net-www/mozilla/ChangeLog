@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.156 2004/03/28 22:57:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.157 2004/03/29 02:45:19 agriffis Exp $
+
+  28 Mar 2004; Aron Griffis <agriffis@gentoo.org> -mozilla-1.5-r1.ebuild,
+  -mozilla-1.6.ebuild:
+  Remove older ebuilds for bug 43072: Cross-domain javascript exploit
 
   29 Mar 2004; Lars Weiler <pylon@gentoo.org> mozilla-1.6-r1.ebuild:
   stable on ppc
