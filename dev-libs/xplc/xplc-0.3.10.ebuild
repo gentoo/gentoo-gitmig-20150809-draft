@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.10.ebuild,v 1.10 2004/12/27 19:41:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.10.ebuild,v 1.11 2005/01/04 20:08:08 sekretarz Exp $
 
 DESCRIPTION="cross platform lightweight components library for C++"
 HOMEPAGE="http://xplc.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/xplc/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~amd64 ~ppc hppa"
+KEYWORDS="x86 sparc alpha amd64 ~ppc hppa"
 IUSE=""
 
 DEPEND="virtual/libc
