@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.12 2003/02/17 18:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.13 2003/03/20 13:35:49 seemant Exp $
+
+*dc-gui-0.71 (20 Mar 2003)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> dc-gui-0.71.ebuild:
+  moved dc-gui2 to SLOT=2 here
 
 *dc-gui-0.66 (17 Feb 2003)
 
