@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/elfkickers
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.1 2003/07/25 20:37:26 solar Exp $
+
+*elfkickers-2.0a (25 Jul 2003)
+
+  25 Jul 2003; <solar@gentoo.org> elfkickers-2.0a.ebuild, metadata.xml,
+  files/elfkickers-2.0a.diff:
+  Initial import of ELFkickers into portage, adds tools such as sstrip, rebind,
+  elfls, elftoc, ebfc
+
