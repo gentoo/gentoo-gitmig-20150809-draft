@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.4.ebuild,v 1.7 2003/10/04 23:46:36 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.4.ebuild,v 1.8 2003/10/07 14:55:47 brad_mssw Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -44,6 +44,7 @@ src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/focus-patch.diff
 	epatch ${FILESDIR}/konq-crash-patch.diff
+	use amd64 && epatch ${FILESDIR}/kdebase-3.1.4-amd64-accessviol.patch
 	#cd ${S} && aclocal
 }
 
