@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/libuta
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/ChangeLog,v 1.1 2002/04/12 21:51:25 spider Exp $
+
+*libuta-0.4.1-r1 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>
+  Initial ChangeLog
+  Updating revision to work with new libpng
