@@ -14,13 +14,13 @@ MD5 d762a24b5c857658cc0a06432b122439 files/2.4.7.20010824-local-exploit-fix.patc
 MD5 d3a321fa8b70eef6df11d7343a14fd02 files/2.4.7.20020116-hfsc.patch 9507
 MD5 2d163d8622e69d17eb7ba73a61ffb51e files/2.4.7.20020116-local-exploit-fix.patch 666
 MD5 249c1788ee3cc7a3d55dee871076a5a1 files/2.4.7.20020116-misc-deb-fixes.patch 977
-MD5 efc13e1a9a4a7bd080305d540ff5d48d files/digest-iproute2-2.6.7.20040608 75
+MD5 deaba7e1316d6929cd4051724db3b885 files/digest-iproute2-2.6.7.20040608 161
 MD5 d0071e387038661c76eefb2c8e6b5c46 files/2.6.7.20040608-misc-deb-fixes.patch 632
 MD5 24a69d69fb222231a8d0f4358743190f files/2.6.7.20040608-misc-gentoo-fixes.patch 3970
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBDxkuHTu7gpaalycRAkEwAJwImOyRKNgv6+6NvrdYhd3+GRaYfQCfR9au
-KfK/j1j/zr86gDMkfDmCQBQ=
-=lNZQ
+iD8DBQFBEEZUHTu7gpaalycRAgW8AJ0dUdl+7hw69Yf43ZN6KuH0jXxYeACg+eep
+HI0MGHrLthD+rTn+FJI7YVU=
+=XXtq
 -----END PGP SIGNATURE-----
