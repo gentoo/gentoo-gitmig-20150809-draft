@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/pipebench
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/ChangeLog,v 1.1 2004/04/18 19:07:22 usata Exp $
+
+*pipebench-0.40 (19 Apr 2004)
+
+  19 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> pipebench-0.40.ebuild:
+  Initial import. Ebuild submitted by Eric Ball <me@ericball.id.au>,
+  closing bug #18854.
+
