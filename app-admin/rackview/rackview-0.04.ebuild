@@ -13,6 +13,7 @@ KEYWORDS="~x86"
 LICENSE="Artistic"
 IUSE="apache2 mysql"
 DEPEND="dev-lang/perl
+	dev-perl/GD
 	mysql? ( dev-db/mysql )"
 DOCS="ChangeLog COPYING README* doc/*"
 
