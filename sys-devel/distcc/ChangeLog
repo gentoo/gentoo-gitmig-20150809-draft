@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.80 2003/10/23 20:17:21 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.81 2003/10/24 16:24:07 pebenito Exp $
+
+  24 Oct 2003; Chris PeBenito <pebenito@gentoo.org> distcc-2.10-r3.ebuild,
+  distcc-2.11-r1.ebuild, distcc-2.11-r2.ebuild, distcc-2.11.1-r1.ebuild,
+  distcc-2.11.1.ebuild, distcc-2.11.2.ebuild, distcc-2.5-r1.ebuild,
+  distcc-2.8-r2.ebuild, distcc-2.9.ebuild:
+  Add in selinux to IUSE, since I forgot to do it when I added the selinux RDEP.
 
 *distcc-2.11.2 (23 Oct 2003)
 

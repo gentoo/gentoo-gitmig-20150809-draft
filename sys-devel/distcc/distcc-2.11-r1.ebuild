@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.11-r1.ebuild,v 1.1 2003/09/24 16:43:05 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.11-r1.ebuild,v 1.2 2003/10/24 16:24:07 pebenito Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -14,7 +14,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
-IUSE="gnome"
+IUSE="gnome selinux"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
