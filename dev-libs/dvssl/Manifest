@@ -1,3 +1,5 @@
-MD5 ce360adf9226f833c8ee2e3210460416 ChangeLog 340
-MD5 1f658a6c45429a4b0b5adb40328263f0 dvssl-0.5.2.ebuild 669
+MD5 93f9fccf64198fa01992f47037989176 ChangeLog 446
+MD5 7dcd79d081228c9d9b6604b76a7cd977 dvssl-0.5.2.ebuild 676
+MD5 40cc0aad67ba70e762eff957b6987796 dvssl-0.5.3.ebuild 758
 MD5 7f3368008fd615dc0434aa56d0ae06f3 files/digest-dvssl-0.5.2 63
+MD5 2cb53d863845f9d7d16f1d0cccc6666d files/digest-dvssl-0.5.3 63
