@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/kemistry
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.6 2003/02/12 05:17:03 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.7 2004/03/15 14:11:59 phosphan Exp $
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> kemistry-0.6.ebuild,
+  kemistry-0.7.ebuild:
+  Moved "newdepend" a little down, so that it really has an effect now. Fixes
+  bug #41664
 
 *kemistry-0.7 (26 Jan 2003)
 

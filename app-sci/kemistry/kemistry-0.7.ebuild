@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/kemistry-0.7.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
-
-newdepend "kde-base/kdesdk"
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/kemistry-0.7.ebuild,v 1.3 2004/03/15 14:12:00 phosphan Exp $
 
 inherit kde-base
 need-kde 3
+newdepend "kde-base/kdesdk"
+
 IUSE=""
 KEYWORDS="x86"
 LICENSE="GPL-2"
