@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.8 2004/07/01 11:16:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.9 2004/07/05 23:58:58 mr_bones_ Exp $
 
 inherit games
 
@@ -21,9 +21,9 @@ RDEPEND="dedicated? ( app-misc/screen )
 	!dedicated? ( virtual/opengl )
 	opengl? ( virtual/opengl )"
 
-S=${WORKDIR}
-dir=${GAMES_PREFIX_OPT}/${PN}
-Ddir=${D}/${dir}
+S="${WORKDIR}"
+dir="${GAMES_PREFIX_OPT}/${PN}"
+Ddir="${D}/${dir}"
 
 pkg_setup() {
 	check_license || die "License check failed"
@@ -35,33 +35,35 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
+	exeinto "${dir}"
+	doexe bin/Linux/x86/* openurl.sh || die "doexe failed"
+	insinto "${dir}"
+	doins CHANGES v1.02_Readme.htm || die "doins failed"
+	insinto /usr/share/pixmaps
+	doins ET.xpm
 
-	cp -r Docs pb etmain ${Ddir}
+	cp -r Docs pb etmain "${Ddir}" || die "cp failed"
 
-	exeinto ${dir} ; doexe bin/Linux/x86/* openurl.sh
-	insinto ${dir} ; doins CHANGES v1.02_Readme.htm
-	insinto /usr/share/pixmaps ; doins ET.xpm
-
-	dogamesbin ${FILESDIR}/et
+	dogamesbin "${FILESDIR}/et" || die "dogamesbin failed"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et
 	if use dedicated ; then
-		dogamesbin ${FILESDIR}/et-ded
-		dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et-ded
-		exeinto /etc/init.d ; newexe ${FILESDIR}/et-ded.rc et-ded
+		dogamesbin "${FILESDIR}/et-ded" || die "dogamesbin failed"
+		dosed "s:GENTOO_DIR:${dir}:" "${GAMES_BINDIR}/et-ded"
+		exeinto /etc/init.d
+		newexe "${FILESDIR}/et-ded.rc" et-ded || die "newexe failed"
 		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
 		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
-		insinto /etc/conf.d ; newins ${FILESDIR}/et-ded.conf.d et-ded
+		insinto /etc/conf.d
+		newins "${FILESDIR}/et-ded.conf.d" et-ded || die "newins failed"
 	fi
 
 	# TODO: move this to /var/ perhaps ?
-	dodir ${dir}/etwolf-homedir
-	dosym ${dir}/etwolf-homedir ${GAMES_PREFIX}/.etwolf
-	keepdir ${dir}/etwolf-homedir
+	dodir "${dir}/etwolf-homedir"
+	dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
 
 	prepgamesdirs
 	make_desktop_entry et "Enemy Territory" ET.xpm
-	chmod g+rw ${Ddir} ${Ddir}/etwolf-homedir ${Ddir}/etmain
+	chmod g+rw "${Ddir}" "${Ddir}/etwolf-homedir" "${Ddir}/etmain"
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.13 2004/07/01 11:16:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.14 2004/07/05 23:58:57 mr_bones_ Exp $
+
+  05 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  enemy-territory-2.56-r2.ebuild:
+  Error check; tidy
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   enemy-territory-2.56-r2.ebuild:
