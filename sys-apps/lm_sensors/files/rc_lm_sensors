@@ -1,0 +1,30 @@
+#!/sbin/runscript
+
+start() {
+	if ! [ -f /etc/sysconfig/lm_sensors ] ; then
+		eerror "/etc/sysconfig/lm_sensors does not exist"
+		return 1
+	fi
+
+	. /etc/sysconfig/lm_sensors
+
+	ebegin "Loading lm_sensors modules"
+	eend $?
+	if ! [ -e /proc/sys/dev/sensors ] ; then
+		ebegin "  Loading i2c-proc"
+		modprobe i2c-proc &>/dev/null
+		eend $?
+	fi
+	[ -e /proc/sys/dev/sensors ] || return 1
+
+	modules=`grep \^MODULE_ /etc/sysconfig/lm_sensors |wc -l`
+	i=1
+	while [ ${i} -le ${modules} ] ; do
+		module=`eval echo '$'MODULE_${i}`
+		ebegin "  Loading ${module}"
+		modprobe ${module} &>/dev/null
+		eend $?
+		i=$((i+1))
+	done
+	return 0
+}
