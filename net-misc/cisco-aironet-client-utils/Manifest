@@ -1,2 +1,5 @@
-MD5 1207acd022d27e44b22691d11940df82 cisco-aironet-client-utils-2.0.ebuild 1461
+MD5 126762c83cad0eda5aa5a23089df8b3a cisco-aironet-client-utils-2.0.ebuild 1111
+MD5 260f379d7fb2e5bda617266e584c6259 ChangeLog 450
+MD5 9064d8240c7226834b86c4e84b34a343 metadata.xml 434
+MD5 366a70339e8bde9b5f98c82de54e7ee1 files/90cisco 20
 MD5 873c008583c916c4c822dea9098cf21c files/digest-cisco-aironet-client-utils-2.0 74
