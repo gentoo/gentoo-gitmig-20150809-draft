@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.64 2004/11/17 23:17:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.65 2004/11/18 07:00:30 eradicator Exp $
+
+*webmin-1.170-r1 (17 Nov 2004)
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/virtual-server-2.31-checkip.patch,
+  +files/virtual-server-2.31-namevirtual.patch,
+  +files/virtual-server-2.31-nocgibin.patch,
+  +files/virtual-server-2.31-pgsql.patch, +files/webmin-1.170-postfix.patch,
+  +webmin-1.170-r1.ebuild:
+  Revision bump to include virtualmin.
 
 *webmin-1.170 (17 Nov 2004)
 
