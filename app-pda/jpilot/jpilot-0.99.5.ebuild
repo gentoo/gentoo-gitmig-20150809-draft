@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.4 2003/09/08 07:22:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.5 2003/09/08 07:23:13 msterret Exp $
 
 SYNCMAL="0.71.2"
 MALSYNC="2.1.1"
@@ -34,7 +34,7 @@ src_compile() {
 	use nls || myconf="--disable-nls"
 	use gtk2 && myconf="${myconf} --enable-gtk2" \
 			 || myconf="${myconf} --disable-gtk2"
-    econf ${myconf}
+	econf ${myconf}
 
 	# make sure we use $CFLAGS
 	mv Makefile Makefile.old
