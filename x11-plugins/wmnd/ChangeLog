@@ -1,10 +1,13 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.4 2003/02/12 09:42:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.5 2003/04/01 21:54:01 spider Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *wmnd-0.4.3 (04 Oct 2002)
+
+  01 apr 2003; <spider@gentoo.org> wmnd-0.4.3.ebuild:
+  Removed xpm dep.  xpm lib is deprecated since a long time.  bug #1446
 
   04 Oct 2002; Nick Hadaway <raker@gentoo.org> wmnd-0.4.3.ebuild,
   files/digest-wmnd-0.4.3 :

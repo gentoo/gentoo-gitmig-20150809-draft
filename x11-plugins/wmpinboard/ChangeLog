@@ -1,10 +1,13 @@
 # ChangeLog for x11-plugins/wmpinboard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/ChangeLog,v 1.4 2003/02/12 09:43:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/ChangeLog,v 1.5 2003/04/01 21:58:25 spider Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *wmpinboard-1.0 (26 May 2002)
+
+  01 apr 2003; <spider@gentoo.org> wmpinboard-1.0.ebuild:
+  fixing bug 1446, removed xpm dependency
 
   30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
