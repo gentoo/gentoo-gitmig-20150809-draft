@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.87 2004/08/30 17:35:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.88 2004/09/01 08:05:52 usata Exp $
+
+  01 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +files/ruby-rdoc-gentoo.diff,
+  ruby-1.8.2_pre2.ebuild:
+  Fixed build failure when installing ruby +doc for the first time.
+  Thanks to Phil Pennock <gentoo@spodhuis.demon.nl>, closing bug #62369.
 
   31 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-1.6.8-r10.ebuild,
   ruby-1.6.8-r11.ebuild, ruby-1.8.2_pre2.ebuild:

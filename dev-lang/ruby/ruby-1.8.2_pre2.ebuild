@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.9 2004/08/30 17:35:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.10 2004/09/01 08:05:52 usata Exp $
 
 ONIGURUMA="onigd2_3_1"
 MY_P=${P/_pre/-preview}
@@ -48,6 +48,9 @@ src_unpack() {
 	if use alpha ; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
+
+	cd ${S}
+	epatch ${FILESDIR}/ruby-rdoc-gentoo.diff
 }
 
 src_compile() {
@@ -75,6 +78,13 @@ src_compile() {
 }
 
 src_install() {
+	LD_LIBRARY_PATH=${D}/usr/lib
+	RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	for d in $(find ${S}/ext -type d) ; do
+		RUBYLIB="${RUBYLIB}:$d"
+	done
+	export LD_LIBRARY_PATH RUBYLIB
+
 	make DESTDIR=${D} install || die "make install failed"
 
 	if use macos ; then

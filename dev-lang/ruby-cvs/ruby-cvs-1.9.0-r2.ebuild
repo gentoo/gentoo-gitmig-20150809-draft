@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.1 2004/08/30 18:19:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r2.ebuild,v 1.2 2004/09/01 08:07:58 usata Exp $
 
 IUSE="socks5 tcltk doc"
 
@@ -31,6 +31,8 @@ ECVS_SERVER="cvs.ruby-lang.org:/src"
 ECVS_MODULE="ruby"
 ECVS_AUTH="pserver"
 ECVS_PASS="anonymous"
+ECVS_UP_OPTS="-dP -rHEAD"
+ECVS_CO_OPTS="-rHEAD"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
@@ -66,8 +68,13 @@ src_compile() {
 }
 
 src_install() {
-	#export RUBY=${D}/usr/bin/ruby19
-	export LD_LIBRARY_PATH=${D}/usr/lib RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	LD_LIBRARY_PATH=${D}/usr/lib
+	RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	for d in $(find ${S}/ext -type d) ; do
+		RUBYLIB="${RUBYLIB}:$d"
+	done
+	export LD_LIBRARY_PATH RUBYLIB
+
 	make DESTDIR=${D} install || die "make install failed"
 
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}

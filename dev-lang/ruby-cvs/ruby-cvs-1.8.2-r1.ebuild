@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.1 2004/08/30 18:19:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.2 2004/09/01 08:07:58 usata Exp $
 
 IUSE="socks5 tcltk doc"
 
-inherit flag-o-matic alternatives gnuconfig cvs
+inherit flag-o-matic alternatives gnuconfig cvs eutils
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -44,6 +44,8 @@ src_compile() {
 		die "version mismatch"
 	fi
 
+	epatch ${FILESDIR}/ruby-rdoc-gentoo.diff
+
 	# Socks support via dante
 	if ! use socks5 ; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
@@ -69,7 +71,14 @@ src_compile() {
 }
 
 src_install() {
-	einstall DESTDIR=${D} || die "einstall failed"
+	LD_LIBRARY_PATH=${D}/usr/lib
+	RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	for d in $(find ${S}/ext -type d) ; do
+		RUBYLIB="${RUBYLIB}:$d"
+	done
+	export LD_LIBRARY_PATH RUBYLIB
+
+	make DESTDIR=${D} install || die "einstall failed"
 
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}
