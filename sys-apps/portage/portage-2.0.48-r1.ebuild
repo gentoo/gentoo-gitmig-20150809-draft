@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.10 2003/06/22 09:41:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.11 2003/06/22 10:19:27 taviso Exp $
 
 IUSE="build"
 
@@ -12,7 +12,7 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86 amd64 alpha"
+KEYWORDS="x86 amd64 alpha arm hppa mips ppc sparc"
 #KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
