@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/speech-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.2 2004/02/12 06:04:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/ChangeLog,v 1.3 2004/02/19 03:58:07 augustus Exp $
+
+  18 Feb 2004; <augustus@gentoo.org> speech-tools-1.2.3.ebuild:
+  Added amd64 to keywords. festival works fine on AMD64. Marked stable since
+  it's the only release.
 
   11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   speech-tools-1.2.3.ebuild:
