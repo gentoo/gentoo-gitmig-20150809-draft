@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.0_pre1.ebuild,v 1.1 2003/03/16 15:03:14 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.0_pre1.ebuild,v 1.2 2003/03/23 18:58:01 phoenix Exp $
 
 IUSE="cups opengl"
+
+inherit eutils
 
 # Dont modify the ECVS_BRANCH setting yourself.
 # Instead, make a backup of this ebuild and rename it to
@@ -53,6 +55,9 @@ src_compile() {
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
+	# patching winex to not compile wcmd
+	epatch ${FILESDIR}/winex-cvs-3.0_pre1.patch
+
 	# the folks at #winehq were really angry about custom optimization
 	unset CFLAGS
 	unset CXXFLAGS
@@ -76,7 +81,7 @@ src_compile() {
 
 	cd ${S}	
 	make depend all || die "make depend all failed"
-	cd programs && emake || die "emake died"
+	cd programs && gmake || die "emake died"
 }
 
 src_install () {
