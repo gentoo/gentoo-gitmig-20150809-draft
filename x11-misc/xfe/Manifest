@@ -1,3 +1,4 @@
-MD5 af2a9816c804b1fffa0b1f08310d72ef ChangeLog 467
-MD5 62afc33d9fac42319be42161e9728fe0 xfe-0.54.2.ebuild 842
 MD5 29ee287c9178642a5a8d667fa5312a5f files/digest-xfe-0.54.2 62
+MD5 4d6c0d627be64bf5c4c53ea09d8f4653 ChangeLog 555
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 2ad192ace04b7af629ac8f7eb5503313 xfe-0.54.2.ebuild 603
