@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/progsreiserfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.7 2003/06/16 01:26:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.8 2003/06/20 22:38:18 weeve Exp $
+
+  20 Jun 2003; Jason Wever <weeve@gentoo.org> progsreiserfs-0.3.0.3.ebuild,
+  files/progsreiserfs-0.3.0.3-sparc-linux.diff:
+  Added a patch for sparc from the progreiserfs people to fix bug #21695.
 
 *progsreiserfs-0.3.0.4 (24 Feb 2003)
 
