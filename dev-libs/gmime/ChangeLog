@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.7 2004/11/26 21:51:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.8 2004/11/26 21:55:50 ticho Exp $
+
+  26 Nov 2004; Andrej Kacian <ticho@gentoo.org> -gmime-2.1.9.ebuild:
+  Removed 2.1.9 ebuild, as it has a file collision with app-arch/sharutils
+  (bug #70392) and 2.1.9-r1 is stable on all arches.
 
   26 Nov 2004; Lars Weiler <pylon@gentoo.org> gmime-2.1.9-r1.ebuild:
   Stable on ppc, bug #72579.
