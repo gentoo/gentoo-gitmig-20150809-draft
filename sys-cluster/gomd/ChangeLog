@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/gomd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd/ChangeLog,v 1.1 2003/11/15 21:20:37 tantive Exp $
+
+*gomd-0.1_pre20031115 (15 Nov 2003)
+
+  15 Nov 2003; Michael Imhof <tantive@gentoo.org> gomd-0.1_pre20031115.ebuild:
+  First release of an cvs-snapshot version for gomd, the general openMosix
+  daemon.
+
