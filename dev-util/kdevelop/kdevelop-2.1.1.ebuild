@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.1.ebuild,v 1.2 2002/05/21 18:14:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.1.ebuild,v 1.3 2002/05/24 12:44:52 danarmak Exp $
 
 inherit kde-base
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${P}_for_KDE_3.0
 DESCRIPTION="KDevelop ${PV}"
 HOMEPAGE="www.kdevelop.org"
 
-SRC_PATH="kde/stable/3.0/src/${P}_for_KDE_3.0.tar.bz2"
+SRC_PATH="kde/stable/3.0.1/src/${P}_for_KDE_3.0.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
