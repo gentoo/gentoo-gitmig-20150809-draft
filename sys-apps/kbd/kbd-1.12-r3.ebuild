@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r3.ebuild,v 1.1 2004/10/26 01:46:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r3.ebuild,v 1.2 2004/12/08 00:49:01 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Keyboard and console utilities"
 HOMEPAGE="http://freshmeat.net/projects/kbd/"
@@ -28,8 +28,10 @@ src_unpack() {
 	done
 
 	cd ${S}
-	# Fixes makefile so that it uses the CFLAGS from portage (bug #21320).
-	sed -i -e "s:-O2:${CFLAGS}:g" src/Makefile.in
+	sed -i \
+		-e "s:-O2:${CFLAGS}:g" \
+		-e 's:install -s:install:' \
+		src/Makefile.in
 
 	# Other patches from RH
 	epatch ${FILESDIR}/${PN}-1.08-terminal.patch
@@ -60,7 +62,7 @@ src_compile() {
 		--datadir=/usr/share \
 		${myconf} || die
 
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {

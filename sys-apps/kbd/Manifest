@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 10cd4cf8b9787c24ddfcc43de8a231d6 ChangeLog 5980
-MD5 d874b9fa0ea62dbc8cf550e6e62c6de0 kbd-1.12-r3.ebuild 2210
+MD5 a09b94a6510f9f5f2080dbd33a8c30e2 kbd-1.12-r3.ebuild 2210
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b392b9b6ce5edd6e37767cecb3d97187 kbd-1.12-r2.ebuild 1891
 MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
@@ -15,7 +15,7 @@ MD5 3492e6d5769a7bcb8d19dddf46f3a08e files/kbd-1.12-kbd_repeat-v2.patch 756
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBfeTQHTu7gpaalycRAtteAJ9PLbmSZCJeELqeS2xXQvmgNlNbGgCbB4Qd
-21V5nUCDH1FRO4P+N6laf2U=
-=jnrk
+iD8DBQFBtk+HroRuSHgZdywRAn2eAKCT9fY67e4TC76gFPHNTVdjVXmVWACfS9QN
+o9APURwCtVAKt+5Zk27MxlI=
+=pYDE
 -----END PGP SIGNATURE-----
