@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mindi-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.6 2004/06/30 21:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi-kernel/ChangeLog,v 1.7 2004/08/12 21:28:10 pfeifer Exp $
+
+*mindi-kernel-1.0-r1 (12 Aug 2004)
+
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> mindi-kernel-1.0-r1.ebuild:
+  Fixed up ebuild to not install spec file and the depend issue on mindi.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mindi-kernel-1.0.ebuild:
   sync IUSE (missing)

@@ -1,4 +1,6 @@
 MD5 cc62cd934e6914d17db207948b97d536 mindi-kernel-1.0.ebuild 617
-MD5 76befcce2ab12bef6c13bd82dc2b5105 ChangeLog 623
+MD5 a4a3df02c92f6887f30a522855a13878 ChangeLog 809
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 9ed05c2e557e47b6b138ce49b391d54b mindi-kernel-1.0-r1.ebuild 623
+MD5 7207a622f730721a218a5432c9fa015b files/digest-mindi-kernel-1.0-r1 66
 MD5 7207a622f730721a218a5432c9fa015b files/digest-mindi-kernel-1.0 66
