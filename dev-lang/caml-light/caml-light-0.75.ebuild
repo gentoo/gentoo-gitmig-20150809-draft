@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/caml-light-0.75.ebuild,v 1.1 2005/02/06 16:09:57 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/caml-light-0.75.ebuild,v 1.2 2005/02/18 10:29:29 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,10 @@ src_compile() {
 		MANDIR=/usr/share/man \
 		configure || die
 
-	make world || die
+	make BINDIR=/usr/bin \
+		LIBDIR=/usr/lib/caml-light \
+		MANDIR=/usr/share/man \
+		world || die
 }
 
 src_install() {

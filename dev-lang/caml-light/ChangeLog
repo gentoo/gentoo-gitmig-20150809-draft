@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/caml-light
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/ChangeLog,v 1.1 2005/02/06 16:09:57 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/ChangeLog,v 1.2 2005/02/18 10:29:29 mattam Exp $
+
+  18 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> caml-light-0.75.ebuild:
+  Fix path bug.
 
 *caml-light-0.75 (06 Feb 2005)
 
