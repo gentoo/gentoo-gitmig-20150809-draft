@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6.ebuild,v 1.1 2004/06/03 22:20:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.6-r1.ebuild,v 1.1 2004/06/15 17:46:04 plasmaroo Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -13,7 +13,7 @@ KV="${OKV}${EXTRAVERSION}"
 S="${WORKDIR}/linux-${KV}"
 IUSE=""
 
-UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2"
+UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2 ${FILESDIR}/${P}.FPULockup-53804.patch"
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV}.tar.bz2

@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.35 2004/06/03 22:20:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.36 2004/06/15 17:46:04 plasmaroo Exp $
+
+*usermode-sources-2.4.24-r4 (15 Jun 2004)
+
+  15 Jun 2004; <plasmaroo@gentoo.org> -usermode-sources-2.4.24-r3.ebuild,
+  +usermode-sources-2.4.24-r4.ebuild, +usermode-sources-2.4.26-r1.ebuild,
+  -usermode-sources-2.4.26.ebuild, -usermode-sources-2.6.4.ebuild,
+  +usermode-sources-2.6.6-r1.ebuild, -usermode-sources-2.6.6.ebuild,
+  +files/usermode-sources....patch:
+  Added patches for the FPU-lockup issues; please see bug #58304 for details.
+  2.4.24 also patched for CAN-2004-0075, CAN-2004-0181,CAN-2004-0394 and
+  CAN-2004-0427. Old versions removed.
+
+*usermode-sources-2.4.24-r4 (15 Jun 2004)
+
+  15 Jun 2004; <plasmaroo@gentoo.org> -usermode-sources-2.4.24-r3.ebuild,
+  +usermode-sources-2.4.24-r4.ebuild, +usermode-sources-2.4.26-r1.ebuild,
+  -usermode-sources-2.4.26.ebuild, -usermode-sources-2.6.4.ebuild,
+  +usermode-sources-2.6.6-r1.ebuild, -usermode-sources-2.6.6.ebuild:
+  Added patches for the FPU-lockup issues; please see bug #58304 for details.
 
 *usermode-sources-2.4.26 (03 Jun 2004)
 

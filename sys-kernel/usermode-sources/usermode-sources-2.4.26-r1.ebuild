@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26.ebuild,v 1.1 2004/06/03 22:20:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r1.ebuild,v 1.1 2004/06/15 17:46:04 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -31,6 +31,7 @@ src_unpack() {
 	mv linux-${PV} ${S} && cd ${S}
 	epatch ${DISTDIR}/${UML_PATCH}.bz2
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${PN}-2.4.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	kernel_universal_unpack
 }
 
