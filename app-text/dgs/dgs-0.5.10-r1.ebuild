@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.23 2004/04/07 21:41:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.24 2004/04/15 17:54:06 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -17,24 +17,20 @@ RDEPEND="=dev-libs/glib-1.2*
 	virtual/x11"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
+	sys-devel/autoconf
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
-pkg_setup() {
-	if has_version 'sys-apps/tcp-wrappers' && ! use tcpd ; then
-		ewarn "tcp-wrappers will be detected by the package and support will be enabled"
-		ewarn "The package presently provides no way to disable tcp-wrappers support if you don't want it"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gs-time_.h-gentoo.diff
+	epatch ${FILESDIR}/${P}-tcpd-gentoo.diff
 	use amd64 && gnuconfig_update
 }
 
 src_compile() {
-	econf --with-x || die
+	WANT_AUTOCONF=2.1 autoconf
+	econf --with-x `use_enable tcpd` || die
 	make || die
 }
 
