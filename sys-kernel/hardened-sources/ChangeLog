@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.10 2003/06/12 22:13:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.11 2003/06/17 03:15:50 frogger Exp $
+
+  16 Jun 2003; Matthew Rickard <frogger@gentoo.org> :
+  Initial import of hardened-sources-2.4.20-r4.  This revision
+  includes only a few changes, but one of these is an important
+  security fix.  It is recommended all users of hardened-sources
+  upgrade to this release.
+  	- ioperm bug fix
+  	- fixed compilation failure when building without GRSec
+  SAL (Secure Auditing for Linux) is NOT included in this revision
+  due to time constraints, but is planned for inclusion in the near
+  future.
 
 *hardened-sources-2.4.20-r2 (12 Jun 2003)
 
