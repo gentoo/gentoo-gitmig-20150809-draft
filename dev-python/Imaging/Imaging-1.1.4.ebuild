@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.10 2004/04/06 03:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.11 2004/04/18 17:09:46 aliz Exp $
 
-inherit distutils flag-o-matic
+inherit distutils eutils
 
 DESCRIPTION="Python Imaging Library (PIL)"
 HOMEPAGE="http://www.pythonware.com/products/pil/index.htm"
@@ -21,12 +21,11 @@ DEPEND="virtual/python
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 setup.py < ${FILESDIR}/${P}-setup.py.patch || die
+	epatch ${FILESDIR}/${P}-setup.py.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
-	append-flags -fPIC
-
 	export OPT=${CFLAGS}
 
 	#Build the core imaging library (libImaging.a)
