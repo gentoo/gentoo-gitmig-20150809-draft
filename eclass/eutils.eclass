@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.64 2003/10/13 15:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.65 2003/11/10 22:18:04 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -707,6 +707,9 @@ make_desktop_entry() {
 				;;
 			"games-"*)
 				type=Game
+				;;
+			"net-"*)
+				type=Network;
 				;;
 			*)
 				type=
