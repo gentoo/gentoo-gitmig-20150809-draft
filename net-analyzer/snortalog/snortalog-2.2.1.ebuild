@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.6 2004/11/22 00:10:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.7 2004/11/22 18:51:45 eldad Exp $
 
 DESCRIPTION="a powerful perl script that summarizes snort logs"
 SRC_URI="http://jeremy.chartier.free.fr/${PN}/${PN}_v${PV}.tgz"
@@ -13,7 +13,11 @@ IUSE=""
 
 S=${WORKDIR}/${PN}_v${PV%.?}
 
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	dev-perl/GDGraph
+	dev-perl/Getopt-Long
+	dev-perl/DB_File
+	dev-perl/perl-tk"
 
 src_compile() {
 	einfo "Nothing to compile."
