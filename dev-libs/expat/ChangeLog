@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.2 2002/03/26 03:50:25 woodchip Exp $
+
+*expat-1.95.2 (25 Mar 2002)
+
+  25 Mar 2002; Donny Davies <woodchip@gentoo.org> expat-1.95.2.ebuild :
+
+  Update to latest release.  Fixed to install into ${D}, previously it didnt.
+  Parallel make is busted, s/emake/make/.  Fixed html docs.
 
 *expat-1.95.1-r1 (1 Feb 2002)
 
