@@ -1,6 +1,11 @@
 # ChangeLog for www-proxy/oops
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/ChangeLog,v 1.3 2005/02/16 22:27:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/ChangeLog,v 1.4 2005/02/24 13:21:15 mrness Exp $
+
+*oops-1.5.23 (24 Feb 2005)
+
+  24 Feb 2005; Alin Nastac <mrness@gentoo.org> +oops-1.5.23.ebuild:
+  Version bump. Fix bugs #10047, #51247 and #58881.
 
   17 Feb 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml:
   Add metadata.xml
