@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/cisco-aironet-client-utils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-aironet-client-utils/ChangeLog,v 1.1 2003/12/13 00:05:42 wolf31o2 Exp $
+
+*cisco-aironet-client-utils-2.0 (12 Dec 2003)
+
+  12 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-aironet-client-utils-2.0.ebuild, metadata.xml, files/90cisco:
+  Initial import by me.
+
