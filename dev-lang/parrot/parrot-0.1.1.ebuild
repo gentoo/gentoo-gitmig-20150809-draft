@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.1 2004/12/20 14:48:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.2 2004/12/20 15:39:38 mcummings Exp $
 
 DESCRIPTION="The virtual machine that perl6 relies on."
 HOMEPAGE="http://www.parrotcode.org/"
@@ -18,16 +18,16 @@ DEPEND=">=dev-lang/perl-5.8.5-r2
 
 src_compile() {
 	#This configure defines the DESTDIR for make.
-	perl Configure.pl --prefix=${D}|| die "Perl ./Configure.pl failed"
+	perl Configure.pl --prefix=${D}|| die "Perl ./Configure.pl failed"  
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
 
 	#The prefix was set by Configure.pl - see src_compile().
-	make install BUILDPREFIX=${D} PREFIX=/usr/${P} || die
+	make install BUILDPREFIX=${D} PREFIX=/usr/share/${P} || die
 	dodir /usr/bin
-	dosym /usr/${P}/bin/parrot /usr/bin
+	dosym /usr/share/${P}/bin/parrot /usr/bin
 
 	#TODO: put the doc (pod) and examples in a special dir
 	#/docs/ /examples/

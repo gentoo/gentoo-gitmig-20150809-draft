@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1de4351e3ec91ae28ea8affe97ed473c parrot-0.1.1.ebuild 1133
+MD5 1da3d397e36c999339c34621812f1a8c parrot-0.1.1.ebuild 1147
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4585336a758ea3b34210b325939cdec1 ChangeLog 478
 MD5 75fbd20b4daec7e1b315a172ad60c64f files/digest-parrot-0.1.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxuXqtG5z4I8BtQoRAk3wAJ9OnTdgLJk5Pw+NqzkngaXoYowmcQCfep7F
-XHItjI6IjHJnbaTUJZqdUw0=
-=w7kY
+iD8DBQFBxvHftG5z4I8BtQoRAtkoAJ9DOFk9GeV5tDD5cT/USFa0Xqg3eACdHo0E
+lF0LjxkJPG6uJA4BBXrMayk=
+=cf6e
 -----END PGP SIGNATURE-----
