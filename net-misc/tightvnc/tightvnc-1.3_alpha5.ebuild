@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.10 2004/10/18 14:08:31 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.11 2004/10/23 11:05:13 blubb Exp $
 
 inherit eutils gcc
 
@@ -37,11 +37,6 @@ src_unpack() {
 
 src_compile() {
 	local CDEBUGFLAGS="${CFLAGS}"
-
-	use amd64 && CDEBUGFLAGS="${CDEBUGFLAGS} -m32 \
-		-L/emul/linux/x86/lib \
-		-L/emul/linux/x86/usr/lib/gcc-lib/i386-pc-linux-gnu/3.2.3 \
-		-L/emul/linux/x86/usr/lib -L/emul/linux/x86/usr/X11R6/lib"
 
 	xmkmf -a || die "xmkmf failed"
 

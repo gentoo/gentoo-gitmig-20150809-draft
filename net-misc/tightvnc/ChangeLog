@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.42 2004/10/18 14:08:31 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.43 2004/10/23 11:05:13 blubb Exp $
+
+  23 Oct 2004; Simon Stelling <blubb@gentoo.org> tightvnc-1.3_alpha5.ebuild:
+  removed amd64-'fix' again
 
   18 Oct 2004; Daniel Goller <morfic@gentoo.org> metadata.xml,
   tightvnc-1.3_alpha5.ebuild, -tightvnc-4.0_beta20031113.ebuild:
