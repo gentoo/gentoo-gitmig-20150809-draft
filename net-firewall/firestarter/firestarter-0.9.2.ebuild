@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.2.ebuild,v 1.1 2003/06/13 04:20:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.2.ebuild,v 1.2 2003/07/09 17:33:22 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
+	dev-util/pkgconfig
 	>=dev-util/intltool-0.21"
 
 SLOT="0"

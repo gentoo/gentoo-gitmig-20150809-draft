@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firestarter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.8 2003/07/04 00:23:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.9 2003/07/09 17:33:22 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> firestarter-0.9.1.ebuild,
+  firestarter-0.9.2.ebuild:
+  added pkgconfig deps
 
 *firestarter-0.9.2 (12 Jun 2003)
 
