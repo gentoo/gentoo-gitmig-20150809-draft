@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.4 2003/11/30 13:50:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.3.ebuild,v 1.1 2003/12/04 20:18:56 caleb Exp $
 
 inherit kde
 need-kde 3.1
@@ -31,7 +31,7 @@ RDEPEND="$RDEPEND sys-apps/eject
 LANGS="af bg ca cs cy da de el en_GB eo es et fa fr he hu it
 ja nb nl nn pl pt pt_BR ru se sk sl sr sv tr ven xh zh_CN zh_TW"
 
-I18N=${PN}-i18n-${PV/10.2/10}
+I18N=${PN}-i18n-${PV/10.3/10}
 
 for pkg in $LANGS
 do
