@@ -9,6 +9,8 @@ DESCRIPTION="libole2"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
+DEPEND=">=dev-libs/glib-1.2.8"
+
 src_unpack() {
   unpack ${A}
 }

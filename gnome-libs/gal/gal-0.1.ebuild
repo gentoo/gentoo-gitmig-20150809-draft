@@ -9,6 +9,11 @@ DESCRIPTION="The Gnome Application Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
+DEPEND=">=gnome-base/gnome-vfs-0.3.1
+	>=gnome-base/libglade-0.14
+	>=gnome-libs/libunicode-0.4"
+RDEPEND=">=sys-libs/glibc-2.1.3"
+
 src_unpack() {
   unpack ${A}
 }
@@ -22,7 +27,6 @@ src_compile() {
 src_install() {                               
   cd ${S}
   try make prefix=${D}/opt/gnome install
-  prepman /opt/gnome
 
   dodoc AUTHORS COPYING ChangeLog NEWS README
 }
