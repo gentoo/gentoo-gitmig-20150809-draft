@@ -52,7 +52,7 @@ app-games/halflife-server
 
 # <spider@gentoo.org> (25 Jul 2002)
 # fixes buildproblems for me. please teset
-#=sys-devel/perl-5.6.1-r5
+=sys-devel/perl-5.6.1-r5
 
 # <woodchip@gentoo.org> (24 Jul 2002)
 # apparently fatally flawed.
@@ -87,7 +87,7 @@ net-misc/radvd
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while the system people put this through the test
-#=sys-apps/bash-2.05b
+=sys-apps/bash-2.05b
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while g2boojum approves
@@ -148,7 +148,7 @@ media-libs/libfame
 # azarah@gentoo.org (17 Jul 2002)
 # needs testing.
 # Added other deps that depend on baselayout
-#=sys-apps/baselayout-1.8.0
+=sys-apps/baselayout-1.8.0
 app-arch/unarj
 app-emulation/zinc
 app-sci/setiathome
