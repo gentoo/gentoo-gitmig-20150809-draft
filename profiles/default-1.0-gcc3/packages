@@ -56,7 +56,7 @@ dev-lang/perl
 *net-misc/rsync
 *net-misc/wget
 *app-shells/bash
-*sys-apps/bzip2
+*app-arch/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
@@ -72,7 +72,7 @@ dev-lang/perl
 *sys-apps/grep
 *sys-apps/groff
 *virtual/bootloader
-*sys-apps/gzip
+*app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/less
 
@@ -90,7 +90,7 @@ dev-lang/perl
 *<sys-apps/shadow-5
 *sys-apps/pam-login
 *sys-apps/sharutils
-*sys-apps/tar
+*app-arch/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
 #sys-apps/tcp-wrappers
 *>=sys-apps/texinfo-4.2-r1
