@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.1 2004/11/06 17:23:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.2 2004/11/24 23:30:49 swegener Exp $
+
+  25 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
 *qtruby-3.3.1 (06 Nov 2004)
 

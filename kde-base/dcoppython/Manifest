@@ -2,4 +2,4 @@ MD5 bbf644ef554a0c50af12daa7c391a6f2 dcoppython-3.3.1.ebuild 402
 MD5 b31f4d30edb1fc4d91e825813070dd47 ChangeLog 610
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
-MD5 eb60c31b9c50087c80632fae53046043 files/digest-dcoppython-3.3.1 151
+MD5 06537607a3d1978100b99a375966c6f1 files/digest-dcoppython-3.3.1 302

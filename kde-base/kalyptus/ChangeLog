@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.1 2004/11/06 17:23:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.2 2004/11/24 23:26:00 swegener Exp $
+
+  25 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
 *kalyptus-3.3.1 (06 Nov 2004)
 
