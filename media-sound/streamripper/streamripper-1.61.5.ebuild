@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.61.1.ebuild,v 1.1 2005/04/04 14:05:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.61.5.ebuild,v 1.1 2005/04/04 18:20:39 lostlogic Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="media-libs/libmad"
 DEPEND="${RDEPEND}
@@ -24,9 +24,15 @@ src_unpack() {
 	cd ${S}
 
 	# Force package to use system libmad
-	rm -rf libmad-0.15.1b
+	rm -rf libmad*
+	sed -i -e 's/libmad//' Makefile.in || die
 
-	econf
+}
+
+src_compile() {
+	econf || die
+	emake || die
+
 }
 
 src_install() {
