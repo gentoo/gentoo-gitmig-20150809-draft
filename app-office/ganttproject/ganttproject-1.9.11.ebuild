@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.5 2004/11/03 11:51:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.9.11.ebuild,v 1.6 2004/11/29 16:23:38 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -25,7 +25,7 @@ src_compile() {
 	fi
 	echo "#! /bin/sh" > ganttproject
 	echo "export CLASSPATH=$(java-config -p ganttproject)" >> ganttproject
-	echo "java net.sourceforge.ganttproject.GanttProject $@" >> ganttproject
+	echo "java net.sourceforge.ganttproject.GanttProject \"$@\"" >> ganttproject
 }
 
 src_install () {
