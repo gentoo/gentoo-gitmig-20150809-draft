@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.12 2004/07/12 02:25:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.13 2004/07/12 02:38:10 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -31,7 +31,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 SLOT="2.2"
 LICENSE="LGPL-2"
-KEYWORDS="-* ~x86 ~mips"
+KEYWORDS="-* ~x86 ~mips ~amd64"
 
 
 SRC_URI="http://ftp.gnu.org/gnu/${PN}/${PN}-${BASE_PV}.tar.bz2
@@ -48,7 +48,7 @@ fi
 
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
-# We also need linux-headers-2.6.6 if using NPTL. Including kernel headers is
+# We also need linux26-headers if using NPTL. Including kernel headers is
 # incredibly unreliable, and this new linux-headers release from plasmaroo
 # should work with userspace apps, at least on amd64 and ppc64.
 DEPEND=">=sys-devel/gcc-3.2.3-r1
@@ -701,7 +701,7 @@ EOF
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 
-    use ppc64 && dosym /lib/ld64.so.1 /lib/ld.so.1
+	use ppc64 && dosym /lib/ld64.so.1 /lib/ld.so.1
 
 	# This is our new config file for building locales
 	insinto /etc
