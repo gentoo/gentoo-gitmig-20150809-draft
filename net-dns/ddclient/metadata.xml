@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<name>Matthew Smith</name>
 	<email>matthewsmith@iinet.net.au</email>
+	<name>Matthew Smith</name>
 	<description>Indirectly maintaining through seemant@gentoo.org</description>
 </maintainer>
 </pkgmetadata>
