@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.101.ebuild,v 1.3 2003/02/04 01:30:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.2.102.ebuild,v 1.1 2003/02/04 01:30:30 spider Exp $
 
 inherit debug 
 inherit gnome2
