@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.24 2004/08/08 14:36:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.25 2004/08/14 23:36:05 slarti Exp $
+
+  15 Aug 2004; Tom Martin <slarti@gentoo.org> libgnomedb-1.0.4.ebuild:
+  Marked ~amd64.
 
   08 Aug 2004; Tony Vroon <chainsaw@gentoo.org>
   +files/libgnomedb-1.0.3-gcc34.patch, libgnomedb-1.0.3.ebuild,
