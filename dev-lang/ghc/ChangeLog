@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.17 2003/07/29 11:45:10 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.18 2003/07/29 23:21:27 kosmikus Exp $
+
+  30 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-6.0.ebuild:
+  Fixed bug that caused ghc to be built with HOpenGL despite -opengl being set.
 
   29 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
   Marked 5.04.3-r1 stable. It fixes a couple of problems that keep appearing

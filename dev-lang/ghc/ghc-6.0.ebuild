@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.1 2003/06/01 09:17:51 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.2 2003/07/29 23:21:27 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -79,7 +79,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="`use_enable opengl hopengl`"
+	if [ `use opengl` ]; then
+		myconf="--enable-hopengl"
+	fi
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
