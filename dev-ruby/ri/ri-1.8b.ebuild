@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b.ebuild,v 1.10 2004/10/20 16:12:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b.ebuild,v 1.11 2005/02/06 23:44:53 kumba Exp $
 
 DESCRIPTION="Ruby Interactive reference"
 HOMEPAGE="http://www.pragmaticprogrammer.com/ruby/downloads/ri.html"
