@@ -1,0 +1,69 @@
+diff --unified -r armagetron-0.2.6.0/src/engine/eWall.cpp armagetron-patch/src/engine/eWall.cpp
+--- armagetron-0.2.6.0/src/engine/eWall.cpp	2003-10-13 14:43:15.000000000 -0600
++++ armagetron-patch/src/engine/eWall.cpp	2004-10-03 15:14:47.953792336 -0600
+@@ -280,6 +280,6 @@
+ #else
+   static eWall* pwall = NULL;
+   static eWall& wall = *pwall; 
+-  return reinterpret_cast<eWall *> (reinterpret_cast<int>(&this[-viewer]) - reinterpret_cast<int>(&wall.view[0]) + reinterpret_cast<int>(&wall));
++  return reinterpret_cast<eWall *> (reinterpret_cast<long int>(&this[-viewer]) - reinterpret_cast<long int>(&wall.view[0]) + reinterpret_cast<long int>(&wall));
+ #endif
+ }
+diff --unified -r armagetron-0.2.6.0/src/network/nNetwork.cpp armagetron-patch/src/network/nNetwork.cpp
+--- armagetron-0.2.6.0/src/network/nNetwork.cpp	2003-10-14 01:38:56.000000000 -0600
++++ armagetron-patch/src/network/nNetwork.cpp	2004-10-03 15:17:14.870457608 -0600
+@@ -1618,7 +1618,7 @@
+ 
+ 				//	 if (peer!=id)
+ 				//  con << "Changed incoming address.\n";
+-				int lenleft = reinterpret_cast<int>(bend) - reinterpret_cast<int>(b);
++				int lenleft = reinterpret_cast<long int>(bend) - reinterpret_cast<long int>(b);
+ 
+ #ifndef NOEXCEPT
+ 				try
+@@ -1629,7 +1629,7 @@
+ 					pmess = tNEW( nMessage )(b,id,lenleft);
+ 					nMessage& mess = *pmess;
+ 
+-					lenleft = reinterpret_cast<int>(bend) - reinterpret_cast<int>(b);
++					lenleft = reinterpret_cast<long int>(bend) - reinterpret_cast<long int>(b);
+ 
+ 					bool mess_is_new=true;
+ 					// see if we have got this packet before
+diff --unified -r armagetron-0.2.6.0/src/network/nServerInfo.cpp armagetron-patch/src/network/nServerInfo.cpp
+--- armagetron-0.2.6.0/src/network/nServerInfo.cpp	2003-10-13 14:43:15.000000000 -0600
++++ armagetron-patch/src/network/nServerInfo.cpp	2004-10-03 15:16:02.983386104 -0600
+@@ -403,8 +403,8 @@
+ 	static nServerInfo& info = *this; // will not cause recursion since it is called only once.
+ 	// uaaa. Pointer magic...
+ 	return reinterpret_cast<nServerInfo *>
+-		( reinterpret_cast<int> (anchor) -
+-		  reinterpret_cast<int> (&info.next) + reinterpret_cast<int>( &info )
++		( reinterpret_cast<long int> (anchor) -
++		  reinterpret_cast<long int> (&info.next) + reinterpret_cast<long int>( &info )
+ 		  );
+ }
+ 
+diff --unified -r armagetron-0.2.6.0/src/network/net_udp.cpp armagetron-patch/src/network/net_udp.cpp
+--- armagetron-0.2.6.0/src/network/net_udp.cpp	2003-10-13 14:43:15.000000000 -0600
++++ armagetron-patch/src/network/net_udp.cpp	2004-10-03 15:19:34.741194024 -0600
+@@ -420,7 +420,8 @@
+ 
+ int ANET_Read (int& sock, int8 *buf, int len, struct sockaddr *addr)
+ {
+-  NET_SIZE addrlen = sizeof (struct sockaddr);
++//  NET_SIZE addrlen = sizeof (struct sockaddr);
++  socklen_t addrlen = (socklen_t)sizeof (struct sockaddr);
+ 
+   int ret;
+   
+@@ -541,7 +542,8 @@
+ 
+ int ANET_GetSocketAddr (int sock, struct sockaddr *addr)
+ {
+-  NET_SIZE addrlen = sizeof(struct sockaddr);
++//  NET_SIZE addrlen = sizeof(struct sockaddr);
++  socklen_t addrlen = (socklen_t)sizeof(struct sockaddr);
+   unsigned int a;
+   
+   memset(addr, 0, sizeof(struct sockaddr));

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.7 2004/12/07 09:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.8 2004/12/09 09:46:42 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -33,6 +33,7 @@ src_unpack() {
 		-e 's/$(SYNC)/$(SYNCDISK)/' Makefile.global.in \
 		|| die 'sed Makefile.global.in failed'
 	filter-flags -fno-exceptions
+	epatch "${FILESDIR}/${PV}-64bit.patch"
 }
 
 src_install() {

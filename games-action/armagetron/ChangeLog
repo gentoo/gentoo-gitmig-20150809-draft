@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.6 2004/12/07 09:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.7 2004/12/09 09:46:42 mr_bones_ Exp $
+
+  09 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/0.2.6.0-64bit.patch, armagetron-0.2.6.0.ebuild:
+  add patch to fix some 64-bit issues from Tyler Montbriand via bug #66263
 
   07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
   armagetron-0.2.6.0.ebuild:
