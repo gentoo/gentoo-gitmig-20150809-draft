@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0_beta5-r8.ebuild,v 1.1 2002/05/30 02:04:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0_beta5-r8.ebuild,v 1.2 2002/05/30 23:24:17 blocke Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -37,4 +37,5 @@ RDEPEND=">=x11-libs/gtk+-2.0.3
 	>=gnome-extra/gnome-games-1.93.0
 	>=app-editors/gedit-1.121.0
 	>=gnome-base/gdm-2.3.90.4
-	>=net-libs/linc-0.5.0"
+	>=net-libs/linc-0.5.0
+	>=x11-libs/libzvt-1.116.1"
