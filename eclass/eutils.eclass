@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.55 2003/09/21 09:58:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.56 2003/09/22 21:08:27 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -913,5 +913,49 @@ unpack_makeself() {
 		# maybe it isnt gzipped ... they usually are, but not always ...
 		tail -n +${skip} ${src} | tar -x --no-same-owner -f - \
 			|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
+	fi
+}
+
+# Display a license for user to accept.
+#
+# Usage: check_license [license]
+# - If the file is not specified then ${LICENSE} is used.
+check_license() {
+	local src=$1
+	if [ -z "${src}" ] ; then
+		src="${PORTDIR}/licenses/${LICENSE}"
+	else
+		if [ -e "${PORTDIR}/licenses/${src}" ] ; then
+			src="${PORTDIR}/licenses/${src}"
+		elif [ -e "${PWD}/${src}" ] ; then
+			src="${PWD}/${src}"
+		elif [ -e "${src}" ] ; then
+			src="${src}"
+		fi
+	fi
+	[ ! -e "${src}" ] && die "Could not find requested license ${src}"
+
+	# here is where we check for the license...
+	# if we don't find one, we ask the user for it
+	if [ -f /usr/share/licenses/${LICENSE} ]; then
+		einfo "The license for this application has already been accepted."
+	else
+		ewarn "You MUST accept this license for installation to continue."
+		eerror "If you CTRL+C out of this, the install will not run!"
+		echo
+
+		${PAGER} ${src} || die "Could not execute ${PAGER} ${src}
+		einfo "Do you accept the terms of this license? [yes/no]"
+		read ACCEPT_TERMS
+		case ${ACCEPT_TERMS} in
+			yes|Yes|y|Y)
+				cp ${src} /usr/share/licenses
+				exit 0
+				;;
+			*)
+				eerror "You MUST accept the license to continue!  Exiting!"
+				die "Failed to accept license"
+				;;
+		esac
 	fi
 }
