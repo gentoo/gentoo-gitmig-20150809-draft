@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5436838c6fc44d7d40793a3681cf77c5 ChangeLog 7613
+MD5 110b4de2f7cb7e278c31f5fc3167ffdd gnome-icon-theme-1.2.3.ebuild 560
 MD5 ddd70e2ad1e2ac2b65144eeea6fc04bc gnome-icon-theme-1.0.9.ebuild 478
 MD5 966a918bde461c36225de1e4e368a228 gnome-icon-theme-1.2.0.ebuild 557
-MD5 ae0cc66f01f8207f334d45f40fd09c98 gnome-icon-theme-1.2.1.ebuild 560
-MD5 110b4de2f7cb7e278c31f5fc3167ffdd gnome-icon-theme-1.2.3.ebuild 560
-MD5 23880fc74c89a674c5ed417ebf2f0148 gnome-icon-theme-2.8.0.ebuild 560
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 a88ac29b6865d5d6fffdff58de8ad794 gnome-icon-theme-2.10.0.ebuild 575
+MD5 d81ccb2e6492851eede7df28c8386d14 ChangeLog 7719
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ae0cc66f01f8207f334d45f40fd09c98 gnome-icon-theme-1.2.1.ebuild 560
+MD5 dd0bb53dee356781a980a6d626ba1522 gnome-icon-theme-2.8.0.ebuild 559
+MD5 c9c1b85c1ecabbaaecc7ba5b6d3074e2 files/digest-gnome-icon-theme-2.10.0 77
 MD5 79fed86dbc571a23c5b1f18e52b30c83 files/digest-gnome-icon-theme-1.0.9 76
 MD5 792bc31e5e5f3833d61567326710544c files/digest-gnome-icon-theme-1.2.0 76
 MD5 d5d241a899b4f7e15f7efa75cf4259d0 files/digest-gnome-icon-theme-1.2.1 76
 MD5 35bd95de3093a10eafd1c5fc80a73ffa files/digest-gnome-icon-theme-1.2.3 76
 MD5 5747a48c36492a856860a3e764cc2745 files/digest-gnome-icon-theme-2.8.0 76
-MD5 c9c1b85c1ecabbaaecc7ba5b6d3074e2 files/digest-gnome-icon-theme-2.10.0 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLoNOXjcVihsel0ERAqzLAJ9B9UyObciptVnfUsNpfQhyb4owDACg8J6j
-aKakU/D0MdkX1/6bbWR8DNE=
-=c940
------END PGP SIGNATURE-----
