@@ -1,26 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.2 2003/09/07 00:24:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.3 2003/12/06 18:29:52 foser Exp $
 
 IUSE="nls"
 
 inherit libtool
 
-S="${WORKDIR}/${P/_rc?}"
 DESCRIPTION="Extended version of the Gnome Terminal."
 SRC_URI="mirror://sourceforge/multignometerm/${P}.tar.bz2"
 HOMEPAGE="http://multignometerm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
-DEPEND=">=x11-libs/gtk+-1.2.10
-	<x11-libs/gtk+-2.0
+DEPEND="=x11-libs/gtk+-1*
 	>=gnome-base/gnome-libs-1.4.1.7
 	>=media-libs/gdk-pixbuf-0.11.0-r1
-	>=gnome-base/libglade-0.17-r1
-	<gnome-base/libglade-1.99
+	=gnome-base/libglade-0*
 	>=app-text/scrollkeeper-0.3.10-r1
 	>=gnome-base/ORBit-0.5.16"
 
