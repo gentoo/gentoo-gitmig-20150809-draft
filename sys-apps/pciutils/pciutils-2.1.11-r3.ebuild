@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r3.ebuild,v 1.4 2005/01/02 23:44:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r3.ebuild,v 1.5 2005/01/20 16:44:25 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~mips ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -70,11 +70,11 @@ src_install() {
 	doman *.8
 
 	insinto /usr/share/misc
-	doins pci.ids || die
+	doins pci.ids || die "pciids failed"
 
 	into /usr
-	dolib lib/libpci.a
+	dolib lib/libpci.a || die "libpci failed"
 
 	insinto /usr/include/pci
-	doins lib/*.h
+	doins lib/*.h || die "headers failed"
 }
