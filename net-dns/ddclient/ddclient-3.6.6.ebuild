@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.2 2005/04/04 13:44:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.3 2005/04/04 19:03:22 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 	dodoc sample-etc_[c-p]*
 
 	newinitd ${FILESDIR}/ddclient.init ddclient
-	
+
 	insinto /etc/ddclient
 	insopts -m 0640 -g ddclient -o root
 	newins sample-etc_ddclient.conf ddclient.conf
