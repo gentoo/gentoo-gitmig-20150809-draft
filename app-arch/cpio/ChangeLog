@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/cpio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.9 2005/01/20 00:03:31 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.10 2005/01/20 03:48:05 gongloo Exp $
+
+  19 Jan 2005; <gongloo@gentoo.org> +files/2.6-isnumber.patch,
+  cpio-2.6.ebuild:
+  Added doman ${D}/usr/share/man/man1/cpio.1 to properly handle manpage
+  gzipping. Added isnumber patch, replacing isnumber by cpio_isnumber (for
+  compatibility reasons). Closes bug 74929.
 
   19 Jan 2005; <gongloo@gentoo.org> cpio-2.5.ebuild:
   Stable on ppc-macos.
