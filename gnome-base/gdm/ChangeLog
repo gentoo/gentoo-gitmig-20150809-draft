@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.38 2003/08/11 12:37:55 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.39 2003/08/11 13:09:07 obz Exp $
+
+  11 Aug 2003; Mike Gardiner <obz@gentoo.org> gdm-2.4.1.6.ebuild:
+  Fixed KEYWORDS on hppa and amd64
 
 *gdm-2.4.1.6 (11 Aug 2003)
 
