@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.8 2004/08/03 01:54:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.9 2004/09/22 11:35:59 dragonheart Exp $
+
+*crypto++-5.2.1 (22 Sep 2004)
+
+  22 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  +crypto++-5.2-r1.ebuild, +crypto++-5.2.1.ebuild:
+  version bump. modified filter -fomit-frame-pointer. Reintroduced amd64 keyword
+  as it has been fixed in 5.2+ according to their changelog. Changed maintaince
+  to crypto herd. All thanks to hoffmajs@gmx.de and others in bug #62376.
+  5.2.1 has having some self test issues: i.e. CryptoPP::Exception caught: 
+  Unexpected error during validation test
 
   02 Aug 2004; Mike Frysinger <vapier@gentoo.org> crypto++-5.2.ebuild:
   Use user specified CXXFLAGS #57846 by Aard Keimpema.
