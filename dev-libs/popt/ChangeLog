@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.19 2004/06/24 23:31:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.20 2004/07/26 23:57:19 mr_bones_ Exp $
+
+  26 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> popt-1.7-r1.ebuild:
+  update source in src_unpack; use emake; tidy
 
   15 Jun 2004; <solar@gentoo.org> popt-1.7-r1.ebuild,
   files/popt-1.7-uclibc.patch:

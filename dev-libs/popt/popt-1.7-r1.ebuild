@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.13 2004/06/24 23:31:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.14 2004/07/26 23:57:19 mr_bones_ Exp $
 
 inherit libtool gnuconfig eutils
 
@@ -17,17 +17,16 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-uclibc.patch
+	epatch "${FILESDIR}/${P}-uclibc.patch"
+	cd ${S}
+	gnuconfig_update
+	elibtoolize
+	use nls || touch ../rpm.c
 }
 
 src_compile() {
-	gnuconfig_update
-	elibtoolize
-
-	use nls || touch ../rpm.c
-
-	econf `use_enable nls` || die
-	make || die
+	econf $(use_enable nls) || die
+	emake || die "emake failed"
 }
 
 src_install() {
