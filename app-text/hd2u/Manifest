@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 d137ce2704169b6b6c503ec57f040af2 hd2u-0.8.0.ebuild 602
-MD5 b27b67bb7e3826d82dc774ff5549a12d hd2u-0.8.2.ebuild 681
-MD5 032a2d306651a7244d45bd494a8f39fc ChangeLog 1356
+MD5 3fc0d2ad9ba636617d805c845c92a9e0 hd2u-0.8.2.ebuild 682
+MD5 33798425e01f10dff3fad8133a9d5ebc ChangeLog 1449
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 2704b9b6d1e6a4028744ca8c63b99ec7 hd2u-0.8.1.ebuild 640
 MD5 dcd81331aec7a90fe30c7f4ef0b19aba files/digest-hd2u-0.8.0 58
@@ -12,7 +12,7 @@ MD5 ea34ca8330982c712c87f296ecab3d96 files/digest-hd2u-0.8.2 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBd9EcEZCkKN40op4RArGqAJ4rD3RKjookyJs2Pq+ihSUias6ucACgppCz
-/SIM2FveX73Vwwd30/Pvfl0=
-=ljBS
+iD8DBQFBqwKZEZCkKN40op4RAiA+AKCaQ/8kOjmvjo6SgFzhhS/1dpjDeACgoGIL
+qgqICW5p6RzmysMCIyIN7OQ=
+=dbwv
 -----END PGP SIGNATURE-----
