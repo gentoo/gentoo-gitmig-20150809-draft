@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/gnomevfs-sharp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.1 2005/04/02 01:21:20 latexer Exp $
+
+*gnomevfs-sharp-1.9.2 (02 Apr 2005)
+
+  02 Apr 2005; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +gnomevfs-sharp-1.9.2.ebuild:
+  Add the preview release of the gtk-sharp-2.0 stuff. This is a new component.
+

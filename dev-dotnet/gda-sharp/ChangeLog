@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.10 2005/03/23 01:29:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.11 2005/04/02 01:13:42 latexer Exp $
+
+*gda-sharp-1.9.2 (02 Apr 2005)
+
+  02 Apr 2005; Peter Johanson <latexer@gentoo.org> +gda-sharp-1.9.2.ebuild:
+  Add the preview release of the gtk-sharp-2.0 stuff.
 
   22 Mar 2005; Peter Johanson <latexer@gentoo.org> gda-sharp-1.0.4.ebuild,
   gda-sharp-1.0.6.ebuild, gda-sharp-1.0.8.ebuild:
