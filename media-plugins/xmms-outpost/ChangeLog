@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-outpost
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-outpost/ChangeLog,v 1.1 2004/02/05 10:28:24 eradicator Exp $
+
+*xmms-outpost-0.15 (05 Feb 2004)
+
+  05 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-outpost-0.15.ebuild:
+  xmms-outpost is a KDE taskbar application to control KDE. Ebuild submitted by
+  Diego Pettenò <dgp85@users.sourceforge.net> in bug #39870.
+
