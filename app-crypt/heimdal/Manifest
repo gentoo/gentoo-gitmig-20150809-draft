@@ -1,6 +1,6 @@
 MD5 80b6c3e80043a592950fdd29efc6f14c ChangeLog 5741
 MD5 e5573e25f19694fc8ccaaced2dd576f4 metadata.xml 353
-MD5 44175974a486df497f345dd510b0c480 heimdal-0.6.2.ebuild 2813
+MD5 1b0c83a271e6af141f3fe3f590c1460b heimdal-0.6.2.ebuild 2817
 MD5 35eed8dc7a9b322e4ed6220ef29cd1bc files/heimdal-0.6-berkdb.patch 542
 MD5 3d0262aa218e1611500de735d3581e28 files/heimdal-0.6.1-fPIC.patch 352
 MD5 3d0262aa218e1611500de735d3581e28 files/heimdal-0.6.2-fPIC.patch 352
