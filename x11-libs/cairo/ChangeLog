@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.17 2004/12/05 21:06:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.18 2004/12/06 09:14:38 twp Exp $
+
+  06 Dec 2004; Tom Payne <twp@gentoo.org> cairo-0.1.23-r1.ebuild,
+  cairo-0.1.23.ebuild, cairo-0.2.0.ebuild:
+  0.1.23 stable on x86. 0.2.0 fix LICENSE. Bug # 73489.
 
   06 Dec 2004; Joseph Jezak <josejx@gentoo.org> cairo-0.1.23-r1.ebuild:
   Marked ppc stable for bug #71653.

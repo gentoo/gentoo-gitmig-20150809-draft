@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.1 2004/12/05 16:57:17 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.2 2004/12/06 09:14:38 twp Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="glitz png"
