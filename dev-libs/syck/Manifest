@@ -1,3 +1,5 @@
-MD5 dbc12b6ba593d4b7b879888684ea3aff syck-0.25.ebuild 555
 MD5 22b67197d32c769838a921ca63282b2f ChangeLog 310
+MD5 dbc12b6ba593d4b7b879888684ea3aff syck-0.25.ebuild 555
+MD5 dbc12b6ba593d4b7b879888684ea3aff syck-0.35.ebuild 555
+MD5 8ee069192bc9c7e14b6761df470ba1c0 files/digest-syck-0.35 61
 MD5 f1a33193b652b38597f9a3c734e8f73b files/digest-syck-0.25 61
