@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ExtUtils-F77
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.14 2004/03/07 15:58:52 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.15 2004/03/14 13:22:43 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ExtUtils-F77-1.13-r1.ebuild, ExtUtils-F77-1.14-r1.ebuild,
+  ExtUtils-F77-1.14.ebuild:
+  Don't assign default to S; header fix
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   ExtUtils-F77-1.14-r1.ebuild:
