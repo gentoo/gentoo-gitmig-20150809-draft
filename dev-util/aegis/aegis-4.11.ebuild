@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/aegis-4.11.ebuild,v 1.5 2004/10/03 21:29:49 swegener Exp $
 
 IUSE="tcltk"
 
