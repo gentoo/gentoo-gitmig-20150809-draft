@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/bastille
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.4 2003/08/03 11:51:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.5 2003/08/27 00:05:34 seemant Exp $
+
+  26 Aug 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild:
+  updated patch from Battousai.  Fixes for program and config file
+  locations.
 
   03 Aug 2003; Seemant Kulleen <seemant@gentoo.org> :
   Added iptables and logrotate to RDEPEND.  Thanks to Wingedone
