@@ -1,11 +1,16 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.14 2002/11/19 09:41:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.15 2002/11/23 15:31:02 blizzy Exp $
+
+  23 Nov 2002; Maik Schreiber <blizzy@gentoo.org> proftpd-1.2.7_rc3.ebuild:
+  Changed KEYWORDS to "~x86 ~ppc ~sparc ~sparc64", as proftpd-1.2.7_rc2.ebuild
+  has. Also fixed ChangeLog.
+
+  19 Nov 2002; L. Boshell <leonardop@gentoo.org> proftpd-1.2.7_rc3.ebuild:
+  Modified tcp-wrappers dep, so default-1.0 users don't have problems with it.
+  See bug #10930.
 
 *proftpd-1.2.7_rc3 (17 Nov 2002)
-
-  19 Nov 2002; L. Boshell <leonardop@gentoo.org> : Modified tcp-wrappers
-  dep, so default-1.0 users don't have problems with it. See bug #10930.
   
   17 Nov 2002; Bruce A. Locke <blocke@shivan.org> proftpd-1.2.7_rc3.ebuild:
   Version bump, ebuild cleanups, and:
@@ -15,9 +20,9 @@
   - mod_wrap for TCP wrappers support
   - sample config file location in rc6 message changed
 
-*proftpd-1.2.7_rc2 (02 Nov 2002)
-
   09 Nov 2002; Ryan Phillips <rphillips@gentoo.org> : set emake to make.  Fixes #10267
+
+*proftpd-1.2.7_rc2 (02 Nov 2002)
 
   02 Nov 2002; Maik Schreiber <blizzy@gentoo.org> : New version. Also we use
   user/group "proftpd" from now on instead of nobody/nogroup.
@@ -30,47 +35,45 @@
 
   03 Aug 2002; Bruce A. Locke <blocke@shivan.org> proftpd-1.2.6_rc1-r1.ebuild,
   files/digest-proftpd-1.2.6_rc1-r1:
-
   Added xinetd file contributed by alextxm@tin.it (Alessandro Pisani) and
   fixed minor directory and documentation buglets
   
 *proftpd-1.2.6_rc1 (19 Jul 2002)
-  19 Jul 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.6_rc1.ebuild
 
+  19 Jul 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.6_rc1.ebuild:
   Added masked release candidate.  Please test.
-
-*proftpd-1.2.5-r1 (20 Jun 2002)
 
   28 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> proftpd-1.2.5-r1.ebuild:
 
   Fix bug #3791 In mod_sql_postgres.c line 38: #inlcude <pgsql/libpq-fe.h>
   is patched to: #include <postgresql/libpq-fe.h>.
 
-  20 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5-r1.ebuild :
+*proftpd-1.2.5-r1 (20 Jun 2002)
 
+  20 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5-r1.ebuild :
   Now we copy pam ftp file if we 'use pam'
 
-*proftpd-1.2.5 (9 Jun 2002)
+*proftpd-1.2.5 (09 Jun 2002)
 
-  9 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5.ebuild :
+  09 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5.ebuild :
 
   Version bump, added SLOT="0" and LICENSE="GPL-2"
-
-*proftpd-1.2.4-r7 (18 March 2002)
 
   2 Apr 2002; Tod Neidt <tod@gentoo.org> proftpd-1.2.4-r7.ebuild :
 
   Specified rundir in make install, needed to avoid sandbox violation of
   'mkdir /var/run/proftp' on initial install.
+
+*proftpd-1.2.4-r7 (18 Mar 2002)
   
-  18 March 2002; Donny Davies <woodchip@gentoo.org> proftpd-1.2.4-r7.ebuild :
+  18 Mar 2002; Donny Davies <woodchip@gentoo.org> proftpd-1.2.4-r7.ebuild :
 
   Fix compilation with USE ldap.  Closes #722, thanks goto rectrix@rectrix.cx (Tim Hobbs)
   for report and suggested resolution.
 
-*proftpd-1.2.4-r6 (1 Feb 2002)
+*proftpd-1.2.4-r6 (01 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
