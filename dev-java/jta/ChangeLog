@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jta
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.4 2004/09/04 23:13:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.5 2004/10/17 07:29:48 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jta-1.0.1.ebuild:
+  keywords ~amd64; closes #67334.
 
   05 Sep 2004; David Holm <dholm@gentoo.org> jta-1.0.1.ebuild:
   Added to ~ppc.
