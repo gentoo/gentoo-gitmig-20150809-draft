@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/puretls
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/ChangeLog,v 1.4 2004/10/22 09:50:36 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/ChangeLog,v 1.5 2005/01/03 21:34:25 luckyduck Exp $
+
+  03 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> puretls-0.94_beta4.ebuild:
+  Package puretls no longer uses packed jars. Fixes #63266.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   puretls-0.94_beta4.ebuild:
