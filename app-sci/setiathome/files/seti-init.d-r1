@@ -5,7 +5,7 @@ if [ -z "${SETIATHOME_THREADS}" ]; then
 fi
 
 depend() { 
-	need net
+	use net
 }
 
 checkconfig() {
