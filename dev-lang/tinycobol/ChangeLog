@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tinycobol
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.4 2003/07/08 07:08:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.5 2003/09/25 07:01:15 phosphan Exp $
+
+*tinycobol-0.61 (25 Sep 2003)
+
+  25 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
+  tinycobol-0.61.ebuild, files/tinycobol-0.61.patch:
+  Version bump (bug #29515).
 
   08 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.60.ebuild:
   Removing manual setting of db3, no idea why it was in. This closes bug 23576.
