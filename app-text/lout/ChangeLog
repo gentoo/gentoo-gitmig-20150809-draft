@@ -1,0 +1,24 @@
+# ChangeLog for app-text/lout
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.1 2002/07/11 06:46:28 phoenix Exp $
+
+*lout-3.25-r1 (11 July 2002)
+
+  11 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, ytin-1.83.5.ebuild, 
+  files/digest-lout-3.25-r1, files/lout-3.25-r1-makefile-gentoo.patch :
+
+  Initial cvs commit. Ebuild contributed by Christian V. J. Brüssow <cvjb@epost.de>.
+  Thanks for the contribution.
+
+  Authors comments:
+  Beware: the original lout sources don't have a configure script. So I
+  will patch the original makefile. The result should compile and install
+  at least on any i386 Gentoo Linux. I don't have any experience with (e.g.)
+  Sparc, PowerPC, ..., so YMMV.
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
+
