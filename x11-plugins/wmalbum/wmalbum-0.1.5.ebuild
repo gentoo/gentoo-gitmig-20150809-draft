@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/wmalbum-0.1.5.ebuild,v 1.2 2004/04/13 13:29:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalbum/wmalbum-0.1.5.ebuild,v 1.3 2004/04/14 03:40:10 mr_bones_ Exp $
 
 DESCRIPTION="WMAlbum is a dock applet that displays album covers for songs being played by XMMS."
 HOMEPAGE="http://wmalbum.sourceforge.net/"
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 
 src_install() {
 	einstall
-	dodoc AUTHORS COPYING INSTALL NEWS README TODO THANKS 
+	dodoc AUTHORS COPYING INSTALL NEWS README TODO THANKS
 	insinto /usr/share/doc/${PF}
 	doins wmalbum
 }
