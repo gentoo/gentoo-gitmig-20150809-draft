@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.5 2003/12/23 12:28:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.6 2003/12/26 14:10:47 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> unison-2.9.1.ebuild:
+  Added sed-fu fix to unison to adjust it's Makefile.OCaml for the new tail
+  syntax.
 
   23 Dec 2003; Markus Nigbur <pyrania@gentoo.org> unison-2.9.1.ebuild:
   Fixed tarball and digest issues.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.7 2003/12/23 12:28:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.8 2003/12/26 14:10:47 weeve Exp $
 
 IUSE="gtk"
 
@@ -17,6 +17,14 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-1.2.10 )"
 SRC_URI="mirror://${P}.tar.gz"
 
 S=${WORKDIR}/${P}
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	# Fix for coreutils change of tail syntax
+	cd ${S}
+	sed -i -e 's/tail -1/tail -n 1/' Makefile.OCaml
+}
 
 src_compile() {
 
