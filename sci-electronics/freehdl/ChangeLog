@@ -1,0 +1,24 @@
+# ChangeLog for app-sci/freehdl
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.1 2004/12/27 19:12:09 ribosome Exp $
+
+*freehdl-20040113 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/freehdl-20040113-gcc3.4.patch, +freehdl-20040113.ebuild:
+  Moved from app-sci/freehdl to sci-electronics/freehdl.
+
+  04 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/freehdl-20040113-gcc3.4.patch, freehdl-20040113.ebuild:
+  Adding patch for gcc 3.4. Adding ~x86 to "KEYWORDS".
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  freehdl-20040113.ebuild:
+  virtual/glibc -> virtual/libc
+
+*freehdl-20040113 (13 May 2004)
+
+  13 May 2004; David Holm <dholm@gentoo.org> +metadata.xml,
+  +freehdl-20040113.ebuild:
+  Initial import.
+
