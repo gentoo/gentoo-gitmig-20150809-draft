@@ -343,10 +343,6 @@ x11-terms/powershell
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
 =net-mail/qmail-1.03-r9
 
-# <aliz@gentoo.org> (11 Sep 2002)
-# Masked for testing
-=x11-misc/hotkeys-0.5.5
-
 # <cardoe@gentoo.org> (11 Sep 2002)
 # j2ee claims freetds, firebird, and curl aren't valid use flags
 # and this ebuild messes up hardcore and isn't tested
