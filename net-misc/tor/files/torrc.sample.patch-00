@@ -1,0 +1,38 @@
+--- torrc.sample.in.orig	2005-02-11 12:40:47.633092872 +0000
++++ torrc.sample.in	2005-02-11 12:47:01.107316160 +0000
+@@ -6,6 +6,10 @@
+ # On Windows, Tor will look for the configuration file in someplace like
+ # "Application Data\tor\torrc" or "Application Data\<username>\tor\torrc"
+ 
++## Default username and group the server will run as
++User tor
++Group tor
++
+ ## Replace this with "SocksPort 0" if you don't want clients to connect.
+ SocksPort 9050 # what port to advertise for application connections
+ SocksBindAddress 127.0.0.1 # accept connections only from localhost
+@@ -36,6 +40,7 @@
+ #Log notice syslog
+ ## To send all messages to stderr:
+ #Log debug stderr
++Log notice file /var/log/tor/tor.log
+ 
+ ## Uncomment this to start the process in the background... or use
+ ## --runasdaemon 1 on the command line.
+@@ -53,6 +58,7 @@
+ ## The directory for keeping all the keys/etc. By default, we store
+ ## things in $HOME/.tor on Unix, and in Application Data\tor on Windows.
+ #DataDirectory @LOCALSTATEDIR@/lib/tor
++DataDirectory   /var/lib/tor/data
+ 
+ ############### This section is just for location-hidden services ###
+ 
+@@ -106,3 +112,8 @@
+ #ExitPolicy reject 192.168.0.1:*
+ #ExitPolicy reject *:*
+ 
++##Banwidth policies, see 
++##http://wiki.noreply.org/wiki/TheOnionRouter/TorFAQ for more info
++#BandwidthRate 25 kb
++#BandwidthBurst 50 mb
++

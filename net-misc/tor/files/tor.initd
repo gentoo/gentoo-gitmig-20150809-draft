@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd,v 1.1 2005/02/10 21:12:02 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd,v 1.2 2005/02/14 14:24:01 humpback Exp $
 
 depend() {
         need net
@@ -11,8 +11,7 @@ checkconfig() {
         # first check that it exists
         if [ ! -f /etc/tor/torrc ] ; then
                 eerror "You need to setup /etc/tor/torrc first"
-                eerror "Example is in /etc/tor"
-                eerror "for info: info sockd.conf"
+                eerror "Example is in /etc/tor/torrc.sample"
                 return 1
         fi
 }
