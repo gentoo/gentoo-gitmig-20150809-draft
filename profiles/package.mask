@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (19 Aug 2002) 
+# masked for testing
+=dev-libs/korelib-1.0
+
 # <blizzy@gentoo.org> (19 Aug 2002)
 # masked for testing
 =x11-wm/oroborus-2.0.7
