@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.19 2003/02/22 02:18:35 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.06-r1.ebuild,v 1.20 2003/05/20 21:06:44 kumba Exp $
 
 IUSE="nls"
 
@@ -16,6 +16,12 @@ PROVIDE="sys-apps/console-tools"
 
 src_compile() {
 	local myopts
+
+	# fixes makefile so that it uses the CFLAGS from portage. Fixes  bug #21320
+	cp src/Makefile.in src/Makefile.in.orig
+	sed -e "s:-O2:${CFLAGS}:g" src/Makefile.in.orig > src/Makefile.in
+	 
+
 	# non-standard configure script; --di to disable NLS, nothing to enable it.	
 	use nls || myopts="--di"
 	./configure --mandir=/usr/share/man \
