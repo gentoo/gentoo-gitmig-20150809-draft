@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.9 2003/04/23 00:09:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.10 2003/06/12 20:18:34 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> texmacs-1.0.0.19.ebuild,
+  texmacs-1.0.1.ebuild:
+  fix Header
 
 *texmacs-1.0.1 (02 Jan 2002)
 
