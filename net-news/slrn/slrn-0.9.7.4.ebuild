@@ -22,6 +22,7 @@ DEPEND="virtual/glibc
 		ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 RDEPEND="virtual/glibc
+		virtual/mta
 		>=sys-apps/sharutils-4.2.1
 		>=sys-libs/slang-1.4.4
 		ssl? ( >=dev-libs/openssl-0.9.6 )"
