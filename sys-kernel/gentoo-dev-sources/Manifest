@@ -1,4 +1,4 @@
-MD5 1e082240fabab6c9da46fbc67909291c ChangeLog 3910
+MD5 d0ca14349e8a7d79e142c10fec08ab71 ChangeLog 4222
 MD5 28dbb115d7c9f2c982087a556028a54f gentoo-dev-sources-2.6.0.ebuild 3294
 MD5 3aa2de29714ded6575c28ef08452319c gentoo-dev-sources-2.6.0_beta10-r1.ebuild 3023
 MD5 a4d672f58dc685b5403312ae1e9db563 gentoo-dev-sources-2.6.0_beta10.ebuild 2632
@@ -8,8 +8,8 @@ MD5 e47d675b21d3c3c710142ecebd3b9039 gentoo-dev-sources-2.6.0_beta11.ebuild 3216
 MD5 6f63cb99dc8533aeca57408321c91cd1 gentoo-dev-sources-2.6.0_beta9.ebuild 2352
 MD5 67f88855f6ec6da22268bad74aa10597 metadata.xml 636
 MD5 438d333157b562dd25e5a83b51941b41 gentoo-dev-sources-2.6.0-r1.ebuild 3300
-MD5 51d3fd8676c22d3bd5bde577f79eca72 gentoo-dev-sources-2.6.1_rc1.ebuild 4680
-MD5 6df7d1be2d5fb59c2eb48aafbbb29798 gentoo-dev-sources-2.6.0-r2.ebuild 3379
+MD5 b8b21566b1fe6bae00799b51c0ae7fba gentoo-dev-sources-2.6.1_rc1.ebuild 4681
+MD5 31e6dd2efc842ae1a08207b41a4ddf44 gentoo-dev-sources-2.6.0-r2.ebuild 3342
 MD5 0bb5e60d954d4e595f357475973e279f files/digest-gentoo-dev-sources-2.6.0 137
 MD5 8ddadf31b5dcf41e4a17ba7b2e7f4ac1 files/digest-gentoo-dev-sources-2.6.0_beta10 144
 MD5 c242a7844916262f087398b60ec62705 files/digest-gentoo-dev-sources-2.6.0_beta10-r1 144
@@ -19,4 +19,4 @@ MD5 d472f52790525a410af311ff82b4e179 files/digest-gentoo-dev-sources-2.6.0_beta1
 MD5 2c930a031439b36d073cdbadc16a5bbc files/digest-gentoo-dev-sources-2.6.0_beta9 142
 MD5 8104284047ea615d1ddcd79fa96e65fc files/digest-gentoo-dev-sources-2.6.0-r1 138
 MD5 049cf3bb4dbeb55995bad1459931c3b5 files/digest-gentoo-dev-sources-2.6.1_rc1 202
-MD5 431365284a32022d85e669a6e204002b files/digest-gentoo-dev-sources-2.6.0-r2 140
+MD5 e7ee256f3e809a78b23313a7c73e7e97 files/digest-gentoo-dev-sources-2.6.0-r2 140
