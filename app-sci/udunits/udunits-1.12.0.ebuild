@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.1 2003/11/03 02:57:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.2 2003/12/15 07:50:11 nerdboy Exp $
 
 # This is the Unidata Units library, which supports conversion of unit 
 # specifications between formatted and binary forms, arithmetic 
@@ -18,7 +18,7 @@ SRC_URI="ftp://unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.Z"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="dev-lang/perl"
 
