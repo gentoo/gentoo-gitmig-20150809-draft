@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8-r1.ebuild,v 1.3 2004/10/17 09:43:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8-r1.ebuild,v 1.4 2004/11/12 12:08:03 tomk Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "----------------------------------------------------------------"
+	einfo ""
 	einfo " By default daemons that use xinetd are not started "
 	einfo "     automatically in gentoo"
 	einfo " To activate do the following steps: "
@@ -55,5 +55,5 @@ pkg_postinst () {
 	einfo "   If the emerge also pulled in the xinetd package for you, do "
 	einfo "   # rc-update add xinetd default "
 	einfo "   # /etc/init.d/xinetd start "
-	einfo "-----------------------------------------------------------------"
+	einfo ""
 }
