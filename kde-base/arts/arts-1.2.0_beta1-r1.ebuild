@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta1-r1.ebuild,v 1.1 2003/11/03 20:02:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_beta1-r1.ebuild,v 1.2 2003/11/04 19:24:00 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -62,7 +62,7 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/48depaths-3.2.0 # number goes down with version upgrade
+CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/48kdepaths-3.2.0 # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/57kdedir-3.2.0 # number goes up with version upgrade
 
