@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.6 2004/02/20 07:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.7 2004/04/18 08:37:46 vapier Exp $
 
 inherit games eutils
 
@@ -30,7 +30,7 @@ pkg_nofetch() {
 src_unpack() {
 	unpack_pdv ${MY_PN}.bin 4
 	echo ">>> Unpacking ${MY_PN}.tar.gz to ${S}"
-	tar -zxf ${MY_PN}.tar.gz
+	tar -zxf ${MY_PN}.tar.gz || die "unpacking ${MY_PN}.tar.gz failed"
 	rm ${MY_PN}.tar.gz
 	cd ${S}
 	unpack boffix_v3.tar.gz
