@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.184 2005/02/27 12:32:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.185 2005/02/27 22:51:12 greg_g Exp $
+
+*kdebase-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.4.0_rc1-startkde-gentoo.patch, +kdebase-3.4.0_rc1.ebuild:
+  New version. Add support for hal (#78339). Switch back to the old
+  system to manage the .kde* directories.
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
   kdebase-3.4.0_beta2.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.37 2005/02/09 16:23:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.38 2005/02/27 23:00:25 greg_g Exp $
+
+*kdewebdev-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kdewebdev-3.4.0_rc1.ebuild:
+  New version.
 
 *kdewebdev-3.4.0_beta2 (09 Feb 2005)
 

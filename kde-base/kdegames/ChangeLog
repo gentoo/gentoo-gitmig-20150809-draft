@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.112 2005/02/22 08:54:12 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.113 2005/02/27 22:54:29 greg_g Exp $
+
+*kdegames-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kdegames-3.4.0_rc1.ebuild:
+  New version.
 
   22 Feb 2005; Hardave Riar <hardave@gentoo.org> kdegames-3.3.2.ebuild:
   Marked ~mips

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.156 2005/02/21 16:45:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.157 2005/02/27 22:55:15 greg_g Exp $
+
+*kdegraphics-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdegraphics-3.4.0_rc1.ebuild:
+  New version. Support disabling DRM in kpdf, exactly as xpdf does.
 
   21 Feb 2005; Aron Griffis <agriffis@gentoo.org>
   kdegraphics-3.2.3-r4.ebuild:

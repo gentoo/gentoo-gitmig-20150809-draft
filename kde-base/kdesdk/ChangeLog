@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.82 2005/02/09 16:23:25 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.83 2005/02/27 22:59:54 greg_g Exp $
+
+*kdesdk-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kdesdk-3.4.0_rc1.ebuild:
+  New version.
 
 *kdesdk-3.4.0_beta2 (09 Feb 2005)
 
