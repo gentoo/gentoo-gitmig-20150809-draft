@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.6 2004/08/02 03:32:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r4.ebuild,v 1.7 2004/10/05 09:49:34 eradicator Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -13,7 +13,7 @@
 # When we update to freetype-pre1.4 or any later version, we should use
 # the included contrib directory and not download any additional files.
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 P2=${PN}1-contrib
 DESCRIPTION="TTF-Library"
@@ -75,10 +75,10 @@ src_install() {
 	# Seems to require a shared libintl (getetxt comes only with a static one
 	# But it seems to work without problems
 
-	make -f arch/unix/Makefile prefix=${D}/usr install || die
+	make -f arch/unix/Makefile prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
 
 	cd ${S}/po
-	make prefix=${D}/usr install || die
+	make prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
 
 	cd ${S}
 	dodoc announce PATENTS README readme.1st
