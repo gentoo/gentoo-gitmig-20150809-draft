@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/pnet-0.5.8.ebuild,v 1.3 2003/06/18 23:55:36 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/pnet-0.5.8.ebuild,v 1.4 2003/06/19 00:38:12 scandium Exp $
 
 DESCRIPTION="Portable .NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -24,7 +24,7 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README 
 	dodoc doc/gtk-sharp.HOWTO
-	dohtml doc/*html
+	dohtml doc/*.html
 
 	# init script
 	exeinto /etc/init.d ; newexe ${PORTDIR}/dev-lang/mono/files/dotnet.init dotnet
