@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wput
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.1 2004/05/02 18:47:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.2 2004/05/03 07:21:54 dholm Exp $
+
+  03 May 2004; David Holm <dholm@gentoo.org> wput-0.4.ebuild:
+  Added to ~ppc.
 
 *wput-0.4 (02 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.4.ebuild,v 1.1 2004/05/02 18:47:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.4.ebuild,v 1.2 2004/05/03 07:21:54 dholm Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://itooktheredpill.dyndns.org/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=""
