@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r10.ebuild,v 1.1 2004/11/27 19:29:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r11.ebuild,v 1.1 2004/12/24 18:53:11 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -46,6 +46,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.smbfs.patch || die "Failed to apply the SMBFS patch!"
 	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
 	epatch ${FILESDIR}/${P}.binfmt_a.out.patch || die "Failed to apply the a.out patch!"
+	epatch ${FILESDIR}/${P}.vma.patch || die "Failed to apply the VMA patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
+
 
 	kernel_universal_unpack
 }
+
