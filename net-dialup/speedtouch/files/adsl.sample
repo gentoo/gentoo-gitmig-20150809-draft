@@ -1,5 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/files/adsl.sample,v 1.2 2004/03/04 19:12:20 vapier Exp $
 
 # This file could be rename but its place is under /etc/ppp/peers
 # To connect to Internet using this configuration file

@@ -1,30 +1,23 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi,v 1.2 2003/02/14 22:58:24 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi,v 1.3 2004/03/04 19:08:22 vapier Exp $
 
 depend() {
-
-    after isapnp
-
+	after isapnp
 }
 
 start() {
-
-        [ -e /etc/capi.conf ] || {
-                eerror "You're missing /etc/capi.conf (comes with a capi-driver)."
-                eerror "Emerge net-dialup/fcpci if you are having an AVM Fritz!Card PCI"
-                return 1
-        }
-        /sbin/capiinit start
-        eend 0
-
+	if [ ! -e /etc/capi.conf ] ; then
+		eerror "You're missing /etc/capi.conf (comes with a capi-driver)."
+		eerror "Emerge net-dialup/fcpci if you are having an AVM Fritz!Card PCI"
+		return 1
+	fi
+	/sbin/capiinit start
+	eend 0
 }
 
 stop() {
-
-        /sbin/capiinit stop
-        eend $?
-
+	/sbin/capiinit stop
+	eend $?
 }
-

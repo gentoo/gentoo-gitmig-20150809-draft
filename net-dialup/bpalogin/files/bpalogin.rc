@@ -1,18 +1,20 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/files/bpalogin.rc,v 1.1 2003/11/23 09:22:46 lanius Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bpalogin/files/bpalogin.rc,v 1.2 2004/03/04 19:07:18 vapier Exp $
 
 depend() {
-        need net
+	need net
 }
 
 start() {
-        /usr/sbin/bpalogin -c /etc/bpalogin.conf
-        eend $?
+	ebegin "Starting bpalogin"
+	/usr/sbin/bpalogin -c /etc/bpalogin.conf
+	eend $?
 }
 
 stop() {
-        killall -9 bpalogin
-        eend $?
+	ebegin "Stopping bpalogin"
+	killall -9 bpalogin
+	eend $?
 }
