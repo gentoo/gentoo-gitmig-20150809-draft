@@ -1,8 +1,11 @@
 # ChangeLog for media-video/em8300-libraries
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.4 2002/12/13 05:25:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.5 2002/12/15 09:05:07 lostlogic Exp $
 
 *em8300-libraries-0.13.0 (12 Dec 2002)
+
+  15 Dec 2002; Brandon Low <lostlogic@gentoo.org> em8300-libraries-0.13.0 :
+  oops, info wrong, and extra line in ebuild.
 
   12 Dec 2002; Brandon Low <lostlogic@gentoo.org> em8300-libraries-0.13.0 :
   Bump
