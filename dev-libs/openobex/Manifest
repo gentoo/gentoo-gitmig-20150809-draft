@@ -1,9 +1,17 @@
-MD5 331af4a5c0824fc8915bdb43f4e63c65 ChangeLog 1831
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c44fdfc69f7986746d7b92d61f8400b openobex-1.0.1.ebuild 994
+MD5 b38bb7cc034ddeeaca688df8787efac5 ChangeLog 1961
 MD5 bd9e210457c22384582e7c1394314d3f metadata.xml 250
-MD5 ec6d86e79b0be9b2065e4badd460dcd0 openobex-0.9.8.ebuild 613
-MD5 ac979b69a7c881c3068ce63676b733f9 openobex-1.0.0.ebuild 641
-MD5 ff8835126821b43bc80db4b18f53c89d openobex-1.0.1.ebuild 998
-MD5 7f2be560ee41e4fa72e98c101d03f606 files/digest-openobex-0.9.8 66
-MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
+MD5 6968d807c94d6b8304271d8f829d7569 openobex-1.0.0.ebuild 638
 MD5 a577e794f16a7f437408fcbd5861b9ed files/digest-openobex-1.0.1 66
 MD5 5d15b9110d8811e635f436f52ee24e48 files/openobex-1.0.1-shared-object.patch 1920
+MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB6zrYQlM6RnzZP+IRAghHAJ0eHwXgarBw3vVF1DOC42sajvozPQCbBvcy
+CyyT8nUbd5+i10II+NfeIe8=
+=dRGs
+-----END PGP SIGNATURE-----

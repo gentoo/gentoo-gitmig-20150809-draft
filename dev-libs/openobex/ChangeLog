@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openobex
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.16 2004/09/28 21:21:55 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.17 2005/01/17 04:10:52 ticho Exp $
+
+  17 Jan 2005; Andrej Kacian <ticho@gentoo.org> -openobex-0.9.8.ebuild,
+  openobex-1.0.1.ebuild:
+  Stable on x86. Removed 0.9.8.
 
   28 Sep 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml:
   Added missing metadata.xml file, set myself as maintainer.
