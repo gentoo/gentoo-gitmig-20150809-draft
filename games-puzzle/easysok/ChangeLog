@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/easysok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/easysok/ChangeLog,v 1.4 2004/10/18 20:12:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/easysok/ChangeLog,v 1.5 2004/12/16 14:26:49 josejx Exp $
+
+  17 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  +files/image_effect-ppc.patch, easysok-0.3.4.ebuild:
+  Added image blending patch for ppc, possibly other big-endian arches. Fixes
+  bug #72721.
 
 *easysok-0.3.4 (18 Oct 2004)
 
