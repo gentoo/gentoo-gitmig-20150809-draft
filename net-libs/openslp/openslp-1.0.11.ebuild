@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.6 2003/09/24 21:32:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.7 2004/01/26 13:54:45 gustavoz Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org"
 SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
-KEYWORDS="ia64 x86 ~sparc ppc hppa amd64"
+KEYWORDS="ia64 x86 sparc ppc hppa amd64"
 DEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="BSD"
