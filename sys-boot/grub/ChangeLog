@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.17 2004/06/10 02:33:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.18 2004/06/10 16:20:21 lv Exp $
+
+  10 Jun 2004; Travis Tilley <lv@gentoo.org> grub-0.94-r1.ebuild:
+  fixed multilib check
 
   09 Jun 2004; Travis Tilley <lv@gentoo.org> grub-0.94-r1.ebuild:
   added multilib check and ~amd64 keyword
