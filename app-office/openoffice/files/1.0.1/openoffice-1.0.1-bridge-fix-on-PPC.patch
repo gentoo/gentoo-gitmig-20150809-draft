@@ -1,0 +1,31 @@
+--- oo_1.0_src/bridges/source/cpp_uno/gcc3_linux_powerpc/cpp2uno.cxx~	Tue Jul 16 20:19:57 2002
++++ oo_1.0_src/bridges/source/cpp_uno/gcc3_linux_powerpc/cpp2uno.cxx	Tue Jul 16 20:46:22 2002
+@@ -736,16 +736,16 @@
+                 // get method
+                 *slots = code;
+                 codeSnippet( (long *)code, vtable_pos++, simple_ret );
++		flush_range( code, nSnippetSize );
+                 code += nSnippetSize;
+-                flush_range((char *) slots, nSnippetSize);
+                 slots++;
+                 if (! ((typelib_InterfaceAttributeTypeDescription *)pTD)->bReadOnly)
+                 {
+                     // set method
+                     *slots = code;
+                     codeSnippet( (long *)code, vtable_pos++, true );
++		    flush_range( code, nSnippetSize );
+                     code += nSnippetSize;
+-                    flush_range((char *) slots, nSnippetSize);
+                     slots++;
+                 }
+             }
+@@ -755,8 +755,8 @@
+                     ((typelib_InterfaceMethodTypeDescription *)pTD)->pReturnTypeRef->eTypeClass );
+                 *slots = code;
+                 codeSnippet( (long *)code, vtable_pos++, simple_ret );
++		flush_range( code, nSnippetSize );
+                 code += nSnippetSize;
+-                flush_range((char *) slots, nSnippetSize);
+                 slots++;
+             }
+             TYPELIB_DANGER_RELEASE( pTD );

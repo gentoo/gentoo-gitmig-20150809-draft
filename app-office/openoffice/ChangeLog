@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.5 2002/08/06 20:38:38 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.6 2002/09/15 18:12:49 azarah Exp $
+
+*openoffice-1.0.1 (15 Sep 2002)
+
+  15 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update version.  New install method.  Install menu shortcuts.
+  Lots of cleanups and other stuff I forgot.
 
 *openoffice-1.0.0-r2 (15 Jul 2002)
 

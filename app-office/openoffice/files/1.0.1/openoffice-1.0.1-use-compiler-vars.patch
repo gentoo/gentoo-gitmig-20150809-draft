@@ -1,0 +1,96 @@
+diff -ru oo_cvs/solenv/inc/unxlngi3.mk oo_stable1_cvs20020411_src/solenv/inc/unxlngi3.mk
+--- oo_cvs/solenv/inc/unxlngi3.mk	Wed Oct 24 19:21:47 2001
++++ oo_stable1_cvs20020411_src/solenv/inc/unxlngi3.mk	Fri Apr 12 21:15:30 2002
+@@ -85,9 +85,9 @@
+ .ENDIF 
+ 
+ # name of C++ Compiler
+-CC=g++
++CC=$(CXXCOMP)
+ # name of C Compiler
+-cc=gcc
++cc=$(CCCOMP)
+ # flags for C and C++ Compiler
+ # do not use standard header search paths
+ # if installed elsewhere
+@@ -138,7 +138,7 @@
+ DYNAMIC		= -Wl,-Bdynamic
+ 
+ # name of linker
+-LINK=gcc
++LINK=$(CXXCOMP)
+ # default linker flags
+ LINKFLAGS=
+ 
+Only in oo_stable1_cvs20020411_src/solenv/inc: unxlngi3.mk.orig
+diff -ru oo_cvs/solenv/inc/unxlngi4.mk oo_stable1_cvs20020411_src/solenv/inc/unxlngi4.mk
+--- oo_cvs/solenv/inc/unxlngi4.mk	Fri Dec 21 13:24:32 2001
++++ oo_stable1_cvs20020411_src/solenv/inc/unxlngi4.mk	Fri Apr 12 19:58:42 2002
+@@ -85,9 +85,9 @@
+ .ENDIF 
+ 
+ # name of C++ Compiler
+-CC=g++
++CC=$(CXXCOMP)
+ # name of C Compiler
+-cc=gcc
++cc=$(CCCOMP)
+ # flags for C and C++ Compiler
+ # do not use standard header search paths
+ # if installed elsewhere
+@@ -147,7 +147,7 @@
+ DYNAMIC		= -Wl,-Bdynamic
+ 
+ # name of linker
+-LINK=gcc
++LINK=$(CXXCOMP)
+ # default linker flags
+ LINKFLAGS=
+ 
+diff -ru oo_cvs/solenv/inc/unxlngppc.mk oo_stable1_cvs20020411_src/solenv/inc/unxlngppc.mk
+--- oo_cvs/solenv/inc/unxlngppc.mk	Thu Feb 28 21:39:42 2002
++++ oo_stable1_cvs20020411_src/solenv/inc/unxlngppc.mk	Fri Apr 12 21:14:54 2002
+@@ -26,9 +26,9 @@
+ 
+ 
+ # name of C++ Compiler
+-CC=g++ 
++CC=$(CXXCOMP)
+ # name of C Compiler
+-cc=gcc
++cc=$(CCCOMP)
+ 
+ # source code is still not signed versus unsigned char clean 
+ CFLAGS=-fsigned-char -w -nostdinc -c $(INCLUDE) -I$(SOLARENV)/unxlngppc/usr/include 
+@@ -81,7 +81,7 @@
+ DYNAMIC = -Wl,-Bdynamic 
+ 
+ # name of linker
+-LINK=gcc 
++LINK=$(CXXCOMP) 
+ # default linker flags
+ LINKFLAGS= 
+ 
+--- oo_1.0_src/solenv/inc/unxlngppc4.mk~	Wed Jun 26 01:40:37 2002
++++ oo_1.0_src/solenv/inc/unxlngppc4.mk	Wed Jun 26 01:46:15 2002
+@@ -85,9 +85,9 @@
+ .ENDIF 
+ 
+ # name of C++ Compiler
+-CC=g++
++CC=$(CXXCOMP)
+ # name of C Compiler
+-cc=gcc
++cc=$(CCCOMP)
+ 
+ # flags for C and C++ Compiler
+ # do not use standard header search paths
+@@ -151,7 +151,7 @@
+ DYNAMIC		= -Wl,-Bdynamic
+ 
+ # name of linker
+-LINK=gcc
++LINK=$(CXXCOMP)
+ # default linker flags
+ LINKFLAGS=
+ 

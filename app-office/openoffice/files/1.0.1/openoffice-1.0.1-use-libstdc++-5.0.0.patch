@@ -1,0 +1,64 @@
+--- oo_1.0.1_src/product/util/makefile.mk	Mon Apr  8 10:34:21 2002
++++ oo_1.0.1_src.azarah/product/util/makefile.mk	Wed Apr 10 18:18:09 2002
+@@ -113,12 +113,12 @@
+ BINDINGDLL=$(COMNAME)_uno
+ 
+ .IF "$(COMID)"=="gcc3"
+-.IF "$(CCNUMVER)">="000300010000"
++.IF "$(CCNUMVER)">="000300020000"
+ ADDITIONAL_DLLS= \
+        $(DESTDIRDLL)$/libgcc_s.so.1            \
+        $(DESTDIRDLL)$/libgcc_s.so              \
+-       $(DESTDIRDLL)$/libstdc++.so.4           \
+-       $(DESTDIRDLL)$/libstdc++.so.4.0.0
++       $(DESTDIRDLL)$/libstdc++.so.5           \
++       $(DESTDIRDLL)$/libstdc++.so.5.0.0
+ .ELSE
+ ADDITIONAL_DLLS= \
+ 	$(DESTDIRDLL)$/libgcc_s.so.1 		\
+@@ -498,15 +498,15 @@
+ #---------------------------------------------------------
+ # special targets for linux gcc3
+ 
+-.IF "$(CCNUMVER)">="000300010000"
++.IF "$(CCNUMVER)">="000300020000"
+ 
+-$(DESTDIRDLL)$/libstdc++.so.4.0.0 : $(DLLOUT)$/libstdc++.so.4.0.0 $(DIRLIST)
++$(DESTDIRDLL)$/libstdc++.so.5.0.0 : $(DLLOUT)$/libstdc++.so.5.0.0 $(DIRLIST)
+        -rm -f $@
+-       $(GNUCOPY) -p $(DLLOUT)$/libstdc++.so.4.0.0 $@
++       $(GNUCOPY) -p $(DLLOUT)$/libstdc++.so.5.0.0 $@
+ 
+-$(DESTDIRDLL)$/libstdc++.so.4 : $(DESTDIRDLL)$/libstdc++.so.4.0.0 $(DIRLIST)
++$(DESTDIRDLL)$/libstdc++.so.5 : $(DESTDIRDLL)$/libstdc++.so.5.0.0 $(DIRLIST)
+        -rm -f $@
+-       +ln -s libstdc++.so.4.0.0 $@
++       +ln -s libstdc++.so.5.0.0 $@
+ 
+ .ELSE
+  
+--- oo_1.0.1_src/product/inc/scp/udk_basefiles.scp	Wed Sep 11 08:18:10 2002
++++ oo_1.0.1_src.azarah/product/inc/scp/udk_basefiles.scp	Wed Sep 11 08:18:40 2002
+@@ -11,11 +11,11 @@
+     Styles		= (PACKED, SETUPZIP);
+ End
+ 
+-#if ( CCNUMVER >= 000300010000 )
++#if ( CCNUMVER >= 000300020000 )
+ 
+ File gid_File_Lib_Stdc
+     BIN_FILE_BODY;
+-    Name               = STRING(libstdc++.so.4.0.0);
++    Name               = STRING(libstdc++.so.5.0.0);
+     Dir                        = GCFG_BINARY_DIR;
+     Styles             = (PACKED, SETUPZIP);
+ End
+@@ -24,7 +24,7 @@
+ Shortcut gid_Shortcut_Lib_Stdc
+     FileID      = gid_File_Lib_Stdc;
+     Dir         = GCFG_BINARY_DIR;
+-    Name        = STRING(libstdc++.so.4);
++    Name        = STRING(libstdc++.so.5);
+     Styles      = (NETWORK,RELATIVE);
+ End
+ 

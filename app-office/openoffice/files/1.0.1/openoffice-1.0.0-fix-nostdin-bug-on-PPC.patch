@@ -1,0 +1,11 @@
+--- oo_stable1_cvs20020418_src/solenv/inc/unxlngppc.mk~	Fri Apr 19 00:09:21 2002
++++ oo_stable1_cvs20020418_src/solenv/inc/unxlngppc.mk	Fri Apr 19 00:24:30 2002
+@@ -31,7 +31,7 @@
+ cc=$(CCCOMP)
+ 
+ # source code is still not signed versus unsigned char clean 
+-CFLAGS=-fsigned-char -w -nostdinc -c $(INCLUDE) -I$(SOLARENV)/unxlngppc/usr/include 
++CFLAGS=-fsigned-char -w -c $(INCLUDE) -I$(SOLARENV)/unxlngppc/usr/include 
+ CFLAGSCC=-fsigned-char
+ 
+ # Flags for enabling exception handling

@@ -1,0 +1,36 @@
+diff -urNd oo_641d_src/config_office/configure.in oo_641d_src/config_office/configure.in.new
+--- oo_641d_src/config_office/configure.in	Sat Mar 30 23:18:04 2002
++++ oo_641d_src/config_office/configure.in.new	Sat Mar 30 22:31:31 2002
+@@ -808,10 +808,14 @@
+    if test "$_os" = "Linux" -a "$_machine_type" = "i686"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`
+       _jdk_middle3=`echo $_jdk | $AWK -F. '{ if ($2 != 3) print "false"; else print "true" }'`
++      _jdk_middle4=`echo $_jdk | $AWK -F. '{ if ($2 != 4) print "false"; else print "true" }'`
+ 
+       if test "$_jdk_middle" = "false" -a "$_jdk_middle3" = "true"; then
+          _jdk_minor="true"
+       fi
++      if test "$_jdk_middle" = "false" -a "$_jdk_middle4" = "true"; then
++         _jdk_minor="true"
++      fi
+    fi
+    if test "$_os" = "FreeBSD" -o "$_os" = "NetBSD"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`
+diff -urNd oo_641d_src/config_office/configure oo_641d_src/config_office/configure.new
+--- oo_641d_src/config_office/configure	Sat Mar 30 23:18:02 2002
++++ oo_641d_src/config_office/configure.new	Sat Mar 30 22:31:26 2002
+@@ -2296,10 +2296,14 @@
+    if test "$_os" = "Linux" -a "$_machine_type" = "i686"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`
+       _jdk_middle3=`echo $_jdk | $AWK -F. '{ if ($2 != 3) print "false"; else print "true" }'`
++      _jdk_middle4=`echo $_jdk | $AWK -F. '{ if ($2 != 4) print "false"; else print "true" }'`
+ 
+       if test "$_jdk_middle" = "false" -a "$_jdk_middle3" = "true"; then
+          _jdk_minor="true"
+       fi
++      if test "$_jdk_middle" = "false" -a "$_jdk_middle4" = "true"; then
++         _jdk_minor="true"
++      fi
+    fi
+    if test "$_os" = "FreeBSD" -o "$_os" = "NetBSD"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`

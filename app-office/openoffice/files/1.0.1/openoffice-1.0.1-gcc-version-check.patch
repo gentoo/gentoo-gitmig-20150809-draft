@@ -1,0 +1,74 @@
+--- oo_1.0_src/config_office/configure.in~	Tue Jun 25 22:44:47 2002
++++ oo_1.0_src/config_office/configure.in	Tue Jun 25 23:27:46 2002
+@@ -241,18 +241,16 @@
+ if test "$_os" != "WINNT" && test -z "$with_gcc_home"; then
+    AC_PROG_CC
+ fi
+-if test "$_os" = "Linux" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" -o \( \( "$_os" = "IRIX" -o "$_os" = "IRIX64" \) -a "$CC" = "gcc" \) ; then
++if test "$_os" = "Linux" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" -o \( \( "$_os" = "IRIX" -o "$_os" = "IRIX64" \) -a "$GCC" = "gcc" \) ; then
+    dnl ******************************************
+    dnl Testing for GNU compiler and version...
+    dnl ******************************************
+    dnl Check whether the gnu gcc compiler is used.
+    if test -z "$with_gcc_home"; then
+-      if test "$CC" = "gcc"; then
+-         AC_PATH_PROG(GCC, gcc)
+-         COMPATH=`echo $GCC | $SED -n "s/\/gcc//p"`
+-         _gcc_include_start=/usr/lib/gcc-lib
+-         _gxx_include_start=/usr/include
+-      fi
++      AC_PROG_CC
++      COMPATH=`echo $CC | $SED -n "s,/[^/]\+$,,p"`
++      _gcc_include_start=/usr/lib/gcc-lib
++      _gxx_include_start=/usr/include
+    else
+       dnl Compiler has been installed to its own directory and it's home is arg with_gcc_home
+       _gcc_path="$with_gcc_home/bin/gcc"
+@@ -343,7 +343,7 @@
+                               AC_MSG_WARN([found multiple g++-2 directories, please rename so you have one distinct]) >> warn
+                            fi
+                         else
+-                           _gxx_include_path3=`find $_gxx_include_start -name "g++" -print 2> /dev/null`
++			   _gxx_include_path3=`find $_gxx_include_start -name "g++-v3*" -print 2> /dev/null`
+                            if test "$_gxx_include_path3"; then
+                               _multiple=`echo $_gxx_include_path3 | $AWK '{ if ($2) print "true"; else print "false" }'`
+                               if test "$_multiple" = "false"; then
+@@ -758,7 +756,8 @@ if test -d "$with_stlport4_home"; then
+ 				fi
+ 			fi
+ 		else
+-			if test -f "$STLPORT4/lib/libstlport_gcc.so"; then
++			_stl_suffix="gcc`$CC -dumpversion`"
++			if test -f "$STLPORT4/lib/libstlport_$_stl_suffix.so"; then
+ 				AC_MSG_RESULT([checked])
+ 			else
+ 				AC_MSG_ERROR([STLport4 libraries not found])
+@@ -821,6 +820,12 @@ if test "$JAVA"; then
+    fi
+    if test "$_os" = "Linux" -a "$_machine_type" = "ppc"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`
++      _jdk_middle3=`echo $_jdk | $AWK -F. '{ if ($2 != 3) print "false"; else print "true" }'`
++
++      if test "$_jdk_middle" = "false" -a "$_jdk_middle3" = "true"; then
++         _jdk_minor="true"
++      fi
++
+    fi
+    if test "$_os" = "Linux" -a "$_machine_type" = "armv4l"; then
+       _jdk_middle=`echo $_jdk | $AWK -F. '{ if ($2 != 2) print "false"; else print "true" }'`
+@@ -1197,12 +1198,14 @@
+ echo "\$MINGWIN32="$WITH_MINGWIN
+ echo "\$with_use_shell="$with_use_shell
+ echo "\$USE_GCC3="$USE_GCC3
++echo "\$CC="$CC
++echo "\$CXX="$CXX
+ echo
+ fi
+ 
+ # Executing the set_soenv script to setup the environment variables.
+ if test -z "$enable_check_only"; then
+-   './set_soenv' $COMPATH $_gcc_include_path $_gxx_include_path $JAVA_HOME $TCSH $PERL $x_libraries $x_includes $_LOCAL_SOLENV $_LOCAL_SOLVER $upd $CYGWIN $STLPORT4 $enable_xprint $with_lang $with_asm_home $with_unzip_home $WITH_MINGWIN $with_use_shell $USE_GCC3
++   './set_soenv' $COMPATH $_gcc_include_path $_gxx_include_path $JAVA_HOME $TCSH $PERL $x_libraries $x_includes $_LOCAL_SOLENV $_LOCAL_SOLVER $upd $CYGWIN $STLPORT4 $enable_xprint $with_lang $with_asm_home $with_unzip_home $WITH_MINGWIN $with_use_shell $USE_GCC3 "$CC" "$CXX"
+ else
+    echo
+    echo Test Complete
