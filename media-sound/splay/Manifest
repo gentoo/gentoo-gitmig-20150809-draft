@@ -1,4 +1,15 @@
-MD5 ca5be3e35f5c71027ef9387deeb70c7c ChangeLog 791
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 731ca4f9e8acd30221cdb17c21b03857 splay-0.9.5.2.ebuild 954
+MD5 ab8cb2480455a710b2c57f84123ec92e ChangeLog 996
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 8f73e2555b53183889ea8d4669c676fc splay-0.9.5.2.ebuild 966
 MD5 2dfdb702aadb0c285c3bbeb861a81810 files/digest-splay-0.9.5.2 65
+MD5 79fd2bcd5390d2bf54d6e7fabd2fc367 files/splay-0.9.5.2-external-id3lib.diff 618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCUXLF06ebR+OMO78RArx7AJ9HcBhj5WNv+l69u3zZog91Op4VOgCfbxnt
+yMFxdlOPioqe6Y9r9VWJgZM=
+=i7Ck
+-----END PGP SIGNATURE-----

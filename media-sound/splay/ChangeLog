@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/splay
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.9 2004/09/14 07:43:59 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.10 2005/04/04 17:00:34 luckyduck Exp $
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/splay-0.9.5.2-external-id3lib.diff, splay-0.9.5.2.ebuild:
+  added patch to fix compilation problems if an id3lib is installed. 
+  fixes #87597
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> splay-0.9.5.2.ebuild:
   Stable amd64.
