@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.168 2004/04/30 18:50:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.169 2004/04/30 19:11:50 gustavoz Exp $
+
+  30 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> gaim-0.77.ebuild:
+  Stable on sparc wrt bug #49184
 
   30 Apr 2004; Stephen P. Becker <geoman@gentoo.org> gaim-0.77.ebuild:
   Stable on mips.
