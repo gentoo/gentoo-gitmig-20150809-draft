@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.4.ebuild,v 1.9 2004/09/06 00:42:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.4.ebuild,v 1.10 2004/10/23 22:40:37 plasmaroo Exp $
 
 inherit eutils
 
@@ -94,7 +94,8 @@ src_compile ()  {
 }
 
 src_install() {
-	if echo ${KV} | grep -q 2.4.; then
+	echo ${KV} | grep -q 2.4.
+	if [ "$?" -eq '0' -o "$LINUX" != '' ]; then
 		emake \
 			CC=${CC} \
 			LINUX=$LINUX \
