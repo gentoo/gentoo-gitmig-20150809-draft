@@ -1,4 +1,6 @@
-MD5 3046e43b59581d434ecfca8486223b12 ChangeLog 752
+MD5 65fef34e9dfa062c72e288653c779e46 biew-5.6.1.ebuild 1431
+MD5 c35aae5e2cc991aaa96a476ebb0c5454 ChangeLog 870
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 d5937ac6cb4c9a7de6f3555f6c59788f biew-5.5.0.ebuild 1419
 MD5 46d0b7c47f51672d499caa48f725a199 files/digest-biew-5.5.0 61
+MD5 1ed5cdfac4193cde312279f62b63caba files/digest-biew-5.6.1 60
