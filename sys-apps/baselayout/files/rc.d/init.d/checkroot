@@ -1,5 +1,5 @@
 #!/bin/sh
-#RCUPDATE:boot:05:This line is required for script management
+#RCUPDATE:boot:07:This line is required for script management
 
 
 . /etc/rc.d/config/basic
