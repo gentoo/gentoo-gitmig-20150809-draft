@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.8 2004/07/01 21:47:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.9 2004/09/28 08:49:06 blubb Exp $
 
 # Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
 # mpich listens on or any other custom options (#38207).
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="doc crypt"
 
 DEPEND="virtual/libc"
