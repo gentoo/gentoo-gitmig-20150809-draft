@@ -1,18 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/files/fenced.rc,v 1.1 2005/03/19 21:52:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/files/fenced.rc,v 1.2 2005/03/22 13:42:07 xmerlin Exp $
 
 depend() {
 	use net
-	need ccs
-	before gfs
-	provide fence
+	need ccs cluster-manager cluster-locking-manager
 }
 
 start() {
 	ebegin "Starting fence domain"
-	/sbin/fence_tool join > /dev/null 2>&1
+	/sbin/fence_tool join ${FENCED_OPTS}> /dev/null 2>&1
 	eend $?
 }
 
