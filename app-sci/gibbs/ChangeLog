@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/gibbs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gibbs/ChangeLog,v 1.1 2004/05/27 12:25:58 phosphan Exp $
+
+*gibbs-1995.9 (27 May 2004)
+
+  27 May 2004; Patrick Kursawe <phosphan@gentoo.org> gibbs-1995.9.ebuild,
+  metadata.xml, files/gibbs-demo:
+  Initial import, ebuild by Frank Vernaillen <fr_ve@hotmail.com> and
+  olivier.fisette@sympatico.ca in bug #28808
+
