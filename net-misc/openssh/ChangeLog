@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.44 2003/09/16 16:41:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.45 2003/09/16 20:13:25 rajiv Exp $
+
+  16 Sep 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> openssh-3.7_p1.ebuild:
+  added warning about restarting sshd.
 
 *openssh-3.7_p1 (16 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7_p1.ebuild,v 1.4 2003/09/16 19:47:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7_p1.ebuild,v 1.5 2003/09/16 20:13:25 rajiv Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -130,11 +130,12 @@ pkg_postinst() {
 	# empty dir for the new priv separation auth chroot..
 	install -d -m0755 -o root -g root ${ROOT}/var/empty
 
-	einfo
-	einfo "Remember to merge your config files in /etc/ssh!"
+	ewarn "Remember to merge your config files in /etc/ssh/ and then"
+	ewarn "restart sshd: '/etc/init.d/sshd restart'."
+	ewarn
 	einfo "As of version 3.4 the default is to enable the UsePrivelegeSeparation"
 	einfo "functionality, but please ensure that you do not explicitly disable"
-	einfo "this in your configuration as disabling it opens security holes"
+	einfo "this in your configuration as disabling it opens security holes."
 	einfo
 	einfo "This revision has removed your sshd user id and replaced it with a"
 	einfo "new one with UID 22.  If you have any scripts or programs that"
