@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.6.ebuild,v 1.4 2004/02/09 07:54:28 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.6.ebuild,v 1.5 2004/06/24 23:34:08 agriffis Exp $
 
 MY_P=${PN}2d6
 S=${WORKDIR}/${PN}

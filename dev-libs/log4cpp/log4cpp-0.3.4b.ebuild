@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.9 2004/04/15 23:58:00 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.10 2004/06/24 23:26:32 agriffis Exp $
 
 DESCRIPTION="library of C++ classes for flexible logging to files, syslog, IDSA and other destinations"
 HOMEPAGE="http://log4cpp.sourcforge.net/"

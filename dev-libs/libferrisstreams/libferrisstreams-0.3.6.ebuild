@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.3.6.ebuild,v 1.1 2004/04/13 04:26:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libferrisstreams/libferrisstreams-0.3.6.ebuild,v 1.2 2004/06/24 23:17:00 agriffis Exp $
 
 inherit flag-o-matic
 

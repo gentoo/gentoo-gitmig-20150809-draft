@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libtrain
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.4 2003/02/12 06:07:09 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.5 2004/06/24 23:24:56 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

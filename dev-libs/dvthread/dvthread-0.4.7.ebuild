@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.4.7.ebuild,v 1.2 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/dvthread-0.4.7.ebuild,v 1.3 2004/06/24 23:07:18 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libcpml
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.10 2004/02/19 14:32:29 taviso Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/ChangeLog,v 1.11 2004/06/24 23:14:46 agriffis Exp $
 
 *libcpml-5.2.01-r3 (19 Feb 2004)
 

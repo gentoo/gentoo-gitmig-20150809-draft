@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/clearsilver
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.6 2004/06/11 22:42:15 stuart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.7 2004/06/24 23:02:39 agriffis Exp $
 
   11 Jun 2004; Stuart Herbert <stuart@gentoo.org> clearsilver-0.9.7.ebuild:
   Disable csharp support (bug #52195)

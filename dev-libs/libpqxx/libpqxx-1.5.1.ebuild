@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-1.5.1.ebuild,v 1.6 2004/04/26 08:33:45 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-1.5.1.ebuild,v 1.7 2004/06/24 23:21:57 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="a modern C++ frontend to the PostgresSQL database."

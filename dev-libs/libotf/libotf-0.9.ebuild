@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.ebuild,v 1.4 2004/06/15 09:04:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.ebuild,v 1.5 2004/06/24 23:21:14 agriffis Exp $
 
 DESCRIPTION="Library for handling OpenType fonts (OTF)"
 HOMEPAGE="http://www.m17n.org/libotf/"

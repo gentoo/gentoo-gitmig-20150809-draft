@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libctl/libctl-2.2.ebuild,v 1.3 2004/04/19 13:06:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libctl/libctl-2.2.ebuild,v 1.4 2004/06/24 23:15:07 agriffis Exp $
 
 
 DESCRIPTION="Guile-based library implementing flexible control files for scientific simulations"

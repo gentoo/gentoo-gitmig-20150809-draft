@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/slib
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.12 2004/02/21 17:48:36 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.13 2004/06/24 23:34:08 agriffis Exp $
 
 *slib-3.1.1 (21 Feb 2004)
 

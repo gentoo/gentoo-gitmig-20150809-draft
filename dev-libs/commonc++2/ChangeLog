@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/commonc++2
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++2/ChangeLog,v 1.1 2004/03/12 21:53:23 lu_zero Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++2/ChangeLog,v 1.2 2004/06/24 23:03:10 agriffis Exp $
 
 *commonc++2-1.1.0 (12 Mar 2004)
 

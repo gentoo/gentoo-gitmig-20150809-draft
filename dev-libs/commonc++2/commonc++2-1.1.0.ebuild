@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++2/commonc++2-1.1.0.ebuild,v 1.1 2004/03/12 21:53:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++2/commonc++2-1.1.0.ebuild,v 1.2 2004/06/24 23:03:10 agriffis Exp $
 
 IUSE="doc"
 

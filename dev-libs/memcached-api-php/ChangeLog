@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/memcached-api-php
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/ChangeLog,v 1.9 2004/02/18 17:57:33 lisa Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/ChangeLog,v 1.10 2004/06/24 23:28:19 agriffis Exp $
 
   18 Feb 2004; Lisa Seelye <lisa@gentoo.org> memcached-api-php-1.0.10.ebuild,
   memcached-api-php-1.0.6-r1.ebuild, memcached-api-php-1.0.6.ebuild,

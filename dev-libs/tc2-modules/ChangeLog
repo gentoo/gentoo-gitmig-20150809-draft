@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/tc2-modules
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/ChangeLog,v 1.4 2004/06/04 09:57:37 zypher Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tc2-modules/ChangeLog,v 1.5 2004/06/24 23:35:34 agriffis Exp $
 
 *tc2-modules-0.6.0 (06 Mar 2004)
 

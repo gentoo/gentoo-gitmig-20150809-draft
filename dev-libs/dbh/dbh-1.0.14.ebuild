@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.14.ebuild,v 1.4 2004/04/27 15:57:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbh/dbh-1.0.14.ebuild,v 1.5 2004/06/24 23:04:34 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}_1.0-14"

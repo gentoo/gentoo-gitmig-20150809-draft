@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/cln
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.8 2004/03/17 21:36:25 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.9 2004/06/24 23:02:49 agriffis Exp $
 
 *cln-1.1.6 (17 Mar 2004)
 

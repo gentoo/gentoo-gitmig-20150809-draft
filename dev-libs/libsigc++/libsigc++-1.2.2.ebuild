@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.2.ebuild,v 1.8 2004/06/20 17:26:14 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.2.ebuild,v 1.9 2004/06/24 23:22:42 agriffis Exp $
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://libsigc.sourceforge.net/"

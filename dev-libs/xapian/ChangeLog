@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/xapian
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.5 2004/06/06 00:07:09 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.6 2004/06/24 23:38:08 agriffis Exp $
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> xapian-0.7.5.ebuild:
   x86 keyword.

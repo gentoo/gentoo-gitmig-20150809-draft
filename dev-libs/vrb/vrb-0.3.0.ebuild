@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.10 2004/03/14 12:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.11 2004/06/24 23:37:47 agriffis Exp $
 
 DESCRIPTION="library for a virtual ring buffer"
 HOMEPAGE="http://phil.ipal.org/freeware/vrb/"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/eb
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.6 2004/04/25 17:27:10 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.7 2004/06/24 23:07:59 agriffis Exp $
 
   26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> eb-3.3.4.ebuild,
   eb-4.0-r1.ebuild, eb-4.0.ebuild:

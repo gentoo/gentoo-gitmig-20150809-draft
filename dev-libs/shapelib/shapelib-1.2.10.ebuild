@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/shapelib-1.2.10.ebuild,v 1.3 2003/11/23 22:13:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/shapelib-1.2.10.ebuild,v 1.4 2004/06/24 23:33:25 agriffis Exp $
 
 inherit base eutils
 

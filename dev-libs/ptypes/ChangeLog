@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/ptypes
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.5 2003/10/01 19:15:34 george Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.6 2004/06/24 23:31:57 agriffis Exp $
 
 *ptypes-1.8.3 (01 Oct 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libtc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.5 2004/06/04 09:28:44 zypher Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.6 2004/06/24 23:23:44 agriffis Exp $
 
 *libtc-1.1.0 (06 Mar 2004)
 

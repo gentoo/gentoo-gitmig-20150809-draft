@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.6 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.7 2004/06/24 23:01:15 agriffis Exp $
 
 MY_V="${PV//\./_}"
 

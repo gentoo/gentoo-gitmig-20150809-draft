@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r2.ebuild,v 1.1 2004/02/18 07:17:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r2.ebuild,v 1.2 2004/06/24 23:12:11 agriffis Exp $
 
 # substitute second dot by "r"
 MY_PV=${PV/./X}

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libusb
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.18 2004/04/27 20:47:56 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.19 2004/06/24 23:25:28 agriffis Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libusb-0.1.8.ebuild:
   Add inherit eutils

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.3.1.ebuild,v 1.1 2004/04/18 04:15:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.3.1.ebuild,v 1.2 2004/06/24 23:11:06 agriffis Exp $
 
 MY_P=${P/geoip/GeoIP}
 S=${WORKDIR}/${MY_P}

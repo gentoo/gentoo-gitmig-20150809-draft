@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.7 2004/03/14 12:17:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.8 2004/06/24 23:20:54 agriffis Exp $
 
 inherit gnome.org
 

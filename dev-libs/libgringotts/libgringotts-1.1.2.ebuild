@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.1.2.ebuild,v 1.6 2004/04/18 18:47:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.1.2.ebuild,v 1.7 2004/06/24 23:17:51 agriffis Exp $
 
 DESCRIPTION="libgringotts - Needed by Gringotts"
 SRC_URI="http://devel.pluto.linux.it/projects/libGringotts/current/${P}.tar.bz2"

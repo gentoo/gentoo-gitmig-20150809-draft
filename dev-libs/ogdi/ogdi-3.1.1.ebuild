@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.4 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.5 2004/06/24 23:29:58 agriffis Exp $
 
 DESCRIPTION="open geographical datastore interface"
 HOMEPAGE="http://ogdi.sourceforge.net"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.1.0.ebuild,v 1.3 2004/06/02 14:02:47 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/dotconf-1.1.0.ebuild,v 1.4 2004/06/24 23:06:02 agriffis Exp $
 
 DESCRIPTION="dot.conf libraries"
 HOMEPAGE="http://www.azzit.de/dotconf/"

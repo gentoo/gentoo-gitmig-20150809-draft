@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.3.ebuild,v 1.2 2004/02/22 20:02:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.3.ebuild,v 1.3 2004/06/24 23:05:51 agriffis Exp $
 
 inherit debug
 

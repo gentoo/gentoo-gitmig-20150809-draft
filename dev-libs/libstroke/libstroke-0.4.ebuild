@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.16 2004/04/27 17:02:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.4.ebuild,v 1.17 2004/06/24 23:23:24 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Stroke and Guesture recognition Library"

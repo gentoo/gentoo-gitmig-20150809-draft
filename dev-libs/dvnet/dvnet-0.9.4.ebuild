@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.4.ebuild,v 1.5 2004/03/17 09:06:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.4.ebuild,v 1.6 2004/06/24 23:06:57 agriffis Exp $
 
 DESCRIPTION="dvnet provides an interface wrapping sockets into streams"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvnet/html/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.0.1.ebuild,v 1.3 2004/06/14 16:43:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcoyotl/libcoyotl-3.0.1.ebuild,v 1.4 2004/06/24 23:14:36 agriffis Exp $
 
 DESCRIPTION="A collection of portable C++ classes."
 HOMEPAGE="http://www.coyotegulch.com/libcoyotl/"

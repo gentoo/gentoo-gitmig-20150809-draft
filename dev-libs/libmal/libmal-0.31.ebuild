@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.8 2003/10/27 02:06:48 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.9 2004/06/24 23:19:39 agriffis Exp $
 
 IUSE=""
 

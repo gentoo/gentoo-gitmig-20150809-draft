@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/dietlibc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.30 2004/06/01 04:12:35 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.31 2004/06/24 23:04:56 agriffis Exp $
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/0.25-gcc34.patch,
   dietlibc-0.25.ebuild:

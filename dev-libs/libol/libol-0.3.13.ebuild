@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.10 2004/06/22 19:48:46 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.13.ebuild,v 1.11 2004/06/24 23:20:43 agriffis Exp $
 
 DESCRIPTION="Support library for syslog-ng"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"

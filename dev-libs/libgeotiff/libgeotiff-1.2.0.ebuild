@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.8 2003/10/08 23:21:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.9 2004/06/24 23:17:31 agriffis Exp $
 
 inherit base eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.3.ebuild,v 1.13 2004/04/30 18:38:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.3.ebuild,v 1.14 2004/06/24 23:29:25 agriffis Exp $
 
 inherit eutils
 

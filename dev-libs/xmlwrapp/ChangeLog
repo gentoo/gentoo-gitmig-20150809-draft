@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/xmlwrapp
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.5 2004/03/18 20:52:46 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.6 2004/06/24 23:38:50 agriffis Exp $
 
 *xmlwrapp-0.4.4 (21 Feb 2004)
 *xmlwrapp-0.4.1 (21 Feb 2004)

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libvc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/ChangeLog,v 1.4 2004/06/07 07:29:54 dragonheart Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/ChangeLog,v 1.5 2004/06/24 23:25:39 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   libvc-003.ebuild:

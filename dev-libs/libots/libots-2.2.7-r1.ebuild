@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r1.ebuild,v 1.1 2004/02/07 00:53:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7-r1.ebuild,v 1.2 2004/06/24 23:21:24 agriffis Exp $
 
 At="libots-2.2.7-2.alpha.rpm"
 S=${WORKDIR}/usr/lib/compaq/libots-2.2.7

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02-r1.ebuild,v 1.1 2004/06/15 13:16:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02-r1.ebuild,v 1.2 2004/06/24 23:32:52 agriffis Exp $
 
 inherit flag-o-matic eutils
 

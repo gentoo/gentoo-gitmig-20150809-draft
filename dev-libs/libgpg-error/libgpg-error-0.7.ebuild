@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-0.7.ebuild,v 1.4 2004/05/31 20:33:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-0.7.ebuild,v 1.5 2004/06/24 23:17:41 agriffis Exp $
 
 DESCRIPTION="Contains error handling functions used by GnuPG"
 HOMEPAGE="http://www.gnupg.org/"

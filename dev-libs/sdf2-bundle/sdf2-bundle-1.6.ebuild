@@ -1,6 +1,6 @@
-# Copyright 2004-2004 Gentoo Technologies, Inc.
+# Copyright 2004-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/sdf2-bundle-1.6.ebuild,v 1.3 2004/05/15 02:56:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/sdf2-bundle-1.6.ebuild,v 1.4 2004/06/24 23:33:14 agriffis Exp $
 
 DESCRIPTION="Advanced syntax definition formalism"
 HOMEPAGE="http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/SDF2"

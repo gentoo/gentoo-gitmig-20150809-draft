@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.02.ebuild,v 1.1 2004/05/30 16:03:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.02.ebuild,v 1.2 2004/06/24 23:36:36 agriffis Exp $
 
 inherit flag-o-matic
 

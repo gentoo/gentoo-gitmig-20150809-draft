@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/expat
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.31 2004/06/15 06:26:16 solar Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.32 2004/06/24 23:09:18 agriffis Exp $
 
   15 Jun 2004; <solar@gentoo.org> expat-1.95.6-r1.ebuild,
   files/expat-1.95.6-uclibc.patch:

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/gmetadom
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.5 2004/03/18 20:52:45 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.6 2004/06/24 23:11:28 agriffis Exp $
 
 *gmetadom-0.2.1 (21 Jan 2004)
 

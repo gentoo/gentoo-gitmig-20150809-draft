@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/ccmath
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ChangeLog,v 1.3 2003/10/28 05:48:01 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ChangeLog,v 1.4 2004/06/24 23:01:48 agriffis Exp $
 
   27 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> ccmath-2.2.1.ebuild:
   tidy; mark stable on ppc so rpc can use it.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.6.1.ebuild,v 1.8 2004/06/16 04:49:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.6.1.ebuild,v 1.9 2004/06/24 23:12:22 agriffis Exp $
 
 DESCRIPTION="general purpose library and file format for storing scientific data"
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5/"

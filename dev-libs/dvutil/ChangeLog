@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/dvutil
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.8 2004/06/08 20:15:39 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.9 2004/06/24 23:07:38 agriffis Exp $
 
   08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> dvutil-0.12.7.ebuild,
   dvutil-0.13.1.ebuild, dvutil-0.13.10.ebuild, dvutil-0.13.11.ebuild,

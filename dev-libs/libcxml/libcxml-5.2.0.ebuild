@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.6 2003/09/11 01:10:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.7 2004/06/24 23:15:17 agriffis Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""

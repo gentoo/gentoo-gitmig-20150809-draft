@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libidmef
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.1 2004/01/09 09:56:54 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.2 2004/06/24 23:18:56 agriffis Exp $
 
 *libidmef-0.7.2 (09 Jan 2004)
 

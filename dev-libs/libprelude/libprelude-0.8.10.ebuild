@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.8.10.ebuild,v 1.7 2004/03/08 20:51:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.8.10.ebuild,v 1.8 2004/06/24 23:22:08 agriffis Exp $
 
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-ids.org/"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/djbfft
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.4 2004/06/03 16:40:32 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.5 2004/06/24 23:05:40 agriffis Exp $
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> djbfft-0.76.ebuild:
   Fix use invocation

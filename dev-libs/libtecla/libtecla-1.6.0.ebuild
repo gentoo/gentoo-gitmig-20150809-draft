@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.0.ebuild,v 1.1 2004/05/27 09:29:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.0.ebuild,v 1.2 2004/06/24 23:23:54 agriffis Exp $
 
 DESCRIPTION="Tecla command-line editing library"
 HOMEPAGE="http://www.astro.caltech.edu/~mcs/tecla/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.6.ebuild,v 1.5 2004/03/25 03:48:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.6.ebuild,v 1.6 2004/06/24 23:35:54 agriffis Exp $
 
 DESCRIPTION="Stripped down version of qt ${PV} for console development"
 SRC_URI="http://freesoftware.fsf.org/download/tinyq/${P}.tar.bz2"
