@@ -1,0 +1,207 @@
+--- ../../configure.orig	Fri May 30 19:10:35 2003
++++ ../../configure	Mon Jul  7 23:48:42 2003
+@@ -18441,6 +18441,168 @@
+    fi
+ 
+ 
++echo Gaim-Encryption configuration block
++# Check whether --with-nspr-includes or --without-nspr-includes was given.
++if test "${with_nspr_includes+set}" = set; then
++  withval="$with_nspr_includes"
++  with_nspr_includes="$withval"
++fi
++
++
++# Check whether --with-nspr-libs or --without-nspr-libs was given.
++if test "${with_nspr_libs+set}" = set; then
++  withval="$with_nspr_libs"
++  with_nspr_libs="$withval"
++fi
++
++
++# Check whether --with-nss-includes or --without-nss-includes was given.
++if test "${with_nss_includes+set}" = set; then
++  withval="$with_nss_includes"
++  with_nss_includes="$withval"
++fi
++
++
++# Check whether --with-nss-libs or --without-nss-libs was given.
++if test "${with_nss_libs+set}" = set; then
++  withval="$with_nss_libs"
++  with_nss_libs="$withval"
++fi
++
++
++
++includeplaces="$prefix/include
++               /usr/include
++               /usr/local/include"
++
++
++echo $ECHO_N "checking for NSPR includes""... $ac_c" 1>&6
++echo "configure:11964: checking for NSPR includes" >&5
++
++if test -z "${with_nspr_includes}" ; then
++   for nsprdir in $includeplaces; do
++       if test -r $nsprdir/nspr.h ; then break; fi
++       nsprdir=$nsprdir/nspr
++       if test -r $nsprdir/nspr.h ; then break; fi
++   done
++else
++   nsprdir=$with_nspr_includes
++fi
++
++echo "$ac_t""${nsprdir}" 1>&6
++
++CPPFLAGS="$CPPFLAGS -I$nsprdir"
++
++
++echo $ECHO_N "checking for NSS includes""... $ac_c" 1>&6
++echo "configure:11982: checking for NSS includes" >&5
++
++if test -z "${with_nss_includes}" ; then
++   for nssdir in $includeplaces; do
++       if test -r $nssdir/nssbase.h ; then break; fi
++       nssdir=$nssdir/nss
++       if test -r $nssdir/nssbase.h ; then break; fi
++   done
++else
++   nssdir=$with_nss_includes
++fi
++
++echo "$ac_t""${nssdir}" 1>&6
++
++CPPFLAGS="$CPPFLAGS -I$nssdir"
++
++for ac_hdr in nss.h nssbase.h keyhi.h
++do
++ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
++echo $ECHO_N "checking for $ac_hdr""... $ac_c" 1>&6
++echo "configure:12002: checking for $ac_hdr" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ECHO_N "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 12007 "configure"
++#include "confdefs.h"
++#include <$ac_hdr>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:12012: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
++  cat >> confdefs.h <<EOF
++#define $ac_tr_hdr 1
++EOF
++ includes_good="yes"
++else
++  echo "$ac_t""no" 1>&6
++includes_good="no"
++fi
++done
++
++
++if test "x${includes_good}" != "xyes" ; then 
++   { echo "configure: error: Need to specify location of NSS and NSPR includes" 1>&2; exit 1; }
++fi
++
++echo $ECHO_N "checking for PK11_GenerateKeyPair in -lnss3""... $ECHO_C" 1>&6
++echo "configure:12045: checking for PK11_GenerateKeyPair in -lnss3" >&5
++ac_lib_var=`echo nss3'_'PK11_GenerateKeyPair | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ECHO_N "(cached) $ECHO_C" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lnss3  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 12053 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char PK11_GenerateKeyPair();
++
++int main() {
++PK11_GenerateKeyPair()
++; return 0; }
++EOF
++if { (eval echo configure:12064: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  libsgood="yes"
++else
++  echo "$ac_t""no" 1>&6
++libsgood="no"
++fi
++
++
++if test "x${libs_good}" == "xno" ; then 
++   { echo "configure: error: Need to specify location of NSS library" 1>&2; exit 1; }
++fi
++
+-                                                                                                                                                                                                                                                                                                  ac_config_files="$ac_config_files Makefile Doxyfile doc/Makefile intl/Makefile pixmaps/Makefile pixmaps/smileys/Makefile pixmaps/smileys/default/Makefile pixmaps/status/Makefile pixmaps/status/default/Makefile plugins/Makefile plugins/docklet/Makefile plugins/gaim-remote/Makefile plugins/gestures/Makefile plugins/perl/Makefile plugins/ticker/Makefile po/Makefile.in sounds/Makefile src/Makefile src/protocols/Makefile src/protocols/gg/Makefile src/protocols/irc/Makefile src/protocols/jabber/Makefile src/protocols/msn/Makefile src/protocols/napster/Makefile src/protocols/oscar/Makefile src/protocols/toc/Makefile src/protocols/yahoo/Makefile src/protocols/zephyr/Makefile gaim.spec"
++                                                                                                                                                                                                                                                                                                  ac_config_files="$ac_config_files Makefile Doxyfile doc/Makefile intl/Makefile pixmaps/Makefile pixmaps/smileys/Makefile pixmaps/smileys/default/Makefile pixmaps/status/Makefile pixmaps/status/default/Makefile plugins/Makefile plugins/docklet/Makefile plugins/encrypt/Makefile plugins/gaim-remote/Makefile plugins/gestures/Makefile plugins/perl/Makefile plugins/ticker/Makefile po/Makefile.in sounds/Makefile src/Makefile src/protocols/Makefile src/protocols/gg/Makefile src/protocols/irc/Makefile src/protocols/jabber/Makefile src/protocols/msn/Makefile src/protocols/napster/Makefile src/protocols/oscar/Makefile src/protocols/toc/Makefile src/protocols/yahoo/Makefile src/protocols/zephyr/Makefile gaim.spec"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -19004,7 +19166,9 @@
+   "plugins/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/Makefile" ;;
+   "plugins/docklet/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/docklet/Makefile" ;;
++  "plugins/encrypt/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/encrypt/Makefile" ;;
+   "plugins/gestures/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/gestures/Makefile" ;;
+   "plugins/perl/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/perl/Makefile" ;;
+   "plugins/ticker/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/ticker/Makefile" ;;
++  "plugins/encrypt/Makefile" ) CONFIG_FILES="$CONFIG_FILES plugins/encrypt/Makefile" ;;
+   "po/Makefile.in" ) CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
+
+diff -ur ../../../stock/gaim-0.63/plugins/Makefile.am ../../plugins/Makefile.am
+--- ../../../stock/gaim-0.63/plugins/Makefile.am	Fri May  2 20:32:24 2003
++++ ../../plugins/Makefile.am	Mon May 26 05:56:00 2003
+@@ -4,7 +4,7 @@
+ PERL_DIR = perl
+ endif
+ 
+-SUBDIRS = docklet gaim-remote gestures $(PERL_DIR) ticker
++SUBDIRS = docklet gaim-remote gestures $(PERL_DIR) ticker encrypt
+ 
+ plugindir = $(libdir)/gaim
+ 
+diff -ur ../../../stock/gaim-0.63/plugins/Makefile.in ../../plugins/Makefile.in
+--- ../../../stock/gaim-0.63/plugins/Makefile.in	Sat May 17 19:12:05 2003
++++ ../../plugins/Makefile.in	Mon May 26 05:56:34 2003
+@@ -131,7 +131,7 @@
+ 
+ @USE_PERL_TRUE@PERL_DIR = perl
+ 
+-SUBDIRS = docklet gaim-remote gestures $(PERL_DIR) ticker
++SUBDIRS = docklet gaim-remote gestures $(PERL_DIR) ticker encrypt
+ 
+ plugindir = $(libdir)/gaim
+ 
+
