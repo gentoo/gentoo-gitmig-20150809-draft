@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>swegener@gentoo.org</email>
+  <name>Sven Wegener</name>
+  <description>primary maintainer until someone from mysql takes over</description>
+</maintainer>
+<longdescription>
+MySQL Administrator is a powerful visual administration console that enables
+you to easily administer your MySQL environment and gain significantly better
+visibility into how your databases are operating. MySQL Administrator now
+integrates database management and maintenance into a single, seamless
+environment, with a clear and intuitive graphical user interface.
+</longdescription>
+</pkgmetadata>

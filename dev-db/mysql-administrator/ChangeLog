@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/mysql-administrator
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.1 2004/08/25 05:57:55 swegener Exp $
+
+*mysql-administrator-1.0.9 (25 Aug 2004)
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +mysql-administrator-1.0.9.ebuild:
+  Initial import, ebuild written by me.
+
