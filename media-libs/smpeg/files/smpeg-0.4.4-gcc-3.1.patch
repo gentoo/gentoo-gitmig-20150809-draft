@@ -1,0 +1,12 @@
+--- smpeg-0.4.4/Makefile.am.gcc3	Mon Jan  7 17:21:03 2002
++++ smpeg-0.4.4/Makefile.am	Mon Jan  7 17:21:17 2002
+@@ -38,7 +38,8 @@
+ 
+ libsmpeg_la_LIBADD =		\
+ 	audio/libaudio.la	\
+-	video/libvideo.la
++	video/libvideo.la       \
++        -lsupc++
+ 
+ EXTRA_DIST =		\
+ 	CHANGES		\
