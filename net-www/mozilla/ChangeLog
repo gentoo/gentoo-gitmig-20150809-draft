@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.73 2002/12/16 19:29:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.74 2002/12/16 23:35:11 azarah Exp $
+
+  17 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
+
+  Update mozilla-1.2.1-Xrender-includes.patch.bz2 to hopefully (?) fix #12223.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r3.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.2 2002/12/16 04:02:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r3.ebuild,v 1.3 2002/12/16 23:35:11 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -366,7 +366,7 @@ src_compile() {
 
 	if [ -z "`use gtk2`" -a -z "`use moznoxft`" ]
 	then
-		mkdir -p ${WORKDIR}/Xft/{include,lib}
+		mkdir -p ${WORKDIR}/Xft/{include/X11/extensions,lib}
 
 		# We need to update Xrender ..
 		cd ${FC_S}/../Xrender
@@ -376,7 +376,7 @@ src_compile() {
 		# system wide libs ...
 		make LIBNAME="Xrender_moz"
 		cp -df Xrender.h extutil.h region.h render.h renderproto.h \
-			${WORKDIR}/Xft/include
+			${WORKDIR}/Xft/include/X11/extensions
 		cp -df libXrender_moz.so* ${WORKDIR}/Xft/lib
 		cd ${WORKDIR}/Xft/lib
 		# Create the libXrender.so to our _moz version so that Xft will
