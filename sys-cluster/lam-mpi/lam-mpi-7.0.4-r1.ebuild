@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4-r1.ebuild,v 1.2 2004/08/20 02:44:15 pvdabeel Exp $
-
-IUSE="crypt"
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4-r1.ebuild,v 1.3 2004/09/19 21:44:21 tantive Exp $
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -20,6 +18,7 @@ RDEPEND="${DEPEND}
 
 SLOT="6"
 KEYWORDS="~x86 ppc"
+IUSE="crypt f77"
 LICENSE="as-is"
 
 src_unpack() {
@@ -30,13 +29,18 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 
 	if use crypt; then
 		myconf="--with-rsh=ssh"
 	else
 		myconf="--with-rsh=rsh"
+	fi
+
+	if use f77; then
+	myconf="${myconf} --with-fc"
+	else
+	myconf="${myconf} --without-fc"
 	fi
 
 	econf \
