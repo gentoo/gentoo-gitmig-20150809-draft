@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.13 2004/06/24 21:36:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.14 2004/08/07 08:02:56 dragonheart Exp $
+
+  07 Aug 2004; Daniel Black <dragonheart@gentoo.org> -pinentry-0.6.9.ebuild,
+  pinentry-0.7.1-r1.ebuild, -pinentry-0.7.1.ebuild:
+  Version 0.7.1 was broken. added x86 keyword to 0.7.1-r1. removed old version
 
 *pinentry-0.7.1-r1 (21 Jun 2004)
 
