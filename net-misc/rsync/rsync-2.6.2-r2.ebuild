@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.2-r1.ebuild,v 1.9 2004/05/02 22:51:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.2-r2.ebuild,v 1.1 2004/05/02 22:51:54 mholzer Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -26,11 +26,6 @@ src_unpack() {
 	use acl && epatch ${DISTDIR}/${P}-acl.diff.bz2
 
 	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir
-	# configure option doesn't work
-	sed	-i \
-		-e 's|/etc/rsyncd.conf|/etc/rsync/rsyncd.conf|g' \
-		rsync.h \
-		|| die "sed rsync.h failed"
 	# yes, updating the man page is very important.
 	sed -i \
 		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' \
@@ -45,6 +40,7 @@ src_compile() {
 	econf \
 		$(use_with build included-popt) \
 		$(use_with acl acl-support) \
+		--with-rsyncd-conf=/etc/rsync/rsyncd.conf \
 		|| die
 	emake || die "emake failed"
 }
