@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.48 2005/01/12 18:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.49 2005/01/14 13:25:15 eradicator Exp $
+
+  14 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/filefuncs/Makefile, gawk-3.1.3-r2.ebuild, gawk-3.1.4.ebuild:
+  multilib fixes for filefuncs.
 
 *gawk-3.1.4 (12 Jan 2005)
 

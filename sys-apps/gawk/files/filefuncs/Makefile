@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/Makefile,v 1.4 2004/07/15 00:42:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/Makefile,v 1.5 2005/01/14 13:25:15 eradicator Exp $
 
 CC ?= gcc
 LD = $(CC)
@@ -14,6 +14,8 @@ DESTDIR =
 
 TARGET = filefuncs.so.$(MAJORVER).$(MINORVER)
 
+LIBDIR = lib
+
 all: $(TARGET)
 
 filefuncs.o: filefuncs.c
@@ -23,11 +25,11 @@ filefuncs.so.$(MAJORVER).$(MINORVER): filefuncs.o
 	$(LD) -o $@ -shared -Wl,-soname -Wl,filefuncs.so.$(MAJORVER) $^
 
 install: $(TARGET)
-	install -m 0755 -d $(DESTDIR)/lib/rcscripts
-	install -m 0755 $(TARGET) $(DESTDIR)/lib/rcscripts
-	ldconfig -l $(DESTDIR)/lib/rcscripts/$(TARGET)
-	rm -f $(DESTDIR)/lib/rcscripts/filefuncs.so
-	ln -s $(TARGET) $(DESTDIR)/lib/rcscripts/filefuncs.so
+	install -m 0755 -d $(DESTDIR)/$(LIBDIR)/rcscripts
+	install -m 0755 $(TARGET) $(DESTDIR)/$(LIBDIR)/rcscripts
+	ldconfig -l $(DESTDIR)/$(LIBDIR)/rcscripts/$(TARGET)
+	rm -f $(DESTDIR)/$(LIBDIR)/rcscripts/filefuncs.so
+	ln -s $(TARGET) $(DESTDIR)/$(LIBDIR)/rcscripts/filefuncs.so
 
 clean:
 	rm -f $(TARGET)
