@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.3 2003/09/29 16:35:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.4 2003/10/27 23:34:42 vapier Exp $
 
 inherit games
 
@@ -33,11 +33,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i \
-		-e 's:heavy=.*:heavy=:' \
-		-e 's:light=.*:light=:' \
-		-e 's:MORE_CFLAGS=".*":MORE_CFLAGS="":' \
-		configure || die "removing static cflags from configure"
+	epatch ${FILESDIR}/${PV}-com-parse.patch
+#	sed -i \
+#		-e 's:heavy=.*:heavy=:' \
+#		-e 's:light=.*:light=:' \
+#		-e 's:MORE_CFLAGS=".*":MORE_CFLAGS="":' \
+#		configure || die "removing static cflags from configure"
 }
 
 src_compile() {
@@ -52,7 +53,7 @@ src_compile() {
 	local debugopts
 	[ `use debug` ] \
 		&& debugopts="--enable-debug --disable-optimize --enable-profile" \
-		|| debugopts="--disable-debug --enable-optimize --disable-profile"
+		|| debugopts="--disable-debug --disable-profile"
 
 	local clients=${QF_CLIENTS}
 	[ `use 3dfx` ] && clients="${clients},3dfx"
@@ -89,6 +90,7 @@ src_compile() {
 		`use_enable alsa` \
 		`use_enable oss` \
 		--enable-sound \
+		--disable-optimize \
 		${debugopts} \
 		--with-global-cfg=${GAMES_SYSCONFDIR}/quakeforge.conf \
 		--with-sharepath=${GAMES_DATADIR}/quake-data \
