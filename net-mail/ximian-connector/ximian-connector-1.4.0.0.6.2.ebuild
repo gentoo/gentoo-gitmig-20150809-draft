@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.4.0.0.6.2.ebuild,v 1.1 2003/07/05 13:27:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.4.0.0.6.2.ebuild,v 1.2 2003/07/14 08:33:39 liquidx Exp $
 
 inherit rpm gnome2
 
@@ -34,11 +34,11 @@ DEPEND=""
 S=${WORKDIR}
 
 pkg_setup() {
-	if [ -n "`use krb4`" ]; then
-		eerror "Ximian Connector requires Kerberos 4 Support in app-crypt/mit-krb5."
+	if [ -z "`use krb4`" ]; then
+		eerror "Ximian Connector requires Kerberos 4 support in app-crypt/mit-krb5."
 		eerror "You will need to remerge it by executing:"
 		eerror ""
-		eerror "USE='krb4' emerge mit-krb5"
+		eerror "USE='krb4' emerge mit-krb5 ximian-connector"
 		die "missing kerberos 4 support"
 	fi
 }
