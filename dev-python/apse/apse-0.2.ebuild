@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/apse-0.2.ebuild,v 1.1 2005/01/24 17:58:59 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/apse-0.2.ebuild,v 1.2 2005/01/24 18:03:51 satya Exp $
 
 inherit distutils
 MY_PN="${PN/apse/Apse}"
@@ -23,9 +23,8 @@ PYTHON_MODNAME="Apse"
 
 src_install() {
 	distutils_src_install
-	#dodir /usr/share/doc/${PF}
 	dodoc README* *agrep
-	insinto /usr/share/doc/test
+	insinto /usr/share/doc/${PF}/test
 	doins test/*
 }
 
