@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.3 2003/11/23 00:08:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.4 2003/12/31 06:32:54 vapier Exp $
 
 inherit games eutils flag-o-matic
 
@@ -23,7 +23,8 @@ RDEPEND="virtual/glu
 	dev-libs/expat
 	media-libs/openal
 	media-libs/sdl-mixer
-	virtual/x11"
+	virtual/x11
+	=x11-libs/gtk+-1*"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
