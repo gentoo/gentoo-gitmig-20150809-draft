@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/omnibook
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.3 2003/05/12 17:53:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/omnibook/ChangeLog,v 1.4 2003/10/31 22:32:15 plasmaroo Exp $
+
+*omnibook-20030828 (31 Oct 2003)
+
+  31 Oct 2003; <plasmaroo@gentoo.org> omnibook-20030828.ebuild:
+  Version bump.
 
 *omnibook-20030403 (12 May 2003)
 
