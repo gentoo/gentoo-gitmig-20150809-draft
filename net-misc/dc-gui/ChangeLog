@@ -1,8 +1,16 @@
 # ChangeLog for net-misc/dc-gui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dc-gui/ChangeLog,v 1.1 2002/04/22 00:22:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dc-gui/ChangeLog,v 1.2 2002/04/22 18:31:04 mkennedy Exp $
 
-*dc-gui-0.54- (21 Apr 2002)
+*dc-gui-0.54 (22 Apr 2002)
+
+  22 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  dc-gui-0.54.ebuild :
+
+  Very minor type-o fixup -- thanks to Jeffry Molanus <Gila@home.nl>
+  for pointin it out!
+
+*dc-gui-0.54 (21 Apr 2002)
 
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   dc-gui-0.54.ebuild, ChangeLog, files/digest-dc-gui-0.54 :
