@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.5 2004/06/30 17:44:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.6 2004/07/01 17:04:29 eldad Exp $
 
 inherit eutils
 
@@ -8,10 +8,11 @@ MY_P=${P/-core}
 DESCRIPTION="Nagios  core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="noweb mysql postgres perl debug apache2"
 
 DEPEND=">=mail-client/mailx-8.1
@@ -26,7 +27,7 @@ DEPEND=">=mail-client/mailx-8.1
 
 	perl? ( >=dev-lang/perl-5.6.1-r7 )
 	mysql? ( >=dev-db/mysql-3.23.56 )
-	postgres? ( >=dev-db/postgresql-7.3.2 )"
+	postgres? ( !mysql? ( >=dev-db/postgresql-7.3.2 ) )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -42,22 +43,30 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+
 	if use mysql && use postgres; then
-		eerror "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
-		eerror "You have to remove either 'mysql' or 'postgres' from your USE flags before emerging this."
+		ewarn "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
+		ewarn "Using MySQL as default."
 
 		has_version ">=sys-apps/portage-2.0.50" && (
-			einfo "You can add:"
+			einfo "You can add -"
+			echo ""
 			einfo "net-analyzer/nagios-core [use flags]"
-			einfo "to the file:"
-			einfo "/etc/portage/package.use"
-			einfo "to permamently set this package's USE flags"
+			echo ""
+			einfo "to /etc/portage/package.use to permanently set this package's USE flags"
+			einfo "More info on package.use is available on:"
+			einfo "     man 5 portage"
 		)
-
-		exit 1
+	elif use postgres ; then
+		myconf="${myconf} \
+		--with-pgsql-xdata \
+		--with-pgsql-status \
+		--with-pgsql-comments \
+		--with-pgsql-extinfo \
+		--with-pgsql-retention \
+		--with-pgsql-downtime"
 	fi
-
-	local myconf
 
 	use mysql && myconf="${myconf} \
 		--with-mysql-xdata \
@@ -66,14 +75,6 @@ src_compile() {
 		--with-mysql-extinfo \
 		--with-mysql-retention \
 		--with-mysql-downtime"
-
-	use postgres && myconf="${myconf} \
-		--with-pgsql-xdata \
-		--with-pgsql-status \
-		--with-pgsql-comments \
-		--with-pgsql-extinfo \
-		--with-pgsql-retention \
-		--with-pgsql-downtime"
 
 	use perl && myconf="${myconf} \
 		--enable-embedded-perl \
@@ -188,6 +189,12 @@ pkg_postinst() {
 		einfo "Please note that you have installed Nagios without web interface."
 		einfo "Please don't file any bugs about having no web interface when you do this."
 		einfo "Thank you!"
+	fi
+
+	if use mysql && use postgres; then
+		ewarn "Unfortunatly you can't have both MySQL and PostgreSQL enabled at the same time."
+		ewarn "as a default, MySQL support was built."
+		ewarn "To build nagios with PostgreSQL you'll have to emerge nagios without the mysql useflag."
 	fi
 
 	einfo "If your kernel has /proc protection, nagios"
