@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/rar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.2 2002/04/14 11:08:12 mkennedy Exp $
+
+*rar-3.0_beta5 (14 Apr 2002)
+
+  14 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  rar-3.0_beta5.ebuild, files/10rar, files/digest-rar-3.0_beta5 :
+
+  Moved RAR into /opt since it is a binary-only item (proprietary, no
+  source). See also bug #1662.
 
 *rar-2.90 (1 Feb 2002)
 
