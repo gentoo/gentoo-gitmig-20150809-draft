@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.7 2004/04/08 05:56:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.8 2004/04/19 02:02:43 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -48,7 +48,7 @@ fi
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.25.3"
+PATCH_VER="2.1.25.4"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="311003-1"
@@ -65,7 +65,7 @@ SRC_PATH="mirror://xfree/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="http://dev.gentoo.org/~seemant/extras/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/${PV}/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
@@ -260,6 +260,14 @@ src_unpack() {
 	if [ ! "${ARCH}" = "s390" ]
 	then
 		mv -f ${PATCH_DIR}/7500* ${PATCH_DIR}/excluded
+	fi
+
+	# 9017 fixes many 64-bit issues with non-PIC libs
+	# patch 9017 overlaps 9015 and 9016 and is applied instead
+	if [ "${ARCH}" = "amd64" ]
+	then
+		mv -f ${PATCH_DIR}/9015* ${PATCH_DIR}/excluded
+		mv -f ${PATCH_DIR}/9016* ${PATCH_DIR}/excluded
 	fi
 
 	# This was formerly applied if USE=debug, but it causes builds
