@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.0a-r1.ebuild,v 1.5 2003/10/18 23:02:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.0a-r1.ebuild,v 1.6 2003/10/18 23:19:16 scandium Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ pkg_setup() {
 		eerror "This package doesn't work with wxGTK"
 		eerror "compiled with gtk2 and unicode in USE"
 		eerror "Please re-compile wxGTK with -unicode"
-		eerror "or with -gtk2"
 		die "aborting..."
 	fi
 }

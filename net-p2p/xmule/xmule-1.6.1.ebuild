@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.3 2003/10/18 23:02:41 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.6.1.ebuild,v 1.4 2003/10/18 23:19:16 scandium Exp $
 
 MY_P=${P//a}
 S=${WORKDIR}/${MY_P}
@@ -25,7 +25,6 @@ pkg_setup() {
 		eerror "This package doesn't work with wxGTK"
 		eerror "compiled with gtk2 and unicode in USE"
 		eerror "Please re-compile wxGTK with -unicode"
-		eerror "or with -gtk2"
 		die "aborting..."
 	fi
 }
