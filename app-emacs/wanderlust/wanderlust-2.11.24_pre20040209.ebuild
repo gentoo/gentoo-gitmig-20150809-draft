@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.24_pre20040209.ebuild,v 1.1 2004/02/09 16:19:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.24_pre20040209.ebuild,v 1.2 2004/03/04 19:16:41 usata Exp $
 
 inherit elisp
 
@@ -10,8 +10,7 @@ IUSE="ssl"
 
 DESCRIPTION="Wanderlust -- Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
