@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/icewoed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.14 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/ChangeLog,v 1.15 2004/11/02 14:36:45 phosphan Exp $
+
+  02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -icewoed-1.5.ebuild,
+  -icewoed-1.6.ebuild, icewoed-1.8.ebuild:
+  Cleanup; latest version stable for x86.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icewoed-1.6.ebuild,
   icewoed-1.8.ebuild:
