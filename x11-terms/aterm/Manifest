@@ -1,3 +1,6 @@
+MD5 d3c8fde7a439e0ad49f1fd69b35c328e aterm-0.4.2-r5.ebuild 1678
 MD5 8b0b60949c22d3383a2f8b559b27519e ChangeLog 2317
 MD5 2d93bf72ffa2ddabf05b54d5717cbd93 aterm-0.4.2-r4.ebuild 1626
+MD5 1109dcca55994f56324dc3b15ca2d04b files/aterm-0.4.2-borderless.patch 4692
+MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r5 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r4 128

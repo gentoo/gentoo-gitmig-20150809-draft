@@ -1,14 +1,21 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.13 2003/10/02 14:59:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.14 2003/10/31 18:08:28 nakano Exp $
+
+*aterm-0.4.2-r5 (31 Oct 2003)
+
+  31 Oct 2003; Masatomo Nakano <nakano@gentoo.org> aterm-0.4.2-r5.ebuild,
+  files/aterm-0.4.2-borderless.patch:
+  Added a pacth to allow for a borderless aterm.
+  Thanks to Rob Kruus <crowbar@netcom.ca>. Close #32387
+
+*aterm-0.4.2-r4 (19 Jan 2003)
 
   02 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> aterm-0.4.2-r4.ebuild:
   Install man page. This closes Bug #30042
 
   11 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> aterm-0.4.2-r3.ebuild aterm-0.4.2-r4.ebuild :
   Chmod and chown aterm bin. Closes #15548.
-
-*aterm-0.4.2-r4 (19 Jan 2003)
 
   27 Mar 2003; Masatomo Nakano <nakano@genoo.org> aterm-0.4.2-r4.ebuild:
   Marked as stable.
