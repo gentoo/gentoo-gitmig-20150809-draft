@@ -1,15 +1,11 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.26 2003/05/24 19:14:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.27 2003/06/17 19:20:24 vapier Exp $
 
-  24 May 2003; Tavis Ormandy <taviso@gentoo.org> libgd-1.8.3-r6.ebuild,
-  libgd-1.8.4.ebuild, files/gd-1.8.3-dec-alpha-compiler.diff,
-  files/gd-1.8.4-dec-alpha-compiler.diff:
-  makring alpha, also ccc fixes.
+*libgd-2.0.15 (17 Jun 2003)
 
-  18 May 2003; Martin Holzer <mholzer@gentoo.org> libgd-1.8.3-r6.ebuild,
-  libgd-1.8.4.ebuild:
-  Added USE flags. Closes #21059.
+  17 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + grab gif patch from orig site.
 
 *libgd-2.0.12 (14 Apr 2003)
 
@@ -36,7 +32,24 @@
   23 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bumpage.
 
-*libgd-1.8.3-r6 (18 Feb 2003)
+*libgd-2.0.1 (09 Sep 2002)
+
+  14 Sep 2002; <mcummings@gentoo.org> :
+  bzip'd patch and moved to mirror
+
+  09 Sep 2002; <mcummings@gentoo.org> :
+  Fixes bugs with perl versions using gd; corrects a few compile options
+  
+*libgd-1.8.4 (18 Feb 2003)
+
+  24 May 2003; Tavis Ormandy <taviso@gentoo.org> libgd-1.8.3-r6.ebuild,
+  libgd-1.8.4.ebuild, files/gd-1.8.3-dec-alpha-compiler.diff,
+  files/gd-1.8.4-dec-alpha-compiler.diff:
+  makring alpha, also ccc fixes.
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> libgd-1.8.3-r6.ebuild,
+  libgd-1.8.4.ebuild:
+  Added USE flags. Closes #21059.
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> libgd-1.8.3-r6.ebuild :
   Added hppa to KEYWORDS.
@@ -52,30 +65,20 @@
   Fix to work with userpriv properly.
 
   04 Feb 2003; Seemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r6.ebuild :
-
   Removed dependency on sed-4 because it is buggy on ppc.  Switched to
   normal gnu-sed syntax. Closes bug #15022 by Rajiv Manglani
   <rajiv@gentoo.org>
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
   15 Jan 2003; Brandon Low <lostlogic@gentoo.org> libgd-1.8.3-r6.ebuild:
   Drop dependency on supersed, switch to >=sed-4.0.  This is unstable on the
   ppc pending the stability of sed-4 on the ppc.
 
-*libgd-2.0.1 (9 Sep 2002)
-  14 Sep 2002; <mcummings@gentoo.org> : bzip'd patch and moved to mirror
-
-  9 Sep 2002; <mcummings@gentoo.org> :
-  Fixes bugs with perl versions using gd; corrects a few compile options
-  
 *libgd-1.8.3-r5 (12 Apr 2002)
 
   22 Apr 2003; Brandon Low <lostlogic@gentoo.org> libgd-1.8.3-r5.ebuild:
   Change supersed dependencies
 
   22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r5.ebuid :
-
   jpeg, X, and truetype turned into USE dependent support.
 
   07 Aug 2002; Mark Guertin <gerk@gentoo.org> :
@@ -84,22 +87,19 @@
   12 Apr 2002; Spider <spider@gentoo.org> libgd-1.8.3-r5.ebuild :
   Updating revision with new libpng
 
-*libgd-1.8.3-r4 (3 Apr 2002)
+*libgd-1.8.3-r4 (03 Apr 2002)
 
-  3 Apr 2002; Bruce A. Locke <blocke@shivan.org> libgd-1.8.3-r4.ebuild :
-
+  03 Apr 2002; Bruce A. Locke <blocke@shivan.org> libgd-1.8.3-r4.ebuild :
   Quick fix for glibc circular dependencies.
 
 *libgd-1.8.3-r3 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r3.ebuild :
-
   Updated ebuild to modern syntax, and ungzipped HTML docs.
 
-*libgd-1.8.3-r2 (1 Feb 2002)
+*libgd-1.8.3-r2 (01 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
