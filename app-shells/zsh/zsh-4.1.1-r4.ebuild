@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r4.ebuild,v 1.1 2004/01/18 17:51:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r4.ebuild,v 1.2 2004/01/22 12:42:09 usata Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
+KEYWORDS="x86 alpha ppc sparc amd64 hppa"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
