@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.3.1.ebuild,v 1.2 2002/06/13 15:32:29 bass Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.3.2.ebuild,v 1.1 2002/06/13 15:32:29 bass Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical FTP client written in Python with GTK bindings."
@@ -23,6 +23,10 @@ src_compile() {
 
 src_install () {
     python setup.py install || die "install failed"
+#	dobin build/scripts-2.2/ftpcube
+#	dodir /usr/share/ftpcube/lib/libftpcube
+#	insinto /usr/share/ftpcube/lib/libftpcube
+#	doins build/lib/libftpcube/*
 	dodoc CHANGELOG README
 }
 	
