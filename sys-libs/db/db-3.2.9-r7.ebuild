@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.14 2004/07/02 08:44:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.15 2004/09/27 08:05:46 pauldv Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-	=sys-libs/db-1.85-r1
+	=sys-libs/db-1.85*
 	sys-devel/libtool
 	sys-devel/m4"
 # We need m4 too else build fails without config.guess

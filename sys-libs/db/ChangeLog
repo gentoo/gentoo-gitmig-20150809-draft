@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.102 2004/09/03 19:45:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.103 2004/09/27 08:05:46 pauldv Exp $
+
+  27 Sep 2004; <pauldv@gentoo.org> db-3.2.9-r10.ebuild, db-3.2.9-r7.ebuild:
+  Fix bug #65291 and mark the -r10 release testing on amd64.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   db-3.2.9-r10.ebuild, db-4.0.14-r2.ebuild:
