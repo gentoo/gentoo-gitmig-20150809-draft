@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.6 2004/04/02 03:47:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.7 2004/04/02 03:50:34 wolf31o2 Exp $
+
+  01 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Fixing fatfingers.
 
 *ut2003-demo-2206-r3 (01 Apr 2004)
 

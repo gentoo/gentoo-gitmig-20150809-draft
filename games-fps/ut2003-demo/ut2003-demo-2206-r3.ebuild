@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.1 2004/04/02 03:47:28 wolf31o2 Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.2 2004/04/02 03:50:34 wolf31o2 Exp $.
 
 inherit games
 
@@ -28,7 +28,7 @@ pkg_setup() {
 src_unpack() {
 	unpack_makeself ${DISTDIR}/ut2003demo-lnx-${PV}.sh.bin \
 		|| die "unpacking demo"
-	unzip unzip ${DISTDIR}/UT2003CrashFix.zip \
+	unzip ${DISTDIR}/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
 	tar -zxf setupstuff.tar.gz || die
 }
