@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10.ebuild,v 1.3 2001/09/02 09:31:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.10.ebuild,v 1.4 2001/09/02 11:21:31 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -76,7 +76,7 @@ src_install() {
   docinto faq
   dodoc faq/*.txt
   docinto html/faq
-  odoc faq/*.html
+  dodoc faq/*.html
   docinto textdocs
   dodoc textdocs/*
 
@@ -88,9 +88,10 @@ src_install() {
 
 pkg_preinst() {
 
-  if [ "$ROOT" = "/" ] 	&& [ -e /etc/rc.d/init.d/samba ] ; then
+  if [ "$ROOT" = "/" ] && [ -e /etc/rc.d/init.d/samba ] ; then
 	/etc/rc.d/init.d/samba stop
   fi
+  return 0
 }
 
 
