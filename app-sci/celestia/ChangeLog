@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/celestia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.21 2004/10/01 01:20:56 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.22 2004/11/13 02:51:12 morfic Exp $
+
+  12 Nov 2004; Daniel Goller <morfic@gentoo.org> celestia-1.3.2.ebuild:
+  added arts USE flag, stable on x86 and ppc
 
   30 Sep 2004; Daniel Goller <morfic@gentoo.org> -celestia-1.3.2_pre20040731-r1.ebuild,
   -celestia-1.3.2_pre20040731.ebuild, -digest-celestia-1.3.2_pre20040731, -digest-celestia-1.3.2_pre20040731-r1:

@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 4f9ff1f859899ca41f510d245af7d109 celestia-1.3.0-r1.ebuild 2222
 MD5 881ad207128ff8ef475049306d2249a8 celestia-1.3.1.ebuild 2308
 MD5 0f4d71adea6a063dd7b7924cb7b9e095 celestia-1.3.0.ebuild 2099
-MD5 c3fe4fce1e6ecbe4f36951f09357fd40 ChangeLog 4762
+MD5 9f909b7dfd699343168814d22674dfaa ChangeLog 4880
 MD5 1b55bd73a1313e288a88762af6cd0fb7 metadata.xml 330
-MD5 5966c7dad7d73f620158f07c218de177 celestia-1.3.2.ebuild 3106
+MD5 c7dec6c3cc66a4b2b95f2841e1847b97 celestia-1.3.2.ebuild 3105
 MD5 48aea4af15487f0c322ff982360d7ee8 files/celestia-1.3.1-gtkmain.patch 2501
 MD5 f96a6eb019a59bf1a643b96c43657af8 files/resmanager.h.patch 893
 MD5 f659f2616eeaaa4d3b6422e586d2bfa2 files/celestia-1.3.2-noarts.patch 3566
@@ -18,7 +18,7 @@ MD5 318b4452af1f7b12deb515e84ca6848a files/celestia-gcc3.patch 4576
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlXTEUpKYMelfdYERAlVvAJsHI49ICBRjHOhHGc/83KHc3dCkCwCfYY+j
-y+NyG9Qm4MRyvQqqsBS6Z7o=
-=VeBW
+iD8DBQFBlXcRUpKYMelfdYERAj7qAJsE61TCzu+P/jsICCLsQbTLJBuN8wCfZNcn
+KdUBcEBmIc66xgYAl82oQJA=
+=LmX0
 -----END PGP SIGNATURE-----
