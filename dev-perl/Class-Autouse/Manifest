@@ -1,6 +1,18 @@
-MD5 115eab7f9b6b702713f02e7eeb4830cf ChangeLog 700
-MD5 4a92d5160d77597dfa525372957f1c78 Class-Autouse-1.03.ebuild 569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8da5048e306cccb5997c44f0bb1463cf ChangeLog 844
 MD5 12d5bad4d2900fbd86f2b70c6a8f0242 Class-Autouse-0.7.ebuild 572
+MD5 4a92d5160d77597dfa525372957f1c78 Class-Autouse-1.03.ebuild 569
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
+MD5 774544d9c22fd8de3e2520d23ef373c8 Class-Autouse-1.12.ebuild 641
 MD5 c93b2af861068caba46dc5cfcbeb815b files/digest-Class-Autouse-0.7 68
+MD5 9dc670611810300b6533a904bb57c265 files/digest-Class-Autouse-1.03 69
+MD5 c71169c7dcd7e74a58b7412569fe4dd2 files/digest-Class-Autouse-1.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBtAsOtG5z4I8BtQoRAt2tAJ41QDhaO2xHMw6BNkN21vhM12IQmQCfVI7H
+gFVn+tGmno0wf4rSqtOTjgw=
+=ftkk
+-----END PGP SIGNATURE-----
