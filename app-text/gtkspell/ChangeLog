@@ -1,0 +1,10 @@
+# ChangeLog for app-text/gtkspell
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.1 2002/07/28 16:48:26 stroke Exp $
+ 
+*gtkspell-2.0.0 (28 Jul 2002)
+
+  28 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtkspell-2.0.0.ebuild :
+  
+  GtkSpell is a spell library fro GTK2 
+  Initial CVS import.
