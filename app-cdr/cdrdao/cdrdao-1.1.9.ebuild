@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9.ebuild,v 1.6 2004/11/04 05:16:51 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.9.ebuild,v 1.7 2004/11/15 02:07:24 lv Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -30,9 +30,7 @@ src_unpack() {
 	cd ${S}
 
 	#apply patch to allow xdao to be compiled with gcc3.4
-	if ([ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] && use gnome); then
-		epatch ${FILESDIR}/cdrdao-Project.h-gcc3.4.patch
-	fi
+	epatch ${FILESDIR}/cdrdao-Project.h-gcc3.4.patch
 
 	# Add gentoo to version
 	sed -i -e "s:^PACKAGE_STRING='cdrdao 1.1.9':PACKAGE_STRING='cdrdao 1.1.9 gentoo':" configure
