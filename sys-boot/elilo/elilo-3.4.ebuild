@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.4 2004/03/04 22:44:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.4.ebuild,v 1.5 2004/03/19 10:15:37 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://developer.intel.com/technology/efi"
@@ -11,8 +13,9 @@ LICENSE="GPL-2"
 IUSE=""
 
 # gnu-efi contains only static libs, so there's no run-time dep on it
-DEPEND=">=gnu-efi-3.0"
-RDEPEND="sys-boot/efibootmgr sys-fs/dosfstools"
+DEPEND=">=sys-boot/gnu-efi-3.0"
+RDEPEND="sys-boot/efibootmgr
+	sys-fs/dosfstools"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die "failed to unpack"
