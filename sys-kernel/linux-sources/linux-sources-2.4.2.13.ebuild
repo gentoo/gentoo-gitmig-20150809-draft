@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.13.ebuild,v 1.2 2001/03/09 10:26:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.13.ebuild,v 1.3 2001/03/09 12:40:06 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -103,10 +103,11 @@ src_unpack() {
     echo "Preparing for compilation..."
     cd ${S}
     #sometimes we have icky kernel symbols; this seems to get rid of them
-    make mrproper
+    try make mrproper
     #this is the configuration for the default kernel
     try cp ${FILESDIR}/${KV}/config .config
-
+    yes "" | make oldconfig
+    try make include/linux/version.h
     #fix silly permissions in tarball
     cd ${WORKDIR}
     chown -R 0.0 linux
@@ -126,9 +127,6 @@ src_compile() {
 
     try make
 
-    cd ${S}
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
-
     cd ${S}/extras/lm_sensors-${SENV}
     try make
 
@@ -142,7 +140,7 @@ src_compile() {
     try make
 
     cd ${S}
-    yes \"\" | make oldconfig
+    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 
@@ -165,18 +163,8 @@ src_install() {
 	try make clean
 	dodir /usr/src
 
-	#install ALSA headers
-	cd ${S}/extras/alsa-driver-${AV}
-	into /usr
-	dosbin snddevices
-	dodir /usr/include/linux
-	insinto /usr/src/linux-${KV}/include/linux
-	cd include
-	doins asound.h asoundid.h asequencer.h ainstr_*.h
 
-	#install sensors tools
-	cd ${S}/extras/lm_sensors-${SENV}
-	make install
+
 
 	if [ "$PN" = "linux" ]
 	then
@@ -189,11 +177,11 @@ src_install() {
 		#grab includes and documentation only
 		dodir /usr/src/linux-${KV}/include/linux
 		dodir /usr/src/linux-${KV}/include/asm-i386
-		cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+		cp -ax ${S}/include/* ${D}/usr/src/linux-${KV}/include
 		cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
-		dodir /usr/include
-		dosym /usr/src/linux/include/linux /usr/include/linux
-		dosym /usr/src/linux/include/asm-i386 /usr/include/asm
+#		dodir /usr/include
+#		dosym /usr/src/linux/include/linux /usr/include/linux
+#		dosym /usr/src/linux/include/asm-i386 /usr/include/asm
 
 		#grab compiled kernel
 		dodir /boot/boot
@@ -214,6 +202,14 @@ src_install() {
 		dodir /lib/modules/${KV}/misc
 		cp modules/*.o ${D}/lib/modules/${KV}/misc
 
+		#install ALSA headers
+		cd ${S}/extras/alsa-driver-${AV}
+		into /usr
+		dosbin snddevices
+		insinto /usr/src/linux-${KV}/include/linux
+		cd include
+		doins asound.h asoundid.h asequencer.h ainstr_*.h
+
 		#fix symlink
 		cd ${D}/lib/modules/${KV}
 		rm build
@@ -230,10 +226,22 @@ src_install() {
 		cd ${D}/usr/src
 		ln -sf linux-${KV} linux
 
+		#install ALSA headers
+		cd ${S}/extras/alsa-driver-${AV}
+		into /usr
+		dosbin snddevices
+		insinto /usr/src/linux-${KV}/include/linux
+		cd include
+		doins asound.h asoundid.h asequencer.h ainstr_*.h
+
 		#remove workdir since our install was dirty and modified ${S}
 		#this will cause an unpack to be done next time
 		rm -rf ${WORKDIR}
 	fi
+
+	#install sensors tools
+	cd ${S}/extras/lm_sensors-${SENV}
+	make install
 }
 
 pkg_postinst() {
