@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta4.ebuild,v 1.1 2003/08/21 23:26:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta4.ebuild,v 1.2 2003/08/22 00:12:27 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -15,7 +15,8 @@ DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
-	=media-libs/libexif-0.5.9"  #for libexif.so.8
+	media-libs/libexif
+	>=x11-libs/lesstif-0.93.40" #lesstif resolves Bug 25767
 
 KEYWORDS="-*" #please test! This is for x86 only!!
 SLOT="0"
