@@ -1,6 +1,16 @@
-MD5 965a49cb6e92cb30aa26a1397e1f34ed snns-4.2-r4.ebuild 1633
-MD5 3f45feb1ab7562379faba5558b15a226 snns-4.2-r6.ebuild 2518
-MD5 9316c9bef19882d7d4d764aa031ea4cf ChangeLog 2097
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 091d98e0aec99f295e1fb8e9be4e8dd8 snns-4.2-r4.ebuild 1639
+MD5 3862b1c39305f8488acf99a663cac222 snns-4.2-r6.ebuild 2526
+MD5 f70f0018aefd5c9aba53e693164f25e2 ChangeLog 2302
 MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
 MD5 409a7ed863845a91ab923aee9873a062 files/digest-snns-4.2-r4 196
 MD5 13bc6c016dc3aa799a25598dead6346e files/digest-snns-4.2-r6 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0clyI1lqEGTUzyQRAl3GAJ9aaomZfsjFRGYg59LsRFQmvGfH7gCdHOT8
+leOCPEiMcWRxU6qcQQ+nkWw=
+=3aze
+-----END PGP SIGNATURE-----
