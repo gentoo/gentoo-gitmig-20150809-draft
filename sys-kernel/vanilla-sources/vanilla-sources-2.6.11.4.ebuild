@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.11.4.ebuild,v 1.4 2005/03/28 15:19:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.11.4.ebuild,v 1.5 2005/03/31 20:00:28 corsair Exp $
 
 detect_kpatch() {
 	[ "${KV_PATCH/.[0-9]}" == "${KV_PATCH}" ] && return 1
@@ -24,5 +24,5 @@ HOMEPAGE="http://www.kernel.org/"
 SRC_URI="${KERNEL_URI} ${ARCH_URI} ${KERNEL_PATCH_URI}"
 UNIPATCH_LIST="${ARCH_PATCH} ${KERNEL_PATCH}"
 
-KEYWORDS="x86 ~ia64 ~ppc ~amd64 ~alpha ~arm"
+KEYWORDS="x86 ~ia64 ~ppc ~amd64 ~alpha ~arm ~ppc64"
 IUSE=""
