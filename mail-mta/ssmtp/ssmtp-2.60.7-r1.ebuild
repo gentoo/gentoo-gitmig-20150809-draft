@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.3 2004/05/30 22:46:58 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.60.7-r1.ebuild,v 1.4 2004/05/30 23:12:09 g2boojum Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="ssl ipv6 md5sum mailwrapper"
 
 DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )"
-RDEPEND="mailwrapper? ( =net-mail/mailwrapper-0.1 )
+RDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!mailwrapper? ( !virtual/mta )
 	net-mail/mailbase
 	ssl? ( dev-libs/openssl )"
@@ -63,8 +63,11 @@ src_install() {
 	newdoc ssmtp.lsm DESC
 	insinto /etc/ssmtp
 	doins ssmtp.conf revaliases
-	insinto /etc
-	use mailwrapper && doins ${FILESDIR}/mailer.conf
+	if use mailwrapper
+	then
+		insinto /etc/mail
+		doins ${FILESDIR}/mailer.conf
+	fi
 
 	# Set up config file
 	# See bug #22658
