@@ -833,3 +833,7 @@ app-arch/gnorpm
 # Masked because it doesnt work properly
 # and because I'm not inclined to break that many users systems. see bug #3065
 x11-libs/gdkxft
+
+# mkennedy@gentoo.org 29 May 2002
+# Test this if you have a gcc-2.95.3
+=sys-devel/gcc-3.1-r5
