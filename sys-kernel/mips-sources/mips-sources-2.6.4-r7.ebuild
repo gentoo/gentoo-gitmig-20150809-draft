@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r6.ebuild,v 1.1 2004/08/02 06:57:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.4-r7.ebuild,v 1.1 2004/08/06 04:48:59 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040311"
 COBALTPATCHVER="1.4"
-SECPATCHVER="1.0"
+SECPATCHVER="1.1"
 IP32DIFFDATE="20040229"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -76,6 +76,9 @@ src_unpack() {
 	# set to 0x98000000, not 0xa8000000.
 	epatch ${FILESDIR}/mipscvs-2.6.x-ip32-kern_entry-arcboot.patch
 
+	# Force detection of PS/2 mice on SGI Systems
+	epatch ${FILESDIR}/misc-2.6-force_mouse_detection.patch
+
 	# iluxa's minpatchset for SGI O2
 	echo -e ""
 	einfo ">>> Patching kernel with iluxa's minimal IP32 patchset ..."
@@ -89,6 +92,7 @@ src_unpack() {
 		epatch ${WORKDIR}/security/CAN-2004-0181-2.6-jfs_ext3.patch
 		epatch ${WORKDIR}/security/CAN-2004-0228-cpufreq.patch
 		epatch ${WORKDIR}/security/CAN-2004-0229-fb_copy_cmap.patch
+		epatch ${WORKDIR}/security/CAN-2004-0415-2.6.4-file_offset_pointers.patch
 		epatch ${WORKDIR}/security/CAN-2004-0427-2.6-do_fork.patch
 		epatch ${WORKDIR}/security/CAN-2004-0495_0496-2.6-sparse.patch
 		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch

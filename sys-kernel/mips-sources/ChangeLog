@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.51 2004/08/02 06:57:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.52 2004/08/06 04:48:59 kumba Exp $
+
+*mips-sources-2.6.7-r4 (06 Aug 2004)
+
+  06 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/misc-2.6-force_mouse_detection.patch, -mips-sources-2.4.25-r6.ebuild,
+  +mips-sources-2.4.25-r7.ebuild, -mips-sources-2.4.26-r6.ebuild,
+  +mips-sources-2.4.26-r7.ebuild, -mips-sources-2.6.4-r6.ebuild,
+  +mips-sources-2.6.4-r7.ebuild, -mips-sources-2.6.5-r5.ebuild,
+  -mips-sources-2.6.6-r4.ebuild, +mips-sources-2.6.6-r5.ebuild,
+  -mips-sources-2.6.7-r3.ebuild, +mips-sources-2.6.7-r4.ebuild:
+  Another kernel vuln, the patch for this one is a doozy, CAN-2004-0415. Also
+  pulled 2.6.5 from the tree, but we're keeping 2.6.4 around because it's the
+  last version that worked on Indigo2 systems. Also included is a patch to force
+  mouse detection for IP22/IP32 (And possibly others) in 2.6.x.
 
 *mips-sources-2.4.25-r6 (02 Aug 2004)
 

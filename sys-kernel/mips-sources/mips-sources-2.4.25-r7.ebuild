@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r6.ebuild,v 1.1 2004/08/02 06:57:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r7.ebuild,v 1.1 2004/08/06 04:48:59 kumba Exp $
 
 
 # Version Data
@@ -9,7 +9,7 @@ CVSDATE="20040222"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 COBALTPATCHVER="1.4"
-SECPATCHVER="1.0"
+SECPATCHVER="1.1"
 
 # Miscellaneous stuff
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
@@ -69,6 +69,7 @@ src_unpack() {
 		epatch ${WORKDIR}/security/CAN-2004-0178-sbblaster.patch
 		epatch ${WORKDIR}/security/CAN-2004-0181-2.4-jfs_ext3.patch
 		epatch ${WORKDIR}/security/CAN-2004-0394-panic.patch
+		epatch ${WORKDIR}/security/CAN-2004-0415-2.4-file_offset_pointers.patch
 		epatch ${WORKDIR}/security/CAN-2004-0427-2.4-do_fork.patch
 		epatch ${WORKDIR}/security/CAN-2004-0495-2.4-sparse.patch
 		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch
