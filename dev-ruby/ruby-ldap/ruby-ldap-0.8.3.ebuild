@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.8.3.ebuild,v 1.1 2004/11/04 15:49:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.8.3.ebuild,v 1.2 2005/03/16 15:27:33 caleb Exp $
 
 inherit ruby
 

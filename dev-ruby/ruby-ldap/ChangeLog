@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-ldap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.7 2004/12/31 01:08:37 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.8 2005/03/16 15:27:33 caleb Exp $
+
+*ruby-ldap-0.9.1 (16 Mar 2005)
+
+  16 Mar 2005; Caleb Tennis <caleb@gentoo.org> +ruby-ldap-0.9.1.ebuild:
+  version bump
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
