@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.7 2004/05/31 22:18:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.8 2004/06/02 19:15:46 vapier Exp $
 
 inherit eutils
-
-IUSE="threads"
 
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
@@ -12,8 +10,8 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha mips ~hppa amd64 ~ia64 ppc64"
-RESTRICT="nomirror"
+KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ppc64"
+IUSE="threads"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.47-r10
@@ -23,7 +21,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 S=${WORKDIR}/${PN}${PV}
 
 pkg_setup() {
-
 	if use threads
 	then
 		ewarn ""
