@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.9.ebuild,v 1.6 2004/06/27 22:19:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.9.ebuild,v 1.7 2004/06/30 02:34:38 agriffis Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=149
@@ -11,7 +11,7 @@ SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz"
 LICENSE="PYTHON"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
-IUSE=""
+IUSE="gnome"
 
 DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*"
