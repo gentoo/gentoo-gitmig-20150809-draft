@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.0.ebuild,v 1.1 2003/03/28 13:40:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.4.0.ebuild,v 1.2 2003/04/02 09:35:46 pvdabeel Exp $
 
 A=xmlwrapp-${PV}.tar.gz
 S=${WORKDIR}/xmlwrapp-${PV}
@@ -8,7 +8,7 @@ DESCRIPTION="xmlwrapp is a modern style C++ library for working with XML data. I
 SRC_URI="http://pmade.org/pjones/software/xmlwrapp/download/${A}"
 HOMEPAGE="http://pmade.org/pjones/software/xmlwrapp/"
 KEYWORDS="x86 ppc"
-LICENSE="GPL2"
+LICENSE="GPL-2"
 SLOT="0"
 
 IUSE=""
