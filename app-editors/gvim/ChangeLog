@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.4 2002/10/09 05:19:11 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.5 2002/10/27 22:52:29 rphillips Exp $
 
   16 Sep 2002; Hannes Mehnert <hannes@gentoo.org> gvim-6.1.ebuild:
   added dependency app-editors/vim-core
@@ -8,9 +8,15 @@
   14 Sep 2002; Hannes Mehnert <hannes@gentoo.org> gvim-6.1.ebuild:
   commited wrong ebuild (wrong dependencies), corrected now)
 
-*gvim-6.1-r15.ebuild (8 Oct 2002)
+*gvim-6.1-r3.ebuild (27 Oct 2002)
 
-  8 Oct 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r15.ebuild :
+  27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r3.ebuild :
+
+  Added vim eclass support
+
+*gvim-6.1-r2.ebuild (8 Oct 2002)
+
+  8 Oct 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r2.ebuild :
 
   Added patches 201-215.  Appears my crashing bug that appeared on my
   computer has been fixed.

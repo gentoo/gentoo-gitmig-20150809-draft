@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.23 2002/10/09 05:17:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.24 2002/10/27 22:52:29 rphillips Exp $
+
+*vim-6.1-r16.ebuild (27 Oct 2002)
+
+  27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r16.ebuild :
+
+  Added vim eclass support
 
 *vim-6.1-r15.ebuild (8 Oct 2002)
 
