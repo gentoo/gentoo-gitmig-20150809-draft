@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.6.ebuild,v 1.6 2004/05/04 12:42:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.6.ebuild,v 1.7 2004/05/11 17:31:20 phosphan Exp $
 
 inherit eutils
 
 MY_PV="$(echo ${PV} | cut -d. -f1,2)"
 S="${WORKDIR}/QuickRip"
 DESCRIPTION="Basic DVD ripper written in Python and PyQT."
-HOMEPAGE="http://www.tomchance.uklinux.net/projects/quickrip.shtml"
+HOMEPAGE="http://quickrip.sourceforge.net/"
 SRC_URI="http://www.tomchance.uklinux.net/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
