@@ -1,0 +1,31 @@
+diff -ur BitchX.orig/configure BitchX/configure
+--- BitchX.orig/configure	Mon Jan  8 01:24:22 2001
++++ BitchX/configure	Tue Apr 17 18:33:57 2001
+@@ -7030,7 +7030,8 @@
+ 
+       echo "$as_me:7031: checking for ZVT" >&5
+ echo $ECHO_N "checking for ZVT... $ECHO_C" >&6
+-      ZVT_LIBS="`$GNOME_CONFIG $gnome_config_args --libs-only-l zvt`"
++      ZVT_CFLAGS="`$GNOME_CONFIG $gnome_config_args --cflags gnome`"
++      ZVT_LIBS="`$GNOME_CONFIG $gnome_config_args --libs zvt`"
+       if test x"$ZVT_LIBS" != x""; then
+         echo "$as_me:7035: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+@@ -7097,8 +7098,6 @@
+         G_CFLAGS="$GLIB_CFLAGS $GTK_CFLAGS $GDK_IMLIB_CFLAGS $ZVT_CFLAGS"
+         G_LIBS="$GLIB_LIBS $GTK_LIBS $PTHREAD_LIBS $GDK_IMLIB_LIBS $ZVT_LIBS"
+       fi
+-      CFLAGS="$CFLAGS $G_CFLAGS"
+-      LIBS="$G_LIBS $LIBS"
+       VERSION="gtk$VERSION"
+       _VERSION_="gtk$_VERSION_"
+ 
+@@ -11944,6 +11943,8 @@
+   SHLIB_SUFFIX=".so"
+ fi
+ 
++CFLAGS="$CFLAGS $G_CFLAGS"
++LIBS="$G_LIBS $LIBS"
+ if test x"$GCC" = x"yes" -a -z "`echo "$CFLAGS" | grep \\\-Wall`"; then
+   CFLAGS="$CFLAGS -Wall"
+ fi
