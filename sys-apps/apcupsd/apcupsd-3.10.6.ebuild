@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.3 2003/11/01 15:16:35 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.4 2003/11/01 15:26:18 tantive Exp $
 
 IUSE="doc snmp usb"
 
@@ -66,9 +66,11 @@ src_install () {
 	make DESTDIR=${D} install || die "installed failed"
 
 	use apache2 || insinto /etc/apache/conf/addon-modules
-	use apache2 &&	insinto /etc/apache2/conf/addon-modules
+	use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf
+	
+	use apache2 && insinto /etc/apache2/conf/modules.d
+	use apache2 && newins ${FILESDIR}/${PV}/apache.conf 60_apcupsd.conf
 
-	newins ${FILESDIR}/${PV}/apache.conf apcupsd.conf
 	insinto /etc/apcupsd
 	newins examples/safe.apccontrol safe.apccontrol
 
