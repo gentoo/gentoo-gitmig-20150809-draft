@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.1.ebuild,v 1.7 2005/03/14 19:00:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.2.ebuild,v 1.1 2005/03/14 19:00:54 pyrania Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/glunarclock/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 
@@ -31,4 +31,4 @@ DEPEND="${RDEPEND}
 		>=app-text/scrollkeeper-0.1.4
 		dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog COPYING* INSTALL MAINTAINERS TODO README"
+DOCS="AUTHORS ChangeLog COPYING* INSTALL README"
