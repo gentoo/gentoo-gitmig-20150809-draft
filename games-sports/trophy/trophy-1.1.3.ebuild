@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/trophy-1.1.3.ebuild,v 1.1 2003/09/11 12:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/trophy-1.1.3.ebuild,v 1.2 2004/03/19 09:27:08 mr_bones_ Exp $
 
 inherit games
 
@@ -14,9 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="=clanlib-0.6.5*
-	>=hermes-1.3.2
-	>=zlib-1.1.3"
+DEPEND="=dev-games/clanlib-0.6.5*
+	>=media-libs/hermes-1.3.2
+	>=sys-libs/zlib-1.1.3"
 
 pkg_setup() {
 	clanlib-config 0.6.5
