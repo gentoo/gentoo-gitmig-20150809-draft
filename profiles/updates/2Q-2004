@@ -1,3 +1,4 @@
+move dev-libs/libextractor media-libs/libextractor
 move dev-java/activation dev-java/gnu-activation
 move sys-apps/brltty app-accessibility/brltty
 move app-misc/yasr app-accessibility/yasr
