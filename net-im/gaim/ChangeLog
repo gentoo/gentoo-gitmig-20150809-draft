@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.106 2003/12/12 20:03:17 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.107 2003/12/22 22:54:16 rizzo Exp $
+
+  22 Dec 2003; Don Seiler <rizzo@gentoo.org>; gaim-0.74-r1.ebuild:
+  Only need to specify include paths for -mozilla, otherwise pkgconfig will work
 
   12 Dec 2003; Don Seiler <rizzo@gentoo.org>; gaim-0.66-r3.ebuild,
   gaim-0.70-r2.ebuild, gaim-0.71-r2.ebuild, gaim-0.73-r1.ebuild,

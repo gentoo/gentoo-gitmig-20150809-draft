@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.3 2003/12/12 15:49:47 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.4 2003/12/22 22:54:16 rizzo Exp $
 
 IUSE="nls perl spell nas ssl mozilla cjk debug"
 
@@ -49,18 +49,15 @@ src_compile() {
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 	use debug  && myconf="${myconf} --enable-debug"
 
-	if [ `use mozilla` ]; then
-		NSS_LIB=/usr/lib/mozilla
-		NSS_INC=/usr/lib/mozilla/include
-	else
+	use mozilla || {
+		# Only need to specify this if no pkgconfig from mozilla
 		NSS_LIB=/usr/lib
 		NSS_INC=/usr/include
-	fi
-
-	myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
-	myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"
-	myconf="${myconf} --with-nspr-libs=${NSS_LIB}"
-	myconf="${myconf} --with-nss-libs=${NSS_LIB}"
+		myconf="${myconf} --with-nspr-includes=${NSS_INC}/nspr"
+		myconf="${myconf} --with-nss-includes=${NSS_INC}/nss"
+		myconf="${myconf} --with-nspr-libs=${NSS_LIB}"
+		myconf="${myconf} --with-nss-libs=${NSS_LIB}"
+	}
 
 	econf ${myconf} || die "Configuration failed"
 	use perl && sed -i -e 's:^\(PERL_MM_PARAMS =.*PREFIX=\)\(.*\):\1'${D}'\2:' plugins/perl/Makefile
@@ -74,10 +71,13 @@ src_compile() {
 		local myencconf
 		cd ${S}/plugins/gaim-encryption-${EV}
 
-		myencconf="${myencconf} --with-nspr-includes=${NSS_INC}/nspr"
-		myencconf="${myencconf} --with-nss-includes=${NSS_INC}/nss"
-		myencconf="${myencconf} --with-nspr-libs=${NSS_LIB}"
-		myencconf="${myencconf} --with-nss-libs=${NSS_LIB}"
+		use mozilla || {
+			# Only need to specify this if no pkgconfig from mozilla
+			myencconf="${myencconf} --with-nspr-includes=${NSS_INC}/nspr"
+			myencconf="${myencconf} --with-nss-includes=${NSS_INC}/nss"
+			myencconf="${myencconf} --with-nspr-libs=${NSS_LIB}"
+			myencconf="${myencconf} --with-nss-libs=${NSS_LIB}"
+		}
 		econf ${myencconf} || die "Configuration failed for encryption"
 		emake || die "Make failed for encryption"
 	}
