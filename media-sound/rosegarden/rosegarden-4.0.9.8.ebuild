@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.8.ebuild,v 1.4 2004/07/13 08:33:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.8.ebuild,v 1.5 2004/09/15 20:20:47 eradicator Exp $
 
 MY_PV="${PV/./-}"
 MY_P="${PN}-${MY_PV}"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 IUSE="jack"
 
