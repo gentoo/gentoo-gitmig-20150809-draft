@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/bar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.7 2004/06/30 14:29:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.8 2004/12/06 17:57:44 ka0ttic Exp $
+
+*bar-1.10.2 (06 Dec 2004)
+
+  06 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  -bar-1.06.ebuild, +bar-1.10.2.ebuild:
+  Version bump; cleaned up ebuild and added support for USE=doc. Marked 1.08
+  stable on x86. Also updated metadata for shell-tools.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> bar-1.06.ebuild,
   bar-1.07.ebuild, bar-1.08.ebuild:

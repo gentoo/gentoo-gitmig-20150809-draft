@@ -1,8 +1,18 @@
-MD5 4b602830b8cb4a8ee4c27c3bd0943b3b bar-1.06.ebuild 558
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 35248372c0ac39b51d26aecd28d9d8c1 bar-1.08.ebuild 535
+MD5 d87273adfea6ce797cf5a58507065763 bar-1.10.2.ebuild 830
 MD5 db3ce8d63c16696bb2270acc44f7c75d bar-1.07.ebuild 558
-MD5 c144163029f9ce4d9e9640149b36ae70 ChangeLog 786
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3ae88119ba205b2153c6b03b898a2b82 files/digest-bar-1.06 60
+MD5 52d69bf6e86786c52ac8f6a74614160d ChangeLog 1049
+MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 2e6efe43b8e52a5aef5eea9433a51bc2 files/digest-bar-1.07 60
 MD5 780367467d4bde7b82ef8f3e457f9893 files/digest-bar-1.08 60
+MD5 a1c4e5adf75247ad7bec79232ac65dcd files/digest-bar-1.10.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtJ2iEZCkKN40op4RAux3AJ4u8WH06ulYH2L2wOdxxxz5SVrEDQCdGdSv
+g9dn27gt6K9Yug6th/1gRT4=
+=SMeJ
+-----END PGP SIGNATURE-----
