@@ -1,20 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.1.ebuild,v 1.3 2004/04/27 20:34:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.1.ebuild,v 1.4 2004/06/21 13:58:54 carlo Exp $
 
-inherit kde-base
-need-kde 3.1
+inherit kde
 
-#S=${WORKDIR}/${P}
 DESCRIPTION="A native KWin window decoration for KDE 3.x."
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=8841"
 SRC_URI="http://www.kde-look.org/content/files/8841-${P}.tar.gz"
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ppc"
-
-SLOT="0"
 IUSE=""
 
-
-
+need-kde 3.2
