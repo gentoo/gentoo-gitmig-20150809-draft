@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/rpc2-1.13.ebuild,v 1.2 2002/07/23 22:22:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/rpc2-1.13.ebuild,v 1.3 2002/08/16 02:57:06 murphy Exp $
 
 DESCRIPTION="Remote procedure call package for IP/UDP (used by Coda)"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Remote procedure call package for IP/UDP (used by Coda)"
 HOMEPAGE="http://www.coda.cs.cmu.edu"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 SLOT=1
 

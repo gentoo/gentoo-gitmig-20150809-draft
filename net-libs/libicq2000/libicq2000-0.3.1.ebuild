@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.1.ebuild,v 1.5 2002/07/17 06:28:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/libicq2000-0.3.1.ebuild,v 1.6 2002/08/16 02:57:06 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ICQ 200x compatible ICQ libraries."
@@ -9,7 +9,7 @@ HOMEPAGE="http://ickle.sf.net"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="=dev-libs/libsigc++-1.0*"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/libcapsinetwork-0.1.1.ebuild,v 1.1 2002/08/01 14:54:19 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/libcapsinetwork-0.1.1.ebuild,v 1.2 2002/08/16 02:57:06 murphy Exp $
 inherit flag-o-matic
 
 DESCRIPTION="libCapsiNetwork is a C++ network library to allow fast development of server daemon processes."
@@ -8,7 +8,7 @@ HOMEPAGE="http://sourceforge.net/projects/libcapsinetwork/"
 SRC_URI="mirror://sourceforge//libcapsinetwork/${P}.tar.bz2"
 LICENSE="GPL"
 SLOT="1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"

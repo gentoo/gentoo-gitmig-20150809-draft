@@ -12,7 +12,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
 

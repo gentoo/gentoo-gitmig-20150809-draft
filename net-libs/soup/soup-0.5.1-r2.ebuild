@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.5 2002/07/23 06:52:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.5.1-r2.ebuild,v 1.6 2002/08/16 02:57:06 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Soup is a SOAP implementation"
@@ -16,7 +16,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	local myconf

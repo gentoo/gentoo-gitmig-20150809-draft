@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.3 2002/07/17 06:28:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/nss_ldap-174-r2.ebuild,v 1.4 2002/08/16 02:57:06 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NSS LDAP Module"
@@ -12,7 +12,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 
