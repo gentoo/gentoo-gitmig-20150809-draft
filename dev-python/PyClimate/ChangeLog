@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/PyClimate
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyClimate/ChangeLog,v 1.1 2004/05/31 18:11:31 nerdboy Exp $
+
+*PyClimate-1.2.1 (31 May 2004)
+
+  31 May 2004; Steve Arnold <nerdboy@gentoo.org> PyClimate-1.2.1.ebuild,
+  metadata.xml:
+  new ebuild for climate analysis stuff in python
+
