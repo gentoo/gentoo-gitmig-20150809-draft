@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.3.2.ebuild,v 1.2 2004/03/06 14:58:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.3.2.ebuild,v 1.3 2004/03/20 00:49:36 weeve Exp $
 
 IUSE="xmms spell gtkhtml"
 
@@ -10,7 +10,7 @@ SRC_URI="http://logjam.danga.com/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2.0

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.14 2004/03/13 06:07:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.15 2004/03/20 00:49:36 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> logjam-4.2.2.ebuild,
+  logjam-4.3.2.ebuild:
+  Marked 4.2.2 stable and added ~sparc keyword to 4.3.2
 
   12 Mar 2004; Jason Wever <weeve@gentoo.org> logjam-4.2.2.ebuild:
   Added ~sparc keyword.
