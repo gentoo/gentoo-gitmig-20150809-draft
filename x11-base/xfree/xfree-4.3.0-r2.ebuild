@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.7 2003/04/13 01:02:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.8 2003/04/13 13:11:40 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.0.5"
+PATCH_VER="1.0.6"
 FT2_VER="2.1.3"
 SISDRV_VER="060403-1"
 SAVDRV_VER="1.1.27t"
@@ -137,7 +137,7 @@ src_unpack() {
 	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Unpack extra fonts stuff from Mandrake
-	unpack gemini-koi8-u.tar.bz2 || die
+	unpack gemini-koi8-u.tar.bz2
 	unpack eurofonts-X11.tar.bz2
 	unpack xfsft-encodings.tar.bz2
 	
@@ -176,6 +176,11 @@ src_unpack() {
 	if [ -z "`use debug`" ]
 	then
 		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
+	fi
+
+	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+	then
+		rm #{WORKDIR}/patch/075*
 	fi
 
 	# Various Patches from all over
@@ -331,6 +336,17 @@ src_unpack() {
 	# The definitions for fontconfig
 	echo "#define UseFontconfig YES" >> config/cf/host.def
 	echo "#define HasFontconfig YES" >> config/cf/host.def
+
+# Will uncomment this after kde, qt, and *box ebuilds are alterered to use
+# it
+#	if use xinerama
+#	then
+#		echo "#define BuildXinerama YES" >> config/cf/host.def
+#		echo "#define BuildXineramaLibrary YES" >> config/cf/host.def
+#	fi
+
+	# Default to whiteglass maybe?
+	echo "#define DefaultCursorTheme whiteglass" >> config/cf/host.def
 
 	# End the host.def definitions here
 	eend 0
@@ -678,6 +694,11 @@ src_install() {
 			strip --strip-debug ${x} || :
 		fi
 	done
+
+	ebegin "Setting Default Cursor Theme to whiteglass"
+	sed -i "s:core:whiteglass:" \
+		${D}/usr/share/cursors/xfree/default/index.theme
+	eend 0
 }
 
 pkg_preinst() {
@@ -816,12 +837,6 @@ pkg_postinst() {
 			-- ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
 		eend 0
 
-		ebegin "Generating koi8 fonts..."
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-		${ROOT}/usr/X11R6/bin/mkfontdir \
-			${ROOT}/usr/X11R6/lib/X11/fonts/ukr
-		eend 0
-
 		if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
 		then
 			ebegin "Creating fonts.scale files..."
@@ -942,6 +957,12 @@ pkg_postinst() {
 	ewarn "If you experience font corruption on OpenOffice.org or similar"
 	ewarn "glitches please remake your XF86Config"
 	echo
+
+	einfo "Please note that the xcursors are in /usr/share/cursors/xfree"
+	einfo "Any custom cursor sets should be placed in that directory"
+	einfo "This is different from the previous versions of 4.3 and"
+	einfo "the 4.2.99 series."
+	
 }
 
 pkg_postrm() {
