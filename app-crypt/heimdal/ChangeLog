@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.22 2004/03/21 09:37:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.23 2004/03/30 09:12:47 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.ebuild,
+  files/heimdal-0.6-berkdb.patch:
+  Fixing berkdb support for heimdal. Should close  #43874.
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> heimdal-0.6.ebuild:
   Marked stable on mips.

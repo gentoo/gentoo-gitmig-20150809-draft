@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.14 2004/03/21 09:37:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.15 2004/03/30 09:12:47 aliz Exp $
 
 inherit libtool eutils
 
@@ -17,7 +17,8 @@ PROVIDE="virtual/krb5"
 DEPEND="
 	ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
-	!app-crypt/kth-krb"
+	!app-crypt/kth-krb
+	sys-devel/autoconf"
 	# ldap? ( net-nds/openldap )
 	# With this enabled, we create a multiple stage
 	# circular dependency with USE="ldap kerberos"
@@ -28,12 +29,14 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gcc3.patch
 	epatch ${FILESDIR}/${P}-rxapps.patch
+	epatch ${FILESDIR}/${P}-berkdb.patch
 
 	# Um, I don't think the below is doing anything since automake is
 	# run in src_compile(), but I'll leave it alone since this ebuild
 	# isn't mine... (16 Feb 2004 agriffis)
 	cd ${S}/lib/krb5 || die
 	sed -i "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in || die
+
 }
 
 src_compile() {
