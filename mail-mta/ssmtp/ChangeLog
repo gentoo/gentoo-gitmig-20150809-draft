@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.16 2005/01/24 21:32:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.17 2005/02/09 15:48:40 ferdy Exp $
+
+  09 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org> ssmtp-2.61.ebuild:
+  Stable on x86
 
 *ssmtp-2.61 (24 Jan 2005)
 
