@@ -3,7 +3,7 @@
 # Script for launching virtualjaguar 
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.3 2004/07/14 22:14:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.4 2004/12/12 06:49:55 mr_bones_ Exp $
 
 source /sbin/functions.sh
 
@@ -15,6 +15,10 @@ fi
 
 if [ ! -d ~/.vj/eeproms ] ; then
     mkdir -p ~/.vj/eeproms
+fi
+
+if [ ! -d ~/.vj/ROMs ] ; then
+    mkdir -p ~/.vj/ROMs
 fi
 
 cd ~/.vj
@@ -29,4 +33,4 @@ if [ -z "`cd ./bios && ls`" ] ; then
 fi
 
 # execute program (with args)
-exec /usr/games/bin/vj "$@"
+exec GENTOODIR/vj "$@"
