@@ -488,13 +488,6 @@ dev-lang/tcl-tk
 # frankly I am not sure that this ebuild is necessary
 =x11-libs/old-gtk-themes-1.0
 
-#seemant@gentoo.org 28 Mar 2002
-# I have found an avi plugin to replace avi-xmms after the freeze.
-# However, xmms needs to link against avifile and libstdc++ for this.
-# This reduces the bloat, but it will be better tested once the freeze is over
-=media-sound/xmms-1.2.7-r4
-=media-video/avi4xmms-0.1
-
 # moved theese to gphoto2
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
