@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.117 2004/12/12 18:37:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.118 2004/12/13 18:28:58 corsair Exp $
+
+  13 Dec 2004; Markus Rothe <corsair@gentoo.org> vim-core-6.3-r3.ebuild:
+  Stable on ppc64
 
   12 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> files/vimrc:
   Update the vimrc link to the new devrel handbook rather than the old howtos

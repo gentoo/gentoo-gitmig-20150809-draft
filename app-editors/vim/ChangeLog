@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.134 2004/12/11 21:48:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.135 2004/12/13 18:26:27 corsair Exp $
+
+  13 Dec 2004; Markus Rothe <corsair@gentoo.org> vim-6.3-r2.ebuild:
+  Stable on ppc64
 
 *vim-7.0_alpha20041211 (11 Dec 2004)
 
