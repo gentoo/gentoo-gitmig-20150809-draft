@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030723.ebuild,v 1.2 2003/08/01 15:35:43 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2_alpha20030826.ebuild,v 1.1 2003/09/01 19:55:18 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -8,35 +8,41 @@ inherit makeedit flag-o-matic gcc nsplugins
 replace-sparc64-flags
 
 S=${WORKDIR}/mozilla
-MOZ_CO_DATE="20030723"
+MOZ_CO_DATE="20030826"
+
+EMVER="0.81.latest"
+IPCVER="1.0.4"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="mirror://gentoo/MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2"
+SRC_URI="mirror://gentoo/MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2
+	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
+	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="gtk2 ipv6 gnome"
+IUSE="gtk2 ipv6 crypt"
 
 RDEPEND="virtual/x11
-   >=dev-libs/libIDL-0.8.0
-   >=gnome-base/ORBit-0.5.10-r1
-   virtual/xft
-   >=sys-libs/zlib-1.1.4
-   >=media-libs/jpeg-6b
-   >=media-libs/libmng-1.0.0
-   >=media-libs/libpng-1.2.1
-   >=sys-apps/portage-2.0.36
-   dev-libs/expat
-   app-arch/zip
-   app-arch/unzip
-   ( gtk2? >=x11-libs/gtk+-2.1.1 :
-     =x11-libs/gtk+-1.2* ) "
+	>=dev-libs/libIDL-0.8.0
+	>=gnome-base/ORBit-0.5.10-r1
+	virtual/xft
+	>=sys-libs/zlib-1.1.4
+	>=media-libs/jpeg-6b
+	>=media-libs/libmng-1.0.0
+	>=media-libs/libpng-1.2.1
+	>=sys-apps/portage-2.0.36
+	dev-libs/expat
+	app-arch/zip
+	app-arch/unzip
+	( gtk2? >=x11-libs/gtk+-2.1.1 :
+     =x11-libs/gtk+-1.2* )
+	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
 DEPEND="${RDEPEND}
-   virtual/glibc
-   dev-lang/perl"
+	virtual/glibc
+	dev-lang/perl"
    
 # needed by src_compile() and src_install()
 export MOZ_THUNDERBIRD=1
@@ -45,6 +51,18 @@ export MOZ_ENABLE_XFT=1
 src_unpack() {
 
 	unpack MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2
+
+	# Unpack the enigmail plugin
+	if use crypt
+		then
+			unpack ipc-${IPCVER}.tar.gz
+			unpack enigmail-${EMVER}.tar.gz
+
+			mv -f ${WORKDIR}/ipc ${S}/extensions/
+			mv -f ${WORKDIR}/enigmail ${S}/extensions/
+			cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
+			cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
+	fi
 
 }
 
@@ -123,6 +141,18 @@ src_compile() {
 
    edit_makefiles
    emake MOZ_THUNDERBIRD=1 || die
+
+	# Build the enigmail plugin
+	if use crypt
+	then
+		einfo "Building Enigmail plugin..."
+		cd ${S}/extensions/ipc
+		make || die
+           
+		cd ${S}/extensions/enigmail
+		make || die
+	fi
+
 }
 
 src_install() {
@@ -155,3 +185,22 @@ src_install() {
 
 }
 
+pkg_postinst() {
+
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaThunderbird"
+
+	# Needed to update the run time bindings for REGXPCOM 
+	# (do not remove next line!)
+	env-update
+	# Register Components and Chrome
+	einfo "Registering Components and Chrome..."
+	LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
+	LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
+	# Fix permissions of component registry
+	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
+	# Fix directory permissions
+	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
+	# Fix permissions on chrome files
+	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
+
+}

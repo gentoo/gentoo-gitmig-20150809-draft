@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.6 2003/08/17 16:43:48 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.7 2003/09/01 19:55:18 brad Exp $
+
+*mozilla-thunderbird-0.2_alpha20030826 (01 Sep 2003)
+
+  01 Sep 2003; Brad Laue <brad@gentoo.org>
+  mozilla-thunderbird-0.2_alpha20030826.ebuild,
+  files/enigmail/Makefile-enigmail, files/enigmail/Makefile-ipc:
+  New snapshot - now featuring enigmail support, at long last.
 
 *mozilla-thunderbird-0.2_alpha20030813 (17 Aug 2003)
 
