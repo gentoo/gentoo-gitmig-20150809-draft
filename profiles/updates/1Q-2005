@@ -27,3 +27,4 @@ move net-news/klibido net-nntp/klibido
 move net-news/leafnode net-nntp/leafnode
 move net-news/knews net-nntp/knews
 move net-news/newspost net-nntp/newspost
+move net-news/nget net-nntp/nget
