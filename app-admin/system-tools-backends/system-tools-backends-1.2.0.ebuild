@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-1.2.0.ebuild,v 1.1 2005/03/09 06:20:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-1.2.0.ebuild,v 1.2 2005/03/09 16:42:54 mr_bones_ Exp $
 
-inherit gnome2 
+inherit gnome2
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
@@ -24,4 +24,3 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
 USE_DESTDIR="1"
-
