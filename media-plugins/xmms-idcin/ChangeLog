@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-idcin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.7 2004/07/06 23:41:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.8 2004/09/03 21:25:33 eradicator Exp $
+
+  03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-idcin-0.5.ebuild:
+  Stable amd64.
 
   06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-idcin-0.5.ebuild:
