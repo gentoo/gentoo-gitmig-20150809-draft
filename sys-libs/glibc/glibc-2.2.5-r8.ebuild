@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.6 2002/09/27 09:55:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.1 2002/09/27 09:55:02 aliz Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -10,25 +10,23 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="2.2"
 
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 #drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
+#
+#we need gcc-2.95.3-r7 or later to fix the atexit() issue with the sandbox patch
+#azarah, 3 Aug 2002
 DEPEND="sys-kernel/linux-headers
+	>=sys-devel/gcc-2.95.3-r7
 	nls? ( sys-devel/gettext )"
-RDEPEND="sys-kernel/linux-headers"
 
-if [ -z "`use build`" ]
-then
-	RDEPEND="${RDEPEND}
-		sys-apps/baselayout"
-else
-	RDEPEND="${RDEPEND}
-		>=sys-apps/portage-1.8.9_pre1
-		sys-apps/baselayout"
-fi
+RDEPEND="sys-kernel/linux-headers
+	sys-apps/baselayout
+	!build? ( >=sys-apps/portage-2.0.23 )"
 
 PROVIDE="virtual/glibc"
 
@@ -36,8 +34,16 @@ PROVIDE="virtual/glibc"
 export CFLAGS="$CFLAGS -O2"
 export CXXFLAGS="$CFLAGS"
 
+pkg_config() {
+	eerror
+	eerror "This is a bad revision of glibc that breaks binary compatibility!!"
+	eerror
+	die
+}
+
 src_unpack() {
 	unpack glibc-${PV}.tar.bz2 || die
+	
 	cd ${S}
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
@@ -48,12 +54,12 @@ src_unpack() {
 	# This patch apparently eliminates compiler warnings for some versions of gcc.
 	# For information about the string2 patch, see: 
 	# http://lists.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
-	patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff || die
+	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff || die
 
 	# This next one is a new patch to fix thread signal handling.  See:
 	# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00120.html
 	# (Added by drobbins on 05 Mar 2002)
-	patch -p0 < ${FILESDIR}/glibc-2.2.5-threadsig.diff || die
+	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.5-threadsig.diff || die
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch || die
@@ -86,10 +92,21 @@ src_unpack() {
 	#
 	cd ${S}; patch -p1 < ${FILESDIR}/${P}-sunrpc-overflow.diff || die
 
-	if [ "${ARCH}" = "x86" ]; then
+	# This one fixes a segfault in some programs when sandbox is running.
+	# We need gcc-2.95.3-r7 or later, or else precompiled stuff like Quake3,
+	# etc do not run.  See for more info:
+	#
+	#   http://sources.redhat.com/ml/bug-glibc/2002-04/msg00025.html
+	#   http://bugs.gentoo.org/show_bug.cgi?id=501
+	#
+	# Azarah (3 Aug 2002)
+	cd ${S}; patch -p1 < ${FILESDIR}/${P}-sandbox.diff || die
+
+	if [ ${ARCH} == "x86" ]; then
 	# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
         # http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-        cd ${S}; patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
+        cd ${S}
+        patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
 	fi
 	
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
@@ -99,15 +116,8 @@ src_unpack() {
 	cd ${S}; patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311.patch || die
 
 	# Avoid "Error: illegal instruction" when compiling on sparc with gcc 3.1.1
-	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
-		cd ${S}; patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311-sparc.patch || die
-	fi
-	
-	# Some patches to fixup build on alpha
-	if [ "${ARCH}" = "alpha" ]; then
-		cd ${S}
-		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-gcc3-fix.diff || die
-		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-pcdyn-fix.diff || die
+	if [ ${ARCH} == "sparc" -o ${ARCH} == "sparc64" ]; then
+		patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311-sparc.patch || die
 	fi
 }
 
@@ -167,8 +177,6 @@ src_install() {
 	
 	if [ "`use pic`" ] 
 	then
-		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
-		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
 		find ${S}/buildhere -name "*_pic.a" -exec cp {} ${D}/lib \;
 		find ${S}/buildhere -name "*.map" -exec cp {} ${D}/lib \;
 		for i in ${D}/lib/*.map

@@ -1,24 +1,88 @@
---- libc/sunrpc/xdr_array.c	2001/08/17 04:48:31	1.5
-+++ libc/sunrpc/xdr_array.c	2002/08/02 01:35:39	1.5.2.1
+--- glibc-2.2.5.orig/malloc/malloc.c    Wed Sep 19 05:23:27 2001
++++ glibc-2.2.5/malloc/malloc.c Tue Aug 13 11:16:26 2002
+@@ -3795,14 +3795,26 @@
+ {
+   arena *ar_ptr;
+   mchunkptr p, oldtop;
+-  INTERNAL_SIZE_T sz, csz, oldtopsize;
++  INTERNAL_SIZE_T bytes, sz, csz, oldtopsize;
+   Void_t* mem;
+
+ #if defined _LIBC || defined MALLOC_HOOKS
+   __malloc_ptr_t (*hook) __MALLOC_PMT ((size_t, __const __malloc_ptr_t)) =
+     __malloc_hook;
++
++  /* size_t is unsigned so the behavior on overflow is defined.  */
++    bytes = n * elem_size;
++#define HALF_INTERNAL_SIZE_T \
++  (((INTERNAL_SIZE_T) 1) << (8 * sizeof (INTERNAL_SIZE_T) / 2))
++  if (__builtin_expect ((n | elem_size) >= HALF_INTERNAL_SIZE_T, 0)) {
++    if (elem_size != 0 && bytes / elem_size != n) {
++      __set_errno (ENOMEM);
++      return 0;
++    }
++  }
++
+   if (hook != NULL) {
+-    sz = n * elem_size;
++    sz = bytes;
+ #if defined __GNUC__ && __GNUC__ >= 2
+     mem = (*hook)(sz, RETURN_ADDRESS (0));
+ #else
+@@ -3819,7 +3831,7 @@
+   }
+ #endif
+
+-  if(request2size(n * elem_size, sz))
++  if(request2size(bytes, sz))
+     return 0;
+   arena_get(ar_ptr, sz);
+   if(!ar_ptr)
+@@ -3862,7 +3874,7 @@
+     }
+     if (p == 0) return 0;
+   }
+-  mem = BOUNDED_N(chunk2mem(p), n * elem_size);
++  mem = BOUNDED_N(chunk2mem(p), bytes);
+
+   /* Two optional cases in which clearing not necessary */
+
+@@ -4899,9 +4911,9 @@
+ {
+   void *mem;
+
+-  /* Test whether the SIZE argument is valid.  It must be a power of
+-     two multiple of sizeof (void *).  */
+-  if (size % sizeof (void *) != 0 || (size & (size - 1)) != 0)
++  /* Test whether the ALIGNMENT argument is valid.  It must be a power
++     of two multiple of sizeof (void *).  */
++  if (alignment % sizeof (void *) != 0 || (alignment & (alignment - 1)) != 0)
+     return EINVAL;
+
+   mem = __libc_memalign (alignment, size);
+diff -urN glibc-2.2.5.orig/sunrpc/xdr_array.c glibc-2.2.5/sunrpc/xdr_array.c
+--- glibc-2.2.5.orig/sunrpc/xdr_array.c Fri Sep  7 13:59:19 2001
++++ glibc-2.2.5/sunrpc/xdr_array.c      Thu Aug  1 16:48:38 2002
 @@ -45,6 +45,7 @@
  #include <rpc/types.h>
  #include <rpc/xdr.h>
  #include <libintl.h>
 +#include <limits.h>
- 
+
  #ifdef USE_IN_LIBIO
  # include <wchar.h>
-@@ -81,7 +82,11 @@
+@@ -81,7 +82,9 @@
        return FALSE;
      }
    c = *sizep;
 -  if ((c > maxsize) && (xdrs->x_op != XDR_FREE))
-+  /*
-+   * XXX: Let the overflow possibly happen with XDR_FREE because mem_free()
-+   * doesn't actually use its second argument anyway.
-+   */
-+  if ((c > maxsize || c > UINT_MAX / elsize) && (xdrs->x_op != XDR_FREE))
++
++  /* Make sure that "c * elsize" doesn't overflow */
++  if ((c > maxsize || UINT_MAX/elsize < c) && (xdrs->x_op != XDR_FREE))
      {
        return FALSE;
      }
+
+
+
 

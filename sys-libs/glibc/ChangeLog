@@ -1,17 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.14 2002/09/22 08:01:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.15 2002/09/27 09:55:02 aliz Exp $
 
-  22 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
-
-  Fix pic support, thanks to Christopher Horler <chris@horler.demon.co.uk>.
-  This closes bug #8178.
-
-  08 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
-
-  Add alpha related patches thanks to Bjoern Brauel <bjoern@tuxnetwork.de>.
+*glibc-2.2.5-r8 (27 Sep 2002)
+  
+  27 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Moved -r7 to -r8 to give room for updated -r6 release.
 
 *glibc-2.2.5-r7 (03 Aug 2002)
+
+  27 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Bumped -r6 to -r7 to include fix for sunrpc overflow.  
 
   03 Aug 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r7.ebuild :
 
@@ -23,6 +22,15 @@
    http://bugs.gentoo.org/show_bug.cgi?id=501
 
 *glibc-2.2.5-r6 (02 Aug 2002)
+
+  22 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
+
+  Fix pic support, thanks to Christopher Horler <chris@horler.demon.co.uk>.
+  This closes bug #8178.
+
+  08 Sep 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.2.5-r6.ebuild :
+
+  Add alpha related patches thanks to Bjoern Brauel <bjoern@tuxnetwork.de>.
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org>
   Added patch for sunrpc overflow.
