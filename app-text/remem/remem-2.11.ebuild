@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.8 2003/02/13 09:44:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/remem/remem-2.11.ebuild,v 1.9 2003/03/29 11:05:56 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="MIT's Remembrance Agent"
-SRC_URI="http://rhodes.www.media.mit.edu/people/rhodes/RA/${P}.tar.gz"
-HOMEPAGE="http://rhodes.www.media.mit.edu/people/rhodes/RA/"
-KEYWORDS="x86 sparc "
+DESCRIPTION="Remembrance Agent plugin for Emacs"
+HOMEPAGE="http://www.remem.org/index.html"
+SRC_URI="http://www.remem.org/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 sparc"
+
 DEPEND=""
 
 src_compile() {
