@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.6 2003/10/27 01:37:46 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.7 2004/03/09 09:32:54 mr_bones_ Exp $
+
+  09 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  cronolog-1.6.2-r1.ebuild:
+  inherit eutils for epatch
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> cronolog-1.6.2-r1.ebuild:
   add ~amd64 flag
