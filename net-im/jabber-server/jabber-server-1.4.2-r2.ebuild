@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.12 2002/11/15 09:27:44 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.13 2002/11/15 09:55:38 verwilst Exp $
 
 IUSE="ssl"
 
@@ -90,12 +90,14 @@ src_install() {
 	mkdir -p ${D}/etc/jabber
 	mkdir -p ${D}/usr/lib/jabber
 	mkdir -p ${D}/var/log/jabber
+	touch ${D}/var/log/jabber/error.log
+	touch ${D}/var/log/jabber/record.log
 	mkdir -p ${D}/var/spool/jabber
 	touch ${D}/var/spool/jabber/.keep
 	mkdir -p ${D}/var/run
 	if [ "${COMPILER}" = "gcc3" ]; then
                 cd ${S}/icqv7-t-${ICQv7}
-		make DESTDIR=${D} install || die
+		#make DESTDIR=${D} install || die
         fi
 
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
@@ -123,20 +125,20 @@ pkg_postinst() {
 	useradd jabber -s /bin/false -d /etc/jabber -g jabber -m	
 	chown jabber.jabber /etc/jabber 
 	chown jabber.jabber /usr/sbin/jabberd
-	chown jabber.jabber /var/log/jabber
+	chown jabber.jabber /var/log/jabber -R
 	chown jabber.jabber /var/spool/jabber -R
 	chmod o-rwx /etc/jabber 
 	chmod o-rwx /usr/sbin/jabberd
-	chmod o-rwx /var/log/jabber
+	chmod o-rwx /var/log/jabber -R
 	chmod o-rwx /var/spool/jabber -R
 	chmod g-x /etc/jabber 
 	chmod g-x /usr/sbin/jabberd
-	chmod g-x /var/log/jabber
+	chmod g-x /var/log/jabber -R
 	chmod g-x /var/spool/jabber -R
 	chmod g+rw /etc/jabber 
 	chmod g+rw /usr/sbin/jabberd
 	chmod g+rw /var/spool/jabber -R
-	chmod g+rw /var/log/jabber
+	chmod g+rw /var/log/jabber -R
 	chmod u+xs /usr/sbin/jabberd
 	
 	einfo "Change 'localhost' to your server's domainname in the /etc/jabber/*.xml configs first"
