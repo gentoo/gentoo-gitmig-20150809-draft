@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.33 2004/07/23 09:25:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.34 2004/08/04 13:53:58 lv Exp $
+
+  04 Aug 2004; Travis Tilley <lv@gentoo.org> gftp-2.0.15.ebuild,
+  gftp-2.0.16-r1.ebuild, gftp-2.0.17.ebuild:
+  gftp 2.0.16 and up dont work on amd64 yet, marking -amd64
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gftp-2.0.17.ebuild:
   Stable amd64.
