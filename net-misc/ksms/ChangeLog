@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ksms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.4 2004/06/24 23:52:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.5 2004/07/03 16:22:47 centic Exp $
+
+*ksms-0.1.2.4 (03 Jul 2004)
+
+  03 Jul 2004; Dominik Stadler <centic@gentoo.org>
+  +files/ksms-0.1.2.4-empty-store.diff, ksms-0.1.2.1.ebuild,
+  +ksms-0.1.2.4.ebuild:
+  Add missing IUSE and SLOT, add new Version 1.2.1.4, seems to fix Bug 54742
 
 *ksms-0.1.2.1 (27 Aug 2003)
 
