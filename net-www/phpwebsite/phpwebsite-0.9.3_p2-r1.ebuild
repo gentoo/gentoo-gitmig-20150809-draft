@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p2.ebuild,v 1.2 2004/01/06 18:40:46 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p2-r1.ebuild,v 1.1 2004/01/06 18:40:46 rizzo Exp $
 
 inherit webapp-apache
 
@@ -8,7 +8,8 @@ MY_PV="${PV/_p/-}"
 S="${WORKDIR}/${PN}-${MY_PV}-full"
 DESCRIPTION="phpWebSite provides a complete web site content management system. Web-based administration allows for easy maintenance of interactive, community-driven web sites."
 HOMEPAGE="http://phpwebsite.appstate.edu"
-SRC_URI="mirror://sourceforge/phpwebsite/${PN}-${MY_PV}-full.tar.gz"
+SRC_URI="mirror://sourceforge/phpwebsite/${PN}-${MY_PV}-full.tar.gz
+		http://phpwsbb.sourceforge.net/Database0932.zip"
 RESTRICT="nomirror"
 
 SLOT="0"
@@ -24,6 +25,12 @@ webapp-detect || NO_WEBSERVER=1
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing for ${WEBAPP_SERVER}"
+}
+
+src_unpack() {
+	unpack ${PN}-${MY_PV}-full.tar.gz
+	cd ${S}/core/
+	unpack Database0932.zip
 }
 
 src_install() {
