@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.3 2004/06/24 21:59:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.4 2004/11/13 15:30:36 hansmi Exp $
 
 KEYWORDS="ppc -mips -x86 -amd64 -alpha -sparc "
 IUSE=""
@@ -15,9 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 src_install() {
-
-	einfo "**************************************************************"
-	einfo "                 TO INSTALL DO THE FOLLOWING"
+	einfo "TO INSTALL DO THE FOLLOWING:"
 	einfo
 	einfo "As root:"
 	einfo
@@ -30,6 +28,4 @@ src_install() {
 	einfo
 	einfo "Add gtkpbbuttons to your favorite window managers startup"
 	einfo "or to your ~/.xinitrc"
-	einfo "**************************************************************"
-
 }
