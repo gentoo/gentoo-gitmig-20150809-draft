@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.7 2003/12/06 19:55:34 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.8 2004/04/04 12:03:49 eradicator Exp $
+
+  04 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> faac-1.23.1.ebuild:
+  Explicitly state which automake/autoconf version to use.  Closes bug #46761.
 
   06 Dec 2003; Heinrich Wendel <lanius@gentoo.org> faac-26102001-r1.ebuild,
   faac-26102001.ebuild:

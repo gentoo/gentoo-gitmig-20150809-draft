@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.1.ebuild,v 1.4 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.1.ebuild,v 1.5 2004/04/04 12:03:49 eradicator Exp $
+
+inherit libtool
 
 S=${WORKDIR}/faac
 DESCRIPTION="Free MPEG-4 audio codecs by AudioCoding.com"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://faac.sourceforge.net/"
-
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="LGPL-2"
@@ -17,19 +19,18 @@ DEPEND=">=media-libs/libsndfile-1.0.0
 	sys-devel/autoconf
 	sys-devel/automake"
 
-src_compile() {
-	aclocal -I .
-	autoheader
-	libtoolize --automake
-	automake --add-missing
-	autoconf
+src_unpack() {
+	unpack ${A}
 
-	econf || die
-	emake || die
+	cd ${S}
+
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
+	sh ./bootstrap
+	elibtoolize
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO docs/libfaac.pdf
