@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>, William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r4.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r4.ebuild,v 1.3 2002/05/14 17:33:22 sandymac Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
@@ -57,11 +57,12 @@ src_compile() {
 		# If you have a P4 add -tpp7 after the -O3
 		# If you want lean/mean replace -axiMKW with -x? (see icc docs for -x)
 		# Note: -ipo breaks povray
-		echo "s/^CFLAGS =/CFLAGS = -O3 -axiMKW -ip /" >> makefile.sed
+		# Note: -ip breaks povray on a P3
+		echo "s/^CFLAGS =/CFLAGS = -O3 -axiMKW /" >> makefile.sed
 		# This is optimized for my Pentium 2:
 		#echo "s/^CFLAGS =/CFLAGS = -O3 -xM -ip /" >> makefile.sed
-		# This is optimized for Pentium 3 (untested, I don't own one):
-		#echo "s/^CFLAGS =/CFLAGS = -O3 -xK -ip /" >> makefile.sed
+		# This is optimized for Pentium 3 (semi-untested, I don't own one):
+		#echo "s/^CFLAGS =/CFLAGS = -O3 -xK /" >> makefile.sed
 		# This is optimized for Pentium 4 (untested, I don't own one):
 		#echo "s/^CFLAGS =/CFLAGS = -O3 -xW -ip -tpp7 /" >> makefile.sed
 

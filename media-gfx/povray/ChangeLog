@@ -1,6 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.5 2002/04/27 23:45:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.6 2002/05/14 17:33:22 sandymac Exp $
+
+  14 May 2002; William McArthur <sandymac@gentoo.org>
+
+  rphillips found a problem where -ip causes segfaults on P3 cpus. I removed
+  -ip from the default case.
 
 *povray-3.1g-r4 (19 Apr 2002)
 
