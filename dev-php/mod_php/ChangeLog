@@ -1,8 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.82 2003/06/10 19:58:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.83 2003/06/12 10:24:04 robbat2 Exp $
 
 *mod_php-4.3.2-r2 (10 June 2003)
+
+  12 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild:
+  syntax errors are bad.
 
   10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild:
   This is an extension of the fixes in 4.3.2-r1, but I'm uncertain if some of
