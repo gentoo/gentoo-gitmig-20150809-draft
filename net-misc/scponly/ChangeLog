@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.10 2004/07/28 00:00:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.11 2004/08/08 00:24:30 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> scponly-3.11-r2.ebuild,
+  scponly-3.7.ebuild, scponly-3.8.ebuild:
+  Typo in DESCRIPTION: psuedoshell -> pseudoshell. Bug 59717.
 
 *scponly-3.11-r2 (28 Jul 2004)
 

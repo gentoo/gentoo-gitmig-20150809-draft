@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.11-r2.ebuild,v 1.1 2004/07/28 00:00:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-3.11-r2.ebuild,v 1.2 2004/08/08 00:24:30 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="A tiny psuedoshell which only permits scp and sftp"
+DESCRIPTION="A tiny pseudoshell which only permits scp and sftp"
 SRC_URI="http://www.sublimation.org/scponly/${P}.tgz"
 HOMEPAGE="http://www.sublimation.org/scponly/"
 LICENSE="as-is"

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.02.ebuild,v 1.5 2004/07/01 20:49:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.02.ebuild,v 1.6 2004/08/08 00:19:48 slarti Exp $
 
-DESCRIPTION="CAPI4HylaFAX - send/recieve faxes via CAPI and AVM Fritz!Cards."
+DESCRIPTION="CAPI4HylaFAX - send/receive faxes via CAPI and AVM Fritz!Cards."
 SRC_URI="ftp://ftp.avm.de/tools/capi4hylafax.linux/capi4hylafax-01.02.02.tar.gz"
 HOMEPAGE="http://capi4linux.thepenguin.de/"
 

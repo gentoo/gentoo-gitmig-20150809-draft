@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.30 2004/07/07 20:48:42 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.31 2004/08/08 00:20:40 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> dante-1.1.13.ebuild,
+  dante-1.1.14-r1.ebuild, dante-1.1.14-r2.ebuild:
+  Typo in DESCRIPTION: implemetation -> implementation. Bug 59717.
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> dante-1.1.14-r2.ebuild:
   stable on amd64

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.21 2004/07/01 20:55:06 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.22 2004/08/08 00:20:40 slarti Exp $
 
 inherit gcc
 
-DESCRIPTION="A free socks4,5 and msproxy implemetation"
+DESCRIPTION="A free socks4,5 and msproxy implementation"
 SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
 

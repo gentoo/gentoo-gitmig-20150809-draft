@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kickpim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kickpim/ChangeLog,v 1.6 2004/07/03 16:35:56 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kickpim/ChangeLog,v 1.7 2004/08/08 00:23:30 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> kickpim-0.5.3.ebuild:
+  Typo in DESCRIPTION: Adressbook -> Addressbook. Bug 59717.
 
   03 Jul 2004; Dominik Stadler <centic@gentoo.org> kickpim-0.5.3.ebuild:
   Marking stable on x86
