@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/tftp-hpa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/ChangeLog,v 1.8 2003/03/29 12:12:50 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/ChangeLog,v 1.9 2003/05/25 14:33:45 mholzer Exp $
+
+*tftp-hpa-0.34 (25 May 2003)
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> tftp-hpa-0.16.ebuild,
+  tftp-hpa-0.29.ebuild, tftp-hpa-0.33.ebuild, tftp-hpa-0.34.ebuild:
+  Version bumped & SRC_URI now uses mirror://kernel
 
 *tftp-hpa-0.33 (28 Mar 2003)
 
