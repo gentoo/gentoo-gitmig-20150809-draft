@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.20 2003/10/03 12:41:26 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.21 2003/10/13 15:11:39 aliz Exp $
+
+*bash-2.05b-r8 (13 Oct 2003)
+
+  13 Oct 2003; Daniel Ahlberg <aliz@gentoo.org bash-2.05b-r8.ebuild:
+  Enable SSH_SOURCE_BASHRC, closing #24762
 
   03 Oct 2003; Christian Birchinger <joker@gentoo.org> bash-2.05b-r7.ebuild:
   Added sparc stable keyword
