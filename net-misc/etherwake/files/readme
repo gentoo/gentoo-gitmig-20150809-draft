@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/files/readme,v 1.1 2003/04/26 16:27:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/files/readme,v 1.2 2004/07/18 04:09:34 dragonheart Exp $
 
 	This program generates and transmits a Wake-On-LAN (WOL) "Magic Packet",
 	used for restarting machines that have been soft-powered-down
