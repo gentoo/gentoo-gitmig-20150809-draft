@@ -1,0 +1,22 @@
+--- configure.old	Wed Jul 31 08:40:07 2002
++++ configure	Wed Jul 31 08:40:26 2002
+@@ -2952,7 +2952,7 @@
+ 
+ ac_ext=C
+ # CXXFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CXXCPP $CPPFLAGS'
++ac_cpp='-Wno-deprecated $CXXCPP $CPPFLAGS'
+ ac_compile='${CXX-g++} -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cxx_cross
+--- plugins/qt-gui-1.2.0/configure.old	Wed Jul 31 08:46:10 2002
++++ plugins/qt-gui-1.2.0/configure	Wed Jul 31 08:48:00 2002
+@@ -4544,7 +4544,7 @@
+ 
+ ac_ext=C
+ # CXXFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CXXCPP $CPPFLAGS'
++ac_cpp='-Wno-deprecated $CXXCPP $CPPFLAGS'
+ ac_compile='${CXX-g++} -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CXX-g++} -o conftest${ac_exeext} $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cxx_cross
