@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/e100
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.13 2004/02/03 12:09:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.14 2004/02/03 12:11:30 mholzer Exp $
+
+  03 Feb 2004; Martin Holzer <mholzer@gentoo.org> e100-2.3.33.ebuild:
+  x86 stable.
 
 *e100-2.3.38 (03 Feb 2004)
 
