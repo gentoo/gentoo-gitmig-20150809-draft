@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.9 2004/02/15 13:26:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.10 2004/03/29 15:07:23 liquidx Exp $
+
+*ximian-artwork-0.2.29.0.6.3 (29 Mar 2004)
+
+  29 Mar 2004; Alastair Tse <liquidx@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild,
+  files/ximian-artwork-0.2.29-disable_industrial.patch:
+  version bump (#36470)
 
   15 Feb 2004; David Holm <dholm@gentoo.org>
   ximian-artwork-0.2.29.0.6.2.ebuild:
