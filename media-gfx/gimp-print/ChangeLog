@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.27 2003/12/07 13:13:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.28 2003/12/08 10:47:20 lanius Exp $
+
+  08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.3.25.ebuild:
+  better fix for the cflags problem, thx to brandy
 
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.3.25.ebuild:
   won't compile with -O3
