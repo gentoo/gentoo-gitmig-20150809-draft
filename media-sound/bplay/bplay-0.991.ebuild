@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/bplay-0.991.ebuild,v 1.14 2004/11/23 03:44:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/bplay-0.991.ebuild,v 1.15 2004/12/19 05:36:38 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.amberdata.demon.co.uk/bplay/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 
 DEPEND="virtual/libc"
 

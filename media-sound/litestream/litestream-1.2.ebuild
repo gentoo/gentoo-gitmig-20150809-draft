@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.7 2004/11/23 05:52:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/litestream/litestream-1.2.ebuild,v 1.8 2004/12/19 05:53:06 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,8 @@ SRC_URI="http://litestream.org/litestream/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~sparc ~ppc x86"
+# -amd64: 1.2 build errors - eradicator
+KEYWORDS="-amd64 sparc ~ppc x86"
 
 DEPEND=""
 

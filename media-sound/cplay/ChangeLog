@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.13 2004/11/23 04:07:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.14 2004/12/19 05:38:28 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> cplay-1.49.ebuild:
+  Stable sparc.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> cplay-1.49.ebuild:
   Added to ~sparc.

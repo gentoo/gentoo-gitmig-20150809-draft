@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.13.ebuild,v 1.5 2004/11/23 03:22:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.13.ebuild,v 1.6 2004/12/19 05:35:40 eradicator Exp $
 
 IUSE="flac oggvorbis"
 
@@ -10,7 +10,7 @@ SRC_URI="http://tempestgames.com/ryan/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 
 DEPEND="dev-lang/perl"
 

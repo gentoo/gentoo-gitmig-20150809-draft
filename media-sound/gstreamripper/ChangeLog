@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gstreamripper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/ChangeLog,v 1.7 2004/12/16 09:25:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/ChangeLog,v 1.8 2004/12/19 05:48:08 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gstreamripper-0.2.ebuild:
+  Stable sparc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> gstreamripper-0.2.ebuild:
   Stable on ppc64
