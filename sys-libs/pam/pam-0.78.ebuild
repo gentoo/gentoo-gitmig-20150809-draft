@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.3 2005/02/26 01:32:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.4 2005/02/26 21:09:45 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -200,12 +200,11 @@ src_compile() {
 
 	einfo "Building Linux-PAM ${PV}..."
 	cd ${S}
-	./configure \
-		--libdir="/$(get_libdir)" \
-		--enable-static-libpam \
+	econf --enable-static-libpam \
 		--enable-fakeroot="${D}" \
-		--enable-isadir="/$(get_libdir)/security" \
-		--host="${CHOST}" || die
+		--libdir="/$(get_libdir)" \
+		--enable-isadir="../../$(get_libdir)/security" \
+		|| die
 
 	# Python stuff in docs gives sandbox problems
 	sed -i -e 's|modules doc examples|modules|' Makefile
