@@ -1,26 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2-r2.ebuild,v 1.1 2003/07/19 17:01:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2-r2.ebuild,v 1.2 2003/11/18 16:21:32 vapier Exp $
 
-SLOT="0"
-KEYWORDS="~x86 ~ppc"
-LICENSE="viewcvs"
 PDATE=${PV/0.9.2_p/}
 DESCRIPTION="Viewcvs, a web interface to cvs and subversion"
+HOMEPAGE="http://viewcvs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PDATE}.tar.gz"
-HOMEPAGE="http://viewcvs.sourceforge.net"
 
-S="${WORKDIR}/${P}"
-WWW="/home/httpd/viewcvs"
+LICENSE="viewcvs"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
+IUSE="apache2"
 
 DEPEND=""
-
 RDEPEND=">=app-text/rcs-5.7
 	>=dev-util/cvs-1.11
 	sys-apps/diffutils
 	net-www/apache"
 
-IUSE="apache2"
+WWW="/home/httpd/viewcvs"
 
 doinstall() {
 	# start_location=$1
@@ -74,11 +72,11 @@ ScriptAlias /viewcvs /home/httpd/viewcvs/cgi/viewcvs.cgi
 ScriptAlias /cvsquery /home/httpd/viewcvs/cgi/cvsquery.cgi
 
 <Directory /home/httpd/viewcvs/cgi>
-        Options ExecCGI
-        <IfModule mod_access.c>
-                Order allow,deny
-                Allow from all
-        </IfModule>
+    Options ExecCGI
+    <IfModule mod_access.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
 </Directory>
 EOF
 
