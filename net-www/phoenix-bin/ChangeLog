@@ -1,8 +1,13 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.5 2002/11/07 19:36:05 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.6 2002/11/09 12:52:54 phoenix Exp $
 
 *phoenix-bin-0.4 (31 Oct 2002)
+
+  09 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4.ebuild :
+
+  Modified the /usr/bin/phoenix script to open new windows instead of
+  creating new instances. Thanks to Lee_ in #gentoo.
 
   07 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4.ebuild :
 
