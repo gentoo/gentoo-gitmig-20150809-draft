@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.20 2005/01/15 21:46:00 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.21 2005/01/16 12:24:23 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -302,7 +302,8 @@ linux-mod_pkg_setup() {
 }
 
 linux-mod_src_compile() {
-	local modulename libdir srcdir objdir i n
+	local modulename libdir srcdir objdir i n myARCH=${ARCH}
+	unset ARCH
 	
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 	
@@ -325,13 +326,15 @@ linux-mod_src_compile() {
 		then
 			cd ${srcdir}
 			einfo "Preparing ${modulename} module"
-			env -u ARCH emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
+			emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
 				|| die "Unable to make \
 				   ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
 			touch ${srcdir}/.built
 			cd ${OLDPWD}
 		fi
 	done
+	
+	ARCH=${myARCH}
 }
 
 linux-mod_src_install() {
