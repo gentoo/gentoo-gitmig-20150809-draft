@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpgroupware
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.16 2003/12/05 16:34:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.17 2003/12/15 20:14:21 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org>
+  phpgroupware-0.9.14.007.ebuild:
+  Fix for bug #32636
 
   05 Dec 2003; Martin Holzer <mholzer@gentoo.org>
   phpgroupware-0.9.14.007.ebuild:
