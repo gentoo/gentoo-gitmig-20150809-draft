@@ -1,13 +1,13 @@
 # ChangeLog for sys-apps/yard
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/ChangeLog,v 1.4 2002/07/24 07:45:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/ChangeLog,v 1.5 2002/07/24 07:46:57 aliz Exp $
 
 *yard-2.0-r1 (1 Feb 2002)
 
   24 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> yard-2.0-r1.ebuild :
 
   Fixed configuration and installation, econf and einstall doesnt seem to work
-  with this package.
+  with this package. Closes bug #5499.
 
   20 Jul 2002; Mark Guertin <gerk@gentoo.org> yard-2.0-r1.ebuild :
   adjusted keywords, and fixed missing DEPEND and RDEPEND (this is
