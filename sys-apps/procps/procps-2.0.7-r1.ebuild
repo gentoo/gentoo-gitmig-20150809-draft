@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r1.ebuild,v 1.4 2000/11/30 23:14:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.7-r1.ebuild,v 1.5 2000/12/08 17:21:49 achim Exp $
 
 P=procps-2.0.7
 A=${P}.tar.gz
@@ -29,7 +29,7 @@ src_unpack() {
     sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::" Makefile.orig > Makefile
     cd ${S}/proc
     mv Makefile Makefile.orig
-    sed -e "s/-O2/${CFLAGS}/" Makefile.orig > Makefile
+    sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::"  Makefile.orig > Makefile
 }
 
 src_install() {                               

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-bootdisk/linux-UP-2.2.17-r5.ebuild,v 1.1 2000/12/08 14:12:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-bootdisk/linux-UP-2.2.17-r5.ebuild,v 1.2 2000/12/08 17:21:49 achim Exp $
 
 P=linux-UP-2.2.17
 A="linux-2.2.17.tar.bz2
@@ -13,7 +13,7 @@ S=${WORKDIR}/linux
 DESCRIPTION="Linux kernel for UP systems with reiserfs,usb,sensors,raid,udma,nfs3 and pppoe support"
 SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.2/linux-2.2.17.tar.bz2
 	 ftp://ftp.de.kernel.org/pub/linux/kernel/v2.2/linux-2.2.17.tar.bz2
-	 http://devlinux.com/pub/namesys/linux-2.2.17-reiserfs-3.5.28-patch.gz
+	 ftp://ftp.reiserfs.org/pub/linux-2.2.17-reiserfs-3.5.28-patch.gz
 	 http://people.redhat.com/mingo/raid-patches/raid-2.2.17-A0
 	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.17/ide.2.2.17.all.20001120.patch.bz2
 	 ftp://ftp.uk.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.17/ide.2.2.17.all.20001120.patch.bz2
@@ -46,9 +46,9 @@ src_unpack() {
 
     try make include/linux/version.h
     try make symlinks
-    cp ${O}/files/${PF}.config .config
-    cp ${O}/files/${PF}.autoconf include/linux/autoconf.h
-    cp ${O}/files/gentoolinux_logo.h include/linux/linux_logo.h
+    cp ${FILESDIR}/${PV}/${PF}.config .config
+    cp ${FILESDIR}/${PV}/${PF}.autoconf include/linux/autoconf.h
+    cp ${FILESDIR}/gentoolinux_logo.h include/linux/linux_logo.h
 
 }
 

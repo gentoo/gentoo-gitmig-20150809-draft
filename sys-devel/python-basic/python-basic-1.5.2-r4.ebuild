@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r4.ebuild,v 1.1 2000/12/01 19:46:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r4.ebuild,v 1.2 2000/12/08 17:21:49 achim Exp $
 
 P=python-basic-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -13,8 +13,7 @@ SRC_URI="http://www.python.org/ftp/python/src/py152.tgz
 
 HOMEPAGE="http://www.python.org
 	  http://www.azstarnet.com/~donut/programs/fchksum/"
-DEPEND=">=sys-libs/db-1.85
-	>=sys-libs/gdbm-1.8.0
+DEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/gpm-1.19.3"
 RDEPEND="$DEPEND
 	 >=sys-apps/bash-2.04"

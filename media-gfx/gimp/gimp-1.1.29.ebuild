@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.29.ebuild,v 1.1 2000/11/05 09:25:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.29.ebuild,v 1.2 2000/12/08 17:21:49 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -34,8 +34,12 @@ src_compile() {
 }
 
 src_install() {                               
+  dodir /usr/X11R6/lib/gimp/1.1/plug-ins
+#  cd ${S}/plug-ins/perl
+#  try make prefix=${D}/usr/X11R6 PREFIX=${D}/usr install
   cd ${S}
-  try make prefix=${D}/usr/X11R6 sysconfdir=${D}/etc PREFIX=${D}/usr install
+  try make prefix=${D}/usr/X11R6 gimpsysconfdir=${D}/etc/gimp/1.1 PREFIX=${D}/usr install
+#  try make DESTDIR=${D} PREFIX=${D}/usr install
   preplib /usr/X11R6
   dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
   dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
