@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.1 2003/12/07 00:16:59 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.2 2003/12/08 03:35:29 g2boojum Exp $
 
 inherit debug
 
@@ -18,6 +18,7 @@ IUSE="gnome"
 #    >=perl-5.6.1-r1
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
+	>=x11-libs/libzvt-2.0
 		>=gnome-base/ORBit-0.5.7
 		>=gnome-base/gnome-libs-1.4.0
 		<gnome-base/gnome-panel-2
