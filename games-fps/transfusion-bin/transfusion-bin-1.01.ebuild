@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.7 2004/11/03 00:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.8 2005/02/26 04:16:50 mr_bones_ Exp $
 
 inherit games
 
 MY_PN=${PN/-bin/}
 DESCRIPTION="Blood remake"
-HOMEPAGE="http://www.planetblood.com/qblood/"
+HOMEPAGE="http://www.transfusion-game.com/"
 SRC_URI="mirror://sourceforge/blood/${MY_PN}-1.0-linux.i386.zip
 	mirror://sourceforge/blood/${MY_PN}-patch-${PV}-linux.i386.zip"
 
