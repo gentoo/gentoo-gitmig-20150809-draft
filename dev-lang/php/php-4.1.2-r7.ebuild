@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.2 2002/04/16 00:55:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.3 2002/04/16 10:01:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -10,8 +10,7 @@ SRC_URI="http://www.php.net/distributions/${P}.tar.gz"
 HOMEPAGE="http://www.php.net/"
 SLOT="0"
 
-DEPEND="virtual/glibc
-	>=dev-libs/gmp-3.1.1
+DEPEND=">=dev-libs/gmp-3.1.1
 	~media-libs/freetype-1.3.1
 	>=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
@@ -19,49 +18,31 @@ DEPEND="virtual/glibc
 	>=media-libs/libgd-1.8.3
 	>=media-libs/t1lib-1.0.1
 	>=net-www/apache-1.3.24-r1
-	pam? ( >=sys-libs/pam-0.75 )
-	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
-	nls? ( sys-devel/gettext )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	berkdb? ( >=sys-libs/db-3 )
-	mysql? ( >=dev-db/mysql-3.23.26 )
-	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	ldap? ( >=net-nds/openldap-1.2.11 )
-	postgres? ( >=dev-db/postgresql-7.1 )
-	mhash? ( >=app-crypt/mhash-0.8 )
-	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	X? ( virtual/x11 )
 	qt? ( =x11-libs/qt-2.3* )
-	xml? ( >=app-text/sablotron-0.44 )
-	libwww? ( >=net-libs/libwww-5.3.2 )
-	imap? ( >=net-mail/uw-imap-2001a-r1 )
-	flash? ( media-libs/libswf media-libs/ming )
-	xml2? ( dev-libs/libxml2 )
-	java? ( virtual/jdk )
-	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )"
-
-RDEPEND="virtual/glibc
-	>=dev-libs/gmp-3.1.1
-	~media-libs/freetype-1.3.1
-	>=media-libs/jpeg-6b
- 	>=media-libs/libpng-1.0.7
- 	>=media-libs/t1lib-1.0.1
-	>=net-www/apache-1.3.24-r1
 	pam? ( >=sys-libs/pam-0.75 )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	berkdb? ( >=sys-libs/db-3 )
-	mysql? ( >=dev-db/mysql-3.23.26 )
-	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	ldap? ( >=net-nds/openldap-1.2.11 )
-	postgres? ( >=dev-db/postgresql-7.1 )
-	X? ( virtual/x11 )
-	qt? ( >=x11-libs/qt-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
-	libwww? ( >=net-libs/libwww-5.3.2 )
-	xml2? ( dev-libs/libxml2 )
+	imap? ( >=net-mail/uw-imap-2001a-r1 )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	java? ( virtual/jdk )
+	ldap? ( >=net-nds/openldap-1.2.11 )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	xml2? ( dev-libs/libxml2 )
+	crypt? ( >=dev-libs/libmcrypt-2.4
+		>=app-crypt/mhash-0.8 )
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	flash? ( media-libs/libswf media-libs/ming )
+	berkdb? ( >=sys-libs/db-3 )
+	libwww? ( >=net-libs/libwww-5.3.2 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
-	"
+	postgres? ( >=dev-db/postgresql-7.1 )
+	readline? ( >=sys-libs/ncurses-5.1
+		>=sys-libs/readline-4.1 )"
+
+RDEPEND="${DEPEND}
+	qt? ( >=x11-libs/qt-2.3.0 )
+	nls? ( sys-devel/gettext )
+	xml? ( >=app-text/sablotron-0.44 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -99,7 +80,9 @@ src_compile() {
 
 	myconf="--without-readline --without-t1lib"
 	use pam && myconf="$myconf --with-pam"
-	use nls && myconf="$myconf --with-gettext"
+	use nls \
+		&& myconf="$myconf --with-gettext" \
+		|| myconf="${myconf} --without-gettext"
 	use gdbm && myconf="$myconf --with-gdbm=/usr"
 	use berkdb && myconf="$myconf --with-db3=/usr"
 	use mysql && myconf="$myconf --with-mysql=/usr"
@@ -132,8 +115,7 @@ src_compile() {
 	fi
 
 	use xml2 && myconf="$myconf --with-dom"
-	use mhash && myconf="$myconf --with-mhash"
-	use crypt && myconf="$myconf --with-mcrypt"
+	use crypt && myconf="$myconf --with-mcrypt --with-mhash"
 	use java && myconf="$myconf --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
