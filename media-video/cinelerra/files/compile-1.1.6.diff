@@ -1,6 +1,6 @@
 diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c cinelerra-1.1.6/libmpeg3/mpeg3io.c
---- cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c	2003-05-13 19:11:23.000000000 +0200
-+++ cinelerra-1.1.6/libmpeg3/mpeg3io.c	2003-05-13 19:13:30.000000000 +0200
+--- cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c	2003-04-14 02:10:55.000000000 +0200
++++ cinelerra-1.1.6/libmpeg3/mpeg3io.c	2003-05-13 19:51:33.000000000 +0200
 @@ -35,8 +35,8 @@
  
  int64_t mpeg3io_get_total_bytes(mpeg3_fs_t *fs)
@@ -47,8 +47,8 @@ diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3io.c cinelerra-1.1.6/libmpeg3/mpeg3
  		{
  			strncpy(device, mnt->mnt_fsname, MPEG3_STRLEN);
 diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h cinelerra-1.1.6/libmpeg3/mpeg3private.h
---- cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h	2003-05-13 19:11:23.000000000 +0200
-+++ cinelerra-1.1.6/libmpeg3/mpeg3private.h	2003-05-13 19:19:52.000000000 +0200
+--- cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h	2003-05-11 05:44:45.000000000 +0200
++++ cinelerra-1.1.6/libmpeg3/mpeg3private.h	2003-05-13 19:51:33.000000000 +0200
 @@ -3,7 +3,7 @@
  
  #include <stdint.h>
@@ -59,22 +59,145 @@ diff -ruN cinelerra-1.1.6.orig/libmpeg3/mpeg3private.h cinelerra-1.1.6/libmpeg3/
  
  
 diff -ruN cinelerra-1.1.6.orig/quicktime/Makefile cinelerra-1.1.6/quicktime/Makefile
---- cinelerra-1.1.6.orig/quicktime/Makefile	2003-05-13 19:11:24.000000000 +0200
-+++ cinelerra-1.1.6/quicktime/Makefile	2003-05-13 19:48:02.000000000 +0200
-@@ -44,7 +44,6 @@
+--- cinelerra-1.1.6.orig/quicktime/Makefile	2003-04-30 08:04:13.000000000 +0200
++++ cinelerra-1.1.6/quicktime/Makefile	2003-05-14 00:06:31.000000000 +0200
+@@ -42,9 +42,9 @@
+ include Makefile.jpeg
+ include Makefile.libraw
  include Makefile.vorbis
++include Makefile.dv
  include Makefile.ffmpeg
  include Makefile.lame
 -include Makefile.dv
  include Makefile.encore50
  
  
-@@ -207,7 +206,7 @@
- 	$(OBJDIR)/$(ENCORE_DIR)/mbtransquant/intel_mmx
+@@ -161,7 +161,6 @@
+ 
+ CFLAGS += \
+ 	-ffast-math \
+-	-mno-ieee-fp \
+ 	-DHAVE_ALLOCA_H=1 \
+ 	-DHAVE_ALLOCA=1 \
+ 	-DHAVE_SQRTF=1 \
+@@ -296,7 +295,7 @@
  
  
--LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
-+LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm -ldv
+ $(FFMPEG_OBJS):
+-	$(CC) `cat $(OBJDIR)/ffmpeg_flags` -c $(subst $(OBJDIR)/,, $*.c) -o $*.o
++	$(CC) `cat $(OBJDIR)/ffmpeg_flags` -c $(subst /PPC/,/ppc/, $(subst $(OBJDIR)/,, $(subst /ppc/,/PPC/, $*.c))) -o $*.o
  
- $(shell echo  $(CFLAGS) > $(OBJDIR)/c_flags)
- $(shell echo  $(LIBRAW_CFLAGS) > $(OBJDIR)/libraw_cflags)
+ $(LAME_OBJS):
+ 	$(CC) `cat $(OBJDIR)/lame_flags` -c $(subst $(OBJDIR)/,, $*.c) -o $*.o
+diff -ruN cinelerra-1.1.6.orig/quicktime/Makefile.dv cinelerra-1.1.6/quicktime/Makefile.dv
+--- cinelerra-1.1.6.orig/quicktime/Makefile.dv	2003-04-04 10:28:51.000000000 +0200
++++ cinelerra-1.1.6/quicktime/Makefile.dv	2003-05-13 20:46:54.000000000 +0200
+@@ -1,4 +1,4 @@
+-DV_DIR := $(shell expr libdv-0.98 )
++DV_DIR := libdv-0.98
+ 
+ DV_OBJS := \
+ 	$(OBJDIR)/$(DV_DIR)/libdv/audio.o \
+@@ -22,7 +22,7 @@
+ 	$(OBJDIR)/$(DV_DIR)/libdv/YV12.o
+ 
+ 
+-
++CFLAGS += -I$(DV_DIR) -I$(DV_DIR)/libdv
+ 
+ ifeq ($(USE_MMX), 1)
+ 
+diff -ruN cinelerra-1.1.6.orig/quicktime/Makefile.ffmpeg cinelerra-1.1.6/quicktime/Makefile.ffmpeg
+--- cinelerra-1.1.6.orig/quicktime/Makefile.ffmpeg	2003-04-25 06:41:44.000000000 +0200
++++ cinelerra-1.1.6/quicktime/Makefile.ffmpeg	2003-05-14 00:36:21.000000000 +0200
+@@ -15,14 +15,23 @@
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/fft.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/h263dec.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/h263.o \
+-	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/huffyuv.o \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/huffyuv.o
++ifeq ($(OBJDIR), i686)
++FFMPEG_OBJS += \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/cputest.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/dsputil_mmx.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/fdct_mmx.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/idct_mmx.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/motion_est_mmx.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/mpegvideo_mmx.o \
+-	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/simple_idct_mmx.o \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/simple_idct_mmx.o 
++endif
++ifeq ($(OBJDIR), ppc)
++FFMPEG_OBJS += \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/dsputil_ppc.o \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/mpegvideo_ppc.o 
++endif
++FFMPEG_OBJS += \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/imgconvert.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/imgresample.o \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/jfdctfst.o \
+@@ -103,8 +112,16 @@
+ FFMPEG_CFLAGS := \
+ 	-O2 \
+ 	-I$(FFMPEG_DIR)/ \
+-	-I$(FFMPEG_DIR)/libavcodec \
+-	-I$(FFMPEG_DIR)/libavcodec/i386 \
++	-I$(FFMPEG_DIR)/libavcodec
++ifeq ($(OBJDIR), i686)
++FFMPEG_CFLAGS += \
++	-I$(FFMPEG_DIR)/libavcodec/i386 
++endif
++ifeq ($(OBJDIR), ppc)
++FFMPEG_CFLAGS += \
++	-I$(FFMPEG_DIR)/libavcodec/ppc 
++endif
++FFMPEG_CFLAGS += \
+ 	-I$(FFMPEG_DIR)/libavcodec/libac3 \
+ 	-I$(FFMPEG_DIR)/libavcodec/mpglib \
+ 	-I$(FFMPEG_DIR)/libavformat \
+@@ -113,8 +130,16 @@
+ 
+ FFMPEG_DIRS := \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/ \
+-	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec \
+-	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386 \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec 
++ifeq ($(OBJDIR), i686)
++FFMPEG_DIRS += \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386
++endif
++ifeq ($(OBJDIR), ppc)
++FFMPEG_DIRS += \
++	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc
++endif
++FFMPEG_DIRS += \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/liba52 \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/mpglib \
+ 	$(OBJDIR)/$(FFMPEG_DIR)/libavformat
+diff -ruN cinelerra-1.1.6.orig/quicktime/depend.ffmpeg cinelerra-1.1.6/quicktime/depend.ffmpeg
+--- cinelerra-1.1.6.orig/quicktime/depend.ffmpeg	2003-04-25 06:42:27.000000000 +0200
++++ cinelerra-1.1.6/quicktime/depend.ffmpeg	2003-05-13 23:45:47.000000000 +0200
+@@ -20,6 +20,11 @@
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/motion_est_mmx.o: 	  $(FFMPEG_DIR)/libavcodec/i386/motion_est_mmx.c
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/mpegvideo_mmx.o: 	  $(FFMPEG_DIR)/libavcodec/i386/mpegvideo_mmx.c
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/i386/simple_idct_mmx.o:    $(FFMPEG_DIR)/libavcodec/i386/simple_idct_mmx.c
++$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/dsputil_ppc.o:  	  $(FFMPEG_DIR)/libavcodec/ppc/dsputil_ppc.c
++$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/dsputil_altivec.o:  	  $(FFMPEG_DIR)/libavcodec/ppc/dsputil_altivec.c
++$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/idct_altivec.o: 		  $(FFMPEG_DIR)/libavcodec/ppc/idct_altivec.c
++$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/mpegvideo_ppc.o: 	  $(FFMPEG_DIR)/libavcodec/ppc/mpegvideo_ppc.c
++$(OBJDIR)/$(FFMPEG_DIR)/libavcodec/ppc/mpegvideo_altivec.o: 	  $(FFMPEG_DIR)/libavcodec/ppc/mpegvideo_altivec.c
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/imgconvert.o: 			  $(FFMPEG_DIR)/libavcodec/imgconvert.c
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/imgresample.o: 			  $(FFMPEG_DIR)/libavcodec/imgresample.c
+ $(OBJDIR)/$(FFMPEG_DIR)/libavcodec/jfdctfst.o:  			  $(FFMPEG_DIR)/libavcodec/jfdctfst.c
+diff -ruN cinelerra-1.1.6.orig/quicktime/libdv-0.98/libdv/vlc.h cinelerra-1.1.6/quicktime/libdv-0.98/libdv/vlc.h
+--- cinelerra-1.1.6.orig/quicktime/libdv-0.98/libdv/vlc.h	2002-11-08 14:44:37.000000000 +0100
++++ cinelerra-1.1.6/quicktime/libdv-0.98/libdv/vlc.h	2003-05-14 00:25:36.000000000 +0200
+@@ -69,7 +69,7 @@
+ extern void dv_decode_vlc(int bits,int maxbits, dv_vlc_t *result);
+ extern void __dv_decode_vlc(int bits, dv_vlc_t *result);
+ 
+-extern __inline__ void dv_peek_vlc(bitstream_t *bs,int maxbits, dv_vlc_t *result) {
++static __inline__ void dv_peek_vlc(bitstream_t *bs,int maxbits, dv_vlc_t *result) {
+   if(maxbits < 16)
+     dv_decode_vlc(bitstream_show(bs,16),maxbits,result);
+   else

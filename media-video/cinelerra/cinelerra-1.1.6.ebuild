@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.1 2003/05/13 17:59:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.6.ebuild,v 1.2 2003/05/14 15:16:33 lu_zero Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	virtual/glibc
@@ -29,21 +29,33 @@ src_unpack() {
 
 src_compile() {
 	export ${CFLAGS}
+	cd ${S}/freetype-2.0.4/builds/unix
+	econf ||die
+	cd ${S}/quicktime/ffmpeg-0.4.6
+	econf ||die
+
+	cd ${S}
 	make || die "make failed"
 }
 
 src_install() {
-	cd ${S}/${PN}/i686
-
+	local myarch
+	if [ -n `use x86` ]; then
+	myarch="i686"
+	fi
+	if [ -n `use ppc` ]; then
+	myarch="ppc"	
+	fi
+	cd ${S}/${PN}/${myarch}
 	dobin ${PN}
 
 	cd ${S}/plugins
 	insinto /usr/lib/${PN}
-	doins i686/*.plugin
+	doins ${myarch}/*.plugin
 	insinto /usr/lib/${PN}/fonts
 	doins titler/fonts/*
 
-	cd ${S}/libmpeg3/i686
+	cd ${S}/libmpeg3/${myarch}
 	dobin mpeg3dump mpeg3cat mpeg3toc 
 
 #	cd ${S}/mix/i686
@@ -52,10 +64,10 @@ src_install() {
 #	cd ${S}/xmovie/i686
 #	dobin xmovie
 
-	cd ${S}/mplexhi/i686
+	cd ${S}/mplexhi/${myarch}
 	dobin mplexhi
 
-	cd ${S}/mplexlo/i686
+	cd ${S}/mplexlo/${myarch}
 	dobin mplexlo
 
 	cd ${S} 
