@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.4 2005/01/08 20:47:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.5 2005/03/29 01:57:08 chriswhite Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
@@ -9,7 +9,9 @@
 # Unmask x86 instruction sets
 -mmx
 -mmx2
+-mmxext
 -sse
 -sse2
 -3dnow
 -3dnowex
+-win32codecs
