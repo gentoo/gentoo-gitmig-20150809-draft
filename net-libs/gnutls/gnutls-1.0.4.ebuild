@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.4.ebuild,v 1.1 2004/02/04 16:57:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.4.ebuild,v 1.2 2004/02/04 20:33:38 mr_bones_ Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -40,10 +40,10 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
-	# make compatibility symlinks - 0.8.x 
+
+	# make compatibility symlinks - 0.8.x
 	dosym /usr/lib/libgnutls.so.10 /usr/lib/libgnutls.so.7
-	
+
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
 		README THANKS doc/TODO
 
