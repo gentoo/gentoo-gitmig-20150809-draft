@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.21.ebuild,v 1.1 2004/12/24 10:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.21.ebuild,v 1.2 2005/03/02 00:30:30 vapier Exp $
 
 inherit eutils 64-bit flag-o-matic gcc
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc ~alpha ~hppa ~ia64 -mips ~amd64"
+KEYWORDS="alpha amd64 hppa ia64 -mips ppc -sparc x86"
 IUSE="sdl jpeg gif png truetype mpeg mmx sse fusion debug fbcon static"
 
 DEPEND="dev-lang/perl
@@ -24,7 +24,7 @@ DEPEND="dev-lang/perl
 	truetype? ( >=media-libs/freetype-2.0.1 )"
 
 pkg_setup() {
-	if [ -z "${VIDEO_CARDS}" ] ; then
+	if [[ -z ${VIDEO_CARDS} ]] ; then
 		ewarn "All video drivers will be built since you did not specify"
 		ewarn "via the VIDEO_CARDS variable what video card you use."
 		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
@@ -53,7 +53,7 @@ src_compile() {
 	for card in ${VIDEO_CARDS} ; do
 		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
 	done
-	[ -z "${vidcards}" ] \
+	[[ -z ${vidcards} ]] \
 		&& vidcards="all" \
 		|| vidcards="${vidcards:1}"
 
