@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.4.ebuild,v 1.1 2002/10/05 19:29:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.4.ebuild,v 1.2 2002/10/10 15:22:49 gerk Exp $
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE $PV: addons - applets, plugins..."
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 newdepend "~kde-base/kdebase-${PV}
 	~kde-base/kdenetwork-${PV}
