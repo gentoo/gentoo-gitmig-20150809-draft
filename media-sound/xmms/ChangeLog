@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.147 2004/10/24 09:04:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.148 2004/10/30 21:09:40 eradicator Exp $
+
+*xmms-1.2.10-r9 (30 Oct 2004)
+
+  30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-1.2.10-r7.ebuild, -xmms-1.2.10-r8.ebuild, +xmms-1.2.10-r9.ebuild:
+  Revision bump and removing from package.mask.  Added gcc-4 patch.
 
   24 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.10-r8.ebuild:

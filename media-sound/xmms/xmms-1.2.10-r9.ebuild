@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.8 2004/10/25 06:58:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r9.ebuild,v 1.1 2004/10/30 21:09:40 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.3"
+PATCHVER="2.1.4"
 
 PATCHDIR="${WORKDIR}/patches"
 
@@ -19,6 +19,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
+
 # Notice to arch maintainers:
 # Please test out the plugins listed below in PDEPEND.  They should
 # work on most of your archs, but haven't been marked yet.
@@ -46,7 +47,7 @@ PDEPEND="!alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( jack? ( media-plugins/xm
 	 !alpha? ( !ia64? ( !ppc64? ( lirc? ( media-plugins/xmms-lirc ) ) ) )
 	 !ia64? ( !ppc64? ( arts? ( media-plugins/xmms-arts ) ) )
 	 !alpha? ( !hppa? ( !ia64? ( !mips? ( !ppc64? ( sndfile? ( media-plugins/xmms-sndfile ) ) ) ) ) )
-	 mad? ( media-plugins/xmms-mad )
+	 !alpha? ( !hppa? ( !ia64? ( !mips? ( mad? ( media-plugins/xmms-mad ) ) ) ) )
 	 flac? ( media-libs/flac )"
 
 src_unpack() {
