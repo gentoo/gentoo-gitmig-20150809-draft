@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.10.3.ebuild,v 1.1 2003/12/05 22:29:20 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.10.3.ebuild,v 1.2 2003/12/30 06:38:08 jbms Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -49,7 +49,7 @@ src_install() {
 		etcdir=${D}/usr/share/emacs/etc \
 		|| die
 
-	elisp-site-file-install ${FILESDIR}/70gnus-cvs-gentoo.el
+	elisp-site-file-install ${FILESDIR}/70${PN}-gentoo.el
 
 	dodoc ChangeLog GNUS-NEWS README todo
 
