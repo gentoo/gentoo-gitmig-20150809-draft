@@ -1,7 +1,7 @@
 #!/bin/sh
-LL=`head -1 /var/qmail/control/qmail-pop3d-loglevel`
-SL=`head -1 /var/qmail/control/qmail-pop3d-softlimit`
-HOSTNAME=`head -1 /var/qmail/control/me`
+LL=`head -n1 /var/qmail/control/qmail-pop3d-loglevel`
+SL=`head -n1 /var/qmail/control/qmail-pop3d-softlimit`
+HOSTNAME=`head -n1 /var/qmail/control/me`
 exec 						\
 	env MAILDIR=Maildir			\
 	env LOGLEVEL=$LL  			\

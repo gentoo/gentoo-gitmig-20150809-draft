@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cvm-vmailmgr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.7 2003/12/27 00:06:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.8 2004/01/05 23:30:30 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> cvm-vmailmgr-0.3.ebuild,
+  cvm-vmailmgr-0.4.ebuild, files/run-cvm-vmailmgr:
+  fix tail -1 issue and copyright headers
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> cvm-vmailmgr-0.3.ebuild:
   Changed sparc keyword to ~sparc since there were previously NO ebuilds of
