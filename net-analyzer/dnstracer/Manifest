@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3d65dc7d18dbe3efe9f24ccc6ba3ca4 dnstracer-1.8.ebuild 653
+MD5 88b8d558a46b1c1f2fd4e6129806989b ChangeLog 1454
 MD5 9d643861f3d0e47b3dcbdcfea4fed169 dnstracer-1.7.ebuild 652
-MD5 f7cd95a815c2e9bdc52c7ca75147f97c ChangeLog 1366
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
+MD5 97f94d87547313040ec96c98de54bdee dnstracer-1.8.ebuild 652
 MD5 85ea998a3a721e755b24dedd7354e029 files/digest-dnstracer-1.7 64
 MD5 f670baae28c6927de7c4a92d12bf3369 files/digest-dnstracer-1.8 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIIj/T+MN7JbqCpMRAlrxAKCDY4BqLsaoqoc0+ue7e7fXMwByUgCfTWfR
-fIdZ0iuuFQF34OaEZh6gCNQ=
-=BMKy
------END PGP SIGNATURE-----
