@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.1 2004/10/26 22:34:12 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.2 2004/10/28 00:54:40 eradicator Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -73,17 +73,20 @@ src_unpack() {
 
 	# DB4 detection and versioned symbols.
 	# Fixed upstream.
-	# epatch "${FILESDIR}/cyrus-sasl-2.1.18-db4.patch" || die "patch failed"
+	# epatch "${FILESDIR}/cyrus-sasl-2.1.18-db4.patch"
 
 	# Add configdir support.
-	epatch "${FILESDIR}/${P}-configdir.patch" || die "patch failed"
+	epatch "${FILESDIR}/${P}-configdir.patch"
 
 	# Fix include path for newer PostgreSQL versions.
-	epatch "${FILESDIR}/cyrus-sasl-2.1.17-pgsql-include.patch" || die "patch failed"
+	epatch "${FILESDIR}/cyrus-sasl-2.1.17-pgsql-include.patch"
 
 	# Add setuid/setgid check for SASL_PATH
 	# Fixed upstream.
-	# epatch "${FILESDIR}/${P}-sasl-path-fix.patch" || die "patch failed"
+	# epatch "${FILESDIR}/${P}-sasl-path-fix.patch"
+
+	# Fix for gcc-4.0
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
