@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.6 2004/12/30 05:14:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.7 2004/12/30 19:20:34 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex
+IUSE="arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
 	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 libcaca
 	samba dxr3 vidix png mng pic"
 
@@ -27,7 +27,7 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
-	aalib? ( media-libs/aalib )
+	media-libs/aalib
 	directfb? ( >=dev-libs/DirectFB-0.9.9 dev-util/pkgconfig )
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 			dev-util/pkgconfig )
@@ -217,7 +217,6 @@ src_compile() {
 		$(use_with esd) --disable-esdtest \
 		$(use_enable alsa) \
 		$(use_with arts) --disable-artstest \
-		$(use_with aalib) \
 		$(use_with oggvorbis ogg) $(use_with oggvorbis vorbis) \
 		$(use_enable ipv6) \
 		$(use_enable directfb) $(use_enable fb) \

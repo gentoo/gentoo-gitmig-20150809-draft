@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.176 2004/12/30 05:14:46 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.177 2004/12/30 19:20:34 chriswhite Exp $
+
+  31 Dec 2004; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
+  Removed aalib USE flag as it doesn't work and aalib cannot be disabled on
+  systems that have it installed.
 
   30 Dec 2004; Chris White <chriswhite@gentoo.org>
   +files/xine-lib-hardened-mmx.patch, xine-lib-1.0.ebuild:
