@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.3 2004/12/10 20:22:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.4 2004/12/11 17:54:27 danarmak Exp $
+
+  11 Dec 2004; Dan Armak <danarmak@gentoo.org> kjsembed-3.3.1.ebuild:
+  Fixed typo: should be KM_MAKEFILESREV - this fixes the generated SRC_URI,
+  and closes #74110.
 
   10 Dec 2004; Dan Armak <danarmak@gentoo.org> files/no-gtk-glib-check.diff,
   kjsembed-3.3.1.ebuild:
