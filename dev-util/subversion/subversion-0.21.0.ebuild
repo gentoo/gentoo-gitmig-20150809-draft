@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0.ebuild,v 1.5 2003/04/27 20:24:39 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.21.0.ebuild,v 1.6 2003/04/29 11:14:22 pauldv Exp $
 
 
 DESCRIPTION="A compelling replacement for CVS"
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/python-2.0
 	>=sys-apps/diffutils-2.7.7
 	>=sys-devel/libtool-1.4.1-r1
 	>=sys-devel/bison-1.28-r3
-	apache2? ( >=net-www/apache-2.0.44 )
+	apache2? ( >=net-www/apache-2.0.45 )
 	!apache2? ( !>=apache-2* )
 	!dev-libs/apr
 	~sys-devel/m4-1.4

@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.9 2003/04/26 14:07:16 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.10 2003/04/29 11:14:22 pauldv Exp $
 
 *subversion-0.21.0 (26 Apr 2003)
+
+  29 Apr 2003; Paul de Vrieze pauldv@gentoo.org subversion-0.20.1.ebuild,
+  subversion-0.21.0.ebuild:
+  Fixed depends to depend on apache-2.0.45 instead of apache-2.0.44
 
   26 Apr 2003; Paul de Vrieze<pauldv@gentoo.org> subversion-0.21.0.ebuild:
   New upstream version. Also do not build the apache module if the apache2 use
