@@ -57,3 +57,4 @@ sys-apps/reiserfs-utils		sys-apps/reiserfsprogs
 
 virtual/w3m		www-client/w3m
 virtual/pdfviewer		app-text/gv
+virtual/psviewer		app-text/gv

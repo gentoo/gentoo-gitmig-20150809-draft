@@ -64,3 +64,4 @@ virtual/mailx		mail-client/mailx
 virtual/w3m		www-client/w3m
 virtual/gnustep-back    gnustep-base/gnustep-back-art
 virtual/pdfviewer		app-text/xpdf
+virtual/psviewer		app-text/gv

@@ -62,3 +62,4 @@ virtual/gsasl		net-libs/libgsasl
 virtual/m3			dev-lang/cm3
 virtual/w3m		www-client/w3m
 virtual/pdfviewer		app-text/xpdf
+virtual/psviewer		app-text/gv

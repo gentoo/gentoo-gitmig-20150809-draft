@@ -63,3 +63,4 @@ virtual/xemacs		app-editors/xemacs
 virtual/xft	     	x11-base/xorg-x11
 virtual/gnustep-back    	gnustep-base/gnustep-back-art
 virtual/pdfviewer		app-text/xpdf
+virtual/psviewer		app-text/gv

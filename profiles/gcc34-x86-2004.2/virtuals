@@ -61,3 +61,4 @@ virtual/lapack			app-sci/lapack-atlas
 virtual/squeak-image		dev-lang/squeak-fullimage
 virtual/w3m		www-client/w3m
 virtual/pdfviewer		app-text/xpdf
+virtual/psviewer		app-text/gv
