@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.5 2004/02/12 06:58:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.6 2004/04/18 04:02:02 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clanlib.org/~sphair/download/ClanLib-${PV}-1.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0.7"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc"
 IUSE="opengl X sdl oggvorbis doc mikmod clanVoice clanJavaScript ipv6"
 
 DEPEND=">=media-libs/hermes-1.3.2
