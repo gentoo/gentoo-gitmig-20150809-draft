@@ -1,7 +1,14 @@
 # ChangeLog for dev-perlXML-CatalogChangeLog/dev-perlXML-DOMChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.6 2002/11/24 17:34:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.7 2002/11/26 14:28:25 mcummings Exp $
 
+
+*XML-DOM-1.39-r4 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> ChangeLog,
+  XML-DOM-1.39-r4, files/digest-XML-DOM-1.39-r4:
+
+  Missing major dep on libwww-perl
 
 *XML-DOM-1.39-r3 (24 Nov 2002)
   
