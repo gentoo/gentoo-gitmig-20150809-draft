@@ -1,9 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.19 2003/04/16 00:54:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.20 2003/09/06 23:50:49 drobbins Exp $
 
-  21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
-  Added arm to keywords.
+*dhcpcd-1.3.22_p4-r1 (06 Sep 2003)
+
+  06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
+  added bug 23428 patch from Alwyn Schoeman <alwyn@smart.com.ph>, which is a
+  great little patch. Also made dhcpcd FHS compliant using an LFS patch, which
+  allows us to address the dhcpcd issues on the 1.4 release LiveCD runtime.
 
 *dhcpcd-1.3.22_p4 (04 Jan 2003)
 
