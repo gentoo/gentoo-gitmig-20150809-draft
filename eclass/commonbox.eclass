@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.5 2002/07/15 01:39:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.6 2002/07/29 17:34:12 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -12,7 +12,7 @@
 ECLASS=commonbox
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS commonify src_compile src_install
+EXPORT_FUNCTIONS commonify src_compile src_install pkg_postinst
 
 DEPEND="x11-misc/commonbox-utils
 	x11-themes/commonbox-styles"
@@ -98,4 +98,24 @@ commonbox_src_install() {
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/${MYBIN}" > ${D}/etc/X11/Sessions/${MYBIN}
 	fperms a+x /etc/X11/Sessions/${MYBIN}
+}
+
+commonbox_pkg_postinst() {
+	#notify user about the new share dir
+	if [ -d /usr/share/commonbox ]
+	then
+		einfo
+		einfo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+		einfo "! ${PN} no longer uses /usr/share/${PN} as the          !"
+		einfo "! default share directory to contain styles and menus.  !"
+		einfo "! The default directory is now /usr/share/commonbox     !"
+		einfo "! Please move any files in /usr/share/${PN} that you    !"
+		einfo "! wish to keep (personal styles and your menu) into the !"
+		einfo "! new directory and modify your menu files to point all !"
+		einfo "! listed paths to the new directory.				       !"
+		einfo "! Also, be sure to update the paths in each user's	   !"
+		einfo "! config file found in their home directory.	           !"
+		einfo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+		einfo
+	fi
 }
