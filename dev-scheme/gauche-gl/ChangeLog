@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.1 2004/07/11 08:03:58 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.2 2004/07/11 09:06:06 hattya Exp $
+
+  11 Jul 2004; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.3.1.ebuild:
+  dev-lisp/gauche to dev-lang/gauche.
 
 *gauche-gl-0.3.1 (11 Jul 2004)
 
