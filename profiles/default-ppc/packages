@@ -48,6 +48,9 @@ sys-apps/grub
 #>=sys-kernel/linux-headers-2.4.18
 #>=sys-kernel/linux-sources-2.4.18
 
+#qt-3.0.4 causes big slowdowns on ppc [daybird]
+=x11-libs/qt-3.0.3.1
+
 sys-apps/sysklogd
 *>=dev-lang/python-2.2-r4
 >=x11-base/xfree-4.1.0-r2
