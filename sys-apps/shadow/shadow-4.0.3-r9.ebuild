@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.2 2003/12/09 22:16:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.3 2003/12/10 08:13:49 seemant Exp $
 
 IUSE="pam selinux"
 
@@ -66,9 +66,9 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-	use nls || myconf="${myconf} --disable-nls"
-	use pam && myconf="${myconf} --with-libpam --with-libcrack" || myconf="${myconf} --without-libpam"
-
+	use pam \
+		&& myconf="${myconf} --with-libpam --with-libcrack" \
+		|| myconf="${myconf} --without-libpam"
 
 	./configure --disable-desrpc \
 		--with-libcrypt \
@@ -76,6 +76,7 @@ src_compile() {
 		--enable-shared=no \
 		--enable-static=yes \
 		--host=${CHOST} \
+		`use_enable nls` \
 		${myconf} || die "bad configure"
 
 	# Parallel make fails sometimes
@@ -140,7 +141,7 @@ src_install() {
 	# also broken. Just do it over.
 	rm -rf ${D}/usr/share/man/*
 
-	rm -f man/id.1
+	rm -f man/id.1 man/getspnam.3
 	for x in man/*.[0-9]
 	do
 		[ -f ${x} ] && doman ${x}

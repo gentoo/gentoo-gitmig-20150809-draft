@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.42 2003/12/09 22:16:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.43 2003/12/10 08:13:49 seemant Exp $
+
+  10 Dec 2003; Seemant Kulleen <seemant@gentoo.org> shadow-4.0.3-r9.ebuild:
+  don't install the getspnam manpage -- man-pages package handles that and does
+  it with a better version, to boot
 
   09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> shadow-4.0.3-r9.ebuild:
   don't install the id man page, coreutils does that
