@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.13 2003/11/04 03:47:09 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.14 2003/11/08 21:40:53 strider Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -42,10 +42,14 @@ function sed2() {
 }
 
 java_pkg_postinst() {
-	if [ -z `java-config --java 2> /dev/null` ] ; then 
-		einfo "No default VM found, setting ${VMHANDLE} as default"
+#	if [ -z `java-config --java 2> /dev/null` ] ; then 
+#		einfo "No default VM found, setting ${VMHANDLE} as default"
+		einfo "Setting ${VMHANDLE} as default"
+		einfo "Use java-config to reassign your VM."
 		java-config --set-system-vm=${VMHANDLE}
-	fi
+		/usr/sbin/env-update
+		source /etc/profile
+#	fi
 }
 
 pkg_postinst() {
