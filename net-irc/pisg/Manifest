@@ -1,11 +1,17 @@
-MD5 b5a07d985484a6fb48a398b5e349dfc8 ChangeLog 1974
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 477a7726485523fa3150f74f51a66a3d ChangeLog 2136
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 129495e8c73a19b5a4c40cc0c1e749de pisg-0.51.ebuild 1035
-MD5 c470b81e8c3a5b2b34107d1e1a66387e pisg-0.52.ebuild 1116
-MD5 f152a96caed5bb241430a6064f8d9781 pisg-0.55.ebuild 1137
-MD5 b06aca1200118c464fa6a281e4b70134 pisg-0.56.ebuild 1261
-MD5 d1bbe01fcf4658d44fe890463108b7be files/digest-pisg-0.51 61
-MD5 8fbdcf618d81a08ca0d8365a251a16ff files/digest-pisg-0.52 61
-MD5 341218b30944ce1df42af8687db007fc files/digest-pisg-0.55 61
+MD5 e49fcfe1bea97c03376a315ef94359a1 pisg-0.56.ebuild 1260
 MD5 2116a6e5786030640b4a7f25159dbfc6 files/0.56-network-option-fix.patch 1345
+MD5 d1bbe01fcf4658d44fe890463108b7be files/digest-pisg-0.51 61
 MD5 48cee577d969a5b7d4feba727deff84f files/digest-pisg-0.56 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+QhhAXomK8S72HoRArI8AJ48srXr9wLl8wBHR0xw3pDbq1BJIACePfpe
+kvK4kLV4abq9Orh9RMhK3h8=
+=Z90I
+-----END PGP SIGNATURE-----
