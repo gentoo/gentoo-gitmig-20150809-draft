@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/macutil
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.2 2004/06/05 19:20:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/ChangeLog,v 1.3 2004/06/06 14:36:50 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  macutil-2.0_beta3.ebuild:
+  QA - IUSE fix
 
 *macutil-2.0_beta3 (02 Jun 2004)
 

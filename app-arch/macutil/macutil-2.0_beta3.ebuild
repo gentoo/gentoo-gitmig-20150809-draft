@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.1 2004/06/02 21:27:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.2 2004/06/06 14:36:50 dragonheart Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://homepages.cwi.nl/~dik/english/ftp.html"
 
 SLOT="0"
 LICENSE="as-is"
+IUSE=""
 KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/glibc"

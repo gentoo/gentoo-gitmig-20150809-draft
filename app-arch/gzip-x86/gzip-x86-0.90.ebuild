@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.90.ebuild,v 1.2 2004/03/12 11:11:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.90.ebuild,v 1.3 2004/06/06 14:35:35 dragonheart Exp $
 
 
 MY_P=${PN/-/_}-${PV}
@@ -11,6 +11,7 @@ SRC_URI="ftp://spruce.he.net/pub/jreiser/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 KEYWORDS="-* x86 amd64"
 
 DEPEND="virtual/glibc"

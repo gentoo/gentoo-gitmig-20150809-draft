@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.11 2004/03/12 11:02:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.12 2004/06/06 14:38:50 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  mt-st-0.6.ebuild, mt-st-0.7-r1.ebuild, mt-st-0.7.ebuild:
+  QA - IUSE fix
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mt-st-0.6.ebuild,
   mt-st-0.7-r1.ebuild, mt-st-0.7.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cfv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.9 2004/04/28 20:12:58 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.10 2004/06/06 14:34:37 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  cfv-1.15.ebuild, cfv-1.16.ebuild:
+  QA - IUSE fix
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> cfv-1.16.ebuild :
   Stable on x86 and AMD64.
