@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.3.ebuild,v 1.3 2004/05/12 00:55:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.1 2004/05/12 00:55:22 dragonheart Exp $
 
 inherit eutils
 
@@ -12,20 +12,22 @@ SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
-DEPEND=">=sys-apps/portage-2.0.47-r10
-	>=sys-libs/lwp-1.10
-	>=net-libs/rpc2-1.20
-	>=sys-libs/rvm-1.8
+DEPEND=">=sys-libs/lwp-1.11
+	>=net-libs/rpc2-1.22
+	>=sys-libs/rvm-1.9
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	>=sys-kernel/linux-headers-2.4
 	>=dev-lang/perl-5.8
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	sys-apps/gawk
+	sys-devel/bison
+	sys-apps/grep"
 
 #	>=sys-apps/sed-4
 #	net-fs/coda-kernel
@@ -39,13 +41,11 @@ RDEPEND=">=sys-libs/lwp-1.10
 	>=sys-libs/readline-3
 	kerberos? ( virtual/krb5 )"
 
-
-
-
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/coda-6.0.3-iowr.patch
+	epatch ${FILESDIR}/coda-6.0.6-gcc3.4.patch
 }
+
 
 src_compile() {
 	local myflags=""
