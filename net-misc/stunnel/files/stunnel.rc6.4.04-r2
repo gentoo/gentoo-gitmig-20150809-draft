@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/files/stunnel.rc6.4.0.4-r2,v 1.1 2003/10/28 15:23:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/files/stunnel.rc6.4.04-r2,v 1.1 2004/01/03 19:31:10 aliz Exp $
 
 depend() {
 	need net

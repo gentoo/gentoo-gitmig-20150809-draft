@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/files/stunnel.rc6.4.04-r3,v 1.1 2004/01/03 19:31:10 aliz Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting stunnel"
+	start-stop-daemon -p /etc/stunnel/stunnel.pid --start --quiet --exec /usr/sbin/stunnel -- /etc/stunnel/stunnel.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping stunnel"
+	start-stop-daemon -p /etc/stunnel/stunnel.pid --stop --quiet --exec /usr/sbin/stunnel -- /etc/stunnel/stunnel.conf
+	eend $?
+}
