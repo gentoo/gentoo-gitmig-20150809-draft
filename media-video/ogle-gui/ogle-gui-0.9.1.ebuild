@@ -1,12 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.3 2003/11/14 16:06:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.4 2003/12/13 21:28:58 seemant Exp $
 
 IUSE="nls"
 
+MY_P=${P/-/_}
+
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GUI interface for the Ogle DVD player."
-HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
+HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd"
+SRC_URI="${HOMEPAGE}/dist/${MY_P}.tar.gz"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~arm amd64 ~ia64"
 
 DEPEND=">=media-video/ogle-${PV}
 	=x11-libs/gtk+-1.2*
@@ -16,12 +23,6 @@ DEPEND=">=media-video/ogle-${PV}
 	<gnome-base/libglade-2.0.0 )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
-
-SLOT="0"
-KEYWORDS="~x86 ~ppc amd64"
-
-SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P/-/_}.tar.gz"
-S=${WORKDIR}/${P/-/_}
 
 src_compile() {
 
