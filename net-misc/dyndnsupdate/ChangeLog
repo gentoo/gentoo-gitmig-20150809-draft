@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/dyndnsupdate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.7 2003/10/30 04:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.8 2004/03/01 21:34:08 aliz Exp $
 
-*dyndnsupdate-0.6.14 (23 Oct 2002)
+*dyndnsupdate-0.6.15 (23 Oct 2002)
 
   25 May 2003; Tavis Ormandy <taviso@gentoo.org> dyndnsupdate-0.6.14.ebuild:
   removing gcc hardcode

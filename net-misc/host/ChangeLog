@@ -1,7 +1,7 @@
 # ChangeLog for net-misc/host
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.14 2004/01/14 01:38:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.15 2004/03/01 21:34:08 aliz Exp $
 
   13 Jan 2004; Chuck Short <zul@gentoo.org> host-991529.ebuild:
   Marked stable on amd64, closes #37063.
@@ -37,3 +37,5 @@
 
   11 May 2002; G Shapovalov <george@gentoo.org> host-991529.ebuild :
   initial release
+
+*host-991529 (11 May 2002)

@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.10 2003/12/24 12:32:35 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.11 2004/03/01 21:34:08 aliz Exp $
+
+*openvpn-1.5.0 (24 Dec 2003)
 
 *openvpn-1.4.2 (03 Aug 2003)
 

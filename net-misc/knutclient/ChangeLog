@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.1 2003/06/24 20:41:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.2 2004/03/01 21:34:08 aliz Exp $
+
+*knutclient-0.7.1 (17 Oct 2003)
 
 *knutclient-0.6.0 (21 Apr 2003)
 

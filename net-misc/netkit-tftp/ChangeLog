@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/netkit-tftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/ChangeLog,v 1.7 2003/10/30 17:13:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-tftp/ChangeLog,v 1.8 2004/03/01 21:34:08 aliz Exp $
+
+*netkit-tftp-0.17-r2 (30 Oct 2003)
 
   30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> netkit-tftp-0.17.ebuild:
   virtual/tftp

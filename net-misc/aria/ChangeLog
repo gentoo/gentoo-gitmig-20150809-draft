@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/aria
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.10 2004/02/09 06:39:48 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/ChangeLog,v 1.11 2004/03/01 21:34:08 aliz Exp $
 
 
   09 Feb 2004; root <root@gentoo.org> aria-0.10.0.ebuild,
@@ -14,7 +14,7 @@
   internationalization file aria.po. I also fixed the NLS useflag so it
   actually does something now.
 
-*aria-1.0.0.ebuild (15 May 2003)
+*aria-1.0.0 (15 May 2003)
 
   15 May 2003; Jared Hudson <jhhudso@gentoo.org> : Updated ebuild to version
   1.0.0. Credit goes to Nicolas Grandclaude <ngclaude@netcourrier.com>. Bug
@@ -28,7 +28,7 @@
 
   Updated aria to work with gcc3.x and be up to date in response to bug id 6835
 	
-*aria-0.10.0.ebuild (04 July 2002)
+*aria-0.10.0 (04 July 2002)
   
   06 Jul 2002; phoen][x <phoenix@gentoo.org> aria-0.10.0.ebuild : 
 
