@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.35 2004/03/11 19:26:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.36 2004/03/13 14:44:08 weeve Exp $
+
+  13 Mar 2004; Jason Wever <weeve@gentoo.org> webmin-1.130.ebuild:
+  Stable on sparc.
 
   11 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> webmin-1.110.ebuild,
   webmin-1.121.ebuild, webmin-1.130.ebuild:
