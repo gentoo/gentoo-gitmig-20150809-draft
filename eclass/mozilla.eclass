@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.3 2004/08/06 02:46:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.4 2004/08/06 13:29:38 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -73,13 +73,6 @@ mozilla_conf() {
 
 	# Additional ARCH support
 	case "${ARCH}" in
-	alpha)
-		# Mozilla won't link with X11 on alpha, for some crazy reason.
-		# set it to link explicitly here.
-		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L\/usr\/X11R6\/lib -lX11/' \
-			${S}/gfx/src/gtk/Makefile.in
-		;;
-
 	ppc)
 		# Fix to avoid gcc-3.3.x micompilation issues.
 		if [[ $(gcc-major-version).$(gcc-minor-version) == 3.3 ]]; then
@@ -202,6 +195,11 @@ mozilla_conf() {
 	else
 		einfo "Building without Xft2.0 support (moznoxft)"
 		myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
+	fi
+
+	if [[ ${myconf} == *--enable-xft* ]]; then
+		# This might just be an historical artifact...
+		export MOZ_ENABLE_XFT=1
 	fi
 }
 
