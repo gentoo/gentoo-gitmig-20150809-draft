@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclxclient
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.4 2004/11/27 18:24:34 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.5 2004/12/19 05:13:22 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libclxclient-1.0.1.ebuild:
+  Stable amd64, sparc, x86.
 
 *libclxclient-1.0.1 (27 Nov 2004)
 
