@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.2 2004/07/24 06:28:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.3 2004/07/24 08:50:54 mr_bones_ Exp $
 
 inherit eutils
 
