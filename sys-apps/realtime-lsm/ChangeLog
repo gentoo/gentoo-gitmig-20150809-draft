@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/realtime-lsm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.6 2005/01/05 18:15:22 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/ChangeLog,v 1.7 2005/03/14 16:53:20 jnc Exp $
+
+  14 Mar 2005; Eric Shattow <jnc@gentoo.org> metadata.xml,
+  realtime-lsm-0.8.5-r1.ebuild:
+  Reported stable on x86, ppc, and amd64. This is needed to effectively use the
+  now-stable qjackctl, jack-audio-connection-kit, etc. plus minor correction to
+  eerror output. Closes bugs #80994, #83220, #83364, #83364, #85201.
 
 *realtime-lsm-0.8.5-r1 (05 Jan 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r1.ebuild,v 1.1 2005/01/05 18:15:22 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/realtime-lsm/realtime-lsm-0.8.5-r1.ebuild,v 1.2 2005/03/14 16:53:20 jnc Exp $
 
 inherit linux-mod eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.joq.us/realtime/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86 amd64"
 
 IUSE=""
 DEPEND="${DEPEND}"
@@ -29,7 +29,9 @@ src_unpack() {
 		eerror ""
 		eerror "${PN} requires you to compile in the 'different security models option."
 		eerror "In your .config: CONFIG_SECURITY=y"
+		eerror "                 CONFIG_SECURITY_CAPABILITIES=m"
 		eerror "Through 'make menuconfig': Security options-> [*] Enable different security models"
+		eerror "                           Security options-> <M> Default Linux Capabilties"
 		eerror ""
 		die "Security support not detected."
 	fi
