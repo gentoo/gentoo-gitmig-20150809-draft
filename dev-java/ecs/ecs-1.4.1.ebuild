@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1.ebuild,v 1.6 2004/06/24 22:25:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1.ebuild,v 1.7 2004/10/16 17:11:46 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Java library to generate markup language text such as HTML and XML."
 HOMEPAGE="http://jakarta.apache.org/ecs"
@@ -20,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	dojar bin/*.jar
+	java-pkg_dojar bin/*.jar
 	dodoc AUTHORS  COPYING  ChangeLog  INSTALL  README
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.6 2004/09/10 19:46:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.7 2004/10/16 17:03:53 axxo Exp $
 
 inherit java-pkg
 
@@ -52,6 +52,6 @@ src_install () {
 	dohtml STATUS.html PROPOSAL.html
 
 	if use doc ; then
-		dohtml -r dist/docs/*
+		java-pkg_dohtml -r dist/docs/*
 	fi
 }

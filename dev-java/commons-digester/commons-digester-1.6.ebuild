@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.6.ebuild,v 1.1 2004/09/10 23:31:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.6.ebuild,v 1.2 2004/10/16 17:05:51 axxo Exp $
 
 inherit java-pkg
 
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	use doc && dohtml -r dist/docs/api/*
+	use doc && java-pkg_dohtml -r dist/docs/api/*
 }

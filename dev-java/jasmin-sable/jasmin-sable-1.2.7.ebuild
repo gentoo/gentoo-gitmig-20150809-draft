@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.4 2004/08/24 04:23:29 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.5 2004/10/16 17:18:47 axxo Exp $
 
 inherit java-pkg
 
@@ -37,7 +37,7 @@ src_install() {
 	java-pkg_dojar classes/{jas,jasmin,javacup,scm}.jar || die "Failed to install jars"
 
 	if use doc ; then
-		dohtml -r doc/*
+		java-pkg_dohtml -r doc/*
 	fi
 
 	dobin ${FILESDIR}/jasmin

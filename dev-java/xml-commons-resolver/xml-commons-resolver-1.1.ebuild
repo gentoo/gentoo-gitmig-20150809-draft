@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.1 2004/09/17 09:36:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-resolver/xml-commons-resolver-1.1.ebuild,v 1.2 2004/10/16 17:41:15 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -22,5 +22,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar src/${PN}.jar
-	use doc && dohtml -r docs/ apidocs/
+	use doc && java-pkg_dohtml -r docs/ apidocs/
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3.ebuild,v 1.5 2004/08/24 04:05:09 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/crimson/crimson-1.1.3.ebuild,v 1.6 2004/10/16 17:10:12 axxo Exp $
 
 inherit java-pkg
 
@@ -21,6 +21,6 @@ src_install() {
 	dojar build/crimson.jar
 	dodoc build/ChangeLog
 	dohtml build/README.html
-	dohtml -r build/docs
-	dohtml -r -A class,java,xml build/examples
+	java-pkg_dohtml -r build/docs
+	java-pkg_dohtml -r -A class,java,xml build/examples
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.4 2004/08/08 21:18:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.5 2004/10/16 17:15:35 axxo Exp $
 
 inherit java-pkg
 
@@ -109,7 +109,7 @@ src_install() {
 
 	# Install API documentation
 	if use doc ; then
-		dohtml -r dist/docs/api
+		java-pkg_dohtml -r dist/docs/api
 	fi
 
 	# Install configuration files

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jump
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.4 2004/10/06 21:36:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.5 2004/10/16 17:27:22 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jump-0.4.1-r1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *jump-0.4.1-r1 (06 Oct 2004)
 

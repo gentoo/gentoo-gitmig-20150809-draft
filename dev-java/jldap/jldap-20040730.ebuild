@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.2 2004/07/30 03:03:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.3 2004/10/16 17:24:30 axxo Exp $
 
 inherit java-pkg
 
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	dodoc COPYRIGHT LICENSE README
 	java-pkg_dojar lib/*
-	use doc && dohtml -r doc/*
+	use doc && java-pkg_dohtml -r doc/*
 }

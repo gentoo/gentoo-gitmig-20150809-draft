@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/jal-bin-20031117.ebuild,v 1.1 2004/07/30 20:12:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/jal-bin-20031117.ebuild,v 1.2 2004/10/16 17:18:28 axxo Exp $
 
 inherit java-pkg
 
@@ -20,6 +20,6 @@ src_compile () { :; }
 src_install() {
 	mv ${P/-bin}.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r1.ebuild,v 1.1 2004/09/19 08:45:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r1.ebuild,v 1.2 2004/10/16 17:22:17 axxo Exp $
 
 inherit java-pkg
 
@@ -48,7 +48,7 @@ src_install() {
 		build/*.jar
 
 	dodoc CHANGES.txt COMMITTERS.txt LICENSE.txt README.txt TODO.txt
-	use doc && dohtml -r build/apidocs/*
+	use doc && java-pkg_dohtml -r build/apidocs/*
 }
 
 pkg_postinst() {

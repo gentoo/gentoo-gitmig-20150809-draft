@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.2 2004/06/24 22:39:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.3 2004/10/16 17:29:57 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Mckoi Java SQL Database System"
 HOMEPAGE="http://mckoi.com/database/"
@@ -50,6 +52,6 @@ src_compile() {
 
 src_install() {
 	dodoc LICENSE.txt README.txt db.conf
-	dojar lib/mckoidb-${PV}.jar
-	use doc && dohtml -r docs
+	java-pkg_dojar lib/mckoidb-${PV}.jar
+	use doc && java-pkg_dohtml -r docs
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.2 2004/08/02 17:36:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.3 2004/10/16 17:35:44 axxo Exp $
 
 inherit java-pkg
 
@@ -43,7 +43,7 @@ src_install() {
 
 	java-pkg_dojar lib/*.jar
 
-	dohtml -r doc/api
+	java-pkg_dohtml -r doc/api
 	cp -r examples ${D}/usr/share/doc/${PF}
 	dodoc doc/*.pdf
 	dodoc LICENSE README VERSION

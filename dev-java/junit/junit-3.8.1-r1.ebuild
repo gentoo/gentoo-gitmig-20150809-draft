@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.1 2004/09/10 19:49:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r1.ebuild,v 1.2 2004/10/16 17:27:41 axxo Exp $
 
 inherit java-pkg
 
@@ -35,6 +35,5 @@ src_install() {
 	java-pkg_dojar junit.jar
 	dodir /usr/share/ant-core/lib
 	dosym /usr/share/junit/lib/junit.jar /usr/share/ant-core/lib/
-	dohtml -A package-list -r README.html cpl-v10.html doc javadoc
-	cp javadoc/package-list	${D}/usr/share/doc/${PF}/html/javadoc/
+	java-pkg_dohtml -r README.html cpl-v10.html doc javadoc
 }

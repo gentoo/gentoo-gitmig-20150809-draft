@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.4 2004/06/24 22:22:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9.ebuild,v 1.5 2004/10/16 17:07:50 axxo Exp $
 
 inherit java-pkg
 
@@ -26,5 +26,5 @@ src_compile() {
 src_install () {
 	java-pkg_dojar dist/bin/*.jar || die "java-pkg_dojar died"
 	dohtml *.html
-	use doc && dohtml -r dist/docs/*
+	use doc && java-pkg_dohtml -r dist/docs/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.4.ebuild,v 1.1 2004/08/15 17:09:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.4.ebuild,v 1.2 2004/10/16 17:03:09 axxo Exp $
 
 inherit java-pkg
 
@@ -52,7 +52,7 @@ src_install() {
 	dodoc legal/*
 
 	docinto api
-	use doc && dohtml -r build/webapp/api/*
+	use doc && java-pkg_dohtml -r build/webapp/api/*
 }
 
 pkg_postinst() {

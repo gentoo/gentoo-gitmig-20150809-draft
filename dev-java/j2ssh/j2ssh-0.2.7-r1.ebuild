@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7-r1.ebuild,v 1.1 2004/09/19 16:00:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7-r1.ebuild,v 1.2 2004/10/16 17:17:11 axxo Exp $
 
 inherit java-pkg
 
@@ -40,5 +40,5 @@ src_install() {
 	java-pkg_dojar dist/lib/*.jar
 	insinto /usr/share/${PN}
 	doins j2ssh.properties
-	use doc && dohtml -r docs/ && cp -R ${S}/examples ${D}/usr/share/${PN}
+	use doc && java-pkg_dohtml -r docs/ && cp -R ${S}/examples ${D}/usr/share/${PN}
 }

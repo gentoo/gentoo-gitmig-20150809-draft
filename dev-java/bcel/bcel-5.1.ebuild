@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.19 2004/09/21 13:37:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.20 2004/10/16 17:01:34 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	use doc && dohtml -r docs/
+	use doc && java-pkg_dohtml -r docs/
 	dodoc LICENSE.txt
 	java-pkg_dojar bin/bcel.jar
 }

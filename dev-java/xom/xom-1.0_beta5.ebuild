@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta5.ebuild,v 1.1 2004/09/19 15:12:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta5.ebuild,v 1.2 2004/10/16 17:42:15 axxo Exp $
 
 inherit java-pkg
 
@@ -52,6 +52,6 @@ src_install() {
 	if use doc ; then
 		dodir /usr/share/doc/${P}
 		cd ${WORKDIR}/XOM/
-		dohtml -r apidocs/
+		java-pkg_dohtml -r apidocs/
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.2.ebuild,v 1.1 2004/08/24 04:08:02 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.2.ebuild,v 1.2 2004/10/16 17:12:04 axxo Exp $
 
 inherit java-pkg
 
@@ -26,7 +26,7 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	use doc && dohtml -r build/doc/api
+	use doc && java-pkg_dohtml -r build/doc/api
 	dodoc doc/*.TXT
 	insinto /usr/share/doc/${PF}
 	doins doc/*.pdf

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r1.ebuild,v 1.1 2004/09/19 15:31:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r1.ebuild,v 1.2 2004/10/16 17:01:14 axxo Exp $
 
 inherit java-pkg
 
@@ -40,5 +40,5 @@ src_install () {
 	doins ${P}/lib/*.jar
 
 	dodoc README LICENSE
-	use doc && dohtml -r ${P}/docs/
+	use doc && java-pkg_dohtml -r ${P}/docs/
 }

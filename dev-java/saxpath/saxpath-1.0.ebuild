@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.1 2004/09/17 13:59:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxpath/saxpath-1.0.ebuild,v 1.2 2004/10/16 17:35:25 axxo Exp $
 
 inherit java-pkg
 
@@ -42,5 +42,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/saxpath.jar
 
-	use doc && dohtml -r build/doc/*
+	use doc && java-pkg_dohtml -r build/doc/*
 }

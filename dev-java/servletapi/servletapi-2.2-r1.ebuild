@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.3 2004/06/24 22:42:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r1.ebuild,v 1.4 2004/10/16 17:36:03 axxo Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,7 @@ src_install () {
 	java-pkg_dojar servletapi/lib/${PN}-${PV}.jar || die "Unable to install"
 
 	if use doc ; then
-		dohtml -r servletapi/docs/*
+		java-pkg_dohtml -r servletapi/docs/*
 	fi
 
 	dodoc dist/README.txt

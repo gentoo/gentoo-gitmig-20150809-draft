@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.10 2004/10/16 08:39:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.11 2004/10/16 17:28:01 axxo Exp $
 
 inherit java-pkg
 
@@ -55,7 +55,7 @@ src_install() {
 	java-pkg_dojar jython-${PV}.jar || die "install failed"
 
 	dodoc {README,LICENSE}.txt NEWS ACKNOWLEDGMENTS
-	dohtml -A .css .jpg .gif -r Doc
+	java-pkg_dohtml -A .css .jpg .gif -r Doc
 	newbin ${FILESDIR}/jython jython
 	newbin ${FILESDIR}/jythonc jythonc
 

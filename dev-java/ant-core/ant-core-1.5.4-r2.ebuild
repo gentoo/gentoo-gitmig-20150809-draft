@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.1 2004/09/22 16:45:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.5.4-r2.ebuild,v 1.2 2004/10/16 16:57:22 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -100,5 +100,5 @@ src_install() {
 
 	dodoc LICENSE LICENSE.* README WHATSNEW KEYS
 	use doc && dohtml welcome.html
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

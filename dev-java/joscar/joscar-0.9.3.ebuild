@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.3 2004/06/24 22:36:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.4 2004/10/16 17:26:03 axxo Exp $
 
 inherit java-pkg
 
@@ -28,5 +28,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar *.jar
 	dodoc USING CHANGELOG UPDATING README RELNOTES
-	use doc && dohtml -r docs/api
+	use doc && java-pkg_dohtml -r docs/api
 }

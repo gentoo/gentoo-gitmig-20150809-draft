@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.3 2004/09/28 21:07:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.4 2004/10/16 17:33:48 axxo Exp $
 
 inherit java-pkg
 
@@ -33,5 +33,5 @@ src_install() {
 	cd ${S}/build
 	mv jakarta-${P}.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
-	use doc && dohtml -r docs/api/*
+	use doc && java-pkg_dohtml -r docs/api/*
 }

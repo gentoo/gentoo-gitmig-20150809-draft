@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.8.4.5.ebuild,v 1.4 2004/08/24 03:41:23 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.8.4.5.ebuild,v 1.5 2004/10/16 17:02:12 axxo Exp $
 
 inherit java-pkg
 
@@ -33,5 +33,5 @@ src_compile() {
 src_install () {
 	java-pkg_dojar build/${PN}*.jar || die "installation failed"
 	dodoc README-SRC
-	use doc && dohtml -r build/apidocs/*
+	use doc && java-pkg_dohtml -r build/apidocs/*
 }

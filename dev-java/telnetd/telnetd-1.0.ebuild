@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0.ebuild,v 1.2 2004/08/30 23:36:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/telnetd-1.0.ebuild,v 1.3 2004/10/16 17:38:59 axxo Exp $
 
 inherit java-pkg
 
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar build/telnetd.jar
-	use doc && dohtml -r build/site/api/*
+	use doc && java-pkg_dohtml -r build/site/api/*
 }

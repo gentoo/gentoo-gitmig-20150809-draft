@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.5 2004/09/22 22:00:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.6 2004/10/16 17:14:56 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  gnu-jaxp-1.0_beta1-r1.ebuild, gnu-jaxp-1.0_beta1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *gnu-jaxp-1.0_beta1-r1 (23 Sep 2004)
 

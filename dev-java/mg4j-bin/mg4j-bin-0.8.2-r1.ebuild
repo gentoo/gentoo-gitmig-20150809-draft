@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/mg4j-bin-0.8.2-r1.ebuild,v 1.1 2004/08/21 11:49:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/mg4j-bin-0.8.2-r1.ebuild,v 1.2 2004/10/16 17:30:17 axxo Exp $
 
 inherit java-pkg
 
@@ -26,6 +26,6 @@ src_compile () { :; }
 src_install() {
 	mv ${MY_P}.jar ${PN/-bin}.jar
 	java-pkg_dojar ${PN/-bin}.jar
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }
 

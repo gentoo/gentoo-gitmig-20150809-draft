@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/wsdl4j-bin-1.4.ebuild,v 1.1 2004/07/30 22:00:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j-bin/wsdl4j-bin-1.4.ebuild,v 1.2 2004/10/16 17:40:15 axxo Exp $
 
 inherit java-pkg
 
@@ -20,6 +20,6 @@ S="${WORKDIR}/${PN/-bin}-${PV//./_}"
 src_compile() { :; }
 
 src_install() {
-	dohtml -r docs/
+	java-pkg_dohtml -r docs/
 	java-pkg_dojar lib/qname.jar lib/wsdl4j.jar
 }

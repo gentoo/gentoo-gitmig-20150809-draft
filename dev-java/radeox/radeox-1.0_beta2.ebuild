@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.4 2004/06/24 22:41:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/radeox-1.0_beta2.ebuild,v 1.5 2004/10/16 17:33:29 axxo Exp $
 
 inherit java-pkg
 
@@ -44,6 +44,6 @@ src_compile() {
 
 src_install() {
 	dodoc Changes.txt README Radeox.version license.txt
-	use doc && dohtml -r docs/api
+	use doc && java-pkg_dohtml -r docs/api
 	java-pkg_dojar lib/{radeox,radeox-api}.jar
 }

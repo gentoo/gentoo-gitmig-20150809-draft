@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.9 2004/10/16 08:44:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.10 2004/10/16 17:13:01 axxo Exp $
 
 inherit java-pkg
 
@@ -43,6 +43,6 @@ src_install () {
 		dohtml ReleaseNotes.html
 		dodir /usr/share/doc/${P}
 		cp -a examples ${D}/usr/share/doc/${P}
-		dohtml -r build/javadocs
+		java-pkg_dohtml -r build/javadocs
 	fi
 }

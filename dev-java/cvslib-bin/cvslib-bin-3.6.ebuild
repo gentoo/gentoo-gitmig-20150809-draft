@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cvslib-bin/cvslib-bin-3.6.ebuild,v 1.1 2004/09/17 09:28:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cvslib-bin/cvslib-bin-3.6.ebuild,v 1.2 2004/10/16 17:10:32 axxo Exp $
 
 inherit java-pkg
 
@@ -28,5 +28,5 @@ src_compile() { :; }
 src_install() {
 	mv cvslib_36.jar cvslib.jar
 	java-pkg_dojar cvslib.jar
-	use doc && dohtml -r javadoc/
+	use doc && java-pkg_dohtml -r javadoc/
 }

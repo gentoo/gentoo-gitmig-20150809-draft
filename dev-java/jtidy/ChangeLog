@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtidy
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.1 2004/09/12 19:33:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.2 2004/10/16 17:27:03 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jtidy-0_pre20010801.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *jtidy-0_pre20010801 (12 Sep 2004)
 

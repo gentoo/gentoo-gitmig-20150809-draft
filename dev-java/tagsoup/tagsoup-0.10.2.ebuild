@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.1 2004/09/19 15:08:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.2 2004/10/16 17:38:21 axxo Exp $
 
 inherit java-pkg
 
@@ -29,5 +29,5 @@ src_install() {
 	java-pkg_dojar dist/lib/${PN}.jar
 
 	dodoc CHANGES LICENSE README TODO
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

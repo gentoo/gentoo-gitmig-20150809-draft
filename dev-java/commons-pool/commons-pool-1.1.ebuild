@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.7 2004/06/24 22:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.8 2004/10/16 17:09:15 axxo Exp $
 
 inherit java-pkg
 
@@ -47,6 +47,6 @@ src_install () {
 	dohtml STATUS.html PROPOSAL.html
 
 	if use doc ; then
-		dohtml -r dist/docs/*
+		java-pkg_dohtml -r dist/docs/*
 	fi
 }

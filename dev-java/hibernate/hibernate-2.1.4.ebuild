@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.6 2004/07/09 03:23:31 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.7 2004/10/16 17:15:55 axxo Exp $
 
 inherit java-pkg
 
@@ -31,5 +31,5 @@ src_install() {
 	dodoc *.txt lib/c3p0*.txt
 	insinto /usr/share/doc/${P}/sample
 	doins src/*.xml src/*.properties src/*.ccf src/META-INF/ra.xml
-	use doc && dohtml -r doc/*
+	use doc && java-pkg_dohtml -r doc/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.1 2004/08/13 21:35:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.2 2004/10/16 17:05:31 axxo Exp $
 
 inherit java-pkg
 
@@ -33,5 +33,5 @@ src_install () {
 	java-pkg_dojar dist/${PN}*.jar || die "Unable to install"
 	dodoc README.txt
 	dohtml PROPOSAL.html STATUS.html
-	use doc && dohtml -r dist/docs/*
+	use doc && java-pkg_dohtml -r dist/docs/*
 }

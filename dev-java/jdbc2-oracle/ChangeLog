@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc2-oracle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/ChangeLog,v 1.8 2004/09/02 08:41:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/ChangeLog,v 1.9 2004/10/16 17:21:39 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  jdbc2-oracle-9.2.0.3.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   02 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jdbc2-oracle-9.2.0.3.ebuild:
   fix typo in javadoc filename, closes #62590

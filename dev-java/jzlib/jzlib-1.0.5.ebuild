@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.3 2004/06/24 22:37:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.5.ebuild,v 1.4 2004/10/16 17:28:21 axxo Exp $
 
 inherit java-pkg
 
@@ -37,6 +37,6 @@ src_compile() {
 src_install() {
 	mv dist/lib/jzlib{*,}.jar
 	java-pkg_dojar dist/lib/jzlib.jar || die "installation failed"
-	use doc && dohtml -r javadoc/*
+	use doc && java-pkg_dohtml -r javadoc/*
 	dodoc LICENSE.txt README ChangeLog
 }

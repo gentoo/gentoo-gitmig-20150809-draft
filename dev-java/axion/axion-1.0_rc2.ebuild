@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2.ebuild,v 1.8 2004/09/04 12:59:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2.ebuild,v 1.9 2004/10/16 17:00:49 axxo Exp $
 
 inherit java-pkg
 
@@ -53,5 +53,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar bin/axion-1.0-M2.jar
-	use doc && dohtml -r bin/docs/api
+	use doc && java-pkg_dohtml -r bin/docs/api
 }

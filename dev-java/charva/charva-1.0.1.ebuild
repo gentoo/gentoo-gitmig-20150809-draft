@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.5 2004/07/02 04:19:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.6 2004/10/16 17:02:31 axxo Exp $
 
 inherit java-pkg
 
@@ -33,6 +33,6 @@ src_install () {
 	cd ${S}
 	dolib.so c/src/*.so
 	java-pkg_dojar java/lib/${PN}.jar
-	use doc && dohtml -r java/doc
+	use doc && java-pkg_dohtml -r java/doc
 	dodoc README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.4 2004/08/03 11:24:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.5 2004/10/16 17:03:33 axxo Exp $
 
 inherit java-pkg
 
@@ -30,5 +30,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar lib/*.jar
 	dohtml README.html
-	use doc && dohtml -r doc/*
+	use doc && java-pkg_dohtml -r doc/*
 }

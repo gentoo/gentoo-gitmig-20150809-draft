@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.5 2004/09/28 15:29:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.15.ebuild,v 1.6 2004/10/16 17:26:23 axxo Exp $
 
 inherit java-pkg
 
@@ -28,6 +28,6 @@ src_compile() {
 src_install() {
 	mv dist/lib/jsch{*,}.jar
 	java-pkg_dojar dist/lib/jsch.jar || die "installation failed"
-	use doc && dohtml -r javadoc/*
+	use doc && java-pkg_dohtml -r javadoc/*
 	dodoc LICENSE.txt README ChangeLog
 }

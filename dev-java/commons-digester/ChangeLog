@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.13 2004/09/10 23:31:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.14 2004/10/16 17:05:51 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  commons-digester-1.5.ebuild, commons-digester-1.6.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *commons-digester-1.6 (11 Sep 2004)
 

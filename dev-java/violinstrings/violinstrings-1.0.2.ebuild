@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.5 2004/08/03 11:23:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/violinstrings-1.0.2.ebuild,v 1.6 2004/10/16 17:39:37 axxo Exp $
 
 inherit java-pkg
 
@@ -24,6 +24,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar *.jar
 	dodoc CHANGES
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4.ebuild,v 1.5 2004/08/23 21:57:36 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4.ebuild,v 1.6 2004/10/16 17:39:18 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
 HOMEPAGE="http://jakarta.apache.org/velocity/"
@@ -37,10 +39,10 @@ src_compile () {
 src_install () {
 	cd ${S}
 	if use j2ee ; then
-		dojar bin/${PN}-J2EE-${PV}.jar
+		java-pkg_dojar bin/${PN}-J2EE-${PV}.jar
 	else
-		dojar bin/${PN}-${PV}.jar
+		java-pkg_dojar bin/${PN}-${PV}.jar
 	fi
 	dodoc LICENSE NOTICE README.txt
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

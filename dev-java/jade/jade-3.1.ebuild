@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.6 2004/10/16 08:46:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.7 2004/10/16 17:17:50 axxo Exp $
 
 inherit java-pkg
 
@@ -31,5 +31,5 @@ src_compile(){
 src_install() {
 	java-pkg_dojar lib/*.jar
 	dodoc README ChangeLog
-	use doc && dohtml -r doc/*
+	use doc && java-pkg_dohtml -r doc/*
 }

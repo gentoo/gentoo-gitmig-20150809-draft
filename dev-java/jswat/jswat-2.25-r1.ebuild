@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25-r1.ebuild,v 1.2 2004/09/19 18:31:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25-r1.ebuild,v 1.3 2004/10/16 17:26:44 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -58,5 +58,5 @@ src_install() {
 	# install documents
 	dodoc BUGS.txt HISTORY.txt LICENSE.txt OLD_HISTORY.txt TODO.txt
 	dohtml README.html
-	use doc && dohtml -r docs
+	use doc && java-pkg_dohtml -r docs
 }

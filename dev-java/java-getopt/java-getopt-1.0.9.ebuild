@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.9.ebuild,v 1.7 2004/06/27 17:42:56 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/java-getopt-1.0.9.ebuild,v 1.8 2004/10/16 17:19:06 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Java command line option parser"
 HOMEPAGE="http://www.urbanophile.com/arenn/hacking/download.html"
@@ -14,17 +16,13 @@ IUSE=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${P}.tar.gz
-}
-
 src_compile() {
 	mv gnu/getopt/buildx.xml build.xml
-	ant all
+	ant all || die "failed to build"
 }
 
 src_install () {
-	dojar build/lib/gnu.getopt.jar
-	dohtml build/api/* -r
+	java-pkg_dojar build/lib/gnu.getopt.jar
+	java-pkg_dohtml -r build/api/*
 	dodoc gnu/getopt/COPYING.LIB gnu/getopt/ChangeLog gnu/getopt/README
 }

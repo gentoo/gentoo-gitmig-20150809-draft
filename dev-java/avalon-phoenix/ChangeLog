@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/avalon-phoenix
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/ChangeLog,v 1.7 2004/06/24 22:17:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/ChangeLog,v 1.8 2004/10/16 17:00:22 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  avalon-phoenix-4.0.4.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> avalon-phoenix-4.0.4.ebuild:
   Fix use invocation

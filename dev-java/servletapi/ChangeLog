@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.15 2004/06/24 22:42:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.16 2004/10/16 17:36:03 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> servletapi-2.2-r1.ebuild,
+  servletapi-2.3-r1.ebuild, servletapi-2.4.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> servletapi-2.2-r1.ebuild,
   servletapi-2.3-r1.ebuild, servletapi-2.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.5 2004/09/04 13:00:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.6 2004/10/16 17:01:53 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -58,5 +58,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar src/build/lib/bsf.jar
 
-	use doc && dohtml -r src/build/javadocs/*
+	use doc && java-pkg_dohtml -r src/build/javadocs/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.1 2004/09/12 19:33:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.2 2004/10/16 17:27:03 axxo Exp $
 
 inherit java-pkg
 
@@ -27,5 +27,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/Tidy.jar
 
-	use doc && dohtml -r doc
+	use doc && java-pkg_dohtml -r doc
 }

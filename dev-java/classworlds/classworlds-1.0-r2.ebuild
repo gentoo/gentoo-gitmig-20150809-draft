@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.5 2004/08/24 03:42:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/classworlds/classworlds-1.0-r2.ebuild,v 1.6 2004/10/16 17:02:50 axxo Exp $
 
 inherit java-pkg
 
@@ -37,5 +37,5 @@ src_compile() {
 src_install() {
 	dodoc LICENSE.txt
 	java-pkg_dojar target/classworlds-1.0.jar
-	use doc && dohtml -r dist/docs/api
+	use doc && java-pkg_dohtml -r dist/docs/api
 }

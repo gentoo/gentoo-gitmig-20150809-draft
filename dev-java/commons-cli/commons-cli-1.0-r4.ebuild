@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.3 2004/08/19 19:00:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.4 2004/10/16 17:04:14 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 src_install() {
 	mv ${S}/target/${P}.jar ${S}/target/${PN}.jar
 	java-pkg_dojar target/${PN}.jar
-	use doc && dohtml -r target/docs/
+	use doc && java-pkg_dohtml -r target/docs/
 	dodoc README.txt
 }
 

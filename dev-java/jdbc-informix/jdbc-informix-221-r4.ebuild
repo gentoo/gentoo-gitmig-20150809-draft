@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.3 2004/06/24 22:32:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-221-r4.ebuild,v 1.4 2004/10/16 17:21:00 axxo Exp $
 
 inherit java-pkg
 
@@ -32,6 +32,6 @@ src_compile() {
 
 src_install() {
 	use doc && dodoc doc/release/jdbc4pg.pdf
-	use doc && dohtml -r doc/
+	use doc && java-pkg_dohtml -r doc/
 	java-pkg_dojar lib/ifx*.jar
 }

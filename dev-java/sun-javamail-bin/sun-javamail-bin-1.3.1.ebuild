@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.3 2004/06/24 22:43:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.4 2004/10/16 17:38:03 axxo Exp $
 
 inherit java-pkg
 
@@ -55,6 +55,6 @@ src_compile() {
 
 src_install() {
 	dodoc CHANGES.txt README.txt LICENSE.txt NOTES.txt
-	use doc && dohtml -r docs/
+	use doc && java-pkg_dohtml -r docs/
 	java-pkg_dojar mail.jar lib/*.jar
 }

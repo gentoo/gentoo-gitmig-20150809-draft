@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.3 2004/06/24 22:23:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.4 2004/10/16 17:08:36 axxo Exp $
 
 inherit java-pkg
 
@@ -43,5 +43,5 @@ src_compile() {
 src_install () {
 	java-pkg_dojar dist/${PN}.jar  || die "Unable to install"
 	dodoc LICENSE.txt RELEASE-NOTES-1.1.txt RELEASE-NOTES.txt
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

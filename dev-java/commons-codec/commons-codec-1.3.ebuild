@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3.ebuild,v 1.1 2004/08/13 21:29:23 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/commons-codec-1.3.ebuild,v 1.2 2004/10/16 17:04:32 axxo Exp $
 
 inherit java-pkg
 
@@ -51,5 +51,5 @@ src_install() {
 	java-pkg_dojar output/dist/${PN}.jar
 
 	dodoc RELEASE-NOTES.txt
-	use doc && dohtml -r output/dist/docs/
+	use doc && java-pkg_dohtml -r output/dist/docs/
 }

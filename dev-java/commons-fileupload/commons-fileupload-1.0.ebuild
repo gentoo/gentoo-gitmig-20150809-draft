@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.9 2004/06/27 17:29:43 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.0.ebuild,v 1.10 2004/10/16 17:06:30 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -35,5 +35,5 @@ src_compile() {
 src_install() {
 	mv ${S}/target/${P}.jar ${S}/target/${PN}.jar
 	java-pkg_dojar target/${PN}.jar
-	use doc && dohtml -r dist/docs/
+	use doc && java-pkg_dohtml -r dist/docs/
 }

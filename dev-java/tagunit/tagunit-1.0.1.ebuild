@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.2 2004/06/24 22:44:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.3 2004/10/16 17:38:40 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="TagUnit is a tag library for testing custom tags within JSP pages."
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}-src.zip"
@@ -30,5 +32,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
 	dodoc changes.txt readme.txt
-	use doc && dohtml -r doc/api/*
+	use doc && java-pkg_dohtml -r doc/api/*
 }

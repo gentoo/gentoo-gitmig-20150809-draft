@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kissme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.9 2004/07/31 21:50:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.10 2004/10/16 17:28:39 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> kissme-0.0.32.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *kissme-0.0.32-r1 31 Jul 2004
 

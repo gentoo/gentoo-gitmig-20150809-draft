@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.22 2004/08/24 03:46:38 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.23 2004/10/16 17:04:51 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  commons-collections-3.1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org>
   -commons-collections-3.0-r1.ebuild, commons-collections-3.1.ebuild:

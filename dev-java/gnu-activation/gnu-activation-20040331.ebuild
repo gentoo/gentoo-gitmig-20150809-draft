@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-20040331.ebuild,v 1.4 2004/08/24 04:12:29 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-activation/gnu-activation-20040331.ebuild,v 1.5 2004/10/16 17:13:39 axxo Exp $
 
 inherit java-pkg
 
@@ -28,6 +28,6 @@ src_install() {
 	java-pkg_dojar activation.jar
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }
 

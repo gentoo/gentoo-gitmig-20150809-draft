@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.3.ebuild,v 1.8 2004/09/02 08:41:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.3.ebuild,v 1.9 2004/10/16 17:21:39 axxo Exp $
 
 inherit java-pkg
 
@@ -72,7 +72,7 @@ src_compile() {
 
 src_install() {
 	if use doc ; then
-		dohtml -r ${S}/javadoc/
+		java-pkg_dohtml -r ${S}/javadoc/
 	fi
 	java-pkg_dojar ${S}/*.zip
 }

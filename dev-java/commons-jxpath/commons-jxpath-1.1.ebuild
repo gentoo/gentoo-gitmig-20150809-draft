@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.3 2004/08/31 03:37:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.4 2004/10/16 17:07:10 axxo Exp $
 
 inherit java-pkg
 
@@ -36,5 +36,5 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	dohtml PROPOSAL.html STATUS.html usersguide.html
-	use doc && dohtml -r dist/docs/
+	use doc && java-pkg_dohtml -r dist/docs/
 }

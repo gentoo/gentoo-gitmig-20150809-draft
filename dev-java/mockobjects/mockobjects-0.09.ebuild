@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.4 2004/07/14 02:45:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.5 2004/10/16 17:30:36 axxo Exp $
 
 inherit java-pkg
 
@@ -40,5 +40,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar out/*.jar
 	dodoc doc/README
-	dohtml -r out/doc/javadoc/*
+	java-pkg_dohtml -r out/doc/javadoc/*
 }

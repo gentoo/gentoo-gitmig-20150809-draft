@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.4-r1.ebuild,v 1.5 2004/09/17 13:54:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.4-r1.ebuild,v 1.6 2004/10/16 17:11:27 axxo Exp $
 
 inherit java-pkg
 
@@ -22,5 +22,5 @@ src_compile() {
 src_install() {
 	cd ${WORKDIR}/dom4j-${PV}
 	java-pkg_dojar build/${PN}.jar
-	use doc && dohtml -r build/doc/*
+	use doc && java-pkg_dohtml -r build/doc/*
 }

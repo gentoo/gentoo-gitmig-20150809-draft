@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jess-bin/jess-bin-6.1.6.ebuild,v 1.1 2004/07/30 20:43:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jess-bin/jess-bin-6.1.6.ebuild,v 1.2 2004/10/16 17:22:36 axxo Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,7 @@ src_install() {
 
 	if use doc; then
 		einfo "Installing documentation..."
-		dohtml -r docs/*
+		java-pkg_dohtml -r docs/*
 		insinto /usr/share/doc/${P/-bin}/examples/
 		doins examples/*
 		local dirs="pumps simple xfer"

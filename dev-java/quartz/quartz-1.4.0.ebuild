@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.0.ebuild,v 1.4 2004/09/21 14:04:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.0.ebuild,v 1.5 2004/10/16 17:33:10 axxo Exp $
 
 inherit java-pkg
 
@@ -54,5 +54,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar lib/quartz.jar
-	use doc && dohtml -r docs/
+	use doc && java-pkg_dohtml -r docs/
 }

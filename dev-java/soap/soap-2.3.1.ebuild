@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.1 2004/09/12 19:32:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1.ebuild,v 1.2 2004/10/16 17:36:22 axxo Exp $
 
 inherit java-pkg
 DESCRIPTION="Apache SOAP (Simple Object Access Protocol) is an implementation of the SOAP submission to W3C"
@@ -30,5 +30,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/lib/soap.jar
 
-	use doc && dohtml -r build/javadocs/
+	use doc && java-pkg_dohtml -r build/javadocs/
 }

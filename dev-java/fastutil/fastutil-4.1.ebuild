@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.1.ebuild,v 1.6 2004/06/27 17:36:13 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.1.ebuild,v 1.7 2004/10/16 17:12:23 axxo Exp $
 
 inherit java-pkg
 
@@ -27,7 +27,7 @@ src_compile() {
 src_install() {
 	mv ${P}.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 	dodoc CHANGES README
 }
 

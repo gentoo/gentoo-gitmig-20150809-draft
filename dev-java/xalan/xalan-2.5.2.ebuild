@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.2.ebuild,v 1.7 2004/09/10 19:51:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.2.ebuild,v 1.8 2004/10/16 17:40:36 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -51,7 +51,7 @@ src_install () {
 	if use doc ; then
 		dodir /usr/share/doc/${P}
 		dodoc TODO STATUS README LICENSE ISSUES
-		dohtml -r build/docs/*
+		java-pkg_dohtml -r build/docs/*
 	fi
 }
 

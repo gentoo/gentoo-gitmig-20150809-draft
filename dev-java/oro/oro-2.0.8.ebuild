@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.8.ebuild,v 1.6 2004/09/10 19:49:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.8.ebuild,v 1.7 2004/10/16 17:31:33 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="A set of text-processing Java classes that provide Perl5 compatible regular expressions, AWK-like regular expressions, glob expressions, and utility classes for performing substitutions, splits, filtering filenames, etc."
 HOMEPAGE="http://jakarta.apache.org/oro/index.html"
@@ -34,9 +36,9 @@ src_compile() {
 
 src_install() {
 	mv jakarta-oro*.jar oro.jar
-	dojar oro.jar || die "Failed Installing"
+	java-pkg_dojar oro.jar
 	dodoc CHANGES COMPILE CONTRIBUTORS ISSUES LICENSE README STYLE TODO
 	dohtml *.html
 
-	use doc && dohtml -r docs/
+	use doc && java-pkg_dohtml -r docs/
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jimi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/ChangeLog,v 1.2 2004/10/03 21:27:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jimi/ChangeLog,v 1.3 2004/10/16 17:24:11 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jimi-1.0.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> jimi-1.0.ebuild:
   Added ~sparc keyword.

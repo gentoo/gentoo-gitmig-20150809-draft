@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r2.ebuild,v 1.3 2004/08/31 03:50:50 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r2.ebuild,v 1.4 2004/10/16 17:19:25 axxo Exp $
 
 inherit java-pkg
 
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	if use doc ; then
-		dohtml -r www/* || die "Failed to install HTML files"
+		java-pkg_dohtml -r www/* || die "Failed to install HTML files"
 		dodir /usr/share/${PN}/examples
 		cp -R examples ${D}/usr/share/${PN} || die "Failed to copy examples"
 	fi

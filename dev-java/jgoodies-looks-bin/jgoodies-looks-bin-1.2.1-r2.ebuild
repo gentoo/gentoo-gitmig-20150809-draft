@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/jgoodies-looks-bin-1.2.1-r2.ebuild,v 1.2 2004/09/03 01:02:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/jgoodies-looks-bin-1.2.1-r2.ebuild,v 1.3 2004/10/16 17:23:33 axxo Exp $
 
 inherit java-pkg
 
@@ -22,5 +22,5 @@ src_compile() { :; }
 src_install() {
 	java-pkg_dojar looks-${PV}.jar looks-win-${PV}.jar plastic-${PV}.jar
 	dodoc README.html RELEASE-NOTES.txt
-	use doc && dohtml -r docs/*
+	use doc && java-pkg_dohtml -r docs/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.2.ebuild,v 1.3 2004/10/12 20:44:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.2.ebuild,v 1.4 2004/10/16 17:36:44 axxo Exp $
 
 inherit java-pkg
 
@@ -51,5 +51,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar target/library/struts.jar
 	dodoc README STATUS.txt
-	use doc && dohtml -r target/documentation/
+	use doc && java-pkg_dohtml -r target/documentation/
 }

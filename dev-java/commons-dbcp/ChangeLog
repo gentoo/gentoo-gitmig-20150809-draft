@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.14 2004/08/13 21:35:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.15 2004/10/16 17:05:31 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> commons-dbcp-1.2.1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
 *commons-dbcp-1.2.1 (13 Aug 2004)
 

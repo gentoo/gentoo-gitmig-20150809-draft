@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/aterm-java-1.6.ebuild,v 1.5 2004/08/24 03:29:20 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/aterm-java-1.6.ebuild,v 1.6 2004/10/16 16:59:20 axxo Exp $
 
 inherit java-pkg
 
@@ -32,6 +32,6 @@ src_install() {
 	exeinto /usr/bin
 	doexe aterm-java-config
 
-	dohtml -r api
+	java-pkg_dohtml -r api
 	dodoc AUTHORS COPYING INSTALL ChangeLog
 }

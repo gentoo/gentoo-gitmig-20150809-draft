@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.9 2004/09/18 10:36:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.10 2004/10/16 17:07:30 axxo Exp $
 
 inherit java-pkg
 
@@ -38,5 +38,5 @@ src_install() {
 	java-pkg_dojar dist/*.jar
 	dodoc RELEASE-NOTES.txt
 	dohtml DEVELOPERS-GUIDE.html PROPOSAL.html STATUS.html
-	use doc && dohtml -r dist/docs/
+	use doc && java-pkg_dohtml -r dist/docs/
 }

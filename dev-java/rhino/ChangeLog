@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.18 2004/10/16 08:37:47 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.19 2004/10/16 17:34:07 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5_rc5.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   16 Oct 2004; Dylan Carlson <absinthe@gentoo.org> rhino-1.5_rc5.ebuild:
   Stable on amd64.

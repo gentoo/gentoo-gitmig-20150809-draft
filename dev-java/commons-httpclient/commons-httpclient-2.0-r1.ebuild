@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.4 2004/06/24 22:22:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0-r1.ebuild,v 1.5 2004/10/16 17:06:51 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
-	use doc && dohtml -r dist/docs/*
+	use doc && java-pkg_dohtml -r dist/docs/*
 }

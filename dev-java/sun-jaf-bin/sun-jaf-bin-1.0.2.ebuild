@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/sun-jaf-bin-1.0.2.ebuild,v 1.4 2004/07/14 13:18:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaf-bin/sun-jaf-bin-1.0.2.ebuild,v 1.5 2004/10/16 17:37:43 axxo Exp $
 
 inherit java-pkg
 
@@ -54,6 +54,6 @@ src_compile() {
 
 src_install() {
 	dodoc RELNOTES.txt README.txt LICENSE.txt
-	use doc && dohtml -r docs/
+	use doc && java-pkg_dohtml -r docs/
 	java-pkg_dojar activation.jar
 }

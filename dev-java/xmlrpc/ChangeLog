@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.3 2004/08/30 18:22:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.4 2004/10/16 17:41:35 axxo Exp $
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xmlrpc-1.2_beta1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
 
   30 Aug 2004; Chris Aniszczyk <zx@gentoo.org> xmlrpc-1.2_beta1.ebuild:
   Marking stable x86

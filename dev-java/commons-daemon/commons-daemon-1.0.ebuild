@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.4 2004/07/02 04:19:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.5 2004/10/16 17:05:10 axxo Exp $
 
 inherit java-pkg
 
@@ -33,5 +33,5 @@ src_install () {
 	java-pkg_dojar dist/${PN}.jar || die "Unable to install"
 	dodoc README RELEASE-NOTES.txt *.html
 	cp -R src/samples ${D}/usr/share/doc/${P}/
-	use doc && dohtml -r dist/docs/*
+	use doc && java-pkg_dohtml -r dist/docs/*
 }

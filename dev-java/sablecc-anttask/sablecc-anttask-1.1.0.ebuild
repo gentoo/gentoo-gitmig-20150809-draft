@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/sablecc-anttask-1.1.0.ebuild,v 1.1 2004/09/19 17:09:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc-anttask/sablecc-anttask-1.1.0.ebuild,v 1.2 2004/10/16 17:34:26 axxo Exp $
 
 inherit java-pkg
 
@@ -25,6 +25,6 @@ src_install() {
 	java-pkg_dojar lib/${PN}.jar
 	dodir /usr/share/ant-core/lib/
 	dosym /usr/share/${PN}/lib/${PN}.jar /usr/share/ant-core/lib/
-	dohtml -r doc
+	java-pkg_dohtml -r doc
 	dodoc AUTHORS ChangeLog COPYING-LESSER LICENSE README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.0.ebuild,v 1.1 2004/09/19 14:51:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.0.ebuild,v 1.2 2004/10/16 17:16:34 axxo Exp $
 
 inherit java-pkg
 
@@ -36,5 +36,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar ${PN}.jar
 
-	use doc && dohtml -r readme.html docs/*
+	use doc && java-pkg_dohtml -r readme.html docs/*
 }
