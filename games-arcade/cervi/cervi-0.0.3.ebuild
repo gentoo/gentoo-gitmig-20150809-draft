@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.4 2004/06/24 22:02:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.5 2004/12/21 13:30:56 josejx Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://tomi.nomi.cz/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
