@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-8.8.25.ebuild,v 1.1 2005/01/18 22:16:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-8.8.25.ebuild,v 1.2 2005/01/21 00:10:51 lu_zero Exp $
 
 IUSE="qt"
 
-inherit eutils rpm linux-info
+inherit eutils rpm linux-info linux-mod
 
 DESCRIPTION="Ati precompiled drivers extra application"
 HOMEPAGE="http://www.ati.com"
@@ -42,7 +42,7 @@ src_unpack() {
 		${WORKDIR}/usr/src/ATI/fglrx_panel_sources.tgz \
 		|| die "Failed to unpack fglrx_panel_sources.tgz!"
 	cd ${WORKDIR}/extra/fglrx_panel
-#	epatch ${FILESDIR}/${P}-improvements.patch.bz2
+	epatch ${FILESDIR}/${P}-improvements.patch.bz2
 	sed -e "s:"${OLDBIN}":"${ATIBIN}":"\
 		-i ${WORKDIR}/extra/fglrx_panel/Makefile
 
