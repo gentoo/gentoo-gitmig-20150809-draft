@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.2 2004/09/30 19:38:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.3 2004/10/05 06:43:50 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -20,9 +20,9 @@ RDEPEND="virtual/libc
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
-	cjk? ( media-fonts/arphicfonts
-		media-fonts/kochi-substitute
-		media-fonts/baekmuk-fonts )
+	cjk? ( >=media-fonts/arphicfonts-0.1-r2
+		>=media-fonts/kochi-substitute-20030809-r2
+		>=media-fonts/baekmuk-fonts-2.2 )
 	cups? ( net-print/cups )
 	!virtual/ghostscript
 	media-libs/fontconfig
@@ -41,7 +41,7 @@ src_unpack() {
 	cd ${S}
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs7.05.6-cjk.diff.bz2
+		epatch ${FILESDIR}/gs${PV}-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 

@@ -1,6 +1,15 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.72 2004/10/04 22:53:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.73 2004/10/05 06:43:50 usata Exp $
+
+  05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/gs7.07.1-cjk.diff.bz2, ghostscript-7.05.6-r1.ebuild,
+  ghostscript-7.05.6.ebuild, ghostscript-7.07.1-r1.ebuild,
+  ghostscript-7.07.1-r2.ebuild, ghostscript-7.07.1-r3.ebuild,
+  ghostscript-7.07.1-r4.ebuild, ghostscript-7.07.1-r5.ebuild,
+  ghostscript-7.07.1-r6.ebuild:
+  Added revision restriction to cjk fonts (Gentoo standard font path has been
+  changed to /usr/share/fonts).
 
   05 Oct 2004; Luca Barbato <lu_zero@gentoo.org> :
   fix for bug #66335, thanks to Steph L <milter@free.fr> for the report and the

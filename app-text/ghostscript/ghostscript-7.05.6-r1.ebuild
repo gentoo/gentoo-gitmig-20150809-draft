@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.9 2004/10/04 22:53:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r1.ebuild,v 1.10 2004/10/05 06:43:50 usata Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ DEPEND="virtual/libc
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
-	cjk? ( media-fonts/arphicfonts
-		media-fonts/kochi-substitute
-		media-fonts/baekmuk-fonts )
+	cjk? ( <=media-fonts/arphicfonts-0.1-r1
+		<=media-fonts/kochi-substitute-20030809-r2
+		<=media-fonts/baekmuk-fonts-2.1-r1 )
 	cups? ( net-print/cups )
 	!virtual/ghostscript
 	media-fonts/gnu-gs-fonts-std"
