@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.47 2004/09/13 15:40:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.48 2004/09/13 22:44:54 solar Exp $
+
+  13 Sep 2004; <solar@gentoo.org> files/heimdal-kadmind,
+  files/heimdal-kpasswdd, heimdal-0.6.3.ebuild:
+  security version bump. Przemyslaw Frasunek has reported some vulnerabilities
+  in Heimdal ftpd, which potentially can be exploited by malicious users to gain
+  escalated privileges or compromise a vulnerable system. The vulnerabilities
+  are caused due to various race condition errors within the out-of-band signal
+  handling code. Successful exploitation may allow execution of FTP commands or
+  arbitrary code with the privileges of the ftpd process. Security bug #61412
 
 *heimdal-0.6.3 (14 Sep 2004)
 

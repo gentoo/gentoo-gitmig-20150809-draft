@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3.ebuild,v 1.1 2004/09/13 15:40:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3.ebuild,v 1.2 2004/09/13 22:44:54 solar Exp $
 
-inherit libtool eutils
+inherit libtool eutils flag-o-matic
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
@@ -10,8 +10,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-*"
-#KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64 ~hppa ~mips"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64 ~hppa ~mips"
 IUSE="ssl berkdb ipv6 krb4 ldap"
 PROVIDE="virtual/krb5"
 
@@ -53,9 +52,9 @@ src_compile() {
 		&& myconf="${myconf} --with-krb4 --with-krb4-config=/usr/athena/bin/krb4-config" \
 		|| myconf="${myconf} --without-krb4"
 
-	use ldap && myconf="${myconf} --with-open-ldap=/usr"
+	use ldap && myconf="${myconf} --with-openldap=/usr"
 
-	append-ldflags -Wl,-z
+	append-ldflags -Wl,-z,now
 	econf ${myconf} || die "econf failed"
 	emake		|| die
 
