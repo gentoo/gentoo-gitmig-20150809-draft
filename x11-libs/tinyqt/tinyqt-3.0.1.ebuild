@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.1.ebuild,v 1.3 2002/02/22 20:31:16 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tinyqt/tinyqt-3.0.1.ebuild,v 1.4 2002/02/22 20:31:41 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
 
-DESCRIPTION="Stripped down version of qt ${PV} for commandline development"
+DESCRIPTION="Stripped down version of qt ${PV} for console development"
 SLOT="3"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
