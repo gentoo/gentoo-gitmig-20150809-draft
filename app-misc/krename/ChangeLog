@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.22 2004/02/29 17:19:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.23 2004/03/14 22:36:42 absinthe Exp $
+
+  14 Mar 2004; Dylan Carlson <absinthe@gentoo.org> krename-2.8.5.ebuild:
+  Added amd64 to KEYWORDS.
 
   22 Feb 2004; David Holm <dholm@gentoo.org> krename-2.8.5.ebuild:
   Added to ~ppc.
