@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.11 2003/02/24 23:43:09 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.12 2003/02/26 22:41:29 zwelch Exp $
+
+*apcupsd-3.10.5-r1 (26 Feb 2003)
+
+  26 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5-r1.ebuild,
+  files/3.10.5/apache.conf, files/3.10.5/init.patch,
+  files/3.10.5/restart.patch:
+  Add --enable-oldnet, fix restart race, add init script depend, add
+  apache add-on configuration file; fixes bugs 9942 and 16392
 
 *apcupsd-3.10.5 (23 Feb 2003)
 
