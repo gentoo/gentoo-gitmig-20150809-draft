@@ -25,3 +25,4 @@ move dev-python/PyXML-py21 dev-python/pyxml-py21
 move dev-python/ScientificPython dev-python/scientificpython
 move dev-python/PyOpenGL dev-python/pyopengl
 move app-gnustep/affiche gnustep-apps/affiche
+move app-gnustep/easydiff gnustep-apps/easydiff
