@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.15 2004/10/04 21:39:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.16 2004/12/15 19:40:59 wolf31o2 Exp $
+
+*squashfs-tools-2.1_p2 (15 Dec 2004)
+
+  15 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -squashfs-tools-1.3.ebuild, -squashfs-tools-2.0.ebuild,
+  -squashfs-tools-2.0_alpha.ebuild, squashfs-tools-2.0_p2.ebuild,
+  +squashfs-tools-2.1_p2.ebuild:
+  Version bumped to 2.1_p2 and closing bug #74509.
 
   24 Sep 2004; Tom Gall <tgall@gentoo.org> squashfs-tools-2.0.ebuild:
   stable on ppc64
