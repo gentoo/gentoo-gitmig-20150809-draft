@@ -1,0 +1,7 @@
+MD5 ced95cbc95521a341635b22cbbfc0c92 metadata.xml 331
+MD5 105a5e374844f9c4b92fcab7e875b353 ccxstream-1.0.15.ebuild 606
+MD5 40d18656d10c16489a80183e4a1ef21b ChangeLog 491
+MD5 97b69dad34ff8cf74407cfd6acdcf1a6 files/ccxstream-termcap.patch 232
+MD5 73c83b29f34c5ee6bfeb874e05afd201 files/ccxstream.confd 1228
+MD5 fe3f207263e89aa78ad98ebd24819254 files/ccxstream.initd 463
+MD5 4321e5f911d04c96005128ccf78c98f4 files/digest-ccxstream-1.0.15 67

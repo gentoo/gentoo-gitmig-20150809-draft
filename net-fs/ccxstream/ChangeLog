@@ -1,0 +1,11 @@
+# ChangeLog for net-fs/ccxstream
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ccxstream/ChangeLog,v 1.1 2004/07/23 11:58:18 chrb Exp $
+
+*ccxstream-1.0.15 (23 Jul 2004)
+
+  23 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +files/ccxstream-termcap.patch, +files/ccxstream.confd,
+  +files/ccxstream.initd, +ccxstream-1.0.15.ebuild:
+  This package was submitted by Mark Dierolf and Marvin Tapessur in bug #36574
+
