@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.29 2005/02/27 17:52:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.30 2005/03/07 17:28:19 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -113,6 +113,9 @@ if [ "$KMNAME" == "kdebase" ]; then
 	IUSE="$IUSE java"
 	DEPEND="$DEPEND java? ( || ( virtual/jdk virtual/jre ) )"
 	RDEPEND="$RDEPEND java? ( || ( virtual/jdk virtual/jre ) )"
+	
+	# bug 82032: the configure check for java is unnecessary as well as broken
+	myconf="$myconf --without-java"
 fi
 
 # TODO FIX ends
