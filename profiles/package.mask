@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (15 Oct 2002)
+# new version has some issues with gcc-3.2
+=dev-lisp/gcl-2.4.3
+
 # <hanno@gentoo.org> (15 Oct 2002)
 # Masked, because new versions have real version numbers
 =app-misc/sonypid-20010123
