@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.1 2002/04/12 23:26:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.2 2002/04/13 00:10:37 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Eye of GNOME"
@@ -15,6 +15,7 @@ RDEPEND="virtual/glibc
 	>=gnome-base/libglade-0.17
 	>=gnome-base/oaf-0.6.2
 	>=media-libs/gdk-pixbuf-0.16.0
+	=dev-libs/glib-1.2*
 	jpeg? ( media-libs/jpeg )
 	png? ( 	media-libs/libpng 
 			sys-libs/zlib )"
