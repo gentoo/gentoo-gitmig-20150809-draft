@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.54 2004/06/24 21:42:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.55 2004/07/08 19:12:02 eradicator Exp $
+
+*webmin-1.150-r2 (08 Jul 2004)
+
+  08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +webmin-1.150-r2.ebuild:
+  Added webmin-minimal USE option.  Thanks to Erich Roncarolo
+  <erich-roncarolo@users.sf.net> in bug #56385.
 
 *webmin-1.150-r1 (16 Jun 2004)
 
