@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.31.ebuild,v 1.5 2005/03/09 01:19:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.31.ebuild,v 1.6 2005/03/23 16:18:53 seemant Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-apps/sed-4
 	ssl? ( dev-libs/openssl )
 	X? ( virtual/x11 )
 	gnome? ( gnome-base/gnome-libs )
-	mozilla? ( net-www/mozilla )
+	mozilla? ( www-client/mozilla )
 	socks5? ( net-misc/tsocks )"
 
 src_compile() {
