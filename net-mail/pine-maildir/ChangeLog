@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/pine-maildir
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.7 2003/05/26 21:21:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.8 2003/06/09 16:25:45 raker Exp $
+
+*pine-maildir-4.56 (09 Jun 2003)
+
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> pine-maildir-4.56.ebuild,
+  files/digest-pine-maildir-4.56:
+  Version bump.  Removed the unneeded bogus-whitespace and passwd 
+  patches.
 
 *pine-maildir-4.53 (26 May 2003)
 
