@@ -1,0 +1,7 @@
+MD5 21769341d6d8a265882604d4be3dd0de ChangeLog 1356
+MD5 6b73ac3743382060dcb87ad719bacf64 ruby-gdkimlib-0.27.ebuild 762
+MD5 41efc05fa91d555b9ca048e1e76c9499 ruby-gdkimlib-0.29.ebuild 763
+MD5 483b8baabc00f94efdd7160b3e993d0c ruby-gdkimlib-0.30.ebuild 780
+MD5 ffcb672a96e98b7778db8aa0886dc9ec files/digest-ruby-gdkimlib-0.27 71
+MD5 2ab00a8d832b5e206dfa9cc899c6d4e1 files/digest-ruby-gdkimlib-0.29 71
+MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-gdkimlib-0.30 70
