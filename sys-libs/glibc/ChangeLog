@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.50 2003/03/21 09:58:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.51 2003/03/30 17:04:08 azarah Exp $
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2.ebuild :
+  Update NPTL version to 0.29.  As it is not used by many (or I cannot
+  imagine it), and with the errno problems, I will rather not bump the
+  revision.  Note that latest version is 0.32, but that (as well as 0.30
+  and up) needs glibc-2.3.3 snapshot.
 
 *glibc-2.3.1-r4 (21 Mar 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.2 2003/03/11 11:34:14 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2.ebuild,v 1.3 2003/03/30 17:04:08 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -34,7 +34,7 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
-NPTL_VER="0.28"
+NPTL_VER="0.29"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"

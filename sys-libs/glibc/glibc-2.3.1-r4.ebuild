@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.2 2003/03/25 08:19:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.3 2003/03/30 17:04:08 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -80,8 +80,8 @@ src_unpack() {
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.gz || die
 	
-	# Security
-        # Fix for http://www.cert.org/advisories/CA-2003-10.html
+	# Security Update
+	# Fix for http://www.cert.org/advisories/CA-2003-10.html
 	epatch ${FILESDIR}/${PN}-xdr_security.patch
 
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
