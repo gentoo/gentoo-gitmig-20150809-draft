@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.1.ebuild,v 1.9 2004/04/27 21:27:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.1.ebuild,v 1.10 2004/06/03 23:41:21 agriffis Exp $
 
 inherit kde-dist eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 	use pam \
 		&& myconf="$myconf --with-pam=yes" \
 		|| myconf="$myconf --with-pam=no --with-shadow"
-	if [[ `use java` ]]; then
+	if use java; then
 		if [[ `has_version virtual/jdk` ]]; then
 			myconf="$myconf --with-java=$(java-config --jdk-home)"
 		else

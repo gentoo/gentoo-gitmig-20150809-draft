@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.5.ebuild,v 1.4 2004/04/23 00:23:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.5.ebuild,v 1.5 2004/06/03 23:46:20 agriffis Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist
 
@@ -34,7 +34,7 @@ src_unpack()
 {
 	kde_src_unpack
 
-	if [ -z "`use mozilla`" ]; then
+	if ! use mozilla; then
 	# disable mozilla bindings/xpart, because configure doesn't seem to do so
 	# even when it doesn't detect the mozilla headers
 	cd ${S}/xparts

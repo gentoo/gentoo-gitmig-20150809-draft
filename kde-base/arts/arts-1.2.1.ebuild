@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.11 2004/05/05 00:34:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.12 2004/06/03 23:39:49 agriffis Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.2
@@ -79,7 +79,7 @@ CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/48kdepaths-3.2.1 # numbe
 }
 
 pkg_postinst() {
-	if [ ! `use artswrappersuid` ] ; then
+	if ! use artswrappersuid ; then
 		einfo "Run chmod +s ${PREFIX}/bin/artswrapper to let artsd use realtime priority"
 		einfo "and so avoid possible skips in sound. However, on untrusted systems this"
 		einfo "creates the possibility of a DoS attack that'll use 100% cpu at realtime"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.14 2004/04/27 21:31:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.15 2004/06/03 23:43:17 agriffis Exp $
 
 inherit kde eutils
 
@@ -68,7 +68,7 @@ src_install() {
 	kde_src_install
 	dohtml *.html
 
-	if [ `use doc` ]; then
+	if use doc; then
 		einfo "Copying API documentation..."
 		dodir ${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs
 		cp -r ${S}/apidocs/* ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
@@ -78,7 +78,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use doc` ]; then
+	if use doc; then
 		rm $KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
 		ln -sf $KDEDIR/share/doc/HTML/en/common \
 			$KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
