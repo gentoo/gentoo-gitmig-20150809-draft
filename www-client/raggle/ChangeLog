@@ -1,6 +1,9 @@
 # ChangeLog for www-client/raggle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.1 2004/09/08 14:03:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.2 2004/09/11 09:42:01 slarti Exp $
+
+  11 Sep 2004; Tom Martin <slarti@gentoo.org> raggle-0.3.1.ebuild:
+  Marked ~amd64.
 
 *raggle-0.3.0 (08 Sep 2004)
 
