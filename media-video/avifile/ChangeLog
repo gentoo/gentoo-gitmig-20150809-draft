@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.27 2002/12/13 22:39:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.28 2003/01/16 00:50:01 raker Exp $
+
+*avifile-0.7.25-20030114 (15 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> avifile-0.7.25.20030114.ebuild,
+  files/digest-avifile-0.7.25.20030114 :
+  Version bump.  subtitles should be working now.
 
 *avifile-0.7.22.20021129 (13 Dec 2002)
 
