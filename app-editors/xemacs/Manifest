@@ -1,16 +1,26 @@
-MD5 829cde279436b24101ccb7ad50517964 xemacs-21.4.15.ebuild 5100
-MD5 cfac707746cf85515a6d04bcb2b11b51 xemacs-21.4.9.ebuild 4215
-MD5 26da773800273cca9b4f447275fd0a08 xemacs-21.4.12.ebuild 4988
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a5493496ad0889faadcdc436e3c2675 ChangeLog 8293
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
-MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
-MD5 39fc9657b72b09c8b91f52ee50758ad2 files/xemacs-21.4.12-ppc.diff 1075
-MD5 94beef92edcaf12edef657556fbb7a7e files/xemacs-21.4.9-ppc.diff 1032
-MD5 6d3780dc77d3dd7c017d8864d2f0b07d files/digest-xemacs-21.4.12 130
-MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15 130
-MD5 678239bc0954d838f5a9c53a6570c850 files/xemacs-21.4.9-ppc-glibc-2.3.x.diff 1112
+MD5 1e04fcfa5dd3d42095370230eb3d40d7 xemacs-21.4.15.ebuild 5058
+MD5 e575bd3c0a8ac4756e3bb8b118c525ef xemacs-21.4.12.ebuild 4944
+MD5 cd336f54fb85ddaeaf1a46bda0909ddb xemacs-21.4.9.ebuild 4175
 MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
-MD5 ace9b77c4d23c9500c1e81a3606545f8 files/quick-fix.patch 393
-MD5 27a8dcab7441389fc05c3406096bb8be files/emodules.info-gentoo.patch 479
+MD5 6a3d383a050855607a702a56c850ff1a files/digest-xemacs-21.4.15 130
+MD5 6d3780dc77d3dd7c017d8864d2f0b07d files/digest-xemacs-21.4.12 130
 MD5 892c698f9b7d3ca42a83df34518b0946 files/digest-xemacs-21.4.9 273
+MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
+MD5 27a8dcab7441389fc05c3406096bb8be files/emodules.info-gentoo.patch 479
+MD5 ace9b77c4d23c9500c1e81a3606545f8 files/quick-fix.patch 393
+MD5 39fc9657b72b09c8b91f52ee50758ad2 files/xemacs-21.4.12-ppc.diff 1075
 MD5 94beef92edcaf12edef657556fbb7a7e files/xemacs-21.4.8-ppc.diff 1032
+MD5 678239bc0954d838f5a9c53a6570c850 files/xemacs-21.4.9-ppc-glibc-2.3.x.diff 1112
+MD5 94beef92edcaf12edef657556fbb7a7e files/xemacs-21.4.9-ppc.diff 1032
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30hsHTu7gpaalycRAiecAJ99q1Cacf/8NJMm2xu+TUZ9uD6jDQCg2Iqs
+HebbLSLlNY5bvQ5VLGw0BoM=
+=kFA8
+-----END PGP SIGNATURE-----

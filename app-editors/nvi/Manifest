@@ -1,10 +1,20 @@
-MD5 41f7f2238d00467595fcbc65a888391e nvi-1.81.5-r2.ebuild 1112
-MD5 54a9fe55700ec2bc25e852b345e30e2f nvi-1.81.5.ebuild 705
-MD5 9152ed59aad46e1db70d407e0d1c797b nvi-1.81.5-r1.ebuild 983
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e8b37fbc9a9025919a9fe2532c494d58 ChangeLog 2805
 MD5 7c5f5de89235e5535151b8c98f3a9e22 nvi-1.81.4.ebuild 676
+MD5 0c2cae41e9c0b3af8a53d87348ed72cf nvi-1.81.5-r1.ebuild 986
+MD5 f3a2cf4a09be6abea093d51a922bf7a8 nvi-1.81.5-r2.ebuild 1115
+MD5 54a9fe55700ec2bc25e852b345e30e2f nvi-1.81.5.ebuild 705
 MD5 47f5a61b93feb15280fbaf8deae78ea5 files/digest-nvi-1.81.4 63
 MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5 63
 MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5-r1 63
 MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5-r2 63
 MD5 e4c11bab15aaee62f61cbe103c890cb9 files/nvi-1.81.5-tcsetattr.patch 565
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30ebHTu7gpaalycRArIbAKDRpeRHLBKJbD5twg2Gvnn0dnzmNACgsidv
+hk+fqt7xlwtmWeYBIzQdrDw=
+=uapf
+-----END PGP SIGNATURE-----

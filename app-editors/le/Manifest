@@ -1,3 +1,13 @@
-MD5 4e7777a92be763fa1f0f7af81c2c837a le-1.9.2.ebuild 637
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7fc76f65a51a106a320021e9f34795f4 ChangeLog 265
+MD5 1efa1e0f3f83ec42fdb6b670bc5fed1e le-1.9.2.ebuild 634
 MD5 da1b769e71e7ce9683c7c3519a03d6cd files/digest-le-1.9.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30cwHTu7gpaalycRAoscAJ9cOXlAuI77D8/ekf+gG2eFVfTlHACg8kg8
++mTB/EVplrGNMIpSckKcz3E=
+=ULBY
+-----END PGP SIGNATURE-----

@@ -1,7 +1,17 @@
-MD5 9ef51040e3e79a3915358ae15045f3f7 xemacs-gtk-21.4.8-r2.ebuild 3598
-MD5 889c15e6b9aed79e2d7f6f75308a6ac6 xemacs-gtk-21.4.8-r3.ebuild 3590
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c29fddb63c0ead6e80e98dd1baa68ae1 ChangeLog 1892
-MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
+MD5 06e48be76149bea21ae82c4e48c8045c xemacs-gtk-21.4.8-r2.ebuild 3587
+MD5 92560a46c90b56b889f35d5dbd608000 xemacs-gtk-21.4.8-r3.ebuild 3581
 MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
 MD5 1aded704f3bee894201ed229a1438948 files/digest-xemacs-gtk-21.4.8-r2 273
 MD5 cc9ed40a631878d1c97fda74557f5a0a files/digest-xemacs-gtk-21.4.8-r3 273
+MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30iBHTu7gpaalycRAry4AKDM2MH4ThbyXtsCczig4f8cLcoghgCg5N0j
+rLtt/7x5Qm4wddXIW4i4L7M=
+=IYQl
+-----END PGP SIGNATURE-----

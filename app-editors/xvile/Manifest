@@ -1,5 +1,15 @@
-MD5 65cc4e14538d1a44d206ef1eb0adbffb xvile-9.3h.ebuild 1504
-MD5 08c8cffdbd2226ec1fd70705e4a2b2b1 xvile-9.4d.ebuild 1248
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d758710ca6eb8011a427dea483e3b903 ChangeLog 1567
-MD5 55768ae3bd94b5c67efdb12a1c969702 files/digest-xvile-9.3h 551
+MD5 ba35e449200cfa43330408b774d581a7 xvile-9.3h.ebuild 1502
+MD5 08c8cffdbd2226ec1fd70705e4a2b2b1 xvile-9.4d.ebuild 1248
 MD5 cb5eef1dde0145c3a3daee63b4388131 files/digest-xvile-9.4d 305
+MD5 55768ae3bd94b5c67efdb12a1c969702 files/digest-xvile-9.3h 551
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA30iZHTu7gpaalycRAuBwAJ0aL3kPyySYuSXvM8HdQhtDz2qUOQCghtY4
+Yt+G6yXphPY33kEkh9qXigg=
+=R7HE
+-----END PGP SIGNATURE-----
