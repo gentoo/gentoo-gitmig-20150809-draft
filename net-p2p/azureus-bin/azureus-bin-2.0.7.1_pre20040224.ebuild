@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.7.1_pre20040224.ebuild,v 1.1 2004/03/05 07:19:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.7.1_pre20040224.ebuild,v 1.2 2004/03/14 01:32:19 eradicator Exp $
 
 inherit eutils
 
@@ -30,8 +30,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="gtk kde"
 
-DEPEND="kde? ( =x11-libs/qt-3*
-		=kde-base/kdelibs-3* )"
+DEPEND="kde? ( >=x11-libs/qt-3*
+		>=kde-base/kdelibs-3* )"
 
 RDEPEND="${DEPEND}
 	dev-java/commons-cli

@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.4 2004/03/05 07:19:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.5 2004/03/14 01:32:19 eradicator Exp $
+
+*azureus-bin-2.0.8.0a (13 Mar 2004)
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  azureus-bin-2.0.7.1_pre20040224.ebuild, azureus-bin-2.0.8.0a.ebuild,
+  files/azureus-bin-2.0.8.0a-gentoo.sh:
+  Version bump. systray4jdaemon was removed upstream. We now RDEPEND on java
+  classes rather than using the ones provided by azurues.
 
 *azureus-bin-2.0.7.1_pre20040224 (04 Mar 2004)
 
