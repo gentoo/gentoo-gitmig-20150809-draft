@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3468 2005/01/09 13:28:43 dholm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3469 2005/01/09 18:45:44 ribosome Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <ribosome@gentoo.org> (09 Jan 2005)
+# Beta release
+=sci-biology/vienna-rna-1.5_beta
 
 # <taviso@gentoo.org> (08 Jan 2005)
 # Package is now available via cpan, users should
