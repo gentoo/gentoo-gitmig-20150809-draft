@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.4 2002/07/26 05:08:05 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.5 2002/08/26 21:17:45 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightment Data Base"
@@ -10,8 +10,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc"
 
-RDEPEND="virtual/glibc
-	 =x11-libs/gtk+-1.2*"
+RDEPEND="virtual/glibc"
 
 DEPEND="$RDEPEND
 	sys-apps/which"
