@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.19 2004/11/14 08:49:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.20 2004/12/05 00:45:01 genone Exp $
+
+  05 Dec 2004; Marius Mauch <genone@gentoo.org> files/Makefile.am-1.0_rc2:
+  Removing the stupid symlink part from the Makefile.
 
 *gambas-1.0_rc2 (14 Nov 2004)
 
