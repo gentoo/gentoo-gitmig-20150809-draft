@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.58 2003/06/10 17:30:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.59 2003/07/01 11:51:43 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -246,6 +246,7 @@ set-qtdir() {
 	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
 	# a .qtrc.lock file in that directory. It's easiest to allow them to do so.
 	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
+	addpredict "$QTDIR/etc/settings"
 
 }
 
