@@ -1,0 +1,18 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/files/msfweb.initd,v 1.1 2005/02/25 11:09:56 ka0ttic Exp $
+
+start() {
+	ebegin "Starting msfweb"
+	start-stop-daemon --start --quiet --exec /usr/bin/msfweb >/dev/null 2>&1 &
+	echo $! > /var/run/msfweb.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping msfweb"
+	start-stop-daemon --stop --quiet --pidfile /var/run/msfweb.pid
+	rm -f /var/run/msfweb.pid
+	eend $?
+}
