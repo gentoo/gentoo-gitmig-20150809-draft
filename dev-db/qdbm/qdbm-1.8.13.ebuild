@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.13.ebuild,v 1.1 2004/07/25 07:43:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.13.ebuild,v 1.2 2004/07/30 17:22:55 matsuu Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 
 DEPEND="java? ( virtual/jdk )
