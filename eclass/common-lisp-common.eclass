@@ -1,15 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.2 2004/01/28 09:33:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.3 2004/02/12 15:14:03 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
 # Sundy code common to many Common Lisp related ebuilds.
 
+# Some handy constants
+
+CLFASLROOT=/usr/lib/common-lisp/
+CLSOURCEROOT=/usr/share/common-lisp/source/
+CLSYSTEMROOT=/usr/share/common-lisp/systems/
+
+# Many of our Common Lisp ebuilds are either inspired by, or actually
+# use packages and files from the Debian project's archives.
+
 do-debian-credits() {
 	docinto debian
 	for i in copyright README.Debian changelog; do
-		dodoc ${S}/debian/${i}
+		# be silent, since all files are not always present
+		dodoc ${S}/debian/${i} &>/dev/null || true
 	done
 	docinto .
 }
