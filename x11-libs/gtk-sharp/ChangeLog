@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk-sharp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.7 2003/07/09 17:14:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.8 2003/07/25 13:14:11 tberman Exp $
+
+  25 Jul 2003; Todd Berman <tberman@gentoo.org> gtk-sharp-0.10.ebuild,
+  gtk-sharp-0.8.ebuild, gtk-sharp-0.9.ebuild:
+  changing mono depend because of lang->dotnet move.
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtk-sharp-0.10.ebuild,
   gtk-sharp-0.8.ebuild, gtk-sharp-0.9.ebuild:
