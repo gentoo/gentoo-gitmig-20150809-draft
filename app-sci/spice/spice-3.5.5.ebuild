@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/spice-3.5.5.ebuild,v 1.6 2003/04/29 06:17:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/spice-3.5.5.ebuild,v 1.7 2003/05/07 18:28:33 george Exp $
 
 IUSE=""
 
@@ -13,7 +13,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="sys-libs/ncurses"
+DEPEND="sys-libs/ncurses
+	x11-base/xfree"
 
 S=${WORKDIR}/${MY_P}
 
