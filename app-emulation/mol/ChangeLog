@@ -1,11 +1,16 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.31 2004/01/30 02:23:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.32 2004/03/07 14:45:11 pylon Exp $
+
+*mol-0.9.70_rc2-r1 (07 Mar 2004)
+
+  07 Mar 2004; Lars Weiler <pylon@gentoo.org> :mol-0.9.70_rc2-r1.ebuild
+  Some updates from upstream (e.g. MOL acceleration for 10.3). Furthermore fixes
+  for the iBook G4.
 
   30 Jan 2004; Lars Weiler <pylon@gentoo.org> mol-0.9.70_rc2.ebuild:
-  Notify the user to set the use-flag[D[D[Do[Dr[Dlag "fbcon" if mol should
-  be installed with support on a virtual terminal. Otherwise molvconfig would
-  not be installed.
+  Notify the user to set the use-flag "fbcon" if mol should be installed with
+  support on a virtual terminal. Otherwise molvconfig would not be installed.
 
 *mol-0.9.70_rc2 (26 Jan 2004)
 
