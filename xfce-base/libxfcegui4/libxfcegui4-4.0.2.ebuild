@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.0.2.ebuild,v 1.3 2004/04/17 21:17:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.0.2.ebuild,v 1.4 2004/04/21 02:58:58 agriffis Exp $
 
 IUSE="xinerama X"
 DESCRIPTION="Libraries for XFCE4"

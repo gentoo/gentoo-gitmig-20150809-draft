@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.2.ebuild,v 1.2 2004/04/17 21:17:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.2.ebuild,v 1.3 2004/04/21 03:04:33 agriffis Exp $
 
 IUSE="X"
 DESCRIPTION="Xfce4 desktop"
