@@ -19,5 +19,5 @@ move x11-misc/x11fonts-jmk media-fonts/x11fonts-jmk
 move x11-misc/zh-kcfonts media-fonts/zh-kcfonts
 move app-text/freefonts media-fonts/freefonts
 move app-text/gnu-gs-fonts-other media-fonts/gnu-gs-fonts-other
-move app-text/gnu-gs-fonts-std media-fonts/gnu-gs-fonts/std
+move app-text/gnu-gs-fonts-std media-fonts/gnu-gs-fonts-std
 move app-text/sharefonts media-fonts/sharefonts
