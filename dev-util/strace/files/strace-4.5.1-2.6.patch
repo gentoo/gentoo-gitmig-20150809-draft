@@ -1,8 +1,8 @@
-diff -ur strace-4.5.1/mem.c strace-4.5.1-plasmaroo/mem.c
+diff -ur strace-4.5.1/mem.c strace-4.5.1.plasmaroo/mem.c
 --- strace-4.5.1/mem.c	2003-09-26 00:06:04.000000000 +0100
-+++ strace-4.5.1-plasmaroo/mem.c	2003-12-25 00:32:03.000000000 +0000
-@@ -32,15 +32,16 @@
-  *	$Id: strace-4.5.1-2.6.patch,v 1.1 2003/12/25 00:42:49 plasmaroo Exp $
++++ strace-4.5.1.plasmaroo/mem.c	2003-12-30 23:49:42.000000000 +0000
+@@ -32,15 +32,19 @@
+  *	$Id: strace-4.5.1-2.6.patch,v 1.2 2003/12/30 23:56:53 plasmaroo Exp $
   */
  
 -#include "defs.h"
@@ -18,97 +18,30 @@ diff -ur strace-4.5.1/mem.c strace-4.5.1-plasmaroo/mem.c
 -#include <asm/ldt.h>
 +	#include <asm/ldt.h>
 +	#include <linux/version.h>
++	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47)
++		#define modify_ldt_ldt_s user_desc
++	#endif
  #endif
  #if defined(LINUX) && defined(SH64)
  #include <asm/page.h>	    /* for PAGE_SHIFT */
-@@ -539,9 +540,11 @@
- }
- 
- #if defined(LINUX) && defined(__i386__)
--void
--print_ldt_entry (ldt_entry)
--struct modify_ldt_ldt_s *ldt_entry;
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+	void print_ldt_entry (ldt_entry) struct user_desc *ldt_entry;
-+#else
-+	void print_ldt_entry (ldt_entry) struct modify_ldt_ldt_s *ldt_entry;
-+#endif
- {
- 	tprintf("base_addr:%#08lx, "
- 		"limit:%d, "
-@@ -566,10 +569,19 @@
- struct tcb *tcp;
- {
- 	if (entering(tcp)) {
--		struct modify_ldt_ldt_s copy;
-+		#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+			struct user_desc copy;
-+		#else
-+			struct modify_ldt_ldt_s copy;
-+		#endif
- 		tprintf("%ld", tcp->u_arg[0]);
- 		if (tcp->u_arg[1] == 0
--				|| tcp->u_arg[2] != sizeof (struct modify_ldt_ldt_s)
-+				|| tcp->u_arg[2] != sizeof 
-+					#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+						(struct user_desc)
-+					#else
-+						(struct modify_ldt_ldt_s)
-+					#endif
- 				|| umove(tcp, tcp->u_arg[1], &copy) == -1)
- 			tprintf(", %lx", tcp->u_arg[1]);
- 		else {
-@@ -589,7 +601,11 @@
- sys_set_thread_area(tcp)
- struct tcb *tcp;
- {
--	struct modify_ldt_ldt_s copy;
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+		struct user_desc copy;
-+	#else
-+		struct modify_ldt_ldt_s copy;
-+	#endif	
- 	if (entering(tcp)) {
- 		if (umove(tcp, tcp->u_arg[0], &copy) != -1) {
- 			if (copy.entry_number == -1)
-@@ -618,7 +634,11 @@
- sys_get_thread_area(tcp)
- struct tcb *tcp;
- {
--	struct modify_ldt_ldt_s copy;
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+		struct user_desc copy;
-+	#else
-+		struct modify_ldt_ldt_s copy;
-+	#endif
- 	if (exiting(tcp)) {
- 		if (umove(tcp, tcp->u_arg[0], &copy) != -1) {
- 			tprintf("{entry_number:%d, ", copy.entry_number);
-diff -ur strace-4.5.1/process.c strace-4.5.1-plasmaroo/process.c
+diff -ur strace-4.5.1/process.c strace-4.5.1.plasmaroo/process.c
 --- strace-4.5.1/process.c	2003-11-13 22:32:26.000000000 +0000
-+++ strace-4.5.1-plasmaroo/process.c	2003-12-25 00:32:02.000000000 +0000
-@@ -89,6 +89,7 @@
- #include <linux/futex.h>
- #endif
- #if defined LINUX
-+#include <linux/version.h>
- # ifndef FUTEX_WAIT
- #  define FUTEX_WAIT 0
- # endif
-@@ -581,7 +582,11 @@
- 			tprintf(", parent_tidptr=%#lx", tcp->u_arg[ARG_PTID]);
- 		if (flags & CLONE_SETTLS) {
++++ strace-4.5.1.plasmaroo/process.c	2003-12-30 23:49:41.000000000 +0000
+@@ -526,8 +526,12 @@
+ };
+ 
  # ifdef I386
--			struct modify_ldt_ldt_s copy;
-+			#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+				struct user_desc copy;
-+			#else
-+				struct modify_ldt_ldt_s copy;
-+			#endif
- 			if (umove(tcp, tcp->u_arg[ARG_TLS], &copy) != -1) {
- 				tprintf(", {entry_number:%d, ",
- 					copy.entry_number);
-Only in strace-4.5.1-plasmaroo/: stamp-h1
+-#  include <asm/ldt.h>
+-extern void print_ldt_entry();
++	#include <asm/ldt.h>
++	#include <linux/version.h>
++	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47)
++		#define modify_ldt_ldt_s user_desc
++	#endif
++	extern void print_ldt_entry();
+ # endif
+ 
+ # if defined IA64
 diff -ur strace-4.5.1/system.c strace-4.5.1-plasmaroo/system.c
 --- strace-4.5.1/system.c	2002-11-06 14:00:13.000000000 +0000
 +++ strace-4.5.1-plasmaroo/system.c	2003-12-25 00:32:03.000000000 +0000
