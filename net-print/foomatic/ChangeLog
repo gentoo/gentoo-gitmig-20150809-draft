@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.16 2003/12/10 18:34:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.17 2003/12/31 12:50:04 lanius Exp $
+
+*foomatic-3.0.20031018 (31 Dec 2003)
+
+  31 Dec 2003; Heinrich Wendel <lanius@gentoo.org> foomatic-20031018.ebuild,
+  foomatic-3.0.20031018.ebuild:
+  fixed version scheme
 
   10 Dec 2003; Heinrich Wendel <lanius@gentoo.org> foomatic-20031018.ebuild:
   stable
