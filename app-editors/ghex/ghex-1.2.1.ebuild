@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-1.2.1.ebuild,v 1.15 2004/06/24 21:54:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-1.2.1.ebuild,v 1.16 2004/08/21 15:18:05 foser Exp $
 
 DESCRIPTION="Gnome Hexadecimal editor"
 HOMEPAGE="http://pluton.ijs.si/~jaka/gnome.html"
@@ -13,7 +13,7 @@ IUSE="nls"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	 >=gnome-base/gnome-libs-1.4.1.2-r3
-	 >=gnome-base/ORBit-0.5.12-r1
+	 =gnome-base/orbit-0*
 	 >=gnome-base/gnome-print-0.34
 	 >=app-text/scrollkeeper-0.2"
 DEPEND="${RDEPEND}
