@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82-r1.ebuild,v 1.1 2004/08/26 15:00:24 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.82-r1.ebuild,v 1.2 2004/08/27 13:52:37 lostlogic Exp $
 
 inherit flag-o-matic eutils gcc debug
 
-IUSE="nls perl spell nas cjk gnutls silc evo" #crypt
+IUSE="nls perl spell nas cjk gnutls silc evo crypt"
 
 DESCRIPTION="GTK2-based Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -28,7 +28,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	silc? ( >=net-im/silc-toolkit-0.9.12-r2 )
 	evo? ( mail-client/evolution )"
 
-#PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.29 )"
+PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.30 )"
 
 print_gaim_warning() {
 	ewarn
