@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/blop-0.2.5.ebuild,v 1.6 2003/09/07 00:02:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/blop-0.2.5.ebuild,v 1.7 2004/04/29 10:21:48 aliz Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
 DESCRIPTION="Bandlimited LADSPA Oscillator Plugins"
 SRC_URI="mirror://sourceforge/blop/${P}.tar.gz"
 HOMEPAGE="http://blop.sf.net/"
