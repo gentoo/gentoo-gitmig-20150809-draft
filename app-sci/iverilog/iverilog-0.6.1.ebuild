@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/iverilog-0.6.1.ebuild,v 1.3 2002/10/04 05:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/iverilog-0.6.1.ebuild,v 1.4 2002/10/28 16:36:39 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -20,8 +20,8 @@ src_unpack() {
 	mv verilog-${PV} ${P}
 }
 
-src_install () {
-	make \
+src_install() {
+	make -j1 \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
@@ -29,4 +29,3 @@ src_install () {
 
 	dodoc *.txt COPYING INSTALL examples/*
 }
-

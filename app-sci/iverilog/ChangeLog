@@ -1,9 +1,11 @@
 # ChangeLog for dev-lang/icarus_verilog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.1 2002/07/09 12:16:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.2 2002/10/28 16:36:39 vapier Exp $
 
 *icarus_verilog-0.6.1 (4/3/2002)
 
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  added make option -j1 to fix #9767
+
   3 Apr 2002; Chad Huneycutt <chadh@gentoo.org> icarus_verilog-0.6.1.ebuild :
-  
   Ebuild created
