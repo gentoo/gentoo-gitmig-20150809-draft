@@ -3,9 +3,9 @@ MD5 327eb455169e2977a4daffcaa9d10d87 glade-2.0.0-r1.ebuild 1522
 MD5 4797b5125d8cc7785653ac0da873bec8 glade-2.0.1.ebuild 1563
 MD5 bfacfd79854f2d22ef23e55b05bf6739 glade-2.6.7.ebuild 1071
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 2e4c7f687fd87e7c46433955089a20cd ChangeLog 3972
-MD5 3e9d08533fceab0ec0a99eeca6ae20f5 glade-2.6.8.ebuild 1116
+MD5 130c4713d2640dd1ff7ce99caf1f927c ChangeLog 4058
 MD5 8add42801cf069b013847f184449aa21 glade-2.6.0.ebuild 1594
+MD5 0190e0f1563d84540099b7161a96e2f1 glade-2.6.8.ebuild 1115
 MD5 b947cc014b4212b215eaaa95590ef136 files/digest-glade-0.6.4 64
 MD5 50067e4babaab978522bedc50c41258c files/digest-glade-2.0.0-r1 65
 MD5 586cc933cce3a4d1a505e94094908b0a files/digest-glade-2.0.1 65
