@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>rphillips@gentoo.org</email>
-</maintainer>
+<maintainer><email>rphillips@gentoo.org</email></maintainer>
+<maintainer><email>arj@gentoo.org</email></maintainer>
 </pkgmetadata>
