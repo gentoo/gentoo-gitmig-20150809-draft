@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-20020124.ebuild,v 1.1 2002/01/24 08:02:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-20020124.ebuild,v 1.2 2002/01/24 19:48:09 danarmak Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="XFS data management API library"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 
-DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make"
+DEPEND="virtual/glibc sys-devel/autoconf sys-devel/make sys-apps/xfsprogs"
 RDEPEND="virtual/glibc"
 
 src_compile() {
