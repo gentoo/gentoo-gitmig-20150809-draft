@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/bastet
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/ChangeLog,v 1.1 2004/10/22 01:44:42 mr_bones_ Exp $
+
+*bastet-0.41 (21 Oct 2004)
+
+  21 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +bastet-0.41.ebuild:
+  initial commit
+
