@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.2 2003/10/10 17:13:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.10.ebuild,v 1.3 2003/10/11 11:15:09 lanius Exp $
 
 inherit libtool flag-o-matic eutils
 # Don't build with -mfpmath=sse || -fPic or it will break. (Bug #14920)
@@ -36,7 +36,7 @@ DEPEND=">=media-libs/a52dec-0.7.4
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
-	quicktime? ( virtual/quicktime media-libs/openquicktime )"
+	quicktime? ( virtual/quicktime )"
 
 src_unpack() {
 	unpack ${A}
@@ -84,9 +84,11 @@ src_compile() {
 		&& myconf="${myconf} --with-libmpeg3" \
 		|| myconf="${myconf} --without-libmpeg3"
 
-	use quicktime \
-		&& myconf="${myconf} --with-qt --with-openqt" \
-		|| myconf="${myconf} --without-qt --without-openqt"
+	if [ "`use quicktime`" ]; then
+		has_version 'media-libs/openquicktime' \
+			&& myconf="${myconf} --with-openqt --without-qt" \
+			|| myconf="${myconf} --without-openqt --with-qt"
+	fi
 
 	use X \
 		&& myconf="${myconf} --enable-x" \
