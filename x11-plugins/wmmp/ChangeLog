@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.1 2003/08/14 04:43:00 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp/ChangeLog,v 1.2 2003/10/07 17:43:26 mholzer Exp $
+
+*wmmp-0.9.1 (08 Oct 2003)
+
+  08 Oct 2003; Martin Holzer <mholzer@gentoo.org> wmmp-0.9.1.ebuild:
+  Version bumped.
 
 *wmmp-0.8.0 (13 Aug 2003)
 
