@@ -3,4 +3,4 @@ MD5 d3b890e71018c80957cb44c4bf7fcb13 ChangeLog 774
 MD5 53d94549a025c89635911877d75068ba files/digest-lambdamoo-1.8.1-r1 67
 MD5 4b918fff63c103c64a5862f561bc3b58 files/lambdamoo.conf 185
 MD5 3b9fdebdc6426dbceac6f711795d3183 files/1.8.1-enable-outbound.patch 451
-MD5 aa153f92f2d06d3b3ec3d5f1c480e8bc files/lambdamoo.rc 1264
+MD5 7ae27b0fa0941310223cd19453664b5c files/lambdamoo.rc 1258

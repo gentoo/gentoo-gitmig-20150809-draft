@@ -2,5 +2,5 @@ MD5 ee9749747b82c894a15f01ba58f27e42 pam_smb-2.0.0_rc5.ebuild 1127
 MD5 baa941d57fe90de61235e7f1a8a928de pam_smb-1.9.9-r1.ebuild 1038
 MD5 64176d1e64030e27183283db61da8253 ChangeLog 605
 MD5 9fe6e35bc7a3bb09b54d5adb0821082a files/digest-pam_smb-2.0.0_rc5 69
-MD5 05977c94b97ac33698fb8929b92b889b files/pamsmbd-init 473
+MD5 8b0abca6ab4167fd498f144b48a2b0dc files/pamsmbd-init 467
 MD5 758307bf5853c461dd0d18ea60991fe1 files/digest-pam_smb-1.9.9-r1 65

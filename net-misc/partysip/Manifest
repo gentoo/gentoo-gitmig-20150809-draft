@@ -1,6 +1,6 @@
 MD5 a15887f593b840aab10aa949a0fc6fc4 partysip-2.1.1.ebuild 1471
 MD5 be70f83cd02880460c999cbd9d5bac29 ChangeLog 647
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 466f86cb9a94b83fd63cd4d9df68dcf2 files/partysip.rc6 563
+MD5 2a6297d7481da765074b92d31c2f596e files/partysip.rc6 559
 MD5 af1cd5cfc31c0ad22707ebfb4c5d4a42 files/partysip.confd 51
 MD5 6d09d636a5e5279fee121ef636931eb7 files/digest-partysip-2.1.1 197

@@ -8,6 +8,6 @@ MD5 85be7f47ed6684f2868b48e82dd8fa6b files/digest-oidentd-2.0.6 65
 MD5 0c88fdf66a5a16f12d49b0a6c5dd5743 files/digest-oidentd-2.0.7 65
 MD5 05a43d3987754f179f4e31bbe61ff315 files/oidentd-2.0.7-confd 67
 MD5 0c88fdf66a5a16f12d49b0a6c5dd5743 files/digest-oidentd-2.0.7-r1 65
-MD5 4356002e3f351fe90d6e10bd780812f0 files/oidentd-init 483
+MD5 92fe6abaa19f4d70836d98ec6244be0f files/oidentd-init 477
 MD5 d9c40e4d6a0bde685a359ad49b4eada2 files/oidentd.conf 298
-MD5 02ab97200bc7c3f462a0e637e9506748 files/oidentd-2.0.7-init 788
+MD5 bc9a656f63247445767f29dc1bcb1286 files/oidentd-2.0.7-init 782

@@ -21,7 +21,7 @@ MD5 b31110303673214476c57e1bed28e1ce files/openssh-skeychallenge-args.diff 925
 MD5 9b53f18685eeb54c381c9bd11b9b80cc files/openssh-3.7.1_p2-skey.patch 326
 MD5 47853493e53ca7d4ac9942d6a76fb855 files/openssh-3.7.1_p2-kerberos.patch 1190
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
-MD5 4beeae34bb68e56f245a31ea0c979caf files/sshd.rc6 1285
+MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
 MD5 319cf9de283116bf886d3aab3d036249 files/openssh-3.8_p1-resolv_functions.patch 422
 MD5 5e42c267d017c8bcf5a68a8b16398736 files/openssh-3.8.1_p1-skey.patch 326
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142

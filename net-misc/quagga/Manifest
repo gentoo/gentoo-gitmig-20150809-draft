@@ -5,7 +5,7 @@ MD5 72494598a213a5d6f441496f48aefd7b files/digest-quagga-0.96.4-r6 66
 MD5 3f95e96aeb427fa3de7f387ff3dc6ad6 files/init/bgpd 866
 MD5 e484b94e7ebb358d11fdf3252e0b604f files/init/ripd 865
 MD5 6b7fbbe67b98a52a36684455c3866d65 files/init/ospfd 875
-MD5 18176c9f90d711597efbf8adf593798f files/init/zebra 1147
+MD5 bfecfbc3b2f5b2748271a2838cac5a2b files/init/zebra 1143
 MD5 4a118d93cab17b63f1d9c675f5d92fdf files/init/ospf6d 884
 MD5 2c6f6b3a64eedf1362a56fd6b3ca9c1b files/init/ripngd 885
 MD5 6d870c42af2625dcc07ba4b155618ebf files/patches-0.96.4/opaque-ready.patch 2617

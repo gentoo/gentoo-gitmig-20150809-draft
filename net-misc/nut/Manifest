@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 eb9aef30e7ef53228b2e1ad1ebee7ace nut-2.0.0.ebuild 3059
+MD5 113061fc3ea1847aa7362da120fbe61e nut-1.5.12.ebuild 3293
+MD5 1ad752545fa2e6e001fc1b9a9ce62d41 nut-1.4.1.ebuild 2312
+MD5 0977e8d4434dbb7846d542dbfc050949 nut-1.2.2.ebuild 3375
 MD5 d970f096e6d10b5bda32fdec691246af ChangeLog 5436
 MD5 91a159b983332d5ed0fb985cc1fe1b80 metadata.xml 330
-MD5 0977e8d4434dbb7846d542dbfc050949 nut-1.2.2.ebuild 3375
-MD5 1ad752545fa2e6e001fc1b9a9ce62d41 nut-1.4.1.ebuild 2312
-MD5 113061fc3ea1847aa7362da120fbe61e nut-1.5.12.ebuild 3293
-MD5 eb9aef30e7ef53228b2e1ad1ebee7ace nut-2.0.0.ebuild 3059
 MD5 ab96c8181bf3780dae5e3377987b05c2 files/digest-nut-1.2.2 61
-MD5 7e8c4aebf3de0a56b058a685f104dfa9 files/upsd-init 586
-MD5 4ebbbc97ea9ab9e6a3ac743148020d84 files/upsd.rc6 595
-MD5 6a3412030571af06d3bef42c99eef2ca files/upsdrv.rc6 486
-MD5 c4b76b8ceaa2c772d9ceb126b180bc37 files/upsmon-init 481
-MD5 a373cd2584d3b851388842d70f2aa4fe files/upsmon.rc6 481
 MD5 af157fac0a88e11c79527d952fce75ec files/digest-nut-1.4.1 61
-MD5 7b76eef352ad93b1369096360bbc3a11 files/digest-nut-1.5.12 62
 MD5 891b50cff5827a4e77573ee8f2f40e48 files/digest-nut-2.0.0 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4wdOHTu7gpaalycRAs0/AJsHb+axQjI2evLhesH/kTsm5IH3CwCgu+ku
-nRRVHF7NZ86q98LgYJXN0zY=
-=MQxL
------END PGP SIGNATURE-----
+MD5 3991086b9dd6c95fe463cb21ead5e0bd files/upsmon-init 474
+MD5 7b76eef352ad93b1369096360bbc3a11 files/digest-nut-1.5.12 62
+MD5 3a425305da409ff659235b4d219f8821 files/upsd.rc6 587
+MD5 59a02122c76aa6364c99e032db372c41 files/upsdrv.rc6 479
+MD5 2019e9c320d038dd72aba624016b0ae1 files/upsmon.rc6 473
+MD5 45f63e627825348055c082a0a94c55fd files/upsd-init 579

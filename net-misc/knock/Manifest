@@ -4,5 +4,5 @@ MD5 bb16013e8c9ff32d3bc1b59df4b5d042 ChangeLog 746
 MD5 85096de16c2a05f92c5a5fb0e800a2bc metadata.xml 252
 MD5 503e3134931fbbd7729e4c6eb69bc38b files/digest-knock-0.1 60
 MD5 6f594c8b1eb17d15a0ab9a73331598e3 files/digest-knock-0.3 60
-MD5 3903412c33a61b6e841ffd5bea4e346f files/knockd.confd 271
-MD5 81a25a85f6c0d1e94446c0ad41fcfa1f files/knockd.initd 499
+MD5 141b7202730b744d2e3f884d1c8e8eec files/knockd.confd 264
+MD5 ae09af5fe36f302c2b18a66ec789e6d4 files/knockd.initd 492

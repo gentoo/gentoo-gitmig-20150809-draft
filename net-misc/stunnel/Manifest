@@ -7,10 +7,10 @@ MD5 392876ec34ba2a5c65a859aad175426e stunnel-4.04-r3.ebuild 1755
 MD5 94bbf637d8743eb253ce19304aad4f67 ChangeLog 3866
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 9177dd12df6261a5bde7e8756c0f1585 files/stunnel-3.22-blinding.patch 3756
-MD5 3a379f44f65498303a6e40d2507c5d69 files/stunnel.rc6 540
+MD5 a7262319408c8fc154543b7614662329 files/stunnel.rc6 534
 MD5 bf10c9036f0ff4b8578c46b89538aed7 files/digest-stunnel-3.22-r2 64
-MD5 4f954fd61770afc292c04b81b6bf421a files/stunnel.rc6.4.04-r2 567
-MD5 c9f531a5e0d6f9cf2dda41d0d934842f files/stunnel.rc6.4.04-r3 604
+MD5 39bf8947e5bcc172aba321a975eff263 files/stunnel.rc6.4.04-r2 561
+MD5 1ceef2be86dab81ee4499b783188fa44 files/stunnel.rc6.4.04-r3 598
 MD5 021f1b3d5a07aa11f572d4fa8a50b4f1 files/stunnel.conf.4.04-r2 721
 MD5 2f553bbcab5ab83a6e45e3ddd73f9944 files/stunnel.conf.4.04-r3 725
 MD5 6cdf521ff4c96a48e8863635b78fa596 files/stunnel-4.04-blinding.patch 2526

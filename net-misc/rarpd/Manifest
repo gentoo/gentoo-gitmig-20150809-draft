@@ -2,6 +2,6 @@ MD5 0d2c4d08e178f724a63211b5be17d622 rarpd-1.1-r2.ebuild 986
 MD5 e79fbe7ab156b89a738c7ffafab46ac1 ChangeLog 842
 MD5 63ddb9a48ecf47479223ee4525142f44 files/digest-rarpd-1.1-r2 60
 MD5 b2e7b89b4346f002ca151f34bff15082 files/1.1-daemon.patch 678
-MD5 a05e2fb2b76ff1915f52dac1003465cc files/rarpd.conf.d 316
-MD5 c51f7468536770e20c2dbf0f018fc7b3 files/rarpd.init.d 649
+MD5 40f2763a6c0a2c8469daa2fd46752149 files/rarpd.conf.d 310
+MD5 f4aa40f55704fd28592c39b96ae6afc9 files/rarpd.init.d 643
 MD5 1db5831c32ce2ee5dc3cf38532019001 files/1.1-libnet-1.0.patch 2428

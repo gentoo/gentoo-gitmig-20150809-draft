@@ -1,6 +1,6 @@
 MD5 83dece448d3bd61da43244766806e95e ChangeLog 1234
 MD5 fbab80bcce6b71cbf1b4694bf595446d netkit-timed-0.17-r6.ebuild 860
 MD5 2674064ee1f22cdf5bf08d9aaeb0c23c files/timed.rc5 704
-MD5 76a890682a6134beaf3c0dc8ad4c292c files/timed.rc6 477
+MD5 af6cc7c3161dec7c5987639b5f4ced10 files/timed.rc6 471
 MD5 541271edee1c0be42ea3f81278cfebd3 files/timed.c 22502
 MD5 a968cd4ed6e20ba5caca252089d73a88 files/digest-netkit-timed-0.17-r6 68

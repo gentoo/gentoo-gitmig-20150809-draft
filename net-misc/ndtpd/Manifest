@@ -2,5 +2,5 @@ MD5 ad5b29ebda4c9e2fa8144d3359407882 ndtpd-3.1.5.ebuild 1657
 MD5 83a323b065fb94569d1ae96ced0f4ec5 ChangeLog 971
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
 MD5 6b62661262cdfe606b598f57f9249a52 files/ndtpd-3.1.5-eb4-gentoo.diff 658
-MD5 bb7240c9529fb10343a33be9c6a2b429 files/ndtpd.initd 669
+MD5 55c0139b320c6367cf6b91e65d0511bc files/ndtpd.initd 663
 MD5 c50d3bad7e4228c971eeb2507f0de06f files/digest-ndtpd-3.1.5 63

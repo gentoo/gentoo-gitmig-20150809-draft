@@ -4,7 +4,7 @@ MD5 513f56f906c36a7d733f24ef4b3d9555 linesrv-2.1.8.ebuild 1728
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 29e20aa982eafe8d1a66419009ef82bf files/digest-linesrv-2.1.8 70
 MD5 68caa632b20d8b4946edfba715c7d414 files/lcshutdown.pam 394
-MD5 5a9e4f092437dc03512229d6472bcfc7 files/linesrv.rc6 725
+MD5 115eb925182365c1c07bc9f85d11a2b6 files/linesrv.rc6 719
 MD5 fcf1fee9b36c1cd1bfb2933c4b6826e3 files/digest-linesrv-2.1.6-r1 70
 MD5 a54a9b1eb14fd4a82818aecca99c9a1b files/linecontrol.pam 420
 MD5 7838f0b96b4e31f15ba49da87494b960 files/linesrv.conf 1282

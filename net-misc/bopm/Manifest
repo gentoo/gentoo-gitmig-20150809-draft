@@ -2,5 +2,5 @@ MD5 8e655bed712c4ea97b4a3d05de29cfcd bopm-3.1.2.ebuild 1521
 MD5 e05ba9cda3034af9ee9b714ffc43059c ChangeLog 493
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 36f48b28d0fc536e21e69aa648526fee files/digest-bopm-3.1.2 62
-MD5 22265687186b12b3ee549e506153e133 files/bopm.conf.d 269
-MD5 6b3c3431594d3af96a39ce30a6e185b2 files/bopm.init.d 563
+MD5 e334c2d6c57447e4f29405c29d30534f files/bopm.conf.d 266
+MD5 e10e245bd3f7f06551943ff5bf2a51dd files/bopm.init.d 557

@@ -2,8 +2,8 @@ MD5 265800b995190f53ee8cc9dcc04500c4 netkit-routed-0.17-r2.ebuild 969
 MD5 88b51eb5a1a498730baac0993e0e714b netkit-routed-0.17-r1.ebuild 788
 MD5 ba39e86dc9af237c207a2ee409f5cefd ChangeLog 1541
 MD5 cd5ac643f9f54eab51dd4daa28656b64 netkit-routed-0.17-r3.ebuild 969
-MD5 0f83d2603d0017eca5719d09c3bd80bb files/routed.confd 799
-MD5 f894a0899776126784fecf5b34150b26 files/routed.initd 519
+MD5 23b57d7da68a49560fb9cccfe629e26b files/routed.confd 793
+MD5 b0cc8b77e3d18d8b15da690fda4ae453 files/routed.initd 513
 MD5 d2b37fe233957364eb10712cef981573 files/digest-netkit-routed-0.17-r1 74
 MD5 d2b37fe233957364eb10712cef981573 files/digest-netkit-routed-0.17-r2 74
 MD5 d2b37fe233957364eb10712cef981573 files/digest-netkit-routed-0.17-r3 74
