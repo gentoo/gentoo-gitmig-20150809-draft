@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3.ebuild,v 1.6 2004/09/19 12:30:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3.ebuild,v 1.7 2004/10/03 17:22:06 brad Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozilla makeedit
@@ -56,7 +56,7 @@ src_unpack() {
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
-	WANT_AUTOCONF_2_1=1 autoconf || die
+	WANT_AUTOCONF=2.1 autoconf || die
 
 	# Unpack the enigmail plugin
 	if use crypt && ! use moznomail; then

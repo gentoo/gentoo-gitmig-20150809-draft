@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.203 2004/09/19 12:30:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.204 2004/10/03 17:22:06 brad Exp $
+
+  03 Oct 2004; Brad Laue <brad@gentoo.org> mozilla-1.7.3.ebuild:
+  Stop using deprecated WANT_AUTOCONF syntax, bug 60827
 
   19 Sep 2004; <kloeri@gentoo.org> mozilla-1.7.3.ebuild:
   Stable on alpha, bug 63996.
