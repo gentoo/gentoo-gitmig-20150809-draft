@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmatroska
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.43 2004/12/19 00:11:10 hansmi Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.44 2005/02/27 14:50:41 mholzer Exp $
+
+*libmatroska-0.7.5 (27 Feb 2005)
+
+  27 Feb 2005; Martin Holzer <mholzer@gentoo.org>
+  +files/libmatroska-shared2.patch, +libmatroska-0.7.5.ebuild:
+  Version bumped. Closes 81468
+  Thx to Martin Wienold <martin.wienold@uni-dortmund.de> 
 
   19 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   libmatroska-0.7.4.ebuild:
