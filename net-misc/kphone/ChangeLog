@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/kphone
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.26 2004/11/08 00:58:37 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.27 2004/11/26 10:46:39 motaboy Exp $
+
+*kphone-4.0.5 (26 Nov 2004)
+
+  26 Nov 2004; Simone Gotti <motaboy@gentoo.org> +kphone-4.0.5.ebuild:
+  Version Bump. Closes bug #72532.
 
 *kphone-4.0.4 (08 Nov 2004)
 
