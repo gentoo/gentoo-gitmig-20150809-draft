@@ -1,18 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87e81d7e2b7c51d8d7062050e12cb28a ChangeLog 7770
-MD5 9ec1194f2e2755310fb2345ebaa199b1 tar-1.14.90.ebuild 1309
+MD5 dfb92b09ecfd54a64065228f1717709a tar-1.14.90.ebuild 1365
+SHA1 c1551f6c41037d7a1497ae4a0a1404a6c3ba1de1 tar-1.14.90.ebuild 1365
 MD5 d0b3e45115a461b08fc996e4036fa171 tar-1.14.ebuild 1337
-MD5 a19a156b33f2b725bccc907941208c92 files/digest-tar-1.14.90 65
-MD5 afe4f707a5851659a448c05a5bb6868e files/1.14.90-remote-shell.patch 594
-MD5 4cdef5c71729b03a10fb5e066b358398 files/1.14.90-tests.patch 879
-MD5 5fbfc1df8f8641b9b99de73d8be1a4dc files/tar.1 7956
+SHA1 fcf5e24ca325803bfc7d04f856daab6ecc5e101b tar-1.14.ebuild 1337
+MD5 4947f3e392c9ab784fff148af0b1eefd ChangeLog 7907
+SHA1 a1aa8d41013fefb13cefb712317f6fe51db87845 ChangeLog 7907
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBafSgHTu7gpaalycRAhPAAKCVJSmKh2uI3026+rhRbv/LopO2PwCgroLn
-2q+HkwCpqQK8HrFY3iU0fy0=
-=Ytv8
------END PGP SIGNATURE-----
+SHA1 8ec1826a50967f8b43c4c35737409a7b0f8e7cdb files/digest-tar-1.14 62
+MD5 5fbfc1df8f8641b9b99de73d8be1a4dc files/tar.1 7956
+SHA1 c2493372c03e2399904b50a04773cb5608d07414 files/tar.1 7956
+MD5 4cdef5c71729b03a10fb5e066b358398 files/1.14.90-tests.patch 879
+SHA1 c023dd7aa5fff9bb8c49a2a28abf134e21e1e096 files/1.14.90-tests.patch 879
+MD5 a19a156b33f2b725bccc907941208c92 files/digest-tar-1.14.90 65
+SHA1 bb76428005af9f61ea7c8ce9d3779e959e1f9553 files/digest-tar-1.14.90 65
+MD5 afe4f707a5851659a448c05a5bb6868e files/1.14.90-remote-shell.patch 594
+SHA1 bc088d68e68293528cb14373d8be055f1442519e files/1.14.90-remote-shell.patch 594

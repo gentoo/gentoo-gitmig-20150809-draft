@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.4 2004/10/11 02:48:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.5 2004/10/11 04:26:13 seemant Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
 DESCRIPTION="Use this to make tarballs :)"
 HOMEPAGE="http://www.gnu.org/software/tar/"
-SRC_URI="http://alpha.gnu.org/gnu/tar/${P}.tar.bz2
+SRC_URI="http://dev.gentoo.org/~seemant/distfiles/${P}.tar.bz2
+	http://alpha.gnu.org/gnu/tar/${P}.tar.bz2
 	mirror://gnu/tar/${P}.tar.bz2"
 
 LICENSE="GPL-2"
