@@ -1,0 +1,12 @@
+# ChangeLog for sys-apps/milo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/ChangeLog,v 1.1 2003/06/03 12:06:46 taviso Exp $
+
+*milo-2.4.18 (03 Jun 2003)
+
+  03 Jun 2003; Tavis Ormandy <taviso@gentoo.org> milo-2.4.18.ebuild,
+  files/README-gentoo, files/linux-2.2.25-gcc3-milo.diff,
+  files/milo-2.2-18-gcc3-gentoo.diff, files/mkserial_no.c, files/objstrip.c:
+  Initial import, the Alpha MIniLOader, bootloader for machines
+  without SRM, or special cases where aboot is not appropriate.
+
