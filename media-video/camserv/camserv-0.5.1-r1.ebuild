@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r1.ebuild,v 1.2 2003/02/13 13:24:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r1.ebuild,v 1.3 2003/09/08 11:45:46 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming video server."
@@ -25,13 +25,13 @@ src_compile() {
 	unset CXXFLAGS
 	unset CHOST
 
-        ./configure \
-           --prefix=/usr \
-           --mandir=/usr/share/man \
-           --infodir=/usr/share/info \
-           --datadir=/usr/share \
-           --sysconfdir=/etc \
-           --localstatedir=/var/lib || die "./configure failed"
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--datadir=/usr/share \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib || die "./configure failed"
 
 	CC="${_CC}"
 	CFLAGS="${_CFLAGS}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.5.ebuild,v 1.2 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.5.ebuild,v 1.3 2003/09/08 11:44:56 msterret Exp $
 
 IUSE="gtk"
 
@@ -20,24 +20,23 @@ DEPEND=">=sys-apps/sed-4
 	dev-libs/cdk
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
-
 src_compile() {
-    myconf='--with-dvb-path=/usr/lib'
-    # not using X use var because gtk is needed too anyway
-    use gtk || myconf=${myconf}' --without-x'
-    econf ${myconf} || die
+	myconf='--with-dvb-path=/usr/lib'
+	# not using X use var because gtk is needed too anyway
+	use gtk || myconf=${myconf}' --without-x'
+	econf ${myconf} || die
 
-    # still assumes to be in the DVB dir
-    sed -i \
+	# still assumes to be in the DVB dir
+	sed -i \
 		-e s%../../../libdvb%/usr/include/libdvb%g  \
 		-e s%../../../include%/usr/include%g \
 		${S}/src/Makefile
 
-    emake || die 'compile failed'
+	emake || die 'compile failed'
 }
 
 src_install() {
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
-    dodoc ${S}/README ${S}/AUTHORS ${S}/NEWS ${S}/ChangeLog
+	dodoc ${S}/README ${S}/AUTHORS ${S}/NEWS ${S}/ChangeLog
 }

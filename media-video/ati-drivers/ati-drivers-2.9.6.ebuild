@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.5 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.6 2003/09/08 11:47:36 msterret Exp $
 
 IUSE="qt kde gnome"
 
@@ -26,10 +26,10 @@ src_unpack() {
 	if [ ! -f ${DISTDIR}/${A} ] ; then
 		die "Please download ${A} from ${HOMEPAGE} or http://www.schneider-digital.de/html/body_download_ati.html (fetch glx1_linux_X4.3.zip and unpack it)"
 	fi
-    cd ${WORKDIR}
-    #unpack  ${A}
+	cd ${WORKDIR}
+	#unpack  ${A}
 	#mv "./XFree 4.3.0-2.9.6/fglrx-glc22-4.3.0-${PV}.i586.rpm" .
-    rpm2targz ${DISTDIR}/${A}
+	rpm2targz ${DISTDIR}/${A}
 	tar zxf fglrx-glc22-4.3.0-${PV}.i586.tar.gz
 }
 
@@ -115,7 +115,7 @@ src_install() {
 	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe fglrxgears/fgl_glxgears
-    doexe usr/X11R6/bin/*
+	doexe usr/X11R6/bin/*
 	rm usr/X11R6/bin/*
 
 	if [ "`use qt`" ]
@@ -123,10 +123,10 @@ src_install() {
 		doexe fglrx_panel/fireglcontrol
 	fi
 
-    #if ["`use kde`"] then
+	#if ["`use kde`"] then
 
 
-    #if ["`use gnome`"]
+	#if ["`use gnome`"]
 	cp -R usr ${D}
 }
 

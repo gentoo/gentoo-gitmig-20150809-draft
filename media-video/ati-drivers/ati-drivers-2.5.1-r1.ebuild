@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.12 2003/09/07 00:08:12 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.13 2003/09/08 11:47:36 msterret Exp $
 
 IUSE="qt kde gnome"
 
@@ -22,8 +22,8 @@ ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip"
 
 src_unpack() {
-    cd ${WORKDIR}
-    rpm2targz ${DISTDIR}/${A} || die
+	cd ${WORKDIR}
+	rpm2targz ${DISTDIR}/${A} || die
 	tar zxf fglrx-glc22-4.2.0-${PV}.i586.tar.gz || die
 	epatch ${FILESDIR}/ati-2.5.1.diff
 	mkdir ${WORKDIR}/fglrxgears
