@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.11.0.ebuild,v 1.1 2003/03/15 22:54:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.11.0.ebuild,v 1.2 2003/04/09 09:40:15 liquidx Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86"
 
-RDEPEND=">=gnome-extra/libgda-0.10.0
+RDEPEND=">=gnome-extra/libgda-0.11.0
    >=x11-libs/gtk+-2.0.6
    >=gnome-base/libglade-2.0.0
    >=gnome-base/libgnomeui-2.0.0
