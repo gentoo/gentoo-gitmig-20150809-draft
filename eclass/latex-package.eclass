@@ -4,10 +4,11 @@
 # the src_install function as-is if the system is single-directory.
 
 inherit base
+ECLASS=latex-package
 INHERITED="$INHERITED $ECLASS"
 
 newdepend ">=app-text/tetex-1.0.7"
-ECLASS=latex-package
+
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/latex/"
 S=${WORKDIR}/${P}

@@ -1,14 +1,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.13 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.14 2002/07/26 21:50:16 danarmak Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
 #first inherit the pkg_postinst() and pkg_postrm() functions
 inherit perl-post
 
-ECLASS=base
+ECLASS=perl-module
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install src_test
