@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/smrsh
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.3 2003/09/17 23:15:35 max Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.4 2004/02/12 22:45:44 max Exp $
+
+  12 Feb 2004; Max Kalika <max@gentoo.org> smrsh-8.12.10.ebuild,
+  smrsh-8.12.9.ebuild:
+  Bump 8.12.10 to stable x86. Remove vulnarable sendmail version.
 
 *smrsh-8.12.10 (17 Sep 2003)
 
