@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.181 2005/02/13 22:43:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.182 2005/02/13 23:16:12 luckyduck Exp $
+
+  14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  postgresql-7.3.9-r1.ebuild, postgresql-7.4.7-r1.ebuild:
+  stable on amd64. see #81350
 
   13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   postgresql-7.3.9-r1.ebuild, postgresql-7.4.7-r1.ebuild:
