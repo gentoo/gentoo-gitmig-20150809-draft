@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.15 2003/02/22 00:35:21 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.16 2003/03/08 23:09:24 aliz Exp $
+
+*expat-1.95.6 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
