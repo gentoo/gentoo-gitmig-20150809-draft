@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc12.ebuild,v 1.2 2001/01/02 16:30:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc12.ebuild,v 1.3 2001/01/16 03:40:48 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test12
@@ -50,8 +50,8 @@ src_unpack() {
     gzip -dc ${DISTDIR}/linux-2.4.0-test12-reiserfs-3.6.23-patch.gz | patch -p1
 
     cd ${S}
-    echo "Applying reiser-nfs patch..."
-    gzip -dc ${FILESDIR}/2.4.0_rc10/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
+#    echo "Applying reiser-nfs patch..."
+#    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
     mkdir extras
     if [ "`use jfs`" ]
     then
@@ -70,22 +70,23 @@ src_unpack() {
 	echo "Unpacking NVidia drivers..."
 	unpack NVIDIA_kernel-0.9-5.tar.gz
 	cd NVIDIA_kernel-0.9-5
-	# this is a little fix to make the NVidia drivers compile right with test12
-	mv nv.c nv.c.orig
-	echo '#define mem_map_inc_count(p) atomic_inc(&(p->count))' > nv.c
-	echo '#define mem_map_dec_count(p) atomic_dec(&(p->count))' >> nv.c
-	cat nv.c.orig >> nv.c
-	cd ${S}/extras
-	for x in i2c lm_sensors
+#	add devfs support and other important fixes
+	local x
+	for x in ${FILESDIR}/nvidia/*
 	do
-		echo "Unpacking and applying $x patch..."
-		cd ${S}/extras
-		unpack ${x}-2.5.4.tar.gz
-		cd ${x}-2.5.4
-		mkpatch/mkpatch.pl . ${S} > ${S}/${x}-patch
-		cd ${S}
-		patch -p1 < ${x}-patch
+		cat ${x} | patch -p1
 	done
+	cd ${S}/extras
+#	for x in i2c lm_sensors
+#	do
+#		echo "Unpacking and applying $x patch..."
+#		cd ${S}/extras
+#		unpack ${x}-2.5.4.tar.gz
+#		cd ${x}-2.5.4
+#		mkpatch/mkpatch.pl . ${S} > ${S}/${x}-patch
+#		cd ${S}
+#		patch -p1 < ${x}-patch
+#	done
 	cd ${S}/extras
 #	echo "Applying LVM 0.9 patch..."
 #	one patch will fail, this is OK (it was applied earlier probably by the JFS patch)
@@ -119,8 +120,8 @@ src_compile() {
 	#symlink tweak in place
 	cd ${S}/fs/reiserfs/utils
     try make
-    cd ${S}/lm_sensors-2.5.4
-    try make
+#   cd ${S}/lm_sensors-2.5.4
+#	try make
     if [ "`use jfs`" ]
     then
 	cd ${S}/fs/jfs/utils

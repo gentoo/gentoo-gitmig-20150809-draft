@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-2.4.0.8.ebuild,v 1.1 2001/01/13 20:02:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.8.ebuild,v 1.1 2001/01/16 03:40:54 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac8
@@ -17,16 +17,14 @@ http://www.de.kernel.org/pub/linux/kernel/people/alan/2.4/patch-2.4.0-ac8.bz2
 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
 http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.1.2-patch.tar.gz
-ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10.tar.bz2
-ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz
+ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.10a.tar.bz2
 ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
 	  http://www.namesys.com
 	  http://www.sistina.com/lvm/
-	  http://www.alsa-project.org
-	  http://www.nvidia.com"
+	  http://www.alsa-project.org"
 
 
 
@@ -40,16 +38,16 @@ src_unpack() {
     echo "Applying ReiserFS patch..."
     gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac6-reiserfs-3.6.25-maxbytes.diff.gz | patch -p1 
 
-
     mkdir extras
 
 	cd ${S}/extras
 	echo "Unpacking LVM..."
-    	unpack lvm_0.9.tar.gz
+	unpack lvm_0.9.tar.gz
+	
 	echo "Unpacking ALSA drivers..."
-	unpack alsa-driver-0.5.10.tar.bz2
+	unpack alsa-driver-0.5.10a.tar.bz2
 
-        #lm_sensors buggy mkpatch.pl in 2.5.4!
+	#lm_sensors buggy mkpatch.pl in 2.5.4!
 	for x in i2c
 	do
 		echo "Unpacking and applying $x patch..."
@@ -67,6 +65,7 @@ src_unpack() {
 	cp ${FILESDIR}/${PV}/config .config
 	cp ${FILESDIR}/${PV}/autoconf.h include/linux/autoconf.h
 	try make include/linux/version.h
+	
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R root.root linux
@@ -87,19 +86,20 @@ src_compile() {
 
     if [ "$PN" = "linux" ]
     then
-	cd ${S}
-	try make bzImage
-	try make modules
+		cd ${S}
+		try make bzImage
+		try make modules
 
-	cd ${S}/extras/LVM/0.9
-	try ./configure --prefix=/
-	try make
+		cd ${S}/extras/LVM/0.9
+		try ./configure --prefix=/
+		try make
 
-	cd ${S}/extras/alsa-driver-0.5.10
-	try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes \
-		--with-cards=share,dummy,virmidi,interwave,interwave-stb,gusmax,gusextreme,gusclassic,es1688,es18xx,sb8,sb16,sbawe,emu10k1,opl3sa2,mozart,sonicvibes,ens1370,ens1371,ad1816a,ad1848,als100,als4000,azt2320,cs4231,cs4232,cs4236,cs4281,cs461x,cs4281,es968,dt0197h,fm801,es1938,es1968,opti92x-ad1848,opti92x-cs4231,opti93x,serial,trident,sgalaxy,hal2,cmi8330,mtpav,rme96,rme9652,ice1712,intel8x0,via686a,cmipci,ymfpci,maestro3
-	# "wavefront" is buggy in 0.5.10
-	try make
+		cd ${S}/extras/alsa-driver-0.5.10
+			try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes \
+			--with-cards=all
+		#	--with-cards=share,dummy,virmidi,interwave,interwave-stb,gusmax,gusextreme,gusclassic,es1688,es18xx,sb8,sb16,sbawe,emu10k1,opl3sa2,mozart,sonicvibes,ens1370,ens1371,ad1816a,ad1848,als100,als4000,azt2320,cs4231,cs4232,cs4236,cs4281,cs461x,cs4281,es968,dt0197h,fm801,es1938,es1968,opti92x-ad1848,opti92x-cs4231,opti93x,serial,trident,sgalaxy,hal2,cmi8330,mtpav,rme96,rme9652,ice1712,intel8x0,via686a,cmipci,ymfpci,maestro3
+		# "wavefront" is buggy in 0.5.10
+		try make
     fi
 }
 src_install() {
