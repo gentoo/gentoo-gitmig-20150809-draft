@@ -1,17 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75641b0bb2c69db2e2a224c775f5fa56 ChangeLog 1731
+MD5 1a412f24a86d69591d0c3959163a105d ChangeLog 1906
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 79c95b57777e67d74054c54cad8c3b90 quirc-0.9.83-r1.ebuild 1084
-MD5 6aa612dbfa5b8767fe0e9b546ac22b34 quirc-0.9.84.ebuild 957
-MD5 b06f7810a17ae2e5b1491990e11988fe files/0.9.83-r1-gentoo.diff 2077
-MD5 7cc003f19a5743d1a95ee5046b3920d9 files/digest-quirc-0.9.83-r1 64
+MD5 e199213b15a2ca3a070c390f59ff33b1 quirc-0.9.84.ebuild 1054
 MD5 fed44d930ac667edf7467fcf51e31f64 files/digest-quirc-0.9.84 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBRHEnI1lqEGTUzyQRAlRWAKCmXx1v9Ij5Me5RToD07BC7WfHkcgCfR4Ka
-RjmuC/hXz44CsrxY46t8vxs=
-=rkqI
+iD8DBQFBlVPuI1lqEGTUzyQRAum+AKCcqX2/7G7Z22yNZEBe9Wm/N9IO/QCfdbWr
+vqRRetAn9lyxrAtleSnoUdE=
+=OB6R
 -----END PGP SIGNATURE-----
