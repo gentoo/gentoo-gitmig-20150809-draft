@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.2.ebuild,v 1.5 2004/03/09 23:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.2.ebuild,v 1.6 2004/03/10 05:51:46 leonardop Exp $
 
 inherit gnome2
 
@@ -31,13 +31,23 @@ src_install() {
 
 	# Documentation install for each of the games
 	cd ${S}
-	local GAMES=$( find . -type d -maxdepth 1)
 
-	for game in ${GAMES}; do
+	for game in `find . -type d -maxdepth 1`
+	do
 		docinto ${game}
 		dodoc ${game}/{AUTHORS,ChangeLog,TODO,NEWS,README,COPYING} > /dev/null
 	done
 
 	rm -rf ${D}/usr/share/doc/${P}/{libgames-support,po}
 
+	# Avoid overwriting previous .scores files
+	local basefile
+	for scorefile in ${D}/var/lib/games/*.scores
+	do
+		basefile=$(basename $scorefile)
+		if [ -s "${ROOT}/var/lib/games/${basefile}" ]
+		then
+			rm ${scorefile}
+		fi
+	done
 }
