@@ -1,13 +1,4 @@
-#gif
-#odbc
-#fbcon		
-#oss
-#libg++
-#objprelink
-#nls
-#mitshm
 xinerama
-gnome-libs	gnome-base/gnome-libs
 directfb	dev-libs/DirectFB
 ungif		media-libs/ungif
 gtkhtml		gnome-extra/gtkhtml
@@ -47,6 +38,7 @@ kde		kde-base/kdebase
 motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
+gphoto2		media-gfx/gphoto2
 ldap		net-nds/openldap
 snmp		net-analyzer/ucd-snmp
 cdr		app-cdr/cdrtools
