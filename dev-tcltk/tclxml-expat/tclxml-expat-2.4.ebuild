@@ -1,6 +1,6 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/tclxml-expat-2.4.ebuild,v 1.2 2003/02/03 01:37:59 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/tclxml-expat-2.4.ebuild,v 1.3 2003/03/02 03:27:38 agenkin Exp $
 
 DESCRIPTION="Tcl wrapper libraries for expat XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
@@ -10,7 +10,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	=dev-tcltk/tclxml-${PV}*"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SLOT="0"
 SRC_URI="mirror://sourceforge/tclxml/tclxml-${PV}.tar.gz"

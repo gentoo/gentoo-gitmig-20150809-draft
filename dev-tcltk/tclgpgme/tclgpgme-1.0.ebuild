@@ -1,6 +1,6 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.2 2003/02/05 03:12:23 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.3 2003/03/02 03:28:12 agenkin Exp $
 
 DESCRIPTION="Tcl/Tk libraries to gpgme."
 HOMEPAGE="http://beepcore-tcl.sourceforge.net/"
@@ -10,7 +10,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	=app-crypt/gpgme-0.3*"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SLOT="0"
 SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
