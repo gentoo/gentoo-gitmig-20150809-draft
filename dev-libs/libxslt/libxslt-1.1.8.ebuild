@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.8.ebuild,v 1.1 2004/07/13 11:23:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.8.ebuild,v 1.2 2004/07/31 03:35:18 spider Exp $
 
 inherit libtool gnome.org
 use python && inherit python
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="python"
 
 DEPEND=">=dev-libs/libxml2-2.6.8
