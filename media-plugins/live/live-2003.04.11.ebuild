@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.09.ebuild,v 1.1 2003/04/11 03:46:16 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.1 2003/04/12 15:35:08 hannes Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
