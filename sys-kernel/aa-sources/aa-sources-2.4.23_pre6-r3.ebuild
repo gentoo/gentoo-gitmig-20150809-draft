@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23_pre6-r3.ebuild,v 1.1 2003/10/05 17:13:53 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23_pre6-r3.ebuild,v 1.2 2003/11/09 21:03:15 plasmaroo Exp $
 
 IUSE="build"
 
@@ -65,8 +65,8 @@ src_unpack() {
 
 pkg_postinst() {
 	echo ; echo ; echo -e "\a"
-	ewarn "This patch has some experimental stuff in it, so use with caution."
-	ewarn "A cool new feature is runtime Hz changing."
-	ewarn "try specifying \"desktop\" on the boot command line."
+	ewarn "This patch has some experimental stuff in it, so use it with caution."
+	ewarn "A cool new feature is runtime Hz changing: try specifying \"desktop\""
+	ewarn "on the boot command line."
 	echo ; echo ; echo
 }
