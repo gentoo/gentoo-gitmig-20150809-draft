@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.13 2003/03/07 20:59:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.14 2003/03/08 00:08:25 seemant Exp $
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> debianutils-1.16.3.ebuild :
   Added arm to keywords.
@@ -9,6 +9,10 @@
   Added hppa to keywords.
 
 *debianutils-1.16.3 (20 Dec 2002)
+
+  07 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  files/debianutils-compress.patch:
+  added patch to use bzip2 instead of gzip for savelog
 
   07 Mar 2003; Seemant Kulleen <seemant@gentoo.org> debianutils-1.16.3.ebuild:
   use epatch
