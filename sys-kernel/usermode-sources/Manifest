@@ -2,9 +2,11 @@ MD5 48ac359d9b4bd01d58538bac6ab3643e usermode-sources-2.6.1-r1.ebuild 1506
 MD5 2f03fbab00001abd97bbf6a22ad25481 usermode-sources-2.4.20-r2.ebuild 2270
 MD5 66159a5c9213b29e33ce341b5b406775 usermode-sources-2.4.21-r1.ebuild 1978
 MD5 5c739fab83545ccbea47c9afc2df914c usermode-sources-2.4.23-r2.ebuild 1684
+MD5 0473410c8ecc0e20e35d8785d3b9da62 usermode-sources-2.4.24-r1.ebuild 1789
+MD5 9fa2fa31e9880488f9ad3f51ae14ba4f usermode-sources-2.6.3-r1.ebuild 791
 MD5 a2f284fae42dbf9801371cd88b76382c usermode-sources-2.4.22-r2.ebuild 1969
 MD5 73a76ea43d99f2369d8ac469599c8175 usermode-sources-2.4.23-r1.ebuild 1688
-MD5 5c317262fd35a39847e34003e018eaee ChangeLog 4446
+MD5 f3b8108f5794a3955117aa5592265823 ChangeLog 4720
 MD5 6cdc1e33ed67ce129f7498203526cb16 metadata.xml 252
 MD5 a61e57d5483a06f20da339d91f98fbb8 files/usermode-sources-2.4.20.rtc_fix.patch 6769
 MD5 3c89919b01bf69d48c4307faa77d99a1 files/digest-usermode-sources-2.4.20-r2 134
@@ -12,7 +14,10 @@ MD5 2b62c53b9695ab543819727b7e64e73b files/digest-usermode-sources-2.4.21-r1 134
 MD5 4c510db2fdca185ae68005e677b87dcd files/digest-usermode-sources-2.4.22-r2 134
 MD5 b8ba6a7baf14cbeb3a21bf174ea7d773 files/digest-usermode-sources-2.4.23-r1 134
 MD5 81d1aecdba0a87dcee572935be335b6d files/digest-usermode-sources-2.4.23-r2 134
+MD5 2f7e35e02cfe97af5e6e49bf84614b42 files/digest-usermode-sources-2.4.24-r1 134
 MD5 f418f335a883a78923ebd9205011c25a files/digest-usermode-sources-2.6.1-r1 131
+MD5 cf8295a2c632cf6aa45b56a91e9a8a31 files/digest-usermode-sources-2.6.3-r1 135
 MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/usermode-sources-2.4.22.rtc_fix.patch 7073
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
+MD5 174438d215b70cad5ffb00ca8123c062 files/usermode-sources-2.4.24.munmap.patch 837
 MD5 e77a93fdf26f06cf3ea5080b27211725 files/usermode-sources.CAN-2003-0985.patch 414
