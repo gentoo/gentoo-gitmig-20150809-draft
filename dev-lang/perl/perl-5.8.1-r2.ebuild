@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1_rc1.ebuild,v 1.10 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.1 2003/10/02 21:18:08 rac Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,15 +17,14 @@ DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SAFE_VERSION="2.09"
 MY_P="perl-`echo $PV | sed 's/_rc/-RC/'`"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="http://www.cpan.org/authors/id/J/JH/JHI/${MY_P}.tgz"
-#ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${MY_P}.tar.gz"
 #ftp://ftp.perl.org/pub/CPAN/modules/by-module/DB_File/DB_File-${DB_FILE_VERSION}.tar.gz
 #ftp://ftp.perl.org/pub/CPAN/modules/by-module/Safe/Safe-${SAFE_VERSION}.tar.gz"
 HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
@@ -76,22 +75,12 @@ src_unpack() {
 
 	unpack ${A}
 
-	# Fix the definition of 'int sockatmark(int);' in perl.h to have __THROW.
-	# This fixes bug #12605.
-	# <azarah@gentoo.org> (28 Dec 2002).
-	cd ${S}; epatch ${FILESDIR}/${P}-sockatmark-should-__THROW.patch
-
 	# Get -lpthread linked before -lc.  This is needed
 	# when using glibc >= 2.3, or else runtime signal
 	# handling breaks.  Fixes bug #14380.
 	# <rac@gentoo.org> (14 Feb 2003)
-
-	# Disabled because 5.8.1_rc1 does not segfault with the test in
-	# bug #14380, even though /usr/bin/perl is not linked with
-	# -lpthread.  May need further investigation.
-	# <rac@gentoo.org> (10 Jul 2003)
-
-	#cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
+	# reinstated to try to avoid sdl segfaults 03.10.02
+	cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
 
 	# Patch perldoc to not abort when it attempts to search
 	# nonexistent directories; fixes bug #16589.
@@ -160,24 +149,6 @@ src_compile() {
 
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 
-cat > config.over <<EOF
-installprefix=${D}/usr
-installarchlib=\`echo \$installarchlib | sed "s!\$prefix!\$installprefix!"\`
-installbin=\`echo \$installbin | sed "s!\$prefix!\$installprefix!"\`
-installman1dir=\`echo \$installman1dir | sed "s!\$prefix!\$installprefix!"\`
-installman3dir=\`echo \$installman3dir | sed "s!\$prefix!\$installprefix!"\`
-installman1dir=\`echo \$installman1dir | sed "s!/share/share/!/share/!"\`
-installman3dir=\`echo \$installman3dir | sed "s!/share/share/!/share/!"\`
-installman1dir=\`echo \$installman1dir | sed "s!/usr/man/!/usr/share/man/!"\`
-installman3dir=\`echo \$installman3dir | sed "s!/usr/man/!/usr/share/man/!"\`
-man1ext=1
-man3ext=3pm
-installprivlib=\`echo \$installprivlib | sed "s!\$prefix!\$installprefix!"\`
-installscript=\`echo \$installscript | sed "s!\$prefix!\$installprefix!"\`
-installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
-installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
-EOF
-	sleep 10
 	sh Configure -des \
 		-Darchname="${myarch}" \
 		-Dcc="${CC:-gcc}" \
@@ -250,8 +221,7 @@ EOF
 	fperms 0755 /usr/bin/xsubpp
 
 	./perl installman \
-		--man1dir="${D}/usr/share/man/man1" --man1ext='1' \
-		--man3dir="${D}/usr/share/man/man3" --man3ext='3'
+		--destdir="${D}" --man1ext='1' --man3ext='3'
 
 	# This removes ${D} from Config.pm and .packlist
 	for i in `find ${D} -iname "Config.pm"` `find ${D} -iname ".packlist"`;do
