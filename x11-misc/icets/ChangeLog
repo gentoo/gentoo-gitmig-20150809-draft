@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icets
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.6 2003/04/24 14:11:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.7 2003/05/19 14:03:31 phosphan Exp $
+
+  19 May 2003; Patrick Kursawe <phosphan@gentoo.org> icets-1.0.ebuild:
+  Homepage moved to SF
 
   24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> : icets-1.0.ebuild :
   stable for x86
