@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libopendaap
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.5 2004/10/05 20:01:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/ChangeLog,v 1.6 2004/12/19 06:57:18 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libopendaap-0.2.3.ebuild:
+  Stable amd64.
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libopendaap-0.2.3.ebuild, +files/libopendaap-0.2.3-types.h:
