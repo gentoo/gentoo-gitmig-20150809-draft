@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.8 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.9 2003/12/14 15:01:18 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -10,7 +10,10 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ppc ~alpha ~sparc ~hppa ~amd64"
+
+# removed ~hppa, as a dependency (xscreensaver) isnt available
+# on that arch. We mean what we say above. <obz@gentoo.org>
+KEYWORDS="x86 ppc ~alpha ~sparc ~amd64"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
