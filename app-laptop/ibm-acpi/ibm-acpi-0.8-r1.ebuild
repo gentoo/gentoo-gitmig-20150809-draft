@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8-r1.ebuild,v 1.1 2005/01/03 20:37:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.8-r1.ebuild,v 1.2 2005/01/04 10:12:51 brix Exp $
 
 inherit linux-mod
 
@@ -18,7 +18,7 @@ IUSE="doc"
 BUILD_PARAMS="KDIR=${KV_DIR}"
 BUILD_TARGETS="default"
 MODULE_NAMES="ibm_acpi(acpi:)"
-MODULESD_IBM_ACPI_DOCS="LICENSE README"
+MODULESD_IBM_ACPI_DOCS="README"
 
 CONFIG_CHECK="!ACPI_IBM ACPI"
 ACPI_IBM_ERROR="${P} requires IBM ThinkPad Laptop Extras (CONFIG_ACPI_IBM) to be DISABLED in the kernel."

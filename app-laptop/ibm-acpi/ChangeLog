@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.16 2005/01/03 20:37:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.17 2005/01/04 10:12:50 brix Exp $
+
+  04 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> ibm-acpi-0.8-r1.ebuild:
+  No need to install the LICENSE file.
 
 *ibm-acpi-0.8-r1 (03 Jan 2005)
 
