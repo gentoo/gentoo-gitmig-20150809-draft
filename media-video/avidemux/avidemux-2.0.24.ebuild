@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.6 2004/07/14 21:28:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.7 2004/07/19 06:18:58 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,8 @@ RDEPEND="virtual/x11
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )"
 # media-sound/toolame is supported as well
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58
+		>=sys-devel/automake-1.8.3"
 
 S=${WORKDIR}/${MY_P}
 
