@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.3 2004/03/15 15:28:48 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.4 2004/03/23 02:58:31 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> lucene-1.2.ebuild,
+  lucene-1.3.ebuild:
+  Marking stable on x86. Fixes according to #45398
 
 *lucene-1.3 (07 Mar 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.5 2004/02/26 06:20:51 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.6 2004/03/23 03:02:18 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> rhino-1.5_rc4-r1.ebuild,
+  rhino-1.5_rc4.ebuild, rhino-1.5_rc5.ebuild:
+  Marking stable on x86. Fixes according to #45398
 
 *rhino-1.5_rc5 (28 Feb 2004)
 
