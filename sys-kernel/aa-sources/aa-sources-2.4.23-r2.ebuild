@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r2.ebuild,v 1.12 2004/07/15 03:44:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.23-r2.ebuild,v 1.13 2004/08/05 01:12:15 plasmaroo Exp $
 
 IUSE=""
 
@@ -34,11 +34,13 @@ if [ ${PRERC} ]; then
 	OURKERNEL="2.4.${OKVLASTPR}"
 	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
 		mirror://kernel/linux/kernel/people/andrea/kernels/v2.4/${KV/-}.bz2
-		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
 else
 	OURKERNEL="2.4.${OKVLAST}"
 	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-		mirror://kernel/linux/kernel/people/andrea/kernels/v2.4/${KV/-}.bz2"
+		mirror://kernel/linux/kernel/people/andrea/kernels/v2.4/${KV/-}.bz2
+		http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
 fi
 
 DESCRIPTION="Full sources for Andrea Arcangeli's Linux kernel"
@@ -68,6 +70,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
