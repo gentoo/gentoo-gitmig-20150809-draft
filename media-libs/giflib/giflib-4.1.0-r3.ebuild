@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.25 2004/06/02 20:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.26 2004/06/19 14:20:26 tgall Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 
 LICENSE="as-is | BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="X gif"
 
 DEPEND="X? ( virtual/x11 )"
@@ -20,6 +20,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gnuconfig_update
+	# The library it tries to create is like 12 bytes, which is obviously bogus,
+	# updating libtool/autoconf fixes this!
+	if [ "${ARCH}" = "ppc64" ] ; then
+		libtoolize -c -f
+		aclocal
+		autoconf
+	fi
 }
 
 src_compile() {
