@@ -1,3 +1,5 @@
-MD5 9c341ae02f2c4ae282245b31df76dd3e suikyo-1.2.0.ebuild 820
+MD5 313fccec6531465f63702de0093fb8e9 suikyo-1.2.0.ebuild 888
+MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
+MD5 cc9efc407cb56104b62ab6247eabf088 ChangeLog 430
 MD5 4d03ee45f5b90d7f41f711bd5a383d7e files/50suikyo-gentoo.el 61
 MD5 71962b2382151bfbc4445b64ad9a43ba files/digest-suikyo-1.2.0 63
