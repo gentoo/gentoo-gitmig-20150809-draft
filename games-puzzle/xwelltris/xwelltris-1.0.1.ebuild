@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.4 2004/03/07 20:51:56 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/xwelltris-1.0.1.ebuild,v 1.5 2004/05/12 09:02:46 mr_bones_ Exp $
 
 inherit games
 
@@ -22,21 +22,21 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# configure/build process is pretty messed up
-	egamesconf `use_with sdl` || die
+	egamesconf $(use_with sdl) || die
 	sed -i \
 		-e "/GLOBAL_SEARCH/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
-			src/include/globals.h || \
-				die "sed src/include/globals.h failed"
+			src/include/globals.h \
+			|| die "sed src/include/globals.h failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dodir ${GAMES_BINDIR} ${GAMES_DATADIR}/${PN} /usr/share/man
+	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}" /usr/share/man
 	make install \
-		INSTDIR=${D}/${GAMES_BINDIR} \
-		INSTLIB=${D}/${GAMES_DATADIR}/${PN} \
+		INSTDIR="${D}/${GAMES_BINDIR}" \
+		INSTLIB="${D}/${GAMES_DATADIR}/${PN}" \
 		INSTMAN=/usr/share/man \
 		|| die "make install failed"
-	dodoc AUTHORS Changelog README* || die "dodoc failed"
+	dodoc AUTHORS Changelog README*
 	prepgamesdirs
 }

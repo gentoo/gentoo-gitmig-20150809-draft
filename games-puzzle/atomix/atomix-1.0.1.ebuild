@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.2 2004/01/02 18:36:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-1.0.1.ebuild,v 1.3 2004/05/12 09:02:45 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -8,9 +8,10 @@ DESCRIPTION="a little mind game for GNOME2"
 HOMEPAGE="http://triq.net/~pearl/atomix.php"
 SRC_URI="http://triq.net/~pearl/download/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND=">=x11-libs/pango-1.0.3
 	>=x11-libs/gtk+-2.0.5

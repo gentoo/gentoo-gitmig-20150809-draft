@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3.ebuild,v 1.2 2004/02/20 06:53:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3.ebuild,v 1.3 2004/05/12 09:02:46 mr_bones_ Exp $
 
 inherit games
 
@@ -23,11 +23,11 @@ src_unpack() {
 
 	use doc && {
 		sed -i \
-			-e '5,$ s/=/ /g' makehtml || \
-				die "sed makehtml failed"
+			-e '5,$ s/=/ /g' makehtml \
+			|| die "sed makehtml failed"
 	} || {
-		echo "#!/bin/sh" > makehtml || \
-			die "clearing makehtml failed"
+		echo "#!/bin/sh" > makehtml \
+		|| die "clearing makehtml failed"
 	}
 
 	sed -i \
@@ -41,24 +41,25 @@ src_unpack() {
 
 src_install() {
 	# executables
-	dogamesbin pathological
-	insinto ${GAMES_DATADIR}/${PN}
+	dogamesbin pathological || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}/${PN}"
 	insopts -m0750
-	doins pathological.py
-	exeinto ${GAMES_LIBDIR}/${PN}
-	doexe write-highscores
+	doins pathological.py || die "doins failed"
+	exeinto "${GAMES_LIBDIR}/${PN}"
+	doexe write-highscores || die "doexe failed"
 
 	# removed some unneeded resource files
 	rm -f graphics/*.xcf
 	rm -f sounds/*.orig
 	# "install" resource files
 	# Use cp, not mv so install can be done multiple times (for ebuild devel).
-	cp -R circuits graphics music sounds ${D}/${GAMES_DATADIR}/${PN}
+	cp -R circuits graphics music sounds "${D}/${GAMES_DATADIR}/${PN}" \
+		|| die "cp failed"
 
 	# setup high score file
-	insinto ${GAMES_STATEDIR}
+	insinto "${GAMES_STATEDIR}"
 	insopts -m0664
-	doins pathological_scores
+	doins pathological_scores || die "doins failed (pathological_scores)"
 
 	# documentation
 	dodoc README TODO

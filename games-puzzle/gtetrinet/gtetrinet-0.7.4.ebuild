@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.3 2004/02/20 06:53:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.4.ebuild,v 1.4 2004/05/12 09:02:45 mr_bones_ Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
@@ -31,7 +31,7 @@ src_compile() {
 			{.,icons,src}/Makefile.in || \
 				die "sed Makefile.in failed"
 	egamesconf \
-		`use_enable ipv6` \
+		$(use_enable ipv6) \
 		--sysconfdir=/etc \
 		|| die
 	emake || die "emake failed"

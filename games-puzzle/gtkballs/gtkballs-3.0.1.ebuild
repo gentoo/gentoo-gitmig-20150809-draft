@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.0.1.ebuild,v 1.3 2004/01/23 01:22:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.0.1.ebuild,v 1.4 2004/05/12 09:02:45 mr_bones_ Exp $
 
 inherit games
 
@@ -8,9 +8,10 @@ DESCRIPTION="An entertaining game based on the old DOS game lines"
 SRC_URI="http://gtkballs.antex.ru/dist/${P}.tar.gz"
 HOMEPAGE="http://gtkballs.antex.ru/"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="3"
+KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND="=x11-libs/gtk+-2*
 	nls? ( >=sys-devel/gettext-0.10.38 ) "
@@ -22,14 +23,16 @@ IUSE="nls"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:touch Makefile\.in::' configure
 	sed -i \
-		's/__func__/__FUNCTION__/g' src/themerc.c \
+		-e 's:touch Makefile\.in::' configure \
+		|| die "sed configure failed"
+	sed -i \
+		-e 's/__func__/__FUNCTION__/g' src/themerc.c \
 		|| die "sed src/themerc.c failed"
 }
 
 src_compile() {
-	egamesconf `use_enable nls` || die
+	egamesconf $(use_enable nls) || die
 	emake || die "emake failed"
 }
 

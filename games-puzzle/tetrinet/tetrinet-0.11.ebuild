@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.4 2004/02/20 06:53:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.5 2004/05/12 09:02:46 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -23,15 +23,15 @@ src_unpack() {
 	cd ${S}
 
 	# for now, make sure IPv6 is always on #32860
-	[ `use ipv6` ] && append-flags -DHAVE_IPV6
+	use ipv6 && append-flags -DHAVE_IPV6
 	sed -i \
 		-e 's/-DHAVE_IPV6//' \
-		-e "s:-O2:${CFLAGS}:" Makefile || \
-			die "sed Makefile failed"
+		-e "s:-O2:${CFLAGS}:" Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_install() {
 	dogamesbin tetrinet tetrinet-server || die "dogamesbin failed"
-	dodoc README TODO tetrinet.txt      || die "dodoc failed"
+	dodoc README TODO tetrinet.txt
 	prepgamesdirs
 }

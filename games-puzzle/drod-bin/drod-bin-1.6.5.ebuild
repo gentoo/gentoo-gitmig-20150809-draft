@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.5.ebuild,v 1.3 2004/02/26 07:24:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.5.ebuild,v 1.4 2004/05/12 09:02:45 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/drod/CDROD-${PV}-setup.sh.bin"
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 RDEPEND="virtual/x11
 	dev-libs/expat
@@ -18,7 +19,7 @@ RDEPEND="virtual/x11
 	media-libs/libsdl
 	>=media-libs/sdl-ttf-2.0.6"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack_makeself ${A}

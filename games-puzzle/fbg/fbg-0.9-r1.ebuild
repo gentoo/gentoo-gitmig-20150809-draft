@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.4 2004/03/07 21:33:45 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.5 2004/05/12 09:02:45 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/fbg/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
+IUSE=""
 
 DEPEND="virtual/x11
 	virtual/opengl
@@ -22,16 +23,18 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "/FBGDATADIR=/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" configure
+	sed -i \
+		-e "/FBGDATADIR=/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" configure \
+			|| die "sed configure failed"
 }
 
 src_compile() {
 	egamesconf --disable-fbglaunch || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc README TODO AUTHORS
 
 	# now clean up the install
