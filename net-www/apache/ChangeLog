@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.269 2004/09/21 14:38:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.270 2004/09/22 07:32:34 kumba Exp $
+
+  22 Sep 2004; Joshua Kinard <kumba@gentoo.org> apache-2.0.51-r1.ebuild:
+  Marked stable on mips.
 
   21 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> apache-2.0.51-r1.ebuild:
   Stable on sparc wrt #64804
