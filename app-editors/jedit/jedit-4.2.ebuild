@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.4 2004/06/24 21:56:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.1 2004/08/30 17:08:13 axxo Exp $
 
-inherit eutils
+inherit java-utils
 
-MY_PV="42pre12"
+MY_PV="${PV//.}"
+MY_PV="${MY_PV//_}"
 
 DESCRIPTION="Programmer's editor written in Java"
-HOMEPAGE="http://www.jedit.org/"
+HOMEPAGE="http://www.jedit.org"
 SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
-
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
-IUSE="jikes"
+SLOT="0"
+IUSE="jikes doc"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
@@ -23,26 +23,17 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/jEdit"
 
 src_compile() {
-	local antflags
+	local antflags=""
 
-	epatch ${FILESDIR}/${P}.jikes-and-lock-fix.patch
-
-	if [ -z "$JAVA_HOME" ]; then
-		einfo
-		einfo "\$JAVA_HOME not set!"
-		einfo "Please use java-config to configure your JVM and try again."
-		einfo
-		die "\$JAVA_HOME not set."
-	fi
-
-	antflags=""
 	if use jikes ; then
 		einfo "Please ignore the following compiler warnings."
 		einfo "Jikes is just too pedantic..."
 		antflags="${antflags} -Dbuild.compiler=jikes"
 	fi
 
-	ant ${antflags} || die "compile problem"
+	use doc && antflags="${antflags} javadoc"
+
+	ant dist ${antflags} || die "compile problem"
 }
 
 src_install () {
