@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.5 2004/04/26 16:09:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.6 2004/06/08 01:50:16 mr_bones_ Exp $
 
 IUSE=""
 
@@ -15,13 +15,10 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc"
 RESTRICT="fetch"
 
-dyn_fetch() {
-	if ! digest_check ${A}; then
-		einfo "${PN} developes require end-users to accept their license agreement"
-		einfo "by registering on their site (http://www.systemc.org)"
-		einfo "Please download ${P} manually and place it in ${DISTDIR}"
-		die
-	fi
+pkg_nofetch() {
+	einfo "${PN} developes require end-users to accept their license agreement"
+	einfo "by registering on their site (http://www.systemc.org)"
+	einfo "Please download ${A} manually and place it in ${DISTDIR}"
 }
 
 src_unpack() {
