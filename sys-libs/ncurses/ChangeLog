@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/ncurses
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.43 2004/01/11 14:46:00 azarah Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.44 2004/01/11 14:47:47 azarah Exp $
 
 *ncurses-5.3-r5 (11 Jan 2004)
 
