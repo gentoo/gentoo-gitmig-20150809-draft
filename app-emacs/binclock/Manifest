@@ -1,5 +1,15 @@
-MD5 08c97a99dc6d3c0bd3e8a14753845285 ChangeLog 580
-MD5 6f3c3713fb3d60ce151f8d459428211b binclock-1.7.ebuild 836
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3f5fbb78a30369d39523e03594d7508 binclock-1.7.ebuild 756
+MD5 75f285a7f8d60fe46823541536b15fd1 ChangeLog 668
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 eb6d3198a32071f5911e336e77bc9220 files/50binclock-gentoo.el 107
 MD5 1bca833d248ce850cce2dc0fdb470eff files/digest-binclock-1.7 63
+MD5 eb6d3198a32071f5911e336e77bc9220 files/50binclock-gentoo.el 107
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBlyyJVWNWqTUmv+0RAs7HAJ9T3BdQj6YMgetsLwMQJa7ZmhzfoQCfcNzL
+sP62ayalDVxR2VX3XJrICT0=
+=KhLX
+-----END PGP SIGNATURE-----

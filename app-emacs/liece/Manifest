@@ -1,12 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9cf51c9ae83bd7303ae4f020080e35ef liece-1.4.10-r1.ebuild 935
-MD5 b57dfb062df0682fd3b33e232e3acd9c liece-1.4.7-r1.ebuild 1062
-MD5 616f0f019d23aac622b1b5852daa77b5 liece-2.0.0_alpha20030526.ebuild 1151
-MD5 a0adc1c366f4670e2182e09cd515818c ChangeLog 1735
+MD5 2fe63a3959ba092aaff976ae0352b39f ChangeLog 1965
 MD5 1a1745d5b1d6297b158b8516387c24c0 metadata.xml 179
-MD5 8e3ab38077dc5e50af6e72e4d6d0fb6f files/liece-1.4.7-gentoo.patch 1226
-MD5 863af99d124215dd5c56d21b1fae3a5c files/digest-liece-1.4.7-r1 63
 MD5 5fd2f8383cbd4d9d178442b07ba2ef90 files/digest-liece-1.4.10-r1 64
-MD5 6730c08f3766e0f9115881c823128da7 files/digest-liece-2.0.0_alpha20030526 77
 MD5 5aa16bbc6b6ac50b62d981d7786d8573 files/60liece-gentoo.el 308
-MD5 96453ef071882a4b0a3ad4558401402d files/delegate.el 3248
 MD5 552111a8ddd22b645f0ecdde27db38c2 files/liece-1.4.10-gentoo.patch 567
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBly2bVWNWqTUmv+0RAkzpAJ9T0+pAw+lMC8ekkHZrOHsexeOClwCdEdzD
+MowsoxOVmpIG4X2i6RLUC6k=
+=0SCO
+-----END PGP SIGNATURE-----
