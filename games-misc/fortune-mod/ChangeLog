@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.8 2004/07/01 11:19:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.9 2004/08/31 10:59:39 mr_bones_ Exp $
+
+  31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-1.99.1.ebuild:
+  fix path in fortune man page (bug #60843)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fortune-mod-1.0.9708-r1.ebuild, fortune-mod-1.99.1.ebuild:

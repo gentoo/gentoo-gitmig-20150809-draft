@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.7 2004/08/31 09:31:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1.ebuild,v 1.8 2004/08/31 10:59:39 mr_bones_ Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 		-e 's:/fortunes:/fortune:' \
 		-e 's:FORTDIR=$(prefix)/usr:FORTDIR=$(prefix)/usr/bin:' \
 		-e 's:^CFLAGS=.*$:CFLAGS=$(DEFINES) $(E_CFLAGS):' \
+		-e '/^all:/s:$: fortune/fortune.man:' \
 		Makefile \
 		|| die "sed Makefile failed"
 	sed -i \
