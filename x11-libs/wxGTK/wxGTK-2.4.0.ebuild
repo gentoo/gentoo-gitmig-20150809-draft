@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.4 2003/01/15 19:12:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.5 2003/01/22 03:22:32 raker Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -75,7 +75,7 @@ src_compile() {
 	use gtk2 && myconf="${myconf} --enable-gtk2 --enable-unicode"
 
 	econf ${myconf}
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
