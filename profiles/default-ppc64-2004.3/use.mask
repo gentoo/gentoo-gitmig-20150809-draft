@@ -66,3 +66,8 @@ sybase-ct
 
 # dietlibc
 diet
+
+# Added because of xmms-plugin.eclass.  Please test out
+# media-sound/beep-media-player and remove if   
+bmp
+

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.7 2004/10/08 14:18:22 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.8 2004/10/20 00:05:17 eradicator Exp $
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
@@ -99,3 +99,7 @@ pfpro
 solid
 sybase
 sybase-ct
+
+# Added because of xmms-plugin.eclass.  Please test out
+# media-sound/beep-media-player and remove if   
+bmp
