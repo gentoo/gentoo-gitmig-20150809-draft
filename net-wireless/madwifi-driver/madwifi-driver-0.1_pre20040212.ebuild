@@ -1,16 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20030802.ebuild,v 1.1 2003/08/03 18:04:02 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20040212.ebuild,v 1.1 2004/02/12 06:27:40 sediener Exp $
 
-MY_PN="${PN/-driver/}"
-MY_PV="${PV/0.1_pre/}"
-MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="Wireless driver for Atheros chipset a/b/g cards"
 HOMEPAGE="http://madwifi.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tgz"
+SRC_URI="mirror://gentoo/$P.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +16,16 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}
+
+pkg_setup() {
+
+	if [[ "${KV}" > "2.5" ]] ; then
+		cd /usr/src/linux
+		./scripts/modpost ./vmlinux
+	fi
+
+}
 
 src_unpack() {
 	check_KV
@@ -42,13 +48,23 @@ src_compile() {
 src_install() {
 	dodir /lib/modules/${KV}/net
 	insinto /lib/modules/${KV}/net
-	doins ${S}/wlan/wlan.o ${S}/ath_hal/ath_hal.o ${S}/driver/ath_pci.o
+
+	# dealing with 2.6.0 kernel modules .ko naming 
+	if [[ "${KV}" > "2.5" ]] ; then
+#		ewarn "Kernel Version 2.5 or higher"
+		doins ${S}/wlan/wlan.ko ${S}/ath_hal/ath_hal.ko ${S}/driver/ath_pci.ko
+	else
+#		ewarn "Kernel Version under 2.5"
+		doins ${S}/wlan/wlan.o ${S}/ath_hal/ath_hal.o ${S}/driver/ath_pci.o
+	fi
 
 	dodoc README
 }
 
 pkg_postinst() {
+
 	depmod -a
+
 	einfo ""
 	einfo "The madwifi drivers create an interface named 'athX'"
 	einfo "Create /etc/init.d/net.ath0 and add a line for athX"

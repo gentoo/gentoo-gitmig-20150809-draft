@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20031213-r1.ebuild,v 1.1 2003/12/20 01:50:06 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20031213-r1.ebuild,v 1.2 2004/02/12 06:27:40 sediener Exp $
 
 DESCRIPTION="Wireless driver for Atheros chipset a/b/g cards"
 HOMEPAGE="http://madwifi.sourceforge.net/"

@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/madwifi-driver
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.6 2004/01/09 00:44:28 sediener Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.7 2004/02/12 06:27:40 sediener Exp $
+
+*madwifi-driver-0.1_pre20040212 (12 Feb 2004)
+
+  12 Feb 2004; Stephen Diener <sediener@gentoo.org>
+  madwifi-driver-0.1_pre20030702.ebuild,
+  madwifi-driver-0.1_pre20030802.ebuild,
+  madwifi-driver-0.1_pre20031110.ebuild,
+  madwifi-driver-0.1_pre20031213-r1.ebuild,
+  madwifi-driver-0.1_pre20031213.ebuild,
+  madwifi-driver-0.1_pre20040212.ebuild:
+  Cleared out all but the last three monthly snapshots.  Added Febs snap.
 
 *madwifi-driver-0.1_pre20040108 (08 Jan 2004)
 
