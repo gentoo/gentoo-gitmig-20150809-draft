@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/digest-base
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.7 2004/02/15 00:57:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.8 2004/02/15 22:07:23 esammer Exp $
+
+  15 Feb 2004; Eric Sammer <esammer@gentoo.org> digest-base-1.05.ebuild:
+  Added ~mips to fill a dep from Digest-HMAC.
 
   14 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
   digest-base-1.05.ebuild:
