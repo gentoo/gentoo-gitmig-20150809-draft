@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.28.ebuild,v 1.8 2005/03/09 23:13:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.28.ebuild,v 1.9 2005/03/11 18:35:15 lanius Exp $
 
 inherit gnome2 eutils
 
@@ -26,6 +26,6 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	gnome2_src_install
-	insinto /usr/share/control-center-2.0/capplets
+	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.38 2005/03/09 23:13:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.39 2005/03/11 18:35:15 lanius Exp $
+
+  11 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  gnome-cups-manager-0.28.ebuild, gnome-cups-manager-0.30.ebuild:
+  move gnome-cups-manager.desktop to /usr/share/applications
 
   10 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
   +files/gnome-cups-manager.desktop, gnome-cups-manager-0.28.ebuild,
