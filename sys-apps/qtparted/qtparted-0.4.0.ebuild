@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.0.ebuild,v 1.1 2003/10/14 13:17:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.0.ebuild,v 1.2 2003/10/15 13:00:35 caleb Exp $
 
 inherit kde
 need-qt 3.1
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND="=x11-libs/qt-3.1*
+DEPEND=">=x11-libs/qt-3.1.0
 	>=sys-apps/parted-1.6.6
 	>=sys-fs/e2fsprogs-1.33
 	>=sys-fs/progsreiserfs-0.3.0.4
