@@ -1,0 +1,7 @@
+MD5 2fb1753be7be4de2375fe436671df67e files/digest-fwanalog-0.4-r2 63
+MD5 b37fb766d36553b90635b5d71080444a files/digest-fwanalog-0.6.2 66
+MD5 ba212938784ef2ca1c8167f51ef821d7 files/digest-fwanalog-0.6.4 66
+MD5 30592ecfcb0c50ca58dce0f3f580b7d3 ChangeLog 1336
+MD5 1af9973198eee64c2bda6d6c18247b3b fwanalog-0.4-r2.ebuild 1069
+MD5 03abbaf9bdb1a5c0277e0bb83d0b2c3d fwanalog-0.6.2.ebuild 1068
+MD5 bfd2ad5f4d0d7d393fce3b1bb2c2cd65 fwanalog-0.6.4.ebuild 1070
