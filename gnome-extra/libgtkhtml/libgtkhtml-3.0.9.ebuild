@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.9.ebuild,v 1.1 2003/09/24 15:06:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.9.ebuild,v 1.2 2003/09/29 20:51:56 agriffis Exp $
 
 inherit gnome2
 
@@ -43,6 +43,7 @@ ELTCONF="--reverse-deps"
 src_unpack() {
 	unpack ${A}
 	if use alpha; then
+		cd ${S}
 		epatch ${FILESDIR}/${PN}-3.0.8-alpha.patch
 	fi
 }
