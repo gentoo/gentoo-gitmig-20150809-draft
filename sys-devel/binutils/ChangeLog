@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.49 2003/05/17 18:24:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.50 2003/05/25 15:34:03 mholzer Exp $
+
+*binutils-2.11.92.0.7 (25 May 2003)
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org>
+  binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,
+  binutils-2.12.90.0.15.ebuild, binutils-2.12.90.0.7.ebuild,
+  binutils-2.13.90.0.16-r1.ebuild, binutils-2.13.90.0.18-r1.ebuild,
+  binutils-2.13.90.0.18.ebuild, binutils-2.13.90.0.20-r1.ebuild,
+  binutils-2.14.90.0.1-r1.ebuild, binutils-2.14.90.0.2.ebuild:
+  now uses mirror://kernel
 
 *binutils-2.14.90.0.2 (17 May 2003)
 
