@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/f-prot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.8 2002/12/10 00:59:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.9 2002/12/15 06:14:54 raker Exp $
 
 *f-prot-3.12c (08 Dec 2002)
+
+  14 Dec 2002; Nick Hadaway <raker@gentoo.org> f-prot-3.12c.ebuild :
+  Updated digest as it upstream updated the file.
 
   09 Dec 2002; Nick Hadaway <raker@gentoo.org> f-prot=3.12c.ebuild :
   Marked stable.
