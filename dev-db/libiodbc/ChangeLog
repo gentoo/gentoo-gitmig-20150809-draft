@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/libiodbc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.1 2003/12/01 15:52:15 tantive Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.2 2004/02/01 12:29:11 tantive Exp $
+
+*libiodbc-3.51.1-r1 (01 Feb 2004)
+
+  01 Feb 2004; Michael Imhof <tantive@gentoo.org> libiodbc-3.51.1-r1.ebuild,
+  libiodbc-3.51.1.ebuild:
+  Fixed my errors. Closes #40045.
 
 *libiodbc-3.51.1 (01 Dec 2003)
 
