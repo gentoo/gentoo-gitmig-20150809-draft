@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.12.ebuild,v 1.4 2004/10/01 01:14:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/xchatosd-5.12.ebuild,v 1.5 2004/12/04 22:44:57 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="On-Screen Display for XChat"
 HOMEPAGE="http://sourceforge.net/projects/xchatosd/"
@@ -18,6 +20,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-return-values.patch
 
 	# We have our own include file in /usr/include/xchat
 	einfo "Updating xchat-plugin.h from /usr/include/xchat/xchat-plugin.h"

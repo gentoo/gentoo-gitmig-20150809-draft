@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchatosd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.4 2004/10/01 01:14:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.5 2004/12/04 22:44:57 swegener Exp $
+
+  04 Dec 2004; Sven Wegener <swegener@gentoo.org>
+  +files/5.12-return-values.patch, xchatosd-5.12.ebuild:
+  Added a patch that fixes wrong return value checking. Closes bug #72481.
 
   01 Oct 2004; Sven Wegener <swegener@gentoo.org> xchatosd-5.12.ebuild:
   Marked stable on x86.

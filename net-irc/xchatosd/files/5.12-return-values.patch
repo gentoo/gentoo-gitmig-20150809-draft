@@ -1,0 +1,39 @@
+diff -Nur xchatosd-5.12.orig/xchatosd.c xchatosd-5.12/xchatosd.c
+--- xchatosd-5.12.orig/xchatosd.c	2004-12-04 23:30:10.621652464 +0100
++++ xchatosd-5.12/xchatosd.c	2004-12-04 23:31:10.636339349 +0100
+@@ -192,16 +192,25 @@
+ 	}
+ 	int status = 0;
+ 
+-	status += xosd_set_pos(osd, conf.pos);
+-	status += xosd_set_vertical_offset(osd, conf.voffset);
+-	status += xosd_set_horizontal_offset(osd, conf.hoffset);
+-	status += xosd_set_align(osd, conf.align);
+-	status += xosd_set_shadow_offset(osd, conf.shadow_offset);
+-	status += xosd_set_timeout(osd, conf.timeout);
+-	status += xosd_set_font(osd, conf.font);
+-	status += xosd_set_colour(osd, conf.color);
+-	status += xosd_display(osd, 0, XOSD_string, MSG_Hello);
+-	return status;
++	status = xosd_set_pos(osd, conf.pos);
++	if (-1 == status) return -1;
++	status = xosd_set_vertical_offset(osd, conf.voffset);
++	if (-1 == status) return -1;
++	status = xosd_set_horizontal_offset(osd, conf.hoffset);
++	if (-1 == status) return -1;
++	status = xosd_set_align(osd, conf.align);
++	if (-1 == status) return -1;
++	status = xosd_set_shadow_offset(osd, conf.shadow_offset);
++	if (-1 == status) return -1;
++	status = xosd_set_timeout(osd, conf.timeout);
++	if (-1 == status) return -1;
++	status = xosd_set_font(osd, conf.font);
++	if (-1 == status) return -1;
++	status = xosd_set_colour(osd, conf.color);
++	if (-1 == status) return -1;
++	status = xosd_display(osd, 0, XOSD_string, MSG_Hello);
++	if (-1 == status) return -1;
++	return 0;
+ }
+ 
+ #ifdef ICONV_LIB
