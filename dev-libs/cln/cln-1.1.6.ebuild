@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.8 2004/03/17 21:36:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.6.ebuild,v 1.1 2004/03/17 21:36:25 aliz Exp $
 
 inherit flag-o-matic gcc
 
@@ -10,15 +10,14 @@ HOMEPAGE="http://www.ginac.de/CLN/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-SRC_URI="ftp://ftp.santafe.edu/pub/gnu/${P}.tar.gz"
-#SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.gz"
+SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2
+	ftp://ftp.santafe.edu/pub/gnu/${P}.tar.bz2
+	ftp://ftp.ilog.fr/pub/Users/haible/gnu/${P}.tar.bz2"
 DEPEND="dev-libs/gmp"
 
 src_compile() {
-	libtoolize -c -f
-
 	# at least with gcc 2.95 and 3.1, cln won't like -O3 flag...
 	replace-flags -O[3..9] -O2
 
