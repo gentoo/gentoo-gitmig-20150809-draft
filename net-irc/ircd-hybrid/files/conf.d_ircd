@@ -1,0 +1,9 @@
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/conf.d_ircd,v 1.1 2003/12/17 02:37:45 zul Exp $
+
+# Config file for /etc/init.d/ircd
+
+# See options in ircd(8). Set {IPV4,IPV6}_OPTS="no" if you don't want the
+# respective ircd-{ipv4,ipv6} daemon to be started.
+IPV4_OPTS=""
+IPV6_OPTS=""
