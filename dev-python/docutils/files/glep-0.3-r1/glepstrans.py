@@ -1,7 +1,7 @@
 # Author: David Goodger
 # Contact: goodger@users.sourceforge.net
-# Revision: $Revision: 1.1 $
-# Date: $Date: 2003/07/07 23:39:10 $
+# Revision: $Revision: 1.2 $
+# Date: $Date: 2003/07/29 00:15:37 $
 # Copyright: This module has been placed in the public domain.
 
 """
@@ -33,8 +33,8 @@ class Headers(Transform):
     default_priority = 360
 
     pep_url = 'glep-%04d.html'
-    pep_cvs_url = ('http://cvs.gentoo.org/cgi-bin/viewcvs.cgi/gentoo/'
-                   'xml/htdocs/proj/en/glep/glep-%04d.txt')
+    pep_cvs_url = ('http://www.gentoo.org/cgi-bin/viewcvs.cgi/'
+                   'xml/htdocs/proj/en/glep/glep-%04d.txt?cvsroot=gentoo')
     rcs_keyword_substitutions = (
           (re.compile(r'\$' r'RCSfile: (.+),v \$$', re.IGNORECASE), r'\1'),
           (re.compile(r'\$[a-zA-Z]+: (.+) \$$'), r'\1'),)
