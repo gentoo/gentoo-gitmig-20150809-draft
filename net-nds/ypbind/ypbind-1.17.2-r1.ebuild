@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.2 2004/08/23 21:50:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2-r1.ebuild,v 1.3 2004/08/24 23:23:27 eradicator Exp $
+
+IUSE="nls slp"
 
 MY_P=${PN}-mt-${PV}
 DESCRIPTION="Multithreaded NIS bind service (ypbind-mt)"
@@ -9,11 +11,10 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~ia64 ~ppc64"
-IUSE="nls"
+KEYWORDS="x86 sparc ~alpha ~ppc amd64 ~ia64 ~ppc64"
 
 DEPEND="net-nds/yp-tools
-	net-libs/openslp
+	slp? ( net-libs/openslp )
 	net-nds/portmap"
 
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -21,7 +22,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	econf $(use_enable nls) || die
+	econf `use_enable nls` `use_enable slp` || die
 	emake || die "emake failed"
 }
 

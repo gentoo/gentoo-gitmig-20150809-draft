@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.12.ebuild,v 1.6 2004/08/23 21:50:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.12.ebuild,v 1.7 2004/08/24 23:23:27 eradicator Exp $
 
-IUSE="nls"
+IUSE="nls slp"
 
 MY_P=${PN}-mt-${PV}
 S=${WORKDIR}/${MY_P}
@@ -15,14 +15,12 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~alpha ~ppc ppc64"
 
 DEPEND="net-nds/yp-tools
-	net-libs/openslp
+	slp? ( net-libs/openslp )
 	net-nds/portmap"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
-	use nls || myconf="--disable-nls"
-	econf ${myconf} || die
+	econf `use_enable nls` `use_enable slp` || die
 	make || die
 }
 
