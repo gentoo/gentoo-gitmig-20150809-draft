@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.12 2003/11/15 18:02:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.13 2003/11/15 21:12:23 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -132,9 +132,9 @@ ruby_src_compile() {
 
 erubyinstall() {
 	local RUBY siteruby
-	if [ "$1" = ruby16 ] ; then
+	if [ "$1" = ruby16 -a -x /usr/bin/ruby16 ] ; then
 		RUBY=ruby16
-	elif [ "$1" = ruby18 ] ; then
+	elif [ "$1" = ruby18 -a -x /usr/bin/ruby18 ] ; then
 		RUBY=ruby18
 	else
 		RUBY=ruby
@@ -161,6 +161,8 @@ erubyinstall() {
 
 ruby_einstall() {
 
+	local siteruby=$(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
+
 	if [[ "${WITH_RUBY/1.6/}" != "${WITH_RUBY}" && "${WITH_RUBY/1.8/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running einstall for ruby 1.6 ;)"
 		MY_S=${S}/1.6/${S#${WORKDIR}}
@@ -172,6 +174,29 @@ ruby_einstall() {
 		erubyinstall ruby18 $@
 		S=${MY_S}
 		#cd -
+	elif [[ "${USE_RUBY/0/}" != "${USE_RUBY}" ]] ; then
+		if [ -n "`use ruby18`" ] ; then
+			erubyinstall ruby18 $@
+			if [ -d ${D}${siteruby}/../1.8 ] ; then
+				cd ${D}${siteruby}/../1.8
+				dodir ${siteruby}/../1.6
+				for x in * ; do
+					ln -s ../1.8/$x ../1.6/$x
+				done
+				cd -
+			fi
+		else
+			erubyinstall ruby16 $@
+			if [ -d ${D}${siteruby}/../1.6 ] ; then
+				cd ${D}${siteruby}/../1.6
+				dodir ${siteruby}/../1.8
+				for x in * ; do
+					ln -s ../1.6/$x ../1.8/$x
+				done
+				cd -
+			fi
+		fi
+		erubyinstall
 	else
 		einfo "running einstall for ruby ;)"
 		erubyinstall ruby $@
