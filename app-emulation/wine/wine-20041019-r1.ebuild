@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.4 2004/10/31 00:50:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r1.ebuild,v 1.5 2004/10/31 00:57:03 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -101,7 +101,7 @@ src_install() {
 	chown -R root:root ${WORKDIR}/fake_windows/
 	cp -r ${WORKDIR}/fake_windows ${D}/usr/share/wine/data/
 
-	# Unpacking the miscellaneous files
+	# Install our custom wrappers
 	cd ${WORKDIR}/misc
 	for x in * ; do
 		[ "${x}" == "config.patch" ] && continue
@@ -109,6 +109,7 @@ src_install() {
 			&& mv "${D}"/usr/bin/${x}{,-bin}
 		dobin ${x}
 	done
+	dosym regedit.exe.so /usr/lib/wine/regedit-bin.exe.so
 
 	# copying the wine.inf into .data (used to be winedefault.reg)
 	cd ${S}
