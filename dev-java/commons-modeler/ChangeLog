@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.1 2004/02/26 03:50:59 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.2 2004/03/23 03:28:35 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-modeler-1.1.ebuild:
+  Stable on x86. Fixes according to #45398
 
 *commons-modeler-1.1 (28 Feb 2004)
 

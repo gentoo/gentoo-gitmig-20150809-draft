@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.1 2004/02/24 20:29:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.2 2004/03/23 03:25:27 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> poi-2.0.ebuild:
+  Stable on x86. Fixes according to #45398
 
 *poi-2.0 (27 Feb 2004)
 

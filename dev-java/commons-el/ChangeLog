@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.2 2004/03/02 08:54:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.3 2004/03/23 03:27:14 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> commons-el-1.0.ebuild:
+  Stable on x86. Fixes according to #45398
 
 *commons-el-1.0 (28 Feb 2004)
 
