@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.16 2005/03/06 11:44:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.17 2005/03/07 11:33:18 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.4-r1"
 GLIBC_INFOPAGE_VERSION="2.3.4-r1"
 
 # Gentoo patchset
-PATCH_VER="1.4"
+PATCH_VER="1.5"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -1027,6 +1027,10 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
+RDEPEND="virtual/os-headers
+	sys-apps/baselayout
+	nls? ( sys-devel/gettext )"
+
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND}
 	        >=${CATEGORY}/gcc-3.3.5-r1"
@@ -1038,11 +1042,22 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		DEPEND="${DEPEND}
 		        >=${CATEGORY}/linux-headers-2.6.8"
 	fi
-fi
 
-RDEPEND="virtual/os-headers
-	sys-apps/baselayout
-	nls? ( sys-devel/gettext )"
+	case ${CTARGET} in
+		x86_64*)
+			[[ ${CHOST/-*/} == "i686" ]] || RDEPEND="${RDEPEND} cross-i686-pc-linux-gnu/${PN}"
+		;;
+		sparc64*)
+			[[ ${CHOST/-*/} == "sparc" ]] || RDEPEND="${RDEPEND} cross-sparc-unknown-linux-gnu/${PN}"
+		;;
+		ppc64*)
+			[[ ${CHOST/-*/} == "powerpc" ]] || RDEPEND="${RDEPEND} cross-powerpc-unknown-linux-gnu/${PN}"
+		;;
+		mips64*)
+			[[ ${CHOST/-*/} == "mips" ]] || RDEPEND="${RDEPEND} cross-mips-unknown-linux-gnu/${PN}"
+		;;
+	esac
+fi
 
 # until amd64's 2004.3 is purged out of existence
 PDEPEND="amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-2.3.4 ) )"
