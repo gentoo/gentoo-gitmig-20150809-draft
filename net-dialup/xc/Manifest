@@ -1,4 +1,5 @@
-MD5 39c11475be628e2605692fc0fa0d6f83 ChangeLog 795
 MD5 6bd64e89e96ad4bfa8c2ba3bdb70ac7a xc-4.3.2.ebuild 855
-MD5 a19ff63623f36ba8624bf50f382e210c files/digest-xc-4.3.2 60
+MD5 0432b4fe381085a624e783034e7b2393 ChangeLog 876
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 80e981efed033a8eaaa0c0e632eee1ae files/xc-4.3.2-gentoo.diff 1905
+MD5 a19ff63623f36ba8624bf50f382e210c files/digest-xc-4.3.2 60

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rppppoek
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/ChangeLog,v 1.3 2003/05/23 07:44:31 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/ChangeLog,v 1.4 2003/11/19 14:50:14 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
 *rppppoek-0.33 (23 May 2003)
 

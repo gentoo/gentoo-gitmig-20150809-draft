@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.13 2003/09/12 22:44:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.14 2003/11/19 14:51:14 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
   12 Sep 2003; Michael Sterrett <msterret@gentoo.org> wvdial-1.53-r1.ebuild:
   whitespace cleanup; error messages; check results of sed; tidy

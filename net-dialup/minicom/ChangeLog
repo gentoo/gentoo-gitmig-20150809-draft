@@ -1,7 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.14 2003/09/30 19:41:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.15 2003/11/19 14:45:19 lanius Exp $
 
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
 *minicom-2.1 (24 Aug 2003)
 
