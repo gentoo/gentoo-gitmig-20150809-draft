@@ -1,7 +1,0 @@
-MD5 e67c24c63e8ae8e1e79be3c4fefb21cb ChangeLog 1029
-MD5 8be8ff787016b48fe79056d059d14586 pycurl-0.4.5.ebuild 606
-MD5 260e31d04e428d2afd0ec63f77ef6f2d pycurl-7.10.3.ebuild 804
-MD5 fb0b79359b9acf560dc90fc2a6e973a9 pycurl-7.10.4.ebuild 804
-MD5 163a02baffda306a7965e007324b2fb2 files/digest-pycurl-0.4.5 63
-MD5 249d6fc38f60f070566d83bbfa159350 files/digest-pycurl-7.10.3 64
-MD5 e493742a164b22b91b7b552c2620e3c1 files/digest-pycurl-7.10.4 127
