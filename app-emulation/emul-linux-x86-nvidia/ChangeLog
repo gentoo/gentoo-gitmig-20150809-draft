@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-nvidia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.3 2004/07/14 21:23:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.4 2004/07/17 03:33:38 cyfred Exp $
+
+*emul-linux-x86-nvidia-1.0.6106-r1 (17 Jul 2004)
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +emul-linux-x86-nvidia-1.0.6106-r1.ebuild:
+  Matching 32bit compatibility commit for nvidia-glx changes. Basically changes
+  how TLS is installed, and removes the need for LD_CONFIG_PATH
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org>
   emul-linux-x86-nvidia-1.0.6106.ebuild:
