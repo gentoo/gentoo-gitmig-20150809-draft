@@ -1,2 +1,5 @@
-MD5 a08dddd5611b8a02c16a7534e3dcf19a livecd-tools-1.0.0_beta1.ebuild 694
+MD5 0c6c53f0701fd00b15cdef2dbeddf69e livecd-tools-1.0.0_beta1.ebuild 699
+MD5 d5a84c0491d188c3710321c1d1c60fa1 ChangeLog 504
+MD5 4069914d425180bd385bb15e13ee391a livecd-tools-1.0.0_beta2.ebuild 766
 MD5 58c4629a8a6a45419568266180882967 files/digest-livecd-tools-1.0.0_beta1 75
+MD5 55b6519be3de5d93dda3c9694440a7cd files/digest-livecd-tools-1.0.0_beta2 75

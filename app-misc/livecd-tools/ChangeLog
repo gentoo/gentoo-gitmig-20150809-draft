@@ -1,0 +1,16 @@
+# ChangeLog for app-misc/livecd-tools
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.1 2004/01/25 07:30:23 brad_mssw Exp $
+
+*livecd-tools-1.0.0_beta2 (25 Jan 2004)
+
+  25 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  livecd-tools-1.0.0_beta2.ebuild:
+  fixes
+
+*livecd-tools-1.0.0_beta1 (24 Jan 2004)
+
+  24 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  livecd-tools-1.0.0_beta1.ebuild:
+  initial commit
+
