@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-gatos
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.19 2004/12/24 04:27:00 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.20 2005/01/20 04:55:57 battousai Exp $
+
+  19 Jan 2005; Bryan Stine <battousai@gentoo.org> -ati-gatos-4.3.0.ebuild:
+  Nuke ati-gatos-4.3.0. XFree 4.3, upon which this depends, is no longer in
+  portage.
 
   23 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   +files/ati-gatos-4.4.0-prototypes.patch, ati-gatos-4.4.0.ebuild:

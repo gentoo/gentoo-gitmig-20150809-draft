@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2b834ae157f9d6a83f9ede1597db75b ChangeLog 2821
 MD5 9fb1596ce1b15c6cf93b2a3e05f38285 metadata.xml 337
-MD5 509ffacc782a18f5b5bb975c7d843818 ati-gatos-4.3.0.ebuild 2289
-MD5 f73e4f75586ad9487cbc0e53565344f6 ati-gatos-4.4.0.ebuild 2403
-MD5 909c81fb5d11eb05efdf420d56460f57 files/digest-ati-gatos-4.3.0 68
-MD5 f0a4b78e9cfa26b4ffdf829e000d0459 files/ati-gatos-4.4.0-new-xorg.patch 10854
+MD5 6807dc81f41d0e84c6494f8bbe85751a ChangeLog 2987
+MD5 5fe70a037aa372f569d20caf624642ec ati-gatos-4.4.0.ebuild 2406
 MD5 ee56241b288c93ecd41472ee630a1ace files/digest-ati-gatos-4.4.0 77
+MD5 f0a4b78e9cfa26b4ffdf829e000d0459 files/ati-gatos-4.4.0-new-xorg.patch 10854
 MD5 21b46c970264da1f4d614d8357e56336 files/ati-gatos-4.4.0-prototypes.patch 1100
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy5qhroRuSHgZdywRAmBPAKCCvanopCjqE8XROp97ITzfBltj+gCdH1t3
-C/uIbVvxm+/1YS8niLP9Nfs=
-=pRDY
------END PGP SIGNATURE-----
