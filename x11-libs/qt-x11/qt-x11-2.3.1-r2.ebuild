@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r2.ebuild,v 1.3 2001/10/09 08:29:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r2.ebuild,v 1.4 2001/10/09 14:50:59 danarmak Exp $
 # note: this is the new revision that installs into /usr
 
 S=${WORKDIR}/qt-${PV}
@@ -97,7 +97,7 @@ src_install() {
 	cd ${D}
 	ln -s /${QTBASE} usr/lib/qt-x11-2
 	insinto /etc/env.d
-	doins ${FILESDIR}/30qt
+	newins ${FILESDIR}/30qt.2 30qt
 	doins ${FILESDIR}/50qt-x11-2
 
 }
