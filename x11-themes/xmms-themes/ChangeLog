@@ -1,10 +1,18 @@
 # ChangeLog for x11-themes/xmms-themes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.2 2002/11/03 17:40:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.3 2002/12/15 01:26:42 seemant Exp $
 
-*xmms-themes-0.0.2 (3 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+*xmms-themes-0.0.2 (3 Nov 2002) 
 
-  Added a few more spiffy themes ;o)
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xmms-themes-0.0.2.ebuild : 
+
+  made sure none of them world-writeable.  Closes bug #11817 by
+  tonlwalk@indiana.edu (Tony Walker)
+
+  03 Nov 2002; Bart Verwilst <verwilst@gentoo.org> xmms-themes-0.0.2.ebuild
+  files/digest-xmms-themes-0.0.2 :
+
+  Added a few more spiffy themes ;o)  
 
 *xmms-themes-0.0.1 (11 Jul 2002) 
 

@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.1 2002/11/03 17:40:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.2.ebuild,v 1.2 2002/12/15 01:26:42 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Collection of XMMS themes"
 HOMEPAGE="http://www.xmms.org"
 THEME_URI="http://www.xmms.org/files/Skins"
@@ -93,13 +94,13 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 	http://mrb.tagclan.com/files/ace.wsz"
 
 
-LICENSE="Freeware"
 SLOT="0"
-KEYWORDS="* alpha"
+LICENSE="Freeware"
+KEYWORDS="x86 ppc sparc alpha"
+
 DEPEND="net-misc/wget"
 RDEPEND="media-sound/xmms
 	app-arch/unzip"
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	local bn
@@ -122,4 +123,6 @@ src_unpack() {
 src_install () {
 	dodir /usr/share/xmms/Skins
 	cp -dpR * ${D}/usr/share/xmms/Skins/
+	chown -R root.root ${D}/usr/share/xmms/Skins/
+	chmod -R o-w ${D}/usr/share/xmms/Skins/
 }
