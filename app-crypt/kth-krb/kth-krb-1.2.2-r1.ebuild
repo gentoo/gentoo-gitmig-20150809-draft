@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.9 2004/05/01 00:14:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r1.ebuild,v 1.10 2004/05/01 19:35:36 mr_bones_ Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} sysconfdir=${D}/etc \
 		install || die
 
