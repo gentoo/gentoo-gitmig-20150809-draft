@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0b.ebuild,v 1.1 2004/02/28 12:00:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0b.ebuild,v 1.2 2004/04/08 07:27:22 eradicator Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alsa-project.org/~iwai/awedrv.html#Utils"
 SRC_URI=http://www.alsa-project.org/~iwai/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="alsa"
 DEPEND="virtual/glibc
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )"

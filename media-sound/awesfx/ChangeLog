@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/awesfx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.5 2004/03/31 18:06:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.6 2004/04/08 07:27:22 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> awesfx-0.5.0b.ebuild:
+  Stable x86.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> awesfx-0.4.4.ebuild:
   Removed explicit S=
