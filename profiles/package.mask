@@ -1,3 +1,6 @@
+#testing eclasses
+=kde-base/kdebase-2.2.1-r1
+
 #a test ebuild for agriffis
 =sys-kernel/linux-headers-2.4.10-r1
 
