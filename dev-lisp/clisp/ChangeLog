@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.10 2003/11/26 21:57:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.11 2003/11/29 07:25:39 mkennedy Exp $
+
+*clisp-2.31-r1 (29 Nov 2003)
+
+  29 Nov 2003; <mkennedy@gentoo.org> clisp-2.31-r1.ebuild:
+  fixes for bugs 33425, 34630 and 34497
 
   26 Nov 2003; <mkennedy@gentoo.org> clisp-2.31.ebuild:
   removed non-x86 keywords. non-x86 maintainers, please check clisp's depend
