@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.11.ebuild,v 1.2 2004/12/04 19:06:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.11.ebuild,v 1.3 2004/12/29 02:46:06 ribosome Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="media-libs/ladspa-sdk
-	dev-libs/fftw
+	sci-libs/fftw
 	>=sys-apps/sed-4"
 
 src_unpack() {

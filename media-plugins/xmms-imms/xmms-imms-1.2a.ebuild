@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.5 2004/11/11 09:55:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.2a.ebuild,v 1.6 2004/12/29 02:44:37 ribosome Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ RDEPEND="=dev-db/sqlite-3*
 	media-sound/xmms
 	>=media-libs/taglib-1.1
 	>=dev-libs/libpcre-4.3
-	=dev-libs/fftw-3*
+	=sci-libs/fftw-3*
 	media-sound/sox"
 
 DEPEND="${RDEPEND}
