@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zopex3
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/ChangeLog,v 1.1 2004/09/27 19:45:56 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/ChangeLog,v 1.2 2004/09/28 01:47:28 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/zope.initd:
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
 *zopex3-3.0.0_rc1 (27 Sep 2004)
 

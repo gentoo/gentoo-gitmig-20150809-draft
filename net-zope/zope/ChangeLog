@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.48 2004/09/26 18:12:47 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.49 2004/09/28 01:46:11 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/2.7.2/zope.initd:
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> zope-2.6.4-r1.ebuild:
   Fixed permission problem (775/664 or 755/644 depending on new/present
