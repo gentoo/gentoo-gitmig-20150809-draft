@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.81 2004/02/24 03:53:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.82 2004/02/27 20:37:03 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -519,7 +519,14 @@ enewuser() {
 	then
 		if [ "${euid}" -gt 0 ]
 		then
-			opts="${opts} -u ${euid}"
+			chown ${euid} ${tmpfile} >& /dev/null
+			realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
+			if [ "${realuser//[0-9]}" != "" ]
+			then
+				euid="uid is taken; using next available"
+			else
+				opts="${opts} -u ${euid}"
+			fi
 		else
 			eerror "Userid given but is not greater than 0 !"
 			die "${euid} is not a valid UID"
