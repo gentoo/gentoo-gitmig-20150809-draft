@@ -1,10 +1,15 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.6 2002/06/27 11:08:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.7 2002/07/29 04:07:49 cselkirk Exp $
 
 *analog-5.24 (27 Jun 2002)
 
+  29 Jul 2002; Calum Selkrik <cselkirk@gentoo.org> analog-5.24.ebuild :
+  
+  Added ppc to KEYWORDS. Added RDEPEND.
+
   27 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
+  
   version bump - this release fixes a security bug in anlgform.pl (not enabled
   by default
 
