@@ -1,14 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.8.10.ebuild,v 1.11 2005/04/01 16:01:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc2.ebuild,v 1.1 2005/04/01 16:01:01 vanquirius Exp $
 
+inherit versionator
+
+MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-ids.org/"
-SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
+SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64 amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -17,6 +20,8 @@ DEPEND="virtual/libc
 #	doc? ( dev-util/gtk-doc )"
 # Doc disabled as per bug 77575
 
+S=${WORKDIR}/${MY_P}
+
 src_compile() {
 	local myconf
 
@@ -24,7 +29,8 @@ src_compile() {
 	# use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --enable-gtk-doc=no"
 
 	econf ${myconf} || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
+	# -j1 may not be necessary in the future
 }
 
 src_install() {
