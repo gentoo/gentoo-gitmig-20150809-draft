@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SmbHash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.7 2004/09/05 09:55:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.8 2004/09/06 16:03:44 lv Exp $
+
+  06 Sep 2004; Travis Tilley <lv@gentoo.org> Crypt-SmbHash-0.02.ebuild:
+  stable on amd64
 
   05 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> Crypt-SmbHash-0.02.ebuild:
   Add ~alpha keyword.
