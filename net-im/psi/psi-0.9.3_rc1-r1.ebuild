@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3_rc1-r1.ebuild,v 1.1 2004/12/28 17:26:27 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3_rc1-r1.ebuild,v 1.2 2004/12/28 19:30:46 humpback Exp $
 
 inherit eutils
 
@@ -36,6 +36,7 @@ SRC_URI="http://people.ex.ac.uk/kismith/psi/${MY_P}.tar.bz2
 		linguas_nl? ( ${HTTPMIRR}/psi_nl-${LANGVER}.tar.bz2 )
 		linguas_pl? ( ${HTTPMIRR}/psi_pl-${LANGVER}.tar.bz2 )
 		linguas_pt? ( ${HTTPMIRR}/psi_pt-${LANGVER}.tar.bz2 )
+		linguas_ptBR? ( ${HTTPMIRR}/psi_pt_BR-${LANGVER}.tar.bz2 )
 		linguas_ru? ( ${HTTPMIRR}/psi_ru-${LANGVER}.tar.bz2 )
 		linguas_se? ( ${HTTPMIRR}/psi_se-${LANGVER}.tar.bz2 )
 		linguas_sk? ( ${HTTPMIRR}/psi_sk-${LANGVER}.tar.bz2 )
