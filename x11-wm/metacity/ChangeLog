@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.30 2003/05/22 17:21:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.31 2003/05/29 22:15:39 lu_zero Exp $
+
+  29 May 2003; Luca Barbato <lu_zero@gentoo.org> metacity-2.4.34.ebuild :
+  Add ppc to KEYWORDS
 
 *metacity-2.4.55 (22 May 2003)
 
