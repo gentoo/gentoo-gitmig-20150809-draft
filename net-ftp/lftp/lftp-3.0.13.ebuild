@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.10.ebuild,v 1.2 2004/11/02 15:16:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.13.ebuild,v 1.1 2004/12/22 10:55:58 dragonheart Exp $
 
 inherit eutils
 
