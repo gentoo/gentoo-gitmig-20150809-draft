@@ -1,0 +1,7 @@
+# ChangeLog for x11-misc/expocity
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/ChangeLog,v 1.1 2004/11/07 13:13:25 pyrania Exp $
+
+  07 Nov 2004; <pyrania@gentoo.org> +metadata.xml:
+  Initial import, closing bug #51106.
+
