@@ -25,12 +25,6 @@
  .B /proc/openprom/, /dev/openprom, eeprom(8)
 --- sparc-utils-1.9.orig/prtconf-1.3/prtconf.c
 +++ sparc-utils-1.9/prtconf-1.3/prtconf.c
-@@ -1,4 +1,4 @@
--/* $Id: sparc-utils_1.9-2.diff,v 1.1 2002/04/16 01:49:36 murphy Exp $
-+/* $Id: sparc-utils_1.9-2.diff,v 1.1 2002/04/16 01:49:36 murphy Exp $
-  * prtconf.c: OpenPROM dump utility.
-  *
-  * Copyright (C) 1998 Jakub Jelinek (jj@ultra.linux.cz)
 @@ -274,7 +274,7 @@
  				if (string)
  					printf("%s: '%s'\n", op->oprom_array, prop);
