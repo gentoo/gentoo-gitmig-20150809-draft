@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/multiskkserv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.1 2003/07/16 18:59:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.2 2003/08/05 09:39:07 usata Exp $
+
+  05 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> multiskkserv-20020201.ebuild:
+  Marked x86 and alpha stable
 
 *multiskkserv-20020201 (17 Jul 2003)
 
