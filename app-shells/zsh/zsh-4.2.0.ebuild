@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.5 2004/06/02 14:55:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.6 2004/06/21 17:43:23 usata Exp $
 
 IUSE="maildir ncurses static doc pcre cap"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ~ppc sparc ~amd64 hppa"
+KEYWORDS="x86 alpha ppc sparc ~amd64 hppa"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
