@@ -92,8 +92,10 @@
 		$public = 'private';
 	}
 
-	$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
-	list( $developer ) = mysql_fetch_row( $developer );
+	if ( $action != 'new_todo' ) {
+		$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
+		list( $developer ) = mysql_fetch_row( $developer );
+	}
 
 	$todo['title'] = strip_tags( $todo['title'], $allow_tags );
 	$todo['longdesc'] = strip_tags( $todo['longdesc'], $allow_tags );
@@ -198,16 +200,20 @@
 <?php } ?>
 
 <?php
-	// okay, now we get to spit out all the followups.
-	$result = mysql_query( "select * from followups where tid=$tid order by date" );
-	while ( $fup = mysql_fetch_array( $result ) ) {
-		$fuser = mysql_query( 'select username from users where uid='.$fup['uid'] );
-		list( $fuser ) = mysql_fetch_row( $fuser );
-?>
-	<p style="margin:15px 5px 5px 5px;">Posted by <b><?=$fuser;?></b> on <b><?=date( "n/j/y", $fup['date'] );?></b></p>
-	<p style="margin:0 5px 5px 15px"><?=$fup['followup'];?></p>
+	if ( $action != 'new_todo' ) {
+		// okay, now we get to spit out all the followups.
+		$result = mysql_query( "select * from followups where tid=$tid order by date" );
+		while ( $fup = mysql_fetch_array( $result ) ) {
+			$fuser = mysql_query( 'select username from users where uid='.$fup['uid'] );
+			list( $fuser ) = mysql_fetch_row( $fuser );
+?>	
+			<p style="margin:15px 5px 5px 5px;">Posted by <b><?=$fuser;?></b> on <b><?=date( "n/j/y", $fup['date'] );?></b></p>
+			<p style="margin:0 5px 5px 15px"><?=$fup['followup'];?></p>
+			<?php
+		}
+	}
 
-<?php } ?>
+?>
 
 </tr></td></table>
 
