@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.4 2003/03/30 22:39:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.91.ebuild,v 1.5 2003/03/31 00:10:38 liquidx Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
@@ -48,4 +48,12 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO KNOWN_BUGS
+    
+    # fix .desktop link
+    dodir /usr/share/applications
+    mv ${D}/usr/share/gnome/apps/Applications/dia.desktop ${D}/usr/share/applications/dia.desktop
+	rmdir ${D}/usr/share/gnome/apps/Applications
+    rmdir ${D}/usr/share/gnome/apps
+	echo "Categories=Application;GNOME;Office;" >> ${D}/usr/share/applications/dia.desktop
+    
 }

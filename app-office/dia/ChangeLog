@@ -1,8 +1,11 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.15 2003/03/30 17:14:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.16 2003/03/31 00:10:38 liquidx Exp $
 
 *dia-0.91 (26 Mar 2003)
+
+  31 Mar 2003; Alastair Tse <liquidx@gentoo.org> dia-0.91.ebuild:
+  fix dia menu desktop entry. python, pygtk and gnome dep fixes.
 
   30 Mar 2003; Martin Holzer <mholzer@gentoo.org> dia-0.91.ebuild:
   fixed pango dependency. closes #18480.
