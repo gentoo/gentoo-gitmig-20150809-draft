@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.11 2004/06/24 22:52:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.12 2004/07/12 01:19:38 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE="readline"
 
-DEPEND="readline? ( >=readline-4.1 )"
+DEPEND="readline? ( >=sys-libs/readline-4.1 )"
 
 src_unpack() {
 	unpack ${A}
