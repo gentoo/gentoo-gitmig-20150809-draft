@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.2a.ebuild,v 1.3 2004/05/16 20:28:29 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.2a.ebuild,v 1.4 2004/06/02 20:39:53 agriffis Exp $
 
 DESCRIPTION="GUI-independent C++ libraries for database applications, including API documentation and tutorials."
 HOMEPAGE="http://hk-classes.sourceforge.net/"
@@ -34,16 +34,16 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "hk_classes has been installed in /usr/lib/hk_classes"
-	if [ `use mysql` ]; then
+	if use mysql; then
 		einfo "MySQL driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use postgres` ]; then
+	if use postgres; then
 		einfo "PostgreSQL driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use odbc` ]; then
+	if use odbc; then
 		einfo "ODBC driver is installed in /usr/lib/hk_classes/drivers"
 	fi
-	if [ `use doc` ]; then
+	if use doc; then
 		echo
 		einfo "API documentation and tutorial are installed in"
 		einfo " /usr/share/doc/${P}/html/hk_docs-0.6"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.9 2004/03/03 03:38:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.10 2004/06/02 20:38:26 agriffis Exp $
 
 inherit perl-module
 
@@ -40,7 +40,7 @@ src_install() {
 	dodoc COPYING Changes MANIFEST README Upgrade
 
 	local __apache_server_root__
-	if [ "`use apache2`" ]; then
+	if use apache2; then
 		__apache_server_root__="/etc/apache2"
 	else
 		__apache_server_root__="/etc/apache"
@@ -49,7 +49,7 @@ src_install() {
 	local __apache_document_root__
 	__apache_document_root__=`grep "^DocumentRoot" ${__apache_conf_dir__}/*.conf -h | cut -d' ' -f2`
 	local __apache_modules_conf_dir__
-	if [ "`use apache2`" ]; then
+	if use apache2; then
 		__apache_modules_conf_dir__="${__apache_conf_dir__}/modules.d"
 		else
 		__apache_modules_conf_dir__="${__apache_conf_dir__}/addon-modules"
@@ -82,7 +82,7 @@ src_install() {
 pkg_postinst() {
 	einfo "To have Apache support MySQLTool, please do the following:"
 	local f
-	if [ "`use apache2`" ] ; then
+	if use apache2 ; then
 		f='2'
 	else
 		f=''
