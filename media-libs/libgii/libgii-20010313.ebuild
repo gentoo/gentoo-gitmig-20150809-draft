@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-20010313.ebuild,v 1.2 2001/05/01 17:58:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-20010313.ebuild,v 1.3 2001/05/21 17:39:19 achim Exp $
 
 A=ggi-devel-${P}.tar.bz2
 S=${WORKDIR}/degas/lib/libgii
@@ -28,6 +28,7 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
+    rm -rf ${D}/usr/lib/*.la
     cd ${D}/usr/share/man/man3
     for i in *.3gii
     do
