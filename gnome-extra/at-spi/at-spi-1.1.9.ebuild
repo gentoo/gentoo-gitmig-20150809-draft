@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.9.ebuild,v 1.2 2003/07/08 09:59:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.9.ebuild,v 1.3 2003/07/19 23:27:59 tester Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 
 RDEPEND=">=gnome-base/gail-0.17
 	>=gnome-base/libbonobo-2.0.0
