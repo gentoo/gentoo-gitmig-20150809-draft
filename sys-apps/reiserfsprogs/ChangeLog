@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/reiserfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.14 2003/04/01 18:13:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.15 2003/04/17 17:36:29 lostlogic Exp $
 
 *reiserfsprogs-3.6.5-r1 (01 Apr 2003)
 
@@ -10,6 +10,10 @@
   This -r should fix the issues with boot that people were having.
 
 *reiserfsprogs-3.6.5 (21 Mar 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.5.ebuild,
+  reiserfsprogs-3.6.5.ebuild:
+  cleanup
 
   21 Mar 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.5.ebuild:
   Many bugfixes, one critical fix, upgrade recommended.
