@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329.ebuild,v 1.5 2001/10/19 17:17:46 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-winbind/samba-winbind-20010329-r6.ebuild,v 1.1 2001/10/19 17:17:46 woodchip Exp $
 
 A=samba-tng-cvs-${PV}.tbz2
 S=${WORKDIR}/tng
@@ -70,5 +70,5 @@ src_install () {
   docinto html
   dodoc *.html
 
-  exeinto /etc/rc.d/init.d ; newexe ${FILESDIR}/samba-winbind.rc5 samba-winbind
+  exeinto /etc/init.d ; newexe ${FILESDIR}/samba-winbind.rc6 samba-winbind
 }
