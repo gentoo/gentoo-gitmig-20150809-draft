@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.56 2003/12/24 20:21:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.57 2003/12/26 01:57:13 seemant Exp $
+
+  25 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  kdeadmin-3.2.0_beta2.ebuild:
+  lm-sensors, not lm_sensors -- thanks to FieldySnuts in #gentoo-dev
 
   24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdeadmin-3.2.0_beta2.ebuild:
   minor dependency fixes
