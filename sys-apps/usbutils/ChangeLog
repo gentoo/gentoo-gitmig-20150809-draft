@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.10 2003/07/18 20:38:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.11 2003/07/28 16:08:28 gmsoft Exp $
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org> usbutils-0.11-r1.ebuild:
   Update gnuconfig on amd64 too
 
 *usbutils-0.11-r1 (04 Jun 2003)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> usbutils-0.11-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   04 Jun 2003; Hanno Boeck <hanno@gentoo.org> usbutils-0.11-r1.ebuild:
   Changed ebuild to download most current usb.ids.

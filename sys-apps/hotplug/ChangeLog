@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.20 2003/07/02 13:55:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.21 2003/07/28 16:10:10 gmsoft Exp $
 
   02 Jul 2003; Jason Wever <weeve@gentoo.org> hotplug-20030501-r2.ebuild:
   Changed ~sparc keyword to sparc.
@@ -9,6 +9,9 @@
   Added ~sparc to keywords.
 
 *hotplug-20030501-r2 (11 Jun 2003)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> hotplug-20030501-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   11 Jun 2003; Daniel Robbins <drobbins@gentoo.org> hotplug-20030501-r2.ebuild:
   Now creates /var/run/usb directory, closing bug #21877. Unmasking on x86.
