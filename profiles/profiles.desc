@@ -1,12 +1,18 @@
+#############################################
 # default profile list
-x86 default-x86-1.4
-ppc default-ppc-1.4
-ppc64 default-ppc64-1.4
-sparc default-sparc-1.4
-mips default-mips-1.4
-alpha default-alpha-1.4
-arm default-arm-1.4
-hppa default-hppa-1.4
-amd64 default-amd64-1.4
-ia64 default-ia64-1.4
-x86obsd default-x86obsd-1.4
+# This file is used by repoman.
+#
+#layout:
+#arch	profile_directory	status
+#
+x86	default-x86-1.4		stable
+ppc	default-ppc-1.4		stable
+ppc64	default-ppc64-1.4	dev
+sparc	default-sparc-1.4	stable
+mips	default-mips-1.4	stable
+alpha	default-alpha-1.4	stable
+arm	default-arm-1.4		stable
+hppa	default-hppa-1.4	stable
+amd64	default-amd64-1.4	stable
+ia64	default-ia64-1.4	stable
+x86obsd	default-x86obsd-1.4	stable
