@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.2 2005/01/24 11:10:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.3 2005/01/28 01:29:55 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource"
-SNAPSHOT="20041228"
+SNAPSHOT="20050127"
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
@@ -73,10 +73,10 @@ src_unpack() {
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		qmake.conf
 	cd ${S}
-	epatch ${FILESDIR}/qt4b1.patch
+#	epatch ${FILESDIR}/qt4b1.patch
 	epatch ${FILESDIR}/qt4b1_20041228.patch
 	epatch ${FILESDIR}/qt4-rpath.patch
-	epatch ${FILESDIR}/qt4-qtprf.patch
+#	epatch ${FILESDIR}/qt4-qtprf.patch
 
 	sed -i -e "s:CFG_REDUCE_EXPORTS=auto:CFG_REDUCE_EXPORTS=no:" configure
 }
@@ -155,7 +155,7 @@ src_install() {
 	for libdir in $(get_all_libdirs); do
 		libdirs="${libdirs}:/usr/${libdir}/qt4"
 	done
-	cat > /etc/env.d/44qt4 << EOF
+	cat > ${D}/etc/env.d/44qt4 << EOF
 PATH=${QTBINDIR}
 ROOTPATH=${QTBINDIR}
 LDPATH=${libdirs:1}
