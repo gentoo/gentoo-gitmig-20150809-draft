@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.4.ebuild,v 1.6 2004/09/27 12:32:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.4.ebuild,v 1.7 2004/11/28 10:07:05 centic Exp $
 
 inherit python kde
 
@@ -18,7 +18,6 @@ DEPEND="dev-lang/perl
 	java? ( virtual/jdk dev-java/ant )
 	python? ( dev-lang/python )
 	doc? ( app-doc/doxygen )"
-RDEPEND="$DEPEND"
 need-kde 3.1
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
