@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.8 2004/12/30 23:06:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.9 2004/12/31 01:47:37 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -109,7 +109,7 @@ src_compile() {
 	export YACC='byacc -d'
 
 	./configure -stl -verbose -largefile \
-		-qt-imgfmt-{jpeg,png} -system-lib{jpeg,png} -fast \
+		-qt-imgfmt-{jpeg,png} -system-lib{jpeg,png} \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
 		-tablet -xft -xrender -xrandr -xkb -xshape -sm \
 		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} -datadir ${QTDATADIR} \
@@ -133,23 +133,30 @@ src_install() {
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
 
-	make INSTALL_ROOT=${D} install_qmake sub-tools-install_subtargets-ordered || die
 	# make INSTALL_ROOT=${D} sub-demos-install_subtargets-ordered sub-examples-install_subtargets-ordered || die
+	# make INSTALL_ROOT=${D} install_qmake sub-tools-install_subtargets-ordered || die
+	# Using install_qmake forces lots of other things to build.  Bypass it for now.
 
+	make INSTALL_ROOT=${D} sub-tools-install_subtargets-ordered || die
+	install -c ${S}/bin/qmake ${D}/usr/lib/qt4/bin/qmake
 	use doc && make INSTALL_ROOT=${D} install_htmldocs
 
 	# sub-tutorial-install_subtargets-ordered
 
-	dodir /usr/lib/qt4/mkspecs
-	cp -a ${S}/mkspecs/linux-g++ ${D}/usr/lib/qt4/mkspecs/linux-g++
-	cp -a ${S}/mkspecs/features ${D}/usr/lib/qt4/mkspecs/features
-	cp -a ${S}/mkspecs/default ${D}/usr/lib/qt4/mkspecs/default
-	cp -a ${S}/mkspecs/.qt.config ${D}/usr/lib/qt4/mkspecs/.qt.config
+	dodir /usr/lib/qt4/mkspecs/linux-g++
+	dodir /usr/lib/qt4/mkspecs/features/unix
 
-	cd ${S}/lib
-	sed -i -e "s:${S}:/usr/lib/qt4/:" *.la
-	cd ${S}/lib/pkgconfig
-	sed -i -e "s:${S}:/usr/lib/qt4/:" *.pc
+	install -c ${S}/mkspecs/linux-g++/qmake.conf ${D}/usr/lib/qt4/mkspecs/linux-g++
+	install -c ${S}/mkspecs/linux-g++/qplatformdefs.h ${D}/usr/lib/qt4/mkspecs/linux-g++
+	install -c ${S}/mkspecs/features/unix/*.prf ${D}/usr/lib/qt4/mkspecs/features/unix
+	install -c ${S}/mkspecs/features/*.prf ${D}/usr/lib/qt4/mkspecs/features
+	install -c ${S}/mkspecs/default ${D}/usr/lib/qt4/mkspecs/default
+	install -c ${S}/mkspecs/.qt.config ${D}/usr/lib/qt4/mkspecs
+
+	cd ${D}/usr/lib/qt4/lib
+	sed -i -e "s:${S}:/usr/lib/qt4:g" *.la
+	cd ${D}/usr/lib/qt4/lib/pkgconfig
+	sed -i -e "s:${S}:/usr/lib/qt4:g" *.pc
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/44qt4
