@@ -1,3 +1,5 @@
+MD5 5b90c9d7ce7093294605b503c765e14b pork-0.8.0.ebuild 809
 MD5 5b90c9d7ce7093294605b503c765e14b pork-0.7.0.ebuild 809
-MD5 37ccf3ca51bfc56fa2c261f6fbaca6d7 ChangeLog 1491
+MD5 718f26d7e4c2090b09c9d12df27b4ba9 ChangeLog 1595
 MD5 d68d9496a49229a7353bc8424244514b files/digest-pork-0.7.0 122
+MD5 ccdcf681188051c85368e0b479ccd4f3 files/digest-pork-0.8.0 62
