@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3778 2005/03/31 13:38:43 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3779 2005/03/31 17:41:52 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# Peter Johanson <latexer@gentoo.org> (31 Mar 2005)
+# Masking all 1.1* releases of mono and libgdiplus.
+=dev-lang/mono-1.1*
+=dev-dotnet/libgdiplus-1.1*
+
 # Andreas Proschofsky <suka@gentoo.org> (30 Mar 2005)
 # Pre-Release, use on your own risk
 >=app-office/openoffice-bin-1.9.87
@@ -38,13 +43,6 @@ dev-util/gcvs
 # masked for heavy testing
 >=net-dns/bind-9.3
 >=net-dns/bind-tools-9.3
-
-# Peter Johanson <latexer@gentoo.org> (25 Mar 2005)
-# Masking the 1.1.5 release. Mainly in portage for advanced users
-# and for amd64
-=dev-lang/mono-1.1.5
-=dev-lang/mono-1.1.5-r1
-=dev-dotnet/libgdiplus-1.1.5
 
 # Masatomo Nakano <nakano@gentoo.org> (25 Mar 2005)
 # Masked due to dependency masked wxGTK-2.5*.
@@ -264,12 +262,6 @@ net-www/mod_authenticache
 # Masked due to vulnerabilities and upstream being dead
 # Bug #81634
 games-action/armagetron
-
-# Peter Johanson <latexer@gentoo.org> (21 Feb 2005)
-# Masking the 1.1.4 release. Mainly in portage for advanced users
-# and for amd64
-=dev-lang/mono-1.1.4
-=dev-dotnet/libgdiplus-1.1.4
 
 # Gregorio Guidi <greg_g@gentoo.org> (21 Feb 2005)
 # Needs testing.
