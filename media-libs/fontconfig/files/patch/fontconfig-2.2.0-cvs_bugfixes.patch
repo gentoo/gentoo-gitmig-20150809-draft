@@ -1,8 +1,8 @@
 Only in fontconfig: .cvsignore
 Only in fontconfig: CVS
-diff -ur fontconfig-2.2.0/ChangeLog fontconfig/ChangeLog
+diff -ur -I '$Id' fontconfig-2.2.0/ChangeLog fontconfig/ChangeLog
 --- fontconfig-2.2.0/ChangeLog	2003-04-17 19:43:04.000000000 +0200
-+++ fontconfig/ChangeLog	2003-05-14 18:29:07.000000000 +0200
++++ fontconfig/ChangeLog	2003-04-23 06:09:56.000000000 +0200
 @@ -1,3 +1,11 @@
 +2003-04-23  James Henstridge  <james@daa.com.au>
 +
@@ -150,16 +150,9 @@ Only in fontconfig-2.2.0/doc: FcUtf8ToUcs4.3
 Only in fontconfig-2.2.0/doc: FcValueDestroy.3
 Only in fontconfig-2.2.0/doc: FcValueSave.3
 Only in fontconfig-2.2.0/doc: Makefile.in
-diff -ur fontconfig-2.2.0/doc/fcpattern.fncs fontconfig/doc/fcpattern.fncs
+diff -ur -I '$Id' fontconfig-2.2.0/doc/fcpattern.fncs fontconfig/doc/fcpattern.fncs
 --- fontconfig-2.2.0/doc/fcpattern.fncs	2003-03-07 09:51:14.000000000 +0100
-+++ fontconfig/doc/fcpattern.fncs	2003-05-14 18:29:08.000000000 +0200
-@@ -1,5 +1,5 @@
- /*
-- * $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-+ * $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-  *
-  * Copyright © 2003 Keith Packard
-  *
++++ fontconfig/doc/fcpattern.fncs	2003-04-23 06:09:56.000000000 +0200
 @@ -226,6 +226,7 @@
  @DESC@
  Builds a pattern using a list of objects, types and values.  Each
@@ -169,18 +162,9 @@ diff -ur fontconfig-2.2.0/doc/fcpattern.fncs fontconfig/doc/fcpattern.fncs
  <listitem><para>
  Object name, a string describing the property to be added.
 Only in fontconfig-2.2.0/doc: fontconfig-devel
-diff -ur fontconfig-2.2.0/doc/fontconfig-devel.sgml fontconfig/doc/fontconfig-devel.sgml
+diff -ur -I '$Id' fontconfig-2.2.0/doc/fontconfig-devel.sgml fontconfig/doc/fontconfig-devel.sgml
 --- fontconfig-2.2.0/doc/fontconfig-devel.sgml	2003-03-07 21:45:31.000000000 +0100
-+++ fontconfig/doc/fontconfig-devel.sgml	2003-05-14 18:29:09.000000000 +0200
-@@ -18,7 +18,7 @@
- <!ENTITY version SYSTEM "version.sgml">
- ]>
- <!--
--    $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-+    $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-    
-     Copyright © 2003 Keith Packard
-    
++++ fontconfig/doc/fontconfig-devel.sgml	2003-04-23 06:09:56.000000000 +0200
 @@ -476,6 +476,7 @@
      <para>
  These routines work with font files and directories, including font
@@ -193,16 +177,9 @@ Only in fontconfig-2.2.0/doc: fontconfig-devel.txt
 Only in fontconfig-2.2.0/doc: fontconfig-user.html
 Only in fontconfig-2.2.0/doc: fontconfig-user.txt
 Only in fontconfig-2.2.0/doc: fonts-conf.5
-diff -ur fontconfig-2.2.0/doc/func.sgml fontconfig/doc/func.sgml
+diff -ur -I '$Id' fontconfig-2.2.0/doc/func.sgml fontconfig/doc/func.sgml
 --- fontconfig-2.2.0/doc/func.sgml	2003-03-07 21:50:44.000000000 +0100
-+++ fontconfig/doc/func.sgml	2003-05-14 18:29:09.000000000 +0200
-@@ -1,5 +1,5 @@
- <!--
--   $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-+   $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
-   
-    Copyright © 2003 Keith Packard
-   
++++ fontconfig/doc/func.sgml	2003-04-23 06:09:56.000000000 +0200
 @@ -76,6 +76,7 @@
  	</funcprototype>
  @}PROTOTYPE@
@@ -235,9 +212,9 @@ Only in fontconfig-2.2.0: mkinstalldirs
 Only in fontconfig/src: .cvsignore
 Only in fontconfig/src: CVS
 Only in fontconfig-2.2.0/src: Makefile.in
-diff -ur fontconfig-2.2.0/src/fccfg.c fontconfig/src/fccfg.c
+diff -ur -I '$Id' fontconfig-2.2.0/src/fccfg.c fontconfig/src/fccfg.c
 --- fontconfig-2.2.0/src/fccfg.c	2003-04-17 23:50:24.000000000 +0200
-+++ fontconfig/src/fccfg.c	2003-05-14 18:29:11.000000000 +0200
++++ fontconfig/src/fccfg.c	2003-04-22 08:29:31.000000000 +0200
 @@ -1232,6 +1232,14 @@
  		    !FcStrCmpIgnoreCase ((FcChar8 *) t->field, 
  					 (FcChar8 *) e->field))
@@ -253,9 +230,9 @@ diff -ur fontconfig-2.2.0/src/fccfg.c fontconfig/src/fccfg.c
  		    if (!st[i].elt)
  			t = 0;
  		    break;
-diff -ur fontconfig-2.2.0/src/fcfreetype.c fontconfig/src/fcfreetype.c
+diff -ur -I '$Id' fontconfig-2.2.0/src/fcfreetype.c fontconfig/src/fcfreetype.c
 --- fontconfig-2.2.0/src/fcfreetype.c	2003-04-20 05:35:58.000000000 +0200
-+++ fontconfig/src/fcfreetype.c	2003-05-14 18:29:13.000000000 +0200
++++ fontconfig/src/fcfreetype.c	2003-04-30 17:18:02.000000000 +0200
 @@ -156,7 +156,7 @@
  } FcNoticeFoundries[] = {
      { (const FcChar8*) "Bigelow",	(const FcChar8 *) "b&h" },
