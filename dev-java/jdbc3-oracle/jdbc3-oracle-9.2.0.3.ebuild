@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.9 2004/07/17 11:20:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.10 2004/09/04 23:13:38 dholm Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://otn.oracle.com/software/tech/java/sqlj_jdbc/htdocs/jdbc9201.htm
 SRC_URI="${file_rowset} ${file_main}
 		doc? ( ${file_doc} )
 		debug? ( ${file_main_debug} )"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~ppc"
 LICENSE="oracle-jdbc"
 SLOT="2"
 DEPEND=">=app-arch/unzip-5.50-r1"

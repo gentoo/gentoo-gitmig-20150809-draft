@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc3-oracle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.7 2004/07/17 11:01:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.8 2004/09/04 23:13:38 dholm Exp $
+
+  05 Sep 2004; David Holm <dholm@gentoo.org> jdbc3-oracle-9.2.0.3.ebuild:
+  Added to ~ppc.
 
   17 Jul 2004; Thomas Matthijs <axxo@gentoo.org> jdbc3-oracle-9.2.0.3.ebuild:
   kill empty src_uri
