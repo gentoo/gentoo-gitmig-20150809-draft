@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.42 2002/03/07 17:54:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.43 2002/03/27 22:33:53 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
-inherit base
+inherit base kde-functions
 ECLASS=kde
 newdepend /autotools
 
@@ -15,6 +15,8 @@ kde_src_compile() {
 
     debug-print-function $FUNCNAME $*
     [ -z "$1" ] && kde_src_compile all
+    
+    cd ${S}
 
     while [ "$1" ]; do
 
@@ -69,6 +71,8 @@ kde_src_install() {
     debug-print-function $FUNCNAME $*
     [ -z "$1" ] && kde_src_install all
 
+    cd ${S}
+
     while [ "$1" ]; do
 
 	case $1 in
@@ -111,7 +115,9 @@ kde_sandbox_patch() {
 	    [ -f "$x" ] && \
 	    cp $x ${x}.orig && \
 	    sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' ${x}.orig > ${x} && \
-	    rm ${x}.orig
+		rm ${x}.orig
+	    sed -e 's: $(kde_datadir): $(DESTDIR)/$(kde_datadir):g' ${x}.orig > ${x} && \
+		rm ${x}.orig
 	done
 	shift
     done

@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.11 2002/02/07 18:52:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.12 2002/03/27 22:33:53 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
-inherit functions
+[ -n "$COMPAT" ] && inherit functions
 ECLASS=base
 
 S=${WORKDIR}/${P}
@@ -14,6 +14,8 @@ base_src_unpack() {
 
 	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && base_src_unpack all
+
+	cd ${WORKDIR}
 
 	while [ "$1" ]; do
 
@@ -40,8 +42,10 @@ base_src_unpack() {
 
 base_src_compile() {
 
-	debug-print-function $FUNCNAME $*
+    debug-print-function $FUNCNAME $*
     [ -z "$1" ] && base_src_compile all
+
+    cd ${S}
 
     while [ "$1" ]; do
 
@@ -70,6 +74,8 @@ base_src_install() {
 	debug-print-function $FUNCNAME $*
 	[ -z "$1" ] && base_src_install all
 
+	cd ${S}
+
 	while [ "$1" ]; do
 
 	case $1 in
@@ -89,4 +95,3 @@ base_src_install() {
 }
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
-
