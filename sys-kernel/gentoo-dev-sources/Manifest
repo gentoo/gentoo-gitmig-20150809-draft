@@ -15,7 +15,7 @@ MD5 7e3c647ec613ab04c7064c4c54c82fa7 gentoo-dev-sources-2.6.8-r7.ebuild 1564
 MD5 c7b41d663c2d8e5b3756e30b1484d66d gentoo-dev-sources-2.6.8-r2.ebuild 1404
 MD5 e1c4910c0c38e0e7685f76b39aa83497 gentoo-dev-sources-2.6.7-r19.ebuild 1660
 MD5 7f9d67acdc1d107e10512e331ebee60b gentoo-dev-sources-2.6.7-r14.ebuild 1404
-MD5 e4783f7522f0bc3e8fc0b5336fcecc3a gentoo-dev-sources-2.6.9-r12.ebuild 1641
+MD5 9337f1391a02c97ead4c694e684f4f98 gentoo-dev-sources-2.6.9-r12.ebuild 1640
 MD5 dd9ed139718965dd04fa7b047f098db5 gentoo-dev-sources-2.6.9-r6.ebuild 1581
 MD5 f843874f1d81a95d804fdadcca64d683 gentoo-dev-sources-2.6.9-r1.ebuild 1441
 MD5 c7e84d18c1fc4f97134ebd51d815e30c gentoo-dev-sources-2.6.8-r9.ebuild 1596
@@ -34,7 +34,7 @@ MD5 caf8d4697e8ba79cd557bdfe90dda3fe gentoo-dev-sources-2.6.7-r18.ebuild 1463
 MD5 f5434deb20ae4780af70b3c4fb352902 gentoo-dev-sources-2.6.7-r13.ebuild 1397
 MD5 792a55090b2d72d5f478bbe32e2dc8a0 gentoo-dev-sources-2.6.9-r11.ebuild 1641
 MD5 b18e785dc60dfabf212b7faf4f0cb74f gentoo-dev-sources-2.6.9-r5.ebuild 1582
-MD5 e8369e345ee6a618ac6c99ff7a8d1753 ChangeLog 29601
+MD5 d93a90a0e1928da885ff5022d90bf231 ChangeLog 29702
 MD5 cac50b7f6c84ae852187d1573628c22f gentoo-dev-sources-2.6.8-r8.ebuild 1596
 MD5 104e8f0f54744dcd97f211d99cffd686 gentoo-dev-sources-2.6.8-r3.ebuild 1405
 MD5 1b8c89170c8fd1603b5f09adfa0ed5e9 metadata.xml 549
