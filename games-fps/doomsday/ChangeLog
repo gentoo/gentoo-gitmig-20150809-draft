@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.3 2004/09/01 13:40:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.4 2004/09/01 13:58:14 wolf31o2 Exp $
+
+  01 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/1.8.1-ambient-light.patch, doomsday-1.8.1.ebuild:
+  Reverting patch.  See bug #61072 for more details.
 
   01 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/1.8.1-ambient-light.patch:

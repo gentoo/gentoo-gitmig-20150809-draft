@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.1.ebuild,v 1.1 2004/08/31 22:17:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.8.1.ebuild,v 1.2 2004/09/01 13:58:14 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 #	epatch ${FILESDIR}/${PV}-filename-case.patch
-	epatch ${FILESDIR}/${PV}-ambient-light.patch
+#	epatch ${FILESDIR}/${PV}-ambient-light.patch
 }
 
 src_install() {
