@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.7 2004/06/24 22:07:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.8 2004/08/03 11:51:19 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.methane.fsnet.co.uk/${PN}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~amd64"
+KEYWORDS="x86 ~alpha ~amd64 ~ppc"
 IUSE="mikmod"
 
 RDEPEND="=dev-games/clanlib-0.6.5*
