@@ -55,9 +55,9 @@
 ~media-video/drip
 
 # xine currently has (known) ppc problems
-<media-libs/xine-lib-0.9.11
-<media-video/xine-ui-0.9.11
-<media-video/xine-dvdnav-0.9.11
+#<media-libs/xine-lib-0.9.11
+#<media-video/xine-ui-0.9.11
+#<media-video/xine-dvdnav-0.9.11
 
 # vnc code (even from vendor) not very ppc happy at all
 # tightvnc works, so masking this for now - Gerk June 26 2002
