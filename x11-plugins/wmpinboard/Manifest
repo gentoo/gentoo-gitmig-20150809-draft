@@ -1,4 +1,5 @@
-MD5 192e3fe3a9121f2a8d60cfccfefdd2d1 wmpinboard-1.0.ebuild 683
-MD5 a1a44923c0ee24c6c7f048e69031f400 ChangeLog 899
+MD5 ddfb56c0e2e1880c53e31476c9a17714 wmpinboard-1.0.ebuild 785
+MD5 55ee491133d49aa969e55bcf77121359 ChangeLog 1042
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 b7532acbb5f32e091d85cf67e343fd30 files/wmpinboard-1.0-segfault.patch 320
 MD5 45429fba57096382c86e58733f1f0385 files/digest-wmpinboard-1.0 67
