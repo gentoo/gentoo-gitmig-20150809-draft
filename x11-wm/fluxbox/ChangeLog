@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.56 2003/06/11 20:50:37 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.57 2003/06/24 21:36:01 nakano Exp $
 
 *fluxbox-0.9.3 (11 Jun 2003)
 
@@ -23,6 +23,10 @@
   Fluxbox was never based on pwm, so I changed the Description of all ebuilds.
 
 *fluxbox-0.1.14-r1 (10 Dec 2002)
+
+  24 Jun 2003; Masatomo Nakano <nakano@gentoo.org> fluxbox-0.1.14-r1.ebuild,
+  files/fluxbox-0.1.14-ja.patch:
+  Added Japanese support.
 
   18 Apr 2003; Guy Martin <gmsoft@gentoo.org> fluxbox-0.1.14-r1.ebuild :
   Added hppa to KEYWORDS.
