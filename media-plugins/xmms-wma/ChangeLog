@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-wma
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/ChangeLog,v 1.1 2004/07/10 06:45:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wma/ChangeLog,v 1.2 2004/07/11 04:03:16 eradicator Exp $
+
+  10 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-wma-1.0.3.ebuild:
+  Fix install dir to be the input plugin dir instead of output ;p. The plugin
+  still works properly in the other location, so no bump needed.
 
 *xmms-wma-1.0.3 (09 Jul 2004)
 
