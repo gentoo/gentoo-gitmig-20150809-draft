@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.2 2002/04/12 21:44:40 spider Exp $
+
+*sdl-image-1.2.1-r1 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>
+  updating with new libpng version
+
 
 *sdl-image-1.2.1 (1 Feb 2002)
 
