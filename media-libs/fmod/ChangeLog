@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.5 2004/02/18 09:32:29 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.6 2004/03/01 03:54:00 eradicator Exp $
+
+*fmod-3.71 (29 Feb 2004)
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> fmod-3.71.ebuild,
+  metadata.xml:
+  Version bump.  Closes bug #43284.
 
   18 Feb 2004; <augustus@gentoo.org> fmod-3.70.ebuild:
   Added ~amd64 keyword.
