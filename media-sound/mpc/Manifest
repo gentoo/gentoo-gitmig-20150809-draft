@@ -1,5 +1,7 @@
 MD5 b5615a68389c15bc085b66b7e27110c8 ChangeLog 804
 MD5 15c8a3652fb10567d3cc8892faf0aa7e mpc-0.9.0.ebuild 752
+MD5 15c8a3652fb10567d3cc8892faf0aa7e mpc-0.9.1.ebuild 752
 MD5 9014d53768984fe9c489793261cc8d0a mpc-0.8.1.ebuild 682
 MD5 dbcc59f44932e3a768a4b845ece1d888 files/digest-mpc-0.9.0 61
+MD5 f67cb60012cadbd58b66fffe20753f56 files/digest-mpc-0.9.1 61
 MD5 1aa1fcec3a5935a8c0fb8ad35a2607ab files/digest-mpc-0.8.1 61
