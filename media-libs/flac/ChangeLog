@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.7 2002/12/06 21:55:39 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.8 2002/12/09 04:26:10 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *flac-1.0.4 (31 Oct 2002)
 
   06 Dec 2002; Phil Bordelon <sunflare@gentoo.org> flac-1.0.4.ebuild :

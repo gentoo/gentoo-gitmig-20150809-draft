@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.2 2002/12/01 14:45:01 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r2.ebuild,v 1.3 2002/12/09 04:26:14 manson Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )

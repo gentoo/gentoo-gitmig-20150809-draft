@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.4 2002/07/09 19:31:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.5 2002/12/09 04:26:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *paragui-1.0.2 (9 May 2002) 
 
   9 Jul 2002; Ryan Phillips <rphillips@gentoo.org> paragui-1.0.2.ebuild :

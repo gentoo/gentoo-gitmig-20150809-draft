@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.11 2002/10/05 18:01:32 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.12 2002/12/09 04:26:14 manson Exp $
 
 IUSE="gtk oggvorbis"
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/glibc
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 
 src_compile() {

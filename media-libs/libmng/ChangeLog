@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.3 2002/09/18 20:37:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.4 2002/12/09 04:26:12 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libmng-1.0.4 (18 Sep 2002)
 
   18 Sep 2002; Nick Hadaway <raker@gentoo.org> libmng-1.0.4.ebuild,

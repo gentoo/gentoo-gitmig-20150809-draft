@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.11 2002/11/17 09:43:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.12 2002/12/09 04:26:14 manson Exp $
 
 DESCRIPTION="Aumix volume/mixer control program."
 SRC_URI="http://jpj.net/~trevor/aumix/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://jpj.net/~trevor/aumix/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc  ~alpha"
 IUSE="gpm nls gtk gnome alsa"
 
 DEPEND=">=sys-libs/ncurses-5.2

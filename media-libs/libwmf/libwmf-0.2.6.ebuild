@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.6.ebuild,v 1.5 2002/12/05 21:07:20 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.6.ebuild,v 1.6 2002/12/09 04:26:13 manson Exp $
 
 #The configure script finds the 5.50 ghostscript Fontmap file while run.
 #This will probably work, especially since the real one (6.50) in this case
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 HOMEPAGE="http://www.wvware.com/libwmf.html"
 
 SLOT="0"
-KEYWORDS="x86 sparc sparc64 ~ppc"
+KEYWORDS="x86 sparc  ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc

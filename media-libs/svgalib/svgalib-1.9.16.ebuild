@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.16.ebuild,v 1.1 2002/11/20 08:38:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.16.ebuild,v 1.2 2002/12/09 04:26:14 manson Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.svgalib.org/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc "
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.4 2002/10/04 05:53:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.5 2002/12/09 04:26:14 manson Exp $
 
 S=${WORKDIR}/petit310pl3
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"
@@ -9,7 +9,7 @@ HOMEPAGE="http://member.nifty.ne.jp/~pen/free/gogo3/mct_gogo.htm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 DEPEND="dev-lang/nasm"
 #	>=sys-libs/ncurses-5.H2

@@ -1,7 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.5 2002/11/22 23:05:14 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.6 2002/12/09 04:26:14 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *mpg123-0.59r-r1 (27 Apr 2002)
 
   22 Nov 2002; Will Woods <wwoods@gentoo.org> mpg123-0.59r-r1.ebuild :

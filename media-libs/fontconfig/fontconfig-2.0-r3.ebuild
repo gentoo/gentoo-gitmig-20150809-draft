@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0-r3.ebuild,v 1.2 2002/11/26 00:45:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0-r3.ebuild,v 1.3 2002/12/09 04:26:10 manson Exp $
 
 inherit debug
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fontconfig.org/"
 
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="x86 alpha ppc sparc sparc64"
+KEYWORDS="x86 alpha ppc sparc "
 
 DEPEND=">=media-libs/freetype-2.0.9
 	>=dev-libs/expat-1.95.3

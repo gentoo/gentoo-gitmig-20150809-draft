@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.8 2002/09/28 18:02:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.9 2002/12/09 04:26:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *smpeg-0.4.4-r4 (22 Aug 2002)
  
   28 Sep 2002; Nick Hadaway <raker@gentoo.org> smpeg-0.4.4-r4.ebuild :

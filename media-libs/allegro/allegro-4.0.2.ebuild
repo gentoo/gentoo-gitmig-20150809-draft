@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.4 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.5 2002/12/09 04:26:10 manson Exp $
 
 IUSE="mmx esd static tetex X fbcon oss svga alsa"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://alleg.sourceforge.net/"
 
 
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 
 RDEPEND="X? ( virtual/x11 )

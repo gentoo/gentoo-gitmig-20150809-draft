@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib-docs/id3lib-docs-3.8.0_pre2.ebuild,v 1.6 2002/10/04 05:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib-docs/id3lib-docs-3.8.0_pre2.ebuild,v 1.7 2002/12/09 04:26:11 manson Exp $
 
 MY_P=${PN/-docs/}-${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://id3lib.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="app-doc/doxygen
 	media-libs/id3lib"

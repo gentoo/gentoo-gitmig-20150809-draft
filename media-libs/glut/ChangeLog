@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.4 2002/12/01 22:42:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.5 2002/12/09 04:26:11 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glut-3.7{-r2,.1}.ebuild :
 
   Add 'preplib' to src_install to add missing libglut.so.3 symlink.  Closes

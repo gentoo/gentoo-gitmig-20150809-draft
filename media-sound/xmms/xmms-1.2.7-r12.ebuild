@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.10 2002/11/17 09:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.11 2002/12/09 04:26:14 manson Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.xmms.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 IUSE="xml nls esd gnome opengl mmx oggvorbis mikmod 3dnow avi"
 
 RDEPEND="app-arch/unzip

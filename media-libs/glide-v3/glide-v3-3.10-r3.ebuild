@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.5 2002/10/04 05:47:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.6 2002/12/09 04:26:11 manson Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -15,7 +15,7 @@ HOMEPAGE="http://glide.sourceforge.net/"
 
 SLOT="0"
 LICENSE="3DFX"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.13

@@ -7,7 +7,7 @@ SRC_URI="mirror://sourceforge/emu10k1/emu10k1-v0.20a.tar.bz2"
 HOMEPAGE="http://www.sourceforge.net/projects/emu10k1/"
 DEPEND="virtual/linux-sources"
 RDEPEND="media-sound/aumix"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 SLOT="$KV"
 LICENSE="GPL-2"
 

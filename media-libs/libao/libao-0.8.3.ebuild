@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3.ebuild,v 1.5 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.3.ebuild,v 1.6 2002/12/09 04:26:12 manson Exp $
 
 IUSE="esd"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc
 	esd? ( >=media-sound/esound-0.2.22 )"

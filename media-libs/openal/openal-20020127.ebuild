@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.10 2002/10/05 17:59:53 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.11 2002/12/09 04:26:13 manson Exp $
 
 IUSE="mpeg arts esd sdl oggvorbis alsa"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.openal.org"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 # documentation doesn't say which versions are required...
 

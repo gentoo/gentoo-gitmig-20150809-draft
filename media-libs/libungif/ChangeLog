@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.2 2002/03/21 09:20:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.3 2002/12/09 04:26:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libungif-4.1.0 (21 Mar 2002)
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libungif-4.1.0-r1.ebuild :

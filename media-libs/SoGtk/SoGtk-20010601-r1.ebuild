@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.11 2002/11/09 09:57:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.12 2002/12/09 04:26:10 manson Exp $
 
 IUSE="nls doc"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.coin3d.org"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/x11
 	<x11-libs/gtkglarea-1.99.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.5 2002/10/20 18:49:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.6 2002/12/09 04:26:13 manson Exp $
 
 IUSE="X gtk opengl"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? ( virtual/opengl virtual/glu )

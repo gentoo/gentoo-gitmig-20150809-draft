@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r2.ebuild,v 1.3 2002/12/01 22:25:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r2.ebuild,v 1.4 2002/12/09 04:26:14 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
 SRC_URI="http://download.sourceforge.net/sox/${P}.tar.gz"
 
-KEYWORDS="x86 ppc alpha ~sparc ~sparc64"
+KEYWORDS="x86 ppc alpha ~sparc "
 SLOT="0"
 LICENSE="LPGL-2.1"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0.ebuild,v 1.8 2002/10/04 05:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0.ebuild,v 1.9 2002/12/09 04:26:13 manson Exp $
 
 MY_P=${P}-src
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://openquicktime.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="media-sound/lame
 	media-sound/mpg123

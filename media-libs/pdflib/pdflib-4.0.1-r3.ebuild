@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.11 2002/10/29 17:31:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.12 2002/12/09 04:26:13 manson Exp $
 
 IUSE="python tcltk java perl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pdflib.com/"
 
 SLOT="4"
 LICENSE="Aladdin"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=sys-devel/perl-5.1 )
