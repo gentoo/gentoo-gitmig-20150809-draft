@@ -1,5 +1,5 @@
 virtual/libc					dev-libs/uclibc
 virtual/glibc					dev-libs/uclibc
 virtual/logger					app-admin/sysklogd
-virtual/modutils				sys-apps/modutils
+virtual/modutils				sys-apps/modutil-init-tools
 virtual/cdrtools				app-cdr/cdrtools
