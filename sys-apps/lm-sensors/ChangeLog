@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.46 2005/01/15 21:20:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.47 2005/01/27 19:18:23 plasmaroo Exp $
+
+  27 Jan 2005; <plasmaroo@gentoo.org> lm-sensors-2.9.0.ebuild:
+  Removing -fPIC filter; bug #78432.
 
   15 Jan 2005; <plasmaroo@gentoo.org> files/rc:
   LOADMODULES >> NOLOADMODULES in the init script; bug #78068.
