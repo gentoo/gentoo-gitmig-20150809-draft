@@ -1,5 +1,4 @@
 MD5 c75783c831d5c64a839e148b7b003693 ChangeLog 662
-MD5 1d4e2a62c50b52ad83fac19650f29e65 openhbci-plugin-ddvcard-0.3.ebuild 640
-MD5 9a1d919645db18a7085198410ba1c89a openhbci-plugin-ddvcard-0.3-r1.ebuild 643
-MD5 ce8172834d26e251fc12906320e78725 files/digest-openhbci-plugin-ddvcard-0.3 79
+MD5 1d7df15c659e20e8a2402eacc682c4f6 openhbci-plugin-ddvcard-0.3-r1.ebuild 642
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 ec8ecbc20edf10d9474abd1cc7491d0e files/digest-openhbci-plugin-ddvcard-0.3-r1 79
