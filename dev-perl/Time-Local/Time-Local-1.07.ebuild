@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/Time-Local-1.07.ebuild,v 1.9 2004/10/19 08:05:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/Time-Local-1.07.ebuild,v 1.10 2005/04/03 01:22:29 mcummings Exp $
 
 inherit perl-module
 
