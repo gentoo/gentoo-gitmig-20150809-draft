@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.12 2004/07/17 22:14:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.13 2004/10/09 20:28:36 swegener Exp $
+
+*bnc-2.8.9 (09 Oct 2004)
+
+  09 Oct 2004; Sven Wegener <swegener@gentoo.org> +bnc-2.8.9.ebuild:
+  Version bump for security bug #66912. Made CFLAGS aware.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> bnc-2.6.4.ebuild,
   bnc-2.8.6-r1.ebuild, bnc-2.8.6.ebuild:
