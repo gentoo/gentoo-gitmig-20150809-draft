@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.11 2004/01/17 19:44:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.12 2004/01/18 10:55:29 lanius Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -29,13 +29,18 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+	ebegin "adjusting file permissions"
+	chmod -R ug+w .
+	eend $? || die
 
-	cp ${FILESDIR}/site.def ${S}/config/cf/
-	echo >>$cfg
-	echo >>$cfg "#undef  OptimizedCDebugFlags"
-	echo >>$cfg "#define OptimizedCDebugFlags ${CFLAGS}"
-	echo >>$cfg "#undef  OptimizedCplusplusDebugFlags"
+	ebegin "setting up site.def"
+	cp ${FILESDIR}/site.def ${S}/config/cf/ && \
+	echo >>$cfg && \
+	echo >>$cfg "#undef  OptimizedCDebugFlags" && \
+	echo >>$cfg "#define OptimizedCDebugFlags ${CFLAGS}" && \
+	echo >>$cfg "#undef  OptimizedCplusplusDebugFlags" && \
 	echo >>$cfg "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}"
+	eend $? || die
 
 	sed -i -e "s:#define USE_BYACC               YES:#undef USE_BYACC:" config/cf/host.def
 
