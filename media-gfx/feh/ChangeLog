@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.9 2003/10/10 08:56:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.10 2003/12/20 04:29:57 ciaranm Exp $
+
+  20 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> feh-1.2.6.ebuild:
+  Stable on sparc to give us a Fluxbox background setting tool
 
   10 Oct 2003; Jason Wever <weeve@gentoo.org> feh-1.2.6.ebuild:
   Added ~sparc keyword.
