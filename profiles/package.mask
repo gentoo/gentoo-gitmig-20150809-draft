@@ -26,7 +26,6 @@
 # masked while licensing is sorted out
 app-games/halflife-server
 app-arch/unlzx
-app-arch/zoo
 
 # <seemant@gentoo.org> 25 Jul 2002
 # masked for testing
