@@ -1,36 +1,45 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r1.ebuild,v 1.2 2001/12/27 02:43:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.1 2002/03/21 17:17:54 azarah Exp $
+
+# NOTE to Maintainer:  it no longer use perl to build the manpages.
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
-SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/${PN}-manpages-${PV}.tar.bz2"
-DEPEND="virtual/glibc"
+SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 
-src_unpack() {
-	unpack ${P}.tar.bz2
-	cd ${S}
-	#man pages are tarred up seperately because building them depends on perl, which isn't installed at
-	#Gentoo Linux bootstrap time.
-	mkdir man; cd man
-	tar xjf ${DISTDIR}/${PN}-manpages-${PV}.tar.bz2 || die
-}
+DEPEND="virtual/glibc
+	>=sys-devel/automake-1.6
+	nls? ( sys-devel/gettext )"
+
 
 src_compile() {
+	
+	local myconf
+
+	use nls && \
+		myconf="${myconf} --without-included-gettext" || \
+		myconf="${myconf} --disable-nls"
+
+	# DO NOT LIBTOOLIZE, AS BINUTILS COME WITH ITS OWN VERSION
+	# OF LIBTOOL!!!!!!!
+
 	./configure --enable-shared \
 		--enable-64-bit-bfd \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--host=${CHOST} \
-		--without-included-gettext || die
+		${myconf} || die
 		
 	if [ "`use static`" ]
 	then
+		make headers -C bfd CFLAGS=-O || die
 		emake -e LDFLAGS=-all-static || die
 	else
+		make headers -C bfd CFLAGS=-O || die
 		emake || die
 	fi
 
@@ -44,7 +53,11 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
 		install || die
+
+	insinto /usr/include
+	doins include/libiberty.h
 	
 	#c++filt is included with gcc -- what are these GNU people thinking?
 	#but not the manpage, so leave that!
@@ -75,9 +88,6 @@ src_install() {
 	cd ${S}
 	if [ -z "`use build`" ]
 	then
-		#install info pages
-		make infodir=${D}/usr/share/info \
-			install-info || die
 		dodoc COPYING* README
 		docinto bfd
 		dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO
@@ -94,12 +104,8 @@ src_install() {
 		docinto opcodes
 		dodoc opcodes/ChangeLog*
 		#install pre-generated manpages
-		rm -f ${D}/usr/share/man/man1/*
-		doman ${S}/man/*.1
 	else
 		rm -rf ${D}/usr/share/man
 	fi
 }
-
-
 
