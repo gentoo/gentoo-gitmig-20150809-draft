@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mcrypt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.8 2004/01/24 08:22:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.9 2004/06/06 15:48:33 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  mcrypt-2.6.4.ebuild:
+  x86 stable
 
   24 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> mcrypt-2.6.2.ebuild,
   mcrypt-2.6.4.ebuild:
