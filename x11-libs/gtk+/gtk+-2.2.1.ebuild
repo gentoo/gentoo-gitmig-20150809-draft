@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.1 2003/02/04 06:01:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1.ebuild,v 1.2 2003/02/06 02:18:25 nall Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -35,6 +35,12 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# should speed up metacity
 	cd ${S}; epatch ${FILESDIR}/gtk+-wm.patch
+
+    if [ "${ARCH}" == "ppc" ]
+	then
+		einfo "Fixing endianness issue in gdkpixbuf for 24-bit and 15-bit displays"
+		cd ${S}; epatch ${FILESDIR}/gtk+-2.2.1-gdkpixbuf-bigendian.patch
+	fi
 }
 
 src_compile() {
