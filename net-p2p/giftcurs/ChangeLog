@@ -1,11 +1,15 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.18 2003/05/05 19:14:06 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.19 2003/05/21 23:23:44 avenj Exp $
 
 *giftcurs-0.5.7 (05 May 2003)
 
   05 May 2003; Jon Portnoy <avenj@gentoo.org> giftcurs-0.5.7.ebuild :
   Version bump.
+
+  21 May 2003; Jon Portnoy <avenj@gentoo.org> giftcurs-0.5.7.ebuild :
+  Removed dependency on giFT, since giFTcurs can be used remotely
+  and doesn't necessarily need giFT.
 
 *giftcurs-0.5.6 (03 March 2003)
 
