@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.66 2004/10/30 02:02:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.67 2004/11/01 01:03:08 kloeri Exp $
+
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.9.ebuild:
+  Stable on alpha.
 
   29 Oct 2004; Jason Wever <weeve@gentoo.org> lftp-3.0.9.ebuild:
   Stable on sparc.
