@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/WWW-Mechanize
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.1 2004/02/27 14:43:26 mcummings Exp $
+
+*WWW-Mechanize-0.72 (27 Feb 2004)
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  WWW-Mechanize-0.72.ebuild:
+  Adding to resolve bug 23719
+
