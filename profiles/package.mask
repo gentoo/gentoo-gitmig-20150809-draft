@@ -1,3 +1,6 @@
+# broken
+=app-doc/quanta-docs-1.0
+
 #won't compile here
 =media-sound/freeamp-2.1.1
 
