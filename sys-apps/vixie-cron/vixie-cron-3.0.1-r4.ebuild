@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.7 2004/03/14 19:24:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.8 2004/03/26 21:20:15 seemant Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips hppa ~ia64 ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips hppa ~ia64 ~amd64 ppc64"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5
