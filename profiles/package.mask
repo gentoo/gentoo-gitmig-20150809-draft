@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+# lostlogic@gentoo.org (10 Jul 2002)
+# Masked for testing, this is a big update to reiserfsprogs
+# Improves a lot of the functionality, but changes a lot.
+=sys-apps/reiserfsprogs-3.6.2
+
+
 # seemant@gentoo.org (09 Jul 2002)
 # masked for gcc-3.1 breakages with galeon, per blocke and mkennedy's
 # request:
@@ -42,7 +48,7 @@
 
 # lostlogic@gentoo.org (09 Jul 2002)
 # Masked for testing md5 support
-=net-misc/openssh-3.4_p1-r3
+#=net-misc/openssh-3.4_p1-r3
 
 # seemant@gentoo.org (09 Jul 2002)
 # Masked for testing.
@@ -103,7 +109,7 @@ dev-java/jaxp
 #azarah@gentoo.org (03 Jul 2002)
 #this one moves a lot of stuff around, and have a search dir
 #order fix that is very experimental
-=sys-devel/gcc-3.1-r8
+#=sys-devel/gcc-3.1-r8
 
 #lostlogic@gentoo.org (03 Jul 2002)
 #new apache ebuild changes a bit how we are handling the group
