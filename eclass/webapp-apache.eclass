@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.6 2003/08/05 17:00:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.7 2003/08/05 18:54:55 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -12,7 +12,7 @@ ECLASS=webapp-apache
 INHERITED="$INHERITED $ECLASS"
 DEPEND="${DEPEND} net-www/apache"
 
-EXPORT_FUNCTIONS pkg_preinst
+EXPORT_FUNCTIONS pkg_setup
 
 # NOTE:
 #
