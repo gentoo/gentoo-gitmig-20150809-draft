@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r11.ebuild,v 1.1 2004/08/08 15:32:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r12.ebuild,v 1.1 2004/08/09 22:56:41 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV/11/3}.tar.bz2
+	mirror://gentoo/patches-${KV/12/3}.tar.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 SLOT="${KV}"
 KEYWORDS="alpha -sparc -x86 -ppc -hppa -mips"
@@ -24,7 +24,7 @@ KEYWORDS="alpha -sparc -x86 -ppc -hppa -mips"
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-	cd ${WORKDIR}/${KV/11/1}
+	cd ${WORKDIR}/${KV/12/1}
 
 	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
 	if ! use crypt; then
@@ -76,6 +76,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${PN}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 
 	# Fix multi-line literal in include/asm-alpha/xor.h -- see bug 38354
 	# If this script "dies" then that means it's no longer applicable.
