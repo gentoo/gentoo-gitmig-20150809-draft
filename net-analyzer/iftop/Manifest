@@ -1,5 +1,6 @@
 MD5 891c4c950b310381e7baaf8ba8fe685b iftop-0.11.ebuild 636
 MD5 7745118475b5e29242747397b167c77c iftop-0.13.ebuild 680
+MD5 91a2c449ef8a9e691bb234b98391a392 iftop-0.15.ebuild 705
 MD5 1d81b0a9451cab7b37aa85395af30025 iftop-0.12.ebuild 681
 MD5 c78abb4f4fa2def2cca8f85ccd83bb04 iftop-0.14.ebuild 681
 MD5 c7a4ef9821a8052cd586efc022effbb0 ChangeLog 1403
@@ -8,3 +9,5 @@ MD5 2eeabc736f57ec2c18f114ae2d96127a files/digest-iftop-0.11 61
 MD5 c760d86756f23c96fdc594ee4b27ccfb files/digest-iftop-0.12 62
 MD5 766dde5066ae59435dd9b2765d5ee11b files/digest-iftop-0.13 62
 MD5 1211cd9a7485be0f68a8432c15085c99 files/digest-iftop-0.14 62
+MD5 0c7e84df258b58ff38a9bd8d43c67f00 files/digest-iftop-0.15 62
+MD5 c9d0a2ec49378a93c55b607f8bb88f91 files/iftoprc 1391

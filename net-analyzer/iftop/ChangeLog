@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.7 2003/09/25 03:18:39 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.8 2003/11/14 02:14:58 zul Exp $
+
+*iftop-0.15 (13 Nov 2003)
+
+  13 Nov 2003; Chuck Short <zul@gentoo.org> iftop-0.14.ebuild,
+  iftop-0.15.ebuild, files/iftoprc:
+  New version, marked 0.14 stable. 
+  Ebuild contributed by Torben Janssen <torben@teejot.net>.
 
   24 Sep 2003; Chuck Short <zul@gentoo.org> :
   Version bump, closes bug #28057.
