@@ -1,5 +1,5 @@
 # /etc/conf.d/net.ppp0:
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/confd.ppp0,v 1.1 2003/05/23 04:45:18 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/confd.ppp0,v 1.2 2004/07/18 03:50:48 dragonheart Exp $
 
 # Config file for /etc/init.d/net.ppp0
 
