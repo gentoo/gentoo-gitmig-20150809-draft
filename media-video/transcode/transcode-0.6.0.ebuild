@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0.ebuild,v 1.2 2002/08/13 07:11:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.0.ebuild,v 1.3 2002/08/28 14:23:02 phoenix Exp $
 
 inherit libtool
 
@@ -22,7 +22,6 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
 	media-libs/libsdl
 	dev-lang/nasm
-	=x11-libs/gtk+-1.2*
 	X? ( virtual/x11 )
 	avi? ( >=media-video/avifile-0.7.4 )
 	dvd? ( media-libs/libdvdread )
