@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> (2 May 2003)
+# depreciated packages
+net-misc/kpopper
+net-im/kxicq2
+
 # <mholzer@gentoo.org> (28 Apr 2003)
 # doesn't compile
 >net-dialup/capi4k-utils-20020701
