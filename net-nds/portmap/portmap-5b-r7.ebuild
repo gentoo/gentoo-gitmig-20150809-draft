@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.13 2004/03/07 10:40:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.14 2004/04/06 10:49:55 method Exp $
 
 inherit eutils
 
+IUSE="selinux"
 MY_P=${PN}_${PV}eta
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Netkit - portmapper"
@@ -16,6 +17,8 @@ KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64"
 
 DEPEND="virtual/glibc
 	sys-apps/tcp-wrappers"
+
+RDEPEND="selinux? ( sec-policy/selinux-portmap )"
 
 src_unpack() {
 	unpack ${A}
