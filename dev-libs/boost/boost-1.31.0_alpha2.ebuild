@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha1.ebuild,v 1.3 2004/02/03 07:55:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha2.ebuild,v 1.1 2004/02/03 07:55:10 george Exp $
 
-MyPV="2003d18"
+MyPV="2004202"
 
 DESCRIPTION="Boost provides free peer-reviewed portable C++ source libraries."
 HOMEPAGE="http://www.boost.org"
@@ -76,8 +76,8 @@ src_install () {
 	# install itself.  So it's done "manually" here.
 
 	# install libraries
-	find libs -type f -name \*.a -exec dolib.a {} \;
-	find libs -type f -name \*.so -exec dolib.so {} \;
+	find bin/boost/libs -type f -name \*.a -exec dolib.a {} \;
+	find bin/boost/libs -type f -name "*.so*" -exec dolib.so {} \;
 
 	# install source/header files
 
