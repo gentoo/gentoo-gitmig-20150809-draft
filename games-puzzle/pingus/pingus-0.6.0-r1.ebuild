@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.4 2004/05/12 09:02:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.5 2004/06/10 05:34:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://pingus.seul.org/files/${P}.tar.bz2"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="opengl"
+IUSE="nls opengl"
 
 DEPEND=">=media-libs/hermes-1.3.2-r2
 	=dev-games/clanlib-0.6.5*
@@ -31,6 +31,7 @@ src_compile() {
 	egamesconf \
 		--with-bindir="${GAMES_BINDIR}" \
 		--with-datadir="${GAMES_DATADIR_BASE}" \
+		$(use_enable nls) \
 		$(use_with opengl clanGL) \
 		|| die
 	emake || die "emake failed"
@@ -41,7 +42,7 @@ src_install() {
 	# pos install process ... FIXME
 	mv ${D}/usr/games/{games,bin}
 	cd ${D}/usr/share/games
-	mv locale ../
+	use nls && mv locale ../
 	mv games/pingus .
 	rm -rf games
 	# end pos install process
