@@ -1,0 +1,370 @@
+diff -ur gnome-spell-1.0.5/configure.in gnome-spell/configure.in
+--- gnome-spell-1.0.5/configure.in	Wed Jul 30 16:42:57 2003
++++ gnome-spell/configure.in	Fri Feb  6 16:38:02 2004
+@@ -82,7 +82,7 @@
+ AC_SUBST(CPPFLAGS)
+ AC_SUBST(LDFLAGS)
+ 
+-GNOME_SPELL_MODULES="libgnomeui-2.0 >= 1.112.1 libbonoboui-2.0 >= 1.112.1 libglade-2.0 >= 1.99.9 enchant >= 0.4.0"
++GNOME_SPELL_MODULES="libgnomeui-2.0 >= 1.112.1 libbonoboui-2.0 >= 1.112.1 libglade-2.0 >= 1.99.9 enchant >= 0.4.0 gtk+-2.0 >= 2.3.0"
+ PKG_CHECK_MODULES(GNOME_SPELL, $GNOME_SPELL_MODULES)
+ AC_SUBST(GNOME_SPELL_CFLAGS)
+ AC_SUBST(GNOME_SPELL_LIBS)
+diff -ur gnome-spell-1.0.5/gnome-spell/control.c gnome-spell/gnome-spell/control.c
+--- gnome-spell-1.0.5/gnome-spell/control.c	Fri Jun 27 17:06:27 2003
++++ gnome-spell/gnome-spell/control.c	Wed Jan  7 15:40:06 2004
+@@ -23,18 +23,18 @@
+ #include <config.h>
+ #include <string.h>
+ #include <glib.h>
++#include <gtk/gtkcombobox.h>
+ #include <gtk/gtkliststore.h>
+ #include <gtk/gtkmain.h>
+ #include <gtk/gtktreeview.h>
+ #include <gtk/gtktreeselection.h>
+ #include <gtk/gtkcellrenderertext.h>
+-#include <gtk/gtkentry.h>
+ #include <gtk/gtklabel.h>
+ #include <gtk/gtkmenu.h>
+ #include <gtk/gtkmenuitem.h>
++#include <gtk/gtktable.h>
+ #include <gtk/gtkwindow.h>
+ #include <libgnome/gnome-i18n.h>
+-#include <libgnomeui/gnome-entry.h>
+ #include <glade/glade.h>
+ #include <bonobo/bonobo-control.h>
+ #include <bonobo/bonobo-property-bag-client.h>
+@@ -66,7 +66,6 @@
+ 	GtkWidget *button_back;
+ 
+ 	GtkWidget *combo_add;
+-	GtkWidget *entry_add;
+ 	GList *abbrevs;
+ 	GList *langs;
+ } SpellControlData;
+@@ -139,7 +138,7 @@
+ }
+ 
+ static void
+-set_entry_add (SpellControlData *cd)
++set_combo_add (SpellControlData *cd)
+ {
+ 	
+ 	CORBA_sequence_GNOME_Spell_Language *language_seq;
+@@ -152,12 +151,15 @@
+ 
+ 		abbrevs_langs_clear (cd);
+ 		for (i = 0, n = 1; i < language_seq->_length; i++) {
++			gchar *lang;
++
+ 			if (strstr (cd->language, language_seq->_buffer[i].abbreviation)) {
+-				cd->langs = g_list_append (cd->langs, g_strdup (_(language_seq->_buffer[i].name)));
++				lang = g_strdup (_(language_seq->_buffer[i].name));
++				cd->langs = g_list_append (cd->langs, lang);
++				gtk_combo_box_append_text (GTK_COMBO_BOX (cd->combo_add), lang);
+ 				cd->abbrevs = g_list_append (cd->abbrevs, g_strdup (language_seq->_buffer[i].abbreviation));
+ 			}
+ 		}
+-		gtk_combo_set_popdown_strings (GTK_COMBO (cd->combo_add), cd->langs);
+ 	}
+ 	CORBA_exception_free (&ev);
+ }
+@@ -165,15 +167,11 @@
+ static gchar *
+ get_abbrev (SpellControlData *cd)
+ {
+-	GList *l, *a;
+-	const gchar *text;
+-
+-	text = gtk_entry_get_text (GTK_ENTRY (cd->entry_add));
++	gint idx;
+ 
+-	if (text)
+-		for (l = cd->langs, a = cd->abbrevs; l && a; l = l->next, a = a->next)
+-			if (!strcmp (text, l->data))
+-				return (gchar *) a->data;
++	idx = gtk_combo_box_get_active (GTK_COMBO_BOX (cd->combo_add));
++	if (idx >= 0)
++		return g_list_nth_data (cd->abbrevs, idx);
+ 
+ 	return NULL;
+ }
+@@ -267,7 +265,7 @@
+ 	GNOME_Spell_Dictionary_setLanguage (cd->dict, cd->language, &ev);
+ 	CORBA_exception_free (&ev);
+ 
+-	set_entry_add (cd);
++	set_combo_add (cd);
+ }
+ 
+ static void
+@@ -343,8 +341,9 @@
+ 	cd->button_ignore  = glade_xml_get_widget (xml, "button_ignore");
+ 	cd->button_skip    = glade_xml_get_widget (xml, "button_skip");
+ 	cd->button_back    = glade_xml_get_widget (xml, "button_back");
+-	cd->combo_add      = glade_xml_get_widget (xml, "combo_add");
+-	cd->entry_add      = glade_xml_get_widget (xml, "entry_add");
++	cd->combo_add      = gtk_combo_box_new_text ();
++	gtk_widget_show (cd->combo_add);
++	gtk_table_attach_defaults (GTK_TABLE (table), cd->combo_add, 0, 1, 3, 4);
+ 
+ 	g_signal_connect (cd->button_replace, "clicked", G_CALLBACK (clicked_replace), cd);
+ 	g_signal_connect (cd->button_add, "clicked", G_CALLBACK (clicked_add), cd);
+diff -ur gnome-spell-1.0.5/gnome-spell/spell-checker.glade gnome-spell/gnome-spell/spell-checker.glade
+--- gnome-spell-1.0.5/gnome-spell/spell-checker.glade	Fri Jun 27 17:06:27 2003
++++ gnome-spell/gnome-spell/spell-checker.glade	Wed Jan  7 15:40:06 2004
+@@ -2,6 +2,7 @@
+ <!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+ 
+ <glade-interface>
++<requires lib="gnome"/>
+ 
+ <widget class="GtkDialog" id="Spell dialog">
+   <property name="visible">True</property>
+@@ -11,6 +12,11 @@
+   <property name="modal">False</property>
+   <property name="resizable">True</property>
+   <property name="destroy_with_parent">False</property>
++  <property name="decorated">True</property>
++  <property name="skip_taskbar_hint">False</property>
++  <property name="skip_pager_hint">False</property>
++  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
++  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+   <property name="has_separator">True</property>
+ 
+   <child internal-child="vbox">
+@@ -32,6 +38,7 @@
+ 	      <property name="label" translatable="yes">Replace</property>
+ 	      <property name="use_underline">True</property>
+ 	      <property name="relief">GTK_RELIEF_NORMAL</property>
++	      <property name="focus_on_click">True</property>
+ 	      <property name="response_id">0</property>
+ 	    </widget>
+ 	  </child>
+@@ -44,6 +51,7 @@
+ 	      <property name="label" translatable="yes">Remember</property>
+ 	      <property name="use_underline">True</property>
+ 	      <property name="relief">GTK_RELIEF_NORMAL</property>
++	      <property name="focus_on_click">True</property>
+ 	      <property name="response_id">0</property>
+ 	    </widget>
+ 	  </child>
+@@ -56,6 +64,7 @@
+ 	      <property name="label" translatable="yes">Ignore</property>
+ 	      <property name="use_underline">True</property>
+ 	      <property name="relief">GTK_RELIEF_NORMAL</property>
++	      <property name="focus_on_click">True</property>
+ 	      <property name="response_id">0</property>
+ 	    </widget>
+ 	  </child>
+@@ -68,6 +77,7 @@
+ 	      <property name="label">gtk-go-forward</property>
+ 	      <property name="use_stock">True</property>
+ 	      <property name="relief">GTK_RELIEF_NORMAL</property>
++	      <property name="focus_on_click">True</property>
+ 	      <property name="response_id">0</property>
+ 	    </widget>
+ 	  </child>
+@@ -80,6 +90,7 @@
+ 	      <property name="label">gtk-close</property>
+ 	      <property name="use_stock">True</property>
+ 	      <property name="relief">GTK_RELIEF_NORMAL</property>
++	      <property name="focus_on_click">True</property>
+ 	      <property name="response_id">0</property>
+ 	    </widget>
+ 	  </child>
+@@ -264,6 +275,7 @@
+ 			  <property name="label" translatable="yes">D_ictionaries</property>
+ 			  <property name="use_underline">True</property>
+ 			  <property name="relief">GTK_RELIEF_NORMAL</property>
++			  <property name="focus_on_click">True</property>
+ 			</widget>
+ 		      </child>
+ 
+@@ -274,6 +286,7 @@
+ 			  <property name="label" translatable="yes">_Describe</property>
+ 			  <property name="use_underline">True</property>
+ 			  <property name="relief">GTK_RELIEF_NORMAL</property>
++			  <property name="focus_on_click">True</property>
+ 			</widget>
+ 		      </child>
+ 
+@@ -284,6 +297,7 @@
+ 			  <property name="label" translatable="yes">Describe _all</property>
+ 			  <property name="use_underline">True</property>
+ 			  <property name="relief">GTK_RELIEF_NORMAL</property>
++			  <property name="focus_on_click">True</property>
+ 			</widget>
+ 		      </child>
+ 
+@@ -295,6 +309,7 @@
+ 			  <property name="label" translatable="yes">_Help</property>
+ 			  <property name="use_underline">True</property>
+ 			  <property name="relief">GTK_RELIEF_NORMAL</property>
++			  <property name="focus_on_click">True</property>
+ 			</widget>
+ 		      </child>
+ 		    </widget>
+@@ -362,6 +377,11 @@
+   <property name="modal">False</property>
+   <property name="resizable">True</property>
+   <property name="destroy_with_parent">False</property>
++  <property name="decorated">True</property>
++  <property name="skip_taskbar_hint">False</property>
++  <property name="skip_pager_hint">False</property>
++  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
++  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+ 
+   <child>
+     <widget class="GtkTable" id="simple_control">
+@@ -469,6 +489,7 @@
+ 		  <property name="has_default">True</property>
+ 		  <property name="can_focus">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
++		  <property name="focus_on_click">True</property>
+ 
+ 		  <child>
+ 		    <widget class="GtkAlignment" id="alignment1">
+@@ -477,6 +498,10 @@
+ 		      <property name="yalign">0.5</property>
+ 		      <property name="xscale">0</property>
+ 		      <property name="yscale">0</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">0</property>
++		      <property name="right_padding">0</property>
+ 
+ 		      <child>
+ 			<widget class="GtkHBox" id="hbox3">
+@@ -534,6 +559,7 @@
+ 		  <property name="can_default">True</property>
+ 		  <property name="can_focus">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
++		  <property name="focus_on_click">True</property>
+ 
+ 		  <child>
+ 		    <widget class="GtkAlignment" id="alignment3">
+@@ -542,6 +568,10 @@
+ 		      <property name="yalign">0.5</property>
+ 		      <property name="xscale">0</property>
+ 		      <property name="yscale">0</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">0</property>
++		      <property name="right_padding">0</property>
+ 
+ 		      <child>
+ 			<widget class="GtkHBox" id="hbox5">
+@@ -599,6 +629,7 @@
+ 		  <property name="can_default">True</property>
+ 		  <property name="can_focus">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
++		  <property name="focus_on_click">True</property>
+ 
+ 		  <child>
+ 		    <widget class="GtkAlignment" id="alignment5">
+@@ -607,6 +638,10 @@
+ 		      <property name="yalign">0.5</property>
+ 		      <property name="xscale">0</property>
+ 		      <property name="yscale">0</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">0</property>
++		      <property name="right_padding">0</property>
+ 
+ 		      <child>
+ 			<widget class="GtkHBox" id="hbox7">
+@@ -664,6 +699,7 @@
+ 		  <property name="can_default">True</property>
+ 		  <property name="can_focus">True</property>
+ 		  <property name="relief">GTK_RELIEF_NORMAL</property>
++		  <property name="focus_on_click">True</property>
+ 
+ 		  <child>
+ 		    <widget class="GtkAlignment" id="alignment4">
+@@ -672,6 +708,10 @@
+ 		      <property name="yalign">0.5</property>
+ 		      <property name="xscale">0</property>
+ 		      <property name="yscale">0</property>
++		      <property name="top_padding">0</property>
++		      <property name="bottom_padding">0</property>
++		      <property name="left_padding">0</property>
++		      <property name="right_padding">0</property>
+ 
+ 		      <child>
+ 			<widget class="GtkHBox" id="hbox6">
+@@ -746,6 +786,7 @@
+ 	  <property name="can_default">True</property>
+ 	  <property name="can_focus">True</property>
+ 	  <property name="relief">GTK_RELIEF_NORMAL</property>
++	  <property name="focus_on_click">True</property>
+ 
+ 	  <child>
+ 	    <widget class="GtkAlignment" id="alignment2">
+@@ -754,6 +795,10 @@
+ 	      <property name="yalign">0.5</property>
+ 	      <property name="xscale">0</property>
+ 	      <property name="yscale">0</property>
++	      <property name="top_padding">0</property>
++	      <property name="bottom_padding">0</property>
++	      <property name="left_padding">0</property>
++	      <property name="right_padding">0</property>
+ 
+ 	      <child>
+ 		<widget class="GtkHBox" id="hbox4">
+@@ -809,45 +854,6 @@
+ 	  <property name="top_attach">3</property>
+ 	  <property name="bottom_attach">4</property>
+ 	  <property name="x_options">fill</property>
+-	  <property name="y_options"></property>
+-	</packing>
+-      </child>
+-
+-      <child>
+-	<widget class="GtkCombo" id="combo_add">
+-	  <property name="visible">True</property>
+-	  <property name="value_in_list">True</property>
+-	  <property name="allow_empty">False</property>
+-	  <property name="case_sensitive">True</property>
+-	  <property name="enable_arrow_keys">True</property>
+-	  <property name="enable_arrows_always">False</property>
+-
+-	  <child internal-child="entry">
+-	    <widget class="GtkEntry" id="entry_add">
+-	      <property name="visible">True</property>
+-	      <property name="can_focus">True</property>
+-	      <property name="editable">True</property>
+-	      <property name="visibility">True</property>
+-	      <property name="max_length">0</property>
+-	      <property name="text" translatable="yes"></property>
+-	      <property name="has_frame">True</property>
+-	      <property name="invisible_char" translatable="yes">*</property>
+-	      <property name="activates_default">False</property>
+-	    </widget>
+-	  </child>
+-
+-	  <child internal-child="list">
+-	    <widget class="GtkList" id="combo-list1">
+-	      <property name="visible">True</property>
+-	      <property name="selection_mode">GTK_SELECTION_BROWSE</property>
+-	    </widget>
+-	  </child>
+-	</widget>
+-	<packing>
+-	  <property name="left_attach">0</property>
+-	  <property name="right_attach">1</property>
+-	  <property name="top_attach">3</property>
+-	  <property name="bottom_attach">4</property>
+ 	  <property name="y_options"></property>
+ 	</packing>
+       </child>
+--- gnome-spell-1.0.5/gnome-spell/Makefile.am.orig	2004-03-22 02:32:59.000000000 +0000
++++ gnome-spell-1.0.5/gnome-spell/Makefile.am	2004-03-22 02:33:10.000000000 +0000
+@@ -11,7 +11,6 @@
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+ 	-DGLADE_DATADIR=\"$(gladedir)\"			\
+ 	-DPLUGIN_DIR=\""$(PLUGIN_DIR)"\"		\
+-	-DGTK_DISABLE_DEPRECATED=1			\
+ 	$(GNOME_SPELL_CFLAGS)				\
+ 	$(END)
+ 
