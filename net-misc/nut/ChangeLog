@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.21 2003/10/21 14:08:22 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.22 2003/10/29 23:57:26 max Exp $
+
+*nut-1.5.7 (29 Oct 2003)
+
+  29 Oct 2003; Max Kalika <max@gentoo.org> nut-1.4.0-r1.ebuild,
+  nut-1.4.0-r2.ebuild, nut-1.4.0-r3.ebuild, nut-1.5.6-r1.ebuild,
+  nut-1.5.6-r2.ebuild, nut-1.5.6.ebuild, nut-1.5.7.ebuild, files/upsd.rc6,
+  files/upsdrv.rc6, files/upsmon.rc6:
+  Bump to version 1.5.7. Cleanup Move drivers to /lib/nut and link control to
+  /sbin for halt.sh to work properly. Fix pid file handling in startup scripts.
+  Fixes all of bug 31665.
 
   21 Oct 2003; Max Kalika <max@gentoo.org> files/upsd.rc6:
   Fix pid path.

@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.0-r2.ebuild,v 1.2 2003/10/21 14:03:57 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.7.ebuild,v 1.1 2003/10/29 23:57:26 max Exp $
 
 DESCRIPTION="Network-UPS Tools."
-SRC_URI="http://www.exploits.org/nut/release/${PV%.*}/${P}.tar.gz"
+SRC_URI="http://www.exploits.org/nut/development/${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://www.exploits.org/nut/"
 
 LICENSE="GPL-2"
@@ -19,17 +19,20 @@ src_unpack() {
 
 	sed -e "s:GD_LIBS.*=.*-L/usr/X11R6/lib \(.*\) -lXpm -lX11:GD_LIBS=\"\1:" \
 		-i configure.in || die "sed failed"
+
+	ebegin "Recreating configure"
+	WANT_AUTOCONF_2_5=1 autoconf || die "autoconf failed"
+	eend $?
 }
 
 src_compile() {
 	local myconf
 	myconf="${myconf} `use_with cgi` `use_with cgi cgipath /usr/share/nut`"
 
-	WANT_AUTOCONF_2_5=1 autoconf
 	econf \
 		--with-user=nut \
 		--with-group=nut \
-		--with-drvpath=/usr/lib/nut \
+		--with-drvpath=/lib/nut \
 		--sysconfdir=/etc/nut \
 		--with-logfacility=LOG_DAEMON \
 		--with-statepath=/var/lib/nut \
@@ -50,7 +53,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	keepdir /var/lib/nut
+
+	dodir /sbin
+	dosym /lib/nut/upsdrvctl /sbin/upsdrvctl
 
 	for i in "${D}"/etc/nut/*.sample ; do
 		mv "${i}" "${i/.sample/}"
@@ -72,6 +77,8 @@ src_install() {
 	newexe "${FILESDIR}/upsd.rc6" upsd
 	newexe "${FILESDIR}/upsdrv.rc6" upsdrv
 	newexe "${FILESDIR}/upsmon.rc6" upsmon
+
+	keepdir /var/lib/nut
 }
 
 pkg_postinst() {
