@@ -29,7 +29,8 @@ gnome-base
 gnome-extra 
 kde-base 
 media-gfx
-media-libs 
+media-libs
+media-plugins
 media-sound 
 media-video 
 net-analyzer 
@@ -55,6 +56,7 @@ sys-libs
 x11-base 
 x11-libs
 x11-misc 
+x11-plugins
 x11-terms 
 x11-themes
 x11-wm 
