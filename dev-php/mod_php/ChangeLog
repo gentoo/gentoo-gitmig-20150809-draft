@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.145 2004/05/18 22:15:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.146 2004/05/28 21:37:59 robbat2 Exp $
+
+*mod_php-4.3.6-r2 (28 May 2004)
+
+  28 May 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.6-r2.ebuild:
+  fixed bugs 50991, 49420 in php-sapi eclass, so bump ebuilds.
 
   18 May 2004; Stuart Herbert <stuart@gentoo.org> :
   Added digest for hardened-php patch

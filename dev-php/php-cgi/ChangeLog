@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.12 2004/05/18 23:07:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.13 2004/05/28 21:36:50 robbat2 Exp $
+
+*php-cgi-4.3.6-r1 (28 May 2004)
+
+  28 May 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.6-r1.ebuild:
+  fixed bugs 50991, 49420 in php-sapi eclass, so bump ebuilds.
 
   19 May 2004; Stuart Herbert <stuart@gentoo.org> :
   Added digest for hardened php patch
