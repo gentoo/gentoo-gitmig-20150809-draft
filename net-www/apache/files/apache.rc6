@@ -10,21 +10,29 @@ depend() {
 
 start() {
 	ebegin "Starting apache"
-	start-stop-daemon --quiet --start --startas /usr/sbin/apache \
+	start-stop-daemon -o --quiet --start --startas /usr/sbin/apache \
 		--pidfile /var/run/apache.pid -- ${APACHE_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping apache"
-	/usr/sbin/apachectl stop
+	/usr/sbin/apachectl stop &>/dev/null
 	start-stop-daemon -o --quiet --stop --pidfile /var/run/apache.pid
 	eend $?
 }
 
 svc_restart() {
 	ebegin "Gracefully restarting apache"
-	/usr/sbin/apachectl graceful
-	eend $?
+	/usr/sbin/apache -t ${APACHE_OPTS} &>/dev/null
+
+	if [ "$?" != "0" ]; then
+		svc_stop
+		eend 1 "Apache configuration error"
+	else
+		killall -USR1 httpd &> /dev/null
+		svc_start &>/dev/null
+		eend $?
+	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.4 2002/08/16 03:01:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.5 2002/09/18 13:21:24 carpaski Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
@@ -75,15 +75,15 @@ src_compile() {
 	DATA_DIR=`grep apache /etc/passwd | cut -d: -f6`
 
 	if [ -z "$DATA_DIR" ]; then
-		eerror "DATA_DIR is null! Using defaults."
-		eerror "You probably want to check /etc/passwd"
 		DATA_DIR="/home/httpd"
+		eerror "DATA_DIR is null! Using default."
+		eerror "Create the apache user and set the homedir to your desired location."
 	fi
 
-	einfo "Using $DATA_DIR as the default data directory."
-        
+	einfo "Using $DATA_DIR as apache's default data directory."
+
 	select_modules_config || \
-	die "couldn't find apache-builtin-mods config file"        
+	die "couldn't find apache-builtin-mods config file"
 
 	#-DBUFFERED_LOGS
 	OPTIM="${mycflags} -DHARD_SERVER_LIMIT=${HARD_SERVER_LIMIT} \
