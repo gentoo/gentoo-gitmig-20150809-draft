@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $header$
 
+  12 Jun 2003; <msterret@gentoo.org> autocutsel-0.6.2.ebuild:
+  add Header
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *autocutsel-0.6.2 (09 Jul 2002)
