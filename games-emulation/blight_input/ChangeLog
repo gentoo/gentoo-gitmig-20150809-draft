@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/blight_input
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/ChangeLog,v 1.2 2003/09/10 15:59:47 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/ChangeLog,v 1.3 2004/03/30 12:03:06 mr_bones_ Exp $
+
+*blight_input-0.0.8-r1 (30 Mar 2004)
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  blight_input-0.0.8-r1.ebuild:
+  small version bump (bug #44591) with patch from Duarte Henriques
 
 *blight_input-0.0.8 (02 Sep 2003)
 
