@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.18 2004/07/09 20:18:05 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-2.7.0.ebuild,v 1.19 2005/01/25 13:30:22 corsair Exp $
 
 DESCRIPTION="IPTraf is an ncurses-based IP LAN monitor"
 SRC_URI="ftp://ftp.cebu.mozcom.com/pub/linux/net/${P}.tar.gz"
