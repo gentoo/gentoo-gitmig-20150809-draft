@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r4.ebuild,v 1.2 2002/05/06 18:40:20 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r4.ebuild,v 1.3 2002/05/06 20:39:18 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
@@ -13,13 +13,12 @@ SLOT="2"
 
 DEPEND="virtual/glibc
 		>=dev-util/pkgconfig-0.12.0
-		doc? ( >=dev-util/gtk-doc-0.9-r2 )
-		! dev-libs/libiconv-1.7" 
+		doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 
 # libiconv breaks other stuff
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
 		!  dev-libs/libiconv-1.7"
 
 src_compile() {
