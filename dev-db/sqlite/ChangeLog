@@ -1,10 +1,16 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.4 2002/07/23 03:03:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.5 2002/07/30 08:21:27 rphillips Exp $
 
   22 Jul 2002; Ryan Phillips <rphillips@gentoo.org> * :
 
   Fixes for repoman
+
+*sqlite-2.6.1 (30 Jul 2002)
+
+  30 Jul 2002; Ryan Phillips <rphillips@gentoo.org> sqlite-2.6.1.ebuild :
+
+  Updated version
 
 *sqlite-2.4.2 (21 Mar 2002)
 
