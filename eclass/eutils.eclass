@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.107 2004/09/29 15:16:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.108 2004/10/01 19:23:58 ka0ttic Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -556,9 +556,10 @@ mymktemp() {
 	fi
 }
 
-# Small wrapper for getent (Linux) and nidump (Mac OS X)
-# used in enewuser()/enewgroup()
+# Small wrapper for getent (Linux), nidump (Mac OS X),
+# and pw (FreeBSD) used in enewuser()/enewgroup()
 # Joe Jezak <josejx@gmail.com> and usata@gentoo.org
+# FBSD stuff: Aaron Walker <ka0ttic@gentoo.org>
 #
 # egetent(database, key)
 egetent() {
@@ -571,6 +572,15 @@ egetent() {
 			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
 			;;
 		esac
+	elif useq x86-fbsd ; then
+		local action
+		if [ "$1" == "passwd" ]
+		then
+			action="user"
+		else
+			action="group"
+		fi
+		pw show "${action}" "$2" -q
 	else
 		getent "$1" "$2"
 	fi
@@ -628,7 +638,7 @@ enewuser() {
 	if [ "${euid}" == "next" ]
 	then
 		local pwrange
-		if use macos || use ppc-macos ; then
+		if use macos || use ppc-macos || [ "${USERLAND}" == "BSD" ] ; then
 			pwrange="`jot 898 101`"
 		else
 			pwrange="`seq 101 999`"
@@ -650,7 +660,12 @@ enewuser() {
 			die "${eshell} does not exist"
 		fi
 	else
-		eshell="/bin/false"
+		if [ "${USERLAND}" == "BSD" ]
+		then
+			eshell="/usr/bin/false"
+		else
+			eshell="/bin/false"
+		fi
 	fi
 	einfo " - Shell: ${eshell}"
 	opts="${opts} -s ${eshell}"
@@ -723,6 +738,17 @@ enewuser() {
 			einfo "Please report the ebuild along with the info below"
 			einfo "eextra: ${eextra}"
 			die "Required function missing"
+		fi
+	elif use x86-fbsd ; then
+		if [ -z "${eextra}" ]
+		then
+			pw useradd ${euser} ${opts} \
+				-c "added by portage for ${PN}" \
+				die "enewuser failed"
+		else
+			einfo " - Extra: ${eextra}"
+			pw useradd ${euser} ${opts} \
+				-c ${eextra} || die "enewuser failed"
 		fi
 	else
 		if [ -z "${eextra}" ]
@@ -826,6 +852,14 @@ enewgroup() {
 		esac
 		dscl . create /groups/${egroup} gid ${egid}
 		dscl . create /groups/${egroup} passwd '*'
+	elif use x86-fbsd ; then
+		case ${egid} in
+			*[!0-9]*) # Non numeric
+				for egid in `jot 898 101`; do
+					[ -z "`egetent group ${egid}`" ] && break
+				done
+		esac
+		pw groupadd ${egroup} -g ${egid} || die "enewgroup failed"
 	else
 		groupadd ${opts} ${egroup} || die "enewgroup failed"
 	fi
