@@ -164,3 +164,4 @@ move net-www/oops www-proxy/oops
 move net-www/squid www-proxy/squid
 move net-www/squidguard www-proxy/squidguard
 move net-www/squirm www-proxy/squirm
+move net-www/tinyproxy www-proxy/tinyproxy
