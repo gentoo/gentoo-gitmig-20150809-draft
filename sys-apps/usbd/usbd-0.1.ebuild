@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.7 2004/07/01 21:42:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbd/usbd-0.1.ebuild,v 1.8 2004/07/15 02:45:47 agriffis Exp $
 
 DESCRIPTION="USB Daemon"
 HOMEPAGE="http://usb.cs.tum.edu"
@@ -11,7 +11,6 @@ KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 DEPEND="virtual/libc
 	>=sys-apps/usbutils-0.11"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf --prefix=/usr --sysconfdir=/etc/usbd || die "econf failed"

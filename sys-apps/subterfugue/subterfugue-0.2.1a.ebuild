@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2.1a.ebuild,v 1.6 2004/06/24 22:27:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2.1a.ebuild,v 1.7 2004/07/15 02:36:05 agriffis Exp $
 
 inherit distutils eutils
 
 IUSE="gtk"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="strace meets expect"
 SRC_URI="mirror://sourceforge/subterfugue/${P}.tgz"
 HOMEPAGE="http://www.subterfugue.org/"

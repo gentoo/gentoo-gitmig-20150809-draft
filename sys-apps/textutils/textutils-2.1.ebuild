@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.20 2004/06/28 01:26:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.21 2004/07/15 02:40:56 agriffis Exp $
 
 IUSE="nls static build"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU text utilities"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/textutils/"
