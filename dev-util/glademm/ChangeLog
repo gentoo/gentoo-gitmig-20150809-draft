@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.18 2004/02/20 17:19:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.19 2004/02/24 23:33:38 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> glademm-2.0.0.1.ebuild:
+  Stable on sparc.
 
   20 Feb 2004; foser <foser@gentoo.org> glademm-0.6.4.ebuild :
   Fix gcc33 introduced include errors #40283
