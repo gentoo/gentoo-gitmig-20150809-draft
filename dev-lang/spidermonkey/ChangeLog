@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.3 2004/09/03 20:51:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.4 2004/09/03 21:31:01 usata Exp $
+
+*spidermonkey-1.5_rc6-r1 (04 Sep 2004)
+
+  04 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +spidermonkey-1.5_rc6-r1.ebuild:
+  spidermonkey-1.5_rc6.ebuild doesn't install all the headers needed by
+  sablotron to build with JavaScript support. Also moved headers to
+  /usr/include/js.
 
 *spidermonkey-1.5_rc6 (04 Sep 2004)
 
