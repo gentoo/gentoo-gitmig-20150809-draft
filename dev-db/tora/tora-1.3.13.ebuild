@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.13.ebuild,v 1.2 2004/01/22 21:57:03 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.13.ebuild,v 1.3 2004/01/23 22:54:11 rizzo Exp $
 
 IUSE="kde oci8"
 DESCRIPTION="TOra - Toolkit For Oracle"
@@ -31,6 +31,14 @@ pkg_setup() {
 }
 
 src_compile() {
+
+	# Need to fake out Qt or we'll get sandbox problems
+	REALHOME="$HOME"
+	mkdir -p $T/fakehome/.kde
+	mkdir -p $T/fakehome/.qt
+	export HOME="$T/fakehome"
+	addwrite "${QTDIR}/etc/settings"
+
 	local myconf
 	myconf="--prefix=/usr --with-mono"
 
