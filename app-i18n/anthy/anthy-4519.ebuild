@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4507.ebuild,v 1.3 2003/09/22 00:47:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4519.ebuild,v 1.1 2003/09/22 00:47:29 usata Exp $
 
 inherit elisp-common
 
@@ -8,7 +8,7 @@ IUSE="emacs"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/5847/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/6003/${P}.tar.gz"
 
 # This branch, so-called anthy-ss (snapshot) is a development branch,
 # so it is not intended to be marked as stable.  It will remain unstable
@@ -21,7 +21,7 @@ S="${WORKDIR}/${P}"
 
 DEPEND="virtual/glibc
 	emacs? ( virtual/emacs )
-	>=app-dicts/canna-cannadic-0.95-r1"
+	>=app-dicts/canna-cannadic-0.95a"
 RDEPEND="virtual/glibc
 	emacs? ( virtual/emacs )"
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4515.ebuild,v 1.1 2003/09/15 13:09:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4515.ebuild,v 1.2 2003/09/22 00:47:29 usata Exp $
+
+inherit elisp-common
 
 IUSE="emacs"
 
@@ -24,7 +26,6 @@ RDEPEND="virtual/glibc
 	emacs? ( virtual/emacs )"
 
 SITEFILE="50anthy-gentoo.el"
-SITELISP=/usr/share/emacs/site-lisp
 
 src_compile() {
 
@@ -54,10 +55,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	if [ -n "` use emacs`" ] ; then
-		insinto ${SITELISP}
-		doins ${FILESDIR}/${SITEFILE}
-	fi
+	use emacs && elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
 	dodoc AUTHORS ChangeLog DIARY INSTALL NEWS README \
 		doc/[A-Z0-9][A-Z0-9]* doc/protocol.txt
@@ -65,16 +63,10 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ -n "` use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
 
-	if [ -n "` use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
+	use emacs && elisp-site-regen
 }
