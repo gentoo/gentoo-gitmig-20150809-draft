@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.10_rc2-r1.ebuild,v 1.1 2004/11/16 13:31:14 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.10_rc2-r1.ebuild,v 1.2 2004/12/21 11:47:07 plasmaroo Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -17,8 +17,8 @@ SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/akpm/patches/2.6/${KV
 KEYWORDS="~x86 ~amd64 ~ia64 -* ~ppc"
 IUSE=""
 
-K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an
-existing bug. Only create a new bug if you have not found one that matches
-your issue. It is best to do an advanced search as the initial search has a
-very low yield. Please assign your bugs to x86-kernel@gentoo.org.
-Please read the ChangeLog and associated docs for more information."
+K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
+experimental nature. If you have any issues, try a matching development-sources
+ebuild -- if the problem persists there, please file a bug at http://bugme.osdl.org.
+If the problem only occurs with mm-sources then please contact Andrew Morton to
+get your issue resolved."
