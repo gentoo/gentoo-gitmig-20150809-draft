@@ -226,3 +226,4 @@ move net-www/fetch www-client/fetch
 move net-www/galeon www-client/galeon
 move net-www/straw net-news/straw
 move net-www/snownews net-news/snownews
+move net-www/liferea net-news/liferea
