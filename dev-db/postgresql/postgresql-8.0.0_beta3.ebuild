@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta3.ebuild,v 1.2 2004/10/09 23:17:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta3.ebuild,v 1.3 2004/11/06 19:26:26 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -143,9 +143,12 @@ src_install() {
 	cd ${S}
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/postgresql.init-8.0.0 postgresql || die
+	newexe ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
+	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-8.0.0 postgresql || die
+	newins ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
 }
 
 pkg_postinst() {
