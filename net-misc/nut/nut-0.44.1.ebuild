@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.1 2000/08/25 15:10:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-0.44.1.ebuild,v 1.2 2000/09/15 20:09:13 drobbins Exp $
 
 P=nut-0.44.1
 A=${P}.tar.gz
@@ -17,15 +17,15 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/nut \
+  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/nut \
 	--with-user=daemon --with-group=daemon
-  make
-  make cgi
+  try make
+  try make cgi
 }
 
 src_install() {                               
   cd ${S}
-  make BASEPATH=${D}/usr CONFPATH=${D}/etc/nut STATEPATH=${D}/var/state/ups \
+  try make BASEPATH=${D}/usr CONFPATH=${D}/etc/nut STATEPATH=${D}/var/state/ups \
 	install
   cd clients
   exeinto /usr/local/httpd/cgi-bin/nut

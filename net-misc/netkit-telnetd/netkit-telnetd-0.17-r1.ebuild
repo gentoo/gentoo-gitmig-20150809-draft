@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r1.ebuild,v 1.2 2000/08/16 04:38:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r1.ebuild,v 1.3 2000/09/15 20:09:13 drobbins Exp $
 
 P=netkit-telnetd-0.17
 A=netkit-telnet-0.17.tar.gz
@@ -10,12 +10,12 @@ DESCRIPTION="Standard Linux telnet client"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
 
 src_compile() {                           
-    ./configure --prefix=/usr
+    try ./configure --prefix=/usr
     cp MCONFIG MCONFIG.orig
     sed -e "s/-pipe -O2/${CFLAGS}/" MCONFIG.orig > MCONFIG
-    make
+    try make
     cd telnetlogin
-    make
+    try make
 }
 
 src_install() {                               

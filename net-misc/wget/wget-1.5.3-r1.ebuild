@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.5.3-r1.ebuild,v 1.2 2000/08/16 04:38:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.5.3-r1.ebuild,v 1.3 2000/09/15 20:09:14 drobbins Exp $
 
 P=wget-1.5.3    
 A="${P}.tar.gz wget-new-percentage-3.0.tgz"
@@ -18,13 +18,13 @@ src_unpack () {
   patch retr.c < ../../wget-new-percentage/wget-new-percentage.diff
 }
 src_compile() {                           
-    ./configure --prefix=/usr --sysconfdir=/etc/wget --disable-debug 
-    make
+    try ./configure --prefix=/usr --sysconfdir=/etc/wget --disable-debug 
+    try make
 }
 
 src_install() {                               
     cd ${S}
-    make prefix=${D}/usr sysconfdir=${D}/etc/wget install	 	
+    try make prefix=${D}/usr sysconfdir=${D}/etc/wget install	 	
     prepinfo
     dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO 
     dodoc doc/sample.wgetrc

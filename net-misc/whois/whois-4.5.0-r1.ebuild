@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.0-r1.ebuild,v 1.2 2000/08/16 04:38:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.0-r1.ebuild,v 1.3 2000/09/15 20:09:14 drobbins Exp $
 
 P=whois-4.5.0
 A=whois_4.5.0.tar.gz
@@ -21,8 +21,8 @@ src_unpack() {
 }
 src_compile() {                           
   cd ${S}
-  make
-  make mkpasswd
+  try make
+  try make mkpasswd
 }
 
 src_install() {                               
@@ -30,7 +30,7 @@ src_install() {
   dodir /usr/bin
   dodir /usr/man/man1
   dodir /usr/share/locale
-  make BASEDIR=${D} prefix=/usr install
+  try make BASEDIR=${D} prefix=/usr install
   prepman
   dobin mkpasswd
   doman mkpasswd.1

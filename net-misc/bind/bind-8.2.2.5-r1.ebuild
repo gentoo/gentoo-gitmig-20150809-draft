@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r1.ebuild,v 1.2 2000/08/16 04:38:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r1.ebuild,v 1.3 2000/09/15 20:09:12 drobbins Exp $
 
 A=bind-src.tar.gz
 S=${WORKDIR}/src
@@ -10,9 +10,9 @@ SRC_URI="ftp://ftp.isc.org/isc/bind/src/8.2.2-P5/"${A}
 HOMEPAGE="http://www.isc.org/products/BIND"
 
 src_compile() {                           
-    make clean
-    make depend
-    make all
+    try make clean
+    try make depend
+    try make all
 }
 
 src_unpack() {
