@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.23 2004/01/15 19:21:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.24 2004/01/27 13:09:58 gustavoz Exp $
+
+  27 Jan 2004; <gustavoz@gentoo.org> graphviz-1.10.ebuild:
+  marked stable on sparc
 
   15 Jan 2004; <agriffis@gentoo.org> graphviz-1.10.ebuild:
   stable on alpha and ia64
