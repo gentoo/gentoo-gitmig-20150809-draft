@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Michael Nygard <michael.nygard@halleysfifth.com>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp
+# $ Header: $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
