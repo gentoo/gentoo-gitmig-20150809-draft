@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.2.ebuild,v 1.2 2002/08/16 02:57:06 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/linc-0.5.2.ebuild,v 1.3 2002/08/23 03:37:29 seemant Exp $
 
 
 inherit libtool
@@ -24,25 +24,19 @@ DEPEND="${RDEPEND}
 src_compile() {
 	elibtoolize
 	local myconf
-	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
+	use doc \
+		&& myconf="${myconf} --enable-gtk-doc" \
+		|| myconf="${myconf} --disable-gtk-doc"
 
 	# if this is disabled (use) ORBit2 will fail to build. Just force it on	
-	myconf="${myconf} --with-openssl"        
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		${myconf} || die
+	myconf="${myconf} --with-openssl"
+
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		install || die
+	einstall || die
     
- 	dodoc AUTHORS ChangeLog COPYING HACKING MAINTAINERS README* INSTALL NEWS TODO
+ 	dodoc AUTHORS ChangeLog COPYING HACKING MAINTAINERS README* NEWS TODO
 }
