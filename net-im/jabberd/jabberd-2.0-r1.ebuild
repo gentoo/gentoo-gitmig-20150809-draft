@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r1.ebuild,v 1.1 2004/08/11 23:58:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r1.ebuild,v 1.2 2004/08/13 11:42:34 humpback Exp $
 
 inherit eutils
 
@@ -103,6 +103,7 @@ src_install() {
 
 	docinto tools ; dodoc tools/db-setup.mysql tools/db-setup.pgsql tools/migrate.pl tools/pipe-auth.pl
 
+	#Must change this, enewgroup/enewuser are supposed to do chek stuff
 	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
 	if [ -z $test_group ]
 	then
