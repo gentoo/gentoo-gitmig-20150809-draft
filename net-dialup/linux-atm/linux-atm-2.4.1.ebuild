@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.8 2004/06/22 02:56:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.9 2004/06/22 03:00:09 vapier Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	sed -i 's:hosts.atm :hosts.atm ${D}:' src/config/Makefile
+	sed -i 's:hosts.atm :hosts.atm ${D}:' src/config/Makefile || die
 	emake || die
 }
 
