@@ -6,7 +6,7 @@ MD5 00db015217d8e61934c033d1e27d40b7 portage-2.0.51_rc7.ebuild 11788
 MD5 c2319f5f50294b32c0d1b9cfa1bee9d3 portage-2.0.50-r11.ebuild 11543
 MD5 48e3a06d54b4afb8b3aac23b90e383ea portage-2.0.51_rc9.ebuild 11788
 MD5 ba4ae80e5e6cf58aac9c5aa1cc5f777e ChangeLog 411
-MD5 0ab7e3167254989b9ed5945bdc5ffe2e portage-2.0.51.ebuild 11934
+MD5 137fc150ea14ad701b4469a87c123c4c portage-2.0.51.ebuild 12211
 MD5 c697b628359c7055961817876804f0a6 metadata.xml 221
 MD5 5375f0805d4d56dc961ad81162854790 files/digest-portage-2.0.50-r11 71
 MD5 3da3469e2b40b9a6b37fd54b2e6c7b98 files/digest-portage-2.0.51_rc7 71
@@ -17,7 +17,7 @@ MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdyePBDOEqLMd+jQRAkhQAJ9cT86eRfojAPyND1trR4aoAkHQqgCfQTLR
-3BwoKbFVAtPfYF5w4EIWmuQ=
-=RDmD
+iD8DBQFBd0swBDOEqLMd+jQRAtekAJ4syTymEMONZ3YxcCPXzfe4C1vSkACdG46E
+ncXBQisyG3AheTK56jPw0Mw=
+=2M1j
 -----END PGP SIGNATURE-----

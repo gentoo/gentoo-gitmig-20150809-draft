@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.ebuild,v 1.3 2004/10/21 03:05:34 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.ebuild,v 1.4 2004/10/21 05:37:34 carpaski Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
@@ -181,6 +181,12 @@ pkg_preinst() {
 			rm -Rf "${IMAGE}"/usr/lib/portage/bin/*
 			mv "${T}"/{sandbox,tbz2tool} "${IMAGE}"/usr/lib/portage/bin/
 		fi
+	fi
+	
+	# If we return true, then we don't have HIGHEST_PROTOCOL.
+	# We need to modify the source for this case.
+	if python -c "import cPickle,sys; sys.exit('HIGHEST_PROTOCOL' in dir(cPickle))"; then
+		sed -i "s:cPickle.HIGHEST_PROTOCOL:-1:" "${IMAGE}"/usr/lib/portage/pym/*.py
 	fi
 }
 
