@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.5 2004/07/03 22:59:56 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.6 2004/07/09 03:23:31 st_lim Exp $
 
 inherit java-pkg
 
@@ -20,6 +20,7 @@ IUSE="doc"
 S=${WORKDIR}/${PN}-${PV:0:3}
 
 src_compile() {
+	sed -e '/<splash/D' -i ${S}/build.xml
 	ant jar
 }
 
