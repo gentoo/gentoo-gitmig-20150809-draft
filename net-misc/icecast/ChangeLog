@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.16 2004/01/13 18:44:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.17 2004/02/17 20:22:02 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> icecast-2.0.0.ebuild:
+  add ~alpha
 
 *icecast-2.0.0 (13 Jan 2004)
 
