@@ -1,11 +1,15 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.24 2004/08/02 07:46:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.25 2004/08/02 12:44:17 dholm Exp $
+
+  02 Aug 2004; David Holm <dholm@gentoo.org> gnat-3.41.ebuild,
+  -gnat-5.0_pre20030822.ebuild, -gnat-5.0_pre20031005.ebuild:
+  Removed GNAT 5.0 snapshots and added ppc support to 3.41.
 
 *gnat-3.41 (02 Aug 2004)
 
   02 Aug 2004; David Holm <dholm@gentoo.org> +gnat-3.41.ebuild:
-  Removed GNAT 5.0 snapshots and added the new GCC 3.4.1-based GNAT.
+  Added the new GCC 3.4.1-based GNAT.
 
   30 Apr 2004; David Holm <dholm@gentoo.org> gnat-3.14p.ebuild:
   Put gnat-3.14p files on Gentoo mirrors.
