@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shoutcast-trans-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.1 2004/08/31 23:57:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.2 2004/09/03 22:47:06 chriswhite Exp $
+
+  04 Sep 2004; Chris White <chriswhite@gentoo.org>
+  shoutcast-trans-bin-0.4.0.ebuild:
+  Used keepdir instead of mkdir.  Thanks to eradicator for pointing this out.
 
 *shoutcast-trans-bin-0.4.0 (01 Sep 2004)
 
