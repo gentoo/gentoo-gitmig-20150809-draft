@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1_pre3.ebuild,v 1.1 2005/01/09 22:19:14 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.1_pre3.ebuild,v 1.2 2005/01/13 21:51:31 fvdpol Exp $
 
 inherit kde-functions gcc virtualx eutils
 need-qt 3
@@ -15,24 +15,24 @@ HOMEPAGE="http://lmuse.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="fluidsynth doc ladcca debug"
+IUSE="doc ladcca debug"
 
 DEPEND=">=x11-libs/qt-3.2.0
 	>=media-libs/alsa-lib-0.9.0
-	fluidsynth?	( media-sound/fluidsynth )
+	media-sound/fluidsynth
 	doc? ( app-text/openjade
 		   app-doc/doxygen
 		   media-gfx/graphviz )
 	dev-lang/perl
-	>=media-libs/libsndfile-1.0.0
-	>=media-sound/jack-audio-connection-kit-0.90.0
+	>=media-libs/libsndfile-1.0.1
+	>=media-libs/libsamplerate-0.1.0
+	>=media-sound/jack-audio-connection-kit-0.98.0
 	ladcca?		( >=media-libs/ladcca-0.4.0 )"
 
 src_compile() {
 	cd ${WORKDIR}/${MY_P}
 	local myconf
 	myconf="--disable-suid-build" # instead, use CONFIG_RTC and realtime-lsm
-	use fluidsynth	|| myconf="${myconf} --disable-fluidsynth"
 	use ladcca		|| myconf="${myconf} --disable-ladcca"
 	use debug		&& myconf="${myconf} --enable-debug"
 	Xeconf ${myconf} || die "configure failed"
