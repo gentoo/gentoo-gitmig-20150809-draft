@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 0c36a223623cafbd54654c586cc4792e cyrus-sasl-1.5.27-r6.ebuild 2745
 MD5 04ab88578310e66a55032b38819541a1 cyrus-sasl-2.1.18-r2.ebuild 5427
-MD5 d954897c6a36e3725a4c02af772e9170 cyrus-sasl-2.1.19-r1.ebuild 7200
+MD5 accfff386c0f82cdc80e642f5b3c9631 cyrus-sasl-2.1.19-r1.ebuild 7164
 MD5 b61513de5e687711b55cba7fb5f33b7b cyrus-sasl-2.1.18.ebuild 4222
 MD5 fca787b36b2303a6d2e8b93aa4dfe018 cyrus-sasl-1.5.27-r5.ebuild 2672
 MD5 118563c3516cf8075300c454145fe383 cyrus-sasl-2.1.17.ebuild 4234
 MD5 7249a88df4e8bf01818b639cd5eddf5e cyrus-sasl-2.1.14.ebuild 3899
-MD5 1de0a88fb491e0432c03184e1ed3026b ChangeLog 17587
+MD5 a5239073bc5938d741e165186c00b061 ChangeLog 17727
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 5d8f83e453b4f7dff5eeee74335de870 files/cyrus-sasl-1.5.24-rpath.patch 448
 MD5 13c15e58d2fa734adeb718e4e3dea757 files/cyrus-sasl-2.1.18-db4.patch 1604
@@ -47,7 +47,7 @@ MD5 fcf540108971d5aaa0bbfba381971ca7 files/digest-cyrus-sasl-2.1.18 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWE625FrxP71izLARAsUfAJ9UnYE3E8+v4KapbOWDKEDkdo33oQCfRLfh
-/jYuneICgDcgJ6Qx4sg8PE8=
-=CHgF
+iD8DBQFBYX9M5FrxP71izLARAoCKAJ9pknS/a0Fx7zIZMseE6kxRfd8SpwCg1li0
+I7XuTpys/v5fVangos9M4OA=
+=4ydn
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.4 2004/09/27 17:31:04 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19-r1.ebuild,v 1.5 2004/10/04 16:49:19 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="berkdb gdbm ldap mysql postgres kerberos static ssl java pam authdaemond"
 
 RDEPEND="virtual/libc
@@ -22,9 +22,7 @@ RDEPEND="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	kerberos? ( virtual/krb5 )
-	!arm? ( !ia64? ( !s390? (
-		authdaemond? ( >=net-mail/courier-imap-3.0.7 )
-	) ) )
+	authdaemond? ( >=net-mail/courier-imap-3.0.7 )
 	java? ( virtual/jdk )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
