@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.1.ebuild,v 1.2 2004/05/24 17:56:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.6.ebuild,v 1.1 2004/06/13 12:14:32 usata Exp $
 
 IUSE="nls ssl"
 
 DESCRIPTION="Ochusha - 2ch viewer for GTK+"
 HOMEPAGE="http://ochusha.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/9501/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/${PN}/9894/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
@@ -28,8 +28,7 @@ src_compile() {
 		--enable-regex \
 		--disable-shared \
 		--enable-static \
-		--with-included-oniguruma \
-		--with-gtk22-api || die
+		--with-included-oniguruma || die
 	emake || die
 }
 
