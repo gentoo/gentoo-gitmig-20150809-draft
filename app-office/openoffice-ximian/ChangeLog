@@ -1,6 +1,22 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.56 2004/08/01 13:57:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.57 2004/08/20 06:24:29 suka Exp $
+
+*openoffice-ximian-1.3.0 (20 Aug 2004)
+
+  20 Aug 2004; suka@gentoo.org -files/1.1.2/gentoo-1.1.60.patch,
+  -files/1.1.2/nativefix.diff, -files/1.1.2/print-fontconfig.diff,
+  -openoffice-ximian-1.1.60.ebuild, +openoffice-ximian-1.3.0.ebuild:
+  Great new release of the Ximian patchset, which brings lots of goodies:
+  Native fileselectors for GNOME and KDE are just the highlight. Take a look at
+  
+  http://ooo.ximian.com/NEWS
+  
+  for more infos.
+  
+  Unfortunately the ooo-kde-build is broken for the moment, so this version is
+  in package.mask for now, if you don't use that use-flag you should happily be
+  able to unmask it.
 
 *openoffice-ximian-1.1.61 (01 Aug 2004)
 

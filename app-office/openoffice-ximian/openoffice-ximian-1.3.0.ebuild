@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.8 2004/08/01 13:19:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.1 2004/08/20 06:24:29 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -32,9 +32,9 @@ IUSE="gnome kde ooo-kde"
 
 OO_VER=1.1.2
 PATCHLEVEL=OOO_1_1_2
-ICON_VER=OOO_1_1-9
-KDE_ICON_VER=OOO_1_1-0.1
-KDE_ICON_PATH=documents/159/1785
+ICON_VER=OOO_1_1-10
+KDE_ICON_VER=OOO_1_1-0.2
+KDE_ICON_PATH=documents/159/1929
 INSTDIR="/opt/Ximian-OpenOffice"
 PATCHDIR=${WORKDIR}/ooo-build-${PV}
 S="${WORKDIR}/oo_${OO_VER}_src"
@@ -225,38 +225,17 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 
-	#Fix Sandbox problems with scale-icons script
-	cd ${PATCHDIR}
-	epatch ${FILESDIR}/${OO_VER}/fixscale.patch
-
-	#Fix problems with newer curl versions
-	epatch ${FILESDIR}/${OO_VER}/curlfix.patch
-
-	#Exchange faulty patch
-	rm patches/OOO_1_1/print-fontconfig.diff || die
-	cp ${FILESDIR}/${OO_VER}/print-fontconfig.diff patches/OOO_1_1/ || die
-
-	#Beginnings of our own patchset
-	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
-
-	cd ${PATCHDIR}/patches/OOO_1_1/
-	epatch ${FILESDIR}/${OO_VER}/nativefix.diff
-
 	#Still needed: The STLport patch
 	cd ${S}
 	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
-
-	if [ ${ARCH} = "sparc" ]; then
-		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
-	fi
 
 	if use ooo-kde; then
 		DISTRO=KDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
 		WIDGETSET=kde
 	else
-		DISTRO=Gentoo
+		DISTRO=NLD
 		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
 		WIDGETSET=gtk
 	fi
@@ -346,7 +325,7 @@ src_compile() {
 		--with-system-xrender \
 		--disable-java \
 		--disable-mozilla \
-		--with-widgetset=${WIDGETSET}"
+		--enable-${WIDGETSET}"
 	./configure ${myconf} || die
 
 	cd ${S}
