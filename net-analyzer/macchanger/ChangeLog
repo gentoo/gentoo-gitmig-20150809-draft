@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/mtr
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.1 2003/05/18 19:28:30 mholzer Exp $
+
+*macchanger-1.3.0 (18 May 2003)
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> macchanger-1.3.0.ebuild:
+  Initial Version. Ebuild submitted by Alvaro Lopez Ortega <alvaro@alobbs.com>
+  in #11547.
