@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.0.ebuild,v 1.1 2004/07/20 06:23:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motiontrack/motiontrack-0.1.0.ebuild,v 1.2 2004/07/23 16:09:38 squinky86 Exp $
 
 
 DESCRIPTION="A set of tools that detect motion between two images"
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~hppa ~amd64"
 
 IUSE="libgd imagemagick debug"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	debug? (
 		libgd? (
 			imagemagick?  ( >=media-gfx/imagemagick-5.5.7 ) : ( media-libs/gd )
