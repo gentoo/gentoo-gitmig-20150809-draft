@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.51.ebuild,v 1.3 2003/10/07 14:27:47 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.51-r2.ebuild,v 1.1 2003/10/21 14:05:54 taviso Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Client-side interface to the X11 Protocol"
@@ -11,7 +11,12 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/X11/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic X11"
-KEYWORDS="x86 alpha ~sparc"
+KEYWORDS="~x86 ~alpha ~sparc"
 
 DEPEND="${DEPEND}
 		virtual/x11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}; epatch ${FILESDIR}/X11-Protocol-0.51_2.patch
+}
