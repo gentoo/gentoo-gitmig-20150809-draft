@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.10 2003/10/14 13:00:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.11 2003/12/15 00:20:41 avenj Exp $
+
+  14 Dec 2003; Jon Portnoy <avenj@gentoo.org> zebra-0.93b-r1.ebuild :
+  AMD64 keywords.
 
   14 Oct 2003; <solar@gentoo.org> metadata.xml:
   Edited metadata.xml to reflect that Amir Guindehi is now the primary
