@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.4.ebuild,v 1.1 2004/08/14 17:10:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.4.ebuild,v 1.2 2004/09/13 05:07:38 eradicator Exp $
 
 inherit gnome2 eutils
 
@@ -10,13 +10,16 @@ HOMEPAGE="http://www.nongnu.org/streamtuner/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 LICENSE="BSD"
 
 DEPEND=">=x11-libs/gtk+-2.2.2
 	>=net-misc/curl-7.10.8
 	>=app-text/scrollkeeper-0.3.0
 	dev-util/pkgconfig"
+
+RDEPEND="${DEPEND}
+	 media-sound/xmms"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
 
