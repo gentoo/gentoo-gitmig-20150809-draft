@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.10 2004/03/29 21:28:19 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.11 2004/04/19 20:09:58 avenj Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${P}-close_stdin.diff
+	epatch ${FILESDIR}/crontab.5.diff
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 
