@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.60 2003/09/27 17:31:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.61 2003/10/04 22:39:18 brad_mssw Exp $
+
+  04 Oct 2003; Brad House <brad_mssw@gentoo.org>
+  kdemultimedia-3.1.4-r1.ebuild:
+  add ~amd64 flag
 
   27 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdemultimedia-2.2.2-r1.ebuild,
   kdemultimedia-2.2.2-r1.ebuild, kdemultimedia-3.1.1.ebuild,

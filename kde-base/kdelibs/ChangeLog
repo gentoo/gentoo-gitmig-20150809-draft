@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.94 2003/09/30 22:08:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.95 2003/10/04 22:39:18 brad_mssw Exp $
+
+  04 Oct 2003; Brad House <brad_mssw@gentoo.org> kdelibs-3.1.4.ebuild:
+  add ~amd64 flag
 
   30 Sep 2003; Luca Barbato <lu_zero@gentoo.org> files/kdelibs-3.1.2-*:
   recovered the patches needed by kdelibs-3.1.2-r1
