@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.4 2004/04/29 19:57:31 agriffis Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.5 2004/05/11 12:47:14 vapier Exp $
 
 inherit games
 
-DESCRIPTION="Port from a old amiga game."
+DESCRIPTION="Port from an old amiga game"
 HOMEPAGE="http://www.methane.fsnet.co.uk/"
 SRC_URI="http://www.methane.fsnet.co.uk/${PN}.tgz"
 

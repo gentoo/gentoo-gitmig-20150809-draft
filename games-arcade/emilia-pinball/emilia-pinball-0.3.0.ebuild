@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.0.ebuild,v 1.7 2004/05/11 12:47:14 vapier Exp $
 
 inherit games
 
@@ -9,19 +9,19 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="SDL OpenGL pinball game"
 HOMEPAGE="http://pinball.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pinball/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha"
+IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/x11
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
-
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${MY_P}
 
