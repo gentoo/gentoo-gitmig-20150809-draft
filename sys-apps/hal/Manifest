@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d9bed60ec59e6c2c5aa8708afde490db ChangeLog 2874
+MD5 4aad3f8d293e5588d0710b7dceaca116 hal-0.4.1-r1.ebuild 2530
 MD5 bfbd716101b6fbb11494bb0d514e598f hal-0.4.2-r1.ebuild 2685
 MD5 e1cdd8db96c5129b4983eaf86e322b0f hal-0.4.4.ebuild 2564
-MD5 6e4743bdb465990bb5b63311bf4e46d9 hal-0.4.1-r1.ebuild 2529
-MD5 3e506a597274c818f662edbe0c7d2b59 hal-0.2.98-r1.ebuild 2062
-MD5 f8f275e08c7897fe0fac9dfa5c20256a ChangeLog 2786
 MD5 731695e9263a5a2e1eeba290b36078d5 metadata.xml 219
-MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
-MD5 715f2a2e9a6980bae0823241ea50787f files/hal-0.4.0-allow-floppy-drives.patch 738
-MD5 72d398ab014b2630043ef2a4d9990e2f files/digest-hal-0.2.98-r1 63
-MD5 f1cf07edc63d04f0ef33911de97ea2f2 files/digest-hal-0.4.1-r1 62
-MD5 a9afa7e41b21ea5f012765a8ced6c10d files/digest-hal-0.4.2-r1 62
-MD5 0693dbefb790150740986cce82039b82 files/hal-0.4.2-cdrom_media_check.patch 1194
-MD5 399570c945e0f4bffbeb645e057e027b files/hal-0.4.1-dm_devices_tab.patch 1028
-MD5 11d67cf37182e289664f50de3ee6172f files/digest-hal-0.4.4 62
-MD5 314ebeadb0a53e448e74ad6a3eead3f8 files/hal-0.4.4-check_ide_floppy_for_zip_fdi.patch 1920
+MD5 3e506a597274c818f662edbe0c7d2b59 hal-0.2.98-r1.ebuild 2062
 MD5 eeb1838cdb78726ab674194f0d268270 files/hal-0.4.2-fstab_sync_crash.patch 468
+MD5 a9afa7e41b21ea5f012765a8ced6c10d files/digest-hal-0.4.2-r1 62
+MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
+MD5 72d398ab014b2630043ef2a4d9990e2f files/digest-hal-0.2.98-r1 63
+MD5 314ebeadb0a53e448e74ad6a3eead3f8 files/hal-0.4.4-check_ide_floppy_for_zip_fdi.patch 1920
+MD5 11d67cf37182e289664f50de3ee6172f files/digest-hal-0.4.4 62
+MD5 0693dbefb790150740986cce82039b82 files/hal-0.4.2-cdrom_media_check.patch 1194
+MD5 f1cf07edc63d04f0ef33911de97ea2f2 files/digest-hal-0.4.1-r1 62
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
+MD5 399570c945e0f4bffbeb645e057e027b files/hal-0.4.1-dm_devices_tab.patch 1028
+MD5 715f2a2e9a6980bae0823241ea50787f files/hal-0.4.0-allow-floppy-drives.patch 738
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4GkcCHk4+ZoBpvsRAkGJAJ0W22e4EpSE4tEXiHGGKGkrN8fueQCdFH8w
+vCxq7+/zCaNlELkZtMV3Q5I=
+=zVQQ
+-----END PGP SIGNATURE-----
