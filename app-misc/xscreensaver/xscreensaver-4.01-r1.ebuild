@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Martin Schlemmer <azarah@gento.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01-r1.ebuild,v 1.1 2002/03/03 21:59:27 agenkin Exp $
-
-DESCRIPTION="a modular screensaver for X11"
-HOMEPAGE="http://www.jwz.org/xscreensaver/"
+# Maintainer: Martin Schlemmer <azarah@gentoo.org> 
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01-r1.ebuild,v 1.2 2002/03/04 18:06:48 azarah Exp $
 
 S="${WORKDIR}/${P}"
-SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
+DESCRIPTION="a modular screensaver for X11"
+SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz
+HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 DEPEND="virtual/x11 sys-devel/bc
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
@@ -77,7 +76,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	if [ "$KDEDIR" ]
 	then
 		dodir "$KDEDIR/bin"
@@ -87,13 +86,10 @@ src_install () {
 	# Fix double Control Center entry
 	rm -f "${D}/usr/share/control-center/capplets/screensaver.desktop"
 
-        insinto /etc/pam.d
-        doins "${FILESDIR}/pam.d/xscreensaver"
-	
-#	if [ "`use gnome`" ]
-#	then
-#		#dodir /usr/bin
-#		# not need i think, shout if it breaks control-center support
-#		#      mv ${D}/usr/bin/screensaver-properties-capplet ${D}/usr/bin
-#	fi
+	if [ "`use pam`" ]
+	then
+		insinto /etc/pam.d
+		doins "${FILESDIR}/pam.d/xscreensaver"
+	fi
 }
+
