@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.5 2003/09/06 20:28:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.6 2003/09/20 06:25:58 seemant Exp $
 
 inherit elisp gnuconfig
 
@@ -15,13 +15,18 @@ KEYWORDS="-x86 -ppc -sparc -alpha -hppa -mips -arm"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
 	sys-devel/flex
+	sys-devel/bison
 	emacs? ( virtual/emacs )"
 
 SITEFILE=50xcscope-gentoo.el
 
 src_compile() {
 	gnuconfig_update
+
+	sed -i -e "s:={:{:" src/egrep.y
+	
 	econf || die
 	make clean || die
 	emake || die
