@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.21 2004/03/02 23:44:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.22 2004/03/03 14:28:30 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="program for playing a wide variety of animation, audio and video fo
 HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
 SLOT="0"
 LICENSE="XAnim"
-KEYWORDS="x86 ppc sparc alpha -mips -hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha -mips hppa amd64 ia64"
 
 RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.3"
@@ -104,8 +104,10 @@ src_install () {
 
 	# I don't know why we're installing these modules when they're
 	# statically linked, but whatever...
-	insinto /usr/lib/xanim/mods
-	doins mods/${_XA_CVID}
-	doins mods/${_XA_CYUV}
-	doins mods/${_XA_IV32}
+	if [[ -n ${_XA_EXT} ]]; then
+		insinto /usr/lib/xanim/mods
+		doins mods/${_XA_CVID}
+		doins mods/${_XA_CYUV}
+		doins mods/${_XA_IV32}
+	fi
 }
