@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.6 2003/09/05 08:38:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.7 2003/12/14 22:59:41 spider Exp $
 
 IUSE="ssl mysql sasl ldap ipv6"
 
@@ -119,7 +119,7 @@ src_install () {
 
 	cd ${S}/bin
 	dosbin post* sendmail
-	chown root.postdrop ${D}/usr/sbin/{postdrop,postqueue}
+	chown root:postdrop ${D}/usr/sbin/{postdrop,postqueue}
 	chmod 2755 ${D}/usr/sbin/{postdrop,postqueue}
 
 	dosym /usr/sbin/sendmail /usr/bin/mailq

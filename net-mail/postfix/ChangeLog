@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.97 2003/11/11 03:54:55 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.98 2003/12/14 22:59:41 spider Exp $
+
+  14 Dec 2003; <spider@gentoo.org> postfix-1.1.11.20020917-r1.ebuild,
+  postfix-1.1.11.20020917.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
   10 Nov 2003; <max@gentoo.org> postfix-2.0.16-r1.ebuild:
   Put back keepdirs for the spool directories.  Allows clean unmerge.

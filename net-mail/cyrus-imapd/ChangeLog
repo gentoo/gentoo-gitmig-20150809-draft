@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.33 2003/10/04 09:32:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.34 2003/12/14 22:52:15 spider Exp $
+
+  14 Dec 2003; <spider@gentoo.org> cyrus-imapd-2.1.11-r1.ebuild,
+  cyrus-imapd-2.1.12.ebuild, cyrus-imapd-2.1.13.ebuild,
+  cyrus-imapd-2.1.14.ebuild, cyrus-imapd-2.1.15-r1.ebuild,
+  cyrus-imapd-2.1.15.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
 *cyrus-imapd-2.1.15-r1 (04 Oct 2003)
 

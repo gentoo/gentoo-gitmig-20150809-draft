@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.11 2003/12/09 05:14:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.12 2003/12/14 22:54:52 spider Exp $
 
 S="${WORKDIR}"
 DESCRIPTION="MTA layout package"
@@ -33,6 +33,6 @@ pkg_postinst() {
 	fi
 
 	# Always set these to close bug #8029.
-	chown root.mail ${ROOT}/var/spool/mail
+	chown root:mail ${ROOT}/var/spool/mail
 	chmod 1777 ${ROOT}/var/spool/mail
 }

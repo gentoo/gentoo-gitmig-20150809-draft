@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.8 2003/09/18 22:04:33 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.12.ebuild,v 1.9 2003/12/14 22:52:15 spider Exp $
 
 inherit eutils
 
@@ -107,51 +107,51 @@ src_install() {
 
 	dodir /var
 	mkdir -m 0750 ${D}var/imap
-	chown -R cyrus.mail ${D}var/imap
+	chown -R cyrus:mail ${D}var/imap
 	keepdir /var/imap
 	mkdir -m 0755 ${D}var/imap/db
-	chown -R cyrus.mail ${D}var/imap/db
+	chown -R cyrus:mail ${D}var/imap/db
 	keepdir /var/imap/db
 	mkdir -m 0755 ${D}var/imap/log
-	chown -R cyrus.mail ${D}var/imap/log
+	chown -R cyrus:mail ${D}var/imap/log
 	keepdir /var/imap/log
 	mkdir -m 0755 ${D}var/imap/msg
-	chown -R cyrus.mail ${D}var/imap/msg
+	chown -R cyrus:mail ${D}var/imap/msg
 	keepdir /var/imap/msg
 	mkdir -m 0755 ${D}var/imap/user
-	chown -R cyrus.mail ${D}var/imap/user
+	chown -R cyrus:mail ${D}var/imap/user
 	keepdir /var/imap/user
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/user/$i ; \
-		chown -R cyrus.mail ${D}var/imap/user/$i
+		chown -R cyrus:mail ${D}var/imap/user/$i
 		keepdir /var/imap/user/$i
 	done
 	mkdir -m 0755 ${D}var/imap/proc
-	chown -R cyrus.mail ${D}var/imap/proc
+	chown -R cyrus:mail ${D}var/imap/proc
 	keepdir /var/imap/proc
 	mkdir -m 0755 ${D}var/imap/quota
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/quota/$i ; \
-		chown -R cyrus.mail ${D}var/imap/quota/$i
+		chown -R cyrus:mail ${D}var/imap/quota/$i
 		keepdir /var/imap/quota/$i
 	done
 	mkdir -m 0755 ${D}var/imap/sieve
-	chown -R cyrus.mail ${D}var/imap/sieve
+	chown -R cyrus:mail ${D}var/imap/sieve
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/sieve/$i ; \
-		chown -R cyrus.mail ${D}var/imap/sieve/$i
+		chown -R cyrus:mail ${D}var/imap/sieve/$i
 		keepdir /var/imap/sieve/$i
 	done
 	mkdir -m 0755 ${D}var/imap/socket
-	chown -R cyrus.mail ${D}var/imap/socket
+	chown -R cyrus:mail ${D}var/imap/socket
 	keepdir /var/imap/socket
 	mkdir ${D}var/spool
 	mkdir -m 0750 ${D}var/spool/imap
-	chown -R cyrus.mail ${D}var/spool/imap
+	chown -R cyrus:mail ${D}var/spool/imap
 	keepdir /var/spool/imap
 	mkdir -m 0755 ${D}var/spool/imap/stage.
-	chown -R cyrus.mail ${D}var/spool/imap/stage.
+	chown -R cyrus:mail ${D}var/spool/imap/stage.
 	keepdir /var/spool/imap/stage.
 	# For hashimapspool
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/spool/imap/$i ; \
-		chown -R cyrus.mail ${D}var/spool/imap/$i
+		chown -R cyrus:mail ${D}var/spool/imap/$i
 		keepdir /var/spool/imap/$i
 	done
 
@@ -174,7 +174,7 @@ src_install() {
 		yes "" | ${FILESDIR}/gentestcrt.sh >/dev/null 2>&1
 		mkdir ${D}etc/cyrusimapd
 		cp server.crt server.key ${D}etc/cyrusimapd
-		chown cyrus.root ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
+		chown cyrus:root ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
 		chmod 0400 ${D}etc/cyrusimapd/server.crt ${D}etc/cyrusimapd/server.key
 	fi
 }
