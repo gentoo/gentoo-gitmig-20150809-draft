@@ -1,4 +1,17 @@
-MD5 6e39dfed570910661b71c268967fcf9c python-mhash-1.2.ebuild 665
-MD5 b6d2ce79042f5101c279b0285fda4859 ChangeLog 379
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b182f1ad9b2e72bcf2bd2f3e3e8f395a python-mhash-1.3.ebuild 906
+MD5 07665d7f6b31029861a70ee22d2a6892 python-mhash-1.2.ebuild 663
+MD5 8f40372169ed1c9c306524418e5e2673 ChangeLog 467
 MD5 44961c613f0cb57d9691674769131003 metadata.xml 257
 MD5 9417a3d58c7f0afd909ef0a77a022d31 files/digest-python-mhash-1.2 67
+MD5 99c7931120e2b7915e4dd6f3784673ed files/digest-python-mhash-1.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCFlktPpIsIjIzwiwRAhvqAJ9LmqyKF5o1JxroAONHRjfmrS2HJwCaA1Qx
+W+ZR6fEtp47gfO47aqvW62E=
+=PabG
+-----END PGP SIGNATURE-----
