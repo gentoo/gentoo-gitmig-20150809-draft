@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.18 2004/08/24 03:45:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.19 2004/09/08 15:15:09 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnuconfig
 
 DESCRIPTION="The GNU info program and utilities"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
@@ -32,6 +32,8 @@ src_unpack() {
 		-e 's:INFO_DEPS = texinfo:INFO_DEPS = texinfo.info:' \
 		-e 's:texinfo\::texinfo.info\::' \
 		Makefile.in
+
+	gnuconfig_update
 }
 
 src_compile() {
