@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mailcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.2 2003/02/12 03:54:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.3 2003/11/01 10:07:20 usata Exp $
+
+*mailcrypt-3.5.8 (01 Nov 2003)
+
+  01 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> mailcrypt-3.5.8.ebuild:
+  Version bumped
 
 *mailcrypt-3.5.7 (31 Oct 2002)
 
