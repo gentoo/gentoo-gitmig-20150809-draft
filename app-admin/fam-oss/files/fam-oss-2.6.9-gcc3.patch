@@ -1,0 +1,11 @@
+--- fam-2.6.7/fam/Scheduler.h.gcc31	2002-05-16 15:24:43.000000000 -0400
++++ fam-2.6.7/fam/Scheduler.h	2002-05-16 15:24:48.000000000 -0400
+@@ -104,7 +104,7 @@
+     //  for the corresponding I/O type.
+ 
+     struct IOTypeInfo {
+-	FDInfo::FDIOHandler FDInfo::*const iotype;
++	FDInfo::FDIOHandler FDInfo::* iotype;
+ 	unsigned int nbitsset;		// number of bits set in fds
+ 	fd_set fds;
+ 	IOTypeInfo(FDInfo::FDIOHandler FDInfo::* a_iotype) :
