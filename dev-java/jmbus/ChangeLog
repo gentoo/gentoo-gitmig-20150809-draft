@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmbus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/ChangeLog,v 1.2 2004/06/24 22:34:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/ChangeLog,v 1.3 2004/10/22 09:06:28 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jmbus-1.0.7.ebuild:
+  Keywords ~amd64.
 
 *jmbus-1.0.7 (23 May 2003)
 

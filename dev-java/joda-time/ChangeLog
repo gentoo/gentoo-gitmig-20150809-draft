@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.6 2004/10/16 17:25:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.7 2004/10/22 09:14:59 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> joda-time-0.95.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> joda-time-0.95.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
