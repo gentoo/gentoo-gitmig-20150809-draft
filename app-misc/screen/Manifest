@@ -4,7 +4,7 @@ MD5 3a2e0a5e279538d16c8f48953266c225 screen-3.9.11-r3.ebuild 1066
 MD5 72add3de3c7414da1d708259c4c4a8e8 screen-3.9.13-r4.ebuild 3264
 MD5 262091ae228765adea9908ce53b83906 ChangeLog 5077
 MD5 abd90bd425d14b3eeeee517d2db27a68 screen-3.9.13-r3.ebuild 3042
-MD5 fea0dd4c623213b5ba9e7c95c64b701b screen-3.9.15.ebuild 3272
+MD5 00ea731a959350c30e0b22d490fa089e screen-3.9.15.ebuild 3278
 MD5 839ac3a5c896513a3e3c6353a6242f53 files/screen.pam.system-auth 113
 MD5 b374ee01709225d49842f69e02880080 files/screenrc 10311
 MD5 f9629c1baeed4dc211032c0cb03ddb51 files/digest-screen-3.9.11-r3 65
