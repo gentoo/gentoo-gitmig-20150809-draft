@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f23c72eb22793007bd77a8532135bde8 pebrot-0.8.6.ebuild 516
-MD5 00db618ffe17647a20ff9d7c554e24b9 ChangeLog 551
+MD5 d27f797b66bd909f7d8b2199ec09ef2a pebrot-0.8.7.ebuild 515
 MD5 777dd6192cc0e6ca0bc051ab9f92a54a metadata.xml 221
+MD5 f152eab476f53a2e4f3d336a99852eea ChangeLog 681
 MD5 193eaffd3c44d0cd921e221adf7e8009 files/digest-pebrot-0.8.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBM3wjCHk4+ZoBpvsRAvkTAJ9CcGma+VNWEMeCDgcEF+amZuqfJQCeNmfy
-SQb+D+Gv6Oa5mTvcxRWiXaA=
-=rOXr
------END PGP SIGNATURE-----
+MD5 8738d4c03a17671b6d8c44158ac400dc files/digest-pebrot-0.8.7 63
