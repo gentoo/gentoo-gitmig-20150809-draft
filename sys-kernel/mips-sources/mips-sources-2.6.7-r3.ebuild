@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.5-r4.ebuild,v 1.2 2004/08/01 08:11:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r3.ebuild,v 1.1 2004/08/02 06:57:17 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040412"
-COBALTPATCHVER="1.4"
+CVSDATE="20040621"
+COBALTPATCHVER="1.5"
+SECPATCHVER="1.0"
 IP32DIFFDATE="20040402"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -21,11 +22,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 12 Apr 2004
-# 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
-# 4) Iluxa's minimal O2 patchset
-# 5) Patch to fix linking issue for initrd's
-# 6) Security Fixes
+# 2) linux-mips.org CVS snapshot diff from 21 Jun 2004
+# 3) Patch to fix an O2 compile-time error
+# 4) Iluxa's minimal O2 Patchset
+# 5) Security fixes
+# 6) patch to fix iptables build failures
 # 7) Patches for Cobalt support
 
 
@@ -33,7 +34,8 @@ DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2
 		mirror://gentoo/cobalt-patches-26xx-${COBALTPATCHVER}.tar.bz2
-		mirror://gentoo/ip32-iluxa-minpatchset-${IP32DIFFDATE}.diff.bz2"
+		mirror://gentoo/ip32-iluxa-minpatchset-${IP32DIFFDATE}.diff.bz2
+		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2"
 
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
@@ -65,29 +67,31 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
+	# Fix a compile glitch for SGI O2/IP32
+	echo -e ""
+	einfo ">>> Generic Patches"
+	epatch ${FILESDIR}/mipscvs-2.6.7-maceisa_rtc_irq-fix.patch
+
+	# In order to use arcboot on IP32, the kernel entry address needs to be
+	# set to 0x98000000, not 0xa8000000.
+	epatch ${FILESDIR}/mipscvs-2.6.x-ip32-kern_entry-arcboot.patch
+
+	# Misc Fixes
+	epatch ${FILESDIR}/misc-2.6-iptables_headers.patch
+
 	# iluxa's minpatchset for SGI O2
 	echo -e ""
 	einfo ">>> Patching kernel with iluxa's minimal IP32 patchset ..."
 	epatch ${WORKDIR}/ip32-iluxa-minpatchset-${IP32DIFFDATE}.diff
 
-	# Bug in 2.6.5 that triggers a kernel oops when swap is activated
-	epatch ${FILESDIR}/mipscvs-${OKV}-swapbug-fix.patch
-
-	# Bug in 2.6.5 in which an include was left out of unistd.h (breaks initrd)
-	epatch ${FILESDIR}/mipscvs-${OKV}-unistd-linkage.patch
 
 	# Security Fixes
 	echo -e ""
-	ebegin "Applying Security Fixes"
-		epatch ${FILESDIR}/CAN-2004-0075-2.6-vicam_usb.patch
-		epatch ${FILESDIR}/CAN-2004-0109-2.6-iso9660.patch
-		epatch ${FILESDIR}/CAN-2004-0228-cpufreq.patch
-		epatch ${FILESDIR}/CAN-2004-0229-fb_copy_cmap.patch
-		epatch ${FILESDIR}/CAN-2004-0427-2.6-do_fork.patch
-		epatch ${FILESDIR}/CAN-2004-0495_0496-2.6-sparse.patch.bz2
-		epatch ${FILESDIR}/CAN-2004-0497-attr_gid.patch
-		epatch ${FILESDIR}/CAN-2004-0596-2.6-eql.patch
-		epatch ${FILESDIR}/CAN-2004-0626-death_packet.patch
+	ebegin ">>> Applying Security Fixes"
+		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch
+		epatch ${WORKDIR}/security/CAN-2004-0596-2.6-eql.patch
+		epatch ${WORKDIR}/security/CAN-2004-0626-death_packet.patch
+		epatch ${WORKDIR}/security/security-2.6-attr_check.patch
 	eend
 
 

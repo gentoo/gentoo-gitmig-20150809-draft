@@ -1,0 +1,19 @@
+--- arch/mips/Makefile.orig	2004-08-02 01:14:02.612198384 -0400
++++ arch/mips/Makefile	2004-08-02 01:14:46.300556744 -0400
+@@ -688,10 +688,16 @@ vmlinux.64: vmlinux
+ 	$(OBJCOPY) -O $(64bit-bfd) --remove-section=.reginfo \
+ 		--change-addresses=0xc000000080000000 $< $@
+ else
++ifdef CONFIG_SGI_IP32
++vmlinux.64: vmlinux
++	$(OBJCOPY) -O $(64bit-bfd) --remove-section=.reginfo \
++		--change-addresses=0x9800000080000000 $< $@
++else
+ vmlinux.64: vmlinux
+ 	$(OBJCOPY) -O $(64bit-bfd) --remove-section=.reginfo \
+ 		--change-addresses=0xa800000080000000 $< $@
+ endif
++endif
+ 
+ makeboot =$(Q)$(MAKE) -f scripts/Makefile.build obj=arch/mips/boot $(1)
+ 
