@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.37 2003/03/13 10:06:01 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.38 2003/03/17 08:45:12 vladimir Exp $
+
+*imagemagick-5.5.5.3 (17 Mar 2003)
+
+  17 Mar 2003; Graham Forest <vladimir@gentoo.org> imagemagick-5.5.5.3.ebuild:
+  Version bump, moved PerlMagick to a seperate ebuild
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> imagemagick-5.5.3.2.ebuild
   Put back to ~ppc as some deps are not marked ppc stable either.
