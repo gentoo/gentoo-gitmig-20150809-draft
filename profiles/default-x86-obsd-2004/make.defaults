@@ -12,8 +12,8 @@ GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurs
 # pulled in during *emerge system*!
 
 #USE="x86 avi arts berkdb crypt cups gif gtk imlib jpeg kde gnome libg++
-	libwww mad motif mpeg ncurses nls oggvorbis opengl pdflib png python
-	qt quicktime readline slang spell ssl truetype X xmms xv zlib xml2"
+#	libwww mad motif mpeg ncurses nls oggvorbis opengl pdflib png python
+#	qt quicktime readline slang spell ssl truetype X xmms xv zlib xml2"
 
 USE="-*"
 
