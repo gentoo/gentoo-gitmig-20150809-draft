@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.13 2004/06/16 20:54:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.14 2004/06/19 13:19:29 malc Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -45,7 +45,7 @@ HOMEPAGE="http://sources.redhat.com/glibc/"
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
 #KEYWORDS="-* ~amd64 ppc64"
 # yanking ~amd64 due to repoman bugs.. plz add back later.
-KEYWORDS="-* ppc64 ~amd64"
+KEYWORDS="-* ppc64 amd64"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
