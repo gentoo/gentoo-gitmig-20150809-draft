@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ezmlm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.10 2003/07/19 15:38:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ChangeLog,v 1.11 2003/11/30 11:12:03 robbat2 Exp $
+
+*ezmlm-0.53-r1 (30 Nov 2003)
+
+  30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> ezmlm-0.53-r1.ebuild,
+  files/ezmlm-0.53-gcc33.patch:
+  fix bug 33745 and heads/tails stuff
 
   19 Jul 2003; Tavis Ormandy <taviso@gentoo.org> ezmlm-0.53.ebuild:
   marking ~alpha
