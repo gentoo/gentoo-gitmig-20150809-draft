@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/opmixer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.2 2002/10/04 19:23:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.3 2002/10/19 20:17:05 cselkirk Exp $
 
 *opmixer-0.75 (11 Jul 2002)
+
+  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> opmixer-0.75.ebuild :
+
+  Added ppc to KEYWORDS.
 
   04 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Added a small gcc3.2 fix for #8760
