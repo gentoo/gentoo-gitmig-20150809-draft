@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>base-system</herd>
+	<herd>base-system</herd>
+	<maintainer>
+		<email>kumba@gentoo.org</email>
+		<name>Joshua Kinard</name>
+	</maintainer>
+
+	<longdescription>
+		Updated config.sub and config.guess files to properly detect various system types
+	</longdescription>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.3 2003/09/17 22:04:41 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.4 2004/02/15 05:10:22 kumba Exp $
+
+*gnuconfig-20040214 (14 Feb 2004)
+
+  14 Feb 2004; Joshua Kinard <kumba@gentoo.org> gnuconfig-20040214.ebuild,
+  metadata.xml:
+  Updated config.sub/guess files taken from GNU CVS (Savannah). Older versions
+  off ftp.gnu.org still unavailable.  Also removed arm keywords.
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> gnuconfig-20030708.ebuild :
   ia64 keywords.
