@@ -2200,3 +2200,15 @@ diff -urp linux-2.6.10/include/asm-i386/unistd.h linux-2.6.10-gentoo/include/asm
  
  #ifdef __KERNEL__
  #define __ARCH_WANT_IPC_PARSE_VERSION
+diff -urp linux-2.6.10/include/linux/if_fddi.h linux-2.6.10-gentoo/include/linux/if_fddi.h
+--- linux-2.6.10/include/linux/if_fddi.h	2004-11-20 16:54:35.000000000 +0000
++++ linux-2.6.10-gentoo/include/linux/if_fddi.h	2005-02-12 19:19:51.244852928 +0000
+@@ -24,6 +24,8 @@
+ #ifndef _LINUX_IF_FDDI_H
+ #define _LINUX_IF_FDDI_H
+ 
++#include <linux/netdevice.h>
++
+ /*
+  *  Define max and min legal sizes.  The frame sizes do not include
+  *  4 byte FCS/CRC (frame check sequence).

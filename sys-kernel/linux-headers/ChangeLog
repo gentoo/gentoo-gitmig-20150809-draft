@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.98 2005/02/08 22:43:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.99 2005/02/12 19:34:58 plasmaroo Exp $
+
+  12 Feb 2005; <plasmaroo@gentoo.org>
+  files/linux-headers-2.6.10-appCompat.patch:
+  Fix net-tools compile.
 
 *linux-headers-2.6.10 (08 Feb 2005)
 
