@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.2.ebuild,v 1.1 2004/02/21 21:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.2.ebuild,v 1.2 2004/03/06 00:50:13 mr_bones_ Exp $
 
 inherit games
 
@@ -20,11 +20,11 @@ DEPEND="media-libs/libsdl
 
 src_compile() {
 	egamesconf `use_enable opengl` || die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
