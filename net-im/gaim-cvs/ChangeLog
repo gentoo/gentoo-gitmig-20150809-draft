@@ -1,8 +1,11 @@
 # ChangeLog for net-im/gaim-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/ChangeLog,v 1.13 2003/03/18 16:41:31 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/ChangeLog,v 1.14 2003/03/27 04:40:51 seemant Exp $
 
 *gaim-cvs-0.60-r3 (09 Feb 2003)
+
+  26 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gaim-cvs-0.60-r3.ebuild:
+  gettext is a required dep -- thanks Rach Holmes
 
   18 Mar 2003; Seth Chandler <sethbc@gentoo.org>; gaim-cvs-0.60-r3.ebuild:
   changed the gaim-cvs server
