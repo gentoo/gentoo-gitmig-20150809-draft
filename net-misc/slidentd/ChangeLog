@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slidentd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.11 2004/06/25 00:11:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.12 2004/08/31 08:38:47 dragonheart Exp $
+
+  31 Aug 2004; Daniel Black <dragonheart@gentoo.org> slidentd-1.0.0.ebuild:
+  removed RDEPEND=sys-apps/ucspi-tcp. Fixes bug #35511. Thanks Sascha
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> slidentd-1.0.0.ebuild:
   QA - IUSE S=

@@ -1,7 +1,17 @@
-MD5 71d3f154eb00a7ac616216020c8f6096 slidentd-1.0.0.ebuild 1091
-MD5 b015556560484669e574947dbca663f6 ChangeLog 1214
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc0d5e6f02fb695bdfa4e4807c2663a3 slidentd-0.0.15.ebuild 1137
+MD5 3cce45c8492cc887e65ca52938803770 slidentd-1.0.0.ebuild 1074
+MD5 67742f35cfe416ba7e5ea9207a13ab32 ChangeLog 1364
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 565c698b8dd1eaa9a064263690eb1f49 files/digest-slidentd-0.0.15 66
 MD5 7941403451e35e669a28d6472eb33db5 files/slidentd-run 234
 MD5 1b48eba45c46d9cb2f340b54c6ccb594 files/digest-slidentd-1.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBNDnSmdTrptrqvGERAhMlAJ9ZVyUiULf2bSWtvPggRVmFH0hmtgCbB+nP
+p3gKWasn/Ndb/3Waq2EOKcY=
+=y9Kn
+-----END PGP SIGNATURE-----
