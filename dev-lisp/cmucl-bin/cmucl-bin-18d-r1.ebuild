@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18d-r1.ebuild,v 1.5 2004/06/24 23:57:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18d-r1.ebuild,v 1.6 2004/07/14 16:20:58 agriffis Exp $
 
 DESCRIPTION="CMUCL Lisp. This conforms to the ANSI Common Lisp Standard"
 HOMEPAGE="http://www.cons.org/cmucl/"
@@ -10,8 +10,8 @@ RDEPEND="$DEPEND"
 SLOT="0"
 SRC_URI="ftp://ftp.cn.freebsd.org/pub/cmucl/release/18d/cmucl-18d-x86-linux.tar.bz2
 	ftp://ftp.cn.freebsd.org/pub/cmucl/release/18d/cmucl-18d-x86-linux.extra.tar.bz2"
-S=${WORKDIR}/${P}
 KEYWORDS="x86"
+IUSE=""
 
 src_unpack() {
 	mkdir ${P}
@@ -42,4 +42,3 @@ src_install () {
 
 	doman man/man1/*.1
 }
-
