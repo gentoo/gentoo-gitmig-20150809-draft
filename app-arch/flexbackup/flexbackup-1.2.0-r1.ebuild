@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0-r1.ebuild,v 1.6 2003/10/21 15:53:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.0-r1.ebuild,v 1.7 2003/11/14 11:39:04 seemant Exp $
 
 DESCRIPTION="Flexible backup script using perl."
 HOMEPAGE="http://flexbackup.sourceforge.net/"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 
 RDEPEND="dev-lang/perl
 	sys-apps/findutils
-	sys-apps/tar
+	app-arch/tar
 	app-arch/mt-st"
 
 src_compile() {

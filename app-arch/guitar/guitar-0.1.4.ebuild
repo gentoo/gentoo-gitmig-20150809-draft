@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.17 2003/09/20 20:33:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.18 2003/11/14 11:39:04 seemant Exp $
 
 MY_P=guiTAR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc -sparc"
 
 DEPEND="x11-libs/gtk+
-	sys-apps/tar
+	app-arch/tar
 	sys-apps/bzip2
 	x86? ( app-arch/rar )
 	app-arch/unrar
