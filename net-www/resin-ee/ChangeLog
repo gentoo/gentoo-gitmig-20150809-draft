@@ -1,6 +1,13 @@
 # ChangeLog for net-www/resin-ee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.5 2004/07/26 13:40:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.6 2004/07/29 22:45:02 axxo Exp $
+
+*resin-ee-2.1.14 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +files/2.1.14/21resin,
+  +files/2.1.14/resin-ee.diff, +files/2.1.14/resin.conf,
+  +files/2.1.14/resin.init, +resin-ee-2.1.14.ebuild:
+  version bump
 
   26 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   resin-ee-2.1.9.ebuild:

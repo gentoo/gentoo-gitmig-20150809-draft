@@ -1,8 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01e94e210fb4cc8e18ec74b78ac7435b resin-ee-2.1.14.ebuild 3164
 MD5 a9fa5ef8d5efb97f515148e30b9e988c resin-ee-2.1.9.ebuild 3162
-MD5 433049da28e678db34b5d70d0264356e ChangeLog 1261
+MD5 e059eceb5b8a8aba487c96c1e7b03df6 ChangeLog 1491
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 36fc2b396b7ee1ff19c9c65c296cf9e4 files/digest-resin-ee-2.1.9 67
+MD5 956a08a7d0b49fa1d2ce70e7329115e5 files/digest-resin-ee-2.1.14 68
 MD5 969f7943a7910e5664be964330842ad7 files/2.1.9/resin.conf 1248
 MD5 4a4c6718efe678b7d309ca40a3440708 files/2.1.9/resin.init 784
 MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.9/21resin 53
 MD5 cc895b3b901369aa2c6d80fb88369113 files/2.1.9/resin-ee.diff 504
+MD5 18cc6b4786d407e64f08d1470dd32fad files/2.1.14/resin.conf 1182
+MD5 007076531c860f649f2104ff51bbd398 files/2.1.14/resin.init 781
+MD5 a810be4b68e920ebc5d2cf8160a5642a files/2.1.14/21resin 53
+MD5 cc895b3b901369aa2c6d80fb88369113 files/2.1.14/resin-ee.diff 504
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCX5X/rLF9B432nYRAgRDAJ4oPw2iEWDr8LdBtqr4WVFT3VfEhgCfWY4A
+FtJAWdrULJpO+14OGq02akw=
+=rw5l
+-----END PGP SIGNATURE-----
