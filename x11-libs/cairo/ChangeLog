@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.27 2005/01/26 15:46:32 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.28 2005/01/26 22:02:55 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> cairo-0.3.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   26 Jan 2005; Tom Payne <twp@gentoo.org> cairo-0.3.0.ebuild:
   Updated glitz dependency. Bug # 79575.
