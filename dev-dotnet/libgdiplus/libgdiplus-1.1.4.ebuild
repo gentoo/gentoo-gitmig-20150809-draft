@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0-r1.ebuild,v 1.2 2005/01/01 17:48:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.4.ebuild,v 1.1 2005/02/21 18:19:33 latexer Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 
@@ -17,27 +17,27 @@ KEYWORDS="~x86 ~ppc"
 IUSE="tiff gif jpeg png"
 
 DEPEND="sys-devel/libtool
-		>=x11-libs/cairo-0.1.23
+		sys-devel/automake
+		sys-devel/autoconf
+		>=x11-libs/cairo-0.3.0
 		tiff? ( media-libs/tiff )
 		gif? ( media-libs/libungif )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
 
-RDEPEND=">=dev-dotnet/mono-1.0"
+RDEPEND=">=dev-dotnet/mono-${PV}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	# See bug #55916
-	einfo "Fixing a libtool problem"
-	rm ltmain.sh
-	aclocal
-	libtoolize --force --copy
+	libtoolize --copy --force || die "libtoolize failed"
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
+	automake || die "automake failed"
 }
 
 src_compile() {
-	local myconf=""
+	local myconf="--with-cairo=installed"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
 	use gif ||  myconf="--without-libungif ${myconf}"
 	use jpeg ||  myconf="--without-libjpeg ${myconf}"
