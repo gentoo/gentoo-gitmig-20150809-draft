@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.01.ebuild,v 1.4 2003/09/17 01:30:39 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.01.ebuild,v 1.5 2003/10/22 12:50:23 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -9,7 +9,7 @@ inherit java nsplugins
 At="j2sdk-1_4_2_01-linux-i586.bin"
 S="${WORKDIR}/j2sdk1.4.2_01"
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.2"
-HOMEPAGE="http://java.sun.com/j2se/1.4.2/index.html"
+HOMEPAGE="http://java.sun.com/products/archive/j2se/1.4.2_01/index.html"
 SRC_URI=${At}
 RESTRICT="fetch"
 SLOT="1.4"
