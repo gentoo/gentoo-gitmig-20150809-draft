@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r1.ebuild,v 1.6 2003/09/16 18:03:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r1.ebuild,v 1.7 2003/09/17 18:43:45 avenj Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -95,7 +95,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~x86 ~amd64 ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
