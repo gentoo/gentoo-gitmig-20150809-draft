@@ -1,0 +1,9 @@
+# ChangeLog for dev-php/php-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/ChangeLog,v 1.1 2003/04/25 18:02:10 coredumb Exp $
+
+*php-cvs-5.0 (25 Apr 2003)
+
+  25 Apr 2003; Tal Peer <coredumb@gentoo.org> php-cvs-5.0.ebuild:
+  Initial import. Currently hard-masked because it uses the new eclass.
+
