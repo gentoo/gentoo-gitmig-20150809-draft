@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.2-r2.ebuild,v 1.7 2005/01/14 21:16:20 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.1 2005/01/14 21:16:20 radek Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-0.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 sparc ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 IUSE="unicode"
 
 RDEPEND="=dev-lang/python-2.3*"
@@ -41,8 +41,6 @@ ZSERVDIR=${ZS_DIR}/${PN}-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 \
-		&& epatch ${FILESDIR}/2.7.2/gid.patch
 }
 
 src_compile() {
@@ -74,7 +72,7 @@ src_install() {
 	 	einfo "import sys"
 		einfo "sys.setdefaultencoding('utf8')"
 		cd ${S}/lib/python/StructuredText/
-		epatch ${FILESDIR}/i18n-1.0.0.patch
+		epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
 		cd ${S}
 	fi
 
@@ -83,7 +81,9 @@ src_install() {
 	dosym ../../share/doc/${PF} ${ZSERVDIR}/doc
 	# copy the init script skeleton to skel directory of our installation
 	skel=${D}${ZSERVDIR}/skel
-	cp ${FILESDIR}/${PV}/zope.initd ${skel}/zope.initd
+	# <radek@gentoo.org> from 2.7.4 release i think that we can use the same
+	# file for every one, and not separate it by PV
+	cp ${FILESDIR}/zope.initd ${skel}/zope.initd
 }
 
 pkg_postinst() {
