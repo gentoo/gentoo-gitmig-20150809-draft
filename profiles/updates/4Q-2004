@@ -65,3 +65,4 @@ move app-sci/aaindex sci-biology/aaindex
 move app-sci/cutg sci-biology/cutg
 move app-sci/prints sci-biology/prints
 move app-sci/prosite sci-biology/prosite
+move app-sci/rebase sci-biology/rebase
