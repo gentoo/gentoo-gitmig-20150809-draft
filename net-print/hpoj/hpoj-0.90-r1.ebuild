@@ -1,3 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.90-r1.ebuild,v 1.2 2003/07/20 09:41:50 lanius Exp $
+
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpoj/${P}.tgz"
@@ -86,8 +90,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "You might want to emerge  net-print/hpijs too for better quality"
-	einfo "or app-admin/mtools for photo-card support."
+	einfo "You might want to emerge app-admin/mtools for photo-card support."
     echo
 	einfo "Before starting hpoj you have to set it up with 'ptal-init setup'"
 	echo
