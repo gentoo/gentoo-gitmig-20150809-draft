@@ -16,7 +16,6 @@ DEPEND="virtual/glibc \
 	  sys-apps/xinetd \
 	  pam? ( >=sys-libs/pam-0.72 ) \
 	  ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r3.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a-r3.ebuild,v 1.4 2002/10/20 18:52:11 vapier Exp $
 
 IUSE="ssl mbox"
 
@@ -15,7 +15,6 @@ PROVIDE="virtual/imapd"
 DEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
 
 LICENSE="as-is"
 SLOT="0"

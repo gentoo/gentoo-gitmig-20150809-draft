@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.5 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.6 2002/10/20 18:52:11 vapier Exp $
 
 IUSE="ssl kerberos perl snmp afs"
 
@@ -28,7 +28,6 @@ DEPEND="virtual/glibc
 	>=dev-libs/cyrus-sasl-2.1.2
 	>=sys-apps/tcp-wrappers-7.6
 	net-mail/mailbase"
-RDEPEND="${DEPEND}"
 
 # recommended: flex, maybe: net-snmp, postfix, perl?, afs, inn, tcl (cyradm)
 	
