@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/Manifest,v 1.67 2003/12/25 22:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/Manifest,v 1.68 2003/12/25 22:07:53 robbat2 Exp $
 MD5 8c1fb36969625ec3bec698406c286d98 mysql-3.23.57-r1.ebuild 6608
 MD5 e82bb972547f92c975a46d0b8e72c6cb mysql-3.23.56.ebuild 6548
 MD5 8cdddec3334edf973b397e2adddb8f29 mysql-4.0.14-r2.ebuild 7582
-MD5 a4710c221b101850e2be0bf29971f30a mysql-4.0.17.ebuild 7524
+MD5 86a68d0234132bdc33aff53f033fa720 mysql-4.0.17.ebuild 7584
 MD5 cd5f438c5cdbe9ef4a3ccf8c03bd604b mysql-4.0.12.ebuild 6772
 MD5 52e5f496b158a63b07081700ca53700b mysql-4.0.15-r1.ebuild 7706
 MD5 5d0d945c87e812af1119e542b83017ee mysql-4.0.14.ebuild 6931
@@ -11,7 +11,7 @@ MD5 9f4a11fff4939c8f157c33bf2c4cd3e4 mysql-4.0.14-r1.ebuild 7429
 MD5 a4710c221b101850e2be0bf29971f30a mysql-4.0.16.ebuild 7524
 MD5 22bac70b6cf83e8dd51e6beee5fd72ac mysql-4.0.13-r4.ebuild 7304
 MD5 062a9a2ba54f4296a7f9a8c9cd28d12e mysql-3.23.57.ebuild 6551
-MD5 e826e35b4844da190fe3beb40badb498 ChangeLog 13460
+MD5 9b6cc176b4d960f13b65c786e41b2e92 ChangeLog 13532
 MD5 baa81fea99f1ba604ab6f9ca2bd831bf mysql-4.0.15.ebuild 7588
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
@@ -47,6 +47,7 @@ MD5 dcd899fe185459da4cb9e71c75c3bda3 files/digest-mysql-3.23.57 67
 MD5 977be6c68f6231cbcf1febd3305ade5d files/mysql-4.0.14-r1-tcpd-vars-fix.diff 465
 MD5 57531ccd19e17ccca95e0e3bf833cd67 files/mysql-3.23-db-3.2.3.diff 1105
 MD5 4c36e60ff941b21103df0acf1e6985b7 files/my.cnf-4.0.14-r1 2812
+MD5 9b5ad94f6e99e65bc3373c9dd15dff08 files/mysql-4.0.17-thrssl.patch 637
 MD5 0d15b78f60dc9d26e02923e591d39ea7 files/digest-mysql-4.0.13-r4 66
 MD5 33666c6c9542fe3ef02379877f0c6bac files/digest-mysql-4.0.14-r1 66
 MD5 33666c6c9542fe3ef02379877f0c6bac files/digest-mysql-4.0.14-r2 66
