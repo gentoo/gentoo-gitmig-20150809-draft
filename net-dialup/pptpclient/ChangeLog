@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.18 2004/11/08 06:41:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.19 2004/11/10 00:21:34 mrness Exp $
+
+  10 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  pptpclient-1.3.1.ebuild, pptpclient-1.4.0.ebuild,
+  pptpclient-1.5.0.ebuild, pptpclient-1.5.0-r1.ebuild:
+  Remove nomirror flag; no reason to be.
 
 *pptpclient-1.5.0-r1 (08 Nov 2004)
 
