@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/File-MimeInfo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.1 2004/02/15 02:54:32 esammer Exp $
+
+*File-MimeInfo-0.10 (14 Feb 2004)
+
+  14 Feb 2004; Eric Sammer <esammer@gentoo.org> File-MimeInfo-0.10.ebuild:
+  Initial import of File-MimeInfo submitted by Sven Wegener
+  <sven.wegener@stealer.net> as a dependency for the yet to be added
+  app-misc/filer. Thanks to Sven Wegener. Part of bug #41605.
+
