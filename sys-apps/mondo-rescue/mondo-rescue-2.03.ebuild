@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.03.ebuild,v 1.4 2004/10/19 13:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.03.ebuild,v 1.5 2005/01/22 10:33:42 wschlich Exp $
 
 inherit libtool
 
