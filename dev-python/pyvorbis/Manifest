@@ -1,3 +1,4 @@
-MD5 28ec3622a17a96ac8cc3ef8427ac3e45 files/digest-pyvorbis-1.1 63
-MD5 457bed4b2eb18a09e6fded70f40cfcc6 pyvorbis-1.1.ebuild 684
 MD5 7106450b2d61bb9f4fd59be9a5cdda43 ChangeLog 547
+MD5 457bed4b2eb18a09e6fded70f40cfcc6 pyvorbis-1.1.ebuild 684
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 28ec3622a17a96ac8cc3ef8427ac3e45 files/digest-pyvorbis-1.1 63

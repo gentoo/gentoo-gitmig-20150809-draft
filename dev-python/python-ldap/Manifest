@@ -3,6 +3,7 @@ MD5 52d9b77c8442a4239473404e0d240987 python-ldap-2.0.0_pre05-r1.ebuild 921
 MD5 d0016cfcd05cb6b30a0469eafa577057 python-ldap-2.0.0_pre05.ebuild 848
 MD5 937f37d1704f72e2b95a3194a9ac0afa python-ldap-2.0.0_pre06.ebuild 875
 MD5 3a9c755df7a12071884584b086e4f45a python-ldap-2.0.0_pre13.ebuild 1051
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 870f1b1ecea4f738da0ba65fb5a0a661 files/digest-python-ldap-2.0.0_pre05 73
 MD5 870f1b1ecea4f738da0ba65fb5a0a661 files/digest-python-ldap-2.0.0_pre05-r1 73
 MD5 aaef21adf6aa58c8fc0a0627f3ceae5f files/digest-python-ldap-2.0.0_pre06 73

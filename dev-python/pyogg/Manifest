@@ -1,3 +1,4 @@
-MD5 c47d79403646e6d551d5e3e774d75dbc files/digest-pyogg-1.1 60
-MD5 aa31ae762423740f327a58c1b98bcdc0 pyogg-1.1.ebuild 627
 MD5 50f4c5a001036106ea489f2bdf3f6c07 ChangeLog 581
+MD5 aa31ae762423740f327a58c1b98bcdc0 pyogg-1.1.ebuild 627
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c47d79403646e6d551d5e3e774d75dbc files/digest-pyogg-1.1 60

@@ -1,3 +1,4 @@
-MD5 c50d99d20d45209e9c845ee0e27375d0 files/digest-pygoogle-0.5.2 62
-MD5 9f9a787e5f6dcfc9f550d751aa006ad6 ChangeLog 474
 MD5 bb1abb0fac9b2c541ca17b292ce16238 pygoogle-0.5.2.ebuild 513
+MD5 9f9a787e5f6dcfc9f550d751aa006ad6 ChangeLog 474
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c50d99d20d45209e9c845ee0e27375d0 files/digest-pygoogle-0.5.2 62

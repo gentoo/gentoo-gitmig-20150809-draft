@@ -1,3 +1,4 @@
-MD5 8c7781ddbeaa772ab26f1578d5cf7022 files/digest-py-xmlrpc-0.8.8.2 68
-MD5 5b6dce5c77c40c3630b8905dc96c1cb2 py-xmlrpc-0.8.8.2.ebuild 735
 MD5 9c313571939726a743671af560b06087 ChangeLog 1058
+MD5 5b6dce5c77c40c3630b8905dc96c1cb2 py-xmlrpc-0.8.8.2.ebuild 735
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 8c7781ddbeaa772ab26f1578d5cf7022 files/digest-py-xmlrpc-0.8.8.2 68
