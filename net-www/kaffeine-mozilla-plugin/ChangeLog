@@ -1,0 +1,7 @@
+# ChangeLog for net-www/kaffeine-mozilla-plugin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/ChangeLog,v 1.1 2004/08/06 14:44:23 carlo Exp $
+
+  06 Aug 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml:
+  Initial ebuild. Thanks to Polynomial-C@gmx.de.
+
