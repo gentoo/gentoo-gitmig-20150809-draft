@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.7 2003/10/24 07:12:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.8 2003/11/01 17:35:59 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -63,8 +63,8 @@ python_version() {
 #         to the latest installed version
 #
 python_makesym() {
-	alternatives_auto_makesym "/usr/bin/python" "/usr/bin/python[0-9].[0-9]"
-	alternatives_auto_makesym "/usr/bin/python2" "/usr/bin/python[0-9].[0-9]"
+	alternatives_auto_makesym "/usr/bin/python" "python[0-9].[0-9]"
+	alternatives_auto_makesym "/usr/bin/python2" "python2.[0-9]"
 }
 
 #
