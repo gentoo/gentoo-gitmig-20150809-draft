@@ -1,6 +1,8 @@
 # ChangeLog for app-emulation/darcnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/ChangeLog,v 1.2 2002/06/05 23:22:51 peitolm Exp $
+* darcnes-0401-r1 (1 Feb 2002)
+  5 Jun 2002 Moved ebuild from dn9b-0401-r1.ebuild to darcnes-0401-r1.ebuild
 
 *dn9b-0401-r1 (1 Feb 2002)
 
