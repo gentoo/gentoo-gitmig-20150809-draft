@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.ebuild,v 1.1 2004/10/20 18:32:42 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.ebuild,v 1.2 2004/10/20 20:22:25 carpaski Exp $
 
 IUSE="build selinux"
 inherit flag-o-matic
@@ -63,13 +63,13 @@ src_compile() {
 			;;
 		"amd64")
 			check_multilib
-			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+			make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
 		*)
 			if useq macos || useq ppc-macos || useq x86-fbsd; then
 				ewarn "NOT BUILDING SANDBOX ON $ARCH"
 			else
-				make || die
+				make CFLAGS="-O1 -pipe" || die
 			fi
 			;;
 	esac
@@ -124,8 +124,14 @@ src_install() {
 	else
 		#install sandbox
 		cd ${S}/src/sandbox-1.1
-		make DESTDIR=${D} HAVE_64BIT_ARCH="${MULTILIB}" \
-			install || die "Failed to compile sandbox"
+		if [ "$ARCH" == "amd64" ]; then
+			check_multilib
+			make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" || \
+			die "Failed to compile sandbox"
+		else
+			make DESTDIR="${D}" install || \
+			die "Failed to compile sandbox"
+		fi
 	fi
 
 	#symlinks
