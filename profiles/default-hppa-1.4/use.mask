@@ -1,4 +1,8 @@
-# 13 Apr 2003 Guy Martin <gmsift@gentoo.org>
+# 20 Jun 2003 Guy Martin <gmsoft@gentoo.org>
+# Alsa is not yet tested
+alsa
+
+# 13 Apr 2003 Guy Martin <gmsoft@gentoo.org>
 # Selinux patches not tested on hppa and no kernel sources are emergeables with this patch.
 selinux
 
