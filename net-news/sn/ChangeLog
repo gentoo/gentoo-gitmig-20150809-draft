@@ -1,6 +1,13 @@
 # ChangeLog for net-news/sn
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/sn/ChangeLog,v 1.3 2003/03/06 03:13:08 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/sn/ChangeLog,v 1.4 2004/06/19 01:14:48 swegener Exp $
+
+*sn-0.3.7 (19 Jun 2004)
+
+  19 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  sn-0.3.6.ebuild, +sn-0.3.7.ebuild:
+  Version bump. Made CFLAGS aware. Fixed parallel build error. Updated
+  dependencies. Added IUSE="". Added metadata.xml.
 
 *sn-0.3.6 (05 Mar 2003)
 
