@@ -1,6 +1,11 @@
 # ChangeLog for net-news/nget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.5 2003/02/12 08:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/ChangeLog,v 1.6 2003/10/20 06:06:05 rphillips Exp $
+
+*nget-0.24.2 (19 Oct 2003)
+
+  19 Oct 2003; Ryan Phillips <rphillips@gentoo.org> :
+  Version bump
 
 *nget-0.22.1 (14 Dec 2002)
 
