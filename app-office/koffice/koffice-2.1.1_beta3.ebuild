@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-2.1.1_beta3.ebuild,v 1.1 2001/06/29 16:20:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-2.1.1_beta3.ebuild,v 1.2 2001/09/19 19:37:47 danarmak Exp $
 
 P=${PN}-1.1-beta3
 A=${P}.tar.bz2
@@ -29,7 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-    QTBASE=/usr/X11R6/lib/qt
     local myconf
     if [ "`use qtmt`" ]
     then
@@ -39,8 +38,8 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try ./configure --prefix=$KDEDIR --host=${CHOST} \
-		--with-qt-dir=$QTBASE $myconf
+    try ./configure  --host=${CHOST} \
+		 $myconf
    try make
 }
 

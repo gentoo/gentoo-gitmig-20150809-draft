@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-1.4.1.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-1.4.1.ebuild,v 1.5 2001/09/19 19:37:47 danarmak Exp $
 
 
 A=${P}.tar.bz2
@@ -25,16 +25,15 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=$KDEDIR --host=${CHOST} \
-		--with-qt-dir=$QTBASE $myconf
-    try make
+    ./configure --host=${CHOST} \
+		$myconf || die
+    make || die
 
 }
 
 src_install() {
 
-  try make install DESTDIR=${D}
+  make install DESTDIR=${D} || die
   dodoc AUTHORS BUGS COPYING ChangeLog FAQ README* TODO
   docinto html
   dodoc *.html

@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-    QTBASE=/usr/X11R6/lib/qt
+    . /etc/env.d/90{kde${PV},qt}
     local myconf
     if [ "`use qtmt`" ]
     then
@@ -32,12 +32,12 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try ./configure --prefix=${KDEDIR} --host=${CHOST} \
-                --with-qt-dir=$QTBASE --with-xinerama $myconf
-    try make
+    ./configure --host=${CHOST} \
+                --with-xinerama $myconf || die
+    make || die
 }
 
 src_install() {
-  try make install DESTDIR=${D}
+  make install DESTDIR=${D} || die
   dodoc AUTHORS COPYING README
 }

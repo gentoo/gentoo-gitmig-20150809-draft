@@ -26,7 +26,6 @@ src_unpack() {
 }
 
 src_compile() {
-    QTBASE=/usr/X11R6/lib/qt
     local myconf
     if [ "`use qtmt`" ]
     then
@@ -39,9 +38,9 @@ src_compile() {
 	if [ "`use objprelink`" ] ; then
 	  myconf="$myconf --enable-objprelink"
 	fi
-    try ./configure --prefix=${KDEDIR} --host=${CHOST} \
-                --with-qt-dir=$QTBASE --with-xinerama $myconf
-    try make
+    ./configure --host=${CHOST} \
+                --with-xinerama $myconf || die
+    make || die
 }
 
 src_install() {
