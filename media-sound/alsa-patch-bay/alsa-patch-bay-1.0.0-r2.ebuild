@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r2.ebuild,v 1.1 2004/11/22 22:30:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r2.ebuild,v 1.2 2005/01/09 12:19:26 swegener Exp $
 
 IUSE="alsa jack ladcca fltk gtk"
 

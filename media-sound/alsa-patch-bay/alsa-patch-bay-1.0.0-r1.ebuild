@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r1.ebuild,v 1.4 2004/09/03 09:16:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r1.ebuild,v 1.5 2005/01/09 12:19:26 swegener Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ IUSE="fltk"
 # To use fltk instead, do $ USE="fltk" emerge alsa-patch-bay
 # Note: fltk is not an official USE flag, and the dependency on
 # it may go away in the future.
-DEPEND="!fltk? =dev-cpp/gtkmm-2.2*
-	fltk? >=x11-libs/fltk-1.1.2
+DEPEND="!fltk? ( =dev-cpp/gtkmm-2.2* )
+	fltk? ( >=x11-libs/fltk-1.1.2 )
 	>=media-libs/alsa-lib-0.9.0_rc1"
 
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
