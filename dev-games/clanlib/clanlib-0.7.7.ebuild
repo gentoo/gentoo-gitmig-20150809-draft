@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.7 2004/04/29 19:57:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.8 2004/06/02 21:33:46 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 	#clanDisplay only controls X, SDL, OpenGL plugins
 	# so no need to pass --{en,dis}able-clanDisplay
 	# also same reason why we dont have to use clanGUI
-	[ `use doc` ] || sed -i '/^SUBDIRS/s:Documentation::' Makefile.in
+	use doc || sed -i '/^SUBDIRS/s:Documentation::' Makefile.in
 	econf \
 		--libdir=/usr/lib/${P} \
 		`use_enable x86 asm386` \
