@@ -1,4 +1,6 @@
 MD5 6e04da21369b0481ef9fb724405f0bf6 files/digest-attal-0.7.1 135
+MD5 b6f808586a9be2641f19b2cfe2cbf02b files/digest-attal-0.7.2 135
+MD5 55c6d99fea90b62ff1e73355e7038699 attal-0.7.2.ebuild 1616
 MD5 25717c1fa79efb4cf3963996a2f5bf94 attal-0.7.1.ebuild 1704
-MD5 da7704d0cb41707e343000e839fab060 ChangeLog 549
+MD5 eeedd77f9ac4a60a1bf6de8b354cab64 ChangeLog 671
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
