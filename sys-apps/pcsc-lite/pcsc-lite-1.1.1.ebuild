@@ -1,24 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.2 2003/02/13 16:10:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.3 2003/04/24 10:57:11 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://www.linuxnet.com/middle.html"
+SRC_URI="http://www.linuxnet.com/middleware/files/${P}.tar.gz"
+
 LICENSE="as-is"
 KEYWORDS="~x86"
 SLOT="0"
-SRC_URI="http://www.linuxnet.com/middleware/files/pcsc-lite-1.1.1.tar.gz"
+
 DEPEND="sys-devel/make
 	sys-devel/libtool"
-
-# moved from dev-util
-PROVIDES="dev-util/pcsc-lite-1.1.1"
 
 src_unpack () {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }   
 
 src_compile() {
@@ -28,14 +28,13 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	emake prefix=${D}/usr install || die
 
 	dodoc AUTHORS COPYING ChangeLog DRIVERS HELP INSTALL NEWS README SECURITY 
 	insinto /usr/share/doc/${P} 
 	doins doc/*.pdf doc/README.DAEMON
-	
+
 	insinto /usr/share/pcsc-lite/utils
 	insopts -m755
 	doins src/utils/bundleTool src/utils/formaticc src/utils/installifd
