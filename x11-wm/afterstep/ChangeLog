@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.4 2002/03/16 18:06:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.5 2002/04/12 19:36:27 seemant Exp $
+
+*afterstep-1.8.11-r2 (12 Apr 2002)
+
+  Recompile against libpng-1.2.1 and optional USE dependent tiff support
 
 *afterstep-1.8.11-r1 (16 Mar 2002)
 
