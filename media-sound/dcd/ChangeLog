@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dcd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.8 2004/09/30 00:51:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/ChangeLog,v 1.9 2004/10/19 03:24:35 tgall Exp $
+
+  18 Oct 2004; Tom Gall <tgall@gentoo.org> dcd-0.95.ebuild:
+  stable on ppc64, bug #64541
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> dcd-0.95.ebuild:
   Stable amd64, sparc.
