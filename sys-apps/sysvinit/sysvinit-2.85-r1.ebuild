@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.2 2004/07/15 02:38:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.3 2004/07/23 12:06:35 agriffis Exp $
 
 inherit eutils
 
@@ -68,4 +68,14 @@ src_install() {
 				${D}/etc/inittab || die
 			;;
 	esac
+}
+
+pkg_postinst() {
+	# Reload init to fix unmounting problems of / on next reboot.
+	# This is really needed, as without the new version of init cause init
+	# not to quit properly on reboot, and causes a fsck of / on next reboot.
+	if [[ ${ROOT} == / ]] && ! use build && ! use bootstrap; then
+		# Do not return an error if this fails
+		/sbin/init U &>/dev/null
+	fi
 }
