@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r3.ebuild,v 1.4 2003/03/17 03:32:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r3.ebuild,v 1.5 2003/03/21 23:00:08 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -31,6 +31,7 @@ newdepend "dev-lang/perl
 	>=media-libs/tiff-3.5.5
 	app-admin/fam-oss
 	app-text/ghostscript
+	media-libs/libart_lgpl
 	=kde-base/arts-1.1.0-r1" # this arts rev is part of the same fix
 				 # as kdelibs 3.1-r3
 
