@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.5 2004/07/15 02:32:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16.ebuild,v 1.6 2004/09/09 15:27:05 vapier Exp $
 
 inherit fixheadtails eutils
 
 DEBIAN_PV="1"
-DESCRIPTION="adjtimex - display or set the kernel time variables"
+DESCRIPTION="display or set the kernel time variables"
 HOMEPAGE="http://www.ibiblio.org/linsearch/lsms/adjtimex.html"
 SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}-${DEBIAN_PV}.diff.gz
-		 mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz"
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -27,13 +28,8 @@ src_unpack() {
 	sed -e '/CFLAGS = -Wall -t/,/endif/d' -i Makefile.in
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
-	dodoc README* COPYING COPYRIGHT ChangeLog
+	dodoc README* ChangeLog
 	doman adjtimex.8 debian/adjtimexconfig.8
 	dosbin adjtimex debian/adjtimexconfig
 	exeinto /etc/init.d
