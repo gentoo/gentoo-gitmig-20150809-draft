@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.7.ebuild,v 1.3 2003/02/13 14:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.7.ebuild,v 1.4 2003/06/18 20:58:04 msterret Exp $
 
 IUSE=""
 
@@ -16,12 +16,8 @@ DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*"
 
-src_compile() {
-	econf
-	emake || die "emake failed"
-}
-
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	dodoc quick_start.html README COPYING NEWS AUTHORS ChangeLog TODO
+	einstall || die
+	dodoc README COPYING NEWS AUTHORS ChangeLog TODO
+	dohtml quick_start.html
 }

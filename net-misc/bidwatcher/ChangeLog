@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bidwatcher
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/ChangeLog,v 1.9 2003/02/12 08:19:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/ChangeLog,v 1.10 2003/06/18 20:58:04 msterret Exp $
+
+  18 Jun 2003; <msterret@gentoo.org> bidwatcher-1.3.7.ebuild:
+  use dohtml for html file (bug 23048); simplify ebuild, use einstall
 
 *bidwatcher-1.3.7 (25 Dec 2002)
 
