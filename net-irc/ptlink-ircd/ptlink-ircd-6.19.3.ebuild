@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.1.ebuild,v 1.4 2005/01/30 12:49:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.3.ebuild,v 1.1 2005/01/30 12:49:18 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	find ${S} -type d -name CVS -exec rm -rf {} \; 2>/dev/null
+	find ${S} -type d -name CVS -print0 2>/dev/null | xargs -0r rm -rf
 }
 
 src_compile() {
