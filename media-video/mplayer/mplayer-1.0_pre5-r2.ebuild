@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.20 2004/10/23 23:10:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.21 2004/10/31 00:47:14 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -161,7 +161,7 @@ src_unpack() {
 
 src_compile() {
 
-	filter-flags -fPIE -fPIC
+	filter-flags -fPIE -fPIC -falign-functions
 
 	local myconf=
 	################
