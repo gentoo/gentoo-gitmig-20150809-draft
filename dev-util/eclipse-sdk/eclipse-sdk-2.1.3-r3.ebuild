@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.3 2004/05/18 20:49:28 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.4 2004/05/19 13:55:37 lu_zero Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclips
 IUSE="gtk motif gnome kde jikes"
 SLOT="2"
 LICENSE="CPL-1.0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=virtual/jdk-1.3
 	|| (
@@ -238,7 +238,7 @@ src_install() {
 	einfo "Installing features and plugins"
 	find features \
 		-name "*.bin.dist.zip" \
-		-exec unzip -q \{\} -d ${D}/${eclipse_dir} \;
+		-exec unzip -q -o \{\} -d ${D}/${eclipse_dir} \;
 
 	# Install launchers and native code
 	exeinto ${eclipse_dir}
