@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/snipsnap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/ChangeLog,v 1.1 2003/04/27 19:08:18 tberman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/ChangeLog,v 1.2 2004/02/16 07:02:44 zx Exp $
+
+*snipsnap-0.5.1a (16 Feb 2004)
+
+  16 Feb 2004; Chris Aniszczyk <zx@gentoo.org> snipsnap-0.5.1a.ebuild,
+  files/0.5.1a-run.sh, files/0.5.1a-snipsnap:
+  Version Bump. Bug #41037
 
 *snipsnap-0.4.2a (27 Apr 2003)
 
