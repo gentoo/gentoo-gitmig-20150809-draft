@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-1.0.9.ebuild,v 1.5 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-1.0.9.ebuild,v 1.6 2003/10/24 09:41:18 obz Exp $
 
 inherit gnome2
 
@@ -14,4 +14,4 @@ LICENSE="GPL-2"
 
 DEPEND=""
 
-DOC="AUTHORS COPYING README INSTALL NEWS ChangeLog"
+DOCS="AUTHORS COPYING README INSTALL NEWS ChangeLog"
