@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.31 2003/04/25 01:19:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.32 2003/05/25 03:38:34 method Exp $
+
+*util-linux-2.11z-r3 (24 May 2003)
+
+  24 May 2003; Joshua Brindle <method@gentoo.org> util-linux-2.11z-r3.ebuild:
+  added support for pam optionally
 
 *util-linux-2.11z-r2 (24 Apr 2003)
 
