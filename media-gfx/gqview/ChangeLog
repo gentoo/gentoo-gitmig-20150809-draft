@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.39 2004/09/19 06:01:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.40 2004/09/19 06:06:15 mr_bones_ Exp $
+
+  18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/rotate_crash_fix.patch, -gqview-1.3.9.ebuild, -gqview-1.4.0.ebuild:
+  clean older ebuilds
 
 *gqview-1.4.4 (18 Sep 2004)
 
