@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.16 2004/06/24 23:25:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.17 2004/07/29 03:37:59 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> libxml-1.8.17-r2.ebuild:
+  stable on ppc64, bug #55076
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> libxml-1.8.17-r2.ebuild:
   Stable on mips.
