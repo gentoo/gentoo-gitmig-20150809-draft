@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r1.ebuild,v 1.1 2004/03/02 15:11:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/python-xlib-0.12-r1.ebuild,v 1.2 2004/04/03 06:10:31 pylon Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://python-xlib.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ia64"
+KEYWORDS="x86 ppc ~sparc alpha ia64"
 IUSE=""
 
 src_install () {
