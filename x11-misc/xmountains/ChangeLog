@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xmountains
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.1 2004/04/12 20:07:30 pyrania Exp $
+
+*xmountains-2.6 (12 Apr 2004)
+
+  12 Apr 2004; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  xmountains-2.6.ebuild:
+  Initial import. Closing bug #42707.
+
