@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.1 2002/12/01 01:25:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.2 2002/12/04 20:41:59 foser Exp $
 
 IUSE="nls gnome"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://glame.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-util/guile-1.4-r3
 	dev-libs/libxml2
@@ -31,9 +31,16 @@ src_unpack() {
 		mv swapfilegui.c swapfilegui.c.bad
 		sed -e "s:#include <libintl.h>::" swapfilegui.c.bad > swapfilegui.c
 	fi
+	
+	# fix makefile problem
+	export WANT_AUTOCONF_2_5=1
+	cd ${S}/libltdl
+	autoconf -f
 }
 
 src_compile() {
+	local myconf=""
+
 	if [ "`use gnome`" ]
 	then
 		# Use a valid icon for the GNOME menu entry
@@ -43,16 +50,12 @@ src_compile() {
 		rm src/gui/glame.desktop.old
 	fi
 	
-	local myconf=""
-
 	use nls	&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
-	use gnome || myconf="$myconf --disable-gui"
+	use gnome && myconf="${myconf} --enable-gui" \
+		|| myconf="${myconf} --disable-gui"
 
-	# needed to not break configure
-	unset CFLAGS	
 	econf --with-included-gettext ${myconf} || die "Configuration failed"
-	
 	emake || die "Compilation failed"
 }
 

@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/glame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.6 2002/12/01 01:25:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.7 2002/12/04 20:41:59 foser Exp $
 
 *glame-0.6.4 (30 Nov 2002)
+
+  04 Dec 2002; foser <foser@gentoo.org> glame-0.6.4.ebuild :
+  Fix make issues in a cleaner way
 
   30 Nov 2002; foser <foser@gentoo.org> glame-0.6.4.ebuild :
   New minor version
