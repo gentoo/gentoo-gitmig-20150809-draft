@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.6.0c-r1.ebuild,v 1.3 2003/10/09 02:33:17 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-0.6.0c-r1.ebuild,v 1.4 2004/01/25 23:47:17 vapier Exp $
 
 inherit eutils
 
@@ -13,6 +13,14 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=net-libs/libnet-1.1.0-r3"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	has_version '>=net-libs/libpcap-0.8.1' \
+		&& sed -i 's!^#include <net/bpf.h>$!#include <pcap-bpf.h>!' \
+		include/packit.h
+}
 
 src_compile() {
 	econf || die "configure failed"
