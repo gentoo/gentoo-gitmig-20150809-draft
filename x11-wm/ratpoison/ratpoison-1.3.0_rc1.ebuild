@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.3 2004/03/15 02:02:44 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_rc1.ebuild,v 1.4 2004/03/15 02:12:41 bcowan Exp $
 
 inherit elisp-common
 
@@ -8,8 +8,6 @@ DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled af
 HOMEPAGE="http://ratpoison.sourceforge.net/"
 LICENSE="GPL-2"
 
-#PV=`echo ${PV} | sed 's/_/-/'`
-#P="${PN}-${PV}"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 

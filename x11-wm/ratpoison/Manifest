@@ -3,11 +3,11 @@ MD5 0dc401dca3401344d482d660aedf9b3b metadata.xml 829
 MD5 f96ef622e678525220c11325b61cfbd0 ratpoison-1.2.2-r1.ebuild 996
 MD5 65dfeece429e075523a2c1ff839566ee ratpoison-1.1.1.ebuild 879
 MD5 ed0f26e7e30336b6db98115baace2221 ratpoison-1.2.1.ebuild 879
-MD5 ba99af34f560a77af56054f662c64ef4 ratpoison-1.3.0_beta3-r1.ebuild 1059
+MD5 c5e22220727b4926e1867aed4888247b ratpoison-1.3.0_beta3-r1.ebuild 1037
 MD5 bacff13c96e8a7d4b60a0ecc0561904c ratpoison-1.2.2.ebuild 879
-MD5 b1344ede868162f3058c6a41cfbff0c3 ratpoison-1.3.0_beta3-r2.ebuild 1519
-MD5 19711b7c40e41d639acb3655426ee612 ratpoison-1.3.0_beta3.ebuild 871
-MD5 606c6e42bad6fecf2466cba233613373 ratpoison-1.3.0_rc1.ebuild 1542
+MD5 c135c1d01066431b916b8e21eb78f7b4 ratpoison-1.3.0_beta3-r2.ebuild 1498
+MD5 873d9330a5c24176aca48d9161d2431f ratpoison-1.3.0_beta3.ebuild 853
+MD5 8a08c7a2605ce61daf5d5b84c6f8af14 ratpoison-1.3.0_rc1.ebuild 1493
 MD5 7c03ae06718549d84c38d181a7192156 files/digest-ratpoison-1.2.2-r1 67
 MD5 ab1a7f36971489b5cffb75d84a2b2d0a files/50ratpoison-gentoo.el 82
 MD5 824194e6a098216cc47885fbcba7e0c4 files/digest-ratpoison-1.1.1 67

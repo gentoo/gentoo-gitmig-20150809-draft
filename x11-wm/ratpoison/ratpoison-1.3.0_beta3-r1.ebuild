@@ -1,20 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_beta3-r1.ebuild,v 1.2 2003/11/08 17:06:51 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0_beta3-r1.ebuild,v 1.3 2004/03/15 02:12:41 bcowan Exp $
 
 DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen"
 HOMEPAGE="http://ratpoison.sourceforge.net/"
 LICENSE="GPL-2"
 
-PV=`echo ${PV} | sed 's/_/-/'`
-P="${PN}-${PV}"
-
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+MY_P="${PN}-${PV/_/-}"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	if [ "${ARCH}" = "amd64" ]
