@@ -1,0 +1,14 @@
+--- mozilla/content/xul/content/src/nsXULElement.cpp.orig	2002-08-24 02:08:08.000000000 +0200
++++ mozilla/content/xul/content/src/nsXULElement.cpp	2002-08-27 16:27:35.000000000 +0200
+@@ -993,6 +993,11 @@
+     if (NS_FAILED(rv))
+         return rv;
+ 
++    // We can't insert an ancestor or ourself.
++    if (IsAncestor(aNewChild, this)) {
++        return NS_ERROR_DOM_HIERARCHY_REQUEST_ERR;
++    }
++
+     nsCOMPtr<nsIContent> newcontent = do_QueryInterface(aNewChild);
+     NS_ASSERTION(newcontent != nsnull, "not an nsIContent");
+     if (! newcontent)

@@ -1,0 +1,11 @@
+--- mozilla/layout/base/src/nsPresContext.cpp.orig	2002-06-25 23:16:00.000000000 +0200
++++ mozilla/layout/base/src/nsPresContext.cpp	2002-08-28 10:41:22.000000000 +0200
+@@ -161,6 +161,8 @@
+   mStopChrome = PR_TRUE;
+ 
+   mShell = nsnull;
++  mLinkHandler = nsnull;
++  mContainer = nsnull;
+ 
+   mDefaultColor = NS_RGB(0x00, 0x00, 0x00);
+   mDefaultBackgroundColor = NS_RGB(0xFF, 0xFF, 0xFF);

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.7 2002/10/12 19:50:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.8 2002/10/13 13:00:34 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -90,6 +90,14 @@ src_unpack() {
 
 	# Apply the bytecode patch for freetype2
 	patch -p1 < ${FILESDIR}/mozilla-ft-bytecode.patch || die
+
+	# Some patches from Mandrake to fix various crashes.  This
+	# seems to fix the "crash on submit bug".
+	patch -p1 < ${FILESDIR}/${P}-nsrange.patch || die
+	patch -p1 < ${FILESDIR}/${P}-bidiselection.patch || die
+	patch -p1 < ${FILESDIR}/${P}-referrer.patch || die
+	patch -p1 < ${FILESDIR}/${P}-prefcrash.patch || die
+	patch -p1 < ${FILESDIR}/${P}-xuldom.patch || die
 
 	# Unpack the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \

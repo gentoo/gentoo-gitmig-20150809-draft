@@ -1,0 +1,11 @@
+--- mozilla/content/base/src/nsSelection.cpp.orig	2002-07-02 23:53:18.000000000 +0200
++++ mozilla/content/base/src/nsSelection.cpp	2002-08-30 10:51:00.000000000 +0200
+@@ -2696,7 +2696,7 @@
+       pos.mContentOffset = contentOffsetEnd;
+       result = VisualSelectFrames(aPresContext, newFrame, pos);
+       if (NS_FAILED(result))
+-        result = HandleClick(newContent, startPos, contentOffsetEnd, PR_FALSE,
++        result = HandleClick(newContent, startPos, contentOffsetEnd, PR_TRUE,
+ 	                     PR_FALSE, beginOfContent);
+       mHint = saveHint;
+     }
