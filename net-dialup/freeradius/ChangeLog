@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.4 2003/05/23 06:04:59 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.5 2003/08/20 17:42:27 rphillips Exp $
+
+*freeradius-0.9.0 (20 Aug 2003)
+  20 Aug 2003; Ryan Phillips <rphillips@gentoo.org> freeradius-0.9.0.ebuild :
+  Added Oliver Graf's version bump, and tweaked init.d and conf.d scripts
 
 *freeradius-0.8.1 (22 May 2003)
   22 May 2003; Chuck Brewer <killian@gentoo.org>:

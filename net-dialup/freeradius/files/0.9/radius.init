@@ -1,0 +1,41 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	use dns
+}
+
+checkconfig() {
+	if [ ! -f /etc/raddb/radiusd.conf ] ; then
+		eerror "No /etc/raddb/radiusd.conf file exists!"
+		return 1
+	fi
+
+	if [ "`/usr/sbin/check-radiusd-config >/dev/null 2>&1; echo $?`" != "0" ] ; then
+		eerror "Config not ok! (try /usr/sbin/check-radiusd-config )"
+		return 1
+	fi
+
+	if [ -z "`grep radiusd /etc/passwd`" ]; then
+		eerror "radiusd user missing!"
+		return 1
+	fi
+
+	return 0
+}
+
+start() {
+	# Comment out the following line to get faster startups
+	checkconfig || return 1
+
+	ebegin "Starting radiusd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/radiusd -- ${RADIUSD_OPTS} >/dev/null
+	eend $?
+}
+
+stop () {
+	ebegin "Stopping radiusd"
+	start-stop-daemon --stop --quiet \
+		--pidfile=/var/run/radiusd/radiusd.pid --retry 20
+	eend $?
+}
