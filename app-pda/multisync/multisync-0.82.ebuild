@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.82.ebuild,v 1.4 2004/07/24 20:40:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.82.ebuild,v 1.5 2004/08/21 15:34:28 foser Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=gnome-base/libbonobo-2.2
 	>=dev-libs/glib-2
 	>=gnome-base/gconf-2
 	>=gnome-base/gnome-vfs-2.2
-	>=gnome-base/ORBit2-2.8.2
+	>=gnome-base/orbit-2.8.2
 	>=dev-libs/openssl-0.9.6j
 	evo?  ( =mail-client/evolution-1.4* )
 	irmc? ( >=sys-apps/irda-utils-0.9.15
