@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.9 2003/12/01 16:38:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.10 2003/12/18 22:44:37 mholzer Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -11,7 +11,7 @@ DESCRIPTION="X MultiMedia System"
 HOMEPAGE="http://www.xmms.org/"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patches-${PATCHVER}.tar.bz2
-	mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
+	( mmx?||3dnow? ) ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
