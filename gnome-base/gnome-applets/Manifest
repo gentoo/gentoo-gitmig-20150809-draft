@@ -1,4 +1,7 @@
-MD5 24b999bb64ff294fcf5849f1d0dd4d45 ChangeLog 12945
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4412dce064a008d8840f1e71f5bf115d ChangeLog 13079
 MD5 8ed0b4c22fbbda480c9061871bcb75c4 gnome-applets-1.4.0.5.ebuild 1026
 MD5 709885847aa42d5ae2b0ec6339a7449e gnome-applets-2.4.2.ebuild 1366
 MD5 069bd27e839883d856332156bd272c9c gnome-applets-2.6.2.ebuild 1512
@@ -6,7 +9,7 @@ MD5 6c7847f2ed764303e30a426ec2db9e89 gnome-applets-2.8.0.ebuild 1508
 MD5 9b1bc5ff9d6369a90c33c138d44f4774 gnome-applets-2.8.1.1.ebuild 1514
 MD5 5a7c39aebff782b58157d512d4329345 gnome-applets-2.8.2.ebuild 1512
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 75f455111bfa19c894e71f5c84f1c713 gnome-applets-2.10.0.ebuild 1529
+MD5 b8310df94bde64a9820c268c176f2ee0 gnome-applets-2.10.0.ebuild 1596
 MD5 13d00fdb8a7ed770c2278e3fde342cd8 files/battstat-acpi-events-2.3.90.diff 18154
 MD5 e8861003d9c73bcf26b9df775ec65fbe files/digest-gnome-applets-1.4.0.5 75
 MD5 de598f4caa39888e1ac75adb7fea28be files/digest-gnome-applets-2.4.2 73
@@ -15,3 +18,10 @@ MD5 0d439ec9ec7142ba8d655023e51280cc files/digest-gnome-applets-2.8.0 73
 MD5 c1487665ce1566df5b58ca7a838cb850 files/digest-gnome-applets-2.8.1.1 75
 MD5 01f2b3a61ec7eb2bedd12fa9e7347c68 files/digest-gnome-applets-2.8.2 73
 MD5 90c7825724b0c78966d8bbf5f401e9b8 files/digest-gnome-applets-2.10.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLpdtXjcVihsel0ERAsjnAJsFGNnFopJm+4O8hjfUaZ5tO4n2lwCdEbzl
+ufMqL1nJmv4gwfxffBMSmy4=
+=/lYE
+-----END PGP SIGNATURE-----
