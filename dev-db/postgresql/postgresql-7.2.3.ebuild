@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3.ebuild,v 1.6 2003/03/01 04:46:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3.ebuild,v 1.7 2003/03/05 20:20:50 sethbc Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
@@ -141,7 +141,7 @@ pkg_postinst() {
 	einfo ">>> to setup the initial database environment."
 }
 
-config() {
+pkg_config() {
 	einfo ">>> Creating data directory ..."
 	mkdir -p /var/lib/postgresql/data
 	chown -Rf postgres.postgres /var/lib/postgresql
