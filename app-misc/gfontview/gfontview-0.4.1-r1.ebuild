@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.4.1-r1.ebuild,v 1.5 2000/11/03 17:47:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.4.1-r1.ebuild,v 1.6 2001/02/01 19:30:33 achim Exp $
 
 P=gfontview-0.4.1
 A=${P}.tar.gz
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	>=dev-libs/glib-1.2.8
 	>=x11-libs/gtk+-1.2.8
 	>=x11-base/xfree-4.0.1
-	|| ( >=net-print/LPRng-3.6.24 >=net-print/cups-1.1.3 )"
+	virtual/lpr"
 
 src_unpack() {
   unpack ${A}

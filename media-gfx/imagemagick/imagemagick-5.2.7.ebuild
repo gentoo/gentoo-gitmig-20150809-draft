@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.2.7.ebuild,v 1.1 2001/01/22 04:58:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.2.7.ebuild,v 1.2 2001/02/01 19:30:33 achim Exp $
 
 P=ImageMagick-${PV}
 A=${P}.tar.gz
@@ -22,8 +22,8 @@ DEPEND=">=app-text/dgs-0.5.9.1
 	media-gfx/gimp
 	media-video/mpeg2vidcodec
 	net-misc/wget
-	|| ( net-print/LPRng net-print/cups )
-	|| ( net-www/navigator net-www/netscape )"
+	virtual/lpr
+        virtual/x11-web-browser"
 
 RDEPEND=">app-text/dgs-0.5.9.1
 	>=media-libs/jpeg-6b

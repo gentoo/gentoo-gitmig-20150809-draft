@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/ggv/ggv-0.95-r1.ebuild,v 1.1 2000/11/25 13:01:56 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/ggv/ggv-0.95-r1.ebuild,v 1.2 2001/02/01 19:30:33 achim Exp $
 
 P=ggv-0.95
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=app-text/ghostscript-6.23
 	>=gnome-base/gnome-libs-1.2.4
-	|| ( >=net-print/LPRng-3.6.24 >=net-print/cups-1.1.3 )"
+	virtual/lpr"
 
 src_compile() {                           
   cd ${S}

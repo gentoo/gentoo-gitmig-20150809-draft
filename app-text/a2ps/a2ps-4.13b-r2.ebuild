@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r2.ebuild,v 1.1 2001/01/15 23:00:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r2.ebuild,v 1.2 2001/02/01 19:30:33 achim Exp $
 
 P=a2ps-4.13b
 A=${P}.tar.gz
@@ -14,7 +14,7 @@ DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3
 	>=app-text/ghostscript-6.23
 	>=app-text/tetex-1.0.7
-	|| ( >=net-print/LPRng-3.6.24 >=net-print/cups-1.1.3 )"
+	virtual/lpr"
 
 src_unpack() {
   unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.5 2001/01/31 20:49:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.6 2001/02/01 19:30:33 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -33,7 +33,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 DEPEND="virtual/glibc
         >=sys-devel/gettext-0.10.35-r1
-        || ( sys-devel/flex sys-build/flex )"
+        virtual/flex"
 
 RDEPEND="virtual/glibc
 	 sys-apps/bash"

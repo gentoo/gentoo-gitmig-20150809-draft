@@ -1,13 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.2 2000/12/11 15:43:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.3 2001/02/01 19:30:33 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended implementation of the Berkley LPR print spooler"
 SRC_URI="ftp://ftp.astart.com/pub/LPRng/LPRng/${A}"
 HOMEPAGE="http://www.astart.com/LPRng/LPRng.html"
+
+PROVIDE="virtual/lpr"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
