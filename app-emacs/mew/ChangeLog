@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.28 2004/10/19 14:34:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.29 2004/11/30 09:57:01 usata Exp $
+
+  30 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> mew-4.1.ebuild:
+  Don't install /etc/skel/.mew.el and /etc/skel/.emacs.mew; bug #72482.
+  Stable on x86 and alpha.
 
 *mew-4.1 (19 Oct 2004)
 
