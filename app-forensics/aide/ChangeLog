@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/aide
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.3 2004/09/17 15:06:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.4 2004/09/18 14:22:11 ka0ttic Exp $
+
+*aide-0.10_p20040917 (18 Sep 2004)
+
+  18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/aide-0.10_p20040917-fix-psql.diff, +aide-0.10_p20040917.ebuild:
+  Version bump; fixes bugs 23764, 37007, and 62194. Thanks to Joshua
+  Schmidlkofer for the postgresql patch.
 
   17 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> aide-0.10.ebuild,
   aide-0.9.ebuild:
