@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>
 # Maintainer: Desktop Team <desktop@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.3 2002/04/16 01:00:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spruce/spruce-0.7.6-r2.ebuild,v 1.4 2002/05/23 06:50:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk email client"
 SRC_URI="ftp://spruce.sourceforge.net/pub/spruce/devel/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	gnome-base/libglade
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	crypt? ( app-crypt/gnupg )

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke (blocke@shivan.org)
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.2.4-r1.ebuild,v 1.1 2002/04/24 14:54:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.2.4-r1.ebuild,v 1.2 2002/05/23 06:50:16 seemant Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.theochem.kth.se/~pawsa/balsa/${A}"
 HOMEPAGE="http://www.balsa.net"
 
 DEPEND="=dev-libs/glib-1.2*
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	>=gnome-base/gnome-core-1.4.0.4-r1
 	>=gnome-base/gnome-print-0.30

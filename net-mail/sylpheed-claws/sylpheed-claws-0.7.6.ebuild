@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.6.ebuild,v 1.1 2002/05/19 09:58:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.6.ebuild,v 1.2 2002/05/23 06:50:17 seemant Exp $
 
 
 MY_P="sylpheed-${PV}claws"
@@ -11,7 +11,7 @@ DESCRIPTION="Bleeding edge version of Sylpheed"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 
-DEPEND=">=x11-libs/gtk+-1.2.6
+DEPEND="=x11-libs/gtk+-1.2*
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	crypt? ( >=app-crypt/gpgme-0.2.3 )
