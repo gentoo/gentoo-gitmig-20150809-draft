@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/ksensors
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kshutdown/ChangeLog,v 1.1 2004/08/19 13:17:24 voxus Exp $
+
+*kshutdown-0.2.0 (19 Aug 2004)
+
+  19 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +kshutdown-0.2.1.ebuild:
+  Initial revision, closing bug #36487.
+  Thanks to Elias Probst <elias.probst@gmx.de>.
