@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.26-r1.ebuild,v 1.8 2003/05/21 18:28:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.31.ebuild,v 1.1 2003/05/21 18:28:51 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
@@ -9,7 +9,7 @@ HOMEPAGE="http://packages.debian.org/unstable/utils/ltrace.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -sparc -mips ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc"
 
