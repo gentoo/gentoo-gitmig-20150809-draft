@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.2.ebuild,v 1.1 2003/12/09 08:13:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.2.ebuild,v 1.2 2004/01/02 19:08:43 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
@@ -23,4 +23,11 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc COPYING ChangeLog first-isofs/README.SILO_ISOFS docs/README*
+}
+
+pkg_postinst() {
+	ewarn "NOTE: If this is an upgrade to an existing SILO install,"
+	ewarn "      you will need to re-run silo as the /boot/second.b"
+	ewarn "      file has changed, else the system will fail to load"
+	ewarn "      SILO at the next boot."
 }

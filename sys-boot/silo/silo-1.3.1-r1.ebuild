@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.1-r1.ebuild,v 1.1 2003/12/29 04:22:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.1-r1.ebuild,v 1.2 2004/01/02 19:08:43 weeve Exp $
 
 inherit mount-boot
 
@@ -29,4 +29,11 @@ src_install() {
 	# Fix maketilo manpage
 	rm ${D}/usr/share/man/man1/maketilo.1
 	dosym /usr/share/man/man1/tilo.1 /usr/share/man/man1/maketilo.1
+}
+
+pkg_postinst() {
+	ewarn "NOTE: If this is an upgrade to an existing SILO install,"
+	ewarn "      you will need to re-run silo as the /boot/second.b"
+	ewarn "      file has changed, else the system will fail to load"
+	ewarn "      SILO at the next boot."
 }
