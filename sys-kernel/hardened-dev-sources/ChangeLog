@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.32 2004/08/07 21:14:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.33 2004/08/08 18:24:25 tseng Exp $
+
+*hardened-dev-sources-2.6.7-r6 (08 Aug 2004)
+
+  08 Aug 2004; Brandon Hale <tseng@gentoo.org>
+  +hardened-dev-sources-2.6.7-r6.ebuild:
+  -m New hardened-patches, updates to newly released grsecurity patch. This
+  should give a a good solid base to go stable, barring more nasty kernel vulns.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org>
   hardened-dev-sources-2.6.7-r5.ebuild:
