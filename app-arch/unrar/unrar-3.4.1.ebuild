@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.4.1.ebuild,v 1.8 2004/08/19 14:28:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.4.1.ebuild,v 1.9 2004/09/16 01:22:51 pvdabeel Exp $
 
 MY_PN=${PN}src
 DESCRIPTION="Uncompress rar files"
@@ -9,7 +9,7 @@ SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="unRAR"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ppc64 macos"
+KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ppc64 macos ppc-macos"
 IUSE=""
 
 DEPEND=""
