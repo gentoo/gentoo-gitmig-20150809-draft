@@ -1,0 +1,53 @@
+There is no gurantee that this is correct... It should be (and it worked for me)
+If it doesn't work for you, please come talk to me, so we can correct the bug.
+--eradicator
+
+Set FEATURES=-sandbox in /etc/make.conf because of a sandbox bug that is seen
+when using gcc-config 1.4.0
+
+Make sure you have the latest gcc-config baselayout and portage:
+# emerge -uv '>=sys-devel/gcc-config-1.3.11' '>=sys-apps/portage-2.1.51-r9'
+
+Delete the /usr/sparc64-unknown-linux-gnu symlink hackery:
+# rm /usr/sparc64-unknown-linux-gnu
+
+Unmerge the kernel compiler as you don't need it any more
+# emerge unmerge gcc-sparc64
+
+Switch to profile:
+# rm /etc/make.profile
+# ln -s /usr/portage/profiles/default-linux/sparc/sparc64/dev/multilib /etc/make.profile
+
+Change CHOST in /etc/make.conf to sparc64-unknown-linux-gnu (or delete it since
+the profile sets it for us):
+# nano -w /etc/make.conf
+
+Get an updated baselayout
+# emerge -v baselayout
+
+Get a sparc64 binutils:
+# CC="sparc-unknown-linux-gnu-gcc" emerge -v binutils
+
+Use binutils-config to choose sparc64-* binutils:
+# binutils-config -l
+# binutils-config <value>
+# . /etc/profile
+
+Get a stage1 sparc64 gcc:
+# CC="sparc-unknown-linux-gnu-gcc" USE="build static" GCC_MAKE_TARGET="all" emerge -v gcc
+
+Remove sparc32 gcc compiler and binutils from your system
+# emerge unmerge \=sys-devel/gcc-<version> \=sys-devel/binutils-<version>
+# rm /etc/env.d/gcc/config-sparc-unknown-linux-gnu /etc/env.d/05gcc-sparc-unknown-linux-gnu /etc/env.d/binutils/binutils/config-sparc-unknown-linux-gnu 
+
+Use gcc-config to set your gcc
+Choose the sparc64-unknown-linux-gnu one you just emerged
+# gcc-config -l
+# gcc-config <value>
+# . /etc/profile
+
+Use the stage1 gcc to build bootstrap multilib glibc
+# USE="-nptl" CBUILD="sparc-unknown-linux-gnu" emerge -v glibc
+
+Now, finally emerge your multilib sandbox, full glibc and gcc
+# emerge -v portage gcc glibc

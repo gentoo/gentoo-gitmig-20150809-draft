@@ -1,0 +1,7 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/multilib/packages,v 1.1 2005/03/07 00:05:03 eradicator Exp $
+
+# sys-devel/gcc brings in our 64bit compiler
+-*sys-devel/gcc-sparc64
+

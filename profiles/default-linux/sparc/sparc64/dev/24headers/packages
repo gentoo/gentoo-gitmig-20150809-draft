@@ -1,0 +1,7 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/24headers/packages,v 1.1 2005/03/07 00:05:03 eradicator Exp $
+
+# Use 2.4 linux-headers by default
+-*virtual/os-headers
+*<sys-kernel/linux-headers-2.5
