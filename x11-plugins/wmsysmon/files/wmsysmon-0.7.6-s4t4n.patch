@@ -1,0 +1,1338 @@
+diff -Naur wmsysmon-0.7.6-orig/src/Makefile wmsysmon-0.7.6-new/src/Makefile
+--- wmsysmon-0.7.6-orig/src/Makefile	2000-07-29 00:17:51.000000000 +0200
++++ wmsysmon-0.7.6-new/src/Makefile	2004-07-17 17:40:45.815818128 +0200
+@@ -3,11 +3,12 @@
+ LIBDIR += -L/usr/X11R6/lib
+ LDFLAGS += -lXpm -lXext -lX11 -lm -s
+ #CFLAGS = -g #-DMONDEBUG
+-CFLAGS += -O3 -m486 -fomit-frame-pointer -I/usr/X11R6/include #-DHI_INTS #undefine HI_INTS if your x86 SMP or alpha
++CFLAGS += -W -Wall -pedantic -I/usr/X11R6/include #-DHI_INTS #undefine HI_INTS if your x86 SMP or alpha
+ 
+ BIN = wmsysmon
+ OBJS =	wmgeneral.o \
+-	wmsysmon.o
++	wmsysmon.o  \
++	cpu_linux.o
+ 
+ $(BIN): $(OBJS)
+ 	$(CC) -o $(BIN) $(OBJS) $(LIBDIR) $(LDFLAGS)
+diff -Naur wmsysmon-0.7.6-orig/src/cpu.h wmsysmon-0.7.6-new/src/cpu.h
+--- wmsysmon-0.7.6-orig/src/cpu.h	1970-01-01 01:00:00.000000000 +0100
++++ wmsysmon-0.7.6-new/src/cpu.h	2004-01-02 01:20:19.000000000 +0100
+@@ -0,0 +1,28 @@
++/*
++ * cpu.h - header file of the module to get cpu usage
++ *
++ * Copyright (c) 2001 Seiichi SATO <ssato@sh.rim.or.jp>
++ *
++ * licensed under the GPL
++ */
++
++#ifndef __CPU_H
++#define __CPU_H
++
++/*#ifdef IGNORE_PROC*/
++#define COMM_LEN 16
++/*#endif*/
++#define MAX_PROC 5
++
++
++typedef struct _cpu_options {
++    int ignore_nice;
++    int cpu_number;
++    char *ignore_proc_list[MAX_PROC];
++    int ignore_procs;
++} cpu_options;
++
++void cpu_init(void);
++int cpu_get_usage(cpu_options *opts);
++
++#endif
+diff -Naur wmsysmon-0.7.6-orig/src/cpu_linux.c wmsysmon-0.7.6-new/src/cpu_linux.c
+--- wmsysmon-0.7.6-orig/src/cpu_linux.c	1970-01-01 01:00:00.000000000 +0100
++++ wmsysmon-0.7.6-new/src/cpu_linux.c	2003-09-10 17:19:54.000000000 +0200
+@@ -0,0 +1,182 @@
++/*
++ * cpu_linux.c - module to get cpu usage, for GNU/Linux
++ *
++ * Copyright (C) 2001, 2002 Seiichi SATO <ssato@sh.rim.or.jp>
++ *
++ * licensed under the GPL
++ */
++
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
++#include <stdio.h>
++#include <unistd.h>
++#include <stdlib.h>
++#include <string.h>
++#include "cpu.h"
++
++#include <dirent.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <linux/limits.h>
++
++#ifdef USE_SMP
++#include <linux/threads.h>
++#endif
++
++static void set_pidlist_from_namelist(int names, char **name_list);
++static int get_cpuusage_bypid(pid_t pid);
++
++static int *pid_list;
++static int pids;
++
++void cpu_init(void)
++{
++    /*  You don't need initialization under GNU/Linux */
++    return;
++}
++
++/* returns current cpu usage in percent */
++int
++cpu_get_usage(cpu_options *opts)
++{
++    static int pre_used, pre_total;
++    static int pre_ig_used;
++    int usage;
++    int cpu, nice, system, idle;
++    int used = 0, total = 0;
++    int ig_used = 0;
++    int i;
++
++    FILE *fp;
++    if (!(fp = fopen("/proc/stat", "r"))) {
++	perror("can't open /proc/stat");
++	exit(1);
++    }
++
++    fscanf(fp, "%*s %d %d %d %d", &cpu, &nice, &system, &idle);
++
++#ifdef USE_SMP
++    if (opts->cpu_number >= 0) {
++	char cpu_name[20];
++	if (opts->cpu_number > NR_CPUS - 1) {
++	    fprintf (stderr, "MAX CPU number that can be running in SMP is %d\n", NR_CPUS - 1);
++	    exit(1);
++	}
++	
++	for (i = 0; i <= opts->cpu_number; i++) {
++	    fscanf(fp, "%s %d %d %d %d", cpu_name, &cpu, &nice, &system, &idle);
++	    if (strncmp(cpu_name, "cpu", 3)){
++		fprintf (stderr, "can't find cpu%d!\n", opts->cpu_number);
++		exit (1);
++	    }
++	}
++    }
++#endif /* USE_SMP */
++
++    fclose(fp);
++    used = cpu + system;
++    if (!opts->ignore_nice)
++	used += nice;
++    total = cpu + nice + system + idle;
++
++    /* get CPU usage of processes which specified by name with '-p' option */
++    if (opts->ignore_procs) {
++	pids = 0;
++	if (!(pid_list = malloc(sizeof(pid_t)))) {
++	    perror("malloc");
++	    exit(1);
++	}
++	set_pidlist_from_namelist(opts->ignore_procs, opts->ignore_proc_list);
++	for (i = 0; i < pids; i++)
++	    ig_used += get_cpuusage_bypid(pid_list[i]);
++	free(pid_list);
++    }
++
++    /* calc CPU usage */
++    if ((pre_total == 0) || !(total - pre_total > 0)) {
++	usage = 0;
++    } else  if (ig_used - pre_ig_used > 0) {
++	usage = (100 * (double)(used - pre_used - ig_used + pre_ig_used)) /
++		(double)(total - pre_total);
++    } else {
++	usage = (100 * (double)(used - pre_used)) / (double)(total - pre_total);
++    }
++
++    /* save current values for next calculation */
++    pre_ig_used = ig_used;
++    pre_used = used;
++    pre_total = total;
++		
++		/* noberasco michele: quick hack
++		   on my machine cpu usage goes over 100, will have to tell 
++			 wmcpumon author about this                                 */
++		if (usage > 100) usage = 100;
++		/* end of quick hack */
++
++    return usage;
++}
++
++/* set pid list table from command names */
++static void
++set_pidlist_from_namelist(int names, char **name_list)
++{
++    DIR *dir;
++    struct dirent *de;
++    FILE *fp;
++    char path[PATH_MAX + 1];
++    char comm[COMM_LEN];
++    pid_t pid;
++    int i;
++
++    if (!(dir = opendir("/proc"))) {
++	perror("can't open /proc");
++	exit(1);
++    }
++
++    /* search specified process from all processes */
++    chdir("/proc");
++    while ((de = readdir(dir)) != NULL) {
++	if ((de->d_name[0] != '.') &&
++	    ((de->d_name[0] >= '0') && (de->d_name[0] <= '9'))) {
++	    pid = (pid_t) atoi(de->d_name);
++	    sprintf(path, "%d/stat", pid);
++	    if ((fp = fopen(path, "r")) != NULL) {
++		fscanf(fp, "%*d (%[^)]", comm);
++		for (i = 0; i < names; i++) {
++		    if (strcmp(comm, name_list[i]) == 0) {
++			/* add process id to list */
++			pids++;
++			if (!(pid_list=realloc(pid_list, pids*sizeof(pid_t)))){
++			    perror("realloc() failed");
++			    exit(1);
++			}
++			pid_list[pids - 1] = pid;
++		    }
++		}
++		fclose(fp);
++	    }
++	}
++    }
++    closedir(dir);
++}
++
++static int
++get_cpuusage_bypid(pid_t pid)
++{
++    FILE *fp;
++    char path[PATH_MAX];
++    int utime = 0, stime = 0;
++    int ret = 0;
++
++    sprintf(path, "/proc/%d/stat", pid);
++    if ((fp = fopen(path, "r")) != NULL) {
++	fscanf(fp, "%*d %*s %*s %*d %*d %*d %*d %*d %*d %*d %*d %*d %*d %d %d ",
++	       &utime, &stime);
++	fclose(fp);
++    }
++
++    ret = utime + stime;
++    return ret;
++}
+diff -Naur wmsysmon-0.7.6-orig/src/wmsysmon.c wmsysmon-0.7.6-new/src/wmsysmon.c
+--- wmsysmon-0.7.6-orig/src/wmsysmon.c	2000-07-11 13:33:59.000000000 +0200
++++ wmsysmon-0.7.6-new/src/wmsysmon.c	2004-01-03 19:17:21.000000000 +0100
+@@ -2,21 +2,21 @@
+ 	wmsysmon -- system monitoring dockapp
+ 
+ 	Copyright (C) 1998-1999 Dave Clark - clarkd@skynet.ca
+-        Copyright (C) 2000 Vito Caputo - swivel@gnugeneration.com
++	Copyright (C) 2000 Vito Caputo - swivel@gnugeneration.com
+ 
+-        wmsysmon is free software; you can redistribute it and/or modify
+-        it under the terms of the GNU General Public License as published by
+-        the Free Software Foundation; either version 2 of the License, or
+-        (at your option) any later version.
+-
+-        wmsysmon is distributed in the hope that it will be useful,
+-        but WITHOUT ANY WARRANTY; without even the implied warranty of
+-        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-        GNU General Public License for more details.
+-
+-        You should have received a copy of the GNU General Public License
+-        along with this program; if not, write to the Free Software
+-        Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++	wmsysmon is free software; you can redistribute it and/or modify
++	it under the terms of the GNU General Public License as published by
++	the Free Software Foundation; either version 2 of the License, or
++	(at your option) any later version.
++
++	wmsysmon is distributed in the hope that it will be useful,
++	but WITHOUT ANY WARRANTY; without even the implied warranty of
++	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++	GNU General Public License for more details.
++
++	You should have received a copy of the GNU General Public License
++	along with this program; if not, write to the Free Software
++	Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
+ #include <stdlib.h>
+@@ -42,6 +42,7 @@
+ #endif
+ 
+ #include "wmgeneral.h"
++#include "cpu.h"
+ 
+ #ifdef HI_INTS
+ #include "wmsysmon-master-alpha.xpm"
+@@ -78,26 +79,32 @@
+ #define INT_LITES	(1)
+ #define INT_METERS	(2)
+ 
+-char	wmsysmon_mask_bits[64*64];
+-int	wmsysmon_mask_width = 64;
+-int	wmsysmon_mask_height = 64;
++/* for CPU percetage */
++#define CPUNUM_NONE -1
++cpu_options cpu_opts;
++
++char wmsysmon_mask_bits[64*64];
++int	 wmsysmon_mask_width  = 64;
++int	 wmsysmon_mask_height = 64;
+ 
+-long	start_time = 0;
+-long	start_uptime = 0;
++long start_time = 0;
++long start_uptime = 0;
+ int	counter = 0;
+-int	Mem_l; /* line in /proc/meminfo "Mem:" is on */
+-int	Swap_l; /* line in /proc/meminfo "Swap:" is on */
+-int	intr_l;	/* line in /proc/stat "intr" is on */
+-int	rio_l; /* line in /proc/stat "disk_rio" is on */
+-int	wio_l; /* line in /proc/stat "disk_wio" is on */
+-int	page_l; /* line in /proc/stat "page" is on */
+-int	swap_l; /* line in /proc/stat "swap" is on */
+-
+-long	io_max;
+-long	io_max_diff;
++int	intr_l;	/* line in /proc/stat "intr" is on     */
++int	rio_l;  /* line in /proc/stat "disk_rio" is on */
++int	wio_l;  /* line in /proc/stat "disk_wio" is on */
++int	page_l; /* line in /proc/stat "page" is on     */
++int	swap_l; /* line in /proc/stat "swap" is on     */
+ 
+ int	meter[4][2];
+ 
++typedef enum
++{
++	IS_2_6 = 0,
++	IS_OTHER
++} kernel_versions;
++kernel_versions kernel_version;
++
+ #ifdef HI_INTS
+ long	_last_ints[24];
+ long	_ints[24];
+@@ -120,6 +127,7 @@
+ char	buf[1024];
+ FILE	*statfp;
+ FILE	*memfp;
++FILE  *vmstatfp;
+ 
+ int	update_rate = 100000;
+ 
+@@ -129,6 +137,7 @@
+ time_t	prevtime;
+ 
+ 
++kernel_versions Get_Kernel_version(void);
+ void usage(void);
+ void printversion(void);
+ void BlitString(char *name, int x, int y);
+@@ -139,9 +148,11 @@
+ void DrawUptime(void);
+ void DrawStuff( void );
+ void DrawMem( void );
++void DrawCpuPercentage( void );
+ void DrawMeter(unsigned int, unsigned int, int, int);
+ 
+-int main(int argc, char *argv[]) {
++int main(int argc, char *argv[])
++{
+ 	int	i;
+ #ifdef PROF
+ 	TAU_PROFILE_TIMER(tautimer, "main()", "int(int, char **)", TAU_DEFAULT);
+@@ -162,52 +173,91 @@
+ 
+ 	last_ints = _last_ints;
+ 	ints = _ints;
+-    
+-	/* Parse Command Line */
+ 
++	/* some defaults for CPU percentage */
++  cpu_opts.ignore_nice = False;
++  cpu_opts.cpu_number = CPUNUM_NONE;
++  cpu_opts.ignore_procs = 0;
++
++	kernel_version = Get_Kernel_version();
++
++	/* Parse Command Line */
+ 	ProgName = argv[0];
+ 	if (strlen(ProgName) >= 5)
+ 		ProgName += (strlen(ProgName) - 5);
+ 
+-	for (i = 1; i < argc; i++) {
++	for (i = 1; i < argc; i++)
++	{
+ 		char *arg = argv[i];
+ 
+-		if (*arg == '-') {
+-			switch (arg[1]) {
+-			case 'd':
+-				if (strcmp(arg + 1, "display")) {
+-					usage();
+-					exit(1);
+-				}
+-				break;
+-			case 'g':
+-				if (strcmp(arg+1, "geometry")) {
+-					usage();
+-					exit(1);
+-				}
+-				break;
+-			case 'v':
+-				printversion();
+-				exit(0);
+-				break;
+-			case 'r':
+-				if (argc > (i + 1)) {
+-					update_rate = (atoi(argv[i + 1]) * 1000);
++		if (*arg == '-')
++		{
++			switch (arg[1])
++			{
++				case 'd':
++					if (strcmp(arg + 1, "display"))
++					{
++						usage();
++						exit(1);
++					}
++					break;
++				case 'g':
++					if (strcmp(arg+1, "geometry"))
++					{
++						usage();
++						exit(1);
++					}
++					break;
++				case 'v':
++					printversion();
++					exit(0);
++					break;
++				case 'r':
++					if (argc > (i + 1))
++					{
++						update_rate = (atoi(argv[i + 1]) * 1000);
++						i++;
++					}
++					break;
++				case 'l':
++					int_mode = INT_LITES;
++					break;
++				case 'n':
++					cpu_opts.ignore_nice = True;
++					break;
++				case 'p':
++					if (argc == (i + 1))
++					{
++						fprintf(stderr, "Option -p needs an argument!\n");
++						exit(1);
++					}
+ 					i++;
+-				}
+-				break;
+-			case 'l':
+-				int_mode = INT_LITES;
+-				break;
+-
+-			default:
+-				usage();
+-				exit(0);
+-				break;
++					if (strlen(argv[i]) >= COMM_LEN)
++					{
++						fprintf(stderr, "Command name %s is longer than 15 characters\n", argv[i]);
++						exit(1);
++					}
++					if (cpu_opts.ignore_procs == MAX_PROC)
++					{
++						fprintf(stderr, "Maximum number of command names is %d\n", MAX_PROC);
++						exit(1);
++					}
++					cpu_opts.ignore_proc_list[cpu_opts.ignore_procs] = argv[i];
++					cpu_opts.ignore_procs++;
++					break;
++
++				default:
++					usage();
++					exit(0);
++					break;
+ 			}
+ 		}
+ 	}
+ 
++	/* Init CPU percentage stuff */
++	/* NOT NEEDED ON LINUX */
++	/* cpu_init(); */
++
+ 	wmsysmon_routine(argc, argv);
+ 
+ #ifdef PROF
+@@ -225,25 +275,24 @@
+ 	int		x = 0;
+ #endif
+ 	XEvent		Event;
+-	int		but_stat = -1;
+ 	FILE		*fp;
+-    
++
+ #ifdef PROF
+ 	TAU_PROFILE_TIMER(tautimer, "wmsysmon_routine()", "(int, char **)", TAU_DEFAULT);
+ 	TAU_PROFILE_START(tautimer);
+ #endif
+ 
+ 	createXBMfromXPM(wmsysmon_mask_bits, wmsysmon_master_xpm, wmsysmon_mask_width, wmsysmon_mask_height);
+-    
++
+ 	openXwindow(argc, argv, wmsysmon_master_xpm, wmsysmon_mask_bits, wmsysmon_mask_width, wmsysmon_mask_height);
+ 
+-    /* init ints */
++	/* init ints */
+ 	bzero(&_last_ints, sizeof(_last_ints));
+ 	bzero(&_ints, sizeof(_ints));
+ 	bzero(&int_peaks, sizeof(int_peaks));
+ 
+-    
+-    /* init uptime */
++
++	/* init uptime */
+ 	fp = fopen("/proc/uptime", "r");
+ 	if (fp) {
+ 		fscanf(fp, "%ld", &start_time);
+@@ -253,350 +302,328 @@
+ 
+ 	statfp = fopen("/proc/stat", "r");
+ 	memfp = fopen("/proc/meminfo", "r");
++	if (kernel_version == IS_2_6) vmstatfp = fopen("/proc/vmstat", "r");
++
+ 
+-	/* here we find tags in /proc/stat & /proc/meminfo and note their
++	/* here we find tags in /proc/stat and note their
+ 	 * lines, for faster lookup throughout execution.
+ 	 */
+-	/* /proc/meminfo */
+-	for(i = 0; fgets(buf, 1024, memfp); i++) {
+-		if(strstr(buf, "Mem:")) Mem_l = i;
+-		else if(strstr(buf, "Swap:")) Swap_l = i;
+-	}
+-
+-	/* /proc/stat */
+ 	for(i = 0; fgets(buf, 1024, statfp); i++) {
+-		if(strstr(buf, "disk_wio")) wio_l = i;
+-		else if(strstr(buf, "disk_rio")) rio_l = i;
+-		else if(strstr(buf, "page")) page_l = i;
+-		else if(strstr(buf, "swap")) swap_l = i;
+-		else if(strstr(buf, "intr")) intr_l = i;
++		if (kernel_version == IS_OTHER)
++		{
++			if(strstr(buf, "page")) page_l = i;
++			if(strstr(buf, "swap")) swap_l = i;
++		}
++		if(strstr(buf, "intr")) intr_l = i;
+ 	}
+ 
+ #ifdef PROF
+ 	while (x < 1000) {
+ #else
+-	while(1) {
++		while(1) {
+ #endif
+-        
+-		curtime = time(0);
+ 
+-#if 1
+-		DrawUptime();
+-		DrawStuff();
+-		DrawMem();
+-		RedrawWindow();
+-#endif
+-        
+-		/* X Events */
+-		while (XPending(display)) {
+-			XNextEvent(display, &Event);
+-			switch (Event.type) {
+-			case Expose:
+-				DirtyWindow(Event.xexpose.x,
+-					    Event.xexpose.y,
+-					    Event.xexpose.width,
+-					    Event.xexpose.height);
+-				break;
+-			case DestroyNotify:
+-				XCloseDisplay(display);
+-				exit(0);
+-				break;
++			curtime = time(0);
+ 
+-			default:
++#if 1
++			DrawCpuPercentage();
++			DrawUptime();
++			DrawStuff();
++			DrawMem();
++			RedrawWindow();
++#endif
++
++			/* X Events */
++			while (XPending(display)) {
++				XNextEvent(display, &Event);
++				switch (Event.type) {
++					case Expose:
++						DirtyWindow(Event.xexpose.x,
++												Event.xexpose.y,
++												Event.xexpose.width,
++												Event.xexpose.height);
++						break;
++					case DestroyNotify:
++						XCloseDisplay(display);
++						exit(0);
++						break;
+ #ifdef MONDEBUG
+-				printf("got: %i\n", Event.type);
++					default:
++						printf("got: %i\n", Event.type);
+ #endif
++				}
+ 			}
+-		}
+ #ifdef PROF
+-		x++;
++			x++;
+ #endif
+ 
+-		usleep(update_rate);
+-	}
++			usleep(update_rate);
++		}
+ #ifdef PROF
+-	TAU_PROFILE_STOP(tautimer);
++		TAU_PROFILE_STOP(tautimer);
+ #endif
+-}
++	}
+ 
+ 
+-void DrawMeter(unsigned int level, unsigned int peak, int dx, int dy)
+-{
+-	static unsigned int	a;
++	void DrawMeter(unsigned int level, unsigned int peak, int dx, int dy)
++		{
++			static unsigned int	a;
+ #ifdef PROF
+-	TAU_PROFILE_TIMER(tautimer, "DrawMeter()", "(int, unsigned int, int, int)", TAU_DEFAULT);
+-	TAU_PROFILE_START(tautimer);
++			TAU_PROFILE_TIMER(tautimer, "DrawMeter()", "(int, unsigned int, int, int)", TAU_DEFAULT);
++			TAU_PROFILE_START(tautimer);
+ #endif
+ 
+-	/* meters are on a per interruptscale, dictated by the peak, maintain
+-	 * this peak outside of here, you can use a fixed peak for all ints but
+-	 * since we're using only 4 lines for our level, the timer interrupt
+-	 * usually kills the peak for the others so they never move. */
+-
+-	if(peak) {
+-		a = level * 3 / peak;
+-	} else a = 0;
++			/* meters are on a per interruptscale, dictated by the peak, maintain
++			 * this peak outside of here, you can use a fixed peak for all ints but
++			 * since we're using only 4 lines for our level, the timer interrupt
++			 * usually kills the peak for the others so they never move. */
++
++			if(peak) {
++				a = level * 3 / peak;
++			} else a = 0;
+ 
+ #ifdef MONDEBUG
+-	printf("level: %u peak: %u selection: %u\n", level, peak, a);
+-	fflush(stdout);
++			printf("level: %u peak: %u selection: %u\n", level, peak, a);
++			fflush(stdout);
+ #endif
+ 
+-	if(a > 3) a = 3;
++			if(a > 3) a = 3;
+ 
+-	copyXPMArea(meter[a][0],
+-		    meter[a][1],
+-		    VBAR_W,
+-		    VBAR_H,
+-		    dx,
+-		    dy);
++			copyXPMArea(meter[a][0],
++									meter[a][1],
++									VBAR_W,
++									VBAR_H,
++									dx,
++									dy);
+ #ifdef PROF
+-	TAU_PROFILE_STOP(tautimer);
++			TAU_PROFILE_STOP(tautimer);
+ #endif
+-}
++		}
+ 
+ 
+ 
+-void DrawBar(int sx, int sy, int w, int h, float percent, int dx, int dy)
+-{
+-	static int	tx;
++	void DrawBar(int sx, int sy, int w, int h, float percent, int dx, int dy)
++		{
++			static int	tx;
+ #ifdef PROF
+-	TAU_PROFILE_TIMER(tautimer, "DrawBar()", "(int, int, int, int, float, int, int)", TAU_DEFAULT);
+-	TAU_PROFILE_START(tautimer);
++			TAU_PROFILE_TIMER(tautimer, "DrawBar()", "(int, int, int, int, float, int, int)", TAU_DEFAULT);
++			TAU_PROFILE_START(tautimer);
+ #endif
+ 
+-	tx = (float)((float)w * ((float)percent / (float)100.0));
++			tx = (float)((float)w * ((float)percent / (float)100.0));
+ 
+-	copyXPMArea(sx, sy, tx, h, dx, dy);
++			copyXPMArea(sx, sy, tx, h, dx, dy);
+ 
+-	copyXPMArea(sx, sy + h + 1, w - tx, h, dx + tx, dy);
++			copyXPMArea(sx, sy + h + 1, w - tx, h, dx + tx, dy);
+ 
+ #ifdef PROF
+-	TAU_PROFILE_STOP(tautimer);
++			TAU_PROFILE_STOP(tautimer);
+ #endif
+-}
++		}
+ 
+ 
+-void DrawLite(int state, int dx, int dy)
+-{
++	void DrawLite(int state, int dx, int dy)
++		{
+ #ifdef PROF
+-	TAU_PROFILE_TIMER(tautimer, "DrawLite()", "(int, int, int)", TAU_DEFAULT);
+-	TAU_PROFILE_START(tautimer);
++			TAU_PROFILE_TIMER(tautimer, "DrawLite()", "(int, int, int)", TAU_DEFAULT);
++			TAU_PROFILE_START(tautimer);
+ #endif
+ 
+-	switch(state) {
+-		case B_RED:
+-			copyXPMArea(BREDX, BREDY, LITEW, LITEH, dx, dy);
+-			break;
+-		case B_GREEN:
+-			copyXPMArea(BGREENX, BGREENY, LITEW, LITEH, dx, dy);
+-			break;
+-		default:
+-		case B_OFF:
+-			copyXPMArea(BOFFX, BOFFY, LITEW, LITEH, dx, dy);
+-			break;
+-	}
++			switch(state) {
++				case B_RED:
++					copyXPMArea(BREDX, BREDY, LITEW, LITEH, dx, dy);
++					break;
++				case B_GREEN:
++					copyXPMArea(BGREENX, BGREENY, LITEW, LITEH, dx, dy);
++					break;
++				default:
++				case B_OFF:
++					copyXPMArea(BOFFX, BOFFY, LITEW, LITEH, dx, dy);
++					break;
++			}
+ 
+ #ifdef PROF
+-	TAU_PROFILE_STOP(tautimer);
++			TAU_PROFILE_STOP(tautimer);
+ #endif
+-}
++		}
+ 
+ 
+-void DrawUptime(void)
+-{
+-	static int	first = 1;
+-	static int	old_days = 0, old_hours = 0, old_minutes = 0;
+-	static long	uptime;
++	void DrawCpuPercentage(void)
++		{
++			int cpupercentage = cpu_get_usage(&cpu_opts);
++			static int oldcpupercentage = -1;
++
++			if (cpupercentage != oldcpupercentage)
++			{
++#ifdef HI_INTS
++				DrawBar(67, 36, 58, 4, cpupercentage, 3, 4);
++#else
++				DrawBar(67, 36, 58, 6, cpupercentage, 3, 4);
++#endif
++				oldcpupercentage = cpupercentage;
++			}
++
++		}
++
++	void DrawUptime(void)
++		{
++			static int	first = 1;
++			static int	old_days = 0, old_hours = 0, old_minutes = 0;
++			static long	uptime;
+     	static int	i;
+ 
+ #ifdef PROF
+-	TAU_PROFILE_TIMER(tautimer, "DrawUptime()", "", TAU_DEFAULT);
+-	TAU_PROFILE_START(tautimer);
++			TAU_PROFILE_TIMER(tautimer, "DrawUptime()", "", TAU_DEFAULT);
++			TAU_PROFILE_START(tautimer);
+ #endif
+-    
+-	uptime = curtime - start_uptime + start_time;
+ 
+-	/* blit minutes */
+-	uptime /=60;
+-	i = uptime % 60;
++			uptime = curtime - start_uptime + start_time;
++
++			/* blit minutes */
++			uptime /=60;
++			i = uptime % 60;
+ 
+-	if(old_minutes != i || first) {
+-		old_minutes = i;
+-		sprintf(buf, "%02i", i);
++			if(old_minutes != i || first) {
++				old_minutes = i;
++				sprintf(buf, "%02i", i);
+ #ifdef HI_INTS
+-		BlitString(buf, 45, 29);
++				BlitString(buf, 45, 29);
+ #else
+-		BlitString(buf, 45, 37);
++				BlitString(buf, 45, 37);
+ #endif
+-	}
++			}
+     
+-	/* blit hours */
+-	uptime /=60;
+-	i = uptime % 24;
++			/* blit hours */
++			uptime /=60;
++			i = uptime % 24;
+ 
+-	if(old_hours != i || first) {
+-		old_hours = i;
+-		sprintf(buf, "%02i", i);
++			if(old_hours != i || first) {
++				old_hours = i;
++				sprintf(buf, "%02i", i);
+ #ifdef HI_INTS
+-		BlitString(buf, 29, 29);
++				BlitString(buf, 29, 29);
+ #else
+-		BlitString(buf, 29, 37);
++				BlitString(buf, 29, 37);
+ #endif
+-	}
++			}
+ 
+     
+-	/* blit days */
+-	uptime /= 24;
+-	i = uptime;
+-	if(old_days != i || first) {
+-		old_days = i;
+-		sprintf(buf, "%03i", i);
++			/* blit days */
++			uptime /= 24;
++			i = uptime;
++			if(old_days != i || first) {
++				old_days = i;
++				sprintf(buf, "%03i", i);
+ #ifdef HI_INTS
+-		BlitString(buf, 6, 29);
++				BlitString(buf, 6, 29);
+ #else
+-		BlitString(buf, 6, 37);
++				BlitString(buf, 6, 37);
+ #endif
+-	}
++			}
+ 
+-	first = 0;
++			first = 0;
+ #ifdef PROF
+-	TAU_PROFILE_STOP(tautimer);
++			TAU_PROFILE_STOP(tautimer);
+ #endif
+-}
++		}
+ 
+ 
+-void DrawStuff( void )
+-{
+-	static int	io_last = 0, first = 1;
++	void DrawStuff( void )
++		{
++			static int	first = 1;
+ #ifdef HI_INTS
+-	static int	int_lites[24] =
+-	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+-		/* to keep track of on/off status */
++			static int	int_lites[24] =
++				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
++			/* to keep track of on/off status */
+ #else
+     	static int	int_lites[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+ #endif
+-	static int	pagein_lite = 0, pageout_lite = 0, swapin_lite = 0, swapout_lite = 0;
+-    	static char	*tok;
+-	static char	seps[] = {" "};
+-	static int	i, ents;
+-
+-	static long	io;
+-	static long	iodiff;
+-	static int	iopercent;
+-
+-	static long	pageins;
+-	static long	pageouts;
+-	static long	swapins;
+-	static long	swapouts;
+-	static long	intdiff;
+-	static long	stage;
+-	static long	*tints;
+-#ifdef PROF
+-	TAU_PROFILE_TIMER(tautimer, "DrawStuff()", "", TAU_DEFAULT);
+-	TAU_PROFILE_START(tautimer);
+-#endif
+-
+-	stage = io = iodiff = iopercent = pageins = pageouts = swapins = swapouts = 0;
+-
+-	statfp = freopen("/proc/stat", "r", statfp);
+-
+-
+-	for(i = 0, ents = 0; ents < 5 && fgets(buf, 1024, statfp); i++) {
+-		if(i == rio_l) {
+-			tok = strtok(buf, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-			ents++;
+-		} else if(i == wio_l) {
+-			tok = strtok(buf, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-
+-			io += atoi(tok);
+-			tok = strtok(NULL, seps);
+-			ents++;
+-		} else if(i == page_l) {
+-			sscanf(buf, "%*s %ld %ld", &pageins, &pageouts);
+-			ents++;
+-		} else if(i == swap_l) {
+-			sscanf(buf, "%*s %ld %ld",
+-				&swapins, &swapouts);
+-			ents++;
+-		} else if(i == intr_l) {
+-			sscanf(	buf,
+-	#ifdef HI_INTS
+-				"%*s %*d %ld %ld %ld %ld %ld"
+-				"%ld %ld %ld %ld %ld %ld %ld"
+-				"%ld %ld %ld %ld %ld %ld %ld"
+-				"%ld %ld %ld %ld %ld",
+-				&ints[0], &ints[1], &ints[2],
+-				&ints[3], &ints[4], &ints[5],
+-				&ints[6], &ints[7], &ints[8],
+-				&ints[9], &ints[10], &ints[11],
+-				&ints[12], &ints[13], &ints[14],
+-				&ints[15], &ints[16], &ints[17],
+-				&ints[18], &ints[19], &ints[20],
+-				&ints[21], &ints[22], &ints[23]);
+-	#else
+-				"%*s %*d %ld %ld %ld %ld %ld"
+-				"%ld %ld %ld %ld %ld %ld %ld"
+-				"%ld %ld %ld %ld",
+-				&ints[0], &ints[1], &ints[2],
+-				&ints[3], &ints[4], &ints[5],
+-				&ints[6], &ints[7], &ints[8],
+-				&ints[9], &ints[10], &ints[11],
+-				&ints[12], &ints[13], &ints[14],
+-				&ints[15]);
+-	#endif
+-			ents++;
+-		}
+-	}
+-
++			static int	pagein_lite = 0, pageout_lite = 0, swapin_lite = 0, swapout_lite = 0;
++			static int	i, ents;
+ 
+-	/* ------------------ IO bar ------------------ */
+-	if(io_max == 0) io_max = io;
+-    
+-	if(io > io_max) iodiff = abs(io_max - io);
+-	else iodiff = 0;
+-
+-	io_max = io;
+-
+-    
+-	if(io_max_diff !=0) iopercent = ((float) iodiff / (float) io_max_diff) * 100.0;
+-	else iopercent = 0;
+-
+-	if(iodiff > io_max_diff) io_max_diff = iodiff;
+-
+-	if (iopercent > 100) iopercent = 100;
+-    
++			static long	pageins;
++			static long	pageouts;
++			static long	swapins;
++			static long	swapouts;
++			static long	intdiff;
++			static long	stage;
++			static long	*tints;
++#ifdef PROF
++			TAU_PROFILE_TIMER(tautimer, "DrawStuff()", "", TAU_DEFAULT);
++			TAU_PROFILE_START(tautimer);
++#endif
++
++			stage = pageins = pageouts = swapins = swapouts = 0;
++
++			statfp = freopen("/proc/stat", "r", statfp);
++
++			if (kernel_version == IS_2_6)
++			{
++				static char *pageins_p=NULL;
++				static char *pageouts_p;
++				static char *swapins_p;
++				static char *swapouts_p;
++
++				vmstatfp = freopen("/proc/vmstat", "r", vmstatfp);
++				fread_unlocked (buf, 1024, 1, vmstatfp);
++				if (!pageins_p)
++				{
++					pageins_p  = strstr(buf, "pgpgin"  ) + 6;
++					pageouts_p = strstr(buf, "pgpgout" ) + 7;
++					swapins_p  = strstr(buf, "pswpin"  ) + 6;
++					swapouts_p = strstr(buf, "pswpout" ) + 7;
++				}
++				sscanf(pageins_p,  "%ld", &pageins  );
++				sscanf(pageouts_p, "%ld", &pageouts );
++				sscanf(swapins_p,  "%ld", &swapins  );
++				sscanf(swapouts_p, "%ld", &swapouts );												
++			}
+ 
+-	if(iopercent != io_last || first) {
+-		io_last = iopercent;
+-#ifdef HI_INTS
+-		DrawBar(67, 36, 58, 4, iopercent, 3, 20);
+-#else
+-		DrawBar(67, 36, 58, 6, iopercent, 3, 26);
++			for(i = 0, ents = 0; ents < 3 && fgets(buf, 1024, statfp); i++)
++			{
++				if (kernel_version == IS_OTHER)
++				{
++					if(i == page_l)
++					{
++						sscanf(buf, "%*s %ld %ld", &pageins, &pageouts);
++						ents++;
++					}
++					if(i == swap_l)
++					{
++						sscanf(buf, "%*s %ld %ld", &swapins, &swapouts);
++						ents++;
++					}
++				}
++				if(i == intr_l)
++				{
++					sscanf(	buf,
++#ifdef HI_INTS
++									"%*s %*d %ld %ld %ld %ld %ld"
++									"%ld %ld %ld %ld %ld %ld %ld"
++									"%ld %ld %ld %ld %ld %ld %ld"
++									"%ld %ld %ld %ld %ld",
++									&ints[0], &ints[1], &ints[2],
++									&ints[3], &ints[4], &ints[5],
++									&ints[6], &ints[7], &ints[8],
++									&ints[9], &ints[10], &ints[11],
++									&ints[12], &ints[13], &ints[14],
++									&ints[15], &ints[16], &ints[17],
++									&ints[18], &ints[19], &ints[20],
++									&ints[21], &ints[22], &ints[23]);
++#else
++					"%*s %*d %ld %ld %ld %ld %ld"
++						"%ld %ld %ld %ld %ld %ld %ld"
++						"%ld %ld %ld %ld",
++						&ints[0], &ints[1], &ints[2],
++						&ints[3], &ints[4], &ints[5],
++						&ints[6], &ints[7], &ints[8],
++						&ints[9], &ints[10], &ints[11],
++						&ints[12], &ints[13], &ints[14],
++						&ints[15]);
+ #endif
+-	}
+-
++				ents++;
++			}
++		}
+ 
+ 	if(int_mode == INT_LITES) {
+ 		/* top 8 ints */
+@@ -654,14 +681,14 @@
+ 			int_peaks[i] = (int_peaks[i] + intdiff) >> 1;
+ #ifdef HI_INTS
+ 			DrawMeter(intdiff,
+-				  int_peaks[i],
+-				  VBAR_H + (i * VBAR_W) + i,
+-				  43);
++								int_peaks[i],
++								VBAR_H + (i * VBAR_W) + i,
++								43);
+ #else
+ 			DrawMeter(intdiff,
+-				  int_peaks[i],
+-				  VBAR_H + (i * VBAR_W) + i,
+-				  51);
++								int_peaks[i],
++								VBAR_H + (i * VBAR_W) + i,
++								51);
+ #endif
+ 		}
+ 
+@@ -670,14 +697,14 @@
+ 			int_peaks[i] = (int_peaks[i] + intdiff) >> 1;
+ #ifdef HI_INTS
+ 			DrawMeter(intdiff,
+-				  int_peaks[i],
+-				  VBAR_H + ((i - 8) * VBAR_W) + (i - 8),
+-				  48);
++								int_peaks[i],
++								VBAR_H + ((i - 8) * VBAR_W) + (i - 8),
++								48);
+ #else
+ 			DrawMeter(intdiff,
+-				  int_peaks[i],
+-				  VBAR_H + ((i - 8) * VBAR_W) + (i - 8),
+-				  56);
++								int_peaks[i],
++								VBAR_H + ((i - 8) * VBAR_W) + (i - 8),
++								56);
+ #endif
+ 		}
+ 
+@@ -687,9 +714,9 @@
+ 			int_peaks[i] = (int_peaks[i] + intdiff) >> 1;
+ 
+ 			DrawMeter(intdiff,
+-				  int_peaks[i],
+-				  VBAR_H + ((i - 16) * VBAR_W) + (i - 16),
+-				  53);
++								int_peaks[i],
++								VBAR_H + ((i - 16) * VBAR_W) + (i - 16),
++								53);
+ 		}
+ #endif
+ 	}
+@@ -782,18 +809,19 @@
+ 
+ void DrawMem(void)
+ {
++	static char *p_mem_tot=NULL, *p_mem_free, *p_mem_buffers, *p_mem_cache;
++	static char *p_swap_total, *p_swap_free;
++
+ 	static int	last_mem = 0, last_swap = 0, first = 1;
+ 	static long 	mem_total = 0;
+-	static long 	mem_used = 0;
++	static long 	mem_free = 0;
+ 	static long 	mem_buffers = 0;
+ 	static long 	mem_cache = 0;
+ 	static long 	swap_total = 0;
+-	static long 	swap_used = 0;
+ 	static long 	swap_free = 0;
+ 
+ 	static int 	mempercent = 0;
+ 	static int 	swappercent = 0;
+-	static int	i, ents;
+ 
+ #ifdef PROF
+ 	TAU_PROFILE_TIMER(tautimer, "DrawMem()", "", TAU_DEFAULT);
+@@ -806,50 +834,52 @@
+ 	counter = 3000000 / update_rate;
+ 
+ 	memfp = freopen("/proc/meminfo", "r", memfp);
++	fread_unlocked (buf, 1024, 1, memfp);
+ 
+-	for(i = 0, ents = 0; ents < 2 && fgets(buf, 1024, memfp); i++) {
+-		if(i == Mem_l) {
+-			sscanf(buf, "%*s %ld %ld %*d %*d %ld %ld",
+-				&mem_total,
+-				&mem_used,
+-				&mem_buffers,
+-				&mem_cache);
+-			ents++;
+-		} else if(i == Swap_l) {
+-			sscanf(buf, "%*s %ld %ld %ld",
+-				&swap_total,
+-				&swap_used,
+-				&swap_free);
+-			ents++;
+-		}
+-	}
++	if (!p_mem_tot)
++	{
++		p_mem_tot     = strstr(buf, "MemTotal:" ) + 13;
++		p_mem_free    = strstr(buf, "MemFree:"  ) + 13;
++		p_mem_buffers = strstr(buf, "Buffers:"  ) + 13;
++		p_mem_cache   = strstr(buf, "Cached:"   ) + 13;
++		p_swap_total  = strstr(buf, "SwapTotal:") + 13;
++		p_swap_free   = strstr(buf, "SwapFree:" ) + 13;
++	}
++	
++	sscanf(p_mem_tot,     "%ld", &mem_total  );
++	sscanf(p_mem_free,    "%ld", &mem_free   );
++	sscanf(p_mem_buffers, "%ld", &mem_buffers);
++	sscanf(p_mem_cache,   "%ld", &mem_cache  );
++	sscanf(p_swap_total,  "%ld", &swap_total );
++	sscanf(p_swap_free,   "%ld", &swap_free  );
+ 
+ 	/* could speed this up but we'd lose precision, look more into it to see
+ 	 * if precision change would be noticable, and if speed diff is significant
+ 	 */
+-	mempercent = ((float)(mem_used - mem_buffers - mem_cache)
+-		     /
+-		     (float)mem_total) * 100;
+-
+-	swappercent = ((float)(swap_used)
+-		      /
+-		      (float)swap_total) * 100;
++	mempercent = ((float)(mem_total - mem_free - mem_buffers - mem_cache)
++								/
++								(float)mem_total) * 100;
++
++	if (!swap_total) swappercent = 0;
++	else swappercent = ((float)(swap_total - swap_free)
++								 /
++								 (float)swap_total) * 100;
+ 
+ 	if(mempercent != last_mem || first) {
+ 		last_mem = mempercent;
+ #ifdef HI_INTS
+-		DrawBar(67, 36, 58,4 , mempercent, 3, 4);
++		DrawBar(67, 36, 54, 4, mempercent, 3, 12);
+ #else
+-		DrawBar(67, 36, 58, 6, mempercent, 3, 4);
++		DrawBar(67, 36, 54, 6, mempercent, 3, 15);
+ #endif
+ 	}
+-	    
++
+ 	if(swappercent != last_swap || first) {
+ 		last_swap = swappercent;
+ #ifdef HI_INTS
+-		DrawBar(67, 36, 58, 4, swappercent, 3, 12);
++		DrawBar(67, 36, 58, 4, swappercent, 3, 20);
+ #else
+-		DrawBar(67, 36, 58, 6, swappercent, 3, 15);
++		DrawBar(67, 36, 58, 6, swappercent, 3, 26);
+ #endif
+ 	}
+ 
+@@ -910,33 +940,35 @@
+ 	TAU_PROFILE_STOP(tautimer);
+ #endif
+ }
+-    
++
+ 
+ void usage(void)
+ {
+-	fprintf(stderr, "\nwmsysmon - http://www.gnugeneration.com\n");
+-	fprintf(stderr, "\n-------------------\n"
+-			"|[---------------]|  <--- Memory Use %\n"
+-			"|[---------------]|  <--- Swap Use %\n"
+-			"|[---------------]|  <--- I/O %\n"
+-			"|                 |\n"
+-			"|   000:00:00     |  <--- Uptime days:hours:minutes\n"
+-			"|                 |\n"
+-#ifdef HI_INTS
+-			"| 01234567   UV   |  <--- 0-N are hardware interrupts 0-23\n"
+-			"| 89ABCDEF   WX   |  <--- U,V are Page IN/OUT, W,X are Swap IN/OUT\n"
+-			"| GHIJKLMN   YZ   |\n"
++	fprintf(stderr, "\nwmsysmon - http://www.gnugeneration.com\n\n");
++	fprintf(stderr, ".-----------------.\n"
++                  "|[---------------]|  <--- CPU Use %\n"
++                  "|[---------------]|  <--- Memory Use %\n"
++                  "|[---------------]|  <--- Swap Use %\n"
++                  "|                 |\n"
++                  "|   000:00:00     |  <--- Uptime days:hours:minutes\n"
++                  "|                 |\n"
++#ifdef HI_INTS
++                  "| 01234567   UV   |  <--- 0-N are hardware interrupts 0-23\n"
++                  "| 89ABCDEF   WX   |  <--- U,V are Page IN/OUT, W,X are Swap IN/OUT\n"
++                  "| GHIJKLMN   YZ   |\n"
+ #else
+-			"| 01234567   WX   |  <--- 0-F are hardware interrupts 0-15\n"
+-			"| 89ABCDEF   YZ   |  <--- W,X are Page IN/OUT, W,X are Swap IN/OUT\n"
++                  "| 01234567   WX   |  <--- 0-F are hardware interrupts 0-15\n"
++                  "| 89ABCDEF   YZ   |  <--- W,X are Page IN/OUT, Y,Z are Swap IN/OUT\n"
+ #endif
+-			"-------------------\n");
++                  "°-----------------°\n");
+ 
+ 	fprintf(stderr, "usage:\n");
+ 	fprintf(stderr, "\t-display <display name>\n");
+ 	fprintf(stderr, "\t-geometry +XPOS+YPOS\tinitial window position\n");
+ 	fprintf(stderr, "\t-r\t\t\tupdate rate in milliseconds (default:300)\n");
+ 	fprintf(stderr, "\t-l\t\t\tblinky lights for interrupts vs. meters(default)\n");
++	fprintf(stderr, "\t-n\t\t\tignore nice processes for CPU percentage\n");
++	fprintf(stderr, "\t-p <process name>\tdo not count <process name> in CPU percentage\n");
+ 	fprintf(stderr, "\t-h\t\t\tthis help screen\n");
+ 	fprintf(stderr, "\t-v\t\t\tprint the version number\n");
+ 	fprintf(stderr, "\n");
+@@ -947,3 +979,20 @@
+ {
+ 	fprintf(stderr, "wmsysmon v%s\n", WMSYSMON_VERSION);
+ }
++
++kernel_versions Get_Kernel_version(void)
++{
++	FILE *fp = fopen("/proc/version", "r");
++	char buf[512];
++
++	if (!fp) return IS_OTHER;
++	if (!fgets(buf, 512, fp))
++	{
++		fclose(fp);
++		return IS_OTHER;
++	}
++	fclose(fp);
++
++	if (strstr(buf, "2.6.")) return IS_2_6;
++	return IS_OTHER;
++}
