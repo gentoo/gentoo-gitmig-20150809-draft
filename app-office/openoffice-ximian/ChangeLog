@@ -1,6 +1,18 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.19 2004/01/28 13:56:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.20 2004/02/03 20:27:41 suka Exp $
+
+  03 Feb 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.50.ebuild:
+  This update further simplifies the ebuild and aims to fix the distcc
+  problems. Even better parallel build COULD now work for you, at least it does
+  for me, as it is not tested enough you will have to explicitely force the
+  ebuild to build in parallel / use more cpus. If you dare to try out emerge the
+  ebuild like:
+  
+  'ECPUS="n" emerge openoffice-ximian'
+  
+  where n has to be exchanged with the number of processes / CPUs you want to
+  use. No guarantee whatsoever that it will work for you :-)
 
   28 Jan 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.46.ebuild,
   openoffice-ximian-1.1.47.3.ebuild, openoffice-ximian-1.1.49.2-r1.ebuild,

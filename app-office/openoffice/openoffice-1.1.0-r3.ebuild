@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.4 2004/01/24 14:53:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.5 2004/02/03 20:31:01 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -281,16 +281,6 @@ src_unpack() {
 	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
 		${S}/solenv/inc/unxlngi4.mk
 
-
-	# Some makefiles are not multiprocess ready (Mandrake)
-	cd ${S}; einfo "Fixing makefiles for multiprocess builds..."
-	for x in io/source/stm dtrans/source/X11 idlc/source nas zlib toolkit/util \
-		comphelper/util padmin/source svtools/util bridges/source/prot_uno \
-		framework/util framework/source/unotypes
-	do
-		perl -pi -e "s/^(PRJNAME)/MAXPROCESS=1\n\1/" ${x}/makefile.mk
-	done
-
 	#Do our own branding by setting gentoo linux as the vendor
 	sed -i -e "s,\(//\)\(.*\)\(my company\),\2Gentoo Linux," ${S}/offmgr/source/offapp/intro/ooo.src
 }
@@ -320,37 +310,6 @@ src_compile() {
 
 	oo_setup
 
-	# Setup default compilers (We overide gcc2 if that is default here)
-	export CC="$(gcc-getCC)"
-	export CXX="$(gcc-getCXX)"
-
-	# Enable new ccache for this build
-	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
-	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -x /usr/bin/ccache -a ! -d /usr/bin/ccache ]
-	then
-		einfo "We're using ccache for this build..."
-		# Build uses its own env with $PATH, etc, so
-		# we take the easy way out. (Az)
-		export CC="/usr/bin/ccache ${CC}"
-		export CXX="/usr/bin/ccache ${CXX}"
-	fi
-
-	# Enable distcc for this build (Az)
-	if [ "${FEATURES/-distcc/}" = "${FEATURES}" -a \
-	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
-		 -x /usr/bin/distcc ]
-	then
-		einfo "We're using distcc for this build..."
-		# Do not bump ECPUS if the user did not touch it, as currently
-		# it -PP do not work properly (segfaulting). (Az)
-		[ "$(echo ${DISTCC_HOSTS} | wc -w)" -gt 1 -a "${ECPUS}" -qt 1 ] && \
-			export ECPUS="$(echo ${DISTCC_HOSTS} | wc -w)"
-
-		export CC="distcc ${CC}"
-		export CXX="distcc ${CXX}"
-	fi
-
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
@@ -372,7 +331,7 @@ src_compile() {
 	# We use build.pl directly, as dmake tends to segfault. (Az)
 	if [ "${ECPUS}" -gt 1 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl --all -P ${ECPUS} product=full"
+		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full"
 	else
 		buildcmd="${S}/solenv/bin/build.pl --all product=full"
 	fi
