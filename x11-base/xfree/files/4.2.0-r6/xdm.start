@@ -1,6 +1,33 @@
 #!/sbin/runscript
-# Based upon a script Copyright (c) 1996-99 SuSE GmbH Nuernberg, Germany.  All rights reserved.
-# Not sure how much of the SuSE original is left.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r6/xdm.start,v 1.4 2002/03/04 22:45:15 azarah Exp $
+
+# This is here to serve as a note to myself, and future developers.
+#
+# Any Display manager (gdm,kdm,xdm) have the following problem:  if
+# it is started before any getty, and no vt is specified, it will
+# usually run on vt2.  When the getty on vt2 then starts, and the
+# DM is already started, the getty will take control of the keyboard,
+# leaving us with a "dead" keyboard.
+#
+# Resolution: add the following line to /etc/inittab
+#
+#  x:3:respawn:/etc/X11/startDM.sh
+#
+# and have /etc/X11/startDM.sh start the DM in -nodaemon mode if
+# a lock is present, else just fall through (with a big enouth
+# delay so that init will not "detect" a respawning process and 
+# halt if for some odd time).
+#
+# We then use /etc/init.d/xdm to control the presence of this
+# lock, and this should ensure that the getty's is always started
+# *before* the DM.
+#
+# Martin Schlemmer
+# aka Azarah
+# 04 March 2002
+
 
 # Start X Font Server before X
 depend() {
@@ -26,28 +53,29 @@ setup_dm() {
 	test ! -x "$EXE" && EXE=/usr/X11R6/bin/xdm
 
 	SERVICE=${EXE##*/}
-	PID="/var/run/xdm.pid"
 }
 
 start() {
 	setup_dm
-	ebegin "Starting ${SERVICE}"
-	start-stop-daemon --start --quiet --exe $EXE 1>&2
-	if [ -n "$?" ] ; then
-		# After a crash or a kill signal we may have
-		# a wrong ownership of /dev/console
-		chown root:tty /dev/console /dev/tty0
-		chmod 622 /dev/console /dev/tty0
-	else
-		eend $? "Error starting ${SERVICE}."
-	fi
+	ebegin "Setting up ${SERVICE}"
+	save_options service "$EXE"
+	eend 0
 }
 
 stop() {
-	setup_dm
-	ebegin "Stopping ${SERVICE}"
-	killall X
-	start-stop-daemon --stop --quiet --exe $EXE 1>&2
-	eend $? "Error stopping ${SERVICE}."
+	local myexe="`get_options service`"
+	local myservice=${myexe##*/}
+	ebegin "Stopping ${myservice}"
+	rm -f ${svcdir}/options/xdm/service
+	if [ "`ps -A | grep "${myservice}" `" ]
+	then
+		start-stop-daemon --stop --quiet \
+			--exe $myexe >/dev/null 2>/dev/null
+	fi
+	if [ "`ps -A | grep "X" `" ]
+	then
+		killall X >/dev/null 2>/dev/null
+	fi
+	eend $? "Error stopping ${myservice}."
 }
 
