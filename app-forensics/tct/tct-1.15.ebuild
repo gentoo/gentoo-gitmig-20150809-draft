@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.15.ebuild,v 1.1 2004/09/16 16:55:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/tct-1.15.ebuild,v 1.2 2004/09/17 09:56:34 ka0ttic Exp $
 
 inherit eutils
 
@@ -44,11 +44,8 @@ src_install() {
 		extras/findkey/findkey || die "extras installation failed"
 
 	# config
-	insinto /usr/lib/tct/conf
+	insinto /etc/tct
 	doins conf/* || die "conf installation failed"
-
-	insinto /usr/lib/tct/etc
-	doins etc/magic || die "etc installation failed"
 
 	# docs
 	newdoc extras/README README.extras || die "newdoc failed"
@@ -57,13 +54,13 @@ src_install() {
 		help-when-broken-into quick-start || die "doc installation failed"
 
 	rm man/man1/file.1
+	rm man/man5/magic.5
 	doman man/*/* || die "man installation failed"
 
 	# setup dirs/symlinks
 	keepdir /var/log/tct
 
-	dodir /etc
-	dosym /usr/lib/tct/conf /etc/tct || die "dosym failed"
+	dosym /etc/tct /usr/lib/tct/conf || die "dosym failed"
 
 	keepdir /var/lib/tct
 	dosym /var/lib/tct /usr/lib/tct/data || die "dosym failed"

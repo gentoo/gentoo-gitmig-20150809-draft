@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/tct
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.1 2004/09/16 16:55:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.2 2004/09/17 09:56:34 ka0ttic Exp $
+
+  17 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> files/tct-1.15-gentoo.diff,
+  tct-1.15.ebuild:
+  Converted to use sys-apps/file; Installs configs into /etc now rather than
+  installing a symlink.
 
 *tct-1.15 (16 Sep 2004)
 
