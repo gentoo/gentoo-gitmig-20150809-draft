@@ -1,0 +1,7 @@
+# ChangeLog for app-dicts/opendict
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.1 2004/08/13 21:15:02 pythonhead Exp $
+
+  13 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> :
+  Initial commit. Thanks <roma1390@uosis.mif.vu.lt> for the ebuild. bug #32120
+
