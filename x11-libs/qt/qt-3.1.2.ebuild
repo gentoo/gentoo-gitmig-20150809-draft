@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2.ebuild,v 1.1 2003/03/22 14:33:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2.ebuild,v 1.2 2003/04/05 23:30:45 hannes Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="3"
 LICENSE="QPL-1.0"
 
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="~x86 ~ppc ~sparc" # alpha removed temporarily as I wasn't sure about the special
+KEYWORDS="x86 ~ppc ~sparc" # alpha removed temporarily as I wasn't sure about the special
 # alpha stuff in src_unpack
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
@@ -53,6 +53,7 @@ src_unpack() {
 	cd ${S}
 	
 	epatch ${FILESDIR}/designer.diff
+	epatch ${FILESDIR}/${P}-qmlined.diff
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
