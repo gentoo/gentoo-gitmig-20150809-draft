@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/libswf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/ChangeLog,v 1.2 2002/08/06 22:05:54 seemant Exp $
 
 *libswf-0.99 (1 Feb 2002)
+
+  06 Aug 2002; Seemant Kulleen <seemant@gentoo.org> libswf-0.99.ebuild :
+
+  Made some changes to fix unpacking the tar.Z file and other changes as
+  outlined by wongs15@tartarus.uwa.edu.au (Steven Wong) in bug #6092
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
