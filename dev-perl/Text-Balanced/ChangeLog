@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Balanced
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Balanced/ChangeLog,v 1.8 2004/12/23 16:11:05 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Balanced/ChangeLog,v 1.9 2005/04/01 16:27:19 nigoro Exp $
+
+  02 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Text-Balanced-1.95.ebuild:
+  Stable on ppc64
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-Balanced-1.95.ebuild:
   added ~ppc64

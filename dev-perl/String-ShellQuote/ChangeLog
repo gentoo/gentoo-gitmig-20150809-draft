@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/String-ShellQuote
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.11 2005/03/05 11:27:02 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/ChangeLog,v 1.12 2005/04/01 16:25:49 nigoro Exp $
+
+  02 Apr 2005; Yuta SATOH <nigoro@gentoo.org>
+  String-ShellQuote-1.00-r1.ebuild:
+  Stable on ppc64
 
   05 Mar 2005; Yuta SATOH <nigoro@gentoo.org>
   String-ShellQuote-1.00-r1.ebuild:
