@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.0.ebuild,v 1.1 2004/09/07 13:42:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.0-r2.ebuild,v 1.1 2004/09/09 03:50:34 usata Exp $
 
 inherit gnome2 eutils
 
@@ -11,16 +11,19 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~amd64"
-IUSE="gnome gtk"
+IUSE="gnome gtk immqt immqt-bc"
 
+GTK_DEPEND=">=x11-libs/gtk+-2
+	>=dev-libs/atk-1
+	>=x11-libs/pango-1
+	>=dev-libs/glib-2"
 RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gconf-1.2
 		>=dev-libs/libxml2-2.5
 		>=gnome-base/orbit-2.8 )
-	gtk? ( >=x11-libs/gtk+-2
-		>=dev-libs/atk-1
-		>=x11-libs/pango-1
-		>=dev-libs/glib-2 )
+	gtk? ( ${GTK_DEPEND} )
+	immqt? ( ${GTK_DEPEND} )
+	immqt-bc? ( ${GTK_DEPEND} )
 	!app-i18n/scim-cvs
 	!<app-i18n/scim-chinese-0.4.0"
 DEPEND="${RDEPEND}
@@ -36,7 +39,7 @@ SCROLLKEEPER_UPDATE="0"
 USE_DESTDIR="1"
 
 has_gtk() {
-	if has_version '>=x11-libs/gtk-2' ; then
+	if has_version '>=x11-libs/gtk+-2' ; then
 		true
 	else
 		false
@@ -62,7 +65,7 @@ src_unpack() {
 
 src_compile() {
 	use gnome || G2CONF="${G2CONF} --disable-config-gconf"
-	use gtk || G2CONF="${G2CONF} --disable-panel-gtk --disable-setup-ui"
+	use gtk || use immqt || use immqt-bc || G2CONF="${G2CONF} --disable-panel-gtk --disable-setup-ui"
 	has_gtk || G2CONF="${G2CONF} --disable-gtk2-immodule"
 	gnome2_src_compile
 }
