@@ -1,12 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.6 2003/01/28 12:54:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.7 2003/01/28 13:00:29 hannes Exp $
 
 inherit kde-base eutils
-
-# Note: we set many vars e.g. DEPEND insteaed of extending them because this isn't a proper KDE app,
-# it only links against arts. So we need set-kdedir, but almost nothing else. So make sure it continues
-# to override e.g. src_install.
 
 MY_P=${PN/-/}-${PV}
 DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
@@ -32,9 +28,3 @@ src_compile() {
 	econf || die
 	emake || die
 }
-
-src_install() {                               
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING NEWS README
-}
-
