@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.6 2005/03/08 18:32:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.7 2005/03/10 03:01:59 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV//./-}.tar.gz
 	mirror://gentoo/${PN}-1.4.1-missing-doc.tar.bz2
 	mirror://sourceforge/tcl/tcl${TCLV}-src.tar.gz
 	mirror://sourceforge/tcl/tk${TKV}-src.tar.gz
-	doc? mirror://sourceforge/${PN}/course-1.1.tar.gz"
+	doc? ( mirror://sourceforge/${PN}/course-1.1.tar.gz )"
 LICENSE="${PN}"
 
 SLOT="0"
