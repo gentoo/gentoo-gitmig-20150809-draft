@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.11 2004/04/27 22:15:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.12 2004/05/17 16:14:45 usata Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	sys-devel/flex
 	sys-devel/bison
 	sys-apps/texinfo
-	tetex? ( app-text/tetex )"
+	tetex? ( virtual/tetex )"
 
 RDEPEND="virtual/glibc"
 
