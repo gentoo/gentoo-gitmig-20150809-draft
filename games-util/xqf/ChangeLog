@@ -1,6 +1,6 @@
-# ChangeLog for app-games/xqf
+# ChangeLog for games-util/xqf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.2 2003/09/10 20:27:06 vapier Exp $
 
   11 Jul 2003; Michael Sterrett <msterret@gentoo.org> xqf-0.9.12.ebuild:
   emake error message
@@ -45,7 +45,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.2 2003/09/10 20:27:06 vapier Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 
