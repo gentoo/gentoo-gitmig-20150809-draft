@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.1 2004/12/20 21:19:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.2 2004/12/31 11:26:09 lanius Exp $
 
 inherit eutils gnuconfig
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile () {
 	econf --disable-cups-install \
-		--disable-foomatic-install || die "econf failed"
+		$(use_enable ppds foomatic-install) || die "econf failed"
 
 	sed -i -e 's|/usr/share/cups|${prefix}/share/cups|g' \
 		-e 's|/usr/lib/cups|${prefix}/lib/cups|g' Makefile \
@@ -56,6 +56,8 @@ src_install() {
 	if ! use ppds; then
 		rm -fR ${D}/usr/share/ppd
 	fi
+
+	use ppds && rm -f ${D}/usr/bin/foomatic-rip
 
 	if use foomaticdb ; then
 		cd ../foomatic-db-hpijs-${DB_V}
