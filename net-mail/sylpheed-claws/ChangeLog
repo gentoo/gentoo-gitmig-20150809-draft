@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.20 2002/10/25 16:47:45 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.21 2002/11/26 11:39:11 bcowan Exp $
+
+*sylpheed-claws-0.8.6 (26 Nov 2002)
+
+  26 Nov 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.6.ebuild,
+  files/digest-sylpheed-claws-0.8.6:
+
+  Version bump, aspell is currently broken in this build with gcc-3.2.1.
 
 *sylpheed-claws-0.8.5 (09 Oct 2002)
 
@@ -12,7 +19,7 @@
   Ebuild now installs README files, etc.
 
   09 Oct 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.5.ebuild,
-  files/digest-sylpheed-claws-0.8.5 :
+  files/digest-sylpheed-claws-0.8.5:
   
   Version bump with minor bugfixes.
 
