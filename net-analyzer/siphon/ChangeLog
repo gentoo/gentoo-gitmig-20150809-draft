@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/siphon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.1 2003/10/20 18:40:10 port001 Exp $
+
+  20 Oct 2003; Ian Leitch <port001@gentoo.org> :
+  New package, thanks  Cory McWilliams <mcwilc@rpi.edu> #22181
+
