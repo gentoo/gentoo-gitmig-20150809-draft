@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.67 2005/04/02 03:30:28 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.68 2005/04/04 19:25:24 joem Exp $
+
+  04 Apr 2005; Joe McCann <joem@gentoo.org> gnome-icon-theme-2.10.0.ebuild:
+  Add gtk-update-icon-cache at the end of the build so icons get cached and
+  load faster
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   gnome-icon-theme-2.8.0.ebuild:
