@@ -1,8 +1,8 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.48.5.ebuild,v 1.1 2002/12/12 16:46:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.48.5.ebuild,v 1.2 2003/02/10 14:12:38 seemant Exp $
 
-IUSE="oggvorbis"
+IUSE="oggvorbis cdr gnome"
 
 inherit perl-module
 
@@ -20,16 +20,16 @@ SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~x86"
 
-DEPEND=">=media-video/transcode-0.6.2
-	media-gfx/imagemagick
+DEPEND="oggvorbis? ( media-sound/ogmtools )
 	gnome? ( gnome-extra/gtkhtml )
-	cdr? ( >=media-video/vcdimager-0.7.12 )
-	cdr? ( >=app-cdr/cdrdao-1.1.7 )
-	cdr? ( app-cdr/cdrtools )
+	cdr? ( >=media-video/vcdimager-0.7.12
+		>=app-cdr/cdrdao-1.1.7
+		app-cdr/cdrtools )
+	>=media-video/transcode-0.6.2
+	media-gfx/imagemagick
 	dev-perl/gtk-perl
 	dev-perl/Storable
-	dev-perl/Event
-	oggvorbis? ( media-sound/ogmtools )"
+	dev-perl/Event"
 
 RDEPEND=">=net-analyzer/fping-2.3"
 

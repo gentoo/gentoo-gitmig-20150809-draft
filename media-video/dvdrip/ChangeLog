@@ -1,8 +1,13 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.8 2002/12/12 16:46:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.9 2003/02/10 14:12:38 seemant Exp $
 
 *dvdrip-0.48.5 (16 Nov 2002) 
+
+   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+   removed crusty old ebuilds and added/updated IUSE, per bug #7981 and
+   Michiel de Bruijne <M.deBruijne@HCCNet.nl>
 
    12 Dec 2002; phoen][x <phoenix@gentoo.org> dvdrip-0.48.5.ebuild,
    files/digest-dvdrip-0.48.5:
