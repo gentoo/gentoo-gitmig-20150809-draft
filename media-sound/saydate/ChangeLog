@@ -3,7 +3,10 @@
 # $Header
 
 *saydate-0.3.0 (4 Nov 2002)
-  
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> saydate-0.3.0.ebuild:
+  Change supersed dependencies
+
   4 Nov 2002; Matt Keadle <mkeadle@gentoo.org> saydate-0.3.0.ebuild :
 
   Added initial ChangeLog which should be updated whenever the package is
