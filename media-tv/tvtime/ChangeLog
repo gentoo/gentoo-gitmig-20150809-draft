@@ -1,6 +1,16 @@
 # ChangeLog for media-tv/tvtime
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.16 2004/07/21 03:34:36 lv Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.17 2005/02/24 08:16:51 obz Exp $
+
+*tvtime-0.9.15 (24 Feb 2005)
+
+  24 Feb 2005; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  +files/tvtime-0.9.15-pic.patch, +tvtime-0.9.15.ebuild:
+  New version of tvtime, 0.9.15 - as requested in bug #66293. 
+  Thanks to contributors there, especially 
+  <bugtracker@surasoft.com> and <dgp85@users.sourceforge.net> 
+  for their help. Also includes a patch for PIC/__PIC__ 
+  from <co@kevquinn.com>, see bug #24227.
 
   20 Jul 2004; Travis Tilley <lv@gentoo.org> tvtime-0.9.12.ebuild:
   stable on amd64

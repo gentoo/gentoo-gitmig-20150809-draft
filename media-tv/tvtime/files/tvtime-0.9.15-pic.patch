@@ -1,0 +1,12 @@
+diff -ur tvtime-0.9.15/src/cpu_accel.c tvtime-0.9.15-patched/src/cpu_accel.c
+--- tvtime-0.9.15/src/cpu_accel.c	2004-06-20 12:30:11.000000000 +0800
++++ tvtime-0.9.15-patched/src/cpu_accel.c	2005-02-24 16:01:46.665413504 +0800
+@@ -35,7 +35,7 @@
+     int AMD;
+     uint32_t caps;
+ 
+-#ifndef PIC
++#if !defined(PIC) && !defined(__PIC__)
+ #define cpuid(op,eax,ebx,ecx,edx)	\
+     __asm__ ("cpuid"			\
+ 	     : "=a" (eax),		\

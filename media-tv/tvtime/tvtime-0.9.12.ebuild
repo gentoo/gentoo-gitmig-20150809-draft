@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.12.ebuild,v 1.6 2004/07/21 03:34:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-0.9.12.ebuild,v 1.7 2005/02/24 08:16:51 obz Exp $
 
 DESCRIPTION="High quality television application for use with video capture cards."
 HOMEPAGE="http://tvtime.net/"
