@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.10.4.ebuild,v 1.1 2001/05/22 15:16:33 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.10.4.ebuild,v 1.2 2001/09/29 23:23:21 drobbins Exp $
 
 #P=
 A=TiMidity++-${PV}.tar.bz2
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.0
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( >=x11-libs/gtk+-1.2.8 )
 	slang? ( >=sys-libs/slang-1.4 )
-	ogg? ( >=media-libs/libvorbis-1.0_beta4 )"
+	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 src_compile() {
     local myconf
@@ -58,7 +58,7 @@ src_compile() {
     then
 	audios="${audios},esd"
     fi
-    if [ "`use ogg`" ]
+    if [ "`use vorbis`" ]
     then
 	audios="${audios},vorbis"
     fi
