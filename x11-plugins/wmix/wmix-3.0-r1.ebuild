@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.0-r1.ebuild,v 1.8 2004/03/26 23:10:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.0-r1.ebuild,v 1.9 2004/06/08 12:42:49 dholm Exp $
 
 IUSE=""
 DESCRIPTION="Dockapp mixer for OSS or ALSA"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ne.jp/asahi/linux/timecop/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc amd64"
+KEYWORDS="x86 ~sparc amd64 ~ppc"
 
 DEPEND="virtual/x11"
 
