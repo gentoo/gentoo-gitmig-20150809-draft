@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/packages,v 1.1 2004/09/20 00:38:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/packages,v 1.2 2005/04/06 01:55:59 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -18,3 +18,6 @@
 *>=sys-devel/binutils-2.15.90.0.1.1-r1
 *>=sys-devel/gcc-3.3.4
 *>=sys-libs/glibc-2.3.4.20040619-r1
+
+# so the upgrade to 2005.1 can work
+<app-emulation/emul-linux-x86-glibc-1000
