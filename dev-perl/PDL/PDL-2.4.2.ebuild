@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.2 2005/03/08 18:22:42 mcummings Exp $
-
-IUSE="opengl"
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.3 2005/03/13 03:35:13 vapier Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="PDL Perl Module"
-SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~csoe/${P}/"
-SLOT="0"
+SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
+
 LICENSE="Artistic as-is"
-KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc sparc x86"
+IUSE="opengl"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Term-ReadLine-Perl
 	>=sys-apps/sed-4"
 
-mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
+mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* Release_Notes TODO"
 
 
 pkg_setup() {
@@ -33,26 +33,21 @@ pkg_setup() {
 	echo ""
 	epause 2
 }
-src_unpack() {
 
+src_unpack() {
 	unpack ${A}
 
 	#open gl does not work at the moment
-	if use opengl
-	then
-		:
-	else
+	if ! use opengl ; then
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
 
 	# Unconditional -fPIC for the lib (#55238)
 	sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" ${S}/Lib/Slatec/Makefile.PL
-
 }
 
-src_install () {
-
+src_install() {
 	perl-module_src_install
 	dodir /usr/share/doc/${PF}/html
 	eval `perl '-V:version'`
@@ -70,7 +65,6 @@ src_install () {
 	done
 	cp ${S}/Doc/scantree.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
 	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
-
 }
 
 pkg_postinst() {
