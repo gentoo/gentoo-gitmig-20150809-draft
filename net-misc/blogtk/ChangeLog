@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/blogtk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.4 2004/06/24 23:37:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.5 2004/09/26 18:43:20 liquidx Exp $
+
+*blogtk-1.0 (26 Sep 2004)
+
+  26 Sep 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/blogtk-1.0-destdir.patch, +blogtk-1.0.ebuild:
+  fixed makefile to work with DESTDIR to avoid sandbox violations. version bump
+  (#50938)
 
   24 Mar 2004; Martin Holzer <mholzer@gentoo.org> blogtk-0.8.ebuild,
   blogtk-0.9.ebuild:
