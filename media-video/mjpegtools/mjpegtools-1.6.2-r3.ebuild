@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.8 2004/10/23 21:20:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.9 2004/11/03 19:30:48 hansmi Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -40,11 +40,13 @@ src_unpack() {
 	# remove checks for gtk in configure in
 	use gtk || epatch ${FILESDIR}/${P}-nogtk.patch
 
-	# Fix an error in the detection of the altivec-support
-	# in the compiler
-	epatch "${FILESDIR}/altivec-fix-${PV}.patch"
-	sed -i 's:-O3::' configure.in
-	autoreconf || die
+	if use ppc; then
+		# Fix an error in the detection of the altivec-support
+		# in the compiler
+		epatch "${FILESDIR}/altivec-fix-${PV}.patch"
+		sed -i 's:-O3::' configure.in
+		autoreconf || die
+	fi
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
