@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.8 2004/06/28 21:59:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.9 2004/07/09 20:23:43 eldad Exp $
 
 inherit webapp-apache
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="mysql samba"
 
 DEPEND="dev-lang/perl
