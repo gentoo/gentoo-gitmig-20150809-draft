@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.4.ebuild,v 1.2 2002/12/13 19:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.4.ebuild,v 1.3 2003/01/13 04:30:37 vapier Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Playstation emulator"
@@ -37,6 +37,11 @@ src_compile() {
 	    -e 's:Pcsx.cfg:~/.pcsx/config:' \
 	    <LnxMain.c >LnxMain.tmp
 	mv -f LnxMain.tmp LnxMain.c
+
+	for f in `find ${WORKDIR} -regex '.*\.[ch]'` ; do
+		cp ${f}{,.old}
+		sed -e 's/$//' ${f}.old > ${f}
+	done
 
 	emake CC=gcc OPTIMIZE="${CFLAGS} -fPIC -fomit-frame-pointer -finline-functions -ffast-math" || die
 	mv pcsx pcsx.bin
