@@ -1,0 +1,11 @@
+--- work/xca-0.5.2/configure	2004-04-23 10:22:57.000000000 +0200
++++ work/xca-0.5.2/configure	2005-02-21 21:37:42.000000000 +0100
+@@ -94,7 +94,7 @@
+  
+ 
+ ######################## DB
+-subdirs="/db /db4 /db3"
++subdirs="/db4.1 /db /db4 /db3"
+ search_includes db_cxx.h || err "The Berkeley DB header files were not found"
+ search_lib db_cxx db4_cxx db_cxx-4 db3_cxx db_cxx-3 || err "The Berkeley DB library was not found. Try installing db-dev" 
+ ## The fun of NPTL... (Thx Enrico Scholz)

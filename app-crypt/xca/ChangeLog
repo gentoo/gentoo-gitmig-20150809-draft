@@ -1,0 +1,12 @@
+# ChangeLog for app-crypt/xca
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.1 2005/03/01 10:16:40 dragonheart Exp $
+
+*xca-0.5.1 (01 Mar 2005)
+
+  01 Mar 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/Rules.mak-prefix.patch, +files/configure-db-4.1.patch,
+  +files/xca-0.5.1-qt.diff, +xca-0.5.1.ebuild:
+  Initial import as per bug #73955. Thanks to Michael Krelin
+  <gentoodoo@klever.net> for the numberous patches and model ebuilds
+

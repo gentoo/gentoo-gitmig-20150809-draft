@@ -1,0 +1,13 @@
+--- work/xca-0.5.2/Rules.mak	2004-04-15 01:36:54.000000000 +0200
++++ work/xca-0.5.2/Rules.mak	2005-02-22 10:15:30.157857504 +0100
+@@ -2,8 +2,8 @@
+ 
+ all: target.obj
+ 
+-ifneq ($(prefix),)
+-  CFLAGS+= -DPREFIX=\"$(prefix)\"
++ifneq ($(inst_prefix),)
++  CFLAGS+= -DPREFIX=\"$(inst_prefix)\"
+ endif
+ 
+ ifneq ($(basedir),)
