@@ -1,0 +1,11 @@
+--- eroaster-2.1.0.0.3.orig/main.py
++++ eroaster-2.1.0.0.3/main.py
+@@ -98,7 +98,7 @@
+     cat = Logger().get_instance()
+     cat.warn("Python CDDB support not available")
+
+-lockfile = "%s/.eroaster.lock" % (os.path.dirname(mktemp()))
++lockfile = "%s/%s/.eroaster.lock" % (environ["HOME"], configdirectory)
+
+ # -----------------------------------------------------------------------------
+ # Project Class
