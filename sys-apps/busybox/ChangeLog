@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.4 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.5 2002/07/21 18:27:33 gerk Exp $
 
 *busybox-0.50.ebuild (14 July 2002)
 
@@ -8,6 +8,9 @@
   Added KEYWORDS, SLOT.
 
 *busybox-0.60.3 (21 May 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (ppc)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> busybox-0.60.3.ebuild :
   Added KEYWORDS, SLOT.

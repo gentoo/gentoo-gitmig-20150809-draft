@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.4 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.5 2002/07/21 18:23:41 gerk Exp $
 
 *at-3.1.8-r6.ebuild (14 July 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (ppc)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> at-3.1.8-r6.ebuild :
   Added KEYWORDS, SLOT.
