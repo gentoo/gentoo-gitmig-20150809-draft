@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.25 2003/02/12 06:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.26 2003/02/12 19:09:10 gmsoft Exp $
+
+  12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added -fPIC to CFLAGS for hppa needed by many apps linking to openssl.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
