@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.6 2002/10/07 03:42:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.7 2002/10/07 22:53:54 lostlogic Exp $
 
 *gentoo-sources-2.4.19-r10 (06 Oct 2002)
 
@@ -14,7 +14,9 @@
   so everyone who has been asking for it finally gets their way because
   I hate being unpopular.  I hope you all enjoy XFS, it is enabled by a
   hidden useflag so set USE="xfs" to turn it on for this kernel.  Please
-  let me know your results.
+  let me know your results.  Apparently with these patches enabled, JFS
+  causes corruption due to some strange interrraction.  If you use JFS
+  and XFS use xfs-sources-2.4.19-r2 please.
 
   New in this release:
   - Dropped ext3-htree due to corruption with current e2fsprogs
