@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.391 2004/05/27 19:56:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.392 2004/05/27 20:10:44 tester Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -207,6 +207,7 @@ media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables support for a codec used by many camcorders
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
+media-video/mpeg4ip:v4l2 - Enable video4linux2 support
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:matroska - Enables support for the matroska video format
 media-video/mplayer:v4l - Enables video4linux support
