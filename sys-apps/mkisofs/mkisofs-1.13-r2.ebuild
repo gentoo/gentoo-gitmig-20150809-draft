@@ -1,17 +1,25 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.3 2002/05/05 17:54:58 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.4 2002/05/11 18:19:24 agenkin Exp $
 # -r2 by Dan Armak
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Premastering program for creating iso9660 volumes"
-SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/mkisofs/${P}.tar.gz"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/mkisofs.html"
+
+S=${WORKDIR}/${P}
+SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/mkisofs/${P}.tar.gz"
+
+src_compile() {
+
+	emake || die
+
+}
 
 src_install() {							   
 	
 	into /usr
+	local DIR
 
 	#looks like these are no longer used
 	[ -d mkisofs/OBJ/i686-linux-cc ] && DIR=i686-linux-cc
