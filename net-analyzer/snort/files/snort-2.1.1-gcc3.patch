@@ -1,0 +1,12 @@
+diff -ur snort-2.0.2/src/util.h snort-2.0.2-gentoo/src/util.h
+--- snort-2.0.2/src/util.h	2003-03-27 09:59:30.000000000 +1200
++++ snort-2.0.2-gentoo/src/util.h	2003-10-10 02:11:41.000000000 +1300
+@@ -39,6 +39,8 @@
+ #include "strlcpyu.h"
+ #endif
+ 
++#include <sys/types.h>
++
+ extern u_long netmasks[33];
+ 
+ /* Self preservation memory control struct */

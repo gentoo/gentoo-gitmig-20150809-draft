@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.33 2004/03/08 17:23:10 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.34 2004/03/09 00:55:52 mboman Exp $
+
+*snort-2.1.1 (09 Mar 2004)
+
+  09 Mar 2004; Michael Boman <mboman@gentoo.org> snort-2.1.1.ebuild,
+  files/2.1.1-libnet-1.0.patch, files/snort-2.1.1-gcc3.patch,
+  files/snort-2.1.1-pgsql.patch:
+  New upstream version. Closes #44067.
 
   08 Mar 2004; Michael Boman <mboman@gentoo.org> files/2.0.6-libnet-1.0.patch:
   Added missing file. Closing bug #43990.
