@@ -1,0 +1,7 @@
+# ChangeLog for app-text/gnu-gs-fonts-std
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnu-gs-fonts-std/ChangeLog,v 1.1 2003/01/27 21:10:32 lordvan Exp $
+
+*gnu-gs-fonts-std-6.0 (27 Jan 2003)
+  27 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org>: gnu-gs-fonts-std-6.0.ebuild
+  initial Version (from Kfir Ozer <ufk2k@yahoo.com>) bug #11528
