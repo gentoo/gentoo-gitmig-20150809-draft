@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.19 2004/12/11 00:38:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.20 2004/12/14 09:45:23 eradicator Exp $
 
 # DON'T inherit distutils because it will cause a circular dependency with python
 #inherit distutils
@@ -16,8 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 
 IUSE=""
 
-DEPEND="sys-libs/zlib
-	virtual/python"
+DEPEND="sys-libs/zlib"
 
 src_compile() {
 	python setup.py build || die

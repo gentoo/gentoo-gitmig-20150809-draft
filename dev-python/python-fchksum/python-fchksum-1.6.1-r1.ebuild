@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1-r1.ebuild,v 1.24 2004/12/11 00:38:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1-r1.ebuild,v 1.25 2004/12/14 09:45:23 eradicator Exp $
 
 # DON'T inherit distutils because it will cause a circular dependency with python
 #inherit distutils
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="sys-libs/zlib
-	virtual/python"
+DEPEND="sys-libs/zlib"
 
 src_compile() {
 	python setup.py build || die
