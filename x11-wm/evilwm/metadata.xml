@@ -7,4 +7,8 @@
 	real estate and provides good keyboard control. It is currently based on 
 	aewm.
 	</longdescription>
+	<maintainer>
+	    <email>aether@gentoo.org</email>
+    	<name>Jason A. Mobarak</name>
+	</maintainer>
 </pkgmetadata>
