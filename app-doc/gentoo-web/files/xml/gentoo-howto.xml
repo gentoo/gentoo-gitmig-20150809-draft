@@ -3,15 +3,16 @@
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
-<author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
+<author title="Author"><mail link="woodchip@gentoo.org">Donny Davies</mail></author>
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+<author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
 <abstract>This document describes the Gentoo Linux Portage system, how
 to create new packages for Gentoo, and is also meant to be somewhat of
 a standard for the Gentoo Developers. It is a work in progress, and is
 constantly being updated and changed. It is by no means
 complete.</abstract>
-<version>1.0</version>
-<date>11 Aug 2001</date>
+<version>1.1</version>
+<date>21 Sep 2001</date>
 
 <!--
 
@@ -465,7 +466,7 @@ default installation destinations are mostly correct, with a few exceptions:</p>
 <path>/usr/bin</path> or <path>/usr/sbin</path>, then the program's
 corresponding man page should be installed into the <path>/usr/share/man</path>
 tree.  This can often be accomplished by specifying a  <c>./configure
---mandir=${prefix}/share/man</c> in the ebuild.</li>
+--mandir=/usr/share/man</c> in the ebuild.</li>
 
 <li>GNU info files should always be installed to <path>/usr/share/info</path>,
 <e>even if the info files are about X11, GNOME or KDE-specific programs or
