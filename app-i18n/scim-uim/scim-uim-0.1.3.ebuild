@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.3.ebuild,v 1.5 2005/01/21 06:29:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/scim-uim-0.1.3.ebuild,v 1.6 2005/02/01 07:22:30 usata Exp $
 
 inherit eutils
 
 DESCRIPTION="scim-uim is an input module for Smart Common Input Method (SCIM) which uses uim as backend"
-HOMEPAGE="http://freedesktop.org/~suzhe/"
-SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
+HOMEPAGE="http://www.scim-im.org/"
+SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	if has_version '=app-i18n/uim-0.4.5-r1' || has_version 'app-i18n/uim-svn' ; then
 		sed -i -e "/^UIM_VERSION/s/=.*/=rev1650/" configure* || die
+		libtoolize --copy --force || die
 	fi
 }
 
