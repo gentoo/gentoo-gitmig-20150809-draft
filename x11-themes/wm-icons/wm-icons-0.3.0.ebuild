@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.3.0.ebuild,v 1.6 2004/06/24 23:38:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.3.0.ebuild,v 1.7 2004/06/28 22:55:52 agriffis Exp $
 
 inherit gnuconfig
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 alpha ppc"
 
 IUSE=""
 DEPEND=">=sys-apps/gawk-3
-	>=dev-lang/perl-5.8.0"
+	>=dev-lang/perl-5.8.0
+	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}
