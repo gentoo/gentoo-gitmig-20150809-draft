@@ -2,6 +2,21 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*fluxbox-0.1.13-r6 (06 Dec 2002)
+
+  06 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r5.ebui
+  ld
+  files/digest-fluxbox-0.1.13-r6
+
+  Update to build against Xft2. Remember patch release.
+
+*fluxbox-0.1.13-r5 (06 Dec 2002)
+
+  06 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r5.ebuild
+  files/digest-fluxbox-0.1.13-r5
+
+  Update to build against Xft2. No remember patch release.
+
 *fluxbox-0.1.13-r4 (26 Nov 2002)
 
   26 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r4.ebuild
