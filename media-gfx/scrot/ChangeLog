@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.4 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.5 2003/05/18 06:51:13 vladimir Exp $
 
 *scrot-0.6 (1 Feb 2002)
+
+  17 May 2003; Graham Forest <vladimir@gentoo.org> scrot-0.6.ebuild:
+  set ~ppc in keywords
 
   25 Mar 2003; Aron Griffis <agriffis@gentoo.org> scrot-0.6.ebuild:
   Add ~alpha to KEYWORDS
