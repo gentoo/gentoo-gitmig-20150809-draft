@@ -1,0 +1,99 @@
+--- drivers/cli/sdl-joystick.c.orig	2003-06-21 22:49:24.000000000 -0500
++++ drivers/cli/sdl-joystick.c	2003-07-10 19:10:38.000000000 -0500
+@@ -143,20 +143,12 @@
+ /* Configure a joystick axis. */
+ void AConfig (int n, int a)
+ {
+-        Sint16 lastaxe[64];
+-        int numaxes;
+-        int axis;
++	SDL_Event event;
+ 
+ 	WNoInput();
+ 
+         joyAMap[n][a] = a;
+ 
+-        numaxes=SDL_JoystickNumAxes(jo[n]);
+-        if(numaxes>64) numaxes=64;
+-
+-        for(axis=0;axis<numaxes;axis++)	/* Pre-load. */
+-		lastaxe[axis]=SDL_JoystickGetAxis(jo[n], axis);
+-
+ 	while (1)
+         {
+                 uint8 t;
+@@ -167,31 +159,26 @@
+                 }
+                 else
+                         break;
+-               
+-                SDL_JoystickUpdate();
+-
+-                for (axis=0;axis<numaxes;axis++) {
+-                	if (abs((Sint32)SDL_JoystickGetAxis(jo[n],axis)-lastaxe[axis]) > 8192) {
+-               			joyAMap[n][a] = axis;
+-					/* 4096 should be good enough to account for any jitter. */
+-                                	while (abs((Sint32)SDL_JoystickGetAxis(jo[n],axis)-lastaxe[axis]) > 4096) {
+-                                        	SDL_JoystickUpdate();
+-                                        	SDL_Delay(50);
+-                      			}
+-                                        goto endaconfig;
+-                	}
+-                }
+-                SDL_Delay(100);
+-        }
+-
+-	endaconfig:
+-	WNoInput();
++	
++		SDL_JoystickUpdate();
++		if (SDL_PollEvent(&event) && (event.type == SDL_JOYAXISMOTION))
++		{
++			// Make sure the joystick was moved by some significant amount
++			if ((event.jaxis.value < -3000) || (event.jaxis.value > 3000))
++			{
++	         		joyAMap[n][a] = event.jaxis.axis;
++			 	WNoInput();
++				return;
++			}
++		}
++	}
+ 	return;
+ }
+ 
+ /* Configure a joystick button. */
+ void BConfig (int n, int b)
+ {
++	SDL_Event event;
+ 	WNoInput();
+ 	joyBMap[n][b] = 0;
+ 	while (1)
+@@ -206,23 +193,15 @@
+ 			break;
+ 		
+ 		SDL_JoystickUpdate();
++
++		if (SDL_PollEvent(&event) && event.type == SDL_JOYBUTTONDOWN)
+ 		{
+-                       int buttons;
+-                       for (buttons = SDL_JoystickNumButtons(jo[n])-1;buttons >= 0;buttons--) {
+-                               if (SDL_JoystickGetButton(jo[n],buttons)) {
+-                                       joyBMap[n][b] = buttons+1;
+-                                       while (SDL_JoystickGetButton(jo[n], buttons)) {
+-                                               SDL_JoystickUpdate();
+-                                               SDL_Delay(50);
+-                                       }
+-                                       goto endbconfig;
+-                               }
+-                       }
++			joyBMap[n][b] = event.jbutton.button+1;
++			WNoInput();
++			return;
+ 		}
+-	   	SDL_Delay(100);
+ 	}
+ 
+-	endbconfig:
+ 	WNoInput();
+ 	return;
+ }
