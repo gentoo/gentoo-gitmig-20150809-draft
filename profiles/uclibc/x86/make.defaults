@@ -3,6 +3,7 @@ GRP_STAGE23_USE="x86 berkdb ncurses python readline zlib uclibc"
 STAGE1_USE="uclibc"
 
 ARCH="x86"
+LIBC="uclibc"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 
