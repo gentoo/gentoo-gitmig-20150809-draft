@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.ebuild,v 1.8 2004/12/04 02:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.1 2004/12/05 04:19:34 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~sh -sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~sh ~sparc ~x86"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
@@ -39,17 +39,33 @@ GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #GCC_MANPAGE_VERSION="3.3.4"
 #BRANCH_UPDATE="20041025"
 PATCH_VER="1.0"
-PIE_VER="8.7.6.7"
+PIE_VER="8.7.7"
 PIE_CORE="gcc-3.3.5-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_3_2"
 PP_FVER="${PP_VER//_/.}-3"
 HTB_VER="1.00"
+#HTB_GCC_VER=""
 
 ETYPE="gcc-compiler"
 
-#PIEPATCH_EXCLUDE="upstream/02_all_gcc-3.3.3-v8.7.1-pie-rs6000.patch.bz2"
-HARDENED_GCC_WORKS="x86 sparc amd64 hppa"
+# arch/libc configurations known to be stable with {PIE,SSP}-by-default
+SSP_STABLE="x86 sparc amd64"
+SSP_UCLIBC_STABLE=""
+PIE_GLIBC_STABLE="x86 sparc amd64"
+PIE_UCLIBC_STABLE="x86 mips ppc"
+
+# arch/libc configurations known to be broken with {PIE,SSP}-by-default
+SSP_UNSUPPORTED="hppa"
+SSP_UCLIBC_UNSUPPORTED="${SSP_UNSUPPORTED}"
+PIE_UCLIBC_UNSUPPORTED="alpha amd64 arm hppa ia64 m68k ppc64 s390 sh sparc"
+PIE_GLIBC_UNSUPPORTED="hppa"
+
+# whether we should split out specs files for multiple {PIE,SSP}-by-default
+# and vanilla configurations.
 SPLIT_SPECS="${SPLIT_SPECS:="true"}"
+
+#GENTOO_PATCH_EXCLUDE=""
+#PIEPATCH_EXCLUDE=""
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -74,6 +90,8 @@ gcc_do_filter_flags() {
 
 
 chk_gcc_version() {
+	mkdir -p "${WORKDIR}"
+
 	# This next bit is for updating libtool linker scripts ...
 	local OLD_GCC_VERSION="`gcc -dumpversion`"
 	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
@@ -116,13 +134,21 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-getoff.patch
 		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-ldm.patch
 	fi
+
+	# Anything useful and objc will require libffi. Seriously. Lets just force
+	# libffi to install with USE="objc", even though it normally only installs
+	# if you attempt to build gcj.
+	if use objc && ! use gcj ; then
+		epatch ${FILESDIR}/3.3.4/libffi-without-libgcj.patch
+		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
+	fi
 }
 
 
 src_install() {
 	local x=
 
-	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
 	for x in ${WORKDIR}/build/gcc/include/*
 	do
@@ -171,27 +197,56 @@ src_install() {
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
 
+	# This one comes with binutils
+	rm -f ${D}${PREFIX}/lib/libiberty.a
+	rm -f ${D}${LIBPATH}/libiberty.a
+	[ -e ${D}/${PREFIX}/lib/32 ] && rm -rf ${D}/${PREFIX}/lib/32
+
+	# we dont want these in freaky non-versioned paths that dont ever get used
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
+	# and mips is just freaky in general ;p
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
+	# and finally, the non-bitdepth-or-ABI-specific freaky path
+	if [ -d ${D}/${LIBPATH}/../lib ] ; then
+		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../lib
+	fi
+	# we also dont want libs in /usr/lib*
+	if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
+		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
+		rm -rf ${D}/${PREFIX}/lib32/
+	elif [ -d ${D}/${PREFIX}/lib32 -a ! -d ${D}/${LIBPATH}/32 ] ; then
+		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${PREFIX}/lib32/
+	fi
+	if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
+		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
+		rm -rf ${D}/${PREFIX}/lib64/
+	elif [ -d ${D}/${PREFIX}/lib64 -a ! -d ${D}/${LIBPATH}/64 ] ; then
+		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${PREFIX}/lib64/
+	fi
+	if [ "$(get_multilibdir)" != "lib" ] ; then
+		mv ${D}/${PREFIX}/lib/*so*  ${D}/${PREFIX}/lib/*\.la \
+			 ${D}/${PREFIX}/lib/*\.a ${D}/${LIBPATH}
+	else
+		mv ${D}/${PREFIX}/lib/*so*  ${D}/${PREFIX}/lib/*\.la \
+			 ${D}/${PREFIX}/lib/*\.a ${D}/${LIBPATH}/32/
+	fi
+	# and sometimes crap ends up here too :|
+	mv ${D}/${LIBPATH}/../*.a ${D}/${LIBPATH}/../*.la ${D}/${LIBPATH}/../*so* \
+		${D}/${LIBPATH}/
+
+	# make sure the libtool archives have libdir set to where they actually
+	# -are-, and not where they -used- to be.
+	fix_libtool_libdir_paths "$(find ${D}/${LIBPATH} -name *.la)"
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if ! use build
 	then
 		cd ${D}${LIBPATH}
-
-		# Tell libtool files where real libraries are
-		for x in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la
-		do
-			if [ -f "${x}" ]
-			then
-				sed -i -e "s:/usr/lib:${LIBPATH}:" ${x}
-				mv ${x} ${D}${LIBPATH}
-			fi
-		done
-
-		# Move all the libraries to version specific libdir.
-		for x in ${D}${PREFIX}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}*
-		do
-			[ -f "${x}" -o -L "${x}" ] && mv -f ${x} ${D}${LIBPATH}
-		done
 
 		# Move Java headers to compiler-specific dir
 		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h
@@ -246,62 +301,8 @@ src_install() {
 		done
 	fi
 
-	# This one comes with binutils
-	rm -f ${D}${PREFIX}/lib/libiberty.a
-	rm -f ${D}${LIBPATH}/libiberty.a
-
-	[ -e ${D}/${PREFIX}/lib/32 ] && rm -rf ${D}/${PREFIX}/lib/32
-
 	cd ${S}
 	if ! use build && [ "${CHOST}" == "${CTARGET}" ] ; then
-		cd ${S}
-		docinto ${CTARGET}
-		dodoc ChangeLog* FAQ MAINTAINERS README
-		docinto ${CTARGET}/html
-		dohtml *.html
-		cd ${S}/boehm-gc
-		docinto ${CTARGET}/boehm-gc
-		dodoc ChangeLog doc/{README*,barrett_diagram}
-		docinto ${CTARGET}/boehm-gc/html
-		dohtml doc/*.html
-		cd ${S}/gcc
-		docinto ${CTARGET}/gcc
-		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use fortran ; then
-			cd ${S}/libf2c
-			docinto ${CTARGET}/libf2c
-			dodoc ChangeLog* README TODO *.netlib
-		fi
-		cd ${S}/libffi
-		docinto ${CTARGET}/libffi
-		dodoc ChangeLog* README
-		cd ${S}/libiberty
-		docinto ${CTARGET}/libiberty
-		dodoc ChangeLog* README
-		if use objc
-		then
-			cd ${S}/libobjc
-			docinto ${CTARGET}/libobjc
-			dodoc ChangeLog* README* THREADS*
-		fi
-		cd ${S}/libstdc++-v3
-		docinto ${CTARGET}/libstdc++-v3
-		dodoc ChangeLog* README
-		docinto ${CTARGET}/libstdc++-v3/html
-		dohtml -r -a css,diff,html,txt,xml docs/html/*
-		cp -f docs/html/17_intro/[A-Z]* \
-			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-
-		if use gcj
-		then
-			cd ${S}/fastjar
-			docinto ${CTARGET}/fastjar
-			dodoc AUTHORS CHANGES ChangeLog* NEWS README
-			cd ${S}/libjava
-			docinto ${CTARGET}/libjava
-			dodoc ChangeLog* HACKING NEWS README THANKS
-		fi
-
 		prepman ${DATAPATH}
 		prepinfo ${DATAPATH}
 	else
@@ -316,17 +317,6 @@ src_install() {
 		doins ${FILESDIR}/awk/fixlafiles.awk
 		exeinto /sbin
 		doexe ${FILESDIR}/fix_libtool_files.sh
-	fi
-
-	# we dont want these in freaky non-versioned paths that dont ever get used
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
-	# and mips is just freaky in general ;p
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
-	# and finally, the non-bitdepth-or-ABI-specific freaky path
-	if [ -d ${D}/${LIBPATH}/../lib ] ; then
-		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../lib
 	fi
 }
 
@@ -351,11 +341,20 @@ fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
 	fi
 }
 
+fix_libtool_libdir_paths() {
+	local dirpath
+	for archive in ${*} ; do
+		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
+		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
+	done
+}
+
 
 pkg_preinst() {
 
 	if [ ! -f "${WORKDIR}/.chkgccversion" ]
 	then
+		mkdir -p ${WORKDIR}
 		chk_gcc_version
 	fi
 

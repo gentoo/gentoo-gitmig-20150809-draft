@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.360 2004/12/04 01:41:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.361 2004/12/05 04:19:34 lv Exp $
+
+*gcc-3.3.5-r1 (04 Dec 2004)
+
+  04 Dec 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.3.4/libffi-without-libgcj.patch, +gcc-3.3.5-r1.ebuild,
+  -gcc-3.3.5.ebuild:
+  added libffi-without-gcj fix, fixed another libpath bug, and updated the pie
+  patches so that sparc works again. the ebuilds and pie patch revisions for
+  the latest 3.3 and 3.4 ebuilds are now in sync. re-keyworded as testing on
+  sparc
 
   03 Dec 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.3-r1.ebuild:
   keyworded as testing on previously supported archs, as well as ia64 which
