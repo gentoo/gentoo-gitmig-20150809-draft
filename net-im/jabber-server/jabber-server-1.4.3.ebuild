@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r4.ebuild,v 1.4 2003/11/18 20:57:43 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.3.ebuild,v 1.1 2003/11/18 20:57:43 luke-jr Exp $
 
-S="${WORKDIR}/jabber-${PV}"
+S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,MUC,AIM,MSN,ICQ and Yahoo transports"
 HOMEPAGE="http://www.jabber.org"
-SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
+SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 	!j-noaim? ( mirror://gentoo/aim-transport-stable-20030314.tar.gz
 	http://ftp.newaol.com/aim/win95/Install_AIM.exe )
 	!j-nomsn? ( http://msn-transport.jabberstudio.org/msn-transport-1.2.8pre5.tar.gz )
@@ -17,8 +17,8 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
-IUSE="ssl ldap"
+KEYWORDS="~x86"
+IUSE="ssl ldap ipv6"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} j-nomsn j-noaim j-noyahoo j-nomuconf j-nojud"
 
@@ -32,9 +32,8 @@ DEPEND="=dev-libs/pth-1.4.0
 	!j-nojud ? ( !=sys-libs/glibc-2.3.1 )"
 
 src_unpack() {
-	unpack jabber-${PV}.tar.gz
+	unpack jabberd-${PV}.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/mio_ssl.c.patch
 	if ! use j-nomsn; then
 		unpack msn-transport-1.2.8pre5.tar.gz
 		cd msn-transport*
@@ -65,9 +64,10 @@ src_compile() {
 	unset LC_ALL LC_CTYPE
 
 
-	local myconf
+	local myconf=""
 	cd ${S}
-	use ssl && myconf="--enable-ssl"
+	use ssl && myconf="$myconf --enable-ssl"
+	use ipv6 && myconf="$myconf --enable-ipv6"
 
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
 	sed 's:pstrdup(jabberd__runtime,HOME):"/var/spool/jabber":' jabberd/jabberd.c.orig > jabberd/jabberd.c
