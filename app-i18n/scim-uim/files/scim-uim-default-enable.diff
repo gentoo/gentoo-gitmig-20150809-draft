@@ -1,20 +1,6 @@
-Index: src/scim_uim_imengine.cpp
-===================================================================
-RCS file: /cvsroot/scim/scim-uim/src/scim_uim_imengine.cpp,v
-retrieving revision 1.9
-retrieving revision 1.10
 diff -u -r1.9 -r1.10
 --- src/scim_uim_imengine.cpp	21 Jun 2004 07:25:07 -0000	1.9
 +++ src/scim_uim_imengine.cpp	3 Jul 2004 13:29:44 -0000	1.10
-@@ -22,7 +22,7 @@
-  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
-  * Boston, MA  02111-1307  USA
-  *
-- * $Id: scim-uim-default-enable.diff,v 1.1 2004/08/03 18:49:22 usata Exp $
-+ * $Id: scim-uim-default-enable.diff,v 1.1 2004/08/03 18:49:22 usata Exp $
-  */
- 
- #define Uses_SCIM_UTILITY
 @@ -43,6 +43,7 @@
  #define scim_imengine_module_create_factory uim_LTX_scim_imengine_module_create_factory
  

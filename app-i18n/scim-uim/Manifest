@@ -3,5 +3,5 @@ MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 7ade4118cf6622d9a2569cd75b1fbad6 ChangeLog 1857
 MD5 f1a8f17cc29e5950b4a227f8f7f1fba1 scim-uim-0.1.1-r1.ebuild 1089
 MD5 2009c02c9830a0625a794229fe3e3143 files/digest-scim-uim-0.1.1 66
-MD5 bf35b949b1abade2bdaee372716f52a8 files/scim-uim-default-enable.diff 2076
+MD5 ec16e7c6e51b320d41f3cc0739b19c10 files/scim-uim-default-enable.diff 1561
 MD5 2009c02c9830a0625a794229fe3e3143 files/digest-scim-uim-0.1.1-r1 66
