@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.2 2003/07/09 15:26:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.3 2003/09/03 12:51:39 liquidx Exp $
 
 IUSE="ssl"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc -sparc "
+KEYWORDS="x86 ~ppc -sparc "
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.5.0
