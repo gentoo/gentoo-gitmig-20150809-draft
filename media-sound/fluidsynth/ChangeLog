@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/fluidsynth
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.1 2003/05/24 09:26:43 jje Exp $
+
+*fluidsynth-1.0.1 (24 May 2003)
+
+  24 May 2003; jje <jje@gentoo.org> fluidsynth-1.0.1.ebuild:
+  Initial revision.
+  
+  Submitted by: Jonathan Kraut <jkraut1@nyc.rr.com>
+
