@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r2.ebuild,v 1.1 2002/11/16 11:02:42 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r2.ebuild,v 1.2 2002/11/16 11:34:36 mkeadle Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
@@ -47,9 +47,11 @@ src_compile() {
 
 	econf
 	# static linking seems to work <rigo@home.nl>
-	ARCHTYPE=`uname -m`
+    [ `uname -m` = "ppc" ] \
+	        && ARCHTYPE="powerpc-unknown" \
+	        || ARCHTYPE="`uname -m`-pc"
 	if [ ${GCCPV} != "2.95.3" ] ; then
-		echo "COMPILERLIBS=/usr/lib/gcc-lib/i686-pc-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${ARCHTYPE}-pc-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
+		echo "COMPILERLIBS=/usr/lib/gcc-lib/${ARCHTYPE}-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/${ARCHTYPE}-pc-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
 	fi
 	# testsuite still fails to build under gcc-3.2
 	mv Makefile Makefile.orig
