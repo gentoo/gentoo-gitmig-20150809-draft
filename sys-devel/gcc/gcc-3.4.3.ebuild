@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.1 2004/11/07 22:15:22 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.2 2004/11/08 00:27:48 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -312,7 +312,7 @@ src_install() {
 		cd ${S}/gcc
 		docinto ${CTARGET}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use f77 ; then
+		if use fortran ; then
 			cd ${S}/libf2c
 			docinto ${CTARGET}/libf2c
 			dodoc ChangeLog* README TODO *.netlib

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.18 2004/10/23 00:30:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.19 2004/11/08 00:27:48 lv Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -94,7 +94,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~mips ~alpha arm -hppa ~amd64 -ia64 ~ppc64 s390"
-IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
+IUSE="static nls bootstrap java build X multilib gcj fortran objc hardened uclibc"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -394,7 +394,7 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++"
-		use f77 && gcc_lang="${gcc_lang},f77"
+		use fortran && gcc_lang="${gcc_lang},f77"
 		use objc && gcc_lang="${gcc_lang},objc"
 		use java && use gcj && gcc_lang="${gcc_lang},java"
 		# We do NOT want 'ADA support' in here!
@@ -673,7 +673,7 @@ src_install() {
 		cd ${S}/gcc
 		docinto ${CCHOST}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use f77
+		if use fortran
 		then
 			cd ${S}/libf2c
 			docinto ${CCHOST}/libf2c

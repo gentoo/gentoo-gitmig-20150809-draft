@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.27 2004/10/06 22:23:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.28 2004/11/08 00:27:48 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -133,7 +133,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64"
 
 KEYWORDS="-* ~x86 ~mips -hppa amd64 ppc64"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
@@ -527,7 +527,7 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++"
-		use f77 && gcc_lang="${gcc_lang},f77"
+		use fortran && gcc_lang="${gcc_lang},f77"
 		use objc && gcc_lang="${gcc_lang},objc"
 		use gcj && gcc_lang="${gcc_lang},java"
 		# We do NOT want 'ADA support' in here!
@@ -848,7 +848,7 @@ src_install() {
 		cd ${S}/gcc
 		docinto ${CCHOST}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use f77
+		if use fortran
 		then
 			cd ${S}/libf2c
 			docinto ${CCHOST}/libf2c
