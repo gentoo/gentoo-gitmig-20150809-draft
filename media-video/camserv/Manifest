@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1b413596b14f30649e0b6d1a68f321c2 ChangeLog 2280
 MD5 35df81807f6c6a2f5a1bb3942e6f3ac6 camserv-0.5.1-r2.ebuild 841
-MD5 288594cd3f8734e81582c15f35079c9e ChangeLog 2183
-MD5 2fe68dc23c0fc880a19d31818a461a03 camserv-0.5.0.ebuild 725
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 0cc8188d6f8abfc2eb25e9b9352283ac files/digest-camserv-0.5.1-r2 65
-MD5 bf0782107eda233c33ce533acf362e48 files/camserv.init 553
 MD5 fb27a1787753b6c9ee46b573c6b8fc5e files/camserv-0.5-errno.patch 3105
-MD5 c473cf955721d867b267d2ca2c0d32ae files/digest-camserv-0.5.0 65
+MD5 bf0782107eda233c33ce533acf362e48 files/camserv.init 553
+MD5 0cc8188d6f8abfc2eb25e9b9352283ac files/digest-camserv-0.5.1-r2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBplaJFdQwWVoAgN4RAhgHAKDbzpPEqSrM2L3R1Q0FLtj+/+1sowCfSxsG
+4naPKHFSPFaKI1ZTAzX2bgk=
+=oNaz
+-----END PGP SIGNATURE-----
