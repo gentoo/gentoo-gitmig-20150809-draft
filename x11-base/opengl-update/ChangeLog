@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.33 2004/07/17 03:25:31 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.34 2004/07/17 12:04:03 cyfred Exp $
+
+*opengl-update-1.8-r1 (17 Jul 2004)
+
+  17 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +opengl-update-1.8-r1.ebuild:
+  OK Making userspace fix the xfree problem which allows everyone to use
+  opengl-update-1.8
 
 *opengl-update-1.8 (17 Jul 2004)
 
