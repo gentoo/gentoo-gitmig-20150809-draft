@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.8 2003/03/11 11:20:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.9 2003/04/28 05:19:17 pylon Exp $
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> nas-1.6.ebuild:
+  Set ppc in KEYWORDS
+  At least one of the two nas-ebuilds have to be masked stable in order to get
+  KDE with nas-support to be compiled.  nas-1.6 compiled on my system, so I
+  don't see any objectives to leave it ~ppc
 
 *nas-1.6 (03 Feb 2003)
 
