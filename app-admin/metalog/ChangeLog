@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.12 2003/03/21 17:29:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.13 2003/06/13 00:22:09 pebenito Exp $
+
+*metalog-0.7 (12 Jun 2003)
+
+  12 Jun 2003; Chris PeBenito <pebenito@gentoo.org> metalog-0.7.ebuild,
+  files/metalog.confd:
+  New upstream version. The default behavior has changed. Buffering is now off
+  by default. Add -a to METALOG_OPTS in /etc/conf.d/metalog to turn it back on.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
