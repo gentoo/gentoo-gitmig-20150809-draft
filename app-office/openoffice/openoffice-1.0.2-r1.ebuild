@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2-r1.ebuild,v 1.1 2003/03/31 22:51:28 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,13 +26,14 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
 replace-flags "-O3" "-O2"
-# Needed to stop segfaults in tools
-append-flags "-fno-strict-aliasing"
+
+# Enable Bytecode Interpreter for freetype ...
+append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
 inherit gcc
 # We want gcc3 if possible!!!!
@@ -48,20 +49,22 @@ inherit virtualx
 
 
 LOC="/opt"
+FT_VER="2.1.3"
 STLP_VER="4.5.3"
 
 INSTDIR="${LOC}/OpenOffice.org${PV}"
 S="${WORKDIR}/oo_${PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
-SRC_URI="http://ny1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
-	http://sf1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
+SRC_URI="http://ny1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
+	http://sf1.mirror.openoffice.org/stable/${PV}/OOo_${PV}_source.tar.bz2
 	http://www.stlport.org/archive/STLport-${STLP_VER}.tar.gz
-	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z"
+	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
+	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -70,7 +73,10 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jdk-1.3.1"
+	>=virtual/jdk-1.3.1
+	virtual/lpr
+	ppc? ( >=sys-libs/glibc-2.2.5-r7
+	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh
@@ -91,15 +97,19 @@ pkg_setup() {
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
-		eerror " #  ebuild ${PORTDIR}/sys-devel/gcc/gcc-3.2-r1.ebuild merge"
+		eerror " #  ebuild ${PORTDIR}/sys-devel/gcc/gcc-3.2.1.ebuild merge"
 		eerror
 		eerror "Please make sure that you use the latest availible revision of"
-		eerror "gcc-3.2.  Thus if there is already a gcc-3.2-r2 out, use this"
-		eerror "rather than -r1."
+		eerror "gcc-3.2.  Thus if there is already a gcc-3.2.1-r2 out, use this"
+		eerror "rather than 3.2.1, etc."
 		eerror
-		eerror "As of writing, gcc-3.2 seemed to create the most stable builds."
-		eerror "Also, because OO is such a complex build, ONLY gcc-3.2 will be"
+		eerror "As of writing, gcc-3.2.1 seemed to create the most stable builds."
+		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.1 will be"
 		eerror "supported!"
+		eerror
+		eerror "This process is not highly recomended, as upgrading your compiler"
+		eerror "without upgrading your distribution can be detrimental to your "
+		eerror "installation of gentoo, unless you know what you're getting into"
 		eerror
 		die
 	fi
@@ -113,33 +123,73 @@ pkg_setup() {
 		eerror "system VM before proceeding:"
 		eerror
 		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-1.3.1"
+		eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
 		eerror " # env-update"
 		eerror " # source /etc/profile"
 		eerror
-		eerror "At the time of writing, this was version 1.3.1, so please"
-		eerror "adjust the version according to the version installed in"
+		eerror "Please adjust <VERSION> according to the version installed in"
 		eerror "/opt."
 		eerror
 		eerror "If you however want to test another JDK (not officially supported),"
 		eerror "you could do the following:"
 		eerror
 		eerror " # export FORCE_JAVA=yes"
-		eerror
+		eerror 
 		die
 	fi
 
 	ewarn "****************************************************************"
-	ewarn " To get this thing to build at all, I had to use less agressive"
-	ewarn " CFLAGS and CXXFLAGS.  If this build thus fails, and you edited"
-	ewarn " this ebuild at all, or used too agressive compiler flags ..."
-	ewarn
-	ewarn "   You HAVE been Warned!"
-	ewarn
+	ewarn " It is important to note that OpenOffice.org is a very fragile  "
+	ewarn " build when it comes to CFLAGS.  A number of flags have already "
+	ewarn " been filtered out.  If you experience difficulty merging this  "
+	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
+	ewarn " merge again.					               "
 	ewarn "****************************************************************"
 }
 
+oo_setup() {
+
+	unset LANGUAGE
+	unset LANG
+
+	export NEW_GCC="0"
+
+	if [ -x /usr/sbin/gcc-config ]
+	then
+		# Do we have a gcc that use the new layout and gcc-config ?
+		if /usr/sbin/gcc-config --get-current-profile &> /dev/null
+		then
+			export NEW_GCC="1"
+			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
+
+			# Just recheck gcc version ...
+			if [ "$(gcc-version)" != "3.2" ]
+			then
+				# See if we can get a gcc profile we know is proper ...
+				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
+				then
+					export PATH="$(/usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1):${PATH}"
+					export GCC_PROFILE="${CHOST}-3.2.1"
+				else
+					eerror "This build needs gcc-3.2 or later!"
+					eerror
+					eerror "Use gcc-config to change your gcc profile:"
+					eerror
+					eerror "  # gcc-config $CHOST-3.2.1"
+					eerror
+					eerror "or whatever gcc version is relevant."
+					die
+				fi
+			fi
+		fi
+	fi
+
+	export JAVA_BINARY="`which java`"
+}
+
 src_unpack() {
+
+	oo_setup
 
 	cd ${WORKDIR}
 	unpack OOo_${PV}_source.tar.bz2 gpc231.tar.Z
@@ -150,71 +200,49 @@ src_unpack() {
 
 	cd ${S}
 
-	einfo "Applying patches..."
-	# This allows JDK 1.4.0 to be used (Prez)
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.0-configure.patch || die
-
-	# Get OO to build with gcc-3.2's libstdc++.so (Az)
-	if [ "$(gcc-version)" = "3.2" ]
-	then
-		patch -p1 < ${FILESDIR}/${PV}/${P}-use-libstdc++-5.0.0.patch || die
-	fi
-
-	# Debian patch to enable build of zipdep
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.0-zipdep-not-found.patch || die
-
-	# Some Debian patches to get the build to use $CC and $CXX,
-	# thanks to nidd from #openoffice.org
-	patch -p1 < ${FILESDIR}/${PV}/${P}-gcc-version-check.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-set-compiler-vars.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-use-compiler-vars.patch || die
-	# Update configure before we do anything else.
-	cd ${S}/config_office; autoconf || die; cd ${S}
-
 	# This resolves missing symbols (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-compiler-flags.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-compiler-flags.patch
 
-	# Enable ccache and distcc (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-parallel-build.patch || die
 	# If $HOME is not set, ccache breaks. (Debian)
-	patch -p1 < ${FILESDIR}/${PV}/${P}-dont-unset-home.patch || die
-
-	if [ "$(use ppc)" ]
-	then
-		# Not sure about this .. PPC guys will have to verify.
-		patch -p1 < ${FILESDIR}/${PV}/${P}-bridge-fix-on-PPC.patch || die
-	fi
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-dont-unset-home.patch
 
 	# Misc Debian patches to fixup build
-	patch -p1 < ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-no-mozab.patch
 	echo "moz     moz : NULL" > ${S}/moz/prj/build.lst
 
 	# Misc patches from Mandrake
-	patch -p1 < ${FILESDIR}/${PV}/${P}-braindamage.patch || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}-fix-asm.patch || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-fix-asm.patch
 
 	# Get OO to use STLport-4.5.3 (Az)
 	cp ${DISTDIR}/STLport-${STLP_VER}.tar.gz ${S}/stlport/download || die
 	cd ${S}/stlport
-	patch -p1 < ${FILESDIR}/${PV}/${P}-use-STLport-4.5.3.patch || die
-
-	# More gcc3 related fixes
-	if [ "$(gcc-major-version)" -eq 3 ] && [ "$(gcc-minor-version)" -ne 0 ]
+	if [ "${NEW_GCC}" -eq "1" ]
 	then
-		local incver="$(gcc-version)"
-		local minver="$(gcc-minor-version)"
-	
-		# Fix ./configure for gcc3 (Az)
-		perl -pi -e 's|CC --version|CC -dumpversion|g' \
-			${S}/config_office/configure
-#		perl -pi -e "s|_gccincname1=\"g++-v3\"|_gccincname1=\"g++-v${incver/\.}\"|g" \
-#			${S}/config_office/configure
+		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-STLport-4.5.3-newgcc.patch
+	else
+		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-STLport-4.5.3.patch
+	fi
+	cd ${S}
 
-		# Fix header not supporting 3.2 and up (Az)
-		perl -pi -e "s|__GNUC_MINOR__ == 0|__GNUC_MINOR__ == ${minver}|g" \
-			${S}/cppu/inc/uno/lbnames.h
+	# Seth -- Dec 1 2002
+	if [ "$(echo ${JAVA_BINARY} | egrep 'j(2s)?dk-1.4')" ]
+	then
+		epatch ${FILESDIR}/${PV}/${PN}-1.0.1-fix-jdk-1.4.0.patch
 	fi
 
+	# Debian patch to fix an xinteraction handler build error (Seth)
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-xinteraction-fix.patch
+	
+	# Get OO to build with freetype-2.1.3
+	einfo "Moving freetype-${FT_VER}.tar.bz2 in place ..."
+	cp ${DISTDIR}/freetype-${FT_VER}.tar.bz2 ${S}/freetype/download || die
+	# We need it as a .tar.gz ...
+	bzip2 -d ${S}/freetype/download/freetype-${FT_VER}.tar.bz2 || die
+	gzip -1 ${S}/freetype/download/freetype-${FT_VER}.tar
+	# OK, copy the new patch in place, and fixup some other things ...
+	cp ${FILESDIR}/${PV}/freetype-${FT_VER}.patch ${S}/freetype || die
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.1-use-freetype-${FT_VER}.patch
+	
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi3.mk
@@ -229,6 +257,12 @@ src_unpack() {
 	do
 		perl -pi -e "s/^(PRJNAME)/MAXPROCESS=1\n\1/" ${x}/makefile.mk
 	done
+
+	epatch ${FILESDIR}/${PV}/${PN}-errno.patch
+	einfo "Lets patch to get AA fonts..."
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.2-default-fonts.patch
+	epatch ${FILESDIR}/${PV}/${PN}-1.0.2-ft-antialias-advice.patch
+
 }
 
 get_EnvSet() {
@@ -241,29 +275,31 @@ get_EnvSet() {
 	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set"
 
 	# Get build specific stuff (Az)
-	export SOLVER="$(awk '/^setenv UPD / {print $3}' ${LinuxEnvSet})"
-	export SOLPATH="$(awk '/^setenv INPATH / {print $3}' ${LinuxEnvSet})"
+	export SOLVER="$(awk '/^setenv UPD / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
+	export SOLPATH="$(awk '/^setenv INPATH / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
 }
 
 src_compile() {
 
 	local buildcmd=""
 
+	oo_setup
+
 	# Setup default compilers (We overide gcc2 if that is default here)
 	export CC="$(gcc-getCC)"
 	export CXX="$(gcc-getCXX)"
 
-	# Create aliases to normal gcc binary names to make sure we compile
-	# everything with the same version of gcc, and avoid possible
-	# segfaults.  This is only done if gcc binaries with non standard
-	# names are used. (Az)
-	[ "${CC}" != "gcc" ] && ln -s $(which ${CC}) ${S}/solenv/bin/gcc
-	[ "${CXX}" != "gcc" -a "${CXX}" != "g++" ] && {\
-		ln -s $(which ${CXX}) ${S}/solenv/bin/g++
-		ln -s $(which ${CXX}) ${S}/solenv/bin/c++
-		ln -s $(which ${CXX}) ${S}/solenv/bin/cpp
-	}
-
+	# Enable ccache for this build (Az)
+	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
+	     -d /usr/bin/ccache -a -x /usr/bin/ccache/ccache ]
+	then
+		# Build uses its own env with $PATH, etc, so
+		# we take the easy way out. (Az)
+		export CC="/usr/bin/ccache/ccache ${CC}"
+		export CXX="/usr/bin/ccache/ccache ${CXX}"
+	fi
+    
 	# Enable distcc for this build (Az)
 	if [ "${FEATURES/-distcc/}" = "${FEATURES}" -a \
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
@@ -278,17 +314,6 @@ src_compile() {
 		export CXX="distcc ${CXX}"
 	fi
 
-	# Enable ccache for this build (Az)
-	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
-	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-		 -d /usr/bin/ccache -a -x /usr/bin/ccache/ccache ]
-	then
-		# Build uses its own env with $PATH, etc, so
-		# we take the easy way out. (Az)
-		export CC="/usr/bin/ccache/ccache ${CC}"
-		export CXX="/usr/bin/ccache/ccache ${CXX}"
-	fi
-	
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
@@ -297,31 +322,28 @@ src_compile() {
 	rm -f config.cache
 	./configure --enable-gcc3 \
 		--with-jdk-home=${JAVA_HOME} \
-		--with-lang=ENUS \
+		--with-lang=ALL\
 		--with-x || die
 	
 	cd ${S}
 	get_EnvSet
 	
-	# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		einfo "Installing GCC related libs..."
-
-		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/lib
-
-		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
-		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
-			die "Could not copy gcc-libs!"
-		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
-		cd ${S}
-	fi
-
 	# Do not include /usr/include in header search path, and
 	# same thing for internal gcc include dir, as gcc3 handles
 	# it correctly by default! (Az)
 	perl -pi -e "s| -I/usr/include||g" ${LinuxEnvSet}
 #	perl -pi -e "s| -I$(gcc-libpath)/include||g" ${LinuxEnvSet}
+
+	if [ "${NEW_GCC}" -eq "1" ]
+	then
+		local gcc_path="$(/usr/sbin/gcc-config --get-bin-path ${GCC_PROFILE})"
+
+		# Setup path for new gcc layout in $LinuxEnvSet, else the build
+		# environment will not find gcc ... (Az)
+		perl -pi -e "s|PATH \.:\$SOLARVER|PATH \.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
+		# New builds start quoting stuff ...
+		perl -pi -e "s|PATH \"\.:\$SOLARVER|PATH \"\.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
+	fi
 
 	# Should the build use multiprocessing?
 	# We use build.pl directly, as dmake tends to segfault. (Az)
@@ -332,6 +354,26 @@ src_compile() {
 		buildcmd="${S}/solenv/bin/build.pl -all product=full"
 	fi
 		
+	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
+	then
+		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
+		echo "setenv CCCOMP \"${CC}\"" >> ${S}/${LinuxEnvSet}
+		echo "setenv CXXCOMP \"${CXX}\"" >> ${S}/${LinuxEnvSet}
+	fi 
+
+	if [ "$(gcc-major-version)" -eq 3 ]
+	then
+		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/{lib,inc}
+
+		einfo "Installing GCC related libs..."
+		# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
+		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
+		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
+			die "Could not copy gcc-libs!"
+		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
+		cd ${S}
+	fi
+
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
@@ -339,7 +381,17 @@ src_compile() {
 	touch ${S}/solver/${SOLVER}/${SOLPATH}/inc/minormkchanged.flg
 	# Bootstrap ...
 	./bootstrap
-	
+
+	if [ "$(gcc-major-version)" -eq 3 ]
+	then
+		local LIBFILE="$(readlink `gcc-libpath`/libstdc++.so.`gcc-libstdcxx-major-version`)"
+		local LIBVERSION="$(echo ${LIBFILE} | sed -e 's|libstdc++\.so\.||g')"
+		# Get this beast to use the right version of libstdc++ ... (Az)
+		echo "LIBSTDCPP3:=${LIBVERSION}" >> \
+			${S}/solver/${SOLVER}/${SOLPATH}/inc/comp_ver.mk
+		cd ${S}
+	fi
+
 	einfo "Building OpenOffice.org..."
 	# Setup virtualmake
 	export maketype="tcsh"
@@ -352,6 +404,10 @@ src_compile() {
 
 src_install() {
 
+	# Sandbox issues; bug #11838
+	addpredict "/user"
+	addpredict "/share"
+	addpredict "/dev/dri"
 	# This allows us to change languages without editing the ebuild.
 	#
 	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
@@ -441,7 +497,7 @@ src_install() {
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper > ${T}/ooffice
+		${FILESDIR}/${PV}/ooffice-wrapper-1.2 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
@@ -498,6 +554,10 @@ src_install() {
 	# Unneeded, as they get installed into /usr/share...
 	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
 
+	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
+		echo 'Categories=Application;Office;' >> ${f}
+	done
+
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/config/registry/instance/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
@@ -524,6 +584,9 @@ pkg_postinst() {
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath or oowriter"
 	einfo
+	einfo " If the fonts appear garbled in the user interface refer to "
+	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
+	einfo 
 	einfo "******************************************************************"
 }   
 
