@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.36 2002/12/27 01:10:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.37 2002/12/27 18:55:08 azarah Exp $
+
+  27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r17.ebuild :
+  Remove the xmms-1.2.7-link-libstdc++.patch on request from XMMS developer
+  Olle Hällnäs <olle@xmms.org>.  Sorry about taking so long, but I forgot.
 
 *xmms-1.2.7-r17 (26 Dec 2002)
 
