@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5.ebuild,v 1.4 2004/08/24 02:12:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.1 2004/08/24 22:43:23 swegener Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 MY_P=${PN}-integration-${PV}
 
@@ -25,6 +25,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-segfault-fix.patch
+}
 
 src_compile() {
 	append-flags -fPIC

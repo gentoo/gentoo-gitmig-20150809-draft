@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat-systray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.13 2004/08/24 02:12:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.14 2004/08/24 22:43:23 swegener Exp $
+
+*xchat-systray-2.4.5-r1 (25 Aug 2004)
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org>
+  +files/2.4.5-segfault-fix.patch, +xchat-systray-2.4.5-r1.ebuild,
+  -xchat-systray-2.4.5.ebuild:
+  Revision bump for a patch that fixes segfaults on executing browser, mail
+  client and multimedia player. Closes bug #61521.
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> xchat-systray-2.4.5.ebuild:
   Stable on x86.

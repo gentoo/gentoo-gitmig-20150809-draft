@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3bd7135d7b2b291f3a4bc9a0bca9e997 ChangeLog 1806
+MD5 a488889ff2096520bad35baa6fd86e0d ChangeLog 2121
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 70f321749d4f588c455d3fce79f46288 xchat-systray-2.3.1.ebuild 886
 MD5 9ea876c9fe939a5288d51fc34d38b0d8 xchat-systray-2.4.0.ebuild 882
-MD5 94daa057277de581248a54c583e5ce24 xchat-systray-2.4.5.ebuild 1277
+MD5 806fda2e88a612c6ce8748d2f7bc8101 xchat-systray-2.4.5-r1.ebuild 1373
 MD5 9a65d335f20aacff5764eae11d496abc files/digest-xchat-systray-2.3.1 77
 MD5 1a8c5c044d17c5ce8aa84c24f8ca3978 files/digest-xchat-systray-2.4.0 86
-MD5 c7f2d25da598195290d93a826f3a99c3 files/digest-xchat-systray-2.4.5 86
+MD5 f9fec2befb2bf0b3888f017d37a36a17 files/2.4.5-segfault-fix.patch 702
+MD5 c7f2d25da598195290d93a826f3a99c3 files/digest-xchat-systray-2.4.5-r1 86
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBKqQkI1lqEGTUzyQRAs/xAKCe4s8KHFs3ZHVumPio/lEsrZRYYwCePpfe
-BsCCmAUUkmd0Q1H2HYN4964=
-=2fvq
+iD8DBQFBK8SaI1lqEGTUzyQRAgJOAJ9+IRWajrlfkvlnLH0IUJ7ro4nhsACghlhf
+LhyCxAPADDdnRAMbaeTt0kc=
+=cobm
 -----END PGP SIGNATURE-----
