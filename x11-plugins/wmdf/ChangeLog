@@ -1,6 +1,6 @@
-# ChangeLog for x11-misc/wmdf
+# ChangeLog for x11-plugins/wmdf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.1 2004/02/07 04:23:27 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.2 2004/02/10 22:30:20 vapier Exp $
 
 *wmdf-0.1.6 (07 Feb 2004)
 
