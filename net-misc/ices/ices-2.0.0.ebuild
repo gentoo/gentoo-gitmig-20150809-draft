@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.7 2004/08/27 03:00:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.8 2004/11/02 21:02:54 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="icecast MP3 streaming client. supports on the fly re-encoding"
-SRC_URI="http://www.icecast.org/files/${P}.tar.gz"
+SRC_URI="http://icecast.org/files/${P}.tar.gz"
 HOMEPAGE="http://www.icecast.org/ices.php"
 
 SLOT="0"

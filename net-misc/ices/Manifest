@@ -1,13 +1,14 @@
-MD5 ea629a9519531a571a27fa8c79cd0e7b ChangeLog 1977
-MD5 07ff30698c450e59676acbe9c3b0ffe9 ices-2.0.0.ebuild 1272
-MD5 9233bc9311706766590d099a92a76650 ices-2.0_beta4.ebuild 1310
-MD5 b51d475dc54bbbaf042e5ea51527753b ices-0.4.ebuild 1167
-MD5 e95b3b1c4c36133d64e8cbd6946ca65c ices-0.3.ebuild 1101
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2724e757f3071ee8f3f096454db1293b ChangeLog 2171
+MD5 87257b4c3249f6e59b8af348c51994b4 ices-2.0.0.ebuild 1273
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
-MD5 e2f333ffb9cdbe3cdf50c182ca81b235 ices-0.2.3.ebuild 1084
-MD5 d966b9c189c4f85caca6ec95e1f9b96d files/digest-ices-0.3 60
-MD5 ad65ac61ebb4b16e6286bf457a03111e files/digest-ices-2.0_beta4 66
-MD5 7b90256f350052b7ec4122e85edd0758 files/docdir.diff 3909
-MD5 9efe5e3855ca15b4185a712b51c81291 files/digest-ices-0.2.3 62
-MD5 aa278c1e95a5ef29c3f79ee70f21f219 files/digest-ices-0.4 60
 MD5 ace2a441b6354b065c6be58e9056ec82 files/digest-ices-2.0.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBh/YMArHZZzCEUG0RAkqHAJ48WMoR4hUJLn3BGbCsPDdNJQab4QCfYyFM
+qDQRj0qFMgj5kJn/WGb2LGE=
+=nZGY
+-----END PGP SIGNATURE-----

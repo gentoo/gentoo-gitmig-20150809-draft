@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ices
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.16 2004/08/31 07:39:32 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.17 2004/11/02 21:02:54 eradicator Exp $
+
+  02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> -files/docdir.diff,
+  -ices-0.2.3.ebuild, -ices-0.3.ebuild, -ices-0.4.ebuild:
+  Removed old versions.  Fixed SRC_URI for bug #69744.
 
   31 Aug 2004; <pyrania@gentoo.org> ices-0.4.ebuild:
   IUSE fixup.
