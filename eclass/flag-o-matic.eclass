@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.15 2003/04/06 23:35:41 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.16 2003/04/19 18:20:56 joker Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -28,6 +28,11 @@ INHERITED="$INHERITED $ECLASS"
 #### get-flag <flag> ####
 # Find and echo the value for a particular flag
 #
+#### replace-sparc64-flags ####
+# Sets mcpu to v8 and uses the original value
+# as mtune if none specified.
+#
+
 
 ALLOWED_FLAGS="-O -mcpu -march -mtune -fstack-protector -pipe -g"
 
@@ -117,4 +122,36 @@ get-flag() {
 			return
 		fi
 	done
+}
+
+replace-sparc64-flags () {
+
+	local SPARC64_CPUS="ultrasparc v9"
+
+ 	if [ "${CFLAGS/mtune}" != "${CFLAGS}" ]
+	then
+		for x in ${SPARC64_CPUS}
+		do
+			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8}"
+		done
+ 	else
+	 	for x in ${SPARC64_CPUS}
+		do
+			CFLAGS="${CFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
+		done
+	fi
+	
+ 	if [ "${CXXFLAGS/mtune}" != "${CXXFLAGS}" ]
+	then
+		for x in ${SPARC64_CPUS}
+		do
+			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8}"
+		done
+	else
+	 	for x in ${SPARC64_CPUS}
+		do
+			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
+		done
+	fi
+	
 }
