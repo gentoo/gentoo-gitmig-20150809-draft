@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.18 2003/05/02 10:00:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.19 2003/05/16 01:04:46 pylon Exp $
+
+  16 May 2003; Lars Weiler <pylon@gentoo.org> soup-0.7.11.ebuild:
+  Set ppc in KEYWORDS
 
   02 May 2003; Alastair Tse <liquidx@gentoo.org> soup-0.7.11.ebuild:
   explicitly disable apxs support
