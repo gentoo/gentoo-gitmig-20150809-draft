@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/portagedb-0.2.0.ebuild,v 1.3 2005/01/02 20:36:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/portagedb-0.2.0.ebuild,v 1.4 2005/01/03 16:46:24 blubb Exp $
 
 inherit flag-o-matic
 
@@ -33,6 +33,10 @@ src_compile() {
 	fi
 
 	emake || die "emake	failed"
+}
+
+src_install() {
+	einstall || die "einstall failed"
 }
 
 pkg_postinst() {
