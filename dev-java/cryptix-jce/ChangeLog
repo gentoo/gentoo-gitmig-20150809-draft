@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/cryptix-jce
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cryptix-jce/ChangeLog,v 1.1 2003/05/14 05:08:58 absinthe Exp $
+
+*cryptix-jce-20030217 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org>
+  cryptix-jce-20030217.ebuild:
+  Initial import.
+
