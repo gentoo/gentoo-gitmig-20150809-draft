@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.642 2004/09/25 05:44:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.643 2004/09/26 18:30:17 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -57,6 +57,7 @@ app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
 app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/grass:nviz - support GLw functionality
+app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
