@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1.ebuild,v 1.6 2004/06/24 22:36:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-1.7.1-r1.ebuild,v 1.1 2004/08/27 10:16:26 axxo Exp $
 
 inherit java-pkg
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25.ebuild,v 1.1 2004/08/27 10:12:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25.ebuild,v 1.2 2004/08/27 10:16:26 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/jswat/${PN}-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 sparc -ppc amd64"
+KEYWORDS="~x86 ~sparc -ppc ~amd64"
 IUSE="doc jikes" #junit"
 
 DEPEND=">=dev-java/ant-1.5"
