@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2811 2004/04/08 06:13:20 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2812 2004/04/08 06:58:17 vapier Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -456,11 +456,6 @@ media-tv/nvrec
 # <george@gentoo.org> (08 Nov 2003)
 # masking intermediat version before it goes away, now that the release is stable
 =app-sci/lard-20030204
-
-# <solar@gentoo.org> (6 Nov 2003)
-# dsniff has a dep of libnids-1.16 which no longer flys. my vote is for
-# removal of dsniff from portage till an upstream update happens.
-net-analyzer/dsniff
 
 # <solar@gentoo.org> (5 Nov 2003)
 # secuirty update #32724
