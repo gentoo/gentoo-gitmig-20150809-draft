@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.63 2003/07/07 01:44:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.64 2003/07/09 08:59:37 joker Exp $
+
+  09 Jul 2003; Christian Birchinger <joker@gentoo.org> vim-6.2.ebuild:
+  Added sparc stable keyword
 
   06 Jul 2003; Aron Griffis <agriffis@gentoo.org> metadata.xml:
   Add metadata.xml
