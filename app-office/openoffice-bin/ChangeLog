@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.40 2004/04/01 11:51:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.41 2004/05/04 16:02:23 pvdabeel Exp $
+
+  04 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> openoffice-bin-1.1.1.ebuild:
+  Made ebuild ppc compatible
 
   01 Apr 2004; suka@gentoo.org openoffice-bin-1.1.1.ebuild,
   files/1.1.1/ooffice-wrapper-1.3:

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.5 2004/04/11 21:00:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.6 2004/05/04 16:02:23 pvdabeel Exp $
 
-IUSE="kde gnome"
+IUSE="ppc x86 kde gnome"
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -12,10 +12,15 @@ LOC="/opt"
 
 INSTDIR="${LOC}/OpenOffice.org"
 MY_P="OOo_${PV}_LinuxIntel_install"
+use ppc && MY_P="OOo_${PV}_LinuxPowerPC_en_installer"
+
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="OpenOffice productivity suite"
-SRC_URI="mirror://openoffice/stable/${PV}/${MY_P}.tar.gz"
+
+SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )
+	ppc? ( http://ftp.sunet.se/pub/Office/OpenOffice.org/contrib/linuxppc/OOo_${PV}_LinuxPowerPC_en_installer.tar.gz )"
+
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="sys-apps/findutils
@@ -39,7 +44,7 @@ RDEPEND="virtual/glibc
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 
 src_install() {
 	# Sandbox issues; bug #8587
