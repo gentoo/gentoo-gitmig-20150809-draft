@@ -1,21 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.2.ebuild,v 1.1 2003/04/17 17:26:26 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.2.ebuild,v 1.2 2003/08/05 16:26:40 vapier Exp $
 
-S=${WORKDIR}/${PN}${PV}
-SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_4/${PN}${PV}-src.tar.gz"
-HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
+inherit eutils
+
 DESCRIPTION="Tk Widget Set"
-IUSE=""
+HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
+SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_4/${PN}${PV}-src.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.47-r10
 	virtual/x11
 	=dev-lang/tcl-${PV}*"
+
+S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +32,6 @@ src_compile() {
 	econf \
 		--with-tcl=/usr/lib \
 		--enable-threads || die
-					
 	emake CFLAGS="${CFLAGS}" || die
 }
 

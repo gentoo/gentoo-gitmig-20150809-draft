@@ -1,29 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.7 2003/02/13 10:31:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r2.ebuild,v 1.8 2003/08/05 16:26:40 vapier Exp $
 
-S=${WORKDIR}/${PN}${PV}
-SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
-HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 DESCRIPTION="Tk Widget Set"
-DEPEND="virtual/glibc
-	virtual/x11
-	=dev-lang/tcl-${PV}*"
+HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
+SRC_URI="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/${PN}${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 ppc sparc alpha"
 
+DEPEND="virtual/glibc
+	virtual/x11
+	=dev-lang/tcl-${PV}*"
+
+S=${WORKDIR}/${PN}${PV}
+
 # hyper-optimizations untested...
 #
 src_compile() {
 	cd ${S}/unix
-	./configure --host=${CHOST} \
-				--prefix=/usr \
-				--mandir=/usr/share/man \
-				--with-tcl=/usr/lib \
-				--enable-threads || die
-					
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--with-tcl=/usr/lib \
+		--enable-threads || die
 	emake CFLAGS="${CFLAGS}" || die
 }
 
