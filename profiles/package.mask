@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2972 2004/06/29 17:33:33 plasmaroo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2973 2004/06/29 21:17:06 agriffis Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -725,9 +725,6 @@ dev-libs/libiconv
 # We are masking out the shadow snapshots now, to coincide
 # with the new pam rollout. ( Woodchip - Mar 20 2002)
 >=sys-apps/shadow-5
-
-#we no longer use sysvinit (rolled into baselayout)
-sys-apps/sysvinit
 
 # broken
 =app-doc/quanta-docs-1.0
