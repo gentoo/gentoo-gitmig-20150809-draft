@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.4.4-r2.ebuild,v 1.1 2004/02/07 23:22:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.4.4-r2.ebuild,v 1.2 2004/02/08 00:10:39 agriffis Exp $
 
 inherit gnome2
 
@@ -31,8 +31,8 @@ src_unpack() {
 
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options.  On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
-	epatch ${FILESDIR}/fileroller-2.4.4-gnutar.patch
+	epatch ${FILESDIR}/file-roller-2.4.4-gentoo.patch
 
 	# Fix 64-bit problems
-	epatch ${FILESDIR}/fileroller-2.4.4-64bit.patch
+	epatch ${FILESDIR}/file-roller-2.4.4-64bit.patch
 }
