@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.1 2004/04/11 19:35:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.2 2004/04/27 18:21:48 agriffis Exp $
 
 IUSE="ssl"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="${PN}-v${PV//./_}"
 
