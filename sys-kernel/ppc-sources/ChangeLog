@@ -1,6 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.3 2002/05/27 00:12:35 kain Exp $
+# $Id: ChangeLog,v 1.4 2002/05/27 02:26:44 kain Exp $
+
+*ppc-sources-2.4.19-r5 (26 May 2002)
+
+  26 May 2002; Kain <kain@kain.org> all :
+
+  Firewire still works, but otherwise this kernel is more like -r3.
+  The rmap vm doesn't seem to work too well on ppc after additional testing.
 
 *ppc-sources-2.4.19-r4 (26 May 2002)
 
