@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.53 2003/08/30 18:52:50 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.54 2003/09/12 04:40:27 strider Exp $
+
+*sun-jdk-1.4.1.05 (12 Sep 2003)
+
+  12 Sep 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.3.1.09.ebuild,
+  sun-jdk-1.4.1.04.ebuild, sun-jdk-1.4.1.05.ebuild, sun-jdk-1.4.2.01.ebuild,
+  sun-jdk-1.4.2.ebuild, files/sun-jdk-1.4.1.05:
+  Updated sun-jdk 1.4.1.04 to 1.4.1.05, various fixes
 
   30 Aug 2003; Preston A. Elder <prez@gentoo.org> sun-jdk-1.4.2.01.ebuild:
   Version bump.  Made stable since the download page downloads this version.
