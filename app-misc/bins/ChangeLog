@@ -2,6 +2,10 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
 
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> bins-1.1.23-r2.ebuild,
+  bins-1.1.26-r1.ebuild, bins-1.1.26.ebuild:
+  sync IUSE (+gtk), add sed-4 dep
+
   28 Jun 2004; Michael Cummings <mcummings@gentoo.org> bins-1.1.26-r1.ebuild:
   Typo - /use instead of /usr. Bug 52088 still.
 

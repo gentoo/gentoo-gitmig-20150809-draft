@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.4 2004/06/24 22:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.5 2004/06/30 03:39:24 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://jsautret.free.fr/BINS/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc alpha ~ppc amd64"
-IUSE=""
+IUSE="gtk"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=media-gfx/imagemagick-5.5.5.3
@@ -31,7 +31,8 @@ DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=dev-perl/XML-Grove-0.46_alpha
 	>=dev-perl/XML-Handler-YAWriter-0.23
 	gtk? ( dev-perl/gtk-perl-glade )
-	>=dev-perl/XML-XQL-0.67"
+	>=dev-perl/XML-XQL-0.67
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
