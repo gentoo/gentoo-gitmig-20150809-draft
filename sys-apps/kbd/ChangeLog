@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.19 2003/09/23 23:43:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.20 2003/10/31 21:20:40 azarah Exp $
+
+*kbd-1.08-r4 (31 Oct 2003)
+
+  31 Oct 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r4.ebuild,
+  files/kbd-1.06-othervt.patch, files/kbd-1.08-nowarn.patch,
+  files/kbd-1.08-sparc.patch, files/kbd-1.08-terminal.patch:
+  Add '--tty' switch to setfont, thanks to Krzysztof Kotlenga
+  <pocek@polbrokers.ods.org>, bug #32279. Also add a few patches from Redhat,
+  and update our Sparc patch with a more simple one.
 
 *kbd-1.08-r3 (24 Sep 2003)
 
