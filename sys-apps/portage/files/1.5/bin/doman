@@ -20,7 +20,7 @@ do
 			install -d ${D}${myloc}/share/man/${mandir}
 	    	fi
 	    	install -m0644 ${x} ${D}${myloc}/share/man/${mandir}
-	    	gzip -9 ${D}${myloc}/share/man/${mandir}/${x##*/}
+	    	gzip -f -9 ${D}${myloc}/share/man/${mandir}/${x##*/}
 	else
 	    	echo "doman: ${x} does not exist."
 	fi

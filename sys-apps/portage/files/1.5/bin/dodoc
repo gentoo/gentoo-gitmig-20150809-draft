@@ -10,10 +10,10 @@ then
 	if [ -z ${DOCDESTTREE} ]
 	then
 		install -m0644 ${x} ${D}usr/share/doc/${PF}
-		gzip -9 ${D}usr/share/doc/${PF}/${x##*/}
+		gzip -f -9 ${D}usr/share/doc/${PF}/${x##*/}
 	else
 		install -m0644 ${x} ${D}usr/share/doc/${PF}/${DOCDESTTREE}
-		gzip -9 ${D}usr/share/doc/${PF}/${DOCDESTTREE}/${x##*/}
+		gzip -f -9 ${D}usr/share/doc/${PF}/${DOCDESTTREE}/${x##*/}
 	fi
 else
 	echo "${0}: ${x} does not exist."
