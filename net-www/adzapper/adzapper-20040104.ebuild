@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040104.ebuild,v 1.2 2004/01/19 21:33:07 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040104.ebuild,v 1.3 2004/01/19 21:40:04 blkdeath Exp $
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
@@ -11,7 +11,7 @@ S="${WORKDIR}/adzap"
 SRC_URI="http://adzapper.sourceforge.net/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND=""
@@ -46,7 +46,7 @@ src_install() {
 	doins update-zapper*
 
 	cd ${S}/zaps
-	insinto ${destdir}/zap
+	insinto /var/www/localhost/htdocs/zap
 	doins *
 }
 
