@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.5.1.ebuild,v 1.2 2003/11/21 01:33:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.5.1.ebuild,v 1.3 2004/01/29 23:55:38 vapier Exp $
 
-IUSE=""
 DESCRIPTION="Replacement for 'emerge search' with search-index"
 HOMEPAGE="http://david-peter.de/esearch.html"
 SRC_URI="http://david-peter.de/downloads/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 
 DEPEND=">=dev-lang/python-2.2"
