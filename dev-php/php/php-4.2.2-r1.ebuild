@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.11 2002/09/27 11:39:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.12 2002/10/04 05:25:17 vapier Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}

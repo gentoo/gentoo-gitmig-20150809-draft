@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r5.ebuild,v 1.5 2002/08/26 20:10:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r5.ebuild,v 1.6 2002/10/04 05:25:02 vapier Exp $
 
 A=php-${PV}.tar.gz
 S=${WORKDIR}/php-${PV}
