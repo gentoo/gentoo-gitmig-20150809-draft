@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.ebuild,v 1.1 2003/09/08 12:53:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.0.1.ebuild,v 1.1 2003/09/10 22:07:48 foser Exp $
 
 inherit gnome2
 
