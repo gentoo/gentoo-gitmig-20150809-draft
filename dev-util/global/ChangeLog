@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.9 2004/06/28 05:35:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.10 2004/07/02 21:17:32 seemant Exp $
+
+*global-4.7.2 (02 Jul 2004)
+
+  02 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +global-4.7.2.ebuild:
+  version bump to 4.7.2 which uses the new sort arguments in coreutils 5 and
+  later. This should close out bug #43838 by Michael Labhard
+  <m.labhard@comcast.net>.  Due to the concerns in that bug, we really
+  should try and get this to stable sooner rather than later.  30 day
+  countdown begins now.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> global-4.6.1.ebuild:
   Added ~sparc, ~mips
