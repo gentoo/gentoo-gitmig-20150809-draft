@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.30 2003/11/07 09:47:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.31 2003/11/08 17:01:01 todd Exp $
+
+  08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gnome-icon-theme-1.0.9.ebuild:
+  added sparc keyword
 
 *gnome-icon-theme-1.1.0 (07 Nov 2003)
 
