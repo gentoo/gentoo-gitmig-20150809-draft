@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.10 2003/03/18 22:42:12 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.11 2003/04/06 07:38:14 absinthe Exp $
 
 *commons-collections-2.1-r3 (17 Mar 2003)
+
+  06 Apr 2003; absinthe <absinthe@gentoo.org> commons-collections-2.1-r3.ebuild:
+  x86 moved to stable.  added ~ppc ~sparc.
 
   18 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
   commons-collections-2.1-r3.ebuild:
