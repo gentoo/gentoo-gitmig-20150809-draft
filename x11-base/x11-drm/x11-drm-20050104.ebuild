@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050104.ebuild,v 1.1 2005/01/07 05:31:26 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050104.ebuild,v 1.2 2005/01/25 02:39:17 battousai Exp $
 
 inherit eutils x11 linux-mod
 
-IUSE="gatos"
+IUSE=""
 IUSE_VIDEO_CARDS="3dfx ffb i810 i830 i915 mach64 matrox rage128 radeon savage sis via"
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
