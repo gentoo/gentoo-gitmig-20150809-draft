@@ -1,0 +1,14 @@
+# ChangeLog for x11-wm/xfwm4
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.1 2003/07/15 03:30:06 bcowan Exp $
+
+*xfwm4-3.99.1 (14 Jul 2003)
+
+  14 Jul 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-3.99.1.ebuild:
+  New version and portage directory structure.
+
+*xfwm4-3.90.0 (13 Jun 2003)
+
+  13 Jun 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-3.90.0.ebuild:
+  Initial import.
+
