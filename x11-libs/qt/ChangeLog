@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.103 2004/01/04 17:40:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.104 2004/01/05 00:19:56 brad_mssw Exp $
+
+  04 Jan 2004; Brad House <brad_mssw@gentoo.org> qt-3.2.3.ebuild:
+  last commit cause _major_ access violations during emerge.  Reverting
 
   04 Jan 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0_beta1.ebuild:
   Test for compile fix - let Qt write to some sysconf directories
