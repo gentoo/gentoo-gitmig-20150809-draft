@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.2.0_pre6.ebuild,v 1.3 2003/10/24 11:38:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.2.0_pre6.ebuild,v 1.4 2004/02/24 14:31:38 lanius Exp $
 
 IUSE="xmms encode oggvorbis"
 
@@ -27,8 +27,7 @@ RDEPEND="${DEPEND}
 	xmms? ( media-sound/xmms )
 	encode? ( media-sound/lame
 		media-sound/sox )
-	oggvorbis? ( media-sound/vorbis-tools )
-	media-sound/zinf"
+	oggvorbis? ( media-sound/vorbis-tools )"
 
 src_install() {
 	einstall \
