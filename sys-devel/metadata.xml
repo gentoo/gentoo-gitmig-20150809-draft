@@ -9,5 +9,9 @@
 		La categoría sys-devel contiene paquetes esenciales para el desarrollo
 		de software.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sys-devel enthält essentielle Entwicklungswerkzeuge und
+		Bibliotheken.
+	</longdescription>
 </catmetadata>
 
