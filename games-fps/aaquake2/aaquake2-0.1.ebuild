@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.2 2004/02/20 06:40:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.3 2004/05/03 21:26:19 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -14,17 +14,20 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/source/q2source-3.21.zip
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="media-libs/aalib"
 
-S=${WORKDIR}/quake2-3.21/linux
+S="${WORKDIR}/quake2-3.21/linux"
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}-gentoo.patch
 	cd quake2-3.21/linux
-	sed -i "s:GENTOO_DIR:${GAMES_LIBDIR}/${PN}:" sys_linux.c
-	sed -i "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" sys_linux.c vid_so.c
+	sed -i \
+		-e "s:GENTOO_DIR:${GAMES_LIBDIR}/${PN}:" sys_linux.c
+	sed -i \
+		-e "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" sys_linux.c vid_so.c
 }
 
 src_compile() {
