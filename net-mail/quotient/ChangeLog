@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/quotient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.7 2004/07/19 22:10:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/ChangeLog,v 1.8 2004/12/29 03:29:51 ciaranm Exp $
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> quotient-0.8.8.ebuild,
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> quotient-0.8.8.ebuild,
   quotient-0.9.1.ebuild:
   dev-python/Imaging renamed to dev-python/imaging.
 

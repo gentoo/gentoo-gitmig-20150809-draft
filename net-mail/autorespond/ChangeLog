@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/autorespond
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.10 2004/12/13 23:36:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.11 2004/12/29 03:24:47 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Dec 2004; Andrej Kacian <ticho@gentoo.org> autorespond-2.0.4.ebuild:
   Stable on x86.
@@ -9,7 +12,7 @@
   autorespond-2.0.4.ebuild:
   virtual/glibc -> virtual/libc
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> autorespond-2.0.4.ebuild:
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> autorespond-2.0.4.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> autorespond-2.0.4.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.28 2004/12/17 17:21:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.29 2004/12/29 03:25:56 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> mailbase-0.00-r6.ebuild:
   Stable on sparc
@@ -14,7 +17,7 @@
   23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> mailbase-0.00-r6.ebuild:
   Added to macos.
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> mailbase-0.00-r6.ebuild:
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mailbase-0.00-r6.ebuild:
   Stable on alpha.
 
   01 Apr 2004; <randy@gentoo.org> mailbase-0.00-r6.ebuild:

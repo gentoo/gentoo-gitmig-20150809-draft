@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-autoresponder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.16 2004/10/26 19:54:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.17 2004/12/29 03:28:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org>
   qmail-autoresponder-0.95.ebuild, qmail-autoresponder-0.96.1-r1.ebuild,
@@ -12,7 +15,7 @@
   qmail-autoresponder-0.96.1.ebuild:
   virtual/glibc -> virtual/libc
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   qmail-autoresponder-0.96.1-r1.ebuild:
   Stable on alpha.
 

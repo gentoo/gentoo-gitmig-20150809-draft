@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.19 2004/12/15 21:42:50 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.20 2004/12/29 03:26:26 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *mailwrapper-0.2.1 (15 Dec 2004)
 
@@ -23,7 +26,7 @@
   25 Apr 2004; Joshua Kinard <kumba@gentoo.org> mailwrapper-0.1.ebuild:
   Marked stable on mips.
 
-  23 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
+  23 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
   Stable on alpha.
 
   23 Apr 2004; Travis Tilley <lv@gentoo.org> mailwrapper-0.1.ebuild:
