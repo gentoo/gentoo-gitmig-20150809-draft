@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rppppoek
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/ChangeLog,v 1.6 2004/06/28 20:30:41 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rppppoek/ChangeLog,v 1.7 2005/02/21 22:24:47 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> rppppoek-0.33.ebuild:
+  added ~amd64
 
   28 Jun 2004; Carsten Lohrke <carlo@gentoo.org> rppppoek-0.33.ebuild:
   QA: kde-base -< kde, need-kde
