@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.14 2002/05/24 21:36:06 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.15 2002/05/25 22:27:01 azarah Exp $
+
+*mozilla-1.0_rc{2,3}-r1 (26 May 2002)
+
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Added dev-libs/expat to DEPEND, resolves bug #3033.
 
 *mozilla-1.0_rc3 (24 May 2002)
 
