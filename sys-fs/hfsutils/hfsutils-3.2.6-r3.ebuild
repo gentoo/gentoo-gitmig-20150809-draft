@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.7 2004/07/01 21:50:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.8 2005/02/05 21:20:43 hansmi Exp $
 
 inherit eutils
 
