@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.15 2003/09/01 20:10:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.16 2003/09/09 17:41:04 mholzer Exp $
+
+*sysklogd-1.4.1-r6 (09 Sep 2003)
+
+  09 Sep 2003; Martin Holzer <mholzer@gentoo.org> sysklogd-1.4.1-r6.ebuild:
+  Adding support for >2 GB files. Closes #27922.
 
 *sysklogd-1.4.1-r5 (01 Sep 2003)
 
