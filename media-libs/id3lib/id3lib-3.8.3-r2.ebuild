@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.3 2004/07/21 01:01:56 eradicator Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r2.ebuild,v 1.4 2004/08/02 11:51:52 vapier Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Id3 library for C/C++"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://id3lib.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ~ia64 ~mips"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ~mips alpha hppa amd64 ~ia64"
+IUSE="doc"
 
 RDEPEND="virtual/libc"
-
 DEPEND="sys-devel/autoconf
 	sys-devel/libtool"
 
@@ -39,12 +37,11 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die "Install failed"
 	dosym /usr/lib/libid3-3.8.so.3 /usr/lib/libid3-3.8.so.0.0.0
 	dosym /usr/lib/libid3-3.8.so.0.0.0 /usr/lib/libid3-3.8.so.0
 
-	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL README THANKS TODO
+	dodoc AUTHORS ChangeLog HISTORY INSTALL README THANKS TODO
 
 	# some example programs to be placed in docs dir.
 	if use doc; then
