@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.345 2004/05/04 18:34:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.346 2004/05/05 02:13:42 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -316,7 +316,7 @@ sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled becau
 sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
 sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
 sys-devel/gcc:f77 - Build support for the f77 language
-sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
+sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
