@@ -1,6 +1,6 @@
 # Copyright 999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.7 2002/08/15 00:07:23 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.8 2002/12/07 07:22:16 jmorgan Exp $
 
 MY_P=${P/_rc/RC}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/x11"
 
