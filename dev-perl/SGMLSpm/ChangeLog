@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.22 2004/06/30 15:02:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.23 2004/07/26 23:24:36 agriffis Exp $
+
+  26 Jul 2004; Aron Griffis <agriffis@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  Since the default compile sequence was intro'd to portage-2.0.51,
+  SGMLSpm-1.03-r4 no longer builds on alpha and ia64. Mark -r5 stable on alpha
+  and ia64
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   fix compilation sequence since there is now a default src_compile #55134
