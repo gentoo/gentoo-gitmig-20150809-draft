@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.9 2004/07/01 08:02:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.10 2005/02/22 21:23:35 kugelfang Exp $
+
+inherit eutils
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Geometry library"
@@ -22,17 +24,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/src
 	mv Makefile.txt Makefile
-	# This echo statement appends a new build target to the exisiting Makefile
-	# for an additional shared library; originally added to support octave-forge
-	echo 'libqhull.so: $(OBJS)
-	c++ -shared -Xlinker -soname -Xlinker $@ -o libqhull.so $(OBJS)' >> Makefile
-
-	# the newly compiled programs will be run during the build.  seems
-	# easiest to statically link.
-	sed -i \
-		-e 's/-lqhull/libqhull.a/' \
-		-e '/^all:/ s/$/ libqhull.so/' Makefile \
-			|| die "sed Makefile failed"
+	# Replaced sed/echo hacks by a clean patch. Fix build error on -fPIC archs
+	# BUG #82646
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/02/22
+	epatch ${FILESDIR}/${P}-makefile.patch
 }
 
 src_compile() {

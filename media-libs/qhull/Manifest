@@ -1,3 +1,14 @@
-MD5 2f5ac843fcb0da30e90fbb4383c930ca ChangeLog 2130
-MD5 ae417c8b489570bc0a8c8afe718e629e qhull-3.1-r1.ebuild 1528
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5b97e7b085c326127be4bea5f949475 ChangeLog 2307
+MD5 ebe973cef633a2dd7fd37fe651a13589 qhull-3.1-r1.ebuild 1248
+MD5 5d10b9f5f4e55bd2fb7679c1baf9d107 files/qhull-3.1-makefile.patch 2103
 MD5 9b2354326e097e633a3488a6a22fe7c9 files/digest-qhull-3.1-r1 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCG6ND5mJXAu5GbtIRAglcAJ9agZn7C431V+kARctY3GpYrdh5PQCcCFFv
+uJPowXPLtCjg67nFAh+i3cQ=
+=yNud
+-----END PGP SIGNATURE-----

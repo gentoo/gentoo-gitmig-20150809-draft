@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qhull
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.14 2004/07/01 08:02:58 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.15 2005/02/22 21:23:35 kugelfang Exp $
+
+  22 Feb 2005; Danny van Dyk <kugelfang@gentoo.org>
+  +files/qhull-3.1-makefile.patch, qhull-3.1-r1.ebuild:
+  Cleared out the sed/echo hacks done to Makefile. Fixed BUG #82646.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> qhull-3.1-r1.ebuild:
   virtual/glibc -> virtual/libc
