@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.1 2002/06/14 00:56:47 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r4.ebuild,v 1.2 2002/06/29 21:41:12 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A cataloging system for documentation on open systems"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+SLOT="0"
 
 RDEPEND=">=dev-libs/libxml-1.8.11
 	>=sys-libs/zlib-1.1.3"
@@ -15,7 +16,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local  myconf
+	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
 
 	./configure \
@@ -57,3 +58,4 @@ pkg_postrm() {
 	echo ">>> Scrollkeeper ${PV} unmerged, if you removed the package"
 	echo "    you might want to clean up /var/lib/scrollkeeper."
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.9.ebuild,v 1.1 2002/06/02 00:08:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.9.ebuild,v 1.2 2002/06/29 21:41:12 azarah Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -17,7 +17,7 @@ http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
 http://unc.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
 http://belnet.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
-SLOT="0.3"
+SLOT="0"
 LICENSE="FDL-1.1 LGPL-2.1"
 
 
@@ -31,10 +31,10 @@ DEPEND="${RDEPEND}
 	 >=dev-util/intltool-0.17
 	nls? ( sys-devel/gettext )"
 src_compile() {
-	local  myconf
+	local myconf=""
 
 	if [ -z "`use nls`" ] ; then
-		myconf ="--disable-nls"
+		myconf="--disable-nls"
 	fi
 	# hack around some to make sure we find the libxml2 includes. odd bug.
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
