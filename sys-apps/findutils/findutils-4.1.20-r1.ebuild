@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.18 2004/05/15 22:06:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.19 2004/06/11 01:10:57 eradicator Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -46,7 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use afs ; then
+	if use afs && use x86; then
 		append-flags -I/usr/afsws/include
 		append-ldflags -lpam
 		export LIBS="/usr/afsws/lib/pam_afs.so.1 -lpam"
