@@ -1,10 +1,10 @@
 default: xmltex.fmt pdfxmltex.fmt 
 
 xmltex.fmt: 
-	tex -ini "&latex" -progname=xmltex xmltex.ini
+	tex -ini "&latex" xmltex.ini
 
 pdfxmltex.fmt: 
-	pdftex -ini "&pdflatex" -progname=pdfxmltex pdfxmltex.ini
+	pdftex -ini "&pdflatex" pdfxmltex.ini
 
 install: xmltex.fmt pdfxmltex.fmt
 	(TT=$$DESTDIR/`kpsewhich -expand-var '$$TEXMFMAIN'`; \
