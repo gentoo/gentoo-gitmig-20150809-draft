@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.11 2002/10/22 05:36:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.12 2002/10/22 20:23:23 vapier Exp $
 
 IUSE="xmms"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
-HOMEPAGE="http://eroaster.sourceforge.net"
+HOMEPAGE="http://eroaster.sourceforge.net/"
 SRC_URI="mirror://sourceforge/eroaster/${P}.tar.gz"  
 
 SLOT="0"
@@ -23,9 +23,9 @@ DEPEND=">=dev-lang/python-2.0
 RDEPEND="${DEPEND}
 	xmms? ( media-sound/xmms )
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-sound/vorbis-tools )
+	oggvorbis? ( media-sound/vorbis-tools )"
 
-src_install () {
+src_install() {
 	einstall \
 		gnorbadir=${D}/usr/share/eroaster || die
 }
@@ -35,18 +35,9 @@ pkg_postinst() {
 	einfo
 	einfo "mpg123   For converting MP3s to WAVs and playing MP3s"
 	einfo "sox      For converting MP3s to WAVs"
-	
-	if [ -z "`use xmms`" ]
-	then
-		einfo "xmms     For playing MP3s"
-	fi
-
+	[ -z "`use xmms`" ]	&& einfo "xmms     For playing MP3s"
 	einfo "bchunk   For converting BIN/CUE to ISO"
-
-	if [ -z "`use encode`" ]
-	then
-		einfo "lame     For Encoding MP3s"
-	fi
+	[ -z "`use encode`" ]	&& einfo "lame     For Encoding MP3s"
 
 	if [ -z "`use oggvorbis`" ]
 	then
