@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.9.ebuild,v 1.3 2000/09/15 20:08:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.9.ebuild,v 1.4 2000/10/14 11:32:54 achim Exp $
 
-P=gtop-1.0.9
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gtop"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtop/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPGAE="http://www.gnome.org/"
 
 src_compile() {                           

@@ -1,31 +1,24 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/medusa/medusa-0.2.ebuild,v 1.1 2000/10/14 11:32:54 achim Exp $
 
-P=GConf-0.8
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="Gconf"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}"
+DESCRIPTION="medusa"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
-
-src_unpack() {
-  unpack ${A}
-}
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --with-catgets
+  try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
 src_install() {                               
   cd ${S}
   try make prefix=${D}/opt/gnome install
-  prepman /opt/gnome
-
-  dodoc AUTHORS BUGS COPYING ChangeLog FAQ NEWS README* THANKS TODO
+  dodoc AUTHORS COPYING ChangeLog NEWS README
 }
 
 
