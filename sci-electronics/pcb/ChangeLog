@@ -1,0 +1,57 @@
+# ChangeLog for app-sci/pcb
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.1 2004/12/27 20:15:40 ribosome Exp $
+
+*pcb-20040530 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +pcb-20040215.ebuild, +pcb-20040530.ebuild, +pcb-20040903.ebuild:
+  Moved from app-sci/pcb to sci-electronics/pcb.
+
+*pcb-20040903 (07 Dec 2004)
+
+  07 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20040530.ebuild,
+  +pcb-20040903.ebuild:
+  Version bump
+
+  17 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> pcb-20040530.ebuild:
+  Marked ~amd64.
+
+  15 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  pcb-20031113.ebuild, pcb-20031113-r1.ebuild: Removed.
+  pcb-20040215.ebuild: Added to x86.
+  pcb-20040530.ebuild: Version bump (#52670) suggested by Sascha Silbe.
+
+  25 May 2004; David Holm <dholm@gentoo.org> pcb-20040215.ebuild:
+  Added to ~ppc.
+
+*pcb-20040215 (20 May 2004)
+
+  20 May 2004; Mike Frysinger <vapier@gentoo.org> +pcb-20040215.ebuild:
+  Version bump #48334 by David Pufer
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20030815.ebuild,
+  pcb-20031113-r1.ebuild, pcb-20031113.ebuild:
+  Removing S=... without effect, adding IUSE
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; pcb-20030815.ebuild,
+  pcb-20031113-r1.ebuild, pcb-20031113.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
+
+  25 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20031113-r1.ebuild:
+  Adding tk build dependency, declaring stable.
+
+*pcb-20031113-r1 (23 Feb 2004)
+
+  23 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> pcb-20031113-r1.ebuild:
+  Fixing broken info dir entry, see bug #36045
+
+*pcb-20031113 (22 Nov 2003)
+
+  22 Nov 2003; <plasmaroo@gentoo.org> pcb-20031113.ebuild:
+  Version bump.
+
+*pcb-20030815 (09 Sep 2003)
+
+  09 Sep 2003; <plasmaroo@gentoo.org> pcb-20030815.ebuild:
+  Initial revision.
