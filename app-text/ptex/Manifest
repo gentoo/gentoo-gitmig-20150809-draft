@@ -1,6 +1,9 @@
-MD5 710ccf7132e6302e3f590cbf8cabc919 ChangeLog 5504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c4d13d1b37e5beabd1bc019e08baef91 ChangeLog 5623
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
-MD5 fb31bfd39844534ff868a2b1566c71a6 ptex-3.1.8.1.ebuild 4845
+MD5 797efb394010cf53628df42097d24c58 ptex-3.1.8.1.ebuild 4917
 MD5 b15520d10c398d825eb8afd22ec776de ptex-3.1.5.ebuild 3536
 MD5 c004152e2907bd7aca89e8fbf88bdce4 ptex-3.1.8.20050218.ebuild 4828
 MD5 b8191d6e039d4434e4fd70d1b19cc4a0 ptex-3.1.4-r2.ebuild 3526
@@ -18,3 +21,10 @@ MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
 MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCN/m8VWNWqTUmv+0RAnutAJ9ehNC7jRh/xd/yuozt7hyxcNujggCfTlbm
+1AximqfCQznW9Wh1bl4LJh0=
+=8gYL
+-----END PGP SIGNATURE-----
