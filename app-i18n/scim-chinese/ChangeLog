@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-chinese
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.16 2004/07/17 16:33:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-chinese/ChangeLog,v 1.17 2004/08/14 00:16:00 usata Exp $
+
+*scim-chinese-0.4.1 (14 Aug 2004)
+
+  14 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +scim-chinese-0.4.1.ebuild:
+  Version bumped.
 
   18 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> scim-chinese-0.3.0.ebuild,
   scim-chinese-0.4.0.ebuild:
