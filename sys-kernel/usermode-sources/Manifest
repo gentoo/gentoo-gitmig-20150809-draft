@@ -49,45 +49,10 @@ MD5 d1ccc2047be533c992f67270a150a210 files/usermode-sources-2.4.cmdlineLeak.patc
 MD5 a3f4cfc55b03f9a6104da43da9c38928 files/usermode-sources-2.6.77923.patch 1094
 MD5 95708646470a95668e8789cd415844ed files/usermode-sources.CAN-2004-0497.patch 846
 MD5 c27699e9d62f7d46213bd51f87636163 files/usermode-sources-2.4.vma.patch 8143
-MD5 8204afea1d572b49a4a80d8da4eef0c9 security/CAN-2004-0596-2.6-eql.patch 1033
-MD5 b738cb0120a32aa92cfcfdbd564dd21f security/security-2.6-attr_check.patch 1368
-MD5 d1ccc2047be533c992f67270a150a210 security/security-2.4-proc_race.patch 388
-MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 security/CAN-2004-0883-2.4-smbfs_remote_overflows.patch 3434
-MD5 30c242af6df0e71b06018cf8abbe224b security/security-2.6.8.1-binfmt_elf-fixes.patch 2349
-MD5 d4a740ae56c2049247083af387a22a85 security/CAN-2004-0394-panic.patch 350
-MD5 9305bb1af0da4ef1510285b7ad880d2d security/security-2.6-af_unix-kern-mem.patch 470
-MD5 263a9f529a3b80e2c91340a73c0c5920 security/CAN-2004-0816-2.6-iptables_dos.patch 1445
-MD5 9e48781c02908b41ffa39a752bf2530f security/CAN-2004-0814-2.6.7-tty_race_conditions.patch 131731
-MD5 eb70acb35ba13daa4b1fda53cb61fc01 security/CAN-2004-0495_0496-2.6-sparse.patch 23861
-MD5 8812f60b8d02b0b3b4c46a3311ddd851 security/CAN-2004-0883-2.6.9-smbfs_remote_overflows.patch 2662
-MD5 b0a1f80aff51d6601e8924329023b241 security/security-2.4-af_unix-kern-mem.patch 515
-MD5 4b99df79dcc18b17eb41489b96ff9689 security/CAN-2004-0814-2.4.27-tty_race_conditions.patch 81529
-MD5 91dd923056c1af13054cb00fb0a8daa3 security/CAN-2004-1074-2.6-kernel_dos_vma.patch 1578
-MD5 52996b643afbd6ed9ba38b9483c2cac3 security/CAN-2004-0415-2.6.7-file_offset_pointers.patch 112612
-MD5 8165de5e2ab6e0d3263ea35ce856fd1b security/CAN-2004-0883-2.6.8.1-smbfs_remote_overflows.patch 3309
-MD5 8f8f2412aacf9a01b5549bf2a9a3bff8 security/CAN-2004-0415-2.4-file_offset_pointers.patch 90145
-MD5 d4c051e7c6062704be85192e25e2f5b2 security/CAN-2004-0814-2.4.26-tty_race_conditions.patch 81508
-MD5 0f66013f643c79c97fda489618a4e2fd security/CAN-2004-0535-2.4-e1000.patch 476
-MD5 e6b4f6f02b16fec37c79501ad976f831 security/CAN-2004-0814-2.6.8.1-tty_race_conditions.patch 130365
-MD5 48d91c3d100d5ffc57155c537b50b861 security/security-2.4-mips-ptrace.patch 1934
-MD5 452e04a312368605e145428c35bd0e05 security/security-2.6-remote_ddos.patch 572
-MD5 d918b0aea5eeb2b536a8a26f9cbbc0d9 security/security-2.6.8.1-mips-ptrace.patch 2085
-MD5 dc18e982f8149588a291956481885a8c security/CAN-2004-0495-2.4-sparse.patch 17549
-MD5 e1f9b1e3d7a58ac47f77dfc6953333ec security/CAN-2004-1074-2.4-kernel_dos_vma.patch 2010
-MD5 2b3ddb8b8b15f8da35ade38544b57857 security/security-2.4-remote_ddos.patch 1499
-MD5 fe5c0aaaedb5a0db1039a5aae50723f7 security/security-2.6.9-mips-ptrace.patch 2278
-MD5 87d4a5f01955bd23fdf77e55ba12b320 security/security-2.6.9-binfmt_elf-fixes.patch 2351
-MD5 95708646470a95668e8789cd415844ed security/CAN-2004-0497-attr_gid.patch 846
-MD5 01d575c832f36dc0433a904cc64448a6 security/security-2.6-proc_race.patch 692
-MD5 12025d52cb6a387cc4becbac6c5654c8 security/CAN-2004-0685-2.4-conectiva_usb.patch 2789
-MD5 d54a257e7c777d0bc7edf1c22152e8f0 security/security-2.6.7-mips-ptrace.patch 2085
-MD5 4c7627b4667b47b9a437f061ea04b5d4 security/security-2.4-binfmt_elf-fixes.patch 2347
-MD5 23852ec2542971547374316129336f33 security/security-2.6.7-binfmt_elf-fixes.patch 2607
-MD5 c91330cc5b4044b6f59696095c2dc0fb security/CAN-2004-0626-death_packet.patch 423
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOE8miJcSIUGNthERAnDVAKCPfVXEwt3dx2TrvdF8dGapLJtHCgCgjRad
-gJx4w5lYpY6zI0Tyze+mOX4=
-=Xvw0
+iD8DBQFCOIReI1lqEGTUzyQRAgMUAKCjRpbVTREEeKAQCcDiUb5+BZVIewCfSPAT
+ulxT1VboGGlvedd/M/liimk=
+=3uu6
 -----END PGP SIGNATURE-----
