@@ -1742,7 +1742,7 @@ class dblink:
 			sys.exit(a)
 
 	def merge(self,mergeroot,inforoot,mergestart=None,outfile=None):
-		
+		global prevmask	
 		if mergestart==None:
 			origdir=os.getcwd()
 			if not os.path.exists(self.dbdir):
@@ -1753,12 +1753,7 @@ class dblink:
 			#before merging, it's *very important* to touch all the files !!!
 			os.system("(cd "+mergeroot+"; for x in `find`; do  touch -c $x 2>/dev/null; done)")
 			print ">>> Merging",self.cat+"/"+self.pkg,"to",root
-			if not os.path.exists(root):
-				print "!!! Error: ROOT setting points to a non-existent directory.  Exiting."
-				return
-			elif not os.path.isdir(root):
-				print "!!! Error: ROOT setting points to a non-directory.  Exiting."
-				return
+			
 		
 			#get old contents info for later unmerging
 			oldcontents=self.getcontents()
@@ -1782,6 +1777,9 @@ class dblink:
 				if os.path.isdir(ppath):
 					self.protectmask.append(ppath)
 				#if it doesn't exist, silently skip it
+				#back up umask, save old one in prevmask (global)
+				prevmask=os.umask(0)
+		
 		mergestart=mergestart
 		os.chdir(mergestart)
 		cpref=os.path.commonprefix([mergeroot,mergestart])
@@ -1918,6 +1916,8 @@ class dblink:
 				print zing+" "+rootfile
 				outfile.write("dev "+relfile+"\n")
 		if mergestart==mergeroot:
+			#restore umask
+			os.umask(prevmask)
 			#if we opened it, close it	
 			outfile.close()
 			if (oldcontents):
@@ -2101,7 +2101,6 @@ def ebuild_init():
 	else:
 		roottree=vartree(root,root_virts)
 	ebuild_initialized=1
-os.umask(0)
 root=getenv("ROOT")
 if len(root)==0:
 	root="/"
@@ -2121,6 +2120,7 @@ if root != "/":
 if not os.path.exists(root+"tmp"):
 	print ">>> "+root+"tmp doesn't exist, creating it..."
 	os.mkdir(root+"tmp",01777)
+os.umask(022)
 settings=config()
 ebuild_initialized=0
 
