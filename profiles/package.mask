@@ -28,8 +28,8 @@
 
 # <azarah@gentoo.org> (08 Sep 2002)
 # Get things ready for new xfree release.
-sys-apps/baselayout-1.8.3
-x11-base/xfree-4.2.1
+#=sys-apps/baselayout-1.8.3
+=x11-base/xfree-4.2.1
 
 # <aliz@gentoo.org> (07 Sep 2002)
 # Masked for testing
