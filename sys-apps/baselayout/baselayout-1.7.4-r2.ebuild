@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.3 2002/03/20 18:35:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.4 2002/03/20 23:21:18 drobbins Exp $
 
 SV="1.3.0"
 SVREV=""
@@ -313,7 +313,7 @@ pkg_postinst() {
 	# is used, as this was the cause for all the devfs problems we had
 	if [ $altmerge -eq 0 ]
 	then
-		cd ${D}/dev
+		cd ${ROOT}/dev
 		#These devices are also needed by many people and should be included
 		echo "Making device nodes... (this could take a minute or so...)"
 		${S}/sbin/MAKEDEV generic-i386

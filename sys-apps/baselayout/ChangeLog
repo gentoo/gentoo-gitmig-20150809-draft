@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.15 2002/03/20 18:36:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.16 2002/03/20 23:21:18 drobbins Exp $
 
+  20 March 2002; Daniel Robbins <drobbins@gentoo.org> : fixed pkg_postinst()
+  that was changing dirs to ${D}/dev instead of ${ROOT}/dev.  No rev bump.
+  
   20 March 2002; Daniel Robbins <drobbins@gentoo.org> : tweaked ebuild to test
   for devfs mount by looking for /dev/.devfsd, not by catting /proc/mounts.
   Catting /proc/mounts can give inaccurate results if you're inside a chroot
