@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.18 2004/03/03 17:04:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.19 2004/03/07 18:06:52 usata Exp $
+
+*prime-0.7a-r1 (08 Mar 2004)
+
+  08 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.7a-r1.ebuild,
+  files/prime-0.7.a.1.diff:
+  Added a fix for ruby 1.6. Extracted from prime-0.7.a.1
 
 *prime-0.7a_p1 (03 Mar 2004)
 

@@ -1,0 +1,30 @@
+diff -urN taiyaki.rb.orig taiyaki.rb
+--- taiyaki.rb.org	2004-02-05 20:39:32.000000000 +0900
++++ taiyaki.rb	2004-03-03 03:21:51.000000000 +0900
+@@ -20,6 +20,26 @@
+   end
+ end
+ 
++### Considering under compatibility with Ruby1.6
++begin
++  Array.new([])
++rescue TypeError
++  class Array
++    alias original_initialize initialize
++
++    def initialize(value = 0)
++      if value.kind_of?(Array) then
++        original_initialize(value.length)
++        self.length.times {|i|
++          self[i] = value[i]
++        }
++      else
++        original_initialize(value)
++      end
++    end
++  end
++end
++
+ def require (name, package = nil, url = nil)
+   package_name =
+          {'progressbar'                => 'progressbar',
