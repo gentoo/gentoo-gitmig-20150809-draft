@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.11 2004/06/24 22:56:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.12 2004/07/13 03:14:36 tgall Exp $
+
+  12 Jul 2004; Tom Gall <tgall@gentoo.org> xdvik-22.40y-r2.ebuild:
+  added ~ppc64 bug #55965
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> xdvik-22.40y-r1.ebuild,
   xdvik-22.40y-r2.ebuild:
