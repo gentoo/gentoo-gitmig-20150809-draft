@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.6 2004/07/30 15:53:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.7 2004/10/03 15:43:00 mcummings Exp $
+
+  03 Oct 2004; Michael Cummings <mcummings@gentoo.org> Test-Pod-1.20.ebuild:
+  Marking stable on x86 and sparc
 
 *Test-Pod-1.20 (30 Jul 2004)
 
