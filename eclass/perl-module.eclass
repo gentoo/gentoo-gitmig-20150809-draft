@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.8 2002/05/06 14:34:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.9 2002/05/06 22:26:36 seemant Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -21,13 +21,14 @@ base_src_compile() {
 }
 
 base_src_test() {
-
-	make test || die
+	make test
 }
 
 base_src_install() {
 
 	dodir ${POD_DIR}
+	
+	test -z ${mytargets} && mytargets="install"
 	
 	make \
 		PREFIX=${D}/usr \
@@ -40,7 +41,7 @@ base_src_install() {
 		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
 		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
 		${myinst} \
-		install || die
+		${mytargets} || die
 
 	sed -e "s:${D}::g" \
 		${D}/${ARCH_LIB}/perllocal.pod \
@@ -48,5 +49,5 @@ base_src_install() {
 	
 	rm -f ${D}/${ARCH_LIB}/perllocal.pod
 
-	dodoc Change* MANIFEST README* ${mydoc}
+	dodoc Change* MANIFEST* README* ${mydoc}
 }
