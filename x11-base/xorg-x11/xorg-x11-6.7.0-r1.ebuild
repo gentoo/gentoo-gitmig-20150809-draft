@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.23 2004/07/11 03:19:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.24 2004/07/11 03:22:12 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -103,7 +103,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.1-r1
-	>=x11-base/opengl-update-1.7
+	>=x11-base/opengl-update-1.7.2
 	>=x11-misc/ttmkfdir-3.0.4
 	>=sys-apps/sed-4
 	sys-apps/util-linux
