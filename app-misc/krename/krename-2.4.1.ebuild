@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/krename-2.4.1.ebuild,v 1.1 2002/10/30 18:55:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/krename-2.4.1.ebuild,v 1.2 2002/11/02 10:11:46 hannes Exp $
 
 IUSE=""
 
@@ -12,6 +12,6 @@ HOMEPAGE="http://krename.sourceforge.net/"
 
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 need-kde 3
