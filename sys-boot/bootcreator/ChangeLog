@@ -1,0 +1,11 @@
+# ChangeLog for sys-boot/bootcreator
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.1 2005/01/16 19:21:50 pylon Exp $
+
+*bootcreator-1.1 (16 Jan 2005)
+
+  16 Jan 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +bootcreator-1.1.ebuild:
+  New ebuild for all Pegasos users.
+  Thanks to MorgothDc that he released this Software under the GPL!
+
