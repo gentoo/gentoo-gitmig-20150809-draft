@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.35.ebuild,v 1.7 2004/06/25 01:15:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.35.ebuild,v 1.8 2004/07/14 21:25:22 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/I/IN/INGY/${MY_P}.readme"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 alpha ~hppa ~mips ~ppc sparc ~amd64"
+IUSE=""
 
 src_compile() {
 	echo "" | perl-module_src_compile
