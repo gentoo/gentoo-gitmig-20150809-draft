@@ -66,7 +66,7 @@ then
 	export FTP_PROXY
 fi
 
-export CONFIG_PROTECT=""
+export CONFIG_PROTECT="-*"
 # disable autoclean, or it b0rks
 export AUTOCLEAN="no"
 #above allows portage to overwrite stuff
