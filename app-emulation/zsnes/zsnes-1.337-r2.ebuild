@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/zsnes/zsnes1337src.tar.gz"
 HOMEPAGE="http://www.zsnes.com/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -sparc -sparc64 -ppc"
 
 RDEPEND="opengl? ( virtual/opengl )
     virtual/x11

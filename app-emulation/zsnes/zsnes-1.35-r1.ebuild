@@ -7,7 +7,7 @@ DESCRIPTION="ZSNES is a SNES (Super Nintendo) emulator that uses x86 assembly."
 SRC_URI="mirror://sourceforge/zsnes/zsnes135src.tar.gz"
 HOMEPAGE="http://www.zsnes.com/"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -sparc -sparc64 -ppc"
 SLOT="0"
 
 RDEPEND="opengl? ( virtual/opengl )
