@@ -1,0 +1,10 @@
+# ChangeLog for net-www/visitors
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/visitors/ChangeLog,v 1.1 2004/06/11 22:00:24 zul Exp $
+
+*visitors-0.2a (11 Jun 2004)
+
+  11 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  visitors-0.2a.ebuild:
+  Initial Ebuild written by Sven Wegener. Closes #50919.
+
