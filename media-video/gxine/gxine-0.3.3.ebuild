@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.6 2003/10/03 11:48:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.7 2003/12/06 19:46:54 spider Exp $
 
 inherit nsplugins
 
@@ -12,11 +12,10 @@ DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1_beta10
 	>=x11-libs/gtk+-2.0.0
 	lirc? ( app-misc/lirc )
-	X? ( virtual/x11 )
-	gnome? ( gnome-base/ORBit )"
+	X? ( virtual/x11 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-IUSE="X gnome nls lirc"
+IUSE="X nls lirc"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
