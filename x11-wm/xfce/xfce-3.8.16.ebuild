@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.3 2002/04/29 21:10:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.4 2002/04/30 12:16:29 seemant Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="XFce is a lightweight desktop environment for various UNIX systems."
@@ -11,9 +11,9 @@ DEPEND="virtual/x11
 	>=x11-libs/gtk+-1.2.10-r4
 	gnome? ( dev-libs/libxml2 )
 	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 >=media-libs/imlib-1.9.10-r1 )
-	arts? ( kde-base/kdelibs )
-	nls? ( sys-devel/gettext )"
-RDEPEND=""
+	arts? ( kde-base/arts )"
+	
+RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
