@@ -1,0 +1,11 @@
+# ChangeLog for kde-base/kdebase-data
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.1 2005/03/13 18:48:04 danarmak Exp $
+
+*kdebase-data-3.4.0_rc1-r1 (13 Mar 2005)
+
+  13 Mar 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +kdebase-data-3.4.0_rc1-r1.ebuild:
+  This ebuild replaces kdebase-l10n, kdebase-startkde and kdebase-pics (bug
+  84018).
+
