@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.0.ebuild,v 1.1 2004/03/22 00:10:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.0.ebuild,v 1.2 2004/03/28 15:36:20 lu_zero Exp $
 
 # FIXME : re-enable docs build
 inherit eutils flag-o-matic libtool gnome2
@@ -31,7 +31,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
-	use ppc && epatch ${FILESDIR}/gnu_asm_fix.patch
+#	Fixed in the configure in a cleaner way.
+#	use ppc && epatch ${FILESDIR}/gnu_asm_fix.patch
 	# docs hack, disable dirs without html output
 #	cd ${S}/docs
 #	mv Makefile.in Makefile.in.old
