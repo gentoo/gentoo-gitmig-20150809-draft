@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.0.2.ebuild,v 1.1 2003/02/04 12:55:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.0.2.ebuild,v 1.2 2003/02/06 22:28:30 agriffis Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the Gnome2 session manager"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 
 RDEPEND=">=x11-libs/gtk+-2.1
@@ -26,6 +26,15 @@ DEPEND="${RDEPEND}
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
 DOC="AUTHORS COPYING* README HACKING INSTALL NEWS TODO ChangeLog"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# This patch is only necessary on 64-bit platforms such as Alpha
+	# but it doesn't hurt elsewhere.
+	epatch ${FILESDIR}/${PN}-2.0.9-64bit.patch || die
+}
 
 src_install() {
 	gnome2_src_install
