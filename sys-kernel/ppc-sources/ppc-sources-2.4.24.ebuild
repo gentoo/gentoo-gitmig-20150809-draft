@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24.ebuild,v 1.1 2004/01/14 08:47:02 trance Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24.ebuild,v 1.2 2004/01/14 08:49:04 trance Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -23,7 +23,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://gentoo/patch-${KV}.bz2
 		http://dev.gentoo.org/~trance/stuff/patch-${KV}.bz2"
 
-KEYWORDS="~ppc -ppc64"
+KEYWORDS="ppc -ppc64"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 
