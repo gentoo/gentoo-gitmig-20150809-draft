@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.12 2002/07/12 15:25:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.13 2002/08/29 23:56:15 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -69,7 +69,7 @@ elibtoolize() {
 
 		for y in test_patch relink_patch tmp_patch portage_patch
 		do
-			if ! eval ${y} --test $>${T}/libtool.foo
+			if ! eval ${y} --test $>${T}/elibtool.log
 			then
 				case ${y} in
 					test_patch)
@@ -144,7 +144,7 @@ elibtoolize() {
 				esac
 				
 				einfo "Applying libtool-${y/_patch/}.patch..."
-				eval ${y} $>${T}/libtool.foo
+				eval ${y} $>${T}/elibtool.log
 			elif [ "${portage}" = "no" ] && [ "${reversedeps}" = "no" ]
 			then
 				ewarn "Cannot apply any patch, running libtoolize..."
