@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.5 2003/06/13 16:56:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.6 2003/07/06 18:11:04 raker Exp $
+
+  06 Jul 2003; Nick Hadaway <raker@gentoo.org> faad2-1.1.ebuild:
+  Marked stable for x86.
 
   13 Jun 2003; Jason Wever <weeve@gentoo.org> faad2-1.1.ebuild:
   Added ~sparc to keywords.
