@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.2.ebuild,v 1.1 2004/10/30 00:35:59 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.2.ebuild,v 1.2 2004/11/14 20:47:06 fafhrd Exp $
 
 inherit eutils
 
@@ -37,9 +37,11 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die "install failed"
+	emake DESTDIR=${D} \
+		GNOMEDIR=${D}/usr/share/gnome/apps/Settings \
+		gnulocaledir=${D}/usr/share/locale \
+		install || die "install failed"
 	#	prefix=${D}/usr \
-	#	GNOMEDIR=${D}/usr/share/gnome/apps/Settings \
 	#	install || die
 
 	dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
