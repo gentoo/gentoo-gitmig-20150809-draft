@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.31 2004/11/16 07:09:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.32 2004/11/16 10:03:51 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -485,9 +485,7 @@ php5-sapi_src_install () {
 
 	# we only install the following for the PHP_PROVIDER_PKG ebuild
 	if ! php5-sapi_is_providerbuild ; then
-		rm ${D}/usr/bin/php-config
-		rm ${D}/usr/bin/phpize
-		rm ${D}/usr/bin/phpextdist
+		rm ${D}/usr/bin/{php,phpextdist,phpize,php-config}
 		rm -rf ${D}/usr/lib/php/build
 		rm -rf ${D}/usr/include/php
 		rm -rf ${D}/usr/share/man/man1/php.1*
