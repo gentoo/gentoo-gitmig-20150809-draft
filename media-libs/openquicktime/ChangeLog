@@ -1,13 +1,16 @@
 # ChangeLog for media-libs/openquicktime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.6 2003/02/12 07:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.7 2003/03/06 21:23:38 mholzer Exp $
+
+*openquicktime-1.0 (25 Apr 2002)
+
+  06 Mar 2003; Martin Holzer <mholzer@gentoo.org> openquicktime-1.0.ebuild :
+  Filtering out -fprefetch-loop-arrays. Closes #16919.
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> openquicktime-1.0.ebuild :
   Add ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*openquicktime-1.0 (25 Apr 2002)
 
   07 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
