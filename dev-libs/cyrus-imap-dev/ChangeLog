@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.1 2002/10/11 05:33:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.2 2002/11/23 06:28:36 raker Exp $
+
+*cyrus-imap-dev-2.1.9-r1 (23 Nov 2002)
+
+  23 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imap-dev-2.1.9-r1.ebuild, files/digest-cyrus-imap-dev-2.1.9-r1,
+  files/config.diff :
+  Added the diff being used on cyrus-imapd and cyrus-imap-admin.
 
 *cyrus-imap-dev-2.1.9 (01 Oct 2002)
 
