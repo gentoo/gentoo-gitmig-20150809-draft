@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.75 2005/03/04 17:21:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.76 2005/03/13 04:38:24 vapier Exp $
+
+*libtool-1.5.14 (13 Mar 2005)
+
+  13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.5.14/libtool-1.5.14-ltmain_sh-max_cmd_len.patch,
+  +libtool-1.5.14.ebuild:
+  Version bump.
 
   04 Mar 2005; Daniel Goller <morfic@gentoo.org> libtool-1.5.10-r4.ebuild:
   Stable on ppc
