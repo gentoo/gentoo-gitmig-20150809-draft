@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.12 2003/05/23 03:03:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.13 2003/05/23 03:54:28 robbat2 Exp $
 
 inherit flag-o-matic 
 
@@ -35,7 +35,7 @@ DEPEND="|| (
 	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
-	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.96 )
+	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	curl? ( >=net-ftp/curl-7.10.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
@@ -62,7 +62,7 @@ DEPEND="|| (
 #		>=sys-libs/readline-4.1 )"
 
 RDEPEND="
-	xml? ( >=app-text/sablotron-0.95-r1 )
+	xml? ( >=app-text/sablotron-0.97 )
 	qt? ( >=x11-libs/qt-2.3.0 )"
 
 src_unpack() {
