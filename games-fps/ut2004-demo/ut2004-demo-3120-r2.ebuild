@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.1 2004/02/24 21:41:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.2 2004/02/24 21:57:23 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -21,7 +21,8 @@ KEYWORDS="-* ~x86 ~amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )
 	alsa? ( >=media-libs/alsa-lib-1.0.2
-			>=media-libs/libsdl-1.2.6-r3 ) "
+			>=media-libs/libsdl-1.2.6-r3
+			>=media-libs/openal-20040218 ) "
 
 S=${WORKDIR}
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.8 2004/02/24 21:41:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.9 2004/02/24 21:57:23 wolf31o2 Exp $
+
+  24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3120-r2.ebuild:
+  Added openal-20040218 DEPEND.
 
 *ut2004-demo-3120-r2 (24 Feb 2004)
 
