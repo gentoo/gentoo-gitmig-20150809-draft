@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.15 2004/06/24 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.16 2004/06/30 22:20:02 agriffis Exp $
 
 inherit gnuconfig
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.2-r5"
 
@@ -79,4 +79,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/login.defs.new
 	fi
 }
-

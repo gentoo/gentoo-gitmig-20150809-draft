@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r1.ebuild,v 1.14 2004/06/24 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.6-r1.ebuild,v 1.15 2004/06/30 22:20:02 agriffis Exp $
 
 MY_PN="${PN/pam-/pam_}"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -8,9 +8,10 @@ DESCRIPTION="Based on the sources from util-linux, with added pam and shadow fea
 SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 HOMEPAGE="http://www.thkukuk.de/pam/pam_login/"
 KEYWORDS="x86 amd64 ppc"
+IUSE="nls"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.2-r5"
 

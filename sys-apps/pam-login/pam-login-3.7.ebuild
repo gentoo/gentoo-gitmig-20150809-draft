@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.17 2004/06/24 22:20:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.18 2004/06/30 22:20:02 agriffis Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -13,10 +13,11 @@ SRC_URI="ftp://ftp.suse.com/pub/people/kukuk/pam/${MY_PN}/${MY_PN}-${PV}.tar.bz2
 HOMEPAGE="http://www.thkukuk.de/pam/pam_login/"
 
 KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64"
+IUSE="nls"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/pam
 	>=sys-apps/shadow-4.0.2-r5"
 
@@ -70,4 +71,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/login.defs.new
 	fi
 }
-
