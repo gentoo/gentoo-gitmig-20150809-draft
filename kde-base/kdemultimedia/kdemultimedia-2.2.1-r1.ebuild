@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.1 2001/09/29 12:42:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.1-r1.ebuild,v 1.2 2001/10/01 11:04:22 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-base || die
+inherit kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 
-	kde-base_src_compile myconf
+	kde_src_compile myconf
 
 	local myaudio
 	local myinteface
@@ -50,7 +50,7 @@ src_compile() {
 		--with-xinerama \
 		$myconf $myaudio $myinterface || die
 
-	kde-base_src_compile make
+	kde_src_compile make
 
 }
 

@@ -10,7 +10,7 @@
    Dan Armak
   </author>
   <date>
-   30/9/01
+   Updated for eclasses v3
   </date>
   <sect1>
    <title>
@@ -21,6 +21,9 @@
   </para>
   <para>
    The most similar group of ebuilds is the kde apps. These have been selected to be the test case for this first incarnation of eclasses. Currently test ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1. Many others will follow.
+  </para>
+  <para>
+   Please read news.txt for an astract of changes between versions of the eclasses.
   </para>
   <para>
    Section two explains how eclasses work.Section three shows a sample inheriting ebuild.
@@ -200,6 +203,9 @@
     <para>
      The only way to know what functions contain what sections is to read the eclasses.
     </para>
+    <para>
+     A final note: not all functions execute all their sections when called with <emphasis>all</emphasis> or without parameters. Some sections may be non-standrd and must be called explicitly. Current examples inculde base_src_unpack<emphasis> patch </emphasis>and the upcoming kde_src_unpack <emphasis>objprelink-patch</emphasis> (whose name may change when I actually write it).
+    </para>
     </sect3>
    </sect2>
    <sect2>
@@ -207,16 +213,20 @@
     base.eclass
    </title>
    <para>
-    This eclass defines some default variables and functions, similar to those you'd get by default in a non-inheriting ebuild. For example, it defines:
-   </para>
-   <programlisting>
-<![ CDATA [base_src_unpack() { unpack ${A}; }
-]]>   </programlisting>
-   <para>
-    Only with sections, of course.
+    This eclass defines some default variables and functions, similar to those you'd get by default in a non-inheriting ebuild.
    </para>
    <para>
     It is inherited by higher-level eclasses like the kde ones.
+   </para>
+   <para>
+    Note that in base_src_unpack there is one non-default section (i.e. it doesn't execute for section <emphasis>all</emphasis>). It is called <emphasis>patch</emphasis> and it looks like this:
+   </para>
+   <programlisting>
+<![ CDATA [cd ${S}
+]]><![ CDATA [patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+]]>   </programlisting>
+   <para>
+    Once, long ago, I remember hearing that emerge would execute this code automatically between src_unpack() and src_compile() if the file &dollar;&lcub;FILESDIR&rcub;/&dollar;&lcub;P&rcub;-gentoo.diff was present. Was this a plan, a rumour, or what? Someone please correct me, or at least correct this document.
    </para>
    </sect2>
    <sect2>
@@ -224,16 +234,19 @@
     kde.eclass
    </title>
    <para>
-    Used by all kde apps, whether directly or indirectly. This is a higher-level eclass, which is intended to provide not only sensible defaults but functions which can be used as-is more often then not. 
+    Used by all kde apps, whether directly or indirectly. This is a med-level eclass, which is intended to provide not only sensible defaults but functions which can be used as-is more often then not. In fact, none of the high-level kde-* eclasses which inherit from here change the functions in any way, and the ebuilds rarely do so.
    </para>
    <para>
-    It inherits c, autoconf and base.
+    It inherits autoconf and base.
    </para>
    <para>
     Read it to find out what it defines. It is quite self-explanatory.
    </para>
    <para>
-    Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/make install cycles. It handles all the std. configure options e.g. objprelink. It also adds kdelibs and qt to DEPEND.
+    Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/make install cycles. It handles all the std. configure options e.g. objprelink. It also adds kdelibs to DEPEND/RDEPEND.
+   </para>
+   <para>
+    Note: some kde apps, like widget styles and i18n packages, do not need to compile anything. Therefore kde.eclass does not inherit c and does not depend on qt. These packages can then inherit straight from here (or from kde-i18n.eclass, which also inherits from here). All other packages, which need to ompile c code and link against qt, should inhreit from kde-base.eclass.
    </para>
    </sect2>
    <sect2>
@@ -241,39 +254,29 @@
     kde-base.eclass
    </title>
    <para>
-    Meant for kde apps part of the core kde distribution.
+    Meant for standard kde apps, of both 2.1 and 2.2 architectures. Inherits c,kde and adds objprelink and qt deps. Sets HOMEPAGE=apps.kde.com.
    </para>
-   <para>
-    Differences from kde.eclass:
-   </para>
-   <itemizedlist>
-    <listitem>
-    <para>
-    Sets appropriate DESCRIPTION and HOMEPAGE=www.kde.org.
-    </para>
-   </listitem>
-    <listitem>
-    <para>
-    Sets default download path to the correct location on ftp.kde.org and several of its mirrors.
-    </para>
-   </listitem>
-   </itemizedlist>
    </sect2>
    <sect2>
     <title>
     kde-i18n.eclass
    </title>
    <para>
-    Meant for the kde-i18n-* packages. Niche use.
+    Meant for the kde-i18n-* packages, possibly also for the koffice-i18n to-be-written packages. Niche use.
    </para>
    <para>
     In fact, all kde-i18n ebuilds are completely identical and so all they have to do is inherit from this eclass.
    </para>
    <para>
-    Differences from kde.eclass:
+    Inherits from kde,kde.org. Makes a few differences, such as PROVIDE virtual/kde-i18n, correct &dollar;S, HOMEPAGE and DESCRIPTION.
    </para>
+   </sect2>
+   <sect2>
+    <title>
+    kde-dist.eclass
+   </title>
    <para>
-    Many. Doesn't inherit c. Doesn't depend on qt. Provides virtual/kde-i18n-&dollar;&lcub;PV&rcub;. Doesn't have <emphasis>myconf </emphasis>section in src_compile(). Doesn't have any sections in src_install(). Probably something else I forgot as well.
+    Meant for the base kde distribution packages in kde-base/*. Inherits kde-base,kde.org. Adds the correct DESCRIPTION and HOMEPAGE and kdelibs-&dollar;&lcub;PV&rcub; deps. The simpler/smaller kde-base/ packages (e.g. kdetoys) make no changes at all; most of those that do only add deps.
    </para>
    </sect2>
    <sect2>
@@ -281,7 +284,7 @@
     c.eclass
    </title>
    <para>
-    Adds gcc and glibc to DEPEND and RDEPEND. Not meant to be used alone, inherited by kde*.
+    Adds gcc and glibc to DEPEND and RDEPEND.
    </para>
    </sect2>
    <sect2>
@@ -289,7 +292,7 @@
     autoconf.eclass
    </title>
    <para>
-    Adds make/automake/autoconf to DEPEND. Not meant to be used alone, inherited by kde*.
+    Adds make/automake/autoconf to DEPEND.
    </para>
    </sect2>
    <sect2>
@@ -300,17 +303,34 @@
     Will be written soon. Will provide verbose debug output functions to centralise the numerous <emphasis>echo</emphasis>s I have scattered around the eclasses.
    </para>
    </sect2>
+   <sect2>
+    <title>
+    kde-objprelink.eclass
+   </title>
+   <para>
+    Will be written soon. Will provide the objprelink deps and the <emphasis>objprelink-patch</emphasis> src_unpack section.
+   </para>
+   </sect2>
   </sect1>
   <sect1>
    <title>
    The inheriting ebuilds
   </title>
   <para>
-   Not much here as yet. Look at the kde*-2.2.1-r1 ebuilds for examples. As a rule, read the eclass you are inheriting from and put any necessary changes in your ebuild.
+   Not much here as yet. Look at the kde*-2.2.1-r1 ebuilds for examples. As a rule, read the eclass you are inheriting from and put any necessary changes in your ebuild. For now, a collection of tips:
   </para>
-  <para>
-   Remember: always extend variables and fnctions. You should almost never need to replace them.
-  </para>
+  <itemizedlist>
+   <listitem>
+   <para>
+   Always extend variables and functions. You should almost never need to replace them. In particular, always remember to use DEPEND=&rdquo;&dollar;DEPEND...&rdquo; and the same for RDEPEND.
+   </para>
+  </listitem>
+   <listitem>
+   <para>
+   The eclasses have DESCRIPTION=&rdquo;Derived from &dollar;ECLASS&rdquo; set. This is to remind you to write a description of your own for your ebuilds. Otherwise the inherited one will show through as a reminder.
+   </para>
+  </listitem>
+  </itemizedlist>
   </sect1>
 
 

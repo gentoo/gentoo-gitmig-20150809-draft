@@ -4,7 +4,7 @@ eclass howto
 
 Dan Armak
 
-30/9/01
+Updated for eclasses v3
 
 1 Introduction
 
@@ -19,6 +19,9 @@ have been selected to be the test case for this first incarnation
 of eclasses. Currently test ebuilds are available for all
 of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1.
 Many others will follow.
+
+Please read news.txt for an astract of changes between versions
+of the eclasses.
 
 Section two explains how eclasses work.Section three shows
 a sample inheriting ebuild.
@@ -174,23 +177,17 @@ base_src_compile() {
 
         case $1 in
 
-           
-configure)
+            configure)
 
-                ./configure
-|| die;;
+                ./configure || die;;
 
-           
-make)
+            make)
 
-                make
-|| die;;
+                make || die;;
 
-           
-all)
+            all)
 
-                base_src_compile
-configure make;;
+                base_src_compile configure make;;
 
         esac
 
@@ -244,80 +241,117 @@ src_compile() {
 The only way to know what functions contain what sections
 is to read the eclasses.
 
+A final note: not all functions execute all their sections
+when called with all or without parameters. Some sections
+may be non-standrd and must be called explicitly. Current
+examples inculde base_src_unpack patch and the upcoming
+kde_src_unpack objprelink-patch (whose name may change when
+I actually write it).
+
 2.3 base.eclass
 
 This eclass defines some default variables and functions,
 similar to those you'd get by default in a non-inheriting
-ebuild. For example, it defines:
-
-base_src_unpack() { unpack ${A}; }
-
-Only with sections, of course.
+ebuild.
 
 It is inherited by higher-level eclasses like the kde ones.
+
+Note that in base_src_unpack there is one non-default section
+(i.e. it doesn't execute for section all). It is called
+patch and it looks like this:
+
+cd ${S}
+
+patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+
+Once, long ago, I remember hearing that emerge would execute
+this code automatically between src_unpack() and src_compile()
+if the file ${FILESDIR}/${P}-gentoo.diff was present. Was
+this a plan, a rumour, or what? Someone please correct me,
+or at least correct this document.
 
 2.4 kde.eclass
 
 Used by all kde apps, whether directly or indirectly. This
-is a higher-level eclass, which is intended to provide not
+is a med-level eclass, which is intended to provide not
 only sensible defaults but functions which can be used as-is
-more often then not. 
+more often then not. In fact, none of the high-level kde-*
+eclasses which inherit from here change the functions in
+any way, and the ebuilds rarely do so.
 
-It inherits c, autoconf and base.
+It inherits autoconf and base.
 
 Read it to find out what it defines. It is quite self-explanatory.
 
 Briefly, it handles all standard kde-2.1* and 2.2* apps that
 need configure/make/make install cycles. It handles all
 the std. configure options e.g. objprelink. It also adds
-kdelibs and qt to DEPEND.
+kdelibs to DEPEND/RDEPEND.
+
+Note: some kde apps, like widget styles and i18n packages,
+do not need to compile anything. Therefore kde.eclass does
+not inherit c and does not depend on qt. These packages
+can then inherit straight from here (or from kde-i18n.eclass,
+which also inherits from here). All other packages, which
+need to ompile c code and link against qt, should inhreit
+from kde-base.eclass.
 
 2.5 kde-base.eclass
 
-Meant for kde apps part of the core kde distribution.
-
-Differences from kde.eclass:
-
-* Sets appropriate DESCRIPTION and HOMEPAGE=www.kde.org.
-
-* Sets default download path to the correct location on ftp.kde.org
-  and several of its mirrors.
+Meant for standard kde apps, of both 2.1 and 2.2 architectures.
+Inherits c,kde and adds objprelink and qt deps. Sets HOMEPAGE=apps.kde.com.
 
 2.6 kde-i18n.eclass
 
-Meant for the kde-i18n-* packages. Niche use.
+Meant for the kde-i18n-* packages, possibly also for the
+koffice-i18n to-be-written packages. Niche use.
 
 In fact, all kde-i18n ebuilds are completely identical and
 so all they have to do is inherit from this eclass.
 
-Differences from kde.eclass:
+Inherits from kde,kde.org. Makes a few differences, such
+as PROVIDE virtual/kde-i18n, correct $S, HOMEPAGE and DESCRIPTION.
 
-Many. Doesn't inherit c. Doesn't depend on qt. Provides virtual/kde-i18n-${PV}.
-Doesn't have myconf section in src_compile(). Doesn't have
-any sections in src_install(). Probably something else I
-forgot as well.
+2.7 kde-dist.eclass
 
-2.7 c.eclass
+Meant for the base kde distribution packages in kde-base/*.
+Inherits kde-base,kde.org. Adds the correct DESCRIPTION
+and HOMEPAGE and kdelibs-${PV} deps. The simpler/smaller
+kde-base/ packages (e.g. kdetoys) make no changes at all;
+most of those that do only add deps.
 
-Adds gcc and glibc to DEPEND and RDEPEND. Not meant to be
-used alone, inherited by kde*.
+2.8 c.eclass
 
-2.8 autoconf.eclass
+Adds gcc and glibc to DEPEND and RDEPEND.
 
-Adds make/automake/autoconf to DEPEND. Not meant to be used
-alone, inherited by kde*.
+2.9 autoconf.eclass
 
-2.9 debug.eclass
+Adds make/automake/autoconf to DEPEND.
+
+2.10 debug.eclass
 
 Will be written soon. Will provide verbose debug output functions
 to centralise the numerous echos I have scattered around
 the eclasses.
 
+2.11 kde-objprelink.eclass
+
+Will be written soon. Will provide the objprelink deps and
+the objprelink-patch src_unpack section.
+
 3 The inheriting ebuilds
 
 Not much here as yet. Look at the kde*-2.2.1-r1 ebuilds for
 examples. As a rule, read the eclass you are inheriting
-from and put any necessary changes in your ebuild.
+from and put any necessary changes in your ebuild. For now,
+a collection of tips:
 
-Remember: always extend variables and fnctions. You should
-almost never need to replace them.
+* Always extend variables and functions. You should almost
+  never need to replace them. In particular, always remember
+  to use DEPEND="$DEPEND..."
+  and the same for RDEPEND.
+
+* The eclasses have DESCRIPTION="Derived
+  from $ECLASS" set. This is to remind you
+  to write a description of your own for your ebuilds. Otherwise
+  the inherited one will show through as a reminder.

@@ -1,43 +1,38 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.7 2001/09/29 21:03:25 danarmak Exp $
-# This is the kde ebuild for std. kde-dependant apps which follow configure/make/make install
-# procedures and have std. configure options. That includes kdevelop, koffice etc.
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.8 2001/10/01 11:04:22 danarmak Exp $
+# The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 . /usr/portage/eclass/inherit.eclass || die
-inherit c autoconf base || die
+inherit autoconf base || die
 ECLASS=kde
 
 DESCRIPTION="Based on the $ECLASS eclass"
-HOMEPAGE="http://apps.kde.org/"
 
-DEPEND="${DEPEND}
-	kde-base/kdelibs
-	objprelink? ( dev-util/objprelink )
-	x11-libs/qt-x11"
-RDEPEND="${RDEPEND}
-	kde-base/kdelibs
-	x11-libs/qt-x11"
+HOMEPAGE="http://www.kde.org/"
+
+DEPEND="$DEPEND kde-base/kdelibs"
+RDEPEND="$RDEPEND kde-base/kdelibs"
 
 kde_src_compile() {
 
-	echo "in kde-base_src_compile, 1st parameter is $1"
+    echo "in kde_src_compile, 1st parameter is $1"
     [ -z "$1" ] && kde_src_compile all
 
     while [ "$1" ]; do
 
 	case $1 in
-	    myconf)
+		myconf)
 			echo "in kde_src_compile, action is myconf"
 			use qtmt 	&& myconf="$myconf --enable-mt"
-	    		use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
+			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
 			;;
-	    configure)
+		configure)
 			echo "in kde_src_compile, action is configure"
 			./configure --host=${CHOST} --with-x \
 			${myconf} --with-xinerama || die
 			;;
-	    make)
+		make)
 			echo "in kde_src_compile, action is make"
 			make || die
 			;;
@@ -46,7 +41,7 @@ kde_src_compile() {
 			kde_src_compile myconf configure make
 			;;
 	esac
-	
+
     shift
     done
 
@@ -79,7 +74,5 @@ kde_src_install() {
 
 }
 
-
 EXPORT_FUNCTIONS src_compile src_install
-
 

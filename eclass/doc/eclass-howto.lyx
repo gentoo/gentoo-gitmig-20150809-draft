@@ -30,7 +30,7 @@ eclass howto
 Dan Armak
 \layout Date
 
-30/9/01
+Updated for eclasses v3
 \layout Section
 
 Introduction
@@ -49,6 +49,9 @@ The most similar group of ebuilds is the kde apps.
  Currently test ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1),
  kdevelop-2.0.1 and koffice-1.1.
  Many others will follow.
+\layout Standard
+
+Please read news.txt for an astract of changes between versions of the eclasses.
 \layout Standard
 
 Section two explains how eclasses work.Section three shows a sample inheriting
@@ -261,165 +264,53 @@ Here is the same function, divided into sections:
 base_src_compile() {
 \layout Code
 
-\SpecialChar ~
-
+ 
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- [ -z "$1" ] && base_src_compile all
+    [ -z "$1" ] && base_src_compile all
 \layout Code
 
-\SpecialChar ~
-
+ 
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- while [ "$1" ]; do
+    while [ "$1" ]; do
 \layout Code
 
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-case $1 in
+        case $1 in
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- configure)
+            configure)
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-./configure || die;;
+                ./configure || die;;
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- make)
+            make)
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-make || die;;
+                make || die;;
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- all)
+            all)
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-base_src_compile configure make;;
+                base_src_compile configure make;;
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
-esac
+        esac
 \layout Code
 
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- shift
+    shift
 \layout Code
 
-\SpecialChar ~
-\SpecialChar ~
-\SpecialChar ~
- done
+    done
 \layout Code
 
-\SpecialChar ~
-
+ 
 \layout Code
 
 }
@@ -509,6 +400,24 @@ src_compile() {
 
 The only way to know what functions contain what sections is to read the
  eclasses.
+\layout Standard
+
+A final note: not all functions execute all their sections when called with
+ 
+\emph on 
+all
+\emph default 
+ or without parameters.
+ Some sections may be non-standrd and must be called explicitly.
+ Current examples inculde base_src_unpack
+\emph on 
+ patch 
+\emph default 
+and the upcoming kde_src_unpack 
+\emph on 
+objprelink-patch
+\emph default 
+ (whose name may change when I actually write it).
 \layout Subsection
 
 base.eclass
@@ -516,28 +425,48 @@ base.eclass
 
 This eclass defines some default variables and functions, similar to those
  you'd get by default in a non-inheriting ebuild.
- For example, it defines:
-\layout Code
-
-base_src_unpack() { unpack ${A}; }
-\layout Standard
-
-Only with sections, of course.
 \layout Standard
 
 It is inherited by higher-level eclasses like the kde ones.
+\layout Standard
+
+Note that in base_src_unpack there is one non-default section (i.e.
+ it doesn't execute for section 
+\emph on 
+all
+\emph default 
+).
+ It is called 
+\emph on 
+patch
+\emph default 
+ and it looks like this:
+\layout Code
+
+cd ${S}
+\layout Code
+
+patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+\layout Standard
+
+Once, long ago, I remember hearing that emerge would execute this code automatic
+ally between src_unpack() and src_compile() if the file ${FILESDIR}/${P}-gentoo.d
+iff was present.
+ Was this a plan, a rumour, or what? Someone please correct me, or at least
+ correct this document.
 \layout Subsection
 
 kde.eclass
 \layout Standard
 
 Used by all kde apps, whether directly or indirectly.
- This is a higher-level eclass, which is intended to provide not only sensible
+ This is a med-level eclass, which is intended to provide not only sensible
  defaults but functions which can be used as-is more often then not.
- 
+ In fact, none of the high-level kde-* eclasses which inherit from here
+ change the functions in any way, and the ebuilds rarely do so.
 \layout Standard
 
-It inherits c, autoconf and base.
+It inherits autoconf and base.
 \layout Standard
 
 Read it to find out what it defines.
@@ -549,29 +478,31 @@ ake install cycles.
  It handles all the std.
  configure options e.g.
  objprelink.
- It also adds kdelibs and qt to DEPEND.
+ It also adds kdelibs to DEPEND/RDEPEND.
+\layout Standard
+
+Note: some kde apps, like widget styles and i18n packages, do not need to
+ compile anything.
+ Therefore kde.eclass does not inherit c and does not depend on qt.
+ These packages can then inherit straight from here (or from kde-i18n.eclass,
+ which also inherits from here).
+ All other packages, which need to ompile c code and link against qt, should
+ inhreit from kde-base.eclass.
 \layout Subsection
 
 kde-base.eclass
 \layout Standard
 
-Meant for kde apps part of the core kde distribution.
-\layout Standard
-
-Differences from kde.eclass:
-\layout Itemize
-
-Sets appropriate DESCRIPTION and HOMEPAGE=www.kde.org.
-\layout Itemize
-
-Sets default download path to the correct location on ftp.kde.org and several
- of its mirrors.
+Meant for standard kde apps, of both 2.1 and 2.2 architectures.
+ Inherits c,kde and adds objprelink and qt deps.
+ Sets HOMEPAGE=apps.kde.com.
 \layout Subsection
 
 kde-i18n.eclass
 \layout Standard
 
-Meant for the kde-i18n-* packages.
+Meant for the kde-i18n-* packages, possibly also for the koffice-i18n to-be-writ
+ten packages.
  Niche use.
 \layout Standard
 
@@ -579,34 +510,31 @@ In fact, all kde-i18n ebuilds are completely identical and so all they have
  to do is inherit from this eclass.
 \layout Standard
 
-Differences from kde.eclass:
+Inherits from kde,kde.org.
+ Makes a few differences, such as PROVIDE virtual/kde-i18n, correct $S,
+ HOMEPAGE and DESCRIPTION.
+\layout Subsection
+
+kde-dist.eclass
 \layout Standard
 
-Many.
- Doesn't inherit c.
- Doesn't depend on qt.
- Provides virtual/kde-i18n-${PV}.
- Doesn't have 
-\emph on 
-myconf 
-\emph default 
-section in src_compile().
- Doesn't have any sections in src_install().
- Probably something else I forgot as well.
+Meant for the base kde distribution packages in kde-base/*.
+ Inherits kde-base,kde.org.
+ Adds the correct DESCRIPTION and HOMEPAGE and kdelibs-${PV} deps.
+ The simpler/smaller kde-base/ packages (e.g.
+ kdetoys) make no changes at all; most of those that do only add deps.
 \layout Subsection
 
 c.eclass
 \layout Standard
 
 Adds gcc and glibc to DEPEND and RDEPEND.
- Not meant to be used alone, inherited by kde*.
 \layout Subsection
 
 autoconf.eclass
 \layout Standard
 
 Adds make/automake/autoconf to DEPEND.
- Not meant to be used alone, inherited by kde*.
 \layout Subsection
 
 debug.eclass
@@ -619,6 +547,17 @@ Will be written soon.
 echo
 \emph default 
 s I have scattered around the eclasses.
+\layout Subsection
+
+kde-objprelink.eclass
+\layout Standard
+
+Will be written soon.
+ Will provide the objprelink deps and the 
+\emph on 
+objprelink-patch
+\emph default 
+ src_unpack section.
 \layout Section
 
 The inheriting ebuilds
@@ -628,8 +567,31 @@ Not much here as yet.
  Look at the kde*-2.2.1-r1 ebuilds for examples.
  As a rule, read the eclass you are inheriting from and put any necessary
  changes in your ebuild.
-\layout Standard
+ For now, a collection of tips:
+\layout Itemize
 
-Remember: always extend variables and fnctions.
+Always extend variables and functions.
  You should almost never need to replace them.
+ In particular, always remember to use DEPEND=
+\begin_inset Quotes erd
+\end_inset 
+
+$DEPEND...
+\begin_inset Quotes erd
+\end_inset 
+
+ and the same for RDEPEND.
+\layout Itemize
+
+The eclasses have DESCRIPTION=
+\begin_inset Quotes erd
+\end_inset 
+
+Derived from $ECLASS
+\begin_inset Quotes erd
+\end_inset 
+
+ set.
+ This is to remind you to write a description of your own for your ebuilds.
+ Otherwise the inherited one will show through as a reminder.
 \the_end

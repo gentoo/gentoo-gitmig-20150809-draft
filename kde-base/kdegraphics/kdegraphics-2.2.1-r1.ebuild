@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.1-r1.ebuild,v 1.1 2001/09/29 12:42:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-2.2.1-r1.ebuild,v 1.2 2001/10/01 11:04:22 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-base || die
+inherit kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Graphics"
 
@@ -15,11 +15,11 @@ RDEPEND="$RDEPEND gphoto2? ( >=media-gfx/gphoto-2.0_beta1 >=media-libs/libgpio-2
 
 src_compile() {
 
-	kde-base_src_compile myconf
+	kde_src_compile myconf
 
 	use gphoto2 && myconf="$myconf --with-gphoto2-includes=/usr/include/gphoto2 --with-gphoto2-libraries=/usr/lib/gphoto2" || myconf="$myconf --without-kamera"
 
-	kde-base_src_compile configure make
+	kde_src_compile configure make
 
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.4 2001/09/29 12:35:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.5 2001/10/01 11:04:22 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 . /usr/portage/eclass/inherit.eclass || die
@@ -22,6 +22,10 @@ base_src_unpack() {
 	    unpack)
 		echo "in base_src_unpack, action unpack"
 		unpack ${A}
+		;;
+	    patch)
+		cd ${S}
+		patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 		;;
 	    all)
 		echo "in base_src_unpack, action all"

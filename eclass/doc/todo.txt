@@ -1,0 +1,14 @@
+debug.eclass
+
+kde-objprelink.eclass
+
+decide where qt deps versioning should go
+
+koffice-i18n packages
+
+-r1 packages for all kde apps in portage
+
+sort out docs/sgml, get link from site
+
+make scheme stable and unmask
+

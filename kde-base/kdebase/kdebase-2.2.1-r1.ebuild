@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.2 2001/09/29 12:42:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.3 2001/10/01 11:04:22 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-base || die
+inherit kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Base"
 
@@ -21,7 +21,7 @@ RDEPEND="$RDEPEND $NEWDEPEND"
 
 src_compile() {
     
-    kde-base_src_compile myconf
+    kde_src_compile myconf
     
     use ldap	&& myconf="--with-ldap" 	|| myconf="--without-ldap"
     use pam	&& myconf="$myconf --with-pam"	|| myconf="$myconf --with-shadow"
@@ -32,14 +32,14 @@ src_compile() {
     use opengl					|| myconf="$myconf --without-gl"
     use ssl					|| myconf="$myconf --without-ssl"
     
-    kde-base_src_compile configure make
+    kde_src_compile configure make
 
 }
 
 
 src_install() {
 
-    kde-base_src_install
+    kde_src_install
 
     insinto /etc/pam.d
     newins ${FILESDIR}/kscreensaver.pam kscreensaver

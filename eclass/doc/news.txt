@@ -1,0 +1,44 @@
+Plans for v3.1:
+- debug.eclass
+- kde-objprelink.eclass
+
+1/10
+v3
+Another major change.
+This involves primarily the kde eclasses.
+
+We now have kde.eclass, which is *not* the same as kde.eclass from v2, but is
+rather a kde-virtual eclass. It includes all the basic definitions and standard
+functions. It is med-level; people do not usually inherit from it.
+
+Then, we have high-level eclasses:
+kde-base.eclass inherits c,kde and adds pbjprelink,qt deps. It's used by misc apps.
+kde.org.eclass adds the SRC_URI/SRC_PATH block for ftp.kde.org and friends.
+kde-dist.eclass inherits kde-base,kde.org and adds HOMEPAGE,DESCRIPTION etc. and
+	Kkdelibs-${PV} deps. It is used by kdebase/* packages.
+kde-i18n.eclass inerits kde,kde.org and adds the neccessary things for kde-i18n packages.
+	It will probably be used for the upcoming koffice-i18n packages as well.
+
+Notice, now you now longer call kde-base_ and kde-i18n_ functions, but only kde_ functions.
+
+I have had to swap eclasses' names around to make them more intuitive. Here is a table
+of the changes:
+kde-virtual	=>	kde
+kde			=>	kde-base
+kde-base	=>	kde-dist + kde.org
+kde-i18n	==	kde-i18n
+
+(kde-virtual was a mid-stage eclass from version 2.5 which was never commited on cvs).
+
+1/10
+v2.5
+A temp version which wasn't commited. Testbed for radical ideas.
+
+30/9
+v2
+Documented in original howto
+
+29/9
+v1
+Original version
+Had an infinite recursion in base.eclass. Was deleted from cvs later that day.
