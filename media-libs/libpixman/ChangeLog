@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpixman
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.4 2004/05/12 00:08:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpixman/ChangeLog,v 1.5 2004/06/05 00:25:17 weeve Exp $
+
+  04 Jun 2004; Jason Wever <weeve@gentoo.org> libpixman-0.1.1.ebuild:
+  Added ~sparc keyword.
 
 *libpixman-0.1.1 (11 May 2004)
 

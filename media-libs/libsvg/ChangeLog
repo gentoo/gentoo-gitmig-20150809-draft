@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.5 2004/06/04 17:58:52 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.6 2004/06/05 00:27:54 weeve Exp $
+
+  04 Jun 2004; Jason Wever <weeve@gentoo.org> libsvg-0.1.2.ebuild:
+  Added ~sparc keyword.
 
   04 Jun 2004; <twp@gentoo.org> libsvg-0.1.2.ebuild:
   Added media-libs/jpeg dependency. Bug # 52997.
