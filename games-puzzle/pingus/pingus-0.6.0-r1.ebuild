@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.8 2004/09/13 02:23:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.9 2004/09/20 20:23:58 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -28,6 +28,7 @@ src_unpack() {
 src_compile() {
 	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
 	append-ldflags -L${ROOT}/usr/lib/clanlib-0.6.5
+	replace-flags -Os -O2
 	egamesconf \
 		--with-bindir="${GAMES_BINDIR}" \
 		--with-datadir="${GAMES_DATADIR_BASE}" \

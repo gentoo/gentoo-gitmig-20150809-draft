@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.5 2004/09/13 02:23:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.6 2004/09/20 20:23:58 mr_bones_ Exp $
+
+  20 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.6.0-r1.ebuild:
+  Fix compile with -Os (bug #64581)
 
   12 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/0.6.0-gcc34.patch, pingus-0.6.0-r1.ebuild:

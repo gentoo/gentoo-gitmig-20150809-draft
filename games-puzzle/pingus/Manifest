@@ -1,5 +1,5 @@
-MD5 4788058de58204f4375addb22b22c2a6 ChangeLog 1486
-MD5 770d149558dc2164c4473a56b0529713 pingus-0.6.0-r1.ebuild 1258
+MD5 3b20a2a3b3984e6211d326defc07991c ChangeLog 1602
+MD5 e99c288a35c507f8178214ef5437c3c1 pingus-0.6.0-r1.ebuild 1281
 MD5 f40bbfa2eda5672febaa041b87f025b7 metadata.xml 1049
 MD5 c9c5cd0b4f1ab5cdb79bcc756aba215e files/0.6.0-gcc3.patch 5070
 MD5 c433bc8abca5794071e6c80378a83f16 files/0.6.0-gcc34.patch 468
