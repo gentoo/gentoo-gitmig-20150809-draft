@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21ba02e289d1025ca7f897215d05ca34 ChangeLog 363
-MD5 8a4d8679f04d48542e16bfcc9a603259 halflife-hookmod-4.ebuild 661
+MD5 780848a027c96c398cddec5b2a8c34ea halflife-hookmod-4.ebuild 695
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 e68255a4d8f10381ea82f186f2f720f5 files/digest-halflife-hookmod-4 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCc3HTu7gpaalycRAg+TAJ9rdebM5aqmpXgcS5WsSx62+oi4PwCgiHJU
+tOXW7paGBEiVVBVuoPM+bgI=
+=mDdB
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 200272207f6e203e51434961213c962f halflife-entmod-2.ebuild 673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa6fd01840adfbc66f74da39b43f0405 ChangeLog 360
+MD5 2df09c91285dd0ef8a105c5363f4f05f halflife-entmod-2.ebuild 707
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b8cfa5ed5b315970175e4c97ecd6c1ca files/digest-halflife-entmod-2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCcoHTu7gpaalycRArLFAJ0Zc6+4tjGIh/Hb8Tr1cpJrlgWfCQCg8Mz6
+7PFc1npI5PKaWqgxf5TkW14=
+=1bRF
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3687662240bc7be4ad0abb3c25c7ebac ChangeLog 370
+MD5 84408a5c90fbcdadc1578eebce3c2129 halflife-clanmod-1.81.24e.ebuild 843
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 893d03ac01e80211520002ae7b995a87 halflife-clanmod-1.81.24e.ebuild 809
 MD5 f8ad89c3a434205784e6b6d68f6e9e97 files/digest-halflife-clanmod-1.81.24e 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCcZHTu7gpaalycRAoK7AKCybrLdLeEIGiqlRf6rkFgQ2EyreQCghnAH
+dGfHpN0SuRu4gNBXIqs/gys=
+=EbY2
+-----END PGP SIGNATURE-----
