@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.3 2003/08/13 18:41:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.4 2003/08/14 01:30:27 weeve Exp $
 
 inherit eutils
 
@@ -12,6 +12,13 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
 IUSE="perl tcltk python ssl gtk mmx ipv6 nls"
+
+# Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
+if [ ${ARCH} = "sparc" ]
+then
+        replace-flags "-O3" "-O2"
+fi
+
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	gtk? ( >=x11-libs/gtk+-2.0.3 )

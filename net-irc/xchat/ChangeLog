@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.64 2003/08/13 18:41:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.65 2003/08/14 01:30:26 weeve Exp $
+
+  13 Aug 2003; Jason Wever <weeve@gentoo.org> xchat-2.0.3-r1.ebuild,
+  xchat-2.0.4.ebuild:
+  Added a replace-flags statement to hopefully fix a seg fault on sparcs.
 
   06 Aug 2003; Alastair Tse <liquidx@gentoo.org> xchat-2.0.3-r1.ebuild,
   xchat-2.0.4.ebuild:
