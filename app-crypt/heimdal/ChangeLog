@@ -1,10 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.8 2002/12/13 10:56:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.9 2003/01/21 05:09:18 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *heimdal-0.5.1-r1 (06 Dec 2002)
+
+  20 Jan 2003; Nick Hadaway <raker@gentoo.org> heimdal-0.5.1-r1.ebuild :
+  Changed PROVIDES to PROVIDE.
 
   06 Dec 2002; Kain X <kain@kain.org> heimdal-0.5.1-r1.ebuild :
   Initial setup for new virtual/krb5 structure.  Shared libraries are also now
