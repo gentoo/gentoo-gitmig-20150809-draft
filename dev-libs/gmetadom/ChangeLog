@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmetadom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.7 2004/07/29 21:57:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.8 2004/08/03 11:36:51 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> gmetadom-0.2.1-r1.ebuild:
+  Added to ~ppc.
 
 *gmetadom-0.2.1-r1 (30 Jul 2004)
 
