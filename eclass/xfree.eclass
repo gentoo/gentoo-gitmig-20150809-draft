@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.2 2003/06/30 06:12:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.3 2003/07/18 15:06:27 seemant Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -20,4 +20,8 @@ vcards() {
 	
 	has "$1" "${VIDEO_CARDS}" && return 0
 	return 1
+}
+
+filter-patch() {
+	mv ${PATCH_DIR}/"*${1}* ${PATCH_DIR}/excluded
 }

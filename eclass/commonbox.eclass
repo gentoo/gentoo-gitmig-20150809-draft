@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.23 2003/06/02 23:38:29 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.24 2003/07/18 15:06:27 seemant Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -25,6 +25,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 PROVIDE="virtual/blackbox"
 
 myconf=""
+MYCONF=""
 mydoc=""
 BOOTSTRAP=""
 FORCEXFT=""
@@ -94,10 +95,18 @@ commonbox_src_compile() {
 		&& myconf="${myconf} --enable-xft" \
 		|| myconf="${myconf} --disable-xft"
 
-	econf \
-		--sysconfdir=/etc/X11/${MYBIN} \
-		--datadir=/usr/share/commonbox \
-		${myconf} || die
+	if [ -z "${MYCONF}" ]
+	then
+		econf \
+			--sysconfdir=/etc/X11/${MYBIN} \
+			--datadir=/usr/share/commonbox \
+			${myconf} || die
+	else
+		econf \
+			--sysconfdir=/etc/X11/${MYBIN} \
+			--datadir=/usr/share/commonbox \
+			${myconf} ${MYCONF} || die
+	fi
 
 	[ ! -z "${FORCEXFT}" ] && echo "#define XFT 1" >> ${S}/config.h
 	
