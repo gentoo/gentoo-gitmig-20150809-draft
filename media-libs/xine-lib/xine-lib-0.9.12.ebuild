@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12.ebuild,v 1.2 2002/06/23 16:30:45 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12.ebuild,v 1.3 2002/06/23 18:32:39 lostlogic Exp $ 
 
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -29,6 +29,12 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
+	for file in `grep -l -r "xine_logo.mpg" *`; do
+		sed -e "s:xine_logo.mpg:xine_logo.mpv:g" ${file} \
+		    > ${file}.hacked || die
+		mv ${file}.hacked ${file} || die
+	done
 
 	use directfb && ( \
 		patch -p0 < ${FILESDIR}/xineconfig.patch-${PV} || die
