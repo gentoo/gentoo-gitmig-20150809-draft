@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.8-r1.ebuild,v 1.1 2004/08/13 21:42:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.8-r1.ebuild,v 1.2 2004/08/14 22:09:30 mr_bones_ Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
@@ -22,12 +22,11 @@ src_compile() {
 	php-sapi_src_compile
 }
 
-
 src_install() {
 	PHP_INSTALLTARGETS="install"
 	php-sapi_src_install
 
-	rm -f ${D}/usr/bin/php 
+	rm -f ${D}/usr/bin/php
 	# rename binary
 	newbin ${S}/sapi/cgi/php php-cgi
 }
