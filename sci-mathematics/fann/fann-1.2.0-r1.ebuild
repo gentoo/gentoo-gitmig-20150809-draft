@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0.ebuild,v 1.2 2005/01/04 11:37:55 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-1.2.0-r1.ebuild,v 1.1 2005/01/04 11:37:55 satya Exp $
 
 inherit eutils
 #-----------------------------------------------------------------------------
+MY_PKG_NAME=${PN}-${PV/-.*/}
 DESCRIPTION="Fast Artificial Neural Network Library implements multilayer artificial neural networks in C"
 HOMEPAGE="http://fann.sourceforge.net/"
-SRC_URI="mirror://sourceforge/fann/${PF}.tar.bz2"
+SRC_URI="mirror://sourceforge/fann/${MY_PKG_NAME}.tar.bz2"
 #-----------------------------------------------------------------------------
 LICENSE="LGPL-2"
 SLOT="0"
@@ -18,12 +19,12 @@ DEPEND="sys-devel/autoconf
 	doc? ( app-text/docbook-sgml-utils )
 	python? ( dev-lang/python dev-lang/swig )"
 #-----------------------------------------------------------------------------
-S=${WORKDIR}/${PF}
+S=${WORKDIR}/${MY_PKG_NAME}
 #=============================================================================
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	cp ${FILESDIR}/${PF}-setup.py ${S}/python/setup.py
+	epatch ${FILESDIR}/${PF}.patch
 }
 #=============================================================================
 src_compile() {
@@ -35,10 +36,11 @@ src_compile() {
 	if use python; then
 		einfo "python ------------------------------"
 		cd ${S}/python || die
-		mkdir fann
-		for f in `ls *py |grep -v setup.py`; do
-			mv $f fann || die
-		done
+		#mkdir fann
+		#for f in `ls *py |grep -v setup.py`; do
+		#	mv $f fann || die
+		#done
+		python setup_unix.py build
 	fi
 }
 #=============================================================================
@@ -60,7 +62,7 @@ src_install() {
 	if use python; then
 		einfo "python ------------------------------"
 		cd ${S}/python || die
-		python setup.py install --root=${D} || die "No python"
+		python setup_unix.py install --root=${D} || die "No python"
 		if use doc; then
 			local python_doc_dir="/usr/share/doc/${PF}/examples/python"
 			insinto ${python_doc_dir}

@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/fann
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.2 2004/12/29 00:35:52 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.3 2005/01/04 11:37:55 satya Exp $
+
+*fann-1.2.0-r1 (04 Jan 2005)
+
+  04 Jan 2005; Christian Andreetta <satya@gentoo.org>
+  +files/fann-1.2.0-r1.patch, +fann-1.2.0-r1.ebuild:
+  python bindings patch by Martin Renold.
+  (http://old.homeip.net/martin/fann-python-bindings.patch)
 
 *fann-1.2.0 (28 Dec 2004)
 
