@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.4 2003/07/23 18:58:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.5 2003/08/07 20:30:42 lisa Exp $
 
 inherit libtool sgml-catalog
 
@@ -53,7 +53,7 @@ src_compile() {
 		--enable-default-search-path=/usr/share/sgml \
 		--datadir=/usr/share/sgml/${P} || die
  
-	make || die
+	emake || die
 }
 
 src_install() {                               
