@@ -1,12 +1,8 @@
 # ChangeLog for app-admin/kportagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.7 2002/08/13 21:44:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.8 2002/08/14 07:36:12 pvdabeel Exp $
 
 *kportagemaster-0.4.2 (08 Aug 2002)
-
-  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> : 
-  
-  Added ppc keyword - update: removed - having some problems with qt, will try again later
 
   08 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
