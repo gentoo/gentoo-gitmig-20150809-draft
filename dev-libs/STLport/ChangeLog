@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.11 2004/03/14 12:13:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.12 2004/03/18 21:37:53 dholm Exp $
+
+  18 Mar 2004; David Holm <dholm@gentoo.org> STLport-4.5.3-r2.ebuild:
+  Added to ~ppc.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   STLport-4.5.3-r1.ebuild, STLport-4.5.3-r2.ebuild:
