@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.2 2005/03/15 16:12:32 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.3.ebuild,v 1.3 2005/03/28 20:49:01 latexer Exp $
 
 inherit 64-bit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	dev-lang/perl
 	tabs? ( dev-perl/gtk2-perl )"
 
-pkg_preinst() {
+pkg_setup() {
 	filter-flags -mno-accumulate-outgoing-args
 	replace-flags -Os -O2
 }
