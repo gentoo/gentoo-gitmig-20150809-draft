@@ -21,9 +21,6 @@
 ##   End example
 ##
 
-# <vapier@gentoo.org> (03 Jan 2004)
-=dev-libs/uclibc-0.9.25
-
 # <aether@gentoo.org> (02 Jan 2004)
 # New java-config with new features and a lot of changed code
 =dev-java/java-config-1.2*
