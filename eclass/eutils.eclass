@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.86 2004/03/25 01:28:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.87 2004/04/01 20:50:43 iggy Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -433,6 +433,10 @@ get_number_of_jobs() {
 		else
 			jobs=2
 		fi
+	elif [ "${ARCH}" = "s390" ]
+	then
+		# s390 has "# processors    : "
+		jobs="$((`grep "^\# processors" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
 	else
 		jobs="$((`grep -c ^cpu /proc/cpuinfo` * 2))"
 		die "Unknown ARCH -- ${ARCH}!"
