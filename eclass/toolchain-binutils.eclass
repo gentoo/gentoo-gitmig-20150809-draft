@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.2 2004/11/15 05:16:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.3 2004/11/15 15:54:42 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst
 
 export CTARGET="${CTARGET:-${CHOST}}"
 
@@ -19,10 +19,10 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PV:0:4}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
+IUSE="nls bootstrap build multitarget uclibc cross"
 use cross \
 	&& SLOT="${CTARGET}-${PV}" \
 	|| SLOT="${CTARGET}"
-IUSE="nls bootstrap build multitarget uclibc cross"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
@@ -37,7 +37,7 @@ MY_BUILDDIR="${WORKDIR}/build"
 
 is_cross() { [ "${CHOST}" != "${CTARGET}" ] ; }
 
-src_unpack() {
+toolchain-binutils_src_unpack() {
 	unpack ${A}
 	mkdir -p "${MY_BUILDDIR}"
 }
@@ -55,7 +55,7 @@ apply_binutils_updates() {
 	strip-linguas -i */po
 }
 
-src_compile() {
+toolchain-binutils_src_compile() {
 	filter-flags -fomit-frame-pointer -fssa #6730
 	strip-flags && replace-flags -O3 -O2 #47581
 
@@ -98,12 +98,12 @@ src_compile() {
 	fi
 }
 
-src_test() {
+toolchain-binutils_src_test() {
 	emake check
 }
 
 # TODO: COMMENT THIS CRAP :)
-src_install() {
+toolchain-binutils_src_install() {
 	local x d
 
 	cd "${MY_BUILDDIR}"
@@ -164,6 +164,6 @@ EOF
 	fi
 }
 
-pkg_postinst() {
+toolchain-binutils_pkg_postinst() {
 	binutils-config ${CTARGET}-${PV}
 }
