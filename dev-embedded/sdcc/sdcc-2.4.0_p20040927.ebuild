@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040606.ebuild,v 1.4 2004/07/18 06:27:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040927.ebuild,v 1.1 2004/09/28 07:22:23 dragonheart Exp $
 
 MY_PV=${PV/*_p/}
 DESCRIPTION="Small device C compiler (for various microprocessors)"
@@ -9,7 +9,7 @@ SRC_URI="http://sdcc.sourceforge.net/snapshots/sdcc-src/${PN}-src-${MY_PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/libc
@@ -21,7 +21,8 @@ DEPEND="virtual/libc
 		virtual/tetex
 		>=app-office/lyx-1.3.4
 		sys-apps/sed )"
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	!dev-embedded/sdcc-cvs"
 
 S=${WORKDIR}/${PN}
 
@@ -34,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "Make install failed"
+	emake DESTDIR=${D} || die "Make install failed"
 	dodoc ChangeLog doc/README.txt doc/libdoc.txt doc/INSTALL.txt
 	use doc && emake -C doc docdir=${D}/usr/share/doc/${P}/ install
 }

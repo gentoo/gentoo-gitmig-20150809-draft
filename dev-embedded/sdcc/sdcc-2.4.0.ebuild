@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.9 2004/06/29 13:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0.ebuild,v 1.10 2004/09/28 07:22:23 dragonheart Exp $
 
 DESCRIPTION="Small device C compiler (for various microprocessors)"
 HOMEPAGE="http://sdcc.sourceforge.net/"
@@ -20,7 +20,8 @@ DEPEND="virtual/libc
 		virtual/tetex
 		>=app-office/lyx-1.3.4
 		sys-apps/sed )"
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	!dev-embedded/sdcc-cvs"
 
 S=${WORKDIR}/${PN}
 
