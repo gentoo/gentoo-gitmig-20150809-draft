@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.2 2003/05/27 17:54:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.3 2003/06/07 17:20:51 foser Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,8 +39,8 @@ src_unpack() {
 
 src_compile() {
 
-	# Strip out -fomit-frame-pointer for k6's
-	is-flag "-march=k6*" && strip-flags "-fomit-frame-pointer"
+	# fix problem with k6's (#22115)
+	is-flag "-march=k6*" && replace-flags "-march=k6*" "-march=i586"
 
 	local mymake=""
 
