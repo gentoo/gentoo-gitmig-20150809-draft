@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/tclspice
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.3 2003/11/28 23:58:52 plasmaroo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.4 2004/02/01 16:33:03 plasmaroo Exp $
+
+*tclspice-0.2.15 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> tclspice-0.2.15.ebuild:
+  Version bump.
 
   28 Nov 2003; <plasmaroo@gentoo.org> tclspice-0.2.14.ebuild:
   Added a readline patch; thanks to Terry Porter <techman at d2.net.au> for
