@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.5 2004/06/19 08:10:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.6 2004/06/22 17:03:18 usata Exp $
 
 inherit latex-package elisp-common
 
@@ -15,9 +15,13 @@ KEYWORDS="x86 ~sparc"
 IUSE="emacs xemacs"
 
 # if you don't have either emacs or xemacs, defaults to emacs. bug #54183
-DEPEND="emacs? ( virtual/emacs >=app-emacs/auctex-11.14 )
-	xemacs? ( virtual/xemacs >=app-xemacs/auctex-1.32 )
-	!emacs? ( !xemacs? ( virtual/emacs >=app-emacs/auctex-11.14 ) )
+DEPEND="emacs? ( virtual/emacs
+		>=app-emacs/auctex-11.14 )
+	xemacs? ( virtual/xemacs
+		>=app-xemacs/auctex-1.32
+		app-xemacs/fsf-compat )
+	!xemacs? ( virtual/emacs
+		>=app-emacs/auctex-11.14 )
 	virtual/ghostscript
 	virtual/tetex"
 
@@ -30,40 +34,35 @@ src_compile() {
 	local myconf
 	export LC_ALL=en_US.ISO8859-1
 
-	if use emacs || use xemacs; then
-		if use emacs; then
-			econf --with-emacs \
-				--with-lispdir=${D}/usr/share/emacs/site-lisp/${PN} \
-				|| die
-			emake || die
-		fi
-		if use xemacs; then
-			cd ${T}
-			econf --with-xemacs \
-				--with-packagedir=${D}/usr/lib/xemacs/site-packages \
-				|| die
-			emake || die
-		fi
-	else
-		econf || die
-		emake || die
+	if use emacs || ! use xemacs ; then
+		econf --with-emacs \
+			--with-lispdir=${D}/usr/share/emacs/site-lisp/${PN} \
+			|| die
+		emake -j1 || die "make ${PN} for emacs failed"
+	fi
+	if use xemacs; then
+		cd ${T}
+		econf --with-xemacs \
+			--with-packagedir=${D}/usr/lib/xemacs/site-packages \
+			|| die
+		emake -j1 || die "make ${PN} for xemacs failed"
 	fi
 }
 
 src_install() {
-	# hack.- we cant call texhash within the make install because of
-	# sandbox violations. doing it later by hand
-	einstall texmfdir=${D}${TEXMF} TEXHASH=/bin/true || die
-	dodoc ChangeLog FAQ INSTALL PROBLEMS README RELEASE TODO doc/preview-latex.dvi
 
-	if use emacs ; then
+	if use emacs || ! use xemacs ; then
+		# hack.- we cant call texhash within the make install because of
+		# sandbox violations. doing it later by hand
+		einstall texmfdir=${D}${TEXMF} TEXHASH=/bin/true || die
 		elisp-site-file-install ${FILESDIR}/60preview-latex-gentoo.el
 	fi
-
 	if use xemacs; then
 		cd ${T}
 		einstall texmfdir=${D}${TEXMF} TEXHASH=/bin/true || die
 	fi
+
+	dodoc ChangeLog FAQ INSTALL PROBLEMS README RELEASE TODO doc/preview-latex.dvi
 }
 
 pkg_postinst() {
