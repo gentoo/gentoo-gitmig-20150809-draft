@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.14 2004/10/05 17:38:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.15 2004/10/05 21:57:34 gustavoz Exp $
+
+  05 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> ed-0.2-r4.ebuild:
+  Stable on sparc wrt #66400
 
   05 Oct 2004; Olivier Crete <tester@gentoo.org> ed-0.2-r4.ebuild:
   Marking stable on x86 wrt bug #66400
