@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.408 2004/06/01 10:36:34 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.409 2004/06/02 16:54:22 latexer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -406,6 +406,7 @@ x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:sdk - Builds the software development kit
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-libs/fltk:nptl - Enable support for NPTL 
+x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-misc/rss-glx:openal - Adds OpenAL (sound) support to certain screensavers
