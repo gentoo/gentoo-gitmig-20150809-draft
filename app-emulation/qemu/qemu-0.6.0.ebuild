@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.1 2004/07/13 14:03:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.2 2004/08/20 14:12:40 lu_zero Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-typo.patch
+	epatch ${FILESDIR}/${P}-sigaction.patch
 }
 
 src_compile() {
