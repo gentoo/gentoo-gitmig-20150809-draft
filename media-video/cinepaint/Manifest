@@ -1,6 +1,17 @@
-MD5 780189c0f68fb614342f4737d019f8c3 cinepaint-0.18.ebuild 734
-MD5 51c74a677b47f27e6c0d77b5c4e09ce1 cinepaint-0.18.3.ebuild 896
-MD5 07da3dab78cc5f0fc22c13356fbdcadc ChangeLog 868
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ee52edbe3665f912c2735fc43aa7448 cinepaint-0.18.ebuild 735
+MD5 0e37bb9998012e8213845f1848f92d7f cinepaint-0.18.3.ebuild 985
+MD5 8e838cbf47dd689052b484d0d9dba67b ChangeLog 1076
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+MD5 732e3bb45a2f1945a5c3217a87c53a50 files/cinepaint-0.18.3-gcc34.patch 1476
 MD5 18b54df1c9a511a226297daf13dccaec files/digest-cinepaint-0.18 67
 MD5 0f99a4352d9c27f40fe6b07cea9d759d files/digest-cinepaint-0.18.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNKP506ebR+OMO78RAkuJAJ92jXwrv1reuBK2Bc/qTgcZx42G5ACfZ+Ee
+EIDQdkRWqMYw3+VYC4useoo=
+=UNdv
+-----END PGP SIGNATURE-----

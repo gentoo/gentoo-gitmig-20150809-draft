@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinepaint
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.4 2004/08/12 20:26:13 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.5 2005/03/13 20:34:59 luckyduck Exp $
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/cinepaint-0.18.3-gcc34.patch, cinepaint-0.18.3.ebuild:
+  added patch to fix compilation with gcc3.4, also added ~amd64 to KEYWORDS.
+  fixed #60753
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Added missing metadata.xml.  Taking over as maintainer.
