@@ -1,10 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-mcast/vanessa-mcast-1.0.0.ebuild,v 1.3 2004/09/04 23:20:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-mcast/vanessa-mcast-1.0.0.ebuild,v 1.4 2005/01/21 21:35:37 xmerlin Exp $
 
+MY_PN="${PN/-/_}"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Multicast Helper Library"
 HOMEPAGE="http://www.vergenet.net/linux/vanessa/"
-SRC_URI="http://www.vergenet.net/linux/vanessa/download/vanessa_mcast/1.0.0/vanessa_mcast-1.0.0.tar.gz"
+SRC_URI="http://www.vergenet.net/linux/vanessa/download/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,9 +17,14 @@ DEPEND="virtual/libc
 	>=dev-libs/vanessa-logger-0.0.6
 	>=net-libs/vanessa-socket-0.0.7"
 
-S=${WORKDIR}/vanessa_mcast-1.0.0
+S=${WORKDIR}/${MY_P}
+
+src_compile() {
+	econf || die "error configure"
+	emake || die "error compiling"
+}
 
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die "error installing"
 	dodoc README NEWS AUTHORS TODO INSTALL
 }

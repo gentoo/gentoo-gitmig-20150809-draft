@@ -1,3 +1,14 @@
-MD5 c47e1f3654b17a9eacac8bf0cbbd2a62 ChangeLog 573
-MD5 b048e433f56fc2a8394da1a54558509a vanessa-mcast-1.0.0.ebuild 678
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3b52bf605e4b4a40b37317a7abfb470 vanessa-mcast-1.0.0.ebuild 810
+MD5 23abe4f1f53fce21bfa3d2b61641de84 ChangeLog 744
+MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
 MD5 70541531b1b0af9532df8d120cad5f48 files/digest-vanessa-mcast-1.0.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8bMggMUyd/cdjWsRAu05AJ43DYC3Ply3dCOd4R9wIQKrAXFa3ACeKfmH
+S0QhskjWTFPHcvGA18n4CVs=
+=owBY
+-----END PGP SIGNATURE-----
