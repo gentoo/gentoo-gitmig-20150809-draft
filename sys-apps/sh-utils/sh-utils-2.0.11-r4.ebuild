@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r4.ebuild,v 1.1 2002/03/21 04:46:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r4.ebuild,v 1.2 2002/04/07 03:14:29 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
@@ -20,6 +20,11 @@ src_unpack() {
 	# information in uname output
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 	rm doc/sh-utils.info
+	#This next line prevents our patched (and updated-mtime) uname.c from forcing a
+	#uname.1 man page regeneration, which requires perl (not available when creating
+	#a new build image... and we don't want this package dependent on perl anyway.
+	#This problem can be fixed by fixing our patch at a future date.
+	touch -d "20 Aug 1999" src/uname.c
 }
 
 src_compile() {
