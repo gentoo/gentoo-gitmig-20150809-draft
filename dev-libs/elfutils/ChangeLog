@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.38 2004/06/24 23:08:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.39 2004/08/02 22:16:55 solar Exp $
+
+  02 Aug 2004; <solar@gentoo.org> elfutils-0.94-r1.ebuild:
+  elfutils does not actually seem to compile currently in a uClibc environment
+  (xrealloc errs), but we need to ensure that glibc never gets pulled in as a
+  dep, since this package does not respect virtual/libc
 
   20 Apr 2004; <agriffis@gentoo.org> elfutils-0.94-r1.ebuild:
   Add missing ia64 keyword

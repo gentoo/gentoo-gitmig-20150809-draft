@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.7 2004/06/24 23:08:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.8 2004/08/02 22:16:55 solar Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
 HOMEPAGE="http://www.redhat.com/"
@@ -11,9 +11,13 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc alpha mips ia64"
-IUSE="nls"
+IUSE="nls uclibc"
 
-DEPEND=">=sys-libs/glibc-2.3.2
+# This pkg does not actually seem to compile currently in a uClibc
+# environment (xrealloc errs), but we need to ensure that glibc never
+# gets pulled in as a dep since this package does not respect virtual/libc
+
+DEPEND="!uclibc? ( >=sys-libs/glibc-2.3.2 )
 	>=sys-devel/binutils-2.14.90.0.6
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"
@@ -28,6 +32,8 @@ src_unpack() {
 	done
 
 	use mips || use alpha && epatch ${FILESDIR}/${P}-alpha-mips-atime.diff
+
+	gnuconfig_update ${S}
 }
 
 src_compile() {
