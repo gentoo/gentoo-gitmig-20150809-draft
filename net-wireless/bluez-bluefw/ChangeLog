@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-bluefw
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.8 2004/03/29 02:10:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.9 2004/03/29 02:15:03 liquidx Exp $
+
+  29 Mar 2004; Alastair Tse <liquidx@gentoo.org> bluez-bluefw-1.0.ebuild:
+  moved bluefw to /sbin so it matches bluez hotplug configuration (#39754)
 
 *bluez-bluefw-1.0 (29 Mar 2004)
 
