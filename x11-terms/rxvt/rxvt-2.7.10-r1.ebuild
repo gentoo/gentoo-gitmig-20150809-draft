@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r1.ebuild,v 1.2 2004/12/09 11:04:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r1.ebuild,v 1.3 2004/12/09 19:10:03 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc ~mips amd64 ~ppc64"
+KEYWORDS="x86 ppc alpha sparc ~mips amd64 ~ppc64"
 IUSE="motif cjk xgetdefault"
 
 DEPEND="virtual/libc

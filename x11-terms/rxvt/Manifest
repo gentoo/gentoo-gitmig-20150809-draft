@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea6898b272e9a7035c773bde19b40c52 ChangeLog 5587
+MD5 3076dfc07984d5c2cbeea8802ae836b1 ChangeLog 5686
 MD5 cd46a87805d1d53c2c0e5f9d9169b9ae metadata.xml 491
+MD5 3c0f0740b40a1ecaf891cd7e1516cbf7 rxvt-2.7.10-r1.ebuild 1819
 MD5 dcc6040c07751ed76667a361cacbb05c rxvt-2.7.10.ebuild 1731
-MD5 3bd34a65753a93f145ca0e651434e94e rxvt-2.7.10-r1.ebuild 1817
 MD5 783f67501d23b6516ec6a923b96e2b6a files/digest-rxvt-2.7.10 63
-MD5 16be90450ba268312bb146b3d4e7b6e9 files/rxvt-2.7.10-rk.patch 2772
-MD5 a38b2f365a55cad915e1e503466ab029 files/rxvt-2.7.10-azz4.diff 5072
 MD5 783f67501d23b6516ec6a923b96e2b6a files/digest-rxvt-2.7.10-r1 63
+MD5 a38b2f365a55cad915e1e503466ab029 files/rxvt-2.7.10-azz4.diff 5072
+MD5 16be90450ba268312bb146b3d4e7b6e9 files/rxvt-2.7.10-rk.patch 2772
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBuC97VWNWqTUmv+0RApz6AKCZx6h60cg0muIzP4+s+Ab4GOMs4ACfQAXD
-qC3RtN9TtiWXj0oScPm0d50=
-=C6l5
+iD8DBQFBuKMcKRy60XGEcJIRAsJCAJ9Wb3tO0cUGpNF5LYYt2XPDd74fngCgocZs
+jX31viHhYUYR9NJRQEwRixo=
+=4dzj
 -----END PGP SIGNATURE-----
