@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.9 2002/07/03 19:27:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.10 2002/07/17 19:08:05 stroke Exp $
+
+*gentoo-0.11.28 (17 Jul 2002)
+
+  17 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gentoo-0.11.28.ebuild
+  files/digest-gentoo-0.11.28 :
+
+  New version. Added SLOT and KEYWORDS 
 
 *gentoo-0.11.27-r1 (03 Jul 2002)
 
