@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.3.ebuild,v 1.1 2004/06/29 03:29:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.3.ebuild,v 1.2 2004/07/15 09:21:43 lv Exp $
 
 inherit flag-o-matic libtool
 
@@ -25,6 +25,10 @@ src_unpack() {
 	autoreconf
 	einfo "Running libtoolize..."
 	elibtoolize
+
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		append-flags -fno-unit-at-a-time
+	fi
 }
 
 src_compile() {
