@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/vendetta-online-bin-1.ebuild,v 1.2 2004/12/01 06:42:52 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/vendetta-online-bin-1.ebuild,v 1.3 2004/12/01 06:44:18 warpzero Exp $
 
 inherit eutils games
 
@@ -37,6 +37,6 @@ src_unpack() {
 }
 
 src_install() {
-	dogamesbin vendetta
+	dogamesbin vendetta || die "dogamesbin failed"
 	prepgamesdirs
 }
