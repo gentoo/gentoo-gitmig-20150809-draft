@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.3 2005/04/04 11:25:06 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.4 2005/04/04 16:32:35 kang Exp $
 
 inherit eutils
 
@@ -43,8 +43,9 @@ src_compile() {
 	a RSBAC-enabled kernel ? Please check the documentation at:
 	http://hardened.gentoo.org/rsbac"
 	emake -C contrib/rsbac-klogd-2.0 || die "cannot make rsbac-klogd"
-	LD="../../src/librsbac.so.$NSS" econf contrib/nss_rsbac \
-	|| die "cannot conf nss_rsbac"
+	cd contrib/nss_rsbac
+	LD="../../src/librsbac.so.$NSS" econf  || die "cannot conf nss_rsbac"
+	cd ${WORKDIR}/${ADMIN}
 	emake -C contrib/nss_rsbac || die "cannot make nss_rsbac"
 	emake -C contrib/pam_rsbac || die "cannot make pam_rsbac"
 	if use debug; then

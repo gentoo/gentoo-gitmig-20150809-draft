@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.14 2005/04/04 11:25:06 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.15 2005/04/04 16:32:35 kang Exp $
+
+  04 Apr 2005; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-admin-1.2.4.ebuild:
+  Space typo in ebuild
 
   04 Apr 2005; Guillaume Destuynder <kang@gentoo.org>
   rsbac-admin-1.2.4.ebuild:
