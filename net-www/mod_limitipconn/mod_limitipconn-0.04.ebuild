@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/mod_limitipconn-0.04.ebuild,v 1.1 2005/02/09 15:47:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/mod_limitipconn-0.04.ebuild,v 1.2 2005/02/13 17:32:35 hollow Exp $
 
 inherit eutils apache-module
 
@@ -13,8 +13,8 @@ SLOT="1"
 LICENSE="as-is"
 IUSE=""
 
-APACHE1_MOD_CONF="27_mod_limitipconn"
-APACHE1_MOD_DEFINE="LIMITIP"
+APACHE1_MOD_CONF="27_${PN}"
+APACHE1_MOD_DEFINE="LIMITIPCONN"
 
 DOCFILES="ChangeLog README"
 

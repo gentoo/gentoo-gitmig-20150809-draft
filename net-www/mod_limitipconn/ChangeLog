@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_limitipconn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.8 2005/02/09 15:47:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_limitipconn/ChangeLog,v 1.9 2005/02/13 17:32:35 hollow Exp $
+
+  13 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  files/27_mod_limitipconn.conf, mod_limitipconn-0.04.ebuild,
+  mod_limitipconn-0.22-r1.ebuild:
+  changed IPLIMIT to LIMITIPCONN + fixed module config
 
 *mod_limitipconn-0.04 (09 Feb 2005)
 
