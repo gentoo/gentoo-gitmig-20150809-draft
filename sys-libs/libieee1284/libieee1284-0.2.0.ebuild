@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.1 2002/08/04 23:03:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.2 2002/08/29 11:44:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library to query devices using IEEE1284"
 HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
-SRC_URI="http://cyberelk.net/tim/data/libieee1284/stable/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/libieee1284/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
