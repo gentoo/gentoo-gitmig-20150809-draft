@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.69 2003/07/26 11:52:11 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.70 2003/08/02 18:47:22 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -40,7 +40,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-fopen-url-secure.patch"
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
@@ -311,7 +311,6 @@ php_src_compile() {
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
 	myconf="${myconf} `use_with kerberos` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
-	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 	myconf="${myconf} `use_enable ipv6`"
 
 	#Waiting for somebody to want Cyrus support :-)
@@ -342,6 +341,9 @@ php_src_compile() {
 	myconf="${myconf} --with-xmlrpc"
 	myconf="${myconf} --enable-wddx"
 	myconf="${myconf} --with-xml"
+
+	#Some extensions need mbstring statically built
+	myconf="${myconf} --enable-mbstring --enable-mbregex"
 
 	# Somebody might want safe mode, but it causes some problems, so I disable it by default
 	#myconf="${myconf} --enable-safe-mode"
