@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2830 2004/04/20 14:52:00 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2831 2004/04/22 02:51:14 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -732,11 +732,6 @@ app-text/psgml
 # Masked (incomplete)
 app-emacs/monk
 
-# <azarah@gentoo.org> (28 Oct 2002)
-# Initial version that support alpha version of new multi version/arch
-# scheme.  Very ALPHA, so use at your own risk!!
-=sys-devel/gcc-3.2-r5
-
 # <chadh@gentoo.org> (21 Oct 2002)
 # This is a version of pcmcia-cs-3.2.1 with a patch to let it work with kismet
 # see bug 7242.  Until it is checked, it should remain masked
@@ -796,11 +791,6 @@ app-misc/ldapbrowser
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
-
-#azarah@gentoo.org (03 Jul 2002)
-#this one moves a lot of stuff around, and have a search dir
-#order fix that is very experimental
-=sys-devel/gcc-3.1-r8
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
