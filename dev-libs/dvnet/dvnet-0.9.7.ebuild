@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.7.ebuild,v 1.2 2003/07/14 19:55:54 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.7.ebuild,v 1.3 2003/07/15 18:41:14 pvdabeel Exp $
 
 A=dvnet-${PV}.tar.gz
 S=${WORKDIR}/dvnet-${PV}
@@ -27,6 +27,5 @@ src_unpack() {
 }
 
 src_install() {
-    AUTOMAKE=1.7.3
 	make DESTDIR=${D} prefix=${D}/usr install
 }
