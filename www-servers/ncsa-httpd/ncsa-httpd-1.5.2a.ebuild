@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ncsa-httpd-1.5.2a.ebuild,v 1.1 2004/08/08 17:46:54 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ncsa-httpd-1.5.2a.ebuild,v 1.2 2004/09/05 09:43:04 swegener Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/current/${MY_P}_sourc
 DEPEND=""
 LICENSE="ncsa-1.3"
 SLOT="1"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
