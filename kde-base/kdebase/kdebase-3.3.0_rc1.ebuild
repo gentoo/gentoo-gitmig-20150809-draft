@@ -1,39 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_beta1.ebuild,v 1.1 2004/07/08 22:25:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_rc1.ebuild,v 1.1 2004/08/06 15:11:47 caleb Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="ldap pam motif encode cups ssl opengl samba java"
+IUSE="ldap pam cups ssl opengl samba java arts"
 
-DEPEND="media-sound/cdparanoia
-	ldap? ( net-nds/openldap )
+DEPEND="ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )
-	motif? ( x11-libs/openmotif )
-	encode? ( media-sound/lame )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba )
+	samba? ( >=net-fs/samba-3.0.1 )
 	java? ( || ( virtual/jdk virtual/jre ) )
-	>=media-libs/freetype-2"
+	arts? ( ~kde-base/arts-${PV//3.3/1.3} )"
 RDEPEND="${DEPEND}
 	sys-apps/eject"
 
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/utils.h.diff
-	epatch ${FILESDIR}/detectwidget.cpp.diff
+	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
 }
 
 src_compile() {
-	myconf="$myconf --with-dpms --with-cdparanoia"
+	myconf="$myconf --with-dpms"
 	myconf="$myconf `use_with ldap` `use_with motif`"
 	myconf="$myconf `use_with encode lame` `use_with cups`"
 	myconf="$myconf `use_with opengl gl` `use_with ssl`"
+	myconf="$myconf `use_with arts`"
 
 	use pam \
 		&& myconf="$myconf --with-pam=yes" \
@@ -64,7 +61,6 @@ src_install() {
 
 	# startkde script
 	cd ${D}/${KDEDIR}/bin
-	epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
 	mv startkde startkde.orig
 	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
 	rm startkde.orig
