@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.7 2004/06/28 17:25:29 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.8 2005/03/14 23:09:11 vapier Exp $
 
 inherit games gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://users.freebsd.org.uk/pub/foobar2k/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
@@ -18,8 +18,6 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +27,7 @@ src_unpack() {
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:g" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}:g" \
 		*.c || die "sed failed"
-	find ${S}/data/ -type d -name .xvpics | xargs rm -rf \{\} \;
+	find "${S}"/data/ -type d -name .xvpics -print0 | xargs -0 rm -r
 }
 
 src_compile() {
