@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/mutt-vc-query
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mutt-vc-query/ChangeLog,v 1.1 2003/07/24 15:41:49 rizzo Exp $
+
+*mutt-vc-query-002 (24 Jul 2003)
+
+  24 Jul 2003; Don Seiler <rizzo@gentoo.org>; mutt-vc-query-002.ebuild:
+  Initial import.  Thanks to Andrew Kirilenko <icedank(at)gmx.net>.
+
