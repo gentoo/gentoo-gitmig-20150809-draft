@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.6 2005/03/15 15:27:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.7 2005/03/22 13:24:40 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -62,6 +62,10 @@ src_unpack() {
 	ht_fix_all
 
 	epatch ${FILESDIR}/${P}-conf-elf-rpm-bz2.patch || die "patch failed"
+
+	# fix access violation in make check
+	sed -i 's/\(snmpd.*\)-Lf/\1-l/' testing/eval_tools.sh || \
+		die "sed eval_tools.sh failed"
 }
 
 src_compile() {
@@ -103,6 +107,11 @@ src_compile() {
 		einfo "Building HTML Documentation"
 		make docsdox || die "failed to build docs"
 	fi
+}
+
+src_test() {
+	cd testing
+	make test || die "make test failed"
 }
 
 src_install () {
