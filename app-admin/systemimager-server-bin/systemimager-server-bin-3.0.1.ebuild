@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-server-bin/systemimager-server-bin-3.0.1.ebuild,v 1.2 2003/11/06 01:01:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemimager-server-bin/systemimager-server-bin-3.0.1.ebuild,v 1.3 2004/02/27 18:29:55 bass Exp $
 
 MY_P="systemimager-server-3.0.1-4.noarch"
 
@@ -13,13 +13,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-# Temporarily comment out because of repoman output
-# DEPEND="app-arch/rpm2targz
-#		app-admin/systemimager-common-bin
-#		app-admin/systemimager-boot-bin"
-#RDEPEND="${DEPEND}
-#		dev-perl/AppConfig
-#		dev-perl/XML-Simple"
+
+DEPEND="app-arch/rpm2targz
+		app-admin/systemimager-common-bin
+		app-admin/systemimager-boot-bin
+		app-admin/systemconfigurator"
+RDEPEND="${DEPEND}
+		dev-perl/AppConfig
+		dev-perl/XML-Simple"
 src_unpack() {
 	rpm2targz ${DISTDIR}/${MY_P}.rpm
 	tar zxf ${WORKDIR}/${MY_P}.tar.gz
