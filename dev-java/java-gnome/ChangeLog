@@ -1,6 +1,41 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.20 2004/09/01 08:47:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.21 2004/12/28 12:54:11 axxo Exp $
+
+* java-gnome-2.8.2-r3 (27 Dec 2004)
+
+  27 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +java-gnome-2.8.2-r3.ebuild:
+  Bump to pick up upstream maint releases to libgtk-java and libglade-java
+
+* java-gnome-2.8.2-r2 (24 Dec 2004)
+
+  24 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +java-gnome-2.8.2-r2.ebuild java-gnome-2.8.2-r1.ebuild:
+  Bump to pick up the libglade bugfix
+
+* java-gnome-2.8.2-r1 (17 Nov 2004)
+
+  17 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> java-gnome-2.8.2-r1.ebuild:
+  Upped dependencies on lib*java for their small ebuild improvements.
+
+  10 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> java-gnome-2.8.2.ebuild:
+  The java-gnome metapackage now generates JavaDoc for the whole java-gnome
+  suite. There's no point in creating disconnected bits of JavaDoc as anyone
+  developing against it needs the whole pile together.
+
+* java-gnome-2.8.2 (08 Nov 2004)
+
+  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com>:
+  MAJOR CHANGE. 
+ 
+  What used to be java-gnome is now multiplexed into various modular
+  subcomponents. Upstream CVS was all re-arranged, and now they release a tarball
+  for each piece. This ebuild is now [only] a meta package which in turn depends
+  on the various individual libraries (libgtk-java, libglade-java, etc) which
+  make up the java-gnome suite.
+
+  Note that this is marked as blocking older java-gnome versions. The 
+  The risk of naming collisions between java-gnome-2.6 and lib*-java-2.8* 
+  is too high.
 
   01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> java-gnome-2.6.0.1-r1.ebuild:
   update depends, closes 62437

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2.ebuild,v 1.2 2004/12/28 12:56:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2-r1.ebuild,v 1.1 2004/12/28 12:56:34 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -9,7 +9,7 @@
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
-# BE VERY SUBTLE IF IT DOESN NOT WORK.
+# BE VERY SUBTLE IF IT DOES NOT WORK.
 #
 
 inherit eutils gnome.org
@@ -18,7 +18,7 @@ DESCRIPTION="Java bindings for the core GNOME libraries (allow GNOME/GTK applica
 HOMEPAGE="http://java-gnome.sourceforge.net/"
 RDEPEND=">=gnome-base/libgnome-2.8.0
 	>=gnome-base/libgnomeui-2.8.0
-	>=dev-java/libgtk-java-2.4.6
+	>=dev-java/libgtk-java-2.4.6-r1
 	>=virtual/jre-1.2"
 
 #
@@ -28,10 +28,10 @@ RDEPEND=">=gnome-base/libgnome-2.8.0
 #
 
 DEPEND="${RDEPEND}
-		>=virtual/jdk-1.2
-		app-arch/zip
-		sys-devel/autoconf
-		sys-devel/automake"
+	>=virtual/jdk-1.2
+	app-arch/zip
+	sys-devel/autoconf
+	sys-devel/automake"
 
 #
 # Critical that this match gtkapiversion
@@ -45,6 +45,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/libgnome-java-2.8.2_gentoo-PN-SLOT.patch
+	sed -i "s|^\(JAVA_INCLUDES = \)|\1 -I\${JDK_HOME}/include -I\${JDK_HOME}/include/linux/|" src/Makefile.in || die "sed failed"
 }
 
 src_compile() {

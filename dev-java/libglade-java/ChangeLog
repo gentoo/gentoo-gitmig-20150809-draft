@@ -1,6 +1,30 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.3 2004/12/21 20:15:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.4 2004/12/28 12:56:02 axxo Exp $
+
+* libglade-java-2.8.2.2 (27 Dec 2004)
+
+  27 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +libglade-java-2.8.2.2.ebuild:
+  New upstream with the fix below. Note that 2.8.2.1 had an internal version 
+  number glitch
+
+* libglade-java-2.8.2-r1 (24 Dec 2004)
+
+  24 Dec 2004; Andrew Cowie <andrew@operationaldynamics.com> +libglade-java-2.8.2-r1.ebuild, -libglade-java-2.8.2.ebuild:
+  Nasty little bug with respect to signal connection. Luckily, simple fix.
+  See gnome.org bug #161190 which in turn is based on Red Hat bug #141713. This
+  will go away very shortly if a new upstream is released (largely and only 
+  containing this patch).
+
+  18 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> libglade-java-2.8.2.ebuild:
+  Marked stable on x86
+
+* libglade-java-2.8.2 (08 Nov 2004)
+
+  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com>:
+  New ebuild. What used to be java-gnome is now multiplexed into various modular
+  subcomponents. Upstream CVS was all re-arranged, and now there is a release
+  tarball for each piece. This is the Java binding for LibGlade.
 
 * libglade-java-2.8.2 (04 Dec 2004)
 
@@ -12,4 +36,3 @@
   New ebuild. What used to be java-gnome is now multiplexed into various modular
   subcomponents. Upstream CVS was all re-arranged, and now there is a release
   tarball for each piece. This is the Java binding for LibGlade.
-

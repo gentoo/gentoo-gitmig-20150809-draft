@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2.ebuild,v 1.2 2004/12/28 12:56:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.8.2.2.ebuild,v 1.1 2004/12/28 12:56:02 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -9,16 +9,16 @@
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
-# BE VERY SUBTLE IF IT DOESN NOT WORK.
+# BE VERY SUBTLE IF IT DOES NOT WORK.
 #
 
 inherit eutils gnome.org
 
-DESCRIPTION="Java bindings for the core GNOME libraries (allow GNOME/GTK applications to be written in Java)"
+DESCRIPTION="Java bindings for [Lib]Glade (allows GNOME/GTK applications writen in Java to be generate their user interface based on Glade description files)"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
-RDEPEND=">=gnome-base/libgnome-2.8.0
-	>=gnome-base/libgnomeui-2.8.0
-	>=dev-java/libgtk-java-2.4.6
+RDEPEND=">=gnome-base/libglade-2.3.6
+	>=dev-java/libgtk-java-2.4.7.1
+	>=dev-java/libgnome-java-2.8.2-r1
 	>=virtual/jre-1.2"
 
 #
@@ -44,7 +44,12 @@ IUSE="gcj"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/libgnome-java-2.8.2_gentoo-PN-SLOT.patch
+	epatch ${FILESDIR}/libglade-java-2.8.2_gentoo-PN-SLOT.patch
+#	fixed upstream, will remove next release.
+#	epatch ${FILESDIR}/libglade-java-2.8.2_signal-connection-fix.patch
+	sed -i "s|^\(JAVA_INCLUDES = \)|\1 -I\${JDK_HOME}/include -I\${JDK_HOME}/include/linux/|" src/Makefile.in || die "sed failed"
+
+	rm -f ${S}/config.cache
 }
 
 src_compile() {
@@ -72,12 +77,12 @@ src_install() {
 	mkdir -p ${D}/usr/lib
 	mkdir -p ${D}/usr/share/java
 	mkdir -p ${D}/usr/lib/pkgconfig
-	mkdir -p ${D}/usr/share/doc/libgnome${SLOT}-java
+	mkdir -p ${D}/usr/share/doc/libglade${SLOT}-java
 
 	make prefix=${D}/usr install || die
 
 	# actually, at time of writing, there were no DOCUMENTS, but leave it here...
-	mv ${D}/usr/share/doc/libgnome${SLOT}-java ${D}/usr/share/doc/${PF}
+	mv ${D}/usr/share/doc/libglade${SLOT}-java ${D}/usr/share/doc/${PF}
 
 	# the upstream install scatters things around a bit. The following cleans
 	# that up to make it policy compliant.
@@ -91,7 +96,7 @@ src_install() {
 
 	mkdir ${D}/usr/share/${PN}-${SLOT}/src
 	cd ${S}/src/java
-	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libgnome-java-${PV}.src.zip *
+	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libglade-java-${PV}.src.zip *
 
 	# again, with dojar misbehaving, better do to this manually for the
 	# time being. Yes, this is bad hard coding, but what in this ebuild isn't?
@@ -99,6 +104,6 @@ src_install() {
 	echo "DESCRIPTION=${DESCRIPTION}" \
 		>  ${D}/usr/share/${PN}-${SLOT}/package.env
 
-	echo "CLASSPATH=/usr/share/${PN}-${SLOT}/lib/gnome${SLOT}.jar" \
+	echo "CLASSPATH=/usr/share/${PN}-${SLOT}/lib/glade${SLOT}.jar" \
 		>> ${D}/usr/share/${PN}-${SLOT}/package.env
 }

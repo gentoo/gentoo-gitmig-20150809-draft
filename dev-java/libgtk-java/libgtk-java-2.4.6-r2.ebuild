@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.8.2.ebuild,v 1.2 2004/12/28 12:56:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.4.6-r2.ebuild,v 1.1 2004/12/28 12:57:07 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -9,16 +9,14 @@
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
-# BE VERY SUBTLE IF IT DOESN NOT WORK.
+# BE VERY SUBTLE IF IT DOES NOT WORK.
 #
 
 inherit eutils gnome.org
 
-DESCRIPTION="Java bindings for the core GNOME libraries (allow GNOME/GTK applications to be written in Java)"
+DESCRIPTION="Java bindings for GTK libraries (allow GTK applications to be written in Java)"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
-RDEPEND=">=gnome-base/libgnome-2.8.0
-	>=gnome-base/libgnomeui-2.8.0
-	>=dev-java/libgtk-java-2.4.6
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=virtual/jre-1.2"
 
 #
@@ -28,15 +26,13 @@ RDEPEND=">=gnome-base/libgnome-2.8.0
 #
 
 DEPEND="${RDEPEND}
-		>=virtual/jdk-1.2
-		app-arch/zip
-		sys-devel/autoconf
-		sys-devel/automake"
+	>=virtual/jdk-1.2
+	app-arch/zip"
 
 #
 # Critical that this match gtkapiversion
 #
-SLOT="2.8"
+SLOT="2.4"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="gcj"
@@ -44,7 +40,11 @@ IUSE="gcj"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/libgnome-java-2.8.2_gentoo-PN-SLOT.patch
+	epatch ${FILESDIR}/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch
+	epatch ${FILESDIR}/libgtk-java-2.4.6_gentoo-PN-SLOT.patch
+	epatch ${FILESDIR}/libgtk-java-2.4.6_install-doc.patch
+	epatch ${FILESDIR}/libgtk-java-2.4.6_no-docbook-autoconf-macro.patch
+	use gcj || epatch ${FILESDIR}/${P}_find_jni.patch
 }
 
 src_compile() {
@@ -59,6 +59,8 @@ src_compile() {
 	# the trick, but there are paths hard coded in .pc files and in the
 	# `make install` step itself that need to be influenced.
 	#
+	# NOTE: THIS RELIES ON PORTAGE PASSING $PN AND $SLOT IN THE ENVIRONMENT
+	#
 
 	./autogen.sh \
 		--host=${CHOST} \
@@ -68,16 +70,9 @@ src_compile() {
 }
 
 src_install() {
-	# workaround Makefile bug not creating necessary parent directories
-	mkdir -p ${D}/usr/lib
-	mkdir -p ${D}/usr/share/java
-	mkdir -p ${D}/usr/lib/pkgconfig
-	mkdir -p ${D}/usr/share/doc/libgnome${SLOT}-java
-
 	make prefix=${D}/usr install || die
 
-	# actually, at time of writing, there were no DOCUMENTS, but leave it here...
-	mv ${D}/usr/share/doc/libgnome${SLOT}-java ${D}/usr/share/doc/${PF}
+	mv ${D}/usr/share/doc/libgtk${SLOT}-java ${D}/usr/share/doc/${PF}
 
 	# the upstream install scatters things around a bit. The following cleans
 	# that up to make it policy compliant.
@@ -91,14 +86,14 @@ src_install() {
 
 	mkdir ${D}/usr/share/${PN}-${SLOT}/src
 	cd ${S}/src/java
-	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libgnome-java-${PV}.src.zip *
+	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libgtk-java-${PV}.src.zip *
 
 	# again, with dojar misbehaving, better do to this manually for the
-	# time being. Yes, this is bad hard coding, but what in this ebuild isn't?
+	# time being.
 
 	echo "DESCRIPTION=${DESCRIPTION}" \
 		>  ${D}/usr/share/${PN}-${SLOT}/package.env
 
-	echo "CLASSPATH=/usr/share/${PN}-${SLOT}/lib/gnome${SLOT}.jar" \
+	echo "CLASSPATH=/usr/share/${PN}-${SLOT}/lib/gtk${SLOT}.jar" \
 		>> ${D}/usr/share/${PN}-${SLOT}/package.env
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.4.6-r1.ebuild,v 1.2 2004/11/29 15:35:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.4.6-r1.ebuild,v 1.3 2004/12/28 12:57:07 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
@@ -27,9 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 
 DEPEND="${RDEPEND}
 		>=virtual/jdk-1.2
-		app-arch/zip
-		sys-devel/autoconf
-		sys-devel/automake"
+		app-arch/zip"
 
 #
 # Critical that this match gtkapiversion
@@ -66,7 +64,7 @@ src_compile() {
 		--host=${CHOST} \
 		--prefix=/usr \
 			${conf} || die "./configure failed"
-	make || die
+	make || die "compile failed"
 }
 
 src_install() {
