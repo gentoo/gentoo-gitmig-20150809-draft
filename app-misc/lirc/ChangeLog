@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.49 2004/11/29 12:50:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.50 2004/11/29 12:53:32 lanius Exp $
+
+  29 Nov 2004; lanius@gentoo.org files/lircd.conf:
+  fix default path of lirc device, bug #71618
 
   29 Nov 2004; <heino@gentoo.org> lirc-0.7.0.ebuild:
   remove bogus configure.in patch
