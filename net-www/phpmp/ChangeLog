@@ -1,0 +1,9 @@
+# ChangeLog for net-www/phpBB
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.1 2003/08/03 22:40:53 stuart Exp $
+
+*phpmp-0.8.2 (03 Aug 2003)
+
+  03 Aug 2003; Stuart Herbert <stuart@gentoo.org> phpmp-0.8.2.ebuild:
+  Initial checkin, based on an ebuild submitted by starz@antisocial.com as
+  bug #24659
