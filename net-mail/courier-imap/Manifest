@@ -1,5 +1,8 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef51bf8c56f3b35171934dc4af99452d courier-imap-3.0.7.ebuild 9236
-MD5 724ddbc6cde00ddf3bac73cf76fd2701 courier-imap-3.0.8.20041116.ebuild 9943
+MD5 e83215f0b7132dc09489e81cacdfa5fd courier-imap-3.0.8.20041116.ebuild 9943
 MD5 d9ae9c6a982e6ac9195eb90d531b4508 courier-imap-3.0.8.ebuild 9394
 MD5 8d4f63bdc96b8252d911b07ec82bf59a ChangeLog 17246
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
@@ -35,3 +38,10 @@ MD5 a62b9cfcf4c0c67b515eb90e6422233c files/courier-imap-3.0.8.20041116-courier-i
 MD5 41b0b05702438e6f56fa885f2d6ef00e files/courier-imap-3.0.8.20041116-courier-pop3d.rc6 983
 MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
 MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnpSY5FrxP71izLARAtlwAJ9HuHbfM6kTyGF7MyQMB0yU+oSpxwCaAohK
+CQBLS4cAmxo6Vkg53Ze3LEg=
+=8Prl
+-----END PGP SIGNATURE-----
