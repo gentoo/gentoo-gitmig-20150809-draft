@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r4.ebuild,v 1.2 2005/02/12 16:08:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r5.ebuild,v 1.1 2005/02/12 16:08:05 usata Exp $
 
 inherit alternatives eutils
 
 IUSE="gpm imlib nls ssl"
 
-MY_PV=${PV##*_}-20
+MY_PV=${PV##*_}-22
 MY_P=${PN}-${MY_PV}
-GC_PV="6.2"
+GC_PV="6.4"
 MY_GC=gc${GC_PV}
 
 DESCRIPTION="A variant of w3m with support for multiple character encodings"
@@ -18,7 +18,7 @@ HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 -alpha sparc ppc"
+KEYWORDS="~x86 -alpha ~sparc ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2

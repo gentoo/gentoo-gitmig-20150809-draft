@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5fc6db14145006f63b64ec51d9936daf ChangeLog 530
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 fb411baeecc9e44ea03c9cd13187808e netscape-7.2.ebuild 2518
-MD5 e66c05ce466a169bf69b9982f8f26527 ChangeLog 408
+MD5 448f7f9dfeadb02955ceb663f735a06b netscape-7.2.ebuild 2526
 MD5 1356e62f21a99bbf8c79bedc63e14299 files/digest-netscape-7.2 84
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCBFGWVWNWqTUmv+0RAh7oAJ9PwHgX2FKK+iEmmOGrR7o4/50WXQCfUGxS
-O5vOHLuSKPGn4UrRvuGryZQ=
-=B/Lk
------END PGP SIGNATURE-----
