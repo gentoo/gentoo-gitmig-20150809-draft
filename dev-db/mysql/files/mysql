@@ -74,6 +74,11 @@ fi
 cd $basedir
 
 start() {
+    # Create db on first start
+    if [ ! -d /var/mysql/mysql ]
+    then
+        /usr/bin/mysql_install_db
+    fi
     # Start daemon
 
     if test -x $bindir/safe_mysqld
@@ -110,5 +115,6 @@ restart () {
 }
 
 doservice ${@}
+
 
 

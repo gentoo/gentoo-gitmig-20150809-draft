@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.22.32-r1.ebuild,v 1.2 2000/08/13 05:28:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.22.32-r1.ebuild,v 1.3 2000/08/13 12:10:49 achim Exp $
 
 A=${P}.tar.gz
 DESCRIPTION="The MySQL Database"
@@ -81,17 +81,11 @@ src_install() {
 		
 }
 
-pkg_postinst () {
+pkg_config () {
 
-  . ${ROOT}/var/lib/packages/install.config
-  if [ "$ROOT" == "/" ] ; then
-    /usr/bin/mysql_install_db
-    /etc/rc.d/init.d/mysql start
-    sleep 5
-    /usr/bin/mysqladmin password $MySQLpass
-  fi
   echo "Setting up symlinks..."
   ${ROOT}/usr/sbin/rc-update add mysql
 
 }
+
 
