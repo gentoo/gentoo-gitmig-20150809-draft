@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.6 2003/09/11 01:21:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.7 2004/02/01 12:31:14 ferringb Exp $
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
@@ -27,6 +27,7 @@ DEPEND=">=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-alsalib-fix.patch || die "Alsalib patch failed"
 }
 
 src_compile() {
