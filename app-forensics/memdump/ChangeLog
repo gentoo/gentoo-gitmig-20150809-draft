@@ -1,0 +1,10 @@
+# ChangeLog for app-forensics/memdump
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.1 2004/09/19 04:01:50 dragonheart Exp $
+
+*memdump-1.0 (19 Sep 2004)
+
+  19 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +memdump-1.0.ebuild:
+  initial import as part of forensics herd. Was suggested in bug #42498
+
