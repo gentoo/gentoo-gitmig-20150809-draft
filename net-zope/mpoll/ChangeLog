@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/mpoll
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/mpoll/ChangeLog,v 1.1 2003/10/11 20:57:47 lanius Exp $
+
+*mpoll-0.3.1 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
+  mpoll-0.3.1.ebuild:
+  initial ebuild, thx to Dominik <dom@wahuu.at>
+
