@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.24 2003/03/05 15:28:01 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.25 2003/03/16 22:52:35 absinthe Exp $
+
+*ant-1.5.1-r4 (16 Mar 2003)
+
+  16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.1-r4.ebuild:
+  Added 'doc' USE flag for developer's documentation.
 
 *ant-1.5.1-r3 (01 Dec 2002)
 
