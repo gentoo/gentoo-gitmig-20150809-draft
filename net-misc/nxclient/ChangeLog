@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.11 2004/07/07 14:24:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.12 2004/08/30 20:43:27 stuart Exp $
+
+  30 Aug 2004; Stuart Herbert <stuart@gentoo.org> nxclient-1.4.0.ebuild:
+  Added snapshot 4; needed by freenx
 
   07 Jul 2004; Stuart Herbert <stuart@gentoo.org> nxclient-1.3.0.ebuild,
   nxclient-1.3.2.ebuild, nxclient-1.4.0.ebuild:
