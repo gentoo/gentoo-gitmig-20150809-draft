@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.39 2002/09/25 16:09:59 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.40 2002/11/14 21:09:33 raker Exp $
+
+*postfix-1.1.11.20020917-r1 (14 Nov 2002)
+
+  14 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020917-r1.ebuild,
+  files/digest-postfix-1.1.11.20020917 :
+  New ebuild which places the smtpd.conf for sasl2 in /usr/lib/sasl2
+  instead of /etc/sasl2.  See bug #10650
 
   25 Sep 2002; Maik Schreiber <blizzy@gentoo.org>
   postfix-1.1.11-r5.ebuild, files/digest-postfix-1.1.11-r5:
