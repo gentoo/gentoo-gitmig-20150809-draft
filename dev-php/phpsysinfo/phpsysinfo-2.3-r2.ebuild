@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.3-r2.ebuild,v 1.3 2005/04/02 08:01:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.3-r2.ebuild,v 1.4 2005/04/02 17:41:08 weeve Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://phpsysinfo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/phpsysinfo/${P}.tar.gz
 		http://dev.gentoo.org/~corsair/${P}-xss-and-path.patch"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~sparc ~amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa sparc ~amd64 ppc64"
 IUSE=""
 
 DEPEND="$DEPEND >=net-www/apache-1.3.27-r1

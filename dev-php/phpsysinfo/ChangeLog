@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.25 2005/04/02 07:01:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.26 2005/04/02 17:41:08 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> phpsysinfo-2.3-r2.ebuild:
+  Stable on SPARC wrt security bug #86478.
 
   02 Apr 2005; Markus Rothe <corsair@gentoo.org>
   files/phpsysinfo-2.3-sparc.patch, files/phpsysinfo-2.3-xss-and-path.patch,

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa15da55376b3faaa7cb58e80eaee9ca phpsysinfo-2.1-r2.ebuild 1545
-MD5 8827892746bd5882799782a7880220d4 phpsysinfo-2.1.ebuild 909
-MD5 2a4787b7359d335ebb9f0430f4bb3e32 phpsysinfo-2.3.ebuild 1069
-MD5 90bc9a8436887302085fbba200aac900 phpsysinfo-2.1-r1.ebuild 1425
-MD5 4cf8e79eaad26d64e21c4eb4478fabdf phpsysinfo-2.3-r2.ebuild 1193
-MD5 08c8fc60174ef3ff913eced95d7bb74c phpsysinfo-2.2.ebuild 1085
-MD5 376df0ec07ba418f5db8a8345a793e0e ChangeLog 3514
+MD5 52e4399cd95d0128917d13716accdd4a ChangeLog 3628
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 90bc9a8436887302085fbba200aac900 phpsysinfo-2.1-r1.ebuild 1425
+MD5 8827892746bd5882799782a7880220d4 phpsysinfo-2.1.ebuild 909
+MD5 aa15da55376b3faaa7cb58e80eaee9ca phpsysinfo-2.1-r2.ebuild 1545
+MD5 08c8fc60174ef3ff913eced95d7bb74c phpsysinfo-2.2.ebuild 1085
+MD5 2a4787b7359d335ebb9f0430f4bb3e32 phpsysinfo-2.3.ebuild 1069
 MD5 b3595c0eebf0d7f02ddf48ca76940a92 phpsysinfo-2.3-r1.ebuild 1077
-MD5 b31f7b9dcef2784b2ba530a58585e35c files/phpsysinfo-2.3-sparc.patch 1622
+MD5 c939f7eac8b5f7f3b6ffa3b3301326af phpsysinfo-2.3-r2.ebuild 1190
 MD5 dd6e98f9ae29de67bf46f225d4fe3eff files/digest-phpsysinfo-2.1 66
-MD5 90445c68318e8784cc1d594123e06edc files/digest-phpsysinfo-2.2 66
-MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3 66
-MD5 7885e7ba5eca949998923dae36e02071 files/fix_memory_display_kernel2.5.diff.gz 1230
 MD5 31e3ac9396a003b09c5f3caf78c361f2 files/digest-phpsysinfo-2.1-r1 133
 MD5 31e3ac9396a003b09c5f3caf78c361f2 files/digest-phpsysinfo-2.1-r2 133
+MD5 7885e7ba5eca949998923dae36e02071 files/fix_memory_display_kernel2.5.diff.gz 1230
+MD5 90445c68318e8784cc1d594123e06edc files/digest-phpsysinfo-2.2 66
+MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3 66
 MD5 30402e91a4759242922f7eecc7337672 files/digest-phpsysinfo-2.3-r1 66
 MD5 5d83f270f99b2620b1552bef09c7e460 files/digest-phpsysinfo-2.3-r2 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCTso/I1lqEGTUzyQRAvvDAKDKXuxUCtYhMbVba+9cdOLFdyURRgCgiVhc
-6rDsoeQYu7rXkdioYZLWXPw=
-=JLdw
------END PGP SIGNATURE-----
+MD5 b31f7b9dcef2784b2ba530a58585e35c files/phpsysinfo-2.3-sparc.patch 1622
