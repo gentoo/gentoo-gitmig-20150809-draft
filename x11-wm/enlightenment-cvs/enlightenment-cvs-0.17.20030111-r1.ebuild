@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030111-r1.ebuild,v 1.1 2003/01/12 07:37:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20030111-r1.ebuild,v 1.2 2003/01/12 20:05:20 vapier Exp $
 
 ECVS_SERVER="cvs.enlightenment.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e17"
@@ -27,7 +27,9 @@ DEPEND="app-admin/fam-oss
 	media-libs/imlib2
 	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=media-libs/freetype-2.1.3"
+#	fbcon? ( >=dev-libs/DirectFB-0.9.16 )
 
 S=${WORKDIR}/${ECVS_MODULE}
 E_PREFIX=/usr/e17
