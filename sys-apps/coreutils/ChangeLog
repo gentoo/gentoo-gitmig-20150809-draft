@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.69 2004/01/11 06:09:46 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.70 2004/01/12 02:33:09 seemant Exp $
+
+  11 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
+  coreutils-5.0.91-r4.ebuild:
+  Applied the 64 bit fixes from MDK's newest src.rpm, which seems to solve the
+  segfaults. In my defense, I did do some preliminary testing on -r4 with the
+  previous patchset, and it didn't segfault -- this time, I checked an ls -R /
+  output on both ia64 and amd64 boxes, so this should be sorted finally (bug
+  #37891 by E. Papegaaij <e.papegaaij@student.utwente.nl>). Also, it now links
+  against ncurses-5.3-r5 and greater for building and running. So, we finally
+  get rid of the termcap cruft, thanks to Azarah for that (bug #37026).
 
   11 Jan 2004; Brad House <brad_mssw@gentoo.org> coreutils-5.0.91-r4.ebuild:
   coreutils -r4 is not stable on amd64. or at least ls is not. seemant broke it
