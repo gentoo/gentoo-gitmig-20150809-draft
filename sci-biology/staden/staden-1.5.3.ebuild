@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.2 2005/01/18 00:18:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.3 2005/01/25 04:19:24 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -73,6 +73,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-prefinish.patch
 	epatch ${FILESDIR}/${P}-tracediff.patch
 	epatch ${FILESDIR}/${P}-mutscan.patch
+	epatch ${FILESDIR}/${P}-mutlib-gcc-3.4.patch
 	cd ${S}/src/mk
 	# Remove the "-fpic" flag. This will be replaced by "-fPIC".
 	sed -i -e 's/SHLIB_CFLAGS		= -fpic/SHLIB_CFLAGS		= /' linux.mk
