@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/quanta-docs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.8 2004/06/30 02:06:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.9 2004/09/02 03:50:59 tgall Exp $
+
+  01 Sep 2004; Tom Gall <tgall@gentoo.org> quanta-docs-20030405.ebuild:
+  stable on ppc64, bug #62167
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> quanta-docs-20030405.ebuild:
   sync IUSE (+mysql)
