@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/esdl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.1 2003/02/17 19:01:57 vapier Exp $
+
+*esdl-0.93.0131 (17 Feb 2003)
+
+  17 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by charlie mac <charzilla@yahoo.com> #14123.
