@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r1.ebuild,v 1.5 2003/10/27 09:56:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r1.ebuild,v 1.6 2004/01/03 13:41:02 aliz Exp $
 
 IUSE=
 
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 ~amd64"
 
 src_unpack() {
 	unpack ${A}
