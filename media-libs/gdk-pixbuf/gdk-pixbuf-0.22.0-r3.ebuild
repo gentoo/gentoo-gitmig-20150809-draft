@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.8 2004/10/10 01:47:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.9 2004/10/17 06:47:27 hardave Exp $
 
 inherit virtualx libtool gnome.org gnuconfig eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 IUSE="doc mmx"
 
 RDEPEND="media-libs/jpeg
