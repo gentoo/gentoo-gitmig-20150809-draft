@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.4.ebuild,v 1.6 2004/06/24 22:12:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.4.ebuild,v 1.7 2005/03/14 23:07:02 vapier Exp $
 
 inherit games
 
@@ -8,9 +8,9 @@ DESCRIPTION="action/arcade recreation of SolarFox"
 HOMEPAGE="http://www.pygame.org/shredwheat/solarwolf/"
 SRC_URI="http://www.pygame.org/shredwheat/solarwolf/${P}.tar.gz"
 
-KEYWORDS="x86 ~sparc hppa"
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="x86 ~sparc hppa"
 IUSE=""
 
 DEPEND=">=dev-python/pygame-1.5.6
@@ -19,7 +19,7 @@ DEPEND=">=dev-python/pygame-1.5.6
 
 src_unpack() {
 	unpack ${A}
-	find ${S} -name .xvpics | xargs rm -rf
+	find "${S}" -name .xvpics -print0 | xargs -0 rm -r
 }
 
 src_install() {
