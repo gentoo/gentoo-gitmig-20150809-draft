@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.17 2002/09/10 16:59:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.18 2002/09/15 14:15:54 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -53,7 +53,7 @@ INHERITED="$INHERITED $ECLASS"
 # Subdirectory in module to be fetched, default is not defined = whole module
 # DO NOT set default to "", if it's defined at all code will break!
 # don't uncomment following line!
-#[ -z "$ECVS_MODULE_SUBDIR" ] && ECVS_MODULE_SUBDIR=""
+#[ -z "$ECVS_SUBDIR" ] && ECVS_SUBDIR=""
 
 # --- end ebuild-configurable settings ---
 
@@ -74,12 +74,13 @@ ECVS_SERVER=$ECVS_SERVER
 ECVS_USER=$ECVS_USER
 ECVS_PASS=$ECVS_PASS
 ECS_MODULE=$ECVS_MODULE
-ECVS_MODULE_SUBDIR=$ECVS_SUBDIR
+ECVS_SUBDIR=$ECVS_SUBDIR
 ECVS_LOCAL=$ECVS_LOCAL
 DIR=$DIR"
 
 	# a shorthand
 	DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}"
+	debug-print "$FUNCNAME: now DIR=$DIR"
 
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
@@ -92,7 +93,7 @@ DIR=$DIR"
 			return 1
 	    fi
 	fi
-							DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}"
+
 	# create target directory as needed
 	if [ ! -d "$DIR" ]; then
 		debug-print "$FUNCNAME: creating cvs directory $DIR"
@@ -107,7 +108,10 @@ DIR=$DIR"
 	# otherwise addwrite() doesn't work.
 	cd -P $ECVS_TOP_DIR > /dev/null
 	ECVS_TOP_DIR="`/bin/pwd`"
+	DIR="${ECVS_TOP_DIR}/${ECVS_MODULE}/${ECVS_SUBDIR}"
 	cd $OLDPWD
+	
+	debug-print "$FUNCNAME: now DIR=$DIR"
 	
 	# disable the sandbox for this dir
 	# not just $DIR because we want to create moduletopdir/CVS too
@@ -136,10 +140,10 @@ DIR=$DIR"
 	fi
 	
 	debug-print "$FUNCNAME: Root<-$newserver, Repository<-$repository"
-	
+	debug-print "$FUNCNAME: entering directory $DIR"
 	cd /$DIR
 	
-	if [ ! -d "$DIR/CVS" ]; then
+	if [ ! -d "CVS" ]; then
 		# create a new CVS/ directory (checkout)
 		debug-print "$FUNCNAME: creating new cvs directory"
 		
@@ -190,6 +194,7 @@ DIR=$DIR"
 	[ -n "$ECVS_BRANCH" ] && ECVS_CVS_OPTIONS="$ECVS_CVS_OPTIONS -r$ECVS_BRANCH"
 
 	# finally run the cvs update command
+	debug-print "$FUNCNAME: is in dir `/bin/pwd`"
 	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
 	einfo "Running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for $ECVS_MODULE/$ECVS_SUBDIR..."
 	$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
