@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6.ebuild,v 1.10 2004/01/06 22:25:33 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Audio System"
@@ -9,7 +9,7 @@ HOMEPAGE="http://radscan.com/nas.html"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ~sparc ppc hppa ~alpha amd64"
+KEYWORDS="x86 ~sparc ppc hppa alpha amd64 ia64"
 
 # This is ridculuous, we only need xmkmf, but no other package
 # provides it. 20020607 (Seemant): Actually, the homepage says it needs
