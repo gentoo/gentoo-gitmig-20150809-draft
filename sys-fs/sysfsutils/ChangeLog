@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/sysfsutils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.1 2003/10/11 20:21:43 azarah Exp $
+
+*sysfsutils-0.2.0 (11 Oct 2003)
+
+  11 Oct 2003; Martin Schlemmer <azarah@gentoo.org> sysfsutils-0.2.0.ebuild:
+  Initial ebuild submitted by myself.
+
