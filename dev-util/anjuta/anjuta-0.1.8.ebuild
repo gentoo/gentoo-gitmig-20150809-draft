@@ -27,7 +27,8 @@ RDEPEND="dev-util/glade
 	 sys-devel/gcc
 	 sys-devel/gdb
 	 sys-apps/grep
-	 >=sys-libs/db-3.2.3"
+	 >=sys-libs/db-3.2.3
+	 dev-util/indent"
 
 
 src_compile() {
