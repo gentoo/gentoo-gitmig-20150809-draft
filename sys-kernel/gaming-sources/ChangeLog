@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.23 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.24 2004/06/14 18:11:07 plasmaroo Exp $
+
+  14 Jun 2004; <plasmaroo@gentoo.org> :
+  Added a patch for the FPU-lockup issue; please see bug #58304 for details.
 
   31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gaming-sources-2.4.20-r11.ebuild:
