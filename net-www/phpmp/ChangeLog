@@ -1,6 +1,9 @@
 # ChangeLog for net-www/phpmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.21 2004/07/13 08:40:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.22 2004/07/19 00:56:04 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> phpmp-0.10.2.ebuild:
+  Stable on alpha.
 
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> phpmp-0.11.0.ebuild:
   Added ~amd64

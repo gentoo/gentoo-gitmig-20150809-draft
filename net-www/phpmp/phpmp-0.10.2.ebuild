@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.10.2.ebuild,v 1.5 2004/06/27 11:15:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.10.2.ebuild,v 1.6 2004/07/19 00:56:04 kloeri Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.musicpd.org/"
 SRC_URI="mirror://sourceforge/musicpd/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
 DEPEND=">=dev-php/mod_php-4.2.3-r2"
 
