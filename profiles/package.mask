@@ -2,7 +2,7 @@
 #explanation of why something is getting masked
 
 #18 Mar 2002, drobbins: this doesn't build if USE="-* build" is set
->=sys-apps/sh-utils-2.0.11-r2
+#>=sys-apps/sh-utils-2.0.11-r2
 
 #GNUCash-1.6* do not work with these
 # guile-1.5 changed function names of 1.4
@@ -81,7 +81,7 @@
 <=app-admin/sudo-1.6.4
 
 #previous versions had a security hole (bug #212)
-<=net-misc/stunnel-3.22
+<net-misc/stunnel-3.22
 
 # Incompatible with gdm
 =media-libs/imlib-1.9.11
@@ -340,16 +340,6 @@ dev-libs/libiconv
 
 # Fails with new Java scheme (karltk) 
 =net-www/tomcat-3.2.2
-
-# Moved all of gkrellm stuff to x11-misc
-app-admin/gkrellm-gnome
-app-misc/gkrellkam
-app-misc/gkrellm-seti
-app-misc/gkrellmlaunch
-app-misc/gkrellweather
-media-sound/gkrellm-volume
-media-sound/gkrellmms
-net-misc/gkrellmwireless
 
 #Should be tested
 =net-mail/teapop-0.3.3
