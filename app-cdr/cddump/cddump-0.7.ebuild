@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.10 2003/02/13 05:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.11 2003/02/26 17:28:27 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="cddump - backup to CD-Recordable and CD-Rewritable"
@@ -9,8 +9,17 @@ HOMEPAGE="http://www.joat.ca/software/cddump.html"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="app-cdr/cdrtools
-		sys-devel/perl"
-KEYWORDS="x86 ppc sparc "
+	sys-devel/perl"
+KEYWORDS="x86 ppc sparc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	cat install.cddump | sed \
+		-e "/system/s:/usr/local/man/man8:${D}usr/man/man8:" > install.cddump.NEW
+	mv install.cddump.NEW install.cddump
+}
 
 src_compile() {
 	# These are appropriate defaults for my system (with an 8x

@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cddump
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/ChangeLog,v 1.5 2003/02/12 03:05:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/ChangeLog,v 1.6 2003/02/26 17:28:27 aliz Exp $
+
+  26 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> cddump-0.7.ebuild :
+  Closes #1872.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
