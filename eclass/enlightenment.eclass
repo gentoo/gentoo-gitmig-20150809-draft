@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.16 2004/02/23 05:56:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.17 2004/03/30 16:18:51 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -60,26 +60,25 @@ enlightenment_src_compile() {
 	[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
 	env \
 		PATH="${T}:${PATH}" \
-		WANT_AUTOCONF_2_5=1 \
 		NOCONFIGURE=yes \
 		USER=blah \
 		./autogen.sh \
 		|| enlightenment_die "autogen failed"
 	if [ ! -z "${EHACKLIBLTDL}" ] ; then
 		cd libltdl
-		env WANT_AUTOCONF_2_5=1 autoconf || enlightenment_die "autogen in libltdl failed"
+		autoconf || enlightenment_die "autogen in libltdl failed"
 		cd ..
 	fi
 	econf ${MY_ECONF} || enlightenment_die "econf failed"
 	emake || enlightenment_die "emake failed"
-	[ `use doc` ] && [ -x ./gendoc ] && { ./gendoc || enlightenment_die "gendoc failed" ; }
+	use doc && [ -x ./gendoc ] && { ./gendoc || enlightenment_die "gendoc failed" ; }
 }
 
 enlightenment_src_install() {
 	make install DESTDIR=${D} || enlightenment_die
 	find ${D} -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
 	dodoc AUTHORS ChangeLog NEWS README TODO ${EDOCS}
-	[ `use doc` ] && [ -d doc ] && dohtml -r doc/*
+	use doc && [ -d doc ] && dohtml -r doc/*
 }
 
 enlightenment_pkg_postinst() {
