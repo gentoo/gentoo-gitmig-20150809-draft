@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.1 2003/10/08 03:17:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.2 2003/10/14 21:21:40 weeve Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.math.fu-berlin.de/~guckes/screen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	pam? ( >=sys-libs/pam-0.75 )"
@@ -91,7 +91,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	chmod 0775 /var/run/screen
+	chmod 0777 /var/run/screen
 
 	einfo "Some dangerous key bindings have been removed or changed to more safe values."
 	einfo "For more info, please check /etc/screenrc"
