@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.62 2003/02/25 14:39:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.63 2003/03/01 19:48:55 lostlogic Exp $
+
+*gentoolkit-0.1.19 (01 Mar 2003)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.19.ebuild,
+  files/scripts/dep-clean, files/scripts/dep-clean.1:
+  Reincarnate dep-clean, as this adds a utility for users, I went with a version
+  bump rather than just a -r bump.
 
 *gentoolkit-0.1.18-r3 (25 Feb 2003)
 
