@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/cromwell
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.1 2004/06/30 01:42:15 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.2 2004/10/16 15:26:41 chrb Exp $
+
+  16 Oct 2004; Chris Bainbridge <chrb@gentoo.org> cromwell-2.31.ebuild:
+  mark stable
 
 *cromwell-2.31 (30 Jun 2004)
 
