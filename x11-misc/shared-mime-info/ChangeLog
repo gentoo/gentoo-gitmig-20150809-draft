@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.22 2004/06/03 22:39:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.23 2004/06/20 18:06:59 port001 Exp $
+
+  20 Jun 2004; Ian Leitch <port001@gentoo.org> shared-mime-info-0.13.ebuild:
+  Fixed typo, USE -> IUSE
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org>
   shared-mime-info-0.14.ebuild:
