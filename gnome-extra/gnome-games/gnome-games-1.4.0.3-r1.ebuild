@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3.ebuild,v 1.6 2001/10/19 22:08:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r1.ebuild,v 1.1 2001/11/14 18:47:23 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-utils"
@@ -22,6 +22,8 @@ src_compile() {
 	if [ -z "`use nls`" ] ; then
 		myconf="--disable-nls"
 	fi
+
+	CFLAGS="${CFLAGS} `gnome-config --cflags gdk_pixbuf`"
 
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
