@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.0_beta2.ebuild,v 1.2 2004/03/12 18:59:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.0_beta2.ebuild,v 1.3 2004/03/21 20:19:04 zhen Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc amd64 ppc hppa alpha"
 
-DEPEND="virtual/glibc"
+DEPEND=""
 
 src_install() {
 	exeinto /etc/init.d
