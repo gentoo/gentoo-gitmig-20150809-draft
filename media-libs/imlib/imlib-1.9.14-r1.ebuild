@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.25 2004/07/14 19:46:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.26 2004/07/27 03:07:48 tgall Exp $
 
 inherit gnome.org libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/arch/imaging/imlib.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
