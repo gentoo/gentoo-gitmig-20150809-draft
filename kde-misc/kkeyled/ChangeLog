@@ -1,0 +1,26 @@
+# ChangeLog for app-misc/kkeyled
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.1 2004/10/30 16:59:06 carlo Exp $
+
+*kkeyled-0.8.6 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +kkeyled-0.8.6.ebuild, +kkeyled-0.8.9.ebuild:
+  Moved from app-misc/kkeyled to kde-misc/kkeyled.
+
+  30 Aug 2004; David Holm <dholm@gentoo.org> kkeyled-0.8.9.ebuild:
+  Added to ~ppc.
+
+*kkeyled-0.8.9 (17 Aug 2004)
+
+  17 Aug 2004; Dominik Stadler <centic@gentoo.org> +kkeyled-0.8.9.ebuild:
+  Add new Version 0.8.9, see Bug 59570
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kkeyled-0.8.6.ebuild:
+  inherit kde instead of deprecated kde-base
+
+*kkeyled-0.8.6 (12 Apr 2003)
+
+  12 Apr 2003; Michele Balistreri <brain@gentoo.org> :
+  Initial import.  Ebuild submitted by Juergen Nagel <juergen@kroell.net>
+  
