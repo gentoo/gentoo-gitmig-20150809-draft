@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.2.ebuild,v 1.3 2004/10/03 11:11:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/babytrans-en2ger-0.2.ebuild,v 1.4 2004/10/15 16:04:32 dholm Exp $
 
 MY_P="EngtoGer.dic.gz"
 MY_F="Engtoger.dic"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.ac-grenoble.fr/ge/languages/babylon_dict/${MY_P}"
 # Needs checking
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="app-dicts/babytrans"

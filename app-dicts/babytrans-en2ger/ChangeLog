@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/babytrans-en2ger
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/ChangeLog,v 1.5 2004/10/03 11:11:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2ger/ChangeLog,v 1.6 2004/10/15 16:04:32 dholm Exp $
+
+  15 Oct 2004; David Holm <dholm@gentoo.org> babytrans-en2ger-0.2.ebuild:
+  Added to ~ppc.
 
   03 Oct 2004; Simon Stelling <blubb@gentoo.org>
   babytrans-en2ger-0.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/babytrans-en2pt-0.2.ebuild,v 1.1 2004/09/22 20:21:55 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/babytrans-en2pt-0.2.ebuild,v 1.2 2004/10/15 16:04:41 dholm Exp $
 
 MY_P="EngtoPor.dic.gz"
 MY_F="Engtoptg.dic"
@@ -10,7 +10,7 @@ SRC_URI="${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="app-dicts/babytrans"
