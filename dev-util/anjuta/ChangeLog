@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.42 2004/08/22 20:56:32 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.43 2004/08/23 19:17:14 lisa Exp $
+
+  23 Aug 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.2-r1.ebuild,
+  anjuta-1.2.2.ebuild:
+  fix bug #61363
 
   22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -files/anjuta-1.2.0_xim.patch,
   +files/xim_patch.patch, anjuta-1.2.2-r1.ebuild, anjuta-1.2.2.ebuild:
