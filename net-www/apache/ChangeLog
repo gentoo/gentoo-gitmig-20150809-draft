@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.140 2004/05/02 00:48:26 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.141 2004/05/03 12:41:34 zul Exp $
+
+  04 May 2004; Chuck Short <zul@gentoo.org> files/apache.rc6:
+  Added postgres to init script.
 
   02 May 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r1.ebuild:
   Backed out patches.
