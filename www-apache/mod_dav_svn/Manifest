@@ -1,0 +1,5 @@
+MD5 076120dcb616242eb54dc09f25dd3fba metadata.xml 402
+MD5 28a09e2387d0c29077101630e57dc832 ChangeLog 520
+MD5 8575517f5dcdbd4057ca1422d1458ba0 mod_dav_svn-1.1.1.ebuild 2811
+MD5 53809180b5372b204b32db3962b409ba files/digest-mod_dav_svn-1.1.1 70
+MD5 cce30a16934a26c3f4b894c601cc41a7 files/47_mod_dav_svn.conf 1833

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <herd>apache</herd>
+  <maintainer>
+    <email>trapni@gentoo.org</email>
+    <name>Christian Parpart</name>
+  </maintainer>
+  <longdescription>
+  	The official Apache Subversion module for accessing server-side
+    Subversion repositories.
+  </longdescription>
+</pkgmetadata>
