@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.0.ebuild,v 1.4 2004/06/25 00:28:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.3.ebuild,v 1.1 2004/06/28 02:34:37 squinky86 Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://e.scarywater.net/bt/download/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X"
 
 RDEPEND="X? ( >=dev-python/wxPython-2.2 )
@@ -34,9 +34,6 @@ src_unpack() {
 
 	# fixes wrong icons path
 	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" btdownloadgui.py
-
-	#Fix to get installed
-	sed -i 's:"btdownloadlibrary.py",::' setup.py
 }
 
 src_install() {
@@ -45,9 +42,6 @@ src_install() {
 	dodir etc
 	cp -a /etc/mailcap ${D}/etc/
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
-
-	rm ${D}/usr/bin/*.ico
-	rm ${D}/usr/bin/*.gif
 
 	if use X; then
 		dodir ${PIXMAPLOC}
