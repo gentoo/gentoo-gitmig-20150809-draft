@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.2 2004/05/12 12:27:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.3 2004/05/15 20:07:21 kugelfang Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 IUSE="emacs static readline zlib tetex hdf5 mpi"
-#IUSE="emacs static readline zlib tetex hdf5 mpi" NOTE: Already added to use.local.desc.
+#IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas" NOTE: Already added to use.local.desc.
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r3
@@ -22,13 +22,23 @@ DEPEND="virtual/glibc
 	>=dev-util/gperf-2.7.2
 	zlib? ( sys-libs/zlib )
 	hdf5? ( dev-libs/hdf5 )
-	tetex? ( virtual/tetex )"
+	tetex? ( virtual/tetex )
+	x86? ( ifc? ( dev-lang/ifc ) )"
 #	blas? ( virtual/blas )" NOTE: Blas-* is not fully done.
 
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
 # http://developer.intel.com/software/products/mkl/mkl52/index.htm for
 # more information
+
+pkg_setup() {
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add g77 to your USE flags and reemerge gcc!"
+		die
+	fi
+}
 
 src_compile() {
 	filter-flags -ffast-math
@@ -39,17 +49,6 @@ src_compile() {
 	use readline || myconf="${myconf} --disable-readline"
 	use hdf5 || myconf="${myconf} --without-hdf5"
 	use mpi  || myconf="${myconf} --without-mpi"
-
-	# NOTE: We need gcc to be emerge with USE="f77"
-	/usr/bin/which g77 > /dev/null 2>&1
-	if [ $? != 0 ]; then
-		ewarn "GNU Fortran Compiler g77 is missing. This is no problem"
-		ewarn "as long as you have a Fortran Compiler that will be"
-		ewarn "detected by ./configure. If you have no other compiler"
-		ewarn "installed, ./configure _will_ fail. In this case, add"
-		ewarn "\"f77\" to your USE-flags and remerge gcc."
-		sleep 20
-	fi
 
 	# NOTE: This version actually works with gcc-3.x
 	./configure ${myconf} --prefix=/usr \
