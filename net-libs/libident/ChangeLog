@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libident
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/ChangeLog,v 1.8 2005/01/01 06:41:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libident/ChangeLog,v 1.9 2005/01/01 13:10:26 corsair Exp $
+
+  01 Jan 2005; Markus Rothe <corsair@gentoo.org> libident-0.32.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *libident-0.32 (01 Jan 2005)
 
