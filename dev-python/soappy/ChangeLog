@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.9 2005/02/10 01:01:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.10 2005/02/12 19:35:15 fserb Exp $
+
+  12 Feb 2005; Fernando Serboncini <fserb@gentoo.org> soappy-0.11.6.ebuild:
+  Raised dependency to fpconst-0.7.1. Closes #81752.
 
   09 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> soappy-0.11.6.ebuild:
   Unstable ppc-macos
