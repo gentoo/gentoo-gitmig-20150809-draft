@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.8 2003/03/27 08:42:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.9 2003/03/28 19:15:12 dragon Exp $
 
 *patchutils-0.2.22 (27 Mar 2003)
+
+  28 Mar 2003; Nicholas Wourms <dragon@gentoo.org> patchutils-0.2.22.ebuild:
+  Fixed the bad digest, also added documentation install.
 
   27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> patchutils-0.2.17.ebuild,
   patchutils-0.2.17.ebuild, patchutils-0.2.18.ebuild,
