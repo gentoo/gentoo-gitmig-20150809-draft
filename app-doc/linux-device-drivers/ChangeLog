@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/linux-device-drivers
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.1 2005/02/19 19:11:13 vapier Exp $
+
+*linux-device-drivers-2 (19 Feb 2004)
+
+  19 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
