@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.7-r1.ebuild,v 1.2 2004/04/27 20:49:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.7-r1.ebuild,v 1.3 2004/05/01 12:35:05 nakano Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.bincimap.org/dl/tarballs/1.2/${P}final.tar.bz2"
 HOMEPAGE="http://www.bincimap.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="ssl"
 
 DEPEND="virtual/glibc
