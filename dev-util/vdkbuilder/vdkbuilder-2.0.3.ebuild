@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.3.ebuild,v 1.7 2003/09/06 08:39:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.3.ebuild,v 1.8 2003/12/14 22:41:32 zul Exp $
 #	sdl? ( media-libs/vdksdl )
 # if we figure out xdb... there's a --enable-xdb and vdkxdb
 
@@ -21,6 +21,10 @@ DEPEND="dev-libs/vdk
 src_compile() {
 
 	local myconf
+
+	# Allows vdkbuilder to compile on gcc3 systems.
+	epatch ${FILESDIR}/vdkbuilder-gcc3.patch || die "Patch Failed"
+
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"

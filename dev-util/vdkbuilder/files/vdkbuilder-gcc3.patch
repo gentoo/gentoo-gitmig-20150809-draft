@@ -1,0 +1,65 @@
+diff -Naur vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc
+--- vdkbuilder2-2.0.3.old/vdkbuilder/vdkb_templates.cc	2002-06-04 07:56:35.000000000 +0000
++++ vdkbuilder2-2.0.3/vdkbuilder/vdkb_templates.cc	2003-12-14 18:07:08.557890952 +0000
+@@ -856,34 +856,34 @@
+  char* pw = getcwd(NULL,MAXPATHLEN);
+  if(pw)
+    {  cwd = pw; free(pw);  }
+- fprintf(fp,"\
+-\n####### Implicit rules\
+-\n.SUFFIXES: .%s .%s\
+-\n\
+-\n.%s.o:\
+-\n\t$(CC) -c   $(CFLAGS) $(INCPATH) $(DEFD) -o $@ $<\
+-\n\
+-\n.%s.o:\
+-\n\t$(C)  -c   $(CFLAGS) $(INCPATH) $(DEFD) -o $@ $<\
+-\n\
+-\n####### Build rules\
+-\n\
+-\nall: $(TARGET)\
+-\n\
+-\n$(TARGET): $(OBJECTS)\
+-\n\t$(LINK)  -o $(TARGET) $(OBJECTS) $(OTHERS_OBJECTS) $(LIBS)\
+-\n\
++ fprintf(fp,"
++\n####### Implicit rules
++\n.SUFFIXES: .%s .%s
++\n
++\n.%s.o:
++\n\t$(CC) -c   $(CFLAGS) $(INCPATH) $(DEFD) -o $@ $<
++\n
++\n.%s.o:
++\n\t$(C)  -c   $(CFLAGS) $(INCPATH) $(DEFD) -o $@ $<
++\n
++\n####### Build rules
++\n
++\nall: $(TARGET)
++\n\
++\n$(TARGET): $(OBJECTS)
++\n\t$(LINK)  -o $(TARGET) $(OBJECTS) $(OTHERS_OBJECTS) $(LIBS)
++\n
+ \n####### Running (used by builder)
+-\nrun: $(TARGET)\
+-\n\tcd %s\
+-\n\t%s $(PRG_ARGS)\
+-\n\tcd %s\
+-\n\
+-\nclean:\
+-\n\t-rm -f $(OBJECTS) $(TARGET)\
+-\n\t-rm -f *~ core\
+-\n\
+-\n####### Compile\
++\nrun: $(TARGET)
++\n\tcd %s
++\n\t%s $(PRG_ARGS)
++\n\tcd %s
++\n
++\nclean:
++\n\t-rm -f $(OBJECTS) $(TARGET)
++\n\t-rm -f *~ core
++\n
++\n####### Compile
+ ",
+ cc_ext,c_ext,cc_ext,c_ext,(char*) path, (char*) builder_exe,(char*) cwd);
+ 
