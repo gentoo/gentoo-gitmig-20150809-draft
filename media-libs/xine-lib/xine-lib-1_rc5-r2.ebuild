@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.5 2004/06/29 19:33:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.6 2004/06/29 22:47:00 hansmi Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 -ia64 ~alpha"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -108,6 +108,14 @@ src_compile() {
 
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
+
+	# Fix compilation-errors on PowerPC
+	# Bugs: 45393 and 55460
+	if use ppc; then
+		append-flags -U__ALTIVEC__
+		use altivec && myconf="${myconf} --enable-altivec" \
+		            || myconf="${myconf} --disable-altivec"
+	fi
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	if use hppa && [ "`gcc-version`" != "3.4" ] ; then
