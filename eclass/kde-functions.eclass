@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.49 2002/12/08 15:34:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.50 2003/01/05 12:41:49 hannes Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -245,8 +245,6 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
-		3.1_rc2)	ver=3.1_pre20021104;;
-		3.1_*)	ver=3.1_pre20021024;; # kde 3.1 prereleases
 		3.1*)	ver=3.1;;
 		3*)	ver=3.0.5;;
 		5)	ver=3.1;; # cvs version
@@ -285,6 +283,7 @@ min-kde-ver() {
 		3.1_rc2)		selected_version="3.1_rc2";;
 		3.1_rc3)		selected_version="3.1_rc3";;
 		3.1_rc5)		selected_version="3.1_rc5";;
+		3.1_rc6)		selected_version="3.1_rc6";;
 		3.1.*)			selected_version="3.1";;
 		3*)				selected_version="3.0";;
 		5)					selected_version="5";;
