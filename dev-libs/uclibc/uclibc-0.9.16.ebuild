@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.16.ebuild,v 1.1 2002/11/11 06:43:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.16.ebuild,v 1.2 2002/12/30 16:45:28 vapier Exp $
 
 MY_P="${P/ucl/uCl}"
 DESCRIPTION="C library for developing embedded Linux systems"
@@ -32,5 +32,6 @@ src_compile() {
 }
 
 src_install() {
+	patch -p0 < ${FILESDIR}/Makefile-cp-order-fix.patch || die
 	make PREFIX=${D} install || die "install failed"
 }
