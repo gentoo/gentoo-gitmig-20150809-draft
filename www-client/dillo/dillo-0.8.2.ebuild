@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.2.ebuild,v 1.1 2004/09/08 13:53:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.2.ebuild,v 1.2 2004/09/14 19:11:26 geoman Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 #MISC_IUSE="nls ssl truetype ssl"
 IUSE="${MISC_IUSE} ipv6"
 
