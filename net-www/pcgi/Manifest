@@ -1,4 +1,4 @@
-MD5 c664d2c27dd0e77ec3c6e24a3a0715f8 pcgi-2.0_alpha5.ebuild 1606
-MD5 c905bd409985cdc70bf755dfaacf1a68 ChangeLog 349
-MD5 60e3a7ee1268e32bce296a6076f736c6 metadata.xml 252
 MD5 6cdcecf891e772282d2a8a46abcfb09b files/digest-pcgi-2.0_alpha5 137
+MD5 a9a81b1238fe4f4b931b16267ae2a5e2 ChangeLog 350
+MD5 60e3a7ee1268e32bce296a6076f736c6 metadata.xml 252
+MD5 dc13a37e12840bf2843959a16a5b50b5 pcgi-2.0_alpha5.ebuild 1607
