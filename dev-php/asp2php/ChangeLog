@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/asp2php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.1 2003/08/02 20:50:46 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/ChangeLog,v 1.2 2003/08/02 22:30:35 coredumb Exp $
+
+*asp2php-0.76.17-r1 (02 Aug 2003)
+
+  02 Aug 2002; Tal Peer <coredumb@gentoo.rog> asp2php-0.76.17-r1.ebuild:
+  Fixed src_install's wrong behaviour - it installed the binary twice, once in 
+  /bin and once in /usr/bin.
 
 *asp2php-0.76.17 (02 Aug 2003)
 
