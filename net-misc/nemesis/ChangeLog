@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/nemesis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.5 2003/02/12 08:28:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.6 2003/03/07 23:26:35 mholzer Exp $
+
+*nemesis-1.32 (23 Apr 2002)
+
+  07 Mar 2003; Martin Holzer <mholzer@gentoo.org> nemesis-1.32.ebuild :
+  Corrected Homepage. Fixed Depend to libnet-1.0*. Closes #17017.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*nemesis-1.32 (23 Apr 2002)
 
   08 Jul 2002; phoen][x <phoenix@gentoo.org> nemesis-1.32.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
