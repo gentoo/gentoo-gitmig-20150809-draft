@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.9 2004/03/30 19:54:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3.ebuild,v 1.1 2004/03/30 19:54:24 solar Exp $
+
+inherit flag-o-matic
 
 IUSE="ssl"
 
@@ -13,24 +15,15 @@ HOMEPAGE="http://www.tcpdump.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
 
 DEPEND=">=net-libs/libpcap-0.6.1
 	ssl? ( >=dev-libs/openssl-0.6.9 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-sctp.patch
-}
-
 src_compile() {
-	local myconf
+	replace-flags -O[3-9] -O2
 
-	use ssl || myconf="--without-crypto"
-	econf \
-		--enable-ipv6 \
-		${myconf} || die
+	econf `use_with ssl crypto` `use_enable ipv6` || die
 	make CCOPT="$CFLAGS" || die
 }
 
