@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gtkatlantic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.9 2005/02/13 20:35:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.10 2005/02/21 00:46:55 kugelfang Exp $
+
+  21 Feb 2005; Danny van Dyk <kugelfang@gentoo.org>
+  gtkatlantic-0.3.2.ebuild:
+  Marked ~amd64.
 
 *gtkatlantic-0.3.2 (13 Feb 2005)
 
