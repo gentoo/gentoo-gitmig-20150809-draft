@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.8 2003/04/24 16:33:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.9 2003/04/25 14:42:00 coredumb Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -39,7 +39,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
 IUSE="${IUSE} berkdb cjk crypt curl exif firebird flash freetds gd gdbm imap informix java jpeg ldap libwww mcal mysql nls oci8 odbc pam pdflib pic png postgres qt snmp spell ssl tiff truetype X xml xml2 zlib"
-IUSE="${IUSE} phpbcmath phpbz2 phpcalender phpdbase phpftp phpiconv phpmimemagic phpsafemode phpsockets phpsysv phpwddx"
+IUSE="${IUSE} phpbcmath phpbz2 phpcalender phpdbase phpftp phpiconv phpmimemagic phpsafemode phpsockets phpsysv phpwddx phpmemlimit"
 
 #removed: gmp
 #causes breakage
@@ -218,6 +218,7 @@ php_src_compile() {
 	use phpsockets && myconf="${myconf} --enable-sockets"
 	use phpsysv && myconf="${myconf} --enable-sysvsem --enable-sysvshm"
 	use phpwddx && myconf="${myconf} --enable-wddx"
+	use phpmemlimit && myconf="${myconf} --enable-memory-limit"
 
 	myconf="${myconf} \
 		--enable-inline-optimization \
