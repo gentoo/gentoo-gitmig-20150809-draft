@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/teco
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.6 2003/06/29 18:24:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.7 2003/09/08 13:08:17 taviso Exp $
+
+*teco-1.00-r2 (08 Sep 2003)
+
+  08 Sep 2003; Tavis Ormandy <taviso@gentoo.org> teco-1.00-r1.ebuild,
+  teco-1.00-r2.ebuild:
+  provide virtual/editor
+  gzipping optional documentation to save bandwidth.
+  added documentation archive to HOMEPAGE.
+  minor syntax changes.
+  make repoman whitespace checker happy.
 
 *teco-1.00-r1 (18 Jun 2003)
 
