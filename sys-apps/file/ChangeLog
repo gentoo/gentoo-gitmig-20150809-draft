@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.7 2003/02/08 22:27:20 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.8 2003/02/09 01:18:27 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> file-3.39.ebuild :
+  Added hppa to keywords.
 
 *file-3.37 (20 Dec 2002)
 
