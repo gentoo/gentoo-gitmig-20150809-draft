@@ -206,3 +206,4 @@ move sys-apps/cpufreqd sys-power/cpufreqd
 move sys-apps/athcool sys-power/athcool
 move sys-apps/gtk-cpuspeedy sys-power/gtk-cpuspeedy
 move sys-apps/hibernate-script sys-power/hibernate-script
+move sys-apps/powermgmt-base sys-power/powermgmt-base
