@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.0.ebuild,v 1.3 2003/10/17 14:10:47 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.0.ebuild,v 1.4 2003/10/18 17:56:36 scandium Exp $
 
 inherit eutils
 
@@ -22,8 +22,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/pnetlib-0.6.0.resources.patch
-	autoconf
-	automake
 }
 
 src_compile() {
