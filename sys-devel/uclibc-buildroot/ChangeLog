@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/uclibc-buildroot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.7 2004/02/20 02:24:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/ChangeLog,v 1.8 2004/02/28 01:17:24 dragonheart Exp $
+
+  28 Feb 2004; Daniel Black <dragonheart@gentoo.org>
+  uclibc-buildroot-20040218.ebuild:
+  Fixed URL for gcc - thanks to Daniel Schroeter <dsc@theone.ch> bug #42923
 
 *uclibc-buildroot-20040218 (20 Feb 2004)
 

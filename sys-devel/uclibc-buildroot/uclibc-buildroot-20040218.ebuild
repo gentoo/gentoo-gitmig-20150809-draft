@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040218.ebuild,v 1.1 2004/02/20 02:24:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040218.ebuild,v 1.2 2004/02/28 01:17:24 dragonheart Exp $
 
 inherit eutils crosscompile
 
@@ -13,9 +13,9 @@ BUSYBOXVER=1.00-pre7
 TINYLOGINVER=1.4
 KERNELHEADERSVER=2.4.25
 
-DESCRIPTION="Embedded root file system"
+DESCRIPTION="Embedded root file system and compiler"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="http://gcc.get-software.com/releases/gcc-${GCCVER}.tar.bz2
+SRC_URI="mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
 	http://dev.gentoo.org/~dragonheart/buildroot-${PV}.tar.bz2
 	mirror://kernel/linux/devel/binutils/binutils-${BINUTILSVER}.tar.bz2
 	mirror://kernel/linux/libs/uclibc/toolchain/kernel-headers-${KERNELHEADERSVER}.tar.bz2
@@ -28,6 +28,7 @@ SRC_URI="http://gcc.get-software.com/releases/gcc-${GCCVER}.tar.bz2
 
 # gcc-3/3/3 hasn't hit all mirrors yet.
 #mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
+#SRC_URI="http://gcc.get-software.com/releases/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
 
 # Not using pregen  locale for the time being.
 #	nls? ( mirror://kernel/linux/libs/uclibc/uClibc-locale-030818.tgz )
