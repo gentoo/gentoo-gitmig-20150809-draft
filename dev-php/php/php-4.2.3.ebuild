@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.7 2002/10/18 06:25:13 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.8 2002/10/27 18:59:22 rphillips Exp $
 
 IUSE="freetype postgres tiff libwww nls jpeg readline ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -26,7 +26,7 @@ DEPEND="
 	png? ( >=media-libs/libpng-1.2.1 )
 	gd? ( >=media-libs/libgd-1.8.3 )
 	X? ( virtual/x11 )
-	qt? ( =x11-libs/qt-2.3* )
+	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
 	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.95-r1 )
@@ -53,8 +53,7 @@ DEPEND="
 #Removed
 #java? ( virtual/jdk )
 
-RDEPEND="${DEPEND}
-	qt? ( >=x11-libs/qt-2.3.0 )
+RDEPEND="qt? ( x11-libs/qt )
 	xml? ( >=app-text/sablotron-0.95-r1 >=net-libs/libwww-5.3.2 )"
 
 src_unpack() {
@@ -113,10 +112,11 @@ src_compile() {
 		myconf="${myconf} --enable-pdflib=/usr"
 	else
 		use gd && myconf="${myconf} --with-gd"
-		use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
-		use tiff && myconf="${myconf} --with-tiff-dir=/usr"
-		use png  && myconf="${myconf} --with-png-dir=/usr"
 	fi
+
+	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
+	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
+	use png  && myconf="${myconf} --with-png-dir=/usr"
 
 	# optional support for oracle oci8 
 	if [ "`use oci8`" ] ; then 

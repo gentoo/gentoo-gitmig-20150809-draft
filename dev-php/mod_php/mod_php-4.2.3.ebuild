@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3.ebuild,v 1.5 2002/10/19 22:46:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.3.ebuild,v 1.6 2002/10/27 18:56:50 rphillips Exp $
 
 IUSE="freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -26,7 +26,7 @@ DEPEND="
 	png? ( >=media-libs/libpng-1.2.1 )
 	gd? ( >=media-libs/libgd-1.8.3 )
 	X? ( virtual/x11 )
-	qt? ( =x11-libs/qt-2.3* )
+	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
 	xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.95-r1 )
@@ -53,8 +53,7 @@ DEPEND="
 #	readline? ( >=sys-libs/ncurses-5.1
 #		>=sys-libs/readline-4.1 )"
 
-RDEPEND="${DEPEND}
-	qt? ( >=x11-libs/qt-2.3.0 )
+RDEPEND="qt? ( x11-libs/qt )
 	xml? ( >=app-text/sablotron-0.95-r1 )"
 
 src_unpack() {
