@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/py-xmlrpc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.1 2002/04/13 21:18:16 karltk Exp $
+
+*py-xmlrpc-0.8.7 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> py-xmlrpc-0.8.7.ebuild files/py-xmlrpc-0.8.7 :
+
+  An extremely fast implementation of the xmlrpc spec for Python (written in 
+  C). It supports both blocking and non-blocking clients and servers on 
+  Windows and POSIX platforms. Version 0.8.1 is 100% compliant with the 
+  www.xmlrpc.com validator.
