@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.14 2003/03/12 19:07:12 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.15 2003/05/20 20:08:27 taviso Exp $
+
+  20 May 2003; Tavis Ormandy <taviso@gentoo.org> unzip-5.50-r1.ebuild:
+  Removing gcc hardcode, and CFLAGS hardcode on non-x86
 
 *unzip-5.50-r1 (21 Oct 2002)
 

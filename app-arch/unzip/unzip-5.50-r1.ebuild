@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r1.ebuild,v 1.8 2003/03/12 19:07:12 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r1.ebuild,v 1.9 2003/05/20 20:08:27 taviso Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Unzipper for pkzip-compressed files"
@@ -15,7 +15,9 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	cp unix/Makefile unix/Makefile.orig
-	sed -e "s:-O3:${CFLAGS}:" unix/Makefile.orig > unix/Makefile
+	sed -e "s:-O3:${CFLAGS}:" \
+		-e "s:CC=gcc LD=gcc:CC=${CC:-gcc} LD=${CC:-gcc}:" \
+		-e "s:-O :${CFLAGS} :" unix/Makefile.orig > unix/Makefile
 
 	use x86 \
 		&& TARGET=linux \
