@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.7 2003/06/22 16:07:19 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.8 2003/08/30 10:45:10 mksoft Exp $
 
 *firebird-1.0.3 (15 Jun 2003)
+  30 Aug 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
+  Added metadata.xml
+  Marked ebuild as stable
+  
   22 Jun 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
   added a check for isc4.gdb for prev 1.0-r1 install. If exists and not
   a symlink copy to /etc/firebird/isc4.gdb
