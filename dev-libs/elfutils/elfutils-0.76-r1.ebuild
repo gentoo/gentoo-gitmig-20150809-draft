@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.76-r1.ebuild,v 1.1 2003/04/24 22:06:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.76-r1.ebuild,v 1.2 2003/06/24 14:38:11 cretin Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.redhat.com/"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="x86 sparc ppc alpha amd64"
 
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.2.1-r6

@@ -1,13 +1,20 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.9 2003/05/14 10:41:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.10 2003/06/24 14:38:10 cretin Exp $
 
 *elfutils-0.76-r2 (14 May 2003)
+
+  24 June 2003; Stefan Jones <cretin@gentoo.org> :
+  Remove from portage as bug fix is not needed anymore, 
+  it was a gcc / binutils bug.
 
   14 May 2003; Stefan Jones <cretin@gentoo.org> elfutils-0.76-hidden.diff :
   Added patch to fix bug #20948
 
 *elfutils-0.76-r1 (24 Apr 2003)
+
+  24 June 2003; Stefan Jones <cretin@gentoo.org> :
+  Added to stable amd64 tree.
 
   24 Apr 2003; Martin Holzer <mholzer@gentoo.org> elfutils-0.76-r1.ebuild:
   Removed /usr/usr/share. closes #19758.
