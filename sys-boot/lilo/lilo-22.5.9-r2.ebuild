@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r1.ebuild,v 1.4 2004/07/03 18:58:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r2.ebuild,v 1.1 2004/07/11 15:41:22 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
-DOLILO_V="0.1"
+DOLILO_V="0.2"
 IUSE="devmap static"
 
 DESCRIPTION="Standard Linux boot loader"
@@ -61,6 +61,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-create-install-dirs.patch
 	# Correctly document commandline options -v and -V, bug #43554
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
+	# Get the manpage path right
 	sed -i -e s,usr/man,usr/share/man,g ${S}/Makefile
 }
 
@@ -190,9 +191,8 @@ pkg_postinst() {
 	einfo "Please note that all the loader files (/boot/*.b) are now linked"
 	einfo "into LILO, and thus no longer installed."
 	einfo "Issue 'dolilo' instead of 'lilo' to have a friendly wrapper that"
-	einfo "handles mounting and unmounting /boot for you, and automatically"
-	einfo "copies the newest available bzImage in place."
-	einfo "Edit /etc/conf.d/dolilo to harness it's full potential."
+	einfo "handles mounting and unmounting /boot for you. It can do more then"
+	einfo "that when asked, edit /etc/conf.d/dolilo to harness it's full potential."
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 	sleep 3
 	echo

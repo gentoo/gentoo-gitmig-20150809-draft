@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.17 2004/07/03 18:58:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.18 2004/07/11 15:41:22 chainsaw Exp $
+
+*lilo-22.5.9-r2 (11 Jul 2004)
+
+  11 Jul 2004; Tony Vroon <chainsaw@gentoo.org> -lilo-22.5.9-r1.ebuild,
+  +lilo-22.5.9-r2.ebuild:
+  Dolilo no longer moves images by default as this could break working configs
+  with a different naming scheme. Sanity checks are only run if MOVEIMAGES is
+  enabled, as they aren't necessary otherwise.
 
 *lilo-22.5.9-r1 (03 Jul 2004)
 
