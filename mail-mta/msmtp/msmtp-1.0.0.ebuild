@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.0.0.ebuild,v 1.2 2004/06/03 16:11:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.0.0.ebuild,v 1.3 2004/06/22 17:28:05 kugelfang Exp $
 
 # msmtp *must* be built with TLS/SSL support, so the "ssl" USE flag cannot be
 # used.
@@ -20,7 +20,7 @@ DEPEND="!gnutls? ( dev-libs/openssl )
 # sasl? ( net-libs/gsasl )
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 src_compile () {
 	local myconf
