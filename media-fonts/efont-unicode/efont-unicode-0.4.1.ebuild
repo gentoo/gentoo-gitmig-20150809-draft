@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.1.ebuild,v 1.1 2003/09/02 20:09:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.1.ebuild,v 1.2 2003/09/25 07:26:05 usata Exp $
 
 IUSE="X"
 
@@ -37,12 +37,16 @@ src_install () {
 
 	insinto ${FONTDIR}
 	doins *.bdf || die
-	use X && doins *.pcf.gz || die
+	if [ -n "`use X`" ] ; then
+		doins *.pcf.gz || die
+	fi
 
 	dodoc README* COPYRIGHT ChangeLog INSTALL
 	dohtml List.html
 
-	use X && /usr/X11R6/bin/mkfontdir ${D}${FONTDIR}
+	if [ -n "`use X`" ] ; then
+		/usr/X11R6/bin/mkfontdir ${D}${FONTDIR}
+	fi
 }
 
 pkg_postinst() {
