@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.5 2004/08/14 14:57:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.6 2004/08/27 10:55:25 pyrania Exp $
+
+  27 Aug 2004; <pyrania@gentoo.org> +metadata.xml, xrmap-2.29.ebuild:
+  Fixing bug #56225. Thanks to James Leddy and Alexandre Veyrenc.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> xrmap-2.10.ebuild,
   xrmap-2.29.ebuild:
