@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.26 2004/11/26 00:28:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.27 2004/12/19 03:09:01 stkn Exp $
+
+  18 Dec 2004; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.0.ebuild, asterisk-1.0.1.ebuild, asterisk-1.0.2.ebuild:
+  zapata isn't used by asterisk anymore, dependency removed
 
   26 Nov 2004; <stkn@gentoo.org> asterisk-1.0.1.ebuild, asterisk-1.0.2.ebuild:
   uclibc dependency had wrong category (closes #72478)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.0.ebuild,v 1.1 2004/09/24 00:01:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.0.ebuild,v 1.2 2004/12/19 03:09:01 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql nopri nozaptel"
 
@@ -23,8 +23,7 @@ DEPEND="virtual/libc
 	mysql? ( dev-db/mysql )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	!nopri? ( >=net-libs/libpri-1.0.0 )
-	!nozaptel? ( >=net-misc/zaptel-1.0.0
-		     >=net-libs/zapata-1.0.0 )"
+	!nozaptel? ( >=net-misc/zaptel-1.0.0 )"
 
 pkg_setup() {
 	NO_WEBSERVER=0
