@@ -153,7 +153,7 @@ net-misc/rsync
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*sys-libs/db
+*<sys-libs/db-3.2.10
 *sys-libs/gdbm  
 *sys-libs/ncurses     
 *sys-libs/pam     
