@@ -41,3 +41,7 @@ report as not everything is in the latest portage release.
 
 [1] http://bugs.gentoo.org/show_bug.cgi?id=75420
 
+I have added a check to make sure someone doesn't use this profile without
+knowing these risks.  Please set a variable 'IWANTTOTRASHMYSYSTEM' in your
+/etc/make.conf if you really want to test this profile.
+

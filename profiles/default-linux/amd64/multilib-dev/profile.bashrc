@@ -1,7 +1,6 @@
-# lib64 sandbox stuff copied from amd64's profile.bashrc:
 # fix for bug 60147, "configure causes sandbox violations when lib64
 # is a directory". currently only works with cvs portage.
-
+#SANDBOX_WRITE="${SANDBOX_WRITE}:/usr/lib64/conftest:/usr/lib64/cf"
 addwrite /usr/lib64/conftest
 addwrite /usr/lib64/cf
 
@@ -16,8 +15,19 @@ addpredict /usr/lib64/python2.4/
 addpredict /usr/lib64/python2.5/
 addpredict /usr/lib64/python3.0/
 
+# sandbox is disabled for /dev/null by default, so this bug isnt caught.
+# hopefully this will help us figure out where this problem occurs...
+if [ ! -e /dev/null ] ; then
+	eerror "/dev/null doesnt exist! this is bad! tail -n 20 /var/log/emerge.log and attach the output to http://bugs.gentoo.org/show_bug.cgi?id=65876"
+	exit 1
+elif [ -f /dev/null ] ; then
+	eerror "/dev/null is a normal file! this is bad! tail -n 20 /var/log/emerge.log and attach the output to http://bugs.gentoo.org/show_bug.cgi?id=65876"
+	exit 1
+fi
+
 if [ -n "${IWANTTOTRASHMYSYSTEM}" ]; then
 	echo "You are using a VERY development profile.  You probably"
 	echo "shouldn't be doing this.  Please see the README in"
-	echo "/usr/portage/profiles/default-linux/sparc/sparc64-multilib/dev"
+	echo "/usr/portage/profiles/default-linux/amd64/multilib-dev"
 fi
+

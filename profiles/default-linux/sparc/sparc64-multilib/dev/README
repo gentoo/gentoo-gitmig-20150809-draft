@@ -18,3 +18,7 @@ If you use this profile or you have any questions, please contact me on IRC.
 
 --Jeremy
 eradicator@gentoo.org
+
+I have added a check to make sure someone doesn't use this profile without
+knowing these risks.  Please set a variable 'IWANTTOTRASHMYSYSTEM' in your
+/etc/make.conf if you really want to test this profile.
