@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.8 2004/08/23 05:28:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.9 2004/08/30 17:35:16 usata Exp $
 
 ONIGURUMA="onigd2_3_1"
 MY_P=${P/_pre/-preview}
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 LICENSE="Ruby"
 SLOT="1.8"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa ~amd64 -ia64 ~s390 macos"
-IUSE="socks5 tcltk cjk"
+IUSE="socks5 tcltk cjk doc"
 
 RDEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
@@ -69,6 +69,7 @@ src_compile() {
 
 	econf --program-suffix=${SLOT/./} --enable-shared \
 		`use_enable socks5 socks` \
+		`use_enable doc install-doc` \
 		|| die "econf failed"
 	emake || die "emake failed"
 }

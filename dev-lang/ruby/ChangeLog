@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.86 2004/08/25 21:00:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.87 2004/08/30 17:35:16 usata Exp $
+
+  31 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-1.6.8-r10.ebuild,
+  ruby-1.6.8-r11.ebuild, ruby-1.8.2_pre2.ebuild:
+  Added doc IUSE flag to 1.8.2_pre2. Thanks to Charles Comstock
+  <dgtized@gmail.com>, closing bug #62003. Disabled maketest for 
+  1.6.8-r11 if cjk is set. Removed old ebuild.
 
   25 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> ruby-1.6.8-r11.ebuild:
   Marked stable on amd64.
@@ -13,7 +19,7 @@
   ruby-1.8.2_pre2.ebuild:
   Stable on sparc wrt security bug #60525.
 
-  20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
+  20 Aug 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
   ruby-1.8.2_pre2.ebuild:
   Stable on alpha, bug 60525.
 
