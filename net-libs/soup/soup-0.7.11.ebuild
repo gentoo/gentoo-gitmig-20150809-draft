@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.2 2003/04/28 23:45:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.3 2003/05/02 10:00:30 liquidx Exp $
 
 IUSE="ssl doc"
 
@@ -33,13 +33,15 @@ src_compile() {
 		&& myconf="${myconf} --enable-gtk-doc" \
 		|| myconf="${myconf} --disable-gtk-doc"
 
-	# there is a --enable-apache here.....
-
+	# disable apache support. too much trouble than
+	# it is worth. it only works with apache1.
+	export ac_cv_path_APXS=no
 	econf \
 		${myconf} \
 		--with-libxml=1 || die
 	# Evolution 1.1 and 1.2 need it with libxml1
-
+	unset ac_cv_path_APXS
+	
 	# dont always work with -j4 -- <azarah@gentoo.org> 9 Nov 2002
 	make || die
 }
