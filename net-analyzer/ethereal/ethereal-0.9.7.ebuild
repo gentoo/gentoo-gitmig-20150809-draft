@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.7.ebuild,v 1.1 2002/10/11 21:20:52 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.7.ebuild,v 1.2 2002/11/06 06:41:17 blocke Exp $
 
-IUSE="X ipv6 snmp ssl"
+IUSE="gtk ipv6 snmp ssl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.ethereal.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	=dev-libs/glib-1.2*
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.5 )
-	X? ( virtual/x11 =x11-libs/gtk+-1.2* )
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	ssl? ( >=dev-libs/openssl-0.9.6e )"
 
 DEPEND="${RDEPEND}
 	sys-devel/perl
@@ -39,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use X || myconf="${myconf} --disable-ethereal"
+	use gtk || myconf="${myconf} --disable-ethereal"
 	use ssl || myconf="${myconf} --without-ssl"
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
