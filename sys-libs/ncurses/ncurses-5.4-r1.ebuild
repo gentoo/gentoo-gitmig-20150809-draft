@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.22 2004/08/11 02:47:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.23 2004/08/12 00:48:43 mr_bones_ Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-xterm.patch
 	# Bug #42336.
 	epatch ${FILESDIR}/${P}-share-sed.patch
+	gnuconfig_update
 }
 
 src_compile() {
@@ -39,9 +40,6 @@ src_compile() {
 	# standard libs also require this.
 	64-bit && append-flags -fPIC
 	filter-ldflags -pie
-
-	# Detect mips systems
-	use mips && gnuconfig_update
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.10 2004/07/02 08:44:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.11 2004/08/12 00:51:52 mr_bones_ Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -56,14 +56,14 @@ src_unpack() {
 	sed -i "s,\(-D_GNU_SOURCE\),\1 ${CFLAGS}," configure
 
 	epatch ${FILESDIR}/${P}-jarlocation.patch
+	cd ${S}
+	gnuconfig_update
 }
 
 src_compile() {
 	local conf=
 	local conf_shared=
 	local conf_static=
-
-	use ppc64 && gnuconfig_update
 
 	conf="${conf}
 		--host=${CHOST} \
