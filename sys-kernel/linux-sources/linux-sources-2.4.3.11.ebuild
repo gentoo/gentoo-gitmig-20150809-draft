@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.3.11.ebuild,v 1.1 2001/04/22 18:21:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.3.11.ebuild,v 1.2 2001/04/27 02:17:53 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -26,11 +26,15 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
          http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
          http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
-         ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
+
          ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz
 	 ftp://ftp.reiserfs.com/pub/misc-patches/linux-${OKV}-knfsd-${KNV}.patch.gz"
 #	 http://download.sourceforge.net/xmlprocfs/linux-2.4-xmlprocfs-${XMLV}.patch.gz
 #	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-${OKV}-reiserfs-${RV}.patch.gz
+if [ "`use alsa`" ]
+then
+    SRC_URI="$SRC_URI ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2"
+fi
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -77,11 +81,14 @@ src_unpack() {
     cd ${S}
     # the -l option allows this patch to apply cleanly (ignore whitespace changes)
     try patch -l -p1 < ${S}/extras/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
-    
-    #unpack alsa drivers
-    echo "Unpacking ALSA drivers..."
-    cd ${S}/extras
-    unpack alsa-driver-${AV}.tar.bz2
+  
+    if [ "`use alsa`" ]
+    then  
+        #unpack alsa drivers
+        echo "Unpacking ALSA drivers..."
+        cd ${S}/extras
+        unpack alsa-driver-${AV}.tar.bz2
+    fi
     
     #unpack and apply the lm_sensors patch
     echo "Unpacking and applying lm_sensors patch..."
@@ -108,8 +115,8 @@ src_unpack() {
     #sometimes we have icky kernel symbols; this seems to get rid of them
     try make mrproper
     #this is the configuration for the default kernel
-    try cp ${FILESDIR}/${KV}/config .config
-    yes "" | make oldconfig
+    try cp ${FILESDIR}/${KV}/config.bootcomp .config
+    try yes \"\" | make oldconfig
     try make include/linux/version.h
     #fix silly permissions in tarball
     cd ${WORKDIR}
@@ -133,21 +140,22 @@ src_compile() {
     cd ${S}/extras/lm_sensors-${SENV}
     try make
     
-    cd ${S}
-    try make update-modverfile
-    cd ${S}/extras/alsa-driver-${AV}
-    try CFLAGS=\""${CFLAGS} -I${S}"\" ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-    try make
 
-    if [ "$PN" != "linux" ]
+    cd ${S}
+
+    if [ "$PN" == "linux" ]
     then
-	return
-    fi
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
+      try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 
-    cd ${S}
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
-    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
+      if [ "`use alsa`" ]
+      then
+        cd ${S}/extras/alsa-driver-${AV}
+        try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+        try make
+      fi
+    fi
 }
 
 src_install() {
@@ -162,19 +170,9 @@ src_install() {
 	#no need for a static library in /lib
 	cp ${D}/lib/liblvm*.a ${D}/usr/lib
 	
-	#clean up LVM
-	try make clean
 	dodir /usr/src
 
-	#install ALSA modules
-	cd ${S}/extras/alsa-driver-${AV}
-	dodir /lib/modules/${KV}/misc
-	cp modules/*.o ${D}/lib/modules/${KV}/misc
-	
-	#install ALSA progs
-	cd ${S}/extras/alsa-driver-${AV}
-	into /usr
-	dosbin snddevices
+
 
 	#install sensors tools
 	cd ${S}/extras/lm_sensors-${SENV}
@@ -182,6 +180,20 @@ src_install() {
 	
 	if [ "$PN" = "linux" ]
 	then
+ 	    if [ "`use alsa`" ]
+            then
+ 
+  	        #install ALSA modules
+ 	        cd ${S}/extras/alsa-driver-${AV}
+	        dodir /lib/modules/${KV}/misc
+	        cp modules/*.o ${D}/lib/modules/${KV}/misc
+       
+	
+  	        #install ALSA progs
+	        cd ${S}/extras/alsa-driver-${AV}
+	        into /usr
+	        dosbin snddevices
+            fi
 
 		dodir /usr/src/linux-${KV}
 		cd ${D}/usr/src
@@ -195,12 +207,15 @@ src_install() {
 #		dosym /usr/src/linux/include/linux /usr/include/linux
 #		dosym /usr/src/linux/include/asm-i386 /usr/include/asm
 		
-		# get alsa includes
-		cd ${S}/extras/alsa-driver-${AV}
-		insinto /usr/src/linux-${KV}/include/linux
-		cd include
-		doins asound.h asoundid.h asequencer.h ainstr_*.h
-		
+		if [ "`use alsa`" ]
+		then
+		    # get alsa includes
+		    cd ${S}/extras/alsa-driver-${AV}
+		    insinto /usr/src/linux-${KV}/include/linux
+		    cd include
+		    doins asound.h asoundid.h asequencer.h ainstr_*.h
+		fi 
+
 		#grab compiled kernel
 		dodir /boot/boot
 		insinto /boot/boot
@@ -210,8 +225,11 @@ src_install() {
 		#grab modules
 		# Do we have a bug in modutils ?
 		# Meanwhile we use this quick fix (achim)
+
+		install -d ${D}/lib/modules/`uname -r`
 		try make INSTALL_MOD_PATH=${D} modules_install
-		
+#		rm -r ${D}/lib/modules/`uname -r`		
+
 		#fix symlink
 		cd ${D}/lib/modules/${KV}
 		rm build
@@ -229,30 +247,27 @@ src_install() {
                 cd ${S}/extras/lm_sensors-${SENV}
                 make clean
 
-                cd ${S}/extras/alsa-driver-${AV}
-                make distclean
-
                 cp -ax ${S} ${D}/usr/src/linux-${KV}
 
-                # get alsa includes
-                insinto /usr/src/linux-${KV}/include/linux
-                cd ${D}/usr/src/linux-${KV}/extras/alsa-driver-${AV}/include
-                doins asound.h asoundid.h asequencer.h ainstr_*.h
+		if [ "`use alsa`" ]
+		then
+                    # get alsa includes
+                    insinto /usr/src/linux-${KV}/include/linux
+                    cd ${D}/usr/src/linux-${KV}/extras/alsa-driver-${AV}/include
+                    doins asound.h asoundid.h asequencer.h ainstr_*.h
+		fi
 	fi
 	
-	#remove workdir since our install was dirty and modified ${S}
-	#this will cause an unpack to be done next time
-	rm -rf ${WORKDIR}
 }
 
 pkg_postinst() {
     if [  "${ROOT}" = "/" ]
     then
-	if [ "${PN}" = "linux" ] ; then
+	if [ "`use alsa`"  ] ; then
 	    echo "Creating sounddevices..."
 	    /usr/sbin/snddevices
 		#needs to get fixed for devfs
-		fi
+	fi
     fi
     rm -f ${ROOT}/usr/src/linux
     ln -sf linux-${KV} ${ROOT}/usr/src/linux
