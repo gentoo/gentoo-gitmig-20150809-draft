@@ -1,8 +1,18 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.9 2002/07/07 22:54:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.10 2002/07/12 17:04:52 seemant Exp $
 
-*acroread-5.05-r4 (07 Jul 2002)
+*acroread-5.05-r6 (12 Jul 2002)
+
+  12 Jul 2002; Seemant Kulleen <seemant@gentoo.org> acroread-5.05-r6.ebuild
+  files/acroread files/digest-acroread-5.05-r6 :
+
+  Used perl wrapper script from securityfocus around this.  It is safe from
+  the security bug now, at least somewhat.  Suggested by:
+  danielsabo@myrealbox.com (Daniel Sabo) in bug $4688.  This package will
+  also be masked.
+
+*acroread-5.05-r5 (07 Jul 2002)
 
   07 Jul 2002; Seemant Kulleen <seemant@gentoo.org> acroread-5.05-r5.ebuild
   files/digest-acroread-5.05-r5 :
