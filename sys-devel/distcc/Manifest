@@ -1,4 +1,4 @@
-MD5 9ff430b9b6605c183c0cb9021554b58d ChangeLog 8503
+MD5 aaf4b5dd632bcd5c98e5bc087a28eb0d ChangeLog 8866
 MD5 fb814141f7428e98792c3f0a6f9e4d46 distcc-1.2.3-r3.ebuild 2883
 MD5 d4b89537053906add5a198877a19bfea distcc-2.0.1-r1.ebuild 2893
 MD5 5f793536bdddf6ee72ba8777fb313294 distcc-2.0.1.ebuild 2896
@@ -8,7 +8,7 @@ MD5 38234c5ce79b03c72cc2d69d6d62cefb distcc-2.4.ebuild 2703
 MD5 8a06baed9414847cb4f0ff60ca4d871c distcc-2.5-r1.ebuild 3177
 MD5 ef4127d6f857ade2d39543f68db70c9b distcc-2.5.ebuild 2703
 MD5 1b52e64bcd021efbd8ab5dbcd9713730 distcc-2.7.ebuild 3452
-MD5 0b38b93fa0074380cc04a903edf87ed0 distcc-2.7.1.ebuild 3635
+MD5 336a273c0f0a8e36ee2d919d468fc95e distcc-2.7.1.ebuild 3873
 MD5 9bad5d7dc8c33d22ff42efcc299f1067 files/digest-distcc-1.2.3-r3 65
 MD5 9a3a39b4f229559e6a855d777c6fe807 files/digest-distcc-2.0.1 65
 MD5 9a3a39b4f229559e6a855d777c6fe807 files/digest-distcc-2.0.1-r1 65
@@ -21,7 +21,11 @@ MD5 5826ae3f83bd02bda94fa0e9343ef3fe files/digest-distcc-2.7 63
 MD5 2c4c5f6d6980e4b17d7daea1399292d8 files/digest-distcc-2.7.1 65
 MD5 34d20e7bf223ac2f2ec61c5a7a9b2e3c files/1.2/conf 314
 MD5 3783a1abcbd33bc1d24e14012edeb696 files/1.2/init 484
+MD5 785e2966bd49522fd593e9f92e926c46 files/2.3/distcc-config 7389
 MD5 38395190f3cea244abdbe4ef9619e59f files/1.2.3/distcc-config 6859
 MD5 d4fd07d7d3d3e3952baef8c654d2715f files/1.2.3/info.patch 545
 MD5 6bc82bf32667e5398497b2dae88f1033 files/1.2.3/wrapper.patch 5242
 MD5 d64446b61d189643742251cdfd0bee2e files/2.7.1/001_fix_tmpdir.patch.gz 249
+MD5 e20ae373aa396d16c03ca33d11247183 files/2.7.1/distcc-config 7391
+MD5 34d20e7bf223ac2f2ec61c5a7a9b2e3c files/2.7.1/conf 314
+MD5 3783a1abcbd33bc1d24e14012edeb696 files/2.7.1/init 484
