@@ -1,6 +1,18 @@
 # ChangeLog for dev-lisp/cl-asdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.5 2003/10/08 02:19:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.6 2003/10/17 00:08:04 mkennedy Exp $
+
+*cl-asdf-1.78 (16 Oct 2003)
+
+  16 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-asdf-1.78.ebuild,
+  metadata.xml:
+  new upstream
+
+*cl-asdf-1.78 (16 Oct 2003)
+
+  16 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-asdf-1.78.ebuild,
+  metadata.xml:
+  new upstream
 
   07 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-asdf-1.77.2.ebuild:
   minor clean up and unmask for x86
