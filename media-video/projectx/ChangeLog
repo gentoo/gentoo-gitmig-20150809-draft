@@ -1,0 +1,11 @@
+# ChangeLog for media-video/projectx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.1 2004/07/31 19:20:44 axxo Exp $
+
+*projectx-0.81.7 (31 Jul 2004)
+
+  31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/build.xml, +projectx-0.81.7.ebuild:
+  initial import, ebuild submitted by Stefan Briesenick <sbriesen@gmx.de>
+  bug 55621
+
