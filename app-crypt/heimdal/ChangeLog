@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.44 2004/06/24 21:32:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.45 2004/07/16 18:40:15 rphillips Exp $
+
+  16 Jul 2004; <rphillips@gentoo.org> heimdal-0.6.2.ebuild,
+  files/heimdal-kadmind, files/heimdal-kdc, files/heimdal-kpasswdd:
+  added Torsten Kurbad's patches from bug 54421
 
   14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.2.ebuild:
   Fixed typo, closing #53632.
