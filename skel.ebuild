@@ -15,12 +15,40 @@
 DESCRIPTION="This is a sample skeleton ebuild file"
 
 # Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="http://"
+HOMEPAGE="http://foo.bar.com"
+
+# Point to any required sources; these will be automatically downloaded by
+# Portage.
+SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 
 # License of the package. This must match the name of file(s) in
 # /usr/portage/licenses/. For complex license combination see the developer
 # docs on gentoo.org for details.
 LICENSE=""
+
+# The SLOT variable is used to tell Portage if it's OK to keep multiple
+# versions of the same package installed at the same time. For example,
+# if we have a libfoo-1.2.2 and libfoo-1.3.2 (which is not compatible
+# with 1.2.2), it would be optimal to instruct Portage to not remove
+# libfoo-1.2.2 if we decide to upgrade to libfoo-1.3.2. To do this,
+# we specify SLOT="1.2" in libfoo-1.2.2 and SLOT="1.3" in libfoo-1.3.2.
+# emerge clean understands SLOTs, and will keep the most recent version
+# of each SLOT and remove everything else.
+# Note that normal applications should use SLOT="0" if possible, since
+# there should only be exactly one version installed at a time.
+# DO NOT USE SLOT=""! This tells Portage to disable SLOTs for this package.
+SLOT="1"
+
+# Using KEYWORDS, we can record masking information *inside* an ebuild
+# instead of relying on an external package.mask file. Right now, you
+# should set the KEYWORDS variable for every ebuild so that it contains
+# the names of all the architectures with which the ebuild works. We have
+# 4 official architecture names right now: "x86", "ppc", "sparc" and
+# "sparc64". So, if you've confirmed that your ebuild works on x86 and ppc,
+# you'd specify: KEYWORDS="x86"
+# For packages that are platform-independant (like Java, PHP or Perl
+# applications) specify KEYWORDS="*".
+KEYWORDS="x86"
 
 # Build-time dependencies, such as
 #    ssl? ( >=openssl-0.9.6b )
@@ -33,10 +61,6 @@ DEPEND=""
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 #RDEPEND=""
-
-# Point to any required sources; these will be automatically downloaded by
-# Portage.
-SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 
 # Source directory; the dir where the sources can be found (automatically
 # unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
@@ -60,7 +84,7 @@ src_compile() {
 	# Note the use of --infodir and --mandir, above. This is to make
 	# this package FHS 2.2-compliant.  For more information, see
 	#   http://www.pathname.com/fhs/
-	
+
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
 	# builds (especially on SMP systems).  Try emake first.  It might
@@ -73,7 +97,7 @@ src_compile() {
 src_install () {
 	# You must *personally verify* that this trick doesn't install
 	# anything outside of DESTDIR; do this by reading and
-	# understanding the install part of the Makefiles. 
+	# understanding the install part of the Makefiles.
 	make DESTDIR=${D} install || die
 	# For Makefiles that don't make proper use of DESTDIR, setting
 	# prefix is often an alternative.  However if you do this, then
