@@ -1,4 +1,13 @@
 #!/bin/sh
+
 export MOZILLA_FIVE_HOME="/usr/lib/phoenix"
-/usr/lib/phoenix/phoenix -remote "openURL($@ ,new-window)" || /usr/lib/phoenix/phoenix $@
+PHOENIX_PATH="/usr/lib/phoenix"
+
+if [ -z "`pidof phoenix-bin`" ]; then
+	# No phoenix running
+	${PHOENIX_PATH}/phoenix $@
+else
+	# phoenix running - open a new window
+	${PHOENIX_PATH}/phoenix -remote "openURL($@ ,new-window)"
+fi
 

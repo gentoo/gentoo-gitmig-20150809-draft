@@ -1,12 +1,14 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.7 2002/11/17 11:59:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.8 2002/11/17 14:21:19 phoenix Exp $
 
 *phoenix-bin-0.4-r1 (17 Nov 2002)
 
+  17 Nov 2002; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Updated the wrapper - phoenix and mozilla should play nice now.
+
   17 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4-r1.ebuild 
   files/phoenix-0.4-antialiasing-patch :
-
   Added TrueType patch. This closes bug #10649.
   Thanks to Sebastian Werner <sebastian@werner-productions.de> for the
   contribution. Put this ebuild in the stable profile.
