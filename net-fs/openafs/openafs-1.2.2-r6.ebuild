@@ -13,7 +13,7 @@ an architecture geared towards system management, along with the tools
 to perform important management tasks. For a user, AFS is a familiar yet
 extensive UNIX environment for accessing files easily and quickly."
 
-SRC_URI="http://www.openafs.org/dl/openafs/1.2.1/openafs-1.2.1-src.tar.bz2"
+SRC_URI="http://www.openafs.org/dl/openafs/1.2.2/openafs-1.2.2-src.tar.bz2"
 HOMEPAGE="http://www.openafs.org/"
 
 DEPEND="virtual/glibc
