@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xautolock
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.1 2002/04/13 11:20:09 spider Exp $
+
+*xautolock-2.1 (13 Apr 2002)
+  13 Apr 2002; Spider <spider@gentoo.org> xautolock-2.1.ebuild:
+  initial ebuild.  for use with xlockmore
+
+
