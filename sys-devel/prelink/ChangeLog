@@ -1,11 +1,14 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.11 2003/03/08 03:27:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.12 2003/03/09 13:18:51 cretin Exp $
 
   07 Mar 2003; Peter Johanson <latexer@gentoo.org> prelink-20021213.ebuild :
   Remasked til Cretin deals with deps on elfutils.
 
 *prelink-20030217 (07 Mar 2003):
+
+  09 Mar 2003; Stefan Jones <cretin@gentoo.org> prelink-20030217.ebuild :
+  Changed DEPEND to glibc-2.3.2
 
   07 Mar 2003; Stefan Jones <cretin@gentoo.org> prelink-20030217.ebuild :
   New version from redhat rawhide.

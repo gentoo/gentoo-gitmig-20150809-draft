@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030217.ebuild,v 1.1 2003/03/07 21:37:04 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030217.ebuild,v 1.2 2003/03/09 13:18:51 cretin Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND=">=dev-libs/elfutils-0.72
 	!dev-libs/libelf
-	>=sys-libs/glibc-2.3.1
+	>=sys-libs/glibc-2.3.2
 	>=sys-devel/binutils-2.13.90.0.10"
 
 
