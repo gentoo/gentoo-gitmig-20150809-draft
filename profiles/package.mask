@@ -43,10 +43,6 @@
 # move dep cache dir to /var/state/init.d.  also some raid updates.
 >=sys-apps/baselayout-1.8.6.0
 
-# <rendhalver@gentoo.org> (02 Jan 2003)
-# new release candidate for XEmacs
->=app-editors/xemacs-21.4.11_rc1
-
 # <azarah@gentoo.org> (27 Dec 2002)
 # Breaks things for now .. wait till new versions
 # of monkey-media, etc are out.
