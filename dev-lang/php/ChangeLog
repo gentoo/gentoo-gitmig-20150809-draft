@@ -1,8 +1,17 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.5 2002/02/23 20:35:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.6 2002/02/25 19:50:22 karltk Exp $
 
-*php-4.0.6-r5 ( 22 Feb 2002 )
+*php-4.1.1-r5 ( 22 Feb 2002 )
+
+  22 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> php-4.1.1-r5.ebuild
+
+  Fixed a bug that made compiling with libpng bug out on some 
+  installations.
+
+  Old revisions removed.
+
+*php-4.1.1-r4 ( 22 Feb 2002 )
 
   22 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> php-4.1.1-r4.ebuild
 
