@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.71 2003/07/22 21:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.72 2003/07/24 19:31:09 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -104,3 +104,4 @@ media-video/vlc:xvid - Enables xvid codec support
 media-video/vlc:v4l - Enables video4linux support
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
+x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
