@@ -1,5 +1,5 @@
-MD5 628e265f2aac91d1d2be608b6f16a17a ChangeLog 599
+MD5 90ed234a558412f7b4795aa5bbd8e77b ChangeLog 602
 MD5 fbf565a79313fa40f21102b5faf296ce mdadm-1.0.1.ebuild 1031
-MD5 055ea6153005683ac31cde7b51235651 mdadm-1.2.0.ebuild 1035
+MD5 60c0a8bd36b40e0fea057e46df9c709a mdadm-1.2.0.ebuild 1038
 MD5 6e85a2023eaee521c817315c7b7f980b files/digest-mdadm-1.0.1 59
 MD5 014cee9c27c5693a1d551858f4d93d27 files/digest-mdadm-1.2.0 59
