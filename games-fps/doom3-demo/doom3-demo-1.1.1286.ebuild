@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1282.ebuild,v 1.5 2004/11/09 21:52:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286.ebuild,v 1.1 2004/12/04 14:27:51 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -20,10 +20,7 @@ DEPEND="app-arch/bzip2
 	app-arch/tar"
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
-	dedicated? ( app-misc/screen )
-	amd64? ( app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-nvidia	)"
+	dedicated? ( app-misc/screen )"
 
 S=${WORKDIR}
 
@@ -46,7 +43,13 @@ src_install() {
 	doins License.txt README version.info
 	exeinto ${dir}
 	doexe gamex86.so libgcc_s.so.1 libstdc++.so.5 || die "doexe libs"
-	doexe bin/Linux/x86/glibc-2.1/doom.x86 || die "doexe doom"
+	if use amd64; then
+		doexe bin/Linux/amd64/doom.x86 || die "doexe doom.x86"
+	elif use x86; then
+		doexe bin/Linux/x86/doom.x86 || die "doexe doom"
+	else
+		die "Platform not supported"
+	fi
 
 	insinto ${dir}/demo
 	doins demo/* || die "doins base"
@@ -57,7 +60,7 @@ src_install() {
 	newins ${DISTDIR}/doom3.png doom3-demo.png
 
 	prepgamesdirs
-	make_desktop_entry doom3-demo "Doom III Demo" doom3.png
+	make_desktop_entry doom3-demo "Doom III Demo" doom3-demo.png
 }
 
 pkg_postinst() {
@@ -65,10 +68,4 @@ pkg_postinst() {
 
 	einfo "To play the game run:"
 	einfo " doom3-demo"
-
-	# IA32 Emulation required for amd64
-	if use amd64 ; then
-		echo
-		ewarn "NOTE: IA32 Emulation must be compiled into your kernel for Doom3 to run."
-	fi
 }
