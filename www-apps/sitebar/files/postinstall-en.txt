@@ -1,0 +1,2 @@
+
+Now go to http://yourhost/sitebar/sitebar.php to complete the installation.
