@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2865 2004/05/21 20:15:26 ciaranm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2866 2004/05/24 11:34:25 humpback Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <humpback@gentoo.org> (24 May 2004)
+# Beta release just here so people can test new features
+=net-im/psi-0.9.2_rc2
 
 # <ciaranm@gentoo.org> (21 May 2004)
 # vim beta release
