@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.70 2005/02/25 00:43:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.71 2005/02/27 00:45:26 plasmaroo Exp $
+
+*genkernel-3.1.0l (27 Feb 2005)
+
+  27 Feb 2005; <plasmaroo@gentoo.org> -genkernel-3.1.0k.ebuild,
+  +genkernel-3.1.0l.ebuild:
+  Add MODULES_SATA support; make udev static on non-x86 architectures.
 
   25 Feb 2005; <plasmaroo@gentoo.org> genkernel-3.1.0k.ebuild:
   Mention available documentation, #77309.
