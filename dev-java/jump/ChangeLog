@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jump
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.1 2003/05/14 05:24:30 absinthe Exp $
+
+*jump-0.4.1 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org> jump-0.4.1.ebuild:
+  Initial import.
+
