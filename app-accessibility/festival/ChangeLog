@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.8 2004/03/31 01:47:32 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.9 2004/04/20 07:06:26 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r1.ebuild, festival-1.4.3.ebuild:
+  Removed unneccessary GCCPV to close bug #48383.
 
   30 Mar 2004; Todd Sunderlin <todd@gentoo.org> festival-1.4.3-r1.ebuild:
   set stable on sparc
