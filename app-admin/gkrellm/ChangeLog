@@ -1,7 +1,15 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.26 2002/12/23 19:19:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.27 2003/01/17 21:47:26 seemant Exp $
 
+*gkrellm-2.1.5 (17 Jan 2003)
+
+  17 Jan 2003; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.1.5.ebuild
+  files/digest-gkrellm-2.1.5 :
+
+  Version bump which fixes bugs in 2.1.4, specifically with multiple instances
+  starting up due to gnome session management.  Thanks to: koto@mynetix.de
+  (Andreas Kotowicz) in bug #13977
 
 *gkrellm-2.1.4 (23 Dec 2002)
 
