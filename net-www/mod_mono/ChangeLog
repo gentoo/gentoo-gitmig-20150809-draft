@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mono/ChangeLog,v 1.7 2004/06/28 00:59:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mono/ChangeLog,v 1.8 2004/06/30 15:39:01 latexer Exp $
+
+*mod_mono-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.ebuild:
+  1.0. Nuff said.
 
 *mod_mono-0.13 (27 Jun 2004)
 
