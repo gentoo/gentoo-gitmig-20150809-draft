@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.146 2003/10/20 00:25:22 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.147 2003/10/21 22:15:08 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -198,6 +198,7 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-base/xfree:gatos - Builds the SDK (alternate flag)
 x11-base/xfree:sdk - Builds the SDK
+x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-terms/eterm:etwin - enable twin support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
