@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.10.6.ebuild,v 1.1 2003/11/02 15:39:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.11.0.ebuild,v 1.1 2004/02/14 15:01:37 liquidx Exp $
 
 inherit distutils
 
@@ -15,6 +15,8 @@ KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=dev-lang/python-2.1.1
 	>=net-ftp/curl-${PV}"
+
+PYTHON_MODNAME="curl"
 
 src_install(){
 	DOCS="TODO"
