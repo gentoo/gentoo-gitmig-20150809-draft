@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.7 2003/01/12 00:08:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/ChangeLog,v 1.8 2003/01/12 07:37:22 vapier Exp $
+
+*enlightenment-cvs-20030111-r1 (12 Jan 2003)
+
+  12 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Tweaked elogin to work with Gentoo better.  Also updated the env.d file.
 
 *enlightenment-cvs-20030111 (11 Jan 2003)
 
