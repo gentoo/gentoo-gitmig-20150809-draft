@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/freeamp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.4 2002/09/11 20:47:00 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/ChangeLog,v 1.5 2002/12/29 23:48:16 lordvan Exp $
+
+*freeamp-2.2.1 (30 Dec 2002)
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org>:
+  dummy ebuild added with comment to emerge zinf instead
+  (freeamp got renamed to zinf)
 
 *freeamp-2.1.1-r1 (3 May 2002)
   
