@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.5 2001/09/03 06:50:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.6 2001/09/03 06:53:27 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -150,8 +150,8 @@ src_install()
 	if [ $altmerge -eq 1 ]
 	then
 		#rootfs and devfs
-		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
 		keepdir /dev-state
+		dosym /usr/sbin/MAKEDEV /dev-state/MAKEDEV
 		keepdir /dev-state/pts /dev-state/shm
 		cd ${D}/dev-state
 	else
