@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/roxcd-0.4.5.ebuild,v 1.1 2004/12/09 18:22:20 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/roxcd-0.4.5.ebuild,v 1.2 2005/03/05 23:51:46 josejx Exp $
 
 DESCRIPTION="RoxCD - A CD Player/Ripper for the ROX Desktop"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
