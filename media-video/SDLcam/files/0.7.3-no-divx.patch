@@ -1,0 +1,12 @@
+--- Makefile.orig	2004-01-30 04:29:32.359312208 -0500
++++ Makefile	2004-01-30 04:29:38.376397472 -0500
+@@ -48,9 +48,6 @@
+ capture/mpeg.so: capture/mpeg.c
+ 	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -lfame
+ 
+-capture/divx.so: capture/divx.c
+-	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -ldivxencore
+-
+ capture/divx2.so: capture/divx2.cpp
+ 	- $(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
+ 
