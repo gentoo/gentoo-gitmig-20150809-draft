@@ -1,5 +1,5 @@
 MD5 0d0ce7a1256f5931b46ec5ae2843dabc sylpheed-claws-0.9.5.ebuild 3876
-MD5 29186e37f49472a96f63b08ec23a2843 sylpheed-claws-0.9.5-r1.ebuild 4651
+MD5 f4a07856d3870bb1842aa610f5d96a0e sylpheed-claws-0.9.5-r1.ebuild 4651
 MD5 245b65d30944dc96574a75ce92891656 sylpheed-claws-0.9.4.ebuild 3471
 MD5 60f0c479b2892ac83ba289ac2a3ee85f sylpheed-claws-0.9.4-r1.ebuild 3878
 MD5 17558d831dc20f8f89961af8bd50f80f sylpheed-claws-0.9.0-r1.ebuild 3334
@@ -14,5 +14,5 @@ MD5 8b029fc7176a8bad264d1676bd83984b files/digest-sylpheed-claws-0.8.11 74
 MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
 MD5 d9e778ef490a8e07e7b931d13052fca2 files/digest-sylpheed-claws-0.9.0-r1 73
 MD5 d4c201b38daa6314bb9eb8c337633312 files/digest-sylpheed-claws-0.9.4-r1 148
-MD5 8deeca05edeb9684d5221140c5b5724f files/digest-sylpheed-claws-0.9.5-r1 234
+MD5 1e7e11ae4e8aba685f25aa113e70e1b5 files/digest-sylpheed-claws-0.9.5-r1 234
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
