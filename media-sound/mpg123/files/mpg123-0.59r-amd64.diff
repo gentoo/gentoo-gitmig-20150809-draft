@@ -30,3 +30,81 @@
  #linux-ppc:
  #	$(MAKE)   LDFLAGS= \
  #		OBJECTS='decode.o dct64.o audio_oss.o' \
+diff -urN mpg123-0.59r/getlopt.c mpg123-0.59r.alpha/getlopt.c
+--- getlopt.c	1998-12-08 04:41:11.000000000 -0500
++++ mpg123-0.59r.alpha/getlopt.c	2002-11-22 17:52:59.000000000 -0500
+@@ -48,7 +48,7 @@
+ 			if (opt->flags & 2) /* var is *char */
+ 				*((char *) opt->var) = (char) opt->value;
+ 			else
+-				*((long *) opt->var) = opt->value;
++				*((int *) opt->var) = opt->value;
+ 		}
+ 		else
+ 			result = opt->value ? opt->value : opt->sname;
+@@ -62,7 +62,7 @@
+ 			if (opt->flags & 2) /* var is *char */
+ 				*((char **) opt->var) = strdup(loptarg);
+ 			else
+-				*((long *) opt->var) = atoi(loptarg);
++				*((int *) opt->var) = atoi(loptarg);
+ 		}
+ 		else
+ 			result = opt->value ? opt->value : opt->sname;
+diff -urN mpg123-0.59r/layer3.c mpg123-0.59r.alpha/layer3.c
+--- layer3.c	1999-04-21 11:25:18.000000000 -0400
++++ mpg123-0.59r.alpha/layer3.c	2002-11-22 17:52:59.000000000 -0500
+@@ -608,7 +608,7 @@
+  * Dequantize samples (includes huffman decoding)
+  */
+ /* 24 is enough because tab13 has max. a 19 bit huffvector */
+-#define BITSHIFT ((sizeof(long)-1)*8)
++#define BITSHIFT ((sizeof(int)-1)*8)
+ #define REFRESH_MASK \
+   while(num < BITSHIFT) { \
+     mask |= getbyte()<<(BITSHIFT-num); \
+@@ -625,7 +625,7 @@
+   int *me;
+ 
+   int num=getbitoffset();
+-  long mask = (long) getbits(num)<<(BITSHIFT+8-num);
++  int mask = (int) getbits(num)<<(BITSHIFT+8-num);
+   part2remain -= num;
+ 
+   {
+@@ -709,7 +709,7 @@
+         if(x == 15 && h->linbits) {
+           max[lwin] = cb;
+           REFRESH_MASK;
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -733,7 +733,7 @@
+         if(y == 15 && h->linbits) {
+           max[lwin] = cb;
+           REFRESH_MASK;
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -883,7 +883,7 @@
+         if (x == 15 && h->linbits) {
+           max = cb;
+ 	  REFRESH_MASK;
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -907,7 +907,7 @@
+         if (y == 15 && h->linbits) {
+           max = cb;
+ 	  REFRESH_MASK;
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
