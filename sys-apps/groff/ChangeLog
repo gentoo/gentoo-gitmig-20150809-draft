@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.3 2002/07/24 09:03:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.4 2002/07/29 16:23:23 azarah Exp $
+
+*groff-1.18-r1 (29 Jul 2002)
+*groff-1.17.2-r2 (29 Jul 2002)
+
+  29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> groff-1.18-r1, groff-1.17.2-r2 :
+  Some build Cleanups.  Enable build of xditview if "X" in USE,
+  and X is actually installed.  We cannot make it depend on X, as
+  X depends on perl, which in turn depend on groff and will cause
+  circular depends.  Enable the install of info pages, and also
+  fix thier extension to .info, else they do not get gzipped.
+  Also fixed 0.18 to install its docs/examples in the right place.
 
 *groff-1.18 (24 Jul 2002)
 
