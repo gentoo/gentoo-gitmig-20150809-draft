@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.7 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.8 2002/12/10 00:36:27 avenj Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
@@ -11,6 +11,10 @@
 *bison-1.75 (20 Oct 2002)
 
   20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> : Update version.
+
+  09 Dec 2002; Jon Portnoy <avenj@gentoo.org> :
+
+  Update to be icc-able with USE=icc.
 
 *bison-1.35 (09 Aug 2002)
 
@@ -25,6 +29,10 @@
 
   Version bump to newest stable, which fixes issues with the spanish
   language environment.
+
+  09 Dec 2002; Jon Portnoy <avenj@gentoo.org> bison-1.35.ebuild :
+ 
+  Update to be icc-able with USE=icc.
 
 *bison-1.34-r1 (2 Apr 2002)
 
