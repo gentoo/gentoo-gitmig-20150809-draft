@@ -128,10 +128,6 @@ app-admin/va-systemimager-client
 
 # Seems to be some issues with GConf 
 
-# glibc-2.2.4 with gcc 2.95.3 brings back the atexit bug, and the patch
-# won't fix it (chadh)
-#=sys-libs/glibc-2.2.4
-
 # temporary until drobbins takes a look at my fix
 =sys-kernel/linux-sources-2.4.9.9
 
