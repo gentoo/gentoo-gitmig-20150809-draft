@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r12.ebuild,v 1.1 2004/03/20 15:46:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r12.ebuild,v 1.2 2004/03/26 07:27:34 mr_bones_ Exp $
 
 S=${WORKDIR}/${PF}
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
@@ -80,7 +80,7 @@ pkg_postinst() {
 						> /usr/share/${PN}/initrd-${THEME}-${SIZE}
 				done
 			fi
-		done	
+		done
 	fi
 
 	# rename bootsplash config file to fit with the standard
