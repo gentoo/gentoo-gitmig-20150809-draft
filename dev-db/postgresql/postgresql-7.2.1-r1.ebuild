@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r1.ebuild,v 1.7 2002/07/12 16:44:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r1.ebuild,v 1.8 2002/07/13 08:59:26 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -10,7 +10,6 @@ HOMEPAGE="http://www.postgresql.org"
 LICENSE="POSTGRESQL"
 
 DEPEND="virtual/glibc
-		>=sys-apps/daemontools-0.76-r1
 		sys-devel/autoconf
 		>=sys-libs/readline-4.1
 		>=sys-libs/ncurses-5.2
@@ -23,7 +22,6 @@ DEPEND="virtual/glibc
 		nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc
-		>=sys-apps/daemontools-0.76-r1
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )

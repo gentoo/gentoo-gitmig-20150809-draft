@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.15 2002/07/12 16:44:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.16 2002/07/13 08:59:26 rphillips Exp $
 
 *postgresql-7.2-r3 (02 Jul 2002)
   
@@ -16,6 +16,10 @@
   is not in the use vars.
 
 *postgresql-7.2.1-r1 (20 Jun 2002)
+
+  13 Jul 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
+
+  Removed daemontools dep
 
   12 Jul 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.1-r1.ebuild :
 
