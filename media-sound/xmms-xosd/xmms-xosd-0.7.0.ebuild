@@ -1,10 +1,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-xosd/xmms-xosd-0.7.0.ebuild,v 1.2 2002/07/22 00:48:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-xosd/xmms-xosd-0.7.0.ebuild,v 1.3 2002/08/08 22:10:51 aliz Exp $
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${P#xmms-}
 DESCRIPTION="xmms plugin for overlaying song titles in X-Windows - X-On-Screen-Display"
-SRC_URI="http://www.ignavus.net/${P}.tar.gz"
+SRC_URI="http://www.ignavus.net/${P#xmms-}.tar.gz"
 HOMEPAGE="http://www.ignavus.net/"
 
 SLOT="0"

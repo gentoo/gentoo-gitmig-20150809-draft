@@ -1,7 +1,7 @@
 # ChangeLog for media-sound/xmms-xosd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Mantainer: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-xosd/ChangeLog,v 1.2 2002/08/05 05:35:40 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-xosd/ChangeLog,v 1.3 2002/08/08 22:10:51 aliz Exp $
 
 *xmms-xosd-0.70 (08 Jun 2002)
 
@@ -10,6 +10,9 @@
 		SRC_URI typo fix
 
 *xmms-xosd-0.70 (08 Jun 2002)
+
+  08 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-xosd-0.70.ebuild:
+  Fixed file to download and $S.
 
   04 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> xosd-0.70.ebuild:
 		
