@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040302.ebuild,v 1.5 2004/07/02 04:45:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040907.ebuild,v 1.1 2004/09/08 03:33:09 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses

@@ -1,13 +1,6 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.8 2004/08/14 20:44:09 dholm Exp $
-
-  14 Aug 2004; David Holm <dholm@gentoo.org> libedit-20040610.ebuild:
-  Added to ~ppc.
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  libedit-20040302.ebuild, libedit-20040610.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.9 2004/09/08 03:33:09 vapier Exp $
 
 *libedit-YYYYMMDD (22 Dec 2003)
 
