@@ -1,4 +1,4 @@
+MD5 35a8e5d4b5839bd2b35920e1a8c36ac6 files/digest-ufed-0.34 61
 MD5 d883ad41b0382cb698914b9393f9b51c ChangeLog 2729
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 fced92496b0d29cc22e332e6960b3ee2 ufed-0.34.ebuild 606
-MD5 35a8e5d4b5839bd2b35920e1a8c36ac6 files/digest-ufed-0.34 61
+MD5 e76b90215e803edc979e6545d8c2ad14 ufed-0.34.ebuild 591
