@@ -860,10 +860,6 @@ net-mail/spamassassin
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
 x11-base/xdirectfb
 
-#seemant@gentoo.org
-# testing new version
-=net-libs/libwww-5.4.0
-
 # seemant@gentoo.org
 # testing new version -- especially packages which have it as a dependency
 =dev-libs/DirectFB-0.9.12
