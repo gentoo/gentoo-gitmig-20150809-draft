@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.53 2005/03/06 23:32:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.54 2005/03/29 20:06:44 kloeri Exp $
+
+  29 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PyQt-3.14.ebuild,
+  PyQt-3.14.1.ebuild:
+  ~alpha keyword.
 
 *PyQt-3.14.1 (07 Mar 2005)
 
