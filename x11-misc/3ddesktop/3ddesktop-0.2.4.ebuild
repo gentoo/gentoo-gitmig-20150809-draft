@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.4.ebuild,v 1.10 2004/04/11 14:57:53 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.4.ebuild,v 1.11 2004/04/12 00:30:37 spyderous Exp $
 
 DESCRIPTION="OpenGL virtual desktop switching"
 HOMEPAGE="http://desk3d.sourceforge.net/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=x11-base/xfree-4.2.0
+DEPEND="virtual/x11
 	=media-libs/freetype-1*
 	media-libs/imlib2"
 

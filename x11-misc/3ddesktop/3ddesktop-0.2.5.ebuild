@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=x11-base/xfree-4.2.0
+DEPEND="virtual/x11
 		media-libs/imlib2
 		x11-base/opengl-update"
 
