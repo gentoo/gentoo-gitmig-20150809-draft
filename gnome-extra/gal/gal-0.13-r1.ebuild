@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.13-r1.ebuild,v 1.1 2001/10/06 10:06:52 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.13-r1.ebuild,v 1.2 2001/10/19 22:09:09 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
@@ -30,13 +29,17 @@ src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		     ${myconf} || die
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }

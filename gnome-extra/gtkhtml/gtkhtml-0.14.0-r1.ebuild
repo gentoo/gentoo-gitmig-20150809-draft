@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.2 2001/10/07 12:32:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-0.14.0-r1.ebuild,v 1.3 2001/10/19 22:04:17 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-extra/gal-0.13-r1
@@ -25,6 +24,7 @@ src_compile() {
   	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    --with-bonobo 					\
 	            --with-gconf
 
@@ -34,7 +34,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Package installation failed."
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	# Fix the double entry in Control Center
 	rm ${D}/usr/share/control-center/capplets/gtkhtml-properties.desktop

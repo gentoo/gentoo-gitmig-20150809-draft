@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.3 2001/10/06 23:45:03 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.4 2001/10/19 21:52:35 hallski Exp $
 
-#P=
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
-SRC_URI="http://www.gnome.org/projects/${PN}/${A}"
+SRC_URI="http://www.gnome.org/projects/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/projects/mc/"
 
 DEPEND="virtual/glibc
@@ -48,17 +46,23 @@ src_compile() {
 		myconf="$myconf --without-gnome"
   	fi
 
-	LDFLAGS="-lcrypt -lncurses" ./configure --host=${CHOST} 	\
-						--prefix=/usr		\
-						--with-samba 		\
-						--with-vfs 		\
-						--with-netrc $myconf || die
+	LDFLAGS="-lcrypt -lncurses" ./configure --host=${CHOST} 	 \
+						--prefix=/usr		 \
+						--sysconfidir=/etc	 \
+						--localstatedir=/var/lib \
+						--with-samba 		 \
+						--with-vfs 		 \
+						--with-netrc 		 \
+						$myconf || die
 
 	make || die  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {                               
-	make prefix=${D}/usr sysconfdir=${D}/etc install || die
+	make prefix=${D}/usr						 \
+	     sysconfdir=${D}/etc					 \
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc ABOUT-NLS COPYING* FAQ INSTALL* NEWS README*
 }

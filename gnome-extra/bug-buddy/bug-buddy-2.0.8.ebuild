@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.2 2001/10/06 22:16:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.0.8.ebuild,v 1.3 2001/10/19 21:58:44 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="bug-buddy"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND="virtual/glibc
@@ -28,13 +27,18 @@ src_compile() {
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
+		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    $myconf || die
 
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING* NEWS README* TODO
 }

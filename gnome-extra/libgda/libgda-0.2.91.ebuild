@@ -3,11 +3,10 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # $Header
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gda lib"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}
-	 ftp://ftp.gnome-db.org/pub/gnome-db/sources/${PV}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${P}.tar.gz
+	 ftp://ftp.gnome-db.org/pub/gnome-db/sources/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-db"
 
 RDEPEND="virtual/glibc
@@ -56,6 +55,7 @@ src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr	 				\
 		    --sysconfdir=/etc		 			\
+		    --localstatedir=/var/lib				\
 		    $myconf || die
 
 	# Wierd hack I had to do to get it to compile (seems the buildin sqlite
@@ -69,7 +69,9 @@ src_compile() {
 }
 
 src_install() {
-	make  DESTDIR=${D} PREFIX=${D}/usr 				\
+	make  prefix=${D}/usr						\
+	      sysconfdir=${D}/etc					\
+	      localstatedir=${D}/var/lib				\
 	      INSTALLMAN3DIR=${D}/usr/share/man/man3 			\
 	      GDA_oafinfodir=${D}/usr/share/oaf install || die
 
