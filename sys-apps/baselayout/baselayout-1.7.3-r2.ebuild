@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.3.ebuild,v 1.1 2002/03/04 19:14:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.3-r2.ebuild,v 1.1 2002/03/06 21:22:09 azarah Exp $
 
-SV=1.2.8
+SV="1.2.9"
+SVREV=""
 #sysvinit version
-SVIV=2.83
+SVIV="2.83"
 S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
@@ -13,13 +14,18 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.ta
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
+if [ -z "$BUILD" ]
+then
+	DEPEND="sys-apps/kbd"
+fi
+
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 src_unpack() {
 	unpack ${A}
 
-	echo ">>> Unpacking rc-scripts-${SV}.tar.bz2"
-	tar -jxf ${FILESDIR}/rc-scripts-${SV}.tar.bz2
+	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
+	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
 	
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -258,6 +264,10 @@ src_install()
 		[ -f $foo ] && doins $foo
 	done
 
+	#make sure our ${svcdir} exists
+	source ${D}/etc/init.d/functions.sh
+	keepdir ${svcdir} >/dev/null 2>&1
+
 	#skip this if we are merging to ROOT
 	[ "$ROOT" = "/" ] && return
 	
@@ -326,19 +336,21 @@ EOF
 	#rather force the install of critical files to insure that there is no
 	#problems.
 	## add net.lo for now as well, as it is a problem case in this release.
-	for x in depscan.sh functions.sh runscript.sh checkroot net.lo xdm
+	for x in depscan.sh functions.sh runscript.sh checkroot net.lo consolefont keymaps xdm
 	do
 		rm -f ${ROOT}/etc/init.d/._cfg*_${x}
 		cp -f ${S}/init.d/${x} ${ROOT}/etc/init.d/
 	done
-	cp -f ${S}/sbin/startDM.sh ${ROOT}/etc/X11/
 	rm -f ${ROOT}/etc/._cfg*_inittab
 	cp -f ${S}/etc/inittab ${ROOT}/etc/
+	[ "$ROOT" = "/" ] && /sbin/init Q
+	mkdir -p ${ROOT}/etc/X11/
+	cp -f ${S}/sbin/startDM.sh ${ROOT}/etc/X11/
 	
 
 	#handle the ${svcdir} that changed in location
 	source ${ROOT}/etc/init.d/functions.sh
-	if [ ! -d ${ROOT}/${svcdir} ]
+	if [ ! -d ${ROOT}/${svcdir}/started/ ]
 	then
 		mkdir -p ${ROOT}/${svcdir}
 		mount -t tmpfs tmpfs ${ROOT}/${svcdir}
@@ -347,6 +359,9 @@ EOF
 			cp -ax ${ROOT}/dev/shm/.init.d/. ${ROOT}/${svcdir}
 		fi
 	fi
+
+	#reload init to fix unmounting problems of / on next reboot
+	[ "$ROOT" = "/" ] && /sbin/init U
 
 	#kill the old /dev-state directory if it exists
 	if [ -e /dev-state ]

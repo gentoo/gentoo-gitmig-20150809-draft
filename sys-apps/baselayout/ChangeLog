@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.8 2002/03/05 16:19:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.9 2002/03/06 21:22:09 azarah Exp $
+
+  6 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.3-r2.ebuild :
+
+  Fixed the respawning "startDM.sh" process.  Fixed the fsck of / when rebooting
+  for the first time after baselayout merge.
 
   5 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.3-r1.ebuild :
 
