@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.4 2004/04/20 17:38:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.5 2004/05/26 15:32:08 kugelfang Exp $
+
+  26 May 2004; Danny van Dyk <kugelfang@gentoo.org> toolame-02l.ebuild:
+  Marked ~amd64.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> toolame-02l.ebuild:
   Added IUSE.
