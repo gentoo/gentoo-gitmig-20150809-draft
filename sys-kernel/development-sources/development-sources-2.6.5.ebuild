@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.13 2004/06/24 22:56:05 agriffis Exp $
-
-IUSE="ultra1"
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.5.ebuild,v 1.14 2004/11/24 08:41:49 eradicator Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -17,6 +15,7 @@ HOMEPAGE="http://www.kernel.org/"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}"
 UNIPATCH_LIST="${ARCH_PATCH}"
 
+IUSE="ultra1"
 use ultra1 || UNIPATCH_EXCLUDE="99_U1-hme-lockup"
 
 KEYWORDS="x86 ~sparc ~alpha ~ia64 ppc arm s390 ~amd64"
