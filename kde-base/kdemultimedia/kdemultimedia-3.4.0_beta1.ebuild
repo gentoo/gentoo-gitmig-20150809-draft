@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.2 2005/01/15 16:56:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.3 2005/01/17 17:24:29 greg_g Exp $
 
 inherit kde-dist
 
@@ -29,7 +29,7 @@ src_compile() {
 	use xine && myconf="$myconf --with-xine-prefix=/usr"
 	use xine || DO_NOT_COMPILE="$DO_NOT_COMPILE xine_artsplugin"
 
-	myconf="${myconf} $(use_with audiocd cdparanoia)"
+	myconf="${myconf} $(use_with cdparanoia)"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
