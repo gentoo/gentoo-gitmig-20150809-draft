@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomeradio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.9 2004/06/25 00:01:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.10 2004/08/19 18:29:03 foser Exp $
+
+  19 Aug 2004; foser <foser@gentoo.org> gnomeradio-1.4.ebuild gnomeradio-1.4-gcc34.patch :
+  Add fix for gtk+-2.4 & gcc34 compilation issues (#54115)
 
   18 Jun 2004; David Holm <dholm@gentoo.org> gnomeradio-1.4.ebuild:
   Added to ~ppc.

@@ -1,4 +1,5 @@
-MD5 86fefea2d5c20762925fc8a85b62fb54 gnomeradio-1.4.ebuild 793
-MD5 f61dfebf691917e33ab8c5e6ad3ab5cf ChangeLog 1087
+MD5 a1ea2544120eebf0e8465a2cb11b0a5e gnomeradio-1.4.ebuild 1006
+MD5 81a0620a74eaedf22974507652dfc594 ChangeLog 1236
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ecd09176a359fc04fc85895ae49e9b20 files/gnomeradio-1.4-gcc34.patch 263
 MD5 ae87ec7d399d7b593b65aee83ea7e440 files/digest-gnomeradio-1.4 66

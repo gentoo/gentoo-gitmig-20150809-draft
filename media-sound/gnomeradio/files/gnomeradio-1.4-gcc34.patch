@@ -1,0 +1,10 @@
+--- src/gui.c	2002-12-14 14:01:48.000000000 +0100
++++ src/gui.c.fix	2004-08-19 20:26:31.272162456 +0200
+@@ -988,6 +988,7 @@
+ 				gtk_adjustment_set_value(volume,(volume->value < 5) ? 0 : volume->value-5);
+ 				break;
+ 		default:
++			break;
+ 	}
+ 	return FALSE;
+ }
