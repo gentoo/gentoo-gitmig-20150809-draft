@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.8.4.ebuild,v 1.12 2004/09/23 05:31:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.8.4.ebuild,v 1.13 2004/09/23 12:26:38 vapier Exp $
 
 DESCRIPTION="unit test framework for C"
 HOMEPAGE="http://sourceforge.net/projects/check/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86 ppc-macos macos s390 ppc64 ~amd64"
+KEYWORDS="~amd64 arm macos ppc ppc64 ppc-macos s390 x86"
 IUSE=""
 
 DEPEND="virtual/libc"
