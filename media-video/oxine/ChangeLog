@@ -1,6 +1,11 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.1 2003/03/14 19:19:57 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.2 2003/05/06 19:52:52 agenkin Exp $
+
+*oxine-0.2 (06 May 2003)
+
+  06 May 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
 
 *oxine-0.1 (14 Mar 2003)
 
