@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.3 2004/06/02 19:03:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.4 2004/06/06 20:57:27 weeve Exp $
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -10,7 +10,7 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips arm amd64 ~ia64 s390"
+KEYWORDS="x86 ~ppc sparc ~mips arm amd64 ~ia64 s390"
 IUSE=""
 
 DEPEND="virtual/glibc
