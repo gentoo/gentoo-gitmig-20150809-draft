@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.191 2004/06/16 15:36:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.192 2004/06/17 16:44:22 lu_zero Exp $
+
+  17 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  glibc-2.3.4.20040605-r1.ebuild:
+  Ported the fix to this ebuild
 
   16 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
   +files/2.3.4/glibc-2.3.4-nptl-altivec.patch, glibc-2.3.4.20040605.ebuild:

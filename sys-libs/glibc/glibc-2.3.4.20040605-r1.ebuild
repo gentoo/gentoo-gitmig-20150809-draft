@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.5 2004/06/14 02:02:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.6 2004/06/17 16:44:22 lu_zero Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -288,14 +288,14 @@ do_arch_mips_patches() {
 
 do_arch_ppc_patches() {
 	cd ${S};
-
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-altivec.patch
 	# Any needed patches for ppc go here
 }
 
 
 do_arch_ppc64_patches() {
 	cd ${S};
-
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-altivec.patch
 	# Any needed patches for ppc64 go here
 }
 
