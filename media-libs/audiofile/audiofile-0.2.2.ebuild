@@ -1,29 +1,28 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.2.ebuild,v 1.1 2001/09/04 19:19:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.2.ebuild,v 1.2 2001/11/14 15:53:59 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="An elegant API for accessing audio files"
-SRC_URI="ftp://oss.sgi.com/projects/audiofile/download/${A}"
+SRC_URI="ftp://oss.sgi.com/projects/audiofile/download/${P}.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/audiofile/"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
+	./configure --host=${CHOST} --prefix=/usr || die
 
-  try ./configure --host=${CHOST} --prefix=/usr
-  try pmake
+	emake || die
 }
 
 src_install() {
+	make prefix=${D}/usr install || die
 
-  try make prefix=${D}/usr install
-  dodoc ACKNOWLEDGEMENTS AUTHORS COPYING* ChangeLog README TODO
-  dodoc NEWS NOTES
-
+	dodoc ACKNOWLEDGEMENTS AUTHORS COPYING* ChangeLog README TODO
+	dodoc NEWS NOTES
 }
+
 
 
 
