@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.6 2003/11/13 14:20:05 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.7 2003/12/14 01:03:21 genone Exp $
+
+*genlop-0.20.2 (14 Dec 2003)
+
+  14 Dec 2003; Marius Mauch <genone@gentoo.org> genlop-0.16.1.ebuild,
+  genlop-0.20.2.ebuild:
+  version bump, removing unnecessary deps
 
   13 Nov 2003; <tuxus@gentoo.org> genlop-0.16.3.ebuild:
   added mips to KEYWORDS
