@@ -1,8 +1,14 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.4 2002/10/31 04:49:15 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.5 2002/11/15 16:19:44 phoenix Exp $
 
 *epic4-1.1.7 (22 Oct 2002)
+
+  15 Nov 2002; phoen][x <phoenix@gentoo.org> epic4-1.1.7.ebuild :
+
+  Used flag-o-matic to replace "-O3" with "-O2". Seems like epic4
+  did not ork on a p3 with "-O3" (check bug #10642) - bitchx has 
+  the same problem, that's why i tried to fix epic with the same solution.
 
   30 Oct 2002; Jon Nall <nall@gentoo.org> epic4-1.1.7.ebuild :
 
@@ -14,12 +20,23 @@
 
 *epic4-1.1.6-r1 (21 Oct 2002)
 
+  15 Nov 2002; phoen][x <phoenix@gentoo.org> epic4-1.1.6-r1.ebuild,
+  files/digest-epic4-1.1.6-r1 :
+
+  Removed this ebuild from the tree.
+
   21 Oct 2002; phoen][x <phoenix@gentoo.org> epic4-1.1.6-r1.ebuild,
   files/digest-epic4-1.1.6-r1 :
 
   Bumped to new version. Removed the "ppc" flag from KEYWORDS.
 
 *epic4-1.0.1-r1 (1 Feb 2002)
+
+  15 Nov 2002; phoen][x <phoenix@gentoo.org> epic4-1.0.1-r1.ebuild :
+
+  Used flag-o-matic to replace "-O3" with "-O2". Seems like epic4
+  didn't work on a p3 with "-O3" - bitchx has the same problem, that's
+  why i'm trying to fix epic with the same solution.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

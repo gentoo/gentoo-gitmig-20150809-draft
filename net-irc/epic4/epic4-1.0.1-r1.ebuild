@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r1.ebuild,v 1.10 2002/10/11 03:09:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r1.ebuild,v 1.11 2002/11/15 16:19:44 phoenix Exp $
 
+IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Epic4 IRC Client"
 SRC_URI="ftp://epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.gz \
 	ftp://epicsol.org/pub/epic/EPIC4-BETA/epic4pre2-help.tar.gz"
@@ -14,6 +14,9 @@ DEPEND=">=sys-libs/ncurses-5.2"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc64"
+
+inherit flag-o-matic
+replace-flags -O[3-9] -O2
 
 src_compile() {
 	econf --libexecdir=/usr/lib/misc || die

@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.7.ebuild,v 1.2 2002/10/31 04:49:15 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.7.ebuild,v 1.3 2002/11/15 16:19:44 phoenix Exp $
 
 IUSE="ipv6 perl ssl"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Epic4 IRC Client"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
 	 ftp://epicsol.org/pub/epic/EPIC4-BETA/epic4pre2-help.tar.gz"
@@ -17,6 +16,9 @@ KEYWORDS="~x86 ~ppc"
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=sys-devel/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
+
+inherit flag-o-matic
+replace-flags -O[3-9] -O2
 
 src_compile() {
 	myconf=""
