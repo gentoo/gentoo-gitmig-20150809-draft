@@ -27,4 +27,4 @@ MD5 0836c864c5f49e72c19bef764dbdfcac files/fluxbox-0.1.14-remember.patch 42020
 MD5 7b7044a97f3d2f84897e7fddf925b309 files/fluxbox-0.1.14-toggledecor.patch 823
 MD5 ddf99954256a3dc12763651bbf63bf3a files/fluxbox-vano-gentoo.patch 1092
 MD5 060013fdc317caaf43dd90e5f0f2f9cf files/digest-fluxbox-0.9.6_pre5 134
-MD5 060013fdc317caaf43dd90e5f0f2f9cf files/digest-fluxbox-0.9.6_pre6 134
+MD5 c1a9c0a8b2a4340ea6c0ac1b1a84e424 files/digest-fluxbox-0.9.6_pre6 134
