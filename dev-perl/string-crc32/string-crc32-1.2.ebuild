@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/string-crc32-1.2.ebuild,v 1.9 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/string-crc32-1.2.ebuild,v 1.10 2004/12/23 16:32:22 nigoro Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/S/SO/SOENKE/${MY_P}.readme"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ~mips ~ppc64"
 IUSE=""

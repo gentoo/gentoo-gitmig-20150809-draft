@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/Parse-Yapp-1.05-r1.ebuild,v 1.11 2004/10/05 13:20:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/Parse-Yapp-1.05-r1.ebuild,v 1.12 2004/12/23 16:41:38 nigoro Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://cpan.org/modules/by-module/Parse/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc alpha"
+KEYWORDS="x86 amd64 sparc ppc alpha ~ppc64"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

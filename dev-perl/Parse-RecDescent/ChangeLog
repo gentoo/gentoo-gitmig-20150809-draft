@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.18 2004/06/25 00:53:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.19 2004/12/23 16:12:37 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Parse-RecDescent-1.94.ebuild:
+  added ~ppc64
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
   Parse-RecDescent-1.94.ebuild:

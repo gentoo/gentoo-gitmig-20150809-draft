@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Stat-lsMode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.6 2004/12/13 05:37:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.7 2004/12/23 16:30:23 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Stat-lsMode-0.50.ebuild:
+  added ~ppc64
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> Stat-lsMode-0.50.ebuild:
   Stable on sparc.
