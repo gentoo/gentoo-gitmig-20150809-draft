@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.4 2002/03/08 08:54:04 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.5 2002/06/24 19:43:07 azarah Exp $
+
+*grub-0.92 (25 Jun 2002)
+
+  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add the latest version thanks to good work from (bug #4020)
+  Markus Krainer <markus-krainer@chello.at>.  Slotified the lot,
+  as well as move splash.xpm.gz to ${FILESDIR}/, as having three
+  seems a bit much.
 
 *grub-0.90-r4 (8 Mar 2002)
 *grub-0.91-r3 (8 Mar 2002)

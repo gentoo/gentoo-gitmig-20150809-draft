@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>, Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r7.ebuild,v 1.1 2002/03/08 08:54:04 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.90-r7.ebuild,v 1.2 2002/06/24 19:43:07 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/grub"
+SLOT="0"
 
 DEPEND="virtual/glibc >=sys-devel/binutils-2.9.1.0.23 >=sys-libs/ncurses-5.2-r2 sys-apps/grep sys-apps/sed"
 RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
@@ -74,7 +75,7 @@ src_install() {
 	
 	dodir /boot/grub
 	cd ${D}/usr/share/grub/i386-pc
-	cp ${FILESDIR}/${P}/splash.xpm.gz ${D}/boot/grub
+	cp ${FILESDIR}/splash.xpm.gz ${D}/boot/grub
 	cd ${S}
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO
 }
