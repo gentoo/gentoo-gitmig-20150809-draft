@@ -2,7 +2,7 @@ MD5 3a0e5f78e38031ab57be3863a456d514 samba-3.0.7.ebuild 13924
 MD5 9b192ecc1db0a52318a676e8c03d4ac2 samba-3.0.7-r1.ebuild 15395
 MD5 cd9f3589a14d50054a0b1e4e129602af samba-3.0.6-r4.ebuild 14203
 MD5 fc36819e4e02fa146e936aa31947ad27 samba-3.0.6-r3.ebuild 14226
-MD5 76f2d1d2978c6fb0c08f7af88d1b44fe samba-3.0.8.ebuild 16489
+MD5 0d32bda2f1bfaa7b313d82066d1614ff samba-3.0.8.ebuild 16497
 MD5 95ce1b7ee42c4d08edd75b61e1f6bf67 ChangeLog 22905
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086

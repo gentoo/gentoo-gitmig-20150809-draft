@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.8.ebuild,v 1.1 2004/11/09 09:30:55 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.8.ebuild,v 1.2 2004/11/09 09:38:00 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -322,8 +322,8 @@ src_install() {
 	fi
 	# dirs -----------------------------------------------------------------
 	diropts -m0700
-	dodir /etc/samba/private
-	touch ${D}/etc/samba/private/.keep
+	dodir /var/lib/samba/private
+	touch ${D}/var/lib/samba/private/.keep
 	diropts -m1777
 	dodir /var/spool/samba
 	touch ${D}/var/spool/samba/.keep
