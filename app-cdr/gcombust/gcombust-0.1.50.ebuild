@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Matthew Kennedy <mbkennedy@ieee.com>
-# Maintainer: Chris Houser <chouser@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.50.ebuild,v 1.2 2002/05/24 05:31:14 agenkin Exp $
 
 DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen"
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"
