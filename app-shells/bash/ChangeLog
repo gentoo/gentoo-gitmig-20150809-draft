@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.39 2004/07/28 13:49:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.40 2004/07/29 01:47:45 ciaranm Exp $
+
+  29 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> bash-3.0.ebuild:
+  Remove ~sparc for now, see bug #58703
 
 *bash-3.0 (28 Jul 2004)
 

@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 59d22d8b43b008b4eefaa51c7a2693b8 ChangeLog 8125
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6a2f5ace1a2dd30b1bee55eba1509027 bash-2.05b-r10.ebuild 3041
-MD5 58621a9b9d30b4492e2e4004a237ebc4 bash-3.0.ebuild 3131
+MD5 bfc3aba25e0e2dca3e91bccadeb09a30 ChangeLog 8234
 MD5 9b26b6899167a29ee4e9c1ad0d39b5a1 bash-2.05b-r9.ebuild 2909
+MD5 ffb7966e9e7658be35568b2d021a0442 bash-3.0.ebuild 3125
+MD5 6a2f5ace1a2dd30b1bee55eba1509027 bash-2.05b-r10.ebuild 3041
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
-MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
-MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
-MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
-MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
 MD5 92f8f2d44177d92edd757366dbd261dc files/bashrc 761
 MD5 30a9ff1b688e79f59376a47d882f3419 files/digest-bash-3.0 128
-MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
+MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
+MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
 MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r10 461
+MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
+MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
+MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCCuKHTu7gpaalycRAimYAJ0YpFUIvOzqhiHymTHFArGb3GkGtgCg4jtC
-1NfD/5D2yixk8202x4ZrNSM=
-=fFLE
+iD8DBQFBCFa2LLFUmVNQ7rkRAv1XAKC04sQkm4rmMOmAuWzBSVWz0s16yACgtE8S
+ii6M7DgvAK0tMJFI0hIIvr4=
+=Cpdv
 -----END PGP SIGNATURE-----
