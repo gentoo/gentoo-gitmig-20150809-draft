@@ -21,12 +21,15 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (11 Sep 2002)
+# Masked for testing
+=x11-misc/hotkeys-0.5.5
+
 # <cardoe@gentoo.org> (11 Sep 2002)
 # j2ee claims freetds, firebird, and curl aren't valid use flags
 # and this ebuild messes up hardcore and isn't tested
 =dev-php/mod-php-4.2.3
 =dev-php/php-4.2.3
-
 
 # <tantive@gentoo.org> (10 Sep 2002)
 # Version bumped, masked due to freeze
