@@ -1,0 +1,2 @@
+# use the colo bootloader
+virtual/bootloader		sys-boot/colo

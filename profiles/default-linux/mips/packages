@@ -1,0 +1,10 @@
+# mips base packages
+
+
+# Core Packages
+*>=sys-devel/gnuconfig-20030708
+*>=sys-kernel/mips-headers-2.4.21
+
+# Don't Work
+!dev-lang/gpc
+

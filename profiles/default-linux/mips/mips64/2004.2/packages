@@ -1,0 +1,5 @@
+# mips64 o32 packages
+
+# Since we're running a mips64 kernel w/ 32bit (o32) userland,
+# we need gcc-mips64 for kernels
+sys-devel/gcc-mips64

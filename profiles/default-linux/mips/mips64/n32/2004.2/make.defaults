@@ -1,0 +1,36 @@
+# copyright 2000 Daniel Robbins, Gentoo Foundation.
+# System-wide defaults for the Portage system
+
+ARCH="mips"
+ABI=n32
+
+# Host-type
+
+CHOST=mips64-unknown-linux-gnu
+CCHOST=mips64-unknown-linux-gnu
+PLATFORM=${CHOST}
+
+PROFILE_ARCH="mips64"
+
+# Options passed to make during the build process
+MAKEOPTS="-j1"
+
+# Fetching command (5 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+# Global configure options
+FEATURES="debug"
+# C Compiler flags (mips4 atm)
+CFLAGS="-O2 -pipe -mabi=n32 -mips4"
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+USE="slang readline gpm berkdb gdbm tcpd pam crypt libwww ssl nls perl python sdl mips n32 -multilib"
+
+ACCEPT_KEYWORDS="mips ~mips"
+
+COMPILER="gcc3"
+
+#Make sure everything is compiled as N32
+#export LDEMULATION=elf32btsmipn32
+#export GNUTARGET=elf32-ntradbigmips
+#EXTRA_ECONF="--libdir=/usr/lib32"

@@ -1,0 +1,7 @@
+# cobalt-mips base packages
+
+# Controls the front LCD panel
+*sys-apps/lcdutils
+
+# Bootloader
+*sys-boot/colo

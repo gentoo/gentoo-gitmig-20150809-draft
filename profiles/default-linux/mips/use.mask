@@ -1,0 +1,91 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.1 2004/09/23 05:38:34 kumba Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# mask evolution use flag until it can be properly tested
+evo
+
+# Ilya A. Volynets-Evenbach
+# no nptl on mips yet
+nptl
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+
+# Paul de Vrieze <pauldv@gentoo.org>
+# There is no java in this profile (if there is it must be available). Without
+# this repoman will fail on apps like sys-libs/db
+java
+
+# Aron Griffis <agriffis@gentoo.org>
+# acl doesn't build on mips atm.  Mask it so that vim quits
+# complaining
+acl
+
+
+# Flags which aren't applicable to mips (Mostly copied from sparc)
+3dfx
+3dnow
+accessibility
+acpi
+afs
+altivec
+apm
+arts
+directfb
+dvdr
+icc
+icc-pgo
+informix
+firebird
+ggi
+lirc
+mmx
+oci8
+sse
+svga
+tcc
+trusted
+voodoo3
+smartcard
+emacs
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+hppa
+arm
+amd64
+ia64
+ppc64
+s390
+uclibc
+macos
+x86-obsd
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+php
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
