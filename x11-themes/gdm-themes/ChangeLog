@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/gdm-themes
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.1 2002/10/29 10:24:27 leonardop Exp $
+
+*gdm-themes-1.0 (29 Oct 2002)
+
+  29 Oct 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
+  gdm-themes-1.0.ebuild : Initial release.
