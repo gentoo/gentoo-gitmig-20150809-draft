@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.3 2005/03/29 03:07:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.4 2005/04/03 12:40:00 kugelfang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="doc emacs"
 
 DEPEND="doc? ( virtual/tetex )"
@@ -32,22 +32,22 @@ src_compile() {
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
-	if use amd64 || use alpha || use hppa ; then
-		# Fixes BUG #49583
-		einfo "Building shared library..."
-		cd Olinux-${CHOST%%-*}
-		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
-		einfo "Building executables..."
-		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exectuables failed!"
-	else
-		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp || die
-	fi
+
+	# Shared libraries should be PIC on ALL architectures.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/31
+	# Fixes BUG #49583
+	einfo "Building shared library..."
+	cd Olinux-* || die "Bad directory. File a BUG!"
+	emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+	einfo "Building executables..."
+	emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building executables failed!"
+
 	use doc || rm -rf doc/*.tex
 	use doc && emake doc
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
 		doins emacs/pari.el
