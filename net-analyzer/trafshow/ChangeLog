@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/trafshow
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.10 2004/12/16 10:05:26 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.11 2005/01/08 10:37:31 dragonheart Exp $
+
+*trafshow-4.0 (08 Jan 2005)
+
+  08 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/trafshow-4.0-gentoo.patch, +trafshow-4.0.ebuild:
+  version bump as per bug #58243. Thanks to Kalin KOZHUHAROV <kalin@thinrope.net>
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> trafshow-3.1-r1.ebuild:
   Stable on ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.15 2005/01/08 10:37:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.1 2005/01/08 10:37:31 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -13,9 +13,9 @@ HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64"
 
-DEPEND="net-libs/libpcap
+DEPEND=">=net-libs/libpcap-0.8.3
 	sys-libs/ncurses
 	slang? ( >=sys-libs/slang-1.4.2 )"
 
@@ -27,9 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use slang; then
-		: slang is the default
-	else
+	if ! use slang; then
 		# No command-line option so pre-cache instead
 		export ac_cv_have_curses=ncurses
 		export LIBS=-lncurses
