@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.4.ebuild,v 1.1 2004/03/29 10:53:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.4.ebuild,v 1.2 2004/04/27 12:10:08 pvdabeel Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -26,7 +26,7 @@ IUSE="extlib"
 DESCRIPTION="Full sources for the linux kernel 2.6 with Pegasos support"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/patches-${KV}.bz2"
-KEYWORDS="~ppc"
+KEYWORDS="ppc"
 DEPEND=" extlib? ( dev-libs/ucl )"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
