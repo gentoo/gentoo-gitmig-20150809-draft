@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/splint
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.2 2003/06/08 04:40:12 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.3 2003/09/05 22:06:38 solar Exp $
+
+*splint-3.1.1 (05 Sep 2003)
+
+  05 Sep 2003; <solar@gentoo.org> splint-3.1.1.ebuild:
+  version bump 3.0.1.6 -> 3.1.1
 
   07 Jun 2003; <rac@gentoo.org> splint-3.0.1.6.ebuild:
   Add IUSE
