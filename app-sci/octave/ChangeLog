@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.17 2003/08/29 00:32:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.18 2003/09/16 22:07:49 seemant Exp $
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> octave-2.0.17-r2.ebuild,
+  octave-2.1.36-r1.ebuild, octave-2.1.49.ebuild:
+  filter out -ffast-math, as it causes segfaults. Thanks to: Jani Kotakoski
+  <jkkoski@iki.fi> in bug #28809
 
   28 Aug 2003; Jason Wever <weeve@gentoo.org> octave-2.1.49.ebuild:
   Added ~sparc to keywords to fix bug 27486.

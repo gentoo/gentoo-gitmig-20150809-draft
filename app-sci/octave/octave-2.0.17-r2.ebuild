@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17-r2.ebuild,v 1.3 2003/04/06 06:32:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17-r2.ebuild,v 1.4 2003/09/16 22:07:49 seemant Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -19,6 +21,9 @@ KEYWORDS="x86 ppc"
 SLOT="0"
 
 src_compile() {
+
+	filter-flags -ffast-math
+
 	# NOTE: This version only works with gcc-2.x not gcc-3.x
 	econf \
 		--enable-dl \

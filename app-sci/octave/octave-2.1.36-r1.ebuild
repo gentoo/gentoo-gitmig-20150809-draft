@@ -1,15 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.7 2003/02/13 09:24:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.8 2003/09/16 22:07:49 seemant Exp $
+
+inherit flag-o-matic eutils
+
+IUSE="tetex"
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
-SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2"
 HOMEPAGE="http://www.octave.org/"
+SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2"
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
-SLOT="0"
-IUSE="tetex"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r3
@@ -27,11 +30,14 @@ PROVIDE="dev-lang/octave"
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
-	patch -p0 < ${FILESDIR}/filebuf.diff
+	epatch ${FILESDIR}/filebuf.diff
 
 }
 
 src_compile() {
+
+	filter-flags -ffast-math
+
 	# NOTE: This version actually works with gcc-3.x
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
