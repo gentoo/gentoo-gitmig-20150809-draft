@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.5 2003/09/30 21:40:35 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.6 2003/11/12 00:51:44 liquidx Exp $
+
+*pyxmms-2.01 (12 Nov 2003)
+
+  12 Nov 2003; Alastair Tse <liquidx@gentoo.org> pyxmms-1.07.ebuild,
+  pyxmms-2.01.ebuild:
+  version bump, added PYTHON_MODNAME and using newer sed expression
 
   30 Sep 2003; Todd Sunderlin <todd@gentoo.org> pyxmms-1.07.ebuild:
   added ~sparc keyword
