@@ -1,49 +1,49 @@
 # ChangeLog for sys-kernel/ppc-development-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.8 2003/12/02 22:31:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.9 2003/12/04 22:20:57 plasmaroo Exp $
 
 *ppc-development-sources-2.6.0_beta11-r1 (02 Dec 2003)
 
   02 Dec 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-development-sources-2.6.0_beta11-r1.ebuild:
-  New version
+  New version.
 
 *ppc-development-sources-2.6.0_beta10-r1 (26 Nov 2003)
 
   26 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-development-sources-2.6.0_beta10-r1.ebuild:
-  New snapshot
+  New snapshot.
 
   20 Nov 2003; Bartosch Pixa <darkspecter@gentoo.org> :
-  minor fix in the r5 patch
+  Minor fix in the -r5 patch.
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   ppc-development-sources-2.6.0_beta9-r3.ebuild,
   ppc-development-sources-2.6.0_beta9-r4.ebuild,
   ppc-development-sources-2.6.0_beta9-r5.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
 *ppc-development-sources-2.6.0_beta9-r5 (19 Nov 2003)
 
   19 Nov 2003; Bartosch Pixa <darkspecter@gentoo.org>
   ppc-development-sources-2.6.0_beta9-r5.ebuild:
-  new snapshot. various G5 bits, linuxppc-2.5 sync, rivafb fixes and more
+  New snapshot. Various G5 bits, linuxppc-2.5 sync, rivafb fixes and more.
 
   14 Nov 2003; Bartosch Pixa <darkspecter@gentoo.org>
   ppc-development-sources-2.6.0_beta9-r3.ebuild,
   ppc-development-sources-2.6.0_beta9-r4.ebuild:
-  small ebuild fixup
+  Small ebuild fixup...
 
 *ppc-development-sources-2.6.0_beta9-r4 (14 Nov 2003)
 
   14 Nov 2003; Bartosch Pixa <darkspecter@gentoo.org>
   ppc-development-sources-2.6.0_beta9-r4.ebuild:
-  new benh snapshot
+  New benh snapshot...
 
 *ppc-development-sources-2.6.0_beta9-r3 (05 Nov 2003)
 
   05 Nov 2003; Bartosch Pixa <darkspecter@gentoo.org>
   ppc-development-sources-2.6.0_beta9-r3.ebuild:
-  initial import
+  Initial import...
 
