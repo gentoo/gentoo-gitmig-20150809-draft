@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.2 2003/04/15 17:18:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.3 2003/05/16 23:31:38 liquidx Exp $
 
 IUSE="ssl"
 S="${WORKDIR}/${PN}"
@@ -11,7 +11,7 @@ DEPEND=">=dev-libs/pwlib-1.4.11
 	ssl? ( dev-libs/openssl )"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc -sparc "
+KEYWORDS="x86 ~ppc -sparc "
 
 pkg_setup() {
 	# to prevent merge problems with broken makefiles from old
