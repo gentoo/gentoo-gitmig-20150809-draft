@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.27 2004/10/22 17:15:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.28 2004/11/23 18:52:39 squinky86 Exp $
+
+  23 Nov 2004; Jon Hood <squinky86@gentoo.org> bittornado-0.3.1.ebuild,
+  bittornado-0.3.6.ebuild, bittornado-0.3.7.ebuild, bittornado-0.3.8.ebuild:
+  Fix wxpython dependency thanks to pythonhead, mark 0.3.8 stable on x86, #71075.
 
 *bittornado-0.3.8 (22 Oct 2004)
 
