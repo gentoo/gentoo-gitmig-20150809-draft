@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.2.ebuild,v 1.3 2003/07/14 20:20:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.3.ebuild,v 1.1 2003/07/14 20:20:47 pvdabeel Exp $
 
 A=dvssl-${PV}.tar.gz
 S=${WORKDIR}/dvssl-${PV}
@@ -18,6 +18,14 @@ DEPEND="virtual/glibc
 	dev-libs/dvnet"
 RDEPEND=${DEPEND}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	aclocal
+	autoconf
+	automake
+}
+
 src_install() {
-	make prefix=${D}/usr install || die
+	make DESTDIR=${D} prefix=${D}/usr install || die
 }
