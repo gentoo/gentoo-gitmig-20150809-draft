@@ -1,8 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-205.ebuild,v 1.3 2004/04/05 14:41:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/mzscheme-205.ebuild,v 1.4 2004/04/11 06:38:46 mkennedy Exp $
 
-IUSE=""
+inherit flag-o-matic
+
+# http://bugs.gentoo.org/show_bug.cgi?id=47037 -march=athlon-xp causes
+# build failure
+
+if is-flag '-march=athlon-xp'; then
+	replace-flags '-march=athlon-xp' '-mcpu=athlon-xp'
+fi
 
 S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
@@ -13,12 +20,11 @@ DEPEND=">=sys-devel/gcc-2.95.3-r7"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86"
+IUSE=""
 
 src_compile() {
 	cd ${S}/src
-
 	econf || die "./configure failed"
-
 	make || die
 }
 
