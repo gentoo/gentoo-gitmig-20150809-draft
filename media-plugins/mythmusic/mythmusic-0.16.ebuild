@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.16.ebuild,v 1.1 2004/09/10 18:48:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.16.ebuild,v 1.2 2004/09/12 10:04:27 aliz Exp $
 
-inherit myth gcc
+inherit myth gcc flag-o-matic
 
 DESCRIPTION="Music player module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
@@ -25,14 +25,19 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
 
-if [ "`gcc-version`" = "3.2" ] || [ "`gcc-version`" = "3.3" ] ; then
-	replace-flags mcpu=pentium4 mcpu=pentium3
-	replace-flags march=pentium4 march=pentium3
-fi
-
 setup_pro() {
 	return 0
 }
+
+src_unpack() {
+	if [ "`gcc-version`" = "3.2" ] || [ "`gcc-version`" = "3.3" ] ; then
+		replace-flags mcpu=pentium4 mcpu=pentium3
+		replace-flags march=pentium4 march=pentium3
+	fi
+
+	myth_src_unpack
+}
+
 
 src_compile() {
 	econf \
