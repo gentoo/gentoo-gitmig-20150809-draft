@@ -11,6 +11,16 @@ start() {
 	if [ ! -d ${BASEDIR}/${SUBDIR} ]
 	then
 		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
+		if [ ! -d ${BASEDIR} ]
+		then
+			mkdir -p ${BASEDIR}
+			chown ${USER}:users ${BASEDIR}
+			if [ ! -d ${BASEDIR} ]
+                	then
+                        	eerror "Directory ${BASEDIR} could not be created!"
+                        	return 1
+			fi
+                fi
 		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
 		if [ ! -d ${BASEDIR}/${SUBDIR} ]
 		then

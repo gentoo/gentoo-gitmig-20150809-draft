@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.60 2004/08/04 03:38:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.61 2004/08/04 17:13:05 squinky86 Exp $
+
+  04 Aug 2004; Jon Hood <squinky86@gentoo.org> files/mldonkey.initd:
+  Fix init script thanks to Antonio <netbix@tiscali.it> in #58331.
 
 *mldonkey-2.5.22-r1 (03 Aug 2004)
 
