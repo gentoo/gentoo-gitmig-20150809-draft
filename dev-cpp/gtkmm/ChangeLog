@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.40 2004/07/14 11:45:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.41 2004/08/04 12:36:02 lv Exp $
+
+  04 Aug 2004; Travis Tilley <lv@gentoo.org> gtkmm-2.4.3.ebuild:
+  removed amd64 fix that's no longer needed, should close bug 58470
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> gtkmm-2.2.12.ebuild:
   stable on amd64 for gcc 3.4 fixes
