@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.22 2004/03/15 15:22:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/ChangeLog,v 1.23 2004/04/09 12:47:22 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> foomatic-3.0.1.ebuild:
+  stable on x86
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> foomatic-3.0.1.ebuild:
   Added ~mips keyword.

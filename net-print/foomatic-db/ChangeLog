@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.11 2004/03/14 00:59:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.12 2004/04/09 12:46:31 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org>
+  foomatic-db-20040302.ebuild:
+  stable on x86
 
 *foomatic-db-20040302 (13 Mar 2004)
 
