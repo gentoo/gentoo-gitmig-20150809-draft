@@ -1,5 +1,5 @@
-MD5 efb3369752c3e490bd0c8658ee478b5c kadslwatch-01.00.05.ebuild 771
-MD5 12920a4bfa20320e77438f3c4180fda4 ChangeLog 749
+MD5 0ad8c5cf17df60066b0b7da79afe5047 kadslwatch-01.00.05.ebuild 776
+MD5 1cb04a481d4bdf2a8c7c4796ec406c64 ChangeLog 856
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 86a06d84922a5ed4bed06c10ae0c036b files/digest-kadslwatch-01.00.05 71
 MD5 c7fdc44e6f308206a89317cb4ec3e9a3 files/kadslwatch-01.00.05-Makefiles.patch 4657
