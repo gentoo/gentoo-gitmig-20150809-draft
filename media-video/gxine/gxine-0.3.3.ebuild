@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.13 2004/08/13 12:23:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.3.3.ebuild,v 1.14 2004/08/28 16:32:41 tgall Exp $
 
 inherit nsplugins
 
@@ -18,7 +18,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 IUSE="X nls lirc"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~ppc64"
 
 SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
 

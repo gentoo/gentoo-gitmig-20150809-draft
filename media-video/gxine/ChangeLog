@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.18 2004/08/13 12:23:43 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.19 2004/08/28 16:32:41 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> gxine-0.3.3.ebuild:
+  marked ~ppc64, bug #59651
 
   13 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> gxine-0.3.3.ebuild:
   Marked ~amd64.
