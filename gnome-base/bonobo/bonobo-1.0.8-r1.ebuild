@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.8-r1.ebuild,v 1.1 2001/08/21 15:15:53 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.8-r1.ebuild,v 1.2 2001/08/23 10:05:13 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of language and system independant CORBA interfaces"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
-         ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext ) sys-devel/perl
