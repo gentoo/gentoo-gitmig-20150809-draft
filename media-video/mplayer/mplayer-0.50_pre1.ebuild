@@ -1,20 +1,20 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>
+# Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>,
 #         Donny Davies <woodchip@gentoo.org>
-# /home/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.18_pre-r1.ebuild,v 1.1 2001/09/24 06:34:22 woodchip Exp
 
 MY_P="MPlayer-0.50pre"
+PRE_VERSION="1"
 S=${WORKDIR}/${MY_P}?
 
-# Only install skin if GUI should be build (gtk as USE flag)
+# Only install Skin if GUI should be build (gtk as USE flag)
 if [ "`use gtk`" ] ; then
-	A="${MY_P}1.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip"
+	A="${MY_P}${PRE_VERSION}.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip"
 	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
 		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
 		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 else		  
-        A="${MY_P}1.tar.bz2 mp-arial-iso-8859-1.zip"
+        A="${MY_P}${PRE_VERSION}.tar.bz2 mp-arial-iso-8859-1.zip"
         SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
                  ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 fi
@@ -59,7 +59,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	# Fix bug with default skin
+	# Fix bug with the default Skin
 	cd ${WORKDIR}/default
 	patch <${FILESDIR}/default-skin.diff
 
@@ -93,11 +93,13 @@ src_install() {
 
 	make prefix=${D}/usr/share BINDIR=${D}/usr/bin install || die
 	
+	# MAN pages are already installed ...
 	rm DOCS/*.1
+	# Install the rest of the documentation
 	dodir /usr/share/doc/${PF}
 	cp -a DOCS/* ${D}/usr/share/doc/${PF}
 
-	# Install default skin
+	# Install the default Skin
 	if [ "`use gtk`" ] ; then
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
@@ -106,7 +108,7 @@ src_install() {
 		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
 	fi
 
-	# Install the font used by OSD and the gui
+	# Install the font used by OSD and the GUI
 	dodir /usr/share/mplayer/fonts
 	cp -a ${WORKDIR}/iso-8859-1/ ${D}/usr/share/mplayer/fonts
 	dosym /usr/share/mplayer/fonts/iso-8859-1/arial-14/ /usr/share/mplayer/font
