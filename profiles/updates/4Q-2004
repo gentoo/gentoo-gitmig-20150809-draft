@@ -42,3 +42,4 @@ move app-misc/rox rox-base/rox
 move app-misc/rox-session rox-base/rox-session
 slotmove ~sys-devel/libtool-1.5.2 0 1.5
 move x11-misc/kgamma kde-misc/kgamma
+move app-misc/mwavem net-dialup/mwavem
