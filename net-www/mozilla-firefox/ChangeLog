@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.93 2004/12/29 15:29:38 sejo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.94 2005/01/02 11:58:16 gmsoft Exp $
+
+  02 Jan 2005; Guy Martin <gmsoft@gentoo.org> mozilla-firefox-1.0-r3.ebuild:
+  Stable on hppa. YAY !
 
   29 Dec 2004; <SeJo@gentoo.org> :
   stable on ppc glsa: 68976
