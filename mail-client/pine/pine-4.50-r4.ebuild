@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.6 2004/07/14 16:25:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.7 2004/08/09 12:39:59 slarti Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ DEPEND="virtual/libc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )"
+RDEPEND="app-misc/mime-types"
 
 S=${WORKDIR}/${PN}${PV}
 
@@ -119,9 +120,6 @@ src_install() {
 	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload
 
 	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1
-
-	insinto /etc
-	doins doc/mime.types
 
 	# Only mailbase should install /etc/mailcap
 #	donewins doc/mailcap.unx mailcap
