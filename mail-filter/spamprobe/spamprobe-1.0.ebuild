@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.0.ebuild,v 1.1 2004/10/22 23:51:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.0.ebuild,v 1.2 2004/12/06 15:12:01 ticho Exp $
 
 DESCRIPTION="Fast, intelligent, automatic spam detector using Paul Graham style Bayesian analysis of word counts in spam and non-spam emails."
 HOMEPAGE="http://spamprobe.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 IUSE="berkdb"
 DEPEND="berkdb? ( >=sys-libs/db-3.2 )
