@@ -1,0 +1,13 @@
+--- scripts/makefile.linux	2004-02-05 13:47:03.155179192 +0000
++++ scripts/makefile.linux	2004-02-05 13:48:45.163671544 +0000
+@@ -73,8 +73,8 @@
+ 
+ all: libpng.a $(LIBNAME).so pngtest pngtest-static libpng.pc libpng-config
+ 
+-libpng.a: $(OBJS)
+-	ar rc $@ $(OBJS)
++libpng.a: $(OBJSDLL)
++	ar rc $@ $(OBJSDLL)
+ 	$(RANLIB) $@
+ 
+ libpng.pc:

@@ -1,0 +1,13 @@
+--- Makefile.in	2004-02-05 13:35:09.214714640 +0000
++++ Makefile.in	2004-02-05 13:40:16.145054136 +0000
+@@ -72,8 +72,8 @@
+ 	  echo '		*** zlib test FAILED ***'; \
+ 	fi
+ 
+-libz.a: $(OBJS) $(OBJA)
+-	$(AR) $@ $(OBJS) $(OBJA)
++libz.a: $(PIC_OBJS) $(OBJA)
++	$(AR) $@ $(PIC_OBJS) $(OBJA)
+ 	-@ ($(RANLIB) $@ || true) >/dev/null 2>&1
+ 
+ match.o: match.S

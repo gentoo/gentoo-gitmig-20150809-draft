@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.4 2004/01/12 02:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.2c.ebuild,v 1.5 2004/02/05 15:16:37 aliz Exp $
 
 IUSE="ssl readline tcpd ncurses"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc hppa"
+KEYWORDS="x86 ~ppc ~sparc hppa ~amd64"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2
@@ -19,6 +19,28 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
 	ncurses? ( sys-libs/ncurses )"
+
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/../gdchart0.94c/zlib-1.1.4/
+	        epatch ${FILESDIR}/zlib-1.1.4-gzprintf.patch
+	        epatch ${FILESDIR}/zlib-1.1.4-glibc.patch
+	        epatch ${FILESDIR}/zlib-1.1.4-build-fPIC.patch
+	        epatch ${FILESDIR}/zlib-1.1.4-mapfile.patch
+		epatch ${FILESDIR}/zlib-1.1.4-build-static-with-fpic.patch
+
+	cd ${S}/../gdchart0.94c/
+		epatch ${FILESDIR}/gdchart0.94c-fpic.patch
+
+	cd ${S}/../gdchart0.94c/gd-1.8.3/
+		epatch ${FILESDIR}/gd-1.8.3-fpic.patch
+
+	cd ${S}/../gdchart0.94c/gd-1.8.3/libpng-1.2.4/
+		epatch ${FILESDIR}/libpng-1.2.4-fpic.patch
+
+}
 
 src_compile() {
 	cd ${S}
@@ -35,25 +57,28 @@ src_compile() {
 	# shipped with just in case future versions are incompatible -- blocke
 
 	# compile gdchart
+	einfo "Configure gdchart"
 	cd ../gdchart0.94c
 	./configure || die "gdchart configure problem"
 
 	# subtree #1
+	einfo "Compiling libpng"
 	cd gd-1.8.3/libpng-1.2.4
-	[ "${ARCH}" = "hppa" ] && sed -i scripts/makefile.linux -e "/^CFLAGS/s/-O3/-O3 -fPIC/"
-	make -f scripts/makefile.linux || die "libpng compile problem"
+	make -f scripts/makefile.linux CFLAGS="${CFLAGS}" || die "libpng compile problem"
 
 	# subtree #2
+	einfo "Compiling zlib"
 	cd ../../zlib-1.1.4/
 	./configure || die "zlib configure problem"
-	[ "${ARCH}" = "hppa" ] && sed -i Makefile -e "/^CFLAGS/s/$/ -fPIC/"
 	make || die "zlib compile problem"
 
 	# gdchart make
+	einfo "Compiling gdchart"
 	cd ../
-	make || die "gdchart compile problem"
+	make CFLAGS="${CFLAGS}" || die "gdchart compile problem"
 
 	# now ntop itself...
+	einfo "Compiling ntop"
 	cd ../ntop
 	econf ${myconf} || die "configure problem"
 	make || die "compile problem"

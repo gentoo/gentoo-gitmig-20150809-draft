@@ -1,0 +1,29 @@
+--- Makefile.in	2004-02-05 15:11:29.652954456 +0000
++++ Makefile.in	2004-02-05 15:12:11.349615600 +0000
+@@ -1,4 +1,4 @@
+-CC = @CC@ -fPIC
++CC = @CC@
+ GDC_INCL = .
+ GD_INCL  = gd-1.8.3
+ GD_LIB   = gd-1.8.3
+@@ -12,16 +12,16 @@
+ 
+ # --- compile the lib ---
+ price_conv.o: price_conv.c
+-	$(CC) -g -c price_conv.c
++	$(CC) $(CFLAGS) -fPIC -g -c price_conv.c
+ 
+ gdc.o: gdc.c gdc.h
+-	$(CC) -I$(GD_INCL) -I$(GDC_INCL) -g -c gdc.c
++	$(CC) $(CFLAGS) -fPIC -I$(GD_INCL) -I$(GDC_INCL) -g -c gdc.c
+ 
+ gdc_pie.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gdcpie.h gdc_pie.c
+-	$(CC) -I$(GD_INCL) -I$(GDC_INCL) -g -c gdc_pie.c
++	$(CC) $(CFLAGS) -fPIC -I$(GD_INCL) -I$(GDC_INCL) -g -c gdc_pie.c
+ 
+ gdchart.o: $(GDC_INCL)/gdc.h $(GDC_INCL)/gdchart.h gdchart.c
+-	$(CC) -I$(GD_INCL) -I$(GDC_INCL) -g -c gdchart.c
++	$(CC) $(CFLAGS) -fPIC -I$(GD_INCL) -I$(GDC_INCL) -g -c gdchart.c
+ 
+ $(GD_LIB)/libgd.a:
+ 	cd $(GD_LIB) ; $(MAKE) -f Makefile libgd.a

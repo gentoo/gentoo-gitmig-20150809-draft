@@ -1,0 +1,294 @@
+This patch fixes security holes caused by potential buffer overflows
+in the implementation of the gzprintf() function in zlib 1.1.4. The
+security holes are fixed for platforms providing vsnprintf(3) and
+snprintf(3) only. This patch is derived from a prepared security patch,
+originally created by Kelledin <kelledin@users.sourceforge.net>. The
+OpenPKG project reduced the patch in size and fixed the configuration
+checks.
+
+diff -ru3 zlib-1.1.4.orig/configure zlib-1.1.4/configure
+--- zlib-1.1.4.orig/configure	Wed Jul  8 20:19:35 1998
++++ zlib-1.1.4/configure	Thu Feb 27 15:14:54 2003
+@@ -155,7 +155,212 @@
+   echo "Checking for unistd.h... No."
+ fi
+ 
+-cat > $test.c <<EOF
++cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdlib.h>
++
++#if (defined(__MSDOS__) || defined(_WINDOWS) || defined(_WIN32) || defined(__WIN32__) || defined(WIN32) || defined(__STDC__) || defined(__cplusplus) || defined(__OS2__)) && !defined(STDC)
++#  define STDC
++#endif
++
++int main() 
++{
++#ifndef STDC
++  choke me
++#endif
++
++  return 0;
++}
++EOF
++
++if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++  echo "Checking whether to use vsnprintf() or snprintf()... using vsnprintf()"
++
++  cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest(char *fmt, ...)
++{
++  char buf[20];
++  va_list ap;
++
++  va_start(ap, fmt);
++  vsnprintf(buf, sizeof(buf), fmt, ap);
++  va_end(ap);
++  return 0;
++}
++
++int main()
++{
++  return (mytest("Hello%d\n", 1));
++}
++EOF
++  
++  if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++    CFLAGS="$CFLAGS -DHAS_vsnprintf"
++    echo "Checking for vsnprintf() in stdio.h... Yes."
++
++    cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest(char *fmt, ...)
++{
++  int i;
++  char buf[20];
++  va_list ap;
++
++  va_start(ap, fmt);
++  i = vsnprintf(buf, sizeof(buf), fmt, ap);
++  va_end(ap);
++  return 0;
++}
++
++int main()
++{
++  return (mytest("Hello%d\n", 1));
++}
++EOF
++
++    if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++      CFLAGS="$CFLAGS -DHAS_vsnprintf_return"
++      echo "Checking for return value of vsnprintf()... Yes."
++    else
++      echo "Checking for return value of vsnprintf()... No."
++      echo "  WARNING: apparently vsnprintf() does not return a value. zlib"
++      echo "  can build but will be open to possible string-format security"
++      echo "  vulnerabilities."
++    fi
++  else
++    echo "Checking for vsnprintf() in stdio.h... No."
++    echo "  WARNING: vsnprintf() not found, falling back to vsprintf(). zlib"
++    echo "  can build but will be open to possible buffer-overflow security"
++    echo "  vulnerabilities."
++
++    cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest(char *fmt, ...)
++{
++  int i;
++  char buf[20];
++  va_list ap;
++
++  va_start(ap, fmt);
++  i = vsprintf(buf, fmt, ap);
++  va_end(ap);
++  return 0;
++}
++
++int main() 
++{
++  return (mytest("Hello%d\n", 1));
++}
++EOF
++
++    if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++      CFLAGS="$CFLAGS -DHAS_vsprintf_return"
++      echo "Checking for return value of vsprintf()... Yes."
++    else
++      echo "Checking for return value of vsprintf()... No."
++      echo "  WARNING: apparently vsprintf() does not return a value. zlib"
++      echo "  can build but will be open to possible string-format security"
++      echo "  vulnerabilities."
++    fi
++  fi
++else
++  echo "Checking whether to use vsnprintf() or snprintf()... using snprintf()"
++
++  cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest() 
++{
++  char buf[20];
++
++  snprintf(buf, sizeof(buf), "%s", "foo");
++  return 0;
++}
++
++int main() 
++{
++  return (mytest());
++}
++EOF
++
++  if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++    CFLAGS="$CFLAGS -DHAS_snprintf"
++    echo "Checking for snprintf() in stdio.h... Yes."
++
++    cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest(char *fmt, ...)
++{
++  int i;
++  char buf[20];
++
++  i = snprintf(buf, sizeof(buf), "%s", "foo");
++  return 0;
++}
++
++int main() 
++{
++  return (mytest());
++}
++EOF
++
++    if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++      CFLAGS="$CFLAGS -DHAS_snprintf_return"
++      echo "Checking for return value of snprintf()... Yes."
++    else
++      echo "Checking for return value of snprintf()... No."
++      echo "  WARNING: apparently snprintf() does not return a value. zlib"
++      echo "  can build but will be open to possible string-format security"
++      echo "  vulnerabilities."
++    fi
++  else
++    echo "Checking for snprintf() in stdio.h... No."
++    echo "  WARNING: snprintf() not found, falling back to sprintf(). zlib"
++    echo "  can build but will be open to possible buffer-overflow security"
++    echo "  vulnerabilities."
++
++    cat >$test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++
++int mytest(char *fmt, ...) 
++{
++  int i;
++  char buf[20];
++
++  i = sprintf(buf, "%s", "foo");
++  return 0;
++}
++
++int main() 
++{
++  return (mytest());
++}
++EOF
++
++    if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++      CFLAGS="$CFLAGS -DHAS_sprintf_return"
++      echo "Checking for return value of sprintf()... Yes."
++    else
++      echo "Checking for return value of sprintf()... No."
++      echo "  WARNING: apparently sprintf() does not return a value. zlib"
++      echo "  can build but will be open to possible string-format security"
++      echo "  vulnerabilities."
++    fi
++  fi
++fi
++
++cat >$test.c <<EOF
+ #include <errno.h>
+ int main() { return 0; }
+ EOF
+diff -ru3 zlib-1.1.4.orig/gzio.c zlib-1.1.4/gzio.c
+--- zlib-1.1.4.orig/gzio.c	Mon Mar 11 14:16:01 2002
++++ zlib-1.1.4/gzio.c	Thu Feb 27 14:29:26 2003
+@@ -530,13 +530,31 @@
+ 
+     va_start(va, format);
+ #ifdef HAS_vsnprintf
++#  ifdef HAS_vsnprintf_return
++    len = vsnprintf(buf, sizeof(buf), format, va);
++    va_end(va);
++    if (len <= 0 || len >= sizeof(buf))
++        return 0;
++#  else
+     (void)vsnprintf(buf, sizeof(buf), format, va);
++    va_end(va);
++    len = strlen(buf);
++    if (len <= 0)
++        return 0;
++#  endif
+ #else
++#  ifdef HAS_vsprintf_return
++    len = vsprintf(buf, format, va);
++    va_end(va);
++    if (len <= 0 || len >= sizeof(buf))
++        return 0;
++#  else
+     (void)vsprintf(buf, format, va);
+-#endif
+     va_end(va);
+     len = strlen(buf); /* some *sprintf don't return the nb of bytes written */
+     if (len <= 0) return 0;
++#  endif
++#endif
+ 
+     return gzwrite(file, buf, (unsigned)len);
+ }
+@@ -553,14 +571,31 @@
+     int len;
+ 
+ #ifdef HAS_snprintf
++#  ifdef HAS_snprintf_return
++    len = snprintf(buf, sizeof(buf), format, a1, a2, a3, a4, a5, a6, a7, a8,
++	         a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
++    if (len <= 0 || len >= sizeof(buf))
++        return 0;
++#  else
+     snprintf(buf, sizeof(buf), format, a1, a2, a3, a4, a5, a6, a7, a8,
+ 	     a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
++    len = strlen(buf);
++    if (len <= 0)
++        return 0;
++#  endif
+ #else
++#  ifdef HAS_sprintf_return
++    len = sprintf(buf, format, a1, a2, a3, a4, a5, a6, a7, a8,
++	        a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
++    if (len <= 0 || len >= sizeof(buf))
++        return 0;
++#  else
+     sprintf(buf, format, a1, a2, a3, a4, a5, a6, a7, a8,
+ 	    a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+-#endif
+     len = strlen(buf); /* old sprintf doesn't return the nb of bytes written */
+     if (len <= 0) return 0;
++#  endif
++#endif
+ 
+     return gzwrite(file, buf, len);
+ }

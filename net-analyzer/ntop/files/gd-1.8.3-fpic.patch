@@ -1,0 +1,55 @@
+--- Makefile	2004-02-05 14:24:07.339051848 +0000
++++ Makefile	2004-02-05 14:39:37.227687288 +0000
+@@ -96,38 +96,41 @@
+ 	sh ./install-item 644 gdfonts.h $(INSTALL_INCLUDE)/gdfonts.h
+ 	sh ./install-item 644 gdfontt.h $(INSTALL_INCLUDE)/gdfontt.h
+ 
++%.o: %.c
++	$(CC) $(CFLAGS) -fPIC -c $< -o $@
++
+ gddemo: gddemo.o libgd.a
+-	$(CC) gddemo.o -o gddemo	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gddemo.o -o gddemo	$(LIBDIRS) $(LIBS)
+ 
+ pngtogd: pngtogd.o libgd.a
+-	$(CC) pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
++	$(CC) $(CFLAGS) -fPIC pngtogd.o -o pngtogd	$(LIBDIRS) $(LIBS) 
+ 
+ webpng: webpng.o libgd.a
+-	$(CC) webpng.o -o webpng	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC webpng.o -o webpng	$(LIBDIRS) $(LIBS)
+ 
+ pngtogd2: pngtogd2.o libgd.a
+-	$(CC) pngtogd2.o -o pngtogd2	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC pngtogd2.o -o pngtogd2	$(LIBDIRS) $(LIBS)
+ 
+ gdtopng: gdtopng.o libgd.a
+-	$(CC) gdtopng.o -o gdtopng	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gdtopng.o -o gdtopng	$(LIBDIRS) $(LIBS)
+ 
+ gd2topng: gd2topng.o libgd.a
+-	$(CC) gd2topng.o -o gd2topng	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gd2topng.o -o gd2topng	$(LIBDIRS) $(LIBS)
+ 
+ gd2copypal: gd2copypal.o libgd.a
+-	$(CC) gd2copypal.o -o gd2copypal	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gd2copypal.o -o gd2copypal	$(LIBDIRS) $(LIBS)
+ 
+ gdparttopng: gdparttopng.o libgd.a
+-	$(CC) gdparttopng.o -o gdparttopng	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gdparttopng.o -o gdparttopng	$(LIBDIRS) $(LIBS)
+ 
+ gdtest: gdtest.o libgd.a
+-	$(CC) gdtest.o -o gdtest	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gdtest.o -o gdtest	$(LIBDIRS) $(LIBS)
+ 
+ gd2time: gd2time.o libgd.a
+-	$(CC) gd2time.o -o gd2time	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gd2time.o -o gd2time	$(LIBDIRS) $(LIBS)
+ 
+ gdtestttf: gdtestttf.o libgd.a
+-	$(CC) gdtestttf.o -o gdtestttf	$(LIBDIRS) $(LIBS)
++	$(CC) $(CFLAGS) -fPIC gdtestttf.o -o gdtestttf	$(LIBDIRS) $(LIBS)
+ 
+ libgd.a: gd.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o gd_io_file.o gd_ss.o \
+ 	gd_io_ss.o gd_png.o gd_jpeg.o gdxpm.o gdfontt.o gdfonts.o gdfontmb.o gdfontl.o \
