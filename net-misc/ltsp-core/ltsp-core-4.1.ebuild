@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.1.ebuild,v 1.1 2004/08/19 09:28:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.1.ebuild,v 1.2 2004/08/19 09:58:59 mr_bones_ Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -139,7 +139,7 @@ src_install() {
 	done
 
 	# debug stuff
-	if [ `use debug` ]; then
+	if use debug ; then
 		echo "Installing debug packages..."
 		for FILE in ${LTSP_DEBUG}
 		do
@@ -148,7 +148,7 @@ src_install() {
 	fi
 
 	# X stuff
-	if [ `use X` ]; then
+	if use X ; then
 		echo "Installing X packages..."
 		for FILE in ${LTSP_X}
 		do

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp-core
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.20 2004/08/19 09:28:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ChangeLog,v 1.21 2004/08/19 09:58:59 mr_bones_ Exp $
+
+  19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> ltsp-core-4.1.ebuild:
+  fix use invocation
 
 *ltsp-core-4.1 (19 Aug 2004)
 
