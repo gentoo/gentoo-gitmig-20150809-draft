@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.3 2005/01/06 22:16:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.4 2005/01/06 22:28:27 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -43,7 +43,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	${XFCE_DEPEND}"
 
-S="${WORKDIR}/${MY_P:-${P}}"
+[[ -z ${XFCE_S} ]] \
+    && S="${WORKDIR}/${MY_P:-${P}}" \
+    || S="${XFCE_S}"
 
 xfce4_src_compile() {
 	if [[ "${DEBUG_OFF}" = "1" ]] && use debug; then
