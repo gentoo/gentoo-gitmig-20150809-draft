@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.62 2004/09/25 06:00:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.63 2004/10/07 19:21:56 j4rg0n Exp $
+
+  07 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> file-4.08.ebuild:
+  Removed ppc-macos keyword Bug # 65763
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> file-4.10-r1.ebuild:
   Marked stable on mips.
