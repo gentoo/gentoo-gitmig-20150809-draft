@@ -1,20 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.0.20010514.ebuild,v 1.1 2001/05/22 03:47:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.0.20010514.ebuild,v 1.2 2001/07/18 05:20:18 drobbins Exp $
 
 
-SRC_URI="ftp://ftp.fu-berlin.de/unix/languages/egcs/snapshots/2001-05-14/gcc-20010514.tar.gz"
-
-if [ "`use libg++`" ]
-then
-    SRC_URI="${SRC_URI}
+SRC_URI="ftp://ftp.fu-berlin.de/unix/languages/egcs/snapshots/2001-05-14/gcc-20010514.tar.gz
     ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
     ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000312.diff.gz
     ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000419.diff.gz
     ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000816.diff.gz
     ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz"
-fi
 
 S=${WORKDIR}/${PN}-20010514
 T=/usr
