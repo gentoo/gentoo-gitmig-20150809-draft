@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.1 2003/07/04 22:15:43 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.2 2003/07/04 22:23:02 iggy Exp $
+
+  04 Jul 2003; ,,, <iggy@gentoo.org> metadata.xml:
+  forgot the metadata.xml file
 
 *heartbeat-1.1.1 (04 Jul 2003)
 

@@ -1,5 +1,6 @@
 MD5 4239906f8dab42c798e7df68b8d7a3f4 heartbeat-1.0.3.ebuild 595
 MD5 91e8460a6946f452fb4779a1e469e08c heartbeat-1.1.1.ebuild 595
-MD5 311da2a04ae208e0f3e248869079e0ac ChangeLog 396
+MD5 a22809d08a4a259f4aa9330ddc7e9dcb ChangeLog 479
+MD5 5161e76bc0f80fa0964d4234bbd1b6f0 metadata.xml 418
 MD5 17bda87e72648bff482c04144ac9ed9d files/digest-heartbeat-1.0.3 68
 MD5 8c8a4b3733ac7f91e9e3835a6f4d2a50 files/digest-heartbeat-1.1.1 68
