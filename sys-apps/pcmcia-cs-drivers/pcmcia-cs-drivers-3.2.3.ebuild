@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.9 2004/06/28 22:14:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/pcmcia-cs-drivers-3.2.3.ebuild,v 1.10 2004/07/09 22:23:53 lv Exp $
 
 MY_P=${P/-drivers/}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz
 	http://ozlabs.org/people/dgibson/dldwd/orinoco-0.13a.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
-DEPEND="sys-kernel/linux-headers
+DEPEND="virtual/os-headers
 	>=sys-apps/sed-4"
 RDEPEND=""
 SLOT="0"

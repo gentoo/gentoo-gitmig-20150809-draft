@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.7 2004/06/27 19:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.4.ebuild,v 1.8 2004/07/09 22:25:19 lv Exp $
 
 MY_P=${P/-tools/}
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
-DEPEND="sys-kernel/linux-headers
+DEPEND="virtual/os-headers
 	>=sys-apps/sed-4
 	gtk? ( =x11-libs/gtk+-1.2* )
 	X? ( virtual/x11 )"

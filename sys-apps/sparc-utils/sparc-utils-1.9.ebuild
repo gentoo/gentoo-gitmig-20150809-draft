@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.20 2004/07/01 21:39:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9.ebuild,v 1.21 2004/07/09 22:31:37 lv Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* sparc"
 
-DEPEND="sys-kernel/linux-headers"
+DEPEND="virtual/os-headers"
 RDEPEND="virtual/libc"
 
 src_unpack() {
