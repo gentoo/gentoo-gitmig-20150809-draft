@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.23 2004/07/31 05:27:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.24 2004/09/16 02:25:14 pvdabeel Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa amd64 ~ia64 s390 macos ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa amd64 ~ia64 s390 macos ppc64 ppc-macos"
 IUSE="bootstrap emacs nls"
 
 DEPEND="virtual/libc"
@@ -25,6 +25,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use macos && myconf="--enable-nls" || myconf="`use_enable nls`"
+	use ppc-macos && myconf="--enable-nls" || myconf="`use_enable nls`"
 
 	# Compaq Java segfaults trying to build gettext stuff, and there's
 	# no good way to tell gettext to refrain from building the java
@@ -70,6 +71,7 @@ src_install() {
 
 	# /usr/lib/charset.alias is provided by Mac OS X
 	use macos && rm -f ${D}/usr/lib/charset.alias
+	use ppc-macos && rm -f ${D}/usr/lib/charset.alias
 
 	if [ -d ${D}/usr/doc/gettext ]
 	then
