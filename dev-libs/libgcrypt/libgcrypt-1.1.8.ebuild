@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.8.ebuild,v 1.2 2002/12/09 04:21:03 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.1.8.ebuild,v 1.3 2003/01/03 07:01:11 satai Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libgcrypt is a general purpose crypto library based on the code used in GnuPG."
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc ~sparc "
 
 DEPEND="app-text/jadetex
-	app-text/docbook2X"
+	app-text/docbook-sgml-utils"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
