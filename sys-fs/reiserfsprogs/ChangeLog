@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.24 2004/08/21 21:43:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.25 2004/08/24 19:42:18 solar Exp $
+
+  24 Aug 2004; <solar@gentoo.org> reiserfsprogs-3.6.17.ebuild,
+  reiserfsprogs-3.6.18.ebuild:
+  added gnuconfig_update. Bug #61497
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> reiserfsprogs-3.6.17.ebuild:
   Marked stable on mips.

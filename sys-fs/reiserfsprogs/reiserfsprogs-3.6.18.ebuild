@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.18.ebuild,v 1.1 2004/08/21 06:04:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.18.ebuild,v 1.2 2004/08/24 19:42:18 solar Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gnuconfig
 
 DESCRIPTION="Reiserfs Utilities"
 HOMEPAGE="http://www.namesys.com/"
@@ -12,6 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	gnuconfig_update ${S}
+}
 
 src_compile() {
 	filter-flags -fPIC
