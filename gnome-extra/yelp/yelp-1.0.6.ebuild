@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.3 2002/09/21 12:09:35 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.4 2002/09/23 19:21:52 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="Yelp is a Help browser for Gnome2"
 SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64 ppc alpha"
 
 RDEPEND=">=gnome-base/ORBit2-2.4.1
