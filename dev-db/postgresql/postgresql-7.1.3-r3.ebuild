@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r2.ebuild,v 1.1 2002/01/31 02:14:33 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r3.ebuild,v 1.1 2002/01/31 14:46:07 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -15,18 +15,18 @@ DEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )
+		python? ( ~dev-lang/python-2.1.1 )
 		java? ( >=virtual/jdk-1.3 >=dev-java/ant-1.3 )
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 		nls? ( sys-devel/gettext )"
-#		python? ( >=dev-lang/python-2.2-r4 )
 
 RDEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )
+		python? ( ~dev-lang/python-2.1.1 )
 		java? ( >=virtual/jdk-1.3 )
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
-#		python? ( >=dev-lang/python-2.2-r4 )
 
 src_unpack() {
 
@@ -37,11 +37,14 @@ src_unpack() {
 	# we know that a shared libperl is present, the default perl
 	# config is however set to the static libperl.a
 	# just remove the check
-	patch -p1 < ${FILESDIR}/${P}-dyn-libperl-gentoo.diff
+	patch -p1 < ${FILESDIR}/${P}-dyn-libperl-gentoo.diff || die
+
+	# patch configure to use python 2.1 for sure
+	patch -p1 < ${FILESDIR}/${P}-python21-configure-gentoo.diff || die
 
 	# This patch is based on Lamar Owens, Thomas Lockhards and 
 	# Thron Eivind Glomsrod work. Thanks you all.
-	patch -p1 < ${FILESDIR}/${P}-perl5-GNUmakefile-gentoo.diff
+	patch -p1 < ${FILESDIR}/${P}-perl5-GNUmakefile-gentoo.diff || die
 }
 
 src_compile() {
@@ -51,10 +54,10 @@ src_compile() {
 	then
 		myconf="--with-tcl"
 	fi
-#	if [ "`use python`" ]
-#	then
-#		myconf="$myconf --with-python"
-#	fi
+	if [ "`use python`" ]
+	then
+		myconf="$myconf --with-python"
+	fi
 	if [ "`use perl`" ]
 	then
 		myconf="$myconf --with-perl"
@@ -84,6 +87,17 @@ src_compile() {
 		--enable-syslog \
 		$myconf || die
 
+	if [ "`use python`" ]
+	then
+		# generate python makefiles
+		cd ${S}/src/interfaces/python
+		make Makefile.pre.in
+
+		cd ${S}
+		# patch makefiles to use python 2.1 for sure
+		patch -p1 < ${FILESDIR}/${P}-python21-makefiles-gentoo.diff || die
+	fi
+
 	emake || die
 
 }
@@ -95,9 +109,20 @@ src_install () {
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
 			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
+		mv ${S}/src/pl/plperl/GNUmakefile ${S}/src/pl/plperl/GNUmakefile_orig
+		sed -e "s:\$(DESTDIR)\$(plperl_installdir):\$(plperl_installdir):" \
+			${S}/src/pl/plperl/GNUmakefile_orig > ${S}/src/pl/plperl/GNUmakefile
 	fi
 
-	make DESTDIR=${D} install || die
+	if [ "`use python`" ]
+	then
+		mkdir -p ${D}/usr/lib/python2.1/site-packages
+		mv ${S}/src/Makefile.global ${S}/src/Makefile.global_orig
+		sed -e "s:python_moduledir = /usr/lib/python2.1:python_moduledir = ${D}/usr/lib/python2.1:" \
+			${S}/src/Makefile.global_orig > ${S}/src/Makefile.global
+	fi
+
+	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	make DESTDIR=${D} install-all-headers || die
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	cd ${S}/doc
@@ -110,7 +135,6 @@ src_install () {
 	dodoc src/sgml/ref/*.sgml
 	docinto sgml/graphics
 	dodoc src/graphics/*
-	mv ${D}/usr/doc/postgresql/html ${D}/usr/share/doc/${PF}
 	rm -rf ${D}/usr/doc ${D}/mnt
 	exeinto /usr/bin
 	
