@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.19 2003/11/29 23:03:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.20 2004/01/09 03:33:25 liquidx Exp $
+
+*libgphoto2-2.1.3-r1 (09 Jan 2004)
+
+  09 Jan 2004; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.1.3-r1.ebuild,
+  files/libgphoto2-2.1.3-canon.patch:
+  new revision. backported missing canon powershot ids from CVS (Bug #35624) and
+  moved usb usermap id generation to pkg_postinst() to solve (bug #36685).
+  please note that now the usermaps are stored in
+  /etc/hotplug/usb/usbcam-gphoto2.usermap and users should not edit this file
+  but add custom ids in /etc/hotplug/usb/usbcam.usermap
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> libgphoto2-2.1.3.ebuild:
   mark stable on amd64
