@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.0.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.0.ebuild,v 1.4 2002/04/25 06:56:23 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface."
@@ -11,7 +11,7 @@ HOMEPAGE="http://acpid.sourceforge.net/"
 # We need the patched kernel with latest ACPI code, or else it will
 # be broken.  Hopefully it will be merge into release kernel soon.
 DEPEND="virtual/glibc
-	>=sys-kernel/linux-sources-2.4.10-r4"
+	>=virtual/linux-sources-2.4.10-r4"
 
 
 src_compile() {
