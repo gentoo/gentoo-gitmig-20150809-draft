@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.24 2004/03/14 05:35:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.25 2004/03/27 16:04:37 spider Exp $
+
+  27 Mar 2004; <spider@gentoo.org> giftcurs-0.6.2.ebuild:
+  Removed the gift RDEPEND per se of but #45886.
+  Marked as x86
 
   13 Mar 2004; Jason Wever <weeve@gentoo.org> giftcurs-0.6.1-r1.ebuild:
   Stable on sparc.
