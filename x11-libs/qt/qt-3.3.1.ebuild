@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.17 2004/02/14 15:44:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1.ebuild,v 1.1 2004/03/01 13:01:49 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="x86 ~alpha ~ppc ~amd64"
-IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite ipv6"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64"
+IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite ipv6 xinerama"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
@@ -31,10 +31,10 @@ DEPEND="virtual/x11 virtual/xft
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
-LD_LIBRARY_PATH=${S}/lib:${LD_LIBRARY_PATH}
 
 QTBASE=/usr/qt/3
 export QTDIR=${S}
+export PLATFORM=linux-g++
 
 src_unpack() {
 	unpack ${A}
@@ -45,15 +45,14 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
-	export PLATFORM=linux-g++
-	use icc && export PLATFORM=linux-icc
+	epatch ${FILESDIR}/qt-no-rpath-uic.patch
+
+#	use icc && export PLATFORM=linux-icc
 }
 
 src_compile() {
 	export QTDIR=${S}
 	export SYSCONF=${D}${QTBASE}/etc/settings
-	LD_LIBRARY_PATH_OLD=${LD_LIBRARY_PATH}
-	export LD_LIBRARY_PATH=${S}/lib:${LD_LIBRARY_PATH}
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
@@ -71,7 +70,7 @@ src_compile() {
 	use cups	&& myconf="${myconf} -cups" || myconf="${myconf} -no-cups"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	use xinerama    && myconf="${myconf} -xinerama"
+	use xinerama    && myconf="${myconf} -xinerama" || myconf="${myconf} -no-xinerama"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
 
@@ -80,16 +79,13 @@ src_compile() {
 	./configure -sm -thread -stl -system-libjpeg -verbose -largefile \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -lpthread -xft -platform ${PLATFORM} -xplatform \
-		${PLATFORM} -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
-		-docdir ${QTBASE}/doc -translationdir ${QTBASE}/translations \
-		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} \
-		-libdir ${QTBASE}/lib -headerdir ${QTBASE}/include \
-		-bindir ${QTBASE}/bin -dlopen-opengl || die
+		${PLATFORM} -xrender -prefix ${QTBASE} -fast ${myconf} \
+		-dlopen-opengl || die
 
 	export QTDIR=${S}
-	emake src-qmake src-moc sub-src sub-tools || die
-	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}
-	export HOME="$REALHOME"
+
+	emake src-qmake src-moc sub-src || die
+	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" emake sub-tools || die
 }
 
 src_install() {
@@ -101,7 +97,7 @@ src_install() {
 
 	# libraries
 
-	dolib lib/libqt-mt.so.3.3.0 lib/libqui.so.1.0.0
+	dolib lib/libqt-mt.so.3.3.1 lib/libqui.so.1.0.0
 	dolib lib/lib{editor,qassistantclient,designercore}.a lib/libqt-mt.la
 
 	cd ${D}/$QTBASE/lib
@@ -111,13 +107,13 @@ src_install() {
 		ln -s $x.1 $x
 	done
 
-	# version symlinks - 3.3.0->3.3->3->.so
-	ln -s libqt-mt.so.3.3.0 libqt-mt.so.3.3
+	# version symlinks - 3.3.1->3.3->3->.so
+	ln -s libqt-mt.so.3.3.1 libqt-mt.so.3.3
 	ln -s libqt-mt.so.3.3 libqt-mt.so.3
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.3.0 libqt.so.3.3.0
+	ln -s libqt-mt.so.3.3.1 libqt.so.3.3.1
 	ln -s libqt-mt.so.3.3 libqt.so.3.3
 	ln -s libqt-mt.so.3 libqt.so.3
 	ln -s libqt-mt.so libqt.so
@@ -165,14 +161,4 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 		doins $x
 	done
-}
-
-pkg_postinst()
-{
-	einfo
-	einfo "If you are upgrading Qt from an earlier version, it's possible that"
-	einfo "your buildkey has changed (based on use flags).  This causes problems"
-	einfo "loading KDE plugins.  If you have problems with KDE styles, the"
-	einfo "simple solution is to re-emerge kdelibs (and kdeartwork if you have it)."
-	einfo
 }

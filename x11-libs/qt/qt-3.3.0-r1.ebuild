@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.4 2004/02/29 21:43:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0-r1.ebuild,v 1.5 2004/03/01 13:01:49 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -44,6 +44,8 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
+	epatch ${FILESDIR}/qt-no-rpath-uic.patch
+
 	export PLATFORM=linux-g++
 #	use icc && export PLATFORM=linux-icc
 }
@@ -83,8 +85,7 @@ src_compile() {
 	export QTDIR=${S}
 
 	emake src-qmake src-moc sub-src || die
-	export LD_PRELOAD="${LD_PRELOAD} ${QTDIR}/lib/libqt-mt.so"
-	emake sub-tools || die
+	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" emake sub-tools || die
 }
 
 src_install() {

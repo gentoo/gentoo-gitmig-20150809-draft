@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.129 2004/03/01 00:32:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.130 2004/03/01 13:01:48 caleb Exp $
+
+*qt-3.3.1 (01 Mar 2004)
+
+  01 Mar 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0-r1.ebuild,
+  qt-3.3.1.ebuild:
+  New version.  We now patch the build of uic so that it isn't
+  rpathed hardcoded against /usr/qt/3/lib/libqt.so, but can be told to
+  link against the Qt that is currently building.
 
   29 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3-r1.ebuild:
   Typo fix and add xinerama flag
