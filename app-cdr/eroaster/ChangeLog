@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.9 2002/11/04 02:46:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.10 2002/12/03 11:54:34 azarah Exp $
+
+*eroaster-2.1.0-r1 (03 Dec 2002)
+
+  03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> eroaster-2.1.0-r1.ebuild :
+  Fixed the gnome-python DEPEND.  Make all needed apps RDEPEND, as its not
+  bchunk and sox are not that heavy packages.  This should also close bug #4807.
 
 *eroaster-2.1.0 (11 July 2002) 
 
