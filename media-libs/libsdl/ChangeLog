@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.21 2003/03/26 04:16:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.22 2003/04/14 05:42:21 seemant Exp $
+
+*libsdl-1.2.5-r2 (13 Apr 2003)
+
+  13 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  libsdl-1.2.5-r2.ebuild:
+  contains a patch for libsdl to choose the best refresh rates for a monito's
+  resolution. The reason this is needed is that xfree-4.3 now reports ALL the
+  refresh rates, whereas 4.2 only reported one for each resolution. This patch
+  was submitted by Pawel Rozanski <tokugawa@wp.pl> in bug #19261
 
   25 Mar 2003; Jason Wever <weeve@gentoo.org> libsdl-1.2.5-r1.ebuild:
   Changed ~sparc keyword to sparc.
