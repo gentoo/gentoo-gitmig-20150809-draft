@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.127 2003/09/29 03:05:06 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.128 2003/10/01 23:57:20 darkspecter Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -61,6 +61,7 @@ kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 media-gfx/autotrace:imagemagick - Enables Imagemagick
+media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
