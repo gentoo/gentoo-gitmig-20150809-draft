@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3079 2004/08/19 14:34:32 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3080 2004/08/20 03:17:36 agriffis Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -792,3 +792,9 @@ app-misc/todo-manager-bronze
 # are no new versions forthcoming, bug 56109
 net-www/netscape-navigator
 net-www/netscape-communicator
+
+# agriffis@gentoo.org 19 Aug 2004
+# Masking because this package is not ready for prime, but want it in
+# portage for better observation (and users are clamoring)
+app-office/mozilla-sunbird-bin
+app-office/mozilla-sunbird
