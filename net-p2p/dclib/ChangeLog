@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.43 2004/07/03 22:22:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.44 2004/08/09 03:42:07 squinky86 Exp $
+
+  08 Aug 2004; Jon Hood <squinky86@gentoo.org> metadata.xml,
+  -dclib-0.2.22.ebuild, -dclib-0.3.1.ebuild, dclib-0.3.2.ebuild:
+  Stable on x86, ebuild cleanups, now under net-p2p herd.
 
   03 Jul 2004; Guy Martin <gmsoft@gentoo.org> dclib-0.3.0.ebuild:
   Marked stable on hppa.
