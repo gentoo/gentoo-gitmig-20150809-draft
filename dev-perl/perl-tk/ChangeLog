@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.29 2004/11/03 04:43:02 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.30 2004/11/07 14:47:06 corsair Exp $
+
+  07 Nov 2004; Markus Rothe <corsair@gentoo.org> perl-tk-804.027.ebuild:
+  Stable on ppc64; bug #60442
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> perl-tk-804.027.ebuild:
   marked ~mips for testing
