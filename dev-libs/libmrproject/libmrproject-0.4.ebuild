@@ -1,24 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.2.ebuild,v 1.2 2002/05/23 02:53:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.4.ebuild,v 1.1 2002/07/06 20:25:40 spider Exp $
 
 
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
-
+inherit debug
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Project manager for Gnome2"
 SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/unstable/${P}.tar.gz"
 HOMEPAGE="http://mrproject.codefactory.se/"
 SLOT="0"
+LICENSE="GPL-2"
 
-
-#libglade
 RDEPEND=">=dev-util/pkgconfig-0.12.0
 		>=dev-libs/glib-2.0.0
 		>=dev-libs/libxml2-2.4.19
@@ -32,7 +25,8 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
-	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc" 	use nls && myconf="${myconf} --enable-nls" || myconf="${myconf} --disable-nls"
+	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
+	use nls && myconf="${myconf} --enable-nls" || myconf="${myconf} --disable-nls"
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
