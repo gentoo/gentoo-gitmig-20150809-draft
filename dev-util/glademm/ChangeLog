@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.8 2003/02/12 06:42:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.9 2003/03/15 19:05:46 liquidx Exp $
+
+*glademm-1.1.3e (15 Mar 2003)
+
+  15 Mar 2003; Alastair Tse <liquidx@gentoo.org> glademm-1.1.3e.ebuild:
+  version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
