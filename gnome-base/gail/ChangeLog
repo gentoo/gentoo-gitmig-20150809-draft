@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gail
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.42 2004/05/30 23:09:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.43 2004/06/15 04:35:02 leonardop Exp $
+
+  14 Jun 2004; L. Boshell <leonardop@gentoo.org> gail-1.6.4.ebuild:
+  Marked stable on x86.
 
 *gail-1.6.5 (30 May 2004)
 
