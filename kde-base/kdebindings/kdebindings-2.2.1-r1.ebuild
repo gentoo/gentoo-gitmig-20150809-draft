@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1-r1.ebuild,v 1.4 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.1-r1.ebuild,v 1.5 2001/10/14 23:00:25 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -11,7 +11,10 @@ NEWDEPEND=">=kde-base/kdebase-${PV}
 	>=x11-libs/gtk+-1.2.10-r4
 	sys-devel/perl
 	python? ( dev-lang/python )
-	java? (	dev-lang/jdk )"
+	java? (	dev-lang/jdk )
+	>=x11-libs/gtk+-1.2.6
+	>=dev-libs/glib-1.2.6
+	>=kde-base/kdenetwork-${PV}"
 
 DEPEND="$DEPEND $NEWDEPEND"
 RDEPEND="$RDEPEND $NEWDEPEND"
@@ -22,10 +25,11 @@ src_compile() {
 
 	use python							|| myconf="$myconf --without-python"
 	use java	&& myconf="$myconf --with-java=/opt/java"	|| myconf="$myconf --without-java"
-
+	
 	kde_src_compile configure
-
-	LIBPYTHON=\"`python-config`\" make || die
+    
+	# the library_path is a kludge for a strange bug
+	LIBRARY_PATH=${QTDIR}/lib LIBPYTHON=\"`python-config`\" make || die
 	
 }
 
