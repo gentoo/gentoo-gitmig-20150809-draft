@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/aap-1.000.ebuild,v 1.3 2004/06/25 02:18:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/aap-1.000.ebuild,v 1.4 2004/07/14 22:30:14 agriffis Exp $
 
-IUSE="X gnome"
+IUSE=""
 
 DESCRIPTION="Bram Moolenaar's super-make program"
 HOMEPAGE="http://www.a-a-p.org/"
