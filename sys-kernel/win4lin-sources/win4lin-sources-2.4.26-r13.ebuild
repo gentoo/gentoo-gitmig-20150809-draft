@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r12.ebuild,v 1.1 2005/01/09 13:00:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r13.ebuild,v 1.1 2005/03/25 19:40:07 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -52,6 +52,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
 	epatch ${FILESDIR}/${P}.77094.patch || die "Failed to apply bug #77094 patch!"
 	epatch ${FILESDIR}/${P}.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
+	epatch ${FILESDIR}/${P}.77666.patch || die "Failed to apply #77666 patch!"
+	epatch ${FILESDIR}/${P}.78362.patch || die "Failed to apply #78362 patch!"
+	epatch ${FILESDIR}/${P}.78363.patch || die "Failed to apply #78363 patch!"
 
 	kernel_universal_unpack
 }

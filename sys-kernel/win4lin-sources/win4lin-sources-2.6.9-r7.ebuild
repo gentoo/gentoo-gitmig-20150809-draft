@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.9-r6.ebuild,v 1.1 2005/01/09 13:00:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.9-r7.ebuild,v 1.1 2005/03/25 19:40:07 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -24,7 +24,14 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.shmLocking.patch
 	${FILESDIR}/${P}.75963.patch
 	${FILESDIR}/${P}.brk-locked.patch
-	${FILESDIR}/${P}.77094.patch"
+	${FILESDIR}/${P}.77094.patch
+	${FILESDIR}/${P}.74070.patch
+	${FILESDIR}/${P}.77666.patch
+	${FILESDIR}/${P}.77923.patch
+	${FILESDIR}/${P}.78362.patch
+	${FILESDIR}/${P}.78363.patch
+	${FILESDIR}/${P}.81106.patch
+	${FILESDIR}/${P}.82141.patch"
 
 S=${WORKDIR}/linux-${KV}
 

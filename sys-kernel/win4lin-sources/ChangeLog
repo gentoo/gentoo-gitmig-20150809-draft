@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.50 2005/01/12 20:53:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.51 2005/03/25 19:40:07 plasmaroo Exp $
+
+*win4lin-sources-2.4.26-r13 (25 Mar 2005)
+
+  25 Mar 2005; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r12.ebuild,
+  +win4lin-sources-2.4.26-r13.ebuild, -win4lin-sources-2.6.9-r6.ebuild,
+  +win4lin-sources-2.6.9-r7.ebuild, +files/win4lin-sources-2.4.26.77666.patch,
+  +files/win4lin-sources-2.4.26.78362.patch,
+  +files/win4lin-sources-2.4.26.78363.patch,
+  +files/win4lin-sources-2.6.9.74070.patch,
+  +files/win4lin-sources-2.6.9.77666.patch,
+  +files/win4lin-sources-2.6.9.77923.patch,
+  +files/win4lin-sources-2.6.9.78362.patch,
+  +files/win4lin-sources-2.6.9.78363.patch,
+  +files/win4lin-sources-2.6.9.81106.patch,
+  +files/win4lin-sources-2.6.9.82141.patch:
+  Security bump - fix #74070, #77666, #77923, #78362, #78363, #81106, #82141.
 
   12 Jan 2005; <plasmaroo@gentoo.org> files/win4lin-sources-2.6.9.77094.patch:
   Fix #77094 patch; bug #77458.
