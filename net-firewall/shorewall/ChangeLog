@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.64 2005/02/02 11:37:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.65 2005/02/21 20:38:39 luckyduck Exp $
+
+  21 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  shorewall-2.2.0_rc5.ebuild:
+  stable on amd64. fixes #82640
 
 *shorewall-2.2.0 (02 Feb 2005)
 
