@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/toppler-1.0.6.ebuild,v 1.1 2004/02/09 22:11:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/toppler/toppler-1.0.6.ebuild,v 1.2 2004/05/11 23:10:09 mr_bones_ Exp $
 
 inherit games
 
@@ -21,8 +21,8 @@ DEPEND=">=media-libs/libsdl-1.2.0
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
-		`use_enable nls` \
-			|| die
+		$(use_enable nls) \
+		|| die
 	emake || die "emake failed"
 }
 
