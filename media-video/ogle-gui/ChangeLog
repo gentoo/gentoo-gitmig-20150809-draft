@@ -1,9 +1,11 @@
 # ChangeLog for media-video/ogle-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.9 2003/02/12 07:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.10 2003/03/04 22:06:34 agenkin Exp $
 
-  31 Dec 2002; Olivier Reisch <doctomoe@gentoo.org> ogle-gui-0.8.5.ebuild :
-  Added ppc keyword
+*ogle-gui-0.9.0 (04 Mar 2003)
+
+  04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump (thanks to Bernardo S. A. Silva <bsaslinux@globo.com>).
 
 *ogle-gui-0.8.5 (21 Sep 2002)
 
