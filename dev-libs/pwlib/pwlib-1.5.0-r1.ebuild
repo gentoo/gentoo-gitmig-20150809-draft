@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0-r1.ebuild,v 1.3 2004/06/24 23:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0-r1.ebuild,v 1.4 2004/07/14 15:05:12 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc -sparc"
-IUSE="ssl sdl"
+IUSE="ldap sdl ssl"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
