@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.36 2003/04/09 03:03:17 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.37 2003/06/03 11:13:31 foser Exp $
+
+*gconf-2.2.1 (03 Jun 2003)
+
+  03 Jun 2003; foser <foser@gentoo.org> gconf-2.2.1.ebuild :
+  New version, minor ebuild cleanups
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> gconf-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
