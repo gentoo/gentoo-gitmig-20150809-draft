@@ -1,4 +1,4 @@
-MD5 5c8cbe258de3664c76a882e9e257c2cf ChangeLog 2036
+MD5 a6090abc7db71db3793935adce8e4ec8 ChangeLog 2226
 MD5 cea84f55366b30559e6c03155cfffce8 mew-2.2.ebuild 937
 MD5 5c434a84b6599f1e420275232ad0a0d3 mew-3.1.ebuild 1117
 MD5 7731db99fe4880cba99cefd8678ee8ce mew-3.2-r1.ebuild 1118
@@ -6,7 +6,7 @@ MD5 9ec3eb304051362bdb10bdef77a12330 mew-3.2.ebuild 1080
 MD5 b29af46831dd3586bab82213931d4e3c mew-3.3.ebuild 1177
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 a745a1ac3de75206d72106c26ec70a8c mew-2.3.ebuild 888
-MD5 110812a1aa21af558e6d971068573b41 mew-2.3-r1.ebuild 984
+MD5 eae09115aeebfc89c23c68d980a75948 mew-2.3-r1.ebuild 987
 MD5 be2f43b958a3f2ddfffc249ff48c9332 files/digest-mew-2.3 59
 MD5 b01c67ed2c3e6adf6f0895d1c0097b27 files/50mew-gentoo.el 187
 MD5 f5a3017ddbd11f99a0077fad12d7ab69 files/digest-mew-2.2 59

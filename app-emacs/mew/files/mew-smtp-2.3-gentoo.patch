@@ -1,0 +1,15 @@
+--- mew-smtp.el.orig	Thu Oct 10 10:37:47 2002
++++ mew-smtp.el	Thu Oct 10 10:39:15 2002
+@@ -587,7 +587,10 @@
+ 	   (info (concat file mew-queue-info-suffix))
+ 	   (server (mew-smtp-get-server pnm))
+ 	   (port (mew-smtp-get-port pnm))
+-	   (ssh-server (mew-smtp-get-ssh-server pnm)))
++	   (ssh-server (mew-smtp-get-ssh-server pnm))
++	   buf)
+       (rename-file file work 'override)
++      ;; If an old buffer exists by accident, we MUST remove the buffer.
++      (if (setq buf (get-file-buffer work)) (mew-remove-buffer buf))
+       (mew-frwlet
+        mew-cs-text-for-read mew-cs-dummy
+        (set-buffer (find-file-noselect work)))
