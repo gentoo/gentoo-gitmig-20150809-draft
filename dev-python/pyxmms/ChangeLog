@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pyxmms
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.1 2003/04/07 15:05:27 chouser Exp $
+
+*pyxmms-1.06 (07 Apr 2003)
+
+  07 Apr 2003; <chouser@gentoo.org> pyxmms-1.06.ebuild:
+  First ebuild for pyxmms
+
