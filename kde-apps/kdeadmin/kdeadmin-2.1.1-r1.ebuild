@@ -34,7 +34,7 @@ src_compile() {
       myconf="$myconf --enable-mitshm"
     fi
     QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
+    try ./configure --prefix=$KDEDIR --host=${CHOST} \
 		--with-qt-dir=$QTBASE \
 		--with-rpm $myconf
     try make

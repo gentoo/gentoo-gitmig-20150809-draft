@@ -15,27 +15,22 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="nls? ( sys-devel/gettext )
 	mozilla? ( >=net-www/mozilla-0.8-r1 )
         >=media-sound/cdparanoia-3.9.8
-        >=media-libs/freetype-2.0.1
-        >=sys-libs/pam-0.73
-	>=gnome-base/bonobo-1.0.2
-	>=gnome-base/libghttp-1.0.9
+        >=gnome-base/bonobo-1.0.2
+        >=gnome-base/libghttp-1.0.9
         >=gnome-base/scrollkeeper-0.2
-	>=gnome-base/control-center-1.4.0
+	>=gnome-base/gnome-core-1.4.0.4
 	>=gnome-libs/medusa-0.5.1
         >=gnome-libs/ammonite-1.0.2
-	>=gnome-libs/librsvg-1.0.0
-	>=gnome-libs/eel-1.0"
+	>=gnome-libs/eel-1.0
+        >=dev-util/xml-i18n-tools-0.8.4"
+
 RDEPEND="mozilla? ( >=net-www/mozilla-0.8-r1 )
         >=media-sound/cdparanoia-3.9.8
-        >=media-libs/freetype-2.0.1
-        >=sys-libs/pam-0.73
-	>=gnome-base/bonobo-1.0.2
-	>=gnome-base/libghttp-1.0.9
-	>=gnome-base/control-center-1.4.0
+        >=gnome-base/bonobo-1.0.2
+        >=gnome-base/gnome-core-1.4.0.4
 	>=gnome-libs/medusa-0.5.1
-        >=gnome-libs/ammonite-1.0.2
-	>=gnome-libs/librsvg-1.0.0
 	>=gnome-libs/eel-1.0"
+
 src_compile() {                           
   local myconf
   if [ -z "`use nls`" ]

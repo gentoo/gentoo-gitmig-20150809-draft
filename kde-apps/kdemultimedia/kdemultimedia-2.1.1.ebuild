@@ -13,6 +13,8 @@ HOMEPAGE="http://www.kde.org"
 
 DEPEND=">=kde-base/kdelibs-${PV}
 	>=sys-libs/ncurses-5.2
+        >=media-sound/cdparanoia-3.9.8
+        >=media-libs/libvorbis-1.0_beta4
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	nas? ( >=media-sound/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )

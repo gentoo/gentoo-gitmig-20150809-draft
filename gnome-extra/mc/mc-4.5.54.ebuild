@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.54.ebuild,v 1.1 2001/06/04 06:41:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.54.ebuild,v 1.2 2001/06/07 21:10:33 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -15,10 +15,8 @@ DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.72 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	>=sys-apps/e2fsprogs-1.19
-	gnome? ( >=gnome-base/gnome-libs-1.2.4 )
-	
-"
-RDEPEND="virtual/x11-web-browser"
+	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
+
 
 src_unpack() {
   unpack ${A}

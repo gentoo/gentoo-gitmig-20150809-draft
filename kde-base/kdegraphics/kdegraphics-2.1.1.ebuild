@@ -11,10 +11,11 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 HOMEPAGE="http://www.kde.org"
 
-DEPEND=">=kde-base/kdelibs-${PV}
-	>=app-text/tetex-1.0.7"
+DEPEND=">=kde-base/kdelibs-${PV} sys-devel/perl
+	tex? ( >=app-text/tetex-1.0.7 )
+        gphoto2? ( >=gnome-apps/gphoto-2.0_beta1 >=media-libs/libgpio-20010607 )"
 
-RDEPEND=">=kde-base/kdelibs-${PV}"
+RDEPEND=">=kde-base/kdelibs-${PV} gphoto2? ( >=gnome-apps/gphoto-2.0_beta1 >=media-libs/libgpio-20010607 )"
 
 src_compile() {
     QTBASE=/usr/X11R6/lib/qt
@@ -23,9 +24,14 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
+    if [ "`use mitshm`" ]                                                                   
     then
       myconf="$myconf --enable-mitshm"
+    fi
+    if [ "`use gphoto2`" ] ; then
+      myconf="$myconf --with-gphoto2-includes=/usr/include/gphoto2 --with-gphoto2-libraries=/usr/lib/gphoto2"
+    else
+      myconf="$myconf --without-kamera"
     fi
     try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myconf

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kdoc/kdoc-2.1.1.ebuild,v 1.1 2001/04/28 15:38:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kdoc/kdoc-2.1.1.ebuild,v 1.2 2001/06/07 21:10:33 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -12,19 +12,16 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 HOMEPAGE="http://www.kde.org"
 
-DEPEND=">=sys-devel/perl-5"
-RDEPEND=$DEPEND
+DEPEND=">=sys-devel/perl-5 kde-base/kde-env"
 
 src_compile() {
-    QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=/opt/kde2.1 --mandir=/opt/kde2.1/share/man --host=${CHOST} \
-		--with-qt-dir=$QTDIR
+
+    try ./configure --prefix=${KDEDIR} --host=${CHOST}
     try make
 }
 
 src_install() {
 
-  dodir /opt/kde2/share/man/man1
   try make install DESTDIR=${D}
   dodoc README TODO Version
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.6 2001/05/20 13:50:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.7 2001/06/07 21:10:33 achim Exp $
 
 A=${PN}-4.0.5.tar.gz
 S=${WORKDIR}/${PN}-4.0.5
@@ -10,18 +10,38 @@ SRC_URI="http://www.php.net/distributions/${A}"
 HOMEPAGE="http://www.php.net/"
 
 DEPEND="virtual/glibc
-	>=sys-libs/zlib-1.1.3
+
 	>=dev-libs/gmp-3.1.1
 	=media-libs/freetype-1.3.1-r2
 	>=media-libs/jpeg-6b
-	>=media-libs/tiff-3.5.5
+        >=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.7
-	>=media-libs/libgd-1.8.3
+        >=media-libs/libgd-1.8.3
 	>=media-libs/t1lib-1.0.1
 	>=net-www/apache-ssl-1.3
 	pam? ( >=sys-libs/pam-0.75 )
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	gettext? ( sys-devel/gettext )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	berkdb? ( >=sys-libs/db-3 )
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	ldap? ( >=net-nds/openldap-1.2.11 )
+	postgres? ( >=dev-db/postgresql-7.1 )
+	X? ( virtual/x11 )
+	qt? ( >=x11-libs/qt-x11-2.3.0 )
+	xml? ( >=app-text/sablotron-0.44 )
+	libwww? ( >=net-libs/libwww-5.3.2 )
+	imap? ( virtual/imap )"
+
+RDEPEND="virtual/glibc
+	>=dev-libs/gmp-3.1.1
+	=media-libs/freetype-1.3.1-r2
+	>=media-libs/jpeg-6b
+ 	>=media-libs/libpng-1.0.7
+ 	>=media-libs/t1lib-1.0.1
+	>=net-www/apache-ssl-1.3
+	pam? ( >=sys-libs/pam-0.75 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	berkdb? ( >=sys-libs/db-3 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
