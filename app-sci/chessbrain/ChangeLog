@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/chessbrain
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.4 2003/12/06 23:36:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.5 2003/12/10 15:31:07 phosphan Exp $
+
+*chessbrain-20407 (10 Dec 2003)
+
+  10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> chessbrain-20407.ebuild:
+  Version bump, ebuild modified from bug 34981
 
   06 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
   chessbrain-20304.ebuild, chessbrain-20310.ebuild, chessbrain-20314.ebuild:
