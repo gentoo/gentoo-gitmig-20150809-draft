@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p2.ebuild,v 1.1 2004/04/14 05:05:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p2.ebuild,v 1.2 2004/04/19 14:57:44 dragonheart Exp $
 
 inherit eutils
 
@@ -10,14 +10,12 @@ SRC_URI="mirror://sourceforge/amanda/${P/_/}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-DEPEND="sys-libs/readline
+RDEPEND="sys-libs/readline
 		virtual/inetd
 		app-arch/mt-st
 		media-gfx/gnuplot
 		sys-apps/gawk
 		app-arch/tar
-		sys-devel/autoconf
-		sys-devel/automake
 		dev-lang/perl
 		sys-apps/mtx
 		app-arch/dump
@@ -26,6 +24,12 @@ DEPEND="sys-libs/readline
 		berkdb? ( sys-libs/db )
 		gdbm? ( sys-libs/gdbm )
 		!sparc? ( xfs? ( sys-fs/xfsdump ) )"
+
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	sys-devel/automake"
+#dev-lang/perl sys-apps/gawk?
+
 
 IUSE="pic debug gdbm berkdb samba xfs"
 
