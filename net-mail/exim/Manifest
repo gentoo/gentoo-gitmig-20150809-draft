@@ -1,4 +1,5 @@
 MD5 091ca25c3bb5a1b01cdc454af84de4e5 exim-4.20-r2.ebuild 6329
+MD5 fe86dd22882c98997377ac4eeff80ce0 exim-4.21.ebuild 6082
 MD5 4d7cabe7d5b81708f2717fafd847ba2b exim-4.12.ebuild 5436
 MD5 b0ca08f26ccf5a73829c0169ad70c528 exim-4.14.ebuild 5483
 MD5 f37a9cb0060d8e3df038d704a933dcc9 exim-4.20-r1.ebuild 6234
@@ -24,3 +25,4 @@ MD5 34def7b529693beda5b84c422d25a878 files/digest-exim-4.10 128
 MD5 100ab1bbdfea50083ecce4bf78af5cc9 files/digest-exim-4.12 129
 MD5 091d3610d9a2a0b879f543cc070ef933 files/digest-exim-4.14 128
 MD5 04ba8d65b73d23eb58c6d3e4accbed7f files/digest-exim-4.20 198
+MD5 e62c9a744fd2c944af3dbc881156574b files/digest-exim-4.21 132
