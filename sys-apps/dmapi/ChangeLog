@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.19 2004/06/24 22:03:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.20 2004/06/30 15:19:50 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> dmapi-2.0.5-r1.ebuild:
+  sync IUSE (missing)
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
   manifest fix

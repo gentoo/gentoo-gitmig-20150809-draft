@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.8 2004/06/24 22:04:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.9 2004/06/30 15:24:37 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> dnotify-0.5.0.ebuild:
+  sync IUSE (missing)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

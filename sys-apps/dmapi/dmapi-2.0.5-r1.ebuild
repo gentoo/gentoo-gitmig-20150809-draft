@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.15 2004/06/24 22:03:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5-r1.ebuild,v 1.16 2004/06/30 15:19:50 agriffis Exp $
 
 DESCRIPTION="XFS data management API library"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
@@ -9,6 +9,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~mips ia64 amd64 alpha"
+IUSE=""
 
 DEPEND="sys-fs/xfsprogs"
 
