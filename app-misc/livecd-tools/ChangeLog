@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.25 2004/10/13 13:17:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.26 2004/10/20 12:27:07 wolf31o2 Exp $
+
+*livecd-tools-1.0.7 (20 Oct 2004)
+
+  20 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-tools-1.0.7.ebuild:
+  Removed extra quotes from net-setup and closing bug #68246.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> livecd-tools-1.0.6.ebuild:
   Stable on hppa.
