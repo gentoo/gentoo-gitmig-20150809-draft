@@ -5,7 +5,7 @@ diff -uprN eel.orig/eel-gdk-extensions.h eel/eel-gdk-extensions.h
  
  #include <gdk/gdktypes.h>
  #include <gdk/gdkwindow.h>
-+#include <idn-int.h>
++typedef unsigned int   uint32_t; 
  
  #define EEL_RGB_COLOR_RED	0xFF0000
  #define EEL_RGB_COLOR_GREEN	0x00FF00
