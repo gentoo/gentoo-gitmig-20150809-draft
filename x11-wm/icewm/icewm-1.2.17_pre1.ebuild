@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre1.ebuild,v 1.1 2004/10/24 19:43:02 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.17_pre1.ebuild,v 1.2 2004/10/24 23:54:37 morfic Exp $
 
 inherit eutils
 
@@ -59,7 +59,6 @@ src_compile(){
 	fi
 
 	CXXFLAGS="${CXXFLAGS}" econf \
-		--with-datadir=/usr/share/icewm \
 		--with-libdir=/usr/share/icewm \
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
