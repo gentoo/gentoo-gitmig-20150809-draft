@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kcpuload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.5 2004/03/14 17:21:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.6 2004/03/21 19:42:50 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kcpuload-1.99.ebuild:
+  Added ~sparc keyword.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kcpuload-1.9.1.ebuild,
   kcpuload-1.99.ebuild:
