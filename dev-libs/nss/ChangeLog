@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.2 2003/07/11 14:23:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.3 2003/07/11 17:47:44 lostlogic Exp $
+
+  11 Jul 2003; Brandon Low <lostlogic@gentoo.org> nss-3.8.ebuild:
+  Add an important || die statement, and make work on all kernels, arches, and
+  debug settings
 
   11 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   no parallel building

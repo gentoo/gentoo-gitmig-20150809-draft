@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.2 2003/07/11 14:23:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.3 2003/07/11 17:47:44 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 
@@ -52,8 +52,8 @@ src_install () {
 	# put all *.a files in /usr/lib/nss (because some have conflicting names
 	# with existing libraries)
 	dodir /usr/lib/nss
-	cp -L Linux2.4_${ARCH}_glibc_PTH_DBG.OBJ/lib/*.a ${D}/usr/lib/nss
-	dolib Linux2.4_${ARCH}_glibc_PTH_DBG.OBJ/lib/*.so
+	cp -L */lib/*.a ${D}/usr/lib/nss || die "copying libs failed"
+	dolib */lib/*.so
 
 	# all the include files
 	insinto /usr/include/nss
