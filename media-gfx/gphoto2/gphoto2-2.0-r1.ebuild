@@ -1,8 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.9 2002/10/20 18:48:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.10 2002/11/06 11:38:56 seemant Exp $
 
 inherit libtool
+inherit flag-o-matic
+
+IUSE="nls"
 
 MY_P=${PN}-${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -23,10 +26,13 @@ src_compile() {
 	aclocal
 
 	# -pipe does no work
-	env CFLAGS="${CFLAGS/-pipe/}" ./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		|| die
+	filter-flags -pipe
+	
+	local myconf
+
+	use nls || myconf="${myconf} --disable-nls"
+
+	econf ${myconf} || die
 
 	cp libgphoto2/Makefile libgphoto2/Makefile.orig
 	sed -e 's:$(prefix)/doc/gphoto2:/usr/share/doc/${PF}:' \
@@ -36,11 +42,10 @@ src_compile() {
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
+	einstall \
 		gphotodocdir=${D}/usr/share/doc/${PF} \
 		HTML_DIR=${D}/usr/share/doc/${PF}/sgml \
-		install || die
+		|| die
 
 	dodoc ChangeLog NEWS* README
 	rm -rf ${D}/usr/share/doc/${PF}/sgml/gphoto2
