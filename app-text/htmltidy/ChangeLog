@@ -1,6 +1,13 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.2 2002/07/25 09:12:12 cybersystem Exp $
+
+*htmltidy-2.7.18 (25 July 2002)
+
+  25 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog :
+
+  Updated to the newest version, 2.7.18.
+
 
 *htmltidy-0.8.4 (1 Feb 2002)
 

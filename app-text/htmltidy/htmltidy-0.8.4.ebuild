@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.4 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-0.8.4.ebuild,v 1.5 2002/07/25 09:12:12 cybersystem Exp $
 
 # convert from normalized gentoo version number to htmltidy's wacky date thing
 month=(dmy jan feb mar apr may jun jul aug sep oct nov dec)
@@ -8,6 +8,10 @@ parts=(${PV//./ })
 vers=$(printf "%d%s%02d" ${parts[2]} ${month[${parts[1]}]} ${parts[0]})
 MY_P=tidy${vers}
 S=${WORKDIR}/${MY_P}
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="GPL-2"
 
 DESCRIPTION="fix mistakes and tidy up sloppy editing in HTML and XML"
 SRC_URI="mirror://sourceforge/tidy/${MY_P}.tgz"
