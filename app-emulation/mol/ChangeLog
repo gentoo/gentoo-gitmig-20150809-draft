@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/mol
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*mol-0.9.63 (5 May 2002)
+
+  5 May 2002; David Chamberlain <daybird@gentoo.org> ChangeLog :
+  
+  Initial version (post ppc/x86 portage merge)
