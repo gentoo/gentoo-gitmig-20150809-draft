@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.39 2004/12/03 06:39:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.40 2004/12/29 02:58:42 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *rp-pppoe-3.5-r5 (03 Dec 2004)
 
@@ -30,7 +33,7 @@
   08 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> rp-pppoe-3.5-r2.ebuild:
   Stable on sparc wrt #66296
 
-  08 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> rp-pppoe-3.5-r2.ebuild:
+  08 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rp-pppoe-3.5-r2.ebuild:
   Stable on alpha, bug 66296.
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/rp-pppoe.rc:

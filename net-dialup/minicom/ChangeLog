@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.26 2004/11/21 07:12:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.27 2004/12/29 02:57:54 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Nov 2004; Alin Nastac <mrness@gentoo.org> -minicom-1.83.1-r1.ebuild,
   -minicom-2.00.0.ebuild, -minicom-2.1.ebuild:
@@ -18,7 +21,7 @@
   27 Oct 2004; Jason Wever <weeve@gentoo.org> minicom-2.1-r1.ebuild:
   Stable on sparc.
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> minicom-2.1-r1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> minicom-2.1-r1.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> minicom-2.1-r1.ebuild:

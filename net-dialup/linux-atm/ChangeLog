@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.8 2004/11/12 18:59:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.9 2004/12/29 02:57:09 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *linux-atm-2.4.1-r1 (12 Nov 2004)
 
@@ -8,7 +11,7 @@
   +linux-atm-2.4.1-r1.ebuild, +files/2.4.1-uclib.patch:
   Fixed broken compilation on uclibc env (#61184).
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> linux-atm-2.4.1.ebuild:
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> linux-atm-2.4.1.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
