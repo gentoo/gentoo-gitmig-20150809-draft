@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.3 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.4 2004/05/29 20:03:53 lv Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_unpack() {
 	# compile on gcc 2.9x
 	epatch ${FILESDIR}/${P}-imake-ansi.patch
 	epatch ${FILESDIR}/${P}-uil-bad_grammar_fix.diff
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {

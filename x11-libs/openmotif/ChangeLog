@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.43 2004/05/12 15:42:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.44 2004/05/29 20:03:53 lv Exp $
+
+  29 May 2004; Travis Tilley <lv@gentoo.org>
+  +files/openmotif-2.1.30-gcc34.patch, openmotif-2.1.30-r5.ebuild:
+  added an #undef X_LOCALE before including XLocale.h, otherwise locale.h isnt
+  included and compilation fails with gcc 3.4
 
   12 May 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   openmotif-2.1.30-r4.ebuild:
