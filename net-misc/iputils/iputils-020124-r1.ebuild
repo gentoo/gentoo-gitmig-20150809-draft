@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.9 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124-r1.ebuild,v 1.10 2003/04/05 23:11:12 gmsoft Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha ~ppc hppa mips"
 
 DEPEND="virtual/glibc
-	sys-kernel/linux-headers	
+	virtual/os-headers	
 	app-text/openjade
 	dev-perl/SGMLSpm
 	app-text/docbook-sgml-dtd
