@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.5 2004/06/09 15:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.6 2004/06/19 10:28:27 eradicator Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -140,6 +140,8 @@ src_compile() {
 
 	use kde && [ -n "${KDEDIR}" ] \
 		&& myconf="${myconf} --with-kde-applnk-path=${KDEDIR}/share/applnk"
+
+	use amd64 && myconf="${myconf} --with-pic"
 
 	# Use Mozilla NSS/NSPR libs if 'mozilla' *and* 'ssl' in USE
 	if use ssl && use mozilla; then
