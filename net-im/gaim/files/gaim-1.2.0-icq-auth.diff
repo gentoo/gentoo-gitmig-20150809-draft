@@ -1,0 +1,28 @@
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/protocols/oscar/auth.c,v
+retrieving revision 1.21.2.3
+retrieving revision 1.21.2.4
+diff -u -r1.21.2.3 -r1.21.2.4
+--- src/protocols/oscar/auth.c	2005/03/14 03:20:19	1.21.2.3
++++ src/protocols/oscar/auth.c	2005/03/21 02:55:37	1.21.2.4
+@@ -230,7 +230,19 @@
+ 
+ 	aim_tlvlist_add_raw(&tl, 0x0001, strlen(sn), sn);
+ 
+-	aim_encode_password_md5(password, key, digest);
++	/* Truncated ICQ passwords, if necessary */
++	if (isdigit(sn[0]) && (strlen(password) > MAXICQPASSLEN))
++	{
++		char truncated[MAXICQPASSLEN + 1];
++		strncpy(truncated, password, MAXICQPASSLEN);
++		truncated[MAXICQPASSLEN] = 0;
++		aim_encode_password_md5(truncated, key, digest);
++	}
++	else
++	{
++		aim_encode_password_md5(password, key, digest);
++	}
++
+ 	aim_tlvlist_add_raw(&tl, 0x0025, 16, digest);
+ 
+ #ifndef USE_OLD_MD5
