@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.10.ebuild,v 1.10 2005/01/06 10:44:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.1 2005/01/06 10:44:40 eradicator Exp $
 
 inherit eutils flag-o-matic
 

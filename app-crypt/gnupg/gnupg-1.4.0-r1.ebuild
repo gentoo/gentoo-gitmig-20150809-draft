@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.1 2005/01/04 20:55:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0-r1.ebuild,v 1.2 2005/01/06 10:44:40 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -103,14 +103,14 @@ src_compile() {
 		`use_with caps capabilities` \
 		`use_with readline` \
 		--enable-static-rnd=linux \
-		--libexecdir=/usr/lib \
+		--libexecdir=/usr/libexec \
 		--enable-sha512 \
 		${myconf} || die
 	emake || die
 }
 
 src_install() {
-	emake DESTDIR=${D} libexecdir="/usr/lib/gnupg" install || die
+	emake DESTDIR=${D} libexecdir="/usr/libexec/gnupg" install || die
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
