@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.10.ebuild,v 1.3 2005/03/10 23:45:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.10.ebuild,v 1.4 2005/03/13 05:08:35 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -225,7 +225,7 @@ src_install() {
 	#
 	insopts -m0644
 	insinto /etc
-	find ${S}/etc -type f -maxdepth 1 -print0 | xargs --null doins
+	find ${S}/etc -maxdepth 1 -type f -print0 | xargs --null doins
 
 	# Install some files to /usr/share/baselayout instead of /etc to keep from
 	# (1) overwriting the user's settings, (2) screwing things up when
@@ -245,7 +245,7 @@ src_install() {
 	insinto /etc/modules.d
 	doins ${S}/etc/modules.d/*
 	insinto /etc/skel
-	find ${S}/etc/skel -type f -maxdepth 1 -print0 | xargs --null doins
+	find ${S}/etc/skel -maxdepth 1 -type f -print0 | xargs --null doins
 
 	# Special-case uglyness... For people updating from lib32 -> lib amd64
 	# profiles, keep lib32 in the search path while it's around
