@@ -5,6 +5,14 @@
 
 *festival-1.4.2-r1 (16 Nov 2002)
 
+  16 Nov 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r2.ebuild
+  files/digest-festival-1.4.2-r2 ChangeLog
+
+  -r1 was hardcoded to i686. This build should check your arch type and build
+  accordingly. Also added IUSE="" for completeness.
+
+*festival-1.4.2-r1 (16 Nov 2002)
+
   16 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> festival-1.4.2-r1.ebuild, festival-1.4.2.ebuild :
 
   Added -ppc to keywords.
