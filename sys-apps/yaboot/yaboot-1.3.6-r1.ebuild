@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Kain X <kain@kain.org>
-# $Id: yaboot-1.3.6-r1.ebuild,v 1.1 2002/04/27 10:41:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/yaboot-1.3.6-r1.ebuild,v 1.2 2002/06/21 20:44:48 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PPC Bootloader"
@@ -12,6 +11,11 @@ DEPEND="sys-apps/powerpc-utils sys-apps/hfsutils"
 MAKEOPTS='PREFIX=/usr MANDIR=share/man'
 
 src_compile() {
+        if [ ${ARCH} = "x86" ] ; then
+                einfo "PPC Only build, sorry"
+                exit 1
+        fi
+
 	export -n CFLAGS
 	export -n CXXFLAGS
 	emake ${MAKEOPTS} || die
