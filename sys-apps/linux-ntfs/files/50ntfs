@@ -1,0 +1,4 @@
+PATH=/opt/linux-ntfs/bin
+ROOTPATH=/opt/linux-ntfs/bin
+LDPATH=/opt/linux-ntfs/lib
+MANPATH=/opt/linux-ntfs/share/man
