@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.2 2002/09/30 03:53:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.3 2003/01/05 22:29:34 manson Exp $
+
+*fakeroot-0.4.4-r1 (29 Sep 2002)
+  05 Jan 2003; Rodney Rees <manson@gentoo.org>;
+  added ~sparc keyword
 
 *fakeroot-0.4.4-r1 (29 Sep 2002)
 
