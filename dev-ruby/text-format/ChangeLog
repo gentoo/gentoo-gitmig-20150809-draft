@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-gnome
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.1 2003/05/17 10:33:53 mholzer Exp $
+
+*text-format-0.61 (17 May 2003)
+
+  17 May 2003; Martin Holzer <mholzer@gentoo.org> text-format-0.61.ebuild:
+  Initial Version. Submitted by Björn Lindström <bkhl@privat.utfors.se> 
+  in #17609.
