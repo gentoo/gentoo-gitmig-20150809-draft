@@ -1,8 +1,16 @@
 # ChangeLog for app-misc/xosview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.1 2003/11/20 23:40:31 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.2 2003/11/21 02:13:03 port001 Exp $
 
 xosview-1.8.0 (28 Aug 2003)
+
+*xosview-1.8.1 (21 Nov 2003)
+
+  21 Nov 2003; Ian Leitch <port001@gentoo.org> xosview-1.8.1.ebuild:
+  Version bump. No need for gcc3.3.x patches with this release, kernel 2.5+
+  patch broke so I diff'ed up a new one and changed SRC_URI to use
+  mirror://sourceforge. Also reported to work on alpha so ~alpha flag added.
+  #33626.
 
 *xosview-1.8.0 (20 Nov 2003)
 
