@@ -1,0 +1,11 @@
+# ChangeLog for media-video/dvd9to5
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd9to5/ChangeLog,v 1.1 2005/03/29 05:33:36 chriswhite Exp $
+
+*dvd9to5-0.1.7 (29 Mar 2005)
+
+  29 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +dvd9to5-0.1.7.ebuild:
+  Initial import into the tree. Fixes Bug #56002. Thanks to Stefan Briesenick
+  for the ebuild.
+
