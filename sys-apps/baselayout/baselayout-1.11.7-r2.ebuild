@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r2.ebuild,v 1.1 2004/12/04 16:11:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r2.ebuild,v 1.2 2004/12/07 02:36:58 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -113,6 +113,11 @@ unkdir() {
 }
 
 src_install() {
+	local libdir=$(get_libdir) other_libdir
+	[[ ${libdir} = "lib" ]] \
+		&& other_libdir="lib64" \
+		|| other_libdir="lib"
+
 	# This directory is to stash away things that will be used in
 	# pkg_postinst; it's needed first for kdir to function
 	dodir /usr/share/baselayout
@@ -133,20 +138,13 @@ src_install() {
 	kdir /etc/modules.d
 	kdir /etc/opt
 	kdir /home
-	# Explanation below
-	if [[ ${ARCH} == amd64 ]]; then
-		kdir /lib64
-		kdir /lib64/dev-state
-		kdir /lib64/udev-state
-	else
-		kdir /lib
-		kdir /lib/dev-state
-		kdir /lib/udev-state
-	fi
-	kdir /lib/rcscripts/awk
-	kdir /lib/rcscripts/sh
-	dodir /lib/rcscripts/net.modules.d	# .keep file messes up net.lo
-	dodir /lib/rcscripts/net.modules.d/helpers.d
+	kdir ${libdir}
+	kdir ${libdir}/dev-state
+	kdir ${libdir}/udev-state
+	kdir ${libdir}/rcscripts/awk
+	kdir ${libdir}/rcscripts/sh
+	dodir ${libdir}/rcscripts/net.modules.d	# .keep file messes up net.lo
+	dodir ${libdir}/rcscripts/net.modules.d/helpers.d
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
@@ -161,12 +159,7 @@ src_install() {
 	kdir /usr/include
 	kdir /usr/include/asm
 	kdir /usr/include/linux
-	# Explanation below
-	if [[ ${ARCH} == amd64 ]]; then
-		kdir /usr/lib64
-	else
-		kdir /usr/lib
-	fi
+	kdir /usr/${libdir}
 	kdir /usr/local/bin
 	kdir /usr/local/games
 	kdir /usr/local/lib
@@ -184,11 +177,7 @@ src_install() {
 	kdir /usr/src
 	kdir /usr/X11R6/include/GL
 	kdir /usr/X11R6/include/X11
-	if [[ ${ARCH} == amd64 ]]; then
-		kdir /usr/X11R6/lib64
-	else
-		kdir /usr/X11R6/lib
-	fi
+	kdir /usr/X11R6/${libdir}
 	kdir /usr/X11R6/man
 	kdir /usr/X11R6/share
 	kdir -m 1777 /tmp
@@ -204,25 +193,10 @@ src_install() {
 
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
-	if [[ ${ARCH} == ppc64 ]]; then
-		dosym lib /lib64
-		dosym lib /usr/lib64
-		dosym lib /usr/X11R6/lib64
-	elif [[ ${ARCH} == amd64 ]]; then
-		# AMD64 is making a slow move towards actual FHS compliance and multilib
-		# capabilities (without ugly semi-working lib32 hacks).
-		#
-		# During the first stage of migration, we just want to get rid of the
-		# lib64 symlink. we can do this now by making lib the symlink instead.
-		# that way, later on when we want to use lib for 32bit libraries, we
-		# wont have to risk breaking all installed binaries by removing the
-		# lib64 symlink.  (See about note regarding ld.so)  Note that this has
-		# no effect on current installs, just new stages.  (07 Aug 2004 lv)
-		dosym lib64 /lib
-		dosym lib64 /usr/lib
-		# X is pretty dumb, i dont know if this'll work when we start removing
-		# lib symlinks. ^^; we might end up needing to keep this one around...
-		dosym lib64 /usr/X11R6/lib
+	if [[ ${ARCH} = ppc64 ]] || [[ ${ARCH} = amd64 ]] ; then
+		dosym ${libdir} ${other_libdir}
+		dosym ${libdir} /usr/${other_libdir}
+		dosym ${libdir} /usr/X11R6/${other_libdir}
 		# this will eventually exist, so remember to fix it Travis...
 		#dosym ../X11R6/lib64/X11 /usr/lib64/X11
 	fi

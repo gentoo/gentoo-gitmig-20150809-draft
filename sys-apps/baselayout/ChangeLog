@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.193 2004/12/04 16:11:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.194 2004/12/07 02:36:58 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  06 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  baselayout-1.11.7-r2.ebuild:
+  Fix /lib vs /lib64 logic.
 
 *baselayout-1.11.7-r2 (04 Dec 2004)
 
