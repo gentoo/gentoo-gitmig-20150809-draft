@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.0.ebuild,v 1.1 2004/08/14 22:16:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.0.ebuild,v 1.2 2004/08/15 15:14:47 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -80,4 +80,13 @@ src_install() {
 
 	dodoc ChangeLog README*
 
+}
+
+pkg_postinst() {
+	einfo
+	einfo "The default theme has been changed to be black on white."
+	einfo "You can download the old theme files at:"
+	einfo "\thttp://xchat.org/files/themes/blacktheme.zip"
+	einfo "Place the files into your ~/.xchat2 directory."
+	einfo
 }
