@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.7 2003/02/12 06:19:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.8 2003/03/14 16:53:20 rac Exp $
+
+*HTML-Tree-3.11-r1 (14 Mar 2003)
+
+  14 Mar 2003; <rac@gentoo.org> HTML-Tree-3.11-r1.ebuild:
+  Add dependency on HTML-Parser.  Thanks to Brian Friday
+  <bfriday@lasierra.edu>.  Fixes bug #17459.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
