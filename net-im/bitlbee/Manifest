@@ -2,7 +2,9 @@ MD5 0c3449412c3a87b75d3ad4b91bda0637 ChangeLog 1318
 MD5 42e7d9f7edf5b073d6e03799b418511d bitlbee-0.72.ebuild 1088
 MD5 7561b5b39797a376aaaeb3b6eebd3b3e bitlbee-0.73-r1.ebuild 1341
 MD5 6b28973e34d85b64890d04495b2baebf bitlbee-0.73.ebuild 1088
+MD5 8a02daab3b6e481f6f5a2a2c9e3f3c86 bitlbee-0.74a.ebuild 1340
 MD5 144e462c0af1d82a3412a237519b32ca files/bitlbee-xinetd.patch 519
 MD5 4b739ca4a0982ccfda988bb664db9b55 files/digest-bitlbee-0.72 201
 MD5 208f8bc3e515b98d70467d031d9d9fc0 files/digest-bitlbee-0.73 64
 MD5 208f8bc3e515b98d70467d031d9d9fc0 files/digest-bitlbee-0.73-r1 64
+MD5 8de9879ddbed4e2fbba0fd6b3e2e898a files/digest-bitlbee-0.74a 65
