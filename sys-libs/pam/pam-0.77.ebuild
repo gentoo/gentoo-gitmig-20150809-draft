@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.9 2003/12/21 16:51:20 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.10 2003/12/23 04:01:56 kumba Exp $
 
 PATCH_LEVEL="1.1"
 BDB_VER="4.1.25"
@@ -32,7 +32,7 @@ RDEPEND=">=sys-libs/cracklib-2.7-r8
 # link statically to it - <azarah@gentoo.org> (09 Nov 2003).
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
-inherit gcc eutils flag-o-matic
+inherit gcc eutils flag-o-matic gnuconfig
 
 # Note that we link to static versions of glib (pam_console.so)
 # and pwdb (pam_pwdb.so) ...
@@ -110,6 +110,16 @@ src_compile() {
 		einfo "Building Berkley DB ${BDB_VER}..."
 		cd ${WORKDIR}
 		cd db-${BDB_VER}/dist || die
+
+		# Pam uses berkdb, which db-4.1.x series can't detect mips64, so we fix it
+		if use mips; then
+			einfo "Updating berkdb config.{guess,sub} for mips"
+			local OLDS="${S}"
+			S="${WORKDIR}/db-${BDB_VER}/dist"
+			gnuconfig_update
+			S="${OLDS}"
+		fi
+
 		echo db_cv_mutex=UNIX/fcntl > config.cache
 		./s_config
 		./configure \
