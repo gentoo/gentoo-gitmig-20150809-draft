@@ -1,0 +1,45 @@
+diff -ru src/callback_helpers.hpp src.new/callback_helpers.hpp
+--- src/callback_helpers.hpp	2003-08-21 15:51:58.000000000 +0200
++++ src.new/callback_helpers.hpp	2004-10-07 14:30:40.235729977 +0200
+@@ -204,7 +204,7 @@
+ template<bool Condition, class Then, class Else>
+ struct IF {
+    typedef typename Selector<Condition>::RET select;
+-   typedef typename select::Result<Then,Else>::RET RET;
++   typedef typename boost::details::Selector<Condition>::RET::template Result<Then,Else>::RET RET;
+ };
+ 
+ 
+diff -ru src/stel_atmosphere.cpp src.new/stel_atmosphere.cpp
+--- src/stel_atmosphere.cpp	2004-05-31 16:33:10.000000000 +0200
++++ src.new/stel_atmosphere.cpp	2004-10-07 14:31:25.347505081 +0200
+@@ -30,7 +30,7 @@
+ stel_atmosphere::stel_atmosphere() : sky_resolution(48), tab_sky(NULL)
+ {
+ 	// Create the vector array used to store the sky color on the full field of view
+-	tab_sky = new (Vec3f*)[sky_resolution+1];
++	tab_sky = new Vec3f*[sky_resolution+1];
+ 	for (int k=0; k<sky_resolution+1 ;k++)
+ 	{
+ 		tab_sky[k] = new Vec3f[sky_resolution+1];
+diff -ru src/vecmath.h src.new/vecmath.h
+--- src/vecmath.h	2003-08-08 14:33:28.000000000 +0200
++++ src.new/vecmath.h	2004-10-07 14:28:15.534702249 +0200
+@@ -758,7 +758,7 @@
+ 						0, 0, 1, 0,
+ 						a.v[0], a.v[1], a.v[2], 1);
+ }
+-
++/*
+ template<class T> Matrix4<T> Matrix4<T>::rotation(const Vector3<T>& a)
+ {
+     T c = (T) cos(angle);
+@@ -769,7 +769,7 @@
+ 						a.v[0]*a.v[2]*d+a.v[1]*s, a.v[1]*a.v[2]*d-a.v[0]*s, a.v[2]*a.v[2]*d+c, 0,
+ 						0,0,0,1	);
+ }
+-
++*/
+ template<class T> Matrix4<T> Matrix4<T>::xrotation(T angle)
+ {
+     T c = (T) cos(angle);
