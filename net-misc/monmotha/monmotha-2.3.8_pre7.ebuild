@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8_pre7.ebuild,v 1.1 2002/08/21 02:23:27 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8_pre7.ebuild,v 1.2 2002/08/21 02:26:01 agenkin Exp $
 
 DESCRIPTION="MonMotha IPTables-based firewall script."
 HOMEPAGE="http://monmotha.mplug.org/firewall/"
@@ -18,18 +18,18 @@ src_install() {
 }
 
 pkg_postinst () {
-	einfo "Don't forget to add the Script to your default"
-	einfo "Runlevel by typing the following Command:"
+	einfo "Don't forget to add the 'monmotha' startup script  to your default"
+	einfo "runlevel by typing the following command:"
 	einfo ""
 	einfo "	 rc-update add monmotha default"
 	einfo ""
 	einfo "You need to edit /etc/monmotha/monmotha before using"
-	einfo "the Script. Enter the right Vars in the File, start the Script"
-	einfo "by typing: /etc/init.d/monmotha start and it should work"
+	einfo "it.  Enter the right vars in the file, start the script"
+	einfo "by typing: '/etc/init.d/monmotha start' and it should work."
 	einfo ""
-	einfo "Don't forget to change the Path to iptables!!!"
+	einfo "Don't forget to change the path to iptables!!!"
 	einfo ""
-	einfo "Note: If You are stopping the Firewall, all iptables Rulesets"
-	einfo "will be Flushed!!!"
+	einfo "Note: If You are stopping the firewall, all iptables rulesets"
+	einfo "will be flushed!!!"
 	einfo ""
 }
