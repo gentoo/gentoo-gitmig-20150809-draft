@@ -1,0 +1,170 @@
+diff -ur kde-i18n-fr-3.1/docs/kdebase/kcontrol/mouse/index.docbook kde-i18n-3.1.new/fr/docs/kdebase/kcontrol/mouse/index.docbook
+--- kde-i18n-3.1/fr/docs/kdebase/kcontrol/mouse/index.docbook	2002-11-11 07:22:18.000000000 -0500
++++ kde-i18n-3.1.new/fr/docs/kdebase/kcontrol/mouse/index.docbook	2003-01-28 18:18:55.000000000 -0500
+@@ -93,10 +93,8 @@
+ > <listitem
+ > <para
+ >Ceci est le réglage par défaut de &kde;. Le fait de cliquer une fois sur une icône l'ouvrira. Pour sélectionner, vous pouvez dessiner un cadre autour de(s) icône(s) à sélectionner ou cliquer avec <keycombo action="simul"
+->&Ctrl; bouton <mousebutton
+->Droit</mousebutton
+-> de la souris</keycombo
+->, ou cliquer une fois dessus en gardant le bouton appuyé pour la déplacer.</para
++>&Ctrl;<mousebutton>bouton Droit</mousebutton
++></keycombo> de la souris, ou cliquer une fois dessus en gardant le bouton appuyé pour la déplacer.</para
+ > </listitem
+ > </varlistentry
+ > <varlistentry
+@@ -305,4 +303,4 @@
+ 
+ </sect1>
+ 
+-</article>
+\ No newline at end of file
++</article>
+diff -ur kde-i18n-fr-3.1/docs/kdebase/khelpcenter/userguide/shortcuts.docbook kde-i18n-3.1.new/fr/docs/kdebase/khelpcenter/userguide/shortcuts.docbook
+--- kde-i18n-3.1/fr/docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2002-09-15 18:27:26.000000000 -0400
++++ kde-i18n-3.1.new/fr/docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2003-01-28 18:09:12.000000000 -0500
+@@ -42,7 +42,7 @@
+ >Tab</keycap
+ ></keycombo
+ > ou <keycombo
+->&Ctrl;&Maj;<keycap
++>&Ctrl;<keycap>&Maj;</keycap><keycap
+ >Tab</keycap
+ > </keycombo
+ ></term
+@@ -102,7 +102,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Esc</keycap
+ > </keycombo
+ ></term
+@@ -114,7 +114,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Correction</keycap
+ > </keycombo
+ ></term
+@@ -126,7 +126,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Numpad +</keycap
+ ></keycombo
+ ></term
+@@ -138,7 +138,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Numpad -</keycap
+ > </keycombo
+ ></term
+@@ -223,8 +223,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt;bouton <mousebutton
+->gauche</mousebutton
++>&Alt;<mousebutton>bouton gauche</mousebutton
+ ></keycombo
+ ></term
+ > <listitem
+@@ -235,8 +234,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt;bouton <mousebutton
+->central</mousebutton
++>&Alt;<mousebutton>bouton central</mousebutton
+ ></keycombo
+ ></term
+ > <listitem
+diff -ur kde-i18n-fr-3.1/docs/kdebase/kwrite/index.docbook kde-i18n-3.1.new/fr/docs/kdebase/kwrite/index.docbook
+--- kde-i18n-3.1/fr/docs/kdebase/kwrite/index.docbook	2002-11-11 07:22:19.000000000 -0500
++++ kde-i18n-3.1.new/fr/docs/kdebase/kwrite/index.docbook	2003-01-28 18:25:17.000000000 -0500
+@@ -772,8 +772,7 @@
+ > <menuchoice
+ > <shortcut
+ ><keycombo action="simul"
+->&Ctrl;
+-><keycap
++>&Ctrl;<keycap
+ >O</keycap
+ ></keycombo
+ ></shortcut
+diff -ur kde-i18n-fr-3.1/docs/kdegraphics/kpovmodeler/index.docbook kde-i18n-3.1.new/fr/docs/kdegraphics/kpovmodeler/index.docbook
+--- kde-i18n-3.1/fr/docs/kdegraphics/kpovmodeler/index.docbook	2002-11-11 07:22:25.000000000 -0500
++++ kde-i18n-3.1.new/fr/docs/kdegraphics/kpovmodeler/index.docbook	2003-01-29 09:04:24.000000000 -0500
+@@ -405,8 +405,7 @@
+ > <row
+ > <entry
+ ><keycombo action="click"
+->&Ctrl; bouton <mousebutton
+->Gauche</mousebutton
++>&Ctrl;<mousebutton>bouton Gauche</mousebutton
+ ></keycombo
+ > de la souris</entry
+ > <entry
+@@ -415,8 +414,7 @@
+ > <row
+ > <entry
+ ><keycombo action="click"
+->&Maj; bouton <mousebutton
+->gauche</mousebutton
++>&Maj;<mousebutton>bouton gauche</mousebutton
+ ></keycombo
+ > de la souris</entry
+ > <entry
+diff -ur kde-i18n-fr-3.1/docs/kdegraphics/kuickshow/index.docbook kde-i18n-3.1.new/fr/docs/kdegraphics/kuickshow/index.docbook
+--- kde-i18n-3.1/fr/docs/kdegraphics/kuickshow/index.docbook	2002-11-18 08:03:25.000000000 -0500
++++ kde-i18n-3.1.new/fr/docs/kdegraphics/kuickshow/index.docbook	2003-01-29 09:01:25.000000000 -0500
+@@ -629,8 +629,7 @@
+ > <row
+ > <entry
+ ><keycombo action="simul"
+->&Maj; glissé avec le bouton <mousebutton
+->gauche</mousebutton
++>&Maj;<mousebutton>glissé avec le bouton gauche</mousebutton
+ > </keycombo
+ ></entry
+ > <entry
+diff -ur kde-i18n-fr-3.1/docs/kdesdk/kbabel/menu.docbook kde-i18n-3.1.new/fr/docs/kdesdk/kbabel/menu.docbook
+--- kde-i18n-3.1/fr/docs/kdesdk/kbabel/menu.docbook	2002-09-13 15:32:52.000000000 -0400
++++ kde-i18n-3.1.new/fr/docs/kdesdk/kbabel/menu.docbook	2003-01-29 09:14:38.000000000 -0500
+@@ -363,7 +363,7 @@
+       <menuchoice>
+         <shortcut>
+           <keycombo action="simul">
+-            &Ctrl;&Alt;<keycap>Space</keycap>
++            &Ctrl;<keycap>&Alt;</keycap><keycap>Space</keycap>
+           </keycombo>
+         </shortcut>
+         <guimenu>Edit</guimenu>
+@@ -406,7 +406,7 @@
+       <menuchoice>
+         <shortcut>
+           <keycombo action="simul">
+-            &Ctrl;Alt;<keycap>N</keycap>
++            &Ctrl;<keycap>Alt;</keycap><keycap>N</keycap>
+           </keycombo>
+         </shortcut>
+         <guimenu>Edit</guimenu>
+@@ -426,7 +426,7 @@
+       <menuchoice>
+         <shortcut>
+           <keycombo action="simul">
+-            &Ctrl;Alt;<keycap>N</keycap>
++            &Ctrl;<keycap>Alt;</keycap><keycap>N</keycap>
+           </keycombo>
+         </shortcut>
+         <guimenu>Edit</guimenu>

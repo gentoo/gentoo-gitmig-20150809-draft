@@ -1,0 +1,69 @@
+diff -ur kde-i18n-ca-3.1/docs/kdebase/khelpcenter/faq/tips.docbook kde-i18n-3.1.new/ca/docs/kdebase/khelpcenter/faq/tips.docbook
+--- kde-i18n-3.1/ca/docs/kdebase/khelpcenter/faq/tips.docbook	2002-10-07 12:59:47.000000000 -0400
++++ kde-i18n-3.1.new/ca/docs/kdebase/khelpcenter/faq/tips.docbook	2003-01-28 13:12:36.000000000 -0500
+@@ -17,7 +17,7 @@
+ <answer>
+ <para
+ >Obriu la finestra emergent minicli (<keycombo action="simul"
+->&Alt;<keycap
++><keycap>&Alt;</keycap><keycap
+ >F2</keycap
+ ></keycombo
+ > és la combinació de tecles per omissió) i introduïu <command
+@@ -46,17 +46,14 @@
+ <answer>
+ <para
+ >Per a moure una finestra, empreu <keycombo action="simul"
+->&Alt; botó <mousebutton
+->esquerra</mousebutton
+-> del ratolí</keycombo
++><keycap>&Alt;</keycap><mousebutton>botó esquerra</mousebutton
++> <keycap>del</keycap> <keycap>ratolí</keycap></keycombo
+ >. Amb <keycombo action="simul"
+->&Alt; botó <mousebutton
+->dret</mousebutton
+-> del ratolí</keycombo
++><keycap>&Alt;</keycap><mousebutton>botó dret</mousebutton
++> <keycap>del</keycap> <keycap>ratolí</keycap></keycombo
+ > canviareu la mida. I per últim, però no menys important, <keycombo action="simul"
+->&Alt; botó <mousebutton
+->central</mousebutton
+-> del ratolí</keycombo
++><keycap>&Alt;</keycap><mousebutton>botó central</mousebutton
++> <keycap>del</keycap> <keycap>ratolí</keycap></keycombo
+ > canviareu la posició de la finestra per sobre o per sota de les altres. El <application
+ >Centre de control del &kde;</application
+ > també us permet canviar aquestes associacions del ratolí.</para>
+diff -ur kde-i18n-ca-3.1/docs/kdebase/khelpcenter/userguide/shortcuts.docbook kde-i18n-3.1.new/ca/docs/kdebase/khelpcenter/userguide/shortcuts.docbook
+--- kde-i18n-3.1/ca/docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2002-10-11 12:02:09.000000000 -0400
++++ kde-i18n-3.1.new/ca/docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2003-01-28 13:15:23.000000000 -0500
+@@ -223,8 +223,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt; botó <mousebutton
+->esquerra</mousebutton
++>&Alt;<mousebutton>botóesquerra</mousebutton
+ ></keycombo
+ ></term
+ > <listitem
+@@ -235,8 +234,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt; botó <mousebutton
+->central</mousebutton
++>&Alt;<mousebutton>botó central</mousebutton
+ > </keycombo
+ ></term
+ > <listitem
+@@ -247,8 +245,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt; botó <mousebutton
+->dret</mousebutton
++>&Alt;<mousebutton>botó dret</mousebutton
+ > </keycombo
+ ></term
+ > <listitem

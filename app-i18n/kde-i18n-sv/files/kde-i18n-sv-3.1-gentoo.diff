@@ -1,0 +1,21 @@
+diff -ur kde-i18n-sv-3.1/docs/kdeutils/kedit/index.docbook kde-i18n-3.1.new/sv/docs/kdeutils/kedit/index.docbook
+--- kde-i18n-3.1/sv/docs/kdeutils/kedit/index.docbook	2002-10-26 17:18:48.000000000 -0400
++++ kde-i18n-3.1.new/sv/docs/kdeutils/kedit/index.docbook	2003-01-29 16:27:45.000000000 -0500
+@@ -386,7 +386,7 @@
+ > <row
+ > <entry
+ ><keycombo action="simul"
+->&Shift;-<keycap
++>&Shift;<keycap
+ >vänsterpil</keycap
+ ></keycombo
+ ></entry
+@@ -398,7 +398,7 @@
+ > <row
+ > <entry
+ ><keycombo action="simul"
+->&Shift;-<keycap
++>&Shift;<keycap
+ >högerpil</keycap
+ ></keycombo
+ ></entry

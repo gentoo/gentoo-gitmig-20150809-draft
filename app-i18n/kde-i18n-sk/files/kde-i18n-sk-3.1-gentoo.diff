@@ -1,0 +1,27 @@
+diff -ur kde-i18n-sk-3.1/docs/kdebase/konsole/index.docbook kde-i18n-3.1.new/sk/docs/kdebase/konsole/index.docbook
+--- kde-i18n-3.1/sk/docs/kdebase/konsole/index.docbook	2002-11-11 07:29:36.000000000 -0500
++++ kde-i18n-3.1.new/sk/docs/kdebase/konsole/index.docbook	2003-01-29 14:40:10.000000000 -0500
+@@ -412,8 +412,7 @@
+ >. Tlačidlo <keycombo action="simul"
+ >&Ctrl;<mousebutton
+ >pravé</mousebutton
+->tlačidlo</keycombo
+-> zobrazí menu <guimenu
++></keycombo>tlačidl zobrazí menu <guimenu
+ >Sedenie</guimenu
+ >. </para
+ > </listitem
+diff -ur kde-i18n-sk-3.1/docs/kdebase/kwrite/index.docbook kde-i18n-3.1.new/sk/docs/kdebase/kwrite/index.docbook
+--- kde-i18n-3.1/sk/docs/kdebase/kwrite/index.docbook	2002-10-26 17:16:28.000000000 -0400
++++ kde-i18n-3.1.new/sk/docs/kdebase/kwrite/index.docbook	2003-01-29 15:47:50.000000000 -0500
+@@ -1097,8 +1097,8 @@
+ > <shortcut
+ ><keycombo action="simul"
+ >&Ctrl;<keycap
+-></keycap
+->G</keycombo
++>G</keycap
++></keycombo
+ ></shortcut
+ ><guimenu
+ >Nájsť</guimenu

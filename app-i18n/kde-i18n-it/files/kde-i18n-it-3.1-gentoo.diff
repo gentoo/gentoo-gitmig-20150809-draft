@@ -1,0 +1,40 @@
+--- kde-i18n-3.1/it/docs/kdeadmin/kpackage/index.docbook	2003-01-11 12:46:03.000000000 -0500
++++ kde-i18n-3.1.new/it/docs/kdeadmin/kpackage/index.docbook	2003-01-29 12:27:31.000000000 -0500
+@@ -1086,7 +1086,7 @@
+ >Copyright della documentazione 2000 Toivo Pedaste <email
+ >toivo@ucs.uwa.edu.au</email
+ ></para>
+-<othercredit role="translator"
++<para><othercredit role="translator"
+ ><firstname
+ >Valerio</firstname
+ > <surname
+@@ -1099,7 +1099,7 @@
+ > </affiliation
+ ><contrib
+ >Traduzione di questa documentazione</contrib
+-></othercredit>
++></othercredit></para>
+ 
+ &underFDL;
+ &underGPL;
+--- kde-i18n-3.1/it/docs/kdeadmin/kwuftpd/index.docbook	2003-01-13 12:32:03.000000000 -0500
++++ kde-i18n-3.1.new/it/docs/kdeadmin/kwuftpd/index.docbook	2003-01-29 13:10:23.000000000 -0500
+@@ -1037,7 +1037,7 @@
+ >jsinger@leeta.net</email
+ >.</para>
+ 
+-<othercredit role="translator"
++<para><othercredit role="translator"
+ ><firstname
+ >Valerio</firstname
+ > <surname
+@@ -1050,7 +1050,7 @@
+ > </affiliation
+ ><contrib
+ >Traduzione di questa documentazione</contrib
+-></othercredit>
++></othercredit></para>
+ 
+ &underFDL;
+ &underGPL;

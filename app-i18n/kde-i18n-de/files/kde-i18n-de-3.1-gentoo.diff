@@ -1,0 +1,130 @@
+diff -ur kde-i18n-de-3.1/docs/kdebase/kdeprint/getting-started.docbook kde-i18n-3.1.new/de/docs/kdebase/kdeprint/getting-started.docbook
+--- kde-i18n-3.1/de/docs/kdebase/kdeprint/getting-started.docbook	2003-01-03 08:44:45.000000000 -0500
++++ kde-i18n-3.1.new/de/docs/kdebase/kdeprint/getting-started.docbook	2003-01-28 15:39:46.000000000 -0500
+@@ -118,7 +118,7 @@
+ 
+ <para
+ >Gehen Sie zu <menuchoice
+->&kmenu; <guisubmenu
++><guimenu>&kmenu;</guimenu> <guisubmenu
+ >Einstellungen</guisubmenu
+ > <guisubmenu
+ >System</guisubmenu
+diff -ur kde-i18n-de-3.1/docs/kdebase/khelpcenter/faq/misc.docbook kde-i18n-3.1.new/de/docs/kdebase/khelpcenter/faq/misc.docbook
+--- kde-i18n-3.1/de/docs/kdebase/khelpcenter/faq/misc.docbook	2003-01-03 08:44:46.000000000 -0500
++++ kde-i18n-3.1.new/de/docs/kdebase/khelpcenter/faq/misc.docbook	2003-01-28 14:13:49.000000000 -0500
+@@ -128,7 +128,7 @@
+ > anbietet. <note
+ ><para
+ >Abhängig von Ihrer Einrichtung von &X-Window; kann auch die Tastenkombination <keycombo action="simul"
+->&Strg;&Alt; Rücktaste</keycombo
++><keycap>&Strg;</keycap><keycap>&Alt;</keycap><keycap>Rücktaste</keycap></keycombo
+ > die Sitzung beenden (durch gewaltsames Beenden des X-Servers), aber deren Benutzung stört das Sitzungsmanagement und kann deswegen nicht empfohlen werden.</para
+ ></note
+ ></para>
+diff -ur kde-i18n-de-3.1/docs/kdebase/khelpcenter/faq/tips.docbook kde-i18n-3.1.new/de/docs/kdebase/khelpcenter/faq/tips.docbook
+--- kde-i18n-3.1/de/docs/kdebase/khelpcenter/faq/tips.docbook	2003-01-03 08:44:46.000000000 -0500
++++ kde-i18n-3.1.new/de/docs/kdebase/khelpcenter/faq/tips.docbook	2003-01-28 14:13:09.000000000 -0500
+@@ -19,7 +19,7 @@
+ >Öffnen Sie das Dialogfenster für das Starten von Anwendungen <abbrev
+ >etc.</abbrev
+ > - standardmäßig mit <keycombo action="simul"
+->&Alt;<keycap
++><keycap>&Alt;</keycap><keycap
+ >F2</keycap
+ ></keycombo
+ > - und geben Sie <command
+@@ -46,15 +46,15 @@
+ <answer>
+ <para
+ >Um ein Fenster zu verschieben, können Sie die Tastenkombination <keycombo action="simul"
+->&Alt;<mousebutton
++><keycap>&Alt;</keycap><mousebutton
+ >linke</mousebutton
+ ></keycombo
+ > Maustaste verwenden. <keycombo action="simul"
+->&Alt;<mousebutton
++><keycap>&Alt;</keycap><mousebutton
+ >rechte</mousebutton
+ ></keycombo
+ > Maustaste verändert die Größe des Fensters und <keycombo action="simul"
+->&Alt;<mousebutton
++><keycap>&Alt;</keycap><mousebutton
+ >mittlere</mousebutton
+ ></keycombo
+ > Maustaste verschiebt das Fenster in den Hintergrund oder holt es wieder hervor. Für weitere Information über die Mausfunktionen lesen Sie bitte im "The K Window Manager Handbook" nach.</para>
+@@ -69,7 +69,7 @@
+ <answer>
+ <para
+ >Die Standard-Tastenkombination <keycombo action="simul"
+->&Strg;&Alt;&Esc;</keycombo
++><keycap>&Strg;</keycap><keycap>&Alt;</keycap><keycap>&Esc;</keycap></keycombo
+ > schaltet den Cursor in einen Totenkopf um. Klicken Sie mit diesem Cursor auf ein Fenster, um dieses zu schließen. Die Tastenzuordnungen können Sie im <application
+ >&kde;-Kontrollzentrum</application
+ > ansehen oder verändern. </para>
+@@ -86,7 +86,7 @@
+ >Dies passiert gewöhnlich dann, wenn sich eine Anwendung aufhängt, während sie einen so genannten <quote
+ >mouse/keyboard grab</quote
+ > besitzt. Wenn dies passiert, können Sie versuchen, durch Drücken von <keycombo action="simul"
+->&Strg;&Alt;<keycap
++><keycap>&Strg;</keycap><keycap>&Alt;</keycap><keycap
+ >F1</keycap
+ ></keycombo
+ > auf eine virtuelle Textkonsole zu gelangen und sich anzumelden. Mit dem folgenden Befehl können Sie eine Liste aller laufenden Prozesse ausgeben:</para>
+@@ -127,7 +127,7 @@
+ 
+ <para
+ >Sie können wieder auf Ihre Arbeitsfläche zurückschalten, indem Sie <keycombo action="simul"
+->&Strg;&Alt;<keycap
++><keycap>&Strg;</keycap><keycap>&Alt;</keycap><keycap
+ >F7</keycap
+ ></keycombo
+ > (oder auch <keycap
+@@ -135,7 +135,7 @@
+ > bzw. <keycap
+ >F9</keycap
+ >, abhängig von Ihrem Betriebssystem) drücken, um zu sehen, ob sie wieder läuft. Wenn Sie <keycombo action="simul"
+->&Alt;<keycap
++><keycap>&Alt;</keycap><keycap
+ >Tab</keycap
+ ></keycombo
+ > drücken, sollten Sie eine Reaktion von Ihrem Fenstermanager erhalten. Falls nicht, dann müssen Sie wieder auf die Textkonsole zurückkehren und versuchen, einen anderen Prozess zu beenden.</para>
+diff -ur kde-i18n-de-3.1/docs/kdegames/kolf/index.docbook kde-i18n-3.1.new/de/docs/kdegames/kolf/index.docbook
+--- kde-i18n-3.1/de/docs/kdegames/kolf/index.docbook	2002-12-31 11:19:15.000000000 -0500
++++ kde-i18n-3.1.new/de/docs/kdegames/kolf/index.docbook	2003-01-28 16:04:17.000000000 -0500
+@@ -800,7 +800,7 @@
+ ><menuchoice
+ ><shortcut
+ > <keycombo action="simul"
+->&Strg;<keycap
++><keycap>&Strg;</keycap><keycap
+ >N</keycap
+ ></keycombo
+ > </shortcut
+@@ -822,7 +822,7 @@
+ ><menuchoice
+ ><shortcut
+ > <keycombo action="simul"
+->&Strg;<keycap
++><keycap>&Strg;</keycap><keycap
+ >O</keycap
+ ></keycombo
+ > </shortcut
+@@ -844,7 +844,7 @@
+ ><menuchoice
+ ><shortcut
+ > <keycombo action="simul"
+->&Strg;<keycap
++><keycap>&Strg;</keycap><keycap
+ >S</keycap
+ ></keycombo
+ > </shortcut
+@@ -1240,7 +1240,7 @@
+ ><keycombo action="simul"
+ >&Strg;<keycap
+ ></keycap
+->Pos1</keycombo
++><keycap>Pos1</keycap></keycombo
+ ></shortcut
+ > <guimenu
+ >Gehe zu</guimenu

@@ -1,0 +1,14 @@
+diff -ur kde-i18n-hu-3.1/docs/kdegraphics/kuickshow/index.docbook kde-i18n-3.1.new/hu/docs/kdegraphics/kuickshow/index.docbook
+--- kde-i18n-3.1/hu/docs/kdegraphics/kuickshow/index.docbook	2002-09-15 18:29:47.000000000 -0400
++++ kde-i18n-3.1.new/hu/docs/kdegraphics/kuickshow/index.docbook	2003-01-29 11:52:12.000000000 -0500
+@@ -644,8 +644,8 @@
+ ><keycombo action="simul"
+ >&Shift;<mousebutton
+ >bal</mousebutton
+-> gomb</keycombo
+-> + húzás</entry
++></keycombo
++>gomb + húzás</entry
+ > <entry
+ >Kijelöl egy nagyítási téglalapot.</entry
+ > </row
