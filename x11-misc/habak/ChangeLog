@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/habak
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.10 2004/09/18 19:05:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.11 2004/09/20 11:10:30 lucass Exp $
+
+*habak-0.2.4.1 (20 Sep 2004)
+
+  20 Sep 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
+  +habak-0.2.4.1.ebuild:
+  Version bump. Minor changes in ebuild. Added metadata.xml.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> habak-0.2.1.ebuild:
   Stable on sparc.
