@@ -1,8 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.6 2003/04/30 16:59:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/phoenix-cvs-0.5-r2.ebuild,v 1.7 2003/05/01 17:04:29 weeve Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
+
+# Added to get phoenix to compile on sparc.
+replace-sparc64-flags
 
 EMVER="0.65.2"
 IPCVER="1.0.0.1"
@@ -14,7 +17,7 @@ S=${WORKDIR}/mozilla
 DESCRIPTION="The Phoenix Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/phoenix/"
 
-KEYWORDS="~x86 ~ppc -sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6"

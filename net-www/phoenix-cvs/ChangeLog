@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phoenix-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.4 2003/04/30 16:59:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.5 2003/05/01 17:04:29 weeve Exp $
+
+  01 May 2003; Jason Wever <weeve@gentoo.org> phoenix-cvs-0.5-r1.ebuild,
+  phoenix-cvs-0.5-r2.ebuild:
+  Changed -sparc keyword to ~sparc and adjusted ebuilds to include the
+  replace-sparc64-flags to fix build problems.
 
   30 Apr 2003; Jason Wever <weeve@gentoo.org> phoenix-cvs-0.5-r1.ebuild,
   phoenix-cvs-0.5-r2.ebuild:
@@ -14,7 +19,7 @@
   30 Mar 2003; phoen][x <phoenix@gentoo.org>; phoenix-cvs-0.5-r2.ebuild,
   files/digest-phoenix-cvs-0.5-r2, files/phoenix:
   Seth asked me to take a look into -r1. I cleaned up a few things:
-  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.4 2003/04/30 16:59:15 weeve Exp $
+  - Added the missing $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-cvs/ChangeLog,v 1.5 2003/05/01 17:04:29 weeve Exp $
   - made ebuild use flag-o-matic over ${CFLAGS//}
   - made ebuild use nsplugins.eclass for easy plugin integration
   TODO:
