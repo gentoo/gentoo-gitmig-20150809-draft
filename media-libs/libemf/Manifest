@@ -1,2 +1,5 @@
-MD5 3958278a6ecf309688fb16216e6179ec libemf-1.0.ebuild 595
+MD5 57317ea9d7b5e318b7220b4e16a459b5 libemf-1.0.ebuild 792
+MD5 8dbedbbac544b57f0b644399afeb1c68 ChangeLog 473
+MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
+MD5 3b1d4fe080501e571622229464654b95 files/libEMF-1.0-gcc3.patch 2429
 MD5 5dd26ee62faddde9ae039b314d8e0850 files/digest-libemf-1.0 62
