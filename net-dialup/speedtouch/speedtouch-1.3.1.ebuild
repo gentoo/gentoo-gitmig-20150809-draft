@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1.ebuild,v 1.2 2004/10/28 09:40:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1.ebuild,v 1.3 2004/10/31 08:24:54 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,30 +10,28 @@ DESCRIPTION="GPL Driver for the Alcatel Speedtouch USB under *nix"
 HOMEPAGE="http://speedtouch.sf.net/"
 SRC_URI="mirror://sourceforge/speedtouch/${MY_P}.tar.bz2"
 
-IUSE="static debug"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~hppa ~amd64"
+KEYWORDS="alpha ~amd64 hppa ~ppc x86"
+IUSE="static debug"
 
 DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
 
 src_compile() {
+	local myconf=
 	use debug && myconf="--enable-debug"
 	use static && myconf="${myconf} --enable-static"
 
 	filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
-	econf --enable-syslog  \
+	econf \
+		--enable-syslog \
 		${myconf} || die "./configure failed"
 
 	emake || die "make failed"
 }
 
-src_install () {
-
-	use debug && RESTRICT="${RESTRICT} nostrip"
-
+src_install() {
 	einstall || die
 
 	# twp 2003-12-25 install *.html correctly
