@@ -1,9 +1,9 @@
 # ChangeLog for net-zope/extfile
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.1 2003/04/11 08:17:52 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extfile/ChangeLog,v 1.2 2003/04/12 20:51:07 kutsuya Exp $
 
 *extfile-1.2.0_beta1 (11 Apr 2003)
 
   11 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> extfile-1.2.0_beta1.ebuild:
-  Initial import.
+  Initial import.#17598
 
