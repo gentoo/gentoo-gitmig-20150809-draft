@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.7 2004/07/27 14:41:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.8 2004/09/02 13:27:04 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 
@@ -21,7 +21,8 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
 DEPEND="virtual/libc
-	sys-libs/zlib"
+	sys-libs/zlib
+	!virtual/modutils"
 PROVIDE="virtual/modutils"
 
 src_unpack() {

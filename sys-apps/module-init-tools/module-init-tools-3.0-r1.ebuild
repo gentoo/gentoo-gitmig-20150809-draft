@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r1.ebuild,v 1.4 2004/07/13 21:55:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r1.ebuild,v 1.5 2004/09/02 13:27:04 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
-IUSE=""
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -11,18 +10,19 @@ MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
 MODUTILS_PV="2.4.26"
 DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
+HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 	mirror://kernel/linux/kernel/people/rusty/modules/old/${MYP}.tar.bz2
 	mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~ia64 ~arm ~ppc64 ~hppa ~s390"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~ia64 ~arm ~ppc64 ~hppa ~s390"
+IUSE=""
 
 DEPEND="virtual/libc
-	sys-libs/zlib"
-
+	sys-libs/zlib
+	!virtual/modutils"
 PROVIDE="virtual/modutils"
 
 src_unpack() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.66 2004/06/24 22:17:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.67 2004/09/02 13:27:04 vapier Exp $
+
+  02 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  module-init-tools-3.0-r1.ebuild, module-init-tools-3.0-r2.ebuild,
+  module-init-tools-3.0.ebuild:
+  Start blocking modutils.
 
   04 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   module-init-tools-3.0-r2.ebuild:
