@@ -1,12 +1,18 @@
 # ChangeLog for app-admin/kportagemaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.3 2002/06/17 18:42:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kportagemaster/ChangeLog,v 1.4 2002/07/02 17:45:56 rphillips Exp $
 
   17 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Add dep on kde-base/kdebase - kportagemaster needs kdesu. Close bug #3758
   (again).
 
+*kportagemaster-0.3 (02 Jul 2002)
+
+  02 Jul 2002; Ryan phillips <rphillips@gentoo.org> kportagemaster-0.3.ebuild :
+
+  New version
+  
 *kportagemaster-0.2 (15 Jun 2002)
 
   15 Jun 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
