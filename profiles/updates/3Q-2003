@@ -46,3 +46,6 @@ move sys-apps/grsecurity-base-policy sec-policy/grsecurity-base-policy
 move net-p2p/gift-cvs net-p2p/gift
 move net-p2p/gift-fasttrack-cvs net-p2p/gift-fasttrack
 move dev-perl/glib dev-perl/glib-perl
+move app-admin/envtest app-portage/envtest
+move app-admin/kemerge app-portage/kemerge
+move app-admin/kportage app-portage/kportage
