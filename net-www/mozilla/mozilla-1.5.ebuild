@@ -1,37 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.6 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.7 2003/10/20 09:25:53 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozcalendar mozaccess mozp3p mozxmlterm"
+IUSE="${IUSE} mozcalendar mozaccess mozxmlterm"
 IUSE="${IUSE} moznoirc moznomail moznocompose moznoxft"
 
 inherit flag-o-matic gcc eutils nsplugins
 
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
-# problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
+# Strip over-aggressive CFLAGS - Mozilla supplies its own fine-tuned CFLAGS and shouldn't be interfered with
 strip-flags
-#
-# Crashes on start when compiled with -fomit-frame-pointer
+
+# Strip flags which create more documented instability
 filter-flags "-fomit-frame-pointer"
 filter-flags -ffast-math
 append-flags -s -fforce-addr
@@ -47,8 +28,7 @@ append-flags -fno-strict-aliasing
 
 fi
 
-# We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
-# (bug #13287)
+# We set -O in ./configure to -O1, as -O2 cause crashes on startup ... (bug #13287)
 
 if [ "${ARCH}" = "amd64" ]
 then
@@ -110,7 +90,7 @@ DEPEND="${RDEPEND}
 moz_setup() {
 
 	# Set MAKEOPTS to have proper -j? option ..
-#	get_number_of_jobs
+	get_number_of_jobs
 	# This should enable parallel builds, I hope
 	export MAKE="emake"
 
@@ -124,12 +104,6 @@ moz_setup() {
 		export MOZ_PSM="1"
 	fi
 
-	# do we build java support for the NSS stuff ?
-	# NOTE: this is broken for the moment
-#	if [ "`use java`" ]
-#	then
-#		export NS_USE_JDK="1"
-#	fi
 }
 
 src_unpack() {
@@ -173,9 +147,6 @@ src_unpack() {
 		cp ${FILESDIR}/enigmail/Makefile-enigmail ${S}/extensions/enigmail/Makefile
 		cp ${FILESDIR}/enigmail/Makefile-ipc ${S}/extensions/ipc/Makefile
 	fi
-
-	# Fix build with Linux 2.6
-	cp ${S}/security/coreconf/Linux2.5.mk ${S}/security/coreconf/Linux2.6.mk
 
 }
 
@@ -271,11 +242,12 @@ src_compile() {
 	#        is just here for completeness.  Please do not use if you
 	#        do not know what you are doing!
 	#
-	# The defaults are (as of 1.2, according to configure (line ~11445)):
-	#     cookie, wallet, content-packs, xml-rpc, xmlextras, help, pref, transformiix,
-	#     venkman, inspector, irc, universalchardet, typeaheadfind
+	# The defaults are:
+	# cookie wallet content-packs xml-rpc xmlextras help p3p pref transformiix 
+	# venkman inspector irc universalchardet typeaheadfind webservices 
+	# spellcheck
 	# Non-defaults are:
-	#     xmlterm access-builtin p3p datetime finger cview
+	#     xmlterm access-builtin datetime finger cview
 	local myext="default"
 	if [ -n "`use mozxmlterm`" ]
 	then
@@ -285,14 +257,11 @@ src_compile() {
 	then
 		myext="${myext},access-builtin"
 	fi
-	if [ -n "`use mozp3p`" ]
-	then
-		myext="${myext},p3p"
-	fi
 	if [ -n "`use moznoirc`" ]
 	then
 		myext="${myext},-irc"
 	fi
+
 # Disable SVG until it's properly implemented
 #	if [ -n "`use mozsvg`" ]
 #	then
