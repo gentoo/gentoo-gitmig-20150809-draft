@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-clx
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.1 2004/12/14 21:46:53 mkennedy Exp $
+
+*cl-clx-0.6 (14 Dec 2004)
+
+  14 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/0.6-gentoo.patch, +cl-clx-0.6.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
