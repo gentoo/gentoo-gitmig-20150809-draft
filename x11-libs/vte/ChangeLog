@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.24 2003/06/10 12:22:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.25 2003/06/16 23:03:12 msterret Exp $
+
+  16 Jun 2003; <msterret@gentoo.org> vte-0.10.28.ebuild, vte-0.10.29.ebuild:
+  remove trailing slash per bug 21837
 
 *vte-0.10.29 (10 Jun 2003)
 

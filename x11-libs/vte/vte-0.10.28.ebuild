@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.10.28.ebuild,v 1.1 2003/05/13 21:15:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.10.28.ebuild,v 1.2 2003/06/16 23:03:12 msterret Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/glibc
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.6 )
-	python? ( >=dev-python/pygtk-1.99 
+	python? ( >=dev-python/pygtk-1.99
 		>=dev-lang/python-2.2 )
 	>=dev-util/pkgconfig-0.12.0"
 
@@ -31,4 +31,4 @@ DOCS="AUTHORS COPY* README HACKING INSTALL NEWS TODO ChangeLog"
 
 use python \
 	&& G2CONF="${G2CONF} --enable-python" \
-	|| G2CONF="${G2CONF} --disable-python" \
+	|| G2CONF="${G2CONF} --disable-python"
