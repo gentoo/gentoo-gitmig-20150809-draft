@@ -38,7 +38,7 @@ src_install() {
 	cp -r main Docs pb ${D}/${dir}/
 
 	exeinto ${dir}
-	doexe bin/x86/*.x86 openurl.sh
+	doexe bin/Linux/x86/*.x86 openurl.sh
 	if [ "`use dedicated`" ];
 	then
 		doexe ${FILESDIR}/wolf-ded
