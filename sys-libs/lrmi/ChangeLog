@@ -1,13 +1,13 @@
 # ChangeLog for sys-libs/lrmi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.9 2004/08/07 22:16:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.10 2004/09/11 21:16:10 kloeri Exp $
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> lrmi-0.8.ebuild:
   Added fix for static library installation which was left out previously.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> lrmi-0.8.ebuild:
   Fixed dynamic library installation; bug 57299. Thanks very much to Stefan
-  Schweizer <sschwiezer@gmail.com> for reporting.
+  Schweizer <sschweizer@gmail.com> for reporting.
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lrmi-0.6.ebuild,
   lrmi-0.7.ebuild, lrmi-0.8.ebuild:
