@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.3.ebuild,v 1.2 2003/10/22 02:32:00 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.3.ebuild,v 1.3 2003/10/26 19:07:09 port001 Exp $
 
 #
 # Mailbox format is determined by the 'mbox' and 'maildir'
@@ -43,7 +43,7 @@ HOMEPAGE="http://www.openwall.com/popa3d/"
 
 SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
 		 http://www.data.is/~hhg/popa3d/${P}-vname-2.diff
-		 maildir? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
+		 !mbox? ( http://www.data.is/~hhg/popa3d/popa3d-0.5.9-maildir-2.diff )"
 
 LICENSE="as-is"
 SLOT="0"
