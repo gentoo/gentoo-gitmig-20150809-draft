@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.17.ebuild,v 1.1 2004/12/09 12:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.17.ebuild,v 1.2 2005/01/19 00:43:00 wolf31o2 Exp $
 
-IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex"
+IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex doc"
 
 inherit flag-o-matic
 
@@ -79,6 +79,7 @@ src_install() {
 	# Different format versions of the Allegro documentation
 	dodoc AUTHORS CHANGES THANKS readme.txt todo.txt
 	use tetex && dodoc docs/allegro.{dvi,ps}
+	use doc && dodoc examples/*
 	dohtml docs/html/*
 	docinto txt
 	dodoc docs/txt/*.txt
