@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.62 2004/10/08 06:08:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.63 2004/10/08 09:07:22 sejo Exp $
+
+  08 Oct 2004; <SeJo@gentoo.org> gettext-0.12.1-r2.ebuild:
+  stable ppc gsla bug: 66355
 
   07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gettext-0.12.1-r2.ebuild:
