@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/freecdb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.1 2003/05/05 08:28:53 phosphan Exp $
+
+*freecdb-0.62 (05 May 2003)
+
+  05 May 2003; Patrick Kursawe <phosphan@gentoo.org> freecdb-0.62.ebuild:
+  Package provided by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp> 
+  in bug 20457
