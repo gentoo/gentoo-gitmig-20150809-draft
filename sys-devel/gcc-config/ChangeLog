@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.35 2003/04/12 21:19:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.36 2003/04/28 02:14:30 azarah Exp $
+
+*gcc-config-1.3.3-r1 (28 Apr 2003)
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.3-r1,
+  gcc-config-1.3.3 :
+  Update gcc-config-1.3.3 to use the absolute path to portageq, else it
+  breaks things.  Thanks to Spider <spider@gentoo.org> for noticing this.
 
   12 Apr 2003; Martin Schlemmer <azarah@gentoo.org> files/wrapper-1.4.1.c :
   Update wrapper as I suggested in bug #18933 to be able to handle cross
