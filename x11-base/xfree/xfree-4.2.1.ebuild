@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.20 2002/10/20 23:00:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.21 2002/10/25 22:35:24 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -33,7 +33,8 @@ strip-flags
 PATCH_VER="1.0"
 FT2_VER="2.1.2"
 FC2_VER="2.0"
-SISDRV_VER="050902-2"
+SISDRV_VER="251002-2"
+SAVDRV_VER="1.1.25t"
 
 BASE_PV="4.2.0"
 MY_SV="${BASE_PV//\.}"
@@ -48,7 +49,7 @@ X_PATCHES="http://ftp.xfree86.org/pub/XFree86/${PV}/patches/${BASE_PV}-${PV}.dif
 	mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
-	http://www.probo.com/timr/xf41sav.tgz
+	http://www.probo.com/timr/savage-${SAVDRV_VER}.tgz
 	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz
 	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver at http://people.mandrakesoft.com/~flepied/projects/wacom/
@@ -156,7 +157,7 @@ src_unpack() {
 	# Update the Savage Driver
 	einfo "Updating Savage driver..."
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/savage
-	tar -zxf ${DISTDIR}/xf41sav.tgz || die
+	tar -zxf ${DISTDIR}/savage-${SAVDRV_VER}.tgz || die
 
 	# Update the SIS Driver
 	einfo "Updating SiS driver..."

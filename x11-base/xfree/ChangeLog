@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.49 2002/10/20 23:00:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.50 2002/10/25 22:35:24 azarah Exp $
+
+  25 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
+
+  Update Savage and SIS drivers.  Fix my braindead bork with the savage
+  driver getting the binary and not the source.
 
   21 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1.ebuild :
 
