@@ -1,16 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.12 2004/12/05 09:17:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.13 2004/12/07 22:05:01 vapier Exp $
 
-inherit eutils gnuconfig
+inherit toolchain-funcs
 
-PVER="17"
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 	ftp://ftp.seindal.dk/gnu/${P}.tar.gz"
-#	mirror://gentoo/m4_1.4-${PVER}.diff.gz
-#	http://ftp.debian.org/debian/pool/main/m/m4/m4_1.4-${PVER}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +24,7 @@ src_compile() {
 		$(use_enable nls) \
 		--enable-changeword \
 		|| die
-	emake || die
+	emake AR="$(tc-getAR)" || die
 }
 
 src_install() {
