@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/xxe
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.1 2003/07/16 19:35:59 rizzo Exp $
+
+*xxe-2.3_p1 (16 Jul 2003)
+
+  16 Jul 2003; Don Seiler <rizzo@gentoo.org>; xxe-2.3_p1.ebuild:
+  Initial import.  Submitted by me
+
