@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/qlogtools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/ChangeLog,v 1.1 2003/08/01 05:02:36 robbat2 Exp $
+
+*qlogtools-3.1 (31 Jul 2003)
+
+  31 Jul 2003; RObin H. Johnson <robbat2@gentoo.org> qlogtools-3.1.ebuild,
+  files/qlogtools-3.1-errno.patch:
+  Initial commit
+
