@@ -8,4 +8,4 @@
 #important stuff (proc, /dev/pts, /var/shm)
 proc		/proc           proc		defaults		0 0
 none		/dev/pts	devpts		mode=620		0 0
-tmpfs		/dev/shm	tmpfs		defaults		0 0
+shm		/dev/shm	shm		defaults		0 0
