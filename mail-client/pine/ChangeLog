@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.3 2004/06/08 23:29:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.4 2004/06/10 16:49:25 agriffis Exp $
+
+  10 Jun 2004; Aron Griffis <agriffis@gentoo.org> pine-4.60.ebuild:
+  Fix use invocation
 
 *pine-4.60 (08 Jun 2004)
 

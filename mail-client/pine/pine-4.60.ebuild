@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.60.ebuild,v 1.1 2004/06/08 23:29:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.60.ebuild,v 1.2 2004/06/10 16:49:25 agriffis Exp $
 
 inherit eutils
 
@@ -43,17 +43,17 @@ src_unpack() {
 	cp "${FILESDIR}/flock.c" "${S}/imap/src/osdep/unix"
 	# Build the flock() emulation.
 	epatch "${FILESDIR}/imap-4.7c2-flock_4.60.patch"
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		# Link to shared ldap libs instead of static.
 		epatch "${FILESDIR}/pine-4.30-ldap.patch"
 		mkdir "${S}/ldap"
 		ln -s /usr/lib "${S}/ldap/libraries"
 		ln -s /usr/include "${S}/ldap/include"
 	fi
-#	if [ "`use ipv6`" ] ; then
+#	if use ipv6 ; then
 #		epatch "${DISTDIR}/${P}-v6-20031001.diff"
 #	fi
-	if [ "`use passfile`" ] ; then
+	if use passfile ; then
 		#Is this really the correct place to define it?
 		epatch "${FILESDIR}/pine-4.56-passfile.patch"
 	fi
@@ -71,7 +71,7 @@ src_unpack() {
 	# Bug #23336 - makes pine transparent in terms that support it.
 	epatch "${FILESDIR}/transparency.patch"
 
-	if [ "`use debug`" ] ; then
+	if use debug ; then
 		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
 			-i "${S}/pine/makefile.lnx" || die "sed pine/makefile.lnx failed"
 		sed -e "s:-g -DDEBUG:${CFLAGS} -g -DDEBUG:" \
@@ -89,7 +89,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		myconf="${myconf} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
 		sed -e "s:\$(SSLDIR)/certs:/etc/ssl/certs:" \
 			-e "s:\$(SSLCERTS):/etc/ssl/certs:" \
@@ -98,13 +98,13 @@ src_compile() {
 	else
 		myconf="${myconf} NOSSL"
 	fi
-	if [ "`use ldap`" ] ; then
+	if use ldap ; then
 		./contrib/ldap-setup lnp lnp
 		myconf="${myconf} LDAPCFLAGS=-DENABLE_LDAP"
 	else
 		myconf="${myconf} NOLDAP"
 	fi
-	if [ "`use kerberos`" ] ; then
+	if use kerberos ; then
 		myconf="${myconf} EXTRAAUTHENTICATORS=gss"
 	fi
 
@@ -120,7 +120,7 @@ src_install() {
 
 	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1
 	dodoc CPYRIGHT README doc/brochure.txt doc/tech-notes.txt
-#	if [ "`use ipv6`" ] ; then
+#	if use ipv6 ; then
 #		dodoc "${DISTDIR}/readme.${P}-v6-20031001"
 #	fi
 
