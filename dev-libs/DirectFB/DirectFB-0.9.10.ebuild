@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.10.ebuild,v 1.1 2002/04/27 00:36:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.10.ebuild,v 1.2 2002/05/01 08:28:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
@@ -12,13 +12,12 @@ DEPEND="sys-devel/perl
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	mpeg? (media-libs/libmpeg3 )
+	mpeg? ( media-libs/libmpeg3 )
 	flash? ( >=media-libs/libflash-0.4.10 )
 	truetype? ( >=media-libs/freetype-2.0.1 )
 	quicktime? ( media-libs/quicktime4linux )"
 #	avi? ( =media-video/avifile-0.6* )
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	
@@ -35,7 +34,7 @@ src_compile() {
 #		|| myconf="${myconf} --disable-avifile"
 	
 	myconf="${myconf} --disable-avifile"
-    
+	
 	use mpeg \
 		&& myconf="${myconf} --with-libmpeg3=/usr/include/libmpeg3" \
 		|| myconf="${myconf} --disable-libmpeg3"
@@ -56,9 +55,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-freetype" \
 		|| myconf="${myconf} --disable-freetype"
 	
-    ./configure	\
-		--prefix=/usr \
-		${myconf} || die
+	econf ${myconf} || die
 
 	use mpeg && ( \
 		cd ${S}/interfaces/IDirectFBVideoProvider
