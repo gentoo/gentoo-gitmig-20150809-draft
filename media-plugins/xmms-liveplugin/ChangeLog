@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-liveplugin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.1 2004/03/21 21:26:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.2 2004/04/20 17:54:38 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-liveplugin-0.2.5.ebuild:
+  Added IUSE.
 
 *xmms-liveplugin-0.2.5 (21 Mar 2004)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.3b.ebuild,v 1.6 2004/04/18 13:49:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.3b.ebuild,v 1.7 2004/04/20 17:41:51 eradicator Exp $
+
+IUSE=""
 
 inherit libtool
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.6.4.ebuild,v 1.3 2004/02/08 23:55:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.6.4.ebuild,v 1.4 2004/04/20 17:42:58 eradicator Exp $
+
+IUSE=""
 
 inherit gst-plugins
 

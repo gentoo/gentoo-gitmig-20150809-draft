@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.12 2004/02/06 14:45:23 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.13 2004/04/20 17:46:24 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mythvideo-0.11.ebuild, mythvideo-0.12.ebuild, mythvideo-0.13.ebuild,
+  mythvideo-0.14.ebuild:
+  Added IUSE.
 
   06 Feb 2004; Max Kalika <max@gentoo.org> :
   Ditch the postinst() message and don't attempt to install non-existant db

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.0.2.ebuild,v 1.2 2004/01/19 09:01:49 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.0.2.ebuild,v 1.3 2004/04/20 17:43:56 eradicator Exp $
+
+IUSE=""
 #
 MY_P=${P/mcp/MCP}
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/xmms-dspectral-1.2.1.ebuild,v 1.4 2004/03/05 21:35:26 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/xmms-dspectral-1.2.1.ebuild,v 1.5 2004/04/20 17:51:18 eradicator Exp $
+
+IUSE=""
 
 MY_P=${PN/xmms-/}-v${PV}
 S=${WORKDIR}/${MY_P}

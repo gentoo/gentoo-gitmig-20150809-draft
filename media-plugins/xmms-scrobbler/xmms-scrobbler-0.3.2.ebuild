@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.2.ebuild,v 1.1 2004/03/29 21:42:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.2.ebuild,v 1.2 2004/04/20 17:56:11 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Audioscrobbler plugin for XMMS"
 HOMEPAGE="http://www.audioscrobbler.com/"

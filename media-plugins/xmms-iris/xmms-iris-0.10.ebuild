@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.10.ebuild,v 1.6 2004/04/16 12:27:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.10.ebuild,v 1.7 2004/04/20 17:53:17 eradicator Exp $
+
+IUSE=""
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}

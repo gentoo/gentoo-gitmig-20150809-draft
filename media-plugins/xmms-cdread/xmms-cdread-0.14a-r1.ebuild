@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.5 2004/04/14 09:55:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.6 2004/04/20 17:49:22 eradicator Exp $
+
+IUSE=""
 
 inherit gnuconfig eutils
 

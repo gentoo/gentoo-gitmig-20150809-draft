@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.3 2004/04/08 07:33:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.4 2004/04/20 17:42:22 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  caps-plugins-0.1.10.ebuild, caps-plugins-0.1.5.ebuild:
+  Added IUSE.
 
   08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   caps-plugins-0.1.10.ebuild:

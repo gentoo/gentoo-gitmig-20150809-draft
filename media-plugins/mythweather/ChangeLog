@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.12 2004/02/03 15:01:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.13 2004/04/20 17:46:53 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mythweather-0.11.ebuild, mythweather-0.12.ebuild, mythweather-0.13.ebuild,
+  mythweather-0.14.ebuild:
+  Added IUSE.
 
 *mythweather-0.14 (03 Feb 2004)
 

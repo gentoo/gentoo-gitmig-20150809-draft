@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/hayes-1.1.5.ebuild,v 1.5 2004/03/14 17:23:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/hayes-1.1.5.ebuild,v 1.6 2004/04/20 17:43:20 eradicator Exp $
+
+IUSE=""
 
 inherit kde
 

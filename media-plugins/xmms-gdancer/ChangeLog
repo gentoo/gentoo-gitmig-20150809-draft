@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-gdancer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/ChangeLog,v 1.6 2004/04/14 09:58:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-gdancer/ChangeLog,v 1.7 2004/04/20 17:52:39 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-gdancer-0.4.5.ebuild:
+  Added IUSE.
 
   14 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-gdancer-0.4.6.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.2.1.ebuild,v 1.5 2004/02/25 20:43:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.2.1.ebuild,v 1.6 2004/04/20 17:48:36 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="XMMPlayer is an input plugin for XMMS"
 HOMEPAGE="http://thegraveyard.org/xmmplayer.php"

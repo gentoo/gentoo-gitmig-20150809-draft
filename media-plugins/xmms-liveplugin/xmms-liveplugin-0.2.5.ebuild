@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/xmms-liveplugin-0.2.5.ebuild,v 1.1 2004/03/21 21:26:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/xmms-liveplugin-0.2.5.ebuild,v 1.2 2004/04/20 17:54:38 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Plugin to support the IR port on the Sound Blaster Live Drive."
 HOMEPAGE="http://liveplugin.sourceforge.net"

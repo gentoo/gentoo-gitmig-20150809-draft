@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.ebuild,v 1.6 2003/09/07 00:02:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/xmms-dflowers-1.2.ebuild,v 1.7 2004/04/20 17:50:20 eradicator Exp $
+
+IUSE=""
 
 MY_P=${PN/xmms-/}-${PV}
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.14 2004/02/06 14:37:50 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.15 2004/04/20 17:45:06 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mythgallery-0.11.ebuild, mythgallery-0.12.ebuild, mythgallery-0.13.ebuild:
+  Added IUSE.
 
   06 Feb 2004; Max Kalika <max@gentoo.org> mythgallery-0.14.ebuild:
   Ditch the postinst() message and don't attempt to install non-existant db

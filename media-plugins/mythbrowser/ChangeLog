@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.1 2004/02/06 16:40:04 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.2 2004/04/20 17:44:41 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mythbrowser-0.14.ebuild:
+  Added IUSE.
 
 *mythbrowser-0.14 (06 Feb 2004)
 

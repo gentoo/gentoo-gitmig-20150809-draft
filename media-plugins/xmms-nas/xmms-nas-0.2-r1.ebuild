@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.6 2004/04/10 10:36:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/xmms-nas-0.2-r1.ebuild,v 1.7 2004/04/20 17:55:12 eradicator Exp $
+
+IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A xmms plugin for NAS"

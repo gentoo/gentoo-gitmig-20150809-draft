@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3.ebuild,v 1.5 2003/02/13 12:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3.ebuild,v 1.6 2004/04/20 17:42:07 eradicator Exp $
+
+IUSE=""
 
 inherit flag-o-matic
 
