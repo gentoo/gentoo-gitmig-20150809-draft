@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/package.mask,v 1.2 2005/03/12 19:15:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/package.mask,v 1.3 2005/03/12 19:33:27 weeve Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
@@ -12,4 +12,4 @@ media-libs/alsa-lib
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
->sys-apps/2.0.1-r1
+>sys-apps/gradm-2.0.1-r1
