@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/gigabase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.4 2003/02/18 12:52:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.5 2004/03/29 17:49:58 rphillips Exp $
+
+*gigabase-3.02 (29 Mar 2004)
+
+  29 Mar 2004; Ryan Phillips <rphillips@gentoo.org> gigabase-3.02.ebuild:
+  Version bump
 
 *gigabase-2.79 (18 Feb 2003)
 
