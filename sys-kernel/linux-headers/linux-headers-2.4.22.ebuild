@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.21 2004/07/09 22:39:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.22 2004/11/14 08:19:00 corsair Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -65,6 +65,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-strict-ansi-fix.patch
 	fi
 
+	use ppc64 && epatch ${FILESDIR}/${PN}-soundcard-ppc64.patch
 
 	# Do Stuff
 	kernel_universal_unpack
