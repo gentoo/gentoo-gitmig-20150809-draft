@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050103-r1.ebuild,v 1.1 2005/01/09 01:50:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050103-r2.ebuild,v 1.1 2005/01/12 11:34:36 ka0ttic Exp $
 
 inherit eutils
 
 GENCOMP_VERS="1.0_beta4"
+GENCOMP_PATCHVERS="20050112"
 
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
@@ -30,7 +31,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo.diff
 	cd ${WORKDIR}/gentoo-bashcomp-${GENCOMP_VERS}
-	epatch ${FILESDIR}/gentoo-bashcomp-20040108.diff
+	epatch ${FILESDIR}/gentoo-bashcomp-${GENCOMP_PATCHVERS}.diff
 }
 
 src_install() {

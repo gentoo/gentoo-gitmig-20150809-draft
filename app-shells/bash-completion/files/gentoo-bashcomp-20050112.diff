@@ -1,6 +1,6 @@
---- gentoo-bashcomp-1.0_beta4/src/gentoo	2004-12-05 23:56:32.000000000 -0500
-+++ gentoo-bashcomp/src/gentoo	2005-01-08 20:57:40.681998239 -0500
-@@ -13,7 +13,7 @@
+--- gentoo-bashcomp-1.0_beta4/src/gentoo	2005-01-12 06:26:08.380227552 -0500
++++ gentoo-bashcomp/src/gentoo	2005-01-12 06:25:05.153839424 -0500
+@@ -12,7 +12,7 @@
  #
  _portdir()
  {
@@ -9,7 +9,7 @@
  		/etc/make.conf /etc/make.globals
  }
  
-@@ -273,7 +273,7 @@
+@@ -272,7 +272,7 @@
  	cur=${COMP_WORDS[COMP_CWORD]}
  	if [ $COMP_CWORD -eq 1 ]; then
  		#COMPREPLY=($(compgen -o filenames -X "!*.ebuild" $cur))
@@ -18,16 +18,38 @@
  	elif [ $COMP_CWORD -eq 2 ]; then
  		COMPREPLY=($(compgen -W 'clean compile config \
  			depend digest \
-@@ -295,7 +295,7 @@
- #
- # simple completion for Gentoo style init
- #
--complete -W "start stop restart pause zap ineed needsme iuse usesme broken" \
-+complete -W "start stop restart pause zap status ineed needsme iuse usesme broken" \
- 	$(for i in /etc/init.d/*; do echo ${i##*/}; done)
+@@ -292,10 +292,27 @@
+ }
  
  #
-@@ -731,7 +731,7 @@
+-# simple completion for Gentoo style init
++# Gentoo init.d completion
+ #
+-complete -W "start stop restart pause zap ineed needsme iuse usesme broken" \
+-	$(for i in /etc/init.d/*; do echo ${i##*/}; done)
++
++_gentoo_style_init()
++{
++	local script="${COMP_WORDS[0]}"
++	local cur="${COMP_WORDS[$COMP_CWORD]}"
++
++	if [[ ( -f "${script}" || -h "${script}" ) && -r "${script}" ]] \
++	&& [[ "${script}" != *.sh ]] \
++	&& [[ "$(head -n 1 "${script}")" = "#!/sbin/runscript" ]]; then
++		[[ $COMP_CWORD -gt 1 ]] && return 1
++		COMPREPLY=($(opts="start stop status restart pause zap ineed needsme iuse usesme broken"; eval "$(grep '^opts=' "${script}")"; echo "${opts}"))
++		[[ "$COMPREPLY" ]] || COMPREPLY=(start stop restart zap)
++		COMPREPLY=($(compgen -W "${COMPREPLY[*]}" -- "${cur}"))
++	else
++		COMPREPLY=($(compgen -o default -- "${cur}"))
++	fi
++	return 0
++}
++complete -F _gentoo_style_init /etc/init.d/*
+ 
+ #
+ # rc completion command
+@@ -730,7 +747,7 @@
  	for i in "${COMP_WORDS[@]}"; do
  		if [ $j -lt $COMP_CWORD ]; then
  			j=$((j + 1))
@@ -36,7 +58,7 @@
  				mode=$i
  				;;
  			esac
-@@ -746,11 +746,11 @@
+@@ -745,11 +762,11 @@
  					COMPREPLY=($(compgen -W "-q --quiet -C --nocolor -h --help -V --version" -- $cur))
  					;;
  				*)
@@ -50,7 +72,7 @@
  			# These commands have not been implemented in 'equery' yet ...
  			echo -n "# Not implemented! "
  			;;
-@@ -830,12 +830,35 @@
+@@ -829,9 +846,32 @@
  						COMPREPLY=($(compgen -W "-U --no-useflags -l --linear" -- $cur))
  						;;
  					*)
@@ -58,10 +80,10 @@
 -						_pkgname -A $cur
 +						# Complete on installed package names.
 +						_pkgname -I $cur
- 						;;
- 				esac
- 			fi
- 			;;
++						;;
++				esac
++			fi
++			;;
 +		depends)
 +			# Only complete if the previous entry on the command line is not
 +			# a package name.
@@ -69,7 +91,7 @@
 +				case $cur in
 +					-*)
 +						COMPREPLY=($(compgen -W "-a --all-packages -d --direct -D --indirect" -- $cur))
-+						;;
+ 						;;
 +					*)
 +						case $prev in
 +						    -a|--all-packages)
@@ -82,13 +104,10 @@
 +							    ;;
 +
 +						esac
-+				esac
-+			fi
-+			;;
- 		check)
- 			# Only complete if the previous entry on the command line is not
- 			# a package name.
-@@ -859,12 +882,32 @@
+ 				esac
+ 			fi
+ 			;;
+@@ -858,12 +898,33 @@
  				esac
  			fi
  			;;
@@ -115,8 +134,9 @@
  complete -F _equery -o filenames equery
  }
  
++#
 +# ekeyword completion
-+# contributed by Ciaran McCreesh <ciaranm@gentoo.org>
++#
 +
  have ekeyword && {
  _ekeyword()
