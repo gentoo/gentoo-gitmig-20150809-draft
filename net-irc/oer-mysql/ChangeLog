@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/oer-mysql
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.7 2004/11/24 21:54:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/oer-mysql/ChangeLog,v 1.8 2004/12/16 03:26:53 swegener Exp $
+
+*oer-mysql-1.0.43 (16 Dec 2004)
+
+  16 Dec 2004; Sven Wegener <swegener@gentoo.org> +oer-mysql-1.0.43.ebuild:
+  Version bump.
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org> oer-mysql-1.0.42.ebuild:
   Fixed SRC_URI to match real file name.
