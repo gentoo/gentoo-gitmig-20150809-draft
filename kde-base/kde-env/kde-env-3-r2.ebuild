@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.17 2004/06/21 02:05:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r2.ebuild,v 1.18 2004/06/24 22:12:39 agriffis Exp $
 
 DESCRIPTION="Sets up some env.d files for kde"
 HOMEPAGE="http://www.gentoo.org/"

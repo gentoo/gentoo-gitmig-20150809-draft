@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r1.ebuild,v 1.10 2004/05/24 03:07:05 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-3-r1.ebuild,v 1.11 2004/06/24 22:12:39 agriffis Exp $
 
 DESCRIPTION="Sets up some env.d files for kde"
 SRC_URI=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.2.0.ebuild,v 1.11 2004/03/03 03:10:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.2.0.ebuild,v 1.12 2004/06/24 22:12:06 agriffis Exp $
 
 inherit kde-dist flag-o-matic
 

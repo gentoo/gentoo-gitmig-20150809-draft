@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kde-env
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.17 2004/06/21 02:05:15 tgall Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.18 2004/06/24 22:12:39 agriffis Exp $
 
   20 Jun 2004; Tom Gall <tgall@gentoo.org> kde-env-3-r2.ebuild:
   stable on ppc64, bug #54146
