@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.6 2004/04/21 16:47:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.7 2004/04/23 06:04:34 mkennedy Exp $
+
+*cl-sql-2.9.2 (23 Apr 2004)
+
+  23 Apr 2004; <mkennedy@gentoo.org>
+  +files/2.9.2-no-shared-object-asdf-gentoo.patch, +cl-sql-2.9.2.ebuild:
+  New upstream version
 
 *cl-sql-2.8.2 (21 Apr 2004)
 
