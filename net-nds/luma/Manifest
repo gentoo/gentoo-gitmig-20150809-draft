@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 66914096d2c7d3ba1ca51a3729b5edc4 luma-2.0.2.ebuild 842
 MD5 146ece73992b14a23b94ff05e5f7c91a luma-1.4.ebuild 945
-MD5 8f65f0b5db82197feea133f0f5184681 ChangeLog 1525
-MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
 MD5 d18dc619182c35c92227d5cba74050fc luma-2.0.1.ebuild 841
 MD5 38eea6212c9b88b10fc10410c7fc210c luma-1.6.ebuild 838
-MD5 66914096d2c7d3ba1ca51a3729b5edc4 luma-2.0.2.ebuild 842
+MD5 c5699df8769dea959f33b376782ff02e luma-2.0.3.ebuild 1180
+MD5 e5d4edd0a70edbceb53a4f7d10f6580d ChangeLog 1636
+MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
 MD5 16949160b2f6f63b47cf329f3fb9a087 files/digest-luma-1.4 64
-MD5 1e87c70a69c742f68ad7891442e1dea3 files/digest-luma-2.0.2 63
 MD5 a21f1cf1d3c01e1613854750396360fa files/digest-luma-1.6 61
 MD5 a6bb7f9692be516ae8190875bb4d5acf files/digest-luma-2.0.1 63
+MD5 1e87c70a69c742f68ad7891442e1dea3 files/digest-luma-2.0.2 63
+MD5 f2aaabeb9fe26499c1257d7981b05102 files/digest-luma-2.0.3 63
 MD5 0d493d96bbe30ded626e2e2ca6106241 files/winpopup-error.patch 2127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCA/2dugEuf3OQ0akRAgOyAJ9/021O3NUwDdZpMXhEPhzwpGyH9gCfQv3x
-9eVRgtcrYb/0LGTukfJuvJ0=
-=eCVE
------END PGP SIGNATURE-----
