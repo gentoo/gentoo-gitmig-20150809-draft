@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.1.0-r2.ebuild,v 1.1 2005/02/04 14:43:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.1.0-r3.ebuild,v 1.1 2005/03/05 19:51:10 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
@@ -36,7 +36,8 @@ UNIPATCH_LIST="${DISTDIR}/${PATCH_SRC_BASE} \
 	${FILESDIR}/2.4.28-uselib4pax.patch \
 	${FILESDIR}/gentoo-sources-2.4.CAN-2004-1137.patch \
 	${FILESDIR}/2.4.29-CAN-2005-0001.patch \
-	${FILESDIR}/CAN-2004-1335.patch"
+	${FILESDIR}/CAN-2004-1335.patch \
+	${FILESDIR}/2.4.28-grsec-2.1.0-pax-mmap-pgtables.patch"
 
 src_unpack() {
 	kernel-2_src_unpack
