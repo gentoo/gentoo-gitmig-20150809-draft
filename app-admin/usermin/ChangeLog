@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.27 2004/06/16 16:05:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.28 2004/06/16 17:20:55 eradicator Exp $
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/usermin-1.070-gentoo.patch, -files/patch/setup.sh,
+  -files/patch/usermin, -files/patch/usermin-init, -usermin-1.000.ebuild,
+  -usermin-1.030.ebuild, -usermin-1.060-r1.ebuild, -usermin-1.070-r1.ebuild:
+  Removing insecure versions.
 
   16 Jun 2004; Luca Barbato <lu_zero@gentoo.org> usermin-1.080.ebuild:
   Marked ppc
