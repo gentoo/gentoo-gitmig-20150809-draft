@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.0.ebuild,v 1.4 2004/06/24 21:54:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.0.ebuild,v 1.5 2004/11/16 08:40:52 phosphan Exp $
 
 inherit flag-o-matic kde-functions
 
@@ -36,7 +36,7 @@ pkg_setup() {
 	einfo	"opengl-update ${X11_IMPLEM}"
 	einfo	"emerge celestia"
 	einfo	"opengl-update nvidia"
-	einfo	"------------"
+	einfo	""
 	einfo	"NOTE: the gnome and kde GUIs are mutually exclusive. If you're getting"
 	einfo 	"the wrong one, run either:"
 	einfo	"'USE=gnome emerge celestia' (for the gnome interface)"

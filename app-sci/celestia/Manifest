@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f9ff1f859899ca41f510d245af7d109 celestia-1.3.0-r1.ebuild 2222
-MD5 881ad207128ff8ef475049306d2249a8 celestia-1.3.1.ebuild 2308
-MD5 0f4d71adea6a063dd7b7924cb7b9e095 celestia-1.3.0.ebuild 2099
-MD5 9f909b7dfd699343168814d22674dfaa ChangeLog 4880
+MD5 d1c4fd45b5434699053e79bca0e3b56b celestia-1.3.0-r1.ebuild 2210
+MD5 7a7c44ddc73bf924e3e6945afeb234be celestia-1.3.1.ebuild 2296
+MD5 b9f19d3e0e4c91481aedb79f76ee203b celestia-1.3.0.ebuild 2087
+MD5 8aa19b17b640f83af14e5efa4b9dcdf1 ChangeLog 5053
 MD5 1b55bd73a1313e288a88762af6cd0fb7 metadata.xml 330
 MD5 c7dec6c3cc66a4b2b95f2841e1847b97 celestia-1.3.2.ebuild 3105
 MD5 48aea4af15487f0c322ff982360d7ee8 files/celestia-1.3.1-gtkmain.patch 2501
@@ -15,10 +12,3 @@ MD5 03b2de07240ae616efd0d19d150b65bb files/digest-celestia-1.3.1 68
 MD5 d4ff8e51fb3a546279e7442cf24e07d7 files/digest-celestia-1.3.2 68
 MD5 95f9f0d84c71195fe1f00ba37ea79c0e files/digest-celestia-1.3.0-r1 68
 MD5 318b4452af1f7b12deb515e84ca6848a files/celestia-gcc3.patch 4576
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBlXcRUpKYMelfdYERAj7qAJsE61TCzu+P/jsICCLsQbTLJBuN8wCfZNcn
-KdUBcEBmIc66xgYAl82oQJA=
-=LmX0
------END PGP SIGNATURE-----
