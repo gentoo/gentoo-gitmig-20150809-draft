@@ -1,0 +1,55 @@
+--- startkde.orig	2004-10-12 18:38:29.300671568 -0500
++++ startkde	2004-10-12 18:40:23.766270152 -0500
+@@ -1,8 +1,36 @@
+ #!/bin/sh
+ #
+-#  DEFAULT KDE STARTUP SCRIPT ( KDE-3.3.2 )
++#  GENTOO CUSTOMIZED STARTUP SCRIPT ( KDE-3.3.2 )
+ #
+ 
++# Gentoo part:
++export PATH="_KDEDIR_/bin:${PATH}"
++export KDEDIR="_KDEDIR_"
++# Use env.d's KDEDIRS. They should only include locations like /usr$
++# actual KDE installations
++
++# handle ~/.kde* dirs - separate ones for separate KDEs
++cd ~
++if [ -e .kde ]; then
++       if [ ! -L .kde ]; then
++               /bin/mv -f .kde .kde.backup
++       else
++               rm -f .kde
++       fi
++fi
++if [ ! -e .kde3.3 ]; then
++       if [ -e .kde3.2 ]; then
++               /bin/cp -r .kde3.2 .kde3.3
++       else
++               /bin/mkdir .kde3.3
++       fi
++fi
++/bin/ln -sf .kde3.3 .kde
++
++#export KDEHOME="${HOME}/.kde3.3"
++
++# Gentoo part ends
++
+ # When the X server dies we get a HUP signal from xinit. We must ignore it
+ # because we still need to do some cleanup.
+ trap 'echo GOT SIGHUP' HUP
+@@ -14,12 +42,12 @@
+ 	exit 1
+ fi
+ 
+-# Set the background to plain grey.
++# Set the background to plain cyan.
+ # The standard X background is nasty, causing moire effects and exploding
+ # people's heads. We use colours from the standard KDE palette for those with
+ # palettised displays.
+ if test -z "$XDM_MANAGED" || echo "$XDM_MANAGED" | grep ",auto" > /dev/null; then
+-  xsetroot -solid "#C0C0C0"
++  xsetroot -solid "#5477A0"
+ fi
+ 
+ # we have to unset this for Darwin since it will screw up KDE's dynamic-loading
