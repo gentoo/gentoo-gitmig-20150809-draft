@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.ebuild,v 1.1 2004/10/03 21:23:27 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.ebuild,v 1.2 2004/10/17 10:01:58 dholm Exp $
 
 inherit kde
 need-kde 3.2
@@ -15,5 +15,5 @@ SRC_URI="http://www.kde-look.org/content/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
