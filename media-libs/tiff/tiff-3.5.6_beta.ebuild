@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.6_beta.ebuild,v 1.1 2001/03/14 15:29:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.6_beta.ebuild,v 1.2 2001/08/08 13:17:55 hallski Exp $
 
 P=${PN}-v3.5.6-beta
 A=${P}.tar.gz
@@ -17,7 +17,7 @@ src_unpack() {
     unpack ${A}
     cd ${S}
     cp ${FILESDIR}/config.site-${PV} config.site
-    echo "DIR_HTML=\"${D}/usr/share/doc/${PF}/html\"" >> config.site
+    echo "DIR_HTML="${D}/usr/share/doc/${PF}/html"" >> config.site
 #    mv configure configure.orig
 #    sed -e "s:if \[ -r /lib/libc.*:if \[ -r /lib/libc\.so\.6 \]\; then:" \
 #	configure.orig > configure
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
     try ./configure --noninteractive
     
-    try make OPTIMIZER=\""${CFLAGS}"\"
+    try make OPTIMIZER="${CFLAGS}"
 }
 
 src_install() {
