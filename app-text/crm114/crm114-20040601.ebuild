@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.2 2004/06/10 08:09:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040601.ebuild,v 1.3 2004/06/10 16:45:41 agriffis Exp $
 
 IUSE="nls static"
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 	sed -i "s#^CFLAGS.*#CFLAGS+=${CFLAGS} -I.#" Makefile
 
-	if [ `use static` ] ; then
+	if use static ; then
 		sed -i "s#-ltre#-L${S}/${TREVERS}/lib/.libs/ -ltre#g" Makefile
 	else
 		sed -i "s#-static##g"  Makefile
@@ -44,7 +44,7 @@ src_unpack() {
 
 src_compile() {
 	# Build TRE library.
-	if [ `use static` ] ; then
+	if use static ; then
 		cd ${S}/tre-${TREVERS}
 	    econf \
 			`use_enable nls` \
