@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/liblrdf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.5 2004/01/26 14:29:15 torbenh Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.6 2004/01/27 08:07:25 torbenh Exp $
+
+*liblrdf-0.3.4 (27 Jan 2004)
+
+  27 Jan 2004; <torbenh@gentoo.org> liblrdf-0.3.3.ebuild,
+  liblrdf-0.3.4.ebuild:
+  0.3.3 was an interrim version. updated to 0.3.4 and removed 0.3.3
 
 *liblrdf-0.3.3 (26 Jan 2004)
 
