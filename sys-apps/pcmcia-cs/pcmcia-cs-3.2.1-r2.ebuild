@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r2.ebuild,v 1.1 2002/10/21 23:33:17 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r2.ebuild,v 1.2 2002/11/02 15:48:23 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -103,9 +103,12 @@ src_compile() {
 	# rather than the currently-running kernel.  It's Gentoo Linux policy to configure for
 	# the kernel in /usr/src/linux
 
-	sed -e "s/^HAS_FORMS=y/HAS_FORMS=n/" config.out > config.out.sed
+	sed -e "/^HAS_FORMS/d" config.out > config.out.sed
+	sed -e "/^HAS_FORMS/d" config.mk > config.mk.sed
 	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.out.sed > config.out
+	sed -e "s/^FLIBS=\".*\"/FLIBS=\"\"/" config.mk.sed > config.mk
 	rm -f config.out.sed
+	rm -f config.mk.sed
 
 	emake all || die "failed compiling"
 }
