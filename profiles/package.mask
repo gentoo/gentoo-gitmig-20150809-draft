@@ -32,7 +32,8 @@
 
 # <george@gentoo.org> (08 Aug 2002)
 # new version, masked for testing
-=dev-lang/ghc-5.04
+# tested, (09 Aug 2002)
+#=dev-lang/ghc-5.04
 
 # <bass@gentoo.org> (08 Aug 2002)
 # beta version for gnome2
