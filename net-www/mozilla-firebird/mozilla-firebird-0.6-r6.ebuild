@@ -1,14 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.2 2003/07/18 04:47:12 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r6.ebuild,v 1.3 2003/07/20 03:37:51 brad Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins
+inherit makeedit flag-o-matic gcc nsplugins eutils
 
 # Added to get MozillaFirebird to compile on sparc.
 replace-sparc64-flags
-
-EMVER="0.65.2"
-IPCVER="1.0.0.1"
 
 S=${WORKDIR}/mozilla
 
@@ -16,7 +13,7 @@ DESCRIPTION="The Mozilla Firebird Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firebird/"
 SRC_URI="http://komodo.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-${PV}-source.tar.bz2"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6"
@@ -93,10 +90,11 @@ src_compile() {
       --enable-strip-libs \
       --enable-cpp-rtti \
       --enable-xterm-updates \
-	  --enable-optimize=-O2 \
+      --enable-optimize=-O2 \
       --disable-ldap \
       --disable-toolkit-qt \
-      --disable-toolkit-xlib"
+      --disable-toolkit-xlib \
+      --enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
 
     if [ -n "`use gtk2`" ] ; then
         myconf="${myconf} --enable-toolkit-gtk2 \
