@@ -7,4 +7,10 @@
   <name>Sven Wegener</name>
   <description>primary maintainer until someone from mysql takes over</description>
 </maintainer>
+<longdescription>
+The MySQL Query Browser is a graphical tool provided by MySQL AB for creating,
+executing, and optimizing queries in a graphical environment. Where the MySQL
+Administrator is designed to administer a MySQL server, the MySQL Query Browser
+is designed to help you query and analyze data stored within the MySQL DBMS.
+</longdescription>
 </pkgmetadata>

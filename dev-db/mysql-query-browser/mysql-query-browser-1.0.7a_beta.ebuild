@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.0.5_alpha.ebuild,v 1.1 2004/08/25 06:06:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.0.7a_beta.ebuild,v 1.1 2004/09/01 14:57:48 swegener Exp $
 
 inherit gnome2
 
@@ -48,4 +48,6 @@ src_install() {
 
 	rm ${D}/usr/bin/mysql-query-browser
 	dobin ${FILESDIR}/mysql-query-browser || die "dobin failed"
+
+	dohtml -r ${S}/mysql-query-browser/doc/{images,mysqlquerybrowser.html,html.css}
 }
