@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/files/xmail.initd,v 1.2 2003/07/21 07:17:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/files/xmail.initd,v 1.3 2003/07/24 03:06:52 raker Exp $
 
 depend() {
 	need net logger
@@ -50,7 +50,7 @@ start() {
 		mkdir -m 700 -p ${CHROOT}
 	fi
 
-	for subdir in dev lib var/run var/MailRoot
+	for subdir in dev lib var/run var/MailRoot tmp
 	do
 		if [ ! -d ${CHROOT}${subdir} ]
 		then
@@ -60,19 +60,17 @@ start() {
 	
 	if [ ! -c ${CHROOT}/dev/null ]
 	then
+		mknod ${CHROOT}/dev/null c `\
 		ls -Ll /dev/null |\
-		awk '{print sub(",","",$5) " " $6}' |\
-		xargs mknod ${CHROOT}/dev/null c
+		awk '{print sub(",","",$5) " " $6}'`
 	fi
 		
-	chown -R xmail.xmail ${CHROOT}
-
 	cp -R -u /etc/xmail/* ${CHROOT}${MAIL_ROOT}
 
-	cd ${CHROOT}
-	ldd var/MailRoot/bin/XMail |\
-		sed -n 's/[[:blank:]][^>]\+>[[:blank:]]\([[:graph:]]\+\).*/\1 lib\/ /p'\
-		|xargs -n 2 cp -u
+	chown -R xmail.xmail ${CHROOT}
+
+	cp `ldd ${CHROOT}${MAIL_ROOT}/bin/XMail |\
+	sed -n 's/[[:blank:]]*[^=]*=>\([^(]*\).*/\1/p'` ${CHROOT}/lib/
 	start-stop-daemon --start -c xmail -r ${CHROOT} \
 		--startas ${MAIL_EXEC} --pidfile=${MAIL_PID} -- \
 		${MAIL_CMD_LINE} 

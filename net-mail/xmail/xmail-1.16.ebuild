@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.1 2003/07/21 07:17:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.2 2003/07/24 03:06:52 raker Exp $
 
 IUSE=""
 
@@ -122,4 +122,8 @@ pkg_postinst() {
 	#fi
 
 	einfo "You can quickly configure XMail by running ${FILESDIR}/xmailwizard."
+
+	ewarn ""
+	ewarn "Make sure you have iptables enabled in your kernel!"
+	ewarn ""
 }
