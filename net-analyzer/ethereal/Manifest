@@ -2,18 +2,20 @@
 Hash: SHA1
 
 MD5 e70cd283dc61b8b8ffdaba5e82ceb873 ethereal-0.10.5.ebuild 2580
+MD5 d31f4dc432eb756efbcc8d44503c1bd1 ethereal-0.10.7.ebuild 2422
 MD5 d55ec36bbd613a4453870a65bc640b59 ethereal-0.10.6.ebuild 2421
-MD5 84b8ed2412f9a6996d97ebd04c4ae3f4 ChangeLog 4137
+MD5 96031ed3d6f54a90a35a231f48bc7f9f ChangeLog 4255
 MD5 ac5ab068efc12615cf18dfcb44aad2e8 ethereal-0.10.5-r1.ebuild 2594
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
 MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5-r1 69
 MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5 69
 MD5 5bc98004e6492e3349a16bf0591c743e files/digest-ethereal-0.10.6 69
+MD5 17b6c78c6fc3bfe54222ff9626331c72 files/digest-ethereal-0.10.7 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBe9q/T+MN7JbqCpMRArJcAJ42fHEjiH/yUCU4Z/7qoTNWSpcUEgCgj8hB
-gwM1RAqk+yp+rx/8d1ncKes=
-=j7Dq
+iD8DBQFBfQUWT+MN7JbqCpMRAqqGAJ9c2ghnARKy0pzMGL9YC84nlj2VzgCdF8E7
+HMg3rOEcfrEcJxsjsboN1tE=
+=iQZ9
 -----END PGP SIGNATURE-----
