@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.ebuild,v 1.4 2003/02/28 13:18:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.ebuild,v 1.5 2003/03/29 23:32:47 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Replacement for the venerable 'isql' program supplied by Sybase."
@@ -9,13 +9,7 @@ LICENSE="GPL-2"
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
 	X? ( x11-base/xfree )
-	motif? ( x11-libs/openmotif )
-	sys-devel/ld.so
-	virtual/glibc"
-RDEPEND="dev-db/freetds
-	readline? ( sys-libs/readline )
-	X? ( x11-base/xfree )
-	motif? ( x11-libs/openmotif )
+	motif? ( virtual/motif )
 	sys-devel/ld.so
 	virtual/glibc"
 SLOT="0"
