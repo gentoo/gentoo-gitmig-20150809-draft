@@ -4,8 +4,8 @@ MD5 8aecad8c011d53493c84ddf5427e0a33 modutils-2.4.24.ebuild 1334
 MD5 df7d440cbfdd4dbb63486b8a2e8d6355 modutils-2.4.23.ebuild 1394
 MD5 a73b8ecd4dcc019f9bce873ee9bc40a6 modutils-2.4.19.ebuild 1130
 MD5 47b2463bfba5154bfb2961d32be5e205 modutils-2.4.16-r3.ebuild 1212
-MD5 3e649a421817647a865731659dd074b0 ChangeLog 4916
-MD5 b1881782172a65905c4f96645c95ca8a modutils-2.4.25.ebuild 1631
+MD5 be31f6a0658ac7b7e18ceb37065632ea ChangeLog 4916
+MD5 24f611cdea223701f7861e65e18fb4a7 modutils-2.4.25.ebuild 1628
 MD5 759c27455fab35ff3d1e14a0aa412c5b modutils-2.4.20.ebuild 1044
 MD5 2a538675787b2c0d36e17a54b7205ada files/digest-modutils-2.4.16-r2 68
 MD5 2a538675787b2c0d36e17a54b7205ada files/digest-modutils-2.4.16-r3 68
