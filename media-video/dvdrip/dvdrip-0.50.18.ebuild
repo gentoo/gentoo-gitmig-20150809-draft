@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.3 2004/07/28 16:13:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.18.ebuild,v 1.4 2004/10/17 11:32:27 absinthe Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="cdr gnome"
 
 DEPEND=" gnome? ( gnome-extra/gtkhtml )

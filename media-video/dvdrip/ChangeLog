@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.28 2004/06/25 00:39:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.29 2004/10/17 11:32:27 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dvdrip-0.50.18.ebuild:
+  stable on amd64
 
 *dvdrip-0.50.18 (19 Apr 2004)
 
