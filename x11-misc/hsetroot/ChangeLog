@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/hsetroot
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.1 2004/12/05 00:58:32 pyrania Exp $
+
+*hsetroot-1.0.2 (05 Dec 2004)
+
+  05 Dec 2004; <pyrania@gentoo.org> +metadata.xml, +hsetroot-1.0.2.ebuild:
+  Initial import.
+

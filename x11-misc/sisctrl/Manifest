@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1dd0ee468fe256d41a2ae863c7fe4a5d sisctrl-0.0.20031119.ebuild 705
-MD5 c0ab69e1a3de4d18eaf4ac663516cff6 ChangeLog 819
+MD5 2ebd3046dee902f181f9cd03f708f9de sisctrl-0.0.20041129.ebuild 705
+MD5 2003e2c72a35662b448325e018e13687 ChangeLog 938
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
 MD5 3b41773ae6c73bbf29ae5a6dc79be26d files/digest-sisctrl-0.0.20031119 72
+MD5 d99e1760c21d56068ca4acf56b5b7352 files/digest-sisctrl-0.0.20041129 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsl3dI7fK2cqeyXkRAmR4AJ9Bp7C5IvKPYZGNK8p/1k0/D9VrDgCeJROp
+HpbGEmQMwpcVeB3ihZtyBP8=
+=e7wx
+-----END PGP SIGNATURE-----
