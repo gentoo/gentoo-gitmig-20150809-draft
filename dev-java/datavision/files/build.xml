@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<project name="DataVision" default="jar" basedir=".">
+	<!-- some properties -->
+	<property name="src.dir" value="." />
+	<property name="build.dir" value="build" />
+	<property name="test.dir" value="tests" />
+	<property name="lib.dir" value="lib" />
+	<property name="docs.dir" value="docs" />
+	<property name="dist.dir" value="dist" />
+	<property name="jarfile" value="${dist.dir}/DataVision.jar" />
+	<property name="jarmanifest" value="jimm/Manifest" />
+	<property name="properties.dir" value="jimm/properties" />
+	<property name="images.dir" value="${build}/toolbarButtonGraphics" />
+	<property name="images.sourcedir" value="images" />
+
+	<!-- properties file for external jars etc -->
+	<property file="build.properties" />
+
+	
+	<!-- classpath -->
+	<path id="compile.classpath">
+		<pathelement path="${lib.dir}/minml2.jar" />
+		<pathelement path="${lib.dir}/jcalendar.jar" />
+		<pathelement path="${lib.dir}/jruby.jar" />
+		<pathelement path="${lib.dir}/gnu-regexp.jar" />
+		<pathelement path="${lib.dir}/iText.jar" />
+		<pathelement path="${lib.dir}/junit.jar" />
+	</path>
+
+	
+	<!-- init -->
+	<target name="init">
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${test.dir}" />
+	</target>	
+
+
+  	<!-- Copy image files into build directory -->
+  	<target name="images" depends="init">
+  	<copy todir="${images.dir}">
+      		<fileset dir="${images.sourcedir}" />
+    	</copy>
+  	</target>
+
+	
+	<!-- Copy properties files into build directory -->
+	<target name="properties">
+	<copy todir="${build.dir}">
+		<fileset dir="${properties.dir}" includes="*.properties" />
+	</copy>
+	</target>
+
+
+	<!-- compile everything -->
+	<target name="compile" depends="init, images, properties">
+		<mkdir dir="${build.dir}" />
+		<javac srcdir="${src.dir}" 
+			destdir="${build.dir}"
+			includes="jimm/**"
+			excludes="jimm/datavision/test/**,jimm/datavision/testdata/**"
+			source="1.4"
+			target="1.4">
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+
+
+	<!-- build the jar file -->
+	<target name="jar" depends="compile">
+		<jar jarfile="${jarfile}" basedir="${build.dir}" manifest="${jarmanifest}" />
+	</target>
+
+	
+	<!-- generate javadocs -->
+	<target name="docs" depends="init">
+		<javadoc sourcepath="${src.dir}"
+			packagenames="jimm.*"
+           		destdir="${docs.dir}"
+           		author="true"
+           		version="true"
+           		use="true"
+           		windowtitle="${ant.project.name} API" />
+	</target>
+
+	<!-- Compile and run tests -->
+  	<target name="compile.test" depends="compile">
+    		<javac srcdir="${src.dir}" destdir="${test.dir}"
+     			includes="jimm/**" 
+			excludes="jimm/datavision/testdata/**"
+			source="1.4"
+			target="1.4">
+      			<classpath refid="compile.classpath" />
+    		</javac>
+  	</target>
+    	
+	<!-- test -->
+ 	<target name="test" depends="compile.test">
+		<java classname="jimm.datavision.test.AllTests"
+		classpathref="test.run.classpath" />  
+	</target>
+	
+	<!-- clean up -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${test.dir}" />
+		<delete dir="${docs.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+</project>

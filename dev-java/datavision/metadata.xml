@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+<herd>java</herd>
+
+<longdescription>
+
+DataVision is an Open Source reporting tool similar to Crystal Reports. Reports 
+can be designed using a drag-and-drop GUI. They may be run, viewed, and printed 
+from the application or exported as HTML, XML, PDF, LaTeX2e, DocBook, or tab- or 
+comma-delimited text files. The output files produced by LaTeX2e and DocBook can 
+in turn be used to produce PDF, text, HTML, PostScript, and more.
+
+DataVision is written in Java and runs almost anywhere. It can generate reports 
+from databases or text data files. Any database with an available JDBC driver 
+should work: Oracle, PostgreSQL, MySQL, Informix, hsqldb, Microsoft Access, 
+Progress, and more. Columns read from text files can be separated by any 
+character.
+
+Report descriptions are stored as XML files. This means you can not only use the 
+DataVision GUI but you may also edit reports using your favorite text editor.
+
+</longdescription>
+</pkgmetadata>

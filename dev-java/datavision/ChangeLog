@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/datavision
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.6 2004/12/04 17:55:01 karltk Exp $
+
+*datavision-0.8.2 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> datavision-0.8.2.ebuild:
+  Initial import. Ebuild submitted by the talented Mr. Jan Brinkmann 
+  <lucky@the-luckyduck.de>. Fixes #63297.
