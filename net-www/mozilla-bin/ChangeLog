@@ -1,0 +1,14 @@
+# ChangeLog for net-www/mozilla-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-bin/ChangeLog,v 1.1 2004/08/05 03:06:41 agriffis Exp $
+
+*mozilla-bin-1.7.2 (04 Aug 2004)
+
+  04 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +files/mozilla-bin-icon.png, +files/mozilla-bin.desktop,
+  +mozilla-bin-1.7.2.ebuild:
+  Bring back mozilla-bin. It's been gone for two years. Having these
+  mozilla.org-built versions in portage makes it easier to test differences
+  between our builds and theirs. And nowadays they can both be installed
+  simultaneously.
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Mozilla (bin)
+Comment=Mozilla Application Suite
+Exec=/usr/bin/mozilla %U
+Icon=mozilla-bin-icon.png
+Terminal=false
+Type=Application
+Categories=Application;Network;
