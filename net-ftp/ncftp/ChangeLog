@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.23 2004/04/26 00:02:46 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.24 2004/04/27 21:50:41 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ncftp-3.1.5-r1.ebuild:
+  Add inherit eutils
 
   25 Apr 2004; Michael McCabe <randy@gentoo.org> ncftp-3.1.7.ebuild:
   added s390 keywords

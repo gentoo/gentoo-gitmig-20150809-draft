@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14.ebuild,v 1.7 2003/09/07 00:12:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.14.ebuild,v 1.8 2004/04/27 21:49:49 agriffis Exp $
 
 IUSE="nls gtk2"
 S=${WORKDIR}/${P}

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.54 2004/04/21 02:25:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.55 2004/04/27 21:51:21 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> proftpd-1.2.9-r1.ebuild:
+  Add inherit eutils
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   proftpd-1.2.9-r1.ebuild, proftpd-1.2.9.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5-r1.ebuild,v 1.4 2004/02/29 21:35:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5-r1.ebuild,v 1.5 2004/04/27 21:50:41 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 IPV6_P="ncftp-315-v6-20030207"

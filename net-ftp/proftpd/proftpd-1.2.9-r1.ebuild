@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9-r1.ebuild,v 1.4 2004/04/21 02:25:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9-r1.ebuild,v 1.5 2004/04/27 21:51:21 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 IUSE="ldap pam postgres mysql ssl tcpd ipv6"
 
