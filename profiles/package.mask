@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+
+# <verwilst@gentoo.org> (2 Okt 2002)
+# Masked for t3st@ge
+=app-games/clanlib-0.6.3
+
 # <woodchip@gentoo.org> (02 Oct 2002)
 # chase latest release; update/report please.
 =sys-apps/evms-1.2.0
