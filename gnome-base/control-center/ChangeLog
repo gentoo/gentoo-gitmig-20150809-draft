@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.22 2002/12/16 23:15:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.23 2003/01/03 17:51:26 foser Exp $
 
   16 Dec 2002; Aron Griffis <agriffis@gentoo.org> control-center-1.4.0.5-r1.ebuild :
   Added ~alpha to KEYWORDS
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *control-center-2.0.3-r1 (01 Dec 2002)
+
+  03 Dec 2002; foser <foser@gentoo.org> control-center-2.0.3-r1.ebuild :
+  Fixed src_uri
 
   01 Dec 2002; foser <foser@gentoo.org> control-center-2.0.3-r1.ebuild :
   Patched with XFT2 config capplet

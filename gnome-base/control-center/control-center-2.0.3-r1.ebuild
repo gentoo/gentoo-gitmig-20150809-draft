@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.0.3-r1.ebuild,v 1.3 2002/12/15 10:44:19 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.0.3-r1.ebuild,v 1.4 2003/01/03 17:51:26 foser Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the gnome2 Desktop configuration tool"
 SRC_URI="${SRC_URI}
-	http://cvs.gentoo.org/~foser/gentoo-xft2-control-center-2.0.3.tar.bz2"
+	mirror://gentoo/gentoo-xft2-control-center-2.0.3.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2"
