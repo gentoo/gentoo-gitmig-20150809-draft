@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythondialog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.9 2004/12/31 00:08:47 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.10 2005/01/04 10:41:45 kloeri Exp $
+
+  04 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Stable on x86 and alpha.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
