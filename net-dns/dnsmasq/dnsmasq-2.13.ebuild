@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.13.ebuild,v 1.1 2004/08/14 18:36:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.13.ebuild,v 1.2 2004/08/14 19:18:54 vapier Exp $
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -18,20 +18,16 @@ DEPEND="virtual/libc
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i "s:-O2:\"${CFLAGS}\":" Makefile
-	sed -i "s:-O2:\"${CFLAGS}\":" src/Makefile
-}
-
 src_compile() {
 	emake || die
 }
 
 src_install() {
-	dosbin src/dnsmasq || die
-	doman dnsmasq.8
+	make \
+		PREFIX=/usr \
+		MANDIR=/usr/share/man \
+		DESTDIR=${D} \
+		install || die
 	dodoc CHANGELOG FAQ
 	dohtml *.html
 
