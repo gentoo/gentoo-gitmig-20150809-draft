@@ -98,10 +98,6 @@ dev-libs/commoncpp2
 =kde-base/kdetoys-3.1_beta2
 =kde-base/kdeutils-3.1_beta2
 
-# fix #6519, #5953; masked until they are well tested
-=kde-base/kdebase-3.0.3-r1
-=x11-themes/ksplash-ml-themes-20020705-r1
-=x11-misc/ksplash-ml-0.95.2-r1
 
 # <spider@gentoo.org> (01 Oct 2002)
 # Masking since its a versionbump as well as fix.
