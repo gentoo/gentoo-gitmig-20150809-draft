@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.5 2002/07/04 05:27:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.6 2002/07/04 05:52:10 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -81,8 +81,10 @@ src_install() {
 	insinto ${WEBROOT}
 	doins favicon.ico
 	
-	#dynamic firewalls tools page
 	cd ${S}
+	doins css/main-new.css css/resume.css
+	
+	#dynamic firewalls tools page
 	xsltproc $TEMPLATE xml/dynfw.xml > ${D}${WEBROOT}/projects/dynfw.html	|| die
 	xsltproc $TEMPLATE xml/project-xml.xml > ${D}${WEBROOT}/projects/xml.html	|| die
 	
@@ -135,13 +137,10 @@ src_install() {
 	python python/genpkgxml-v2.py ${T}/main-packages.xml || die
 	for DIR in `ls xml/packages`
 	do
-		echo "Making dir: (${DIR}) ${D}/${WEBROOT}/${DIR}/"
-					   	 dodir ${WEBROOT}/packages/${DIR}
 		for FILE in  `ls xml/packages/${DIR} | sed 's/.xml//'`
 		do
-			echo ${FILE}
-			echo "xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html"
-				  xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html
+			echo -n "."	
+			xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html
 		done
 	done
 
@@ -149,7 +148,6 @@ src_install() {
 	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
 	xsltproc $TEMPLATE ${T}/main-packages-old-style.xml > ${D}${WEBROOT}/index-packages-old.html || die
 	xsltproc $TEMPLATE xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
-	doins css/main-new.css css/resume.css
 	
 	#install XSL for later use
 	dodir ${WEBROOT}/xsl
@@ -177,6 +175,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	export WEBROOT="`cat ${T}/webroot`"
 	if [ -d ${WEBROOT}.bak ]
 	then
 		rm -rf ${WEBROOT}.bak
