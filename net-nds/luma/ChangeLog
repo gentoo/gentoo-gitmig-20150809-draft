@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.5 2004/11/03 14:42:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.6 2004/11/08 20:23:09 carlo Exp $
+
+*luma-1.5 (08 Nov 2004)
+
+  08 Nov 2004; Carsten Lohrke <carlo@gentoo.org> +luma-1.5.ebuild:
+  version bump
 
   03 Nov 2004; <SeJo@gentoo.org> luma-1.4.ebuild:
   stable on ppc
