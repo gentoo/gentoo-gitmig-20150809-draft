@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.55 2005/02/01 15:43:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.56 2005/02/01 20:20:24 tester Exp $
+
+  01 Feb 2005; Olivier Crête <tester@gentoo.org> :
+  Stable on x86 per security bug #79874
 
   30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
   Stable on alpha, bug 79874.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c.ebuild,v 1.5 2005/01/30 19:43:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c.ebuild,v 1.6 2005/02/01 20:20:24 tester Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.washington.edu/imap/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 sparc ppc ~hppa alpha amd64"
+KEYWORDS="x86 sparc ppc ~hppa alpha amd64"
 IUSE="ipv6 ssl pic kerberos"
 
 PROVIDE="virtual/imapd"
