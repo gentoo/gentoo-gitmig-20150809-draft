@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10-r1.ebuild,v 1.2 2005/03/09 17:40:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/callgrind/callgrind-0.9.10-r1.ebuild,v 1.3 2005/03/28 13:33:54 caleb Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-RDEPEND=">=dev-util/valgrind-2.2.0"
+RDEPEND="=dev-util/valgrind-2.2*"
 DEPEND="${RDEPEND}
 	!dev-util/calltree"
 
