@@ -1,6 +1,12 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.22 2004/09/29 03:15:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.23 2004/10/03 14:19:05 usata Exp $
+
+  03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/htmltidy-dbpatch.diff, -htmltidy-0.8.4.ebuild,
+  -htmltidy-2.7.18-r1.ebuild, -htmltidy-2.7.18-r2.ebuild,
+  htmltidy-4.8.6.ebuild:
+  Removed old ebuilds. Marked 4.8.6 stable on x86, alpha, ppc and ppc-macos.
 
   28 Sep 2004; Tom Gall <tgall@gentoo.org> htmltidy-4.8.6.ebuild:
   added ~ppc64, bug #64229
