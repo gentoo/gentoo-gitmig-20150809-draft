@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a2f9ae5ee96d879a46661ac8eedb01c ChangeLog 3574
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 56663f1bbadbe0cc8bba404dfe7c64c1 mixxx-1.2.1.ebuild 1486
+MD5 d4e0e757008928a4d92833893656a374 mixxx-1.4.2.ebuild 1427
 MD5 cfa87804ff32619b4689512f3363995e mixxx-1.4.1.ebuild 1444
-MD5 c3ce38ab8c5450325204e937bdac0807 mixxx-1.4.2.ebuild 1442
-MD5 5794a39e6d1cd6f615c7c853b050f19d files/mixxx-1.3.2-gentoo.patch 3606
-MD5 f25d0518f6fa31ce0950ba6960246f49 files/digest-mixxx-1.4.1 64
-MD5 f3543ce61c9d39860076bad6d555d3bb files/digest-mixxx-1.2.1 64
-MD5 a17a2d5788ac463f0c92292648430f77 files/digest-mixxx-1.4.2 64
+MD5 97513bd2cb01fbed888101a913e106d3 ChangeLog 3680
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 e7c3a488b82537d2e1912239a42453c0 files/mixxx.pro 13666
+MD5 f3543ce61c9d39860076bad6d555d3bb files/digest-mixxx-1.2.1 64
+MD5 f25d0518f6fa31ce0950ba6960246f49 files/digest-mixxx-1.4.1 64
+MD5 a17a2d5788ac463f0c92292648430f77 files/digest-mixxx-1.4.2 64
+MD5 5794a39e6d1cd6f615c7c853b050f19d files/mixxx-1.3.2-gentoo.patch 3606
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxRfFArHZZzCEUG0RAgt9AJ9Bt61OlPAemB8Ni3fHCc2goodIVwCdGBeO
-/bfJ0PKJP1rFl0nUeQN2qHo=
-=oZBl
+iD8DBQFBxeM4T+MN7JbqCpMRAhsCAJ0XzszjkZooHc5q3KzkQhk6/RHqMQCfW2iY
+39r9NNkuBaFUnXcXnDXO6C8=
+=fVYp
 -----END PGP SIGNATURE-----

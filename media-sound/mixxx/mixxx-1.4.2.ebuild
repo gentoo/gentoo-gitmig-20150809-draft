@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.2 2004/12/19 05:55:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.3 2004/12/19 20:24:06 eldad Exp $
 
 IUSE="alsa jack"
 
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure `use_enable alsa Alsa` `use_enable jack Jack` || die "configure failed"
+	./configure `use_enable alsa` `use_enable jack` || die "configure failed"
 
 	sed -i -e "s/CFLAGS *= -pipe -w -O2/CFLAGS   = ${CFLAGS} -w/" \
 	       -e "s/CXXFLAGS *= -pipe -w -O2/CXXFLAGS   = ${CXXFLAGS} -w/" Makefile
