@@ -1,0 +1,11 @@
+# ChangeLog for app-eng/magic
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $ Header: $
+
+* magic-7.1 (30 April 2002)
+
+  30 April 2002; Michael Nygard <michael.nygard@halleysfifth.com> ChangeLog :
+  
+  First Gentoo release of this package.  Magic predates autoconf, so has its
+  own (manual) configuration script.  I may work with the upstream
+  developers to transition to autoconf.
