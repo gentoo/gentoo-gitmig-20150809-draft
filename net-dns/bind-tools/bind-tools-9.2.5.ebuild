@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.5.ebuild,v 1.4 2005/04/04 18:45:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.5.ebuild,v 1.5 2005/04/04 18:53:06 gmsoft Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~arm ~hppa amd64 ~ia64 ~s390 ~mips ~ppc64"
+KEYWORDS="x86 ppc sparc ~alpha ~arm hppa amd64 ~ia64 ~s390 ~mips ~ppc64"
 IUSE="ipv6"
 
 DEPEND="virtual/libc"
