@@ -26,7 +26,7 @@ virtual/jdk	     	dev-java/ibm-jdk-bin
 virtual/jre	     	dev-java/ibm-jre-bin
 virtual/kernel	 	sys-kernel/linux-headers
 virtual/krb5		app-crypt/mit-krb5
-virtual/linux-sources   sys-kernel/ppc-sources
+virtual/linux-sources   sys-kernel/gentoo-dev-sources
 virtual/logger		app-admin/sysklogd
 virtual/lpr	     	net-print/cups
 virtual/mailx		mail-client/mailx
