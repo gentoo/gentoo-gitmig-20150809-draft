@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.4.ebuild,v 1.1 2004/03/07 14:59:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.4.ebuild,v 1.2 2004/03/08 11:43:09 foser Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/x11
 	virtual/xft
 	>=media-libs/fontconfig-2.1
 	media-libs/libpng
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
@@ -61,6 +61,7 @@ src_compile() {
 		--enable-threads \
 		--without-ImageMagick \
 		--disable-scripting \
+		--disable-gucharmap \
 		--with-sys-wv || die
 
 	emake all-recursive || die
