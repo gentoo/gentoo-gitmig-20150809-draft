@@ -1,0 +1,146 @@
+diff -Nru kift-0.8.1-clean/kift/autosearch.cpp kift-0.8.1/kift/autosearch.cpp
+--- kift-0.8.1-clean/kift/autosearch.cpp	Fri Apr  5 12:40:17 2002
++++ kift-0.8.1/kift/autosearch.cpp	Thu Jul  4 03:45:53 2002
+@@ -37,6 +37,8 @@
+ #include "kiftsearch.h"
+ #include "founditem.h"
+ 
++using namespace std;
++
+ AutoSearch::AutoSearch(QWidget *parent, const char *name, DownloadManager *xdownloadmanager) : autoSearchForm(parent,name)
+ {
+   //Initialize non-GUI elements
+@@ -404,4 +406,4 @@
+       if (value!="") lastListItem->setText(7,value);
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff -Nru kift-0.8.1-clean/kift/baseitemclass.cpp kift-0.8.1/kift/baseitemclass.cpp
+--- kift-0.8.1-clean/kift/baseitemclass.cpp	Wed Mar 13 13:51:32 2002
++++ kift-0.8.1/kift/baseitemclass.cpp	Thu Jul  4 03:42:20 2002
+@@ -24,6 +24,8 @@
+ #include <qregexp.h>
+ #include <kurl.h>
+ 
++using namespace std;
++
+ BaseItemClass::BaseItemClass(){
+   clearItem();
+ }
+diff -Nru kift-0.8.1-clean/kift/clistviewitem.cpp kift-0.8.1/kift/clistviewitem.cpp
+--- kift-0.8.1-clean/kift/clistviewitem.cpp	Wed Mar 13 13:51:38 2002
++++ kift-0.8.1/kift/clistviewitem.cpp	Thu Jul  4 03:24:52 2002
+@@ -23,7 +23,7 @@
+ CListViewItem::CListViewItem(QListView *listview) : QListViewItem(listview) {
+ }
+ 
+-CListViewItem::CListViewItem(QListView * listview, int column, unsigned long size, QString c0, QString c1 = QString::null, QString c2 = QString::null, QString c3 = QString::null, QString c4 = QString::null, QString c5 = QString::null, QString c6 = QString::null, QString c7 = QString::null )
++CListViewItem::CListViewItem(QListView * listview, int column, unsigned long size, QString c0, QString c1, QString c2, QString c3, QString c4, QString c5, QString c6, QString c7 )
+    : QListViewItem(listview,c0,c1,c2,c3,c4,c5,c6,c7)
+ {
+   psize=size;
+diff -Nru kift-0.8.1-clean/kift/downloadmanager.cpp kift-0.8.1/kift/downloadmanager.cpp
+--- kift-0.8.1-clean/kift/downloadmanager.cpp	Wed Mar 13 13:51:42 2002
++++ kift-0.8.1/kift/downloadmanager.cpp	Thu Jul  4 03:39:18 2002
+@@ -38,6 +38,8 @@
+ #include "kiftdownload.h"
+ #include "kiftsearch.h"
+ 
++using namespace std;
++
+ DownloadManager::DownloadManager(QWidget *parent, const char *name) : QWidget(parent, name)
+ //QListView *viewlist,int max,
+ {
+@@ -181,7 +183,7 @@
+   cerr<<"Current Downloads "<<nDownloads<<" of "<<maxDownloads<<endl;
+ }
+ 
+-void DownloadManager::killDownload(QListViewItem *viewitem, bool del=false)
++void DownloadManager::killDownload(QListViewItem *viewitem, bool del)
+ {
+   for (int i=0;i<downloadClassCount;i++) {
+     if ((viewitem!=NULL)&&(downloadClass[i].viewItem!=NULL)) {
+diff -Nru kift-0.8.1-clean/kift/founditem.cpp kift-0.8.1/kift/founditem.cpp
+--- kift-0.8.1-clean/kift/founditem.cpp	Wed Mar 13 13:51:48 2002
++++ kift-0.8.1/kift/founditem.cpp	Thu Jul  4 03:38:10 2002
+@@ -26,6 +26,8 @@
+ #include "kiftdownload.h"
+ #include "kiftdownload.h"
+ 
++using namespace std;
++
+ FoundItem::FoundItem(){
+   clearItem();
+ }
+diff -Nru kift-0.8.1-clean/kift/kifftid3editor.cpp kift-0.8.1/kift/kifftid3editor.cpp
+--- kift-0.8.1-clean/kift/kifftid3editor.cpp	Fri Apr  5 11:46:10 2002
++++ kift-0.8.1/kift/kifftid3editor.cpp	Thu Jul  4 03:36:02 2002
+@@ -52,6 +52,7 @@
+ #include "kifftid3editor.h"
+ #include "id3propsui.h"
+ 
++using namespace std;
+ 
+ kifftID3Editor::kifftID3Editor(QWidget *parent, const char *name) : QWidget(parent,name)
+ {
+diff -Nru kift-0.8.1-clean/kift/kift.cpp kift-0.8.1/kift/kift.cpp
+--- kift-0.8.1-clean/kift/kift.cpp	Fri Apr  5 12:24:46 2002
++++ kift-0.8.1/kift/kift.cpp	Thu Jul  4 03:49:22 2002
+@@ -55,6 +55,7 @@
+ #include "downloadmanager.h"
+ #include "autosearch.h"
+ 
++using namespace std;
+ 
+ Kift::Kift(QWidget *parent, const char *name) : kifftmainForm(parent, name)
+ {
+diff -Nru kift-0.8.1-clean/kift/kiftdownload.cpp kift-0.8.1/kift/kiftdownload.cpp
+--- kift-0.8.1-clean/kift/kiftdownload.cpp	Sun Mar 24 14:10:19 2002
++++ kift-0.8.1/kift/kiftdownload.cpp	Thu Jul  4 03:30:45 2002
+@@ -42,6 +42,7 @@
+ #include "kiftsearch.h"
+ 
+ 
++using namespace std;
+ 
+ Kiftdownload::Kiftdownload()
+ {
+@@ -295,7 +296,7 @@
+   cerr<<"Not supported by the giFT daemon right now"<<endl;
+ }
+ 
+-void Kiftdownload::exitProcess(bool restart, bool del=false)
++void Kiftdownload::exitProcess(bool restart, bool del)
+ {
+   if (del==false) {
+     /*QString msg="<transfer id=\""+giftID+"\" action=\"pause\"/>\n";
+@@ -455,7 +456,7 @@
+   if (viewItem!=NULL) viewItem->setText(0,"Downloading");
+ }
+ 
+-void Kiftdownload::addMirror(QString XML, bool insert=false)
++void Kiftdownload::addMirror(QString XML, bool insert)
+ {
+   QString newHash=getGiftValueFromXML("hash",XML);
+   QString newUrl=getGiftValueFromXML("href",XML);
+@@ -501,4 +502,4 @@
+   cerr<<query<<endl;
+   search->startSearch(query,id);
+   cerr<<"Not fully implemented now (findmoresources)!"<<endl;
+-}
+\ No newline at end of file
++}
+diff -Nru kift-0.8.1-clean/kift/kiftsearch.cpp kift-0.8.1/kift/kiftsearch.cpp
+--- kift-0.8.1-clean/kift/kiftsearch.cpp	Fri Apr  5 11:59:26 2002
++++ kift-0.8.1/kift/kiftsearch.cpp	Thu Jul  4 03:28:03 2002
+@@ -78,7 +78,7 @@
+ }
+ 
+ 
+-bool kiftSearch::startSearch(QString searchquery, int id=-1)
++bool kiftSearch::startSearch(QString searchquery, int id)
+ {
+   myID=id;
+   searchQuery=searchquery;

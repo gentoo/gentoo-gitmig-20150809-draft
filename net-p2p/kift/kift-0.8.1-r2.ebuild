@@ -16,8 +16,9 @@ SRC_URI="mirror://sourceforge/kift/${P}.tar.gz"
 
 src_unpack() {
 
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${P}-gentoo.patch
 
 }
