@@ -1,7 +1,11 @@
 # ChangeLog for media-video/cxfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.6 2005/01/13 03:17:28 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.7 2005/01/15 04:48:31 arj Exp $
 
+  15 Jan 2005; Anders Rune Jensen <arj@gentoo.org> +cxfe-0.9.1-r1.ebuild:
+  Two more patches, one to disable dpms in x11 fullscreen and another to
+  add a status button.
+	
   13 Jan 2005; Anders Rune Jensen <arj@gentoo.org> cxfe-0.9.1.ebuild:
   Tested and works on amd64. 3 Patches, one to fix OSD, another to 
   make it compile on gcc 2.95 and the last to make xv the default output 

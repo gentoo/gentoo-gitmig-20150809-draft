@@ -1,0 +1,92 @@
+Common subdirectories: cxfe/CVS and cxfe-mod/CVS
+diff -uN cxfe/README cxfe-mod/README
+--- cxfe/README	2004-11-27 03:32:10.000000000 +0100
++++ cxfe-mod/README	2005-01-15 06:26:10.714383896 +0100
+@@ -91,6 +91,7 @@
+ Up Arrow - increases Volume
+ Down Arrow - decrease Volume
+ f - Full Screen/Window Toggle (X only)
++o - Display position in stream
+ d - Toggle Deinterlace/post processing (uses default or post set with
+     -p switch)
+ s - Skip to next MRL if multiple MRLS supplied.  If only one
+diff -uN cxfe/cxfe.c cxfe-mod/cxfe.c
+--- cxfe/cxfe.c	2004-11-27 03:07:59.000000000 +0100
++++ cxfe-mod/cxfe.c	2005-01-15 06:30:27.162397872 +0100
+@@ -476,6 +476,27 @@
+    percent_done = (ltime/llength)*100;
+    printf("Time:%d sec Length:%d sec \n",ltime/1000,llength/1000);
+ }
++static void print_osd_status()
++{
++   int               lpos, ltime, llength;
++   int	     percent_done;
++   
++   
++   (void)get_pos_length(cxfe.stream, &lpos, &ltime, &llength);
++
++   percent_done = (int)(((double)ltime/(double)llength)*100);
++
++   int cur_hour = ltime/1000/60/60;
++   int cur_min = (ltime/1000-cur_hour*60*60)/60;
++   int cur_sec= ltime/1000-cur_hour*60*60-cur_min*60;
++
++   int tot_hour = llength/1000/60/60;
++   int tot_min = (llength/1000-tot_hour*60*60)/60;
++   int tot_sec= llength/1000-tot_hour*60*60-tot_min*60;
++   
++   osd_display_info("%d:%d:%d / %d:%d:%d (%d%%)", cur_hour, cur_min, cur_sec, 
++		    tot_hour, tot_min, tot_sec, percent_done);
++}
+ #ifdef HAVE_LIBLIRC_CLIENT
+ static void *process_lirc_thread()
+ {
+@@ -518,6 +539,8 @@
+                 if (!strcmp(c,"Quit")){
+                     running = 0;
+                     next_mrl = FALSE;}
++		if (!strcmp(c,"STATUS"))
++		    print_osd_status();
+ 		if (!strcmp(c,"ASPECT_CHANGE"))
+ 		    aspect_change();
+ 		if (!strcmp(c,"Menu"))
+@@ -679,6 +702,10 @@
+ 	case 'D':
+ 	        toggle_deinterlace();
+ 		break;
++	case 'o':
++	case 'O':
++	        print_osd_status();
++		break;
+         case 'l':
+         case 13:
+            	send_event(XINE_EVENT_INPUT_SELECT);
+@@ -864,6 +891,10 @@
+            case XK_M:
+              send_event(XINE_EVENT_INPUT_DOWN);
+              break;
++	   case XK_o:
++	   case XK_O:
++	     print_osd_status();
++	     break;
+            case XK_Return:
+              send_event(XINE_EVENT_INPUT_SELECT);
+              break;
+diff -uN cxfe/lircrc-example cxfe-mod/lircrc-example
+--- cxfe/lircrc-example	2004-11-15 15:44:06.000000000 +0100
++++ cxfe-mod/lircrc-example	2005-01-15 06:29:39.959573792 +0100
+@@ -99,6 +99,13 @@
+ end
+ begin
+         remote = REALmagic
++	button = OSD
++        prog   = cxfe
++        repeat = 0
++        config = STATUS
++end
++begin
++        remote = REALmagic
+ 	button = 1
+         prog   = cxfe
+         repeat = 0
+Common subdirectories: cxfe/termio and cxfe-mod/termio
