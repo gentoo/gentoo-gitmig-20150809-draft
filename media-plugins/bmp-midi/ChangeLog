@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-midi
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-midi/ChangeLog,v 1.1 2004/12/20 21:44:48 chainsaw Exp $
+
+*bmp-midi-0.01 (20 Dec 2004)
+
+  20 Dec 2004; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +bmp-midi-0.01.ebuild:
+  Initial commit. Ebuild based on the one submitted by will@johnstonclan.net
+  and enhanced by genstef@gentoo.org in bug #72378.
+
