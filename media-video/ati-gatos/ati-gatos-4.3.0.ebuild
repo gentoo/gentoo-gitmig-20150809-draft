@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.3 2004/01/14 01:10:18 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.3.0.ebuild,v 1.4 2004/01/15 06:20:29 battousai Exp $
 
 inherit eutils
 
@@ -45,13 +45,13 @@ pkg_postinst() {
 	einfo "line to /etc/X11/XF86Config, in the files section and above any other"
 	einfo "ModulePath directives:"
 	einfo
-	einfo "      ModulePath /usr/X11R6/lib/modules-extra/gatos"
+	einfo "      ModulePath \"/usr/X11R6/lib/modules-extra/gatos\""
 	einfo
 	einfo "Please note that you may need to uncomment or add another ModulePath line with"
 	einfo "the default module path in it. If XFree86 does not start after adding the line"
 	einfo "above, add this one under it:"
 	einfo
-	einfo "      ModulePath /usr/X11R6/lib/modules"
+	einfo "      ModulePath \"/usr/X11R6/lib/modules\""
 }
 
 fix_makefile() {

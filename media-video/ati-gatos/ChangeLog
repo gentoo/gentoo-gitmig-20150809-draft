@@ -1,8 +1,11 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.8 2004/01/14 01:10:18 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.9 2004/01/15 06:20:29 battousai Exp $
 
 *ati-gatos-4.3.0 (13 Jan 2004)
+
+  15 Jan 2004; Bryan Stine <battousai@gentoo.org> ati-gatos-4.3.0.ebuild:
+  Add quotes around the ModulePath example paths to avoid confusion.
 
   13 Jan 2004; <battousai@gentoo.org> ChangeLog, ati-gatos-4.3.0.ebuild:
   Warn user about SDK only if XFree was merged without the sdk USE flag. Also,
