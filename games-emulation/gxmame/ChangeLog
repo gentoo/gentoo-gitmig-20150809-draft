@@ -1,6 +1,18 @@
 # ChangeLog for games-emulation/gxmame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.10 2005/01/02 07:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.11 2005/03/02 00:25:49 mr_bones_ Exp $
+
+*gxmame-0.35_beta1 (01 Mar 2005)
+
+  01 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +gxmame-0.35_beta1.ebuild, -gxmame-0.35_pre.ebuild:
+  version bump (bug #81979); cleaned out badly named cvs snap
+
+*gxmame-0.35_beta1 (01 Mar 2005)
+
+  01 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +gxmame-0.35_beta1.ebuild:
+  version bump (bug #81979)
 
 *gxmame-0.35_pre (02 Jan 2005)
 
