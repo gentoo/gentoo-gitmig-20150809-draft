@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/par2cmdline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.6 2004/06/24 21:34:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.7 2004/08/02 13:19:24 alexander Exp $
+
+  2 Aug 2004; Alexander Plank <alexander@gentoo.org> par2cmdline-0.4.ebuild:
+  add macos keyword bug 58451
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   par2cmdline-0.3.ebuild, par2cmdline-0.4.ebuild:
