@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.68 2004/02/25 21:03:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.69 2004/02/27 01:33:33 bazik Exp $
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
+  Stable on sparc. Remember to mkdir /var/empty if it doesnt exist before you
+  restart sshd...
 
   25 Feb 2004; Guy Martin <gmsoft@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
   Marked stable on hppa.
