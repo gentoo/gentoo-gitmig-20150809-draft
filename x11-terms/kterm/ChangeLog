@@ -1,12 +1,12 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.5 2003/09/08 21:13:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.6 2003/09/08 21:19:15 usata Exp $
 
 *kterm-6.2.0-r1 (20 Jun 2003)
 
   09 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> kterm-6.2.0-r1.ebuild:
-  Changed default bindir to /usr/bin. Changed ~x86 to x86 and added ~sparc
-  keywords.
+  Changed default bindir to /usr/bin. Changed ~x86 to x86 and added
+  ~sparc, ~ppc and -alpha keywords.
 
   20 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> kterm-6.2.0-r1.ebuild,
   digest-kterm-6.2.0-r1:
