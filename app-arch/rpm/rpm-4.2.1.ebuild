@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.5 2003/11/13 14:26:15 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.6 2003/11/14 13:32:45 tuxus Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
 IUSE="nls python doc"
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
