@@ -32,3 +32,4 @@ move net-news/nzbget net-nntp/nzbget
 move net-news/pan net-nntp/pan
 move net-news/sn net-nntp/sn
 move net-news/slrn net-nntp/slrn
+move net-news/slrnconf net-nntp/slrnconf
