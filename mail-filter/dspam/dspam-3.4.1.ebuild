@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.2 2005/03/28 14:33:00 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.3 2005/04/05 08:37:13 st_lim Exp $
 
 inherit eutils
 
@@ -60,11 +60,14 @@ pkg_setup() {
 		epause 30
 	elif [ "${multiple_dbs}" -eq "0" ]; then
 		echo
-		ewarn "You need to select at least one database backend in your USE flags."
-		ewarn "Please enable one of the following USE flags:"
-		ewarn "  ${supported_dbs}"
+		ewarn "You did not select any SQL based database backend. DSPAM will use"
+		ewarn "Berkeley DB for storing data. If you don't want that, then enable"
+		ewarn "one of the following USE flags:"
+		ewarn "${supported_dbs}"
 		echo
-		die "Database support missing"
+		ewarn "Waiting 30 seconds before starting..."
+		ewarn "(Control-C to abort)..."
+		epause 30
 	fi
 	has_version sys-kernel/linux26-headers || (
 		einfo "To use the new DSPAM deamon mode, you need to emerge"
@@ -196,7 +199,7 @@ src_install () {
 		dodoc src/tools.pgsql_drv/README
 	elif use oci8 ; then
 		dodoc src/tools.ora_drv/README
-	elif use sqlite || sqlite3 ; then
+	elif use sqlite || use sqlite3 ; then
 		dodoc src/tools.sqlite_drv/README
 	fi
 	doman man/dspam*
@@ -353,7 +356,7 @@ src_install () {
 		newins src/tools.ora_drv/oral_objects.sql ora_objects.sql
 		newins src/tools.ora_drv/virtual_users.sql ora_virtual_users.sql
 		newins src/tools.ora_drv/purge.sql ora_purge.sql
-	elif use sqlite || sqlite3 ; then
+	elif use sqlite || use sqlite3 ; then
 		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
@@ -489,7 +492,7 @@ pkg_config () {
 		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_objects.sql 1>/dev/null 2>&1
 
 		if use virtual-users ; then
-			einfo "Creating DSPAM MySQL database for virtual-users users"
+			einfo "Creating DSPAM PostgreSQL database for virtual-users users"
 			PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
 		fi
 	elif use oci8 ; then
