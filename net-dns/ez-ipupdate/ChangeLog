@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.2 2002/09/16 17:06:33 owen Exp $
 
 *ez-ipupdate-3.0.11_beta7 (08 May 2002)
+
+  16 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   08 May 2002; Thilo Bangert <bangert@gentoo.org> :
 
