@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a570da4bf2e1b1e5961c218d870315e2 gigaset-isdn-0.4.1.ebuild 1417
+MD5 cd8c188864c3be10548ccf5a560be62b gigaset-isdn-0.4.0.ebuild 1416
+MD5 3830b4188c6f01880ff0dd46185462e3 ChangeLog 885
 MD5 bcb8da102fb210674bba37f6ae00d38f metadata.xml 271
-MD5 17e591742b4e08415f6a357a3c554416 ChangeLog 749
-MD5 0962d8aad27fda9453910f01b7c8ad9c gigaset-isdn-0.4.0.ebuild 1416
 MD5 a283ea44b003b4bf0c6fd0dfcb336b22 files/digest-gigaset-isdn-0.4.0 66
+MD5 a5ebb69a302558697c41dd4dd2a72d29 files/digest-gigaset-isdn-0.4.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBv0MPjtv59x0+BrURApTBAKCVRJfy4cOfh9hH0FxAf17n4RKNKwCfcEnt
-B8lT4OtxF+cHBq3uSpkl+kc=
-=IbhR
+iD8DBQFCBfbYjiC39V7gKu0RAnJEAKDCe4PSZyjPVdjpw7YIfUkESOcTAwCfZ/qw
+PpXTABFdLEyROewp1qGoejc=
+=jOmL
 -----END PGP SIGNATURE-----
