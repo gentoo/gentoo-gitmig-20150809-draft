@@ -1,11 +1,18 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.5 2002/12/13 11:00:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.6 2002/12/18 13:52:26 seemant Exp $
+
+*lib-compat-1.1 (18 Dec 2002)
+
+  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> lib-compat-1.1.ebuild
+  files/digest-lib-compat-1.1 :
+
+  Added the libstdc++ from gcc-2.95.3
+
+*lib-compat-1.0-r2 (1 Feb 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*lib-compat-1.0-r2 (1 Feb 2002)
-
   07 Sep 2002; Mark Guertin <gerk@gentoo.org> lib-compat-1.0-r2 :
   set x86 USE on SRC_URI and src_install function, these are not valid
   on ppc or sparc (x86 libs), but may need to add ppc libs in future so 
