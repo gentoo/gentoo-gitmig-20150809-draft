@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.8 2002/10/15 04:29:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.9 2002/10/15 07:03:43 blizzy Exp $
+
+*gentoo-stats-0.3.1 (15 Oct 2002)
+
+  15 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+  Fixes a bug in reporting the profile.
 
 *gentoo-stats-0.3 (15 Oct 2002)
 

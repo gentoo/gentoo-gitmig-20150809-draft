@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (15 Oct 2002)
+# b0rked
+=app-admin/gentoo-stats-0.3
+
 # <aliz@gentoo.org> (14 Oct 2002)
 # sourcefile removed from upstream
 =media-libs/SoQt
