@@ -1,6 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.306 2004/12/14 20:52:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.307 2004/12/14 23:55:28 stuart Exp $
 
   14 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
   Also fix src_uri in apache-1.x.
@@ -8,6 +8,10 @@
   14 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   apache-2.0.52-r1.ebuild:
   Use mirror://apache/.. in SRC_URI.
+
+  14 Dec 2004; Stuart Herbert <stuart@gentoo.org> :
+  Fix for SSL directory bug + moved all configuration files out of CVS and into
+  the apache-conf tarball created by urilith.
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Removed unused digest entries. Added missing digest entries.
