@@ -143,3 +143,4 @@ move app-sci/raster3d sci-chemistry/raster3d
 move app-sci/xdrawchem sci-chemistry/xdrawchem
 move app-misc/rpc sci-calculators/rpc
 move sys-kernel/hppa-dev-sources sys-kernel/hppa-sources
+move app-sci/balsa sci-electronics/balsa
