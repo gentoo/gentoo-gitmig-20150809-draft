@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.206 2004/01/04 03:26:26 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.207 2004/01/04 18:31:18 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -210,6 +210,7 @@ net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
 net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 net-www/w3m-m17n:migemo - Enables migemo support
 net-www/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
+net-www/w3m:async - Enables asynchronous fetch
 net-www/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 net-www/w3m:migemo - Enables migemo support
 net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
