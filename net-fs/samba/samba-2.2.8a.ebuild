@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8a.ebuild,v 1.2 2003/04/09 08:12:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.8a.ebuild,v 1.3 2003/07/18 21:34:26 tester Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND="pam? >=sys-libs/pam-0.72
 	ssl? >=dev-libs/openssl-0.9.6
 	tcpd? >=sys-apps/tcp-wrappers-7.6
 	oav? >=dev-libs/popt-1.6.3"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
