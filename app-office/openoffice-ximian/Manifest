@@ -27,3 +27,4 @@ MD5 7499a81bad1959834a0e6f995200e3e8 files/1.1.1/openoffice-1.1.0-linux-2.6-fix.
 MD5 7978a9c1f590a83622b8040ee83197a4 files/1.1.1/nptl.patch 1285
 MD5 fc8711196de6324c9fae45342d159bf3 files/1.1.1/build.patch 330
 MD5 ec45b66d175ad9662716a06e7c678cef files/1.1.1/newstlportfix.patch 10362
+MD5 6fd623d53d17e17f953232da5b04447f files/1.1.1/fixscale.patch 1035
