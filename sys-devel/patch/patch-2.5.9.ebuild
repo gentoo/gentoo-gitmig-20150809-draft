@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.13 2004/03/02 16:10:35 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.14 2004/03/29 21:53:56 avenj Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Utility to apply diffs to files"
 HOMEPAGE="http://www.gnu.org/software/patch/patch.html"
@@ -16,6 +18,7 @@ IUSE="build static"
 DEPEND="virtual/glibc"
 
 src_compile() {
+	strip-flags
 	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"
 	ac_cv_sys_long_file_names=yes \
 		./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
