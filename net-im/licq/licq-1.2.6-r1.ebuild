@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.1 2003/05/04 18:30:38 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.2 2003/06/04 04:26:10 brad Exp $
 
 inherit kde-base
 need-kde 3.0
@@ -11,7 +11,7 @@ SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl socks5 qt kde ncurses"
 
 # we can't have conditional dependencies so "use kde && inherit kde-base" 
