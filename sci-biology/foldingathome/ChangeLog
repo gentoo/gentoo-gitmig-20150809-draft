@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.7 2005/02/08 16:06:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.8 2005/03/03 14:40:55 lostlogic Exp $
+
+  03 Mar 2005; Brandon Low <lostlogic@gentoo.org> -files/folding-conf.d,
+  -files/folding-init.d, -files/folding-init.d-r1, -files/folding-init.d-r3,
+  -files/folding.sh, files/init-5.0.2-r3, -files/initfolding,
+  -files/initfolding-r1, -foldingathome-4.0.0-r2.ebuild,
+  -foldingathome-4.0.0.ebuild:
+  Fix bug 82345, nice 20 doesn't exist.
+  Remove old ebuilds and files.
 
   08 Feb 2005; Brandon Low <lostlogic@gentoo.org>
   foldingathome-5.0.2-r3.ebuild:

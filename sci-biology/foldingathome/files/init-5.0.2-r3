@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/init-5.0.2-r3,v 1.1 2005/02/06 01:02:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/init-5.0.2-r3,v 1.2 2005/03/03 14:40:55 lostlogic Exp $
 
 opts="${opts} unitinfo"
 
@@ -32,7 +32,7 @@ start() {
 	for (($CPU; CPU > 0; CPU--)); do
 		ebegin "Starting Folding@Home on CPU ${CPU}"
 		cd /opt/foldingathome/client${CPU}/
-		nice -n 20 su foldingathome -c "/opt/foldingathome/client${CPU}/foldingathome ${FOLD_OPTS}" &>/dev/null &
+		nice -n 19 su foldingathome -c "/opt/foldingathome/client${CPU}/foldingathome ${FOLD_OPTS}" &>/dev/null &
 		eend $?
 	done
 }
