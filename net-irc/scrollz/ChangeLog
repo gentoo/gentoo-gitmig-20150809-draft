@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/scrollz
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.1 2002/12/11 16:39:24 phoenix Exp $
+
+*scrollz-1.8m (11 Dec 2002)
+
+  11 Dec 2002; phoen][x <phoenix@gentoo.org> scrollz-1.8m.ebuild, 
+  files/digest-scrollz-1.8m:
+  Initial import.  Ebuild submitted by Cory Visi <cory@visi.name>.
+  Thanks for the contribution. This closes bug 9808. 
+k
