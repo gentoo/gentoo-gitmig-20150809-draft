@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7.ebuild,v 1.2 2004/07/23 02:07:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7-r1.ebuild,v 1.1 2004/07/23 02:07:35 avenj Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -37,6 +37,7 @@ src_unpack() {
 
 	# patch to fix groff build against 4.7. See also bug #57690 and
 	# http://lists.gnu.org/archive/html/bug-texinfo/2004-07/msg00002.html
+	# -- avenj@gentoo.org 22 Jul 04
 	cd ${S}/makeinfo && epatch ${FILESDIR}/makeinfo.patch
 }
 
