@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.8 2004/05/15 21:50:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.9 2004/06/02 02:56:18 tgall Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gnuconfig
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha arm hppa ~amd64 ~ia64 s390 mips"
+KEYWORDS="x86 ppc sparc ~alpha arm hppa ~amd64 ~ia64 s390 mips ppc64"
 IUSE=""
 
 DEPEND="virtual/glibc"
@@ -24,6 +24,8 @@ src_compile() {
 	if use alpha || use amd64 || use ia64; then
 		append-flags -fPIC
 	fi
+
+	use ppc64 && gnuconfig_update
 
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 
