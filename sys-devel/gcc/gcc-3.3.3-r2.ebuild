@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.3 2004/04/20 22:41:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r2.ebuild,v 1.4 2004/04/22 03:01:12 vapier Exp $
 
-IUSE="static nls bootstrap java build X multilib nogcj hardened uclibc f77 objc"
+IUSE="static nls bootstrap java build X multilib nogcj nof77 noobjc hardened uclibc"
 KEYWORDS="~x86 ~mips ~sparc amd64 -hppa ~alpha ~ia64 ~ppc64 s390"
 
 inherit eutils flag-o-matic libtool
@@ -388,8 +388,8 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-shared"
 		gcc_lang="c,c++"
-		use f77  && gcc_lang="${gcc_lang},f77"
-		use objc && gcc_lang="${gcc_lang},objc"
+		use nof77 || gcc_lang="${gcc_lang},f77"
+		use noobjc || gcc_lang="${gcc_lang},objc"
 		[ -n "`use java`" -a -z "`use nogcj`" ] && gcc_lang="${gcc_lang},java"
 		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
