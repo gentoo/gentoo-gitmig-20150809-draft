@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.6 2003/02/14 19:42:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.7 2003/04/01 16:41:42 agriffis Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/libquicktime/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 
 IUSE="oggvorbis png jpeg"
 
@@ -30,10 +30,18 @@ src_unpack() {
 	cd ${S}
 	sed -i "s:\(have_libavcodec=\)true:\1false:g" \
 		configure.ac
+
+	# Fix bug 10966 by replacing the x86-centric OPTIMIZE_CFLAGS with
+	# our $CFLAGS
+	if use alpha; then
+		mv configure.ac configure.ac.old
+		awk -F= '$1=="OPTIMIZE_CFLAGS" { print $1"="cflags; next }
+		         { print }' cflags="$CFLAGS" \
+					 <configure.ac.old >configure.ac || die
+	fi
 }
 
 src_compile() {
-
 	ebegin "Regenerating configure script..."
 	autoconf
 	eend
@@ -46,7 +54,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-mmx"
 
 	econf ${myconf}
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {
