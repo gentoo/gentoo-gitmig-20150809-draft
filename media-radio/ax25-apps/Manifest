@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a499855559676b037fd34685d50cd22f ChangeLog 774
-MD5 abbf24823eca69a4dcf71df8c529cc15 ax25-apps-0.0.6-r1.ebuild 1209
+MD5 4b0604cef5b68fced5f975f913d04c6b ChangeLog 861
+MD5 f9f1d5789a396e69bbd15591974691cb ax25-apps-0.0.6-r1.ebuild 1209
 MD5 b19fbed9cfa44ab4d9491f1ee51aebb1 ax25-apps-0.0.6.ebuild 1138
 MD5 b663d2b333f0df648e3831787bd2ee00 files/ax25ipd.rc 493
 MD5 0acda5ebbe2b0f11dd02a707ac35f4ca files/ax25mond.rc 498
@@ -10,10 +7,3 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/ax25rtd.blank 0
 MD5 7564740a7a54c379eedcb3e44fc8fe68 files/ax25rtd.rc 493
 MD5 d11cb1e7e7635247a9e2684e98a19915 files/digest-ax25-apps-0.0.6 67
 MD5 d11cb1e7e7635247a9e2684e98a19915 files/digest-ax25-apps-0.0.6-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBK/nzI1lqEGTUzyQRAkRsAJ9CaDwtWL1je2CvX385j+Oi1B7LhQCgl0cY
-vwn9Y6M3x43H/AyQkbTt8QU=
-=c+S+
------END PGP SIGNATURE-----
