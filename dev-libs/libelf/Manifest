@@ -1,5 +1,5 @@
 MD5 17227f3e7b12b8fd31520d95f074c769 ChangeLog 1483
-MD5 e87e3dd9efc65372bdd71a9b11379c94 libelf-0.8.2.ebuild 819
-MD5 4da3e1788f3fa2e5a6c5d574d2e8bfa3 libelf-0.8.4.ebuild 837
+MD5 14a1f64f154d7b701d63d750c266daed libelf-0.8.2.ebuild 822
+MD5 64568ebe3593b3bdddd946288464a6bb libelf-0.8.4.ebuild 837
 MD5 0a685835376d6711c4efc28a1ca0eadb files/digest-libelf-0.8.4 64
 MD5 bb4b4879be32209ab0cba5bca0420b82 files/digest-libelf-0.8.2 64
