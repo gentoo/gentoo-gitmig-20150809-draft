@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.5 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.6 2004/06/13 08:26:20 eradicator Exp $
 
 DESCRIPTION="horgand is an opensource software organ."
 HOMEPAGE="http://personal.telefonica.terra.es/web/soudfontcombi/"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=x11-libs/fltk-1.1.2
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 S="${WORKDIR}/${P}"
 

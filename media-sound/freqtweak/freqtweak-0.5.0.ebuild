@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.5.0.ebuild,v 1.5 2004/03/27 02:57:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.5.0.ebuild,v 1.6 2004/06/13 08:25:44 eradicator Exp $
 
 DESCRIPTION="tool for FFT-based realtime audio spectral manipulation and display"
 HOMEPAGE="http://freqtweak.sourceforge.net"
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="x11-libs/wxGTK
 	dev-libs/fftw
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 pkg_setup() {
 	if wx-config --cppflags | grep gtk2u >& /dev/null; then

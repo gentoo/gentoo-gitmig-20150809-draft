@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.9 2004/05/26 17:59:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.10 2004/06/13 08:32:05 eradicator Exp $
 
 inherit virtualx eutils kde-functions
 need-qt 3
@@ -21,7 +21,7 @@ DEPEND="media-libs/alsa-lib \
 	>=media-libs/libsndfile-1.0.4 \
 	>=x11-libs/qt-3.1.0
 	ladcca? ( >=media-libs/ladcca-0.4.0 ) \
-	jack? ( virtual/jack ) \
+	jack? ( media-sound/jack-audio-connection-kit ) \
 	fluidsynth? ( media-sound/fluidsynth )"
 
 S=${WORKDIR}/${MY_P}

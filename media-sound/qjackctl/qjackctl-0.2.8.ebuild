@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.8.ebuild,v 1.1 2004/05/26 23:06:15 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.2.8.ebuild,v 1.2 2004/06/13 08:34:54 eradicator Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1.1
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 src_compile() {
 	econf || die

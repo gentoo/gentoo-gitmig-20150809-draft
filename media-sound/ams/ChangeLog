@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ams
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.7 2004/05/15 08:16:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.8 2004/06/13 08:11:58 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> ams-1.7.2.ebuild,
+  ams-1.8.2.ebuild:
+  Getting rid of virtual/jack.
 
 *ams-1.8.2 (15 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.0.ebuild,v 1.4 2004/03/18 07:29:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.0.ebuild,v 1.5 2004/06/13 08:32:05 eradicator Exp $
 
 inherit virtualx
 
@@ -19,7 +19,7 @@ DEPEND="media-libs/alsa-lib \
 	>=media-libs/libsndfile-1.0.4 \
 	>=x11-libs/qt-3.1.0
 	ladcca? ( media-libs/ladcca ) \
-	jack? ( virtual/jack ) \
+	jack? ( media-sound/jack-audio-connection-kit ) \
 	fluidsynth? ( media-sound/fluidsynth )"
 
 S=${WORKDIR}/${MY_P}

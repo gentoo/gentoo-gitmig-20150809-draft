@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.11 2004/04/26 03:57:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.12 2004/06/13 08:29:02 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  jack-rack-1.4.1.ebuild, jack-rack-1.4.2.ebuild, jack-rack-1.4.3.ebuild:
+  Getting rid of virtual/jack.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> jack-rack-1.4.3.ebuild:
   Add die following econf for bug 48950

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.7 2004/04/20 16:52:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.8 2004/06/13 08:42:49 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 
 KEYWORDS="x86"
 
-DEPEND="virtual/jack
+DEPEND="media-sound/jack-audio-connection-kit
 	>=media-libs/alsa-lib-0.9
 	x11-libs/fltk"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.9.0_beta.ebuild,v 1.4 2004/03/24 23:19:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.9.0_beta.ebuild,v 1.5 2004/06/13 08:37:17 eradicator Exp $
 
 MY_P="${P/_/}"
 DESCRIPTION="Sound editor and recorder"
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE="oggvorbis jack nls static oss cdr"
 
 DEPEND="virtual/x11
-	jack? ( virtual/jack )
+	jack? ( media-sound/jack-audio-connection-kit )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	cdr? ( app-cdr/cdrdao )
 	=dev-libs/fftw-2*

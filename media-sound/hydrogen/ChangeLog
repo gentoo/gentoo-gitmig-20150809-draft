@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.10 2004/04/28 16:45:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.11 2004/06/13 08:26:41 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  hydrogen-0.8.1-r1.ebuild, hydrogen-0.8.1.ebuild, hydrogen-0.8.2.ebuild:
+  Getting rid of virtual/jack.
 
   28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   hydrogen-0.8.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.18 2004/05/04 02:10:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.19 2004/06/13 08:31:44 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> mixxx-1.2.1.ebuild:
+  Getting rid of virtual/jack.
 
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org> mixxx-0.9.2.ebuild,
   mixxx-1.1-r1.ebuild, mixxx-1.1.ebuild, mixxx-1.2.1.ebuild:

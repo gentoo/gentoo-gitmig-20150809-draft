@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.13 2004/06/08 07:41:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.14 2004/06/13 08:39:47 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rosegarden-4.0.9.6.ebuild, rosegarden-4.0.9.7.ebuild,
+  rosegarden-4.0.9.8.ebuild, rosegarden-4.0.9.ebuild:
+  Getting rid of virtual/jack.
 
 *rosegarden-4.0.9.8 (08 Jun 2004)
 

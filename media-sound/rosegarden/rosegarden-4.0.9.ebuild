@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.9 2004/04/20 17:33:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.10 2004/06/13 08:39:47 eradicator Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND=">=kde-base/kdelibs-3.0
 	kde-base/kdemultimedia
 	>=x11-libs/qt-3
 	virtual/alsa
-	virtual/jack
+	media-sound/jack-audio-connection-kit
 	>=media-libs/ladspa-sdk-1.0
 	>=media-libs/ladspa-cmt-1.14"
 

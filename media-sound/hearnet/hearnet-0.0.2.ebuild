@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.3 2004/04/22 09:13:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.4 2004/06/13 08:26:02 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=net-libs/libpcap-0.4
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.3.ebuild,v 1.4 2004/04/16 08:03:26 lv Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.3.ebuild,v 1.5 2004/06/13 08:45:50 eradicator Exp $ 
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=x11-libs/fltk-1.1.2
 	=dev-libs/fftw-2*
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 S="${WORKDIR}/${MY_P}"
 

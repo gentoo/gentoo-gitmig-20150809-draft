@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a.ebuild,v 1.4 2004/04/20 16:57:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a.ebuild,v 1.5 2004/06/13 08:40:33 eradicator Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/fltk-1.1
 	media-libs/libsndfile
 	media-libs/liblrdf
 	alsa? ( media-libs/alsa-lib )
-	jack? ( virtual/jack )
+	jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk"
 
 S=${WORKDIR}/${PN}-0.2.2

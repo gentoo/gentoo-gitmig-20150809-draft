@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.7 2004/03/27 02:57:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.8 2004/06/13 08:25:44 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  freqtweak-0.4.7.ebuild, freqtweak-0.5.0.ebuild, freqtweak-0.5.2.ebuild:
+  Getting rid of virtual/jack.
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   freqtweak-0.4.7.ebuild, freqtweak-0.5.0.ebuild, freqtweak-0.5.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.11 2004/04/08 07:47:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.12 2004/06/13 08:37:17 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rezound-0.8.3_beta-r2.ebuild, rezound-0.9.0_beta.ebuild:
+  Getting rid of virtual/jack.
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> rezound-0.9.0_beta.ebuild:
   fixing depend. see 45343

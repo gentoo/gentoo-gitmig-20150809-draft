@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.4 2004/05/10 23:40:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.5 2004/06/13 08:40:12 eradicator Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
@@ -21,7 +21,7 @@ DEPEND="sys-libs/zlib
 	esd? ( media-sound/esound )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.7 )
 	nls? ( sys-devel/gettext )
-	jack? ( virtual/jack )"
+	jack? ( media-sound/jack-audio-connection-kit )"
 
 RDEPEND="${DEPEND}
 	app-arch/bzip2

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.1.3.ebuild,v 1.2 2004/03/01 05:37:15 eradicator Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.1.3.ebuild,v 1.3 2004/06/13 08:34:54 eradicator Exp $ 
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1.1
-	jack? ( virtual/jack )"
+	jack? ( media-sound/jack-audio-connection-kit )"
 
 src_install () {
 	einstall || die "make install failed"

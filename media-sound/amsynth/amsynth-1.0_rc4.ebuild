@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.4 2004/04/27 19:57:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.5 2004/06/13 08:14:32 eradicator Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="=dev-cpp/gtkmm-1.2* \
 	media-libs/libsndfile \
 	alsa? ( media-libs/alsa-lib \
 		media-sound/alsa-utils ) \
-	jack? ( virtual/jack )"
+	jack? ( media-sound/jack-audio-connection-kit )"
 
 S=${WORKDIR}/${MY_P}
 
