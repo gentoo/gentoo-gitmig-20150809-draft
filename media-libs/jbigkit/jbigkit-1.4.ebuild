@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.9 2003/07/09 20:13:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.10 2003/08/03 05:38:35 tester Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha amd64"
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 
