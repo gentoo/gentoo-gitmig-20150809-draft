@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.4 2003/02/12 09:16:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.5 2003/02/28 05:22:59 lostlogic Exp $
+
+*ck-sources-2.4.20-r4 (27 Feb 2003)
+
+  27 Feb 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r4.ebuild:
+  bump
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
