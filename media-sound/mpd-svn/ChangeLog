@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.5 2005/03/11 19:06:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.6 2005/03/13 12:03:11 ticho Exp $
+
+*mpd-svn-20050312 (13 Mar 2005)
+
+  13 Mar 2005; Andrej Kacian <ticho@gentoo.org> +files/mpd.pidfile.rc6,
+  +mpd-svn-20050312.ebuild:
+  Snapshot update. Use new initfile, based on pidfile, provided by Avuton
+  Olrich <avuton@gmail.com>.
 
 *mpd-svn-20050308 (11 Mar 2005)
 
