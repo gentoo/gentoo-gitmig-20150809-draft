@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1-r1.ebuild,v 1.3 2001/06/21 20:49:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.1-r1.ebuild,v 1.4 2001/06/23 02:25:35 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,6 +10,7 @@ SRC_URI="ftp://ftp.insync.net/pub/mirrors/ftp.gimp.org/gimp/v1.2/v${PV}/"${A}
 HOMEPAGE="http://www.gimp.org"
 
 DEPEND="nls? ( sys-devel/gettext )
+        sys-devel/autoconf sys-devel/automake
 	>=x11-libs/gtk+-1.2.8
 	>=media-libs/mpeg-lib-1.3.1
 	aalib? ( >=media-libs/aalib-1.2 )
@@ -23,10 +24,16 @@ RDEPEND=">=x11-libs/gtk+-1.2.8
 	         >=dev-perl/Parse-RecDescent-1.80 )
 	 gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
 
-src_unpac() {
+src_unpack() {
   unpack ${A}
-  cp ${FILESDIR}/psd_save.c $S/plug-ins/common
+  cd ${S}/plug-ins/common
+  cp ${FILESDIR}/psd_save.c .
+  patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+  cd ${S}
+  automake
+  autoconf
 }
+
 src_compile() {                           
   local myconf
   local mymake

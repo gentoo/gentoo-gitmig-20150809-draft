@@ -1,4 +1,4 @@
-/*
+#/*
  * PSD Save Plugin version 1.0 (BETA)
  * This GIMP plug-in is designed to save Adobe Photoshop(tm) files (.PSD)
  *
@@ -68,7 +68,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <glib.h>
-#include "libgimp/gimp.h"
+#include <libgimp/gimp.h>
 
 
 /* Local types etc
@@ -112,9 +112,9 @@ static PSD_Image_Data PSDImageData;
 static void   query      (void);
 static void   run        (char    *name,
                           int      nparams,
-                          GParam  *param,
+                          GimpParam  *param,
                           int     *nreturn_vals,
-                          GParam **return_vals);
+                          GimpParam **return_vals);
 static void* xmalloc(size_t n);
 static void psd_lmode_layer(gint32 idLayer, gchar* psdMode);
 static void reshuffle_cmap_write(guchar *mapGimp);
@@ -133,7 +133,7 @@ static void write_gshort(FILE *fd, gshort val, gchar *why);
 static void write_glong(FILE *fd, glong val, gchar *why);
 
 
-GPlugInInfo PLUG_IN_INFO =
+GimpPlugInInfo PLUG_IN_INFO =
 {
   NULL,    /* init_proc */
   NULL,    /* quit_proc */
@@ -149,15 +149,15 @@ MAIN()
 static void
 query ()
 {
-  static GParamDef save_args[] =
+  static GimpParamDef save_args[] =
   {
-    { PARAM_INT32, "run_mode", "Interactive, non-interactive" },
-    { PARAM_IMAGE, "image", "Input image" },
-    { PARAM_DRAWABLE, "drawable", "Drawable to save" },
-    { PARAM_STRING, "filename", "The name of the file to save the image in" },
-    { PARAM_STRING, "raw_filename", "The name of the file to save the image in" },
-    { PARAM_INT32, "compression", "Compression type: { NONE (0), LZW (1), PACKBITS (2)" },
-    { PARAM_INT32, "fillorder", "Fill Order: { MSB to LSB (0), LSB to MSB (1)" }
+    { GIMP_PDB_INT32, "run_mode", "Interactive, non-interactive" },
+    { GIMP_PDB_IMAGE, "image", "Input image" },
+    { GIMP_PDB_DRAWABLE, "drawable", "Drawable to save" },
+    { GIMP_PDB_STRING, "filename", "The name of the file to save the image in" },
+    { GIMP_PDB_STRING, "raw_filename", "The name of the file to save the image in" },
+    { GIMP_PDB_INT32, "compression", "Compression type: { NONE (0), LZW (1), PACKBITS (2)" },
+    { GIMP_PDB_INT32, "fillorder", "Fill Order: { MSB to LSB (0), LSB to MSB (1)" }
   };
   static int nsave_args = sizeof (save_args) / sizeof (save_args[0]);
 
@@ -169,7 +169,7 @@ query ()
                           "2000",
                           "<Save>/PSD",
 			  "RGB*, GRAY*, INDEXED*",
-                          PROC_PLUG_IN,
+                          GIMP_PLUGIN,
                           nsave_args, 0,
                           save_args, NULL);
   gimp_register_save_handler ("file_psd_save", "psd", "");
@@ -180,19 +180,19 @@ query ()
 static void
 run (char    *name,
      int      nparams,
-     GParam  *param,
+     GimpParam  *param,
      int     *nreturn_vals,
-     GParam **return_vals)
+     GimpParam **return_vals)
 {
-  static GParam values[2];
-  GRunModeType run_mode;
+  static GimpParam values[2];
+  GimpRunModeType run_mode;
 
   run_mode = param[0].data.d_int32;
 
   *nreturn_vals = 1;
   *return_vals = values;
-  values[0].type = PARAM_STATUS;
-  values[0].data.d_status = STATUS_CALLING_ERROR;
+  values[0].type = GIMP_PDB_STATUS;
+  values[0].data.d_status = GIMP_PDB_CALLING_ERROR;
 
   if (strcmp (name, "file_psd_save") == 0)
   {
@@ -201,11 +201,11 @@ run (char    *name,
     if ( save_image (param[3].data.d_string,          /* Nombre del fichero */
                      param[1].data.d_image) )         /* Identificador de la imagen */
     {
-      values[0].data.d_status = STATUS_SUCCESS;
+      values[0].data.d_status = GIMP_PDB_SUCCESS;
     }
     else
     {
-      values[0].data.d_status = STATUS_EXECUTION_ERROR;
+      values[0].data.d_status = GIMP_PDB_EXECUTION_ERROR;
     }
   }
 }
@@ -236,46 +236,46 @@ static void psd_lmode_layer(gint32 idLayer, gchar* psdMode)
 {
   switch ( gimp_layer_get_mode (idLayer) )
   {
-    case NORMAL_MODE:
+    case GIMP_NORMAL_MODE:
       strcpy (psdMode, "norm");
       break;
-    case DARKEN_ONLY_MODE:
+    case GIMP_DARKEN_ONLY_MODE:
       strcpy (psdMode, "dark");
       break;
-    case LIGHTEN_ONLY_MODE:
+    case GIMP_LIGHTEN_ONLY_MODE:
       strcpy (psdMode, "lite");
       break;
-    case HUE_MODE:
+    case GIMP_HUE_MODE:
       strcpy (psdMode, "hue ");
       break;
-    case SATURATION_MODE:
+    case GIMP_SATURATION_MODE:
       strcpy (psdMode, "sat ");
       break;
-    case COLOR_MODE:
+    case GIMP_COLOR_MODE:
       strcpy (psdMode, "colr");
       break;
-    case MULTIPLY_MODE:
+    case GIMP_MULTIPLY_MODE:
       strcpy (psdMode, "mul ");
       break;
-    case SCREEN_MODE:
+    case GIMP_SCREEN_MODE:
       strcpy (psdMode, "scrn");
       break;
-    case DISSOLVE_MODE:
+    case GIMP_DISSOLVE_MODE:
       strcpy (psdMode, "diss");
       break;
-    case DIFFERENCE_MODE:
+    case GIMP_DIFFERENCE_MODE:
       strcpy (psdMode, "diff");
       break;
-    case VALUE_MODE:                  /* ? */
+    case GIMP_VALUE_MODE:                  /* ? */
       strcpy (psdMode, "lum ");
       break;
-    case OVERLAY_MODE:                /* ? */
+    case GIMP_OVERLAY_MODE:                /* ? */
       strcpy (psdMode, "over");
       break;
 /*    case BEHIND_MODE:                 Estos son de GIMP 1.1.14*/
 /*    case DIVIDE_MODE:                 Estos son de GIMP 1.1.14*/
-    case ADDITION_MODE:
-    case SUBTRACT_MODE:
+    case GIMP_ADDITION_MODE:
+    case GIMP_SUBTRACT_MODE:
       IFDBG printf("PSD: Warning - unsupported layer-blend mode: %c, using 'norm' mode\n",
                    gimp_layer_get_mode (idLayer));
       strcpy (psdMode, "norm");
@@ -584,9 +584,9 @@ static gint gimpBaseTypeToPsdMode (gint gimpBaseType)
 {
   switch (gimpBaseType)
   {
-    case RGB: return(3);                     /* RGB */
-    case GRAY: return(1);                    /* Grayscale */
-    case INDEXED: return(2);                 /* Indexed */
+    case GIMP_RGB: return(3);                     /* RGB */
+    case GIMP_GRAY: return(1);                    /* Grayscale */
+    case GIMP_INDEXED: return(2);                 /* Indexed */
     default:
       g_message ("PSD: Error: Can't convert GIMP base imagetype to PSD mode\n");
       IFDBG printf ("PSD Save: el gimpBaseType vale %d, no puede convertirlo a PSD mode", gimpBaseType);
@@ -604,9 +604,9 @@ static gint nCanalesLayer (gint gimpBaseType, gint hasAlpha)
 
   switch (gimpBaseType)
   {
-    case RGB: return(3+incAlpha);                /* R,G,B y Alpha (Si existe) */
-    case GRAY: return(1+incAlpha);               /* G y Alpha (Si existe) */
-    case INDEXED: return(1+incAlpha);            /* I y Alpha (Si existe) */
+    case GIMP_RGB: return(3+incAlpha);                /* R,G,B y Alpha (Si existe) */
+    case GIMP_GRAY: return(1+incAlpha);               /* G y Alpha (Si existe) */
+    case GIMP_INDEXED: return(1+incAlpha);            /* I y Alpha (Si existe) */
     default:
       return(0);                        /* Retorno 0 cananles por defecto */
   }
@@ -671,7 +671,7 @@ static void save_color_mode_data (FILE *fd, gint32 image_id)
 
   switch (PSDImageData.baseType)
   {
-    case INDEXED:
+    case GIMP_INDEXED:
       IFDBG printf ("      Tipo de la imagen: INDEXED\n");
 
       cmap = gimp_image_get_cmap (image_id, &nColors);
@@ -1221,8 +1221,8 @@ static void save_layerAndMask (FILE *fd, gint32 image_id)
   for (i=PSDImageData.nLayers-1; i>=0; i--)
   {
     int nCanal;
-    GDrawable* drawable;
-    GPixelRgn region;		/* Region de la imagen */
+    GimpDrawable* drawable;
+    GimpPixelRgn region;		/* Region de la imagen */
     guchar* data;		/* Bytes que componen un layer con todos sus canales */
     guchar* red;		/* Bytes que componen un canal R */
     guchar* green;		/* Bytes que componen un canal G */
@@ -1254,7 +1254,7 @@ static void save_layerAndMask (FILE *fd, gint32 image_id)
     nCanal = 0;
     switch ( PSDImageData.baseType )
     {
-      case RGB:
+      case GIMP_RGB:
 
         if ( gimp_drawable_has_alpha(PSDImageData.lLayers[i]) )
         {
@@ -1288,7 +1288,7 @@ static void save_layerAndMask (FILE *fd, gint32 image_id)
                            "blue channel" );
         break;
 
-      case GRAY:
+      case GIMP_GRAY:
 
         if ( gimp_drawable_has_alpha(PSDImageData.lLayers[i]) )
         {
@@ -1317,7 +1317,7 @@ static void save_layerAndMask (FILE *fd, gint32 image_id)
 
         break;
 
-      case INDEXED:
+      case GIMP_INDEXED:
         IFDBG printf ("        Grabando canal indexed...\n");
         save_channel_data (fd, data, PSDImageData.layersDim[i].width,
                            PSDImageData.layersDim[i].height,
@@ -1363,8 +1363,8 @@ static void save_data (FILE *fd, gint32 image_id)
   gint offset_y;                /* Offset y de cada capa*/
   gint32 layerHeight;		/* Altura de cada capa */
   gint32 layerWidth;            /* Anchura de cada capa*/
-  GDrawable* drawable;
-  GPixelRgn region;		/* Region de la imagen */
+  GimpDrawable* drawable;
+  GimpPixelRgn region;		/* Region de la imagen */
   guchar* data;			/* Bytes que componen un layer con todos sus canales */
   guchar* red;			/* Bytes que componen un canal R */
   guchar* green;		/* Bytes que componen un canal G */
@@ -1406,7 +1406,7 @@ static void save_data (FILE *fd, gint32 image_id)
   nCanal = 0;
   switch ( PSDImageData.baseType )
   {
-    case RGB:
+    case GIMP_RGB:
       RGB_to_chans ( data, longCanal * nChannelsLayer, &red, &green, &blue);
 
       get_compress_channel_data ( red, layerWidth, layerHeight,
@@ -1431,8 +1431,8 @@ static void save_data (FILE *fd, gint32 image_id)
       nCanal++;
       break;
 
-    case GRAY:
-    case INDEXED:
+    case GIMP_GRAY:
+    case GIMP_INDEXED:
       gray_indexed = data;
       get_compress_channel_data ( gray_indexed, layerWidth, layerHeight,
                                   &(TLdataCompress[nCanal]), &(dataCompress[nCanal]),
@@ -1509,14 +1509,14 @@ static void save_data (FILE *fd, gint32 image_id)
 
     switch ( PSDImageData.baseType )
     {
-      case RGB:
+      case GIMP_RGB:
         xfwrite(fd, red, longCanal, "red channel data");
         xfwrite(fd, green, longCanal, "green channel data");
         xfwrite(fd, blue, longCanal, "blue channel data");
         break;
 
-      case GRAY:
-      case INDEXED:
+      case GIMP_GRAY:
+      case GIMP_INDEXED:
         xfwrite(fd, gray_indexed, longCanal, "gray or indexed channel data");
         break;
     }
@@ -1561,7 +1561,7 @@ static void get_image_data (FILE *fd, gint32 image_id)
 
   /* El formato PSD no permite imagenes indexadas con capas */
 
-  if ( PSDImageData.baseType == INDEXED )
+  if ( PSDImageData.baseType == GIMP_INDEXED )
   {
     IFDBG printf ("      Realizo el flatten de la imagen indexada\n");
     gimp_image_flatten(image_id);
@@ -1608,7 +1608,7 @@ int save_image (gchar *filename, gint32 image_id)
 
   /* El formato PSD no permite imagenes indexadas con capas */
 
-  if ( PSDImageData.baseType == INDEXED )
+  if ( PSDImageData.baseType == GIMP_INDEXED )
     write_glong(fd, 0, "layers info section length");
   else
     save_layerAndMask (fd, image_id);
