@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.3.3.ebuild,v 1.2 2003/09/08 02:29:57 msterret Exp $
-
-PN=GConf
-P=${PN}-${PV}
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.3.3.ebuild,v 1.3 2003/09/08 12:20:42 foser Exp $
 
 inherit gnome2
 
+MY_P=GConf-${PV}
+PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Gnome Configuration System and Daemon"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="mirror://gnome/sources/${PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 IUSE="doc"
 LICENSE="LGPL-2"
@@ -39,6 +41,7 @@ src_install() {
 }
 
 kill_gconf () {
+
 	# this function will kill all running gconfd that could be causing troubles
 	if [ -x /usr/bin/gconftool ]
 	then
@@ -55,25 +58,29 @@ kill_gconf () {
 		/usr/bin/gconftool-2 --shutdown
 	fi
 	return 0
+
 }
 
 pkg_setup () {
+
 	kill_gconf
+
 }
 
 pkg_preinst () {
+
 	kill_gconf
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > ${D}/../../etc/env.d/50gconf
 
 	dodir /root/.gconfd
+
 }
 
 pkg_postinst () {
 
 	kill_gconf
-	gnome2_pkg_postinst
 
 	#change the permissions to avoid some gconf bugs
 	einfo "changing permissions for gconf dirs"
