@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8ff54c32023b916f7d49cead1dc430a0 safecat-1.11.ebuild 1209
-MD5 5d819d2523c52afc20d17856496a1e3b ChangeLog 1109
+MD5 0751dca4286a58e316cde04af3f602f5 ChangeLog 1123
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 f1a0de11ad74ec86a89591c3d4de8d85 files/safecat-1.11-gentoo.patch 355
 MD5 b8802a01bb6d1194118da7bb8f98d3f4 files/digest-safecat-1.11 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPI1FI1lqEGTUzyQRAv85AKCkkV5AMcjpeZ3JmpWzujZF4JTTdACdEFqg
-uYccMMy1+l3VAXF0bvJrIcE=
-=PySe
------END PGP SIGNATURE-----
