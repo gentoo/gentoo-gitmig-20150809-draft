@@ -1,8 +1,9 @@
-MD5 1738c36d4a610a6bb5ce5e27e6821e5e ChangeLog 4774
+MD5 95be8f7c7820df8881e4e5ae4703bcd3 ChangeLog 4856
 MD5 422a319476b2e8f7610677aef2e5377a rpm-4.0.4-r5.ebuild 1603
+MD5 5272269376e8dfcd4e4045b70cc657c9 rpm-4.2.1.ebuild 2306
 MD5 e244d95b6b885f82f182a98f4be640cf rpm-4.2_pre069.ebuild 2155
-MD5 0fc1c4d3757b2872609b39308e3ab2f5 rpm-4.2.1.ebuild 2303
 MD5 e7ef0e369ef68d513461dd831eb1ef4f files/digest-rpm-4.0.4-r5 62
+MD5 dd838f7f21d8a9eed6fdf9a18e7ba0e4 files/digest-rpm-4.2.1 62
 MD5 576f625499d593cd3424798fe480090e files/digest-rpm-4.2_pre069 65
 MD5 90a229eb084e54a880c72d83dffa31cb files/rpm-3.0.6-popt-popt.c-gentoo.diff 206
 MD5 806f307798e39d580d5286d99c44b965 files/rpm-4.0.4-glibc2.3.diff 495
@@ -10,4 +11,3 @@ MD5 90a229eb084e54a880c72d83dffa31cb files/rpm-4.0.4-popt-popt.c-gentoo.diff 206
 MD5 6b639232d435829fd97b09e10f58de81 files/rpm-4.0.4-system-popt.diff 18639
 MD5 fe39156514725cf08be38b39fe3f6f3c files/rpm-4.1-system-popt.diff 21458
 MD5 3d46eae2efd769e423b004de176d9812 files/rpm-4.2-system-popt.diff 14435
-MD5 dd838f7f21d8a9eed6fdf9a18e7ba0e4 files/digest-rpm-4.2.1 62
