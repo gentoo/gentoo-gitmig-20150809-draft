@@ -1,6 +1,12 @@
 # ChangeLog for app-office/ooextras
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.2 2005/01/20 11:55:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.3 2005/03/05 18:17:03 suka Exp $
+
+*ooextras-20050216 (05 Mar 2005)
+
+  05 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
+  ooextras-20031206.ebuild, +ooextras-20050216.ebuild:
+  New release with lots of new templates
 
   20 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   ooextras-20031206.ebuild:
