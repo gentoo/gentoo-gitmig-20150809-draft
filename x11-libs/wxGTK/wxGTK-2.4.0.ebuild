@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.19 2004/06/28 19:38:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.20 2004/07/22 17:57:05 pythonhead Exp $
 
-DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
-HOMEPAGE="http://www.wxwindows.org/"
+HOMEPAGE="http://www.wxwidgets.org/"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
@@ -41,7 +41,7 @@ src_compile() {
 		--enable-png --with-libjpeg"
 
 	#Note: pcx image support enabled by default if found.
-	#Also, all wxWindows gui features are enabled by default. If you
+	#Also, all wxWidgets gui features are enabled by default. If you
 	#want to build a smaller library you can disable features by adding
 	#the appropriate flags to myconf (see INSTALL.txt).
 
@@ -79,10 +79,10 @@ src_compile() {
 	myconf="${myconf} --with-x --with-gtk"
 
 	# here we disable unicode support even thought gtk2 supports it
-	# because too many apps just don't follow the wxWindows guidelines
+	# because too many apps just don't follow the wxWidgets guidelines
 	# for unicode support.
 	#
-	# http://www.wxwindows.org/manuals/2.4.0/wx458.htm#unicode
+	# http://www.wxwidgets.org/manuals/2.4.0/wx458.htm#unicode
 	#
 	# ref #20116 - liquidx@gentoo.org (07 May 2003)
 
