@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.10 2004/06/24 21:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.11 2004/06/26 23:01:57 liquidx Exp $
+
+  26 Jun 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gnome-pilot-2.0.10-missing_proc.patch, gnome-pilot-2.0.10-r1.ebuild:
+  added patch to prevent segv on missing /proc/bus/usb/devices (#42378)
 
   04 Feb 2004; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10-r1.ebuild,
   files/gnome-pilot-2.0.10-treo600.patch:

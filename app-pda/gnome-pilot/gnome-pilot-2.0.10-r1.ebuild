@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.7 2004/06/24 21:42:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.8 2004/06/26 23:01:57 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -39,4 +39,7 @@ src_unpack() {
 	# add treo600 support
 	# http://bugzilla.gnome.org/show_bug.cgi?id=124254
 	epatch ${FILESDIR}/${P}-treo600.patch
+	# prevent segv if /proc/bus/usb/devices is missing
+	# http://mail.gnome.org/archives/gnome-pilot-list/2004-February/msg00013.html
+	cd ${S}; epatch ${FILESDIR}/${P}-missing_proc.patch
 }
