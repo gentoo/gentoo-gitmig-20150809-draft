@@ -9,7 +9,6 @@ HOMEPAGE="http://rivatv.sourceforge.net/"
 DEPEND="virtual/x11
 	>=virtual/linux-sources-2.4.17"
 
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"

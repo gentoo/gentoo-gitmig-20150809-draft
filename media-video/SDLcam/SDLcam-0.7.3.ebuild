@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3.ebuild,v 1.1 2002/10/01 00:22:14 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3.ebuild,v 1.2 2002/10/20 18:49:49 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Webcam application that uses the SDL library"
@@ -15,7 +15,6 @@ DEPEND="dev-libs/libxml2
 	media-libs/sdl-image
 	media-libs/sdl-ttf"
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 

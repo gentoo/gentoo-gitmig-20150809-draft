@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.51.ebuild,v 1.1 2002/10/14 13:41:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.51.ebuild,v 1.2 2002/10/20 18:49:49 vapier Exp $
 
 DESCRIPTION="kino is a digital video editor for linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -18,7 +18,6 @@ DEPEND="x11-libs/gtk+
 	sys-libs/libraw1394
 	sys-libs/libavc1394
 	media-libs/libdv"
-RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="~x86"
 

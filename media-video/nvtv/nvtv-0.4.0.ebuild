@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.4.0.ebuild,v 1.4 2002/10/18 17:48:43 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.4.0.ebuild,v 1.5 2002/10/20 18:49:49 vapier Exp $
 
 IUSE="X gtk"
 S=${WORKDIR}/${PN}
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 
 DEPEND="sys-apps/pciutils
 	gtk? ( =x11-libs/gtk+-1.2* )"
-RDEPEND="${DEPEND}"
 
 
 src_compile() {
