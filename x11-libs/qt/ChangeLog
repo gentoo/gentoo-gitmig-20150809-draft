@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.94 2003/11/14 14:20:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.95 2003/11/29 22:52:50 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> qt-3.2.3.ebuild:
+  mark stable on amd64
 
 *qt-3.2.3 (14 Nov 2003)
 
