@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.6 2004/02/29 21:22:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.7 2004/03/24 05:09:26 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="nls ncurses gtk gtk2 gnome esd sdl"
 
-DEPEND=">=sys-apps/sed-4
+RDEPEND="virtual/glibc
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	esd? ( media-sound/esound )
 	gtk? (
@@ -24,7 +24,12 @@ DEPEND=">=sys-apps/sed-4
 		dev-libs/glib
 	)
 	nls? ( sys-devel/gettext )
-	sdl? ( media-libs/libsdl media-libs/sdl-mixer )"
+	sdl? (
+		media-libs/libsdl
+		media-libs/sdl-mixer
+	)"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -34,8 +39,8 @@ src_unpack() {
 		-e "/priv_hiscore/ s:DPDATADIR:\"${GAMES_STATEDIR}\":" \
 		-e "/\/doc\// s:DPDATADIR:\"/usr/share\":" \
 		-e 's:index.html:html/index.html:' \
-			src/dopewars.c || \
-				die "sed src/dopewars.c failed"
+			src/dopewars.c \
+				|| die "sed src/dopewars.c failed"
 }
 
 src_compile() {
@@ -55,7 +60,7 @@ src_compile() {
 		--enable-networking \
 		--enable-plugins \
 		${myservconf} \
-		|| die
+			|| die
 	emake || die "emake failed"
 }
 
