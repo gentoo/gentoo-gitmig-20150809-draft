@@ -1,0 +1,58 @@
+# ChangeLog for app-sci/udunits
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.1 2004/12/28 19:24:10 ribosome Exp $
+
+*udunits-1.12.0 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/udunits_configure_in.patch, +files/udunits_customize.patch,
+  +files/udunits_lib_make.patch, +files/udunits_master_mk.patch,
+  +udunits-1.12.0.ebuild, +udunits-1.12.1.ebuild, +udunits-1.12.3.ebuild:
+  Moved from app-sci/udunits to sci-libs/udunits.
+
+*udunits-1.12.3 (11 Dec 2004)
+
+  11 Dec 2004; Steve Arnold <nerdboy@gentoo.org> +udunits-1.12.3.ebuild:
+  added latest 1.12.3 to ~arch
+
+  11 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> udunits-1.12.1.ebuild:
+  Stable on alpha.
+
+  08 Nov 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.1.ebuild:
+  fixed perl test issues and added ~amd64 to keywords; all udunits libs and
+  language interfaces should be correct now.
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> udunits-1.12.0.ebuild:
+  Q.A.: Removed RDEPEND=$DEPEND.
+
+  06 Jun 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.1.ebuild:
+  bump to x86, corrected depend, added einfo
+
+  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> udunits-1.12.0.ebuild:
+  Stable on alpha.
+
+  08 May 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.0.ebuild:
+  back-ported fix for build error (fortran interface still incomplete)
+
+*udunits-1.12.1 (08 May 2004)
+
+  08 May 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
+  udunits-1.12.1.ebuild:
+  new minor source rev bump to fix build error, fixed Fortran interface
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> udunits-1.12.0.ebuild:
+  Add die following econf for bug 48950
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> udunits-1.12.0.ebuild:
+  Corrected IUSE.
+
+  21 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> udunits-1.12.0.ebuild:
+  header fix; inherit eutils for epatch; arm needs deps first
+
+  14 Dec 2003; <nerdboy@gentoo.org> udunits-1.12.0.ebuild:
+  bumped to x86
+
+*udunits-1.12.0 (02 Nov 2003)
+
+  02 Nov 2003; <nerdboy@gentoo.org> udunits-1.12.0.ebuild:
+  new ebuild for the Unidata units library and perl module
