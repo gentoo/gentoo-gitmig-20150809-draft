@@ -1,17 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r1.ebuild,v 1.2 2001/10/20 02:51:28 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r1.ebuild,v 1.3 2002/02/26 06:31:58 drobbins Exp $
 
-P=rp8_linux20_libc6_i386_cs2_rpm
-A=rp8_linux20_libc6_i386_cs2_rpm
 S=${WORKDIR}/usr
 DESCRIPTION="Real Player * basic"
-SRC_URI=""
+SRC_URI="rp8_linux20_libc6_i386_cs2_rpm"
 HOMEPAGE="http://"
 
 DEPEND=">=app-arch/rpm-3.0.6"
 RDEPEND="virtual/x11"
+RESTRICT="fetch"
 
 dyn_fetch() {
 	for y in ${A} 
@@ -29,7 +28,7 @@ src_unpack() {
 # You must download rp8_linux20_libc6_i386_cs2_rpm 
 # from real.com and put it in ${DISTDIR}
 
-  rpm2cpio ${DISTDIR}/${P} | cpio -i --make-directories
+  rpm2cpio ${DISTDIR}/${A} | cpio -i --make-directories
 
 }
 
