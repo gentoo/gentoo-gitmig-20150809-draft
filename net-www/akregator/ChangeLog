@@ -1,6 +1,9 @@
 # ChangeLog for net-www/akregator
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.4 2004/06/27 21:05:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.5 2004/07/03 20:56:14 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> akregator-1.0_beta3.ebuild:
+  QA: removed doubled kdelibs dependency
 
   27 Jun 2004; Dylan Carlson <absinthe@gentoo.org> metadata.xml,
   akregator-1.0_beta3.ebuild:
