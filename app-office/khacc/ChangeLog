@@ -1,6 +1,9 @@
 # ChangeLog for app-office/khacc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.4 2004/03/09 21:48:39 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.5 2004/03/19 14:20:55 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> khacc-1.7.8.ebuild:
+  Added ~sparc keyword.
 
   09 Mar 2004; Dominik Stadler <centic@gentoo.org> khacc-1.7.8.ebuild:
   Add einfo for necessary action for qhacc, see Bug 38825

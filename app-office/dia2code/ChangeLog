@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.6 2004/03/14 01:45:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.7 2004/03/19 14:16:46 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> dia2code-0.8.1.ebuild:
+  Added ~sparc keyword.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> dia2code-0.8.1.ebuild:
   Don't assign default to S; header fix

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kbudget
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.4 2004/02/25 14:18:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.5 2004/03/19 14:19:20 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> kbudget-0.6.ebuild:
+  Added ~sparc keyword.
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> kbudget-0.6.ebuild:
   Adding amd64 keyword. Closing #37454.

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.5 2004/02/14 14:43:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.6 2004/03/19 14:17:57 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> gnotime-2.1.7.ebuild:
+  Added ~sparc keyword.
 
 *gnotime-2.1.7 (14 Feb 2004)
 
