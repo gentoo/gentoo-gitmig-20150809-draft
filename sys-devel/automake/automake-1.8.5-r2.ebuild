@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r2.ebuild,v 1.4 2004/12/02 04:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r2.ebuild,v 1.5 2004/12/03 23:11:49 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ IUSE="uclibc"
 
 DEPEND="dev-lang/perl
 	sys-devel/automake-wrapper
-	>=sys-devel/autoconf-2.58
+	>=sys-devel/autoconf-2.59-r6
 	sys-devel/gnuconfig"
 
 src_unpack() {
