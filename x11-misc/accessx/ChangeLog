@@ -3,8 +3,16 @@
 # Maintainer: George Shapovalov <george@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.1 2002/02/20 02:58:37 agriffis Exp
 
+*accessx-950-r1 (24 Jul 2002)
+
+  24 Jul 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  accessx-0950-r1.ebuild, files/accessx-0950-gcc3-gentoo.patch,
+  files/digest-accessx-0950-r1 :
+
+  Fix for gcc3.1
+
 *accessx-0950
 
-	18 Apr 2002; Sean P. Kane <spk42@spkane.org> accessx-0950.ebuild :
+  18 Apr 2002; Sean P. Kane <spk42@spkane.org> accessx-0950.ebuild :
 
-	Added ebuild for accessx
+  Added ebuild for accessx
