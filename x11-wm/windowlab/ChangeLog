@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.8 2004/06/24 23:46:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.9 2004/08/13 14:18:00 slarti Exp $
+
+  13 Aug 2004; Tom Martin <slarti@gentoo.org> windowlab-1.24.ebuild:
+  Marked ~amd64.
 
 *windowlab-1.24 (24 Jun 2004)
 
