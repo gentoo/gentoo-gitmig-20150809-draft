@@ -3,7 +3,7 @@ MD5 013d5311de2ca1ca7a2930df5cebf153 gentoo-sources-2.4.26-r5.ebuild 754
 MD5 39e765c1228a24fc938248ae5c92cddf gentoo-sources-2.4.22-r13.ebuild 1617
 MD5 f1906bf632397610b8d7649830e04bc4 gentoo-sources-2.4.20-r21.ebuild 6666
 MD5 86aee6498007ed2f5a40bc96cee32e37 gentoo-sources-2.4.26-r6.ebuild 776
-MD5 556c6f045ecb85209c8553f995323749 ChangeLog 20296
+MD5 37850cda887c49bd5886cd5effd9a9de ChangeLog 20333
 MD5 a7dc495c28a8174d99347be70f1c9792 gentoo-sources-2.4.19-r18.ebuild 3863
 MD5 91ea2908f17a4069774ffce01264df0c metadata.xml 354
 MD5 2ac4fd77e067652901ccf234c9687bb1 files/i810_drm.patch 1247

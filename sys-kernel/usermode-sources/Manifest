@@ -1,6 +1,6 @@
 MD5 f02cf5f0a00762d227f7c913b0a41a5a usermode-sources-2.4.26-r3.ebuild 1958
 MD5 ec937ee516ab651055687bcaa75a67eb usermode-sources-2.4.24-r6.ebuild 2699
-MD5 a7110b421a9d18e16168d4623475ceb4 ChangeLog 10096
+MD5 8ad822e69ce754e033c66edcbe898252 ChangeLog 10175
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
 MD5 69290e33a53dee51edf184c93435f113 usermode-sources-2.6.6-r3.ebuild 955
 MD5 02c062ec3a11a6a1498cdf0b1716c90a files/usermode-sources-2.6.6.FPULockup-53804.patch 895
