@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 f116889d9178bfcb64fd155baf3007c4 ChangeLog 4958
 MD5 cc8c7b67c1a47c6f2b150579e10112ba diffutils-2.8.4-r4.ebuild 2072
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 fe0dcf1334e854ccfa823376261a281b diffutils-2.8.7.ebuild 1519
+MD5 a467b89172823af85b8017bac836d299 diffutils-2.8.7.ebuild 1513
 MD5 88eef724512016e5400a58e4057ef235 files/diffutils-2.8.4-Makefile-fix-typeo.patch 1158
 MD5 bb27bd30edca169156e905ebe7dab570 files/diffutils-2.8.4-no-manpage.patch 1168
 MD5 fcb3554acdf9074aad98b90af6cb915d files/diffutils-2.8.4-sdiff-no-waitpid.patch 525
@@ -15,7 +15,7 @@ MD5 28aba2261ffb7634265a612938df28f5 files/digest-diffutils-2.8.7 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtlPwroRuSHgZdywRAu81AJ0ZvJKJ7iIQDV0H6ZGcMNZuLT5f4QCdGial
-0kuRXx7pNXGQd06DQ8xBGhU=
-=SCPo
+iD8DBQFBt023roRuSHgZdywRAuRRAJ4kUSDbQuYhauGjmncWmJGno3dV7ACdEBgy
+U3rNHBqjpRJflYMr6WuX8pI=
+=kh6v
 -----END PGP SIGNATURE-----
