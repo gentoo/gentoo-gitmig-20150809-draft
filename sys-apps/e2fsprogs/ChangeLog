@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.11 2002/12/09 22:56:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.12 2002/12/26 18:43:35 azarah Exp $
+
+*e2fsprogs-1.32-r1 (26 Dec 2002)
+
+  26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> e2fsprogs-1.32-r1.ebuild :
+
+  Fix trying to move lsattr, chattr and uuidgen to non existing directory
+  in src_install().  Move compile_et and mk_cmds to /usr/bin. Fix a cosmetic
+  error in mk_cmds help output.
 
   10 Dec 2002; Martin Schlemmer <azarah@gentoo.org> e2fsprogs-1.32.ebuild :
 
