@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.25 2004/08/14 23:36:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.26 2004/10/22 07:57:19 liquidx Exp $
+
+  22 Oct 2004; Alastair Tse <liquidx@gentoo.org> libgnomedb-1.0.4.ebuild:
+  removed intltoolize, not quite sure why its not working, but temporary
+  stopgap for now.
 
   15 Aug 2004; Tom Martin <slarti@gentoo.org> libgnomedb-1.0.4.ebuild:
   Marked ~amd64.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.3 2004/08/14 23:36:05 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.4 2004/10/22 07:57:19 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -29,7 +29,8 @@ DEPEND=">=dev-util/pkgconfig-0.8
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix ${S}/doc/Makefile.in
-	cd ${S}; intltoolize --force || die
+	cd ${S}
+	#intltoolize --force || die
 	# Avoid documentation problems. See bug #46275.
 	epatch ${FILESDIR}/${PN}-1.0.3-gtkdoc_fix.patch
 	# Add extra selector. See bug #48611.
