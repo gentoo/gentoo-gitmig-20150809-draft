@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity-eawpatches
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.1 2002/05/19 19:36:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.2 2002/12/03 15:26:50 agriffis Exp $
+
+*timidity-eawpatches-12-r1 (03 Dec 2002)
+
+	03 Dec 2002; Aron Griffis <agriffis@gentoo.org> timidity-eawpatches-12-r1:
+
+	Fix some installation issues with hints from Chris Moeller
+	<kode54@earthlink.net>.  Fixes BUG #8753
 
 *timidity-eawpatches-12 (19 May 2002)
 
