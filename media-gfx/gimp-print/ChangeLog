@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp-print
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.50 2004/12/29 00:32:20 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.51 2005/02/20 19:22:14 lanius Exp $
+
+*gimp-print-5.0.0_beta3 (20 Feb 2005)
+
+  20 Feb 2005; Heinrich Wendel <lanius@gentoo.org> gimp-print-4.2.6.ebuild,
+  gimp-print-4.2.7.ebuild, +gimp-print-5.0.0_beta3.ebuild:
+  version bump
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,15 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.11 2005/02/20 19:22:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta3.ebuild,v 1.1 2005/02/20 19:22:14 lanius Exp $
 
-inherit libtool
+inherit flag-o-matic libtool
 
-IUSE="nls gtk readline cups foomaticdb ppds"
+IUSE="cups foomaticdb gtk nls readline"
+
+MY_P=gutenprint-5.0.0-beta3
 
 DESCRIPTION="Gimp Print Drivers"
 HOMEPAGE="http://gimp-print.sourceforge.net"
-KEYWORDS="x86 ppc alpha sparc hppa amd64"
-SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.gz"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
 
 DEPEND="cups? ( >=net-print/cups-1.1.14 )
 	media-gfx/imagemagick
@@ -22,10 +24,12 @@ DEPEND="cups? ( >=net-print/cups-1.1.14 )
 LICENSE="GPL-2"
 SLOT="0"
 
+S=${WORKDIR}/${MY_P}
+
+append-flags -fno-inline-functions
+
 src_compile() {
 	elibtoolize --reverse-deps
-
-	local myconf
 
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
@@ -39,31 +43,33 @@ src_compile() {
 		&& myconf="${myconf} --enable-lexmarkutil" \
 		|| myconf="${myconf} --disable-lexmarkutil"
 
-	has_version =media-gfx/gimp-1.2* \
-		&& myconf="${myconf} --with-gimp" \
-		|| myconf="${myconf} --without-gimp"
-
 	if use cups; then
 		myconf="${myconf} --with-cups"
 	else
 		myconf="${myconf} --without-cups"
 	fi
 
+	if use cups && use ppds; then
+		myconf="${myconf} --enable-cups-ppds --enable-cups-level3-ppds"
+	else
+		myconf="${myconf} --disable-cups-ppds"
+	fi
+
 	use foomaticdb \
 		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
 
+	# --without-translated-ppds enabled \
 	econf \
 		--enable-test \
-		--with-ghosts \
+		--with-ghostscript \
 		--with-user-guide \
 		--with-samples \
 		--with-escputil \
-		--without-translated-ppds \
 		$myconf || die
 
 	# IJS Patch
-	sed -i -e "s/<ijs/<ijs\/ijs/g" src/ghost/ijsgimpprint.c
+	sed -i -e "s/<ijs/<ijs\/ijs/g" src/ghost/ijsgutenprint.c
 
 	emake || die "compile problem"
 }
@@ -71,22 +77,13 @@ src_compile() {
 src_install () {
 	make install DESTDIR=${D} || die
 
-	if ! use ppds; then
-		rm -fR ${D}/usr/share/cups/model/
-	fi
-
-	exeinto /usr/share/gimp-print
-	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,curve,escp2-weavetest,run-testdither,run-weavetest,testdither}
+	exeinto /usr/share/gutenprint
+	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,escp2-weavetest,run-testdither,run-weavetest,testdither}
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README \
 		doc/users_guide/users-guide.ps doc/users_guide/users-guide.pdf \
-		${D}/usr/share/gimp-print/doc/gimpprint.ps
+		${D}/usr/share/gutenprint/doc/gutenprint.pdf
 	dohtml doc/FAQ.html
 	dohtml -r doc/users_guide/html doc/developer/developer-html
-	rm -fR ${D}/usr/share/gimp-print/doc
-}
-
-pkg_postinst () {
-	einfo "The gimp-print ebuild no longer creates the ppds automatically, please use foomatic"
-	einfo "to do so or remerge gimp-print with the ppds use flag."
+	rm -fR ${D}/usr/share/gutenprint/doc
 }
