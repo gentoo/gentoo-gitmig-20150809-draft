@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta3-r3.ebuild,v 1.2 2003/08/20 12:28:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta3-r3.ebuild,v 1.3 2003/09/25 17:42:59 tseng Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -25,6 +25,8 @@ mirror://kernel/linux/kernel/people/akpm/patches/2.6/${PV/_beta/-test}/${KV}/${K
 KEYWORDS="x86 ppc"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
+PROVIDE="virtual/linux-sources
+		virtual/alsa"
 
 src_unpack() {
 	cd ${WORKDIR}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>tseng@gentoo.org</email>
+	<name>Brandon Hale</name>
+</maintainer>
+<longdescription>
+This kernel is based on Andrew Morton's tree.
+It includes a large number of patches to vanilla 2.6 + bk,
+most notably scheduler work by Con Klivias.
+</longdescription>
+</pkgmetadata>
+	
