@@ -3,8 +3,8 @@ MD5 7a4b49d770031f7c6747c611ded7bc9a cdrtools-2.01_alpha19.ebuild 2189
 MD5 180a8d154221e49dc7633c8e2bebdcf2 cdrtools-2.01_alpha20.ebuild 2241
 MD5 f9fcbc79ca94669d29f5937fbabae7f6 metadata.xml 444
 MD5 9ddd5fdbf8092e8321095f0af99a3124 cdrtools-2.01_alpha23.ebuild 2203
-MD5 d2fd1d2ad46ea4d2c87f3573dca613de cdrtools-2.01_alpha25.ebuild 2168
-MD5 9e791351d9c94d16bcddf267c1f97148 ChangeLog 9454
+MD5 d274f321aa9daebe954c67d1d71e55b4 cdrtools-2.01_alpha25.ebuild 2166
+MD5 311a1710afae2fa3a169ea40ea1a0dd3 ChangeLog 9552
 MD5 3e09d97c263f22dbda9a67df209b533c files/cdrtools-2.01-kernel25-support.patch 602
 MD5 a5d2f2339b75bf4919653d91b83ec07d files/digest-cdrtools-2.01_alpha16 69
 MD5 bada1ee8ca01fbf2ae79c91e3615ee95 files/digest-cdrtools-2.01_alpha19 143
