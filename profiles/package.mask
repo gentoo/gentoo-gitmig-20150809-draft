@@ -247,6 +247,12 @@ x11-themes/gnome-icon-theme
 >=gnome-base/control-center-2.1
 >=gnome-base/libgnomecanvas-2.1
 >=gnome-base/bonobo-activation-2.1
+>=gnome-base/libbonobo-2.1
+>=gnome-base/libbonoboui-2.1
+>=gnome-base/gnome-applets-2.1
+>=gnome-base/gnome-vfs-2.1
+>=gnome-base/libgnomeprint-2.1
+>=gnome-base/libgnomeprintui-2.1
 >=gnome-base/gnome-panel-2.1
 >=gnome-base/libgnome-2.1
 >=gnome-base/gnome-desktop-2.1
@@ -262,6 +268,9 @@ gnome-extra/gcalctool
 >=gnome-extra/gnome-games-2.1
 >=gnome-extra/gnome-media-2.1
 >=gnome-extra/gnome-utils-2.1
+>=gnome-extra/at-spi-1.1
+>=x11-libs/startup-notification
+
 
 # <spider@gentoo.org> (23 oct 2002)
 # okay, this has been a bothersome thing with recompiles of static packages 
