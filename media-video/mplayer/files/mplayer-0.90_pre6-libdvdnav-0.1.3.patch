@@ -301,16 +301,6 @@ diff -urN MPlayer-0.90pre6/libmpcodecs/vf_noise.c MPlayer-20020812/libmpcodecs/v
 diff -urN MPlayer-0.90pre6/libmpdemux/demux_real.c MPlayer-20020812/libmpdemux/demux_real.c
 --- MPlayer-0.90pre6/libmpdemux/demux_real.c	Mon Aug  5 05:13:45 2002
 +++ MPlayer-20020812/libmpdemux/demux_real.c	Mon Aug 12 02:04:37 2002
-@@ -8,6 +8,9 @@
-     TODO: fix the whole syncing mechanism
-     
-     $Log: not supported by cvs2svn $
-+    Revision 1.20  2002/08/12 00:04:37  arpi
-+    RV40 support
-+
-     Revision 1.19  2002/08/05 03:13:45  arpi
-     fixed 'eof at 66s' bug
- 
 @@ -518,7 +521,8 @@
  	    ds_add_packet(ds, dp);
  	} else
