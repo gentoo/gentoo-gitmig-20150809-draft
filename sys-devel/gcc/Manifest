@@ -15,7 +15,7 @@ MD5 8ac4b38bad6dc01c0766cc8bf3e99f68 gcc-3.3.4-r2.ebuild 24489
 MD5 cc2341f3a38875b9cd63c500dba7467e gcc-3.3.5-r1.ebuild 12280
 MD5 6d021c1f93d3b1c470df3d9c9db7cfd5 gcc-3.4.1-r3.ebuild 31269
 MD5 9241e3b0a55a6e6bde420c99a3d7ca38 gcc-3.4.2-r2.ebuild 13482
-MD5 a6994f9f4d6a6c212dabee49d0bed80c gcc-3.4.3-r1.ebuild 14416
+MD5 65dc740d82e9b9bfc2ca8c7e3ec04615 gcc-3.4.3-r1.ebuild 14500
 MD5 605d72bfc5aca7748ab63170c2707392 gcc-3.4.3.ebuild 13250
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
@@ -56,6 +56,7 @@ MD5 97d7409ba5038bea85f9cabe023e28a6 files/3.4.1/gcc-3.4.1-spec-env.patch 755
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
+MD5 57ea5e7145dc1322b30f3ce6d6683978 files/3.4.3/gcc-3.4.3-cross-compile.patch 628
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -113,7 +114,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtTE3roRuSHgZdywRAhjIAJ95xVGQRCSRBAj4cXUkbaQ9cojm5QCgiDGk
-rRRxjkUnSYg+ePi9v2xIFZA=
-=y/hM
+iD8DBQFBt+xRroRuSHgZdywRAnZSAJ0bUhItnxvU73DHfZ55je0WCyA5/QCfSRoZ
+vk/suDD+WmfU0M9rrL7rQFw=
+=6Frg
 -----END PGP SIGNATURE-----
