@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.40 2004/11/03 00:16:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.41 2004/11/03 00:34:55 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -686,14 +686,14 @@ backward_compat_setup() {
 
 	dodir /usr/$(get_libdir)/X11/fonts/
 	for G_FONTDIR in ${G_FONTDIRS}; do
-		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/$(get_libdir)/X11/fonts/${G_FONTDIR}
+		dosym ../../../share/fonts/${G_FONTDIR} /usr/$(get_libdir)/X11/fonts/${G_FONTDIR}
 	done
 
-	dosym ${ROOT}/usr/share/man /usr/X11R6/man
+	dosym ../share/man /usr/X11R6/man
 	# Have the top-level lib symlink made first, so real dirs don't get created
-	dosym ${ROOT}/usr/lib /usr/X11R6/lib
-	dosym ${ROOT}/usr/share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
-#	dosym ${ROOT}/usr/share/bin /usr/X11R6/bin
+	dosym ../lib /usr/X11R6/lib
+	dosym ../../../share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
+#	dosym ../share/bin /usr/X11R6/bin
 }
 
 compose_files_setup() {
@@ -794,7 +794,7 @@ setup_dynamic_libgl() {
 		done
 		# Since we added glext.h and don't have new opengl-update yet, do this
 		# Avoids circular opengl-update/xorg-x11 dependency
-		dosym /usr/$(get_libdir)/opengl/${PN}/include/glext.h /usr/X11R6/include/GL/
+		dosym ../../../$(get_libdir)/opengl/${PN}/include/glext.h /usr/X11R6/include/GL/
 		# Even if libdir isnt lib, we need a lib symlink for opengl-update and
 		# friends. See bug 62990 for more info.
 		if [ "$(get_libdir)" != "lib" ]; then
@@ -843,9 +843,9 @@ strip_execs() {
 setup_config_files() {
 
 	# Fix default config files after installing fonts to /usr/share/fonts
-	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:${ROOT}usr/share/fonts:g" \
+	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/xorg.conf.example
-	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:${ROOT}usr/share/fonts:g" \
+	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
 
 	# Work around upgrade problem where people have
@@ -1040,7 +1040,7 @@ migrate_usr_x11r6_lib() {
 	# Donnie Berkholz <spyderous@gentoo.org> 20 October 2004
 	mv -f ${ROOT}usr/X11R6/$(get_libdir)/* ${ROOT}usr/$(get_libdir)
 	rmdir ${ROOT}usr/X11R6/$(get_libdir)
-	ln -s ${ROOT}usr/X11R6/$(get_libdir) ${ROOT}usr/$(get_libdir)
+	ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
 }
 
 update_config_files() {
@@ -1370,8 +1370,8 @@ pkg_postinst() {
 		mv nv_drv.so nv_drv.so.orig
 
 		ld -shared -o ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/$(get_libdir)/modules/libfb.so
-		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
-		ld -rpath ${ROOT}/usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
+		ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
+		ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
 
 		if use opengl; then
 			#The problem about DRI module and GLX module is fixed.
@@ -1379,8 +1379,8 @@ pkg_postinst() {
 			mv libglx.so libglx.so.orig
 			mv libdri.so libdri.so.orig
 
-			ld -rpath ${ROOT}/usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
-			ld -rpath ${ROOT}/usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+			ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
+			ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
 		fi
 	fi
 
