@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.6 2003/03/27 10:40:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.7 2003/07/16 11:40:23 tuxus Exp $
 
 IUSE="readline"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/bc/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 
 	>=sys-libs/ncurses-5.2 )"
