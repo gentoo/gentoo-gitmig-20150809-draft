@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.19 2003/04/10 20:14:10 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.20 2003/05/24 23:59:36 lu_zero Exp $
+
+*mol-0.9.69_pre2 (25 May 2003)
+
+  25 May 2003; Luca Barbato <lu_zero@gentoo.org> mol-0.9.69_pre2.ebuild:
+  rsync snapshot of mol. Solves bug #21548
 
 *mol-0.9.69_pre1 (10 Apr 2003)
 
