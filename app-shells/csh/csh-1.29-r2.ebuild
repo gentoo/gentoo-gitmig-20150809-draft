@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.6 2003/12/02 22:29:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.7 2003/12/15 08:07:55 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
-SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

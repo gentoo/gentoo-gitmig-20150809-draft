@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.13 2003/12/02 22:29:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.14 2003/12/15 08:07:55 taviso Exp $
+
+  15 Dec 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r2.ebuild:
+  change to mirror:// syntax.
 
   02 Dec 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r2.ebuild:
   no need to append-flags one at a time, minor syntax change.
