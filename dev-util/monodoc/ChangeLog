@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodoc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.5 2003/12/06 05:45:33 tberman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.6 2004/02/13 20:21:19 tberman Exp $
+
+*monodoc-0.10 (13 Feb 2004)
+
+  13 Feb 2004; Todd Berman <tberman@gentoo.org> monodoc-0.10.ebuild,
+  monodoc-0.5.ebuild, monodoc-0.8.ebuild:
+  remove everything except newly added .10
 
 *monodoc-0.8 (06 Dec 2003)
 
