@@ -1,0 +1,44 @@
+--- build.xml.orig	2005-01-04 18:34:23.272737328 +0100
++++ build.xml	2005-01-04 19:37:21.623340728 +0100
+@@ -234,7 +234,7 @@
+   </target>
+ 
+   <target name="jar"
+-          depends="junit, jar-core, jar-jdk, jar-j2ee"/>
++          depends="compile-j2ee, jar-core, jar-jdk, jar-j2ee"/>
+ 
+   <target name="jar-core"
+           depends="compile-core, deliverable-names"
+@@ -292,7 +292,7 @@
+   </target>
+ 
+   <target name="jar-ext-httpclient"
+-          depends="junit, compile-ext-httpclient"
++          depends="compile-ext-httpclient"
+ 	  description="Generate extension mockobjects jar">
+     <jar jarfile="${out.dir}/${ant.project.name}-httpclient.jar"
+       manifest="${conf.dir}/manifest">
+@@ -401,8 +401,8 @@
+        ========================================================================
+     -->
+   <target name="all"
+-          depends="clean, junit, jar, javadoc, dist"
+-          description="do it all (clean, jar, javadoc, junit, dist)">
++          depends="clean, jar, javadoc, dist"
++          description="do it all (clean, jar, javadoc, dist)">
+   </target>
+ 
+   <target name="src" depends="clean,prepare-dist">
+@@ -423,5 +423,12 @@
+     <delete file="${dist.name}-src.tar" />
+   </target>
+ 
++   <!-- zip the sources -->
++   <target name="sourcezip">
++         <zip destfile="${out.dir}/${ant.project.name}-src.zip">
++                <zipfileset dir="src" />
++         </zip>
++        </target>
++
+ </project>
+ 

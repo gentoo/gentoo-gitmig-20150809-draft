@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.7 2004/10/17 19:17:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.8 2005/01/04 18:44:36 luckyduck Exp $
 
-inherit java-pkg
+inherit eutils java-pkg
 
 DESCRIPTION="Test-first development process for building object-oriented software"
 HOMEPAGE="http://mockobjects.sf.net"
@@ -10,35 +10,55 @@ SRC_URI="http://dev.gentoo.org/~karltk/java/distfiles/mockobjects-java-${PV}-gen
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE="doc junit"
-DEPEND="=dev-java/junit-3.8*"
-RDEPEND=""
+IUSE="doc jikes junit source"
+DEPEND=">=virtual/jdk-1.4
+	junit? ( =dev-java/junit-3.8* )
+	jikes? ( >=dev-java/jikes-1.21 )
+	source? ( app-arch/zip )
+	>=dev-java/ant-core-1.6.2"
+RDEPEND=">=virtual/jre-1.4"
+
 S=${WORKDIR}/mockobjects-java-${PV}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/build.xml-${PV} build.xml || die
-	(
+
+	epatch ${FILESDIR}/${P}-gentoo.patch
+
+	if use junit; then
 		cd lib
 		java-pkg_jar-from junit
-	)
+	fi
 	mkdir -p out/jdk/classes
 }
 
 src_compile() {
-	# karltk: add jikes support soon
-	ant jar || die "failed to build jar"
-	if use doc ; then
-		ant javadoc || die "failed to create javadoc"
+	local antflags="jar"
+	if use doc; then
+		antflags="${antflags} javadoc"
 	fi
-	if use junit ; then
-		ant junit || die "failed to run junit"
+	if use jikes; then
+		antflags="${antflags} -Dbuild.compiler=jikes"
 	fi
+	if use junit; then
+		antflags="${antflags} junit"
+	fi
+	if use source; then
+		antflags="${antflags} sourcezip"
+	fi
+	ant ${antflags} || die "ant build failed"
 }
 
 src_install() {
 	java-pkg_dojar out/*.jar
 	dodoc doc/README
-	java-pkg_dohtml -r out/doc/javadoc/*
+
+	if use doc; then
+		java-pkg_dohtml -r out/doc/javadoc/*
+	fi
+	if use source; then
+		dodir /usr/share/doc/${PF}/source
+		cp out/${PN}-src.zip ${D}/usr/share/doc/${PF}/source
+	fi
 }

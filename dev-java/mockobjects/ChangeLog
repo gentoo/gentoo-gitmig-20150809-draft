@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mockobjects
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.7 2004/10/17 19:17:41 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.8 2005/01/04 18:44:36 luckyduck Exp $
+
+  04 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/build.xml-0.09,
+  +files/mockobjects-0.09-gentoo.patch, mockobjects-0.09.ebuild:
+  two manifest only jarfiles where generated. fixed.
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> mockobjects-0.09.ebuild:
   keyword x86
