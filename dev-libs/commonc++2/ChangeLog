@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/commonc++2
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++2/ChangeLog,v 1.1 2004/03/12 21:53:23 lu_zero Exp $
+
+*commonc++2-1.1.0 (12 Mar 2004)
+
+  12 Mar 2004; Luca Barbato <lu_zero@gentoo.org> commonc++2-1.1.0.ebuild,
+  metadata.xml:
+  First commit, thanks to Clement Siuchung Cheung <sccheung@umich.edu> and
+  Carlo <current@myrealbox.com> (see bug #43144)
+
