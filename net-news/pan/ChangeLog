@@ -1,6 +1,12 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.12 2002/07/13 14:07:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.13 2002/07/17 09:40:40 stroke Exp $
+
+*pan-0.11.4 (17 July 2002)
+
+  17 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.11.4.ebuild:
+  New Gnome1 version of pan. Also updated dependencies and changed the
+  SRC_URI url to point to the correct download location.
 
 *pan-0.12.1 (13 July 2002)
 
