@@ -1,7 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.9 2003/02/14 22:34:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.10 2003/02/28 04:25:10 agriffis Exp $
+
+opts="depend checkconfig start stop reload"
 
 depend() {
 	need clock hostname
@@ -28,4 +30,14 @@ stop() {
     start-stop-daemon --stop --quiet --pidfile /var/run/syslog-ng.pid
     eend $? "Failed to stop syslog-ng"
     sleep 1 # needed for syslog-ng to stop in case we're restarting
+}
+
+reload() {
+	if [ ! -f /var/run/syslog-ng.pid ]; then
+		eerror "syslog-ng isn't running"
+		return 1
+	fi
+	ebegin "Reloading configuration and re-opening log files"
+	kill -HUP `cat /var/run/syslog-ng.pid` &>/dev/null
+	eend $?
 }

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.21 2003/02/12 02:27:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.22 2003/02/28 04:25:10 agriffis Exp $
+
+*syslog-ng-1.5.26-r1 (27 Feb 2003)
+
+  27 Feb 2003; Aron Griffis <agriffis@gentoo.org> syslog-ng-1.5.26-r1.ebuild,
+  files/syslog-ng.rc6:
+  Fix bug 16308 by adding a reload() function to the init script. Bumped the
+  masked revision to pick up the change. Thanks to Michael Sterrett for his
+  work debugging and providing the patch.  Also added ~alpha to KEYWORDS.
 
 *syslog-ng-1.5.26 (09 Feb 2003)
 
