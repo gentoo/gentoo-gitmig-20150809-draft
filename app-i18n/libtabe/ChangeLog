@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libtabe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.3 2003/03/07 17:01:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.4 2003/11/03 23:37:46 liquidx Exp $
+
+  03 Nov 2003; Alastair Tse <liquidx@gentoo.org> libtabe-0.2.5.ebuild,
+  files/libtabe-0.2.5-db3.patch:
+  db-3 patch thanks to Palatis <palatis@gentoo.org.tw> (#32655)
 
 *libtabe-0.2.5 (11 Oct 2002)
 
