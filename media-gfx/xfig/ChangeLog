@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.4 2002/12/03 06:13:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.5 2003/01/08 03:26:59 george Exp $
 
 *xfig-3.2.3d-r1 (13 Apr 2002)
+
+  07 Jan 2003; George Shapovalov <george@gentoo.org> xfig-3.2.3d-r1.ebuild :
+  added IUSE, few cosmetic touch-ups
 
   02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xfig-3.2.3d-r1.ebuild :
 
