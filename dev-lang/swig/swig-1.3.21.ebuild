@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.21 2004/08/07 21:50:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.22 2004/08/16 04:50:25 vapier Exp $
 
-inherit mono #48511
+inherit flag-o-matic mono #48511
 
 DESCRIPTION="Simplified Wrapper and Interface Generator"
 HOMEPAGE="http://www.swig.org/"
@@ -20,40 +20,35 @@ DEPEND="virtual/libc
 	guile? ( >=dev-util/guile-1.4 )
 	tcltk? ( >=dev-lang/tk-8.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )
-	!arm? ( !mips? ( php? ( >=dev-php/php-4.0.0 ) ) )"
+	php? ( >=dev-php/php-4.0.0 )"
 
 S=${WORKDIR}/SWIG-${PV}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's:$(M4_INSTALL_DIR):$(DESTDIR)$(M4_INSTALL_DIR):g' Makefile.in
+}
+
 src_compile() {
-	local myc
+	strip-flags
 
-	use python && myc="$myc --with-py" \
-		   || myc="$myc --without-py"
-	use java && myc="$myc --with-java=$JAVA_HOME --with-javaincl=${JAVA_HOME}/include" \
-		 || myc="$myc --without-java"
-	use ruby && myc="$myc --with-ruby=/usr/bin/ruby" \
-		 || myc="$myc --without-ruby"
-	use guile && myc="$myc --with-guile" \
-		  || myc="$myc --without-guile"
-	use tcltk && myc="$myc --with-tcl" \
-		  || myc="$myc --without-tcl"
-	use perl && myc="$myc --with-perl" \
-		 || myc="$myc --without-perl"
-	use php && myc="$myc --with-php" \
-		 || myc="$myc --without-php"
+	local myconf
+	if use ruby ; then
+		local rubyver="`ruby --version | cut -d '.' -f 1,2`"
+		export RUBY="/usr/lib/ruby/${rubyver/ruby /}/"
+	fi
 
-	unset CXXFLAGS
-	unset CFLAGS
-
-	use ruby && local rubyver="`ruby --version | cut -d '.' -f 1,2`"
-	use ruby && RUBY="/usr/lib/ruby/${rubyver/ruby /}/"
-
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-			$myc || die "./configure failed"
+	econf \
+		`use_with python py` \
+		`use_with java java "${JAVA_HOME}"` \
+		`use_with java javaincl "${JAVA_HOME}/include"` \
+		`use_with ruby ruby /usr/bin/ruby` \
+		`use_with guile` \
+		`use_with tcltk tcl` \
+		`use_with perl perl5` \
+		`use_with php` \
+		|| die
 
 	# fix the broken configure script
 	use tcltk || sed -i -e "s:am__append_1 =:#am__append_1 =:" Runtime/Makefile
@@ -65,7 +60,7 @@ src_compile() {
 	emake runtime PLTCOLLECTS=$PLT || die
 }
 
-src_install () {
-	make prefix=${D}/usr install || die
-	make prefix=${D}/usr install-runtime || die
+src_install() {
+	make install DESTDIR=${D} || die
+	dodoc ANNOUNCE CHANGES FUTURE NEW README TODO
 }
