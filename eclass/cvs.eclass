@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.48 2003/09/28 17:19:43 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.49 2003/09/28 17:24:18 coredumb Exp $
 #
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -15,6 +15,7 @@
 # TODO:
 # Implement more auth types (gserver?, kserver?)
 # Implement more 'ext' auth methods (do anyone actually use it with anything other than ssh?)
+# Add support for password-based ssh (only keys supported now)
 
 ECLASS=cvs
 INHERITED="$INHERITED $ECLASS"
@@ -57,7 +58,8 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ECVS_SERVER" ] && ECVS_SERVER="offline"
 
 # Authentication method to use - possible values are "pserver" and "ext"
-# WARNING ext is NOT supported! (never was, despite what earlier version of this file said)
+# Currently, only method for 'ext' is ssh, please note that it doesn't
+# work with passwords, only with keys.
 [ -z "$ECVS_AUTH" ] && ECVS_AUTH="pserver"
 
 # Use su to run cvs as user
