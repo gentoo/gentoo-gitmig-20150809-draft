@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.59-r2.ebuild,v 1.1 2003/01/18 18:01:25 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.59-r2.ebuild,v 1.2 2003/01/24 22:10:36 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -31,7 +31,6 @@ then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 sys-devel/perl
-		 >sys-apps/module-init-tools-0.9.8
 		 sys-devel/make"
 fi
 
