@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.4 2003/07/15 13:56:22 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.5 2003/08/05 14:49:20 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 # note to self: check for java deps
 DESCRIPTION="Red Hat Package Management Utils"
-SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/${P}.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
+SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips"
 IUSE="nls"
 
@@ -18,7 +18,6 @@ RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/popt-1.6.3"
-
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
@@ -27,7 +26,6 @@ filter-flags -fPIC
 export WANT_AUTOCONF_2_1=1
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-system-popt.diff
@@ -39,7 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf `use_enable nls` || die
 	make || die
 }
