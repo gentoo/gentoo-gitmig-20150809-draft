@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-administrator
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.7 2004/10/23 01:23:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/ChangeLog,v 1.8 2004/11/21 23:35:07 swegener Exp $
+
+*mysql-administrator-1.0.14 (22 Nov 2004)
+
+  22 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  mysql-administrator-1.0.13.ebuild, +mysql-administrator-1.0.14.ebuild:
+  Version bump. This version needs >=dev-db/mysql-4.1. Modified the 1.0.13
+  ebuild to depend on <dev-db/mysql-4.1.
 
   23 Oct 2004; Simon Stelling <blubb@gentoo.org>
   mysql-administrator-1.0.13.ebuild:
