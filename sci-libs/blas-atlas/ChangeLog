@@ -1,0 +1,72 @@
+# ChangeLog for app-sci/blas-atlas
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.1 2004/12/29 18:19:36 ribosome Exp $
+
+*blas-atlas-3.6.0 (29 Dec 2004)
+
+  29 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/c-ATLAS, +files/c-threaded-ATLAS, +files/f77-ATLAS,
+  +files/f77-threaded-ATLAS, +files/war, +blas-atlas-3.6.0.ebuild:
+  Moved from app-sci/blas-atlas to sci-libs/blas-atlas.
+
+  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  blas-atlas-3.6.0.ebuild:
+  Stable on alpha.
+
+  28 Nov 2004; Daniel Goller <morfic@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Fix clobbering of bx register, reference bug 56842 for more information
+
+  17 Nov 2004; Markus Rothe <corsair@gentoo.org> blas-atlas-3.6.0.ebuild:
+  stable on ppc64
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Replaced ${GCC} by tc-getCC from toolchain-funcs.
+
+  10 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked stable on x86 and ppc.
+
+  30 Sep 2004; Ferris McCormick <fmccor@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Stable for sparc (tested both hardened and not).
+
+  29 Sep 2004; Ferris McCormick <fmccor@gentoo.org> files/c-ATLAS:
+  Correct trivial typo: setup() {... needs closing '}'.
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> blas-atlas-3.6.9.ebuild:
+  marked ~ppc64
+
+  03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked ~alpha, kloeri tested.
+
+  03 Jul 2004; Ferris McCormick <fmccor@gentoo.org> blas-atlas-3.6.0.ebuild:
+  1. Restructure .ebuild for correct sparc CFLAGS (kugelfang@gentoo.org)
+  2. Add ~sparc keyword to restructured build.
+
+  24 Jun 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.6.0.ebuild :
+  ifc useflag got retained even though this ebuild does not support ifc (yet), cleaned up
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  blas-atlas-3.6.0.ebuild:
+  fix typo in error message (bug #54290)
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked stable on amd64.
+
+  12 May 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.6.0.ebuild :
+  added the fix for g77 issue. Moved atlas3.6.0-shared-libs.patch.bz2 to the mirrors to 
+  avoid duplication (the same one is used by lapack-atlas), plus it is 5k in size, which is 
+  more than 2k limit :).
+  Removed old version (3.4.2), so that we start aclean when this gets unmasked..
+
+  11 May 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked ~amd64 and ~ppc.
+
+*blas-atlas-3.6.0 (03 Apr 2004)
+
+*blas-atlas-3.4.2 (02 Feb 2004)
+
+  02 Feb 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.4.2.ebuild, Manifest, files/{atlas-gentoo.patch.bz2,c-ATLAS,c-threaded-ATLAS,digest-blas-atlas-3.4.2,f77-ATLAS,f77-threaded-ATLAS,war} :
+  initial release (#30453)
+  Automatically Tuned Linear Algebra Software BLAS implementation
+  ebuild submitted by Derek Dolney <dolney@astro.upenn.edu>
+  This version installs shared and static libs and provides virtual/blas
+  and will replace atlas now in dev-libs as a part of large blas reorganization (see bug)
