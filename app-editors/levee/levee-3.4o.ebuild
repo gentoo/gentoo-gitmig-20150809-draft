@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.8 2002/08/14 18:36:02 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.9 2002/10/04 04:09:23 vapier Exp $
 
 DESCRIPTION="Really tiny vi clone, for things like rescue disks"
 HOMEPAGE="http://www.pell.chi.il.us/~orc/Code/"
