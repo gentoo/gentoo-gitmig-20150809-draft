@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.3 2004/05/05 10:44:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.51-r1.ebuild,v 1.4 2004/05/07 06:29:31 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -27,15 +27,6 @@
 #   need to be able to install more than one language pack.
 
 inherit flag-o-matic eutils gcc
-
-# Compile problems with these ...
-filter-flags "-funroll-loops"
-filter-flags "-fomit-frame-pointer"
-filter-flags "-fprefetch-loop-arrays"
-filter-flags "-fno-default-inline"
-append-flags "-fno-strict-aliasing"
-replace-flags "-O3" "-O2"
-replace-flags "-Os" "-O2"
 
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
@@ -265,6 +256,15 @@ src_unpack() {
 	einfo "Munging font mappings ..."
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu
 	echo "done munging fonts."
+
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+	replace-flags "-Os" "-O2"
 
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
