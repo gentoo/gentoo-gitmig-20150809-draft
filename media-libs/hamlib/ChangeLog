@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.10 2004/10/01 22:56:27 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.11 2004/12/08 23:41:12 killsoft Exp $
+
+  08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
+  New in 1.2.3:
+  * frontend API: LEVEL_SQLSTAT marked as deprecated
+  * new backends: Racal, V4L radio cards, Watkins-Johnson 8888
+  * new models: IC-78, IC-7800, IC-R20, IC-756PROIII
+  * fixes: AOR 5k&8k: added S-Meter, 7030: fixed freq,
+    IC-R8500: calibrated S-Meter, legacy Jupiter and many others..
+  * port: mingw32 dist with gcc 3.4 version, and stdcall interface
+    prepared for VisualBasic support.
 
   01 Oct 2004; Robb Romans <killsoft@gentoo.org> hamlib-1.2.2.ebuild:
   mark stable on x86
