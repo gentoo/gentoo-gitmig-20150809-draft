@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.20 2005/01/11 11:53:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.21 2005/01/11 12:30:55 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -100,7 +100,7 @@ alt_libdir() {
 	if [[ ${CTARGET} = ${CHOST} ]] ; then
 		echo /$(get_libdir)
 	else
-		echo /usr/${CTARGET}/lib
+		echo /usr/${CTARGET}/$(get_libdir)
 	fi
 }
 
@@ -168,7 +168,7 @@ setup_flags() {
 	fi
 
 	# AMD64 multilib
-	if use amd64; then
+	if use amd64 && [ -n "${ABI}" ]; then
 		# We change our CHOST, so set this right here
 		export CC="$(tc-getCC)"
 
@@ -359,10 +359,13 @@ pkg_setup() {
 
 
 do_arch_amd64_patches() {
-	cd ${S};
-	# CONF_LIBDIR support
-	epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
-	sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
+	cd ${S}
+
+	if [ -z "${MULTILIB_ABIS}" ]; then
+		# CONF_LIBDIR support
+		epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
+		sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
+	fi
 }
 
 
