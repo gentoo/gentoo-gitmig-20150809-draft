@@ -1,17 +1,27 @@
-MD5 97babfc8b56c4ee41095a8ef269375e5 vte-0.11.10.ebuild 699
-MD5 5ed810e7aee45c5bed662b2ef762dc10 vte-0.11.10-r1.ebuild 971
-MD5 30b37a1004de92e55daeeba93a3be13b vte-0.10.29.ebuild 843
-MD5 41fe081b69a7f78f172ee79c4ce96865 vte-0.11.11-r2.ebuild 892
-MD5 4da252236fee0bc3858646772a02d107 vte-0.11.11.ebuild 680
-MD5 9eb5f6066ad5c1e81c86d3871ad462f9 vte-0.11.11-r1.ebuild 790
-MD5 b88060ddde6fd5f2724fa9e745d778fa ChangeLog 6287
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be7cd944ab934f972a0931c1552be800 ChangeLog 6388
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 3805528034f3d01fa27e24f600618c0d files/vte-line-scroll.patch 2234
+MD5 30b37a1004de92e55daeeba93a3be13b vte-0.10.29.ebuild 843
+MD5 5ed810e7aee45c5bed662b2ef762dc10 vte-0.11.10-r1.ebuild 971
+MD5 97babfc8b56c4ee41095a8ef269375e5 vte-0.11.10.ebuild 699
+MD5 9eb5f6066ad5c1e81c86d3871ad462f9 vte-0.11.11-r1.ebuild 790
+MD5 afae435d8763f88d111deca285dbc764 vte-0.11.11-r2.ebuild 896
+MD5 4da252236fee0bc3858646772a02d107 vte-0.11.11.ebuild 680
+MD5 be623776239aa85bd3c86ba840b71c45 files/digest-vte-0.10.29 64
+MD5 bae7fb7cbc1656fb42249c1aefc806cb files/digest-vte-0.11.10 64
 MD5 bae7fb7cbc1656fb42249c1aefc806cb files/digest-vte-0.11.10-r1 64
+MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11 64
 MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11-r1 64
 MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11-r2 64
 MD5 553e8d9e7925f1daa0245c9e92c7f72b files/vte-0.11.10-bg_fix.patch 3428
 MD5 38c957d83d560c18819204fe28c3c1ae files/vte-0.11.11-spaces.patch 15370
-MD5 be623776239aa85bd3c86ba840b71c45 files/digest-vte-0.10.29 64
-MD5 bae7fb7cbc1656fb42249c1aefc806cb files/digest-vte-0.11.10 64
-MD5 76c3c0d2bc006fe4de452fd3f0c26e45 files/digest-vte-0.11.11 64
+MD5 3805528034f3d01fa27e24f600618c0d files/vte-line-scroll.patch 2234
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByOaEKRy60XGEcJIRAgkuAJsHzh7nPY5wJ/3Qoh8HqncvgYJNygCgm6Rp
+L+WPtcE6JnJMjrNB8ncNOQY=
+=Ennl
+-----END PGP SIGNATURE-----
