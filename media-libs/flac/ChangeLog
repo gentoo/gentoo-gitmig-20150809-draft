@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/flac
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.12 2003/02/11 00:00:13 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.13 2003/02/12 07:06:51 vapier Exp $
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> flac-1.1.0.ebuild :
   Add ~alpha to KEYWORDS

@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libsndfile
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.9 2003/02/04 10:35:58 raker Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.10 2003/02/12 07:12:56 vapier Exp $
 
 *libsndfile-1.0.4 (04 Feb 2003)
 

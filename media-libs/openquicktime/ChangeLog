@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/openquicktime
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.5 2003/02/10 23:07:15 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.6 2003/02/12 07:15:15 vapier Exp $
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> openquicktime-1.0.ebuild :
   Add ~alpha to KEYWORDS

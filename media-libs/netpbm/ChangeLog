@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.11 2003/01/30 16:30:06 gerk Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.12 2003/02/12 07:14:46 vapier Exp $
 
 *netpbm-10.11.4 (04 Jan 2002)
 
