@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.44 2004/04/15 15:50:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.45 2004/04/20 01:53:54 lv Exp $
+
+  19 Apr 2004; Travis Tilley <lv@gentoo.org> nvidia-glx-1.0.5332-r2.ebuild:
+  marking stable on amd64 to close bug #48409
 
   15 Apr 2004; <spider@gentoo.org> nvidia-glx-1.0.4363.ebuild,
   nvidia-glx-1.0.4496-r1.ebuild, nvidia-glx-1.0.4496.ebuild,
