@@ -125,13 +125,16 @@ src_install () {
 pkg_postinst() {
 	install -d 0755 ${ROOT}/var/spool/postfix
 
-	ewarn "First time installers: You must edit"
-	ewarn "/etc/mail/aliases to suit your needs and then run"
-	ewarn "/usr/bin/aliases. Postfix will not work correctly"
-	ewarn "without it."
-	ewarn ""
 	ewarn "If you've upgraded from <postfix-1.1.8, you must update"
 	ewarn "/etc/postfix/master.cf to the latest version"
 	ewarn "(/etc/postfix/._cfg*_master.cf). Otherwise Postfix will"
 	ewarn "not work correctly."
+
+	if [ ! -e /etc/mail/aliases.db ] ; then
+		ewarn ""
+		ewarn "First time installers: You must edit"
+		ewarn "/etc/mail/aliases to suit your needs and then run"
+		ewarn "/usr/bin/aliases. Postfix will not work correctly"
+		ewarn "without it."
+	fi
 }
