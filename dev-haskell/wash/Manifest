@@ -1,6 +1,14 @@
-MD5 7ac2aea36d44192547fc73435cff7760 ChangeLog 535
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 c060b83c3e91b3fa3861f5c632d457c3 wash-2.0.5-r1.ebuild 1349
-MD5 2e71fe9d310cb076e26fd9c3c4e7505c wash-2.0.5.ebuild 2732
-MD5 17b177468da822de7bb9ba89a644b9ce files/digest-wash-2.0.5 62
-MD5 17b177468da822de7bb9ba89a644b9ce files/digest-wash-2.0.5-r1 62
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b40df995776c96a25bc7dfe063e118a8 ChangeLog 716
+MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
+MD5 3f2cb7b34318ee851cae6e9442c44696 wash-2.0.6.ebuild 1363
+MD5 ce436420e114151be54e562439be9a55 files/digest-wash-2.0.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMD/VBQBy/eDH5uERAoljAKDSDwf9xm5DbslMICpK5R7n6akl9QCg17Hf
+peSfE+GPZkd3K1ztM9FvtIk=
+=xZ/K
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.0.5-r1.ebuild,v 1.2 2005/01/01 18:05:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.0.6.ebuild,v 1.1 2005/03/10 12:38:13 araujo Exp $
 
 inherit ghc-package
 
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	ghc-setup-pkg
-	make install || die "make install failed"
+	make exec_prefix=${D}/usr install || die "make install failed"
 	ghc-install-pkg
 	dodoc README
 	if use doc; then
