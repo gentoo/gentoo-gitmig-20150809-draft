@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/numlockx
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.1 2002/07/12 19:38:02 agenkin Exp $
+
+*numlockx-1.0 (12 Jul 2002)
+
+  12 Jul 2002; Arcady Genkin <agenkin@thpoon.com> numlockx-1.0.ebuild:
+
+  First version, thanks to Jacob Perkins <jap1@ionet.net> and
+  Johannes Findeisen <you@hanez.org>.
