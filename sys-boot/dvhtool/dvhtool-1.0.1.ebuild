@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1.ebuild,v 1.1 2003/12/09 08:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1.ebuild,v 1.2 2004/04/26 19:29:22 agriffis Exp $
 
 DESCRIPTION="Dvhtool is the tool responsible for writing MIPS kernel(s) into the SGI volume header"
 HOMEPAGE="http://packages.debian.org/unstable/utils/dvhtool.html"
@@ -20,7 +20,7 @@ src_unpack() {
 }
 src_compile() {
 	cd ${S}.orig
-	econf
+	econf || die "econf failed"
 	emake || die "Failed to compile"
 }
 
