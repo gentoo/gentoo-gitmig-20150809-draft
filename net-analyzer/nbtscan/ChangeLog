@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nbtscan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.5 2003/02/12 07:47:24 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.6 2004/03/29 13:46:38 mboman Exp $
+
+*nbtscan-1.5.1 (29 Mar 2004)
+
+  29 Mar 2004; Michael Boman <mboman@gentoo.org> nbtscan-1.5.1.ebuild:
+  New upstream version. Closes #45372
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
