@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.13 2004/02/09 16:30:07 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.14 2004/04/07 07:48:26 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -25,20 +25,23 @@ PROVIDE="virtual/kernel virtual/os-headers"
 KEYWORDS="ppc ~x86 -mips ppc64"
 
 
-# Figure out what architecture we are, and set ARCH appropriately
-ARCH="$(uname -m)"
-ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
-[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
+pkg_setup() {
+	# Figure out what architecture we are, and set ARCH appropriately
+	ARCH="$(uname -m)"
+	ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
+	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
 
 
-# Archs which have their own separate header packages, add a check here
-# and redirect the user to them
-if [ "${ARCH}" = "mips" ] || [ "${ARCH}" = "mips64" ]; then
-	eerror "These headers are not appropriate for your architecture."
-	eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
-	die
-fi
-
+	# Archs which have their own separate header packages, add a check here
+	# and redirect the user to them
+	case "${ARCH}" in
+		mips|mips64|hppa)
+			eerror "These headers are not appropriate for your architecture."
+			eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
+			die
+		;;
+	esac
+}
 
 src_unpack() {
 	unpack ${A}
