@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/blas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.6 2004/04/19 09:31:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.7 2004/04/21 20:43:01 kugelfang Exp $
+
+*blas-19980702-r1 (21 Apr 2004)
+
+  21 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> +blas-19980702-r1.ebuild:
+  Version bump to make /usr/lib/libblas.a linkable on amd64.
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> blas-19980702.ebuild:
   Adding IUSE
