@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.8 2003/03/14 16:53:20 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.9 2003/03/25 04:53:49 rac Exp $
+
+*HTML-Tree-3.17 (24 Mar 2003)
+
+  24 Mar 2003; <rac@gentoo.org> HTML-Tree-3.17.ebuild:
+  Upstream version bump, thanks to Mike Javorski <mike_javorski@bigfoot.com>,
+  closes bug #18126
 
 *HTML-Tree-3.11-r1 (14 Mar 2003)
 
