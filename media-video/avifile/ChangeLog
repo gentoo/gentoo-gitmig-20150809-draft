@@ -1,11 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.76 2004/10/06 22:04:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.77 2004/10/06 22:28:04 eradicator Exp $
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/avifile-0.7.41.20041001-sparc.patch,
   avifile-0.7.41.20041001.ebuild:
-  Recreated sparc patch.  Readded to ~amd64 and ~sparc.  Closes bug #66422.
+  Recreated sparc CFLAGS patch, but still -sparc.  Readded to ~amd64.
+  Closes bug #66422.
 
   06 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> files/throw.patch:
   Patch was broken (bug #64893)
