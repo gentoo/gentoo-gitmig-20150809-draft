@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.53 2004/01/28 14:17:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.54 2004/01/28 14:57:45 max Exp $
+
+  28 Jan 2004; Max Kalika <max@gentoo.org> files/saslauthd2.conf:
+  More flexible start-up script config file. Fixes bug 39447 as well.
 
   28 Jan 2004; Max Kalika <max@gentoo.org> cyrus-sasl-1.5.27-r6.ebuild,
   cyrus-sasl-2.1.13.ebuild, cyrus-sasl-2.1.14.ebuild,
