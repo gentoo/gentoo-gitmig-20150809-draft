@@ -17,7 +17,7 @@ Do it yourself:
  2) emerge -v '>=sys-devel/gcc-config-1.3.9'
  3) emerge -v '>=sys-devel/distcc-2.18.3-r1'
  4) emerge unmerge linux26-headers
- 5) emerge -v linux-headers
+ 5) emerge -v '>=linux-headers-2.6.8.1-r4'
  6) emerge unmerge emul-linux-x86-glibc
  7) rm /lib32 /usr/lib32 /usr/X11R6/lib32
  8) mkdir /lib32 /usr/lib32 /usr/X11R6/lib32
