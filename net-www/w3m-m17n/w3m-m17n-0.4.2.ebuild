@@ -1,9 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.4 2003/10/31 15:38:27 usata Exp $
-
-IUSE="X nopixbuf imlib imlib2 xface migemo gpm ssl"
-#IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.5 2004/01/26 01:08:08 vapier Exp $
 
 W3M_CVS_PV="1.862"
 W3M_P="${P/-m17n/}+cvs-${W3M_CVS_PV}"
@@ -21,9 +18,11 @@ SRC_URI="http://dev.gentoo.org/~usata/distfiles/${W3M_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/libwc-${LIBWC_PV}.tar.gz"
 #	nls? ( http://www.page.sannet.ne.jp/knabe/w3m/${W3M_M17N_P}-nls-1.diff.gz)
 
-SLOT="0"
 LICENSE="w3m"
+SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
+IUSE="X nopixbuf imlib imlib2 xface migemo gpm ssl"
+#IUSE="nls"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -41,14 +40,12 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
-
 PROVIDE="virtual/textbrowser
 	virtual/w3m"
 
-S="${WORKDIR}/${P/-m17n/}"
+S=${WORKDIR}/${P/-m17n/}
 
 pkg_setup() {
-
 	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
 		ewarn
 		ewarn "If you set USE=\"nopixbuf\" (disable gdk-pixbuf for w3mimgdisplay),"
@@ -59,7 +56,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack ${W3M_P}.tar.gz
 	cd ${S}
 
@@ -77,7 +73,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf migemo_command imglib
 
 	if [ -n "`use X`" ] ; then
@@ -102,7 +97,7 @@ src_compile() {
 		migemo_command="no"
 	fi
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	autoconf || die
 
 	econf --program-suffix=-m17n \
@@ -122,7 +117,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make package=w3m-m17n DESTDIR=${D} install || die
 
 	# w3mman and manpages conflict with those from w3m

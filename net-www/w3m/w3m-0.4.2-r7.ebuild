@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r7.ebuild,v 1.1 2004/01/21 15:26:39 usata Exp $
-
-IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk nls async"
-#IUSE="canna unicode"
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r7.ebuild,v 1.2 2004/01/26 01:07:18 vapier Exp $
 
 W3M_CVS_PV="1.890"
 W3M_CVS_P="${PN}-cvs-${W3M_CVS_PV}"
 
 DESCRIPTION="Text based WWW browser, supports tables and frames"
+HOMEPAGE="http://w3m.sourceforge.net/"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${W3M_CVS_P}.tar.gz
@@ -20,12 +18,12 @@ SRC_URI="mirror://gentoo/${W3M_CVS_P}.tar.gz
 # w3n canna inline patch:
 #	canna? ( http://www.j10n.org/files/${W3M_CVS_P}-canna.patch )
 
-HOMEPAGE="http://w3m.sourceforge.net/"
-
-SLOT="0"
 LICENSE="w3m"
+SLOT="0"
 # since it is a CVS snapshot, we better not change keywords to stable
 KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk nls async"
+#IUSE="canna unicode"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.57"
@@ -43,14 +41,12 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
-
 PROVIDE="virtual/textbrowser
 	virtual/w3m"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
-
 	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
 		ewarn
 		ewarn "If you set USE=\"nopixbuf\" (disable gdk-pixbuf for w3mimgdisplay),"
@@ -61,7 +57,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${W3M_CVS_P}-1.896.diff.gz
@@ -76,8 +71,7 @@ src_unpack() {
 }
 
 src_compile() {
-
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	#autoconf || die "autoconf failed"
 
 	local myconf migemo_command imagelib
