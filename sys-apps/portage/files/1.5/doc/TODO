@@ -1,0 +1,34 @@
+Here's a list of stuff to add/fix in Portage 1.5:
+
+Add a flag to force a merge even if RDEPEND settings aren't satisfied.
+
+Update DEPEND and RDEPEND so that we can reference the USE setting, allowing us
+to depend on a package with certain functionality enabled or disabled.
+
+Update DEPEND and RDEPEND so that we can provide an alternative if
+functionality isn't enabled, i.e.:
+
+	foo? ( sys-apps/bar : sys-apps/meep )
+
+For package installs, runtime dependencies should be calculated using the USE
+setting contained in the .tbz2 metadata rather than the USE setting in
+/etc/make.conf/defaults.
+
+/fix in/fix indd MULTIPLE support.  Make Portage default to only allowing a
+single version of a package installed at one time.  MULTIPLE will allow users
+to override this behavior:
+
+		MULTIPLE="major" or 1 means that foo/bar-1.0 and foo/bar-2.0 can be installed together
+		MULTIPLE="minor" or 2 means that foo/bar-1.0, 2.0, and 2.1 can be installed together
+		MULTIPLE=3,4,5,etc.
+  		MULTIPLE=0 means no restrictions (even foo/bar-1.0 and foo/bar-1.0-r1 can be installed together)
+		Also need to add a system-wide override option for this one.        
+
+Add csh support to env-update
+ 
+Upgrade fetch feature to eliminate partial download problem
+  
+Enhance /usr/sbin/ebuild so that it can recursively merge packages.  Base this
+on the digraph code in /usr/sbin/pkgmerge
+   
+Add system profile support to the portage-maintain code                     
