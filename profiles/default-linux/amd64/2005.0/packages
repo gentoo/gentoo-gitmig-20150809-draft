@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/packages,v 1.5 2005/01/14 00:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/packages,v 1.6 2005/01/14 11:37:19 eradicator Exp $
 
-*>=sys-devel/binutils-2.15.90.0.1.1-r4
+# Use this one if binutils-config goes stable before 2005.0 snapshot.
+#*>=sys-devel/binutils-2.15.90.0.1.1-r4
+*>=sys-devel/binutils-2.15.90.0.1.1-r3
 *>=sys-devel/gcc-3.3.5-r1
 *=sys-libs/glibc-2.3.4.20040808-r1
 
