@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.9 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.10 2002/12/09 04:41:46 manson Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.aist-nara.ac.jp/~masata-y/gtkDPS/dist/${P}.tar.gz"
 HOMEPAGE="http://www.aist-nara.ac.jp/~masata-y/gtkDPS/"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*

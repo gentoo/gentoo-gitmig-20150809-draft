@@ -1,7 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.38 2002/12/07 14:33:12 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.39 2002/12/09 04:41:48 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
   07 Dec 2002; Bjoern Brauel <bjb@gentoo.org> qt-3.1.0-r1.ebuild:
 
   Fix compilation on alpha and marked as stable (on alpha)

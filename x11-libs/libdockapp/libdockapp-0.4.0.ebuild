@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.4.0.ebuild,v 1.5 2002/10/04 06:39:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.4.0.ebuild,v 1.6 2002/12/09 04:41:48 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker Dock Applet Library"
@@ -8,7 +8,7 @@ SRC_URI="http://www.minet.uni-jena.de/~topical/sveng/wmail/${P}.tar.gz"
 HOMEPAGE="http://www.minet.uni-jena.de/~topical/sveng/wmail.html"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=x11-base/xfree-4.1.0"
 

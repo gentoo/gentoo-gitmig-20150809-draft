@@ -8,7 +8,7 @@ SRC_URI="http://home.wtal.de/petig/Gtk/${MY_P}.tar.gz"
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=x11-libs/gtkmm-1.2.5-r1"

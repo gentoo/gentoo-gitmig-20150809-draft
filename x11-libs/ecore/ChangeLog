@@ -1,7 +1,10 @@
 # ChangeLog for x11-libs/ecore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.1 2002/04/20 18:26:23 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.2 2002/12/09 04:41:42 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *ecore-0.0.2 (20 Apr 2002)
 
   20 Apr 2002; Leigh Dyer <lsd@linuxgamers.net> ecore-0.0.2.ebuild :

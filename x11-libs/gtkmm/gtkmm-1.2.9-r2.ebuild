@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.8 2002/10/04 06:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.9 2002/12/09 04:41:47 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
@@ -11,7 +11,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 SLOT="1.2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/libsigc++-1.0*"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdkxft/gdkxft-1.5.ebuild,v 1.6 2002/10/17 16:22:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdkxft/gdkxft-1.5.ebuild,v 1.7 2002/12/09 04:41:42 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gdkxft transparently adds anti-aliased font support to gtk+-1.2."
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gdkxft.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11
