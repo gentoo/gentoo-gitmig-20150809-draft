@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.88 2004/01/15 14:51:19 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.89 2004/01/15 16:14:52 cybersystem Exp $
 
 *fluxbox-0.9.8 (15 Jan 2004)
+ 
+  15 Jan 2004; Sascha Schwabbauer <cybersystem@gentoo.org> fluxbox-0.9.8.ebuild:                                               
+  Added ~ppc
 
   15 Jan 2004; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.8.ebuild:
   Version bump.
