@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.6 2004/04/20 18:22:26 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.7 2004/05/31 18:31:34 vapier Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
 SRC_URI="http://66.93.236.84/~jedwin/projects/chmlib/${PF}.tgz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
@@ -49,5 +51,5 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples/
 	doins test_chmLib.c enum_chmLib.c chm_http.c
 
-	dodoc AUTHORS COPYING NEWS README
+	dodoc AUTHORS NEWS README
 }
