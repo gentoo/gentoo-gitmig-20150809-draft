@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc. 
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.9 2002/12/13 11:00:42 blizzy Exp $
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.10 2002/12/17 20:13:46 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -47,4 +47,3 @@
 *ppc-sources-2.4.19 <pvdabeel@gentoo.org> :
 
   First official ppc kernel release
-
