@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.3 2002/07/23 04:19:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5.ebuild,v 1.4 2002/08/02 16:35:55 danarmak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -135,3 +135,12 @@ src_install() {
 	done
 
 }
+
+pkg_postinst() {
+
+einfo "NOTE: If you are upgrading from an older QT, you must remerge any versions of
+kde-base/kdelibs and x11-themes/mosfet-liquid-widgets, or QT/KDE widget style plugns
+will not work!"
+
+}
+
