@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sloccount
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.4 2004/09/05 17:36:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.5 2004/12/02 13:52:27 fmccor Exp $
+
+  02 Dec 2004; Ferris McCormick <fmccor@gentoo.org> sloccount-2.22.ebuild:
+  Add ~sparc keyword at user request (Leif Sawyer).  Program builds, runs,
+  and produces results; I cannot verify their accuracy.  (Note annoying bug
+  68624, unrelated to actual results from the program.)
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> sloccount-2.22.ebuild:
   Added amd64 keyword, closing #58895.
