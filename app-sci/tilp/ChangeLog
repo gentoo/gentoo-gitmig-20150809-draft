@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/tilp
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.1 2003/07/20 05:22:46 rphillips Exp $
+
+*tilp-6.06 (19 Jul 2003)
+
+  19 Jul 2003; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  Submitted by Brent Redeker and Jonathan Rogers. Fixes #18234
