@@ -1,0 +1,11 @@
+# ChangeLog for kde-base/konq-plugins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.1 2005/02/27 19:21:09 danarmak Exp $
+
+*konq-plugins-3.4.0_beta2 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> +metadata.xml,
+  +konq-plugins-3.4.0_beta2.ebuild:
+  Replacing the konqueror-* ebuilds, except for the konqueror-akregator
+  ebuild, with this one.
+
