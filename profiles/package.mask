@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3303 2004/11/06 21:49:30 avenj Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3304 2004/11/07 22:56:29 latexer Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -361,11 +361,6 @@ app-office/mozilla-sunbird
 # are no new versions forthcoming, bug 56109
 net-www/netscape-navigator
 net-www/netscape-communicator
-
-# <latexer@gentoo.org> (17 Aug 2004)
-# These versions of mono include (broken) NPTL support (bug #54603)
-=dev-dotnet/mono-1.0.1-r2
-=dev-dotnet/mono-1.0.2-r1
 
 # <squinky86@gentoo.org> (17 Aug 2004)
 # Masked by request of upstream developers.
