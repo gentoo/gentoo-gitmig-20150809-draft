@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.31 2005/03/20 00:06:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.32 2005/03/30 00:25:46 vapier Exp $
+
+  30 Mar 2005; Mike Frysinger <vapier@gentoo.org> xfsprogs-2.6.25.ebuild:
+  Clean up and add ppc64 KEYWORDS.
 
   20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xfsprogs-2.6.25.ebuild:
   Stable on alpha.
