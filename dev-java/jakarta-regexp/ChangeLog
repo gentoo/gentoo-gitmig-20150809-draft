@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-regexp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.4 2005/03/27 17:05:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.5 2005/04/02 18:07:27 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jakarta-regexp-1.3.ebuild:
+  setting all keywords back to arch, since its only a package move.
 
 *jakarta-regexp-1.3 (27 Mar 2005)
 

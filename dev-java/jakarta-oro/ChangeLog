@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-oro
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.1 2005/03/29 14:28:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.2 2005/04/02 18:07:37 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jakarta-oro-2.0.8.ebuild:
+  setting all keywords back to arch, since its only a package move.
 
 *jakarta-oro-2.0.8 (29 Mar 2005)
 
