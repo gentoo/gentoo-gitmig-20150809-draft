@@ -57,19 +57,13 @@
 
 <p style="font-size:medium;font-weight:bold;"><?=$username;?>'s completed todos</p>
 <table width="95%" border=0 cellpadding=2 cellspacing=2>
-<?php if ( $uid == $devid ) { ?>
-<tr>
-	<td colspan=5 align="right">You're logged in. Clicking on a todo will take you to an edit page.<br>
-	or... <a href="single.php?action=new_todo">Create a new todo</a>.</td>
-</tr>
-<?php } ?>
 <tr>
 	<td bgcolor="#dddaec"><b>Title</b></td>
 	<td bgcolor="#dddaec"><b>Followups</b></td>
 	<td bgcolor="#dddaec"><b>Existed</b></td>
 </tr>
 <?php
-		$result = mysql_query( "select * from todos where owner=$devid and priority=0 order by date" );
+		$result = mysql_query( "select * from todos where owner=$devid and priority=0 order by datecompleted" );
 		while ( $todo = mysql_fetch_array($result) ) {
 
 			$fupcount = mysql_query( 'select fid from followups where tid='.$todo['tid'] );
