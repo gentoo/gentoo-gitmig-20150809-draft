@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.62 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.63 2004/09/10 21:40:12 gregkh Exp $
+
+*udev-031 (10 Sep 2004)
+
+  10 Sep 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-031.ebuild:
+  031 release
+  No more udev_volume_id as it doesn't build :(
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> udev-025-r1.ebuild,
   udev-030.ebuild:
