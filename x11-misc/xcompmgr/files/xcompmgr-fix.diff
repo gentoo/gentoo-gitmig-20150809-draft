@@ -1,0 +1,23 @@
+Index: xcompmgr.c
+===================================================================
+RCS file: /cvs/xapps/xcompmgr/xcompmgr.c,v
+retrieving revision 1.26
+diff -u -3 -p -r1.26 xcompmgr.c
+--- xcompmgr.c	14 Aug 2004 21:39:51 -0000	1.26
++++ xcompmgr.c	22 Aug 2004 00:58:24 -0000
+@@ -1124,11 +1124,11 @@ get_opacity_prop(Display *dpy, win *w, u
+     int format;
+     unsigned long n, left;
+ 
+-    char *data;
+-    XGetWindowProperty(dpy, w->id, opacityAtom, 0L, 1L, False, 
++    char *data = NULL;
++    if (XGetWindowProperty(dpy, w->id, opacityAtom, 0L, 1L, False, 
+ 		       XA_CARDINAL, &actual, &format, 
+-		       &n, &left, (unsigned char **) &data);
+-    if (data != None)
++		       &n, &left, (unsigned char **) &data) == Success
++            && data != NULL)
+     {
+ 	unsigned int i;
+ 	memcpy (&i, data, sizeof (unsigned int));

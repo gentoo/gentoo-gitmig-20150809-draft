@@ -1,4 +1,7 @@
 MD5 c90616b3ad65290d53d51d249f17305d xcompmgr-0.1_pre20040821.ebuild 745
+MD5 22cf83e8b0b9e0fe6ca148b4aa6864c6 xcompmgr-0.1_pre20040821-r1.ebuild 836
 MD5 c5d30e41eec54b52bce0a2c9308bbf85 ChangeLog 702
 MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
+MD5 fcac96a3388e51713ee63c0c8f861c8e files/xcompmgr-fix.diff 832
+MD5 5dac0410ae8df15ee3ce7b02ad495847 files/digest-xcompmgr-0.1_pre20040821-r1 76
 MD5 5dac0410ae8df15ee3ce7b02ad495847 files/digest-xcompmgr-0.1_pre20040821 76

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.1 2004/08/21 22:50:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.2 2004/08/22 07:15:09 seemant Exp $
+
+  22 Aug 2004; Seemant Kulleen <seemant@gentoo.org> :
+  Add a patch from langthang to fix crashing when xcompmgr is used. langthang
+  sent the patch upstream as well.
 
 *transset-0.1_pre20040821 (21 Aug 2004)
 
