@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fb02f86109cc25fea595654096e1e8e treecc-0.3.2.ebuild 622
 MD5 4fcc47643c393c8744f107799339d128 treecc-0.3.4.ebuild 622
 MD5 bf09f2e39b5330a2834952b7de325e6b ChangeLog 1772
 MD5 7aafe9575b2ba436030a1cbd1b89fa99 metadata.xml 259
-MD5 d23bc75eb7bc429da177b93a27ed3b99 files/digest-treecc-0.3.2 64
 MD5 831c215ba797cf5d551555da52fe16c2 files/digest-treecc-0.3.4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhBkBPgS8WLD64cERAgg+AJ9MhszT8xPeEt/mBrTfg0eQwPW8YQCfWGSl
-LNaYniljtC8gKF1dxx6Ajsk=
-=PusF
+iD8DBQFBpyCYPgS8WLD64cERAtbXAJ9llxr3sf32+aEwO07txo9uX/6k6wCfX/3K
+qHFdGVg4ojOerDFS7Fs93CU=
+=SXch
 -----END PGP SIGNATURE-----
