@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.16 2003/09/10 12:57:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.17 2003/10/05 12:49:47 obz Exp $
+
+  05 Oct 2003; Mike Gardiner <obz@gentoo.org> libart_lgpl-2.3.16.ebuild:
+  Marked stable on x86
 
 *libart_lgpl-2.3.16 (10 Sep 2003)
 
