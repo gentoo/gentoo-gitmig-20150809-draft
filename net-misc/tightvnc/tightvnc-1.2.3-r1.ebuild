@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.3-r1.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.3-r1.ebuild,v 1.3 2002/06/04 06:38:44 rphillips Exp $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
@@ -29,7 +29,9 @@ src_compile() {
 src_install() {
 
 	cd ${S}
+	mkdir -p ${D}/usr/man
+	mkdir -p ${D}/usr/man/man1
 	mkdir -p ${D}/usr/bin
-	./vncinstall ${D}/usr/bin || die
+	./vncinstall ${D}/usr/bin ${D}/usr/man || die
 
 }
