@@ -1,48 +1,48 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.8 2003/12/02 01:42:10 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.9 2003/12/04 22:53:53 plasmaroo Exp $
 
 *gentoo-dev-sources-2.6.0_beta11-r1 (01 Dec 2003)
 
   01 Dec 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta11-r1.ebuild:
-  amd64 agpgart fixes have been added to this release as well as 
-  additional amd64 specific fixes
+  'amd64' agpgart fixes have been added to this release as well as 
+  additional amd64 specific fixes...
 
 *gentoo-dev-sources-2.6.0_beta11 (26 Nov 2003)
 
   26 Nov 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta11.ebuild:
-  bump to _beta11 and genpatches to 0.6
+  Bump to _beta11 and genpatches to 0.6.
 
 *gentoo-dev-sources-2.6.0_beta10-r1 (24 Nov 2003)
 
   24 Nov 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta10-r1.ebuild:
-  bump genpatches to 0.5, and make a workaround for a bug
-  in kernel.eclass when modifying the EXTRAVERSION in the Makefile
+  Bump genpatches to 0.5, and make a workaround for a bug
+  in kernel.eclass when modifying the EXTRAVERSION in the Makefile.
 
 *gentoo-dev-sources-2.6.0_beta10 (23 Nov 2003)
 
   23 Nov 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta10.ebuild:
-  Sync with -test10, inc to genpatches-0.4
+  Sync with -test10, inc to genpatches-0.4/
 
   20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   gentoo-dev-sources-2.6.0_beta9.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   04 Nov 2003; John Mylchreest <johnm@gentoo.org>;
   gentoo-dev-sources-2.6.0_beta9.ebuild:
-  Updating ebuild to support kernel.eclass properly
+  Updating ebuild to support kernel.eclass properly.
 
   02 Nov 2003; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0_beta9.ebuild:
-  having distfiles/ in mirror:// can cause problems with older portage versions.
+  Having distfiles/ in mirror:// can cause problems with older portage versions.
   Remove it as it works fine on all version without it. The old version can
   cause a lookup to happen in distfiles/distfiles/ which is improper. Luke-Jr
-  found this problem
+  found this problem.
 
 *gentoo-dev-sources-2.6.0_beta9 (30 Oct 2003)
 

@@ -1,25 +1,25 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.17 2003/10/29 03:51:35 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.18 2003/12/04 22:52:27 plasmaroo Exp $
 
   28 Oct 2003; Bob Johnson <livewire@gentoo.org> :
-  added progressbar,bumped busybox version, start of new 2.6 initrd
+  Added progressbar, bumped busybox version, started the new 2.6 initrd...
 
   24 Oct 2003; Brad House <brad_mssw@gentoo.org> genkernel-1.9.ebuild:
-  add ~amd64 flag
+  Added '~amd64' flag.
 
   19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
   OK, we are building fine now. I have left it masked until I can verify that it
   can actually build 2.6 kernels ok.
 
   19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
-  this should have been masked.
+  This should have been masked.
 
   19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> genkernel-2.0.ebuild:
-  bug #31533
+  Bug #31533.
 
   19 Oct 2003; zhen <zhen@gentoo.org> genkernel-2.0.ebuild:
-  updating paths for file locations, this should fix some problems.
+  Updating paths for file locations, this should fix some problems.
   Also marking -* because no one should emerge it until it is complete.
 
 *genkernel-2.0 (19 Oct 2003)
@@ -28,56 +28,56 @@
   2.0 is the testing only ebuild for 2.6 support. Adding into the tree.
 
   18 Oct 2003; zhen <zhen@gentoo.org> files/bin-keymaps.tar.gz:
-  moving some source around - bin-keymaps will be added in here instead of being
-  included in the genkernel tarball
+  Moving some source around - bin-keymaps will be added in here instead 
+  of being included in the genkernel tarball.
 
-* genkernel-1.9 (07 Oct 2003)
+*genkernel-1.9 (07 Oct 2003)
 
   10 Oct 2003; Bob Johnson <livewire@gentoo.org>
-	added MRPROPER setting in /etc/kernel/settings (yes/no)
-	--myconfig will use /etc/kernels/myconfig  
-	--buildpkg will not write anything to local system now
+	Added MRPROPER setting in /etc/kernel/settings (yes/no)
+	  --myconfig will use /etc/kernels/myconfig.  
+	  --buildpkg will not write anything to local system now.
 	INITRD_SIZE fixed in settings
-	--livecd will build livecd kernel/initrd
-	--help now works
+	  --livecd will build LiveCD kernel/initrd.
+	  --help now works.
 	
 * genkernel-1.8 (11 Sep 2003)
 
   11 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: important bug fix; in 1.7,
-  modules were not getting copied to the initrd. Now fixed.
+  Modules were not getting copied to the initrd. Now fixed.
 
 * genkernel-1.7 (10 Sep 2003)
 
   10 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: Genkernel now FHS-compliant;
-  sed redirect fix. Also, MAKEOPTS now comes from Portage/make.conf. This closes
-  bugs 27920, 27948.
+  Sed redirect fix. Also, MAKEOPTS now comes from Portage/make.conf. 
+  This closes bugs #27920, #27948.
 
 * genkernel-1.6 (03 Sep 2003)
 
-  03 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: fixed various bugs: 26336,
-  26346, 26822, 26901, 27446, 27871 (some duplicates)
+  03 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: Fixed various bugs: 
+  26336, 26346, 26822, 26901, 27446, 27871 (some duplicates)...
 
 * genkernel-1.5 (31 Jul 2003)
 
-  31 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: new version with support
-  for System.map.
+  31 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: New version with 
+  support for System.map.
 
 * genkernel-1.4 (30 Jul 2003)
 
-  30 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: new version with lots
-  of fixes.
+  30 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: New version with 
+  lots of fixes.
 
 * genkernel-1.2 (14 07 2003)
 
   14 07 2003; Bob Johnson <livewire@gentoo.org>
-  -minor typo fixes
+  Minor typo fixes.
 
 * genkernel-1.1 (26 04 2003)
 
   26 04 2003; Bob Johnson <livewire@gentoo.org>
 	
-       	-added kernel package option (--buildpkg)
-	-make fail on missing $KV
+       	- Added kernel package option (--buildpkg).
+	- Make fail on missing $KV.
 	
 * genkernel-1.0 (14 04 2003)
 

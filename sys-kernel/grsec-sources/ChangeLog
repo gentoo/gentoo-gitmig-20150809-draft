@@ -1,48 +1,46 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.8 2003/12/02 20:22:22 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.9 2003/12/04 22:55:21 plasmaroo Exp $
 
   02 Dec 2003; Alexander Gabert <pappy@gentoo.org>
   grsec-sources-2.4.23.1.9.13.ebuild:
-  created linux2423grsec1913 patch and added ~hppa keywords
+  Created linux2423grsec1913 patch and added '~hppa' keywords.
 
 *grsec-sources-2.4.22.1.9.12-r1 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org>
   grsec-sources-2.4.22.1.9.12-r1.ebuild,
   grsec-sources-2.4.22.2.0_rc3-r1.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
 *grsec-sources-2.4.23.1.9.13 (01 Dec 2003)
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org>
   grsec-sources-2.4.21.1.9.11.ebuild, grsec-sources-2.4.21.2.0_rc2.ebuild,
   grsec-sources-2.4.22.1.9.12.ebuild, grsec-sources-2.4.22.2.0_rc3.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
   01 Dec 2003; <solar@gentoo.org> grsec-sources-2.4.23.1.9.13.ebuild:
-  performance enhancements, PaX updates including PT_GNU_STACK and PT_GNU_HEAP
+  Performance enhancements, PaX updates including PT_GNU_STACK and PT_GNU_HEAP
   support, documentation updates, a fix for an initrd problem.
 
   05 Nov 2003; <solar@gentoo.org> grsec-sources-2.4.21.1.9.11.ebuild,
   grsec-sources-2.4.21.2.0_rc2.ebuild, grsec-sources-2.4.22.2.0_rc3.ebuild,
-  metadata.xml:
-  fixed typo pointed out by frogger
+  metadata.xml: Fixed typo pointed out by frogger
 
   17 Sep 2003; Alexander Gabert <pappy@gentoo.org>
-  grsec-sources-2.4.22.1.9.12.ebuild:
-  added hppa support and custom grsec patch
+  grsec-sources-2.4.22.1.9.12.ebuild: Added hppa support and custom 
+  grsec patch.
 
 *grsec-sources-2.4.22.2.0_rc3 (04 Sep 2003)
 
   04 Sep 2003; <solar@gentoo.org> grsec-sources-2.4.22.1.9.12.ebuild,
   grsec-sources-2.4.22.2.0_rc3.ebuild:
-  version bumps
+  Version bumps.
 
 *grsec-sources-2.4.21.2.0_rc2 (14 Aug 2003)
 
   14 Aug 2003; <solar@gentoo.org> grsec-sources-2.4.21.1.9.11.ebuild,
   grsec-sources-2.4.21.2.0_rc2.ebuild, metadata.xml:
-  Initial import of grsec-sources
+  Initial import of grsec-sources.
 
