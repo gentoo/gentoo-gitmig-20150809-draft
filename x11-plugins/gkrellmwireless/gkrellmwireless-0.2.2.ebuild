@@ -10,7 +10,7 @@ HOMEPAGE="http://gkrellm.luon.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="=app-admin/gkrellm-1.2*"
 
