@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.6 2004/02/27 19:10:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r1.ebuild,v 1.7 2004/04/12 21:44:59 wolf31o2 Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="Unreal Tournament 2004 Demo"
 HOMEPAGE="http://www.unrealtournament.com/"
@@ -17,6 +17,7 @@ SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
+IUSE=""
 
 DEPEND="!dedicated? ( virtual/opengl )"
 
