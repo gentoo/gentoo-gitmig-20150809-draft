@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.21 2003/06/25 07:42:06 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.22 2003/06/26 21:00:34 rac Exp $
+
+  26 Jun 2003; <rac@gentoo.org> perl-5.8.0-r12.ebuild:
+  Add block depends on ExtUtils-MakeMaker and File-Spec, because we need to get
+  those uninstalled before they steal our files again
 
 *perl-5.8.0-r12 (25 Jun 2003)
 
