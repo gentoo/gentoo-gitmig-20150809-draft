@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.4 2003/11/12 17:13:06 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.5 2003/12/14 03:09:38 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> Authen-SASL-2.04.ebuild:
+  Make stable on ppc
 
   12 Nov 2003; Will Woods <wwoods@gentoo.org> Authen-SASL-2.04.ebuild:
   Added ~alpha to KEYWORDS
