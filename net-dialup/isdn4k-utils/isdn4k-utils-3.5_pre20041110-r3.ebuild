@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110-r2.ebuild,v 1.1 2004/12/03 16:48:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110-r3.ebuild,v 1.1 2004/12/03 18:45:00 mrness Exp $
 
 inherit eutils
 
@@ -181,6 +181,10 @@ src_install() {
 	# install logrotate configs
 	insinto /etc/logrotate.d
 	newins ${FILESDIR}/${PV}/isdnlog.logrotated isdnlog
+
+	# ipppd module from sys-apps/baselayout  thinks ipppd should be in /sbin; waiting #73067 to be solved
+	dodir /sbin
+	dosym /usr/sbin/ipppd /sbin/ipppd
 }
 
 pkg_postinst() {
