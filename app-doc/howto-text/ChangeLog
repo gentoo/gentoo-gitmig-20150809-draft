@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/howto-text
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.10 2003/10/24 11:42:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-text/ChangeLog,v 1.11 2004/03/18 03:38:53 vapier Exp $
+
+*howto-text-20040317 (17 Mar 2004)
+
+  17 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #44240 by Jaco Kroon.
 
 *howto-text-20031006 (06 Oct 2003)
 
