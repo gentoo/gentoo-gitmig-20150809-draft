@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.3-r1.ebuild,v 1.5 2003/02/13 16:32:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.3-r1.ebuild,v 1.6 2003/09/06 08:08:12 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}/misc
 	cp Makefile.in Makefile.in.orig
 	#This fix stops gettext from invoking emacs to install the po mode
@@ -42,18 +42,18 @@ src_install() {
 	exeopts -m0755
 	exeinto /usr/bin
 	doexe misc/gettextize
-	
+
 	#glibc includes gettext; this isn't needed anymore
 	rm -rf ${D}/usr/{include,lib}/*
 
 	#again, installed by glibc
 	rm -rf ${D}/usr/share/locale/locale.alias
-	
+
 	if [ -d ${D}/usr/doc/gettext ]
 	then
 		mv ${D}/usr/doc/gettext ${D}/usr/share/doc/${PF}/html
 		rm -rf ${D}/usr/doc
-   	fi
+	fi
 
 	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.10 2003/09/02 19:09:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.11 2003/09/06 08:09:07 msterret Exp $
 
 IUSE="nls static build"
 
@@ -37,7 +37,7 @@ src_compile() {
 	fi
 }
 
-src_install() {                               
+src_install() {
 
 	make DESTDIR=${D} \
 		datadir=/usr/share \

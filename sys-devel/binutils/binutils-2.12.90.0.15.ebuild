@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.11 2003/05/25 15:34:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.12 2003/09/06 08:09:19 msterret Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ppc sparc "
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
 	nls? ( sys-devel/gettext )
-	|| ( dev-lang/perl 
+	|| ( dev-lang/perl
 	     ( !build?     ( dev-lang/perl ) )
 	     ( !bootstrap? ( dev-lang/perl ) )
 	   )"
@@ -30,7 +30,7 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
-	
+
 	local myconf=""
 	use nls && \
 		myconf="${myconf} --without-included-gettext" || \
@@ -45,7 +45,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--host=${CHOST} \
 		${myconf} || die
-		
+
 	if [ "`use static`" ]
 	then
 		make headers -C bfd CFLAGS=-O || die
@@ -75,18 +75,18 @@ src_install() {
 
 	insinto /usr/include
 	doins include/libiberty.h
-	
+
 	#c++filt is included with gcc -- what are these GNU people thinking?
 	#but not the manpage, so leave that!
 	rm -f ${D}/usr/bin/c++filt #${D}/usr/share/man/man1/c++filt*
-	
+
 	#strip has a symlink going from /usr/${CHOST}/bin/strip to /usr/bin/strip
 	#we should reverse it:
 
 	rm ${D}/usr/${CHOST}/bin/strip; mv ${D}/usr/bin/strip ${D}/usr/${CHOST}/bin/strip
 	#the strip symlink gets created in the loop below
 
-	#ar, as, ld, nm, ranlib and strip are in two places; create symlinks.  This will reduce the 
+	#ar, as, ld, nm, ranlib and strip are in two places; create symlinks.  This will reduce the
 	#size of the tbz2 significantly.  We also move all the stuff in /usr/bin to /usr/${CHOST}/bin
 	#and create the appropriate symlinks.  Things are cleaner that way.
 	cd ${D}/usr/bin
@@ -96,12 +96,12 @@ src_install() {
 	if [ ! -e ../${CHOST}/bin/${x} ]
 		then
 			mv $x ../${CHOST}/bin/${x}
-		else	
+		else
 			rm -f $x
 		fi
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
-	
+
 	cd ${S}
 	if [ -z "`use build`" ]
 	then
@@ -109,7 +109,7 @@ src_install() {
 			mandir=${D}/usr/share/man \
 			infodir=${D}/usr/share/info \
 			install-info || die
-			
+
 		dodoc COPYING* README
 		docinto bfd
 		dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO

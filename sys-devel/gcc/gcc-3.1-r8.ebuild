@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1-r8.ebuild,v 1.13 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1-r8.ebuild,v 1.14 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -279,8 +279,8 @@ src_install() {
 	fi
 
 	cd ${SORIG}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		cd ${SORIG}
 		docinto /
 		dodoc BUGS COPYING COPYING.LIB ChangeLog GNATS README* FAQ MAINTAINERS
@@ -315,12 +315,12 @@ src_install() {
 		cd ${SORIG}/libstdc++-v3
 		docinto libstdc++-v3
 		dodoc ChangeLog* README
-    else
-        rm -rf ${D}/usr/share/{man,info}
+	else
+		rm -rf ${D}/usr/share/{man,info}
 	fi
 
-    # Fix ncurses b0rking
-    find ${D}/ -name '*curses.h' -exec rm -f {} \;
+	# Fix ncurses b0rking
+	find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postrm() {
@@ -334,6 +334,6 @@ pkg_postrm() {
 	fi
 
 	# Fix ncurses b0rking (if r5 isn't unmerged)
-        find /usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
+	find /usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }
 

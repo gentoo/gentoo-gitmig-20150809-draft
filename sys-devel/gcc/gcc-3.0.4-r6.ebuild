@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.13 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.14 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -60,7 +60,7 @@ src_unpack() {
 	if [ "`use build`" ]
 	then
 		patch -p0 < ${FILESDIR}/texinfo-${TV}-no-ncurses-gentoo.diff || die
- 		touch *
+		touch *
 	fi
 
 	cd ${S}
@@ -243,8 +243,8 @@ src_install() {
 	rm -f ${D}${LOC}/lib/libgcc_s.so*
 
 	cd ${S}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		#do a full texinfo-${TV} install
 
 		if ! build_multiple
@@ -309,8 +309,8 @@ src_install() {
 		cd ${S}/libstdc++-v3
 		docinto libstdc++-v3
 		dodoc ChangeLog* README
-    else
-        rm -rf ${D}/usr/share/{man,info}
+	else
+		rm -rf ${D}/usr/share/{man,info}
 		#do a minimal texinfo install (build image)
 		cd ${WORKDIR}/build/texinfo
 		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57-r1.ebuild,v 1.4 2003/09/02 19:19:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57-r1.ebuild,v 1.5 2003/09/06 08:10:52 msterret Exp $
 
 IUSE=""
 
@@ -27,11 +27,11 @@ DEPEND=">=sys-apps/texinfo-4.3
 src_unpack() {
 
 	unpack ${A}
-	
+
 	cd ${OLD_S}
 	epatch ${FILESDIR}/${OLD_P}-configure-gentoo.diff
 	epatch ${FILESDIR}/${OLD_P}-configure.in-gentoo.diff
-	
+
 	cd ${S}
 	# Enable both autoconf-2.1 and autoconf-2.5 info pages
 	epatch ${FILESDIR}/${PN}-2.57-infopage-namechange.patch
@@ -48,7 +48,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-	
+
 	emake || die
 
 	#
@@ -60,12 +60,12 @@ src_compile() {
 	cp autoconf.texi autoconf.texi.orig
 	sed -e '/START-INFO-DIR-ENTRY/ i INFO-DIR-SECTION GNU programming tools' \
 		autoconf.texi.orig > autoconf.texi
-	
+
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-		
+
 	emake || die
 }
 
@@ -125,7 +125,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	
+
 	# remove these to make sure symlinks install properly if old versions
 	# was binaries
 	for x in autoconf autoheader autoreconf autoscan autoupdate ifnames autom4te

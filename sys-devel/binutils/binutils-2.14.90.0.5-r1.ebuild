@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.5-r1.ebuild,v 1.4 2003/09/01 19:22:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.5-r1.ebuild,v 1.5 2003/09/06 08:09:19 msterret Exp $
 
 IUSE="nls bootstrap build"
 
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~x86 ~ppc -alpha ~sparc ~mips -hppa -arm"
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
 	nls? ( sys-devel/gettext )
-	|| ( dev-lang/perl 
+	|| ( dev-lang/perl
 	     ( !build?     ( dev-lang/perl ) )
 	     ( !bootstrap? ( dev-lang/perl ) )
 	    )"
@@ -39,7 +39,7 @@ if [ "${ARCH}" = "arm" ]; then
 fi
 
 src_unpack() {
-	
+
 	unpack ${A}
 
 	cd ${S}
@@ -79,9 +79,9 @@ src_unpack() {
 		cp ${x} ${x}.orig
 		gawk '
 			{
-				if ($0 ~ /LIBADD/) 
+				if ($0 ~ /LIBADD/)
 					gsub("../bfd/libbfd.la", "-L../bfd/.libs ../bfd/libbfd.la")
-			
+
 					print
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
@@ -132,7 +132,7 @@ src_install() {
 
 	insinto /usr/include
 	doins include/libiberty.h
-	
+
 	# c++filt is included with gcc -- what are these GNU people thinking?
 	# but not the manpage, so leave that!
 # We install it now, as gcc-3.3 do not have it any longer ...
@@ -143,7 +143,7 @@ src_install() {
 
 	rm ${D}/usr/${CHOST}/bin/strip; mv ${D}/usr/bin/strip ${D}/usr/${CHOST}/bin/strip
 	# The strip symlink gets created in the loop below
-	
+
 	# By default ar, as, ld, nm, ranlib and strip are in two places; create
 	# symlinks.  This will reduce the size of the tbz2 significantly.  We also
 	# move all the stuff in /usr/bin to /usr/${CHOST}/bin and create the
@@ -155,12 +155,12 @@ src_install() {
 	if [ ! -e ../${CHOST}/bin/${x} ]
 		then
 			mv ${x} ../${CHOST}/bin/${x}
-		else	
+		else
 			rm -f ${x}
 		fi
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
-	
+
 	cd ${S}
 	if [ -z "`use build`" ]
 	then
@@ -168,7 +168,7 @@ src_install() {
 			mandir=${D}/usr/share/man \
 			infodir=${D}/usr/share/info \
 			install-info || die
-			
+
 		dodoc COPYING* README
 		docinto bfd
 		dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO

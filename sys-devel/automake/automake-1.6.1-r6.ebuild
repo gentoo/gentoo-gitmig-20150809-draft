@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.16 2003/09/02 19:16:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.17 2003/09/06 08:10:38 msterret Exp $
 
 # OLD14 = 1.4
 # OLD15 = 1.5
@@ -73,17 +73,17 @@ src_compile() {
 	# so 'ac-wrapper.pl' do not detect that it should use
 	# autoconf-2.5x
 	export WANT_AUTOCONF_2_5=1
-	
+
 	cd ${S}
 
 	perl -pi -e "s:setfilename automake.info:setfilename automake-1.6.info:" \
 		automake.texi
-	
+
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-	
+
 	emake ${MAKEOPTS} || die
 
 	#
@@ -94,12 +94,12 @@ src_compile() {
 
 	perl -pi -e "s:setfilename automake.info:setfilename automake-1.5.info:" \
 		automake.texi
-	
+
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-	
+
 	emake ${MAKEOPTS} || die
 	unset WANT_AUTOCONF_2_5
 
@@ -111,7 +111,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-		
+
 	emake ${MAKEOPTS} || die
 }
 
@@ -119,13 +119,13 @@ src_compile() {
 # use the correct directories, and also adds the normal
 # /usr/share/aclocal for aclocal to include.
 fix_bins() {
-	
+
 	for x in aclocal automake
 	do
 		perl -pi -e "s:share/automake\":share/automake-${1}\":g" ${x}
 		perl -pi -e "s:share/aclocal\":share/aclocal-${1}\":g" ${x}
 	done
-	
+
 	# add "/usr/share/aclocal" to m4 search patch
 	cp aclocal aclocal.orig
 	sed -e '/&scan_m4_files (@dirlist);/i \push (@dirlist, \"/usr/share/aclocal\");' \
@@ -158,7 +158,7 @@ src_install() {
 	cd ${S}
 # not needed for 1.6.1
 #	fix_bins ${NEW_PV}
-	
+
 	make DESTDIR=${D} \
 		install || die
 
@@ -179,7 +179,7 @@ src_install() {
 
 	cd ${OLD15_S}
 	fix_bins ${OLD15_PV}
-	
+
 	make DESTDIR=${D} \
 		pkgdatadir=/usr/share/automake-${OLD15_PV} \
 		m4datadir=/usr/share/aclocal-${OLD15_PV} \
@@ -205,7 +205,7 @@ src_install() {
 
 	# Ignore duplicates like automake-1.5 and 1.6
 	patch -p0 <${FILESDIR}/${PN}-1.4_p5-ignore-duplicates.patch || die
-	
+
 	make DESTDIR=${D} \
 		pkgdatadir=/usr/share/automake-1.4 \
 		m4datadir=/usr/share/aclocal-1.4 \
@@ -222,7 +222,7 @@ src_install() {
 
 	#
 	# ************ misc stuff ****************
-	
+
 	# Some packages needs a /usr/share/automake directory
 	dosym automake-1.4 /usr/share/automake
 
@@ -232,7 +232,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	
+
 	# remove these to make sure symlinks install properly if old versions
 	# was binaries
 	for x in automake aclocal

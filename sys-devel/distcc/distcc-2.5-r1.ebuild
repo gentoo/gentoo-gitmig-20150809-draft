@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.4 2003/08/11 01:56:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.5-r1.ebuild,v 1.5 2003/09/06 08:09:35 msterret Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ pkg_postinst() {
 	einfo "/usr/lib/distcc/bin to your path before /usr/bin.  If you're"
 	einfo "combining this with ccache, put the ccache path BEFORE distcc."
 	einfo "Portage 2.0.46-r11+ will take advantage of distcc if you put"
-	einfo "distcc into the FEATURES setting in make.conf and use" 
+	einfo "distcc into the FEATURES setting in make.conf and use"
 	einfo "distcc-config --set-hosts. Do NOT set CC=distcc or similar."
 	ewarn "See http://www.gentoo.org/doc/en/distcc.xml for information."
 }

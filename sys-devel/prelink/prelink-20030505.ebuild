@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030505.ebuild,v 1.2 2003/05/21 19:34:35 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030505.ebuild,v 1.3 2003/09/06 08:06:52 msterret Exp $
 
 IUSE=""
 
@@ -41,7 +41,7 @@ src_install() {
 
 	dodoc INSTALL TODO ChangeLog THANKS COPYING README AUTHORS NEWS
 
-        insinto /etc
-        doins ${S}/doc/prelink.conf
+	insinto /etc
+	doins ${S}/doc/prelink.conf
 }
 

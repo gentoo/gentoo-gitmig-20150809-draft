@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.20 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.21 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -281,8 +281,8 @@ src_install() {
 	fi
 
 	cd ${S}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		cd ${S}
 		docinto /
 		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
@@ -312,8 +312,8 @@ src_install() {
 		cd ${S}/libstdc++
 		docinto libstdc++
 		dodoc ChangeLog NEWS
-    else
-        rm -rf ${D}/usr/share/{man,info}
+	else
+		rm -rf ${D}/usr/share/{man,info}
 	fi
 }
 

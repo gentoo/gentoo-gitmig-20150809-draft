@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.11 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.12 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -362,8 +362,8 @@ src_install() {
 	fi
 
 	cd ${S}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		cd ${S}
 		docinto /${CCHOST}
 		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
@@ -397,21 +397,21 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-        if [ -n "`use java`" ]
-        then
+		if [ -n "`use java`" ]
+		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
 			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
 			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
-        fi
-    else
-        rm -rf ${D}/usr/share/{man,info}
+		fi
+	else
+		rm -rf ${D}/usr/share/{man,info}
 	fi
 
-    # Fix ncurses b0rking
-    find ${D}/ -name '*curses.h' -exec rm -f {} \;
+	# Fix ncurses b0rking
+	find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_postinst() {

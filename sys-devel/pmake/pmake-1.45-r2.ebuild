@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.6 2003/05/28 21:34:32 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.7 2003/09/06 08:07:49 msterret Exp $
 
 IUSE=""
 
@@ -26,12 +26,12 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	# We do not want all patches in ${FILESDIR}, as 01_all_groffpatch.patch is
 	# not longer valid for this version.
 	epatch ${FILESDIR}/02_all_mktemp.patch
-	
+
 	mv Makefile.boot Makefile.bootorig
 	sed 's/MACHINE=sun/MACHINE=gentoo/g' Makefile.bootorig > Makefile.bootor
 	use x86 && sed 's/MACHINE_ARCH=sparc/MACHINE_ARCH=i386/g' Makefile.bootor > Makefile.boot

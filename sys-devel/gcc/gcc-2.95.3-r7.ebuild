@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.19 2003/09/05 02:01:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.20 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="nls static build"
 
@@ -123,7 +123,7 @@ src_install() {
 
 	[ -e ${D}/usr/bin/gcc ] || die "gcc not found in ${D}"
 
-    FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
+	FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dosym g++ /usr/bin/${CHOST}-g++
 	dosym g++ /usr/bin/${CHOST}-c++
@@ -141,8 +141,8 @@ src_install() {
 	doexe ${FILESDIR}/cc
 
 	cd ${S}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		#do a full texinfo-${TV} install
 
 #		cd ${S}/texinfo
@@ -196,8 +196,8 @@ src_install() {
 		cd ${S}/libstdc++
 		docinto libstdc++
 		dodoc ChangeLog NEWS
-    else
-        rm -rf ${D}/usr/share/{man,info}
+	else
+		rm -rf ${D}/usr/share/{man,info}
 		# do a minimal texinfo install (build image)
 #		cd ${S}/texinfo
 #		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}

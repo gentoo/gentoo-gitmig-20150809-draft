@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.ebuild,v 1.1 2003/07/13 21:31:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.ebuild,v 1.2 2003/09/06 08:08:12 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -46,7 +46,7 @@ src_install() {
 	then
 		mv ${D}/usr/doc/gettext ${D}/usr/share/doc/${PF}/html
 		rm -rf ${D}/usr/doc
-   	fi
+	fi
 
 	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO
 }

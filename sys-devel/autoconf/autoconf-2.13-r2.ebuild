@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.13-r2.ebuild,v 1.14 2003/09/02 19:19:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.13-r2.ebuild,v 1.15 2003/09/06 08:10:52 msterret Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ src_compile() {
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--host=${CHOST} || die
-		
+
 	make ${MAKEOPTS} || die
 }
 
@@ -40,7 +40,7 @@ src_install() {
 
 	exeinto /usr/share/autoconf
 	doexe ${S}/install-sh
-		
+
 	dodoc COPYING AUTHORS ChangeLog.* NEWS README TODO
 }
 

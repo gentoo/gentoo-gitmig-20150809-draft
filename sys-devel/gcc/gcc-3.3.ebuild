@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.10 2003/09/05 02:01:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.ebuild,v 1.11 2003/09/06 08:06:07 msterret Exp $
 
 IUSE="static nls bootstrap java build X"
 
@@ -207,7 +207,7 @@ src_unpack() {
 	fi
 
 	# Make gcc's version info specific to Gentoo
- 	version_patch ${FILESDIR}/3.3/gcc33-gentoo-branding.patch
+	version_patch ${FILESDIR}/3.3/gcc33-gentoo-branding.patch
 
 	if [ -n "${PP_VER}" ]
 	then

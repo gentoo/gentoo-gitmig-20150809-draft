@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.1 2003/06/03 13:03:24 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.2 2003/09/06 08:07:33 msterret Exp $
 
 DESCRIPTION="The Omni OpenMP Compiler"
 HOMEPAGE="http://phase.etl.go.jp/Omni/"
@@ -20,16 +20,16 @@ RDEPEND="java? ( virtual/jdk )"
 
 src_unpack() {
 
-        if [ ! -e ${DISTDIR}/${A} ] ; then
-                einfo "Due to license issues you have to download"
-                einfo "the appropriate Omni archive:"
-                einfo "http://phase.etl.go.jp/Omni/Omni-release.html"
+	if [ ! -e ${DISTDIR}/${A} ] ; then
+		einfo "Due to license issues you have to download"
+		einfo "the appropriate Omni archive:"
+		einfo "http://phase.etl.go.jp/Omni/Omni-release.html"
 		einfo "Please get the file "${A}
-                einfo ""
-                einfo "The archive should be placed into ${DISTDIR}."
+		einfo ""
+		einfo "The archive should be placed into ${DISTDIR}."
 
-                die "package archive not found"
-        fi
+		die "package archive not found"
+	fi
 
 	unpack ${A}
 
@@ -42,7 +42,7 @@ src_compile() {
 	myconf=""
 
 	# There is no configure script for the doc
-	if [ ! `use doc` ]  ; then 
+	if [ ! `use doc` ]  ; then
 	    mv Makefile.in Makefile.in.orig
 	    sed s/doc// Makefile.in.orig > Makefile.in
 	fi
@@ -67,6 +67,6 @@ src_install() {
 	dodir /usr/share/doc/
 	use doc && mv ${D}usr/lib/openmp/doc ${D}usr/share/doc/${P}
 	use doc && mv ${D}usr/lib/openmp/examples ${D}usr/share/doc/${P}
-	
+
 	dodoc README COPYRIGHT LICENSE
 }

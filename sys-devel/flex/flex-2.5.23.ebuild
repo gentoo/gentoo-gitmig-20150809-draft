@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.23.ebuild,v 1.8 2003/04/17 22:55:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.23.ebuild,v 1.9 2003/09/06 08:08:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU lexical analyser generator"
@@ -32,7 +32,7 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	
+
 	if [ -z "`use build`" ]
 	then
 		dodoc AUTHORS COPYING ChangeLog NEWS ONEWS README* RoadMap THANKS TODO

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.15 2003/09/02 19:19:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.16 2003/09/06 08:10:52 msterret Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -36,7 +36,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-	
+
 	emake || die
 
 	#
@@ -47,7 +47,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--target=${CHOST} || die
-		
+
 	emake || die
 }
 
@@ -86,7 +86,7 @@ src_install() {
 	#
 
 	# need to use 'prefix' here, else we get sandbox problems
-    cd ${OLD_S}
+	cd ${OLD_S}
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
@@ -107,7 +107,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	
+
 	# remove these to make sure symlinks install properly if old versions
 	# was binaries
 	for x in autoconf autoheader autoreconf autoscan autoupdate ifnames autom4te
