@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.1.ebuild,v 1.1 2004/07/08 04:46:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.3.ebuild,v 1.1 2004/07/23 17:06:20 solar Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.nl/"
