@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/rio
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.1 2003/07/19 01:56:23 jje Exp $
+
+*rio-1.0.7 (19 Jul 2003)
+
+  19 Jul 2003; jje <jje@gentoo.org> rio-1.0.7.ebuild:
+  Initial revision.
+  
+  Submitted by: Danny Pansters <danny@ricin.com>
+
