@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-03.09.10.ebuild,v 1.1 2002/08/09 13:02:49 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-03.09.10.ebuild,v 1.2 2002/10/02 05:40:53 vapier Exp $
 
 DESCRIPTION="CAPI4Linux drivers for AVM Fritz!Card PCI"
 HOMEPAGE="http://www.avm.de/"
 S="${WORKDIR}/fritz"
-SRC_URI="ftp://ftp.avm.de/cardware/fritzcrd.pci/linux/fcpci-suse8.0-${PV}.tar.gz"
+SRC_URI="ftp://ftp.avm.de/cardware/fritzcrd.pci/linux/suse.80/fcpci-suse8.0-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
