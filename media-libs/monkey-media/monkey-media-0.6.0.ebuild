@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.0.ebuild,v 1.1 2002/11/15 11:20:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.0.ebuild,v 1.2 2002/12/04 19:19:46 azarah Exp $
 
 IUSE="doc"
 
@@ -16,8 +16,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
-	=x11-libs/gtk+-2.0*
-	=dev-libs/atk-1.0*
+	>=x11-libs/gtk+-2.0.6
+	>=dev-libs/atk-1.0
 	=dev-libs/glib-2.0*
 	>=media-libs/audiofile-0.2.3
 	=gnome-base/gnome-vfs-2.0*

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/monkey-media
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/ChangeLog,v 1.3 2002/11/15 11:20:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/ChangeLog,v 1.4 2002/12/04 19:19:46 azarah Exp $
+
+  04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> monkey-media-0.6.0.ebuild :
+  Work with gtk+-2.1 and atk-1.1 ...
 
 *monkey-media-0.6.0 (15 Nov 2002)
   
