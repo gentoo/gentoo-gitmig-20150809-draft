@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.179 2005/02/28 11:33:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.180 2005/03/03 16:58:33 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> mysql-4.0.22-r1.ebuild:
+  Dependency update: sys-apps/procps -> sys-process/procps.
 
   28 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.22-r1.ebuild,
   mysql-4.0.22-r2.ebuild, mysql-4.0.22.ebuild, mysql-4.0.23-r1.ebuild,
