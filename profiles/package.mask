@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2975 2004/06/30 17:58:21 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2976 2004/07/01 14:00:47 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -673,10 +673,6 @@ x11-libs/gtkmm-addons
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
 # release that actually works.
 x11-terms/powershell
-
-# <danarmak@gentoo.org> (20 Aug 2002)
-# masked for extensive testing
-x11-libs/qt-embedded
 
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
