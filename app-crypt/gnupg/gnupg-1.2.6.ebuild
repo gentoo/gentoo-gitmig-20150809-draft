@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.14 2004/10/24 05:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.15 2004/11/09 20:15:26 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ IUSE="X ldap nls static idea"
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 			app-arch/bzip2
 			sys-libs/zlib )
-		!ppc-macos? ( X? ( || ( media-gfx/xloadimage media-gfx/xli ) ) )
+		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 		nls? ( sys-devel/gettext )
 		dev-lang/perl
 		virtual/libc
@@ -83,7 +83,7 @@ src_compile() {
 		myconf="${myconf} --enable-m-guard"
 	fi
 
-	append-ldflags -Wl,-z,now
+	use ppc-macos || append-ldflags -Wl,-z,now
 
 	econf ${myconf} || die
 	emake || die
