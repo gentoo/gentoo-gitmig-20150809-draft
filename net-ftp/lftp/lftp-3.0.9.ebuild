@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.7-r1.ebuild,v 1.3 2004/09/13 18:48:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.9.ebuild,v 1.1 2004/09/27 08:15:54 dragonheart Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -9,12 +9,12 @@ inherit eutils
 DESCRIPTION="A sophisticated ftp/http client, file transfer program."
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 
-SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
+#SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
 # Was a bit too slow and unreliable last time I tried (dragonheart)
-#SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
+SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha hppa ~mips ~ia64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~ppc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -37,17 +37,8 @@ RDEPEND="nls? ( sys-devel/gettext )
 	socks5? ( sys-libs/pam )
 	socks5? ( >=net-misc/dante-1.1.12 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/lftp-3.0.7-memleak.patch
-}
-
 src_compile() {
-	local myconf
-
-	use nls && myconf="--enable-nls" \
-		|| myconf="--disable-nls"
+	local myconf="`use_enable nls`"
 
 	use ssl && myconf="${myconf} --with-ssl=/usr" \
 		|| myconf="${myconf} --without-ssl"

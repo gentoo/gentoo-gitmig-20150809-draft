@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.59 2004/09/16 13:48:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.60 2004/09/27 08:15:54 dragonheart Exp $
+
+*lftp-3.0.9 (27 Sep 2004)
+
+  27 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  -files/lftp-3.0.7-memleak.patch, -lftp-2.6.11.ebuild, -lftp-3.0.7-r1.ebuild,
+  lftp-3.0.8.ebuild, +lftp-3.0.9.ebuild:
+  version bump and old version cleanout
 
 *lftp-3.0.8 (16 Sep 2004)
 
