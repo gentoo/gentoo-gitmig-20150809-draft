@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.3.ebuild,v 1.8 2004/02/29 23:31:50 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.3.ebuild,v 1.9 2004/03/03 11:16:50 mholzer Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gkrellm.net/gkrellmss/gkrellmss.html"
 SRC_URI="http://web.wt.net/~billw/gkrellmss/${P}.tar.gz"
 
 DEPEND="=app-admin/gkrellm-2*
-	dev-libs/fftw
+	=dev-libs/fftw-2*
 	media-sound/esound"
 
 SLOT="0"
