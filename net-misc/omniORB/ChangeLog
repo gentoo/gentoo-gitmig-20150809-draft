@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.16 2003/12/15 22:15:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.17 2003/12/15 23:02:22 kloeri Exp $
+
+  16 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> omniORB-4.0.2.ebuild:
+  Mark omniORB-4.0.2 x86.
 
 *omniORB-4.0.3 (15 Dec 2003)
 
