@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.3 2002/07/16 11:36:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.4 2002/07/22 15:42:48 seemant Exp $
 
 S=${WORKDIR}/SDL12
 DESCRIPTION="Simple Direct Media Layer"
 SRC_URI="http://www.libsdl.org/release/${P}.tar.bz2"
 HOMEPAGE="http://www.libsdl.org/"
+
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
 	X? ( virtual/x11 )
@@ -20,10 +24,6 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
-
-SLOT="0"
-LICENSE="LGPL"
-KEYWORDS="x86 ppc"
 
 src_unpack() {
 
