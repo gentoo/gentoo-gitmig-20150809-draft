@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.8 2003/09/27 22:42:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.9 2003/09/28 20:49:15 foser Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="python nls gnome aalib perl doc jpeg png tiff doc"
+IUSE="python nls gnome aalib perl doc jpeg png tiff"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
