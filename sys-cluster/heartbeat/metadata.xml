@@ -2,11 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>no-herd</herd>
+  <herd>cluster</herd>
   <maintainer>
-    <email>iggy@gentoo.org</email>
-    <name>Brian Jackson</name>
-    <description>Actively maintained</description>
+    <email>cluster@gentoo.org</email>
   </maintainer>
   <longdescription>
     Heartbeat is a cluster manager to handle failover of 2 nodes.
