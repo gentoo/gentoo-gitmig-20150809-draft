@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.16 2003/05/05 14:55:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.17 2003/05/13 02:36:04 weeve Exp $
+
+  12 May 2003; Jason Wever <weeve@gentoo.org> autofs-3.1.7-r5.ebuild:
+  Changed ~sparc keyword to sparc.
 
   05 May 2003; Jason Wever <weeve@gentoo.org> autofs-3.1.7-r5.ebuild:
   Added ~sparc to keywords.
