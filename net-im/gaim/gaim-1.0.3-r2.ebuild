@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r2.ebuild,v 1.2 2004/11/29 19:59:37 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r2.ebuild,v 1.3 2004/12/02 15:02:39 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -25,7 +25,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 			!<dev-perl/ExtUtils-MakeMaker-6.17 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( || ( >=dev-libs/nss-3.9.2-r2 net-www/mozilla-firefox net-www/mozilla ) )
+	!gnutls? ( >=dev-libs/nss-3.9.2-r2 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )"
 	#eds? ( gnome-extra/evolution-data-server )"
 
@@ -103,10 +103,10 @@ src_compile() {
 	else
 		einfo "Disabling GnuTLS, using NSS"
 		myconf="${myconf} --enable-gnutls=no"
-		#myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
-		#myconf="${myconf} --with-nss-includes=/usr/include/nss"
-		#myconf="${myconf} --with-nspr-libs=/usr/lib/nspr"
-		#myconf="${myconf} --with-nss-libs=/usr/lib/nss"
+		myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
+		myconf="${myconf} --with-nss-includes=/usr/include/nss"
+		myconf="${myconf} --with-nspr-libs=/usr/lib/nspr"
+		myconf="${myconf} --with-nss-libs=/usr/lib/nss"
 	fi
 
 
