@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r3.ebuild,v 1.8 2005/01/11 12:47:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8_rc2.ebuild,v 1.1 2005/01/11 12:47:47 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -10,11 +10,11 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
-SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
+SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
@@ -42,31 +42,21 @@ pkg_setup() {
 	#
 	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
-	[ -z "${ALSA_CARDS}" ] && ALSA_CARDS=all
+	if [ -z "${ALSA_CARDS}" ]; then
+		ewarn "\${ALSA_CARDS} isn't set, so we are compiling all alsa drivers."
+		ALSA_CARDS="all"
+	fi
 }
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
 
 	[ "${PROFILE_ARCH}" == "xbox" ] && \
-		epatch ${FILESDIR}/${PN}-1.0.5a-xbox-ac97.patch
+		epatch ${FILESDIR}/${PN}-1.0.7-xbox.patch
 
 	convert_to_m ${S}/Makefile
-
-	# Fix ioctl32 support
-	epatch ${FILESDIR}/${P}-ioctl32.patch-r2
-
-	# Fix audigy 7.1 detection on some cards... bug #72433
-	epatch ${FILESDIR}/${P}-audigy71.patch
-
-	# Fix order of configure operations so the kernel compiler isn't used
-	# for tests.
-	epatch ${FILESDIR}/${PN}-1.0.7-configure.patch
-	export WANT_AUTOCONF=2.5
-	autoconf
 }
 
 src_compile() {
@@ -75,7 +65,7 @@ src_compile() {
 
 	econf `use_with oss` \
 		--with-kernel="${KV_DIR}" \
-		--with-build="${KV_DIR}" \
+		--with-build="${KV_OUT_DIR}" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
@@ -100,7 +90,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/include/sound
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Provided by alsa-headers now
 	rm -rf ${D}/usr/include/sound

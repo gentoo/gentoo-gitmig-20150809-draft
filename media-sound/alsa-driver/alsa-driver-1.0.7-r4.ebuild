@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.5 2005/01/01 11:43:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.6 2005/01/11 12:47:47 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -139,4 +139,7 @@ pkg_postinst() {
 	einfo
 
 	linux-mod_pkg_postinst
+
+	einfo "Check out the ALSA installation guide availible at the following URL:"
+	einfo "http://www.gentoo.org/doc/en/alsa-guide.xml"
 }
