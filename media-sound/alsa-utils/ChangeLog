@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.79 2004/11/23 12:58:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.80 2004/11/29 12:28:15 eradicator Exp $
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  Added save option thanks to Ben Anderson <roothorick@new.rr.com> in bug #72771.
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-utils-1.0.7.ebuild:

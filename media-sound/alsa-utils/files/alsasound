@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.19 2004/11/20 10:47:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.20 2004/11/29 12:28:15 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -37,11 +37,16 @@
 #
 # 2004.10.29 - Jeremy Huddleston <eradicator@gentoo.org>
 # Cleaned up to work better for mixed builtin/module systems
+#
+# 2004.11.29 - Jeremy Huddleston <eradicator@gentoo.org>
+# Added save option thanks to Ben Anderson <roothorick@new.rr.com>
 
 alsactl=/usr/sbin/alsactl
 asoundcfg=/etc/asound.state
 aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
+
+opts="${opts} save"
 
 depend() {
 	need bootmisc localmount
@@ -171,15 +176,19 @@ restore_mixer() {
 	return 0
 }
 
-save_mixer() {
+save() {
+	ebegin "Storing ALSA Mixer Levels"
+	
 	if [ -x $alsactl ]; then
 		$alsactl -f $asoundcfg store
+		val=$?
+		eend $val
+		return $val
 	else
-		eerror -e "ERROR: Cannot find alsactl, did you forget to install media-sound/alsa-utils?"
+		eerror -e "ERROR: Cannot find alsactl."
+		eend 1
 		return 1
 	fi
-
-	return 0
 }
 
 start() {
@@ -207,12 +216,7 @@ stop() {
 	eend 0
 
 	if [ "${SAVE_ON_STOP}" = "yes" ]; then
-		einfo "Storing ALSA Mixer Levels"
-		if save_mixer; then
-			eend 0
-		else
-			eend 1
-		fi
+		save
 	fi
 
 	einfo "Unloading modules"
