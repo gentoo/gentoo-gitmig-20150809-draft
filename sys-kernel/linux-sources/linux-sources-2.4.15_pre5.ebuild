@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre1.ebuild,v 1.3 2001/11/17 07:35:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre5.ebuild,v 1.1 2001/11/18 20:02:37 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.14
-KV=2.4.15-pre1
+KV=2.4.15-pre5
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 if [ $PN = "linux-extras" ] 
@@ -36,7 +36,7 @@ fi
 ACPIV=20011109
 LVMV=1.0.1-rc4
 EXT3V=0.9.15
-LOWLV=2.4.14
+LOWLV=2.4.15-pre5
 PREEV="${KV}-1"
 
 EXT3P="ext3-2.4-${EXT3V}-`echo ${KV} |sed -e 's:\.::g' -e 's:-::'`"
@@ -50,7 +50,7 @@ EXT3P="ext3-2.4-${EXT3V}-`echo ${KV} |sed -e 's:\.::g' -e 's:-::'`"
 [ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.kernel.org/pub/linux/kernel/testing/patch-${KV}.bz2
 ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-http://www.zip.com.au/~akpm/ext3-2.4-${EXT3V}-2414.gz
+http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kernel-rml-2.4.15-pre4-1.patch
 http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz
 http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"
 	
@@ -120,14 +120,15 @@ src_unpack() {
 	dodir /usr/src/linux-${KV}-extras
 
 	cd ${S}
-	patchorama ${DISTDIR}/ext3-2.4-${EXT3V}-2414.gz ${DISTDIR}/patch-${KV}.bz2 ${GFILESDIR}/2.4.15pre1aa1/* ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${DISTDIR}/acpi-${ACPIV}.diff.gz
-	echo ">>> Fixing up rejects..."
-	cd ${GFILESDIR}/2.4.15pre1aa1-fixes
-	cp array.c ${S}/fs/proc || die
-	cp filemap.c ${S}/mm || die 
-	cp sched.h ${S}/include/linux || die
-	cp fs.h ${S}/include/linux || die
-	cp low-latency.h ${S}/include/linux || die
+	#patchorama ${DISTDIR}/ext3-2.4-${EXT3V}-2414.gz ${DISTDIR}/patch-${KV}.bz2 ${GFILESDIR}/2.4.15pre1aa1/* ${DISTDIR}/acpi-${ACPIV}.diff.gz
+	patchorama ${DISTDIR}/patch-${KV}.bz2 ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${DISTDIR}/preempt-kernel-rml-2.4.15-pre4-1.patch
+	#echo ">>> Fixing up rejects..."
+	#cd ${GFILESDIR}/2.4.15pre1aa1-fixes
+	#cp array.c ${S}/fs/proc || die
+	#cp filemap.c ${S}/mm || die 
+	#cp sched.h ${S}/include/linux || die
+	#cp fs.h ${S}/include/linux || die
+	#cp low-latency.h ${S}/include/linux || die
 	
 	echo "Preparing for compilation..."
 	cd ${S}
