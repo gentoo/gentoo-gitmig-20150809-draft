@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/sonic-rainbow-0.6.2.2.ebuild,v 1.2 2004/07/17 10:14:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/sonic-rainbow-0.6.2.2.ebuild,v 1.3 2004/09/15 17:30:11 eradicator Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="virtual/cdrtools
 	>=x11-libs/gtk+-1.2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ~ppc"
 
 src_install() {
 	make DESTDIR=${D} localedir=${D}/usr/share/locale install || die
