@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.8 2003/03/24 14:52:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.9 2003/04/19 11:57:47 mksoft Exp $
+
+*mlterm-2.6.3-r1 (19 Apr 3002)
+  19 Apr 2003; Meir Kriheli <mksoft@gentoo.org> mlterm-2.6.3-r1.ebuild :
+  Added bidi support (based on nls). Marked unstable and bumped revision
+  as fribidi is unstable as well
 
 *mlterm-2.6.3 (28 Feb 2003)
   24 Mar 2003; Masatomo Nakano <nakano@gentoo.org> mlterm-2.6.3.ebuild:
