@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-030.ebuild,v 1.7 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-030.ebuild,v 1.8 2004/09/21 23:26:47 vapier Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -13,16 +13,14 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips ~alpha arm hppa amd64 ~ia64 ppc64"
+KEYWORDS="arm alpha amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	sys-apps/hotplug-base"
-
 RDEPEND="${DEPEND}
 	>=sys-apps/baselayout-1.8.6.12-r3"
 # We need some changes for devfs type layout
-
 PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
