@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.4 2005/03/02 01:27:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.5 2005/03/13 19:49:16 danarmak Exp $
+
+  13 Mar 2005; Dan Armak <danarmak@gentoo.org>
+  kdebase-meta-3.4.0_beta1.ebuild, kdebase-meta-3.4.0_beta2.ebuild,
+  kdebase-meta-3.4.0_rc1.ebuild:
+  Change deps from kdebase-l10n, -startkde and -pics to the new apcakge
+  kdebase-data which replaces them.
 
   02 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
   kdebase-meta-3.4.0_rc1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.4.0_rc1.ebuild,v 1.2 2005/03/02 01:27:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.4.0_rc1.ebuild,v 1.3 2005/03/13 19:49:16 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -49,9 +49,7 @@ $(deprange 3.4.0_beta2 $MAXKDEVER kde-base/ksystraycmd)
 $(deprange $PV $MAXKDEVER kde-base/ktip)
 $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kxkb)
-$(deprange $PV $MAXKDEVER kde-base/kdebase-l10n)
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/nsplugins)
-$(deprange $PV $MAXKDEVER kde-base/kdebase-pics)
 $(deprange $PV $MAXKDEVER kde-base/knetattach)
-$(deprange $PV $MAXKDEVER kde-base/kdebase-startkde)"
+$(deprange $PV $MAXKDEVER kde-base/kdebase-data)"
