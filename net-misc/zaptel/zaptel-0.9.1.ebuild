@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.2 2004/05/10 13:17:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-0.9.1.ebuild,v 1.3 2004/06/10 00:51:59 agriffis Exp $
 
 inherit eutils
 
@@ -78,7 +78,7 @@ src_unpack() {
 	sed -i -e "s:#\( ztdummy.*\):\1:" Makefile
 
 	# devfs support
-	if [ -n "`use devfs26`" ]; then
+	if use devfs26; then
 		einfo "Enabling experimental devfs support for linux-2.6..."
 		epatch ${FILESDIR}/${P}-experimental-devfs26.diff
 	fi
@@ -115,7 +115,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -n "`use devfs26`" ]; then
+	if use devfs26; then
 		ewarn "*** Warning! ***"
 		ewarn "Devfs support for linux-2.6 is experimental and not"
 		ewarn "supported by digium or the asterisk project!"

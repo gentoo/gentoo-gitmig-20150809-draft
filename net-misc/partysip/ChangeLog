@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/partysip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.1 2004/03/14 21:23:55 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/ChangeLog,v 1.2 2004/06/10 00:50:14 agriffis Exp $
+
+  09 Jun 2004; Aron Griffis <agriffis@gentoo.org> partysip-2.1.1.ebuild:
+  Fix use invocation
 
 *partysip-2.1.1 (14 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.2c.ebuild,v 1.1 2004/03/12 23:49:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.2c.ebuild,v 1.2 2004/06/10 00:49:23 agriffis Exp $
 
 DESCRIPTION="A simple TCP/IP packet repeater"
 HOMEPAGE="http://www.gcd.org/sengoku/stone/"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
-	if [ "`use ssl`" ] ; then
+	if use ssl ; then
 		emake \
 			CFLAGS="${CFLAGS}" \
 			SSL=/usr \

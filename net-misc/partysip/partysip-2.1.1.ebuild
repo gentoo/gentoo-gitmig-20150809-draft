@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.1.1.ebuild,v 1.1 2004/03/14 21:23:55 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.1.1.ebuild,v 1.2 2004/06/10 00:50:14 agriffis Exp $
 
 #IUSE="gdbm berkdb debug"
 IUSE="debug"
@@ -30,7 +30,7 @@ src_compile() {
 
 	# preference for berkdb...
 	# (doesn't work atm, looks like it's always trying to use ndbm)
-#	if [ -n "`use berkdb`" ]; then
+#	if use berkdb; then
 #		myconf="${myconf} --with-db=db"
 #	else
 #		use gdbm \
