@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.2 2005/02/14 19:07:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.3 2005/02/14 19:30:00 lanius Exp $
 
 inherit multilib
 
@@ -31,6 +31,7 @@ src_install () {
 
 	# for profile
 	dodir /usr/$(get_libdir)/motif
+	keepdir /usr/$(get_libdir)/motif
 
 	# bitmaps
 	dodir /usr/include/X11/bitmaps

@@ -36,6 +36,10 @@ Options:
       --cflags               Print compilation flags for the given/current
                              profile.
 
+      --install              Install the given profile.
+
+	  --uninstall            Uninstall the given profile.
+
 USAGE_END
     exit $1
 }
@@ -74,10 +78,16 @@ for x in "$@"; do
 		;;
 
 		--clfags)
-		;;
+        ;;
 
-		--ldflags)
-		;;
+        --ldflags)
+        ;;
+
+		--install)
+        ;;
+
+        --uninstall)
+        ;;
 
 		-h|--help)
 			usage 0
