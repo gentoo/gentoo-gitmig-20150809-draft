@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.64 2004/11/05 18:18:17 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.65 2004/12/22 13:35:52 lucass Exp $
+
+  22 Dec 2004; Lukasz Strzygowski <lucass@gentoo.org> pygtk-2.4.0.ebuild,
+  pygtk-2.4.1.ebuild:
+  Marked stable on x86.
 
 *pygtk-2.4.1 (05 Nov 2004)
 
@@ -13,7 +17,7 @@
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> pygtk-2.2.0.ebuild:
   Stable on hppa.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
   Stable on alpha.
 
 *pygtk-2.4.0 (03 Oct 2004)
@@ -34,7 +38,7 @@
   24 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org> +pygtk-2.3.96.ebuild:
   Version bump.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
   Stable on x86.
 
   29 Jul 2004; Tom Gall <tgall@gentoo.org> pygtk-2.2.0.ebuild:
@@ -50,7 +54,7 @@
   25 Jul 2004; Lukasz Strzygowski <lucass@gentoo.org> +pygtk-2.3.93.ebuild:
   Version bump. Now it install also examples. Added src_test.
 
-  20 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-0.6.11-r1.ebuild,
+  20 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtk-0.6.11-r1.ebuild,
   pygtk-1.99.13-r1.ebuild, pygtk-2.0.0-r1.ebuild, pygtk-2.0.0.ebuild,
   pygtk-2.2.0.ebuild, pygtk-2.3.92.ebuild:
   dev-python/PyOpenGL is now dev-python/pyopengl - adjust dependencies
@@ -64,13 +68,13 @@
   Added and hardmasked ebuild for 2.3.92 (unstable branch). Added
   long description to metadata.xml. Updated homepage's url to http://www.pygtk.org/.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.0.0-r1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtk-2.0.0-r1.ebuild:
   Stable on alpha.
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> pygtk-2.0.0-r1.ebuild:
   Stable on mips.
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-0.6.11.ebuild,
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pygtk-0.6.11.ebuild,
   pygtk-1.99.13-r1.ebuild:
   Add missing IUSE.
 
@@ -99,7 +103,7 @@
 
 *pygtk-2.2.0 (11 Mar 2004)
 
-  11 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
+  11 Mar 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
   Version bump, bug #44378.
 
   09 Mar 2004; <agriffis@gentoo.org> pygtk-2.0.0.ebuild:
