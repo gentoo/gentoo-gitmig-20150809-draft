@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.2.6.ebuild,v 1.2 2003/07/22 12:44:19 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.2.6.ebuild,v 1.3 2003/10/15 12:33:46 weeve Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 
 IUSE=""
 
