@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.2.ebuild,v 1.3 2004/07/14 17:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.2.ebuild,v 1.4 2004/07/30 03:48:53 tgall Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gimp.org/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips ppc64"
 IUSE="X aalib altivec debug doc gimpprint gtkhtml jpeg mmx mng png python sse svg tiff wmf"
 
 # FIXME : some more things can be (local) USE flagged
