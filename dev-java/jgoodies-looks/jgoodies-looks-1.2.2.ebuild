@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.1 2005/01/05 23:55:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.2 2005/01/06 21:04:16 luckyduck Exp $
 
 inherit java-pkg
 
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar plastic.jar
+	java-pkg_dojar looks.jar
 
 	dodoc LICENSE.txt RELEASE-NOTES.txt
 	if use doc ; then
