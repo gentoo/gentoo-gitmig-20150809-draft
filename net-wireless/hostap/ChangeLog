@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.17 2003/06/18 15:21:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.18 2003/07/28 16:29:54 latexer Exp $
+
+*hostap-0.0.4 (28 Jul 2003)
+
+  28 Jul 2003; Peter Johanson <latexer@gentoo.org> hostap-0.0.4.ebuild:
+  Added 0.0.4. Switched to using local use variables instead of the silly
+  HOSTAP_DRIVER variable. Bad idea on my part. Use "hostap-nopci" or
+  "hostap-noplx" to not build those if you don't want to.
 
   18 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> :
   Fixed missing digests (bug 21466)

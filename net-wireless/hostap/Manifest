@@ -1,3 +1,4 @@
+MD5 091a24a0011df22fc137c55c5970d9a9 hostap-0.0.4.ebuild 3189
 MD5 0cccc8dc56ab904fd60590fd9a5066ac hostap-0.0.2-r1.ebuild 4289
 MD5 1792c1d78c928fa0e303eb5c36860bf3 hostap-0.0.1.ebuild 4295
 MD5 e39e12c78112afb3d4dd0dfa135ae609 hostap-0.0.3.ebuild 4285
@@ -9,4 +10,5 @@ MD5 cc10a98c98d5848f509dd21eb0828004 files/digest-hostap-0.0.3-r1 354
 MD5 423cd360c12fa0a6530fb01f334a0bd6 files/digest-hostap-0.0.1 354
 MD5 6033278b29022d54d25048af3af5e4d8 files/digest-hostap-0.0.2 354
 MD5 cc10a98c98d5848f509dd21eb0828004 files/digest-hostap-0.0.3 354
+MD5 767da41867e766a8207872c4c2859268 files/digest-hostap-0.0.4 354
 MD5 72d2af56025069ea611a9cc8456ef12e files/hostap-20021012-gentoo-patch.diff 517
