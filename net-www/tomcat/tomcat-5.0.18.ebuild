@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.5 2004/03/21 09:12:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.6 2004/04/11 06:09:25 lv Exp $
 
 inherit eutils
 
 DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 SRC_URI="http://apache.mirrors.pair.com/jakarta/tomcat-`echo ${PV} | cut -b 1`/v${PV}/bin/jakarta-${P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha ~amd64"
 LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND="sys-apps/sed
