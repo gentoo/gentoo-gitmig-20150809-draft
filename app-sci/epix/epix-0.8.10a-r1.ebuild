@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.6 2004/11/22 13:26:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.7 2004/11/24 03:09:53 ribosome Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
-
 SRC_URI="http://mathcs.holycross.edu/~ahwang/software/${P}_complete.tar.bz2"
-
 LICENSE="GPL-2"
+
 SLOT="0"
 KEYWORDS="x86 amd64"
-
 IUSE=""
-DEPEND="app-shells/bash
+
+DEPEND="virtual/tetex"
+
+RDEPEND="app-shells/bash
 		>=sys-apps/sed-4"
 
 S=${WORKDIR}/${P/a/}

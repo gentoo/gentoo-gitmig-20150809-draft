@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/epix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.10 2004/11/24 00:54:28 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.11 2004/11/24 03:09:53 ribosome Exp $
+
+  23 Nov 2004; Olivier Fisette <ribosome@gentoo.org> epix-0.8.10a-r1.ebuild,
+  epix-1.0.0.ebuild:
+  Added "virtual/tetex" dependency. Required to build the documentation.
 
 *epix-1.0.0 (23 Nov 2004)
 

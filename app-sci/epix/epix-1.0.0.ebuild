@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-1.0.0.ebuild,v 1.1 2004/11/24 00:54:28 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-1.0.0.ebuild,v 1.2 2004/11/24 03:09:53 ribosome Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="app-shells/bash
+DEPEND="virtual/tetex"
+
+RDEPEND="app-shells/bash
 		>=sys-apps/sed-4"
 
 src_compile() {
