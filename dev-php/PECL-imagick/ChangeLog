@@ -1,0 +1,8 @@
+# ChangeLog for dev-php/PECL-imagick
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-imagick/ChangeLog,v 1.1 2003/10/11 18:24:56 coredumb Exp $
+ 
+*PECL-imagick-0.9.8 (11 Oct 2003)
+  
+  11 Oct 2003; Tal Peer <coredumb@gentoo.org> PECL-imagick-0.9.8.ebuild:
+  Initial import.
