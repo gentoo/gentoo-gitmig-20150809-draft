@@ -31,7 +31,7 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-*>=sys-apps/baselayout-1.7.9-r1
+*>=sys-apps/baselayout-1.8.6.8-r1
 *>=sys-apps/portage-2.0.25
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
