@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/dccserver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.7 2004/07/01 22:20:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.8 2004/07/12 22:21:03 swegener Exp $
+
+  13 Jul 2004; Sven Wegener <swegener@gentoo.org> dccserver-0.3.ebuild,
+  dccserver-0.4.ebuild:
+  Removed unnecessary src_compile() and marked 0.4 stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dccserver-0.3.ebuild,
   dccserver-0.4.ebuild:
