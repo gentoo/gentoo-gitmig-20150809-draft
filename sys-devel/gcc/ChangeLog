@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.192 2004/03/15 09:23:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.193 2004/03/15 14:46:50 aliz Exp $
 
   15 Mar 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.2-r5.ebuild,
   gcc-3.3.2-r6.ebuild:
@@ -125,6 +125,8 @@
   03 Feb 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.2-r4.ebuild:
   Marked 3.3.2-r4 stable for mips. Stages are built for this, and no problems
   have been reported so far.
+
+*gcc-3.2.3-r4 (27 Jan 2004)
 
   27 Jan 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.3-r4.ebuild:
   Removes the fixinclude headers, fix backported from the 3.3.2 series
