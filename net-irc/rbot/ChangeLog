@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rbot
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.1 2003/10/05 20:43:39 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.2 2004/04/11 16:53:25 usata Exp $
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> rbot-0.9.6.ebuild:
+  virtual/ruby fix
 
 *rbot-0.9.6 (05 Oct 2003)
 

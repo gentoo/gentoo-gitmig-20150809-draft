@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.6.ebuild,v 1.1 2003/10/05 20:43:39 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.6.ebuild,v 1.2 2004/04/11 16:53:25 usata Exp $
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="spell xml"
 
-DEPEND=">=dev-lang/ruby-1.6.8"
+DEPEND="virtual/ruby"
 RDEPEND="${DEPEND}
 	dev-ruby/ruby-bdb
 	dev-ruby/rexml
