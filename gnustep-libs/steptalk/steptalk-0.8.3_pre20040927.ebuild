@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.1 2004/09/28 17:52:18 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/steptalk-0.8.3_pre20040927.ebuild,v 1.2 2004/10/18 12:13:11 dholm Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="StepTalk is the official GNUstep scripting framework."
 HOMEPAGE="http://www.gnustep.org/experience/StepTalk.html"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
