@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.19 2005/02/17 18:12:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.20 2005/02/28 15:52:45 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -15,8 +15,7 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
-IUSE="aalib libcaca arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
-	theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0 samba dxr3 vidix png mng"
+IUSE="aalib libcaca arts cle266 esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec opengl aac fbcon ffmpeg xv xvmc nvidia i8x0 samba dxr3 vidix png mng"
 RESTRICT="nostrip"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -39,7 +38,8 @@ RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	libcaca? ( media-libs/libcaca )
 	samba? ( net-fs/samba )
 	png? ( media-libs/libpng )
-	mng? ( media-libs/libmng )"
+	mng? ( media-libs/libmng )
+	ffmpeg? (media-video/ffmpeg)"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
@@ -165,27 +165,22 @@ src_compile() {
 	use !mng && export ac_cv_header_libmng_h=no
 
 	if use xvmc; then
-		if use nvidia && use i8x0; then
+		count="0"
+		use nvidia && count="`expr ${count} + 1`" 
+		use i8x0 && count="`expr ${count} + 1`"
+		use cle266 && count="`expr ${count} + 1`"
+		if [ "${count}" -gt "1" ]; then
 			eerror "Invalid combination of USE flags"
 			eerror "When building support for xvmc, you may only"
 			eerror "include support for one video card:"
-			eerror "   nvidia, i8x0"
+			eerror "   nvidia, i8x0, cle266"
 			eerror ""
-			eerror "Emerge again with different USE flags"
-
-			exit 1
-		elif use nvidia; then
-			xvmclib="XvMCNVIDIA"
-		elif use i8x0; then
-			xvmclib="I810XvMC"
-		else
-			ewarn "You tried to build with xvmc support."
-			ewarn "No supported graphics hardware was specified."
-			ewarn ""
-			ewarn "No xvmc support will be included."
-			ewarn "Please one appropriate USE flag and re-emerge:"
-			ewarn "   nvidia or i8x0"
+			die "emerge again with different USE flags"
 		fi
+
+		use nvidia && xvmclib="XvMCNVIDIA"
+		use i8x0 && xvmclib="I810XvmC"
+		use cle266 && xvmclib="viaXvMC"
 
 		if [ -n "${xvmclib}" ]; then
 			if [ -f "${ROOT}/usr/$(get_libdir)/libXvMC.so" -o -f "${ROOT}/usr/$(get_libdir)/libXvMC.a" ]; then
@@ -213,6 +208,19 @@ src_compile() {
 		fi
 	fi
 
+	if use X; then
+		if "${ROOT}/usr/include/X11/X.h" ]; then
+			myconf="${myconf} --x-includes=${ROOT}/usr/include"
+		elif [ -f "${ROOT}/usr/X11R6/include/X11/X.h" ]; then
+			myconf="${myconf} --x-includes=${ROOT}/usr/X11R6/include"
+		else
+			eerror "Couldn't find your X header files."
+			die "Couldn't find X headers."
+		fi
+	fi
+
+	use ffmpeg && myconf="${myconf} --with-external-ffmpeg=/usr"
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable X x11) $(use_with X x) \
@@ -229,7 +237,6 @@ src_compile() {
 		${myconf} \
 		--disable-sdltest || die "Configure failed"
 
-		#$(use_with ffmpeg external-ffmpeg) \
 		#$(use_with dvdnav external-dvdnav) \
 		#$(use_enable macos macosx-video) $(use_enable macos coreaudio) \
 
