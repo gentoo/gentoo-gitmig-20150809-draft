@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.10 2003/05/26 09:36:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.11 2003/08/24 03:19:40 strider Exp $
+
+*xerces-2.5.0 (23 Aug 2003)
+
+  23 Aug 2003; Adrian Almenar <strider@gentoo.org> xerces-2.5.0.ebuild:
+  Version Bump, that should fix bug #26758
 
 *xerces-2.3.0-r1 (26 May 2003)
 
