@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/thlnk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/thlnk/ChangeLog,v 1.5 2004/06/24 23:03:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/thlnk/ChangeLog,v 1.6 2004/08/25 16:19:07 ciaranm Exp $
+
+  25 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> thlnk-1.2.1.ebuild:
+  Normalised HOMEPAGE to www.vim.org
 
   31 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> thlnk-1.2.1.ebuild:
   Stable on sparc
