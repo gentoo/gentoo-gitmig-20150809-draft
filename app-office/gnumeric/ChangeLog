@@ -1,12 +1,11 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.17 2002/10/19 22:08:23 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.18 2002/12/09 22:48:43 mholzer Exp $
 
 
 *gnumeric-1.1.8 (02 Sep 2002)
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> gnumeric-1.1.8.ebuild :
-
   Added ppc to KEYWORDS.
 
   02 Sep 2002; Spider <spider@gentoo.org> gnumeric-1.1.8.ebuild :
@@ -19,6 +18,10 @@
   Also closes bug #5395
 
 *gnumeric-1.0.9 (29 Jul 2002)
+
+  09 Dec 2002; Martin Holzer <mholzer@gentoo.org gnumeric-1.0.9.ebuild gnumeric-1.0.8.ebuild Changelog :
+  Fixed SRC_URI.
+
   29 Jul 2002; Spider <spider@gentoo.org> gnumeric-1.0.9.ebuild gnumeric-1.0.8.ebuild gnumeric-1.1.5.ebuild :
   bump version, add KEYWORDS to all versions.
 
@@ -50,20 +53,17 @@ gnumeric-1.1.5 (13 Jun 2002)
 *gnumeric-1.0.5-r2 (9 Apr 2002)
 
   9 Apr 2002; M.Schlemmer <azarah@gentoo.org> gnumeric-1.0.5-r2.ebuild :
-
   Update to use the virtualx eclass for enabling build in console.
 
 *gnumeric-1.0.5-r1 (4 Apr 2002)
 
   4 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnumeric-1.0.5-r1.ebuild :
-
   Added Mandrake's fix to allow gnumeric to be compiled without the DISPLAY
   being set.  Clever -- it uses Xvfb.
 
 *gnumeric-1.0.5 (11 March 2002)
 
   19 Feb 2002; M.Schlemmer <azarah@gentoo.org> gnumeric-1.0.4-r1.ebuild :
-
   Enable Gnome Basic support that was broken for a while.  Added EOG to RDEPEND
   for image support.
 
@@ -72,7 +72,6 @@ gnumeric-1.1.5 (13 Jun 2002)
 *gnumeric-1.0.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
