@@ -1,14 +1,18 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.22 2003/06/05 23:03:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.23 2003/08/18 06:30:47 kumba Exp $
+
+
+*slocate-2.7-r2 (17 Apr 2003)
+
+  18 Aug 2003; Joshua Kinard <kumba@gentoo.org> slocate-2.7-r2.ebuild:
+  Changed ~mips to mips in KEYWORDS
 
   05 Jun 2003; Aron Griffis <agriffis@gentoo.org> slocate-2.7-r2.ebuild:
   Add dependency on sed-4
 
   05 Jun 2003; Aron Griffis <agriffis@gentoo.org> slocate-2.7-r2.ebuild:
   Mark stable on alpha
-
-*slocate-2.7-r2 (17 Apr 2003)
 
   06 May 2003; Guy Martin <gmsoft@gentoo.org> slocate-2.7-r2.ebuild :
   Added sys-apps/shadow to DEPEND since pkg_postinst() use groupmod and groupadd.
