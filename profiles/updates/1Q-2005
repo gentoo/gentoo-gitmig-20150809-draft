@@ -12,3 +12,4 @@ move games-emulation/mupen64-blight-glN64 games-emulation/mupen64-glN64
 move sci-biology/njplot-unrooted sci-biology/njplot
 move www-proxy/dnrd net-dns/dnrd
 move net-mail/poppassd_pam net-mail/poppassd_ceti
+move sys-kernel/pegasos-dev-sources sys-kernel/pegasos-sources
