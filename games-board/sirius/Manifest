@@ -1,4 +1,4 @@
-MD5 0b5b01fd48178eb33491139af936c6aa files/digest-sirius-0.8.0 65
 MD5 27c7d8089f8dead3ed52bfde6464d581 ChangeLog 741
+MD5 c5091fb419436605ad794ea2dff461c5 sirius-0.8.0.ebuild 562
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 65660c094a7e3d1aa7b44db519b3c4d7 sirius-0.8.0.ebuild 551
+MD5 0b5b01fd48178eb33491139af936c6aa files/digest-sirius-0.8.0 65
