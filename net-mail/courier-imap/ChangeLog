@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.2 2002/02/21 19:17:21 g2boojum Exp $
+
+*courier-imap-1.4.1-r2 (21 Feb 2002)
+
+21 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> :
+	Modified the ebuild so that /usr/sbin/{imapd,pop3d} get renamed to
+	/usr/sbin/{courier-imapd,courier-pop3d}.  I also had to change hack
+	the /usr/lib/courier-imap/*.rc files to call these newly-named functions.
+	While I was at it I cleaned up the ebuilds and fixed the not-yet-caught
+	bug that pop3d was still trying to use Maildir instead of ${MAILDIR}.
+	Fixes bug #584.
 
 *courier-imap-1.4.1-r1 (1 Feb 2002)
 
