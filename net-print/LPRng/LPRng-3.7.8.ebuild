@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer System Team <system@gentoo.org>
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.7.8.ebuild,v 1.1 2001/10/04 23:22:54 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.7.8.ebuild,v 1.2 2001/10/07 07:58:43 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended implementation of the Berkley LPR print spooler"
@@ -37,9 +37,8 @@ src_install() {
 	newdoc ${FILESDIR}/printcap printcap.sample
 	newdoc lpd.conf lpd.conf.sample
 	newdoc lpd.perms lpd.perms.sample
-	cp HOWTO/LPRng-HOWTO.pdf ${D}/usr/share/doc/${P}
-	insinto /usr/share/doc/${P}/html
-	doins HOWTO/{LPRng-HOWTO.html,*.jpg}
+	insinto /usr/share/doc/${P} ; doins HOWTO/LPRng-HOWTO.pdf
+	insinto /usr/share/doc/${P}/html ; doins HOWTO/{LPRng-HOWTO.html,*.jpg}
 
 	diropts -m 755 ; dodir /var/spool/lpd
 	diropts -o lp -g lp -m 0700 ; dodir /var/spool/lpd/lp
