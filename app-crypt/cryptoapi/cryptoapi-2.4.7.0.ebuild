@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Preston A. Elder <prez@goth.net>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.3 2002/05/01 01:03:02 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.4 2002/05/01 20:57:47 prez Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Modules that add encryption ability at the kernel level."
@@ -9,7 +9,7 @@ SRC_URI="http://prdownloads.sourceforge.net/cryptoapi/${P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/cryptoapi"
 
 DEPEND=">=sys-apps/util-linux-2.11o-r2
-		sys-kernel/linux-sources"
+	virtual/linux-sources"
 
 src_compile() {
 	econf || die
