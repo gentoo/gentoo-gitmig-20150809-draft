@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.12 2003/04/05 22:05:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.13 2003/07/12 13:23:07 aliz Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> kdbg-1.2.5.3.ebuild :
   Marked ppc stable
@@ -25,6 +25,11 @@
   submission (#9472)
 
   30 Apr 2002; Dan Armak <danarmak@gentoo.org> (1.2.5.2,3): fix bug #2226 (S= line needed).
+
+*kdbg-1.2.5.3 (13 Mar 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *kdbg-1.2.5 (13 Apr 2002)
 

@@ -1,8 +1,8 @@
 # ChangeLog for dev-util/gnustep-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.13 2003/07/02 08:10:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.14 2003/07/12 13:23:07 aliz Exp $
 
-*gnustep-bsae-1.6.0-r1 (02 Jul 2003)
+*gnustep-base-1.6.0-r1 (02 Jul 2003)
 
   02 Jul 2003; raker@gentoo.org <raker@gentoo.org> gnustep-base-1.6.0-r1.ebuild:
   Now depends on the gnustep eclass.

@@ -1,8 +1,8 @@
 # ChangeLog for dev-util/cccc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.2 2003/02/14 22:50:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/ChangeLog,v 1.3 2003/07/12 13:23:07 aliz Exp $
 
-*cccc-3.pre63 (14 Feb 2003)
+*cccc-3.0_pre63 (14 Feb 2003)
     
   14 Feb 2003 Luca Barbato <lu_zero@gentoo.org>
   First commit

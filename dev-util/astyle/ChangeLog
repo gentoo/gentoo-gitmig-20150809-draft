@@ -1,10 +1,10 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.4 2003/02/12 06:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.5 2003/07/12 13:23:07 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*astyle-0.15.3 (24 Apr 2002)
+*astyle-1.15.3 (24 Apr 2002)
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> astyle-1.15.3.ebuild files/digest/astyle-1.15.3 :
   
