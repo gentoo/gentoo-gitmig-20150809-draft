@@ -1,6 +1,13 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.41 2004/11/22 00:23:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.42 2004/12/05 01:48:24 swegener Exp $
+
+*leafnode-2.0.0_alpha20041113 (05 Dec 2004)
+
+  05 Dec 2004; Sven Wegener <swegener@gentoo.org>
+  -leafnode-2.0.0_alpha20041007.ebuild,
+  +leafnode-2.0.0_alpha20041113.ebuild:
+  Version bump in the development series.
 
 *leafnode-1.10.7 (22 Nov 2004)
 

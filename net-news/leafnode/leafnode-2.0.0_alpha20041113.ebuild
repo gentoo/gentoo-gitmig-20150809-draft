@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041007.ebuild,v 1.2 2004/10/23 01:19:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041113.ebuild,v 1.1 2004/12/05 01:48:25 swegener Exp $
 
 MY_P=${P/_/.}a
 
