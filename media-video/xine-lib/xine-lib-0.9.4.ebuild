@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-lib/xine-lib-0.9.4.ebuild,v 1.3 2001/11/14 04:00:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-lib/xine-lib-0.9.4.ebuild,v 1.4 2001/11/14 04:14:30 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -11,6 +11,7 @@ HOMEPAGE="http://xine.sourceforge.net/"
 DEPEND="virtual/glibc
 	>=media-libs/libdvdcss-1.0.0
 	>=media-libs/libdvdread-0.9.2
+	>=media-libs/win32codecs-0.50
 	X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	aalib? ( media-libs/aalib )
@@ -37,6 +38,7 @@ src_compile() {
 		    --mandir=/usr/share/man				\
 		    --infodir=/usr/share/info				\
 		    --sysconfdir=/etc					\
+		    --with-w32-path=/usr/lib/win32			\
 		    ${myconf} || die
 		    
 	make || die
