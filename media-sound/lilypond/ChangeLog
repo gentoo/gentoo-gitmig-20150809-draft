@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.14 2003/10/01 15:34:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.15 2003/12/03 16:04:40 agriffis Exp $
+
+  03 Dec 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.8.2.ebuild:
+  Stable on alpha and x86
 
   01 Oct 2003; Aron Griffis <agriffis@gentoo.org> lilypond-2.0.0.ebuild:
   Fix trailing whitespace for repoman
