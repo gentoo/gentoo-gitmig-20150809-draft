@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.3 2003/01/12 20:00:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.4 2003/01/19 08:58:17 azarah Exp $
 
 inherit eutils
 
@@ -54,12 +54,19 @@ src_unpack() {
 	
 	local KV_major="`uname -r | cut -d. -f1`"
 	local KV_minor="`uname -r | cut -d. -f2`"
+	local KV_micro="`uname -r | cut -d. -f3 | sed -e 's:[^0-9].*::'`"
 
 	cd ${S}
 	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
 	then
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
 		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
+
+		if [ "${KV_micro}" -gt 53 ]
+		then
+			EPATCH_SINGLE_MSG="Applying module loader no common sections..." \
+			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.54.diff
+		fi
 	else
 		# This is a minor patch to make it work with rmap enabled kernels
 		EPATCH_SINGLE_MSG="Applying rmap compat patch for kernel 2.4..."

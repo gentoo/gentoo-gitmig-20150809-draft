@@ -1,6 +1,6 @@
 diff -ru NVIDIA_kernel-1.0-4191/Makefile NVIDIA_kernel-1.0-4191-2.5-tl/Makefile
---- NVIDIA_kernel-1.0-4191/Makefile	2002-12-09 21:27:15.000000000 +0100
-+++ NVIDIA_kernel-1.0-4191-2.5-tl/Makefile	2002-12-17 19:58:32.000000000 +0100
+--- NVIDIA_kernel-1.0-4191/Makefile	Mon Dec  9 12:27:15 2002
++++ NVIDIA_kernel-1.0-4191-2.5-tl/Makefile	Fri Dec 27 05:36:52 2002
 @@ -2,7 +2,7 @@
  #   Generated on 'builder3.nvidia.com' on Mon Dec  9 11:49:03 PST 2002
  
@@ -21,8 +21,11 @@ diff -ru NVIDIA_kernel-1.0-4191/Makefile NVIDIA_kernel-1.0-4191-2.5-tl/Makefile
  endif
  
  ifeq ($(shell if test -d $(KERNDIR)/kernel; then echo yes; fi),yes)
-@@ -60,6 +62,7 @@
+@@ -58,8 +60,10 @@
+ # allow specification of alternate include file tree on command line and extra defines
+ ifdef SYSINCLUDE
  INCLUDES += -I$(SYSINCLUDE)
++INCLUDES += -I$(SYSINCLUDE)/../arch/i386/mach-generic
  else
  INCLUDES += -I$(KERNINC)
 +INCLUDES += -I$(MACHINC)
@@ -30,8 +33,8 @@ diff -ru NVIDIA_kernel-1.0-4191/Makefile NVIDIA_kernel-1.0-4191-2.5-tl/Makefile
  
  DEFINES+=$(EXTRA_DEFINES)
 diff -ru NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-2.5-tl/nv-linux.h
---- NVIDIA_kernel-1.0-4191/nv-linux.h	2002-12-09 21:27:15.000000000 +0100
-+++ NVIDIA_kernel-1.0-4191-2.5-tl/nv-linux.h	2002-12-17 19:59:14.000000000 +0100
+--- NVIDIA_kernel-1.0-4191/nv-linux.h	Mon Dec  9 12:27:15 2002
++++ NVIDIA_kernel-1.0-4191-2.5-tl/nv-linux.h	Fri Dec 27 03:56:49 2002
 @@ -28,19 +28,16 @@
  #include <linux/module.h>
  #include <linux/version.h>
@@ -110,6 +113,18 @@ diff -ru NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-2.5-tl/nv-linu
 -#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&(map_nr)->count))
 -#  define GET_EVENT_QUEUE(nv)           ((struct __wait_queue_head *) ((nv)->event_queue))
 -#  define VMA_PRIVATE(vma)              ((vma)->vm_private_data)
+-#else
+-#  define in_irq()                      (local_irq_count[smp_processor_id()])
+-#  define LINUX_VMA_OFFS(vma)           ((vma)->vm_offset)
+-#  define GET_MODULE_SYMBOL(mod, sym)   (void*) get_module_symbol((mod), (sym))
+-#  define PUT_MODULE_SYMBOL(sym)
+-#  define GET_MAP_NR(phys_page)         MAP_NR(__va(phys_page))
+-#  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&mem_map[map_nr].count))
+-#  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&mem_map[map_nr].count))
+-#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&mem_map[map_nr].count))
+-#  define GET_EVENT_QUEUE(nv)           ((struct wait_queue **) &((nv)->event_queue))
+-#  define VMA_PRIVATE(vma)              ((void*)((vma)->vm_pte))
+-#endif
 +#define LINUX_VMA_OFFS(vma)           (((vma)->vm_pgoff) << PAGE_SHIFT)
 +#define GET_MODULE_SYMBOL(mod,sym)    (const void *) inter_module_get(sym)
 +#define PUT_MODULE_SYMBOL(sym)        inter_module_put((char *) sym)
@@ -129,18 +144,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-2.5-tl/nv-linu
 +#  define RESTORE_FLAGS(x)              local_irq_restore(x)
 +#  define MAY_SLEEP()                   (!in_interrupt() && !in_atomic())
 +#  define SMP_NUM_CPUS                  num_online_cpus()
- #else
--#  define in_irq()                      (local_irq_count[smp_processor_id()])
--#  define LINUX_VMA_OFFS(vma)           ((vma)->vm_offset)
--#  define GET_MODULE_SYMBOL(mod, sym)   (void*) get_module_symbol((mod), (sym))
--#  define PUT_MODULE_SYMBOL(sym)
--#  define GET_MAP_NR(phys_page)         MAP_NR(__va(phys_page))
--#  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&mem_map[map_nr].count))
--#  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&mem_map[map_nr].count))
--#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&mem_map[map_nr].count))
--#  define GET_EVENT_QUEUE(nv)           ((struct wait_queue **) &((nv)->event_queue))
--#  define VMA_PRIVATE(vma)              ((void*)((vma)->vm_pte))
--#endif
++#else
 +#  define NV_DEVICE_NUMBER(_minor)      ((_minor) & 0x0f)
 +#  define NV_IS_CONTROL_DEVICE(_minor)  (((_minor) & 0xff) == 0xff)
 +#  define SUSER()                       suser()
@@ -186,7 +190,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-2.5-tl/nv-linu
          return !(eflags & NV_CPU_INTERRUPT_FLAGS_BIT);
      }
   
-@@ -265,17 +293,16 @@
+@@ -265,16 +293,15 @@
  
      nv_alloc_t *alloc_queue;
  
@@ -202,16 +206,15 @@ diff -ru NVIDIA_kernel-1.0-4191/nv-linux.h NVIDIA_kernel-1.0-4191-2.5-tl/nv-linu
  
      U032 vblank_notifier;
      U032 waiting_for_vblank;
- 
+-
 -    /* queue for for NV's OS events */
 -    void *event_queue;
--
+ 
      /* get a timer callback every second */
      struct timer_list rc_timer;
- 
 diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
---- NVIDIA_kernel-1.0-4191/nv.c	2002-12-09 21:27:15.000000000 +0100
-+++ NVIDIA_kernel-1.0-4191-2.5-tl/nv.c	2002-12-17 19:58:32.000000000 +0100
+--- NVIDIA_kernel-1.0-4191/nv.c	Mon Dec  9 12:27:15 2002
++++ NVIDIA_kernel-1.0-4191-2.5-tl/nv.c	Fri Dec 27 04:56:44 2002
 @@ -36,24 +36,12 @@
  // keep track of opened clients and their process id so they
  //   can be free'd up on abnormal close
@@ -634,22 +637,18 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
                               LINUX_VMA_OFFS(vma),
                               vma->vm_end - vma->vm_start,
                               vma->vm_page_prot))
-@@ -1340,9 +1308,13 @@
+@@ -1340,9 +1308,7 @@
          }
          else
          {
-+#ifdef KERNEL_2_5
-+            rm_map_agp_pages(nv, (void **) &vma,
-+                          at->class, at->priv_data);
-+#else
-             rm_map_agp_pages(nv, (void **) &vma->vm_start,
-                           at->class, at->priv_data);
+-            rm_map_agp_pages(nv, (void **) &vma->vm_start,
+-                          at->class, at->priv_data);
 -
-+#endif
++            rm_map_agp_pages(nv, (void **) &vma, at->class, at->priv_data);
          }
          nvos_list_page_count(at->page_table, at->num_pages);
          nv_unlock_at(nv);
-@@ -1384,7 +1356,7 @@
+@@ -1384,7 +1350,7 @@
          while (pages--)
          {
              page = (unsigned long) at->page_table[i++];
@@ -658,7 +657,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
                	return -EAGAIN;
              start += PAGE_SIZE;
              pos += PAGE_SIZE;
-@@ -1398,8 +1370,10 @@
+@@ -1398,8 +1364,10 @@
  
      vma->vm_file = file;
  
@@ -669,7 +668,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
      return 0;
  }
-@@ -1425,8 +1399,7 @@
+@@ -1425,8 +1393,7 @@
          return nv_kern_ctl_poll (file, wait);
  
      // add us to the list
@@ -679,7 +678,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
      nv_lock_ldata(nv);
  
      // wake the user on any file-specific event, or a general vblank
-@@ -1505,11 +1478,15 @@
+@@ -1505,11 +1472,15 @@
  
      switch (_IOC_NR(cmd))
      {
@@ -695,7 +694,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
          /* pass out info about the card */
          case _IOC_NR(NV_IOCTL_CARD_INFO):
-@@ -1651,8 +1628,7 @@
+@@ -1651,8 +1622,7 @@
      if (need_to_run_bottom_half)
      {
          NV_ATOMIC_INC(nvl->bh_count);
@@ -705,7 +704,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
      }
  }
  
-@@ -1740,36 +1716,18 @@
+@@ -1740,36 +1710,18 @@
  
      nv_lock_ldata(nv);
  
@@ -744,7 +743,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
      nv->flags &= ~NV_FLAG_HOTKEY_OCCURRED;
  
      nv->usage_count++;
-@@ -1792,16 +1750,10 @@
+@@ -1792,16 +1744,10 @@
      nv_printf(NV_DBG_INFO, "nv_kern_ctl_close\n");
  
      nv_lock_ldata(nv);
@@ -763,7 +762,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
      nv_unlock_ldata(nv);
  
      rm_free_unused_clients(nv, current->pid, (void *) file);
-@@ -1809,9 +1761,12 @@
+@@ -1809,9 +1755,12 @@
      /* free up our per file private data */
      if (file->private_data)
          NV_KFREE(file->private_data);
@@ -776,7 +775,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
      return 0;
  }
-@@ -1837,7 +1792,7 @@
+@@ -1837,7 +1786,7 @@
      if (file->f_flags & O_NONBLOCK)
          return -EAGAIN;
  
@@ -785,7 +784,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
      nv_lock_ldata(nv);
  
-@@ -1867,7 +1822,7 @@
+@@ -1867,7 +1816,7 @@
      nv_ctl_device.nv_state.flags |= NV_FLAG_HOTKEY_OCCURRED;
      nv_unlock_ldata(&(nv_ctl_device.nv_state));
  
@@ -794,7 +793,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  }
  
  struct host_bridge_t {
-@@ -2217,7 +2172,7 @@
+@@ -2217,7 +2166,7 @@
  {
      pgd_t *pg_dir;
      pmd_t *pg_mid_dir;
@@ -803,7 +802,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
  #if defined(NVCPU_IA64)
      if (address > __IA64_UNCACHED_OFFSET)
-@@ -2241,14 +2196,7 @@
+@@ -2241,14 +2190,7 @@
      if (pmd_none(*pg_mid_dir))
          goto failed;
  
@@ -819,7 +818,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  
      if (!pte_present(pte))
          goto failed;
-@@ -2589,7 +2537,7 @@
+@@ -2589,7 +2531,7 @@
  
      nvfp->any_fired_notifiers++;
  
@@ -828,7 +827,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  }
  
  /*
-@@ -2606,7 +2554,7 @@
+@@ -2606,7 +2548,7 @@
      if (nvl->waiting_for_vblank)
          nvl->vblank_notifier++;
  
@@ -837,7 +836,7 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
  }
  
  
-@@ -2657,12 +2605,8 @@
+@@ -2657,12 +2599,8 @@
      if ( (NV_AGP_DISABLED(nv)) && (config & NVOS_AGP_CONFIG_NVAGP) )
      {
          /* make sure the user does not have agpgart loaded */
@@ -851,8 +850,8 @@ diff -ru NVIDIA_kernel-1.0-4191/nv.c NVIDIA_kernel-1.0-4191-2.5-tl/nv.c
          } else
              status = rm_init_agp(nv);
 diff -ru NVIDIA_kernel-1.0-4191/os-agp.c NVIDIA_kernel-1.0-4191-2.5-tl/os-agp.c
---- NVIDIA_kernel-1.0-4191/os-agp.c	2002-12-09 21:27:15.000000000 +0100
-+++ NVIDIA_kernel-1.0-4191-2.5-tl/os-agp.c	2002-12-17 19:58:32.000000000 +0100
+--- NVIDIA_kernel-1.0-4191/os-agp.c	Mon Dec  9 12:27:15 2002
++++ NVIDIA_kernel-1.0-4191-2.5-tl/os-agp.c	Fri Dec 27 03:56:49 2002
 @@ -48,7 +48,11 @@
  typedef struct {
      int           (*backend_acquire)(void);
@@ -1076,8 +1075,8 @@ diff -ru NVIDIA_kernel-1.0-4191/os-agp.c NVIDIA_kernel-1.0-4191-2.5-tl/os-agp.c
 -
 -
 diff -ru NVIDIA_kernel-1.0-4191/os-interface.c NVIDIA_kernel-1.0-4191-2.5-tl/os-interface.c
---- NVIDIA_kernel-1.0-4191/os-interface.c	2002-12-09 21:27:15.000000000 +0100
-+++ NVIDIA_kernel-1.0-4191-2.5-tl/os-interface.c	2002-12-17 19:58:32.000000000 +0100
+--- NVIDIA_kernel-1.0-4191/os-interface.c	Mon Dec  9 12:27:15 2002
++++ NVIDIA_kernel-1.0-4191-2.5-tl/os-interface.c	Fri Dec 27 04:56:41 2002
 @@ -31,7 +31,7 @@
      PHWINFO pDev
  )
@@ -1249,7 +1248,7 @@ diff -ru NVIDIA_kernel-1.0-4191/os-interface.c NVIDIA_kernel-1.0-4191-2.5-tl/os-
  }
  
  
-@@ -1036,12 +991,10 @@
+@@ -1036,11 +991,9 @@
      if (sgi_funcs.add_barrier == NULL)
      {
  #if defined(TESTING_SWAP)
@@ -1257,8 +1256,7 @@ diff -ru NVIDIA_kernel-1.0-4191/os-interface.c NVIDIA_kernel-1.0-4191-2.5-tl/os-
          inter_module_register(ADD_BARRIER_FUNC,    THIS_MODULE, sgitest_add_barrier);
          inter_module_register(REMOVE_BARRIER_FUNC, THIS_MODULE, sgitest_remove_barrier);
          inter_module_register(SWAP_READY_FUNC,     THIS_MODULE, sgitest_swap_ready);
- #endif
 -#endif
+ #endif
          sgi_funcs.add_barrier = GET_MODULE_SYMBOL(0, ADD_BARRIER_FUNC);
          sgi_funcs.remove_barrier = GET_MODULE_SYMBOL(0, REMOVE_BARRIER_FUNC);
-         sgi_funcs.swap_ready = GET_MODULE_SYMBOL(0, SWAP_READY_FUNC);

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.18 2003/01/12 20:00:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.19 2003/01/19 08:58:17 azarah Exp $
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4191-r1.ebuild :
+
+  Add a patch for kernel 2.5.54 or later's module loader not handling common
+  sections.
 
   12 Jan 2003; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4191-r1.ebuild :
 
