@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.03.ebuild,v 1.1 2004/12/02 21:26:14 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.02.03.ebuild,v 1.2 2005/02/13 21:18:22 genstef Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ IUSE="unicode"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="net-dialup/capi4k-utils
 		net-misc/hylafax"
@@ -48,6 +48,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-hylafax-spooldir=/var/spool/fax || die "econf failed"
+	libtoolize --copy --force
 	emake || die "emake failed"
 }
 
