@@ -1,10 +1,16 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.2 2002/03/09 11:49:41 guidob Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.3 2002/03/27 12:39:12 seemant Exp $
+
+*cdrtools-1.11.19 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> cdrtools-1.11.19.ebuild :
+
+  Version update.
 
 *cdrtools-1.11.16 (9 Mar 2002)
 
-  9 Mar 2002; Guido Bakker <guidob@gentoo.org ebuild :
+  9 Mar 2002; Guido Bakker <guidob@gentoo.org> cdrtools-1.11.16.ebuild :
 
   Version update.
 
