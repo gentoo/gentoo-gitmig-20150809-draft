@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.1 2004/02/29 12:08:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.0.0.ebuild,v 1.2 2004/03/23 01:53:18 kumba Exp $
 
-inherit eutils libtool
+inherit eutils libtool gnuconfig
 
 DESCRIPTION="System Utilities Based on Sysfs"
 HOMEPAGE="http://linux-diag.sourceforge.net/Sysfsutils.html"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc ~mips"
 
 DEPEND="virtual/glibc"
 
@@ -28,6 +28,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
+
 	econf || die "./configure failed"
 
 	emake || die
