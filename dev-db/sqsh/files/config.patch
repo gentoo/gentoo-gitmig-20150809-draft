@@ -1,6 +1,8 @@
-60c60
+59,60c59,60
+< /* #undef HAVE_STRCASECMP */
 < /* #undef HAVE_STRERROR */
 ---
+> #define HAVE_STRCASECMP 1
 > #define HAVE_STRERROR 1
 62,67c62,67
 < /* #undef HAVE_STRFTIME */
