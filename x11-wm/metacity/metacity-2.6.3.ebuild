@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.3.ebuild,v 1.8 2004/06/30 14:05:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.3.ebuild,v 1.9 2004/11/05 02:54:32 obz Exp $
 
-inherit gnome2
+inherit gnome2 toolchain-funcs
 
 DESCRIPTION="Gnome default windowmanager"
 HOMEPAGE="http://www.gnome.org/"
@@ -35,8 +35,7 @@ src_unpack(){
 	# causes ICE on ppc w/ gcc (still)
 	cd ${S}
 	if use ppc; then
-		[ -z "${CC}" ] && CC=gcc
-		if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
+		if [ gcc-version != "2.95" ] ; then
 			patch -p0 < ${FILESDIR}/metacity-2.4.3-ppc-gcc3.2.diff || die "patch failed"
 		fi
 	fi

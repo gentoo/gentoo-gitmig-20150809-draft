@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.11 2004/08/26 16:32:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.12 2004/11/05 02:54:32 obz Exp $
 
 inherit gnome2 eutils
 
@@ -41,15 +41,5 @@ src_unpack() {
 	# fix the xinerama configure stuff (#46291)
 	epatch ${FILESDIR}/${P}-xinerama_config_test.patch
 	WANT_AUTOCONF=2.5 autoconf || die
-
-#We can remove that one eventually
-	# causes ICE on ppc w/ gcc (still)
-#	use ppc && (
-#		[ -z "${CC}" ] && CC=gcc
-#		if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
-#			patch -p0 < ${FILESDIR}/metacity-2.4.3-ppc-gcc3.2.diff || die "patch failed"
-#		fi
-#	)
-
 
 }

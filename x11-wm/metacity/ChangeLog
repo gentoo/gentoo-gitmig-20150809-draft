@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.75 2004/11/04 08:01:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.76 2004/11/05 02:54:32 obz Exp $
+
+  05 Nov 2004; Mike Gardiner <obz@gentoo.org> metacity-2.6.3.ebuild,
+  metacity-2.6.5.ebuild, metacity-2.8.0.ebuild:
+  Using the toolchain-funcs eclass for handling the detection of CC version,
+  rather than doing it ourselves, see bug #70119
 
 *metacity-2.8.6 (04 Nov 2004)
 
