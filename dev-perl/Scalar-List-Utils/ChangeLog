@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Scalar-List-Utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.8 2004/05/26 20:15:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.9 2004/06/06 03:32:56 mcummings Exp $
+
+*Scalar-List-Utils-1.14 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Scalar-List-Utils-1.14.ebuild:
+  dep update for html-fromtext
 
   26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   Scalar-List-Utils-1.11.ebuild:
