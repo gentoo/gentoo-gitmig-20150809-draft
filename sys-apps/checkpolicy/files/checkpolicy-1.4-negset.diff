@@ -1,0 +1,82 @@
+diff -ruN checkpolicy.old/policy_parse.y checkpolicy/policy_parse.y
+--- checkpolicy.old/policy_parse.y	2003-10-15 07:15:18.431551648 -0400
++++ checkpolicy/policy_parse.y	2003-10-15 07:19:00.550784392 -0400
+@@ -1,6 +1,10 @@
+ 
+ /*
+  * Author : Stephen Smalley, <sds@epoch.ncsc.mil> 
++ *
++ * Modified October 14, 2003 David Caplan, <dac@tresys.com>
++ * - allow exclusion of types and attributes in type/attribute lists
++ * 
+  */
+ 
+ /* FLASK */
+@@ -1660,6 +1664,7 @@
+ {
+ 	type_datum_t *t;
+ 	unsigned int i;
++	int add = TRUE;
+ 
+ 	if (strcmp(id, "*") == 0) {
+ 		/* set all types */
+@@ -1674,14 +1679,27 @@
+ 		for (i = 0; i < policydbp->p_types.nprim; i++) {
+ 			if (ebitmap_get_bit(set, i))
+ 				ebitmap_set_bit(set, i, FALSE);
+-			else 
++			else
+ 				ebitmap_set_bit(set, i, TRUE);
+ 		}
+ 		free(id);
+ 		return 0;
+ 	}
+ 
+-	t = hashtab_search(policydbp->p_types.table, id);
++	/* see if we want to exclude type/attribute */
++	if (id[0] == '-') {
++	         if (strlen(id) == 1) {
++		      sprintf(errormsg, "illegal identifier %s", id);
++		      yyerror(errormsg);
++		      free(id);
++		      return -1;
++	         }
++	         add = FALSE;
++	         t = hashtab_search(policydbp->p_types.table, id+1);
++	} else {
++	         t = hashtab_search(policydbp->p_types.table, id);
++	}
++
+ 	if (!t) {
+ 		sprintf(errormsg, "unknown type %s", id);
+ 		yyerror(errormsg);
+@@ -1693,12 +1711,13 @@
+ 		/* set all types with this attribute */
+ 		for (i = ebitmap_startbit(&t->types); i < ebitmap_length(&t->types); i++) {
+ 			if (!ebitmap_get_bit(&t->types, i)) 
+-				continue;		
+-			ebitmap_set_bit(set, i, TRUE);
++				continue;
++			/* set or clear bit depending on add */
++			ebitmap_set_bit(set, i, add);
+ 		}
+ 	} else {
+-		/* set one type */
+-		ebitmap_set_bit(set, t->value - 1, TRUE);
++		/* set or clear (depending on add) one type */
++		ebitmap_set_bit(set, t->value - 1, add);
+ 	}
+ 
+ 	free(id);
+diff -ruN checkpolicy.old/policy_scan.l checkpolicy/policy_scan.l
+--- checkpolicy.old/policy_scan.l	2003-10-15 07:15:18.426552408 -0400
++++ checkpolicy/policy_scan.l	2003-10-15 07:10:39.149009048 -0400
+@@ -127,7 +127,7 @@
+ t2 |
+ T2				{ return(T2); }
+ "/"({letter}|{digit}|_|"."|"-"|"/")*	{ return(PATH); }
+-{letter}({letter}|{digit}|_)*	{ return(IDENTIFIER); }
++({letter}|"-")({letter}|{digit}|_)*	{ return(IDENTIFIER); }
+ {letter}({letter}|{digit}|_|"."|"-")*	{ return(USER_IDENTIFIER); }
+ {digit}{digit}*                 { return(NUMBER); }
+ #[^\n]*                         { /* delete comments */ }
