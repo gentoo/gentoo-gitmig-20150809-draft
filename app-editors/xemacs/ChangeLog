@@ -1,8 +1,8 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.9 2002/05/31 23:42:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.10 2002/05/31 23:43:37 mkennedy Exp $
 
-*xemacs-21.4.8 (21 May 2002)
+*xemacs-21.4.8-r1 (31 May 2002)
 
   31 May 2002; Matthew Kennedy <mkennedy@gentoo.org> xemacs-21.4.8-r1.ebuild, 
   files/digest-xemacs-21.4.8-r1, ChangeLog :
