@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.6.ebuild,v 1.2 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.6.ebuild,v 1.3 2003/01/08 06:00:40 george Exp $
 
 IUSE="qt"
 
@@ -15,9 +15,9 @@ LICENSE="GPL-2"
 
 DEPEND="qt? ( >=qt-3.0.0 )"
 
-#the app requires babel at run time to be able to perform various file type conversions
-RDEPEND="${DEPEND}
-	app-sci/babel"
+#if you would like to use app-sci/babel instead of included openbabel, please uncomment the following 2 lines
+#RDEPEND="${DEPEND}
+#	app-sci/babel"
 
 src_compile() {
 	./configure --prefix=/usr || die
@@ -34,4 +34,3 @@ src_install () {
 
 	dodoc README.txt TODO.txt COPYRIGHT.txt HISTORY.txt
 }
-
