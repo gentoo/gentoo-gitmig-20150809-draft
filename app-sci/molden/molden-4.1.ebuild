@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.1.ebuild,v 1.1 2004/07/27 08:03:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/molden-4.1.ebuild,v 1.2 2004/07/28 08:08:41 spyderous Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -22,6 +22,16 @@ RDEPEND="virtual/x11
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
+	# Set fortran compiler, since gcc-config doesn't
+	[ -z ${FC} ] && FC="g77"
+
+	# Check for fortran compiler
+	if [ ! "`which ${FC} 2> /dev/null`" ]; then
+		eerror "Fortran compiler not found."
+		eerror "Please recompile sys-devel/gcc with f77 in USE flags."
+		die
+	fi
+
 	unpack ${A}
 	cd ${S}
 
