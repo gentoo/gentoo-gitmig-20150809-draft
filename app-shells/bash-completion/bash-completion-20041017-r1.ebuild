@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r1.ebuild,v 1.1 2004/11/12 10:57:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r1.ebuild,v 1.2 2004/11/15 15:34:01 ka0ttic Exp $
 
 GENCOMP_VERS="1.0_beta2"
 
@@ -24,10 +24,10 @@ src_install() {
 	insinto /etc
 	doins bash_completion
 
+	# >=dev-util/subversion-1.1.1-r3 provides extremely superior completions
+	has_version ">=dev-util/subversion-1.1.1-r3" && rm contrib/subversion
+
 	insinto /usr/share/bash-completion
-	# don't install subversion completion, since the subversion
-	# package provides its own
-	rm contrib/subversion
 	doins contrib/*
 
 	exeinto /etc/profile.d
@@ -47,7 +47,7 @@ pkg_postinst() {
 	echo
 	einfo "Add the following line to your ~/.bashrc to"
 	einfo "activate completion support in your bash:"
-	einfo "[ -f /etc/profile.d/bash-completion ] && source /etc/profile.d/bash-completion"
+	einfo "[ -f /etc/profile.d/bash-completion ] && . /etc/profile.d/bash-completion"
 	einfo
 	einfo "Additional complete functions can be enabled by symlinking them from"
 	einfo "/usr/share/bash-completion to /etc/bash_completion.d"
