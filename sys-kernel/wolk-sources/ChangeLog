@@ -1,6 +1,35 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.8 2003/02/23 18:58:06 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.9 2003/03/08 21:09:35 livewire Exp $
+
+*wolk-sources-4.0s-rc2
+
+  08 March 2003; Bob Johnson <livewire@gentoo.org>:
+
+	Changelog from v4.0s-rc1 -> v4.0s-rc2
+	- removed an important SMP unbreakage patch
+	- "CONFIG_X86_L1_CACHE_SHIFT redefined" errors
+	- RAID5 disasters
+	- handle SCSI recovered errors
+	- handle too large vmallocs gracefully
+	- xdr nfs highmem deadlock + symbol export fix
+	- get_vm_area
+	- UP local APIC on SMP Athlon
+	- initialisation of a stack of modules
+	- target_cpus() for APIC/UP/SMP problems
+	- rmap: Potential infinite loop around rebalance_dirty_zone()
+	- XFS+ACL + GRSEC+ACL not working correct
+	- reiserfs: possible transaction overflow when deleting highly
+              	    fragmented large files.
+	- LVM v1.0.7
+	- Super FreeS/WAN v1.99.6-rc1
+	- Orinoco v0.13b
+	- grsecurity v1.99d-CVS as of 2003-03-03
+	- IPMI Driver v18
+	- NTFS Driver 2.4.20 v2.1.1a
+	- Broadcom Tigon3 v1.4c
+	- "nfract" from vm.bdflush to 30 for Desktop Tweaks
+	- made sysctl "Preempt Warnings" an config option	
 
 *wolk-sources-4.0s-rc1
   
