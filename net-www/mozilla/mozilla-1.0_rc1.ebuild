@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0_rc1.ebuild,v 1.4 2002/04/26 06:16:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0_rc1.ebuild,v 1.5 2002/04/27 12:02:48 pvdabeel Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -151,8 +151,32 @@ src_install() {
 	make || die
 	dodir /usr/lib
 
-	tar xzf ${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz 	\
-		-C ${D}/usr/lib
+	# ppc fix #
+ 
+ 	SYSTEM_ARCH=`echo $ARCH |\
+	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	if [ -z "$SYSTEM_ARCH" ]
+	then
+		SYSTEM_ARCH=`uname -m |\
+	    sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	fi
+	
+    TODO="${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz"
+
+	case $SYSTEM_ARCH in 
+	  ppc) 
+	   TODO="${S}/dist/mozilla-powerpc-unknown-linux-gnu.tar.gz";;
+	  i386)
+	   TODO="${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz";;
+	  sparc64)
+	   ;;
+	  arm)
+	   ;;
+	esac
+
+	tar xzf ${TODO} -C ${D}/usr/lib
+
+	# end ppc fix #
 
 	# Install the development tools in /usr
 	dodir /usr/bin
