@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.6 2003/07/16 13:57:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5l-r6.ebuild,v 1.7 2003/09/23 15:26:51 azarah Exp $
 
 IUSE="nls"
 
@@ -102,4 +102,15 @@ src_install() {
 
 	exeinto /etc/cron.daily
 	doexe ${FILESDIR}/makewhatis.cron
+
+	for x in $(awk '
+		/^MANSECT/ {
+			split($2, sects, ":")
+			for (x in sects)
+				print "cat" sects[x]
+		}' ${D}/etc/man.conf)
+	do
+		keepdir /var/cache/man/${x}
+	done
 }
+
