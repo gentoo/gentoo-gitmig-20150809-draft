@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/root-portal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.1 2002/10/24 18:16:47 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/ChangeLog,v 1.2 2002/12/01 03:27:47 nall Exp $
 
 *root-portal-0.4.11 (16 Oct 2002)
+
+  30 Nov 2002; Jon Nall <nall@gentoo.org> root-portal-0.4.11.ebuild :
+  added ~ppc
 
   16 Oct 2002; Spider <spider@gentoo.org> ChangeLog root-portal-0.4.11.ebuild :
   first ebuild by myself, its a handly little util to draw text/graphs on the 
