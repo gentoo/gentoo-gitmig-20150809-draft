@@ -1,9 +1,11 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.15 2002/12/20 21:12:45 tuxus Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.16 2003/01/01 06:51:40 vapier Exp $
 
 *bash-2.05a-r3 (20 Dec 2002)
+
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added static support
 
   20 Dec 2002; Jan Seidel <tuxus@gentoo.org> bash-2.05a-r3.ebuild :
   Added mips to keywords
@@ -23,8 +25,10 @@
  
 *bash-2.05b-r3 (25 Sep 2002)
 
-  25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r3.ebuild :
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added static support
 
+  25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r3.ebuild :
   Added a few patches.
 
 *bash-2.05b-r2 (1 Sep 2002)
