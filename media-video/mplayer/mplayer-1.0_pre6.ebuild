@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.4 2004/12/27 05:18:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.5 2004/12/27 14:23:31 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -256,7 +256,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable gif)"
 	myconf="${myconf} $(use_enable jpeg)"
 	#myconf="${myconf} $(use_enable ladspa)"
-	myconf="${myconf} $(use_enable dts)"
+	myconf="${myconf} $(use_enable dts libdts)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska internal-matroska)"
 	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"

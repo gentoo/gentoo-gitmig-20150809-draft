@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.246 2004/12/27 05:18:11 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.247 2004/12/27 14:23:31 chriswhite Exp $
+
+  27 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
+  Fixed dts -> libdts configure option as per bug #75762.
 
   27 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
   Added dts support back per bug #75669. Also fixed libdv being forced
