@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.106 2004/07/03 23:40:40 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.107 2004/07/20 00:19:28 pylon Exp $
+
+  20 Jul 2004; Lars Weiler <pylon@gentoo.org> python-2.1.3-r1.ebuild:
+  Made python-2.1 stable on ppc as there are still some ebuilds which require
+  this version.
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
   Stable on alpha.
