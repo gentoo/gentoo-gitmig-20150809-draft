@@ -1,8 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.13 2003/01/09 15:23:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.14 2003/01/10 00:38:43 kain Exp $
 
-  07 Jan 2003; Aron Griffis <agriffis@gentoo.org> autofs-3.1.7-r6.ebuild:
+  09 Jan 2003; Kain <kain@kain.org> autofs-3.1.7-r5.ebuild:
+  Add ppc to KEYWORDS
+  
+  07 Jan 2003; Aron Griffis <agriffis@gentoo.org> autofs-3.1.7-r5.ebuild:
   Add alpha to KEYWORDS
 
 *autofs-3.1.7-r5 (17 Nov 2002)
