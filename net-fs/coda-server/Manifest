@@ -1,5 +1,5 @@
-MD5 092125274df14b1f1d9dce2db58de09e ChangeLog 904
-MD5 ac3e471d213331424ecd089a844c7748 coda-server-5.3.19.ebuild 1868
+MD5 830bd491d1d0d6206de8e3e49b0b3430 ChangeLog 1010
+MD5 548e85665592892739253a9974c22108 coda-server-5.3.19.ebuild 1884
 MD5 49e881e0eadfae1a5910ebce38f0d7f3 metadata.xml 323
 MD5 296b4e177ceef43d26796422bbe2ec15 files/coda-server-5.3.19-gentoo.patch 732
 MD5 c64c09508bed2660cfd97ac95fe466e2 files/digest-coda-server-5.3.19 64
