@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.ebuild,v 1.1 2003/10/22 22:53:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.ebuild,v 1.2 2003/10/22 22:57:22 seemant Exp $
 
 inherit gnuconfig
 
@@ -40,9 +40,9 @@ src_compile() {
 		${myconf} || die
 
 	if use static; then
-		make LDFLAGS="--static" || die
+		emake LDFLAGS="--static" || die
 	else
-		make || die
+		emake || die
 	fi
 }
 
