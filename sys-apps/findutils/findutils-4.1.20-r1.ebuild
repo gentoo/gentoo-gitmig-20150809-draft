@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.13 2004/03/24 01:16:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.14 2004/03/30 02:57:36 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -30,14 +30,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ "${ARCH}" == "ppc64" ] || [ "${ARCH}" == "sh" ] ; then
-		# need to make sure the autotool files are updated to support
-		# these architectures
-		libtoolize -c -f || die "libtool failed"
-		aclocal || die "aclocal failed"
-		automake -c -f -a || die "automake failed"
-		autoconf || die "autoconf failed"
-	fi
+	# Detect new systems properly
+	use mips && gnuconfig_update
+	use ppc64 && gnuconfig_update
+	use sh && gnuconfig_update
 
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
@@ -50,10 +46,6 @@ src_unpack() {
 }
 
 src_compile() {
-
-	# Detect mips systems properly
-	use mips && gnuconfig_update
-
 	if use afs ; then
 		append-flags -I/usr/afsws/include
 		append-ldflags -lpam
