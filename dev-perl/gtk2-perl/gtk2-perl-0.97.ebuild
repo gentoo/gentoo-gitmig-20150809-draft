@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-0.97.ebuild,v 1.1 2003/09/08 11:17:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-0.97.ebuild,v 1.2 2003/12/06 17:52:30 spider Exp $
 
-IUSE="gtk2 perl"
+IUSE="perl"
 inherit perl-module
 
 MY_P=Gtk2-${PV}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.6 2003/09/08 11:17:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.7 2003/12/06 17:52:30 spider Exp $
+
+  06 Dec 2003; <spider@gentoo.org> gtk2-perl-0.12.ebuild,
+  gtk2-perl-0.26.ebuild, gtk2-perl-0.90.ebuild, gtk2-perl-0.92.ebuild,
+  gtk2-perl-0.96.ebuild, gtk2-perl-0.97.ebuild:
+  Removed gtk2 from IUSE.
 
 *gtk2-perl-0.97 (08 Sep 2003)
 
