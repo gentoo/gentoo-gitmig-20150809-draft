@@ -1,5 +1,5 @@
-MD5 40c74e064f88f6ab0eb64ca8e17557ae ChangeLog 1710
-MD5 767ae34bfc126580aa65ca78b50c950e eflite-0.3.8-r2.ebuild 1208
+MD5 4fc6d9aa75aa7ac941e096996d7bff62 ChangeLog 1808
+MD5 522526fa4175147d0cc0089345ed4dd3 eflite-0.3.8-r2.ebuild 1217
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 d00d20939f9c2af3962608cc96917fbb files/es.conf 216
 MD5 3ce16fcf84acfe36c846349d6f10eb3a files/eflite-0.3.8-daemon.patch 1728

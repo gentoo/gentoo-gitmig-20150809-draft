@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.8 2004/04/22 17:54:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.9 2004/04/23 16:27:09 eradicator Exp $
+
+  23 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  eflite-0.3.8-r2.ebuild:
+  Added IUSE.
 
   22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   eflite-0.3.8-r2.ebuild:
