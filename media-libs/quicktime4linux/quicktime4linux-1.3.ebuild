@@ -1,35 +1,30 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.3.ebuild,v 1.3 2001/07/01 15:38:53 achim Exp $
+# Author: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.3.ebuild,v 1.4 2002/03/21 15:51:06 seemant Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="quicktime library for linux"
-SRC_URI="http://heroinewarrior.com/${A}"
+SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
 
 DEPEND="virtual/glibc media-libs/jpeg"
 RDEPEND="virtual/glibc"
 
 src_compile() {
-    if [ -z "`use mmx`" ] ; then
-      myconf="--no-mmx"
-    fi
-    try ./configure $myconf
-#    echo "$CFLAGS" > c_flags
-    try make
-
+	use mmx || myconf="--no-mmx"
+	./configure ${myconf} || die
+	
+	emake || die
 }
 
 src_install () {
 
-   dolib.so libquicktime.so
-   dolib.a  libquicktime.a
-   insinto /usr/include/quicktime
-   doins *.h
-   dodoc README 
-   docinto html
-   dodoc docs/*.html
+	dolib.so libquicktime.so
+	dolib.a  libquicktime.a
+	insinto /usr/include/quicktime
+	doins *.h
+	dodoc README 
+	dohtml -r docs
 }
 
