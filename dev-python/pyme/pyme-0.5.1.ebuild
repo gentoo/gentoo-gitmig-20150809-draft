@@ -1,25 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.10 2004/09/24 23:55:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.11 2004/11/17 02:49:36 pythonhead Exp $
 
-IUSE=""
+inherit distutils
 
-DESCRIPTION="GPGME Interface for Python"
 MY_P=${P/-/_}
+DESCRIPTION="GPGME Interface for Python"
 SRC_URI="http://gopher.quux.org:70/devel/pyme/${MY_P}.tar.gz"
 HOMEPAGE="http://gopher.quux.org:70/devel/pyme"
-
-DEPEND="=app-crypt/gpgme-0.3.14-r1
-	>=sys-apps/sed-4"
-
-RDEPEND="=app-crypt/gpgme-0.3.14-r1
-	dev-lang/swig"
-
 SLOT="0"
 KEYWORDS="~x86 ~sparc ppc"
 LICENSE="GPL-2"
+IUSE=""
+DEPEND="=app-crypt/gpgme-0.3.14-r1
+	>=sys-apps/sed-4"
+RDEPEND="=app-crypt/gpgme-0.3.14-r1
+	dev-lang/swig"
 
-inherit distutils
 
 src_unpack() {
 	unpack ${A}
