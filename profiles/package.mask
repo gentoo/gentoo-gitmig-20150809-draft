@@ -289,3 +289,6 @@ app-misc/gkrellweather
 media-sound/gkrellm-volume
 media-sound/gkrellmms
 net-misc/gkrellmwireless
+
+#Should be tested
+dev-lang/python-2.2
