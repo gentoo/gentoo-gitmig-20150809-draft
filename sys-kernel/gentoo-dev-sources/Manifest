@@ -32,11 +32,10 @@ MD5 76384ba3ed721c7a118ce26c1a1abcf5 files/digest-gentoo-dev-sources-2.6.8-r5 28
 MD5 bedc7f069171f711f192d4c0dd245344 files/digest-gentoo-dev-sources-2.6.8-r6 283
 MD5 3634c82b2a27f59ecb9ba78585d8a0d1 files/digest-gentoo-dev-sources-2.6.8-r7 283
 MD5 5dd81f06655db1c5383d108e776bfff6 files/digest-gentoo-dev-sources-2.6.8-r8 283
-MD5 0667d9963cc7d4c0136dbcff54ae937f files/digest-gentoo-dev-sources-2.6.8-r9 283
+MD5 b3783cd6813d8e37e1c1c8b8d1bb6722 files/digest-gentoo-dev-sources-2.6.8-r9 283
 MD5 5505dba36be29cd0c4521e6e6dac8978 files/digest-gentoo-dev-sources-2.6.7-r10 221
 MD5 4480e95e5e59c1f1a309e568d2e448a5 files/digest-gentoo-dev-sources-2.6.7-r11 221
 MD5 66e72150c11296bb20bb4e02d1270232 files/digest-gentoo-dev-sources-2.6.7-r12 221
 MD5 399fb0ed7c2b6ff9203eaaf209048cd8 files/digest-gentoo-dev-sources-2.6.7-r13 221
 MD5 91a2a65a9e5b571fa1b0ef88dbe5cfbe files/digest-gentoo-dev-sources-2.6.7-r14 221
 MD5 980949de52189c7d9c1d791b7f5cc27e files/2.6-do_munmap.patch 743
-MD5 31ec7b4310dd7be3e34aab0204f9b1e8 files/gentoo-dev-sources-2.6.5.CAN-2004-0109.patch 2072
