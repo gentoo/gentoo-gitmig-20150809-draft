@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/embassy-emnu
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy-emnu/ChangeLog,v 1.1 2004/07/20 01:35:10 ribosome Exp $
+
+* embassy-emnu-1.05 (19 Jul 2004)
+
+  14 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-emnu-1.05.ebuild, metadata.xml, ChangeLog
+  Initial import.
