@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.2 2003/10/14 21:21:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.3 2003/10/15 19:45:07 weeve Exp $
 
 inherit flag-o-matic
 
@@ -100,5 +100,5 @@ pkg_postinst() {
 	einfo "mode. To enable it, run:"
 	einfo ""
 	einfo "\tchmod u+s /usr/bin/screen"
-	einfo "\tchmod g-w /var/run/screen"
+	einfo "\tchmod go-w /var/run/screen"
 }
