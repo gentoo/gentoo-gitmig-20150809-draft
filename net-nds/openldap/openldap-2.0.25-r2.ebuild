@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.2 2002/09/07 09:14:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.25-r2.ebuild,v 1.3 2002/09/09 09:17:29 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -27,15 +27,21 @@ RDEPEND="virtual/glibc
 src_compile() {
 	local myconf
 
-	use tcpd && myconf="${myconf} --enable-wrappers" \
+	use tcpd \
+		&& myconf="${myconf} --enable-wrappers" \
 		|| myconf="${myconf} --disable-wrappers"
-	use ssl && myconf="${myconf} --with-tls" \
+
+	use ssl \
+		&& myconf="${myconf} --with-tls" \
 		|| myconf="${myconf} --without-tls"
-	use readline && myconf="${myconf} --with-readline" \
+
+	use readline \
+		&& myconf="${myconf} --with-readline" \
 		|| myconf="${myconf} --without-readline"
-	if use ldap-berkdb; then
+
+	if use berkdb; then
 		myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
-	elif use ldap-gdbm; then
+	elif use gdbm; then
 		myconf="${myconf} --enable-ldbm --with-ldbm-api=gdbm"
 	elif use ldap-none; then
 		myconf="${myconf} --disable-ldbm"
