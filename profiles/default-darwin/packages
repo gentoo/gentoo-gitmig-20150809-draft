@@ -6,5 +6,6 @@
 
 # Things we want emerge system to install for all Darwin profiles
 
+*sys-apps/freebsd-stat
 *sys-apps/sed
 *virtual/editor
