@@ -1,27 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.1.ebuild,v 1.6 2003/01/18 19:19:26 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.1.ebuild,v 1.7 2003/01/24 21:32:52 vapier Exp $
 
-IUSE="nls static build"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/sed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
+
 KEYWORDS="x86 -ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="nls static build"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-
+DEPEND="virtual/glibc
+	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	local myconf
-	[ -z "`use nls`" ] && myconf="--disable-nls"
-	econf ${myconf} || die
-	if [ -z "`use static`" ]
-	then
+	econf `use_enable nls` || die
+	if [ `use static` ] ; then
 		emake || die
 	else
 		emake LDFLAGS=-static || die
