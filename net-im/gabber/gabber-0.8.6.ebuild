@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Frederic Brin <duckx@libertysurf.fr>, Maintainer: Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.6.ebuild,v 1.1 2002/01/12 01:19:34 verwilst Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.6.ebuild,v 1.2 2002/02/09 11:47:56 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Jabber Client"
 SRC_URI="http://prdownloads.sourceforge.net/gabber/${P}.tar.gz"
 HOMEPAGE="http://gabber.sourceforge.net"
-
+SLOT="0"
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=gnome-base/libglade-0.17-r1
 	>=gnome-extra/gal-0.13

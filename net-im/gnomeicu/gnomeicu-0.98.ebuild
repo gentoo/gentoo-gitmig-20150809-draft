@@ -1,12 +1,13 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joshua Pierre <joshua@swool.com>
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2 
+# Author Joshua Pierre <joshua@swool.com>, Maintainer Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.ebuild,v 1.2 2002/02/09 11:47:57 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
 SRC_URI="http://download.sourceforge.net/gnomeicu/${P}.tar.gz"
 HOMEPAGE="http://gnomeicu.sourceforge.net/"
-
+SLOT="0"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	 >=sys-libs/gdbm-1.8.0
 	 >=gnome-base/libglade-0.16

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.2 2002/01/09 21:02:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.3 2002/02/09 11:47:57 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 use kde && inherit kde-base
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 DESCRIPTION="KDE/QT ICQ Client with v6 support only (UDP)" 
-
+SLOT="0"
 DEPEND="$DEPEND
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 

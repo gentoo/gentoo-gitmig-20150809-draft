@@ -1,21 +1,25 @@
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.2 2002/01/06 04:03:09 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.3 2002/02/09 11:47:57 verwilst Exp $
 
-
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ interface for Licq, the KDE/QT ICQ client"
-SRC_URI="http://gtk.licq.org/download/${A}"
+SRC_URI="http://gtk.licq.org/download/${P}.tar.gz"
 HOMEPAGE="http://gtk.licq.org"
-
-DEPEND="virtual/glibc sys-devel/perl nls? ( sys-devel/gettext )
-        >=net-im/licq-1.0.2 gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
+SLOT="0"
+DEPEND="virtual/glibc 
+	sys-devel/perl 
+	nls? ( sys-devel/gettext )
+        >=net-im/licq-1.0.2 
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
 	>=x11-libs/gtk+-1.2.10-r4
         spell? ( >=app-text/pspell-0.11.2 )"
 
-RDEPEND="virtual/glibc >=net-im/licq-1.0.2
-	>=x11-libs/gtk+-1.2.10-r4 gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
+RDEPEND="virtual/glibc 
+	>=net-im/licq-1.0.2
+	>=x11-libs/gtk+-1.2.10-r4 
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
         spell? ( >=app-text/pspell-0.11.2 )"
 
 

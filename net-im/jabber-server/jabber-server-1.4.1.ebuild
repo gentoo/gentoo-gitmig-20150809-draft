@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.3 2002/01/06 04:03:09 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.4 2002/02/09 11:47:57 verwilst Exp $
 
 S="${WORKDIR}/jabber-1.4.1"
 HOMEPAGE="http://www.jabber.org"
-DESCRIPTION="Open Source Jabber Server"
-
+DESCRIPTION="Open Source Jabber Server & Transports"
+SLOT="0"
 SRC_URI="http://download.jabber.org/dists/1.4/final/jabber-1.4.1.tar.gz
 		 http://download.jabber.org/dists/transports/aim-transport/aim-transport-0.9.24c.tar.gz
 		 http://download.jabber.org/dists/1.4/final/conference-0.4.1.tar.gz
@@ -16,9 +16,9 @@ SRC_URI="http://download.jabber.org/dists/1.4/final/jabber-1.4.1.tar.gz
 		 http://download.jabber.org/dists/1.4/final/yahoo-transport-0.8-1.4.linux.tar.gz"
 
 DEPEND="virtual/glibc
-		virtual/python
-		>=dev-libs/pth-1.4.0
-		>=app-admin/sudo-1.6.3_p7"
+	virtual/python
+	>=dev-libs/pth-1.4.0
+	>=app-admin/sudo-1.6.3_p7"
 
 src_compile() {
 
@@ -83,11 +83,11 @@ src_install() {
 pkg_postinst() {
 
 	echo
-	echo "#########################################################################"
-	echo "# Done!																  #"
-	echo "# Now go to /usr/jabber, and run './ServSetup to configure your server. #"
-	echo "# Have fun!															  #"
-	echo "#########################################################################"
+	echo "##########################################################################"
+	echo "# Done!								       #"
+	echo "# Now go to /usr/jabber, and configure your server before starting it.   #"
+	echo "# Have fun!							       #"
+	echo "##########################################################################"
 	echo
 
 }

@@ -1,21 +1,17 @@
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.7 2002/01/06 04:03:09 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.8 2002/02/09 11:47:57 verwilst Exp $
 
 
-LICQV=licq-1.0.3
-A=${LICQV}.tar.gz
+LICQV=licq-1.0.4
 S=${WORKDIR}/${P}
 DESCRIPTION="Enables you to use Licq from the console using a ncurses 'GUI'"
-SRC_URI="http://download.sourceforge.net/licq/${A}
-         ftp://ftp.fanfic.org/pub/licq/srcs/${A}
-         ftp://licq.darkorb.net/${A}
-         ftp://ftp.fr.licq.org/pub/licq/srcs/${A}
-         ftp://ftp.ru.licq.org/pub/licq/srcs/${A}
-         ftp://ftp.pt.licq.org/pub/mirrors/licq/srcs/${A}
-         ftp://mirror.itcnet.ro/pub/licq/srcs/${A}"
+SRC_URI="http://download.sourceforge.net/licq/${LICQV}.tar.gz
+         ftp://ftp.fanfic.org/pub/licq/srcs/${LICQV}.tar.gz
+         ftp://licq.darkorb.net/${LICQV}.tar.gz"
 HOMEPAGE="http://www.licq.org"
-
+SLOT="0"
 DEPEND="virtual/glibc sys-devel/gcc
         >=sys-libs/ncurses-5.2
         >=net-im/licq-1.0.3"
@@ -25,13 +21,13 @@ RDEPEND="virtual/glibc sys-devel/gcc
 
 src_compile() {
   cd ${WORKDIR}/${LICQV}/plugins/console-${PV}
-  try ./configure --host=${CHOST} --prefix=/usr --with-licq-includes=/usr/include/licq
-  try make
+  ./configure --host=${CHOST} --prefix=/usr --with-licq-includes=/usr/include/licq || die
+  make || die
 }
 
 src_install() {
   cd ${WORKDIR}/${LICQV}/plugins/console-${PV}
-  try make prefix=${D}/usr install
+  make prefix=${D}/usr install || die
   dodoc README
 }
 

@@ -1,19 +1,19 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/caim/caim-0.03.ebuild,v 1.2 2001/04/29 19:42:08 achim Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# Maintainer Bart Verwilst <verwilst@gentoo.org>, Author Ryan Tolboom <ryan@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-im/caim/caim-0.03.ebuild,v 1.3 2002/02/09 11:47:56 verwilst Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Console AIM Client"
-SRC_URI="http://www.mercyground.co.uk/${A}"
+SRC_URI="http://www.mercyground.co.uk/${P}.tar.gz"
 HOMEPAGE="http://www.mercyground.co.uk"
-
-DEPEND=">=sys-libs/ncurses-5.1"
+SLOT="0"
+DEPEND="virtual/glibc
+	>=sys-libs/ncurses-5.1"
 
 src_unpack() {
 
-    unpack ${A}
+    unpack ${P}.tar.gz
     patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
     cd ${S}
     echo "CFLAGS += ${CFLAGS}" >> Makefile.rules
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 
-    try make
+    emake || die
 
 }
 

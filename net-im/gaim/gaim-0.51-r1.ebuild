@@ -1,26 +1,25 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@bigfoot.com>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.51-r1.ebuild,v 1.1 2002/01/27 06:21:16 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.51-r1.ebuild,v 1.2 2002/02/09 11:47:56 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"
 SRC_URI="http://prdownloads.sourceforge.net/gaim/${P}.tar.bz2"
 HOMEPAGE="http://gaim.sourceforge.net"
-
+SLOT="0"
 DEPEND=">=x11-libs/gtk+-1.2.10-r4
 	nls? ( sys-devel/gettext )
 	gnome? ( >=gnome-base/gnome-core-1.4 )
 	perl? ( >=sys-devel/perl-5.6.1 )
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	esd? ( >=media-sound/esound-0.2.22-r2 )
-	arts? ( >=kde-base/kdelibs-2.1.1 )"
+	arts? ( >=kde-base/kdelibs-2.2 )"
 	
 src_compile() {
     
     local myopts gnomeopts
 
-    # note for clarity: || means not enabled, && means enabled
     use esd ||  myopts="--disable-esd"
     use nas ||  myopts="$myopts --disable-nas"
     use perl || myopts="$myopts --disable-perl"

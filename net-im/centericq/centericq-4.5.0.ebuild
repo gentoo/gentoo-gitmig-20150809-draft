@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Shachar Goldin <aldarsior@yahoo.com>, Maintainer Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.5.0.ebuild,v 1.2 2002/01/26 23:17:46 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.5.0.ebuild,v 1.3 2002/02/09 11:47:56 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 HOMEPAGE="http://konst.org.ua/eng/software/centericq/info.html"
-
+SLOT="0"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	>=dev-libs/libsigc++-1.0.4"
