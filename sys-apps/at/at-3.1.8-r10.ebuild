@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.7 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.8 2004/11/13 01:00:47 ka0ttic Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Queues jobs for later execution"
 HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/a/at/at_${PV}-11.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc alpha ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ppc ~sparc alpha ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -21,19 +21,28 @@ RDEPEND="virtual/libc
 src_unpack() {
 	unpack ${A} && cd ${S} || die "error unpacking"
 
+	# respect LDFLAGS
+	sed -i "s/\(@LIBS@\)/@LDFLAGS@ \1/" Makefile.in || \
+		die "sed Makefile.in failed"
+
 	# Fix bug 33696 by allowing usernames longer than 8 chars,
 	# thanks to Yuval Kogman for the patch
 	epatch ${FILESDIR}/at-3.1.8-longuser.patch
 }
 
 src_compile() {
+	# QA security notice fix; see "[gentoo-core] Heads up changes in suid
+	# handling with portage >=51_pre21" for more details.
+	append-ldflags -Wl,-z,now
+
 	./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
 		--with-jobdir=/var/cron/atjobs \
 		--with-atspool=/var/cron/atspool \
 		--with-etcdir=/etc/at \
 		--with-daemon_username=at \
 		--with-daemon_groupname=at || die
-	emake || die
+
+	emake LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {

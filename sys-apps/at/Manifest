@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 23f7b1fdcfc5d77a348f6d7fea97fc14 at-3.1.8-r9.ebuild 1344
-MD5 e990cb7c661ae307fb0970ec9c587e08 at-3.1.8-r10.ebuild 1578
-MD5 803c8a5cbd45e8e60a4d0b5c9892bae1 ChangeLog 2797
+MD5 0cca9afeea7da7a203e03bdf3d9b4f72 at-3.1.8-r10.ebuild 1870
+MD5 fec7c1b25237ee178beb947331630752 ChangeLog 2969
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
 MD5 f189f039555f37eb1a0792837d33ea04 files/at-3.1.8-longuser.patch 723
 MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r9 63
@@ -13,7 +13,7 @@ MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r10 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZoVEEZCkKN40op4RAkeXAJ9UxGx9CCfMrmDi6hiO+2ujLXAKqQCggYJY
-G8MkOydgynXRW0i0IqU2k+M=
-=owCh
+iD8DBQFBlVzIEZCkKN40op4RAobUAJ9EI+dZtfoJvKmnKA2sqB9R9i3mjwCgnMx6
+YXdXTzS+MjQogCsfKZnnDAo=
+=/0Dv
 -----END PGP SIGNATURE-----
