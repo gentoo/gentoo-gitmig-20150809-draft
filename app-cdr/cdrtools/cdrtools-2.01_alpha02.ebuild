@@ -1,20 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha02.ebuild,v 1.2 2003/02/03 10:42:22 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha02.ebuild,v 1.3 2003/02/05 20:33:31 azarah Exp $
 
+IUSE=""
+
+inherit eutils
+
+S="${WORKDIR}/${PN}-2.01"
 DESCRIPTION="A set of tools for CDR drives, including cdrecord."
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.gz"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
-LICENSE="GPL-2"
-DEPEND="virtual/glibc"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.gz"
-S=${WORKDIR}/${PN}-2.01
+DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	# Add support for 2.5 kernels
+	# <azarah@gentoo.org> (05 Feb 2003)
+	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
+	
 	cd ${S}/DEFAULTS
 	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
 	mv Defaults.linux.hacked Defaults.linux
