@@ -2,7 +2,7 @@ MD5 e6811a9b5e680cf30978893e6c7a2caf kdenetwork-3.0.5b.ebuild 968
 MD5 0fa9477ff987143f6689c775a36e5bd9 kdenetwork-3.1.2.ebuild 877
 MD5 2855066433f32ebe500a93ea3b1d366c kdenetwork-2.2.2-r2.ebuild 603
 MD5 7ee307959ba5ec560a0ad4044842f832 kdenetwork-3.0.4-r1.ebuild 1058
-MD5 ab815504ee1202af353991ee509bb283 kdenetwork-3.1.1-r1.ebuild 997
+MD5 b7b4cf255077db04957177b7d00ebbed kdenetwork-3.1.1-r1.ebuild 996
 MD5 fd1aaa7c1ecd967eefbcf86cac93e295 ChangeLog 5776
 MD5 8cfc35635879b3b4fc158d2efa9ec0bb files/lisa 559
 MD5 86ce22554d0bf8df52bc6fe7425184a3 files/reslisa 570
