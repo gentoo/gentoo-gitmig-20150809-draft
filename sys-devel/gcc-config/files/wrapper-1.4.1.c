@@ -2,7 +2,7 @@
  * Copyright 1999-2003 Gentoo Technologies, Inc.
  * Distributed under the terms of the GNU General Public License v2
  * Author: Martin Schlemmer <azarah@gentoo.org>
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.1.c,v 1.1 2003/04/12 18:44:22 azarah Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.1.c,v 1.2 2003/04/12 21:19:26 azarah Exp $
  */
 
 #define _REENTRANT
@@ -20,10 +20,13 @@
 #include <stdarg.h>
 #include <errno.h>
 
-//#define DEBUG
-
 #define GCC_CONFIG	"/usr/bin/gcc-config"
-#define ENVD_FILE	"/etc/env.d/05gcc"
+
+#ifndef CC_PROFILE
+# define ENVD_FILE	"/etc/env.d/05gcc"
+#else
+# define ENVD_FILE	"/etc/env.d/gcc/" CC_PROFILE
+#endif
 
 struct wrapper_data {
 	char name[MAXPATHLEN + 1];
@@ -144,16 +147,10 @@ static int find_target_in_envd(struct wrapper_data *data)
 			if ((NULL != token) && (strlen(token) > 0)) {
 				
 				str = token;
-#ifdef DEBUG
-				printf("* token = %s\n", token);
-#endif
 				/* A bash variable may be unquoted, quoted with " or
 				 * quoted with ', so extract the value without those ..
 				 */
 				token = strsep(&str, "\n\"\'");
-#ifdef DEBUG
-				printf("* token = %s\n", token);
-#endif
 
 				while (NULL != token) {
 					
@@ -164,9 +161,6 @@ static int find_target_in_envd(struct wrapper_data *data)
 					}
 
 					token = strsep(&str, "\n\"\'");
-#ifdef DEBUG
-					printf("* token = %s\n", token);
-#endif
 				}
 			}
 			
@@ -184,35 +178,30 @@ static void find_wrapper_target(struct wrapper_data *data)
 	FILE *inpipe = NULL;
 	char *str = data->tmp;
 
-#ifdef DEBUG
-	printf("* calling find_target_in_path\n");
-#endif
+#ifndef CC_PROFILE
 	if (find_target_in_path(data))
 		return;
-
-#ifdef DEBUG
-	printf("* calling find_target_in_envd\n");
 #endif
+
 	if (find_target_in_envd(data))
 		return;
-	
-#ifdef DEBUG
-	printf("* calling find_wrapper_target\n");
-#endif
-	
+
 	/* Only our wrapper is in PATH, so 
 	   get the CC path using gcc-config and 
 	   execute the real binary in there... */
+#ifndef CC_PROFILE
 	inpipe = popen(GCC_CONFIG " --get-bin-path", "r");
-	if (NULL == inpipe) {
-		
+#else
+	inpipe = popen(GCC_CONFIG " --get-bin-path " CC_PROFILE, "r");
+#endif
+	if (NULL == inpipe)
 		wrapper_exit(
-			"Could not open pipe for GCC_CONFIG: %s\n",
+			"Could not open pipe for gcc-config: %s\n",
 			wrapper_strerror(errno, data));
-	}
 
 	if (0 == fgets(str, MAXPATHLEN, inpipe))
-		wrapper_exit("Could not get compiler binary path: %s\n",
+		wrapper_exit(
+			"Could not get compiler binary path: %s\n",
 			wrapper_strerror(errno, data));
 
 	strncpy(data->bin, str, sizeof(data->bin) - 1);
@@ -311,10 +300,6 @@ int main(int argc, char **argv)
 	/* Set argv[0] to the correct binary, else gcc do not find internal
 	 * headers, etc (bug #8132). */
 	argv[0] = data->bin;
-
-#ifdef DEBUG
-	printf("exec %s\n", data->bin);
-#endif
 
 	/* Ok, do it ... */
 	if (execv(data->bin, argv) < 0)
