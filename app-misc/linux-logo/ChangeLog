@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/linux-logo
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.4 2003/10/31 19:12:34 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.5 2004/04/24 19:29:58 spock Exp $
+
+*linux-logo-4.09 (24 Apr 2004)
+
+  24 Apr 2004; Michal Januszewski <spock@gentoo.org> +files/linux-logo.conf,
+  +files/linux-logo.initscript, +linux-logo-4.09.ebuild:
+  Added an ebuild for the newest version. Added initscript to make setting
+  /etc/issue easier. Closes bug #47221.
 
   23 Sep 2003; Todd Sunderlin <todd@gentoo.org> linux-logo-4.07.ebuild:
   added ~sparc keyword
