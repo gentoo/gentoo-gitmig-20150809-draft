@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.5 2003/09/06 22:27:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.6 2003/10/11 23:09:18 pappy Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -23,7 +23,7 @@
 #There is only one issue: ghci will be successfully built only if ghc is bootstrapped from the same version.
 #Thus we need to detect presently installed one and bootstrap in one or two stages..
 
-inherit base
+inherit base flag-o-matic
 
 IUSE="doc tetex opengl"
 
@@ -131,12 +131,30 @@ src_compile() {
 	if test x$need_stage1 = xyes; then
 		echo ">>> Bootstrapping intermediate GHC ${PV} using GHC ${BASE_GHC_VERSION}"
 
+		if has_version "sys-devel/hardened-gcc"
+		then
+			# flag-o-matic will automatically insert -yet_exec if -fPIC is filtered
+			# and the flag-o-matic eclass is inherited above
+			filter-flags "-fPIC"
+			pushd "${STAGE1_B}" || die
+			PATH="${GHCPATH}" ./configure \
+				-host="${CHOST}" \
+				--prefix="${STAGE1_D}/usr" \
+				--with-ghc="${GHC}" \
+				--with-gcc="gcc ${CFLAGS}" \
+				--without-happy || die "intermediate stage configure failed"
+			# the configure will tell ghc to use the gcc toolchain assembler with -yet_exec for compiling
+			# so ghc-asm will not bug about the PIC prologue that would otherwise be inserted by gcc
+			# specs file which is provided by sys-devel/hardened-gcc and it's transparent PIC specs file
+		else
+
 		pushd "${STAGE1_B}" || die
 			PATH="${GHCPATH}" ./configure \
 				-host="${CHOST}" \
 				--prefix="${STAGE1_D}/usr" \
 				--with-ghc="${GHC}" \
 				--without-happy || die "intermediate stage configure failed"
+		fi
 			#parallel make causes trouble
 			make || die "intermediate stage make failed"
 			make install || die
