@@ -35,7 +35,8 @@ RDEPEND=">=sys-devel/gcc-2.95.2
          app-text/sgml-commonk
          alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	cups? ( net-print/cups )
-         ssl? ( >=dev-libs/openssl-0.9.6 )"
+         ssl? ( >=dev-libs/openssl-0.9.6 )
+	sys-devel/perl dev-lang/python"
 
 src_unpack() {
     unpack ${A}
