@@ -5,13 +5,13 @@ MY_P=${PN/xmms-}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="xmms plugin for overlaying song titles in X-Windows - X-On-Screen-Display"
 SRC_URI="http://www.ignavus.net/${MY_P}.tar.gz"
-HOMEPAGE="http://www.ignavus.net/"
+HOMEPAGE="http://www.ignavus.net/software.html"
 DEPEND="virtual/x11
 	virtual/glibc
 	>=media-sound/xmms-1.2.6-r1
 	>=x11-libs/xosd-1.0.2"
 RDEPEND="${DEPEND}"
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
