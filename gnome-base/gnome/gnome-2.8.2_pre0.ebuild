@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.4 2004/12/29 04:56:39 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2_pre0.ebuild,v 1.5 2004/12/29 05:07:01 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -98,8 +98,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/zenity-2.8.2
 	>=net-analyzer/gnome-netstatus-2.8
 
-	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.5 )
-	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.5 )
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
 
 	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
 
