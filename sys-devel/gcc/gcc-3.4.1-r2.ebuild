@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.12 2004/08/25 13:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.13 2004/08/26 03:45:03 solar Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -285,6 +285,7 @@ glibc_have_pie() {
 }
 
 check_glibc_ssp() {
+	[ "$GLIBC_SSP_CHECKED" = 1 ] && return 0
 	if glibc_have_ssp
 	then
 		if [ -n "${GLIBC_SSP_CHECKED}" ] && \
