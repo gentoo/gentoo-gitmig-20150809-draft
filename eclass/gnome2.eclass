@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.31 2003/04/17 23:13:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.32 2003/05/04 18:37:56 liquidx Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -87,6 +87,28 @@ gnome2_gconf_install() {
 			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F}
 		done
 	fi
+}
+
+gnome2_omf_fix() {
+	# workaround/patch against omf.make or omf-install/Makefile.in
+	# in order to remove redundant scrollkeeper-updates.
+	# - <liquidx@gentoo.org>
+	
+	local omf_makefiles
+
+	omf_makefiles="$@"
+
+	[ -f ${S}/omf-install/Makefile.in ] \
+		&& omf_makefiles="${omf_makefiles} ${S}/omf-install/Makefile.in"
+	[ -f ${S}/omf.make ] \
+		&& omf_makefiles="${omf_makefiles} ${S}/omf.make"
+
+	for omf in ${omf_makefiles}; do
+		omfbase=$(basename ${omf})
+		einfo "Fixing OMF Makefile: ${omfbase}"
+		sed -i -e 's:\(-scrollkeeper-update -p $(localstatedir)/scrollkeeper\)\([\s\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
+		sed -i -e 's:\(-scrollkeeper-update -p $(scrollkeeper_localstate_dir)\)\([\s\\]*\)$:\1 -o $(DESTDIR)$(omf_dest_dir)\2:' ${omf}
+	done
 }
 
 gnome2_scrollkeeper_update() {
