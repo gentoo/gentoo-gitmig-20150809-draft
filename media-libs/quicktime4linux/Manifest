@@ -1,7 +1,7 @@
 MD5 108d3e9d9e220d8415e069fb6232eeea files/quicktime_makefile.patch 420
 MD5 856fdf26d3cf2a72a72147c73f14a2c9 files/digest-quicktime4linux-1.6.2 150
 MD5 05a81d2da899448b5ec3b5bbf23b6f2d files/digest-quicktime4linux-2.0.0 79
-MD5 7287c710823b3719a6173e455680354c files/2.0.0-external-libs.patch 1780
+MD5 fbea9d6668d0669be8198881311f3ab4 files/2.0.0-external-libs.patch 1650
 MD5 c46fd893f3945688c806226477501585 files/digest-quicktime4linux-1.5.5-r1 74
 MD5 ae2802be07e21795df874c1d65cbe021 files/2.0.0-gcc2.patch 1007
 MD5 cff036b41967a42ea65b3eef0002f4a0 files/2.0.0-gentoo-libmpeg3.patch 663
@@ -12,5 +12,5 @@ MD5 7181d651d366d5e7a27d576bbf5d0230 files/2.0.0-gentoo-sharedlib.patch 969
 MD5 0ed1b908795a9624a417e0d7afd413e4 quicktime4linux-1.6.2.ebuild 1123
 MD5 9d5d29649047e45a1f155063c1cea869 quicktime4linux-1.5.5-r1.ebuild 886
 MD5 158601abb395e0ebde15aed8bbc5351b quicktime4linux-2.0.0.ebuild 1124
-MD5 a2c724463fa8ccb9173071a00aae9a06 quicktime4linux-2.0.0-r1.ebuild 1316
+MD5 ce996d59dc39c50ea8f35857c548cd18 quicktime4linux-2.0.0-r1.ebuild 1335
 MD5 11da92db1d080b1b11468bbb7eb5ab8d ChangeLog 2872
