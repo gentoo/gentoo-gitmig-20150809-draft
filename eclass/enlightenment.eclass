@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.7 2003/12/02 02:54:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.8 2004/01/20 01:30:37 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -11,8 +11,8 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://wh0rd.de/gentoo/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+#	http://wh0rd.de/gentoo/distfiles/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
