@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.3 2004/07/11 10:41:59 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.4 2004/07/15 18:24:16 gustavoz Exp $
 
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
 	http://www.dtek.chalmers.se/~d3august/xt/dl/ndg_files.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
