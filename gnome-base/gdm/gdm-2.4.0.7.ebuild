@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.7.ebuild,v 1.3 2002/08/16 04:09:22 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.7.ebuild,v 1.4 2002/08/31 16:01:43 spider Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -20,7 +20,8 @@ RDEPEND=">=sys-libs/pam-0.72
 	>=dev-libs/libxml2-2.4.12
 	>=gnome-base/libgnome-2.0.2
 	>=gnome-base/libgnomeui-2.0.1
-	>=gnome-base/libgnomecanvas-2.0.1"
+	>=gnome-base/libgnomecanvas-2.0.1
+	>=gnome-base/ORBit2-2.4.1"
 
 DEPEND="${RDEPEND}
 	>=x11-base/xfree-4.2.0-r3"
