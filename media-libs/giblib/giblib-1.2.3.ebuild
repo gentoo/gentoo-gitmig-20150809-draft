@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.3.ebuild,v 1.2 2004/02/23 01:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.3.ebuild,v 1.3 2004/02/23 20:43:56 vapier Exp $
+
+inherit gcc
 
 DESCRIPTION="Giblib, graphics library"
 HOMEPAGE="http://www.linuxbrit.co.uk/"
