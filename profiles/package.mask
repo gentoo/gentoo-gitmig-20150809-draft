@@ -44,26 +44,6 @@ net-www/zope
 # committed to facilitate testing by several devs, mostly Verwilst and me.
 # testing should be over in 24h so don't unmask without good reason.
 # added kdeadmin, kdeaddons as well // Spider 
->=kde-base/arts-1.0.0
->=kde-base/kdelibs-3.0
->=kde-base/kdebase-3.0
->=kde-base/kde-3.0
->=kde-base/kdeartwork-3.0
->=kde-base/kdebindings-3.0
->=kde-base/kdeedu-3.0
->=kde-base/kdegames-3.0
->=kde-base/kdegraphics-3.0
->=kde-base/kdemultimedia-3.0
->=kde-base/kdenetwork-3.0
->=kde-base/kdepim-3.0
->=kde-base/kdesdk-3.0
->=kde-base/kdetoys-3.0
->=kde-base/kdeutils-3.0
->=kde-base/kdoc-3.0
->=dev-util/kdevelop-2.1
->=kde-base/kdeaddons-3.0
->=kde-base/kdeadmin-3.0
-
 
 >=app-i18n/kde-i18n-3.0
 >=app-i18n/kde-i18n-af-3.0
@@ -108,16 +88,6 @@ net-www/zope
 >=app-i18n/kde-i18n-xh-3.0
 >=app-i18n/kde-i18n-zh_CN.GB2312-3.0
 >=app-i18n/kde-i18n-zh_TW.Big5-3.0
-
-# Waiting for kde3 ebuilds. These ebuilds are ok themselves and if you're using
-# my kde3pre ebuilds, you can unmask and emerge these as well. - danarmak
->=net-misc/qtella-0.4.1
->=net-misc/krfb-0.6
->=net-misc/kio_fish-1.1
-#>=x11-misc/mosfet-liquid-widgets-0.9.1
->=net-misc/kbiff-3.6
->=app-cdr/k3b-0.6.0_pre2
-#>=app-office/koffice-1.2_pre20020402
 
 # These two have compile problems -- Azarah (24/03/2002)
 #
