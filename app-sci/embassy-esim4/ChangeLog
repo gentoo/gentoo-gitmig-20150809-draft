@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/embassy-esim4
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy-esim4/ChangeLog,v 1.1 2004/07/20 02:36:10 ribosome Exp $
+
+* embassy-esim4-1.0.0 (19 Jul 2004)
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-esim4-1.0.0.ebuild, metadata.xml, ChangeLog
+  Initial import.
