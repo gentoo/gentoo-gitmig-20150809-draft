@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 90dca5f95c71c04b8779af2f4f3e7d5d daaplib-0.1.1a.ebuild 983
+MD5 541615ee163590f4545607d3a4b86cb3 ChangeLog 1121
+MD5 f9dcdbe93b9d7332f27461b91c5a39ee daaplib-0.1.1a.ebuild 988
 MD5 0589e7641e96ea672f142cb3fd282e8b metadata.xml 397
-MD5 0a2de5e07ee6ed9c35fcafd75fc012c3 ChangeLog 1015
 MD5 2ec77395a6d005da75eb0f9a9f3650dd files/daaplib-0.1.1a-Makefile 930
 MD5 c4e1bf55fa774a3c2698e7e9bd20fa0a files/digest-daaplib-0.1.1a 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBizvPArHZZzCEUG0RAv/hAJ0T44UEZ81VRZWQAOlJxIEWzS5OVgCfZJfO
-J0CUdqNEXnKXjbxJHZtUtGQ=
-=Yh7F
+iD8DBQFB2bYOKRy60XGEcJIRAnPZAJ9JkdQEneAh7WLMiTp5aSK1dW76OACdGh6O
+g3H03LDjBJkLxValeFea0eM=
+=smux
 -----END PGP SIGNATURE-----
