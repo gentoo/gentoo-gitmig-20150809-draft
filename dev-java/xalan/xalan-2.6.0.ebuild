@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0.ebuild,v 1.3 2004/08/30 18:25:09 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0.ebuild,v 1.4 2004/09/06 00:10:04 ciaranm Exp $
 
 inherit java-pkg eutils
 
@@ -62,13 +62,13 @@ pkg_postinst() {
 		einfo " Design documentation can be found online at:             "
 		einfo "     http://xml.apache.org/xalan-j/design/design2_0_0.html"
 		einfo "                                                          "
-		sleep 5
+		epause 5
 	else
 		einfo "                                                          "
 		einfo " Online Documentation:                                    "
 		einfo "     http://xml.apache.org/xalan-j/design/design2_0_0.html"
 		einfo "     http://xml.apache.org/xalan-j/apidocs/index.html     "
 		einfo "                                                          "
-		sleep 5
+		epause 5
 	fi
 }
