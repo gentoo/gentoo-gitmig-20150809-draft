@@ -1,4 +1,6 @@
 MD5 850c33e7a86d5c734afa0df755fd55a0 generator-1.3.0.ebuild 743
+MD5 cae00451c8ea787f6907b575d74cddb7 generator-1.3.0.11.ebuild 754
 MD5 5a7cfbcf582ecf66f386b823aab81102 ChangeLog 740
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 f2aa42fefb0344b3646f77fb0d3b6975 files/digest-generator-1.3.0 64
+MD5 aa9266e2f5537c95d7a26603013d35f9 files/digest-generator-1.3.0.11 68
