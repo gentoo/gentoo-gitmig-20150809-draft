@@ -1,0 +1,15 @@
+--- xine-lib-1-rc3/configure.ac.org	2003-12-29 14:44:22.000000000 +0100
++++ xine-lib-1-rc3/configure.ac	2003-12-29 14:47:43.000000000 +0100
+@@ -1505,9 +1505,9 @@
+     ;;
+ 
+   sparc*-*-linux*)
+-    case $host_alias in
+-    sparc-*)    cpu_cflags="-mcpu=supersparc -mtune=supersparc" ;;
+-    sparc64-*)
++    case `uname -m` in
++    sparc)    cpu_cflags="-mcpu=supersparc -mtune=supersparc" ;;
++    sparc64)
+       cpu_cflags="-mcpu=ultrasparc -mtune=ultrasparc"
+       if test x$enable_vis = xyes; then
+         AC_DEFINE_UNQUOTED(ENABLE_VIS,,[Define this if you have Sun UltraSPARC CPU])

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4.ebuild,v 1.6 2004/05/03 20:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4.ebuild,v 1.7 2004/05/05 22:51:18 squash Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -62,7 +62,12 @@ src_unpack() {
 	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV}
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-2.6.patch
+	# force 32 bit userland
 	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
+	# fix a missing header
+	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/xine-lib-1-rc4-sparc_missing_include.patch
+	# fix included libtool
+	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/xine-lib-1rc4-libtool1.5.6.shrext_cmds.patch
 
 	# always_inline means inline-or-fail, so it's no suprise that xine-lib
 	# fails to compile with gcc 3.4 when this one inline fails
@@ -91,7 +96,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-asf"
 
 	use sparc \
-		&& myconf="${myconf} --enable-vis"
+		&& myconf="${myconf} --enable-vis --build=${CHOST}"
 
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"

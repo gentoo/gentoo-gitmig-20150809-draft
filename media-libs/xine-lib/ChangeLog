@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.114 2004/05/03 16:21:56 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.115 2004/05/05 22:51:18 squash Exp $
+
+  05 May 2004; Josh Grebe <squash@gentoo.org> xine-lib-1_rc4.ebuild,
+  files/xine-lib-1-rc4-sparc_missing_include.patch,
+  files/xine-lib-1_rc4-configure-sparc.patch,
+  files/xine-lib-1rc4-libtool1.5.6.shrext_cmds.patch:
+  Fixed up sparc: Added missing configure patch, add --build arg to force 32
+  bit, fix missing vis.h, and fix broken local libtool
 
   03 May 2004; Jon Portnoy <avenj@gentoo.org> xine-lib-1_rc4.ebuild :
   Temporarily mask on AMD64 until 32-bit asm issues can be fixed.
