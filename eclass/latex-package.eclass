@@ -45,7 +45,7 @@ inherit base
 INHERITED="$INHERITED $ECLASS"
 
 newdepend ">=app-text/tetex-1.0.7
-	   >=sys-apps/texinfo-4.2-r5"
+       >=sys-apps/texinfo-4.2-r5"
 ECLASS=latex-package
 HOMEPAGE="http://www.tug.org/"
 SRC_URI="ftp://tug.ctan.org/macros/latex/"
@@ -82,13 +82,13 @@ latex-package_src_doinstall() {
                     #dodoc -u $i
                 done
                 ;;
-	    "tex" | "dtx")
-	    	for i in `find . -maxdepth 1 -type f -name "*.${1}"`
-		do
-		    echo "Making documentation: $i"
-		    texi2dvi -q -c --language=latex $i
-		done
-	        ;;
+        "tex" | "dtx")
+            for i in `find . -maxdepth 1 -type f -name "*.${1}"`
+        do
+            echo "Making documentation: $i"
+            texi2dvi -q -c --language=latex $i
+        done
+            ;;
             "tfm" | "vf" | "afm" | "pfb")
                 for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
