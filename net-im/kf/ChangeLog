@@ -1,6 +1,14 @@
 # ChangeLog for net-im/kf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/ChangeLog,v 1.4 2004/04/30 20:41:35 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/ChangeLog,v 1.5 2004/06/12 21:44:01 lucass Exp $
+
+*kf-0.1.4.1 (12 Jun 2004)
+
+  12 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org>; kf-0.1.4.1.ebuild, metadata.xml:
+  Version bump. 
+  Added a 'spell' use flag to control spell checking, as well as a patch, 
+  that make configure script to work with gtkspell-2.0.4.
+  Added myself to metadata.xml.
 
   30 Apr 2004; Don Seiler <rizzo@gentoo.org>; kf-0.1.3.ebuild:
   Updating webpage and src_uri.  Thanks to Lukasz Strzygowski, Bug #49532
