@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.29 2004/11/12 15:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.30 2004/12/06 06:41:08 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="GNU lexical analyser generator"
 HOMEPAGE="http://lex.sourceforge.net/"
@@ -29,6 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export CC="$(tc-getCC)"
+
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
