@@ -1,0 +1,50 @@
+diff -aur packit-0.6.0c-original/configure packit-0.6.0c/configure
+--- packit-0.6.0c-original/configure	2003-06-03 17:28:39.000000000 -0400
++++ packit-0.6.0c/configure	2003-08-06 20:11:49.000000000 -0400
+@@ -3695,7 +3695,7 @@
+ fi
+ 
+ 
+-for ac_header in libnet.h
++for ac_header in libnet-1.1/libnet.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -4127,13 +4127,13 @@
+ fi
+ 
+ 
+-echo "$as_me:$LINENO: checking for libnet_build_ipv4 in -lnet" >&5
+-echo $ECHO_N "checking for libnet_build_ipv4 in -lnet... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for libnet_build_ipv4 in -lnet1.1" >&5
++echo $ECHO_N "checking for libnet_build_ipv4 in -lnet1.1... $ECHO_C" >&6
+ if test "${ac_cv_lib_net_libnet_build_ipv4+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lnet  $LIBS"
++LIBS="-lnet1.1  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -4186,7 +4186,7 @@
+ #define HAVE_LIBNET 1
+ _ACEOF
+ 
+-  LIBS="-lnet $LIBS"
++  LIBS="-lnet1.1 $LIBS"
+ 
+ else
+   LIBNET="no"
+diff -aur packit-0.6.0c-original/include/packit.h packit-0.6.0c/include/packit.h
+--- packit-0.6.0c-original/include/packit.h	2003-05-29 22:33:43.000000000 -0400
++++ packit-0.6.0c/include/packit.h	2003-08-06 20:11:29.000000000 -0400
+@@ -28,7 +28,7 @@
+ #include "config.h"
+ #endif
+ 
+-#include <libnet.h>
++#include <libnet-1.1/libnet.h>
+ #include <pcap.h>
+ #include <sys/types.h>
+ #include <net/bpf.h>
