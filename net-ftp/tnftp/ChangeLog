@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.9 2005/01/09 14:45:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.10 2005/01/11 18:29:26 kloeri Exp $
+
+  11 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tnftp-20050103.ebuild:
+  Stable on alpha, bug 74704.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> tnftp-20050103.ebuild:
   Marked stable on sparc wrt security bug #74704.
