@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r5.ebuild,v 1.13 2003/02/13 10:23:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r5.ebuild,v 1.14 2003/03/09 14:26:38 seemant Exp $
 
 IUSE="doc mozilla"
 
@@ -8,16 +8,18 @@ inherit java
 
 At="j2sdk-1_4_0_01-linux-i586.bin"
 S="${WORKDIR}/j2sdk1.4.0_01"
-SRC_URI=""
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
-LICENSE="sun-bcla"
+SRC_URI=""
+
 SLOT="1.4"
-KEYWORDS="x86 -ppc -sparc -alpha"
-DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.5
+LICENSE="sun-bcla"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
+
+DEPEND=">=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.0* )"
-RDEPEND="$DEPEND"
+
+RDEPEND="sys-libs/lib-compat"
 
 PROVIDE="virtual/jre-1.4
 	virtual/jdk-1.4
