@@ -1,6 +1,15 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.8 2003/10/29 03:44:15 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.9 2003/11/13 05:57:48 pebenito Exp $
+
+*selinux-base-policy-20031010-r1 (12 Nov 2003)
+
+  12 Nov 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20031010-r1.ebuild,
+  files/selinux-base-policy-20031010-cvs.diff:
+  Add fixes from policy cvs for compilers, so non x86 and ppc compilers can
+  work. Also portage update as a side effect of updated setfiles code in
+  portage, from bug 31748.
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-20031010.ebuild:
