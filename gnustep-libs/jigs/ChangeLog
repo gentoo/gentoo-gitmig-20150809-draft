@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/jigs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/jigs/ChangeLog,v 1.1 2004/07/23 13:36:49 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/jigs/ChangeLog,v 1.2 2004/07/23 15:01:35 fafhrd Exp $
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> jigs-1.5.5.ebuild:
+  Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *jigs-1.5.5 (23 Jul 2004)
 

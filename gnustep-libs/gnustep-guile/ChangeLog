@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gnustep-guile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gnustep-guile/ChangeLog,v 1.1 2004/07/23 14:03:06 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gnustep-guile/ChangeLog,v 1.2 2004/07/23 15:01:16 fafhrd Exp $
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gnustep-guile-1.0.3.ebuild, gnustep-guile-1.1.1.ebuild:
+  Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *gnustep-guile-1.0.3 (23 Jul 2004)
 
