@@ -699,7 +699,3 @@ app-misc/todo-manager-bronze
 # agriffis@gentoo.org 29 Jul 2003
 # mask nforce-net-1.0.0261 for bug 24815
 =net-misc/nforce-net-1.0.0261*
-
-# agriffis@gentoo.org 29 Jul 2003
-# ruby-1.8.0_pre5 breaks vim at the moment... see bug 25529
->=dev-lang/ruby-1.8.0_pre5
