@@ -1,14 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5fedd0dbcbfc8bebca3b54ddc7acc27a ChangeLog 1511
+MD5 4c9f3fcd9343cbf3e5bd2782b333ea5c dcraw-6.08.ebuild 1239
 MD5 2cdd1dede98bfcd0b23ab1e73c8dd9da dcraw-6.09.ebuild 1335
-MD5 8f4e56203da5c907c784a0e403a6911a ChangeLog 1406
-MD5 e2249575ab4985f9decfcce9ac052f24 dcraw-6.31.ebuild 1539
+MD5 9ec463cfd8dec8ebebb2d61eb070ada3 metadata.xml 728
 MD5 68cdb7a97cd285acf5fa030f207fcf49 dcraw-6.19.ebuild 1342
 MD5 1bd699e70e3c768e5ff6d63e38cbe78b dcraw-6.25.ebuild 1546
-MD5 9ec463cfd8dec8ebebb2d61eb070ada3 metadata.xml 728
+MD5 916c856bf272114f4ad3528c223a378e dcraw-6.31.ebuild 1540
 MD5 66eefc4cfe44c51020bb6564d0ab1782 dcraw-6.35.ebuild 1543
-MD5 4c9f3fcd9343cbf3e5bd2782b333ea5c dcraw-6.08.ebuild 1239
-MD5 d9bd5461e3812d09c6fac5e700a0f4a6 files/digest-dcraw-6.19 62
 MD5 75a3faedfe2fbc457ef792c7438bf2ef files/digest-dcraw-6.08 62
-MD5 f590500d8be6917aeff5885be2807d4e files/digest-dcraw-6.35 62
 MD5 f18fbdbd428d34df0a063484f690219f files/digest-dcraw-6.09 62
+MD5 d9bd5461e3812d09c6fac5e700a0f4a6 files/digest-dcraw-6.19 62
 MD5 ce5fd286688fa453124dd4e3701c6964 files/digest-dcraw-6.25 62
 MD5 4b362e7db64e25af915237f19ddf630b files/digest-dcraw-6.31 62
+MD5 f590500d8be6917aeff5885be2807d4e files/digest-dcraw-6.35 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLHMDKRy60XGEcJIRAkDjAJ0UioWFTloUVEhG6SJKwM7UroIPbwCgrbJX
+euvW1sZEJXa7D8gi2naGCPg=
+=3Y7z
+-----END PGP SIGNATURE-----
