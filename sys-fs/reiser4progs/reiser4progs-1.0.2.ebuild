@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.2.ebuild,v 1.1 2004/10/31 00:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.2.ebuild,v 1.2 2004/10/31 19:25:26 vapier Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_install() {
 	local l=""
 	for l in libreiser4-minimal libreiser4 librepair ; do
 		mv ${D}/$(get_libdir)/${l}.{a,la} ${D}/usr/$(get_libdir)/
-		#dosym ../usr/lib/${l}.a /lib/${l}.a
+		dosym ../usr/lib/${l}.a /lib/${l}.a
 		gen_usr_ldscript ${l}.so
 	done
 }
