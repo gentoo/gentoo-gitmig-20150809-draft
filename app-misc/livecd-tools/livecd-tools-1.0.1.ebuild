@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.1.ebuild,v 1.1 2004/03/21 20:19:04 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.1.ebuild,v 1.2 2004/03/24 19:44:02 gustavoz Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~zhen/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 
 DEPEND=""
 
