@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.88 2004/07/18 20:25:06 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.89 2004/12/28 22:39:26 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Jul 2004; Brandon Hale <tseng@gentoo.org> -openbox-3.0-r1.ebuild,
   -openbox-3.0.ebuild, -openbox-3.1-r1.ebuild, -openbox-3.1.ebuild,
@@ -17,7 +20,7 @@
   09 May 2004; <SeJo@gentoo.org> openbox-3.2-r1.ebuild:
   added ~ppc keyword
 
-  09 May 2004; Bryan Østergaard <kloeri@gentoo.org> openbox-3.2-r1.ebuild:
+  09 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> openbox-3.2-r1.ebuild:
   Keyword ~alpha.
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> openbox-3.2-r1.ebuild:
