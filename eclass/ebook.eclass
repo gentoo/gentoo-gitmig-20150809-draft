@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.18 2004/08/01 20:00:07 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.19 2004/08/01 20:20:10 bass Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -79,9 +79,6 @@ fi
 if [ "${EBOOKDEVHELPFILE}" = "" ]; then
 	EBOOKDEVHELPFILE=${_ebookdevhelpfile}".devhelp"
 fi
-if [ "${EBOOKFROMDIR}" = "" ]; then
-	EBOOKFROMDIR=${S}
-fi
 
 S=${WORKDIR}
 ebook_src_unpack() {
@@ -90,14 +87,19 @@ ebook_src_unpack() {
 }
 
 ebook_src_install() {
-
 	debug-print-function $FUNCNAME $*
 	
 	dodir ${DEVHELPROOT}/books
 	dodir ${DEVHELPROOT}/books/${EBOOKDESTDIR}
 	echo EBOOKSRCDIR= ${EBOOKSRCDIR}
-	cp ${EBOOKFROMDIR}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
-	cp -R ${EBOOKFROMDIR}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
+
+	if [ "${EBOOKFROMDIR}" ]; then
+		cp ${S}/${EBOOKFROMDIR}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
+		cp -R ${S}/${EBOOKFROMDIR}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
+	else
+		cp ${S}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
+		cp -R ${S}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
+fi
 }
 
 EXPORT_FUNCTIONS src_unpack src_install
