@@ -1,0 +1,9 @@
+# ChangeLog for media-video/kdenlive
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.1 2004/03/18 22:09:08 zypher Exp $
+
+*kdenlive-0.2.4 (07 Mar 2004)
+
+  18 Mar 2004; Marc Hildebrand <zypher@gentoo.org> kdenlive-0.2.4.ebuild:
+  Initial ebuild
+
