@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.11 2002/12/20 19:35:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.12 2002/12/20 23:22:12 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -125,12 +125,8 @@ src_unpack () {
 	cd ${S}
 
 	# Various patches from all over
-	epatch ${WORKDIR}/patch/
+	# epatch ${WORKDIR}/patch/
 	
-	# Fix bison parse errors with bison-1.40 and up
-	# http://www.jg555.com/cvs/cvsweb.cgi/~checkout~/patches/xfree/xfree-4.2.x.-bison.fixes.patch
-	epatch ${FILESDIR}/xfree-4.2.x.-bison.fixes.patch
-
 	# Update the Savage Driver
 	ebegin "Updating Savage driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/savage
