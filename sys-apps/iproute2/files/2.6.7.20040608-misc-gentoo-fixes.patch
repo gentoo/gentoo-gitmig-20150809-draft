@@ -73,7 +73,7 @@ diff -ur iproute2-2.6.7.orig/misc/ss.c iproute2-2.6.7/misc/ss.c
  		if (info->tcpi_snd_ssthresh < 0xFFFF)
  			printf(" ssthresh:%d", info->tcpi_snd_ssthresh);
  		
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,6)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
  		if (info->tcpi_rcv_rtt)
  			printf(" rcv_rtt:%g", (double) info->tcpi_rcv_rtt/1000);
  		if (info->tcpi_rcv_space)
