@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.125 2004/12/07 01:32:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.126 2004/12/08 01:31:38 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1534,4 +1534,11 @@ built_with_use() {
 		shift
 	done
 	return 0
+}
+
+# Many configure scripts wrongly bail when a C++ compiler 
+# could not be detected. #73450
+epunt_cxx() {
+	EPATCH_SINGLE_MSG="Removing useless C++ checks ..." \
+		epatch "${PORTDIR}/eclass/ELT-patches/nocxx/nocxx.patch"
 }
