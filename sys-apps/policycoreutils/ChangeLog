@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.40 2005/02/14 00:38:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.41 2005/03/13 13:41:29 pebenito Exp $
+
+*policycoreutils-1.22 (13 Mar 2005)
+
+  13 Mar 2005; Chris PeBenito <pebenito@gentoo.org>
+  +files/policycoreutils-1.22-genhomedircon-quiet.diff,
+  +policycoreutils-1.22.ebuild:
+  New upstream release.
 
 *policycoreutils-1.20-r1 (13 Feb 2005)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.18-r1.ebuild,v 1.2 2005/01/08 03:13:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.22.ebuild,v 1.1 2005/03/13 13:41:29 pebenito Exp $
 
 IUSE="build nls pam"
 
 inherit eutils
 
-EXTRAS_VER="1.10"
-SEPOL_VER="1.2"
+EXTRAS_VER="1.12"
+SEPOL_VER="1.4"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -15,7 +15,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 RDEPEND=">=sys-libs/libselinux-${PV}
 	!build? ( pam? ( sys-libs/pam ) >=sys-libs/libsepol-${SEPOL_VER} )
@@ -48,8 +48,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# patch in code for nls option
-	epatch ${FILESDIR}/policycoreutils-nonls.diff
+	epatch ${FILESDIR}/policycoreutils-1.22-genhomedircon-quiet.diff
 
 	# fixfiles is extremely dangerous
 	sed -i -e '/^all/s/fixfiles//' ${S}/scripts/Makefile \

@@ -1,0 +1,14 @@
+diff -urN policycoreutils-1.22.orig/scripts/genhomedircon policycoreutils-1.22/scripts/genhomedircon
+--- policycoreutils-1.22.orig/scripts/genhomedircon	2005-03-07 10:46:17.000000000 -0500
++++ policycoreutils-1.22/scripts/genhomedircon	2005-03-12 18:59:45.873548040 -0500
+@@ -104,10 +104,6 @@
+ 	return rc
+ 
+ def oldgenhomedircon(filecontextdir, filecontext):
+-    sys.stderr.write("Using genhomedircon in this fashion is supported for backwards compatability\n")
+-    sys.stderr.write("Please update to the latest policy\n")
+-    sys.stderr.flush()
+-
+     if os.path.isdir(filecontextdir) == 0:
+         sys.stderr.write("New usage is the following\n")
+         usage()
