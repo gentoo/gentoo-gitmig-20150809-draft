@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.5 2003/12/24 05:23:11 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.6 2004/01/02 15:44:10 rizzo Exp $
 
 IUSE="nls perl spell nas ssl mozilla cjk debug"
 
@@ -33,6 +33,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2 || die
 	cd ${S}
 	epatch ${FILESDIR}/gaim-0.74-log_free.patch
+	epatch ${FILESDIR}/gaim-0.74-scs-msg-yahoo.patch
 	use cjk && epatch ${FILESDIR}/gaim-0.74_cjk_gtkconv.patch
 
 	use ssl && {
@@ -113,4 +114,9 @@ pkg_postinst() {
 		ewarn "via http://bugs.gentoo.org/ or the gaim-encryption project."
 		ewarn
 	fi
+
+	einfo
+	einfo "Yahoo! has changed their IM server.  Existing profiles should"
+	einfo "change the server for their Yahoo! IM accounts to scs.msg.yahoo.com"
+	einfo
 }
