@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.72-r1.ebuild,v 1.4 2000/09/15 20:09:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.72-r1.ebuild,v 1.5 2000/11/07 11:16:08 achim Exp $
 
 P=pam-0.72
 A=Linux-PAM-0.72.tar.gz
@@ -9,6 +9,10 @@ S=${WORKDIR}/Linux-PAM-0.72
 DESCRIPTION="PAM"
 SRC_URI="http://openrock.net/pub/linux/libs/pam/pre/library/${A}"
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
+
+DEPEND=">=sys-libs/cracklib-2.7
+	>=sys-libs/pam-0.72"
+RDEPEND=$DEPEND
 
 src_unpack() {                           
   unpack ${A}

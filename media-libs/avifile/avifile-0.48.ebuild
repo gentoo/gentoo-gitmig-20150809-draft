@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.48.ebuild,v 1.1 2000/10/05 20:45:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avifile/avifile-0.48.ebuild,v 1.2 2000/11/07 11:16:08 achim Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -11,6 +11,13 @@ SRC_URI="ftp://ftp.e1.bmstu.ru/pub/devtools/SDL/AVI/${P}.tar.gz
 
 HOMEPAGE="http://divx.euro.ru/"
 
+DEPEND=">=kde-base/qt-x11-2.1.1
+	>=media-video/xmps-0.1.3"
+RDEPEND=">=kde-base/qt-x11-2.1.1
+	 >=media-libs/libsdl-1.1.5
+	 >=x11-libs/gtk+-1.2.8
+	 >=media-sound/esound-0.2.19"
+	
 src_unpack () {
 
     WIN32=/usr/libexec/avifile/win32
