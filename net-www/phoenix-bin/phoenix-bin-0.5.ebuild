@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-20021121.ebuild,v 1.3 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5.ebuild,v 1.1 2002/12/10 17:23:02 phoenix Exp $
 
-inherit nsplugins eutils
 IUSE=""
 
 MY_PN=${PN/-bin/}
@@ -22,23 +21,34 @@ RDEPEND=">=sys-libs/lib-compat-1.0-r2
 	 virtual/x11"
 
 src_install() {
+	# Plugin path creation
+	PLUGIN_DIR="/usr/lib/nsbrowser/plugins" 
+	dodir /${PLUGIN_DIR}
+
 	dodir /usr/lib
+
 	mv ${S} ${D}/usr/lib
+
+	# Plugin path setup (rescuing the existent plugins)
+	mv ${D}/usr/lib/${MY_PN}/plugins ${D}/usr/lib/${MY_PN}/plugins.temp
+	dosym ../nsbrowser/plugins /usr/lib/${MY_PN}/
+	mv ${D}/usr/lib/${MY_PN}/plugins.temp/* ${D}/usr/lib/${MY_PN}/plugins/
+	rmdir ${D}/usr/lib/${MY_PN}/plugins.temp
 
 	# Fixing permissions
 	chown -R root.root ${D}/usr/lib/${MY_PN}
 
 	# Truetype fonts
         cd ${D}/usr/lib/${MY_PN}/defaults/pref
-	epatch ${FILESDIR}/phoenix-0.4-antialiasing-patch
+        einfo "Enabling truetype fonts"
+        patch < ${FILESDIR}/phoenix-0.4-antialiasing-patch
 
 	# Misc stuff
 	dobin ${FILESDIR}/phoenix
 	dosym /usr/lib/libstdc++-libc6.1-1.so.2 /usr/lib/${MY_PN}/libstdc++-libc6.2-2.so.3
-	src_mv_plugins /usr/lib/phoenix/plugins
-
 }
 
 pkg_preinst() {
-	pkg_mv_plugins /usr/lib/phoenix/plugins
+	# Remove the old plugins dir
+	[ -d /usr/lib/phoenix/plugins ] && rm -r /usr/lib/phoenix/plugins
 }

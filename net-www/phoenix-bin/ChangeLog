@@ -1,11 +1,21 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.13 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.14 2002/12/10 17:23:02 phoenix Exp $
 
-\* Autoupdate keywords (12-6-02)
+*phoenix-bin-0.4-r2 (10 Dec 2002)
+
+  10 Dec 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild 
+  files/digest-phoenix-bin-0.5 :
+  Version bump. Tagging that unstable.
+
+* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *phoenix-bin-20021121 (21 Nov 2002)
+
+  21 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild,
+  files/digest-phoenix-bin-0.5.ebuild :
+  Removing this from the tree because 20021121 > 0.5 from portage's view.
 
   21 Nov 2002; Mark Guertin <gerk@gentoo.org> phoenix-bin-20021121.ebuild:
   set as -ppc -sparc -sparc64 -alpha to avoid confusion, these are all x86
@@ -19,7 +29,7 @@
 *phoenix-bin-0.4-r2 (19 Nov 2002)
 
   19 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4-r2.ebuild 
-  files/digest-phoenix-bin0.4-r2 :
+  files/digest-phoenix-bin-0.4-r2 :
   Made phoenix mozilla plugin compliant. The new plugin layout for 
   phoenix and mozilla is: All plugins go to /usr/lib/nsbrowser/plugins 
   and the browsers plugins/ dir is symlinked to that very directory. 
