@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.10 2003/09/10 04:19:00 vapier Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -35,6 +35,8 @@ src_unpack() {
 	cp SDL_DirectFB_video.c SDL_DirectFB_video.c.orig
 	sed -e "s:DICAPS_ALL, ::" SDL_DirectFB_video.c.orig \
 		> SDL_DirectFB_video.c
+	cd ${S}
+	sed -i 's:head -1:head -n 1:' configure
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.7 2003/07/29 21:17:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.8 2003/09/10 04:19:00 vapier Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -41,6 +41,7 @@ src_unpack() {
 	# resolution in XFree86-4.3 instead of the worst one.
 	cd ${S}
 	use X && epatch ${FILESDIR}/${P}-xfree-4.3.patch.bz2
+	sed -i 's:head -1:head -n 1:' configure
 }
 
 src_compile() {
