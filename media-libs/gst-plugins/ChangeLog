@@ -1,5 +1,8 @@
 # ChangeLog for media-libs/gst-plugins
 
+  18 Dec 2002; foser <foser@gentoo.org> gst-plugins-0.4.2*.ebuild :
+  Fixed libmpeg2 dep (bug #12224)
+
 *gst-plugins-0.4.2-r1 (08 Dec 2002)
 
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gst-plugins-0.4*.ebuild :

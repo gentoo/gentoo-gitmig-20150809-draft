@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2-r1.ebuild,v 1.2 2002/12/09 11:48:59 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2-r1.ebuild,v 1.3 2002/12/18 13:12:53 foser Exp $
 
 inherit libtool gnome2 flag-o-matic
 
@@ -30,7 +30,7 @@ DEPEND=">=media-libs/gstreamer-0.4.2
 	>=media-libs/libdv-0.9.5
 	encode? ( media-sound/lame )
 	quicktime? ( media-libs/openquicktime )
-	mpeg? (	>=media-libs/libmpeg2-0.2.1 )
+	mpeg? (	=media-libs/libmpeg2-0.2* )
 	oggvorbis? ( 	media-libs/libvorbis 
 			media-libs/libogg )
 	jpeg? (	media-video/mjpegtools 
