@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.27 2004/04/25 23:12:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.28 2004/04/26 12:06:13 obz Exp $
+
+  26 Apr 2004; Mike Gardiner <obz@gentoo.org> sablotron-0.96.ebuild,
+  sablotron-0.97.ebuild, sablotron-1.0.ebuild:
+  Removed 0.96 version, 1.0 stable on x86
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> sablotron-0.96.ebuild,
   sablotron-0.97.ebuild:
