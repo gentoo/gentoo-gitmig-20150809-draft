@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/kbiff-3.7.1.ebuild,v 1.2 2004/12/06 15:15:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kbiff/kbiff-3.7.1.ebuild,v 1.3 2004/12/16 11:25:27 motaboy Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://devel-home.kde.org/~granroth/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=kde-base/kdebase-3"
