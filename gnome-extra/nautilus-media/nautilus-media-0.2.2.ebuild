@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.2.2.ebuild,v 1.1 2003/06/10 15:38:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-media/nautilus-media-0.2.2.ebuild,v 1.2 2003/06/29 22:46:56 darkspecter Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Media plugins for Nautilus (audio view and info tab)"
 HOMEPAGE="http://www.gstreamer.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ppc ~alpha ~sparc"
 
 RDEPEND=">=media-libs/gstreamer-0.6.1
 	>=media-libs/gst-plugins-0.6.1
