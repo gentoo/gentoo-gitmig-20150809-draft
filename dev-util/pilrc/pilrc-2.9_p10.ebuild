@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-2.9_p10.ebuild,v 1.4 2004/06/25 02:43:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-2.9_p10.ebuild,v 1.5 2004/07/15 00:00:19 agriffis Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ SRC_URI="http://www.ardiri.com/download/files/palm/${PN}-${PREV_PV}.tgz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
+IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 
