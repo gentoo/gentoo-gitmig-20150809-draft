@@ -50,7 +50,7 @@ pkg_postrm()
 }
 
 try() {
-	"$@"
+	env "$@"
 	if [ $? -ne 0 ]
 	then
 		echo 
