@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.6 2002/10/03 20:08:09 bcowan Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.7 2002/10/04 06:05:00 vapier Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX

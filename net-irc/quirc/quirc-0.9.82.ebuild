@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.4 2002/07/17 07:36:02 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.5 2002/10/04 06:05:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GUI IRC client scriptable in Tcl/Tk"
