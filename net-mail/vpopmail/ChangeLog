@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.37 2004/06/28 08:47:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.38 2004/08/04 09:49:12 tomk Exp $
+
+  04 Aug 2004; <tomk@gentoo.org> vpopmail-5.2.1-r5.ebuild,
+  vpopmail-5.2.1-r6.ebuild, vpopmail-5.2.1-r7.ebuild,
+  vpopmail-5.2.1-r8.ebuild, vpopmail-5.2.1-r9.ebuild,
+  vpopmail-5.2.2-r1.ebuild, vpopmail-5.2.2.ebuild, vpopmail-5.4.0-r1.ebuild,
+  vpopmail-5.4.0.ebuild, vpopmail-5.4.0_rc1.ebuild:
+  HOMEPAGE changed.
 
   28 Jun 2004; Robin H. Johnson <robbat2@gentoo.org> vpopmail-5.4.0-r1.ebuild:
   bug #55313, RESTRICT=nouserpriv.

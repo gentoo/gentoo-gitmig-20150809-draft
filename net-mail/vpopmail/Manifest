@@ -1,39 +1,29 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ae268834389d102a1e29676fd9a68de ChangeLog 6152
+MD5 5867b54ad82fc3de202fa5cb7afccca2 vpopmail-5.2.2-r1.ebuild 7487
+MD5 0f45c195f993f33c78c2a6d98108a3c8 vpopmail-5.4.0.ebuild 7429
+MD5 a6fbf86e82e7039d4256fdd6c1a38bcb vpopmail-5.4.0-r1.ebuild 7410
+MD5 98eb520388c505ec8e99f8fdf5f33d3a vpopmail-5.2.1-r9.ebuild 7567
+MD5 39aa2505d0a7cf2d02650d8cdf4b187c vpopmail-5.2.1-r6.ebuild 6380
+MD5 3886587ecb82bfa71669f27a2880f8f5 vpopmail-5.2.1-r8.ebuild 6724
+MD5 0bc96064a9872b49c094b93f24e9f909 vpopmail-5.4.0_rc1.ebuild 8362
+MD5 5c75d54e8924b414cba1dda30a7181e4 vpopmail-5.2.1-r5.ebuild 6062
+MD5 8359e63e0c39d804533dc59a4f8b53cb vpopmail-5.2.2.ebuild 7487
+MD5 a6ff1e3dfae9fbe4c51ef9b5fffee949 ChangeLog 6466
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 c4e8df4d3702016cb0ff5ffe3f225e2d vpopmail-5.2.1-r5.ebuild 6051
-MD5 9060399f97a373c8cf49421ae62c7861 vpopmail-5.2.1-r6.ebuild 6369
-MD5 5be9b34e18cf598d80d9e2eb64c06146 vpopmail-5.2.1-r7.ebuild 6368
-MD5 21da3b08acebffc4f473ec20648148cf vpopmail-5.2.1-r8.ebuild 6713
-MD5 d6f7fc6b096eb35e3e25c93b4da8728f vpopmail-5.2.1-r9.ebuild 7556
-MD5 8b0ca34fa7fccc110e9121ea50603f1b vpopmail-5.2.2-r1.ebuild 7476
-MD5 078478ef92782654d1c3e98adbba91b4 vpopmail-5.2.2.ebuild 7476
-MD5 3c3055888272e73b27ba3b92781235f1 vpopmail-5.4.0_rc1.ebuild 8351
-MD5 b32df8b6ab202c1ff6657003412e7a2e vpopmail-5.4.0.ebuild 7418
-MD5 aa2605ddcb0f9e73928a30a68ff85b09 vpopmail-5.4.0-r1.ebuild 7398
+MD5 ac097e29d83d3347f7773eb8e73341ab vpopmail-5.2.1-r7.ebuild 6379
+MD5 c8f37f4f0e61e7c848351d7e4a38478f files/vpopmail-Maildir-dotmaildir-fix.sh 931
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
+MD5 ceafe640132b1326bbc71949e8bccd1c files/vpopmail-5.2.1-gcc33mysql.diff 554
+MD5 d0bc9f5393a1f0602c71fdee0b3d2cd8 files/digest-vpopmail-5.2.2 134
+MD5 d3296e78f37859945cfe766afb969dc2 files/digest-vpopmail-5.4.0 134
+MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
+MD5 2a9fe0fff0522f424c0faf7db8f690a9 files/digest-vpopmail-5.4.0_rc1 138
 MD5 d388c60820d1ce87e90cbc46a89c6a77 files/digest-vpopmail-5.2.1-r5 327
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r6 134
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r7 134
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r8 134
 MD5 61705fcd13006df869646877d966fac8 files/digest-vpopmail-5.2.1-r9 134
-MD5 d0bc9f5393a1f0602c71fdee0b3d2cd8 files/digest-vpopmail-5.2.2 134
 MD5 d0bc9f5393a1f0602c71fdee0b3d2cd8 files/digest-vpopmail-5.2.2-r1 134
-MD5 2a9fe0fff0522f424c0faf7db8f690a9 files/digest-vpopmail-5.4.0_rc1 138
-MD5 ceafe640132b1326bbc71949e8bccd1c files/vpopmail-5.2.1-gcc33mysql.diff 554
-MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
-MD5 c8f37f4f0e61e7c848351d7e4a38478f files/vpopmail-Maildir-dotmaildir-fix.sh 931
-MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
+MD5 d3296e78f37859945cfe766afb969dc2 files/digest-vpopmail-5.4.0-r1 134
 MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 9aeca181f86314f09d9cfe99ebe8b7d0 files/vpopmail.diff 2101
-MD5 d3296e78f37859945cfe766afb969dc2 files/digest-vpopmail-5.4.0 134
-MD5 d3296e78f37859945cfe766afb969dc2 files/digest-vpopmail-5.4.0-r1 134
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+fj9mdTrptrqvGERArekAJ9IVI22EH/Huizku6+jYXm8n4EHqwCfWbjM
-At82YANMgCe0eD8mzzO1onE=
-=7Cyr
------END PGP SIGNATURE-----
+MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235

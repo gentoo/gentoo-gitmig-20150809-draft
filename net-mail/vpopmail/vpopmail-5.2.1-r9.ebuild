@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.7 2004/06/24 23:32:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r9.ebuild,v 1.8 2004/08/04 09:49:12 tomk Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
 inherit eutils
 
 # TODO: all ldap, sybase support
-HOMEPAGE="http://www.inter7.com/vpopmail"
+HOMEPAGE="http://www.inter7.com/index.php?page=vpopmail"
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."
 SRC_URI="http://www.inter7.com/${PN}/${P}.tar.gz
 	mysql? ( http://gentoo.twobit.net/misc/${P}-mysql.diff )"
