@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/groupoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.6 2003/11/23 01:07:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.7 2003/12/15 20:06:28 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> groupoffice-1.93.ebuild,
+  groupoffice-1.94.ebuild:
+  Fix for bug #32636
 
   23 Nov 2003; Martin Holzer <mholzer@gentoo.org> groupoffice-1.93.ebuild,
   groupoffice-1.94.ebuild:
