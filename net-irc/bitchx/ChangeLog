@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.47 2004/07/22 01:18:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.48 2004/08/22 01:46:24 swegener Exp $
+
+  22 Aug 2004; Sven Wegener <swegener@gentoo.org> bitchx-1.1-r1.ebuild:
+  Updated SRC_URI as upstream download location has changed. Closes bug #61005.
 
   22 Jul 2004; Sven Wegener <swegener@gentoo.org> -bitchx-1.1.ebuild:
   Removed old ebuild.
