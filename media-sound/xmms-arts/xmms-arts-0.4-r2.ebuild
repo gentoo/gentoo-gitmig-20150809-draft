@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r2.ebuild,v 1.1 2001/12/08 19:50:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r2.ebuild,v 1.2 2001/12/10 18:31:51 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde || die
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {     
 	kde_src_compile myconf # calls set-kdedir
-	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDEDIR}/include" ./configure --prefix=/usr --host=${CHOST} || die
+	CFLAGS="$CFLAGS -I/usr/X11R6/include -I/usr/include -I${KDEDIR}/include -I${KDEDIR}/include/artsc"  ./configure --prefix=/usr --host=${CHOST} || die
 	emake || die
 }
 
