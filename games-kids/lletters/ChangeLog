@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/lletters
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.10 2004/06/24 22:51:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.11 2004/11/05 04:53:36 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> lletters-0.1.95-r1.ebuild:
+  Added ~ppc.
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   lletters-0.1.95-r1.ebuild:
