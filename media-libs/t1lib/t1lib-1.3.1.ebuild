@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.19 2003/10/30 08:14:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.20 2003/12/22 23:33:10 plasmaroo Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
 
 DEPEND="X? ( virtual/x11 )"
 
-SLOT="0"
+SLOT="1"
 LICENSE="LGPL-2 GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
