@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.5 2004/07/15 02:25:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/quotient/quotient-0.8.8.ebuild,v 1.6 2004/07/19 22:10:00 kloeri Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-python/twisted-1.1.1
 	>=mail-filter/spambayes-1.0_alpha9
-	>=dev-python/Imaging-1.1.4
+	>=dev-python/imaging-1.1.4
 	>=dev-python/lupy-0.1.5.5.1"
 
 S=${WORKDIR}/${MY_P}
