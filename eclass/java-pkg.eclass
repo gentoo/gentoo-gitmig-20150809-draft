@@ -1,11 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.17 2004/10/19 13:10:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.18 2004/11/15 23:31:08 karltk Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
 SLOT="${SLOT}"
+
+
+pkglistpath=${S}/.java-pkg-pkglist
 
 java-pkg_doclass()
 {
@@ -13,7 +16,8 @@ java-pkg_doclass()
 	java-pkg_dojar $*
 }
 
-java-pkg_do_init_() {
+java-pkg_do_init_() 
+{
 	debug-print-function ${FUNCNAME} $*
 
 	if [ -z "${JARDESTTREE}" ] ; then
@@ -30,8 +34,15 @@ java-pkg_do_init_() {
 	fi
 
 	shareroot="${sharepath}/${pkg_name}"
-	jardest="${shareroot}/${JARDESTTREE}"
-	sodest="/opt/${pkg_name}/${SODESTTREE}"
+
+	if [ -z "${jardest}" ] ; then
+		jardest="${shareroot}/${JARDESTTREE}"
+	fi
+
+	if [ -z "${sodest}" ] ; then
+		sodest="/opt/${pkg_name}/${SODESTTREE}"
+	fi
+
 	package_env="${D}${shareroot}/package.env"
 
 	debug-print "JARDESTTREE=${JARDESTTREE}"
@@ -43,7 +54,13 @@ java-pkg_do_init_() {
 	debug-print "package_env=${package_env}"
 }
 
-java-pkg_do_write_() {
+java-pkg_do_write_() 
+{
+	# Create directory for package.env
+	if [ ! -d "${D}${shareroot}" ] ; then
+		install -d "${D}${shareroot}"
+	fi
+
 	# Create package.env
 	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
 	if [ -n "${cp_pkg}" ]; then
@@ -52,9 +69,17 @@ java-pkg_do_write_() {
 	if [ -n "${lp_pkg}" ]; then
 		echo "LIBRARY_PATH=${lp_prepend}:${lp_pkg}:${lp_append}" >> "${package_env}"
 	fi
+	if [ -f ${pkglistpath} ] ; then
+		pkgs=$(cat ${pkglistpath} | tr '\n' ':')
+		echo "DEPEND=${pkgs}" >> "${package_env}"
+	fi
+
+	# Strip unnecessary leading and trailing colons
+	sed -e "s/=:/=/" -e "s/:$//" -i "${package_env}"
 }
 
-java-pkg_do_getsrc_() {
+java-pkg_do_getsrc_() 
+{
 	# Check for symlink
 	if [ -L "${i}" ] ; then
 		cp "${i}" "${T}"
@@ -226,8 +251,15 @@ java-pkg_dozip()
 	java-pkg_dojar $*
 }
 
+_record-jar()
+{
+	echo "$2@$1" >> ${pkglistpath}
+}
+
 java-pkg_jar-from()
 {
+	debug-print-function ${FUNCNAME} $*
+
 	local pkg=$1
 	local jar=$2
 	local destjar=$3
@@ -241,6 +273,7 @@ java-pkg_jar-from()
 			eerror "Installation problems with jars in ${pkg} - is it installed?"
 			return 1
 		fi
+		_record-jar ${pkg} $(basename ${x})
 		if [ -z "${jar}" ] ; then
 			ln -sf ${x} $(basename ${x})
 		elif [ "`basename ${x}`" == "${jar}" ] ; then
@@ -255,14 +288,23 @@ java-pkg_jar-from()
 	fi
 }
 
-java-pkg_getjar() {
+java-pkg_getjar() 
+{
+	
+	debug-print-function ${FUNCNAME} $*	
+
 	local pkg=$1
 	local jar=$2
 
 	for x in $(java-config --classpath=${pkg} | tr ':' ' '); do
+
 		if [ ! -f ${x} ] ; then
 			die "Installation problems with jars in ${pkg} - is it installed?"
-		elif [ "$(basename ${x})" == "${jar}" ] ; then
+		fi
+
+		_record-jar ${pkg} ${x}
+
+		if [ "$(basename ${x})" == "${jar}" ] ; then
 			echo ${x}
 			return 0
 		fi
@@ -270,11 +312,23 @@ java-pkg_getjar() {
 	die "Could not find $2 in $1"
 }
 
-java-pkg_getjars() {
+java-pkg_getjars() 
+{
 	java-config --classpath=$1
 }
 
 
-java-pkg_dohtml() {
+java-pkg_dohtml() 
+{
 	dohtml -f package-list $@
+}
+
+java-pkg_jarinto() 
+{
+	jardest=$1	
+}
+
+java-pkg_sointo() 
+{
+	sodest=$1
 }
