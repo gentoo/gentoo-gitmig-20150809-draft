@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.374 2005/01/25 12:55:23 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.375 2005/01/31 20:16:12 plasmaroo Exp $
+
+  31 Jan 2005; <plasmaroo@gentoo.org> gcc-3.3.5-r1.ebuild,
+  gcc-3.4.3-r1.ebuild:
+  GCC 3.3.5 eats fluffy bunnies for breakfast and kills IA64 bootstraps, so
+  3.4.3-r1 is going stable as it works. Marking 3.3.5-r1 "-ia64".
 
   25 Jan 2005; Rob Holland <tigger@gentoo.org> :
   Don't break the description line by overriding it in the eclass.
