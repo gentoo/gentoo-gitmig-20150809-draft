@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.13 2004/06/24 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.14 2004/08/03 01:25:59 george Exp $
+
+*erlang-9c-r3 (02 Aug 2004)
+
+  02 Aug 2004; George Shapovalov <george@gentoo.org> erlang-9c-r3.ebuild :
+  fixed some stray ${D}'s in wrappers (#58901), added support for ~amd64
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; erlang-8b.ebuild,
   erlang-9c-r1.ebuild, erlang-9c-r2.ebuild, erlang-9c.ebuild:
