@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r2.ebuild,v 1.1 2004/06/23 18:43:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r2.ebuild,v 1.2 2004/06/24 13:45:39 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="ipv6 static extensions"
 DEPEND="virtual/linux-sources"
 
 pkg_preinst() {
-	if [ "`use extensions`" ]; then
+	if use extensions; then
 		einfo "WARNING: 3rd party extensions has been enabled."
 		einfo "This means that iptables will use your currently installed"
 		einfo "kernel in /usr/src/linux as headers for iptables."
@@ -39,7 +39,7 @@ src_unpack() {
 
 	unpack ${A} ; cd ${S}
 
-	if [ "`use extensions`" ]; then
+	if use extensions; then
 		epatch ${FILESDIR}/extensions/${P}-grsecurity.patch.bz2
 		epatch ${FILESDIR}/extensions/${P}-imq.patch.bz2
 		epatch ${FILESDIR}/extensions/${P}-l7.patch.bz2
@@ -74,7 +74,7 @@ src_compile() {
 	use ipv6 || myconf="${myconf} DO_IPV6=0"
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 
-	if [ "`use extensions`" ]; then
+	if use extensions; then
 		make ${myconf} \
 			LIBDIR=/lib \
 			BINDIR=/sbin \
