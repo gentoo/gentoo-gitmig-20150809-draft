@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <g2boojum@gentoo.org> 28 May 2003
+# Masking >=openldap-2.1 until db4 stuff gets settled
+>=net-nds/openldap-2.1
+
 # <tantive@gentoo.org> 26 May 2003
 # Masking bsddb3-4.1.3 as it depends on db-4
 =dev-python/bsddb3-4.1.3
