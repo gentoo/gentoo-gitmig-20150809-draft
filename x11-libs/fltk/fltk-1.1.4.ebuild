@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.10 2004/11/01 19:26:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.11 2004/12/05 01:16:24 pyrania Exp $
 
 IUSE="opengl debug nptl"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
@@ -49,8 +49,8 @@ src_compile() {
 	# needed for glibc-2.3.1 (as far as i can test)
 	# otherwise libstdc++ won't be linked. #17894 and #15572
 	# doesn't happen for glibc-2.3.2 - <liquidx@gentoo.org>
-	export CXX="g++"
-	export CC="g++"
+	export CXX=$(tc-getCXX)
+	export CC=$(tc-getCC)
 
 	# bug #19894
 	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"

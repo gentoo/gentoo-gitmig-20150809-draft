@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.37 2004/11/01 19:26:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.38 2004/12/05 01:16:24 pyrania Exp $
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> fltk-1.1.4.ebuild:
+  Fixed bug #70116.
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
