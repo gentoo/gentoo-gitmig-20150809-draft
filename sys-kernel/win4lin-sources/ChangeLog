@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.49 2005/01/09 13:00:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.50 2005/01/12 20:53:59 plasmaroo Exp $
+
+  12 Jan 2005; <plasmaroo@gentoo.org> files/win4lin-sources-2.6.9.77094.patch:
+  Fix #77094 patch; bug #77458.
 
 *win4lin-sources-2.6.9-r6 (09 Jan 2005)
 
