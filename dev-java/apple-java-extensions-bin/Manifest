@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13d1474a038a97cf1061ddfb8d8b4c1c ChangeLog 423
-MD5 62ef021f0b708a23d990193fa6fb0d6b apple-java-extensions-bin-1.2.ebuild 917
+MD5 94b3225ba65f06f77a5992cc6bc2565c ChangeLog 527
+MD5 72c19c1a8b8bfd6afeeada98b036d563 apple-java-extensions-bin-1.2.ebuild 923
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6ecb4788796eea6212f907356bd5ebf5 files/digest-apple-java-extensions-bin-1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBCdmw/rLF9B432nYRAndDAKCPz8mTnZ4j9ASKEycfrHsN87b9EACgxiOE
-8WIQqXIakTu/iHDhhQmjdbc=
-=MVRv
------END PGP SIGNATURE-----
