@@ -1,22 +1,22 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/files/atd.rc6,v 1.8 2001/12/06 20:17:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/files/atd.rc6,v 1.9 2002/03/24 08:29:24 azarah Exp $
 
 depend() {
-    need clock
-    use sysklogd metalog syslog-ng
+    need clock logger
 }
 
 start() {
     ebegin "Starting atd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/atd
+    start-stop-daemon --start --quiet --pidfile /var/run/atd.pid \
+    	--startas /usr/sbin/atd
     eend $?
 }
 
 stop() {
     ebegin "Shutting down atd"
-    #dont kill with --pidfile, as it does not always get created -- Azarah
-    start-stop-daemon --stop --quiet --exec /usr/sbin/atd
+    start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
     eend $?
 }
+
