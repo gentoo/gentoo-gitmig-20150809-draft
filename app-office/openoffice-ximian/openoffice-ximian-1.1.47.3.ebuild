@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.47.3.ebuild,v 1.1 2003/12/26 04:18:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.47.3.ebuild,v 1.2 2003/12/28 19:34:48 seemant Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -61,6 +61,7 @@ S="${WORKDIR}/oo_${OO_VER/1.1.0/1.1}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.bz2
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${XIMIAN_VER}.tar.gz
+	http://dev.gentoo.org/~seemant/extras/ooo-build-${XIMIAN_VER}.tar.gz
 	http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz"
 
 HOMEPAGE="http://ooo.ximian.com"
