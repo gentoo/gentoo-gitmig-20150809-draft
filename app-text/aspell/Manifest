@@ -4,7 +4,7 @@ MD5 82c26e110bee2f362aff32433eb7acd0 aspell-0.60.ebuild 1704
 MD5 31c74e020ce6a51c83076110745d1ef5 aspell-0.60.2.ebuild 1694
 MD5 5c4d56b645bd858f170c1c4e57dbd082 aspell-0.60.1.1.ebuild 1696
 MD5 bed3674383e37d55402f49b7aea9a73b aspell-0.50.5-r4.ebuild 1891
-MD5 175286e7adbf890fc31f02e226e71a6b ChangeLog 11167
+MD5 a2866674bda78bab34e07a706e981af0 ChangeLog 11167
 MD5 c883e4872c7714a380206fa110e8f3a6 files/digest-aspell-0.60.1.1 68
 MD5 337afb25ae875e8dbe3336d493b5e3de files/digest-aspell-0.60 64
 MD5 f956a4b48687a0823d0d5d7608b567e9 files/02-gcc3.3-constcast.patch 453
