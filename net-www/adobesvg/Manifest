@@ -1,3 +1,5 @@
+MD5 941bcc81747d5360c7d9bba55933a03a files/digest-adobesvg-3.01b 80
 MD5 2fc0b57273e45f7084dbacde8ca5fe2d files/digest-adobesvg-3.0 76
+MD5 ae6642203d6ccf609a578c05aa397a6d adobesvg-3.01b.ebuild 796
 MD5 a106274e06e3ea76b014e51d21765eac adobesvg-3.0.ebuild 580
-MD5 151b1e675d3cc3b0f27f89c7ac055175 ChangeLog 338
+MD5 ece3c481094f77afa93eeac995e9e3e1 ChangeLog 509

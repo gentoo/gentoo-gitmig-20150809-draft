@@ -1,3 +1,5 @@
-MD5 55790e1e9effa4d8655ccbce216853ff downman-0.0.4.ebuild 735
-MD5 6bb010e9f8ca11fd00f2ee38b7b1953d ChangeLog 411
 MD5 d8c0577adf02470a6535ac25fd5a48ea files/digest-downman-0.0.4 65
+MD5 5eb901a7966e529a4203e5476b37b614 files/digest-downman-0.0.5 65
+MD5 0eb9b5a5d2cc4cf2a5e49a2a681a0bc3 downman-0.0.5.ebuild 710
+MD5 2c9723d29ac7be39ae10cffbdfa5c40d downman-0.0.4.ebuild 710
+MD5 da250e78bfd9a3c29ab2d2647306b74b ChangeLog 524
