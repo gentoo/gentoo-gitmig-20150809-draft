@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.1.ebuild,v 1.2 2004/10/12 19:20:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.1.ebuild,v 1.3 2004/10/12 19:22:58 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -24,9 +24,11 @@ src_unpack() {
 	cd ${S}
 
 	#make jikes happy
-	use jikes && sed '837 s/ConnectionPool/org.apache.commons.httpclient.MultiThreadedHttpConnectionManager.ConnectionPool/' \
-	-i src/java/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.java \
-	|| die "failed to sed"
+	if use jikes; then
+		sed '837 s/ConnectionPool/org.apache.commons.httpclient.MultiThreadedHttpConnectionManager.ConnectionPool/' \
+			-i src/java/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.java \
+			|| die "failed to sed"
+	fi
 
 	epatch ${FILESDIR}/gentoo.diff || die "patching failed"
 	echo "commons-logging.jar=/usr/share/commons-logging/lib/commons-logging.jar" >> build.properties

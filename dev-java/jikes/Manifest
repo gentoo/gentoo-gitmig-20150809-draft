@@ -3,17 +3,15 @@ Hash: SHA1
 
 MD5 22d5bb5b9e5100f090d8f6dda2af2872 jikes-1.21.ebuild 941
 MD5 a7e74b0aec8daa5a47d07de7a3fb6fc8 jikes-1.22-r1.ebuild 957
-MD5 3d436b62e655f8648c866d239f09b962 jikes-1.22.ebuild 877
-MD5 0733440f5bedf71654f48745287a3a2b ChangeLog 3504
+MD5 f6512b5569ec23180c7efc79e8e2bbb6 ChangeLog 3600
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 9212c7c97a31e2efe645cabab5a9a47e files/deprecated.patch 1531
 MD5 69804c19e69a70f1d6c9bf2b837fbd8d files/digest-jikes-1.22-r1 63
 MD5 bbe4f7862346b14d9cc597f108b07db6 files/digest-jikes-1.21 63
-MD5 69804c19e69a70f1d6c9bf2b837fbd8d files/digest-jikes-1.22 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbC7w/rLF9B432nYRAlHsAKCsGVw/H+ytkg0CoW75y7Sjlrb7VACfV0DB
-RRvHou9bRnePV5P/K3qUXck=
-=fXbq
+iD8DBQFBbC9Y/rLF9B432nYRAuTLAKCqJZDyKhTkzTtKqC4AWVxCU4t9wwCggE8h
+SpBx04e7zFVeXf7nnrg7vcc=
+=2Bcs
 -----END PGP SIGNATURE-----
