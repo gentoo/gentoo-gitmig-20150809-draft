@@ -1,3 +1,5 @@
-MD5 44bf9c6d576ce8ac98c7349f4e1552f0 ruby-config-0.1.ebuild 401
-MD5 8ea6a43eeadeddb729be76cdeb0071e6 files/ruby-config.sh 2687
+MD5 c0dc43ce1cdc886398474eb7dee23d86 ruby-config-0.1.ebuild 554
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 6971b94ca2ef7c9e879f943740460674 ChangeLog 441
+MD5 af894dcb3f8043fd0e06b74dd4919045 files/ruby-config.sh 2697
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-config-0.1 0
