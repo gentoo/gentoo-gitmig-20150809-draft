@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.4 2004/02/15 07:14:54 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120.ebuild,v 1.5 2004/02/19 15:43:48 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -9,12 +9,13 @@ HOMEPAGE="http://www.unrealtournament.com/"
 
 SRC_URI="x86? ( ftp://ftp.linuxhardware.org/ut2004/ut2004-lnx-demo-${PV}.run.bz2
 	http://www.lokigames.com/sekrit/ut2004-lnx-demo-${PV}.run.bz2
-	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2 )
+	http://pomac.netswarm.net/mirror/games/ut2004/ut2004-lnx-demo-${PV}.run.bz2
+	http://icculus.org/~icculus/tmp/${PN}-lnx-tts-pingpatch.tar.bz2 )
 	amd64? ( mirror://gentoo/ut2004-lnx64-demo-${PV}.run.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* x86"
 
 DEPEND="!dedicated? ( virtual/opengl )"
 
@@ -42,6 +43,10 @@ src_install() {
 
 	dodir ${GAMES_BINDIR}
 	dosym ${dir}/ut2004demo ${GAMES_BINDIR}/ut2004demo
+
+	# Ping patch
+	exeinto ${dir}/System
+	doexe ut2004-bin
 
 	prepgamesdirs
 }
