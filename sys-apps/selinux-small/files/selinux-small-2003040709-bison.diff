@@ -1,0 +1,12 @@
+diff -urN selinux/module/checkpolicy/Makefile selinux-patched/module/checkpolicy/Makefile
+--- selinux/module/checkpolicy/Makefile	2002-09-23 12:10:02.000000000 -0400
++++ selinux-patched/module/checkpolicy/Makefile	2003-03-20 14:26:01.000000000 -0500
+@@ -17,6 +17,8 @@
+ OPTIONS = 
+ endif
+ 
++YACC = bison -y
++
+ CFLAGS = -g $(OPTIONS) -I$(LSMDIR)/include -Wall -O2 -pipe -include $(MODDIR)/ss/global.h -I$(MODDIR)/include -I$(MODDIR)/ss 
+ 
+ OBJS = ebitmap.o queue.o hashtab.o symtab.o sidtab.o avtab.o policydb.o services.o y.tab.o lex.yy.o checkpolicy.o 

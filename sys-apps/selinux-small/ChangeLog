@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.13 2003/05/10 18:12:33 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.14 2003/05/10 18:27:06 pebenito Exp $
+
+*selinux-small-2003040709 (10 May 2003)
+
+  10 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003040709.ebuild, files/selinux-small-2003040709-bison.diff:
+  New upstream version. PAM should work correctly now, thanks to Paul
+  Kronenwetter.
 
   10 May 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-small-2003011510-r4.ebuild:
