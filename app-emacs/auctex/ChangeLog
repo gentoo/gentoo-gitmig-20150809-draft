@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.1 2002/11/01 02:52:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.2 2003/02/09 11:00:24 mkennedy Exp $
+
+*auctex-11.13 (09 Feb 2003)
+
+  09 Feb 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  auctex-11.13.ebuild, files/digest-auctex-11.13 :
+
+  Version bump to latest stable. resolves bug #13177 (masked as ~x86
+  while release freeze applies).
 
 *auctex-10.0g (31 Oct 2002)
 
