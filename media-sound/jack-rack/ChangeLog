@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.10 2004/04/18 15:40:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.11 2004/04/26 03:57:20 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> jack-rack-1.4.3.ebuild:
+  Add die following econf for bug 48950
 
   18 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> jack-rack-1.4.3.ebuild:
   Adding amd64 keyword, closing #48174.

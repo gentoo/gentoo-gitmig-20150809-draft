@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.91.1.ebuild,v 1.5 2004/03/31 18:28:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.91.1.ebuild,v 1.6 2004/04/26 03:57:54 agriffis Exp $
 
 DESCRIPTION="MP3 organizer/ID3 tag-editor extrodinaire"
 HOMEPAGE="http://madman.sf.net"
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/qt-3.1.0-r3
 
 src_compile() {
 	addwrite "${QTDIR}/etc/settings"
-	econf --prefix=/usr --libdir=/usr/lib
+	econf --prefix=/usr --libdir=/usr/lib || die "econf failed"
 	emake
 }
 

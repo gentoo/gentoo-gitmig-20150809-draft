@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.20 2004/02/22 22:37:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r4.ebuild,v 1.21 2004/04/26 03:55:38 agriffis Exp $
 
 IUSE="gpm nls gtk gnome alsa"
 
@@ -25,7 +25,7 @@ src_compile() {
 	use gtk  || myconf="${myconf} --without-gtk"
 	use alsa || myconf="${myconf} --without-alsa"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "make failed"
 }
 

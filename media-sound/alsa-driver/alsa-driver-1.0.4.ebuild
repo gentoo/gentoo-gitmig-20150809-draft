@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.4 2004/04/06 18:04:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.5 2004/04/26 03:50:48 agriffis Exp $
 
 inherit kernel-mod flag-o-matic
 
@@ -74,7 +74,7 @@ src_compile() {
 		--with-kernel="${KER_DIR}" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
-		--with-cards="${ALSA_CARDS}"
+		--with-cards="${ALSA_CARDS}" || die "econf failed"
 
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
