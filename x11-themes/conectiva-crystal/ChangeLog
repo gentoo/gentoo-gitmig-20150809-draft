@@ -1,8 +1,14 @@
 # ChangeLog for x11-themes/conectiva-crystal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.8 2002/12/09 19:34:03 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.9 2002/12/11 05:39:15 satai Exp $
 
-*conectiva-crystal-120902 (09 Dec 02)
+*conectiva-crystal-021209 (09 Dec 02)
+
+  09 Dec 02; Matthew Turk <satai@gentoo.org> :
+
+  Changed the name of the ebuilds; this preserves continuity across years.
+
+**conectiva-crystal-120902 (09 Dec 02)
 
   09 Dec 02; Matthew Turk <satai@gentoo.org> :
 
