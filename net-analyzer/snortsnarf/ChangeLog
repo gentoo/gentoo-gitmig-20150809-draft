@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsnarf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.2 2004/03/22 12:28:09 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.3 2004/03/30 03:07:43 zul Exp $
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> snortsnarf-021111.1.ebuild:
+  Changed defaultroute to /var/www/localhost. Closes #33062.
 
   22 Mar 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
   snortsnarf-021111.1.ebuild:
