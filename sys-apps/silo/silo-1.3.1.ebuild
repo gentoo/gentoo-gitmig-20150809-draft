@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.3.1.ebuild,v 1.1 2003/08/31 14:52:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/silo-1.3.1.ebuild,v 1.2 2003/09/15 18:02:29 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SPARC/UltraSPARC Improved Loader, a boot loader for sparc"
@@ -13,7 +13,7 @@ KEYWORDS="-* ~sparc"
 
 PROVIDE="virtual/bootloader"
 
-DEPEND="sys-apps/e2fsprogs
+DEPEND="sys-fs/e2fsprogs
 	sys-apps/sparc-utils"
 
 src_compile() {
