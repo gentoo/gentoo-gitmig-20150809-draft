@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.35 2003/04/10 23:04:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.36 2003/05/29 03:28:36 woodchip Exp $
+
+*samba-3.0_alpha24-r1 (28 May 2003)
+
+  28 May 2003; Donny Davies <woodchip@gentoo.org> Manifest,
+  samba-3.0_alpha24-r1.ebuild, files/samba-pdb_ldap-exop.patch:
+  This is basically SAMBA_3_0 as pulled from CVS on 20030528 with a small
+  patch to fix `ldap passwd sync' against an OpenLDAP-2.1.x server.
+  `oav' USE flag DOESNT work right now, neither does the nisplussam passdb.
 
 *samba-3.0_alpha23 (11 Apr 2003)
 
