@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.55 2003/11/12 22:22:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.56 2003/11/26 23:24:03 genone Exp $
+
+*sylpheed-claws-0.9.7 (26 Nov 2003)
+
+  26 Nov 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.7.ebuild,
+  files/gv-procmime-0.9.7.diff:
+  - version bump 
+  - adding configure option for compface 
+  - re-enabling option for clamav plugin 
+  - replacing 
+  		use xxx && myconf="--enable-xxx" || myconf="--disable-xxx"
+	with 
+		myconf=`use_enable xxx`
 
   12 Nov 2003; Marius Mauch <genone@gentoo.org> metadata.xml,
   sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.5.ebuild,

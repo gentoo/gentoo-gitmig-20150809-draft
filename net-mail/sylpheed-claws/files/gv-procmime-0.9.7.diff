@@ -1,0 +1,11 @@
+--- src/viewer.c.org	2003-11-26 22:49:55.000000000 +0100
++++ src/viewer.c	2003-11-26 22:50:28.000000000 +0100
+@@ -95,7 +95,7 @@
+ 
+ 	ghostscriptviewer->filename = procmime_get_tmp_file_name(mimeinfo);
+ 
+-	if (!(procmime_get_part(ghostscriptviewer->filename, file, mimeinfo) < 0)) {
++	if (!(procmime_get_part(ghostscriptviewer->filename, mimeinfo) < 0)) {
+ 		GtkGS *gs = GTK_GS(ghostscriptviewer->gs);
+ 
+ 		gtk_gs_set_antialiasing(gs, ghostscriptviewerprefs.antialiasing);
