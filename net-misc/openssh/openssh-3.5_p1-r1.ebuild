@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.19 2003/11/14 08:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.20 2003/12/08 07:38:37 vapier Exp $
 
 inherit eutils
 
@@ -85,7 +85,7 @@ src_install() {
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 	insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
-	touch ${D}/var/empty/.keep
+	keepdir /var/empty
 }
 
 pkg_preinst() {

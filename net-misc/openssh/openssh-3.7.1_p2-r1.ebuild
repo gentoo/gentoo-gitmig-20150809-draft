@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.3 2003/12/07 17:56:38 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.4 2003/12/08 07:38:37 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -107,7 +107,7 @@ src_install() {
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 	insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
-	keepdir /var/empty/.keep
+	keepdir /var/empty
 }
 
 pkg_preinst() {
