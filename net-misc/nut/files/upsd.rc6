@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/files/upsd.rc6,v 1.6 2004/03/06 03:36:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/files/upsd.rc6,v 1.7 2004/03/09 03:39:22 robbat2 Exp $
 
 depend() {
 	need net upsdrv
@@ -10,6 +10,11 @@ depend() {
 
 start() {
 	ebegin "Starting upsd"
+	# clean up first
+	pkill -u root -x upsd
+	sleep 1s
+	rm -f /var/state/nut/upsd.pid
+	# now start up
 	start-stop-daemon --start --quiet --exec /usr/sbin/upsd
 	eend $?
 }
