@@ -1,9 +1,12 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.11 2003/10/22 16:59:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.12 2003/10/23 00:49:28 agriffis Exp $
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> gpdf-0.110.ebuild:
   set ppc in keywords
+
+  22 Oct 2003; Aron Griffis <agriffis@gentoo.org> gpdf-0.111.ebuild:
+  Fix compilation on alpha by adding -fPIC
 
 *gpdf-0.111 (20 Oct 2003)
 
