@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.32 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.33 2004/10/17 10:03:36 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dump-0.4.37.ebuild:
+  keywords ~amd64.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dump-0.4.32.ebuild,
   dump-0.4.36.ebuild:
