@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.1 2003/04/05 17:27:19 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.2 2003/04/15 10:15:50 mholzer Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -17,6 +17,7 @@ DEPEND=">=gnome-base/ORBit-0.5.0
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-libs/libxml-1.4.0
 	dev-util/pkgconfig
+	dev-libs/libpcre
 	>=app-text/scrollkeeper-0.1.4
 	>=gnome-base/gnome-print-0.35
 	=gnome-base/gnome-vfs-1.0*
