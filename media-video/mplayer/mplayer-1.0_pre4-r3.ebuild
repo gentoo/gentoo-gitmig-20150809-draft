@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.4 2004/05/28 03:38:38 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.5 2004/05/28 09:42:42 phosphan Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2 live bidi mad xvid divx4linux"
 
@@ -118,6 +118,7 @@ src_unpack() {
 	# preparing build for 2.6 mga kernel module
 	cp ${KV_OUTPUT}/.config ${T}/
 	ln -s /usr/src/linux/scripts ${T}/
+	ln -s /usr/src/linux/include ${T}/
 	sed -e "s:SUBDIRS:O=${T} SUBDIRS:" -i drivers/Makefile \
 		|| die "sed failed setting O=${T}"
 	sed -e "s:^MDIR = .*:MDIR = ${D}/lib/modules/${KV_VERSION_FULL}/kernel/drivers/char/:" -i drivers/Makefile \
@@ -279,8 +280,29 @@ src_compile() {
 	if use matrox
 	then
 		unset ARCH
+		local driverwasbuilt="ok"
+		local dirtytrick="no"
+		local oldwrite="${SANDBOX_WRITE}"
 		cd ${S}/drivers
-		make all || die "Failed to build matrox driver!"
+		if [ ${KV_MAJOR}.${KV_MINOR} = "2.6" -a ${KV_PATCH} -le 5 ]; then
+			einfo "Kernel < 2.6.6, have to remove your include/asm and .config"
+			einfo "temporarily. Putting them into ${T}, will try to restore them later."
+			dirtytrick="yes"
+			addwrite /usr/src/linux/
+			mv /usr/src/linux/.config ${T}/savedconfig
+			mv /usr/src/linux/include/asm ${T}/savedasm
+			SANDBOX_WRITE="${oldwrite}"
+		fi
+		make all || driverwasbuilt="no"
+		if [ ${dirtytrick} = "yes" ]; then
+			addwrite /usr/src/linux
+			mv ${T}/savedconfig /usr/src/linux/.config
+			mv ${T}/savedasm /usr/src/linux/include/asm
+			SANDBOX_WRITE="${oldwrite}"
+		fi
+		if [ ${driverwasbuilt} = "no" ]; then
+			die "Failed to build matrox driver!"
+		fi
 	fi
 }
 
