@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.49 2003/07/18 23:11:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.50 2003/07/19 19:47:37 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> arts-1.1.2-r1.ebuild:
+  Changed mads dep back to media-sound/mad
 
 *arts-1.1.2-r1 (18 Jul 2003)
 
