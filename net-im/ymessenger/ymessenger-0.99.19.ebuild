@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.8 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.9 2002/10/19 07:35:08 seemant Exp $
 
 IUSE="gnome"
 
@@ -15,7 +15,8 @@ DESCRIPTION="Yahoo's instant messenger client"
 SRC_URI=""
 HOMEPAGE="http://messenger.yahoo.com/messenger/download/unix.html"
 
-DEPEND="gnome? ( gnome-extra/gtkhtml )"
+DEPEND="media-libs/gdkpixbuf
+	gnome? ( gnome-extra/gtkhtml )"
 RDEPEND="virtual/x11"
 
 RESTRICT="fetch"
