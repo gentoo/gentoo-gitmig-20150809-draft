@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.1 2003/10/26 01:24:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.76.1.ebuild,v 1.2 2003/11/01 07:05:06 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -13,9 +13,9 @@ HOMEPAGE="http://x.mame.net/"
 LICENSE="xmame"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha"
-IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick"
+IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	alsa? ( media-libs/alsa-lib )
 	xv? ( >=x11-base/xfree-4.1.0 )
@@ -23,44 +23,88 @@ DEPEND="sys-libs/zlib
 	esd? ( >=media-sound/esound-0.2.29 )
 	svga? ( media-libs/svgalib )
 	ggi? ( media-libs/libggi )
-	arts? ( kde-base/arts )
-	x86? ( dev-lang/nasm )"
+	arts? ( kde-base/arts )"
+DEPEND="${RDEPEND}
+	icc? ( dev-lang/icc )
+	x86? ( dev-lang/nasm )
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/xmame-${PV}
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-
 	epatch ${FILESDIR}/${PV}-glx-fix.patch
 
-	[ ${ARCH} == "x86" ] && sed -i -e '/X86_ASM_68000 =/s:#::' -e '/X86_MIPS3_DRC =/s:#::' Makefile
-	[ ${ARCH} == "ppc" ] && sed -i '/^MY_CPU/s:i386:risc:' Makefile
-	[ ${ARCH} == "sparc" ] && sed -i '/^MY_CPU/s:i386:risc:' Makefile
-	[ ${ARCH} == "alpha" ] && sed -i '/^MY_CPU/s:i386:alpha:' Makefile
-	[ ${ARCH} == "mips" ] && sed -i '/^MY_CPU/s:i386:mips:' Makefile
-
-	[ ${ARCH} == "x86" ] && [ `use joystick` ] && sed -i '/JOY_I386.*=/s:#::' Makefile
-
-	[ `use esd` ] && sed -i '/SOUND_ESOUND/s:#::' Makefile
-	[ `use alsa` ] && sed -i '/SOUND_ALSA/s:#::' Makefile
-	[ `use arts` ] && sed -i '/SOUND_ARTS/s:#::' Makefile
-	[ `use sdl` ] && sed -i '/SOUND_SDL/s:#::' Makefile
-
-	if [ `use dga` ] ; then
-		sed -i '/X11_DGA/s:#::' Makefile
-		[ `use 3dfx` ] && sed -i '/TDFX_DGA_WORKAROUND/s:#::' Makefile
+	if [ ${ARCH} == "x86" ] ; then
+		sed -i \
+			-e '/X86_ASM_68000 =/s:#::' \
+			-e '/X86_MIPS3_DRC =/s:#::' Makefile || \
+				die "sed Makefile (x86) failed"
+		if  [ `use joystick` ] ; then
+			sed -i \
+				-e '/JOY_I386.*=/s:#::' Makefile || \
+					die "sed Makefile (joystick) failed"
+		fi
+	elif [ ${ARCH} == "ppc" ] ; then
+		sed -i \
+			-e '/^MY_CPU/s:i386:risc:' Makefile || \
+				die "sed Makefile (ppc) failed"
+	elif [ ${ARCH} == "sparc" ] ; then
+		sed -i \
+			-e '/^MY_CPU/s:i386:risc:' Makefile || \
+				die "sed Makefile (sparc) failed"
+	elif [ ${ARCH} == "alpha" ] ; then
+		sed -i \
+			-e '/^MY_CPU/s:i386:alpha:' Makefile || \
+				die "sed Makefile (alpha) failed"
+	elif [ ${ARCH} == "mips" ] ; then
+		sed -i \
+			-e '/^MY_CPU/s:i386:mips:' Makefile || \
+				die "sed Makefile (mips) failed"
 	fi
 
-	[ `use xv` ] && sed -i '/X11_XV/s:#::' Makefile
+	if [ `use icc` ] ; then
+		sed -i \
+			-e '/^CC/s:gcc:icc:' Makefile || \
+				die "sed Makefile (icc) failed"
+	fi
+	if [ `use esd` ] ; then
+		sed -i \
+			-e '/SOUND_ESOUND/s:#::' Makefile || \
+				die "sed Makefile (esd) failed"
+	fi
+	if [ `use alsa` ] ; then
+		sed -i \
+			-e '/SOUND_ALSA/s:#::' Makefile || \
+				die "sed Makefile (alsa) failed"
+	fi
+	if [ `use arts` ] ; then
+		sed -i \
+			-e '/SOUND_ARTS/s:#::' Makefile || \
+				die "sed Makefile (arts) failed"
+	fi
+	if [ `use sdl` ] ; then
+		sed -i \
+			-e '/SOUND_SDL/s:#::' Makefile || \
+				die "sed Makefile (sdl) failed"
+	fi
+	if [ `use dga` ] ; then
+		sed -i \
+			-e '/X11_DGA/s:#::' Makefile || \
+				die "sed Makefile (dga) failed"
+		if [ `use 3dfx` ] ; then
+			sed -i \
+				-e '/TDFX_DGA_WORKAROUND/s:#::' Makefile || \
+					die "sed Makefile (dga) failed"
+		fi
+	fi
 
-	sed -i \
-		-e "/^PREFIX/s:=.*:=/usr:" \
-		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
-		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
-		-e "/^TARGET/s:mame:${TARGET:1}:" \
-		Makefile
+	if [ `use xv` ] ; then
+		sed -i \
+			-e '/X11_XV/s:#::' Makefile || \
+				die "sed Makefile (xv) failed"
+	fi
 
 	case ${ARCH} in
 		x86)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
@@ -71,15 +115,31 @@ src_unpack() {
 		ppc)	append-flags -Wno-unused -funroll-loops -fstrength-reduce -fomit-frame-pointer -ffast-math -fsigned-char
 			;;
 	esac
-	sed -i "s:^CFLAGS =:CFLAGS=${CFLAGS}:" Makefile
+	sed -i \
+		-e "/^PREFIX/s:=.*:=/usr:" \
+		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
+		-e "/^XMAMEROOT/s:=.*:=${GAMES_DATADIR}/${TARGET}:" \
+		-e "/^TARGET/s:mame:${TARGET:1}:" \
+		-e "s:^CFLAGS =:CFLAGS=${CFLAGS}:" Makefile || \
+			die "sed Makefile failed"
 }
 
 src_compile() {
-	[ ! -z "`use X``use dga``use xv`" ] && { make DISPLAY_METHOD=x11 || die; }
-	[ `use sdl` ] && { make DISPLAY_METHOD=SDL || die; }
-	[ `use svga` ] && { make DISPLAY_METHOD=svgalib || die; }
-	[ `use ggi` ] && { make DISPLAY_METHOD=ggi || die; }
-	[ `use opengl` ] && { make DISPLAY_METHOD=xgl || die; }
+	[ ! -z "`use X``use dga``use xv`" ] && {
+		emake DISPLAY_METHOD=x11 || die "emake failed (x11)";
+	}
+	[ `use sdl` ] && {
+		emake DISPLAY_METHOD=SDL || die "emake failed (SDL)";
+	}
+	[ `use svga` ] && {
+		emake DISPLAY_METHOD=svgalib || die "emake failed (svgalib)";
+	}
+	[ `use ggi` ] && {
+		emake DISPLAY_METHOD=ggi || die "emake failed (ggi)";
+	}
+	[ `use opengl` ] && {
+		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)";
+	}
 }
 
 src_install() {
@@ -93,15 +153,28 @@ src_install() {
 		-e "s:^XMAMEROOT.*:XMAMEROOT=${D}/${GAMES_DATADIR}/${TARGET}:" \
 		Makefile
 
-	[ ! -z "`use X``use dga``use xv`" ]	&& { make DISPLAY_METHOD=x11 install || die; }
-	[ `use sdl` ]				&& { make DISPLAY_METHOD=SDL install || die; }
-	[ `use svga` ]				&& { make DISPLAY_METHOD=svgalib install || die; }
-	[ `use ggi` ]				&& { make DISPLAY_METHOD=ggi install || die; }
-	[ `use opengl` ]			&& { make DISPLAY_METHOD=xgl install || die; }
+	[ ! -z "`use X``use dga``use xv`" ]	&& {
+		make DISPLAY_METHOD=x11 install || die;
+	}
+	[ `use sdl` ]				&& {
+		make DISPLAY_METHOD=SDL install || die;
+	}
+	[ `use svga` ]				&& {
+		make DISPLAY_METHOD=svgalib install || die;
+	}
+	[ `use ggi` ]				&& {
+		make DISPLAY_METHOD=ggi install || die;
+	}
+	[ `use opengl` ]			&& {
+		make DISPLAY_METHOD=xgl install || die;
+	}
 
-	cp -r ctrlr ${D}/${GAMES_DATADIR}/${PN}/
-	dodoc doc/{changes.*,*.txt,mame/*,${TARGET}rc.dist} README todo
-	dohtml -r doc/*
+	cp -r ctrlr ${D}/${GAMES_DATADIR}/${PN}/ || \
+		die "cp failed"
+	dodoc doc/{changes.*,*.txt,mame/*,${TARGET}rc.dist} README todo || \
+		die "dodoc failed"
+	dohtml -r doc/* || \
+		die "dohtml failed"
 
 	if [ `use opengl` ] ; then
 		dosym ${TARGET}.xgl ${GAMES_BINDIR}/${TARGET}
@@ -114,7 +187,6 @@ src_install() {
 	elif [ `use ggi` ] ; then
 		dosym ${TARGET}.ggi ${GAMES_BINDIR}/${TARGET}
 	fi
-
 	prepgamesdirs
 }
 
@@ -122,8 +194,8 @@ pkg_postinst() {
 	games_pkg_postinst
 	einfo "Your available MAME binaries are:"
 	[ ! -z "`use X``use dga``use xv`" ] && einfo " ${TARGET}.x11"
-	[ `use sdl` ] && einfo " ${TARGET}.SDL"
-	[ `use svga` ] && einfo " ${TARGET}.svgalib"
-	[ `use ggi` ] && einfo " ${TARGET}.ggi"
-	[ `use opengl` ] && einfo " ${TARGET}.xgl"
+	[ `use sdl` ]                       && einfo " ${TARGET}.SDL"
+	[ `use ggi` ]                       && einfo " ${TARGET}.ggi"
+	[ `use svga` ]                      && einfo " ${TARGET}.svgalib"
+	[ `use opengl` ]                    && einfo " ${TARGET}.xgl"
 }
