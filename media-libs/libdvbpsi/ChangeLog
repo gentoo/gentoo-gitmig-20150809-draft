@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.6 2003/02/12 07:09:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.7 2003/07/06 19:26:22 raker Exp $
+
+  03 Jul 2003; Nick Hadaway <raker@gentoo.org> libdvbpsi-0.1.2.ebuild:
+  Marked stable for x86
 
 *libdvbpsi-0.1.2 (22 Dec 2002)
 
