@@ -4,8 +4,16 @@
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Rewritten from the old, Perl-based emerge-webrsync script
 
-. /etc/make.conf
+if [ -e /usr/bin/spython ]
+then
+	#1.0_rc6 and earlier
+	PYTHON=/usr/bin/spython
+else
+	#1.0 and later
+	PYTHON=/usr/bin/python
+fi
 
+GENTOO_MIRRORS="`${PYTHON} -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
 syncpath="/var/tmp/emerge-webrsync"
 
 if [ ! -d $syncpath ] ; then
@@ -49,6 +57,7 @@ while (( $attempts <  40 )) ; do
 	for i in $GENTOO_MIRRORS ; do 
 		url="${i}/snapshots/$file"
 		rm -f $file
+		
 		if (wget $wgetops $url) ; then
 			sync_local
 			exit 0

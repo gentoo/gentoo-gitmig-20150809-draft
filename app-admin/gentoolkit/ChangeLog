@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.38 2002/09/04 17:21:58 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.39 2002/09/09 15:14:08 phoenix Exp $
+
+*gentoolkit-0.1.17 (03 Sep 2002)
+
+  09 Sep 2002; phoen][x <phoenix@gentoo.org> gentoolkit-0.1.17-r1.ebuild,
+  files/scripts/emerge-webrsync :
+
+  Bumped to new version in order to force portage to reinstall gentoolkit.
+  emerge-webrsync was broken - it checked /etc/make.conf for GENTOO_MIRRORS
+  but the new baselayout doesn't set GENTOO_MIRRORS in /etc/make.conf.
+  Fixed that with some python-magic from scripts/bootstrap.sh.
 
 *gentoolkit-0.1.17 (03 Sep 2002)
 
