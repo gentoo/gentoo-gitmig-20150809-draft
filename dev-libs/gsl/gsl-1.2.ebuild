@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.2.ebuild,v 1.3 2002/10/04 05:15:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.2.ebuild,v 1.4 2002/10/19 05:55:13 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU Scientific Library"
@@ -14,6 +14,11 @@ KEYWORDS="x86 sparc sparc64"
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	patch -d ${S} -p1 < ${FILESDIR}/k6-undef.diff
+}
+
 src_compile() {
  	
 #Avoid locking (can break parallel builds) 	
@@ -25,11 +30,12 @@ src_compile() {
 
 	#Uncomment the 'make check ...' line if you want to run the test suite.
 	#Note that the check.log file will be several megabytes in size.	
-	#	make check > check.log 2>&1 || die
+	#	make check > ${WORKDIR}/check.log 2>&1 || die
 
 }
 
 src_install () {
+
 	einstall || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL KNOWN-PROBLEMS MACHINES NEWS
 
