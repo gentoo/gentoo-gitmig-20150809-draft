@@ -1,8 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.59 2003/04/23 10:04:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.60 2003/04/24 13:35:10 coredumb Exp $
 
 *mod_php-4.3.1-r3 (23 Apr 2003)
+
+  24 Apr 2003; Tal Peer <coredumb@gentoo.org> mod_php-4.3.1-r2.ebuild,
+  mod_php-4.3.1-r3.ebuild:
+  Fixed bug #18551
 
   23 Apr 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.1-r3.ebuild:
   New version utilizing PHP eclass
