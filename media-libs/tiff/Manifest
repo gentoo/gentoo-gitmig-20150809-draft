@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 580241f532bfb5aeed5fb1deefac2aee tiff-3.6.1-r2.ebuild 2140
-SHA1 181cdf8dd87e787374d7333d02bbe5b916d38c0c tiff-3.6.1-r2.ebuild 2140
-MD5 b17f1b75392a228647e3b4f268d25fe4 ChangeLog 4286
-SHA1 f138163e5bdaceb7f40468326db4e07c4d442987 ChangeLog 4286
+MD5 f925228c821db1baed11c44493c746d0 tiff-3.6.1-r2.ebuild 2196
+SHA1 12bf42a3caa01b57e11bf908715f884c3c9149df tiff-3.6.1-r2.ebuild 2196
+MD5 e6bd4544253dff189dbae9e4db6c44e3 ChangeLog 4375
+SHA1 331ff89818c09e35507579af41f7b068b42448f0 ChangeLog 4375
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 metadata.xml 160
 MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site 488
 SHA1 b45b9e5ba7f61e97f07314c201ea7424e4d9f0b4 files/config.site 488
-MD5 cad49e9764cabaf8ae55434dfba57f4d files/digest-tiff-3.6.1-r2 632
-SHA1 a17a3a9c97030d8d509da0b60f03f566fa6a30a4 files/digest-tiff-3.6.1-r2 632
+MD5 ddbc15fbcb5ccc632af0421557475731 files/digest-tiff-3.6.1-r2 801
+SHA1 17974eb5a07da4205c0665d7942376c0b72145bb files/digest-tiff-3.6.1-r2 801
 MD5 dca7d9db2819ce30468b1a44b7575aaa files/tiff-3.6.1-r1-man.so.patch 364
 SHA1 d28ab469b8a07bf282480cf93e7db46be52225b3 files/tiff-3.6.1-r1-man.so.patch 364
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBbTVw94CCfB4KcwwRAq4aAKDBqk9FUczhe8pGWkfTBorFZvuwdwCaAxEY
-FvMUrRB7asBwGTFKMMbcPvA=
-=nudt
+iD8DBQFBbUbY94CCfB4KcwwRAuXJAJkBKvnqyQy3hNNmsJiWY9PCtyOI3gCgw5/3
+oxreaFJMOqhRB3UUCQ/gYsI=
+=cyOj
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r2.ebuild,v 1.1 2004/10/13 14:03:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r2.ebuild,v 1.2 2004/10/13 15:17:51 solar Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.libtiff.org/"
 SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz
 	ftp://ftp.remotesensing.org/libtiff/libtiff-lzw-compression-kit-1.5.tar.gz
 	mirror://gentoo/libtiff-3.6.1-alt-bound.patch.bz2
+	mirror://gentoo/libtiff-3.6.1-alt-bound-fix2.patch.bz2
 	mirror://gentoo/libtiff-3.6.1-chris-bound.patch.bz2"
 
 LICENSE="as-is"
