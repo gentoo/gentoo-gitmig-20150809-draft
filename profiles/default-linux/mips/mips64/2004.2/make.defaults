@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/make.defaults,v 1.4 2004/09/29 20:27:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/2004.2/make.defaults,v 1.5 2004/10/02 07:26:32 kumba Exp $
 
 ARCH="mips"
 
@@ -11,7 +11,7 @@ CHOST="mips-unknown-linux-gnu"
 PROFILE_ARCH="mips64"
 
 # Sandbox is broken on mips (Bug #45814)
-FEATURES="-sandbox ccache"
+FEATURES="-sandbox ccache autoconfig"
 
 # Compiler flags
 # We build a *minimum* of mips3, because just about any mips64 box we theoretically

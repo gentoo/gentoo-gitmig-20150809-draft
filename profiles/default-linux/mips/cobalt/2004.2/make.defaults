@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.4 2004/09/29 20:27:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.5 2004/10/02 07:26:32 kumba Exp $
 
 ARCH="mips"
 
@@ -11,7 +11,7 @@ CHOST="mipsel-unknown-linux-gnu"
 PROFILE_ARCH="cobalt"
 
 # Sandbox is broken on mips (Bug #45814)
-FEATURES="-sandbox ccache"
+FEATURES="-sandbox ccache autoconfig"
 
 # Compiler flags
 # We build mips4 by default because all cobalt systems use an RM5231 (or derivative)
