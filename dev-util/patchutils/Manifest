@@ -1,5 +1,5 @@
-MD5 9dee76149ca81d9a8dab4909585ee0e5 ChangeLog 1441
+MD5 317795d84a8589adac82c66aec8757e0 ChangeLog 1554
 MD5 dbdc73acacbd5fb9a0ff31d847fd9c44 patchutils-0.2.22.ebuild 643
-MD5 20dd3d7bf36c714ffe99d5cbdbf4b53b patchutils-0.2.23.ebuild 647
+MD5 5f930f7fac4bf181e50fe1837c987af4 patchutils-0.2.23.ebuild 646
 MD5 2d6bf2eae3113938f7c9c039571180bf files/digest-patchutils-0.2.22 137
 MD5 22be6f937a2129f82c1d22e8b935a964 files/digest-patchutils-0.2.23 70

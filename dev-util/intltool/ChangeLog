@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.28 2003/11/15 23:50:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.29 2003/12/29 03:21:21 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> intltool-0.27.2.ebuild:
+  Move to mips stable (~mips -> mips)
 
   06 Nov 2003; Jason Wever <weeve@gentoo.org> intltool-0.27.2.ebuild:
   Marked stable on sparc.

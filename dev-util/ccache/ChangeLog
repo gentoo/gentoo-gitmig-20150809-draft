@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.26 2003/12/14 03:50:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.27 2003/12/29 03:19:39 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> ccache-2.3.ebuild:
+  Move to mips stable (~mips -> mips)
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> ccache-2.3.ebuild:
   Marked stable on hppa.

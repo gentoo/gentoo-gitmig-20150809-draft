@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.25 2003/11/15 02:22:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.26 2003/12/29 03:20:37 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org>
+  dialog-0.9_beta20031002.ebuild:
+  Move to mips stable (~mips -> mips)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   dialog-0.9_beta20031002.ebuild:

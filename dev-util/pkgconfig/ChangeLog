@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.16 2003/10/21 02:57:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.17 2003/12/29 03:23:16 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> pkgconfig-0.15.0.ebuild:
+  Move to mips stable (~mips -> mips)
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> pkgconfig-0.15.0.ebuild:
   Stable on alpha
