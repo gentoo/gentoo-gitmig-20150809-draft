@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.11 2004/03/19 10:09:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.12 2004/03/24 22:22:30 spider Exp $
 
 inherit gcc eutils
 
@@ -14,12 +14,11 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="ppc x86 sparc alpha hppa amd64 ia64"
 
-RDEPEND="=dev-cpp/gtkmm-1.2*
+DEPEND="=dev-cpp/gtkmm-1.2*
 	>=gnome-base/gnome-libs-1.4
 	>=gnome-base/ORBit-0.5.11
 	=sys-libs/db-1*"
 
-DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

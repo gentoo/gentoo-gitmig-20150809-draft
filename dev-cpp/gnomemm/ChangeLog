@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gnomemm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.9 2004/03/19 10:09:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.10 2004/03/24 22:22:29 spider Exp $
+
+  24 Mar 2004; <spider@gentoo.org> gnomemm-1.2.3-r1.ebuild:
+  moved RDEPEND to DEPEND, removed DEPEND="${RDEPEND}" . RDEPEND=DEPEND in this
+  case anyhow
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> gnomemm-1.2.3-r1.ebuild:
   Inherit eutils.
