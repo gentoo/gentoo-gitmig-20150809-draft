@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.48 2003/05/25 08:57:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.49 2003/06/24 01:09:31 foser Exp $
+
+*nautilus-2.2.4-r5 (24 Jun 2003)
+
+  24 Jun 2004; foser <foser@gentoo.org> nautilus-2.2.4-r5.ebuild :
+  Added libgnomecups printer view patch when cups in USE
 
   25 May 2003; Alastair Tse <liquidx@gentoo.org> nautilus-1.0.6-r9.ebuild,
   nautilus-2.0.7.ebuild, nautilus-2.2.1.ebuild, nautilus-2.2.3.ebuild,
