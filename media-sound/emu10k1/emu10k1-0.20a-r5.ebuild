@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.3 2003/10/28 14:14:15 mholzer Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
 SRC_URI="mirror://sourceforge/emu10k1/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.sourceforge.net/projects/emu10k1/"
 
 DEPEND="virtual/linux-sources"
@@ -19,6 +20,14 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	[ -z "$KV" ] && die "Couldn't detect kernel version.  Does /usr/src/linux exist?"
 	return 0
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Patch for GCC 3.3 
+	epatch ${FILESDIR}/${P}-gcc3.3.patch.gz || die
 }
 
 src_compile() {
