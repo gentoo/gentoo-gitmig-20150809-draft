@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v5/glide-v5-0.ebuild,v 1.1 2001/08/04 18:22:45 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-1.0.ebuild,v 1.1 2001/08/11 18:36:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="the glide library (for voodoo5 cards)"
+DESCRIPTION="the glide library (for voodoo3 cards)"
 SRC_URI="http://dri.sourceforge.net/res/glide3headers.tar.gz
-         http://dri.sourceforge.net/res/voodoo5/x86/libglide3.so"
+         http://dri.sourceforge.net/res/voodoo3/x86/libglide3.so"
 HOMEPAGE="http://dri.sourceforge.net/"
 DEPEND=""
 RDEPEND=""
@@ -16,10 +16,6 @@ src_unpack() {
 	cd ${S}
 	unpack glide3headers.tar.gz
 	chown -R 0.0 glide
-}
-
-src_compile() {
-
 }
 
 src_install () {
