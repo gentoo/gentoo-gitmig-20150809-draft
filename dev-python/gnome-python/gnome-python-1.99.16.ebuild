@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.16.ebuild,v 1.6 2003/09/06 23:32:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.16.ebuild,v 1.7 2003/09/12 19:42:15 liquidx Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -22,7 +22,6 @@ DEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/gconf-1.2
 	>=x11-libs/libzvt-2
-	>=gnome-base/bonobo-activation-1
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/nautilus-2
