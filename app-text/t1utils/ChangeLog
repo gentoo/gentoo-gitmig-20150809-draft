@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.9 2003/12/03 15:40:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.10 2004/01/03 20:13:25 agriffis Exp $
+
+  03 Jan 2004; <agriffis@gentoo.org> t1utils-1.28.ebuild:
+  Stable on ia64
 
   03 Dec 2003; Aron Griffis <agriffis@gentoo.org> t1utils-1.28.ebuild:
   Stable on alpha to support lilypond-1.8.2
