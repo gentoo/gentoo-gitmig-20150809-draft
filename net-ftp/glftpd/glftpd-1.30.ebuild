@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.30.ebuild,v 1.1 2003/04/29 15:26:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.30.ebuild,v 1.2 2003/07/09 13:25:05 vapier Exp $
 
 MY_P=${P/-/-LNX_}
 DESCRIPTION="a HIGHLY configurable ftp server"
@@ -9,21 +9,23 @@ SRC_URI="http://www.glftpd.com/files/${MY_P}.tgz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+IUSE="ssl"
 
 DEPEND=""
 RDEPEND="sys-apps/xinetd"
+PDEPEND="ssl? ( net-ftp/glftpd-tls )"
 
 S=${WORKDIR}/${MY_P}
-GLROOT="${D}/opt/glftpd/"
-[ -z "${GLFTPD_PORT}" ]	&&	GLFTPD_PORT=21
+GLROOT=${D}/opt/glftpd/
+GLFTPD_PORT=${GLFTPD_PORT:-21}
 
 pkg_setup() {
 	[ -d /proc/sysvipc/ ] || die "You need System V IPC support in your kernel"
 }
 
 src_compile() {
-	[ "( use tcpd )" ]	&&	USETCPD=y	||	USETCPD=n
+	[ `use tcpd` ]		&&	USETCPD=y	||	USETCPD=n
 	[ -z "${JAIL}" ]	&&	JAIL=y		||	JAIL=n
 	WHICHNETD=x
 
@@ -81,7 +83,7 @@ pkg_postinst() {
 	einfo "create a cronjob for auto generating statistics,"
 	einfo "just run this command after you install:"
 	echo
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${P}/${P}.ebuild config"
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	echo
 }
 
