@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.1 2004/04/19 01:48:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.2 2004/05/07 16:31:08 solar Exp $
 
 inherit flag-o-matic gcc
 
@@ -11,7 +11,7 @@ DESCRIPTION="Administrative interface for grsecuritys2 access control lists"
 SRC_URI="http://www.grsecurity.net/gradm-${PV}.tar.gz"
 HOMEPAGE="http://www.grsecurity.net/"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc" ; # ~alpha"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc" ; # ~alpha"
 SLOT="0"
 
 IUSE=""
