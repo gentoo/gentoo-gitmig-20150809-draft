@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.1 2004/08/31 17:57:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.2 2004/09/01 09:04:19 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -76,7 +76,6 @@ src_install() {
 
 	use noantlr || jars="${jars} antlr"
 	use nobcel || jars="${jars} apache-bcel"
-	use nobeanutils || jars="${jars} commons-beanutils"
 	#use nobsf || jars="${jars} apache-bsf"
 	use nocommonslogging || jars="${jars} commons-logging"
 	use nocommonsnet || jars="${jars} commons-net"
