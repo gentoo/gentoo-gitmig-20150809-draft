@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.240 2004/12/10 13:09:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.241 2004/12/11 02:51:42 spyderous Exp $
+
+  10 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  Change munging of config file RgbPath to match where it's currently
+  installed, and use get_libdir() for it.
 
   10 Dec 2004; Guy Martin <gmsoft@gentoo.org> xorg-x11-6.8.0-r3.ebuild:
   Stable on hppa.
