@@ -1,4 +1,4 @@
-MD5 4ff10cfe375a944a7db0113db9587224 files/digest-pcsc-slb-rf72-drv-1.1.0 69
-MD5 d511b4cc5426a4853ff7a85df20f9a49 pcsc-slb-rf72-drv-1.1.0.ebuild 833
 MD5 1af33a9df0976081318aead50ddec5e8 ChangeLog 840
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 d511b4cc5426a4853ff7a85df20f9a49 pcsc-slb-rf72-drv-1.1.0.ebuild 833
+MD5 4ff10cfe375a944a7db0113db9587224 files/digest-pcsc-slb-rf72-drv-1.1.0 69

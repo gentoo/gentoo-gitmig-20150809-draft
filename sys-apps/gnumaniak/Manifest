@@ -1,4 +1,4 @@
-MD5 8f2139a4fb8b6c25657cb48bb9b2098a files/digest-gnumaniak-1.8 65
-MD5 a1b30d3ef4d19b3789b8568938b8df79 gnumaniak-1.8.ebuild 649
 MD5 3550b905ada4d836a6c9bb9eb7ce749c ChangeLog 589
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 a1b30d3ef4d19b3789b8568938b8df79 gnumaniak-1.8.ebuild 649
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8f2139a4fb8b6c25657cb48bb9b2098a files/digest-gnumaniak-1.8 65

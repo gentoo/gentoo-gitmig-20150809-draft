@@ -1,4 +1,4 @@
-MD5 f39a4b5d54ed6dca514462d30e78eda9 files/digest-dnotify-0.5.0 64
-MD5 384d3af2789d0c09b20a82642a0f4a7e dnotify-0.5.0.ebuild 765
 MD5 7a3414115c91938ce0afae9854534b5e ChangeLog 1039
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 384d3af2789d0c09b20a82642a0f4a7e dnotify-0.5.0.ebuild 765
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 f39a4b5d54ed6dca514462d30e78eda9 files/digest-dnotify-0.5.0 64

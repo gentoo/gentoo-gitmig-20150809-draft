@@ -1,4 +1,4 @@
-MD5 b194decf1fa65761784980a24bf299f3 files/digest-minutils-0.16 63
-MD5 e0d81b53fd20c5738857af52d554ae22 minutils-0.16.ebuild 635
 MD5 45c1113a737ae5e681849acbfd8d2192 ChangeLog 328
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 e0d81b53fd20c5738857af52d554ae22 minutils-0.16.ebuild 635
+MD5 b194decf1fa65761784980a24bf299f3 files/digest-minutils-0.16 63

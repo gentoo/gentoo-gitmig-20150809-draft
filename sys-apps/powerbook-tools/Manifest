@@ -1,4 +1,4 @@
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-powerbook-tools-0.1 0
-MD5 e6631e028ae85dadeb585f04418e4a2b powerbook-tools-0.1.ebuild 1045
 MD5 6afa54df31184037194340c821aee18c ChangeLog 747
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 e6631e028ae85dadeb585f04418e4a2b powerbook-tools-0.1.ebuild 1045
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-powerbook-tools-0.1 0

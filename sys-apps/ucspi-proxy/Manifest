@@ -1,4 +1,4 @@
-MD5 949a21e84e0d5aa0adeccc0df2cf174a files/digest-ucspi-proxy-0.95 67
-MD5 2fb66be26c10ddb0adc0dd608df1cc2a ucspi-proxy-0.95.ebuild 737
 MD5 69cb8d5ea2b4a42b495eeeff45698cf9 ChangeLog 509
-MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 2fb66be26c10ddb0adc0dd608df1cc2a ucspi-proxy-0.95.ebuild 737
+MD5 949a21e84e0d5aa0adeccc0df2cf174a files/digest-ucspi-proxy-0.95 67
