@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.26 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.27 2004/04/15 06:18:13 plasmaroo Exp $
+
+*vanilla-sources-2.4.26 (15 Apr 2004)
+
+  15 Apr 2004; <plasmaroo@gentoo.org> vanilla-sources-2.4.26.ebuild:
+  Version bump for the CAN-2004-0109 issue; bug #47881.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> vanilla-sources-2.4.25.ebuild:
   Add IUSE=
