@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.54.ebuild,v 1.8 2004/07/01 08:00:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.54.ebuild,v 1.9 2004/07/03 07:17:00 squinky86 Exp $
 
 S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="C64 SID player library"
 HOMEPAGE="http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/linux.html"
 SRC_URI="http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/${P}.tgz"
