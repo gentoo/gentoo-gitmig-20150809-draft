@@ -13,7 +13,7 @@ virtual/glut           media-libs/glut
 virtual/imapUW         net-mail/uw-imap
 x11-libs/xaw           x11-libs/Xaw3d
 virtual/jdk            dev-java/ibm-jdk-bin
-virtual/jre            dev-java/ibm-jdk-jre
+virtual/jre            dev-java/ibm-jre-bin
 virtual/imapd          net-mail/courier-imap
 virtual/blackbox       x11-wm/blackbox
 virtual/emacs          app-editors/emacs
