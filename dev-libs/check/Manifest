@@ -1,3 +1,13 @@
-MD5 0ea766cdb8695bd2509710cf56617936 check-0.8.4.ebuild 573
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a4435c61b5261f9cf62d890902b2ece ChangeLog 821
+MD5 c9263d9d002d10d7cbd8391fc652467d check-0.8.4.ebuild 581
 MD5 fdd436cebe214ab0c7604930defd4439 files/digest-check-0.8.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBU2UEHTu7gpaalycRAhn+AJ0Q6+8junYIEKkaewBC6QoiTuvM2wCgh5Mu
+NepO4NmWu/3rHg7Nr9FGD7c=
+=odNV
+-----END PGP SIGNATURE-----
