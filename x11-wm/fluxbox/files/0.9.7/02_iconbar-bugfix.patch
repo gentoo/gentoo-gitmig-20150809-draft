@@ -1,0 +1,20 @@
+Index: src/IconbarTool.cc
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/src/IconbarTool.cc,v
+retrieving revision 1.26
+diff -r1.26 IconbarTool.cc
+383c383
+< void IconbarTool::update(FbTk::Subject *subj) {
+---
+> void IconbarTool::update(FbTk::Subject *subj) {    
+385c385,390
+<     if (m_screen.isShuttingdown())
+---
+>     if (m_screen.isShuttingdown()) {
+>         m_screen.clientListSig().detach(this);
+>         m_screen.iconListSig().detach(this);
+>         m_screen.currentWorkspaceSig().detach(this);        
+>         if (!m_icon_list.empty())
+>             deleteIcons();
+386a392
+>     }

@@ -1,0 +1,101 @@
+Index: src/FbTk/ImageControl.cc
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/src/FbTk/ImageControl.cc,v
+retrieving revision 1.10
+retrieving revision 1.11
+diff -r1.10 -r1.11
+25c25
+< // $Id: 01_cache-bugfix.patch,v 1.1 2004/01/11 15:16:04 pyrania Exp $
+---
+> // $Id: 01_cache-bugfix.patch,v 1.1 2004/01/11 15:16:04 pyrania Exp $
+148a149
+> 
+170c171
+<     Cache tmp;
+---
+>     /*    Cache tmp;
+177,182c178,195
+<     CacheList::iterator it = cache.find(&tmp);
+<     if (it == cache.end()) {
+<         return None;
+<     } else {
+<         (*it)->count++;
+<         return (*it)->pixmap;
+---
+>     */
+>     CacheList::iterator it = cache.begin(); 	 
+>     CacheList::iterator it_end = cache.end(); 	 
+>     for (; it != it_end; ++it) { 	 
+>         if (((*it)->width == width) && 	 
+>             ((*it)->height == height) && 	 
+>             ((*it)->texture == text.type()) && 	 
+>             ((*it)->pixel1 == text.color().pixel())) { 	 
+>             if (text.type() & FbTk::Texture::GRADIENT) { 	 
+>                 if ((*it)->pixel2 == text.colorTo().pixel()) { 	 
+>                     (*it)->count++; 	 
+>                     return (*it)->pixmap; 	 
+>                 } 	 
+>             } else { 	 
+>                 (*it)->count++; 	 
+>                 return (*it)->pixmap; 	 
+>             } 	 
+>         } 	 
+224c237
+<         cache.insert(tmp); 
+---
+>         cache.push_back(tmp); 
+246,247c259
+< 
+<                 if (s_timed_cache)
+---
+>                 if (s_timed_cache) {
+249,251c261,262
+<                 else if (! (*it)->count) 
+<                     cleanCache();
+< 
+---
+>                     return;
+>                 }
+253a265,267
+>             if ((*it)->count <= 0)
+>                 cleanCache();
+> 
+364a379
+>     std::list<CacheList::iterator> deadlist;
+369d383
+< 
+371,372d384
+<             CacheList::iterator tmp_it = it;
+<             ++tmp_it;
+374c386
+<             cache.erase(it);
+---
+>             deadlist.push_back(it);
+377,379c389
+<             it = tmp_it;
+<             if (it == it_end) break;
+<         }
+---
+>         } 
+380a391,397
+> 
+>     std::list<CacheList::iterator>::iterator dead_it = deadlist.begin();
+>     std::list<CacheList::iterator>::iterator dead_it_end = deadlist.end();
+>     for (; dead_it != dead_it_end; ++dead_it) {
+>         cache.erase(*dead_it);
+>     }
+>     
+Index: src/FbTk/ImageControl.hh
+===================================================================
+RCS file: /cvsroot/fluxbox/fluxbox/src/FbTk/ImageControl.hh,v
+retrieving revision 1.8
+retrieving revision 1.9
+diff -r1.8 -r1.9
+25c25
+< // $Id: 01_cache-bugfix.patch,v 1.1 2004/01/11 15:16:04 pyrania Exp $
+---
+> // $Id: 01_cache-bugfix.patch,v 1.1 2004/01/11 15:16:04 pyrania Exp $
+130c130
+<     typedef std::set<Cache *, ltCacheEntry> CacheList;
+---
+>     typedef std::list<Cache *> CacheList;
