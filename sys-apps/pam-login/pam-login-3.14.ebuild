@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.1 2003/10/19 00:03:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.14.ebuild,v 1.2 2003/10/20 00:55:03 pebenito Exp $
 
 
 inherit gnuconfig
@@ -34,6 +34,9 @@ src_unpack() {
 	# Do not warn on inlining for gcc-3.3, bug #21213
 	epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
 	epatch ${FILESDIR}/pam-login-3.11-lastlog-fix.patch
+
+	# enable query_user_context selinux code (only affects selinux)
+	epatch ${FILESDIR}/pam-login-3.14-query_user_context.diff
 }
 
 src_compile() {
