@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.8 2003/08/07 20:51:38 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.9 2003/11/24 19:34:58 agriffis Exp $
+
+  24 Nov 2003; Aron Griffis <agriffis@gentoo.org> gle-3.0.1-r2.ebuild:
+  Stable on ia64
 
   07 Aug 2003; Lisa Seelye <lisa@gentoo.org> gle-3.0.1-r2.ebuild:
   Changed make to emake for bug 26149
