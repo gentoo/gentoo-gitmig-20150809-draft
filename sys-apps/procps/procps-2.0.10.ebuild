@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.8.ebuild,v 1.3 2002/10/11 14:52:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10.ebuild,v 1.1 2002/10/11 14:52:40 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -26,7 +26,8 @@ src_unpack() {
 	# WARNING! In case of a version bump, check the line below that removes a line from the Makefile file.
 	cd ${S}/ps
 	mv Makefile Makefile.orig
-	sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::" -e "33d" Makefile.orig > Makefile
+	sed -e "s/-O2/${CFLAGS}/" -e "s:/var/.*man/:${D}var/.*man/:" -e "s:-lproc:-lproc -L${D}lib:" \
+	    Makefile.orig > Makefile
 
 	cd ${S}/proc
 	mv Makefile Makefile.orig
@@ -35,12 +36,14 @@ src_unpack() {
 	#remove /etc/X11/applnk/Desktop/top.app from makefile
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e "{16d;29d;201d;202d}" -e "s:\$(DESKTOP)::"  Makefile.orig > Makefile
+	sed -e 's/$.DESKTOP.//' Makefile.orig > Makefile
 
 }
 
 src_compile() { 
-	make || die
+	dodir /lib
+
+	emake SHLIBDIR="${D}lib" || die
 }
 
 src_install() {
@@ -51,7 +54,11 @@ src_install() {
 	dodir /lib
 	dodir /bin
 
-	make DESTDIR=${D} MANDIR=/usr/share/man install || die
+	exeinto /lib
+	doexe proc/libproc.so.2.0.8
+	dosym /lib/libproc.so.2.0.8 /lib/libproc.so
+
+	einstall DESTDIR="${D}" || die
 
 	dodoc BUGS COPYING COPYING.LIB NEWS TODO
 	docinto proc

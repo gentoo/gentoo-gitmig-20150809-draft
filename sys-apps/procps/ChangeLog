@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.4 2002/09/30 20:00:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.5 2002/10/11 14:52:40 lostlogic Exp $
+
+*procps-2.0.10 (11 Oct 2002)
+
+  30 Sep 2002; Brandon Low <lostlogic@gentoo.org> procps-2.0.10.ebuild
+  files/digest-procps-2.0.10 :
+
+  Version bump.  Set keywords to ~.
 
 *procps-2.0.9 (30 Sep 2002)
 
