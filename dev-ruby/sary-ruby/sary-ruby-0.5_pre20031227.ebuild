@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-0.5_pre20031227.ebuild,v 1.7 2004/06/25 02:04:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-0.5_pre20031227.ebuild,v 1.8 2004/12/11 10:50:15 usata Exp $
 
 inherit ruby
 
@@ -20,4 +20,10 @@ SLOT="0"
 USE_RUBY="ruby16 ruby18 ruby19"
 S="${WORKDIR}/${PN}"
 
-DEPEND=">=app-text/sary-1.0.3"
+DEPEND="!>=app-text/sary-1.1.0
+	>=app-text/sary-1.0.3"
+
+src_unpack() {
+	unpack ${A}
+	rm -rf ${S}/debian	# workaround for ruby19
+}
