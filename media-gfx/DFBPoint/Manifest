@@ -1,4 +1,14 @@
-MD5 16dda1e61016575aab45ce4d7dabf97f ChangeLog 911
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2bcc7def540b7524ab775983f2c73b40 ChangeLog 1016
 MD5 fef8ace4a107206b14f31cc6d9195f05 DFBPoint-0.7.2.ebuild 947
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 3ce51fa3f0afb8d2cc23666ee084078d files/digest-DFBPoint-0.7.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1b2I1lqEGTUzyQRAu4MAKC3H1n2tQ3WiWxDHMecfzxKLx6WeQCgqKhA
+1aWTNKO/0PnHc1a2VRpxBzg=
+=3Qq1
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1827244b95535645ad24e7c00a061bec ChangeLog 831
 MD5 05b907c6486cc9686deb87bd7be43ac4 frontline-0.5.4.ebuild 787
-MD5 91249cdd91e69712b1bb4764e283bdff ChangeLog 826
 MD5 749ca01a89e3baed437e005e3b80b2e0 files/digest-frontline-0.5.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1aUI1lqEGTUzyQRApS4AKCtrG/oq4PI61PlSN+AZ3dCbczdFACeLazw
+1/Za1Op3EbmWG9AHXKZo88o=
+=V1PY
+-----END PGP SIGNATURE-----
