@@ -23,11 +23,14 @@ SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip fetch"
 
-DEPEND="virtual/libc
+# vmware-workstation should not use virtual/libc as this is a 
+# precompiled binary package thats linked to glibc.
+RDEPEND="sys-libs/glibc
 	virtual/x11
-	virtual/os-headers
 	>=dev-lang/perl-5
 	sys-apps/pciutils"
+
+DEPEND="${RDEPEND} virtual/os-headers"
 
 src_install() {
 	dodir /opt/vmware/bin
