@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/perforce
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.7 2004/06/25 02:42:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/ChangeLog,v 1.8 2004/06/26 22:04:14 stuart Exp $
+
+*perforce-2003.1-r1 (26 Jun 2004)
+
+  26 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  files/perforce-2003.1/50perforce, +perforce-2003.1-r1.ebuild:
+  Fixes for bugs #52830 & #52831
 
   19 Feb 2004; root <root@gentoo.org> :
   Updated digests; files were changed by Perforce
