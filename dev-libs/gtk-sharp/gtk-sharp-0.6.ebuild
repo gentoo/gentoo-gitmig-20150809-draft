@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtk-sharp/gtk-sharp-0.6.ebuild,v 1.1 2002/12/12 01:47:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtk-sharp/gtk-sharp-0.6.ebuild,v 1.2 2002/12/18 13:16:36 foser Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit."
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/mono-0.16
 	gnome? ( >=gnome-base/libgnomecanvas-2
 		>=gnome-base/libgnomeui-2 )"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 src_compile() {
 
