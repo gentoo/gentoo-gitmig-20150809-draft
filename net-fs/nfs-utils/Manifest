@@ -2,22 +2,21 @@
 Hash: SHA1
 
 MD5 7f85ee70d102141816130bdc7cea5fa0 nfs-utils-1.0.6-r6.ebuild 3021
-MD5 4020787756671c03faf77a9ded8de220 ChangeLog 9481
+MD5 5e39d50e2886f79bfcc0cb48d24c9aca ChangeLog 9565
 MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
 MD5 28aff43d6059a5645973388f8e4b9d5f files/nfs 5297
 MD5 a23ae1dac684526aeaa679372648f9bf files/nfs.confd 616
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-nfs-utils-1.0.6-r6 0
+MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r6 67
 MD5 3c693e012dcb68827b8f82cc98fa129b files/nfs-utils-0.3.3-rquotad-overflow.patch 1243
 MD5 a02eed87e5d581e56feb0f6dfd18e6df files/exports 66
 MD5 df57bdbe3dfddd40cda65b04509d5957 files/nfs-utils-1.0.6-usn36.patch.gz 5596
 MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
 MD5 3878538fac900450212b414f8c8c39ab files/nfs-utils-1.0.6-uclibc.patch 547
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iQCVAwUBQelo2J4WFLgrx1GWAQL/eAQAyoI1a2XfoE3nMuokHJA3Oubdg+oqL329
-AoDbxvqdeKlblvZEoD2ED9s1uTYvE0lHKIIAtY4p7MJKkKVTRMk8GAhfMQoAxI9z
-8NFMmrS3x1lM6hDWs3CKRXDRTtgTw0yd7pTtTfTt05PkB/gFoYIrIDnPcBQM2CEe
-UhdQAR630DI=
-=43x2
+iD8DBQFB6eL0PpIsIjIzwiwRAjkoAKD1buaOGHN7EyFA8tAtxNIfZbiPdQCgthXJ
+N/FbdnOPzQdkKq8BlVtbedg=
+=Vgha
 -----END PGP SIGNATURE-----
