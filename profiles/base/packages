@@ -1,5 +1,42 @@
 # Gentoo Base Profile
 
+# NOTE: THIS IS THE BASE PROFILE FOR *ANY* GENTOO BASED (GNU/LINUX) SYSTEM.
+# NO MODIFICATIONS MAY BE MADE TO THIS FILE WITHOUT PRIOR DISCUSSION.  IF
+# YOU ARE CREATING A NEW PROFILE, YOU SIMPLY NEED TO INHERIT THIS BASE
+# PROFILE IN YOUR PROFILE DIRECTORY'S "parent" FILE.
+
+
+# OK, you're staring at this file and you have no idea what these stars are
+# for.  HEre's teh scoop.  An initial "*" marks a package that is part of
+# the official BASE system profile.  If there is a "*" then `emerge system`
+# will use the line in its calculations of what should be installed for the
+# base profile.  Lines without a "*" prefix will be ignored for profile
+# system calculations.
+
+# Now, this is new: *all* lines (with or without a star) will be used as a
+# special package *inclusion* mask. For example, the line
+# *=sys-devel/gcc-2.95.3-r1 will cause Portage to totally ignore all gcc
+# ebuilds except for gcc-2.95.3-r1. The notation: >=, >, <=, <, and ~ can be
+# used to offer a bit more flexibility.  For example, >=sys-libs/glibc-2.2.4
+# will cause Portage to ignore all glibc ebuilds with a version less than
+# 2.2.4.  This allows us to have profile-specific package.mask settings.
+# *ALL* lines are used for this masking process, whether they are prefixed
+# with a * or not.  And if a generic dependency is used, say "sys-apps/foo"
+# then all versions of foo are considered.  The key thing to note is that
+# this file does not need to end up being an exaustive list of portage
+# packages, just the ones critical to this profile hierarchy.
+
+# So, what happens to ${PORTDIR}/profiles/package.mask? It is still around,
+# and still useful.  But it should be mainly used for broken ebuilds and
+# packages only.  The package.mask continues to function as normal, masking
+# out ebuilds from *all* system profiles.
+
+# Which to use? Use the profile-specific stuff to lock down specific
+# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known compatible
+# versions of binutils, gcc, and glibc so we lock those versions down here.
+# This prevents the user from shooting themselves in the foot by installing
+# a non-working version.
+
 *app-arch/bzip2
 *app-arch/cpio
 *app-arch/gzip
@@ -9,10 +46,7 @@
 *app-shells/sash
 *dev-lang/perl
 *dev-lang/python
-*net-firewall/iptables
-*net-misc/dhcpcd
 *net-misc/iputils
-*net-misc/openssh
 *net-misc/rsync
 *net-misc/wget
 *sys-apps/baselayout
@@ -33,7 +67,7 @@
 *sys-apps/man-pages
 *sys-apps/net-tools
 *sys-apps/pam-login
-*sys-apps/portage
+*>=sys-apps/portage-2.0.50-r1
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/sed
@@ -60,7 +94,7 @@
 *sys-libs/pam
 *sys-libs/readline
 *sys-libs/zlib
-*virtual/bootloader
 *virtual/editor
 *virtual/glibc
 *virtual/modutils
+*virtual/ssh
