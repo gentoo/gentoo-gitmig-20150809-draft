@@ -1,6 +1,16 @@
-MD5 af7c11376136ac389bf275819e45f118 xfoil-6.94-r1.ebuild 1698
-MD5 99dfbb14aa1b1077be5494df9ab1e793 xfoil-6.94.ebuild 1652
-MD5 6c7ba1278c8d5d526487c84b24db0da8 ChangeLog 880
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 766171db1eb5a33f55105a40f915f0bc ChangeLog 1053
 MD5 f9b985eff5cf629c334273be8fbdee5c metadata.xml 219
-MD5 bd6eb26fc81bfc9a42aa998d36043598 files/digest-xfoil-6.94-r1 175
+MD5 97e2b03562c5305a44a092c6295d4c23 xfoil-6.94-r1.ebuild 1689
+MD5 b523626fac083d06f381d37833aea9dd xfoil-6.94.ebuild 1724
 MD5 bd6eb26fc81bfc9a42aa998d36043598 files/digest-xfoil-6.94 175
+MD5 bd6eb26fc81bfc9a42aa998d36043598 files/digest-xfoil-6.94-r1 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCAR135mJXAu5GbtIRAhSiAKCCEX+KmL6baygcZb5i8E1bP3brqQCdEX4p
+iR9xMZgtoNKbdcWjGJY/ZSQ=
+=EryO
+-----END PGP SIGNATURE-----
