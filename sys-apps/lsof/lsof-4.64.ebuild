@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.10 2002/12/15 10:44:23 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.11 2003/01/09 21:27:49 lostlogic Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
@@ -9,7 +9,7 @@ SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.gz"
 HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
 
-DEPEND="virtual/glibc virtual/linux-sources"
+DEPEND="virtual/glibc"
 
 LICENSE="GPL-2"
 SLOT="0"

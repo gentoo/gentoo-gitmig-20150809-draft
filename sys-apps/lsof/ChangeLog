@@ -1,10 +1,14 @@
 # ChangeLog for sys-apps/lsof
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.7 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.8 2003/01/09 21:27:49 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lsof-4.64 (29 Jun 2002)
+
+  09 Jan 2002; Brandon Low <lostlogic@gentoo.org>:
+  Remove linux-sources from depends because it only needs the 
+  headers and they are in system.
 
   26 Sep 2002; Mike Frysinger <vapier@gentoo.org>:
   updated keywords (alpha)
