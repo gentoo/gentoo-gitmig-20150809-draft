@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.6 2004/06/25 00:19:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.7 2004/06/29 10:39:30 carlo Exp $
 
 DESCRIPTION="Managements system for online audio streams"
 HOMEPAGE="http://mindx.dyndns.org/kde/radio/"
@@ -11,7 +11,7 @@ KEYWORDS="x86"
 
 IUSE="debug kde"
 
-# We don't inherit kde-base because we might not need to install the kde
+# We don't inherit kde because we might not need to install the kde
 # related components, and if that's the case, we don't want to accidently
 # pull in kde as a dependency
 
