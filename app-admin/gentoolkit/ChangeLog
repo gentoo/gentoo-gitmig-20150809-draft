@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.71 2003/03/29 11:29:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.72 2003/04/22 18:54:26 mholzer Exp $
+
+*gentoolkit-0.1.19-r4 (22 Apr 2003)
+
+  22 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  gentoolkit-0.1.19-r3.ebuild, gentoolkit-0.1.19-r3.ebuild,
+  gentoolkit-0.1.19-r4.ebuild, files/scripts/qpkg:
+  Chaning qpkg to use /bin/bash. Closes #18915.
 
 *gentoolkit-0.1.19-r3 (12 Mar 2003)
 
