@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.2 2002/05/17 05:06:52 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.3 2002/06/03 21:25:35 murphy Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -25,10 +25,13 @@ HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc sys-devel/autoconf"
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	# configure is broken by default for sparc and possibly others, regen
+	# from configure.in
+	autoconf
 	./configure --prefix=/usr || die
 	emake || die
 }
