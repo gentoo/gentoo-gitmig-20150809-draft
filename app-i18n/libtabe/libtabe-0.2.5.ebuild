@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.3 2003/02/13 08:46:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.4 2003/03/07 17:01:26 liquidx Exp $
 
 DESCRIPTION="Libtabe provides bimsphone support for xcin-2.5+"
 HOMEPAGE="http://libtabe.sourceforge.net/"
@@ -17,6 +17,7 @@ src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
+		--with-db-inc=/usr/include/db3 \
 		--with-db-lib=/usr/lib \
 		--with-db-bin=/usr/bin \
 		--enable-shared || die "./configure failed"
