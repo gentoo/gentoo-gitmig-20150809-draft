@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.1 2004/10/16 02:21:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.2 2004/10/24 20:57:15 dragonheart Exp $
 
 inherit kernel-mod eutils
 
@@ -29,7 +29,7 @@ src_compile() {
 	then
 		export SUPPORT_ALSA=1
 	else
-		export SUPPORT_ALSA=0
+		unset SUPPORT_ALSA
 	fi
 
 	# http://marc.theaimsgroup.com/?l=gentoo-dev&m=109672618708314&w=2
