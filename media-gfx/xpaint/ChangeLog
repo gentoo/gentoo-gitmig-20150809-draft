@@ -1,9 +1,18 @@
 # ChangeLog for media-gfx/xpaint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.2 2003/02/12 07:05:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.3 2003/05/27 02:28:27 joker Exp $
+
+*xpaint-2.6.9 (27 May 2003)
+
+  27 May 2003; Christian Birchinger <joker@gentoo.org>
+  xpaint-2.6.9.ebuild:
+
+  Version bump. Own install functions (sandbox violations).
+  Using included Xaw95 libs because compilation fails otherwise.
 
 *xpaint-2.6.2-r1 (12 Apr 2002)
 
-  12 Apr 2002; Seemant Kulleen <seemant @gentoo.org> xpaint-2.6.2-r1.ebuild :
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+  xpaint-2.6.2-r1.ebuild:
 
   Compile against new libpng
