@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.3 2004/06/25 03:21:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.4 2004/07/01 20:02:16 squinky86 Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64"
 IUSE="ipv6 static crypt GAPING_SECURITY_HOLE"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	crypt? ( dev-libs/libmix )"
 
 src_unpack() {
