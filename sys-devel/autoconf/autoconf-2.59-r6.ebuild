@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r6.ebuild,v 1.1 2004/10/21 01:06:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r6.ebuild,v 1.2 2004/10/22 03:38:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -36,6 +36,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please note that the 'WANT_AUTOCONF_2_5=1' syntax is now:" 
+	einfo "Please note that the 'WANT_AUTOCONF_2_5=1' syntax is now:"
 	einfo "  WANT_AUTOCONF=2.5"
 }
