@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.3.ebuild,v 1.1 2003/12/10 22:00:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.3.ebuild,v 1.2 2003/12/24 05:15:01 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ceres.dti.ne.jp/~knak/yc.html"
 SRC_URI="http://www.ceres.dti.ne.jp/~knak/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~alpha"
+KEYWORDS="amd64 x86 alpha"
 
 DEPEND="virtual/emacs
 	>=app-i18n/canna-3.6"

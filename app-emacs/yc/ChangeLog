@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/yc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.15 2003/12/10 22:00:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.16 2003/12/24 05:15:01 usata Exp $
+
+  24 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> yc-4.0.0.ebuild,
+  yc-4.0.1.ebuild, yc-4.0.2.ebuild, yc-4.0.3.ebuild:
+  Marked as stable. Removed old ebuilds
 
 *yc-4.0.3 (11 Dec 2003)
 
