@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.43 2005/03/27 22:53:10 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.44 2005/03/28 19:52:15 stkn Exp $
+
+  28 Mar 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff, asterisk-1.0.7.ebuild:
+  Added fix for compiling res_perl with bri enabled.
 
   27 Mar 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.7.ebuild:
   Fixed and re-enabled res_perl support, perl modules are now installed into

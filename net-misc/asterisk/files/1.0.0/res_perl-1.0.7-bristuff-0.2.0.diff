@@ -1,0 +1,20 @@
+--- asterisk-addons-1.0.7/res_perl/AstAPIBase.c.orig	2005-03-28 21:38:28.998238136 +0200
++++ asterisk-addons-1.0.7/res_perl/AstAPIBase.c	2005-03-28 21:40:41.375113792 +0200
+@@ -704,7 +704,7 @@
+ struct ast_channel *asterisk_request_and_dial(char *type,char *data,int format,char *callerid, int timeout) {
+ 	int reason;
+ 	struct ast_channel *chan;
+-	chan = ast_request_and_dial(type,AST_FORMAT_ULAW, data, timeout, &reason,callerid);
++	chan = ast_request_and_dial(type,AST_FORMAT_ULAW, data, timeout, &reason, 0, callerid, NULL);
+ 	return chan;
+ }
+ 
+@@ -743,7 +743,7 @@
+ 
+ struct ast_channel *asterisk_request(int format,char *type,char *data,char *callerid) {
+ 	struct ast_channel *chan=NULL;
+-	chan = ast_request(type, format, data);
++	chan = ast_request(type, format, data, NULL);
+ 	if (callerid && strlen(callerid))
+ 		ast_set_callerid(chan, callerid, 1);
+ 

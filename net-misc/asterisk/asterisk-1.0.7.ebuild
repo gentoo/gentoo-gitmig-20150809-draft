@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.2 2005/03/27 22:53:10 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.3 2005/03/28 19:52:15 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -137,6 +137,10 @@ src_unpack() {
 		sed -i -e "s:^ASTSRC.*:ASTSRC = ${S}:" \
 			-e "s:\$(ASTLIBDIR)/modules/res_musiconhold.so::" \
 			res_perl/Makefile
+
+		if use bri; then
+			epatch ${FILESDIR}/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff
+		fi
 
 		cd ${S}
 	fi
