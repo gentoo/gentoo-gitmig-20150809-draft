@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.12 2004/08/31 18:54:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.13 2004/09/06 20:54:32 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gcc-sparc64-3.2.3.ebuild,
+  gcc-sparc64-3.3.1.ebuild, gcc-sparc64-3.3.2.ebuild,
+  gcc-sparc64-3.3.3.ebuild, gcc-sparc64-3.3.4.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gcc-sparc64-3.3.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.3.ebuild,v 1.5 2004/07/15 03:24:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.3.ebuild,v 1.6 2004/09/06 20:52:48 ciaranm Exp $
 
 
 # Variables
@@ -120,5 +120,5 @@ pkg_postinst() {
 	einfo "${MYARCH}make <target>"
 	einfo "Where <target> is one of the usual kernel targets"
 	einfo ""
-	sleep 10
+	epause 10
 }

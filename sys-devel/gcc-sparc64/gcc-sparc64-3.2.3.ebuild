@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.2.3.ebuild,v 1.8 2004/07/15 03:25:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.2.3.ebuild,v 1.9 2004/09/06 20:54:32 ciaranm Exp $
 
 inherit flag-o-matic eutils
 
@@ -117,5 +117,5 @@ pkg_postinst() {
 	einfo "${MYARCH}make <target>"
 	einfo "Where <target> is one of the usual kernel targets"
 	einfo ""
-	sleep 10
+	epause 10
 }

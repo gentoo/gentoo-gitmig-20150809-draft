@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.7 2004/07/22 08:09:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.8 2004/09/06 20:52:48 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gcc-mips64-3.3.1.ebuild,
+  gcc-mips64-3.3.2.ebuild, gcc-mips64-3.3.3.ebuild, gcc-mips64-3.3.4.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *gcc-mips64-3.3.4 (22 Jul 2004)
 
