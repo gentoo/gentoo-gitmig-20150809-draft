@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.3 2004/09/28 04:25:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.4 2004/10/07 02:40:22 eradicator Exp $
 
 IUSE="static jack"
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 -sparc ~ia64 ~ppc64 ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 -sparc ~ia64 ~ppc64 ~hppa ~mips"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND="virtual/alsa
@@ -57,17 +57,16 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	#This alsa version does not provide libasound.so.1
-	#Without this library just about everything even remotely
-	#linked to previous versions of alsa-lib will break.
-	#Fortunately, libasound.so.2 seems to be backwards
-	#compatible with libasound.so.1 and a simple link
-	#fixes the problem (fingers crossed)
-	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
+	preserve_old_lib /usr/$(get_libdir)/libasound.so.1
+
 	dodoc ChangeLog COPYING TODO
 
 	if use static; then
 		cd ${S}.static
 		make DESTDIR="${D}" install || die "make install failed"
 	fi
+}
+
+src_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libasound.so.1
 }
