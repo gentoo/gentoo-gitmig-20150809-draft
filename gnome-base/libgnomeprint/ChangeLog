@@ -1,8 +1,11 @@
 # ChangeLog for gnome-extra/libgnomeprint
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.7 2002/10/24 19:07:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.8 2002/11/12 00:34:44 spider Exp $
 
 *libgnomeprint-1.116.1 (24 Oct 2002)
+
+  11 Nov 2002; Spider <spider@gentoo.org> libgnomeprint-1.116.1.ebuild : marked
+  as stable
   
   24 Oct 2002; Spider <spider@gentoo.org> libgnomeprint-1.116.1.ebuild :
   new version, minor update and using gnome.org eclass now
