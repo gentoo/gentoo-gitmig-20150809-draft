@@ -1,6 +1,30 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.52 2004/10/21 18:10:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.53 2004/11/06 20:54:20 plasmaroo Exp $
+
+*aa-sources-2.4.23-r3 (06 Nov 2004)
+
+  06 Nov 2004; <plasmaroo@gentoo.org> -aa-sources-2.4.23-r2.ebuild,
+  +aa-sources-2.4.23-r3.ebuild, aa-sources-2.6.5-r5.ebuild,
+  -files/aa-sources-2.4.23.CAN-2004-0001.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0109.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0133.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0177.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0178.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0181.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0394.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0427.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0495.patch,
+  -files/aa-sources-2.4.23.CAN-2004-0535.patch,
+  -files/aa-sources-2.4.23.FPULockup-53804.patch,
+  +files/aa-sources-2.4.23.XDRWrapFix.patch,
+  -files/aa-sources-2.4.23.munmap.patch,
+  -files/aa-sources-2.4.23.rtc_fix.patch,
+  +files/aa-sources-2.6.5.devPtmx.patch, -files/do_brk_fix.patch:
+  Bump 2.4 branch to -aa3 which contains some of the security fixes in files/,
+  removing them from there. Fixed 2.4 kNFSd security vulnerability and the 2.6
+  /dev/ptmx DoS, bug #62524. Also fixed CAN-2004-0814 for 2.4 and 2.6, bug
+  #68421.
 
   21 Oct 2004; <plasmaroo@gentoo.org> aa-sources-2.6.5-r5.ebuild,
   +files/aa-sources-2.6.5.CAN-2004-0816.patch:

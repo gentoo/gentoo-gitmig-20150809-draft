@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.13 2004/10/21 18:10:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.14 2004/11/06 20:54:20 plasmaroo Exp $
 
 ETYPE="sources"
 K_NOUSENAME="yes"
@@ -23,7 +23,9 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.CAN-2004-0596.patch
 	${FILESDIR}/${P}.CAN-2004-0495-0496.patch
 	${FILESDIR}/${P}.cmdlineLeak.patch
-	${FILESDIR}/${P}.CAN-2004-0816.patch"
+	${FILESDIR}/${P}.CAN-2004-0816.patch
+	${FILESDIR}/${P}.devPtmx.patch
+	${DISTDIR}/${P}-CAN-2004-0814.patch"
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -31,7 +33,8 @@ UNIPATCH_STRICTORDER="yes"
 DESCRIPTION="Full sources for Andrea Arcangeli's Linux kernel"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/andrea/"
 SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/andrea/kernels/v2.6/${KV}.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
 
 KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE=""
