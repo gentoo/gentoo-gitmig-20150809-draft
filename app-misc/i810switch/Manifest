@@ -1,4 +1,6 @@
-MD5 93cbaf268fff9c5d4d0e6f6f29e93570 ChangeLog 842
+MD5 4635e8cfa6b39b4d987b9efee7e11f88 ChangeLog 973
 MD5 a48f42da18f16903700c9c734c336dbf i810switch-0.5.ebuild 728
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+MD5 0f85b57939a0c09f3b42b2e633f2e177 i810switch-0.6.1.ebuild 729
 MD5 258acdbb7653d8a6866c06fe1ff382ae files/digest-i810switch-0.5 65
+MD5 fd923187070b851e03761af34ab56fb4 files/digest-i810switch-0.6.1 67
