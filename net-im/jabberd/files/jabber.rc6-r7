@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r7,v 1.4 2004/06/24 00:33:16 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r7,v 1.5 2004/07/05 17:06:14 humpback Exp $
 
 depend() {
 	need net
@@ -12,9 +12,11 @@ start() {
 	ebegin "Starting main Jabber Component"
 	if [ "${JABBERD}" = "jabberd14" ]
 	then
-		if [ -z $(ps ax | grep `cat ${JPIDFILE}` | grep -v grep ) ]
-		then
-			rm -f ${JPIDFILE}
+		if [ -f ${JPIDFILE} ] then
+			if [ -z $(ps ax | grep `cat ${JPIDFILE}` | grep -v grep ) ]
+			then
+				rm -f ${JPIDFILE}
+			fi
 		fi
 		jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
 	else
@@ -40,14 +42,14 @@ start() {
 
 stop() {
 	ebegin "Stopping main Jabber Component"
-	kill `cat ${JPIDFILE}`
 	if [ "${JABBERD}" = "jabberd14" ]
 	then
+		kill `cat ${JPIDFILE}`
 		sleep 2
-        		if [ -f ${JPIDFILE} ]; then
-				kill -9 `cat ${JPIDFILE}`
-				rm -f ${JPIDFILE}
-			fi
+        	if [ -f ${JPIDFILE} ]; then
+			kill -9 `cat ${JPIDFILE}`
+			rm -f ${JPIDFILE}
+		fi
 	else
 		ebegin "   Router"
 			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/router.pid
