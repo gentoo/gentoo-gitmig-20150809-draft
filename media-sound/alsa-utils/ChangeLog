@@ -1,12 +1,17 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.25 2003/07/11 20:08:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.26 2003/07/29 19:53:35 agenkin Exp $
 
   12 Jun 2003; <msterret@gentoo.org> alsa-utils-0.5.10-r8.ebuild:
   fix Header
 
   05 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> alsa-utils-0.9.4.ebuild :
   Switched to mirror://alsaproject in SRC_URI.
+
+*alsa-utils-0.9.6 (29 Jul 2003)
+
+  29 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version update.
 
 *alsa-utils-0.9.5 (11 Jul 2003)
 
