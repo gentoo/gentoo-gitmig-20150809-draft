@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.877 2005/01/19 19:44:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.878 2005/01/20 01:56:57 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -707,6 +707,7 @@ sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-mathematics/yacas:glut - Build an OpenGL plugin using the GLUT library
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
+sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/checkpolicy:mls - Add experimental multi level security policy support
