@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.1 2004/04/03 04:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.2 2004/04/03 04:23:33 vapier Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -130,6 +130,8 @@ src_install() {
 	vpopmail_set_homedir
 
 	make DESTDIR=${D} install || die
+	dosed ${VPOP_HOME}/etc/inc_deps
+	dosed ${VPOP_HOME}/etc/lib_deps
 
 	into /var/vpopmail
 	dobin ${FILESDIR}/vpopmail-Maildir-dotmaildir-fix.sh
