@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.93 2003/10/15 21:17:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.94 2003/10/18 21:02:47 brad_mssw Exp $
+
+  18 Oct 2003; Brad House <brad_mssw@gentoo.org> glibc-2.3.2-r6.ebuild:
+  add ~amd64 flag to glibc-2.3.2-r6, works with and without nptl enabled in use
+  flags
 
   15 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
   glibc-2.3.2-r7.ebuild:
