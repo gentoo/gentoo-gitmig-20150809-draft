@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.5.1.ebuild,v 1.1 2005/03/01 10:16:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.5.1.ebuild,v 1.2 2005/03/01 18:59:04 swegener Exp $
 
 inherit eutils kde toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6
 	>=x11-libs/qt-2.2.4
-	>=db-3.2"
+	>=sys-libs/db-3.2"
 
 src_unpack() {
 	unpack ${A}

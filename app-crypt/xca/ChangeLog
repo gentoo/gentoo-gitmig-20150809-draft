@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.1 2005/03/01 10:16:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.2 2005/03/01 18:59:04 swegener Exp $
+
+  01 Mar 2005; Sven Wegener <swegener@gentoo.org> xca-0.5.1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *xca-0.5.1 (01 Mar 2005)
 
