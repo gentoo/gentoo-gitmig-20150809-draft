@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.4.ebuild,v 1.1 2001/01/20 04:59:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.4.ebuild,v 1.2 2001/03/21 16:21:11 pnamias Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
@@ -25,29 +25,14 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  local myopts
-  if [ -n "`use gnome`" ]
-  then
-	myopts="--prefix=/opt/gnome --with-gnome"
-  else
-	myopts="--prefix=/usr/X11R6 --without-gnome"
-  fi
-  CFLAGS="$CFLAGS -I/opt/gnome/include" try ./configure --host=${CHOST} ${myopts} 
+  CFLAGS="$CFLAGS -I/opt/gnome/include" try ./configure --host=${CHOST}  
   try make
 
 }
 
 src_install() {                               
   cd ${S}
-  if [ -n "`use gnome`" ]
-  then
-    try make prefix=${D}/opt/gnome \
-	gnorbadir=${D}/opt/gnome/etc/CORBA/servers \
-	sysdir=${D}/opt/gnome/share/applets/Multimedia \
-	install
-  else
     try make prefix=${D}/usr/X11R6 install
-  fi
   dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
   insinto /usr/X11R6/include/X11/pixmaps/
   donewins gnomexmms/gnomexmms.xpm xmms.xpm
