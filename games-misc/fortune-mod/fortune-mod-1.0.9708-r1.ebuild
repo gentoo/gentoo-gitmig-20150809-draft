@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.0.9708-r1.ebuild,v 1.2 2004/05/13 07:52:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.0.9708-r1.ebuild,v 1.3 2004/05/13 08:10:45 mr_bones_ Exp $
 
 inherit eutils
 
-MY_P="${PN}-${P##*.}.tar.gz"
+MY_P="${PN}-${P##*.}"
 #The original (http://www.progsoc.uts.edu.au/~dbugger/hacks/hacks.html) is dead
 # but the guy setup his 'perm' home with LSM (http://lsm.execpc.com/)
 DESCRIPTION="The notorious fortune program"
 HOMEPAGE="ftp://sunsite.unc.edu/pub/Linux/games/amusements/fortune/"
-SRC_URI="http://www.ibiblio.org/pub/Linux/games/amusements/fortune/${MY_P}"
+SRC_URI="http://www.ibiblio.org/pub/Linux/games/amusements/fortune/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -29,26 +29,30 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/9708-Makefile.patch
-	epatch ${FILESDIR}/9708-ppc-rot.patch
+	epatch "${FILESDIR}/9708-Makefile.patch"
+	epatch "${FILESDIR}/9708-ppc-rot.patch"
 }
 
 src_compile() {
-	[ `use offensive` ] && off=1 || off=0
+	local off=0
+
+	use offensive && off=1
 	emake \
 		OFFENSIVE=${off} \
 		OPTCFLAGS="${CFLAGS}" \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
-	[ `use offensive` ] && off=1 || off=0
+	local off=0
+
+	use offensive && off=1
 	make \
 		OFFENSIVE=${off} \
 		OPTCFLAGS="${CFLAGS}" \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		install \
-		|| die
+		|| die "make install failed"
 
 	dosed /usr/share/man/man6/fortune.6
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.4 2004/05/13 07:52:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.5 2004/05/13 08:10:45 mr_bones_ Exp $
+
+  13 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-1.0.9708-r1.ebuild:
+  correct S; use flag fixing; error messages; tidy
 
   13 May 2004; Joshua Kinard <kumba@gentoo.org>
   fortune-mod-1.0.9708-r1.ebuild, fortune-mod-1.99.1.ebuild:
