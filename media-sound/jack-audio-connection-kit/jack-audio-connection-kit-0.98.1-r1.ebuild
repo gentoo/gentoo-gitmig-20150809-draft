@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.6 2004/07/24 05:51:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.7 2004/09/02 13:41:12 tgall Exp $
 
 IUSE="doc debug jack-tmpfs caps"
 
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 #-sparc: 0.98.1-r1: config/sysdeps/cycles.h:27:2: warning: #warning You are compiling JACK on a platform for which jack/cycles.h needs work
-KEYWORDS="x86 ~ppc amd64 ~alpha ~ia64 -sparc"
+KEYWORDS="x86 ~ppc amd64 ~alpha ~ia64 ppc64 -sparc"
 
 RDEPEND=">=media-libs/alsa-lib-0.9.1
 	>=media-libs/libsndfile-1.0.0
