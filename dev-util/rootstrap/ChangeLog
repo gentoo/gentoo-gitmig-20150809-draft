@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rootstrap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.10 2005/01/27 14:04:59 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.11 2005/02/24 17:19:13 lanius Exp $
+
+  24 Feb 2005; Heinrich Wendel <lanius@gentoo.org> rootstrap-0.3.21.ebuild:
+  mark stable on amd64
 
   27 Jan 2005; lanius@gentoo.org -rootstrap-0.3.18.ebuild,
   -rootstrap-0.3.19.ebuild, rootstrap-0.3.21.ebuild:
