@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 83ea6c8296b84ed0f468752d964a6f6f ChangeLog 1625
+MD5 9e115d9d1da5e685413dc8c8870d6ef7 ChangeLog 1727
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 8f0f6ca3d3bb862acadb02e87b3310e8 eurosym-1.4.ebuild 1079
+MD5 f6d4380c25288d7301ae6cb9ae5a9868 eurosym-1.4.ebuild 1135
 MD5 994b8cb5d08447177dfbb306002185dd files/digest-eurosym-1.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcUkQVWNWqTUmv+0RAinmAJ9jsqjJPc4GUagzOUihW3v6MSD6TACgmpQ1
-Xo0Vp1qjJdaKH7OqWpye/7Y=
-=s2EQ
+iD8DBQFBdR9XVWNWqTUmv+0RAlvZAJ9ls9f3izQbCaRcMaWQ4lDtWn4lwQCfUdCt
+p/f+8FTwlIOcu/NHEdZd0kA=
+=Kawc
 -----END PGP SIGNATURE-----

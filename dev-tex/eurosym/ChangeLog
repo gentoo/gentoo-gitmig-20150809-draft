@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.15 2004/10/16 15:58:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.16 2004/10/19 14:12:06 usata Exp $
+
+  19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> eurosym-1.4.ebuild:
+  Blocks >=tetex-2; bug #68129.
 
   17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> eurosym-1.4.ebuild:
   Changed DEPEND to tetex-1.
