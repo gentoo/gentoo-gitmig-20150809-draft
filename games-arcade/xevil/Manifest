@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b35cc5d8f4b1a764761e653b4884482b ChangeLog 425
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cc71daa812ff63f1f3558e7cd8a916dd xevil-2.02_p2.ebuild 1090
+MD5 96d7e8716c4772e0a29603f657a79b7e xevil-2.02_p2.ebuild 1125
 MD5 f82eccd2bfaf4e7990a45c7075a64659 files/digest-xevil-2.02_p2 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCLKHTu7gpaalycRAiJ5AKCXmqWbHolxws6oJENak1hhBmRdLgCgqfiS
+Yzfdr35pP6YGFVzXyv2+9kg=
+=AWs7
+-----END PGP SIGNATURE-----
