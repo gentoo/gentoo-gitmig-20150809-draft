@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/simgear
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/ChangeLog,v 1.1 2002/12/09 15:26:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/ChangeLog,v 1.2 2003/02/09 22:34:11 seemant Exp $
 
 *simgear-0.3.1 (09 Dec 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.1.ebuild :
+
+  Added specifically that plib should be 1.6.0 or greater in DEPENDS.
+  Closes bug #15354 by Tyler Nielsen <tyler@mithander.com>
 
   09 Dec 2002; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.1.ebuild
   ChangeLog files/digest-simgear-0.3.1 :
