@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.15 2003/02/09 22:27:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.16 2003/02/10 19:13:43 gerk Exp $
+
+  10 Feb 2003; Mark Guertin <gerk@gentoo.org> mjpegtools-1.6.0-r7.ebuild 
+  files/1.6.0-r7-ppc.patch:
+  Added patch to close bug #15441, thanks go to Lapo Calamandrei.
 
 *mjpegtools-1.6.1 (09 Feb 2003)
 
