@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r2.ebuild,v 1.2 2003/06/07 01:16:11 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r2.ebuild,v 1.3 2003/06/10 13:25:27 nakano Exp $
 
 MY_P="Canna36p3"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
