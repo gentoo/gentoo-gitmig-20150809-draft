@@ -7,7 +7,7 @@ MD5 a6fbf86e82e7039d4256fdd6c1a38bcb vpopmail-5.4.0-r1.ebuild 7410
 MD5 98eb520388c505ec8e99f8fdf5f33d3a vpopmail-5.2.1-r9.ebuild 7567
 MD5 39aa2505d0a7cf2d02650d8cdf4b187c vpopmail-5.2.1-r6.ebuild 6380
 MD5 3886587ecb82bfa71669f27a2880f8f5 vpopmail-5.2.1-r8.ebuild 6724
-MD5 0640b5081eec0b42b4a8cad733eba956 vpopmail-5.4.6-r1.ebuild 7636
+MD5 8084f285eaaf0e6d31a5a27b78bd7156 vpopmail-5.4.6-r1.ebuild 7637
 MD5 0bc96064a9872b49c094b93f24e9f909 vpopmail-5.4.0_rc1.ebuild 8362
 MD5 9cb9f545f72335fc7ba8402d9c616d01 vpopmail-5.4.6.ebuild 7499
 MD5 5c75d54e8924b414cba1dda30a7181e4 vpopmail-5.2.1-r5.ebuild 6062
@@ -38,7 +38,7 @@ MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.6-access.violation.patch
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBKTco5FrxP71izLARAjUTAKCaMvA2dLbHAXuB6i7CEA+Ns2YuxgCgjQKo
-/hFnAOJEva9lbuqeDfxp5/A=
-=nuv0
+iD8DBQFBKTfZ5FrxP71izLARAjQtAJ0enMGkXxyqQonoGdUCeFa40cZcpQCbBtTM
+ADbRn6LN47QOgoCoB7Tqvrw=
+=scch
 -----END PGP SIGNATURE-----

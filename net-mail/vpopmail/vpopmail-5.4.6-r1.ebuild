@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.3 2004/08/23 00:02:08 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.6-r1.ebuild,v 1.4 2004/08/23 00:04:40 langthang Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -125,7 +125,7 @@ src_compile() {
 	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 	#--disable-rebuild-tcpserver-file \
 
-	make || die "Make failed."
+	emake || die "Make failed."
 }
 
 src_install() {
