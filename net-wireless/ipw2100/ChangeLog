@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.44 2004/11/04 12:00:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.45 2004/11/05 10:18:17 brix Exp $
+
+*ipw2100-0.60 (05 Nov 2004)
+
+  05 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +ipw2100-0.60.ebuild:
+  Version bump.
 
   04 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> -files/hostap_crypt.h,
   -files/ipw2100-0.55-modparam-perm.patch,
