@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/sign
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.5 2004/08/13 13:03:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/ChangeLog,v 1.6 2004/09/07 22:51:48 swegener Exp $
+
+  08 Sep 2004; Sven Wegener <swegener@gentoo.org> -sign-1.0.5.ebuild,
+  -sign-1.0.6.ebuild, sign-1.0.7.ebuild:
+  Marked 1.0.7 stable on x86. Modified ebuild to install a symlink that can be
+  used to invoke sign in unsign mode. Removed old ebuilds.
 
   13 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
   sign-1.0.5.ebuild:
