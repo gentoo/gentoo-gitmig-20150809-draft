@@ -2,6 +2,7 @@ app-admin/sudo-1.6.6
 app-arch/bzip2-1.0.2
 app-arch/gzip-1.2.4
 app-arch/tar-1.13.25
+app-arch/unzip-5.20
 app-crypt/mit-krb5
 app-editors/emacs-21.2.1
 app-editors/vim-6.2
@@ -25,6 +26,7 @@ dev-libs/icu-3.13
 dev-libs/libedit-20020225
 dev-libs/libiconv-1.9
 dev-libs/libxml2-2.6.7
+dev-libs/openssl-0.9.7b
 dev-php/mod_php-4.2
 dev-tcltk/expect-5.32
 dev-util/cscope-15.3
@@ -62,7 +64,6 @@ net-misc/efax-0.9a
 net-misc/gsasl-2.1.1
 net-misc/mdnsresponder-58
 net-misc/openssh-3.6.1_p1
-net-misc/openssl-0.9.7b
 net-misc/rsync-2.5.7
 net-nds/openldap-2.1.22
 net-nds/portmap-8.1
@@ -82,7 +83,7 @@ sys-apps/grep-2.4.2
 sys-apps/groff-1.18.1
 sys-apps/less-378
 sys-apps/lsof-4.68
-sys-apps/sed-4.0.2
+sys-apps/sed-4.0.7
 sys-apps/tcp_wrappers-7.6
 sys-apps/texinfo-4.6
 sys-apps/vixie-cron-3.0.1
@@ -251,7 +252,7 @@ sys-darwin/webdavfs-148.2
 sys-darwin/xnu-517
 sys-devel/autoconf-2.57
 sys-devel/automake-1.6.3
-sys-devel/bc-1.06
+sys-devel/bc-1.05
 sys-devel/bison-1.28
 sys-devel/distcc-2.0.2
 sys-devel/flex-2.5.4a
@@ -269,6 +270,7 @@ sys-libs/pam-modules-13
 sys-libs/yacc-1.1.4
 sys-libs/zlib-1.1.4
 sys-apps/diffutils-2.5.7 
+sys-apps/findutils-4.1.7
 x11-base/apple-xfree-4.3
 sys-apps/sed-4.0.7
 sys-apps/ed-0.2-r3
