@@ -1,7 +1,10 @@
 # ChangeLog for net-dialup/fcpci
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer Alexander Holler <holler@ahsoftware.de>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.4 2003/11/19 14:15:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.5 2004/04/10 12:22:48 lanius Exp $
+
+  10 Apr 2004; Heinrich Wendel <lanius@gentoo.org> :
+  version bump, bug #45355, add kernel 2.6 warning bug #46769
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata
