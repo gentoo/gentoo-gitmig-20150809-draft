@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/madeleine
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/madeleine/ChangeLog,v 1.1 2003/06/26 17:06:30 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/madeleine/ChangeLog,v 1.2 2004/04/12 05:11:25 usata Exp $
+
+*madeleine-0.6.1 (10 Apr 2004)
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> madeleine-0.6.1.ebuild:
+  Version bumped. virtual/ruby fix
 
 *madeleine-0.3 (26 Jun 2003)
 
