@@ -1,6 +1,9 @@
 # ChangeLog for net-www/adzapper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.13 2004/06/25 00:48:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.14 2004/07/06 04:35:40 brad Exp $
+
+  06 Jul 2004; Brad Laue <brad@gentoo.org> adzapper-20040408.ebuild:
+  Stable on x86 finally.
 
 *adzapper-20040408 (23 Jun 2004)
 
