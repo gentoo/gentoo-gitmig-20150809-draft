@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.6 2002/07/24 16:27:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.7 2002/08/01 03:27:16 seemant Exp $
 
 MY_PV=${PV%.*}
 
@@ -49,7 +49,10 @@ src_compile() {
 
 	echo "all:" > test/Makefile
 
-	patch -p1 <${FILESDIR}/ncurses-5.2.20020511-gcc31.patch
+	# this patch is completely invalid.  whoever was responsible for
+	# generating it for the previous snapshots, please investigate with
+	# regards to this current snapshot.
+	#	patch -p1 <${FILESDIR}/ncurses-5.2.20020511-gcc31.patch
 
 	#emake still doesn't work circa 25 Mar 2002
 	make || die

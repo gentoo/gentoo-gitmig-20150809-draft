@@ -1,12 +1,21 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.10 2002/07/24 16:27:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.11 2002/08/01 03:27:16 seemant Exp $
 
 
 *ncurses-5.2.20020511-r1 (9 Jun 2002)
+	
+  31 Jul 2002; Seemant Kulleen <seemant@gentoo.org> :
+
+  the second gcc-3.1 patch (from files/) attempts to replace lines in the
+  cursesw.cc file that do not even exist any longer.  the patch fails.  It
+  has been commented out, with the hope that whoever generated it for the
+  older snapshots will investigate and sort this out.  ncurses, it must be
+  noted, appears to work well in production, despite the failed patch,
+  anyway.
+
   24 Jul 2002; Spider <spider@gentoo.org> :
   change CXXFLAGS in the ebuild to accomodate for -fno-exceptions
-  
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added ppc to keywords
