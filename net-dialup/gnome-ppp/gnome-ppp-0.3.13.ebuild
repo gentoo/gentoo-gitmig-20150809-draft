@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.7.ebuild,v 1.1 2004/07/13 12:55:18 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.13.ebuild,v 1.1 2004/07/22 19:06:33 pclouds Exp $
 
 inherit gnome2 eutils
 
@@ -26,9 +26,3 @@ DEPEND="sys-devel/gettext
 	${RDEPEND}"
 
 USE_DESTDIR="1"
-src_unpack() {
-	unpack ${A}
-	# This patch is to prevent showing window1 which's 
-	# probably a mistake. This may be fixed soon
-	epatch ${FILESDIR}/${P}-glade.patch
-}
