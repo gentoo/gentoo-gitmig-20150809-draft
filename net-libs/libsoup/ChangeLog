@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.6 2003/06/03 10:24:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.7 2003/06/10 13:50:53 liquidx Exp $
+
+*libsoup-1.99.23 (10 Jun 2003)
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.23.ebuild:
+  version bump for evo 1.4
 
 *libsoup-1.99.22 (03 Jun 2003)
 
