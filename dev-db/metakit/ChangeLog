@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.7 2003/12/08 02:46:22 kloeri Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.8 2004/01/29 21:09:41 kloeri Exp $
+
+  29 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  metakit-2.4.9.2-r1.ebuild:
+  Marked 2.4.9.2-r1 x86 as requested by author.
 
   08 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
   metakit-2.4.9.2-r1.ebuild:
