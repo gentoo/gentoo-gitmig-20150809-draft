@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.10 2004/04/05 18:16:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.11 2004/04/15 18:49:10 vapier Exp $
 
-inherit base flag-o-matic
+inherit base flag-o-matic eutils
 
 DEB_PVER=12
 DESCRIPTION="POSIX 1003.1e capabilities"
@@ -12,7 +12,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 ~mips hppa sparc ~ppc alpha amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
-	if [ `use python` ] ; then
+	if use python ; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
 		append-flags -I/usr/include/python${PYTHONVER}
 	fi
@@ -49,9 +49,9 @@ src_compile() {
 src_install() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
-	if [ `use python` ] ; then
+	if use python ; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages"
 	fi
 	make install FAKEROOT="${D}" man_prefix=/usr/share ${myflags} || die
-	dodoc CHANGELOG README License pgp.keys.asc doc/capability.notes
+	dodoc CHANGELOG README pgp.keys.asc doc/capability.notes
 }
