@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.8 2003/11/16 01:43:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.9 2003/12/15 15:48:08 bcowan Exp $
+
+  15 Dec 2003; Brad Cowan <bcowan@gentoo.org> xfwm4-4.0.1.ebuild:
+  Added startup-notification dep.
 
 *xfwm4-4.0.1 (12 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.0.1.ebuild,v 1.2 2003/12/07 19:54:34 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.0.1.ebuild,v 1.3 2003/12/15 15:48:08 bcowan Exp $
 
 IUSE="X"
 S=${WORKDIR}/${P}
@@ -19,7 +19,8 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	=xfce-base/libxfce4util-${PV}
 	=xfce-base/libxfcegui4-${PV}
 	=xfce-base/libxfce4mcs-${PV}
-	=xfce-base/xfce-mcs-manager-${PV}"
+	=xfce-base/xfce-mcs-manager-${PV}
+	x11-libs/startup-notification"
 
 src_compile() {
 	local myconf
