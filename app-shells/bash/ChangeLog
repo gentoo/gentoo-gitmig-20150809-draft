@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.31 2004/02/15 21:07:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.32 2004/03/02 18:09:00 iggy Exp $
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> bash-2.05b-r9.ebuild:
+  s390 keywords
 
   15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r9.ebuild:
   Fix parallel make, bug #41002.
