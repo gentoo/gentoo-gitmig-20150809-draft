@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.9 2003/02/05 09:01:43 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.10 2003/02/10 21:00:58 raker Exp $
+
+*vpopmail-5.2.1-r4 (10 Feb 2003)
+
+  10 Feb 2003; Nick Hadaway <raker@gentoo.org> vpopmail-5.2.1-r4.ebuild,
+  files/digest-vpopmail-5.2.1-r4 :
+  changed mysql logic so if mysql is not in use to force disabling of
+  mysql support.
 
 *vpopmail-5.2.1-r3 (05 Feb 2003)
 
