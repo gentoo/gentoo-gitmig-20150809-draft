@@ -1,10 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb57b8711943dbb438526d7860fda1b1 commons-httpclient-2.0-r1.ebuild 1320
 MD5 e30f81fc9e3eb58025ff71b308f2dcff commons-httpclient-2.0.2.ebuild 1598
 MD5 71baa3270838e2c2ab69ec0f6d1a1cd6 commons-httpclient-2.0.1.ebuild 1605
-MD5 36afb0ca285e2f2be751575e08886b93 ChangeLog 2162
+MD5 b70cba18dc33aade7be3f175fb7309cb ChangeLog 2303
+MD5 ecb24404cf00408b77f2525bfca60cec commons-httpclient-3.0_rc1.ebuild 1331
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
 MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
+MD5 0f992c1cc59ac83b50ecb76e46e4cedd files/digest-commons-httpclient-3.0_rc1 83
 MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
 MD5 20316ee59dc3bf35dd5c04778ae6882f files/jikes.diff 955
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT/HC/rLF9B432nYRApqbAKCDcULZJ71+DiczxXFeeqOjzLtJZACePM0c
+lFKvfnV8rTGdD0FUEvU0Fik=
+=ZTi2
+-----END PGP SIGNATURE-----
