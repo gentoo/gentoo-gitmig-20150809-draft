@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.23 2003/08/12 23:07:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.24 2003/08/18 11:51:24 spider Exp $
+
+*gdk-pixbuf-0.22.0-r2 (18 Aug 2003)
+
+  18 Aug 2003; <spider@gentoo.org> gdk-pixbuf-0.22.0-r2.ebuild:
+  support for USE="mmx" flag (thanks to Serge Matveev <serge@matveev.spb.ru>)
 
   13 Aug 2003; <spider@gentoo.org> :
   added a db-1 dependency (copied from gnome-libs) to get specifics.
