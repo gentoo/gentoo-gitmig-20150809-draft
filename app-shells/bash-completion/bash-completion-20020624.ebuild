@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.1 2002/06/24 21:27:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020624.ebuild,v 1.2 2002/06/25 10:22:03 seemant Exp $
 
-S=${WORKDIR}/bash_completion
+S=${WORKDIR}/${P/-/_}
 
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
-SRC_URI="http://www.caliban.org/files/bash/${P}.tar.gz"
+SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
 LICENSE="GPL-2"
+SLOT=""
 
 RDEPEND=">=sys-apps/bash-2.05a"
 
