@@ -2,14 +2,17 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.2.0.ebuild,v 1.1 2002/01/28 06:30:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.2.0.ebuild,v 1.2 2002/04/13 13:39:30 seemant Exp $
 
 DESCRIPTION="The Common Unix Printing System - Gimp Print Drivers"
 HOMEPAGE="http://www.cups.org"
+SRC_URI="http://download.sourceforge.net/gimp-print/${P/-cups/}.tar.gz"
 
 S=${WORKDIR}/${P/-cups/}
-SRC_URI="http://download.sourceforge.net/gimp-print/${P/-cups/}.tar.gz"
-DEPEND="virtual/glibc net-print/cups media-gfx/imagemagick sys-libs/readline sys-devel/perl"
+DEPEND="net-print/cups 
+	media-gfx/imagemagick
+	sys-libs/readline
+	sys-devel/perl"
 
 src_compile() {
 
@@ -41,6 +44,6 @@ src_install () {
 	doexe test/{unprint,pcl-unprint,bjc-unprint,parse-escp2,parse-bjc}
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README \
-		 doc/{gimpprint.ps,FAQ.html}
-	dohtml doc/manual-html
+		 doc/gimpprint.ps
+	dohtml doc/manual-html doc/FAQ.html
 }
