@@ -1,14 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ed9f5b961f1ad79621dd0393de91e0c2 tomcat-3.3.2-r1.ebuild 2920
 MD5 c51948b362c299e2735d6e460666e073 tomcat-5.0.27-r1.ebuild 3227
 MD5 064bb30807b209e63f4c181c630732a8 tomcat-3.3.2.ebuild 2894
+MD5 7032e1b63c82b5755b93a592ae55b7a4 tomcat-4.1.30-r3.ebuild 3230
 MD5 8aa660cb189e47312c7fb43a30df7a5d tomcat-4.1.30-r2.ebuild 3207
-MD5 bc5d0844bd210ede8ac09175c4c02955 ChangeLog 9468
+MD5 0224b421d666174378fd4960d2fbb48b tomcat-5.0.27-r2.ebuild 3250
+MD5 122be7981b93a7aa3e51bddeca96a358 ChangeLog 9647
 MD5 56292f22dced45d993974e198033461d metadata.xml 221
 MD5 6940eb780efc66ecb6ecf11b6b7adb05 files/digest-tomcat-3.3.2 73
 MD5 71d59fd713a960e63c1b894ca5893a1b files/digest-tomcat-4.1.30-r2 74
+MD5 71d59fd713a960e63c1b894ca5893a1b files/digest-tomcat-4.1.30-r3 74
 MD5 d5a48abc8db5543a73abbbf151d0630e files/digest-tomcat-5.0.27-r1 75
+MD5 d5a48abc8db5543a73abbbf151d0630e files/digest-tomcat-5.0.27-r2 75
+MD5 6940eb780efc66ecb6ecf11b6b7adb05 files/digest-tomcat-3.3.2-r1 73
 MD5 eb7830519ae94bb563d39f1f51ab590a files/3.3.2/gentoo.diff 368
 MD5 d33339579d0be490e2426622bdc02478 files/3.3.2/tomcat.conf 898
 MD5 fc61d48a4df09dc7b355fb37cda3a8f4 files/3.3.2/tomcat.init 629
@@ -24,9 +30,9 @@ MD5 d35e0401143488349e4399a3f25530b7 files/5.0.27/tomcat.init 632
 MD5 c19b85e130d0e0a565eebc406d699965 files/5.0.27/jikes.diff 510
 MD5 a4af2d8c7172284a45409b4c6869c54d files/5.0.27/21tomcat 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBCXsr/rLF9B432nYRAnBdAJ41hd3CMvGv/ZZA96z8RF5Inh1SVQCgsP8K
-bevfpHZhcbA7nngdK03AgVU=
-=+mil
+iD8DBQFBEAmr/rLF9B432nYRAs5eAJ4+C8FqOydMLIQSwwbbFHmfCK74TACfQ+Wp
+zjPqf2gPAhzTjoTDxnq2eK0=
+=9zR2
 -----END PGP SIGNATURE-----
