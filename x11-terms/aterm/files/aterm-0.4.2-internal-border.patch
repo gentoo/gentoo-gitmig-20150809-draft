@@ -1,6 +1,15 @@
-diff -Naur aterm-0.4.2/src/main.c aterm-0.4.2-orig/src/main.c
---- aterm-0.4.2/src/main.c	2004-08-23 14:08:25.000000000 +0200
-+++ aterm-0.4.2-orig/src/main.c	2004-08-23 14:11:12.071851096 +0200
+diff -Naur aterm-0.4.2/src/main.c aterm-0.4.2-spock/src/main.c
+--- aterm-0.4.2/src/main.c	2005-01-18 14:40:55.000000000 +0100
++++ aterm-0.4.2-spock/src/main.c	2005-01-18 14:42:35.000000000 +0100
+@@ -838,7 +838,7 @@
+ 	    Resize_menuBar(x, 0, width, y);
+ 	}
+     }
+-    XMoveResizeWindow(Xdisplay, TermWin.vt, x, y, width, height + 1);
++    XMoveResizeWindow(Xdisplay, TermWin.vt, x, y, width, (height < 0xffff) ? height + 1 : height);
+ 
+     if (old_width)
+ 	Gr_Resize(old_width, old_height);
 @@ -1634,6 +1634,7 @@
      rs_minBufferWidth = NULL;
      rs_saveLines = NULL;	/* scrollback buffer [lines] */
@@ -22,9 +31,9 @@ diff -Naur aterm-0.4.2/src/main.c aterm-0.4.2-orig/src/main.c
  /* no point having a scrollbar without having any scrollback! */
      if (!TermWin.saveLines)
  	Options &= ~Opt_scrollBar;
-diff -Naur aterm-0.4.2/src/rxvt.h aterm-0.4.2-orig/src/rxvt.h
---- aterm-0.4.2/src/rxvt.h	2004-08-23 14:08:25.000000000 +0200
-+++ aterm-0.4.2-orig/src/rxvt.h	2004-08-23 14:09:58.099096664 +0200
+diff -Naur aterm-0.4.2/src/rxvt.h aterm-0.4.2-spock/src/rxvt.h
+--- aterm-0.4.2/src/rxvt.h	2005-01-18 14:40:55.000000000 +0100
++++ aterm-0.4.2-spock/src/rxvt.h	2005-01-18 14:41:50.000000000 +0100
 @@ -603,10 +603,6 @@
  #define scrollBar_esc		30
  #define menuBar_margin		2	/* margin below text */
@@ -57,9 +66,9 @@ diff -Naur aterm-0.4.2/src/rxvt.h aterm-0.4.2-orig/src/rxvt.h
  EXTERN const char      *rs_cutchars;	/* chars for selection boundaries */
  #ifdef META8_OPTION
  EXTERN const char      *rs_modifier;
-diff -Naur aterm-0.4.2/src/xdefaults.c aterm-0.4.2-orig/src/xdefaults.c
---- aterm-0.4.2/src/xdefaults.c	2004-08-23 14:08:24.000000000 +0200
-+++ aterm-0.4.2-orig/src/xdefaults.c	2004-08-23 14:09:23.273390976 +0200
+diff -Naur aterm-0.4.2/src/xdefaults.c aterm-0.4.2-spock/src/xdefaults.c
+--- aterm-0.4.2/src/xdefaults.c	2005-01-18 14:40:28.000000000 +0100
++++ aterm-0.4.2-spock/src/xdefaults.c	2005-01-18 14:41:50.000000000 +0100
 @@ -302,6 +302,8 @@
           "pointer color"),
      STRG(rs_borderWidth, "borderWidth", "bw", "number",
