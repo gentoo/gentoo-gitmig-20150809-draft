@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.9 2004/11/11 09:33:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.10 2004/11/22 03:22:20 tgall Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -60,11 +60,15 @@ do_filter_flags() {
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
-
 	# gcc 3.3 doesn't support -mtune on numerous archs, so xgcc will fail
 	setting="`get-flag mtune`"
 	[ ! -z "${setting}" ] && filter-flags -mtune="${setting}"
 
+	# in gcc 3.3 there is a bug on ppc64 where if -mcpu is used
+	# the compiler incorrectly assumes the code you are about to build
+	# is 32 bit
+	use ppc64 setting="`get-flag mcpu`"
+	[ ! -z "${setting}" ] && filter-flags -mcpu="${setting}"
 
 	# only allow the flags that we -know- are supported
 	transform_known_flags
