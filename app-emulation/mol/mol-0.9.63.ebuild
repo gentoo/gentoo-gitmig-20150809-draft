@@ -17,7 +17,7 @@ src_compile() {
 
 src_install() {
 
-	make install || die "Failed to install MOL"
+	make DESTDIR=${D} install || die "Failed to install MOL"
 
 	dodoc 0README BUILDING COPYING COPYRIGHT CREDITS Doc/*
 	
