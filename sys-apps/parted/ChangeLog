@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.6 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.7 2002/09/14 04:30:27 woodchip Exp $
+
+*parted-1.6.3 (14 Sep 2002)
+
+  14 Sep 2002; Donny Davies <woodchip@gentoo.org> :
+  Chase latest release.  Added the libreiserfs support.
 
 *parted-1.6.1 (8 Jun 2002)
 
@@ -8,7 +13,6 @@
   Added KEYWORDS.
 
   8 Jun 2002; Donny Davies <woodchip@gentoo.org> :
-
   New 1.6 release + small install patch.  This one can use dev-libs/progsreiserfs
   optionally at runtime; not installed per default at the moment.  Testing/feedback
   on this welcome.
@@ -19,7 +23,6 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> parted-1.4.24-r3.ebuild :
-
   Closes bug #1690 and related bugs.  Thanks to everyone for the patches and
   fixes.
 
@@ -29,20 +32,17 @@
   Added LICENSE, KEYWORDS, SLOT.
 
   29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> parted-1.4.24-r2.ebuild :
-
   Matthew Kennedy submitted some fixes for USE flag based compilation -- to
   explicitly enable if in USE and explicitly disable if not.
 
 *parted-1.4.24-r1 (27 Mar 2002)
 
   27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> parted-1.4.24-r1.ebuild :
-
   man page/LFH fixes submitted by Matthew Kennedy.
 
 *parted-1.4.24 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
