@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/gtksee-0.5.6.ebuild,v 1.4 2004/09/23 00:38:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/gtksee-0.5.6.ebuild,v 1.5 2004/09/30 18:24:13 mr_bones_ Exp $
 
 DESCRIPTION="A simple but functional image viewer/browser - ACD See alike."
 HOMEPAGE="http://gtksee.berlios.de/"
@@ -25,6 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	# broken makefiles that don't support DESTDIR with USE nls (bug #65889)
+	einstall || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
