@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.17 2004/06/24 22:04:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.18 2004/06/28 00:48:38 ciaranm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/utils/text/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha ~sparc ~mips"
 
 DEPEND="virtual/glibc"
 
