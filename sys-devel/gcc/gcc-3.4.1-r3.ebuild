@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.15 2005/01/15 01:23:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.16 2005/01/18 06:15:01 eradicator Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
 
@@ -31,7 +31,7 @@ DEPEND="virtual/libc
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? (
 		gcj? (
 			gtk? ( >=x11-libs/gtk+-2.2 )

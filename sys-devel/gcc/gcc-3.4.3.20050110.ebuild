@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.4 2005/01/17 04:33:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.5 2005/01/18 06:15:01 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
 		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	)
-	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	!build? (
 		gcj? (
 			gtk? ( >=x11-libs/gtk+-2.2 )
@@ -106,7 +106,7 @@ src_unpack() {
 	case $(tc-arch ${CTARGET}) in
 		mips)
 			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-			if use !multilib; then
+			if ! use_multilib; then
 				use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
 				use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 			fi
@@ -133,7 +133,7 @@ src_unpack() {
 			fi
 			;;
 		amd64)
-			if use multilib; then
+			if use_multilib; then
 				epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 				cd ${S}/libstdc++-v3
 				einfo "running autoreconf..."
