@@ -403,49 +403,8 @@ app-emacs/monk
 
 # <foser@gentoo.org> (27 Oct 2002)
 # Unstable GNOME2 tree mask (2.1)
-# Expect things to break if you unmask this !
-# Only tested on x86, other archs *will* break
-# I repeat : do NOT even try unless you're using x86
->=x11-libs/vte-0.9.2
->=x11-libs/libwnck-2.1
->=x11-terms/gnome-terminal-2.1
->=x11-themes/gnome-themes-0.2
-x11-themes/gnome-icon-theme
->=gnome-base/eel-2.1
->=gnome-base/gail-1.1
->=gnome-base/gnome-session-2.1
->=gnome-base/nautilus-2.1
->=gnome-base/gnome-2.1
->=gnome-base/ORBit2-2.5
->=gnome-base/librsvg-2.1
->=gnome-base/libgnomeui-2.1
->=gnome-base/control-center-2.1
->=gnome-base/libgnomecanvas-2.1
->=gnome-base/bonobo-activation-2.1
->=gnome-base/libbonobo-2.1
->=gnome-base/libbonoboui-2.1
->=gnome-base/gnome-applets-2.1
->=gnome-base/gnome-vfs-2.1
->=gnome-base/libgnomeprint-2.1
->=gnome-base/libgnomeprintui-2.1
->=gnome-base/gnome-panel-2.1
->=gnome-base/libgnome-2.1
->=gnome-base/gnome-desktop-2.1
->=app-arch/file-roller-2.1
->=media-gfx/eog-1.1
->=net-libs/linc-0.7
->=app-editors/gedit-2.1
->=gnome-extra/yelp-2.1
-gnome-extra/system-tray-applet
->=gnome-extra/libgtkhtml-2.1
+# or whats left of it
 gnome-extra/gcalctool
->=gnome-extra/gnome-games-2.1
->=gnome-extra/gnome-media-2.1
->=gnome-extra/gnome-utils-2.1
->=gnome-extra/at-spi-1.1
->=x11-wm/metacity-2.4.3
->=x11-libs/startup-notification
-
 
 # <spider@gentoo.org> (23 oct 2002)
 # okay, this has been a bothersome thing with recompiles of static packages 
