@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/memcached-api-php
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/ChangeLog,v 1.1 2003/07/30 01:46:51 lisa Exp $
+
+
+* dev-libs/memcached-api-php-1.0.6
+29 Jul 2003; Lisa Seelye <lisa@gentoo.org>
+  Added the split APIs. This is one of them.
