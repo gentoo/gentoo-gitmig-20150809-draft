@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.0.ebuild,v 1.2 2005/02/14 15:09:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.0.ebuild,v 1.3 2005/03/10 15:50:42 mr_bones_ Exp $
 
 DESCRIPTION="classic Basic interpreter"
 HOMEPAGE="http://blassic.org"
 SRC_URI="http://blassic.org/bin/${P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~hppa ~ppc ~x86"
+KEYWORDS="~hppa ~ppc x86"
 SLOT="0"
 IUSE="svga X"
 
