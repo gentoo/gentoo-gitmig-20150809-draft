@@ -38,6 +38,7 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
 	berkdb? ( >=sys-libs/db-3 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
+	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
 	postgres? ( >=dev-db/postgresql-7.1 )"
 #	java? ( virtual/jdk )
@@ -97,7 +98,7 @@ src_compile() {
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use ldap &&  myconf="${myconf} --with-ldap" 
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-
+	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 
 	use qt && ( \
 		export QTDIR=/usr/qt/2 #hope this helps - danarmak
