@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.67 2004/11/30 01:33:12 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.68 2004/12/31 01:31:49 cyfred Exp $
+
+*nvidia-glx-1.0.6629-r1 (31 Dec 2004)
+
+  31 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
+  +nvidia-glx-1.0.6629-r1.ebuild:
+  Changing driver and lib install location to be detected depending on
+  xorg-x11 version.
 
   30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> -files/README.gentoo,
   +files/libGL.la, -files/libGL.la.2,
