@@ -1,5 +1,5 @@
 MD5 0fc6db7b40264047cb491190ab09a0ee cryptlib-3.0.ebuild 1122
-MD5 3230767344870b05b020a444fde77d23 files/digest-cryptlib-3.0 54
-MD5 7c7e549b4a508f53290cbb591b233f20 files/digest-cryptlib-3.1_beta04 60
+MD5 bb69781cd7a49bb58937abeba1ea18dd files/digest-cryptlib-3.0 108
+MD5 743e6e019948102d51993bc1e2745d0c files/digest-cryptlib-3.1_beta04 114
 MD5 dd4efb0ec611545265f2ef94e38e0052 ChangeLog 472
 MD5 3ea12f4cd169bbeb4cf8d7c0a9c64392 cryptlib-3.1_beta04.ebuild 1164

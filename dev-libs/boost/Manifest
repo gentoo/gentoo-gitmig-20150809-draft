@@ -1,7 +1,5 @@
-MD5 0debdea0d8401ccef37a4421c1bc8c07 files/digest-boost-1.28 65
 MD5 ed187a2b2048776a7e5b27060d96938c files/digest-boost-1.29.0 65
 MD5 2b36d47323b021671d391600501685cc files/digest-boost-1.30.0 66
-MD5 3c7d1636527b94102a667aa60a6d96fc boost-1.28.ebuild 1443
 MD5 1ce7bfeec3df43684579d4c3317e522e boost-1.29.0.ebuild 1437
 MD5 f7c854cc61848f5c42009aee06aa1bb8 ChangeLog 1037
 MD5 47cc0eb1fd0be0e7b300c2433f3da645 boost-1.30.0.ebuild 2997
