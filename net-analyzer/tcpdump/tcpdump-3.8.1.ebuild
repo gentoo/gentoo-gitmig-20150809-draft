@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.1.ebuild,v 1.1 2004/01/03 13:12:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.1.ebuild,v 1.2 2004/01/05 15:49:54 aliz Exp $
+
+inherit flag-o-matic
 
 IUSE="ssl"
 
@@ -19,6 +21,8 @@ DEPEND=">=net-libs/libpcap-0.6.1
 	ssl? ( >=dev-libs/openssl-0.6.9 )"
 
 src_compile() {
+	replace-flags -O[3-9] -O2
+
 	econf `use_with ssl crypto` `use_enable ipv6` || die
 	make CCOPT="$CFLAGS" || die
 }
