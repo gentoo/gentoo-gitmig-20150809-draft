@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/lapack-config
+# Copyright 2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-config/ChangeLog,v 1.1 2004/04/30 01:29:53 george Exp $
+
+*lapack-config-1.0.0.ebuild (29 Apr 2004)
+
+  29 Apr 2004; George Shapovalov <george@gentoo.org> lapack-config-1.0.0.ebuild, Manifest, files/{digest-lapack-config-1.0.0,lapack-config.gz} :
+  initial release
+  Utility to change the default LAPACK library
+  ebuild submitted by  Derek Dolney <dolney@astro.upenn.edu>
