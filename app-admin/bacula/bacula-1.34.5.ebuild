@@ -31,6 +31,8 @@ RDEPEND="${DEPEND}
 src_compile() {
 	local myconf=""
 
+	sed -i -e "s:$bindir/mysql:$bindir/mysql -p:g" grant_mysql_privileges.in
+
 	#define this to skip building the other daemons ...
 	[ -n "$BUILD_CLIENT_ONLY" ] \
 		&& myconf="${myconf} --enable-client-only"
