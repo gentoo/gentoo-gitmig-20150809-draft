@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/krename
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.1 2002/05/02 19:17:09 danarmak Exp $
+
+*krename-2.1-pre2 (2 May 2002)
+
+  2 May 2002; Dan Armak <danarmak@gentoo.org> ChangeLog:
+  
+  User ebuild submission (Michael v.Ostheim - #1973)
