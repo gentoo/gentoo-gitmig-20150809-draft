@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pam_ssh
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_ssh/ChangeLog,v 1.1 2004/02/23 01:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_ssh/ChangeLog,v 1.2 2004/03/30 00:56:24 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pam_ssh-1.9.ebuild:
+  inherit eutils for epatch
 
 *pam_ssh-1.9 (22 Feb 2004)
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.19 2004/03/13 21:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.1.ebuild,v 1.20 2004/03/30 00:58:09 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="adds multiple ssh keys to the ssh authentication agent. These may use the same passphrase. Unlike ssh-add, if any of the keys use the same passphrase, you will only need to enter each unique passphrase once, and keys that are already added will not be prompted for again."
 SRC_URI="http://www.azstarnet.com/~donut/programs/ssh-multiadd/${P}.tar.gz"
