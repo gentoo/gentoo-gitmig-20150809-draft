@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.72-r1.ebuild,v 1.2 2003/11/04 07:36:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.72-r1.ebuild,v 1.3 2003/11/15 06:35:21 rizzo Exp $
 
-IUSE="nls perl spell nas ssl"
+IUSE="nls perl spell nas ssl cjk"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="~x86"
 
 DEPEND="=sys-libs/db-1*
 	>=x11-libs/gtk+-2.0
@@ -29,6 +29,8 @@ DEPEND="=sys-libs/db-1*
 
 src_unpack() {
 	unpack ${A} || die
+	use cjk && epatch ${FILESDIR}/gaim_cjk_gtkconv.patch
+
 	use ssl && {
 		cd ${S}/plugins
 		unpack gaim-encryption-${EV}.tar.gz
@@ -71,6 +73,15 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [ `use cjk` ]; then
+		ewarn
+		ewarn "You have chosen (by selecting 'USE=cjk') to compile with"
+		ewarn "a patch for CJK support.  Please be aware that this patch"
+		ewarn "causes problems with skkinput.  kinput2 works fine.  Details"
+		ewarn "can be found at http://bugs.gentoo.org/show_bug.cgi?id=24657#c23"
+		ewarn
+	fi
+
 	if [ `use ssl` ]; then
 		ewarn
 		ewarn "You have chosen (by selecting 'USE=ssl') to install"
