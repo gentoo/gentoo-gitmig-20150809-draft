@@ -1,4 +1,14 @@
-MD5 ea53a068e1d65ff4f051e9d9bab73f90 libical-0.24_rc4-r1.ebuild 841
-MD5 57a779f41d144c28dc3e08dcd7c04a41 ChangeLog 1180
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fd575997c7e34efc745751504ffa5d7 libical-0.24_rc4-r1.ebuild 849
 MD5 4d01239e46295f54006f3d3afd40ac08 metadata.xml 254
+MD5 379f25a655ab0c3da7483afd5bbbc4c0 ChangeLog 1294
 MD5 9e86a9c26c4068790ea6ad837ee2326a files/digest-libical-0.24_rc4-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdWZvugEuf3OQ0akRAsweAKCbVFe7rUJIrZWniYVVA9FmC+UklACgjtLc
+y4ZOD+NBfxz71LfMBLUQadw=
+=256x
+-----END PGP SIGNATURE-----
