@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.7.ebuild,v 1.4 2003/09/11 23:31:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.0.7.ebuild,v 1.5 2003/09/15 16:57:21 weeve Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A remote security scanner for Linux (nessus-plugins)"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 DEPEND=">=net-analyzer/nessus-core-${PV}"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc -sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 
 src_compile() {
 	econf || die "configure failed"

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.15 2003/07/10 12:20:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.16 2003/09/15 16:55:48 weeve Exp $
+
+  15 Sep 2003; Jason Wever <weeve@gentoo.org> nessus-libraries-2.0.7.ebuild:
+  Added ~sparc keyword.
 
 *nessus-libraries-2.0.7 (10 Jul 2003)
 
