@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.2 2004/12/01 18:26:25 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.3 2004/12/06 00:05:07 swtaylor Exp $
 
 inherit eutils
 
@@ -76,6 +76,7 @@ src_compile() {
 		--disable-autorenamesent \
 		--cache-file=${S}/configuring.cache \
 		--host=${CHOST} ${myconf} debug=true || die "./configure"
+	sed -e'/^install-perms-local:/a\	sed -e\"s|^|'${D}'|g\" -i permissions.dat' -i Makefile
 	emake || die "Compile problem"
 }
 
@@ -93,8 +94,6 @@ etc_courier_chg() {
 	file="${1}" ; key="${2}" ; value="${3}"
 	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
 	sed -i -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
-	#sed -i.x -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
-	#diff "${file}.x" "${file}" ; rm "${file}.x"
 }
 
 set_maildir() {
