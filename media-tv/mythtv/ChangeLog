@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.14 2004/02/02 17:58:54 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.15 2004/02/06 14:28:31 max Exp $
+
+*mythtv-0.14-r1 (06 Feb 2004)
+
+  06 Feb 2004; Max Kalika <max@gentoo.org> mythtv-0.14-r1.ebuild,
+  mythtv-0.14.ebuild:
+  Re-enable DVB support. Add DirectFB, artsc, and cle266 (via hardware MPEG
+  decoder) support.
 
 *mythtv-0.14 (02 Feb 2004)
 

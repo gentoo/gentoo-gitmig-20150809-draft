@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14.ebuild,v 1.1 2004/02/02 17:58:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.1 2004/02/06 14:28:31 max Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="alsa lcd lirc nvidia"
+IUSE="alsa arts dvb directfb lcd lirc nvidia cle266"
 
 DEPEND="virtual/x11
 	>=x11-libs/qt-3.1
@@ -20,10 +20,13 @@ DEPEND="virtual/x11
 	>=media-tv/xmltv-0.5.16
 	>=sys-apps/sed-4
 	alsa? ( media-libs/alsa-lib )
+	arts? ( kde-base/arts )
+	directfb? ( dev-libs/DirectFB )
+	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	nvidia? ( media-video/nvidia-glx )"
-	#dvb? ( media-libs/libdvb )
+	nvidia? ( media-video/nvidia-glx )
+	cle266? ( media-libs/libddmpeg )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
@@ -40,7 +43,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} && cd ${S}
 
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:usr/local:usr:g" -i "${i}" || die "sed failed"
@@ -54,42 +57,57 @@ src_compile() {
 	fi
 
 	if [ "`use alsa`" ] ; then
-		sed -e "s:#CONFIG += using_alsa:CONFIG += using_alsa:" \
-			-e "s:#ALSA_LIBS = -lasound:ALSA_LIBS = -lasound:" \
-			-i "settings.pro" || die "enable alsa sed failed"
+		sed -e 's:#CONFIG += using_alsa:CONFIG += using_alsa:' \
+			-e 's:#ALSA_LIBS = -lasound:ALSA_LIBS = -lasound:' \
+			-i 'settings.pro' || die "enable alsa sed failed"
 	fi
-	# Not quite ready for prime time.
-	#if [ "`use dvb`" ] ; then
-	#	sed -e "s:#CONFIG += using_dvb:CONFIG += using_dvb:" \
-	#		-e "s:#DEFINES += USING_DVB:DEFINES += USING_DVB:" \
-	#		-e "s:#INCLUDEPATH += /usr/src:INCLUDEPATH += /usr:" \
-	#		-i "settings.pro" || die "enable dvb sed failed"
-	#fi
+	if [ "`use arts`" ] ; then
+		sed -e 's:artsc/artsc.h:artsc.h:' \
+			-i "libs/libmyth/audiooutputarts.h" || die "sed failed"
+		sed -e 's:#CONFIG += using_arts:CONFIG += using_arts:' \
+			-e 's:#ARTS_LIBS = .*:ARTS_LIBS = `artsc-config --libs`:' \
+			-e 's:#EXTRA_LIBS += -L/opt/.*:EXTRA_LIBS += `artsc-config --libs`:' \
+			-e 's:#INCLUDEPATH += /opt/.*:QMAKE_CXXFLAGS += `artsc-config --cflags`:' \
+			-i 'settings.pro' || die "enable arts sed failed"
+	fi
+	if [ "`use directfb`" ] ; then
+		sed -e 's:#CONFIG += using_directfb:CONFIG += using_directfb:' \
+			-e 's:#EXTRA_LIBS += `directfb:EXTRA_LIBS += `directfb:' \
+			-e 's:#QMAKE_CXXFLAGS += `directfb:QMAKE_CXXFLAGS += `directfb:' \
+			-i 'settings.pro' || die "enable arts sed failed"
+	fi
+	if [ "`use dvb`" ] ; then
+		sed -e 's:#CONFIG += using_dvb:CONFIG += using_dvb:' \
+			-e 's:#DEFINES += USING_DVB:DEFINES += USING_DVB:' \
+			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include:' \
+			-i 'settings.pro' || die "enable dvb sed failed"
+	fi
 	if [ "`use lcd`" ] ; then
-		sed -e "s:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:" \
-			-i "settings.pro" || die "enable lcd sed failed"
+		sed -e 's:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:' \
+			-i 'settings.pro' || die "enable lcd sed failed"
 	fi
 	if [ "`use lirc`" ] ; then
-		sed -e "s:#CONFIG += using_lirc:CONFIG += using_lirc:" \
-			-e "s:#LIRC_LIBS = -llirc_client:LIRC_LIBS = -llirc_client:" \
-			-i "settings.pro" || die "enable lirc sed failed"
+		sed -e 's:#CONFIG += using_lirc:CONFIG += using_lirc:' \
+			-e 's:#LIRC_LIBS = -llirc_client:LIRC_LIBS = -llirc_client:' \
+			-i 'settings.pro' || die "enable lirc sed failed"
 	fi
 	if [ "`use nvidia`" ] ; then
-		sed -e "s:#CONFIG += using_xvmc:CONFIG += using_xvmc:" \
-			-e "s:#EXTRA_LIBS += -lXvMCNVIDIA:EXTRA_LIBS += -lXvMCNVIDIA:" \
-			-i "settings.pro" || die "enable xvmc sed failed"
+		sed -e 's:#CONFIG += using_xvmc:CONFIG += using_xvmc:' \
+			-e 's:#DEFINES += USING_XVMC:DEFINES += USING_XVMC:' \
+			-e 's:#EXTRA_LIBS += -lXvMCNVIDIA:EXTRA_LIBS += -lXvMCNVIDIA:' \
+			-i 'settings.pro' || die "enable xvmc sed failed"
 	fi
-	# Needs a VIA supported kernel driver.
-	#if [ "`use via`" ] ; then
-	#	sed -e "s:#CONFIG += using_via:CONFIG += using_via:"
-	#		-e "s:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:"
-	#		-i "settings.pro" || die "enable lirc sed failed"
-	#fi
+	if [ "`use cle266`" ] ; then
+		sed -e 's:#CONFIG += using_viahwslice:CONFIG += using_viahwslice:' \
+			-e 's:#DEFINES += USING_VIASLICE:DEFINES += USING_VIASLICE:' \
+			-e 's:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:' \
+			-i 'settings.pro' || die "enable lirc sed failed"
+	fi
 
 	qmake -o "Makefile" "${PN}.pro"
 
 	econf
-	make || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
@@ -130,7 +148,7 @@ pkg_postinst() {
 	einfo
 	einfo "Next, you need to run the mythsetup program."
 	einfo "It will ask you some questions about your hardware, and"
-	einfo "then run xmltv's grabber to configure your channels."
+	einfo "then run XMLTV's grabber to configure your channels."
 	einfo
 	einfo "Once you have configured your database, you can run"
 	einfo "/usr/bin/mythfilldatabase to populate the schedule"
