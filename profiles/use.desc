@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.169 2004/06/30 18:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.170 2004/07/05 17:43:30 mr_bones_ Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -196,6 +196,7 @@ pda - Adds support for portable devices.
 pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
 pfpro - Adds support for Verisign Payflow Pro
+php - Include support for php
 pic - Build Position Independent Code. Needed for prelink or the hardened toolchain
 pie - Enable support for Position Independent Executables
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)

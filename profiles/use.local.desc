@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.466 2004/07/05 01:38:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.467 2004/07/05 17:43:30 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -146,7 +146,6 @@ dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
-dev-libs/redland:php - Enable the PHP interface
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
@@ -368,8 +367,6 @@ net-www/apache:distcache - Enable SSL distcache support
 net-www/apache:threads - Enable thread support
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
-net-www/memcached:php - Include the PHP API for memcached
-net-www/monkeyd:php - Include support for php scripts
 net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
 net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
 net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
