@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f9e3dd44cdcf7feae59f0f9fa1d5e34e wxhaskell-0.8-r1.ebuild 1793
 MD5 293b69594a911f53b2c4c0fec1884abe wxhaskell-0.7.ebuild 2335
 MD5 61868cbfbc9fef58146982ef2ad7c74e wxhaskell-0.6-r1.ebuild 2368
 MD5 a07765cd08c1fd8eab7f40b2f18acf5b wxhaskell-0.6.ebuild 2238
-MD5 78b1a77688f302156f92ce875d8ad05b ChangeLog 1339
+MD5 98f0cdaeec63e7864d29a61f1858604b ChangeLog 1528
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 ba7da1ae552ebf988650997c54739880 wxhaskell-0.8.ebuild 2752
 MD5 2b3cf83262913705b98fae84eb4e5757 files/digest-wxhaskell-0.6 66
 MD5 6f249be5b808ef834f9ea740d68b12c4 files/digest-wxhaskell-0.7 66
 MD5 08efb7ecd02832c5599b968bdc329dc9 files/digest-wxhaskell-0.8 66
 MD5 2b3cf83262913705b98fae84eb4e5757 files/digest-wxhaskell-0.6-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpPo8I1lqEGTUzyQRAiWJAJ9MXpPD688g6AdIfWKYOXs1mbzATQCfQQ6c
-PxVz/mh48x5RFWeZ2bDYYGY=
-=mxDs
------END PGP SIGNATURE-----
+MD5 08efb7ecd02832c5599b968bdc329dc9 files/digest-wxhaskell-0.8-r1 66

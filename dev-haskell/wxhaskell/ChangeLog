@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wxhaskell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.10 2004/11/10 19:02:26 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/ChangeLog,v 1.11 2004/11/25 21:41:48 kosmikus Exp $
+
+*wxhaskell-0.8-r1 (25 Nov 2004)
+
+  25 Nov 2004; Andres Loeh <kosmikus@gentoo.org> +wxhaskell-0.8-r1.ebuild:
+  Supports ghc-package.eclass now (bug #69270). Added ~amd64 flag (bug #58590).
 
   10 Nov 2004; Andres Loeh <kosmikus@gentoo.org> wxhaskell-0.8.ebuild:
   Fixed bug #70683.
