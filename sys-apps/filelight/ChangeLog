@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/filelight
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/ChangeLog,v 1.9 2004/06/30 13:06:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/ChangeLog,v 1.10 2004/07/01 16:05:18 carlo Exp $
+
+*filelight-1.0_beta2-r1 (01 Jul 2004)
+
+  01 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  +filelight-1.0_beta2-r1.ebuild:
+  -fPIC for amd64
 
 *filelight-1.0_beta2 (30 Jun 2004)
 
