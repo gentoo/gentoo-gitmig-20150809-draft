@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.27 2005/02/01 22:47:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.28 2005/02/02 16:26:00 chrb Exp $
+
+  02 Feb 2005; Chris Bainbridge <chrb@gentoo.org> zaptel-1.0.4.ebuild:
+  Removed failure when PPP isn't found. The ebuild now gives a warning but
+  continues. Not everyone is using their ISDN for PPP ;-)
 
   01 Feb 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/zaptel-1.0.4-gcc34.patch, zaptel-1.0.3.ebuild, zaptel-1.0.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.2 2005/02/01 22:47:22 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.4.ebuild,v 1.3 2005/02/02 16:26:00 chrb Exp $
 
 IUSE="devfs26"
 
@@ -14,16 +14,29 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-CONFIG_CHECK="PPP"
-ERROR_PPP="PPP support isn't enabled or available as a module! Please reconfigure your kernel to include CONFIG_PPP,
-	CONFIG_PPP_ASYNC CONFIG_PPP_DEFLATE and CONFIG_PPPOE."
-
 DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/newt-0.50.0"
 
 pkg_setup() {
 	linux-info_pkg_setup
+
+	if ! linux_chkconfig_present PPP ; then
+		einfo ""
+		einfo "PPP support isn't enabled or available as a module."
+		einfo ""
+
+		einfo "If you aren't using PPP (eg. you're using voice ISDN"
+		einfo "or non-PPP data), then this is okay."
+
+		einfo "Otherwise, if you want to use PPP over your hardware"
+		einfo "please quit now and reconfigure your kernel to include"
+		einfo "CONFIG_PPP, CONFIG_PPP_ASYNC, CONFIG_PPP_DEFLATE"
+		einfo "and CONFIG_PPPOE."
+		einfo ""
+		einfo "Sleeping 20 Seconds..."
+		epause 20
+	fi
 
 	# show an nice warning message about zaptel not supporting devfs on 2.6
 	if kernel_is 2 6 && linux_chkconfig_present DEVFS_FS ; then
