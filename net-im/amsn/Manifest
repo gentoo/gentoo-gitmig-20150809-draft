@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c130e78fe903475e1ba0a0af39f26720 amsn-0.93.ebuild 2411
+MD5 e4ca58d2beaba299d1a9fafe68413a2a amsn-0.93.ebuild 2410
 MD5 a930a754bb53af037682f86a1aeb72c7 amsn-0.92.ebuild 2201
-MD5 8525f547c03b51cb3ea140715d799a98 ChangeLog 4254
+MD5 b466ab1fc0b57909e3ac6afb91ed06f0 ChangeLog 4338
 MD5 44ce0c035de27a04849efc79eb485971 metadata.xml 325
 MD5 7256ecf0a82fb6b7be96c03a1d9cef13 amsn-0.90.ebuild 2196
 MD5 249a656c8d46348d0bc25e70b86ea115 files/digest-amsn-0.92 62
@@ -13,7 +13,7 @@ MD5 092065dac17f94efcb8225a9cb52f46f files/digest-amsn-0.93 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD4DBQFBML52wDHaUUJ0mYMRAidIAJ9pLTZP8PyOVWzmuLoVkkF92zngHACY64dO
-2Pg9+CaJOXi/v71JZRLidg==
-=FEIQ
+iD8DBQFBR3YtwDHaUUJ0mYMRAmE8AJ9Jdm/r/IL25ilzOlqwckqpMiY1MACeJkVz
+mCy1tcAg7xQ7XVrzKi0BurY=
+=MxUo
 -----END PGP SIGNATURE-----
