@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.35 2004/10/25 19:59:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.36 2004/10/25 23:24:21 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -534,6 +534,10 @@ split_out_specs_files() {
 # Travis Tilley <lv@gentoo.org> (04 Oct 2004)
 #
 do_gcc_config() {
+	# sometimes MY_PV_FULL is set at this point, sometimes it isnt. I have no
+	# idea why, but it seems not to be set at bootstrap and that's bad.
+	gcc_setup_static_vars
+
 	# we only want to switch compilers if installing to / and we're not
 	# building a cross-compiler.
 	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CTARGET}" ] && return 0
