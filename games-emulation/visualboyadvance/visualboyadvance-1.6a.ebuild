@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.5.1.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.6a.ebuild,v 1.1 2003/09/21 20:46:18 vapier Exp $
 
 inherit games
 
-S=${WORKDIR}/VisualBoyAdvance-1.5
+S=${WORKDIR}/VisualBoyAdvance-${PV}
 
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vboy.emuhq.com/"
-SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-${PV}-src.tar.gz"
+SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,12 +21,12 @@ DEPEND="mmx? ( dev-lang/nasm )
 	media-libs/libsdl
 	virtual/x11"
 
-src_compile() {
-	for m in `find -name Makefile.in` ; do
-		cp ${m}{,.orig}
-		sed -e "s:@LIBTOOL@:/usr/bin/libtool:" ${m}.orig > ${m}
-	done
+src_unpack() {
+	unpack ${A}
+	sed -i "s:@LIBTOOL@:/usr/bin/libtool:" `find -name Makefile.in`
+}
 
+src_compile() {
 	egamesconf \
 		--enable-c-core \
 		`use_with debug profiling` \
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die
-	dogamesbin ${FILESDIR}/playvisualboyadvance
+	dogamesbin ${FILESDIR}/visualboyadvance
 	insinto ${GAMES_DATADIR}/VisualBoyAdvance
 	doins src/VisualBoyAdvance.cfg
 	dodoc README README-win.txt INSTALL ChangeLog AUTHORS NEWS

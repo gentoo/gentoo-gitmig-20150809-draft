@@ -15,4 +15,4 @@ if ! [ -d ~/.${PN}/save ]; then
 fi
 
 cd ~/.${PN}
-./${PN} $@
+exec ./${PN} "$@"
