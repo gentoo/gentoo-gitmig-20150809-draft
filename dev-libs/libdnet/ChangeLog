@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.14 2005/02/27 05:35:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.15 2005/03/23 01:39:35 vanquirius Exp $
+
+*libdnet-1.10 (22 Mar 2005)
+
+  22 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +libdnet-1.10.ebuild:
+  Version bump.
 
   27 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> libdnet-1.7.ebuild,
   libdnet-1.8-r1.ebuild, libdnet-1.8.ebuild:
