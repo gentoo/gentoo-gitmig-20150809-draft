@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Net_SmartIRC
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SmartIRC/ChangeLog,v 1.1 2003/12/25 12:25:27 coredumb Exp $
+
+*PEAR-Net_SmartIRC-0.5.5_p1 (25 Dec 2003)
+
+  25 Dec 2003; Tal Peer <coredumb@gentoo.org>
+  PEAR-Net_SmartIRC-0.5.5_p1.ebuild, metadata.xml:
+  Initial commit, fixes bug #24372
+
