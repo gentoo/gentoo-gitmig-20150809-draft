@@ -1,0 +1,18 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	need logger
+}
+
+start() {
+	ebegin "Starting amavisd-new"
+	start-stop-daemon --start --quiet --exec /usr/sbin/amavisd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping amavisd-new"
+	start-stop-daemon --stop --quiet --pidfile /var/run/amavis/amavisd.pid
+	eend $?
+}

@@ -1,0 +1,40 @@
+# ChangeLog for net-mail/amavisd-new
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.1 2003/08/19 02:01:02 max Exp $
+
+*amavisd-new-20030616_p4 (16 Aug 2003)
+
+  16 Aug 2003; Max Kalika <max@gentoo.org> amavisd-new-20030616_p2.ebuild,
+  amavisd-new-20030616_p4.ebuild:
+  Bump version to 20030616-p4.
+
+  21 Jul 2003; Max Kalika <max@gentoo.org> amavisd-new-20030616_p2.ebuild:
+  Force libnet RDEPEND to 1.12 as it requires Net::SMTP version 2.24 which is
+  first available in that package.
+
+  15 Jul 2003; Max Kalika <max@gentoo.org> amavisd-new-20030314_p2.ebuild,
+  amavisd-new-20030616.ebuild, amavisd-new-20030616_p2.ebuild:
+  Fix postgres depend.
+
+*amavisd-new-20030616_p2 (30 Jun 2003)
+
+  30 Jun 2003; Max Kalika <max@gentoo.org> amavisd-new-20030616_p2.ebuild:
+  Bump version to 20030616_p2.
+
+  26 Jun 2003; Max Kalika <max@gentoo.org> amavisd-new-20030314_p2.ebuild,
+  amavisd-new-20030616.ebuild:
+  Fix proper USE flag syntax.
+
+*amavisd-new-20030616 (23 Jun 2003)
+
+  23 Jun 2003; Max Kalika <max@gentoo.org> amavisd-new-20030314_p2.ebuild,
+  amavisd-new-20030616.ebuild:
+  Bump version to 20030616. Drop the no-longer-needed ldap patch. Drop
+  spamassassin use flag and force spamassassin dependency. Add temporary sed fix
+  as advised by the release note. Fix econf parameters for both versions.
+
+*amavisd-new-20030314_p2 (12 Jun 2003)
+
+  12 Jun 2003; Max Kalika <max@gentoo.org> amavisd-new-20030314_p2.ebuild:
+  Initial version.
+
