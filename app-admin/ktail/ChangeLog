@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ktail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ChangeLog,v 1.4 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ktail/ChangeLog,v 1.5 2003/01/03 17:00:45 hannes Exp $
+
+  03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> ktail-0.6.1.ebuild:
+  fix for qt-3.1, solves #13070
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
