@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.1 2003/09/05 13:15:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.2 2003/09/05 13:45:09 taviso Exp $
 
 inherit flag-o-matic ccc
 
@@ -27,6 +27,9 @@ src_compile() {
 		append-flags -fPIC
 		append-ldflags -fPIC
 	fi
+
+	# skeyprune wont honour @sysconfdir@
+	sed -i 's#/etc/skeykeys#/etc/skey/skeyskeys#g' skeyprune.pl skeyprune.8
 
 	econf --sysconfdir=/etc/skey || die
 	emake || die
