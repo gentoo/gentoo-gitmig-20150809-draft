@@ -1,18 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.7.1.1.ebuild,v 1.3 2004/04/19 12:20:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/rasmol-2.7.1.1.ebuild,v 1.4 2004/04/27 08:23:44 vapier Exp $
+
+inherit gcc
 
 MY_P="RasMol_${PV}"
 
 DESCRIPTION="Free program that displays molecular structure."
 HOMEPAGE="http://www.openrasmol.org/"
-KEYWORDS="x86"
-SLOT="0"
-IUSE=""
-LICENSE="public-domain"
-DEPEND="virtual/x11"
-
 SRC_URI="http://www.bernstein-plus-sons.com/software/${MY_P}.tar.gz"
+
+LICENSE="public-domain"
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
+
+DEPEND="virtual/x11"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -34,12 +37,12 @@ src_compile() {
 		|| die "8-bit make failed"
 	mv rasmol rasmol.8
 	make clean
-	make DEPTHDEF=-DSIXTEENBIT CC=${CC} \
+	make DEPTHDEF=-DSIXTEENBIT CC="$(gcc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
 		|| die "16-bit make failed"
 	mv rasmol rasmol.16
 	make clean
-	make DEPTHDEF=-DTHIRTYTWOBIT CC=${CC} \
+	make DEPTHDEF=-DTHIRTYTWOBIT CC="$(gcc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
 		|| die "32-bit make failed"
 	mv rasmol rasmol.32
