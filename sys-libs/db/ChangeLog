@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.20 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.21 2003/02/23 22:16:16 azarah Exp $
+
+*db-3.2.9-r2 (23 Feb 2003)
+
+  23 Feb 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Fix build to link libdb*.so to dependency libs .. for instance when building
+  with NPTL we need to link to libpthread.
+  Fix the db185 stuff to not have to hack the build to pieces to build.
+  We should compile shared and static libs in two diff build dirs ...
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> db-1.85-r1.ebuild , db-3.2.9-r1.ebuild :
   Added arm to keywords.
