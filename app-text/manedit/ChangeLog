@@ -1,6 +1,13 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.1 2002/05/02 23:38:06 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.2 2002/05/14 15:42:31 tod Exp $
+
+*manedit-0.5.6-r1 (14 May, 2002)
+
+  14 May 2002; Tod Neidt <tod@thpoon.com> manedit-0.5.6-r1.ebuild :
+  
+  Fix to install in /usr (Bug# 2565), submitted by Nicholas Jones
+  <carpaski@twobit.net>.  Also, fixed up formatting, etc to pass lintool.
 
 *manedit-0.5.6 (2 May, 2002)
 
