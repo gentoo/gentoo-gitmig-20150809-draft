@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.5 2004/06/24 22:45:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.6 2004/07/23 05:57:29 mkennedy Exp $
+
+*xdoclet-1.2.1 (23 Jul 2004)
+
+  23 Jul 2004; <mkennedy@gentoo.org> metadata.xml, +xdoclet-1.2.1.ebuild:
+  New upstream version.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> xdoclet-1.2.0_beta1.ebuild:
   Fix use invocation
