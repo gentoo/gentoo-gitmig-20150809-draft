@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 859a5e218f9602db404084e4809648b0 ChangeLog 1074
+MD5 336a9dc5fab0bd7e42e46ef1b4cb8ab5 ChangeLog 1175
 MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
-MD5 a9c2322ee49c1c38bf73a9044e34c062 mupen64-riceplugin-5.1.0.ebuild 1360
+MD5 5edb89f1ead13e24776c854bac69b69d mupen64-riceplugin-5.1.0.ebuild 1359
 MD5 45e5b555bb4c252b8ebe4731dd1229f8 files/mupen64-riceplugin-makefile.patch 1013
 MD5 b3400316b9d64a4bda1c9d80e9e87717 files/digest-mupen64-riceplugin-5.1.0 63
 MD5 5818587f7353a1f0bc54a08443734016 files/mupen64-riceplugin-compile.patch 6601
@@ -11,7 +11,7 @@ MD5 c79ad1f4cdadf86d6bf4fab101ea3ae5 files/mupen64-riceplugin-gtk2.patch 631
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB5wJHUpKYMelfdYERArJOAJ9Y2g0egTdIoX/SIyPSCRtVwMN/pACgiLN+
-cFO5z3B9KNv78C1XBiet2rc=
-=1gEs
+iD8DBQFB7zNUUpKYMelfdYERAtkIAJ9qWXF5EARv1LMkrOE7xUyhH3Ej/QCfbd6r
+gTiluBMqiiB0Dj0fWifLFUQ=
+=nmEJ
 -----END PGP SIGNATURE-----
