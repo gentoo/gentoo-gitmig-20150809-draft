@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030709.ebuild,v 1.2 2003/07/12 11:39:46 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030709.ebuild,v 1.3 2003/08/01 20:18:34 vapier Exp $
 
 inherit eutils base
 
 DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
+HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz
 	 mirror://gentoo/${P}-xopenfont.patch
 	 mirror://gentoo/${P}-fake_windows.tar.bz2
 	 mirror://gentoo/${P}-misc.tar.bz2"
-HOMEPAGE="http://www.winehq.com/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 -ppc -sparc"
 IUSE="nas arts cups opengl alsa tcltk nptl"
 
@@ -39,24 +39,22 @@ src_unpack() {
 }
 
 src_compile() {	
-	cd ${S}
-	local myconf
-
-	use opengl && myconf="$myconf --enable-opengl" || myconf="$myconf --disable-opengl"
-	use nptl && myconf="$myconf --with-nptl" || myconf="$myconf --without-nptl"
-
-	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 	
 	unset CFLAGS CXXFLAGS
 	
 	ac_cv_header_jack_jack_h=no \
 	ac_cv_lib_soname_jack= \
-	./configure --prefix=/usr/lib/wine \
+	./configure \
+		--prefix=/usr/lib/wine \
 		--sysconfdir=/etc/wine \
 		--host=${CHOST} \
 		--enable-curses \
-		${myconf} || die
+		`use_enable opengl` \
+		`use_with nptl` \
+		`use_enable debug trace` \
+		`use_enable debug` \
+		|| die
 
 	cd ${S}/programs/winetest
 	cp Makefile 1
@@ -68,11 +66,10 @@ src_compile() {
 	cd programs && emake || die
 }
 
-src_install () {
+src_install() {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/wine"
 	
 	### Install wine to ${D}
-	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
