@@ -42,7 +42,7 @@ my ($tmp, %useddirs, %profiles, %profileitems, @components);
 my ($directory, $parent, $hostname, $component);
 my ($file, $filename, $package, $dir, $perms);
 my ($installation, $product, $version, $language);
-my ($shortcut, $scname, $fileid, $scdir);
+my ($shortcut, $scname, $fileid, $scdir, $dontdelete);
 my ($profile, $p_name, $p_dir, $profileitem);
 my ($pi_profile, $pi_sect, $pi_key, $pi_value);
 
@@ -58,8 +58,11 @@ while (<FH>)
     {
 		if (length($directory) && length($parent) && length($hostname))
 		{
-			$directories{$directory} = [ $parent, $hostname ];
+			$hostname =~ s/\%PRODUCTNAME/$product/;
+			$hostname =~ s/\%PRODUCTVERSION/$version/;
+			$directories{$directory} = [ $parent, $hostname, $dontdelete ];
 		}
+		$dontdelete = 0;
 		$directory = $parent = $hostname = "";
 
 		if (length($file))
@@ -160,6 +163,10 @@ while (<FH>)
 		elsif (/^\s*HostName\s*=\s*\"([^"]+)\";/)
 		{
 			$hostname = $1;
+		}
+		elsif (/^\s*Styles\s*=\s*\(.*DONT_DELETE.*\);/)
+		{
+			$dontdelete = 1;
 		}
 	}
 	elsif (length($file))
@@ -267,21 +274,30 @@ sub getFilePath
 
 foreach $tmp (sort keys %packages)
 {
-	my ($dir) = getFilePath($packages{$tmp}[0]);
+	my ($dir) = getFilePath(@{$packages{$tmp}}[0]);
 	$useddirs{$dir} = ".";
+}
+
+foreach $tmp (sort keys %directories)
+{
+	if (@{$directories{$tmp}}[2])
+	{
+	    my ($dir) = getFilePath($tmp);
+	    $useddirs{$dir} = ".";
+	}
 }
 
 print "#!/bin/sh\n";
 
 if ($runargs =~ /install/)
 {
-	print "mkdir -p $destdir\n";
-	print "chmod 755 $destdir\n";
+	print "mkdir -p \"$destdir\"\n";
+	print "chmod 755 \"$destdir\"\n";
 
 	foreach $tmp (sort keys %useddirs)
 	{
-		print "mkdir -p $tmp\n";
-		print "chmod 755 $tmp\n";
+		print "mkdir -p \"$tmp\"\n";
+		print "chmod 755 \"$tmp\"\n";
 	}
 
 	print "mkdir /tmp/inst$$\n";
@@ -290,12 +306,12 @@ if ($runargs =~ /install/)
 	foreach $tmp (sort keys %packages)
 	{
 		print "rm -f *\n";
-		print "unzip -o $instdir/$tmp\n";
+		print "unzip -o \"$instdir/$tmp\"\n";
 		print "chmod $packages{$tmp}[1] *\n";
-		print "mv * " . getFilePath($packages{$tmp}[0]) . "\n";
+		print "mv * \"" . getFilePath($packages{$tmp}[0]) . "\"\n";
 	}
 
-	print "cd $destdir\n";
+	print "cd \"$destdir\"\n";
 	print "rm -rf /tmp/inst$$\n";
 
 	foreach $tmp (sort keys %shortcuts)
@@ -306,8 +322,8 @@ if ($runargs =~ /install/)
 			my ($newdir) = getFilePath($files{$shortcuts{$tmp}[1]}[1]);
 			$newdir =~ s/^$prefix//;
 			$newdir = "/" . $newdir if ($newdir !~ /^\//);
-			print "ln -sf $newdir/$files{$shortcuts{$tmp}[1]}[0] " .
-			getFilePath($shortcuts{$tmp}[2]) . "/$shortcuts{$tmp}[0]\n";
+			print "ln -sf \"$newdir/$files{$shortcuts{$tmp}[1]}[0]\" \"" .
+			getFilePath($shortcuts{$tmp}[2]) . "/$shortcuts{$tmp}[0]\"\n";
 		}
 	}
 }
@@ -326,9 +342,9 @@ if ($runargs =~ /createdb/)
 				my ($cfgfile) = $profiles{$tmp}[0];
 				if ($cfgfile !~ /sversionrc/)
 				{
-					print "rm -f $dir/$profiles{$tmp}[0]\n";
+					print "rm -f \"$dir/$profiles{$tmp}[0]\"\n";
 				}
-				print "echo '[" . $sect . "]' >>$dir/$profiles{$tmp}[0]\n";
+				print "echo '[" . $sect . "]' >>\"$dir/$profiles{$tmp}[0]\"\n";
 				my ($key);
 				foreach $key (sort keys %{$profileitems{$tmp}->{$sect}})
 				{
@@ -339,9 +355,9 @@ if ($runargs =~ /createdb/)
 					$value =~ s,<installmode>,NETWORK,;
 					$value =~ s/<productkey>/$product $version/;
 					$value =~ s,<workpath_url>,file://$finaldestdir,;
-					print "echo '$key2=$value' >>$dir/$profiles{$tmp}[0]\n";
+					print "echo '$key2=$value' >>\"$dir/$profiles{$tmp}[0]\"\n";
 				}
-				print "echo '' >>$dir/$profiles{$tmp}[0]\n";
+				print "echo '' >>\"$dir/$profiles{$tmp}[0]\"\n";
 			}
 		}
 	}
@@ -352,19 +368,19 @@ if ($runargs =~ /register/)
 	print "LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:$destdir/program; export LD_LIBRARY_PATH\n";
 	foreach $tmp (sort @components)
 	{
-		print "$regcomp -register -c $destdir/program/$tmp -r $destdir/program/applicat.rdb\n";
+		print "\"$regcomp\" -register -c \"$destdir/program/$tmp\" -r \"$destdir/program/applicat.rdb\"\n";
 	}
 }
 
 if ($runargs =~ /install/)
 {
-	print "cp $instdir/LICENSE* $destdir\n";
-	print "cp $instdir/README* $destdir\n";
+	print "cp \"$instdir\"/LICENSE* \"$destdir\"\n";
+	print "cp \"$instdir\"/README* \"$destdir\"\n";
 }
 
 if ($runargs =~ /createdb/)
 {
-	print "rm -f $destdir/program/instdb.ins\n";
+	print "rm -f \"$destdir/program/instdb.ins\"\n";
 
 	my ($ismod) = "0";
 	my ($isinst) = "0";
@@ -387,7 +403,7 @@ if ($runargs =~ /createdb/)
 		# Do not print a "Styles" line for the "Installation" section
 		if (!(($isinst =~ "1") and ($tmp =~ /Styles/)))
 		{
-			print "echo '$tmp' >>$destdir/program/instdb.ins\n";
+			print "echo '$tmp' >>\"$destdir/program/instdb.ins\"\n";
 		}
 	
 		# Are we in a "Module" section?
@@ -403,12 +419,12 @@ if ($runargs =~ /createdb/)
 		# All modules are installed
 		if (($ismod =~ "1") and ($tmp =~ /Default/))
 		{
-			print "echo '\tInstalled\t = YES;' >>$destdir/program/instdb.ins\n";
+			print "echo '\tInstalled\t = YES;' >>\"$destdir/program/instdb.ins\"\n";
 		}
 		# gid_Module_Root should also be "installed"
 		elsif (($ismod =~ "1") and ($modname =~ /gid_Module_Root/) and ($tmp =~ /Description/))
 		{
-			print "echo '\tInstalled\t = YES;' >>$destdir/program/instdb.ins\n";
+			print "echo '\tInstalled\t = YES;' >>\"$destdir/program/instdb.ins\"\n";
 		}
 	}
 }
