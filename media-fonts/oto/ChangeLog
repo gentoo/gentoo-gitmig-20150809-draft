@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/oto
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.1 2004/03/29 22:53:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.2 2004/03/30 15:52:17 dholm Exp $
+
+  30 Mar 2004; David Holm <dholm@gentoo.org> oto-0.4.ebuild:
+  Added to ~ppc.
 
 *oto-0.4 (30 Mar 2004)
 
