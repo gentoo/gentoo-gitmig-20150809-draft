@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.21 2004/03/25 08:29:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.22 2004/03/28 21:57:43 agriffis Exp $
+
+*mozilla-firefox-0.8-r2 (28 Mar 2004)
+
+  28 Mar 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-0.8-r2.ebuild:
+  Fix bug 33159 by making virtual/xft dependant on !moznoxft. Add dependency on
+  mozilla-launcher
 
   25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   mozilla-firefox-0.8.ebuild:
