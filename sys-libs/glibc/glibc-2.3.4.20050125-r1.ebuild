@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.20 2005/03/10 13:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.21 2005/03/10 22:46:13 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -277,7 +277,7 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}$(alt_libdir)/tls ] && { use nptlonly || ! use nptl; }; then
+	if [ -d /${ROOT}$(alt_libdir)/tls ] && ! { want_nptl && want_linuxthreads; }; then
 		addwrite /${ROOT}$(alt_libdir)/
 		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
 		rm -rf /${ROOT}$(alt_libdir)/tls || die
@@ -714,6 +714,7 @@ check_nptl_support() {
 want_nptl() {
 	want_tls || return 1
 	use nptl || return 1
+	is_crosscompile && use build && return 1
 
 	# Archs that can use NPTL
 	case $(tc-arch) in
@@ -920,12 +921,9 @@ use_multilib() {
 # Setup toolchain variables that would be defined in the profiles for these archs.
 crosscompile_setup() {
 	if is_crosscompile; then
+		# CFLAGS are used by ${CTARGET}-gcc
 		local VAR="CFLAGS_"${CTARGET//-/_}
-		local VAL=${!VAR}
-
-		if [[ -n ${VAL} ]] ; then
-			CFLAGS="${VAL}"
-		fi
+		CFLAGS=${!VAR-"-O2"}
 
 		case $(tc-arch) in
 			amd64)
@@ -1070,9 +1068,9 @@ pkg_setup() {
 		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
 		ewarn "must disable some configure checks to get glibc to compile.  You should"
 		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
-		ewarn "be safe.  Additionally, you must use -nptl for the first emerge."
+		ewarn "have the correct libs."
 
-		want_nptl && die "You need to use -nptl when emerging a crosscompiled glibc for the first time"
+		want_nptl && die "You need to set USE=\"build\" when emerging a cross-compile toolchain glibc for the first time."
 
 		ebeep
 		epause 5
@@ -1145,7 +1143,7 @@ src_unpack() {
 	# Some configure checks fail on the first emerge through because they
 	# try to link.  This doesn't work well if we don't have a libc yet.
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
-	if is_crosscompile && ! has_version "${CATEGORY}/${PN}"; then
+	if is_crosscompile && use build; then
 		rm ${S}/sysdeps/sparc/sparc64/elf/configure{,.in}
 		rm ${S}/nptl/sysdeps/pthread/configure{,.in}
 	fi
