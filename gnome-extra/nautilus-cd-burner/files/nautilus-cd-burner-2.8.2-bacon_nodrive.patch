@@ -1,0 +1,52 @@
+===================================================================
+RCS file: /cvs/gnome/nautilus-cd-burner/bacon-cd-selection.c,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -u -r1.11 -r1.12
+--- bacon-cd-selection.c	2004/09/16 21:43:48	1.11
++++ bacon-cd-selection.c	2004/09/21 12:00:22	1.12
+@@ -165,6 +165,13 @@
+ 	int i;
+ 
+ 	i = gtk_combo_box_get_active (combo);
++	/* No selection */
++	if (i < 0) {
++		g_signal_emit (G_OBJECT (bcs),
++				bcs_table_signals[DEVICE_CHANGED],
++				0, NULL);
++		return;
++	}
+ 	drive = get_drive (bcs, i);
+ 
+ 	g_signal_emit (G_OBJECT (bcs),
+@@ -255,11 +262,21 @@
+ 		cd_drive_free (cdrom);
+ 		bcs->priv->cdroms = g_list_delete_link
+ 			(bcs->priv->cdroms, item);
++		gtk_widget_set_sensitive (GTK_WIDGET (bcs), (bcs->priv->cdroms != NULL));
+ 	} else {
++		gboolean activate = FALSE;
++
+ 		cdrom = cd_drive_get_file_image ();
+ 		gtk_combo_box_append_text (GTK_COMBO_BOX (bcs),
+ 				cdrom->display_name);
++		if (bcs->priv->cdroms == NULL) {
++			activate = TRUE;
++		}
+ 		bcs->priv->cdroms = g_list_append (bcs->priv->cdroms, cdrom);
++		gtk_widget_set_sensitive (GTK_WIDGET (bcs), TRUE);
++		if (activate != FALSE) {
++			gtk_combo_box_set_active (GTK_COMBO_BOX (bcs), 0);
++		}
+ 	}
+ 
+ 	bcs->priv->have_file_image = have_file_image;
+@@ -319,6 +336,8 @@
+ 		GList *l;
+ 		int i = g_list_length (bcs->priv->cdroms);
+ 
++		gtk_widget_set_sensitive (GTK_WIDGET (bcs), (drives != NULL));
++
+ 		if (bcs->priv->have_file_image)
+ 			i--;
+ 

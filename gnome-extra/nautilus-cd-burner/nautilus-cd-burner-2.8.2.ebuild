@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.1.ebuild,v 1.2 2004/09/18 01:05:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.2.ebuild,v 1.1 2004/09/21 12:28:06 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="CD and DVD writer plugin for Nautilus"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,3 +29,13 @@ DEPEND=">=dev-util/intltool-0.29
 
 G2CONF="${G2CONF} $(use_enable hal)"
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README TODO"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix crash when no cddrive is attached
+	epatch ${FILESDIR}/${P}-bacon_nodrive.patch
+
+}
