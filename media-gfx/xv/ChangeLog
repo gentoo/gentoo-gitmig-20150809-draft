@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.33 2004/08/06 19:34:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.34 2004/09/02 14:45:40 taviso Exp $
+
+*xv-3.10a-r7 (02 Sep 2004)
+
+  02 Sep 2004; Tavis Ormandy <taviso@gentoo.org> +metadata.xml,
+  -xv-3.10a-r3.ebuild, -xv-3.10a-r5.ebuild, -xv-3.10a-r6.ebuild,
+  +xv-3.10a-r7.ebuild:
+  fix security issues reported in #61619.
+  vulnerable versions removed.
+  meatadata.xml added with me named as new maintainer.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> xv-3.10a-r6.ebuild:
   Stable on sparc

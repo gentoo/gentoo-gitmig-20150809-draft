@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.12 2004/08/06 19:34:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r7.ebuild,v 1.1 2004/09/02 14:45:40 taviso Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~amd64 mips hppa ia64 ppc64"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -28,6 +28,9 @@ src_unpack() {
 	use ppc && epatch ${FILESDIR}/${P}-ppc.patch
 	# This patch is needed to get xv to stop segfaulting on amd64
 	use amd64 && epatch ${FILESDIR}/xv-use-getcwd.patch
+
+	# fix security issues #61619
+	epatch ${FILESDIR}/${P}-security.diff || die
 }
 
 src_compile() {
