@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/mod_loopback-2.0.ebuild,v 1.1 2002/11/28 20:42:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/mod_loopback-2.0.ebuild,v 1.2 2003/02/13 15:37:58 vapier Exp $
 
 DESCRIPTION="A web client debugging tool (DSO) for Apache2"
 HOMEPAGE="http://www.snert.com/Software/mod_loopback/index.shtml"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.6 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.7 2003/02/13 15:32:02 vapier Exp $
 
 DESCRIPTION="Boa - A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${P}.tar.gz"

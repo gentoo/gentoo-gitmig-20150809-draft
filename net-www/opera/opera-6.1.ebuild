@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1.ebuild,v 1.4 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1.ebuild,v 1.5 2003/02/13 15:40:44 vapier Exp $
 #
 # By default, the statically compiled version of opera will be
 # installed.  There are two other variations of the package that this

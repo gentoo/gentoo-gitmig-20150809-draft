@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.12 2002/12/22 19:16:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.13 2003/02/13 15:33:56 vapier Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"

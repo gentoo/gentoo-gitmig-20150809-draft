@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a.ebuild,v 1.1 2003/01/22 05:17:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/mod_gzip-1.3.26.1a.ebuild,v 1.2 2003/02/13 15:37:40 vapier Exp $
 
 DESCRIPTION="Apache module which acts as an Internet Content Accelerator"
 HOMEPAGE="http://sourceforge.net/projects/mod-gzip/"

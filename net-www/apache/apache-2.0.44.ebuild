@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.44.ebuild,v 1.2 2003/02/12 17:47:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.44.ebuild,v 1.3 2003/02/13 15:31:50 vapier Exp $
 
 inherit eutils
 
