@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.26 2003/02/12 19:09:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.27 2003/02/21 14:34:04 tuxus Exp $
 
+  21 Feb 2003; Jan Seidel <tuxus@gentoo.org> openssl-0.9.6g-r1.ebuild openssl-0.9.6i.ebuild :
+  added a patch for mips
+ 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added -fPIC to CFLAGS for hppa needed by many apps linking to openssl.
 
@@ -32,6 +35,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *openssl-0.9.6g-r1 (04 Nov 2002)
+
+  21 Feb 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added a patch for mips
 
   25 Nov 2002; Nick Hadaway <raker@gentoo.org> openssl-0.9.6g-r1.ebuild :
   Updated ebuild so the certs directory is created.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.1 2003/02/20 16:25:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.2 2003/02/21 14:34:04 tuxus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -17,6 +17,12 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+
+        if [ "${ARCH}" = "mips" ]
+        then
+        cd ${S}
+        patch -p1 < ${FILESDIR}/openssl-0.9.6-mips.diff || die
+        fi
 
     # many apps linking to openssl needs -fPIC
 	if [ "${ARCH}" = "hppa" ]
