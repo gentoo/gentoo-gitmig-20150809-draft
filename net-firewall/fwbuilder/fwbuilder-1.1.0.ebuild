@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.0.10.ebuild,v 1.5 2003/10/21 16:02:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.0.ebuild,v 1.1 2003/11/26 11:09:42 aliz Exp $
 
 DESCRIPTION="A firewall GUI"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
 RESTRICT="nomirror"
 S=${WORKDIR}/${P}
 
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="static nls"
@@ -19,8 +19,15 @@ DEPEND="sys-devel/autoconf
 	=dev-cpp/gtkmm-1.2*
 	=dev-libs/libsigc++-1.0*
 	nls? ( >=sys-devel/gettext-0.11 )
-	~net-libs/libfwbuilder-1.0.0"
+	~net-libs/libfwbuilder-1.0.2"
 RDEPEND="$DEPEND"
+
+# Added by Jason Wever <weeve@gentoo.org>
+# Fix for bug #30256.
+if [ "${ARCH}" = "sparc" ]; then
+	inherit flag-o-matic
+	replace-flags "-O3" "-O2"
+fi
 
 src_compile() {
 	local myconf
@@ -32,8 +39,7 @@ src_compile() {
 		--prefix=/usr \
 		--host=${CHOST}	|| die "./configure failed"
 
-	cp config.h config.h.orig
-	sed -e "s:#define HAVE_XMLSAVEFORMATFILE 1://:" config.h.orig > config.h
+	sed -i -e "s:#define HAVE_XMLSAVEFORMATFILE 1://:" config.h
 
 	if [ "`use static`" ]
 	then
