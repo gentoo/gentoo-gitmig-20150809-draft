@@ -1,0 +1,11 @@
+--- src/libffmpeg/libavcodec/mpegvideo.h.old	2004-04-27 15:11:22.072712048 -0400
++++ src/libffmpeg/libavcodec/mpegvideo.h	2004-04-27 15:11:45.477154032 -0400
+@@ -892,7 +892,7 @@
+ int ff_h263_resync(MpegEncContext *s);
+ int ff_h263_get_gob_height(MpegEncContext *s);
+ int ff_mpeg4_set_direct_mv(MpegEncContext *s, int mx, int my);
+-inline int ff_h263_round_chroma(int x);
++int ff_h263_round_chroma(int x);
+ 
+ 
+ /* rv10.c */

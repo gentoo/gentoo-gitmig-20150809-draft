@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.108 2004/04/26 14:41:58 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.109 2004/04/27 19:38:18 lv Exp $
+
+  27 Apr 2004; Travis Tilley <lv@gentoo.org> +files/xine-lib-gcc34.patch,
+  xine-lib-1_rc3-r3.ebuild:
+  added a patch that removes an attempt to inline ff_h263_round_chroma so that
+  xine-lib will compile using gcc 3.4
 
   26 Apr 2004; Brandon Hale <tseng@gentoo.org> xine-lib-1_rc3-r1.ebuild,
   xine-lib-1_rc3-r3.ebuild:
