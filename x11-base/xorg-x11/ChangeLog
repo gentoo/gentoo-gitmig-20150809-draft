@@ -1,6 +1,75 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.245 2004/12/19 02:21:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.246 2004/12/19 08:32:54 spyderous Exp $
+
+  19 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.901.ebuild:
+  PATCH_VER 0.3.1. This should help out PPC users on Radeon and Rage128.
+  
+  (fd.o #2064) Add 5160_all_6.8.1-benh-radeon-ppc-fixes.patch, with tons of
+  changes:
+  
+  1. This patch adds the "VGAAccess" option (defaults to NO on PPC and YES on
+  others) that disables all legacy VGA stuffs in the driver, since they are
+  causing various issues on non-x86 machines.
+  
+  2. This patch makes sure CRTC2_OFFSET_CNTL is cleared. None of the options in
+  this register should be enabled with our current driver, and some firmwares
+  setup a tiled display, which we _must_ disable for now. Without this, the
+  second screen is completely scrambled on some PowerMacs.
+  
+  3. This patch fix the routine that probes for PLL values in absence of a
+  BIOS ROM. The measure is more precise, done several times to avoid
+  "gliches" caused by scheduling latencies, plus the patch fixes actual
+  bugs in the previous iteration of the code. It also add calculation of
+  the mclk and sclk values for proper display bandwidth calculation and
+  adds proper min/max PLL values for r420 type cards.
+  
+  4. The display bandwidth calculation code has a small bug when looking at
+  the memory controller setup on r300 chips. Hui from ATI confirmed that
+  this was the right fix.
+  
+  5. When using MergedFB, the driver would call RADEONInitPLLRegisters for the
+  first head even when UseBiosDividers was set to TRUE, which was incorrect.
+  This patch fixes it by moving the test of UseBiosDividers into
+  RADEONInitPLLRegisters which simplifies the code in the caller and is more
+  logical.
+  
+  6. The dual head setup was recently re-broken (after having been fixed a while
+  ago) with SURFACE_CNTL beeing written with the wrong value from the second
+  head. The problem is that usually, only the first head had a correct value
+  in there, and the driver would regular mixup which register setup was used to
+  restore that value. This patch fixes it once for all by making sure the
+  second head does carry the proper value too.
+  
+  7. The second digital output of the radeon chip doesn't like when the P2PLL
+  is set with an odd post-divider value. This makes sure we never chose
+  a "wrong" value when calculating the P2PLL setting on a non-CRT screen.
+  
+  8. On some cards where no BIOS provided output mapping infos is available, the
+  driver would get the DDC flipped between the two outputs of the card. This
+  typically happen on recent Mac cards. This adds an option to force the
+  driver to reverse what it thinks is the primary display DDC and the
+  secondary display DDC. Ultimately, we'll have to do a better job of
+  recognizing those Mac cards though.
+  
+  9. RadeonValidateFPModes() has a bug where it could try to dereference
+  a NULL pointer in some cases when linking in modes. This fixes it.
+  
+  10. This patch adds an option for probing the PLL value at server init time
+  for LVDS panels and re-using it later (by setting UseBiosDividers). It's
+  useful on machines without an X86 BIOS image providing the proper set of
+  divider values for the LVDS, as the value calculated by
+  RADEONInitPLLRegisters() tend not to be suitable for some LVDS panels.
+  It also changes a bit the way the panel infos are extracted, the previous
+  code didn't quite work for me, and after discussing with Hui, I decided
+  to move the detection earlier in the discovery process and to do it slightly
+  differently.
+  
+  (fd.o #2089) Add 5135_all_6.8.1-r128-ppc-vgaaccess.patch. This patch adds the
+  "VGAAccess" option (defaults to NO on PPC and YES on others) that disables
+  all legacy VGA stuffs in the driver, since they are causing various issues on
+  non-x86 machines.
 
 *xorg-x11-6.8.1.901 (18 Dec 2004)
 
