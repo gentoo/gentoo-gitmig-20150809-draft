@@ -1,6 +1,6 @@
 # ChangeLog for dev-dotnet/pnetc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.17 2004/11/26 12:39:20 scandium Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.18 2005/01/01 17:49:57 eradicator Exp $
 
   26 Nov 2004; Rainer Groesslinger <scandium@gentoo.org> pnetc-0.6.10.ebuild:
   stable on all architectures

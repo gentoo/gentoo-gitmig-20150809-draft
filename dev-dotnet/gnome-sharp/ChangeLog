@@ -1,6 +1,6 @@
 # ChangeLog for dev-dotnet/gnome-sharp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.7 2004/12/30 23:27:42 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.8 2005/01/01 17:47:15 eradicator Exp $
 
   31 Dec 2004; Sven Wegener <swegener@gentoo.org> gnome-sharp-1.0.4.ebuild:
   Removed eutils from inherit.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.7 2004/06/29 18:05:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.8 2005/01/01 17:50:53 eradicator Exp $
 
 DESCRIPTION="Library for using Windows.Forms with Mono"
 HOMEPAGE="http://www.go-mono.com/"

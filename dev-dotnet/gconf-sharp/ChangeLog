@@ -1,6 +1,6 @@
 # ChangeLog for dev-dotnet/gconf-sharp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.3 2004/12/30 23:25:47 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.4 2005/01/01 17:46:06 eradicator Exp $
 
   31 Dec 2004; Sven Wegener <swegener@gentoo.org> gconf-sharp-1.0.4.ebuild:
   Removed eutils from inherit.

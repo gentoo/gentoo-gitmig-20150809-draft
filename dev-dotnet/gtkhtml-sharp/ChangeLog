@@ -1,6 +1,6 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.6 2004/12/30 23:28:31 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.7 2005/01/01 17:47:40 eradicator Exp $
 
   31 Dec 2004; Sven Wegener <swegener@gentoo.org>
   gtkhtml-sharp-1.0.4.ebuild:

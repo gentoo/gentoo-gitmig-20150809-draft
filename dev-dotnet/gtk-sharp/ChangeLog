@@ -1,6 +1,6 @@
 # ChangeLog for dev-dotnet/gtk-sharp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.7 2004/12/14 02:05:37 latexer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.8 2005/01/01 17:47:54 eradicator Exp $
 
   13 Dec 2004; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.0.4-r1.ebuild:
   Fix for libtool problem due to version mismatches. Thanks to DHUNCAN for
