@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.6 2003/01/21 01:41:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.7 2003/02/04 13:42:21 foser Exp $
+
+*gnome-themes-2.2 (04 Feb 2003)
+
+  04 Feb 2003; foser <foser@gentoo.org> gnome-themes-2.2.ebuild ;
+  New version
+  Some fixes for gtk-engines dep to work
 
 *gnome-themes-1.0 (21 Jan 2003)
 
