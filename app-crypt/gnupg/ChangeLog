@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.26 2003/08/26 19:54:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.27 2003/08/30 19:03:25 taviso Exp $
+
+*gnupg-1.2.3-r2 (30 Aug 2003)
+
+  30 Aug 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r2.ebuild:
+  configure interprets libexecdir different from the install makefile 
+  target, which breaks external applications (specifically hkp and mailto) 
+  #27608.
+  minor syntax changes.
+  bumped.
 
 *gnupg-1.2.3-r1 (26 Aug 2003)
 
