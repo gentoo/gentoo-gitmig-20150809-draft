@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/cgiirc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/ChangeLog,v 1.1 2004/01/29 15:45:27 mholzer Exp $
+
+*cgiirc-0.5.3 (29 Jan 2004)
+
+  29 Jan 2004; Martin Holzer <mholzer@gentoo.org> cgiirc-0.5.3.ebuild:
+  Initial ebuild. Submitted by scootersmk <scootersmk@chartertn.net> in #38852
+
