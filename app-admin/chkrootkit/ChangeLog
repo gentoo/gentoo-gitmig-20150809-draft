@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.19 2004/02/09 04:53:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.20 2004/02/29 22:45:09 pyrania Exp $
+
+  29 Feb 2004; Markus Nigbur <pyrania@gentoo.org> chkrootkit-0.42b.ebuild:
+  Stable on x86
 
   08 Feb 2004; Dylan Carlson <absinthe@gentoo.org> chkrootkit-0.42b.ebuild:
   added amd64 keyword.
