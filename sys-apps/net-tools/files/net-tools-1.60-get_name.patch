@@ -42,7 +42,7 @@ diff -Nrup net-tools-1.60.orig/lib/interface.c net-tools-1.60/lib/interface.c
 +	if ((nameend-namestart)<IFNAMSIZ) {
 +	    memcpy(name,&p[namestart],nameend-namestart);
 +	    name[nameend-namestart]='\0';
-+	    p=&p[nameend];
++	    p=&p[nameend+1];
 +	} else {
 +	    /* Interface name too large */
 +	    name[0]='\0';
