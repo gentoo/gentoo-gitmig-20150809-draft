@@ -1,0 +1,11 @@
+# ChangeLog for net-www/w3m-m17n
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/ChangeLog,v 1.1 2003/06/20 13:47:54 yakina Exp $
+
+*w3m-m17n-20030308 (20 Jun 2003)
+
+  20 Jun 2003; YAMAKURA Makot <yakina@gentoo.org> w3m-m17n-20030308.ebuild,
+  files/digest-w3m-m17n-20030308,ChangeLog,Manifest:
+
+  Initial import. Ebuild submitted by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>.
+  Bug #21671
