@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ruby-libart-0.34.ebuild,v 1.1 2003/08/06 01:52:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ruby-libart-0.34.ebuild,v 1.2 2003/08/06 02:02:40 agriffis Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/libart
 DESCRIPTION="Ruby libart bindings"
 SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome.sourceforge.net/"
 LICENSE="Ruby"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 SLOT="0"
 
 DEPEND=">=dev-lang/ruby-1.6.4-r1

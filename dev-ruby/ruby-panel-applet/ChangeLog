@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-panel-applet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ChangeLog,v 1.5 2003/08/06 01:59:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ChangeLog,v 1.6 2003/08/06 02:03:00 agriffis Exp $
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org>
+  ruby-panel-applet-0.34.ebuild:
+  Mark stable on x86 since ruby-gtk-0.34 is already marked stable
 
 *ruby-panel-applet-0.34 (05 Aug 2003)
 

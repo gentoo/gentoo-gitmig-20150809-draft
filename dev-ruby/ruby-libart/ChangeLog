@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.3 2003/08/06 01:52:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.4 2003/08/06 02:02:40 agriffis Exp $
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-libart-0.34.ebuild:
+  Mark stable on x86 since ruby-gtk-0.34 is already marked stable
 
 *ruby-libart-0.34 (05 Aug 2003)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.34.ebuild,v 1.1 2003/08/06 01:59:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.34.ebuild,v 1.2 2003/08/06 02:03:00 agriffis Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/panel-applet
 DESCRIPTION="Ruby Gnome Panel bindings"
 SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome.sourceforge.net/"
 LICENSE="Ruby"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 SLOT="0"
 
 DEPEND=">=dev-lang/ruby-1.6.4-r1

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gdkimlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.7 2003/08/06 01:46:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.8 2003/08/06 02:01:42 agriffis Exp $
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-gdkimlib-0.34.ebuild:
+  Mark stable on x86 since ruby-gtk-0.34 is already marked stable
 
 *ruby-gdkimlib-0.34 (05 Aug 2003)
 
