@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+
+# <spider@gentoo.org> 25 Jul 2002
+# we need to fix deps on >=dev-util/gob-1.0.x
+>=dev-util/gob-1.99.3
+
+
 # <george@gentoo.org>
 # masking omniORB-305 for testing
 =net-misc/omniORB-305
@@ -847,7 +853,6 @@ gnome-extra/gal2
 >=dev-util/glade-1.1.0
 >=dev-util/glademm-1.1.0
 
->=dev-util/gob-1.99.3
 
 media-libs/monkey-sound
 media-sound/rhythmbox
