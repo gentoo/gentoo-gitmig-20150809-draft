@@ -1,5 +1,5 @@
-MD5 bf02e82e360deef0202d359156a488e2 onis-0.6.0.ebuild 1012
+MD5 597d02246fa3d260240726042cd160aa ChangeLog 461
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 323bd15e4f0c27ac78c1588f81fb7980 ChangeLog 382
+MD5 dfa9b853d69b2d118a36f50fc66ed972 onis-0.6.0.ebuild 1014
 MD5 9b0ece7b82c71aae249b8e7bc1e4a40c files/0.6.0-nochdir.patch 258
 MD5 f614a635ad9550dce02407f2e9fc811c files/digest-onis-0.6.0 62
