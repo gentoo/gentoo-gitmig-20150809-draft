@@ -1,0 +1,15 @@
+# ChangeLog for sys-apps/pcmcia-cs-drivers
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-drivers/ChangeLog,v 1.1 2003/01/23 08:34:17 chadh Exp $
+
+*pcmcia-cs-drivers-3.2.3 (23 Jan 2003)
+
+  23 Jan 2003; Chad Huneycutt <chadh@gentoo.org> pcmcia-cs-drivers-3.2.3.ebuild :
+  I'm trying to whip our pcmcia stuff into shape.  There are many complaints
+  about the inability to use kernel modules provided by pcmcia-cs with kernel
+  pcmcia (yenta_socket PCIC).  This ebuild will install just the pcmcia-cs
+  modules.  If you want cardmgr and the other pcmcia-cs tools, then install
+  the pcmcia-cs-tools ebuild.  Credit for the header adjustment to quelch the
+  version mismatch error comes from Alistair Tse (gentoo@liquidx.net) and
+  bug #7940.
+
