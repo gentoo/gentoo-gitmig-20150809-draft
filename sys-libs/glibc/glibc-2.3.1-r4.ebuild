@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.19 2003/10/10 18:44:08 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.20 2003/11/10 03:44:03 vapier Exp $
 
 IUSE="nls pic build"
 
@@ -136,6 +136,9 @@ src_unpack() {
 
 	# Fix problems with ORACLE, bug #16504
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-typeo_dl-runtime_c.patch
+
+	# Fix sscanf fixed arg bug
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-sscanf.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
