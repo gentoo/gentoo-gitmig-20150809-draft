@@ -3,7 +3,7 @@ MD5 bf3bf815a62ef62fc5db60c156e395bd xterm-191.ebuild 1404
 MD5 6bf46051147f1c3ee33b53922434b474 xterm-184.ebuild 1306
 MD5 0373ef84254509e84ba13f0bb5b245df xterm-179.ebuild 766
 MD5 99fc526f55d25188c9ee32b188943318 ChangeLog 6302
-MD5 e6ee387a2de6b2fea8e5a3573c48b667 metadata.xml 228
+MD5 a8f4e2b68b04b535b32e12816278f1da metadata.xml 231
 MD5 254e9b7ebbb4d0e4c31e5153d08ca50f xterm-194.ebuild 1381
 MD5 22861d1a4affc7229c468095a0103257 files/xterm-184-remove-termcap-breakage.patch 377
 MD5 a2579a687debb13d3011931fad6249eb files/digest-xterm-179 58
