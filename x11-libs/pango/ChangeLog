@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.32 2003/02/21 23:44:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.33 2003/02/28 14:41:29 foser Exp $
+
+*pango-1.2.1-r1 (28 Feb 2003)
+
+  28 Feb 2003; foser <foser@gentoo.org> pango-1.2.1-r1.ebuild :
+  Added speedimproving patch from cvs
 
 *pango-1.2.1 (04 Feb 2003)
 
