@@ -2,6 +2,7 @@ MD5 2c5d9b7dc44664677e1454dc7dd5f7ee pymol-0.86.ebuild 1259
 MD5 55042ae7de682e2f677de2a2441bad35 pymol-0.88.ebuild 1019
 MD5 b049103d28a5200db1b96c5de9b9b561 pymol-0.82.ebuild 1265
 MD5 f7c02cdae4c623c179565b3f91edfbf6 ChangeLog 1137
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 34d172ef31b5038e071b634d4e645cf1 files/pymol-gentoo.diff 1566
 MD5 72d88a2e8fb425d0dc86fb9b3d5239de files/digest-pymol-0.82 64
 MD5 38bed98126e8d0cfbcd3ee77b20d9171 files/digest-pymol-0.86 64

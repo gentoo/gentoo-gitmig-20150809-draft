@@ -3,9 +3,10 @@ MD5 de96e8b6792236295ebde1bcc93d584c octave-2.1.49.ebuild 1951
 MD5 fec806bf9cc19ceae37cf80e7d7908be octave-2.0.17-r1.ebuild 1135
 MD5 d78eedbb09dfc48289aec538812bf423 octave-2.0.17.ebuild 1067
 MD5 8a7146db2e44d370827ab877f283c3e5 octave-2.1.36-r1.ebuild 1928
-MD5 fff4a50fffaee9778d25d7d993396a5f octave-2.1.40.ebuild 1849
+MD5 fadc422b1003437c0d52788d5d4fe0e8 octave-2.1.40.ebuild 1846
 MD5 7df9005fd03f62e32a686ba243a0e8dd octave-2.1.36.ebuild 1529
-MD5 62451e2823dd83f2c00f83da32ea3a0a ChangeLog 3134
+MD5 fb368f98115a583f3b90fa3b02f7a9a6 ChangeLog 3249
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 db65638ec0880bb6bd26be8f6fba1eee files/digest-octave-2.0.17-r1 67
 MD5 db65638ec0880bb6bd26be8f6fba1eee files/digest-octave-2.0.17-r2 67
 MD5 c93a44a52d46ca6e8fed8c3c23877c0d files/digest-octave-2.1.36-r1 67

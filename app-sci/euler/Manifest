@@ -1,5 +1,6 @@
-MD5 3a936a4181c2ec0c1e386ebee7c744af ChangeLog 1288
 MD5 994227a1b8b350eff8e85555fea43a09 euler-1.59.1.ebuild 1057
 MD5 3d1f27f86b90b50ff243f16707ffca29 euler-1.60.6.ebuild 1149
+MD5 3a936a4181c2ec0c1e386ebee7c744af ChangeLog 1288
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 026d72827b7dc7ecc8a31b474ce6ed5f files/digest-euler-1.59.1 64
 MD5 25c07f2cd7585d6b674ba310cf33fafa files/digest-euler-1.60.6 64

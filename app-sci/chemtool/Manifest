@@ -1,5 +1,6 @@
 MD5 3b01f6a7baa034390c0ab376ac35211a chemtool-1.5.ebuild 1768
 MD5 ff1f9aa9ca46911da4af97d3bbc1a9b7 ChangeLog 781
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 55ed6136e52ec1136e015844186dd7ba files/config.h.in-chemtool-1.5-gentoo.diff 368
 MD5 776f1a36180ed2f86a523e6119066079 files/digest-chemtool-1.5 64
 MD5 85997784eda14376edb5a380af598393 files/Makefile.in-chemtool-1.5-gentoo.diff 2715
