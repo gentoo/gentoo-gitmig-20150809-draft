@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11-r2.ebuild,v 1.1 2003/12/07 17:58:40 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta11-r2.ebuild,v 1.2 2003/12/14 20:29:46 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -27,7 +27,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	 ${GPV_SRC}"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="-* ~x86 ~amd64 ~mips ~hppa ~sparc ~alpha"
+KEYWORDS="-* x86 amd64 ~mips ~hppa ~sparc ~alpha"
 PROVIDE="virtual/linux-sources virtual/alsa"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
