@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre15.ebuild,v 1.1 2004/08/03 18:42:47 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_pre16.ebuild,v 1.1 2004/08/05 05:37:43 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -15,8 +15,8 @@ SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.ta
 HOMEPAGE="http://www.gentoo.org"
 
 # Contact carpaski with a reason before you modify any of these.
-KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc64  s390  sparc  x86"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="  alpha  amd64  arm  hppa  ia64  macos  mips  ppc  ppc64  s390  sparc  x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~macos ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
@@ -62,8 +62,11 @@ src_compile() {
 			make CFLAGS="-march=i386 -O1 -pipe" || die
 			;;
 		"amd64")
-		check_multilib
-		make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+			check_multilib
+			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+			;;
+		"macos")
+			ewarn "NOT BUILDING SANDBOX ON $ARCH"
 			;;
 		*)
 		make || die
@@ -129,7 +132,6 @@ src_install() {
 	insinto /usr/lib/portage/pym
 	doins *.py
 
-
 	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
 	cd ${S}/bin
@@ -138,12 +140,19 @@ src_install() {
 	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
 
-	#install sandbox
-	cd ${S}/src/sandbox-1.1
-	make clean
-	make DESTDIR=${D} \
-		HAVE_64BIT_ARCH="${MULTILIB}" \
-		install || die "Failed to compile sandbox"
+	case "$ARCH" in
+		macos)
+			ewarn "Not installing sandbox on $ARCH"
+			;;
+		*)
+			#install sandbox
+			cd ${S}/src/sandbox-1.1
+			make clean
+			make DESTDIR=${D} \
+				HAVE_64BIT_ARCH="${MULTILIB}" \
+				install || die "Failed to compile sandbox"
+			;;
+	esac
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
