@@ -390,23 +390,23 @@ the <c>notail</c> option for your boot partition if you created a Reiserfs files
 #
 # &lt;fs&gt;          &lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;      		&lt;dump/pass&gt;
 </comment>
-/dev/hda1	/boot		ext2		noauto,noatime		1 1
-/dev/hda2	/		reiserfs	notail,noatime		0 0
-/dev/hda3	none            swap		sw			0 0
-/dev/hdc	/mnt/cdrom	iso9660		noauto,ro		0 0
+/dev/hda1		/boot		ext2		noauto,noatime		1 1
+/dev/hda2		/		reiserfs	notail,noatime		0 0
+/dev/hda3		none            swap		sw			0 0
+/dev/hdc		/mnt/cdrom	iso9660		noauto,ro		0 0
 <comment>
 # /proc should always be enabled
 # /proc/bus/usb should be enabled if you need usb support
 # no /dev devfs line is needed; mounting /dev is done by our devfs initscript
 </comment>
-proc		/proc           proc		defaults		0 0
-none		/proc/bus/usb	usbdevfs	defaults		0 0
+proc			/proc           proc		defaults		0 0
+none			/proc/bus/usb	usbdevfs	defaults		0 0
 <comment>
 # The following are optional; /dev/pts isn't needed for devfs; /dev/shm is
 # an example only (shm is a dynamically expandable/shrinkable ramdisk
 
-#none		/dev/pts	devpts		mode=620		0 0
-#shm		/dev/shm	shm		defaults		0 0
+#none			/dev/pts	devpts		mode=620		0 0
+#shm			/dev/shm	shm		defaults		0 0
 </comment>
 </pre>
 
