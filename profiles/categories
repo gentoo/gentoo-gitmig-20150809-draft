@@ -33,6 +33,7 @@ media-video
 net-analyzer 
 net-apache
 net-dialup 
+net-dns
 net-fs 
 net-ftp 
 net-im 
