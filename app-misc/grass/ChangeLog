@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/grass
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.1 2003/04/12 00:52:08 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.2 2003/04/17 22:37:38 mholzer Exp $
+
+*grass-5.0.2 (17 Apr 2003)
+
+  17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, grass-5.0.2.ebuild:
+  Version bumped. Ebuild submitted by Doug Gorley <douggorley@shaw.ca> in #19309.
 
 *grass-5.0.1 (11 Apr 2003)
 
