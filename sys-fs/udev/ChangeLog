@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.7 2003/10/23 20:23:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.8 2003/11/07 21:44:07 azarah Exp $
+
+*udev-005-r1 (07 Nov 2003)
+
+  07 Nov 2003; Martin Schlemmer <azarah@gentoo.org> udev-005-r1.ebuild:
+  FUpdate to build against external libsysfs.
 
 *udev-005 (23 Oct 2003)
 
