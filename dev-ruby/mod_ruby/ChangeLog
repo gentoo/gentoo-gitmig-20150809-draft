@@ -1,13 +1,14 @@
 # ChangeLog for dev-ruby/mod_ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/ChangeLog,v 1.6 2004/12/09 11:25:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/ChangeLog,v 1.7 2004/12/16 09:49:22 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> mod_ruby-1.2.4.ebuild:
+  Stable on ppc64
 
   09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> mod_ruby-1.2.4.ebuild:
   Stable on x86, ppc and alpha.
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
-
-  mod_ruby-1.2.2.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> mod_ruby-1.2.2.ebuild:
   Marked ~ppc64; bug #67066
 
 *mod_ruby-1.2.4 (20 Oct 2004)
