@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.18 2004/10/04 13:43:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.19 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  festival-gaim-0.81.ebuild, festival-gaim-1.00.ebuild:
+  Masked festival-gaim-1.00.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  festival-gaim-0.81.ebuild:
+  Masked festival-gaim-0.81.ebuild stable for ppc
 
   04 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   festival-gaim-1.00.ebuild:

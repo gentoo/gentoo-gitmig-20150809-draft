@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/nfbtrans
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.5 2004/09/22 01:42:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.6 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nfbtrans-7.70.ebuild:
+  Masked nfbtrans-7.70.ebuild stable for ppc
 
 *nfbtrans-7.74 (21 Sep 2004)
 

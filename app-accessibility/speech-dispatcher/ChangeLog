@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.12 2004/09/28 18:27:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.13 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  speech-dispatcher-0.3.ebuild, speech-dispatcher-0.4.1.ebuild:
+  Masked speech-dispatcher-0.4.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  speech-dispatcher-0.3.ebuild:
+  Masked speech-dispatcher-0.3.ebuild stable for ppc
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   speech-dispatcher-0.4.1.ebuild:

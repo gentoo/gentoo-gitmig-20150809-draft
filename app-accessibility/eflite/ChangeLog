@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.14 2004/09/15 17:50:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.15 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  eflite-0.3.8-r2.ebuild:
+  Masked eflite-0.3.8-r2.ebuild stable for ppc
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   eflite-0.3.8-r2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.20 2004/10/01 05:48:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.21 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnopernicus-0.8.4.ebuild:
+  Masked gnopernicus-0.8.4.ebuild stable for ppc
 
   01 Oct 2004; Stephen P. Becker <geoman@gentoo.org> gnopernicus-0.8.4.ebuild,
   gnopernicus-0.9.12.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.12 2004/06/28 23:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.13 2004/10/05 10:33:48 pvdabeel Exp $
 
 inherit eutils fixheadtails gcc
 
@@ -13,7 +13,7 @@ DEPEND=">=sys-apps/sed-4"
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="doc"
 
 RDEPEND="virtual/libc"

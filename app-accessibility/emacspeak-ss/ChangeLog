@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/emacspeak-ss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak-ss/ChangeLog,v 1.4 2004/06/24 21:21:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak-ss/ChangeLog,v 1.5 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  emacspeak-ss-1.9.1.ebuild:
+  Masked emacspeak-ss-1.9.1.ebuild stable for ppc
 
   02 Jun 2004; William Hubbs,,, <williamh@gentoo.org> emacspeak-ss-1.9.1.ebuild,
   metadata.xml:

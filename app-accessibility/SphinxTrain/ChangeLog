@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/SphinxTrain
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.5 2004/06/24 21:25:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.6 2004/10/05 10:33:48 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  SphinxTrain-0.9.1-r1.ebuild:
+  Masked SphinxTrain-0.9.1-r1.ebuild stable for ppc
 
   24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   SphinxTrain-0.9.1-r1.ebuild:
