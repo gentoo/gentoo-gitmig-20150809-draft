@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.21 2003/07/19 12:35:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.22 2003/07/19 19:29:52 agriffis Exp $
+
+*nfs-utils-1.0.5-r1 (19 Jul 2003)
+
+  19 Jul 2003; Aron Griffis <agriffis@gentoo.org> nfs-utils-1.0.5-r1.ebuild,
+  files/nfs-2:
+  Change exportfs timeouts from 5 seconds to 30 seconds to prevent prematurely
+  killing exportfs
 
   19 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> nfs-utils-1.0.5.ebuild :
   Security update, unmasking.
