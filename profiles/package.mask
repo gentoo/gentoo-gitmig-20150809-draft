@@ -1,6 +1,8 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
-=sys-apps/portage-2.0
+
+#masked for testing (drobbins, 19 Jun 2002)
+=sys-apps/portage-2.0.2
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
