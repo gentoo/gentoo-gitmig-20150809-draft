@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea30e4caf90a458eb747431b9ba9ea49 ChangeLog 871
-MD5 dbebb789dfd4378ef4222f5212961f13 fbv-0.99.ebuild 1014
+MD5 3d4f0f688850670b57cad889918cc68c ChangeLog 952
+MD5 b0309a5b44d34e2e1a5a4d4e75d677d9 fbv-0.99.ebuild 1009
 MD5 0f5c383081f83e1c590a3e59b460ae81 fbv-1.0b.ebuild 1014
-MD5 d0fa687199799a3f1c51f0bbbb3a0be3 files/digest-fbv-1.0b 59
 MD5 fddf15ff0ff3ee14782881f4425e8b36 files/digest-fbv-0.99 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB2cWqmdTrptrqvGERArOYAKCJK23/kRuf/v4krZwt2Q9aSG9EDwCdEJyj
-OYoR2qwAVxyKwjz8Ta9eJSw=
-=Ye1c
------END PGP SIGNATURE-----
+MD5 d0fa687199799a3f1c51f0bbbb3a0be3 files/digest-fbv-1.0b 59
