@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.6 2004/12/16 10:20:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.7 2004/12/16 18:56:29 kloeri Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -137,9 +137,6 @@ src_compile() {
 		einfo "build without SASLdb support"
 		myconf="${myconf} --with-dblib=none"
 	fi
-
-	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
-	use alpha && append-flags -D_REENTRANT -pthread
 
 	# Detect mips systems properly.
 	gnuconfig_update
