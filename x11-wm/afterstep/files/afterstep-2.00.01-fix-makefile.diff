@@ -1,0 +1,15 @@
+--- Makefile.in.old      2004-11-30 17:57:13.000000000 -0500
++++ Makefile.in       2004-12-04 18:48:23.260595280 -0500
+@@ -72,10 +72,8 @@
+ install.desktop: AfterStep.desktop.final
+ 	@if [ -d /usr/share/xsessions ] && [ -w /usr/share/xsessions ] ; then \
+		echo "installing AfterStep.desktop into /usr/share/xsessions/" ; \
+-		$(INSTALL_DATA)  AfterStep.desktop.final /usr/share/xsessions/AfterStep.desktop ; \
+ 	else if [ -d /etc/X11/sessions ] && [ -w /etc/X11/sessions ] ; then \
+ 		echo "installing AfterStep.desktop /etc/X11/xsessions/" ; \
+-		$(INSTALL_DATA)  AfterStep.desktop.final /etc/X11/xsessions/AfterStep.desktop ; \
+	fi; fi
+
+ install.data:
+
+

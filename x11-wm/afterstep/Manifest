@@ -1,12 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31f39ddd5c436eb2a77f4db4897fe2c3 afterstep-1.8.11-r2.ebuild 1542
 MD5 0494dc2dbd95a056487d7b2335c17c71 afterstep-2.0_beta4.ebuild 3576
 MD5 1774476c1aee0200109539a94010f2a4 afterstep-2.0_beta3.ebuild 3521
-MD5 7c43100b550418ab08833f9aa9cbe449 ChangeLog 3858
-MD5 0616eb9e1cca0ddd3b72f221b6b1aa52 metadata.xml 221
+MD5 97fd097340acbc03dc3267bf03c6c953 ChangeLog 4070
+MD5 5fcb6c5011c265ab4d4268662ee0dac9 metadata.xml 353
+MD5 ec216c026939813f87dd7aa0e4db9a9b afterstep-2.00.01.ebuild 3674
 MD5 9735d9a9bce29bcbd35792c0c4064ea0 files/digest-afterstep-1.8.11-r2 70
 MD5 2ea2a7ef9b473b186f54c6d399c05910 files/digest-afterstep-2.0_beta3 74
 MD5 82c3b0c4d9c7c8cf1460dbe184f344cd files/digest-afterstep-2.0_beta4 75
 MD5 776a43b6b57674eb3b1ec1f026707be5 files/as2-gnome-r1.diff 1802
 MD5 720723e9a9846b9d6a7e64a25b1adbbc files/afterstep 29
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.11-gentoo.diff 1321
+MD5 1e30a65a7a4daf379a4159eb28ac2d0f files/afterstep-2.00.01-fix-makefile.diff 656
+MD5 68d5b5bcaa6c2e3102dbde6b1314326e files/digest-afterstep-2.00.01 71
 MD5 9dfd9962d8a60e264920c6d4e742d74c files/as2-gnome.diff 1524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB6/iwEZCkKN40op4RAh3VAJ9lr0t2aTXFJIDSe5a3IsFTcdOh+gCfaseu
+Fm0Sl03RpA+P51BI5ZfZqIY=
+=Jeqs
+-----END PGP SIGNATURE-----
