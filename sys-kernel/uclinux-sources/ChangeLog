@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.22 2004/11/20 11:26:08 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.23 2004/11/27 18:25:13 plasmaroo Exp $
+
+*uclinux-sources-2.6.7_p0-r10 (27 Nov 2004)
+
+  27 Nov 2004; <plasmaroo@gentoo.org> +uclinux-sources-2.4.26_p0-r10.ebuild,
+  -uclinux-sources-2.4.26_p0-r9.ebuild, +uclinux-sources-2.6.7_p0-r10.ebuild,
+  -uclinux-sources-2.6.7_p0-r9.ebuild,
+  +files/uclinux-sources-2.4.26_p0.binfmt_a.out.patch,
+  +files/uclinux-sources-2.6.binfmt_a.out.patch,
+  +files/uclinux-sources.AF_UNIX.patch:
+  Version bump for the AF_UNIX and a.out security vulnerabilities; bugs #72452
+  and #72317.
 
 *uclinux-sources-2.4.26_p0-r9 (20 Nov 2004)
 
