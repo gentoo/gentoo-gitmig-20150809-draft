@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r4.ebuild,v 1.1 2002/03/26 09:32:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r4.ebuild,v 1.2 2002/04/12 17:00:32 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/mc/"
 
 DEPEND="virtual/glibc
 	>=sys-apps/e2fsprogs-1.19
-	>=dev-libs/glib-1.2.0
+	=dev-libs/glib-1.2*
 	>=sys-devel/automake-1.5d-r1
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	pam? ( >=sys-libs/pam-0.72 )
