@@ -25,7 +25,11 @@ cd $syncpath
 found=0
 attempts=0
 download=1
-wgetops=-q
+if [ "$1" == "-v" ] ; then
+	wgetops=
+else	
+	wgetops=-q
+fi
 
 if [ "$1" == "-n" ] ; then
 	download=0

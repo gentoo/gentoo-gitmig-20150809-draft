@@ -1,15 +1,17 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.45 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.46 2003/01/03 20:51:49 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*gentoolkit-0.1.17-r6 (03 Jan 2002)
+
+  03 Jan 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r6.ebuild files/digest-gentoolkit-0.1.17-r6 files/scripts/emerge-webrsync Changelog :
+  Added -v option to emerge-webrsync to display wget status. Closes #12477.
  
 *gentoolkit-0.1.17-r5 (06 Dec 2002)
 
   06 Dec 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r5.ebuild files/digest-gentoolkit-0.1.17-r5 files/scripts/emerge-webrsync Changelog:
   emerge-webrsync now changes user and group to root before rsyncing. Fixes #9306
   
-
 *gentoolkit-0.1.17-r4 (23 Nov 2002)
 
   23 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.17-r4.ebuild files/digest-gentoolkit-0.1.17-r4:
@@ -21,7 +23,6 @@
   11 Nov 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r3.ebuild files/digest-gentoolkit-0.1.17-r3 files/scripts/emerge-webrsync: 
   fixed emerge-webrsync 0 byte bug
   
-
 *gentoolkit-0.1.17-r2 (30 Oct 2002)
 
   30 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.17-r2.ebuild files/digest-gentoolkit-0.1.17-r2:
