@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.2.28.ebuild,v 1.6 2004/07/01 19:50:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.2.28.ebuild,v 1.7 2004/07/14 16:40:57 agriffis Exp $
 
 DESCRIPTION="Distributed Checksum Clearinghouse"
 HOMEPAGE="http://www.rhyolite.com/anti-spam/dcc/"
@@ -10,6 +10,7 @@ SRC_URI="${HOMEPAGE}/source/${MY_P}.tar.Z"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
+IUSE="ipv6"
 
 RDEPEND="dev-lang/perl
 	mail-filter/procmail
