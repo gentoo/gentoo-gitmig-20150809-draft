@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/xsv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/ChangeLog,v 1.3 2004/06/25 01:52:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/ChangeLog,v 1.4 2004/07/15 06:35:30 lucass Exp $
+
+*xsv-2.7 (15 Jul 2004)
+
+  15 Jul 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +xsv-2.7.ebuild:
+  Version bump, some little fixes to install documentation in the
+  correct directory. Added long description to metadata.xml.
 
 *xsv-2.5-r1 (29 Oct 2003)
 
