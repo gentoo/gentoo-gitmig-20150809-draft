@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/fondu-20040527.ebuild,v 1.1 2004/07/05 08:05:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/fondu-20040527.ebuild,v 1.2 2004/07/06 11:01:42 dholm Exp $
 
 DESCRIPTION="Utilities for converting between and manipulating mac fonts and unix fonts"
 HOMEPAGE="http://fondu.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="http://fondu.sourceforge.net/${PN}_src-${PV:2:6}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 DEPEND="virtual/libc"
