@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.2 2003/09/09 23:44:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-bonuspacks/unreal-tournament-bonuspacks-436.ebuild,v 1.3 2003/09/10 19:00:20 vapier Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ IUSE="X"
 
 DEPEND="app-arch/unzip
 	|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty )
-	app-games/umodpack"
+	games-util/umodpack"
 RDEPEND="X? ( virtual/x11 )"
 
 S=${WORKDIR}
