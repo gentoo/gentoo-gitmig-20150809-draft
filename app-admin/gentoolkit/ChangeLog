@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.88 2003/06/22 20:09:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.89 2003/06/30 20:54:18 utx Exp $
+
+*gentoolkit-0.1.29 (30 Jun 2003)
+
+  30 Jun 2003; Stanislav Brabec <utx@gentoo.org> gentoolkit-0.1.29.ebuild,
+  files/scripts/revdep-rebuild-1:
+  New version of revdep-rebuild:
+  - resolving order of recompilation
+  - new options --soname and --soname-regexp
+  - search more directories
 
 *gentoolkit-0.1.28 (22 Jun 2003)
 
