@@ -1,6 +1,6 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.34 2003/05/28 20:12:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.35 2003/06/11 00:49:20 msterret Exp $
 
 *openldap-2.0.27-r4 (28 May 2003)
 
@@ -32,13 +32,13 @@
    - wrong pid file directory in both config and init.d (#13057)
    - debugging enabled for syslogging (#16131)
    - version bumped 2.1 series and omit redundant kerberos patch (#16341)
-   - fixed /var/tmp paths in *.la (#12084)  
+   - fixed /var/tmp paths in *.la (#12084)
 
 *openldap-2.0.27-r3 (11 May 2003)
 
   11 May 2003; Alastair Tse <liquidx@gentoo.org> openldap-2.0.27-r3.ebuild,
   files/2.0/slapd, files/2.0/slapd.conf, files/2.0/slurpd:
-  
+
   wholesale changes to how this ebuild is installed. fixes :
    - wrong pid file directory in both config and init.d (#13057)
    - debugging enabled for syslogging (#16131)
@@ -97,7 +97,7 @@
   Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
   03 Dec 2002; Will Woods <wwoods@gentoo.org> openldap-1.2.13-r6.ebuild:
   Added ~alpha keyword and src_unpack() with gnuconfig_update.
 
@@ -125,8 +125,8 @@
   Removed sasl support as saslv2 support is not complete in this and
   causes a circular dependancy with cyrus-sasl.  cyrus-sasl still has
   ldap support built in.
- 
-  21 Sept 2002; Grant Goodyear <g2boojum@gentoo.org> openldap-2.0.25-r3.ebuild	
+
+  21 Sept 2002; Grant Goodyear <g2boojum@gentoo.org> openldap-2.0.25-r3.ebuild
   Replaced entire make install section w/ "make DESTDIR=${D} install".
   The previous version was putting ${D} in the /etc/openldap files, and
   the simple fix seems to have solved the problem.   I also checked, and
@@ -134,12 +134,12 @@
   Seemant's fix.
 
 *openldap-2.0.25-r2 (15 Aug 2002)
- 
-  16 Sep 2002; Seemant Kulleen <seemant@gentoo.org> openldap-2.0.25-r2.ebuild	
+
+  16 Sep 2002; Seemant Kulleen <seemant@gentoo.org> openldap-2.0.25-r2.ebuild
   Fixed sysconfdir to /etc so that config files go into the /etc/openldap
   directory instead of /etc/openldap/openldap.  Thanks to:
   gdjohn@egregious.org.uk (Gareth John) in bug #7986
- 
+
   07 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
   openldap-2.0.25-r2.ebuild :
   Fixed the use flags so that they are not prefixed with "ldap-"  as
@@ -153,8 +153,8 @@
 
 *openldap-2.0.25-r1 (29 Jul 2002)
 
-  12 Aug 2002; Mark Guertin <gerk@gentoo.org> :                                 
-  Added ppc to keywords                                                         
+  12 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   29 Jul 2002; Nick Hadaway <raker@gentoo.org>
   openldap-2.0.25-r1, files/slapd.rc6, files/digest-openldap-2.0.25-r1 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.20.ebuild,v 1.3 2003/06/06 23:58:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.20.ebuild,v 1.4 2003/06/11 00:49:20 msterret Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp"
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86 -ppc"
 LICENSE="OPENLDAP"
 
 DEPEND=">=sys-libs/ncurses-5.1
+	>=sys-apps/sed-4
 	berkdb? ( >=sys-libs/db-4.0.14 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -25,7 +26,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	odbc? ( dev-db/unixODBC )
 	slp? ( >=net-libs/openslp-1.0 )
 	perl? ( >=dev-lang/perl-5.6 )"
-	
+
 pkg_preinst() {
 	if ! grep -q ^ldap: /etc/group
 	then
@@ -41,7 +42,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	# According to MDK, the link order needs to be changed so that
-	# on systems w/ MD5 passwords the system crypt library is used 
+	# on systems w/ MD5 passwords the system crypt library is used
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -ie 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' ${S}/servers/slapd/Makefile.in
@@ -90,9 +91,9 @@ src_compile() {
 	use odbc \
 		&& myconf="${myconf} --enable-sql" \
 		|| myconf="${myconf} --disable-sql"
-		
+
 	use berkdb \
-		&& myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley" 
+		&& myconf="${myconf} --enable-ldbm --enable-bdb --with-ldbm-api=berkeley"
 
 	# only turn off bdb if berkdb is not in USE
 	use gdbm && [ ! `use berkdb` ] \
@@ -111,7 +112,7 @@ src_compile() {
 	myconf="${myconf} --enable-rewrite --enable-rlookups"
 	myconf="${myconf} --enable-meta --enable-monitor"
 	myconf="${myconf} --enable-null --enable-shell"
-	
+
 	# disabled options
 	# --enable-bdb --with-bdb-module=dynamic
 	# --enable-dnsserv --with-dnsserv-module=dynamic
@@ -128,7 +129,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	
+
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
 	docinto rfc ; dodoc doc/rfc/*.txt
 
@@ -155,7 +156,7 @@ src_install() {
 	fperms 0640 /etc/openldap/slapd.conf
 	fowners root:ldap /etc/openldap/slapd.conf.default
 	fperms 0640 /etc/openldap/slapd.conf.default
-	
+
 	# install our own init scripts
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/2.0/slapd slapd

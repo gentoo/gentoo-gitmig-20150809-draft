@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r2.ebuild,v 1.7 2003/06/06 23:58:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r2.ebuild,v 1.8 2003/06/11 00:49:20 msterret Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ LICENSE="OPENLDAP"
 IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
 
 DEPEND="virtual/glibc
+	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/db-3
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
@@ -44,7 +45,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/kerberos-2.0.diff.bz2	
+	epatch ${FILESDIR}/kerberos-2.0.diff.bz2
 }
 
 src_compile() {

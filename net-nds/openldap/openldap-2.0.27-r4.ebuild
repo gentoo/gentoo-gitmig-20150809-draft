@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.2 2003/06/06 23:58:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.3 2003/06/11 00:49:20 msterret Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 LICENSE="OPENLDAP"
 
 DEPEND=">=sys-libs/ncurses-5.1
+	>=sys-apps/sed-4
 	berkdb?   ( =sys-libs/db-3* )
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
@@ -50,7 +51,7 @@ src_unpack() {
 	# force the use of db3 only, db4 has api breakages
 	epatch ${FILESDIR}/${P}-db3-gentoo.patch
 	# According to MDK, the link order needs to be changed so that
-	# on systems w/ MD5 passwords the system crypt library is used 
+	# on systems w/ MD5 passwords the system crypt library is used
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -ie 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' ${S}/servers/slapd/Makefile.in
@@ -120,7 +121,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
-	
+
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
 	docinto rfc ; dodoc doc/rfc/*.txt
 
@@ -147,7 +148,7 @@ src_install() {
 	fperms 0640 /etc/openldap/slapd.conf
 	fowners root:ldap /etc/openldap/slapd.conf.default
 	fperms 0640 /etc/openldap/slapd.conf.default
-	
+
 	# install our own init scripts
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/2.0/slapd slapd
