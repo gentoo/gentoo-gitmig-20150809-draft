@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.8.3.1.ebuild,v 1.1 2005/03/12 19:21:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.8.3.1.ebuild,v 1.2 2005/03/31 18:30:26 axxo Exp $
 
 #
 # WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
@@ -61,7 +61,7 @@ src_compile() {
 		--host=${CHOST} \
 		--prefix=/usr \
 			${conf} || die "./configure failed"
-	make || die
+	make INCLUDES="-I${JDK_HOME}/include -I${JDK_HOME}/include/linux/" || die
 }
 
 src_install() {

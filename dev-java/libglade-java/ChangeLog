@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.5 2005/03/12 19:21:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.6 2005/03/31 18:30:26 axxo Exp $
+
+  31 Mar 2005; Thomas Matthijs <axxo@gentoo.org>
+  libglade-java-2.8.3.1.ebuild:
+  add include paths to jni.h
 
 *libglade-java-2.8.3.1 (12 Mar 2005)
 
