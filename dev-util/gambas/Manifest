@@ -1,5 +1,5 @@
 MD5 418b7558312b8dfa503bde489b43f61b gambas-0.72.ebuild 1560
 MD5 d1680457a92a279eb0e33f2b99a1ac46 ChangeLog 622
 MD5 622720c5c5e309d4457ff037f8a4175f metadata.xml 222
-MD5 7823ef6207c12562fe6e3b0069fce980 files/non-symlink-0.71.patch 1631
 MD5 ae2d9d9ca26d8cd07432890ecf5fe206 files/digest-gambas-0.72 65
+MD5 7823ef6207c12562fe6e3b0069fce980 files/non-symlink-0.72.patch 1631
