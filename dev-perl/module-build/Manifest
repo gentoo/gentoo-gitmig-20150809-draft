@@ -1,10 +1,20 @@
-MD5 732c1482f75855afa9feac3c231a2258 ChangeLog 1642
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b9e6de00b65dd50be754e8e5bf80d1e ChangeLog 1762
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cf098eb42df0bb25c7bb41f9df2607f6 module-build-0.18.ebuild 692
 MD5 cee3a0091b41b34411976310ff51c9b5 module-build-0.19.ebuild 691
 MD5 0e756b2a0902ba35bdbcf85d6d104d5a module-build-0.22.ebuild 733
-MD5 9312388763dda8a67658a04b70a1de31 module-build-0.25.ebuild 730
+MD5 97eac83616debef1cd7791dbffa80f55 module-build-0.25.ebuild 689
 MD5 46c83a840d25a11c761e0cbceae27a95 files/digest-module-build-0.18 68
 MD5 0d078cff23ce12c13c3e9525bff85314 files/digest-module-build-0.19 68
 MD5 804380d9ccfd232c890ace70f8539d70 files/digest-module-build-0.22 68
 MD5 02fe7753001f89b0f496f0669d31a1da files/digest-module-build-0.25 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBeTxctG5z4I8BtQoRAmT8AJ4m8qYsU8SvenNKb75tF/LuMkudBACfdlLX
+wayoxkBe8vTiZfD1FgtL3L4=
+=OLyC
+-----END PGP SIGNATURE-----
