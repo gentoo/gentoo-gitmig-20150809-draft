@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0797c1b4b8c5a83b8cc41c973bbdfa52 whois-4.6.13-r1.ebuild 1204
+MD5 fd5c776c543cce55c9b91271dc1c5dda ChangeLog 6527
 MD5 0a15a4ef7a8d60bd128e6f9f0436c3e2 whois-4.6.6-r3.ebuild 1178
+MD5 4465451c0c720b179b9a59e7b71d6524 whois-4.6.13-r1.ebuild 1208
 MD5 4a3e863f19df9e9b1e051e318c776ea6 whois-4.6.9-r1.ebuild 1202
-MD5 a585d8b6200a8a4219d99312c1dde3fd ChangeLog 6431
-MD5 5963b760548bb1f580ee3ac53ac1eb19 files/whois-4.6.9-gentoo-security.patch 4712
-MD5 fbeb270cb2d2f8fbd313166116740f8b files/whois-4.6.13-gentoo-security.patch 4065
-MD5 405e144ea2a2c14c0b066e42461ee8f4 files/digest-whois-4.6.13-r1 63
-MD5 5b0f12c560d041d865109694432ffd93 files/whois-4.6.6-gentoo-security-2.patch 5366
 MD5 9d6a7c447cdafb5e2b97f86d5c6e9789 files/digest-whois-4.6.6-r3 62
 MD5 002b59068a31c05cfe61df2c31d655e7 files/digest-whois-4.6.9-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9CkR7aJl2DRYeA4RAovAAJ0dHM5ou7ToIgh+PK1KBpkaQuuPrACgskj8
-SVC7Hd1D0oqY4UuReAHolRc=
-=KqmP
------END PGP SIGNATURE-----
+MD5 fbeb270cb2d2f8fbd313166116740f8b files/whois-4.6.13-gentoo-security.patch 4065
+MD5 5b0f12c560d041d865109694432ffd93 files/whois-4.6.6-gentoo-security-2.patch 5366
+MD5 5963b760548bb1f580ee3ac53ac1eb19 files/whois-4.6.9-gentoo-security.patch 4712
+MD5 405e144ea2a2c14c0b066e42461ee8f4 files/digest-whois-4.6.13-r1 63

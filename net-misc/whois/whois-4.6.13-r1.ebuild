@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.13-r1.ebuild,v 1.1 2004/07/13 18:24:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.13-r1.ebuild,v 1.2 2004/07/17 16:39:19 tgall Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.linux.it/~md/software/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linux.it/~md/software/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips hppa ~ia64 alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips hppa ~ia64 alpha ~amd64 ppc64"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5"
