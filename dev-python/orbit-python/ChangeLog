@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/orbit-python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/ChangeLog,v 1.8 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/ChangeLog,v 1.9 2003/09/17 08:46:34 liquidx Exp $
+
+*orbit-python-1.99.0-r1 (17 Sep 2003)
+
+  17 Sep 2003; Alastair Tse <liquidx@gentoo.org>
+  orbit-python-1.99.0-r1.ebuild:
+  orbit-python-1.99 has now been superceded by pyorbit-1.99. introducing a
+  placeholder while we transistion the deps to pyorbit
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
