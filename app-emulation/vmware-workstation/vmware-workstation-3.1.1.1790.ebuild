@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.1 2002/04/19 06:22:50 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.2 2002/04/29 22:51:45 sandymac Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -27,6 +27,8 @@ SRC_URI="$SRC_PATH0/${NP}.tar.gz
 	 $SRC_PATH6/${NP}.tar.gz"
 
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
+LICENSE="vmware"
+
 DEPEND="virtual/glibc virtual/x11 sys-kernel/linux-headers
 		>=sys-devel/perl-5 ~dev-lang/tcl-8.3.3"
 #debug is needed to prevent a segfault from stripping vmware executables
