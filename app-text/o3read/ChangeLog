@@ -1,6 +1,11 @@
 # ChangeLog for app-text/o3read
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/ChangeLog,v 1.4 2005/01/01 16:27:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/ChangeLog,v 1.5 2005/01/10 20:10:54 avenj Exp $
+
+*o3read-0.0.4 (10 Jan 2005)
+
+  10 Jan 2005; Jon Portnoy <avenj@gentoo.org> o3read-0.0.4.ebuild :
+  Security version bump.
 
 *o3read-0.0.3 (27 Nov 2002)
 
