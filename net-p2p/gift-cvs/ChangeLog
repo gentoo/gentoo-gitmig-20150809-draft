@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.14 2003/06/10 18:53:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.15 2003/06/21 20:19:52 lostlogic Exp $
+
+  21 Jun 2003; Brandon Low <lostlogic@gentoo.org> gift-cvs-0.10.0-r2.ebuild,
+  gift-cvs-0.10.0.ebuild:
+  Fix CVS server address
 
 *gift-cvs-0.10.0-r2 (10 Jun 2003)
 

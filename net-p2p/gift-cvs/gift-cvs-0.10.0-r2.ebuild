@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0-r2.ebuild,v 1.1 2003/06/10 18:53:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0-r2.ebuild,v 1.2 2003/06/21 20:19:52 lostlogic Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -17,7 +17,7 @@ inherit cvs debug flag-o-matic
 strip-flags
 
 # CVS settings for giFT
-ECVS_SERVER="cvs.gift.sourceforge.net:/cvsroot/gift"
+ECVS_SERVER="cvs.sourceforge.net:/cvsroot/gift"
 ECVS_MODULE="giFT"
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}
