@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.72 2003/09/03 17:30:51 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.73 2003/09/04 18:08:43 rizzo Exp $
+
+*gaim-0.68-r1 (04 Sep 2003)
+
+  04 Sep 2003; Don Seiler <rizzo@gentoo.org>; gaim-0.68-r1.ebuild,
+  metadata.xml, files/gaim-encryption-2.10-keys.patch:
+  Version bump to pick up encryption patch.
 
 *gaim-0.68 (03 Sep 2003)
 
