@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.35 2004/10/08 19:20:52 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.36 2004/10/17 05:33:36 hardave Exp $
+
+  16 Oct 2004; Hardave Riar <hardave@gentoo.org> rp-pppoe-3.5-r2.ebuild:
+  Stable on mips, bug #66296.
 
   08 Oct 2004; <SeJo@gentoo.org> rp-pppoe-3.5-r2.ebuild:
   stable ppc gsla: 66296
