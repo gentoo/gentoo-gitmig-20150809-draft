@@ -1,0 +1,71 @@
+#!/bin/sh
+#RCUPDATE:3 4:80:This line is required for script management
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+SERVICE=`basename ${0}`
+SVCDIR=/var/supervise/${SERVICE}
+CTLDIR=/etc/supervise/${SERVICE}
+opts="setup start stop"
+
+#this service is designed to *only* run supervised
+
+setup() {
+	einfo "${SERVICE} Setup"
+	echo
+	echo "After completing this setup process, your system will be configured to run the"
+	echo "dnscache service.  This service caches DNS (domain name service) lookups; in"
+	echo "other words, it speeds up the time it takes for your machine to resolve hostnames."
+	echo "More information on this package can be found at http://cr.yp.to/djbdns.html."
+	echo
+	einfo "After this script completes, djbdns will be configured and running.  Your"
+	einfo "/etc/resolv.conf will be updated so that all DNS lookups are directed to dnscache."
+	einfo "Your original /etc/resolv.conf will be backed up to /etc/resolv.conf.orig."
+	einfo "In addition, dnscache will be configured to start every time your system boots."
+	echo
+	echo "(press any key to begin setup, or press control-C to abort)"
+	echo
+	read
+	if [ ! -e ${SVCDIR} ]
+	then
+		einfo ">>> Setting up ${SVCDIR}..."
+		/usr/bin/dnscache-conf dnscache dnslog ${SVCDIR}
+		einfo ">>> Creating ${CTLDIR} symlink..."
+		ln -s ${SVCDIR} ${CTLDIR} 
+	fi	
+	if [ ! -e /var/log/${SERVICE}.d ]
+	then
+		einfo ">>> /var/log/${SERVICE}.d points to the dnscache log..."
+		ln -s ${SVCDIR}/log/main /var/log/${SERVICE}.d
+	fi
+	if [ -e /etc/resolv.conf ]
+	then
+		einfo ">>> Backing up /etc/resolv.conf..."
+		cp /etc/resolv.conf /etc/resolv.conf.orig
+		cat /etc/resolv.conf.orig | grep -v nameserver > /etc/resolv.conf
+		echo nameserver 127.0.0.1 >> /etc/resolv.conf
+		einfo ">>> New /etc/resolv.conf has been created."
+	fi
+	echo
+	einfo ">>> Configuring ${SERVICE} to start at system boot..."
+	/usr/sbin/rc-update add dnscache
+	einfo "${SERVICE} setup is complete!"
+}
+
+start() {
+		ebegin "Starting supervised ${SERVICE}"
+		/usr/bin/svc -u ${CTLDIR} 
+		/usr/bin/svc -u ${CTLDIR}/log
+		eend $? "Error starting ${SERVICE} supervised."
+}
+
+stop() {
+		ebegin "Stopping supervised ${SERVICE}"
+		/usr/bin/svc -d ${CTLDIR}
+		/usr/bin/svc -d ${CTLDIR}/log
+		eend $? "Error stopping ${SERVICE} supervised"
+}
+
+doservice ${@}
+
