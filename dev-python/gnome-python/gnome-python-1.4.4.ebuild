@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.11 2004/06/25 01:30:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4.ebuild,v 1.12 2004/09/02 17:51:57 pvdabeel Exp $
 
 inherit gnome.org
 
@@ -10,7 +10,7 @@ DESCRIPTION="gnome-python"
 HOMEPAGE="http://www.daa.com.au/~james/gnome/"
 
 SLOT="1"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 
 DEPEND="virtual/python
