@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3537 2005/01/26 04:37:47 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3538 2005/01/27 15:15:30 xmerlin Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <xmerlin@gentoo.org> (27 Jan 2005)
+# Masked for a memory corruption bug
+=sys-cluster/drbd-0.7.9
+=sys-cluster/drbd-0.7.9-r1
 
 # <dragonheart@gentoo.org> (26 Jan 2005)
 # Masked in preparation for deletion. Objects see bug #69451
