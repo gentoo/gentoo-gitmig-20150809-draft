@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# masked for testing (please test r2) (gerk June 19, 2002)
+>=x11-libs/xforms-089-r1
+
 #masked for testing (drobbins, 19 Jun 2002)
 =sys-apps/portage-2.0.2
 
@@ -14,9 +17,6 @@ net-misc/mldonkey
 # masking nhc98, until strange module lookup behaviour is resolved
 # george - Jun 8, 2002
 dev-lang/nhc98
-
-# masking as it's causing strange errors Gerk June 9 2002
-=x11-libs/xforms-089-r1
 
 # masking k3studio, somehow it escaped being masked before
 # ebuild incomplete
