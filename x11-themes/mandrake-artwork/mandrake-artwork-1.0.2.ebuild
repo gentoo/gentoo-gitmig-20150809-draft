@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.5 2005/01/01 02:42:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.6 2005/01/26 16:12:44 greg_g Exp $
 
-inherit eutils kde-functions kde
+inherit eutils kde
 
 MDK_EXTRAVERSION="1mdk"
 
@@ -15,12 +15,14 @@ SLOT="0"
 KEYWORDS="~x86 ppc ~alpha ~sparc"
 IUSE="kde"
 
-# Needed to build...
-DEPEND="app-arch/rpm2targz
-	>=x11-libs/gtk+-2.0
-	>=media-libs/gdk-pixbuf-0.2.5
-	=x11-libs/gtk+-1.2*
-	kde? ( >=kde-base/kdebase-3.1* )"
+RDEPEND=">=x11-libs/gtk+-2.0
+	 >=media-libs/gdk-pixbuf-0.2.5
+	 =x11-libs/gtk+-1.2*
+	 kde? ( >=kde-base/kdebase-3.1 )"
+DEPEND="${RDEPEND}
+	app-arch/rpm2targz"
+
+need-kde 3.1
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
@@ -29,7 +31,6 @@ src_unpack() {
 }
 
 src_compile() {
-	set-qtdir 3
 	cd ${WORKDIR}/galaxy-${PV}
 	#make distclean
 
