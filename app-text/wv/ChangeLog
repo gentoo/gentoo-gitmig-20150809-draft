@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.19 2004/06/24 22:56:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.20 2004/07/12 16:41:06 foser Exp $
+
+*wv-1.0.0-r1 (12 Jul 2004)
+
+  12 Jul 2004; foser <foser@gentoo.org> wv-1.0.0-r1.ebuild , wv-1.0.0-fix_overflow.patch, metadata.xml:
+  Add security fix (#56595)
+  Make wmf support USE switchable
+  Added to gnome herd for now with me as maintainer
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wv-1.0.0.ebuild:
   stable on alpha and ia64
