@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.19 2003/12/16 10:55:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.20 2004/05/10 18:18:31 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -102,6 +102,13 @@ function webapp-pkg_setup ()
 		eerror "${msg}"
 		die "${msg}"
 	fi
+
+	ewarn "Ebuilds (like this one) that use the webapp-apache.eclass need to"
+	ewarn "be converted to use the new webapp.eclass, to be compatible with"
+	ewarn "webapp-config."
+	ewarn
+	ewarn "Please file a bug on http://bugs.gentoo.org/, stating that this"
+	ewarn "ebuild needs converting to use the new approach."
 }
 
 # shamelessly stolen from Max Kalika <max@gentoo.org>'s horde stuff ;-)
