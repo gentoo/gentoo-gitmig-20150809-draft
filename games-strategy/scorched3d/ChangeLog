@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.17 2004/12/14 19:39:36 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.18 2005/02/12 00:48:46 mr_bones_ Exp $
+
+  11 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> -files/37-GLEXT.patch,
+  -scorched3d-37.2.ebuild:
+  clean old files
 
   14 Dec 2004; Simon Stelling <blubb@gentoo.org> scorched3d-38.ebuild:
   added ~amd64
