@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.17 2002/10/27 21:09:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.18 2002/11/15 15:48:43 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre3 (14 Nov 2002)
+
+  14 Nov 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre3.ebuild:
+
+  This is mostly to get things moving again... much of the old todos
+  from _pre1 and _pre2 will still be getting done.
+
+  Changes from _pre2:
+  - Update to another new gentoo-fb logo patch
+  - update to latest acpi version
+  - update to -rc1-ac1 as the base
 
 *lolo-sources-2.4.20.1_pre2 (23 Oct 2002)
 
