@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-minicmd/xfce4-minicmd-0.2.0.ebuild,v 1.9 2004/04/05 01:48:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-minicmd/xfce4-minicmd-0.2.0.ebuild,v 1.10 2004/06/24 22:01:37 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"

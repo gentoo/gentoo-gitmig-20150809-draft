@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.2.0.ebuild,v 1.8 2004/04/20 22:14:06 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.2.0.ebuild,v 1.9 2004/06/24 22:00:15 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"

@@ -1,6 +1,6 @@
 # ChangeLog for xfce-extra/xfce4-iconbox
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.26 2004/06/23 08:57:42 malc Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.27 2004/06/24 22:01:16 agriffis Exp $
 
   23 Jun 2004; <malc@gentoo.org> xfce4-iconbox-4.0.5.ebuild:
   Mark stable on amd64

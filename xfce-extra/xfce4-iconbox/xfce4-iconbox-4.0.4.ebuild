@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/xfce4-iconbox-4.0.4.ebuild,v 1.9 2004/04/27 16:05:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/xfce4-iconbox-4.0.4.ebuild,v 1.10 2004/06/24 22:01:16 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Xfce4 iconbox"

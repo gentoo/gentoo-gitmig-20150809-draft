@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/xfce4-datetime-0.2.ebuild,v 1.5 2004/04/27 16:01:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/xfce4-datetime-0.2.ebuild,v 1.6 2004/06/24 22:00:43 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"

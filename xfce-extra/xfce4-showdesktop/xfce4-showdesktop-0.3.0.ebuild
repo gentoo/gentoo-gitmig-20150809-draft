@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/xfce4-showdesktop-0.3.0.ebuild,v 1.10 2004/04/27 16:12:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-showdesktop/xfce4-showdesktop-0.3.0.ebuild,v 1.11 2004/06/24 22:02:20 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"
