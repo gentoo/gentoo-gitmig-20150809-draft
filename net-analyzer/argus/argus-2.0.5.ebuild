@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.8 2004/07/27 02:18:38 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.9 2004/10/03 09:53:00 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.qosient.com/argus/"
 SRC_URI="ftp://ftp.qosient.com/pub/argus/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc-macos"
 IUSE=""
 RDEPEND="virtual/libc
 	>=net-libs/libpcap-0.6.2"
@@ -37,7 +37,7 @@ src_install () {
 
 	dobin bin/ra*
 
-	use macos && newsbin bin/argus_bpf argus || newsbin bin/argus_linux argus
+	use ppc-macos && newsbin bin/argus_bpf argus || newsbin bin/argus_linux argus
 
 	insinto /etc/argus
 	doins support/Config/argus.conf
