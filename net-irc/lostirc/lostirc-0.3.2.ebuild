@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.2.ebuild,v 1.1 2004/03/06 13:29:33 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.2.ebuild,v 1.2 2004/03/23 17:07:27 mholzer Exp $
 
 inherit base
 
@@ -8,6 +8,7 @@ IUSE="kde gnome"
 DESCRIPTION="A simple but functional graphical IRC client"
 HOMEPAGE="http://lostirc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
