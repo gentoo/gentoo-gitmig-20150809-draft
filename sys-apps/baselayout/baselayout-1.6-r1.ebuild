@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.7 2001/08/22 21:18:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.8 2001/08/23 07:32:13 drobbins Exp $
 
 SV=1.1.3
 S=${WORKDIR}/rc-scripts-${SV}
@@ -13,6 +13,16 @@ src_compile() {
 	cp ${S}/init.d/runscript.c ${T}
 	cd ${T}
 	gcc ${CFLAGS} runscript.c -o runscript
+}
+
+#adds ".keep" files so that dirs aren't auto-cleaned
+keepdir() {
+	dodir $*
+	local x
+	for x in $*
+	do
+		touch ${D}/${x}/.keep
+	done
 }
 
 src_install()
@@ -27,24 +37,24 @@ src_install()
 		echo '!!! installed versions.  We will have an automated update system shortly.'
 		exit 1
 	fi
-	dodir /sbin
+	keepdir /sbin
 	exeinto /sbin
 	doexe ${T}/runscript
 
-	dodir /usr
-	dodir /usr/bin
-	dodir /usr/lib
-	dodir /usr/sbin
+	keepdir /usr
+	keepdir /usr/bin
+	keepdir /usr/lib
+	keepdir /usr/sbin
 	dosbin ${S}/sbin/MAKEDEV ${S}/sbin/run-crons ${S}/sbin/update-modules
-	dodir /var /var/run /var/lock/subsys
+	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
 	if [ -z "`use bootcd`" ]
 	then
-		dodir /boot
+		keepdir /boot
 		dosym . /boot/boot
-		dodir /home
-		dodir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
+		keepdir /home
+		keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 		dosym ../X11R6/include/X11 /usr/include/X11
 		dosym ../X11R6/include/GL /usr/include/GL
 		
@@ -55,12 +65,12 @@ src_install()
 		#the currently-installed includes in /usr/src and copies them to /usr/include/linux and
 		#/usr/include/asm.  This is the recommended approach so that kernel includes can remain
 		#constant.  The kernel includes should really only be upgraded when you upgrade glibc.
-		dodir /usr/include/linux /usr/include/asm
-		dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
+		keepdir /usr/include/linux /usr/include/asm
+		keepdir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
 
 		for foo in games lib sbin share bin share/doc share/man src
 		do
-		  dodir /usr/local/${foo}
+		  keepdir /usr/local/${foo}
 		done
 		#local FHS compat symlinks
 		dosym share/man /usr/local/man	
@@ -70,14 +80,14 @@ src_install()
 		dosym share/man /usr/man
 		dosym share/doc /usr/doc
 		dosym share/info /usr/info
-		dodir /usr/X11R6/share
+		keepdir /usr/X11R6/share
 		dosym ../../share/info	/usr/X11R6/share/info
 		#end FHS compatibility symlinks stuff
 		
 		doman ${FILESDIR}/MAKEDEV.8
 		dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
-		dodir /usr/X11R6/lib /usr/X11R6/man
-		dodir /var/log/news
+		keepdir /usr/X11R6/lib /usr/X11R6/man
+		keepdir /var/log/news
 		
 		#supervise stuff depreciated
 		#dodir /var/lib/supervise
@@ -85,7 +95,7 @@ src_install()
 		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
 		#end supervise stuff
 		
-		dodir /opt
+		keepdir /opt
 
 #		It makes sense to move these to the PAM package.
 #		dodir /etc/pam.d
@@ -97,12 +107,14 @@ src_install()
 	touch ${D}/var/log/lastlog
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
-	dodir /var/db/pkg /var/spool /var/tmp /var/lib/misc
+	#the .keep file messes up Portage when looking in /var/db/pkg
+	dodir /var/db/pkg 
+	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
-	dodir /root /proc
+	keepdir /root /proc
 	
 	chmod go-rx ${D}/root
-	dodir /tmp
+	keepdir /tmp
 	chmod 1777 ${D}/tmp
 	chmod 1777 ${D}/var/tmp
 	chown root.uucp ${D}/var/lock
@@ -113,7 +125,7 @@ src_install()
 	ln -s ../proc/filesystems ${D}/etc/filesystems
 	for foo in hourly daily weekly monthly
 	do
-		dodir /etc/cron.${foo}
+		keepdir /etc/cron.${foo}
 	done
 	for foo in ${S}/etc/*
 	do
@@ -122,16 +134,16 @@ src_install()
 	done
 	
 	chmod go-rwx ${D}/etc/shadow
-	dodir /lib /proc /mnt/floppy /mnt/cdrom
+	keepdir /lib /proc /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
 #	dosbin rc-update 
 #	insinto /usr/bin
 #	insopts -m0755
 #	doins colors
-  	dodir /dev
-	dodir /dev-state
-	dodir /dev/pts /dev/shm
+  	keepdir /dev
+	keepdir /dev-state
+	keepdir /dev/pts /dev/shm
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	cd ${D}/dev
 	#These devices are also needed by many people and should be included

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r1.ebuild,v 1.1 2001/08/22 21:36:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r1.ebuild,v 1.2 2001/08/23 07:32:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #Specific Linux headers are now required so that we build from a stable "base"
 #We need gcc-2.95.3-r2 because it includes a special fix for this glibc version (2.2.4)
-DEPEND=">=sys-devel/gcc-2.95.3-r2 ~sys-kernel/linux-headers-2.4.8.8 nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+DEPEND="~sys-kernel/linux-headers-2.4.8.8 nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 
 if [ -z "`use bootstrap`" ] && [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 then

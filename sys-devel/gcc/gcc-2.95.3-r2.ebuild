@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r2.ebuild,v 1.2 2001/08/21 02:55:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r2.ebuild,v 1.3 2001/08/23 07:32:13 drobbins Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -43,7 +43,7 @@ src_unpack() {
 
     cd ${S}
     # A patch for the atexit problem occured with glibc-2.2.3
-    # patch -l -p0 < ${FILESDIR}/${P}-atexit.diff
+     patch -l -p0 < ${FILESDIR}/${P}-atexit.diff
 	
    	# The previous patch has been replaced with this patch:
 	patch -l -p1 < ${FILESDIR}/${P}-destructor-atexit.diff
