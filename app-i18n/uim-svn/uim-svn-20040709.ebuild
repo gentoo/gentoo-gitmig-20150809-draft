@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.1 2004/07/09 11:56:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.2 2004/07/17 10:16:30 dholm Exp $
 
 inherit subversion flag-o-matic
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://uim.freedesktop.org/"
 SRC_URI=""
 
 LICENSE="GPL-2 | BSD"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 DEPEND="${RDEPEND}
