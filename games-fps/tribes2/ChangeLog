@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tribes2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.1 2004/02/11 22:19:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/ChangeLog,v 1.2 2004/02/12 00:13:27 wolf31o2 Exp $
+
+  11 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> tribes2-25034.ebuild:
+  Added RESTRICT=nomirror.
 
 *tribes2-25034 (11 Feb 2004)
 

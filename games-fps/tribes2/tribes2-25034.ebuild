@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.1 2004/02/11 22:19:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.2 2004/02/12 00:13:28 wolf31o2 Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.libsdl.org/projects/tribes2/release/tribes2-${PV}-cdrom-x86.
 LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip"
+RESTRICT="nostrip nomirror"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
