@@ -22,6 +22,12 @@
 ##   End example
 ##
 
+# Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
+# masked for testing... includes gcc-3.1 fixes and depend updates
+=media-libs/smpeg-0.4.4-r3
+=media-video/smpeg-xmms-0.3.4-r2
+
+
 # Daniel Ahlberg <aliz@gentoo.org> (02 Aug 2002)
 # masked for testing
 =sys-libs/glibc-2.2.5-r6
@@ -60,7 +66,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1158 2002/08/03 07:05:07 christoph Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1159 2002/08/03 09:23:23 cardoe Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
