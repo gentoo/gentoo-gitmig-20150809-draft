@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.1.ebuild,v 1.4 2003/02/04 00:14:32 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.1.ebuild,v 1.5 2003/02/07 19:13:02 rphillips Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 		>=sys-libs/zlib-1.1.3
 		tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 		perl? ( >=sys-devel/perl-5.6.1-r2 )
-		python? ( >=dev-lang/python-2.2 )
+		python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 		java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3 ) 
 		ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 		nls? ( sys-devel/gettext )"
