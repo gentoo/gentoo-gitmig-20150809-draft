@@ -1,5 +1,5 @@
 # /etc/bash.bashrc:
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.3 2004/08/14 03:10:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/files/bashrc,v 1.4 2004/08/19 01:31:20 agriffis Exp $
 # 
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
@@ -14,8 +14,20 @@ if [[ $- != *i* ]]; then
 	return
 fi
 
-# Set colorful PS1 only on colorful terminals
-if dircolors --print-database | grep -Fqx "TERM $TERM"; then
+# Set colorful PS1 only on colorful terminals.
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.
+use_color=false
+safe_term=${TERM//[^[:alnum:]]/.}	# sanitize TERM
+
+if [[ -f /etc/DIR_COLORS ]]; then
+	grep -q "^TERM ${safe_term}" /etc/DIR_COLORS && use_color=true
+elif dircolors --print-database | grep -q "^TERM ${safe_term}"; then
+	use_color=true
+fi
+
+if ${use_color}; then
 	if [[ $EUID == 0 ]]; then
 		PS1='\[\033[01;31m\]\h \[\033[01;34m\]\W \$ \[\033[00m\]'
 	else

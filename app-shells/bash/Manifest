@@ -6,7 +6,7 @@ MD5 6a2f5ace1a2dd30b1bee55eba1509027 bash-2.05b-r10.ebuild 3041
 MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
 MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
-MD5 bf31cdbb653a9ad17112633172d243be files/bashrc 948
+MD5 8424d47516cd474034c956a1cde0cafa files/bashrc 1335
 MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
 MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
 MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
