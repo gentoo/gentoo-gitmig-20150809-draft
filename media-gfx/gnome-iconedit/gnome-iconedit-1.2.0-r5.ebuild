@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.11 2003/03/25 20:07:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.12 2003/04/25 16:48:59 foser Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Edits icons, what more can you say?"
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc sparc"
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.11.0-r1
+	dev-libs/libxml
 	media-libs/libpng
 	gnome-base/ORBit"
 # Gnome-Print support is broken
