@@ -1,0 +1,12 @@
+diff -uNr gnome-themes-extras-0.6/Smooth/smooth_style.c gnome-themes-extras-0.6.patched/Smooth/smooth_style.c
+--- gnome-themes-extras-0.6/Smooth/smooth_style.c	2003-12-14 22:00:56.000000000 +0100
++++ gnome-themes-extras-0.6.patched/Smooth/smooth_style.c	2004-03-18 16:34:50.755088896 +0100
+@@ -707,7 +707,7 @@
+ {
+   g_return_if_fail(sanitize_parameters(style, window, &width, &height));
+ 
+-  if ((EDGE_LINE_STYLE(style,NULL) == SMOOTH_LINE_FLAT)  && DETAIL ("entry") && widget && (GTK_IS_SPIN_BUTTON (widget) || (widget->parent && GTK_IS_COMBO(widget->parent)))) 
++  if ((EDGE_LINE_STYLE(style,NULL) == SMOOTH_LINE_FLAT)  && DETAIL ("entry") && widget && (GTK_IS_SPIN_BUTTON (widget) || (widget->parent && GTK_IS_COMBO_BOX(widget->parent)))) 
+   {
+        gtk_paint_flat_box(style, window, widget->state, GTK_SHADOW_NONE, area, widget, "entry_bg", x, y, width, height);
+ 

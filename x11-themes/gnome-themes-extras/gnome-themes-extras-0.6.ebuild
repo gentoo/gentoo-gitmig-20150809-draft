@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.6.ebuild,v 1.1 2004/03/06 13:03:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.6.ebuild,v 1.2 2004/03/19 14:18:35 foser Exp $
 
 inherit gnome2
 
@@ -21,7 +21,13 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog MAINTAINERS README TODO"
 
 src_unpack() {
+
 	unpack ${A}
+
+	cd ${S}
+	# fix issues with gtk+ 2.4 (#44988)
+	epatch ${FILESDIR}/${PN}-0-smooth_engine_gtk_2.4.patch
+
 	sed -e 's:gorilla-default:capplet-icons:' \
 		-i ${S}/Gorilla/gtk-2.0/iconrc.in \
 		-i ${S}/Gorilla/gtk-2.0/iconrc
