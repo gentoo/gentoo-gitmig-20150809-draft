@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/pam_usb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/ChangeLog,v 1.1 2003/11/18 20:04:42 hhg Exp $
+
+*pam_usb-0.2_rc1 (18 Nov 2003)
+
+  18 Nov 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  pam_usb-0.2_rc1.ebuild:
+  new package -- submitted by Ray Tsang <rayt@9pnet.com>
+
