@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/envtest-1.2.3-r4.ebuild,v 1.2 2003/08/15 12:14:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/envtest-1.2.3-r4.ebuild,v 1.3 2003/09/08 07:57:41 msterret Exp $
 
 DESCRIPTION="This ebuild display the environment for an ebuild. It's for portage-testing purposes only and will _always_ fail."
 HOMEPAGE="http://foo.bar.com/"
