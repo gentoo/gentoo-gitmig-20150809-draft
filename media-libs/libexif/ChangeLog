@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.14 2004/03/16 23:55:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.15 2004/05/14 03:31:38 geoman Exp $
+
+  13 May 2004; Stephen P. Becker <geoman@gentoo.org> libexif-0.5.12-r1.ebuild:
+  Stable on mips.
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libexif-0.5.12-r1.ebuild:
   Added ~mips keyword.
