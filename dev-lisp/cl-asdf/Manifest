@@ -2,9 +2,9 @@ MD5 6f0869af5a04b4861b645951ad6fc0e0 cl-asdf-1.78.ebuild 989
 MD5 888e2c4823bffdb68c3efbec14866b59 cl-asdf-1.73b.ebuild 781
 MD5 df284fb53907a12bfefdee08c8f124b0 cl-asdf-1.84.ebuild 992
 MD5 551129d068fcc410c1ff740028959570 cl-asdf-1.77.2.ebuild 961
-MD5 84e92774efbc4336a2915582670e5edf cl-asdf-1.86.ebuild 1003
+MD5 90a801f19d44b5b88e2ae757f199af8f cl-asdf-1.86.ebuild 1003
 MD5 2376f7b447fc7d599e0a4bc20bb327ac cl-asdf-1.81.ebuild 955
-MD5 dbdbe994a394bdae1ecd66bacdd2a6ec ChangeLog 1809
+MD5 bc12503864134afccbcd833d4080181d ChangeLog 1809
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 da47e17802d933cda8e74bd9f7351645 files/digest-cl-asdf-1.73b 64
 MD5 af309c1cf1de43964fd82cb5d310d98e files/digest-cl-asdf-1.78 133
