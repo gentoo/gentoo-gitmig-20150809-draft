@@ -1,0 +1,23 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/gcc34/2004.3/packages,v 1.1 2004/11/06 18:11:46 kumba Exp $
+
+
+# sparc64 v9 32-bit userland packages
+
+# Since we're running a sparc64 kernel w/ 32bit (v9) userland,
+# we need gcc-sparc64 for kernels
+*sys-devel/gcc-sparc64
+
+# Sometimes necessary to trick programs into thinking we're really
+# a sparc32 system.
+*sys-devel/sparc32
+
+
+# GCC 3.4.x Testing Profile
+# Tests the following:
+#	>=sys-devel/gcc-3.4.1
+
+-*<sys-devel/gcc-3.4.1
+*>=sys-devel/gcc-3.4.1
+
