@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_rc1.ebuild,v 1.1 2004/08/06 14:01:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_rc1.ebuild,v 1.2 2004/08/06 18:51:02 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -68,7 +68,7 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
+CONFIG_PROTECT=${PREFIX}/share/config:${PREFIX}/env" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/58kdedir-3.3.0 # number goes up with version upgrade
 
