@@ -1,8 +1,13 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.3 2003/03/13 22:27:40 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.4 2003/03/14 20:32:22 absinthe Exp $
 
 *orion-1.5.2b-r1 (13 Mar 2003)
+
+  14 Mar 2003; Dylan Carlson <absinthe@gentoo.org> files/1.5.2b/orion.conf,
+  files/1.5.2b/orion.init, files/1.5.2b/start_orion.sh,
+  files/1.5.2b/stop_orion.sh:
+  Fixed start_orion.sh to correctly source conf.d/orion.  Added cvs keywords.
 
   13 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
 
