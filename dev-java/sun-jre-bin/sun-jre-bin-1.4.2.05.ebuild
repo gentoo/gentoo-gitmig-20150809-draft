@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05.ebuild,v 1.2 2004/07/28 11:01:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05.ebuild,v 1.3 2004/09/06 18:45:33 ciaranm Exp $
 
 IUSE="gnome kde mozilla"
 
-inherit java nsplugins
+inherit java nsplugins eutils
 
 At="j2re-1_4_2_05-linux-i586.bin"
 S="${WORKDIR}/j2re1.4.2_05"
@@ -176,12 +176,8 @@ pkg_postinst () {
 		einfo "******************************************************"
 	fi
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
-
+	ebeep 5
+	epause 8
 }
 
 pkg_prerm() {

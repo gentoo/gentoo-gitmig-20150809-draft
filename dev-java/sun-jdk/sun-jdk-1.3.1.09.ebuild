@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.12 2004/07/14 13:20:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.13 2004/09/06 18:44:20 ciaranm Exp $
 
 IUSE="doc mozilla"
 
-inherit java nsplugins
+inherit java nsplugins eutils
 
 At="j2sdk-1_3_1_09-linux-i586.bin"
 S="${WORKDIR}/jdk1.3.1_09"
@@ -135,9 +135,6 @@ pkg_postinst () {
 	einfo " Or use java-config program to set your preferred VM"
 	einfo "******************************************************"
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
+	ebeep 5
+	epause 8
 }

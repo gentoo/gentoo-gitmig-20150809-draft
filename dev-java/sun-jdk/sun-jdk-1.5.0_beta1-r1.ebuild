@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1-r1.ebuild,v 1.3 2004/06/24 22:44:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1-r1.ebuild,v 1.4 2004/09/06 18:44:20 ciaranm Exp $
 
 IUSE="doc gnome kde mozilla"
 
-inherit java
+inherit java eutils
 
 amd64file="j2sdk-1_5_0-beta-linux-amd64.bin"
 x86file="j2sdk-1_5_0-beta-linux-i586.bin"
@@ -207,10 +207,7 @@ pkg_postinst () {
 	einfo " Or use java-config program to set your preferred VM"
 	einfo "******************************************************"
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
-
+	ebeep 5
+	epause 8
 }
+

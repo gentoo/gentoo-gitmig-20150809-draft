@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.2 2004/09/03 05:43:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.3 2004/09/06 18:44:20 ciaranm Exp $
 
 IUSE="doc gnome kde mozilla jce"
 
-inherit java
+inherit java eutils
 
 amd64file="jdk-1_5_0-rc-linux-amd64.bin"
 x86file="jdk-1_5_0-rc-linux-i586.bin"
@@ -249,10 +249,6 @@ pkg_postinst () {
 	einfo " which can cause incompatibility with certain sources."
 	einfo "*********************************************************"
 
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-	echo -ne "\a" ; sleep 1
-	sleep 8
-
+	ebeep 5
+	epause 8
 }

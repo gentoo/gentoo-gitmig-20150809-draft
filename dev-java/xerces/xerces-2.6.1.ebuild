@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.1.ebuild,v 1.4 2004/06/24 22:45:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.1.ebuild,v 1.5 2004/09/06 18:47:53 ciaranm Exp $
 
 inherit java-pkg eutils
 
@@ -53,13 +53,13 @@ pkg_postinst() {
 		einfo " Online Documentation:                                    "
 		einfo "     http://xml.apache.org/xerces2-j/api.html             "
 		einfo "                                                          "
-		sleep 5
+		epause 5
 	else
 		einfo "                                                          "
 		einfo " Online Documentation:                                    "
 		einfo "     http://xml.apache.org/xerces2-j/api.html             "
 		einfo "                                                          "
-		sleep 5
+		epause 5
 	fi
 }
 
