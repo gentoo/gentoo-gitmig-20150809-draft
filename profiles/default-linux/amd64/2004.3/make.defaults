@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.15 2005/01/12 23:08:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/make.defaults,v 1.16 2005/02/01 18:48:23 eradicator Exp $
 
 # GCC 3.4.2 has multilib enabled by default, but we still need multilib in USE
 # for compatibility. also, without this we might actually fail to build stages.
@@ -16,4 +16,3 @@ FEATURES="sandbox autoconfig"
 
 CONF_LIBDIR="lib"
 CONF_MULTILIBDIR="lib32"
-

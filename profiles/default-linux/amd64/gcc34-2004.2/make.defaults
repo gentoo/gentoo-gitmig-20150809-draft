@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/gcc34-2004.2/make.defaults,v 1.11 2005/01/12 23:08:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/gcc34-2004.2/make.defaults,v 1.12 2005/02/01 18:48:23 eradicator Exp $
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses -java -nptl"
 
@@ -13,3 +13,5 @@ FEATURES="-sandbox"
 
 # yay lib64!
 CONF_LIBDIR="lib64"
+
+SYMLINK_LIB="yes"
