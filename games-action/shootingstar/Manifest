@@ -1,4 +1,5 @@
-MD5 56eb8fb545cd86c9b1966b1c60197496 shootingstar-1.2.0.ebuild 670
-MD5 8f79b74bd499ff22bc39345f18679372 ChangeLog 440
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 24c1dc28aa9db7ce678a06b21fb02ca9 shootingstar-1.2.0.ebuild 758
+MD5 9f90f4885c52346a2c4cbdf44403e56d ChangeLog 620
+MD5 be5aab019239b5659c6f5f5bb61b0085 files/1.2.0-gcc34.patch 1053
 MD5 e213ef0a24782b487d5eabba35b82063 files/digest-shootingstar-1.2.0 71
