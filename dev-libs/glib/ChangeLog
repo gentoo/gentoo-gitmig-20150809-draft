@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.47 2003/07/01 16:32:45 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.48 2003/07/08 20:11:14 liquidx Exp $
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> glib-2.2.1-r1.ebuild,
+  glib-2.2.1.ebuild, glib-2.2.2.ebuild:
+  allow USE='debug' to enable debuggign mode
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> glib-2.2.2.ebuild :
   set stable on sparc

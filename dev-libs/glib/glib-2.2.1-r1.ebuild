@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1-r1.ebuild,v 1.2 2003/05/30 18:18:15 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1-r1.ebuild,v 1.3 2003/07/08 20:11:14 liquidx Exp $
 
 inherit libtool
 
@@ -29,7 +29,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-gtk-doc" \
 		|| myconf="${myconf} --disable-gtk-doc"
 
-	if [ -n "$DEBUGBUILD" ]; then
+	if [ -n "$DEBUGBUILD" -o -n "`use debug`" ]; then
 		myconf="${myconf}  --enable-debug=yes"
     	fi
 
