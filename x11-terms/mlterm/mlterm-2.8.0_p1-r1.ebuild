@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.3 2003/11/29 16:34:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.4 2003/12/05 08:15:29 usata Exp $
 
 IUSE="truetype gnome gtk gtk2 imlib bidi nls"
 
@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="BSD"
 
-DEPEND="gnome? ( gtk? ( gtk2? ( =x11-libs/gtk+-2* ) ) :
-			( >=media-libs/gdk-pixbuf-0.18.0 ) )
-	!gnome? ( imlib? >=media-libs/imlib-1.9.14 : virtual/x11 )
+DEPEND="gnome? ( gtk? ( gtk2? ( =x11-libs/gtk+-2* ) ) 
+		!gtk? ( >=media-libs/gdk-pixbuf-0.18.0 ) )
+	!gnome? ( imlib? ( >=media-libs/imlib-1.9.14 ) )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	truetype? ( =media-libs/freetype-2* )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
