@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 e223647add0f5a85b38c709137aa64bc ChangeLog 8672
-MD5 2020a6e8efb088506a712adb6579d824 gettext-0.12.1-r2.ebuild 2536
+MD5 2c325faf7fe217ab42093bfdbb4043e1 gettext-0.12.1-r2.ebuild 2502
 MD5 052fa4170280f717609a90326d746cb0 gettext-0.14.1.ebuild 2567
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e846923f9b90ce853b73bfd6756a7cab files/gettext-0.12.1-bootstrap.patch 51612
@@ -15,7 +15,7 @@ MD5 fada337fd753f2580b6849dc560498ff files/gettext-0.12.1-tempfile.patch 2226
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhKgLHTu7gpaalycRArLtAJ9RmbXvryf2Cr4mPKVCjBcTvVfjHwCg7EBz
-jI1i0sWpTEelOQ1niV4Gd8E=
-=/SnY
+iD8DBQFBha29HTu7gpaalycRAmeSAKDwgcsbtEf0IAr9fN09wsTxJgeo2gCeLhu9
+D4L9w5tSxSowK3IqDO1mLz0=
+=OLQM
 -----END PGP SIGNATURE-----

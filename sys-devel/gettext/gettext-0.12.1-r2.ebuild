@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.12 2004/10/31 08:53:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.13 2004/11/01 03:29:27 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs libtool
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	( use macos || use ppc-macos ) && myconf="--enable-nls" || myconf="`use_enable nls`"
+	use ppc-macos && myconf="--enable-nls" || myconf="`use_enable nls`"
 
 	# Compaq Java segfaults trying to build gettext stuff, and there's
 	# no good way to tell gettext to refrain from building the java
@@ -70,7 +70,7 @@ src_install() {
 	rm -f ${D}/usr/$(get_libdir)/libintl.*
 	rm -rf ${D}/usr/share/locale/locale.alias
 	# /usr/lib/charset.alias is provided by Mac OS X
-	( use macos || use ppc-macos ) && rm -f ${D}/usr/lib/charset.alias
+	use ppc-macos && rm -f ${D}/usr/lib/charset.alias
 
 	if [ -d ${D}/usr/doc/gettext ]
 	then
