@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.8 2003/09/07 02:59:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.9 2003/10/28 18:52:14 johnm Exp $
 
 inherit gnuconfig
 
@@ -40,7 +40,7 @@ src_compile() {
 		${sslconf} \
 		--infodir=/usr/share/doc/${PF}
 	cp Makefile Makefile.orig
-	sed -e "s/partimag\.root/root.root/g" Makefile.orig > Makefile
+	sed -e "s/partimag\.root/root:root/g" Makefile.orig > Makefile
 	emake || die
 }
 
