@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.3.0.ebuild,v 1.1 2004/07/27 02:58:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/labplot/labplot-1.3.0.ebuild,v 1.2 2004/08/20 21:57:07 kugelfang Exp $
 
-inherit kde
+inherit eutils gnuconfig kde
 
 MPN="LabPlot"
 
@@ -29,17 +29,17 @@ need-kde 3.1
 S="${WORKDIR}/${MPN}-${PV}"
 
 src_compile() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-amd64.patch
+}
+
+src_compile() {
 	local myconf="\
 		$(use_enable fftw) \
 		$(use_enable fftw fftw3) \
 		$(use_enable imagemagick ImageMagick) \
 		$(use_enable tiff)"
-	# Uncomment the following for use on amd64.
-	# if [ ${ARCH} = "amd64" ]; then
-	# 	myconf="${myconf} \
-	# 	--host=x86-linux-gnu \
-	# 	--build=x86-linux-gnu \
-	# 	--disable-pstoedit"
-	# fi
+	gnuconfig_update
 	kde_src_compile
 }
