@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.75 2003/10/30 17:51:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.76 2003/10/30 19:57:10 woodchip Exp $
+
+  30 Oct 2003; Donny Davies <woodchip@gentoo.org> files/apache.rc6,
+  files/2.0.40/apache2.initd:
+  Fixo; Use full path to start-stop-daemon.  Thanks klieber.
 
 *apache-2.0.48 (30 Oct 2003)
 
