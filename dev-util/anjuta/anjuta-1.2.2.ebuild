@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2.ebuild,v 1.5 2004/06/25 02:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2.ebuild,v 1.6 2004/07/03 13:20:06 kugelfang Exp $
 
 inherit eutils gnome2
 
@@ -38,13 +38,15 @@ DOCS="AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
 #lets see if this plays nice this version
-#src_unpack() {
-#	unpack ${A}
-#
-#	cd ${S}
 #	epatch ${FILESDIR}/${P}_xim.patch
-#}
+
+	use amd64 && epatch ${FILESDIR}/${P}-64bit.patch
+}
 
 pkg_postinst() {
 
