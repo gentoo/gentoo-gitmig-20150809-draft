@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0-r1.ebuild,v 1.9 2003/01/07 03:57:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0-r1.ebuild,v 1.10 2003/02/03 21:51:03 agriffis Exp $
 
 IUSE="nls"
 
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/libvorbis-${PV}
 RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 LICENSE="as-is"
 
 src_compile() {
