@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.6 2004/02/09 06:39:48 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.2_beta7.ebuild,v 1.7 2004/03/17 08:08:12 seemant Exp $
 
 IUSE="nls"
 
-P=`echo ${P} | sed s/_beta/test/g`
-S=${WORKDIR}/${P}
-#A=`echo ${P}.tar.bz2 | sed s/_beta/test/g`
+MY_P=${P/_beta/test}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Aria is a download manager with a GTK+ GUI, it downloads files from Internet via HTTP/HTTPS or FTP."
-SRC_URI="http://aria.rednoah.com/storage/sources/${P}.tar.bz2"
 HOMEPAGE="http://aria.rednoah.com"
+SRC_URI="http://aria.rednoah.com/storage/sources/${MY_P}.tar.bz2"
+
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
-SLOT="0"
 
 RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
@@ -25,21 +25,13 @@ DEPEND="${RDEPEND}
 
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf \
+		`use_enable nls` || die
 	emake || die
 }
 
 src_install () {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+	einstall || die
 
 	dodoc AUTHORS README* NEWS ChangeLog TODO COPYING
 }
-
