@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.ebuild,v 1.8 2004/05/03 22:40:23 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.3.ebuild,v 1.9 2004/05/23 21:12:16 pvdabeel Exp $
 inherit kde
 
 # TODO : mysql support
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/stable/${P}/src/${P}.tar.bz2"
 
-KEYWORDS="x86 amd64 ~ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 RESTRICT="nomirror"
 
 IUSE=""
