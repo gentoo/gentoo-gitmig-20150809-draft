@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/htop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.13 2004/11/29 13:34:21 wschlich Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/htop/ChangeLog,v 1.14 2005/02/23 15:45:53 malc Exp $
+
+  23 Feb 2005; Malcolm Lashley <malc@gentoo.org> htop-0.5.ebuild:
+  Stable on amd64 - Bug #82743
 
 *htop-0.5 (29 Nov 2004)
 
