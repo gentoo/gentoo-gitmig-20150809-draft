@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.16 2005/01/03 22:08:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.17 2005/01/04 22:16:05 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -217,6 +217,10 @@ src_unpack() {
 	# Fix a bug on ia64, see bug 68173
 	# Doesn't affect other platforms
 	epatch ${FILESDIR}/${PVR}/spawn-alloc-h.patch
+
+	# Fixes bug 40010
+	EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
+	epatch ${FILESDIR}/${PVR}/tlsbeforeauth-fix.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then

@@ -1,0 +1,39 @@
+diff -Nur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
+--- qmail-1.03.orig/qmail-smtpd.c	2004-01-30 21:32:02.923302000 +0100
++++ qmail-1.03/qmail-smtpd.c	2004-01-30 21:32:16.412351168 +0100
+@@ -563,7 +563,7 @@
+   if (!ssl) out("\r\n250-STARTTLS");
+ #endif //TLS
+ 
+-#ifdef TLS && TLS_BEFORE_AUTH 
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
+   if(ssl) smtp_authout();
+ #else // TLS && TLS_BEFORE_AUTH
+   smtp_authout();
+@@ -1019,7 +1019,7 @@
+ {
+   int r;
+ 
+-#ifdef TLS && TLS_BEFORE_AUTH
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
+   if (!ssl) return err_wantstarttls();
+ #endif
+   if (*arg) {
+@@ -1046,7 +1046,7 @@
+ {
+   int r, id = 0;
+ 
+-#ifdef TLS && TLS_BEFORE_AUTH
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
+   if (!ssl) return err_wantstarttls();
+ #endif
+   if (*arg) {
+@@ -1075,7 +1075,7 @@
+   int i, r;
+   char *s;
+ 
+-#ifdef TLS && TLS_BEFORE_AUTH
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
+   if (!ssl) return err_wantstarttls();
+ #endif
+ 

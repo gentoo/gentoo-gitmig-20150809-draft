@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.5 2005/01/04 21:35:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.6 2005/01/04 22:16:05 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -248,6 +248,10 @@ src_unpack() {
 	# Add double-bounce-trim-patch from bug 45782
 	EPATCH_SINGLE_MSG="Adding double-bounce-trim-patch" \
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
+
+	# Fixes bug 40010
+	EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
+	epatch ${FILESDIR}/${PV}-r15/tlsbeforeauth-fix.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then

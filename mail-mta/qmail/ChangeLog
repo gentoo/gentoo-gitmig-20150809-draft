@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.21 2005/01/04 21:35:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.22 2005/01/04 22:16:05 hansmi Exp $
+
+  04 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/1.03-r15/tlsbeforeauth-fix.patch, qmail-1.03-r15.ebuild,
+  qmail-1.03-r16.ebuild:
+  Fixed bug 40010.
 
   04 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   files/run-qmailpop3dlog, files/run-qmailqmqpdlog, files/run-qmailqmtpdlog,
