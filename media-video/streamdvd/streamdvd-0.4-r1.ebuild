@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.3 2004/07/27 15:10:16 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.4 2004/07/30 17:18:37 chriswhite Exp $
 
 DESCRIPTION="fast tool to backup Video DVDs 'on the fly'"
 HOMEPAGE="http://www.badabum.de/streamdvd.html"
@@ -9,6 +9,8 @@ SRC_URI="http://www.badabum.de/down/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+
+IUSE=""
 
 DEPEND="media-libs/libdvdread
 	gui? ( dev-perl/perl-tk

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/streamdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.6 2004/07/27 00:00:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.7 2004/07/30 17:18:37 chriswhite Exp $
+
+  31 Jul 2004; Chris White <chriswhite@gentoo.org> streamdvd-0.4-r1.ebuild:
+  Missing IUSE.
 
   26 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   streamdvd-0.4-r1.ebuild:
