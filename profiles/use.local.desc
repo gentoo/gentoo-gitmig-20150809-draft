@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.587 2004/08/31 19:25:42 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.588 2004/08/31 19:29:26 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -410,8 +410,8 @@ net-fs/shfs:amd - Enable automounter support
 net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-im/bitlbee:flood - Enable flood protection support
-net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/ekg2:gsm - Enable gsm plugin
+net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
@@ -475,6 +475,7 @@ net-www/kazehakase:migemo - enable migemo support for Japanese incremental searc
 net-www/links:javascript - enable javascript support
 net-www/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+net-www/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla-firefox:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
 net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
@@ -551,8 +552,8 @@ x11-base/kdrive:freetype - Enables Freetype font support
 x11-base/kdrive:fs - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
-x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
 x11-base/x11-drm:gamma - If you have a 3dlabs video card
+x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
 x11-base/x11-drm:i8x0 - If you have an ibm i810 or i830 video card
 x11-base/x11-drm:radeon - If you have an ATI Radeon video card
 x11-base/x11-drm:rage128 - If you have an ATI Rage128 based video card
