@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3504 2005/01/18 21:22:12 mkennedy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3505 2005/01/19 10:32:51 kosmikus Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <kosmikus@gentoo.org> (19 Jan 2005)
+# several compilation problems using current gcc's,
+# for example #73367
+dev-lang/nhc98
 
 # <cardoe@gentoo.org> (18 Jan 2005)
 # testing mythtv CVS snapshot to fix bugs with latest "stable"
