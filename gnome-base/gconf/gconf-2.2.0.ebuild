@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.8 2003/03/11 12:32:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.9 2003/03/27 01:23:46 liquidx Exp $
 
 IUSE="doc"
 
@@ -30,6 +30,18 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="-j1"
 
+src_install() {
+
+	gnome2_src_install 
+    
+	# hack hack
+	dodir /etc/gconf/gconf.xml.mandatory
+	dodir /etc/gconf/gconf.xml.defaults
+	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
+	touch ${D}/etc/gconf/gconf.xml.defaults/.keep${SLOT}
+
+}
+
 kill_gconf () {
 	# this function will kill all running gconfd that could be causing troubles
 	if [ -x /usr/bin/gconftool ]
@@ -50,16 +62,11 @@ kill_gconf () {
 }
 
 pkg_setup () {
-  kill_gconf
+	kill_gconf
 }
 
 pkg_preinst () {
 	kill_gconf 
-	# hack hack
-	dodir /etc/gconf/gconf.xml.mandatory
-	dodir /etc/gconf/gconf.xml.defaults
-	touch ${D}/etc/gconf/gconf.xml.mandatory/.keep
-	touch ${D}/etc/gconf/gconf.xml.defaults/.keep
 
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' >${D}/etc/env.d/50gconf

@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.34 2003/03/11 12:32:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.35 2003/03/27 01:23:46 liquidx Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> gconf-2.2.0.ebuild :
   Add ~alpha to KEYWORDS
@@ -9,6 +9,10 @@
   Mark stable on alpha
 
 *gconf-2.2.0 (30 Jan 2003)
+
+  27 Mar 2003; Alastair Tse <liquidx@gentoo.org> gconf-1.0.8-r4.ebuild,
+  gconf-2.2.0.ebuild:
+  fix keepdir problems with gconf.xml.mandatory and others. bug #17645.
 
   11 Mar 2003; Jason Wever <weeve@gentoo.org> gconf-2.2.0.ebuild:
   Added ~sparc to keywords.

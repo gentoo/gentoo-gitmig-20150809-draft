@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.6 2003/02/13 12:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r4.ebuild,v 1.7 2003/03/27 01:23:46 liquidx Exp $
 
 IUSE="nls"
 
@@ -54,8 +54,11 @@ src_install() {
 	     install || die
 	# gconf 1.0.8 seems to gets the perms wrong on this dir.
 	chmod 0755 ${D}/etc/gconf/gconf.xml.mandatory
+    # keep this mandatory dir
+    touch ${D}/etc/gconf/gconf.xml.mandatory/.keep${SLOT}
 	# this fix closes bug #803
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+
 }
 
 pkg_postinst() {
