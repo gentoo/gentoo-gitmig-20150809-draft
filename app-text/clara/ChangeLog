@@ -1,0 +1,11 @@
+# ChangeLog for app-text/clara
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.1 2004/02/17 13:22:21 spock Exp $
+
+*clara-20031214 (17 Feb 2004)
+
+  17 Feb 2004; Michal Januszewski <spock@gentoo.org> clara-20031214.ebuild,
+  metadata.xml:
+  Initial commit, closes #20333. Original ebuild submitted by steveb
+  <tp22a@softhome.net>. Thanks :)
+
