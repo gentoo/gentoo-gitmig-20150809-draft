@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.11 2003/01/16 11:44:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.12 2003/01/17 07:23:57 seemant Exp $
+
+*webmin-1.050-r2 (16 Jan 2002)
+
+  16 Jan 2002; Seemant Kulleen <seemant@gentoo.org> webmin-1.050-r2.ebuild
+  files/digest-webmin-1.050-r2 :
+
+  webalizer config file needs to be in /etc/apache/conf instead, closing bug
+  #14039 by peter.hermsdorf@web.de (peter hermsdorf)
 
 *webmin-1.050-r1 (16 Jan 2002)
 

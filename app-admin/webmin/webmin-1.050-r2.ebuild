@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.020-r1.ebuild,v 1.2 2002/11/07 08:10:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.050-r2.ebuild,v 1.1 2003/01/17 07:23:57 seemant Exp $
 
 IUSE="ssl"
 
@@ -10,12 +10,27 @@ HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="sys-devel/perl
 	ssl? ( dev-perl/Net-SSLeay )"
 
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+
+	# fix paths for conf files -- will be unnecessary at next upstream
+	# release for webmin
+	cp ${S}/postgresql/config-gentoo-linux  ${T}
+	sed "s:hba_conf=.*:hba_conf=/var/lib/postgresql/data/pg_hba.conf:" \
+		${T}/config-gentoo-linux > ${S}/postgresql/config-gentoo-linux
+
+	cp "${S}/webalizer/config-*-linux" ${T}
+	sed "s:webalizer_conf=.*:webalizer_conf=/etc/apache/webalizer.conf:" \
+		"${T}/config-*-linux" > "${S}/webalizer/config-*-linux"
+	
+}
 
 src_install() {
 	rm -f mount/freebsd-mounts*
@@ -30,8 +45,8 @@ src_install() {
 	mv ${D}/usr/libexec/webmin/openslp/config \
 		${D}/usr/libexec/webmin/openslp/config-gentoo-linux
 	
-	insinto /etc/init.d
-	newins webmin-gentoo-init webmin
+	exeinto /etc/init.d
+	newexe webmin-gentoo-init webmin
 
 	insinto /etc/pam.d/
 	newins webmin-pam webmin
