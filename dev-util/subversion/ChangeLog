@@ -1,11 +1,14 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.33 2003/09/25 17:06:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.34 2003/09/25 17:34:29 mholzer Exp $
 
   25 Sep 2003; Martin Holzer <mholzer@gentoo.org> subversion-0.24.2-r1.ebuild,
   subversion-0.25.0.ebuild, subversion-0.26.0.ebuild,
   subversion-0.27.0.ebuild, subversion-0.28.0.ebuild, files/70svn-gentoo.el:
   leading space errors.
+
+  26 Sep 2003; Martin Holzer <mholzer@gentoo.org> subversion-0.28.0.ebuild:
+  Added autoconf version. Closes #28198.
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
   Fix metadata.xml
