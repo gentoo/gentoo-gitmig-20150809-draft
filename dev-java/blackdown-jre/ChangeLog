@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.28 2004/02/21 04:01:14 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.29 2004/03/01 07:31:31 mkennedy Exp $
+
+  01 Mar 2004; <mkennedy@gentoo.org> files/blackdown-jre-1.3.1,
+  files/blackdown-jre-1.4.1, files/blackdown-jre-1.4.2_rc1:
+  Remove CLASSPATH from environment variable list.
 
   20 Feb 2004; <zx@gentoo.org> blackdown-jre-1.4.2_rc1.ebuild:
   Bug fix, #40433

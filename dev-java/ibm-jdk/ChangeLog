@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.33 2004/02/15 09:46:34 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.34 2004/03/01 07:19:21 mkennedy Exp $
+
+  01 Mar 2004; <mkennedy@gentoo.org> files/ibm-jdk-1.3.1, files/ibm-jdk-1.4.1:
+  Remove CLASSPATH from environment variable list.
 
   15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> ibm-jdk-1.4.1.ebuild:
   set ppc in keywords

@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/files/compaq-jdk-1.3.1,v 1.4 2004/02/13 19:30:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/files/compaq-jdk-1.3.1,v 1.5 2004/03/01 07:28:28 mkennedy Exp $
 
 VERSION="Compaq JDK @PV@"
 JAVA_HOME=/opt/@P@
-CLASSPATH=/opt/@P@/jre/lib/rt.jar:/opt/@P@/jre/lib/tools.jar:.
 JDK_HOME=/opt/@P@
 JAVAC=${JAVA_HOME}/bin/javac
 ADDPATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin"
 ADDLDPATH="/opt/@P@/jre/lib/alpha/:/opt/@P@/jre/lib/alpha/classic/:/opt/@P@/jre/lib/alpha/native_threads/:/opt/@P@/lib/alpha/"
 
-ENV_VARS="JAVA_HOME CLASSPATH JDK_HOME JAVAC ADDPATH ADDLDPATH"
+ENV_VARS="JAVA_HOME JDK_HOME JAVAC ADDPATH ADDLDPATH"
