@@ -1,11 +1,27 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.34 2004/07/21 19:17:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.35 2004/07/22 21:15:33 ferringb Exp $
+
+*mpd-0.11.1-r1 (22 Jul 2004)
+
+  22 Jul 2004; Brian Harring <ferringb@gentoo.org> metadata.xml,
+  mpd-0.11.0-r1.ebuild, mpd-0.11.0.ebuild, mpd-0.11.1-r1.ebuild,
+  mpd-0.11.1.ebuild, files/mpd.rc6:
+  revbumping 0.11.0 and 0.11.1 to push out corrected deps/configuration
+  handling, added USE="droproot" option to control whether mpd runs as root, or
+  user mpd, and adjusted the default configuration so that it binds strictly to
+  localhost. These changes are intended to secure the default install- versions
+  beyond 0.11.1 will install mpd as non-root by default.  Corrected init.d script
+  so that /etc/mpd.conf is used (was fixed once upon a time, but crept back in)
+  which closes bug #56132 .
 
 *mpd-0.11.2 (21 Jul 2004)
 
   21 Jul 2004; Martin Holzer <mholzer@gentoo.org> mpd-0.11.2.ebuild:
   Version bumped.
+
+  16 Jul 2004; Brian Harring <ferringb@gentoo.org> mpd-0.11.0.ebuild:
+  Stabling 0.11.0 for x86.
 
 *mpd-0.11.1 (27 Jun 2004)
 
