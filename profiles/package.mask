@@ -44,21 +44,21 @@
 # Masked for testing.
 =net-mail/procmail-3.22-r3
 
-# <spider@gentoo.org> 16 Jul 2002
+# <spider@gentoo.org> (16 Jul 2002)
 # Masking this out due to feature incompleteness
 dev-libs/libmrproject
 >=app-office/mrproject-0.5.90
 
-# <spider@gentoo.org> 25 Jul 2002
+# <spider@gentoo.org> (25 Jul 2002)
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
 
 
-# <george@gentoo.org>
+# <george@gentoo.org> (date??)
 # masking omniORB-305 for testing
 =net-misc/omniORB-305
 
-# <seemant@gentoo.org> 25 Jul 2002
+# <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
 # needs sorting out on the policy
 app-misc/nomadii-utils
@@ -70,7 +70,7 @@ app-arch/unlzx
 app-games/cstrike-server
 app-misc/ldapbrowser
 
-# <seemant@gentoo.org> 25 Jul 2002
+# <seemant@gentoo.org> (25 Jul 2002)
 # masked for testing
 =app-admin/msyslog-1.08e
 
@@ -82,7 +82,7 @@ app-misc/ldapbrowser
 # version bump
 =sys-apps/pcmcia-cs-3.2.0
 
-# <jayskwak@gentoo.org> 25 Jul 2002
+# <jayskwak@gentoo.org> (25 Jul 2002)
 # masked for korean input testing
 =x11-libs/qt-3.0.5-r1
 
@@ -100,7 +100,10 @@ app-misc/ldapbrowser
 
 # <spider@gentoo.org> (25 Jul 2002)
 # fixes buildproblems for me. please teset
-=sys-devel/perl-5.6.1-r5
+#
+# <azarah@gentoo.org> (29 Jul 2002)
+# works fine for me with gcc-2.95.3 and 3.2
+#=sys-devel/perl-5.6.1-r5
 
 # <woodchip@gentoo.org> (24 Jul 2002)
 # apparently fatally flawed.
