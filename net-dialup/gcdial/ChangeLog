@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/gcdial
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.1 2003/11/28 00:54:18 brandy Exp $
+
+*gcdial-0.7b (28 Nov 2003)
+
+  28 Nov 2003; Brandy Westcott brandy@gentoo.org gcdial-0.7b.ebuild:
+  Initial import. Thanks to Jonathan Rogers <jonner@teegra.net> for the ebuild.
+  Closes bug #31956.
+
