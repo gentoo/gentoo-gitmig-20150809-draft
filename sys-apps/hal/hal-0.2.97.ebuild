@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.97.ebuild,v 1.1 2004/08/17 21:01:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.2.97.ebuild,v 1.2 2004/08/17 21:05:32 foser Exp $
 
 inherit eutils debug python
 
@@ -59,10 +59,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	einfo "Enabled in this ebuild by default is the usage of fstab-sync"
-	einfo "that will create mount rules for non-existing devices in"
-	einfo "fstab if needed, mount points will be created in /media."
-	einfo "This functionality alters your fstab runtime on the filesystem"
-	einfo "and might affects certain applications."
+	ewarn "Enabled in this ebuild by default is the usage of fstab-sync"
+	ewarn "that will create mount rules for non-existing devices in"
+	ewarn "fstab if needed, mount points will be created in /media."
+	ewarn "This functionality alters your fstab runtime on the filesystem"
+	ewarn "and might affects certain applications."
+	echo
+	einfo "The HAL daemon needs to be running for certain applications to"
+	einfo "work. Suggested is to add the init script to your start-up"
+	einfo "scripts, this should be done like this :"
+	einfo "\`rc-update add hald default\`"
 
 }
