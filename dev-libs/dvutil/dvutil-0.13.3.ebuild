@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.3.ebuild,v 1.1 2003/03/06 18:54:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.3.ebuild,v 1.2 2003/03/13 10:04:05 pvdabeel Exp $
 
 A=dvutil-${PV}.tar.gz
 S=${WORKDIR}/dvutil-${PV}
@@ -11,7 +11,9 @@ KEYWORDS="x86 ppc"
 LICENSE="GPL2"
 SLOT="0"
 
+IUSE=""
 DEPEND="virtual/glibc"
+RDEPEND=${DEPEND}
 
 src_install() {
 	make prefix=${D}/usr install
