@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.9 2004/06/24 23:05:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/DirectFB-extra-0.9.16.ebuild,v 1.10 2004/07/13 21:09:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://directfb.org/download/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc -sparc"
-IUSE="quicktime flash imlib avi"
+IUSE="quicktime flash imlib"
 
 DEPEND=">=dev-libs/DirectFB-${PV}*
 	quicktime? ( media-libs/openquicktime )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.1 2004/07/11 21:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.2 2004/07/13 21:12:17 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
-IUSE="kerberos pam tcpd ipv6 zlib X"
+IUSE="pam tcpd ipv6 zlib X"
 
 DEPEND="dev-libs/gmp
 	dev-libs/liboop

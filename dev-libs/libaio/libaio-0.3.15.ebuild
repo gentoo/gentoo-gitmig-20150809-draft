@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.6 2004/06/24 23:13:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.7 2004/07/13 21:11:49 mr_bones_ Exp $
 
 inherit eutils 64-bit
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/${P}-2.5-2.
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 amd64"
-IUSE="nls"
+IUSE=""
 
 DEPEND=""
 
