@@ -1,8 +1,13 @@
 # ChangeLog for media-video/xmovie
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.5 2002/10/21 08:56:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.6 2003/02/09 12:04:33 mkennedy Exp $
 
 *xmovie-1.8-r4 (21 Oct 2002)
+
+  09 Feb 2003; Matthew Kennedy <mkennedy@gentoo.org> xmovie-1.8-r4.ebuild,
+  ChangeLog :
+
+  Conditionally apply the gcc3 patch. resolves bug 13580.
 
   21 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> xmovie-1.8-r4,
   ChangeLog, files/digest-xmovie-1.8-r4, files/xmovie-gcc3-gentoo.patch :

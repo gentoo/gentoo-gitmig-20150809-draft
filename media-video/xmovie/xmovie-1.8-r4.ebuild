@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.1 2002/10/21 08:56:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.2 2003/02/09 12:04:33 mkennedy Exp $
+
+inherit gcc 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Player for MPEG and Quicktime movies"
@@ -13,6 +15,7 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
+IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,8 +23,11 @@ KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
-	# gcc3.2 fix (from bug #7227)
-	cd ${S} && patch -p1 <${FILESDIR}/xmovie-gcc3-gentoo.patch || die 
+	if [ `gcc-major-version` = '3' ] ;
+	then
+		# gcc3.2 fix (from bug #7227)
+		cd ${S} && patch -p1 <${FILESDIR}/xmovie-gcc3-gentoo.patch || die 
+   fi
 }
 
 src_compile() {
