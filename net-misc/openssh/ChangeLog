@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.55 2003/10/29 03:17:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.56 2003/11/05 16:05:05 taviso Exp $
+
+*openssh-3.7.1_p2-r1 (05 Nov 2003)
+
+  05 Nov 2003; Tavis Ormandy <taviso@gentoo.org> openssh-3.7.1_p2-r1.ebuild,
+  files/openssh-skeychallenge-args.diff:
+  patch needed for compatability with new skey.
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> openssh-3.5_p1-r1.ebuild,
   openssh-3.6.1_p2.ebuild, openssh-3.7.1_p2.ebuild,
