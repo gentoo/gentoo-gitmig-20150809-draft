@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.3.1.ebuild,v 1.3 2002/01/19 16:38:29 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.3.1.ebuild,v 1.4 2002/01/20 01:18:50 verwilst Exp $
 
 S=${WORKDIR}/${P}-src
 SRC_URI="http://www.affinix.com/~justin/programs/psi/${P}-src.tar.bz2"
@@ -16,6 +16,8 @@ src_compile() {
 	export QTDIR="/usr/qt/3"
 	export QMAKESPEC="linux-g++"
 	cd ${S}/src
+	mv common.cpp common.cpp.orig
+	sed -e 's:PATH_BASE = "/usr/local/psi":PATH_BASE = "/usr/share/psi":' common.cpp.orig | cat > common.cpp
 	/usr/qt/3/bin/qmake psi.pro || die
 	emake || die
 	mv psi ${S}
@@ -42,6 +44,5 @@ src_install() {
 	cp README ${D}/usr/share/psi/
 	cp COPYING ${D}/usr/share/psi/
 	ln -sf /usr/share/psi/psi ${D}/usr/bin/psi
-	ln -sf /usr/share/psi/ /usr/local/psi
 
 }
