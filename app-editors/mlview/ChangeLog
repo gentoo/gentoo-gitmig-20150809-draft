@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.6 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.7 2004/11/25 02:22:16 leonardop Exp $
+
+*mlview-0.7.1 (24 Nov 2004)
+
+  24 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> mlview-0.7.1.ebuild:
+  Version bump. Adds support for the `debug' USE flag. Updated dependencies.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mlview-0.6.2.ebuild, mlview-0.6.3.ebuild:
