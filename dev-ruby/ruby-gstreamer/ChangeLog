@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.9 2005/03/14 19:40:02 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.10 2005/04/01 06:02:39 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org>
+  ruby-gstreamer-0.10.1.ebuild:
+  stable on ia64
 
 *ruby-gstreamer-0.12.0 (14 Mar 2005)
 
