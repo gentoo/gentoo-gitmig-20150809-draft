@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.5 2003/05/18 16:54:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.8.ebuild,v 1.6 2003/05/22 22:26:39 foser Exp $
 
 IUSE="pda"
 
@@ -17,6 +17,16 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
 DEPEND="${RDEPEND}
 	pda? ( gnome-extra/gnome-pilot )"
+
+src_unpack() {
+	unpack ${A}
+
+	# remove unneeded check that makes it want libxml (#21504)
+	cd ${S}
+	mv configure.in configure.in.old
+	sed -e "s:GNOME_XML_CHECK::" configure.in.old > configure.in
+	autoconf || die
+}
 
 src_compile() {
 	./configure --host=${CHOST}					\
