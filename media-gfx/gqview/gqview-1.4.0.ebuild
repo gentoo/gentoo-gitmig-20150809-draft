@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.6-r1.ebuild,v 1.2 2004/02/21 13:54:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.4.0.ebuild,v 1.1 2004/02/21 13:54:50 mr_bones_ Exp $
 
 IUSE="nls"
 
 DESCRIPTION="A GTK-based image browser"
-SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 HOMEPAGE="http://gqview.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -18,14 +18,12 @@ DEPEND="media-libs/libpng
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	epatch ${FILESDIR}/rotate_crash_fix.patch
-
 	econf `use_enable nls` || die
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall GNOME_DATADIR=${D}/usr/share || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Don't remove duplicate README, the program looks for it. (bug 30111)
 	# rm -rf ${D}/usr/share/gqview
