@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11g.ebuild,v 1.1 2001/07/10 06:46:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11g.ebuild,v 1.2 2001/07/28 15:49:20 pete Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
@@ -17,7 +17,7 @@ src_unpack() {
     unpack ${P}.tar.gz
     cd ${S}
     cp MCONFIG MCONFIG.orig
-    sed -e "s:-pipe -O2 $(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
+    sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
         -e "s:CPU=.*:CPU=${CHOST%%-*}:" \
         -e "s:HAVE_PAM=no:HAVE_PAM=yes:" \
 	-e "s:HAVE_SLN=no:HAVE_SLN=yes:" \
