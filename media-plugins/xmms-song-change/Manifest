@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 bbb463a448b755e9e58d237d926f5186 xmms-song-change-1.2.10.ebuild 316
-MD5 de0af3d531c5f3a987a65c2e17f46705 xmms-song-change-1.2.10-r1.ebuild 357
-MD5 cc5bd2510e19420d79e275e29383ce7e ChangeLog 368
+MD5 1a725e8ad4904debc36c660059e0ade1 xmms-song-change-1.2.10.ebuild 443
+MD5 f96175e81c4929a988e9d0efb84e3e8e xmms-song-change-1.2.10-r1.ebuild 464
+MD5 506ab5c5574e4c90cdeaa5dccf83fe89 ChangeLog 474
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-song-change-1.2.10 142
 MD5 290b77ae077793d89ff8882b5c413f42 files/digest-xmms-song-change-1.2.10-r1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDX9rArHZZzCEUG0RAgl6AJ47zj6L4Xlqd3qWsmYG2Nd75bAfqACghWMl
+qxaFMoiPPbBs3kU/CylCvok=
+=iaHp
+-----END PGP SIGNATURE-----
