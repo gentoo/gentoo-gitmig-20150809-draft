@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 451151a59df0c5e3dabbded4e754466f psoload-2.0.ebuild 614
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+MD5 d47675772f30e34154530cb4cb988117 ChangeLog 324
+MD5 5067f2476c4906ecd73c0a1f77f039d7 files/digest-psoload-2.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBl/kgHTu7gpaalycRAnHDAJ4wP1rj7QR+VIrcDLqxOzNHUSxcNQCg+KMg
+8IltOfqnFUgG2AzSadctO1Q=
+=N7Yn
+-----END PGP SIGNATURE-----
