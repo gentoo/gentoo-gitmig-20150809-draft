@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.19 2003/05/16 01:04:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.20 2003/07/06 11:41:27 gmsoft Exp $
 
   16 May 2003; Lars Weiler <pylon@gentoo.org> soup-0.7.11.ebuild:
   Set ppc in KEYWORDS
@@ -12,6 +12,9 @@
   bump 0.7.11 to stable
 
 *soup-0.7.11 (04 Mar 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> soup-0.7.11.ebuild :
+  Added hppa top KEYWORDS.
 
   04 Mar 2003; Alastair Tse <liquidx@gentoo.org> soup-0.7.11.ebuild files/digest-soup-0.7.11 :
   version bump. #16816.
