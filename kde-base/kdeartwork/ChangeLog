@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.70 2004/04/20 01:45:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.71 2004/04/21 01:42:50 caleb Exp $
+
+  20 Apr 2004; Caleb Tennis <caleb@gentoo.org>
+  -files/kdeartwork-screensaver.patch, -kdeartwork-3.0.5b.ebuild:
+  Remove old version
 
 *kdeartwork-3.2.2 (19 Apr 2004)
 
