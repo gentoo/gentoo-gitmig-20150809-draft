@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/dsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.5 2003/08/14 03:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dsh/ChangeLog,v 1.6 2003/10/02 17:20:52 vapier Exp $
+
+*dsh-0.25.0 (02 Oct 2003)
+
+  02 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *dsh-0.24.0 (13 Aug 2003)
 
