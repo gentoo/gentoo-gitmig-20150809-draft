@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r1.ebuild,v 1.5 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.3-r1.ebuild,v 1.6 2002/07/23 05:08:47 george Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -12,6 +12,11 @@ HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 DESCRIPTION="Tool Command Language"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86"
 
 # hyper-optimizations untested...
 #
