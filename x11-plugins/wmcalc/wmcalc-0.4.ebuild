@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.6 2004/11/12 22:54:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.7 2004/11/24 05:09:57 weeve Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dockapps.org/file.php/id/130"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc ppc64"
+KEYWORDS="x86 amd64 ppc ppc64 ~sparc"
 DEPEND="virtual/x11"
 
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmblob
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.4 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.5 2004/11/24 05:03:14 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmblob-1.0.1.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmblob-1.0.1.ebuild:

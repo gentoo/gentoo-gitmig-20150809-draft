@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbinclock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.7 2004/10/19 08:52:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbinclock/ChangeLog,v 1.8 2004/11/24 04:58:44 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmbinclock-0.3.ebuild:
+  Added ~sparc keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmbinclock-0.3.ebuild:
   Stable on amd64.
