@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.2 2002/10/27 07:56:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021027.ebuild,v 1.3 2002/10/27 14:13:57 vapier Exp $
 
 IUSE="pic X mmx truetype opengl"
 
@@ -195,6 +195,8 @@ src_install() {
 	 -e 's:intl/Makefile::' \
 	 -e 's:po/Makefile.in::' \
 		configure.ac.old > configure.ac
+	cp Makefile.am Makefile.am.old
+	sed -e 's:intl po::' Makefile.am.old > Makefile.am
 	./autogen.sh ${baseconf} || die "could not autogen e"
 	cp Makefile Makefile.old
 	sed -e 's:m4  po::' \
