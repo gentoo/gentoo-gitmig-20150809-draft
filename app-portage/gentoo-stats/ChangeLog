@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/gentoo-stats
+# ChangeLog for app-portage/gentoo-stats
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.1 2003/08/15 12:27:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/ChangeLog,v 1.2 2003/08/16 05:36:26 vapier Exp $
 
 *gentoo-stats-0.4 (15 Aug 2003)
 
