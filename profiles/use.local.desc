@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.305 2004/04/20 01:16:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.306 2004/04/20 03:10:26 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -256,6 +256,7 @@ net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
 net-www/monkeyd:php - Include support for php scripts
+net-www/mozilla-firefox:mozdomi - Enable DOM inspector in firefox
 net-www/mozilla-firefox:moznoxft - Disable XFT support in and/or firefox
 net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
 net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
