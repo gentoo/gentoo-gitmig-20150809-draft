@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a907e35a59a23765b4cae85a9804f926 ChangeLog 1617
-MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
 MD5 7fa8347838f53d2150799793ae0570af ne-1.36.ebuild 1067
-MD5 68f9c363a170b3c599f6b7dafd7b9c81 ne-1.38.ebuild 991
+MD5 2145d26fe56e81923c3535d19b756c4b ne-1.38.ebuild 975
+MD5 911ee40626c7d30a9bf3a71b3f4604ec ChangeLog 1776
+MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
+MD5 8b43ccad04a03c5987712c1c148d531a ne-1.39.ebuild 976
 MD5 f42f170988b1e65d3614a7f8c8e1e3d8 files/1.36-include-fix.patch 825
 MD5 00fcc22f5e66eaa8d63653b147365adb files/digest-ne-1.36 60
 MD5 fee9c062d0bb6450e91880380c8f4331 files/digest-ne-1.38 60
+MD5 dbdd3b9510c60b4d23469fc0ff2a9861 files/digest-ne-1.39 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBlkEvI1lqEGTUzyQRAo27AJ9NGRjehRxbmdME5YzcdtNR/vwFHQCcCZSl
-Y3SBbSpy+2h/GwdwbYap51s=
-=iCOh
+iD8DBQFBslqeI1lqEGTUzyQRAiv3AJ9/oJx5NAyz2TvaOszSIm56rm+GIACgrgCW
+fKEw0WJLtvT8YcJEC3hmGms=
+=ojVY
 -----END PGP SIGNATURE-----
