@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.112 2005/02/06 07:38:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.113 2005/02/16 11:11:33 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -25,6 +25,17 @@ RDEPEND="~kde-base/kde-env-3"
 
 # overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"
+
+kde_pkg_setup() {
+	use arts && if ! built_with_use kdelibs arts ; then
+		eerror "You are trying to compile ${CATEGORY}/${P} with the \"arts\" USE flag enabled."
+		eerror "However, $(best_version kdelibs) was compiled with this flag disabled."
+		eerror
+		eerror "You must either disable this use flag, or recompile"
+		eerror "$(best_version kdelibs) with this use flag enabled."
+		die 
+	fi
+}
 
 kde_src_unpack() {
 
@@ -194,4 +205,4 @@ kde_src_install() {
 
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install

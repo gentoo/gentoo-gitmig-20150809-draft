@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.23 2005/02/11 17:15:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.24 2005/02/16 11:11:33 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
 #
 # This is the kde-meta eclass which supports broken-up kde-base packages.
 
-inherit kde
+inherit kde multilib
 ECLASS=kde-meta
 INHERITED="$INHERITED $ECLASS"
 IUSE="$IUSE kdexdeltas" 
@@ -316,11 +316,11 @@ function kde-meta_src_unpack() {
 				cd $S
 				mkdir -p ${dirname}
 				cd ${dirname}
-				if [ ! "$(find ${PREFIX}/lib/ -name "${libname}*")" == "" ]; then
-					echo "Symlinking library ${libname} under ${PREFIX}/lib/ in source dir"
-					ln -s ${PREFIX}/lib/${libname}* .
+				if [ ! "$(find ${PREFIX}/$(get_libdir)/ -name "${libname}*")" == "" ]; then
+					echo "Symlinking library ${libname} under ${PREFIX}/$(get_libdir)/ in source dir"
+					ln -s ${PREFIX}/$(get_libdir)/${libname}* .
 				else
-					die "Can't find library ${libname} under ${PREFIX}/lib/"
+					die "Can't find library ${libname} under ${PREFIX}/$(get_libdir)/"
 				fi
 				libname=""
 			fi
