@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.85 2004/02/23 19:43:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.86 2004/02/27 05:44:47 nakano Exp $
+
+  27 Feb 2004; Masatomo Nakano <nakano@gentoo.org>
+  files/postgresql.init-7.3.4, files/postgresql.init-7.3.5,
+  files/postgresql.init-7.4.1:
+  Added 'reload' action to /etc/init.d/postgresql.
 
   23 Feb 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.5-r1.ebuild,
   postgresql-7.3.5-r2.ebuild, postgresql-7.3.5.ebuild,
