@@ -1,2 +1,14 @@
-MD5 63ab36fefba32e52e1236da072f2d73b quake1-movies-0.ebuild 1820
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a65e024d48379d338572dd4cec607c6 quake1-movies-0.ebuild 2029
+MD5 554ebdadb428fb35d2924900605abf91 ChangeLog 346
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8807a2962d83f727a6acc74d44be8ccd files/digest-quake1-movies-0 505
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB6ynUroRuSHgZdywRAlDgAKCNHwAexDogypbNWP4D3ebSyWLZhwCbBRvb
+kV4p4aV6ryzjclcDV43q70o=
+=1Urv
+-----END PGP SIGNATURE-----
