@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.3.0.ebuild,v 1.4 2004/09/02 03:20:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.3.0.ebuild,v 1.5 2004/09/02 11:15:55 pvdabeel Exp $
 
 inherit kde-dist eutils
 
@@ -14,4 +14,5 @@ src_unpack() {
 	# Fix for SPARC compilation issues, may also work for PPC, PPC64
 	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 	use ppc64 && epatch ${FILESDIR}/${P}-sparc.patch
+	use ppc && epatch ${FILESDIR}/${P}-sparc.patch
 }
