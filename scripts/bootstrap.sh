@@ -14,6 +14,8 @@ echo "Using GCC $myGCC"
 echo "Using GETTEXT $myGETTEXT"
 echo "Using GLIBC $myGLIBC"
 
+#USE may be set from the environment (recommended) so we back it up for later.
+olduse="$USE"
 export USE="build"
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
@@ -22,10 +24,9 @@ emerge $myPORTAGE || exit
 emerge $myGETTEXT || exit
 emerge $myBINUTILS || exit
 emerge $myGCC || exit
-unset USE
+export USE="$olduse"
 export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
 emerge $myGLIBC || exit
 emerge $myGETTEXT || exit
 emerge $myBINUTILS || exit
 emerge $myGCC || exit
-unset USE
