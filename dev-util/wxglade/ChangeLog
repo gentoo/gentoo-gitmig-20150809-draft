@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.14 2004/11/05 01:13:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.15 2004/11/08 18:57:29 pythonhead Exp $
+
+  08 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> :
+  Version bump
 
 *wxglade-0.3.5 (04 Nov 2004)
 

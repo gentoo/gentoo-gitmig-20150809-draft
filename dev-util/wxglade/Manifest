@@ -1,4 +1,4 @@
-MD5 318e981900972226ad64d9a6fdaa160f ChangeLog 2298
+MD5 8c9a9364b1ee0248ae3d9955cbdaf796 ChangeLog 2369
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
 MD5 860eefe292d22a855dc291b4fccb940e wxglade-0.3.1-r1.ebuild 1111
 MD5 129879b0f888a03548abb4a04169e8f2 wxglade-0.3.1.ebuild 999
@@ -6,9 +6,11 @@ MD5 7418bb425c04860b3966bbe2e121100e wxglade-0.3.2.ebuild 1113
 MD5 448d4d4af966e99fb53434afa91cc061 wxglade-0.3.3.ebuild 1062
 MD5 c015fb0ade9fdeda8c7432c17952f35f wxglade-0.3.4.ebuild 1076
 MD5 a8feda30dc5f4d034a8beb9ef38f88c8 wxglade-0.3.5.ebuild 1086
+MD5 a4d2b2b0aae4064eb9f3bce2a715da89 wxglade-0.3.5.1.ebuild 1100
 MD5 e2d210765074f03bd2e2c5d2ce8f6b63 files/digest-wxglade-0.3.1 62
 MD5 e2d210765074f03bd2e2c5d2ce8f6b63 files/digest-wxglade-0.3.1-r1 62
 MD5 cb49ef62c01f4e657f5ccfdfc792ce1f files/digest-wxglade-0.3.2 62
 MD5 100d8ac5a0df34f93e797042d7a6dc64 files/digest-wxglade-0.3.3 62
 MD5 a02e86d0ccc0ee0cabeea016ffc1b975 files/digest-wxglade-0.3.4 62
 MD5 74511e14866a8aab1f50e97bff38ee5d files/digest-wxglade-0.3.5 65
+MD5 ff5d7bd983ffa3df755803f98d5823fc files/digest-wxglade-0.3.5.1 67
