@@ -1,6 +1,6 @@
 MD5 91a4b5806d5981d5944c65aa805212ca ChangeLog 943
 MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
 MD5 7a1c0256d8a1f66ccdb332cf80a92e96 gtkpod-0.60.ebuild 680
-MD5 c69239fb55b71758ceea970b9bc7e9a7 gtkpod-0.70.ebuild 719
+MD5 a26b39e8dacb711727b48a72c6c03267 gtkpod-0.70.ebuild 718
 MD5 444d83d13b7069265586b3bee811b963 files/digest-gtkpod-0.60 63
 MD5 a1d883cfc4bf4b1787612b279424f7ec files/digest-gtkpod-0.70 63
