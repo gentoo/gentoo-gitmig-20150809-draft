@@ -11,6 +11,7 @@ HOMEPAGE="http://linuz.sns.it/~max/twin/"
 DEPEND="virtual/glibc
 	X? ( virtual/x11 )
 	ggi? ( >=media-libs/libggi-1.9 )
+        >=sys-libs/gpm-1.19.3
         >=sys-libs/ncurses-5.2"
 	
 src_unpack() {

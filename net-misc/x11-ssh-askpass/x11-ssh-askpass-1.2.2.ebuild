@@ -9,7 +9,8 @@ DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
 HOMEPAGE="http://www.ntrnet.net/~jmknoble/software/x11-ssh-askpass/"
 SRC_URI="http://www.ntrnet.net/~jmknoble/software/x11-ssh-askpass/${A}"
 
-DEPEND=">=net-misc/openssh-2.3.0 virtual/x11"
+DEPEND="virtual/glibc virtual/x11"
+RDEPEND=">=net-misc/openssh-2.3.0 virtual/x11"
 
 src_compile() {
     try ./configure 

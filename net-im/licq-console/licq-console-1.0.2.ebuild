@@ -14,11 +14,12 @@ SRC_URI="http://download.sourceforge.net/licq/${A}
          ftp://mirror.itcnet.ro/pub/licq/srcs/${A}"
 HOMEPAGE="http://www.licq.org"
 
-DEPEND="=net-im/licq-1.0.3"
+DEPEND="virtual/glibc sys-devel/gcc
+        >=sys-libs/ncurses-5.2
+        =net-im/licq-1.0.3"
 
-src_unpack() {
-  unpack ${A}
-}
+RDEPEND="virtual/glibc sys-devel/gcc
+        >=sys-libs/ncurses-5.2"
 
 src_compile() {
   cd ${WORKDIR}/${LICQV}/plugins/console-${PV}

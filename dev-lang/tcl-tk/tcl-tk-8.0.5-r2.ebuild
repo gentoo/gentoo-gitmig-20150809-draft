@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.0.5-r2.ebuild,v 1.1 2001/04/28 11:04:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.0.5-r2.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
 
 
 R1=tcl${PV}
@@ -44,9 +44,9 @@ src_compile() {
 
 src_install() {
 	cd ${S1}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 	cd ${S2}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 #	ln -sf wish8.0 ${D}/usr/bin/wish
 #	ln -sf tclsh8.0 ${D}/usr/bin/tclsh
 	cd ${S1}

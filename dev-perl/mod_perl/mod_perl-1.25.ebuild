@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.25.ebuild,v 1.2 2001/05/03 16:38:58 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.25.ebuild,v 1.3 2001/06/01 14:00:14 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,10 +9,8 @@ DESCRIPTION="A Perl Modul for Apache"
 SRC_URI="http://perl.apache.org/dist/${A}"
 HOMEPAGE="http://perl.apache.org"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	>=dev-perl/libwww-perl-5.48
-	>=dev-perl/HTML-Parser-3.13
-	>=dev-perl/URI-1.09
 	>=net-www/apache-ssl-1.3"
 
 src_compile() {

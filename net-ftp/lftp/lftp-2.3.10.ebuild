@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.3.10.ebuild,v 1.1 2001/05/16 13:08:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.3.10.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -11,27 +11,35 @@ SRC_URI="ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${A}
 
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3
-	>=sys-libs/gpm-1.19.3
+DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
-	>=dev-libs/openssl-0.9.6"
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+        nls? ( sys-devel/gettext )"
 
-src_unpack () {
-    unpack ${A}
-}
+RDEPEND="virtual/glibc
+	>=sys-libs/ncurses-5.1
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
-src_compile() {                           
+src_compile() {
+    local myconf
+    if [ -z "`use nls`" ] ; then
+      myconf="--disable-nls"
+    fi
+    if [ -z "`use ssl`" ] ; then
+      myconf="$myconf --without-ssl"
+    fi
+
     export CFLAGS="-fno-exceptions -fno-rtti ${CFLAGS}"
     export CXXFLAGS="-fno-exceptions -fno-rtti ${CXXFLAGS}"
-    try ./configure --prefix=/usr --sysconfdir=/etc/lftp --with-modules
+
+    try ./configure --prefix=/usr --sysconfdir=/etc/lftp --mandir=/usr/share/man --with-modules $myconf
     try make
 }
 
 src_install() {
-	cd ${S}
-	try make prefix=${D}/usr sysconfdir=${D}/etc/lftp install
-	prepman
+
+	try make prefix=${D}/usr sysconfdir=${D}/etc/lftp mandir=${D}/usr/share/man install
+
 	dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS NEWS
 	dodoc README* THANKS TODO
 	

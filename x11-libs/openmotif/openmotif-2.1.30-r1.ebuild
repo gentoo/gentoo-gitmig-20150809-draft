@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.1 2001/03/09 10:26:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r1.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
 
 A=openmotif-2.1.30-4_MLI.src.tar.gz
 S=${WORKDIR}/motif
@@ -9,8 +9,7 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/"${A}
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 
-DEPEND="virtual/glibc
-	>=x11-base/xfree-4.0.1"
+DEPEND="virtual/glibc virtual/x11"
 
 src_unpack() {
   unpack ${A}

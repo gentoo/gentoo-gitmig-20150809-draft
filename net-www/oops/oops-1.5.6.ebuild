@@ -1,14 +1,18 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.5 2001/04/27 20:35:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/oops-1.5.6.ebuild,v 1.6 2001/06/01 14:00:14 achim Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://zipper.paco.net/~igor/oops/oops-1.5.6.tar.gz"
 HOMEPAGE="http://zipper.paco.net/~igor/oops.eng/"
 DESCRIPTION="An advanced multithreaded caching web proxy"
 
-DEPEND="virtual/glibc >=sys-libs/db-3.2.3h dev-libs/libpcre ssl? ( >=dev-libs/openssl-0.9.6 )"
+DEPEND="virtual/glibc sys-devel/gcc
+        dev-libs/libpcre
+        sys-devel/flex"
+
+RDEPEND="virtual/glibc sys-devel/gcc"
 
 src_unpack() {
 	unpack ${A}
@@ -19,7 +23,8 @@ src_unpack() {
 }
 
 src_compile() {
-    try ./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid --sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops
+    try ./configure --prefix=/usr --libdir=/usr/lib/oops --enable-oops-user=squid \
+    --sysconfdir=/etc/oops --sbindir=/usr/sbin --with-regexp=pcre --localstatedir=/var/run/oops
 	cd src
 	cp config.h.in config.h.in.orig
 	sed -e '/STRERROR_R/d' config.h.in.orig > config.h.in
@@ -34,12 +39,12 @@ src_install() {
 	chown squid.squid ${D}
 	try make DESTDIR=${D} install
 	chmod -R g+srw ${D}/etc/oops
-	chmod -R g+rw ${D}/etc/oops/*	
+	chmod -R g+rw ${D}/etc/oops/*
 
 	insinto /etc/oops
 	doins ${FILESDIR}/oops.cfg
 	cd ${D}
-	
+
 	#cleanups
 	rm -rf ${D}/usr/oops
 	rm -rf ${D}/usr/lib/oops/modules
@@ -55,7 +60,7 @@ src_install() {
 		do
 			if [ -f $x ]
 			then
-				mv $x $x.eg	
+				mv $x $x.eg
 			fi
 		done
 	done

@@ -41,7 +41,7 @@ src_compile() {
 
 src_install() {
 	cd ${S1}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 	
 	# fix the tclConfig.sh to eliminate refs to the build directory
 	sed -e "s,^TCL_BUILD_LIB_SPEC='-L${S1}/unix,TCL_BUILD_LIB_SPEC='-L/usr/lib," \
@@ -61,7 +61,7 @@ src_install() {
 	rm -f ${D}/usr/lib/tcl${V1}/include/generic/tclPlatDecls.h	
 	
 	cd ${S2}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 	
 	# fix the tclConfig.sh to eliminate refs to the build directory
 	sed -e "s,^TK_BUILD_LIB_SPEC='-L${S2}/unix,TCL_BUILD_LIB_SPEC='-L/usr/lib," \

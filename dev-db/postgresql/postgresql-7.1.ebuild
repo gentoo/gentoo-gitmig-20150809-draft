@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.4 2001/04/22 18:38:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.5 2001/06/01 14:00:14 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -9,15 +9,24 @@ SRC_URI="ftp://ftp.postgresql.org/pub/v7.1/${P}.tar.gz
 	 http://www.postgresql.org/~petere/rl42-pg.patch"
 HOMEPAGE="http://postgresql.readysetnet.com/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/glibc sys-devel/autoconf
         >=sys-libs/readline-4.1
         >=sys-libs/ncurses-5.2
+        >=sys-libs/zlib-1.1.3
         tcltk? ( >=dev-lang/tcl-tk-8 )
         perl? ( sys-devel/perl )
         python? ( dev-lang/python )
         java? ( dev-lang/jdk >=dev-java/jaxp-1.0.1 >=dev-java/ant-1.3 )
         ssl? ( >=dev-libs/openssl-0.9.6-r1 )
         nls? ( sys-devel/gettext )"
+
+RDEPEND="virtual/glibc
+        >=sys-libs/zlib-1.1.3
+        tcltk? ( >=dev-lang/tcl-tk-8 )
+        perl? ( sys-devel/perl )
+        python? ( dev-lang/python )
+        java? ( dev-lang/jdk >=dev-java/jaxp-1.0.1 >=dev-java/ant-1.3 )
+        ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 src_unpack() {
 
@@ -60,6 +69,10 @@ src_compile() {
     if [ "`use java`" ]
     then
         myconf="$myconf --with-java"
+    fi
+    if [ "`use ssl`" ]
+    then
+        myconf="$myconf --with-openssl=/usr"
     fi
     if [ "`use nls`" ]
     then

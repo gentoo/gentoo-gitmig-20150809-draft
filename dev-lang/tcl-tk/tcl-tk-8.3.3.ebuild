@@ -45,9 +45,9 @@ src_compile() {
 
 src_install() {
 	cd ${S1}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 	cd ${S2}/unix
-	try make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
 	ln -sf wish8.3 ${D}/usr/bin/wish
 	ln -sf tclsh8.3 ${D}/usr/bin/tclsh
 	cd ${S1}

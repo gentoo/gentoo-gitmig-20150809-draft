@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.1 2001/04/23 01:00:39 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
 
 P=
 A=ircii-pana-1.0c18.tar.gz
@@ -40,21 +40,29 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     if [ -n "`use gnome`" ]
     then
       try make prefix=${D}/opt/gnome install
-      insinto /opt/gnome/share/gnome/apps/Internet
-      doins gtkBitchX.desktop
-      insinto /opt/gnome/share/pixmaps
-      doins BitchX.png
+#      insinto /opt/gnome/share/gnome/apps/Internet
+#      doins gtkBitchX.desktop
+#      insinto /opt/gnome/share/pixmaps
+#      doins BitchX.png
+      cd ${D}/opt/gnome/bin
+      rm gtkBitchX
+      ln -sf gtkBichX-1.0c18 gtkBitchX
+      chmod -x ${D}/opt/gnome/lib/bx/plugins/BitchX.hints
     else
       try make prefix=${D}/usr install
+      cd ${D}/usr/bin
+      rm gtkBitchX
+      ln -sf BichX-1.0c18 BitchX
+      chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
     fi
 
-    ln -sf ${D}/usr/bin/${P} BitchX
-    chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
+    #ln -sf ${D}/usr/bin/${P} BitchX
 
+
+    cd ${S}
     dodoc Changelog README* IPv6-support
     cd doc
     insinto /usr/X11R6/include/bitmaps
@@ -65,19 +73,19 @@ src_install () {
     dodoc *.tcl
     docinto html
     dodoc *.html
-    
+
     docinto plugins
     dodoc plugins
     cd ../dll
     insinto /usr/lib/bx/wav
     doins wavplay/*.wav
-    mv acro/README acro/README.acro
+    cp acro/README acro/README.acro
     dodoc acro/README.acro
-    mv arcfour/README arcfour/README.arcfour
+    cp arcfour/README arcfour/README.arcfour
     dodoc arcfour/README.arcfour
-    mv blowfish/README blowfish/README.blowfish
+    cp blowfish/README blowfish/README.blowfish
     dodoc blowfish/README.blowfish
     dodoc nap/README.nap
-    mv qbx/README qbx/README.qbx
+    cp qbx/README qbx/README.qbx
     dodoc qbx/README.qbx
 }
