@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.27 2003/08/04 20:21:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.28 2003/08/04 21:21:11 mholzer Exp $
+
+  05 Aug 2003; Martin Holzer <mholzer@gentoo.org> DirectFB-0.9.12.ebuild,
+  DirectFB-0.9.16.ebuild:
+  Updated quicktime to virtual/quicktime
 
 *DirectFB-0.9.19 (30 Jul 2003)
 

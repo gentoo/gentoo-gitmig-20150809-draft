@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.12.ebuild,v 1.11 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.12.ebuild,v 1.12 2003/08/04 21:21:11 mholzer Exp $
 
 IUSE="gif quicktime mpeg png truetype flash jpeg mmx"
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/perl
 	mpeg? ( media-libs/libmpeg3 )
 	flash? ( >=media-libs/libflash-0.4.10 )
 	truetype? ( >=media-libs/freetype-2.0.1 )
-	quicktime? ( media-libs/quicktime4linux )"
+	quicktime? ( virtual/quicktime )"
 #	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )"
 
 
