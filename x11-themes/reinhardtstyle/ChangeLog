@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/reinhardtstyle
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/ChangeLog,v 1.4 2005/01/01 02:41:41 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/ChangeLog,v 1.5 2005/03/08 15:31:38 greg_g Exp $
+
+  08 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> reinhardtstyle-0.8.2.ebuild,
+  -reinhardtstyle-0.8.ebuild:
+  Stable on x86.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> reinhardtstyle-0.8.2.ebuild:
   Added ~sparc keyword.
