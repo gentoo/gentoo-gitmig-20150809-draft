@@ -1,16 +1,24 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.9 2004/06/30 11:42:15 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.10 2004/06/30 18:54:52 kang Exp $
 
-*rsbac-sources-2.4.26 (24 Jun 2004)
+*rsbac-sources-2.4.26-r2 (30 Jun 2004)
+
+  30 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
+  +files/rsbac-sources-v1.2.3-3.patch,
+  +rsbac-sources-2.4.26-r2.ebuild:
+  JAIL Security fix, see http://rsbac.org/download/bugfixes/
+
+*rsbac-sources-2.4.26-r1 (29 Jun 2004)
 
   29 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
-  -rsbac-sources-2.4.26.ebuild
-  +rsbac-sources-2.4.26-r1.ebuild
-  +files/rsbac-sources-2.4.CAN-2004-0495.patch
-  +files/ rsbac-sources-2.4.CAN-2004-0535.patch
-
+  -rsbac-sources-2.4.26.ebuild,
+  +rsbac-sources-2.4.26-r1.ebuild,
+  +files/rsbac-sources-2.4.CAN-2004-0495.patch,
+  +files/ rsbac-sources-2.4.CAN-2004-0535.patch:
   Security bump with fixes for 2.4.26
+
+*rsbac-sources-2.4.26 (24 Jun 2004)
 
   24 Jun 2004; Guillaume Destuynder <kang@gentoo.org>:
   Initial import.  Ebuild submitted by zhware <zhware@gentoo.org>
