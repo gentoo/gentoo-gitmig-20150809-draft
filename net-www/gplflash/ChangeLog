@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.1 2002/06/30 02:41:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.2 2002/07/09 19:36:44 azarah Exp $
+
+  09 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc3-gentoo.diff :
+
+  Update the patch not to include the "$Id:", as it invalidated the
+  patch after commit, causing gplflash to still fail with gcc3.
 
 *gplflash-0.4.10-r1 (29 Jun 2002)
 
