@@ -1,20 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.7.ebuild,v 1.3 2004/04/19 08:00:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.8.ebuild,v 1.1 2004/04/19 08:00:15 dragonheart Exp $
 
 IUSE=""
 
 DESCRIPTION="Generate highlighted source code as an (x)html document"
-SRC_URI="ftp://ftp.gnu.org/gnu/source-highlight/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
+SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="sys-apps/gawk
+	sys-apps/grep
+	sys-devel/bison
+	sys-devel/gcc
+	sys-devel/flex
+	virtual/glibc"
 
-S="${WORKDIR}/${P}"
+RDEPEND="virtual/glibc"
+
+S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
