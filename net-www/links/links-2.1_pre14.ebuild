@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre14.ebuild,v 1.1 2003/12/03 19:48:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre14.ebuild,v 1.2 2003/12/09 07:26:42 mr_bones_ Exp $
 
-IUSE="ssl javascript png X gpm tiff fbcon svga jpeg"
+IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg"
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
