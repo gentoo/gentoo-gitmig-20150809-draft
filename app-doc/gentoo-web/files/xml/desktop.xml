@@ -134,7 +134,7 @@ to kill the X server.</p>
 by hand:</p>
 <pre>
 # <i>cp /etc/X11/XF86Config /etc/X11/XF86Config.working</i>
-# <i>vim /etc/X11/XF86Config</i></pre>
+# <i>nano /etc/X11/XF86Config</i></pre>
 <pre caption="Pointer section of XF86Config">
 Section "InputDevice"
 
@@ -162,7 +162,7 @@ for instructions.  Better yet, use <c>konqueror</c>, <c>opera</c>,
 Assuming that it does, kill X and we'll start a real window manager
 instead.  First, though, we need to fix a minor KDE bug.
 </p>
-<pre># <i>vim /opt/kde2.1/bin/startkde</i></pre>
+<pre># <i>nano /opt/kde2.1/bin/startkde</i></pre>
 <pre caption="the top of the startkde file after it has been fixed">
 <i>#!/bin/sh --login</i>
 #
@@ -190,7 +190,7 @@ Edit <path>/etc/rc.d/config/basic</path> so that
 <e>DISPLAYMANAGER="kdm"</e>.  
 </p>
 <pre>
-# <i>vim /etc/rc.d/config/basic</i>
+# <i>nano /etc/rc.d/config/basic</i>
 </pre>
 <pre caption="/etc/rc.d/config/basic -- setting DISPLAYMANAGER">
 MOUSE="ms"				# Set to the mouse type as used by gpm (auto, ps2, ms, etc.)
@@ -204,7 +204,7 @@ default runlevel for X) and change <path>/etc/inittab</path> so that
 runlevel 4 is the default runlevel.</p>
 <pre>
 # <i>rc-update add xdm</i>
-# <i>vim /etc/inittab</i>
+# <i>nano /etc/inittab</i>
 </pre>
 <pre caption="the initdefault line, configured to start kdm (runlevel 4)">
 # Default runlevel.
@@ -239,7 +239,7 @@ all necessary extra modules (like Alsa) and kernel-specific tools, like the LVM
 utilities.</p>
 
 <pre>
-# <i>vim /etc/make.conf</i>
+# <i>nano /etc/make.conf</i>
 <comment>above, make sure that "alsa" is in the USE variable</comment>
 # <i>cd /usr/portage/sys-kernel/linux-extras</i>
 # <i>emerge linux-extras-x.y.z.ebuild</i>
@@ -253,7 +253,7 @@ see the Gentoo FAQ:
 <uri>http://www.gentoo.org/doc/faq.html</uri>.
 </p>
 <pre>
-# <i>vim /etc/rc.d/config/modules</i>
+# <i>nano /etc/rc.d/config/modules</i>
 </pre>
 <pre caption="modules.conf with Alsa modules">
 # Put modules to be loaded, with arguments, one per line
@@ -278,7 +278,7 @@ be lost.
 </warn>
 <p>Now we set up the <e>kerneld</e> aliases.</p>
 <pre>
-# <i>vim /etc/modules/2.4.4-ac9</i>
+# <i>nano /etc/modules/2.4.4-ac9</i>
 </pre>
 <pre caption="end of /etc/modules/2.4.4-ac9 with Alsa additions">
 depfile=/lib/modules/2.4.4-ac9/modules.dep
@@ -303,7 +303,7 @@ your sound card.
 <p>We should still help out <e>devfs</e>, however.
 Add the following to <path>/etc/devfsd.conf</path>.</p>
 <pre>
-# <i>vim /etc/devfsd.conf</i>
+# <i>nano /etc/devfsd.conf</i>
 </pre>
 <pre caption="end of devfsd.conf file with Alsa additions">
 CHANGE          .*              COPY    $devpath /dev-state/$devname
@@ -700,7 +700,7 @@ the Samba articles by Daniel Robbins at
 # <i>rc-update add samba</i>
 # <i>cd /etc/smb</i>
 # <i>cp /etc/smb/smb.conf.eg /etc/smb/smb.conf</i>
-# <i>vim /etc/smb/smb.conf</i>
+# <i>nano /etc/smb/smb.conf</i>
 </pre>
 <pre caption="smb.conf -- workgroup">
 # workgroup = NT-Domain-Name or Workgroup-Name, eg: REDHAT4
