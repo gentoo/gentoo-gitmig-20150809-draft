@@ -7,19 +7,25 @@ DESCRIPTION="Gtk email client"
 SRC_URI="ftp://spruce.sourceforge.net/pub/spruce/devel/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/"
 
-DEPEND=">=x11-libs/gtk+-1.2.6
+RDEPEND=">=x11-libs/gtk+-1.2.6
         gnome-base/libglade
 	ssl? ( >=dev-libs/openssl-0.9.6 )
         gpg? ( app-crypt/gnupg )
         gnome? ( gnome-base/gnome-print )"
+
+DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
+
 # Doesn't work? Please test =)
 
 src_compile() {
 
     local myopts
+    if [ -z "`use nls`" ]; then
+      myopts="--disable-nls"
+    fi
     if [ "`use ssl`" ]; then
       echo "SSL does not work"
-      #  myopts="--with-ssl"
+      #  myopts="$myopts --with-ssl"
     fi
     if [ "`use gpg`" ] ; then
         myopts="$myopts --enable-pgp"
