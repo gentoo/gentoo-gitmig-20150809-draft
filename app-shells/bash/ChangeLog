@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.42 2004/07/29 02:57:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.43 2004/08/02 15:38:01 agriffis Exp $
+
+*bash-3.0-r2 (02 Aug 2004)
+
+  02 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/bash-3.0-invisible.patch, +bash-3.0-r2.ebuild:
+  Fix the bug reported by Alexander in bug 36393: bash applies all invisible
+  characters to the first line instead of the ones that actually (dis)appear in
+  that line. I've also pushed this upstream
 
   29 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> bash-3.0-r1.ebuild:
   Add ~sparc back in
