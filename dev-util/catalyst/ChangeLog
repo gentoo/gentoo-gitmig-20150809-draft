@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.32 2004/10/22 04:30:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.33 2004/10/28 15:18:06 wolf31o2 Exp $
+
+*catalyst-1.1.1 (28 Oct 2004)
+
+  28 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> catalyst-1.1.0.ebuild,
+  +catalyst-1.1.1.ebuild:
+  Fixing 1.1.0 ebuild trying to install files from livecd/kconfig, which no
+  longer exists and adding new catalyst version 1.1.1, which is a minor bugfix
+  release.
 
 *catalyst-1.1.0 (22 Oct 2004)
 
