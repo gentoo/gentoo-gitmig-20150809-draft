@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.3 2003/11/03 07:51:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r16.ebuild,v 1.4 2003/11/05 00:56:50 brad_mssw Exp $
 
 IUSE="build"
 
@@ -15,7 +15,7 @@ SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.ta
 HOMEPAGE="http://www.gentoo.org"
 
 # Contact carpaski a reason before you modify any of these.
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 LICENSE="GPL-2"
