@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.3 2004/10/13 23:44:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.4 2004/10/15 20:10:45 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -55,6 +55,22 @@ tc-getNM() { tc-getPROG NM nm; }
 # Returns the name of the archiver indexer
 tc-getRANLIB() { tc-getPROG RANLIB ranlib; }
 
+# Returns the name of the C compiler for build
+tc-getBUILD_CC() {
+	if [ -n "${CC_FOR_BUILD}" ] ; then
+		echo "${CC_FOR_BUILD}"
+		return 0
+	fi
+
+	if [ -n "${CBUILD}" ] ; then
+		local cc="$(type -p "${CBUILD}-gcc")"
+		if [ -n "${cc}" ] ; then
+			echo "${cc}"
+		fi
+	fi
+
+	echo "gcc"
+}
 
 
 # Returns the version as by `$CC -dumpversion`
