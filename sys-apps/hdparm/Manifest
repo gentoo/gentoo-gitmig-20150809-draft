@@ -1,9 +1,10 @@
-MD5 66fdafca139592ab257d0082e75b4377 ChangeLog 4120
+MD5 f89203faccff1be250e199e5690b5ec3 ChangeLog 4233
 MD5 e584aac79d5e0707320d814fec4968e4 hdparm-5.2-r3.ebuild 854
 MD5 de345e6967f324a0fe927bfd2684e935 hdparm-5.3-r1.ebuild 807
 MD5 4070c0febd8673c35c11d8d7793af6c6 hdparm-5.3-r2.ebuild 1077
 MD5 36fe0f027a1aeea037b4a7ef4b4e5b86 hdparm-5.4.ebuild 1120
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 8fd16952abc76215399bcbc069550c27 hdparm-5.5.ebuild 1129
 MD5 550ca4c2cb3569de0c9a31035e6962a4 files/digest-hdparm-5.2-r3 61
 MD5 a6bccb876455636b364c093460cbb994 files/digest-hdparm-5.3-r1 61
 MD5 a6bccb876455636b364c093460cbb994 files/digest-hdparm-5.3-r2 61
@@ -12,3 +13,4 @@ MD5 e5329109e5d4913db5d99dea05ea7cb7 files/hdparm-conf.d 526
 MD5 5ad61cfc6a0abd8ceb1f62f96df56cf5 files/hdparm-init 387
 MD5 79addcfcff37bea2f39b6aef5050139f files/hdparm-new-init 2137
 MD5 58b06c855068c6d95b0f665c201d6051 files/hdparm-5.4-readahead_rename.patch 1254
+MD5 f5fc13fdfccb0f5600d45488c6a5d534 files/digest-hdparm-5.5 61
