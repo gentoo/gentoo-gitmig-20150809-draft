@@ -1,0 +1,27 @@
+# ChangeLog for sys-kernel/gs-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.1 2003/01/15 20:44:43 livewire Exp $
+
+*gs-sources-2.4.21_pre3 (15 Jan 2003)
+  
+  15 Jan 2003; Bob Johnson <livewire_@ameritech.net>:
+  Initial Release Gentoo Stable Sources -gss
+  
+ 	- 2.4.20 patched up to 2.4.21pre3
+	- 3.5G address-space
+	- acpi pre3
+ 	- evms 1.2.1
+	- proconfig 9.7
+	- ntfs 2.10a
+	- few Nvidia nforce bitkeeper patches
+	- win4lin
+	- futexes
+	- imon
+	- i2c-2.7.0
+	- new aic79xx drivers
+	- ecc-20020904
+	- v4l2-api
+	- super freeswan 1.99
+	- gcc31 compile opts
+	- gentoo framebuffer 
+	- 3c59x fix for asus/nforce2?
