@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.14.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/boxquote-1.14.ebuild,v 1.4 2004/04/22 21:21:34 dholm Exp $
 
 inherit elisp
 
