@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.20 2005/02/25 04:44:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.21 2005/03/13 04:52:21 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
@@ -10,19 +10,16 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="gpm build bootstrap debug doc uclibc unicode nocxx"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-xterm.patch
-	# Bug #42336.
-	epatch ${FILESDIR}/${P}-share-sed.patch
-	gnuconfig_update
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-xterm.patch
+	epatch "${FILESDIR}"/${P}-share-sed.patch #42336
 }
 
 src_compile() {
