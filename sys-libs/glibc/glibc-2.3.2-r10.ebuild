@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.4 2004/04/24 08:21:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.5 2004/04/24 08:22:52 vapier Exp $
 
 IUSE="nls pic build nptl"
 
 inherit eutils flag-o-matic gcc
 
-filter-flags "-fomit-frame-pointer -malign-double"
-filter-ldflags "-pie"
+filter-flags -fomit-frame-pointer -malign-double
+filter-ldflags -pie
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -32,8 +32,7 @@ filter-ldflags "-pie"
 strip-flags
 
 # Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="${CFLAGS//-O?} -O2"
-export CXXFLAGS="${CFLAGS}"
+replace-flags -O? -O2
 export LDFLAGS="${LDFLAGS//-Wl,--relax}"
 
 BRANCH_UPDATE="20031115"
