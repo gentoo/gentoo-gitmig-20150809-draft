@@ -1,6 +1,18 @@
-MD5 131e32fc9d3995dacd7afdaa4e14ea06 ChangeLog 824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c122fab7720cfd6b46c3d0f6cc529a32 ChangeLog 940
 MD5 2f64a04a7cbf24b05eca14b4d95718c1 Test-Manifest-0.92.ebuild 493
 MD5 5c3ff7eba1f322bba2ea1cdadc0152e8 Test-Manifest-0.93.ebuild 510
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 ed801ae587ecbce52b399235a32c482f Test-Manifest-1.11.ebuild 497
 MD5 2b9ab149077a5cff52b5d2c9e4713374 files/digest-Test-Manifest-0.92 68
 MD5 96edf8ae71106044ef3e542aabbc9819 files/digest-Test-Manifest-0.93 68
+MD5 5c037060210fd4b2b883737c288ffb4b files/digest-Test-Manifest-1.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBct4FtG5z4I8BtQoRArnGAJ493x84DqFEjO+Rhyhnq5a24VaeKACfRsCe
+qtYiCgYY5V7Dg5+gac48nsw=
+=x8OQ
+-----END PGP SIGNATURE-----
