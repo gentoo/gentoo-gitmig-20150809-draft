@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# Header: $
 
 inherit distutils
 inherit eutils
@@ -13,7 +14,7 @@ SRC_URI="http://e.scarywater.net/bt/download/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X"
 
 RDEPEND="X? ( >=dev-python/wxPython-2.2 )
