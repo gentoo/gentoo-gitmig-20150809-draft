@@ -1,7 +1,15 @@
-MD5 cf75fcb6b04bfe93e7104f6a53e1f1b5 ChangeLog 882
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 970601ab1b0fc8165fea73976d248ead metadata.xml 739
-MD5 39f3d9e957e7387fe56edbb91e338885 mysql-administrator-1.0.10.ebuild 1362
+MD5 9deac8dba0379ccc2ea1aadcd62745f6 ChangeLog 997
 MD5 efac88d9d835aae352130fabcf348731 mysql-administrator-1.0.12.ebuild 1364
-MD5 d59155709458d9124fa80ed18d232b13 files/digest-mysql-administrator-1.0.10 80
 MD5 2860a344803fd5cc6e113c684e66cabf files/mysql-administrator 302
 MD5 7b56231c842fcfa4a8c27e99a183c3ea files/digest-mysql-administrator-1.0.12 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcbxUI1lqEGTUzyQRApOsAKCMtyM+6YZSL1vbxyEToSPrEr5DrwCeJdQl
+5c1TxX1OCOTMYNpICr7e3SE=
+=euh9
+-----END PGP SIGNATURE-----
