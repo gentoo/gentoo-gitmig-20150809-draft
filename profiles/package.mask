@@ -142,10 +142,6 @@ app-text/psgml
 # should be unmasked *prior* to libpng-1.0* removal!!!
 =media-gfx/graphviz-1.8.10-r1
 
-# <strider@gentoo.org> (02 Dec 2002)
-# new ebuild masking it for now
-=dev-java/ibm-jre-1.4.0
-
 # <danarmak@gentoo.org> (03 Dec 2002)
 # new package, in testing (me and azarah)
 sys-apps/utempter
