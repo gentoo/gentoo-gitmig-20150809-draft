@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.15 2005/02/01 09:20:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.16 2005/02/02 23:43:37 vapier Exp $
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #GCC_MANPAGE_VERSION="3.3.4"
@@ -102,4 +102,7 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.4/libffi-without-libgcj.patch
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
+
+	# Don't screw with directories when cross-compiling
+	epatch ${FILESDIR}/3.3.5/gcc-3.3.5-no-COPYING-cross-compile.patch
 }
