@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.14 2002/06/24 02:00:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.15 2002/06/28 23:41:51 azarah Exp $
+
+xscreensaver-4.05-r2 (29 Jun 2002)
+
+  29 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add /usr/share/pixmaps/xscreensaver.xpm if gnome in USE ... fixes no icon in
+  control-center for gnome2.
 
 xscreensaver-4.05 (22 Jun 2002)
   22 Jun 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r1.ebuild :
