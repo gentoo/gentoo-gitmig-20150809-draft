@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.5 2003/06/25 22:35:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.6 2003/06/28 01:37:08 msterret Exp $
 
 inherit kde-base
 
 need-kde 3
 
+IUSE=""
 MY_P=${P/_/}
 DESCRIPTION="CDBakeOven, KDE CD Writing Software"
 SRC_URI="mirror://sourceforge/cdbakeoven/${MY_P}.tar.bz2"
+S=${WORKDIR}/${MY_P}
 HOMEPAGE="http://cdbakeoven.sourceforge.net/"
 
 LICENSE="GPL-2"
