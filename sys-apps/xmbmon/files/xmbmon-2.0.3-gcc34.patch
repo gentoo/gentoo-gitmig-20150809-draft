@@ -1,0 +1,24 @@
+diff -Nru xmbmon203.old/pci_pm.c xmbmon203/pci_pm.c
+--- xmbmon203.old/pci_pm.c	2004-07-21 18:12:47.233020408 -0400
++++ xmbmon203/pci_pm.c	2004-07-21 18:13:01.936785096 -0400
+@@ -184,7 +184,7 @@
+ 			ret = NFORCE2SMB;
+ 			inq_smbba = getSMBBA71;
+ 			break;
+-		default:
++		default:;
+ 		}
+ #if !defined(LINUX) && defined(HAVE_SMBUS) && defined(SMBUS_IOCTL)
+ 		if (ret)
+diff -Nru xmbmon203.old/sensors.c xmbmon203/sensors.c
+--- xmbmon203.old/sensors.c	2004-07-21 18:12:47.231020712 -0400
++++ xmbmon203/sensors.c	2004-07-21 18:13:23.193553576 -0400
+@@ -117,7 +117,7 @@
+ 				fprintf(stderr,
+ 			" SMBus slave 0x%02X(0x%02X) found...\n", j, j/2);
+ 		}
+-skip:
++skip:;
+ 	}
+ 	method->Close();
+ 	smb_slave = save;

@@ -1,4 +1,5 @@
-MD5 8fcc0ec9a7b5607dede134592a241828 ChangeLog 904
+MD5 1f4332f75e6eba70d6deae94c0921438 xmbmon-2.0.3.ebuild 1506
+MD5 81d857c59c7a2e2979e3f3875f217c97 ChangeLog 1020
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 90c17e96b65e03fb6b94c58e381fdff9 xmbmon-2.0.3.ebuild 1422
 MD5 bcbf7a71b0097dda70c0ca258cf00c84 files/digest-xmbmon-2.0.3 61
+MD5 9c27e9d00e4c46cdac30f402fc3092c0 files/xmbmon-2.0.3-gcc34.patch 702

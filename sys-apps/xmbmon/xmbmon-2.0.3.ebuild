@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.7 2004/07/01 21:44:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.3.ebuild,v 1.8 2004/07/21 22:31:58 lv Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="Mother Board Monitor Program for X Window System"
@@ -18,6 +18,12 @@ DEPEND="virtual/libc
 	X? ( virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/xmbmon-2.0.3-gcc34.patch
+}
 
 src_compile() {
 	gnuconfig_update
