@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-networkinfo/desklet-networkinfo-0.1.4-r1.ebuild,v 1.2 2003/11/20 20:32:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-networkinfo/desklet-networkinfo-0.1.4-r1.ebuild,v 1.3 2004/02/29 04:31:05 jhuebel Exp $
 
 SENS_NAME="Network"
 DISP_NAME="networkinfo"
@@ -16,7 +16,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22"
 

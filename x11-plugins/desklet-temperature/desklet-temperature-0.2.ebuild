@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.2.ebuild,v 1.1 2003/11/12 11:03:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/desklet-temperature-0.2.ebuild,v 1.2 2004/02/29 04:33:04 jhuebel Exp $
 
 DESKLET_NAME="TempNOAA"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22"
 

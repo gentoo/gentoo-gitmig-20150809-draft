@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/desklet-multitail-0.2.2.ebuild,v 1.1 2004/02/04 13:40:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/desklet-multitail-0.2.2.ebuild,v 1.2 2004/02/29 04:29:40 jhuebel Exp $
 
 DESKLET_NAME="MultiTail"
 S=${WORKDIR}/${DESKLET_NAME}-${PV}
@@ -12,7 +12,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.25"
 
