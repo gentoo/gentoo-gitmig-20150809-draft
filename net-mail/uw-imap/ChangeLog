@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.41 2004/11/24 09:33:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.42 2004/11/24 10:48:48 joker Exp $
+
+  24 Nov 2004; Christian Birchinger <joker@gentoo.org> uw-imap-2004a.ebuild:
+  Added sparc stable keyword
 
   24 Nov 2004; Andrej Kacian <ticho@gentoo.org> uw-imap-2004a.ebuild:
   Stable on x86.
