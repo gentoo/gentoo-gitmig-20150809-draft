@@ -1,0 +1,10 @@
+# ChangeLog for app-text/rhyme
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.1 2003/09/04 17:14:58 taviso Exp $
+
+*rhyme-0.9 (04 Sep 2003)
+
+  04 Sep 2003; Tavis Ormandy <taviso@gentoo.org> rhyme-0.9.ebuild:
+  Initial import, Thanks to Aric LeDell <aledell@rcn.com> for
+  submitting the ebuild in #24735
+
