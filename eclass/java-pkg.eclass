@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.10 2004/07/31 15:18:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.11 2004/09/09 12:30:00 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -162,7 +162,7 @@ java-pkg_dojar()
 		mysrc=$(java-pkg_do_getsrc_)
 
 		# Install files
-		install -m 0644 "${mysrc}" "${D}${jardest}"
+		install -m 0644 "${mysrc}" "${D}${jardest}" || die "${mysrc} not found"
 
 		# Build CLASSPATH
 		if [ -z "${cp_pkg}" ] ; then
