@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.7 2004/10/05 08:49:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.8 2004/10/20 05:19:49 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/0.2.1d-makefile-gentoo.patch, -files/0.2.1d-zeroconf-gentoo.patch,
+  -files/daapd-0.2.3b-gentoo.patch, -files/daapd-0.2.3b-mpeg4.patch,
+  -daapd-0.2.1d.ebuild, -daapd-0.2.3b.ebuild:
+  Removing old versions.
 
 *daapd-0.2.3d (05 Oct 2004)
 

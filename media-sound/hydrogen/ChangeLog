@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.20 2004/08/20 18:11:13 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.21 2004/10/20 05:29:08 eradicator Exp $
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -hydrogen-0.8.1-r1.ebuild, -hydrogen-0.8.1.ebuild,
+  -hydrogen-0.8.2-r1.ebuild, -hydrogen-0.8.2-r2.ebuild,
+  -hydrogen-0.8.2-r3.ebuild, -hydrogen-0.8.2.ebuild:
+  Removing old versions.
 
   20 Aug 2004; <frank@gentoo.org> hydrogen-0.9.0_beta1.ebuild:
   Added media-libs/flac dependency. Closes bug #60977.
