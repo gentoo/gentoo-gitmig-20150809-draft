@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.46 2003/12/06 21:59:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.47 2004/01/14 12:09:45 obz Exp $
+
+  14 Jan 2004; Mike Gardiner <obz@gentoo.org> gdm-2.4.1.7-r1.ebuild:
+  Stable on x86 as part of GNOME-2.4.1
 
   06 Dec 2003; foser <foser@gentoo.org> gdm-2.*.ebuild :
   Fix occurances chown usr.grp to usr:grp (#35127)

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.3 2003/12/06 21:59:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.4 2004/01/14 12:09:45 obz Exp $
 
 inherit eutils gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 LICENSE="GPL-2"
 IUSE="tcpd X xinerama"
 SRC_URI="${SRC_URI}
