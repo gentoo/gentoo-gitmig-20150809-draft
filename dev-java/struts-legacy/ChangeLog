@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts-legacy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.7 2004/10/16 17:37:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.8 2004/10/17 07:32:04 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  struts-legacy-1.0-r1.ebuild:
+  keywords ~amd64; closes #67318.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   struts-legacy-1.0-r1.ebuild:
