@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.6 2005/01/01 17:30:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.7 2005/01/25 15:30:47 greg_g Exp $
 
 DESCRIPTION="An SQL editor and developer tool"
 HOMEPAGE="http://www.aquafold.com"
@@ -44,7 +44,7 @@ src_install() {
 		echo "Exec=/opt/bin/${PN}" >> ${PN}-kde.desktop
 		echo "Icon=/opt/${PN}/lib/datastudio.ico" >> ${PN}-kde.desktop
 		echo "Type=Application" >> ${PN}-kde.desktop
-		insinto ${KDEDIR}/share/applnk/Development
+		insinto /usr/share/applnk/Development
 		doins ${PN}-kde.desktop
 	fi
 
