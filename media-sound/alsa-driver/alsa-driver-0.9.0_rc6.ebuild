@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc6.ebuild,v 1.1 2002/11/20 02:15:27 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc6.ebuild,v 1.2 2002/12/21 06:37:40 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -76,7 +76,7 @@ src_install () {
 	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
 
 	insinto /etc/modules.d
-	newins ${FILESDIR}/alsa-modules.conf alsa
+	newins ${FILESDIR}/alsa-modules.conf-rc alsa
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/alsasound
 }
@@ -88,7 +88,7 @@ pkg_postinst () {
 	fi
 
 	einfo
-	einfo "You might want to edit file /etc/modules.d/alsa according to your"
+	einfo "You need to edit file /etc/modules.d/alsa according to your"
 	einfo "hardware configuration."
 	einfo
 	einfo "If you are going to be using the 'alsasound' init script, make sure"
