@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-spc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.6 2004/04/17 16:25:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.7 2004/06/18 05:42:01 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-spc-0.2.1.ebuild:
+  gnuconfig update for ~amd64 addition.
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-spc-0.2.1.ebuild:
