@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.20 2004/05/22 18:56:58 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.21 2004/05/25 10:22:02 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -32,6 +32,8 @@ IS_UPGRADE=0
 IS_REPLACE=0
 
 INSTALL_CHECK_FILE="installed_by_webapp_eclass"
+
+ETC_CONFIG="/etc/vhosts/webapp-config"
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -332,7 +334,7 @@ function webapp_pkg_setup ()
 	# pull in the shared configuration file
 
 	G_HOSTNAME="localhost"
-	. /etc/vhosts/webapp-config || die "Unable to open /etc/vhosts/webapp-config file"
+	. ${ETC_CONFIG} || die "Unable to open /etc/vhosts/webapp-config file"
 
 	# are we installing a webapp-config solution over the top of a 
 	# non-webapp-config solution?
@@ -432,6 +434,8 @@ function webapp_src_preinst ()
 
 function webapp_pkg_postinst ()
 {
+	. ${ETC_CONFIG}
+
 	# sanity checks, to catch bugs in the ebuild
 
 	if [ ! -f ${MY_APPDIR}/${INSTALL_CHECK_FILE} ]; then
