@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.5 2003/11/12 04:13:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6.ebuild,v 1.6 2003/11/12 16:24:02 drobbins Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -37,10 +37,16 @@ src_compile() {
 		--enable-fsstd \
 		--enable-zoom \
 		|| die
+	#enlightenment's makefile uses the $USER env var (bad), which may not be
+	#set correctly if you did a "su" to get root before emerging. Normally,
+	#your $USER will still exist when you su (unless you enter a chroot,) but
+	#will cause perms to be wrong. This fixes this:
+	export USER=root
 	emake || die
 }
 
 src_install() {
+	export USER=root
 	emake install DESTDIR=${D} || die
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/enlightenment
