@@ -1,9 +1,13 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.4 2002/11/25 18:25:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.5 2002/12/03 00:02:59 wwoods Exp $
 
 *ksymoops-2.4.8 (25 Nov 2002)
   
+  02 Dec 2002; Will Woods <wwoods@gentoo.org> ksymoops-2.4.8.ebuild :
+  
+  Added alpha keyword
+
   25 Nov 2002; Brandon Low <lostlogic@gentoo.org> ksymoops-2.4.8.ebuild :
 
   Version bump
