@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.5 2005/02/02 19:43:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.6 2005/02/02 22:20:38 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -65,6 +65,9 @@ src_compile() {
 
 	# fails to copmile with -jx
 	export MAKEOPTS="${MAKEOPTS} -j1"
+
+	# bug #80421
+	filter-flags -ftracer
 
 	econf --with-x || die "configuration failed"
 
