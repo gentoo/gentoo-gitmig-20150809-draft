@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.25 2003/12/16 23:29:10 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.26 2004/01/03 17:40:05 zul Exp $
+
+*epic4-1.1.16-r1 (03 Jan 2004)
+
+  03 Jan 2004; Chuck Short <zul@gentoo.org> epic4-1.1.10.ebuild,
+  epic4-1.1.11.ebuild, epic4-1.1.12.ebuild, epic4-1.1.14-r1.ebuild,
+  epic4-1.1.14.ebuild, epic4-1.1.16-r1.ebuild, epic4-1.1.16.ebuild,
+  files/epic-defaultserver.patch:
+  Ebuild clean ups, added patch so that epic defaults to irc.freenode.net first.
 
   16 Dec 2003; Chuck Short <zul@gentoo.org> epic4-1.1.16.ebuild:
   Marked stable on x86, ia64, and amd64.
