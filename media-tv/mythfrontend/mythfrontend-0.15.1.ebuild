@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.5 2004/06/28 16:54:01 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.15.1.ebuild,v 1.6 2004/09/21 04:49:59 cardoe Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/mythtv-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl"
 
 DEPEND="virtual/x11
