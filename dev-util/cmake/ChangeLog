@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cmake
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.1 2003/12/08 18:26:04 lisa Exp $
+
+*cmake-1.8.1 (08 Dec 2003)
+
+  08 Dec 2003; Lisa Seelye <lisa@gentoo.org> cmake-1.8.1.ebuild:
+  Initial checkin. Submitted by Sam Yates <sam@quux.dropbear.id.au> to close bug
+  25334.
+
