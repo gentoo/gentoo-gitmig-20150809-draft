@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.4 2004/06/24 21:27:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.5 2004/06/25 23:45:26 vapier Exp $
 
 inherit eutils
 
@@ -9,11 +9,11 @@ HOMEPAGE="http://freshmeat.net/projects/afio/"
 SRC_URI="http://members.brabant.chello.nl/~k.holtman/${P}.tgz"
 
 LICENSE="Artistic LGPL-2"
-KEYWORDS="x86 ppc sparc ~amd64"
 SLOT="0"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -21,10 +21,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/Makefile.patch
-	#our cflags
+	# use our cflags
 	sed -i \
-		-e "s:-O2 -fomit-frame-pointer:${CFLAGS}:" Makefile \
-			|| die "sed Makefile failed"
+		-e "s:-O2 -fomit-frame-pointer:${CFLAGS}:" \
+		Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
@@ -33,12 +34,11 @@ src_compile() {
 
 src_install() {
 	local i
-
-	dobin afio                                || die "dobin failed"
-	dodoc ANNOUNCE-2.5 HISTORY README SCRIPTS || die "dodoc failed"
+	dobin afio || die "dobin failed"
+	dodoc ANNOUNCE-2.5 HISTORY README SCRIPTS
 	for i in 1 2 3 4 5 ; do
-		insinto /usr/share/doc/${P}/script$i
-		doins script$i/*                      || die "doins failed (${i})"
+		docinto script$i
+		dodoc script$i/*
 	done
-	doman afio.1                              || die "doman failed"
+	doman afio.1
 }
