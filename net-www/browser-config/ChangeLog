@@ -1,0 +1,9 @@
+# ChangeLog for net-www/browser-config
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/browser-config/ChangeLog,v 1.1 2003/04/13 12:12:04 vladimir Exp $
+
+*browser-config-1.0 (13 Apr 2003)
+
+  13 Apr 2003; Graham Forest <vladimir@gentoo.org> browser-config-1.0.ebuild:
+  Initial import
+
