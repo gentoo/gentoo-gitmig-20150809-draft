@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jldap
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/ChangeLog,v 1.1 2004/07/30 01:49:58 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  initial import, bug 41276, ebuild submitted by Matthew Gregory Sr.
+  <matt.gregory@skyleach.com
+
