@@ -1,36 +1,43 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.0.5.ebuild,v 1.5 2002/10/05 05:39:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.0.6-r1.ebuild,v 1.1 2002/11/29 07:49:43 azarah Exp $
 
 IUSE="doc"
 
-inherit gnome2
+inherit eutils gnome2
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="User interface part of libgnome"
-SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 LICENSE="GPL-2 LGPL-2.1" 
 
-RDEPEND=">=x11-libs/gtk+-2.0.6
+RDEPEND=">=x11-libs/gtk+-2
 	>=sys-devel/perl-5.0.0
 	>=sys-apps/gawk-3.1.0
 	>=dev-libs/popt-1.6.0
 	>=sys-devel/bison-1.28
 	>=sys-devel/gettext-0.10.40
-	>=media-sound/esound-0.2.29
+	>=media-sound/esound-0.2.26
 	>=media-libs/audiofile-0.2.3
-	>=gnome-base/libbonoboui-2.0.3
+	>=gnome-base/libbonoboui-2
 	>=gnome-base/gconf-1.2.1
-	>=gnome-base/libgnome-2.0.4
-	>=gnome-base/libgnomecanvas-2.0.4"
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomecanvas-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
+
 DOCS="AUTHORS  COPYING.LIB INSTALL NEWS README"
 
 
+src_unpack() {
+	unpack ${A}
+
+	# Fix a crash when using gtk+-2.1.
+	# <azarah@gentoo.org> (21 Nov 2002)
+	cd ${S}; epatch ${FILESDIR}/${PN}-2.0.5-GTK_TYPE_INVISIBLE.patch
+}
 
