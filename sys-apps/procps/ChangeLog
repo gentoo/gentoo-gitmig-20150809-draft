@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.7 2002/10/31 17:27:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.8 2002/11/06 04:26:16 jrray Exp $
+
+  05 Nov 2002; J Robert Ray <jrray@gentoo.org> procps-2.0.10-r1.ebuild :
+  Combine both sed calls into one, avoiding attempt to overwrite 0444
+  perm'd file (fakeroot issue).
 
 *procps-2.0.10-r1 (31 Oct 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.4 2002/10/31 17:48:16 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.5 2002/11/06 04:26:16 jrray Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -18,10 +18,10 @@ src_unpack() {
 	cd ${S}
 
 	# Use the CFLAGS from /etc/make.conf.
-
+	# remove /etc/X11/applnk/Desktop/top.app from makefile
 	mv Makefile Makefile.orig
 	sed -e "s/-O3/${CFLAGS}/" -e 's/all: config/all: /' \
-	    -e "s:--strip::" Makefile.orig > Makefile
+	    -e "s:--strip::" -e 's/$.DESKTOP.//' Makefile.orig > Makefile
 
 	# WARNING! In case of a version bump, check the line below that removes a line from the Makefile file.
 	cd ${S}/ps
@@ -32,12 +32,6 @@ src_unpack() {
 	cd ${S}/proc
 	mv Makefile Makefile.orig
 	sed -e "s/-O2/${CFLAGS}/" -e "s:--strip::" Makefile.orig > Makefile
-
-	#remove /etc/X11/applnk/Desktop/top.app from makefile
-	cd ${S}
-	mv Makefile Makefile.orig
-	sed -e 's/$.DESKTOP.//' Makefile.orig > Makefile
-
 }
 
 src_compile() { 
