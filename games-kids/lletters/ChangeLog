@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/lletters
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.5 2004/02/13 04:10:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.6 2004/03/06 01:19:01 mr_bones_ Exp $
+
+  05 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lletters-0.1.95-r1.ebuild:
+  Fix sandbox violation with USE=nls. (bug #43762)
 
   12 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
   lletters-0.1.95-r1.ebuild, files/tellhow.h.gentoo:

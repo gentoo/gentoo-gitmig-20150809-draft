@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.3 2004/02/13 04:10:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.4 2004/03/06 01:19:01 mr_bones_ Exp $
 
 inherit games
 
@@ -17,7 +17,11 @@ DEPEND="virtual/x11
 	media-libs/imlib
 	=x11-libs/gtk+-1.2*"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
+
+DEPEND="${DEPEND}
+	>=sys-apps/sed-4"
 
 IUSE="nls"
 
@@ -30,8 +34,12 @@ src_unpack() {
 
 src_compile() {
 	egamesconf `use_enable nls` || die
+	# Work around the po/Makefile (bug #43762)
+	# Why don't people honor DESTDIR?
+	sed -i \
+		-e '/^prefix =/ s:/.*:$(DESTDIR)/usr:' po/Makefile \
+			|| die "sed po/Makefile failed"
 	emake || die "emake failed"
-
 }
 
 src_install () {
