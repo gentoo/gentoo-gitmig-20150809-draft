@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.4 2004/11/21 21:40:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.5 2004/11/21 21:47:59 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -81,13 +81,14 @@ pkg_setup() {
 }
 
 src_compile() {
-	set_arch_to_kernel
-	for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
-		einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
-		cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
-		kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
-	done
-	set_arch_to_portage
+	(
+		unset ARCH
+		for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
+			einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
+			cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
+			kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
+		done
+	)
 }
 
 src_install() {
