@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.939 2005/02/07 07:00:49 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.940 2005/02/09 07:32:10 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -202,6 +202,9 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+games-strategy/uqm:music - download and install music files (large)
+games-strategy/uqm:voice - download and install voice files (large)
+games-strategy/uqm:remix - download and install music remix files (large)
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
