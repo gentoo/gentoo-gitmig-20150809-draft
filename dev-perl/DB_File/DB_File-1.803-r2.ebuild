@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.803-r2.ebuild,v 1.2 2003/02/13 11:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.803-r2.ebuild,v 1.3 2003/06/21 21:36:36 drobbins Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/DB_File/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 amd64 alpha"
 
 DEPEND="${DEPEND}
 	>=sys-libs/db-3.2"

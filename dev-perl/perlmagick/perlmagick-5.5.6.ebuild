@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.1 2003/04/24 15:30:32 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.2 2003/06/21 21:36:44 drobbins Exp $
 
 inherit perl-module
 inherit flag-o-matic
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.imagemagick.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 amd64 ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="=media-gfx/imagemagick-${PV}
 		>=dev-lang/perl-5"

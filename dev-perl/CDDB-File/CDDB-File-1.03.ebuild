@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.03.ebuild,v 1.6 2003/02/13 10:57:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.03.ebuild,v 1.7 2003/06/21 21:36:35 drobbins Exp $
 
 inherit perl-module
 
@@ -14,4 +14,4 @@ DEPEND="${DEPEND}
 
 SLOT="2"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 amd64 ppc alpha"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/Audio-Wav-0.02.ebuild,v 1.6 2003/04/08 04:52:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/Audio-Wav-0.02.ebuild,v 1.7 2003/06/21 21:36:35 drobbins Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Audio/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ppc ~sparc ~alpha"
 DEPEND="dev-perl/Audio-Tools"

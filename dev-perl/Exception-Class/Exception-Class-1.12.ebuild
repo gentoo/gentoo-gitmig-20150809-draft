@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.12.ebuild,v 1.2 2003/06/08 04:23:24 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.12.ebuild,v 1.3 2003/06/21 21:36:36 drobbins Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Exception/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="${DEPEND}
 	>=dev-perl/Class-Data-Inheritable-0.02

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r2.ebuild,v 1.4 2003/02/13 11:17:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r2.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
 
 IUSE="opengl"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/Net-Telnet-3.03-r1.ebuild,v 1.3 2002/12/09 04:21:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/Net-Telnet-3.03-r1.ebuild,v 1.4 2003/06/21 21:36:36 drobbins Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Net/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc alpha sparc  sparc "
+KEYWORDS="x86 amd64 ppc alpha sparc  sparc "
 
 DEPEND="${DEPEND}
 	>=dev-perl/libnet-1.0703"

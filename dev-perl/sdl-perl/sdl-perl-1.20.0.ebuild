@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.0.ebuild,v 1.1 2003/03/05 16:13:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.0.ebuild,v 1.2 2003/06/21 21:36:44 drobbins Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://sdlperl.org/downloads/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE="truetype mpeg"
 
 DEPEND="${DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r2.ebuild,v 1.3 2003/06/10 10:56:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27-r2.ebuild,v 1.4 2003/06/21 21:36:44 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl Module for Apache"
@@ -9,7 +9,7 @@ HOMEPAGE="http://perl.apache.org"
 
 SLOT="0"
 LICENSE="Apache-1.1 as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="dev-lang/perl dev-perl/libwww-perl =net-www/apache-1*"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.06.ebuild,v 1.4 2003/03/25 22:11:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.06.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
 
 inherit eutils perl-module
 CATEGORY="dev-perl"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 newdepend ">=media-libs/libgd-2.0.5
 	jpeg? ( media-libs/jpeg )

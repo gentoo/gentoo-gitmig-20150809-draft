@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/File-MMagic-1.19.ebuild,v 1.1 2003/06/08 03:05:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/File-MMagic-1.19.ebuild,v 1.2 2003/06/21 21:36:36 drobbins Exp $
 
 inherit perl-module
 
@@ -12,4 +12,4 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/File/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"

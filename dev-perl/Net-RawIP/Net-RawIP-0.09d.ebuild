@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.09d.ebuild,v 1.4 2003/06/07 04:39:47 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.09d.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ DEPEND="net-libs/libpcap >=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/Test-Simple-0.42-r1.ebuild,v 1.4 2003/02/13 11:20:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/Test-Simple-0.42-r1.ebuild,v 1.5 2003/06/21 21:36:37 drobbins Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/search?dist=Test-Harness"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 mydoc="rfc*.txt"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20020425-r1.ebuild,v 1.4 2003/02/13 11:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20020425-r1.ebuild,v 1.5 2003/06/21 21:36:44 drobbins Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/perltidy/${P/perltidy/Perl-Tidy}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="${DEPEND}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.08.ebuild,v 1.3 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.08.ebuild,v 1.4 2003/06/21 21:36:44 drobbins Exp $
 
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 HOMEPAGE="http://perl.apache.org/"
@@ -10,7 +10,7 @@ S=${WORKDIR}/${NEWP}
 SRC_URI="http://perl.apache.org/dist/${NEWP}.tar.gz"
 DEPEND="dev-lang/perl =net-www/apache-2*"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 SLOT="1"
 

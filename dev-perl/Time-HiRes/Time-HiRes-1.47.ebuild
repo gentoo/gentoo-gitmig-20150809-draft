@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/Time-HiRes-1.47.ebuild,v 1.1 2003/05/25 01:59:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/Time-HiRes-1.47.ebuild,v 1.2 2003/06/21 21:36:38 drobbins Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/author/JHI/${P}/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 amd64 ppc sparc alpha ~mips ~hppa ~arm"
 DEPEND=""
 RDEPEND=""
 

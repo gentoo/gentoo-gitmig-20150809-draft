@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/Attribute-Handlers-0.78-r1.ebuild,v 1.2 2003/06/08 04:30:23 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/Attribute-Handlers-0.78-r1.ebuild,v 1.3 2003/06/21 21:36:35 drobbins Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ HOMEPAGE="http://www.cpan.org/author/ABERGMAN/${P}/"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 myconf="${myconf} INSTALLDIRS=perl"

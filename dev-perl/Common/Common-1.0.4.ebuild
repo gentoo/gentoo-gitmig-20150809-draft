@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.7 2003/06/01 19:41:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Common/Common-1.0.4.ebuild,v 1.8 2003/06/21 21:36:35 drobbins Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -19,7 +19,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="dev-lang/ocaml
 		dev-lang/perl"
