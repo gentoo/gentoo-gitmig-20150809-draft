@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/rss_glx
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss_glx/ChangeLog,v 1.1 2002/11/22 18:22:30 vapier Exp $
+
+*rss_glx-0.6.6 (22 Nov 2002)
+
+  22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Benjamin Ritcey <gentoo@ritcey.com>.
