@@ -1,11 +1,11 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.8 2004/04/15 18:02:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.9 2004/04/16 11:42:26 gmsoft Exp $
 
   15 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> narray-0.5.7_p2.ebuild:
   Stable on sparc
 
-  13 Apr 2004; Guy Martin <gmsoft@gentoo.org> :
+  13 Apr 2004; Guy Martin <gmsoft@gentoo.org> narray-0.5.7_p2.ebuild:
   Marked stable on hppa.
 
   10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> narray-0.5.7-r1.ebuild,
