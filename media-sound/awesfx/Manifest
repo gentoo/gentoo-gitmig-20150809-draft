@@ -1,6 +1,6 @@
 MD5 10440ed44ff4ddbb8a5efeabad83f493 awesfx-0.4.4.ebuild 1499
 MD5 52b26c923c4b05fff7ac90696db916fa awesfx-0.5.0b.ebuild 1170
-MD5 f6bc00d95c874fa682c8818be847ff03 ChangeLog 622
+MD5 1114dd2ca83893df802d12f769aaf018 ChangeLog 622
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 a2f1d07a053240ebc621d1834c928e6f files/awesfx-0.5.0b-makefile-noalsa.patch 3507
 MD5 f2718083317de4e006954291d3da6f4e files/awesfx-0.5.0b-configure-noalsa.patch 7814
