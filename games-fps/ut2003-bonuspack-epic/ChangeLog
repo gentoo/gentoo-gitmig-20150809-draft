@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-bonuspack-epic
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.5 2004/04/02 01:51:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.6 2004/04/23 21:07:50 wolf31o2 Exp $
+
+  23 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-bonuspack-epic-1.ebuild:
+  Adding dodir ${dir} and fising dodir ${dir}/System.  Closing bug #48788.
 
   01 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-bonuspack-epic-1.ebuild:
