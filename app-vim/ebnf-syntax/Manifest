@@ -1,2 +1,14 @@
-MD5 14545371227c96697223ced829db2688 ebnf-syntax-1.1.ebuild 547
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 29fa499533e099f5822f34200767be9d ebnf-syntax-1.1.ebuild 560
+MD5 1eb79bd7f5aff3171c9669b6043cfbf0 ChangeLog 353
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIjBgLLFUmVNQ7rkRAn3dAJ921oLyKbl1QIbf4R4kNLiTXTDFVgCgx3eC
+d7qkNjMiPKEITAC0u0LhAGw=
+=ZkYs
+-----END PGP SIGNATURE-----

@@ -1,2 +1,14 @@
-MD5 862a28a11f0706a166aaae9d46ff0a6c bnf-syntax-1.2.ebuild 513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e3550eb9f4da5dedf7c8497e61df051 bnf-syntax-1.2.ebuild 524
+MD5 5473468d4254331e30ff71b076b88965 ChangeLog 349
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 358d27b31c12ee40b1f91434134aa9ff files/digest-bnf-syntax-1.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIjACLLFUmVNQ7rkRApiZAKDBCImQhw8dFwo+Ma9IYP1kFpzj+ACgirOo
+Fe1s3bB4f2QmurQf74oVmi0=
+=eRSK
+-----END PGP SIGNATURE-----

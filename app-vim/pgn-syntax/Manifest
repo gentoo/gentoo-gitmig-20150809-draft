@@ -1,2 +1,14 @@
-MD5 f30003a2592fe3929824a96681a09ae6 pgn-syntax-1.0.ebuild 539
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2c4f3418f20e9f476a87c6b826763d7 ChangeLog 349
+MD5 9438c8091c1447023babe355495cb32b pgn-syntax-1.0.ebuild 550
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 a6d2e8a5c9fa5ed4c197c2506dc15d9e files/digest-pgn-syntax-1.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIjDeLLFUmVNQ7rkRAjO3AJ4qkGWxF4DkNbd2aouHcBCwONcN4QCeI4PL
+q45vSvq6Nv3pEcYgGUXdQ/k=
+=tFV5
+-----END PGP SIGNATURE-----

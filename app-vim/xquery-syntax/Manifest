@@ -1,2 +1,14 @@
-MD5 7c54bb2e2202d5056bdd547f0037401e xquery-syntax-0.1.ebuild 519
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f9beffcfd51e578c411a351f7640994 ChangeLog 361
+MD5 53c5b5fd757af28302bd23931eb05f5e xquery-syntax-0.1.ebuild 536
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIjEFLLFUmVNQ7rkRArAQAKC1GzhQ243UQIm/UE1SNWXuO4lLtQCaA18X
+/5B9vU+yfpUYoMTB/WxjsZE=
+=OzRN
+-----END PGP SIGNATURE-----
