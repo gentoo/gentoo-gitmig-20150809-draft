@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.8 2002/07/13 21:33:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.9 2002/07/22 21:00:18 raker Exp $
+
+*cyrus-sasl-2.1.6 (22 Jul 2002)
+
+  22 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-sasl-2.1.6.ebuild, files/digest-cyrus-sasl-2.1.6,
+  files/cyrus-sasl-2.1.6-iovec.diff :
+
+  Updated to latest released version.  Most notably, ldap support has been
+  added back in.  (yay!)  Here's the "New in 2.1.6" notes...
+
+  * Security fix for the CRAM-MD5 plugin to check the full length of the
+  digest string.
+  * Return of the Experimental LDAP saslauthd module.
+  * Addition of Experimental MySQL auxprop plugin.
+  * Can now select multiple auxprop plugins (and a priority ordering)
+  * Mechanism selection now includes number of security flags
+  * Mac OS X 10.1 Fixes
+  * Misc other minor bugfixes.
 
 *cyrus-sasl-2.1.5-r2 (13 Jul 2002)
 
