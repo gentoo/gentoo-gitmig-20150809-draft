@@ -24,10 +24,14 @@
 
 # sunflare@gentoo.org (08 Jul 2002)
 # Masked for testing.
-=app-doc/doxygen-1.2.16
+=app-admin/mon-0.99.2-r1
 
 # sunflare@gentoo.org (08 Jul 2002)
 # Masked for testing.
+=app-doc/doxygen-1.2.16
+
+# sunflare@gentoo.org (08 Jul 2002)
+# Deleted; will remove this dependency once 0.99.2-r1 comes out of testing. 
 =app-admin/mon-0.99.2
 
 # sunflare@gentoo.org (08 Jul 2002)
