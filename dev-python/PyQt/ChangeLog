@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.17 2003/04/29 17:53:57 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.18 2003/07/31 03:14:45 caleb Exp $
+
+
+*PyQt-3.7 (30 Jul 2003)
+
+  30 Jul 2003; Caleb Tennis <caleb@gentoo.org> PyQt-3.7.ebuild:
+  Version bump.  Removed version deps on qt and python as this product
+  can support almost all known (portage) version.
+
 *PyQt-3.6-r1 (29 Apr 2003)
 
   29 Apr 2003; Michele Balistreri <brain@gentoo.org> PyQt-3.6-r1.ebuild :

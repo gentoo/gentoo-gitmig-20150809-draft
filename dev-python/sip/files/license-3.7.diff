@@ -1,0 +1,34 @@
+--- build.py.orig	2003-07-30 22:07:12.000000000 +0000
++++ build.py	2003-07-30 22:07:57.000000000 +0000
+@@ -675,31 +675,6 @@
+         licType = "GPL"
+         licname = "GNU General Public License"
+ 
+-    inform("This is the %s version of SIP and is licensed under the %s." % (licType,licname),0)
+-
+-    print
+-    print "Type 'L' to view the license."
+-    print "Type 'yes' to accept the terms of the license."
+-    print "Type 'no' to decline the terms of the license."
+-    print
+-
+-    while 1:
+-        try:
+-            resp = raw_input("Do you accept the terms of the license? ")
+-        except:
+-            resp = ""
+-
+-        resp = string.lower(string.strip(resp))
+-
+-        if resp == "yes":
+-            break
+-
+-        if resp == "no":
+-            sys.exit(0)
+-
+-        if resp == "l":
+-            os.system("more LICENSE")
+-
+     proPatches["@BLX_SIP_LICENSE@"] = licType
+ 
+     inform("Building the %s version of SIP 3.7 for Python %s on %s." % (licType,pyFullVers,sys.platform))
