@@ -1,10 +1,16 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.2 2002/06/05 14:27:40 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.3 2002/08/02 19:34:18 gerk Exp $
 
 *libIDL-0.8.0 (05 Jun 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   05 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> libIDL-0.8.0.ebuild ChangeLog :
 
 *libIDL-0.7.4-r2 (22 May 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   22 May 2002; Spider <spider@gentoo.org> libIDL-0.7.4-r2.ebuild ChangeLog :
   Added this from the gnome2 tarballs
