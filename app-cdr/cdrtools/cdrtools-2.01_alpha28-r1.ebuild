@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.2 2004/05/28 02:51:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.3 2004/05/31 16:58:39 tgall Exp $
 
-inherit eutils gcc
+inherit eutils gcc gnuconfig
 
 DESCRIPTION="A set of tools for CD recording, including cdrecord."
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~hppa sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ppc ~hppa sparc ~alpha ~amd64 ~ia64 ppc64"
 IUSE=""
 
 DEPEND="virtual/glibc"
@@ -36,9 +36,13 @@ src_unpack() {
 	cd ${S}/RULES
 	cp i386-linux-cc.rul x86_64-linux-cc.rul
 	cp i386-linux-gcc.rul x86_64-linux-gcc.rul
+	ln -sf ppc-linux-cc.rul ppc64-linux-cc.rul
 }
 
 src_compile() {
+
+	use ppc64 && gnuconfig_update
+
 	emake CC="$(gcc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
