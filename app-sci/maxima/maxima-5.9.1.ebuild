@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.1.ebuild,v 1.1 2004/10/06 04:30:13 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.1.ebuild,v 1.2 2004/10/07 13:18:47 phosphan Exp $
 
 inherit eutils
 
@@ -82,11 +82,11 @@ pkg_postinst() {
 	then
 		einfo "In order to use Maxima with emacs, add the following to your"
 		einfo ".emacs file:"
-		einfo "(setq load-path (cons "/usr/share/maxima/5.9.0/emacs" load-path))"
-		einfo "(autoload 'maxima-mode "maxima" "Maxima mode" t)"
-		einfo "(autoload 'maxima "maxima" "Maxima interactive" t)"
-		einfo "(setq auto-mode-alist (cons '("\\.max" . maxima-mode) auto-mode-alist))"
-		einfo "(autoload 'emaxima-mode "emaxima" "EMaxima" t)"
+		einfo '(setq load-path (cons "/usr/share/maxima/5.9.0/emacs" load-path))'
+		einfo "(autoload 'maxima-mode \"maxima\" \"Maxima mode\" t)"
+		einfo "(autoload 'maxima \"maxima\" \"Maxima interactive\" t)"
+		einfo "(setq auto-mode-alist (cons '(\"\\\\.max\" . maxima-mode) auto-mode-alist))"
+		einfo "(autoload 'emaxima-mode \"emaxima\" \"EMaxima\" t)"
 		einfo "(add-hook 'emaxima-mode-hook 'emaxima-mark-file-as-emaxima)"
 	fi
 }
