@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.2 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.3 2003/11/16 23:07:21 pyrania Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.jmknoble.net/WindowMaker/wmclock/${P}.tar.gz"
 HOMEPAGE="http://www.jmknoble.net/WindowMaker/wmclock/"
 
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
