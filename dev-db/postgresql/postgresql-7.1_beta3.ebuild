@@ -14,7 +14,7 @@ src_unpack() {
   unpack ${A}
   cd ${S}/src/backend/catalog
   cp genbki.sh genbki.sh.orig
-#  sed -e 's:\\name:\\ name:' genbki.sh.orig > genbki.sh
+  sed -e 's:\\name:\\ name:' genbki.sh.orig > genbki.sh
 }
 
 src_compile() {
