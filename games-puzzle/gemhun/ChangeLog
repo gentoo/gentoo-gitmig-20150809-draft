@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gemhun
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.1 2003/11/08 17:13:04 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.2 2004/03/31 19:04:33 mr_bones_ Exp $
+
+  31 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gemhun-20031016.ebuild:
+  flag-o-matic; error check sed; tidy
 
 *gemhun-20031016 (08 Nov 2003)
 
