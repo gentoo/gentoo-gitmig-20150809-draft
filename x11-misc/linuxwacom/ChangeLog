@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.14 2004/10/04 06:02:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.15 2004/10/04 06:13:29 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Update logic to consider that the sdk USE flag may be set without xfree or
+  xorg-x11 installed.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:

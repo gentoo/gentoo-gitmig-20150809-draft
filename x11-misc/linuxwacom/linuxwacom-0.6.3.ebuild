@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.3.ebuild,v 1.8 2004/10/04 06:02:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.3.ebuild,v 1.9 2004/10/04 06:13:29 spyderous Exp $
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -33,12 +33,15 @@ pkg_setup() {
 				eerror "that you have emerged xfree with the sdk USE flag enabled."
 				die "Please remerge xfree with the sdk USE flag enabled."
 			fi
-		else if [ ! "`grep sdk /var/db/pkg/x11-base/xorg-x11-[0-9]*/USE`" ]
+		elif has_version "x11-base/xorg-x11"
+		then
+			if [ ! "`grep sdk /var/db/pkg/x11-base/xorg-x11-[0-9]*/USE`" ]
 			then
 				eerror "This package builds against the X.Org SDK, and therefore requires"
 				eerror "that you have emerged xorg-x11 with the sdk USE flag enabled."
 				die "Please remerge xorg-x11 with the sdk USE flag enabled."
 			fi
+		else die "This build requires x11-base/xorg-x11 or x11-base/xfree to be installed to build against the SDK when USE=sdk."
 		fi
 		einfo "Building against the X11 SDK. This will install updated X drivers and userland tools."
 	else
