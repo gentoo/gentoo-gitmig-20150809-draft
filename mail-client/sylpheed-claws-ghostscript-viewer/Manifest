@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ca7084abffaa897749cdcfd0f8e5afe1 sylpheed-claws-ghostscript-viewer-0.8.ebuild 803
+MD5 64da8dcb0a077d2e8952ea0d8fe6f6a3 ChangeLog 1011
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 ed4b9465450242cccaa43822a1f93d12 ChangeLog 904
 MD5 566010d620f19ccb2e1f5bc9c9cb3cb0 files/digest-sylpheed-claws-ghostscript-viewer-0.8 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdWzzugEuf3OQ0akRArQDAJ9nm17Y4fa5phWoyNiyh3z9ScoW9wCghVdc
-dE8hmsc0oiQrLDz/WwOtaEM=
-=eIw9
------END PGP SIGNATURE-----
