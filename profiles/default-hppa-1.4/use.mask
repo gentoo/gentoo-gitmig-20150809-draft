@@ -1,3 +1,8 @@
+# 19 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# Ldap and acl not tested yet
+ldap
+acl
+
 # 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # Postgresql is curently b0rked on hppa
 postgres
