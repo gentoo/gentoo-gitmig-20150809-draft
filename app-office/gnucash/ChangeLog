@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.61 2005/01/02 18:32:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.62 2005/01/02 19:44:23 kloeri Exp $
+
+  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> gnucash-1.8.10.ebuild:
+  ~alpha keyword, bug 73702.
 
   03 Jan 2005; Chris White <chriswhite@gentoo.org> gnucash-1.8.10.ebuild:
   ~ppc marked per bug #73702.
