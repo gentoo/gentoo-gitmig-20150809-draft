@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.47 2005/01/12 08:34:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.48 2005/01/29 00:53:19 dragonheart Exp $
+
+*nessus-2.2.2a (28 Jan 2005)
+
+  28 Jan 2005; Daniel Black <dragonheart@gentoo.org> nessus-2.2.0.ebuild,
+  +nessus-2.2.2a.ebuild, nessus-2.3.0.ebuild:
+  Add latest stable version (bug #78789). Added dropped ~ppc64 keywords. Thanks
+  to Alexey Portnov <mail@trado.nnov.ru>
 
 *nessus-2.3.0 (12 Jan 2005)
 
