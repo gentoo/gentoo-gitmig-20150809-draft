@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.15 2003/02/12 05:36:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.16 2003/02/13 07:26:41 gerk Exp $
+
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> xpdf-2.01.ebuild :
+  set to -ppc, can't meet deps
 
   13 Jan 2003; Aron Griffis <agriffis@gentoo.org> xpdf-2.01-r1.ebuild :
   Add alpha to KEYWORDS
