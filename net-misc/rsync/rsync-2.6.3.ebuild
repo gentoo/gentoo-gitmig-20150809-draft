@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.3.ebuild,v 1.2 2004/10/03 04:38:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.3.ebuild,v 1.3 2004/10/05 05:20:38 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -24,7 +24,11 @@ S="${WORKDIR}/${P/_/}"
 src_unpack() {
 	unpack "${P/_/}.tar.gz"
 	cd ${S}
-	use acl && epatch patches/acl.diff
+	if use acl ; then
+		epatch patches/acl.diff
+		autoconf || die "autoconf"
+		autoheader || die "autoheader"
+	fi
 
 	# change confdir to /etc/rsync rather than just /etc (the --sysconfdir
 	# yes, updating the man page is very important.
