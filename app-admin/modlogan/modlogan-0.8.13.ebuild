@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.1 2004/10/17 17:14:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.2 2004/10/18 18:11:18 mr_bones_ Exp $
 
 MY_FILESDIR="${FILESDIR}/${PV}"
 THEMES_VERSION="0.0.7"
@@ -39,14 +39,14 @@ src_compile() {
 		|| myconf="--without-mysql"
 
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	econf \
 		--enable-plugins \
 		--sysconfdir=/etc \
 		--libdir=/usr/lib/modlogan \
 		--disable-check-dynamic \
 		${myconf} || die
-	
+
 	emake || die
 }
 
