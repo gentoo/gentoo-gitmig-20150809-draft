@@ -22,75 +22,83 @@
 ##   End example
 ##
 
-# <seemant@gentoo.org> 24 Jul 2002
+# <azarah@gentoo.org> (25 Jul 2002)
+# gawk is very flexible and can be used instead
+# of cut, etc that is not in /bin, and also much
+# faster than greps/cuts.  Thus I started using
+# it in baselayout, but we need >=gawk-3.1.0-r3
+# to have it in /bin.
+<sys-apps/gawk-3.1.0-r3
+
+# <seemant@gentoo.org> (24 Jul 2002)
 # masked for testing.  a replacement of the system's sed programme
 =sys-apps/supersed-3.58
 
-# <spider@gentoo.org> 25 Jul 2002
+# <spider@gentoo.org> (25 Jul 2002)
 # fixes buildproblems for me. please teset
 =sys-devel/perl-5.6.1-r5
 
-# <woodchip@gentoo.org> 24 Jul 2002
+# <woodchip@gentoo.org> (24 Jul 2002)
 # apparently fatally flawed.
 net-misc/fakeidentd
 
-# <spider@gentoo.org> 25 Jul 2002
+# <spider@gentoo.org> (25 Jul 2002)
 #  Just a minor change, worth testing 
 # as it uses less RAM during compile
 # but shouldn't be unmasked just for this
 # only changes the buildprocess
 =net-www/mozilla-1.0-r4
 
-# <g2boojum@gentoo.org> 24 Jul 2002
+# <g2boojum@gentoo.org> (24 Jul 2002)
 # waiting on copyright 
 net-misc/radvd
 
-# <stubear@gentoo.org> 24 Jul 2002
+# <stubear@gentoo.org> (24 Jul 2002)
 # needs testing of new CJK stuff
 =dev-db/postgresql-7.2.1-r2
 
-# <carpaski@gentoo.org> 24 Jul 2002
+# <carpaski@gentoo.org> (24 Jul 2002)
 # Quick testing
 =net-mail/vpopmail
 
-# <aliz@gentoo.org> 24 Jul 2002
+# <aliz@gentoo.org> (24 Jul 2002)
 # needs some testing first
 =app-text/aspell-0.33.7.1-r2
 
-# <aliz@gentoo.org> 24 Jul 2002
+# <aliz@gentoo.org> (24 Jul 2002)
 # masked for testing
 =sys-apps/groff-1.18
 
-# <seemant@gentoo.org> 23 Jul 2002
+# <seemant@gentoo.org> (23 Jul 2002)
 # Masked while the system people put this through the test
 =sys-apps/bash-2.05b
 
-# <seemant@gentoo.org> 23 Jul 2002
+# <seemant@gentoo.org> (23 Jul 2002)
 # Masked while g2boojum approves
 =sys-kernel/usermode-sources-2.4.18-r2
 =dev-util/usermode-20020718
 
-# <raker@gentoo.org> 22 Jul 2002
+# <raker@gentoo.org> (22 Jul 2002)
 # New snazzy postfix ebuild with ipv6,tls, and saslv2 support
 =net-mail/postfix-1.1.11.20020613
 
-# <owen@gentoo.org> 22 Jul 2002
+# <owen@gentoo.org> (22 Jul 2002)
 # Broken against latest FLTK. Hopefully will be fixed with a new POSE.
 <=app-emulation/pose-3.5
 
-# phoen][x <phoenix@gentoo.org> 22 Jul 2002
+# phoen][x <phoenix@gentoo.org> (22 Jul 2002)
 # Bumped to new version - masked for testing
 >=app-emulation/bochs-1.4.1
 
-# <owen@gentoo.org> 22 Jul 2002
+# <owen@gentoo.org> (22 Jul 2002)
 # masked for testing.
 =dev-libs/pilot-link-0.11.1
 
-# <seemant@gentoo.org> 21 Jul 2002
+# <seemant@gentoo.org> (21 Jul 2002)
 # masked for testing
 =sys-devel/gettext-0.11.3
 
-# <seemant@gentoo.org> 20 Jul 2002
+# <seemant@gentoo.org> (20 Jul 2002)
 # masked because GNU Readline 4.2 is not in 1.0 default inclusion
 =media-sound/cdcd-0.6.4
 
