@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.22 2004/08/25 19:52:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.23 2004/08/28 06:01:32 solar Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -86,7 +86,7 @@ else
 fi
 
 DEPEND="virtual/libc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	!nptl? ( !uclibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
@@ -95,7 +95,7 @@ DEPEND="virtual/libc
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	!nptl? ( !uclibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
