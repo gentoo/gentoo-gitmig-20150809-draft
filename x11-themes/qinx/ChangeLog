@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.7 2003/06/12 19:50:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.8 2003/09/15 13:05:33 wmertens Exp $
+
+*qinx-0.6 (15 Sep 2003)
+
+  15 Sep 2003; <wmertens@gentoo.org> qinx-0.6.ebuild:
+  New upstream version. Since it compiles cleanly and it's just a theme,
+  marking stable for x86. Deleted v0.2 to clean things up.
 
   12 Jun 2003; <msterret@gentoo.org> qinx-0.2.ebuild:
   fix Header
