@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.5 2004/10/13 17:31:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.6 2004/10/14 12:00:06 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${PN}-${BASE_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
-HPPA_PATCHES=2004-08-24
+HPPA_PATCHES=2004-09-30
 
 SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 	http://dev.gentoo.org/~lv/${PN}-manpages-${NEW_PV}.tar.bz2
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~x86 ~amd64 ~hppa ~ppc64 ~ppc"
+KEYWORDS="-* ~x86 ~amd64 -hppa ~ppc64 ~ppc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -341,7 +341,11 @@ do_arch_hppa_patches() {
 		epatch ${i}
 	done
 
+	unset EPATCH_OPTS
+
 	use hardened && epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch
+
+	einfo "Done with hppa patches."
 
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.276 2004/10/13 17:31:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.277 2004/10/14 12:00:06 gmsoft Exp $
+
+  14 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20041006.ebuild:
+  Updated hppa patches to 2004-09-30. Fixed unpacking (#67503). Marked -hppa
+  since it was never tested and problems where reported on the parisc mailing
+  list.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   Moved Lv's latest patch into do_arch{ia64|amd64}_patches() to avoid breakage
