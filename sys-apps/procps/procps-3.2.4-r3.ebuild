@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r3.ebuild,v 1.1 2005/02/27 17:42:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r3.ebuild,v 1.2 2005/03/01 22:20:56 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 HOMEPAGE="http://procps.sourceforge.net/"
-SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
+SRC_URI="http://procps.sf.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="mips"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="n32"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -23,6 +23,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-linux26-slab.patch
 	# Upstream patch to fix display on 64bit systems
 	epatch "${FILESDIR}"/${PV}-64bit-display.patch
+	# Pretty up the /proc mount error message
+	epatch "${FILESDIR}"/procps-3.2.5-proc-mount.patch
 
 	# Clean up the makefile
 	# firstly we want to control stripping
