@@ -1,5 +1,5 @@
-MD5 ce7d69642a80d1d072c1bfbb22c39424 ChangeLog 552
-MD5 6b9191e85981d11fd04b9bafcc5944a7 datavision-0.8.2.ebuild 2681
+MD5 dcccac04dbca4e5d4a9ba4c20b6776a3 ChangeLog 657
+MD5 310b788d0c6316b439e09f03a3956bcb datavision-0.8.2.ebuild 2680
 MD5 5840092606eb4cc78c7f2ab5a1ea6c0b metadata.xml 1074
 MD5 0c349e98a6dce2623ff69e1be9efcc79 files/build.xml 3172
 MD5 a282952fb231f9f35456cecb32fb45f9 files/datavision.sh 418

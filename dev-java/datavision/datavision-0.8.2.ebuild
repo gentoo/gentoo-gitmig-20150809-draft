@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.3 2005/01/01 18:22:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.4 2005/01/20 16:37:39 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.4
 	junit?( >=dev-java/junit-3.7 )
 	jikes?( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4
-	>=app-text/itext-1.02b
+	>=dev-java/itext-1.02b
 	>=dev-java/jruby-0.7.0
 	=dev-java/gnu-regexp-1.1*
 	=dev-java/jcalendar-1.2*
