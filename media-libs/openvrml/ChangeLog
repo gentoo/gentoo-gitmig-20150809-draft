@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openvrml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.11 2004/06/24 23:18:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.12 2004/08/02 08:49:55 lanius Exp $
+
+  02 Aug 2004; Heinrich Wendel <lanius@gentoo.org> openvrml-0.14.3.ebuild:
+  replace text useflag by truetype
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> openvrml-0.14.1.ebuild:
   clean older ebuild
