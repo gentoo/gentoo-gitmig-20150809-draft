@@ -3,6 +3,9 @@
 # /home/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09
 # lanius Exp $
 
+  26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> lirc-0.7.0_pre4.ebuild:
+  Marked stable on amd64.
+
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   lirc-0.6.6-r1.ebuild, lirc-0.7.0_pre3.ebuild, lirc-0.7.0_pre4.ebuild:
   x86 stable.QA fixes. Use LIRC_OPTS to set options.
