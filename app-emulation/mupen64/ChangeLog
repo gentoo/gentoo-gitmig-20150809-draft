@@ -1,11 +1,13 @@
 # ChangeLog for app-emulation/mupen64
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/ChangeLog,v 1.3 2003/03/03 12:44:43 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/ChangeLog,v 1.4 2003/06/21 08:57:57 vapier Exp $
+
+*mupen64-0.1 (21 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + build from src + games.eclass support #13141.
 
 *mupen64-0.0.90a (26 Dec 2002)
-
-  03 Mar 2003; <vladimir@gentoo.org> mupen64-0.0.90a.ebuild:
-  Automated removal of remaining sparc64 KEYWORDS
 
   26 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   initial release

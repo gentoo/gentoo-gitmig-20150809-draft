@@ -1,13 +1,11 @@
 #!/bin/sh
 
-if ! [ -d ~/.mupen64/save ]
-then
+if [ ! -d ~/.mupen64/save ] ; then
 	mkdir -p ~/.mupen64/{save,plugins}
 	cd ~/.mupen64
-	ln -s /usr/lib/mupen64/plugins/* plugins/
-	ln -s /opt/mupen64/mupen64 mupen64
+	ln -s GENTOO_DIR/plugins/* plugins/
+	ln -s GENTOO_DIR/mupen64 mupen64
 fi
 
-cd $HOME/.mupen64
-./mupen64	
-
+cd ~/.mupen64
+GENTOO_DIR/mupen64 $@
