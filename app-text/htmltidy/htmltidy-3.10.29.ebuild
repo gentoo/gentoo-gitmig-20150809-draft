@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.9 2004/06/24 22:40:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-3.10.29.ebuild,v 1.10 2004/07/23 18:20:56 usata Exp $
 
 inherit eutils
 
@@ -17,9 +17,14 @@ SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz
 		 http://tidy.sourceforge.net/docs/tidy_docs.tgz
 		 xml? ( http://www.cise.ufl.edu/~ppadala/tidy/html2db.tar.gz )"
 
+DEPEND="virtual/libc
+	>=sys-devel/autoconf-2.5
+	>=sys-devel/automake-1.5"
+RDEPEND="virtual/libc"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha ~amd64 macos"
 IUSE="debug doc xml"
 
 src_unpack() {
@@ -31,7 +36,8 @@ src_unpack() {
 	/bin/sh ./build/gnuauto/setup.sh > /dev/null
 
 	# Stop tidy from appending -O2 to our CFLAGS
-	sed -i -e "/save_cflags/s/\ \-O2//" configure.in
+	sed -e "/save_cflags/s/\ \-O2//" configure.in > ${T}/configure.in &&
+	mv ${T}/configure.in configure.in || die "sed configure.in failed"
 
 	if use xml ; then
 		# Apply the docbook patch to tidy sources
@@ -42,9 +48,10 @@ src_unpack() {
 		epatch ${FILESDIR}/03-html2db-null.patch
 
 		# Point to the tidy source in the html2db Makefile
-		sed -i -e "/TIDYDIR\=/s:\.\.:${S}:" \
+		sed -e "/TIDYDIR\=/s:\.\.:${S}:" \
 			   -e "/LIBDIR\=/s:lib:src\/\.libs\/:" \
-			   ${WORKDIR}/html2db/Makefile
+			   ${WORKDIR}/html2db/Makefile > ${T}/Makefile &&
+		mv ${T}/Makefile ${WORKDIR}/html2db/Makefile || die "sed Makefile failed"
 	fi
 }
 
@@ -55,7 +62,7 @@ src_compile() {
 
 	if use xml ; then
 		cd ${WORKDIR}/html2db
-		make || die
+		emake || die
 	fi
 }
 
