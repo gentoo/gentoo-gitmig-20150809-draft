@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.13 2002/11/28 01:42:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.14 2002/11/30 23:32:48 nall Exp $
 
 *libgnome-2.0.6 (27 Nov 2002)
 
@@ -8,6 +8,9 @@
   GNOME 2.0.3 release
 
 *libgnome-2.1.0 (27 Oct 2002)
+
+  30 Nov 2002; Jon Nall <nall@gentoo.org> libgnome-2.1.0.ebuild :
+  keyworded as ~ppc
 
   27 Oct 2002; foser <foser@gentoo.org> libgnome-2.1.0.ebuild :
   Gnome 2.1 commit
