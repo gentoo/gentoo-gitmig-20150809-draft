@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.6 2002/10/01 10:20:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.7 2002/10/21 17:33:10 vapier Exp $
+
+*unzip-5.50-r1 (21 Oct 2002)
+
+  21 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a symlink for zipinfo per #9425
 
 *unzip-5.50 (01 Oct 2002)
 
