@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.5.0.ebuild,v 1.2 2005/01/02 17:24:38 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.6.0.ebuild,v 1.1 2005/01/02 17:24:38 bcowan Exp $
 
 DESCRIPTION="Xfce4 media player"
 HOMEPAGE="http://spuriousinterrupt.org/projects/xfmedia"
-SRC_URI="http://spuriousinterrupt.org/projects/xfmedia/files/${P}.tar.gz"
+SRC_URI="http://spuriousinterrupt.org/projects/xfmedia/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.2*
 	dev-libs/libxml2
-	>=xfce-base/xfce4-base-4.1.90
+	>=xfce-base/xfce4-base-4.1.99.2
 	media-libs/xine-lib"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
