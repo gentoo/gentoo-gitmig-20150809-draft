@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-sgml-dtd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.22 2004/03/09 23:11:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/ChangeLog,v 1.23 2004/04/15 02:52:35 geoman Exp $
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org>
+  docbook-sgml-dtd-3.0-r1.ebuild, docbook-sgml-dtd-3.1-r1.ebuild,
+  docbook-sgml-dtd-4.0-r1.ebuild, docbook-sgml-dtd-4.1-r1.ebuild:
+  Marked stable on mips.
 
   09 Mar 2004; <agriffis@gentoo.org> docbook-sgml-dtd-4.2.ebuild:
   stable on alpha and ia64

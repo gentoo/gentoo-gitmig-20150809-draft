@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.18 2004/03/09 05:23:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.19 2004/04/15 02:55:24 geoman Exp $
 
 MY_P="sdb4124"
 S=${WORKDIR}/${P}
 DESCRIPTION="Docbook DTD for XML"
 SRC_URI="http://www.nwalsh.com/docbook/simple/${PV}/${MY_P}.zip"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 SLOT="0"
 LICENSE="X11"
 
