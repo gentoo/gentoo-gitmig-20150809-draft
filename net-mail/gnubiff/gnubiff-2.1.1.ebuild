@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.1.ebuild,v 1.1 2005/03/07 12:57:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.1.ebuild,v 1.2 2005/03/12 19:49:31 nakano Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ IUSE="gnome password"
 
 RDEPEND="virtual/libc
 	>=x11-libs/gtk+-2.4
+	>=gnome-base/libglade-2.3
 	gnome? ( >=gnome-base/libgnome-2.2
 		>=gnome-base/libgnomeui-2.2 )"
 
