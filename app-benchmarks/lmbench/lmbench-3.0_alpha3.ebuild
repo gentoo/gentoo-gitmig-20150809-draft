@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.6 2004/05/10 14:56:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.7 2004/05/13 18:24:08 fmccor Exp $
 
 inherit gcc
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.bitmover.com/lmbench/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="virtual/glibc"
