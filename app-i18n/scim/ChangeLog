@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.18 2004/06/24 21:53:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.19 2004/06/26 10:19:28 usata Exp $
+
+*scim-0.99.1 (26 Jun 2004)
+
+  26 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -scim-0.8.2.ebuild,
+  +scim-0.99.1.ebuild:
+  Version bumped. Added to ~alpha. Removed old ebuild.
 
 *scim-0.99.0 (21 Jun 2004)
 
