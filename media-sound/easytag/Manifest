@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7655bd7391fd662c7a33bc4a0b154252 ChangeLog 9357
-MD5 bb2cf80daa29eb49020aa2f934c040b3 easytag-1.99.2-r1.ebuild 1365
-MD5 bb726cc75ebfd04025a335cf7f4ab980 easytag-1.0.ebuild 1205
-MD5 e930e32fc78c2d62acbdd3bcf96f017d easytag-0.31-r2.ebuild 1503
-MD5 6a9577f6f7bd662b3731e88ec5b7eacf easytag-0.30d.ebuild 1585
-MD5 1938bc1e5b84790dfca5f1e21c1cbef4 easytag-1.0-r1.ebuild 1223
+MD5 0616e5064376abca7ea661b00df2fbc9 ChangeLog 9465
 MD5 40a9a5b1285d1cbbe7fb1cc171b2bbdd easytag-1.99.1.ebuild 1351
+MD5 bb726cc75ebfd04025a335cf7f4ab980 easytag-1.0.ebuild 1205
+MD5 bc22b0ee8bb900cee1624e632046bd76 easytag-1.0-r1.ebuild 1222
+MD5 bb2cf80daa29eb49020aa2f934c040b3 easytag-1.99.2-r1.ebuild 1365
 MD5 79119f45cab878d56945e1c66e22550c metadata.xml 402
 MD5 c4d08df22462de9ece56501c89750069 easytag-1.99.2.ebuild 1351
+MD5 e930e32fc78c2d62acbdd3bcf96f017d easytag-0.31-r2.ebuild 1503
 MD5 8675a281ffdfa2e143517cb7e2fab945 easytag-0.31.ebuild 1676
-MD5 5630250004c7a1257a3a170ab8bb749f files/easytag-0.30.2-gcc2.patch 11999
-MD5 bed011d8cb53800acb92633c0341a526 files/digest-easytag-1.0-r1 65
-MD5 25444660393147e2d06a5f1378a89ec4 files/easytag-0.31_pre2-gcc2.patch 2763
-MD5 0d25821074d4a2c7097aba4513b54f7b files/digest-easytag-1.99.2 68
-MD5 86777318233983d77338c33ab4bf266b files/easytag-ape-fix.patch 684
-MD5 0dc3e112a9f2e10861c7608a584f9423 files/digest-easytag-0.30d 349
+MD5 6a9577f6f7bd662b3731e88ec5b7eacf easytag-0.30d.ebuild 1585
 MD5 a767d8be7a9435927acebb4b1ca9df4c files/easytag-0.30.2-fix-configure.patch 648
-MD5 bed011d8cb53800acb92633c0341a526 files/digest-easytag-1.0 65
+MD5 6adeec14f325dc4f876c9893498412ac files/digest-easytag-1.99.1 68
 MD5 eaf43037ba8c09b632e3dd43420700e3 files/digest-easytag-0.31-r2 154
 MD5 0d25821074d4a2c7097aba4513b54f7b files/digest-easytag-1.99.2-r1 68
-MD5 6adeec14f325dc4f876c9893498412ac files/digest-easytag-1.99.1 68
+MD5 bed011d8cb53800acb92633c0341a526 files/digest-easytag-1.0-r1 65
 MD5 d81b9befdf36f2e2bdc8ef1e26d450cb files/digest-easytag-0.31 138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB10ETCHk4+ZoBpvsRAnu/AJ4t5cQ9KH85Fo8d5HidwLhKwlYGrwCdEZBD
-Z0g6Od8lApPQmj8LNKDaorM=
-=rRDj
------END PGP SIGNATURE-----
+MD5 5630250004c7a1257a3a170ab8bb749f files/easytag-0.30.2-gcc2.patch 11999
+MD5 0d25821074d4a2c7097aba4513b54f7b files/digest-easytag-1.99.2 68
+MD5 86777318233983d77338c33ab4bf266b files/easytag-ape-fix.patch 684
+MD5 25444660393147e2d06a5f1378a89ec4 files/easytag-0.31_pre2-gcc2.patch 2763
+MD5 bed011d8cb53800acb92633c0341a526 files/digest-easytag-1.0 65
+MD5 0dc3e112a9f2e10861c7608a584f9423 files/digest-easytag-0.30d 349
