@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/lupy
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/ChangeLog,v 1.1 2004/02/17 14:37:48 lordvan Exp $
+
+*lupy-0.1.5.5.1 (17 Feb 2004)
+  
+  17 Feb 2004; Thomas Raschbacher <lordvan@gentoo.org> lupy-0.1.5.5.1.ebuild:
+  initial import
