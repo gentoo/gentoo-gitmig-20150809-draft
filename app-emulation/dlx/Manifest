@@ -1,4 +1,6 @@
+MD5 24a01c04de02b3887fa7a94f9a861ddf ChangeLog 625
 MD5 7a54c5126941d27c069689260d5af4bb dlx-1.0.0.ebuild 526
-MD5 d2c9ad6f0bc058005fec1104be794b49 ChangeLog 391
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
+MD5 556e2a8d5c741d9813942037d0414f46 dlx-1.0.0-r1.ebuild 671
 MD5 f8e3caf5fa8caedbbccf1cc9e55ccc61 files/digest-dlx-1.0.0 55
+MD5 f8e3caf5fa8caedbbccf1cc9e55ccc61 files/digest-dlx-1.0.0-r1 55
