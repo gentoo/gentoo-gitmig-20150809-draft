@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.23 2005/03/20 18:29:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.24 2005/03/31 20:53:50 blubb Exp $
+
+  31 Mar 2005; <blubb@gentoo.org> jpilot-0.99.7-r1.ebuild:
+  stable on amd64
 
   20 Mar 2005; Jason Wever <weeve@gentoo.org> jpilot-0.99.7-r1.ebuild:
   Fixed up ebuild to inherits eutils so epatch will work and marked stable on
