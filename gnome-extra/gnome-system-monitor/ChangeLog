@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.46 2004/09/17 22:53:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.47 2004/11/05 03:44:44 obz Exp $
+
+*gnome-system-monitor-2.7.0-r1 (05 Nov 2004)
+
+  05 Nov 2004; Mike Gardiner <obz@gentoo.org>
+  +files/gnome-system-monitor-execlp.patch,
+  +gnome-system-monitor-2.7.0-r1.ebuild:
+  Applied execlp patch, as outlined in bug #17880, so that killing an un-owned
+  process really works now.
 
 *gnome-system-monitor-2.7.0 (18 Sep 2004)
 

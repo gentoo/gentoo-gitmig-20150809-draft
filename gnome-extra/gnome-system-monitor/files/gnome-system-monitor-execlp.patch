@@ -1,0 +1,11 @@
+--- gnome-system-monitor-2.7.0/src/util.c	2004-07-19 20:20:08.000000000 +0800
++++ gnome-system-monitor-2.7.0-patched/src/util.c	2004-11-05 19:29:24.543517008 +0800
+@@ -270,7 +270,7 @@
+ 		freopen ("/dev/null", "w", stdout);
+ #endif
+ 
+-		execlp ("su", "su", "-m", user_p, "-c", exec_p, NULL);
++		execlp ("su", "-m", user_p, "-c", exec_p, NULL);
+ 		_exit (0);
+ 		
+ 	}
