@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0-r1.ebuild,v 1.1 2004/02/23 18:51:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.0-r1.ebuild,v 1.2 2004/02/24 08:33:13 mr_bones_ Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -17,11 +17,11 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	# Do not add -march=i586, bug #41770.
 	sed -i -e 's:-march=i[345]86 ::g' configure
-	
+
 	# This is needed for alpha and probably other newer arches (amd64)
 	# (13 Jan 2004 agriffis)
 	gnuconfig_update
