@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gnustep-back
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.10 2003/06/29 21:34:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.11 2003/07/02 08:15:09 raker Exp $
+
+*gnustep-back-0.8.5-r1 (02 Jul 2003)
+
+  02 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.5-r1.ebuild:
+  New ebuild which includes an xft2 patch and depends on the gnustep eclass.
 
   29 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.5.ebuild:
   Small fix to hopefully resolve bug #19698

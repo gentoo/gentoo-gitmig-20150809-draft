@@ -1,0 +1,11 @@
+--- gnustep-back-0.8.5.orig/configure.ac        2003-03-12 07:28:32.000000000 +0800
++++ gnustep-back-0.8.5/configure.ac     2003-06-28 15:18:53.000000000 +0800
+@@ -176,6 +176,7 @@
+ # Extended font support & UTF8 support
+ #--------------------------------------------------------------------
+ WITH_XFT=no
++GRAPHIC_CFLAGS="${GRAPHIC_CFLAGS} -I/usr/include/freetype2"
+ save_header=${CPPFLAGS}
+ save_libs=${LIBS}
+ CPPFLAGS="${GRAPHIC_CFLAGS} ${GRAPHIC_LFLAGS} ${CPPFLAGS}"
+
