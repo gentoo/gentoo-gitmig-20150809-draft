@@ -1,9 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.11 2004/06/24 23:46:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.12 2004/07/17 18:03:33 fafhrd Exp $
 
 *windowmaker-0.80.2-r4 (07 Jun 2004)
 
+  17 Jun 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  metadata.xml:
+  Added windowmaker to gnustep herd.
+  
   07 Jun 2004; Nick Hadaway <raker@gentoo.org> 
   windowmaker-0.80.2-r4.ebuild, files/wmfpo.patch, 
   files/gtk2flickerfix.patch:
