@@ -1,22 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cff01d152628ab55c43cca83d0a576a4 ChangeLog 1616
-MD5 71d963ee6718e6ef0d32b98ed714b0be util-vserver-0.30.ebuild 1338
-MD5 e9ce3ebab93b61e6aec608d5deb49d6f util-vserver-0.29_p214.ebuild 2115
-MD5 de373141d8d3eeffd74dccdd3b7e7196 files/digest-util-vserver-0.30 70
-MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
+MD5 9c760add6c9c1acc9005f451786091e3 ChangeLog 2021
+MD5 db4295d67ea5ff66ec872fa3563f146c util-vserver-0.30.ebuild 1337
+MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
+MD5 2f53c8eb1d63c11023789c2e4fb4737a util-vserver-0.30.196.ebuild 1351
 MD5 3fb961ce171c0f04c695c76f698daa94 files/rebootmgr.initd 966
-MD5 b2b8518d47de9e56f0ddbe7c724c5153 files/configure.patch 588
-MD5 e9e0e5d1c6b7b26a7a2f2dbd27f9ce1d files/vprocunhide 779
-MD5 bb2e87b9dec28f87c0f884a6bdb97777 files/vservers-init 1442
-MD5 d594dbc3171e5b45319a01d12c7e6d7e files/digest-util-vserver-0.29_p214 74
-MD5 42078263eccf1f9d58f0e74ddff51bdb files/vservers-conf.d 908
-MD5 9c223495a65c74f9819c5ee880a428bf files/vserver-build-029p214.patch 864
+MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
+MD5 de373141d8d3eeffd74dccdd3b7e7196 files/digest-util-vserver-0.30 70
+MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
+MD5 f7a463d2443b495aa0e2554051ad5949 files/0.30.196/vservers.confd 1020
+MD5 67a441a0026927594aaa0926fbb5a13f files/0.30.196/vservers.initd 1270
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBTdcOKtJO8LeSoosRAvYUAJ9G8jcIbLI3rIr1bIrXxKr/+nb+RwCfVbM8
-JwicT9URHrujYwLUPEZUWiw=
-=Jx0k
+iD8DBQFB82UgmPFBzbX68WERAla1AJ4y8FCTJR1p9+YOpIjsDS8v1TOvIgCfabx0
+asjEBu5kRQhUMB64BL8VIbk=
+=QE3e
 -----END PGP SIGNATURE-----

@@ -1,0 +1,21 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.196/vservers.confd,v 1.1 2005/01/23 08:49:41 hollow Exp $
+
+# The *basename* of the lockfile; this must be the same name like
+# this if the initscript. Else, the vservers will not be stopped at
+# shutdown
+LOCKFILE=/var/lock/vservers-default
+
+# Number of vservers which shall be started in parallel; since most
+# initmethods are spending much time time in sleeps, it is safe to
+# use a high number here
+NUMPARALLEL=6
+
+# The vserver-flavor; the 'default' vservers will be started very late
+# which may be inappropriately for early services like nameservers or
+# VPN tunnels. By copying this initscript to a new name and adapting
+# the startup-position (for RH/Fedora the numbers in line 2), other
+# vservers can be selected. Identification of vservers happens by
+# putting the flavor into /etc/vservers/<vserver-id>/apps/init/mark.
+MARK=default

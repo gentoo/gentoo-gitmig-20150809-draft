@@ -1,0 +1,57 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.196/vservers.initd,v 1.1 2005/01/23 08:49:41 hollow Exp $
+
+opts="${opts} vstatus condrestart"
+
+checkconfig() {
+	: ${UTIL_VSERVER_VARS:=/usr/lib/util-vserver/util-vserver-vars}
+	[ -e $UTIL_VSERVER_VARS ] || {
+		eerror "Cannot find util-vserver installation"
+		eerror "(the file '$UTIL_VSERVER_VARS' would be expected)"
+		exit 1
+	}
+	. $UTIL_VSERVER_VARS
+	
+	: ${MARK:=default}
+	: ${LOCKFILE:=/var/lock/vservers-$MARK}
+	: ${NUMPARALLEL:=6}
+}
+
+start() {
+	checkconfig
+	
+	ebegin "Unhiding /proc entries"
+	$_VPROCUNHIDE
+	eend $?
+	
+	ebegin "Starting vservers of type '$MARK'"
+	$_START_VSERVERS -m $MARK -j $NUMPARALLEL --all --start
+	local rc=$?
+	[ $rc -eq 0 ] && touch ${LOCKFILE}
+	eend $rc
+}
+
+stop() {
+	checkconfig
+	
+	ebegin "Stopping vservers of type '$MARK'"
+	$_START_VSERVERS -m $MARK -j $NUMPARALLEL --all --stop
+	local rc=$?
+	rm -f ${LOCKFILE}
+	eend $rc
+}
+
+condrestart() {
+	[ -f $lockfile ] && restart || :
+}
+
+vstatus() {
+	checkconfig
+	[ -f $lockfile ] && {
+	    einfo "vservers of type '$MARK' were started"
+	    exit 0
+	}
+	einfo "vservers of type '$MARK' are not started"
+}
