@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-Stem-It
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.1 2004/10/06 23:15:05 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.2 2005/01/22 15:26:57 mcummings Exp $
+
+  22 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  Lingua-Stem-It-0.01.ebuild:
+  Unmasking for x86
 
 *Lingua-Stem-It-0.01 (06 Oct 2004)
 

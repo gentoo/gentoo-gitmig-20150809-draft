@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Slurp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.1 2004/10/06 23:11:42 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.2 2005/01/22 15:20:34 mcummings Exp $
+
+  22 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  File-Slurp-9999.06.ebuild:
+  Unmasking for x86
 
 *File-Slurp-9999.06 (06 Oct 2004)
 
