@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19.ebuild,v 1.1 2002/09/03 19:26:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19.ebuild,v 1.2 2002/09/08 03:03:32 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -20,7 +20,7 @@ ETYPE="sources"
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 ftp://oss.sgi.com/projects/xfs/download/patches/2.4.19/xfs-2.4.19-all-i386.bz2
-	 http://gentoo.lostlogicx.com/patch-2.4.19-xfs.bz2"
+	 mirror://gentoo/patch-2.4.19-xfs.bz2"
 
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://oss.sgi.com/projects/xfs http://evms.sourceforge.net"
