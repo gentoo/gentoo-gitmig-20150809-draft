@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 e6f6ca190ee8b80afa5e226bfc129984 ChangeLog 1126
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 dd33515a40888d9135710218819bce51 jasperreports-0.6.1-r1.ebuild 1162
+MD5 62c53a8add609155460db4391f9fd4b7 jasperreports-0.6.1-r1.ebuild 1178
 MD5 7c129dc0ae90126adb4848378fe1b872 files/digest-jasperreports-0.6.1-r1 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcWVb/rLF9B432nYRAuyWAJ4967DNW63XObLDypMwWgDgQ1rtcwCgu6qS
-abS5aAARbR6HB/anL8t0sdo=
-=uqMX
+iD8DBQFBiMbR/rLF9B432nYRAuv/AJ0bbpd0E4mpR+Zpvfo9iUqfNuWtSgCgjoV6
+z1BD0XAulkoqn+Z/lMYjnTc=
+=6nrm
 -----END PGP SIGNATURE-----
