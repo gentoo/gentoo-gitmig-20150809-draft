@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/tintin
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tintin/Changelog,v 1.1 2002/06/04 00:26:29 blauwers Exp $
+
+*tintin-1.86 (04 JUN 2002)
+
+  04 Jun 2002; B.Lauwers <blauwers@gentoo.org> Changelog, tintin-1.86.ebuild:
+  Added initial ebuild for tintin as requested in enhancement bug 3079.
