@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20050301.ebuild,v 1.1 2005/03/10 14:59:19 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/spca5xx-20050301.ebuild,v 1.2 2005/03/12 16:14:58 kingtaco Exp $
 
 inherit linux-mod
 
@@ -24,9 +24,9 @@ src_unpack() {
 	convert_to_m ${S}/Makefile
 }
 
-src_compile() {
-	linux-mod_src_compile
-}
+#src_compile() {
+#	linux-mod_src_compile
+#}
 
 src_install() {
 	dodoc CHANGELOG INSTALL README
