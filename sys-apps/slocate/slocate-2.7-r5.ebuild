@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.13 2004/06/16 01:52:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.14 2004/06/17 11:01:36 kloeri Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
 HOMEPAGE="http://www.geekreview.org/slocate/"
