@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.11 2003/05/05 21:35:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.12 2003/09/12 01:54:26 vapier Exp $
 
 *xplanet-1.0.1 (17 Mar 2003)
 
@@ -16,6 +16,9 @@
   version bump
 
 *xplanet-0.94-r1 (23 Aug 2002)
+
+  11 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Made a simple gcc3 patch #21096.
 
   07 Feb 2003: Jason Wever <weeve@gentoo.org> xplanet-0.94-r1.ebuild :
   Changed ~sparc keyword to sparc.
