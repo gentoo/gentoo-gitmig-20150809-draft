@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/songer
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/songer/ChangeLog,v 1.1 2004/12/09 19:15:33 sergey Exp $
+
+*songer-0.1.2 (09 Dec 2004)
+
+  09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +songer-0.1.2.ebuild:
+  Just added to the tree. (Bug #51996)
+
