@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e97b7b5f2a7e28cc74ba43ba0d5c93f mail-notification-0.6.1.ebuild 1175
-MD5 822554eabd82c5abfa43801369b25a0c ChangeLog 408
+MD5 3fba3b51587e06a499d80181789fd6eb mail-notification-0.6.1.ebuild 1092
+MD5 c79eb65052bcea8551487cb5c4810640 ChangeLog 601
 MD5 5d240c2111a6535d744ec8bbc7cc692c metadata.xml 249
 MD5 c20d65fc977d20fe4c343cbc1db3418c files/digest-mail-notification-0.6.1 75
 MD5 4c450be92ce937bb17a9c9d58b4b3463 files/mail-notification-0.6.1-64bit-fix.patch 325
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOk8hCHk4+ZoBpvsRAodNAJ9PN8idobC02VtAhbjuFqnhD2PY0gCfVSXX
-1C/JfAkzVYsHRrYdDHIhKFE=
-=5WrW
+iD8DBQFBOlJMCHk4+ZoBpvsRAkiUAKCg7IJH4fK4Ky2VmLYTqjVTqlTG0gCeL6bj
+ocPVVNNS283K4bcu/Nhhg3E=
+=6ZSD
 -----END PGP SIGNATURE-----

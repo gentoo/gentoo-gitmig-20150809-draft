@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-0.6.1.ebuild,v 1.1 2004/09/04 23:25:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-0.6.1.ebuild,v 1.2 2004/09/04 23:38:19 slarti Exp $
 
 inherit gnome2 eutils 64-bit
 
@@ -13,17 +13,15 @@ KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
-IUSE="gmail ssl sasl"
+IUSE="ssl sasl"
 
 DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-util/gob-2
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/eel-2
-	gmail? ( =net-libs/libsoup-1.99.28 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 
-G2CONF="${G2CONF} $(use_enable gmail)"
 G2CONF="${G2CONF} $(use_enable ssl)"
 G2CONF="${G2CONF} $(use_enable sasl)"
 
