@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.7 2003/01/04 03:31:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.8 2003/01/17 03:45:48 raker Exp $
 
 *nessus-plugins-1.2.7 (04 Jan 2003)
+
+  12 Jan 2003; Nick Hadaway <raker@gentoo.org> nessus-plugins-1.2.7.ebuild :
+  doc install fix.  Marked stable for x86.
 
   04 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Found by Raskasi <raskasi@gmx.net>.
