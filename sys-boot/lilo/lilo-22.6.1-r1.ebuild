@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.1.ebuild,v 1.3 2005/02/26 15:10:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6.1-r1.ebuild,v 1.1 2005/02/26 15:10:54 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DOLILO_V="0.3"
-IUSE="devmap static"
+IUSE="devmap static minimal pxeserial"
 
 DESCRIPTION="Standard Linux boot loader"
 HOMEPAGE="http://lilo.go.dyndns.org/pub/linux/lilo/"
@@ -19,10 +19,9 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 
-RDEPEND=">=sys-apps/sed-4
-	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
+RDEPEND="devmap? ( >=sys-libs/device-mapper-1.00.08 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/bin86-0.15.5"
 
@@ -55,6 +54,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-create-install-dirs.patch
 	# Correctly document commandline options -v and -V, bug #43554
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
+
+	# this patch is needed when booting PXE and the device you're using 
+	# emulates vga console via serial console.
+	# IE..  B.B.o.o.o.o.t.t.i.i.n.n.g.g....l.l.i.i.n.n.u.u.x.x and stair stepping.
+	use novga && epatch ${FILESDIR}/lilo-22.6.1-novga.patch
+
 	# Get the manpage path right
 	sed -i -e s,usr/man,usr/share/man,g ${S}/Makefile
 
@@ -79,21 +84,23 @@ src_install() {
 	keepdir /boot
 	make ROOT=${D} install || die
 
-	into /
-	dosbin ${S}/dolilo/dolilo
+	if use !minimal; then
+		into /
+		dosbin ${S}/dolilo/dolilo
 
-	into /usr
-	dosbin keytab-lilo.pl
+		into /usr
+		dosbin keytab-lilo.pl
 
-	insinto /etc
-	newins ${FILESDIR}/lilo.conf lilo.conf.example
+		insinto /etc
+		newins ${FILESDIR}/lilo.conf lilo.conf.example
 
-	insinto /etc/conf.d
-	newins ${S}/dolilo/dolilo.conf.d dolilo.example
+		insinto /etc/conf.d
+		newins ${S}/dolilo/dolilo.conf.d dolilo.example
 
-	doman manPages/*.[5-8]
-	dodoc CHANGES COPYING INCOMPAT README*
-	docinto samples ; dodoc sample/*
+		doman manPages/*.[5-8]
+		dodoc CHANGES COPYING INCOMPAT README*
+		docinto samples ; dodoc sample/*
+	fi
 }
 
 # Check whether LILO is installed
@@ -161,7 +168,7 @@ pkg_postinst() {
 			ln -snf boot-menu.b ${ROOT}/boot/boot.b
 	fi
 
-	if [ "${ROOT}" = "/" ]
+	if [ "${ROOT}" = "/" ] && use !minimal;
 	then
 		if lilocheck
 		then
@@ -181,12 +188,13 @@ pkg_postinst() {
 		fi
 		echo
 	fi
-
-	echo
-	einfo "Issue 'dolilo' instead of 'lilo' to have a friendly wrapper that"
-	einfo "handles mounting and unmounting /boot for you. It can do more then"
-	einfo "that when asked, edit /etc/conf.d/dolilo to harness it's full potential."
-	ebeep 5
-	epause 3
-	echo
+	if use !minimal; then
+		echo
+		einfo "Issue 'dolilo' instead of 'lilo' to have a friendly wrapper that"
+		einfo "handles mounting and unmounting /boot for you. It can do more then"
+		einfo "that when asked, edit /etc/conf.d/dolilo to harness it's full potential."
+		ebeep 5
+		epause 3
+		echo
+	fi
 }
