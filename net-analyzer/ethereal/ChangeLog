@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.21 2003/02/12 07:44:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.22 2003/02/15 07:39:40 gerk Exp $
 
 *ethereal-0.9.8-r1 (29 Dec 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> ethereal-0.9.8-r1.ebuild :
+  set ~ppc in keywords
     
   11 Jan 2003: Jason Wever <weeve@gentoo.org ethereal-0.9.8-r1.ebuild:
   Added ~sparc to keywords.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.7.ebuild,v 1.8 2003/02/13 13:40:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.7.ebuild,v 1.9 2003/02/15 07:42:29 gerk Exp $
 
 IUSE="ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ettercap.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 sparc alpha ~ppc"
 
 DEPEND="sys-libs/ncurses
 	ssl? ( dev-libs/openssl )"

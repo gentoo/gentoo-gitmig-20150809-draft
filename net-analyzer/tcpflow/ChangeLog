@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.2 2003/02/12 07:50:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.3 2003/02/15 07:49:23 gerk Exp $
 
 *tcpflow-0.20 (29 Oct 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> tcpflow-0.20.ebuild :
+  set ~ppc in keywords
 
   29 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import. ebuild
   submitted by Maurizio Disimino <maurizio@iridium.aetheric.org>
