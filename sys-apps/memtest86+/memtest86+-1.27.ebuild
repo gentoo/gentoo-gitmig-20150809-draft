@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.25.ebuild,v 1.1 2004/09/01 11:48:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.27.ebuild,v 1.1 2004/10/13 19:17:18 spock Exp $
 
 inherit mount-boot
 
