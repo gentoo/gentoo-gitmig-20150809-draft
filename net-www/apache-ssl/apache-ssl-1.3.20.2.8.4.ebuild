@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.20.2.8.4.ebuild,v 1.3 2001/06/16 23:48:29 drobbins Exp $
 
 AV="1.3.20"
 MSV="2.8.4"
@@ -14,8 +14,8 @@ SRC_URI="http://httpd.apache.org/dist/httpd/apache_${AV}.tar.gz
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
 
 DEPEND="virtual/glibc
-	=sys-libs/db-3.2.3h-r3
-	=sys-libs/db-1.85-r1
+	>=sys-libs/db-3.2.3h-r3
+	>=sys-libs/db-1.85-r1
 	>=dev-libs/openssl-0.9.6"
 
 src_compile() {                           
