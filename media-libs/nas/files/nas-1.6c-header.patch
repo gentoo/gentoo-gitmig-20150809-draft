@@ -1,10 +1,10 @@
---- server/dia/main.c.orig	2004-07-10 16:26:02.392580536 +0200
-+++ server/dia/main.c	2004-07-10 16:26:18.304161608 +0200
-@@ -51,6 +51,7 @@
-  * $Id: nas-1.6c-header.patch,v 1.1 2004/07/10 15:02:32 kugelfang Exp $
-  */
- 
+--- server/dia/main.c.orig	2004-07-10 19:36:15.429535192 +0200
++++ server/dia/main.c	2004-07-10 19:36:38.645005904 +0200
+@@ -64,6 +64,7 @@
+ #include "site.h"
+ #include "globals.h"
+ #include "nasconf.h"
 +#include <stdlib.h>
- #include <stdio.h>
- #include <audio/audio.h>
- #include <audio/Aproto.h>
+ 
+ extern void     OsInit(), InitClient(), ResetWellKnownSockets(),
+                 Dispatch(), FreeAllResources();

@@ -5,7 +5,7 @@ MD5 d29c3d9ae8bbe352ef6c1c5e9c17ba31 nas-1.6c-r1.ebuild 1839
 MD5 13a61d04a20b645099bd84d72891bcd2 nas-1.6c.ebuild 1027
 MD5 af8c4ec9066a4de4e9fa29f7d2fab1be nas-1.5-r1.ebuild 1111
 MD5 348e8ac6e839ad076bbfb2858cf3063d nas-1.6c-r2.ebuild 1827
-MD5 410aefeb0f6a2d7a50d485282f9cac71 files/nas-1.6c-header.patch 313
+MD5 70da453ef2c91d9e0659ee6af9914d29 files/nas-1.6c-header.patch 340
 MD5 4a7327fe2c6fba8c4315133a522358a3 files/digest-nas-1.6 64
 MD5 8d4c92b527f79724412d1d1a77631c14 files/digest-nas-1.6c 65
 MD5 8d4c92b527f79724412d1d1a77631c14 files/digest-nas-1.6c-r1 65
