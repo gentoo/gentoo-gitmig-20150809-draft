@@ -1,6 +1,7 @@
 MD5 c4052dc9dd6563ca4b9aa52949902d03 ChangeLog 1202
 MD5 baff2333576ee3fb85b167c1cf47f2af neverball-0.21.0.ebuild 1100
 MD5 0a8e4ecfd7a9c12a473e7272e0e26b16 neverball-0.25.3.ebuild 1100
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 bdae432be6fc2950630e80f38d2a8e0f neverball-0.25.9.ebuild 1064
 MD5 6fcfbde010777d9ba7f76499607f389f neverball-0.25.11.ebuild 1070
 MD5 1ddda03e12c4102992f739c083af94b3 files/digest-neverball-0.21.0 70
