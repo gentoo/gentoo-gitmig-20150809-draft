@@ -551,8 +551,8 @@ diff -ur linux-2.6.0/include/linux/i2c.h linux-2.6.0/include/linux.gentoo/i2c.h
  #include <linux/i2c-id.h>
 +#ifdef __KERNEL__
  #include <linux/device.h>	/* for struct device */
-+#endif
  #include <asm/semaphore.h>
++#endif
  
  /* --- General options ------------------------------------------------	*/
 @@ -109,6 +117,7 @@
