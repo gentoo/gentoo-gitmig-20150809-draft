@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.5 2004/08/05 19:54:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.6 2004/08/05 20:22:20 slarti Exp $
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org> -files/maildrop-1.7.0-db3.patch,
+  maildrop-1.7.0.ebuild:
+  Tidy; removed epatch as it seems to be unnecessary.
 
 *maildrop-1.7.0 (05 Aug 2004)
 
