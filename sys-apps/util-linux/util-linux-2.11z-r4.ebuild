@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.6 2003/06/24 14:33:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.7 2003/06/26 18:40:11 method Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -65,6 +65,7 @@ src_unpack() {
 		-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:" \
 		-e "s:usr/man:usr/share/man:" \
 		-e "s:usr/info:usr/share/info:" \
+		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
 
 	if [ -z "`use nls`" ] ; then

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.40 2003/06/24 14:33:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.41 2003/06/26 18:40:11 method Exp $
+
+  26 Jun 2003; Joshua Brindle <method@gentoo.org> util-linux-2.11z-r4.ebuild:
+  Added -e s:SUIDMODE=.*4755:SUIDMODE=4711: for more secure suid permissions
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> util-linux-2.11z-r4.ebuild:
   Mark stable on alpha
