@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.21 2002/12/31 15:11:18 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.22 2003/01/16 23:21:48 wwoods Exp $
+
+  16 Jan 2003; Will Woods <wwoods@gentoo.org> : alsa-driver-0.5.12a.ebuild
+  Added ~alpha keyword
 
   31 Dec 2002; Olivier Reisch <doctomoe@gentoo.org>
   alsa-driver-0.9.0_rc6.ebuild :
