@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.3 2004/06/24 22:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.4 2004/08/21 15:37:56 foser Exp $
 
 DESCRIPTION="Scientific application for data analysis and technical graphics"
 SRC_URI="http://scigraphica.sourceforge.net/src/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND=">=x11-libs/gtk+extra-0.99.17
 	>=dev-python/numeric-20.3
 	>=dev-libs/libxml-1.8.16
 	>=media-libs/imlib-1.9.14
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r3 >=gnome-base/ORBit-0.5.12-r1 >=gnome-base/gnome-print-0.34 )"
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r3 =gnome-base/orbit-0* >=gnome-base/gnome-print-0.34 )"
 
 pkg_setup() {
 	if has_version ">=dev-python/pygtk-0.99"; then
