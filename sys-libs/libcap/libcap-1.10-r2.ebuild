@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.3 2003/08/27 06:10:53 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.4 2003/08/29 06:28:38 cretin Exp $
 
 inherit base
 
@@ -38,9 +38,6 @@ src_compile() {
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages" 
 		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
 	fi
-	
-	# all platforms need to get -fPIC for shared libraries
-	append-flags -fPIC
 	
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }

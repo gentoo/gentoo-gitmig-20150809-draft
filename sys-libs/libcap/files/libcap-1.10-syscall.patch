@@ -17,4 +17,18 @@
 +*/
  /*
   * $Log: not supported by cvs2svn $
+  * Revision 1.1  2003/08/27 06:10:53  cretin
+  * Added -fPIC for prelink to work, and fixed compile error
+  *
   * Revision 1.1.1.1  1999/04/17 22:16:31  morgan
+--- libcap-1.10/libcap/Makefile.jj	2003-08-29 07:19:21.863907872 +0100
++++ libcap-1.10/libcap/Makefile	2003-08-29 07:20:21.562832256 +0100
+@@ -61,7 +61,7 @@
+ 	ln -sf $(MAJLIBNAME) $(LIBNAME)
+ 
+ %.o: %.c $(INCLS)
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) -fPIC -c $< -o $@
+ 
+ install: all
+ 	mkdir -p -m 0755 $(INCDIR)/sys
