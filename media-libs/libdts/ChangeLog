@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.5 2004/09/01 17:10:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.6 2004/12/26 10:10:30 corsair Exp $
+
+  26 Dec 2004; Markus Rothe <corsair@gentoo.org> libdts-0.0.2.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #75669
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> libdts-0.0.2.ebuild:
   Stable amd64, sparc.
