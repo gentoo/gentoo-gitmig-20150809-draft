@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.8 2004/12/22 11:25:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r3.ebuild,v 1.9 2004/12/22 22:08:03 gmsoft Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	# hppa patches from Ivar <orskaug@stud.ntnu.no>
 	# <gmsoft@gentoo.org> (22 Dec 2004)
-	use hppa && epatch ${FILESDIR}/mozilla-hppa.patch
+	epatch ${FILESDIR}/mozilla-hppa.patch
 
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
@@ -84,14 +84,6 @@ src_compile() {
 	# firefox.
 	has_hardened && append-flags -fno-stack-protector-all
 	replace-flags -fstack-protector-all -fstack-protector
-
-	# hppa have problems with high level of optimisation
-	# forcing -O0 <gmsoft@gentoo.org> (22 Dec 2004)
-	if use hppa
-	then
-		export CFLAGS="-O0 -pipe"
-		export CXXFLAGS="-O0 -pipe"
-	fi
 
 	####################################
 	#
