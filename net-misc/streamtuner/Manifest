@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e0efa63dda44d897065795d36080b54b ChangeLog 2558
+MD5 af2e0a04cb5932806fc7bf2955ef2bce streamtuner-0.99.ebuild 783
+MD5 c6d5ee1f1013121cc1eb98fbe0bddfd1 ChangeLog 2711
 MD5 cb345950d3a39c6efef50c55d2bfa964 streamtuner-0.12.4.ebuild 829
+MD5 a205326a0f0276838f0354f0cffd8dcc files/digest-streamtuner-0.99 68
 MD5 58f85470334ffd6799ca3330c1f87f5c files/streamtuner-0.12.3-gcc34.patch 413
 MD5 e79a63b27d38fa0f7b5574641a61738a files/digest-streamtuner-0.12.4 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBp5CbArHZZzCEUG0RAnO7AJ9H7EUieg5VA3s1Xk8XlA/9kupHjQCgiAA5
+ROTZKZxppH8brdxDb8W51Sg=
+=Ja/s
+-----END PGP SIGNATURE-----
