@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.6 2003/05/12 01:43:13 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.7 2003/06/21 23:22:55 avenj Exp $
+
+*getmail-3.1.7 (21 Jun 2003)
+
+  21 Jun 2003; Jon Portnoy <avenj@gentoo.org> getmail-3.1.7.ebuild :
+  Version bump, submitted by Wim Uyttebroek in bug 22785.
 
 *getmail-3.1.1 (11 May 2003)
 
