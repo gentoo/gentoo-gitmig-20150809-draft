@@ -1,5 +1,6 @@
 MD5 a768f20366d412feaf748b4ac46b046e metadata.xml 350
-MD5 c43be07ca1c71160f9006d26d4460718 ChangeLog 4362
+MD5 80cbc1b5d4ed5b22f14af56194f87bed ChangeLog 4606
+MD5 c6ed4fdd1c5bb7fca8c67770e4d0506d pegasos-dev-sources-2.6.9-r4.ebuild 759
 MD5 3960bdad6eb7f6cbfc58fb2327fa72bf pegasos-dev-sources-2.6.8.1-r2.ebuild 838
 MD5 5e3a83dbc4d3f21e7a47d4ab0cce8f87 pegasos-dev-sources-2.6.9.ebuild 831
 MD5 613de41e3cdeaed151c487d99c91e1a9 pegasos-dev-sources-2.6.9-r1.ebuild 834
@@ -10,3 +11,4 @@ MD5 ea89058171bb35f89fdee1b00665f62a files/digest-pegasos-dev-sources-2.6.9 137
 MD5 ef4ae77a9f63f9ff56c5774f808dda65 files/digest-pegasos-dev-sources-2.6.9-r1 137
 MD5 11513cb7bf54e0401e56ca39a41d5368 files/digest-pegasos-dev-sources-2.6.9-r2 137
 MD5 8aa01ae69e33eb5f4ba6e0911bf0a108 files/digest-pegasos-dev-sources-2.6.9-r3 137
+MD5 152f36d2b5a67c4dc78118f6d6b4009d files/digest-pegasos-dev-sources-2.6.9-r4 137
