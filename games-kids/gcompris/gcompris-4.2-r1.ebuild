@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header: initial version by Ron Simpkin doobedoobedo@quake3world.com
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="full featured educational application for children from 3 to 10"
 HOMEPAGE="http://ofset.sourceforge.net/gcompris/"
