@@ -1,10 +1,17 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.1 2002/04/13 20:23:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.2 2002/04/24 06:02:29 sandymac Exp $
+
+*icc-6.0 (24 Apr 2002)
+
+  24 Apr 2002  William McArthur <sandymac@gentoo.org> icc-6.0.ebuild :
+
+  The icc-6.0.ebuild is functionally identical to the icc-5.0.1.ebuild . A few
+  tweaks were made for the minor differeces in Intel's package.
 
 *icc-5.0.1 (12 Apr 2002)
 
-  12 Apr 2002; William McArthur <Leknor@Leknor.com> ChangeLog :
+  12 Apr 2002; William McArthur <sandymac@gentoo.org> ChangeLog :
 
   Initial Gentoo package. The install from Intel is RPM based so I extract
   the i386 RPMs manually using rpm2cpio and cpio. (Idea taken from the
