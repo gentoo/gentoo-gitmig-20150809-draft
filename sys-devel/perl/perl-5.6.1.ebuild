@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1.ebuild,v 1.1 2001/04/16 16:37:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1.ebuild,v 1.2 2001/05/11 14:06:17 achim Exp $
 
 
 A=${P}.tar.gz
@@ -10,7 +10,11 @@ DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.perl.org/pub/perl/CPAN/src/${A}"
 HOMEPAGE="http://www.perl.org"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/glibc sys-apps/man
+        berkdb? ( >=sys-libs/db-3.1.17 )
+	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
+
+RDEPEND="virtual/glibc 
         berkdb? ( >=sys-libs/db-3.1.17 )
 	gdbm?   ( >=sys-libs/gdbm-1.8.0 )"
 
