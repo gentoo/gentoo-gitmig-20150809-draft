@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 615262491b6f5e890bc059322d3b21d6 astrolog-ephemeris-5.40.ebuild 701
-MD5 bc60d03b6921670490ce642293e9baa0 ChangeLog 775
+MD5 0ab04b3d20cd7a30fe0feaed99358186 astrolog-ephemeris-5.40.ebuild 713
+MD5 d4225aef755b3bf3c442ac500d6b3795 ChangeLog 899
 MD5 3474183119487ec6a8b13b9b90286f55 metadata.xml 412
 MD5 22f043450ce76c469ccd6cbd7413fdc9 files/digest-astrolog-ephemeris-5.40 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBiMed/rLF9B432nYRAoUhAJ9AVrxKAxy8DTpY7PnjSUv/MJ8DEgCeMqgP
-j0bSN13c0B8bE1M4LKMwIk8=
-=HKBz
+iD8DBQFBt3WKZ/iYVBmujdURAtvuAJ9csc5nak+3NVaci92nISXE2iAskACg2v4d
+Rel4iSPUM5HcWJuRlE0iAvc=
+=fZIH
 -----END PGP SIGNATURE-----
