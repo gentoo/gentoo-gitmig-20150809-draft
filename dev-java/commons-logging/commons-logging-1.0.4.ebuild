@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4.ebuild,v 1.12 2005/01/01 18:18:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4.ebuild,v 1.13 2005/01/26 21:07:48 corsair Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-java/log4j-1.2.5
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc amd64 ppc64"
 IUSE="doc jikes junit"
 
 S="${WORKDIR}/${P}-src/"

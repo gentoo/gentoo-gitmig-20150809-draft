@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.12 2004/12/18 09:09:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.13 2005/01/26 21:13:04 corsair Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ MY_PV="21"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.class"
 LICENSE="JPython"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc amd64 ppc64"
 IUSE="readline jikes"
 # servlet
 
