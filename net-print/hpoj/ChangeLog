@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.2 2003/06/21 06:38:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.3 2003/07/15 13:08:13 lanius Exp $
+
+*hpoj-0.90-r1 (15 Jul 2003)
+
+  15 Jul 2003; Heinrich Wendel <lanius@gentoo.org> hpoj-0.90-r1.ebuild,
+  files/hpoj.init:
+  fixed bugs: #23304 (init.d wrapper script), #23010 (X dep fix),
+  #21109 (use usb = libusb dep), #21108(init.d before cupsd)
 
   20 Jun 2003; <msterret@gentoo.org> hpoj-0.90.ebuild:
   stop the creation of /dosym (bug 23208)
