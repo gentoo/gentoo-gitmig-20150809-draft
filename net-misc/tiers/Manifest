@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3421789eca75a86d628848546af73ab9 tiers-1.1.ebuild 1365
 MD5 b6128e45169526a82fadbe9e2b76d922 ChangeLog 577
-MD5 324eee4fe6016c45a7f30f6f214a46ed files/digest-tiers-1.1 174
+MD5 de08488e62a5dc1c5d1349edfc61ae6f files/digest-tiers-1.1 119
 MD5 0b8b2907e0f34c042c6faf3f71df9077 files/tiers1.1-gccfixes.patch 5840
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpQSvI1lqEGTUzyQRAg2iAKDHbb7mT1CudWAU06E/C+lvYkKLvwCeJBTN
+7shvggCc6ONpn8YWNI7xpjc=
+=UA7Q
+-----END PGP SIGNATURE-----
