@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.22 2004/10/01 14:34:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.23 2004/10/31 19:49:17 weeve Exp $
+
+  31 Oct 2004; Jason Wever <weeve@gentoo.org>
+  device-mapper-1.00.17-r1.ebuild:
+  Stable on sparc (as much as 2.6 kernel stuff can be stable on sparc).
 
   01 Oct 2004; Simon Stelling <blubb@gentoo.org>
   device-mapper-1.00.19-r1.ebuild:
