@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.20030220.ebuild,v 1.1 2003/02/20 11:41:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.20030220.ebuild,v 1.2 2003/02/22 07:45:05 vapier Exp $
 
 DESCRIPTION="Enlightment Data Base"
 HOMEPAGE="http://www.enlightenment.org/pages/edb.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pic ncurses gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* )
