@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.35 2003/06/11 22:47:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.36 2003/06/11 23:41:08 foser Exp $
 
+*fontconfig-2.2.1 (11 Jun 2003)
+
+  11 Jun 2003; foser <foser@gentoo.org> fontconfig-2.2.1.ebuild, fontconfig-2.2-local_fontdir-r1.patch :
+  Always disable docs building (#21195)
+  Update fotndir patch to include /usr/local/share/fonts for local fonts
+ 
   11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> fontconfig-2.1-r1.ebuild,
   fontconfig-2.2.0-r2.ebuild,
   files/patch/fontconfig-0.0.1.020826.1330-blacklist.patch,
