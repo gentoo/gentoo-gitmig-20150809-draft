@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.ebuild,v 1.1 2004/06/17 00:37:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.ebuild,v 1.2 2004/06/17 02:10:15 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -77,6 +77,9 @@ pkg_postinst() {
 	einfo "Extracting firefox-bin-${PV} initialization files"
 	cd ${ROOT}/opt/thunderbird && tar xjpf ${FILESDIR}/thunderbird-bin-${PV}-init.tar.bz2
 
+	# This should be called in the postinst and postrm of all the
+	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
+	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
 }
 
