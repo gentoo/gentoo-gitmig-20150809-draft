@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.38 2004/05/05 15:55:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.39 2004/05/12 13:33:50 pappy Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -231,15 +231,6 @@ pkg_setup() {
 		if use sdk
 		then
 			die "The static USE flag is incompatible with gatos and sdk USE flags."
-		fi
-
-		# Check for hardened
-		if use hardened && has_version ">=sys-devel/gcc-3.3.3-r1"
-		then
-			append-flags -yet_exec
-		elif has_version "sys-devel/hardened-gcc"
-		then
-			append-flags -yet_exec
 		fi
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.12 2004/04/19 06:19:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.13 2004/05/12 13:31:56 pappy Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -379,7 +379,6 @@ src_unpack() {
 
 	# this is needed for ./configure and runtime linking and building not to fall into falsely believing
 	# that there are some headers and functions for builtin video drivers or font libraries present
-	has_version "sys-devel/hardened-gcc" && export CC="${CC} -yet_exec"
 
 	echo "#define CcCmd ${CC}" >> config/cf/host.def
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
