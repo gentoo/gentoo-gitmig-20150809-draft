@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.11 2004/02/03 00:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.12 2004/02/07 05:07:43 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -51,9 +51,6 @@ enlightenment_src_unpack() {
 }
 
 enlightenment_src_compile() {
-	use alpha && append-flags -fPIC
-	use ppc && append-flags -fPIC
-	use hppa && append-flags -fPIC
 	[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
 	env \
 		PATH="${T}:${PATH}" \
