@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.6 2004/05/25 18:00:14 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.7 2004/05/31 11:51:08 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -152,7 +152,7 @@ src_install() {
 	if use pg-hier; then
 		dodoc ${WORKDIR}/README-${P_HIERPG}.html || die
 	fi
-	dodoc README HISTORY
+	dodoc README HISTORY COPYRIGHT INSTALL
 	dodoc contrib/adddepend/*
 
 	exeinto /usr/bin
