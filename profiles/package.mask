@@ -1,13 +1,6 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-# ok, users are getting circular deps again... please please please
-# don't unmask this until you guys are sure and have tested it on other
-# machines besides the one your developing on :)  -- blocke
-=sys-apps/portage-1.9.3
-=dev-lang/python-2.2-r6
-=dev-python/python-fchksum-1.6.1
-
 #if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
 #this fixes that.  devlopers give it a shot
 =net-misc/rsync-2.5.4-r1
