@@ -1,4 +1,4 @@
-#####################################################################
+gawk#####################################################################
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -22,6 +22,7 @@
 ##
 
 # <azarah@gentoo.org> (25 Mar 2003)
+# <lostlogic@gentoo.org> (26 Mar 2003)
 # Tempory mask gawk versions that do not have filefuncs.so module, as it
 # (new gawk version) breaks baselayout if its (baselayout) not remerged.
 #
@@ -31,6 +32,17 @@
 #  lolo asked me to do, and masking it totally did not just break it
 #  from detecting (and effectively disabling) devfs, but also broke
 #  depscan.sh, rc-envupdate.sh, etc, which was IMHO MUCH worse.
+#  --Azarah
+#
+#  Ok, this problem is getting uglier by the second.  
+#  The way it looks to me is that FIRST gawk changes it's API so that
+#  filefuncs.so doesn't work between versions, which was rude in the 
+#  first place.  So then Azarah kindly made that work, however there
+#  is still a place in baselayout (devfsd detection) where we use a
+#  gawk call that the lovely GNU folks also changed the function of
+#  between versions.  And so Azarah and I will have to spend some time
+#  rebooting ourselves to make sure this is OK.  Sorry about all that
+#  folks.  --LostLogic
 >=sys-apps/gawk-3.1.2
 
 # <sethbc@gentoo.org> (23 Mar 2003)
