@@ -1,18 +1,18 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332.ebuild,v 1.3 2004/02/01 02:47:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5336.ebuild,v 1.1 2004/02/01 02:47:51 azarah Exp $
 
-PKG_V="pkg0"
+PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
-NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
+NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}"
 DESCRIPTION="XFree86 GLX libraries for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
+SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PKG_V}.run"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~x86"
 RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
@@ -108,10 +108,4 @@ pkg_postinst() {
 	einfo
 	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
 	einfo
-
-	if [ `has_version x11-libs/qt` ] ; then
-		einfo "You have Qt installed on your system.  Qt is linked against opengl,"
-		einfo "which means you may have problems emerging KDE programs later until"
-		einfo "you run \"opengl-update xfree\""
-	fi
 }

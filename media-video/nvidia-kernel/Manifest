@@ -1,10 +1,9 @@
 MD5 ad9be703f3ba183bf2b5d9a9765619fa nvidia-kernel-1.0.5328-r1.ebuild 4562
-MD5 47c6f6c090cef530154804d3d3b03846 .nvidia-kernel-1.0.5336.ebuild.swp 16384
 MD5 d12e78297c403467ea2e4144729ece91 nvidia-kernel-1.0.3123-r2.ebuild 3118
 MD5 a2954410aed3b91f7f5324169e43ab3f nvidia-kernel-1.0.4349-r2.ebuild 3543
 MD5 ca0e848e813d3fc1fce83e51f35e34f7 nvidia-kernel-1.0.5332.ebuild 4431
-MD5 f4cdd84ebc34694b31db94b2f5acd86e ChangeLog 13091
-MD5 49440eebf2275251667637d3002f9fb2 nvidia-kernel-1.0.5336.ebuild 4188
+MD5 21132091054872f3cb52a1cb1b052b3a ChangeLog 13230
+MD5 6a0f2239670a3c0d900f6c410d54073a nvidia-kernel-1.0.5336.ebuild 4379
 MD5 d07c7e8805ac45db9ec99be3e86dee70 nvidia-kernel-1.0.2960-r1.ebuild 1987
 MD5 6c62870aa5220d0967df5827dca75563 nvidia-kernel-1.0.4180.ebuild 3714
 MD5 6ce6540461b32a4439a8e13c6ad8f80f nvidia-kernel-1.0.4496-r4.ebuild 4272
@@ -50,3 +49,4 @@ MD5 6d98825a3cf78f4a5ce42d4f4decab89 files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-2
 MD5 c0f21cb76a7471671ec9665968dfaafb files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-20031026.diff 81900
 MD5 183b64f528e98221291072f12db5859d files/1.0.4496/NVIDIA_kernel-1.0-4496-2.6-pci_name-20030905.diff 608
 MD5 4c7749ca72483547e15031a2af560415 files/1.0.5332/NVIDIA-Linux-x86_64-1.0-5332-2.6.diff 7216
+MD5 6215d802b88e2c395098cf80480aa40f files/1.0.5336/Makefile 4166
