@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.34 2003/09/26 03:20:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.35 2003/11/03 15:32:29 caleb Exp $
+
+*kdevelop-3.0.0_beta1 (03 Nov 2003)
+
+  03 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdevelop-3.0.0_beta1.ebuild:
+  New beta version
 
 *kdevelop-3.0_alpha7 (25 Sep 2003)
 
