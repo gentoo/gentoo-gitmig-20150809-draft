@@ -6,5 +6,5 @@
   <email>mrness@gentoo.org</email>
   <name>Alin Nastac</name>
 </maintainer>
-<longdescription>Long description of the package</longdescription>
+<longdescription>cross platform lightweight components library for C++</longdescription>
 </pkgmetadata>
