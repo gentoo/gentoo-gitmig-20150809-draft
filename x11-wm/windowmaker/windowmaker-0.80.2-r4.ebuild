@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.5 2004/07/23 20:11:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r4.ebuild,v 1.6 2004/07/25 18:46:53 s4t4n Exp $
 
 inherit eutils flag-o-matic
 filter-mfpmath "sse" "387"
@@ -142,7 +142,7 @@ src_install() {
 
 	cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
 
-	dodoc AUTHORS BUGFORUM BUGS ChangeLog COPYING* INSTALL* FAQ* \
+	dodoc AUTHORS BUGFORM BUGS ChangeLog COPYING* INSTALL* FAQ* \
 	      MIRRORS README* NEWS TODO
 
 	# WindowMaker Extra

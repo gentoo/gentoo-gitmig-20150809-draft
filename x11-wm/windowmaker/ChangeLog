@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.14 2004/07/23 20:11:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.15 2004/07/25 18:46:53 s4t4n Exp $
+
+  25 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> windowmaker-0.80.2-r4.ebuild:
+  Fixed non existing dodoc entry BUGFORUM to BUGFORM.
 
   23 Jul 2004; Tom Gall <tgall@gentoo.org> windowmaker-0.80.2-r4.ebuild:
   stable on ppc64
