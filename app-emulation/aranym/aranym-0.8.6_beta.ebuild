@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.8.6_beta.ebuild,v 1.2 2004/02/11 10:19:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.8.6_beta.ebuild,v 1.3 2004/02/11 14:35:59 dholm Exp $
 
 inherit flag-o-matic
 
 AFROS="afros-20040206.zip"
 S="${WORKDIR}/${PN}-0.8.6beta"
-DESCRIPTION="ARAnyM is a virtual machine software for running the Atari ST/TT/Falcon operating systems (TOS, FreeMiNT, MagiC and others) and TOS/GEM applications."
+DESCRIPTION="ARAnyM, Atari Running on Any Machine, is a virtual machine software for running Atari ST/TT/Falcon operating systems and TOS/GEM applications."
 SRC_URI="mirror://sourceforge/aranym/${PN}-0.8.6beta.tar.gz
 	mirror://sourceforge/aranym/${AFROS}"
 HOMEPAGE="http://aranym.sourceforge.net/"
 LICENSE="GPL-2"
 
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 
 IUSE="sdl"
