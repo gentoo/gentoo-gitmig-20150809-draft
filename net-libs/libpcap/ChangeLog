@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.13 2003/03/03 09:09:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.14 2003/03/30 19:15:24 joker Exp $
 
 *libpcap-0.7.2 (03 Mar 2003)
 
@@ -26,7 +26,11 @@
   3 Jan 2003; Stefan Jones <cretin@gentoo.org> :
   Added -fpic to the CFLAGS to aid prelinking.
 
-*libpcap-0.7.1-r1 (31 Aug 2002) 
+*libpcap-0.7.1-r1 (31 Aug 2002)
+
+  30 Mar 2003; Christian Birchinger <joker@gentoo.org>
+  libpcap-0.7.1-r1.ebuild:
+  Added sparc stable keyword
 
   15 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libpcap-0.7.1-r1.ebuild :
   Added mips keyword to ebuild.
