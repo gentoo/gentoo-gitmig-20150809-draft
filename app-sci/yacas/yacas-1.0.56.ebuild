@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/yacas-1.0.56.ebuild,v 1.1 2004/04/19 16:58:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/yacas/yacas-1.0.56.ebuild,v 1.2 2004/04/20 00:55:07 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.sourceforge.net/backups/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4
