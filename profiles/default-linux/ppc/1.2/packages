@@ -1,0 +1,238 @@
+# IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
+
+# OK; you're staring at this file and you have no idea what these stars are
+# for.  Here's the scoop.  An initial "*" marks a package that is part of the
+# official "base" system profile.  If there's a "*", then "emerge system" will
+# use the line in its calculations of what "should" be installed for this
+# profile.  Lines without a "*" prefix will be ignored for profile
+# calculations.
+
+# Now, this is new: *all* lines (star or no star) will be used as a special
+# package *inclusion* mask.  For example, the line *=sys-devel/gcc-2.95.3-r1
+# will cause Portage to totally ignore all gcc ebuilds other than
+# gcc-2.95.3-r1.  >=, <=, <, > and ~ can be used to offer a bit more
+# flexibility.  For example, >=sys-libs/glibc-2.2.4 will cause emerge to ignore
+# all glibc ebuilds with a version less than 2.2.4.  This allows us to have
+# profile-specific package.mask settings.  *All* lines are used for this
+# masking process, whether they are prefixed with a * or not.  And if a generic
+# dep is used, like "sys-apps/foo", then all versions of foo are included.  If
+# there is no entry, then all versions of an app are included.  The key thing
+# to note is that this file does not need to end up being an exhaustive list
+# of portage packages; just the ones critical to this profile.
+
+# So, what happens to /usr/portage/profiles/package.mask?  It's still around,
+# and still useful.  But it should mainly be used for broken ebuilds only.
+# package.mask continues to function as normal, masking out ebuilds from *all*
+# system profiles.
+
+# Which to use?  Use the profile-specific stuff to "lock down" specific
+# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
+# versions of binutils, gcc and glibc, so we lock them down here.  This
+# prevents the user from shooting himself/herself in the foot by installing a
+# wacky version.
+
+# PPC 1.2 PROFILE
+
+#
+# Temporary masking here only please (permanent ones at bottom)
+#
+
+# Looks like a whole bunch of x86 stuff in the ebuild that I'm not sure
+# will work so great on the PPC so it's masked for PPC testing. 
+# Owen - July 0/02
+~net-fs/openafs
+
+# x86 asm in this one, might be fixable at a later date (?) Gerk - june 24 2002
+~media-video/drip
+
+# xine currently has (known) ppc problems
+<media-libs/xine-lib-0.9.11
+<media-video/xine-ui-0.9.11
+<media-video/xine-dvdnav-0.9.11
+
+# vnc code (even from vendor) not very ppc happy at all
+# tightvnc works, so masking this for now - Gerk June 26 2002
+~net-misc/vnc
+
+# temp (to fix) currently x86 only builds 
+# that can be adjusted for ppc (gerk)
+~media-gfx/blender
+~media-video/ati-gatos
+
+#
+# Profile specific pkgs start here
+#
+
+# lock down the gcc 2.95.3 compiled versions of blackdown
+<=dev-java/blackdown-jdk-1.3.1-r8
+<=dev-java/blackdown-jre-1.3.1-r8
+
+*app-arch/ncompress
+*sys-apps/baselayout
+*sys-apps/portage
+*=sys-devel/binutils-2.12.90.0.7
+*=sys-devel/gcc-2.95.3-r7
+*~sys-libs/glibc-2.2.5
+*sys-apps/texinfo
+
+sys-kernel/ppc-sources
+>=sys-kernel/linux-headers-2.4.18
+
+sys-apps/sysklogd
+*>=dev-lang/python-2.2-r4
+>=x11-base/xfree-4.1.0-r2
+*virtual/editor
+#*app-editors/vim # Vim emerges xfree ... this sucks
+*sys-fs/hfsutils
+*virtual/bootloader
+*sys-apps/mac-fdisk
+*app-shells/sash
+*dev-lang/perl
+*dev-perl/ExtUtils-MakeMaker
+*net-ftp/ftp
+*net-misc/dhcpcd
+net-misc/netkit-telnetd
+net-misc/rsync
+*net-misc/wget
+*app-shells/bash
+*app-arch/bzip2
+*sys-apps/kbd
+*app-arch/cpio
+*sys-apps/debianutils
+*sys-apps/diffutils
+*sys-fs/e2fsprogs
+*sys-apps/ed
+*sys-apps/eject
+*sys-apps/fbset
+*sys-apps/file
+*sys-apps/fileutils
+*sys-apps/findutils
+*sys-apps/gawk
+*sys-apps/grep
+*sys-apps/groff
+*app-arch/gzip
+*sys-apps/hdparm
+*sys-apps/less
+*sys-apps/man
+*sys-apps/man-pages
+*sys-apps/modutils
+*sys-apps/net-tools
+*sys-apps/xinetd
+*sys-apps/procps
+*sys-apps/psmisc
+*sys-apps/raidtools
+*sys-fs/reiserfsprogs
+*sys-apps/sed
+*sys-apps/setserial
+*sys-apps/sh-utils
+*<sys-apps/shadow-5
+*sys-apps/pam-login
+# updated for GLSA
+*>=app-arch/sharutils-4.2.1-r6
+*app-arch/tar
+*sys-apps/textutils
+*sys-apps/util-linux
+*sys-apps/which
+*sys-devel/autoconf
+*>=sys-devel/automake-1.6.1-r5
+*sys-devel/bc
+*sys-devel/bison
+*sys-devel/flex
+*sys-devel/gettext
+*sys-devel/libtool
+*sys-devel/m4
+*sys-devel/make
+*sys-devel/patch
+*sys-libs/cracklib  
+*<sys-libs/db-3.2.10
+*sys-libs/gdbm  
+*sys-libs/ncurses     
+*sys-libs/pam     
+*sys-libs/pwdb      
+*sys-libs/readline  
+*sys-libs/zlib
+>=sys-libs/gpm-1.19.3-r5
+>=sys-apps/isapnptools-1.23-r6
+>=sys-apps/dcron-2.7-r6
+*virtual/ssh
+*>=sys-fs/devfsd-1.3.20
+>=sys-apps/xinetd-2.3.3-r6
+>=net-fs/samba-2.2.2-r6
+#>=net-fs/samba-2.0.10-r6
+>=sys-apps/at-3.1.8-r6
+>=app-admin/fcron-1.1.1-r6
+>=app-admin/metalog-0.6-r6
+>=app-admin/mon-0.38.20-r6
+>=app-admin/syslog-ng-1.4.12-r6
+>=net-www/apache-1.3.20-r6
+>=net-analyzer/ucd-snmp-4.1.2-r6
+>=net-ftp/oftpd-0.3.6-r6
+>=net-ftp/proftpd-1.2.4-r6
+>=net-misc/dhcp-3.0_rc12-r6
+>=net-misc/bind-9.1.3-r6
+>=net-misc/netkit-timed-0.17-r6
+>=net-misc/pdnsd-1.1.6-r6
+>=net-mail/exim-3.32-r6
+>=net-misc/fakeidentd-1.4-r6
+>=net-nds/openldap-1.2.12-r6
+>=net-nds/portmap-5b-r6
+>=media-sound/alsa-utils-0.5.10-r6
+>=net-print/LPRng-3.7.9-r6
+>=net-nds/ypbind-1.7-r6
+>=net-nds/ypserv-1.3.9-r6
+>=net-print/cups-1.1.10-r6
+>=sys-apps/apmd-3.0.1-r6
+#>=net-mail/postfix-20010228.5-r6
+>=net-misc/portsentry-1.1-r6
+>=sys-apps/noflushd-2.4-r6
+>=app-text/dictd-1.5.5-r6
+>=net-fs/samba-winbind-20010329-r6
+>=net-www/wwwoffle-2.6d-r6
+>=net-www/squid-2.4.2s-r6
+>=net-dialup/ppp-2.4.1-r6
+
+#
+# From here down are premanently 'locked down' builds
+# that are either precompiled bin for x86 or things
+# that don't work on ppc and wont in the future on ppc
+#
+
+# These are ebuilds installing precompiled stuff:
+
+~net-www/netscape-communicator
+~net-www/netscape-flash
+~net-www/netscape-navigator
+~net-www/netscape-plugger
+
+# more precompiled and/or x86 only ebuilds
+# not avail for ppc (gerk)
+~app-text/acroread
+~app-emulation/vmware-workstation
+~app-emulation/wine
+~app-emulation/winesetuptk
+~app-emulation/winex
+~dev-java/ibm-jdk
+~dev-java/sun-jdk
+~dev-java/sun-j2ee
+~dev-java/ibm-jre
+~app-emulation/basiliskII
+~sys-apps/yard
+~app-emulation/dosemu
+~net-www/opera
+~net-www/opera-static
+~dev-util/cvsup
+~media-video/realplayer
+
+# makes no sense on ppc
+~sys-boot/lilo
+~sys-boot/grub 
+
+# x86 and sparc only kernels (gerk)
+~sys-kernel/gentoo-sources
+~sys-kernel/crypto-sources
+~sys-kernel/openmosix-sources
+~sys-kernel/redhat-sources
+~sys-kernel/sparc-sources
+~sys-kernel/usermode-sources
+~sys-kernel/xfs-sources
+
