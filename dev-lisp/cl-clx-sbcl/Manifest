@@ -1,4 +1,5 @@
-MD5 503b0a600cef785f569c8417e4cc92ed cl-clx-sbcl-0.5.4.ebuild 1111
+MD5 1b2d44cf3c537c17eacfe2e256ad3424 cl-clx-sbcl-0.5.4.ebuild 1115
+MD5 21242351aaeaff4099e6122bee76eb74 ChangeLog 441
 MD5 77965244606331f316bc83fa33f7bdb3 metadata.xml 599
 MD5 ea70376acc7982db3dbd73c532d3af5f files/0.5.4-gentoo.patch 387
 MD5 d5f5a9b9df7741bf9ad6ec36bb68ccb5 files/digest-cl-clx-sbcl-0.5.4 61
