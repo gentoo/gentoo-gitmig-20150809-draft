@@ -1,6 +1,12 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.8 2004/06/24 22:34:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.9 2004/12/08 14:45:49 phosphan Exp $
+
+*epstool-3.06 (08 Dec 2004)
+
+  08 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> -epstool-3.02.ebuild,
+  +epstool-3.06.ebuild:
+  Version bump
 
   03 May 2004; Danny van Dyk <kugelfang@gentoo.org> epstool-3.04.ebuild:
   Marked ~amd64.
