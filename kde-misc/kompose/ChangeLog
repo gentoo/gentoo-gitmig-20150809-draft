@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kompose
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.2 2004/10/31 01:22:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.3 2004/11/23 15:50:26 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kompose-0.5.ebuild:
+  stable on x86
 
 *kompose-0.4.2 (31 Oct 2004)
 

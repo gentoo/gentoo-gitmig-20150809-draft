@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 145849969bd6ee0010b4d82602245a75 kompose-0.3.ebuild 475
+MD5 d0aa28ce5be834c91fcbfcd6669318b3 kompose-0.5.ebuild 500
 MD5 07eb6c2e09017cd8d62ed24f372bd2b8 kompose-0.4.1.ebuild 502
 MD5 073d418082aa6da6fbc2cde44bfcbc3d kompose-0.4.2.ebuild 503
-MD5 38ad77b926221e08a7d418fa5740b4c4 kompose-0.5.ebuild 501
+MD5 184a155fae292a5b738344fb709e4fdc ChangeLog 1471
+MD5 145849969bd6ee0010b4d82602245a75 kompose-0.3.ebuild 475
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 43fbc8c88c00c6945e703a3647eb5235 ChangeLog 1388
 MD5 56cd1ffdc72ce2bf99c8772482ad6ceb files/digest-kompose-0.4.1 66
 MD5 e9dac40c72df3ad65456c25eea055d6b files/digest-kompose-0.4.2 66
 MD5 0b66fd01b68c84aa8facffe68dcb40bb files/digest-kompose-0.3 70
 MD5 940d03f7ca83b7e2d11b40b4013b0d12 files/digest-kompose-0.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhD5WI1lqEGTUzyQRAlIcAJ4w/AiMDErQ69P8BLiEmWMhfzt/3gCgtDkY
-5wC5/xl/DI1ANsbZdWkm3a4=
-=gOr8
------END PGP SIGNATURE-----
