@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.2 2003/05/21 13:50:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.3 2003/06/18 15:45:37 caleb Exp $
 
 inherit kde-base
 need-kde 3
@@ -45,6 +45,7 @@ einfo "complete list. If you want subversion support, you must emerge it and the
 einfo "kdevelop; all other packages can be emerged after kdevelop."
 einfo
 einfo "dev-util/cvs:		provide frontend for cvs version control system"
+einfo "net-misc/x11-ssh-askpass		for use with SSH protected CVS systems"
 einfo "dev-util/subversion		ditto for subversion. However much newer version of"
 einfo "				subversion is needed than exists in portage atm"
 einfo "perforce			ditto for perforce system. No ebuild exists atm"
