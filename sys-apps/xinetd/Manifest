@@ -12,7 +12,7 @@ MD5 897e24c3c7cc5a08093dfcb3a71fc0ee files/xconv.pl 3030
 MD5 300b0b4bf4741ed50e7978d3361e5666 files/xinetd-run 463
 MD5 ccad3f7878ea7a1e078796419717c4b2 files/xinetd.conf 459
 MD5 1f24b28f485355ae6fa0f9e4008553c5 files/xinetd.confd 289
-MD5 3eda9814ff868bdb29f35c7ad4d2c02f files/xinetd.rc6 919
+MD5 1a44a9fae11dc8161f5576bf47c86671 files/xinetd.rc6 916
 MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
 MD5 f9591814c08ab763ace5c8969ce6d457 files/etc.xinetd.d/README.services 643
 MD5 7d04f6175ae493c8aa988e3728e959b3 files/etc.xinetd.d/chargen-tcp 246
@@ -26,7 +26,7 @@ MD5 70829ea9fe03a6e343efa635c9f263e0 files/etc.xinetd.d/time-udp 272
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBYdrJHTu7gpaalycRAp6WAJ4+2SWWhP5e1mEdP92Sy7RQg/ETTwCgv80F
-apoYfe9SqaguYnlR7PEWJ0A=
-=m5tu
+iD8DBQFBYyAFHTu7gpaalycRAnHUAKDG9ZalKmAUM2xWfRao8dpCedZ0tgCg9uXP
+GMWAlDK7P4YlLOwxlj+LBJU=
+=DesY
 -----END PGP SIGNATURE-----
