@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha20.ebuild,v 1.1 2003/12/05 03:29:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha20.ebuild,v 1.2 2003/12/14 23:36:04 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${DOWNLOADFILENAME}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~hppa ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~alpha ~amd64 ia64"
 IUSE="dvdr"
 
 DEPEND="virtual/glibc"
