@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/netwatch
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/ChangeLog,v 1.1 2003/09/29 15:09:19 genone Exp $
+
+*netwatch-1.0a (29 Sep 2003)
+
+  29 Sep 2003; Marius Mauch <genone@gentoo.org> netwatch-1.0a.ebuild:
+  Initial commit. Thanks to Jeremy Huddleston (bug 24146), although the
+  version 1.0b_pre3 isn't available and currently breaks portage, so I can 
+  only add 1.0a.
+
