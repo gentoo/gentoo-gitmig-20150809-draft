@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.1.15.ebuild,v 1.2 2004/05/24 01:57:25 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/clientform-0.1.15.ebuild,v 1.3 2004/06/15 18:58:19 pythonhead Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://wwwsearch.sourceforge.net/ClientForm/"
 SRC_URI=http://wwwsearch.sourceforge.net/ClientForm/src/${MY_P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DOCS="COPYING README.txt PKG-INFO MANIFEST.in ChangeLog"
 
