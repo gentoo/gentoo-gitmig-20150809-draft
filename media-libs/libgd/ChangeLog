@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.13 2003/02/04 18:13:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.14 2003/02/08 06:29:33 lostlogic Exp $
 
 *libgd-1.8.3-r6 (15 Jan 2003)
   
-  04 Feb 2003; Sseemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r6.ebuild :
+  07 Feb 2003; Brandon Low <lostlogic@gentoo.org>; libgd-1.8.3-r6.ebuild :
+  Fix to work with userpriv properly.
+
+  04 Feb 2003; Seemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r6.ebuild :
 
   Removed dependency on sed-4 because it is buggy on ppc.  Switched to
   normal gnu-sed syntax. Closes bug #15022 by Rajiv Manglani
