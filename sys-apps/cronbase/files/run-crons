@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.3 2002/05/13 18:34:05 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.4 2002/06/21 09:25:48 bangert Exp $
 #
 # 20 Apr 2002; Thilo Bangert <bangert@gentoo.org> run-crons:
 #
@@ -27,13 +27,20 @@ do
     test -e /var/spool/cron/lastrun/$BASE && {
 
 	case $BASE in
-	    cron.hourly)  TIME="-cmin  +60 -or -cmin  60" ;;
-	    cron.daily)   TIME="-ctime +1  -or -ctime 1"  ;;
-	    cron.weekly)  TIME="-ctime +7  -or -ctime 7"  ;;
-	    cron.monthly) TIME="-ctime +30 -or -ctime 30" ;;
+	    cron.hourly)
+		#> 59 min =~ >= 60 min
+		TIME="-cmin  +59 " ;;
+	    cron.daily)
+		#>= 1 day
+		TIME="-ctime +1  -or -ctime 1"  ;;
+	    cron.weekly)
+		#>= 7 days
+		TIME="-ctime +7  -or -ctime 7"  ;;
+	    cron.monthly)
+		#>= 30 days
+		TIME="-ctime +30 -or -ctime 30" ;;
 	esac
-	eval find /var/spool/cron/lastrun/$BASE $TIME | \
-	    xargs --no-run-if-empty rm 
+	find /var/spool/cron/lastrun/$BASE $TIME -exec rm {} \;
     }
     if test ! -e /var/spool/cron/lastrun/$BASE ; then
 	touch /var/spool/cron/lastrun/$BASE
@@ -52,6 +59,5 @@ done
 #
 
 touch /var/spool/cron/lastrun
-find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun | \
-    xargs --no-run-if-empty rm
+find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun -exec rm {} \;
 
