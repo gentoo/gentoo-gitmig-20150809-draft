@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.2.1.ebuild,v 1.5 2003/02/13 05:54:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.2.1.ebuild,v 1.6 2003/02/17 12:55:17 foser Exp $
 
 inherit gnome2
 
@@ -23,6 +23,7 @@ DEPEND=">=dev-libs/glib-2
 	>=gnome-base/libbonoboui-2"
 
 RDEPEND="${DEPEND}
-	>=gnome-base/gconf-1.2"
+	>=gnome-base/gconf-1.2
+	>=app-text/scrollkeeper-0.3.11"
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO"
