@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode_ctl/ChangeLog,v 1.1 2002/04/30 13:52:59 sandymac Exp $
+
+*microcode_ctl-1.06 (30 Apr 2002)
+
+  30 Apr 2002; William McArthur <sandymac@gentoo.org> microcode_ctl-1.06.ebuild:
+
+  Initial add to portage.
