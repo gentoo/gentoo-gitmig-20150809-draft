@@ -1,7 +1,15 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.5 2002/02/18 21:10:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.6 2002/04/10 12:01:33 karltk Exp $
 
+*postgresql-7.2-r2 (10 Apr 2002)
+
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> postgresql-7.2-r2.ebuild files/digest-postgresql-7.2-r2:
+
+  Added proper code in pkg_setup() so that it will refuse to compile if the
+  user has JDK 1.4.0 as his system VM.
+
+  Removed postgresql-7.2-r1.ebuild files/digest-postgresql-7.2-r1
 
 *postgresql-7.2-r1 (18 Feb 2002)
 
