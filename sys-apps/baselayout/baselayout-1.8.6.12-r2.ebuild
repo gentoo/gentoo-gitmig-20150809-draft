@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.3 2003/12/10 21:02:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.4 2003/12/14 20:22:02 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -162,6 +162,14 @@ create_dev_nodes() {
 	export PATH="${D}/sbin:${PATH}"
 
 	case ${ARCH} in
+		amd64)
+			# amd64 must use generic-i386 because amd64/x86_64 does not have
+			# a generic option at this time, and the default 'generic' ends
+			# up erroring out, because MAKEDEV internally doesn't know what
+			# to use
+			einfo "Using generic-i386 to make amd64 device nodes..."
+			${D}/sbin/MAKEDEV generic-i386
+			;;
 		x86)
 			einfo "Using generic-i386 to make device nodes..."
 			${D}/sbin/MAKEDEV generic-i386
