@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.10 2003/07/20 13:52:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext/ChangeLog,v 1.11 2003/12/30 17:28:29 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  locale-maketext-1.06.ebuild:
+  tested on sparc
 
 *locale-maketext-1.06 (20 Jul 2003)
 
