@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.121.ebuild,v 1.1 2005/01/27 14:05:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.121.ebuild,v 1.2 2005/02/24 17:19:25 lanius Exp $
 
 DESCRIPTION="personal package builder for Debian packages"
 HOMEPAGE="http://packages.qa.debian.org/p/pbuilder.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc amd64"
 SRC_URI="mirror://debian/pool/main/p/pbuilder/pbuilder_${PV}.tar.gz"
 
 S=${WORKDIR}/${PN}
