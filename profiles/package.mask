@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (26 Dec 2002)
+# latest wxGTK breaks wxPython
+=wxGTK/wxGTK-2.3.4
+
 # <jhhudso@gentoo.org> (24 Dec 2002)
 # Testing xemacs without sandbox disable, since --pdump has been added
 =app-editors/xemacs-21.4.10-r2
