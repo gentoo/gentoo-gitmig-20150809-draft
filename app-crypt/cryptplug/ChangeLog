@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.11 2004/06/06 23:21:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.12 2004/06/16 02:05:48 weeve Exp $
+
+  15 Jun 2004; Jason Wever <weeve@gentoo.org> cryptplug-0.3.16.ebuild:
+  Stable on sparc.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   cryptplug-0.3.15.ebuild, cryptplug-0.3.16.ebuild:
