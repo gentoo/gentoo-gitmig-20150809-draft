@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/upx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/upx/ChangeLog,v 1.1 2002/06/21 22:09:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/upx/ChangeLog,v 1.2 2002/07/09 18:24:51 sunflare Exp $
+
+*upx-1.22 (09 Jul 2002)
+
+  09 Jul 2002; Phil Bordelon <sunflare@gentoo.org> upx-1.21.ebuild upx-1.22.ebuild :
+
+  Version bump.  Cleaned up the ebuild a bit; added SLOT and KEYWORD
+  to the older ebuild as well.  The new ebuild also does documentation.
 
 *upx-1.21 (21 Jun 2002)
 
