@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapiir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.9 2004/06/25 00:25:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.10 2004/07/20 06:35:21 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
+  Added ~amd64
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> tapiir-0.7.1.ebuild:
   Getting rid of virtual/jack.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.4 2004/06/25 00:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.4.ebuild,v 1.5 2004/07/20 06:33:19 eradicator Exp $
 
 inherit python
 
@@ -8,11 +8,10 @@ IUSE="gtkhtml gnome" # see bug #43889 oss"
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://solfege.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=x11-libs/gtk+-2.0
