@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.10 2004/11/17 07:02:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.11 2004/12/15 11:27:18 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -32,6 +32,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	http://www.leverton.org/qmail-hold-1.03.pat.gz
 	mirror://qmail/netscape-progress.patch
 	http://www-dt.e-technik.uni-dortmund.de/~ma/djb/qmail/sendmail-ignore-N.patch
+	mirror://gentoo/qmail-1.03-moreipme-0.6pre1-gentoo.patch
 	"
 # broken stuffs
 #http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
@@ -200,6 +201,11 @@ src_unpack() {
 	if useq macos; then
 		epatch ${FILESDIR}/${PVR}/qmail-macos-dns-fix.patch
 	fi
+
+	# Rediffed patch to prevent from a problem which can
+	# happen when using NAT. Rediffed by hansmi@gentoo.org.
+	# See http://www.suspectclass.com/~sgifford/qmail/qmail-moreipme-0.6.README
+	epatch ${DISTDIR}/qmail-1.03-moreipme-0.6pre1-gentoo.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then

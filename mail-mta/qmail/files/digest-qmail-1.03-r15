@@ -21,3 +21,4 @@ MD5 ad597c93426c0938fdb36d853fbcf40d 08-capa.diff 1323
 MD5 00084ddd52a3665b65f2db20a773b382 qmail-hold-1.03.pat.gz 1596
 MD5 68e7697fd61d7cd9a5a7dc88ce2ecd47 netscape-progress.patch 1457
 MD5 598aca7a3a99426d1f49079172986b31 sendmail-ignore-N.patch 636
+MD5 2bd191cca4e640e87cca79bc0405f97a qmail-1.03-moreipme-0.6pre1-gentoo.patch 13942
