@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r1.ebuild,v 1.3 2005/01/01 18:00:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r1.ebuild,v 1.4 2005/03/21 08:13:58 eradicator Exp $
 
-inherit gcc
+inherit toolchain-funcs multilib
 
 DESCRIPTION="A cross-platform network library designed for games"
 HOMEPAGE="http://www.hawksoft.com/hawknl/"
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	emake \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		OPTFLAGS="${CFLAGS} -D_GNU_SOURCE -D_REENTRANT" \
 		|| die "emake failed"
 }
@@ -43,15 +43,15 @@ src_compile() {
 src_install() {
 	local reallib
 
-	dodir /usr/{include,lib}
-	make install LIBDIR="${D}/usr/lib" INCDIR="${D}/usr/include" \
+	dodir /usr/{include,$(get_libdir)}
+	make install LIBDIR="${D}/usr/$(get_libdir)" INCDIR="${D}/usr/include" \
 		|| die "make install failed"
 	if use doc ; then
 		docinto samples
 		dodoc samples/* || die "dodoc failed"
 	fi
 
-	cd "${D}/usr/lib"
+	cd "${D}/usr/$(get_libdir)"
 	for f in *.so* ; do
 		[ ! -L ${f} ] && continue
 		reallib="$(basename $(readlink NL.so))"
