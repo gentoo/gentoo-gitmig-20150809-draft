@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.4 2002/05/01 01:15:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3.ebuild,v 1.5 2002/05/01 01:29:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a library for running svga graphics on the console"
@@ -41,6 +41,10 @@ src_install () {
 	dolib.a gl/libvgagl.a
 	dolib.so gl/libvgagl.so.${PV}
 	dosym libvgagl.so.${PV} /usr/lib/libvgagl.so
+
+	insinto /usr/include
+	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
+	doins src/keyboard/vgakeyboard.h
 
 	cd doc
 	dodoc 0-README CHANGES* DESIGN NEWS TODO
