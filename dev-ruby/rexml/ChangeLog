@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rexml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.10 2003/04/23 09:33:21 twp Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.11 2004/04/10 15:46:02 usata Exp $
+
+*rexml-3.0.2 (11 Apr 2004)
+
+  11 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> rexml-2.5.8.ebuild,
+  rexml-3.0.2.ebuild:
+  Version bumped. virtual/ruby fix
 
 *rexml-2.5.8 (23 Apr 2003)
 
