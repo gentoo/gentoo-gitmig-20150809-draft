@@ -1,6 +1,11 @@
 # ChangeLog for net-print/xprint
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/ChangeLog,v 1.1 2003/07/20 11:10:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xprint/ChangeLog,v 1.2 2003/08/08 20:14:42 lanius Exp $
+
+*xprint-008-r1 (08 Aug 2003)
+
+  08 Aug 2003; lanius@gentoo.org xprint-008-r1.ebuild:
+  cleaned this up a lot (bug #25745)
 
 *xprint-008 (20 Jul 2003)
 
