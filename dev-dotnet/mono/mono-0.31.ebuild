@@ -1,30 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.5 2004/06/24 22:04:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.31.ebuild,v 1.6 2004/06/29 14:37:57 vapier Exp $
 
 inherit eutils mono flag-o-matic
-
-strip-flags
 
 MCS_P="mcs-${PV}"
 MCS_S=${WORKDIR}/${MCS_P}
 
-IUSE="nptl"
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
+HOMEPAGE="http://www.go-mono.com/"
 SRC_URI="http://www.go-mono.com/archive/${P}.tar.gz
 	http://www.go-mono.com/archive/${MCS_P}.tar.gz"
-HOMEPAGE="http://www.go-mono.com/"
 
 LICENSE="GPL-2 | LGPL-2 | X11"
 SLOT="0"
-
 KEYWORDS="~x86 -ppc"
+IUSE="nptl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
 	>=dev-libs/icu-2.6
 	!dev-dotnet/pnet"
-
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxml2"
@@ -44,6 +40,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-flags
+
 	local myconf=""
 	if use nptl && have_NPTL
 	then
@@ -53,7 +51,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
+	emake -j1 || die "MONO compilation failure"
 
 	ln -s ../runtime ${WORKDIR}/${P}/runtime/lib
 	cd ${MCS_S}
@@ -68,11 +66,10 @@ src_compile() {
 	echo "prefix=/usr" >> build/config.make
 }
 
-src_install () {
-	cd ${S}
+src_install() {
 	einstall || die
 
-	dodoc AUTHORS ChangeLog COPYING.LIB NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	docinto docs
 	dodoc docs/*
 
@@ -86,7 +83,7 @@ src_install () {
 	doins MonoIcon.png ScalableMonoIcon.svg
 
 	docinto mcs
-	dodoc AUTHORS COPYING README* ChangeLog INSTALL.txt
+	dodoc AUTHORS README* ChangeLog INSTALL.txt
 	docinto mcs/docs
 	dodoc docs/*.txt
 

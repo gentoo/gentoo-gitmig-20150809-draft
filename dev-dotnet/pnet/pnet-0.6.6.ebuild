@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.6.ebuild,v 1.7 2004/06/24 22:04:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.6.ebuild,v 1.8 2004/06/29 14:38:16 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,6 @@ SRC_URI="mirror://gnu/dotgnu/pnet/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
-
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.3.0
@@ -27,13 +26,13 @@ src_unpack() {
 src_compile() {
 	use amd64 && replace-flags -O? -O1
 	econf || die
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die
+	emake -j1 || die
 }
 
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README
+	dodoc AUTHORS ChangeLog HACKING INSTALL NEWS README
 	dodoc doc/gtk-sharp.HOWTO
 	dohtml doc/*.html
 

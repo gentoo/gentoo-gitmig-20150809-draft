@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.5 2004/06/24 22:05:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.6 2004/06/29 14:39:07 vapier Exp $
 
 DESCRIPTION="Library for using Windows.Forms with Mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -12,9 +12,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND=">=dev-dotnet/mono-0.95
-		>=app-emulation/wine-20040121
-		>=dev-dotnet/libgdiplus-0.9"
-DEPEND="${RDEPEND}"
+	>=app-emulation/wine-20040121
+	>=dev-dotnet/libgdiplus-0.9"
 
 src_unpack() {
 	unpack ${A}
