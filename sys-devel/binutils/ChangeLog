@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.155 2004/09/08 18:14:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.156 2004/09/28 15:49:36 vapier Exp $
+
+  28 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/2.15/40_all_binutils-uclibc-linker.patch,
+  binutils-2.15.90.0.1.1-r1.ebuild, binutils-2.15.90.0.1.1-r3.ebuild:
+  Add a patch to fix uclibc linking/ld.so.con.
 
   08 Sep 2004; Mike Frysinger <vapier@gentoo.org>
   binutils-2.14.90.0.8-r1.ebuild, -binutils-2.14.90.0.8-r2.ebuild:

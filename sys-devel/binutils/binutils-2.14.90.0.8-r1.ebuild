@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.23 2004/09/09 01:51:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.24 2004/09/28 15:53:42 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -31,6 +31,7 @@ src_unpack() {
 	# relro doesnt play well with pax
 	mv ${WORKDIR}/patch/{38,39,63,92}_* ${WORKDIR}/patch/skip/
 	epatch ${WORKDIR}/patch
+	epatch ${FILESDIR}/2.15/40_all_binutils-uclibc-linker.patch
 
 	# Libtool is broken (Redhat).
 	for x in ${S}/opcodes/Makefile.{am,in}

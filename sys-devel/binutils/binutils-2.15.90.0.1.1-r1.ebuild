@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r1.ebuild,v 1.8 2004/09/02 02:44:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r1.ebuild,v 1.9 2004/09/28 15:49:36 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -29,8 +29,8 @@ src_unpack() {
 	mkdir ${WORKDIR}/patch/skip
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
 
+	EPATCH_SUFFIX=patch epatch ${FILESDIR}/2.15
 	epatch ${WORKDIR}/patch
-
 
 	# Libtool is broken (Redhat).
 	for x in ${S}/opcodes/Makefile.{am,in}
