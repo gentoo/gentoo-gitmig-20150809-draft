@@ -1,20 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.1 2002/05/22 21:03:14 g2boojum Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.2 2002/07/25 15:31:24 seemant Exp $
 
 PN0="john"
+S=${WORKDIR}/${PN0}-${PV}
 DEBPATCH=${PN0}_${PV}-17.diff.gz
 DESCRIPTION="John the Ripper is a fast password cracker."
 HOMEPAGE="http://www.openwall.com/${PN0}/"
-LICENSE="GPL-2"
-DEPEND="virtual/glibc
-		>=sys-devel/binutils-2.8.1.0.15"
-#RDEPEND=""
 SRC_URI="${HOMEPAGE}/${PN0}-${PV}.tar.gz
 		 http://ftp.debian.org/debian/pool/main/j/${PN0}/${DEBPATCH}"
 
-S=${WORKDIR}/${PN0}-${PV}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 
 src_unpack() {
 	unpack ${PN0}-${PV}.tar.gz
