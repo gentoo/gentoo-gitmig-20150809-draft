@@ -259,5 +259,17 @@ diff -u -r linux-2.4.20-gentoo-r6/arch/i386/math-emu/poly.h linux-2.4.20-gentoo-
 +		:"g" (dest), "g" (x2), "g" (exp) \
  		:"cx","si","ax");
  }
- 
 
+diff -u -r linux-2.4.20-gentoo-r6/net/ipv4/netfilter/ip_nat_core.c linux-2.4.20-gentoo-r7/net/ipv4/netfilter/ip_nat_core.c
+--- linux-2.4.20-gentoo-r6/net/ipv4/netfilter/ip_nat_core.c	2003-09-10 23:36:03.000000000 +0100
++++ linux-2.4.20-gentoo-r7/net/ipv4/netfilter/ip_nat_core.c	2003-09-21 12:36:47.000000000 +0100
+@@ -851,8 +851,7 @@
+ 			if (exp_for_packet(exp, pskb)) {
+ 				/* FIXME: May be true multiple times in the
+ 				 * case of UDP!! */
+-				DEBUGP("calling nat helper (exp=%p) for
+-					packet\n", exp);
++				DEBUGP("calling nat helper (exp=%p) for packet\n", exp);
+ 				ret = helper->help(ct, exp, info, ctinfo, 
+ 						   hooknum, pskb);
+ 				if (ret != NF_ACCEPT) {
