@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/cheetah-docs
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/ChangeLog,v 1.1 2004/01/18 13:01:53 liquidx Exp $
+
+  18 Jan 2004; Alastair Tse <liquidx@gentoo.org> :
+  moved dev-python/Cheetah-docs to dev-python/cheetah-docs. also fixed
+  installation paths
+
+*Cheetah-docs-0.9.15_alpha1 (30 Jan 2003)
+
+  30 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Initial version of the ebuild.
