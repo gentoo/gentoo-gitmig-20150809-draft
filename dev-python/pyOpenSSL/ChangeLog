@@ -1,6 +1,6 @@
-# ChangeLog for dev-lang/sather
+# ChangeLog for dev-python/pyOpenSSL
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/ChangeLog,v 1.1 2002/12/05 13:56:39 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/ChangeLog,v 1.2 2002/12/17 19:37:52 vapier Exp $
 
 *pyOpenSSL-0.5.1 (05 Dec 2002)
 
