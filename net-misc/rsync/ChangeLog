@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.71 2004/11/22 03:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.72 2004/12/29 13:04:18 gustavoz Exp $
+
+  29 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> rsync-2.6.3.ebuild:
+  Stable on sparc
 
   21 Nov 2004; Mike Frysinger <vapier@gentoo.org> rsync-2.6.0-r3.ebuild,
   rsync-2.6.3.ebuild:
