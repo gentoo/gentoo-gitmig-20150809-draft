@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.25 2003/01/08 22:11:01 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.26 2003/01/12 02:18:48 lu_zero Exp $
+
+*sylpheed-0.8.8-r1 (12 Jan 2003) sylpheed-0.8.8-r1.ebuild,
+  files/digest-sylpheed-0.8.8-r1,files/shared-mime.patch
+  12 Jan 2003; Luca Barbato <lu_zero@gentoo.org>:
+  patched to use shared-mime-info from freedesktop.org 
 
 *sylpheed-0.8.8 (26 Dec 2002)
 
