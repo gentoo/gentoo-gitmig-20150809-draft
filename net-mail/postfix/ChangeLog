@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.64 2003/04/19 02:55:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.65 2003/04/28 18:32:07 azarah Exp $
+
+*postfix-2.0.9 (28 Apr 2003)
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> postfix-2.0.9-r1.ebuild,
+  postfix-2.0.9-get-FQDN.patch :
+  Postfix do not get the FQDN if no hostname is specified, and thus do not
+  handle the hostname change in latest baselayout gracefully.  Patch it to
+  fix this issue.
 
 *postfix-2.0.9 (18 Apr 2003)
 
