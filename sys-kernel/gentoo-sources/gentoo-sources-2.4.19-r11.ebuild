@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r11.ebuild,v 1.1 2004/02/23 23:02:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r11.ebuild,v 1.2 2004/02/24 20:37:26 plasmaroo Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -43,14 +43,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
-	cd linux-${KV}
-	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
-	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
-	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() patch!"
-	epatch ${FILESDIR}/${PN}-2.4.20-munmap.patch || die "Failed to apply munmap patch!"
-	cd ..
-
-	cd ${KV}
+	cd ${KV/11/10}
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
 
@@ -65,4 +58,11 @@ src_unpack() {
 	[ `use acpi4linux` ] || rm 70*
 
 	kernel_src_unpack
+
+	cd linux-${KV}
+	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
+	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() patch!"
+	epatch ${FILESDIR}/${P}-munmap.patch || die "Failed to apply munmap patch!"
+	cd ..
 }
