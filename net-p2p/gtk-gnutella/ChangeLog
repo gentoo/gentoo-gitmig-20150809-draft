@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.17 2003/11/16 21:18:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.18 2003/11/24 08:07:29 lostlogic Exp $
+
+*gtk-gnutella-0.93-r1 (24 Nov 2003)
+
+  24 Nov 2003; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.93-r1.ebuild:
+  Thanks to Keith Constable <kccricket@twistedgamer.com> on Bug 32597 for doing
+  the leg work to use the commandline arguments for the new gtk-gnutella
+  configurator that I didn't want to do, this ebuild should also fix Bug 33660
+  thanks to a little bit of additional hacking I did.
 
   16 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   gtk-gnutella-0.91.9.1.ebuild, gtk-gnutella-0.92.ebuild,
