@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.1 2005/01/06 19:52:02 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.2 2005/01/06 20:26:42 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -54,24 +54,32 @@ xfce4_src_compile() {
 	    XFCE_CONFIG="${XFCE_CONFIG} --enable-debug=yes"
 	fi 
 	
-	econf ${XFCE_CONFIG} || die
-    
-	if [[ "${SINGLE_MAKE}" = "1" ]]; then
-	    emake -j1 || die
+	if [[ ${XFCE_META} = "1" ]]; then
+	    einfo "Meta Build, Nothing to compile."   
 	else
-	    emake || die
+	    econf ${XFCE_CONFIG} || die
+    
+	    if [[ "${SINGLE_MAKE}" = "1" ]]; then
+		emake -j1 || die
+	    else
+		emake || die
+	    fi
 	fi
 }
 
 xfce4_src_install() {
-	if [[ "${WANT_EINSTALL}" = "1" ]]; then
-	    einstall || die
-	else
-	    make DESTDIR=${D} install || die
-	fi
+	if [[ ${XFCE_META} = "1" ]]; then
+	    einfo "Meta Build, Nothing to install."
+	else    
+	    if [[ "${WANT_EINSTALL}" = "1" ]]; then
+		einstall || die
+	    else
+		make DESTDIR=${D} install || die
+	    fi
 	
-	if use doc; then
-	    dodoc ${XFCE_DOCS} AUTHORS INSTALL README COPYING ChangeLog HACKING NEWS THANKS TODO
+	    if use doc; then
+		dodoc ${XFCE_DOCS} AUTHORS INSTALL README COPYING ChangeLog HACKING NEWS THANKS TODO
+	    fi
 	fi
 }
 
