@@ -1,0 +1,12 @@
+--- vicious-extensions/Makefile.am.orig	Sat Oct  6 03:46:47 2001
++++ vicious-extensions/Makefile.am	Sat Oct  6 03:44:05 2001
+@@ -5,7 +5,8 @@
+ 	-I.. \
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
+ 	-I$(includedir) \
+-	$(GNOME_INCLUDEDIR)
++	$(GNOME_INCLUDEDIR) \
++	$(LIBGLADE_CFLAGS)
+ 
+ noinst_LIBRARIES = libvicious.a libviciousui.a
+ 

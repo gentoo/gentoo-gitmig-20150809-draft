@@ -1,0 +1,39 @@
+diff -r -u bonobo-1.0.9.orig/bonobo/Makefile.am bonobo-1.0.9/bonobo/Makefile.am
+--- bonobo-1.0.9.orig/bonobo/Makefile.am	Fri Sep 21 00:06:42 2001
++++ bonobo-1.0.9/bonobo/Makefile.am	Sat Oct  6 04:41:54 2001
+@@ -13,7 +13,8 @@
+ 	$(GNOME_INCLUDEDIR)				\
+ 	$(OAF_CFLAGS)					\
+ 	$(GDK_PIXBUF_CFLAGS)				\
+-	$(PROF_CFLAGS)
++	$(PROF_CFLAGS)					\
++	$(GNOME_PRINT_CFLAGS)
+ 
+ LDFLAGS += $(PROF_LDFLAGS)
+ 
+diff -r -u bonobo-1.0.9.orig/configure.in bonobo-1.0.9/configure.in
+--- bonobo-1.0.9.orig/configure.in	Thu Sep 27 20:51:27 2001
++++ bonobo-1.0.9/configure.in	Sat Oct  6 04:41:38 2001
+@@ -294,6 +294,9 @@
+     AC_MSG_ERROR(Did not find gnome-print installed)
+ fi
+ 
++GNOME_PRINT_CFLAGS="`$GNOME_CONFIG --cflags print`"
++AC_SUBST(GNOME_PRINT_CFLAGS)
++
+ GNOME_PRINT_LIBS="`$GNOME_CONFIG --libs print`"
+ AC_SUBST(GNOME_PRINT_LIBS)
+ 
+diff -r -u bonobo-1.0.9.orig/monikers/Makefile.am bonobo-1.0.9/monikers/Makefile.am
+--- bonobo-1.0.9.orig/monikers/Makefile.am	Sun May  6 00:57:34 2001
++++ bonobo-1.0.9/monikers/Makefile.am	Sat Oct  6 04:55:06 2001
+@@ -5,7 +5,8 @@
+ 	-I$(top_builddir)				\
+ 	-I$(top_srcdir)/bonobo                          \
+         -I$(includedir)                                 \
+-	$(BONOBO_TEST_CFLAGS)
++	$(BONOBO_TEST_CFLAGS)				\
++	$(GNOME_PRINT_CFLAGS)
+ 
+ OAF_FILES =					\
+ 	Bonobo_Moniker_gzip.oaf.in		\

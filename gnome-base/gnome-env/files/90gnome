@@ -1,6 +1,0 @@
-GNOME_PATH=/opt/gnome
-PATH=/opt/gnome/bin:/opt/gnome/sbin
-ROOTPATH=/opt/gnome/bin:/opt/gnome/sbin
-MANPATH=/opt/gnome/man
-INFODIR=/opt/gnome/info
-LDPATH=/opt/gnome/lib
