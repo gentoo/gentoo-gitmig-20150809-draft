@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.2 2004/09/10 19:50:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.3 2004/09/28 21:07:25 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="100% Pure Java Regular Expression package"
 SRC_URI="mirror://apache/jakarta/regexp/source/jakarta-${P}.tar.gz"
@@ -30,6 +32,6 @@ src_compile() {
 src_install() {
 	cd ${S}/build
 	mv jakarta-${P}.jar ${PN}.jar
-	dojar ${PN}.jar
+	java-pkg_dojar ${PN}.jar
 	use doc && dohtml -r docs/api/*
 }
