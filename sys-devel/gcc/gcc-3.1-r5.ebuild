@@ -18,7 +18,7 @@ SLOT="3.1"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2"
-DESCRIPTION="Modern GCC C/C++ compiler and an included, upgraded version of texinfo to boot"
+DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 DEPEND="virtual/glibc"
