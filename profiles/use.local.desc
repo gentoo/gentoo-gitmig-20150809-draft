@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.665 2004/10/03 09:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.666 2004/10/04 09:16:55 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -47,7 +47,6 @@ app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
-app-emulation/wine:nptl - Support for the Native POSIX Threading Library built into glibc
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
@@ -128,7 +127,6 @@ dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure 
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/tora:oracle - Enable oracle support
-dev-dotnet/mono:nptl - Enable/Disable the Native POSIX Threading Library support (requires glibc built with nptl)
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace-cvs:3ds - Enables support for .3DS files in CrystalSpace
@@ -166,7 +164,6 @@ dev-java/quartz:oracle - Enable oracle support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
-dev-java/sun-j2sdk:nptl - Enable support for NPTL
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/velocity:j2ee - Add j2ee support
 dev-lang/R:blas - Use the blas library. (virtual/blas)
@@ -226,7 +223,6 @@ dev-tcltk/tkzinc:threads - enable the use of threads
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
-dev-util/monodevelop:nptl - Enable or disable nptl support (mainly for mono-debugger)
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/xmingw-gcc:f77 - Build support for the f77 language
 dev-util/xmingw-gcc:gcj - Build gcj (java compiler included with gcc package)
@@ -585,7 +581,6 @@ sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
 sys-libs/glibc:n32 - Enable n32 ABI support on mips
 sys-libs/glibc:n64 - Enable n64 ABI support on mips
-sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
@@ -627,7 +622,6 @@ x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 a
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:xprint - Builds the XPrint extension to X
 x11-libs/evas:cairo - Build the cairo graphical engine
-x11-libs/fltk:nptl - Enable support for NPTL
 x11-libs/fox:freetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
