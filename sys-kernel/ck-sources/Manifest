@@ -1,5 +1,5 @@
-MD5 85e9b2a9660d73af08e04ff088a74df3 ChangeLog 13834
-MD5 c6cc40a53406991a490e43897d5d3c04 ck-sources-2.6.9-r3.ebuild 803
+MD5 37b9f28921b16166a3437895feaba493 ChangeLog 14012
+MD5 304950311b4a2dd6cf4ea150bb0b6ce6 ck-sources-2.6.9-r3.ebuild 802
 MD5 467750a99a7e23aac6f007d29c5f122b ck-sources-2.4.27-r4.ebuild 1077
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/ck-sources-2.4.27.XDRWrapFix.patch 1499
@@ -14,3 +14,4 @@ MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/ck-sources-2.6.9.smbfs.patch 2662
 MD5 d4a740ae56c2049247083af387a22a85 files/ck-sources-2.4.27.CAN-2004-0394.patch 350
 MD5 cc2afc76adbf81038af8a5f262ed5174 files/digest-ck-sources-2.4.27-r4 214
 MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 files/ck-sources-2.4.27.smbfs.patch 3434
+MD5 530630d25910e6bd9376b63ea099655f files/ck-sources-2.6.9.AF_UNIX.patch 469
