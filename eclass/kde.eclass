@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.24 2001/12/24 20:54:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.25 2001/12/27 16:58:56 drobbins Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -10,7 +10,7 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND="$DEPEND objprelink? ( >=dev-util/objprelink-0-r1 )"
+DEPEND="$DEPEND"
 
 # resolution function: kde version -> qt version
 # wish we had something like python dictionaries here :-)
@@ -32,30 +32,6 @@ qtver-from-kdever() {
 
 }
 
-kde-objprelink-patch() {
-	debug-print-function $FUNCNAME $*
-	if [ "`use objprelink`" ]; then
-	    cd ${S} || die
-	    patch -p0 < /usr/share/objprelink/kde-admin-acinclude.patch || die
-	    patched=false
-	    
-	    for x in Makefile.cvs admin/Makefile.common
-	    do
-		if ! $patched
-		then
-		    if [ -f $x ]
-		    then
-			echo "patching file $x (kde-objprelink-patch)" && make -f $x && patched=true || die
-		    fi
-		fi
-	    done
-
-	    $patched || echo "??? Warning: kde-objprelink-patch: patch not applied, makefile not found"
-	
-	fi
-
-}
-
 kde_src_compile() {
 
     debug-print-function $FUNCNAME $*
@@ -73,7 +49,7 @@ kde_src_compile() {
 			fi
 			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
-			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
+			myconf="$myconf --disable-objprelink"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
 			;;
 		configure)

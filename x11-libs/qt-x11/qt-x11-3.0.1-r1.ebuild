@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.1-r1.ebuild,v 1.1 2001/12/18 21:45:02 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.1-r1.ebuild,v 1.2 2001/12/27 16:58:56 drobbins Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -15,7 +15,6 @@ DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-libs/nas-1.4.1 )
-	objprelink? ( dev-util/objprelink )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	virtual/x11"
@@ -38,7 +37,6 @@ src_unpack() {
 #    cat tmp tmp2 > qmake.conf
 #    rm tmp tmp2
 
-    use objprelink && patch -p0 < ${FILESDIR}/qt-x11-3.0.1-objprelink.patch
 	
 	cd ${S}
 	mv tools/assistant/helpdialogimpl.cpp tools/assistant/helpdialogimpl.cpp_orig
