@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.20 2005/03/19 12:11:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.21 2005/03/20 13:30:16 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -32,6 +32,20 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59-r4"
 
 S="${WORKDIR}/httpd-${PV}"
+
+pkg_setup() {
+	if use mpm-metux || use mpm-peruser; then
+		ewarn " -BIG- -FAT- -WARNING-"
+		ewarn ""
+		ewarn "The metux (USE=mpm-metux) and peruser (USE=mpm-peruser) MPM's"
+		ewarn "are considered highly experimental and are not (yet) supported,"
+		ewarn "nor are they recommended for production use.  You have been"
+		ewarn "warned!"
+		ewarn
+		ewarn "Continuing in 5 seconds.."
+		sleep 5
+	fi
+}
 
 src_unpack() {
 	unpack ${A} || die
@@ -345,11 +359,6 @@ select_mpms() {
 	useq mpm-peruser && mpms="${mpms} peruser"
 	useq mpm-threadpool && mpms="${mpms} threadpool"
 	useq mpm-leader && mpms="${mpms} leader"
-
-	if useq mpm-metux || useq mpm-peruser; then
-		ewarn "Metux/Peruser are considered more or less insecure"
-		ewarn "and beta staged. Use at your own risk!"
-	fi
 
 	if [ "x${mpms}" = "x" ]; then
 		if useq threads; then

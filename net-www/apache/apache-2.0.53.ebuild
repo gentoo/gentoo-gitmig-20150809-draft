@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.6 2005/03/19 01:14:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.53.ebuild,v 1.7 2005/03/20 13:30:16 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -32,6 +32,19 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59-r4"
 
 S="${WORKDIR}/httpd-${PV}"
+
+pkg_setup() {
+	if use mpm-peruser; then
+		ewarn " -BIG- -FAT- -WARNING-"
+		ewarn ""
+		ewarn "The peruser (USE=mpm-peruser) MPM is considered highly experimental"
+		ewarn "and are not (yet) supported, nor are they recommended for production"
+		ewarn "use.  You have been warned!"
+		ewarn
+		ewarn "Continuing in 5 seconds.."
+		sleep 5
+	fi
+}
 
 src_unpack() {
 	unpack ${A} || die
@@ -344,11 +357,6 @@ select_mpms() {
 	useq mpm-peruser && mpms="${mpms} peruser"
 	useq mpm-threadpool && mpms="${mpms} threadpool"
 	useq mpm-leader && mpms="${mpms} leader"
-
-	if useq mpm-peruser; then
-		ewarn "Peruser is considered more or less insecure"
-		ewarn "and beta staged. Use at your own risk!"
-	fi
 
 	if [ "x${mpms}" = "x" ]; then
 		if useq threads; then
