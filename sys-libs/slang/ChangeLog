@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.26 2004/06/24 23:09:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.27 2004/07/23 11:22:20 usata Exp $
+
+  23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> slang-1.4.9.ebuild:
+  Added to macos.
 
 *slang-1.4.9-r1 (07 Jun 2004)
 
