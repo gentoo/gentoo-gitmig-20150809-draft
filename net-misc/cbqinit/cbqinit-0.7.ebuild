@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.9 2004/06/24 23:38:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/cbqinit-0.7.ebuild,v 1.10 2004/07/15 02:41:24 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Sets up class-based queue traffic control (QoS) with iproute2"
@@ -10,6 +10,7 @@ SRC_URI="mirror://sourceforge/cbqinit/cbq.init-v${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa "
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4.0.5"
 

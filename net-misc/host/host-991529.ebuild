@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.22 2004/06/24 23:48:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.23 2004/07/15 02:52:20 agriffis Exp $
 
 S="${WORKDIR}"
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
 
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ppc64"
+IUSE=""
 LICENSE="as-is"
 SLOT="0"
 

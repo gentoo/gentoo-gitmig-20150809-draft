@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.ebuild,v 1.10 2004/06/24 23:41:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/directvnc-0.7.ebuild,v 1.11 2004/07/15 02:44:15 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc -sparc"
+IUSE=""
 
 DEPEND="dev-libs/DirectFB
 	sys-devel/automake

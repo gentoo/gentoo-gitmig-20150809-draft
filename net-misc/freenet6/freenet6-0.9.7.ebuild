@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.5 2004/06/24 23:44:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.6 2004/07/15 02:49:51 agriffis Exp $
 
 DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
 HOMEPAGE="http://www.freenet6.net/"
@@ -9,6 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="VPL-1.0"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE=""
 DEPEND=""
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.5 2004/06/24 23:54:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.92.ebuild,v 1.6 2004/07/15 02:57:18 agriffis Exp $
 
 MY_PN="linuxigd"
 S="${WORKDIR}/${PN}"
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/linux-igd/${MY_PN}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
+IUSE=""
 
 DEPEND="net-misc/upnp
 	net-firewall/iptables"
