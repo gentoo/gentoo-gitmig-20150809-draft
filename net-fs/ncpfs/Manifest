@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6dd2ca09e9cf8805295cd88fa3d0ff7f ChangeLog 2374
 MD5 c9e5871c825d1968d24662100bab7b2c metadata.xml 290
-MD5 46b5830df57362ba123e8c822aefaaae ncpfs-2.2.5.ebuild 1350
-MD5 17472e333bedf6a903d5bee4b0fb319d ncpfs-2.2.6.ebuild 1263
-MD5 0c8c4441a0a862ccf5f399721144d50f ChangeLog 2276
-MD5 cf30be0a3ca1f63ff991a9d69ac7c2ff ncpfs-2.2.0.19-r1.ebuild 945
-MD5 451a9ac75dcee32503b81434d3e830eb ncpfs-2.2.0.19-r2.ebuild 988
-MD5 57e7c70b0e8be0e9aaddf3efd63273bc ncpfs-2.2.0.19.ebuild 732
-MD5 fdd49676265cd6dc78bfc6de7d761a6e ncpfs-2.2.3.ebuild 957
+MD5 57899ae34bf2427a8b5725b1008e1619 ncpfs-2.2.0.19-r1.ebuild 944
+MD5 8f95e569a67f7f23172f7d75d946ebda ncpfs-2.2.0.19-r2.ebuild 987
+MD5 b9a976d20bfd39a3e1c6c17fb9a12e91 ncpfs-2.2.0.19.ebuild 732
+MD5 c7d2a68cc89c164a2022c4d7cf270d5e ncpfs-2.2.3.ebuild 959
+MD5 9d486449be9d79517a06d9de5dab75d9 ncpfs-2.2.5.ebuild 1350
+MD5 f5a194d3db7012defca088b66884d30b ncpfs-2.2.6.ebuild 1260
 MD5 922a7aee31b05e5c9fe29c08ad41efbb files/digest-ncpfs-2.2.0.19 67
 MD5 922a7aee31b05e5c9fe29c08ad41efbb files/digest-ncpfs-2.2.0.19-r1 67
 MD5 922a7aee31b05e5c9fe29c08ad41efbb files/digest-ncpfs-2.2.0.19-r2 67
@@ -16,10 +13,3 @@ MD5 26e01ffe1e892a30ca35b773ed1ad014 files/digest-ncpfs-2.2.3 64
 MD5 28e54a3c45d44a003fc1f5764a7e2b63 files/digest-ncpfs-2.2.5 64
 MD5 221f5197d914c3526e1d965bf62d9535 files/ncpfs-2.2.5-php.patch 555
 MD5 6894750817d66de3a8383dd2d668ea39 files/digest-ncpfs-2.2.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB+uRcMGnpIbeahxwRAqBKAJ9+SaIymLELoChDLyyK17NU8K0DogCgmrF2
-mf5EM4vV9f8WwXHvP7hORuY=
-=rCiH
------END PGP SIGNATURE-----

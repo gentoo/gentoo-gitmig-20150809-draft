@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19-r2.ebuild,v 1.5 2004/07/14 23:52:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.0.19-r2.ebuild,v 1.6 2005/01/29 08:36:38 corsair Exp $
 
 inherit eutils
 
