@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0.ebuild,v 1.8 2005/02/14 07:57:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0-r1.ebuild,v 1.1 2005/02/14 07:57:16 robbat2 Exp $
 
 inherit fixheadtails
 
@@ -46,7 +46,7 @@ src_compile() {
 	econf \
 		--with-user=nut \
 		--with-group=nut \
-		--with-drvpath=/lib/nut \
+		--with-drvpath=/usr/lib/nut \
 		--sysconfdir=/etc/nut \
 		--with-logfacility=LOG_DAEMON \
 		--with-statepath=/var/lib/nut \
@@ -70,8 +70,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install install-lib || die "make install failed"
 
-	dodir /sbin
-	dosym /lib/nut/upsdrvctl /sbin/upsdrvctl
+	dodir /usr/sbin
+	dosym /usr/lib/nut/upsdrvctl /usr/sbin/upsdrvctl
 
 	for i in "${D}"/etc/nut/*.sample ; do
 		mv "${i}" "${i/.sample/}"
@@ -102,7 +102,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/upsd.rc6" upsd
-	newexe "${FILESDIR}/upsdrv.rc6" upsdrv
+	newexe "${FILESDIR}/upsdrv.rc6-r1" upsdrv
 	newexe "${FILESDIR}/upsmon.rc6" upsmon
 
 	keepdir /var/lib/nut

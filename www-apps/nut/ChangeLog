@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/nut
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/ChangeLog,v 1.9 2004/12/29 01:49:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/ChangeLog,v 1.10 2005/02/14 07:57:16 robbat2 Exp $
+
+*nut-2.0.0-r1 (13 Feb 2005)
+
+  13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> -files/upsd-init,
+  +files/upsdrv.rc6-r1, -files/upsmon-init, +nut-2.0.0-r1.ebuild:
+  Bug #47482. Move stuff away from the root filesystem where it wouldn't work
+  anyway.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
