@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/rev-plugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.6 2004/06/24 23:34:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.7 2004/07/04 20:20:45 fvdpol Exp $
+
+  04 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> rev-plugins-0.2.1.ebuild:
+  Updated package description and URL.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> rev-plugins-0.2.1.ebuild:
   added ~amd64 keyword
