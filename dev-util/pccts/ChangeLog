@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.9 2003/05/23 13:16:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.10 2003/06/11 08:14:47 phosphan Exp $
+
+*pccts-1.33.33 (11 Jun 2003)
+
+  11 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> pccts-1.33.33.ebuild,
+  files/pccts-1.33.33-gentoo.diff:
+  Bumping to maintainance release .33
 
   23 May 2003; Patrick Kursawe <phosphan@gentoo.org>
   files/pccts-1.33.32-r1-gentoo.diff:
