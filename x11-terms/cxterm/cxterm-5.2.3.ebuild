@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3.ebuild,v 1.5 2004/06/24 23:20:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3.ebuild,v 1.6 2004/06/28 21:48:13 agriffis Exp $
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://cxterm.sourceforge.net/"
 DESCRIPTION="A Chinese/Japanese/Korean X-Terminal"
 
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	>=sys-apps/sed-4"
 
 SLOT="0"
 LICENSE="BSD"

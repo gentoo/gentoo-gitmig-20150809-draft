@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.8 2004/06/28 21:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.9 2004/06/28 21:49:23 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
@@ -13,6 +13,7 @@ DEPEND="virtual/x11
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
+IUSE=""
 
 # hyper-optimizations untested...
 #
