@@ -48,9 +48,9 @@ src_install () {
 
     make DESTDIR=${D} install || die
     cd ${D}/usr/share/doc/${P}
-    mv man-html html
-    mv man-text txt
-    prepalldocs
+    dohtml -r man-html
+	docinto text
+    dodoc man-text
     cd ${S}
     
     dodoc README* TODO
