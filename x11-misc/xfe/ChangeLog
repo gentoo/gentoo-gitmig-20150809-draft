@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.10 2004/08/23 19:07:06 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.11 2004/08/28 15:55:42 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> xfe-0.66.ebuild:
+  stable on ppc64, bug #59384
 
 *xfe-0.70 (23 Aug 2004)
 
