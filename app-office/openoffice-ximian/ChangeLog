@@ -1,6 +1,20 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.64 2004/08/23 14:47:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.65 2004/08/28 07:01:58 suka Exp $
+
+*openoffice-ximian-1.3.2 (28 Aug 2004)
+
+  28 Aug 2004; suka@gentoo.org +files/1.1.2/gentoo-1.3.2.patch,
+  +openoffice-ximian-1.3.2.ebuild:
+  New patch version, this solves a lot of the troubles people seemed to have
+  with 1.3.0, for instance the kde file selector crash should be gone (closes
+  bug #61588), also OOO_FORCE_DESKTOP=KDE|Gnome should be working fine now,
+  which is especially handy for non-kde/gnome users. On the feature side, this
+  adds suport for Wordperfect documents.
+  
+  For a full list of changes, see like always:
+  
+  http://ooo.ximian.com/ooo-build/NEWS
 
   23 Aug 2004; suka@gentoo.org files/1.1.2/gentoo-1.3.0.patch,
   openoffice-ximian-1.3.0.ebuild:
