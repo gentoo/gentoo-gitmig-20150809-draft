@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.06.ebuild,v 1.4 2004/07/05 05:47:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.06.ebuild,v 1.5 2005/03/25 23:37:01 blubb Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.rubynet.org/modules/net/geoip/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/ruby
 	>=dev-libs/geoip-1.2.1"
