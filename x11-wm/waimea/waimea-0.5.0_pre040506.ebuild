@@ -1,37 +1,39 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.4 2004/06/05 17:24:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.5 2004/06/05 19:49:05 usata Exp $
 
 inherit eutils 64-bit
 
-S="${WORKDIR}/${PN}-0.5.0"
+MY_P="${P%_pre*}"	# 0.5.0_pre040506 -> 0.5.0
+
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Window manager based on BlackBox"
 # Temporary URL until SF's CVS is back online
-SRC_URI="http://www.cs.umu.se/~c99drn/waimea/waimea-0.5.0-040506.tar.gz"
+SRC_URI="http://www.cs.umu.se/~c99drn/waimea/${P/_pre/-}.tar.gz"
 HOMEPAGE="http://www.waimea.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE="truetype xinerama"
+IUSE="truetype xinerama svg"
 
 DEPEND="virtual/x11
 	>=x11-libs/cairo-0.1.22
-	x11-libs/libsvg-cairo"
+	svg? ( x11-libs/libsvg-cairo )"
 
 PROVIDE="virtual/blackbox"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	64-bit && epatch ${FILESDIR}/${PN}-0.5.0-64bit-clean.patch
+	64-bit && epatch ${FILESDIR}/${MY_P}-64bit-clean.patch
 }
 
 src_compile() {
 	econf \
 		`use_enable xinerama` \
 		`use_enable truetype xft` \
-		--enable-svg \
+		`use_enable svg ` \
 		--enable-shape \
 		--enable-render \
 		--enable-randr \
