@@ -393,10 +393,6 @@ dev-lang/tcl-tk
 # masking PAM version that shouldn't be there anymore
 >=sys-libs/pam-0.75-r3
 
-#maksing 2.2 kernels until a new baselayout is available
-<=sys-kernel/linux-sources-2.4
-<=sys-kernel/linux-headers-2.4
-
 =dev-ruby/mod-ruby-0.9.7
 
 #security update
