@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# Just masked until more testing can be done. (sandymac, 24 May 2002)
+=net-www/mozilla-1.0_rc3
+
 # devel branch of syslog-ng -- broken (blocke, May 21, 2002)
 >=app-admin/syslog-ng-1.5.17
 >=dev-libs/libol-0.3.2
