@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.11 2004/04/25 03:32:50 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.12 2004/04/26 02:20:48 agriffis Exp $
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -30,7 +30,7 @@ src_compile() {
 	#compile without tcltk support
 	use tcltk || myconf="${myconf} --without-tcl --without-tk"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die
 }

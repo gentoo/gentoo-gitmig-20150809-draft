@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.25 2004/04/25 03:32:50 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.26 2004/04/26 02:20:48 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> graphviz-1.10.ebuild:
+  Add die following econf for bug 48950
 
   24 Apr 2004; Bret Curtis <psi29a@gentoo.org> graphviz-1.10.ebuild:
   Added to ~mips
