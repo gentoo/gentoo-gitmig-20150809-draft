@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.1 2003/10/19 17:26:47 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-2.0.ebuild,v 1.2 2003/10/19 20:43:57 lanius Exp $
 
 BUSYBOX="busybox-0.60.5"
-CLOOP_VERSION="cloop_1.02-1"
+CLOOP="cloop_1.02-1"
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
@@ -17,9 +17,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
-
-S=${WORKDIR}/${P}
-
 
 src_install() {
 	insinto /etc/kernels
