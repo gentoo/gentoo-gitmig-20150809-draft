@@ -72,3 +72,4 @@ move app-sci/njplot-unrooted sci-biology/njplot-unrooted
 move app-sci/phylip sci-biology/phylip
 move app-sci/rnaview sci-biology/rnaview
 move app-sci/seaview sci-biology/seaview
+move app-sci/staden sci-biology/staden
