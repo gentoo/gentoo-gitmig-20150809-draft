@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7.ebuild,v 1.5 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7.ebuild,v 1.6 2002/10/20 18:41:50 vapier Exp $
 
 IUSE="gdbm"
 
@@ -18,7 +18,6 @@ DEPEND="virtual/glibc
 	>=sys-libs/pam-0.75
 	>=dev-libs/openssl-0.9.6d
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

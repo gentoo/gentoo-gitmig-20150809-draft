@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.1 2002/10/11 05:33:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.2 2002/10/20 18:41:50 vapier Exp $
 
 S=${WORKDIR}/cyrus-imapd-${PV}
 
@@ -21,7 +21,6 @@ DEPEND="virtual/glibc
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2
 	>=sys-apps/tcp-wrappers-7.6"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 

@@ -12,7 +12,6 @@ SLOT="0"
 
 DEPEND=">=dev-lang/mono-0.13
 		>=x11-libs/gtk+-2.0.2"
-RDEPEND="${DEPEND}"
 KEYWORDS="x86 -ppc"
 
 src_compile() {
