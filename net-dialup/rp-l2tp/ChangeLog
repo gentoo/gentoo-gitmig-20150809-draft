@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-l2tp
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.5 2004/07/01 22:09:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.6 2004/09/15 14:07:31 lanius Exp $
+
+*rp-l2tp-0.4 (15 Sep 2004)
+
+  15 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/rp-l2tp-0.4-gentoo.diff.bz2, +rp-l2tp-0.4.ebuild:
+  version bump, bug #57377
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   rp-l2tp-0.3-r1.ebuild:
