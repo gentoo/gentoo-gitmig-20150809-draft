@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.7.ebuild,v 1.2 2002/11/06 21:49:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.7.ebuild,v 1.3 2002/11/10 00:04:59 rphillips Exp $
 
 IUSE="nls"
 
@@ -8,10 +8,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
 SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 HOMEPAGE="http://konst.org.ua/eng/software/centericq/info.html"
-
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
@@ -27,9 +26,7 @@ src_compile() {
 
 	use nls || myopts="--disable-nls"
 	
-	econf --with-included-gettext \
-        ${myopts} || die "Configure failed"
-	
+	econf ${myopts} || die "Configure failed"
 	emake || die "Compilation failed"
 }
 

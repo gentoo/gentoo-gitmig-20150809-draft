@@ -1,8 +1,11 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.12 2002/11/06 21:49:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.13 2002/11/10 00:05:41 rphillips Exp $
 
 *centericq-4.8.7 (04 Nov 2002)
+
+  09 Nov 2002; Ryan Phillips <rphillips@gentoo.org> centericq-4.8.4.ebuild :
+  Removed internal gettext support.
 
   06 Nov 2002; Ryan Phillips <rphillips@gentoo.org> centericq-4.8.7.ebuild :
 
