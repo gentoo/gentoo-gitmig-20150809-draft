@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.2-r1.ebuild,v 1.6 2004/07/07 00:37:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.2-r1.ebuild,v 1.7 2004/12/13 15:45:51 caleb Exp $
 
 inherit kde eutils
 
@@ -8,7 +8,7 @@ need-autoconf 2.5
 set-kdedir ${PV}
 
 DESCRIPTION="KDE libraries needed by all kde programs"
-HOMEPAGE="http//www.kde.org/"
+HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
