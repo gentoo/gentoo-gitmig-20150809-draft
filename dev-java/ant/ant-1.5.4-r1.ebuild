@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.11 2004/04/16 02:24:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.12 2004/04/21 16:37:15 vapier Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
 HOMEPAGE="http://ant.apache.org/"
