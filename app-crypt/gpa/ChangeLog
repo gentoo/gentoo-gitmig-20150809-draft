@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.18 2004/06/15 21:17:11 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.19 2004/06/16 01:46:45 azarah Exp $
+
+*gpa-0.7.0-r1 (16 Jun 2004)
+
+  16 Jun 2004; Martin Schlemmer <azarah@gentoo.org> +gpa-0.7.0-r1.ebuild:
+  By default gnupg puts gpgkeys_hkp in /usr/libexec/gnupg, so
+  check if it is in uncommon /usr/lib/gnupg, and change libexecdir
+  if so.  If we do not do this, hkp server types is not usable,
+  as gpa cannot find gpgkeys_hkp ...
 
   15 Jun 2004; Scott W Taylor <swtaylor@gentoo.org> gpa-0.7.0.ebuild:
   dependancy fix for gpa #54013
