@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.30 2005/01/31 18:15:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.31 2005/02/07 00:15:27 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> expect-5.42.1.ebuild:
+  Marked stable on mips.
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> expect-5.42.1.ebuild:
   Stable on sparc
