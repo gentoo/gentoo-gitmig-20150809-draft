@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.18 2004/05/12 02:41:13 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.19 2004/05/26 15:30:00 stuart Exp $
+
+  26 May 2004; Stuart Herbert <stuart@gentoo.org> freetds-0.62.3.ebuild:
+  Added global USE flag mssql, for php
 
   11 May 2004; Michael McCabe <randy@gentoo.org> freetds-0.62.3.ebuild:
   Added s390 keywords
