@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.54 2003/06/25 10:39:59 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.55 2003/06/26 02:16:27 raker Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -79,3 +79,7 @@ x11-base/xfree-drm:sis - If you have an SiS video card
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
 net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
 net-mail/courier:fax - Enables fax support in the courier mail server
+media-video/vlc:wxwindows - Enables wxwindows support
+media-video/vlc:xvid - Enables xvid codec support
+media-video/vlc:v4l - Enables video4linux support
+media-video/ffmpeg:faad - Enables faad2 support
