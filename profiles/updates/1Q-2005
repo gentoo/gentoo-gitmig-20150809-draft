@@ -66,3 +66,11 @@ move app-i18n/scim-chinese app-i18n/scim-pinyin
 move kde-base/libksvg kde-base/ksvg
 move kde-base/ksvgplugin kde-base/ksvg
 move kde-base/kaddressbook-xxports-kworldclock kde-base/kaddressbook-plugins
+move kde-base/kfile-desktop kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-folder kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-html kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-lnk kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-txt kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-cert kde-base/kdeaddons-kfile-plugins
+move kde-base/kfile-mhtml kde-base/kdeaddons-kfile-plugins
+
