@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/gnomame-1.00_beta6.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/gnomame-1.00_beta6.ebuild,v 1.2 2003/10/03 01:46:26 mr_bones_ Exp $
 
 MY_P="${P/_beta/b}"
 S=${WORKDIR}/${MY_P}
@@ -13,13 +13,14 @@ KEYWORDS="x86"
 SLOT="0"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	media-libs/gdk-pixbuf"
+	media-libs/gdk-pixbuf
+	games-emulation/xmame"
 
 src_compile() {
 	econf || die
-	emake || die "Compilation failed"
+	emake || die "emake failed"
 }
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS ChangeLog README || die "dodoc failed"
 }
