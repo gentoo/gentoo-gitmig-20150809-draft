@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta11-r1.ebuild,v 1.1 2003/12/17 15:30:19 tseng Exp $
-#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1_rc1-r1.ebuild,v 1.1 2004/01/02 23:34:06 plasmaroo Exp $
+# OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel
 
-OKV=${PV/_beta/-test}
+OKV=${PV/_/-}
 
 EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
 
 KV=${OKV}-${PR/r/mm}
-
 S=${WORKDIR}/linux-${KV}
 
 inherit eutils
@@ -23,15 +22,16 @@ inherit eutils
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV/_beta/-test}.tar.bz2
-mirror://kernel/linux/kernel/people/akpm/patches/2.6/${PV/_beta/-test}/${KV}/${KV}.bz2"
-KEYWORDS="x86 ~ppc"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/testing/linux-${OKV}.tar.bz2
+mirror://kernel/linux/kernel/people/akpm/patches/2.6/${OKV}/${KV}/${KV}.bz2"
+KEYWORDS="~x86"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
 PROVIDE="virtual/linux-sources
 		virtual/alsa"
 
 src_unpack() {
+
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
@@ -40,11 +40,9 @@ src_unpack() {
 	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
-	#Fix broken APIC includes in test11-mm1 (tseng)
-	epatch ${FILESDIR}/apic.patch || die "APIC fix failed"
-
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
+
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
@@ -57,18 +55,16 @@ src_unpack() {
 		&& mv Makefile.new Makefile
 	cd ${S}
 
-	#This is needed on > 2.5
+	# This is needed on > 2.5
 	MY_ARCH=${ARCH}
 	unset ARCH
-	#sometimes we have icky kernel symbols; this seems to get rid of them
+
+	# Sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die "make mrproper died"
 	ARCH=${MY_ARCH}
 
-	# kernel_universal_unpack used to do this... changes in kconfig make
-	# this die now
-	#make include/linux/version.h || die "make include/linux/version.h failed"
-
 }
+
 pkg_postinst() {
 	if [ ! -e ${ROOT}usr/src/linux-beta ]
 	then
@@ -76,10 +72,10 @@ pkg_postinst() {
 	fi
 
 	ewarn "Please note that ptyfs support has been removed from devfs"
-	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
-	ewarn "or else you will get errors when trying to open a pty."
-	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
-	ewarn "filesystem."
+	ewarn "and you have to compile it in now, or else you will get"
+	ewarn "errors when trying to open a pty. The options are:"
+	ewarn "Device Drivers -> Character devices -> Unix98 PTY support and"
+	ewarn "File systems -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
 	ewarn "Also, note that you must compile in support for"
 	ewarn "input devices (Input device support->Input devices),"
