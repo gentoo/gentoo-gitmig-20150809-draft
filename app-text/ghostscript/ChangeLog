@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.45 2004/03/07 19:28:46 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.46 2004/04/26 10:15:09 lanius Exp $
+
+*ghostscript-7.07.1-r2 (26 Apr 2004)
+
+  26 Apr 2004; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-7.07.1-r2.ebuild, files/gs7.07.1-krgb.patch.gz:
+  add krgb support from hpijs
 
   07 Mar 2004; Bret Curtis <psi29a@gentoo.org> ghostscript-7.07.1-r1.ebuild:
   Added ~mips to KEYWORDS
