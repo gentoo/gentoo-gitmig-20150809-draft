@@ -1,0 +1,14 @@
+--- src/io/input.cpp.orig	2003-10-30 04:47:16.997745896 -0500
++++ src/io/input.cpp	2003-10-30 04:47:46.725226632 -0500
+@@ -25,0 +25,1 @@
++#include <unistd.h>
+@@ -113,7 +113,8 @@
+ 	char strTemp[25] = {0};
+ 	char thisChar = 0;
+ 
+-	F = fopen("dapinput.ini", "rt");
++	chdir(getenv("HOME"));
++	F = fopen(".dapinput.ini", "rt");
+ 
+ 	// if we opened the file successfully
+ 	if (F != NULL)

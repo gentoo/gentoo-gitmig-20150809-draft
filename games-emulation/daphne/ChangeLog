@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/daphne
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.2 2003/09/10 16:00:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.3 2003/10/30 09:52:56 vapier Exp $
+
+*daphne-0.99.6-r1 (30 Oct 2003)
+
+  30 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Fix stupid path bug i made #32314.
 
 *daphne-0.99.6 (15 Jul 2003)
 
