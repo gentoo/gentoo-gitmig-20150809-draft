@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.4 2004/09/29 20:59:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.ebuild,v 1.1 2004/09/30 14:34:05 axxo Exp $
 
 inherit java eutils
 
-amd64file="jdk-1_5_0-rc-linux-amd64.bin"
-x86file="jdk-1_5_0-rc-linux-i586.bin"
+amd64file="jdk-1_5_0-linux-amd64.bin"
+x86file="jdk-1_5_0-linux-i586.bin"
 
-jcefile="jce_policy-1_5_0-rc.zip"
+jcefile="jce_policy-1_5_0.zip"
 
 if use x86; then
 	At=${x86file}
@@ -17,7 +17,7 @@ fi
 
 S="${WORKDIR}/jdk1.5.0"
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
-HOMEPAGE="http://java.sun.com/j2se/1.5.0/download.jsp"
+HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
 SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )
 		jce? ( $jcefile )"
 SLOT="1.5"
@@ -44,8 +44,8 @@ PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-FETCH_SDK="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-1.5.0-rc-oth-JPR&SiteId=JSC&TransactionId=noreg"
-FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce-1.5.0-rc-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_SDK="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-1.5.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce_policy-1.5.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 
 pkg_nofetch() {
@@ -56,7 +56,7 @@ pkg_nofetch() {
 
 	if use jce; then
 		einfo "Also download ${jcefile} from:"
-		einfo ${FETCK_JCE}
+		einfo ${FETCH_JCE}
 		einfo "Java(TM) Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files"
 		einfo "and move it to ${DISTDIR}"
 	fi
