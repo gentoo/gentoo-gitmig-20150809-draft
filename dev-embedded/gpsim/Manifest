@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 49d1f63e358ee80a5c3ffc53f309cab9 ChangeLog 1638
+MD5 b98d5f83689ba7886de52b1e7bc50f4c ChangeLog 1735
 MD5 01e49b76d8a1f5005c9400ed2d552c9f gpsim-0.20.14-r1.ebuild 1097
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 ee2f978beb2bfdd87bf95182cb24a19e gpsim-0.21.2.ebuild 1057
+MD5 b181fe73ab26296b5d8cc400c9237979 gpsim-0.21.2.ebuild 1062
 MD5 d19aef867a58fe25de6dbcbf6dfc32d9 files/digest-gpsim-0.20.14-r1 65
 MD5 aad12da70389a0c7871624aadadeaa58 files/gpsim-0.20.14-gcc2_fix.patch 407
 MD5 936707e2f6868120b029358522a740df files/digest-gpsim-0.21.2 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+w4lmdTrptrqvGERApcKAJ9dJljq6dglY7jhUAQ4YTOuAL7bUgCdEKvR
-2jAUfkp7bcrx8xUmCMAJyac=
-=B5XY
+iD8DBQFBQyH8mdTrptrqvGERAvwOAJ98zjxOovpdMyhO60Pwycfdw0jDFgCglFTM
+jPwyO62xanoi0w6Igol0La8=
+=e/OR
 -----END PGP SIGNATURE-----
