@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>tad@gentoo.org</email>
+  <name>Troy Dack</name>
+</maintainer>
+<longdescription>Multisync plugin to get data from a PDA using synce</longdescription>
+</pkgmetadata>
