@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89d25e5c4713c86a363c420290e5ec93 ChangeLog 9536
-MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 801b740d19b4a680780bc6c016a0eceb webapp-config-1.9-r2.ebuild 1145
-MD5 3aecf070ae2672567d75e58551b58557 webapp-config-1.10-r6.ebuild 1406
 MD5 396fd3dfd7a18fa33e569a53ae89fc8e webapp-config-1.10-r10.ebuild 1414
+MD5 801b740d19b4a680780bc6c016a0eceb webapp-config-1.9-r2.ebuild 1145
+MD5 0ea5fdc364abcbe5f083bb9d3e28512e ChangeLog 9646
 MD5 2c2641fbea8ae821af716c5ad547ab2b webapp-config-1.10-r11.ebuild 1438
+MD5 3aecf070ae2672567d75e58551b58557 webapp-config-1.10-r6.ebuild 1406
+MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
+MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r11 74
 MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
 MD5 675f730140fb4b7303082b203e27ba0b files/digest-webapp-config-1.10-r6 73
 MD5 ad4be087a0a4be0991e124d97fe377ac files/digest-webapp-config-1.10-r10 74
-MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r11 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBULu3HTu7gpaalycRAthlAKC/2njo2NMZhBEH6X7GNunYEVQD5wCgjqcF
-88BjxgdhJ4to0un3s6owlk8=
-=b8jl
------END PGP SIGNATURE-----
