@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.8 2004/07/01 21:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r9.ebuild,v 1.9 2004/10/31 05:25:01 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,11 +16,10 @@ LICENSE="GPL-2"
 IUSE="crypt nls static pam"
 
 DEPEND="virtual/libc
-	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
 	pam? ( sys-apps/pam-login )"
-
-RDEPEND="${DEPEND} dev-lang/perl
+RDEPEND="${DEPEND}
+	dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

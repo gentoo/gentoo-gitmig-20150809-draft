@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.11 2004/10/31 01:27:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r9.ebuild,v 1.12 2004/10/31 05:23:44 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="nls build static uclibc"
 
+RDEPEND=""
 DEPEND="nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
 
