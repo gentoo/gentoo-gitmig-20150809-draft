@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.15 2004/04/24 08:06:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.16 2004/05/08 14:24:04 kugelfang Exp $
 
 inherit flag-o-matic
 
@@ -20,8 +20,20 @@ DEPEND="virtual/glibc"
 src_compile() {
 	strip-flags
 	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"
+	# workaround for hardened on amd64, 1st part
+	if [ "`use amd64`" ] && [ "is-ldflags -pie" ]; then
+		einfo Stripping "-pie" from LDFLAGS, adding it to Makefile manually
+		filter-ldflags -pie
+		append-flags -fPIC
+		LDFLAGS_PIE="1"
+	fi
 	ac_cv_sys_long_file_names=yes \
 		./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
+	# workaround for hardened on amd64, 2nd part
+	if [ ${LDFLAGS_PIE} = "1" ]; then
+		einfo "Patching Makefile..."
+		sed -i -e 's/^LDFLAGS =/& -pie/' Makefile || die "Patching Makefile failed!"
+	fi
 	if ! use static ; then
 		emake || die "emake failed"
 	else
