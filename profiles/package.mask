@@ -334,3 +334,6 @@ dev-lang/tcl-tk
 
 # Development branch
 >=net-www/galeon-1.1.0
+
+# [aeoo] testing
+>dev-python/egenix-mx-base-2.0.2
