@@ -54,10 +54,10 @@ java -cp $CLASSPATH -Djava.library.path="/usr/lib:${AZDIR}" -jar Azureus2.jar ${
 #java -cp $CLASSPATH -Djava.library.path="/usr/lib:${AZDIR}" org.gudy.azureus2.ui.swt.Main "$1"
 
 if [ $? -ne 0 ]; then
-	echo "If you recieved an error about missing log4j or cli, you "
-	echo "need to setup your classpath correctly."
+	echo "If you recieved an error about missing log4j or cli, you need to setup"
+	echo "your classpath correctly."
 	echo "This should do the trick (as root):"
-	echo "java-config --add-system-classpath=junit,log4j,commons-cli"
+	echo "java-config --add-system-classpath=junit,log4j,commons-cli,systray4j"
 	echo "env-update && source /etc/profile"
 	echo
 	echo "Currently, your classpath (including azureus additions) is:"
