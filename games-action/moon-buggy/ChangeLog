@@ -1,6 +1,6 @@
-# ChangeLog for app-games/moon-buggy
+# ChangeLog for games-action/moon-buggy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.2 2003/09/10 20:31:46 vapier Exp $
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org> moon-buggy-0.5.1.ebuild,
   moon-buggy-0.5.53.ebuild:
