@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.32 2005/01/17 23:19:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.33 2005/01/18 02:09:36 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -697,7 +697,11 @@ glibc_do_configure() {
 			--infodir=$(alt_prefix)/share/info
 			--libexecdir=$(alt_prefix)/lib/misc"
 
-	GBUILDDIR="${WORKDIR}/build-${CTARGET}-$1"
+	if [ -n "${ABI}" ]; then
+		GBUILDDIR="${WORKDIR}/build-${ABI}-${CTARGET}-$1"
+	else
+		GBUILDDIR="${WORKDIR}/build-${CTARGET}-$1"
+	fi
 	mkdir -p ${GBUILDDIR}
 	cd ${GBUILDDIR}
 	einfo "Configuring GLIBC for $1 with: ${myconf}"
@@ -917,9 +921,18 @@ EOF
 	# We'll take care of the cache ourselves
 	rm -f ${D}/etc/ld.so.cache
 
+	# Some things want this, notably ash.
+	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
+
+	# Handle includes for different ABIs
+	prep_ml_includes
+
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	# Everything past this point just needs to be done once... don't waste time building locale files twice...
+	is_final_abi || return 0
 
 	cd ${WORKDIR}/${MYMAINBUILDDIR}
 	if ! use build ; then
@@ -945,7 +958,10 @@ EOF
 		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
-		rm -rf ${D}/usr/share ${D}/usr/$(get_libdir)/gconv
+		rm -rf ${D}/usr/share
+		for dir in $(get_all_libdirs); do
+			rm -rf ${D}/usr/${dir}/gconv &> /dev/null
+		done
 
 		einfo "Installing Timezone data..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -961,17 +977,11 @@ EOF
 	# creation of the "factory" symlink in pkg_postinst().
 	rm -f ${D}/etc/localtime
 
-	# Some things want this, notably ash.
-	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
-
 	insinto /etc
 	# This is our new config file for building locales
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
-
-	# Handle includes for different ABIs
-	prep_ml_includes
 }
 
 must_exist() {
