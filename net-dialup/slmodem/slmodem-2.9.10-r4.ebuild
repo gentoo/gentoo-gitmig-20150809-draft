@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r2.ebuild,v 1.5 2004/12/29 22:38:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r4.ebuild,v 1.1 2005/01/06 23:12:23 mrness Exp $
 
-inherit eutils linux-info
+inherit eutils linux-mod
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://www.smlink.com/"
@@ -21,46 +21,48 @@ RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )"
 
 pkg_setup() {
-	check_modules_supported
+	MODULE_NAMES="slamr(extra:${S}/drivers)"
+	useq usb && MODULE_NAMES="${MODULE_NAMES} slusb(extra:${S}/drivers)"
+	BUILD_TARGETS="all"
+
+	local CONFIG_CHECK=""
+	if useq alsa; then
+		CONFIG_CHECK="${CONFIG_CHECK} SND"
+	fi
+	if useq usb; then
+		CONFIG_CHECK="${CONFIG_CHECK} USB"
+	fi
+
+	linux-mod_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to patch"
+	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to apply usb_endpoint patch"
+	epatch ${FILESDIR}/${P}-pci-workaround.patch || die "failed to apply pci workaround patch"
+
+	convert_to_m drivers/Makefile
+
+	if kernel_is ge 2 6 10; then
+		epatch ${FILESDIR}/${P}-fix-for-2.6.10.patch || die "failed to apply fix for kernels >= 2.6.10"
+	fi
 }
 
 src_compile() {
-	if use alsa
-	then
-		export SUPPORT_ALSA=1
-	else
-		unset SUPPORT_ALSA
+	local MAKE_PARAMS=""
+	if useq alsa; then
+		MAKE_PARAMS="SUPPORT_ALSA=1"
 	fi
+	emake ${MAKE_PARAMS} modem || die "failed to build modem"
 
-	# http://marc.theaimsgroup.com/?l=gentoo-dev&m=109672618708314&w=2
-	if [ ${KV_MINOR} -gt 5 ] && [ ${KV_PATCH} -gt 5 ];	then
-		sed -i 's:SUBDIRS=:M=:g' drivers/Makefile
-	fi
-
-	unset ARCH
-
-	emake \
-		KERNEL_DIR="${ROOT}/usr/src/linux" \
-	 	modem drivers || die "Failed to compile driver"
+	linux-mod_src_compile
 }
 
 src_install() {
-	if kernel_is 2 6 ; then
-		KV_OBJ="ko"
-	else
-		KV_OBJ="o"
-	fi
+	linux-mod_src_install
 
-	insinto /lib/modules/${KV}/extra
-	doins drivers/slamr.${KV_OBJ}
-	doins drivers/slusb.${KV_OBJ}
-
+	cd ${S}
 	newsbin modem/modem_test slmodem_test
 	dosbin modem/slmodemd
 	dodir /var/lib/slmodem
@@ -79,8 +81,6 @@ src_install() {
 	if [ -e ${ROOT}/dev/.devfsd ] ; then
 		# devfs
 		insinto /etc/devfs.d/; newins ${FILESDIR}/${PN}-2.9.devfs ${PN}
-		insinto /etc/modules.d/; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
-		chmod 644 ${D}/etc/modules.d/slmodem
 	elif [ -e ${ROOT}/dev/.udev ] ; then
 		# udev
 		# check Symlink
@@ -92,44 +92,43 @@ src_install() {
 		dodir /etc/udev/permissions.d
 		echo 'slamr*:root:dialout:0660' > \
 			${D}/etc/udev/permissions.d/55-${PN}.permissions
-	else
-		make -C drivers DESTDIR=${D} KERNEL_DIR="${ROOT}/usr/src/linux" install-devices
 	fi
 
-	# Install hotplug script
-	insinto /etc/hotplug/usb; insopts -m0755; newins ${FILESDIR}/slusb.hotplug slusb
+	#Create device nodes, add module aliases and install hotplug script
+	make -C drivers DESTDIR=${D} KERNEL_DIR="${ROOT}/usr/src/linux" install-devices
+	insinto /etc/modules.d/; insopts -m0644; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
+	useq usb &&
+		( insinto /etc/hotplug/usb; insopts -m0755; newins ${FILESDIR}/slusb.hotplug slusb )
 
 	dodir /etc/hotplug/blacklist.d
 	echo -e "slusb\nslamr\nsnd-intel8x0m" >> ${D}/etc/hotplug/blacklist.d/55-${PN}
 }
 
 pkg_postinst() {
+	linux-mod_pkg_postinst
+
 	# Make some devices if we aren't using devfs
 	# If we are using devfs, restart it
-	if [ -e ${ROOT}/dev/.devfsd ]
-	then
+	if [ -e ${ROOT}/dev/.devfsd ]; then
 		ebegin "Restarting devfsd to reread devfs rules"
 			killall -HUP devfsd
-		eend 0
-		einfo "modules-update to complete configuration."
+		eend $?
 
-	elif [ -e ${ROOT}/dev/.udev ]
-	then
+	elif [ -e ${ROOT}/dev/.udev ]; then
 		ebegin "Restarting udev to reread udev rules"
 			udevstart
-		eend 0
+		eend $?
 	fi
 
-	echo
+	if [ ! -e ${ROOT}/dev/ppp ]; then
+		mknod ${ROOT}/dev/ppp c 108 0
+	fi
 
+	ewarn "To avoid problems, slusb/slamr have been added to /etc/hotplug/blacklist"
 	einfo "You must edit /etc/conf.d/${PN} for your configuration"
-
-	ewarn "To avoid problems add slusb/slamr to /etc/hotplug/blacklist"
-
 	einfo "To add slmodem to your startup - type : rc-update add slmodem default"
 
-	if use alsa;
-	then
+	if use alsa; then
 		einfo "I hope you have already added alsa to your startup: "
 		einfo "otherwise type: rc-update add alsasound boot"
 		einfo
@@ -137,8 +136,4 @@ pkg_postinst() {
 		einfo "compile it as a module and edit /etc/module.d/alsa"
 		einfo 'to: "alias snd-card-(number) snd-intel8x0m"'
 	fi
-
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 }

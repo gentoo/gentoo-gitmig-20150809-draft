@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/slmodem
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.34 2004/12/29 22:38:21 mrness Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.35 2005/01/06 23:12:23 mrness Exp $
+
+*slmodem-2.9.10-r4 (07 Jan 2005)
+
+  07 Jan 2005; Alin Nastac <mrness@gentoo.org>
+  +files/slmodem-2.9.10-pci-workaround.patch, -slmodem-2.9.10-r2.ebuild,
+  -slmodem-2.9.10-r3.ebuild, +slmodem-2.9.10-r4.ebuild:
+  Fix slamr module for kernels >= 2.6.10, thanks to Daniel Drake
+  <dsd@gentoo.org>. See bug #75656.
 
 *slmodem-2.9.10-r3 (29 Dec 2004)
 
@@ -19,7 +27,7 @@
   +files/slmodem-2.9.10-usb_endpoint_halted-gentoo.patch,
   +files/slusb.hotplug, +slmodem-2.9.10-r2.ebuild:
   Solve undefined symbol error for slusb when is compiled against kernel
-  versions >= 2.69. See bug #74073.
+  versions >= 2.6.9. See bug #74073.
 
 *slmodem-2.9.10-r2 (14 Dec 2004)
 
