@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/betna-0.9.7.ebuild,v 1.2 2004/06/03 14:23:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/betna-0.9.7.ebuild,v 1.3 2004/06/18 18:07:58 jhuebel Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://koti.mbnet.fi/makegho/c/betna/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.7"
