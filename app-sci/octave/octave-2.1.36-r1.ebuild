@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.8 2003/09/16 22:07:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.9 2003/12/30 17:09:38 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	>=media-gfx/gnuplot-3.7.1-r3
 	>=dev-libs/fftw-2.1.3
 	>=dev-util/gperf-2.7.2
-	tetex? ( >=tetex-1.0.7-r10 ) "
+	tetex? ( virtual/tetex ) "
 PROVIDE="dev-lang/octave"
 
 # NOTE: octave supports blas/lapack from intel but this is not open

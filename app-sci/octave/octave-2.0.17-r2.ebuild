@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17-r2.ebuild,v 1.4 2003/09/16 22:07:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.0.17-r2.ebuild,v 1.5 2003/12/30 17:09:38 usata Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/${P}.tar.bz2"
 HOMEPAGE="http://www.octave.org/"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
-	app-text/tetex
+	virtual/tetex
 	>=media-gfx/gnuplot-3.7.1-r3"
 
 LICENSE="GPL-2"
