@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4.ebuild,v 1.5 2001/07/29 10:32:15 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4.ebuild,v 1.6 2001/08/15 22:41:13 hallski Exp $
 
 A=""
 S=${WORKDIR}
@@ -19,7 +19,6 @@ DEPEND="=gnome-base/gnome-env-1.0
 	=gnome-base/gal-0.8
 	=gnome-base/gconf-1.0.1
         =gnome-base/bonobo-1.0.4
-	=gnome-base/glibwww-0.2-r1
 	=gnome-base/gtkhtml-0.9.2
         =gnome-base/libglade-0.16-r1
         =gnome-base/libghttp-1.0.9
