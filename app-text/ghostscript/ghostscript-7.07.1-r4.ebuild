@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r4.ebuild,v 1.1 2004/08/04 16:10:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r4.ebuild,v 1.2 2004/08/09 11:28:43 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~ia64 ~x86 -ppc ~sparc ~alpha ~hppa ~amd64 ~mips ~ppc64"
 IUSE="X cups cjk emacs truetype"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
@@ -27,6 +27,9 @@ DEPEND="virtual/libc
 	cups? ( net-print/cups )
 	!virtual/ghostscript
 	truetype? ( media-libs/fontconfig )"
+
+DEPEND="${RDEPEND}
+	truetype? ( dev-util/pkgconfig )"
 
 S=${WORKDIR}/espgs-${PV}
 
