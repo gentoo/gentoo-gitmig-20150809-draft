@@ -1,8 +1,12 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.4 2002/06/02 22:41:06 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.5 2002/06/11 11:07:54 wmertens Exp $
 
 *doxygen-1.2.15-r1 (11 May 2002)
+
+  11 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
+  Changed qt dependency syntax so Portage wouldn't get weird dependency
+  problems. Builds fine with qt3.
 
   02 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
   Changed ebuild to depend on graphvis as per bug #3320.
