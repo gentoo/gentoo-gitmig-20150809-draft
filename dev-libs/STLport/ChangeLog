@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.18 2004/07/06 22:01:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.19 2004/07/06 22:03:58 vapier Exp $
+
+*STLport-4.6.2-r2 (06 Jul 2004)
+
+  06 Jul 2004; Mike Frysinger <vapier@gentoo.org> +STLport-4.6.2-r2.ebuild:
+  Make sure all the include files can be read by everyone #56245 by Akim Boyko.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   STLport-4.5.3-r3.ebuild, STLport-4.6.2.ebuild:
