@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.24 2003/11/14 17:11:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.25 2003/11/18 04:36:58 gregf Exp $
+
+*wget-1.9.1-r1 (17 Nov 2003)
+
+  17 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.1-r1.ebuild,
+  wget-1.9.1.ebuild:
+  Version bump to add patch to fix ipv4
+
+  17 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.ebuild:
+  1.9 has bugs removed for 1.9.1
 
 *wget-1.9.1 (14 Nov 2003)
 
