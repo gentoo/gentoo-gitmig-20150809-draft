@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.2 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.3 2003/07/09 16:04:13 mholzer Exp $
 
 IUSE="X"
 
@@ -54,7 +54,7 @@ src_install () {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/seti-init.d-r1 setiathome
 	insinto /etc/conf.d ; newins ${FILESDIR}/seti-conf.d-r1 setiathome
-	echo "SETIATHOME_DIR=${I}">> ${D}/etc/conf.d/setiathome
+	echo "#SETIATHOME_DIR=${I}">> ${D}/etc/conf.d/setiathome
 }
 
 pkg_postinst () {
