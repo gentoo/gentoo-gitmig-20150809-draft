@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ntop
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.15 2004/01/08 23:41:21 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.16 2004/01/12 02:37:31 seemant Exp $
+
+  11 Jan 2004; Seemant Kulleen <seemant@gentoo.org> ntop-2.2.ebuild,
+  ntop-2.2c.ebuild:
+  Changed dodir to keepdir, otherwise a subsequent install removes
+  /var/lib/ntop. Closes bug #37914 by Carlo <current@myrealbox.com>
 
   26 Sep 2003; Martin Holzer <mholzer@gentoo.org> ntop-2.2.ebuild,
   ntop-2.2c.ebuild:
