@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gtkguitune
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.6 2004/07/13 07:33:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.7 2004/07/23 06:07:10 chriswhite Exp $
+
+*gtkguitune-0.7 (23 Jul 2004)
+
+  23 Jul 2004; Chris White <chriswhite@gentoo.org> +gtkguitune-0.7.ebuild:
+  Version bump to close Bug #45340.  Thanks to Keith Lea for reporting.
 
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gtkguitune-0.6.ebuild:

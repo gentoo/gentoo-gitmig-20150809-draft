@@ -1,4 +1,6 @@
-MD5 378ac7453a71b86cd0376912ff245143 ChangeLog 700
+MD5 ac04e6d1544eafd1ed3f9f49487a2969 ChangeLog 879
 MD5 d631948b51f499d717a275d9d63e4a0b gtkguitune-0.6.ebuild 661
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 0551e05eb4f943e2c36168ee07bb971d gtkguitune-0.7.ebuild 739
 MD5 b6dfa204fcb2153265aa873e6813f74c files/digest-gtkguitune-0.6 65
+MD5 7b256e0ae0aa9b2d7dca1963fccc78e0 files/digest-gtkguitune-0.7 65
