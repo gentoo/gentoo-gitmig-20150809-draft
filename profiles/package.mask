@@ -134,6 +134,7 @@ sys-kernel/linux-sources-vanilla
 
 # in development
 #>=sys-devel/gcc-2.96
+net-mail/sendmail
 
 # incompatible
 >=app-text/pspell-0.12
