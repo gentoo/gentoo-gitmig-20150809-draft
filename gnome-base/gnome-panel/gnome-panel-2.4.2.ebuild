@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.6 2004/02/14 18:43:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.2.ebuild,v 1.7 2004/02/23 16:56:38 obz Exp $
 
 inherit gnome2 eutils
 
@@ -42,6 +42,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# use menu && epatch ${FILESDIR}/menu-${PV}.patch
+
+	# fix calendar day-of-week for l10n, see bug #38672
+	# consider clean/removing for gtk+-2.4/gnome-2.6
+	epatch ${FILESDIR}/${PN}-calendar-l10n.patch
 
 	# fix initial menu size
 	epatch ${FILESDIR}/${PN}-2.4-panel_size.patch
