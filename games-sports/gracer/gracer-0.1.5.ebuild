@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.1 2003/09/11 12:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.2 2003/12/12 21:46:29 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -38,11 +38,11 @@ src_compile() {
 		`use_enable png` \
 		|| die
 	sed -i 's:-lplibsl:-lplibsl -lplibul:' `find -name Makefile`
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
-	dodoc AUTHORS ChangeLog NEWS README
+	make DESTDIR=${D} install           || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 	prepgamesdirs
 }
