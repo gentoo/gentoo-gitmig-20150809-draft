@@ -1,12 +1,15 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.63 2003/08/06 02:02:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.64 2003/08/13 18:41:00 gmsoft Exp $
 
   06 Aug 2003; Alastair Tse <liquidx@gentoo.org> xchat-2.0.3-r1.ebuild,
   xchat-2.0.4.ebuild:
   added workaround for PYTHONPATH problems (#25943)
 
 *xchat-2.0.4 (31 Jul 2003)
+
+  13 Aug 2003; Guy Martin <gmsoft@gentoo.org> xchat-2.0.4.ebuild :
+  Added hppa to KEYWORDS.
 
   31 Jul 2003; foser <foser@gentoo.org> xchat-2.0.4.ebuild :
   New version, brought to our attention in #25612
