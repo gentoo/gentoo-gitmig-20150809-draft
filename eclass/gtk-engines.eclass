@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.10 2002/11/11 04:53:49 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.11 2002/11/17 01:52:17 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -56,6 +56,9 @@ case "${ENGINE}" in
 		fi
 		;;
 	
+	"geramik" )
+		MY_PN="3952-Geramik" ;;
+		
 	"gtkstep" )
 		LICENSE="LGPL-2" ;;
 		
@@ -111,6 +114,10 @@ then
 elif [ "X${ENGINE}" = "Xflat" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://download.freshmeat.net/themes/gtk2flat/gtk2flat-default.tar.gz"
+	
+elif [ "X${ENGINE}" = "Xgeramik" ]
+then
+	SRC_URI="http://www.kde-look.org/content/files/${MY_P}.tar.gz"
 	
 elif [ "X${ENGINE}" = "Xxfce" ]
 then
