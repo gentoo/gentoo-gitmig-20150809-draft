@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.26 2005/02/05 15:59:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.27 2005/04/03 19:09:07 axxo Exp $
+
+*antlr-2.7.5 (03 Apr 2005)
+
+  03 Apr 2005; Thomas Matthijs <axxo@gentoo.org> +antlr-2.7.5.ebuild:
+  version bump
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> antlr-2.7.4.ebuild:
   added support for the doc and the examples useflag. fixes #80862
