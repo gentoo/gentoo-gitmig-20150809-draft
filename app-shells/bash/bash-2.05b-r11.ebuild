@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.10 2004/09/28 13:37:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r11.ebuild,v 1.1 2004/09/29 20:09:22 agriffis Exp $
 
 inherit gcc eutils flag-o-matic gnuconfig
 
@@ -46,6 +46,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-parallel-build.patch
 	# Fix using bash with post-20040808 glibc ebuilds (from fedora)
 	epatch ${FILESDIR}/${P}-jobs.patch
+	# Fix bash call to setlocale #64266
+	epatch ${FILESDIR}/${P}-setlocale.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h

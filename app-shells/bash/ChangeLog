@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.54 2004/09/28 13:37:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.55 2004/09/29 20:09:22 agriffis Exp $
+
+*bash-2.05b-r11 (29 Sep 2004)
+
+  29 Sep 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/bash-2.05b-setlocale.patch, -bash-2.05b-r10.ebuild,
+  +bash-2.05b-r11.ebuild:
+  Fix bash-2 initialization wrt setlocale #64266. Arch devs, please do *not*
+  stable this package until I say so since the newer bashrc stuff needs to be
+  synchronized with stabilization of newer baselayout versions
 
   28 Sep 2004; Aron Griffis <agriffis@gentoo.org> files/bashrc:
   Enable checkwinsize in system bashrc #65623
