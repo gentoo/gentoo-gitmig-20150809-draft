@@ -179,3 +179,4 @@ move net-misc/gwget2 net-misc/gwget
 
 move net-www/dspam-web www-apps/dspam-web
 move dev-tcltk/mmucl games-mud/mmucl
+move app-editors/xemacs-packages-sumo app-xemacs/xemacs-packages-sumo
