@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.6 2003/10/19 11:50:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.7 2003/12/26 05:23:40 strider Exp $
 
 inherit base java-pkg
 ECLASS=jakarta-commons
@@ -46,7 +46,8 @@ jakarta-commons_src_compile() {
 			myconf)
 				debug-print-section myconf
 				use jikes && myconf="$myconf -Dbuild.compiler=jikes"
-				use log4j && echo "log4j.jar=`java-config --classpath=log4j`" >> build.properties
+				#use log4j && echo "log4j.jar=`java-config --classpath=log4j`" >> build.properties
+				echo "log4j.jar=`java-config --classpath=log4j`" >> build.properties
 				use junit && echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
