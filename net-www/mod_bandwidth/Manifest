@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8a8f9e02967286c4ff006a1db4ec0d0 ChangeLog 1917
+MD5 3b19b6de352962fbe4fd99b965fd3ee5 ChangeLog 2026
 MD5 52d4491250bfe0a8852170c9ce5aa3a8 metadata.xml 501
 MD5 853dc35eff084e13004e17e2c6dc6908 mod_bandwidth-2.0.4.ebuild 1718
-MD5 f44ba07ed97dc95e35212f0d3c4003c6 mod_bandwidth-2.0.5-r1.ebuild 1006
+MD5 682728e1a8132d3ecc613fa3c4fbd586 mod_bandwidth-2.0.5-r1.ebuild 825
 MD5 98fabcbf50d867020d0673ed2c28740b mod_bandwidth-2.0.5.ebuild 1725
 MD5 261701832cd085ac1d31fa948299c5d5 files/10_mod_bandwidth.conf 900
-MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.4 59
-MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5 59
-MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5-r1 59
 MD5 7fdb7dc609577ce39c00d5c998411c56 files/mod_bandwidth-2.0.4-register.patch 658
 MD5 7fdb7dc609577ce39c00d5c998411c56 files/mod_bandwidth-2.0.5-register.patch 658
 MD5 cb75940c95ae90a42fc84bd3baac4f4f files/mod_bandwidth.conf 519
+MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.4 59
+MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5-r1 59
+MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCEN64mPFBzbX68WERArm+AJ9LQFHt3cZXI66u0f9CCCS16T5xOwCeOiug
-u1dDlDu83MMJRcsDhk0g+S4=
-=ZHAM
+iD8DBQFCHz5EmPFBzbX68WERAikEAKCFQkLh+7D1MSDNCAPT0CcLBEey6wCbBUUk
+zal0UdW3ofBrY8JlA55F6sk=
+=Gsrg
 -----END PGP SIGNATURE-----
