@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.13 2004/04/14 09:09:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.14 2004/04/26 08:07:20 dragonheart Exp $
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> electricsheep-2.5.ebuild,
+  metadata.xml:
+  Added media-libs/alsa-lib and media-libs/nas to dependancies. This program
+  will use sys-libs/slang and media-libs/aalib if they exist on the system and
+  transform them into dependancies. Emailed author for fix to this.
+
+*electricsheep-2.5 (24 Apr 2004)
+
+  24 Apr 2004; Daniel Black <dragonheart@gentoo.org> electricsheep-2.5.ebuild,
+  metadata.xml:
+  Version bump. Thanks to Aaron Wilson <unstableaaron@hotmail.com> in bug #47856
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> electricsheep-2.4-r2.ebuild:
   Added IUSE=
