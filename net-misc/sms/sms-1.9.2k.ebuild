@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-1.9.2k.ebuild,v 1.1 2004/04/22 08:46:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-1.9.2k.ebuild,v 1.2 2004/06/06 00:12:12 dragonheart Exp $
 
 DESCRIPTION="Command line program for sending SMS to Polish GSM mobile phone users"
 HOMEPAGE="http://ceti.pl/~miki/komputery/sms.html"
 SRC_URI="http://ceti.pl/~miki/komputery/download/sms/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RDEPEND="virtual/glibc
 	sys-libs/gdbm"
