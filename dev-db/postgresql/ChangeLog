@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.130 2004/09/28 01:13:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.131 2004/10/02 23:57:49 nakano Exp $
+
+*postgresql-7.3.7-r1 (03 Oct 2004)
+
+  03 Oct 2004; Masatomo Nakano <nakano@gentoo.org>
+  files/pg_autovacuum.init-7.4.5, +files/postgresql-7.3.7-gentoo.patch,
+  -files/postgresql-8.0.0_beta1-gentoo.patch,
+  -files/postgresql-8.0.0_beta2-gentoo.patch, +postgresql-7.3.7-r1.ebuild,
+  -postgresql-8.0.0_beta2.ebuild:
+  Fixed fail to start up pg_vacuum problem(#51503). Added patch not to use 
+  termcap library in 7.3.7. See #63073 and #63181.
 
 *postgresql-8.0.0_beta3 (28 Sep 2004)
 
