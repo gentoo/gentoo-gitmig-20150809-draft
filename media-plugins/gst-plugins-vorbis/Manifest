@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b19ff00aa0c619f9cca91945c97c3b70 ChangeLog 4820
-MD5 3cad73c0079270d3f5c347eeb46d06b7 gst-plugins-vorbis-0.8.3.ebuild 575
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 ff8ca9086e514f4a95a6a283c77fc741 gst-plugins-vorbis-0.8.5.ebuild 426
-MD5 accd08fef4498d4593fdfba2c5de48f4 gst-plugins-vorbis-0.8.2.ebuild 568
-MD5 2cc6d9b1247f56ed84b2d86b594724d0 gst-plugins-vorbis-0.8.7.ebuild 429
-MD5 dcef67acafafa482267fb11d405c1166 gst-plugins-vorbis-0.6.4.ebuild 430
 MD5 026341ebc893993f35d3e879ee5f911b gst-plugins-vorbis-0.8.1.ebuild 416
 MD5 2327ebc19615ca1d17703c52886002fa gst-plugins-vorbis-0.8.8.ebuild 437
+MD5 3cad73c0079270d3f5c347eeb46d06b7 gst-plugins-vorbis-0.8.3.ebuild 575
+MD5 dcef67acafafa482267fb11d405c1166 gst-plugins-vorbis-0.6.4.ebuild 430
+MD5 ff8ca9086e514f4a95a6a283c77fc741 gst-plugins-vorbis-0.8.5.ebuild 426
+MD5 6f7f26c3aef6b119b92d3383333c7c5f gst-plugins-vorbis-0.8.7.ebuild 428
+MD5 accd08fef4498d4593fdfba2c5de48f4 gst-plugins-vorbis-0.8.2.ebuild 568
+MD5 834a9d9a3d3abe62e373d820e3cdb0fb ChangeLog 4926
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-vorbis-0.6.4 71
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-vorbis-0.8.1 71
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-vorbis-0.8.2 71
-MD5 f2fcdce32fe2db50800509c12fbf38ee files/gst-plugins-vorbis-gcc2_fix.patch 847
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-vorbis-0.8.3 71
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-vorbis-0.8.8 71
-MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-vorbis-0.8.7 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-vorbis-0.8.5 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPiWYugEuf3OQ0akRAmE1AJ9nPrTBZU3DahTLBaBiIaeHhF8rAQCfZBEz
-3riCcobPugaaZQc+gs+bXEQ=
-=30eE
------END PGP SIGNATURE-----
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-vorbis-0.8.7 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-vorbis-0.8.8 71
+MD5 f2fcdce32fe2db50800509c12fbf38ee files/gst-plugins-vorbis-gcc2_fix.patch 847
