@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.43 2003/06/06 22:39:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.44 2003/06/24 23:21:28 mholzer Exp $
+
+*gkrellm-2.1.13 (25 Jun 2003)
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.13.ebuild:
+  Version bumped. Closes #23084
 
   07 Jun 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-2.1.10.ebuild:
   Fixing nls support. Closes #21307.
