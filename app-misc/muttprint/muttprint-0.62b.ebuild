@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.62b.ebuild,v 1.6 2003/09/19 16:18:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.62b.ebuild,v 1.7 2004/03/14 10:52:17 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="pretty printing of your mails"
 HOMEPAGE="http://muttprint.sf.net/"
 SRC_URI="mirror://sourceforge/muttprint/${P}.tar.gz"

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.2 2003/10/08 03:50:39 hillster Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.3 2004/03/14 10:52:44 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pms-0.94.ebuild:
+  Don't assign default to S; header fix
 
   07 Oct 2003; Joel Hill <hillster@gentoo.org> pms-0.94.ebuild:
   cleanup added docs, marking stable.

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/glastree
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.4 2003/02/12 04:59:33 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.5 2004/03/14 10:50:41 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> glastree-0.57.ebuild,
+  glastree-0.58.ebuild, glastree-1.02.ebuild:
+  Don't assign default to S; header fix
 
 *glastree-1.02 (15 Dec 2002)
   15 Dec 2002; Seth Chandler <sethbc@gentoo.org> glastree-1.02.ebuild:

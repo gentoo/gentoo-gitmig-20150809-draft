@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-6.ebuild,v 1.3 2003/10/27 15:42:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detachtty/detachtty-6.ebuild,v 1.4 2004/03/14 10:49:57 mr_bones_ Exp $
 
 DESCRIPTION="detachtty allows the user to attach/detach from interactive processes across the network.  It is similar to GNU Screen"
 HOMEPAGE="http://packages.debian.org/unstable/admin/detachtty.html"
@@ -10,8 +10,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	make || die

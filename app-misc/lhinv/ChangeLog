@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lhinv
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.4 2003/02/12 05:03:20 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.5 2004/03/14 10:51:21 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lhinv-1.1-r1.ebuild,
+  lhinv-1.1-r2.ebuild:
+  Don't assign default to S; header fix
 
 *lhinv-1.1-r2 (30 Aug 2002)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.1 2003/03/16 21:48:52 sethbc Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.2 2004/03/14 10:50:30 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fdupes-1.40.ebuild:
+  Don't assign default to S; header fix
 
 *fdupes-1.40 (16 Mar 2003)
 
