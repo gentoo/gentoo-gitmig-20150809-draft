@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r6.ebuild,v 1.13 2004/06/24 22:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r6.ebuild,v 1.14 2004/06/28 01:23:35 agriffis Exp $
 
 inherit eutils
 
@@ -63,7 +63,7 @@ src_install() {
 	dosym hosts_access.5.gz /usr/share/man/man5/hosts.allow.5.gz
 	dosym hosts_access.5.gz /usr/share/man/man5/hosts.deny.5.gz
 	dolib.a libwrap.a
-	if [ -z `use static` ]; then
+	if ! use static; then
 		newlib.so libwrap.so libwrap.so.0.${PV}
 		dosym /usr/lib/libwrap.so.0.${PV} /usr/lib/libwrap.so.0
 		dosym /usr/lib/libwrap.so.0 /usr/lib/libwrap.so

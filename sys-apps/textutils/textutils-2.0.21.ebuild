@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.21.ebuild,v 1.14 2004/06/24 22:29:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0.21.ebuild,v 1.15 2004/06/28 01:26:28 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -33,7 +33,7 @@ src_compile() {
 		--without-included-regex \
 		${myconf} || die
 
-	if [ "`use static`" ]
+	if use static
 	then
 		emake LDFLAGS=-static || die
 	else
@@ -53,7 +53,7 @@ src_install() {
 
 	rmdir ${D}/usr/lib
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc AUTHORS COPYING ChangeLog NEWS README* THANKS TODO
 	else

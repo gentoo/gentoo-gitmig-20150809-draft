@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.5.ebuild,v 1.15 2004/06/24 22:29:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.5.ebuild,v 1.16 2004/06/28 01:25:42 agriffis Exp $
 
 IUSE="nls build"
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	if [ -z "`use nls`" ] || [ -n "`use build`" ] ; then
+	if ! use nls || use build ; then
 		myconf="--disable-nls"
 	fi
 
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ -n "`use build`" ] ; then
+	if use build ; then
 		mv util/ginstall-info util/install-info
 		dobin makeinfo/makeinfo util/{install-info,texi2dvi,texindex}
 	else

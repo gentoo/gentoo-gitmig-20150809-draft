@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.21 2004/06/24 22:29:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.22 2004/06/28 01:26:28 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> textutils-2.0.21.ebuild,
+  textutils-2.1.ebuild:
+  QA - fix use invocation
 
   19 Apr 2004; Michael McCabe <randy@gentoo.org> textutils-2.1-r1.ebuild:
   added s390 keywords
