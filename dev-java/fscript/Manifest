@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55899a8947d370da66698ee8266e89bd fscript-1.15.ebuild 908
-MD5 0cca143f70195b94014186368c9d3e8a fscript-1.14.ebuild 887
-MD5 2e63be5237d522d5081e0621c0e07258 ChangeLog 836
+MD5 e8e21f9abefbc056eae8c264b9408441 ChangeLog 955
+MD5 3e439c0ba8a7f896525b8b5a90aac37b fscript-1.14.ebuild 898
+MD5 999a357baec2c4f6cc9b9277c0ee819a fscript-1.15.ebuild 919
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 103dbcb0b2f1efbcf4e91ba1c978e5f6 files/digest-fscript-1.14 61
 MD5 bf48481be411a104fdb421903ac733d1 files/digest-fscript-1.15 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVa5/rLF9B432nYRAkP+AJ4xmTjS9nun14reyJd+DVM04gF/eACglpty
-0GlLJ7oGon3LpSQJykW3cJk=
-=oCjn
------END PGP SIGNATURE-----
