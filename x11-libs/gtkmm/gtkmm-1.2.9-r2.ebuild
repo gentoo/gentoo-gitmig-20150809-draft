@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.4 2002/07/16 03:33:35 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.5 2002/08/04 03:09:08 leonardop Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ interface for GTK+"
@@ -57,11 +57,6 @@ src_install() {
 	make DESTDIR=${D}				\
 		install || die
 
-
-	dodoc AUTHORS COPYING ChangeLog* HACKING
-	dodoc NEWS* README* TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
-
-
-
 
