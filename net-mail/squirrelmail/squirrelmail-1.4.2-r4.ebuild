@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r4.ebuild,v 1.2 2004/04/27 21:12:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r4.ebuild,v 1.3 2004/05/11 20:36:42 mholzer Exp $
 
 inherit webapp-apache eutils
 
@@ -29,7 +29,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 HOMEPAGE="http://www.squirrelmail.org/"
 
-IUSE="crypt virus-scan ldap ssl"
+IUSE="crypt virus-scan ldap ssl apache2"
 
 LICENSE="GPL-2"
 SLOT="1"
