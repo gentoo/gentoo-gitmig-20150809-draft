@@ -89,7 +89,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*<sys-libs/db-4.1.0
+*sys-libs/db
 *>=sys-libs/ncurses-5.2-r2
 *sys-libs/pam     
 *sys-libs/pwdb      
