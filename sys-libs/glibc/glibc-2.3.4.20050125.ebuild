@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.13 2005/02/13 03:38:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.14 2005/02/13 07:21:54 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -313,9 +313,11 @@ toolchain-glibc_src_install() {
 		sed "s~/$(get_libdir)/~$(alt_libdir)/tls/~" ${D}$(alt_usrlibdir)/libpthread.so \
 			> ${D}/$(alt_usrlibdir)/nptl/libpthread.so
 
-		sed -i -e "s~/usr/$(get_libdir)/~$(alt_usrlibdir)/nptl/~" ${D}/$(alt_usrlibdir)/nptl/libpthread.so
+		sed -i -e "s~/usr/$(get_libdir)/~$(alt_usrlibdir)/nptl/~" ${D}$(alt_usrlibdir)/nptl/libpthread.so ${D}$(alt_usrlibdir)/nptl/libc.so
 
-		dosym ../${librtsofile} $(alt_usrlibdir)/nptl/librt.so
+		chmod 755 ${D}$(alt_usrlibdir)/nptl/libpthread.so ${D}$(alt_usrlibdir)/nptl/libc.so
+
+		dosym ../librt.so $(alt_usrlibdir)/nptl/librt.so
 
 		# last but not least... headers.
 		mkdir -p ${D}/nptl ${D}$(alt_headers)/nptl
