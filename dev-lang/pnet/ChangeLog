@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/pnet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/ChangeLog,v 1.4 2003/05/07 19:29:00 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pnet/ChangeLog,v 1.5 2003/05/12 16:22:18 scandium Exp $
+
+*pnet-0.5.6-r2 (12 May 2003)
+
+  12 May 2003; Rainer Groesslinger <scandium@gentoo.org> pnet-0.5.6-r2.ebuild:
+  init script provided by
+  Per Wigren <wigren@home.se> in bug #19617
+  with some enhancements added
 
 *pnet-0.5.6-r1 (07 May 2003)
 
