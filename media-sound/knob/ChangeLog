@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/knob
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/knob/ChangeLog,v 1.7 2004/09/03 09:59:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/knob/ChangeLog,v 1.8 2004/12/15 22:10:39 kloeri Exp $
+
+  15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> knob-1.2-r1.ebuild:
+  Stable on alpha.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> knob-1.2-r1.ebuild:
   Stable amd64, sparc, x86.
