@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.12 2004/09/09 11:31:45 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.13 2004/09/29 15:07:07 fmccor Exp $
+
+  29 Sep 2004; Ferris McCormick <fmccor@gentoo.org> files/c-ATLAS:
+  Correct trivial typo: setup() {... needs closing '}'.
 
   09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> blas-atlas-3.6.9.ebuild:
   marked ~ppc64

@@ -11,4 +11,4 @@ ln -sf blas/atlas/libcblas.so.0 /usr/${MY_LIBDIR}/libcblas.so.0
  
 einfo "/usr/${MY_LIBDIR}/libcblas.a -> blas/atlas/libcblas.a"
 ln -sf blas/atlas/libcblas.a /usr/${MY_LIBDIR}/libcblas.a
-
+}
