@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.3.4.ebuild,v 1.2 2004/06/23 20:36:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.5.3.ebuild,v 1.1 2004/06/23 20:36:48 stuart Exp $
 
 DESCRIPTION="Snownews, a text-mode RSS/RDF newsreader"
-HOMEPAGE="http://home.kcore.de/~kiza/software/snownews/"
+HOMEPAGE="http://snownews.kcore.de/"
 SRC_URI="http://home.kcore.de/~kiza/software/snownews/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.5.6
@@ -18,10 +18,11 @@ DEPEND=">=dev-libs/libxml2-2.5.6
 S=${WORKDIR}/${P}
 
 src_compile() {
-	cd ${S}
-	make LOCALEPATH=/usr/share/locale || die
+	emake || die
 }
 
 src_install() {
 	make PREFIX=${D}/usr install || die
+
+	dodoc AUTHOR CREDITS README README.colors
 }
