@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01.ebuild,v 1.11 2004/11/12 15:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01.ebuild,v 1.12 2005/02/13 03:34:33 solar Exp $
 
 inherit perl-module
 

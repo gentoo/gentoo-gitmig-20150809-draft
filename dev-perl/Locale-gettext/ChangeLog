@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.12 2005/02/13 02:49:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.13 2005/02/13 03:34:33 solar Exp $
+
+  12 Feb 2005; <solar@gentoo.org> Locale-gettext-1.03.ebuild:
+  - marked stable for bug 77440
 
   13 Feb 2005; <plasmaroo@gentoo.org> Locale-gettext-1.03.ebuild:
   Marking 1.03 stable; fixes {#77440|#79478} symptoms on IA64.
