@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.1 2003/06/16 18:25:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r6.ebuild,v 1.2 2003/06/26 14:45:57 vapier Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.ntp.org/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa"
+IUSE="parse-clocks"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2
@@ -31,7 +32,10 @@ src_compile() {
 	cp configure{,.orig}
 	sed -i "s:-Wpointer-arith::" configure
 
-	econf --build=${CHOST} || die
+	econf \
+		--build=${CHOST} \
+		`use_enable parse-clocks` \
+		|| die
 	emake || die
 }
 
