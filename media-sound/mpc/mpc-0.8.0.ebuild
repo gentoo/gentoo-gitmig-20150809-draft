@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.8.0.ebuild,v 1.1 2003/08/10 05:29:56 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.8.0.ebuild,v 1.2 2003/08/10 10:49:17 jje Exp $
 
 DESCRIPTION="mpc is a client for Music Player Daemon (mpd)"
 SRC_URI="http://mercury.chem.pitt.edu/~shank/${P}.tar.gz"
@@ -11,7 +11,6 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=""
-RDEPEND=">=media-sound/mpd-0.8.2"
 
 src_compile() {
 	local myconf
