@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/xtail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.1 2002/04/21 22:37:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.2 2002/07/31 03:27:45 cselkirk Exp $
 
 *xtail-2.1 (21 Apr 2002)
+  
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> xtail-2.1.ebuild :
+
+  Added ppc to KEYWORDS. Added RDEPEND.
 
   21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   xtail-2.1.ebuild, files/digest-xtail-2.1 :
