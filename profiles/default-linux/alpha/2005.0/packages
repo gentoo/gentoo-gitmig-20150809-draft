@@ -1,5 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/packages,v 1.2 2005/03/17 20:34:10 vapier Exp $
-
->=sys-kernel/linux-headers-2.5
