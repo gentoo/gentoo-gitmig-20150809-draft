@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>zhen@gentoo.org</email>
+  <name>John Davis</name>
+  <description>Full time maintainer, please post all bugs to me.</description>
+</maintainer>
+<longdescription>xerces-c is a C++ library specializing in XML parsing. It is released by
+the Apache Foundation</longdescription>
+</pkgmetadata>
