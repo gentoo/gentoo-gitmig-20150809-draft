@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.ebuild,v 1.4 2002/08/18 20:38:35 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.ebuild,v 1.5 2002/08/21 11:43:27 danarmak Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -9,6 +9,9 @@ inherit flag-o-matic libtool
 
 # Compile problems with these ...
 filter-flags "-fno-exceptions"
+
+# cf bug #6641
+filter-flags "-fomit-frame-pointer"
 
 LOC="/usr"
 MY_PV="`echo ${PV/_pre} | cut -d. -f1,2`"
