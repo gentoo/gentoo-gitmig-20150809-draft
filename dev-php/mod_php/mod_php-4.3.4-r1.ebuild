@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r1.ebuild,v 1.1 2003/11/16 12:25:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r1.ebuild,v 1.2 2003/11/24 00:13:36 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -54,8 +54,7 @@ inherit php-2 eutils
 DEPEND="${DEPEND}
 	>=net-www/apache-1.3.26-r2
 	apache2? ( >=net-www/apache-2.0.43-r1 )
-	>=sys-apps/findutils-4.1.7-r5
-	"
+	>=sys-apps/findutils-4.1.7-r5"
 PDEPEND="${PDEPEND} ~dev-php/php-core-${PV}"
 PROVIDE="virtual/php-4.3.4"
 
