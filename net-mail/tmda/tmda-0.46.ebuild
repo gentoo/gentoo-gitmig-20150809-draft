@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.14 2002/02/01 19:50:13 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.46.ebuild,v 1.3 2002/02/15 18:57:51 agenkin Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -25,11 +25,11 @@ src_install () {
 
         # The Python TMDA module
         insinto "/usr/lib/python${pv}/site-packages/TMDA"
-        doins TMDA/*
+        doins TMDA/*.py*
 
         # The templates
         insinto /etc/tmda
-        doins templates/*
+        doins templates/*.txt
         
         # Documentation
         dodoc COPYRIGHT ChangeLog README THANKS UPGRADE CRYPTO
