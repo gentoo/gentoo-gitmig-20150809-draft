@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20031211.ebuild,v 1.2 2004/01/03 10:37:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20031211.ebuild,v 1.3 2004/01/07 20:21:13 mr_bones_ Exp $
 
 inherit eutils
 
@@ -26,10 +26,10 @@ src_unpack() {
 @@ -7,7 +7,7 @@
  ## Installation paths
  ##
- 
+
 -PREFIX=/usr/local
 +PREFIX=/usr
- 
+
  # Unless you are creating a package conforming to some OS's standards, you
  # probably do not want to modify the following directories:
 @@ -15,13 +15,13 @@
@@ -50,7 +50,7 @@ src_unpack() {
  INCDIR=\$(PREFIX)/include/ion
  # Nothing at the moment
 @@ -68,7 +68,7 @@
- 
+
  # If you have installed Lua 5.0 from the official tarball without changing
  # paths, this so do it.
 -LUA_DIR=/usr/local
@@ -64,28 +64,28 @@ src_unpack() {
  # in sprintf_2.2/ is used.
 -#HAS_SYSTEM_ASPRINTF=1
 +HAS_SYSTEM_ASPRINTF=1
- 
- 
+
+
  ##
 @@ -139,7 +139,7 @@
  # it so it is perhaps better not using anything at all.
- 
+
  # Most systems
 -#XOPEN_SOURCE=-ansi -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED
 +XOPEN_SOURCE=-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED
  # sunos, (irix)
  #XOPEN_SOURCE=-ansi -D__EXTENSIONS__
- 
+
 @@ -153,8 +153,8 @@
  # following should optimize function calls to Lua a little.
  #C99_SOURCE=-std=c99 -DCF_HAS_VA_COPY
- 
+
 -CFLAGS=-g -Os \$(WARN) \$(DEFINES) \$(INCLUDES) \$(EXTRA_INCLUDES)
 -LDFLAGS=-g -Os \$(LIBS) \$(EXTRA_LIBS)
 +CFLAGS=${CFLAGS} \$(WARN) \$(DEFINES) \$(INCLUDES) \$(EXTRA_INCLUDES)
 +LDFLAGS=${CFLAGS} \$(LIBS) \$(EXTRA_LIBS)
- 
- 
+
+
  ##
 EOP
 	epatch ${T}/system.mk.patch
