@@ -1,11 +1,11 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.22 2003/05/30 00:12:41 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.23 2003/05/30 00:20:31 kain Exp $
 
 *ppc-sources-2.4.21-r1 (29 May 2003)
 
   29 May 2003; Kain <kainz@gentoo.org> ppc-sources-2.4.21-r1.ebuild:
-  New kernel based off benh's bitkeeper tree from ~ May 27 (rev 1.892).
+  New kernel based off benh's bitkeeper tree from ~ May 27 (rev 1.893).
   This kernel also contains the orinoco monitor patch, and iptables.
   Next version should have bootsplash and ipsec/cryptoapi support.
   NOTE: For the moment, I don't have ipsec support in this kernel!
