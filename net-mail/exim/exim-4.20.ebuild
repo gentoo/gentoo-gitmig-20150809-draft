@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.20.ebuild,v 1.2 2003/06/12 23:34:27 msterret Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan exiscan-acl"
 
@@ -49,7 +49,7 @@ src_unpack() {
 		einfo "Patching exican-acl support into exim ${PV}.."
 		epatch ${DISTDIR}/exiscan-acl-${EXISCANACL_VER}.patch
 	fi
-	
+
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
