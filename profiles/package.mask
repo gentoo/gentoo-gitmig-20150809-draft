@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <seemant@gentoo.org> (16 Aug 2002)
-# masked for mirroring
-=x11-themes/commonbox-styles-0.2
-
 # <satai@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-text/docbook-xml-dtd-4.1.2-r3
@@ -67,10 +63,6 @@
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
 net-www/apache2
-
-# <seemant@gentoo.org> (14 Aug 2002)
-# masked for b0rkage
-=app-cdr/cdrtools-1.11.29
 
 # <blizzy@gentoo.org> (14 Aug 2002)
 # masked since there doesn't seem to be a download location
