@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r3.ebuild,v 1.1 2004/07/01 23:39:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.26-r3.ebuild,v 1.2 2004/07/13 09:28:43 kumba Exp $
 
 
 # Version Data
@@ -21,7 +21,7 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 28 Nov 2003
+# 2) linux-mips.org CVS snapshot diff from 15 Apr 2004
 # 3) patch to fix arch/mips[64]/Makefile to pass appropriate CFLAGS
 # 4) patch to fix the mips64 Makefile to allow building of mips64 kernels
 # 5) iso9660 fix
