@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=limewire
+TryExec=
+Icon=/usr/share/pixmaps/limewire/main-icon.png
+Terminal=false
+Name=LimeWire
+GenericName=File Sharing
+Comment=A file sharing program running on the Gnutella Network
+Categories=Application;Network;FileTransfer;P2P

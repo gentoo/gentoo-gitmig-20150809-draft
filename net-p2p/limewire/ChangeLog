@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.4 2004/08/30 15:49:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.5 2004/09/02 17:38:25 squinky86 Exp $
+
+*limewire-4.1.5 (02 Sep 2004)
+
+  02 Sep 2004; Jon Hood <squinky86@gentoo.org> +files/limewire.desktop,
+  +files/main-icon.png, limewire-4.0.8.ebuild, +limewire-4.1.5.ebuild:
+  Version bump, adding changes from Keith Lea <keith@cs.oswego.edu>, #62576.
 
   30 Aug 2004; David Holm <dholm@gentoo.org> limewire-4.1.4.ebuild:
   Added to ~ppc.
