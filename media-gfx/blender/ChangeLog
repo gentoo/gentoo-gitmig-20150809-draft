@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/blender
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.47 2004/12/25 02:26:49 lu_zero Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.48 2005/01/03 12:41:13 lu_zero Exp $
+
+*blender-2.36-r1 (03 Jan 2005)
+
+  03 Jan 2005; Luca Barbato <lu_zero@gentoo.org> +blender-2.36-r1.ebuild,
+  +files/blender-2.36-dirs.patch:
+  Make it use saner paths, added back plugins, scripts and internationalization
+
+  03 Jan 2005; Luca Barbato <lu_zero@gentoo.org> -files/blender-2.12,
+  -files/blender-2.31a-plugins.patch, -blender-2.33a.ebuild.
+  -files/configure-fix-2.30.patch, -files/configure-fix-2.31.patch,
+  -files/configure-fix-2.31a.patch, -blender-2.30.ebuild,
+  -blender-2.31.ebuild, -blender-2.31a.ebuild, -blender-2.32.ebuild:
+  Cleanups
 
 *blender-2.36 (25 Dec 2004)
 
@@ -106,7 +119,7 @@
   04 Dec 2003; Luca Barbato <lu_zero@gentoo.org> blender-2.28c.ebuild,
   blender-2.31.ebuild, files/configure-fix-2.31.patch:
   new version, thanks to Bjarke Freund-Hansen <gentoo-bugzilla@rocekiller.dk>
-  and Tarmo TÃ¤nav <sn4ip3r@estprog.ee>
+  and Tarmo TÃÂ¤nav <sn4ip3r@estprog.ee>
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> blender-2.30.ebuild:
   add ~amd64 flag

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.35.ebuild,v 1.2 2004/11/16 10:40:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.35.ebuild,v 1.3 2005/01/03 12:41:13 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
