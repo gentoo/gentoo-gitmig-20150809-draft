@@ -1,0 +1,11 @@
+--- Src/Makefile.orig	2003-08-14 21:14:02.092817328 -0400
++++ Src/Makefile	2003-08-14 21:14:09.306720648 -0400
+@@ -4,7 +4,7 @@
+ VERSION = 0
+ BUILD = 2
+ PLUGIN = libSPU2null-${VERSION}.${BUILD}.so
+-CFLAGS+= -fPIC -Wall -O2 -fomit-frame-pointer -D__LINUX__
++CFLAGS+= -fPIC -Wall $(OPTFLAGS) -D__LINUX__
+ OBJS = SPU2.o
+ DEPS:= $(OBJS:.o=.d)
+ LIBS = $(shell gtk-config --libs) 
