@@ -1,6 +1,16 @@
-MD5 f99eb903f5c3e0b1e95bfd9055c6cf75 hcfpcimodem-1.05.ebuild 1353
-MD5 7df02b0dc9b898d083fd458791c14499 ChangeLog 2210
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 536382ed9365dfadd47ecba3af2e2199 hcfpcimodem-1.05.ebuild 1354
+MD5 288c2e93216447e8558858da7ba71952 ChangeLog 2333
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 f99eb903f5c3e0b1e95bfd9055c6cf75 hcfpcimodem-1.03.ebuild 1353
 MD5 13b1736e40486ab28af3387842521d86 files/digest-hcfpcimodem-1.03 72
 MD5 c5a95c807346bdb475dcf710e9ff1fd2 files/digest-hcfpcimodem-1.05 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCKk7rjiC39V7gKu0RAu7fAKDCrPNfTIk92Vqg0BeRMpiD5miJIQCgrmxF
+1pJq7fWVfvwHtRtVd9JFLKM=
+=Ns/N
+-----END PGP SIGNATURE-----
