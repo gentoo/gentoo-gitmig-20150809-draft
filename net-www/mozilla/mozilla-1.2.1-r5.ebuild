@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.7 2003/03/30 20:23:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.8 2003/04/06 03:02:41 joker Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -13,8 +13,8 @@ inherit flag-o-matic gcc makeedit eutils nsplugins
 filter-flags "-fomit-frame-pointer"
 
 # Sparc support ...
-replace-flags "-mcpu=ultrasparc" "-mcpu=v8"
-replace-flags "-mcpu=v9" "-mcpu=v8"
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
+replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
