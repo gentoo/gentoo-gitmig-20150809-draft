@@ -1,45 +1,28 @@
---- /tmp/pcimodules-pciutils-2.1.8.diff	Mon Aug  5 01:50:23 2002
-+++ pcimodules-pciutils-2.1.8.diff	Mon Aug  5 02:07:38 2002
-@@ -1,11 +1,11 @@
- diff -u --new-file pciutils-2.1.8/Makefile pciutils/Makefile
- --- pciutils-2.1.8/Makefile	Sat May 20 07:48:08 2000
- +++ pciutils/Makefile	Fri Nov 24 02:03:56 2000
--@@ -32,7 +32,7 @@
-+@@ -33,7 +33,7 @@
-  
-  export
+--- /tmp/Makefile	Fri Aug  2 09:40:43 2002
++++ Makefile	Fri Aug  2 09:43:40 2002
+@@ -33,7 +33,7 @@
  
---all: lib lspci setpci lspci.8 setpci.8 pci.ids 
-+-all: lib lspci setpci lspci.8 setpci.8 pci.ids
- +all: lib lspci setpci lspci.8 setpci.8 pci.ids pcimodules pcimodules.8 
+ export
  
-  lib: lib/config.h
-@@ -28,16 +28,20 @@
-  
-  %.8: %.man
-  	M=`echo $(DATE) | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <$< >$@ "s/@TODAY@/$$M/;s/@VERSION@/pciutils-$(VERSION)$(SUFFIX)/"
--@@ -58,9 +60,9 @@
-+@@ -61,13 +61,13 @@
-  install: all
-- 	# -c is ignored on Linux, but required on FreeBSD
-+ # -c is ignored on Linux, but required on FreeBSD
-  	$(DIRINSTALL) -m 755 $(ROOT)/sbin $(PREFIX)/share $(MANDIR)/man8
---       $(INSTALL) -c -m 755 -s lspci setpci $(ROOT)/sbin
--+       $(INSTALL) -c -m 755 -s lspci setpci pcimodules $(ROOT)/sbin
-- 	$(INSTALL) -c -m 644 pci.ids $(PREFIX)/share
---       $(INSTALL) -c -m 644 lspci.8 setpci.8 $(MANDIR)/man8
--+       $(INSTALL) -c -m 644 lspci.8 setpci.8 pcimodules.8 $(MANDIR)/man8
-- 	# Remove relics from old versions
-+-	$(INSTALL) -c -m 755 -s lspci setpci $(ROOT)/sbin
-++	$(INSTALL) -c -m 755 -s lspci setpci pcimodules $(ROOT)/sbin
-+ 	if [ ! -f $(PREFIX)/share/pci.ids -o pci.ids -nt $(PREFIX)/share/pci.ids ] ; then \
-+ 		$(INSTALL) -c -m 644 pci.ids $(PREFIX)/share ; \
-+ 	elif [ -f $(PREFIX)/share/pci.ids ] ; then \
-+ 		echo "$(PREFIX)/share/pci.ids is same or newer than the version to be installed, skipping." ; \
-+ 	fi
-+-	$(INSTALL) -c -m 644 lspci.8 setpci.8 $(MANDIR)/man8
-++	$(INSTALL) -c -m 644 lspci.8 setpci.8 pcimodules.8 $(MANDIR)/man8
-+ # Remove relics from old versions
-  	rm -f $(ROOT)/etc/pci.ids
-  
- Common subdirectories: pciutils-2.1.8/lib and pciutils/lib
+-all: lib lspci setpci lspci.8 setpci.8 pci.ids
++all: lib lspci setpci lspci.8 setpci.8 pci.ids pcimodules pcimodules.8 
+ 
+ lib: lib/config.h
+ 	$(MAKE) -C lib all
+@@ -61,13 +61,13 @@
+ install: all
+ # -c is ignored on Linux, but required on FreeBSD
+ 	$(DIRINSTALL) -m 755 $(ROOT)/sbin $(PREFIX)/share $(MANDIR)/man8
+-	$(INSTALL) -c -m 755 -s lspci setpci $(ROOT)/sbin
++	$(INSTALL) -c -m 755 -s lspci setpci pcimodules $(ROOT)/sbin
+ 	if [ ! -f $(PREFIX)/share/pci.ids -o pci.ids -nt $(PREFIX)/share/pci.ids ] ; then \
+ 		$(INSTALL) -c -m 644 pci.ids $(PREFIX)/share ; \
+ 	elif [ -f $(PREFIX)/share/pci.ids ] ; then \
+ 		echo "$(PREFIX)/share/pci.ids is same or newer than the version to be installed, skipping." ; \
+ 	fi
+-	$(INSTALL) -c -m 644 lspci.8 setpci.8 $(MANDIR)/man8
++	$(INSTALL) -c -m 644 lspci.8 setpci.8 pcimodules.8 $(MANDIR)/man8
+ # Remove relics from old versions
+ 	rm -f $(ROOT)/etc/pci.ids
+ 
+
