@@ -1,7 +1,4 @@
-MD5 a3992a4984d1fefbda7aeed630b36c73 amanda-2.4.4-r2.ebuild 11187
-MD5 39e95ca76cc75938893b1dd937451492 amanda-2.4.4.ebuild 8371
-MD5 d25d060a300148812269f0b58d9cdd45 amanda-2.4.4-r1.ebuild 11208
-MD5 7f5b595a01ab88918322ea49b9debb2e ChangeLog 2273
+MD5 fd9f15b4ebef4aac8a8975e2e5a339cf amanda-2.4.4-r2.ebuild 11188
 MD5 b21569120561b1c58ad59e93ce6df732 files/amanda-devfs 216
 MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
 MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
@@ -14,3 +11,6 @@ MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r1 65
 MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r2 65
 MD5 95a109a0edbf12da91dbabf7977a97f7 files/example_global.conf 1377
 MD5 ef2e4c8797076d9733b31a860fda8582 files/amanda-inetd.amanda.sample 194
+MD5 688f0bd229bb9bbee02de21095f67d16 amanda-2.4.4.ebuild 8372
+MD5 026def9e2812a5e849794154afe42c1d amanda-2.4.4-r1.ebuild 11209
+MD5 4f25e4a9ba919483832d809b21d67179 ChangeLog 2274
