@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.16 2003/05/15 22:30:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.17 2003/06/09 21:04:39 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> logrotate-3.6.5-r1.ebuild:
+  unmask for everyone
 
   15 May 2003; <msterret@gentoo.org> logrotate-3.6.5-r1.ebuild:
   applied a patch from Wayne Davison to unpack in src_unpack rather than
