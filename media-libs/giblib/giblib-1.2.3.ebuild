@@ -1,26 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.3.ebuild,v 1.1 2003/10/19 14:11:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/giblib-1.2.3.ebuild,v 1.2 2004/02/23 01:06:11 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Giblib, graphics library"
 HOMEPAGE="http://www.linuxbrit.co.uk/"
 SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 DEPEND=">=media-libs/imlib2-1.0.3
 	>=media-libs/freetype-2.0"
-RDEPEND="$DEPEND"
 
-src_compile() {
-	econf || die
-	emake || die
+pkg_setup() {
+	cd ${T}
+	$(gcc-getCC) ${FILESDIR}/imlib-x-test.c `imlib2-config --libs` `imlib2-config --cflags` \
+		|| die "You need to re-emerge Imlib2 with USE=X"
 }
 
-src_install () {
+src_install() {
 	make prefix=${D}/usr install || die
 	rm -rf ${D}/usr/doc
 	dodoc README AUTHORS ChangeLog
