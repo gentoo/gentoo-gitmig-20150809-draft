@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.8 2004/04/19 20:31:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.9 2004/06/12 01:47:41 vapier Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -31,7 +31,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}-glx.patch
 		append-flags -DGL_GLEXT_LEGACY
 	fi
-	has_version '~media-video/nvidia-glx-1.0.5328' && epatch ${FILESDIR}/${PV}-another-glx.patch
+	has_version '>=media-video/nvidia-glx-1.0.5328' && epatch ${FILESDIR}/${PV}-another-glx.patch
 }
 
 src_compile() {
