@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.4.ebuild,v 1.7 2004/08/09 17:30:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/disc-cover-1.5.4.ebuild,v 1.8 2004/09/02 23:27:36 kugelfang Exp $
 
 DESCRIPTION="Creates CD-Covers via Latex by fetching cd-info from freedb.org or local file"
 HOMEPAGE="http://www.cwi.nl/~jvhemert/disc-cover.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.cwi.nl/~jvhemert/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 IUSE=""
 
 DEPEND="dev-lang/perl
