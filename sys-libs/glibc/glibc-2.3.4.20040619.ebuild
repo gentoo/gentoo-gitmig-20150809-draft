@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.22 2004/08/02 20:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.23 2004/08/05 23:59:53 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -285,7 +285,7 @@ pkg_setup() {
 			if [ "${FORCE_DOWNGRADE}" ]; then
 				ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
 			else
-				eerror "Dowgrading glibc is not supported and we strongly recommend that"
+				eerror "Downgrading glibc is not supported and we strongly recommend that"
 				eerror "you don't do it as it WILL break all applications compiled against"
 				eerror "the new version (most likely including python and portage)."
 				eerror "If you are REALLY sure that you want to do it set "
