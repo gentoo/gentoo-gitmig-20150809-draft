@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.7.6.ebuild,v 1.2 2003/11/28 22:42:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.7.6.ebuild,v 1.3 2004/02/04 16:36:52 liquidx Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
 RDEPEND="dev-libs/libxml2

@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/conglomerate
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.4 2003/11/28 22:42:57 lu_zero Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.5 2004/02/04 16:36:52 liquidx Exp $
+
+*conglomerate-0.7.11 (04 Feb 2004)
+
+  04 Feb 2004; Alastair Tse <liquidx@gentoo.org> conglomerate-0.7.11.ebuild,
+  conglomerate-0.7.4.ebuild, conglomerate-0.7.5.ebuild,
+  conglomerate-0.7.6.ebuild:
+  version bump (#40173)
 
   28 Nov 2003; Luca Barbato <lu_zero@gentoo.org> conglomerate-0.7.6.ebuild:
   Marked ~ppc
