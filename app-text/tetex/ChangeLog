@@ -1,6 +1,15 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.73 2005/01/01 16:37:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.74 2005/01/19 15:01:12 matsuu Exp $
+
+*tetex-2.0.2-r5 (19 Jan 2005)
+
+  19 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> +files/xdvizilla.patch,
+  +files/xpdf-3.00pl2-CAN-2004-1125.patch,
+  +files/xpdf-3.00pl3-CAN-2005-0064.patch,
+  +files/xpdf-CESA-2004-007-xpdf2-newer.diff, +files/xpdf-goo-sizet.patch,
+  +files/xpdf2-underflow.patch, +tetex-2.0.2-r5.ebuild:
+  security bump; bug #75801
 
 *tetex-2.99.5.20041207 (09 Dec 2004)
 
