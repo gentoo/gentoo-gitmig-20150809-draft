@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.11 2004/03/29 00:39:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.12 2004/04/28 16:49:07 eradicator Exp $
+
+  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  normalize-0.7.6-r2.ebuild:
+  Stable x86.
 
 *normalize-0.7.6-r2 (28 Mar 2004)
 
