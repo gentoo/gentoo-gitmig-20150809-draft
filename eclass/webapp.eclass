@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.24 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.25 2004/06/27 00:30:56 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -430,6 +430,7 @@ function webapp_src_preinst ()
 	dodir "${MY_ICONSDIR}"
 	dodir "${MY_ERRORSDIR}"
 	dodir "${MY_SQLSCRIPTSDIR}"
+	dodir "${MY_HOOKSCRIPTSDIR}"
 }
 
 function webapp_pkg_postinst ()
