@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2-r1.ebuild,v 1.7 2003/02/13 13:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2-r1.ebuild,v 1.8 2004/01/03 13:55:55 aliz Exp $
 
 S=${WORKDIR}/fping-2.4b2_to
 DESCRIPTION="A utility to ping multiple hosts at once"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.fping.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~amd64"
 
 src_compile() {
 

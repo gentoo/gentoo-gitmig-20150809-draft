@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-1.8-r1.ebuild,v 1.3 2003/12/06 21:30:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-1.8-r1.ebuild,v 1.4 2004/01/03 13:55:55 aliz Exp $
 inherit eutils
 
 DESCRIPTION="Nagios $PV NRPE - Nagios Remote Plugin Executor"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/nrpe-1.8.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0"
 S="${WORKDIR}/nrpe-1.8"

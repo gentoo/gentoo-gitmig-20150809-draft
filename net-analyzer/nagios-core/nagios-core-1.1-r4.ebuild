@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.5 2003/11/27 21:30:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.6 2004/01/03 13:55:55 aliz Exp $
 
 inherit eutils
 
@@ -11,10 +11,10 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 IUSE="gd apache2 perl"
 
-DEPEND=">=mailx-8.1
+DEPEND=">=net-mail/mailx-8.1
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	gd? (
 		>=jpeg-6b-r3
