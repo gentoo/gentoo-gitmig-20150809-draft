@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gtk-systrace
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/ChangeLog,v 1.4 2003/07/18 15:49:45 method Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/ChangeLog,v 1.5 2004/03/15 02:00:43 seemant Exp $
+
+  14 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
+  gtk-systrace-0.1-r1.ebuild, gtk-systrace-0.1-r2.ebuild:
+  Change FILESDIR to FILES_DIR, because FILESDIR is a portage built-in variable,
+  not meant to be overwritten
 
   18 Jul 2003; Joshua Brindle <method@gentoo.org> gtk-systrace-0.1-r1.ebuild:
   revert  mondo amd64 commit (keywords, misc things here and there)
