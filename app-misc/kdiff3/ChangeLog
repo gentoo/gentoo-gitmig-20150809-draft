@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kdiff3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.9 2004/02/09 03:54:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.10 2004/02/15 12:06:12 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> kdiff3-0.9.82.ebuild:
+  Added to ~ppc.
 
   08 Feb 2004; Dylan Carlson <absinthe@gentoo.org> kdiff3-0.9.82.ebuild:
   version bump.  metadata, header fixes.  added amd64 keyword.
