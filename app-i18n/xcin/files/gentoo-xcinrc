@@ -7,7 +7,7 @@
 ;
 ;  Directories.
 ;
-(define XCIN_DEFAULT_DIR      "/usr/lib/xcin")
+(define XCIN_DEFAULT_DIR      "/usr/lib/X11/xcin25")
 (define XCIN_USER_DIR         ".xcin")
 
 ;
