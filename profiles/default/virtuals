@@ -1,7 +1,7 @@
 virtual/lpr			net-print/cups
 virtual/python			dev-lang/python
 virtual/mta			net-mail/ssmtp
-virtual/alsa			sys-kernel/linux
+virtual/alsa			media-sound/alsa-driver	
 virtual/kernel			sys-kernel/linux
 virtual/glibc 			sys-libs/glibc
 virtual/x11			x11-base/xfree
