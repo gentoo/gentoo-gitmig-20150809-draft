@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e8c45759cd15cb907e8bd323e625f91e nessus-libraries-2.1.1.ebuild 775
 MD5 040fc29d6c1cf7d419c524ffa5a548fd ChangeLog 5267
 MD5 fda214dc78c8ac3a9e8d50f5f0cee8aa metadata.xml 249
 MD5 30b4a9afcbad3ad361fc127ea3ef84e6 nessus-libraries-2.0.12.ebuild 780
-MD5 6d5a4b64045606d22820c3eae297ce82 nessus-libraries-2.0.10a.ebuild 755
-MD5 6eb46769a60e17f41b2c4884cd2ebfd1 files/digest-nessus-libraries-2.0.10a 76
 MD5 e4c0d37cf6e9bbc6b03e885ece2dd51d files/digest-nessus-libraries-2.0.12 75
 MD5 9bc0483e65a7c00dfa30a0b857a4e789 files/digest-nessus-libraries-2.1.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHIlFT+MN7JbqCpMRAj3PAJ9VuYhgN8etCkb+SO/lCw/Mk8NYNwCfVb2O
+DjRgJ1DiCjpXSG6/lGqtbqQ=
+=YQD6
+-----END PGP SIGNATURE-----
