@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.28 2004/07/24 02:36:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.29 2004/07/24 14:58:45 eldad Exp $
+
+*nessus-libraries-2.1.1 (24 Jul 2004)
+
+  24 Jul 2004; Eldad Zack <eldad@gentoo.org> +nessus-libraries-2.1.1.ebuild:
+  Version bump.
 
   23 Jul 2004; Jason Wever <weeve@gentoo.org> nessus-libraries-2.0.12.ebuild:
   Stable on sparc wrt security bug #58014.
