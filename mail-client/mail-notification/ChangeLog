@@ -1,0 +1,8 @@
+# ChangeLog for mail-client/mailnotify
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.1 2004/09/04 23:25:35 slarti Exp $
+
+*mailnotify-0.6.1 (05 Sep 2004)
+
+  05 Sep 2004; Tom Martin <slarti@gentoo.org> +mailnotify-0.6.1.ebuild:
+  Initial import. Ebuild submitted by Alex F <acid.punk@gmx.net> in bug 58543.
