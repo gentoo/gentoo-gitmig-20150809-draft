@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.7.1.ebuild,v 1.1 2004/11/25 02:22:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.7.1.ebuild,v 1.2 2004/11/25 02:26:07 leonardop Exp $
 
-inherit debug gnome2
+inherit gnome2
 
 DESCRIPTION="XML editor for the GNOME environment"
 HOMEPAGE="http://www.freespiders.org/projects/gmlview/"
