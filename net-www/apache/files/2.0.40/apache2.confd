@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.confd,v 1.3 2003/07/27 02:54:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.confd,v 1.4 2003/09/25 02:20:48 woodchip Exp $
 
 # Config file for /etc/init.d/apache2
 

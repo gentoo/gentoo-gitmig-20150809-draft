@@ -1,13 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.9 2003/07/11 04:29:55 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.10 2003/09/25 02:20:48 woodchip Exp $
 
 opts="${opts} reload"
 
 depend() {
 	need net
 	use mysql dns logger netmount
+	after sshd
 }
 
 start() {
