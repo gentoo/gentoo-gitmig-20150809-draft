@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.18 2003/12/06 18:29:52 foser Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.19 2004/04/17 22:16:23 weeve Exp $
+
+  17 Apr 2004; Jason Wever <weeve@gentoo.org>
+  multi-gnome-terminal-1.6.2.ebuild:
+  Added ~sparc keyword.
 
 *multi-gnome-terminal-1.6.2 (28 Apr 2003)
 
