@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prelude-nagios
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.1 2003/07/05 16:03:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.2 2003/07/08 05:53:29 solar Exp $
+
+  08 Jul 2003; <solar@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *prelude-nagios-0.0.2 (05 Jul 2003)
 
