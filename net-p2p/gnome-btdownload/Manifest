@@ -1,4 +1,14 @@
-MD5 b7754af2708c25c056c3ff144122e01f gnome-btdownload-0.0.11.ebuild 758
-MD5 29cd50bb5d4f6e06e13f80f8df7263e5 ChangeLog 666
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fa765c02313b3adc969fa6cb55d5d9e8 gnome-btdownload-0.0.11.ebuild 760
+MD5 6c18256bdda233a4fa785b5a7d9ee389 ChangeLog 766
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 7dbbf8233a94b880b3548c48c958cb5a files/digest-gnome-btdownload-0.0.11 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBKrm8cAgAdbxYsnERAnWxAJ45rLQakKgk0/IawSGd49EYNbI4bACgodJA
+bzFmxSe/iXrTIYGGOBWlFjY=
+=gbab
+-----END PGP SIGNATURE-----

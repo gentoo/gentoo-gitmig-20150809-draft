@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnome-btdownload
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.3 2004/07/03 20:02:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.4 2004/08/24 03:44:50 squinky86 Exp $
+
+  23 Aug 2004; Jon Hood <squinky86@gentoo.org> gnome-btdownload-0.0.11.ebuild:
+  Stable on x86.
 
   03 Jul 2004; Tom Martin <slarti@gentoo.org> gnome-btdownload-0.0.11.ebuild:
   Marked ~amd64.

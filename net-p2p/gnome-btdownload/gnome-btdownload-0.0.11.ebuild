@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/gnome-btdownload-0.0.11.ebuild,v 1.3 2004/07/03 20:02:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/gnome-btdownload-0.0.11.ebuild,v 1.4 2004/08/24 03:44:50 squinky86 Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A work-in-progress Gnome mime-sink for BitTorrent files"
 HOMEPAGE="http://gnome-bt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gnome-bt/${P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 SLOT="0"
 IUSE=""
 
