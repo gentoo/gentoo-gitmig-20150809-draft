@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.20 2003/08/10 08:30:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.21 2003/08/12 16:17:47 pappy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -53,8 +53,9 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc ~sparc alpha ~hppa ~arm mips"
-# Is 99% compadible, just some .a's bork.
+# failing hppa: ../linuxthreads/sysdeps/pthread/errno-loc.c:39:
+# `pthread_descr' undeclared (first use in this function)
+KEYWORDS="x86 ppc ~sparc alpha -hppa ~arm mips"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
