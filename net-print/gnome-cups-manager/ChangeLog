@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.30 2004/12/24 14:00:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.31 2004/12/26 08:27:50 joem Exp $
+
+  26 Dec 2004; Joe McCann <joem@gentoo.org> gnome-cups-manager-0.28.ebuild:
+  bump libgnomecups dep to minimum requirement, closes bug 75677. Also bumping
+  intltool dep to 0.29, when the xml-parser dep was added.
 
   13 Nov 2004; Hardave Riar <hardave@gentoo.org>
   gnome-cups-manager-0.23.ebuild:
