@@ -101,28 +101,13 @@ x11-libs/qt-embedded
 =dev-perl/XML-NamespaceSupport-1.07
 =dev-perl/XML-LibXSLT-1.50
 
-# <bass@gentoo.org> (18 Aug 2002)
-# for testing
-#=net-misc/guidedog-0.9.0
-
 # <bass@gentoo.org> (16 Aug 2002)
 # test it please
 =app-admin/localepurge-0.2
 
-# <satai@gentoo.org> (16 Aug 2002)
-# Masked for testing
-# tested, unmasking.  Hoping.
-#=app-text/docbook-xml-dtd-4.1.2-r3
-
 # <aliz@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-admin/fam-oss-2.6.9
-
-# <mcummings@gentoo.org> (16 Aug 2002)
-# Masked for testing
-# got teters on all four platforms -
-# urgent for fix to perl eclass for 5.6.1 users
-#dev-perl/ExtUtils-MakeMaker
 
 # <styx@gentoo.org> (16 Aug 2002)
 # Masked for testing
@@ -178,11 +163,6 @@ app-i18n/aspell-en
 # masked for testing, might pose security problems!
 sys-apps/fakeroot
 
-# <satai@gentoo.org> (13 Aug 2002)
-# masked for mirrors
-#app-text/latex-foiltex
-#app-text/latex-floatflt
-
 # <blizzy@gentoo.org> (12 Aug 2002)
 # masked for testing
 =sys-apps/gradm-1.4
@@ -203,32 +183,9 @@ sys-apps/fakeroot
 # masked for b0rk@ge + testing
 =app-office/koffice-1.2_rc1
 
-# <george@gentoo.org> (09 Aug 2002)
-# masked for testing (issue fixed)
-# tested Ok, unmasking
-#=dev-lang/R-1.5.1
-
-# <george@gentoo.org> (09 Aug 2002)
-# does not build
-# repaired and tested
-#=dev-tcltk/itcl-3.2-r2
-
 * <seemant@gentoo.org> (09 Aug 2002)
 # masked while azarah approves
 =sys-devel/bison-1.35
-
-# <mcummings@gentoo.org> (08 Aug 2002)
-# please test - simple address book (bug #6004)
-#=net-mail/abook-0.4.17
-
-# <danarmak@gentoo.org> (09 Aug 2002)
-# please test - should make kxine work (bug #5412)
-#=media-libs/xine-lib-0.9.13-r1
-
-# <george@gentoo.org> (08 Aug 2002)
-# new version, masked for testing
-# tested, (09 Aug 2002)
-#=dev-lang/ghc-5.04
 
 # <bass@gentoo.org> (08 Aug 2002)
 # beta version for gnome2
@@ -251,16 +208,6 @@ sys-apps/fakeroot
 # Dan Armak <danarmak@gentoo.org> (06 aug 2002)
 # mask kvim (committing now); the ebuild is ok but conflicts with generic vim
 app-editors/kvim
-
-# Brandon Low <lostlogic@gentoo.org> (06 Aug 2002)
-# Mask new xine version for testing, please test and report.
-#=media-libs/xine-lib-0.9.13
-#=media-video/xine-ui-0.9.13
-#=media-video/xine-dvdnav-0.9.13
-
-# <azarah@gentoo.org> (08 Aug 2002)
-# This one at lest breaks mplayer
-#=media-libs/libdvdnav-0.1.3
 
 # <nitro@gentoo.org> (05 Aug 2002)
 # masked for testing -- new features
@@ -290,15 +237,6 @@ app-editors/kvim
 # <carpaski@gentoo.org) (05 Aug 2002)
 # Testing
 =media-sound/xmms-xosd-0.7.0-r1
-
-# Michael Cummings <mcummings@gentoo.org> (04 Aug 2002)
-# Found hardcoded refs for i686 in ebuild - please test
-# Tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
-#=sys-devel/perl-5.6.1-r6
-
-# Seemant Kulleen <seemant@gentoo.org> (04 Aug 2002)
-# Maksed for testing
-#=sys-libs/libieee1284-0.2.0
 
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
@@ -379,11 +317,6 @@ app-office/ical
 # marked pre-release
 =sys-apps/evms-1.1.0_pre4
 
-# J. Alberto Suárez L. <bass@gentoo.org> (31 Jul 2002)
-# Beta version of firestarter for Gnome2
-#final version relased
-#=net-misc/firestarter-0.9.0
-
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
 dev-python/anygui
@@ -396,14 +329,6 @@ media-video/kxine
 # New version, lots of different USE flags that I havent tested together.
 # needs testing as I just copied the old ebuild
 =app-office/gnumeric-1.0.9
-
-# <verwilst@gentoo.org> (28 Jul 2002)
-# stupid thing can't find a c++ compiler half the time
-
-# <azarah@gentoo.org> (29 Jul 2002)
-# this one works fine on all my boxes .. please try 1.17.2-r2 ?
-#>=sys-apps/groff-1.17
-
 
 # <mcummings@gentoo.org> (28 Jul 2002)
 # new version of perl - incompatible with 5.6 IO model
@@ -421,11 +346,9 @@ media-video/kxine
 # Masked for testing.
 =net-mail/procmail-3.22-r3
 
-
 # <spider@gentoo.org> (25 Jul 2002)
 # we need to fix deps on >=dev-util/gob-1.0.x
 >=dev-util/gob-1.99.3
-
 
 # <george@gentoo.org> (date??)
 # masking omniORB-305 for testing
@@ -458,15 +381,6 @@ app-misc/ldapbrowser
 # it in baselayout, but we need >=gawk-3.1.0-r3
 # to have it in /bin.
 <sys-apps/gawk-3.1.0-r3
-
-# <spider@gentoo.org> (25 Jul 2002)
-# fixes buildproblems for me. please teset
-#
-# <azarah@gentoo.org> (29 Jul 2002)
-# works fine for me with gcc-2.95.3 and 3.2
-# <seemant@gentoo.org> (29 Jul 2002)
-# trans13nt reports it works fine with gcc-3.1 as well
-#=sys-devel/perl-5.6.1-r5
 
 # <woodchip@gentoo.org> (24 Jul 2002)
 # apparently fatally flawed.
@@ -605,14 +519,6 @@ sys-apps/mkisofs
 # Needs more testing, got word from someone on the devel team for this
 # upstream who's a gentoo user that it's b0rken. I can only test on x86
 =app-games/boson-0.6.1-r1
-
-# cardoe@gentoo.org (12 Jul 2002)
-# new beta of pcmcia-cs
-=sys-apps/pcmcia-cs-3.1.35_beta2
-
-# cardoe@gentoo.org (12 Jul 2002)
-# masked cause it has not been tested enough
-=net-dialup/hsflinmodem-5.03.03.02062500
 
 # sunflare@gentoo.org (09 Jul 2002)
 # Masked because readline-4.2 is masked in default-1.0.
