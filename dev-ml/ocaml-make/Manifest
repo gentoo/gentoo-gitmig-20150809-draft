@@ -1,3 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71902c79f2c38092322c37f7a5e022b4 ChangeLog 748
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 07b0546a37c9f9876e3a6d96f39ce18e ocaml-make-5.04.0.ebuild 790
-MD5 5c7f6661c88a84a701f9e35e95ff42dd ChangeLog 739
 MD5 54d2d16a1fee2369b565dc8dc673ebc3 files/digest-ocaml-make-5.04.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1HkI1lqEGTUzyQRAr+qAJ42OjQ+e48cuSu/fO5yOGKgODUA0ACbBWFP
+SMbhYAWbvBDmFQ9Giqipq3k=
+=K6G+
+-----END PGP SIGNATURE-----

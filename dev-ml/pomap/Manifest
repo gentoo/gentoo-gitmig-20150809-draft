@@ -1,4 +1,14 @@
-MD5 aa0cec029a37031986e0ff339b051476 ChangeLog 1057
-MD5 94bdeaac52d8d3f8d077f6e6b9cbdd30 pomap-2.9.4.ebuild 722
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9215f796b45667176c935cb769fb20d ChangeLog 1063
 MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
+MD5 94bdeaac52d8d3f8d077f6e6b9cbdd30 pomap-2.9.4.ebuild 722
 MD5 a42b972a131cab66fd85e3dc56619657 files/digest-pomap-2.9.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1GAI1lqEGTUzyQRAlPfAJ9pEZmxj2ocPfxhS354RShZe7/SKgCgtInq
+yZm8uZhETlQ8jPrpSWxKIww=
+=X4SF
+-----END PGP SIGNATURE-----
