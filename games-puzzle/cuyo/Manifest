@@ -1,6 +1,4 @@
-MD5 df26cda3decec4eb2fe4456ce0f162ca ChangeLog 1134
-MD5 942d7a4ae6edf4e4c17544c76bf19f8c cuyo-1.8.1.ebuild 1090
+MD5 b72daf395f36c072a576d5530ab4f76f ChangeLog 1232
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 5a78d2f6e8db162852e2890ef462c64b cuyo-1.8.5.ebuild 990
-MD5 27fbd8ae79cdd34cd18968db45d62fed files/digest-cuyo-1.8.1 62
 MD5 e62d8f092e5b98b7ceea0f086ad5ad13 files/digest-cuyo-1.8.5 63
