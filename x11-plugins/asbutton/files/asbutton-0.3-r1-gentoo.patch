@@ -1,0 +1,13 @@
+--- Makefile    2003-04-15 19:14:25.000000000 +0200
++++ Makefile    2003-04-15 19:14:43.000000000 +0200
+@@ -5,8 +5,8 @@
+ CCFLAGS = -O2 
+ TARGET = asbutton
+ OBJECTS = asbutton.o readline.o
+-BINDIR = /usr/local/bin
+-ICONDIR = /usr/share/afterstep/desktop/icons/16bpp
++BINDIR = ${DESTDIR}usr/bin
++ICONDIR = ${DESTDIR}usr/share/afterstep/desktop/icons/16bpp
+ 
+ ICONS = asb4-1.xpm asb4-2.xpm asb4-3.xpm asb4-4.xpm asb4-blank.xpm asb4-bullethole.xpm \
+         asb4-filingcabinet.xpm asb4-gear.xpm asb4-gnu-button-thang.xpm \
