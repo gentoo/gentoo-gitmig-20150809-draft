@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.14 2004/06/24 21:58:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.15 2004/09/17 22:13:54 morfic Exp $
 
 IUSE="doc ssl nls"
 
-inherit eutils libtool
+inherit eutils libtool gcc
 
 DESCRIPTION="GNOME Virtual File System."
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.gz"
@@ -44,6 +44,13 @@ src_unpack() {
 	# Fix a rare segfault with gnome-mime-data-2.0.1.  Weird one really ...
 	# <azarah@gentoo.org> (2 Jan 2003).
 	epatch ${FILESDIR}/1.0/${P}-fix-segfault.patch
+
+	#apply both patches to compile with gcc-3.4 closing bug #53075
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/1.0/${P}-gcc3.4.patch
+	fi
+
 
 	autoheader
 	aclocal -I /usr/share/aclocal/gnome-macros
