@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.4 2004/03/24 14:06:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.5 2004/04/04 19:19:01 lv Exp $
+
+  04 Apr 2004; Travis Tilley <lv@gentoo.org> gnome-speech-0.3.2-r1.ebuild:
+  added ~amd64 keyword
 
   24 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-speech-0.3.2-r1.ebuild:
