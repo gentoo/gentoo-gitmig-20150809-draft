@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.83 2004/11/03 10:44:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.84 2004/11/18 17:14:26 lanius Exp $
+
+*opera-7.60_alpha3 (18 Nov 2004)
+
+  18 Nov 2004; <heino@gentoo.org> -opera-7.60_alpha2.ebuild,
+  +opera-7.60_alpha3.ebuild:
+  version bump
 
   03 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   opera-7.60_alpha2.ebuild:
@@ -8,7 +14,7 @@
 
 *opera-7.60_alpha2 (26 Oct 2004)
 
-  26 Oct 2004; <heino@gentoo.org> -opera-6.12.ebuild, -opera-7.11-r2.ebuild,
+  26 Oct 2004; <lanius@gentoo.org> -opera-6.12.ebuild, -opera-7.11-r2.ebuild,
   -opera-7.23-r1.ebuild, opera-7.54.ebuild, -opera-7.60_alpha1.ebuild,
   +opera-7.60_alpha2.ebuild:
   remove old versions; remove ppc shared version, it's built with gcc-2.95; bump
