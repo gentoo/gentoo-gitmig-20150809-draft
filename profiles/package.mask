@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (19 Jul 2002)
+# masked for testing
+=x11-misc/xloadimage-4.1
+
 # <nitro@gentoo.org> (19 Jun 2002)
 # new version, please test
 >=net-ftp/proftpd-1.2.6_rc1
