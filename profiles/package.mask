@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3350 2004/11/26 22:57:39 pyrania Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3351 2004/11/27 14:04:44 dragonheart Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -153,11 +153,6 @@ x11-misc/xeasyconf
 >=app-text/tetex-2.96
 >=app-text/ptex-3.1.4.20041026
 
-# <dsd@gentoo.org> (17 Oct 2004)
-# Facing removal from portage, use forcedeth (in-kernel)
-# http://bugs.gentoo.org/65330
-net-misc/nforce-net
-
 # <liquidx@gentoo.org> (16 Oct 2004)
 # Deprecate old unsupported gphoto-0.4.3. use gphoto2.
 media-gfx/gphoto
@@ -229,10 +224,6 @@ sys-fs/submount
 # <axxo@gentoo.org> (07 Oct 2004)
 # work in progress
 =app-benchmarks/jmeter-2.0.1-r1
-
-# <mr_bones_@gentoo.org> (30 Sep 2004)
-# Until www-apps/midcom is worked out
-www-apps/spider-admin
 
 # Gustavo Felisberto <humpback@gentoo.org> (30 Sep 2004)
 # Skype is beta binary software and users complain in Gentoo Bugzilla
@@ -386,7 +377,7 @@ dev-lang/fpc-source
 # Masking because this package is not ready for prime, but want it in
 # portage for better observation (and users are clamoring)
 app-office/mozilla-sunbird-bin
-app-office/mozilla-sunbird
+#app-office/mozilla-sunbird
 
 # <agriffis@gentoo.org> (18 Aug 2004)
 # Masking due to security issues that will never be solved since there
@@ -445,14 +436,6 @@ dev-lisp/cl-rsm-genetic-alg
 # super-untested and is, therefore, masked.
 =dev-perl/DBD-mysql-2.9004
 
-# <eldad@gentoo.org> (16 July 2004)
-# Nessus 2.1.x is the development branch, not for production use.
-=net-analyzer/libnasl-2.1*
-=net-analyzer/nessus-libraries-2.1*
-=net-analyzer/nessus-plugins-2.1*
-=net-analyzer/nessus-2.1*
-=net-analyzer/nessus-core-2.1*
-
 # <usata@gentoo.org> (2 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is imcomplete. info directory handling should be reconsidered.
@@ -478,10 +461,6 @@ net-irc/epic5
 # Using system libmikmod breaks mod music #52064
 >=media-libs/sdl-mixer-1.2.5-r2
 
-# <pauldv@gentoo.org> (24 May 2004)
-# Insecure, do not use unless for converting old databases
-<dev-util/subversion-1.0.3
-
 # <kanaka@gentoo.org> (18 May 2004)
 # these have fetch restrictions, since 0.3.0.123 doesn't have fetch
 # restrictions, I have masked these.
@@ -502,20 +481,13 @@ media-video/gst-player
 # accessibility testing for development purposes
 app-accessibility/speechd-up
 
-# <lu_zero@gentoo.org> (25 Apr 2004)
-# Working fine on ppc, but needs -fno-strict-aliasing to behave.
-=sys-devel/gcc-3.3.3_pre20040426
-
 # <foser@gentoo.org> (20 Apr 2004)
 # gnome meta update tracker
-=gnome-base/gnome-2.6_p1
 =gnome-base/gnome-2.6.1_p1
-=gnome-base/gnome-2.6.2_p1
 =gnome-base/gnome-2.6.3_pre*
 
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 25 Aug 2004)
 # these are beta version
-=media-gfx/gimp-print-5.0.0_beta1
 =media-gfx/gimp-print-5.0.0_beta2
 
 # <klasikahl@gentoo.org> (09 Apr 2004)
@@ -526,10 +498,6 @@ app-admin/mailmin
 # <humpback@gentoo.org> (07 Apr 2004)
 # these are here waiting for jabberd2
 >=net-im/jabberd-2
-
-# <mr_bones_@gentoo.org> (04 Apr 2004)
-# versioning change.
->=games-arcade/pachi-20000000
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
@@ -552,10 +520,6 @@ games-fps/aaut
 >=net-im/jabberoo-1.9.3
 >=net-im/gabber-1.9.3
 
-# <lu_zero@gentoo.org> (25 Mar 2004)
-# Working fine on ppc, but needs -fno-strict-aliasing to behave.
-=sys-devel/gcc-3.3.3_pre20040322
-
 # <raker@gentoo.org> (18 Mar 2004)
 # The latest AfterStep beta is broken :(
 =x11-wm/afterstep-2.0_beta4
@@ -563,10 +527,6 @@ games-fps/aaut
 # <aliz@gentoo.org> (17 Mar 2004)
 # Security related
 ~dev-libs/openssl-0.9.7c
-
-# <avenj@gentoo.org> (15 Mar 2004)
-# Borks with GCC 3.3, apparently.
-=sys-devel/oskit-20020317
 
 # <rajiv@gentoo.org> (03 Mar 2004)
 # security problems. see bug #43658.
@@ -576,19 +536,11 @@ games-fps/aaut
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
 
-# <lu_zero@gentoo.org> (27 Feb 2004)
-# needs testing
-=sys-apps/attr-2.4.8
-
 # <foser@gentoo.org> (24 Feb 2004)
 # breaks source builds
 # needs fixes troughout the tree
 # lot of testing needed !
 >=media-libs/freetype-2.1.6
-
-# <liquidx@gentoo.org> (19 Feb 2004)
-# possible symlink vunerability (#41253)
-<x11-misc/xscreensaver-4.14-r2
 
 # <lu_zero@gentoo.org> (17 Feb 2004)
 # gcloop support, to be tested a bit
@@ -614,10 +566,6 @@ media-video/realone
 # blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
 =app-sci/xfoil-6.94-r1
 
-# <rphillips@gentoo.org> (15 Jan 2004)
-# prerelease version, but first that support signing
->=dev-util/tla-20040113
-
 # <spyderous@gentoo.org> (16 Sept 2004)
 # change from -r7 to xorg -- -r7 was a security release, xfree is deprecated
 # <spyderous@gentoo.org> (14 Feb 2004)
@@ -627,10 +575,6 @@ media-video/realone
 # <battousai@gentoo.org> (13 Jan 2004)
 # needs testing and xfree-4.3.0-r7 release first
 >=media-video/ati-gatos-4.3
-
-# <lanius@gentoo.org> (11 Jan 2004)
-# force downgrade
->=x11-libs/openmotif-2.2.2
 
 # <robbat2@gentoo.org> (10 Jan 2004)
 # blocked for testing
@@ -650,10 +594,6 @@ net-misc/zebra
 >=dev-java/sun-jdk-1.4.99
 >=dev-java/java-sdk-docs-1.4.99
 
-# <karltk@gentoo.org> (09 Jan 2004)
-# Placeholder to remind people it's deprecated.
->=dev-util/eclipse-sdk-bin-1.0
-
 # <lu_zero@gentoo.org> (06 Jan 2004)
 # Has memory leak issue
 =media-video/ati-drivers-3.7.0
@@ -666,20 +606,12 @@ net-misc/zebra
 # <dragonheart@gentoo.org> (25 Oct 2004)
 =app-crypt/gpgme-1.0.1-r1
 
-# <lanius@gentoo.org> (31 Dec 2003)
-# fix version scheme
-# (accidently commited 3.0.20031018 as 20031018)
->=net-print/foomatic-2000
->=net-print/foomatic-db-engine-2000
->=net-print/foomatic-filters-2000
-
 # <dragonheart@gentoo.org> (27 August 2004)
 # <hattya@gentoo.org> (20 Jun 2004)
 # <seemant@gentoo.org> (12 Dec 2003)
 # All the sylpheed-gtk2 versions will be masked here together
 # The sylpheed-0.9.8-r2 is probably the ugliest ebuild I've ever made.
 # But it works. sorta. :)
-=mail-client/sylpheed-claws-0.9.5-r1
 =mail-client/sylpheed-0.9.12-r6
 =mail-client/sylpheed-0.9.99-r1
 
@@ -720,19 +652,10 @@ dev-python/japanesecodecs
 # Masked while it's still under development.
 media-fonts/chkfontpath
 
-# <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
-# work in progress, broken ebuild
->=app-portage/ufed-0.40
-
 # <seemant@gentoo.org> (22 Apr 2003)
 # the package is unmainteained and dead upstream. it will die in portage
 # accordingly.
 media-plugins/avi-xmms
-
-# <zwelch@gentoo.org> (06 Apr 2003)
-# New versions of packages that have new cross-compiling support
-#  These will be unmasked once everything has been fully tested
->=sys-devel/gcc-config-1.4
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
@@ -750,11 +673,6 @@ net-dialup/hcfusbmodem
 # not really stable enough for my tastes. needs testing.
 dev-db/mergeant
 
-# <chadh@gentoo.org> (23 Jan 2003)
-# new pcmcia-cs ebuilds need testing and acceptance
-sys-apps/pcmcia-cs-tools
-sys-apps/pcmcia-cs-drivers
-
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
@@ -765,33 +683,14 @@ sys-apps/pcmcia-cs-drivers
 # the new layout (/usr/lib/nsbrowser/plugins)
 # and should work in both mozilla and phoenix.
 =net-www/netscape-plugger-4.0-r2
-=media-video/realplayer-8-r3
-=app-text/djvu-3.5.9-r1
 
 # <verwilst@gentoo.org> (13 Nov 2002)
 # B0rks jabber-server, using 1.4.0 instead
 ~dev-libs/pth-1.4.1
 
-# <chadh@gentoo.org> (21 Oct 2002)
-# This is a version of pcmcia-cs-3.2.1 with a patch to let it work with kismet
-# see bug 7242.  Until it is checked, it should remain masked
-=sys-apps/pcmcia-cs-3.2.1-r2
-=sys-apps/pcmcia-cs-3.2.2
-
-# <blizzy@gentoo.org> (20 Oct 2002)
-# breaks xfree
-=sys-devel/bison-1.75
-
 # <george@gentoo.org> (15 Oct 2002)
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
-
-# <kain@kain.org> (17 Sep 2002)
-# gcc 3.2 and kerberos v5 fixes for cyrus-sasl; still needs wider testing
-# also making sure cyrus-sasl can integrate with OpenLDAP, whose configure
-# scripts don't know how to find cyrus-sasl-2
-#=net-nds/openldap-2.0.25-r3
-=dev-libs/cyrus-sasl-1.5.27-r5
 
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
