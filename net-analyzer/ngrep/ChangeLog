@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.8 2003/11/02 22:20:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.9 2003/11/24 17:06:23 mholzer Exp $
+
+  24 Nov 2003; Martin Holzer <mholzer@gentoo.org> ngrep-1.40.ebuild,
+  ngrep-1.41.ebuild:
+  adding RESTRICT="nomirror"
 
   03 Nov 2003; Martin Schlemmer <azarah@gentoo.org> ngrep-1.41.ebuild,
   files/ngrep-1.41-fix-HAVE_DUMB_UDPHDR-test.patch:

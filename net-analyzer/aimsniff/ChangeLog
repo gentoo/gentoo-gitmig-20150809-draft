@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/aimsniff
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.2 2003/08/05 17:30:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.3 2003/11/24 17:04:36 mholzer Exp $
+
+  24 Nov 2003; Martin Holzer <mholzer@gentoo.org> aimsniff-0.8.ebuild:
+  adding RESTRICT="nomirror"
 
 *aimsniff-0.8 (25 Jul 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.4 2003/10/04 15:32:58 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.5 2003/11/24 17:04:36 mholzer Exp $
 
 inherit webapp-apache
 
@@ -8,6 +8,7 @@ DESCRIPTION="utility for monitoring and archiving AOL Instant Messenger messages
 HOMEPAGE="http://www.aimsniff.com/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/was_0.1.1b.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,7 +34,7 @@ src_install() {
 	dodir ${HTTPD_ROOT}
 	mv ../was ${D}/${HTTPD_ROOT}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} *
 }
 
 pkg_setup ()
