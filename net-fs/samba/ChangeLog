@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.69 2004/04/27 12:01:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.70 2004/04/27 14:57:44 tseng Exp $
+
+  27 Apr 2004; Brandon Hale <tseng@gentoo.org> samba-3.0.2a-r2.ebuild:
+  Stable on x86.
 
   27 Apr 2004; Jason Wever <weeve@gentoo.org> samba-3.0.2a-r2.ebuild:
   Stable on sparc wrt bug #41800.

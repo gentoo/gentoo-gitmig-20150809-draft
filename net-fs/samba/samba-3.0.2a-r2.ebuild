@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.3 2004/04/27 12:01:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.4 2004/04/27 14:57:44 tseng Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ DEPEND="sys-devel/autoconf
 #IDEALX scripts are now using Net::LDAP
 RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 
-KEYWORDS="~x86 ~ppc sparc ~mips ~hppa ~amd64 ~ia64 alpha"
+KEYWORDS="x86 ~ppc sparc ~mips ~hppa ~amd64 ~ia64 alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -117,7 +117,7 @@ src_compile() {
 		&& myconf="${myconf} --with-ldap" \
 		|| myconf="${myconf} --without-ldap"
 		#this is for old samba 2.x compat
-		#myconf="${myconf} --with-ldapsam" 
+		#myconf="${myconf} --with-ldapsam"
 		myconf="${myconf} --without-ldapsam"
 
 	if [ "${ARCH}" != "amd64" ]
@@ -141,9 +141,9 @@ src_compile() {
 
 	#default_{static,shared}_modules|source/configure
 	#/usr/lib/samba/auth/.............      AUTH_MODULES
-	#/usr/lib/samba/charset/                CHARSET_MODULES
+	#/usr/lib/samba/charset/		CHARSET_MODULES
 	#/usr/lib/samba/pdb/..............      PDB_MODULES
-	#/usr/lib/samba/rpc/                    RPC_MODULES
+	#/usr/lib/samba/rpc/		    RPC_MODULES
 	#/usr/lib/samba/vfs/..............      VFS_MODULES|source/Makefile
 	#/usr/lib/samba/lowcase.dat
 	#/usr/lib/samba/upcase.dat
