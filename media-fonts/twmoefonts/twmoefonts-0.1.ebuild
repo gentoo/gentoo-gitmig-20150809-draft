@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.8 2004/07/14 17:10:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1.ebuild,v 1.9 2004/08/07 23:12:15 slarti Exp $
 
 IUSE=""
-DESCRIPTION="Standard tranditional Chinese fonts made by Minister of Education (MOE), Republic of China."
+DESCRIPTION="Standard traditional Chinese fonts made by Minister of Education (MOE), Republic of China."
 SRC_URI="ftp://ftp.ncu.edu.tw/FreeBSD/distfiles/zh-moettf/moe_kai.ttf
 	ftp://ftp.ncu.edu.tw/FreeBSD/distfiles/zh-moettf/moe_sung.ttf"
 HOMEPAGE=""	# Unable to find homepage

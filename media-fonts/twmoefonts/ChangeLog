@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/twmoefonts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.6 2004/07/29 19:03:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/ChangeLog,v 1.7 2004/08/07 23:12:15 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> twmoefonts-0.1-r1.ebuild,
+  twmoefonts-0.1.ebuild:
+  Typo in DESCRIPTION: tranditional -> traditional. Bug 59717.
 
   29 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> twmoefonts-0.1-r1.ebuild:
   Marked ~amd64.

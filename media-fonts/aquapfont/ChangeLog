@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.10 2004/07/24 03:40:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.11 2004/08/07 23:11:52 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> aquapfont-2.5-r1.ebuild:
+  Typo in DESCRIPTION: proportinal -> proportional. Bug 59717.
 
   24 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> aquapfont-2.5.ebuild:
   Changed DESCRIPTION field. See bug #58142
