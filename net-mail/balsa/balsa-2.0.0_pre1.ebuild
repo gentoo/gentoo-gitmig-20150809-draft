@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.0_pre1.ebuild,v 1.2 2002/05/30 22:54:51 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.0_pre1.ebuild,v 1.3 2002/06/02 22:31:40 stroke Exp $
 
 MY_V="2.0.0"
 MY_P="${PN}-${MY_V}"
@@ -31,12 +31,16 @@ RDEPEND="=dev-libs/glib-2.0*
 
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
+
 	
 src_unpack() {
 	 unpack ${A}
 	# this patch is from Riccardo Persichetti
 	# (ricpersi@libero.it) to make balsa compile
 	patch -p0 < ${FILESDIR}/${MY_P}-gentoo.patch || die
+	
+        # This patch is from me, stroke (stroke@gentoo.org)
+        patch -p0 < ${FILESDIR}/${MY_P}-varmail.patch || die
 }
 
 src_compile() {
