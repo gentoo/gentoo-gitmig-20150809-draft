@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.16 2004/06/12 19:56:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.17 2004/06/14 22:07:58 tgall Exp $
+
+  14 Jun 2004; Tom Gall <tgall@gentoo.org> utempter-0.5.5.4.ebuild:
+  marking ~ppc64 for initial x support bug #53763
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> utempter-0.5.5.4.ebuild:
   Stable on alpha.
