@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.2 2003/09/05 23:44:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.3 2004/03/15 22:47:22 mboman Exp $
 
 IUSE="mysql"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.snort.org"
 
 SLOT="0"
 LICENSE="QPL"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/glibc
 	net-libs/libpcap
