@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.6-r1.ebuild,v 1.7 2004/06/26 22:18:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.6-r1.ebuild,v 1.8 2004/09/02 18:18:28 pvdabeel Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://user.it.uu.se/~adavid/utils/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa"
 
 RDEPEND=">=media-sound/xmms-1.2.7-r16"
 
