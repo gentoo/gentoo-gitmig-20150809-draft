@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.32 2005/01/31 14:27:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.33 2005/01/31 15:57:17 corsair Exp $
+
+  31 Jan 2005; Markus Rothe <corsair@gentoo.org>
+  mailx-8.1.2.20040524-r1.ebuild:
+  Stable on ppc64; bug #80067
 
   31 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild:
