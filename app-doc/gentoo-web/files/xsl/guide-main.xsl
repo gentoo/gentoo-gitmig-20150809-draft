@@ -337,7 +337,7 @@ User Docs:<br/>
 							<xsl:apply-templates select="newsitems"/>
 						</xsl:when>
 						<xsl:otherwise>
-							<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> -->
+							<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> 
 							<br/>
 							<xsl:apply-templates select="chapter"/> 
 							<br/>
