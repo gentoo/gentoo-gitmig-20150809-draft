@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.79 2005/02/19 20:08:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.80 2005/02/27 19:52:45 blubb Exp $
+
+  27 Feb 2005; Simon Stelling <blubb@gentoo.org> pwlib-1.8.3-r1.ebuild:
+  stable on amd64; fixes bug #72706
 
   19 Feb 2005; David Holm <dholm@gentoo.org> pwlib-1.6.6-r2.ebuild:
   Stable on ppc
