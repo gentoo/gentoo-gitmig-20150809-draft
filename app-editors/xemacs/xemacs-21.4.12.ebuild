@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.4 2003/06/10 08:21:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.5 2003/06/28 23:30:08 lu_zero Exp $
 
 IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna  athena neXt Xaw3d"
 
@@ -57,7 +57,7 @@ PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc alpha ~sparc"
+KEYWORDS="~x86 ~ppc alpha ~sparc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -69,7 +69,7 @@ src_unpack() {
 	if [ ${ARCH} = "ppc" ] ; then
 		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
 	fi
-
+	epatch ${FILESDIR}/quick-fix.patch
 	# copy Next_XEmacs icons into toolbar dir
 	cp ${WORKDIR}/NeXT.XEmacs/xemacs-icons/* ${S}/etc/toolbar/
 }

@@ -1,0 +1,11 @@
+diff -ruN xemacs-21.4.12.orig/configure xemacs-21.4.12/configure
+--- xemacs-21.4.12.orig/configure	2003-06-29 00:48:56.000000000 +0200
++++ xemacs-21.4.12/configure	2003-06-29 00:49:09.000000000 +0200
+@@ -2966,7 +2966,6 @@
+ fi
+ 
+ 
+-test "$machine$opsys" = "powerpclinux" && start_flags="-T $srcdir/src/ppc.ldscript"
+ 
+ if test "$unexec" = "unexaix.o"; then
+   if   test "$dynamic" = "no"; then

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.35 2003/06/10 08:21:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.36 2003/06/28 23:30:08 lu_zero Exp $
+
+  29 Jun 2003; Luca Barbato <lu_zero@gentoo.org> xemacs-21.4.12.ebuild:
+  Fixed ppc problems and masked ~ppc
 
   10 Jun 2003; <rac@gentoo.org> xemacs-21.4.12.ebuild:
   Remove unused lucid variable from IUSE
