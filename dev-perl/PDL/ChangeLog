@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.22 2004/06/25 00:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.23 2004/08/30 19:20:14 kugelfang Exp $
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> PDL-2.4.0.ebuild:
+  Applying -fPIC to compile flags now unconditionally. See BUG #55238.
 
   06 Jun 2004; Aron Griffis <agriffis@gentoo.org> PDL-2.3.2-r1.ebuild,
   PDL-2.3.2-r2.ebuild, PDL-2.3.4.ebuild, PDL-2.4.0-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.10 2004/07/14 20:06:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.11 2004/08/30 19:20:14 kugelfang Exp $
 
 IUSE="opengl"
 
@@ -41,10 +41,13 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	if use hppa || use amd64; then
-		cd ${S}/Lib/Slatec
-		sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
-	fi
+	# fPIC has to be applied unconditonally !
+	# BUG #55238
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
+	# if use hppa || use amd64; then
+	cd ${S}/Lib/Slatec
+	sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
+	# fi
 }
 
 src_install () {
