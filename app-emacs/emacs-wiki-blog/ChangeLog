@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/emacs-wiki-blog
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki-blog/ChangeLog,v 1.1 2005/02/17 19:19:57 mkennedy Exp $
+
+*emacs-wiki-blog-0.4 (17 Feb 2005)
+
+  17 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/0.4-gentoo.patch, +files/90emacs-wiki-blog-gentoo.el,
+  +emacs-wiki-blog-0.4.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
