@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47_pre1.ebuild,v 1.1 2002/12/21 12:53:32 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47_pre1.ebuild,v 1.2 2002/12/21 12:57:55 carpaski Exp $
 
 IUSE="build"
 
@@ -144,13 +144,14 @@ pkg_postinst() {
 	fi
 
 	# Kill the existing counter and generate a new one.
+	echo -n "Recalculating the counter... "
 	mv /var/cache/edb/counter /var/cache/edb/counter.old
-	python -c 'import portage; portage.counter_tick_core("/")'
+	python -c 'import portage; portage.counter_tick_core("/")' &>/dev/null
 	if [ -f /var/cache/edb/counter ] ; then
-		print "Counter updated successfully."
+		echo "Counter updated successfully."
 		rm -f /var/cache/edb/counter.old
 	else
-		print "!!! Failed to update counter."
+		echo "FAILED to update counter."
 		mv /var/cache/edb/counter.old /var/cache/edb/counter
 	fi
 
