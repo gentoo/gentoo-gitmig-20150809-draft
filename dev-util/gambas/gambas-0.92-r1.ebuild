@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.92-r1.ebuild,v 1.1 2004/04/10 02:33:03 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.92-r1.ebuild,v 1.2 2004/04/21 13:15:55 genone Exp $
 
 inherit eutils
 
@@ -14,7 +14,6 @@ KEYWORDS="~x86"
 IUSE="postgres mysql sdl doc curl debug"
 
 DEPEND=">=sys-devel/automake-1.7.5
-	>=x11-base/xfree-4.3.0
 	>=x11-libs/qt-3.2
 	>=kde-base/kdelibs-3.2
 	sdl? ( media-libs/libsdl )
