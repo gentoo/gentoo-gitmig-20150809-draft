@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/rhythmbox
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.1 2002/06/01 16:30:35 spider Exp $
+
+*rhythmbox-0.2.1 (1 Jun 2002)
+  1 Jun 2002; Spider <spider@gentoo.org> rhythmbox-0.2.1.ebuild ChangeLog: 
+  A media thingie that mimics iTunes for Gnome2 
