@@ -1,0 +1,11 @@
+--- gnokii-0.6.3/Docs/sample/gnokiirc.orig	2004-07-05 00:04:24.000000000 +0200
++++ gnokii-0.6.3/Docs/sample/gnokiirc	2004-07-23 14:03:12.077771752 +0200
+@@ -91,7 +91,7 @@
+ # permissions 4750, owned by root, group gnokii.  Ensure you
+ # are in the gnokii group and that the group exists...
+ [gnokiid]
+-bindir = /usr/local/sbin/
++bindir = /usr/sbin/
+ 
+ # Any entries in the following two sections will be set as environment
+ # variables when running the scripts.

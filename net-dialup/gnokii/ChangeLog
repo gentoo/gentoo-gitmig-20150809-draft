@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.15 2004/08/03 07:36:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.16 2004/09/15 14:51:27 lanius Exp $
+
+*gnokii-0.6.3 (15 Sep 2004)
+
+  15 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
+  +files/gnokii-0.6.3-nounix98pty.patch.bz2, +files/gnokii-bindir.patch,
+  +files/gnokii.desktop, +gnokii-0.6.3.ebuild:
+  version bump, bug #61906, added destop file
 
   03 Aug 2004; Heinrich Wendel <lanius@gentoo.org> gnokii-0.4.3.ebuild:
   remove old buggy ebuild
