@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.19 2002/12/13 18:34:58 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.20 2002/12/30 00:18:57 azarah Exp $
+
+*binutils-2.13.90.0.16-r1 (30 Dec 2002)
+
+  30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.16-r1.ebuild :
+  Update with patches from Redhat/Mandrake for various issues.
 
   13 Dec 2002; Mark Guertin <gerk@gentoo.org> binutils-2.13.90.0.16.ebuild :
   Marked stable for ppc.
