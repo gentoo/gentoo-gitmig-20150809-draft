@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8491028c0d198bd2e6a66f400fc80862 ChangeLog 4695
 MD5 f77f13c1b8dded211ed9b623513bba16 gnutls-0.8.10.ebuild 1218
-MD5 81412d7eaa9beecf365e5a3e44b00042 gnutls-0.8.12.ebuild 1280
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 81412d7eaa9beecf365e5a3e44b00042 gnutls-0.8.12.ebuild 1280
 MD5 61563bcfef3b156e2b5b3ad2150c03b3 gnutls-1.0.4.ebuild 1369
-MD5 2af94f0926f83cb6c4c9ba52aca9347d gnutls-1.0.14.ebuild 1893
-MD5 f805afe572c2b766d7ad68bd4165fa7a gnutls-1.0.17.ebuild 1846
+MD5 00bf3cd6a400fc63c44869f462fddb6c gnutls-1.0.14.ebuild 1900
+MD5 87c797497e98558e4c5ecf94bdf4827f gnutls-1.0.17.ebuild 1854
 MD5 b2ae83a3180a66ab61bdf08669f27399 files/digest-gnutls-0.8.10 66
 MD5 ec1e68cbc333074c03943a0927d46c01 files/digest-gnutls-0.8.12 66
 MD5 0f5a5be1e092fb96ea291fdf5699d05f files/digest-gnutls-1.0.4 65
 MD5 3e65b092ba91de3afba12ede1cbbb5a3 files/digest-gnutls-1.0.14 67
 MD5 29d3e8994448eb3fe1d15c6720621b40 files/gnutls-1.0.14-extra.h.patch 479
 MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBisv4HTu7gpaalycRAvm+AJ9pDKWxuvvpR3OuBV49cwz/2DwXmwCeLgbV
-QuHOFOHkVvTx/VO17eKoM20=
-=9jQh
------END PGP SIGNATURE-----
