@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/kwin-neos
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/kwin-neos/ChangeLog,v 1.1 2004/07/01 17:49:22 jhuebel Exp $
+
+  01 Jul 2004; Jason Eric Huebel <jhuebel@gentoo.org> :
+  initial ebuild release. Native KDE 3.2 theme by Amaury Chamayou
+  <achamayou@wanadoo.fr>
+
