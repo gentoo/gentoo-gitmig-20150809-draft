@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/isdn4k-utils
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.1 2002/07/17 10:43:24 seemant Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.2 2002/08/09 00:28:34 verwilst Exp $
+
+*isdn4k-utils-3.2_p1 (9 Aug 2002)
+
+  9 Aug 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+  New working version, just in time for our Gentoo 1.4 release :o)
+  This version will be included on our bootcd.
 
 *isdn4k-utils-3.1_p1-r3 (16 Jul 2002)
 
@@ -8,5 +15,7 @@
   isdn4k-utils-3.1_p1-r3.ebuild ChangeLog
   files/digest-isdn4k-utils-3.1_p1-r3 :
 
-  No, I am not the maintainer of this.  I just added the ChangeLog file and
-  did some cleaning up of the ebuild.
+  No, I am not the maintainer of this.  I just added the ChangeLog file 
+  and did some cleaning up of the ebuild.
+
+
