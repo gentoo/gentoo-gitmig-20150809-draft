@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.3 2003/06/14 09:28:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.4 2003/06/22 12:35:13 taviso Exp $
 
 cvs_update="20030603"
 DESCRIPTION="UNIX port of the famous Windows Telnet and SSH client"
@@ -12,7 +12,7 @@ LICENSE="MIT"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 IUSE="doc"
 DEPEND="dev-lang/perl
@@ -35,7 +35,7 @@ src_compile() {
 	einfo "Generating Makefiles..."
 	${S}/mkfiles.pl || die "failed to create makefiles."
 
-	# change the CFLLAGS to those requested by user.
+	# change the CFLAGS to those requested by user.
 	einfo "Setting CFLAGS..."
 	sed -i "s/-O2/${CFLAGS}/g" ${S}/unix/Makefile.gtk
 
@@ -59,4 +59,10 @@ src_install() {
 	# docs...
 	dodoc README README.txt LICENCE CHECKLST.txt LATEST.VER website.url MODULE
 	use doc && dodoc doc/*
+
+	if test ! -c /dev/ptmx; then
+		ewarn
+		ewarn "The pterm application requires UNIX98 PTY support to operate."
+		ewarn
+	fi
 }
