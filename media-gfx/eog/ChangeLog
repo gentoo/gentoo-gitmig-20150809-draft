@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.29 2003/03/11 00:39:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.30 2003/03/16 19:15:53 foser Exp $
 
 *eog-2.2.1 (10 Mar 2003)
+
+  16 Mar 2003; foser <foser@gentoo.org> eog-2.2.1.ebuild :
+  Fixed bonobo deps to be on the safe side (#16102)
 
   10 Mar 2003; foser <foser@gentoo.org> eog-2.2.1.ebuild :
   New version

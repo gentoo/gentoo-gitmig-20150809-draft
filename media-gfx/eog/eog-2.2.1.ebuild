@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.1 2003/03/11 00:39:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.2 2003/03/16 19:15:53 foser Exp $
 
 inherit gnome2
 
@@ -16,9 +16,9 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 RDEPEND=">=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0.4
-	>=gnome-base/libgnomeui-2.0.6
-	>=gnome-base/libbonoboui-2.0.3
-	>=gnome-base/bonobo-activation-1.0.3
+	>=gnome-base/libgnomeui-2.2
+	>=gnome-base/libbonoboui-2.2
+	>=gnome-base/bonobo-activation-2.2
 	>=gnome-base/libglade-2.0.1
 	>=gnome-base/librsvg-2.0.1
 	jpeg? ( media-libs/jpeg )
