@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.28 2004/01/29 12:56:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.29 2004/01/31 19:05:48 lanius Exp $
+
+  31 Jan 2004; Heinrich Wendel <lanius@gentoo.org> xpdf-2.02.1.ebuild,
+  xpdf-2.02.ebuild, xpdf-2.03.ebuild, xpdf-3.00.ebuild:
+  remove 2.02; remove mips/arm keywords (bad depend); fixed homepage
 
   29 Jan 2004; Aron Griffis <agriffis@gentoo.org> xpdf-2.03.ebuild:
   stable on alpha and ia64

@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.7 2004/01/29 12:56:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.8 2004/01/31 19:05:48 lanius Exp $
 
 MY_PV=${PV/.1/pl1}
 
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="An X Viewer for PDF Files"
-HOMEPAGE="http://www.foolabs.com/xpdf/xpdf.html"
+HOMEPAGE="http://www.foolabs.com/xpdf/"
 SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~mips hppa ~arm ~amd64 ia64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ia64"
 IUSE="motif"
 
 DEPEND="motif? ( virtual/x11
