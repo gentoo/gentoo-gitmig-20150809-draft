@@ -1,6 +1,13 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.13 2004/09/07 22:29:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.14 2004/09/12 02:03:27 swegener Exp $
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> files/2.4.1-berkdb.patch,
+  inn-2.4.1.ebuild:
+  Added a patch from Maurice Mueller <maurice_mueller@gmx.de> to make inn
+  compile with BerkeleyDB 4.x. Modified ebuild to correctly initialize tagged
+  hash table in pkg_config and install SSL certificates into the right location
+  to prevent overwriting them when upgrading.
 
   08 Sep 2004; Sven Wegener <swegener@gentoo.org> +files/2.4.1-berkdb.patch,
   files/innd, inn-2.4.1.ebuild:

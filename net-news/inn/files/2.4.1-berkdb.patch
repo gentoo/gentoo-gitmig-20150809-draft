@@ -6,7 +6,7 @@ diff -Nur inn-2.4.1.orig/configure.in inn-2.4.1/configure.in
      fi
      if test x"$BERKELEY_DB_DIR" = xyes ; then
 -        for v in db41 db4 db3 db2 ; do
-+        for v in 3 2 ; do
++        for v in 4.2 4.1 4 3 2 ; do
 -            if test -d "/usr/local/include/$v" ; then
 +            if test -d "/usr/local/include/db$v" ; then
                  BERKELEY_DB_LDFLAGS="-L/usr/local/lib"
@@ -20,7 +20,7 @@ diff -Nur inn-2.4.1.orig/configure.in inn-2.4.1/configure.in
          done
          if test x"$BERKELEY_DB_LIB" = x ; then
 -            for v in db41 db4 db3 db2 ; do
-+            for v in 3 2 ; do
++            for v in 4.2 4.1 4 3 2 ; do
 -                if test -d "/usr/include/$v" ; then
 +                if test -d "/usr/include/db$v" ; then
 -                    BERKELEY_DB_CFLAGS="-I/usr/include/$v"

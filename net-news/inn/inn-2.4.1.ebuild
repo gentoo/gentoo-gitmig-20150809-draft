@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.4 2004/09/07 22:29:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.5 2004/09/12 02:03:27 swegener Exp $
 
 inherit fixheadtails ssl-cert eutils
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="http://www.isc.org/products/INN"
-SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
+SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz
+	http://mauricem.com/inn_db4.tar.gz"
 SLOT="0"
-LICENSE="as-is BSD"
+LICENSE="as-is BSD GPL-2"
 KEYWORDS="~x86"
 IUSE="ipv6 kerberos sasl ssl perl python tcltk berkdb inntaggedhash innkeywords"
 
@@ -19,7 +20,7 @@ RDEPEND="virtual/mta
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
 	tcltk? ( dev-lang/tcl )
-	berkdb? ( =sys-libs/db-3* )
+	berkdb? ( sys-libs/db )
 	virtual/gzip"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.13
@@ -31,6 +32,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/2.4.1-berkdb.patch
+	epatch ${WORKDIR}/db_patch.patch
+
 	ht_fix_file configure.in support/fixscript.in
 
 	export WANT_AUTOCONF="2.1"
@@ -110,8 +113,18 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/innd innd
 
-	insinto /usr/lib/news/lib
-	use ssl && docert cert
+	if use ssl
+	then
+		insinto /etc/news/cert
+
+		docert cert
+		fowners news:news /etc/news/cert/cert.{crt,csr,key,pem}
+
+		for cert in cert.{crt,csr,key,pem}
+		do
+			dosym "/etc/news/cert/${cert}" "/usr/lib/news/lib/${cert}"
+		done
+	fi
 }
 
 pkg_postinst() {
@@ -183,6 +196,7 @@ pkg_config() {
 	if [ ! -e "${NEWSSPOOL_DIR}/db/history}" ]
 	then
 		if [ ! -f "${NEWSSPOOL_DIR}/db/history.dir" \
+			-a ! -f "${NEWSSPOOL_DIR}/db/history.pag" \
 			-a ! -f "${NEWSSPOOL_DIR}/db/history.hash" \
 			-a ! -f "${NEWSSPOOL_DIR}/db/history.index" ]
 		then
@@ -191,9 +205,10 @@ pkg_config() {
 			chown news:news "${NEWSSPOOL_DIR}/db/history"
 			chmod 644 "${NEWSSPOOL_DIR}/db/history"
 			su - news -c "/usr/lib/news/bin/makedbz -i"
-			mv "${NEWSSPOOL_DIR}/db/history.n.dir" "${NEWSSPOOL_DIR}/db/history.dir"
-			mv "${NEWSSPOOL_DIR}/db/history.n.hash" "${NEWSSPOOL_DIR}/db/history.hash"
-			mv "${NEWSSPOOL_DIR}/db/history.n.index" "${NEWSSPOOL_DIR}/db/history.index"
+			mv -f "${NEWSSPOOL_DIR}/db/history.n.dir" "${NEWSSPOOL_DIR}/db/history.dir"
+			[ -f "${NEWSSPOOL_DIR}/db/history.n.pag" ] && mv -f "${NEWSSPOOL_DIR}/db/history.n.pag" "${NEWSSPOOL_DIR}/db/history.pag"
+			[ -f "${NEWSSPOOL_DIR}/db/history.n.hash" ] && mv -f "${NEWSSPOOL_DIR}/db/history.n.hash" "${NEWSSPOOL_DIR}/db/history.hash"
+			[ -f "${NEWSSPOOL_DIR}/db/history.n.index" ] && mv -f "${NEWSSPOOL_DIR}/db/history.n.index" "${NEWSSPOOL_DIR}/db/history.index"
 			su - news -c "/usr/lib/news/bin/makehistory"
 		else
 			NEWS_ERRFLAG="1"
