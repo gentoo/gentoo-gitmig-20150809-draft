@@ -3,7 +3,7 @@ MD5 0b56de13046811303d92eb986f72f1d2 portage-2.0.49_pre12.ebuild 9480
 MD5 6b0a70b3fb889be81ae0a165acc4cd94 portage-2.0.48-r3.ebuild 9172
 MD5 4a5ea0277cc7f436cb4bbed94397c941 portage-2.0.49_pre11.ebuild 9480
 MD5 4b443b79502a2b4789b217c120b9e71a ChangeLog 618
-MD5 6b0a70b3fb889be81ae0a165acc4cd94 portage-2.0.48-r4.ebuild 9172
+MD5 1c15e22dec59608966f65c129ab28f18 portage-2.0.48-r4.ebuild 9172
 MD5 97099c94293452dd800dfcf1def48130 files/digest-portage-2.0.49_pre11 73
 MD5 dd8af9e19384d41b3a19c904c105331c files/digest-portage-2.0.49_pre12 73
 MD5 b6989b04bc0ab44de75cf82ab47698fa files/portage-rescue-2.0.48-r1-sparc.tbz2 227629
