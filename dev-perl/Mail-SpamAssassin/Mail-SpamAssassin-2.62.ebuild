@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.60-r1.ebuild,v 1.3 2004/01/18 10:47:36 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.62.ebuild,v 1.1 2004/01/18 10:47:36 esammer Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://spamassassin.org"
 IUSE="berkdb ssl"
 SLOT="0"
 LICENSE="GPL-2 | Artistic"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
 
 newdepend ">=dev-perl/ExtUtils-MakeMaker-6.11-r1
 	dev-perl/Time-Local
@@ -24,11 +24,10 @@ newdepend ">=dev-perl/ExtUtils-MakeMaker-6.11-r1
 	ssl?    ( dev-perl/IO-Socket-SSL )
 	berkdb? ( dev-perl/DB_File )"
 
-myconf="CONTACT_ADDRESS=root@localhost RUN_NET_TESTS=0"
+myconf="CONTACT_ADDRESS=root@localhost RUN_RAZOR_TESTS=0"
 
 # If ssl is enabled, spamc can be built with ssl support
-if [ "`use ssl`" ];
-then
+if use ssl; then
 	myconf="${myconf} ENABLE_SSL=yes"
 fi
 
@@ -59,24 +58,23 @@ mydoc="License
 	sample-spam.txt "
 
 src_compile() {
-
 	perl-module_src_compile
-
+	perl-module_src_test
 }
 
 src_install () {
-
 	perl-module_src_install
 
 	# Add the init and config scripts.
 	dodir /etc/init.d /etc/conf.d
-	cp ${FILESDIR}/spamd.init ${D}/etc/init.d/spamd
-	chmod +x ${D}/etc/init.d/spamd
-	cp ${FILESDIR}/spamd.conf ${D}/etc/conf.d/spamd
+	insinto /etc/init.d
+	newins ${FILESDIR}/spamd.init spamd
+	fperms 755 /etc/init.d/spamd
+	insinto /etc/conf.d
+	newins ${FILESDIR}/spamd.conf spamd
 }
 
 pkg_postinst() {
-
 	perl-module_pkg_postinst
 
 	if [ -z "`best_version dev-perl/DB_File`" ]; then
