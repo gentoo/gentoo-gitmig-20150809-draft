@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.9 2004/12/20 11:35:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.10 2004/12/20 22:29:09 config Exp $
+
+  20 Dec 2004; Benjamin Schindler <config@gentoo.org> libdaemon-0.7.ebuild:
+  Fixed a typo in 0.7 ebuild - makes configure fail if doc-use flag isn't set
 
 *libdaemon-0.7 (20 Dec 2004)
 
