@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-1.0.ebuild,v 1.3 2004/06/30 19:23:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-1.0.ebuild,v 1.4 2004/08/10 01:25:43 latexer Exp $
 
 inherit eutils mono
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-apps/sed-4.0
 		>=gnome-base/libgnomeprintui-2.2 )
 	libgda? ( >=gnome-extra/libgda-0.11 )
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )
-	gtkhtml? ( >=gnome-extra/libgtkhtml-3.0.10 )"
+	gtkhtml? ( =gnome-extra/libgtkhtml-3.0.10* )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
