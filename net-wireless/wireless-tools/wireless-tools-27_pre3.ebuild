@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre3.ebuild,v 1.1 2003/11/10 15:40:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre3.ebuild,v 1.2 2003/11/10 15:52:05 latexer Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre3/}
@@ -33,7 +33,7 @@ src_install () {
 	GENTOO_WE_VERSION="`sed -ne '/WIRELESS_EXT/{s:\([^0-9]*\)::;p;q;}' \
 		< /usr/src/linux/include/linux/wireless.h`"
 	dosbin iwconfig iwevent iwgetid iwpriv iwlist iwspy
-	dolib libiw${GENTOO_WE_VERSION}.so.27 libiw.a
+	dolib libiw${GENTOO_WE_VERSION}.so.27
 	insinto /usr/include/
 	doins iwlib.h
 	dosym /usr/lib/libiw${GENTOO_WE_VERSION}.so.27 /usr/lib/libiw${GENTOO_WE_VERSION}.so
