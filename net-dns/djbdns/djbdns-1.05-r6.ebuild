@@ -1,14 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.1 2003/02/12 18:10:24 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.2 2003/02/12 18:15:50 agenkin Exp $
 
-DESCRIPTION="Excellent high-performance DNS services"
-SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
-	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
-	mirror://${P}-ipv6-gentoo.diff.bz2
-	http://www.legend.co.uk/djb/dns/round-robin.patch"
+DESCRIPTION="Excellent high-performance DNS services."
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 LICENSE="as-is"
+
 KEYWORDS="~x86 ~sparc "
 SLOT="0"
 IUSE="ipv6 static"
@@ -18,6 +15,10 @@ RDEPEND="${DEPEND}
 	>=sys-apps/daemontools-0.70
 	sys-apps/ucspi-tcp"
 
+SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
+	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
+	mirror://${P}-ipv6-gentoo.diff.bz2
+	http://www.legend.co.uk/djb/dns/round-robin.patch"
 S="${WORKDIR}/${P}"
 
 src_unpack() {
@@ -43,10 +44,10 @@ src_install() {
 	insinto /etc
 	doins dnsroots.global
 	into /usr
-	for i in *-conf dnscache tinydns walldns rbldns pickdns axfrdns *-get *-data *-edit dnsip dnsipq dnsname dnstxt dnsmx dnsfilter random-ip dnsqr dnsq dnstrace dnstracesort
-	do
-		dobin $i
-	done
+	dobin *-conf dnscache tinydns walldns rbldns pickdns axfrdns \
+	      *-get *-data *-edit dnsip dnsipq dnsname dnstxt dnsmx \
+	      dnsfilter random-ip dnsqr dnsq dnstrace dnstracesort
+
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
 
 	dobin ${FILESDIR}/dnscache-setup
@@ -62,5 +63,6 @@ pkg_postinst() {
 	id &>/dev/null tinydns || \
 		useradd -g nofiles -d /nonexistent -s /bin/false tinydns
 
-	einfo "Use dnscache-setup and tinydns-setup to help you configure your nameservers!"
+	einfo "Use dnscache-setup and tinydns-setup to help you"
+	einfo "configure your nameservers!"
 }
