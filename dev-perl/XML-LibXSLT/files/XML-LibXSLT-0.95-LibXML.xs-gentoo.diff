@@ -1,0 +1,38 @@
+--- XML-LibXML/LibXML.xs.orig	Fri Mar 16 19:03:54 2001
++++ XML-LibXML/LibXML.xs	Fri Mar 16 19:04:14 2001
+@@ -333,7 +333,7 @@
+ }
+ 
+ xmlParserCtxtPtr
+-get_context(SV * self)
++get_context2(SV * self)
+ {
+     SV ** ctxt_sv;
+     ctxt_sv = hv_fetch((HV *)SvRV(self), "_context", 8, 0);
+@@ -363,7 +363,7 @@
+     tbuff = newSV(0);
+     tsize = newSViv(BUFSIZE);
+     
+-    ctxt = get_context(self);
++    ctxt = get_context2(self);
+     
+     while (!done) {
+         int cnt;
+@@ -599,7 +599,7 @@
+         int well_formed;
+     CODE:
+         ptr = SvPV(string, len);
+-        ctxt = get_context(self);
++        ctxt = get_context2(self);
+         xmlParseChunk(ctxt, ptr, len, 0);
+         xmlParseChunk(ctxt, ptr, 0, 1);
+         well_formed = ctxt->wellFormed;
+@@ -644,7 +644,7 @@
+ 	    f = PerlIO_open(filename, "r");
+ 	}
+ 	if (f != NULL) {
+-            ctxt = get_context(self);
++            ctxt = get_context2(self);
+ 	    res = PerlIO_read(f, chars, 4);
+ 	    if (res > 0) {
+                 xmlParseChunk(ctxt, chars, res, 0);

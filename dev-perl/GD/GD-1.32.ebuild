@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32.ebuild,v 1.1 2001/02/16 20:01:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32.ebuild,v 1.2 2001/03/16 17:13:25 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,8 +10,8 @@ DESCRIPTION="The Perl DBI Module"
 SRC_URI="http://www.cpan.org/modules/by-module/GD/${A}"
 HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
 
-DEPEND=">=sys-devel/perl-5"
-RDEPEND="$DEPEND"
+DEPEND=">=sys-devel/perl-5
+	>=media-libs/libgd-1.8.3"
 
 src_unpack() {
   unpack ${A}
