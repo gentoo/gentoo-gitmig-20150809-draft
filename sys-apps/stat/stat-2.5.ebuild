@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/stat-2.5.ebuild,v 1.13 2004/07/01 21:39:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/stat-2.5.ebuild,v 1.14 2004/08/05 10:15:34 ciaranm Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A command-line stat() wrapper"
 SRC_URI="ftp://metalab.unc.edu/pub/linux/utils/file/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/directory/stat.html"
 
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
