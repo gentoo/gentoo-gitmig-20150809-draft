@@ -22,6 +22,10 @@
 ##
 
 
+# <phoenix@gentoo.org> (11 Oct 2002)
+# Masking the new winex for testing
+=app-emulation/winex-20021011
+
 # <g2boojum@gentoo.org> (10 Oct 2002)
 # masking new cups for testing
 =net-print/cups-1.1.16
