@@ -1,6 +1,7 @@
 MD5 f124bcc8961fc1e88b072e42d3d5e408 numeric-23.0.ebuild 819
+MD5 5be0c364234f14f2d2e7a3ea333855d0 numeric-23.6.ebuild 913
 MD5 0e196e3f6656f3aba77f29434067e65e numeric-23.1.ebuild 828
-MD5 c905592036e3de617bfb14b6edd7bbb5 ChangeLog 2120
+MD5 d6e2595fb3e1a487196450cac6991656 ChangeLog 2235
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 a380ec4d19d310f3fe27156af572e90e numeric-22.0.ebuild 815
 MD5 ce10a7060fdfa66e31804920ac05b7b7 numeric-23.3.ebuild 906
@@ -9,3 +10,4 @@ MD5 543b62c79215183872d1f43ee1033c0b files/digest-numeric-22.0 64
 MD5 1bbfd6024c1a372499b3774b2b91b5ab files/digest-numeric-23.0 64
 MD5 a52c0be4669341bbf82129377ca75f2e files/digest-numeric-23.1 64
 MD5 5d2d3eb0342d757082bce1599b6838de files/digest-numeric-23.3 64
+MD5 3589c8d3f9d19b0b8d7bca9bc2dae572 files/digest-numeric-23.6 64
