@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.8 2004/09/11 15:49:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.9 2004/10/04 21:26:03 pvdabeel Exp $
 
 *libstatgrab-0.10.3 (12 Sep 2004)
+
+  04 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>:
+  Mask this version (which has BSD support btw) stable
 
   12 Sep 2004; Daniel Black <dragonheart@gentoo.org>
   libstatgrab-0.10.2.ebuild, +libstatgrab-0.10.3.ebuild:
@@ -13,6 +16,9 @@
   Masked libstatgrab-0.10.ebuild stable for ppc
 
 *libstatgrab-0.10.2 (31 Jul 2004)
+
+  04 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>:
+  PPC stable
 
   31 Jul 2004; Daniel Black <dragonheart@gentoo.org>
   +libstatgrab-0.10.2.ebuild, libstatgrab-0.10.ebuild:

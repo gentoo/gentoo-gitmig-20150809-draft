@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.83 2004/10/02 12:27:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.84 2004/10/04 21:22:52 pvdabeel Exp $
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ncurses-5.4-r5.ebuild:
   Stable on alpha.
@@ -26,6 +26,9 @@
   defaults when using a version a portage without CONF_LIBDIR support
 
 *ncurses-5.4-r5 (30 Aug 2004)
+ 
+  04 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>:
+  PPC stable
 
   30 Aug 2004; Guy Martin <gmsoft@gentoo.org> +ncurses-5.4-r5.ebuild:
   Unconditonal use of -fPIC (#55238).
