@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.29 2002/08/15 00:25:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.30 2002/08/15 22:34:55 azarah Exp $
+
+  15 Aug 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.ebuild :
+
+  Add back gcc-3-deopt.patch.  Also add gcc-3-deopt-doc.patch.  Update
+  the docs that gets installed, as well as added html pages for libstdc++-v3.
+
+*gcc-3.2 (15 Aug 2002)
+
+  15 Aug 2002; Daniel Robbins <azarah@gentoo.org> gcc-3.2.ebuild :
+
+  Update to latest version
 
 *gcc-3.2_pre-r1 (15 Aug 2002)
 
