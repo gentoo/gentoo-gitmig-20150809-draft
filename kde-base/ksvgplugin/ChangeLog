@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksvgplugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvgplugin/ChangeLog,v 1.2 2005/02/05 11:39:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvgplugin/ChangeLog,v 1.3 2005/02/11 15:09:33 danarmak Exp $
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  ksvgplugin-3.4.0_beta1.ebuild, ksvgplugin-3.4.0_beta2.ebuild:
+  Added a blocking dep on kde-base/ksvg, which will replace this ebuild (bug
+  80270).
 
 *ksvgplugin-3.4.0_beta2 (05 Feb 2005)
 
