@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.10 2003/02/13 09:21:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.11 2003/03/01 01:30:18 vapier Exp $
 
-IUSE="nls"
+inherit eutils
 
-S=${WORKDIR}/${P}
-DESCRIPTION="GPeriodic is a periodic table application for Linux."
+DESCRIPTION="periodic table application for Linux"
 SRC_URI="ftp://ftp.seul.org/pub/gperiodic/${P}.tar.gz"
 HOMEPAGE="http://gperiodic.seul.org/"
+
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	=x11-libs/gtk+-1.2*
@@ -21,41 +22,16 @@ PROVIDE="app-misc/gperiodic"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
- 	#Fix version number,comment out non-working lex inquiry
- 	# to eliminate superfluous config error, and use ncurses for termcap 
-
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
-	local myconf
-
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
-
-	./configure --host=${CHOST} \
-		    --prefix=/usr \
-		    --sysconfdir=/etc \
-		    --localstatedir=/var/lib \
-	    	    --infodir=/usr/share/info \
-		    --mandir=/usr/share/man \
-		    ${myconf} || die
-	
+	econf `use_enable nls` || die
 	emake || die
 }
 
-src_install () {
-	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib \
-	     infodir=${D}/usr/share/info \
-	     mandir=${D}/usr/share/man \
-	     install || die
-	
+src_install() {
+	einstall || die
 	doman man/gperiodic.1
-	
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README
 }

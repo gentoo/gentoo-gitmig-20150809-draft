@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncview/ncview-1.92d.ebuild,v 1.2 2003/02/13 09:23:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncview/ncview-1.92d.ebuild,v 1.3 2003/03/01 01:31:05 vapier Exp $
 
-IUSE=""
-
-DESCRIPTION="Ncview is an X-based viewer for netCDF files."
+DESCRIPTION="X-based viewer for netCDF files"
 SRC_URI="ftp://cirrus.ucsd.edu/pub/ncview/${P}.tar.gz"
 HOMEPAGE="http://meteora.ucsd.edu/~pierce/ncview_home_page.html"
 
