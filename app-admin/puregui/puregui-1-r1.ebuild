@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puregui/puregui-1-r1.ebuild,v 1.11 2002/11/30 02:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puregui/puregui-1-r1.ebuild,v 1.12 2002/12/09 04:17:35 manson Exp $
 
 DESCRIPTION="A GUI to Configure Pure-FTPD"
 SRC_URI="mirror://sourceforge/pureftpd/${PN}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://pureftpd.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5_pre20021029.ebuild,v 1.3 2002/11/30 01:43:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5_pre20021029.ebuild,v 1.4 2002/12/09 04:17:35 manson Exp $
 
 DESCRIPTION="tune your kernel and hardware settings for optimal performance"
 SRC_URI="mirror://sourceforge/powertweak/${PN}-0.99.4.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://powertweak.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )

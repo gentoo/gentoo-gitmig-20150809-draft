@@ -1,7 +1,10 @@
 # ChangeLog for app-adminmsyslogChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.9 2002/09/28 00:22:59 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.10 2002/12/09 04:17:35 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *-1.08e-r1 (27 Sep 2002)
 
   27 Sep 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :

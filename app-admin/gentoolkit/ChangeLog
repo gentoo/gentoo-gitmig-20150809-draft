@@ -1,7 +1,10 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.43 2002/12/06 19:59:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.44 2002/12/09 04:17:34 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gentoolkit-0.1.17-r5 (06 Dec 2002)
 
   06 Dec 2002; Martin Holzer <mholzer@gentoo.org> gentoolkit-0.1.17-r5.ebuild files/digest-gentoolkit-0.1.17-r5 files/scripts/emerge-webrsync Changelog:

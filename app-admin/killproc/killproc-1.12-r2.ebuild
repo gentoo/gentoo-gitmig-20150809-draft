@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.11 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.12 2002/12/09 04:17:35 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="killproc and assorted tools for boot scripts"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.suse.com/pub/projects/init/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 IUSE=""
 
 DEPEND="virtual/glibc"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.4.ebuild,v 1.10 2002/11/30 01:46:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.4.ebuild,v 1.11 2002/12/09 04:17:36 manson Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
 SRC_URI="ftp://ftp.ocis.net/pub/users/ldeutsch/release/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.icewalkers.com/softlib/app/app_00233.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

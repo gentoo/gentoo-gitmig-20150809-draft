@@ -1,7 +1,10 @@
 # ChangeLog for app-admin/smartsuite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/ChangeLog,v 1.3 2002/08/27 00:11:33 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/ChangeLog,v 1.4 2002/12/09 04:17:36 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *smartsuite-2.1 (23 Jul 2002)
   
   23 Aug 2002; Arcady Genkin <agenkin@thpoon.com> smartsuite-2.1-r1.ebuild :

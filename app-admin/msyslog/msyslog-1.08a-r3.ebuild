@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r3.ebuild,v 1.6 2002/10/20 18:14:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08a-r3.ebuild,v 1.7 2002/12/09 04:17:35 manson Exp $
 
 IUSE="postgres mysql"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="mysql? ( >=dev-db/mysql-3.23 )
 	postgres? ( >=dev-db/postgresql-7 )"

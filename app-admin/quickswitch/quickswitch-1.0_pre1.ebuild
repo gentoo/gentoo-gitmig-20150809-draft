@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.9 2002/11/30 02:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-1.0_pre1.ebuild,v 1.10 2002/12/09 04:17:36 manson Exp $
 
 MY_PN="quickwitch"
 MY_P="${MY_PN}-${PV/_/}"
@@ -11,7 +11,7 @@ HOMEPAGE="http://edgesolutions.ca/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=sys-devel/perl-5.6.0"
 

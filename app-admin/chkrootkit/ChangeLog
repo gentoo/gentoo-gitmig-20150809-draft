@@ -1,7 +1,10 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.4 2002/11/29 20:45:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.5 2002/12/09 04:17:34 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *chkrootkit-0.37 (18 Sept 2002)
 
   29 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> chkrootkit-0.37.ebuild :

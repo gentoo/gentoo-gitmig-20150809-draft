@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r2.ebuild,v 1.3 2002/11/26 22:38:41 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r2.ebuild,v 1.4 2002/12/09 04:17:35 manson Exp $
 
 S=${WORKDIR}/omtest
 DESCRIPTION="openMosix stress test"
@@ -15,7 +15,7 @@ DEPEND=">=dev-libs/openssl-0.6.9g
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="x86 -ppc -sparc  -alpha"
 
 
 src_unpack() {
