@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.13 2004/04/11 19:06:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.14 2004/05/06 09:13:10 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 
 	# fix gtk detection
-	sed -i -e "s:gtk12-config:gtk-config:" configure
+	sed -i -e "s:gtk12-config:gtk-config:" ${S}/configure
 }
 
 # this release completely removed oggvorbis support as it was too outdated.
