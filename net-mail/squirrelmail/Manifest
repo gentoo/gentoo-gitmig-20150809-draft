@@ -1,4 +1,7 @@
 MD5 e3778be6bb18fbbed371e80713499bda squirrelmail-1.4.2-r1.ebuild 2030
 MD5 ce26ed2b32957a26ee6823aa6b70f8dc ChangeLog 5129
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 43e39ba343ddd9acc1a57013f5c2c2b7 squirrelmail-1.4.2-r2.ebuild 4310
 MD5 96aac58deae88b397543c2a244b252a3 files/digest-squirrelmail-1.4.2-r1 72
+MD5 6558965ca922cf1ddae90dc069456c8f files/digest-squirrelmail-1.4.2-r2 423
+MD5 1ebd5ce3ff0ce02fa62f3890b6a8f255 files/ldapuserdata-0.4-gentoo.patch 709

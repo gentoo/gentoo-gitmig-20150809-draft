@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/squirrelmail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.31 2003/12/15 20:23:58 stuart Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.32 2004/02/04 04:54:21 eradicator Exp $
+
+*squirrelmail-1.4.2-r2 (03 Feb 2004)
+
+  03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squirrelmail-1.4.2-r2.ebuild, files/ldapuserdata-0.4-gentoo.patch:
+  Added plugins to support gpg, ldap, virus scanning, and automatic retrieval of
+  user data. Closes bug #38374.
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org>
   squirrelmail-1.4.2-r1.ebuild:
