@@ -1,0 +1,9 @@
+# ChangeLog for media-video/qc-usb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.1 2003/07/06 18:04:15 liquidx Exp $
+
+*qc-usb-0.5.1 (06 Jul 2003)
+
+  06 Jul 2003; Alastair Tse <liquidx@gentoo.org> qc-usb-0.5.1.ebuild:
+  re-write of qce-ga, improves speed and framerates
+
