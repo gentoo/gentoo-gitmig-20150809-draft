@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.7 2004/02/22 22:41:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.8 2004/03/09 16:01:01 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,7 +44,7 @@ src_compile() {
 
 	use ipv6 && myconf="${myconf} DO_IPV6=1" || myconf="${myconf} DO_IPV6=0"
 
-	make \
+	make ${myconf} \
 		LIBDIR=/lib \
 		BINDIR=/sbin \
 		MANDIR=/usr/share/man \
@@ -81,7 +81,10 @@ pkg_postinst() {
 	einfo "This package now includes an initscript which loads and saves"
 	einfo "rules stored in /var/lib/iptables/rules-save"
 	einfo "This location can be changed in /etc/conf.d/iptables"
-
+	einfo ""
 	einfo "If you are using the iptables initsscript you should save your"
 	einfo "rules using the new iptables version before rebooting."
+	einfo ""
+	einfo "If you are uprading to a >=2.4.21 kernel you may need to rebuild"
+	einfo "iptables."
 }
