@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.3 2004/06/24 22:26:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.4 2004/07/06 17:24:50 sejo Exp $
+
+  06 Jul 2004; <SeJo@gentoo.org> fop-0.20.5.ebuild:
+  added ~ppc keyword
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> fop-0.20.5.ebuild:
   Fix use invocation
