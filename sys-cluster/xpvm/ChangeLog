@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/xpvm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.5 2003/09/21 23:15:38 tantive Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/ChangeLog,v 1.6 2004/04/25 21:58:41 spyderous Exp $
+
+*xpvm-1.2.5-r3 (25 Apr 2004)
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; +xpvm-1.2.5-r3.ebuild:
+  Update to respect PVM_ROOT, wherever it is (#47860). Also general fixups.
 
   22 Sep 2003; Michael Imhof <tantive@gentoo.org> xpvm-1.2.5-r2.ebuild:
   Unmasked for x86.
