@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc11.ebuild,v 1.1 2000/12/02 06:11:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc11.ebuild,v 1.2 2000/12/02 06:38:37 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test11
@@ -32,7 +32,10 @@ HOMEPAGE="http://www.kernel.org/
 	
 src_compile() {
    	#time to do the special symlink tweak
-	readlink /usr/src/linux > ${T}/linuxlink
+	if [ -e /usr/src/linux ]
+	then
+		readlink /usr/src/linux > ${T}/linuxlink
+	fi
 	rm /usr/src/linux
 	( cd /usr/src; ln -s ${S} linux )
 	#symlink tweak in place
@@ -57,18 +60,26 @@ src_compile() {
 	try ./configure --prefix=/
 	try make
 	#untweak the symlink
-	( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
+	if [ -e ${T}/linuxlink ]
+	then
+		( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
+	else
+		rm /usr/src/linux
+	fi
 }
 
 src_unpack() {
-	if [ ! -L /usr/src/linux ]
+	if [ -e /usr/src/linux ]
 	then
-		echo '!!!' /usr/src/linux is not a symbolic link.
-		echo '!!!' For ${PF} to compile correctly, /usr/src/linux
-		echo '!!!' needs to be temporarily modified to point to
-		echo '!!!' a temporary build directory.  Please rename your
-		echo '!!!' current directory and restart this build process.
-		exit 1
+		if [ ! -L /usr/src/linux ]
+		then
+			echo '!!!' /usr/src/linux is not a symbolic link.
+			echo '!!!' For ${PF} to compile correctly, /usr/src/linux
+			echo '!!!' needs to be temporarily modified to point to
+			echo '!!!' a temporary build directory.  Please rename your
+			echo '!!!' current directory and restart this build process.
+			exit 1
+		fi
 	fi
 	cd ${WORKDIR} 
 	unpack linux-2.4.0-test8.tar.bz2
@@ -130,9 +141,9 @@ src_unpack() {
 	try make include/linux/version.h
     try make symlinks
 	try make dep
-	cd ${S}
+	cd ${WORKDIR}
 	#fix silly permissions in tarball
-	chown -R root.root *
+	chown -R root.root linux
 }
 
 src_install() {                               

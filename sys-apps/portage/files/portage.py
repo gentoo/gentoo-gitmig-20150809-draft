@@ -151,7 +151,7 @@ def mergefiles(outfile,mystart):
 		if os.path.islink(x):
 			myto=os.readlink(x)
 			if os.path.exists(floc[0]):
-				if os.path.isdir(floc[0]):
+				if (not os.path.islink(floc[0])) and (os.path.isdir(floc[0])):
 					print "!!!",floc[0],"->",myto
 				else:
 					os.unlink(floc[0])
