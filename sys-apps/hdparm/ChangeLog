@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.20 2003/03/01 21:17:39 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.21 2003/03/31 19:20:28 mholzer Exp $
 
 *hdparm-5.3-r2 (01 Mar 2003)
+
+  31 Mar 2003; root <root@gentoo.org> hdparm-5.2-r1.ebuild,
+  hdparm-5.2-r1.ebuild, hdparm-5.2-r2.ebuild, hdparm-5.2-r2.ebuild,
+  hdparm-5.2-r3.ebuild, hdparm-5.3-r2.ebuild:
+  Marked stable, fixed src_uri for 5.2, cleaned old crusty ebuilds.
 
   01 Mar 2003; Seth Chandler <sethbc@gentoo.org> hdparm-5.3-r2.ebuild,
   files/hdparm-conf.d, files/hdparm-new-init:
