@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.5 2002/12/18 16:37:47 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.6 2003/01/02 02:55:57 azarah Exp $
+
+  02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Add "!dev-libs/elfutils" to DEPEND, as elfutils replaces libelf ...
 
   18 Dec 2002; Mark Guertin <gerk@gentoo.org> libelf-0.8.2.ebuild :
   set ppc in keywords

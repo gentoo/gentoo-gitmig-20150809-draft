@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.7.0.ebuild,v 1.8 2002/12/09 04:21:03 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.7.0.ebuild,v 1.9 2003/01/02 02:55:57 azarah Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="A ELF object file access library"
 SRC_URI="http://www.stud.uni-hannover.de/~michael/software/libelf-0.7.0.tar.gz"
 HOMEPAGE="http://www.stud.uni-hannover.de/~michael/software/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
-DEPEND="nls?  ( sys-devel/gettext )"
+DEPEND="!dev-libs/elfutils
+	nls?  ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf
