@@ -1,0 +1,11 @@
+# ChangeLog for gnustep-libs/camaelon
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.1 2004/09/27 00:15:55 fafhrd Exp $
+
+*camaelon-0.1 (26 Sep 2004)
+
+  26 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +files/config-camaelon.sh, +camaelon-0.1.ebuild:
+  New package; key'd for ~x86. Use of the Camaelon GNUstep theme engine requires
+  using the "camaelon" local USE flag with gnustep-gui.
+
