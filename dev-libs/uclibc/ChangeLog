@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.10 2003/11/16 00:20:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.11 2003/11/21 06:02:14 solar Exp $
+
+  21 Nov 2003; <solar@gentoo.org> uclibc-0.9.22.ebuild,
+  files/uClibc-0.9.22-etdyn.patch, files/uClibc-0.9.22-pax.patch,
+  files/0.9.23/uClibc-0.9.23-etdyn.patch,
+  files/0.9.23/uClibc-0.9.23-flipturn.patch:
+  updated etdyn patches. no major functional changes to revision bump, removed
+  buggy 0.9.22 code from portage
 
 *uclibc-0.9.23 (15 Nov 2003)
 
