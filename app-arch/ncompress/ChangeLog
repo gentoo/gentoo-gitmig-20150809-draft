@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.18 2004/10/07 12:53:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.19 2004/10/07 21:47:59 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ncompress-4.2.4-r1.ebuild:
+  Stable amd64.
 
   07 Oct 2004; Olivier Crete <tester@gentoo.org> ncompress-4.2.4-r1.ebuild:
   Marking stable on x86 wrt security bug #66251
