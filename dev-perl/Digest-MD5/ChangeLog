@@ -1,7 +1,13 @@
 # ChangeLog for dev-perl/Digest-MD5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.2 2002/04/28 04:02:38 g2boojum Exp $
 
+*Digest-MD5-2.17 (27 Apr 2002)
+
+  27 Apr 2002; Grant Goodyear <g2boojum@gentoo.org> :
+  
+  New version.
+  
 *Digest-MD5-2.12 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
