@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7db8d867e9cb6d3e5fce5708524a3c45 pcfclock-0.44.ebuild 848
+MD5 c273df6539acd9cc18155312fa423849 ChangeLog 362
+MD5 7481cda919930a3db6d92e0b4ab47420 files/digest-pcfclock-0.44 64
+MD5 b60ea900b74d4f577955d7bbe079a376 files/pcfclock.modules.d 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+iBXHTu7gpaalycRAt0GAKDt1CDRpxC71eknjb56ZkDa8TocEACfRnTl
+EsouxPPagpW6YAbj0eI14Y4=
+=Tjk8
+-----END PGP SIGNATURE-----

@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/pcfclock
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.1 2004/07/18 07:01:22 vapier Exp $
+
+*pcfclock-0.44 (18 Jul 2004)
+
+  18 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Stefan Briesenick #50811.
