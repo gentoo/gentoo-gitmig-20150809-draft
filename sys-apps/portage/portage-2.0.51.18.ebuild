@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.13 2005/02/18 11:43:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.18.ebuild,v 1.1 2005/03/01 01:32:15 carpaski Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
@@ -12,11 +12,11 @@ S=${WORKDIR}/${PF}
 DESCRIPTION="The Portage Package Management System (Similar to BSD's ports). The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
-RESTRICT="nosandbox sandbox"
+RESTRICT="nosandbox sandbox primaryuri multilib-pkg-force"
 
-# Contact carpaski with a reason before you modify any of these.
-KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+# Contact carpaski with a reason before you modify any of these please.
+#KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
+KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -53,32 +53,36 @@ check_multilib() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "s:^CFLAGS =.*:CFLAGS = :"           src/sandbox-1.1/Makefile
-	sed -i "/PORTAGE_RESTRICT.*'')/s:''):' '):" pym/portage.py
-	sed -i "s/self.config/self.options/"        bin/dispatch-conf
-	sed -i "/proz /d;/Prozilla/d"               cnf/make.conf*
-	epatch ${FILESDIR}/gcc-2.95-libsandbox.patch
 }
 
 src_compile() {
-	cd ${S}/src; ${CC:-gcc} ${CFLAGS} tbz2tool.c -o tbz2tool
+	export CC="$(tc-getCC)"
+	cd ${S}/src; ${CC} ${CFLAGS} tbz2tool.c -o tbz2tool
+
 	cd ${S}/src/sandbox-1.1
-	case ${ARCH} in
-		"x86")
-			make CFLAGS="-march=i386 -O1 -pipe" || die
-			;;
-		"amd64")
-			check_multilib
-			make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
-			;;
-		*)
-			if useq ppc-macos || useq x86-fbsd; then
-				ewarn "NOT BUILDING SANDBOX ON $ARCH"
-			else
-				make CFLAGS="-O1 -pipe" || die
-			fi
-			;;
-	esac
+	if use ppc-macos || use x86-fbsd; then
+		ewarn "NOT BUILDING SANDBOX ON ${ARCH}"
+	elif has_multilib_profile; then
+		OABI="${ABI}"
+		for ABI in $(get_install_abis); do
+			export ABI
+			make clean
+			make CFLAGS="-O1 -pipe -DSB_HAVE_64BIT_ARCH" libsandbox.so || die
+			mv libsandbox.so libsandbox.so.${ABI}
+		done
+		make clean
+		export ABI="${DEFAULT_ABI}"
+		make CFLAGS="-O1 -pipe -DSB_HAVE_64BIT_ARCH" sandbox || die
+		ABI="${OABI}"
+	elif [ "${ARCH}" == "amd64" ]; then
+		check_multilib
+		make CFLAGS="-O1 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
+	elif [ "${ARCH}" == "x86" ]; then
+		make CFLAGS="-march=i386 -O1 -pipe" || die
+	else
+		make CFLAGS="-O1 -pipe" || die
+	fi
+
 	cd ${S}/bin
 }
 
@@ -112,6 +116,12 @@ src_install() {
 		fi
 	fi
 
+	if [[ $ARCH == "x86-fbsd" ]]; then
+		cd ${S}/src/bsd-flags
+		chmod +x setup.py
+		./setup.py install --root ${D} || eerror "Failed to install bsd-chflags modules"
+	fi
+
 
 	dodir /usr/lib/portage/pym
 	cd ${S}/pym
@@ -125,19 +135,32 @@ src_install() {
 	doexe *
 	doexe ${S}/src/tbz2tool
 
+	#install sandbox
+	cd ${S}/src/sandbox-1.1
 	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
+	elif has_multilib_profile; then
+		into /
+		OABI="${ABI}"
+		for ABI in $(get_install_abis); do
+			newlib.so libsandbox.so.${ABI} libsandbox.so
+		done
+		into /usr
+
+		exeinto /usr/lib/portage/bin
+		doexe sandbox
+
+		insinto /usr/lib/portage/lib
+		doins sandbox.bashrc
+
+		ABI="${OABI}"
+	elif [ "${ARCH}" == "amd64" ] && ! has_multilib_profile; then
+		check_multilib
+		make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
+		die "Failed to install sandbox"
 	else
-		#install sandbox
-		cd ${S}/src/sandbox-1.1
-		if [ "$ARCH" == "amd64" ]; then
-			check_multilib
-			make DESTDIR="${D}" HAVE_64BIT_ARCH="${MULTILIB}" install || \
-			die "Failed to compile sandbox"
-		else
-			make DESTDIR="${D}" install || \
-			die "Failed to compile sandbox"
-		fi
+		make DESTDIR="${D}" install || \
+		die "Failed to install sandbox"
 	fi
 
 	#symlinks
@@ -236,9 +259,8 @@ pkg_postinst() {
 	NEWWORLD="${ROOT}/var/lib/portage/world"
 
 	if [ ! -f "${NEWWORLD}" ]; then
-		cp "${OLDWORLD}" "${NEWWORLD}" && \
-		rm -f "${OLDWORLD}" && \
-		ln ../../lib/portage/world "${NEWWORLD}"
+		ln ../../cache/edb/world "${NEWWORLD}" || \
+		cp "${OLDWORLD}" "${NEWWORLD}"
 	fi
 
 	if [ ! -f "/etc/portage/package.mask" ]; then
@@ -272,10 +294,10 @@ pkg_postinst() {
 	echo
 
 	if [ -z "$PORTAGE_TEST" ]; then
-		for TICKER in 1 2 3 4 5 6 7 8 9 10; do
-			echo -ne "\a" ; sleep 0.$(( $RANDOM % 9 + 1)) &>/dev/null ; sleep 0,$(( $RANDOM % 9 + 1)) &>/dev/null
-		done
-		sleep 5
+		#for TICKER in 1 2 3 4 5 6 7 8 9 10; do
+		#	echo -ne "\a" ; sleep 0.$(( $RANDOM % 9 + 1)) &>/dev/null ; sleep 0,$(( $RANDOM % 9 + 1)) &>/dev/null
+		#done
+		sleep 3
 
 		# Kill the existing counter and generate a new one.
 		echo -n "Recalculating the counter... "
@@ -321,32 +343,32 @@ pkg_postinst() {
 	fi
 
 	if [ -d "${ROOT}usr/portage/distfiles" ]; then
-		find "${ROOT}usr/portage/distfiles" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}usr/portage/distfiles" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chgrp portage &> /dev/null
 
-		find "${ROOT}usr/portage/distfiles" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}usr/portage/distfiles" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chmod 0644 &> /dev/null
 
-		find "${ROOT}usr/portage/distfiles/cvs-src" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}usr/portage/distfiles/cvs-src" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chown portage &> /dev/null
 
-		find "${ROOT}usr/portage/distfiles/cvs-src" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}usr/portage/distfiles/cvs-src" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chmod u+w &> /dev/null
 
 		chmod 2775 "${ROOT}usr/portage/distfiles"
 		chmod 2775 "${ROOT}usr/portage/distfiles/cvs-src"
 	fi
 	if [ -d "${ROOT}/${PORTDIR}/distfiles" ]; then
-		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chgrp portage &> /dev/null
 
-		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}/${PORTDIR}/distfiles" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chmod 0644 &> /dev/null
 
-		find "${ROOT}/${PORTDIR}/distfiles/cvs-src" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}/${PORTDIR}/distfiles/cvs-src" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chown portage &> /dev/null
 
-		find "${ROOT}/${PORTDIR}/distfiles/cvs-src" -type f -maxdepth 1 -print0 | \
+		find "${ROOT}/${PORTDIR}/distfiles/cvs-src" -type f -maxdepth 1 -print0 2>/dev/null | \
 		${XARGS} -0 -n 500 chmod u+w &> /dev/null
 
 		chmod 2775 "${ROOT}/${PORTDIR}/distfiles"
@@ -366,3 +388,4 @@ pkg_postinst() {
 	einfo "speedup. Alternatively, you may 'emerge sync' if it has been more"
 	einfo "than 30 minutes since your last sync."
 }
+
