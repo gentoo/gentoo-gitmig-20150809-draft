@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc4.ebuild,v 1.1 2002/10/23 20:07:36 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc4.ebuild,v 1.2 2002/10/23 23:52:11 raker Exp $
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,12 @@ KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2 LGPL-2.1"
 
 src_compile() {                           
+
+	# added to resolve linking problems.
+	# See...
+	# http://sourceforge.net/mailarchive/forum.php?thread_id=1220474&forum_id=1752
+	libtoolize --copy --force
+	aclocal
 
 	econf || die "./configure failed"
 
