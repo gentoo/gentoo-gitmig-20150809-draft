@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/libgnomeprintui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.14 2003/02/12 06:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/ChangeLog,v 1.15 2003/02/22 04:48:21 agriffis Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgnomeprintui-2.2.1.1.ebuild :
   Add ~alpha to KEYWORDS
 
 *libgnomeprintui-2.2.1.1 (04 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgnomeprintui-2.2.1.1.ebuild :
+  Mark stable on Alpha
 
   05 Feb 2003; foser <foser@gentoo.org> libgnomeprintui-2.2.1.1.ebuild :
   Fixed libgnomeprint to dep on the same version as libgnomeprintui

@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.32 2003/02/18 22:22:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.33 2003/02/22 04:58:14 agriffis Exp $
 
 *control-center-2.2.0.1-r1 (18 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> control-center-2.2.0.1-r1.ebuild :
+  Mark stable on Alpha
 
   18 Feb 2003; Aron Griffis <agriffis@gentoo.org> control-center-2.2.0.1-r1.ebuild files/control-center-2.2.0.1-alpha_hack.patch files/digest-control-center-2.2.0.1-r1 :
   Add control-center-2.2.0.1-alpha_hack.patch to workaround alpha gcc bug

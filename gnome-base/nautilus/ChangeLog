@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.39 2003/02/19 19:46:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.40 2003/02/22 04:50:41 agriffis Exp $
 
 *nautilus-2.2.1 (12 Feb 2003)
 
@@ -15,6 +15,9 @@
   Add ~alpha to KEYWORDS
 
 *nautilus-2.2.0.2 (30 Jan 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> nautilus-2.2.0.2.ebuild :
+  Mark stable on Alpha
 
   30 Jan 2003; foser <foser@gentoo.org> nautilus-2.2.0.2.ebuild :
   GNOME 2.2 rc2 commit

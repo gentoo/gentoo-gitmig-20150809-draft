@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.29 2003/02/12 16:00:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.30 2003/02/22 04:45:23 agriffis Exp $
 
 *eel-2.2.1 (12 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> eel-2.2.1.ebuild :
+  Mark stable on Alpha
 
   12 Feb 2003; foser <foser@gentoo.org> eel-2.2.1.ebuild :
   New version

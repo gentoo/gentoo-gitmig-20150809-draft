@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.0.ebuild,v 1.4 2003/02/13 12:07:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.2.0.ebuild,v 1.5 2003/02/22 04:55:10 agriffis Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1" 
-KEYWORDS="x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc alpha"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/libwnck-0.13

@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.26 2003/02/12 06:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.27 2003/02/22 04:56:49 agriffis Exp $
 
   06 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-session-2.2.0.2.ebuild :
   Add ~alpha to KEYWORDS.  Add 64-bit patch from 2.0.9, still needed on 2.2.0.2.
@@ -12,6 +12,9 @@
   Add patch to prevent segfault on alpha when running gnome-session-properties
 
 *gnome-session-2.2.0.2 (04 Feb 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-session-2.2.0.2.ebuild :
+  Mark stable on Alpha
 
   04 Feb 2003; foser <foser@gentoo.org> gnome-session-2.2.0.2.ebuild :
   minor version bump
