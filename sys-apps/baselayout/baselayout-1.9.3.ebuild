@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.2.ebuild,v 1.1 2004/05/16 22:40:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.3.ebuild,v 1.1 2004/05/17 22:02:11 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.4.12		# rc-scripts version
+SV=1.4.14		# rc-scripts version
 SVREV=			# rc-scripts rev
 SVIV=2.84		# sysvinit version
 
