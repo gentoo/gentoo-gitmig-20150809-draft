@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.14 2004/11/10 10:42:03 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.15 2004/11/10 23:05:04 dsd Exp $
+
+  11 Nov 2004; Daniel Drake <dsd@gentoo.org>
+  -files/pavuk-0.9.28-digest_auth.c.patch, -files/pavuk-0.9.28-http.patch,
+  -pavuk-0.9.28-r4.ebuild:
+  Remove old insecure version, GLSA 200411-19
 
   10 Nov 2004; <SeJo@gentoo.org> pavuk-0.9.31.ebuild:
   stable on ppc gsla:70516
