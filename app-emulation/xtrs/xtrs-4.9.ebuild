@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.4 2002/07/27 15:47:42 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.5 2002/08/02 05:06:04 seemant Exp $
 
 DESCRIPTION="XTRS 4.9.0 - RadioShack TRS80 Emulator, inc. FreeWare ROM & LDOS Image"
 HOMEPAGE="http://www.tim-mann.org/trs80.html"
@@ -18,9 +18,9 @@ S=${WORKDIR}/xtrs-4.9
 
 src_unpack () {
 
-    ### make doesn't play nicely with the usual ${PREFIX} behaviour, but relies
-    ### on an external Makefile.local to set compiletime options, and default
-    ### behavious.  we'll patch it here, to make our install sane.
+	### make doesn't play nicely with the usual ${PREFIX} behaviour, but relies
+	### on an external Makefile.local to set compiletime options, and default
+	### behavious.  we'll patch it here, to make our install sane.
 
 	unpack ${A}
 	cd ${WORKDIR}
@@ -29,27 +29,27 @@ src_unpack () {
 
 src_compile() {
 
-    ### As we mentioned, make ignores any/all prefixes so it's just a standard
-    ### make here, the install prefixes were taken care of by our patch above
+	### As we mentioned, make ignores any/all prefixes so it's just a standard
+	### make here, the install prefixes were taken care of by our patch above
 
 	emake || die "XTRS Make Failed"
 }
 
 src_install () {
 
-    ### make install, isn't really a 'make install'  but a set of 'cp x y' commands
-    ### which fails miserablly if the directories dont exist, we'll create them
-    ### first to keep everthing smiley happy
+	### make install, isn't really a 'make install'  but a set of 'cp x y' commands
+	### which fails miserablly if the directories dont exist, we'll create them
+	### first to keep everthing smiley happy
 
 	mkdir -p ${D}/usr/bin
 	mkdir -p ${D}/usr/share/xtrs
 	mkdir -p ${D}/usr/share/man/man1
 
-    ### and now run the make install script
+	### and now run the make install script
 
 	make install || die "XTRS Make Install Failed"
 
-    ### and finally, move the OSS rom images & extract an lsdos image
+	### and finally, move the OSS rom images & extract an lsdos image
 
 	cp *.hex ${D}/usr/share/xtrs
 	cp *.dsk ${D}/usr/share/xtrs/disks

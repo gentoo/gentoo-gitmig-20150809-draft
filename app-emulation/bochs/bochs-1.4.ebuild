@@ -15,21 +15,21 @@ SLOT="0"
 
 #build-time dependencies
 DEPEND=">=sys-libs/glibc-2.1.3
-        >=x11-base/xfree-4.0.1"
+	>=x11-base/xfree-4.0.1"
 RDEPEND="${DEPEND}"
 
 KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${PN}.tar.gz
-    
+	
 	cd $S
 	cp Makefile.in Makefile.in.orig
 	sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
 	-e 's: $(prefix): $(DESTDIR)$(prefix):g' \
 	-e 's: $(bindir): $(DESTDIR)$(bindir):g' \
 	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in.orig > Makefile.in
-        
+	
 }
 
 src_compile() {

@@ -12,27 +12,27 @@ SLOT="0"
 KEYWORDS="x86 -sparc -sparc64 -ppc"
 
 RDEPEND="opengl? ( virtual/opengl )
-    virtual/x11
-    >=media-libs/libsdl-1.2.0
-    sys-libs/zlib
-    media-libs/libpng"
+	virtual/x11
+	>=media-libs/libsdl-1.2.0
+	sys-libs/zlib
+	media-libs/libpng"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 	
 
 src_compile() {
-    patch -p1 < ${FILESDIR}/${P}-gentoo.patch
-    cd ${S}/src
-    use opengl || myconf="--without-opengl"
-    ./configure --prefix=/usr --host=${CHOST} $myconf || die
-    make || die
+	patch -p1 < ${FILESDIR}/${P}-gentoo.patch
+	cd ${S}/src
+	use opengl || myconf="--without-opengl"
+	./configure --prefix=/usr --host=${CHOST} $myconf || die
+	make || die
 }
 src_install () {
-    cd ${S}/src
-    into /usr
-    dobin zsnes
-    doman linux/zsnes.man
-    cd ${S}
-    dodoc *.txt linux/*
+	cd ${S}/src
+	into /usr
+	dobin zsnes
+	doman linux/zsnes.man
+	cd ${S}
+	dodoc *.txt linux/*
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.4 2002/07/24 03:10:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r2.ebuild,v 1.5 2002/08/02 05:06:04 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
@@ -42,7 +42,7 @@ src_unpack() {
 	then
 		sed -e "s:MY_CPU = i386:\#MY_CPU = i386:g" -e \
 		"s:\# MY_CPU = risc$:MY_CPU = risc:" makefile.unix > makefile.unix.tmp
-                mv makefile.unix.tmp makefile.unix
+	        mv makefile.unix.tmp makefile.unix
 	fi
 
 	if [ "`use dga`" ]; then
@@ -65,7 +65,7 @@ src_unpack() {
 }
 
 src_compile() {
-    local MYFLAGS
+	local MYFLAGS
 	MYFLAGS=""
 
 	if [ ${ARCH} = "ppc" ] ; then
