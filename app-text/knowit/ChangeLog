@@ -1,6 +1,12 @@
 # ChangeLog for app-text/knowit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/ChangeLog,v 1.5 2004/01/22 02:41:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/knowit/ChangeLog,v 1.6 2004/05/01 15:18:16 centic Exp $
+
+*knowit-0.10 (01 May 2004)
+
+  01 May 2004; Dominik Stadler <centic@gentoo.org> +knowit-0.10.ebuild,
+  knowit-0.10_beta3.ebuild, knowit-0.9.ebuild:
+  Add missing IUSE and SLOT. Add new version 0.10, see Bug 46832.
 
 *knowit-0.10_beta3 (21 Jan 2004)
 
