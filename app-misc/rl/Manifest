@@ -1,4 +1,16 @@
-MD5 fb183b7c1d7f44bada38f391564b2492 ChangeLog 1076
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 04a585e648a7486feb3591fd79360419 rl-0.2.2.ebuild 770
+MD5 3b19f7c68f58eb85ef99057f3ab3ea0b rl-0.2.3.ebuild 770
+MD5 329e82d32c0c4c56ae131baed63486d3 ChangeLog 1184
 MD5 0e81493cec22dcbd57bc4ba24c586bc5 metadata.xml 402
 MD5 c4b0edbb6636a114dae5cf17e3d8bb4f files/digest-rl-0.2.2 60
+MD5 a969e68ccdca0cfff71e833bdf66796c files/digest-rl-0.2.3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTtCSI1lqEGTUzyQRAu7ZAJ9KG12E+lOpNV7ViZ5jMqrVV8/KgACZARry
+luSoN1lKC3WSgyGcmbniTxI=
+=p+ag
+-----END PGP SIGNATURE-----
