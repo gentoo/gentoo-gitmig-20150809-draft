@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.54 2005/02/08 19:45:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.55 2005/02/11 05:28:53 vapier Exp $
+
+*strace-4.5.9 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +strace-4.5.9.ebuild:
+  Version bump.
 
   08 Feb 2005; Aron Griffis <agriffis@gentoo.org> strace-4.5.8.ebuild:
   more ia64 fixes for building against linux26-headers-2.6.8.1-r2
