@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.148 2003/11/27 22:02:17 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.149 2003/11/28 19:08:16 pappy Exp $
+
+  28 Nov 2003; Alexander Gabert <pappy@gentoo.org> gcc-3.2.3-r3.ebuild,
+  gcc-3.3.2-r3.ebuild:
+  added logic for false positives hitting gcc library with guard in it
 
 *gcc-3.2.3-r3 (27 Nov 2003)
 
