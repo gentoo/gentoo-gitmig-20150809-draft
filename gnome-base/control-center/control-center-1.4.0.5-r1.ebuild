@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.21 2004/06/24 21:54:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.22 2004/07/14 15:03:09 agriffis Exp $
 
 inherit gnome.org
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME control-center"
 HOMEPAGE="http://www.gnome.org/"
 
@@ -51,5 +50,3 @@ src_install() {
 		install || die
 	dodoc AUTHORS COPYING* ChangeLog README NEWS
 }
-
-
