@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta3.ebuild,v 1.1 2005/01/12 12:10:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta3.ebuild,v 1.2 2005/01/13 18:02:41 greg_g Exp $
 
 inherit kde eutils
 
@@ -48,6 +48,8 @@ src_unpack() {
 }
 
 src_compile() {
+	PREFIX="`kde-config --prefix`"
+
 	myconf="${myconf} `use_with arts` `use_with xine` `use_with gstreamer` `use_enable mysql`"
 	myconf="${myconf} `use_with opengl` `use_enable !noamazon amazon`"
 
