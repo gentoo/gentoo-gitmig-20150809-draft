@@ -32,6 +32,11 @@
 # wacky version.
 
 # PPC PROFILE
+
+# gstreamer uses x86 asm :(
+# Gerk - July 4, 2002
+~media-libs/gstreamer
+
 # Looks like a whole bunch of x86 stuff in the ebuild that I'm not sure
 # will work so great on the PPC so it's masked for PPC testing. 
 # Owen - July 0/02
