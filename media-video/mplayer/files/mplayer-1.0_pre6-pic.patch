@@ -1,0 +1,285 @@
+--- configure.old	2005-03-20 13:19:29.000000000 +0900
++++ configure	2005-03-20 13:20:40.000000000 +0900
+@@ -6370,21 +6375,6 @@
+   fi
+ fi
+ 
+-echocheck "compiler support for -fno-PIC"
+-if x86; then
+-cat > $TMPC <<EOF
+-int main(void) { return 0; }
+-EOF
+-if cc_check -fno-PIC ; then
+-  CFLAGS="-fno-PIC $CFLAGS"
+-  echores "yes"
+-else
+-  echores "no"
+-fi
+-else
+-  echores "only used for x86"
+-fi
+-
+ echocheck "ftello()"
+ # if we don't have ftello use the osdep/ compatibility module
+ cat > $TMPC << EOF
+--- libavcodec/common.h.old	2005-03-20 13:36:31.000000000 +0900
++++ libavcodec/common.h	2005-03-20 13:36:54.000000000 +0900
+@@ -1255,24 +1255,12 @@
+ #endif
+ 
+ 
+-#if __CPU__ >= 686 && !defined(RUNTIME_CPUDETECT)
+-#define COPY3_IF_LT(x,y,a,b,c,d)\
+-asm volatile (\
+-    "cmpl %0, %3	\n\t"\
+-    "cmovl %3, %0	\n\t"\
+-    "cmovl %4, %1	\n\t"\
+-    "cmovl %5, %2	\n\t"\
+-    : "+r" (x), "+r" (a), "+r" (c)\
+-    : "r" (y), "r" (b), "r" (d)\
+-);
+-#else
+ #define COPY3_IF_LT(x,y,a,b,c,d)\
+ if((y)<(x)){\
+      (x)=(y);\
+      (a)=(b);\
+      (c)=(d);\
+ }
+-#endif
+ 
+ #if defined(ARCH_X86) || defined(ARCH_X86_64)
+ static inline long long rdtsc(void)
+--- postproc/swscale_template.c.old	2005-03-20 14:50:33.000000000 +0900
++++ postproc/swscale_template.c	2005-03-20 14:53:44.000000000 +0900
+@@ -2334,7 +2334,11 @@
+ 
+ 
+ 		:: "r" (src), "m" (dst), "m" (dstWidth), "m" (xInc>>16), "m" (xInc&0xFFFF)
++#ifdef __PIC__ // remove registers from the clober list.  This prevents gcc and pic from dying
++		: "%ecx", "%esi"
++#else
+ 		: "%"REG_a, "%"REG_b, "%ecx", "%"REG_D, "%esi"
++#endif
+ 		);
+ #ifdef HAVE_MMX2
+ 	} //if MMX2 can't be used
+@@ -2513,7 +2517,11 @@
+ 
+ 		:: "m" (src1), "m" (dst), "m" ((long)dstWidth), "m" ((long)(xInc>>16)), "m" ((xInc&0xFFFF)),
+ 		"r" (src2)
++#ifdef __PIC__ // remove registers from the clober list.  This prevents gcc and pic from dying
++		: "%ecx", "%esi"
++#else
+ 		: "%"REG_a, "%"REG_b, "%ecx", "%"REG_D, "%esi"
++#endif
+ 		);
+ #ifdef HAVE_MMX2
+ 	} //if MMX2 can't be used
+--- postproc/rgb2rgb_template.c.old	2005-03-20 14:54:15.000000000 +0900
++++ postproc/rgb2rgb_template.c	2005-03-20 14:55:41.000000000 +0900
+@@ -2173,7 +2173,10 @@
+ 				"add $8, %%"REG_a"		\n\t"
+ 				" js 1b				\n\t"
+ 				: : "r" (src+width*3), "r" (ydst+width), "g" ((long)-width)
++#ifdef __PIC__ // remove registers from the clober list.  This prevents gcc and pic from dying
++#else
+ 				: "%"REG_a, "%"REG_b
++#endif
+ 			);
+ 			ydst += lumStride;
+ 			src  += srcStride;
+@@ -2325,7 +2328,10 @@
+ 			"add $4, %%"REG_a"		\n\t"
+ 			" js 1b				\n\t"
+ 			: : "r" (src+chromWidth*6), "r" (src+srcStride+chromWidth*6), "r" (udst+chromWidth), "r" (vdst+chromWidth), "g" ((long)-chromWidth)
++#ifdef __PIC__ // remove registers from the clober list.  This prevents gcc and pic from dying
++#else
+ 			: "%"REG_a, "%"REG_b
++#endif
+ 		);
+ 
+ 		udst += chromStride;
+--- postproc/yuv2rgb.c.old	2005-03-20 14:55:59.000000000 +0900
++++ postproc/yuv2rgb.c	2005-03-20 14:56:22.000000000 +0900
+@@ -580,7 +580,7 @@
+ 
+ SwsFunc yuv2rgb_get_func_ptr (SwsContext *c)
+ {
+-#if defined(ARCH_X86) || defined(ARCH_X86_64)
++#if defined(ARCH_X86) && !defined(__PIC__) || defined(ARCH_X86_64)
+     if(c->flags & SWS_CPU_CAPS_MMX2){
+ 	switch(c->dstFormat){
+ 	case IMGFMT_BGR32: return yuv420_rgb32_MMX2;
+--- libvo/osd_template.c.old	2005-03-20 15:37:23.000000000 +0900
++++ libvo/osd_template.c	2005-03-20 15:38:26.000000000 +0900
+@@ -293,7 +293,7 @@
+ #endif
+     for(y=0;y<h;y++){
+         register int x;
+-#if defined(ARCH_X86) || defined(ARCH_X86_64)
++#if defined(ARCH_X86) && !defined(__PIC__) || defined(ARCH_X86_64)
+ #ifdef HAVE_MMX
+ #ifdef HAVE_3DNOW
+     asm volatile(
+--- mp3lib/Makefile.old	2005-03-20 16:06:38.000000000 +0900
++++ mp3lib/Makefile	2005-03-20 16:09:58.000000000 +0900
+@@ -11,13 +11,17 @@
+ ifeq ($(TARGET_ARCH_X86),yes)
+ SRCS += decode_i586.c
+ OBJS += decode_i586.o
++ifeq ($(TARGET_MMX),yes)
+ SRCS += decode_MMX.c dct64_MMX.c tabinit_MMX.c
+ OBJS += decode_MMX.o dct64_MMX.o tabinit_MMX.o
++endif
++ifeq ($(TARGET_3DNOW),yes)
+ SRCS += dct36_3dnow.c dct64_3dnow.c
+ OBJS += dct36_3dnow.o dct64_3dnow.o
+ SRCS += dct36_k7.c dct64_k7.c
+ OBJS += dct36_k7.o dct64_k7.o
+ endif
++endif
+ ifeq ($(TARGET_ARCH_POWERPC),yes)
+ ifeq ($(TARGET_ALTIVEC),yes)
+ SRCS += dct64_altivec.c
+--- liba52/imdct.c.old	2005-03-20 16:14:03.000000000 +0900
++++ liba52/imdct.c	2005-03-20 16:23:41.000000000 +0900
+@@ -753,10 +753,9 @@
+ const i_cmplx_t x_minus_plus_3dnow __attribute__ ((aligned (8))) = {{ 0x80000000UL, 0x00000000UL }}; 
+ const complex_t HSQRT2_3DNOW __attribute__ ((aligned (8))) = { 0.707106781188, 0.707106781188 };
+ 
+-#undef HAVE_3DNOWEX
+-#include "imdct_3dnow.h"
+-#define HAVE_3DNOWEX
++#ifdef HAVE_3DNOWEX
+ #include "imdct_3dnow.h"
++#endif
+ 
+ void
+ imdct_do_512_sse(sample_t data[],sample_t delay[], sample_t bias)
+@@ -782,16 +781,27 @@
+     /* Pre IFFT complex multiply plus IFFT cmplx conjugate */
+     /* Bit reversed shuffling */
+ 	asm volatile(
++#ifdef __PIC__
++		"pushl %%ebx\n\t"
++#endif
+ 		"xorl %%esi, %%esi			\n\t"
+ 		"leal "MANGLE(bit_reverse_512)", %%eax	\n\t"
+ 		"movl $1008, %%edi			\n\t"
+ 		"pushl %%ebp				\n\t" //use ebp without telling gcc
+ 		".balign 16				\n\t"
+ 		"1:					\n\t"
++#ifdef __PIC_
+ 		"movlps (%0, %%esi), %%xmm0		\n\t" // XXXI
+ 		"movhps 8(%0, %%edi), %%xmm0		\n\t" // RXXI
+ 		"movlps 8(%0, %%esi), %%xmm1		\n\t" // XXXi
+ 		"movhps (%0, %%edi), %%xmm1		\n\t" // rXXi
++#else
++		"movl %[data], %%ebx\n\t"
++		"movlps (%%ebx, %%esi), %%xmm0\n\t"
++		"movhps 8(%%ebx, %%edi), %%xmm0\n\t"
++		"movlps 8(%%ebx, %%esi), %%xmm1\n\t"
++		"movhps (%%ebx,%%edi), %%xmm1\n\t"
++#endif
+ 		"shufps $0x33, %%xmm1, %%xmm0		\n\t" // irIR
+ 		"movaps "MANGLE(sseSinCos1c)"(%%esi), %%xmm2\n\t"
+ 		"mulps %%xmm0, %%xmm2			\n\t"
+@@ -807,7 +817,14 @@
+ 		"subl $16, %%edi			\n\t"
+ 		" jnc 1b				\n\t"
+ 		"popl %%ebp				\n\t"//no we didnt touch ebp *g*
++#ifdef __PIC__
++		"popl %%ebx\n\t"
++#endif
++#ifndef __PIC__
+ 		:: "b" (data), "c" (buf)
++#else
++		:: [data] "g" (data), "c" (buf)
++#endif
+ 		: "%esi", "%edi", "%eax", "%edx"
+ 	);
+ 
+@@ -1302,7 +1319,7 @@
+ #endif // arch_x86
+ 
+ 	imdct_512 = imdct_do_512;
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) && !defined(__PIC__)
+ 	if(mm_accel & MM_ACCEL_X86_SSE)
+ 	{
+ 	  fprintf (stderr, "Using SSE optimized IMDCT transform\n");
+--- mp3lib/decod386.c.old	2005-03-20 16:34:43.000000000 +0900
++++ mp3lib/decod386.c	2005-03-20 16:35:01.000000000 +0900
+@@ -117,7 +117,7 @@
+ 
+ static synth_func_t synth_func;
+ 
+-#if defined(CAN_COMPILE_X86_ASM)
++#if defined(CAN_COMPILE_X86_ASM) && !defined(__PIC__)
+ int synth_1to1_MMX( real *bandPtr,int channel,short * samples)
+ {
+     static short buffs[2][2][0x110];
+--- mp3lib/mpg123.h.old	2005-03-20 16:33:45.000000000 +0900
++++ mp3lib/mpg123.h	2005-03-20 16:33:35.000000000 +0900
+@@ -111,13 +111,17 @@
+ extern real *mp3lib_pnts[];
+ 
+ extern int synth_1to1_pent( real *,int,short * );
++#ifndef __PIC__
+ extern void make_decode_tables_MMX(long scaleval);
+ extern int synth_1to1_MMX( real *,int,short * );
+ extern int synth_1to1_MMX_s(real *, int, short *, short *, int *);
++#endif
+ extern void dct64(real *a,real *b,real *c);
+ 
++#ifndef __PIC__
+ extern void dct36_3dnow(real *,real *,real *,real *,real *);
+ extern void dct36_3dnowex(real *,real *,real *,real *,real *);
++#endif
+ extern void dct36_sse(real *,real *,real *,real *,real *);
+ 
+ typedef int (*synth_func_t)( real *,int,short * );
+--- mp3lib/sr1.c.old	2005-03-20 16:38:53.000000000 +0900
++++ mp3lib/sr1.c	2005-03-20 16:31:33.000000000 +0900
+@@ -383,10 +383,12 @@
+ /******************************************************************************/
+ 
+ /* It's hidden from gcc in assembler */
++#ifndef __PIC__
+ extern void dct64_MMX(real *, real *, real *);
+ extern void dct64_MMX_3dnow(real *, real *, real *);
+ extern void dct64_MMX_3dnowex(real *, real *, real *);
+ void (*dct64_MMX_func)(real *, real *, real *);
++#endif
+ 
+ #include "../cpudetect.h"
+ 
+@@ -406,6 +408,7 @@
+ 
+ #ifdef CAN_COMPILE_X86_ASM
+ 
++#ifndef __PIC__
+     if (gCpuCaps.hasMMX)
+     {
+ 	_has_mmx = 1;
+@@ -434,6 +437,7 @@
+ 	mp_msg(MSGT_DECAUDIO,MSGL_V,"mp3lib: using MMX optimized decore!\n");
+     }
+     else
++#endif
+     if (gCpuCaps.cpuType >= CPUTYPE_I586)
+     {
+ 	synth_func = synth_1to1_pent;
+--- mp3lib/decode_i586.c.old	2005-03-21 00:08:25.000000000 +0900
++++ mp3lib/decode_i586.c	2005-03-21 00:07:58.000000000 +0900
+@@ -307,6 +307,10 @@
+ "        movl "MANGLE(saved_ebp)",%%ebp\n\t"
+ 	:"=a"(retval)
+ 	:"m"(bandPtr),"m"(channel),"m"(samples),"m"(tmp[0])
++#ifdef __PIC__
++	:"memory", "%edi", "%esi");
++#else
+ 	:"memory","%edi","%esi","%ebx");
++#endif
+   return retval;
+ }

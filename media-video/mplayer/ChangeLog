@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.282 2005/03/20 04:01:12 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.283 2005/03/20 17:23:04 chriswhite Exp $
+
+*mplayer-1.0_pre6-r2 (21 Mar 2005)
+
+  21 Mar 2005; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre6-pic.patch, +mplayer-1.0_pre6-r2.ebuild:
+  The big closer. Bug #51853 goes bye bye. MPlayer will now compile with pic
+  and x86 without filtration.
 
   20 Mar 2005; Chris White <chriswhite@gentoo.org>
   mplayer-1.0_pre6-r1.ebuild:
