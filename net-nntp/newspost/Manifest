@@ -1,6 +1,16 @@
-MD5 1c67fed85a50739c4c2c5efd10244d07 ChangeLog 2357
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8054891e10866126dc47a80483eee824 newspost-2.0.ebuild 908
+MD5 18e106b26c4817c3b5bcdfbbca2bc39a newspost-2.1.1.ebuild 946
+MD5 eddc171bd575be62038224280545c17c ChangeLog 2556
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 94da4ca802d81f7650e5874eb7846620 newspost-2.0.ebuild 906
-MD5 f28b5799a8157a08ff26d6a5b0581f10 newspost-2.1.1.ebuild 943
-MD5 46899efb4a2b656aa05aa4d86f5792ba files/digest-newspost-2.0 63
 MD5 b215709cb527d3080506432abfb71147 files/digest-newspost-2.1.1 65
+MD5 46899efb4a2b656aa05aa4d86f5792ba files/digest-newspost-2.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB7BkXI1lqEGTUzyQRAgbVAKDCxmPuNxA6ENiCAN3HKkwxD5V2tQCgpWNX
+1m3T7rK+JRwEHuJKmZE/wdQ=
+=wWd7
+-----END PGP SIGNATURE-----

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4d469a9f2a17556e35ff6ef2b369308a leafnode-1.10.7.ebuild 1915
-MD5 21c07786ccc5dd31fe8a9be1fd6d2d38 leafnode-1.10.6.ebuild 1914
-MD5 728580542a60523adf04c9af4a82376f leafnode-2.0.0_alpha20041227.ebuild 2123
-MD5 9b06d658c43e949162433a56453ce869 ChangeLog 9307
+MD5 61bf3a09356cfd09ca84e94a369dd49e leafnode-1.10.7.ebuild 1915
+MD5 2c827d059de964302f29f8956b35b179 leafnode-1.10.6.ebuild 1914
+MD5 ba27282fd42c48e5d331a1693390c663 leafnode-2.0.0_alpha20041227.ebuild 2123
+MD5 16414664fd37a3abec861e9ebc02a439 ChangeLog 9659
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 dbc24acfe37122337d045dc7045c6dd7 files/local.groups 83
 MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
@@ -17,7 +17,7 @@ MD5 72cc5e849b413ec0cf288a65980dd3b5 files/texpire.cron 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB1KqlI1lqEGTUzyQRAgCJAKDas57S5WLivxlzhiaYz+SJ+uUNKgCgq/Wt
-FYL92oCrDGJE6o9Uu4DMtuU=
-=l9kL
+iD8DBQFB7BeKI1lqEGTUzyQRAk4yAJsGKrR3EF5aUhAnpYyLgmbxzbhIsgCcCC4t
+UJyoKBHsb9vYx313hJY8l4I=
+=26Qj
 -----END PGP SIGNATURE-----
