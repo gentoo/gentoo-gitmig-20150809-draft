@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.315 2004/04/25 01:42:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.316 2004/04/25 15:28:23 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -348,6 +348,7 @@ x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with 
 x11-misc/rss-glx:openal - Adds OpenAL (sound) support to certain screensavers
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
+x11-terms/mlterm:uim - Enable uim support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
