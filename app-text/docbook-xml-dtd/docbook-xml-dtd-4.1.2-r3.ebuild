@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r3.ebuild,v 1.14 2004/06/25 03:03:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r3.ebuild,v 1.15 2004/07/13 21:04:54 agriffis Exp $
 
 MY_P="docbkx412"
 S=${WORKDIR}/${P}
@@ -15,6 +15,7 @@ DEPEND=">=app-arch/unzip-5.41
 	>=dev-libs/libxml2-2.4
 	>=app-text/docbook-xsl-stylesheets-1.45"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
+IUSE=""
 src_unpack() {
 	mkdir ${S}
 	cd ${S}

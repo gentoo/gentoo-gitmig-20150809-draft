@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r1.ebuild,v 1.8 2004/06/24 22:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r1.ebuild,v 1.9 2004/07/13 21:02:41 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tools to convert docbook to man and info"
@@ -9,6 +9,7 @@ HOMEPAGE="http://docbook2x.sourceforge.net"
 
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 LICENSE="GPL-2"
 
 DEPEND=""
