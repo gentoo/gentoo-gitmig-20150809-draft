@@ -1,6 +1,9 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.30 2003/08/27 15:32:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.31 2003/08/29 22:59:27 zul Exp $
+
+  29 Aug 2003; Chuck Short <zul@gentoo.org> licq-1.2.7.ebuild:
+  Added ~sparc to keywords, closes #27522.
 
   27 Aug 2003; Caleb Tennis <caleb@gentoo.org> licq-1.2.7.ebuild:
   Change kde dependency issue to resolve bug #26857.

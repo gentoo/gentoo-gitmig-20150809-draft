@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.5 2003/08/27 15:32:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.6 2003/08/29 22:59:27 zul Exp $
 
 DESCRIPTION="ICQ Client with v8 support" 
 HOMEPAGE="http://www.licq.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="ssl socks5 qt kde ncurses"
 
 # we can't have conditional dependencies so "use kde && inherit kde-base" 
