@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.1 2002/04/12 16:52:20 spider Exp $
+
+*atk-1.0.1-r1.ebuild (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org>
+   adding atk 1.0.1 into portage
+   USE="doc" will install extra documentation about the api's for your pleasure
