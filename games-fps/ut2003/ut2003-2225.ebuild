@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.1 2003/09/09 18:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.2 2003/09/10 18:36:47 vapier Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc"
-RDEPEND="dedicated? ( app-games/ut2003-ded )
+RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
 S=${WORKDIR}
