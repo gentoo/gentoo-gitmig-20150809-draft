@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.2 2004/07/15 02:30:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.3 2004/07/26 09:41:02 kang Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://rsbac.org/download/code/v${PV}/rsbac-admin-v${PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="dev-util/dialog
 	|| ( >=sys-kernel/rsbac-sources-2.4.26

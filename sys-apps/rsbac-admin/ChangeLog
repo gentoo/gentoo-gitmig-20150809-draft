@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/rsbac-admin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.7 2004/07/15 00:50:31 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.8 2004/07/26 09:41:02 kang Exp $
 
 *rsbac-admin-1.2.3 (26 Jun 2004)
+
+  26 Jul 2004; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-admin-1.2.3.ebuild,
+  files/rsbac.conf:
+  Added PAX module as default setting.
+  Marked stabled on x86.
 
   26 Jun 2004; Guillaume Destuynder <kang@gentoo.org> rsbac-admin-1.2.3.ebuild
   Version bump. Minor modifications: now using egroup, now depending on
