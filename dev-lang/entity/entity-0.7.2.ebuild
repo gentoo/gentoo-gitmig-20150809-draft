@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.13 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.14 2002/07/22 07:24:29 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An XML Framework"
@@ -17,15 +17,11 @@ DEPEND=">=media-libs/imlib-1.9.10-r1
 	opengl? ( <x11-libs/gtkglarea-1.99.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-RDEPEND=">=media-libs/imlib-1.9.10-r1
-	>=dev-libs/libpcre-3.2
-	tcltk? ( >=dev-lang/tk-8.1.1 )
-	perl? ( >=sys-devel/perl-5.6 )
-	python? ( >=dev-lang/python-2.0i-r4 )
-	sdl? ( >=media-libs/libsdl-1.1.7 )
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	opengl? ( <x11-libs/gtkglarea-1.99.0 )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
+RDEPEND="${DEPEND}"
+
+SLOT="0"
+LICENSE="MIT"
+KEYWORD="x86"
 
 src_compile() {
 
