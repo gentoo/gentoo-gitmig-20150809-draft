@@ -1,7 +1,10 @@
-MD5 64418c0f092b6abe94d34cb91b1b1764 libgtk-java-2.4.6-r2.ebuild 3043
-MD5 fc7a7c3173bc071cbedcc7e93630bf69 libgtk-java-2.4.7.2.ebuild 3344
-MD5 ecd83955c10abfb7302368afd32eacb4 libgtk-java-2.4.6-r1.ebuild 3007
-MD5 ea053cb7f019ae21f4881feb4323aeb5 ChangeLog 1684
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41ccd73b971613a795b578f97a702cbd libgtk-java-2.4.6-r2.ebuild 3043
+MD5 20764715913c1c083549f17b669148ba libgtk-java-2.4.7.2.ebuild 3343
+MD5 fb7e56cb47cba5872442e1bfa7ea4d2d libgtk-java-2.4.6-r1.ebuild 3007
+MD5 1b684f88633a7c8ae35570168e799eed ChangeLog 2900
 MD5 23e70539fce4ef96d51e3043420acb8c metadata.xml 975
 MD5 d5868ac77f6fa3fcf16ec100095cb0af files/digest-libgtk-java-2.4.6-r1 70
 MD5 d5868ac77f6fa3fcf16ec100095cb0af files/digest-libgtk-java-2.4.6-r2 70
@@ -11,3 +14,10 @@ MD5 44a67ac512c028ffef92f3a0ed1bc196 files/digest-libgtk-java-2.4.7.2 72
 MD5 21907163f2b6597c520b7c1a4da20784 files/libgtk-java-2.4.6_find_jni.patch 369
 MD5 40956547f4eb0b797359f67f6c6910bb files/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch 689
 MD5 e8a6ddb689376b8e04d3bc41cca48253 files/libgtk-java-2.4.6_no-docbook-autoconf-macro.patch 394
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0Vgu/rLF9B432nYRAvXIAKC/F4VayNNoKkhZloz5pAjZHTXIUwCgwUYI
+Nvi4oL6BoqEUBnwHNxc/h68=
+=uA1T
+-----END PGP SIGNATURE-----
