@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.2.ebuild,v 1.2 2004/06/25 01:38:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.2.ebuild,v 1.3 2004/07/19 22:06:47 kloeri Exp $
 
 inherit distutils eutils
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/jpeg
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/pyrex-0.5
 	>=dev-python/docutils-0.3
-	>=dev-python/Imaging-1.1.3
+	>=dev-python/imaging-1.1.3
 	>=dev-python/soappy-0.11.1"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.18.ebuild,v 1.6 2004/06/25 01:48:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.18.ebuild,v 1.7 2004/07/19 22:04:27 kloeri Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -14,7 +14,7 @@ SRC_URI="http://www.reportlab.org/ftp/ReportLab_${vmaj}_${vmin}.tgz"
 HOMEPAGE="http://www.reportlab.org/"
 
 DEPEND=">=sys-libs/zlib-0.95
-	dev-python/Imaging
+	dev-python/imaging
 	>=sys-apps/sed-4
 	app-arch/tar"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyds
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.12 2004/06/25 01:38:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.13 2004/07/19 22:06:47 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pyds-0.6.5.ebuild,
+  pyds-0.7.0.ebuild, pyds-0.7.1.ebuild, pyds-0.7.2.ebuild:
+  dev-python/Imaging renamed to dev-python/imaging.
 
 *pyds-0.7.2 (25 May 2004)
 

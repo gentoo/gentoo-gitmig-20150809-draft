@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.7 2004/06/25 01:31:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.8 2004/07/19 22:01:44 kloeri Exp $
 
 IUSE=""
 MY_P="HTMLgen"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/python
-		dev-python/Imaging"
+		dev-python/imaging"
 
 S="${WORKDIR}/${MY_P}"
 
