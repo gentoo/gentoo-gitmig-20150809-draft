@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1-r1.ebuild,v 1.2 2000/12/20 00:41:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1-r2.ebuild,v 1.1 2001/01/04 23:02:44 drobbins Exp $
 
 A="apache_1.3.14.tar.gz mod_ssl-2.7.1-1.3.14.tar.gz"
 S=${WORKDIR}/apache_1.3.14
@@ -17,7 +17,10 @@ DEPEND=">=sys-apps/bash-2.04
 
 src_compile() {                           
    export SSL_BASE=SYSTEM
-   export EXTRA_CFLAGS="-DUSE_FLOCK_SERIALIZED_ACCEPT -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+#I get file locking errors with 2.4.0-test10 thru 12 (everything I've tried)
+#so we zap the FLOCK option...
+#	export EXTRA_CFLAGS="-DUSE_FLOCK_SERIALIZED_ACCEPT -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+	export EXTRA_CFLAGS="-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
    cd ${S}/../mod_ssl-2.7.1-1.3.14
     try ./configure --with-apache=${S} --with-ssl=SYSTEM
    cd ${S}
