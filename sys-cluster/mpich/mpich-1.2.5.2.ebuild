@@ -1,6 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.5 2004/04/02 21:43:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.6 2004/04/02 22:30:09 spyderous Exp $
+
+# Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
+# mpich listens on or any other custom options (#38207).
+# The default USR1 conflicts with pthreads. Options include SIGUSR2 and SIGBUS.
+# For example: MPICH_CONFIGURE_OPTS="--with-device=ch_p4:-listener_sig=SIGBUS"
 
 DESCRIPTION="MPICH - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich"
@@ -16,6 +21,12 @@ RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )
 	!sys-cluster/lam-mpi"
+
+pkg_setup() {
+	if [ -n "${MPICH_CONFIGURE_OPTS}" ]; then
+		einfo "Custom configure options are ${MPICH_CONFIGURE_OPTS}."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +45,10 @@ src_compile() {
 
 	export RSHCOMMAND
 
+	local myconf="${myconf} ${MPICH_CONFIGURE_OPTS}"
+
 	./configure \
+		${myconf} \
 		--mandir=/usr/share/man \
 		--prefix=/usr || die
 	make || die
