@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.2-r1.ebuild,v 1.8 2004/08/04 09:49:12 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.2-r1.ebuild,v 1.9 2004/09/06 20:48:56 ciaranm Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -34,7 +34,7 @@ vpopmail_set_homedir() {
 		eerror "vpopmail's home directory is null in passwd data!"
 		eerror "You probably want to check that out."
 		eerror "Continuing with default."
-		sleep 1; echo -ne "\a"; sleep 1; echo -ne "\a"
+		ebeep 3
 		VPOP_HOME="${VPOP_DEFAULT_HOME}"
 	else
 		einfo "Setting VPOP_HOME to: $VPOP_HOME"
