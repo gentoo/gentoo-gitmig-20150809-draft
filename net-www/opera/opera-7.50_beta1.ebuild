@@ -1,26 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha4.ebuild,v 1.1 2004/04/17 11:54:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_beta1.ebuild,v 1.1 2004/04/26 10:26:39 lanius Exp $
 
 IUSE="static"
 
-OPERAVER="7.50-Preview-4"
-OPERAVER2="7.50-20040414"
+OPERAVER="7.50-20040422"
+
 S=${WORKDIR}/${A/.tar.bz2/}
 
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
-# that's an ugly workaround for the broken src_uri syntax
 SRC_URI="
-	x86? ( !static? ( http://snapshot.opera.com/unix/${OPERAVER}/intel-linux/en/${PN}-${OPERAVER2}.5-shared-qt.i386-en.tar.bz2 ) )
-	x86? ( static? ( http://snapshot.opera.com/unix/${OPERAVER}/intel-linux/en/${PN}-${OPERAVER2}.1-static-qt.i386-en.tar.bz2 ) )
-	amd64? ( !static? ( http://snapshot.opera.com/unix/${OPERAVER}/intel-linux/en/${PN}-${OPERAVER2}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( static? ( http://snapshot.opera.com/unix/${OPERAVER}/intel-linux/en/${PN}-${OPERAVER2}.1-static-qt.i386-en.tar.bz2 ) )
-	ppc? ( !static? ( http://snapshot.opera.com/unix/${OPERAVER}/ppc-linux/en/${PN}-${OPERAVER2}.2-shared-qt.ppc-en.tar.bz2 ) )
-	ppc? ( static? ( http://snapshot.opera.com/unix/${OPERAVER}/ppc-linux/en/${PN}-${OPERAVER2}.1-static-qt.ppc-en.tar.bz2 ) )
-	sparc? ( !static? ( http://snapshot.opera.com/unix/${OPERAVER}/sparc-linux/en/${PN}-${OPERAVER2}.2-shared-qt.sparc-en.tar.bz2 )  )
-	sparc? ( static? ( http://snapshot.opera.com/unix/${OPERAVER}/sparc-linux/en/${PN}-${OPERAVER2}.1-static-qt.sparc-en.tar.bz2 ) )"
+	x86? ( static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	amd64? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	ppc? ( static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
+	ppc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
+	sparc? ( static?  ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+	sparc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/750/beta1/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
 
 # Dependencies may be augmented later (see below).
 DEPEND=""
