@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.28 2005/01/19 13:19:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.29 2005/01/29 15:07:45 solar Exp $
+
+  29 Jan 2005; <solar@gentoo.org> +files/2.6.25-uclibc-fadvise.patch,
+  xfsprogs-2.6.25.ebuild:
+  - temp work around to disable posix_fadvise till such times as _syscall6()
+  exists for uClibc. bug #73855
 
   19 Jan 2005; Joshua Kinard <kumba@gentoo.org> xfsprogs-2.6.25.ebuild:
   Marked stable on mips.

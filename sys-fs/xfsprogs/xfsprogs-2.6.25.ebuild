@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.7 2005/01/19 13:19:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.8 2005/01/29 15:07:45 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 hppa ia64 mips ~ppc ~sparc x86"
-IUSE="nls"
+IUSE="nls uclibc"
 
 RDEPEND="virtual/libc
 	sys-fs/e2fsprogs"
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# temp work around till a _syscall6() exists. bug #73855
+	use uclibc && epatch ${FILESDIR}/2.6.25-uclibc-fadvise.patch
+
 	sed -i \
 		-e '/^GCFLAGS/s:-O1::' \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \

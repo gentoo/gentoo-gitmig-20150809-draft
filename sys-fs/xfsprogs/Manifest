@@ -1,8 +1,21 @@
-MD5 08f8e1b41f5bbdd03b9db8a100b3e132 ChangeLog 7480
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a0345f135e1107df160fb7ea4dcb78c xfsprogs-2.6.25.ebuild 1747
+MD5 71ab1cbc5ae52f7416755d2173bd8a39 ChangeLog 7686
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a719cf48b1b97beb3422daf7d375c294 xfsprogs-2.6.13.ebuild 1920
-MD5 2a08e2d121ec0da11a69aad3320db569 xfsprogs-2.6.25.ebuild 1618
-MD5 911b4db00dda0d9aad7d79c8f2de99c3 files/2.6.13-configure.patch 238
-MD5 7b6e7879f947d56d486f1d17f3c8f3e1 files/2.6.13-uclibc-mincore.patch 1141
+MD5 8eba105c0398707194a64a5be0075310 files/2.6.25-uclibc-fadvise.patch 849
 MD5 3d4e4aea1da9c2a07cc9581930aab671 files/digest-xfsprogs-2.6.13 71
 MD5 0ccba5779bd5c7edc42cac54ed360fa5 files/digest-xfsprogs-2.6.25 71
+MD5 7b6e7879f947d56d486f1d17f3c8f3e1 files/2.6.13-uclibc-mincore.patch 1141
+MD5 911b4db00dda0d9aad7d79c8f2de99c3 files/2.6.13-configure.patch 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iQCVAwUBQfumtZ4WFLgrx1GWAQLgMQQAlzIUH/FWEHNytBUU5oElIKBsQ/u6E9sC
+0k7XEtVOjZgn6zhhWVySeQYldcaromVW5vEu83/2p3GsmGrq9HhV92oHdecsEbOd
+w8rpZvaDWsLfVW1eJ+E0tgTpWKwaz8YrKfWV6Ybu6iTovMRybwHCJEmQ7aAThL6o
+ekUaAp6trvM=
+=pCZ1
+-----END PGP SIGNATURE-----
