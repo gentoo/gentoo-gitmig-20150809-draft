@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/hal-device-manager
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/ChangeLog,v 1.1 2004/10/02 15:49:29 latexer Exp $
+
+*hal-device-manager-0.2.98 (02 Oct 2004)
+
+  02 Oct 2004; <peter@gentoo.org> +metadata.xml,
+  +hal-device-manager-0.2.98.ebuild:
+  New package. Seperates out hal-device-manager from hal package to prevent
+  circular dep hal -> gnome -> hal.
+
