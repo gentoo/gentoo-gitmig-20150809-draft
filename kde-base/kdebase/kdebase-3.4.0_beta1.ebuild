@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.2 2005/01/14 21:04:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.3 2005/01/17 15:41:51 danarmak Exp $
 
 inherit kde-dist eutils
 
@@ -18,7 +18,8 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	samba? ( >=net-fs/samba-3.0.1 )
 	java? ( || ( virtual/jdk virtual/jre ) )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	logitech-mouse? ( dev-libs/libusb )"
+	logitech-mouse? ( dev-libs/libusb )
+	>=media-libs/freetype-2.1.3" # for kfontinst
 # TODO:
 # - add support for dbus/hal for 'media:' ioslave:
 #     hal? ( >=sys-apps/dbus-0.22-r3    (for proper Qt support)

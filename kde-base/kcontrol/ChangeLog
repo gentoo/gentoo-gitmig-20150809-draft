@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.1 2005/01/15 02:24:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.2 2005/01/17 15:38:18 danarmak Exp $
+
+  17 Jan 2005; Dan Armak <danarmak@gentoo.org> kcontrol-3.4.0_beta1.ebuild:
+  Adding missing dep on freetype, bug #78206.
 
 *kcontrol-3.4.0_beta1 (15 Jan 2005)
 

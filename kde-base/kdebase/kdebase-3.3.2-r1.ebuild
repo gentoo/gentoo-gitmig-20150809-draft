@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.7 2005/01/12 03:50:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r1.ebuild,v 1.8 2005/01/17 15:41:51 danarmak Exp $
 
 inherit kde-dist eutils
 
