@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mairix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.11 2005/02/04 13:19:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.12 2005/03/06 11:16:11 tove Exp $
+
+  06 Mar 2005; Torsten Veller <tove@gentoo.org> mairix-0.15.2.ebuild:
+  Stable for x86.
 
 *mairix-0.15.2 (04 Feb 2005)
 
