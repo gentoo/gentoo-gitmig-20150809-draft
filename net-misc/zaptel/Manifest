@@ -6,7 +6,7 @@ MD5 57a33550baf4bda34695fa3cb84a8012 zaptel-1.0.0.ebuild 3059
 MD5 cfce09091affa8e8668e7a22801ac097 zaptel-1.0.1.ebuild 3186
 MD5 eaa764a27a800be752aba85a7df8d342 zaptel-1.0.2.ebuild 3127
 MD5 89874e5cbdf7262fe23db47cdb5a538e zaptel-1.0.4.ebuild 4473
-MD5 0bc02af62c229b02bd37531ee8ca9501 zaptel-1.0.6.ebuild 6254
+MD5 d400fda93b4e0c26a8f44e472fcd2bf2 zaptel-1.0.6.ebuild 6253
 MD5 66c86744220e6716f15393caf0ee408d files/digest-zaptel-1.0.3 64
 MD5 051e2ff3f1222e2b551a70e9cd1b31f0 files/digest-zaptel-1.0.4 64
 MD5 3921a7fd4a60c8785d510e857ff2eabe files/digest-zaptel-0.9.1 64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.4 2005/03/18 14:35:39 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.6.ebuild,v 1.5 2005/03/18 14:41:13 chrb Exp $
 
 IUSE="devfs26 bri florz"
 
@@ -173,7 +173,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	
+
 	if use devfs26; then
 		ewarn "*** Warning! ***"
 		ewarn "Devfs support for linux-2.6 is experimental and not"
