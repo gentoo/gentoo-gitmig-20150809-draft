@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb7c98c4ada508b4870303b6cf6f327c metadata.xml 450
-MD5 581d46a6b2564cd71878abcf670dd7bd ChangeLog 16366
-MD5 947cccb941265494107dc537a11932aa cdrtools-2.01-r2.ebuild 3443
-MD5 26c673d1c0824a9d9639d68f36c833c2 cdrtools-2.01.ebuild 2871
+MD5 fa5b4d8d4d0f05a41bc192108568a79e ChangeLog 16441
+MD5 6d1a6299e572e68d8fa65ed1e5f9c7ad cdrtools-2.01-r2.ebuild 3439
 MD5 721c0e45d992dc9007c82aacfb2fc351 cdrtools-2.01.01_alpha01-r1.ebuild 3392
+MD5 26c673d1c0824a9d9639d68f36c833c2 cdrtools-2.01.ebuild 2871
+MD5 fb7c98c4ada508b4870303b6cf6f327c metadata.xml 450
 MD5 245b4ec3f9e91750df712bee416f6481 files/cdrtools-2.01-scsi-remote.patch 540
-MD5 1a596f5cae257e97c559716336b30e5b files/mkisofs-iconv-10.patch 16986
 MD5 c848b3b9b6921469483a22caa0fd40c3 files/digest-cdrtools-2.01 67
 MD5 8165b59a7b14939c58a88ca1f272cad4 files/digest-cdrtools-2.01-r2 147
 MD5 0e8283f78b14f3ead0e78d197e1d5ed1 files/digest-cdrtools-2.01.01_alpha01-r1 153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQF7cKRy60XGEcJIRAmW6AJ46T0KIzA1Hz9il6f30hM30E08rdQCdGwHg
-Uc0qFpucRJnHJdFniLWc954=
-=wTlF
------END PGP SIGNATURE-----
+MD5 1a596f5cae257e97c559716336b30e5b files/mkisofs-iconv-10.patch 16986
