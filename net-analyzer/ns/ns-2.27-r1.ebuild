@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27.ebuild,v 1.2 2004/01/28 04:04:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ns-2.27-r1.ebuild,v 1.1 2004/01/28 04:04:33 robbat2 Exp $
 
 DESCRIPTION="Network Simulator"
 HOMEPAGE="http://www.isi.edu/nsnam/ns/"
@@ -18,7 +18,7 @@ DEPEND_COMMON=">=dev-lang/tcl-${need_tclver}
 		>=dev-tcltk/tclcl-1.0.13b
 		net-libs/libpcap
 		debug? ( =dev-lang/perl-5* >=media-gfx/xgraph-12.1 >=dev-libs/dmalloc-4.8.2 >=dev-tcltk/tcl-debug-2.0 )"
-DEPEND="doc? ( app-text/tetex app-text/ghostscript dev-tex/latex2html ) ${DEPEND_COMMON}"
+DEPEND="doc? ( app-text/tetex virtual/ghostscript dev-tex/latex2html ) ${DEPEND_COMMON}"
 RDEPEND="${DEPEND_COMMON}"
 S=${WORKDIR}/${P}
 

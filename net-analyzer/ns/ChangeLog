@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ns
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.4 2004/01/22 08:30:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.5 2004/01/28 04:04:33 robbat2 Exp $
+
+*ns-2.27-r1 (27 Jan 2004)
+
+  27 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> ns-2.27-r1.ebuild,
+  ns-2.27.ebuild:
+  fix #39423, revision bump.
 
 *ns-2.27 (22 Jan 2004)
 
