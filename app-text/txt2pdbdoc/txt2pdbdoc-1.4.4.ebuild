@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.2.ebuild,v 1.12 2004/07/02 22:53:49 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.4.ebuild,v 1.1 2004/07/02 22:53:49 g2boojum Exp $
 
 DESCRIPTION="Text to Doc file converter for the Palm Pilot.  Also includes an HTML to Doc converter."
 SRC_URI="http://homepage.mac.com/pauljlucas/software/${P}.tar.gz"
@@ -11,6 +11,13 @@ LICENSE="GPL-2"
 
 DEPEND="dev-lang/perl"
 IUSE=""
+
+# automake error: INSTALL and NEWS files missing, and make breaks w/o them
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	touch INSTALL NEWS
+}
 
 src_compile() {
 	./configure \
