@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9-r1.ebuild,v 1.4 2002/07/16 05:50:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9-r1.ebuild,v 1.5 2002/07/24 05:52:58 gerk Exp $
 
 SV="1.3.5"
 SVREV=""
@@ -131,7 +131,7 @@ src_install()
 	dosym ../var/tmp /usr/tmp
 	
 	keepdir /home
-	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
+	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/{X11,GL}
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
 	
