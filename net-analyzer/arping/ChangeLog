@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.9 2003/03/07 22:41:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.10 2003/08/21 04:36:29 vapier Exp $
+
+*arping-2.01 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  libnet-1.1.x version of arping.  SLOT to 2 and make binary 'arping2' #27023.
+  This way we dont kill iputils arping.
+
+*arping-1.06-r1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Patch to compile against SLOT-ed libnet-1.0.x #17772.
+  Also set SLOT to 1 and make binary 'arping1' #27023.
+  This way we dont kill iputils arping.
 
 *arping-1.06 (07 Mar 2003)
 
