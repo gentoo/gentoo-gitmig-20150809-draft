@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.4 2002/05/08 00:06:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05a-r2.ebuild,v 1.5 2002/07/06 17:56:35 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The standard GNU Bourne again shell"
@@ -32,8 +32,8 @@ src_compile() {
 		--with-curses \
 		--without-gnu-malloc \
 		${myconf} || die
-	#doesn't like -j
-	make || die
+	# bash 2.0.5 doesn't like -j>1
+	emake -j1 || die
 }
 
 src_install() {
