@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/psemu-gpupetemesagl-1.6.7.ebuild,v 1.2 2002/11/06 14:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/psemu-gpupetemesagl-1.6.7.ebuild,v 1.3 2002/11/18 10:42:46 hanno Exp $
 
 URI_PV=`echo -n ${PV} | sed -e "s:\.::g"`
 DESCRIPTION="PSEmu OpenGL GPU"
@@ -9,7 +9,7 @@ SRC_URI="http://www.ngemu.com/psx/plugins/linux/gpu/gpupetemesagl${URI_PV}.tar.g
 
 LICENSE="freedist"
 KEYWORDS="x86 -ppc"
-SLOT="0"    
+SLOT="0"
 IUSE=""
 
 DEPEND="virtual/opengl"

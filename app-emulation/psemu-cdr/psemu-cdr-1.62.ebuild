@@ -1,15 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdr/psemu-cdr-1.62.ebuild,v 1.5 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-cdr/psemu-cdr-1.62.ebuild,v 1.6 2002/11/18 10:42:46 hanno Exp $
 
 DESCRIPTION="PSEmu plugin to read from CD-ROM"
 HOMEPAGE="http://www.pcsx.net"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
-SLOT="0" 
+SLOT="0"
 SRC_URI="http://linux.pcsx.net/downloads/plugins/cdr-${PV}.tgz"
 DEPEND="x11-libs/gtk+"
 S=${WORKDIR}
+IUSE=""
 
 src_compile() {
 	cd src
@@ -24,4 +25,3 @@ src_install () {
 	chmod 755 ${D}/usr/lib/psemu/plugins/*
 	dodoc ReadMe.txt
 }
-

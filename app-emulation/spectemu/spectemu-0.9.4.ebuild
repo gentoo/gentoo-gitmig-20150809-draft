@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.5 2002/10/17 01:06:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.9.4.ebuild,v 1.6 2002/11/18 10:42:46 hanno Exp $
 
 IUSE="X readline svga"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kempelen.iit.bme.hu/~mszeredi/spectemu/spectemu.html"
 LICENSE="GPL-2 | LGPL-2"
 SRC_URI="http://home.gwi.net/~plemon/sources/spectemu-0.94.tar.gz"
 KEYWORDS="x86"
-SLOT="0"   
+SLOT="0"
 ### Several versions of specemu exist,  xspect & vgaspect, utilising X11
 ### and/or svgalib. libreadline provides optional runtime features.
 ### The ./configure script automagically figures out which binaries to build
@@ -47,7 +47,7 @@ src_install () {
 
 ### Here's our make install, nothing special here,  houston, we are
 ### go for launch.
-	
+
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
