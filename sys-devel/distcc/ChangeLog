@@ -1,8 +1,20 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.20 2003/02/13 23:00:18 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.21 2003/02/17 20:37:06 zwelch Exp $
+
+*distcc-1.1-r9 (17 Feb 2003)
+  
+  17 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Fix location of pid file... (bug 15769)
+  Fix einfo Portage version reference
 
 *distcc-1.1-r8 (10 Feb 2003)
+  
+  17 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Fix einfo Portage version reference
+
+  15 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Extended einfo and added link to configuration page
   
   10 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Includes wrapper-1.1.patch from bug 13897; now installs symlinks

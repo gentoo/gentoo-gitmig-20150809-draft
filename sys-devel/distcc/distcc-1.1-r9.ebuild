@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r8.ebuild,v 1.3 2003/02/17 20:37:06 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r9.ebuild,v 1.1 2003/02/17 20:37:06 zwelch Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	dodoc "${S}/survey.txt"
 
 	exeinto /etc/init.d
-	newexe "${FILESDIR}/distccd.2" distccd
+	newexe "${FILESDIR}/distccd.3" distccd
 
 	# Search the PATH now that gcc doesn't live in /usr/bin
 	#   ztw - this needs to be moved into an installed script so
