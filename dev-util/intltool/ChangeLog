@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.5 2002/05/19 19:10:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.6 2002/05/20 15:46:36 spider Exp $
+
+
+
+
+*intltool-0.21 (20 May 2002)
+  20 May 2002; Spider <spider@gentoo.org> :
+  Later greater and better... and fixes a bug in old version :)
 
 *intltool-0.20 (19 May 2002)
   19 May 2002; Spider <spider@gentoo.org> :

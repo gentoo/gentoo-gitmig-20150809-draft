@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.20.ebuild,v 1.1 2002/05/19 19:10:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.21.ebuild,v 1.1 2002/05/20 15:46:36 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scripts for extracting translatable strings from various sourcefiles"
