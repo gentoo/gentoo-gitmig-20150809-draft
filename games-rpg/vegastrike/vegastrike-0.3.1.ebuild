@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.3.1.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.3.1.ebuild,v 1.2 2003/09/23 19:55:07 mholzer Exp $
 
 inherit games eutils flag-o-matic
 
@@ -34,6 +34,9 @@ src_unpack() {
 
 	rpm2targz ${DISTDIR}/${PN}-data-${DATA_VER}.noarch.rpm || die "data rpm2targz failed"
 	tar -zxf ${PN}-data-${DATA_VER}.noarch.tar.gz || die "src tar failed"
+	cd ${WORKDIR}
+	#Fixes gcc3 issue
+	epatch ${FILESDIR}/${P}-gcc3.patch || die
 
 	cd ${S}
 	autoconf || die
