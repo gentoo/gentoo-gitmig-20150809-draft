@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.0.ebuild,v 1.4 2004/07/03 22:22:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.3.0.ebuild,v 1.5 2004/09/18 22:13:30 squinky86 Exp $
 
 inherit gcc eutils
 
-DESCRIPTION="Library for the Qt client for DirectConnect"
+DESCRIPTION="DirectConnect client library"
 HOMEPAGE="http://dcgui.berlios.de/"
 SRC_URI="http://download.berlios.de/dcgui/${P}.tar.bz2"
 IUSE=""
