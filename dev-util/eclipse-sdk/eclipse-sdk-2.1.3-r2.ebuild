@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r2.ebuild,v 1.1 2004/05/10 20:59:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r2.ebuild,v 1.2 2004/05/10 21:10:21 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -277,7 +277,7 @@ src_install() {
 
 	# Install launchers and native code
 	if use gtk ; then
-		info "Installing eclipse-gtk binary"
+		einfo "Installing eclipse-gtk binary"
 		mv  ${D}/${eclipse_dir}/plugins/platform-launcher/library/gtk/eclipse-gtk \
 			${D}/${eclipse_dir}/eclipse-gtk || die "Failed to install eclipse-gtk"
 	fi
