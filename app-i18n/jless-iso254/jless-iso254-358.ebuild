@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.12 2004/06/24 21:47:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.13 2004/06/28 01:47:21 vapier Exp $
 
 inherit eutils
 
@@ -16,13 +16,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2"
 
 S=${WORKDIR}/${LESS_P}
 
 src_unpack() {
-
 	unpack ${LESS_P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${LESS_P}-iso254.patch.gz

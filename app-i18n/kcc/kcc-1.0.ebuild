@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.9 2004/06/24 21:48:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.10 2004/06/28 01:49:02 vapier Exp $
 
 inherit gcc eutils
 
 DESCRIPTION="A Kanji code converter"
-HOMEPAGE="" 	#There doesn't seem to be a home page for this package!
+HOMEPAGE="" # There doesn't seem to be a home page for this package!
 SRC_URI="ftp://ftp.jp.freebsd.org/pub/FreeBSD/ports/distfiles/${PN}.tar.gz"
 
 LICENSE="GPL-2"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S="${WORKDIR}/${PN}"
 

@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.16 2004/06/24 21:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.17 2004/06/28 01:41:41 vapier Exp $
 
 inherit cannadic eutils
-
-IUSE="doc"
 
 MY_P="Canna${PV//[._]/}"
 
@@ -14,13 +12,14 @@ SRC_URI="mirror://sourceforge.jp/canna/6059/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 ppc sparc alpha"
+IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
 	doc? ( app-text/ptex )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -99,8 +98,7 @@ src_install() {
 	fperms 775 /var/lib/canna/dic/{user,group}
 }
 
-pkg_prerm () {
-
+pkg_prerm() {
 	if [ -S /tmp/.iroha_unix/IROHA ] ; then
 		einfo
 		einfo "Stopping Canna for safe unmerge"
@@ -109,8 +107,7 @@ pkg_prerm () {
 	fi
 }
 
-pkg_postrm () {
-
+pkg_postrm() {
 	if [ -f /usr/sbin/cannaserver ] ; then
 		update-cannadic-dir
 		einfo

@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p1.ebuild,v 1.5 2004/06/24 21:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p1.ebuild,v 1.6 2004/06/28 01:41:41 vapier Exp $
 
 inherit cannadic eutils
-
-IUSE="doc"
 
 MY_P="Canna${PV//./}"
 
@@ -15,12 +13,13 @@ SRC_URI="mirror://sourceforge.jp/canna/7449/${MY_P/_/}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha ~amd64"
+IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
 	doc? ( app-text/ptex )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S="${WORKDIR}/${MY_P/_/}"
 
@@ -36,7 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	xmkmf || die
 
 	# Remove VENDORNAME, see bug #48229
@@ -105,7 +103,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	update-cannadic-dir
 	einfo
 	einfo "Canna dictionary format has been changed."
@@ -113,8 +110,7 @@ pkg_postinst() {
 	einfo
 }
 
-pkg_prerm () {
-
+pkg_prerm() {
 	if [ -S /tmp/.iroha_unix/IROHA ] ; then
 		# make sure cannaserver get stopped because otherwise
 		# we cannot stop it with /etc/init.d after emerge -C canna
@@ -126,8 +122,7 @@ pkg_prerm () {
 	fi
 }
 
-pkg_postrm () {
-
+pkg_postrm() {
 	if [ -f /usr/sbin/cannaserver -a -e ${T}/canna.cookie ] ; then
 		#update-cannadic-dir
 		einfo

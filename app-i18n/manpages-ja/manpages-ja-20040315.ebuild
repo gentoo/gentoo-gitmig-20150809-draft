@@ -1,28 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040315.ebuild,v 1.5 2004/06/24 21:51:11 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040315.ebuild,v 1.6 2004/06/28 01:54:27 vapier Exp $
 
 MY_P="man-pages-ja-${PV}"
 
-HOMEPAGE="http://www.linux.or.jp/JM/
-	http://www.gentoo.gr.jp/jpmain/translation.xml"
 DESCRIPTION="A collection of manual pages translated into Japanese"
+HOMEPAGE="http://www.linux.or.jp/JM/ http://www.gentoo.gr.jp/jpmain/translation.xml"
 SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/portage-${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 SLOT="0"
-S="${WORKDIR}/${MY_P}"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
+IUSE=""
 
 DEPEND=">=sys-apps/groff-1.18.1-r2
 	=sys-apps/groff-1.18*
 	sys-apps/man"
 
-pkg_setup() {
+S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
 	if ! groff -v -Tnippon >/dev/null 2>&1 ; then
 		ewarn
 		ewarn "You need to compile groff with multilingual support."
@@ -32,8 +30,7 @@ pkg_setup() {
 	fi
 }
 
-src_install () {
-
+src_install() {
 	for x in $(grep '^[^#].*' script/pkgs.list | cut -f1 | sort)
 	do
 		for a in $(ls -d manual/$x/man* 2>/dev/null)
@@ -58,8 +55,7 @@ src_install () {
 	dodoc ChangeLog INSTALL README
 }
 
-pkg_postinst () {
-
+pkg_postinst() {
 	einfo
 	einfo "You need to set appropriate LANG and PAGER variables to use"
 	einfo "Japanese manpages."

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.7 2004/06/24 21:49:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.8 2004/06/28 01:50:31 vapier Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	>=media-fonts/konfont-0.1"
 
-src_unpack(){
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
@@ -26,13 +26,13 @@ src_unpack(){
 	epatch ${FILESDIR}/${P}-racecondition-fix3.patch
 }
 
-src_compile(){
+src_compile() {
 	make config || die
 	make depend || die
 	make || die
 }
 
-src_install(){
+src_install() {
 	make LIBDIR=${D}/etc \
 		MANDIR=${D}/usr/share/man/ja/man1 \
 		BINDIR=${D}/usr/bin install || die
