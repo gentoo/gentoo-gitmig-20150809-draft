@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.1 2003/07/17 13:09:19 phosphan Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.2 2003/08/05 18:31:42 vapier Exp $
 
 [ -n "`use kde`" ] && inherit kde-functions
 inherit eutils
@@ -25,7 +25,7 @@ DEPEND=">=media-gfx/transfig-3.2.3d
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}.patch
 }
 
 src_compile() {
@@ -58,7 +58,7 @@ src_compile() {
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	dodir ${KDEDIR}/share/applnk/Graphics
 	dodir ${KDEDIR}/share/mimelnk/application
 	dodir ${KDEDIR}/share/icons/hicolor/32x32/mimetypes

@@ -1,25 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.2.ebuild,v 1.2 2003/08/03 16:53:37 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.2.ebuild,v 1.3 2003/08/05 18:30:14 vapier Exp $
 
-IUSE="mysql gd"
-
-inherit perl-module
-inherit eutils
-
-S=${WORKDIR}/${P}
+inherit perl-module eutils
 CATEGORY="app-sci"
 
-DESCRIPTION="The Bioperl Project is a collection of tools for bioinformatics, genomics and life science research."
+DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
+HOMEPAGE="http://www.bioperl.org/"
 #SRC_URI="http://www.cpan.org/modules/by-module/Bio/${P}.tar.gz"
 SRC_URI="http://www.bioperl.org/ftp/DIST/${P}.tar.gz"
-HOMEPAGE="http://www.bioperl.org/"
 
-SLOT="0"
 LICENSE="Artistic GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
+IUSE="mysql gd"
 
-#DEPEND=${DEPEND}
 DEPEND="${DEPEND}
 	dev-perl/File-Temp
 	dev-perl/HTML-Parser
@@ -37,7 +32,6 @@ DEPEND="${DEPEND}
 	dev-perl/Text-Shellwords
 	gd? ( >=dev-perl/GD-1.32-r1 )
 	mysql? ( >=dev-perl/DBD-mysql-2.1004-r3 )"
-RDEPEND=${RDEPEND}
 
 src_unpack() {
 	unpack ${A}

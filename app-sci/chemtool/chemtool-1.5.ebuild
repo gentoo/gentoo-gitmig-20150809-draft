@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.5.ebuild,v 1.5 2003/04/18 17:12:23 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.5.ebuild,v 1.6 2003/08/05 18:31:42 vapier Exp $
 
 [ -n "`use kde`" ] && inherit kde-functions
 inherit eutils
@@ -60,7 +60,7 @@ src_compile() {
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	einstall \
 		gnomedir=${D}/usr \
 		kdedir=${D}/${KDEDIR} \

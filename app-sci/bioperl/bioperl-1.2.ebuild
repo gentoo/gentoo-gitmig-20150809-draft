@@ -1,20 +1,17 @@
 # Copyright 2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.2 2003/06/07 01:22:13 avenj Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.3 2003/08/05 18:30:14 vapier Exp $
 
 inherit perl-module debug
 
-S="${WORKDIR}/bioperl-${PV}"
-IUSE="mysql gd"
-
-DESCRIPTION="The Bioperl Project is a collection of tools for bioinformatics, genomics and life science research."
-
-HOMEPAGE="http://www.bioperl.org"
+DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
+HOMEPAGE="http://www.bioperl.org/"
 SRC_URI="http://bioperl.org/ftp/DIST/${P}.tar.gz"
 
+LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
-LICENSE="Artistic GPL-2"
+IUSE="mysql gd"
 
 DEPEND="dev-perl/File-Temp
 	dev-perl/Graph
@@ -58,6 +55,7 @@ src_compile() {
 	# This dies at RootIO.t:
 	# perl-module_src_test || die "test failed"
 }
+
 src_install() {
 	mydoc="AUTHORS BUGS FAQ"
 	perl-module_src_install

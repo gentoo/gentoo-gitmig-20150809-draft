@@ -1,14 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.10 2003/02/13 09:21:23 vapier Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.59.1.ebuild,v 1.11 2003/08/05 18:32:27 vapier Exp $
 
 DESCRIPTION="Mathematical programming environment"
-
+HOMEPAGE="http://euler.sourceforge.net/"
 SRC_URI="mirror://sourceforge/euler/euler-1.59.1.tar.gz"
-
-HOMEPAGE="http://euler.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +13,6 @@ KEYWORDS="x86"
 DEPEND="virtual/glibc
 	virtual/x11
 	=x11-libs/gtk+-1.2*"
-
 PROVIDE="app-misc/euler"
 
 src_unpack() {
@@ -32,13 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
-
 	cd ${S}/source
 	emake INSTALL_DIR=/usr || die
 }
 
-src_install () {
-
+src_install() {
 	cd ${S}/source
 	dodir usr usr/share usr/bin
 	make INSTALL_DIR=${D}/usr install || die

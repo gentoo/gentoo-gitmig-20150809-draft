@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.5 2003/03/11 21:11:45 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.1.2.ebuild,v 1.6 2003/08/05 18:35:17 vapier Exp $
 
-SLOT="0"
+DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://aros.ca.sandia.gov/~cljanss/mpqc/"
 SRC_URI="http://aros.ca.sandia.gov/~cljanss/mpqc/distrib/${P}.tar.gz
 	doc? ( http://aros.ca.sandia.gov/~cljanss/mpqc/distrib/${PN}-man-${PV}.tar.gz )"
-DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="doc X"
 
@@ -15,7 +16,7 @@ DEPEND="sys-devel/flex
 	app-sci/blas
 	app-sci/lapack
 	dev-lang/perl
-	X?	( x11-base/xfree )"
+	X? ( x11-base/xfree )"
 
 src_compile() {
 	CFLAGS_SAVE=${CFLAGS}; CXXFLAGS_SAVE=${CXXFLAGS}

@@ -1,19 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.0.2.ebuild,v 1.4 2003/07/02 12:33:39 aliz Exp $
-
-IUSE="mysql gd"
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.0.2.ebuild,v 1.5 2003/08/05 18:30:14 vapier Exp $
 
 inherit perl-module
-
-S=${WORKDIR}/${P}
 CATEGORY="app-sci"
-DESCRIPTION="The Bioperl Project is a collection of tools for bioinformatics, genomics and life science research."
+
+DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
+HOMEPAGE="http://www.bioperl.org/"
 SRC_URI="http://bioperl.org/DIST/${P}.tar.gz"
-HOMEPAGE="http://www.bioperl.org"
 
 LICENSE="Artistic | GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE="mysql gd"
 
 DEPEND="dev-perl/File-Temp
 	dev-perl/HTML-Parser
@@ -30,8 +29,6 @@ DEPEND="dev-perl/File-Temp
 	dev-perl/Text-Shellwords
 	gd? ( >=dev-perl/GD-1.32-r1 )
 	mysql? ( >=dev-perl/DBD-mysql-2.1004-r3 )"
-
-SLOT="0"
 
 src_compile() {
 	# there's a test to run for BioGFFDB if using mysql

@@ -1,20 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.6.ebuild,v 1.5 2003/07/02 12:33:39 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.6.ebuild,v 1.6 2003/08/05 18:41:03 vapier Exp $
 
+DESCRIPTION="a molecular structure drawing program"
+HOMEPAGE="http://www.prism.gatech.edu/~gte067k/${PN}"
+SRC_URI="http://www.prism.gatech.edu/~gte067k/${PN}/${P}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="qt"
 
-S=${WORKDIR}/${P}
-DESCRIPTION="XDrawChem--a molecular structure drawing program."
-SRC_URI="http://www.prism.gatech.edu/~gte067k/${PN}/${P}.tgz"
-HOMEPAGE="http://www.prism.gatech.edu/~gte067k/${PN}"
-
-KEYWORDS="x86 ~ppc ~sparc "
-SLOT="0"
-LICENSE="GPL-2"
-
-DEPEND="qt? ( >=qt-3.0.0 )"
-
+DEPEND="qt? ( >=x11-libs/qt-3.0.0 )"
 #if you would like to use app-sci/babel instead of included openbabel, please uncomment the following 2 lines
 #RDEPEND="${DEPEND}
 #	app-sci/babel"
@@ -24,7 +21,7 @@ src_compile() {
 	emake -f Makefile INSTRING=/usr/share/xdrawchem || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr/bin
 	dobin xdrawchem/xdrawchem
 
