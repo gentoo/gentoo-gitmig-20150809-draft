@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mondo-rescue
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.15 2005/03/05 22:31:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/ChangeLog,v 1.16 2005/03/05 22:38:18 ciaranm Exp $
+
+  05 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  mondo-rescue-2.03.ebuild, mondo-rescue-2.04.ebuild,
+  mondo-rescue-2.10.ebuild:
+  move sys-apps/buffer sys-block/buffer
 
   05 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   mondo-rescue-1.47.ebuild:
