@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.68 2005/02/02 22:20:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.69 2005/02/03 00:04:58 gustavoz Exp $
+
+  02 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> openmotif-2.2.3.ebuild:
+  Stable on sparc wrt #78111
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> openmotif-2.2.3.ebuild:
   filter -ftracer
