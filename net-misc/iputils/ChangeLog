@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.32 2004/08/04 18:51:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.33 2004/10/07 00:47:06 lv Exp $
+
+  06 Oct 2004; Travis Tilley <lv@gentoo.org>
+  +files/iputils-021109-linux-udp-header.patch, iputils-021109-r3.ebuild:
+  fix compiling iputils using newer glibc snapshots
 
   04 Aug 2004; Jon Portnoy <avenj@gentoo.org> iputils-021109-r3.ebuild :
   Fix bison sed line. Bugs 59414 and 59191.

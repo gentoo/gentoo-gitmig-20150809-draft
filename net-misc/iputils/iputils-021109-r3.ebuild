@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.10 2004/08/09 04:34:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.11 2004/10/07 00:47:06 lv Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -38,6 +38,10 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	epatch ${FILESDIR}/${PV}-no-pfkey-search.patch
+
+	# make iputils work with newer glibc snapshots
+	epatch ${FILESDIR}/${P}-linux-udp-header.patch
+
 	sed -i \
 		-e "/^CCOPT=/s:-O2:${CFLAGS}:" \
 		-e "/^CC=/s:gcc:$(gcc-getCC):" \
