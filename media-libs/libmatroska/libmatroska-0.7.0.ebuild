@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.3 2004/05/27 19:16:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.0.ebuild,v 1.4 2004/06/09 21:42:22 lu_zero Exp $
 
 inherit flag-o-matic
 
@@ -26,6 +26,7 @@ src_compile() {
 	# use of matroska, like libvlcplugin from vlc.
 	# Travis Tilley <lv@gentoo.org> 09 Apr 2004
 	use amd64 && append-flags -fPIC
+	use ppc && append-flags -fPIC
 
 	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
 	make PREFIX=/usr \
