@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.1 2003/04/12 15:35:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.2 2003/06/11 00:31:44 msterret Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
