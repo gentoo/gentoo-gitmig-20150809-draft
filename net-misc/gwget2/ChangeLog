@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gwget2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/ChangeLog,v 1.1 2003/08/13 03:58:02 obz Exp $
+
+*gwget2-0.5 (13 Aug 2003)
+
+  13 Aug 2003; Mike Gardiner <obz@gentoo.org> gwget2-0.5.ebuild:
+  New package. Thanks to Jose Romildo Malaquias (romildo@iber.com.br). See bug
+  #18255
+
