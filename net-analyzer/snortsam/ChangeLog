@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.3 2004/08/16 10:55:29 eldad Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.4 2005/01/12 08:17:59 dragonheart Exp $
+
+  11 Jan 2005; Daniel Black <dragonheart@gentoo.org> snortsam-2.24.ebuild:
+  ppc stable. (needed for snort-2.3.0_rc2 stablity as a result of bug #70758)
 
   16 Aug 2004; Eldad Zack <eldad@gentoo.org> snortsam-2.24.ebuild:
   x86 stable
