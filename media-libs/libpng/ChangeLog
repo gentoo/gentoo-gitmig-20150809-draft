@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.31 2003/05/18 17:36:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.32 2003/07/01 15:35:24 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> libpng-1.2.5-r4.ebuild:
+  set stable on sparc
 
   18 maj 2003; <spider@gentoo.org>libpng-1.0.15-r1.ebuild :
   update to make libpng not overwrite libpng.pc, which broke fbdesk

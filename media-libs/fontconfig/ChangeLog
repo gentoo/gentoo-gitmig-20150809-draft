@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.37 2003/06/17 23:21:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.38 2003/07/01 15:32:33 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> fontconfig-2.1.4.ebuild:
+  set stable on sparc
 
   17 Jun 2003; foser <foser@gentoo.org> fontconfig-2.2.0-r2.ebuild :
   backport disable docs fix (#21195)
