@@ -61,3 +61,4 @@ move net-mail/ximian-connector mail-client/ximian-connector
 move net-mail/drac mail-client/drac
 move net-mail/sendmail mail-mta/sendmail
 move x11-misc/ami app-i18n/ami
+move net-mail/nullmailer mail-mta/nullmailer
