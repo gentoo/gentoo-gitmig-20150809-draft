@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20030731b.ebuild,v 1.1 2004/01/24 09:36:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20030731b.ebuild,v 1.2 2004/03/15 15:49:25 dholm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ DESCRIPTION="The Sword of Fargoal - a remake of C64's old dungeon crawler game"
 HOMEPAGE="http://squidfighter.sourceforge.net/fargoal/"
 SRC_URI="mirror://sourceforge/squidfighter/${PN}${PV}.zip"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
