@@ -1,5 +1,5 @@
-MD5 86bc0a14ff3ad62e193d735552847695 ChangeLog 6941
-MD5 4440624a9efb94861c5b60fa30ec78cf alpha-sources-2.4.21-r15.ebuild 4608
+MD5 5b33ee28ca94333ee96be884d2c00f71 alpha-sources-2.4.21-r16.ebuild 4779
+MD5 f24529241dd1b78a6aa2b29b0645b0cc ChangeLog 7263
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/alpha-sources.XDRWrapFix.patch 1499
 MD5 5bf9836a632a861728d33f9736bb7431 files/alpha-sources.CAN-2004-0133.patch 427
 MD5 d1ccc2047be533c992f67270a150a210 files/alpha-sources.cmdlineLeak.patch 388
@@ -7,10 +7,11 @@ MD5 c460ea130cb4ae84a5063ba044e3ce72 files/alpha-sources.CAN-2004-0427.patch 460
 MD5 9c816c892d6e3d3f0b7b77d3d503ab10 files/alpha-sources.CAN-2004-0075.patch 634
 MD5 d4a740ae56c2049247083af387a22a85 files/alpha-sources.CAN-2004-0394.patch 350
 MD5 147fec50180ad91b6260fc7201dcb90f files/alpha-sources.CAN-2004-0010.patch 6050
+MD5 b9a94233e1457787352e5f85e3e3582d files/alpha-sources.binfmt_a.out.patch 2009
 MD5 dc18e982f8149588a291956481885a8c files/alpha-sources.CAN-2004-0495.patch 17549
 MD5 fce867333f0c9d905d426396371bc9b4 files/alpha-sources.binfmt_elf.patch 2511
 MD5 a61e57d5483a06f20da339d91f98fbb8 files/alpha-sources.rtc_fix.patch 6769
-MD5 76cc0c8530da5b9d8f6db7182df4d591 files/digest-alpha-sources-2.4.21-r15 304
+MD5 b0a1f80aff51d6601e8924329023b241 files/alpha-sources.AF_UNIX.patch 515
 MD5 174438d215b70cad5ffb00ca8123c062 files/alpha-sources.munmap.patch 837
 MD5 60d25ff310fc6abfdce39ec9e47345af files/alpha-sources.CAN-2004-0685.patch 2809
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/alpha-sources.CAN-2004-0497.patch 707
@@ -20,5 +21,6 @@ MD5 de75cfa969ed092578d9ddda6c5be334 files/alpha-sources.CAN-2004-0181.patch 123
 MD5 eaeda68a619caaddd5b8fdc5e7c39932 files/alpha-sources.CAN-2004-0177.patch 384
 MD5 21f3a4f186017d925067335e24db36a1 files/alpha-sources.CAN-2004-0109.patch 1877
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/alpha-sources.CAN-2004-0178.patch 424
+MD5 76cc0c8530da5b9d8f6db7182df4d591 files/digest-alpha-sources-2.4.21-r16 304
 MD5 082e410301c2522521b0d3843db19c9e files/alpha-sources.CAN-2004-0535.patch 502
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242

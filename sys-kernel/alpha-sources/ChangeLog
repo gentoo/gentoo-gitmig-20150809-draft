@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.37 2004/11/19 21:09:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.38 2004/11/27 17:22:56 plasmaroo Exp $
+
+*alpha-sources-2.4.21-r16 (27 Nov 2004)
+
+  27 Nov 2004; <plasmaroo@gentoo.org> -alpha-sources-2.4.21-r15.ebuild,
+  +alpha-sources-2.4.21-r16.ebuild, +files/alpha-sources.AF_UNIX.patch,
+  +files/alpha-sources.binfmt_a.out.patch:
+  Version bump for the AF_UNIX and a.out security vulnerabilities; bugs #72452
+  and #72317.
 
 *alpha-sources-2.4.21-r15 (19 Nov 2004)
 
