@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.37 2004/06/24 23:05:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.38 2004/07/01 08:35:37 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libao-0.8.3-r1.ebuild, libao-0.8.4-r1.ebuild, libao-0.8.4.ebuild,
+  libao-0.8.5.ebuild:
+  virtual/glibc -> virtual/libc
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libao-0.8.5.ebuild:
   Stable on alpha.

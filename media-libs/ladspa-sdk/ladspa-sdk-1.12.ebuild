@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.12 2004/06/24 23:04:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.13 2004/07/01 08:35:20 eradicator Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 src_unpack() {

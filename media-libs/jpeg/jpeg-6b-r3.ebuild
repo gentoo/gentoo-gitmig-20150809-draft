@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.25 2004/06/24 23:03:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.26 2004/07/01 08:30:29 eradicator Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

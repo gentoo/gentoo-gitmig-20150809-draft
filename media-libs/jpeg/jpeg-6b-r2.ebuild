@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r2.ebuild,v 1.13 2004/06/24 23:03:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r2.ebuild,v 1.14 2004/07/01 08:30:29 eradicator Exp $
 
 MY_P=${PN}src.v${PV}
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 

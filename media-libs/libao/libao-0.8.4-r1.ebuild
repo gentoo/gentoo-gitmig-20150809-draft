@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.14 2004/06/24 23:05:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.15 2004/07/01 08:35:37 eradicator Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha hppa ~amd64 mips"
 IUSE="alsa arts esd nas mmap"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.22 )
