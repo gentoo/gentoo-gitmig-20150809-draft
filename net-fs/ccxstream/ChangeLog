@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/ccxstream
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ccxstream/ChangeLog,v 1.2 2004/08/06 11:02:24 chrb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ccxstream/ChangeLog,v 1.3 2005/03/10 11:56:08 chrb Exp $
+
+  10 Mar 2005; Chris Bainbridge <chrb@gentoo.org> ccxstream-1.0.15.ebuild:
+  mark stable on x86.
 
   06 Aug 2004; Chris Bainbridge <chrb@gentoo.org> ccxstream-1.0.15.ebuild:
   added inherit
