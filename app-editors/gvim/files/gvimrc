@@ -14,3 +14,7 @@ set mousemodel=popup          " right mouse button pops up a menu in the GUI
 if (&foldmethod == 'diff')
 	set columns=165
 endif
+
+" For bug 33327, add a mapping which allows shift-insert to function
+" as expected in insert and command-line modes
+map! <s-insert> <c-r>*
