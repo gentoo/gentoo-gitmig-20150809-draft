@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.38 2003/11/05 15:53:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.39 2003/11/12 18:05:40 agriffis Exp $
+
+  12 Nov 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0-r1.ebuild:
+  Mark this version stable on all arches since we've had almost-complete
+  coverage and want them to move forward at the same time. Additional motivation
+  is that 1.6.8 won't build on ia64 (see bug 33305)
 
   03 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.0-r1.ebuild,
   ruby-1.8.1_pre2.ebuild:
