@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.70-r5.ebuild,v 1.1 2003/06/05 11:58:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.70-r5.ebuild,v 1.2 2003/06/05 16:40:51 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
@@ -44,6 +44,8 @@ src_unpack() {
 	sed -i -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" Makefile
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
+	# ARCH is used differently in the makefiles now, and this seems to fix things
+	unset ARCH
 	make mrproper || die
 
 	#fix silly permissions in tarball
