@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.2 2002/02/20 21:04:25 gbevin Exp $
+
+*libpcre-3.9 (20 Feb 2002)
+
+  20 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  
+  Version upgrade to latest version.
+  Added binary compatibility slot 3.
+  
 
 *libpcre-3.7 (1 Feb 2002)
 
