@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.11 2004/08/02 15:48:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.12 2004/08/10 08:49:13 axxo Exp $
+
+  10 Aug 2004; Thomas Matthijs <axxo@gentoo.org> velocity-1.4.ebuild:
+  fix doc target #59859
 
   02 Aug 2004; Thomas Matthijs <axxo@gentoo.org> velocity-1.4.ebuild:
   fix doc checking bug 59156

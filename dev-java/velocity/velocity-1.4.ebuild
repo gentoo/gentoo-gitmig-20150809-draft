@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4.ebuild,v 1.3 2004/08/02 15:48:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4.ebuild,v 1.4 2004/08/10 08:49:13 axxo Exp $
 
 DESCRIPTION="A Java-based template engine that allows easy creation/rendering of documents that format and present data."
 HOMEPAGE="http://jakarta.apache.org/velocity/"
@@ -24,7 +24,7 @@ src_compile () {
 	local antflags
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use junit && antflags="${antflags} test"
-	use doc && antflags="${antflags} javadoc"
+	use doc && antflags="${antflags} javadocs"
 	if use j2ee ; then
 		cp /opt/sun-j2ee-1.3.1/lib/j2ee.jar ${S}/build/lib
 		ant ${antflags} jar-J2EE || die "Java compile failed."
