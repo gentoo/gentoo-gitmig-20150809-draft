@@ -1,6 +1,6 @@
 MD5 1a6b9bd644b263c7c262827d729cf0c4 gnome-alsamixer-0.9.6.ebuild 898
 MD5 4ce57267565cf862c3038159782d6db3 gnome-alsamixer-0.9.3.ebuild 934
-MD5 695f7886bf804786e9a36480f1d00cac ChangeLog 1394
+MD5 62289a09ed3e0f092aa5dd09daa4143a ChangeLog 1473
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 62622a38c69e0f766d8f8f1f4948dadc files/gnome-alsamixer.desktop 290
 MD5 82b95a0df43429da5098b4da883f6bd0 files/gnome-alsamixer-0.9.6-gtk24.patch 699
