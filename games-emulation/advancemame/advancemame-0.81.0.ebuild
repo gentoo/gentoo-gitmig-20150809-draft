@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.81.0.ebuild,v 1.1 2004/04/08 20:29:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.81.0.ebuild,v 1.2 2004/05/11 12:51:22 vapier Exp $
 
 inherit eutils games
-use debug && inherit debug
 
 DESCRIPTION="GNU/Linux port of the MAME emulator with GUI menu"
 HOMEPAGE="http://advancemame.sourceforge.net/"
