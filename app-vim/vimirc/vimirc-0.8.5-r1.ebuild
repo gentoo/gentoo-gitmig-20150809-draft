@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.8.5-r1.ebuild,v 1.1 2004/09/06 22:20:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/vimirc-0.8.5-r1.ebuild,v 1.2 2004/12/29 00:50:47 ciaranm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: IRC Client"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=931"
 LICENSE="vim"
-KEYWORDS="~x86 sparc mips ~ppc"
+KEYWORDS="x86 sparc mips ~ppc"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="vimirc.txt"
