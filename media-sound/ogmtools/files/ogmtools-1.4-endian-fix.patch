@@ -1,0 +1,11 @@
+--- avilib/avidump.c.orig	2004-04-18 01:20:48.000000000 -0700
++++ avilib/avidump.c	2004-04-18 01:21:30.000000000 -0700
+@@ -57,7 +57,7 @@
+                    ((x<<8)  & 0x00ff0000) |\
+                    ((x<<24) & 0xff000000))
+ # define SWAP8(x) (((SWAP4(x)<<32) & 0xffffffff00000000ULL) |\
+-                   (SWAP4(x)))
++                   SWAP4(x))
+ #else
+ # define SWAP2(a) (a)
+ # define SWAP4(a) (a)
