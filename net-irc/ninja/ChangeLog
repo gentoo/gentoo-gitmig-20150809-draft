@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/ninja
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.1 2003/05/12 19:55:30 avenj Exp $
+
+*ninja-1.5.9_pre9.ebuild (12 May  2003)
+
+  12 May 2003; Jon Portnoy <avenj@gentoo.org> ebuild-1.5.9_pre9.ebuild :
+  Initial import. Ebuild submitted by Burton Samograd
+  <kruhft@kruhft.dyndns.org>. Thanks Burton!
