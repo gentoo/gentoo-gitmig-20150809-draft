@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.297 2004/08/03 15:35:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.298 2004/08/03 18:18:57 lv Exp $
+
+*gcc-3.4.1-r2 (03 Aug 2004)
+
+  03 Aug 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch, -gcc-3.4.1-r1.ebuild,
+  +gcc-3.4.1-r2.ebuild, gcc-3.4.1.ebuild:
+  new snapshot, among other things it contains an enum fix that's needed to work
+  on porting openoffice to gcc 3.4. removed the old experimental ebuild and
+  keyworded 3.4.1 stable on ppc64 since it also has the ICE fix for mozilla.
+  updated piepatch version to 8.7.6.5
 
   03 Aug 2004; Tom Gall <tgall@gentoo.org> gcc-3.4.1-r1.ebuild:
   stable on ppc64

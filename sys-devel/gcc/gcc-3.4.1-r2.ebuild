@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r1.ebuild,v 1.6 2004/08/03 15:35:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.1 2004/08/03 18:18:57 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -10,8 +10,9 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ppc64"
-#KEYWORDS="-* ~amd64 ~mips ~ppc64"
+# previous release known to b0rk glibc on hppa... i dont know if this bug
+# still exists, so i'll keep in the -hppa...
+KEYWORDS="-* ~amd64 ~mips ~ppc64 ~x86 -hppa"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # we also need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
@@ -66,10 +67,10 @@ fi
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
-BRANCH_UPDATE=
+BRANCH_UPDATE=20040803
 
 # PIE support
-PIE_VER="8.7.6.3"
+PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 
 # ProPolice version
@@ -490,13 +491,11 @@ src_unpack() {
 	do_patch_tarball
 	do_piessp_patches
 
-	version_patch ${FILESDIR}/3.4.1/gcc-${PV}-gentoo-branding.patch \
+	version_patch ${FILESDIR}/3.4.1/gcc-${PV}-r2-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
 	# misc patches that havent made it into a patch tarball yet
-	use sparc && epatch ${FILESDIR}/3.4.0/gcc34-multi32-hack.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
-	epatch ${FILESDIR}/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
