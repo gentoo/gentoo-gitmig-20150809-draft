@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/music-box
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/music-box/ChangeLog,v 1.1 2004/12/08 19:24:54 sergey Exp $
+
+*music-box-0.0.17 (08 Dec 2004)
+
+  08 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +music-box-0.0.17.ebuild:
+  First time added to portage. (Bug #51996)
+
