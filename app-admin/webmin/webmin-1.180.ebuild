@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.180.ebuild,v 1.1 2005/01/27 10:34:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.180.ebuild,v 1.2 2005/01/28 07:31:16 eradicator Exp $
 
 IUSE="ssl apache2 webmin-minimal"
 
@@ -26,9 +26,10 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 
+	cd ${S}
+
 	# in webmin-minimal webalizer and apache2 are not present
 	if ! use webmin-minimal ; then
-		cd ${S}
 		# Bug #47020
 		epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.74 2005/01/27 10:34:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.75 2005/01/28 07:31:16 eradicator Exp $
+
+  27 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> :
+  Fix bug #79769 (now works with USE=webmin-minimal).
 
 *webmin-1.180 (27 Jan 2005)
 
