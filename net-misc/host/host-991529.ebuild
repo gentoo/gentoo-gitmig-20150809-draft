@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.18 2003/10/10 09:39:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.19 2003/12/24 15:57:13 zul Exp $
 
 S="${WORKDIR}"
 
@@ -13,7 +13,7 @@ DESCRIPTION="the standalone host tool, supports LOC reporting (RFC1876)"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
 
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa -amd64"
 LICENSE="as-is"
 SLOT="0"
 
