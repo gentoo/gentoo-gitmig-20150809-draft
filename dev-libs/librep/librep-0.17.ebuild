@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# # $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17.ebuild,v 1.8 2004/08/30 19:16:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17.ebuild,v 1.9 2004/10/03 21:17:06 swegener Exp $
 
 IUSE="readline"
 
