@@ -8,8 +8,8 @@ This page contains information about the "guide" XML project, used for the
 Gentoo Linux documentation and Web site.
 </abstract>
 
-<version>1.0</version>
-<date>07 Jun 2001</date>
+<version>1.1</version>
+<date>02 Sep 2001</date>
 
 <chapter>
 <title>Guide XML</title>
@@ -26,8 +26,8 @@ developerWorks</uri> articles, written by Daniel Robbins:</p>
 <ul>
 	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gentoo/index.html">Part 1</uri>, Daniel creates a user-centric action plan and introduces <c>pytext</c>, an embedded Python interpreter.</li>
 	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gent/">Part 2</uri>, Daniel shows off the new <c>guide XML</c> documentation system and sets up a daily CVS-log mailing list.</li>
-	<li>Part 3: Coming soon</li>
-	<li>Part 4: Coming soon</li>
+	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gentoo3/">Part 3</uri>, Daniel designs a new look for the site as a whole.</li>
+	<li>In <uri link="http://www-106.ibm.com/developerworks/usability/library/us-gentoo4/">Part 4</uri>, Daniel completes the conversion to XML/XSLT, fixes a host of Netscape 4.x browser compatibility bugs, and adds an auto-generated XML Changelog to the site.</li>
 </ul>
 
 <p>We also have a <uri link="/doc/xml-guide.html">Gentoo Linux Documentation

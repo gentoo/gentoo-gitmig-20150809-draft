@@ -208,7 +208,7 @@ tarball contained on the CD-ROM.  To mount the CD-ROM, one typically types:
 # <i>cd /mnt/gentoo</i>
 # <i>tar -xvjpf /mnt/cdrom/build-*.tbz2</i>
 # <i>mount -o bind /proc /mnt/gentoo/proc</i>
-# <i>chroot /mnt/gentoo</i>
+# <i>chroot /mnt/gentoo /bin/bash</i>
 # <i>env-update</i>
 Regenerating /etc/ld.so.cache...
 # <i>source /etc/profile</i>
