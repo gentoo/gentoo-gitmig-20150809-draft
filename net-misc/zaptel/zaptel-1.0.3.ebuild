@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.3.ebuild,v 1.2 2005/01/05 01:49:19 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.3.ebuild,v 1.3 2005/01/13 21:09:05 stkn Exp $
 
 IUSE="devfs26"
 
-inherit eutils kernel-mod
+inherit eutils kernel-mod toolchain-funcs
 
 DESCRIPTION="Pseudo-TDM engine"
 HOMEPAGE="http://www.asterisk.org"
@@ -73,6 +73,12 @@ src_unpack() {
 	if use devfs26; then
 		einfo "Enabling experimental devfs support for linux-2.6..."
 		epatch ${FILESDIR}/${PN}-1.0.0-experimental-devfs26.diff
+	fi
+
+	# apply patch for gcc-3.4.x if that's the compiler in use...
+	# fixes (#76707)
+	if use x86 && [[ `gcc-version` = "3.4" ]]; then
+		epatch ${FILESDIR}/${P}-gcc34.patch
 	fi
 }
 

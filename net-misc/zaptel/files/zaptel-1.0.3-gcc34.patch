@@ -1,0 +1,46 @@
+diff -r -u -b -B zaptel-1.0.3.orig/wcfxs.c zaptel-1.0.3/wcfxs.c
+--- zaptel-1.0.3.orig/wcfxs.c	2004-09-15 14:40:16.000000000 -0500
++++ zaptel-1.0.3/wcfxs.c	2005-01-07 14:17:10.000000000 -0600
+@@ -469,9 +469,9 @@
+ 	zt_receive(&wc->span);
+ }
+ 
+-static inline void wcfxs_voicedaa_check_hook(struct wcfxs *wc, int card);
+-static inline void wcfxs_proslic_check_hook(struct wcfxs *wc, int card);
+-static inline void wcfxs_proslic_recheck_sanity(struct wcfxs *wc, int card);
++static void wcfxs_voicedaa_check_hook(struct wcfxs *wc, int card);
++static void wcfxs_proslic_check_hook(struct wcfxs *wc, int card);
++static void wcfxs_proslic_recheck_sanity(struct wcfxs *wc, int card);
+ 
+ static void wcfxs_stop_dma(struct wcfxs *wc);
+ static void wcfxs_reset_tdm(struct wcfxs *wc);
+
+--- zaptel-1.0.3/wcfxs.c.orig	2005-01-10 19:33:37.304026336 +0000
++++ zaptel-1.0.3/wcfxs.c	2005-01-10 19:35:11.453713408 +0000
+@@ -1356,7 +1356,7 @@
+ 	return 0;
+ }
+ 
+-static inline void wcfxs_proslic_recheck_sanity(struct wcfxs *wc, int card)
++static void wcfxs_proslic_recheck_sanity(struct wcfxs *wc, int card)
+ {
+ 	int res;
+ 	/* Check loopback */
+@@ -1380,7 +1380,7 @@
+ 	}
+ }
+ 
+-static inline void wcfxs_voicedaa_check_hook(struct wcfxs *wc, int card)
++static void wcfxs_voicedaa_check_hook(struct wcfxs *wc, int card)
+ {
+ #ifndef AUDIO_RINGCHECK
+ 	unsigned char res;
+@@ -1524,7 +1524,7 @@
+ 	}
+ }
+ 
+-static inline void wcfxs_proslic_check_hook(struct wcfxs *wc, int card)
++static void wcfxs_proslic_check_hook(struct wcfxs *wc, int card)
+ {
+ 	char res;
+ 	int hook;
