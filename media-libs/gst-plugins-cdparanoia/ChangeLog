@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/gst-plugins-cdparanoia
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-cdparanoia/ChangeLog,v 1.1 2003/06/16 22:49:52 foser Exp $
+
+*gst-plugins-cdparanoia-0.6.2 (17 Jun 2003)
+
+  17 Jun 2003; foser <foser@gentoo.org> gst-plugins-cdparanoia-0.6.2, ChangeLog :
+  Initial commit, experimental ebuild using gst-plugins eclass
