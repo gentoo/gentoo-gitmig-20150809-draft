@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.20.ebuild,v 1.1 2005/02/20 05:23:32 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.20.ebuild,v 1.2 2005/03/18 07:00:37 morfic Exp $
 
 inherit eutils
 
-DESCRIPTION="Ice Window Manager"
+DESCRIPTION="Ice Window Manager with Themes"
 
 HOMEPAGE="http://www.icewm.org/
 	http://sourceforge.net/projects/icewmsilverxp/"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~ppc ~x86 ~sparc ~amd64"
+KEYWORDS="ppc x86 ~sparc ~amd64"
 
 IUSE="esd gnome imlib nls spell truetype xinerama silverxp"
 
