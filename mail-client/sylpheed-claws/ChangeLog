@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.36 2005/03/10 19:27:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.37 2005/03/12 14:55:01 genone Exp $
+
+  12 Mar 2005; Marius Mauch <genone@gentoo.org> sylpheed-claws-1.0.3.ebuild:
+  makring 1.0.3 stable on x86 and amd64 for bug #84056.
 
 *sylpheed-claws-1.0.3 (10 Mar 2005)
 
