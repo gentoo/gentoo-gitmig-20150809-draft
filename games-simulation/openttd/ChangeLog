@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.1 2004/06/26 22:25:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.2 2004/07/03 02:13:53 mr_bones_ Exp $
+
+  02 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  openttd-20040626.ebuild:
+  don't mess with MAKEOPTS; unpack in unpack; use games eclass functions; tidy
 
 *openttd-20040626 (27 Jun 2004)
 
