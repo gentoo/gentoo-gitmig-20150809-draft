@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.0.ebuild,v 1.1 2004/09/15 13:29:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1.ebuild,v 1.1 2004/09/30 15:12:42 foser Exp $
 
 inherit gnome2 eutils
 
-IUSE="doc ssl gnutls samba ipv6 hal"
+IUSE="doc ssl gnutls samba ipv6 hal howl"
 
 SLOT="2"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2
 	app-admin/fam
 
 	gnome-base/gnome-mime-data
-	>=x11-misc/shared-mime-info-0.14
+	>=x11-misc/shared-mime-info-0.15
 
 	ssl? ( >=dev-libs/openssl-0.9.5
 		!gnome-extra/gnome-vfs-sftp )
@@ -33,10 +33,10 @@ RDEPEND=">=dev-libs/glib-2
 	samba? ( >=net-fs/samba-3
 		!gnome-extra/gnome-vfs-extras )
 	hal? ( >=sys-apps/hal-0.2.92
-		>=sys-apps/dbus-0.22 )"
+		>=sys-apps/dbus-0.22 )
+	howl? (>=net-misc/howl-0.9.6-r1 )"
 
 # FIXME : make the fam dep a virtual
-# FIXME : add howl support when its fixed
 
 # ssl/gnutls USE deps : if both are enabled choose openssl
 # foser <foser@gentoo.org> 19 Apr 2004
@@ -52,6 +52,7 @@ G2CONF="${G2CONF} \
 	$(use_enable samba) \
 	$(use_enable ipv6) \
 	$(use_enable hal) \
+	$(use_enable howl) \
 	--disable-schemas-install
 	--without-gtk"
 
@@ -61,6 +62,18 @@ G2CONF="${G2CONF} \
 use gnutls && use ssl && G2CONF="${G2CONF} --disable-gnutls"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+
+	# make howl a real switch (#64906)
+	epatch ${FILESDIR}/${P}-howl_config.patch
+	automake
+	autoconf
+
+}
 
 src_install() {
 

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.106 2004/09/17 22:13:54 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.107 2004/09/30 15:12:42 foser Exp $
+
+*gnome-vfs-2.8.1 (30 Sep 2004)
+
+  30 Sep 2004; foser <foser@gentoo.org> gnome-vfs-2.8.1.ebuild :
+  Add patch to make howl support optional, done by latexer (#64906)
 
   17 Sep 2004; Daniel Goller <morfic@gentoo.org>
   +files/1.0/gnome-vfs-1.0.5-gcc3.4.patch, gnome-vfs-1.0.5-r3.ebuild:
