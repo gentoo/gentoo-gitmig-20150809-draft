@@ -1,6 +1,7 @@
 MD5 e473de19e03877a875c8398fbf2ee3d0 hostap-driver-0.1.3.ebuild 2903
 MD5 1a4e9f348ea1158f85e73de05b21a333 hostap-driver-0.1.2-r1.ebuild 3818
 MD5 878a0269474add253e99017cbaf1b6ff hostap-driver-0.1.2.ebuild 3715
+MD5 5ef678ebab365208cbf4281887da49c1 hostap-driver-0.2.5.ebuild 3070
 MD5 a2593a329214efd6d27d3f814027f62d hostap-driver-0.1.2-r2.ebuild 2801
 MD5 afb4b160091427936002d9fab6bfc44b ChangeLog 2395
 MD5 e4c2a5b184138acc2d5252edc1be21bc metadata.xml 822
@@ -13,4 +14,5 @@ MD5 75dda0e477834ba5a6c5c88cfb402fe7 files/digest-hostap-driver-0.1.1 71
 MD5 5c57e0825ccb41c219c9d86c6a9114e5 files/digest-hostap-driver-0.1.2 71
 MD5 44d9961555b48c6445ebe7bd24d33b4a files/digest-hostap-driver-0.1.3 515
 MD5 fe9ca923fd63e570f4f47be989fd810f files/digest-hostap-driver-0.2.4 441
+MD5 702e5e315551f06833fde599816fd65a files/digest-hostap-driver-0.2.5 441
 MD5 afb604f5408986228ad8cc60236339dc files/hostap-driver-0.1.2.firmware.diff.bz2 590
