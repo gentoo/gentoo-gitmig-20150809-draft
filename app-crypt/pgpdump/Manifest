@@ -1,4 +1,6 @@
 MD5 5abc5a67064ffe84a4f916c7aae749d6 pgpdump-0.22.ebuild 699
-MD5 c2a7736f20101306dfa5a5d3d5748f3a ChangeLog 978
+MD5 52ec7b939eff1a1cbc2719675c084f47 pgpdump-0.24.ebuild 703
+MD5 8e3336a419dde6a8943acb64e281459c ChangeLog 1097
 MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
 MD5 f744522117a4521aaf77a9c4b028f996 files/digest-pgpdump-0.22 63
+MD5 eb25ed69b971a313db1f9b3328c33c40 files/digest-pgpdump-0.24 63
