@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/aespipe
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.1 2004/02/11 14:56:23 aliz Exp $
+
+*aespipe-2.2a (11 Feb 2004)
+
+  11 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> aespipe-2.2a.ebuild:
+  Initial import. Ebuild submitted by Venkat Manakkal <venkat@rayservers.com> in
+  #20669.
+
