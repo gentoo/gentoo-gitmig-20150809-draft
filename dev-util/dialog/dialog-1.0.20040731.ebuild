@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20031207-r1.ebuild,v 1.3 2004/09/21 14:35:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20040731.ebuild,v 1.1 2004/09/21 14:35:33 lanius Exp $
 
 inherit eutils
 
-MY_PV="${PV/_beta/b-}"
+MY_PV="${PV/1.0./1.0-}"
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="tool to display dialog boxes from a shell"
 HOMEPAGE="http://hightek.org/dialog/"
@@ -18,13 +18,8 @@ IUSE="unicode"
 DEPEND=">=app-shells/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-estonian-sed.patch
-}
-
 src_compile() {
+	export LANG=C
 	use unicode && ncursesw="w"
 	econf "--with-ncurses${ncursesw}" || die "configure failed"
 	emake || die "build failed"
