@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.4 2001/05/10 06:56:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.5 2001/05/18 05:02:22 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -13,7 +13,7 @@ SRC_URI="$SRC_PATH0/X402src-1.tgz $SRC_PATH0/X402src-2.tgz $SRC_PATH0/X402src-3.
 	 $SRC_PATH1/X402src-1.tgz $SRC_PATH1/X402src-2.tgz $SRC_PATH1/X402src-3.tgz
 	 ftp://ftp.xfree.org/pub/XFree86/4.0.3/patches/4.0.2-4.0.3.diff.gz
 	 ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/4.0.3/patches/4.0.2-4.0.3.diff.gz
-       	 http://keithp.com/~keithp/fonts/truetype.tar.gz"
+       	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
 #         http://www.linuxvideo.org/devel/data/gatos.tar.gz"
 
 HOMEPAGE="http://www.xfree.org
