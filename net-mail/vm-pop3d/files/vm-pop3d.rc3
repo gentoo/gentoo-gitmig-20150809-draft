@@ -1,23 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/files/vm-pop3d.rc3,v 1.5 2004/07/14 23:52:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/files/vm-pop3d.rc3,v 1.6 2005/02/16 19:24:52 ferdy Exp $
 
-SERVICE=vm-pop3d
-
-opts="start stop restart"
+depend() {
+	need net
+	use logger
+}
 
 start() {
-	ebegin "Starting $SERVICE"
-	/usr/sbin/vm-pop3d $OPTS
+	ebegin "Starting vm-pop3d"
+	start-stop-daemon --start --quiet --exec /usr/sbin/vm-pop3d -- ${OPTS}
+	eend ${?}
 }
 
 stop() {
-	ebegin "Stopping $SERVICE"
-	killall -15 /usr/sbin/vm-pop3d
-}
-
-restart() {
-	stop
-	start
+	ebegin "Stopping vm-pop3d"
+	killall vm-pop3d
+	eend ${?}
 }

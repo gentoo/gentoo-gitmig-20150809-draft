@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.13 2004/10/18 12:26:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.14 2005/02/16 19:24:52 ferdy Exp $
 
 inherit eutils
 
@@ -39,4 +39,10 @@ src_install() {
 	newexe ${FILESDIR}/vm-pop3d.rc3 vm-pop3d
 	insinto /etc/conf.d
 	newins ${FILESDIR}/vm-pop3d.confd vm-pop3d
+
+	if use pam;
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/vm-pop3d.pamd vm-pop3d
+	fi
 }
