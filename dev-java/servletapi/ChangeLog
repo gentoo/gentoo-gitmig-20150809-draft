@@ -1,14 +1,22 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.1 2002/11/02 22:21:53 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.2 2002/12/04 04:09:11 strider Exp $
 
 *servletapi-2.3 (02 Nov 2002)
+
+  04 Dec 2002; Adrian Almenar <strider@gentoo.org> servletapi-2.3.ebuild
+  Eliminated keywords, of arch's without tests.
+  Changed Slot from 0 to 2.3 since it can coexist with 2.2.
 
   02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> servletapi-2.3 files/digest-servletapi-2.3 :
   Initial import Ebuild submitted by Adrian Almenar
   <aalmenar@conectium.com>.
 
 *servletapi-2.2 (02 Nov 2002)
+
+  04 Dec 2002; Adrian Almenar <strider@gentoo.org> servletapi-2.3.ebuild
+  Eliminated keywords, of arch's without tests.
+  Changed Slot from 0 to 2.2 since it can coexist with 2.3.
 
   02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> servletapi-2.2 files/digest-servletapi-2.2 :
   Initial import Ebuild submitted by Adrian Almenar
