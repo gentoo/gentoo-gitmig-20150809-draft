@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-goodweather
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.9 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.10 2004/12/02 05:00:58 obz Exp $
+
+*desklet-goodweather-0.4-r1 (02 Dec 2004)
+
+  02 Dec 2004; Mike Gardiner <obz@gentoo.org>
+  +desklet-goodweather-0.4-r1.ebuild:
+  New version, fixes the infamous 'metha' typo for workies with gdesklets-0.3x
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   desklet-goodweather-0.3.ebuild, desklet-goodweather-0.4.ebuild:
