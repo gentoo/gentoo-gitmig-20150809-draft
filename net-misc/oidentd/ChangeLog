@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.15 2003/07/14 03:29:04 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.16 2003/07/15 09:17:12 joker Exp $
+
+  15 Jul 2003; Christian Birchinger <joker@gentoo.org> oidentd-2.0.7.ebuild:
+  Added sparc stable keyword
 
 *oidentd-2.0.7 (13 Jul 2003)
 
