@@ -5,5 +5,9 @@
 		The dev-perl category contains libraries and utilities relevant to the
 		Perl programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-perl enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache Perl.
+	</longdescription>
 </catmetadata>
 
