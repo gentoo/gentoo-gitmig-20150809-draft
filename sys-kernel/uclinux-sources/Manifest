@@ -1,7 +1,7 @@
-MD5 be67997413b0247b8a85069ef0e0b362 ChangeLog 9121
+MD5 f2bded2505f7d49b37070ec3053c9141 ChangeLog 9357
+MD5 b9af557700c063b4960c6d0e88c0e06e uclinux-sources-2.6.7_p0-r14.ebuild 3558
 MD5 f3fa6c474b8727f8215534b7fc9c93ba metadata.xml 304
 MD5 01bff29b5fe2d6b7952660aae9f74fc2 uclinux-sources-2.4.26_p0-r12.ebuild 3270
-MD5 033a21b9c0b1129ae32668b371e41e8a uclinux-sources-2.6.7_p0-r13.ebuild 3469
 MD5 4d656fa3f3a47df751c0d78b64ed8353 files/uclinux-sources-2.6.AF_UNIX.SELinux.patch 1761
 MD5 757ee1239c3f14645ccea3640d551e11 files/uclinux-sources-2.4.26_p0.CAN-2004-1056.patch 11249
 MD5 385d55defaf1fd0639113ac6cd0e6681 files/uclinux-sources-2.6.brk-locked.patch 10934
@@ -22,7 +22,7 @@ MD5 6bcdd0bb63e2db559a5c6465c73a7f89 files/uclinux-sources-2.6.CAN-2004-1151.pat
 MD5 8aa9e251f67d0a96275be95e78cf93d7 files/uclinux-sources-2.4.26_p0.brk-locked.patch 9287
 MD5 09e9f1cad6f2f28fe81682cbad8e3011 files/uclinux-sources-2.6.CAN-2004-1137.patch 2551
 MD5 915e8d7a0618736caa44d96968015467 files/uclinux-sources-2.4.26_p0.binfmt_elf.patch 2346
-MD5 3f6f370e8be93508e492315860e508ac files/digest-uclinux-sources-2.6.7_p0-r13 287
+MD5 3f6f370e8be93508e492315860e508ac files/digest-uclinux-sources-2.6.7_p0-r14 287
 MD5 0f66013f643c79c97fda489618a4e2fd files/uclinux-sources-2.4.26_p0.CAN-2004-0535.patch 476
 MD5 95708646470a95668e8789cd415844ed files/uclinux-sources.CAN-2004-0497.patch 846
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/uclinux-sources-2.4.26_p0.FPULockup-53804.patch 354
@@ -36,6 +36,8 @@ MD5 8165de5e2ab6e0d3263ea35ce856fd1b files/uclinux-sources-2.6.smbfs.patch 3309
 MD5 452e04a312368605e145428c35bd0e05 files/uclinux-sources-2.6.devPtmx.patch 572
 MD5 b738cb0120a32aa92cfcfdbd564dd21f files/uclinux-sources-2.6.ProcPerms.patch 1368
 MD5 8204afea1d572b49a4a80d8da4eef0c9 files/uclinux-sources-2.6.CAN-2004-0596.patch 1033
+MD5 655251f31f0bdc85bdd0cd0280af22b7 files/uclinux-sources-2.6.75963.patch 979
+MD5 a9bf527023df8fa105cdf1eff318fde7 files/uclinux-sources-2.6.77094.patch 2830
 MD5 b0a1f80aff51d6601e8924329023b241 files/uclinux-sources.AF_UNIX.patch 515
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/uclinux-sources-2.6.CAN-2004-1016.patch 2835
 MD5 d1ccc2047be533c992f67270a150a210 files/uclinux-sources-2.4.26_p0.cmdlineLeak.patch 388
