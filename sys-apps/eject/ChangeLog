@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.4 2002/11/08 13:01:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.5 2002/12/05 21:12:28 wwoods Exp $
 
 *eject-2.0.12 (05 Nov 2002)
+
+  05 Dec 2002; Will Woods <wwoods@gentoo.org> eject-2.0.10.ebuild, eject-2.0.12.ebuild: 
+  added alpha keyword.
 
   06 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.

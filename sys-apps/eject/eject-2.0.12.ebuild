@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12.ebuild,v 1.1 2002/11/08 13:01:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.12.ebuild,v 1.2 2002/12/05 21:12:29 wwoods Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz"
 HOMEPAGE="http://eject.sourceforge.net/"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
