@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.54 2003/02/10 16:20:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.55 2003/02/10 19:42:03 agriffis Exp $
+
+  10 Feb 2003; Aron Griffis <agriffis@gentoo.org> gentoolkit-0.1.18.ebuild files/scripts/echangelog files/scripts/ekeyword files/digest-gentoolkit-0.1.18 :
+  Add echangelog and ekeyword.  Bump version to 0.1.18.
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> gentoolkit-0.1.17-r11.ebuild :
   Added hppa to keywords.

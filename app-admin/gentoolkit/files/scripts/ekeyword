@@ -1,0 +1,33 @@
+#!/usr/bin/perl -w
+#
+# ekeyword: Update the KEYWORDS in an ebuild.  For example:
+#
+#   $ ekeyword ~alpha oaf-0.6.8-r1.ebuild
+#   12c12
+#   < KEYWORDS="x86 ppc sparc"
+#   ---
+#   > KEYWORDS="x86 ppc sparc ~alpha"
+
+
+die "syntax: ekeyword { arch | ~arch } ebuild...\n" unless @ARGV > 1;
+
+my $kw = shift @ARGV;
+(my $arch = $kw) =~ s|~||;
+
+for my $f (@ARGV) {
+    open I, "<$f"       or die "Can't read $f: $!\n";
+    open O, ">$f.new"   or die "Can't write $f.new: $!\n";
+    select O;
+
+    while (<I>) {
+        /^KEYWORDS/ or print, next;
+        s/~?$arch/$kw/ || s/.*?['"].*?(?=['"])/$& $kw/;
+        print $_, <I>;
+    }
+
+    close I;
+    close O;
+
+    system "diff $f $f.new"     or die "Can't run diff: $!\n";
+    rename "$f.new", "$f"       or die "Can't rename: $!\n";
+}

@@ -1,0 +1,57 @@
+#!/usr/bin/perl -w
+#
+# echangelog: Update the ChangeLog for an ebuild.  For example:
+#
+#   $ echangelog 'Add ~alpha to KEYWORDS'
+#   4a5,7
+#   >   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> oaf-0.6.8-r1.ebuild :
+#   >   Add ~alpha to KEYWORDS
+#   >
+
+
+use POSIX qw(strftime);
+
+my @files = ();
+my ($entry, $user, $date, $text);
+
+die "No ChangeLog in this directory\n" unless -f 'ChangeLog';
+
+open C, 'cvs diff --brief 2>&1 |' or die "Can't run cvs diff: $!\n";
+while (<C>) {
+    /ChangeLog/ and next;
+    if (/^cvs server: (\S+) .*new entry/ || /^Index: (\S+)/) {
+        push @files, $1;
+    }
+}
+close C;
+
+die "No changed files found\n" unless @files;
+
+if ($ARGV[0]) {
+    $entry = $ARGV[0];
+} else {
+    local $/ = undef;
+    print "Please type the log entry, finish with ctrl-d\n";
+    $entry = <>;
+}
+
+die "Empty entry; aborting\n" unless $entry =~ /\S/;
+$entry =~ s/^\s*(.*?)\s*$/$1/;  # trim whitespace
+$entry =~ s/^/  /gm;            # add indentation
+
+$user = $ENV{'ECHANGELOG_USER'} ||
+        sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
+
+$date = strftime("%d %b %Y", localtime);
+
+open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
+{ local $/ = undef; $text = <I>; }
+close I;
+
+open O, '>ChangeLog.new' or die "Can't open ChangeLog.new for output: $!\n";
+$text =~ s/^.*?\n(?=\s)/$&\n  $date; $user @files :\n$entry\n/s;
+print O $text;
+close O;
+
+system 'diff ChangeLog ChangeLog.new';
+rename 'ChangeLog.new', 'ChangeLog' or die "Can't rename: $!\n";

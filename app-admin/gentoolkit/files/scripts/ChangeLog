@@ -1,3 +1,5 @@
-2002-11-11 Martin Holzer <mholzer@gentoo.org>
-	* fix emerge-webrsync 0 byte bug  
+10 Feb 2003 Aron Griffis <agriffis@gentoo.org>
+	* add echangelog and ekeyword
 
+11 Nov 2002 Martin Holzer <mholzer@gentoo.org>
+	* fix emerge-webrsync 0 byte bug  
