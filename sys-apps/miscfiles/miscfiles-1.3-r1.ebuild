@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.5 2003/09/17 22:53:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3-r1.ebuild,v 1.6 2003/12/17 04:59:01 brad_mssw Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/directory/miscfiles.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ~arm ia64"
+KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ~arm ia64 ppc64"
 
 src_unpack() {
 	unpack ${A}
