@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20050202.ebuild,v 1.3 2005/03/28 08:25:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20050202.ebuild,v 1.4 2005/03/29 16:47:38 taviso Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,7 +31,7 @@ src_unpack() {
 	cp ${DISTDIR}/ast-ksh.${RELEASE}.tgz ${S}/lib/package/tgz/ || die
 
 	if use nls; then
-		cp ${DISTDIR}/ast-ksh-locale.2003-04-22.tgz ${S}/lib/package/tgz/ || die
+		cp ${DISTDIR}/ast-ksh-locale.${RELEASE}.tgz ${S}/lib/package/tgz/ || die
 	fi
 
 	# INIT provides the basic tools to start building.
