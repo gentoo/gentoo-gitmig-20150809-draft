@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.05-r1.ebuild,v 1.1 2004/08/05 01:50:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.05-r1.ebuild,v 1.2 2004/10/05 00:05:56 pkdawson Exp $
 
 inherit eutils
 
@@ -48,6 +48,7 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${PV}-AutoMakefile.patch
 	epatch ${FILESDIR}/${PV}-code.patch
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 	sed -i -e "s:-O3::g" -e "s:wxXML/expat/Makefile::g" ${S}/configure.in ${S}/configure
 
 	cd ${S}
