@@ -1,4 +1,6 @@
-MD5 1fb2f17cc00accdd893d8fb9dc6b3c77 ChangeLog 2100
+MD5 da9c2f25383cad4e2b60044a14e7afb1 ChangeLog 2226
+MD5 838065dcba00767b1776a3353c633029 prime-dict-0.8.2.ebuild 561
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 fe77ea5ee4a76309c400d2a2c6d64788 prime-dict-0.8.0.ebuild 560
+MD5 e47dce093ee220a41469f0345bc2dd93 files/digest-prime-dict-0.8.2 69
 MD5 8018cb27b5837f7036de716f4abc390e files/digest-prime-dict-0.8.0 69
