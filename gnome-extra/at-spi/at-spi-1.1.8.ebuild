@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.8.ebuild,v 1.9 2003/08/04 18:13:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.1.8.ebuild,v 1.10 2004/02/03 10:32:27 ferringb Exp $
 
 IUSE="doc"
 
@@ -19,7 +19,8 @@ RDEPEND=">=gnome-base/gail-0.17
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc )
+	dev-perl/XML-Parser"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
