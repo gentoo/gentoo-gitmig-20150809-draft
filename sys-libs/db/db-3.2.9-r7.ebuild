@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.15 2004/09/27 08:05:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.16 2004/12/16 10:29:20 eradicator Exp $
 
 IUSE=""
 
@@ -66,6 +66,7 @@ src_compile() {
 		--enable-cxx \
 		--enable-compat185 \
 		--enable-dump185 \
+		--libdir=/usr/$(get_libdir) \
 		--prefix=/usr"
 	# --enable-rpc aparently does not work .. should verify this
 	# at some stage ...
@@ -100,6 +101,7 @@ src_install () {
 	make libdb=libdb-3.2.a \
 		libcxx=libcxx_3.2.a \
 		prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		install || die
 
 	cd ${S}/build-static
@@ -112,13 +114,13 @@ src_install () {
 	mv *.h db3
 	ln db3/db.h db.h
 
-	cd ${D}/usr/lib
+	cd ${D}/usr/$(get_libdir)
 	ln -s libdb-3.2.so libdb.so.3
 
 	# For some reason, db.so's are *not* readable by group or others,
 	# resulting in no one but root being able to use them!!!
 	# This fixes it -- DR 15 Jun 2001
-	cd ${D}/usr/lib
+	cd ${D}/usr/$(get_libdir)
 	chmod go+rx *.so
 	# The .la's aren't readable either
 	chmod go+r *.la
@@ -139,7 +141,7 @@ src_install () {
 }
 
 fix_so () {
-	cd ${ROOT}/usr/lib
+	cd ${ROOT}/usr/$(get_libdir)
 	target=`find -type f -maxdepth 1 -name "libdb-*.so" |sort |tail -n 1`
 	[ -n "${target}" ] && ln -sf ${target//.\//} libdb.so
 	target=`find -type f -maxdepth 1 -name "libdb_cxx*.so" |sort |tail -n 1`

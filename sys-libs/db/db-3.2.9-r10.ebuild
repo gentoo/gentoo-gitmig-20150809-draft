@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.14 2004/09/27 08:05:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.15 2004/12/16 10:29:20 eradicator Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -93,12 +93,14 @@ src_compile() {
 	mkdir -p ${S}/build-static
 	cd ${S}/build-static
 	../dist/configure ${conf} ${conf_static} \
+		--libdir=/usr/$(get_libdir) \
 		--enable-static || die
 
 	einfo "Configuring ${P} (shared)..."
 	mkdir -p ${S}/build-shared
 	cd ${S}/build-shared
 	../dist/configure ${conf} ${conf_shared} \
+		--libdir=/usr/$(get_libdir) \
 		--enable-shared || die
 
 	# Parallel make does not work
@@ -116,6 +118,7 @@ src_install () {
 	make libdb=libdb-3.2.a \
 		libcxx=libcxx_3.2.a \
 		prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		install || die
 
 	cd ${S}/build-static
@@ -131,7 +134,7 @@ src_install () {
 	# For some reason, db.so's are *not* readable by group or others,
 	# resulting in no one but root being able to use them!!!
 	# This fixes it -- DR 15 Jun 2001
-	cd ${D}/usr/lib
+	cd ${D}/usr/$(get_libdir)
 	chmod go+rx *.so
 	# The .la's aren't readable either
 	chmod go+r *.la

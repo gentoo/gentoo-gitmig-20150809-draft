@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.12 2004/12/14 16:21:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r4.ebuild,v 1.13 2004/12/16 10:29:20 eradicator Exp $
 
 inherit eutils gnuconfig db
 
@@ -88,6 +88,7 @@ src_compile() {
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
+		--libdir=/usr/$(get_libdir) \
 		--enable-compat185 \
 		--with-uniquename \
 		--host=${CHOST} \
@@ -98,7 +99,7 @@ src_compile() {
 
 src_install () {
 
-	einstall || die
+	einstall libdir="${D}/usr/$(get_libdir)" || die
 
 	db_src_install_usrbinslot
 

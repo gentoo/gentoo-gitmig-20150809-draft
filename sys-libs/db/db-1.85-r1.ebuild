@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.28 2004/11/12 14:53:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r1.ebuild,v 1.29 2004/12/16 10:29:20 eradicator Exp $
 
 inherit eutils
 
@@ -33,10 +33,10 @@ src_install () {
 
 	newlib.a libdb.a libdb1.a || die "newlib.a failed"
 	newlib.so libdb.so.2 libdb1.so.2 || die "newlib.so failed"
-	dosym libdb1.so.2 /usr/lib/libdb1.so
-	dosym libdb1.so.2 /usr/lib/libdb.so.2
-	dosym libdb1.so.2 /usr/lib/libndbm.so
-	dosym libdb1.a /usr/lib/libndbm.a
+	dosym libdb1.so.2 /usr/$(get_libdir)/libdb1.so
+	dosym libdb1.so.2 /usr/$(get_libdir)/libdb.so.2
+	dosym libdb1.so.2 /usr/$(get_libdir)/libndbm.so
+	dosym libdb1.a /usr/$(get_libdir)/libndbm.a
 
 	dodir /usr/include/db1
 	insinto /usr/include/db1

@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.109 2004/12/14 16:21:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.110 2004/12/16 10:29:20 eradicator Exp $
+
+  16 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> db-1.85-r1.ebuild,
+  db-1.85-r2.ebuild, db-3.2.9-r10.ebuild, db-3.2.9-r7.ebuild,
+  db-4.0.14-r2.ebuild, db-4.0.14-r3.ebuild, db-4.1.25_p1-r3.ebuild,
+  db-4.1.25_p1-r4.ebuild, db-4.2.52_p1.ebuild, db-4.2.52_p2.ebuild:
+  get_libdir support for multilib archs.
 
   14 Dec 2004; Dylan Carlson <absinthe@gentoo.org> db-4.1.25_p1-r4.ebuild:
   Stable on amd64.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.7 2004/09/01 18:24:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p1.ebuild,v 1.8 2004/12/16 10:29:20 eradicator Exp $
 
 IUSE="tcltk java doc"
 
@@ -72,7 +72,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-java"
 
 	use tcltk \
-		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/lib" \
+		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 
 	if use java && [ -n "${JAVAC}" ]; then
@@ -91,6 +91,7 @@ src_compile() {
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
+		--libdir=/usr/$(get_libdir) \
 		--enable-compat185 \
 		--enable-cxx \
 		--with-uniquename \
@@ -101,7 +102,7 @@ src_compile() {
 
 src_install () {
 
-	einstall || die
+	einstall libdir="${D}/usr/$(get_libdir)" || die
 
 	db_src_install_usrbinslot
 
