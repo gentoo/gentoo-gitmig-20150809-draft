@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.40 2004/10/10 00:43:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.41 2004/10/12 14:11:17 gustavoz Exp $
+
+  12 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> attr-2.4.16.ebuild:
+  Stable on sparc
 
 *attr-2.4.19 (09 Oct 2004)
 
