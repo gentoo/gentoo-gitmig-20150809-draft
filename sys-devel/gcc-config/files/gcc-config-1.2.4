@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.4,v 1.1 2002/12/16 18:45:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.4,v 1.2 2002/12/17 13:06:48 azarah Exp $
 
 
 source /etc/init.d/functions.sh || {
@@ -132,9 +132,15 @@ switch_profile() {
 
 			if [ -z "${MY_LDPATH}" ]
 			then
-				MY_LDPATH="${LDPATH}"
+				if [ -d ${LDPATH} ]
+				then
+					MY_LDPATH="${LDPATH}"
+				fi
 			else
-				MY_LDPATH="${MY_LDPATH}:${LDPATH}"
+				if [ -d ${LDPATH} ]
+				then
+					MY_LDPATH="${MY_LDPATH}:${LDPATH}"
+				fi
 			fi
 		fi
 	done
