@@ -1,26 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.3 2002/07/21 03:14:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.4 2002/07/22 07:45:24 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
 HOMEPAGE="http://www.winehq.com/"
-KEYWORDS="x86 -ppc -sparc -sparc64"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/x11
 	sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
-	opengl? ( virtual/opengl )
+	dev-lang/tcl dev-lang/tk
 	>=sys-libs/ncurses-5.2
-	cups? ( net-print/cups )
 	>=media-libs/freetype-2.0.0
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
-	dev-lang/tcl dev-lang/tk"
+	cups? ( net-print/cups )
+	opengl? ( virtual/opengl )"
 
 src_compile() {
 	
@@ -36,12 +37,12 @@ src_compile() {
 	export CXXFLAGS=""
 	
 	./configure --prefix=/usr \
-	--exec_prefix=/usr/wine \
-	--sysconfdir=/etc/wine \
-	--mandir=/usr/share/man \
-	--host=${CHOST} \
-	--enable-curses \
-	${myconf} || die
+		--exec_prefix=/usr/wine \
+		--sysconfdir=/etc/wine \
+		--mandir=/usr/share/man \
+		--host=${CHOST} \
+		--enable-curses \
+		${myconf} || die
 
 	cd ${S}/programs/winetest
 	cp Makefile 1
