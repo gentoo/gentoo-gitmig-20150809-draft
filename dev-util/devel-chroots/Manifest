@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 44b8f8e39dc42d26a3b9d484a2d2874a metadata.xml 866
 MD5 796e667b33fd52e1e22a8400d6a2997c devel-chroots-1.0.0.ebuild 800
 MD5 7e34a1dbae2f9259713b1f28b7b5a4b5 devel-chroots-1.0.1.ebuild 1088
 MD5 f43a37e9c37bac5c0e144ca8c8e6ca6c ChangeLog 1065
+MD5 c5d4fa2050828a5f16b909c2708a3fbb metadata.xml 423
 MD5 d6dafe7e0848d37e899e8f17fb8b23e6 files/digest-devel-chroots-1.0.0 69
 MD5 8d02613924d503918ba9d1169de52d5d files/digest-devel-chroots-1.0.1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBOsSTI1lqEGTUzyQRAjt+AKDbjme1V/qYpp1jcLQxfkXPbgc3kQCgqqT1
-5h5EfyrmAZz3ef3qrD4sSsI=
-=DRMH
+iD8DBQFBw0qDI1lqEGTUzyQRAvo6AKDfD8tLDn+ljrClSCyK4YhKE5lzdwCgqI+9
+ehyTkBn9QTcigS3vJMeCdhw=
+=40Rd
 -----END PGP SIGNATURE-----
