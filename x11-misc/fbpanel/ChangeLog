@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.10 2004/06/03 16:13:04 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.11 2004/06/07 23:11:07 ciaranm Exp $
+
+*fbpanel-3.8-r1 (08 Jun 2004)
+
+  08 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> +fbpanel-3.8-r1.ebuild:
+  Fix the default config settings, bug #53248
 
 *fbpanel-3.8 (03 Jun 2004)
 
