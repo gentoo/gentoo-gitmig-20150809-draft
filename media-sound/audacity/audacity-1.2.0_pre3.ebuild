@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.3.ebuild,v 1.6 2004/02/07 10:26:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0_pre3.ebuild,v 1.1 2004/02/07 10:26:03 eradicator Exp $
 
 inherit eutils
 
@@ -9,13 +9,13 @@ MY_P="${PN}-src-${MY_PV}"
 
 DESCRIPTION="A free, crossplatform audio editor."
 HOMEPAGE="http://audacity.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 IUSE="encode flac mad oggvorbis"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
@@ -23,7 +23,6 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 	media-libs/libid3tag
 	>=media-libs/libsndfile-1.0.0
 	>=media-libs/libsamplerate-0.0.14
-	=dev-libs/fftw-2*
 	>=media-libs/ladspa-sdk-1.12
 	flac? ( media-libs/flac )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
@@ -33,9 +32,6 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 S="${WORKDIR}/${MY_P}"
 
 DOC="LICENSE.txt README.txt audacity-1.2-help.htb"
-
-# Disable UNICODE
-CFLAGS="${CFLAGS} -DwxUSE_UNICODE=0"
 
 src_unpack() {
 	if wx-config --cppflags | grep gtk2u >& /dev/null; then
@@ -51,7 +47,7 @@ src_unpack() {
 src_compile() {
 	local myconf;
 
-	myconf="--with-libsndfile=system --with-id3tag=system --with-help"
+	myconf="--with-libsndfile=system --with-id3tag=system"
 
 	# MAD support
 	if use mad; then
