@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.13 2003/03/13 20:04:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.14 2003/03/29 02:51:25 agriffis Exp $
 
 *gob-2.0.5 (13 Mar 2003)
 
@@ -32,6 +32,10 @@
   gnome2 version
 
 *gob-1.0.12 (11 Apr 2002)
+
+  28 Mar 2003; Aron Griffis <agriffis@gentoo.org> gob-1.0.12.ebuild:
+  Mark stable on alpha
+
   11 Apr 2002; Spider <spider@gentoo.org>
   Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
     
