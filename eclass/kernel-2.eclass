@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.90 2005/02/07 11:15:18 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.91 2005/02/07 12:44:23 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -745,11 +745,13 @@ detect_version() {
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
-	KV_FULL=${OKV}${EXTRAVERSION}
+	KV_FULL=${OKV}${RELEASE}${EXTRAVERSION}
 
-	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the portage naming convention
-	# these cannot be supported, but the code here can handle it up until this point
-	# and theoretically thereafter.
+	# -rc-bk pulls can be achieve by specifying CKV
+	# for example:
+	#   CKV="2.6.11_rc3_pre2"
+	# will pull:
+	#   linux-2.6.11-rc3.tbz & patch-2.6.11-rc3-bk2.bz2
 
 	if [ "${RELEASETYPE}" == "-rc" -o "${RELEASETYPE}" == "-pre" ]
 	then
@@ -757,7 +759,6 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${CKV//_/-}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
-		KV_FULL=${CKV/[-_]*/}${EXTRAVERSION}
 	fi
 
 	if [ "${RELEASETYPE}" == "-bk" ]
@@ -766,19 +767,18 @@ detect_version() {
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-		KV_FULL=${CKV/[-_]*/}${EXTRAVERSION}
 	fi
 
 	if [ "${RELEASETYPE}" == "-rc-bk" ]
 	then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))-${RELEASE/-bk*}"
-		EXTRAVERSION="$([ -n "${RELEASE}" ] && echo ${RELEASE/*-bk/-bk})$([ -n "${K_USENAME}" ] && echo -${PN/-*/})$([ ! "${PR}" == "r0" ] && echo -${PR})"
+		EXTRAVERSION="${RELEASE/*-bk/-bk}$([ -n "${K_USENAME}" ] && echo -${PN/-*/})$([ ! "${PR}" == "r0" ] && echo -${PR})"
 
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 			    mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-		KV_FULL=${CKV/[-_]*/}${EXTRAVERSION}
 	fi
+
 
 	S=${WORKDIR}/linux-${KV_FULL}
 	# we will set this for backwards compatibility.
