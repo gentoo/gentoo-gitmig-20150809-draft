@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.9 2004/01/17 13:47:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.10 2004/02/22 23:04:56 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="library to provide an API for commonly used low-level network funct
 HOMEPAGE="http://www.packetfactory.net/libnet/"
 SRC_URI="http://www.packetfactory.net/libnet/dist/deprecated/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc arm alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 LICENSE="LGPL-2"
 SLOT="1.0"
 IUSE=""

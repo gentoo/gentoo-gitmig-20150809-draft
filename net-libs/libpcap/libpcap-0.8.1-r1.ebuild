@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.1-r1.ebuild,v 1.1 2004/02/15 13:41:04 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.1-r1.ebuild,v 1.2 2004/02/22 23:05:53 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="pcap-Library"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="BSD"
 IUSE="ipv6"
-KEYWORDS="~x86 ~ppc sparc ~alpha ~mips hppa ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc sparc ~alpha ~mips hppa ~amd64 ~ia64"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

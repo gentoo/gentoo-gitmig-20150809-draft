@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.23.ebuild,v 1.5 2003/09/11 01:25:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.23.ebuild,v 1.6 2004/02/22 23:06:23 agriffis Exp $
 
 #IUSE="ssl"
 IUSE=""
@@ -20,7 +20,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc  ~ppc ~alpha hppa"
+KEYWORDS="x86 ~sparc ~ppc ~alpha hppa"
 
 src_compile() {
 	elibtoolize

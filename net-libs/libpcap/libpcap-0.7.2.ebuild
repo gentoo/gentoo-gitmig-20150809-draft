@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.2.ebuild,v 1.5 2003/09/18 19:50:32 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.2.ebuild,v 1.6 2004/02/22 23:05:53 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
 
 src_compile() {
 
