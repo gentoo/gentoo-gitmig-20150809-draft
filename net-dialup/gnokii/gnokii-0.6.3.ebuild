@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.16 2005/01/25 00:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.17 2005/02/28 18:43:49 mrness Exp $
 
 inherit eutils
 
@@ -15,10 +15,10 @@ IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
 	bluetooth? ( net-wireless/bluez-libs )
-	irda? ( virtual/os-headers )
 	sms? ( postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql ) )"
 DEPEND="${RDEPEND}
+	irda? ( virtual/os-headers )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

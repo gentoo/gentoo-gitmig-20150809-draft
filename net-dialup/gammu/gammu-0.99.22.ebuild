@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.99.22.ebuild,v 1.2 2005/02/06 11:54:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/gammu-0.99.22.ebuild,v 1.3 2005/02/28 18:41:15 mrness Exp $
 
 inherit eutils
 
@@ -13,12 +13,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-RDEPEND="irda? ( virtual/os-headers )
-	mysql? ( dev-db/mysql )
+RDEPEND="mysql? ( dev-db/mysql )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	bluetooth? ( net-wireless/bluez-libs )"
 
 DEPEND="${RDEPEND}
+	irda? ( virtual/os-headers )
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

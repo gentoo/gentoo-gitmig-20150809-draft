@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.29 2005/02/06 13:44:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.30 2005/02/28 18:43:49 mrness Exp $
+
+  28 Feb 2005; Alin Nastac <mrness@gentoo.org> gnokii-0.6.3.ebuild,
+  gnokii-0.6.4.ebuild:
+  Move virtual/os-headers from RDEPEND to DEPEND (#82449).
 
   06 Feb 2005; Alin Nastac <mrness@gentoo.org>
   -files/gnokii-0.5.4-nounix98pty.patch, -gnokii-0.5.10.ebuild,
