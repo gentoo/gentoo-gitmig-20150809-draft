@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.7 2004/08/08 10:15:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.3.2.eclass,v 1.8 2004/08/08 10:29:06 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -148,4 +148,7 @@ nxserver_pkg_postinst() {
 		ewarn "be found in /usr/NX/etc"
 		ewarn
 	fi
+
+	# regen the ld.so cache, because Portage sometimes doesn't
+	ldconfig -v > /dev/null
 }
