@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.14 2004/03/12 15:17:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.15 2004/05/04 12:17:34 usata Exp $
+
+*lha-114i-r2 (04 May 2004)
+
+  04 May 2004; Mamoru KOMACHI <usata@gentoo.org> lha-114i-r2.ebuild,
+  files/lha-114i.diff:
+  Applied buffer overflows and directory traversal patches.
+  See http://lists.netsys.com/pipermail/full-disclosure/2004-May/020776.html
+  for detail.
 
   12 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> lha-114i-r1.ebuild:
   amd64 unmask.
