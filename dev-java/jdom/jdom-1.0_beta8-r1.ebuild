@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta8-r1.ebuild,v 1.1 2002/07/10 21:03:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta8-r1.ebuild,v 1.2 2002/08/01 18:04:16 karltk Exp $
 
 P="jdom-b8"
 A="jdom-b8.tar.gz"
@@ -10,8 +10,7 @@ SRC_URI="http://www.jdom.org/dist/source/${A}"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="0"
-KEYWORDS="*"
-
+KEYWORDS="x86"
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
 	>=dev-java/ant-1.4.1
