@@ -1,11 +1,21 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.12 2002/05/22 19:11:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.13 2002/05/25 01:25:41 karltk Exp $
+
+*glib-2.0.1-r6 (25 May 2002)
+
+  25 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> glib-2.0.1-r6.ebuild files/digest-glib-2.0.1-r6:
+
+  removed libtoolize from the ebuild, as it resulted in missing .so files.
+
+  Removed glib-2.0.1-r5.ebuild files/digest-glib-2.0.1-r5
 
 
 *glib-2.0.0-r5 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> glib-2.0.1-r5.ebuild:
   return debug info into this for the upcoming gnome2 testing
+
+  25 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> glib-2.0.1-r5.ebuild:
   
 *glib-2.0.0-r4 (1 May 2002)
   1 May 2002 ; Spider <spider@gentoo.org> glib-2.0.1-r4.ebuild:

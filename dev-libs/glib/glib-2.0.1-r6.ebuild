@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r5.ebuild,v 1.1 2002/05/22 19:11:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r6.ebuild,v 1.1 2002/05/25 01:25:41 karltk Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -30,7 +30,8 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	libtoolize --copy --force
+# Running libtoolize results in missing .so files -- karltk 2002-05-25
+#	libtoolize --copy --force
 	local myconf
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
 	./configure --host=${CHOST} \
