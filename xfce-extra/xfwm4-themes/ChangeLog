@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.19 2004/04/20 20:37:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.20 2004/04/21 03:12:48 agriffis Exp $
+
+  20 Apr 2004; Aron Griffis <agriffis@gentoo.org> xfwm4-themes-4.0.4.ebuild:
+  Stable on alpha and ia64
 
   20 Apr 2004; Guy Martin <gmsoft@gentoo.org> xfwm4-themes-4.0.4.ebuild:
   Marked stable on hppa.
