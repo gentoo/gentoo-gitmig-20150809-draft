@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.2 2005/02/16 05:07:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.3 2005/02/16 18:32:19 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -23,7 +23,7 @@ PATCH_VER="1.2"
 # C Stubbs addon
 CSTUBS_VER="2.1.2"
 CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
-CSTUBS_URI="http://dev.gentoo.org/~eradicator/${CSTUBS_TARBALL}"
+CSTUBS_URI="http://dev.gentoo.org/~eradicator/glibc/${CSTUBS_TARBALL}"
 
 # (Recent snapshots fails with 2.6.5 and earlier)
 LT_KERNEL_VERSION="2.4.1"
