@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.35 2003/09/24 15:09:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.36 2003/10/26 20:00:22 foser Exp $
+
+*gnome-spell-1.0.5-r1 (26 Oct 2003)
+
+  26 Oct 2003; foser <foser@gentoo.org> gnome-spell-1.0.5-r1.ebuild :
+  Add patch to use enchant as backend
 
   24 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnome-spell-1.0.5.ebuild:
   stable bump for x86
