@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.5 2002/03/31 04:51:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.6 2002/03/31 05:30:04 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs filesystem utilities"
@@ -33,10 +33,15 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die
 	cat ${S}/libhandle/.libs/libhandle.la | sed -e 's:installed=no:installed=yes:g' > ${D}/usr/lib/libhandle.la
+	dodir /usr/lib /lib
+	insinto /usr/lib
+	doins libhandle.a
+	exeinto /lib
+	doins libhandle.so.1.0.0
 	cd ${D}/lib
-	ln -s ../usr/lib/libhandle.a libhandle.a
-	ln -s libhandle.so.1 libhandle.so.1.0.0
-	ln -s libhandle.so libhandle.so.1
+	ln -sf ../usr/lib/libhandle.a libhandle.a
+	ln -sf libhandle.so.1.0.0 libhandle.so.1
+	ln -sf libhandle.so.1 libhandle.so
 	cd ${D}/usr/lib
-	ln -s ../../lib/libhandle.so libhandle.so
+	ln -sf ../../lib/libhandle.so libhandle.so
 }
