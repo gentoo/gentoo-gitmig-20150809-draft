@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.12.ebuild,v 1.3 2004/06/25 01:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.12.ebuild,v 1.4 2004/11/04 16:38:44 pythonhead Exp $
 
 inherit distutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=dev-libs/openssl-0.9.7"
+DEPEND=">=dev-libs/openssl-0.9.7
+	app-arch/unzip"
 
 PYTHON_MODNAME="M2Crypto"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.9 2004/06/25 01:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.10 2004/11/04 16:38:44 pythonhead Exp $
+
+  04 Nov 2004; Rob Cakebread <pythonhead@gentoo.org>
+  m2crypto-0.07_alpha3.ebuild, m2crypto-0.12-r1.ebuild,
+  m2crypto-0.12.ebuild, m2crypto-0.13.ebuild:
+  depend on app-arch/unzip bug# 69831
 
   01 Apr 2004; David Holm <dholm@gentoo.org> m2crypto-0.13.ebuild:
   Added to ~ppc.
