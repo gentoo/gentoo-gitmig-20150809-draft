@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.28 2003/08/02 22:33:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.29 2003/12/18 22:19:16 latexer Exp $
+
+  18 Dec 2003; Peter Johanson <latexer@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *linux-wlan-ng-0.2.1_pre11 (02 Aug 2003)
 
