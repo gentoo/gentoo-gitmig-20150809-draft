@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.8.0.ebuild,v 1.2 2004/10/25 07:32:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132-r1.ebuild,v 1.1 2004/10/25 15:25:08 foser Exp $
 
-inherit gnome2 flag-o-matic
+inherit gnome2 flag-o-matic eutils
 
 DESCRIPTION="Viewer for Portable Document Format (PDF) files"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/gconf-2
@@ -30,3 +30,13 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/pdfviewer"
 
 DOCS="AUTHORS CHANGES ChangeLog COPYING INSTALL NEWS README*"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/xpdf
+	# fix security vulnerability (#68571)
+	epatch ${FILESDIR}/${PN}-xpdf_2_CAN-2004-0888.patch
+
+}
