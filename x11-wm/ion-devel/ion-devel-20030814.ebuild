@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20030814.ebuild,v 1.1 2003/08/18 13:55:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20030814.ebuild,v 1.2 2003/09/06 04:16:43 msterret Exp $
 
 MY_P=${PN}-${PV/_p/-}
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
@@ -73,7 +73,7 @@ src_compile() {
 			${T}/system.mk > system.mk
 		eend $?
 	fi
-	
+
 	emake || die
 
 }

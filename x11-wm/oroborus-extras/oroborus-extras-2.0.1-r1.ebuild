@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.11 2003/06/12 19:08:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.12 2003/09/06 04:16:43 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Other stuff for oroborus"
@@ -42,20 +42,20 @@ src_compile() {
 src_install () {
 
 	dodir /usr/bin
-	
+
 # Deskmenu first
 	cd ${S}/deskmenu-1.3.0
 	make PREFIX=${D}/usr install || die
-	
+
 	newdoc README README.deskmenu
 	newdoc CHANGES CHANGES.deskmenu
 	newdoc example_rc example_rc.deskmenu
 	dodoc LICENSE
 
-# Keylaunch next 
+# Keylaunch next
 	cd ${S}/keylaunch
 	make PREFIX=${D}/usr install || die
-	
+
 	newdoc README README.keylaunch
 	newdoc LICENSE LICENSE.keylaunch
 	newdoc example_rc example_rc.keylaunch
@@ -63,7 +63,6 @@ src_install () {
 # Desklaunch last
 	cd ${S}/desklaunch
 	make PREFIX=${D}/usr install || die
-	
+
 	newdoc README README.desklaunch
 }
-

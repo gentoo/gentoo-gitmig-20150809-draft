@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.13 2003/06/12 18:59:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.11-r2.ebuild,v 1.14 2003/09/06 04:16:43 msterret Exp $
 
 S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="A window manager based on the NeXTStep interface."
@@ -43,7 +43,7 @@ src_compile() {
 		--disable-staticlibs \
 		--with-xpm \
 		${myconf} || die
-		    
+
 	emake || die
 }
 
@@ -52,7 +52,7 @@ src_install() {
 	make DESTDIR=${D} \
 	     GNUSTEP_LOCAL_ROOT=${D}${GNUSTEP_LOCAL_ROOT} \
 	     install || die
-	     
+
 	rm -f ${D}/usr/bin/sessreg
 
 	dodoc COPYRIGHT ChangeLog INSTALL NEW README* TEAM UPGRADE
@@ -60,8 +60,8 @@ src_install() {
 	dodir /usr/share/doc/${PF}/html
 	cp -a ${S}/doc/* ${D}/usr/share/doc/${PF}/html
 	rm ${D}/usr/share/doc/${PF}/html/Makefile*
-	
+
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/afterstep
-	
+
 }

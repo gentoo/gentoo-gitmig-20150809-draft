@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.2 2003/02/13 17:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.3 2003/09/06 04:16:43 msterret Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	for i in ${GOODIES} 
+	for i in ${GOODIES}
 	do
 		make CFLAGS="${CFLAGS}" -C $i || die
 	done
@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin
-	for i in ${GOODIES} 
+	for i in ${GOODIES}
 	do
 		make DESTDIR=${D} -C $i install || die
 		docinto $i
