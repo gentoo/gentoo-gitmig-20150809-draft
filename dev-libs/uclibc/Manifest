@@ -1,6 +1,6 @@
-MD5 89b7c6b10681b01108edcdd5700fab8b uclibc-0.9.26-r2.ebuild 6124
+MD5 0f09e214b55018acde32b82559bb4236 uclibc-0.9.26-r2.ebuild 6190
 MD5 3783c027ae7ce204176e87ec250a59f3 uclibc-0.9.26-r1.ebuild 2550
-MD5 6e3b0e9602c06e204c8bdbf07a94f748 ChangeLog 4434
+MD5 94bbd5bdc29dd14de8a9eec6675b16a7 ChangeLog 4694
 MD5 5e376ebb178aae5f2f7b29da2b0b7917 uclibc-0.9.21.ebuild 1082
 MD5 f694d40cf09e6c5511ae52f755a5ffe5 metadata.xml 998
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
@@ -16,3 +16,4 @@ MD5 874260fc77637deccf7588cfc1c76674 files/0.9.26/uClibc-20040613-do_rem.patch 3
 MD5 d35beaf332590fed8c619483d4598dc6 files/0.9.26/uclibc-0.9.26-ssp-gcc34-after-frandom.patch 542
 MD5 bdd1e91ee48fb8be0d28cabdfcfdf3ff files/0.9.26/uClibc-0.9.26-pie-option.patch 863
 MD5 2416f5e954ccb8b39b1c0d6a3cf5e827 files/0.9.26/uClibc-0.9.26-Makefile.patch 1478
+MD5 b9df87c681aa3a1ef3033cb195e516df files/0.9.26/uclibc-0.9.26-arm-dl-sysdep.patch 795

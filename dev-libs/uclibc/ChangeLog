@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.21 2004/06/23 02:14:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.22 2004/06/23 18:28:49 solar Exp $
+
+*uclibc-0.9.26-r2 (23 Jun 2004)
+
+  23 Jun 2004; <solar@gentoo.org> uclibc-0.9.26-r2.ebuild,
+  files/0.9.26/uclibc-0.9.26-arm-dl-sysdep.patch:
+  Added patch for ARCH=arm to prevent a static inlines from being included more
+  than one time. sent patch upstream
 
   22 Jun 2004; <solar@gentoo.org> files/0.9.26/ssp.c,
   files/0.9.26/uClibc-20040613-do_rem.patch,

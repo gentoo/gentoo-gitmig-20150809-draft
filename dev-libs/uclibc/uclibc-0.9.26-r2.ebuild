@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r2.ebuild,v 1.1 2004/06/23 02:14:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r2.ebuild,v 1.2 2004/06/23 18:28:49 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -71,7 +71,8 @@ src_unpack() {
 	fi
 
 	# support archs which dont implement all syscalls
-	[ -z "${CVS_VER}" ] && epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch
+	[ -z "${CVS_VER}" ] && epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch || \
+		epatch ${FILESDIR}/${PV}/uclibc-0.9.26-arm-dl-sysdep.patch
 
 	# fixup for install perms
 	sed -i -e "s:-fa:-dRf:g" Makefile
