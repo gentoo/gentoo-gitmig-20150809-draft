@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.2.ebuild,v 1.2 2004/02/07 05:45:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.2.1.ebuild,v 1.1 2004/02/08 22:24:43 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -131,7 +131,7 @@ pkg_postinst() {
 		einfo "seusermod"
 		einfo " "
 		einfo "A policy for the seuser program has been installed into"
-		einfo "${POLICYDIR}.  Please reload your policy at relabel"
+		einfo "${POLICYDIR}.  Please reload your policy and relabel"
 		einfo "setools:  rlpkg setools"
 	fi
 }
