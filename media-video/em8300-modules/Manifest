@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8231b234c0cfd6e61b3beb5e40990ed6 em8300-modules-0.15.0_pre20040906.ebuild 2171
+MD5 4ee920a8351c5d20d578bc7bf5b1a09c em8300-modules-0.15.0_pre20040906.ebuild 2187
 MD5 5828ff39d73ab92b6ec6262e6a1d8d58 em8300-modules-0.14.0.ebuild 1940
 MD5 10f07db2bcca72c2d9fd2b13148f6894 em8300-modules-0.12.0.ebuild 2434
-MD5 9cc1a5d3a335ea558fdf2154488de072 em8300-modules-0.15.0_pre20040525.ebuild 2176
+MD5 e44873858edde7efdb9525a72bc2f48a em8300-modules-0.15.0_pre20040525.ebuild 2192
 MD5 9557b4f8c9c17637a04a126438963dad em8300-modules-0.13.0.ebuild 2433
 MD5 bc33f9a4fcabfc9f7cd9deb48a8622a1 ChangeLog 2201
 MD5 5bf3ce68ed1923dc3a3996a58987a360 metadata.xml 247
@@ -17,7 +17,7 @@ MD5 c6636e3bede214480f9eb0d32d916dd1 files/digest-em8300-modules-0.14.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYMh3MSkoRwEucGERAvWkAKCcmdfqzdq3OyCsrj7bNotzzjpU2gCdGP5l
-IA+noGLsh1NMGOFMk9XR9sE=
-=E69u
+iD8DBQFBYMuSMSkoRwEucGERArnmAJ9PA5cBrzuXcscs068GMgiZa72JPgCfSO6O
+BcLpngfzY/wbWqQ3ZE1lrQ4=
+=jwrA
 -----END PGP SIGNATURE-----
