@@ -1,12 +1,15 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.25 2003/02/19 13:01:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.26 2003/02/19 21:46:47 zwelch Exp $
 
   19 Feb 2003; <gmsoft@gneoot.org> gcc-config-1.3.1.ebuild :
   Changed ~hppa to hppa.
 
 *gcc-config-1.3.1 (19 Jan 2003)
 
+  18 Feb 2003;  <zwelch@gentoo.org> gcc-config-1.3.1.ebuild :
+  Add stable for arm
+  
   18 Feb 2003;  <seemant@gentoo.org> gcc-config-1.3.1.ebuild :
   moved to stable for x86
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r4.ebuild,v 1.14 2003/02/13 16:34:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r4.ebuild,v 1.15 2003/02/19 21:46:47 zwelch Exp $
 
 
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/patch/patch.html"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 src_compile() {
 

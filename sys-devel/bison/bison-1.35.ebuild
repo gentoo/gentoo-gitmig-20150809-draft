@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.12 2003/02/13 16:28:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.35.ebuild,v 1.13 2003/02/19 21:46:47 zwelch Exp $
 
 IUSE="nls static build" # icc"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND="nls? ( sys-devel/gettext )"
 #	icc? ( dev-lang/icc )"

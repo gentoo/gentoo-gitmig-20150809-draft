@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.11 2003/02/13 16:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.12 2003/02/19 21:46:47 zwelch Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -11,7 +11,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.bz2
 	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips arm"
 
 DEPEND=">=sys-devel/m4-1.4p
 	sys-devel/perl"

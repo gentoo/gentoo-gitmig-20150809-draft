@@ -1,11 +1,15 @@
 # ChangeLog for sys-devel/make
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.9 2003/02/12 09:15:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.10 2003/02/19 21:46:47 zwelch Exp $
 
+  18 Feb 2003; Zach Welch <zwelch@gentoo.org> make-3.80.ebuild :
+  Added arm to keywords.
+  
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> make-3.80.ebuild :
   Added hppa to keywords.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
  
 *make-3.80 (14 Oct 2002)
 

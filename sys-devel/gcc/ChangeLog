@@ -1,11 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.65 2003/02/13 20:18:56 gerk Exp $
-
-  08 Feb 2003; Guy Martin <gmsoft@gentoo.orf> :
-  Added hppa to keywords.
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.66 2003/02/19 21:46:47 zwelch Exp $
 
 *gcc-3.2.2.ebuild (06 Feb 2003)
+
+  18 Feb 2003; Zach Welch <zwelch@gentoo.org> gcc-3.2.2.ebuild :
+  Added arm to keywords.
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.2.2.ebuild :
+  Added hppa to keywords.
 
   06 Feb 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.2.ebuild :
   Update version.
