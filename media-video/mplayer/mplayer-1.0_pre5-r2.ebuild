@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.19 2004/10/17 00:21:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.20 2004/10/23 23:10:47 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -114,7 +114,7 @@ src_unpack() {
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
 
 	#Workaround for the altivec softscaler issues
-	epatch ${FILESDIR}/mplayer-1.0_pre5-yuv2rbg_kludge.patch
+	epatch ${FILESDIR}/mplayer-1.0_pre5-yuv2rgb_fix.patch
 
 	#bug #55936, eradicator's cachefill patch.
 	epatch ${FILESDIR}/cachefill.patch
