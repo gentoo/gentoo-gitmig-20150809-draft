@@ -1,8 +1,7 @@
-MD5 a43de176a2973e952d00e2a3da0fc297 ChangeLog 774
+MD5 c41384253485f4a9560dc149306fdd70 ChangeLog 1407
 MD5 ee9bb53fb090e02e955d866401bcec12 ecb-1.80.ebuild 1702
 MD5 433aafbf99ba4709ae3fd0e7f934e799 ecb-1.90.ebuild 1530
-MD5 475cdd8b7c3770909d62279abbb3da80 ecb-1.96.ebuild 1157
-MD5 77302aa6436dbaef4ab1adfd67cc5c6a ecb-1.96.ebuild~ 1263
+MD5 b257d3b6885a997cef06299794260d2f ecb-1.96.ebuild 1274
 MD5 bf88d754c37fc5df12a996583552816b files/50ecb-gentoo.el 134
 MD5 3d51075abd295aa76775d1c315d35dcc files/digest-ecb-1.80 60
 MD5 caecb2f0e391a0260149b86a9877e560 files/digest-ecb-1.90 60
@@ -10,5 +9,5 @@ MD5 3888d43ea733def4c7566c06aa442f79 files/ecb-1.90-gentoo.patch 2393
 MD5 0a0e7458fb9bcb8ccffce77ab25944a9 files/ecb-help.el-gentoo.patch 1427
 MD5 9f6fdeeb2bb9e4dfef117f28fe5995de files/ecb.texi-gentoo.patch 251
 MD5 100b2f2e83bbbbe6d0f26279ac4c5c17 files/70ecb-gentoo.el 97
-MD5 7642fb00bc73f44f7d590fa4f006d892 files/ecb-help.el-ecb-1.93-gentoo.diff 2148
 MD5 16eb737af1695abe7371fc78c0a863b3 files/digest-ecb-1.96 60
+MD5 b2fecab970cb3caf89959102b9494cc9 files/ecb-help.el-ecb-1.96-gentoo.diff 1270
