@@ -1,0 +1,77 @@
+diff -r -c rubber-0.99.7.orig/src/__init__.py rubber-0.99.7/src/__init__.py
+*** rubber-0.99.7.orig/src/__init__.py	2004-02-16 22:33:47.000000000 +0900
+--- rubber-0.99.7/src/__init__.py	2004-03-22 17:07:08.650376984 +0900
+***************
+*** 82,87 ****
+--- 82,90 ----
+  		"""
+  		return self.objects[name]
+  
++ 	def has_key (self, name):
++ 		return self.objects.has_key(name)
++ 
+  	def register (self, name, dict={}):
+  		"""
+  		Attempt to register a package with the specified name. If a module is
+***************
+*** 503,509 ****
+  		else:
+  			lst = string.split(cmd, ".", 1)
+  			if len(lst) > 1:
+! 				if modules.has_key(lst[0]):
+  					self.modules[lst[0]].command(lst[1], arg)
+  			else:
+  				self.msg.info(pos, _("unknown directive '%s'") % cmd)
+--- 506,512 ----
+  		else:
+  			lst = string.split(cmd, ".", 1)
+  			if len(lst) > 1:
+! 				if self.modules.has_key(lst[0]):
+  					self.modules[lst[0]].command(lst[1], arg)
+  			else:
+  				self.msg.info(pos, _("unknown directive '%s'") % cmd)
+diff -r -c rubber-0.99.7.orig/src/modules/lhs2TeX.py rubber-0.99.7/src/modules/lhs2TeX.py
+*** rubber-0.99.7.orig/src/modules/lhs2TeX.py	2003-10-28 05:04:41.000000000 +0900
+--- rubber-0.99.7/src/modules/lhs2TeX.py	2004-03-22 17:07:53.261595048 +0900
+***************
+*** 21,31 ****
+  		self.env = env
+  		self.source = source
+  		self.target = target
+! 		self.cmd = ["lhs2TeX", "-math", source]
+  
+  	def run (self):
+  		self.env.msg(0, _("pretty-printing %s...") % self.source)
+! 		out = open(target, 'w')
+  		def w (line, file=out):
+  		  file.write(line)
+  		  file.flush()
+--- 21,31 ----
+  		self.env = env
+  		self.source = source
+  		self.target = target
+! 		self.cmd = ["lhs2TeX", "-poly", source]
+  
+  	def run (self):
+  		self.env.msg(0, _("pretty-printing %s...") % self.source)
+! 		out = open(self.target, 'w')
+  		def w (line, file=out):
+  		  file.write(line)
+  		  file.flush()
+***************
+*** 48,54 ****
+  		else:
+  			self.clean_tex = 0
+  		env.convert.add_rule("(.*)\\.tex$", "\\1.lhs", "lhs2TeX")
+! 		self.style = "-math"
+  
+  	def make (self):
+  		"""
+--- 48,54 ----
+  		else:
+  			self.clean_tex = 0
+  		env.convert.add_rule("(.*)\\.tex$", "\\1.lhs", "lhs2TeX")
+! 		self.style = "-poly"
+  
+  	def make (self):
+  		"""

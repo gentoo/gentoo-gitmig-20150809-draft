@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 532bee021eb922932535dc9a4aa88f0e rubber-0.99.8.ebuild 795
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 9d07ac651d5df91d86b5143b64423f54 ChangeLog 483
+MD5 fa3ee1d6122e1a65f21eee40704b33ff files/digest-rubber-0.99.8 64
+MD5 1a745ebed6ee7adc37e3e4b29cc075bb files/rubber-module-command.patch 2240
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjjArVWNWqTUmv+0RAvP4AKCbmklPCxznjaAWpc4Xk+jgqtAiFQCePHhX
+dRKa6txFSxv3E1NKYX8uU2I=
+=8c58
+-----END PGP SIGNATURE-----

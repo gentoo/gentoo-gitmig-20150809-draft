@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/rubber
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.1 2004/11/07 14:31:01 usata Exp $
+
+*rubber-0.99.8 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/rubber-module-command.patch, +rubber-0.99.8.ebuild:
+  Initial import. Ebuild submitted by Sam Yates <sam@quux.dropbear.id.au>.
+  See bug #45009 for discussion about rubber-module-command.patch.
+
