@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.19 2004/07/24 07:08:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.20 2004/08/09 23:32:52 gmsoft Exp $
+
+*hppa-dev-sources-2.6.7_p14-r1 (09 Aug 2004)
+
+  09 Aug 2004; Guy Martin <gmsoft@gentoo.org> +files/CAN-2004-0596.patch,
+  +files/firmware.c.patch, +files/security-proc-cmdline.patch,
+  +hppa-dev-sources-2.6.7_p14-r1.ebuild:
+  Added security fixes (see #57826, #59378 and #59905). Fix firmware.c.
 
 *hppa-dev-sources-2.6.7_p14 (24 Jul 2004)
 

@@ -1,0 +1,20 @@
+--- drivers/net/eql.c.ori	2004-07-22 12:46:56.103576048 +0200
++++ drivers/net/eql.c	2004-07-22 12:46:59.068125368 +0200
+@@ -497,6 +497,8 @@
+ 	slave_dev = dev_get_by_name(sc.slave_name);
+ 
+ 	ret = -EINVAL;
++	if (!slave_dev)
++		return ret;
+ 
+ 	spin_lock_bh(&eql->queue.lock);
+ 	if (eql_is_slave(slave_dev)) {
+@@ -531,6 +533,8 @@
+ 	slave_dev = dev_get_by_name(sc.slave_name);
+ 
+ 	ret = -EINVAL;
++	if (!slave_dev)
++		return ret;
+ 
+ 	spin_lock_bh(&eql->queue.lock);
+ 	if (eql_is_slave(slave_dev)) {
