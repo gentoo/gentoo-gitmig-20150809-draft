@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3.50_pre20041027.ebuild,v 1.3 2005/01/01 13:24:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.1 2005/02/26 04:20:48 usata Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
 IUSE="X Xaw3d aqua cjk gif gnome gtk jpeg multi-tty nls png spell tiff"
 
-INLINE="inline_patch-20041015"
-MULTI_TTY="emacs--multi-tty--0--patch-261.2004-10-19"
+INLINE="inline_patch-20041229"
+MULTI_TTY="emacs--multi-tty--0--patch-301.2005-02-25"
 
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
 HOMEPAGE="http://www.gnu.org/software/emacs/
 	http://macemacsjp.sourceforge.jp/
 	http://lorentey.hu/project/emacs.html.en"
 SRC_URI="mirror://gentoo/${P/_pre/-}.tar.gz
-	cjk? ( mirror://sourceforge.jp/macemacsjp/11918/${INLINE}.tar.gz )
+	cjk? ( mirror://sourceforge.jp/macemacsjp/12817/${INLINE}.tar.gz )
 	multi-tty? ( http://lorentey.hu/downloads/emacs/multi-tty/${MULTI_TTY}.patch.gz )"
 
 # Never use the sandbox, it causes Emacs to segfault on startup
@@ -34,11 +34,12 @@ DEPEND=">=sys-apps/portage-2.0.51
 		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) )
 		gnome? ( gnome-base/gnome-desktop ) )
 	nls? ( >=sys-devel/gettext-0.11.5 )
-	!=app-editors/emacs-cvs-21.3.50*"
+	!=app-editors/emacs-cvs-21.3.50*
+	!=app-editors/emacs-cvs-22.0.50*"
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="21.3.50"
+SLOT="22.0.50"
 LICENSE="GPL-2"
 # should run on other arches, but the ebuild is intended for ppc-macos
 KEYWORDS="-* ~ppc-macos"
@@ -109,7 +110,7 @@ src_compile() {
 	fi
 
 	econf --enable-debug \
-		--program-suffix=-${SLOT} \
+		--program-suffix=.emacs-${SLOT} \
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
@@ -118,7 +119,8 @@ src_compile() {
 
 src_install () {
 	einstall || die
-	rm ${D}/usr/bin/emacs-${SLOT}-${SLOT}
+	rm ${D}/usr/bin/emacs-${SLOT}.emacs-${SLOT} || die "removing duplicate emacs executable failed"
+	dohard /usr/bin/emacs.emacs-${SLOT} /usr/bin/emacs-${SLOT} || die
 
 	if use aqua ; then
 		einfo "Installing Carbon Emacs..."
@@ -144,8 +146,7 @@ src_install () {
 		# defaults to aspell if installed
 		elisp-site-file-install ${FILESDIR}/40aspell-gentoo.el
 	fi
-	newenvd ${FILESDIR}/50emacs-${SLOT}.envd 50emacs-${SLOT}
-	dosed "s:%%SLOT%%:${SLOT}:g" /etc/env.d/50emacs-${SLOT}
+	newenvd ${FILESDIR}/60emacs-${SLOT}.envd 60emacs-${SLOT}
 
 	einfo "Fixing manpages..."
 	for m in  ${D}/usr/share/man/man1/* ; do
@@ -163,7 +164,7 @@ src_install () {
 update-alternatives() {
 	for i in emacs emacsclient etags ctags b2m ebrowse \
 		rcs-checkin grep-changelog ; do
-		alternatives_auto_makesym "/usr/bin/$i" "/usr/bin/$i-21.*"
+		alternatives_auto_makesym "/usr/bin/$i" "/usr/bin/$i.emacs-*"
 	done
 }
 

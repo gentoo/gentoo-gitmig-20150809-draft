@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.57 2005/02/21 17:36:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.58 2005/02/26 04:20:48 usata Exp $
+
+*emacs-22.0.50_pre20050225 (26 Feb 2005)
+
+  26 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/60emacs-22.0.50.envd, +files/emacs-22.0.50.desktop,
+  -emacs-21.3-r2.ebuild, -emacs-21.3-r3.ebuild, -emacs-21.3-r5.ebuild,
+  -emacs-21.3.50_pre20041027.ebuild, +emacs-22.0.50_pre20050225.ebuild:
+  Updated CVS snapshot for ppc-macos.
+  Removed ebuilds vulnerable to GLSA 200502-20.
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> emacs-21.4.ebuild:
   stable on ia64 #79686
