@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/mpqc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.3 2003/02/12 05:17:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/ChangeLog,v 1.4 2003/12/15 03:54:07 spyderous Exp $
+
+*mpqc-2.2.0 (14 Dec 2003)
+
+  14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; mpqc-2.2.0.ebuild:
+  Version bump.
 
   02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> mpqc-2.1.2.ebuild:
   marked stable for x86
