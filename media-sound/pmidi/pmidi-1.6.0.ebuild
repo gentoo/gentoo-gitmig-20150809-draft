@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/pmidi-1.6.0.ebuild,v 1.4 2004/06/25 00:17:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pmidi/pmidi-1.6.0.ebuild,v 1.5 2004/07/19 20:11:14 eradicator Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0_rc6"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation Failed"
