@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdist
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.6 2004/03/10 14:36:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/ChangeLog,v 1.7 2004/03/10 22:17:00 dholm Exp $
+
+  10 Mar 2004; David Holm <dholm@gentoo.org> rdist-6.1.5-r1.ebuild:
+  Added to ~ppc.
 
 *rdist-6.1.5-r1 (10 Mar 2004)
 
