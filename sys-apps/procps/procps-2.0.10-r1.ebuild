@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.8 2003/01/18 14:39:12 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-2.0.10-r1.ebuild,v 1.9 2003/02/09 02:16:56 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
@@ -9,7 +9,7 @@ HOMEPAGE="http://surriel.com/procps/"
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 DEPEND="${RDEPEND} >=sys-devel/gettext-0.10.35"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 SLOT="0"
 
 src_unpack() {
