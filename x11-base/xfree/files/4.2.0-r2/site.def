@@ -8,6 +8,8 @@
 #define BuildAllSpecsDocs NO
 #define BuildSpecsDocs NO
 #define BuildGLULibrary NO
+#define BuildGLXLibrary YES
+#define BuildGlxExt YES
 #define SharedLibGLU NO
 #define NormalLibGLU NO
 /* binutils-2.9 */

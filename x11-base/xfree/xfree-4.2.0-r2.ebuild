@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r2.ebuild,v 1.2 2002/01/21 01:07:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r2.ebuild,v 1.3 2002/01/21 01:59:42 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -108,10 +108,10 @@ src_install() {
 	#dosym /usr/X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
 	#We're no longer including libGLU from here.  Packaged separately, from separate sources.
 
-	insinto /etc/X11
-	doins ${FILESDIR}/${PVR}/chooser.sh
-	insinto /etc/X11/Sessions
-	doins ${FILESDIR}/${PVR}/Sessions/*
+	exeinto /etc/X11
+	doexe ${FILESDIR}/${PVR}/chooser.sh
+	exeinto /etc/X11/Sessions
+	doexe ${FILESDIR}/${PVR}/Sessions/*
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/10xfree
 	insinto /etc/X11/xinit
