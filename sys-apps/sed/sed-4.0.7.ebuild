@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.11 2004/01/10 14:40:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.7.ebuild,v 1.12 2004/01/16 07:08:37 kumba Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="mirror://gnu/sed/${P}.tar.gz"
@@ -16,6 +16,9 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	local myconf
+
+	# Allow sed to detect mips systems properly
+	use mips && gnuconfig_update
 
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
