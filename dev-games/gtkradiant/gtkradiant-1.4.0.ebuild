@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.8 2004/06/24 22:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.9 2004/06/29 06:59:27 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="FPS level editor"
 HOMEPAGE="http://www.qeradiant.com/?data=editors/gtk"
@@ -24,9 +24,9 @@ RDEPEND="media-libs/libpng
 	virtual/x11
 	virtual/opengl"
 
-S=${WORKDIR}
-dir=${GAMES_PREFIX_OPT}/${PN}
-Ddir=${D}/${dir}
+S="${WORKDIR}"
+dir="${GAMES_PREFIX_OPT}/${PN}"
+Ddir="${D}/${dir}"
 
 src_unpack() {
 	unpack_makeself
@@ -34,26 +34,26 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
-	cp -r bin/Linux/x86/* ${Ddir}/
-	chmod -R a+x ${Ddir}/
-	cp -r README license.txt core/* ${Ddir}
-	echo ${PV:2:1} > ${Ddir}/RADIANT_MAJOR
-	echo ${PV:4} > ${Ddir}/RADIANT_MINOR
-	chmod a+x ${Ddir}/openurl.sh
+	dodir "${dir}"
+	cp -r bin/Linux/x86/* "${Ddir}/" || die "cp failed"
+	chmod -R a+x "${Ddir}/"
+	cp -r README license.txt core/* "${Ddir}" || die "cp failed"
+	echo ${PV:2:1} > "${Ddir}/RADIANT_MAJOR"
+	echo ${PV:4} > "${Ddir}/RADIANT_MINOR"
+	chmod a+x "${Ddir}/openurl.sh"
 
-	dogamesbin ${FILESDIR}/{q3map2,radiant}
-	insinto ${dir}/games
-	doins ${FILESDIR}/*.game
-	exeinto ${dir} || die "${dir}"
-	doexe ${FILESDIR}/{q3map2,radiant}
+	dogamesbin "${FILESDIR}/"{q3map2,radiant} || die "dogamesbin failed"
+	insinto "${dir}/games"
+	doins "${FILESDIR}/"*.game || die "doins failed"
+	exeinto "${dir}"
+	doexe ${FILESDIR}/{q3map2,radiant} || die "doexe failed"
 
-	dodir ${GAMES_PREFIX_OPT}
-	cp -r et ${D}/${GAMES_PREFIX_OPT}/enemy-territory
-	cp -r q3 ${D}/${GAMES_PREFIX_OPT}/quake3
-	cp -r wolf ${D}/${GAMES_PREFIX_OPT}/rtcw
-	dodir ${GAMES_DATADIR}
-	cp -r q2 ${D}/${GAMES_DATADIR}/quake2-data
+	dodir "${GAMES_PREFIX_OPT}"
+	cp -r et "${D}/${GAMES_PREFIX_OPT}/enemy-territory" || die "cp failed"
+	cp -r q3 "${D}/${GAMES_PREFIX_OPT}/quake3" || die "cp failed"
+	cp -r wolf "${D}/${GAMES_PREFIX_OPT}/rtcw" || die "cp failed"
+	dodir "${GAMES_DATADIR}"
+	cp -r q2 "${D}/${GAMES_DATADIR}/quake2-data" || die "cp failed"
 
 	prepgamesdirs
 }
