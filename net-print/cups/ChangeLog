@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.100 2004/11/07 23:56:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.101 2004/11/12 12:01:12 lanius Exp $
+
+  12 Nov 2004; Heinrich Wendel <lanius@gentoo.org> -cups-1.1.20-r3.ebuild,
+  -cups-1.1.20-r4.ebuild, cups-1.1.22.ebuild:
+  move samba to PDEPEND, bug #62560; remove old ebuilds
 
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> cups-1.1.20-r5.ebuild:
   Marked stable on mips.
