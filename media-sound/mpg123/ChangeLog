@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.27 2004/02/15 19:43:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.28 2004/02/15 20:39:08 agriffis Exp $
+
+  15 Feb 2004; Aron Griffis <agriffis@gentoo.org> metadata.xml,
+  mpg123-0.59s-r1.ebuild, mpg123-0.59s.ebuild:
+  Mark 0.59s-r1 stable on x86 for bug 40631. Remove older ebuilds. Add this
+  ebuild to the sound herd.  Remove ~arm from KEYWORDS since there isn't even
+  a bugzilla account to get somebody to test.
 
   15 Feb 2004; Jason Wever <weeve@gentoo.org> mpg123-0.59s-r1.ebuild:
   Marked stable on sparc to fix bug #40631.
