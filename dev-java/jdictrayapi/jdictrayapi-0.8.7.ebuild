@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.8.7.ebuild,v 1.2 2005/02/17 17:35:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/jdictrayapi-0.8.7.ebuild,v 1.3 2005/03/16 18:04:47 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -20,7 +20,8 @@ IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-core-1.5.4
 		app-arch/unzip
-		jikes? ( >=dev-java/jikes-1.21 )"
+		jikes? ( >=dev-java/jikes-1.21 )
+		source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
@@ -55,8 +56,12 @@ src_install() {
 		java-pkg_dohtml -r docs/*
 	fi
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-		cp ${PN}-src.zip ${D}/usr/share/doc/${PF}/source
+		for dir in $(find ${S} -name CVS);
+		do
+			rm -rf ${dir}
+		done
+
+		java-pkg_dosrc ${S}/src/unix/*
 	fi
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples

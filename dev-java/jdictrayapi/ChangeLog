@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdictrayapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.2 2005/02/17 17:35:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.3 2005/03/16 18:04:47 luckyduck Exp $
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jdictrayapi-0.8.7.ebuild:
+  jdictrayapi now makes use of java-pkg_dosrc
 
   17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jdictrayapi-0.8.7.ebuild:
   added missing unzip dependency. see #69831
