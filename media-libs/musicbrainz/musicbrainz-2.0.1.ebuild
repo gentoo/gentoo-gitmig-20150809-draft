@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.10 2004/03/03 03:14:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.11 2004/06/18 05:41:09 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.musicbrainz.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc alpha amd64 ia64"
+KEYWORDS="-x86 -sparc ~ppc alpha -amd64 ia64"
 
 DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""

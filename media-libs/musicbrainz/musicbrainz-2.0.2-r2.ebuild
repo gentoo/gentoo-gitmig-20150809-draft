@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.8 2004/06/07 23:01:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.9 2004/06/18 05:41:09 eradicator Exp $
 
 inherit libtool distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc hppa ~alpha"
+KEYWORDS="x86 ppc sparc hppa ~alpha -amd64"
 IUSE="python"
 
 RDEPEND="virtual/glibc

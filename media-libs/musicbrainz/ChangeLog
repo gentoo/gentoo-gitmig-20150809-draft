@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.28 2004/06/07 23:01:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.29 2004/06/18 05:41:09 eradicator Exp $
+
+  17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musicbrainz-2.0.1.ebuild, musicbrainz-2.0.2-r2.ebuild,
+  musicbrainz-2.1.1.ebuild:
+  2.1.1 stable amd64 as it is the only working version for this arc. 2.0.2-r2
+  stable sparc. Masking my arcs in 2.0.1 to force upgrade to newer versions to
+  fix linking errors.
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> musicbrainz-2.0.2-r2.ebuild:
   Fix use invocation
