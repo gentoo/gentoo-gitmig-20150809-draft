@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.3-r1.ebuild,v 1.1 2002/06/05 14:20:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.3-r1.ebuild,v 1.2 2002/06/05 14:25:22 seemant Exp $
 
 
 inherit perl-module
@@ -33,7 +33,7 @@ src_unpack()
 		-e 's:/local::g' \
 		 Makefile.linux.orig > Makefile.linux
 
-	for i in OpenGL.xs SDL_perl.c OpenGL.c detect.c
+	for i in OpenGL.xs SDL_perl.xs detect.c
 	do
 		cp ${i} ${i}.orig
 		sed "s:GL/::g" \
