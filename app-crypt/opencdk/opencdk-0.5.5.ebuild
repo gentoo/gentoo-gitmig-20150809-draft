@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.5.ebuild,v 1.10 2004/08/14 23:11:38 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.5.ebuild,v 1.11 2004/08/15 01:04:01 hardave Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Open Crypto Development Kit for basic OpenPGP message manipulation"
 HOMEPAGE="http://www.gnutls.org/"
@@ -14,6 +16,14 @@ IUSE="doc"
 RDEPEND=">=dev-libs/libgcrypt-1.1.94"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.6"
+
+src_compile() {
+	# Needed for mips and probably others
+	gnuconfig_update
+
+	econf || die "Failed to run econf!"
+	emake || die "Failed to run emake!"
+}
 
 src_install() {
 	einstall || die "installed failed"
