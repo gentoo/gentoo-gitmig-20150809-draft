@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-perl/HTML-SimpleParse
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.1 2002/12/18 18:36:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.2 2002/12/27 21:09:24 vapier Exp $
 
 *HTML-SimpleParse-0.10 (18 Dec 2002)
 
