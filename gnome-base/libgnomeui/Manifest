@@ -1,10 +1,20 @@
-MD5 fb7bb11f433eb2922dac8b2b95303db3 libgnomeui-2.8.0.ebuild 1003
-MD5 0e85f651dde10b76d2a287e2ca9eba4d ChangeLog 7489
-MD5 6615596dbbd5148b3b5b88ee7b774447 libgnomeui-2.4.0.1.ebuild 884
-MD5 ecbaa00993be5e159dc98ccb0008e501 libgnomeui-2.6.0.ebuild 994
-MD5 738fd98f1f53a7b3a2341d57f76cac95 libgnomeui-2.6.1.1.ebuild 1002
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23977a819ba05d79b675876da0d01767 libgnomeui-2.8.0.ebuild 1002
+MD5 42b35df6880dcf255cde710a52804c1c ChangeLog 7579
+MD5 6af5745a6eafe97daf03a45278b60e1c libgnomeui-2.6.1.1.ebuild 1002
+MD5 293b5d554585d90fed1a2dff5d264167 libgnomeui-2.4.0.1.ebuild 884
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 a367254e9c3911e428448e32bb16bc80 libgnomeui-2.6.0.ebuild 994
+MD5 21a5070695ab142c951bd58c17b8fe91 files/digest-libgnomeui-2.6.1.1 72
 MD5 aa8a8358c612ef8399525582a64c7cf7 files/digest-libgnomeui-2.6.0 70
 MD5 0db411f046038dd128c7486865b18212 files/digest-libgnomeui-2.8.0 70
-MD5 21a5070695ab142c951bd58c17b8fe91 files/digest-libgnomeui-2.6.1.1 72
 MD5 856ca51af259bcbfe426d1c09c7bafcd files/digest-libgnomeui-2.4.0.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4GnZCHk4+ZoBpvsRAuJAAJ466rPMtrnp8EfIXZFknPD6EbJeRACfX8ct
+TKB9L4Nh09pQCCR/zR2Fi00=
+=tn3j
+-----END PGP SIGNATURE-----

@@ -1,10 +1,20 @@
-MD5 c5c8c9d45483f700cb9efb522db83ce7 ChangeLog 5949
-MD5 24f5cb63130b40d5f466a80e484fe49e libgnomecanvas-2.6.0.ebuild 699
-MD5 0b805514f43ad3deb00d2388d079bee4 libgnomecanvas-2.8.0.ebuild 709
-MD5 16386833c0761ff79415e373d502f6f4 libgnomecanvas-2.6.1.1.ebuild 708
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2278f9852b7a7412017c0fb80bba5a7 ChangeLog 6043
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a61e50eb31efb04ef2077d57431f2154 libgnomecanvas-2.4.0.ebuild 682
-MD5 f880aa672265631ff7c926daf1921ed0 files/digest-libgnomecanvas-2.4.0 73
-MD5 2b4a5d74860dcdb2e85a73785b5b26ce files/digest-libgnomecanvas-2.6.1.1 75
+MD5 349638d6425f45cd2af5383888d472a5 libgnomecanvas-2.8.0.ebuild 708
+MD5 26783e9777f67549085c65065a86fb65 libgnomecanvas-2.6.0.ebuild 700
+MD5 23b3b4fef515ce69adb04b30201b1475 libgnomecanvas-2.4.0.ebuild 682
+MD5 9fb3607be5e851ddfb91ea1fefb88e07 libgnomecanvas-2.6.1.1.ebuild 708
 MD5 e823d514303495a7ff61883f5258d181 files/digest-libgnomecanvas-2.8.0 73
+MD5 2b4a5d74860dcdb2e85a73785b5b26ce files/digest-libgnomecanvas-2.6.1.1 75
+MD5 f880aa672265631ff7c926daf1921ed0 files/digest-libgnomecanvas-2.4.0 73
 MD5 5ab2a0d66885d07f1425402db7986225 files/digest-libgnomecanvas-2.6.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4G3gCHk4+ZoBpvsRAkAvAJ0akvzPcx994WvViGTI2zAXctdZ8ACdFNOl
+nlAT5qhRTSjMNJe9takE8Ig=
+=fx88
+-----END PGP SIGNATURE-----
