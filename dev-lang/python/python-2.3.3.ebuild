@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.14 2004/02/09 23:25:00 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.15 2004/02/11 00:16:31 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -65,6 +65,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3-gentoo_py_dontcompile.patch
 	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
+	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
 }
 
 src_configure() {
