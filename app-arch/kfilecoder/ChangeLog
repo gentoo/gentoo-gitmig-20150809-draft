@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/kfilecoder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/ChangeLog,v 1.2 2002/07/15 21:40:33 danarmak Exp $
+
+*kfilecoder-0.6.0_pre1 (16 Jul 2002)
+
+  16 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version (kde3).
 
 *kfilecoder-0.5.0-r2 (1 Feb 2002)
 
