@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r1.ebuild,v 1.1 2001/12/18 22:32:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r1.ebuild,v 1.2 2002/01/08 19:10:48 azarah Exp $
 
 PN=Guppi
 P=${PN}-${PV}
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r3
 	 >=gnome-base/gnome-print-0.31
 	 >=media-libs/gdk-pixbuf-0.13
 	 >=dev-util/guile-1.5
-	 bonobo? ( >=gnome-base/bonobo-1.0.17 )"
+	 >=gnome-base/bonobo-1.0.17"
+# Seems that bonobo *is* needed ....
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
