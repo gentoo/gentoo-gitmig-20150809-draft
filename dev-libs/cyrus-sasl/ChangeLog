@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.112 2005/02/06 21:25:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.113 2005/02/15 19:36:27 ferdy Exp $
+
+*cyrus-sasl-2.1.20-r2 (15 Feb 2005)
+
+  15 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/cyrus-sasl-2.1.19-checkpw.c.patch,
+  +files/cyrus-sasl-ntlm_impl-spnego.patch.gz, +cyrus-sasl-2.1.20-r2.ebuild:
+  Fix bugs #46038,#45181,#81970,#81342. Adding urandom,srp,crypt and
+  ntlm_unsupported_patch use flags and its patches.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> cyrus-sasl-2.1.20.ebuild:
   Marked stable on mips.
