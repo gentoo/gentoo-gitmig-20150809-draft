@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.5 2002/07/23 06:58:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.99.19.ebuild,v 1.6 2002/08/06 19:13:24 seemant Exp $
 
 # If you are looking in here, it is because emerge has instructed you to do
 # so.  Please go to http://messenger.yahoo.com/download/unix.html and scroll
@@ -32,7 +32,7 @@ pkg_setup() {
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${MY_P}.tar.gz ]
 	then
-		die "Please download ${MY_P} from ${HOMEPAGE} -- Note that you need the one for Debian Sid -- and place into ${DISTDIR}"
+		die "Please download ${MY_P} from ${HOMEPAGE}.  Scroll to the bottom to find the tarballs for Non-Root Installs.-- Note that you need the one for Debian Sid -- and place into ${DISTDIR}"
 	fi
 	unpack ${MY_P}.tar.gz || die
 }
