@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.64 2003/11/07 23:18:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.65 2003/11/13 15:44:51 robbat2 Exp $
+
+  13 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.4.ebuild:
+  fix accidental readline reversion
 
 *php-4.3.4 (07 Nov 2003)
 
