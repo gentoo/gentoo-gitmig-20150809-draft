@@ -1,17 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-1.2.7.ebuild,v 1.3 2003/02/13 13:42:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-1.2.7.ebuild,v 1.4 2003/02/14 09:05:15 vapier Exp $
 
-S=${WORKDIR}/${PN}
+inherit eutils
+
 DESCRIPTION="A remote security scanner for Linux (libnasl)"
 HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
-DEPEND="=net-analyzer/nessus-libraries-${PV}"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc -sparc "
 
-inherit eutils
+DEPEND="=net-analyzer/nessus-libraries-${PV}"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +42,5 @@ src_install() {
 		localstatedir=${D}/var/lib \
 		mandir=${D}/usr/share/man \
 		install || die "Install failed libnasl"
-	cd ${S}
 	dodoc COPYING TODO
 }
