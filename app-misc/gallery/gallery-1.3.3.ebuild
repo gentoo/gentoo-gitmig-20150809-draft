@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.3.ebuild,v 1.1 2003/01/28 22:08:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.3.ebuild,v 1.2 2003/01/28 22:15:05 mholzer Exp $
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator."
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-DEPEND=">=net-www/apache-1.3.24-r1
+depenD=">=net-www/apache-1.3.24-r1
 	>=dev-php/mod_php-4.1.2-r5
 	>=media-gfx/jhead-1.6
 	>=media-gfx/imagemagick-5.4.9.1-r1"
@@ -82,7 +82,7 @@ pkg_postinst() {
 	einfo "For new installations  point your browser to http://www.yourhost.com/gallery/setup/"
 	einfo "and follow the instructions."
         einfo "-----------------------------------------------------------------------------------"
-        einfo "For upgrades, just run  # /home/httpd/gallery/secure.sh" 
+        einfo "For upgrades, just run  # ${DST_PATH}/secure.sh" 
 	einfo
 }
 
