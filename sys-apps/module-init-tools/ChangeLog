@@ -1,12 +1,17 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.34 2003/09/17 21:45:02 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.35 2003/09/23 14:51:03 azarah Exp $
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org>
   module-init-tools-0.9.15_pre1.ebuild :
   ia64 keywords.
 
 *module-init-tools-0.9.15_pre1 (17 Sep 2003)
+
+  23 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
+  module-init-tools-0.9.12-r1.ebuild, module-init-tools-0.9.13_pre2.ebuild,
+  module-init-tools-0.9.14.ebuild, module-init-tools-0.9.15_pre1.ebuild:
+  Update SRC_URI to hangle older tarballs moved to old/, bug #29315.
 
   17 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
   module-init-tools-0.9.15_pre1.ebuild,

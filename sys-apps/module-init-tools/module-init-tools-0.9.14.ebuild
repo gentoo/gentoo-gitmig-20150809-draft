@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.14.ebuild,v 1.1 2003/09/15 21:35:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.14.ebuild,v 1.2 2003/09/23 14:51:03 azarah Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -13,6 +13,7 @@ S="${WORKDIR}/${MYP}"
 MODUTILS_PV="2.4.25"
 DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
 SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
+	mirror://kernel/linux/kernel/people/rusty/modules/old/${MYP}.tar.bz2
 	mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 
