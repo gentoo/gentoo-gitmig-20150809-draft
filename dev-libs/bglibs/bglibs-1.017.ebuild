@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.017.ebuild,v 1.4 2004/10/10 15:45:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.017.ebuild,v 1.5 2004/10/19 08:24:37 absinthe Exp $
 
 inherit fixheadtails gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://untroubled.org/bglibs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~amd64 ~hppa"
+KEYWORDS="x86 ~ppc sparc ~mips alpha amd64 ~hppa"
 IUSE=""
 DEPEND="virtual/libc"
 

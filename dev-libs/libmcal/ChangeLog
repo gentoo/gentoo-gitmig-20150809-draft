@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.20 2004/10/11 23:38:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.21 2004/10/19 08:28:11 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> libmcal-0.7-r3.ebuild:
+  Stable on amd64.
 
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> libmcal-0.7-r3.ebuild:
   Stable on hppa.
