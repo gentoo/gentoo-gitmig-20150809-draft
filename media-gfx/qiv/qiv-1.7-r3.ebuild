@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7-r3.ebuild,v 1.7 2002/10/20 13:27:52 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-1.7-r3.ebuild,v 1.8 2002/10/20 18:48:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Quick Image Viewer"
@@ -15,7 +15,6 @@ DEPEND="media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=media-libs/imlib-1.9.10
 	virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	make || die

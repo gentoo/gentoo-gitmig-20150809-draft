@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.8 2002/10/19 20:25:56 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.0-r1.ebuild,v 1.9 2002/10/20 18:48:56 vapier Exp $
 
 inherit libtool
 
@@ -17,7 +17,6 @@ KEYWORDS="x86 ppc"
 DEPEND=">=dev-libs/libusb-0.1.5
 	=dev-libs/glib-1.2*
 	>=sys-libs/zlib-1.1.4"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	elibtoolize

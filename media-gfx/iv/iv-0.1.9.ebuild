@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9.ebuild,v 1.5 2002/10/04 05:45:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9.ebuild,v 1.6 2002/10/20 18:48:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This is an image viewer"
@@ -13,7 +13,6 @@ KEYWORDS="x86"
 
 DEPEND=">=media-libs/imlib-1.9.13
 	=x11-libs/gtk+-1.2*"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd iv

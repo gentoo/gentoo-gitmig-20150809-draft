@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.6 2002/10/18 20:50:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.7 2002/10/20 18:48:56 vapier Exp $
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,6 @@ KEYWORDS="x86 ppc"
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
 	media-libs/libpng"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

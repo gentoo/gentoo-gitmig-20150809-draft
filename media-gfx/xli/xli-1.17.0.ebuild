@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.3 2002/10/18 20:50:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.4 2002/10/20 18:48:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -15,7 +15,6 @@ DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.0.5
 	>=media-libs/jpeg-6b-r2"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	cp Imakefile Imakefile.orig
