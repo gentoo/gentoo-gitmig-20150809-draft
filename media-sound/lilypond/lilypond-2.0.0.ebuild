@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.0.ebuild,v 1.4 2004/01/03 20:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.0.ebuild,v 1.5 2004/01/15 04:06:22 agriffis Exp $
 
 IUSE="doc"
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/python-2.2.3-r1
 	>=sys-devel/make-3.80
 	>=app-text/mftrace-1.0.19
 	virtual/ghostscript
-	sys-devel/bison !sys-devel/bison-1.75
+	sys-devel/bison !=sys-devel/bison-1.75
 	doc? ( media-gfx/imagemagick
 		>=media-libs/netpbm-9.12-r4 )"
 
