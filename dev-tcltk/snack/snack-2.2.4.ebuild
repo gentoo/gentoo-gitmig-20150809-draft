@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.2.ebuild,v 1.2 2004/03/13 09:53:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.1 2004/04/04 22:28:40 zx Exp $
 
 IUSE="alsa oggvorbis"
 
@@ -12,8 +12,8 @@ LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
 
-DEPEND=">dev-lang/tcl-8.0.5
-	>dev-lang/tk-8.0.5
+DEPEND=">dev-lang/tcl-8.4.3
+	>dev-lang/tk-8.4.3
 	oggvorbis? ( media-libs/libogg )"
 
 S=${WORKDIR}/${PN}${PV}/unix
@@ -32,4 +32,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D}usr install || die "make install failed"
+	cd ..
+	dodoc BSD.txt  COPYING  README changes
+	dohtml doc/*
 }
