@@ -87,6 +87,10 @@ net-www/netscape-plugger
 ~app-emulation/dosemu
 ~net-www/opera
 ~net-www/opera-static
+~app-games/quake3
+~app-games/quake3-cpma
+~app-games/quake3-osp
+
 
 # temp (to fix) currently x86 only builds 
 # that can be adjusted for ppc (gerk)
