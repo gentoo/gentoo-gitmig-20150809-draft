@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.7 2004/03/24 17:33:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.8 2004/04/03 14:01:58 pbienst Exp $
+
+  03 Apr 2004; Peter Bienstman <pbienst@gentoo.org> blitz-0.7.ebuild:
+  Fixed location of docs. Marked stable on x86.
 
   24 Mar 2004; Martin Holzer <mholzer@gentoo.org> blitz-0.7.ebuild:
   fixing digest. closes 45486
