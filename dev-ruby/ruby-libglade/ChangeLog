@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libglade
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.6 2003/02/12 06:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.7 2003/08/06 01:34:17 agriffis Exp $
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-libglade-0.30.ebuild:
+  Make this depend on the pre-2.0 versions of libglade to fix bug 22027
 
 *ruby-libglade-0.30 (07 Jan 2003)
 

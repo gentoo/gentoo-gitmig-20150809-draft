@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.30.ebuild,v 1.2 2003/02/13 11:44:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.30.ebuild,v 1.3 2003/08/06 01:34:17 agriffis Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/libglade
 DESCRIPTION="Ruby libglade bindings"
@@ -13,7 +13,8 @@ SLOT="0"
 DEPEND=">=dev-lang/ruby-1.6.4-r1
 		=x11-libs/gtk+-1.2*
 		>=dev-libs/libxml-1.8.17-r2
-		>=sys-libs/zlib-1.1.4"
+		>=sys-libs/zlib-1.1.4
+		=gnome-base/libglade-0*"
 
 src_compile() {
 	ruby extconf.rb || die "ruby extconf.rb failed"
