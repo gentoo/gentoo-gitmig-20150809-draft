@@ -1,0 +1,16 @@
+# ChangeLog for dev-lang/tcc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.1 2002/07/20 04:17:27 george Exp $
+
+*tcc-0.9.7.ebuild (19 Jul 2002)
+
+  19 Jul 2002; George Shapovalov <george@gentoo.org> tcc-0.9.7.ebuild :
+
+  initial release
+
+  A very small C compiler for ix86 (64 K). It compiles and execute
+  C source directly without linking or assembly, and does not (yet ?) output elf
+  binary file. You can also use it like in a script with #!/usr/bin/tcc in your C
+  source. Very funny :-).
+
+  ebuild submitted by Julien Herfurth <jherfurth@arafox.com>
