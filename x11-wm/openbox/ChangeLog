@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.63 2003/11/07 04:04:51 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.64 2003/11/07 05:12:42 tseng Exp $
+
+  07 Nov 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0.ebuild:
+  Added some more usable themes for users with limited vision.
 
   06 Nov 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0.ebuild:
   Bump and cleanup.
