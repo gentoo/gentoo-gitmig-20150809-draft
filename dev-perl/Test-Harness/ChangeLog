@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.22 2004/03/03 15:15:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.23 2004/03/18 21:24:30 aliz Exp $
 
   03 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   Test-Harness-2.30.ebuild:
@@ -24,6 +24,7 @@
   CPAN Version bump - doc fixes
 
 *Test-Harness-2.29-r1 (28 Jul 2003)
+*Test-Harness-2.28-r1 (28 Jul 2003)
 
   28 Jul 2003; <rac@gentoo.org> Test-Harness-2.28-r1.ebuild,
   Test-Harness-2.29-r1.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.25 2004/03/14 11:30:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.26 2004/03/18 21:24:30 aliz Exp $
 
   14 Mar 2004; Michael Cummings <mcummings@gentoo.org>
   libwww-perl-5.69-r2.ebuild, libwww-perl-5.76.ebuild:
@@ -23,6 +23,7 @@
   Added ~mips to KEYWORDS.
 
 *libwww-perl-5.76 (22 Dec 2003)
+*libwww-perl-5.69-r2 (22 Dec 2003)
 
   22 Dec 2003; <rac@gentoo.org> libwww-perl-5.69-r2.ebuild,
   libwww-perl-5.76.ebuild:
