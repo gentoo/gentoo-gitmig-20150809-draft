@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.4 2004/09/25 11:35:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.5 2004/11/04 13:32:40 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/pub/outgoing/hdf4/hdf${MY_PV}/hdf${MY_PV}.t
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/hdf4.html"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="~x86 ~amd64 ppc"
+KEYWORDS="x86 ~amd64 ppc"
 SLOT="0"
 IUSE="szip"
 
@@ -37,7 +37,7 @@ src_compile() {
 	use szip && myconf="${myconf} --with-szlib=/usr"
 	use ppc && append-flags -DSUN
 	econf ${myconf} || die "configure failed"
-	make LDFLAGS="-lm" || die "make failed"
+	make LDFLAGS="${LDFLAGS} -lm" || die "make failed"
 }
 
 src_install() {
