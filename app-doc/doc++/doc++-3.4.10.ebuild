@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.5 2004/06/24 21:39:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/doc++-3.4.10.ebuild,v 1.6 2004/06/28 13:06:53 vapier Exp $
 
 DESCRIPTION="Documentation system for C, C++, IDL and Java"
 HOMEPAGE="http://docpp.sourceforge.net/"
@@ -11,12 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
+RDEPEND="virtual/libc"
 
 src_compile() {
 	./configure -prefix /usr || die

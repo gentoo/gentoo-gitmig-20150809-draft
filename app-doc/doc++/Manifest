@@ -1,3 +1,13 @@
-MD5 338fc26085f5d1d47f0347d625f8fe78 doc++-3.4.10.ebuild 640
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40a67e3dc22aa142d26649082d21ec16 ChangeLog 496
+MD5 32a7a9edb62bb3418aee72b38b0de57c doc++-3.4.10.ebuild 597
 MD5 c7761f6b34038a9aca4bec7a4abdc835 files/digest-doc++-3.4.10 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4BgBHTu7gpaalycRAjGkAKDglVRhEWT5oxb9J+KYT9gh56ElHQCfYJhv
+subPqV42Sy0oqHxi7+uKg/M=
+=tan0
+-----END PGP SIGNATURE-----
