@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.8 2002/10/17 14:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.9 2002/12/10 00:37:42 blauwers Exp $
 
 IUSE="X"
 
@@ -25,7 +25,7 @@ src_unpack () {
 		einfo "for your system's architecture from:"
 		einfo "http://setiathome.ssl.berkeley.edu/unix.html"
 		einfo ""
-		einfo "The archive should be placed into /usr/portage/distfiles."
+		einfo "The archive should be placed into ${DISTDIR}."
 		einfo "After that, create a symbolic link:"
 		einfo ""
 		einfo "\tln -s <archive> ${DISTDIR}/${P}.tar"
