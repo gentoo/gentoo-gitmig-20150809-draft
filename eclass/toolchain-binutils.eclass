@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.22 2005/01/15 01:19:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.23 2005/01/20 02:35:16 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_prerm
 
 export CTARGET=${CTARGET:-${CHOST}}
-if [[ ${CTARGET} = ${CHOST} ]] ; then
+if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
 
-LIBPATH=/usr/"$(get_libdir)"/binutils/${CTARGET}/${PV}
+LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${PV}
 INCPATH=${LIBPATH}/include
 BINPATH=/usr/${CTARGET}/binutils-bin/${PV}
 DATAPATH=/usr/share/binutils-data/${CTARGET}/${PV}
@@ -57,12 +57,12 @@ toolchain-binutils_src_unpack() {
 }
 
 apply_binutils_updates() {
-	cd ${S}
+	cd "${S}"
 
-	[[ -n ${PATCHVER} ]] && epatch ${WORKDIR}/patch
+	[[ -n ${PATCHVER} ]] && epatch "${WORKDIR}"/patch
 	if [[ -n ${UCLIBC_PATCHVER} ]] ; then
-		epatch ${WORKDIR}/uclibc-patches
-	elif [[ ${PORTAGE_LIBC} = "uClibc" ]] ; then
+		epatch "${WORKDIR}"/uclibc-patches
+	elif [[ ${PORTAGE_LIBC} == "uClibc" ]] ; then
 		die "sorry, but this binutils doesn't yet support uClibc :("
 	fi
 
@@ -104,7 +104,7 @@ toolchain-binutils_src_compile() {
 		--enable-64-bit-bfd \
 		${myconf} ${EXTRA_ECONF}"
 	echo ./configure ${myconf}
-	${S}/configure ${myconf} || die "configure failed"
+	"${S}"/configure ${myconf} || die "configure failed"
 
 	make configure-bfd || die "make configure-bfd failed"
 	make headers -C bfd || die "make headers-bfd failed"
@@ -123,6 +123,7 @@ toolchain-binutils_src_compile() {
 }
 
 toolchain-binutils_src_test() {
+	cd "${MY_BUILDDIR}"
 	make check || die "check failed :("
 }
 
@@ -165,14 +166,15 @@ toolchain-binutils_src_install() {
 	local targ=${CTARGET/-*}
 	local FAKE_TARGETS=${CTARGET}
 	case ${targ} in
-		mips|powerpc|sparc)
-			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/-/64-}";;
-		mips64|powerpc64|sparc64)
+		mips64*|powerpc64|sparc64*)
 			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/64-/-}";;
+		mips*|powerpc|sparc*)
+			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/-/64-}";;
 	esac
+	
 
 	# Generate an env.d entry for this binutils
-	cd ${S}
+	cd "${S}"
 	insinto /etc/env.d/binutils
 	cat << EOF > env.d
 TARGET="${CTARGET}"
