@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.2 2004/02/20 07:38:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.3 2004/04/30 11:36:52 dholm Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://home.kcore.de/~kiza/linux/tornado/"
 SRC_URI="http://home.kcore.de/~kiza/linux/tornado/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
 
