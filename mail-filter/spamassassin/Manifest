@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4147f1b9c181d9c2481b277a41c2a12b ChangeLog 12980
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 2340f8dc700ca777028031b023b4d168 spamassassin-2.63.ebuild 2300
-MD5 65493afe87a913fca09fc1a71f91c049 spamassassin-2.63-r1.ebuild 2411
-MD5 765fc4df91c2d5259208d35fc1c6068b spamassassin-2.64.ebuild 2515
-MD5 9edc1167fa27cd5bb5770b30162362c7 spamassassin-3.0.0.ebuild 5971
-MD5 8ba5cfffb43037101ab50a95ea535d66 spamassassin-3.0.0-r1.ebuild 5774
-MD5 eb9d69c3a00f5ae1fb3380da85e49500 spamassassin-3.0.1.ebuild 5778
+MD5 0142860158103173c30577799937a6fd spamassassin-2.63-r1.ebuild 2411
+MD5 7e70436bd6345888b62e9ce781661cc5 spamassassin-2.63.ebuild 2300
+MD5 b118018ee1faae8004bee591b5304cf0 spamassassin-2.64.ebuild 2516
+MD5 c7d9c4ea15b7c345a703d299f8f342a5 spamassassin-3.0.0-r1.ebuild 5774
+MD5 b9b2ffa6e5df055b9c97dc8ed4e3dc4d spamassassin-3.0.0.ebuild 5971
+MD5 41bfaa841cbc365eca6f13a085954165 spamassassin-3.0.1.ebuild 5778
 MD5 707c884ce951b59e0dc244ee29ceac9f spamassassin-3.0.2.ebuild 5771
+MD5 920a357b908a80155acc461604f686a3 ChangeLog 13196
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63 75
-MD5 e76e0d7ee2c9225a16dfe1f177823f70 files/spamd.conf 446
-MD5 90925e8f6521add45f8a727ed982e61a files/spamd.init 645
+MD5 0a729fcad36340496651b99146401d21 files/3.0.0-spamd.conf 774
+MD5 33f67831957d640746a374b8774e7d2d files/3.0.0-spamd.init 667
 MD5 2bc962fe7cbd5fc24b6ca7703a498e83 files/digest-spamassassin-2.63-r1 75
 MD5 6a161feb8320fadb55f440aab192d008 files/digest-spamassassin-2.64 75
-MD5 3fe5a2e4cdb6c4830cb22f635d1b24e3 files/3.0.0-spamd.conf 777
-MD5 33f67831957d640746a374b8774e7d2d files/3.0.0-spamd.init 667
 MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0 76
 MD5 7d4ce834279c9e36320d114a7118c127 files/digest-spamassassin-3.0.0-r1 76
 MD5 37be9f25f104cf5e5ad47b37351c7900 files/digest-spamassassin-3.0.1 76
 MD5 faa89d7205b3bde710ddc585969a3992 files/digest-spamassassin-3.0.2 76
+MD5 e76e0d7ee2c9225a16dfe1f177823f70 files/spamd.conf 446
+MD5 90925e8f6521add45f8a727ed982e61a files/spamd.init 645
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8fKcroRuSHgZdywRAs3pAKCA1YHeeNgNCFhSY+QeRuKeh8zjRQCdEaRs
-V63qVZQcRFo4KfXoaFXq+40=
-=zuYM
+iD8DBQFB9RcltG5z4I8BtQoRAmU+AJwK2CSGnVOmyo1FQCCy2+P/t5w/hgCfXhKO
+NUdlg46C/ZBwFQAFIQBAbEc=
+=ZvlM
 -----END PGP SIGNATURE-----
