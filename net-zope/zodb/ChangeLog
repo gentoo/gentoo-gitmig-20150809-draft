@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zodb
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.4 2004/10/14 19:40:25 radek Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.5 2005/01/14 22:16:59 radek Exp $
+
+*zodb-3.2.5 (14 Jan 2005)
+
+  14 Jan 2005; Radoslaw Stachowiak <radek@gentoo.org> +zodb-3.2.5.ebuild:
+  new release (compatible with zope-2.7.4). added slot 3.2.
 
 *zodb-3.3 (14 Oct 2004)
 
