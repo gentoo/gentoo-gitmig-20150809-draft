@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.21 2004/02/02 03:13:49 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.22 2004/02/28 22:52:44 liquidx Exp $
+
+*libgcrypt-1.1.92 (28 Feb 2004)
+
+  28 Feb 2004; Alastair Tse <liquidx@gentoo.org> libgcrypt-1.1.92.ebuild:
+  version bump. added backward compat symlinks. (#43175)
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> libgcrypt-1.1.91.ebuild :
   AMD64 keywords.
