@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r1.ebuild,v 1.7 2005/01/22 11:45:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r2.ebuild,v 1.1 2005/01/24 18:05:49 humpback Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc sparc x86 ~alpha"
 IUSE=""
 
 DEPEND=">=app-crypt/qca-1.0
-	>=x11-libs/qt-3.3.0-r1
 	>=dev-libs/openssl-0.9.6i"
 
 src_unpack() {
@@ -36,7 +35,6 @@ src_compile() {
 src_install() {
 	make INSTALL_ROOT="${D}" install || die "make install failed"
 	insinto /usr/include
-	doins qca-tls.h
 
 	dodoc README
 }
