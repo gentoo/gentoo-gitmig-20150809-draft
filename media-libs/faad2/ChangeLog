@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.8 2003/10/02 03:10:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.9 2003/10/02 16:11:29 darkspecter Exp $
+
+  02 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> faad2-2.0_rc1.ebuild:
+  added id3lib to deps and fixed breakage when USE=-xmms
 
 *faad2-2.0_rc1 (02 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.2 2003/10/02 03:15:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.3 2003/10/02 16:11:29 darkspecter Exp $
 
 inherit eutils libtool
 
@@ -15,7 +15,8 @@ DEPEND=">=media-libs/libsndfile-1.0.1
 	>=libtool-1.4.1-r10
 	sys-devel/automake
 	sys-devel/autoconf
-	xmms? ( >=media-sound/xmms-1.2.7 )"
+	xmms? ( >=media-sound/xmms-1.2.7
+			media-libs/id3lib )"
 SLOT="0"
 
 src_unpack() {
@@ -26,6 +27,10 @@ src_unpack() {
 src_compile() {
 	sh ./bootstrap
 	elibtoolize
+	if [ ! "`use xmms`" ]
+	then
+		rm -rf ${S}/plugins/xmms/*
+	fi
 	econf
 	if [ "`use xmms`" ]
 	then
