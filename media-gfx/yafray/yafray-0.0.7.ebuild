@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.4 2005/02/18 01:08:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.5 2005/03/22 14:23:13 sekretarz Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.coala.uniovi.es/~jandro/noname/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND="media-libs/jpeg

@@ -1,10 +1,20 @@
-MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 96263834ece1d3e78a43d49d44cf0216 yafray-0.0.7.ebuild 1013
 MD5 6cd6b3531914a358df0c6698b3ecae0d yafray-0.0.4.ebuild 807
-MD5 10acb2a56232a70f502951da3ea910f2 ChangeLog 1728
 MD5 a32db48cc3b024867bab012c19743889 yafray-0.0.6.ebuild 977
-MD5 86fe8c89afd46ef9be76010f293095dc yafray-0.0.7.ebuild 1012
-MD5 1369fb0f3bdcd1b7cbf08c71ded07fca files/digest-yafray-0.0.7 64
-MD5 7b50d20a15ce12bca91f1354401f1351 files/yafray-0.0.7-scons.patch 866
+MD5 8287a7e385e386d5cdac5811029755a7 ChangeLog 1836
+MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
 MD5 6990e835f5744cd54dbc5afb80a05f34 files/yafray-gcc34-fix.gz 1190
 MD5 9eb9f2e8a635d14ca7d085f6a0f271d0 files/digest-yafray-0.0.4 64
 MD5 3c992b5abf43533014483fbe73ec18a7 files/digest-yafray-0.0.6 64
+MD5 1369fb0f3bdcd1b7cbf08c71ded07fca files/digest-yafray-0.0.7 64
+MD5 7b50d20a15ce12bca91f1354401f1351 files/yafray-0.0.7-scons.patch 866
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCQDiNZ/iYVBmujdURAvD/AKDumy8O/YtDy7QKxJTWDnsEgsIlZwCcDw6f
+SRc0eIpdeMXEVz1HXojv9mM=
+=JjqH
+-----END PGP SIGNATURE-----
