@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.2 2004/04/03 18:29:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.3 2004/05/12 10:36:51 wolf31o2 Exp $
 
 IUSE="cdr"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -8,7 +8,7 @@ HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${PV}-9.tar.gz
 	mirror://sourceforge/pxes/pxesconfig-${PV}-9.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SLOT="0"
 LICENSE="GPL-2"
