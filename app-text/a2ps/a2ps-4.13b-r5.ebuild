@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.14 2004/01/26 00:06:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.15 2004/01/30 05:25:30 drobbins Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ KEYWORDS="ia64 x86 ppc sparc alpha hppa"
 IUSE="nls tetex cjk"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.57
+	>=sys-devel/autoconf-2.58
 	>=dev-util/gperf-2.7.2
 	>=dev-util/yacc-1.9.1
 	cjk? ( >=sys-apps/sed-4 )"
