@@ -1,5 +1,5 @@
 --- air-1.2.5/install-air-1.2.5	2004-08-12 02:16:24.000000000 +0930
-+++ install-air-1.2.5	2004-09-13 19:53:15.118414552 +0930
++++ install-air-1.2.5	2004-09-16 22:58:01.859773960 +0930
 @@ -1,18 +1,33 @@
  #!/bin/sh
  
@@ -100,7 +100,7 @@
  begin 755 air
  M(R$O=7-R+V)I;B]P97)L(`HC*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ
  M*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ
-@@ -2041,8 +2058,15 @@
+@@ -2041,8 +2058,16 @@
  end
  SHAR3_EOF
  
@@ -108,6 +108,7 @@
 +	mv $TEMP_DIR/air $TEMP_DIR/air.orig
 +	echo "correcting installation directory in air to $FINAL_INSTALL_DIR" | tee -a $INSTALL_LOG
 +	sed -e "s:/usr/local:$FINAL_INSTALL_DIR:g" $TEMP_DIR/air.orig > $TEMP_DIR/air
++	chmod a+x $TEMP_DIR/air
 +	rm -f $TEMP_DIR/air.orig | tee -a $INSTALL_LOG
 +fi
 +
@@ -117,7 +118,7 @@
  begin 664 air-icons.tar.gz
  M'XL("*3?P3T``V%I<BUI8V]N<RYT87(`[-T)4%/WO@?P!,(68HP8*6(,$%$B
  M8@PA+&I$-ME%1*[U*:6*:*GEJD6NM4@AA#TB"D:%@"P1$`($!(R0A&R$L`H(
-@@ -2335,8 +2359,8 @@
+@@ -2335,8 +2360,8 @@
  end
  SHAR4_EOF
  
@@ -128,7 +129,7 @@
  begin 755 tailer
  M(R$O8FEN+W-H"B,J*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ
  M*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BHJ*BH*(R`@
-@@ -2370,8 +2394,8 @@
+@@ -2370,8 +2395,8 @@
  end
  SHAR5_EOF
  
@@ -139,7 +140,7 @@
  begin 755 split.gz
  M'XL("/.S$T$``W-P;&ET`.U\#WQ4Q;7PW;"$)03O@HN-)<I5@X"2D""TA$"!
  MP")4@I&P_BFL89-LV-5--MV]2T)+)+A9R>UM;%ZKKVJU)87VT7]*:Z4)*`2"
-@@ -2630,12 +2654,12 @@
+@@ -2630,12 +2655,12 @@
  end
  SHAR6_EOF
  if [ $UPGRADE = "no" ] ; then
@@ -155,7 +156,7 @@
  	
  	
  	if [ $? -ne 0 ] ; then
-@@ -2650,7 +2674,7 @@
+@@ -2650,7 +2675,7 @@
  		echo "If the installer failed with some other error message,"
  		echo "please email steve@unixgurus.com for assistance."
  		echo ""
@@ -164,7 +165,7 @@
  		exit 1
  	else
  		echo "Download of Perl/Tk successful." | tee -a $INSTALL_LOG
-@@ -2679,6 +2703,10 @@
+@@ -2679,6 +2704,10 @@
  fi	
  
  # create directories if they don't exist
@@ -175,7 +176,7 @@
  if [ ! -d $ICON_DIR ]; then
  	echo "creating directory $ICON_DIR..." | tee -a $INSTALL_LOG
  	mkdir -p $ICON_DIR 2>> $INSTALL_LOG
-@@ -2690,37 +2718,56 @@
+@@ -2690,37 +2719,56 @@
  
  # install air-counter 
  echo "Unpacking and installing air-counter..." | tee -a $INSTALL_LOG
@@ -248,3 +249,9 @@
  
  if [ $UPGRADE = "yes" ]; then
  	echo "Upgrade to AIR v$VERSION complete."
+@@ -2737,4 +2785,4 @@
+ echo ""
+ echo "All Done. Type 'air' on the command-line to begin." | tee -a $INSTALL_LOG
+ echo ""
+-cat $INSTALL_LOG | mail -s "AIR v$VERSION Install Log" steve@unixgurus.com
++#cat $INSTALL_LOG | mail -s "AIR v$VERSION Install Log" steve@unixgurus.com

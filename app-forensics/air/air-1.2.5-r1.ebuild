@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5-r1.ebuild,v 1.1 2004/09/13 10:25:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5-r1.ebuild,v 1.2 2004/09/16 13:40:03 dragonheart Exp $
 
 inherit eutils
 
@@ -44,6 +44,10 @@ src_install() {
 
 	dodoc README
 
+	dodoc ${T}/air-install.log
+
+	rm ${D}/usr/bin/split
+
 	chown -R root:root ${D}
 	fowners root:users /usr/share/air/logs
 	fperms ug+rwx /usr/share/air/logs
@@ -51,6 +55,7 @@ src_install() {
 		fperms ug+rw /usr/share/air/air-fifo
 		fowners root:users /usr/share/air/air-fifo
 	fi
+	fperms a+x /usr/bin/air
 }
 
 pkg_postinst() {
@@ -58,4 +63,6 @@ pkg_postinst() {
 	einfo "sys-apps/dcfldd"
 	einfo "net-analyzer/netcat"
 	einfo "net-analyzer/cryptcat"
+
+	einfo "The author, steve@unixgurus.com, would appreciate and email of the install file /usr/share/doc/${PF}/air=install.log"
 }
