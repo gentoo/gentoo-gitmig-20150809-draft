@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.8 2003/09/12 02:11:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.9 2003/12/09 17:39:30 lanius Exp $
 
 DESCRIPTION="standard ghostscript frontend used by programs like LyX"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc alpha sparc"
 # so I can't identify it
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
-	app-text/ghostscript"
+	virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}
