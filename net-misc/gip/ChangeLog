@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gip
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.1 2004/06/25 02:15:51 jmglov Exp $
+
+*gip-1.0.0.1 (24 Jun 2004)
+
+  24 Jun 2004; Josh Glover <jmglov@gentoo.org> gip-1.0.0.1.ebuild,
+  metadata.xml:
+  This package was submitted by Josh Glover in bug #55055
+
