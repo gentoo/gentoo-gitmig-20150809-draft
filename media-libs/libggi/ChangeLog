@@ -1,8 +1,14 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.7 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.8 2002/12/28 05:49:59 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*libggi-2.0.1-r1 (28 Dec 2002)
+
+  28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> libggi-2.0.1-r1.ebuild :
+  Fix to enable framebuffer support if 'fbcon' in USE.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords
  
 *libggi-2.0.1 (05 Jun 2002)
 
