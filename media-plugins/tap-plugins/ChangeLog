@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.12 2004/08/18 19:04:53 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.13 2004/09/22 21:27:57 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  tap-plugins-0.7.0.ebuild:
+  Added ~sparc.
 
 *tap-plugins-0.7.0 (18 Aug 2004)
 
