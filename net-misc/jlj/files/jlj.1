@@ -1,0 +1,402 @@
+.TH "jlj" 1
+.SH NAME
+jlj \- Jerry's LiveJournal entry system
+.SH SYNOPSIS
+.B jlj
+[options]
+.SH DESCRIPTION
+You should be able to configure it as below, then just type 'jlj.pl'.
+You might have to change the path to your "perl" executable in the
+first line of jlj.pl, and as well you might want to change the name
+of 'jlj.pl' to 'jlj' for ease of use.
+
+If you want to do the check friends option, type 'jlj.pl -c'.  It will
+respond with two lines, if all was successful.  ie:
+
+        new=0
+        interval=45
+
+new: 0 if there was no new posts in your friends list since you last checked.
+     1 if there was a post in your friends list.
+
+interval:  The number of seconds that the server requests that you wait
+           before you check your friends again.
+           NOTE: the server may get unhappy with you if you check more
+           often than this amount of time.
+
+NOTE: The 'checkfriends' option will not work with livejournal.com
+unless you have a paid account.
+
+To use it in 'offline mode', type 'jlj.pl -o'.  This will not
+attempt to connect to the server at all, but still will let you
+queue up messages to be posted, as well as postponing messages for
+completion later.  You will also be able to edit postponed messages
+as well.
+
+If you just type 'jlj.pl', it will attempt to log into the server.
+
+When it is run, you will be given a prompt similar to this:
+
+    [new]/offline/list/<number>?
+
+The selection in brackets, "new" in this case, is the default
+selection.  If you just hit return, this is the action that will
+be taken.  All of the prompts are arranged such that the first
+letter of every selection is different. [*]
+
+You can simply type the first letter of the menu, or hit return if
+the selection you want is the default.  I have tried to arrange
+the behavior of the first menu to change based on whether you run
+it with the -o option, and if there are any postponed entries to
+use... So if you have no postponed entries, and you run jlj with
+the "-o" option, the prompt won't display at all since there'd be
+nothing to do.
+
+When a message is postponed instead of queued or sent to the server,
+It goes into a directory so that you can edit it later.  At the
+above prompt, if you select 'list', it will display all of the
+postponed messages' date, community or user, and subject line, with
+a number next to it.  You can type the number of the message to
+continue editing that entry.
+
+The journal entries in the 'queue' folder are entries that are in
+the queue to be sent to the server.  The next time that jlj is run
+with the '-f' option, these will be posted to the server.
+
+The journal entries in the 'postponed' folder are entries that have
+been set aside to be edited later by you.  You can re-activate
+these using the above menu/prompt.
+
+The journal entries in the 'sent' folder are entries that have been
+submitted to the journal server.
+
+[*] This caused a slight change with the 'security' prompt.  Instead
+    of selecting if a post is to be: public, private, or friends-only,
+    it is now: everyone, private, or friends-only.
+
+NOTE:  If you mangle the date line, the entry might not be submittable anymore!
+        - just delete it altogether if you like, and the date/time of
+          when it is sumbitted to the server will be used instead.
+
+NOTE:  Do not change the line labelled 'do not edit', or it might fail
+
+Just some notes about configuring JLJ...
+
+edit the enclosed '.livejournal.rc' file.  You will need to set your
+username and password.  There are prompts for most everything else,
+but not your username and password.
+
+You should see something like this:
+
+    user: yourusername
+    password: yourpassword
+
+change the text to read your correct username and password.  For example,
+if your username is "bunnyfoobar", and your password is "ilikecheese", then
+those two lines should read:
+
+    user: bunnyfoobar
+    password: ilikecheese
+
+The rest of the things in that file are fairly self explanatory, but i'll
+briefly cover them here just in case. ;)
+
+First of all, you may notice that there are multiple items on each of
+the lines.  JLJ only looks at the first item on each of the lines.  so if
+you were to see:
+
+    blah:  yes no
+
+then the setting for 'blah' would be 'yes'.
+
+Be sure to copy the .livejournal.rc file into your home directory, and make
+it only readable by you.  ie:
+        chmod 600 .livejournal.rc
+        mv .livejournal.rc ~
+.SH OPTIONS
+.TP
+.B \-c
+Check your friends list to see if there were new posts.
+.TP
+.B \-f
+Flush the queue of pending submission entries off to the server.
+.TP
+.B \-h
+Display a help message (showing these options)
+.TP
+.B \-j
+Display a cheat sheet of JerryWiki escapes.
+    To enable JerryWiki, set the "formatted" line
+    in your .livejournal.rc to have "jerry" as the
+    first item in the list, rather than "preformatted".
+.TP
+.B \-ne     
+No-Edit
+Skips the step where it lets you edit the file. 
+This is useful for command-line based entries. (See below.)
+.TP
+.B \-o
+Work offline.
+It does not attempt to contact the server at all.
+.TP
+.B \-p name
+Select a different 'profile'.
+    You can set up two different files for each profile.
+    In your .jlj/profiles directory, create a [name].jlj
+    file for the .rc options you want to use for that
+    profile.  You can also create a [name].txt file for
+    starting text for each of those posts.  (Read more
+    about profiles below.)
+.TP
+.B \-q
+Quick mode.
+    It only prompts you for subject, then bounces right
+    into the editor.  It tries to do this online.  You can
+    still postpone the message for completion later.
+.TP
+.B \-s
+autoSend.
+    After a post is edited, JLJ will ask if you want to send
+    it, queue it, postpone it, etc.  This will force the
+    answer to that question to be "send".
+.TP
+.B \-vc
+Version Check.
+    Checks the main JLJ site to see if there is a new
+    version available.  This is also done after each
+    event posted to livejournal.
+.SH Command Line Event Editing
+The following command-line options will enable "Quick mode".
+These will override any profile settings.  If you have a default
+body associated with a profile, both bodies will be in the event.
+.TP
+.B \-eb text
+Use "text" as your event's body
+.TP
+.B \-ec text
+Use "text" as your event's community
+.TP
+.B \-ei text
+Use "text" as your event's picture (image)
+.TP
+.B \-em text
+Use "text" as your event's mood
+.TP
+.B \-ep text
+Use "text" as your event's privacy [public/private/etc]
+.TP
+.B \-es text
+Use "text" as your event's subject
+.TP
+.B \-et text
+Use "text" as your event's music (tunes)
+
+A typical command-line based entry might be something like:
+
+prompt% jlj.pl -s -ne -es "Cheese Of The Day" -eb "The cheese of today is Gouda"
+.SH PROFILES
+You can set up multiple profiles, as many as you'd like to use.
+Since the profile configuration files get read in after the base
+configuration file, it can contain just the differences you want
+to use.  For example;
+%  jlj.pl -q
+
+will use the default setup, in quick mode.  It will first read in
+        ~/.livejournal.rc
+
+After that, it will read in
+        ~/.jlj/profiles/default.jlj
+
+When you do not select a profile, the 'default' profile name is used.
+
+Also, when the post file is created, it will append any text stored in
+        ~/.jlj/profiles/default.txt
+
+So, if you always want a signature on your posts (for whatever
+
+Another example... If you were to type:
+
+% jlj.pl -q -p angryllama
+
+Then, like the above, it will first read in
+        ~/.livejournal.rc
+
+then proceed to read in
+        ~/.jlj/profiles/angryllama.jlj
+
+which may contain just the simple override of "allow comments: no",
+or may contain other changes like setting the server as such:
+"server:  www.deadjournal.com", or the like.  And also, any text
+stored in
+        ~/.jlj/profiles/angryllama.txt
+ will appear as the starting point of the post.
+
+Any number of overrides can be used in the .jlj files.
+
+Both the [profile name].jlj configuration file and the
+[profile name].txt file are optional.  You don't need either.
+
+So you could have different username and passwords set for different
+accounts, all in the .jlj files.
+
+.SH CONFIGURATION FILE
+This file contains all of the configuration details for how to
+connect to the server, username, as well as things like
+default settings for the posts.  The ~/.livejournal.rc file
+ALWAYS gets parsed at configuration time.  If a profile is
+selected then that profile's configuration file will get
+parsed afterwards, overriding anything already set where
+applicable.
+
+
+.B server: www.livejournal.com
+.B postcgi: /interface/flat
+
+Generally, you shouldn't have to change either of these unless you
+want to use JLJ with another site, such as "deadjournal.com".  This
+is the address for the main server hub and path for the cgi script
+that accepts posts.
+
+.TP
+.B user: username 
+your username for livejournal
+.TP
+.B password: password
+your password for livejournal
+.TP
+.B editor:
+This is the full path to a text editor to use.  You should be
+able to use anything like 'vi', 'emacs', 'pico', 'nedit' etc.
+Whichever you are comfortable with.  Mine is set to "usr/ucb/vi"
+.TP
+.B editor offset:
+To make editing easier, we'd like it to start us with the cursor
+at the bottom of the generated file.  This means that we want
+the cursor to be on line 12.  Most editors ('vi', 'emacs', 'pico', 
+and 'nedit' for example) allow for a command line option
+to set the start point of the cursor in the file.  For those
+just mentioned, it is "+<line number>", so the default value
+for this is "+12".  If your text editor does not support this,
+either delete the line, or set it to the appropriate option
+for your editor.
+.TP
+.B base dir: %s/.jlj
+where all of the files will be stored.  %s gets replaced with
+$HOME assuming it's set in your shell. (It usually is.)  In
+the above example, it'll save aside your entries in the ~/.jlj
+directory.  This should be an explicit pathname, not a relative
+path.  I have no idea what'll happen if it's a relative path.
+.TP
+.B backup: yes no
+Keep a backup copy of your posts in ~/.jlj/sent
+.TP
+.B security: public private friends prompt
+What 'security level' to use.  'public' 'private' and 'friends'
+will always post under those security levels.  'prompt' will
+ask you every time you run JLJ.  Generally you're probably
+going to want 'public'.  NOTE: 'friends' will be visible to
+_all_ of your friends, rather than to a specific friend group.
+.TP
+.B format: preformatted none
+If this is set to 'preformatted', the server will assume you've
+formatted the text yourself, and will do nothing.  If it is
+set to 'none', it will add line breaks at the end of every
+line. (Since you're probably going to be sticking with a certian
+style of posts, there's no reason to prompt you about this, so
+we set it once, and are done with it.)  If you set it to "none",
+then the Mongolian Crack Monkeys will take your post, put <br>'s
+at the end of each line, and do all sorts of other nasty
+automatic HTML code.  You probably will want it set to
+"preformatted"
+.TP
+.B mood prompt: yes no
+Ask what mood you're in.  This gets cross referenced with the
+known moods when your entry is posted to the server.  If you type
+a standard mood like "happy", it will get a cute little icon next
+to it.  If you type a non-standard mood like "diagonal", it will
+just submit it as text, and you will get no cute little icon.
+.TP
+.B music prompt: yes no
+Ask what music you're listening to.
+.TP
+.B picture prompt: yes no
+Display a list of your pictures, and ask for which you want.
+For best results, put in descriptive keywords for your pictures
+so that you know which is which when you are given this list.
+.TP
+.B community prompt: yes no
+Display a list of communities and journals you can post to,
+and ask for which to post to.
+.TP
+.B community: <community name>
+A default community name for quick posts.  If this is set
+and a non-quick post is made and you have the 'community
+prompt' set to "yes", JLJ will override this setting with
+whatever you chose in the configuration file.
+.TP
+.B backdate entry: no yes prompt
+This will always prompt you for the date and time on startup
+of the client, if you have this set to "yes".  It will not
+ask you if you have switched on 'quick' mode (-q).
+.TP
+.B allow comments: yes no prompt
+Sets the 'allow comments' field for the posts.  If set to 'yes',
+it will always allow comments.  If set to 'no', it will always
+disallow comments.  Prompt will ask you every time.
+.TP
+.B autolink: yes no
+Enables the 'autolink' code.  If this is enabled than text with the
+form 'http://foo' will become a link to that url.  This should work
+with http, ftp, etc.
+.TP
+.B ignore suffix: ~
+If this is set to something (usualy a tilde '~'), then files with
+that on the end of it will be ignored by the flush and postponed
+code.  Typically, some text editors use this to denote a temporary
+file, and should be ignored by jlj.
+.TP
+.B fast server: yes no
+Use the "fast servers" if that is an option to the user.  There's
+really no reason to ever turn this off, but if you want to, you
+can.  If you are an unpaid user or for some other reason have been
+disallowed from using the fast servers, this will be ignored.
+.TP
+.B server retries: 5
+During peak usage times (12am-12pm, 12pm-12am GMT) the servers are
+usually very busy, and may drop requests or otherwise timeout when
+a request is made to them.  If this happens, JLJ can retry the
+request up to this number of tries.  Any number less than 1 is
+converted into 1 by jlj.  You probably shouldn't set this too high
+just to be nice.
+.TP
+.B proxy: no yes
+Set to yes if you're using a proxy for web connections.
+.TP
+.B proxy host: yourproxy.dom.tld
+Set it to the address of the web proxy server.
+.TP
+.B proxy port: 80
+which port on the proxy server is used.
+
+.SH BUGS
+This is currently not very happy with a situation where if you have
+a lot of posts queued up, which do not contain a username or password
+in their appropriate profile.  It will attempt to log into the
+first account, which will probably work (after it prompts the user
+for login data)  then it will use that password/username for
+subsequent posts that are lacking a username or password.
+
+.B Solution:
+
+Put a username and password into your profiles.  Just be sure
+to "chmod 600"  your .livejournal.rc and profile files and
+"chmod 700" your .jlj directory.
+
+If you are using jlj on a system where someone with superuser
+access can read your files without your knowledge, and you are
+writing something they do not approve of, then you should run
+jlj from a different machine.   (In this situation you should
+also be sure to remove the files in your 'sent' directory,
+since those are the original posts, unencrypted.  Or you can
+use the new "backup" option in the configuration file, and
+
