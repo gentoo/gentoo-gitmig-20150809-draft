@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.1.ebuild,v 1.2 2004/09/04 17:08:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.1.ebuild,v 1.3 2004/11/25 16:13:19 obz Exp $
 
 inherit eutils gnome2
 
@@ -26,7 +26,8 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libglade-2.0.1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.21"
+	>=dev-util/intltool-0.21
+	app-text/scrollkeeper"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

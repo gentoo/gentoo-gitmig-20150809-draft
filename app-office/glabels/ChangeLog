@@ -1,6 +1,10 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.5 2004/10/05 14:04:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.6 2004/11/25 16:13:19 obz Exp $
+
+  26 Nov 2004; Mike Gardiner <obz@gentoo.org> glabels-1.93.3.ebuild,
+  glabels-2.0.1.ebuild:
+  Added app-text/scrollkeeper dep, see bug #72477
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   glabels-1.93.3.ebuild:
