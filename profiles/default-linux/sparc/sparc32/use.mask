@@ -1,2 +1,8 @@
 # 2.6 kernel doesn't work on sparc yet.
 nptl
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Don't allow alsa in sparc32 because of missing drivers
+alsa
+ladcca
+
