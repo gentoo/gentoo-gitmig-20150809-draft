@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.13 2004/12/06 19:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.14 2004/12/07 02:57:33 vapier Exp $
 
 # What's in this kernel?
 
@@ -19,14 +19,17 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
 
 LICENSE="GPL-2"
-[[ ${CTARGET} != ${CHOST} ]] \
-	&& SLOT="${CTARGET}" \
-	|| SLOT="0"
 KEYWORDS="-* amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
 IUSE=""
 
-DEPEND="!virtual/os-headers"
-PROVIDE="virtual/kernel virtual/os-headers"
+if [[ ${CTARGET} = ${CHOST} ]]
+then
+	DEPEND="!virtual/os-headers"
+	PROVIDE="virtual/kernel virtual/os-headers"
+	SLOT="0"
+else
+	SLOT="${CTARGET}"
+fi
 
 S=${WORKDIR}/linux-${OKV}
 
