@@ -1,16 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r3.ebuild,v 1.1 2002/01/15 06:34:26 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r4.ebuild,v 1.1 2002/02/18 19:46:26 g2boojum Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Vector illustrating application for GNOME"
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${A}"
+SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sodipodi.sourceforge.net/"
 
 RDEPEND=">=gnome-base/gnome-print-0.30
          >=gnome-extra/gal-0.13-r1
+		 media-libs/gdk-pixbuf
 	 bonobo? ( >=gnome-base/bonobo-1.0.9 )"
 
 DEPEND="${RDEPEND}
