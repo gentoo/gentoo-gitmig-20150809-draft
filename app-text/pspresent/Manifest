@@ -1,4 +1,14 @@
-MD5 08dbe1baf139e62ba2b33a25cea7fb00 ChangeLog 737
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43adca0ecbb75474c72a9491c7b5aae8 ChangeLog 859
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 e672b5d82cb2e4691eec2c43807f8734 pspresent-1.1.ebuild 813
+MD5 c53b0233a4d6f6a46d4d49b1fa3b63af pspresent-1.1.ebuild 799
 MD5 e8d36b988969f7d4ff8e3a45e05ca0f3 files/digest-pspresent-1.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfLIUVWNWqTUmv+0RAi4VAJwOBorIVqbO4LBWpfCsKcJvltImZgCeOj07
+zj2WtXH8ASpotJUPsSs82WU=
+=gGRu
+-----END PGP SIGNATURE-----

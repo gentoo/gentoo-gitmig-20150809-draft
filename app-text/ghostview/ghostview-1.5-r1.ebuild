@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.15 2004/10/25 07:34:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.16 2004/10/25 07:59:48 usata Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND="virtual/libc
 	virtual/x11"
 RDEPEND="${DEPEND}
 	virtual/ghostscript"
-PROVIDE="virtual/pdfviewer"
+PROVIDE="virtual/pdfviewer
+	virtual/psviewer"
 
 src_unpack() {
 	unpack ${A}

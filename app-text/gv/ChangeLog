@@ -1,9 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.28 2004/10/25 07:33:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.29 2004/10/25 07:58:23 usata Exp $
 
   25 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gv-3.5.8-r4.ebuild:
-  Provide virtual/pdfviewer; bug #50423.
+  Provide virtual/pdfviewer and virtual/psviewer; bug #50423.
 
   16 Oct 2004; Hardave Riar <hardave@gentoo.org> gv-3.5.8-r4.ebuild:
   Added ~mips keyword.
@@ -15,7 +15,7 @@
   08 Aug 2004; Luca Barbato <lu_zero@gentoo.org> gv-3.5.8-r4.ebuild:
   Marked ppc
 
-  06 Aug 2004; Bryan Østergaard,,, <kloeri@gentoo.org> gv-3.5.8-r4.ebuild:
+  06 Aug 2004; Bryan ƒŠstergaard,,, <kloeri@gentoo.org> gv-3.5.8-r4.ebuild:
   Stable on alpha, bug #59385.
 
   05 Aug 2004; Tom Martin <slarti@gentoo.org> gv-3.5.8-r4.ebuild:
@@ -33,7 +33,7 @@
   files/gv-3.5.8-debian.diff.gz:
   add debian patch, fixes bug #41848
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gv-3.5.8-r3.ebuild:
+  04 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> gv-3.5.8-r3.ebuild:
   Stable on alpha.
 
   25 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> gv-3.5.8-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.18 2004/07/14 01:59:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.94.ebuild,v 1.19 2004/10/25 08:02:20 usata Exp $
 
 IUSE="nls bonobo"
 
@@ -16,6 +16,8 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.4
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+PROVIDE="virtual/psviewer"
 
 src_compile() {
 	local myconf=""

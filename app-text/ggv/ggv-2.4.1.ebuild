@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.1.ebuild,v 1.12 2004/08/21 15:40:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-2.4.1.ebuild,v 1.13 2004/10/25 08:02:20 usata Exp $
 
 inherit gnome2 eutils
 
@@ -20,6 +20,8 @@ RDEPEND=">=gnome-base/libgnomeui-2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.21"
+
+PROVIDE="virtual/psviewer"
 
 DOCS="AUTHORS ChangeLog INSTALL MAINTAINERS TODO README"
 

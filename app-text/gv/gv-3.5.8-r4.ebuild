@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.8 2004/10/25 07:33:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.9 2004/10/25 07:58:23 usata Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ IUSE=""
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
 	virtual/ghostscript"
-PROVIDE="virtual/pdfviewer"
+PROVIDE="virtual/pdfviewer
+	virtual/psviewer"
 
 src_unpack() {
 	unpack ${A}
