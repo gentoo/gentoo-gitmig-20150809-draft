@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.4 2003/06/11 11:44:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.5 2003/07/02 08:35:21 phosphan Exp $
+
+  02 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> metakit-2.4.7.37.ebuild:
+  Resolving bug 23855 - einstall instead of make install
 
   11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> metakit-2.4.9.2.ebuild:
   sandbox fix; sed -i being used
