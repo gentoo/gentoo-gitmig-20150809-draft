@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/icewm
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.45 2004/06/14 16:10:26 usata Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.46 2004/06/24 23:41:55 agriffis Exp $
 
 *icewm-1.2.14 (15 Jun 2004)
 

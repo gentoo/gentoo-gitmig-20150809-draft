@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/gnustep-env/gnustep-env-0.1.ebuild,v 1.15 2004/06/19 13:25:02 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/gnustep-env/gnustep-env-0.1.ebuild,v 1.16 2004/06/24 23:41:33 agriffis Exp $
 
 DESCRIPTION="Exports GNUSTEP_LOCAL_ROOT"
 HOMEPAGE="http://www.gentoo.org"

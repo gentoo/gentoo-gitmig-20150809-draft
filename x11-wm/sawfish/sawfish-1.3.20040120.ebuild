@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20040120.ebuild,v 1.7 2004/04/28 15:57:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20040120.ebuild,v 1.8 2004/06/24 23:44:55 agriffis Exp $
 
 inherit eutils gnuconfig
 

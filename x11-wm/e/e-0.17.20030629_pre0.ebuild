@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030629_pre0.ebuild,v 1.3 2003/10/21 05:39:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030629_pre0.ebuild,v 1.4 2004/06/24 23:40:27 agriffis Exp $
 
 inherit enlightenment
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/trswm-0.5.2.ebuild,v 1.2 2004/03/07 20:15:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/trswm-0.5.2.ebuild,v 1.3 2004/06/24 23:45:28 agriffis Exp $
 
 DESCRIPTION="An ion-based window manager that aims to provide a desktop environment based on the keyboard, making the mouse optional"
 HOMEPAGE="http://www.relex.ru/~yarick/trswm/"

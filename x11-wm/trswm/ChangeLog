@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/trswm
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.6 2004/04/06 03:15:20 zx Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.7 2004/06/24 23:45:28 agriffis Exp $
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> trswm-0.4.9.ebuild:
   Marking stable on hppa

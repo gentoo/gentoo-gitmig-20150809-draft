@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20030617.ebuild,v 1.4 2004/06/19 05:27:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20030617.ebuild,v 1.5 2004/06/24 23:44:23 agriffis Exp $
 
 MY_P=${PN}-${PV/1.0./}
 S=${WORKDIR}/${MY_P}

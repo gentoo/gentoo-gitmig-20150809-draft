@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/selectwm
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.10 2004/03/30 09:48:39 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.11 2004/06/24 23:45:06 agriffis Exp $
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> selectwm-0.3-r1.ebuild,
   selectwm-0.4.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/amiwm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.2 2003/09/24 13:54:28 pauldv Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.3 2004/06/24 23:39:56 agriffis Exp $
 
   24 Sep 2003; <paul@gentoo.org> amiwm-0.20_p48.ebuild:
   Change the (R) character into (R) to disallow confusion. (The character was
