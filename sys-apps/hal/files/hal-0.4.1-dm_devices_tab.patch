@@ -1,0 +1,26 @@
+Index: DeviceManager.py
+===================================================================
+RCS file: /cvs/hal/hal/tools/device-manager/DeviceManager.py,v
+retrieving revision 1.15
+diff -u -b -B -r1.15 DeviceManager.py
+--- DeviceManager.py    1 Sep 2004 17:38:59 -0000       1.15
++++ DeviceManager.py    1 Nov 2004 23:22:48 -0000
+@@ -355,8 +355,15 @@
+             product.set_label("Unknown")
+             vendor.set_label("Unknown")
+ 
+-        # clear category, capabilities
++        # set category, capabilities
++        if device.properties.has_key("info.category"):
++            category.set_label("%s"%device.properties["info.category"])
++        else:
+-        category.set_label("Unknown")
++            category.set_label("Unknown")
++
++        if device.properties.has_key("info.capabilities"):
++            capabilities.set_label("%s"%device.properties["info.capabilities"])
++        else:
+-        capabilities.set_label("Unknown")
++            capabilities.set_label("Unknown")
+ 
+     def update_tab_usb(self, device):
