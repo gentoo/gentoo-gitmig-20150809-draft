@@ -1,0 +1,118 @@
+#!/bin/sh -
+#RCUPDATE:2 3 4:95:This line is required for script management
+
+# description: MOSIX is am extension of the operating system,
+#	       supporting scalable and transparent cluster computing.
+#
+# mosix		Script to stop/start MOSIX
+#
+# Author:       Amnon Shiloh
+
+. /etc/rc.d/config/functions
+
+SERVICE="mosix"
+opts="start stop status restart"
+
+mosix_stop() {
+	echo 0 > /proc/mosix/admin/mospe
+	rm -f /var/lock/subsys/mosix
+}
+
+mosix_start() {
+	if [ -s /etc/overheads -a -f /proc/mosix/admin/overheads ]
+	then
+		 /bin/grep -v '^#' /etc/overheads > /proc/mosix/admin/overheads
+	fi
+	if [ -s /etc/mfscosts -a -f /proc/mosix/admin/mfscosts ]
+	then
+		 /bin/grep -v '^#' /etc/mfscosts > /proc/mosix/admin/mfscosts
+	fi
+	a1=
+	[ -s /etc/mospe ] && a1="-p `cat /etc/mospe`"
+	a2=
+	[ -s /etc/mosgates ] && a2="-g `cat /etc/mosgates`"
+	/sbin/setpe -W $a1 $a2 -f /etc/mosix.map
+	touch /var/lock/subsys/mosix
+}
+
+alarm() {
+	t=$2
+	while :
+	do
+		case "$t" in 0) break ;; esac
+		sleep 1
+		t=$(($t-1))
+	done
+	kill -1 $1
+	exit 0
+}
+
+# See how we were called.
+start() {
+	eecho "Initializing MOSIX"
+	if [ ! -f /etc/mosix.map ]
+	then
+		echo You have no MOSIX configuration - please edit yours now:
+		echo -n "Editor to use [q to quit] - [vi] :- "
+		trap 'echo Timed-Out ; exit 1' 1
+		alarm $$ 120 &
+		killer=$!
+		read editor
+		kill $killer
+		trap ''
+		case "$editor" in [qQ]) exit ;;
+			"") editor=/usr/bin/vi
+			    [ -f $editor ] || editor=/bin/vi
+				;;
+		esac
+		echo "# MOSIX CONFIGURATION" > /etc/mosix.map
+		echo "# ===================" >> /etc/mosix.map
+		echo "#" >> /etc/mosix.map
+		echo "# Each line should contain 3 fields, mapping IP addresses to MOSIX node-numbers:" >> /etc/mosix.map
+		echo "# 1) first MOSIX node-number in range." >> /etc/mosix.map
+		echo "# 2) IP address of the above node (or node-name from /etc/hosts)." >> /etc/mosix.map
+		echo "# 3) number of nodes in this range." >> /etc/mosix.map
+		echo "#" >> /etc/mosix.map
+		echo "# MOSIX-#  IP  number-of-nodes" >> /etc/mosix.map
+		echo "# ============================" >> /etc/mosix.map
+		$editor /etc/mosix.map
+		echo
+		while :
+		do
+			echo "If this node's standard IP address is not part of the table that"
+			echo "you just edited, because MOSIX uses a different or separate network,"
+			echo "you need to type this node's MOSIX-number now."
+			echo
+			/bin/echo -n "Otherwise please press only <Enter> :- "
+			read me
+			case "$me" in "") /bin/rm -f /etc/mospe ; break ;;
+				[1-9] | [1-9][0-9] | [1-9][0-9][0-9] | \
+				[1-9][0-9][0-9][0-9] | \
+				[1-6][0-9][0-9][0-9][0-9])
+					echo $me > /etc/mospe ; break ;;
+				*) echo Improper MOSIX number - please try again: ;;
+			esac
+		done
+	fi
+	start_mosix 
+	eend
+}
+
+stop() {
+	eecho "Stopping MOSIX"
+	stop_mosix 
+	eend
+}
+
+status() {
+	/sbin/setpe -r
+}
+
+restart() {
+	eecho "Restarting MOSIX"
+	stop_mosix
+	start_mosix 
+	eend
+}
+
+doservice ${@}

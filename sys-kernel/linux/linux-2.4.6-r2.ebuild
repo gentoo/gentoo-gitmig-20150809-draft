@@ -128,13 +128,13 @@ src_unpack() {
 		cd MOSIX-${MOSV}
 		tar xzf MOSIX-${MOSV}.tar.gz patches.${OKV} kernel.new.${OKV}.tar
 		cd ${S}
-		try cat ${S2}/MOSIX-${MOSV}/patches.2.4.6 | patch -p0
-		tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.2.4.6.tar
+		try cat ${S2}/MOSIX-${MOSV}/patches.${KV} | patch -p0
+		tar -x --no-same-owner -vf ${S2}/MOSIX-${MOSV}/kernel.new.${KV}.tar
 	fi
 	
 	cd ${S}
 	echo "Applying reiserfs-NFS fix..."
-	try cat ${FILESDIR}/2.4.6/linux-2.4.6-reiserfs-NFS.patch | patch -N -p1
+	try cat ${FILESDIR}/${PVR}/linux-${KV}-reiserfs-NFS.patch | patch -N -p1
 			
 	if [ "`use lvm`" ]
 	then
@@ -146,14 +146,14 @@ src_unpack() {
 
 		# I had to hack this in so that LVM will look in the current linux
 		# source directory instead of /usr/src/linux for stuff - pete
-		try CFLAGS="${CFLAGS} -I${S}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+		CFLAGS="${CFLAGS} -I${S}/include" try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
 		cd PATCHES
 		try make KERNEL_VERSION=${KV} KERNEL_DIR=${S}
 		cd ${S}
 		# the -l option allows this patch to apply cleanly (ignore whitespace changes)
 		try patch -l -p1 < ${S2}/LVM/${LVMV}/PATCHES/lvm-${LVMV}-${KV}.patch
 		cd ${S}/drivers/md
-		try patch -p0 < ${FILESDIR}/${KV}/lvm.c.diff
+		try patch -p0 < ${FILESDIR}/${PVR}/lvm.c.diff
 	fi
 
 #		if [ "`use lm_sensors`" ]
@@ -193,7 +193,7 @@ src_unpack() {
 #		echo "Unpacking pcmcia-cs tools..."
 #		cd ${S2}
 #		unpack pcmcia-cs-${PCV}.tar.gz
-	#	patch -p0 < ${FILESDIR}/${KV}/pcmcia-cs-${PCV}-gentoo.diff
+	#	patch -p0 < ${FILESDIR}/${PVR}/pcmcia-cs-${PCV}-gentoo.diff
 #	fi
 	
 	#JFS patch works; commented out because it's not ready for production use
@@ -223,7 +223,7 @@ src_unpack() {
 			echo 
 			echo "Fixing reject in include/linux/sched.h..."
 			echo
-			cp ${FILESDIR}/${KV}/sched.h include/linux
+			cp ${FILESDIR}/${PVR}/sched.h include/linux
 		fi
 	fi
 	
@@ -271,8 +271,8 @@ src_compile() {
 			fi
 			# I had to hack this in so that LVM will look in the current linux
 			# source directory instead of /usr/src/linux for stuff - pete
-			try CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}"
-			try make 
+			CFLAGS="${CFLAGS} -I${KS}/include" try ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}"
+			try make
 		fi
 	
 #		if [ "`use lm_sensors`" ]
@@ -294,6 +294,7 @@ src_compile() {
 			
 		if [ "$PN" == "linux" ]
 		then
+			cd ${KS}
 			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep
 			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage
 			try make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules
@@ -326,7 +327,7 @@ src_install() {
 		then
 			cd ${KS2}/LVM/${LVMV}/tools
 	    
-			try CFLAGS="${CFLAGS} -I${KS}/include" make install -e prefix=${D} mandir=${D}/usr/share/man \
+			CFLAGS="${CFLAGS} -I${KS}/include" try make install -e prefix=${D} mandir=${D}/usr/share/man \
 			sbindir=${D}/sbin libdir=${D}/lib
 			#no need for a static library in /lib
 			mv ${D}/lib/*.a ${D}/usr/lib
