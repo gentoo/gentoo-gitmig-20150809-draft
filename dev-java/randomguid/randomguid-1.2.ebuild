@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.ebuild,v 1.4 2003/02/13 10:22:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/randomguid-1.2.ebuild,v 1.5 2003/03/27 02:03:54 seemant Exp $
 
 IUSE="jikes"
 
-A="RandomGUID.tar"
 S=${WORKDIR}
-SRC_URI="ftp://www.javaexchange.com/javaexchange/${A}"
 DESCRIPTION="Generate truly random, cryptographically strong GUIDs"
 HOMEPAGE="http://www.javaexchange.com"
+SRC_URI="ftp://www.javaexchange.com/javaexchange/RandomGUID.tar"
+
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="x86 ppc sparc alpha hppa mips arm"
 
 RDEPEND=">=virtual/jdk-1.2"
 DEPEND="${RDEPEND}

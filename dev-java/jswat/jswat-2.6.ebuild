@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.6.ebuild,v 1.4 2003/02/13 10:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.6.ebuild,v 1.5 2003/03/27 02:04:26 seemant Exp $
 
 S="${WORKDIR}/jswat"
 DESCRIPTION="Extensible graphical Java debugger"
 HOMEPAGE="http://www.bluemarsh.com/java/jswat"
 SRC_URI="http://www.bluemarsh.com/binaries/java/jswat/jswat2-src-20020617.tar.gz"
-LICENSE="GPL-2"
+
 SLOT="2"
-KEYWORDS="*"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 DEPEND=">=dev-java/ant-1.4.1"
 #this next line should be changed to >=virtual/jdk once we have a bunch of 1.4 JDK's
