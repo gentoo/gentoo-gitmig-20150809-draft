@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.1 2004/09/12 19:31:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.2 2004/09/19 19:32:33 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-httpclient-2.0
 	dev-java/commons-collections
 	>=dev-java/oro-2.0
-	>=dev-java/jdom-1._beta9
+	>=dev-java/jdom-1.0_beta9
 	>=dev-java/xerces-2.6.2-r1
 	dev-java/xalan
 	>=dev-java/avalon-logkit-bin-1.2
