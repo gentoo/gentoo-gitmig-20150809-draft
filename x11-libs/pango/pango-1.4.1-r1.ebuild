@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1-r1.ebuild,v 1.3 2004/08/22 23:01:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1-r1.ebuild,v 1.4 2004/09/23 08:52:02 usata Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ppc64 ~ppc-macos"
 IUSE="doc"
 
 RDEPEND="virtual/x11
@@ -29,7 +29,7 @@ src_unpack() {
 
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
+	use ppc-macos || epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
 	use amd64 && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
