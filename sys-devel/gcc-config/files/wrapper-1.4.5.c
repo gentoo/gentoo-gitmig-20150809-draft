@@ -1,7 +1,7 @@
 /*
- * Copyright 1999-2004 Gentoo Foundation
+ * Copyright 1999-2005 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.3 2005/02/07 19:24:21 eradicator Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.4 2005/03/16 23:32:12 vapier Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -14,7 +14,7 @@
 #include <sys/stat.h>
 #include <sys/param.h>
 #include <unistd.h>
-#include <wait.h>
+#include <sys/wait.h>
 #include <libgen.h>
 #include <string.h>
 #include <stdarg.h>
