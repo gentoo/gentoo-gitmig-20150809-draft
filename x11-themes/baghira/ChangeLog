@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.11 2004/08/09 17:24:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.12 2004/08/16 08:27:29 voxus Exp $
+
+*baghira-0.5a (16 Aug 2004)
+
+  16 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org> +baghira-0.5a.ebuild:
+  Version bump, ~amd64 added, closing bug #60146.
 
   09 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> baghira-0.5.ebuild:
   Keyworded ~sparc
