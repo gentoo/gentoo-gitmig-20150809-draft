@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.28 2004/02/22 06:17:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.29 2004/02/22 18:01:18 agriffis Exp $
 
 inherit flag-o-matic eutils
 strip-flags -funroll-loops
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 IUSE="gnome perl oggvorbis"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1

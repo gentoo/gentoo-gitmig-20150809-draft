@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.52.ebuild,v 1.10 2003/09/05 22:57:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.52.ebuild,v 1.11 2004/02/22 18:02:21 agriffis Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
