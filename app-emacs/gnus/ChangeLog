@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.1 2003/09/10 05:52:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.2 2003/11/08 18:06:59 usata Exp $
 
 *gnus-5.10.2 (10 Sep 2003)
+
+  09 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> gnus-5.10.2.ebuild:
+  Changed emacsw3 USE flag to emacs-w3. Closing bug #21062.
 
   10 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
   Initial import.  Ebuild submitted by Bjorn Lindstrom <bkhl@privat.utfors.se>.

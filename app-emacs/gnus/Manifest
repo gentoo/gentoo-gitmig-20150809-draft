@@ -1,5 +1,5 @@
-MD5 e27651e445320040f2cd77b326e61cf9 ChangeLog 375
-MD5 d3216a17291462bbb9145e7aa33aad36 gnus-5.10.2.ebuild 1053
+MD5 c12e78d6df1c441a6929f8ed91aae8dc ChangeLog 502
+MD5 0191dfac7f5726ab79f5ecafaf0e48b9 gnus-5.10.2.ebuild 970
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 44144fe26337a173aac5ad08c0b67808 files/70gnus-gentoo.el 39
 MD5 dbb0f393b283b4796c6d534117754c66 files/digest-gnus-5.10.2 64
