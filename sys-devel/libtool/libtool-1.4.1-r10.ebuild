@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.13 2004/07/02 08:40:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.14 2004/07/15 03:33:30 agriffis Exp $
 
 IUSE=""
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A shared library tool for developers"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
@@ -60,4 +59,3 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog* NEWS \
 	      README THANKS TODO doc/PLATFORMS
 }
-

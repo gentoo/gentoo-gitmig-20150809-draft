@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r3.ebuild,v 1.5 2004/07/02 08:40:18 eradicator Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r3.ebuild,v 1.6 2004/07/15 03:33:30 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -9,7 +9,6 @@ inherit eutils gnuconfig
 # NOTE:  We install libltdl of libtool-1.3x for compat reasons ...
 
 OLD_PV="1.3.5"
-S="${WORKDIR}/${P}"
 OLD_S="${WORKDIR}/${PN}-${OLD_PV}"
 DESCRIPTION="A shared library tool for developers"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
@@ -19,6 +18,7 @@ HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ppc64"
+IUSE=""
 
 DEPEND="virtual/libc"
 
@@ -66,9 +66,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-nonneg.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.3.5-mktemp.patch
 
-	use hppa && S="${OLD_S}" gnuconfig_update
-	use amd64 && S="${OLD_S}" gnuconfig_update
-	use ppc64 && S="${OLD_S}" gnuconfig_update
+	gnuconfig_update
 
 	cd ${S}
 	echo
@@ -142,10 +140,10 @@ src_compile() {
 	cd ${OLD_S}
 
 	# Detect mips/mips64
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	# regen to allow for build,host,target ppc64
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	einfo "Configuring ${OLD_S##*/} ..."
 	./configure --host=${CHOST} \
@@ -162,7 +160,7 @@ src_compile() {
 	cd ${S}
 
 	# Detect mips/mips64
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	einfo "Configuring ${S##*/} ..."
 	./configure --host=${CHOST} \
@@ -198,4 +196,3 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog* NEWS \
 	      README THANKS TODO doc/PLATFORMS
 }
-
