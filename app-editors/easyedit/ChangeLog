@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/easyedit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.1 2004/02/18 15:56:35 hattya Exp $
+
+*easyedit-1.4.6 (19 Feb 2004)
+
+  19 Feb 2004; Akinori Hattori <hattya@gentoo.org> easyedit-1.4.6.ebuild,
+  metadata.xml:
+  Initial revision. Ebuild submitted by Michael C. Ferguson <mcf@augustmail.com>
+  in bug #37906.
+
