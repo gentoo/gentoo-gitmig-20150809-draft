@@ -1,34 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.6-r1.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.6-r1.ebuild,v 1.3 2003/09/08 06:43:56 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
-SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
+SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	dev-libs/openssl"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
-
 src_unpack(){
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-db4.diff ||die
+	epatch ${FILESDIR}/${P}-db4.diff
 }
 
 src_compile() {
-	local myconf
-	myconf="--with-berkeleydb=/usr"
-	econf ${myconf} || die
+	econf --with-berkeleydb=/usr || die
 	emake || die
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog COPYING DOCUMENTATION NEWS README SURVEY TODO
 	dodoc doc/*.html
