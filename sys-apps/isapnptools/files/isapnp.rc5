@@ -7,6 +7,7 @@ source /etc/rc.d/config/functions
 
 CONFFILE=/etc/isapnp.conf
 
+start() {
 if [ -e $CONFFILE ] ; then
 	if [ -e /sbin/isapnp ] ; then
 		ebegin "Configuring ISA PnP devices"
@@ -18,7 +19,7 @@ if [ -e $CONFFILE ] ; then
 	fi
 else
 	eerror "You need an /etc/isapnp.conf file first"
-	eerror "There is an example in docs/isapnptools/txt/isapnp.conf.gz"
+	eerror "Theres a sample in docs/isapnptools/txt"
 	return 1
 fi
 }
