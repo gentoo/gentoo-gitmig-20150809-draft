@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/gsmlib-1.10-r1.ebuild,v 1.2 2004/07/26 00:59:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/gsmlib-1.10-r1.ebuild,v 1.3 2005/01/23 20:43:23 blubb Exp $
 
 inherit eutils
 
