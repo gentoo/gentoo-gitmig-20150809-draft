@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/signify
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.7 2005/01/13 20:00:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/ChangeLog,v 1.8 2005/02/28 21:49:30 astinus Exp $
+
+  28 Feb 2005; Alex Howells <astinus@gentoo.org> signify-1.07.ebuild,
+  signify-1.14.1.ebuild:
+  Bug request 83580 is asking for keywording of net-mail/signify on AMD64. Both
+  versions in the tree seem to install and function, adding ~amd64 to both.
 
 *signify-1.14.1 (13 Jan 2005)
 
