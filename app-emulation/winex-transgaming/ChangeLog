@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/winex-transgaming
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/ChangeLog,v 1.4 2003/04/06 08:59:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/ChangeLog,v 1.5 2003/04/27 14:27:53 lordvan Exp $
+
+*winex-transgaming-3.0 (27 Apr 2003)
+  27 Apr 2003; Thomas Raschbacher <lordvan@gentoo.org> winex-transgaming-3.0.ebuild:
+  new version + dep for !app-emulation/winex-cvs
 
   06 Apr 2003; phoen][x <phoenix@gentoo.org> winex-transgaming-*.ebuild :
   Changed SLOT to reflect the version of winex.
