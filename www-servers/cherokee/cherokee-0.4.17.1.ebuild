@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.1.ebuild,v 1.1 2004/10/30 17:12:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.1.ebuild,v 1.2 2004/11/01 10:34:08 hansmi Exp $
 
 MY_PV=0.4.17
 
@@ -15,7 +15,7 @@ RDEPEND="virtual/libc
 DEPEND=">=sys-devel/automake-1.7.5
 	${RDEPEND}"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 IUSE=""
 
