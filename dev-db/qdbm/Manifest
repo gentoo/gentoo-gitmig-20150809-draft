@@ -1,12 +1,22 @@
-MD5 43595c2110442a31ade33fe178aded6d ChangeLog 2154
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9935a04373368ab825552933261e0448 qdbm-1.8.15.ebuild 1159
+MD5 8590ba94ee69ca881520b7225a14ee9e qdbm-1.8.17.ebuild 1175
+MD5 87777c0bb7a066bde4ee0d3370f9c557 qdbm-1.8.14.ebuild 1159
+MD5 baa34b4deb9f8a225a9751b44b1f2d71 qdbm-1.8.16.ebuild 1165
+MD5 235ec74b0b648c619f252934e06fa392 ChangeLog 2246
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
 MD5 5e5bab9218684cb5effeb74d1efb71fe qdbm-1.8.13.ebuild 1154
-MD5 87777c0bb7a066bde4ee0d3370f9c557 qdbm-1.8.14.ebuild 1159
-MD5 9935a04373368ab825552933261e0448 qdbm-1.8.15.ebuild 1159
-MD5 baa34b4deb9f8a225a9751b44b1f2d71 qdbm-1.8.16.ebuild 1165
-MD5 257ed0ffa18b948b98bc2a8ff862c3ae qdbm-1.8.17.ebuild 1177
 MD5 3162efb60c6bd5483bf56f2b5dd9396b files/digest-qdbm-1.8.13 63
 MD5 16ebc6231d28ac424989fd6fd1e9fb29 files/digest-qdbm-1.8.14 63
 MD5 77d48911377c01d79d9dd6d5db819573 files/digest-qdbm-1.8.15 63
 MD5 5e73e3df7c9ba5df4312934edf80cd9a files/digest-qdbm-1.8.16 63
 MD5 340399145118f869822d6127294a3ebb files/digest-qdbm-1.8.17 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2vlHZ/iYVBmujdURAhUZAJ9OKRxAQuWMokd/PbXdfD4XUJ86UACgwtCK
+q+pQ5meChl+YHfbOBYCqxjM=
+=MoNQ
+-----END PGP SIGNATURE-----

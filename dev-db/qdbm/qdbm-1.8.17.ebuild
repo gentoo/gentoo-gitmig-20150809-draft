@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.17.ebuild,v 1.10 2005/01/01 17:42:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.17.ebuild,v 1.11 2005/01/04 20:12:45 sekretarz Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://qdbm.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~amd64 ppc ppc64 alpha sparc"
+KEYWORDS="x86 amd64 ppc ppc64 alpha sparc"
 SLOT="0"
 
 DEPEND="java? ( virtual/jdk )
