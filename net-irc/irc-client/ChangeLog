@@ -1,0 +1,8 @@
+# ChangeLog for net-irc/irc-client
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.1 2003/09/10 23:56:26 zul Exp $
+
+  10 Sep 2003; Chuck Short <zul@gentoo.org> :
+  Initial Version, ebuild written by Jesus Perez <jesus.pr@worldonline.es>
+  closes #19448.
+
