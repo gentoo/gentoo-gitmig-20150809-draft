@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 d4969be6b3f1725977e3e6774a050257 ChangeLog 341
 MD5 607dc51d1f0bcebda4b8fe238ddb7734 metadata.xml 286
-MD5 9deb2169eb73a07c104b51d77db9d7a8 netboot-base-20041007.ebuild 965
+MD5 f75b672a5201cd146f46c712cb576445 netboot-base-20041007.ebuild 977
 MD5 70bab51ddf543bb3c33317914b4c5fa3 files/digest-netboot-base-20041007 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB2wsDroRuSHgZdywRAjYOAJ0bAfVccBalJByUztdOOtaA8KKg8wCdER/Q
-yIt+yiSswW2FuG0ERzVQ11Q=
-=FBrL
+iD8DBQFB2wsvroRuSHgZdywRAn8zAJ9imftC3SYhg7w9F7yl6Aqy8TjQPACfaQ0Y
+3/GcdEW/npfrMr/2K/ebTBo=
+=NnEY
 -----END PGP SIGNATURE-----
