@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.74.ebuild,v 1.1 2003/10/17 22:43:04 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.74.ebuild,v 1.2 2003/10/18 05:34:15 mr_bones_ Exp $
 
 S=${WORKDIR}/mpiexec-${PV}
-DESCRIPTION="Mpiexec is a replacement program for the script mpirun, 
-which is part of the mpich package.  It bridges the gap between mpich 
-and PBS.  It is used to initialize a parallel job from within a PBS 
+DESCRIPTION="Mpiexec is a replacement program for the script mpirun,
+which is part of the mpich package.  It bridges the gap between mpich
+and PBS.  It is used to initialize a parallel job from within a PBS
 batch or interactive environment."
 SRC_URI="http://www.osc.edu/~pw/mpiexec/mpiexec-0.74.tgz"
 HOMEPAGE="http://www.osc.edu/~pw/mpiexec/"
@@ -48,8 +48,8 @@ src_compile() {
 src_install() {
 	dodir /usr/sbin
 	dodir /usr/local/bin
-	
-	make install prefix=${D}/usr mandir=${D}/usr/share/man 
+
+	make install prefix=${D}/usr mandir=${D}/usr/share/man
 infodir=/usr/share/infoinstall || die
 
 	dodoc LICENSE README
