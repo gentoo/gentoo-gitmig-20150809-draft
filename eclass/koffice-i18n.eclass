@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.12 2002/08/01 18:57:25 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.13 2002/09/17 07:05:16 danarmak Exp $
 inherit kde
 ECLASS=koffice-i18n
 INHERITED="$INHERITED $ECLASS"
@@ -11,9 +11,14 @@ case $PV in
 		need-kde 2.2
 		SRC_PATH="kde/stable/koffice-${PV//_/-}/src/${PN}-${PV//_/-}.tar.bz2"
 		;;
-	1.2*)
+	# 1.2 prereleases
+	1.2_*)
 		need-kde 3
 		SRC_PATH="kde/unstable/koffice-${PV//_/-}/src/${PN}-${PV//_/-}.tar.bz2"
+		;;
+	1.2)
+		need-kde 3
+		SRC_PATH="kde/stable/koffice-1.2/src/${P}.tar.bz2"
 		;;
 esac
 
