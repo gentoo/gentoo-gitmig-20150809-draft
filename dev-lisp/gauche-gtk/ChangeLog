@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gauche-gtk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gtk/ChangeLog,v 1.6 2004/02/21 15:29:19 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche-gtk/ChangeLog,v 1.7 2004/03/28 09:19:13 hattya Exp $
+
+*gauche-gtk-0.4 (28 Mar 2004)
+
+  28 Mar 2004; Akinori Hattori <hattya@gentoo.org> gauche-gtk-0.4.ebuild:
+  version bump.
 
   22 Feb 2004; Akinori Hattori <hattya@gentoo.org> gauche-gtk-0.3.ebuild,
   files/gauche-gtk-0.3-gentoo.diff:

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>hattya@gentoo.org</email>
-	<name>Akinori Hattori</name>
-</maintainer>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>hattya@gentoo.org</email>
+  </maintainer>
 
-<longdescription>
-Gauche extension module to use GTK.
-</longdescription>
+  <longdescription>
+    Gauche extension module to use GTK.
+  </longdescription>
 </pkgmetadata>
