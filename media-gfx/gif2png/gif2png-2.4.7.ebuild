@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.4.7.ebuild,v 1.1 2003/07/28 21:46:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.4.7.ebuild,v 1.2 2003/07/28 21:56:44 mholzer Exp $
 
 IUSE=""
 
@@ -26,4 +26,5 @@ src_install() {
 	make \
 		DESTDIR=${D} \
 		install || die "make install failed"
+	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README
 }
