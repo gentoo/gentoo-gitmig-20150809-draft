@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.29 2004/10/01 20:36:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.30 2004/10/01 20:50:17 brix Exp $
+
+*ipw2100-0.50 (01 Oct 2004)
+
+  01 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  -files/ipw2100-0.31-sched-fix.diff, -files/ipw2100-0.33-acpi-fix.diff,
+  -files/ipw2100-0.33-makefile-fix.diff, -files/ipw2100-0.38-makefile-1.diff,
+  -files/ipw2100-0.38-makefile-2.diff, -files/ipw2100-0.38-resume.patch,
+  -ipw2100-0.41.ebuild, -ipw2100-0.45.ebuild, -ipw2100-0.46-r1.ebuild,
+  -ipw2100-0.46.ebuild, -ipw2100-0.48.ebuild, -ipw2100-0.49.ebuild,
+  -ipw2100-0.50.ebuild, -ipw2100-0.51.ebuild, -ipw2100-0.52.ebuild:
+  Pruned old versions
 
 *ipw2100-0.55-r2 (01 Oct 2004)
 
