@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.18 2005/01/22 18:17:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.19 2005/03/10 07:55:21 slarti Exp $
+
+  10 Mar 2005; Tom Martin <slarti@gentoo.org> libgsasl-0.2.4.ebuild:
+  Marked ~sparc
 
   22 Jan 2005; Tom Martin <slarti@gentoo.org> -libgsasl-0.1.4.ebuild:
   Purge old versions.
