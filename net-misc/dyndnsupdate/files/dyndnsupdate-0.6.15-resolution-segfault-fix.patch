@@ -1,0 +1,14 @@
+--- src/dyndnsupdate.c.orig	2003-07-02 17:37:41.000000000 +0200
++++ src/dyndnsupdate.c	2004-04-18 00:07:41.006457888 +0200
+@@ -346,6 +346,11 @@
+     sleep(1);
+     print_msg(LOG_DEBUG, "reply from %s:\n%s", CHECKIPSERVER, get_msg);
+     ipaddr = strstr(get_msg, "Address: ")+9;
++    if (ipaddr == 9) //dammit +9 !
++    {
++    	perror("invalid reply\n");
++	exit(1);
++    }
+     q = strchr(ipaddr, '\n'); *q = '\0';
+     print_msg(LOG_INFO, "%s...Done!\n", ipaddr);
+     sprintf(ipaddress, ipaddr);

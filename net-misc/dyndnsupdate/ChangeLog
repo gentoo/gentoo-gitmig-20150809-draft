@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dyndnsupdate
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.8 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dyndnsupdate/ChangeLog,v 1.9 2004/04/17 22:36:00 kugelfang Exp $
+
+  18 Apr 2004; <dvandyk@gentoo.org>
+  +files/dyndnsupdate-0.6.15-resolution-segfault-fix.patch,
+  dyndnsupdate-0.6.15.ebuild:
+  Added patch to keep dyndnsupdate from segfaulting in case the HTTP Reply 
+  for resolving the IP is invalid.
 
 *dyndnsupdate-0.6.15 (23 Oct 2002)
 
