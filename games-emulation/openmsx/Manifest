@@ -1,4 +1,6 @@
 MD5 5abebc187ff9051114ea4ed118222991 openmsx-0.3.3.ebuild 1838
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 346bd6bfcaeae690a49f9d20ce9726fd ChangeLog 537
+MD5 8553d57d3cafb68c5463cee64fafcc4a openmsx-0.3.4.ebuild 1832
 MD5 57a5a827ee242bcd74d41dd135924b95 files/digest-openmsx-0.3.3 66
+MD5 04f5dc7ba36939e792262356a7558ac1 files/digest-openmsx-0.3.4 66
