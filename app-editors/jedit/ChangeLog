@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.50 2005/02/28 13:23:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.51 2005/03/01 21:11:37 luckyduck Exp $
+
+  01 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jedit-4.2-r1.ebuild:
+  fixed #83698
 
 *jedit-4.2-r1 (28 Feb 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.1 2005/02/28 13:23:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.2 2005/03/01 21:11:37 luckyduck Exp $
 
-inherit java-utils
+inherit java-pkg eutils
 
 MY_PV="${PV//.}"
 MY_PV="${MY_PV//_}"
@@ -55,20 +55,15 @@ src_compile() {
 }
 
 src_install () {
-	java-pkg-dojar jedit.jar
-
 	dodir /usr/share/jedit
 	dodir /usr/bin
 
 	insinto /usr/share/jedit
-	doins -r jars doc macro modes properties startup
+	doins -r jedit.jar jars doc modes properties startup
 	keepdir /usr/share/jedit/jars
 
-	cat ${PN} <<EOF
-#!/bin/bash
-
-\$(java-config -J) -jar $(java-config -p jedit) \$@
-EOF
+	echo "#!/bin/bash" > ${PN}
+	echo "\$(java-config -J) -jar /usr/share/jedit/jedit.jar \$@" >> ${PN}
 	dobin ${PN}
 
 	insinto /usr/share/icons/hicolor/128x128/apps
