@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.6 2003/12/15 20:56:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.7 2004/01/07 21:40:04 robbat2 Exp $
 
 inherit webapp-apache
 
@@ -19,11 +19,8 @@ S=${WORKDIR}/${MY_P}
 webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
-	GREPSQL=`grep sql /var/db/pkg/dev-php/mod_php*/USE`
-	GREPLDAP=`grep ldap /var/db/pkg/dev-php/mod_php*/USE`
-	if [ "${GREPSQL}" != "" ] || [ "${GREPLDAP}" != "" ] ; then
-		return 0
-	else
+	GREPBACKEND=`egrep 'sql|odbc|postgres|ldap' /var/db/pkg/dev-php/mod_php*/USE`
+	if [ -z "${GREPBACKEND}" ] ; then
 		eerror "Missing SQL or LDAP support in mod_php !"
 		die "aborting..."
 	fi
