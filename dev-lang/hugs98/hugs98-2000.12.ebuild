@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tom Bevan tom@regex.com.au
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-12.2000.ebuild,v 1.1 2002/04/24 19:43:15 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12.ebuild,v 1.1 2002/04/24 19:45:33 karltk Exp $
 
 P="hugs98-Dec2001"
 S=${WORKDIR}/${P}
