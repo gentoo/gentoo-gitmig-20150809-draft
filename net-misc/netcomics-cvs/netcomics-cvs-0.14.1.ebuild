@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.1 2003/10/06 10:44:56 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/netcomics-cvs-0.14.1.ebuild,v 1.2 2003/11/16 23:09:37 pyrania Exp $
 
 inherit cvs perl-module
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://netcomics.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="${DEPEND}
 	dev-perl/libwww-perl
