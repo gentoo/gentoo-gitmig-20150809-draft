@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.4 2004/06/27 17:35:25 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.5 2004/07/30 19:38:37 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  move dev-java/dbunit dev-java/dbunit-bin
 
   27 Jun 2004; Chris Aniszczyk <zx@gentoo.org> dbunit-2.0.ebuild:
   Marking stable on x86 and ppc
