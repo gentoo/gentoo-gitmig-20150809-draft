@@ -45,6 +45,7 @@ src_compile() {
 		`use_with gdbm` \
 		`use_with pam` \
 		`use_with qt` \
+		`use_with speex` \
 		--enable-verbose \
 		--with-bdb \
 		--with-openssl \
