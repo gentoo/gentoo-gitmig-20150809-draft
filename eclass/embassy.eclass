@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.2 2004/07/20 20:39:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.3 2004/09/11 14:04:45 ribosome Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -53,9 +53,15 @@ embassy_src_compile() {
 	local EXTRA_CONF
 	! use X && EXTRA_CONF="${EXTRA_CONF} --without-x"
 	! use png && EXTRA_CONF="${EXTRA_CONF} --without-pngdriver"
-	./configure ${EXTRA_CONF} || die
+	./configure --host=${CHOST} \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--datadir=/usr/share \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		${EXTRA_CONF} || die
 	emake || die "Before reporting this error as a bug, please make sure you compiled
-    EMBOSS and the EMBASSY packages with the same USE flags. Failure to
+    EMBOSS and the EMBASSY packages with the same \"USE\" flags. Failure to
     do so may prevent the compilation of some EMBASSY packages, or cause
     runtime problems with some EMBASSY programs. For example, if you
     compile EMBOSS with \"png\" support and then try to build DOMAINATRIX
