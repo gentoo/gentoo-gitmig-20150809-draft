@@ -1,3 +1,5 @@
-MD5 2eb790dc1b1539e5043c5b1d227a81f1 ChangeLog 486
-MD5 041ad7aba6a508423bb0487980f69321 libggz-0.0.5.ebuild 616
 MD5 b1ddcfdc5b91e28c37244742f4682f7a files/digest-libggz-0.0.5 64
+MD5 2d43ae518fd60b091dca4e18ea6da1d3 files/digest-libggz-0.0.7 64
+MD5 041ad7aba6a508423bb0487980f69321 libggz-0.0.5.ebuild 616
+MD5 79e597bd92adf583b422c5799a6241c1 ChangeLog 509
+MD5 26d93f940c8e98bdcdddb0e34a086d3a libggz-0.0.7.ebuild 768
