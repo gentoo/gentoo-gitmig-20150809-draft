@@ -1,5 +1,5 @@
-<<<<<<< Manifest
-MD5 547c3f699834d617c991e7c06c7defdd nabi-0.9.ebuild 973
-MD5 7a3e785e5a228270709a9964b6d07609 ChangeLog 429
-=======
-MD5 88636e2a25efee048c2be3aa29615f75 nabi-0.9.ebuild 974
+MD5 4d39f93f67de45de3e9b627beefa1bd6 nabi-0.10.ebuild 880
+MD5 779e1c44382f332002af0a69e18d0bc3 nabi-0.9.ebuild 973
+MD5 19bdb8104afeda7f44e6d627d0fee1d8 ChangeLog 448
+MD5 cc876b2f0d74d5371ff4a1e793c20f73 files/digest-nabi-0.10 61
+MD5 6249dc47c56f3dc76c1dd95683226058 files/digest-nabi-0.9 60
