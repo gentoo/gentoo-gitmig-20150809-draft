@@ -1,6 +1,14 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.7 2002/06/03 11:53:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.8 2002/06/04 09:58:39 seemant Exp $
+
+*acroread-5.05-r4 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org> acroread-5.05-r4.ebuild
+  files/digest-acroread-5.05-r4 :
+
+  More fixes.  The symlinks from the last fix were not being created
+  properly.  This closes bug #3260 again.
 
 *acroread-5.05-r3 (3 Jun 2002)
 
