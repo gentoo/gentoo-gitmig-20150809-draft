@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3.ebuild,v 1.2 2004/10/20 12:09:02 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3.ebuild,v 1.3 2004/10/20 12:13:17 absinthe Exp $
 
 inherit java-pkg
 
 At="FirebirdSQL-${PV}JDK_1.3"
-DESCRIPTION="jdbc driver for firebird sql server"
+DESCRIPTION="JDBC2 driver for Firebird SQL server"
 HOMEPAGE="http://www.firebird.sourceforge.net"
 SRC_URI="mirror://sourceforge/firebird/${At}.zip"
 LICENSE="LGPL-2"
