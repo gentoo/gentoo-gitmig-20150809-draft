@@ -1,11 +1,24 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.7 2002/05/27 10:13:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.8 2002/06/09 18:10:16 stroke Exp $
+
+*file-roller-1.107.ebuild (09 Jun 2002)
+
+  09 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> file-roller-1.107.ebuild :
+
+  New version. (GTK+2/GNOME2)
+
+
+*file-roller-1.0.2 (09 Jun 2002)
+  
+  09 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> file-roller-1.0.2.ebuild :
+  
+  New version. (This one depends on the  GTK+1.2/GNOME 1 libs).
+
 
 *file-roller-1.106 (27 May 2002)
   27 May 2002; Spider <spider@gentoo.org> file-roller-1.106.ebuild :
    this is the ebuild for file-roller ( GNOME2)
-   written by Gabriele Giorgetti <g.gabriele79@genie.it> | stroke on #gentoo
   
   Adding more gnome2 software :)
 
