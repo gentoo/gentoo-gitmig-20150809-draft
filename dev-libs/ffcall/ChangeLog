@@ -1,11 +1,15 @@
 # ChangeLog for dev-libs/ffcall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Nick Hadaway <raker@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.6 2003/02/12 06:03:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.7 2003/12/12 22:23:51 gmsoft Exp $
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
 *ffcall-1.8d (03 Jul 2002)
+
+  12 Dec 2003; Guy Martin <gmsoft@gentoo.org> ffcall-1.8d.ebuild,
+  files/ffcall_hppa_1.8-4.2.diff.gz :
+  Fix hppa asm (#35270). Thanks to Mike Fulk <mfulk2@triad.rr.com>.
 
   30 Oct 2002; Nick Hadaway <raker@gentoo.org> ffcall-1.8d.ebuild :
   Changed emake to make.
