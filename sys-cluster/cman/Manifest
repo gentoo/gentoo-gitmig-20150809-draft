@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 a3f82d542d77974694ba72cc54931146 cman-1.0_pre3.ebuild 787
-MD5 70c71b204e2f8917d2c7c936e6f1343a ChangeLog 527
+MD5 87a3153b4017f257f21f101532b52a3d ChangeLog 665
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 504052a4ca8b6a4ec1d67bd569077d54 cman-1.0_pre31.ebuild 876
 MD5 1b66cd669f2348b1e7cdb8f057be395a files/digest-cman-1.0_pre3 64
+MD5 0b1d2c6bdf0d0def6a2bdceb6d204832 files/digest-cman-1.0_pre31 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFB+YwigMUyd/cdjWsRAmGoAJiyHiht0+neHhLMp/scChyshczrAJ0c8qVB
-jn//PBYeegZZrXQZYwIISQ==
-=95fF
+iD8DBQFCPE7MgMUyd/cdjWsRAg3TAKCBzbo4gKCBJi+VnyEvN0sRl5DleQCgg68/
+qBAjjh8lG9Flkm5iRMwSKGo=
+=OyQW
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.6 2005/01/27 17:49:38 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.7 2005/03/19 16:06:24 xmerlin Exp $
+
+*cman-1.0_pre31 (19 Mar 2005)
+
+  19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +cman-1.0_pre31.ebuild:
+  cman-1.0_pre31 in portage
 
   28 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> cman-1.0_pre3.ebuild:
   dependency tuning
