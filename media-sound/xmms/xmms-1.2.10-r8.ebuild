@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.3 2004/10/14 19:22:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r8.ebuild,v 1.4 2004/10/19 04:16:35 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 alsa oss arts jack sndfile lirc flac mad"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.0"
+PATCHVER="2.1"
 
 PATCHDIR="${WORKDIR}/patches"
 
@@ -99,6 +99,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
 	newdoc ${PATCHDIR}/README README.patches
+	newdoc ${PATCHDIR}/ChangeLog ChangeLog.patches
 
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
@@ -120,4 +121,11 @@ src_install() {
 	doins ${WORKDIR}/gentoo_ice/*
 	docinto gentoo_ice
 	dodoc ${WORKDIR}/README
+}
+
+pkg_postinst() {
+	ewarn "This version of xmms is under development and subject to change."
+	ewarn "while it is still in package.mask.  Some features found in earlier"
+	ewarn "versions of xmms (cjk support and an id3v2 editor) are not yet"
+	ewarn "integrated into this version."
 }

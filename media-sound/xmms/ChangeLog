@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.144 2004/10/14 16:54:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.145 2004/10/19 04:16:35 eradicator Exp $
 
-  14 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  18 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r8.ebuild:
+  Added ISO-8859-1 encoding patch.  Added sort by track length.
+
+  14 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r8.ebuild:
   Using old xmms icon for desktop menu entries. Fixed gettext being in RDEPEND
   instead of DEPEND. General cleanup.
 
