@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.2.ebuild,v 1.3 2005/01/01 17:47:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.2.ebuild,v 1.4 2005/02/07 19:57:48 latexer Exp $
 
-inherit eutils mono
+inherit eutils mono multilib
 
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit and GNOME libraries"
 SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install () {
-	make GACUTIL_FLAGS="/root ${D}/usr/lib /gacdir /usr/lib /package ${PN}" \
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package ${PN}" \
 		DESTDIR=${D} install || die
 
 	dodoc README* ChangeLog

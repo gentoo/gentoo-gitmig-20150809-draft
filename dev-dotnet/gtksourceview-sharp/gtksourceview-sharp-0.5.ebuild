@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.4 2005/01/01 17:48:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.5.ebuild,v 1.5 2005/02/07 19:54:50 latexer Exp $
 
-inherit mono
+inherit mono multilib
 
 DESCRIPTION="A C# Binding to gtksourceview"
 HOMEPAGE="http://www.go-mono.com/"
@@ -39,6 +39,6 @@ src_compile() {
 
 src_install() {
 	dodir $(monodoc --get-sourcesdir)
-	make GACUTIL_FLAGS="/root ${D}/usr/lib /gacdir /usr/lib -package gtk-sharp" \
+	make GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) -package gtk-sharp" \
 		DESTDIR=${D} install || die
 }
