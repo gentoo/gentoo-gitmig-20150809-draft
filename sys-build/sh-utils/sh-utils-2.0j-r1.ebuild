@@ -2,7 +2,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.1 2001/01/25 18:00:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.2 2001/01/27 22:04:24 achim Exp $
 
 P=sh-utils-2.0j
 A=${P}.tar.gz
@@ -24,7 +24,7 @@ src_compile() {
 	export CFLAGS="${CFLAGS}"
 	try ./configure --host=${CHOST} --build=${CHOST} --prefix=/usr \
 	--without-included-regex --disable-nls
-	try make ${MAKEOPTS}
+	try make ${MAKEOPTS} LDFLAGS=-static
 }
 
 src_install() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-build/glibc/glibc-2.2.1.ebuild,v 1.2 2001/01/27 08:38:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-build/glibc/glibc-2.2.1.ebuild,v 1.3 2001/01/27 22:04:24 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -17,6 +17,7 @@ DEPEND=""
 RDEPEND="$DEPEND
 	 >=sys-apps/bash-2.04
 	 >=sys-devel/perl-5.6"
+PROVIDE="virtual/glibc"
 
 src_compile() {                           
 
