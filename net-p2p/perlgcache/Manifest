@@ -1,2 +1,15 @@
-MD5 ef6265cf5098a057800c657e42a711a3 perlgcache-0.7.9.ebuild 1248
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 468ba83ca8190750c0278cf13d3d981e perlgcache-0.7.9.ebuild 1355
+MD5 4cb55e69c52010dd2ebd1fa2dbbf6b41 ChangeLog 389
+MD5 38f5d2fc5324ff4b77d0473e67408a9e metadata.xml 269
+MD5 d850fdb5ae0f35458238488860116bb7 files/postinstall-en.txt 446
 MD5 373539db89cbc3c2b82563eaf33558b0 files/digest-perlgcache-0.7.9 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSxYqcAgAdbxYsnERAnPvAJwL1adBMkIRGDQii4HZNsduZGQwEACgpc1V
+0FowKLJKl0F0qdLWfySn9vc=
+=e4Ys
+-----END PGP SIGNATURE-----
