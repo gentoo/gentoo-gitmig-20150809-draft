@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.6 2003/04/13 21:53:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r2.ebuild,v 1.1 2003/04/17 16:34:48 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -17,43 +17,31 @@ src_install() {
 
 	dodir /usr/share/man/man1
 
-	sed -i -e "/groupadd/s/^/#/;/chown.*slocate/s/^/#/" Makefile
+	sed -i -e "/groupadd/s/^/#/;/chown.*slocate/s/^/#/" Makefile || die
 	make DESTDIR=${D} install || die
 
 	# make install for this package is blocked by sandbox
-#	dobin slocate
 	dosym slocate /usr/bin/locate
 	dosym slocate /usr/bin/updatedb
 	fperms 0755 /etc/cron.daily/slocate
-#
-#	dosym slocate.1.gz /usr/share/man/man1/locate.1.gz
-#
 	keepdir /var/lib/slocate
-
 
 	# If this file doesn't exist, the first run of updatedb will create
 	# it anyway.  But doing this shuts it up.
-	if [ ! -f ${ROOT}/var/lib/slocate/slocate.db ]
-	then
+	if [ ! -f ${ROOT}/var/lib/slocate/slocate.db ] ; then
 		touch ${D}/var/lib/slocate/slocate.db
 	fi
 
 	dodoc INSTALL LICENSE COPYING AUTHORS NEWS README ChangeLog
-
 
 	# man page fixing
 	rm -rf ${D}/usr/share/man/man1/locate.1.gz
 	dosym slocate.1.gz /usr/share/man/man1/locate.1.gz
 
 
-	# Make a fake updatedb.conf file, to shut slocate up 
-	echo "# There is a sample config file in :" > updatedb.conf
-	echo "# /usr/share/doc/${PF}/updatedb.conf.gz" >> updatedb.conf
 	insinto /etc
-	doins updatedb.conf
+	doins ${FILESDIR}/updatedb.conf
 	fperms 0644 /etc/updatedb.conf
-
-	dodoc ${FILESDIR}/updatedb.conf
 }
 
 pkg_postinst() {
@@ -72,7 +60,6 @@ pkg_postinst() {
 	ewarn "/etc/cron.daily/slocate.cron the .cron is no longer"
 	ewarn "in the filename"
 	echo
-	einfo "Please note that the /etc/updatedb.conf file is EMPTY"
-	einfo "There is a sample configuration file in"
-	einfo "/usr/share/doc/${PF}"
+	einfo "Note that the /etc/updatedb.conf file is generic"
+	einfo "Please customize it to your system requirements"
 }
