@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.11 2004/06/28 19:23:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.12 2004/08/18 07:52:48 phosphan Exp $
+
+  18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> qwt-4.2.0_rc1-r1.ebuild,
+  -qwt-4.2.0_rc1.ebuild:
+  Latest -> stable
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> qwt-4.2.0_rc1-r1.ebuild:
   add sed-4 dep
