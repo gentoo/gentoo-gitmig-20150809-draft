@@ -59,7 +59,6 @@
 ~app-emulation/wine
 ~app-emulation/winesetuptk
 ~app-emulation/winex
-~dev-java/ibm-jdk
 ~dev-java/sun-jdk
 ~dev-java/sun-j2ee
 ~dev-java/ibm-jre
