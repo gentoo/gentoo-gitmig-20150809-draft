@@ -1,15 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.3.ebuild,v 1.3 2004/06/16 01:33:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.5.ebuild,v 1.1 2004/06/16 01:33:46 squinky86 Exp $
 
 IUSE="gtk2"
 
-DESCRIPTION="a powerful frontend for mldonkey"
-SRC_URI="gtk2? ( http://sancho-gui.sourceforge.net/tmp/${PN/-bin/}-${PV/.3/-3}-linux-gtk.tar.bz2 )
-	!gtk2? ( http://sancho-gui.sourceforge.net/tmp/${PN/-bin/}-${PV/.3/-3}-linux-fox.tar.bz2 )"
-HOMEPAGE="http://sancho-gui.sourceforge.net/"
+MY_P=${P/-bin/}
+MY_P=${MY_P%.*}-${MY_P##*.}
 
-KEYWORDS="x86"
+use gtk2 && TOOLKIT="gtk" || TOOLKIT="fox"
+
+DESCRIPTION="a powerful frontend for mldonkey"
+HOMEPAGE="http://sancho-gui.sourceforge.net/"
+SRC_URI="http://sancho-gui.sourceforge.net/tmp/${MY_P}-linux-${TOOLKIT}.tar.bz2"
+
+KEYWORDS="~x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 RESTRICT="nomirror"
@@ -18,8 +22,7 @@ DEPEND="virtual/glibc
 	virtual/x11
 	gtk2? ( >=x11-libs/gtk+-2 )"
 
-use gtk2 && TOOLKIT="gtk" || TOOLKIT="fox"
-S="${WORKDIR}/${PN/-bin/}-${PV/.3/-3}-linux-${TOOLKIT}"
+S="${WORKDIR}/${MY_P}-linux-${TOOLKIT}"
 
 src_compile() {
 	einfo "Nothing to compile."
