@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.20 2002/07/16 00:06:06 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.21 2002/08/03 22:58:35 stroke Exp $
+
+*gtk+-2.0.6 (04 Jul 2002)
+
+  04 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gtk+-2.0.6.ebuild:
+
+  New version.
 
 *gtk+-2.0.5-r2 (15 Jul 2002)
 
