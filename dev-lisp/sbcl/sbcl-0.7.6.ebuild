@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6.ebuild,v 1.1 2002/07/28 21:01:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6.ebuild,v 1.2 2002/07/29 00:51:14 karltk Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -32,7 +32,11 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${BIN}-${TARCH}-linux-binary.tar.bz2
-	mv ${BIN} ${BIN}-binary
+	if [ ${ARCH} == "x86" ] ; then
+		mv ${BIN} ${BIN}-binary
+	elif [ ${ARCH} == "ppc" ] ; then
+		mv ${BIN}-${TARCH}-linux ${BIN}-binary
+	fi
     
 	unpack ${P}-source.tar.bz2
 	unpack ${P}-html.tar.bz2
