@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.15 2005/01/07 08:12:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.16 2005/01/12 23:08:22 spyderous Exp $
 
 FEATURES="sandbox ccache autoconfig multilib-pkg multilib-strict"
 
@@ -8,7 +8,7 @@ FEATURES="sandbox ccache autoconfig multilib-pkg multilib-strict"
 GRP_STAGE23_USE="berkdb gpm ipv6 -java multislot multilib ncurses nls -nptl pam perl python readline ssl tcpd zlib"
 
 # Sane, minimal USE settings
-USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg nls png tiff truetype truetype-fonts type1-fontsusb xpm xrandr xv"
+USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups font-server fortran f77 fbcon gif jpeg nls opengl png tiff truetype truetype-fonts type1-fonts usb xpm xrandr xv"
 
 # Not all of this is implemented in portage/toolchain, yet. See 
 # http://bugs.gentoo.org/show_bug.cgi?id=75420

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.14 2005/01/07 06:11:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.15 2005/01/12 23:08:21 spyderous Exp $
 
 # GCC 3.4.2 has multilib enabled by default, but we still need multilib in USE
 # for compatibility
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses multilib readline zlib -java -nptl"
 
 # Sane, functional, almost-but-not-quite-minimal default for USE
-USE="${GRP_STAGE23_USE} bitmap-fonts oss alsa crypt fortran f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
+USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts font-server oss alsa crypt fortran f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
 
 # we can enable sandbox now that we use multilib by default
 FEATURES="sandbox autoconfig"

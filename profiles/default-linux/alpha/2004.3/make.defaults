@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2004.3/make.defaults,v 1.5 2004/11/08 00:22:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2004.3/make.defaults,v 1.6 2005/01/12 23:08:21 spyderous Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -23,6 +23,7 @@ cups
 encode
 fortran
 f77
+font-server
 foomaticdb
 gdbm
 gif
@@ -56,6 +57,8 @@ spell
 ssl
 tcpd
 truetype
+truetype-fonts
+type1-fonts
 X
 xml2
 xmms
