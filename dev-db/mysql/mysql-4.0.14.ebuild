@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.1 2003/07/23 20:24:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.2 2003/07/28 23:24:37 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -63,7 +63,7 @@ src_unpack() {
 	#zap startup script messages
 	patch -p1 < ${FILESDIR}/mysql-4.0.4-install-db-sh.diff || die
 	#zap binary distribution stuff
-	patch -p1 < ${FILESDIR}/mysql-4.0-mysqld-safe-sh.diff || die
+	patch -p1 < ${FILESDIR}/mysql-4.0.14-mysqld-safe-sh.diff || die
 	#for correct hardcoded sysconf directory
 	patch -p1 < ${FILESDIR}/mysql-4.0-my-print-defaults.diff || die
 	#patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
@@ -72,7 +72,7 @@ src_unpack() {
 	# i would really prefer to fix this at the Makefile.am level, but can't
 	# get the software to autoreconf as distributed - too many missing files
 	# Robert Coie <rac@gentoo.org> 2003.06.12
-	patch -p0 < ${FILESDIR}/${P}-thrssl.patch || die
+	patch -p0 < ${FILESDIR}/${PN}-4.0.13-thrssl.patch || die
 }
 
 src_compile() {
