@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.4 2004/03/31 06:49:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.5 2004/04/13 09:53:51 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,6 @@ SRC_URI="http://www.pknet.com/~joe/${P}.tar.gz"
 LICENSE="dgen-sdl"
 KEYWORDS="x86"
 SLOT="0"
-
 IUSE="X mmx opengl"
 
 RDEPEND="media-libs/libsdl
@@ -21,7 +20,10 @@ DEPEND="${DEPEND}
 	dev-lang/nasm"
 
 src_compile() {
-	egamesconf `use_with opengl` `use_with X x` `use_with mmx` || die
+	egamesconf \
+		$(use_with opengl) \
+		$(use_with X x) \
+		$(use_with mmx) || die
 	emake || die "emake failed"
 }
 
