@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/luabind
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/ChangeLog,v 1.1 2004/04/06 19:14:04 rphillips Exp $
+
+*luabind-6 (06 Apr 2004)
+
+  06 Apr 2004; Ryan Phillips <rphillips@gentoo.org> luabind-6.ebuild:
+  initial import
+
