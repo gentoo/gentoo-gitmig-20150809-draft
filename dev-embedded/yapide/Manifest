@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a47ad7b389e3341f36f1f93deec354c3 yapide-0.1.ebuild 1301
+MD5 ecaaa461dce4abb6a47b23e8d4e98c54 ChangeLog 506
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 1582e350c89120cffd8fe87f88a451c0 files/yapide-0.1-configure.patch 449
+MD5 88360cbedb701128f2d7f23863a5b0c7 files/digest-yapide-0.1 59
+MD5 8a508bb3601e8af1a63cd89ec1fff718 files/yapide-0.1-nocflags.patch 1014
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBEgwhmdTrptrqvGERAkz6AJ9WEvrANTDouIEvMw1jvslJ3HqgYACfZVhp
+DMCr1p6To1qqnpXc3ueVtXY=
+=iy6O
+-----END PGP SIGNATURE-----

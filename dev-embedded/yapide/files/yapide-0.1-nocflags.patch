@@ -1,0 +1,37 @@
+--- src/src.pro.orig	2004-08-05 18:07:02.315294152 +0930
++++ src/src.pro	2004-08-05 18:07:34.970329832 +0930
+@@ -6,13 +6,6 @@
+ DEPENDPATH      = . 
+ 
+ release {
+-  contains( QMAKE_CC, gcc ) {
+-    message( "Adding release optimizations for gcc" )
+-    QMAKE_CFLAGS   += -finline-functions -fexpensive-optimizations \
+-                      -fstrict-aliasing -fomit-frame-pointer 
+-    QMAKE_CXXFLAGS += -finline-functions -fexpensive-optimizations \
+-                      -fstrict-aliasing -fomit-frame-pointer
+-  }
+   TARGET = yapide
+ }
+ 
+@@ -21,20 +14,6 @@
+   TARGET = yapidedebug
+ }
+     
+-CPU_YAPIDE = $$system( echo $CPU )
+-
+-contains( CPU_YAPIDE, i686 ) {
+-	message( "Configuring for Pentium Pro" )
+-	QMAKE_CFLAGS   += -march=pentiumpro
+-	QMAKE_CXXFLAGS += -march=pentiumpro
+-}
+-
+-contains( CPU_YAPIDE, Athlon ) {
+-	message( "Configuring for Athlon" )
+-	QMAKE_CFLAGS   += -march=athlon
+-	QMAKE_CXXFLAGS += -march=athlon
+-}
+-
+ HEADERS   = \
+             xpm/animation.xpm \
+             xpm/breakpoint.xpm \
