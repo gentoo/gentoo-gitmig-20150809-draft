@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.4.ebuild,v 1.3 2004/06/24 22:00:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.4.ebuild,v 1.4 2004/06/29 17:33:40 agriffis Exp $
 
 inherit eutils distutils
 
@@ -21,4 +21,3 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
-

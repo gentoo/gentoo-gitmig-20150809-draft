@@ -1,5 +1,5 @@
-MD5 7eb02872e3e5ef4211be11c4fe2bf787 pygresql-3.4.ebuild 652
-MD5 5fb00cc88c5c88ca14d875824b2eed43 ChangeLog 452
+MD5 1ef4c8662e9914c128fcba3240a84efb pygresql-3.4.ebuild 651
+MD5 dc0375274fc102704e05a9562e2b9441 ChangeLog 551
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 e5e27a1cc9a1a83127c4e13e05caa5c1 files/digest-pygresql-3.4 60
 MD5 47b90bbe8d1267f76a07cfd2284eabe1 files/pygresql-3.4-gentoo.patch 501
