@@ -1,6 +1,16 @@
-MD5 2da43141b7d5e12107bccabb7a920b12 ChangeLog 1289
-MD5 e6806e5b4858ca9be8fc46ebb5440537 cutils-1.6-r1.ebuild 814
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 582d991acc39bac1cdc70589d485724d ChangeLog 1366
+MD5 25ccce00125f0685f36f681153c19215 cutils-1.6-r1.ebuild 825
 MD5 46815a54e7fe8e5105add5d38af9102b cutils-1.6.ebuild 808
-MD5 4c8243b2387167b346f51621a25b1a33 files/cutils-1.6-gentoo.diff 407
-MD5 14f71dbb1d609ae354e00843901e5dfd files/digest-cutils-1.6 62
 MD5 14f71dbb1d609ae354e00843901e5dfd files/digest-cutils-1.6-r1 62
+MD5 14f71dbb1d609ae354e00843901e5dfd files/digest-cutils-1.6 62
+MD5 4c8243b2387167b346f51621a25b1a33 files/cutils-1.6-gentoo.diff 407
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPNXI7fK2cqeyXkRAs1uAKDZg1LGRcZyvjuij5b7x7r9qjQdCACfXZ+M
+aw4P6F02W7dBczYq0Q+ki1M=
+=NMHA
+-----END PGP SIGNATURE-----
