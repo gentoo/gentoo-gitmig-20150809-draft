@@ -1,0 +1,11 @@
+--- mono-0.97/mono/interpreter/interp.c.orig	2004-06-26 17:55:52.739575943 +0200
++++ mono-0.97/mono/interpreter/interp.c	2004-06-26 17:54:44.489967101 +0200
+@@ -1164,7 +1164,7 @@
+ 		}
+ 	}
+ 
+-	if (method->klass->valuetype)
++	if (method->klass->valuetype && obj)
+ 		/* Unbox the instance, since valuetype methods expect an interior pointer. */
+ 		obj = mono_object_unbox (obj);
+ 

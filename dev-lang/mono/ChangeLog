@@ -1,0 +1,386 @@
+# ChangeLog for dev-dotnet/mono
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.30 2005/03/11 03:14:01 latexer Exp $
+
+*mono-1.0.5-r4 (10 Mar 2005)
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +files/dotnet.conf, +files/dotnet.init, +files/mcs-1.0.5-pathfix.diff,
+  +files/mono-1.0-segv.diff, +mono-0.28.ebuild, +mono-1.0.2-r1.ebuild,
+  +mono-1.0.2.ebuild, +mono-1.0.4-r1.ebuild, +mono-1.0.4.ebuild,
+  +mono-1.0.5-r2.ebuild, +mono-1.0.5-r3.ebuild, +mono-1.0.5-r4.ebuild,
+  +mono-1.0.5-r5.ebuild, +mono-1.0.6.ebuild, +mono-1.1.4.ebuild:
+  Moved from dev-dotnet to dev-lang.
+
+*mono-1.0.5-r5 (07 Mar 2005)
+
+  07 Mar 2005; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r5.ebuild:
+  Revision bump to remove gmcs script when installing mono-1.0.5. We don't
+  install the 2.0 profile stuff, including gmcs, on mono-1.0.x.
+
+  22 Feb 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.4.ebuild:
+  Change pnet blocker to allow people to install a new enough pnet along side
+  mono-1.1.4
+
+*mono-1.0.5-r4 (21 Feb 2005)
+
+  21 Feb 2005; Peter Johanson <latexer@gentoo.org> -mono-1.0.1-r1.ebuild,
+  -mono-1.0.1-r2.ebuild, -mono-1.0.1.ebuild, -mono-1.0.5-r1.ebuild,
+  +mono-1.0.5-r4.ebuild, -mono-1.0.5.ebuild, +mono-1.1.4.ebuild:
+  Add 1.0.5-r4, which now works for NPTL glibc using only gcc-3.3.5. This is
+  hopefully the new target for stabalization. Also add in new mono-1.1.4, which
+  will remain p.masked but in portage for amd64 folks. Removed some older
+  ebuilds as well.
+
+  19 Feb 2005; Peter Johanson <latexer@gentoo.org> mono-1.0.6.ebuild:
+  Remove the gmcs wrapper script, as on mono-1.0.x, we don't install gmcs
+
+*mono-1.0.6 (18 Feb 2005)
+
+  18 Feb 2005; Peter Johanson <latexer@gentoo.org> +mono-1.0.6.ebuild:
+  Bump. NPTL problem seems no longer to rely on gcc-3.4 to work. See bug #63734
+  for the long, painful details.
+
+  18 Jan 2005; Rainer Groesslinger <scandium@gentoo.org> mono-0.28.ebuild,
+  mono-1.0.1-r1.ebuild, mono-1.0.1-r2.ebuild, mono-1.0.1.ebuild,
+  mono-1.0.2-r1.ebuild, mono-1.0.2.ebuild, mono-1.0.4-r1.ebuild,
+  mono-1.0.4.ebuild, mono-1.0.5-r1.ebuild, mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild, mono-1.0.5.ebuild:
+  only block older versions of dev-dotnet/pnet (bug #39369)
+
+  04 Jan 2005; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Fixes for installations on systems without mono already installed. See bug
+  #75560
+
+  02 Jan 2005; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Add PLATFORM=linux fix to one more spot.
+
+  23 Dec 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Make sure PLATFORM=linux, since this is borking on some architectures somehow.
+  See bug #75272.
+
+  21 Dec 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Remove the amd64 keywords from these, as they now require the JIT to build,
+  and amd64 has no working JIT in 1.0.x
+
+  20 Dec 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Fix for upgrades from 0.28 era mono versions. Thanks to dma`
+
+  20 Dec 2004; Peter Johanson <latexer@gentoo.org>
+  +files/mcs-1.0.5-pathfix.diff:
+  Add a missing patch. Oops.
+
+*mono-1.0.5-r3 (20 Dec 2004)
+
+  20 Dec 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r2.ebuild,
+  +mono-1.0.5-r3.ebuild:
+  Revision bump pthreads and nptl mono versions that now build mcs and class
+  libs as well. Includes fix for bug #72770/66528. Thanks to foser
+  <foser@gentoo.org> for the corlib fix.
+
+*mono-1.0.5 (13 Dec 2004)
+
+  13 Dec 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.5-r1.ebuild,
+  +mono-1.0.5.ebuild:
+  Bump.
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> -mono-0.30.1.ebuild,
+  -mono-0.30.ebuild, -mono-0.31.ebuild, -mono-0.91.ebuild, -mono-0.95.ebuild,
+  -mono-0.96.ebuild, -mono-0.97.ebuild, -mono-1.0.ebuild:
+  Long needed house cleaning.
+
+*mono-1.0.4 (03 Nov 2004)
+
+  03 Nov 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.4-r1.ebuild,
+  +mono-1.0.4.ebuild:
+  Bump.
+
+  29 Oct 2004; Peter Johanson <latexer@gentoo.org> mono-0.28.ebuild, mono-0.30.1.ebuild,
+  mono-0.30.ebuild, mono-0.31.ebuild, mono-0.91.ebuild, mono-0.95.ebuild,
+  mono-0.96.ebuild, mono-0.97.ebuild, mono-1.0.1-r1.ebuild,
+  mono-1.0.1-r2.ebuild, mono-1.0.1.ebuild, mono-1.0.2-r1.ebuild,
+  mono-1.0.2.ebuild, mono-1.0.ebuild:
+  Change the masked mono to include a fix for NPTL systems available for
+  gcc-3.4. Please test. Also fixed the LICENSE syntax.
+
+  23 Sep 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.2.ebuild:
+  Fix a small typo.
+
+*mono-1.0.2 (22 Sep 2004)
+
+  22 Sep 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.2-r1.ebuild,
+  +mono-1.0.2.ebuild:
+  Bump. Includes both a non-NPTL enabled and NPTL version. NPTL version masked
+  pending a resolution to issues in GC.
+
+  18 Aug 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.1-r1.ebuild:
+  Explicitly setting the threading implementation. Was sometimes choosing
+  __thread over pthread. Thanks to JohanH in #muine on freenode.
+
+  18 Aug 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.1-r1.ebuild:
+  Better check for requested NPTL support in the NPTL-unsupported 1.0.1-r1
+  release.
+
+*mono-1.0.1-r1 (17 Aug 2004)
+
+  17 Aug 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.1-r1.ebuild,
+  +mono-1.0.1-r2.ebuild:
+  Two new versions. One removes all NPTL support, in hopes of being marked
+  stable soon. -r2 keeps the support, and is package.masked.
+
+*mono-1.0.1 (05 Aug 2004)
+
+  05 Aug 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.1.ebuild:
+  Bump. New bugfix release. Only minimal changes.
+
+  10 Jul 2004; Peter Johanson <latexer@gentoo.org> +files/mono-1.0-segv.diff,
+  mono-1.0.ebuild:
+  Fix for amd64. See bug #55722
+
+*mono-1.0 (30 Jun 2004)
+
+  30 Jun 2004; Peter Johanson <latexer@gentoo.org> +mono-1.0.ebuild:
+  1.0. Nuff said.
+
+  29 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-0.97.ebuild:
+  Fix for installation for first time installs. See bug #55229 and #55393.
+
+  28 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-0.97.ebuild:
+  Build fix. See bug #55393.
+
+  27 Jun 2004; Peter Johanson <latexer@gentoo.org> :
+  Fix the digest.
+
+*mono-0.97 (27 Jun 2004)
+
+  27 Jun 2004; Peter Johanson <latexer@gentoo.org> +mono-0.97.ebuild:
+  Release candidate goodness.
+
+*mono-0.96 (16 Jun 2004)
+
+  16 Jun 2004; Peter Johanson, <latexer@gentoo.org> mono-0.96.ebuild:
+  Beta3 loves you.
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> mono-0.31.ebuild,
+  mono-0.91.ebuild, mono-0.95.ebuild:
+  Fix use invocation
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> mono-0.91.ebuild,
+  mono-0.95.ebuild:
+  Closed bug #51171.
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> mono-0.95.ebuild:
+  Added to ~ppc.
+
+*mono-0.95 (02 Jun 2004)
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> mono-0.95.ebuild:
+  Beta2. You know you love it.
+
+  10 May 2004; Travis Tilley <lv@gentoo.org> mono-0.91.ebuild:
+  ~amd64 keyword added
+
+  05 May 2004; David Holm <dholm@gentoo.org> mono-0.91.ebuild:
+  Added to ~ppc.
+
+*mono-0.91 (05 May 2004)
+
+  05 May 2004; Peter Johanson <latexer@gentoo.org> mono-0.91.ebuild:
+  Beta1 baby! Now with fun-filled GAC!
+
+  29 Mar 2004; Peter Johanson <latexer@gentoo.org> mono-0.31.ebuild:
+  Added nptl support behind a nptl USE flag and using have_NPTL from eutils.
+  Blame tberman if things break, he said he'd take the bugs.
+
+  20 Mar 2004; Todd Berman <tberman@gentoo.org> mono-0.31.ebuild:
+  adding --with-nptl=no
+
+*mono-0.31 (19 Mar 2004)
+
+  19 Mar 2004; Todd Berman <tberman@gentoo.org> mono-0.31.ebuild:
+  version bump
+
+*mono-0.30.1 (14 Feb 2004)
+
+  14 Feb 2004; Todd Berman <tberman@gentoo.org> mono-0.30.1.ebuild:
+  version bump
+
+*mono-0.30 (13 Feb 2004)
+
+  13 Feb 2004; Todd Berman <tberman@gentoo.org> mono-0.26-r1.ebuild,
+  mono-0.30.ebuild:
+  Adding 0.30, removing 0.26
+
+*mono-0.28 (04 Oct 2003)
+
+  04 Oct 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.28.ebuild:
+  new version
+
+*mono-0.26-r1 (29 Sep 2003)
+
+  29 Sep 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.26-r1.ebuild:
+  fix for building mcs
+  provided by pcgod@gmx.net (bug #26839)
+
+  26 Aug 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.23-r1.ebuild,
+  mono-0.24-r1.ebuild, mono-0.25-r1.ebuild, mono-0.25.ebuild,
+  mono-0.26.ebuild:
+  Add a block for dev-dotnet/pnet because both are using
+  /usr/bin/ilasm for converting IL assembly source files into an IL binary
+
+*mono-0.26 (26 Aug 2003)
+
+  26 Aug 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.26.ebuild:
+  new version, minor fixes because of the new build system
+  compilation of mcs is disabled for now (see bug #26839)
+
+*mono-0.25 (24 Jul 2003)
+
+  24 Jul 2003; Todd Berman <tberman@gentoo.org> metadata.xml,
+  mono-0.23-r1.ebuild, mono-0.24-r1.ebuild, mono-0.25-r1.ebuild,
+  mono-0.25.ebuild, files/dotnet.conf, files/dotnet.init:
+  Moving to dev-dotnet
+
+  20 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.23-r1.ebuild,
+  mono-0.24-r1.ebuild, mono-0.25-r1.ebuild, mono-0.25.ebuild:
+  Fixing licenses for mono, added GPL-2 and X11
+
+  20 Jul 2003; Todd Berman <tberman@gentoo.org> metadata.xml, mono-0.25-r1.ebuild:
+  Fixed up depend issues, thanks liquidx :)
+
+  16 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.25-r1.ebuild:
+  Changing to blocking libxml2-2.5.8, portage version with this fully working is
+  masked, but it will hopefully be stable soon, before 1.4 for sure.
+
+  16 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.25-r1.ebuild:
+  libxml2-2.5.8 breaks xslt on mono, and until ! blocker deps work, masking it
+  like this.
+
+*mono-0.25-r1 (13 Jul 2003)
+
+  13 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.25-r1.ebuild:
+  Changed gc to included (modified boehm), its required by the debugger (next
+  piece to enter portage).
+
+*mono-0.25 (27 Jun 2003)
+
+  27 Jun 2003; foser <foser@gentoo.org> mono-0.25.ebuild :
+  New version
+
+*mono-0.24-r1 (12 May 2003)
+
+  12 May 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.23-r1.ebuild,
+  mono-0.24-r1.ebuild, files/dotnet.conf, files/dotnet.init:
+  init script provided by
+  Per Wigren <wigren@home.se> in bug #19617
+  with some enhancements added
+
+*mono-0.24 (08 May 2003)
+
+  08 May 2003; foser <foser@gentoo.org> mono-0.24.ebuild :
+  New version, use new compiler for mcs compilation and path fixes (#17614)
+
+*mono-0.23-r1 (12 May 2003)
+ 
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*mono-0.23 (08 Mar 2003)
+
+  12 Mar 2003; foser <foser@gentoo.org> mono-0.23.ebuild :
+  Install icons as requested/done by mathias.hasselmann@gmx.de
+
+  08 Mar 2003; foser <foser@gentoo.org> mono-0.23.ebuild :
+  New version
+
+*mono-0.22 (06 Mar 2003)
+
+  06 Mar 2003; foser <foser@gentoo.org> mono-0.22.ebuild :
+  New version
+
+*mono-0.21 (28 Feb 2003)
+
+  28 Feb 2003; foser <foser@gentoo.org> mono-0.21.ebuild :
+  New version
+
+*mono-0.20-r1 (27 Feb 2003)
+
+  28 Feb 2003; foser <foser@gentoo.org> mono-0.20-r1.ebuild :
+  Removed redundant patch, there was another way to do this duh :/
+
+  27 Feb 2003; foser <foser@gentoo.org> mono-0.20-r1.ebuild :
+  Compiles mcs from scratch now
+  Initial work done by Artur Brodowski <bzdurqa@wp.pl> in #16316
+  Hacked on a lot by me to get it right
+  Now also uses mono eclass
+
+*mono-0.20 (24 Feb 2003)
+
+  24 Feb 2003; foser <foser@gentoo.org> mono-0.20.ebuild :
+  New version
+
+*mono-0.19 (22 Jan 2003)
+
+  22 Jan 2003; Brandon Low <lostlogic@gentoo.org> mono-0.19.ebuild :
+  New version
+
+*mono-0.18 (13 jan 2003)
+
+  13 Jan 2003; foser <foser@gentoo.org> mono-0.18.ebuild :
+  New version
+
+*mono-0.17 (10 Dec 2002)
+
+  10 Dec 2002; foser <foser@gentoo.org> mono-0.17.ebuild :
+  New version
+
+*mono-0.16 (24 Oct 2002)
+
+  24 Oct 2002; foser <foser@gentoo.org> mono-0.16.ebuild :
+
+  New version, now depends on boehm-gc
+
+*mono-0.13 (29 Jul 2002)
+
+  29 Jul 2002; Kevyn Shortell <trance@gentoo.org> mono-0.13.ebuild, ChangeLog:
+  Added >=glib-2.x as a dependency, closing bug #5708.  Many thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for testing ebuild on glib-1.3 machine to
+  find the bug =).
+
+*mono-0.13 (28 Jul 2002)
+
+  28 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.13.ebuild, ChangeLog:
+  Added pkgconfig as a dependency, closing bug #5665.  Thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for pointing this out.
+
+  27 Jul 2002: Kevyn Shortell <trance@gentoo.org> mono-0.13.ebuild, ChangLog:
+  updated to mono-0.13.ebuild. The ebuild was submitted by Luis Mayoral <satriani@okulto.net>.
+  Tested on PPC and X86, failed PPC. repo'd and submitted.
+
+*mono-0.12 (28 Jul 2002)
+
+  28 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild, ChangeLog:
+  Added pkgconfig as a dependency, closing bug #5665.  Thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for pointing this out.
+
+  24 Jul 2002: Brandon Low <lostlogic@gentoo.org> mono-0.12.ebuild, ChangeLog:
+  Doesn't like parallel make, and .keep a dir that it might need (othewise why did 
+  it create it?)
+
+  23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> ChangeLog: Unmasking the ebuild.
+  PLEASE NOTE that the build has been known to bomb on at least one machine, although
+  it worked on all of the rest of them that we tested it on.  This is very much
+  work-in-progress software, so please take that into account before you start to
+  post bugs.
+
+  23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild: dodoc should
+  grab 'ChangeLog,' not 'Changelog.'  Fixed.
+
+  23 Jul 2002; Phil Bordelon <sunflare@gentoo.org> mono-0.12.ebuild, ChangeLog:
+  Original release.  The ebuild was submitted by Luis Mayoral <satriani@okulto.net>.
+  Lintool'd and repoman'd by me.
