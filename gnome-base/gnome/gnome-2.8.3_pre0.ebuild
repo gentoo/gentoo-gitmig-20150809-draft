@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.5 2005/02/17 06:58:46 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.6 2005/02/17 07:09:57 obz Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -67,9 +67,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-text/gpdf-2.8.3
 
 	>=gnome-base/gnome-session-2.8.1
-	>=gnome-base/gnome-desktop-2.8.1
+	>=gnome-base/gnome-desktop-2.8.3
 	>=gnome-base/gnome-applets-2.8.2
-	>=gnome-base/gnome-panel-2.8.2
+	>=gnome-base/gnome-panel-2.8.3
 
 	>=x11-themes/gnome-icon-theme-2.8
 	>=x11-themes/gnome-themes-2.8.1
