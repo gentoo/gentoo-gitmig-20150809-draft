@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.27 2003/03/13 22:10:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.28 2003/03/30 21:51:57 joker Exp $
 
 *screen-3.9.15 (13 Mar 2003)
+
+  30 Mar 2003; Christian Birchinger <joker@gentoo.org> screen-3.9.15.ebuild:
+  Added sparc stable keyword
 
   13 Mar 2003; Brandon Low <lostlogic@gentoo.org> screen-3.9.15.ebuild:
   Version bump
