@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Matthew Turk <satai@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.3 2003/01/03 05:05:55 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.4 2003/02/08 03:09:16 satai Exp $
 #
 
 inherit base
@@ -42,7 +42,7 @@ sgml-catalog_pkg_postinst() {
             ewarn "${arg2} doesn't appear to exist, although it ought to!"
             continue
         fi
-        einfo "Now adding $arg1 to $arg2 and /etc/sgml/catalog"
+        einfo "Now adding $arg2 to $arg1 and /etc/sgml/catalog"
         sgml-catalog_cat_doinstall $arg1 $arg2
     done
     sgml-catalog_cleanup
