@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.36 2005/02/24 18:07:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.37 2005/03/06 20:47:40 usata Exp $
+
+  07 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> ptex-3.1.4-r2.ebuild,
+  ptex-3.1.5.ebuild, -ptex-3.1.8.20050111.ebuild:
+  Fixed incorrect newins psfonts-ja.map.
 
   24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> ptex-3.1.5.ebuild:
   Stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4-r2.ebuild,v 1.8 2005/02/21 16:50:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.4-r2.ebuild,v 1.9 2005/03/06 20:47:40 usata Exp $
 
 PTEX_TEXMF_PV=2.2
 TETEX_PV=2.0.2
@@ -105,7 +105,7 @@ src_install() {
 	einstall bindir=${D}/usr/bin texmf=${D}/usr/share/texmf || die
 
 	insinto /usr/share/texmf/dvips/config
-	newins ${FILESDIR}/psfonts-novflib-ja.map psfonts-ja.map
+	doins ${FILESDIR}/psfonts-ja.map || die
 	cat >>${D}/usr/share/texmf/web2c/updmap.cfg<<-EOF
 
 	# Japanese fonts
