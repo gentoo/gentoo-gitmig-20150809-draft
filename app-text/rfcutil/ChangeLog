@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rfcutil
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.10 2004/06/28 04:06:44 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.11 2004/08/11 16:11:49 gongloo Exp $
+
+  11 Aug 2004; Hasan Khalil <gongloo@gentoo.org> rfcutil-3.2.3.ebuild:
+  Stable on macos.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> rfcutil-3.2.3.ebuild:
   Added ~mips
