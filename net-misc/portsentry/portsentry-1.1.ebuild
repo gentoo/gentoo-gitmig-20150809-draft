@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portsentry/portsentry-1.1.ebuild,v 1.1 2001/09/12 21:28:26 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portsentry/portsentry-1.1.ebuild,v 1.2 2001/09/13 00:09:53 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This is a sample skeleton ebuild file"
@@ -37,7 +37,7 @@ src_install () {
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/portsentry
-	dosbin portsentry ignore.csh
+	dobin portsentry ignore.csh
 	insinto /etc/portsentry
 	doins portsentry.{ignore,conf}
 	dodoc README* CHANGES LICENSE CREDITS 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger achim@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.7.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snort/snort-1.7.ebuild,v 1.3 2001/09/13 00:09:53 lamer Exp $
 
 #P=
 A="${P}.tar.gz"
@@ -48,6 +48,16 @@ src_install () {
     doins contrib/create_mysql contrib/*.pl contrib/snortlog
     dodoc AUTHORS BUGS ChangeLog COPYING CREDITS NEWS README.*
     dodoc RULES.SAMPLE USAGE contrib/pgsql.php3
+	 insinto /etc/snort
+	 doins ${FILESDIR}/snort.conf
+	 insinto /usr/lib/snort
+	 doins *lib
+	 insinto /etc/init.d
+	 doexe ${FILESDIR}/snort
 }
 
+pkg_postint() {
+	groupadd snort
+	useradd -s /dev/null -g snort -s /bin/false snort
+}
 

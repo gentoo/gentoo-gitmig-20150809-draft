@@ -1,0 +1,56 @@
+#!/sbin/runscript
+SERVICE=snort
+opts="start stop restart"
+
+# Make sure this matches your IFACE
+PIDFILE=/var/run/snort_eth0.pid
+EXE=/usr/bin/snort
+
+# comment out the next three lines after you've read them 
+einfo "Edit /etc/snort/snort.conf and /etc/init.d/snort"
+exit 0;
+
+# Pick a mode options are    -A 
+
+#fast -   fast alert mode, write the alert in a simple format with a 
+#                timestamp, alert message, source and destination IPs/ports
+#
+# full -   this is also the default alert mode, so if you specify nothing
+#                this will automatically be used
+#
+# unsock - send alerts to a UNIX socket that another program can listen on
+#
+# none -   turn off alerting
+
+MODE="full"
+
+# Set this to the appropriate network you box lives on
+NETWORK="192.168.1.1/24"
+
+# You probably don't want to change this, but in case you do
+LOGDIR="/var/log/snort"
+
+# Probably not this either
+CONF=/etc/snort/snort.conf
+OPTS="-D -s -u nobody -dev -l $LOGDIR -h $NETWORK -c $CONF"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --start --quiet --exec $EXE -- $OPTS 2>&1 >/dev/null 
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	kill  -9 `cat $PIDFILE`  2>&1
+	eend $?
+}
+
+restart() {
+	stop
+	start
+}
