@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r1.ebuild,v 1.1 2004/05/31 12:26:19 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r1.ebuild,v 1.2 2004/06/02 20:34:00 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -59,7 +59,7 @@ pkg_setup() {
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+	if [[ -z ${JDKHOME} || ! -d ${JDKHOME} ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -74,7 +74,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" ]; then
+	if use java; then
 		check_java_config
 	fi
 
@@ -82,9 +82,7 @@ src_compile() {
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	if [ "`use java`" ]; then
-		myconf="$myconf --with-java"
-	fi
+	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
@@ -115,7 +113,7 @@ src_compile() {
 src_install() {
 	addwrite "/usr/share/man/man3/Pg.3pm"
 
-	if [ "`use perl`" ]
+	if use perl
 	then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
@@ -133,7 +131,7 @@ src_install() {
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	dodoc contrib/adddepend/*
 
-	if [ "`use java`" ]; then
+	if use java; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
@@ -143,7 +141,7 @@ src_install() {
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd ${S}/doc
 		docinto FAQ_html || die
 		dodoc src/FAQ/* || die

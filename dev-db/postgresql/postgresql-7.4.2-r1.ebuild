@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.4 2004/05/25 15:57:26 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.5 2004/06/02 20:34:00 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -64,7 +64,7 @@ pkg_setup() {
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+	if [[ -z ${JDKHOME} || ! -d ${JDKHOME} ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -90,7 +90,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		check_java_config
 	fi
 
@@ -98,7 +98,7 @@ src_compile() {
 	use tcltk && myconf="--with-tcl"
 	use python && use mips || myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		myconf="$myconf --with-java"
 	fi
 	use ssl && myconf="$myconf --with-openssl"
@@ -155,7 +155,7 @@ src_install() {
 
 	exeinto /usr/bin
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi

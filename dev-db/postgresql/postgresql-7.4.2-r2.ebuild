@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.8 2004/06/02 19:19:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.9 2004/06/02 20:34:00 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -62,7 +62,7 @@ pkg_setup() {
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+	if [[ -z ${JDKHOME} && ! -d ${JDKHOME} ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -92,7 +92,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" ]; then
+	if use java; then
 		check_java_config
 	fi
 
@@ -155,7 +155,7 @@ src_install() {
 
 	exeinto /usr/bin
 
-	if [ "`use java`" ]; then
+	if use java; then
 		# we need to remove jar file after dojar; otherwise two same jar
 		# file are installed.
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar || die

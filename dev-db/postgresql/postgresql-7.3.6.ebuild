@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.5 2004/05/01 04:16:50 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6.ebuild,v 1.6 2004/06/02 20:34:00 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -56,22 +56,13 @@ pkg_setup() {
 		fi
 	fi
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
-		if [ "`use amd64`" ]; then
-			ewarn "Ignore USE=\"java\" in amd64"
-		fi
-	fi
-
-	if [ "`use python`" ]; then
-		if [ "`use ppc`" ]; then
-			ewarn "Ignore USE=\"python\" in ppc"
-		fi
-	fi
+	use java && use amd64 && ewarn "Ignoring USE=\"java\" in amd64"
+	use python && use ppc && ewarn "Ignore USE=\"python\" in ppc"
 }
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [ -z "${JDKHOME}" ] || [ ! -d "${JDKHOME}" ]; then
+	if [[ -z ${JDKHOME} || ! -d ${JDKHOME} ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -86,15 +77,17 @@ src_unpack() {
 src_compile() {
 	filter-flags -ffast-math
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		check_java_config
 	fi
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
-	use python && use ppc || myconf="$myconf --with-python"
+	if use python && ! use ppc; then
+		myconf="$myconf --with-python"
+	fi
 	use perl && myconf="$myconf --with-perl"
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		myconf="$myconf --with-java"
 	fi
 	use ssl && myconf="$myconf --with-openssl"
@@ -127,8 +120,7 @@ src_compile() {
 src_install() {
 	addwrite "/usr/share/man/man3/Pg.3pm"
 
-	if [ "`use perl`" ]
-	then
+	if use perl; then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
 			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
@@ -145,7 +137,7 @@ src_install() {
 	dodoc COPYRIGHT HISTORY INSTALL README register.txt
 	dodoc contrib/adddepend/*
 
-	if [ "`use java`" -a ! "`use amd64`" ]; then
+	if use java && ! use amd64; then
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
@@ -155,7 +147,7 @@ src_install() {
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd ${S}/doc
 		docinto FAQ_html || die
 		dodoc src/FAQ/* || die
