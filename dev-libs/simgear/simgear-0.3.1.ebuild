@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/simgear-0.3.1.ebuild,v 1.2 2002/12/31 16:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/simgear-0.3.1.ebuild,v 1.3 2003/02/03 07:36:17 vapier Exp $
 
 MY_P=SimGear-${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,8 @@ KEYWORDS="x86"
 IUSE="X gnome"
 
 DEPEND="media-libs/plib
-	dev-db/metakit"
+	dev-db/metakit
+	media-libs/glut"
 
 src_compile() {
 	econf || die
