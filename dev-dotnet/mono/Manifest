@@ -5,7 +5,7 @@ MD5 0e725b30fa7e76ff69420f5b6da61e49 mono-0.24-r1.ebuild 1905
 MD5 c6d92e1d51b20e1942f7d5bbb0c21be9 mono-0.25-r1.ebuild 1928
 MD5 b90d364920a184fc42c52cd2810c2a6a mono-0.25.ebuild 1903
 MD5 7e99f29e39c3b562219f81032cf55504 mono-0.26.ebuild 2001
-MD5 41abe5d26d300438f2a2b5f9e1bf61d8 mono-0.26-r1.ebuild 2175
+MD5 de6401bde26ec25480c0c195138f1162 mono-0.26-r1.ebuild 2167
 MD5 152002c84c4dd3770f370368bf6bb469 files/digest-mono-0.23-r1 123
 MD5 69fcf888ecb5ec9c5498caa075565ab6 files/digest-mono-0.24-r1 123
 MD5 e1aeccd0dfc7bc9e54ea0884c40a3f45 files/digest-mono-0.25 123
