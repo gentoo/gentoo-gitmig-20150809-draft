@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/memcached-api-perl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/ChangeLog,v 1.6 2003/10/06 20:39:06 lisa Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/ChangeLog,v 1.7 2004/02/18 17:54:32 lisa Exp $
+
+  18 Feb 2004; Lisa Seelye <lisa@gentoo.org> memcached-api-perl-1.0.12.ebuild,
+  memcached-api-perl-1.0.9.ebuild:
+  remove arm, fix (c) date
+
+*memcached-api-perl-1.0.12 (18 Feb 2004)
+
+  18 Feb 2004; Lisa Seelye <lisa@gentoo.org> memcached-api-perl-1.0.12.ebuild:
+  version bump. fixes some internal bugs. see program changelog for details
 
 *memcached-api-perl-1.0.9 (06 Oct 2003)
 
