@@ -4,6 +4,8 @@
 <herd>net-im</herd>
 <maintainer>
   <email>net-im@gentoo.org</email>
+  <description>The code on the 1.9.* versions is very buggy, please report problems to humpback@gentoo.org</description>
 </maintainer>
-	<longdescription>Gnome Jabber client</longdescription>
+
+<longdescription>The next generation of Gabber: The Gnome Jabber Client.</longdescription>
 </pkgmetadata>
