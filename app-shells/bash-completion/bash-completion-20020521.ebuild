@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020427.ebuild,v 1.1 2002/04/28 00:21:55 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20020521.ebuild,v 1.1 2002/05/21 18:53:05 bangert Exp $
 
 S=${WORKDIR}/bash_completion
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
 
 RDEPEND=">=sys-apps/bash-2.05a"
 
+LICENSE="GPL-2"
 
 src_install () {
 
@@ -19,7 +20,6 @@ src_install () {
 
     insinto /etc/bash_completion.d
 
-    doins contrib/
     doins contrib/dict
     doins contrib/harbour
     doins contrib/isql
