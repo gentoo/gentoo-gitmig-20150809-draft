@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.5 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2.2-r1.ebuild,v 1.6 2003/09/11 03:32:43 drobbins Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -18,6 +18,13 @@ KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 #  please do not reduce this list further unless
 #  dependencies pull in what you remove.
 #  With "emerge gnome" a user expects the full "standard" distribution of Gnome and should be provided with that, consider only installing the parts needed for smaller installations.
+
+#drobbins, 10 Sep 2003; xscreensaver added to deps with a bindist? conditional
+#this is a hack to get GRP working right (to get xscreensaver installed) until
+#we can get control-center to RDEPEND on xscreensaver with gtk2 in USE. Carpaski
+#will be adding this soon; when this happens, the xscreensaver should be removed
+#from here and something like this should be added to RDEPEND (not DEPEND) in
+#control-center: "x11-misc/xscreensaver[gtk2]"
 
 RDEPEND="!gnome-base/gnome-core
 
@@ -75,7 +82,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-arch/file-roller-2.2.5
 	>=gnome-extra/acme-2.0.6
 	>=app-text/ggv-2.0.1
-
+	
+	bindist? ( x11-misc/xscreensaver )
+	
 	!hppa? ( !alpha? (
 		>=gnome-extra/gnome-media-2.2.2
 		>=gnome-extra/nautilus-media-0.2.2
