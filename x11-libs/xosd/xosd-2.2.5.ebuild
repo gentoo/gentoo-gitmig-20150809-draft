@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.6 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.7 2004/05/23 16:43:24 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ignavus.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~alpha hppa"
+KEYWORDS="x86 ~sparc ppc ~alpha hppa"
 IUSE="xmms"
 
 DEPEND="virtual/x11
