@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.6 2004/02/11 22:47:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.7 2004/02/15 20:51:48 azarah Exp $
+
+  15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> fam-2.7.0.ebuild:
+  Add elibtoolize back.
 
   11 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> fam-2.7.0.ebuild:
   Fixing per bug #41201.  Please see bug for more information.
