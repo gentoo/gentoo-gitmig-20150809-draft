@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.3 2004/04/26 18:43:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.4 2004/04/26 19:40:03 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -605,9 +605,9 @@ src_install() {
 	then
 		rm -f ${D}${LOC}/lib/libiberty.a
 	fi
-	if [ -f "${LIBPATH}/libiberty.a" ]
+	if [ -f "${D}${LIBPATH}/libiberty.a" ]
 	then
-		rm -f ${LIBPATH}/libiberty.a
+		rm -f ${D}${LIBPATH}/libiberty.a
 	fi
 
 	cd ${S}
