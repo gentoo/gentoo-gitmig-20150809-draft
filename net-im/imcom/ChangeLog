@@ -1,6 +1,11 @@
 # ChangeLog for net-im/imcom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.17 2004/06/24 22:53:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.18 2004/06/25 12:35:53 lordvan Exp $
+
+  25 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> imcom-1.32.ebuild,
+  imcom-1.33.ebuild:
+  fixed licenses (Bug #53669, thanks to Philipp Kern
+  <phil@lordaeron.in-berlin.de> for pointing this out)
 
   18 Jun 2004; Jason Wever <weeve@gentoo.org> imcom-1.33.ebuild:
   Added ~sparc keyword.
