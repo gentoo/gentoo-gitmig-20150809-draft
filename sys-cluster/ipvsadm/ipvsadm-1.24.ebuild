@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.9 2005/03/08 02:48:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.10 2005/03/09 17:55:52 xmerlin Exp $
 
-inherit check-kernel
+inherit linux-info
 
 DESCRIPTION="ipvsadm is a utility to administer the IP virtual server services offered by the Linux kernel with IP virtual server support."
 HOMEPAGE="http://linuxvirtualserver.org"
@@ -18,9 +18,8 @@ KEYWORDS="x86"
 IUSE=""
 
 pkg_setup() {
-	if is_2_4_kernel
-	then
-		die "${P} supports only 2.5 and 2.6 kernels, please try ${PN}-1.24 for 2.4 kernels"
+	if kernel_is 2 4; then
+		die "${P} supports only 2.6 kernels, please try ${PN}-1.21 for 2.4 kernels"
 	fi
 }
 
