@@ -99,5 +99,5 @@
 *virtual/editor
 *virtual/glibc
 *virtual/modutils
-*virtual/ssh
 *virtual/os-headers
+*virtual/ssh
