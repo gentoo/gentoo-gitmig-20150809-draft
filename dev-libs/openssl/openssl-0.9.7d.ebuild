@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.9 2004/04/28 06:50:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.10 2004/05/10 15:18:41 tgall Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -30,6 +30,10 @@ src_unpack() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
+	if [ "${ARCH}" = "ppc64" ]; then
+		epatch ${FILESDIR}/addppc64support.diff
+	fi
+
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	if [ "${ARCH}" = "hppa" ]; then
@@ -46,6 +50,7 @@ src_unpack() {
 			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
 			Configure
 	fi
+
 	if [ "${ARCH}" = "alpha" -a "${CC}" != "ccc" ]; then
 	# ccc compiled openssl will break things linked against
 	# a gcc compiled openssl, the configure will automatically detect 
@@ -67,13 +72,18 @@ src_unpack() {
 	for a in $( grep -n -e "^\"linux-" Configure ); do
 		LINE=$( echo $a | awk -F: '{print $1}' )
 		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
-		NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) $CFLAGS"
+		# for ppc64 I have to be careful given current
+		# toolchain issues
+		if [ "${ARCH}" != "ppc64" ]; then
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) $CFLAGS"
+		else
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) "
+
+		fi
+
 		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure
 	done
 	IFS=$OLDIFS
-	if [ "${ARCH}" = "ppc64" ]; then
-		epatch ${FILESDIR}/addppc64support.diff
-	fi
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {

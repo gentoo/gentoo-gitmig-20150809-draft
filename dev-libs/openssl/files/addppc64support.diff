@@ -9,13 +9,13 @@
    ppc-*-linux2) OUT="linux-ppc" ;;
    m68k-*-linux*) OUT="linux-m68k" ;;
    ia64-*-linux?) OUT="linux-ia64" ;;
---- openssl-0.9.7d/Configure.orig	2004-04-25 15:38:35.723264568 +0000
-+++ openssl-0.9.7d/Configure	2004-04-25 15:39:29.448097152 +0000
-@@ -387,6 +387,7 @@
- "linux-mipsel",   "gcc:-DL_ENDIAN -DTERMIO   -Wall -O2::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
- "linux-mips",   "gcc:-DB_ENDIAN -DTERMIO   -Wall -O2::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
- "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO   -Wall -O2::-D_REENTRANT::-ldl:BN_LLONG RC4_CHAR RC4_CHUNK DES_RISC1 DES_UNROLL::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+--- openssl-0.9.7d/Configure.orig	2004-03-12 21:24:44.000000000 +0000
++++ openssl-0.9.7d/Configure	2004-05-07 16:11:06.000000000 +0000
+@@ -404,6 +404,7 @@
+ "bsdi-elf-gcc",     "gcc:-DPERL5 -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::-ldl:BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ "nextstep",	"cc:-O -Wall:<libc.h>:(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:::",
+ "nextstep3.3",	"cc:-O3 -Wall:<libc.h>:(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:::",
 +"linux-ppc64", "gcc:-DB_ENDIAN -DNO_ASM -DTERMIO  -Wall  ::-D_REENTRANT::-ldl:SIXTY_FOUR_BIT_LONG ::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
- "linux-m68k",   "gcc:-DB_ENDIAN -DTERMIO   -Wall -O2::-D_REENTRANT:::BN_LLONG::",
- "linux-s390",	"gcc:-DB_ENDIAN -DTERMIO -DNO_ASM   -Wall -O2::-D_REENTRANT::-ldl:BN_LLONG::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
- "linux-s390x",	"gcc:-DB_ENDIAN -DTERMIO -DNO_ASM   -Wall -O2::-D_REENTRANT::-ldl:SIXTY_FOUR_BIT_LONG::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ 
+ # NCR MP-RAS UNIX ver 02.03.01
+ "ncr-scde","cc:-O6 -Xa -Hoff=BEHAVED -686 -Hwide -Hiw::(unknown)::-lsocket -lnsl -lc89:${x86_gcc_des} ${x86_gcc_opts}:::",
