@@ -1,4 +1,4 @@
-/#####################################################################
+#####################################################################
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -313,7 +313,8 @@ app-office/ical
 
 # J. Alberto Suárez L. <bass@gentoo.org> (31 Jul 2002)
 # Beta version of firestarter for Gnome2
-=net-misc/firestarter-0.9.0
+#final version relased
+#=net-misc/firestarter-0.9.0
 
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
