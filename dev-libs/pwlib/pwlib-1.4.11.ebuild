@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.1 2003/03/20 00:38:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.2 2003/04/01 02:50:25 liquidx Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -20,24 +20,25 @@ DEPEND=">=sys-devel/bison-1.28
 	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
-        ewarn ""
-        ewarn "Your compile WILL fail if you are upgrading from"
-        ewarn "a previous version of pwlib."
-        ewarn ""
-        ewarn "emerge unmerge pwlib"
-        ewarn "BEFORE upgrading to a newer version"
-        ewarn ""
-        ewarn "You have been warned :)"
-        ewarn ""
-        sleep 5
-
 	unpack ${A}
 	cd ${S}/make
+    
+    # filter out -O3 and -mcpu embedded compiler flags
 	cp unix.mak unix.mak.orig
 	sed \
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
 		< unix.mak.orig > unix.mak
+        
+    # patch unix.mak so it doesn't require annoying upgrades
+    cp unix.mak unix.mak.orig2
+    sed \
+    	-e "s:-DP_SSL -I\$(OPENSSLDIR)/include -I\$(OPENSSLDIR)/crypto:-DP_SSL:" \
+        -e "s:^LDFLAGS.*\+= -L\$(OPENSSLDIR)/lib -L\$(OPENSSLDIR):LDFLAGS +=:" \
+        < unix.mak.orig2 > unix.mak
+        
+    rm unix.mak.orig unix.mak.orig2
+        
 }
 
 src_compile() {

@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.22 2003/03/27 02:02:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.23 2003/04/01 02:50:24 liquidx Exp $
 
 *pwlib-1.4.11 (20 Mar 2003)
+
+  01 Apr 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.4.11.ebuild:
+  workaround for problems when upgrading openh323 and pwlib. fixes #14979.
 
   20 Mar 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.4.11.ebuild:
   version bump
