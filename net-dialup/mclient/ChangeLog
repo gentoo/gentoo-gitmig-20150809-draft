@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mclient
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/ChangeLog,v 1.4 2004/07/01 22:08:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/ChangeLog,v 1.5 2004/11/19 22:34:50 mrness Exp $
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org> mclient-2.8.ebuild:
+  Stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mclient-2.8.ebuild:
   virtual/glibc -> virtual/libc

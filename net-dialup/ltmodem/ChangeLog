@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.15 2004/11/06 14:41:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.16 2004/11/19 22:31:03 mrness Exp $
+
+  20 Nov 2004; Alin Nastac <mrness@gentoo.org> ltmodem-8.26_alpha9-r3.ebuild:
+  Stable on x86.
 
 *ltmodem-8.31_alpha8 (06 Nov 2004)
 

@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 77f8cde2937f0b36df4695c5d099156f ChangeLog 1987
 MD5 fb2e60717b5ce262efea991b5cbbc03b ltmodem-8.26_alpha9-r1.ebuild 1555
 MD5 c6876f0de8131cd0721cce58f339fd92 ltmodem-8.26_alpha9-r2.ebuild 1574
-MD5 2f33e168aeb161e164a9e6f418b833bb ltmodem-8.26_alpha9-r3.ebuild 2284
+MD5 f017ee898f757edafcd46cd28b108984 ltmodem-8.26_alpha9-r3.ebuild 2283
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 7330c8b98e09368468c234ba4cee303a ltmodem-8.31_alpha8.ebuild 2445
 MD5 f5ab4274b107a9ac1e7d521c5dbb594a files/digest-ltmodem-8.26_alpha9-r1 66
@@ -13,10 +10,3 @@ MD5 c7770cf081fb61801ccdcf7eb67175dc files/digest-ltmodem-8.26_alpha9-r3 137
 MD5 b990e7d5303c86f37ea21cf471d22e03 files/ltmodem_devfs 198
 MD5 1a8e6ce7bc277552331003f54cf26c78 files/ltmodem_modules 244
 MD5 bb762fb0d5ebce81b72fa6c8eb99ca0d files/digest-ltmodem-8.31_alpha8 136
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjj6fjtv59x0+BrURAtUZAKC1C0YPqXM8SSEBesNBHqundeYwRgCg4oet
-nN0JP1tJU9mKsKPFzJi/eXI=
-=G0my
------END PGP SIGNATURE-----
