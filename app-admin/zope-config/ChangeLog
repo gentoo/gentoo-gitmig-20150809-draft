@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.9 2003/12/12 07:40:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.10 2003/12/22 17:09:57 lanius Exp $
+
+  22 Dec 2003; Heinrich Wendel <lanius@gentoo.org> zope-config-0.1-r1.ebuild,
+  zope-config-0.2.ebuild, zope-config-0.3.ebuild:
+  fixed circular dep with zope, bug #35918
 
   12 Dec 2003; Heinrich Wendel <lanius@gentoo.org> files/0.3/zope-config:
   use mv instead of cp to avoid data loose when zope is still running
