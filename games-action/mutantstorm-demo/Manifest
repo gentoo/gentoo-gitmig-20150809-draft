@@ -1,4 +1,14 @@
-MD5 61295f6548d1f26200cdc0ad132672f8 mutantstorm-demo-1.33.ebuild 912
-MD5 6fe39034851fb56028741be9e57e967d ChangeLog 705
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6b51671b3cff5b6edcd13d8bd753e726 metadata.xml 1758
+MD5 61295f6548d1f26200cdc0ad132672f8 mutantstorm-demo-1.33.ebuild 912
+MD5 33504dbcde872311937077f7d8dececf ChangeLog 785
 MD5 93b8ddcfff567acf04a76cbfb5ee8d42 files/digest-mutantstorm-demo-1.33 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsVzI1lqEGTUzyQRAl0IAJsHqJN/J95ZwE+T6U29116osIEBfgCghfcb
+21pCQvR6yxFsiCLbXG9bOV0=
+=Avyp
+-----END PGP SIGNATURE-----
