@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r1.ebuild,v 1.4 2004/05/01 16:39:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r1.ebuild,v 1.5 2004/05/01 19:09:04 zul Exp $
 
 DESCRIPTION="Configures the apache manual for local viewing."
 HOMEPAGE="http://www.apache.org"
@@ -21,7 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	sed -i -e "s:2.0.49:${PV}" ${FILESDIR}/00_apache_manual.conf
+	sed -i -e "s:2.0.49:${PV}:" ${FILESDIR}/00_apache_manual.conf
 	insinto /etc/apache2/conf/modules.d
 	doins ${FILESDIR}/00_apache_manual.conf
 }
