@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.20 2004/10/20 01:17:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.21 2004/11/07 16:48:24 latexer Exp $
+
+*icu-2.6.2 (07 Nov 2004)
+
+  07 Nov 2004; <peter@gentoo.org> +metadata.xml, +icu-2.6.2.ebuild:
+  Bump to the latest 2.6.x series, and add a metadata.xml.
 
   21 Oct 2004; Aron Griffis <agriffis@gentoo.org> icu-2.8.ebuild:
   add ~ia64
