@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.1 2005/02/14 19:04:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.2 2005/02/14 19:07:34 lanius Exp $
 
 inherit multilib
 
@@ -27,17 +27,20 @@ src_compile() {
 
 src_install () {
 	exeinto /usr/bin
-	newexe ${FILESDIR}/motif-config-1.0 motif-config
+	newexe ${FILESDIR}/motif-config-0.1 motif-config
 
+	# for profile
 	dodir /usr/$(get_libdir)/motif
 
+	# bitmaps
+	dodir /usr/include/X11/bitmaps
+	# bindings
+	dodir /usr/$(get_libdir)/X11/bindings
 	insinto /etc/X11/app-defaults
+
+	# mwm default config
 	# Mwm
 	insinto /etc/X11/mwm
 	# system.mwmrc
 	dosym /etc/X11/mwm /usr/$(get_libdir)/X11/mwm
-	dodir /usr/include/X11/bitmaps
-	# bitmaps
-	dodir /usr/$(get_libdir)/X11/bindings
-	# bindings
 }
