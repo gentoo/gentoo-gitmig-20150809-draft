@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.12.1_pre.ebuild,v 1.1 2005/02/12 11:23:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0_pre.ebuild,v 1.1 2005/03/21 08:16:01 usata Exp $
 
 inherit elisp
 

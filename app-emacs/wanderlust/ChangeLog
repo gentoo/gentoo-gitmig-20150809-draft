@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.35 2005/02/21 13:20:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.36 2005/03/21 08:16:01 usata Exp $
+
+*wanderlust-2.14.0_pre (21 Mar 2005)
+
+  21 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -wanderlust-2.12.1_pre.ebuild, wanderlust-2.12.2.ebuild,
+  +wanderlust-2.14.0_pre.ebuild:
+  Version bumped.
 
 *wanderlust-2.12.2 (21 Feb 2005)
 
