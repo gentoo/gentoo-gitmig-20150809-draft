@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (08 Oct 2002)
+# Version bumped, masked for testing.
+=sys-kernel/usermode-sources-2.4.19-r10
+=sys-kernel/usermode-sources-2.4.19-r11
+=sys-kernel/usermode-sources-2.4.19-r12
 
 # <tantive@gentoo.org> (08 Oct 2002)
 # Version bumped, masked for testing.
