@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14edcd83976a5b10a78f7980019c704c netpipes-4.2.ebuild 761
+MD5 c260f5cd9a68c0965120f9244b5df4ef metadata.xml 284
+MD5 d7904adbbfef9b38da5b1d95d2b1770f ChangeLog 440
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-netpipes-4.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5kdpmdTrptrqvGERAsM3AKCWLmjQw717vLkVl+paI4QqxNXKmwCfaFjr
+3GylTh10Dq5Muy6n9MpNyw4=
+=8hXi
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/netpipes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.1 2005/01/13 10:03:15 dragonheart Exp $
+
+*netpipes-4.2 (13 Jan 2005)
+
+  13 Jan 2005; Daniel Black <dragonheart@gentoo.org> +netpipes-4.2.ebuild,
+  metadata.xml:
+  Initial import as per bug #72959. Thanks to the author thoth@purplefrog.com
+  for the program and ebuild
+
