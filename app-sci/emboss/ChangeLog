@@ -1,6 +1,19 @@
 # ChangeLog for app-sci/emboss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.9 2004/06/24 21:57:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.10 2004/07/15 02:06:20 ribosome Exp $
+
+  14 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  emboss-2.8.0-r3.ebuild: Modified configuration step to make the X and png
+  USE flags independent; Added support for icc; Added primer3 and clustalw
+  to the dependencies since some EMBOSS programs won't work without them;
+  Added support for the biological databases aaindex, cutg, prints, prosite,
+  rebase and transfac, which are needed for many EMBOSS programs (the databases
+  are PDEPENDencies since they all must be indexed with an EMBOSS program before
+  use) (this database support is optional); Added header files installation for
+  EMBOSS development.
+  emboss-2.8.0-r2.ebuild: Added to x86.
+  emboss-2.8.0-r1.ebuild, emboss-2.8.0.ebuild, emboss-2.7.1.ebuild: Removed files.
+  metadata.xml: Added long description; Set myself as maintainer.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> emboss-2.8.0-r1.ebuild,
   emboss-2.8.0-r2.ebuild:
