@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-patch-bay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.14 2004/06/24 23:49:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.15 2004/07/02 23:46:26 fvdpol Exp $
+
+  03 Jul 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/alsa-patch-bay-1.0.0-amd64.patch:
+  AMD64 compilation fixes.
 
   14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-patch-bay-1.0.0.ebuild:
