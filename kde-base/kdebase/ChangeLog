@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.185 2005/02/27 22:51:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.186 2005/03/07 11:09:29 greg_g Exp $
+
+  07 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kdebase-3.4.0_rc1.ebuild:
+  Proper handling of java (#82032).
 
 *kdebase-3.4.0_rc1 (27 Feb 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_rc1.ebuild,v 1.1 2005/02/27 22:51:12 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_rc1.ebuild,v 1.2 2005/03/07 11:09:29 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -18,7 +18,6 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
 	samba? ( >=net-fs/samba-3.0.4 )
-	java? ( || ( virtual/jdk virtual/jre ) )
 	lm_sensors? ( sys-apps/lm_sensors )
 	logitech-mouse? ( dev-libs/libusb )
 	ieee1394? ( sys-libs/libraw1394 )
@@ -26,6 +25,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	       >=sys-apps/hal-0.4 )"
 
 RDEPEND="${DEPEND}
+	java? ( || ( virtual/jdk virtual/jre ) )	
 	sys-apps/eject"
 
 src_unpack() {
@@ -44,15 +44,10 @@ src_compile() {
 	use pam && myconf="${myconf} --with-pam=yes" \
 		|| myconf="${myconf} --with-pam=no --with-shadow"
 
-	if use java ; then
-		if has_version virtual/jdk ; then
-			myconf="${myconf} --with-java=$(java-config --jdk-home)"
-		else
-			myconf="${myconf} --with-java=$(java-config --jre-home)"
-		fi
-	else
-		myconf="${myconf} --without-java"
-	fi
+	# the java test is problematic (see kde bug 100729) and
+	# useless. All that's needed for java applets to work is
+	# to have the 'java' executable in PATH.
+	myconf="${myconf} --without-java"
 
 	kde_src_compile
 }
