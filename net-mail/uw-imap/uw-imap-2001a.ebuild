@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Cristian Martinez <cfuga@itam.mx>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.1 2002/02/23 18:06:44 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2001a.ebuild,v 1.2 2002/02/23 18:13:28 g2boojum Exp $
 
 PN0=imap
 S=${WORKDIR}/${PN0}-${PV}
@@ -14,6 +14,7 @@ DEPEND="virtual/glibc
         ssl? ( dev-libs/openssl )"
 
 PROVIDE="virtual/imapd"
+PROVIDE="virtual/imapUW"
 
 src_unpack() {
 	unpack ${A}
