@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.1 2002/03/23 01:01:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.2 2002/03/23 05:46:49 drobbins Exp $
+
+  22 Mar 2002; Daniel Robbins <drobbins@gentoo.org> kbd-1.06-r1.ebuild :
+  Fixed Matthew Kennedy's patch which was totally broken in every way and
+  killed this ebuild.
 
 *kbd-1.06-r1  (22 Mar 2002)
 
   22 Mar 2002; Seemant Kulleen <seemant@gentoo.org> kbd-1.06-r1.ebuild :
-
   Added USE dependent nls support from a patch sent in by Matthew Kennedy.
 
 *kbd-1.06  (1 Feb 2002)

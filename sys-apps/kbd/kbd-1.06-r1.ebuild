@@ -6,30 +6,23 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Keyboard and console utilities"
 SRC_URI="ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/utils/kbd/${P}.tar.gz"
 HOMEPAGE=""
-DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )"
+DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 PROVIDE="sys-apps/console-tools"
 
 src_compile() {
 	local myopts
-
-	if [ -z "`use nls`" ] 
-	then
-		myopts="--disable-nls"
-	else
-		myopts="--enable-nls"
-	fi
-
+	# non-standard configure script; --di to disable NLS, nothing to enable it.	
+	use nls || myopts="--di"
 	./configure --mandir=/usr/share/man \
-		--datadir=/usr/share \
-		${myopts} || die
+	--datadir=/usr/share \
+	${myopts} || die
 	make || die
 }
 
 src_install() {
 	make  \
-		DESTDIR=${D}	\
-		DATADIR=${D}/usr/share	\
-		MANDIR=${D}/usr/share/man	\
-		install || die
+	DESTDIR=${D} \
+	DATADIR=${D}/usr/share \
+	MANDIR=${D}/usr/share/man \
+	install || die
 }
