@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/stuffit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.7 2003/05/15 11:47:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.8 2003/06/16 14:02:08 phosphan Exp $
+
+  16 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> stuffit-5.2.0.611.ebuild:
+  Filled SRC_URI again, put download hints into pkg_nofetch, corrected
+  tarball name - should fix bug 22679. Removed unnecessary ARCH test.
 
   15 May 2003; Patrick Kursawe <phosphan@gentoo.org> stuffit-5.2.0.611.ebuild:
   www. was missing in homepage URL
