@@ -1,7 +1,17 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.9 2003/09/12 00:57:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.10 2003/10/08 00:30:45 livewire Exp $
 
+* genkernel-1.9 (07 Oct 2003)
+
+  10 Oct 2003; Bob Johnson <livewire@gentoo.org>
+	added MRPROPER setting in /etc/kernel/settings (yes/no)
+	--myconfig will use /etc/kernels/myconfig  
+	--buildpkg will not write anything to local system now
+	INITRD_SIZE fixed in settings
+	--livecd will build livecd kernel/initrd
+	--help now works
+	
 * genkernel-1.8 (11 Sep 2003)
 
   11 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: important bug fix; in 1.7,
