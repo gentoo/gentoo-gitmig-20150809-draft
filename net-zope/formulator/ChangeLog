@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/formulator
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.12 2005/02/21 21:31:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/formulator/ChangeLog,v 1.13 2005/03/28 15:24:32 radek Exp $
+
+*formulator-1.8.0 (28 Mar 2005)
+
+  28 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +formulator-1.8.0.ebuild:
+  version bump. also changed homepage, as new version are hosted and
+  developed by infrae guys.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> formulator-1.6.2.ebuild:
   added ~amd64
