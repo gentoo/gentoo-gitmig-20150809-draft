@@ -23,6 +23,7 @@ acl - Adds support for sys-apps/acl (XFS dump/restore utilities)
 acpi - Adds support for Advanced Configuration and Power Interface
 afs - Adds OpenAFS support (distributed file system)
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
+apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for aRts: the KDE sound daemon
 atlas - Adds support for atlas instead of blas in dev-lang/R 
