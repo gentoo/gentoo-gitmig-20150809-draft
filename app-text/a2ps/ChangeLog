@@ -1,11 +1,14 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.10 2003/07/29 15:15:58 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.11 2003/08/12 06:59:46 usata Exp $
+
+*a2ps-4.13b-r5 (16 Jul 2003)
+
+  12 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13b-r5.ebuild:
+  Stop running autoconf
 
   29 Jul 2003; lanius@gentoo.org a2ps-4.13b-r5.ebuild:
   stable bump
-
-*a2ps-4.13b-r5 (16 Jul 2003)
 
   16 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13b-r5.ebuild,
   files/a2ps-4.13-stdout.diff:

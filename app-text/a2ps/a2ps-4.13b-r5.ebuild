@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.2 2003/07/29 15:15:58 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.3 2003/08/12 06:59:47 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -37,6 +37,8 @@ src_unpack() {
 	fi
 	cd ${S}
 	xpatch ${PATCHES} || die
+	#stop running autoconf (bug #24264)
+	find . | xargs touch
 }
 
 src_compile() {
