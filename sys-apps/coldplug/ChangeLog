@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coldplug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.10 2005/03/07 15:44:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.11 2005/04/01 16:52:50 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> coldplug-20040920.ebuild:
+  stable on ia64
 
   07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   coldplug-20040920.ebuild:
