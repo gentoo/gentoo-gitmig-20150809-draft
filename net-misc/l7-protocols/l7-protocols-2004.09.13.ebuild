@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-20040819.ebuild,v 1.2 2004/09/04 14:12:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2004.09.13.ebuild,v 1.1 2004/09/19 00:20:59 dragonheart Exp $
 
 IUSE=""
 
-MY_P=l7-protocols-2004_08_19
+MY_P=${PN}-${PV//./_}
 
 DESCRIPTION="Protocol definitions of l7-filter kernel modules"
 HOMEPAGE="http://l7-filter.sourceforge.net/protocols"
