@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-driver
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.16 2004/10/22 19:16:11 solar Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.17 2005/01/07 16:43:17 solar Exp $
+
+*madwifi-driver-0.1_pre20050106 (07 Jan 2005)
+
+  07 Jan 2005; <solar@gentoo.org> -madwifi-driver-0.1_pre20040824-r1.ebuild,
+  -madwifi-driver-0.1_pre20040906.ebuild,
+  +madwifi-driver-0.1_pre20050106.ebuild:
+  - version bump for 2.6.x kernels
 
   22 Oct 2004; <solar@gentoo.org> madwifi-driver-0.1_pre20041019.ebuild:
   added app-arch/sharutils to DEPEND

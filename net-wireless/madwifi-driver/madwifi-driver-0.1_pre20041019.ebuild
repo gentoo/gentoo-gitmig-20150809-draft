@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20041019.ebuild,v 1.2 2004/10/22 19:16:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20041019.ebuild,v 1.3 2005/01/07 16:43:17 solar Exp $
 
 # cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi login
 # cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co -r HEAD madwifi

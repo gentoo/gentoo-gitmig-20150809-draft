@@ -1,10 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20040824-r1.ebuild,v 1.1 2004/08/29 04:41:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20050106.ebuild,v 1.1 2005/01/07 16:43:17 solar Exp $
 
-# All work on madwifi is pretty much done under the WPA branch. At some
-# point in the near future it should be merged back into HEAD. 
-# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co -r WPA madwifi
+# Be sure when we bump madwifi-driver that we also bump madwifi-tools at 
+# the same time as they use the same snapshot tarball.
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi login
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi co -r HEAD madwifi
+# cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/madwifi logout
 
 inherit eutils kernel-mod
 
@@ -13,26 +15,31 @@ HOMEPAGE="http://madwifi.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="mirror://gentoo/$P.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+#KEYWORDS="~x86 ~amd64"
+KEYWORDS="-*"
 IUSE=""
-DEPEND=""
+DEPEND="app-arch/sharutils"
+RDEPEND=""
 
 S=${WORKDIR}
 
 pkg_setup() {
+	check_KV
 	if [[ "${KV}" > "2.5" ]] ; then
-		cd ${ROOT}/usr/src/linux
-		if [[ "${KV}" > "2.6.8" ]] ; then
-			./scripts/mod/modpost ./vmlinux
-		else
-			./scripts/modpost ./vmlinux
+		if [[ "${KV}" < "2.6.6" ]] ; then
+			cd ${ROOT}/usr/src/linux
+			[ -x ./scripts/modpost ] \
+				&& ./scripts/modpost ./vmlinux
 		fi
 	fi
+	use x86 && TARGET=i386-elf
+	use amd64 && TARGET=x86_64-elf
+	export TARGET
 }
 
 src_unpack() {
@@ -40,30 +47,29 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# http://article.gmane.org/gmane.linux.drivers.madwifi.user/4033
-	epatch ${FILESDIR}/madwifi-multi-ssid-support.patch
+	#epatch ${FILESDIR}/madwifi-multi-ssid-support.patch
 
 	if kernel-mod_is_2_6_kernel && [ ${KV_PATCH} -gt 5 ]; then
 		for dir in ath ath_hal net80211; do
 			sed -i -e "s:SUBDIRS=:M=:" ${S}/${dir}/Makefile
 		done
-
-		[[ "${KV_PATCH}" -ge 8 ]] && epatch ${FILESDIR}/${PN}-2.6.8-20040814-proc_dointvec.patch
 	fi
 }
 
 src_compile() {
 	unset ARCH
 	make clean
-	make KERNELPATH="${ROOT}/usr/src/linux" KERNELRELEASE="${KV}" || die
+
+	make KERNELPATH="${ROOT}/usr/src/linux" KERNELRELEASE="${KV}" \
+		TARGET="${TARGET}" || die
 }
 
 src_install() {
 	unset ARCH
 	make KERNELPATH="${ROOT}/usr/src/linux" KERNELRELEASE="${KV}" \
-		DESTDIR="${D}" install || die
+		TARGET="${TARGET}" DESTDIR="${D}" install || die
 
-	dodoc README
+	dodoc README COPYRIGHT
 }
 
 pkg_postinst() {
