@@ -1,0 +1,11 @@
+--- job.c	2004-11-14 11:32:36.000000000 -0500
++++ job.c	2005-03-07 01:23:37.181878096 -0500
+@@ -535,7 +535,7 @@
+     foreground = 0;
+ 
+     /* set stdin to the job's output */
+-    if ( fseek(mailf, 0, SEEK_SET ) != 0) die_e("Can't fseek()");
++    if ( lseek(fileno(mailf), 0, SEEK_SET ) != 0) die_e("Can't lseek()");
+     if ( dup2(fileno(mailf), 0) != 0 ) die_e("Can't dup2(fileno(mailf))");
+ 
+     xcloselog();

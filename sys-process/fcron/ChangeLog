@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.2 2005/03/05 13:37:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.3 2005/03/08 13:23:17 ka0ttic Exp $
+
+*fcron-2.9.5.1-r3 (08 Mar 2005)
+
+  08 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/fcron-2.9.5.1-fix-mail-output.diff, -fcron-2.9.5.1-r2.ebuild,
+  +fcron-2.9.5.1-r3.ebuild:
+  Revision bump; added patch to fix mail output. Thanks to Dmitry Karasik for
+  the patch in bug 83648.
 
 *fcron-2.9.5.1-r2 (04 Mar 2005)
 
