@@ -1,6 +1,16 @@
-# ChangeLog for dev-perlTermReadKeyChangeLog/dev-perlTest-SimpleChangeLog
+# ChangeLog for dev-perl/Test-Simple
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.3 2002/10/30 07:20:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.4 2002/11/17 05:37:53 mkennedy Exp $
+
+*Test-Simple-0.47 (16 Nov 2002)
+
+  16 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  Test-Simple-0.47.ebuild, files/digest-Test-Simple-0.47 :
+
+  New version (required by update to latest HTML-Mason). Tidied up
+  ChangeLog.
+
+*Test-Simple-0.42-r1 (14 Jun 2002)
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
