@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/systrace
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/ChangeLog,v 1.1 2003/03/28 23:38:07 method Exp $
+
+*systrace-1.0-r1 (27 Mar 2003)
+
+  27 Mar 2003; Nate Underwood <natey@gentoo.org> systrace-1.0-r1.ebuild:
+  Ebuild changes to negate the need for systrace-sources.
+
+  27 Mar 2003; Nate Underwood <natey@gentoo.org> systrace-1.0-r1.ebuild:
+  Initial import.
