@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-4.4-r1.ebuild,v 1.1 2003/06/28 12:03:49 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-4.4-r1.ebuild,v 1.2 2003/10/04 16:14:23 karltk Exp $
 
 IUSE="ncurses tpctlir perl"
 
@@ -15,10 +15,18 @@ KEYWORDS="x86 amd64 -ppc -mips -sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="$DEPEND >=sys-apps/thinkpad-4.3 ncurses? ( sys-libs/ncurses )"
-RDEPEND="$RDEPEND >=sys-apps/thinkpad-4.3 ncurses? ( sys-libs/ncurses ) perl? ( dev-lang/perl )"
+DEPEND=">=sys-apps/thinkpad-4.3 ncurses? ( sys-libs/ncurses )"
+RDEPEND=">=sys-apps/thinkpad-4.3 ncurses? ( sys-libs/ncurses )
+	perl? ( dev-lang/perl )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/tpctlir-cli-4.4-r1.diff
+}
 
 src_compile() {
+
 	emake -C lib || die "lib make failed"
 	emake -C tpctl || die "tpctl make failed"
 	if use ncurses > /dev/null; then
