@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.10 2004/10/30 22:09:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.11 2004/11/28 23:32:28 foser Exp $
+
+*gst-plugins-ffmpeg-0.8.2-r1 (29 Nov 2004)
+
+  29 Nov 2004; foser <foser@gentoo.org> gst-plugins-ffmpeg-0.8.2-r1.ebuild :
+  Add patch to fix aspect ratio issues with some movies
+  http://bugzilla.gnome.org/show_bug.cgi?id=159755
+  Filter more flags to fix bugs like #64262
 
   30 Oct 2004; Travis Tilley <lv@gentoo.org> gst-plugins-ffmpeg-0.8.1.ebuild:
   stable on amd64

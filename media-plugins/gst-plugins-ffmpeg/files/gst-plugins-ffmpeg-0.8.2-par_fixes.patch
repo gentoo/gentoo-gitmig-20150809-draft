@@ -1,0 +1,36 @@
+--- gst-ffmpeg-0.8.2/ext/ffmpeg/gstffmpegdec.c	2004-10-09 18:22:07.000000000 +0200
++++ gst-ffmpeg-0.8.2.patched/ext/ffmpeg/gstffmpegdec.c	2004-11-28 20:45:36.290598936 +0100
+@@ -476,14 +476,26 @@
+         caps = gst_ffmpeg_codectype_to_caps (oclass->in_plugin->type,
+             ffmpegdec->context);
+ 
+-        /* add in pixel-aspect-ratio if we have it */
+-        if (caps && ffmpegdec->par) {
+-          GST_DEBUG_OBJECT (ffmpegdec, "setting pixel-aspect-ratio");
+-	  gst_structure_set (gst_caps_get_structure (caps, 0),
+-              "pixel-aspect-ratio", GST_TYPE_FRACTION,
+-              gst_value_get_fraction_numerator (ffmpegdec->par),
+-              gst_value_get_fraction_denominator (ffmpegdec->par),
++        /* add in pixel-aspect-ratio if we have it,
++	 * prefer ffmpeg par over sink par 
++	 */
++       if (caps) {
++         if (ffmpegdec->context->sample_aspect_ratio.num &&
++		ffmpegdec->context->sample_aspect_ratio.den) {
++            GST_DEBUG ("setting ffmpeg provided pixel-aspect-ratio");
++	    gst_structure_set (gst_caps_get_structure (caps, 0),
++               "pixel-aspect-ratio", GST_TYPE_FRACTION,
++               ffmpegdec->context->sample_aspect_ratio.num,
++               ffmpegdec->context->sample_aspect_ratio.den,
++	       NULL);
++	  }
++	  else if (ffmpegdec->par) {
++            GST_DEBUG ("passing on pixel-aspect-ratio from sink");
++	    gst_structure_set (gst_caps_get_structure (caps, 0),
++              gst_value_get_fraction_numerator (ffmpegdec->context->sample_aspect_ratio.num),
++              gst_value_get_fraction_denominator (ffmpegdec->context->sample_aspect_ratio.den),
+               NULL);
++	  }
+         }
+         if (caps == NULL ||
+             !gst_pad_set_explicit_caps (ffmpegdec->srcpad, caps)) {
