@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.3 2003/09/28 16:58:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.4 2003/09/28 16:59:39 liquidx Exp $
 
 inherit gtk-engines2
 
@@ -30,5 +30,5 @@ src_unpack() {
 		automake -a -c
 		autoconf
 		libtoolize -c -f
-	fi	
+	fi
 }
