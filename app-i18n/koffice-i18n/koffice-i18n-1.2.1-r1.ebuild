@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.8 2004/06/28 04:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.9 2004/10/17 10:13:07 absinthe Exp $
 
 inherit kde
 need-kde 3
@@ -25,7 +25,7 @@ BASEDIR="mirror://kde/stable/koffice-${MY_PV}/src/"
 
 #Maybe this isn't the smartest way of doing things, but it works
 #for the purposes of this ebuild.
-USE="${USE} ${LINGUAS}"
+#USE="${USE} ${LINGUAS}"
 
 # Important:
 #
