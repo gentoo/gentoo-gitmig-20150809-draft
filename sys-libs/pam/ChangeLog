@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.15 2002/11/03 10:50:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.16 2002/12/05 19:35:02 azarah Exp $
+
+  05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r10.ebuild :
+
+  Fix bison syntax for bison-1.50 or later, thanks to Redhat.  Added
+  pam-0.75-pam_console-bison.fixes.patch for this.
 
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r10.ebuild :
 

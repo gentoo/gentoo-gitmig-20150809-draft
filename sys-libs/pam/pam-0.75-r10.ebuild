@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.2 2002/11/03 10:50:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r10.ebuild,v 1.3 2002/12/05 19:35:02 azarah Exp $
 
 IUSE="berkdb"
 
@@ -46,25 +46,33 @@ src_unpack() {
 			einfo "  ${x##*/}..."
 			bzip2 -dc ${S2}/patchdir/${x} | patch -p1 > /dev/null || \
 				die "Failed Patch: ${x##*/}!"
+# pam-0.75-userdb.patch.bz2 patch userdb.c twice, which causes --dry-run
+# in epatch to fail ...
+#			epatch ${S2}/patchdir/${x}
 		fi
 	done
 
 	# Get pam_userdb to link to db3 or db4 if they exist
 	# <azarah@gentoo.org> (3 Nov 2002)
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-pam_userdb-use-db3.patch || die
+	cd ${S}; epatch ${FILESDIR}/${P}-pam_userdb-use-db3.patch
 
+	# Fix bison syntax for bison-1.50 or later, thanks to Redhat
+	cd ${S}; epatch ${FILESDIR}/${P}-pam_console-bison.fixes.patch
+
+	cd ${S}/doc
+	einfo "Unpacking docs..."
+	tar -xvzf Linux-PAM-0.75-docs.tar.gz > /dev/null || \
+		die "Failed to unpack docs!"
+	
+	cd ${S}; einfo "Installing module docs..."
 	for readme in modules/pam_*/README
 	do
 		cp -f ${readme} doc/txts/README.$(dirname ${readme} | sed -e 's|^modules/||')
 	done
 
+	einfo "Generating configure..."
 	export WANT_AUTOCONF_2_5=1
-	autoconf
-
-	cd ${S}/doc
-	einfo "Unpacking docs..."
-	tar -xvzf Linux-PAM-0.75-docs.tar.gz > /dev/null || \
-		die "Failed to unpack docs"
+	cd ${S}; autoconf || :
 }
 
 src_compile() {
