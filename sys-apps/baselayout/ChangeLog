@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.48 2002/12/10 20:10:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.49 2002/12/16 18:43:48 azarah Exp $
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.5.ebuild :
+
+  Fix /usr/lib/X11 symlink.  Change gawk module to compile if
+  /usr/include/awk/awk.h exists.
 
 *baselayout-1.8.5.5 (09 Dec 2002)
 

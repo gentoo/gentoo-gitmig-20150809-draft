@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.2 2002/12/10 20:10:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.5.ebuild,v 1.3 2002/12/16 18:43:48 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -110,7 +110,7 @@ src_compile() {
 		einfo "Building sysvinit..."
 		emake LDFLAGS="" || die "problem compiling sysvinit"
 
-		if [ -z "`use bootstrap`" ]
+		if [ -f /usr/include/awk/awk.h ]
 		then
 			# Build gawk module
 			cd ${S}/src
@@ -167,11 +167,11 @@ src_install() {
 	
 	keepdir /home
 	keepdir /usr/include /usr/src /usr/portage
-	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib/X11
+	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
 	
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib/X11 /usr/lib/X11
+	dosym ../X11R6/lib /usr/lib/X11
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -404,6 +404,12 @@ pkg_preinst() {
 	then
 		rm -f ${ROOT}/etc/init.d/rc-help.sh
 	fi
+
+	# This one was borked, so make sure fixed one gets installed.
+	if [ -L ${ROOT}/usr/lib/X11 ]
+	then
+		rm -f ${ROOT}/usr/lib/X11
+	fi
 }
 
 pkg_postinst() {
@@ -537,6 +543,6 @@ pkg_postrm() {
 	# Fix problematic links
 	ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 	ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-	ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
+	ln -snf ../X11R6/lib ${ROOT}/usr/lib/X11
 }
 
