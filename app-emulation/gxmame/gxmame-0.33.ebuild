@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/gxmame-0.32.ebuild,v 1.1 2003/04/06 15:52:42 mholzer Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/gxmame-0.33.ebuild,v 1.1 2003/07/13 08:33:40 vapier Exp $
 
 DESCRIPTION="frontend for XMame using the GTK library"
 HOMEPAGE="http://gxmame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE="nls"
 
-DEPEND="x11-base/xfree
+DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	media-libs/gdk-pixbuf"
@@ -25,5 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR=${D} || die
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }
