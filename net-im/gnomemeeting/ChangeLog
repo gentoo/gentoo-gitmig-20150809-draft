@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.1 2002/07/03 23:15:51 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.2 2002/07/07 14:11:48 stroke Exp $
+
+*gnomemeeting-0.92.1-r1 (07 Jul 2002)
+
+  07 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnomemeeting-0.92.1-r1.ebuild
+  
+  gnome2 eclassed. Updated dependencies. SLOT and LICENSE added.
+
 
 *gnomemeeting-0.92.1 (03 Jul 2002)
 
