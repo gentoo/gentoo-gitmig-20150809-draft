@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.50 2005/01/09 01:45:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.51 2005/01/10 17:44:18 gmsoft Exp $
+
+*hppa-sources-2.6.10_p10 (10 Jan 2005)
+
+  10 Jan 2005; Guy Martin <gmsoft@gentoo.org> -files/AF_UNIX-security.patch,
+  -files/CAN-2004-0394.patch, -files/CAN-2004-0495-2.4-sparse.patch,
+  -files/CAN-2004-0497.patch, -files/CAN-2004-0535-2.4-e1000.patch,
+  -files/CAN-2004-0814.patch, -files/CAN-2004-0882-0883.patch,
+  -files/CAN-2004-1074.patch, +files/CAN-2004-1235.patch,
+  -files/CAN-2004-685.patch, +files/LKA-20050107.patch,
+  -files/NFS-XDR-security.patch, -files/binfmt_elf-loader-security.patch,
+  -files/security-proc-cmdline.patch, +hppa-sources-2.6.10_p10.ebuild:
+  Version bump. Fix security issues (#77094, #77025). Remove old sources.
 
 *hppa-sources-2.6.10_p6 (09 Jan 2005)
 
