@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.6 2004/10/14 18:58:02 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.7 2004/11/20 23:51:07 sekretarz Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/clustalw/${PN}${PV}.UNIX.tar.gz"
 
 LICENSE="clustalw"
 SLOT="0"
-KEYWORDS="alpha ppc sparc x86 ~ppc-macos"
+KEYWORDS="alpha ppc sparc x86 ~ppc-macos ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
