@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/rekall
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.7 2004/10/15 16:14:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.8 2004/10/31 12:56:34 motaboy Exp $
+
+  31 Oct 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/rekall-2.2.1-configure.patch:
+  Added a patch to the configure script to honor the "arts" USE flag. Fixes
+  bug #65457.
 
   15 Oct 2004; Carsten Lohrke <carlo@gentoo.org> rekall-2.2.1.ebuild:
   stable on x86

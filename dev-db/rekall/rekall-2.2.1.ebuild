@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.1.ebuild,v 1.3 2004/10/15 16:14:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.1.ebuild,v 1.4 2004/10/31 12:56:34 motaboy Exp $
 
 inherit kde eutils
 
@@ -26,6 +26,7 @@ need-kde 3
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-configure.patch
 	epatch ${FILESDIR}/${P}-gcc-3.4-compat.patch
 	sed -i -e 's/$(LN_S) $(kde_libs_htmldir)\/$(KDE_LANG)\/common/$(LN_S) common/' ${S}/doc/rekall/Makefile.in
 }
