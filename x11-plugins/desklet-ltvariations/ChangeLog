@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-ltvariations
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.5 2004/06/24 22:49:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/ChangeLog,v 1.6 2004/07/18 04:25:56 obz Exp $
+
+*desklet-ltvariations-0.26 (18 Jul 2004)
+
+  18 Jul 2004; Mike Gardiner <obz@gentoo.org> +desklet-ltvariations-0.26.ebuild:
+  Version bump, as requested by <rizzo@gentoo.org> in bug #44708
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   desklet-ltvariations-0.21-r1.ebuild:
