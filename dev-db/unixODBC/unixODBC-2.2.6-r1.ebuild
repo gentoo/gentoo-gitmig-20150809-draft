@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.9 2005/01/01 17:44:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6-r1.ebuild,v 1.10 2005/02/07 01:47:15 rphillips Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 	local myconf
 
 	if use qt ; then
-		myconf="--enable-gui=yes"
+		myconf="--enable-gui=yes --x-libraries=/usr/lib "
 	else
 		myconf="--enable-gui=no"
 	fi
@@ -54,6 +54,7 @@ src_compile() {
 			--host=${CHOST} \
 			--prefix=/usr \
 			--sysconfdir=/etc/unixODBC \
+			--x-libraries=/usr/lib \
 			${myconf} || die
 
 		# not sure why these symlinks are needed. busted configure, i guess...

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.16 2005/01/07 11:32:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.8.ebuild,v 1.17 2005/02/07 01:47:15 rphillips Exp $
 
 inherit eutils gnuconfig
 
@@ -38,7 +38,7 @@ src_compile() {
 
 	if use qt && ! use mips
 	then
-		myconf="--enable-gui=yes"
+		myconf="--enable-gui=yes --x-libraries=/usr/lib "
 	else
 		myconf="--enable-gui=no"
 	fi
@@ -63,6 +63,7 @@ src_compile() {
 		./configure --host=${CHOST} \
 				--with-odbc=${S} \
 				--prefix=/usr \
+				--x-libraries=/usr/lib \
 				--sysconfdir=/etc/unixODBC \
 				${myconf} || die
 
