@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/openbabel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.1 2003/09/24 15:31:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/openbabel/ChangeLog,v 1.2 2003/12/16 11:44:07 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> openbabel-1.100.1.ebuild:
+  Added ~sparc keyword to fix broken dependencies in app-sci/xdrawchem.
 
 *openbabel-1.100.1 (24 Sep 2003)
 
