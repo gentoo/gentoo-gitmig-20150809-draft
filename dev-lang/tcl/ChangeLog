@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.2 2002/04/24 19:05:40 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.3 2002/05/31 04:29:42 prez Exp $
+
+*tcl-8.3.3-r2 (31 May 2002)
+
+  31 May 2002; Preston A. Elder <prez@gentoo.org> tcl-8.3.3-r2.ebuild files/digest-tcl-8.3.3-r2:
+
+  Fixed the soft links created in the install process.
 
 *tcl-8.3.3-r1 (24 Apr 2002)
 
