@@ -1,5 +1,5 @@
-MD5 bbc00e3d9487f0ace8675d61e6aaae71 ChangeLog 365
+MD5 bf964e2a679e0d4a6119000afbd3d5d1 ChangeLog 479
 MD5 bdaf12209d2425f5799be45dba682da6 wmmp-0.8.0.ebuild 653
-MD5 3b9ad04e85722e3379750f2bc9470bc2 wmmp-0.9.1.ebuild 687
+MD5 0bfbafaa053724d07ed7c6ea4204cceb wmmp-0.9.1.ebuild 661
 MD5 beb727868a84018b72dd002d9f392004 files/digest-wmmp-0.8.0 62
 MD5 999b899312796e783824ace79291a08d files/digest-wmmp-0.9.1 62
