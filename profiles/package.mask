@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3746 2005/03/21 23:07:59 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3747 2005/03/22 00:24:55 foser Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -189,7 +189,7 @@ x11-misc/xfontselector
 
 # foser <foser@gentoo.org> (02 Mar 2005)
 # does not work with most available kernels
->=app-admin/gamin-0.0.25
+>=app-admin/gamin-0.0.26-r5
 
 # Jeremy Huddleston <eradicator@gentoo.org> (01 Mar 2005)
 # Still in development.  Doesn't work right.  I know it doesn't work right.  Don't use it.  Also, it triggers a sandbox bug.
