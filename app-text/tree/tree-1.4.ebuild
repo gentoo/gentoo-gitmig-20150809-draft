@@ -1,34 +1,39 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.7 2004/03/12 08:30:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.4.ebuild,v 1.8 2004/04/27 23:54:54 mr_bones_ Exp $
 
-NV="${PV}b3"
+MY_PV="${PV}b3"
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
 HOMEPAGE="http://mama.indstate.edu/users/ice/tree/"
-SRC_URI="ftp://mama.indstate.edu/linux/tree/${PN}-${NV}.tgz"
+SRC_URI="ftp://mama.indstate.edu/linux/tree/${PN}-${MY_PV}.tgz"
 
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${PN}-${NV}.tgz
-	cd ${S} && \
+	unpack ${A}
+	cd ${S}
 	sed -i \
-		-e "s/-O2 -Wall -fomit-frame-pointer/${CFLAGS}/" Makefile || \
-		die "sed Makefile failed"
+		-e 's/-O2 -Wall -fomit-frame-pointer/$(E_CFLAGS)/' Makefile \
+			|| die "sed Makefile failed"
+	# fix for bug #49210
+	sed -i \
+		-e '1085 s/$/;/' tree.c \
+			|| die "sed tree.c failed"
 }
 
 src_compile() {
-	emake || die
+	emake E_CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
-src_install () {
-	insinto /usr/bin
-	dobin tree
+src_install() {
+	dobin tree || die "dobin failed"
 	doman tree.1
-	dodoc CHANGES LICENSE README*
+	dodoc CHANGES README*
 }
