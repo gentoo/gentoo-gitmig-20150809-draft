@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.46 2005/03/25 19:30:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.47 2005/03/28 13:15:42 gmsoft Exp $
+
+  28 Mar 2005; Guy Martin <gmsoft@gentoo.org> timidity++-2.13.2.ebuild:
+  Stable on hppa.
 
   25 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
   timidity++-2.13.2-r1.ebuild:
