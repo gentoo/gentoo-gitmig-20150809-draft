@@ -1,5 +1,5 @@
 move dev-java/oro dev-java/jakarta-oro
-move dev-java/regexp pdev-java/jakarta-regexp
+move dev-java/regexp dev-java/jakarta-regexp
 move dev-perl/Locale-Maketext-Lexicon dev-perl/locale-maketext-lexicon
 move dev-java/xt-bin dev-java/xt
 move dev-java/fesi-bin dev-java/fesi
