@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.1.ebuild,v 1.5 2004/12/06 03:32:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.1.ebuild,v 1.6 2004/12/14 11:20:58 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,6 @@ DESCRIPTION="A Unix system friendly Scheme Interpreter"
 HOMEPAGE="http://gauche.sf.net/"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
-RESTRICT="nomirror"
 LICENSE="BSD"
 KEYWORDS="x86 ~ppc ia64 ~sparc"
 SLOT="0"
@@ -42,15 +41,10 @@ src_compile() {
 		myconf="${myconf} --enable-multibyte=euc-jp"
 	fi
 
-	sed -i -e "67s/\$(LIB_INSTALL_DIR)/\$(DISTDIR)\$(LIB_INSTALL_DIR)/" src/Makefile.in
-
 	strip-flags
 
-	mycflags=${CFLAGS}
-	unset CFLAGS CXXFLAGS
-
 	econf ${myconf} --enable-threads=pthreads || die
-	emake OPTFLAGS="${mycflags}" || die
+	emake || die
 
 }
 
