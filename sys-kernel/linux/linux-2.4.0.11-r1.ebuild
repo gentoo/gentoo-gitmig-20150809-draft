@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0.11.ebuild,v 1.1 2001/01/24 18:08:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r1.ebuild,v 1.1 2001/01/25 18:13:08 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -51,15 +51,14 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < lm_sensors-patch   
 
-	if [ "$PN" = "linux" ]
-	then
-		echo "Preparing for compilation..."
-		cd ${S}
-		#this is the configuration for the default kernel
-		cp ${FILESDIR}/${PV}/config .config
-		cp ${FILESDIR}/${PV}/autoconf.h include/linux/autoconf.h
-		try make include/linux/version.h
-	fi
+	echo "Preparing for compilation..."
+	cd ${S}
+	#this is the configuration for the default kernel
+	#annoying but true -- we need to do this for linux-sources as well
+	#so that autoconf.h exists and other packages compile
+	cp ${FILESDIR}/${PV}/config .config
+	cp ${FILESDIR}/${PV}/autoconf.h include/linux/autoconf.h
+	try make include/linux/version.h
 
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
@@ -72,14 +71,16 @@ src_compile() {
 	try ./configure --prefix=/ --mandir=/usr/man
 	try make
 
+	cd ${S}
+	try make symlinks
+	try make dep
+	
+	#if we're just linux-sources, then we're done with all compilation stuff
 	if [ "$PN" != "linux" ]
 	then
 		return
 	fi
 
-	cd ${S}
-	try make symlinks
-	try make dep
 	cd ${S}/lm_sensors-2.5.5
 	try make
 
