@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.1 2004/05/19 10:38:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.2 2004/05/20 06:45:21 robbat2 Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -236,14 +236,8 @@ pkg_config() {
 }
 
 pkg_preinst() {
-	if ! groupmod mysql; then
-		groupadd -g 60 mysql || die "problem adding group mysql"
-	fi
-
-	if ! id mysql; then
-		useradd -g mysql -s /dev/null -d /var/lib/mysql -c "mysql" mysql
-		assert "problem adding user mysql"
-	fi
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 /dev/null /var/lib/mysql mysql || die "problem adding user mysql"
 }
 
 pkg_postinst() {
