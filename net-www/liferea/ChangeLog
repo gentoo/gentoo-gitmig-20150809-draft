@@ -1,0 +1,9 @@
+# ChangeLog for net-www/liferea
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.1 2003/12/10 15:21:42 liquidx Exp $
+
+*liferea-0.4.5 (10 Dec 2003)
+
+  10 Dec 2003; Alastair Tse <liquidx@gentoo.org> liferea-0.4.5.ebuild:
+  initial commit. ebuild based on suka's submission <suka@t0.or.at> (#27551)
+
