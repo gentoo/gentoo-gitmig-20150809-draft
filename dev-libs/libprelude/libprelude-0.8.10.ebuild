@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.8.10.ebuild,v 1.6 2004/02/27 06:57:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.8.10.ebuild,v 1.7 2004/03/08 20:51:27 avenj Exp $
 
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-ids.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64"
+KEYWORDS="x86 ppc sparc alpha ia64 amd64"
 IUSE="ssl doc debug"
 
 DEPEND="virtual/glibc
