@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.36 2004/08/10 21:26:21 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.37 2004/08/10 21:37:04 dsd Exp $
+
+  10 Aug 2004; Daniel Drake <dsd@gentoo.org> easytag-0.31-r1.ebuild,
+  easytag-0.31-r2.ebuild, easytag-0.31.ebuild:
+  Fix depend (flac requires libvorbis)
 
 *easytag-0.31-r3 (10 Aug 2004)
 

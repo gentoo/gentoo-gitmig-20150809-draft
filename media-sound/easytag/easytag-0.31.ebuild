@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.5 2004/07/03 01:44:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31.ebuild,v 1.6 2004/08/10 21:37:04 dsd Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 RDEPEND=">=media-libs/id3lib-3.8.2
 	gtk2? ( =x11-libs/gtk+-2.4* )
 	!gtk2? ( =x11-libs/gtk+-1.2* )
-	flac? ( >=media-libs/flac-1.1.0 )
+	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0_beta4 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 DEPEND="${RDEPEND}
