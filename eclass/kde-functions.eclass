@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.50 2003/01/05 12:41:49 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.51 2003/01/28 11:58:55 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -71,12 +71,18 @@ need-kde() {
 			need-automake 1.6
 			;;
 	esac
-	
-	# if we're a kde-base package, we need an exact version of kdelibs
-	# to compile correctly.
-	if [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
-		# kde 3.0.3 and 2.2.2 are special cases, because 3.0.3a and 2.2.2a exist.
+
+	# Things that need more special handling can just set NEED_KDE_DONT_ADD_KDELIBS_DEP
+	# and add one of their own manually.
+	if [ -n "$NEED_KDE_DONT_ADD_KDELIBS_DEP" ]; then
+		# do nothing
+		debug-print "$FUNCNAME: NEED_KDE_DONT_ADD_KDELIBS_DEP set, complying with request"
+	elif [ "${INHERITED//kde-dist}" != "$INHERITED" ]; then
+    		# if we're a kde-base package, we need an exact version of kdelibs
+		# to compile correctly.
+		# all kinds of special cases live here.
 		# goes to show this code is awfully inflexible, i guess.
+		# maybe i should look at relocating it...
 		if [ "$PV" == "3.0.3" ]; then
 			newdepend "=kde-base/kdelibs-3.0.3*"
 		elif [ "$PV" == "2.2.2" ]; then
