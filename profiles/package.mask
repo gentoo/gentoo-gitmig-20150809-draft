@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2959 2004/06/23 19:13:58 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2960 2004/06/23 22:05:12 squinky86 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -247,10 +247,6 @@ games-fps/aaut
 # <avenj@gentoo.org> (15 Mar 2004)
 # Borks with GCC 3.3, apparently.
 =sys-devel/oskit-20020317
-
-# <eradicator@gentoo.org> (13 Mar 2004)
-# teknap is having some gcc3.3 related issues.
-net-p2p/teknap
 
 # <vapier@gentoo.org> (09 Mar 2004)
 # CVS ebuild to help out developers
