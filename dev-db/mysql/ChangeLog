@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.86 2004/02/07 17:12:43 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.87 2004/02/24 20:10:07 mholzer Exp $
+
+  24 Feb 2004; Martin Holzer <mholzer@gentoo.org> mysql-4.0.17.ebuild:
+  x86 stable
 
   07 Feb 2004; Brad House <brad_mssw@gentoo.org> mysql-4.0.17.ebuild,
   files/mysql-gentoo-nptl.diff:
