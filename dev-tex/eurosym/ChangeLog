@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/eurosym
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.12 2004/07/12 01:07:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/ChangeLog,v 1.13 2004/09/01 08:50:17 usata Exp $
+
+*eurosym-1.4 (01 Sep 2004)
+
+  01 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -eurosym-1.2.ebuild,
+  +eurosym-1.4.ebuild:
+  Use ${P}.tar.gz instead of ${PN}.tar.gz.
+  Thanks to Urs Joss <tschenturs@gmx.ch>, closing bug #62272.
 
   12 Jul 2004; Lars Weiler <pylon@gentoo.org> eurosym-1.2.ebuild:
   Removed ppc from keywords as this package is useless with tetex-2. Furthermore

@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.2.ebuild,v 1.12 2004/07/12 01:07:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.4.ebuild,v 1.1 2004/09/01 08:50:17 usata Exp $
 
 inherit latex-package
+
 S=${WORKDIR}/${PN}
 
 DESCRIPTION="LaTeX package and fonts used to set the euro (currency) symbol."
-SRC_URI="ftp://ftp.dante.de/tex-archive/fonts/eurosym.tar.gz"
+# Snapshot taken from: ftp://ftp.dante.de/tex-archive/fonts/${PN}.tar.gz
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/eurosym.html"
 LICENSE="as-is"
 
