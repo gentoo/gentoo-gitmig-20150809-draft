@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.33 2004/07/08 19:14:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.34 2004/07/26 08:34:48 eradicator Exp $
+
+  26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/usermin-1.080-safestop.patch, usermin-1.080-r1.ebuild:
+  Add a test to setup.sh's stop command to fix possible borkage on upgrade.
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   usermin-1.080-r1.ebuild:

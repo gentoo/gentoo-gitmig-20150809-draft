@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.5 2004/07/08 19:14:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080-r1.ebuild,v 1.6 2004/07/26 08:34:48 eradicator Exp $
 
 inherit eutils
 
@@ -30,6 +30,8 @@ src_unpack() {
 
 	# Bug #46273... missing config for gentoo
 	cp quota/generic-linux-lib.pl quota/gentoo-linux-lib.p
+
+	epatch ${FILESDIR}/${P}-safestop.patch
 }
 
 src_install() {
