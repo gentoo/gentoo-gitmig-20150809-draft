@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.6 2004/07/24 05:54:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4.ebuild,v 1.7 2004/07/29 05:03:49 vapier Exp $
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"
@@ -21,8 +21,8 @@ src_install() {
 	keepdir /var/lib/vnstat
 
 	dobin src/vnstat || die
-	insinto /etc/cron.d
-	newins ${FILESDIR}/vnstat.cron vnstat
+	exeinto /etc/cron.d
+	newexe ${FILESDIR}/vnstat.cron vnstat
 	doman man/vnstat.1
 
 	newdoc pppd/vnstat_ip-down ip-down.example
