@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.3 2004/04/27 21:09:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0-r1.ebuild,v 1.4 2004/05/01 03:06:57 puggy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.debian.org/debian/dists/stable/main/source/x11/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/x11"
 
