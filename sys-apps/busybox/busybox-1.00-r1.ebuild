@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.6 2005/01/02 09:59:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.7 2005/01/10 23:34:54 gmsoft Exp $
 
 inherit eutils
 
@@ -73,7 +73,8 @@ src_unpack() {
 			einfo "Found your ${configfile} and using it."
 			return 0
 		fi
-	elif use netboot ; then
+	fi
+	if use netboot ; then
 		cp ${FILESDIR}/config-netboot .config
 		sed -i \
 			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
@@ -134,12 +135,6 @@ src_install() {
 
 	into /
 	dobin busybox
-	if use netboot ; then
-		dosym /bin/busybox /bin/sh
-		dodir /sbin
-		dosym /bin/busybox /sbin/init
-		return 0
-	fi
 	if use make-busybox-symlinks ; then
 		if [ ! "${VERY_BRAVE_OR_VERY_DUMB}" = "yes" ] && [ "${ROOT}" = "/" ];
 		then

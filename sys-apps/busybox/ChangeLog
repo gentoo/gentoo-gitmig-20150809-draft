@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.55 2005/01/02 09:59:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.56 2005/01/10 23:34:54 gmsoft Exp $
+
+  11 Jan 2005; Guy Martin <gmsoft@gentoo.org> busybox-1.00-r1.ebuild:
+  Yes we *NEED* the symlinks for netboot.
 
   02 Jan 2005; Guy Martin <gmsoft@gentoo.org> busybox-1.00-r1.ebuild:
   Added dodir before dosym for creating correctly the link /sbin/init when
