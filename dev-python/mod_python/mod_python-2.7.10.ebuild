@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.1 2004/01/24 21:06:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.2 2004/04/01 01:52:07 kloeri Exp $
 
 inherit python
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.apache.org/dist/httpd/modpython/${P}.tgz"
 HOMEPAGE="http://www.modpython.org/"
 
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
