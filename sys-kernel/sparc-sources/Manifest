@@ -1,9 +1,10 @@
-MD5 5209cd1cba2ccff138fd8e2fbcb942ed ChangeLog 12697
+MD5 50d2533f80f58d0a1e4cdd5f473a56e1 ChangeLog 12904
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
 MD5 e49a4396990adcba8965d8b5626be063 sparc-sources-2.4.28-r1.ebuild 2196
 MD5 4712f9ab540112b45aa8980492aaf2ba sparc-sources-2.4.28-r2.ebuild 2196
 MD5 75ed8d1e0c929e1bd2fe36ce40200b17 sparc-sources-2.4.28-r3.ebuild 2339
 MD5 d98aabe4831da717436ab6d1012d5a24 sparc-sources-2.4.28-r4.ebuild 2398
+MD5 7c9ed2b4468617c2381f04413c746deb sparc-sources-2.4.28-r5.ebuild 2402
 MD5 935f3a9c9a5209ad79a0cdbf9ca4b610 files/U1-hme-lockup.patch 263
 MD5 6ed89b8ac0b47a4c25d3a616ef9245cc files/2.4.28-vma-PaX.patch 11369
 MD5 8100ed8276f69a4b404939a5570ee0d0 files/digest-sparc-sources-2.4.28-r1 143
@@ -13,3 +14,5 @@ MD5 ae7509dcd16fac1bc6c6f42cc821b16b files/digest-sparc-sources-2.4.28-r3 143
 MD5 757ee1239c3f14645ccea3640d551e11 files/linux-2.4.28-CAN-2004-1056.patch 11249
 MD5 ae7509dcd16fac1bc6c6f42cc821b16b files/digest-sparc-sources-2.4.28-r4 143
 MD5 4bc00101d2c6a9722b16eb55f6cec2a0 files/2.4-brk-locked-plasmaroo.patch 8275
+MD5 29e531cdd3f2effce5e31a1f2afb5b5d files/2.4-brk-locked-plasmaroo.PaX.patch 8912
+MD5 ae7509dcd16fac1bc6c6f42cc821b16b files/digest-sparc-sources-2.4.28-r5 143
