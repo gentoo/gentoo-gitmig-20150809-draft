@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.25 2005/01/06 18:17:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.26 2005/02/26 22:25:23 genstef Exp $
+
+  26 Feb 2005; Stefan Schweizer <genstef@gentoo.org> +files/capi.conf,
+  capi4k-utils-20041006-r5.ebuild:
+  Changing capi.conf to also include the fritzcapi/fcdsl entries.
 
 *capi4k-utils-20041006-r5 (06 Jan 2005)
 
