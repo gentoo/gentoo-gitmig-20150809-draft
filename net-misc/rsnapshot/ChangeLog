@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsnapshot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/ChangeLog,v 1.9 2004/07/12 00:52:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/ChangeLog,v 1.10 2004/08/26 01:33:57 kloeri Exp $
+
+  26 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> rsnapshot-1.1.6.ebuild:
+  x86 stable bump.
 
 *rsnapshot-1.1.6 (12 Jul 2004)
 

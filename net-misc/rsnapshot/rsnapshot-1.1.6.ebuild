@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/rsnapshot-1.1.6.ebuild,v 1.1 2004/07/12 00:52:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsnapshot/rsnapshot-1.1.6.ebuild,v 1.2 2004/08/26 01:33:57 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rsnapshot.org/downloads/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.2
