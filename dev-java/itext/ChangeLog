@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/itext
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.1 2005/01/05 11:02:34 mglauche Exp $
+
+*itext-1.1 (05 Jan 2005)
+
+  05 Jan 2005; <mglauche@gentoo.org> +Changelog, +metadata.xml,
+  +itext-1.1.4.ebuild, +itext-1.1.ebuild:
+  new location: dev-java/itext
+  version bumps
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>java</herd>
+ <maintainer>
+    <email>mglauche@gentoo.org</email>
+    <name>Michael Glauche</name>
+  </maintainer>
+<longdescription>
+ iText is a library that allows you to generate PDF files on the fly.
+</longdescription>
+</pkgmetadata>
