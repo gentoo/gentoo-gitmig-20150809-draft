@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/kcc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.1 2002/11/05 14:40:22 stubear Exp $
+
+*kcc-1.0 (28 Oct 2002)
+
+  28 Oct 2002; Stuart Bouyer <stubear@gentoo.org> kcc-1.0.ebuild  :
+
+  Initial ebuild submitted by Yukihiro Nakai <nakai@gnome.gr.jp>. Warning
+  the SRC_URI is sometimes slow to download from. I'm looking for mirrors,
+  but this is an old package.
