@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-0.9.ebuild,v 1.2 2003/11/12 06:11:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdplay/cdplay-0.9.ebuild,v 1.3 2004/03/01 05:37:12 eradicator Exp $
 
 DESCRIPTION="Console CD Player"
 HOMEPAGE="http://www.x-paste.de/projects/index.php"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2.ebuild,v 1.1 2003/06/21 00:41:11 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2.ebuild,v 1.2 2004/03/01 05:37:14 eradicator Exp $
 
 DESCRIPTION="Free software bass synthesizer step sequencer"
 HOMEPAGE="http://www.bitmechanic.com/projects/freebirth/"

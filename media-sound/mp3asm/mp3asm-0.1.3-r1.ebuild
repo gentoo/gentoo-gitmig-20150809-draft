@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.5 2003/11/28 20:49:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/mp3asm-0.1.3-r1.ebuild,v 1.6 2004/03/01 05:37:15 eradicator Exp $
 
 MY_P=${PN}-${PV}-${PR/r/}
 DESCRIPTION="A command line tool to clean and edit mp3 files."

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.5 2004/01/22 11:08:53 torbenh Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.6 2004/03/01 05:37:16 eradicator Exp $
 
   22 Jan 2004; <torbenh@gentoo.org> metadata.xml, tapiir-0.7.1.ebuild:
   Fixed alsa-1.0 compile breakage

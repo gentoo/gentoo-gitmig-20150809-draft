@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.8 2003/11/11 13:11:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.9 2004/03/01 05:37:16 eradicator Exp $
 
 DESCRIPTION="gtk+ based drum machine"
 HOMEPAGE="http://muth.org/Robert/Trommler/"

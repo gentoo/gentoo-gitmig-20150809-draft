@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/gqradio
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.4 2003/07/02 14:39:54 weeve Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.5 2004/03/01 05:37:14 eradicator Exp $
 
   02 Jul 2003; Jason Wever <weeve@gentoo.org> metadata.xml:
   Added metadata.xml

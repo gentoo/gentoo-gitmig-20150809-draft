@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sphinx2/sphinx2-0.4.ebuild,v 1.4 2003/07/12 20:30:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sphinx2/sphinx2-0.4.ebuild,v 1.5 2004/03/01 05:37:16 eradicator Exp $
 
 DESCRIPTION="Sphinx2 - CMU Speech Recognition-engine"
 HOMEPAGE="http://fife.speech.cs.cmu.edu/sphinx/"

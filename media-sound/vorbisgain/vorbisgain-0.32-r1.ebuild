@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.32-r1.ebuild,v 1.1 2003/09/20 11:51:06 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/vorbisgain-0.32-r1.ebuild,v 1.2 2004/03/01 05:37:16 eradicator Exp $
 
 DESCRIPTION="vorbisgain calculates a percieved sound level of an Ogg Vorbis file using the ReplayGain algorithm and stores it in the file header"
 HOMEPAGE="http://sjeng.sourceforge.net/ftp/vorbis/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.3 2003/07/12 20:31:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.4 2004/03/01 05:37:16 eradicator Exp $
 
 DESCRIPTION="Sets up hotplugging support for MidiMan midisport 1x1/2x2 usb devices"
 HOMEPAGE="http:///"

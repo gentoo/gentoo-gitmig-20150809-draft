@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/jack-rack
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.3 2003/10/16 19:46:45 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.4 2004/03/01 05:37:14 eradicator Exp $
 
 *jack-rack-1.4.2 (17 Oct 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.3 2003/10/27 09:52:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.4 2004/03/01 05:37:13 eradicator Exp $
 
 MY_P="cdstatus${PV}"
 DESCRIPTION="Tool for diagnosing cdrom drive and digital data (audio) extraction"
