@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.41 2003/10/20 23:14:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.42 2003/10/22 20:26:53 rac Exp $
+
+  22 Oct 2003; <rac@gentoo.org> perl-5.8.1-r2.ebuild,
+  files/perl-5.8.1-perldoc-emptydirs.patch:
+  Forward-port the perldoc emptydirs patch
 
   20 Oct 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.1-r1.ebuild,
   perl-5.8.1-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.4 2003/10/20 23:16:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1-r2.ebuild,v 1.5 2003/10/22 20:26:53 rac Exp $
 
 inherit eutils flag-o-matic
 
@@ -86,12 +86,7 @@ src_unpack() {
 	# nonexistent directories; fixes bug #16589.
 	# <rac@gentoo.org> (28 Feb 2003)
 
-	# we are using the vendor directory now, so it should not be
-	# empty.  this patch doesn't come close to applying, so leaving
-	# off for now.
-	# <rac@gentoo.org> (10 Jul 2003)
-
-	#cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-perldoc-emptydirs.patch
 
 	# this lays the groundwork for solving the issue of what happens
 	# when people (or ebuilds) install different versiosn of modules
