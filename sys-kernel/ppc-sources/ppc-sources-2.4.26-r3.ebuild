@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.26-r3.ebuild,v 1.1 2004/07/09 18:17:50 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.26-r3.ebuild,v 1.2 2004/07/15 05:27:39 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -11,6 +11,7 @@ GPV=26.1
 GPV_SRC="mirror://gentoo/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
 
 KEYWORDS="-* ppc"
+IUSE=""
 
 UNIPATCH_LIST="${DISTDIR}/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	${FILESDIR}/${P}.CAN-2004-0394.patch

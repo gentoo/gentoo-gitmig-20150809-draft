@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.23-r1.ebuild,v 1.5 2004/06/24 23:00:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.23-r1.ebuild,v 1.6 2004/07/15 05:27:39 agriffis Exp $
 
 # Whats in this kernel?
 #
@@ -28,7 +28,7 @@
 # - Initial support for iBook G4
 # - Fix for Promise IDE controller on Xserve's
 
-IUSE=""
+IUSE="xfs"
 
 ETYPE="sources"
 inherit kernel eutils
