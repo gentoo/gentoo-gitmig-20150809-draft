@@ -1,4 +1,14 @@
-MD5 3f662187d5ab53e2dfd8b1dff0cf69ce ChangeLog 979
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 082be45d97162966a9b848a4eb6ceb9e fluxter-0.1.0.ebuild 710
-MD5 236c68c69553ad05ff7f1dd66c9baeae metadata.xml 239
+MD5 3f662187d5ab53e2dfd8b1dff0cf69ce ChangeLog 979
+MD5 6d984fdc3a2bfe09ec7cb86b38267de3 metadata.xml 256
 MD5 83c7aec55abae0ca21a2a7abc40b064f files/digest-fluxter-0.1.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5nJ7EZCkKN40op4RAkZ3AJ42QrsWtO0uXmVFIeqxso0tUqgFKQCgl3fO
+tXkovF5o03vVEHzHDuk9wzU=
+=M1uq
+-----END PGP SIGNATURE-----
