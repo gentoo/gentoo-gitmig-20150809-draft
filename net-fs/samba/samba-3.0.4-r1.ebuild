@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.5 2004/06/24 22:43:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.6 2004/06/26 17:23:28 genone Exp $
 
 inherit eutils
 
@@ -331,8 +331,9 @@ src_install() {
 		rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
 	fi
 	chown -R root:root ${D}/usr/share/doc/${PF}
-	# man, info
-	gzip --recursive ${D}/usr/man
+
+	# moving manpages
+	mv ${D}/usr/man ${D}/usr/share/man
 }
 
 pkg_postinst() {
