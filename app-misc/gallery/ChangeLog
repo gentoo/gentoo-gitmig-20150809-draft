@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.14 2003/11/24 09:49:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.15 2003/11/27 20:23:38 mholzer Exp $
+
+*gallery-1.4.1 (27 Nov 2003)
+
+  27 Nov 2003; Martin Holzer <mholzer@gentoo.org> gallery-1.4.1.ebuild:
+  Version bumped.
 
 *gallery-1.4.1_rc4 (24 Nov 2003)
 
