@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.4 2003/02/12 07:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.5 2003/10/21 22:27:25 taviso Exp $
+
+  21 Oct 2003; Tavis Ormandy <taviso@gentoo.org> ddclient-3.6.2.ebuild:
+  adding ~alpha keyword
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
