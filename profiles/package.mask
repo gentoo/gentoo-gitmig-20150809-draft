@@ -356,3 +356,7 @@ dev-lang/tcl-tk
 #old location is deprecated.  Additional game packages
 #for xmame should still go into app-games
 >=app-games/xmame-0.53.1
+
+# gbevin@gentoo.org, 7 Feb 2002
+# really not finished or tested, don't use !
+dev-util/subversion
