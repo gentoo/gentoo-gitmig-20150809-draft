@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header: /home/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog
 
+  09 Sep 2003; Michael Imhof <tantive@gentoo.org>
+  Little changes in the ebuilds, should close #28166
+
 *openpbs-2.3.16-r1 (03 Jun 2003)
 
   03 Jun 2003; Michael Imhof <tantive@gentoo.org>

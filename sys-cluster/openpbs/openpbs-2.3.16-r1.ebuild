@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.1 2003/06/03 12:56:02 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.2 2003/09/09 17:24:34 tantive Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
-A=${NAME}.tar.gz
+B=${NAME}.tar.gz
 S="${WORKDIR}/${NAME}"
 
 DESCRIPTION="The Portable Batch System (PBS) is a flexible batch queueing and workload management system"
@@ -21,10 +21,10 @@ RDEPEND="${DEPEND} crypt? ( net-misc/openssh )"
 
 
 src_unpack() {
-        if [ ! -e ${DISTDIR}/${A} ] ; then
+        if [ ! -e ${DISTDIR}/${B} ] ; then
                 einfo "Due to license issues you have to download"
                 einfo "the appropriate openpbs archive:"
-		einfo "http://www.openpbs.org/UserArea/Download/"${A}
+		einfo "http://www.openpbs.org/UserArea/Download/"${B}
 		einfo ""
                 einfo "The archive should be placed into ${DISTDIR}."
 
@@ -32,7 +32,7 @@ src_unpack() {
         fi
 
 	cd ${WORKDIR}
-	unpack ${A}
+	unpack ${B}
 	cd ${S}
 	# apply a patch I made for gcc3. 
 	# maybe this should be done with sed but I'm too lazy
