@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.5 2002/04/16 09:44:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.6 2002/04/18 18:39:29 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -49,7 +49,7 @@ src_unpack() {
 	)
 
 	use matrox && ( \
-		cd ${S}/drivers;
+		cd ${S}/drivers
 		patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
 	)
 	
@@ -142,7 +142,7 @@ src_compile() {
 	emake all || die
 	
 	use matrox && ( \
-		cd drivers \
+		cd drivers 
 		emake all || die
 	)
 }

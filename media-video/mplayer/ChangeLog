@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.10 2002/04/17 15:56:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.11 2002/04/18 18:39:29 seemant Exp $
+
+  18 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+  fixed a small typo I made in the matrox section
 
   17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r6.ebuild
   files/digest-mplayer-0.60-r6 :
