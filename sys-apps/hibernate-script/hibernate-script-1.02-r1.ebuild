@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/hibernate-script-1.02-r1.ebuild,v 1.1 2004/12/07 20:07:48 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/hibernate-script-1.02-r1.ebuild,v 1.2 2004/12/30 16:51:59 brix Exp $
 
 # The following works with both pre-releases and releases
 MY_P=${PN}-${PV/_/-}
@@ -13,7 +13,7 @@ SRC_URI="http://download.berlios.de/softwaresuspend/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
