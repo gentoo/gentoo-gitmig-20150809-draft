@@ -1,6 +1,16 @@
-MD5 5a2b8a3a0602026008c48466132e66b7 ChangeLog 10397
-MD5 56d78ea6a5d49e31ea36cdc98b0b48ad metadata.xml 352
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b700dd3fabe2af07a2554ec20419bb60 links-2.1_pre15.ebuild 3734
-MD5 c41fc5981244d82657e4a2dac584b264 files/digest-links-2.1_pre15 68
+MD5 27f31bbe7662e8869631e9d886d4e741 ChangeLog 10401
+MD5 56d78ea6a5d49e31ea36cdc98b0b48ad metadata.xml 352
 MD5 52bed2c64a669feed86577cb52f8cbb5 files/links-0.96-r2-gentoo.patch 1400
+MD5 c41fc5981244d82657e4a2dac584b264 files/digest-links-2.1_pre15 68
 MD5 85b8ee32c98ab5a596d1d1b6ca3d68eb files/links-2.1pre15-utf8.diff.bz2 4670
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNfN9I1lqEGTUzyQRAuP8AJ93Ig0+Qvf3nMFGjVLjQst2IabD2gCcDQl8
+z3XCmsscn0MYNIfuo21Hz6A=
+=s9MD
+-----END PGP SIGNATURE-----
