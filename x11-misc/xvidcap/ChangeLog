@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.7 2004/08/10 03:19:50 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.8 2004/08/21 12:03:21 s4t4n Exp $
+
+  21 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> xvidcap-1.1.3.ebuild:
+  General ebuild clean up: remove 'inherit eutils', add '|| die' clause
+  to emake and einstall, update dodoc, fix #58322... I don't think changes
+  are dramatic enough for a revision bump, so there is none ;-)
 
   10 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> xvidcap-1.1.3.ebuild:
   xvidcap will not compile with ffmpeg-0.4.9. Updated DEPEND accordingly.

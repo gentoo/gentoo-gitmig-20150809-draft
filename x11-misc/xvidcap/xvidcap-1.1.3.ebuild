@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3.ebuild,v 1.5 2004/08/10 03:19:50 pkdawson Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3.ebuild,v 1.6 2004/08/21 12:03:21 s4t4n Exp $
 
 IUSE="gtk"
 
@@ -25,12 +23,14 @@ SLOT="0"
 src_compile() {
 	use gtk && myconf="${myconf} --with-gtk2"
 
-	econf ${myconf} || die "econf failed"
-	emake
+	econf ${myconf} || die "Configuration failed"
+	emake || die "Compilation failed"
 }
 
 src_install() {
-	einstall
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
-	prepall
+	einstall || die "Installation failed"
+
+	# Fix for #58322
+	rm -fr ${D}/usr/share/doc/${PN}_${PV}
+	dodoc NEWS TODO README AUTHORS INSTALL ChangeLog XVidcap.ad
 }
