@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.106 2004/03/26 08:45:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.107 2004/03/26 18:50:01 zul Exp $
+
+  26 Mar 2004; <zul@gentoo.org> files/2.0.49/gentestcrt.sh:
+  Copied missing gentestcrt.sh from ${FILESDIR}/2.0.40. Closes #45786.
 
   26 Mar 2004; Robin H. Johnson <robbat2@gentoo.org>
   files/2.0.49/apache2.initd:
