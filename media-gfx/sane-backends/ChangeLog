@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.4 2002/04/14 07:07:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.5 2002/06/22 08:40:51 rphillips Exp $
+
+*sane-backends-1.0.8 (22 Jun 2002)
+
+  22 Jun 2002; Ryan Phillips <rphillips@gentoo.org> sane-backends-1.0.8.ebuild
+  files/digest-sane-backends-1.0.8
+
+  New version
 
 *sane-backends-1.0.7-r1 (13 Apr 2002)
 
@@ -11,16 +18,6 @@
   variable.  This solution was found by the bug reporter of bug #1595,
   MvOstheim@web.de (Michael v.Ostheim)
 
-=======
-*sane-backends-1.0.7-r1 (13 Apr 2002)
-
-  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
-  sane-backends-1.0.7-r1.ebuild files/digest-sane-backends-1.0.7-r1 :
-
-  Added a pkg_postinst() function to add the SANE_CONFIG_DIR environment
-  variable.
-
->>>>>>> 1.3
 *sane-backends-1.0.7 (2 Mar 2002)
 
   2 Mar 2002; Chris Houser <chouser@gentoo.org>
