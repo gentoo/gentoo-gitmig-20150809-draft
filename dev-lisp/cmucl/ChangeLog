@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cmucl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.1 2003/09/24 00:27:43 mkennedy Exp $
+
+*cmucl-18e (23 Sep 2003)
+
+  23 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
