@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.23 2003/06/08 16:57:54 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.24 2003/06/08 23:28:53 lu_zero Exp $
+
+  09 Jun 2003; Luca Barbato <joker@gentoo.org> cracklib-2.7-r7.ebuild:
+  Added ppc stable keyword
 
   08 Jun 2003; Christian Birchinger <joker@gentoo.org> cracklib-2.7-r7.ebuild:
   Added sparc stable keyword
