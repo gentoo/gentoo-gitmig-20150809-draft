@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmmsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.2 2004/02/27 03:24:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsd/ChangeLog,v 1.3 2004/04/08 07:55:05 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsd-0.3.ebuild:
+  Removed explicit S=
 
   26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsd-0.3.ebuild:
   Stable in x86.
