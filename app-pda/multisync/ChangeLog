@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.15 2004/10/01 23:39:32 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.16 2004/10/04 18:54:54 brix Exp $
+
+  04 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  multisync-0.81-r1.ebuild, multisync-0.82.ebuild:
+  Updated irda-utils dependency to new location
 
   02 Oct 2004; Gustavo Felisberto <humpback@gentoo.org>;
   +files/multisync-0.82-bluetooth-sdp-2.patch, multisync-0.82.ebuild:

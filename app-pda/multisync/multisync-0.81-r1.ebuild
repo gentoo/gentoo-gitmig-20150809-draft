@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.11 2004/08/21 15:34:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.12 2004/10/04 18:54:55 brix Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="virtual/libc
 	>=gnome-base/orbit-2.8.2
 	>=dev-libs/openssl-0.9.6j
 	evo?  ( =mail-client/evolution-1.4* )
-	irmc? ( >=sys-apps/irda-utils-0.9.15
+	irmc? ( >=net-wireless/irda-utils-0.9.15
 		>=dev-libs/openobex-1
 		bluetooth? ( >=net-wireless/bluez-libs-2.3
 					 >=net-wireless/bluez-sdp-1.0
