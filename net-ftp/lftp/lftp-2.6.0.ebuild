@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.0.ebuild,v 1.1 2002/08/10 16:30:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.0.ebuild,v 1.2 2002/08/13 21:02:25 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LFTP is a sophisticated ftp/http client, file transfer program."
@@ -39,7 +39,7 @@ src_install() {
 
 	make install DESTDIR=${D} || die
 
-	hrmph, empty..
+	# hrmph, empty..
 	rm -rf ${D}/usr/lib
 
 	dodoc BUGS COPYING ChangeLog FAQ FEATURES MIRRORS \
