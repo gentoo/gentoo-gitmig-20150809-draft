@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15-r1.ebuild,v 1.1 2004/09/09 23:39:51 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15-r1.ebuild,v 1.2 2004/09/10 08:30:47 tigger Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -21,10 +21,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use static && sed -i -e 's/TARGETS += lvm.static/TARGETS = .commands lvm-static/' \
+	use static && ( sed -i -e 's/TARGETS += lvm.static/TARGETS = .commands lvm-static/' \
 	-e 's/^install_tools_static:/install_tools_unused:/' \
 	-e 's/^install_tools_dynamic: lvm/install_tools_static: lvm.static/' \
-	-e 's/lvm \\$/lvm.static \\/' tools/Makefile.in || die "sed failed"
+	-e 's/lvm \\$/lvm.static \\/' tools/Makefile.in || die "sed failed" )
 }
 
 
