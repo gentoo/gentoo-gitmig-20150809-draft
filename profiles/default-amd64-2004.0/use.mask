@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.9 2004/08/03 00:20:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.10 2004/09/01 20:25:25 lv Exp $
+
+#unknowns
+afs
+drac
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build

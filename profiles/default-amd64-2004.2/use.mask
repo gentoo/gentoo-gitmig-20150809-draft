@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.7 2004/08/25 21:08:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.8 2004/09/01 20:25:25 lv Exp $
+
+# unknowns
+afs
+drac
 
 # WON'T BUILD - SECTION
 
