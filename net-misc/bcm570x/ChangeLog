@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bcm570x
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm570x/ChangeLog,v 1.2 2004/06/24 23:36:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm570x/ChangeLog,v 1.3 2004/09/29 20:28:57 kanaka Exp $
+
+  29 Sep 2004; Joel Martin <kanaka@gentoo.org> :
+  Added version 7.3.5 and fixed to work with kernel 2.6. Removed fetch
+  restriction.
 
 *bcm570x-7.1.22 (08 Apr 2004)
 
