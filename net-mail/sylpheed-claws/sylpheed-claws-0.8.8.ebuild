@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.3 2002/12/26 17:45:45 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.4 2003/01/01 22:07:46 azarah Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
-MY_P="sylpheed-${PV}claws"
-S=${WORKDIR}/${MY_P}
+inherit eutils
 
+MY_P="sylpheed-${PV}claws"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Bleeding edge version of Sylpheed"
 SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
@@ -38,8 +39,16 @@ src_unpack() {
 	if use gtkhtml
 	then
 		cd ${S}
-		patch -p1 < ${FILESDIR}/sylpheed-0.8.3claws32-dillo.patch || die
+		epatch ${FILESDIR}/sylpheed-0.8.3claws32-dillo.patch
 	fi
+
+	# Change package name to sylpheed-claws ...
+	for i in `find ${S}/ -name 'configure*'`
+	do
+		cp $i ${i}.orig
+		sed -e "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" \
+			${i}.orig > ${i}
+	done
 }
 
 src_compile() {
@@ -76,29 +85,24 @@ src_compile() {
 		--program-suffix=-claws \
 		${myconf} || die "./configure failed"
 
-	for i in `find . -name Makefile` ; do
-		cp $i ${i}.orig
-		sed "s/PACKAGE = sylpheed/PACKAGE = sylpheed-claws/" \
-			< ${i}.orig \
-			> ${i}
-	done
-	
-	cp sylpheed.desktop sylpheed.desktop.orig
-	sed "s/sylpheed.png/sylpheed-claws.png/" \
-		< sylpheed.desktop.orig
-		> sylpheed.desktop
-
 	emake || die
 }
 
 src_install() {
 	
 	make DESTDIR=${D} install || die
-	
-	use gnome || rm -rf ${D}/usr/share/gnome
+
+	local menuentry="/usr/share/gnome/apps/Internet/sylpheed.desktop"
+	use gnome \
+		&& {
+			dosed "s/Sylpheed/Sylpheed Claws/" ${menuentry}
+			dosed "s/sylpheed/sylpheed-claws/" ${menuentry}
+			mv ${D}${menuentry} ${D}${menuentry/sylpheed/sylpheed-claws}
+		} \
+		|| rm -rf ${D}/usr/share/gnome
 
 	mv ${D}/usr/share/pixmaps/sylpheed.png \
 		${D}/usr/share/pixmaps/sylpheed-claws.png
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*  
-}	
+}

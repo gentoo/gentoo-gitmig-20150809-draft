@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.26 2002/12/26 17:22:38 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.27 2003/01/01 22:07:46 azarah Exp $
+
+  1 Jan 2003; Martin Schlemmer <azarah@gentoo.org> sylpheed-claws-0.8.8.ebuild :
+
+  Fix Gnome .desktop having no data; moved it to sylpheed-claws; Also change
+  menu entry name to sylpheed-claws.
 
 *sylpheed-claws-0.8.8 (26 Dec 2002)
 
