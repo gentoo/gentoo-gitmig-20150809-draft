@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.6 2003/02/13 13:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr2-driver/dxr2-driver-1.0.4.ebuild,v 1.7 2003/09/02 20:48:32 chouser Exp $
 
 DESCRIPTION="Driver and minimal DVD player(s) for the Creative Labs Dxr2 Card"
 HOMEPAGE="http://dxr2.sourceforge.net/"
@@ -41,7 +41,7 @@ src_compile() {
 
 src_install () {
 	# make install doesn't create standard dirs -- do that now
-	dodir /usr/bin /usr/lib /usr/src /etc/modules.d
+	dodir /usr/bin /usr/lib /usr/src /etc/modules.d /dev
 
 	# no devfs support in dxr2 yet?
 	mknod ${D}/dev/dxr2 c 120 0 || die
