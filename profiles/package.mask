@@ -22,6 +22,11 @@
 ##
 
 
+# <murphy@gentoo.org> (14 Sep 2002)
+# Bugfix release, may resolve some issues on sparc64 but needs further testing
+# before full-scale deployment
+=sys-apps/silo-1.2.6
+
 # <woodchip@gentoo.org> (14 Sep 2002)
 # Chase latest stable release; added libreiserfs support.
 =sys-apps/parted-1.6.3
