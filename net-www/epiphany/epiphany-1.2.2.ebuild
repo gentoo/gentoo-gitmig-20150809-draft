@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.2.ebuild,v 1.1 2004/03/31 22:39:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.2.ebuild,v 1.2 2004/04/19 22:05:47 khai Exp $
 
 inherit gnome2
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
-HOMEPAGE="http://epiphany.mozdev.org/"
+HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 LICENSE="GPL-2"
 
 SLOT="0"

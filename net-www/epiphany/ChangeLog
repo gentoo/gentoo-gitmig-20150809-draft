@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.48 2004/04/17 20:06:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.49 2004/04/19 22:05:46 khai Exp $
+
+  19 Apr 2004; <khai@gentoo.org> epiphany-1.0.3.ebuild, epiphany-1.0.7.ebuild,
+  epiphany-1.2.2.ebuild:
+  Fixed homepage url, closes #48166
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> epiphany-1.0.7.ebuild:
   stable on amd64
