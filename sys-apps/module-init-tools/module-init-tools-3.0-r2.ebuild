@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.11 2004/10/03 10:05:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0-r2.ebuild,v 1.12 2004/12/23 23:21:01 vapier Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 
@@ -39,6 +39,7 @@ src_unpack() {
 	if ! use no-old-linux ; then
 		cd ${WORKDIR}/modutils-${MODUTILS_PV}
 		epatch ${FILESDIR}/modutils-2.4.22-no-above-below.patch
+		epatch ${FILESDIR}/modutils-2.4.27-gcc34.patch
 	fi
 
 	# Support legacy .o modules

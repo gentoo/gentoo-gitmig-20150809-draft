@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.27.ebuild,v 1.2 2004/09/02 13:20:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.27.ebuild,v 1.3 2004/12/23 23:16:36 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit eutils
 
 DESCRIPTION="Standard kernel module utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
@@ -22,6 +22,8 @@ src_unpack() {
 
 	EPATCH_OPTS="-d ${S}/util" \
 	epatch ${FILESDIR}/alias.h.diff
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 }
 
 src_compile() {

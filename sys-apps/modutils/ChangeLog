@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.44 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.45 2004/12/23 23:16:36 vapier Exp $
+
+  23 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/2.4.27-gcc34.patch,
+  modutils-2.4.27.ebuild:
+  Add patch to fix gcc-3.4.x building #74538 by splite.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   modutils-2.4.23.ebuild:
