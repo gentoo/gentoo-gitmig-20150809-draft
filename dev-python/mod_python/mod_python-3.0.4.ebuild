@@ -1,23 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.0_beta4.ebuild,v 1.6 2003/11/14 11:43:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.4.ebuild,v 1.1 2003/12/12 02:44:23 kloeri Exp $
+
 
 DESCRIPTION="An Apache2 DSO providing an embedded Python interpreter"
 HOMEPAGE="http://www.modpython.org/"
-
-NEWP="`echo ${P} | sed -e 's|_beta|-BETA|'`"
-S=${WORKDIR}/${NEWP}
-SRC_URI="http://www.apache.org/dist/httpd/modpython/dev/${NEWP}.tgz"
-DEPEND="dev-lang/python =net-www/apache-2*"
+SRC_URI="http://www.apache.org/dist/httpd/modpython/${P}.tgz"
 LICENSE="Apache-1.1"
+SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-SLOT="0"
+DEPEND="dev-lang/python >=net-www/apache-2.0"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	patch -p0 <${FILESDIR}/mod_python-3.0.0_beta4-destdir.diff || die
+	sed -i -e 's:mod_python.so :mod_python.so $(DESTDIR):' Makefile.in
+	sed -i -e 's:--optimize 2:--prefix=${DESTDIR}/usr --optimize 2:' dist/Makefile.in
+
+	# Fix compilation when using Python-2.3
+	has_version ">=dev-lang/python-2.3" && \
+		sed -i -e 's:LONG_LONG:PY_LONG_LONG:g' \
+		"${S}/src/requestobject.c"
 }
 
 src_compile() {
@@ -38,8 +42,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To have Apache run python programs, please do the following:"
-	einfo "Edit /etc/conf.d/apache2 (/etc/conf.d/apache if you're using"
-	einfo "apache 1.x) and add \"-D PYTHON\""
+	einfo "Edit /etc/conf.d/apache2 and add \"-D PYTHON\""
 	einfo "That will setup Apache to load python when it starts."
 	einfo
 	einfo "If you're new to mod_python there's a manual and tutorial"
