@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.1 2004/02/27 03:41:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.2 2004/02/28 22:41:04 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -34,8 +34,8 @@ src_compile() {
 	# non-x86 maintainers, add to the the following and verify
 
 	if use lesstif || test -d /usr/X11R6/include/lesstif; then
-		sed -i -e 's,-I/usr/X11R6/include,/usr/X11R6/include/lesstif,g' \
-			-e 's,-L/usr/X11R6/lib,-L/usr/X11R6/lib/lesstif,g' \
+		sed -i -e 's,-I/usr/X11R6/include,-I/usr/X11R6/include/lesstif,g' \
+			-e 's,-L/usr/X11R6/lib,-L/usr/X11R6/lib/lesstif -L/usr/X11R6/lib,g' \
 			src/motif/server/Config.x86
 	fi
 
