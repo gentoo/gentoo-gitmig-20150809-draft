@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.18 2003/01/08 23:25:44 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.19 2003/02/07 20:31:20 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> texinfo-4.3-r1.ebuild :
+  Added hppa to keywords.
 
   08 Jan 2003; Jared Hudson <jhhudso@gentoo.org> texinfo-4.3-r1.ebuild : Fixed
   bug where install-info wasn't being installed during bootstrap
