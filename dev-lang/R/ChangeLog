@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.36 2004/11/17 16:44:42 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.37 2005/02/02 13:46:17 kugelfang Exp $
+
+  02 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> R-2.0.0.ebuild:
+  GNU Fortran 77 profile name changed to g77 in fortran.eclass
 
   17 Nov 2004; Markus Rothe <corsair@gentoo.org> R-2.0.0.ebuild:
   stable on ppc64
