@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-3.2a.ebuild,v 1.7 2004/06/24 22:44:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-3.2a.ebuild,v 1.8 2004/07/13 18:11:51 agriffis Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="Project management and coordination system"
 HOMEPAGE="http://www.phprojekt.com/"
 SRC_URI="http://www.phprojekt.de/download/${PN}.tar.gz"
-IUSE="apache2"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
