@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3.ebuild,v 1.3 2003/12/25 20:04:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3.ebuild,v 1.4 2004/01/19 04:51:48 strider Exp $
 
 S=${WORKDIR}/jakarta-${PN}-${PV}
 DESCRIPTION="100% Pure Java Regular Expression package"
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/"
 
 SLOT="1"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc amd64"
 
 DEPEND=">=virtual/jdk-1.3"
 

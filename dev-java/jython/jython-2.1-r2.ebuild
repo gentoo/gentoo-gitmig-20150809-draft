@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r2.ebuild,v 1.1 2004/01/17 16:03:14 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r2.ebuild,v 1.2 2004/01/19 04:50:35 strider Exp $
 
 DESCRIPTION="An implementation of Python written in Java"
 HOMEPAGE="http://www.jython.org"
@@ -8,7 +8,7 @@ MY_PV="21"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.class"
 LICENSE="JPython"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc amd64"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.2"

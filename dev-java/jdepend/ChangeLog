@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.4 2004/01/18 22:08:56 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.5 2004/01/19 04:49:13 strider Exp $
+
+  19 Jan 2004; Adrian Almenar <strider@gentoo.org> jdepend-2.6.ebuild:
+  Added amd64 keyword.
 
   18 Jan 2004; Adrian Almenar <strider@gentoo.org> jdepend-2.6.ebuild:
   Fixed #37878 with patch from Bert Van Vreckem <Bert.Van.Vreckem@pandora.be>,
