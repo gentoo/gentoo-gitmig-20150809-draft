@@ -1,19 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.12 2003/12/09 17:35:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.13 2004/01/13 15:56:55 usata Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig
 
 S=${WORKDIR}/${P/b/}
 DESCRIPTION="Any to PostScript filter"
 SRC_URI="ftp://ftp.enst.fr/pub/unix/a2ps/${P}.tar.gz
 	cjk? ( http://www.on.cs.keio.ac.jp/~yasu/linux/GNU/a2ps-4.13-ja_nls.patch ) "
-PATCHES="${FILESDIR}/a2ps-4.13-autoconf-gentoo.diff
-	${FILESDIR}/a2ps-4.13-stdout.diff"
-
-if use cjk; then
-	PATCHES="${PATCHES} ${DISTDIR}/a2ps-4.13-ja_nls.patch"
-fi
 
 HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps/"
 
@@ -38,7 +32,11 @@ src_unpack() {
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
 	cd ${S}
-	xpatch ${PATCHES} || die
+
+	epatch ${FILESDIR}/a2ps-4.13-autoconf-gentoo.diff
+	epatch ${FILESDIR}/a2ps-4.13-stdout.diff
+	use cjk && epatch ${DISTDIR}/a2ps-4.13-ja_nls.patch
+
 	#stop running autoconf (bug #24264)
 	#find . | xargs touch
 }
