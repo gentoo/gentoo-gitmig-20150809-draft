@@ -1,4 +1,6 @@
-MD5 d36490c800fe30c98f4c27e4f51a8b38 ChangeLog 611
 MD5 c21f1292cf98f4a7240c1578d8e79129 cmfformcontroller-1.0_rc1.ebuild 609
+MD5 e6ffdbc06bbbbadc39a2eeb20711d8d6 cmfformcontroller-1.0.1.ebuild 593
+MD5 d36490c800fe30c98f4c27e4f51a8b38 ChangeLog 611
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 aef754ad993a618c6259583301f55787 files/digest-cmfformcontroller-1.0.1 74
 MD5 bd64d230e165d9bbe0a8ec30e87f38a1 files/digest-cmfformcontroller-1.0_rc1 76
