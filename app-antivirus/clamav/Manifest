@@ -16,4 +16,4 @@ MD5 2c7f2f8b0a3e7d16ecc154dd129188e3 files/digest-clamav-0.72 64
 MD5 50b576f5cc3976c6bc0d9aa11a2d25a3 files/digest-clamav-0.73 64
 MD5 6c57d7ce5871b55ba80e4ceb212fb536 files/digest-clamav-0.74 64
 MD5 e8dcbdecd955708ddc7c79399ffa6276 files/clamd.conf 166
-MD5 80a677a25d57280cf6de5c1a1da96510 files/clamd.rc 1393
+MD5 9c52877a96f295b0402bad70bc4af358 files/clamd.rc 1385
