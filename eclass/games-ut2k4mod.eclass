@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.1 2004/11/25 00:08:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.2 2005/02/23 12:31:38 wolf31o2 Exp $
 
 inherit games
 
@@ -25,6 +25,26 @@ RDEPEND="virtual/libc
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
+
+check_dvd() {
+	# The following is a nasty mess to determine if we are installing from
+	# a DVD or from multiple CDs.  Anyone feel free to submit patches to this
+	# to bugs.gentoo.org as I know it is a very ugly hack.
+	USE_DVD=
+    USE_ECE_DVD=
+	if [ -n "${CD_ROOT}" ]
+	then
+		[ -d "${CD_ROOT}/CD1" ] && USE_DVD=1
+		[ -d "${CD_ROOT}/CD7" ] && USE_ECE_DVD=1
+	else
+		local mline=""
+		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'`
+		do
+			[ -d "${mline}/CD1" ] && USE_DVD=1
+			[ -d "${mline}/CD7" ] && USE_ECE_DVD=1
+		done
+	fi
+}
 
 games-ut2k4mod_pkg_fetch() {
 	einfo "Please download ${A} and put it into ${DISTDIR}"
