@@ -1,24 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.30.ebuild,v 1.2 2003/02/13 11:44:52 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.30.ebuild,v 1.3 2003/08/07 03:18:10 vapier Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/panel-applet
 DESCRIPTION="Ruby Gnome Panel bindings"
-SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome.sourceforge.net/"
+SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
+
 LICENSE="Ruby"
-KEYWORDS="x86 ~alpha"
 SLOT="0"
+KEYWORDS="x86 ~alpha"
 
 DEPEND=">=dev-lang/ruby-1.6.4-r1
-		>=dev-ruby/ruby-gnome-${PV}"
+	>=dev-ruby/ruby-gnome-${PV}"
 
 src_compile() {
 	ruby extconf.rb || die "ruby extconf.rb failed"
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	make site-install DESTDIR=${D}
 	dodoc [A-Z]*
 	cp -dr sample ${D}/usr/share/doc/${PF}
