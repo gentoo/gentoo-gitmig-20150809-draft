@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.30 2003/10/13 04:58:07 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.31 2003/10/14 06:16:03 obz Exp $
+
+  14 Oct 2003; Mike Gardiner <obz@gentoo.org> libwnck-2.4.0.1-r1.ebuild,
+  libwnck-2.4.0.1.ebuild:
+  Marked -r1 stable on x86 after brief testing period, removed 2.4.0.1 in favour
+  of -r1 with the patch
 
 *libwnck-2.4.0.1-r1 (13 Oct 2003)
 
