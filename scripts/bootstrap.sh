@@ -1,7 +1,15 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.35 2002/12/27 18:42:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.36 2003/01/06 07:16:50 drobbins Exp $
+
+# IMPORTANT NOTE:
+# This script now accepts an optional argument.
+# Without an argument, it executes normally.
+# With a "1.5" argument, it will execute only the first half of the build process.
+# With a "2" argument, it will execute only the second half of the build process.
+# Please ensure that this is maintained properly, as it is needed for my stage-building tools
+# (drobbins, 06 Jan 2003)
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
 if [ ! -d ${MYPROFILEDIR} ]
@@ -61,7 +69,6 @@ trap "cleanup" INT QUIT TSTP
 # USE may be set from the environment so we back it up for later.
 export ORIGUSE="`${PYTHON} -c 'import portage; print portage.settings["USE"];'`"
 export GENTOO_MIRRORS="`${PYTHON} -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
-export USE="-* build bootstrap"
 
 export PORTDIR="`${PYTHON} -c 'import portage; print portage.settings["PORTDIR"];'`"
 export DISTDIR="`${PYTHON} -c 'import portage; print portage.settings["DISTDIR"];'`"
@@ -100,6 +107,10 @@ export AUTOCLEAN="no"
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
 
+
+if [ "$1" = "" ] || [ "$1" = "1.5" ]
+then
+export USE="-* build bootstrap"
 #
 # First stage of bootstrap (aka build stage)
 #
@@ -108,7 +119,7 @@ cd /usr/portage
 emerge ${myPORTAGE} || cleanup 1
 emerge ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
 # make.conf has been overwritten, so we explicitly export our original settings
-export USE="${ORIGUSE} bootstrap"
+fi
 
 # Basic support for gcc multi version/arch scheme ...
 if test -f /usr/sbin/gcc-config &> /dev/null && \
@@ -120,14 +131,17 @@ then
 	/usr/sbin/gcc-config "`/usr/sbin/gcc-config --get-current-profile`" &> /dev/null
 fi
 
+if [ "$1" = "" ] || [ "$1" = "2" ]
+then
 #
 # Second stage of boostrap
 #
-emerge ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
+export USE="${ORIGUSE} bootstrap"
+emerge --usepkg --buildpkg ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
 emerge ${myNCURSES} || cleanup 1
-
+fi
 # Restore original make.conf
 cleanup 0
 
