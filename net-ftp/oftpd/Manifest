@@ -1,6 +1,16 @@
-MD5 c477715b0207435ad3b50f300a9a1c5f oftpd-0.3.7-r1.ebuild 877
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9e881dd0433999ecf2b2d2c0fa5cfc5 ChangeLog 1987
+MD5 c477715b0207435ad3b50f300a9a1c5f oftpd-0.3.7-r1.ebuild 877
 MD5 0f7a846dd3f2197538502db078109b71 metadata.xml 351
-MD5 fc5f658f7c4a98e088571b08df5d625e files/init.d.oftpd 674
-MD5 b0ba4d96ae0eb98abce711409607eda4 files/conf.d.oftpd 469
 MD5 14eb385d2dee30be94c941c01703ab40 files/digest-oftpd-0.3.7-r1 62
+MD5 b0ba4d96ae0eb98abce711409607eda4 files/conf.d.oftpd 469
+MD5 e172cb3380495952dbccdc43d5168a16 files/init.d.oftpd 671
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYx89HTu7gpaalycRAjF7AJ9JhgV5A1N93Gf0//nv66C6HbKXHgCcCdgf
+uJ7wv2gYQWLCOeGcxRMX5Cs=
+=Bfcw
+-----END PGP SIGNATURE-----
