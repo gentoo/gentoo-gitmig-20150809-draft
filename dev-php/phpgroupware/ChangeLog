@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/phpgroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.26 2004/07/21 21:28:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.27 2004/07/27 17:51:29 mholzer Exp $
+
+*phpgroupware-0.9.16.002 (27 Jul 2004)
+
+  27 Jul 2004; Martin Holzer <mholzer@gentoo.org>
+  phpgroupware-0.9.16.002.ebuild:
+  Version bumped.
 
 *phpgroupware-0.9.16.001 (21 Jul 2004)
 
