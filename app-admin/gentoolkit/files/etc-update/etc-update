@@ -1,71 +1,32 @@
 #!/bin/bash
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Jochem Kossen, (c) 2002
+# Author: Jochem Kossen <j.kossen@home.nl>, (c) 2002
 # Author: Leo Lipelis <aeoo@gentoo.org>, (c) 2002
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>, (c) 2002
 
 scriptname=`basename $0`
 
-# edit the lines below to your liking
+get_config() {
+    item=$1
 
-# arguments used whenever rm is called
-rm_opts="-i"
+    # First strip off comment lines, then grab the configuration
+    # item. If there's more than one of the same configuration item,
+    # then allow the last setting to take precedence.
+    cut -d'#' -f1-1 /etc/etc-update.conf | \
+	sed -ne "s/^\ *$item\ *=\ *\"\(.*\)\"/\1/p" | tail -1
+}
 
-# arguments used whenever mv is called
-mv_opts="-i"
+# load etc-config's configuration
+rm_opts=`get_config rm_opts`
+mv_opts=`get_config mv_opts`
+cp_opts=`get_config cp_opts`
+pager=`get_config pager`
+diff_command=`get_config diff_command`
+merge_command=`get_config merge_command`
 
-# arguments used whenever cp is called
-cp_opts="-i"
-
-# pager for use with diff commands (see NOTE_2)
-#pager="less -E"
-pager=""
-
-# vim-users: you CAN use vimdiff for diff_command. (see NOTE_1)
-diff_command="diff -uN %file1 %file2"
-#diff_command="vim -d %file1 %file2"
-
-# vim-users: don't use vimdiff for merging (see NOTE_1)
-merge_command="sdiff -s -o %merged %orig %new"
-
-# EXPLANATION
-#
-# pager:
-#
-# Examples of pager usage:
-#	pager=""		# don't use a pager
-#	pager="less -E"	# less
-#	pager="more"	# more
-#
-#
-# diff_command:
-#
-# Arguments:
-#	%file1	[REQUIRED]
-#	%file2	[REQUIRED]
-#
-# Examples of diff_command:
-#	diff_command="diff -uN %file1 %file2"	# diff
-#	diff_command="vim -d %file1 %file2"		# vimdiff
-#
-#
-# merge_command:
-#
-# Arguments:
-#	%orig	[REQUIRED]
-#   %new    [REQUIRED]
-#	%merged	[REQUIRED]
-#
-# Examples of merge_command:
-#	merge_command="sdiff -s -o %merged %old %new"	# sdiff
-#
-
-# NOTE_1: Editors such as vim/vimdiff are not usable for the merge_command
-# because it is not known what filenames the produced files have (the user can
-# choose while using those programs)
-
-# NOTE_2: Make sure pager is set to "" when using an editor as diff_command!
+#echo "rm_opts: $rm_opts, mv_opts: $mv_opts, cp_opts: $cp_opts"
+#echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command"
 
 #
 # Find all "new" configuration files, sort, so that ._cfg_0000 is presented
@@ -104,6 +65,7 @@ rm_extra_file() {
 		;;
 	5)
 		echo "*** skipping ..."
+		exit
 		;;
 	*)
 		echo "!!! Please pick a valid choice next time !!!"
@@ -140,7 +102,7 @@ echo "3) Redo the merge"
 echo "4) Keep original file"
 echo "5) Skip (keep all files)"
 echo "  OR"
-echo "6) Restart $scriptname"
+echo "6) Back to previous menu"
 echo
 echo -n "Type (1, 2, 3, 4, 5 or 6): "
 }
@@ -179,7 +141,7 @@ install_merged_file() {
 		echo "*** skipping ..."
 		;;
 	6)
-		echo "*** restarting $scriptname ..."
+		echo "*** going back to previous menu ..."
 		echo
 		if [ -e $merged ]; then
 			echo "*** an (old?) merged file exists. It will be removed ..."
@@ -250,3 +212,4 @@ for new_full_path in $cfg_files; do
 	rm_extra_file ${old_full_path} ${new_full_path}
 done
 echo "*** script finished ..."
+

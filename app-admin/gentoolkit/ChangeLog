@@ -1,7 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.9 2002/03/18 21:52:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.10 2002/03/23 00:09:07 karltk Exp $
 
+
+*gentoolkit-0.1.6 (22 Mar 2002)
+
+  22 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.6.ebuild files/scripts/etc-update* files/etc-update/*:
+
+  etc-update: Added patches from both M.Kennedy and J.Kossem that allow
+  system-wide configuration of auxiliary commands through /etc/etc-update.conf
 
 *gentoolkit-0.1.5-r2 (18 Mar 2002)
 
