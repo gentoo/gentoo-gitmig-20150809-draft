@@ -12,7 +12,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/glibc
-	sys-apps/iptables
+	net-firewall/iptables
 	sys-apps/iproute"
 
 RDEPENR=${DEPEND}

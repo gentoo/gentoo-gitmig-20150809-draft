@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	sys-apps/iptables
+	net-firewall/iptables
 	sys-apps/iproute"
 
 RDEPENR=${DEPEND}

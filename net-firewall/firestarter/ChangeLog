@@ -1,9 +1,14 @@
 # ChangeLog for net-firewall/firestarter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.5 2003/03/04 20:53:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.6 2003/03/11 22:11:36 mholzer Exp $
  
 *firestarter-0.9.1 (31 Jan 2003)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> firestarter-0.8.2.ebuild,
+  firestarter-0.8.3.ebuild, firestarter-0.9.0.ebuild,
+  firestarter-0.9.1.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
 
   04 Mar 2003; Aron Griffis <agriffis@gentoo.org> firestarter-0.9.1.ebuild:
   Mark stable on alpha

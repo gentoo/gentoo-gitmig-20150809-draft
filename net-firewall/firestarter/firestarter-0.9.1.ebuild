@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.1.ebuild,v 1.5 2003/03/04 20:53:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.1.ebuild,v 1.6 2003/03/11 22:11:37 mholzer Exp $
 
 inherit gnome2 eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnome-2	
-	sys-apps/iptables"
+	net-firewall/iptables"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )

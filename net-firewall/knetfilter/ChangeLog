@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/knetfilter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.1 2003/02/17 20:51:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.2 2003/03/11 22:13:26 mholzer Exp $
 
   30 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
@@ -9,6 +9,10 @@
   rfom the 'languageChange undeclared' bug, which it fixes.
 
 *knetfilter-3.1.0 (19 Dec 2002)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> knetfilter-3.0.2.ebuild,
+  knetfilter-3.0.3.ebuild, knetfilter-3.1.0.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
 
   19 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
