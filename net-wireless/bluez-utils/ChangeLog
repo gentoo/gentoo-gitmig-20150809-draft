@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.6 2003/05/21 17:55:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.7 2003/09/19 14:52:11 liquidx Exp $
+
+*bluez-utils-2.3-r1 (19 Sep 2003)
+
+  19 Sep 2003; Alastair Tse <liquidx@gentoo.org> bluez-utils-2.1.ebuild,
+  bluez-utils-2.2.ebuild, bluez-utils-2.3-r1.ebuild, metadata.xml:
+  added patch for bluepin, fixed ref to bluepin in hcid.conf, added init
+  scipt, removed mknod for rfcomm (not needed for devfs)
 
   21 May 2003; Peter Johanson <latexer@gentoo.org> bluez-utils-2.3.ebuild:
   Add gtk USE flag for pygtk dependancy. bug #21129
