@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.99 2003/09/02 22:27:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.100 2003/09/04 03:35:40 msterret Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,6 +22,7 @@ app-games/freecraft-fcmp:music - Also installs the music that the project provid
 app-games/halflife-metamod:src - use the source, not the binary install
 app-games/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 app-games/quake2-relnev:noqmax - Do not build the pretty version (quake max)
+app-games/tuxracer:stencil-buffer - Enables use of stencil-buffer
 app-games/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 app-misc/grass:nviz - support GLw functionality
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
@@ -31,8 +32,8 @@ app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
 app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
 app-sci/maxima:auctex - enable auctex in maxima
-app-sci/maxima:cmucl - adds cmucl (lisp) support to maxima
 app-sci/maxima:clisp - adds clisp support to maxima
+app-sci/maxima:cmucl - adds cmucl (lisp) support to maxima
 app-sci/maxima:gcl   - adds gcl (lisp) support to maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
@@ -72,10 +73,10 @@ net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
 net-im/jabber-server:j-noaim - If you do NOT want the AIM/ICQ transport built with jabber-server
-net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
-net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
-net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon built with jabber-server
 net-im/jabber-server:j-nojud - If you do NOT want the Jabber User Directory built with jabber-server
+net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
+net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon built with jabber-server
+net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
 net-libs/gnutls:lzo - Adds support for LZO compression library
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
@@ -104,8 +105,8 @@ net-www/mozilla:moznoxft - blank
 net-www/mozilla:mozp3p - blank
 net-www/mozilla:mozsvg - blank
 net-www/mozilla:mozxmlterm - blank
-sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/busybox:diet - Compile and link with dietlibc
+sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
@@ -129,7 +130,7 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
 x11-wm/fvwm:bidi - Enable bidirectional language support
+x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
+x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
-x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
