@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hs-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.4 2005/01/01 18:05:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.5 2005/02/23 09:45:59 kosmikus Exp $
+
+*hs-plugins-0.9.8 (23 Feb 2005)
+
+  23 Feb 2005; Andres Loeh <kosmikus@gentoo.org> +hs-plugins-0.9.8.ebuild:
+  New version.
 
   17 Dec 2004; Andres Loeh <kosmikus@gentoo.org> hs-plugins-0.9.6.ebuild:
   Fixed IUSE.
