@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222.ebuild,v 1.10 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222.ebuild,v 1.11 2003/09/17 03:50:53 seemant Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=mtools-3
-	>=tetex-1.0.7-r10"
+DEPEND=">=sys-fs/mtools-3
+	>=app-text/tetex-1.0.7-r10"
 
 S=${WORKDIR}/${PN}-5.4
 
