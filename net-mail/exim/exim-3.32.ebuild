@@ -152,8 +152,14 @@ src_install () {
     doins ${FILESDIR}/exim
 
     dodoc ${S}/doc/*
+# INSTALL a pam.d file for SMTP AUTH that works with gentoo's pam
 	 insinto /etc/pam.d
 	 doins ${FILESDIR}/pam.d-exim
+
+# A nice filter for exim to protect your windows clients.
+	insinto /etc/exim
+	doins ${FILESDIR}/system_filter.exim
+	einfo "Read the bottom of /etc/exim/system_filter.exim for usage"
 }
 
 pkg_config() {
