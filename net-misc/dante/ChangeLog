@@ -1,6 +1,6 @@
-# ChangeLog for homeblutgensgentoo-x86net-miscdanteChangeLog/
+# ChangeLog for net-misc/dante
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.8 2002/12/13 11:00:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.9 2002/12/17 19:44:08 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
