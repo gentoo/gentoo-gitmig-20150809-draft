@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-#$HEADER:$
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-0.99-r2.ebuild,v 1.2 2001/08/11 12:29:57 pm Exp $
 
 A=pure-ftpd-0.99.tar.gz
 S=${WORKDIR}/${P}
