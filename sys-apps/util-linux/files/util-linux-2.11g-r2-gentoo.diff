@@ -1,0 +1,15 @@
+diff -r -C2 util-linux-2.11g.orig/sys-utils/ipc.texi util-linux-2.11g/sys-utils/ipc.texi
+*** util-linux-2.11g.orig/sys-utils/ipc.texi	Thu Apr 12 17:11:42 2001
+--- util-linux-2.11g/sys-utils/ipc.texi	Fri Aug  3 19:13:28 2001
+***************
+*** 7,10 ****
+--- 7,15 ----
+       
+  @ifinfo
++ 
++ @direntry
++ * ipc: (ipc).        Inter Process Communication.
++ @end direntry
++ 
+  This file documents the System V style inter process communication
+  primitives available under linux.
