@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta11.ebuild,v 1.7 2004/06/25 16:12:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta11.ebuild,v 1.8 2004/09/02 18:17:50 pvdabeel Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -10,7 +10,7 @@ SRC_URI="http://coredump.free.fr/linux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc amd64"
+KEYWORDS="x86 ppc -sparc amd64"
 IUSE=""
 
 DEPEND="virtual/libc
