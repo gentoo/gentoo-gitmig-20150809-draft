@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-nvidia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.4 2004/07/17 03:33:38 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.5 2004/07/19 02:59:34 lv Exp $
+
+  18 Jul 2004; Travis Tilley <lv@gentoo.org>
+  emul-linux-x86-nvidia-1.0.6106-r1.ebuild,
+  -emul-linux-x86-nvidia-1.0.6106.ebuild:
+  deleting an ebuild that depends on a version of nvidia-glx that's been deleted
+  and marking r1 stable
 
 *emul-linux-x86-nvidia-1.0.6106-r1 (17 Jul 2004)
 
