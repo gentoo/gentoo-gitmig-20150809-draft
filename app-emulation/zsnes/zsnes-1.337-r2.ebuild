@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/app-emulation/zsnes/zsnes-1.337-r1.ebuild,v 1.2 2002/05/08 08:48:20 spider Exp
-# Don't attempt to introduce $CFLAGS usage, docs say result will be slower.
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/zsnes-1.337-r2.ebuild,v 1.9 2002/10/17 01:18:13 vapier Exp $
 
+# Don't attempt to introduce $CFLAGS usage, docs say result will be slower.
 IUSE="opengl"
 
 S=${WORKDIR}/${P}
