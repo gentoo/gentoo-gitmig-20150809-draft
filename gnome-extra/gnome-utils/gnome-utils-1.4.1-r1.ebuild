@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.ebuild,v 1.3 2001/10/07 20:37:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1-r1.ebuild,v 1.1 2001/10/15 15:35:44 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -42,13 +42,17 @@ src_compile() {
 		    --prefix=/usr					\
 		    --with-ncurses 					\
 		    --with-messages=/var/log/syslog.d/current 		\
-		    --with-sysconfdir=/etc $myconf || die
+		    --localstatedir=/var/lib				\
+		    --sysconfdir=/etc $myconf || die
 	
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/usr					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README*
 }
