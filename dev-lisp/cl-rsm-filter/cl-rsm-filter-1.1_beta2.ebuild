@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-filter/cl-rsm-filter-1.1_beta2.ebuild,v 1.1 2003/10/18 10:13:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rsm-filter/cl-rsm-filter-1.1_beta2.ebuild,v 1.2 2003/11/09 19:17:12 mkennedy Exp $
 
 inherit common-lisp
 
@@ -18,13 +18,7 @@ CLPACKAGE=rsm-filter
 
 S=${WORKDIR}/${P/_beta/b}
 
-src_compile() {
-	make linux || die
-}
-
 src_install() {
-	exeinto /usr/lib/rsm-random
-	doexe random.so
 	common-lisp-install *.lisp *.asd
 	common-lisp-system-symlink
 	dodoc copying copyright
