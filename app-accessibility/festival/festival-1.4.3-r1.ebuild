@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.3 2004/03/21 20:16:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.4 2004/03/22 18:12:04 eradicator Exp $
 
 inherit eutils
 
@@ -141,8 +141,8 @@ src_install() {
 	doins ${FESTLIB}/rab_diphone/festvox/*
 	insinto ${DESTLIB}/rab_diphone/group
 	doins ${FESTLIB}/rab_diphone/group/*
-	insinto ${DESTLIB}/us1_mbrola
 
+	insinto ${DESTLIB}/us1_mbrola
 	doins ${FESTLIB}/us1_mbrola/*
 	insinto ${DESTLIB}/us1_mbrola/festvox
 	doins ${FESTLIB}/us1_mbrola/festvox/*
