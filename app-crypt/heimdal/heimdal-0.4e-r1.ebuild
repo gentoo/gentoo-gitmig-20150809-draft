@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.4e-r1.ebuild,v 1.9 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.4e-r1.ebuild,v 1.10 2002/11/30 19:48:00 vapier Exp $
 
-IUSE="ssl berkdb ipv6 ldap"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/${PN}/src/${P}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/heimdal/"
@@ -12,6 +9,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc sparc64"
+IUSE="ssl berkdb ipv6 ldap"
 
 DEPEND=">=app-crypt/kth-krb-1.1-r1
 	ssl? ( dev-libs/openssl )
@@ -38,7 +36,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make prefix=${D}/usr/heimdal \
 		sysconfdir=${D}/etc \
 		install || die
