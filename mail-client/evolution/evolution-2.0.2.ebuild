@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.11 2004/11/12 10:46:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.12 2004/11/15 21:26:12 liquidx Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 
@@ -30,6 +30,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.2.3
 	>=gnome-base/libgnomeprintui-2
 	>=x11-themes/gnome-icon-theme-1.2
 	>=gnome-base/orbit-2.9.8
+	mail-filter/spamassassin
 	pda? ( >=app-pda/gnome-pilot-2.0.10
 		>=app-pda/gnome-pilot-conduits-2.0.10 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )

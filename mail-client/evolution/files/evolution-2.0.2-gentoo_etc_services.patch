@@ -30,3 +30,14 @@ diff -ur camel.new/providers/smtp/camel-smtp-transport.c camel/providers/smtp/ca
  		camel_exception_setv (ex, CAMEL_EXCEPTION_SERVICE_UNAVAILABLE,
  				      _("Could not connect to %s (port %s): %s"),
 Only in camel/providers/smtp: camel-smtp-transport.c~
+--- camel/providers/pop3/camel-pop3-store.c.old	2004-11-15 18:59:42.001851744 +0000
++++ camel/providers/pop3/camel-pop3-store.c	2004-11-15 18:59:48.603848088 +0000
+@@ -158,7 +158,7 @@
+ 		serv = g_alloca(16);
+ 		sprintf(serv, "%d", service->url->port);
+ 	} else
+-		serv = "pop3";
++		serv = "pop-3";
+ 		
+ 	if (ssl_mode != USE_SSL_NEVER) {
+ #ifdef HAVE_SSL
