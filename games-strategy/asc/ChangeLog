@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/asc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.4 2004/06/24 00:09:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.5 2004/06/24 12:50:29 wolf31o2 Exp $
+
+  24 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> asc-1.15.0.0.ebuild:
+  Changed DEPEND for libsigc and closing bug #55004.
 
 *asc-1.15.0.0 (23 Jun 2004)
 
