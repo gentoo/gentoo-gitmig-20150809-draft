@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> 28 May 2003
+# net-www/opera-static is removed in favor of the unified
+# net-www/opera.
+net-www/opera-static
+
 # <g2boojum@gentoo.org> 28 May 2003
 # Masking >=openldap-2.1 until db4 stuff gets settled
 >=net-nds/openldap-2.1
