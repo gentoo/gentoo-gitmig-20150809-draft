@@ -1,0 +1,40 @@
+diff -Naur cyrus-sasl-2.1.18-orig/saslauthd/auth_pam.c cyrus-sasl-2.1.18/saslauthd/auth_pam.c
+--- cyrus-sasl-2.1.18-orig/saslauthd/auth_pam.c	2003-05-31 13:00:24.000000000 -0400
++++ cyrus-sasl-2.1.18/saslauthd/auth_pam.c	2004-07-06 23:13:06.303220973 -0400
+@@ -178,7 +178,7 @@
+   const char *login,			/* I: plaintext authenticator */
+   const char *password,			/* I: plaintext password */
+   const char *service,			/* I: service name */
+-  const char *realm __attribute__((unused))
++  const char *realm
+   /* END PARAMETERS */
+   )
+ {
+@@ -186,17 +186,25 @@
+     pam_appdata my_appdata;		/* application specific data */
+     struct pam_conv my_conv;		/* pam conversion data */
+     pam_handle_t *pamh;			/* pointer to PAM handle */
++    char user[256];
+     int rc;				/* return code holder */
+     /* END VARIABLES */
+ 
+-    my_appdata.login = login;
++    strlcpy(user, login, 256);
++
++    if (realm) {
++	    strlcat(user, "@", 256);
++	    strlcat(user, realm, 256);
++    }
++
++    my_appdata.login = user;
+     my_appdata.password = password;
+     my_appdata.pamh = NULL;
+ 
+     my_conv.conv = saslauthd_pam_conv;
+     my_conv.appdata_ptr = &my_appdata;
+ 
+-    rc = pam_start(service, login, &my_conv, &pamh);
++    rc = pam_start(service, user, &my_conv, &pamh);
+     if (rc != PAM_SUCCESS) {
+ 	syslog(LOG_DEBUG, "DEBUG: auth_pam: pam_start failed: %s",
+ 	       pam_strerror(pamh, rc));

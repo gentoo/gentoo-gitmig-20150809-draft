@@ -1,4 +1,4 @@
-MD5 2e473cb5921ee91aad15a5e5cdc0b079 ChangeLog 14997
+MD5 06ee60b082e2583bdd38bd6c9d4a4427 ChangeLog 15189
 MD5 3197fe37928e71d1072a187d59c7420f cyrus-sasl-1.5.27-r5.ebuild 2692
 MD5 371deb1330411da2c73d84bf46ee190e cyrus-sasl-1.5.27-r6.ebuild 2765
 MD5 0364033278f9f21b78e0a6cb0025db6b cyrus-sasl-2.1.14.ebuild 3917
@@ -6,7 +6,7 @@ MD5 9bec5bcd49985c0721eec238b54ccc3d cyrus-sasl-2.1.15.ebuild 3747
 MD5 a1468600bebea36437d458d047b417e7 cyrus-sasl-2.1.18.ebuild 4266
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 6277febc050092fe764fe9c445a66570 cyrus-sasl-2.1.17.ebuild 4249
-MD5 ab1cbd5aa6c7d7a40f426b0f332fe4f2 cyrus-sasl-2.1.18-r1.ebuild 4498
+MD5 e05d7c587a996d694af09adf1520923d cyrus-sasl-2.1.18-r1.ebuild 5378
 MD5 b398dd3696347604a52a40bf1a77291b files/2.1.14-db4.patch 2032
 MD5 a445d25ebbdf18b372340d4643736941 files/2.1.14-kerberos.patch 1148
 MD5 72c9252fd0ccb3fc369c60ec233f4218 files/2.1.14-mysql.patch 730
@@ -36,3 +36,4 @@ MD5 960ffd4d83e165ccaa68cf43937ff63d files/digest-cyrus-sasl-2.1.17 70
 MD5 e8b9357dba2bde4dac0b1cf38d5942eb files/cyrus-sasl-2.1.18-cvs-1.172.patch 5056
 MD5 428652e3c78cc4da4e8b4b129875d9d1 files/cyrus-sasl-2.1.18-sasl-path-fix.patch 537
 MD5 fcf540108971d5aaa0bbfba381971ca7 files/digest-cyrus-sasl-2.1.18-r1 70
+MD5 d6cb936d23646d9e5312d63d08f6f563 files/cyrus-sasl-2.1.18-pam_mysql.patch 1388

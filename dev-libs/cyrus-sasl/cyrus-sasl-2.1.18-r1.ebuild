@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r1.ebuild,v 1.1 2004/07/07 02:59:32 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r1.ebuild,v 1.2 2004/07/07 04:17:05 merlin Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
+IUSE="gdbm ldap mysql postgres kerberos static ssl java pam pam-mysql"
 
 RDEPEND="virtual/libc
 	>=sys-libs/db-3.2
@@ -54,6 +54,12 @@ src_unpack() {
 
 	# Add setuid/setgid check for SASL_PATH
 	epatch "${FILESDIR}/cyrus-sasl-2.1.18-sasl-path-fix.patch"
+
+	# Support deprecated pam_mysql authentication, requested in Bug 39497
+	# Patch from: http://asg.web.cmu.edu/archive/message.php?mailbox=archive.cyrus-sasl&searchterm=patch&msg=4669
+	if use pam-mysql; then
+		epatch "${FILESDIR}/cyrus-sasl-2.1.18-pam_mysql.patch"
+	fi
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
@@ -144,4 +150,20 @@ src_install () {
 	newexe "${FILESDIR}/saslauthd2.rc6" saslauthd
 	insinto /etc/conf.d
 	newins "${FILESDIR}/saslauthd2.conf" saslauthd
+}
+
+pkg_postinst() {
+	if ! use pam-mysql && use pam && has_version 'sys-libs/pam_mysql'; then
+		echo
+		ewarn
+		ewarn "Starting with version 2.1.17 of cyrus-sasl, the cyrus-sasl team has switched"
+		ewarn "to an authentication style that BREAKS pam_mysql."
+		ewarn
+		ewarn "If you are using pam_mysql, it is recommended you convert to cyrus-sasl's"
+		ewarn "auxprop sql authentication support using smtpd.conf."
+		ewarn
+		ewarn "If you do not wish to change your configuration, you may put \"pam-mysql\""
+		ewarn "in your USE flags to revert to the old (deprecated) authentication behavior."
+		ewarn
+	fi
 }
