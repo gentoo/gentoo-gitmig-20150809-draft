@@ -1,4 +1,4 @@
-MD5 a28d0fb8d484a3d818cbc5ca1f8957ed ChangeLog 744
-MD5 e03b36c593fc6c1de839c1d82e05bdb3 dns2go-1.1-r2.ebuild 664
 MD5 298b1b6ac6bb015f5e09eda200c0c401 files/digest-dns2go-1.1-r2 59
 MD5 ba17d9d27ffebe761d2a02e1ceabe223 files/dns2go.rc6 410
+MD5 e03b36c593fc6c1de839c1d82e05bdb3 dns2go-1.1-r2.ebuild 664
+MD5 5e65aa16496b0b5bf00b12b7981ac8eb ChangeLog 752
