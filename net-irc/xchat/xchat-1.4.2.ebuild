@@ -1,13 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.5 2000/10/28 19:16:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.6 2000/11/05 14:42:17 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="xchat"
 SRC_URI="http://www.xchat.org/files/source/1.4/"${A}
 HOMEPAGE="http://www.xchat.org/"
+
+DEPEND=">=media-libs/imlib-1.9.8.1
+	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )"
 
 src_compile() {                           
   cd ${S}
