@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8de61b081f894ec8b5ddf5daf3891850 ChangeLog 2551
 MD5 8940f7a639d08a5ef09a21c1be7a93f4 gtk-cpuspeedy-0.3.0.ebuild 1049
 MD5 9e2a054a1c88817613efae9564a60cf4 metadata.xml 530
 MD5 e894da4eaf551e42693cdff2b43e935d files/digest-gtk-cpuspeedy-0.3.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNx9fLLFUmVNQ7rkRAuugAKDP2i+cArTw1wri2y78qB1PmOE9owCfeZIF
+ng5r/0h2z2glRryZEo3Boy8=
+=Awj0
+-----END PGP SIGNATURE-----
