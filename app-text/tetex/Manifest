@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4fb593f7e28c0aac69480f6bb021eda ChangeLog 14669
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8f27cd5e7c06b0c37851607799f69316 tetex-1.0.7-r13.ebuild 4770
+MD5 579993d078f852b910c9d268db95cabb ChangeLog 14768
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 18a2c88ee01a228f443743b3cbf2a234 tetex-2.0.2-r4.ebuild 611
-MD5 9d6f2b7b8621ce8f40f5b3e1dc831e84 tetex-2.0.2-r5.ebuild 1166
+MD5 f6d72aed78ff4d2113d1427692f0fb4a tetex-2.0.2-r5.ebuild 1163
 MD5 f5af4a68fd5fbd92bd1db3c7954dfd54 tetex-2.99.9.20050111.ebuild 2030
+MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
 MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
-MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r4 282
+MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
 MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r5 282
+MD5 898ff0537f5b05d67fa8113a55d47581 files/digest-tetex-2.99.9.20050111 248
 MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
-MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
 MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
 MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
 MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 898ff0537f5b05d67fa8113a55d47581 files/digest-tetex-2.99.9.20050111 248
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8NhfVWNWqTUmv+0RAmEJAJ0YQ3W8GF3PsrBjjNuJOFYFjn7hGgCgmJqT
-mazlqKHS39ip1TqDRdycKQU=
-=LJgZ
------END PGP SIGNATURE-----
