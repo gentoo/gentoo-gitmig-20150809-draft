@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.8 2003/02/12 05:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.9 2003/04/12 15:06:56 g2boojum Exp $
+
+*R-1.6.2 (12 Apr 2003)
+
+  12 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> Manifest, R-1.6.2.ebuild:
+  Version bump
 
 *R-1.6.1 (12 Dec 2002)
 
