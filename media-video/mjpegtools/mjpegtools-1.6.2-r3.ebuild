@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.20 2005/03/27 20:08:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.21 2005/03/29 02:35:30 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -78,11 +78,11 @@ src_compile() {
 		if use mmx; then
 			myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
 		fi
-		
+
 		if [[ ${CHOST/i686/} != ${CHOST} ]] || [[ ${CHOST/x86_64/} != ${CHOST} ]]; then
 			myconf="${myconf} --enable-cmov-extension"
 		fi
-		
+
 		[[ $(gcc-major-version) -eq 3 ]] && append-flags -mno-sse2
 	fi
 
@@ -98,7 +98,7 @@ src_compile() {
 
 	if has_pie; then
 		pie_magic="$(test_flag -fno-pic) $(test_flag -nopie)"
-		
+
 		find "${S}" -name Makefile | xargs sed -i \
 			-e "s:CC = gcc:CC = gcc ${pie_magic}:g" \
 			-e "s:CXX = gcc:CXX = g++ ${pie_magic}:g" \
