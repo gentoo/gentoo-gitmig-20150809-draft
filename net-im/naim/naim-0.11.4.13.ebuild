@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.9.ebuild,v 1.2 2002/11/16 18:15:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.4.13.ebuild,v 1.1 2002/11/16 18:15:51 lostlogic Exp $
 
 VA="`echo ${PV}|sed -e 's:^\([0-9]*\)\..*$:\1:'`"
 VB="`echo ${PV}|sed -e 's:^[0-9]*\.\([0-9]*\)\..*$:\1:'`"
