@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.11 2004/08/09 20:07:21 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.12 2005/01/02 19:49:13 dsd Exp $
+
+  02 Jan 2005; Daniel Drake <dsd@gentoo.org> radvd-0.7.2-r1.ebuild:
+  Change virtual/kernel to virtual/linux-sources
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> radvd-0.7.2-r1.ebuild:
   Marked ~amd64, resolves 59087

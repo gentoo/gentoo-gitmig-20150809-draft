@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2-r1.ebuild,v 1.8 2004/11/03 00:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.7.2-r1.ebuild,v 1.9 2005/01/02 19:49:13 dsd Exp $
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon (radvd)"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 arm hppa x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	virtual/kernel"
+	virtual/linux-sources"
 
 pkg_preinst() {
 	# Force ownership of radvd user and group. fix #19647
