@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.7 2003/02/12 08:19:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.8 2003/04/02 07:14:36 phosphan Exp $
+
+*bridge-utils-0.9.6 (02 Apr 2003)
+
+  02 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> bridge-utils-0.9.6.ebuild,
+  files/digest-bridge-utils-0.9.6 :
+  New version, moved binaries to /sbin since they can be necessary for
+  bringing the network up.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
