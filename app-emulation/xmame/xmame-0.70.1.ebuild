@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.70.1.ebuild,v 1.2 2003/07/11 23:28:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.70.1.ebuild,v 1.3 2003/07/16 01:50:21 vapier Exp $
 
 inherit games flag-o-matic gcc
 
@@ -32,6 +32,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-glx-fix.patch
 
 	[ ${ARCH} == "x86" ] && sed -i -e '/X86_ASM_68000 =/s:#::' -e '/X86_MIPS3_DRC =/s:#::' Makefile
 	[ ${ARCH} == "ppc" ] && sed -i '/^MY_CPU/s:i386:risc:' Makefile
