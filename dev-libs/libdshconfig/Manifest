@@ -1,5 +1,3 @@
 MD5 aea7fbb4a781f9d0bf4685d07e37968b files/digest-libdshconfig-0.20.8 71
-MD5 3bc52bd6345065c24de0beff284a5d38 files/digest-libdshconfig-0.20.7-r1 71
-MD5 e5fc288b4e963df5c9db4fd8976fd2f7 libdshconfig-0.20.8.ebuild 639
+MD5 6565e0f172ae96b99a57c9303eb8ef3d libdshconfig-0.20.8.ebuild 633
 MD5 8192ea19c8b309e620f1d13b6a2e83b8 ChangeLog 655
-MD5 6cab28b99f5044f46c526774eccc0dca libdshconfig-0.20.7-r1.ebuild 640
