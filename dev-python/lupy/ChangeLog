@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lupy
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/ChangeLog,v 1.1 2004/02/17 14:37:48 lordvan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/ChangeLog,v 1.2 2004/04/15 23:07:09 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> lupy-0.1.5.5.1.ebuild:
+  adding s390 keywords
 
 *lupy-0.1.5.5.1 (17 Feb 2004)
   
