@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.5 2004/08/22 06:51:37 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.6 2004/08/23 18:28:08 robbat2 Exp $
 
 inherit eutils gnuconfig
 
@@ -15,7 +15,7 @@ PROVIDE="virtual/imapd"
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
-	berkdb? ( >=sys-libs/db-3* )
+	berkdb? ( sys-libs/db )
 	gdbm ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
