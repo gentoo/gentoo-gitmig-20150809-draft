@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.3 2004/02/04 13:19:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/uclibc-buildroot/uclibc-buildroot-20040131.ebuild,v 1.4 2004/02/05 06:14:56 dragonheart Exp $
 
 inherit eutils crosscompile
 
@@ -30,36 +30,11 @@ SRC_URI="mirror://gnu/gcc/gcc-${GCCVER}/gcc-${GCCVER}.tar.bz2
 #
 # nested SRC_URI are not supported until portage-2.0.50pre19 bug #16159
 
-# Note: buildroot doesn't exist on mirror://gentoo yet - have to download the cvs and self pack
-
-# for testing only
 RESTRICT="nomirror"
 
 LICENSE="LGPL-2"
 
-#
-# Since cross compilers require different slots
-#
-# NOTE - cross-setslot is for applications not compilers
-#
-# "crosstarget" from crosscompile.eclass is equal to below
-#if [ -n  "${CCHOST}" ] && [ "${CHOST}" != "${CCHOST}" ];
-#then
-#	if [ -n "${TARGET_ARCH}" ]
-#	then
-#		SLOT="${TARGET_ARCH}-${CCHOST}"
-#	else
-#		SLOT="${CCHOST}"
-#	fi
-#else
-#	if [ -n "${TARGET_ARCH}" ]
-#	then
-#		SLOT="${TARGET_ARCH}"
-#	else
-		SLOT="0"
-#	fi
-#fi
-
+SLOT="0"
 # ONLY single slot support since only one version of package can exist in db.
 
 
@@ -71,7 +46,7 @@ IUSE="nls ipv6 debug nommu fullrpc pie propolice softfloat savedconfig"
 # pie = enforce no text relocation support in uClibc (x86 only)
 # propolice = Stack-Smashing Protecto
 # softfloat = software floating point calculations
-
+# savedconfig = compile uclibc/busybox/tinylogin using saved settings.
 
 # There was some comment some that alpha may be broken although I don't know.
 # TODO check these: ~ppc ~mips ~arm ~alpha
@@ -95,7 +70,8 @@ DEPEND="dev-lang/perl
 
 RDEPEND=""
 
-PROVIDE="virtual/glibc"
+# TODO: Removing for the time being TOO dangerous
+#PROVIDE="virtual/glibc"
 
 S=${WORKDIR}/buildroot
 
@@ -294,13 +270,13 @@ src_compile() {
 			uclibc_config_option  n PTHREADS_DEBUG_SUPPORT
 		fi
 
-		[ `use ipv6` ] && uclibc_config_option y UCLIBC_HAS_IPV6 || \
+		use ipv6 && uclibc_config_option y UCLIBC_HAS_IPV6 || \
 			uclibc_config_option n UCLIBC_HAS_IPV6
 
-		[ `use fullrpc` ] && uclibc_config_option y UCLIBC_HAS_FULL_RPC || \
+		use fullrpc  && uclibc_config_option y UCLIBC_HAS_FULL_RPC || \
 			uclibc_config_option n UCLIBC_HAS_FULL_RPC
 
-		[ `use nommu` ] && uclibc_config_option n UCLIBC_HAS_MMU || \
+		use nommu && uclibc_config_option n UCLIBC_HAS_MMU || \
 			uclibc_config_option y UCLIBC_HAS_MMU
 
 
@@ -311,7 +287,7 @@ src_compile() {
 			uclibc_config_option n UCLIBC_PIE_SUPPORT
 		fi
 
-		[ `use propolice` ] && uclibc_config_option y UCLIBC_PROPOLICE || \
+		use propolice && uclibc_config_option y UCLIBC_PROPOLICE || \
 			uclibc_config_option n UCLIBC_PROPOLICE
 
 		if [ `use softfloat` ]; then
@@ -367,7 +343,7 @@ src_compile() {
 	cd ${S}
 	emake -j1 || die "Could not make uclibc-buildroot"
 
-	if [ -n "`use debug`" ]; then
+	if [ `use debug` ]; then
 		if [ -f /etc/embedded/busybox.config && `use savedconfig` ]; then
 			emake BUSYBOX_CONFIG=/etc/embedded/busybox.config busybox \
 				|| "Error making busybox old config"
@@ -399,30 +375,31 @@ src_install() {
 
 	cd staging_dir
 
-	# there's probably a better way to do this. usr/bin got mapped to bin in most cases.
-	mv info share
-
-	tar -cf - lib/ usr/bin/ bin/ ${BINPREFIX}/* ${TARGETARCH}-linux \
-		include/ | \
-		tar --no-same-owner -C ${D}/usr/${BINPREFIX} -xf -
-
-	tar -cf - usr/${BINPREFIX} | \
-		tar --no-same-owner -C ${D} -xf -
-
+	doinfo info/*
 	doman `find man -type f -name "*.[0-9]"`
 
+	dodir usr/${BINPREFIX}
+
+	cp --preserve=mode -dPRf lib usr/bin/ bin/ ${BINPREFIX}/* ${TARGETARCH}-linux \
+		include/ ${D}/usr/${BINPREFIX}
+
+	cp --preserve=mode -dPRf usr/${BINPREFIX} ${D}
+
 	# gcc-config stuff
-	local gccconfigfile=${D}/etc/env.d/gcc/${ARCH}-uclibc-${UCLIBCVER}
+	local gccconfigfile=${D}/etc/env.d/gcc/${BINPREFIX}-${UCLIBCVER}
 
 	dodir /etc/env.d/gcc
-	echo "PATH=\"/usr/${BINPREFIX}/usr/bin\"" > ${gccconfigfile}
-	echo "ROOTPATH=\"/usr/${BINPREFIX}/usr/bin\"" >> ${gccconfigfile}
+	echo "PATH=\"/usr/${BINPREFIX}/bin\"" > ${gccconfigfile}
+	echo "ROOTPATH=\"/usr/${BINPREFIX}/bin\"" >> ${gccconfigfile}
 	echo "LDPATH=\"/usr/${BINPREFIX}/lib\"" >> ${gccconfigfile}
-	echo 'CC="gcc"'  >> ${gccconfigfile}
-	echo 'CXX="g++"'  >> ${gccconfigfile}
+	echo "CC=\"${BINPREFIX}-gcc\""  >> ${gccconfigfile}
+	echo "CXX=\"${BINPREFIX}-g++\""  >> ${gccconfigfile}
+
+	dodir /usr/lib/gcc-lib/${BINPREFIX}
+	dosym /usr/${BINPREFIX}/lib /usr/lib/gcc-lib/${BINPREFIX}/${UCLIBCVER}
 
 	# warning- consistancy with Makefile uncertian.
-	#use softfloat && TARGETARCH="${TARGETARCH}_nofpu"
+	use softfloat && TARGETARCH="${TARGETARCH}_nofpu"
 
 	# rootfs (tempory for testing purposes)
 	dodir /var/lib/rootfs_${TARGETARCH}
@@ -434,11 +411,10 @@ src_install() {
 	dodir /etc/embedded
 	cp ${UCLIBCDIR}/.config ${D}/etc/embedded/uClibc.config
 
-	[ -f ${S}/build_${ARCH}/busybox-${BUSYBOXVER}/Config.h ] && \
-		cp ${S}/build_${ARCH}/busybox-${BUSYBOXVER}/Config.h ${D}/etc/embedded/busybox.config
+	[ -f ${S}/build_${TARGETARCH}/busybox-${BUSYBOXVER}/Config.h ] && \
+		cp ${S}/build_${TARGETARCH}/busybox-${BUSYBOXVER}/Config.h ${D}/etc/embedded/busybox.config
 
-	[ -f ${S}/build_${ARCH}/tinylogin-${TINYLOGINVER}/Config.h ] && \
-		cp ${S}/build_${ARCH}/tinylogin-${TINYLOGINVER}/Config.h ${D}/etc/embedded/tinylogin.config
-
+	[ -f ${S}/build_${TARGETARCH}/tinylogin-${TINYLOGINVER}/Config.h ] && \
+		cp ${S}/build_${TARGETARCH}/tinylogin-${TINYLOGINVER}/Config.h ${D}/etc/embedded/tinylogin.config
 
 }
