@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
 # Modified by Ivan C.  <navi_@hotmail.com>
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.3-r2.ebuild,v 1.10 2003/06/12 21:53:50 msterret Exp $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."

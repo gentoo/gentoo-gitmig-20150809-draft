@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  12 Jun 2003; <msterret@gentoo.org> ser-0.8.10.ebuild, ser-0.8.9.ebuild:
+  fix Header
+
 *ser-0.8.10 (15 Nov 2002)
 
   15 Nov 2002; Matt Keadle <mkeadle@gentoo.org> ser-0.9.10.ebuild

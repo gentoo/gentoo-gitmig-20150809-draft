@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.16 2003/05/04 14:58:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.17 2003/06/12 21:53:50 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> tightvnc-1.2.3-r2.ebuild:
+  fix Header
 
   04 May 2003; Daniel Ahlberg <aliz@gentoo.org> tightvnc-1.2.8.ebuild :
   Do not allow tightvnc and vnc to be installed at the same time as they
