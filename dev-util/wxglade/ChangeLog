@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/wxglade
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.16 2004/12/31 02:08:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.17 2005/01/13 19:10:22 pythonhead Exp $
+
+*wxglade-0.3.5.1 (13 Jan 2005)
+
+  13 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> wxglade-0.3.5.1.ebuild,
+  wxglade-0.3.5.ebuild:
+  Stable x86, removed dep on app-arch/unzip
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
