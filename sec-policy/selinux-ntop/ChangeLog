@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ntop
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.1 2004/07/03 20:56:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.2 2004/09/02 02:22:12 pebenito Exp $
+
+*selinux-ntop-20040901 (01 Sep 2004)
+
+  01 Sep 2004; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-ntop-20040901.ebuild:
+  Add missing rule from #51899
 
 *selinux-ntop-20040703 (03 Jul 2004)
 
