@@ -33,6 +33,7 @@
 *>=sys-devel/gcc-3.2.1
 *>=sys-libs/glibc-2.2.5-r7
 *>=sys-kernel/linux-headers-2.4.19
+*>=sys-devel/gnuconfig-20030708
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 #>=x11-base/xfree-4.2.1
