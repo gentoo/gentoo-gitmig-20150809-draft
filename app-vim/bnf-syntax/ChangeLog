@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/bnf-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/ChangeLog,v 1.1 2005/02/27 20:39:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bnf-syntax/ChangeLog,v 1.2 2005/03/06 16:57:06 ciaranm Exp $
+
+  06 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> bnf-syntax-1.2.ebuild:
+  x86 sparc mips stable
 
 *bnf-syntax-1.2 (27 Feb 2005)
 
