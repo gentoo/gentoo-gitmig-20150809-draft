@@ -126,7 +126,7 @@ diff -Naurp distcc-2.18.3.orig/src/distcc.c distcc-2.18.3/src/distcc.c
 +            goto out;
 +        }
 +        dcc_find_compiler(newargv, &compiler_args);
-+        free(newargv);
++        if (newargv != argv) free(newargv);
          /* compiler_args is now respectively either "cc -c hello.c" or
           * "gcc -c hello.c" */
  
@@ -140,7 +140,7 @@ diff -Naurp distcc-2.18.3.orig/src/distcc.c distcc-2.18.3/src/distcc.c
 +            goto out;
 +        }
 +        dcc_copy_argv(newargv, &compiler_args, 0);
-+        free(newargv);
++        if (newargv != argv) free(newargv);
          compiler_args[0] = compiler_name;
      }
  
