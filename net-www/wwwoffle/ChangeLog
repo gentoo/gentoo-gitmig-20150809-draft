@@ -1,11 +1,17 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.4 2002/03/26 12:48:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.5 2002/06/02 21:40:57 wmertens Exp $
+
+*wwwoffle-2.7b (02 Jun 2002)
+
+  02 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
+  New mainstream version. This one fixes the problem where it wouldn't pass
+  on length information.
+
+*wwwoffle-2.7-r1 (16 Mar 2002)
 
   26 Mar 2002; Dan Armak <danarmak@gentoo.org>: general cleanup
   of the ebuild. Fix bug that made the default spooldir /var/tmp/portage/...
-
-*wwwoffle-2.7-r1 (16 Mar 2002)
 
   16 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
   
@@ -20,11 +26,3 @@
   ebuild in various small ways.
 
 *wwwoffle-2.6d-r6 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
