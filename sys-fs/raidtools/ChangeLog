@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/raidtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.13 2004/09/06 02:28:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.14 2004/09/06 15:56:39 dsd Exp $
+
+  06 Sep 2004; Daniel Drake <dsd@gentoo.org> raidtools-1.00.3-r1.ebuild,
+  raidtools-1.00.3-r2.ebuild:
+  1.00.3-r2 stable on same archs as -r1. Remove -r1 due to segfault problems.
 
   06 Sep 2004; Sven Wegener <swegener@gentoo.org> raidtools-1.00.3-r2.ebuild:
   Added patch from 1.00.3-r1 to 1.00.3-r2 that fixes compile errors with
