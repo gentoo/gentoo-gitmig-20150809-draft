@@ -1,0 +1,13 @@
+--- xine-lib-0.9.12/configure.in	Sun Jun 23 03:55:20 2002
++++ xine-lib-0.9.12/configure.in.new	Wed Jul 31 10:37:35 2002
+@@ -723,10 +723,6 @@
+ 		archopt_val=athlon ;;
+ 	    esac
+ 
+-	    if test x"$archopt_val" != x; then
+-		CFLAGS="$CFLAGS $sarchopt=$archopt_val"
+-		DEBUG_CFLAGS="$DEBUG_CFLAGS $sarchopt=$archopt_val"
+-	    fi
+ 	    ]
+ 	fi
+ 

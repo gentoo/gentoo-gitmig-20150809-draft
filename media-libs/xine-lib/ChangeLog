@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.14 2002/07/22 09:47:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.15 2002/07/31 16:13:30 lostlogic Exp $
+
+*xine-lib-0.9.12-r2 (31 Jul 2002)
+
+  31 Jul 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.12-r2.ebuild:
+
+  Remove the configure script mangling of -march and -mcpu.
 
 *xine-lib-0.9.12-r1 (19 Jul 2002)
 
