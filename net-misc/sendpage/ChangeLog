@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/sendpage
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendpage/ChangeLog,v 1.1 2004/06/13 21:22:23 mcummings Exp $
+
+*sendpage-0.9.14 (13 Jun 2004)
+
+  13 Jun 2004; Michael Cummings <mcummings@gentoo.org> metadata.xml,
+  sendpage-0.9.14.ebuild:
+  ebuild submitted by Russell Adams <rladams@kelsey-seybold.com> in bug 19405;
+  cleaned up
+
