@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.9 2003/11/08 16:45:36 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.10 2003/11/15 03:18:57 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
+  gst-plugins-oss-0.6.3.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> gst-plugins-oss-0.6.3.ebuild:
   added sparc keyword
