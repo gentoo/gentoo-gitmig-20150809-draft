@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.17 2003/11/21 00:47:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.18 2003/12/31 16:57:55 plasmaroo Exp $
 
-ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
+ECVS_AUTH="ext"
+ECVS_SERVER="savannah.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
 ECVS_USER="anoncvs"
 ECVS_CVS_OPTIONS="-dP"
