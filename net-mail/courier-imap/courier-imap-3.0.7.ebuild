@@ -1,17 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.10 2004/08/26 04:38:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.11 2004/08/26 05:18:55 vapier Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
-SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-KEYWORDS="~x86 ppc sparc ~mips ~alpha ~hppa amd64"
+SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 ppc sparc ~mips ~alpha hppa amd64"
 IUSE="fam berkdb gdbm debug ipv6 ldap mysql nls pam postgres selinux"
-PROVIDE="virtual/imapd"
+#userpriv breaks linking against vpopmail
+RESTRICT="nouserpriv"
+
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
@@ -27,9 +30,8 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-lang/perl
 	sys-apps/procps"
+PROVIDE="virtual/imapd"
 
-#userpriv breaks linking against vpopmail
-RESTRICT="nouserpriv nomirror"
 pkg_setup() {
 	if ! use berkdb && ! use gdbm; then
 		echo

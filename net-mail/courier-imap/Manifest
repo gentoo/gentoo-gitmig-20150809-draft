@@ -1,11 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f289dd3c3e06f102bb6ad60c1a10e7e ChangeLog 14886
 MD5 98ff975617b94649165b1789b86b5a99 courier-imap-3.0.5.ebuild 8530
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 3b12e3224b57db24a2af5a920c7e28e4 courier-imap-3.0.7.ebuild 9229
+MD5 e54015e887403777ac050a5d9697a022 courier-imap-3.0.7.ebuild 9222
 MD5 f156e5a11ab06f0bee9c0b1e6e2c8887 files/authdaemond.conf 440
 MD5 92cd406de622a1cf2de2ffc0662349bc files/authdaemond.rc6 957
 MD5 457d7f87a25f4f8f05af321130d846bf files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch 1263
-MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.7-db4-configure.in.patch 1337
 MD5 c8836ccb71ec53cb7570308b10d9c247 files/courier-imapd-ssl.rc6 1200
 MD5 90bb778616a7c67658b9e78890d4b8fe files/courier-imapd.rc6 945
 MD5 d1bfa2a8019ebac0a33d3ef7a8945eeb files/courier-pop3d-ssl.rc6 1208
@@ -29,4 +31,12 @@ MD5 71a551a4f772f4299f9752f3d043b8c5 files/authdaemond-3.0.4-r1 1062
 MD5 7d5ddf4fa33c73befa0bd434a17022f9 files/authdaemond.conf-3.0.4-r1 544
 MD5 d9d0cf2a19ee5b20039583b7cb4cffcc files/courier-pop3d-ssl.rc6-3.0.5 1204
 MD5 cf0b34bc53717e49f0f75bd610a0fac9 files/digest-courier-imap-3.0.5 72
+MD5 39e2ec0f1212612a99f443d6e6275139 files/courier-imap-3.0.7-db4-configure.in.patch 1337
 MD5 06c960b3b160106abff0c0d3e84105d0 files/courier-imap-3.0.7-disable-fam-configure.in.patch 654
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBLXLHHTu7gpaalycRAh9mAKDOTE06FbZMep84tXaub4uFNdewvwCfUSzH
+/QyFnrrdPT+qEMjgiTNIugQ=
+=9cM0
+-----END PGP SIGNATURE-----
