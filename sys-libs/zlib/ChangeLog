@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.8 2002/12/13 11:00:46 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.9 2003/02/07 20:34:48 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> zlib-1.1.4.ebuild :
+  Added hppa to keywords.
 
   12 Dec 2002; Jan Seidel <tuxus@gentoo.org> zlib-1.1.4.ebuild : 
   Added mips to keywords.
