@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.10 2004/03/18 21:45:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.11 2004/04/27 20:20:37 tester Exp $
+
+*insight-6.1 (27 Apr 2004)
+
+  27 Apr 2004; <tester@gentoo.org> insight-6.0.ebuild, 
+  insight-6.1.ebuild, files/gdb-6.x-crash.patch:
+  Version bump and add a fix for a crasher in gdb
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> insight-5.1.1.ebuild,
   insight-5.2.1.ebuild, insight-5.3.ebuild, insight-6.0.ebuild:
