@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2-r2.ebuild,v 1.1 2003/05/28 13:07:05 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0_pre2-r2.ebuild,v 1.2 2003/05/28 14:44:37 scandium Exp $
 
 IUSE="socks5 tcltk"
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf='--enabled-shared'
+	local myconf='--enable-shared'
 
 	filter-flags -fomit-frame-pointer
 
