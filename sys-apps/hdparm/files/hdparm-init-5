@@ -25,12 +25,12 @@ depend() {
 }
 
 do_hdparm() {
-    if [[ ${args:=$all_args} ]]
+    if [ ${args:=$all_args} ]
     then
 		orgdevice=`readlink -f $device`
 		if [ -b $orgdevice ]; then
 	        ebegin "Running hdparm on $device"
-		    hdparm -q $args $device || ewarn "Failed to run hdparm on $device"
+		    hdparm $args $device > /dev/null || ewarn "Failed to run hdparm on $device"
 		fi
     fi
 }
