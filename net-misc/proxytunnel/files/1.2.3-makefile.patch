@@ -1,0 +1,27 @@
+--- Makefile.orig	2004-11-02 13:02:36.000000000 -0500
++++ Makefile	2004-11-02 13:03:18.000000000 -0500
+@@ -2,11 +2,11 @@
+ #
+ # Please uncomment the appropriate settings
+ 
+-CC = gcc
+-CFLAGS = -Wall -DHAVE_GETOPT_LONG
+-LDFLAGS =
+-INSTALLPATH = $(DESTDIR)/usr/local/bin
+-MANPATH = $(DESTDIR)/usr/local/man/man1
++CC ?= gcc
++CFLAGS += -DHAVE_GETOPT_LONG
++LDFLAGS +=
++INSTALLPATH = $(DESTDIR)/usr/bin
++MANPATH = $(DESTDIR)/usr/share/man/man1
+ 
+ PROGNAME = proxytunnel
+ OBJ = proxytunnel.o	\
+@@ -24,6 +24,6 @@
+ 	@rm -f $(PROGNAME) $(OBJ)
+ 
+ install:
+-		mkdir -p $(INSTALLPATH)
++		mkdir -p $(INSTALLPATH) $(MANPATH)
+ 		install -g root -m755 -o root $(PROGNAME) $(INSTALLPATH)/$(PROGNAME)
+ 		install -g root -m644 -o root debian/$(PROGNAME).1 $(MANPATH)/$(PROGNAME).1

@@ -1,4 +1,17 @@
-MD5 e2d6964c3545b3e9fc1293e7dceddd8b ChangeLog 718
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 427d03a02a0ec68febd5acc128a90880 proxytunnel-1.2.3.ebuild 796
 MD5 210340eb860a1c9a5cf63401b5fce5ce proxytunnel-1.2.0.ebuild 795
-MD5 4abbce06d14cb7cd98c338f999b43323 files/1.2.0-makefile.patch 710
+MD5 14f7be8925db3933c4d7b2178b7a53a2 ChangeLog 861
 MD5 5f4e28b0ae591778e4bf7cc09d5680d8 files/digest-proxytunnel-1.2.0 65
+MD5 9fd01b5fdd6549e751ed95892e36d69a files/digest-proxytunnel-1.2.3 65
+MD5 4abbce06d14cb7cd98c338f999b43323 files/1.2.0-makefile.patch 710
+MD5 1ad82e2e6fe4f4e48bfbb25c5ffcac2d files/1.2.3-makefile.patch 759
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBh81Y94CCfB4KcwwRAqp8AJ9UEUr83hmaHULBcxWq2+mMDVr8qgCfSl6v
+VA31kItwsehPj/KVB92YgSg=
+=cPkx
+-----END PGP SIGNATURE-----
