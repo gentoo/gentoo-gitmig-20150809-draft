@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.2.3.ebuild,v 1.1 2004/11/02 18:11:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.2.3.ebuild,v 1.2 2004/11/02 18:44:15 klieber Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/proxytunnel/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="static"
 
 DEPEND="virtual/libc"

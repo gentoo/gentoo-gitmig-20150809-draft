@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/proxytunnel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.6 2004/11/02 18:11:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/ChangeLog,v 1.7 2004/11/02 18:44:15 klieber Exp $
+
+  02 Nov 2004; Kurt Lieber <klieber@gentoo.org> proxytunnel-1.2.3.ebuild:
+  tested/marked stable on x86 
 
 *proxytunnel-1.2.3 (02 Nov 2004)
 
