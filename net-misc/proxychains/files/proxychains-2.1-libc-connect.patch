@@ -1,0 +1,16 @@
+--- proxychains-2.1/proxychains/core.h
++++ proxychains-2.1/proxychains/core.h
+@@ -65,11 +65,9 @@
+ 
+ int proxychains_write_log(char *str,...);
+ 
+-#ifndef __linux__
+-#define __libc_connect _connect
+-#endif
++#include <sys/socket.h>
++#define __libc_connect connect
+ 
+-extern int __libc_connect (int sock, const struct sockaddr *addr, unsigned int len);
+ 
+ 
+ #endif
