@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.3 2004/04/16 02:28:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.4 2004/04/26 17:44:10 agriffis Exp $
 
 inherit elisp-common eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf CC="gcc -fno-reorder-blocks -fno-inline" --enable-force-reg
+	econf CC="gcc -fno-reorder-blocks -fno-inline" --enable-force-reg || die "econf failed"
 	make || die
 	use emacs && emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
 }
