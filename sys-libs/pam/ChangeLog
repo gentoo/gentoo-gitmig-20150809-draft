@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.64 2005/02/26 21:09:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.65 2005/03/07 19:32:39 azarah Exp $
+
+*pam-0.78-r1 (07 Mar 2005)
+
+  07 Mar 2005; Martin Schlemmer <azarah@gentoo.org> +pam-0.78-r1.ebuild:
+  Do not link cracklib and pwdb static, bug #83899. Add /dev/dri/\* to
+  console.perms, bug #55833. Add NIS patche from Peter S. Mazinger
+  <ps.m@gmx.net>.
 
   26 Feb 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.78.ebuild:
   Use econf and some tweaking to fix some man pages installing into /man, bug
