@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r4.ebuild,v 1.1 2003/03/07 16:58:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r4.ebuild,v 1.2 2003/06/29 23:17:15 aliz Exp $
 
 DESCRIPTION="Fontviewer for PostScript Type 1 and TrueType"
 SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://gfontview.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="nls gnome"
 
 DEPEND=">=media-libs/t1lib-1.0.1

@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.1.ebuild,v 1.1 2003/04/12 00:52:08 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.1.ebuild,v 1.2 2003/06/29 23:17:15 aliz Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.baylor.edu/"
 SRC_URI="http://grass.baylor.edu/grass5/source/${P}_src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="tcltk png jpeg tiff postgres odbc gd motif truetype"
 

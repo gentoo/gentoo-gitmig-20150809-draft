@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.64.ebuild,v 1.1 2003/04/18 17:34:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.64.ebuild,v 1.2 2003/06/29 23:17:15 aliz Exp $
 
 DESCRIPTION="pretty printing of your mails"
 HOMEPAGE="http://muttprint.sf.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/muttprint/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="app-text/tetex"
 

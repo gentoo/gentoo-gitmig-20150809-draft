@@ -1,8 +1,8 @@
 # ChangeLog for app-misc/kdiff3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.5 2003/06/12 14:47:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.6 2003/06/29 23:17:15 aliz Exp $
 
-*kdiff-0.9.61 (12 Jun 2003)
+*kdiff3-0.9.61 (12 Jun 2003)
 
   12 Jun 2003; Caleb Tennis <caleb@gentoo.org> kdiff3-0.9.61.ebuild:
   Version bump - closes bug #22650

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gwhere/gwhere-0.0.26.ebuild,v 1.2 2003/02/13 09:01:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gwhere/gwhere-0.0.26.ebuild,v 1.3 2003/06/29 23:17:15 aliz Exp $
 
 MY_P="${P/gw/GW}"
 S="${WORKDIR}/${MY_P}"
@@ -10,7 +10,7 @@ DESCRIPTION="removable media cataloguer made with GTK+"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-1.2

@@ -1,8 +1,8 @@
 # ChangeLog for app-misc/bbgallery
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/ChangeLog,v 1.4 2003/02/12 15:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbgallery/ChangeLog,v 1.5 2003/06/29 23:17:15 aliz Exp $
 
-* bbgallery-1.1.0 (30 August 2002)
+*bbgallery-1.1.0 (30 August 2002)
 
   9 Sep 2002; <mcummings@gentoo.org> bbgallery-1.1.0.ebuild :
   Added missing RDEPENDs for the perl pieces that it requires to run. 

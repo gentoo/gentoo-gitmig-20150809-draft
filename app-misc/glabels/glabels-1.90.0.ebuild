@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.2 2003/02/13 08:59:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/glabels-1.90.0.ebuild,v 1.3 2003/06/29 23:17:15 aliz Exp $
 
 DESCRIPTION="Program for creating labels and business cards"
 HOMEPAGE="http://snaught.com/glabels/"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 SRC_URI="http://snaught.com/${PN}/source/${P}.tar.gz"

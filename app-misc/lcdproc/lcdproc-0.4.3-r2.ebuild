@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r2.ebuild,v 1.2 2003/06/10 17:44:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r2.ebuild,v 1.3 2003/06/29 23:17:15 aliz Exp $
 
 SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.gz"
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
@@ -8,7 +8,7 @@ HOMEPAGE="http://lcdproc.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc ncurses svga"
 
 DEPEND=">=sys-apps/baselayout-1.6.4
