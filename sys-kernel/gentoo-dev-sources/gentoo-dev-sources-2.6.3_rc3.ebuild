@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc3.ebuild,v 1.2 2004/02/15 18:12:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.3_rc3.ebuild,v 1.3 2004/02/17 02:51:17 brad_mssw Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -11,7 +11,7 @@ detect_version
 GPV=2.20
 GPV_SRC="mirror://gentoo/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 UNIPATCH_LIST="${DISTDIR}/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}.tar.bz2"
 UNIPATCH_DOCS="${WORKDIR}/patches/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}/README"
