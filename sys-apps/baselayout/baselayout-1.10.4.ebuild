@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r2.ebuild,v 1.3 2004/07/29 20:02:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.4.ebuild,v 1.1 2004/08/18 20:44:07 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.5.1 		# rc-scripts version
+SV=1.5.3 		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
@@ -128,9 +128,16 @@ src_install() {
 	kdir /etc/modules.d
 	kdir /etc/opt
 	kdir /home
-	kdir /lib
-	kdir /lib/dev-state
-	kdir /lib/udev-state
+	# Explanation below
+	if [[ ${ARCH} == amd64 ]]; then
+		kdir /lib64
+		kdir /lib64/dev-state
+		kdir /lib64/udev-state
+	else
+		kdir /lib
+		kdir /lib/dev-state
+		kdir /lib/udev-state
+	fi
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
@@ -145,7 +152,12 @@ src_install() {
 	kdir /usr/include
 	kdir /usr/include/asm
 	kdir /usr/include/linux
-	kdir /usr/lib
+	# Explanation below
+	if [[ ${ARCH} == amd64 ]]; then
+		kdir /usr/lib64
+	else
+		kdir /usr/lib
+	fi
 	kdir /usr/local/bin
 	kdir /usr/local/games
 	kdir /usr/local/lib
@@ -163,8 +175,11 @@ src_install() {
 	kdir /usr/src
 	kdir /usr/X11R6/include/GL
 	kdir /usr/X11R6/include/X11
-	kdir /usr/X11R6/lib
-	kdir /usr/X11R6/lib
+	if [[ ${ARCH} == amd64 ]]; then
+		kdir /usr/X11R6/lib64
+	else
+		kdir /usr/X11R6/lib
+	fi
 	kdir /usr/X11R6/man
 	kdir /usr/X11R6/share
 	kdir -m 1777 /tmp
@@ -182,10 +197,27 @@ src_install() {
 
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
-	if [[ ${ARCH} == amd64 || ${ARCH} == ppc64 ]]; then
+	if [[ ${ARCH} == ppc64 ]]; then
 		dosym lib /lib64
 		dosym lib /usr/lib64
 		dosym lib /usr/X11R6/lib64
+	elif [[ ${ARCH} == amd64 ]]; then
+		# AMD64 is making a slow move towards actual FHS compliance and multilib
+		# capabilities (without ugly semi-working lib32 hacks).
+		#
+		# During the first stage of migration, we just want to get rid of the
+		# lib64 symlink. we can do this now by making lib the symlink instead.
+		# that way, later on when we want to use lib for 32bit libraries, we
+		# wont have to risk breaking all installed binaries by removing the
+		# lib64 symlink.  (See about note regarding ld.so)  Note that this has
+		# no effect on current installs, just new stages.  (07 Aug 2004 lv)
+		dosym lib64 /lib
+		dosym lib64 /usr/lib
+		# X is pretty dumb, i dont know if this'll work when we start removing
+		# lib symlinks. ^^; we might end up needing to keep this one around...
+		dosym lib64 /usr/X11R6/lib
+		# this will eventually exist, so remember to fix it Travis...
+		#dosym ../X11R6/lib64/X11 /usr/lib64/X11
 	fi
 
 	# FHS compatibility symlinks stuff
