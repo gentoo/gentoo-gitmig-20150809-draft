@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.3 2002/08/01 18:04:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.4 2003/01/12 18:49:47 mkennedy Exp $
+
+*jdom-1.0_beta8-r2 (12 Jan 2003)
+
+  12 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  jdom-1.0_beta8-r2.ebuild, ChangeLog,
+  files/digest-jdom-1.0_beta8-r2 :
+
+  Removes JDK 1.1 version of JDOM and supporting com.sun.collections.*
+  JAR (resolves bug #13719)
 
 *jdom-1.0_beta8-r1 (10 Jul 2002)
 
