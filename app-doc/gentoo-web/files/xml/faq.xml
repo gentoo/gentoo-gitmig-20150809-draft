@@ -6,8 +6,8 @@
 
 <abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
 
-<version>1.0.3</version>
-<date>11 Aug 2001</date>
+<version>1.0.4</version>
+<date>02 Sep 2001</date>
 
 <chapter>
 	<title>Getting Started</title>
@@ -84,8 +84,13 @@ information.</p>
 		doesn't go away when I reboot?</title>
 		<body>
 		<p>You need to edit <path>/etc/devfsd.conf</path>
-		and add the line "REGISTER psaux EXECUTE /bin/ln -sf $devpath
-		/dev/mouse".  You'll then want to <c>killall -HUP devfsd</c>
+		and add these lines:</p>
+<pre>
+REGISTER        ^misc/psaux$    CFUNCTION GLOBAL symlink misc/psaux mouse
+UNREGISTER      ^misc/psaux$    CFUNCTION GLOBAL unlink mouse
+</pre>
+<p>If you are not using the devfs PS/2 mouse <path>/dev/misc/psaux</path> device,
+adjust the <c>misc/psaux</c> strings above accoringly.  You'll then want to <c>killall -HUP devfsd</c>
 		to get devfsd to reread <path>/etc/devfsd.conf</path>.</p>
 		</body>
 	</section>
