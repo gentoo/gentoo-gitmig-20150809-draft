@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.5 2003/09/10 01:45:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4.ebuild,v 1.6 2003/09/13 09:12:17 gmsoft Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.postgresql.org/pub/source/v${PV}/${P}.tar.gz
@@ -153,7 +153,7 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	einfo "Creating the prout data directory ..."
+	einfo "Creating the data directory ..."
 	mkdir -p ${PG_DIR}/data
 	chown -Rf postgres.postgres ${PG_DIR}
 	chmod 700 ${PG_DIR}/data
