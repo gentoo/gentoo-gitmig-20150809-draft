@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.11 2004/08/31 12:42:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.12 2004/08/31 23:24:21 kloeri Exp $
+
+  01 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  star-1.5_alpha46.ebuild:
+  Stable on alpha, bug 61797.
 
   31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> star-1.5_alpha46.ebuild:
   Stable on sparc wrt #61797
