@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.15 2003/04/20 18:21:14 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.16 2003/04/28 19:58:40 method Exp $
 
 *gradm-1.9.9g (20 Apr 2003)
+
+  28 Apr 2003; Joshua Brindle <method@gentoo.org> files/grsecurity:
+  fixed typo
 
   20 Apr 2003; Joshua Brindle <method@gentoo.org> gradm-1.9.9f.ebuild,
   gradm-1.9.9f.ebuild, gradm-1.9.9g.ebuild:

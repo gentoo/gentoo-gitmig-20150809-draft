@@ -77,7 +77,7 @@ fork_bomb_max=20
 
 # Set when one of socket_* is enabled
 socket_all_gid=1004
-socket_cilent_gid=1003
+socket_client_gid=1003
 socket_server_gid=1002
 
 # Lock the above settings on boot
