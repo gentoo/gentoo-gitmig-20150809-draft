@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ruby-gconf-0.2.ebuild,v 1.12 2004/06/25 01:58:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ruby-gconf-0.2.ebuild,v 1.13 2004/07/14 22:02:47 agriffis Exp $
 
 inherit ruby
 
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/${P}.tar.gz"
 HOMEPAGE="http://ruby-gnome.sourceforge.net/"
 LICENSE="Ruby"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 SLOT="0"
 

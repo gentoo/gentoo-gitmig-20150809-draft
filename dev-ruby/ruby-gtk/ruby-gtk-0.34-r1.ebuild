@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.9 2004/07/01 10:26:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ruby-gtk-0.34-r1.ebuild,v 1.10 2004/07/14 22:08:51 agriffis Exp $
 
 inherit ruby-gnome2 ruby
 
@@ -13,6 +13,7 @@ LICENSE="Ruby"
 SLOT="0"
 USE_RUBY="ruby16 ruby18 ruby19"
 KEYWORDS="x86 alpha ~sparc ppc"
+IUSE=""
 
 DEPEND="virtual/ruby
 	=x11-libs/gtk+-1.2*"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.30.ebuild,v 1.6 2004/06/25 01:58:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ruby-gdkpixbuf-0.30.ebuild,v 1.7 2004/07/14 22:04:40 agriffis Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/gdkpixbuf
 DESCRIPTION="Ruby GdkPixbuf bindings"
@@ -10,6 +10,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="x86 alpha"
+IUSE=""
 
 DEPEND="virtual/ruby
 	>=dev-ruby/ruby-gtk-${PV}"

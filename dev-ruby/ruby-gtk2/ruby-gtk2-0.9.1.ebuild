@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ruby-gtk2-0.9.1.ebuild,v 1.8 2004/07/04 10:31:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ruby-gtk2-0.9.1.ebuild,v 1.9 2004/07/14 22:09:53 agriffis Exp $
 
 inherit ruby ruby-gnome2
 
 DESCRIPTION="Ruby Gtk2 bindings"
 KEYWORDS="alpha x86 ~ppc ~ia64 ~sparc ~amd64"
+IUSE=""
 USE_RUBY="ruby16 ruby18 ruby19"
 DEPEND="${DEPEND} >=x11-libs/gtk+-2"
 RDEPEND="${RDEPEND} >=x11-libs/gtk+-2
