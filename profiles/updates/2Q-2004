@@ -102,3 +102,4 @@ move app-misc/mutt-vc-query mail-client/mutt-vc-query
 move sys-apps/mac-fdisk sys-fs/mac-fdisk
 move sys-apps/amiga-fdisk sys-fs/amiga-fdisk
 move games-puzzle/marbles games-puzzle/lmarbles
+move app-text/gmanedit app-editors/gmanedit
