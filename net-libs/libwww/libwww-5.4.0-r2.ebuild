@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.18 2004/07/11 06:44:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.19 2004/07/11 15:25:46 pvdabeel Exp $
 
 inherit eutils
 
@@ -34,14 +34,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
 	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
-	# I can't get this part work correctly - stupid autotools 
-	# The HAVE_APPKIT_APPKIT_H macro is automatically set to 1, but it shouldn't be because appkit is not 
-	# what autotools think it is. I have tried everything from patching, to sed. Please help me out here
-
-	use macos && sed -e "s:#undef HAVE_APPKIT_APPKIT_H:#undef HAV_H:g" wwwconf.h.in > wwwconf.h.in
-
-	# The following works as expected
-
 	if use macos; then 
 		glibtoolize -c -f || die "libtoolize failed"
 	else
@@ -54,6 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
+	
 	econf \
 		--enable-shared \
 		--enable-static \
@@ -63,6 +56,10 @@ src_compile() {
 		`use_with mysql` \
 		`use_with ssl` \
 		|| die	
+
+	emake check-am || die
+	
+	use macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 
 	emake || die
 }
