@@ -1,6 +1,13 @@
 # ChangeLog for media-lib/libdvdnav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.4 2002/07/01 07:45:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.5 2002/07/01 15:12:45 lostlogic Exp $
+
+*libdvdnav-0.1.2-r2 (1 Jul 2002)
+
+  1 Jul 2002; Brandon Low <lostlogic@gentoo.org> libdvdnav-0.1.2-r2.ebuild
+
+  One more try, patch is now compiler dependant so that this will comile
+  successfully on gcc 2.95.3 and 3.1 systems.
 
 *libdvdnav-0.1.2-r1 (1 Jul 2002)
 
