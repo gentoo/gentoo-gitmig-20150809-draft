@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040820.ebuild,v 1.1 2004/09/01 01:59:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20040820.ebuild,v 1.2 2004/09/03 22:43:25 slarti Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://crm114.sourceforge.net/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 TREVERS="0.6.8"
 
