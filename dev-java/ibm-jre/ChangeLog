@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.27 2004/03/22 19:50:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.28 2004/04/07 03:39:32 zx Exp $
+
+  06 Apr 2004; Chris Aniszczyk <zx@gentoo.org> :
+  Updated digests. Closes #46952, #45780
 
   22 Mar 2004; David Holm <dholm@gentoo.org> ibm-jre-1.4.1-r2.ebuild:
   Added ppc support.
