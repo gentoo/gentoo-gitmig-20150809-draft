@@ -1,14 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f4b18993ea4e902777640a7afe26b4de mozilla-1.7.3.ebuild 8822
 MD5 21fbce86f739b098e11b5225b58f452d mozilla-1.7-r1.ebuild 16620
 MD5 9320e2015bdfdecec9c9bcd3a6f65cfb mozilla-1.7.ebuild 16477
 MD5 7c90e1ccb807e874f4bfa5796d3c513d mozilla-1.6-r1.ebuild 16979
-MD5 aa7166da0319e88d9ad909403631ab70 mozilla-1.7.2-r1.ebuild 8874
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 1b86c01a90c75d55fc70099410d8cd0d mozilla-1.7.3-r2.ebuild 9947
 MD5 4370477202723c1b000f026f1edabe7f mozilla-1.7.3-r3.ebuild 9977
+MD5 aa7166da0319e88d9ad909403631ab70 mozilla-1.7.2-r1.ebuild 8874
 MD5 a74a5ac4166ff6482742859333a43240 ChangeLog 36061
+MD5 1b86c01a90c75d55fc70099410d8cd0d mozilla-1.7.3-r2.ebuild 9947
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 e816a98fb3581a6d4a050aa4cdf12905 files/mozilla-1.7-amd64.patch 25433
 MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3 281
+MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-1.7.3-4ft2.patch 22360
 MD5 a5fb876c8ca4e8dbd0208db31897f39d files/ipc-1.0.7-nsPipeChannel.patch 445
 MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
 MD5 766df4cd7332bf4127847985f98e46ec files/gtk2mozilla_head_patch2 27148
@@ -26,12 +30,11 @@ MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 e30291e992d71bccac5937cca9696da0 files/enigmail-Makefile 1560
 MD5 df4a4bc60d8f5d28c801ccedfea84d70 files/mozilla-ft-bytecode.patch 629
 MD5 01b356d7ff1afde7e091ed10b251b940 files/digest-mozilla-1.7.2-r1 204
+MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3-r2 281
+MD5 678261bd3948e6db546338bbc90f721f files/digest-mozilla-1.7.3-r3 203
 MD5 c3b63fbbf42894e19fff553092660af6 files/digest-mozilla-1.7 204
 MD5 d2a2c551fe8991a27d4abe4e3bbedbe3 files/mozilla-xft-unix-prefs.patch 1320
 MD5 296fe1fa9c5b387bcd909f0a128c7a16 files/mozilla-new-freetype2.patch 720
-MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3-r2 281
-MD5 81a50166a3d53f53af6bcbf38da71071 files/digest-mozilla-1.7.3-r3 281
-MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-1.7.3-4ft2.patch 22360
 MD5 9bb311174360a35555ae82617d33bc3f files/1.2/mozilla-1.2b-over-the-spot.patch.bz2 320
 MD5 025a72a791c12f7c3f50e59fc63db451 files/1.2/mozilla-1.2b-freetype.patch.bz2 854
 MD5 83da5242120c74b0ca6cceae9d6cf237 files/1.2/mozilla-1.2-cutnpaste-limit-fix.patch.bz2 2838
@@ -50,3 +53,10 @@ MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 MD5 e3c488f3226f61adbb11d6a73ae84209 files/icon/mozilla.desktop 153
 MD5 e30291e992d71bccac5937cca9696da0 files/enigmail/Makefile-enigmail 1560
 MD5 68a7617a6d3f0f37904cd6aaa90fe1ba files/enigmail/Makefile-ipc 1596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpQZII1lqEGTUzyQRArOoAJ9j/wU6sQ4UYUxuyxfU4HnKS95bVQCgipzu
+yL9GGlsLsdMtDEYXnyysha0=
+=TJCQ
+-----END PGP SIGNATURE-----
