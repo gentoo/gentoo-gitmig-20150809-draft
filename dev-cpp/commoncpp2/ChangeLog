@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
+
+  15 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> commoncpp2-1.0.13.ebuild:
+  x86 unmask.
 
 *commoncpp2-1.0.9 (08 Dec 2003)
 
