@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.9 2004/03/28 01:55:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.10 2004/04/02 19:39:15 mr_bones_ Exp $
+
+  02 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> genlop-0.30.1.ebuild:
+  removed hppa since it needs dev-perl/DateManip first
 
 *genlop-0.30.1 (28 Mar 2004)
 
