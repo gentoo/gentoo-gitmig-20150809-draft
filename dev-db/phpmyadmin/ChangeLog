@@ -1,10 +1,15 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.29 2003/10/21 15:37:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.30 2003/10/22 15:40:47 twp Exp $
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.0.ebuild,
   phpmyadmin-2.5.3-r1.ebuild, files/config.inc.php-2.5.2.patch:
   adding RESTRICT="nomirror"
+
+*phpmyadmin-2.5.4 (20 Oct 2003)
+
+  20 Oct 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.5.4.ebuild :
+  Version bump. Bug # 31537. Update MySQL dependency.
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.3-r1.ebuild:
   Marked x86 stable.
