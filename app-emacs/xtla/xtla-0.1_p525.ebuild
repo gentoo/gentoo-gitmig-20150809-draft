@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/xtla-0.1_p525.ebuild,v 1.1 2004/10/19 20:37:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xtla/xtla-0.1_p525.ebuild,v 1.2 2004/10/21 12:07:55 blubb Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://wiki.gnuarch.org/moin.cgi/xtla
 SRC_URI="mirror://gentoo/${PN}--main--${PV:0:3}--patch-${PF:10}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/emacs
 	sys-devel/autoconf
