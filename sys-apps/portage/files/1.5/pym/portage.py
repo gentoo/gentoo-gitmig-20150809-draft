@@ -15,7 +15,7 @@ import xpak
 # master category list.  Any new categories should be added to this list to ensure that they all categories are read
 # when we check the portage directory for available ebuilds.
 
-categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-emulation", "app-games", "app-misc", 
+categories=("app-admin", "app-arch", "app-cdr", "app-crypt", "app-doc", "app-editors", "app-emulation", "app-games", "app-misc", 
 			"app-office", "app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs", "dev-perl", 
 			"dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
 			"gnome-office","kde-apps", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
