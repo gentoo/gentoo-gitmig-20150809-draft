@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.9.ebuild,v 1.9 2004/11/02 15:16:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.9.ebuild,v 1.10 2004/12/07 09:37:00 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~ppc-macos s390 sparc x86"
 IUSE="ssl socks5 nls"
 
 DEPEND=">=sys-libs/ncurses-5.1

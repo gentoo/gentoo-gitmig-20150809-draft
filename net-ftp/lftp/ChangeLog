@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.67 2004/11/01 01:03:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.68 2004/12/07 09:37:00 dragonheart Exp $
+
+*lftp-3.0.12 (07 Dec 2004)
+
+  07 Dec 2004; Daniel Black <dragonheart@gentoo.org> +lftp-3.0.12.ebuild,
+  -lftp-3.0.8.ebuild, lftp-3.0.9.ebuild:
+  version bump as per bug #73582 by rockoo. Removed one old version. added ppc
+  keyword to 3.0.9
 
   01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.9.ebuild:
   Stable on alpha.
