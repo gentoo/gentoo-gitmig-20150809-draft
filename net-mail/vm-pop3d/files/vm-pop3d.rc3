@@ -1,31 +1,25 @@
-#!/bin/sh
-#RCUPDATE:2 3 4:75:This line is required for script management
-
-. /etc/rc.d/config/functions
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/files/vm-pop3d.rc3,v 1.2 2002/09/25 17:00:56 raker Exp $
 
 SERVICE=vm-pop3d
+
 opts="start stop restart"
 
-PIDFILE=/var/run/exim.pid
-EXE=/usr/sbin/vm-pop3d
 
 start() {
 		ebegin "Starting $SERVICE..."
-     		start-stop-daemon --start --quiet --exec ${VM-POP3D_OPTS:-d5 -t 600}
-		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+     		/usr/sbin/vm-pop3d $OPTS
 }
 
 stop() {
 		ebegin "Stopping $SERVICE..."
-		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+		killall -15 /usr/sbin/vm-pop3d
 }
 
 restart() {
 		stop
 		start
 }
-
-doservice ${@}
-
 

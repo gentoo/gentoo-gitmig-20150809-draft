@@ -1,2 +1,6 @@
-# Command-line options for running exim
-VM-POP3D_OPTS="-d5 -t 600"
+# Command-line options for running vm-pop3d
+# -d <number of daemons to start>
+# -t <timeout in seconds>
+# -p <port to run the pop server on>
+
+OPTS="-d 5 -t 600 -p 110"
