@@ -1,0 +1,12 @@
+# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation.
+# Gentoo Linux PowerPC system defaults
+
+ACCEPT_KEYWORDS="ppc"
+ARCH="ppc"
+CFLAGS="-O2 -pipe"
+CHOST="powerpc-unknown-linux-gnu"
+CXXFLAGS=${CFLAGS}
+FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+MAKEOPTS="-j2"
+PLATFORM=$CHOST
+USE="dvd jpeg nls gif png truetype ppc"
