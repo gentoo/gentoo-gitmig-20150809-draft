@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.82 2004/09/14 13:38:11 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.83 2004/09/14 13:41:20 lostlogic Exp $
+
+  14 Sep 2004; Brandon Low <lostlogic@gentoo.org>
+  -files/procps-3.1.11-multipids.patch, -files/procps-3.1.12-selinux.diff.bz2,
+  -procps-3.1.12-r1.ebuild, -procps-3.1.13-r1.ebuild:
+  Clean up a bit
 
 *procps-3.2.3-r1 (14 Sep 2004)
 
