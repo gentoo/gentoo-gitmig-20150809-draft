@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.2 2004/06/24 22:31:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r1.ebuild,v 1.3 2004/11/24 08:03:16 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,20 +15,18 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="virtual/x11"
 
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/${PATCH}"
 	sed -i \
 		-e 's:-O2 ::' \
 		-e "s:gcc:gcc ${CFLAGS}:" Makefile \
-			|| die "sed Makefile failed"
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
