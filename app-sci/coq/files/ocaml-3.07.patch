@@ -1,0 +1,10 @@
+--- /root/tmp/coq-7.4/parsing/pcoq.ml4  2002-12-15 13:10:18.000000000 +0100
++++ parsing/pcoq.ml4    2003-10-16 13:00:15.000000000 +0200
+@@ -108,6 +108,7 @@
+     type parsable = G.parsable
+     let parsable = G.parsable
+     let tokens = G.tokens
++    let glexer = G.glexer
+     module Entry = G.Entry
+     module Unsafe = G.Unsafe
+ 

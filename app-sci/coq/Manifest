@@ -1,3 +1,5 @@
-MD5 7a800e0e86a2ddfb190813abb900b64e coq-7.4.ebuild 745
+MD5 5b3bd95c81c08df116223beb9ca0de4f coq-7.4.ebuild 976
+MD5 5af6b26df9264817e5b6a292c1436417 metadata.xml 238
+MD5 8ea318dfb8fa73049a3d5b26257daba7 ChangeLog 467
 MD5 d3f33f3602d82ea691f91b062dbf236b files/digest-coq-7.4 60
 MD5 393c3085f82f205122b4e66c94232ff7 files/ocaml-3.07.patch 333
