@@ -7,3 +7,4 @@ move x11-wm/fluxspace x11-misc/fluxspace
 move x11-misc/qingy sys-apps/qingy
 move app-misc/xclip x11-misc/xclip
 move dev-util/gputils dev-embedded/gputils
+move dev-util/gpsim dev-embedded/gpsim
