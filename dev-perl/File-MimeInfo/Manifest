@@ -1,4 +1,14 @@
-MD5 60804a45de44b0f210fb7b2e2f330a93 ChangeLog 974
-MD5 76c2e706ff206e9aac11059d5246dc2a File-MimeInfo-0.10.ebuild 601
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb9c40c48125d28edec3015eea2d5fb7 ChangeLog 1064
+MD5 2eab6db9d214dfbf5036efb6c420a686 File-MimeInfo-0.10.ebuild 609
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c13ab58d6a628b17059931f1b13a790e files/digest-File-MimeInfo-0.10 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBynXQ60LfUIagIAkRAvGiAKCc2pa7Va7P8lCc3YzqEzWFQOJhIgCfVNdV
+8lyxoRcdPM7B7Y8zcXt+d4A=
+=PyeK
+-----END PGP SIGNATURE-----
