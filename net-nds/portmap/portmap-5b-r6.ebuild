@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r6.ebuild,v 1.8 2002/10/04 06:16:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r6.ebuild,v 1.9 2002/10/30 08:24:44 lostlogic Exp $
 
 MY_P=${PN}_${PV}eta
 A0=portmap_5beta.dif
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd $S || die
 	patch -p0 < $FILESDIR/$A0 || die
-	cp Makefile Makefile.orig
+	mv Makefile Makefile.orig || die
 	sed -e "s/-O2/$CFLAGS/" Makefile.orig > Makefile || die
 }
 
