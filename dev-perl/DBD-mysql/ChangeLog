@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.21 2004/03/21 10:20:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.22 2004/04/02 15:29:35 randy Exp $
+
+  02 Apr 2004; <randy@gentoo.org> DBD-mysql-2.9003.ebuild:
+  adding s390 keywords
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> DBD-mysql-2.1013-r1.ebuild,
   DBD-mysql-2.1013.ebuild, DBD-mysql-2.1027.ebuild, DBD-mysql-2.9003.ebuild:

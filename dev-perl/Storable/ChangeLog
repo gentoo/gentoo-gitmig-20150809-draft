@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.22 2004/03/21 10:07:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.23 2004/04/02 15:23:22 randy Exp $
+
+  02 Apr 2004; <randy@gentoo.org> Storable-2.09.ebuild:
+  adding s390 to keywords
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> Storable-1.0.14-r1.ebuild,
   Storable-1.0.14.ebuild, Storable-2.04-r1.ebuild, Storable-2.04.ebuild,
