@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.8 2004/06/24 22:15:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.9 2004/11/03 07:50:16 usata Exp $
 
 inherit elisp
 
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/emacs
-	dev-lisp/common-lisp-controller
+DEPEND="dev-lisp/common-lisp-controller
 	sys-apps/texinfo
 	virtual/tetex
 	app-text/texi2html"
@@ -32,10 +31,10 @@ CLPACKAGE=ilisp
 
 src_compile() {
 	make EMACS=emacs SHELL=/bin/sh || die
-	cd extra && for i in *.el ; do
-		emacs --batch --no-site-file --eval "(byte-compile-file \"$i\")" *.el
-	done
-	make -C ${S}/docs
+	cd extra
+	elisp-comp *.el || die "elisp-comp failed"
+	cd -
+	make -C ${S}/docs || die "make docs failed"
 }
 
 src_install() {
@@ -66,7 +65,7 @@ src_install() {
 	elisp-site-file-install ${FILESDIR}/50ilispclc-gentoo.el
 	dodoc ACKNOWLEDGMENTS GETTING-ILISP HISTORY INSTALLATION README Welcome
 
-	sed -i "s,@HYPERSPEC@,${P}/HyperSpec,g" ${D}/usr/share/emacs/site-lisp/50ilispclc-gentoo.el
+	dosed "s,@HYPERSPEC@,${P}/HyperSpec,g" /usr/share/emacs/site-lisp/50ilispclc-gentoo.el
 }
 
 pkg_preinst() {
