@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/tiobench
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.1 2003/11/15 08:21:20 mr_bones_ Exp $
+
+*tiobench-0.3.3 (15 Nov 2003)
+
+  15 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> tiobench-0.3.3.ebuild:
+  initial commit; ebuild modified from the one submitted by Sven Wegener via bug
+  32499
+
