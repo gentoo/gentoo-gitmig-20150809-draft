@@ -1,0 +1,21 @@
+diff -urN hwsetup-1.0.orig/hwsetup.c hwsetup-1.0/hwsetup.c
+--- hwsetup-1.0.orig/hwsetup.c	2003-06-02 15:01:28.000000000 -0400
++++ hwsetup-1.0/hwsetup.c	2004-07-24 18:57:36.986337040 -0400
+@@ -103,7 +103,7 @@
+ 
+ struct xinfo *getxinfo(struct device *d)
+ {
+- const char *xfree4="XFree86", *xvesa4="vesa";
++ const char *xfree4="X", *xvesa4="vesa";
+  const char *xpath=XPATH;
+  static struct xinfo xi;
+  int rescanned=0;
+@@ -206,7 +206,7 @@
+         {
+          char xm[32]="";
+          strcpy(xi.xserver,xfree4);
+-         if(sscanf(xpos,"XFree86(%30[^)])",xm)==1)
++         if(sscanf(xpos,"X(%30[^)])",xm)==1)
+           strcpy(xi.xmodule,xm);
+          else
+           strcpy(xi.xmodule,xvesa4);

@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6b69eae3f5ffb4f12c148d40b908293 ChangeLog 1270
-MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 78c7eb2af710138e04eed996bebf020e hwsetup-1.0-r1.ebuild 661
+MD5 4e2d13d5b31bfc756a824e24ea62f27d hwsetup-1.0-r2.ebuild 751
+MD5 4467f167d7131402dbad65277530e3f8 ChangeLog 1486
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 70141575b96009e82605b4f86fbe8758 files/digest-hwsetup-1.0-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iibHTu7gpaalycRAmymAKD7cQAyHtFUE+FzfV+UR3xdLq9twwCgwIu2
-qEOnSVt2DEe4+PiIcfZlmMA=
-=JNcL
------END PGP SIGNATURE-----
+MD5 70141575b96009e82605b4f86fbe8758 files/digest-hwsetup-1.0-r2 64
+MD5 1ada56ed20f7ac972b207a4ba6f2887f files/hwsetup-1.0-gentoo.patch 696

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.12 2004/06/24 22:11:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.13 2004/07/27 12:30:25 wolf31o2 Exp $
+
+*hwsetup-1.0-r2 (27 Jul 2004)
+
+  27 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/hwsetup-1.0-gentoo.patch, +hwsetup-1.0-r2.ebuild:
+  Changed all calls to XFree86 to just X to make it X server agnostic.
 
   23 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r1.ebuild:
   Added to ~ppc per dholm.
