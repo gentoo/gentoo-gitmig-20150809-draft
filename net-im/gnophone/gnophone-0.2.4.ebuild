@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.2 2003/02/13 14:09:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.3 2003/04/16 17:52:58 cretin Exp $
 
 IUSE=""
 
@@ -15,7 +15,6 @@ DEPEND="media-sound/gsm
 	x11-libs/gtk+
 	media-libs/gdk-pixbuf
 	dev-libs/glib
-	sys-devel/ld.so
 	x11-base/xfree
 	media-libs/imlib
 	virtual/glibc"
@@ -27,7 +26,6 @@ RDEPEND="media-sound/gsm
 	x11-libs/gtk+
 	media-libs/gdk-pixbuf
 	dev-libs/glib
-	sys-devel/ld.so
 	x11-base/xfree
 	media-libs/imlib
 	virtual/glibc"
