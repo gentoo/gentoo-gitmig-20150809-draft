@@ -662,10 +662,6 @@ media-libs/nurbs++
 # azarah - 19 Jun 2002
 >=x11-base/xfree-4.2.99
 
-# devel branch of syslog-ng -- broken (blocke, May 21, 2002)
->=app-admin/syslog-ng-1.5.17
->=dev-libs/libol-0.3.2
-
 # this patch works for me on x86 and ppc but breaks other ppl :( (kain, 08 May 2002)
 =sys-devel/gdb-5.1.1-r1
 
