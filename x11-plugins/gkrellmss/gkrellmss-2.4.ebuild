@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.4.ebuild,v 1.5 2004/07/03 14:51:53 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.4.ebuild,v 1.6 2004/07/09 23:25:31 slarti Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="=app-admin/gkrellm-2*
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 
 src_unpack() {
 	unpack ${A}
