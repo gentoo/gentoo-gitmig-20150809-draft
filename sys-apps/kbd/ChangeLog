@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.9 2003/02/22 02:18:35 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.10 2003/05/20 21:06:44 kumba Exp $
+
+  20 May 2003; Joshua Kinard <kumba@gentoo.org> kbd-1.06-r1.ebuild:
+  Added fix to ebuild to use CFLAGS from /etc/make.conf.  Fixes Bug #21320.
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> kbd-1.06-r1.ebuild :
   Added arm to keywords.
