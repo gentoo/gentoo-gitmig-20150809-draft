@@ -110,13 +110,10 @@ net-misc/radvd
 # <aliz@gentoo.org> (24 Jul 2002)
 # masked for testing
 =sys-apps/groff-1.18
-<<<<<<< package.mask
 
 # <drobbins@gentoo.org> 24 Jul 2002
 # this version breaks with gcc 3.1
-# =net-im/gnomemeeting-0.93.0
-=======
->>>>>>> 1.1077
+=net-im/gnomemeeting-0.93.0
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while the system people put this through the test
