@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/genmenu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.14 2004/08/18 10:03:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.15 2004/08/19 09:47:41 mr_bones_ Exp $
+
+  19 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> genmenu-1.0.7.ebuild:
+  virtual/glibc -> virtual/libc; tidy
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> genmenu-1.0.3.ebuild,
   genmenu-1.0.6.ebuild:
