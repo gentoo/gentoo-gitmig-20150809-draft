@@ -1,0 +1,288 @@
+Only in fontconfig: .cvsignore
+Only in fontconfig: CVS
+diff -ur fontconfig-2.2.0/ChangeLog fontconfig/ChangeLog
+--- fontconfig-2.2.0/ChangeLog	2003-04-17 19:43:04.000000000 +0200
++++ fontconfig/ChangeLog	2003-05-14 18:29:07.000000000 +0200
+@@ -1,3 +1,11 @@
++2003-04-23  James Henstridge  <james@daa.com.au>
++
++	* doc/fontconfig-devel.sgml: close the <para> element.
++
++	* doc/fcpattern.fncs: close the <para> element.
++
++	* doc/func.sgml: close the <refsynopsisdiv> element.
++
+ 2003-04-17  Colin Walters <walters@debian.org>
+ 
+ 	+ Remove some unused variables, and initialize some other ones so
+Only in fontconfig-2.2.0: Makefile.in
+Only in fontconfig-2.2.0: aclocal.m4
+Only in fontconfig: autogen.sh
+Only in fontconfig: config
+Only in fontconfig-2.2.0: config.guess
+Only in fontconfig-2.2.0: config.h.in
+Only in fontconfig-2.2.0: config.sub
+Only in fontconfig-2.2.0: configure
+Only in fontconfig: debian
+Only in fontconfig/doc: .cvsignore
+Only in fontconfig/doc: CVS
+Only in fontconfig-2.2.0/doc: FcAtomicCreate.3
+Only in fontconfig-2.2.0/doc: FcAtomicDeleteNew.3
+Only in fontconfig-2.2.0/doc: FcAtomicDestroy.3
+Only in fontconfig-2.2.0/doc: FcAtomicLock.3
+Only in fontconfig-2.2.0/doc: FcAtomicNewFile.3
+Only in fontconfig-2.2.0/doc: FcAtomicOrigFile.3
+Only in fontconfig-2.2.0/doc: FcAtomicReplaceOrig.3
+Only in fontconfig-2.2.0/doc: FcAtomicUnlock.3
+Only in fontconfig-2.2.0/doc: FcBlanksAdd.3
+Only in fontconfig-2.2.0/doc: FcBlanksCreate.3
+Only in fontconfig-2.2.0/doc: FcBlanksDestroy.3
+Only in fontconfig-2.2.0/doc: FcBlanksIsMember.3
+Only in fontconfig-2.2.0/doc: FcCharSetAddChar.3
+Only in fontconfig-2.2.0/doc: FcCharSetCopy.3
+Only in fontconfig-2.2.0/doc: FcCharSetCount.3
+Only in fontconfig-2.2.0/doc: FcCharSetCreate.3
+Only in fontconfig-2.2.0/doc: FcCharSetDestroy.3
+Only in fontconfig-2.2.0/doc: FcCharSetEqual.3
+Only in fontconfig-2.2.0/doc: FcCharSetFirstPage.3
+Only in fontconfig-2.2.0/doc: FcCharSetHasChar.3
+Only in fontconfig-2.2.0/doc: FcCharSetIntersect.3
+Only in fontconfig-2.2.0/doc: FcCharSetIntersectCount.3
+Only in fontconfig-2.2.0/doc: FcCharSetIsSubset.3
+Only in fontconfig-2.2.0/doc: FcCharSetNextPage.3
+Only in fontconfig-2.2.0/doc: FcCharSetSubtract.3
+Only in fontconfig-2.2.0/doc: FcCharSetSubtractCount.3
+Only in fontconfig-2.2.0/doc: FcCharSetUnion.3
+Only in fontconfig-2.2.0/doc: FcConfigAppFontAddDir.3
+Only in fontconfig-2.2.0/doc: FcConfigAppFontAddFile.3
+Only in fontconfig-2.2.0/doc: FcConfigAppFontClear.3
+Only in fontconfig-2.2.0/doc: FcConfigBuildFonts.3
+Only in fontconfig-2.2.0/doc: FcConfigCreate.3
+Only in fontconfig-2.2.0/doc: FcConfigDestroy.3
+Only in fontconfig-2.2.0/doc: FcConfigFilename.3
+Only in fontconfig-2.2.0/doc: FcConfigGetBlanks.3
+Only in fontconfig-2.2.0/doc: FcConfigGetCache.3
+Only in fontconfig-2.2.0/doc: FcConfigGetConfigDirs.3
+Only in fontconfig-2.2.0/doc: FcConfigGetConfigFiles.3
+Only in fontconfig-2.2.0/doc: FcConfigGetCurrent.3
+Only in fontconfig-2.2.0/doc: FcConfigGetFontDirs.3
+Only in fontconfig-2.2.0/doc: FcConfigGetFonts.3
+Only in fontconfig-2.2.0/doc: FcConfigGetRescanInverval.3
+Only in fontconfig-2.2.0/doc: FcConfigParseAndLoad.3
+Only in fontconfig-2.2.0/doc: FcConfigSetCurrent.3
+Only in fontconfig-2.2.0/doc: FcConfigSetRescanInverval.3
+Only in fontconfig-2.2.0/doc: FcConfigSubstitute.3
+Only in fontconfig-2.2.0/doc: FcConfigSubstituteWithPat.3
+Only in fontconfig-2.2.0/doc: FcConfigUptoDate.3
+Only in fontconfig-2.2.0/doc: FcDefaultSubstitute.3
+Only in fontconfig-2.2.0/doc: FcDirCacheValid.3
+Only in fontconfig-2.2.0/doc: FcDirSave.3
+Only in fontconfig-2.2.0/doc: FcDirScan.3
+Only in fontconfig-2.2.0/doc: FcFileScan.3
+Only in fontconfig-2.2.0/doc: FcFontList.3
+Only in fontconfig-2.2.0/doc: FcFontMatch.3
+Only in fontconfig-2.2.0/doc: FcFontRenderPrepare.3
+Only in fontconfig-2.2.0/doc: FcFontSetAdd.3
+Only in fontconfig-2.2.0/doc: FcFontSetCreate.3
+Only in fontconfig-2.2.0/doc: FcFontSetDestroy.3
+Only in fontconfig-2.2.0/doc: FcFontSort.3
+Only in fontconfig-2.2.0/doc: FcFreeTypeCharIndex.3
+Only in fontconfig-2.2.0/doc: FcFreeTypeCharSet.3
+Only in fontconfig-2.2.0/doc: FcFreeTypeQuery.3
+Only in fontconfig-2.2.0/doc: FcGetVersion.3
+Only in fontconfig-2.2.0/doc: FcInit.3
+Only in fontconfig-2.2.0/doc: FcInitBringUptoDate.3
+Only in fontconfig-2.2.0/doc: FcInitLoadConfig.3
+Only in fontconfig-2.2.0/doc: FcInitLoadConfigAndFonts.3
+Only in fontconfig-2.2.0/doc: FcInitReinitialize.3
+Only in fontconfig-2.2.0/doc: FcMatrixCopy.3
+Only in fontconfig-2.2.0/doc: FcMatrixEqual.3
+Only in fontconfig-2.2.0/doc: FcMatrixInit.3
+Only in fontconfig-2.2.0/doc: FcMatrixMultiply.3
+Only in fontconfig-2.2.0/doc: FcMatrixRotate.3
+Only in fontconfig-2.2.0/doc: FcMatrixScale.3
+Only in fontconfig-2.2.0/doc: FcMatrixShear.3
+Only in fontconfig-2.2.0/doc: FcNameConstant.3
+Only in fontconfig-2.2.0/doc: FcNameGetConstant.3
+Only in fontconfig-2.2.0/doc: FcNameGetObjectType.3
+Only in fontconfig-2.2.0/doc: FcNameParse.3
+Only in fontconfig-2.2.0/doc: FcNameRegisterConstants.3
+Only in fontconfig-2.2.0/doc: FcNameRegisterObjectTypes.3
+Only in fontconfig-2.2.0/doc: FcNameUnparse.3
+Only in fontconfig-2.2.0/doc: FcNameUnregisterConstants.3
+Only in fontconfig-2.2.0/doc: FcNameUnregisterObjectTypes.3
+Only in fontconfig-2.2.0/doc: FcObjectSetAdd.3
+Only in fontconfig-2.2.0/doc: FcObjectSetBuild.3
+Only in fontconfig-2.2.0/doc: FcObjectSetCreate.3
+Only in fontconfig-2.2.0/doc: FcObjectSetDestroy.3
+Only in fontconfig-2.2.0/doc: FcPatternAdd-Type.3
+Only in fontconfig-2.2.0/doc: FcPatternAdd.3
+Only in fontconfig-2.2.0/doc: FcPatternAddWeak.3
+Only in fontconfig-2.2.0/doc: FcPatternBuild.3
+Only in fontconfig-2.2.0/doc: FcPatternCreate.3
+Only in fontconfig-2.2.0/doc: FcPatternDel.3
+Only in fontconfig-2.2.0/doc: FcPatternDestroy.3
+Only in fontconfig-2.2.0/doc: FcPatternEqual.3
+Only in fontconfig-2.2.0/doc: FcPatternEqualSubset.3
+Only in fontconfig-2.2.0/doc: FcPatternGet-Type.3
+Only in fontconfig-2.2.0/doc: FcPatternGet.3
+Only in fontconfig-2.2.0/doc: FcPatternHash.3
+Only in fontconfig-2.2.0/doc: FcPatternPrint.3
+Only in fontconfig-2.2.0/doc: FcStrBasename.3
+Only in fontconfig-2.2.0/doc: FcStrCmpIgnoreCase.3
+Only in fontconfig-2.2.0/doc: FcStrCopy.3
+Only in fontconfig-2.2.0/doc: FcStrCopyFilename.3
+Only in fontconfig-2.2.0/doc: FcStrDirname.3
+Only in fontconfig-2.2.0/doc: FcStrListCreate.3
+Only in fontconfig-2.2.0/doc: FcStrListDone.3
+Only in fontconfig-2.2.0/doc: FcStrListNext.3
+Only in fontconfig-2.2.0/doc: FcStrSetAdd.3
+Only in fontconfig-2.2.0/doc: FcStrSetAddFilename.3
+Only in fontconfig-2.2.0/doc: FcStrSetCreate.3
+Only in fontconfig-2.2.0/doc: FcStrSetDel.3
+Only in fontconfig-2.2.0/doc: FcStrSetDestroy.3
+Only in fontconfig-2.2.0/doc: FcStrSetMember.3
+Only in fontconfig-2.2.0/doc: FcUcs4ToUtf8.3
+Only in fontconfig-2.2.0/doc: FcUtf16Len.3
+Only in fontconfig-2.2.0/doc: FcUtf16ToUcs4.3
+Only in fontconfig-2.2.0/doc: FcUtf8Len.3
+Only in fontconfig-2.2.0/doc: FcUtf8ToUcs4.3
+Only in fontconfig-2.2.0/doc: FcValueDestroy.3
+Only in fontconfig-2.2.0/doc: FcValueSave.3
+Only in fontconfig-2.2.0/doc: Makefile.in
+diff -ur fontconfig-2.2.0/doc/fcpattern.fncs fontconfig/doc/fcpattern.fncs
+--- fontconfig-2.2.0/doc/fcpattern.fncs	2003-03-07 09:51:14.000000000 +0100
++++ fontconfig/doc/fcpattern.fncs	2003-05-14 18:29:08.000000000 +0200
+@@ -1,5 +1,5 @@
+ /*
+- * $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
++ * $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
+  *
+  * Copyright © 2003 Keith Packard
+  *
+@@ -226,6 +226,7 @@
+ @DESC@
+ Builds a pattern using a list of objects, types and values.  Each
+ value to be entered in the pattern is specified with three arguments:
++</para>
+ <orderedlist>
+ <listitem><para>
+ Object name, a string describing the property to be added.
+Only in fontconfig-2.2.0/doc: fontconfig-devel
+diff -ur fontconfig-2.2.0/doc/fontconfig-devel.sgml fontconfig/doc/fontconfig-devel.sgml
+--- fontconfig-2.2.0/doc/fontconfig-devel.sgml	2003-03-07 21:45:31.000000000 +0100
++++ fontconfig/doc/fontconfig-devel.sgml	2003-05-14 18:29:09.000000000 +0200
+@@ -18,7 +18,7 @@
+ <!ENTITY version SYSTEM "version.sgml">
+ ]>
+ <!--
+-    $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
++    $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
+    
+     Copyright © 2003 Keith Packard
+    
+@@ -476,6 +476,7 @@
+     <para>
+ These routines work with font files and directories, including font
+ directory cache files.
++    </para>
+     &fcfile;
+   </sect2>
+   <sect2><title>FcStrSet and FcStrList</title>
+Only in fontconfig-2.2.0/doc: fontconfig-devel.txt
+Only in fontconfig-2.2.0/doc: fontconfig-user.html
+Only in fontconfig-2.2.0/doc: fontconfig-user.txt
+Only in fontconfig-2.2.0/doc: fonts-conf.5
+diff -ur fontconfig-2.2.0/doc/func.sgml fontconfig/doc/func.sgml
+--- fontconfig-2.2.0/doc/func.sgml	2003-03-07 21:50:44.000000000 +0100
++++ fontconfig/doc/func.sgml	2003-05-14 18:29:09.000000000 +0200
+@@ -1,5 +1,5 @@
+ <!--
+-   $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
++   $Id: fontconfig-2.2.0-cvs_bugfixes.patch,v 1.1 2003/05/14 23:30:49 foser Exp $
+   
+    Copyright © 2003 Keith Packard
+   
+@@ -76,6 +76,7 @@
+ 	</funcprototype>
+ @}PROTOTYPE@
+ 	</funcsynopsis>
++	</refsynopsisdiv>
+ 	<refsect1><title>Description</title>
+ 	    <para>
+ @DESC@
+Only in fontconfig/fc-cache: .cvsignore
+Only in fontconfig/fc-cache: CVS
+Only in fontconfig-2.2.0/fc-cache: Makefile.in
+Only in fontconfig/fc-lang: .cvsignore
+Only in fontconfig/fc-lang: CVS
+Only in fontconfig-2.2.0/fc-lang: Makefile.in
+Only in fontconfig/fc-lang: fc-lang.man
+Only in fontconfig-2.2.0/fc-lang: fclang.h
+Only in fontconfig/fc-lang: iso639-1
+Only in fontconfig/fc-lang: iso639-2
+Only in fontconfig/fc-list: .cvsignore
+Only in fontconfig/fc-list: CVS
+Only in fontconfig-2.2.0/fc-list: Makefile.in
+Only in fontconfig/fontconfig: .cvsignore
+Only in fontconfig/fontconfig: CVS
+Only in fontconfig-2.2.0/fontconfig: Makefile.in
+Only in fontconfig-2.2.0: fontconfig.spec
+Only in fontconfig-2.2.0: install-sh
+Only in fontconfig-2.2.0: ltmain.sh
+Only in fontconfig-2.2.0: missing
+Only in fontconfig-2.2.0: mkinstalldirs
+Only in fontconfig/src: .cvsignore
+Only in fontconfig/src: CVS
+Only in fontconfig-2.2.0/src: Makefile.in
+diff -ur fontconfig-2.2.0/src/fccfg.c fontconfig/src/fccfg.c
+--- fontconfig-2.2.0/src/fccfg.c	2003-04-17 23:50:24.000000000 +0200
++++ fontconfig/src/fccfg.c	2003-05-14 18:29:11.000000000 +0200
+@@ -1232,6 +1232,14 @@
+ 		    !FcStrCmpIgnoreCase ((FcChar8 *) t->field, 
+ 					 (FcChar8 *) e->field))
+ 		{
++		    /* 
++		     * KLUDGE - the pattern may have been reallocated or
++		     * things may have been inserted or deleted above
++		     * this element by other edits.  Go back and find
++		     * the element again
++		     */
++		    if (e != s->edit && st[i].elt)
++			st[i].elt = FcPatternFindElt (p, t->field);
+ 		    if (!st[i].elt)
+ 			t = 0;
+ 		    break;
+diff -ur fontconfig-2.2.0/src/fcfreetype.c fontconfig/src/fcfreetype.c
+--- fontconfig-2.2.0/src/fcfreetype.c	2003-04-20 05:35:58.000000000 +0200
++++ fontconfig/src/fcfreetype.c	2003-05-14 18:29:13.000000000 +0200
+@@ -156,7 +156,7 @@
+ } FcNoticeFoundries[] = {
+     { (const FcChar8*) "Bigelow",	(const FcChar8 *) "b&h" },
+     { (const FcChar8*) "Adobe",		(const FcChar8 *) "adobe" },
+-    { (const FcChar8*) "Bitstream",	(const FcChar8 *) "bitsteam" },
++    { (const FcChar8*) "Bitstream",	(const FcChar8 *) "bitstream" },
+     { (const FcChar8*) "Monotype",	(const FcChar8 *) "monotype" },
+     { (const FcChar8*) "Linotype",	(const FcChar8 *) "linotype" },
+     { (const FcChar8*) "LINOTYPE-HELL", (const FcChar8 *) "linotype" },
+@@ -769,10 +769,16 @@
+ 		}
+ 	}
+      
++#if 0
++	/* 
++	 * Don't bother with italic_angle; FreeType already extracts that
++	 * information for us and sticks it into style_flags
++	 */
+         if (psfontinfo.italic_angle < 0) 
+             slant = FC_SLANT_ITALIC; 
+         else if (psfontinfo.italic_angle >= 0) 
+             slant = FC_SLANT_ROMAN; 
++#endif
+ 
+         if(!foundry)
+             foundry = FcNoticeFoundry(psfontinfo.notice);
+Only in fontconfig-2.2.0: stamp-h.in
+Only in fontconfig/test: .cvsignore
+Only in fontconfig/test: CVS
+Only in fontconfig-2.2.0/test: Makefile.in
