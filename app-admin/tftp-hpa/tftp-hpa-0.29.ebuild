@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/tftp-hpa-0.29.ebuild,v 1.7 2002/08/16 02:30:28 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tftp-hpa/tftp-hpa-0.29.ebuild,v 1.8 2002/10/04 03:46:21 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HPA's TFTP Daemon is a port of the OpenBSD TFTP server"
