@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ecletex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.9 2005/02/10 23:53:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.10 2005/02/13 01:28:48 karltk Exp $
+
+  13 Feb 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  ecletex-0.0.3.ebuild:
+  Complete fix for #81272. Would benefit from some testing.
 
   11 Feb 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
   +files/build.properties-0.0.3, files/build.xml-0.0.3,
