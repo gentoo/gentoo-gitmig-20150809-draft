@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r1.ebuild,v 1.2 2002/06/21 03:09:18 carpaski Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
