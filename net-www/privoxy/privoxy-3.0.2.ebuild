@@ -1,11 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.2.ebuild,v 1.5 2003/10/18 18:35:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.2.ebuild,v 1.6 2004/01/18 14:29:37 mholzer Exp $
 
 S="${WORKDIR}/${P}-stable"
 HOMEPAGE="http://www.privoxy.org"
 DESCRIPTION="A web proxy with advanced filtering capabilities for protecting privacy against internet junk."
 SRC_URI="mirror://sourceforge/ijbswa/${P}-stable-src.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="2"
 KEYWORDS="x86 ~ppc alpha"
@@ -14,7 +15,6 @@ LICENSE="GPL-2"
 DEPEND=">=sys-apps/sed-4"
 
 pkg_setup() {
-
 	if ! grep -q ^privoxy: /etc/group ; then
 		groupadd privoxy || die "problem adding group privoxy"
 	fi
@@ -47,6 +47,7 @@ src_compile() {
 src_install () {
 	diropts -m 0750 -g privoxy -o privoxy
 	dodir /var/log/privoxy
+	keepdir /var/log/privoxy
 	dodir /etc/privoxy /etc/privoxy/templates
 
 	insopts -m 0640 -g privoxy -o privoxy
