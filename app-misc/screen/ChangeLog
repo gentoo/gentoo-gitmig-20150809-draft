@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.41 2003/11/18 22:05:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.42 2003/11/20 21:48:29 mr_bones_ Exp $
+
+  20 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> screen-4.0.1.ebuild:
+  install patchlevel.h as doc for bug 33852; more error checking/messages; use
+  sed -i; use more portage functions
 
   18 Nov 2003; Peter Johanson <latexer@gentoo.org> screen-4.0.1.ebuild:
   Fixed chmod line to be 0775 (bug # 33672)

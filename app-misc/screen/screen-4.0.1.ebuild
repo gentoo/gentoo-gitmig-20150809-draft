@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.7 2003/11/18 22:05:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.1.ebuild,v 1.8 2003/11/20 21:48:29 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -14,19 +14,20 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2
+	>=sys-apps/sed-4
 	pam? ( >=sys-libs/pam-0.75 )"
 
 src_unpack() {
 	unpack ${A} && cd ${S}
 
 	# Fix manpage.
-	mv doc/screen.1 doc/screen.1.orig
-	sed <doc/screen.1.orig >doc/screen.1 \
+	sed -i \
 		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g;
 		s:/usr/local/screens:/var/run/screen:g;
 		s:/local/etc/screenrc:/etc/screenrc:g;
 		s:/etc/utmp:/var/run/utmp:g;
-		s:/local/screens/S-:/var/run/screen/S-:g"
+		s:/local/screens/S-:/var/run/screen/S-:g" doc/screen.1 || \
+			die "sed doc/screen.1 failed"
 }
 
 src_compile() {
@@ -40,7 +41,8 @@ src_compile() {
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
 	use pam && myconf="--enable-pam" && append-flags "-DUSE_PAM"
 
-	econf 	--with-socket-dir=/var/run/screen \
+	econf \
+		--with-socket-dir=/var/run/screen \
 		--with-sys-screenrc=/etc/screenrc \
 		--enable-rxvt_osc ${myconf}
 
@@ -63,31 +65,30 @@ src_compile() {
 	# (16 Jan 2003 agriffis)
 	LC_ALL=POSIX make term.h || die "Failed making term.h"
 
-	emake || die "Failed to compile"
+	emake || die "emake failed"
 }
 
 src_install () {
-	dobin screen
+	dobin screen || die "dobin failed"
+	keepdir /var/run/screen
 	fperms 2755 /usr/bin/screen
-
-	dodir /var/run/screen
-	touch ${D}/var/run/screen/.keep
-
-	# can't use this cause fowners do not support multiple args.
-	# fowners root.utmp /{usr/bin,var/run}/screen
-	chown root:utmp ${D}/{usr/bin,var/run}/screen
+	fowners root:utmp /{usr/bin,var/run}/screen
 
 	insinto /usr/share/terminfo ; doins terminfo/screencap
 	insinto /usr/share/screen/utf8encodings ; doins utf8encodings/??
 	insopts -m 644 ; insinto /etc ; doins ${FILESDIR}/screenrc
 
-	use pam && { insinto /etc/pam.d ; newins ${FILESDIR}/screen.pam.system-auth screen ; }
+	use pam && {
+		insinto /etc/pam.d
+		newins ${FILESDIR}/screen.pam.system-auth screen
+	}
 
-	dodoc README ChangeLog INSTALL COPYING TODO NEWS* \
-	doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
+	dodoc README ChangeLog INSTALL TODO NEWS* patchlevel.h \
+		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps} || \
+			die "dodoc failed"
 
-	doman doc/screen.1
-	doinfo doc/screen.info*
+	doman doc/screen.1 || die "doman failed"
+	doinfo doc/screen.info* || die "doinfo failed"
 }
 
 pkg_postinst() {
