@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.6 2004/04/28 09:03:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.7 2004/05/07 06:26:56 mr_bones_ Exp $
 
 inherit gcc
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc hppa amd64"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/hawknl${PV}
