@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.12 2002/10/04 03:57:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.13 2002/11/30 02:28:22 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Modules that add encryption ability at the kernel level."
 SRC_URI="mirror://sourceforge/cryptoapi/${P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/cryptoapi"
@@ -12,12 +11,12 @@ LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
 
 DEPEND=">=sys-apps/util-linux-2.11o-r2
-		virtual/linux-sources
-		>=sys-apps/portage-1.9.10"
+	virtual/linux-sources
+	>=sys-apps/portage-1.9.10"
 
 src_compile() {
 	check_KV
-	econf --enable-iv-mode-sector || die
+	econf --enable-iv-mode-sector
 	cd ${S}/api
 	cp Makefile Makefile.orig
 	sed -e "s:-DMODVERSIONS:-DMODVERSIONS -DEXPORT_SYMTAB:g" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgsm/gpgsm-0.3.10.ebuild,v 1.1 2002/11/01 10:29:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgsm/gpgsm-0.3.10.ebuild,v 1.2 2002/11/30 02:36:47 vapier Exp $
 
 S="${WORKDIR}/newpg-${PV}"
 DESCRIPTION="GnuPG Cryptographic message syntax and temporary project for gnupg extensions. Will be merged into gnupg for the gnupg-2.0 release."
@@ -24,13 +24,13 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_compile(){
 	local myconf
 	use nls \
+		&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
-
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README README-alpha THANKS TODO VERSION
 }

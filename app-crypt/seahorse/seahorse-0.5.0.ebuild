@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.16 2002/10/18 20:56:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.17 2002/11/30 02:38:31 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="gnome front end to gnupg"
 SRC_URI="mirror://sourceforge/seahorse/${P}.tar.gz"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -16,7 +15,7 @@ DEPEND="virtual/x11
 	>=gnome-base/gnome-libs-1.4.1.2-r1"
 
 src_compile() {                           
-	econf || die
+	econf
 	emake || die
 }
 

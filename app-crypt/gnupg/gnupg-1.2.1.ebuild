@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.5 2002/11/10 15:29:29 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.6 2002/11/30 02:29:47 vapier Exp $
 
-IUSE="X zlib ldap nls"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
@@ -12,6 +9,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ppc ~sparc ~sparc64"
+IUSE="X zlib ldap nls"
 
 DEPEND="sys-devel/perl
 	X? ( x11-misc/xloadimage )
@@ -32,11 +30,11 @@ src_compile() {
 		myconf="${myconf} --enable-m-guard"
 	fi
 
-	econf ${myconf} || die
-	emake || make || die
+	econf ${myconf}
+	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS PROJECTS README THANKS TODO VERSION
 	docinto doc
