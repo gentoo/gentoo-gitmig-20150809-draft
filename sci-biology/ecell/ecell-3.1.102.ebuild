@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102.ebuild,v 1.2 2004/12/28 20:27:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102.ebuild,v 1.3 2005/01/02 17:26:33 chrb Exp $
 
 inherit eutils
 
