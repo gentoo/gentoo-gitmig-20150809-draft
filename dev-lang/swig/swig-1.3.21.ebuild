@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.9 2004/04/28 19:22:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.10 2004/05/13 14:49:11 randy Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	perl? ( >=dev-lang/perl-5.6.1 )"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~hppa sparc x86 ~amd64 ~ppc ~mips ~ia64"
+KEYWORDS="~alpha ~hppa sparc x86 ~amd64 ~ppc ~mips ~ia64 s390"
 
 src_compile() {
 	local myc
