@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.2 2003/09/11 12:18:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.3 2003/09/11 14:43:59 pylon Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd ${S}
 	# Add support for 2.5 kernels
 	# <azarah@gentoo.org> (05 Feb 2003)
-	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch || die
+	epatch ${FILESDIR}/${PN}-2.01-kernel25-support.patch
 
 	use dvdr && epatch ../${DVDR_PATCH_P}
 
