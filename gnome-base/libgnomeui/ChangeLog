@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.11 2002/11/13 00:25:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.12 2002/11/21 19:52:40 azarah Exp $
+
+*libgnomeui-2.0.5-r1 (21 Nov 2002)
+
+  21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> libgnomeui-2.0.5-r1.ebuild :
+  Fix a crash when using gtk+-2.1.  Added ${P}-GTK_TYPE_INVISIBLE.patch
+  for this.  This is a fix backported from 2.1.2.
 
 *libgnomeui-2.1.2 (12 Nov 2002)
 
