@@ -3,3 +3,5 @@
 >=sys-libs/readline-4.2
 >sys-devel/automake-1.4-r2
 app-admin/powertweak
+app-admin/va-systemimager-server
+app-admin/va-systemimager-client
