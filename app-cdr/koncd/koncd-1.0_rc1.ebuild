@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/koncd-1.0_rc1.ebuild,v 1.6 2001/12/30 17:29:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/koncd-1.0_rc1.ebuild,v 1.7 2002/02/12 01:23:19 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/koncd-1.0rc1
 DESCRIPTION="A KDE frontend to cdr apps; very powerful"
 SRC_URI="http://www.koncd.org/download/koncd-1.0rc1.tar.gz"
 HOMEPAGE="http://www.koncd.org/"
-
-newdepend ">=app-cdr/cdrtools-1.11"
+SLOT="0"
+NEWDEPEND "$DEPEND >=app-cdr/cdrtools-1.11"
 
 
