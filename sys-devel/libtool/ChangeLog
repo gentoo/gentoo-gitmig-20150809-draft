@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.73 2005/02/15 14:55:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.74 2005/02/23 17:17:01 azarah Exp $
+
+*libtool-1.5.10-r5 (23 Feb 2005)
+
+  23 Feb 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/1.5.10/libtool-1.5.10-portage.patch, +libtool-1.5.10-r5.ebuild:
+  Update portage.patch to verify that we always have a leading '/' when we
+  replace $D.
 
   15 Feb 2005; Markus Rothe <corsair@gentoo.org> libtool-1.5.10-r4.ebuild:
   Stable on ppc64
