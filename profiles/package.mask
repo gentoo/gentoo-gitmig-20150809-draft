@@ -131,6 +131,7 @@ x11-misc/med
 =x11-misc/commonbox-utils-0.5
 
 # <lanius@gentoo.org> (10 Oct 2003)
+# updated 24 Nov
 # motif cleanups
 =x11-libs/openmotif-2.2.2-r3
 =x11-libs/openmotif-2.1.30-r2
