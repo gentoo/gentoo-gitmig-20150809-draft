@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.52.ebuild,v 1.1 2004/07/07 16:04:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.52.ebuild,v 1.2 2004/07/07 17:10:09 eradicator Exp $
 
 IUSE="static spell"
 
@@ -20,8 +20,11 @@ SRC_URI="
 	amd64? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 	ppc? ( static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
 	ppc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
-	sparc? ( static?  ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
-	sparc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
+	sparc? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+
+# sparc shared version does not work for me as it uses gcc-2.95 - eradicator
+#	sparc? ( static?  ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+#	sparc? ( !static? ( ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
 
 
 # Dependencies may be augmented later (see below).
@@ -41,7 +44,7 @@ RDEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc amd64"
 
 src_unpack() {
 	unpack ${A}
