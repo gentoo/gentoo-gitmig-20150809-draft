@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.8.ebuild,v 1.1 2005/02/05 14:06:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.8.ebuild,v 1.2 2005/02/05 15:00:51 satya Exp $
 
 inherit eutils linux-mod
 
@@ -21,7 +21,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-#	use vserver && epatch ${FILESDIR}/${P}-vserver.patch
+	use vserver && epatch ${FILESDIR}/${P}-vserver.patch
 	if ! use debug; then
 		echo "UNIONFS_DEBUG_CFLAG=" >> ${user_Makefile}
 		EXTRACFLAGS="${EXTRACFLAGS} -DNODEBUG"
