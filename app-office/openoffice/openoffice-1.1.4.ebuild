@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.19 2005/03/30 10:15:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.20 2005/03/30 14:09:49 suka Exp $
 
 # Notes:
 #
@@ -260,13 +260,10 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PV}/openoffice-java.patch
 
-	# GCC 3.4.x fixes
-	if [ "$(gcc-version)" = "3.4" ]
-	then
-		epatch ${FILESDIR}/${PV}/gcc34.patch.bz2
-		epatch ${FILESDIR}/${PV}/gcc34-sal-link-to-libsupc++.diff
-		use !java && epatch ${FILESDIR}/${PV}/gcc34-nojava-fix.patch
-	fi
+	#GCC 3.4 fixes, also needed for hardened
+	epatch ${FILESDIR}/${PV}/gcc34.patch.bz2
+	epatch ${FILESDIR}/${PV}/gcc34-sal-link-to-libsupc++.diff
+	use !java && epatch ${FILESDIR}/${PV}/gcc34-nojava-fix.patch
 
 	#Fixes for hardened
 	if use hardened; then
