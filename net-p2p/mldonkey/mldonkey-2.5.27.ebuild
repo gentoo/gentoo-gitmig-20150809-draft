@@ -1,26 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.22-r1.ebuild,v 1.3 2004/08/10 02:26:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.27.ebuild,v 1.1 2004/08/13 22:42:23 squinky86 Exp $
 
 inherit eutils
 
-IUSE="gtk"
+IUSE="gtk gtk2"
+
+PATCHPACK="patch_pack27b.gz"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
-SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
-	http://ftp.berlios.de/pub/mldonkey/spiralvoice/patchpacks/patch_pack22a.gz"
+SRC_URI="http://ftp.berlios.de/pub/mldonkey/spiralvoice/cvs/${P/.5./.5-}.tar.bz2
+	http://ftp.berlios.de/pub/mldonkey/spiralvoice/patchpacks/${PATCHPACK}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 
-RDEPEND="gtk? ( =dev-ml/lablgtk-1.2.6* )
-	>=dev-lang/ocaml-3.07
+S=${WORKDIR}
+
+RDEPEND=">=dev-lang/ocaml-3.07
 	dev-lang/perl
-	net-misc/wget"
-#	gtk? ( !gtk2? ( =dev-ml/lablgtk-1.2.6* ) )
-#	gtk2? ( =dev-ml/lablgtk-2* )
+	net-misc/wget
+	gtk? ( !gtk2? ( =dev-ml/lablgtk-1.2.6* ) )
+	gtk2? ( >=dev-ml/lablgtk-2.4 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
@@ -28,15 +31,12 @@ DEPEND="${RDEPEND}
 MLUSER="p2p"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-
+	unpack ${P/.5./.5-}.tar.bz2
 	cd ${S}
-	#Don't change this, unless you know what you are doing
-	epatch ${DISTDIR}/patch_pack22a.gz || die
+	epatch ${DISTDIR}/${PATCHPACK}
 	export WANT_AUTOCONF=2.5
 	cd config; autoconf; cd ..
 }
-
 
 src_compile() {
 	use gtk || export GTK_CONFIG="no"
@@ -48,17 +48,14 @@ src_compile() {
 		--localstatedir=/var/mldonkey \
 		--enable-batch \
 		--enable-checks \
-		--enable-pthread || die
-#		`use_enable gtk2`
-#	use gtk || use gtk2 || export GTK_CONFIG=no
-	use gtk || export GTK_CONFIG=no
+		--enable-pthread \
+		`use_enable gtk2` || die
 	export OCAMLRUNPARAM="l=256M"
 	emake || die
 }
 
 src_install() {
 	dobin mlnet
-#	( use gtk || use gtk2 ) && dobin mlchat mlgui mlguistarter mlim mlnet+gui
 	use gtk && dobin mlchat mlgui mlguistarter mlim mlnet+gui
 	dobin ${FILESDIR}/mldonkey
 
