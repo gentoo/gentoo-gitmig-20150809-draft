@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.24 2004/11/28 01:23:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.25 2004/11/28 11:16:32 lu_zero Exp $
+
+  28 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  files/qemu-0.6.1-20041126.patch:
+  Minor fix, the patch had an Header reference that cvs replaced
 
 *qemu-0.6.1-r1 (28 Nov 2004)
 
