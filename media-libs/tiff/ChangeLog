@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/tiff
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.11 2003/11/15 02:39:06 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.12 2004/02/19 17:42:47 lostlogic Exp $
+
+*tiff-3.6.1 (19 Feb 2004)
+
+  19 Feb 2004; Brandon Low <lostlogic@gentoo.org> tiff-3.5.7-r1.ebuild,
+  tiff-3.6.0.ebuild, tiff-3.6.0_beta2.ebuild, tiff-3.6.1.ebuild:
+  Bump and strip arm keywords
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> tiff-3.6.0.ebuild:
   Stable on ia64
