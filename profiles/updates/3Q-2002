@@ -48,3 +48,4 @@ move x11-misc/wmpinboard x11-plugins/wmpinboard
 move x11-misc/wmppp x11-plugins/wmppp
 move x11-misc/wmsysmon x11-plugins/wmsysmon
 move x11-misc/wmweather x11-plugins/wmweather
+move x11-misc/WMCPULoad x11-plugins/wmcpuload
