@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.3 2002/11/24 04:03:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r5.ebuild,v 1.4 2002/11/30 21:53:54 vapier Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -334,7 +334,7 @@ src_install() {
 		do
 			if [ -d ${D}${LOC}/include/${x} ]
 			then
-				mkdir -p ${D}${LIBPATH}/include/${x}
+				dodir /${LIBPATH}/include/${x}
 				mv -f ${D}${LOC}/include/${x}/* ${D}${LIBPATH}/include/${x}/
 				rm -rf ${D}${LOC}/include/${x}
 			fi

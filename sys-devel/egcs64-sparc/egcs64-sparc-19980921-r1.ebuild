@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.9 2002/10/04 06:33:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.10 2002/11/30 21:49:49 vapier Exp $
 
 EGCSDATE=`echo $P| sed -e 's/egcs64-sparc-\([0-9]*\).*/\1/'`
 EGCSVER=2.92.11
 S=${WORKDIR}/egcs64-${EGCSDATE}
-A="egcs64_${EGCSDATE}.orig.tar.gz"
 DESCRIPTION="sparc64 crosscompiler for building sparc64 kernels on sparc32"
-SRC_URI="http://ftp.us.debian.org/debian/dists/stable/main/source/devel/${A}"
+SRC_URI="http://ftp.us.debian.org/debian/dists/stable/main/source/devel/egcs64_${EGCSDATE}.orig.tar.gz"
 HOMEPAGE="http://www.rocklinux.de/projects/sparc/sparc.html"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -60,8 +59,7 @@ src_compile() {
 src_install() {
 
 	cd ${S}/build
-	mkdir -p ${D}/${MYPREFIX}/lib ${D}/${MYPREFIX}/bin ${D}/${MYPREFIX}/local \
-				${D}/${MYPREFIX}/doc/egcs64-${EGCSDATE}/gcc
+	dodir /${MYPREFIX}/{bin,lib,local} /${MYPREFIX}/doc/egcs64-${EGCSDATE}/gcc
 
 	cd gcc && make install \
 		prefix=${D}/${MYPREFIX} local_prefix=${D}/${MYPREFIX}/local \
@@ -93,7 +91,3 @@ src_install() {
 	ln -s egcs-${EGCSVER} egcs64
 	ln -s egcs-${EGCSVER} cc64
 }
-
-
-
-
