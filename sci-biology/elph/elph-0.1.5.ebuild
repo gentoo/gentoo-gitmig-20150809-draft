@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-0.1.5.ebuild,v 1.2 2005/01/28 01:24:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-0.1.5.ebuild,v 1.3 2005/01/28 01:32:07 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,7 +22,7 @@ src_unpack() {
 	sed -i -e "s/CC      := g++/CC      := $(tc-getCXX)/" \
 		-e "s/-fno-exceptions -fno-rtti -D_REENTRANT -g/${CXXFLAGS}/" \
 		-e "s/LINKER    := g++/LINKER    := $(tc-getCXX)/" \
-		Makefile
+		Makefile || die
 }
 
 src_compile() {
