@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.12 2003/09/08 02:25:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.13 2003/09/23 15:28:48 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
-IUSE="bootstrap build"
+IUSE="bootstrap build static"
 
 SV="1.4.3.8p1"
 SVREV=""
@@ -40,6 +40,8 @@ src_unpack() {
 
 	echo ">>> Unpacking rc-scripts-${SV}${SVREV}.tar.bz2"
 	tar -jxf ${FILESDIR}/rc-scripts-${SV}${SVREV}.tar.bz2 || die
+
+	use static && export LDFLAGS="-static"
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -95,7 +97,7 @@ src_compile() {
 
 	cd ${S}/src
 	einfo "Building utilities..."
-	make CC="${CC:-gcc}" LD="${CC:-gcc}" \
+	make CC="${CC:-gcc}" LD="${CC:-gcc} ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
 
 	if [ -z "`use build`" ]
@@ -104,7 +106,7 @@ src_compile() {
 		cd ${S2}
 		einfo "Building sysvinit..."
 		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
-			LDFLAGS="" || die "problem compiling sysvinit"
+			LDFLAGS="${LDFLAGS}" || die "problem compiling sysvinit"
 
 		if [ -z "`use bootstrap`" ]
 		then
