@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.2 2002/02/23 01:43:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.3 2002/05/30 05:21:57 seemant Exp $
+
+*wget-1.8.2 (29 May 2002)
+
+  29 May 2002; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2.ebuild
+  files/digest-wget-1.8.2 :
+
+  Version bump. The patch still works, so there is no noticeable difference
+  to the user.
 
 *wget-1.8.1-r1 (22 Feb 2002)
 
