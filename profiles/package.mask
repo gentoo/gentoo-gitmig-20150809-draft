@@ -40,10 +40,6 @@
 # new version, please test!
 =sys-devel/perl-5.8.0
 
-# <stubear@gentoo.org> (28 Jul 2002)
-# Testing CJK patch for Mutt.
-=net-mail/mutt-1.4-r2
-
 # <raker@gentoo.org> (26 Jul 2002)
 # New libgda masked for testing.
 =gnome-extra/libgda-0.8.192
