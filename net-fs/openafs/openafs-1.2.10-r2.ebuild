@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.6 2004/06/07 21:29:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r2.ebuild,v 1.7 2004/06/19 05:17:17 vapier Exp $
 
-inherit check-kernel fixheadtails flag-o-matic eutils
+inherit check-kernel fixheadtails flag-o-matic eutils gcc
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The AFS 3 scalable distributed file system"
 HOMEPAGE="http://www.openafs.org/"
 SRC_URI="http://openafs.org/dl/openafs/${PV}/${P}-src.tar.bz2"
 
-SLOT="0"
 LICENSE="IPL-1"
+SLOT="0"
 KEYWORDS="~x86 ~alpha ~ia64"
+IUSE=""
 
 DEPEND="virtual/linux-sources
 	>=sys-apps/portage-2.0.47-r10
@@ -52,10 +52,10 @@ src_compile() {
 	# I'm not experimenting here, just making it work on multiple
 	# arches...  (12 Jan 2004 agriffis)
 	econf --enable-transarc-paths || die econf
-	make CC="${CC}" MT_CC="${CC} -fPIC" || die make
+	make CC="$(gcc-getCC)" MT_CC="$(gcc-getCC) -fPIC" || die make
 }
 
-src_install () {
+src_install() {
 	local sys_name=$(sed -n 's/^SYS_NAME=//p' Makefile) || die sys_name
 
 	make dest || die dest
