@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.11.ebuild,v 1.2 2004/02/24 11:20:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.11.ebuild,v 1.3 2004/03/12 12:18:29 eradicator Exp $
 
 inherit eutils
 
 IUSE="gtk"
-
-S="${WORKDIR}/${P}"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
@@ -17,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 
-DEPEND="gtk? ( =dev-ml/lablgtk-1.2.5 )
+DEPEND="gtk? ( =dev-ml/lablgtk-1* )
 	>=dev-lang/ocaml-3.06
 	dev-lang/perl"
 RDEPEND="net-misc/wget"
