@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.6 2004/10/16 17:09:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.7 2004/10/19 20:25:29 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  commons-primitives-1.0.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   commons-primitives-1.0.ebuild:
