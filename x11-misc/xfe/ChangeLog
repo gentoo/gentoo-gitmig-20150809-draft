@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.17 2004/10/21 08:36:28 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.18 2004/10/23 16:24:29 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> xfe-0.72.ebuild:
+  Stable on sparc.
 
   21 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> xfe-0.72.ebuild:
   Stable for x86.
