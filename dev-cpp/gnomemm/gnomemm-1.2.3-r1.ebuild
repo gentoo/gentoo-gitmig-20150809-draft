@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.13 2004/04/12 17:06:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.14 2004/04/25 23:23:07 agriffis Exp $
 
 inherit gcc eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
