@@ -1,6 +1,10 @@
 # ChangeLog for net-www/straw
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.17 2003/11/27 14:06:38 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.18 2004/02/14 12:43:35 liquidx Exp $
+
+  14 Feb 2004; Alastair Tse <liquidx@gentoo.org> straw-0.19.1.ebuild,
+  straw-0.21.1.ebuild, straw-0.21.2.ebuild:
+  unpeg adns-python depends
 
   27 Nov 2003; Alastair Tse <liquidx@gentoo.org> straw-0.21.2.ebuild:
   added fix for first time conversion from <0.21.x
