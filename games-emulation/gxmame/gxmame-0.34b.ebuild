@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.5 2004/06/24 22:29:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.34b.ebuild,v 1.6 2004/09/12 23:35:02 mr_bones_ Exp $
 
 DESCRIPTION="frontend for XMame using the GTK library"
 HOMEPAGE="http://gxmame.sourceforge.net/"
@@ -29,13 +29,13 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		`use_enable nls` \
-		`use_enable joystick` \
+		$(use_enable nls) \
+		$(use_enable joystick) \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }
