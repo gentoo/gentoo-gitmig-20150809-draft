@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.3 2004/08/16 07:13:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.4 2004/08/31 09:12:36 mr_bones_ Exp $
 
 inherit games
 
@@ -56,7 +56,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake PREFIX=/usr || die "emake failed"
+	emake -j1 PREFIX=/usr || die "emake failed"
 }
 
 src_install() {
