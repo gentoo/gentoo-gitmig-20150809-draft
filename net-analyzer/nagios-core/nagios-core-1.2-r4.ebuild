@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.1 2005/01/25 10:04:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.2 2005/01/25 10:39:51 dragonheart Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -15,16 +15,13 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="noweb mysql postgres perl debug apache2"
 
-# place inside !noweb beside the other apache depend
-#		apache2? ( ${APACHE2_DEPEND} )
 DEPEND="virtual/mailx
 	!noweb? (
 		>=media-libs/jpeg-6b-r3
 		>=media-libs/libpng-1.2.5-r4
 		>=media-libs/gd-1.8.3-r5
-		!apache2? ( ${APACHE1_DEPEND} )
+		${APACHE_DEPEND}
 	)
-
 	perl? ( >=dev-lang/perl-5.6.1-r7 )
 	mysql? ( >=dev-db/mysql-3.23.56 )
 	postgres? ( !mysql? ( >=dev-db/postgresql-7.3.2 ) )"
@@ -202,7 +199,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	einfo
-	einfo "The example config files are located at /usr/share/doc/${P}/sample-configs/."
+	einfo "The example config files are located at /usr/share/doc/${PF}/sample-configs/."
 	einfo
 	einfo "Also, if you want nagios to start at boot time"
 	einfo "remember to execute:"
@@ -219,7 +216,6 @@ pkg_postinst() {
 			einfo " Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 		else
 			einfo " Edit /etc/conf.d/apache and add \"-D NAGIOS\""
-			einfo " Edit ${APACHE1_CONFDIR}/apache.conf and add \"Include modules.d/nagios.conf\""
 		fi
 
 		einfo
