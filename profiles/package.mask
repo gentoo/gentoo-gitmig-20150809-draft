@@ -200,10 +200,6 @@ sys-apps/pcmcia-cs-drivers
 #Not enough mature
 media-video/lumiere
 
-# <vapier@gentoo.org> (22 Jan 2003)
-# package is no longer distributed
-dev-libs/libtomcrypt
-
 # <mjc@gentoo.org> (10 Jan 2003)
 # fixed others silly dates
 # masked, I just copied the old ebuild
