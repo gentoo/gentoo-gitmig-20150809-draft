@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.18 2005/02/24 21:46:19 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.19 2005/02/25 22:49:40 rizzo Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama offensive kde nls"
-#icc
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -84,8 +83,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-4.10-norpm.patch
 	# set default fortune to /usr/bin/fortune even if one can't be found
 	epatch ${FILESDIR}/${PN}-4.14-fortune.patch
-	# disabled because it is out of date - liquidx (15/06/2004)
-	# use icc && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-4.14-icc.patch
 	# disable not-safe-for-work xscreensavers
 	use offensive || epatch ${FILESDIR}/${PN}-4.16-nsfw.patch
 }
@@ -129,11 +126,6 @@ src_compile() {
 			myconf="${myconf} --with-gnome --with-pixbuf"
 		fi
 	fi
-
-	#if use icc ; then
-		#export CC=icc
-		#autoconf
-	#fi
 
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
