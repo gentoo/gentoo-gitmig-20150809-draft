@@ -1,0 +1,25 @@
+diff -urN gnome-system-monitor-2.4.0-orig/src/Makefile.am gnome-system-monitor-2.4.0/src/Makefile.am
+--- gnome-system-monitor-2.4.0-orig/src/Makefile.am	2004-04-02 11:54:54.000000000 -0500
++++ gnome-system-monitor-2.4.0/src/Makefile.am	2004-04-02 11:56:51.000000000 -0500
+@@ -3,8 +3,7 @@
+ INCLUDES = \
+ 	-DPROCMAN_DATADIR=\"$(datadir)/procman/\" \
+ 	-DDATADIR=\""$(datadir)"\" \
+-	@PROCMAN_CFLAGS@ -DGTK_DISABLE_DEPRECATED=1 \
+-	-DGNOME_DISABLE_DEPRECATED
++	@PROCMAN_CFLAGS@
+ 
+ bin_PROGRAMS = gnome-system-monitor
+ 
+diff -urN gnome-system-monitor-2.4.0-orig/src/Makefile.in gnome-system-monitor-2.4.0/src/Makefile.in
+--- gnome-system-monitor-2.4.0-orig/src/Makefile.in	2004-04-02 11:54:54.000000000 -0500
++++ gnome-system-monitor-2.4.0/src/Makefile.in	2004-04-02 11:56:38.000000000 -0500
+@@ -101,7 +101,7 @@
+ WARN_CFLAGS = @WARN_CFLAGS@
+ WARN_CXXFLAGS = @WARN_CXXFLAGS@
+ 
+-INCLUDES =  	-DPROCMAN_DATADIR=\"$(datadir)/procman/\" 	-DDATADIR=\""$(datadir)"\" 	@PROCMAN_CFLAGS@ -DGTK_DISABLE_DEPRECATED=1 	-DGNOME_DISABLE_DEPRECATED
++INCLUDES =  	-DPROCMAN_DATADIR=\"$(datadir)/procman/\" 	-DDATADIR=\""$(datadir)"\" 	@PROCMAN_CFLAGS@ 
+ 
+ 
+ bin_PROGRAMS = gnome-system-monitor

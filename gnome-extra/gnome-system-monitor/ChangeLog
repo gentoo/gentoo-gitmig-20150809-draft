@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.36 2004/03/21 19:56:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.37 2004/04/27 15:16:08 foser Exp $
+
+  27 Apr 2004; foser <foser@gentoo.org> gnome-system-monitor-2.4.0.ebuild :
+  Fix build with gtk+-2.4, patch provided by David Love <dlove@nighton.net> in #46303
+  Fix libgtop dep to 2.0* (api breakage !)
 
 *gnome-system-monitor-2.6.0 (21 Mar 2004)
 

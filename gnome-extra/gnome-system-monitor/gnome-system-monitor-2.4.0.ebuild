@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.4.0.ebuild,v 1.9 2004/03/14 18:15:03 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.4.0.ebuild,v 1.10 2004/04/27 15:16:08 foser Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/gconf-2
-	>=gnome-base/libgtop-2
+	=gnome-base/libgtop-2.0*
 	>=x11-libs/libwnck-0.12"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
@@ -25,3 +25,12 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 DOCS="AUTHORS ChangeLog COPYING HACKING README INSTALL NEWS TODO"
 
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix issues with gtk+-2.4
+	epatch ${FILESDIR}/${P}-fix_gtk+-2.4_build.patch
+
+}
