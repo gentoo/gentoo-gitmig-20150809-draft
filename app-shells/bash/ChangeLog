@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.19 2003/10/01 19:54:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.20 2003/10/03 12:41:26 joker Exp $
+
+  03 Oct 2003; Christian Birchinger <joker@gentoo.org> bash-2.05b-r7.ebuild:
+  Added sparc stable keyword
 
   01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> bash-2.05b-r7.ebuild:
   Stable on alpha
