@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3180 2004/09/23 19:26:57 karltk Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3181 2004/09/23 23:51:30 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -38,7 +38,7 @@ net-irc/irssi-charconv
 
 # Jeremy Huddleston <eradicator@gentoo.org> (18 Sep 2004)
 # Buggy beta...
-=amarok-1.1-beta2
+=amarok-1.1_beta2
 
 # Aron Griffis <agriffis@gentoo.org> (15 Sep 2004)
 # New modular net-scripts need testing
