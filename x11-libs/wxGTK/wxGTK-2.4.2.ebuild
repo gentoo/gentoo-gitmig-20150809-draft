@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.4 2003/10/09 08:05:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.5 2003/10/17 07:38:24 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -41,6 +41,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	export LANG='C'
 
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
