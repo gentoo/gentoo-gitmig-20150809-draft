@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.6 2004/01/22 22:31:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.7 2004/02/08 03:40:57 agriffis Exp $
+
+*id3v2-0.1.9-r1 (07 Feb 2004)
+
+  07 Feb 2004; Aron Griffis <agriffis@gentoo.org> id3v2-0.1.9-r1.ebuild,
+  files/id3v2-0.1.9-alpha.patch:
+  Fix bug 33814 with a patch to prevent an uninitialized variable
 
   22 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> id3v2-0.1.7.ebuild,
   id3v2-0.1.9.ebuild:

@@ -1,0 +1,17 @@
+Prevent a segfault on alpha and any other arch that doesn't always get
+zero-initialized automatics.  Frankly the code in this segment looks
+pretty broken to me, but I'm just fixing the segfault...
+
+07 Feb 2004 agriffis
+
+--- id3v2-0.1.9/id3v2.cpp.alpha	2003-02-25 11:28:20.000000000 -0500
++++ id3v2-0.1.9/id3v2.cpp	2004-02-07 22:28:39.000000000 -0500
+@@ -409,7 +409,7 @@
+         {
+           // check if there is a total track number and if we only have 
+           // the track number for this file.  In this case combine them.
+-          char *currentTrackNum, *newTrackNum;
++          char *currentTrackNum, *newTrackNum = NULL;
+ 
+           if (pFrame != NULL) 
+           {
