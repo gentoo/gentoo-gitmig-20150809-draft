@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3.ebuild,v 1.1 2004/06/10 12:08:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.3.ebuild,v 1.2 2004/06/10 22:55:33 caleb Exp $
 
 inherit kde eutils
 
@@ -33,7 +33,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
-	~kde-base/arts-1.2.2
+	~kde-base/arts-1.2.3
 	>=x11-libs/qt-3.2.3"
 RDEPEND="${DEPEND}
 	app-text/sgml-common
