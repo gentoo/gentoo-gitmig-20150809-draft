@@ -3,11 +3,11 @@ Hash: SHA1
 
 MD5 5a433b0a9b3bb67549453e57cb1b26ae ChangeLog 11502
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ebcb4d035e3e96c283f8ee1083e0d2f6 ncurses-5.4-r2.ebuild 5155
-MD5 ea52ebcfb59abec2eb3b5825715c2fb6 ncurses-8.1.ebuild 879
-MD5 14c8e34a87335151e42d095c3af7f6e2 ncurses-5.4-r3.ebuild 5138
-MD5 9e10302eed56e25bbf34d4f4fed15a1e ncurses-5.3-r5.ebuild 3824
-MD5 2dc876aa2d2c85218aa94816d002cb84 ncurses-5.4-r1.ebuild 4507
+MD5 3468bda79299eaa15a53fafaec46c9a8 ncurses-5.4-r2.ebuild 5150
+MD5 e0cbea07444890f3bd2fa7462ee9b8c9 ncurses-8.1.ebuild 401
+MD5 a8aa36f5c312abd10b7037ddd191b086 ncurses-5.4-r3.ebuild 5132
+MD5 ef94a7f9c979745c6e813ad1d849054e ncurses-5.3-r5.ebuild 3821
+MD5 3ce45b6441f21eed5924fc1c13598c5a ncurses-5.4-r1.ebuild 4501
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r2 64
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
 MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r3 64
@@ -22,7 +22,7 @@ MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBGYfIHTu7gpaalycRAr9zAJ9xv60kXW4fHB0JsfCggIt07hjv7wCfcDbd
-UsiGpjxbRPB9ZQMx4PVayXk=
-=Rsn/
+iD8DBQFBGYkJHTu7gpaalycRAvvWAKCmTMWtdk4kv6sdx+pJJ2DyMzrgXgCfSXDO
+MtSP/N+e14AOstrZenLzCss=
+=GZ5B
 -----END PGP SIGNATURE-----
