@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.5-r1.ebuild,v 1.4 2003/06/18 02:19:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.5-r1.ebuild,v 1.5 2003/09/07 00:16:08 msterret Exp $
 
 IUSE=""
 
@@ -35,7 +35,7 @@ src_install() {
 	### This will -NOT- work when installing a binary .tbz2
 	### and should be fixed properly.
 	# Save the old config into the new package as CONFIG_PROTECT
-        # doesn't work for this package.   
+        # doesn't work for this package.
         if [ -f ${ROOT}/var/yp/Makefile ]; then
                 mv ${D}/var/yp/Makefile ${D}/var/yp/Makefile.dist
                 cp ${ROOT}/var/yp/Makefile ${D}/var/yp/Makefile

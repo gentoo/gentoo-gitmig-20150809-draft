@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.10 2003/07/23 19:11:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.11 2003/09/07 00:16:08 msterret Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 pkg_setup() {
 	if [ "${SASL1}" != "yes" ]; then
 		ewarn ""
-		ewarn "For linking with SASLv1..." 
+		ewarn "For linking with SASLv1..."
 		ewarn "emerge cyrus-sasl-1.5.27-r6 (or newest 1.x series build)"
 		ewarn "SASL1=yes emerge net-nds/openldap"
 		ewarn ""
@@ -199,7 +199,7 @@ pkg_postinst() {
 	fi
 
 	# Since moving to running openldap as user ldap there are some
-	# permissions problems with directories and files. 
+	# permissions problems with directories and files.
 	# Let's make sure these permissions are correct.
 	chown ldap:ldap /var/run/openldap
 	chmod 0755 /var/run/openldap
@@ -211,7 +211,7 @@ pkg_postinst() {
 
 	if [ "${SASL1}" != "yes" ]; then
 		einfo ""
-		einfo "For linking with SASLv1..." 
+		einfo "For linking with SASLv1..."
 		einfo "emerge cyrus-sasl-1.5.27-r6 (or newest 1.x series build)"
 		einfo "SASL1=yes emerge net-nds/openldap"
 		einfo ""

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.8 2003/07/18 20:46:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.9 2003/09/07 00:16:08 msterret Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${PN}_5beta.dif
 
@@ -27,7 +27,7 @@ src_unpack() {
 	# relocation error and build problem with glibc-2.3.2 cvs ...
 	# <azarah@gentoo.org> (31 Dec 2002).
 	epatch ${FILESDIR}/${P}-include-errno_h.patch
-	
+
 	# Get portmap to use our CFLAGS ...
 	mv Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.4 2003/07/16 14:24:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.5 2003/09/07 00:16:08 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
@@ -36,7 +36,7 @@ src_install() {
 	newexe ${FILESDIR}/rpc.yppasswdd rpc.yppasswdd
 
  	# Save the old config into the new package as CONFIG_PROTECT
-        # doesn't work for this package.   
+        # doesn't work for this package.
         if [ -f ${ROOT}/var/yp/Makefile ]; then
                 mv ${D}/var/yp/Makefile ${D}/var/yp/Makefile.dist
                 cp ${ROOT}/var/yp/Makefile ${D}/var/yp/Makefile
