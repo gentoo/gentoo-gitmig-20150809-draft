@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.4 2002/07/23 00:12:55 seemant Exp $
 
 #The plotutils package contains extra X fonts.  These fonts are not installed
 #in the current ebuild.  The commented out ebuild lines below are for future 
@@ -10,16 +10,15 @@
 #See Bug# 30 at http://bugs.gentoo.org/show_bug.cgi?id=30
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="a powerful C/C++ function library for exporting 2-D vector graphics"
-
 SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
-#	X? ( ftp://ftp.hp.com/pub/printers/software/mp135mu.exe )
-
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
 
-DEPEND="virtual/glibc
-	media-libs/libpng
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="media-libs/libpng
 	X? ( virtual/x11 )"
 
 src_unpack() {
@@ -40,16 +39,11 @@ src_compile() {
 #Not sure if enabling screws the pooch for those without these printers.
 #--enable-ps-fonts-in-pcl --enable-lj-fonts-in-ps
 	
-	use X	\
-		&& myconf="${myconf} --with-x --enable-libxmi"	\
+	use X \
+		&& myconf="${myconf} --with-x --enable-libxmi" \
 		|| myconf="${myconf} --without-x"
  
-	./configure --infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--prefix=/usr \
-		--host=${CHOST} \
-		${myconf} || die "./configure failed"
-	
+	econf ${myconf} || die "./configure failed"
 	emake || die "Parallel Make Failed"
 
 }

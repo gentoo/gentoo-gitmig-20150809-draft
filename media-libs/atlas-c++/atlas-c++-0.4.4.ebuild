@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.4.ebuild,v 1.4 2002/07/22 14:37:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.4.ebuild,v 1.5 2002/07/23 00:12:54 seemant Exp $
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
+DESCRIPTION="Atlas protocol standard implementation in C++.  Atlas protocol is used in role playing games at worldforge."
 HOMEPAGE="http://www.worldforge.net"
 SRC_URI="ftp://victor.worldforge.org/pub/worldforge/libs/${MY_PN}/${MY_P}.tar.bz2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.5 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.6 2002/07/23 00:12:54 seemant Exp $
 
 S=${WORKDIR}/Mesa-${PV}
 DESCRIPTION="OpenGL like graphic library for Linux, this package only contains the glu and glut parts"
@@ -8,32 +8,34 @@ SRC_URI="http://download.sourceforge.net/mesa3d/MesaLib-${PV}.tar.bz2
 		 http://download.sourceforge.net/mesa3d/MesaDemos-${PV}.tar.bz2"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-DEPEND="virtual/glibc virtual/x11"
+SLOT="3.5"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
+
+DEPEND="virtual/x11"
 PROVIDE="virtual/glu virtual/glut"
 
 src_compile() {
 	local myconf
-	if [ "`use mmx`" ]
-	then
-		myconf="--enable-mmx"
-	else
-		myconf="--disable-mmx"
-	fi
-	if [ "`use 3dnow`" ]
-	then
-		myconf="${myconf} --enable-3dnow"
-	else
-		myconf="${myconf} --disable-3dnow"
-	fi
-	if [ "`use sse`" ]
-	then
-		myconf="${myconf} --enable-sse"
-	else
-		myconf="${myconf} --disable-sse"
-	fi
-	#--without-glut means that no glut is available on the system, so mesa should build its own
+
+	use mmx \
+		&& myconf="--enable-mmx" \
+		|| myconf="--disable-mmx"
+
+	use 3dnow \
+		&& myconf="${myconf} --enable-3dnow" \
+		|| myconf="${myconf} --disable-3dnow"
+
+	use sse \
+		&& myconf="${myconf} --enable-sse" \
+		|| myconf="${myconf} --disable-sse"
+	#--without-glut means that no glut is available on the system, 
+	# so mesa should build its own
 	myconf="${myconf} --with-x --without-glut --disable-ggi-fbdev --without-ggi"
-	./configure --prefix=/usr --sysconfdir=/etc/mesa --host=${CHOST} $myconf || die
+	econf \
+		--sysconfdir=/etc/mesa \
+		${myconf} || die
+
 	emake || die
 }
 

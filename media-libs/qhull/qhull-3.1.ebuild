@@ -1,14 +1,17 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1.ebuild,v 1.3 2002/07/23 00:12:55 seemant Exp $
 
 S=${WORKDIR}/qhull3.1
 DESCRIPTION="Geometry library"
 SRC_URI="http://www.geom.umn.edu/software/qhull/qhull3.1.tgz"
 HOMEPAGE="http://www.geom.umn.edu/software/qhull/"
 
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86"
+
 DEPEND=""
-#RDEPEND=""
 
 src_compile() {
 	cd src
@@ -43,4 +46,6 @@ src_install () {
 	dohtml -a html,gif *
 
 	doman *.1
+
+	dodoc *.txt
 }

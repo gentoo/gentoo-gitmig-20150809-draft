@@ -1,18 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.4 2002/07/23 00:12:54 seemant Exp $
 
 MY_P=Mesa-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="OpenGL like graphic library for Linux"
 SRC_URI="http://download.sourceforge.net/mesa3d/MesaLib-${PV}.tar.bz2
-         http://download.sourceforge.net/mesa3d/MesaDemos-${PV}.tar.bz2"
+	 http://download.sourceforge.net/mesa3d/MesaDemos-${PV}.tar.bz2"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-DEPEND="virtual/glibc
-        X? ( virtual/x11 )
-        ggi? ( >=media-libs/libggi-2.0_beta3 )
-        svga? ( >=media-libs/svgalib-1.4.2-r1 )"
+DEPEND="X? ( virtual/x11 )
+	ggi? ( >=media-libs/libggi-2.0_beta3 )
+	svga? ( >=media-libs/svgalib-1.4.2-r1 )"
 
 if [ "`use X`" ]
 then
@@ -21,60 +20,49 @@ else
 	PROVIDE="virtual/opengl"
 fi
 
+SLOT="3.5"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
+
 src_compile() {
 	local myconf
 
-	if [ "`use mmx`" ]
-	then
-		myconf="--enable-mmx"
-	else
-		myconf="--disable-mmx"
-	fi
+	use mmx \
+		&& myconf="--enable-mmx" \
+		|| myconf="--disable-mmx"
 
-	if [ "`use 3dnow`" ]
-	then
-		myconf="${myconf} --enable-3dnow"
-	else
-		myconf="${myconf} --disable-3dnow"
-	fi
+	use 3dnow \
+		&& myconf="${myconf} --enable-3dnow" \
+		|| myconf="${myconf} --disable-3dnow"
 
-	if [ "`use sse`" ]
-	then
-		myconf="${myconf} --enable-sse"
-	else
-		myconf="${myconf} --disable-sse"
-	fi
+	use sse \
+		&& myconf="${myconf} --enable-sse" \
+		|| myconf="${myconf} --disable-sse"
 
-	if [ "`use X`" ]
-	then
+	use X && ( \
 		myconf="${myconf} --with-x --without-glut"
 		# --without-glut means that mesa is forced to use and install
 		# his own version of glut.
-	else
+	) || ( \
 		myconf="${myconf} --without-x"
 		rm -rf src-glut
-	fi
+	)
 
-	if [ -z "`use ggi`" ] || [ -z "`use fbcon`" ]
-	then
-		myconf="${myconf} --disable-ggi-fbdev --without-ggi"
-	fi
+	( use ggi && use fbcon ) \
+		|| myconf="${myconf} --disable-ggi-fbdev --without-ggi"
 
-	if [ -z "`use svga`" ]
-	then
-		myconf="${myconf} --without-svga"
-	fi
+	use svga || myconf="${myconf} --without-svga"
 
 	cp configure configure.orig
 	sed -e "s:^ggi_confdir.*:ggi_confdir=/etc/ggi:" \
 		-e "s:^ggi_libdir.*:ggi_libdir=\$prefix/lib:" \
 		configure.orig > configure
 
-	./configure --prefix=/usr --sysconfdir=/etc/mesa --host=${CHOST} $myconf \
-		|| die
+	econf \
+		--sysconfdir=/etc/mesa \
+		${myconf} || die
 
-	if [ "`use ggi`" ] && [ "`use fbcon`" ]
-	then
+	( use ggi && use fbcon ) && ( \
 		cd ${S}/src/GGI
 		cp Makefile Makefile.orig
 		sed -e "s:^ggimesaconfdatadir.*:ggimesaconfdatadir = \${ggi_confdir}:" \
@@ -91,28 +79,27 @@ src_compile() {
 		cd ${S}
 		mkdir gg
 		ln -s /usr/lib/libgg*.so .
-	fi
+	)
 
 	emake || die
 
-	if [ "`use ggi`" ]
-	then
+	use ggi && ( \
 		cd ${S}/ggi/ggiglut
-		make libglut_la_LIBADD="-lggi -lgg -L${S}/src/.libs -lGL" \
-			|| die
-	fi
+		make \
+			libglut_la_LIBADD="-lggi -lgg -L${S}/src/.libs -lGL" || die
+	)
 }
 
 src_install () {
-	if [ "`use ggi`" ]
-	then
-	  cd ggi/ggiglut
-	  make DESTDIR=${D} install || die
-	  cd ${D}/usr/lib
-	  cp libglut.la libglut.orig
-	  sed -e "s:-L${S}/src/.libs::g" libglut.orig > libglut.la
-	  rm libglut.orig
-	fi
+	use ggi && ( \
+		cd ggi/ggiglut
+		make DESTDIR=${D} install || die
+		cd ${D}/usr/lib
+		cp libglut.la libglut.orig
+		sed -e "s:-L${S}/src/.libs::g" libglut.orig > libglut.la
+		rm libglut.orig
+	)
+
 	cd ${S}
 	make DESTDIR=${D} install || die
 	cd ${D}/usr/lib
@@ -129,5 +116,6 @@ src_install () {
 
 	cd ${S}
 	dodoc docs/*
-	#we no longer install demos since they seem to be linked for built-time testing only.
+	#we no longer install demos since they seem to be linked 
+	# for built-time testing only.
 }

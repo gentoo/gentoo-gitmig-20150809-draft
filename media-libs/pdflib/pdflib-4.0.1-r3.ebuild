@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.2 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.3 2002/07/23 00:12:55 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
 SRC_URI="http://www.pdflib.com/pdflib/download/${P}.tar.gz"
 HOMEPAGE="http://www.pdflib.com"
+
+SLOT="4"
+LICENSE="Aladdin"
+KEYWORDS="x86"
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=sys-devel/perl-5.1 )
@@ -25,31 +29,29 @@ src_compile() {
 		${S}/bind/java/Makefile.in.orig > ${S}/bind/java/Makefile.in
 
 	local myconf
-	if [ -z "`use tcltk`" ] ; then
-		myconf="--with-tcl=no"
-	fi
-	if [ -z "`use perl`" ] ; then
-		myconf="$myconf --with-perl=no"
-	fi
-	if [ -z "`use python`" ] ; then
-		myconf="$myconf --with-py=no"
-	elif [ -x /usr/bin/python ] ; then
-		
-		local pyver="`/usr/bin/python -V 2>&1 \
+	use tcltk || myconf="--with-tcl=no"
+
+	use perl || myconf="${myconf} --with-perl=no"
+
+	use python && ( \
+		if [ -x /usr/bin/python ]
+		then
+			local pyver="`/usr/bin/python -V 2>&1 \
 			|cut -d ' ' -f 2 |cut -d '.' -f 1,2`"
-		myconf="$myconf --with-pyincl=/usr/include/python${pyver}"
-	fi
-	if [ "`use java`" ] ; then
-		myconf="$myconf --with-java=${JAVA_HOME}"
-	else
-		myconf="$myconf --with-java=no"
-	fi
+			myconf="${myconf} --with-pyincl=/usr/include/python${pyver}"
+		fi 
+	) || ( \
+		myconf="${myconf} --with-py=no"
+	)
+
+	use java \
+		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
+		|| myconf="${myconf} --with-java=no"
 	
-	./configure --prefix=/usr \
-		--host=${CHOST} \
+	econf \
 		--enable-cxx \
 		--disable-php \
-		$myconf || die
+		${myconf} || die
 		
 	emake || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.3 2002/07/11 06:30:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.4 2002/07/23 00:12:55 seemant Exp $
 
 LIBVER="0.0.6"
 
@@ -8,7 +8,10 @@ S=${WORKDIR}/tmp/openal
 DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
 SRC_URI="http://ftp.au.freebsd.org/pub/lokigames/openal/${P}.tar.gz"
 HOMEPAGE="http://www.openal.org"
+
 SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
 
 # documentation doesn't say which versions are required...
 
@@ -26,12 +29,12 @@ src_compile() {
 
 	local myconf
 
-	use alsa && myconf="--enable-alsa " 
-	use arts && myconf="--enable-arts "
-	use esd && myconf="--enable-esd "
-	use sdl && myconf="--enable-sdl "
-	use oggvorbis && myconf="--enable-vorbis "
-	use smpeg && myconf="--enable-smpeg "
+	use esd && myconf="${myconf} --enable-esd"
+	use sdl && myconf="${myconf} --enable-sdl"
+	use alsa && myconf="${myconf} --enable-alsa" 
+	use arts && myconf="${myconf} --enable-arts"
+	use smpeg && myconf="${myconf} --enable-smpeg"
+	use oggvorbis && myconf="${myconf} --enable-vorbis"
 
 	cd ${S}/linux
 
