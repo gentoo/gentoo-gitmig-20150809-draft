@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.1 2002/05/22 23:01:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.2 2002/05/23 03:26:46 spider Exp $
+
+*gnome-terminal-1.9.6-r1 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> gnome-terminal-1.9.6-r1.ebuild :
+  fix broken profterm.schemas to correct gnome-terminal.schemas
 
 *gnome-terminal-1.9.6 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> ChangeLog gnome-terminal-1.9.6.ebuild :
