@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.40 2003/10/05 21:15:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.41 2003/10/22 18:22:16 mr_bones_ Exp $
+
+  22 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  add metadata.xml
 
   05 Oct 2003; Brad House <brad_mssw@gentoo.org>
   syslog-ng-1.6.0_rc3-r1.ebuild:
