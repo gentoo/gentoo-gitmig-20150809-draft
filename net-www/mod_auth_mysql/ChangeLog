@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_auth_mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.5 2003/10/02 02:14:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/ChangeLog,v 1.6 2004/01/05 23:28:33 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  mod_auth_mysql-1.11.ebuild, mod_auth_mysql-20030510-r1.ebuild,
+  mod_auth_mysql-20030510-r2.ebuild, mod_auth_mysql-20030510.ebuild:
+  fix tail -1 issue and copyright headers
 
 *mod_auth_mysql-20030510-r2 (01 Oct 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510-r1.ebuild,v 1.1 2003/09/08 17:09:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-20030510-r1.ebuild,v 1.2 2004/01/05 23:28:33 robbat2 Exp $
 
 DESCRIPTION="Basic authentication for Apache using a MySQL database"
 HOMEPAGE="http://modauthmysql.sourceforge.net/"
@@ -34,7 +34,7 @@ src_install() {
 	doexe ${PN}.so
 	insinto ${CONFDIR}
 	doins ${FILESDIR}/mod_auth_mysql.conf
-	cat mod_auth_mysql.c | head -81 \
+	cat mod_auth_mysql.c | head -n81 \
 		| cut -c 4- > mod_auth_mysql.txt
 	dodoc ${FILESDIR}/mod_auth_mysql.conf \
 		README
