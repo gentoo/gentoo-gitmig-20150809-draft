@@ -1,11 +1,16 @@
 # ChangeLog for dev-util/boa-constructor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.5 2003/02/12 06:38:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.6 2003/04/19 23:56:42 blauwers Exp $
+
+*boa-constructor-0.2.3_alpha (20 Apr 2003)
+
+  20 Apr 2003; Bart Lauwers <blauwers@gentoo.org> :
+  Version bump per Bug#12640
+
+*boa-constructor-0.1.0_alpha (<Mar 15, 2002>)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*boa-constructor-0.1.0_alpha (<Mar 15, 2002>)
-
   15 Mar 2002; Arcady Genkin <agenkin@thpoon.com> boa-constructor-0.1.0_alpha :
   
   Initial version of the package.
