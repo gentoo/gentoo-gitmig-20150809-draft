@@ -1,4 +1,6 @@
 MD5 9425409f9d6c7b9dddb79a5ef0d109c2 quartz-1.3.4.ebuild 2137
-MD5 4fb0647c866f36c0ab42ffc787463c62 ChangeLog 773
+MD5 39d0e07c6b7f035e3fc4bb58c4a5d43e ChangeLog 937
+MD5 14acc605e00917efea4356d92b19e558 quartz-1.4.0.ebuild 2134
 MD5 70b5c4b2ad5de8b5ad59a27a446c29ff metadata.xml 221
 MD5 2a356855e5f18bec4fa487120599d27a files/digest-quartz-1.3.4 65
+MD5 a71a8902eeeefda7b8bc53dab760ec24 files/digest-quartz-1.4.0 65

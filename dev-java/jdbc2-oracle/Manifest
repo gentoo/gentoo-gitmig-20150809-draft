@@ -1,4 +1,14 @@
-MD5 0d62157883d29d8dbe07503558fd6031 jdbc2-oracle-9.2.0.3.ebuild 2400
-MD5 819db24caff22b1f738a6759489c78e9 ChangeLog 1521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6b43a8904f66696b844367eb2e7bd60 jdbc2-oracle-9.2.0.3.ebuild 2400
+MD5 7d64220bb5c849adaa9807eb41010df7 ChangeLog 1646
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 7d8a2b744f94287becd640337d7d3910 files/digest-jdbc2-oracle-9.2.0.3 399
+MD5 ea87361be97921bff4ae13c53947f7a0 files/digest-jdbc2-oracle-9.2.0.3 399
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBNt0Y/rLF9B432nYRAlz0AJwPwzsAlb2JUyoRyCgYy+RewjAVswCgswiO
++aFZkCnho8PWwgj8dAgT3co=
+=a46F
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.3.ebuild,v 1.7 2004/07/17 11:42:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.3.ebuild,v 1.8 2004/09/02 08:41:49 axxo Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ file_main_orig=classes12.zip
 file_main_debug_orig=classes12_g.zip
 file_rowset_orig=ocrs12.zip
 file_nls_orig=nls_charset12.zip
-file_doc_orig=javadoc.tat
+file_doc_orig=javadoc.tar
 
 file_main=${P}-${file_main_orig}
 file_main_debug=${P}-${file_main_debug_orig}
