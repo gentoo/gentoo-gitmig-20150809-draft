@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e23cc9940644eaa2a8acab3ad4dc0c68 peephole-1.3.ebuild 792
 MD5 a76f83628fda15d23b40a6b787f5e5ab ChangeLog 807
 MD5 e3b4cba7c3fac4c4e9672bc97d8bbca1 metadata.xml 255
+MD5 5289f19c3c11312768b6e16fa57c2168 peephole-1.3.ebuild 794
 MD5 8c46074132490df724fb07c9bd2f5b2e files/digest-peephole-1.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBHKABCHk4+ZoBpvsRApveAKCWFsl7aRG6rOLtmeTzunGJZjxG1gCeKKAv
-xaj/Oil+5qUQh8AXo5KW1V4=
-=Ytrg
------END PGP SIGNATURE-----

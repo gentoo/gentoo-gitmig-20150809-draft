@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/peephole-1.3.ebuild,v 1.4 2004/07/13 17:47:15 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/peephole-1.3.ebuild,v 1.5 2004/09/02 18:15:05 pvdabeel Exp $
 
 DESCRIPTION="A daemon that polls your POP servers, checking if there are messages from particular persons."
 HOMEPAGE="http://peephole.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/peephole/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.7d-r1"
