@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20-r1.ebuild,v 1.1 2004/08/12 07:09:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20-r1.ebuild,v 1.2 2004/09/10 02:34:51 vapier Exp $
 
-inherit eutils 64-bit
+inherit eutils 64-bit flag-o-matic gcc
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -13,9 +13,10 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc -sparc alpha hppa ia64 -mips amd64"
-IUSE="jpeg gif png truetype mpeg mmx sse fusion"
+IUSE="sdl jpeg gif png truetype mpeg mmx sse fusion debug fbcon static"
 
 DEPEND="dev-lang/perl
+	sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
@@ -51,11 +52,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local vidcards
-	local card
-	local mycppflags
-	local myconf
-
+	local vidcards card
 	for card in ${VIDEO_CARDS} ; do
 		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
 	done
@@ -63,11 +60,20 @@ src_compile() {
 		&& vidcards="all" \
 		|| vidcards="${vidcards:1}"
 
-	use mpeg && mycppflags="-I/usr/include/libmpeg3"
-	if use amd64 ; then
-		myconf="--enable-mmx --enable-sse"
+	local sdlconf="--disable-sdl"
+	if use sdl ; then
+		# since SDL can link against DirectFB and trigger a
+		# dependency loop, only link against SDL if it isn't
+		# broken #61592
+		echo 'int main(){}' > sdl-test.c
+		$(gcc-getCC) sdl-test.c -lSDL 2>/dev/null \
+			&& sdlconf="--enable-sdl" \
+			|| ewarn "Disabling SDL since libSDL.so is broken"
 	fi
-	econf CPPFLAGS="${mycppflags}" \
+
+	use mpeg && export CPPFLAGS="${CPPFLAGS} -I/usr/include/libmpeg3"
+	econf \
+		$(use_enable fbcon fbdev) \
 		$(use_enable mmx) \
 		$(use_enable sse) \
 		$(use_enable mpeg libmpeg3) \
@@ -76,7 +82,9 @@ src_compile() {
 		$(use_enable gif) \
 		$(use_enable truetype freetype) \
 		$(use_enable fusion multi) \
-		${myconf} \
+		$(use_enable debug) \
+		$(use_enable static) \
+		${sdlconf} \
 		--with-gfxdrivers="${vidcards}" \
 		|| die
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.42 2004/08/12 07:09:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.43 2004/09/10 02:34:51 vapier Exp $
+
+  09 Sep 2004; Mike Frysinger <vapier@gentoo.org> DirectFB-0.9.20-r1.ebuild,
+  -DirectFB-0.9.20.ebuild:
+  Add detection to prevent circular dependency causing build failures #61592 by
+  Anton Starikov.
 
 *DirectFB-0.9.20-r1 (12 Aug 2004)
 
