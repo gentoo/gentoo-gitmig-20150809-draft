@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.811 2004/12/23 18:07:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.812 2004/12/24 04:34:23 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -87,15 +87,10 @@ app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
-app-sci/aaindex:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/aaindex:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 app-sci/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 app-sci/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
-app-sci/cutg:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/drgeo:no-helpbrowser - Do not install the default help browser
-app-sci/emboss:no-biodata - Do not install the biological databases used by some programs.
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
@@ -109,18 +104,7 @@ app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 app-sci/octave:blas - Adds dependency for virtual/blas.
 app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
-app-sci/orsa:cln - Use the Class Library for Numbers for calculations
-app-sci/orsa:gsl - Use the GNU scientific library for calculations
-app-sci/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
-app-sci/prints:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/prints:no-rawdb - Do not install the original database files (keep only indexed files)
-app-sci/prosite:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/prosite:no-rawdb - Do not install the original database files (keep only indexed files)
-app-sci/rebase:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/rebase:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/scilab:atlas - Add support for the atlas library
-app-sci/transfac:no-emboss - Do not index the database files for use with EMBOSS
-app-sci/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
 app-shells/dash:diet - Compile and link with dietlibc
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
@@ -623,6 +607,22 @@ net-www/mozilla:mozsvg - Enable SVG support in mozilla and firefox
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
+sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
+sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
+sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
+sci-biology/aaindex:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/aaindex:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/cutg:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/emboss:no-biodata - Do not install the biological databases used by some programs.
+sci-biology/prints:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/prints:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/prosite:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/prosite:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/rebase:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/rebase:no-rawdb - Do not install the original database files (keep only indexed files)
+sci-biology/transfac:no-emboss - Do not index the database files for use with EMBOSS
+sci-biology/transfac:no-rawdb - Do not install the original database files (keep only indexed files)
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
