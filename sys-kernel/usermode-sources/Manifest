@@ -6,7 +6,7 @@ MD5 0473410c8ecc0e20e35d8785d3b9da62 usermode-sources-2.4.24-r1.ebuild 1789
 MD5 9fa2fa31e9880488f9ad3f51ae14ba4f usermode-sources-2.6.3-r1.ebuild 791
 MD5 a2f284fae42dbf9801371cd88b76382c usermode-sources-2.4.22-r2.ebuild 1969
 MD5 73a76ea43d99f2369d8ac469599c8175 usermode-sources-2.4.23-r1.ebuild 1688
-MD5 f3b8108f5794a3955117aa5592265823 ChangeLog 4720
+MD5 9dfc79806764161cc1df10ed966c2a92 ChangeLog 4761
 MD5 6cdc1e33ed67ce129f7498203526cb16 metadata.xml 252
 MD5 a61e57d5483a06f20da339d91f98fbb8 files/usermode-sources-2.4.20.rtc_fix.patch 6769
 MD5 3c89919b01bf69d48c4307faa77d99a1 files/digest-usermode-sources-2.4.20-r2 134

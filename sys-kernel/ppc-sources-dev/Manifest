@@ -5,7 +5,7 @@ MD5 c82effeaae6a6536b1659075b2b880c4 ppc-sources-dev-2.4.24-r2.ebuild 1814
 MD5 0364ea8c0969b8ee3e9d3ce66a07337b ppc-sources-dev-2.4.24.ebuild 1931
 MD5 1ebdbd77dfa42e5c517aff79d43c5321 ppc-sources-dev-2.4.21.ebuild 1867
 MD5 144bf8fc981bd21efec5c0409da95c79 ppc-sources-dev-2.4.24-r1.ebuild 1831
-MD5 bc455c31558f4e229aeedc6770d293fe ChangeLog 3585
+MD5 f38f179737d6cf3e18f44199f3b86fd9 ChangeLog 3618
 MD5 2e1532c1dbff17ab96ea76d189a9b7ba ppc-sources-dev-2.4.19.ebuild 2253
 MD5 4b1f93b2fca55d2bfdd961a517eb5611 metadata.xml 347
 MD5 e77a93fdf26f06cf3ea5080b27211725 files/ppc-sources-dev-2.4.22.CAN-2003-0985.patch 414
