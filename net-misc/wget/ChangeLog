@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.25 2003/11/18 04:36:58 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.26 2003/11/18 08:23:58 mr_bones_ Exp $
+
+  18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> wget-1.8.2-r3.ebuild,
+  wget-1.9.1-r1.ebuild:
+  sys-devl/autoconf -> sys-devel/autoconf; repoman: Trim trailing whitespace
 
 *wget-1.9.1-r1 (17 Nov 2003)
 
