@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 243f51cdd805a3ee9355a2a870d24412 ChangeLog 1654
 MD5 1b8b7e07b5df41df91f5188f40cc992d Jcode-0.83.ebuild 713
-MD5 f227afda8cb30958882221cab327b5ad ChangeLog 1576
+MD5 a827ed73064eeba9d32e50d0068834b5 Jcode-0.87.ebuild 729
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 444bc76f1f43f91ca3300aca45046227 Jcode-0.87.ebuild 719
 MD5 d363676e3df4c07ec2e56555cf64b6d2 files/digest-Jcode-0.83 62
 MD5 16755d537d324f158932bdcade8ce2fb files/digest-Jcode-0.87 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBynqB60LfUIagIAkRAkPqAJ9DhZZ2TTiaEhySxAQHoUXKlNFnxgCeODQX
+Bo93DcgXFTIajdtzpqsMU2k=
+=0BM6
+-----END PGP SIGNATURE-----
