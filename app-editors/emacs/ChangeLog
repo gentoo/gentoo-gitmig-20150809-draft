@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.26 2004/05/13 19:30:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.27 2004/05/17 06:30:04 mkennedy Exp $
+
+  17 May 2004; <mkennedy@gentoo.org> files/emacs-18.59-gcc-gentoo.patch:
+  Remove compiler option adjustments which made the build incompatible with GCC
+  2.95
 
   13 May 2004; Michael Sterrett <mr_bones_@gentoo.org> emacs-21.3-r3.ebuild:
   don't use deprecated ? : use syntax

@@ -144,32 +144,3 @@ Only in emacs-18.59/src: pre-crt0.o
 Only in emacs-18.59/src: print.o
 Only in emacs-18.59/src: process.o
 Only in emacs-18.59/src: regex.o
-diff -ur emacs-18.59.orig/src/s-linux.h emacs-18.59/src/s-linux.h
---- emacs-18.59.orig/src/s-linux.h	2004-05-12 19:51:09.959521160 -0500
-+++ emacs-18.59/src/s-linux.h	2004-05-12 20:03:12.614660880 -0500
-@@ -253,7 +253,7 @@
- 
- #define C_COMPILER gcc
- #define C_DEBUG_SWITCH -g
--#define C_OPTIMIZE_SWITCH -O2 -malign-loops=2 -malign-jumps=2 -malign-functions=2
-+#define C_OPTIMIZE_SWITCH -O2 -falign-loops=2 -falign-jumps=2 -falign-functions=2
- #define OLDXMENU_OPTIONS CFLAGS=-O2 EXTRA=insque.o
- #define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o
- #define LIBS_DEBUG		/* override in config.h to include -lg */
-Only in emacs-18.59/src: s-linux.h~
-Only in emacs-18.59/src: scroll.o
-Only in emacs-18.59/src: search.o
-Only in emacs-18.59/src: syntax.o
-Only in emacs-18.59/src: sysdep.o
-Only in emacs-18.59/src: temacs
-Only in emacs-18.59/src: term.o
-Only in emacs-18.59/src: terminfo.o
-Only in emacs-18.59/src: undo.o
-Only in emacs-18.59/src: unexelf.o
-Only in emacs-18.59/src: window.o
-Only in emacs-18.59/src: x11fns.o
-Only in emacs-18.59/src: x11term.o
-Only in emacs-18.59/src: xdisp.o
-Only in emacs-18.59/src: xemacs
-Only in emacs-18.59/src: xmakefile
-Only in emacs-18.59/src: xmakefile~
