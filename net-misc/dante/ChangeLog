@@ -1,24 +1,23 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.11 2003/02/12 08:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.12 2003/03/04 07:02:11 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *dante-1.1.13 (15 Jul 2002)
+
+  03 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added CFLAGS fix for gcc-3.2.1 ... you should use 3.2.2 anyways ...
+
   26 Jan 2002; Jon Nall <nall@gentoo.org> dante-1.1.13.ebuild :
   added ~ppc
 
   15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog dante-1.1.19.ebuild:
-
   Upgraded to 1.1.13, removed entire src_unpack stuff as none of the patches
   applied cleanly. Also I comment out line 99 of the socks.h before it's
   installed as it conflicts with a line in /usr/include/netinet/in.h
 
-
 *dante-1.1.12 (6 Jul 2002)
 
   6 Jul 2002; phoen][x <phoenix@gentoo.org> dante-1.1.12.ebuild,
-
   Added KEYWORDS.
 
 *dante-1.1.9* (6 Jul 2002)

@@ -1,29 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.9 2003/02/13 14:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.10 2003/03/04 07:02:11 vapier Exp $
 
-IUSE="tcpd"
+inherit gcc
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
 SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ppc sparc"
 SLOT="0"
+IUSE="tcpd"
 
 RDEPEND="virtual/glibc
 	sys-libs/pam
 	tcpd? ( sys-apps/tcp-wrappers )"
-
 DEPEND="${RDEPEND}
 	sys-devel/perl"
 
-# removed the src_unpack() since it doesn't appear to need any of those
-# patches (they all barfed when I tried to apply them by hand)
-
 src_compile() {
+	[ "`gcc-fullversion`" == "3.2.1" ] && export CFLAGS=""
+
 	local myconf
 	use tcpd || myconf="--disable-libwrap"
 	[ -n "$DEBUGBUILD" ] || myconf="${myconf} --disable-debug"
