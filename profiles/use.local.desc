@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.80 2003/08/03 00:00:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.81 2003/08/06 20:52:02 woodchip Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -116,3 +116,4 @@ x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 media-gfx/autotrace:imagemagick - Enables Imagemagick
+net-misc/openssh:X509 - Adds support for X.509 certificate authentication
