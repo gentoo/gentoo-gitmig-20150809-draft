@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.6 2004/06/24 22:24:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.7 2004/07/14 22:39:53 agriffis Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -15,6 +15,7 @@ HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/linux-sources
 	sys-devel/automake"
