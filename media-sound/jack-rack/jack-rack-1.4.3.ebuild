@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.3.ebuild,v 1.9 2004/06/25 00:07:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.3.ebuild,v 1.10 2004/09/22 22:30:10 eradicator Exp $
 
 IUSE="gnome"
 
@@ -12,13 +12,13 @@ SRC_URI="http://arb.bash.sh/~rah/software/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ~ppc amd64 ~sparc"
 
-DEPEND="media-libs/ladcca \
-	media-libs/liblrdf \
-	>=x11-libs/gtk+-2.0.6-r2 \
-	>=media-libs/ladspa-sdk-1.12 \
-	dev-libs/libxml2 \
+DEPEND="media-libs/ladcca
+	media-libs/liblrdf
+	>=x11-libs/gtk+-2.0.6-r2
+	>=media-libs/ladspa-sdk-1.12
+	dev-libs/libxml2
 	media-sound/jack-audio-connection-kit"
 
 src_unpack() {
@@ -29,9 +29,9 @@ src_unpack() {
 
 src_compile() {
 	econf `use_enable gnome` || die "econf failed"
-	make || die
+	emake -j1 || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
