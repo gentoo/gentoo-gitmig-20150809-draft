@@ -1,8 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.5 2003/02/22 07:27:44 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.6 2003/05/20 00:59:52 kumba Exp $
+
 
 IUSE="ssl nls static ipv6"
+
+inherit gnuconfig
 
 NPVER=20011209
 S=${WORKDIR}/${P}
@@ -17,7 +20,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm ~mips"
 
 src_unpack() {
 	unpack ${A}
@@ -36,6 +39,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Make wget use up-to-date configure scripts
+	gnuconfig_update
+
 	local myconf
 	use nls || myconf="--disable-nls"
 	use ssl && myconf="${myconf} --with-ssl"
