@@ -1,8 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.40 2003/07/09 07:35:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.41 2003/07/09 20:12:20 raker Exp $
 
-  09 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4,
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.1.22.ebuild:
+  Version bump.  Added ebuild changes made to 2.0.27-r4 to 2.1.22.
+  Still waiting for db4 to become a reality in gentoo.
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4.ebuild,
   files/2.0/slapd, files/2.0/slapd.conf:
   Updated example to include ldapi.  Added eval to the slapd init.d
   so the %2f is parsed properly.  Changed the location of the slapd.args
