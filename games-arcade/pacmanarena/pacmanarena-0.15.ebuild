@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.4 2004/06/07 04:03:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.5 2004/06/19 16:25:47 jhuebel Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/pacmanarena/"
 SRC_URI="mirror://sourceforge/pacmanarena/pacman-arena-${PV}.tar.bz2
 		mirror://sourceforge/pacmanarena/pacman-data-0.0.zip"
 
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 ~alpha ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="oggvorbis"
