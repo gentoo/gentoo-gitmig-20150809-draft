@@ -1,12 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfs-utils/reiserfs-utils-3.6.25-r6.ebuild,v 1.1 2001/04/28 19:07:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfs-utils/reiserfs-utils-3.6.25-r6.ebuild,v 1.2 2001/06/27 04:51:57 achim Exp $
 
 S=${WORKDIR}/reiserfsprogs-3.x.0j
 DESCRIPTION="Reiserfs Utilities"
 SRC_URI="ftp://ftp.namesys.com/pub/reiserfsprogs/reiserfsprogs-3.x.0j.tar.gz"
 HOMEPAGE="http://www.namesys.com"
+
+DEPEND="virtual/glibc"
 
 src_compile() {
     cd ${S}
