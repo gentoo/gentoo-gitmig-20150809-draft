@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.2.ebuild,v 1.1 2003/05/07 11:05:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.2.ebuild,v 1.2 2003/05/20 23:22:00 weeve Exp $
 inherit kde-dist 
 
 IUSE="pda"
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer..."
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 
 newdepend "pda? ( >=dev-libs/pilot-link-0.11.1-r1 )
 	dev-lang/perl
