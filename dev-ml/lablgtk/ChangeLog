@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.28 2005/04/01 04:39:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.29 2005/04/06 18:41:37 mattam Exp $
+
+  06 Apr 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-2.2.0.ebuild,
+  lablgtk-2.4.0.ebuild:
+  Use autodetection instead of adding --without-* flags. Fixes bug #87246.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> lablgtk-2.4.0.ebuild:
   stable on ia64

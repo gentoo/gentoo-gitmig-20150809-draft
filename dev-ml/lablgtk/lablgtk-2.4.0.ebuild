@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.5 2005/04/01 04:39:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.6 2005/04/06 18:41:37 mattam Exp $
 
 IUSE="debug doc glade gnome opengl svg"
 
@@ -23,12 +23,6 @@ SLOT="2"
 KEYWORDS="amd64 ~x86 ~ppc ~alpha ia64 ~sparc"
 
 src_compile() {
-	use gnome || myconf="$myconf
-				--without-gnomecanvas --without-gnomeui
-				--without-panel"
-	use opengl || myconf="$myconf --without-gl"
-	use svg || myconf="$myconf --without-rsvg"
-	use glade || myconf="$myconf --without-glade"
 	use debug && myconf="$myconf --enable-debug"
 
 	econf $myconf || die "configure failed"
