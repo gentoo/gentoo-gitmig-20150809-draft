@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916-r1.ebuild,v 1.4 2005/01/30 17:51:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20040916-r1.ebuild,v 1.5 2005/02/07 17:07:26 chriswhite Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -29,5 +29,5 @@ src_install() {
 	fi
 
 	mkdir -p ${D}/usr/lib/win32
-	mv *.dll *.ax *.acm *.vwp *.drv *.DLL ${D}/usr/lib/win32
+	mv *.dll *.ax *xa *.acm *.vwp *.drv *.DLL ${D}/usr/lib/win32
 }
