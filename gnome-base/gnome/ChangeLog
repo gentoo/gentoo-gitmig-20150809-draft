@@ -1,7 +1,15 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.54 2003/02/03 13:10:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.55 2003/02/06 00:24:26 spider Exp $
 
+
+*gnome-2.2_rc2-r98 (05 Feb 2003)
+  
+  05 Feb 2003; Spider <spider@gentoo.org> gnome-2.2_rc2-r98.ebuild :
+  sharpened up all deps,  fixed the gnome-system-monitor (duplicate and wrong 
+  version) and added gnome-mime-data
+   this is 2.2.0 pre-release internal gentoo
+  
 *gnome-2.2_rc2 (30 Jan 2003)
 
   02 Feb 2003; foser <foser@gentoo.org> gnome-2.2_rc2.ebuild :
