@@ -1,9 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 57673b282c25d0c720a58f6b279abf60 ChangeLog 16014
+MD5 a3d2fec802d92a0054cf3ccf1fc9d502 ChangeLog 16355
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 05bbf2629f4d1ab30d95e051cc923add util-linux-2.12i-r1.ebuild 3678
+MD5 6285cd723a19d84e43e70924fd12a7c8 util-linux-2.12p.ebuild 4421
 MD5 26220b8883c0ebc90c7caeb8ae21e6f3 util-linux-2.12-r5.ebuild 4195
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 6aa1c240dd789327ea92e36309052950 files/no-symlink-resolve.patch 316
@@ -20,14 +21,17 @@ MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
 MD5 8d4f1146f0699deb1e6872e1c81293e3 files/util-linux-2.12-selinux.diff.bz2 2558
 MD5 61beee95fb4696a6af11ffb84ddb055c files/util-linux-2.12i-ignore-managed.patch 506
 MD5 482305a63e330c809dc808af25ecfe33 files/util-linux-2.12i-pic.patch 2522
+MD5 d448f3b1b3ea21db4c2c4f303b48c1c8 files/digest-util-linux-2.12p 294
 MD5 5a1bf3d383850b6c8ca05cc4fe76c813 files/digest-util-linux-2.12-r5 154
 MD5 a9bc06c292401d6f2d27e8e4ebf7e6ae files/util-linux-2.12i-fat-LABEL-support.patch 2304
+MD5 08a8f7d810ef0413ab5226883daf9d87 files/util-linux-2.12p-fat-LABEL-support.patch 11349
+MD5 a4ffbd0d6a9a7b839c293623e417a326 files/util-linux-2.12p-swapon-check-symlinks.patch 911
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4e8ProRuSHgZdywRAjJcAJ46FqqHgNqMiqKjirgJJOLOCPkB1ACfYa8i
-pOSn2omBLrO3Prd04rqhZwg=
-=5xE5
+iD8DBQFB4gXproRuSHgZdywRAl0xAJ9h9+r4mrEqhlwSTfiDo03LK0/+jgCfdtYx
+gsibQZh53BGP7OuHabimP3A=
+=hH7x
 -----END PGP SIGNATURE-----

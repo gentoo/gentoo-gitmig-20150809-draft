@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.95 2005/01/10 01:36:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.96 2005/01/10 04:34:23 vapier Exp $
+
+*util-linux-2.12p (09 Jan 2005)
+
+  09 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12p-fat-LABEL-support.patch,
+  +files/util-linux-2.12p-swapon-check-symlinks.patch,
+  +util-linux-2.12p.ebuild:
+  Version bump. Change default crypto to loop-aes (since its actually
+  maintained upstream) #69082 by Arnvid L. Karstad.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org> util-linux-2.12i-r1.ebuild:
   Stable on sparc, resolves bug #77295.
