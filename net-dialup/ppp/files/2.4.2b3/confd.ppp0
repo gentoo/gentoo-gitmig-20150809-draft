@@ -1,5 +1,5 @@
 # /etc/conf.d/net.ppp0:
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2b3/confd.ppp0,v 1.1 2003/12/22 15:05:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2b3/confd.ppp0,v 1.2 2003/12/22 15:16:18 lanius Exp $
 
 # Config file for /etc/init.d/net.ppp0
 
@@ -20,6 +20,7 @@ PASSWORD="passwd"               # Your password/secret.  Ugly I know, but i
                                 # on.  700 permission on /etc/init.d/net.ppp0
                                 # should be enouth for now.
 NUMBER="9180000"                # The telephone number of your ISP
+                                # leave blank for leased-line operation.
 REMIP=""                        # The ip of the remote box if it should be set
 NETMASK=""                      # Netmask
 IPADDR=""                       # Our IP if we have a static one
