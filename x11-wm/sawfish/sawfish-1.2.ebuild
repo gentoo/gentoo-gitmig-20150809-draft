@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.8 2002/12/17 22:55:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.9 2003/01/05 12:03:33 foser Exp $
 
 inherit base eutils
 
@@ -30,6 +30,8 @@ src_unpack() {
 	base_src_unpack
 
 	cd ${S}; epatch ${FILESDIR}/sawfish-1.2-fullscreen.patch
+	# Fixes gtk 2.2 being detected as 1.x
+	epatch ${FILESDIR}/sawfish-1.2-gtk+-2.2.patch
 }
 
 src_compile() {

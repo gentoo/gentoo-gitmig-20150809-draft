@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.23 2002/12/31 18:55:50 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.24 2003/01/05 12:03:33 foser Exp $
+
+  05 Jan 2003; foser <foser@gentoo.org> sawfish-1.2.ebuild :
+  gtk+-2.2 build fix provided by Andy Dustman (bug #12755)
 
   31 Dec 2002; Chris Houser <chouser@gentoo.org> sawfish-1.0.1-r6.ebuild :
   Added alpha to KEYWORDS
