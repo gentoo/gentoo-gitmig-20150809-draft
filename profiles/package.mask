@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (11 Dec 2003)
+# An MIRC malformed dcc header exploit works to bring down xchat.
+# but I thought that OSS, bah
+=net-irc/xchat-2.0.6*
+
 # <carpaski@gentoo.org> (11 Dec 2003)
 # API change. All portage tools that meet this change in API
 # should be masked version-specific and follow immediately underneath.
