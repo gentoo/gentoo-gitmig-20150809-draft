@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/gentool /usr/bin/multilog t /var/log/gentool.d
+exec /usr/sbin/gentool.py /usr/bin/multilog t /var/log/gentool.d
