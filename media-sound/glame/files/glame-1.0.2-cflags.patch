@@ -1,0 +1,30 @@
+diff -Naur glame-1.0.2.orig/configure glame-1.0.2.cflags/configure
+--- glame-1.0.2.orig/configure	2004-10-15 01:45:17.713874000 -0700
++++ glame-1.0.2.cflags/configure	2004-10-15 01:52:33.089150474 -0700
+@@ -1994,7 +1994,10 @@
+ #define NDEBUG
+ _ACEOF
+ 
+-	glame_debug_gcc_cflags="-O3 -ffast-math -funroll-loops"
++	if test -z "$CFLAGS"; then
++		CFLAGS="-O2 -ffast-math -funroll-loops"
++	fi
++	glame_debug_gcc_cflags="$CFLAGS"
+ else
+ 	if test -z "$CFLAGS"; then
+ 		CFLAGS="-g -O2 -ffast-math"
+diff -Naur glame-1.0.2.orig/configure.ac glame-1.0.2.cflags/configure.ac
+--- glame-1.0.2.orig/configure.ac	2004-01-13 11:54:26.000000000 -0800
++++ glame-1.0.2.cflags/configure.ac	2004-10-15 01:51:48.394512522 -0700
+@@ -33,7 +33,10 @@
+ 	glame_debug_gcc_cflags="-g3 -O"
+ elif test "$glame_debug" = "no"; then
+ 	AC_DEFINE(NDEBUG,, [disable debugging code])
+-	glame_debug_gcc_cflags="-O3 -ffast-math -funroll-loops"
++	if test -z "$CFLAGS"; then
++		CFLAGS="-O2 -ffast-math"
++	fi
++	glame_debug_gcc_cflags="$CFLAGS"
+ else
+ 	if test -z "$CFLAGS"; then
+ 		CFLAGS="-g -O2 -ffast-math"

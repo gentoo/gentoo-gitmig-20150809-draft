@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.10 2004/09/14 08:09:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.11 2004/10/15 08:59:03 eradicator Exp $
 
 IUSE="nls gnome oggvorbis debug alsa"
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	nls? ( >=sys-devel/gettext-0.11.3 )"
 
-
 src_unpack() {
 	unpack ${A}
 
@@ -50,6 +49,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/gentoo.patch
+	epatch ${FILESDIR}/${P}-cflags.patch
 }
 
 src_compile() {

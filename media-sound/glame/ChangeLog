@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/glame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.21 2004/09/14 08:09:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.22 2004/10/15 08:59:03 eradicator Exp $
+
+  15 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/glame-1.0.2-cflags.patch:
+  Make glame honor user CFLAGS.  Closes bug #67070.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> glame-1.0.2.ebuild:
   Stable amd64, sparc.
