@@ -1,6 +1,4 @@
-MD5 ec38f6038d7082749929c658c89bd39a ChangeLog 1399
+MD5 bab53248693280f98912d904e4cbfa7b ChangeLog 1569
 MD5 4b5cecc9c79198cbdc0d596ad42e25bb calltree-0.9.5.ebuild 712
 MD5 8722050a8e3d7ed9bef5d59aec0fff16 metadata.xml 240
-MD5 6618854a795aa0fca0473550fcf8e392 calltree-0.9.4.ebuild 670
 MD5 7c1b0efeac9fe2e81f385361d76ab95c files/digest-calltree-0.9.5 66
-MD5 b36ce082e8ad784e1474dc1657e03407 files/digest-calltree-0.9.4 66
