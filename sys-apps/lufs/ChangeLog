@@ -1,13 +1,18 @@
 # ChangeLog for sys-apps/lufs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.7 2003/03/18 10:44:41 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.8 2003/03/18 11:38:38 wmertens Exp $
 
-  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.3.ebuild
+*lufs-0.9.4 (18 Mar 2003)
+  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.4.ebuild :
+  Turns out there was a new upstream version, and the init script and
+  lufs user don't make sense any more because the daemon was rewritten.
+
+  18 Mar 2003; Wout Mertens <wmertens@gentoo.org> lufs-0.9.3.ebuild :
   Fixed typo in install, -init was missing from the init script. Didn't
   bump revision since the people that have it running probably
   figured that out by themselves.
 
-*lufs-0.9.31 (12 Feb 2003)
+*lufs-0.9.3 (12 Feb 2003)
 
   12 Feb 2003; Luca Barbato <lu_zero@gentoo.org> lufs-0.9.3.ebuild
   files/digest-lufs-0.9.3 lufs-0.9.3-init

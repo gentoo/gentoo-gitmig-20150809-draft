@@ -6,19 +6,22 @@
 #
 # processname: lufs
 # chkconfig: - 91 91
+#
+# lufsd is started by the lufs user, and logs are kept in its homedir.
+#
 
 depend () {
         need localmount
 }
 
 start () {
-        echo -n "Starting lufsd... "
+        ebegin "Starting lufsd"
         su - lufs -c "lufsd -d 2>~/lufsd.err >~/lufsd.log"
-        echo
+        eend $? "Error starting lufsd"
 }
 
 stop () {
-        echo -n "Shutting down lufsd... "
-        killall lufsd
-        echo
+        ebegin "Stopping lufsd"
+        pkill lufsd
+        eend $? "Error stopping lufsd"
 }
