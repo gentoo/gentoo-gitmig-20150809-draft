@@ -1,11 +1,14 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.10 2003/03/13 18:25:27 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.11 2003/04/15 20:28:58 agenkin Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> xvid-0.9.1.ebuild :
   Marked ppc stable
 
 *xvid-0.9.1 (16 Feb 2003)
+
+  15 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Marking stable on x86.
 
   16 Feb 2003; Martin Schlemmer <azarah@gentoo.org> xvid-0.9.1.ebuild :
   New version.  Should also work on ppc and alpha!

@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.17 2003/03/28 22:52:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.18 2003/04/15 20:25:34 agenkin Exp $
 
 *libdvdcss-1.2.6 (11 Mar 2003)
+
+  15 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Marking stable on x86.
 
   28 Mar 2003; Martin Holzer <mholzer@gentoo.org> libdvdcss-1.2.6.ebuild:
   fixed dodoc docs. closes #18304.
