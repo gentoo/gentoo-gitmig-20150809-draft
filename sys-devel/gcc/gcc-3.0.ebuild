@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.ebuild,v 1.5 2001/07/18 05:20:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.ebuild,v 1.6 2001/12/07 21:10:04 drobbins Exp $
 
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -13,7 +13,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz"
 
 S=${WORKDIR}/${P}
-T=/usr
+TARG=/usr
 
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -76,10 +76,10 @@ src_compile() {
     export CXXFLAGS="${CXXFLAGS/-O?/}"
 
 
-	try ${S}/configure --prefix=${T} --mandir=${T}/share/man --infodir=${T}/share/info \
+	try ${S}/configure --prefix=${TARG} --mandir=${TARG}/share/man --infodir=${TARG}/share/info \
                 --enable-version-specific-runtime-libs \
                 --host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
-                --with-local-prefix=${T}/local ${myconf}
+                --with-local-prefix=${TARG}/local ${myconf}
 
 	# Parallel build does not work
     if [ -z "`use static`" ]
@@ -99,18 +99,18 @@ src_install() {
 
     mkdir ${CHOST}
     cp mkinstalldirs ${CHOST}
-	try make install prefix=${D}${T} mandir=${D}${T}/share/man infodir=${D}${T}/share/info
+	try make install prefix=${D}${TARG} mandir=${D}${TARG}/share/man infodir=${D}${TARG}/share/info
     cd ${D}/usr/lib/gcc-lib/${CHOST}
     mv lib* ${D}/usr/lib
     mv include/* ${D}/usr/include
     rm -rf include
-    FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
+    FULLPATH=${D}${TARG}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib
 	dosym	/usr/bin/cpp /lib/cpp
 	dosym   /usr/bin/gcc /usr/bin/cc
 	dodir /etc/env.d
-	echo "LDPATH=${T}/lib/gcc-lib/${CHOST}/${PV}" > ${D}/etc/env.d/05gcc3
+	echo "LDPATH=${TARG}/lib/gcc-lib/${CHOST}/${PV}" > ${D}/etc/env.d/05gcc3
 	cd ${S}
     if [ -z "`use build`" ]
     then
