@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.7 2002/10/04 05:13:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.8 2002/11/30 01:19:17 vapier Exp $
 
-S="${WORKDIR}/Sather-1.3"
+MY_P="Sather-${PV}"
 DESCRIPTION="Sather is an object oriented language designed to be simple, efficient, safe, flexible and non-proprietary."
-SRC_URI="http://www.cs.waikato.ac.nz/sather/release/downloads/Sather-1.3.tar.gz
+SRC_URI="http://www.cs.waikato.ac.nz/sather/release/downloads/${MY_P}.tar.gz
 	ftp://ftp.gnu.org/gnu/sather/Doc/sather-tutorial-000328.ps.gz
 	ftp://ftp.gnu.org/gnu/sather/Doc/sather-tutorial-000328.html.tar.gz
 	ftp://ftp.gnu.org/gnu/sather/Doc/sather-specification-000328.html.tar.gz
@@ -13,18 +13,19 @@ SRC_URI="http://www.cs.waikato.ac.nz/sather/release/downloads/Sather-1.3.tar.gz
 	http://www.icsi.berkeley.edu/~sather/Documentation/LanguageDescription/Descript.ps.gz"
 HOMEPAGE="http://www.cs.waikato.ac.nz/sather/ http://www.icsi.berkeley.edu/~sather/"
 
-DEPEND=">=sys-devel/gcc-2.95.3-r5
-		>=dev-libs/boehm-gc-6.0"
-RDEPEND=">=sys-devel/gcc-2.95.3-r5"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
+DEPEND=">=sys-devel/gcc-2.95.3-r5
+	>=dev-libs/boehm-gc-6.0"
+RDEPEND=">=sys-devel/gcc-2.95.3-r5"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack Sather-1.3.tar.gz
-	
+
 	mkdir doc
 	cd doc
 	unpack sather-tutorial-000328.html.tar.gz
@@ -36,20 +37,17 @@ src_unpack() {
 }
 
 src_compile() {
-
 	export SATHER_HOME="$S"
 	export LOCALE="en_NZ"
 	export SATHER_ENV="$SATHER_HOME/resources/$LOCALE/bin/LIBCHARS-posix"
 	export SATHER_RESOURCES="$SATHER_HOME/resources/$LOCALE"
 	export PATH="$PATH:$SATHER_HOME/bin"
-	
+
 	./configure linux || die
 	make || die
-
 }
 
 src_install () {
-
 	dodir /usr
 	cp -a ${WORKDIR}/Sather-1.3 ${D}/usr/sather
 	rm -rf ${D}/usr/sather/bin/sacomp.code
@@ -57,7 +55,7 @@ src_install () {
 	rm -rf ${D}/usr/sather/sacomp
 	rm -rf ${D}/usr/sather/sacomp-boot
 	rm -rf ${D}/usr/sather/system
-	mkdir ${D}/usr/sather/system
+	dodir /usr/sather/system
 	cp ${WORKDIR}/Sather-1.3/system/CONFIG ${D}/usr/sather/system
 	cp ${WORKDIR}/Sather-1.3/system/FORBID ${D}/usr/sather/system
 	
@@ -74,5 +72,4 @@ SATHER_ENV="/usr/sather/resources/en_NZ/bin/LIBCHARS-posix"
 SATHER_RESOURCES="/usr/sather/resources/en_NZ"
 PATH="/usr/sather/bin"
 EOF
-
 }

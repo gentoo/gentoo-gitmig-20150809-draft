@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.1 2002/10/20 23:07:15 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.2 2002/11/30 01:17:57 vapier Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -86,7 +86,7 @@ src_install() {
 	# If USE tcltk lets install idle
 	# Need to script the python version in the path
 	if use tcltk; then
-		mkdir "${D}/usr/lib/python${PYVER}/tools"
+		dodir /usr/lib/python${PYVER}/tools
 		mv "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py
 	fi
