@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.4 2003/12/15 20:16:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.5 2004/03/03 10:57:51 mholzer Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -24,12 +24,10 @@ SLOT="0"
 DEPEND=">=dev-db/postgresql-7.0.0
 	>=dev-php/mod_php-4.1"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
-	echo "${NO_WEBSERVER}"
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
-	einfo "Installing into ${D}${HTTPD_ROOT}."
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_compile() {
@@ -42,6 +40,7 @@ src_compile() {
 }
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	for doc in DEVELOPERS FAQ HISTORY INSTALL TODO TRANSLATORS \
