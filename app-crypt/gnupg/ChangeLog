@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.38 2003/11/29 22:31:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.39 2003/12/03 18:45:01 taviso Exp $
+
+*gnupg-1.2.3-r5 (03 Dec 2003)
+
+  03 Dec 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r5.ebuild,
+  files/gnupg-1.2.3-hkp-format-string.diff:
+  patch from cvs, missing format string in hkp code.
 
 *gnupg-1.2.3-r4 (29 Nov 2003)
 
