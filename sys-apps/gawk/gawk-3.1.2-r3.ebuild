@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r3.ebuild,v 1.4 2003/05/20 19:52:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.2-r3.ebuild,v 1.5 2003/05/23 10:57:20 taviso Exp $
 
 IUSE="nls build"
 
@@ -31,6 +31,9 @@ src_unpack() {
 	# a bizarre case.  The following patch fixes the problem, thanks to 
 	# Arnold D. Robbins (Maintainer of gawk).
 	epatch ${FILESDIR}/${P}-input-filesize.patch
+
+	# support for dec compiler.
+	[ "${CC}" == "ccc" ] && epatch ${FILESDIR}/${P}-dec-alpha-compiler.diff
 }
 
 src_compile() {

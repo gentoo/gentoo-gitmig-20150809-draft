@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.22 2003/05/20 19:52:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.23 2003/05/23 10:57:20 taviso Exp $
+
+  23 May 2003; Tavis Ormandy <taviso@gentoo.org> gawk-3.1.2-r3.ebuild:
+  support for ccc (alpha).
 
   20 May 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r3.ebuild :
   Mark stable for all, as all issues are fixed, and 3.1.1-r2 with filefuncs
