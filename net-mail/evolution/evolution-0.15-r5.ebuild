@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r5.ebuild,v 1.2 2001/10/09 03:46:29 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r5.ebuild,v 1.3 2001/10/20 15:48:15 hallski Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -27,16 +27,16 @@ DEPEND=">=gnome-extra/bonobo-conf-0.12
         >=dev-util/xml-i18n-tools-0.8.4
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	mozilla? ( >=net-www/mozilla-0.9.4-r2 )
+#	mozilla? ( >=net-www/mozilla-0.9.4-r2 )
 	pda? ( >=gnome-extra/gnome-pilot-0.1.61-r1 )" 
 
-src_unpack() {
-	unpack ${DB3}.tar.gz
-	unpack ${P}.tar.gz
-
-	cd ${S}
-	patch -p1 < ${FILESDIR}/evolution-0.15-r5-remove-movemail-check.patch
-}
+#src_unpack() {
+#	unpack ${DB3}.tar.gz
+#	unpack ${P}.tar.gz
+#
+#	cd ${S}
+#	patch -p1 < ${FILESDIR}/evolution-0.15-r5-remove-movemail-check.patch
+#}
 
 src_compile() {
 	cd ${WORKDIR}/${DB3}/build_unix
@@ -48,7 +48,7 @@ src_compile() {
   
 	local myconf
 
-	MOZILLA=$MOZILLA_FIVE_HOME
+#	MOZILLA=$MOZILLA_FIVE_HOME
 
 	if [ "`use ssl`" ] ; then
 		myconf="$myconf --enable-ssl"
@@ -60,11 +60,11 @@ src_compile() {
 		myconf="$myconf --with-pisock=/usr --enable-pilot-conduits=yes"
 	fi
 
-	if [ "`use mozilla`" ] ; then
-		myconf="$myconf --with-nspr-includes=${MOZILLA}/include/nspr \
-				--with-nss-includes=${MOZILLA}/include       \
-				--with-nspr-libs=${MOZILLA}"
-	fi
+#	if [ "`use mozilla`" ] ; then
+#		myconf="$myconf --with-nspr-includes=${MOZILLA}/include/nspr \
+#				--with-nss-includes=${MOZILLA}/include       \
+#				--with-nspr-libs=${MOZILLA}"
+#	fi
 
 	CFLAGS="-I${WORKDIR}/db3/include ${CFLAGS} 			\
 		`gnome-config --cflags bonobo`"
