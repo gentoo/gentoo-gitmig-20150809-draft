@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f4031105ba12950f4f06bc46df6535d ChangeLog 520
-MD5 f4e1994b7ee66891df1ce7d94057e8fa tux-2.2.7.ebuild 809
-MD5 7cea7f44637927f9b886849db2dbdbd0 tux-3.2.16.ebuild 988
+MD5 e25e75c6afb782bf71a021502e4c3472 ChangeLog 804
+MD5 de847eec61d31baf25b41719ec7c9bba tux-2.2.7.ebuild 811
+MD5 f4610dcc1bee1718179de0d8dd479348 tux-3.2.16.ebuild 994
 MD5 5cdf6a00aa7a9f1a9c960054ddf17917 files/digest-tux-2.2.7 60
-MD5 cfa17291b408a5db403bdaefc13bde68 files/tux.conf.d 1853
-MD5 ea5da7f38eafe7b43c2b6369f5f43d9a files/tux.init.d 1703
 MD5 eec61576fb028448bc45ca00fe54efeb files/digest-tux-3.2.16 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+f6BmdTrptrqvGERApMuAJ4xfdslYrkVvmUarl16DNsZ9iGKpACdFCr4
-C117S5v/vluZxZRxwaDxOSc=
-=v8LC
------END PGP SIGNATURE-----
+MD5 05de99492b2c2d9d8cbb30adc0791fa8 files/tux.conf.d 1852
+MD5 499c8232be6bee50514aee499c1e44a8 files/tux.init.d 1705
