@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.10 2004/09/04 00:33:24 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.11 2004/12/17 03:58:24 vapier Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://udhcp.busybox.net/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ~ia64"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -50,11 +50,8 @@ src_install() {
 		install \
 		|| die
 
-	dodoc AUTHORS COPYING ChangeLog README* TODO
+	dodoc AUTHORS ChangeLog README* TODO
 
 	insinto /usr/share/udhcpc
 	doins samples/*
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/udhcp.init udhcp
 }
