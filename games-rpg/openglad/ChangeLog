@@ -1,8 +1,11 @@
 # ChangeLog for games-rpg/openglad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.2 2003/09/10 16:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.3 2003/12/31 19:03:05 vapier Exp $
 
 *openglad-0.98 (01 Aug 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch from Paul Taylor <birder@ozemail.com.au> to fix compile #35167.
 
   01 Aug 2003; Michael Sterrett <msterret@gentoo.org> openglad-0.98.ebuild:
   initial commit.  ebuild submitted by Rob Cakebread (modified) via bug 24844
