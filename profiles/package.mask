@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Dan Armak <danarmak@gentoo.org> (06 aug 2002)
+# mask kvim (committing now); the ebuild is ok but conflicts with generic vim
+app-editors/kvim
+
 # Brandon Low <lostlogic@gentoo.org> (06 Aug 2002)
 # Mask new xine version for testing, please test and report.
 =media-libs/xine-lib-0.9.13
