@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0.ebuild,v 1.9 2004/10/14 14:49:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.1.ebuild,v 1.1 2004/10/14 14:49:56 carlo Exp $
 
 inherit python kde eutils
 
@@ -9,10 +9,10 @@ S=${WORKDIR}/${MY_P}
 
 IUSE="arts doc java python ruby"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
-SRC_URI="mirror://kde/stable/3.3/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.3.1/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 SLOT=3
 
 DEPEND="dev-lang/perl
@@ -21,7 +21,7 @@ DEPEND="dev-lang/perl
 	java? ( virtual/jdk dev-java/ant dev-java/java-config )
 	python? ( dev-lang/python )
 	doc? ( app-doc/doxygen )"
-need-kde 3.3
+need-kde 3.3.1
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
 
@@ -31,8 +31,8 @@ src_unpack() {
 	# fPIC patches shall be applied unconditionally
 	# BUG #55238
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
-	epatch ${FILESDIR}/${P/.0/_beta1}-bdb-fPIC.patch
-	epatch ${FILESDIR}/${P}-bdb-mutex.patch
+	epatch ${FILESDIR}/${P%.*}_beta1-bdb-fPIC.patch
+	epatch ${FILESDIR}/${P%.*}.0-bdb-mutex.patch
 }
 
 src_compile() {

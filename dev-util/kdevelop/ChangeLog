@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.68 2004/09/26 03:39:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.69 2004/10/14 14:49:56 carlo Exp $
+
+*kdevelop-3.1.1 (14 Oct 2004)
+
+  14 Oct 2004; Carsten Lohrke <carlo@gentoo.org> kdevelop-3.1.0.ebuild,
+  +kdevelop-3.1.1.ebuild:
+  version bump, apply bdb/mutex.h patch unconditionally, raise need-kde
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> kdevelop-3.1.0.ebuild:
   Stable on sparc.
