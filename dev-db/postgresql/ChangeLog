@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.191 2005/04/04 08:52:41 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.192 2005/04/05 15:19:50 nakano Exp $
+
+  05 Apr 2005; Masatomo Nakano <nakano@gentoo.org>
+  postgresql-8.0.1-r2.ebuild:
+  removed blocking RDEPEND.
 
   04 Apr 2005; Masatomo Nakano <nakano@gentoo.org>
   postgresql-8.0.1-r2.ebuild:
