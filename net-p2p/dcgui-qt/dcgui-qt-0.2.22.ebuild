@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/dcgui-qt-0.2.22.ebuild,v 1.1 2004/05/07 06:57:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/dcgui-qt-0.2.22.ebuild,v 1.2 2004/05/07 14:34:37 caleb Exp $
 
 DESCRIPTION="Qt based client for DirectConnect"
 HOMEPAGE="http://dcgui.berlios.de/"
@@ -17,6 +17,7 @@ DEPEND=">=dev-libs/libxml2-2.4.22
 	>=x11-libs/qt-3"
 
 src_compile() {
+	addwrite "$QTDIR/etc/settings"
 	econf \
 		`use_with ssl` \
 		--with-libdc=/usr \
