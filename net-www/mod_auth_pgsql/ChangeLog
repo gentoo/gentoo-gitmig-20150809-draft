@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.13 2004/07/11 23:44:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.14 2004/07/18 08:29:59 nakano Exp $
+
+  18 Jul 2004; Masatomo Nakano <nakano@gentoo.org>
+  mod_auth_pgsql-2.0.2-r1.ebuild, -mod_auth_pgsql-2.0.2.ebuild:
+  Fixed RDEPEND. Removed old ebuild.
 
   11 Jul 2004; Jason Wever <weeve@gentoo.org> mod_auth_pgsql-2.0.2-r1.ebuild:
   Added ~sparc keyword.
