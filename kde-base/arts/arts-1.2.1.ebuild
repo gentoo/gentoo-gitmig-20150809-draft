@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.6 2004/03/16 01:32:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.1.ebuild,v 1.7 2004/03/24 19:34:12 jhuebel Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -33,6 +33,9 @@ src_unpack() {
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
+
+	cd ${S}
+	use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
 }
 
 src_compile() {

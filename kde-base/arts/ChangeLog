@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.83 2004/03/16 01:32:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.84 2004/03/24 19:34:12 jhuebel Exp $
+
+  24 Mar 2004; Jason Huebel <jhuebel@gentoo.org> files/arts-1.2.1-buffer.patch,
+  arts-1.2.1.ebuild
+  Patch to fix sound problems with arts on amd64. Contributed by coolo at SUSE.
 
   15 Mar 2004; Jason Wever <weeve@gentoo.org> arts-1.2.1.ebuild:
   Marked stable on sparc.
