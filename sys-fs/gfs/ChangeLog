@@ -1,6 +1,6 @@
-# ChangeLog for sys-cluster/gfs
+# ChangeLog for sys-fs/gfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.2 2005/03/19 22:04:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.3 2005/03/20 13:22:04 swegener Exp $
 
   19 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gfs,
   gfs-6.1_pre21.ebuild:
