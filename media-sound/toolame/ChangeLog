@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/toolame
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.1 2003/05/02 19:21:28 avenj Exp $
+
+*toolame-02l (02 May 2003)
+
+  02 May 2003; Jon Portnoy <avenj@gentoo.org> toolame-02l.ebuild :
+  Initial import. Ebuild submitted by Par Karlsson 
+  <paer.karlsson@kmstudiosystems.com> in bug #19289.
