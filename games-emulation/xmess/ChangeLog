@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmess
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.9 2004/01/14 21:38:52 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.10 2004/02/16 19:09:31 mr_bones_ Exp $
+
+  16 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> xmess-0.77.1.ebuild,
+  xmess-0.78.1.ebuild:
+  header fix; mips and ia64 need deps first
 
 *xmess-0.78.1 (14 Jan 2004)
 

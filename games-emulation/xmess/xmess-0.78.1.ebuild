@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.78.1.ebuild,v 1.2 2004/01/28 22:37:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.78.1.ebuild,v 1.3 2004/02/16 19:09:31 mr_bones_ Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha hppa ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc net"
 
 RDEPEND="sys-libs/zlib
