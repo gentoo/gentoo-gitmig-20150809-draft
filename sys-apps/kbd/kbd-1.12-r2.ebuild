@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.9 2004/06/24 22:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.10 2004/06/28 19:23:37 vapier Exp $
 
 inherit eutils
 
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
-PROVIDE="sys-apps/console-tools"
 
 src_unpack() {
 	local a

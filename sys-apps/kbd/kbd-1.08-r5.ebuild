@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r5.ebuild,v 1.4 2004/06/24 22:12:39 agriffis Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r5.ebuild,v 1.5 2004/06/28 19:23:37 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Keyboard and console utilities"
+HOMEPAGE="http://freshmeat.net/projects/kbd/"
 SRC_URI="ftp://ftp.cwi.nl/pub/aeb/kbd/${P}.tar.gz
 	ftp://ftp.win.tue.nl/pub/home/aeb/linux-local/utils/kbd/${P}.tar.gz"
-HOMEPAGE="http://freshmeat.net/projects/kbd/"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa ia64 ~ppc64"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ~ppc64"
+IUSE="nls"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-PROVIDE="sys-apps/console-tools"
+DEPEND="virtual/libc
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	local a
@@ -82,4 +80,3 @@ src_install() {
 	dodir /usr/share/doc/${PF}/html
 	cp -dR doc/* ${D}/usr/share/doc/${PF}/html/
 }
-
