@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.1 2005/03/03 18:41:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.2 2005/03/30 21:11:46 ribosome Exp $
+
+*t-coffee-2.26 (30 Mar 2005)
+
+  30 Mar 2005; Olivier Fisette <ribosome@gentoo.org> +t-coffee-2.26.ebuild:
+  New version.
 
 *t-coffee-2.03 (03 Mar 2005)
 
