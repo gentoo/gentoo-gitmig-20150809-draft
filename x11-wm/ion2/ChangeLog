@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.5 2004/03/15 15:22:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.6 2004/03/19 07:11:51 twp Exp $
+
+  19 Mar 2004; Tom Payne <twp@gentoo.org> ion2-20040211-r2.ebuild, ion2-20040211-r2.ebuild :
+  Remove hppa until it gets a more recent lua.
 
 *ion2-20040211-r2 (14 Mar 2004)
 
