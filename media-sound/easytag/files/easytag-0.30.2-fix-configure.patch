@@ -1,0 +1,16 @@
+--- easytag-0.30.2/configure.in	2004-03-24 23:33:51.000000000 +0000
++++ easytag-0.30.2-dsd/configure.in	2004-04-04 18:54:07.826952264 +0100
+@@ -34,11 +34,11 @@
+ dnl -------------------------------
+ AC_ARG_ENABLE(ogg,
+               AC_HELP_STRING([--disable-ogg], [Disable support for Ogg Vorbis files (default=enabled)]),
+-              enable_ogg=no, enable_ogg=yes)
++              , enable_ogg=yes)
+ 
+ AC_ARG_ENABLE(flac,
+               AC_HELP_STRING([--disable-flac],[Disable support for FLAC files (default=enabled)]),
+-              enable_flac=no, enable_flac=yes)
++              , enable_flac=yes)
+ 
+ 
+ dnl -------------------------------
