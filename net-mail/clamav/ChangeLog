@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.18 2004/03/22 08:50:11 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.19 2004/03/26 23:00:35 solar Exp $
+
+*clamav-0.68 (26 Mar 2004)
+
+  26 Mar 2004; <solar@gentoo.org> clamav-0.68.ebuild:
+  DoS vulnerability with processing of RAR archives. Bugzilla Bug #45357
 
 *clamav-0.70_rc (21 Mar 2004)
 
