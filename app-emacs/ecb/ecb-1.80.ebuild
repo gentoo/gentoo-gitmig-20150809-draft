@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.80.ebuild,v 1.2 2003/02/13 07:04:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.80.ebuild,v 1.3 2003/07/11 22:55:50 vapier Exp $
 
-inherit elisp
+inherit elisp eutils
 
 IUSE=""
 
@@ -17,8 +17,7 @@ DEPEND="virtual/emacs
 	app-emacs/speedbar
 	app-emacs/eieio
 	app-emacs/jde
-	app-emacs/elib
-	app-misc/fixdos"
+	app-emacs/elib"
 
 S="${WORKDIR}/${P}"
 
@@ -31,8 +30,7 @@ src_unpack() {
 		mv ecb-help.el.new ecb-help.el
 	sed -e "s,@ECBHTMLFILE@,/usr/share/doc/${P}/html/ecb.html,g" <ecb-help.el >ecb-help.el.new && \
 		mv ecb-help.el.new ecb-help.el
-	# Hi, Welcome to Unix...
-	crlf -u ecb.texi
+	edos2unix ecb.texi
 }
 
 src_compile() {

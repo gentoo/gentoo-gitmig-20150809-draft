@@ -4,6 +4,6 @@ MD5 caecb2f0e391a0260149b86a9877e560 files/digest-ecb-1.90 60
 MD5 3888d43ea733def4c7566c06aa442f79 files/ecb-1.90-gentoo.patch 2393
 MD5 0a0e7458fb9bcb8ccffce77ab25944a9 files/ecb-help.el-gentoo.patch 1427
 MD5 9f6fdeeb2bb9e4dfef117f28fe5995de files/ecb.texi-gentoo.patch 251
-MD5 36f2332f0a175d0565dd9861941da714 ecb-1.80.ebuild 1736
+MD5 310e7344637728ec168df9361d618cb5 ecb-1.80.ebuild 1702
 MD5 4e84ff81ab0d72c62b7cab3575bb90eb ecb-1.90.ebuild 1533
 MD5 a43de176a2973e952d00e2a3da0fc297 ChangeLog 774
