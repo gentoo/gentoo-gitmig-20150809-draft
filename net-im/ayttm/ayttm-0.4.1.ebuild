@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.1.ebuild,v 1.1 2003/09/23 15:09:47 usata Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.1.ebuild,v 1.2 2003/09/26 17:11:39 usata Exp $
 
 IUSE="arts esd gnome nls"
 
@@ -35,7 +35,6 @@ src_compile() {
 		&& myconf="${myconf} --with-gnome" \
 		|| myconf="${myconf} --without-gnome"
 
-	
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
