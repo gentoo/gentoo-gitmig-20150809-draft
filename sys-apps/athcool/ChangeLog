@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/athcool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.10 2004/08/22 19:22:02 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/athcool/ChangeLog,v 1.11 2004/09/06 00:31:50 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> athcool-0.3.7.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -athcool-0.3.5.ebuild,
   athcool-0.3.7.ebuild:
