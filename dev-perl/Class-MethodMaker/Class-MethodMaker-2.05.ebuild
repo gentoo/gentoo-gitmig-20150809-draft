@@ -1,19 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.05.ebuild,v 1.1 2005/03/11 17:35:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.05.ebuild,v 1.2 2005/03/14 18:22:49 mcummings Exp $
 
 inherit perl-module
 
-MY_PV=${PV/4.1/4-1}
-MY_P=${PN}-${MY_PV}
-MY_SPV=${PV/.1/}
-MY_SP=${PN}-${MY_SPV}
-
-S="${WORKDIR}/${MY_SP}"
-
 DESCRIPTION="Perl module for Class::MethodMaker"
 HOMEPAGE="http://search.cpan.org/~fluffy/${MY_P}"
-SRC_URI="mirror://cpan/authors/id/F/FL/FLUFFY/${MY_P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/F/FL/FLUFFY/${P}.tar.gz"
+#style="builder"
 
 
 LICENSE="Artistic"
@@ -27,4 +21,12 @@ SRC_TEST="do"
 # if built with it. Go figure.
 #DEPEND="dev-perl/module-build"
 
-
+src_unpack() {
+	# This sad little hack is to accomadate a change in the eclass to 
+	# handle module-build modules more smoothly - except that the 
+	# Build.PL for this module is currently broken.
+	unpack ${A}
+	if [ -f ${S}/Build.PL ]; then
+		rm ${S}/Build.PL
+	fi
+}
