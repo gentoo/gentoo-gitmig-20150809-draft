@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.11 2004/01/14 18:34:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.12 2004/03/04 04:38:16 jhuebel Exp $
 
 inherit flag-o-matic gcc
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gabber.sourceforge.net"
 IUSE="ssl crypt xmms"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha"
+KEYWORDS="x86 ppc ~alpha ~amd64"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	<gnome-base/libglade-2.0.0
