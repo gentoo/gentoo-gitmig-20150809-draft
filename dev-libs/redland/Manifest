@@ -1,7 +1,3 @@
 MD5 7dedc0ff7af8a4b993a4d5d16e5a9833 ChangeLog 736
-MD5 2aeccb18c99270b11723f350258c60d6 redland-0.9.15.ebuild 1060
-MD5 73f649eb9beaa682ba2ee966a5c8cb17 redland-0.9.16.ebuild 1238
 MD5 d50d939676bc2a9941216a8704c2f2a7 redland-0.9.18.ebuild 698
-MD5 d1520e577d6322377950c0ca427ed8f1 files/digest-redland-0.9.15 67
-MD5 edc17952f8ecbcd3d5c7991a0ab06018 files/digest-redland-0.9.16 67
 MD5 d06c927d3c9397ea9b704f6a37be9c59 files/digest-redland-0.9.18 67
