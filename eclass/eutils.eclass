@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.143 2005/01/26 16:19:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.144 2005/02/03 22:11:33 chriswhite Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -16,6 +16,43 @@ INHERITED="$INHERITED $ECLASS"
 DEPEND="!bootstrap? ( sys-devel/patch )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
+
+# ecpu_check
+# Usage:
+#
+# ecpu_check array_of_cpu_flags
+#
+# array_of_cpu_flags - An array of cpu flags to check against USE flags
+#
+# Checks user USE related cpu flags against /proc/cpuinfo.  If user enables a
+# cpu flag that is not supported in their processor flags, it will warn the
+# user if CROSSCOMPILE is not set to 1 ( because cross compile users are
+# obviously using different cpu flags than their own cpu ).  Examples:
+#
+# CPU_FLAGS=(mmx mmx2 sse sse2)
+# ecpu_check CPU_FLAGS
+# Chris White <chriswhite@gentoo.org> (03 Feb 2005)
+
+ecpu_check() {
+    CPU_FLAGS=$1
+    USER_CPU=`grep "flags" /proc/cpuinfo`
+
+    for flags in `seq 1 ${#CPU_FLAGS[@]}`
+    do
+        if has ${CPU_FLAGS[$flags - 1]} $USER_CPU && ! has ${CPU_FLAGS[$flags - 1]} $USE
+        then
+            ewarn "Your system is ${CPU_FLAGS[$flags - 1]} capable but you don't have it enabled!"
+            ewarn "You might be cross compiling (in this case set CROSSCOMPILE to 1 to disable this warning."
+        fi
+
+        if ! has ${CPU_FLAGS[$flags - 1]} $USER_CPU  && has ${CPU_FLAGS[$flags -1]} $USE
+        then
+            ewarn "You have ${CPU_FLAGS[$flags - 1]} support enabled but your processor doesn't"
+            ewarn "Seem to support it!  You might be cross compiling or do not have /proc filesystem"
+            ewarn "enabled.  If either is the case, set CROSSCOMPILE to 1 to disable this warning."
+        fi
+    done
+}
 
 # Wait for the supplied number of seconds. If no argument is supplied, defaults
 # to five seconds. If the EPAUSE_IGNORE env var is set, don't wait. If we're not
