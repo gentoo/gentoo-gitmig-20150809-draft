@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.7 2003/04/12 11:26:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.8 2003/04/25 19:20:23 mholzer Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -99,7 +99,7 @@ src_unpack() {
 	fi
 
 	if use postgres; then
-		sed -e "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Local/Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/postgresql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
