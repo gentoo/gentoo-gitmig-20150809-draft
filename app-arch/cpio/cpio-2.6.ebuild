@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6.ebuild,v 1.2 2005/01/20 03:48:05 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6.ebuild,v 1.3 2005/01/20 14:09:52 vapier Exp $
 
 inherit eutils
 
@@ -34,7 +34,6 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die
 	dodoc ChangeLog NEWS README INSTALL
-	doman ${D}/usr/share/man/man1/cpio.1
 	rm -f "${D}"/usr/share/man/man1/mt.1
 	rmdir "${D}"/usr/libexec
 }
