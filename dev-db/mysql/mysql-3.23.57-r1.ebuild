@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57-r1.ebuild,v 1.11 2005/01/23 23:38:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57-r1.ebuild,v 1.12 2005/01/30 00:18:18 robbat2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,6 +29,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
 src_unpack() {
+	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 	unpack ${A} || die
 	cd ${S} || die
 	# required for qmail-mysql
@@ -186,4 +187,5 @@ pkg_postinst() {
 	einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
 	einfo "if this is a new install."
 	einfo
+	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 }

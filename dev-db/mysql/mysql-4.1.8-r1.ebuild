@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8-r1.ebuild,v 1.3 2005/01/23 23:38:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8-r1.ebuild,v 1.4 2005/01/30 00:18:18 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -52,6 +52,7 @@ warning() {
 
 pkg_setup() {
 	warning
+	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 }
 
 src_unpack() {
@@ -276,4 +277,5 @@ pkg_postinst() {
 	einfo
 
 	warning
+	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 }
