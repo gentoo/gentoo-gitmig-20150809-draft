@@ -23,7 +23,7 @@ diff -ur work.orig/nano-1.2.2/global.c work/nano-1.2.2/global.c
      toggle_mac_msg = _("Writing file in Mac format");
      toggle_backup_msg = _("Backing up file");
      toggle_smooth_msg = _("Smooth scrolling");
-+//    toggle_wsconvert_msg = _("Whitespace converting");
++    //toggle_wsconvert_msg = _("Whitespace converting");
  #ifdef ENABLE_COLOR
      toggle_syntax_msg = _("Color syntax highlighting");
  #endif
@@ -31,7 +31,7 @@ diff -ur work.orig/nano-1.2.2/global.c work/nano-1.2.2/global.c
      toggle_init_one(TOGGLE_AUTOINDENT_KEY, toggle_autoindent_msg, AUTOINDENT);
      toggle_init_one(TOGGLE_SUSPEND_KEY, toggle_suspend_msg, SUSPEND);
      toggle_init_one(TOGGLE_NOHELP_KEY, toggle_nohelp_msg, NO_HELP);
-+//    toggle_init_one(TOGGLE_WSCONVERT_KEY, toggle_wsconvert_msg, WS_CONVERT);
++    //toggle_init_one(TOGGLE_WSCONVERT_KEY, toggle_wsconvert_msg, WS_CONVERT);
  #ifndef DISABLE_WRAPPING
      toggle_init_one(TOGGLE_WRAP_KEY, toggle_wrap_msg, NO_WRAP);
  #endif
@@ -42,7 +42,7 @@ diff -ur work.orig/nano-1.2.2/nano.h work/nano-1.2.2/nano.h
  #define HISTORY_CHANGED		(1<<29)
  #define HISTORYLOG		(1<<30)
  #define JUSTIFY_MODE		(1<<31)
-+//#define WS_CONVERT		(1<<32)
++//#define WS_CONVERT		(1<<31) // 32
  
  /* Control key sequences, changing these would be very very bad */
  
@@ -50,14 +50,14 @@ diff -ur work.orig/nano-1.2.2/nano.h work/nano-1.2.2/nano.h
  #define TOGGLE_MAC_KEY		NANO_ALT_O
  #define TOGGLE_SMOOTH_KEY	NANO_ALT_S
  #define TOGGLE_NOCONVERT_KEY	NANO_ALT_N
-+//#define TOGGLE_WSCONVERT_KEY	NANO_ALT_V
++#define TOGGLE_WSCONVERT_KEY	NANO_ALT_V
  #define TOGGLE_BACKUP_KEY	NANO_ALT_B
  #define TOGGLE_SYNTAX_KEY	NANO_ALT_Y
  #endif /* !NANO_SMALL */
 diff -ur work.orig/nano-1.2.2/nanorc.sample work/nano-1.2.2/nanorc.sample
 --- work.orig/nano-1.2.2/nanorc.sample	2003-09-01 18:15:59.000000000 -0400
 +++ work/nano-1.2.2/nanorc.sample	2003-09-01 18:32:31.000000000 -0400
-@@ -86,6 +86,14 @@
+@@ -86,6 +86,16 @@
  ## Use this tab size instead of the default; it must be greater than 0
  # set tabsize 8
  
@@ -68,6 +68,8 @@ diff -ur work.orig/nano-1.2.2/nanorc.sample work/nano-1.2.2/nanorc.sample
 +## Same as tabconverting above, but applied to spaces.
 +## it can be a single character.  183 seems to be a 'good' value.
 +# set tabconvert 32
++## Finally, you can toggle whitespace converting with this
++# set wsconvert
 +
  ## Save automatically on exit, don't prompt
  # set tempfile
@@ -91,7 +93,7 @@ diff -ur work.orig/nano-1.2.2/rcfile.c work/nano-1.2.2/rcfile.c
  #endif
  #ifndef NANO_SMALL
      {"noconvert", NO_CONVERT},
-+/*    {"wsconvert", WS_CONVERT}, */
++    {"wsconvert", WS_CONVERT},
  #endif
      {"nofollow", NOFOLLOW_SYMLINKS},
      {"nohelp", NO_HELP},
@@ -158,7 +160,7 @@ diff -ur work.orig/nano-1.2.2/winio.c work/nano-1.2.2/winio.c
 -	if (*original == '\t')
 -	    do {
 +	if (*original == '\t') {
-+	    converted[pos++] = tabconvert;
++	    converted[pos++] = (ISSET(WS_CONVERT) ? tabconvert : ' ');
 +	    while (pos % tabsize)
  		converted[pos++] = ' ';
 -	    } while (pos % tabsize);
@@ -172,7 +174,19 @@ diff -ur work.orig/nano-1.2.2/winio.c work/nano-1.2.2/winio.c
  		converted[pos++] = *original + 64;
  	} else
 -	    converted[pos++] = *original;
-+	    converted[pos++] = (*original==' ') ? spaceconvert : *original;
++	    converted[pos++] = (*original==' '&&ISSET(WS_CONVERT)) ? spaceconvert : *original;
      }
      converted[pos] = '\0';
  
+--- work.orig/nano-1.2.2/nano.c.orig	2003-09-14 20:33:48.981627152 -0400
++++ work/nano-1.2.2/nano.c	2003-09-14 20:34:33.990784720 -0400
+@@ -2957,6 +2957,9 @@
+ 	edit_refresh();
+ 	break;
+ #endif
++/*    case TOGGLE_WSCONVERT_KEY:
++	edit_refresh();
++	break;*/
+     }
+ 
+     /* We are assuming here that shortcut_init() above didn't free and
