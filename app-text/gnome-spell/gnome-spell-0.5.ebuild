@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.13 2003/05/16 00:58:43 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.14 2003/06/10 13:16:35 liquidx Exp $
 
 IUSE="nls"
 
@@ -14,12 +14,11 @@ KEYWORDS="x86 sparc ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=net-mail/evolution-1.2.0
-	>=gnome-base/gnome-libs-1.4.1.7
+DEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	=gnome-base/control-center-1.4*
 	>=gnome-base/bonobo-1.0.19-r1
 	<gnome-base/libglade-2.0.0
-	>=gnome-extra/gal-0.19
+   	<gnome-extra/gal-1.99
 	virtual/aspell-dict
 	nls? ( sys-devel/gettext )"
 

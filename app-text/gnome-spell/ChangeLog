@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.27 2003/06/03 10:23:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.28 2003/06/10 13:16:35 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnome-spell-0.5.ebuild:
+  removed evolution dep and fixed gal dep
 
 *gnome-spell-1.0.4 (03 Jun 2003)
 

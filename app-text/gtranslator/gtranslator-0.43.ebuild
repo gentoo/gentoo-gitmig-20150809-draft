@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.9 2003/03/06 11:11:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.10 2003/06/10 13:14:13 liquidx Exp $
 
 IUSE="nls"
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 sparc"
 
 DEPEND=">=gnome-base/gnome-libs-1.2
 	=gnome-base/gconf-1.0*
-	>=gnome-extra/gal-0.11.99
+	<gnome-extra/gal-1.99
 	>=app-text/scrollkeeper-0.1.4
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
