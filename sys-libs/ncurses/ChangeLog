@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.50 2004/02/29 19:12:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.51 2004/02/29 21:57:39 azarah Exp $
+
+*ncurses-5.4 (29 Feb 2004)
+
+  29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> ncurses-5.4.ebuild,
+  files/ncurses-5.4-share-sed.patch, files/ncurses-5.4-xterm.patch:
+  Update version, closes bug #43302.
 
   29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> ncurses-5.3-r5.ebuild,
   files/ncurses-5.3-share-sed.patch:
