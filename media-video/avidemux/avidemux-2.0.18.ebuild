@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.7 2004/01/30 06:48:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.18.ebuild,v 1.8 2004/02/01 01:15:55 mholzer Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,6 +35,8 @@ RDEPEND="virtual/x11
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${MY_P}
+
+filter-flags "-fno-default-inline"
 
 src_compile() {
 	# Fixes a possible automake error due to clock skew

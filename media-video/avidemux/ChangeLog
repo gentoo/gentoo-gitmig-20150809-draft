@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.33 2003/12/21 11:10:33 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.34 2004/02/01 01:15:55 mholzer Exp $
+
+  01 Feb 2004; Martin Holzer <mholzer@gentoo.org> avidemux-2.0.18.ebuild,
+  avidemux-2.0.20.ebuild:
+  adding filter. Closes 39980.
 
 *avidemux-2.0.20 (21 Dec 2003)
 
