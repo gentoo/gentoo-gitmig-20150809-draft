@@ -27,17 +27,11 @@
 >=sys-apps/sysklogd-1.4.1
 
 virtual/x11
-<sys-apps/shadow-5
 >=sys-apps/texinfo-4.2-r1
 >=sys-devel/automake-1.6.1-r5
 >=sys-devel/libtool-1.4.1-r4
 >=sys-libs/ncurses-5.2.20020511-r3
 >=sys-libs/pam-0.75-r10
-
-# These don't make sense on sparc 
-!sys-devel/bin86
-!sys-boot/lilo
-!sys-boot/grub
 
 # Get a decent editor - BROKEN
 !app-editors/levee
