@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3.ebuild,v 1.14 2004/06/30 02:30:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3.ebuild,v 1.15 2004/07/15 01:46:18 agriffis Exp $
 
 inherit eutils
 
@@ -107,4 +107,3 @@ src_install() {
 		rm -rf ${D}/usr/share
 	fi
 }
-
