@@ -14,8 +14,8 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 12) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
 -- Option 1: Recommended - compile your own glibc--
 13a) cd /usr/tmp
-13b) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1-lib32.tbz2
-13c) lynx -source http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2-lib32.md5sum | md5sum -c -
+13b) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1-lib32.tar.bz2
+13c) lynx -source http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tar.bz2-lib32.md5sum | md5sum -c -
 13d) cd /
 13e) tar xjf /usr/tmp/glibc-2.3.4.20040808-r1-lib32.tar.bz2
 13d) emerge -O -v glibc
