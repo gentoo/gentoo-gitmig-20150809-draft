@@ -1,21 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c819b10773d06394085052f775b8138 ChangeLog 13332
 MD5 3faecfffa69ae8404a41a8d39201b3e1 exim-4.33-r1.ebuild 7626
 MD5 8807b47f2f299eb16a17bf4904c4ca81 exim-4.34-r1.ebuild 7933
 MD5 4f81a30a363f8dee30864633df6649f4 exim-4.34.ebuild 7562
-MD5 765424c8f863b33e5d246d54c3e52ec7 exim-4.40.ebuild 7735
-MD5 3025eee9c7c7d25fd908f7ebc8b75026 exim-4.41.ebuild 7733
 MD5 33dd717372c0b5d66b421e65dc0e45e3 metadata.xml 1065
-MD5 98c026953bdbe43ba05b35e3a0cb6b4e exim-4.42.ebuild 7692
+MD5 765424c8f863b33e5d246d54c3e52ec7 exim-4.40.ebuild 7735
+MD5 c3f0cea30d15c37e3c6870e76b66b864 exim-4.41.ebuild 7737
+MD5 4b444a10aed0d538eda2a03216896fe7 exim-4.42.ebuild 7697
+MD5 0b9dd9bdd135e4ecbe06e8c3638c65c1 ChangeLog 13458
 MD5 68fc403ba2c98ccba281939085cb9052 files/auth_conf.sub 775
 MD5 0cb2ffe88c81fd7ac8429b5a19d58b35 files/configure 16346
 MD5 904b31332322109b4d2a382d6a253412 files/digest-exim-4.33-r1 133
 MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34 133
 MD5 6a964dbcdbca2690ed166e9a59cebe84 files/digest-exim-4.34-r1 133
-MD5 22fec326813079b35bb1997f9b323060 files/digest-exim-4.40 133
-MD5 fc1d2de3c279dab8107d973ae63301d6 files/digest-exim-4.41 133
 MD5 369b42cafcbe5631c2d03cbbfd4aeddd files/exim-4.10-gentoo.diff 1889
 MD5 5d5aabea7d56a91803df1312c04d32c0 files/exim-4.14-tail.patch 446
 MD5 622b726ea7b32aae93a8fe9f3c2af9cd files/exim-4.20-maildir.patch 478
@@ -27,11 +22,6 @@ MD5 eb249c90af3ab11e5a4d307e184a75ac files/exiscan.conf 22113
 MD5 de6d33cbc3f6762f73fbe852c318e461 files/mailer.conf 1301
 MD5 d230e0fa45f2b65d5bc50c0879c40148 files/pam.d-exim 101
 MD5 4c0b8ee742360c08f0bc0b526fcaad10 files/system_filter.exim 8120
+MD5 22fec326813079b35bb1997f9b323060 files/digest-exim-4.40 133
+MD5 fc1d2de3c279dab8107d973ae63301d6 files/digest-exim-4.41 133
 MD5 02d10d38a03184cc913c44a59f7d61ed files/digest-exim-4.42 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBM68TI1lqEGTUzyQRAnDuAJ9mLB3aXi4kg3bYLbmu6qGJKA3BLACgxF69
-WQ5UVe3mLHfHWPeyGTqMt40=
-=SwCA
------END PGP SIGNATURE-----
