@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.8 2003/07/16 04:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.9 2003/07/18 18:45:38 vapier Exp $
 
 inherit games
 
@@ -45,16 +45,16 @@ games-q3mod_src_install() {
 	fi
 
 	games-q3mod_make_q3ded_exec
-	newgamesbin ${T}/q3ded-${MOD_NAME}.bin q3ded-${MOD_BINS}
+	newgamesbin ${T}/q3${MOD_NAME}-ded.bin q3${MOD_BINS}-ded
 	games-q3mod_make_quake3_exec
 	newgamesbin ${T}/quake3-${MOD_NAME}.bin quake3-${MOD_BINS}
 
 	games-q3mod_make_init.d
 	exeinto /etc/init.d
-	newexe ${T}/q3ded-${MOD_NAME}.init.d q3ded-${MOD_BINS}
+	newexe ${T}/q3${MOD_NAME}-ded.init.d q3${MOD_BINS}-ded
 	games-q3mod_make_conf.d
 	insinto /etc/conf.d
-	newins ${T}/q3ded-${MOD_NAME}.conf.d q3ded-${MOD_BINS}
+	newins ${T}/q3${MOD_NAME}-ded.conf.d q3${MOD_BINS}-ded
 
 	dodir ${GAMES_SYSCONFDIR}/quake3
 
@@ -74,15 +74,15 @@ games-q3mod_pkg_postinst() {
 	fi
 
 	einfo "To play this mod:             quake3-${MOD_NAME}"
-	einfo "To launch a dedicated server: q3ded-${MOD_NAME}"
+	einfo "To launch a dedicated server: q3${MOD_NAME}-ded"
 	[ `use dedicated` ] && \
-	einfo "To launch server at startup:  /etc/init.d/q3ded-${MOD_NAME}"
+	einfo "To launch server at startup:  /etc/init.d/q3${MOD_NAME}-ded"
 
 	games_pkg_postinst
 }
 
 games-q3mod_make_q3ded_exec() {
-cat << EOF > ${T}/q3ded-${MOD_NAME}.bin
+cat << EOF > ${T}/q3${MOD_NAME}-ded.bin
 #!/bin/sh
 exec ${GAMES_BINDIR}/q3ded +set fs_game ${MOD_NAME} +set dedicated 1 +exec server.cfg \${@}
 EOF
@@ -96,7 +96,7 @@ EOF
 }
 
 games-q3mod_make_init.d() {
-cat << EOF > ${T}/q3ded-${MOD_NAME}.init.d
+cat << EOF > ${T}/q3${MOD_NAME}-ded.init.d
 #!/sbin/runscript
 $(<${PORTDIR}/header.txt)
 
@@ -106,13 +106,13 @@ depend() {
 
 start() {
 	ebegin "Starting ${MOD_NAME} dedicated"
-	screen -A -m -d -S q3ded-${MOD_NAME} su - ${GAMES_USER_DED} -c "${GAMES_BINDIR}/q3ded-${MOD_NAME} \${${MOD_NAME}_OPTS}"
+	screen -A -m -d -S q3${MOD_BINS}-ded su - ${GAMES_USER_DED} -c "${GAMES_BINDIR}/q3${MOD_BINS}-ded \${${MOD_BINS}_OPTS}"
 	eend \$?
 }
 
 stop() {
 	ebegin "Stopping ${MOD_NAME} dedicated"
-	local pid=\`screen -list | grep q3ded-${MOD_NAME} | awk -F . '{print \$1}' | sed -e s/.//\`
+	local pid=\`screen -list | grep q3${MOD_BINS}-ded | awk -F . '{print \$1}' | sed -e s/.//\`
 	if [ -z "\${pid}" ] ; then
 		eend 1 "Lost screen session"
 	else
@@ -131,10 +131,10 @@ EOF
 
 games-q3mod_make_conf.d() {
 	if [ -e ${FILESDIR}/${MOD_NAME}.conf.d ] ; then
-		cp ${FILESDIR}/${MOD_NAME}.conf.d ${T}/q3ded-${MOD_NAME}.conf.d
+		cp ${FILESDIR}/${MOD_NAME}.conf.d ${T}/q3${MOD_NAME}-ded.conf.d
 		return 0
 	fi
-cat << EOF > ${T}/q3ded-${MOD_NAME}.conf.d
+cat << EOF > ${T}/q3${MOD_NAME}-ded.conf.d
 $(<${PORTDIR}/header.txt)
 
 # Any extra options you want to pass to the dedicated server
