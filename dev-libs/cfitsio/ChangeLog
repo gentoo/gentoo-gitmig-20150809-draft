@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/cfitsio
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cfitsio/ChangeLog,v 1.1 2003/01/05 05:51:19 george Exp $
+
+*cfitsio-2.430.ebuild (04 ñÎ× 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> cfitsio-2.430.ebuild, ChangeLog, files/digest-cfitsio-2.430 :
+  initial release (ref #11508)
+  C and Fortran library for reading and writing files in FITS data format
+  ebuild submitted by Nathaniel C. Domingo <nathaniel.domingo@upd.edu.ph>
