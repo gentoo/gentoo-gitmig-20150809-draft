@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.5 2004/07/14 16:17:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.5.ebuild,v 1.6 2004/08/22 05:09:37 obz Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -28,7 +28,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.9
 	       >=app-pda/pilot-link-0.11.8
 	       >=app-pda/gnome-pilot-conduits-2.0.10-r1 )
 	spell? ( >=app-text/gnome-spell-1.0.5 )
-	>=gnome-base/ORBit2-2.8.2
+	>=gnome-base/orbit-2.8.2
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/libgnomeui-2.0

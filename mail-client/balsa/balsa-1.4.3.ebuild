@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-1.4.3.ebuild,v 1.5 2004/08/09 20:25:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-1.4.3.ebuild,v 1.6 2004/08/22 04:59:41 obz Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	>=gnome-base/gnome-libs-1.4.1.4
-	>=gnome-base/ORBit-0.5.10-r1
+	=gnome-base/orbit-0*
 	>=media-libs/gdk-pixbuf-0.13.0
 	>=net-libs/libesmtp-0.8.11
 	nls? ( sys-devel/gettext )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.6 2004/07/14 16:20:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.6-r1.ebuild,v 1.7 2004/08/22 05:07:04 obz Exp $
 
 IUSE="crypt debug gnome gtk2 ipv6 ldap xinerama"
 
@@ -35,7 +35,7 @@ RDEPEND="virtual/x11
 		>=dev-libs/libIDL-0.8.0 )
 	!gtk2? (
 		=x11-libs/gtk+-1.2*
-		>=gnome-base/ORBit-0.5.10-r1 )
+		=gnome-base/orbit-0* )
 	crypt? ( >=app-crypt/gnupg-1.2.1 )
 	>=net-www/mozilla-launcher-1.7-r1"
 
