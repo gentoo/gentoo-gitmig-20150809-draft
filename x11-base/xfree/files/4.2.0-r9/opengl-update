@@ -1,4 +1,9 @@
 #!/bin/bash
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r9/opengl-update,v 1.2 2002/04/07 06:05:08 azarah Exp $
+
 
 source /etc/init.d/functions.sh
 
