@@ -1,22 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.8 2003/01/01 01:27:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.9 2003/01/12 22:06:19 vapier Exp $
+
+# NOTES:
+#  - NTPDATE variables below are used if you wish to set your
+#    clock when you start the ntp init.d script
+#  - make sure that the NTPDATE_CMD will close by itself ...
+#    the init.d script will not attempt to kill/stop it
+#  - ntpd will be used to maintain synchronization with a time
+#    server regardless of what NTPDATE is set to
+#  - read each of the comments above each of the variable
 
 # Comment this out if you dont want the init script to warn
 # about not having ntpdate setup
 NTPDATE_WARN="y"
 
 # Command to run to set the clock initially
-# if you want to use ntpd to set the clock, change this to 'ntpd'
+# Most people should just uncomment this line ...
+# however, if you know what you're doing, and you
+# want to use ntpd to set the clock, change this to 'ntpd'
 #NTPDATE_CMD="ntpdate"
 
 # Options to pass to the above command
-# you might want to change 'someserver' to a valid
-# hostname which you can aquire below
+# Most people should just uncomment this variable and
+# change 'someserver' to a valid hostname which you
+# can aquire from the URL's below
 #NTPDATE_OPTS="-b someserver"
 
 ##
 # A list of available servers is available here:
+# Please respect the access policy as stated by the responsible person.
 # * http://www.eecis.udel.edu/~mills/ntp/clock1.html
 # and
 # * http://www.eecis.udel.edu/~mills/ntp/clock2.html

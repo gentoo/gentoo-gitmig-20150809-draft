@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r3.ebuild,v 1.3 2003/01/06 18:12:33 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r4.ebuild,v 1.1 2003/01/12 22:06:19 vapier Exp $
 
 inherit eutils
 
@@ -45,4 +45,10 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntpd.rc ntpd
 	insinto /etc/conf.d ; newins ${FILESDIR}/ntpd.confd ntpd
+}
+
+pkg_postinst() {
+	ewarn "Please run etc-update and then read"
+	ewarn "all the comments in /etc/ntp.conf and"
+	ewarn "/etc/conf.d/ntpd"
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.19 2003/01/09 12:33:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.20 2003/01/12 22:06:19 vapier Exp $
+
+*ntp-4.1.1b-r4 (12 Jan 2003)
+
+  12 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added a lot more comments to hopefully keep people from
+  messing up their ntp installs.
 
 *ntp-4.1.1b-r3 (31 Dec 2002)
 
