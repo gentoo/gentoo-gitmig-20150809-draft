@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/worker
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.3 2002/11/06 06:22:46 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.4 2003/02/12 05:10:30 vapier Exp $
 
 *worker-2.7.0 (27 Oct 2002)
 

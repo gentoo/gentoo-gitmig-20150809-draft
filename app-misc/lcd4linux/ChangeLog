@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.4 2002/10/19 15:48:49 aliz Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.5 2003/02/12 05:02:53 vapier Exp $
 
 *lcd4linux-0.98-r2 (27 May 2002)
 

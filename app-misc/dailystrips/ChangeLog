@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/dailystrips
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.6 2003/01/16 22:41:54 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.7 2003/02/12 04:57:46 vapier Exp $
 
   16 Jan 2003; Aron Griffis <agriffis@gentoo.org> dailystrips-1.0.25.ebuild :
   Add ~alpha to KEYWORDS

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/screen
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.25 2003/02/10 16:28:56 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.26 2003/02/12 05:06:03 vapier Exp $
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> screen-3.9.13-r4.ebuild :
   Added hppa to keywords.

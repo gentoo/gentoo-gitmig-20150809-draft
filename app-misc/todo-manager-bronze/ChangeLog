@@ -1,7 +1,7 @@
 # ChangeLog for app-misc/todo-manager-bronze
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/ChangeLog,v 1.2 2002/12/12 23:51:48 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/ChangeLog,v 1.3 2003/02/12 05:09:27 vapier Exp $
 
 *todo-manager-bronze-20020807 (13 Dec 2002)
 
