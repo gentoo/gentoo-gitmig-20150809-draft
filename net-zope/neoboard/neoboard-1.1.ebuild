@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.3 2003/09/08 06:53:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoboard/neoboard-1.1.ebuild,v 1.4 2003/09/11 01:27:47 msterret Exp $
 
 inherit zproduct
 P_NEW="NeoBoard-${PV}"
@@ -25,5 +25,5 @@ pkg_postinst()
 {
 	zproduct_pkg_postinst
 	ewarn "There are three different ways to add this product to your"
-    ewarn "Zope/CMF/Plone site. Please consult the documentation."
+	ewarn "Zope/CMF/Plone site. Please consult the documentation."
 }

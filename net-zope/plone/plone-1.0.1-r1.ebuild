@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-1.0.1-r1.ebuild,v 1.5 2003/09/08 10:45:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-1.0.1-r1.ebuild,v 1.6 2003/09/11 01:27:47 msterret Exp $
 
 inherit zproduct
 S="${WORKDIR}/CMFPlone-${PV}"
@@ -29,6 +29,5 @@ pkg_postinst()
 {
 	zproduct_pkg_postinst
 	einfo "---> NOTE: i18n folder location: ${ZP_DIR}/${PF}"
-    ewarn "Using >net-zope/cmf-1.3.1 will break this product."
+	ewarn "Using >net-zope/cmf-1.3.1 will break this product."
 }
-
