@@ -31,3 +31,4 @@ move app-misc/obexftp net-wireless/obexftp
 move dev-util/jcvs-bin dev-util/jcvs
 move dev-php/groupoffice www-apps/groupoffice
 move dev-java/wsdl4j-bin dev-java/wsdl4j
+move app-misc/omnibook app-laptop/omnibook
