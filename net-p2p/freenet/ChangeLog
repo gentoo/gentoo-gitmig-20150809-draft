@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.3 2002/07/15 16:26:21 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.4 2002/07/16 19:25:35 bass Exp $
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
 
@@ -8,15 +8,15 @@
 
 *freenet-20020621.ebuild ( 21 Jun 2002 )
 
-  20 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
-  Bumped version, and added note that explain how install the newest version.
-
   15 Jul 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
   Added a note about unemerge problems with updated versions bug
   #4744.
   When you update, the files in /var/freenet are more recents
   that the ebuils files. The ebuild can remove it but I think that is
   more secure for the user do it manually.
+
+  20 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
+  Bumped version, and added note that explain how install the newest version.
 
 *freenet-20020214.ebuild ( 18 Feb 2002 )
 

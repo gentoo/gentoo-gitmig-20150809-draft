@@ -1,5 +1,5 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.2 2002/07/15 16:26:21 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.3 2002/07/16 19:25:35 bass Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
@@ -71,7 +71,7 @@ pkg_postinstall () {
 	einfo "*********************************************************"
 }
 
-pkg_postinstall () {
+pkg_postrm () {
 
 	einfo "Note that if updates freenat after emerge, the /var/freenet"
 	einfo "dir don't is removed in unemerge. Please do it manually"
