@@ -7,4 +7,4 @@ MD5 f7abb2ab05992f3730ba5177a60f67fc files/digest-lprng-3.8.22 63
 MD5 dfa3c66fd99b0bb9ed02f64ac334fa68 files/digest-lprng-3.8.26 63
 MD5 12c153fc04ca287e8fb301045a5b10ca files/digest-lprng-3.8.27 63
 MD5 4503b9b65dd2fc9f1a5949f715cd69d1 files/printcap 658
-MD5 d430615cec5d0df823ed497497bf8f6d files/lprng-init 1000
+MD5 765668889fe2508c644ecee836c56730 files/lprng-init 994

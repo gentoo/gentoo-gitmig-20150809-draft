@@ -3,7 +3,7 @@ MD5 80db9ac76bb5e948005bb6032044e32a cups-1.1.20-r1.ebuild 3362
 MD5 edf9612cf5ce54df9094f7652cca2b38 ChangeLog 9925
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 b435375521c765134c93816ad7dbe742 files/digest-cups-1.1.21_rc1 75
-MD5 436a18c42f44fb1a92b1ab720d666f55 files/cupsd.rc6 521
+MD5 d7e6454c7e8062203b324c5f6a1a2c65 files/cupsd.rc6 515
 MD5 beaf9ffc2a24c42618be32cbd996e9bb files/cups.pam 231
 MD5 baaa1e0bc63f959779998f5e57de6f9d files/digest-cups-1.1.20-r1 72
 MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
