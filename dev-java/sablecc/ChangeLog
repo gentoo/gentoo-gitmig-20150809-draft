@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/sablecc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.1 2004/02/18 03:31:38 zx Exp $
+
+*sablecc-2.18.2 (17 Feb 2004)
+
+  17 Feb 2004; Chris Aniszczyk <zx@gentoo.org> sablecc-2.18.2.ebuild:
+  Initial Import. Thanks to Kaleb Pederson <kibab@icehouse.net> for the initial
+  ebuild. Bug #40321
+
