@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.10 2004/07/13 01:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.11 2004/07/13 23:00:48 mr_bones_ Exp $
 
 inherit libtool eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~amd64 ~ia64"
 IUSE="nls doc jpeg"
 
-# needs >usbutils-0.11-r2 to avoid /usr/lib/libusb* 
+# needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
 # conflicts with dev-libs/libusb
 RDEPEND=">=dev-libs/libusb-0.1.6
 	>=sys-apps/usbutils-0.11-r2
@@ -25,10 +25,10 @@ DEPEND="${RDEPEND}
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set CAMERAS
-# environment to a comma-separated list (no spaces) of drivers that 
+# environment to a comma-separated list (no spaces) of drivers that
 # you want to build.
-IUSE_CAMERAS="agfa-cl20 barbie canon casio digita dimera directory fuji gsmart300 jamcam jd11 
-kodak konica mustek largan minolta panasonic pccam300 pccam600 polaroid ptp2 ricoh samsung 
+IUSE_CAMERAS="agfa-cl20 barbie canon casio digita dimera directory fuji gsmart300 jamcam jd11
+kodak konica mustek largan minolta panasonic pccam300 pccam600 polaroid ptp2 ricoh samsung
 smal sierra sipix sonydscf1 sonydscf55 soundvision spca50x sq905 stv0680 sx330z"
 
 pkg_setup() {
