@@ -15,7 +15,6 @@ start()	{
 		einfo "Starting ${SERVICE}.."
 		export DEBUGLEVEL=255
 		exec $EXE ./.maildir/ splogger qmail &
-/usr/bin/tcpserver -x/etc/tcp.smtp.cdb -uqmaild -gnofiles /usr/bin/rblsmtpd -b -rrbl.maps.vix.com 0 smtp /var/qmail/bin/qmail-smtpd 2>&1 | /var/qmail/bin/splogger & 
 		eend $? "Error starting ${SERVICE}."
 }
 
