@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# masking for confirmation
+=x11-themes/conectiva-crystal-092502
+
 # fix #6519, #5953; masked until they are well tested
 =kde-base/kdebase-3.0.3-r1
 =x11-themes/ksplash-ml-themes-20020705-r1
