@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.11 2004/08/18 02:39:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.12 2004/08/19 14:37:28 vapier Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -9,27 +9,43 @@
 # we no longer compile gcc and binutils twice.  Doing this is said to be
 # unnecessary and a holdover from very early versions of Gentoo.
 
+# people who were here:
 # (drobbins, 06 Jun 2003)
 # (solar, Jul 2004)
+# (vapier, Aug 2004)
+
+if [ -e /etc/init.d/functions.sh ] ; then
+	source /etc/init.d/functions.sh
+
+	# Use our own custom script, else logger cause things to
+	# 'freeze' if we do not have a system logger running
+	esyslog() {
+		echo &> /dev/null
+	}
+fi
 
 unset STRAP_EMERGE_OPTS 
 STRAP_RUN=1
 
-for opt in $* ; do
-	case $opt in
+for opt in "$@" ; do
+	case "${opt}" in
 		--fetchonly|-f)
-			echo "Running in fetch-only mode..."
-			STRAP_EMERGE_OPTS="-f"
+			echo "Running in fetch-only mode ..."
+			STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -f"
 			unset STRAP_RUN;;
-		-h|--help)
-			echo "bootstrap-cascade.sh: Please run with no arguments to start bootstrap, or specify"
-			echo "--fetchonly or -f to download source archives only. -h/--help displays this"
-			echo "help."
+		--help|-h)
+			echo -e "Usage: ${HILITE}bootstrap-cascade.sh${NORMAL} ${GOOD}[options]${NORMAL}"
+			echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
+			echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
+			echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
+			echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
+			echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
 			exit 1;;
-		--info) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info"   ; unset STRAP_RUN ;;
+		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info"   ; unset STRAP_RUN ;;
 		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p" ; unset STRAP_RUN ;;
+		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v";;
-		--debug|-d) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
+		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
 		*) ;;
 	esac
 done
@@ -48,19 +64,9 @@ fi
 # spython is 1.0_rc6 and earlier and python is 1.0 and later
 [ -e /usr/bin/spython ] && PYTHON="/usr/bin/spython" || PYTHON="/usr/bin/python"
 
-if [ -e /etc/init.d/functions.sh ]; then
-	source /etc/init.d/functions.sh
-
-	# Use our own custom script, else logger cause things to
-	# 'freeze' if we do not have a system logger running
-	esyslog() {
-		echo &> /dev/null
-	}
-fi
-
 [ -e /etc/profile ] && source /etc/profile
 
-echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
+echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 2001-2004 Gentoo Foundation.; Distributed under the GPL"
 if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
 	echo "Fetching all bootstrap-related archives..."
