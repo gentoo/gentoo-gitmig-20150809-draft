@@ -21,6 +21,34 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (19 Jun 2003)
+# re-write and porting of all gtk-themes.
+# masking for testing
+>=x11-themes/gnome-themes-2.2.2-r1
+>=x11-themes/gtk-engines-2.2.0
+>=x11-themes/gtk-engines-begtk-1.0.1-r1
+>=x11-themes/gtk-engines-cleanice-1.2.5
+>=x11-themes/gtk-engines-crux-1.9.5-r1
+>=x11-themes/gtk-engines-dwerg-0.6
+>=x11-themes/gtk-engines-eazel-0.3-r1
+>=x11-themes/gtk-engines-flat-2.0-r1
+>=x11-themes/gtk-engines-geramik-0.24-r3
+>=x11-themes/gtk-engines-gtkstep-2.2-r1
+>=x11-themes/gtk-engines-icegradient-0.0.5-r1
+>=x11-themes/gtk-engines-lighthouseblue-0.7.0
+>=x11-themes/gtk-engines-mac2-1.0.3-r1
+>=x11-themes/gtk-engines-magicchicken-1.1.1
+>=x11-themes/gtk-engines-mist-0.10
+>=x11-themes/gtk-engines-notif2-1.0
+>=x11-themes/gtk-engines-smooth-0.5.2
+>=x11-themes/gtk-engines-thinice-2.0.2-r1
+>=x11-themes/gtk-engines-xenophilia-0.8-r1
+>=x11-themes/gtk-engines-xfce-2.1.1-r1
+
+# <liquidx@gentoo.org> (19 Jun 2003)
+# double protection for alpha quality gpdf
+app-text/gpdf
+
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
 # this ebuild is not going to work for quite a while
@@ -50,7 +78,7 @@ media-libs/gst-plugins-cdparanoia
 # <vladimir@gentoo.org> 10 June 2003
 # As per Luca's request
 # buffer issue on ncurses application (e.g. BitchX)
->=x11-libs/vte-0.10.28
+#>=x11-libs/vte-0.10.28
 
 # <vladimir@gentoo.org> 10 June 2003
 # Needs testing (Completely new patches)
