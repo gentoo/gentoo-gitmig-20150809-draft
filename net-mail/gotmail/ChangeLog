@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.23 2004/10/17 12:52:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.24 2004/10/17 12:54:06 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  -gotmail-0.8.0_beta1.ebuild, -gotmail-0.8.1.ebuild:
+  remove broken versions
 
 *gotmail-0.8.2 (17 Oct 2004)
 
