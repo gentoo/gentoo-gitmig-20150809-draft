@@ -1,3 +1,4 @@
-MD5 509861a4c9084badf6392840cca833ba ChangeLog 473
-MD5 4c771b5f64bb172427ec858e89e04bc8 phrack-all-60.ebuild 1672
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-phrack-all-60 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-phrack-all-61 0
+MD5 9d0959cda55e3d459b4e86c404ad44d3 ChangeLog 343
+MD5 d214fc2699e860d2fe3cb2d4976374b8 metadata.xml 579
+MD5 02b126aff5e3038f95b2f8fa791e7192 phrack-all-61.ebuild 1690
