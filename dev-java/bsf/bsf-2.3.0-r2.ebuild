@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.10 2005/01/26 21:49:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.11 2005/01/29 21:23:54 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64 ppc64"
 IUSE="doc jython rhino jikes"
 RDEPEND=">=virtual/jre-1.4
 	jython? ( >=dev-java/jython-2.1-r5 )
-	rhino? ( >=dev-java/rhino-1.4 )
+	rhino? ( =dev-java/rhino-1.5* )
 	=dev-java/servletapi-2.3*
 	>=dev-java/ant-1.5.4"
 DEPEND=">=virtual/jdk-1.4
@@ -28,7 +28,7 @@ src_unpack() {
 
 	cd ${S}/src/build/lib
 	if use rhino; then
-		java-pkg_jar-from rhino || die "Missing rhino"
+		java-pkg_jar-from rhino-1.5 || die "Missing rhino"
 	fi
 
 	if use jython; then
@@ -39,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 
-	use rhino && cp="${cp}:$(java-config -p rhino)"
+	use rhino && cp="${cp}:$(java-config -p rhino-1.5)"
 	use jython && cp="${cp}:$(java-config -p jython)"
 
 	# karltk: fix this

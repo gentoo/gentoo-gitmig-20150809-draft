@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.7 2005/01/01 18:12:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r1.ebuild,v 1.8 2005/01/29 21:23:54 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,7 @@ IUSE="doc jython rhino"
 RDEPEND="=www-servers/tomcat-5*"
 DEPEND="${REPEND}
 	jython? ( >=dev-java/jython-2.1-r5 )
-	rhino? ( >=dev-java/rhino-1.4 )
+	rhino? ( =dev-java/rhino-1.5* )
 	>=dev-java/ant-1.5.4"
 
 src_unpack() {
@@ -24,7 +24,7 @@ src_unpack() {
 	epatch ${WORKDIR}/bsf-rhino-1.5.patch
 
 	cd ${S}/src/build/lib
-	java-pkg_jar-from rhino || die "Missing rhino"
+	java-pkg_jar-from rhino-1.5 || die "Missing rhino"
 	java-pkg_jar-from jython || die "Missing jython"
 }
 
@@ -39,7 +39,7 @@ src_compile() {
 	cp="${cp}:/opt/tomcat5/common/lib/jsp-api.jar"
 
 
-	cp="${cp}:$(java-config -p rhino)"
+	cp="${cp}:$(java-config -p rhino-1.5)"
 	cp="${cp}:$(java-config -p jython)"
 
 	local antflags=
