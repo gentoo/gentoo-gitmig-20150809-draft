@@ -4,8 +4,7 @@
 <herd>cluster</herd>
 <maintainer>
   <email>voxus@infonet.ee</email>
-<!--  <name>Konstantin Arkhipov</name> -->
-<!--  <description>Release manager, patch manager</description> -->
+  <name>Konstantin Arkhipov</name>
+  <description>Release manager, patch manager</description>
 </maintainer>
-<!-- <longdescription></longdescription> -->
 </pkgmetadata>
