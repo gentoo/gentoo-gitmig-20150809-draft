@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/ctrlxmms
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ctrlxmms/ChangeLog,v 1.1 2003/07/30 11:58:43 mcummings Exp $
+
+*ctrlxmms-1.1 (30 Jul 2003)
+
+  30 Jul 2003; Michael Cummings <mcummings@gentoo.org> ctrlxmms-1.1.ebuild:
+  Bug 17122, ebuild submitted by Alex Revo <accessps@yahoo.com>
+
