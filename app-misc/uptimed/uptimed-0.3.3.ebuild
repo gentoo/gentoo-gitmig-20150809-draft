@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.3.ebuild,v 1.1 2004/09/11 18:03:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.3.ebuild,v 1.2 2004/09/20 16:14:20 ka0ttic Exp $
 
-DESCRIPTION="Standard informational utilities and process-handling tools"
+DESCRIPTION="System uptime record daemon that keeps track of your highest uptimes"
 HOMEPAGE="http://unixcode.org/uptimed/"
 SRC_URI="http://unixcode.org/downloads/uptimed/${P}.tar.bz2"
 
@@ -11,30 +11,24 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-src_compile() {
-	sed -i -e "s:-d /var/:-d ${D}/var/:g" ${S}/Makefile.am
-	sed -i -e "s:-d /var/:-d ${D}/var/:g" ${S}/Makefile.in
+DEPEND="virtual/libc"
 
-	econf || die
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s:-d /var/:-d ${D}/var/:" Makefile.in || die
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/sbin
-	dodir /var/spool/uptimed
-	keepdir /var/spool/uptimed
-
 	make DESTDIR=${D} install || die
-
-	dodoc README NEWS TODO AUTHORS CREDITS
-	dodoc INSTALL.cgi sample-cgi/*
-	exeinto /etc/init.d ; newexe ${FILESDIR}/uptimed uptimed
+	keepdir /var/spool/uptimed
+	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
+	doinitd ${FILESDIR}/uptimed || die
 }
 
 pkg_postinst() {
-	einfo "To start uptimed, you must enable the /etc/init.d/uptimed rc file"
-	einfo "You may start uptimed now with:"
-	einfo "/etc/init.d/uptimed start"
-	einfo "To view your uptimes, use the command 'uprecords'."
+	echo
+	einfo "Start uptimed with '/etc/init.d/uptimed start'"
+	einfo "To view your uptime records, use the command 'uprecords'."
+	echo
 }

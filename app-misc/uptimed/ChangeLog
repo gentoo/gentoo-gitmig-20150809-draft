@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.16 2004/09/11 18:03:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.17 2004/09/20 16:14:20 ka0ttic Exp $
+
+  20 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> -files/uptimed-0.2.0.patch,
+  uptimed-0.3.3.ebuild:
+  Cleaned up 0.3.3 ebuild; removed old patch
 
 *uptimed-0.3.3 (11 Sep 2004)
 
