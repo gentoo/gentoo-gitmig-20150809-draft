@@ -1,0 +1,9 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/packages,v 1.1 2004/04/12 19:05:11 pebenito Exp $
+
+# base generic embedded profile
+
+*>=sys-apps/baselayout-lite-1.0_pre1
+*>=sys-apps/busybox-0.60.5-r1
+*>=sys-apps/tinylogin-1.4
