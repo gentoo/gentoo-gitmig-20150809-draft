@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.57.ebuild,v 1.1 2003/10/12 05:00:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kmrcl/cl-kmrcl-1.57.ebuild,v 1.2 2003/10/16 05:41:43 mkennedy Exp $
 
 inherit common-lisp
 
@@ -22,6 +22,13 @@ src_install() {
 	common-lisp-install *.lisp *.asd
 	common-lisp-system-symlink
 	common-lisp-system-symlink ${CLPACKAGE}-tests
-
 	dodoc README rt-test.lisp
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
