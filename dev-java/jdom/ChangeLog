@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.14 2004/06/24 22:33:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.15 2004/09/19 08:45:34 axxo Exp $
+
+*jdom-1.0_beta10-r1 (19 Sep 2004)
+
+  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +jdom-1.0_beta10-r1.ebuild:
+  no longer uses packed jars, #63265
 
 *jdom-1.0_beta10 (30 Mar 2004)
 
