@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/relay-ctrl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.6 2003/02/12 08:16:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/ChangeLog,v 1.7 2003/08/01 04:21:47 robbat2 Exp $
+
+  31 Jul 2003; RObin H. Johnson <robbat2@gentoo.org> relay-ctrl-3.1.1-r1.ebuild:
+  Add in config info, and reduce dependancies (you don't need qmail really)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
