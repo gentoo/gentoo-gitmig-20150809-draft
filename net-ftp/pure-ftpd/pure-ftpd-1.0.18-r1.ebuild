@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.9 2004/07/04 17:53:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.10 2004/07/15 18:15:21 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64 ppc64"
 IUSE="pam mysql postgres ldap ssl"
 
 DEPEND="virtual/libc
