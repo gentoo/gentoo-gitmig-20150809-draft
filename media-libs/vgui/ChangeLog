@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/vgui
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.1 2004/05/30 20:47:24 robbat2 Exp $
+
+*vgui-1.90a (30 May 2004)
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> vgui-1.90a.ebuild:
+  Initial Commit. Ebuild by Robin Johnson <robbat2@gentoo.org>.
+
