@@ -1,6 +1,29 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.5 2002/03/11 03:56:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.6 2002/03/27 22:54:19 woodchip Exp $
+
+*samba-2.2.3a-r2 (27 March 2002)
+
+  27 March 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.3a-r2.ebuild,
+  swat.xinetd, smbusers, samba.rc6, samba-2.2.3a-srv_spoolss_nt.patch :
+
+  The "tidy up a bunch of loose-ends before the 1.0 release, release :)"
+
+  *** Changes important for people upgrading ***:
+    -> /etc/smb has moved to the better-suited /etc/samba directory.
+       Simply move your /etc/smb/* to /etc/samba.  Then delete the /etc/samba/codepages
+       directory.  These files are now in /var/lib/samba/codepages since I see no need
+       to have 3.3MB of files in /etc which people will never change :)
+    -> /var/run/smb has moved to /var/run/samba.
+       Again, simply move your /var/run/smb/* to /var/run/samba and all will be well.
+    -> If you have the string "/etc/smb" in your smb.conf file (likely), then please
+       change all occurances of that to "/etc/samba".  Thats it, you're done.
+
+  Other changes:
+    As mentioned above, /etc/smb/codepages has moved to /var/lib/samba/codepages.  The
+    initscript was tweaked to start cupsd before samba and also tweaked to start smbd
+    before nmbd.  Added a sample smbusers file.  Added an xinetd snippet for the swat
+    service.  Added a patch to fix changing printer properties from Windows NT.
 
   10 March 2002; Donny Davies <woodchip@gentoo.org> files/samba.rc6 :
 

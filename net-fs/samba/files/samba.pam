@@ -3,4 +3,4 @@
 auth       required     pam_smbpass.so nodelay
 account    required     pam_pwdb.so audit nodelay
 session    required     pam_pwdb.so nodelay
-password   required     pam_smbpass.so nodelay smbconf=/etc/smb/smb.conf
+password   required     pam_smbpass.so nodelay smbconf=/etc/samba/smb.conf
