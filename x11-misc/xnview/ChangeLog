@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.4 2004/04/14 01:36:27 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.5 2004/05/01 16:49:49 port001 Exp $
+
+  01 May 2004; Ian Leitch <port001@gentoo.org> xnview-1.50.ebuild,
+  xnview-1.68.ebuild:
+  Fixed libformat.so symlinking, #49021
 
 *xnview-1.68 (13 Apr 2004)
 
