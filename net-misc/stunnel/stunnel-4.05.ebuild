@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.05.ebuild,v 1.2 2004/06/18 17:48:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.05.ebuild,v 1.3 2004/06/19 06:12:35 vapier Exp $
 
 inherit ssl-cert eutils
 
-IUSE="static"
-S=${WORKDIR}/${P}
 DESCRIPTION="TLS/SSL - Port Wrapper"
+HOMEPAGE="http://stunnel.mirt.net/"
 SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
-HOMEPAGE="http://stunnel.mirt.net"
-DEPEND="virtual/glibc >=dev-libs/openssl-0.9.6j"
-RDEPEND=">=dev-libs/openssl-0.9.6j"
-KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~ppc"
+
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~amd64"
+IUSE="static"
+
+DEPEND="virtual/glibc
+	>=dev-libs/openssl-0.9.6j"
+RDEPEND=">=dev-libs/openssl-0.9.6j"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
@@ -21,9 +23,11 @@ src_unpack() {
 }
 
 src_compile() {
-	use static && myconf="${myconf} --disable-shared --enable-static"
-	use static && LDADD="${LDADD} -all-static" && export LDADD
-	econf ${myconf} || die
+	use static && append-ldflags -all-static
+	econf \
+		`use_enable static` \
+		`use_enable !static shared` \
+		|| die
 	emake || die
 }
 
@@ -33,7 +37,7 @@ src_install() {
 
 	into /usr
 	dosbin src/stunnel
-	dodoc AUTHORS BUGS COPYING COPYRIGHT.GPL CREDITS INSTALL NEWS PORTS README TODO
+	dodoc AUTHORS BUGS CREDITS INSTALL NEWS PORTS README TODO
 	dodoc doc/en/transproxy.txt
 	dohtml doc/stunnel.html doc/en/VNC_StunnelHOWTO.html tools/ca.html tools/importCA.html
 	doman doc/stunnel.8
@@ -56,7 +60,7 @@ pkg_postinst() {
 	enewuser stunnel
 	enewgroup stunnel
 
-	chown stunnel /etc/stunnel
+	chown stunnel ${ROOT}/etc/stunnel
 
 	einfo "Starting from version 4 stunnel now uses a configuration file for setting up stunnels."
 	einfo "Stunnel can now also be run as a daemon"
