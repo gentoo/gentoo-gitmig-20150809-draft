@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.17 2004/11/02 11:57:56 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.18 2004/11/23 21:53:09 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kmldonkey-0.10.ebuild,
+  -kmldonkey-0.10_pre3.ebuild, -kmldonkey-0.10_pre4.ebuild,
+  -kmldonkey-0.8.ebuild, -kmldonkey-0.9.1.ebuild:
+  clean up and 0.10 stable on x86
 
 *kmldonkey-0.10 (02 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.10.ebuild,v 1.1 2004/11/02 11:57:56 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.10.ebuild,v 1.2 2004/11/23 21:53:09 carlo Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/kmldonkey/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="arts"
 
 need-kde 3
