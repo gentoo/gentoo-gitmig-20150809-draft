@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/qt-unixODBC
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.1 2004/10/23 21:19:15 danarmak Exp $
+
+*qt-ODBC-3.3.3 (23 Oct 2004)
+
+  23 Oct 2004; Dan Armak <danarmak@gentoo.org> qt-ODBC-3.3.3.ebuild:
+  First created. A separate ebuild for the QT unixODBC plugin to fix #14178.
+  
