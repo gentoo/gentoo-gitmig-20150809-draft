@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.19 2003/10/06 04:08:50 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.20 2003/10/06 04:24:19 brad_mssw Exp $
+
+  06 Oct 2003; Brad House <brad_mssw@gentoo.org> mpg123-0.59s-r1.ebuild,
+  files/mpg123-0.59s-amd64.patch:
+  patch for 0.59s and amd64
 
   06 Oct 2003; Brad House <brad_mssw@gentoo.org>
   files/mpg123-0.59r-amd64.diff:

@@ -1,7 +1,7 @@
-MD5 e6b06d9e9af2cbc34fb751612e0d558d ChangeLog 3788
+MD5 f7d5b2b56a3d1ef55cb1cc4316ce61b1 ChangeLog 3924
 MD5 f7a5849c9d0381f667738a7ad2820c2b mpg123-0.59r-r2.ebuild 1667
 MD5 5477014ccf0663352d7ce01f5dfd12a5 mpg123-0.59r-r3.ebuild 1535
-MD5 84e3bd19ae864b24b67692e4c4fe4b88 mpg123-0.59s-r1.ebuild 1423
+MD5 3cd9b6d03331e667646796f41921af97 mpg123-0.59s-r1.ebuild 1523
 MD5 1d1cc84eaf4ddf4b149ccfd871dc2640 mpg123-0.59s.ebuild 1331
 MD5 8936a4142ebda9826bda6818a51e1524 files/digest-mpg123-0.59r-r2 64
 MD5 1d1f7b49b09cb2394ef7a7dd893b1fea files/digest-mpg123-0.59r-r3 134
@@ -9,3 +9,4 @@ MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s 67
 MD5 78e5e78b54876dbecebb45acec8fb449 files/digest-mpg123-0.59s-r1 67
 MD5 a80297615f6515bb5631c177511c989a files/mpg123-0.59s-security.diff 1075
 MD5 efa64a45cc5ceed3325967030d014e3b files/mpg123-0.59r-amd64.diff 3512
+MD5 612f9b911a4e6e9c4e0d38bc439eb756 files/mpg123-0.59s-amd64.patch 90006
