@@ -1,0 +1,9 @@
+# ChangeLog for net-p2p/gift-ares
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-ares/ChangeLog,v 1.1 2005/02/02 16:55:19 squinky86 Exp $
+
+*gift-ares-0.2.1 (02 Feb 2005)
+
+  02 Feb 2005; Jon Hood <squinky86@gentoo.org> +gift-ares-0.2.1.ebuild:
+  Initial commit, #78265. Thanks Sveinung Kvilhaugsvik <sveinung@HotPOP.com>.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7fad7eaeb55e0f067c22cac0b7cf8912 ChangeLog 393
+MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
+MD5 aa118d317cc068d4772d1b72e9c6642a gift-ares-0.2.1.ebuild 1031
+MD5 ad7fa2d1b20b72336619bc7e9a7bba09 files/digest-gift-ares-0.2.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCAQX/cAgAdbxYsnERAhjlAJ93UgWmOCs5Xr0imLanalpDODAo4QCfdM6v
+NrVtUL2FxTQNauzUEskVIe8=
+=6fFx
+-----END PGP SIGNATURE-----
