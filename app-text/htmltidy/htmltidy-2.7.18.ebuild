@@ -1,13 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild,v 1.4 2002/10/04 05:05:55 vapier Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild,v 1.5 2002/11/30 00:36:07 vapier Exp $ /home/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-2.7.18.ebuild, v 1.5 2002/07/25 11:07:00 cybersystem Exp $
 
 # convert from normalized gentoo version number to htmltidy's wacky date thing
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
-
 parts=(${PV//./ })
 vers=$(printf "%02d%02d%02d" ${parts[0]} ${parts[1]} ${parts[2]})
 MY_P=tidy_src_${vers}
@@ -16,6 +11,11 @@ S=${WORKDIR}/tidy
 DESCRIPTION="fix mistakes and tidy up sloppy editing in HTML and XML"
 SRC_URI="http://tidy.sourceforge.net/src/${MY_P}.tgz"
 HOMEPAGE="http://tidy.sourceforge.net/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64"
+
 DEPEND=""
 
 src_unpack() {
@@ -29,14 +29,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake \
-		OTHERCFLAGS="${CFLAGS}" \
-		|| die "emake failed"
+	emake OTHERCFLAGS="${CFLAGS}" || die "emake failed"
 }
 
-src_install () {
-	mkdir -p "${D}/usr/bin"
-	mkdir -p "${D}/usr/share/man/man1"
+src_install() {
+	dodir /usr/bin
+	dodir /usr/share/man/man1
 	make \
 		INSTALLDIR="${D}/usr/" \
 		MANPAGESDIR="${D}/usr/share/man" \
