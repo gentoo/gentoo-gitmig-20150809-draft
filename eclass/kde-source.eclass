@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.6 2002/08/11 19:30:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.7 2002/08/12 09:40:25 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -40,6 +40,8 @@ INHERITED="$INHERITED $ECLASS"
 # the configuration order intact: env. and profile settings override
 # kde-source.eclass defaults, which in turn override cvs.eclass defaults
 inherit cvs
+#... and reset $ECLASS. Ugly I know, hopefully I can prettify it someday
+ECLASS=kde-source
 
 # --- end user-configurable settings ---
 
