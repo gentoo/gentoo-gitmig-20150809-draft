@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59fa3480bb59da95a096a8e7e9b5dbe0 kcmlinuz-3.4.0.ebuild 410
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2f140be5c4ba1e543fb28c86d3507927 ChangeLog 702
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 59fa3480bb59da95a096a8e7e9b5dbe0 kcmlinuz-3.4.0.ebuild 410
 MD5 dff739018360a0997224c39ad20e83fb files/digest-kcmlinuz-3.4.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwkVUpKYMelfdYERAldFAJ4wRuv6qGCPj5bs/s/RgyUoPLLlRACdE6CG
-bVm7Rftuv+xpOcnRXWENsOU=
-=tmbq
------END PGP SIGNATURE-----
