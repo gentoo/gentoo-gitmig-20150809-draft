@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (05 Oct 2003)
+# Masking new portage pre-~arch.
+>=sys-apps/portage-2.0.49-r8
+
 # <mkennedy@gentoo.org> (05 Oct 2003)
 # maxima depending on cmucl and not cmucl-bin needs testing
 =app-sci/maxima-5.9.0-r2
