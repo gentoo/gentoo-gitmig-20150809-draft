@@ -1,6 +1,19 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.11 2002/08/25 16:51:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.12 2002/09/11 16:51:00 raker Exp $
+
+*lftp-2.6.2 (11 Sep 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> lftp-2.6.2.ebuild,
+  files/digest-lftp-2.6.2 :
+  Version bump.  readline history is now stored in a file. 
+  handle full-disk condition as fatal if the file is removed. 
+  recursive deletion (rm -r) fixed. It used DELE instead of RMD. 
+  fixed a rare core dump, usually happening on completion. 
+  fixed compilation with modules. nls use variable appears to work
+  with this version as well.  Undoing temporary forcing of nls.
+  Patched configure so adding ssl support doesn't add the dreaded
+  -I/usr/include flag.  gcc3 is much happier now. :)
 
 *lftp-2.6.1 (13 Aug 2002)
 
