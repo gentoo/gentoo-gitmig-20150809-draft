@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.80.ebuild,v 1.1 2003/12/31 10:34:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.80.ebuild,v 1.2 2004/01/18 19:41:27 usata Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 
 # This version won't run on w3m and w3m-m17n
 DEPEND="virtual/emacs
-	net-www/w3mmee
+	>=net-www/w3mmee-0.3.2_p24-r3
 	>=app-emacs/apel-10.3
 	virtual/flim"
 
