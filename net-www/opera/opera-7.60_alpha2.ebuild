@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha1.ebuild,v 1.1 2004/08/26 09:34:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha2.ebuild,v 1.1 2004/10/26 17:59:30 lanius Exp $
 
 IUSE="static spell"
 
-OPERAVER="7.60-20040824"
-OPERAFTPDIR="7.60-Preview-1"
+OPERAVER="7.60-20041026"
+OPERAFTPDIR="7.60-Preview-2"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -17,11 +17,12 @@ SRC_URI="
 	x86? ( static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
 	x86? ( !static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 	amd64? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	ppc? ( static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
-	ppc? ( !static? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )"
+	ppc? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
+	sparc? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en//${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
 
-# no sparc version in this release
-#	sparc? ( http://snapshot.opera.com/unix/${OPERAFTPDIR}/intel-linux/en//${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )
+# ppc shared version does not work as it uses gcc-2.95 - lanius
+#	ppc? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
+#	ppc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
 
 # amd64 shared libs require app-emulation/emul-linux-x86-qtlibs-1 which is not stable yet
 #	amd64? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
