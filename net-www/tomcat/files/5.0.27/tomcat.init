@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/5.0.27/tomcat.init,v 1.1 2004/07/27 13:05:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/files/5.0.27/tomcat.init,v 1.2 2004/07/28 09:38:00 axxo Exp $
 
 depend() {
 	need net
@@ -10,23 +10,14 @@ depend() {
 
 start()	{
 	ebegin "Starting Tomcat"
-	cd ${CATALINA_HOME}
-	su - ${CATALINA_USER} -c "${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_START}" 
+	start-stop-daemon --start --quiet --chuid tomcat:tomcat --exec ${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_START}
+	sleep 5
 	eend $?
 }
 
 stop()	{
 	ebegin "Stopping Tomcat"
-	su - ${CATALINA_USER} -c "${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_STOP}"
-	sleep 2
-	eend $?
-}
-
-restart() {
-	ebegin "Restarting Tomcat"
-	su - ${CATALINA_USER} -c "${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_STOP}"
+	start-stop-daemon --start --quiet --chuid tomcat:tomcat --exec ${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_STOP}
 	sleep 5
-	cd ${CATALINA_HOME}
-	su - ${CATALINA_USER} -c "${CATALINA_HOME}/bin/catalina.sh ${TOMCAT_START}"
 	eend $?
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.35 2004/07/27 13:04:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.36 2004/07/28 09:37:59 axxo Exp $
+
+  28 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/3.3.2/tomcat.init,
+  files/4.1.30/tomcat.init, files/5.0.27/tomcat.init, tomcat-3.3.2.ebuild,
+  tomcat-4.1.30.ebuild, tomcat-5.0.27.ebuild:
+  changed init scripts, changed default shell/homedir for tomcat user, added
+  warning about the new init scripts
 
 *tomcat-5.0.27 (27 Jul 2004)
 

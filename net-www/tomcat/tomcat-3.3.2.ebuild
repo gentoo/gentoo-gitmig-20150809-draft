@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2.ebuild,v 1.1 2004/07/27 13:04:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2.ebuild,v 1.2 2004/07/28 09:38:00 axxo Exp $
 
 inherit eutils
 
@@ -29,7 +29,8 @@ src_unpack() {
 
 pkg_preinst() {
 	enewgroup tomcat
-	enewuser tomcat -1 /bin/bash /opt/${TOMCAT_NAME} tomcat
+	enewuser tomcat -1 -1 /dev/null tomcat
+
 	chown -R tomcat:tomcat ${D}
 	chown -R tomcat:tomcat /var/log/${TOMCAT_NAME}
 }
@@ -81,6 +82,12 @@ pkg_postinst() {
 	einfo "   /etc/init.d/${TOMCAT_NAME} stop"
 	einfo "   /etc/init.d/${TOMCAT_NAME} restart"
 	einfo " "
+	einfo " "
+	ewarn " If you are upgrading from older ebuild do NOT use"
+	ewarn " /etc/init.d/tomcat and /etc/conf.d/tomcat you probably"
+	ewarn " want to remove these. "
+	ewarn " A version number has been appended so that tomcat 3, 4 and 5"
+	ewarn " can be installed side by side"
 	einfo " "
 	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Tomcat runs on port 8080.  You can change this"
