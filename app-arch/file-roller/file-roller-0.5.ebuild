@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-0.5.ebuild,v 1.1 2002/02/03 21:13:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-0.5.ebuild,v 1.2 2002/02/05 19:44:38 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="File Roller is an archive manager for the GNOME environment."
-SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/${PN/-/}/${P}.tar.gz"
 HOMEPAGE="http://fileroller.sourceforge.net/"
 
 DEPEND="virtual/glibc

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.1 2002/02/03 21:13:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.2 2002/02/05 19:44:38 azarah Exp $
+
+  5 Feb 2002; M.Schlemmer <azarah@gentoo.org> file-roller-0.5.ebuild :
+
+  Fix the url in $SRC_URI.
 
 *file-roller-0.5 (3 Feb 2002)
 
