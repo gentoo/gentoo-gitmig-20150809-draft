@@ -1,0 +1,42 @@
+CXX = c++
+AR = ar
+CP = cp
+RM = rm
+
+TARGET = libdaaplib.a libdaaplib.so
+OBJS = taginput.o tagoutput.o registry.o
+
+LIBS =
+LIBPATH =
+PREFIX = /usr/local
+LIBDEPLOY = $(PREFIX)/lib
+INCDEPLOY = $(PREFIX)/include
+INCPATH = ../include
+DESTDIR =
+FLAGS = -Wall -Wno-multichar -fPIC $(CXXFLAGS) $(CPPFLAGS)
+
+.cpp.o:
+	$(CXX) $(FLAGS) -I$(INCPATH) -c $<
+
+libdaaplib.a: $(OBJS)
+	$(AR) rs libdaaplib.a $(OBJS)
+	ranlib libdaaplib.a
+
+libdaaplib.so: $(OBJS)
+	$(CXX) -shared --soname=libdaaplib.so -o libdaaplib.so $(OBJS)
+
+$(OBJS): $(<:.o=.h) $(INCPATH)/daap/basic.h
+
+clean:
+	rm $(OBJS) $(TARGET)
+
+install: $(TARGET)
+	mkdir -p $(DESTDIR)$(LIBDEPLOY)
+	cp libdaaplib.a $(DESTDIR)$(LIBDEPLOY)
+	chmod 644 $(DESTDIR)$(LIBDEPLOY)/libdaaplib.a
+	cp libdaaplib.so $(DESTDIR)$(LIBDEPLOY)
+	chmod 755 $(DESTDIR)$(LIBDEPLOY)/libdaaplib.so
+
+	mkdir -p $(DESTDIR)$(INCDEPLOY)
+	cp -r $(INCPATH)/daap $(DESTDIR)$(INCDEPLOY)
+	chmod -R a+r $(DESTDIR)$(INCDEPLOY)/daap

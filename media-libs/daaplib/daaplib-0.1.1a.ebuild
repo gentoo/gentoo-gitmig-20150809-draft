@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.2 2004/03/25 11:56:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.3 2004/04/23 16:58:46 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="a tiny, portable C++ library to read and write low-level DAAP streams in memory"
 HOMEPAGE="http://www.deleet.de/projekte/daap/daaplib/"
@@ -14,29 +16,22 @@ RDEPEND=""
 
 S=${WORKDIR}/${PN}.${PV}/daaplib/src
 
-src_compile() {
-	# There is no configure step
-	emake || die
+src_unpack() {
+	unpack ${A}
 
-	if use static; then
-		ranlib libdaaplib.a
-	else
-		c++ -shared --soname=libdaaplib.so -o libdaaplib.so taginput.o tagoutput.o registry.o
-	fi
+	# Use updated gentoo Makefile
+	ebegin "Updating Makefile"
+	cp ${FILESDIR}/${P}-Makefile ${S}/makefile
+	eend $?
+}
+
+src_compile() {
+	emake || die
 }
 
 src_install() {
-	# Not an autoconf make file :(
-
-	if use static; then
-		dolib.a libdaaplib.a
-	else
-		dolib.so libdaaplib.so
-	fi
-
-	mkdir -p ${D}/usr/include/
-	cp -r ../include/daap ${D}/usr/include/
-	chmod -R a+r ${D}/usr/include/daap
+	make DESTDIR="${D}" PREFIX=/usr install
+	use static || rm ${D}/usr/lib/libdaaplib.a
 
 	dodoc ../../COPYING ../../README
 }
