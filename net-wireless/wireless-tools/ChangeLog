@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.23 2003/12/29 22:52:19 latexer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.24 2004/02/21 01:24:08 latexer Exp $
+
+  20 Feb 2004; Peter Johanson <latexer@gentoo.org> wireless-tools-26.ebuild:
+  Fix for bug #42226 to install iwlib.h
 
 *wireless-tools-27_pre7 (29 Dec 2003)
 

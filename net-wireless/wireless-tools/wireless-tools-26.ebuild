@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26.ebuild,v 1.3 2003/11/02 18:56:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-26.ebuild,v 1.4 2004/02/21 01:24:08 latexer Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P}
@@ -34,4 +34,8 @@ src_install () {
 	dolib libiw.so.26 libiw.a
 	doman iwconfig.8 iwlist.8 iwpriv.8 iwspy.8
 	dodoc CHANGELOG.h COPYING INSTALL PCMCIA.txt README
+
+	insinto /usr/include
+	doins iwlib.h
+	dosym /usr/lib/libiw.so.26 /usr/lib/libiw.so
 }
