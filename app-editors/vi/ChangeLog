@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.25 2004/04/20 16:44:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.26 2004/04/27 16:46:24 kugelfang Exp $
+
+  27 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> vi-3.7-r5.ebuild:
+  Narked stable on amd64.
 
   20 Apr 2004; Guy Martin <gmsoft@gentoo.org> vi-3.7-r5.ebuild:
   Marked stable on hppa.
