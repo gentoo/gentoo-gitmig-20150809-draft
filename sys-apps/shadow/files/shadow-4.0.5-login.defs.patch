@@ -1,0 +1,28 @@
+Index: etc/login.defs.linux
+===================================================================
+RCS file: /cvsroot/shadow/etc/login.defs.linux,v
+retrieving revision 1.14
+diff -u -B -U0 -r1.14 login.defs.linux
+--- etc/login.defs.linux	4 May 2003 20:09:43 -0000	1.14
++++ etc/login.defs.linux	29 Oct 2004 02:02:48 -0000
+@@ -46 +46 @@
+-MAIL_CHECK_ENAB		yes
++#MAIL_CHECK_ENAB		no
+@@ -93 +93 @@
+-#ISSUE_FILE	/etc/issue
++ISSUE_FILE	/etc/issue
+@@ -223 +223 @@
+-SU_WHEEL_ONLY	no
++SU_WHEEL_ONLY	yes
+@@ -228 +228 @@
+-CRACKLIB_DICTPATH	/var/cache/cracklib/cracklib_dict
++CRACKLIB_DICTPATH	/usr/lib
+@@ -245 +245 @@
+-LOGIN_RETRIES		5
++LOGIN_RETRIES		3
+@@ -297 +297 @@
+-#MD5_CRYPT_ENAB	no
++MD5_CRYPT_ENAB	yes
+@@ -348 +348 @@
+-#GETPASS_ASTERISKS 1
++GETPASS_ASTERISKS 0

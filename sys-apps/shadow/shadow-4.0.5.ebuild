@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5.ebuild,v 1.1 2004/10/29 01:35:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5.ebuild,v 1.2 2004/10/29 02:29:41 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -43,6 +43,9 @@ src_unpack() {
 
 	# don't install manpages if USE=-nls
 	epatch ${FILESDIR}/shadow-${PV}-nls-manpages.patch
+
+	# tweak the default login.defs
+	epatch ${FILESDIR}/shadow-${PV}-login.defs.patch
 
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
@@ -121,8 +124,9 @@ src_install() {
 			'(' -name 'login.1' -o -name 'suauth.5' ')' \
 			-exec rm {} \;
 	else
+		insinto /etc
 		insopts -m0644
-		doins ${FILESDIR}/login.defs
+		newins etc/login.defs.linux login.defs
 	fi
 
 	# Remove manpages that are handled by other packages
