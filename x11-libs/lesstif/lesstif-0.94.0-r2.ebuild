@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r2.ebuild,v 1.3 2005/03/02 21:52:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r2.ebuild,v 1.4 2005/03/02 22:23:12 hansmi Exp $
 
 inherit libtool flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 src_compile() {
 	use ppc-macos || elibtoolize
 
-	if use ppc-macos || macos ; then
+	if use ppc-macos; then
 		append-ldflags -L/usr/X11R6/lib -lX11 -lXt
 	fi
 
