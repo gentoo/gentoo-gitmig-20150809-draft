@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.17 2004/12/12 01:34:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.18 2004/12/12 15:04:37 eradicator Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -136,7 +136,7 @@ src_install() {
 
 	if [ -n "${PROFILE_ARCH}" ]; then
 		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
-			dosym ${CHOST} /usr/${CHOST32}
+			dodir /usr/${CHOST32}
 
 			for x in `ls ${D}/usr/${CHOST}/bin/`
 			do
