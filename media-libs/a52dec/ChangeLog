@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.22 2004/11/05 09:29:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.23 2004/11/11 17:39:47 corsair Exp $
+
+  11 Nov 2004; Markus Rothe <corsair@gentoo.org> a52dec-0.7.4-r3.ebuild:
+  Stable on ppc64; missing dependency of media-libs/libmpeg3
 
 *a52dec-0.7.4-r3 (05 Nov 2004)
 
