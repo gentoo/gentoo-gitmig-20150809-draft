@@ -140,12 +140,13 @@ floppies. You'll need  bootdisk.img and rescue.img. You can find them <uri
 link="http://www.ibiblio.org/gentoo/gentoo-x86">here</uri> (look in the latest
 rc dir).
 </p>
-<p>Once you've downloaded them you need to run "dd if=bootdisk.img of=/dev/fd0
-bs=1k" for both the bootdisk.img and rescue.img. Then you can boot from
+<p>Once you've downloaded them you need to run <c>dd if=bootdisk.img of=/dev/fd0
+bs=1k</c> for both the bootdisk.img and rescue.img. Then you can boot from
 bootdisk.img, and insert rescue.img when it prompts you. If you have a
 currently running system you may want to download sys or build tarball and
 store it on a spare partition so you will have it available when you reboot.
 </p>
+</body>
 </section>
 
 <section>
