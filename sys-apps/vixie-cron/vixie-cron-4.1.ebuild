@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.1 2004/08/27 22:38:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.2 2004/08/27 22:57:25 ciaranm Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 
 	doman crontab.1 crontab.5 cron.8
 
-	dodoc CHANGES CONVERSION FEATURES MAIL MANIFEST README THANKS
+	dodoc CHANGES CONVERSION FEATURES MAIL README THANKS
 
 	diropts -m0755 ; dodir /etc/cron.d
 	keepdir /etc/cron.d/
