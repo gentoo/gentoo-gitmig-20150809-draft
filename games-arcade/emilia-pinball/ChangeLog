@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/emilia-pinball
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.2 2003/09/10 20:36:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.3 2003/10/06 18:52:59 agriffis Exp $
+
+  06 Oct 2003; Aron Griffis <agriffis@gentoo.org> emilia-pinball-0.3.0.ebuild:
+  Stable on alpha
 
 *emilia-pinball-0.3.0 (16 Jul 2003)
 

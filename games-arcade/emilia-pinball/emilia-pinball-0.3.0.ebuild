@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pinball/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/opengl
 	virtual/x11
