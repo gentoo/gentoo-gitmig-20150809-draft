@@ -1,5 +1,5 @@
-MD5 41d8adb8fb5c390f3d8306b36588343f kio_burn-0.4.ebuild 677
-MD5 d392649613a9a904d98ddfcbecafdffa ChangeLog 739
+MD5 9f59a40816482edfd049eb416174dba2 kio_burn-0.4.ebuild 676
+MD5 4a8c128afa6e13aa23dda42a763f8c19 ChangeLog 827
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 af940d563ec6e2984d5e73b941308a7c files/kio_burn-0.4-kde3.2-compile-fix.patch 968
 MD5 cdd5cf8e555be64dae6f7735f3f0104a files/digest-kio_burn-0.4 60
