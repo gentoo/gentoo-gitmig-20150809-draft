@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac4bf14796e53cc5eb63d6a4657e82f4 ChangeLog 430
+MD5 59ccfa4bfe28c69c562a5efc2eba7668 maildirtree-0.6.ebuild 539
+MD5 54614362530048f21a127e4a200cf571 metadata.xml 345
+MD5 f30b820e08352ae221ae9a5316bcac6e files/digest-maildirtree-0.6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm8Fm10xuJSrg3/sRAlRtAJ9x+elfiy73CguV8RS5OgWJFjw8IQCeO/bT
+p0O+RikVtIixyZPdwio51W0=
+=vFuW
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/maildirtree
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.1 2004/11/17 21:23:29 ticho Exp $
+
+*maildirtree-0.6 (17 Nov 2004)
+
+  17 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +maildirtree-0.6.ebuild:
+  Initial import. Closes #71414, ebuild submitted by Gudleik Rasch
+  <gudleik@rastamatra.org>.
+
