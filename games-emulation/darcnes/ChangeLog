@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/darcnes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.9 2004/11/15 19:25:20 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/darcnes/ChangeLog,v 1.10 2005/03/13 08:18:42 mr_bones_ Exp $
+
+  13 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -darcnes-0401-r1.ebuild:
+  clean old ebuild
 
   15 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> darcnes-0401-r2.ebuild:
   call games_pkg_setup in pkg_setup
