@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.81 2004/06/07 21:40:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.82 2004/06/21 23:26:49 foser Exp $
+
+*gimp-2.0.2 (22 Jun 2004)
+
+  22 Jun 2004; foser <foser@gentoo.org> gimp-2.0.2.ebuild :
+  New release, as requested in #47983
+  Added svg USE as in #51263 (still autodetect based though :/)
+  Use --disable-default-binary instead of removing the versionless gimp link
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> gimp-1.2.3-r3.ebuild,
   gimp-1.2.4.ebuild, gimp-1.2.5.ebuild:

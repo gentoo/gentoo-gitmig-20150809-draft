@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.0.ebuild,v 1.6 2004/06/21 23:26:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.2.ebuild,v 1.1 2004/06/21 23:26:49 foser Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gimp.org/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~hppa ~sparc amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64 ~mips"
 IUSE="doc python aalib png jpeg tiff mng wmf gimpprint gtkhtml mmx sse X altivec debug"
 
 # FIXME : some more things can be (local) USE flagged
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	mng? ( media-libs/libmng )
 
 	wmf? ( >=media-libs/libwmf-0.2.8 )
+	svg? ( >=gnome-base/librsvg-2.2 )
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
@@ -54,9 +55,6 @@ src_unpack() {
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
 
-	# fix to compile using gcc 3.4
-	epatch ${FILESDIR}/${P}-gcc34.patch
-
 }
 
 src_compile() {
@@ -66,14 +64,13 @@ src_compile() {
 
 	# Workaround portage variable leakage
 	local AA=
-	local myconf=
 
 	replace-flags "-march=k6*" "-march=i586"
 	# gimp uses inline functions (plug-ins/common/grid.c) (#23078)
 	filter-flags "-fno-inline"
 
 	econf \
-		${myconf} \
+		--disable-default-binary \
 		`use_enable mmx` \
 		`use_enable sse` \
 		`use_enable altivec` \
@@ -102,9 +99,6 @@ src_install() {
 	dodir /usr/share/{applications,application-registry,mime-info}
 
 	make DESTDIR=${D} install || die
-
-	# Remove unversioned link to 2.0 binary
-	rm ${D}/usr/bin/gimp
 
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
 		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
