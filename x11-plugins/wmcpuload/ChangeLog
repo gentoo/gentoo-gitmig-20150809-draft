@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.10 2003/11/04 03:28:00 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.11 2003/12/14 04:40:49 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> wmcpuload-1.0.1.ebuild:
+  Make stable on ppc
+  Thanks to Florian Daniel for the testing
 
   04 Nov 2003; Brandy Westcott brandy@gentoo.org wmcpuload-1.0.1.ebuild:
   Small fix to install docs.
