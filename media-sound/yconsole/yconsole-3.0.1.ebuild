@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yconsole/yconsole-3.0.1.ebuild,v 1.1 2003/08/17 19:03:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yconsole/yconsole-3.0.1.ebuild,v 1.2 2003/10/04 23:33:09 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,10 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
 
 DEPEND="=x11-libs/gtk+-1*
-	media-libs/imlib"
-#RDEPEND=""
+	media-libs/imlib
+	media-libs/yiff"
 
 src_unpack() {
 	unpack ${A}
