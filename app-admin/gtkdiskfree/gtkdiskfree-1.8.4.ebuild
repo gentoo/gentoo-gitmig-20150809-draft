@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.8.4.ebuild,v 1.4 2003/02/13 05:24:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.8.4.ebuild,v 1.5 2003/02/28 22:06:47 vapier Exp $
 
-DESCRIPTION="GtkDiskFree is a program which shows free space on your mounted filesystems"
+DESCRIPTION="shows free space on your mounted filesystems"
 HOMEPAGE="http://gtkdiskfree.tuxfamily.org/"
 SRC_URI="http://gtkdiskfree.tuxfamily.org/src_tgz/${P}.tar.gz"
 
@@ -13,19 +13,14 @@ IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
-	nls? ( sys-devel/gettext ) "
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
-	use nls \
-		&& myconf="--enable-nls" \
-		|| myconf="--disable-nls"
-	econf ${myconf}
-
+	econf `use_enable nls` || die
 	emake all || die "emake failed"
 }
 
 src_install() {
-	einstall DESTDIR=${D}
+	einstall DESTDIR=${D} || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }

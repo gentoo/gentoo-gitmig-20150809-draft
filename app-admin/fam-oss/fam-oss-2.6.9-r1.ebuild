@@ -1,16 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.9 2003/02/22 00:09:41 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.10 2003/02/28 22:05:21 vapier Exp $
 
 inherit libtool eutils
 
 MY_P="${P/-oss/}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="FAM, the File Alteration Monitor."
+DESCRIPTION="FAM, the File Alteration Monitor"
 SRC_URI="ftp://oss.sgi.com/projects/fam/download/${MY_P}.tar.gz"
-
 HOMEPAGE="http://oss.sgi.com/projects/fam/"
 
 KEYWORDS="x86 ~ppc alpha ~sparc"
@@ -46,8 +43,7 @@ src_install() {
 	cp fam/fam.conf fam/fam.conf.old
 	sed s:"local_only = false":"local_only = true":g fam/fam.conf.old >fam/fam.conf
 			
-	make DESTDIR=${D} \
-		install || die
+	make DESTDIR=${D} install || die
 	     
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fam
