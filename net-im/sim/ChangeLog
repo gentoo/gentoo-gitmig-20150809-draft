@@ -1,6 +1,14 @@
 # ChangeLog for net-im/sim
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.1 2002/07/28 18:50:24 danarmak Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.2 2002/09/12 16:00:34 danarmak Exp $
+
+*sim-0.7 (12 Sep 2002)
+
+  12 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream version. Also readded support for turning kde support off,
+  thus closing bug #6003. Also added the proper USE ssl -controlled deps
+  and configure options for openssl support.
 
 *sim-0.6 (28 Jul 2002)
 
