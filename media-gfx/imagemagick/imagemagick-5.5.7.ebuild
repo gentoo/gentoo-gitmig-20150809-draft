@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.ebuild,v 1.1 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7.ebuild,v 1.2 2003/07/02 03:30:15 seemant Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
@@ -26,7 +26,8 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
-DEPEND="media-libs/jbigkit
+DEPEND=">=sys-apps/sed-4
+	media-libs/jbigkit
 	>=sys-apps/bzip2-1
 	sys-libs/zlib
 	X? ( virtual/x11 
@@ -54,23 +55,24 @@ src_compile() {
 	use xml2 || myconf="${myconf} --without-xml"
 	use truetype || myconf="${myconf} --without-ttf"
 	use wmf || myconf="${myconf} --without-wmf"
+
 	# Netscape is still used ?  More people should have Mozilla
-	cp configure configure.orig
-	sed -e 's:netscape:mozilla:g' configure.orig > configure
+	sed -i 's:netscape:mozilla:g' configure
 
 	#patch to allow building by perl
-	patch -p0 < ${FILESDIR}/perlpatch.diff
+	epatch ${FILESDIR}/perlpatch.diff
 
 	econf \
 		--enable-shared \
-		#--enable-static \
 		--enable-lzw \
 		--with-fpx \
 		--with-jbig \
 		--without-hdf \
 		--with-threads \
 		--with-bzlib \
-		${myconf}
+		${myconf} || die
+		#--enable-static \
+
 	emake || die "compile problem"
 }
 
