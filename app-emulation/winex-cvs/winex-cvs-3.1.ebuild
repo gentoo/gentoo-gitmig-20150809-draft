@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.1 2003/06/24 18:40:53 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.2 2003/07/02 23:05:37 vapier Exp $
 
 IUSE="cups opengl"
 
@@ -47,6 +47,16 @@ newdepend "sys-devel/gcc
 		dev-lang/tk ) 
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )"
+
+src_unpack() {
+	if ! [ -z "`perl -V:archname 2> /dev/null | grep 'thread-multi'`" ]
+	then
+		eerror "Sorry - can't build winex against threaded perl!"
+		eerror "Please remerge perl and libperl WITHOUT 'USE=threads'"
+		die "Not compatible with threaded perl"
+	fi
+	cvs_src_unpack
+}
 
 src_compile() {
 	cd ${S}
