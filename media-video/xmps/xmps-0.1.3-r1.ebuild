@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.1.3-r1.ebuild,v 1.5 2000/11/05 12:59:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.1.3-r1.ebuild,v 1.6 2000/12/18 19:12:53 achim Exp $
 
 P=xmps-0.1.3
 A=${P}.tar.gz
@@ -39,7 +39,12 @@ src_compile() {
 src_install () {
 
     cd ${S}
-    try make DESTDIR=${D} install
+    if [ -n "`use gnome`" ]
+    then
+      try make prefix=${D}/opt/gnome install
+    else
+      try make prefix=${D}/usr/X11R6 install
+    fi
     dodoc AUTHORS ChangeLog COPYING NEWS README TODO
 
 }
