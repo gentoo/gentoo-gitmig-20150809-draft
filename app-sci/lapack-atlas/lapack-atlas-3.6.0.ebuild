@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.14 2004/11/01 00:58:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.15 2004/11/17 16:43:28 corsair Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc ~ppc64 ~sparc"
+KEYWORDS="~x86 amd64 ~ppc ppc64 ~sparc"
 IUSE="ifc doc"
 
 DEPEND="virtual/libc

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.17 2004/11/01 00:45:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.18 2004/11/17 16:38:37 corsair Exp $
+
+  17 Nov 2004; Markus Rothe <corsair@gentoo.org> blas-atlas-3.6.0.ebuild:
+  stable on ppc64
 
   31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> blas-atlas-3.6.0.ebuild:
   Replaced ${GCC} by tc-getCC from toolchain-funcs.
