@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919.ebuild,v 1.1 2004/02/07 09:32:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/hkscs-ming-1.0_pre20030919.ebuild,v 1.2 2004/02/10 13:07:50 mr_bones_ Exp $
 
 inherit rpm
 
@@ -25,7 +25,7 @@ src_unpack() {
 	# complicated and convoluted unpack procedure
 	LINENUMBER=237
 	cd ${S}; tail +${LINENUMBER} ${DISTDIR}/${A} | tar zxv || die "unpack failed"
-	
+
 	# then we rpm_unpack the fonts package
 	rpm_unpack ${S}/package_rh/imfont-${RPM_V}-0.i386.rpm
 }
@@ -54,4 +54,4 @@ pkg_postinst() {
 	einfo "    <default><family>sans-serif</family></default>"
 	einfo "</alias>"
 	einfo " "
-}	
+}
