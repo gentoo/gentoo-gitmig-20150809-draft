@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.0_beta1.ebuild,v 1.2 2005/01/14 23:11:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.4.0_beta1.ebuild,v 1.3 2005/02/08 14:38:41 greg_g Exp $
 
 inherit kde-dist
 
@@ -17,9 +17,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	virtual/ghostscript
 	media-libs/tiff
 	povray? ( x86? ( media-gfx/povray
-			virtual/opengl ) )
-	!media-gfx/kolourpaint
-	!kde-misc/kgamma"
+			virtual/opengl ) )"
 
 RDEPEND="${DEPEND}
 	app-text/xpdf
