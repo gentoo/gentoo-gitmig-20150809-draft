@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.0.ebuild,v 1.2 2004/08/18 17:48:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.0.ebuild,v 1.3 2004/08/21 21:55:57 mattam Exp $
+
+inherit findlib
 
 DESCRIPTION="Unit testing framework for OCaml"
 HOMEPAGE="http://home.wanadoo.nl/maas/ocaml/"
@@ -8,21 +10,16 @@ SRC_URI="http://home.wanadoo.nl/maas/ocaml/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-DEPEND="dev-lang/ocaml
-	dev-ml/findlib"
+DEPEND="dev-lang/ocaml"
+IUSE=""
 
 src_compile() {
 	emake all allopt || die "emake failed"
 }
 
 src_install() {
-	# which directory does the lib go into?
-	destdir=`ocamlfind printconf destdir`
-	# install
-	mkdir -p ${D}${destdir} || die
-	make \
-		OCAMLFIND_DESTDIR=${D}${destdir} \
-		OCAMLFIND_LDCONF=dummy install || die
+	findlib_src_install
+
 	# typo
 	mv LICENCE LICENSE
 	# install documentation
