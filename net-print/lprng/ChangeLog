@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.13 2003/10/17 10:48:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.14 2003/10/31 13:35:43 lanius Exp $
+
+  31 Oct 2003; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.22.ebuild:
+  stable bump
 
   17 Oct 2003; Heinrich Wendel <lanius@gentoo.org> lprng-3.8.22.ebuild:
   bug #31209
