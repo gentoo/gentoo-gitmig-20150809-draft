@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r2.ebuild,v 1.1 2003/10/08 19:06:51 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0-r2.ebuild,v 1.2 2003/10/26 04:16:28 robbat2 Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php-src"
@@ -20,7 +20,9 @@ SRC_URI=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="${DEPEND}
-	>=dev-util/re2c-0.9.1"
+	>=dev-util/re2c-0.9.1
+	truetype? ( >=media-libs/t1lib-5.0.0 )
+	"
 
 src_unpack() {
 	cvs_src_unpack

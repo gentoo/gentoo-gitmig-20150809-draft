@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.2 2003/09/08 04:45:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.3 2003/10/26 04:16:12 robbat2 Exp $
 
 PHPSAPI="cli"
 MY_P="php-5.0.0b1"
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips"
 
 DEPEND="${DEPEND}
-	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 ) "
+	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
+	truetype? ( >=media-libs/t1lib-5.0.0 )"
 
 RDEPEND="${RDEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/ChangeLog,v 1.5 2003/10/08 19:06:51 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/ChangeLog,v 1.6 2003/10/26 04:16:28 robbat2 Exp $
+
+  25 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> php-cvs-5.0-r2.ebuild:
+  fix bug #25326 hopefully
 
 *php-cvs-5.0-r2 (08 Oct 2003)
 
