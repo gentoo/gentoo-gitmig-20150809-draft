@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.4 2004/11/13 03:32:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.5 2005/01/16 10:56:17 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gnuconfig
 
-DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://www.wxwidgets.org/"
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 
@@ -37,6 +37,7 @@ src_unpack() {
 	# disable contrib/src/animate
 	EPATCH_OPTS="-d ${S}/contrib/src" epatch ${FILESDIR}/${PN}-2.4.2-contrib_animate.patch
 	use amd64 && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.4.2-cleanup.patch
+	gnuconfig_update
 }
 
 pkg_setup() {

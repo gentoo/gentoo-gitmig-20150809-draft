@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.3.ebuild,v 1.3 2004/11/13 23:14:10 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.5.3.ebuild,v 1.4 2005/01/16 10:56:17 vapier Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
-DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://www.wxwidgets.org/"
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
 
@@ -51,6 +51,8 @@ pkg_setup() {
 }
 
 src_compile() {
+	gnuconfig_update
+
 	local myconf
 	export LANG='C'
 	sed -i "s/-O2//g" configure || die "sed configure failed"
