@@ -1,0 +1,9 @@
+# ChangeLog for mail-filter/ask
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/ask/ChangeLog,v 1.1 2004/08/07 16:44:41 tomk Exp $
+
+*ask-2.4.1 (07 Aug 2004)
+
+  07 Aug 2004; Tom Knight <tomk@gentoo.org> +ask-2.4.1.ebuild:
+  Thanks to Saleem A. for submitting this ebuild in bug #25952
+
