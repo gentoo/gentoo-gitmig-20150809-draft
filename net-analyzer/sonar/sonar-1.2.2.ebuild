@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.2.ebuild,v 1.1 2004/05/11 17:17:50 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.2.ebuild,v 1.2 2004/05/12 15:27:49 dholm Exp $
 
 inherit gcc
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/popt-1.7-r1
