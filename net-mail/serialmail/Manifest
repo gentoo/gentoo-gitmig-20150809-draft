@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 61ad30ac0aaaedce45c3ef54ac85076e serialmail-0.75-r1.ebuild 1225
-MD5 4df3b15baed6e9d884feb107a01cde8a ChangeLog 1447
+MD5 77a517e3732a6f9c2a13baf4d3d9927c ChangeLog 1562
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 12a0c0604f2952f9a23037d75cc73991 serialmail-0.75-r2.ebuild 1360
+MD5 f27828c299b98af572e76ce96c4ac312 serialmail-0.75-r2.ebuild 1358
 MD5 3339480edaf2f8d572600ce92d8ffa33 files/errno.patch 567
 MD5 9470e572fd04d86fc02411a70786ebbc files/digest-serialmail-0.75-r1 66
 MD5 be37eec8e201ac2eb60cd0fc1fd845fe files/digest-serialmail-0.75-r2 138
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBCSGy5FrxP71izLARAnXCAJ96ZXWOhXE6tUaqGuBc2Wv7TsEqqACfRAPb
-PwFyN2Lv3q4J/9ksrhPIqT0=
-=zHO+
------END PGP SIGNATURE-----
