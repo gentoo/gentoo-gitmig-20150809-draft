@@ -1,4 +1,14 @@
-MD5 5b3b58567e64ce417bae17d786273026 ChangeLog 556
-MD5 8546bd513cc7be944ba28a8f635f278d fortune-mod-rss-20030120.ebuild 563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1aefb453ed91a3f724db416572ea48d0 fortune-mod-rss-20030120.ebuild 569
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+MD5 82287dc4f25b5e5e281868c4e00e8cea ChangeLog 672
 MD5 255d24a78800dfa890bef0527e952485 files/digest-fortune-mod-rss-20030120 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdEKkugEuf3OQ0akRArThAJ45JBhVkC7/g8j8wLGVI0pNAEg+HwCgjSC7
+dJVOdb3swPpdU8aVZL97414=
+=d5Mb
+-----END PGP SIGNATURE-----
