@@ -1,41 +1,44 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.11 2003/12/18 22:34:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.12 2003/12/19 18:49:52 avenj Exp $
+
+  19 Dec 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2-r1.ebuild :
+  Fix for a fix. Bug 33495.
 
   18 Dec 2003; Guy Martin <gmsoft@gentoo.org> hping-2.0.0_rc2-r1.ebuild:
   Marked stable on hppa.
 
 *hping-2.0.0_rc2-r1 (03 Dec 2003)
 
-	03 Dec 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2-r1.ebuild,
-			files/wlan-header-fix.patch :
-	Patch from GMsoft to fix a WLAN bug. Bug #34481.
+  03 Dec 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2-r1.ebuild,
+		files/wlan-header-fix.patch :
+  Patch from GMsoft to fix a WLAN bug. Bug #34481.
 
-	20 Nov 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2.ebuild :
-	Build fixes from trauma@web.de, bug #33495.
+  20 Nov 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2.ebuild :
+  Build fixes from trauma@web.de, bug #33495.
 
-	24 Nov 2003; Aron Griffis <agriffis@gentoo.org> hping-2.0.0_rc2.ebuild:
-	Add ~alpha
+  24 Nov 2003; Aron Griffis <agriffis@gentoo.org> hping-2.0.0_rc2.ebuild:
+  Add ~alpha
 
 *hping-2.0.0_rc2 (03 March 2003)
 
-	03 Aug 2003; Guy Martin <gmsoft@gentoo.org> hping-2.0.0_rc2.ebuild :
-	Added hppa to KEYWORDS.
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> hping-2.0.0_rc2.ebuild :
+  Added hppa to KEYWORDS.
 
-	03 March 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2.ebuild :
-	Version bump.
+  03 March 2003; Jon Portnoy <avenj@gentoo.org> hping-2.0.0_rc2.ebuild :
+  Version bump.
 
-	06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-	28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
-	moved to net-analyzer - added SLOT
+  28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
+  moved to net-analyzer - added SLOT
 
 *hping-2.0.0_rc1 (1 Feb 2002)
 
-	15 Feb 2003; Mark Guertin <gerk@gentoo.org> hping-2.0.0_rc1.ebuild :
-	set ppc in keywords
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> hping-2.0.0_rc1.ebuild :
+  set ppc in keywords
 
-	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
 	Added initial ChangeLog which should be updated whenever the package is
 	updated in any way. This changelog is targetted to users. This means that the

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2-r1.ebuild,v 1.3 2003/12/18 22:34:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2-r1.ebuild,v 1.4 2003/12/19 18:49:52 avenj Exp $
 
 S=${WORKDIR}/hping2-rc2
 DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer."
@@ -22,7 +22,7 @@ src_compile() {
 	then
 		make CCOPT="${CFLAGS}" || die
 	else
-		make CCOPT="${CFLAGS}" || die
+		make CCOPT="${CFLAGS}" DEBUG="" || die
 	fi
 }
 
