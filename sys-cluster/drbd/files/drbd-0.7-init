@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7-init,v 1.4 2005/03/13 13:35:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7-init,v 1.5 2005/03/15 03:42:49 xmerlin Exp $
 
 opts="${opts} reload"
 
@@ -9,6 +9,7 @@ DRBDADM="/sbin/drbdadm"
 PROC_DRBD="/proc/drbd"
 MODPROBE="modprobe"
 RMMOD="rmmod"
+UDEV_TIMEOUT=10
 ADD_MOD_PARAM=""
 
 depend() {
@@ -18,33 +19,26 @@ depend() {
 	need net
 }
 
-create_devices() {
-	local RESOURCES RESOURCE DEVICE
-
-	# create dev if needed
-	RESOURCES=`$DRBDADM sh-resources`
-	#RESOURCES=${RESOURCE%%\ *}
-
-	for RESOURCE in $RESOURCES; do
-		DEVICE=`$DRBDADM sh-dev $RESOURCE`
-		if [ ! -b ${DEVICE} ]; then
-			mknod $DEVICE b 147 ${DEVICE/\/dev\/drbd\/}
-		fi
-	done
-}
 
 load_module() {
-	if [ ! -f $PROC_DRBD ]; then
-		${MODPROBE} -s drbd `$DRBDADM sh-mod-parms` $ADD_MOD_PARAM &> /dev/null
+	if [ ! -f ${PROC_DRBD} ]; then
+		${MODPROBE} -s drbd `${DRBDADM} sh-mod-parms` ${ADD_MOD_PARAM} &> /dev/null
 	fi
+	
+	# make sure udev has time to create the device files
+	RESOURCE=`${DRBDADM} sh-resources` || exit 20
+	RESOURCE=${RESOURCE%%\ *}
+	DEVICE=`${DRBDADM} sh-dev ${RESOURCE}` || exit 20
+	
+	while [ ! -e ${DEVICE} ] && [ ${UDEV_TIMEOUT} -gt 0 ] ; do
+		sleep 1
+		UDEV_TIMEOUT=$(( ${UDEV_TIMEOUT}-1 ))
+	done	
 }
 
 start() {
 	ebegin "Starting DRBD"
-
 	load_module
-	create_devices
-
 	${DRBDADM} up all
 	eend $ret
 }
@@ -54,8 +48,9 @@ stop() {
 
 	# Check for mounted drbd devices	
 	if ! grep -q '^/dev/drbd' /proc/mounts &>/dev/null; then
-		if [ -f $PROC_DRBD ]; then
+		if [ -f ${PROC_DRBD} ]; then
 			${DRBDADM} down all
+			${RMMOD} drbd
 		fi
 		eend $?
 	else
@@ -68,9 +63,9 @@ status() {
 	# NEEDS to be heartbeat friendly...
 	# so: put some "OK" in the output.
 	ebegin "Status of DRBD"
-	if [ -e $PROC_DRBD ]; then
+	if [ -e ${PROC_DRBD} ]; then
 	    echo "drbd driver OK; device status:"
-	    cat "$PROC_DRBD"
+	    cat "${PROC_DRBD}"
 	    eend 0
 	else
 	    echo >&2 "drbd not loaded"
