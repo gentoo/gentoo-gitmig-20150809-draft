@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.35 2004/12/07 00:14:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.36 2004/12/07 04:27:26 vapier Exp $
 
-inherit eutils flag-o-matic gcc versionator
+inherit eutils flag-o-matic gcc versionator fixheadtails
 
 # The next command strips most flags from CFLAGS/CXXFLAGS.  If you do 
 # not like it, comment it out, but do not file bugreports if you run into
@@ -92,11 +92,15 @@ src_unpack() {
 		epatch ${FILESDIR}/2.95.3/${P}-alpha.diff
 	fi
 
+	cd ${S}
+
+	# Fix outdated head/tails format #65668
+	ht_fix_file configure gcc/Makefile.in
+
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
 	# absolute paths, as some modules then gets rebuild with the wrong
 	# paths.  Thus we use $FAKE_ROOT.
-	cd ${S}
 	for x in $(find . -name Makefile.in)
 	do
 		# Fix --datadir=

@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 5371f9df6e973106e58e4cbc03959161 ChangeLog 75661
-MD5 40f450ed72bcc7f9118f2672005c614b gcc-2.95.3-r8.ebuild 8337
+MD5 174a113e9053c5b695257f31f08ce64c gcc-2.95.3-r8.ebuild 8432
 MD5 f804f416c7c486569541c7cc81b07cbb gcc-3.2.3-r4.ebuild 19729
 MD5 32f6bf1128374ba782984fa69f87d0ea gcc-3.3.2-r2.ebuild 17859
 MD5 1a33850ffcbfdcd016e44ba0ed751242 gcc-3.3.2-r5.ebuild 21183
@@ -113,7 +113,7 @@ MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtS32roRuSHgZdywRAop8AJwKPPt8/ewuk4ODcaDBaPylOoyiygCgh1iq
-nJd7P3uTcpjzjqjgBwexwiE=
-=4A3c
+iD8DBQFBtTE3roRuSHgZdywRAhjIAJ95xVGQRCSRBAj4cXUkbaQ9cojm5QCgiDGk
+rRRxjkUnSYg+ePi9v2xIFZA=
+=y/hM
 -----END PGP SIGNATURE-----
