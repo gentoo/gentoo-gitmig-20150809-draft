@@ -1,6 +1,9 @@
 # ChangeLog for net-im/naim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.14 2003/01/20 06:59:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.15 2003/02/11 04:17:41 latexer Exp $
+
+  10 Feb 2003; Peter Johanson <latexer@gentoo.org> naim-0.11.5.1.ebuild naim-0.11.5.4.ebuild :
+  Added ~alpha to KEYWORDS
 
 *naim-0.11.5.3-r1 (20 Jan 2003)
 
