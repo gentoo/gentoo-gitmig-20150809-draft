@@ -1,34 +1,27 @@
 # ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.5 2002/07/25 04:51:31 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.6 2002/09/12 22:40:24 drobbins Exp $
 
-irssi-0.8.5-r1 (15 Jul 2002)
+*irssi-0.8.5-r2 (12 Sep 2002)
 
-  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
-  Added ppc to keywords
+  12 Sep 2002; Daniel Robbins <drobbins@gentoo.org>: new rev bump with
+  configuration flag fixes: several use/configure combos were toggled, the
+  ebuild had "--enable-perl" instead of "--with-perl", etc.
 
-  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+*irssi-0.8.5-r1 (15 Jul 2002)
 
-  incremented the version number. Anyone with socks in use gets an additional
-  depend on net-misc/dante-1.1.13. It's needed for libsocks.so and socks.h
-  (otherwise toggling the option --with-socks does no good) needs more socks
-  testing however so it's getting masked)
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org>: Added ppc to keywords
 
-irssi-0.8.5 (23 Jun 2002)
-	23 Jun 2002; lamer <lamer@gentoo.org>
-	Updated to latest version from upstream. Fixes a topic string overflow
-	DoS attack. Upgrade now.
+  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog: Incremented the
+  version number. Anyone with socks in use gets an additional depend on
+  net-misc/dante-1.1.13. It's needed for libsocks.so and socks.h (otherwise
+  toggling the option --with-socks does no good) needs more socks testing
+  however so it's getting masked)
 
-  11 Apr 2002; Spider <spider@gentoo.org>
-  Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
+*irssi-0.8.5 (23 Jun 2002)
 
+  23 Jun 2002; lamer <lamer@gentoo.org>: Updated to latest version from
+  upstream. Fixes a topic string overflow DoS attack. Upgrade now.
 
-*irssi-0.7.98.4 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  11 Apr 2002; Spider <spider@gentoo.org>: Update all glib dependencies to use
+  glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
