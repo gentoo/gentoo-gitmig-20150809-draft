@@ -1,13 +1,18 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.6 2002/09/22 21:41:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.7 2002/09/23 19:41:19 raker Exp $
 
+*gstreamer-0.4.1-r1 (23 Sep 2002)
 
+  23 Sep 2002; Nick Hadaway <raker@gentoo.org> gstreamer-0.4.1-r1.ebuild,
+  files/xsl.diff, files/digest-gstreamer-0.4.1-r1 :
+  Revision bump due to testing some fixes I made that only affect
+  installing with USE="doc".  Please see bug #6760
 
 *gstreamer-0.4.1 (22 Sep 2002)
+
   22 Sep 2002; Spider <spdier@gentoo.org> gstreamer-0.4.1.ebuild : updated
   the version to latest release
-
 
   07 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords and made nasm a dep only on 
