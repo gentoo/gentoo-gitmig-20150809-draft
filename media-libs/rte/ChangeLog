@@ -1,9 +1,13 @@
 # ChangeLog for media-libs/rte
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.1 2002/05/22 14:23:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.2 2002/09/02 10:42:36 seemant Exp $
 
 *rte-0.4 (22 May 2002)
-  
+ 
+  02 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rte-0.4.ebuild :
+
+  emake -> make
+ 
   22 May 2002; Seemant Kulleen <seemant@gentoo.org> rte-0.4.ebuild
   ChangeLog files/digest-rte-0.4 :
 
