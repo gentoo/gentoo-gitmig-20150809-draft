@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r2.ebuild,v 1.3 2002/07/11 22:37:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r2.ebuild,v 1.4 2002/07/11 23:13:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ispell is a fast screen-oriented spelling checker"
@@ -21,11 +21,10 @@ src_unpack() {
 
 	cd ${S}
 	bzcat ${DISTDIR}/${P}-gentoo.diff.bz2 | patch || die
+
 }
 
 src_compile() {
-	export TMPDIR=/tmp
-	addwrite ${TMPDIR}
 	make || die
 }
 
