@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r4.ebuild,v 1.1 2002/07/25 00:35:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r4.ebuild,v 1.2 2002/08/02 18:00:03 gerk Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -86,6 +86,13 @@ src_unpack() {
 		if [ "${ARCH}" = "x86" ] ; then
 			patch -p0 < ${FILESDIR}/${P}-abi-compat-wrappers.patch
 		fi
+
+                # ABI Patch for ppc/xpcom for gcc-3.x
+                # http://bugzilla.mozilla.org/show_bug.cgi?id=142594
+
+                if [ "${ARCH}" = "ppc" ] ; then
+                        patch -p0 < ${FILESDIR}/mozilla-1.0-abi-xpcom-ppc.patch || die
+                fi
 	fi
 
 	# Apply the bytecode patch for freetype2
