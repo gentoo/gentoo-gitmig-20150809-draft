@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.5_p4.ebuild,v 1.3 2004/03/30 20:40:33 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.5_p4.ebuild,v 1.4 2004/05/05 16:33:47 sejo Exp $
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_/}"
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RESTRICT="nostrip nomirror"
 RDEPEND=">=virtual/jdk-1.4.1"

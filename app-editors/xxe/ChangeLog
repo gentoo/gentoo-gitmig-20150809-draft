@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.10 2004/03/30 20:40:33 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.11 2004/05/05 16:33:47 sejo Exp $
+
+  05 May 2004; <SeJo@gentoo.org> xxe-2.5_p4.ebuild:
+  added ~ppc keyword
 
   30 Mar 2004; Don Seiler <rizzo@gentoo.org>; xxe-2.5_p4.ebuild:
   Added xxe.desktop and some other cosmetic changes.  Thanks to Keith Lea.
