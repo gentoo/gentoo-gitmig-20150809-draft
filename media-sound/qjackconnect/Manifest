@@ -1,4 +1,14 @@
-MD5 2477090223b9ad739434aa293462646c ChangeLog 1694
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01ae0d141b326670fa3369501c8734d0 ChangeLog 1803
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 755a033920a140b8d2ce0b3eba0156c2 qjackconnect-0.0.3b-r1.ebuild 794
+MD5 9e5501a4c361a181b412567c3d844ca4 qjackconnect-0.0.3b-r1.ebuild 803
 MD5 1f5f3cee4ab0107fff6c2b8b1002eafb files/digest-qjackconnect-0.0.3b-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBsaK5ArHZZzCEUG0RAlRUAJjz2oRMLnR2OFBL0hoRM7DmUUvfAJ4v3Yvl
+jTaWsctgPQgRWfJTt+k/rQ==
+=oh5M
+-----END PGP SIGNATURE-----
