@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2-r1.ebuild,v 1.2 2004/03/03 18:58:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2-r1.ebuild,v 1.3 2004/03/04 16:31:49 mkennedy Exp $
 
 inherit common-lisp
 
@@ -16,6 +16,7 @@ LICENSE="Norvig"
 KEYWORDS="~x86"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
+SLOT="0"
 
 CLPACKAGE=aima
 
