@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.12 2004/05/04 22:40:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.13 2004/05/05 14:25:39 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -48,7 +48,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
 	>=gnome-base/libgnome-2.6.1.1
-	>=gnome-base/libgnomeui-2.6
+	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
 	>=gnome-base/libglade-2.3.6
 
@@ -99,7 +99,7 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/librsvg-2.6.5
 	>=x11-libs/libwnck-2.6.1
-	>=x11-wm/metacity-2.8
+	>=x11-wm/metacity-2.8.1
 
 	>=x11-libs/startup-notification-0.5
 
