@@ -1,4 +1,4 @@
-MD5 96139e7a5328080482bd30b7ae526710 xstow-0.4.6.ebuild 756
 MD5 71bb1335e13679d5f92243262783e54f ChangeLog 405
+MD5 21e2776b7d13f8a58ca4c1f5bdbf593b xstow-0.4.6.ebuild 761
 MD5 3e6e841329de70b113d46828506780d8 files/digest-xstow-0.4.6 63
 MD5 49825a24ed2a22d7f3c4f72daa0af9f1 files/xstow-0.4.6-configure-ncurses.diff 2211
