@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.3 2002/12/14 21:37:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.4 2002/12/20 19:07:00 tuxus Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="virtual/glibc"
 
