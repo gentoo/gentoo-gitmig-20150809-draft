@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94c9b8f315671ab7ec59f27ddd27de6e ChangeLog 15018
+MD5 e60a31d1ecfe03f2e142952076dde1e5 ChangeLog 15282
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8f27cd5e7c06b0c37851607799f69316 tetex-1.0.7-r13.ebuild 4770
 MD5 0914a927a521f6171ed062dc16729e5b tetex-3.0.ebuild 2008
+MD5 5f971d324a3e77713cc652e689bbc349 tetex-3.0-r1.ebuild 2069
 MD5 18a2c88ee01a228f443743b3cbf2a234 tetex-2.0.2-r4.ebuild 611
 MD5 e5a8143f0a59c2ca12f664210ec223cb tetex-2.0.2-r5.ebuild 1163
 MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0 202
 MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
+MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r1 202
 MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r4 282
 MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
@@ -23,7 +25,7 @@ MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCCNlHVWNWqTUmv+0RAlQwAJ9quJcus5BHFtK9vIwn39vcitl4XgCePLOa
-V+VzprKC+d26fQQVGlNRmIM=
-=yus7
+iD8DBQFCDBwVVWNWqTUmv+0RAr6+AJ4oH0yP8x+ZcMWlaGeczJ9Zs3tWCwCgmCzj
+RNZoR70g/8Jxcth07bLR01Y=
+=rpPT
 -----END PGP SIGNATURE-----
