@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.1 2003/07/17 19:41:54 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2237.ebuild,v 1.2 2003/07/26 00:05:24 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware. The agreeing to a licence is part of the configure step
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 
 SLOT="0"
 LICENSE="vmware"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="-* x86"
 IUSE="kde"
 
 DEPEND="virtual/glibc
