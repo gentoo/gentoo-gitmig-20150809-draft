@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.23 2005/01/04 20:31:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.24 2005/01/08 08:50:16 mrness Exp $
+
+  08 Jan 2005; Alin Nastac <mrness@gentoo.org>
+  -files/wvdial-1.53-crypt.patch, -wvdial-1.53-r1.ebuild:
+  Remove obsolete ebuild.
 
   04 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> wvdial-1.54.0.ebuild:
   Stable on amd64, bug #72440
