@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.80.ebuild,v 1.4 2004/04/01 10:56:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.80.ebuild,v 1.5 2004/04/19 12:39:29 phosphan Exp $
 
 inherit eutils
 
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/units/units.html"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ppc alpha amd64"
 
 DEPEND=">=sys-libs/readline-4.1-r2

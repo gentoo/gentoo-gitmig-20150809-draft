@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/units
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.9 2004/04/01 10:56:37 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.10 2004/04/19 12:39:29 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> units-1.80.ebuild:
+  Adding IUSE
 
   01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> units-1.74-r1.ebuild,
   units-1.74.ebuild, units-1.80.ebuild:
