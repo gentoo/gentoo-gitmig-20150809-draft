@@ -1,3 +1,15 @@
-MD5 33e4de506bd70668ebcd0947d3cedf17 ChangeLog 521
-MD5 4ab1cc5d7161efed0102778cf9509773 fujiplay-1.33.ebuild 1016
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8781cbf005c98c1320c7e7afc88d6df4 metadata.xml 307
+MD5 64618929aad7f9c6780ee7d382d2ff91 fujiplay-1.33.ebuild 1128
+MD5 8c27d29e3690fda6867bc1348aac92d7 ChangeLog 715
 MD5 ffd323c4305177a6b06eeb23eb59b8cc files/digest-fujiplay-1.33 56
+MD5 c7c94e811dfa5dc89f6dfb37935a2d29 files/fujiplay-1.33-unterminated-strings.patch 3118
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3+bfMGnpIbeahxwRAlQGAJ4lyakcfigHhmATLVovCspnwpbafgCgm3Dj
+uKO0YFe8v7PsBCEshBCQGzc=
+=MU97
+-----END PGP SIGNATURE-----
