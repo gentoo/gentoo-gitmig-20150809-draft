@@ -1,3 +1,5 @@
-MD5 545d7a38b6c337869518d9f9b72641ec pgpdump-0.19.ebuild 667
 MD5 17bbeab80ad9ecb08166292eac8539df ChangeLog 376
+MD5 545d7a38b6c337869518d9f9b72641ec pgpdump-0.19.ebuild 667
+MD5 71a70fd4495ec080d0791dccec4cfdee pgpdump-0.20.ebuild 691
 MD5 6f76f75d148238129783790514643be9 files/digest-pgpdump-0.19 63
+MD5 2eb42804351134c40f96f57dc75084ea files/digest-pgpdump-0.20 63

@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/pgpdump
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.1 2003/07/19 13:42:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.2 2003/12/08 23:47:00 matsuu Exp $
+
+*pgpdump-0.20 (09 Dec 2003)
+
+  09 Dec 2003; MATSUU Takuto <matsuu@gentoo.org> pgpdump-0.20.ebuild:
+  Version bump.
+  Add app-arch/bzip2 to DEPENDS.
+  Add ~amd64 to KEYWORDS.
 
 *pgpdump-0.19 (19 Jul 2003)
 
