@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 442c741674355713b87927cb709f39ed shmux-1.0_beta5.ebuild 795
 MD5 fa306da0779d785c402457963eccb8a7 shmux-1.0_beta6.ebuild 796
 MD5 1364a61004fac959351704d2f2b6a9b4 ChangeLog 1557
-MD5 358cd2a98add074613ea658de495913a metadata.xml 814
+MD5 a0fae7a456514165d86dcc501c78e5ae metadata.xml 807
 MD5 235bcc0d662efb2390f3182ea5a18055 files/digest-shmux-1.0_beta5 59
 MD5 adecae3a3e95a2ef39d9dc15a87aa4e3 files/digest-shmux-1.0_beta6 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwPSoI1lqEGTUzyQRAm+6AKCFQw4hbL/YQCUXG+aEdLPHdf7tagCdH/ak
-Tczt3mkne+0AdxsxbqDHAGk=
-=d4gp
+iD8DBQFBw0U1I1lqEGTUzyQRAlh1AJ49rwggFuiARIqOI7dF0b4JI1c4VACgx24t
+go/n3H/3d5rRKcp396J5igE=
+=lRCQ
 -----END PGP SIGNATURE-----
