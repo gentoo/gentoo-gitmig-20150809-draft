@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.3 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.4 2004/03/27 09:58:47 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="fast action arcade-style game w/sound and network support"
 HOMEPAGE="http://www.ucw.cz/~hubicka/koules/English/"
@@ -14,24 +14,26 @@ KEYWORDS="x86"
 IUSE="X svga joystick"
 
 DEPEND=">=sys-apps/sed-4
-	svga? ( media-libs/svgalib )
-	X? ( virtual/x11 )
-	|| ( svga? ( ) X? ( ) virtual/x11 )"
+	|| (
+		svga? ( media-libs/svgalib )
+		X? ( virtual/x11 )
+		virtual/x11 )"
 RDEPEND="virtual/glibc
-	svga? ( media-libs/svgalib )
-	X? ( virtual/x11 )
-	|| ( svga? ( ) X? ( ) virtual/x11 )
+	|| (
+		svga? ( media-libs/svgalib )
+		X? ( virtual/x11 )
+		virtual/x11 )
 	|| (
 		tcltk? ( dev-lang/tk dev-lang/tcl )
 		dev-util/dialog
 	)"
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${PN}${PV}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch "${FILESDIR}/${PV}-gcc3.patch"
 	sed -i \
 		-e "/^KOULESDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^SOUNDDIR/s:=.*:=${GAMES_DATADIR}/${PN}:" \
