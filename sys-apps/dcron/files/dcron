@@ -6,7 +6,7 @@
 
 SERVICE=dcron
 EXE="/usr/sbin/crond"
-SVCDIR=/etc/svc.d/control/dcron
+SVCDIR=/etc/supervise/dcron
 opts="start stop"
 
 start() {

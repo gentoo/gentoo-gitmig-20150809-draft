@@ -43,13 +43,13 @@ supervise_start() {
 		prepconfig
 
 		ebegin "Starting ${SERVICE} supervised"
-		/usr/bin/svc -u /etc/svc.d/control/xinetd
+		/usr/bin/svc -u /etc/supervise/xinetd
 		eend $? "Error starting ${SERVICE} supervised."
 }
 
 supervise_stop() {
 		ebegin "Stopping ${SERVICE} supervised"
-		/usr/bin/svc -d /etc/svc.d/control/xinetd
+		/usr/bin/svc -d /etc/supervise/xinetd
 		eend $? "Error stopping ${SERVICE}. supervised"
 }
 

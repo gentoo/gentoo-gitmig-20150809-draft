@@ -52,6 +52,6 @@ ca:12345:ctrlaltdel:/sbin/shutdown -t1 -r now
 # Start svscan process in runlevels 2 through 5
 # Placing it here makes sure that it respawns if it dies, but keeping it our of runlevel 1 prevents
 # svscan from starting before the system is ready.
-SV:2345:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/svc.d/control < /dev/null > /dev/console 2>/dev/console
+SV:2345:respawn:env - PATH=/usr/local/bin:/usr/sbin:/usr/bin:/bin svscan /etc/supervise < /dev/null > /dev/console 2>/dev/console
 
 # End of /etc/inittab
