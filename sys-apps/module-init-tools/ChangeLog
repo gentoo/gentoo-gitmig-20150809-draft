@@ -1,10 +1,15 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.42 2003/11/26 15:38:28 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.43 2003/12/09 23:31:40 plasmaroo Exp $
+
+*module-init-tools-0.9.15_pre4 (09 Dec 2003)
+
+  09 Dec 2003; <plasmaroo@gentoo.org> module-init-tools-0.9.15_pre4.ebuild:
+  Version bumped to -pre4, closes bug #35396.
 
   26 Nov 2003; Brad House <brad_mssw@gentoo.org>
   module-init-tools-0.9.15_pre3.ebuild:
-  mark stable on amd64
+  Marked stable on 'amd64'.
 
 *module-init-tools-0.9.15_pre3 (02 Nov 2003)
 
@@ -16,7 +21,7 @@
 
   20 Oct 2003; Joshua Kinard <kumba@gentoo.org>
   module-init-tools-0.9.15_pre2.ebuild:
-  Added gnuconfig support for mips64
+  Added gnuconfig support for 'mips64'.
 
   18 Oct 2003; Martin Schlemmer <azarah@gentoo.org>
   module-init-tools-0.9.15_pre2.ebuild:
