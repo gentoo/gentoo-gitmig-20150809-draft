@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.34 2004/10/11 16:37:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.35 2004/11/07 06:15:06 usata Exp $
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> sablotron-0.97.ebuild,
+  sablotron-1.0.1.ebuild, sablotron-1.0.ebuild:
+  Require dev-perl/XML-Parser only if doc USE flag is set; bug #69452.
 
   11 Oct 2004; Guy Martin <gmsoft@gentoo.org> sablotron-1.0.ebuild:
   Marked stable on hppa.
