@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00.ebuild,v 1.1 2004/10/13 12:29:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00.ebuild,v 1.2 2004/10/17 01:25:50 solar Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
 	!amd64? ( uclibc? ( dev-libs/uclibc ) )
 	>=sys-apps/sed-4"
-RDEPEND="!static? ( ${DEPEND} )"
+RDEPEND="!static? ( virtual/libc )"
 
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )

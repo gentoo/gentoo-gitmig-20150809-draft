@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fa747ecef8eb57f7a134f269ed2d524a busybox-1.00.ebuild 6816
+MD5 a1fac9c975262b6871f2876c1e20ef15 busybox-1.00.ebuild 6819
 MD5 bb58878c35f17f5bad4aa060f1dcc25e busybox-0.60.3-r2.ebuild 1183
 MD5 f98f75be102af5709caff4cf84eaeb90 busybox-0.60.3-r1.ebuild 1091
-MD5 f8da3423413ed2769f010629349cceb9 busybox-1.00_rc3.ebuild 6868
-MD5 dd040b3cd6203231184ff55b2cb29690 ChangeLog 9453
+MD5 99fad2bf0042dc1141d3089e9f6baeb2 busybox-1.00_rc3.ebuild 6871
+MD5 2fcd5f0e34f4102b0a2f0658847541b8 ChangeLog 9569
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d9841a0171170d16bb121c696591e7ef files/config-netboot 9853
 MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00 66
@@ -25,7 +25,7 @@ MD5 3a4b93f7ec6f3aaade20029a81562b88 files/msh.diff 433
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBbaDi94CCfB4KcwwRArfzAKCovrlMO2Xrhsxc7mkam7Ne/KBdqACgm9s5
-cil7uMl+z4Bq82FN7KeL+Y4=
-=qKSO
+iD8DBQFBccn894CCfB4KcwwRAlaaAJsG3zLQH8bLxpb3Wh9ie5R3umXLrQCgjxmS
+rdCjisN+Uo+1kaYDPCVpTBw=
+=fD0F
 -----END PGP SIGNATURE-----
