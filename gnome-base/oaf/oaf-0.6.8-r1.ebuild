@@ -1,19 +1,20 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.7.ebuild,v 1.1 2001/10/28 14:10:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8-r1.ebuild,v 1.1 2002/03/24 08:21:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Object Activation Framework for GNOME"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 
 RDEPEND="virtual/glibc
-        >=dev-libs/popt-1.5
+	>=dev-libs/popt-1.5
 	>=gnome-base/ORBit-0.5.10-r1
 	>=dev-libs/libxml-1.8.15"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/perl-5
+	dev-util/indent
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -35,6 +36,7 @@ src_compile() {
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
 		    --sysconfdir=/etc					\
 		    --localstatedir=/var/lib				\
 		    ${myconf} || die
@@ -44,6 +46,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
 	     sysconfdir=${D}/etc					\
 	     localstatedir=${D}/var/lib					\
 	     install || die
