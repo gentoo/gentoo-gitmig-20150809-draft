@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.123 2004/03/03 19:53:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.124 2004/03/17 09:16:40 seemant Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  17 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
+  baselayout-1.8.6.13-r1.ebuild:
+  fix for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>
 
   03 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
   Add gcc2.x compat patch #43097 by Tristan Henderson.

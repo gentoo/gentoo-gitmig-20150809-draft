@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.5 2004/03/03 19:53:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.6 2004/03/17 09:16:40 seemant Exp $
 
 IUSE="bootstrap build livecd static selinux"
 
@@ -149,7 +149,12 @@ keepdir_mount() {
 }
 
 create_dev_nodes() {
-	export PATH="${D}/sbin:${PATH}"
+
+	if [ -z "${DEST}" ]; then
+		DEST=${D}
+	fi
+
+	export PATH="${DEST}/sbin:${PATH}"
 
 	case ${ARCH} in
 		amd64)
@@ -158,43 +163,43 @@ create_dev_nodes() {
 			# up erroring out, because MAKEDEV internally doesn't know what
 			# to use
 			einfo "Using generic-i386 to make amd64 device nodes..."
-			${D}/sbin/MAKEDEV generic-i386
+			${DEST}/sbin/MAKEDEV generic-i386
 			;;
 		x86)
 			einfo "Using generic-i386 to make device nodes..."
-			${D}/sbin/MAKEDEV generic-i386
+			${DEST}/sbin/MAKEDEV generic-i386
 			;;
 		ppc)
 			einfo "Using generic-powerpc to make device nodes..."
-			${D}/sbin/MAKEDEV generic-powerpc
+			${DEST}/sbin/MAKEDEV generic-powerpc
 			;;
 		ppc64)
 			einfo "Using generic-powerpc to make device nodes..."
-			${D}/sbin/MAKEDEV generic-powerpc
+			${DEST}/sbin/MAKEDEV generic-powerpc
 			;;
 		sparc)
 			einfo "Using generic-sparc to make device nodes..."
-			${D}/sbin/MAKEDEV generic-sparc
+			${DEST}/sbin/MAKEDEV generic-sparc
 			;;
 		mips)
 			einfo "Using generic-mips to make device nodes..."
-			${D}/sbin/MAKEDEV generic-mips
+			${DEST}/sbin/MAKEDEV generic-mips
 			;;
 		arm)
 			einfo "Using generic-arm to make device nodes..."
-			${D}/sbin/MAKEDEV generic-arm
+			${DEST}/sbin/MAKEDEV generic-arm
 			;;
 		hppa)
 			einfo "Using generic-hppa to make device nodes..."
-			${D}/sbin/MAKEDEV generic-hppa
+			${DEST}/sbin/MAKEDEV generic-hppa
 			;;
 		*)
 			einfo "Using generic to make device nodes..."
-			${D}/sbin/MAKEDEV generic
+			${DEST}/sbin/MAKEDEV generic
 			;;
 	esac
 
-	${D}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
+	${DEST}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 src_install() {
@@ -524,7 +529,7 @@ pkg_postinst() {
 			else
 				# devices.tar.bz2 will not exist with binary packages ...
 				cd ${ROOT}/dev
-				D="${ROOT}" create_dev_nodes
+				DEST="${ROOT}" create_dev_nodes
 			fi
 		fi
 	fi
