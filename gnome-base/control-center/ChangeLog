@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.52 2003/11/15 02:50:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.53 2003/12/13 00:23:15 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> control-center-2.4.0.ebuild:
   Stable on ia64
@@ -23,6 +23,9 @@
   set ppc in keywords
 
 *control-center-2.4.0 (09 Sep 2003)
+
+  13 Dec 2003; Guy Maratin <gmsoft@gentoo.org> control-center-2.4.0.ebuild :
+  Marked stable on hppa.
 
   09 Sep 2003; foser <foser@gentoo.org> control-center-2.4.0.ebuild :
   New version
