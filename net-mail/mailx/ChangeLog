@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.14 2003/09/21 18:14:12 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.15 2003/09/30 15:31:20 avenj Exp $
+
+  30 Sep 2003; Jon Portnoy <avenj@gentoo.org>
+  mailx-8.1.2.20021129-r2.ebuild :
+  Patch fix.
 
   21 Sep 2003; Jon Portnoy <avenj@gentoo.org>
   mailx-8.1.2.20021129-r2.ebuild, files/mailx-64bit.diff :
