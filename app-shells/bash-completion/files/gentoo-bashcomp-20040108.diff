@@ -1,0 +1,181 @@
+diff -urN gentoo-bashcomp-1.0_beta4/CVS/Entries gentoo-bashcomp/CVS/Entries
+--- gentoo-bashcomp-1.0_beta4/CVS/Entries	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/CVS/Entries	2005-01-08 19:21:27.000000000 -0500
+@@ -0,0 +1,6 @@
++/COPYING/1.2/Thu Jun  3 01:04:41 2004//
++/NEWS/1.3/Thu Jun  3 01:04:40 2004//
++/README/1.2/Thu Jun  3 01:04:41 2004//
++/TODO/1.3/Thu Jun  3 01:04:41 2004//
++D/src////
++/AUTHORS/1.7/Sun Dec  5 05:12:08 2004//
+diff -urN gentoo-bashcomp-1.0_beta4/CVS/Entries.Log gentoo-bashcomp/CVS/Entries.Log
+--- gentoo-bashcomp-1.0_beta4/CVS/Entries.Log	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/CVS/Entries.Log	2005-01-08 19:21:28.000000000 -0500
+@@ -0,0 +1,2 @@
++A D/CVSROOT////
++R D/CVSROOT////
+diff -urN gentoo-bashcomp-1.0_beta4/CVS/Repository gentoo-bashcomp/CVS/Repository
+--- gentoo-bashcomp-1.0_beta4/CVS/Repository	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/CVS/Repository	2004-11-27 13:29:12.000000000 -0500
+@@ -0,0 +1 @@
++gentoo-bashcomp
+diff -urN gentoo-bashcomp-1.0_beta4/CVS/Root gentoo-bashcomp/CVS/Root
+--- gentoo-bashcomp-1.0_beta4/CVS/Root	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/CVS/Root	2004-11-27 13:29:12.000000000 -0500
+@@ -0,0 +1 @@
++:ext:ka0ttic@cvs.sourceforge.net:/cvsroot/gentoo-bashcomp
+diff -urN gentoo-bashcomp-1.0_beta4/NEWS gentoo-bashcomp/NEWS
+--- gentoo-bashcomp-1.0_beta4/NEWS	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/NEWS	2004-06-02 21:04:40.000000000 -0400
+@@ -0,0 +1 @@
++First release on SourceForge.
+\ No newline at end of file
+diff -urN gentoo-bashcomp-1.0_beta4/src/CVS/Entries gentoo-bashcomp/src/CVS/Entries
+--- gentoo-bashcomp-1.0_beta4/src/CVS/Entries	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/src/CVS/Entries	2005-01-08 20:39:25.967753832 -0500
+@@ -0,0 +1,2 @@
++/gentoo/1.19/Sun Jan  9 01:39:25 2005//
++D
+diff -urN gentoo-bashcomp-1.0_beta4/src/CVS/Repository gentoo-bashcomp/src/CVS/Repository
+--- gentoo-bashcomp-1.0_beta4/src/CVS/Repository	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/src/CVS/Repository	2004-11-27 13:29:13.000000000 -0500
+@@ -0,0 +1 @@
++gentoo-bashcomp/src
+diff -urN gentoo-bashcomp-1.0_beta4/src/CVS/Root gentoo-bashcomp/src/CVS/Root
+--- gentoo-bashcomp-1.0_beta4/src/CVS/Root	1969-12-31 19:00:00.000000000 -0500
++++ gentoo-bashcomp/src/CVS/Root	2004-11-27 13:29:13.000000000 -0500
+@@ -0,0 +1 @@
++:ext:ka0ttic@cvs.sourceforge.net:/cvsroot/gentoo-bashcomp
+diff -urN gentoo-bashcomp-1.0_beta4/src/gentoo gentoo-bashcomp/src/gentoo
+--- gentoo-bashcomp-1.0_beta4/src/gentoo	2004-12-05 23:56:32.000000000 -0500
++++ gentoo-bashcomp/src/gentoo	2005-01-08 20:39:25.000000000 -0500
+@@ -2,7 +2,7 @@
+ #
+ # Gentoo Linux Bash Shell Command Completion
+ #
+-# $Id: gentoo-bashcomp-20040108.diff,v 1.1 2005/01/09 01:50:14 ka0ttic Exp $
++# $Id: gentoo-bashcomp-20040108.diff,v 1.1 2005/01/09 01:50:14 ka0ttic Exp $
+ #
+ # Copyright 1999-2004 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License, v2 or later
+@@ -13,7 +13,7 @@
+ #
+ _portdir()
+ {
+-	sed -n -e '/^PORTDIR=/ { s/^[^=]\+=\("[^"]\+\|\S\+\).*/\1/p ; q }' \
++	sed -n -e '/^PORTDIR=/ { s/^[^=]\+="\?\([^"]\+\|\S\+\).*/\1/p ; q }' \
+ 		/etc/make.conf /etc/make.globals
+ }
+ 
+@@ -273,7 +273,7 @@
+ 	cur=${COMP_WORDS[COMP_CWORD]}
+ 	if [ $COMP_CWORD -eq 1 ]; then
+ 		#COMPREPLY=($(compgen -o filenames -X "!*.ebuild" $cur))
+-		COMPREPLY=($(compgen -o filenames))
++		COMPREPLY=($(compgen -o filenames -A file -W "--debug" -- ${cur}))
+ 	elif [ $COMP_CWORD -eq 2 ]; then
+ 		COMPREPLY=($(compgen -W 'clean compile config \
+ 			depend digest \
+@@ -295,7 +295,7 @@
+ #
+ # simple completion for Gentoo style init
+ #
+-complete -W "start stop restart pause zap ineed needsme iuse usesme broken" \
++complete -W "start stop restart pause zap status ineed needsme iuse usesme broken" \
+ 	$(for i in /etc/init.d/*; do echo ${i##*/}; done)
+ 
+ #
+@@ -731,7 +731,7 @@
+ 	for i in "${COMP_WORDS[@]}"; do
+ 		if [ $j -lt $COMP_CWORD ]; then
+ 			j=$((j + 1))
+-			case $i in @(belongs|ch@(anges|eck)|dep@(ends|graph)|files|glsa|list|s@(ize|tats)|uses|which))
++			case $i in @(belongs|ch@(anges|eck)|dep@(ends|graph)|files|glsa|list|s@(ize|tats)|uses|which|hasuse))
+ 				mode=$i
+ 				;;
+ 			esac
+@@ -746,11 +746,11 @@
+ 					COMPREPLY=($(compgen -W "-q --quiet -C --nocolor -h --help -V --version" -- $cur))
+ 					;;
+ 				*)
+-					COMPREPLY=($(compgen -W "belongs changes check depends depgraph files glsa list size stats uses which" -- $cur))
++					COMPREPLY=($(compgen -W "belongs changes check depends depgraph files glsa hasuse list size stats uses which" -- $cur))
+ 					;;
+ 			esac
+ 			;;
+-		changes|depends|glsa|stats)
++		changes|glsa|stats)
+ 			# These commands have not been implemented in 'equery' yet ...
+ 			echo -n "# Not implemented! "
+ 			;;
+@@ -830,12 +830,35 @@
+ 						COMPREPLY=($(compgen -W "-U --no-useflags -l --linear" -- $cur))
+ 						;;
+ 					*)
+-						# Complete on all package names.
+-						_pkgname -A $cur
++						# Complete on installed package names.
++						_pkgname -I $cur
+ 						;;
+ 				esac
+ 			fi
+ 			;;
++		depends)
++			# Only complete if the previous entry on the command line is not
++			# a package name.
++			if [[ ${prev} == ${mode} || ${prev:0:1} == "-" ]]; then
++				case $cur in
++					-*)
++						COMPREPLY=($(compgen -W "-a --all-packages -d --direct -D --indirect" -- $cur))
++						;;
++					*)
++						case $prev in
++						    -a|--all-packages)
++							    # Complete on all package names.							
++							    _pkgname -A $cur
++							    ;;
++						    *)
++							    # Complete on installed package names.
++							    _pkgname -I $cur
++							    ;;
++
++						esac
++				esac
++			fi
++			;;
+ 		check)
+ 			# Only complete if the previous entry on the command line is not
+ 			# a package name.
+@@ -859,12 +882,32 @@
+ 				esac
+ 			fi
+ 			;;
++		hasuse)
++		   	# Only complete if the previous entry on the command line is not
++			# a package name.
++			if [[ ${prev} == ${mode} || ${prev:0:1} == "-" ]]; then
++				case $cur in
++					-*)
++						COMPREPLY=($(compgen -W "-i --installed -I --exclude-installed -p --portage-tree -o --overlay" -- $cur))
++						;;
++					*)
++						local glob loc
++						glob=$(sed -n -e 's/^\([^ ]\+\) - .*$/\1/p' ${portdir}/profiles/use.desc)
++						loc=$(sed -n -e 's/^[^ ]\+:\([^ ]*\) - .*$/\1/p' ${portdir}/profiles/use.local.desc)
++						COMPREPLY=($(compgen -W "$glob $loc" -- $cur))
++						;;
++				esac
++			fi
++			;;
+ 	esac
+ 	return 0
+ }
+ complete -F _equery -o filenames equery
+ }
+ 
++# ekeyword completion
++# contributed by Ciaran McCreesh <ciaranm@gentoo.org>
++
+ have ekeyword && {
+ _ekeyword()
+ {
