@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.3 2005/01/13 18:28:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.4 2005/01/20 14:04:31 vapier Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 DESCRIPTION="Enemy Territory - ${MOD_DESC}"
 
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 x86"
 IUSE="opengl dedicated emul-linux-x86"
 
 DEPEND="app-arch/unzip"
@@ -74,7 +74,7 @@ games-etmod_pkg_postinst() {
 		cp ${samplecfg} ${realcfg}
 	fi
 
-	einfo "To play this mod:             enemy-territory-${MOD_BINS}"
+	einfo "To play this mod:             et-${MOD_BINS}"
 	einfo "To launch a dedicated server: et-${MOD_BINS}-ded"
 	use dedicated && \
 	einfo "To launch server at startup:  /etc/init.d/et-${MOD_NAME}-ded"
