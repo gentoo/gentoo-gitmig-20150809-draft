@@ -1,0 +1,13 @@
+diff -u cl-binary-types-0.84.1.orig/binary-types.lisp cl-binary-types-0.84.1/binary-types.lisp
+--- cl-binary-types-0.84.1.orig/binary-types.lisp	2002-10-25 06:20:52.000000000 -0500
++++ cl-binary-types-0.84.1/binary-types.lisp	2003-10-15 15:38:27.770957296 -0500
+@@ -433,7 +433,7 @@
+   (unless (typep type 'binary-record)
+     (setf type (find-binary-type type)))
+   (unless (typep type 'binary-record)
+-    (error "~S is not of RECORD type."))
++    (error "~S is not of RECORD type." type))
+   (unless (find-if #'(lambda (slot)
+ 		       (eq slot-name (record-slot-name slot)))
+ 		   (binary-record-slots type))
+Only in cl-binary-types-0.84.1: binary-types.lisp~
