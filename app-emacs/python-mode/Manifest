@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 335671e12874b21013a45712d150b500 ChangeLog 1112
+MD5 3271be4cc22470049dc7e7a1770d79b3 ChangeLog 1205
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 5ec0d617968fa3436913945c7713994f python-mode-4.6.ebuild 772
+MD5 9b687c83613f230171cc300823a032be python-mode-4.63-r1.ebuild 877
 MD5 aeabbb29eeb625fcf53e425bad1a6a76 python-mode-4.63.ebuild 780
-MD5 460363141373be332e5be340819af5c8 python-mode-4.63-r1.ebuild 870
 MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
+MD5 2f5fc2b5c01b7202432d5e420db9d66b files/55python-mode-gentoo.el 505
 MD5 7842a604f7fbeda6be9d9b86f6d143bb files/digest-python-mode-4.6 67
 MD5 45d20c84f1cf40ffa73a3471d5e4ac6f files/digest-python-mode-4.63 71
-MD5 2f5fc2b5c01b7202432d5e420db9d66b files/55python-mode-gentoo.el 505
 MD5 45d20c84f1cf40ffa73a3471d5e4ac6f files/digest-python-mode-4.63-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBr+xrVWNWqTUmv+0RAlmwAJ945sZU/Xu8p/FpIRew6qeWDjhlhwCfatMc
-SgF3rgE09J7/32t9KLE310c=
-=dOY9
------END PGP SIGNATURE-----
