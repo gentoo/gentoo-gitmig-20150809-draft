@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.23.ebuild,v 1.1 2001/10/12 14:30:46 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.23.ebuild,v 1.2 2001/11/14 15:56:10 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="esound"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/${A}
-           ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/${P}.tar.gz
+           ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${P}.tar.gz"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 
 DEPEND="virtual/glibc
@@ -20,37 +19,42 @@ RDEPEND="virtual/glibc
 	>=media-libs/audiofile-0.1.9"
 
 src_compile() {                           
+	local myconf
 
-  local myconf
-  if [ "`use tcpd`" ]
-  then
-    myconf="--with-libwrap"
-  else
-    myconf="--without-libwrap"
-  fi
+	if [ "`use tcpd`" ]
+	then
+		myconf="--with-libwrap"
+	else
+		myconf="--without-libwrap"
+	fi
 
-  if [ "`use alsa`" ]
-  then
-    myconf="$myconf --enable-alsa"
-  else
-    myconf="$myconf --enable-alsa=no"
-  fi
+	if [ "`use alsa`" ]
+	then
+		myconf="$myconf --enable-alsa"
+	else
+		myconf="$myconf --enable-alsa=no"
+	fi
 
-  try ./configure --host=${CHOST} --prefix=/usr \
-		  --sysconfdir=/etc/esd $myconf
-  try pmake
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--sysconfdir=/etc/esd \
+		$myconf || die
+
+	emake || die
 }
 
 src_install() {                               
-  cd ${S}
-  try make prefix=${D}/usr sysconfdir=${D}/etc/esd install
-  dodoc AUTHORS COPYING* ChangeLog README TODO
-  dodoc NEWS TIPS
-  dodoc docs/esound.ps
-  docinto html
-  dodoc docs/html/*.html docs/html/*.css
-  docinto html/stylesheet-images
-  dodoc docs/html/stylesheet-images/*.gif
+	make prefix=${D}/usr sysconfdir=${D}/etc/esd install || die
+
+	dodoc AUTHORS COPYING* ChangeLog README TODO NEWS TIPS
+	dodoc docs/esound.ps
+
+	docinto html
+	dodoc docs/html/*.html docs/html/*.css
+
+	docinto html/stylesheet-images
+	dodoc docs/html/stylesheet-images/*.gif
 }
 
 
