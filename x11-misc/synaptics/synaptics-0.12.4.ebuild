@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.12.4.ebuild,v 1.1 2004/02/19 17:12:33 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.12.4.ebuild,v 1.2 2004/02/23 08:33:11 battousai Exp $
 
 # This ebuild overwrites synaptics files installed by <= xfree-4.3.0-r3
 # and xfree-4.3.99.14 >= X >= xfree-4.3.99.8.
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-#RDEPEND=">=x11-base/xfree-4.3.0-r4"
+RDEPEND=">=x11-base/xfree-4.3.0-r4"
 
 src_unpack() {
 	unpack ${A}
