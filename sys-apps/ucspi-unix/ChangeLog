@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-unix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.6 2003/04/23 21:11:29 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.7 2003/12/27 00:03:39 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> ucspi-unix-0.34.ebuild,
+  ucspi-unix-0.36.ebuild, files/ucspi-unix-gentoo-head.patch:
+  Added ~sparc keyword and a patch for 0.36 to fix the change in head syntax.
 
 *ucspi-unix-0.36 (23 Apr 2003)
 
