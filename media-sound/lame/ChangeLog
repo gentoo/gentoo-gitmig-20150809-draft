@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.6 2002/09/09 00:04:48 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.7 2002/09/29 14:52:52 azarah Exp $
 
 *lame-3.92 (23 Apr 2002)
+  29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Libtoolize to fix bug #5638.
+
   09 Sep 2002; Jack Morgan <jmorgan@gentoo.org> :
   Added sparc/saprc64 keywords
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.7 2002/09/23 19:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.92.ebuild,v 1.8 2002/09/29 14:52:52 azarah Exp $
+
+inherit libtool
 
 S=${WORKDIR}/lame-${PV}
 DESCRIPTION="LAME Ain't an Mp3 Encoder"
@@ -10,41 +12,36 @@ HOMEPAGE="http://www.mp3dev.org/mp3/"
 DEPEND="virtual/glibc
 	x86? ( dev-lang/nasm )
 	>=sys-libs/ncurses-5.2
-	gtk?    ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 # Oggvorbis support breaks with -rc3 
 RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
-	gtk?    ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )"
 #	oggvorbis? ( >=media-libs/libvorbis-1.0_rc3 )"
 
-
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 
-src_unpack() {
-	unpack ${A}
-#	cd ${S}
-#	patch -p1 < ${FILESDIR}/lame-3.91-gcc3.diff || die
-}
 
 src_compile() {
+	elibtoolize
 
 	local myconf=""
 	if [ "`use oggvorbis`" ] ; then
-#		myconf="--with-vorbis"
-		myconf="--without-vorbis"
+#		myconf="${myconf} --with-vorbis"
+		myconf="${myconf} --without-vorbis"
 	else
-		myconf="--without-vorbis"
+		myconf="${myconf} --without-vorbis"
 	fi
 	if [ "`use gtk`" ] ; then
-		myconf="$myconf --enable-mp3x"
+		myconf="${myconf} --enable-mp3x"
 	fi
-	if [ "$DEBUG" ] ; then
-		myconf="$myconf --enable-debug=yes"
+	if [ "${DEBUG}" ] ; then
+		myconf="${myconf} --enable-debug=yes"
 	else
-		myconf="$myconf --enable-debug=no"
+		myconf="${myconf} --enable-debug=no"
 	fi
 	
 	./configure --prefix=/usr \
@@ -53,7 +50,7 @@ src_compile() {
 		--enable-nasm \
 		--enable-mp3rtp \
 		--enable-extopt=full \
-		$myconf || die
+		${myconf} || die
 		
 	emake || die
 }
