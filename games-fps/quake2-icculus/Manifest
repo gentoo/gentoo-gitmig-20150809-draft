@@ -1,6 +1,3 @@
-MD5 b856def125fbe7675963724b7eb2c3bd ChangeLog 1199
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 2a381bcbb06765bbc0267281fb21c103 quake2-icculus-0.15-r1.ebuild 4341
 MD5 2219e82edb75f4e2a9fa232afc365c5d files/0.15-Makefile-gcc3.patch 787
 MD5 ad5de2e8c5c06b69b3b5a2dd926a758f files/0.15-Makefile-optflags.patch 260
 MD5 fa58facee98afc741e1928b77be65065 files/README-postinstall 2695
@@ -10,3 +7,6 @@ MD5 b4df11798b5b2777a1097c4d9a61c0df files/sdlquake2.start 46
 MD5 d767ab81dded19a075fc660fdd3f83fd files/0.15-Makefile-noopts.patch 766
 MD5 4247988d46cf59b63b9e668fa1045492 files/0.15-gentoo-path.patch 1693
 MD5 c95a6c91b14235134b9ac58fdee7c5eb files/digest-quake2-icculus-0.15-r1 248
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 b856def125fbe7675963724b7eb2c3bd ChangeLog 1199
+MD5 5b9555b155c9c5b4f830d0cd5a1c8e0a quake2-icculus-0.15-r1.ebuild 4350
