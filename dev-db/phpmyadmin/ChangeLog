@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.30 2003/10/22 15:40:47 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.31 2003/12/15 20:03:27 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> phpmyadmin-2.5.4.ebuild:
+  Fix for bug '32636'
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org> phpmyadmin-2.5.0.ebuild,
   phpmyadmin-2.5.3-r1.ebuild, files/config.inc.php-2.5.2.patch:
