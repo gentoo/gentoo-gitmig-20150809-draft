@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.34 2004/09/22 18:15:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.35 2004/10/08 22:05:24 foser Exp $
+
+  09 Oct 2004; foser <foser@gentoo.org> gcalctool-4.4.19.ebuild :
+  Add intltool dep (#65329)
 
   22 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gcalctool-4.4.16.ebuild:
   Stable on sparc
