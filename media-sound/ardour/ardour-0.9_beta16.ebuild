@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta16.ebuild,v 1.3 2004/06/27 09:32:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta16.ebuild,v 1.4 2004/08/14 02:47:11 squinky86 Exp $
 
 MY_P="${P}.1"
 MY_PV="${PV}.1"
@@ -25,7 +25,7 @@ RDEPEND="dev-util/pkgconfig
 	>=media-libs/libsamplerate-0.0.14
 	>=media-libs/liblrdf-0.3.1
 	>=dev-libs/libxml2-2.5.7
-	=media-libs/libart_lgpl-2.3*"
+	>=media-libs/libart_lgpl-2.3.16"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
