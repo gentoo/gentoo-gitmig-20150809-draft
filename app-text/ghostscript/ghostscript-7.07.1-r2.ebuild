@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.10 2004/07/01 11:57:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.11 2004/08/04 16:10:14 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -38,7 +38,7 @@ src_unpack() {
 	cd ${S}
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs7.05.6-cjk.diff
+		epatch ${FILESDIR}/gs7.05.6-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 

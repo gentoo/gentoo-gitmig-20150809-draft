@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.15 2004/07/13 21:15:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.16 2004/08/04 16:10:14 lanius Exp $
 
 inherit eutils
 
@@ -38,14 +38,15 @@ src_unpack() {
 	unpack gnu-gs-fonts-other-6.0.tar.gz
 
 	# Brother HL-12XX support
-	cp ${FILESDIR}/gs7.05-gdevhl12.c ${S}/src/gdevhl12.c || die
+	cp ${FILESDIR}/gs7.05-gdevhl12.c.bz2 ${S}/src/gdevhl12.c.bz2 || die
+	bzip2 -d ${S}/src/gdevhl12.c.bz2 || die
 	mv ${S}/src/Makefile.in ${S}/src/Makefile.in.orig
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
 		${S}/src/Makefile.in.orig > ${S}/src/Makefile.in || die
 
 ##	patch -p0 < ${FILESDIR}/png.diff || die "patch failed"
 
-	use cjk && epatch ${FILESDIR}/gs${PV}-cjk.diff
+	use cjk && epatch ${FILESDIR}/gs${PV}-cjk.diff.bz2
 
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
 	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch || die
