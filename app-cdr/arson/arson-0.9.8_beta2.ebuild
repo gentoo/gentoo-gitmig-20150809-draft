@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.8 2004/07/15 21:21:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.9 2004/07/22 04:59:53 lv Exp $
 
 inherit kde eutils gcc
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/arson/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 sparc amd64"
 IUSE="oggvorbis"
 
 DEPEND=">=media-sound/cdparanoia-3.9.8
