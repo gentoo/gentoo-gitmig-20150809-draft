@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.2 2003/08/11 05:37:49 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.4.ebuild,v 1.3 2003/11/16 09:42:02 brandy Exp $
 
 inherit perl-module
 
@@ -29,9 +29,9 @@ src_compile() {
 src_install () {
 	exeinto usr/bin
 	newexe whois bwwhois
-	dosym bwwhois /usr/bin/whois
 
-	doman whois.1
+	mv whois.1 bwwhois.1
+	doman bwwhois.1
 
 	insinto etc/whois
 	doins whois.conf tld.conf sd.conf
