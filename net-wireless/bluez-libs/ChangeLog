@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.4 2003/04/27 14:32:02 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.5 2003/05/09 16:13:46 latexer Exp $
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> bluez-libs-2.2.ebuild, bluez-libs-2.3.ebuild,
+  bluez-libs-2.4.ebuild:
+  Marked stable now that gentoo-sources-2.4.20-r4 is released.
 
 *bluez-libs-2.4 (27 Apr 2003)
 

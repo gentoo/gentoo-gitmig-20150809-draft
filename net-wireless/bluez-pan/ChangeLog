@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-pan
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-pan/ChangeLog,v 1.2 2003/04/27 14:28:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-pan/ChangeLog,v 1.3 2003/05/09 16:14:52 latexer Exp $
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> bluez-pan-1.1.ebuild:
+  Marked stable now that gentoo-sources-2.4.20-r4 is released
 
 *bluez-pan-1.1 (27 Apr 2003)
 

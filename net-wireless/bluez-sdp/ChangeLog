@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-sdp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-sdp/ChangeLog,v 1.4 2003/04/27 14:30:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-sdp/ChangeLog,v 1.5 2003/05/09 16:15:49 latexer Exp $
+
+  09 May 2003; Peter Johanson <latexer@gentoo.org> bluez-sdp-0.8.ebuild, bluez-sdp-1.0.ebuild,
+  bluez-sdp-1.1.ebuild:
+  Marked stable now that gentoo-sources-2.4.20-r4 is released
 
 *bluez-sdp-1.1 (27 Apr 2003)
 
