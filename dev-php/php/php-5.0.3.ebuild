@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3.ebuild,v 1.3 2005/02/01 15:47:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3.ebuild,v 1.4 2005/02/11 23:01:36 vapier Exp $
 
 PHPSAPI="cli"
 MY_P="${PN}-${PV}"
@@ -19,6 +19,7 @@ SLOT="0"
 src_unpack() {
 	php5-sapi_src_unpack
 	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
+	epatch ${FILESDIR}/${P}-missing-arches.patch
 }
 
 src_compile () {

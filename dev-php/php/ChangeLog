@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.141 2005/02/01 15:47:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.142 2005/02/11 23:01:36 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/php-5.0.3-missing-arches.patch, php-5.0.3.ebuild:
+  Add fix for ia64/s390.
 
   01 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> php-5.0.3.ebuild:
   Marked ~amd64 as the c-client issues should now be resolved in the latest

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r1.ebuild,v 1.5 2005/02/01 15:50:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r1.ebuild,v 1.6 2005/02/11 23:02:21 vapier Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -74,6 +74,7 @@ src_unpack() {
 
 	php5-sapi_src_unpack
 	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
+	epatch ${FILESDIR}/${P}-missing-arches.patch
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.205 2005/02/01 17:53:43 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.206 2005/02/11 23:02:21 vapier Exp $
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/mod_php-5.0.3-missing-arches.patch, mod_php-5.0.3-r1.ebuild,
+  mod_php-5.0.3.ebuild:
+  Add fix for ia64/s390.
 
   01 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> mod_php-5.0.3.ebuild:
   Marked ~amd64 too, -r1 is currently masked.
