@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.13.1.ebuild,v 1.4 2004/06/25 00:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.13.1.ebuild,v 1.5 2004/07/01 22:38:25 eradicator Exp $
 
 DESCRIPTION="A great newsreader for alt.binaries.*"
 HOMEPAGE="http://www.bnr2.org/"
@@ -11,7 +11,7 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="virtual/x11"
 
 S=${WORKDIR}/BNR2

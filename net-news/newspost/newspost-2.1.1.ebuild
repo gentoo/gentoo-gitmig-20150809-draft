@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.7 2004/06/25 00:26:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-2.1.1.ebuild,v 1.8 2004/07/01 22:38:45 eradicator Exp $
 
 DESCRIPTION="a usenet binary autoposter for unix"
 HOMEPAGE="http://newspost.unixcab.org/"
@@ -14,7 +14,7 @@ IUSE=""
 # but it should mean that it is 64bit clean.
 KEYWORDS="x86 ~amd64"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
