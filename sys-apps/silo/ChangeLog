@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/silo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.9 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/silo/ChangeLog,v 1.10 2003/04/19 05:22:05 kumba Exp $
+
+*silo-1.3.0 (19 Apr 2003)
+
+  19 Apr 2003; Joshua Kinard <kumba@gentoo.org> silo-1.3.0.ebuild :
+  New version (1.2.6 -> 1.3.0), New SILO Homepage: http://www.sparc-boot.org/
+
 
 *silo-1.2.5 (15 Feb 2002)
 
