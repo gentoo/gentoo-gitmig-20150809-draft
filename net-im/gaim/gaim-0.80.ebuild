@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.3 2004/07/19 11:04:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.4 2004/07/21 16:51:42 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -64,6 +64,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gaim-0.81cvs-gtkblist_dnd.diff
 	epatch ${FILESDIR}/gaim-0.81cvs-icon_scaling.diff
 	epatch ${FILESDIR}/gaim-0.81cvs-irc-ison-lessflood.patch
+	epatch ${FILESDIR}/gaim-0.81cvs-chatbutton-crashfix.patch
 }
 
 src_compile() {
