@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.5 2004/03/31 01:45:40 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.6 2004/04/18 08:14:33 eradicator Exp $
 
 inherit eutils fixheadtails
 
@@ -30,7 +30,12 @@ src_unpack() {
 	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
 
 	# Compile fix for #41329.
-	[ `use sparc` ] && sed -i 's/-fpic/-fPIC/' config/compilers/gcc_defaults.mak
+	sed -i 's/-fpic/-fPIC/' config/compilers/gcc_defaults.mak
+}
+
+src_compile() {
+	econf || die
+	emake -j1 || die
 }
 
 src_install() {
