@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.12-r1.ebuild,v 1.1 2004/12/19 07:27:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.12-r1.ebuild,v 1.2 2004/12/19 07:30:45 cardoe Exp $
 
 inherit linux-info
 
@@ -26,6 +26,7 @@ src_unpack() {
 		eerror "You have a kernel patched with Software Suspend 2 (swsusp2)"
 		eerror "but don't have it enabled. You must remove the patch or"
 		eerror "enable Software Suspend 2 (swsusp2)."
+		eerror "http://bugs.gentoo.org/show_bug.cgi?id=74864"
 		die "Fix your kernel"
 	fi
 
