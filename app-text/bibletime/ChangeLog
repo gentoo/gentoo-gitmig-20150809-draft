@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibletime
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.6 2003/10/23 17:14:27 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.7 2004/04/08 22:20:25 squinky86 Exp $
+
+*bibletime-1.4.1 (04 Apr 2004)
+
+  04 Apr 2004; Jon Hood <squinky86@gentoo.org> bibletime-1.4.1.ebuild:
+  version bump
 
   23 Oct 2003; Caleb Tennis <caleb@gentoo.org> bibletime-1.2.2.ebuild,
   bibletime-1.3.ebuild, bibletime-1.3_beta4.ebuild, bibletime-1.3_rc1.ebuild:
