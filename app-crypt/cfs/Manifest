@@ -1,5 +1,5 @@
-MD5 ed5edb128e352f2660bdd54c9ca17c1f ChangeLog 427
-MD5 1f08be5da55eaffde5a785412aaed858 cfs-1.4.1.14.ebuild 2143
+MD5 27ee5b64c6a34ce2549ede727337d37b ChangeLog 513
+MD5 7bd9c248558ff6726670e9965ccdc247 cfs-1.4.1.14.ebuild 2141
 MD5 2bfae1e5bb975f12d5062aa546c12884 metadata.xml 224
 MD5 0b0cdabd6032b25050b45428de2ec859 files/README.Gentoo 1584
 MD5 32480c3ff8af77c971dae9a2462a812d files/cfsd.init 679

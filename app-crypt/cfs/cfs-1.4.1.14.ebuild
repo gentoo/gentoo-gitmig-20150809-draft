@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.1 2004/09/17 21:48:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.2 2004/09/17 21:54:07 mkennedy Exp $
 
 inherit eutils
 
@@ -76,6 +76,6 @@ src_install() {
 
 pkg_postinst() {
 	rm -f /var/lib/cfs/.cfsfs/.keep
-	einfo "Please read /usr/share/docs/cfs-${PF}/README.Gentoo for"
+	einfo "Please read /usr/share/docs/${PF}/README.Gentoo for"
 	einfo "information on how to get started with CFS on Gentoo."
 }

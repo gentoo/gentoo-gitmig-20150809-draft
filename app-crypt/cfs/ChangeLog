@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cfs
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.1 2004/09/17 21:48:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.2 2004/09/17 21:54:07 mkennedy Exp $
+
+  17 Sep 2004; <mkennedy@gentoo.org> cfs-1.4.1.14.ebuild:
+  Minor typographical fix.
 
 *cfs-1.4.1.14 (17 Sep 2004)
 
