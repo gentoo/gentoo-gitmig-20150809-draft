@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.99.ebuild,v 1.8 2004/10/16 23:57:20 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.99.ebuild,v 1.9 2005/03/09 19:19:35 corsair Exp $
 
 inherit perl-module
 

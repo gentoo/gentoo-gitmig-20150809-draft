@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/Data-Dumper-2.101.ebuild,v 1.10 2004/10/16 23:57:21 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/Data-Dumper-2.101.ebuild,v 1.11 2005/03/09 19:20:13 corsair Exp $
 inherit perl-module
 
 DESCRIPTION="Convert data structure into perl code"

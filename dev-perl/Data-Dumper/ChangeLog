@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Dumper
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/ChangeLog,v 1.7 2004/12/24 15:02:16 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/ChangeLog,v 1.8 2005/03/09 19:20:13 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> Data-Dumper-2.121.ebuild:
+  Stable on ppc64
 
   25 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Data-Dumper-2.121.ebuild:
   added ~ppc64
