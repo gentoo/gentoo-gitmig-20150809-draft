@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.2.ebuild,v 1.1 2004/09/22 20:08:41 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en/babytrans-en-0.2.ebuild,v 1.2 2004/10/03 11:10:11 blubb Exp $
 
 MY_P="english.dic.gz"
 MY_F="english.dic"
@@ -10,7 +10,7 @@ SRC_URI="${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 RESTRICT="fetch"
 
