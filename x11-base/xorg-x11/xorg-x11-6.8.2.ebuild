@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.6 2005/02/13 22:32:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.7 2005/02/15 03:46:58 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -442,8 +442,6 @@ setup_multilib() {
 	# and a few other apps to work.
 	if ! has_multilib_profile; then
 		use amd64 && get_libdir_override lib64
-		# lib32 isnt a supported configuration (yet?)
-		[ "$(get_libdir)" == "lib32" ] && get_libdir_override lib
 	fi
 }
 
@@ -1510,6 +1508,23 @@ check_migrate_return() {
 		einfo "${MIGRATE_METHOD} successful!"
 	else
 		die "${MIGRATE_METHOD} failed. Exit code: ${MIGRATE_RETURN}."
+	fi
+
+	# Migration fubars lib symlinks -- eradicator
+	if use amd64; then
+		if [[ -L ${ROOT}usr/lib64 ]]; then
+			rm ${ROOT}usr/lib64
+			dosym lib ${ROOT}usr/lib64
+		elif [[ -L ${ROOT}usr/lib ]]; then
+			rm -f ${ROOT}usr/lib
+			dosym lib64 ${ROOT}usr/lib
+		elif [[ -L ${ROOT}usr/lib32 ]]; then
+			if has_multilib_profile; then
+				dosym lib ${ROOT}usr/lib32
+			else
+				dosym ../emul/linux/x86/usr/lib ${ROOT}usr/lib32
+			fi
+		fi
 	fi
 }
 
