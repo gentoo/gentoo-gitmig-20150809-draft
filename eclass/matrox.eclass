@@ -1,11 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.6 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
 # This eclass is designed to reduce code duplication in the mtxdrivers* ebuilds.
 # The only addition to mtxdrivers-pro is OpenGL stuff.
+
+inherit eutils
 
 ECLASS="matrox"
 INHERITED="${INHERITED} ${ECLASS}"
@@ -77,11 +79,11 @@ matrox_src_compile() {
 
 matrox_base_src_install() {
 	# Kernel Module
-	dodir /lib/modules/${KV}/kernel/drivers/video; insinto /lib/modules/${KV}/kernel/drivers/video
+	dodir /$(get_libdir)/modules/${KV}/kernel/drivers/video; insinto /$(get_libdir)/modules/${KV}/kernel/drivers/video
 	doins src/kernel/mtx.o
 
 	# X Driver (2D)
-	dodir /usr/X11R6/lib/modules/drivers; insinto /usr/X11R6/lib/modules/drivers
+	dodir /usr/X11R6/$(get_libdir)/modules/drivers; insinto /usr/X11R6/$(get_libdir)/modules/drivers
 	doins xfree86/${GENTOO_X_VERSION}/mtx_drv.o
 }
 

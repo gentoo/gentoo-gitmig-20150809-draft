@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.6 2004/07/28 12:59:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.7 2004/09/15 23:10:21 kugelfang Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
 
-inherit base
+inherit base eutils
 ECLASS="eclipse-ext"
 INHERITED="${INHERITED} ${ECLASS}"
 IUSE="${IUSE}"
@@ -28,7 +28,7 @@ eclipse_ext_basedir="/usr/lib-eclipse-${eclipse_ext_slot}"
 function eclipse-ext_require-slot {
 	# karltk: Should probably add support for a span of slots
 	local slot=$1
-	if [ ! -d /usr/lib/eclipse-${slot} ] ; then
+	if [ ! -d /usr/$(get_libdir)/eclipse-${slot} ] ; then
 		eerror "Cannot find any installed Eclipse SDK for slot ${slot}"
 		return 1
 	fi
@@ -56,7 +56,7 @@ function eclipse-ext_create-ext-layout {
 		dodir ${eclipse_ext_basedir}/{features,plugins}
 		touch ${D}/${eclipse_ext_basedir}/.eclipseextension
 	else
-		eclipse_ext_basedir="/usr/lib/eclipse-${eclipse_ext_slot}"
+		eclipse_ext_basedir="/usr/$(get_libdir)/eclipse-${eclipse_ext_slot}"
 		dodir ${eclipse_ext_basedir}/{features,plugins}
 	fi
 }

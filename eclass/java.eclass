@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.17 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.18 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+
+inherit eutils
 
 ECLASS=java
 INHERITED="$INHERITED $ECLASS"
@@ -85,7 +87,7 @@ install_mozilla_plugin() {
 	bn=`basename $1`
 
 	if use mozilla ; then
-		dodir /usr/lib/mozilla/plugins
-		dosym $1 /usr/lib/mozilla/plugins/${bn}
+		dodir /usr/$(get_libdir)/mozilla/plugins
+		dosym $1 /usr/$(get_libdir)/mozilla/plugins/${bn}
 	fi
 }

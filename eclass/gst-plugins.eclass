@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.18 2004/08/08 15:30:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.19 2004/09/15 23:10:21 kugelfang Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -13,6 +13,8 @@
 # defined in the source, in case of spider usage obtain recommended plugins to use from 
 # Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer 
 # or the gstreamer team.
+
+inherit eutils
 
 ECLASS="gst-plugins"
 INHERITED="$INHERITED $ECLASS"
@@ -138,8 +140,8 @@ gst-plugins_src_unpack() {
 
 	# Link with the syswide installed interfaces if needed
 	gst-plugins_find_plugin_dir
-	sed -e "s:\$(top_builddir)/gst-libs/gst/libgstinterfaces:/usr/lib/libgstinterfaces:" \
-		-e "s:\${top_builddir}/gst-libs/gst/libgstinterfaces:/usr/lib/libgstinterfaces:" \
+	sed -e "s:\$(top_builddir)/gst-libs/gst/libgstinterfaces:/usr/$(get_libdir)/libgstinterfaces:" \
+		-e "s:\${top_builddir}/gst-libs/gst/libgstinterfaces:/usr/$(get_libdir)/libgstinterfaces:" \
 		-i Makefile.in
 	cd ${S}
 

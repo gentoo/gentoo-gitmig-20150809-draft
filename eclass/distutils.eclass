@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.24 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.25 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -19,7 +19,7 @@
 # PYTHON_SLOT_VERSION     - for Zope support
 # DOCS                    - additional DOCS
 
-inherit python
+inherit python eutils
 
 ECLASS=distutils
 INHERITED="$INHERITED $ECLASS"
@@ -68,7 +68,7 @@ distutils_pkg_postrm() {
 		ebegin "Performing Python Module Cleanup .."
 		if [ -n "${PYTHON_MODNAME}" ]; then
 			for pymod in ${PYTHON_MODNAME}; do
-				for moddir in "`ls -d --color=none -1 ${ROOT}usr/lib/python*/site-packages/${pymod} 2> /dev/null`"; do
+				for moddir in "`ls -d --color=none -1 ${ROOT}usr/$(get_libdir)/python*/site-packages/${pymod} 2> /dev/null`"; do
 					python_mod_cleanup ${moddir}
 				done
 			done
@@ -88,8 +88,8 @@ distutils_pkg_postinst() {
 	if has_version ">=dev-lang/python-2.3"; then
 		python_version
 		for pymod in "${PYTHON_MODNAME}"; do
-			if [ -d "${ROOT}usr/lib/python${PYVER}/site-packages/${pymod}" ]; then
-				python_mod_optimize ${ROOT}usr/lib/python${PYVER}/site-packages/${pymod}
+			if [ -d "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}" ]; then
+				python_mod_optimize ${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/${pymod}
 			fi
 		done			
 	fi		

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.3 2004/09/11 14:04:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.4 2004/09/15 23:10:21 kugelfang Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -9,6 +9,8 @@
 # The inheriting ebuild should provide a "DESCRIPTION", "KEYWORDS" and, if
 # necessary, add "(R|P)DEPEND"encies. Additionnaly, the inheriting ebuild's
 # name must begin by "embassy-".
+
+inherit eutils
 
 ECLASS=embassy
 INHERITED="$INHERITED $ECLASS"
@@ -43,10 +45,10 @@ embassy_src_unpack() {
 	unpack ${A}
 	mkdir EMBOSS-${EBOV}/embassy
 	mv ${EF} EMBOSS-${EBOV}/embassy/
-	cp /usr/lib/libplplot.la EMBOSS-${EBOV}/plplot/
-	cp /usr/lib/libajax.la EMBOSS-${EBOV}/ajax/
-	cp /usr/lib/libajaxg.la EMBOSS-${EBOV}/ajax/
-	cp /usr/lib/libnucleus.la EMBOSS-${EBOV}/nucleus/
+	cp /usr/$(get_libdir)/libplplot.la EMBOSS-${EBOV}/plplot/
+	cp /usr/$(get_libdir)/libajax.la EMBOSS-${EBOV}/ajax/
+	cp /usr/$(get_libdir)/libajaxg.la EMBOSS-${EBOV}/ajax/
+	cp /usr/$(get_libdir)/libnucleus.la EMBOSS-${EBOV}/nucleus/
 }
 
 embassy_src_compile() {

@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.6 2004/06/27 18:42:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.7 2004/09/15 23:10:21 kugelfang Exp $
 
 # Author: foser <foser@gentoo.org>
 
 # Font Eclass
 #
 # Eclass to make font installation more uniform
+
+inherit eutils
 
 ECLASS="font"
 INHERITED="$INHERITED $ECLASS"
@@ -41,7 +43,7 @@ font_xfont_config() {
 		mkfontdir \
 			-e /usr/share/fonts/encodings \
 			-e /usr/share/fonts/encodings/large \
-			-e /usr/X11R6/lib/X11/fonts/encodings \
+			-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
 			${D}/usr/share/fonts/${PN}
 		if [ -e ${FONT_S}/fonts.alias ] ;
 		then

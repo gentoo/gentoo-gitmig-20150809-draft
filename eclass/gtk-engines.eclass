@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.29 2004/07/23 13:10:02 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.30 2004/09/15 23:10:21 kugelfang Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -18,6 +18,7 @@
 #
 #   emerge =gtk-themes-1*
 
+inherit eutils
 
 ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
@@ -172,7 +173,7 @@ gtk-engines_src_install() {
 	# Some corrections to misc files
 	if [ "X${ENGINE}" = "Xxenophilia" ]
 	then
-		dodir /usr/X11R6/lib/X11/fonts/misc
+		dodir /usr/X11R6/$(get_libdir)/X11/fonts/misc
 		
 		mv fonts/Makefile fonts/Makefile.orig
 		sed -e 's:/usr:${D}/usr:' \
@@ -184,7 +185,7 @@ gtk-engines_src_install() {
 
 	einstall \
 		THEME_DIR=${D}/usr/share/themes \
-		ENGINE_DIR=${D}/usr/lib/gtk/themes/engines \
+		ENGINE_DIR=${D}/usr/$(get_libdir)/gtk/themes/engines \
 		|| die "Installation failed"
 
 	# Remove unwanted stuff, since some engines include GTK-1 and GTK-2
@@ -193,9 +194,9 @@ gtk-engines_src_install() {
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
-			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/Mist/gtk
+			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/Mist/gtk
 		else
-			rm -rf ${D}/usr/lib/gtk-2.0 ${D}/usr/share/themes/Mist/gtk-2.0
+			rm -rf ${D}/usr/$(get_libdir)/gtk-2.0 ${D}/usr/share/themes/Mist/gtk-2.0
 		fi
 
 		rm -rf ${D}/usr/share/themes/Mist/metacity-1
@@ -209,19 +210,19 @@ gtk-engines_src_install() {
 			mv ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc-2.0 \
 			   ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc
 
-			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/Geramik/gtk
+			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/Geramik/gtk
 		else
-			rm -rf ${D}/usr/lib/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
+			rm -rf ${D}/usr/$(get_libdir)/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
 		fi
 		
 	elif [ "X${ENGINE}" = "Xlighthouseblue" ]
 	then
 		if [ "$SLOT" -eq "2" ]
 		then
-			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/LighthouseBlue/gtk
+			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/LighthouseBlue/gtk
 		else
 			rm -rf \
-				${D}/usr/lib/gtk-2.0 \
+				${D}/usr/$(get_libdir)/gtk-2.0 \
 				${D}/usr/share/themes/LighthouseBlue/gtk-2.0
 		fi
 	fi
@@ -237,7 +238,7 @@ gtk-engines_pkg_postinst() {
 	if [ "$INSTALL_FONTS" -ne 0 ]
 	then
 		echo ">>> Updating X fonts..."
-		mkfontdir /usr/X11R6/lib/X11/fonts/misc
+		mkfontdir /usr/X11R6/$(get_libdir)/X11/fonts/misc
 		xset fp rehash || fonts_notice
 	fi
 }
@@ -246,7 +247,7 @@ gtk-engines_pkg_postrm() {
 	if [ "$INSTALL_FONTS" -ne 0 ]
 	then
 		echo ">>> Updating X fonts..."
-		mkfontdir /usr/X11R6/lib/X11/fonts/misc
+		mkfontdir /usr/X11R6/$(get_libdir)/X11/fonts/misc
 		xset fp rehash || fonts_notice
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.8 2004/06/26 19:08:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.9 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -8,7 +8,9 @@
 
 # Some handy constants
 
-CLFASLROOT=/usr/lib/common-lisp/
+inherit eutils
+
+CLFASLROOT=/usr/$(get_libdir)/common-lisp/
 CLSOURCEROOT=/usr/share/common-lisp/source/
 CLSYSTEMROOT=/usr/share/common-lisp/systems/
 
@@ -40,7 +42,7 @@ EOF
 		exit 1
 	fi
 	IMPL=$1
-	FILE="/usr/lib/common-lisp/bin/$IMPL.sh"
+	FILE="/usr/$(get_libdir)/common-lisp/bin/$IMPL.sh"
 	if [ ! -f "$FILE" ] ; then
 		cat <<EOF
 $PROGNAME: I cannot find the script $FILE for the implementation $IMPL
@@ -55,8 +57,8 @@ EOF
 	fi
 	# install CLC into the lisp
 	sh "$FILE" install-clc || (echo "Installation of CLC failed" >&2 ; exit 3)
-	mkdir /usr/lib/common-lisp/$IMPL &>/dev/null || true
-	chown cl-builder:cl-builder /usr/lib/common-lisp/$IMPL
+	mkdir /usr/$(get_libdir)/common-lisp/$IMPL &>/dev/null || true
+	chown cl-builder:cl-builder /usr/$(get_libdir)/common-lisp/$IMPL
 
 	# now recompile the stuff
 	for i  in /usr/share/common-lisp/systems/*.asd	; do
@@ -100,7 +102,7 @@ EOF
 		exit 1
 	fi
 	IMPL=$1
-	IMPL_BIN="/usr/lib/common-lisp/bin/$IMPL.sh"
+	IMPL_BIN="/usr/$(get_libdir)/common-lisp/bin/$IMPL.sh"
 	if [ ! -f "$IMPL_BIN" ] ; then
 		cat <<EOF
 $PROGNAME: No implementation of the name $IMPL is registered
@@ -123,7 +125,7 @@ EOF
 	sh $IMPL_BIN remove-clc || echo "De-installation of CLC failed" >&2
 	clc-autobuild-impl $IMPL inherit
 	# Just remove the damn subtree
-	(cd / ; rm -rf "/usr/lib/common-lisp/$IMPL/" ; true )
+	(cd / ; rm -rf "/usr/$(get_libdir)/common-lisp/$IMPL/" ; true )
 	echo "$PROGNAME: Common Lisp implementation $IMPL uninstalled"
 }
 
@@ -131,7 +133,7 @@ reregister-all-common-lisp-implementations() {
 	# Rebuilds all common lisp implementations
 	# Written by Kevin Rosenberg <kmr@debian.org>
 	# GPL-2 license
-	local clc_bin_dir=/usr/lib/common-lisp/bin
+	local clc_bin_dir=/usr/$(get_libdir)/common-lisp/bin
 	shopt -s nullglob
 	cd $clc_bin_dir
 	for impl_bin in *.sh; do
@@ -151,17 +153,17 @@ reregister-all-common-lisp-implementations() {
 impl-save-timestamp-hack() {
 	local impl=$1
 	dodir /usr/share/${impl}
-	tar cpjf ${D}/usr/share/${impl}/portage-timestamp-compensate -C ${D}/usr/lib/${impl} .
+	tar cpjf ${D}/usr/share/${impl}/portage-timestamp-compensate -C ${D}/usr/$(get_libdir)/${impl} .
 }
 
 impl-restore-timestamp-hack() {
 	local impl=$1
-	tar xjpfo /usr/share/${impl}/portage-timestamp-compensate -C /usr/lib/${impl}
+	tar xjpfo /usr/share/${impl}/portage-timestamp-compensate -C /usr/$(get_libdir)/${impl}
 }
 
 impl-remove-timestamp-hack() {
 	local impl=$1
-	rm -rf /usr/lib/${impl} &>/dev/null || true
+	rm -rf /usr/$(get_libdir)/${impl} &>/dev/null || true
 }
 
 test-in() {
@@ -177,12 +179,12 @@ test-in() {
 
 standard-impl-postinst() {
 	local impl=$1
-	rm -rf /usr/lib/common-lisp/${impl}/* &>/dev/null || true
-	chown cl-builder:cl-builder /usr/lib/common-lisp/${impl}
+	rm -rf /usr/$(get_libdir)/common-lisp/${impl}/* &>/dev/null || true
+	chown cl-builder:cl-builder /usr/$(get_libdir)/common-lisp/${impl}
 	if test-in ${impl} cmucl sbcl; then
 		impl-restore-timestamp-hack ${impl}
 	fi
-	chown -R root:root /usr/lib/${impl}
+	chown -R root:root /usr/$(get_libdir)/${impl}
 	/usr/bin/clc-autobuild-impl ${impl} yes
 	register-common-lisp-implementation ${impl}
 }
@@ -195,7 +197,7 @@ standard-impl-postrm() {
 		if test-in ${impl} cmucl sbcl; then
 			impl-remove-timestamp-hack ${impl}
 		fi
-		rm -rf /usr/lib/common-lisp/${impl}/*
+		rm -rf /usr/$(get_libdir)/common-lisp/${impl}/*
 	fi
 }
 

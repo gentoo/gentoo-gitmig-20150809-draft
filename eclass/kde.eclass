@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.105 2004/09/03 14:30:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.106 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -61,7 +61,7 @@ kde_src_compile() {
 	[ -z "$1" ] && kde_src_compile all
 
 	cd ${S}
-	export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
+	export kde_widgetdir="$KDEDIR/$(get_libdir)/kde3/plugins/designer"
 
 	# fix the sandbox errors "can't writ to .kde or .qt" problems.
 	# this is a fake homedir that is writeable under the sandbox, so that the build process

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.9 2004/09/15 23:10:21 kugelfang Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -41,6 +41,8 @@
 # 
 # - liquidx@gentoo.org (16 Jun 2003)
 
+inherit eutils
+
 ECLASS="gtk-engines2"
 INHERITED="$INHERITED $ECLASS"
 
@@ -51,14 +53,14 @@ HOMEPAGE="http://art.gnome.org/ http://themes.freshmeat.net/"
 
 if has_version "=x11-libs/gtk+-1.2*"; then
 	HAS_GTK1=1
-	GTK1_ENGINES_DIR=/usr/lib/gtk/themes/engines
+	GTK1_ENGINES_DIR=/usr/$(get_libdir)/gtk/themes/engines
 fi	
 
 if has_version ">=x11-libs/gtk+-2" || use gtk2; then
 	HAS_GTK2=1
 	GTK2_FULL_VER=$(pkg-config gtk+-2.0 --modversion 2>/dev/null)
 	GTK2_MAJOR_VER=${GTK2_FULL_VER%.*}.0
-	GTK2_ENGINES_DIR=/usr/lib/gtk-2.0/${GTK2_MAJOR_VER}/engines
+	GTK2_ENGINES_DIR=/usr/$(get_libdir)/gtk-2.0/${GTK2_MAJOR_VER}/engines
 fi
 
 # --- define some deps for binary packages

@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.16 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.17 2004/09/15 23:10:21 kugelfang Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
 # This eclass contains (or should) functions to get common info about gcc
+
+inherit eutils
 
 ECLASS=gcc
 INHERITED="$INHERITED $ECLASS"
@@ -81,7 +83,7 @@ gcc-micro-version() {
 
 # Returns gcc's internal library path
 gcc-libpath() {
-	echo "/usr/lib/gcc-lib/$($(gcc-getCC) -dumpmachine)/$(gcc-fullversion)"
+	echo "/usr/$(get_libdir)/gcc-lib/$($(gcc-getCC) -dumpmachine)/$(gcc-fullversion)"
 }
 
 # Returns the full version of libstdc++.so
