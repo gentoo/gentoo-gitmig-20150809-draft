@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+    <email>sejo@gentoo.org</email>
+    <name>Maes Jochen</name>
+</maintainer>
+<longdescription>
+xpg is a GUI tool for postgresql, it allows you to create databases, 
+users, queries. Overall it's a very good database GUI
+</longdescription>
+</pkgmetadata>
