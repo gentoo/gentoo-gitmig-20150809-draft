@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0.ebuild,v 1.1 2003/03/16 06:59:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0.ebuild,v 1.2 2003/03/16 07:05:25 absinthe Exp $
 
 S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="Jakarta-Commons library for working with command line arguments and options"
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install () {
 	dojar target/*.jar || die "Unable to Install"
-	use doc && dohtml -r dist/docs/*
+	use doc && dohtml -r target/docs/*
 }
