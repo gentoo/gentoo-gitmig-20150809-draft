@@ -152,7 +152,8 @@ sys-apps/fakeroot
 
 # <george@gentoo.org> (09 Aug 2002)
 # masked for testing (issue fixed)
-=dev-lang/R-1.5.1
+# tested Ok, unmasking
+#=dev-lang/R-1.5.1
 
 # <george@gentoo.org> (09 Aug 2002)
 # does not build
