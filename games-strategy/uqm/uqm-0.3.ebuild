@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.1 2003/09/12 06:25:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.2 2003/09/15 08:55:11 msterret Exp $
 
 inherit games
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/glibc
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	sys-apps/textutils
+	sys-apps/coreutils
 	app-arch/unzip"
 
 src_unpack() {
