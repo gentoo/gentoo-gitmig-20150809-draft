@@ -1,3 +1,5 @@
-MD5 64e6c5b3c1007ec7fc3c894d0ff91334 adabindx-0.7.2.ebuild 1039
 MD5 8af79ee1afd8aa228951f393f79b2b00 files/adabindx-0.7.2.diff 219745
 MD5 8c577abf12ed815ffdc1400d2aee29c8 files/digest-adabindx-0.7.2 67
+MD5 5a15ab1c1842ad40f719c9500dc77e6e ChangeLog 501
+MD5 edd1578dcf469d4ffd33ac1f9762f5e5 adabindx-0.7.2.ebuild 1204
+MD5 e8e274a5057d2f205a38206204250c79 metadata.xml 156
