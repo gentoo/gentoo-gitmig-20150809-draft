@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.4 2003/05/28 15:21:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.5 2003/10/03 14:27:22 caleb Exp $
+
+  03 Oct 2003; Caleb Tennis <caleb@gentoo.org> kmyfirewall-0.9.6.ebuild:
+  Supports something called Gentoo mode, so lets turn it on
+  by default in the configuration file.
+  Closes bug #22124
 
 *kmyfirewall-0.9.6 (28 May 2003)
 
