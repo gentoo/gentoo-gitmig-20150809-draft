@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.70 2003/11/30 11:22:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.71 2003/11/30 11:42:09 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -959,31 +959,54 @@ unpack_pdv() {
 	local datafile="`tail -c +$((${metaskip}+1)) ${src} | strings | head -n 1`"
 	datafile="`basename ${datafile}`"
 
-	# now lets uncompress the file if need be
+	# now lets uncompress/untar the file if need be
 	local tmpfile="`mymktemp ${T}`"
 	tail -c +$((${tailskip}+1)) ${src} 2>/dev/null | head -c 512 > ${tmpfile}
-	local filetype="`file -b ${tmpfile}`"
-	case ${filetype} in
-		compress*)
-			#for some reason gzip dies with this ... dd cant provide buffer fast enough ?
-			#dd if=${src} ibs=${metaskip} count=1 \
-			#	| dd ibs=${tailskip} skip=1 \
-			#	| gzip -dc \
-			#	> ${datafile}
+
+	local iscompressed="`file -b ${tmpfile}`"
+	if [ "${iscompressed:0:8}" == "compress" ] ; then
+		iscompressed=1
+		mv ${tmpfile}{,.Z}
+		gunzip ${tmpfile}
+	else
+		iscompressed=0
+	fi
+	local istar="`file -b ${tmpfile}`"
+	if [ "${istar:0:9}" == "POSIX tar" ] ; then
+		istar=1
+	else
+		istar=0
+	fi
+
+	#for some reason gzip dies with this ... dd cant provide buffer fast enough ?
+	#dd if=${src} ibs=${metaskip} count=1 \
+	#	| dd ibs=${tailskip} skip=1 \
+	#	| gzip -dc \
+	#	> ${datafile}
+	if [ ${iscompressed} -eq 1 ] ; then
+		if [ ${istar} -eq 1 ] ; then
+			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+				| head -c $((${metaskip}-${tailskip})) \
+				| tar -xzf -
+		else
 			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				| gzip -dc \
 				> ${datafile}
-			;;
-		*)
+		fi
+	else
+		if [ ${istar} -eq 1 ] ; then
+			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
+				| head -c $((${metaskip}-${tailskip})) \
+				| tar -xf -
+		else
 			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
 				> ${datafile}
-			#dd if=${src} ibs=${metaskip} count=1 \
-			#	| dd ibs=${tailskip} skip=1 of=${datafile}
-			;;
-	esac
-	[ -s "${datafile}" ] || die "failure unpacking pdv ('${metaskip}' '${tailskip}' '${datafile}')"
+		fi
+	fi
+	true
+	#[ -s "${datafile}" ] || die "failure unpacking pdv ('${metaskip}' '${tailskip}' '${datafile}')"
 	#assert "failure unpacking pdv ('${metaskip}' '${tailskip}' '${datafile}')"
 }
 
