@@ -1,0 +1,78 @@
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.49/apache2-builtin-mods,v 1.1 2004/03/22 21:17:57 stuart Exp $
+#
+# This file will be installed into /etc/apache2 when you first emerge
+# Apache2.  If/when you upgrade, it will be consulted for your options,
+# thus preserving your previous configuration.  The default configuration
+# in files/ is used if the one in /etc/apache2 isn't available.
+#
+# To compile a module statically into the apache binary, simply put
+# static beside it.  To compile a module as a DSO, put shared beside
+# it.  To disable a module, simply put a - as the first character on
+# the line.
+#
+# Examples:
+# mod_access shared    ( this would build a DSO )
+# mod_actions static   ( this would get compiled statically )
+# - mod_alias shared   ( this module would not be built at all )
+#
+# Please be aware that if you _do_ customize these then you'll need
+# to manually adjust your apache2.conf file, tweaking the LoadModule
+# lines accordingly or else your server will fail to start; you've
+# been warned! (woodchip@gentoo.org  Nov 21 2002)
+
+- mod_example shared
+mod_access shared
+mod_auth shared
+mod_auth_dbm shared
+mod_auth_anon shared
+mod_auth_digest shared
+mod_alias shared
+mod_file-cache shared
+mod_echo shared
+mod_charset-lite shared
+mod_cache shared
+mod_disk-cache shared
+mod_mem-cache shared
+mod_ext-filter shared
+mod_case_filter shared
+mod_case-filter-in shared
+mod_deflate shared
+mod_mime-magic shared
+mod_cern-meta shared
+mod_expires shared
+mod_headers shared
+mod_usertrack shared
+mod_unique-id shared
+mod_proxy shared
+mod_proxy-connect shared
+mod_proxy-ftp shared
+mod_proxy-http shared
+mod_ssl shared
+- mod_optional-hook-export shared
+- mod_optional-hook-import shared
+- mod_optional-fn-import shared
+- mod_optional-fn-export shared
+- mod_bucketeer shared
+mod_info shared
+mod_include shared
+mod_cgi shared
+mod_cgid shared
+mod_dav shared
+mod_dav-fs shared
+mod_vhost-alias shared
+mod_speling shared
+mod_rewrite shared
+mod_log_config shared
+mod_logio shared
+mod_env shared
+mod_setenvif shared
+mod_mime shared
+mod_status shared
+mod_autoindex shared
+mod_asis shared
+mod_negotiation shared
+mod_dir shared
+mod_imap shared
+mod_actions shared
+mod_userdir shared
+mod_so static
