@@ -1,0 +1,15 @@
+# ChangeLog for media-sound/timemachine
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/ChangeLog,v 1.1 2004/06/18 22:17:33 fvdpol Exp $
+
+*timemachine-0.2.4 (19 Jun 2004)
+
+  19 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +metadata.xml,
+  +files/timemachine-0.2.4-ladcca-compile.patch, +timemachine-0.2.4.ebuild:
+  The first version of this package. Timemachine is a simple
+  jack client record button remembering the last ten seconds
+  of audio when pressed. 
+  
+  Thanks to Toni Arnold <toni__arnold@bluewin.ch> for the ebuild.
+  Closes bug #52555.
+
