@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.31 2003/07/15 19:57:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.32 2003/08/03 15:21:05 gmsoft Exp $
 
   15 Jul 2003; Martin Holzer <mholzer@gentoo.org> files/named.conf-r2:
   Fixed pid patch. Closes #24497
@@ -18,6 +18,9 @@
   Fix rcfiles
 
 *bind-9.2.2-r2 (27 Apr 2003)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> bind-9.2.2-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   27 Apr 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2-r2.ebuild,
   files/named.rc7:
