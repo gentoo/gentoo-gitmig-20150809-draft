@@ -1,0 +1,13 @@
+# ChangeLog for net-p2p/limewire
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.1 2004/08/08 03:18:48 squinky86 Exp $
+
+*limewire-4.1.3 (07 Aug 2004)
+
+*limewire-4.0.8 (07 Aug 2004)
+
+  07 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +limewire-4.0.8.ebuild, +limewire-4.1.3.ebuild:
+  Initial import, closes #59742. Thanks to Ed Wiget <security@rhpstudios.com>
+  (tSp in forums) for this package.
+
