@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/sdl-sopwith
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.4 2004/04/18 01:29:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.5 2004/04/18 01:37:07 wolf31o2 Exp $
+
+  17 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  sdl-sopwith-1.7.1.ebuild:
+  Reverting DEPEND and RDEPEND to orginal state. Bug #48117 should have rather
+  been only about the gdk-pixbuf not being needed.
 
   17 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   sdl-sopwith-1.7.1.ebuild:
