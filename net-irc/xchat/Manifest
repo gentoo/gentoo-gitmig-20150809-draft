@@ -1,28 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9109f8ff1f8c90a5dddbb1b4cd85521f xchat-2.4.2-r1.ebuild 2106
+MD5 edc8267515b0e480ea28ae4481510b59 xchat-2.4.3.ebuild 2017
 MD5 46410ec58328bede3461067d7ee63613 xchat-2.4.1-r1.ebuild 2102
 MD5 0be17dadd26963cc2616c76f0e6da87c xchat-2.4.0.ebuild 2235
 MD5 8ebf40ee60968abaf73442bfb9873e93 xchat-1.8.11-r1.ebuild 2267
 MD5 d22e0e2a5a132b2fcfdccdebc356475d xchat-2.0.9.ebuild 2059
-MD5 85ae55efdf06140f43373f95592f311e ChangeLog 23065
+MD5 0b8789b6bf42364723583c321b71ddbe ChangeLog 23282
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
-MD5 b3151cbbd4bbc63cbf9fc5d5fb92e02e files/xc242-slist-nosel.diff 719
 MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
 MD5 3ddde600db975d5c534197fa4fe2b1b7 files/digest-xchat-2.4.0 134
+MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 e4f52004b3e7ca6598d403f2fa74dcd4 files/2.4.1-fe-text.patch 697
 MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
-MD5 9403b36cad6dd575414e469658c4c5ed files/xc242-whois-spec.diff 543
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 9d213a58f6822d1958b6a5a4ad07ec14 files/2.4.1-close-fds-on-exec.patch 1041
 MD5 4a066f82a7a8ab6fe970340332d70105 files/digest-xchat-2.4.1-r1 134
-MD5 cbb203891b82a388b7f0bec0f20a94d1 files/digest-xchat-2.4.2-r1 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCQ/9HI1lqEGTUzyQRAmzwAJiM55Ljk3l3NDxuOLrh3CjPMnOqAKCMOzGa
-E6kOEOdLAB6M12KARpkDug==
-=K1eS
+iD8DBQFCTBGfI1lqEGTUzyQRArmJAJ9xaZPG0cbEtwLPp3k8bzRpuJjycwCeOtQF
+37H6DHwNjmpv0/IHYrLsBEU=
+=rSiy
 -----END PGP SIGNATURE-----
