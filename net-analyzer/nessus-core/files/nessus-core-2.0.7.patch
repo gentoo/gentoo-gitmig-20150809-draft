@@ -1,0 +1,11 @@
+--- nessus-core/nessusd/nessusd.c	2003-07-01 23:37:29.000000000 +0200
++++ nessusd.new	2003-07-10 15:02:57.000000000 +0200
+@@ -800,7 +800,7 @@
+       {
+        char host_name[1024];
+         
+-      hg_get_name_from_ip(addr.sin_addr, host_name, sizeof(host_name));
++      hg_get_name_from_ip(address.sin_addr, host_name, sizeof(host_name));
+       if(!(hosts_ctl("nessusd", host_name, asciiaddr, STRING_UNKNOWN)))
+       {
+        shutdown(soc, 2);
