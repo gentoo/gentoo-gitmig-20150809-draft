@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/linuxwacom
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.1 2004/02/19 15:47:35 battousai Exp $
+
+*linuxwacom-0.6.0 (19 Feb 2004)
+
+  19 Feb 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.0.ebuild:
+  Initial import. Builds against the SDK, and replaces the driver distributed
+  with xfree.
+
