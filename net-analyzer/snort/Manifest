@@ -1,4 +1,4 @@
-MD5 ad1c03da9976f887aa5027f2ebbc93db ChangeLog 3806
+MD5 b76147a3ccae6471b403b6e5be39b1b4 ChangeLog 3806
 MD5 710488a1702ad6555b6266400feca61c snort-1.8.6.ebuild 2539
 MD5 4b805689503782e047d03cd3cceaee93 snort-1.8.7.ebuild 2565
 MD5 b121e9b8a4544c1b8b693744a25d9bac snort-1.9.0.ebuild 2716
@@ -6,7 +6,7 @@ MD5 b3815c56fdef8172caa0830e23810739 snort-1.9.1-r1.ebuild 2833
 MD5 6b7060c54c68911a8d7d3ecfb3c5283e snort-1.9.1-r2.ebuild 2824
 MD5 b7a9320806fdb6c56b298980ec223d1d snort-1.9.1.ebuild 2727
 MD5 006245d824acd3b53cdc0976edfb94dd snort-2.0.0.ebuild 3007
-MD5 f6506db7aaa739aca9fffabf788e7fcb snort-2.0.1.ebuild 3304
+MD5 c4b7ac7dd54b0bc475986d44ec7c3f7e snort-2.0.1.ebuild 3304
 MD5 15408a678cbad1f26faa4878550ddbd9 metadata.xml 956
 MD5 f709dea91ede4986f0bcd0ec4b8f35b5 files/digest-snort-1.8.6 64
 MD5 02a31a68fbda2df18d79240c1d37775e files/digest-snort-1.8.7 64

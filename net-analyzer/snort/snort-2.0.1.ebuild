@@ -1,13 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1.ebuild,v 1.1 2003/08/09 20:15:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.1.ebuild,v 1.2 2003/08/11 05:58:07 solar Exp $
 
 inherit eutils
 
-IUSE="ssl postgres mysql snmp prelude"
+IUSE="ssl postgres mysql prelude"
+
+# snort 2.0.x does not support snmp yet Bug #26310
+# IUSE="${IUSE} snmp"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
-SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
+SRC_URI="http://www.snort.org/dl/${P}.tar.gz 
+	prelude? ( mirror://gentoo/${P}+prelude.patch.gz )"
+
 HOMEPAGE="http://www.snort.org"
 
 SLOT="0"
@@ -20,8 +26,8 @@ DEPEND="virtual/glibc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	snmp? ( >=net-analyzer/net-snmp-5.0 )
 	prelude? ( >=dev-libs/libprelude-0.8 )"
+#	snmp? ( >=net-analyzer/net-snmp-5.0 )
 
 RDEPEND="virtual/glibc 
 	dev-lang/perl
@@ -45,7 +51,7 @@ src_unpack() {
 
 	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
 	
-	use prelude && epatch ${FILESDIR}/${P}+prelude.patch
+	use prelude && epatch ../${P}+prelude.patch
 }
 
 src_compile() {
@@ -58,8 +64,8 @@ src_compile() {
 		|| myconf="${myconf} --without-mysql"
 	use ssl && myconf="${myconf} --with-openssl" \
 		|| myconf="${myconf} --without-openssl"
-	use snmp && myconf="${myconf} --with-snmp" \
-		|| myconf="${myconf} --without-snmp"
+#	use snmp && myconf="${myconf} --with-snmp" \
+#		|| myconf="${myconf} --without-snmp"
 	use prelude && myconf="${myconf} --with-prelude"
 
 
@@ -81,7 +87,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	dodir /var/log/snort
-	touch ${D}/var/log/snort/.keep
+	keepdir /var/log/snort/
 
 	insinto /usr/lib/snort/bin
 	doins contrib/{create_mysql,snortlog,*.pl}
