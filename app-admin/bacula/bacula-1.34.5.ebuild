@@ -40,7 +40,7 @@ src_compile() {
 		`use_enable gnome`
 		`use_enable tcpd tcp-wrappers`
 		`use_enable X x`"
-	
+
 	[ -n "$BUILD_CLIENT_ONLY" ] \
 		 && myconf="${myconf} --enable-client-only"
 
