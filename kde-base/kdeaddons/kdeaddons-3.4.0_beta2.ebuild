@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.0_beta2.ebuild,v 1.3 2005/02/11 19:05:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.0_beta2.ebuild,v 1.4 2005/02/11 23:43:20 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -15,7 +15,7 @@ DEPEND="~kde-base/kdepim-${PV}
 	arts? ( ~kde-base/arts-${PV} )
 	sdl? ( >=media-libs/libsdl-1.2 )
 	xmms? ( media-sound/xmms )
-	berkdb? ( =sys-lib/db-4.2* )"
+	berkdb? ( =sys-libs/db-4.2* )"
 
 # Make vimpart use /usr/bin/kvim -- fixes bug 33257.
 # This should continue to apply to upcoming versions since it's
