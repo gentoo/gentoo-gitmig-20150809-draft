@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mosfet-liquid-widgets
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.2 2002/07/16 03:04:26 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mosfet-liquid-widgets/ChangeLog,v 1.3 2002/08/24 18:36:14 danarmak Exp $
+
+*mosfet-liquid-widgets-0.9.5-r1 (24 Aug 2002)
+
+  24 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Install the ksplash images (the ones you see while KDE is loading) into
+  the kdelibs dir, not into the prefix. Otherwise they do not work.
 
 Relocated to x11-themes
 
