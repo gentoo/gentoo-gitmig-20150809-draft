@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tux/files/tux.init.d,v 1.1 2003/06/16 19:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tux/files/tux.init.d,v 1.2 2004/02/14 04:48:54 vapier Exp $
 
 checkconfig() {
 	if [ ! -e /proc/sys/net/tux ] ; then
@@ -24,6 +24,7 @@ checkconfig() {
 	[ -z "${TUX_CGIROOT}" ] && TUX_CGIROOT=${TUX_DOCROOT}
 	[ -z "${TUX_KEEPALIVE}" ] && TUX_KEEPALIVE=30
 	[ -n "${TUX_MODULEPATH}" ] && TUX_MODULES="-m ${TUX_MODULEPATH} ${TUX_MODULES}"
+	return 0
 }
 
 setconfig() {
