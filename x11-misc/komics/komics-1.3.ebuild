@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.3.ebuild,v 1.1 2004/09/05 11:03:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.3.ebuild,v 1.2 2004/09/06 19:33:25 aliz Exp $
 
 inherit kde
 
@@ -23,10 +23,12 @@ need-kde 3
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-gcc34.patch
 	rm -rf ${S}/autom4te.cache
 }
 
 src_compile() {
 	local myconf="`use_enable arts`"
-	kde_src_compile all
+	kde_src_compile myconf configure
+	make || die
 }
