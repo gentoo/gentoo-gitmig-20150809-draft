@@ -14,4 +14,4 @@ MD5 5b001531455e0ff356512be131dc32cb files/digest-esound-0.2.33 66
 MD5 e2bd989e15dcb9b15096d1a9cd29edf0 files/digest-esound-0.2.34 66
 MD5 6a04ae174ae4b2bb4ad9734fe09d32e2 files/esound.conf.d 737
 MD5 abf9fa5dcfe799ee75cb17808b389739 files/esound-0.2.32-amd64.patch 686
-MD5 5ab7cfdd90a2a3dc9adcfc3cbe993615 files/esound.init.d 868
+MD5 0af490e6c9b79db177214d01027e800e files/esound.init.d 862
