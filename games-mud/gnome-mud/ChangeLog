@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.6 2003/11/18 18:39:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.7 2003/12/09 10:23:19 mr_bones_ Exp $
+
+  09 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.3.ebuild:
+  use keepdir instead of dodir for /usr/share/gnome-mud; call
+  gnome2_gconf_install in pkg_postinst to register gconf stuff
 
   18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-mud-0.10.1.ebuild, gnome-mud-0.10.2.ebuild:
