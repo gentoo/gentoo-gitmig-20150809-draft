@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/fondu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.1 2004/07/05 08:05:01 usata Exp $
+
+*fondu-20040527 (05 Jul 2004)
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +fondu-20040527.ebuild:
+  Initial import. Ebuild submitted by Jose Sia Jr. <jsia@id.iit.edu>,
+  closing bug #24732
+
