@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.10 2002/08/03 15:31:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.11 2002/08/10 12:53:02 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -218,6 +218,9 @@ cvs_src_unpack() {
 	    debug-print "patching from $x"
 	    patch -p0 < $x
 	done
+	# make sure we don't try to apply patches more than once, since
+	# cvs_src_unpack is usually called several times from e.g. kde-source_src_unpack
+	export PATCHES=""
     fi
 
 }
