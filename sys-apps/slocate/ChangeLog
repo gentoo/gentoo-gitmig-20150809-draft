@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.41 2004/06/16 01:12:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.42 2004/06/16 01:22:52 dragonheart Exp $
+
+  16 Jun 2004; Daniel Black <dragonheart@gentoo.org> slocate-2.7-r5.ebuild:
+  uclibc patch thanks to Peter S. Mazinger <ps.m@gmx.net>
 
   15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> files/updatedb.conf:
   Added nnpfs to the PRUNEFS line. (bug #54035)

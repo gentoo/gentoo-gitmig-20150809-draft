@@ -1,23 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.11 2004/05/22 22:52:04 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.12 2004/06/16 01:22:52 dragonheart Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
 HOMEPAGE="http://www.geekreview.org/slocate/"
-SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
+SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz
+	mirror://gentoo/slocate-${PV}-uclibc-sl_fts.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE=""
+IUSE="uclibc"
 
 DEPEND="sys-apps/shadow
 	>=sys-apps/sed-4
 	sys-devel/automake"
 RDEPEND="sys-apps/shadow"
 
+src_unpack() {
+	unpack ${A}
+	use uclibc && epatch ${FILESDIR}/sl_fts.patch
+}
 src_compile() {
 	filter-lfs-flags
 	econf || die
