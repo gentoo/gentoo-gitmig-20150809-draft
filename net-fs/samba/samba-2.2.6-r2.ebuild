@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.3 2002/12/07 06:53:37 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.4 2003/02/13 14:02:31 vapier Exp $
 
 IUSE="pam acl cups ldap ssl tcpd vscan"
 
