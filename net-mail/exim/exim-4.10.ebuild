@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.10.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.10.ebuild,v 1.8 2003/04/12 11:27:33 seemant Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -155,6 +155,8 @@ src_install () {
 	dosym /usr/sbin/exim /usr/bin/mailq
 	dosym /usr/sbin/exim /usr/bin/newaliases
 	dosym /usr/sbin/exim /usr/bin/mail
+	dosym exim /usr/sbin/rsmtp
+	dosym exim /usr/sbin/rmail
 	dosym /usr/sbin/exim /usr/lib/sendmail
 	dosym /usr/sbin/exim /usr/sbin/sendmail
 
