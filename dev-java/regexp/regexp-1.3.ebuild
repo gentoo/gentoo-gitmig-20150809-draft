@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3.ebuild,v 1.10 2004/08/24 01:52:34 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3.ebuild,v 1.11 2004/09/10 19:50:09 axxo Exp $
 
 DESCRIPTION="100% Pure Java Regular Expression package"
 SRC_URI="mirror://apache/jakarta/regexp/source/jakarta-${P}.tar.gz"
@@ -9,7 +9,8 @@ SLOT="0"
 IUSE="doc jikes"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-DEPEND=">=virtual/jdk-1.3"
+DEPEND=">=virtual/jdk-1.3
+	dev-java/ant-core"
 
 S=${WORKDIR}/jakarta-${P}
 
