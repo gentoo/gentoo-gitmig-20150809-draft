@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/noflushd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.15 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.16 2004/11/26 23:07:30 s4t4n Exp $
+
+  27 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> noflushd-2.7.3.ebuild:
+  Stable for x86 (had this up and running forever now ;-)
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   noflushd-2.7.2.ebuild, noflushd-2.7.3.ebuild:
