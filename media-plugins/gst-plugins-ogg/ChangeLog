@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.4 2004/03/31 00:38:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.5 2004/04/06 03:06:02 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> gst-plugins-ogg-0.8.0.ebuild:
+  Marking ~hppa
 
   30 Mar 2004; Travis Tilley <lv@gentoo.org> gst-plugins-ogg-0.8.0.ebuild:
   adding ~amd64 keyword
