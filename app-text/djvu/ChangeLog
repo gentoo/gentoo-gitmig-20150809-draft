@@ -1,6 +1,12 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.14 2004/06/24 22:32:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.15 2004/08/24 10:35:38 usata Exp $
+
+*djvu-3.5.14 (24 Aug 2004)
+
+  24 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +djvu-3.5.14.ebuild,
+  -djvu-3.5.7.ebuild, -djvu-3.5.9-r1.ebuild, -djvu-3.5.9.ebuild:
+  Version bumped. This closes bug #60882. Cleaned up old ebuilds.
 
   02 May 2004; Danny van Dyk <kugelfang@gentoo.org> djvu-3.5.12.ebuild:
   Marked ~amd64.
