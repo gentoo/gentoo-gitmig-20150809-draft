@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.3 2003/12/26 14:07:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2_beta3-r1.ebuild,v 1.4 2003/12/27 14:37:21 lanius Exp $
 
 MY_PV=${PV/_beta/b}
 MY_P=${PN}-${MY_PV}
@@ -135,5 +135,5 @@ pkg_postinst() {
 	ewarn "/usr/share/doc/ppp*/scripts directory."
 
 	# lib name has changed
-	sed -i -e "s:pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
+	sed -i -e "s:^pppoe.so:rp-pppoe.so:" ${ROOT}etc/ppp/options
 }
