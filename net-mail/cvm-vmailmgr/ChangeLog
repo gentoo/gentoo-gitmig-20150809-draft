@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cvm-vmailmgr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.13 2004/07/01 22:30:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/ChangeLog,v 1.14 2004/10/17 11:23:12 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> cvm-vmailmgr-0.6.ebuild:
+  Added to ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cvm-vmailmgr-0.3.ebuild, cvm-vmailmgr-0.4.ebuild, cvm-vmailmgr-0.6.ebuild:
