@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 738c06931d427117e14dccd4f911700f ChangeLog 5367
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 60a713e5661a53d9b8ea559a672dfa3d xinetd-2.3.13.ebuild 1987
+MD5 1a03f57ec8f70d784d822784bfa3963c xinetd-2.3.13.ebuild 1909
 MD5 897e24c3c7cc5a08093dfcb3a71fc0ee files/xconv.pl 3030
 MD5 ccad3f7878ea7a1e078796419717c4b2 files/xinetd.conf 459
 MD5 1f24b28f485355ae6fa0f9e4008553c5 files/xinetd.confd 289
@@ -18,10 +15,3 @@ MD5 6eb573e86ba7cad19ea240848a88767a files/etc.xinetd.d/echo-tcp 238
 MD5 15e73cb0db884334cef7ac44ced9fa6c files/etc.xinetd.d/echo-udp 263
 MD5 02bc3d5745432ee4b5b11b9c2e03c731 files/etc.xinetd.d/time-tcp 270
 MD5 70829ea9fe03a6e343efa635c9f263e0 files/etc.xinetd.d/time-udp 272
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB3DPmroRuSHgZdywRAgKpAJ9XfOiEonBa/KlsFykUDF0h8pDIEwCaA1+K
-v4B4cXdXW++g3GSorH7RsY4=
-=vOYm
------END PGP SIGNATURE-----
