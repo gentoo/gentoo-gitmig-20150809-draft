@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.18 2004/08/06 12:53:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.19 2004/11/05 22:52:27 corsair Exp $
+
+  05 Nov 2004; Markus Rothe <corsair@gentoo.org> gnome-common-2.4.0.ebuild:
+  Marked ~ppc64; bug #69450
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-common-2.4.0.ebuild:

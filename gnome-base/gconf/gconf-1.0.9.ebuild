@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.12 2004/08/21 16:29:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.13 2004/11/05 22:50:35 corsair Exp $
 
-inherit libtool gnome.org eutils
+inherit libtool gnome.org eutils gnuconfig
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 mips"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 mips ~ppc64"
 
 DEPEND="dev-util/indent
 	=dev-libs/glib-1.2*
@@ -45,6 +45,7 @@ src_unpack () {
 
 src_compile() {
 	elibtoolize
+	use ppc64 && gnuconfig_update
 	econf $(use_enable nls) || die "econf failed"
 	emake || die "make failed"
 }
