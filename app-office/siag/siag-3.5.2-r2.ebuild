@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.11 2004/06/02 02:21:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.12 2004/06/10 11:56:32 dholm Exp $
 
 DESCRIPTION="A free Office package for Linux"
 SRC_URI="ftp://siag.nu/pub/siag/${P}.tar.gz"
@@ -9,7 +9,7 @@ IUSE="kde"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11
 	>=dev-libs/gmp-3.1.1
