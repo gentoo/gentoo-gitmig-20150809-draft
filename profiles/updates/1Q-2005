@@ -8,3 +8,4 @@ move games-emulation/blight-tr64gl games-emulation/mupen64-blight-tr64gl
 move games-emulation/blight-glN64 games-emulation/mupen64-blight-glN64
 move games-emulation/blight_input games-emulation/mupen64-blight-input
 move games-emulation/mupen-blight-uhleaudio games-emulation/mupen64-blight-uhleaudio
+move games-emulation/mupen64-blight-glN64 games-emulation/mupen64-glN64
