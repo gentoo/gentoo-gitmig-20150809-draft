@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.119 2004/09/16 21:57:03 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.120 2004/09/16 23:11:48 lisa Exp $
+
+  16 Sep 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.16-r1.ebuild:
+  forgot to bump patchlevel var
 
 *distcc-2.14-r1 (16 Sep 2004)
 
