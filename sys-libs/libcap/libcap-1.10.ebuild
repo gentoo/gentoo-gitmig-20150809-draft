@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.9 2003/10/01 11:05:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.10 2003/10/09 19:41:15 pappy Exp $
 
 inherit base flag-o-matic
 
@@ -36,8 +36,21 @@ src_compile() {
 		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
 	fi
 
-	has_version 'sys-devel/hardened-gcc' && \
-	append-flags "-yet_exec -fstack-protector -Wl,$(gcc-config -L)/libgcc.a -Wl,/lib/libc.so.6"
+    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml or #gentoo-hardened/irc.freenode
+    if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ] && has_version "sys-devel/hardened-gcc"
+    then
+        append-flags "-yet_exec -fstack-protector"
+    fi
+
+    if [ "${ARCH}" == "hppa" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
+
+    if [ "${ARCH}" == "hppa64" ] && has_version 'sys-devel/hardened-gcc'
+    then
+        append-flags "-yet_exec"
+    fi
 
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }
