@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.9 2003/10/03 15:51:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.10 2003/10/03 19:01:10 mr_bones_ Exp $
 
 IUSE="readline tcltk berkdb bootstrap build doc"
 
@@ -46,7 +46,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -malign-double
-	
+
 	# during building, ./python -E segfaults with propolice
 	filter-flags -fstack-protector
 
