@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/desklet-sysinfo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/ChangeLog,v 1.1 2003/09/30 11:24:46 obz Exp $
+
+*desklet-sysinfo-0.21.2 (30 Sep 2003)
+
+  30 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-sysinfo-0.21.2.ebuild,
+  metadata.xml:
+  First import of the sysinfo desklet which has finally reached a level of
+  usability/stability
+
