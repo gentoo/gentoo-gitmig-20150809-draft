@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.9.ebuild,v 1.2 2004/11/28 08:04:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.9.ebuild,v 1.3 2004/12/28 14:41:56 ribosome Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ DEPEND="virtual/emacs
 	virtual/tetex
 	virtual/ghostscript
 	dev-tex/breqn
-	>=app-sci/maxima-0.9"
+	>=sci-mathematics/maxima-0.9"
 
 src_compile() {
 	econf --prefix=/usr || die "econf failed"
