@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.30 2004/07/18 23:32:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.31 2004/07/22 17:22:08 rizzo Exp $
+
+*xplanet-1.1.0 (22 Jul 2004)
+
+  22 Jul 2004; Don Seiler <rizzo@gentoo.org> metadata.xml,
+  +xplanet-1.1.0.ebuild:
+  Version bump
 
   19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> xplanet-1.0.8.ebuild:
   Added ~alpha keyword.
