@@ -1,0 +1,9 @@
+# ChangeLog for gnome-extra/libbonobomm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libbonobomm/ChangeLog,v 1.1 2003/04/26 20:57:59 liquidx Exp $
+
+*libbonobomm-1.3.5 (26 Apr 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> libbonobomm-1.3.5.ebuild:
+  initial libboebuild
+
