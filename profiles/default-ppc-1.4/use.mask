@@ -8,8 +8,8 @@ icc
 icc-pgo
 mmx
 svga
-sse
-scanner 
+sse 
+firebird
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
