@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.50 2005/01/04 12:47:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.51 2005/01/05 02:11:53 j4rg0n Exp $
+
+  04 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> tiff-3.7.1-r1.ebuild:
+  Stable ppc-macos.
 
   04 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   tiff-3.7.1-r1.ebuild:
@@ -9,10 +12,10 @@
   04 Jan 2005; Hardave Riar <hardave@gentoo.org> tiff-3.7.1-r1.ebuild:
   Stable on mips, bug #75213.
 
-  04 Jan 2005; Olivier Crête <tester@gentoo.org> tiff-3.7.1-r1.ebuild:
+  04 Jan 2005; Olivier CrÃªte <tester@gentoo.org> tiff-3.7.1-r1.ebuild:
   Stable in x86 wrt security bug #75213
 
-  03 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tiff-3.7.1-r1.ebuild:
+  03 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> tiff-3.7.1-r1.ebuild:
   Stable on alpha.
 
   03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> tiff-3.7.1-r1.ebuild:
@@ -31,7 +34,7 @@
   +tiff-3.7.1-r1.ebuild:
   bumped and added patches for bugs #75423 and #75316 (all ~)
 
-  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> tiff-3.7.1.ebuild:
+  02 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> tiff-3.7.1.ebuild:
   Stable on alpha, bug 75213.
 
   02 Jan 2005; Markus Rothe <corsair@gentoo.org> tiff-3.7.1.ebuild:
@@ -57,7 +60,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> tiff-3.7.0.ebuild:
   Stable on amd64.
 
-  23 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> tiff-3.7.0.ebuild:
+  23 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> tiff-3.7.0.ebuild:
   Stable on alpha.
 
   16 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> tiff-3.7.0.ebuild:
