@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.10 2004/10/05 20:26:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.11 2004/10/07 19:01:20 taviso Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -68,7 +68,7 @@ src_install() {
 	exeinto /bin
 	doexe ${my_arch}/bin/ok/ksh
 
-	dosym /bin/ksh ksh93
+	dosym /bin/ksh /bin/ksh93
 
 	newman ${my_arch}/man/man1/sh.1 ksh.1
 	dodoc lib/package/LICENSES/ast lib/package/gen/ast-ksh.txt
