@@ -1,0 +1,12 @@
+diff -aurN work/avidemux-2.0.32/avidemux/oplug_mpeg/op_mpegwrite.cpp work.new/avidemux-2.0.32/avidemux/oplug_mpeg/op_mpegwrite.cpp
+--- work/avidemux-2.0.32/avidemux/oplug_mpeg/op_mpegwrite.cpp	2004-09-26 13:30:42.000000000 +0200
++++ work.new/avidemux-2.0.32/avidemux/oplug_mpeg/op_mpegwrite.cpp	2004-10-29 11:22:10.303596416 +0200
+@@ -133,7 +133,7 @@
+ 	_audioBuffer=NULL;
+ 	_muxer=NULL;
+ 	_outputAsPs=1;
+-
++	audioWanted=audioGot=0;
+ }
+ //_______________________________________
+ // Clean up in case we forgot something
