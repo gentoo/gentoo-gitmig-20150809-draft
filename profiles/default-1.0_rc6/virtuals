@@ -9,3 +9,4 @@ virtual/opengl			x11-base/xfree
 virtual/glu			media-libs/mesa-glu
 virtual/glut			media-libs/mesa-glu
 x11-libs/xaw			x11-libs/Xaw3d
+sys-apps/texinfo		sys-devel/gcc	

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.5 2001/11/24 18:40:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.6 2001/11/25 02:13:51 drobbins Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
@@ -21,7 +21,7 @@ then
 	DEPEND="$DEPEND nls? ( sys-devel/gettext ) >=sys-libs/ncurses-5.2-r2"
 	RDEPEND="$RDEPEND >=sys-libs/ncurses-5.2-r2"
 fi
-
+PROVIDE="sys-apps/texinfo"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
