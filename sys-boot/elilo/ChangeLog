@@ -1,0 +1,11 @@
+# ChangeLog for sys-boot/elilo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.1 2004/01/23 16:21:39 agriffis Exp $
+
+*elilo-3.4 (23 Jan 2004)
+
+  23 Jan 2004; <agriffis@gentoo.org> elilo-3.4.ebuild,
+  files/elilo-3.3a-devscheme.patch, files/elilo-3.4,
+  files/elilo-3.4-makefile.patch, files/elilo.8-3.4, files/eliloalt.8-3.4:
+  New ebuild for elilo, stolen from Mandrake and Debian
+
