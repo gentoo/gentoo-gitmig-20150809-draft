@@ -24,11 +24,11 @@ MD5 2d68ea9bddc5ae32edc46b93504bc677 gcc-2.95.3-r8.ebuild 8333
 MD5 cd874b5d941d93ed0dc78586cf006e9a gcc-3.3.3-r3.ebuild 23601
 MD5 f357f60ed2b1c343a0555b94de742cd1 gcc-3.3.2-r6.ebuild 21068
 MD5 d30becfe989175c3d30ff19e941c3822 gcc-3.3.2-r1.ebuild 17813
-MD5 3b2359486e611ffd4854259e6c542e46 ChangeLog 62926
+MD5 b91c45990075649d40a5b8b8b65327a7 ChangeLog 63193
 MD5 c2cdb224cdf888d8a95ae6c39804c893 gcc-3.3.2.ebuild 17760
 MD5 5c7b94106c929033ea8cac50d7a36d71 gcc-3.3.3_pre20040426.ebuild 22484
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 0c60e91d3ec352fb818946a54a44e53d gcc-3.4.1-r2.ebuild 31070
+MD5 0e890060a40f959ff8f7637eb18c6a57 gcc-3.4.1-r2.ebuild 31073
 MD5 ad1fa47ddb922205e26c539b444c16da gcc-3.3.3-r5.ebuild 24249
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
@@ -119,8 +119,8 @@ MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.pa
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
 MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
 MD5 cd770c23ece7458db5e6c5067f262ce0 files/3.4.1/gcc-3.4.1-glibc-is-native.patch 760
-MD5 90b625228a093246fd118a7cd10f7627 files/3.4.1/gcc-3.4.1-mips-n64only.patch 624
-MD5 ffc2f2f211c8777f110bc80a54abe69d files/3.4.1/gcc-3.4.1-mips-n32only.patch 624
+MD5 aa8e15a63d797df37bbd4e489ed0267f files/3.4.1/gcc-3.4.1-mips-n64only.patch 614
+MD5 7cb2138ac2df6f8674d19974e966a45b files/3.4.1/gcc-3.4.1-mips-n32only.patch 614
 MD5 86ae592deb82c4564eb61f770fe5f8a7 files/3.4.1/gcc-3.4.1-gentoo-branding.patch 759
 MD5 14fec2000fc63536d4cf22195e88e14f files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch 781
 MD5 df06b1cf70425c78e2e59136ed372ab4 files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch 729

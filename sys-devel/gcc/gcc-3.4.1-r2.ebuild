@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.8 2004/08/15 02:25:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.9 2004/08/15 07:31:35 iluxa Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -613,8 +613,8 @@ src_compile() {
 	case "${CCHOST}" in
 	    mips*)
 		use multilib && myconf="${myconf} --with-abi=32"
-		[ "${ABI}" = n32 ] && myconf="${myconf} --with-abi=n32"
 		[ "${ABI}" = n64 ] && myconf="${myconf} --with-abi=n64"
+		[ "${ABI}" = n32 ] && myconf="${myconf} --with-abi=n32"
 	    ;;
 	esac
 

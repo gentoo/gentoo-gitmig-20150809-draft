@@ -10,8 +10,8 @@ diff -u -r1.3 t-linux64
 -MULTILIB_DIRNAMES = o32 32 64
 -MULTILIB_OSDIRNAMES = ../lib ../lib32 ../lib64
 +MULTILIB_OPTIONS = mabi=n32
-+MULTILIB_DIRNAMES = 32
-+MULTILIB_OSDIRNAMES = ../lib
++MULTILIB_DIRNAMES =
++MULTILIB_OSDIRNAMES =
  
  EXTRA_MULTILIB_PARTS=crtbegin.o crtend.o crtbeginS.o crtendS.o crtbeginT.o
  
