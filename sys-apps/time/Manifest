@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2b8f6fd88f62fb20a31194d782085e0d ChangeLog 1418
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 02081023cbebffb009f9dca42e041fe3 time-1.7-r1.ebuild 752
+MD5 7ce854813afb36f135ac80821fd0faf8 time-1.7-r1.ebuild 757
 MD5 57be936571e51a73e7b44f4cd460c4d3 files/digest-time-1.7-r1 60
 MD5 a1dddef27c61d5286b14565321fb2aac files/1.7-info-dir-entry.patch 461
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWIagHTu7gpaalycRAg5jAKCa0Z1/nwfD6bfv2hIr21G5oo3hkACeNLIR
-mcCglmsOPcn8Jy6W7Fm9wgM=
-=bd4n
------END PGP SIGNATURE-----
