@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.2 2004/03/22 11:45:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.3 2004/03/22 16:32:15 zx Exp $
 
 inherit java
 
@@ -15,7 +15,7 @@ DEPEND=">=dev-libs/gmp-3.1
 	>=dev-java/java-config-0.2.4"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~hppa"
 
 src_compile() {
 	./configure \
