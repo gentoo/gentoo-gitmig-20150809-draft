@@ -86,23 +86,23 @@ diff -N -r -U3 cracklib,2.7.orig/util/Makefile cracklib,2.7/util/Makefile
  
  packer: packer.o $(LIBS)
 -	cc $(CFLAGS) -o $@ $@.o $(LIBS)
-+	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $@.o $(LDFLAGS)
  
  unpacker: unpacker.o $(LIBS)
 -	cc $(CFLAGS) -o $@ $@.o $(LIBS)
-+	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $@.o $(LDFLAGS)
  
  testnum: testnum.o $(LIBS)
 -	cc $(CFLAGS) -o $@ $@.o $(LIBS)
-+	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $@.o $(LDFLAGS)
  
  teststr: teststr.o $(LIBS)
 -	cc $(CFLAGS) -o $@ $@.o $(LIBS)
-+	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $@.o $(LDFLAGS)
  
  testlib: testlib.o $(LIBS)
 -	cc $(CFLAGS) -o $@ $@.o $(LIBS)
-+	cc $(CFLAGS) -o $@ $@.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $@.o $(LDFLAGS)
  
  clean:
  	-rm *.o *~ all
