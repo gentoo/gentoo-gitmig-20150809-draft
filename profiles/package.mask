@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> (19 Jun 2003)
+# It is a beta version
+=app-office/openoffice-bin-1.1_beta2
+
 # <games@gentoo.org> (19 Jun 2003)
 # 4.1.x is incompat with 4.0.x
 =media-libs/allegro-4.1*
