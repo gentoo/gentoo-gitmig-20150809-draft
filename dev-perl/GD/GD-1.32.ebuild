@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32.ebuild,v 1.2 2001/03/16 17:13:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32.ebuild,v 1.3 2001/05/03 16:38:57 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -29,15 +29,13 @@ src_unpack() {
 
 }
 src_compile() {
-    cd ${S}
     perl Makefile.PL
     try make
     try make test
 }
 
 src_install () {
-    cd ${S}
-    try make PREFIX=${D}/usr install
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
     dodoc ChangeLog MANIFEST README*
     docinto html
     dodoc GD.html

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.2 2001/03/12 10:52:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.3.ebuild,v 1.3 2001/05/03 16:38:57 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,7 @@ src_compile() {
 
 src_install () {
 
-    try make PREFIX=${D}/usr install
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
     diropts -o nobody -g nogroup
     dodir /var/cache/axkit
     dodir /usr/local/httpd/htdocs/xslt

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/libxml-perl-0.07.ebuild,v 1.5 2001/04/28 23:18:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/libxml-perl-0.07.ebuild,v 1.6 2001/05/03 16:38:58 achim Exp $
 
 P=libxml-perl-0.07
 A=${P}.tar.gz
@@ -16,7 +16,6 @@ DEPEND=">=sys-devel/perl-5
 
 src_compile() {
 
-    cd ${S}
     perl Makefile.PL 
     try make
     make test
@@ -25,8 +24,7 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
-    try make PREFIX=${D}/usr install
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
     dodoc README ChangeLog Changes
 }
 
