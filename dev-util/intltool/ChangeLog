@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.40 2004/05/14 02:00:29 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.41 2004/05/30 23:42:09 leonardop Exp $
+
+  30 May 2004; L. Boshell <leonardop@gentoo.org> intltool-0.30.ebuild:
+  Add IUSE var.
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> intltool-0.30.ebuild:
   Stable on mips.
