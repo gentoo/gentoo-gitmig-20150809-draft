@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.1 2004/12/26 09:58:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.2 2004/12/27 23:06:20 mr_bones_ Exp $
 
-inherit fixheadtails eutils games
+inherit eutils games
 
 DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventures"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -24,12 +24,6 @@ DEPEND="virtual/libc
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-libs/libmad )
 	zlib? ( sys-libs/zlib )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#ht_fix_file configure #64550
-}
 
 src_compile() {
 	local myconf=
