@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.1.10_rc2.ebuild,v 1.2 2004/03/10 00:24:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.1.10_rc2.ebuild,v 1.3 2004/04/20 17:33:13 mr_bones_ Exp $
 
 inherit games
 
-MY_P=${P/_}
+MY_P="${P/_}"
 DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
 HOMEPAGE="http://exult.sourceforge.net/"
 SRC_URI="mirror://sourceforge/exult/${MY_P}.tar.gz"
@@ -14,12 +14,13 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 IUSE="timidity zlib opengl debug mmx 3dnow"
 
-RDEPEND=">=media-libs/libsdl-1.2*
+DEPEND=">=media-libs/libsdl-1.2*
+	>=media-libs/sdl-mixer-1.2.4
 	timidity? ( >=media-sound/timidity++-2* )
 	zlib? ( sys-libs/zlib )
 	opengl? ( virtual/opengl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	ewarn "*********************************************************"
@@ -32,13 +33,13 @@ pkg_setup() {
 
 src_compile() {
 	egamesconf \
-		`use_enable timidity` \
-		`use_enable zlib zip` \
-		`use_enable opengl` \
-		`use_enable debug` \
-		`use_enable mmx` \
-		`use_enable 3dnow` \
-		|| die
+		$(use_enable timidity) \
+		$(use_enable zlib zip) \
+		$(use_enable opengl) \
+		$(use_enable debug) \
+		$(use_enable mmx) \
+		$(use_enable 3dnow) \
+			|| die
 	# bug #44185 - fails on parallel make
 	emake -j1 || die "emake failed"
 }
