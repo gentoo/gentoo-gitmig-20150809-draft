@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r8.ebuild,v 1.1 2002/06/26 20:01:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r8.ebuild,v 1.2 2002/06/26 22:40:14 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A shared library tool for developers"
@@ -31,6 +31,12 @@ src_unpack() {
 	#fixes quoting for test's .. *VERY* important!
 	patch -p0 <${FILESDIR}/${PV}/${P}-test.patch || die
 	patch -p1 <${FILESDIR}/${PV}/${P}-duplicate-dependency.patch || die
+	patch -p0 <${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch || die
+	# Do not create bogus entries in $dependency_libs or $libdir
+	# with ${D} or ${S} in them.
+	#
+	# Azarah - 07 April 2002
+	patch -p0 <${FILESDIR}/${PV}/${P}-portage.patch-v5 || die
 }
 
 src_compile() {
@@ -46,13 +52,5 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog* NEWS \
 	      README THANKS TODO doc/PLATFORMS	
-
-	cd ${D}/usr/share/libtool
-	patch -p0 <${FILESDIR}/${PV}/${P}-ltmain.sh-hack.patch || die
-	# Do not create bogus entries in $dependency_libs or $libdir
-	# with ${D} or ${S} in them.
-	#
-	# Azarah - 07 April 2002
-	patch -p0 <${FILESDIR}/${PV}/${P}-portage.patch-v5 || die
 }
 

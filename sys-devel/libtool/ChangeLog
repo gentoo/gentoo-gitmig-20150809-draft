@@ -1,10 +1,15 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.7 2002/06/26 20:01:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.8 2002/06/26 22:40:14 azarah Exp $
 
-*libtool-1.4.1-r8 (10 April 2002)
+  27 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
 
-  8 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Fix a bug in libtool-1.4.1-portage.patch-v5 that has been dropping link dirs
+  and -l? flags.
+
+*libtool-1.4.1-r8 (26 Jun 2002)
+
+  26 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
 
   Fix bug #4122.
 

@@ -1,6 +1,6 @@
 --- ltmain.sh.orig	Wed Apr  3 01:19:37 2002
 +++ ltmain.sh	Sun May 26 19:50:52 2002
-@@ -3940,9 +3940,40 @@
+@@ -3940,9 +3940,41 @@
  		  $echo "$modename: \`$deplib' is not a valid libtool archive" 1>&2
  		  exit 1
  		fi
@@ -20,14 +20,15 @@
 +		fi
 +		;;
 +	      *)
-+	      	if test "$installed" = yes && test "$S"; then
++	      	if test "$installed" = yes; then
 +		  # We do not want portage's build root ($S) present.
-+	          if test -n "`echo $deplib |grep -e "$S"`"
-+		  then
++	          if test -n "`echo $deplib |grep -e "$S"`" && test "$S"; then
 +		    newdependency_libs=""
 +		  # We do not want portage's install root ($D) present.
 +		  elif test -n "`echo $deplib |grep -e "$D"`" && test "$D"; then
 +		    mynewdependency_lib="`echo "$deplib" |sed -e "s:$D::g" -e 's://:/:g'`"
++		  else
++		    mynewdependency_lib="$deplib"
 +		  fi
 +		else
 +		  mynewdependency_lib="$deplib"
