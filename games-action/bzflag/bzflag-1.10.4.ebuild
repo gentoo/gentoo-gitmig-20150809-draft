@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.4.ebuild,v 1.2 2004/04/15 14:48:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.4.ebuild,v 1.3 2004/04/19 21:24:35 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/bzflag/${MY_P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
 
 DEPEND="virtual/opengl"
 
