@@ -1,5 +1,5 @@
 MD5 d75c64f9d8db48fce7c355cd9e2375d9 nmrview-5.2.2-r2.ebuild 1285
-MD5 43650275f17973bdc9194d4e8852606b ChangeLog 1023
+MD5 978c4a65954196d20ed52e0572fc0dde ChangeLog 1149
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
-MD5 34c987f1b79037d8f77400580df2dcac files/nmrview.sh 163
+MD5 0a1d063e6babcba9dcbc82db6188e76c files/nmrview.sh 163
 MD5 a8857c8e06c514a0e16ec3d10999ca52 files/digest-nmrview-5.2.2-r2 138
