@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.1 2004/08/25 12:56:50 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.2 2004/08/28 05:49:07 mr_bones_ Exp $
 
 DESCRIPTION="A destruction/stress testing tool for LADSPA plugins. It's intended mostly for sanity checking your own code before you release it to the world."
 HOMEPAGE="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa/demolition.html"
@@ -13,7 +13,7 @@ IUSE=""
 
 S=${WORKDIR}/demolition
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/glib-1.2.0
 	media-libs/ladspa-sdk"
 DEPEND="${RDEPEND}
@@ -26,5 +26,4 @@ src_compile() {
 
 src_install() {
 	dobin demolition || die "dobin failed"
-	dodoc COPYING
 }
