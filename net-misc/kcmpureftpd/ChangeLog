@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kcmpureftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.10 2004/06/24 23:51:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.11 2004/07/03 16:50:39 centic Exp $
+
+  03 Jul 2004; Dominik Stadler <centic@gentoo.org> kcmpureftpd-0.8.ebuild,
+  kcmpureftpd-0.9.1.ebuild:
+  Mark stable on x86.
 
   04 May 2004; David Holm <dholm@gentoo.org> kcmpureftpd-0.9.1.ebuild:
   Added to ~ppc.
