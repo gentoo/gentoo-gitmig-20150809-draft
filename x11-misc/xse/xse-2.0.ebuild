@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.0.ebuild,v 1.2 2005/01/21 22:29:40 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.0.ebuild,v 1.3 2005/03/21 13:01:31 taviso Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 DEPEND="virtual/x11"

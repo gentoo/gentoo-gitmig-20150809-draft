@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.1 2005/01/21 21:49:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/ChangeLog,v 1.2 2005/03/21 13:01:31 taviso Exp $
+
+  21 Mar 2005; Tavis Ormandy <taviso@gentoo.org> xse-2.0.ebuild:
+  stable
 
 *xse-2.0 (21 Jan 2005)
 
