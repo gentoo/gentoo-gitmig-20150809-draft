@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6e8a19978d7128410145f7b5b15ecf3b ChangeLog 467
-MD5 21bd6294b95aaee5b036007cd6c401a4 loki_patch-20040916.ebuild 918
+MD5 3f0411ae1f50b86f5b01a61cd8810310 ChangeLog 555
+MD5 4169ffed11f10c4cb4cfcf2c0297e25c loki_patch-20040916.ebuild 922
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
 MD5 9a7f5741c12bca917a311213a179acff files/digest-loki_patch-20040916 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBU2O5HTu7gpaalycRAhmhAKDZQ3vDsROG0uhkgi0aoyLuLgRRPQCg1jch
-cpCwpu3HjsIgCGMWxB2Egeg=
-=nWze
------END PGP SIGNATURE-----
