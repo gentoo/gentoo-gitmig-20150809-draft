@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/bioperl-pipeline
+# ChangeLog for sci-biology/bioperl-pipeline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/ChangeLog,v 1.1 2004/12/23 22:12:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-pipeline/ChangeLog,v 1.2 2004/12/24 02:21:26 swegener Exp $
 
 *bioperl-pipeline-0.1 (23 Dec 2004)
 

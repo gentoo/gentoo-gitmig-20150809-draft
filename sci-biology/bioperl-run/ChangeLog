@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/bioperl-run
+# ChangeLog for sci-biology/bioperl-run
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.1 2004/12/23 22:09:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.2 2004/12/24 02:22:02 swegener Exp $
 
 *bioperl-run-1.2.2 (23 Dec 2004)
 
