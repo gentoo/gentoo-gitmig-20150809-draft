@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.5.ebuild,v 1.10 2004/07/14 01:10:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.11.ebuild,v 1.1 2004/08/14 01:02:58 usata Exp $
+
+IUSE=""
 
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
 HOMEPAGE="http://imhangul.kldp.net/"
@@ -8,18 +10,12 @@ SRC_URI="http://download.kldp.net/imhangul/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
-IUSE=""
+KEYWORDS="~x86 ~alpha ~ppc"
 
-DEPEND=">=x11-libs/gtk+-2.0.6"
+DEPEND=">=x11-libs/gtk+-2.2.0"
 
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--mandir=/usr/share/man || die "./configure failed"
-
+	econf || die
 	emake || die
 }
 
@@ -39,6 +35,7 @@ pkg_postinst() {
 	einfo "export GTK_IM_MODULE=hangul3f	// 3 input type"
 	einfo ""
 }
+
 
 pkg_postrm() {
 	gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
