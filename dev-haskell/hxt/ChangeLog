@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/hxt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.1 2005/02/26 17:37:05 kosmikus Exp $
+
+*hxt-4.02 (26 Feb 2005)
+
+  26 Feb 2005; Andres Loeh <kosmikus@gentoo.org> +metadata.xml,
+  +hxt-4.02.ebuild:
+  Initial import using an ebuild provided by Luis F. Araujo <araujo@lbsd.net>
+  (bug #79590).
+
