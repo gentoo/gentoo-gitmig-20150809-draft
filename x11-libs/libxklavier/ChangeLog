@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.33 2005/01/08 23:34:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.34 2005/03/09 02:51:57 joem Exp $
+
+*libxklavier-2.0 (08 Mar 2005)
+
+  08 Mar 2005; Joe McCann <joem@gentoo.org> +libxklavier-2.0.ebuild:
+  gnome-2.10 release
 
   08 Jan 2005; Tom Martin <slarti@gentoo.org> libxklavier-1.04-r1.ebuild:
   Stable on amd64.
