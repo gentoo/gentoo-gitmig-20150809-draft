@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.1 2004/07/22 08:31:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.2 2004/07/22 09:05:45 eradicator Exp $
 
 IUSE="gtk gtk2 gpm nls"
 
@@ -27,6 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-nohome.patch
+	epatch ${FILESDIR}/${P}-close-dialogs.patch
+	epatch ${FILESDIR}/${P}-save_load.patch
 }
 
 src_compile() {

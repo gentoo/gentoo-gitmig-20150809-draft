@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.32 2004/07/22 08:31:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.33 2004/07/22 09:05:45 eradicator Exp $
+
+  22 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/aumix-2.8-close-dialogs.patch, +files/aumix-2.8-save_load.patch:
+  Added aumix-2.8-close-dialogs.patch aumix-2.8-save_load.patch from upstream.
 
 *aumix-2.8-r2 (22 Jul 2004)
 
