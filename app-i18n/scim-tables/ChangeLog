@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.26 2005/03/13 12:12:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.27 2005/03/27 08:57:38 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  scim-tables-0.5.0.ebuild:
+  Stable on alpha.
 
   13 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> scim-tables-0.4.3.ebuild,
   scim-tables-0.5.0.ebuild:
