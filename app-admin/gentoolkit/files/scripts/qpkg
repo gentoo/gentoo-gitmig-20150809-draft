@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.23 2003/06/12 19:47:14 mholzer Exp $
-ID='$Id: qpkg,v 1.23 2003/06/12 19:47:14 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.24 2003/06/13 07:15:27 rajiv Exp $
+ID='$Id: qpkg,v 1.24 2003/06/13 07:15:27 rajiv Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -59,15 +59,15 @@ do
 		;;
 
 	-I|--installed)
+		inst=y
+		;;
+
 	-m|--masked)
 		grepmask="-L"
 		;;
 
 	-n|--non-masked)
 		grepmask="-l"
-		;;
-
-		inst=y
 		;;
 
 	-U|--uninstalled)
