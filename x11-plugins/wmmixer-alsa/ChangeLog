@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmixer-alsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/ChangeLog,v 1.4 2003/02/12 09:42:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer-alsa/ChangeLog,v 1.5 2003/12/26 17:24:40 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> wmmixer-alsa-0.6.ebuild:
+  Masked on sparc as alsa-lib dependency cannot be met.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
