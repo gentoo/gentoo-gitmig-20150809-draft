@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.8 2002/11/17 09:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.9 2002/11/26 23:54:06 rphillips Exp $
 
 inherit perl-module
 
@@ -19,6 +19,7 @@ RDEPEND="${DEPEND}
 	>=net-www/apache-1.3.24-r1
 	>=dev-db/mysql-3.23.38
 	dev-perl/CGI
+	dev-perl/Apache-DBI
 	dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/Crypt-Blowfish"
@@ -56,4 +57,16 @@ src_install() {
 		${D}${APACHE_ROOT}/mysqltool/index.cgi.orig > \
 		${D}${APACHE_ROOT}/mysqltool/index.cgi
 	rm ${D}${APACHE_ROOT}/mysqltool/index.cgi.orig
+}
+
+pkg_postinst() {
+	einfo "Please add the following to commonapache.conf:"
+	einfo "PerlRequire {apache_root}/conf/mysqltool.conf"
+	einfo "<Directory {apache_document_root}/htdocs/mysqltool>"
+    einfo "Options ExecCGI"
+    einfo "<Files *.cgi>"
+    einfo "SetHandler perl-script"
+	einfo "PerlHandler MysqlTool"
+	einfo "</Files>"
+	einfo "</Directory>"
 }
