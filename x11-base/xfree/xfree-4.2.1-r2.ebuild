@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.18 2003/01/31 09:16:01 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.19 2003/02/05 11:30:21 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -393,7 +393,7 @@ src_install() {
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../X11R6/lib /usr/lib/X11
+	dosym ../X11R6/lib/X11 /usr/lib/X11
 	dosym ../../usr/X11R6/lib/X11/xkb /etc/X11/xkb
 
 	# Some critical directories
@@ -800,7 +800,7 @@ pkg_postrm() {
 		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
 		ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-		ln -snf ../X11R6/lib ${ROOT}/usr/lib/X11
+		ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
 	fi
 }
 

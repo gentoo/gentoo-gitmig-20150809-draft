@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.89 2003/02/04 18:19:53 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.90 2003/02/05 11:30:21 azarah Exp $
+
+  05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fix the /usr/lib/X11 symlink to point to the correct ../X11R6/lib/X11.
+  Some ebuild had this still wrong.  This closes bug #15017.
 
   04 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> xfree-4.2.99.4.ebuild :
   
