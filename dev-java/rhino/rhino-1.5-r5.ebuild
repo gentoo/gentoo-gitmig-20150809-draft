@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5-r5.ebuild,v 1.3 2004/05/09 22:04:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5-r5.ebuild,v 1.4 2004/06/17 10:45:08 st_lim Exp $
 
 inherit java-pkg
 
@@ -21,6 +21,12 @@ RESTRICT="nomirror"
 
 src_compile() {
 	local antflags="jar"
+
+	[ -n $http_proxy ] && proxyhost=`echo $http_proxy | sed -e "s/^\(.*\):\([0-9]*\)/\1/g" ` && \
+	  proxyport=`echo $http_proxy | sed -e "s/^\(.*\):\([0-9]*\)/\2/g" ` && \
+	  sed -e "s:<target name=\"get-swing-ex\" unless=\"swing-ex-available\">:&\n<setproxy proxyhost=\"${proxyhost}\" proxyport=\"${proxyport}\" />:g" \
+	      -i toolsrc/build.xml
+
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compilation error"
 }
