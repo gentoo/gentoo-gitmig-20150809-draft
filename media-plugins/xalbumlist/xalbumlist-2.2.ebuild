@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xalbumlist/xalbumlist-2.2.ebuild,v 1.3 2004/06/24 23:36:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xalbumlist/xalbumlist-2.2.ebuild,v 1.4 2004/08/28 18:00:15 dholm Exp $
 
 DESCRIPTION="A control program for XMMS"
 HOMEPAGE="http://xalbumlist.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 IUSE=""
 
