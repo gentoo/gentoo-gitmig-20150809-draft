@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.987-r1.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.987-r1.ebuild,v 1.3 2002/08/02 17:53:02 seemant Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -43,25 +43,25 @@ src_compile() {
 }
 
 src_install() {
-        export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
+	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		libexecdir=${D}/usr/lib/${PN} \
 		infodir=${D}/usr/share/info \
 		mandir=${D}/usr/share/man \
 		install || die
-        unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
     
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README
 }
 
 pkg_postinst() {
-        echo ">>> updating GConf2"
-        export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-        for SCHEMA in metacity.schemas ; do
-                echo $SCHEMA
-                /usr/bin/gconftool-2  --makefile-install-rule \
-                        /etc/gconf/schemas/${SCHEMA}
-        done
+	echo ">>> updating GConf2"
+	export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
+	for SCHEMA in metacity.schemas ; do
+	        echo $SCHEMA
+	        /usr/bin/gconftool-2  --makefile-install-rule \
+	                /etc/gconf/schemas/${SCHEMA}
+	done
 }       
 
