@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.1.ebuild,v 1.4 2002/08/07 04:00:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.2.ebuild,v 1.1 2002/08/07 04:00:03 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An MTA designed specifically for maildirs"
@@ -155,6 +155,7 @@ insinto /etc/skel
 insinto /etc/courier
     newins ${FILESDIR}/bofh bofh
     newins ${FILESDIR}/locallowercase locallowercase
+    newins ${FILESDIR}/sizelimit sizelimit
 
 	dodoc AUTHORS BENCHMARKS ChangeLog* NEWS README TODO
 }
