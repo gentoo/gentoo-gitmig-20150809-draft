@@ -1,6 +1,0 @@
-MD5 2cb187d8f60994c5e1b5fef2bcb6e85d /files/openssh-3.5_p1-gentoo-sshd-gcc3.patch 315
-MD5 b86ae0c43a704c4ee2abd2ce5c955f8f /files/sshd.pam 294
-MD5 e45ff32a9973b347955cba32d6a99d80 /files/sshd.rc6 1213
-MD5 98042bfd79c1981b532543165f8d08e7 /openssh-3.6_p1.ebuild 3971
-MD5 72ef1134d521cb6926c99256dad17fe0 openssh-3.6p1.tar.gz 875851
-MD5 c425e65927b359382bf3618d265d45f1 openssh_3.6p1-5.se1.diff.bz2 54985
