@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5-r1.ebuild,v 1.3 2005/01/01 14:17:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5-r1.ebuild,v 1.4 2005/02/12 18:35:42 kloeri Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ src_unpack() {
 	cd ${S}
 	# fix bad code generation (bug #47141)
 	epatch "${FILESDIR}/${PV}-parser.patch"
+	# fix font issue (bug #73510)
+	epatch "${FILESDIR}/${P}-font.patch"
 }
 
 src_compile() {
