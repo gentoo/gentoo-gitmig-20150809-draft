@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.9 2004/07/04 10:45:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.10 2004/09/15 15:30:11 foser Exp $
 
 inherit eutils gnome2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.4.7
 	>=x11-libs/pango-1.2
 	>=dev-libs/popt-1.5
-	>=dev-libs/libcroco-0.4
+	=dev-libs/libcroco-0.5*
 	zlib? ( >=gnome-extra/libgsf-1.6 )"
 
 DEPEND="${RDEPEND}

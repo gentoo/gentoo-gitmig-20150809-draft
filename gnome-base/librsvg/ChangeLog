@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.56 2004/08/22 13:03:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.57 2004/09/15 15:30:10 foser Exp $
+
+*librsvg-2.8.1 (15 Sep 2004)
+
+  15 Sep 2004; foser <foser@gentoo.org> librsvg-2.8.1.ebuild :
+  Gnome 2.8 release
+  update croco dep (fix in older versions)
+  add gnome USE for gnome-vfs
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> librsvg-2.6.5.ebuild:
   Stable on alpha.

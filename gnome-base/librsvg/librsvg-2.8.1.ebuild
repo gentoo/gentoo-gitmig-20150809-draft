@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.5.ebuild,v 1.10 2004/09/15 15:30:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.8.1.ebuild,v 1.1 2004/09/15 15:30:11 foser Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
 
-IUSE="doc zlib"
+IUSE="doc zlib gnome"
 SLOT="2"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 ~mips ppc64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 LICENSE="LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
@@ -18,15 +18,20 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.4.7
 	>=x11-libs/pango-1.2
 	>=dev-libs/popt-1.5
-	=dev-libs/libcroco-0.5*
-	zlib? ( >=gnome-extra/libgsf-1.6 )"
+	>=dev-libs/libcroco-0.6
+	zlib? ( >=gnome-extra/libgsf-1.6 )
+	gnome? ( >=gnome-base/gnome-vfs-2 )"
+
+# FIXME : silent deps on libgnomeprint
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
 	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 # FIXME : USEify croco support (?)
-G2CONF="${G2CONF} $(use_with zlib svgz) \
+G2CONF="${G2CONF} \
+	$(use_with zlib svgz) \
+	$(use_enable gnome gnome_vfs) \
 	--with-croco \
 	--enable-pixbuf-loader \
 	--enable-gtk-theme"
