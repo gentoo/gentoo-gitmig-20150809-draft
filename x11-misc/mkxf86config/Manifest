@@ -1,2 +1,5 @@
-MD5 f0c5ca904e57044afa0b9465552b0f27 mkxf86config-0.8.ebuild 764
+MD5 91f1dec2cf3f0e968db2472fd528d9e6 ChangeLog 436
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 1f83a6eabe1e5c831a1f04b8f059068f mkxf86config-0.8.ebuild 873
 MD5 1b8398caeba504ebffc51674e3d8c18a files/digest-mkxf86config-0.8 74
+MD5 8ebdf9901bd2f9f2a5c4e4ccbfed541c files/mkxf86config-gentoo.patch 4040

@@ -1,0 +1,80 @@
+diff -ruN xf86config-knoppix-0.8-orig/XF86Config-4.in xf86config-knoppix-0.8/XF86Config-4.in
+--- xf86config-knoppix-0.8-orig/XF86Config-4.in	2004-01-03 17:22:59.691440216 +0000
++++ xf86config-knoppix-0.8/XF86Config-4.in	2004-01-03 17:24:49.111805792 +0000
+@@ -13,30 +13,14 @@
+ EndSection
+ 
+ Section "Files"
+-	RgbPath      "/usr/X11R6/lib/X11/rgb"
+-	ModulePath   "/usr/X11R6/lib/modules"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/misc:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/misc"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/75dpi"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi:unscaled"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/100dpi"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/Speedo"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/PEX"
+-# Additional fonts: Locale, Gimp, TTF...
+-	FontPath     "/usr/X11R6/lib/X11/fonts/cyrillic"
+-#	FontPath     "/usr/X11R6/lib/X11/fonts/latin2/75dpi"
+-#	FontPath     "/usr/X11R6/lib/X11/fonts/latin2/100dpi"
+-# True type and type1 fonts are also handled via xftlib, see /etc/X11/XftConfig!
+-	FontPath     "/usr/X11R6/lib/X11/fonts/Type1"
+-	FontPath     "/usr/share/fonts/ttf/western"
+-	FontPath     "/usr/share/fonts/ttf/decoratives"
+-	FontPath     "/usr/share/fonts/truetype"
+-	FontPath     "/usr/share/fonts/truetype/openoffice"
+-	FontPath     "/usr/share/fonts/truetype/ttf-bitstream-vera"
+-	FontPath     "/usr/share/fonts/latex-ttf-fonts"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/defoma/CID"
+-	FontPath     "/usr/X11R6/lib/X11/fonts/defoma/TrueType"
++        RgbPath      "/usr/X11R6/lib/X11/rgb"
++        ModulePath   "/usr/X11R6/lib/modules"
++        FontPath     "/usr/X11R6/lib/X11/fonts/misc/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/Speedo/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/Type1/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/CID/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/75dpi/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/100dpi/"
+ EndSection
+ 
+ Section "Module"
+diff -ruN xf86config-knoppix-0.8-orig/XF86Config.in xf86config-knoppix-0.8/XF86Config.in
+--- xf86config-knoppix-0.8-orig/XF86Config.in	2004-01-03 17:22:59.692440064 +0000
++++ xf86config-knoppix-0.8/XF86Config.in	2004-01-03 17:25:26.954052896 +0000
+@@ -1,27 +1,11 @@
+ Section "Files"
+-        RgbPath      "/usr/X11R6/lib/X11/rgb"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/misc:unscaled"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/misc"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/75dpi:unscaled"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/75dpi"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/100dpi:unscaled"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/100dpi"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/Speedo"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/PEX"
+-# Additional fonts: Locale, Gimp, TTF...
+-        FontPath     "/usr/X11R6/lib/X11/fonts/cyrillic"
+-#        FontPath     "/usr/X11R6/lib/X11/fonts/latin2/75dpi"
+-#        FontPath     "/usr/X11R6/lib/X11/fonts/latin2/100dpi"
+-# True type and type1 fonts are also handled via xftlib, see /etc/X11/XftConfig!
+-	FontPath     "/usr/X11R6/lib/X11/fonts/Type1"
+-        FontPath     "/usr/share/fonts/ttf/western"
+-        FontPath     "/usr/share/fonts/ttf/decoratives"
+-	FontPath     "/usr/share/fonts/truetype"
+-        FontPath     "/usr/share/fonts/truetype/openoffice"
+-        FontPath     "/usr/share/fonts/truetype/ttf-bitstream-vera"
+-	FontPath     "/usr/share/fonts/latex-ttf-fonts"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/defoma/CID"
+-        FontPath     "/usr/X11R6/lib/X11/fonts/defoma/TrueType"
++        ModulePath   "/usr/X11R6/lib/modules"
++        FontPath     "/usr/X11R6/lib/X11/fonts/misc/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/Speedo/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/Type1/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/CID/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/75dpi/"
++        FontPath     "/usr/X11R6/lib/X11/fonts/100dpi/"
+ EndSection
+ 
+ Section "ServerFlags"
