@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r4.ebuild,v 1.3 2002/05/06 20:39:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.0.1-r4.ebuild,v 1.4 2002/05/06 20:40:24 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
@@ -18,8 +18,7 @@ DEPEND="virtual/glibc
 
 # libiconv breaks other stuff
 
-RDEPEND="virtual/glibc
-		!  dev-libs/libiconv-1.7"
+RDEPEND="virtual/glibc"
 
 src_compile() {
 	libtoolize --copy --force
