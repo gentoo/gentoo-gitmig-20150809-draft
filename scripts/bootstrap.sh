@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.46 2003/06/06 06:16:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.47 2003/06/06 16:55:38 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -12,6 +12,21 @@
 # of Gentoo, where we were being ultra-paranoid.
 
 # (drobbins, 06 Jun 2003)
+
+unset STRAP_EMERGE_OPTS 
+STRAP_RUN=1
+if [ "$1" = "--fetchonly" -o "$1" = "-f" ]
+then
+	echo "Running in fetch-only mode..."
+	STRAP_EMERGE_OPTS="-f"
+	unset STRAP_RUN
+elif [ "$1" = "-h" -o "$1" = "--help" ]
+then
+	echo "bootstrap.sh: Please run with no arguments to start bootstrap, or specify"
+	echo "--fetchonly or -f to download source archives only. -h/--help displays this"
+	echo "help."
+	exit 1
+fi
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
 if [ ! -d ${MYPROFILEDIR} ]
@@ -46,10 +61,13 @@ fi
 
 echo
 echo -e "${GOOD}Gentoo Linux${GENTOO_VERS}; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
-echo -e " Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
-echo
-einfo "Starting Bootstrap of base system ..."
-echo
+echo -e "Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL"
+if [ "$STRAP_EMERGE_OPTS" = "-f" ]
+then
+	echo "Fetching all bootstrap-related archives..."
+else
+	echo "Starting Bootstrap of base system ..."
+fi
 echo
 
 # This should not be set to get glibc to build properly. See bug #7652.
@@ -59,19 +77,25 @@ LD_LIBRARY_PATH=""
 unset TMP TMPDIR TEMP
 
 cleanup() {
-	if [ -f /etc/make.conf.build ]
+	if [ -n "$STRAP_RUN" ]
 	then
-		mv -f /etc/make.conf.build /etc/make.conf
+		if [ -f /etc/make.conf.build ]
+		then
+			mv -f /etc/make.conf.build /etc/make.conf
+		fi
 	fi
-
 	exit $1
 }
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
 # not being restored.
-cp -f /etc/make.conf /etc/make.conf.build
-trap "cleanup" TERM KILL INT QUIT ABRT
+if [ -n "$STRAP_RUN" ]
+then
+	cp -f /etc/make.conf /etc/make.conf.build
+fi
+
 #TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
+trap "cleanup" TERM KILL INT QUIT ABRT
 
 # USE may be set from the environment so we back it up for later.
 export ORIGUSE="`${PYTHON} -c 'import portage; print portage.settings["USE"];'`"
@@ -87,8 +111,10 @@ INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
 if [ "${INVALID_USE}" = "yes" ]
 then
 	echo
-	eerror "You have 'build' or 'bootstrap' in your USE flags!  Please"
-	eerror "remove it before trying to continue ..."
+	eerror "You have 'build' or 'bootstrap' in your USE flags. Please"
+	eerror "remove it before trying to continue, since these USE flags"
+	eerror "are used for internal purposes and shouldn't be specified"
+	eerror "by you."
 	echo
 	cleanup 1
 fi
@@ -115,6 +141,7 @@ echo "Using ${myZLIB}"
 echo "Using ${myNCURSES}"
 echo
 
+echo "Configuring environment..."
 export GENTOO_MIRRORS="`${PYTHON} -c 'import portage; print portage.settings["GENTOO_MIRRORS"];'`"
 
 export PORTDIR="`${PYTHON} -c 'import portage; print portage.settings["PORTDIR"];'`"
@@ -153,7 +180,7 @@ export AUTOCLEAN="no"
 # Allow portage to overwrite stuff
 export CONFIG_PROTECT="-*"
 	
-USE="-* build bootstrap" emerge ${myPORTAGE} || cleanup 1
+USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 
 if [ -x /usr/bin/gcc-config ]
 then
@@ -165,23 +192,23 @@ then
 fi
 
 # Basic support for gcc multi version/arch scheme ...
-if test -x ${GCC_CONFIG} &> /dev/null && \
-   ${GCC_CONFIG} --get-current-profile &> /dev/null
+if [ -n "$STRAP_RUN" ]
 then
-	# Make sure we get the old gcc unmerged ...
-	emerge clean || cleanup 1
-	# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
-	${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
+	if test -x ${GCC_CONFIG} &> /dev/null && \
+	${GCC_CONFIG} --get-current-profile &> /dev/null
+	then
+		# Make sure we get the old gcc unmerged ...
+		emerge clean || cleanup 1
+		# Make sure the profile and /lib/cpp and /usr/bin/cc are valid ...
+		${GCC_CONFIG} "`${GCC_CONFIG} --get-current-profile`" &> /dev/null
+	fi
 fi
 
 export USE="${ORIGUSE} bootstrap"
-for x in ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${MYBASELAYOUT} ${myZLIB} 
-do
-	emerge $x || cleanup 1
-done
+emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${MYBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
-emerge ${myNCURSES} || cleanup 1
+emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
 
 # Restore original make.conf
 cleanup 0
