@@ -1,0 +1,11 @@
+# ChangeLog for media-video/w3cam
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.1 2002/10/23 09:29:03 zwelch Exp $
+
+*usb-pwcx-8.2.2 (25 Aug 2002)
+
+  25 Aug 2002; Burton Samograd <kruhft@kruhft.dyndns.org> ChangeLog,
+  usb-pwcx-8.2.2.ebuild, files/digest-usb-pwcx-8.2.2 :
+  New ebuild. usb-pwcx is a set of binary only drivers for Phillips 
+  USB webcams that allows for higher resolution and frame rates.
+
