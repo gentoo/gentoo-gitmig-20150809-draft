@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.4 2004/04/15 03:01:09 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.5 2004/05/15 08:08:47 eradicator Exp $
+
+  15 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  XML-Generator-0.99.ebuild:
+  Adding to stable x86 as this is needed by webmin... including versions
+  already stable. See bug #45950 for more information.
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> XML-Generator-0.99.ebuild:
   adding s390 keywords
