@@ -1,4 +1,4 @@
-MD5 125f47ea2a7250ce2b5764d84b279e70 files/digest-fastutil-4.1 68
-MD5 138487ed3000d1983d60c2b209b27736 fastutil-4.1.ebuild 881
-MD5 e97fed8a2943541ac98c0e4dbd32cee3 ChangeLog 395
+MD5 571556475a1add6872463566d9acc7c3 ChangeLog 482
+MD5 d8edee5d5676c59f4299153af36c04be fastutil-4.1.ebuild 889
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 125f47ea2a7250ce2b5764d84b279e70 files/digest-fastutil-4.1 68

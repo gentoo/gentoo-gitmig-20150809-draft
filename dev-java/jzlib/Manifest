@@ -1,5 +1,5 @@
-MD5 857861170f2fc720c2c8f3cb1416a11b jzlib-1.0.3.ebuild 1035
-MD5 64e2de38548ba43cc486313a9bbffb13 ChangeLog 536
+MD5 11444f3160139bd0f8da83105a5b8da3 ChangeLog 537
+MD5 afbd9ea3db19b65fbda86b089c0e6d83 jzlib-1.0.3.ebuild 1044
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d4a5da6cd5894adce3162aa3a1340a9d files/digest-jzlib-1.0.3 62
 MD5 c85943ac8f46d6595a76723f73d57599 files/jzlib_build.xml 1688
