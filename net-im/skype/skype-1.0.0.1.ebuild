@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.93.0.3-r3.ebuild,v 1.1 2005/01/05 22:24:11 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.0.0.1.ebuild,v 1.1 2005/02/01 13:42:25 humpback Exp $
 
 inherit eutils
 
@@ -44,18 +44,15 @@ src_install() {
 	mv skype skype.bin
 	cp ${FILESDIR}/sDaemonWrapper skype
 
-	dodir /opt/skype
+	dodir /opt/${PN}
 	exeopts -m0755
-	exeinto /opt/skype
+	exeinto /opt/${PN}
 	doexe skype
 	doexe skype.bin
-	#This version nolonger has the need for resources hardcoded it can use
-	#./skype --resources-path /some/directory/with/resources but our script
-	#must be changed and the older ebuilds removed first
-	insinto /opt/skype/sound
+	insinto /opt/${PN}/sound
 	doins sound/*.wav
 
-	insinto /opt/skype/lang
+	insinto /opt/${PN}/lang
 	doins lang/*.qm
 	#Skype still shows ALL languagues no matter what were installed
 	#for i in ${LINGUAS}; do
@@ -64,10 +61,10 @@ src_install() {
 	#	fi;
 	#done;
 
-	insinto /opt/skype/avatars
+	insinto /opt/${PN}/avatars
 	doins avatars/*.jpg
 
-	insinto /opt/skype
+	insinto /opt/${PN}
 	make_desktop_entry skype "Skype VoIP" ../icons/hicolor/48x48/apps/skype.png
 	for SIZE in 16 32 48
 	do
