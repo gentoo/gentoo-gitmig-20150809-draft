@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/ChangeLog,v 1.4 2005/03/23 18:25:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jms/ChangeLog,v 1.5 2005/04/04 15:02:02 luckyduck Exp $
+
+  04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jms-1.1.ebuild:
+  added ~ppc to KEYWORDS
 
   23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> jms-1.1.ebuild:
   Keyworded ~sparc wrt #84992
