@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.5 2002/07/19 20:28:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.6 2002/07/22 04:52:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
@@ -12,6 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/x11
+	dev-libs/libxml
+	dev-libs/libxml2
 	=media-libs/freetype-1.3*
 	>=media-libs/jpeg-6b
 	media-libs/libpng
