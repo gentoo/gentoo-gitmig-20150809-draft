@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/prothon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.2 2004/04/12 12:17:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.3 2004/04/17 03:56:23 weeve Exp $
+
+*prothon-0.0.4_p328 (16 Apr 2004)
+
+  16 Apr 2004; Jason Wever <weeve@gentoo.org> prothon-0.0.4_p328.ebuild:
+  Added ~sparc keyword.
 
 *prothon-0.0.3_p282 (12 Apr 2004)
 
