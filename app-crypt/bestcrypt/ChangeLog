@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.26 2005/01/07 08:55:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.27 2005/01/26 08:56:00 dragonheart Exp $
+
+  26 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/bestcrypt-1.5_p9-makefile_fix.patch, files/bestcrypt.devfs,
+  bestcrypt-1.5_p10.ebuild, -bestcrypt-1.5_p7-r1.ebuild,
+  -bestcrypt-1.5_p9-r1.ebuild:
+  devfs stuff added to 1.5_p10 thanks to Craig <craig@haquarter.de>. 1.5_p10 x86
+  stable. removed old versions
 
 *bestcrypt-1.5_p10 (07 Jan 2005)
 
