@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.4.2.ebuild,v 1.9 2005/01/01 10:50:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.4.2.ebuild,v 1.10 2005/03/03 09:08:11 leonardop Exp $
 
 inherit java-pkg gnome2
 
@@ -26,8 +26,7 @@ src_compile() {
 		eerror "In order to compile java sources you have to set the"
 		eerror "\$JDK_HOME environment properly."
 		eerror ""
-		eerror "You can achieve this by using the java-config tool:"
-		eerror "  emerge java-config"
+		eerror "You may do this using dev-java/java-config."
 		die "Couldn't find a valid JDK home"
 	fi
 
@@ -66,14 +65,10 @@ pkg_postinst() {
 	einfo ""
 	einfo "The Java Accessibility Bridge for GNOME has been installed."
 	einfo ""
-	einfo "For this to work with your regular java desktop applications,"
-	einfo "make sure too add the following line to your ~/.orbitrc file:"
+	einfo "To enable accessibility support with your java applications, you"
+	einfo "have to enable CORBA traffic over IP. To do this, you may add the"
+	einfo "following line to your /etc/orbitrc or ~/.orbitrc file:"
 	einfo ""
 	einfo "  ORBIIOPIPv4=1"
-	einfo ""
-	einfo "And then either:"
-	einfo "  a) Restart your session, or"
-	einfo "  b) Manually kill your bonobo-activation-server and"
-	einfo "     at-spi-registryd processes."
 	einfo ""
 }
