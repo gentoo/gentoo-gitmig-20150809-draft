@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/desklet-weather
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.1 2003/09/09 05:23:46 obz Exp $
+
+*desklet-weather-0.21 (09 Sep 2003)
+
+  09 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-weather-0.21.ebuild:
+  First import
+
