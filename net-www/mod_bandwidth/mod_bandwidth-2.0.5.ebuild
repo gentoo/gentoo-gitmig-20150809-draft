@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5.ebuild,v 1.1 2004/05/17 13:51:36 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5.ebuild,v 1.2 2004/06/20 13:59:28 zul Exp $
 
 DESCRIPTION="Bandwidth Management Module for Apache"
 HOMEPAGE="http://www.cohprog.com/v3/bandwidth/intro-en.html"
@@ -37,7 +37,7 @@ pkg_postinst() {
 		${ROOT}/var/cache/mod_bandwidth/{link,master}
 
 	einfo
-	einfo "Execute \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "Execute \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with this module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo
