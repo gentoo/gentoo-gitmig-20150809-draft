@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/randomsig
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/ChangeLog,v 1.4 2003/02/12 08:15:46 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/randomsig/ChangeLog,v 1.5 2004/04/16 20:27:52 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> randomsig-1.10.0.ebuild:
+  adding s390 keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
