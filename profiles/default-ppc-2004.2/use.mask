@@ -18,6 +18,8 @@ uclibc
 firebird
 fmod
 uml
+fdftk
+
 
 # media-libs/glide-v3 requires some extra work on ppc
 3dfx

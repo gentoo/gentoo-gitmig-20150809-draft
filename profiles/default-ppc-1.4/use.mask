@@ -13,6 +13,7 @@ firebird
 tcc
 acpi
 uml
+fdftk
 
 # No stable enough gcc-3.3.x available on ppc
 nptl
