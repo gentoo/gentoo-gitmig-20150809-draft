@@ -1,9 +1,13 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.16 2002/08/04 09:15:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.17 2002/08/04 17:35:24 spider Exp $
 
 *pan-0.12.92-r1 (4 Aug 2002)
-
+  4 Aug 2002; Spider <spider@gentoo.org> pan-0.12.92-r1.ebuild :
+  gtk-spell support is broken, mask out (it crashes with aspell)
+  inherit debug instead of the manaual debug info
+  
+  
   4 Aug 2002; Leonardo Boshell <leonardop@gentoo.org> pan-0.12.92-r1.ebuild:
   Dependencies corrections. libunicode was missing. Closes bug #5879.
 

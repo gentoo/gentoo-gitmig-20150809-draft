@@ -1,13 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.92-r1.ebuild,v 1.1 2002/08/04 09:15:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.92-r1.ebuild,v 1.2 2002/08/04 17:35:24 spider Exp $
 
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
+inherit debug
 
 DESCRIPTION="A newsreader for the Gnome2 desktop"
 SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
@@ -32,7 +27,9 @@ src_compile() {
 
 	use nls   || myconf="--disable-nls"
 	use spell || myconf="$myconf --disable-gtkspell"
-	
+
+	# gtkspell breaks things now.
+	myconf="${myconf} --disable-gtkspell"	
 	econf --enable-debug=yes $myconf || die "Configure failure"
 
 	emake || die "Compilation failure"
