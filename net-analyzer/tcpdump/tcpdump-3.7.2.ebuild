@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.12 2004/06/24 22:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.13 2004/07/14 22:37:59 agriffis Exp $
 
 inherit eutils
 
-IUSE="ssl ipv6"
+IUSE="ssl"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 SRC_URI="mirror://sourceforge/tcpdump/${P}.tar.gz
 	http://www.tcpdump.org/release/${P}.tar.gz
