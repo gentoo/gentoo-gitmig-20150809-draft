@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r1.ebuild,v 1.12 2004/08/05 21:23:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2-r1.ebuild,v 1.13 2004/08/30 19:44:42 pvdabeel Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.muhri.net/${MY_P}.tar.gz
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha ~hppa amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ~ia64 ~mips"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-2*"

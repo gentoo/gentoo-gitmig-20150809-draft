@@ -1,6 +1,33 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.12 2004/08/16 08:27:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.13 2004/08/30 19:44:41 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild, baghira-0.4.ebuild, baghira-0.4c.ebuild,
+  baghira-0.4d.ebuild, baghira-0.5.ebuild, baghira-0.5a.ebuild:
+  Masked baghira-0.5a.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild, baghira-0.4.ebuild, baghira-0.4c.ebuild,
+  baghira-0.4d.ebuild, baghira-0.5.ebuild:
+  Masked baghira-0.5.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild, baghira-0.4.ebuild, baghira-0.4c.ebuild,
+  baghira-0.4d.ebuild:
+  Masked baghira-0.4d.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild, baghira-0.4.ebuild, baghira-0.4c.ebuild:
+  Masked baghira-0.4c.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild, baghira-0.4.ebuild:
+  Masked baghira-0.4.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  baghira-0.3r.ebuild:
+  Masked baghira-0.3r.ebuild stable for ppc
 
 *baghira-0.5a (16 Aug 2004)
 

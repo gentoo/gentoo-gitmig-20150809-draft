@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20040809.ebuild,v 1.1 2004/08/12 13:37:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20040809.ebuild,v 1.2 2004/08/30 19:44:42 pvdabeel Exp $
 
 DESCRIPTION="A collection of FluxBox themes from FluxMod"
 HOMEPAGE="http://www.ikaro.dk"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~ppc ~alpha ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~sparc ~mips ppc ~alpha ~hppa ~amd64 ~ia64 ~ppc64"
 
 IUSE=""
 DEPEND=">=sys-apps/sed-4"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.21 2004/08/14 13:57:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.22 2004/08/30 19:44:42 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  thinkeramik-3.2.1.ebuild:
+  Masked thinkeramik-3.2.1.ebuild stable for ppc
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> thinkeramik-2.8.1.ebuild:
   Fixed CVS Header.

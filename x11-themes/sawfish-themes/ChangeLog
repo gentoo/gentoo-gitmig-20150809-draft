@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/sawfish-themes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.6 2004/06/24 23:37:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/ChangeLog,v 1.7 2004/08/30 19:44:42 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  sawfish-themes-0.0.1-r1.ebuild, sawfish-themes-0.0.1-r3.ebuild:
+  Masked sawfish-themes-0.0.1-r3.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  sawfish-themes-0.0.1-r1.ebuild:
+  Masked sawfish-themes-0.0.1-r1.ebuild stable for ppc
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   sawfish-themes-0.0.1-r1.ebuild, sawfish-themes-0.0.1-r3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.1 2004/08/19 14:23:28 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.2 2004/08/30 19:44:41 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  activeheart-1.2.1.ebuild:
+  Masked activeheart-1.2.1.ebuild testing for ppc
 
 *activeheart-1.2.1 (19 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/activeheart-kwin-1.1.ebuild,v 1.1 2004/08/19 14:23:28 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/activeheart-kwin-1.1.ebuild,v 1.2 2004/08/30 19:44:41 pvdabeel Exp $
 
 inherit kde-base
 
@@ -17,4 +17,4 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="$KDEMAJORVER.$KDEMINORVER"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"

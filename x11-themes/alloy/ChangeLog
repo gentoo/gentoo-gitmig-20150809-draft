@@ -1,6 +1,17 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.12 2004/08/16 21:55:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.13 2004/08/30 19:44:41 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> alloy-0.5.1.ebuild,
+  alloy-0.5.2.ebuild, alloy-0.5.ebuild:
+  Masked alloy-0.5.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> alloy-0.5.1.ebuild,
+  alloy-0.5.2.ebuild:
+  Masked alloy-0.5.2.ebuild stable for ppc
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> alloy-0.5.1.ebuild:
+  Masked alloy-0.5.1.ebuild stable for ppc
 
   16 Aug 2004; Carsten Lohrke <carlo@gentoo.org>
   +files/remove-extra-semicolon.patch, alloy-0.5.2.ebuild:

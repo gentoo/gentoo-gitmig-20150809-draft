@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.9 2004/06/24 23:37:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.10 2004/08/30 19:44:42 pvdabeel Exp $
 
 DESCRIPTION="Some nice themes for sawfish"
 HOMEPAGE="http://www.themes.org"
@@ -8,7 +8,7 @@ SRC_URI="http://ftp1.sourceforge.net/pub/mirrors/themes.org/sawmill/Adept-0.28.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ppc alpha"
 IUSE=""
 
 DEPEND=">=x11-wm/sawfish-1.0"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.56 2004/08/23 10:25:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.57 2004/08/30 19:44:42 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gnome-icon-theme-1.2.3.ebuild:
+  Masked gnome-icon-theme-1.2.3.ebuild stable for ppc
 
   23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   gnome-icon-theme-1.2.3.ebuild:

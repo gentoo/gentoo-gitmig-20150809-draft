@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/noia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.13 2004/06/28 22:46:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.14 2004/08/30 19:44:42 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> noia-021209.ebuild:
+  Masked noia-021209.ebuild stable for ppc
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> noia-021209.ebuild,
   noia-030203.ebuild, noia-1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.5.ebuild,v 1.2 2004/08/09 17:24:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/baghira-0.5.ebuild,v 1.3 2004/08/30 19:44:41 pvdabeel Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/baghira/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ppc"
 IUSE=""
 
 DEPEND=">=kde-base/kdebase-3.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-021209.ebuild,v 1.6 2004/06/28 22:46:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-021209.ebuild,v 1.7 2004/08/30 19:44:42 pvdabeel Exp $
 
 inherit kde
 need-kde 3
@@ -9,7 +9,7 @@ S="${WORKDIR}/noia"
 DESCRIPTION="Noia Icon Set for KDE"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.carlitus.net"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
