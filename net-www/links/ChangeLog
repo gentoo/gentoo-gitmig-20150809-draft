@@ -1,6 +1,10 @@
 # ChangeLog for net-www/links
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.54 2004/10/23 22:15:28 lanius Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.55 2005/01/11 14:41:13 lanius Exp $
+
+  11 Jan 2005; Heinrich Wendel <lanius@gentoo.org>
+  files/links-2.1pre15-utf8.diff.bz2:
+  update utf8 patch, bug #67528
 
   24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -links-0.96-r2.ebuild,
   -links-2.1_pre11.ebuild, -links-2.1_pre13.ebuild, -links-2.1_pre14.ebuild,
