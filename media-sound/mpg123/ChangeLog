@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.36 2004/02/18 17:40:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.37 2004/04/12 09:40:41 eradicator Exp $
+
+*mpg123-0.59s-r3 (12 Apr 2004)
+
+  12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mpg123-0.59s-r3.ebuild:
+  Support for more nas and esd added.  Alsa is broken.  Closes bug #47269.
 
   18 Feb 2004; Martin Schlemmer <azarah@gentoo.org> mpg123-0.59s-r2.ebuild:
   Remove -m486 based on patch from Thomas Veith <th_veith@web.de>, closing bug
