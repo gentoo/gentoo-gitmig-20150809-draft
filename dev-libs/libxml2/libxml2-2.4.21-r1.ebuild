@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>,  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.20.ebuild,v 1.1 2002/04/16 13:47:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.21-r1.ebuild,v 1.1 2002/05/26 15:23:03 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libxml"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/libxml/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/libxml/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -14,6 +14,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 
 src_compile() {
+	# Fix .la files of python site packages
+	libtoolize --copy --force
+
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --mandir=/usr/share/man \

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.7 2002/05/09 19:29:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.8 2002/05/26 15:23:03 azarah Exp $
+
+*libxml2-2.4.21-r1 (9 MAy 2002)
+
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Libtoolize to fix .la files from python site packages.
 
 *libxml2-2.4.21 (9 MAy 2002)
   9 May 2002; Spider <spider@gentoo.org> :

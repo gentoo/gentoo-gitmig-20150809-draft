@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.4 2002/05/09 19:38:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.5 2002/05/26 15:23:10 azarah Exp $
 
+*libxslt-1.0.17-r1 (26 May 2002)
+
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Libtoolize to fix .la files of python site package.
 
 *libxslt-1.0.17 (9 May 2002)
   9 May 2002; Spider <spider@gentoo.org> libxslt-1.0.17.ebuild :
