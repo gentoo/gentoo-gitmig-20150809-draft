@@ -1,3 +1,5 @@
-MD5 bcf0a384506f1d90d90c1b0ecef84c50 files/digest-gtkpod-0.51 63
-MD5 cb21640284c17baa455c5666298513af gtkpod-0.51.ebuild 678
 MD5 80fd1fe0858fcfc291748bad2072463a ChangeLog 469
+MD5 cb21640284c17baa455c5666298513af gtkpod-0.51.ebuild 678
+MD5 ec06fdbfd34001063b74ad97c0fbb348 gtkpod-0.52.ebuild 679
+MD5 def6ed9b41a01aea21dac076389890b3 files/digest-gtkpod-0.52 63
+MD5 bcf0a384506f1d90d90c1b0ecef84c50 files/digest-gtkpod-0.51 63
