@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1.ebuild,v 1.2 2003/12/05 16:28:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.4.1.ebuild,v 1.3 2003/12/05 16:29:58 mholzer Exp $
 
 inherit webapp-apache
 
@@ -21,9 +21,6 @@ DEPEND=">=net-www/apache-1.3.24-r1
 S=${WORKDIR}/${PN}
 
 webapp-detect || NO_WEBSERVER=1
-
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
 
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
