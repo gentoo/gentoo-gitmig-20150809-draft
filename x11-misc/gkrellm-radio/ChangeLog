@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/gkrellm-radio
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-radio/ChangeLog,v 1.1 2002/04/26 09:35:13 seemant Exp $
+
+*gkrellm-radio-0.3 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-radio-0.3.ebuild
+  files/digest-gkrellm-radio-0.3 :
+
+  New gkrellm plugin
