@@ -16,8 +16,6 @@ DEPEND=""
 
 src_compile() {
 
-   cd ${S}
-
    mv Makefile Makefile.old
    sed -e "s/# FLAGSM = -DLINUX -DSHADOW_PWD/FLAGSM = -DLINUX -DSHADOW_PWD -DNO_ASMSIGNALH/" -e "s/# LIBSM = -lshadow/LIBSM = -lshadow/" Makefile.old > Makefile
 
@@ -30,11 +28,12 @@ src_compile() {
 }
 
 src_install () {
-    cd ${S}
 
-    into /usr
+    mv nat nbaudit
+    dobin nbaudit
 
-    dobin nat
-    doman nat.1
+    mv nat.1 nbaudit.1
+    doman nbaudit.1
+
     dodoc README COPYING
 }
