@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/ChangeLog,v 1.3 2004/01/19 13:14:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/ChangeLog,v 1.4 2004/01/19 13:17:48 lanius Exp $
+
+*generator-1.2.3 (19 Jan 2004)
+
+  19 Jan 2004; Heinrich Wendel <lanius@gentoo.org> generator-1.0.1.ebuild,
+  generator-1.2.3.ebuild:
+  added homepage
 
   19 Jan 2004; Heinrich Wendel <lanius@gentoo.org> generator-1.0.ebuild:
   version bump

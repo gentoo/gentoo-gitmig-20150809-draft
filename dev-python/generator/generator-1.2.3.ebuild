@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.2.3.ebuild,v 1.1 2004/01/19 13:14:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generator/generator-1.2.3.ebuild,v 1.2 2004/01/19 13:17:48 lanius Exp $
 SLOT="0"
 IUSE=""
 DESCRIPTION="Widget generator for Archetypes"
+HOMEPAGE="http://www.sourceforge.net/projects/archetypes"
 SRC_PN=archetypes
 SRC_PV=1.2.3_final
 SRC_P=${SRC_PN}-${SRC_PV}
