@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Damon Conway <kabau@gentoo.org>
-# /home/cvsroot/gentoo-x86/skel.build,v 1.8 2001/10/11 17:50:47 woodchip Exp
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20011109.ebuild,v 1.1 2001/12/12 15:35:59 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager"
-SRC_URI="http://www.students.tut.fi/~tuomov/dl/ion-20010523.tar.gz"
+SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
