@@ -1,0 +1,66 @@
+--- MPlayer-1.0pre5try2/configure	2004-12-19 03:17:24.000000000 +0900
++++ MPlayer-1.0pre6/configure	2004-12-24 00:36:00.000000000 +0900
+@@ -3719,7 +3965,42 @@
+ fi
+ 
+ 
++
++echocheck "PNM support"
++if test "$_pnm" = yes; then
++  _def_pnm="#define HAVE_PNM"
++  _vosrc="$_vosrc vo_pnm.c"
++  _vomodules="pnm $_vomodules"
++else
++  _def_pnm="#undef HAVE_PNM"
++  _novomodules="pnm $_novomodules"
++fi
++echores "$_pnm"
++
++
++
++echocheck "md5sum support"
++if test "$_md5sum" = yes; then
++  _def_md5sum="#define HAVE_MD5SUM"
++  _vosrc="$_vosrc vo_md5sum.c md5sum.c"
++  _vomodules="md5sum $_vomodules"
++else
++  _def_md5sum="#undef HAVE_MD5SUM"
++  _novomodules="md5sum $_novomodules"
++fi
++echores "$_md5sum"
++
++
++
+ echocheck "GIF support"
++# This is to appease people who want to force gif support.
++# If it is forced to yes, then we still do checks to determine
++# which gif library to use.
++if test "$_gif" = yes ; then
++  _force_gif=yes
++  _gif=auto
++fi
++
+ if test "$_gif" = auto ; then
+   _gif=no
+ cat > $TMPC << EOF
+@@ -3743,6 +4024,20 @@
+   fi
+ fi
+ 
++# If no library was found, and the user wants support forced,
++# then we force it on with libgif, as this is the safest
++# assumption IMHO.  (libungif & libregif both create symbolic
++# links to libgif.  We also assume that no x11 support is needed,
++# because if you are forcing this, then you _should_ know what
++# you are doing.  [ Besides, package maintainers should never
++# have compiled x11 deps into libungif in the first place. ] )
++# </rant>
++#   --Joey
++if test "$_force_gif" = yes && test "$_gif" = no ; then
++  _gif=yes
++  _ld_gif="-lgif"
++fi
++
+ if test "$_gif" = yes ; then
+   _def_gif='#define HAVE_GIF 1'
+   _vosrc="$_vosrc vo_gif89a.c"

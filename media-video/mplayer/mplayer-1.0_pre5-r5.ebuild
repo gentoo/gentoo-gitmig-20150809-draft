@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.19 2005/02/03 22:19:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.20 2005/02/04 21:49:38 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -162,6 +162,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-bio2jack.patch
 
 	use ppc64 && epatch ${FILESDIR}/${P}-r4-ppc64.patch
+
+	# backport the gif recognition from pre6...
+	# yay! - Chris
+	epatch ${FILESDIR}/${PN}-gif.patch
 }
 
 linguas_warn() {
@@ -441,12 +445,6 @@ src_compile() {
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
-
-	# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
-	# so... we have to help it along.
-	if use gif; then
-		sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
-	fi
 
 	einfo "Make"
 	make all || die "Failed to build MPlayer!"
