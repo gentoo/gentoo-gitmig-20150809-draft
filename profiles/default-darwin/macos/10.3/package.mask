@@ -2,6 +2,7 @@
 # These packages will, or depend on packages that will overwrite collision-protected files 
 ##
 
+app-editors/vim-core
 app-shells/zsh
 media-libs/a52dec
 sys-apps/diffutils
