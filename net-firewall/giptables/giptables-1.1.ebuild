@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/giptables/giptables-1.1.ebuild,v 1.3 2003/09/02 23:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/giptables/giptables-1.1.ebuild,v 1.4 2003/09/07 00:10:32 msterret Exp $
 
 DESCRIPTION="set of shell scripts that help generate iptables rules"
 HOMEPAGE="http://www.giptables.org/"
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 DEPEND=""
 RDEPEND="net-firewall/iptables"
 
-src_install() {	
+src_install() {
 	dodir /etc/{conf.d,init.d}
 
 	# Creating GIPTables home, modules and conf directories
@@ -31,22 +31,22 @@ src_install() {
 	cp -f ${S}/conf/* ${D}/lib/giptables/conf
 	chmod 600 ${D}/lib/giptables/conf/*
 
-	# Copying other GIPTables files	
-	cp ${S}/if_ipaddr ${D}/lib/giptables	
+	# Copying other GIPTables files
+	cp ${S}/if_ipaddr ${D}/lib/giptables
 	chmod 700 ${D}/lib/giptables/if_ipaddr
 
 	cp ${S}/rc.giptables.blocked ${D}/etc/conf.d/giptables.blocked
 	cp ${S}/rc.giptables.custom ${D}/etc/conf.d/giptables.custom
-	chmod 600 ${D}/etc/conf.d/giptables.blocked ${D}/etc/conf.d/giptables.custom	
+	chmod 600 ${D}/etc/conf.d/giptables.blocked ${D}/etc/conf.d/giptables.custom
 
 	# Creating docs
 	dodoc AUTHORS COPYING ChangeLog* INSTALL README TODO
 	dodir /usr/share/doc/${PF}/html
-	mv ${S}/documentation/* ${D}/usr/share/doc/${PF}/html		
+	mv ${S}/documentation/* ${D}/usr/share/doc/${PF}/html
 
 	# Creating init script
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/giptables.init giptables		
+	newexe ${FILESDIR}/giptables.init giptables
 }
 
 pkg_preinst() {
@@ -54,7 +54,7 @@ pkg_preinst() {
 	do
 	    sed -f ${FILESDIR}/replace.sed $conf_file > ${D}/lib/giptables/conf/sed.tmp
 	    mv ${D}/lib/giptables/conf/sed.tmp $conf_file
-	done	
+	done
 }
 
 pkg_postinst() {

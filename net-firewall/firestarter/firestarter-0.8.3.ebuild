@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.8.3.ebuild,v 1.5 2003/07/09 17:34:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.8.3.ebuild,v 1.6 2003/09/07 00:10:32 msterret Exp $
 
 IUSE="nls"
 
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	einstall \
 		destdir=${D} \
 		graphicsdir=${D}/usr/share/pixmaps || die "einstall failed"

@@ -1,5 +1,5 @@
-MD5 090c8bf1c488922d2608e28ebdc2b6d1 metadata.xml 330
-MD5 48da10982c175b5d04fac88e8eb7d285 ipkungfu-0.5.0.ebuild 1245
 MD5 5a8aa9b45e66381925ea8f753a96a48b ChangeLog 379
+MD5 0be12ad68d7dca4335e47f57188a494b ipkungfu-0.5.0.ebuild 1244
+MD5 090c8bf1c488922d2608e28ebdc2b6d1 metadata.xml 330
 MD5 bf86133a04973ce6906c064a84144ff6 files/digest-ipkungfu-0.5.0 62
 MD5 ca05ec0ec7018a07b5c7a028e40e7f23 files/ipkungfu.init 500
