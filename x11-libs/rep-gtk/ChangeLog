@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.17 2003/02/12 15:24:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.18 2003/08/21 02:27:49 agriffis Exp $
+
+*rep-gtk-0.18 (20 Aug 2003)
+
+  20 Aug 2003; Aron Griffis <agriffis@gentoo.org> rep-gtk-0.18.ebuild:
+  Version bump. This version includes the 64-bit patch I sent John a long time
+  ago
 
   12 Feb 2003; Aron Griffis <agriffis@gentoo.org> files/rep-gtk-0.17-64bit.patch :
   Update patch with help from John Harper
