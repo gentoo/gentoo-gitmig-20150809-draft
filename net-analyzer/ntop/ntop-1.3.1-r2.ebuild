@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r2.ebuild,v 1.1 2000/11/14 17:11:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r2.ebuild,v 1.2 2001/04/29 16:51:55 achim Exp $
 
 P=ntop-1.3.1
 A="${P}.tar.gz"
@@ -20,11 +20,7 @@ DEPEND=">=sys-apps/bash-2.04
 
 src_unpack() {
     unpack ${A}
-    if [ -n "`use glibc22`" ]
-    then
-	echo "Using glibc-2.2"
-	cp ${FILESDIR}/main.c ${S}/main.c
-    fi
+    cp ${FILESDIR}/main.c ${S}/main.c
 }
 src_compile() {
     cd ${S}
