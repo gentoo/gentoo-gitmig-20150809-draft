@@ -1,6 +1,16 @@
-MD5 23cd1ad11675102cd4e7263979eec484 ChangeLog 1353
-MD5 567f1edc0b4fb9336f8cef6a52549316 File-Find-Rule-0.28.ebuild 711
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c05b7940124f7a2f39bfa0f6646ab84 File-Find-Rule-0.26.ebuild 689
+MD5 1de9954e9c09afdf8a8b0e32bba57fb1 ChangeLog 1458
+MD5 5a7aa28a2c28a6d7b2be779e50f2a326 File-Find-Rule-0.28.ebuild 721
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 99c153bb9ddb668507d92835384630cf File-Find-Rule-0.26.ebuild 683
-MD5 bbde6f354a0099b354e28c436dec2370 files/digest-File-Find-Rule-0.28 70
 MD5 191d830348669608651e10ca9b1b1194 files/digest-File-Find-Rule-0.26 70
+MD5 bbde6f354a0099b354e28c436dec2370 files/digest-File-Find-Rule-0.28 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5JBmZ/iYVBmujdURAqWtAJ9oD3ofTqlVE+y6uekYj/K+oqLBvgCdEBBy
+tW7ARsYtfFFJ31+uyN8g0gY=
+=01Sw
+-----END PGP SIGNATURE-----

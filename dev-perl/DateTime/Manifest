@@ -1,8 +1,18 @@
-MD5 1b6058655e0b2d8380a4572aecb08082 ChangeLog 1316
-MD5 8328dd48a100a80d7e20cc316482fd19 DateTime-0.20.ebuild 609
-MD5 74fe4d35b1bba6a0a8b2ff2be7ddc642 DateTime-0.21.ebuild 645
-MD5 c1c1d73627cb9b736467d9b5ff239756 DateTime-0.22.ebuild 663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd598318c37fb26b6058477e2c8f0f44 DateTime-0.20.ebuild 610
+MD5 8dfbc0bf54cb3caebd95f22daa58fcdc DateTime-0.22.ebuild 670
+MD5 5ede99291e39233bad43da7140a6931e ChangeLog 1413
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e607ecb622b74649cc8ff06353eeca73 DateTime-0.21.ebuild 646
+MD5 ccdd957266e3fce31d460aeb9c7b60ba files/digest-DateTime-0.20 64
 MD5 3871a45b77c0a2bd97a76914dfe68c4c files/digest-DateTime-0.21 64
 MD5 d7c7660dc0f548de6f62457d363ecd58 files/digest-DateTime-0.22 64
-MD5 ccdd957266e3fce31d460aeb9c7b60ba files/digest-DateTime-0.20 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5JG1Z/iYVBmujdURAo7AAKC6WtiE87vsFh+XsGy9phRDXd+zEwCfSMnA
+Ygw66OLBme9+bS5XwyYDSOM=
+=BKzt
+-----END PGP SIGNATURE-----

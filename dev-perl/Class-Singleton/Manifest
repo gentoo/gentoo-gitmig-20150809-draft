@@ -1,4 +1,14 @@
-MD5 1f6cdb4ab687aa1d58f67f2b8a4613c4 ChangeLog 713
-MD5 aab0e7f68dec19fd04636837e212b408 Class-Singleton-1.03.ebuild 488
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21c81e48df0b7e65e00aee5e5ef1e864 Class-Singleton-1.03.ebuild 498
+MD5 18615d7532eb1b9cb39dff32828fb6e1 ChangeLog 819
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0c44d0f8206922b1f3508a31cb7fa1c5 files/digest-Class-Singleton-1.03 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5JDUZ/iYVBmujdURArAdAJwOKNhms5+TurZ2rQQJ4XdHVXewTgCfToQY
+W77DLBZhFyPO17A4yfnFN70=
+=4KyW
+-----END PGP SIGNATURE-----

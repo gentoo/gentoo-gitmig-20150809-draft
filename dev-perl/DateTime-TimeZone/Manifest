@@ -1,8 +1,18 @@
-MD5 738a4c5ac102e8748267b674c080edad ChangeLog 1714
-MD5 7752410a1ebeca3c620d48b075d1f2d5 DateTime-TimeZone-0.27.ebuild 603
-MD5 d1239c116d36b39395510b529ae74bb3 DateTime-TimeZone-0.28.ebuild 613
-MD5 a9bf9af55b568943e041ef9df6e1f546 DateTime-TimeZone-0.30.ebuild 647
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4fa065ce8a5816f34a4cc8b73231599 DateTime-TimeZone-0.30.ebuild 654
+MD5 21f9ebac85868841c53e5948c98aaa7b DateTime-TimeZone-0.28.ebuild 616
+MD5 ddafdc6dbc373bfe387cfd0697e788b9 DateTime-TimeZone-0.27.ebuild 604
+MD5 08470e7cc8f69a9578c6dcb7359c469c ChangeLog 1822
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9d5c46c7ab8ec3783e66c030fdf7c541 files/digest-DateTime-TimeZone-0.30 74
 MD5 20252c010eca6d34cf58b5a9cb303b3d files/digest-DateTime-TimeZone-0.27 74
 MD5 cfd98ca66f564d4a27722dfff593a55a files/digest-DateTime-TimeZone-0.28 74
+MD5 9d5c46c7ab8ec3783e66c030fdf7c541 files/digest-DateTime-TimeZone-0.30 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5JETZ/iYVBmujdURAoUKAJ0cdma9pWP7wUfY+I1F8ikyRugJjQCg4rbf
+IFIQE9OiZOh6Z6wS5ORIEec=
+=wnC4
+-----END PGP SIGNATURE-----
