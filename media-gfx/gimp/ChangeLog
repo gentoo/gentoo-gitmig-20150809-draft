@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.67 2004/01/31 14:02:07 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.68 2004/02/01 07:03:15 tseng Exp $
+
+  01 Feb 2004; Brandon Hale <tseng@gentoo.org>
+  files/gimp-2.0_pre2-cpuaccel-pic.patch:
+  Small fix to gimp-2.0_pre2-cpuaccel-pic.patch for amd64.
 
   31 Jan 2004; Brandon Hale <tseng@gentoo.org> gimp-2.0_pre2.ebuild,
   files/gimp-2.0_pre2-cpuaccel-pic.patch:

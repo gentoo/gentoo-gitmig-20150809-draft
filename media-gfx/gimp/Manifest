@@ -1,4 +1,4 @@
-MD5 e9c5dc05e93fcdb652deee067cf7d53c ChangeLog 10636
+MD5 a87a7e9cdb71dbc5caba06965f20e190 ChangeLog 10785
 MD5 79946d76b127a835c8c16d552add5cab gimp-1.2.3-r3.ebuild 4690
 MD5 94d6af458cd63b08afdecab7cce057ee gimp-1.2.4.ebuild 3079
 MD5 f2435ea78fe2898d558c4e427e2d2c28 gimp-1.2.5.ebuild 3220
@@ -19,4 +19,4 @@ MD5 c73865fe1298b84c685ee1314093c7bd files/gimp-2.0_pre2-remote_new_behaviour.pa
 MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
 MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
-MD5 10acea3a20366b441cd711d7b4b0bd39 files/gimp-2.0_pre2-cpuaccel-pic.patch 2482
+MD5 945091d07e44e026c8e5fb5c01014873 files/gimp-2.0_pre2-cpuaccel-pic.patch 2524

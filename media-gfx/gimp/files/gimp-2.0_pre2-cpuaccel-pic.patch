@@ -24,7 +24,7 @@
 -         "=c" (ecx),             \
 -         "=d" (edx)              \
 -       : "0" (op))
-+#if !defined(ARCH_X86_64) && defined(PIC)
++#if !defined(ARCH_X86_64) && (defined(__PIC__) || defined(__pic__) || defined(PIC))
 +#define cpuid(op,eax,ebx,ecx,edx)  \
 +  __asm__ ("movl %%ebx, %%esi\n\t" \
 +           "cpuid\n\t"             \
