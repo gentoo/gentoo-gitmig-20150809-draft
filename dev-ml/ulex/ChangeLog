@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ulex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.6 2004/08/08 07:11:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.7 2004/08/25 13:36:53 mattam Exp $
+
+  25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ulex-0.4.ebuild,
+  ulex-0.5.ebuild:
+  Use findlib eclass, move to stable.
 
 *ulex-0.5 (08 Aug 2004)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.5.ebuild,v 1.1 2004/08/08 07:11:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.5.ebuild,v 1.2 2004/08/25 13:36:53 mattam Exp $
 
-inherit eutils
+inherit eutils findlib
 
-DESCRIPTION="a lexer generator for unicode"
+DESCRIPTION="A lexer generator for unicode"
 HOMEPAGE="http://www.cduce.org"
 SRC_URI="http://www.cduce.org/download/${P}.tar.gz"
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND=">=dev-lang/ocaml-3.08
-	>=dev-ml/findlib-0.8"
+DEPEND=">=dev-lang/ocaml-3.08"
 
 src_compile() {
 	make all || die
@@ -22,9 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	local destdir=`ocamlfind printconf destdir`
-	dodir ${destdir}
-	# dummy ld.conf, packages do not install C libraries
-	make OCAMLFIND_LDCONF=dummy OCAMLFIND_DESTDIR=${D}${destdir} install || die
+	findlib_src_install
 	dodoc README CHANGES
 }
