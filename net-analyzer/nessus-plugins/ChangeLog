@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.25 2004/07/20 02:53:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.26 2004/07/21 07:00:35 eldad Exp $
+
+*nessus-plugins-2.0.11 (21 Jul 2004)
+
+  21 Jul 2004; Eldad Zack <eldad@gentoo.org> +nessus-plugins-2.0.11.ebuild:
+  Version bump
 
   19 Jul 2004; Jason Wever <weeve@gentoo.org> nessus-plugins-2.0.10a.ebuild:
   Stable on sparc.
