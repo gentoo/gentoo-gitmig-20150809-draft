@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.4 2003/08/07 03:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1h.ebuild,v 1.5 2003/09/13 07:33:09 vapier Exp $
 
 MY_P="${P/-/-snap-}"
 EZM3="ezm3-1.1"
@@ -87,7 +87,7 @@ src_compile() {
 	done
 
 	# then we compile cvsup
-	env PATH="${S}/${EZM3}-install/bin:${PATH}" make || die "cvsup compile failed"
+	env PATH="${EZM3_INSTALL}/bin:${PATH}" make || die "cvsup compile failed"
 
 	# now we do up the html pages ...
 	cd ${S}/${MY_P}/doc
