@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-0.ebuild,v 1.1 2003/10/13 21:38:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-0.ebuild,v 1.2 2004/01/13 06:11:32 spider Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ LICENSE="bass"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
-DEPEND=">=/games-engines/scummvm-0.5.0"
+DEPEND=">=games-engines/scummvm-0.5.0"
 
 S=${WORKDIR}/sky-cd
 

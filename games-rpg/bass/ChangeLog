@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/bass
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.1 2003/10/13 21:38:34 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.2 2004/01/13 06:11:32 spider Exp $
+
+  13 Jan 2003; Spider <spider@gentoo.org> :
+  Fixed dependency so it doesn't break with new portage. 
 
 *bass-0 (13 Oct 2003)
 
