@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1bdf1805dda493f136e075ba65d99a4a ChangeLog 1195
-MD5 d048b58893fd828d4a1ef086997d6ae2 helixplayer-1.0_beta1.ebuild 3264
+MD5 3ce413f275c687aa44db0f53d2239b07 ChangeLog 1331
+MD5 846794dd6d8249d568c56a94b452d0a4 helixplayer-1.0_beta1.ebuild 3264
 MD5 b545cb646f8e1ac50777745dfc1f380d metadata.xml 342
-MD5 3c089b45285987e4a598702098eb396a helixplayer-1.0.1.ebuild 1858
+MD5 3e53be68881aed7418463e1f231ec638 helixplayer-1.0.1.ebuild 1858
 MD5 6438303cb10431e6fe1fd8c1a24328d4 files/50helix 22
 MD5 9ff4380a6e2acce72f2685a5f5a03b2c files/buildrc 35
 MD5 d9d3bd60b0c7de98d93ccde45775936d files/digest-helixplayer-1.0_beta1 88
@@ -18,7 +18,7 @@ MD5 b83696db32d29e1c07d27cb6ba16414e files/gentoo_bif.patch 10461
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlutNFdQwWVoAgN4RAlJhAJ9pLnxCcCLq3JsnAcBqgpxP8RwzQwCg9j+u
-H2TZL4z5YOU0EBDeD6Rgf/A=
-=+plE
+iD8DBQFBm+UtFdQwWVoAgN4RAlGqAKDHZJItQH+oiAddGZ9naUqiuUIIDwCeL73n
+dfkKvGH9peub0rd2AvWC3t8=
+=FSjR
 -----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.3 2004/11/14 05:20:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.4 2004/11/17 23:56:12 chriswhite Exp $
+
+  18 Nov 2004; Chris White <chriswhite@gentoo.org> helixplayer-1.0.1.ebuild,
+  helixplayer-1.0_beta1.ebuild:
+  Fixed inherit location.
 
 *helixplayer-1.0.1 (14 Nov 2004)
 

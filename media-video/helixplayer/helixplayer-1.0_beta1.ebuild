@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.3 2004/11/14 05:20:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0_beta1.ebuild,v 1.4 2004/11/17 23:56:12 chriswhite Exp $
+
+inherit nsplugins eutils
 
 DESCRIPTION="A free open-source media player by real"
 HOMEPAGE="http://www.helixplayer.org/"
@@ -15,8 +17,6 @@ DEPEND="media-libs/libtheora
 RDEPEND=">=dev-libs/glib-2
 		>=x11-libs/pango-1.2
 		>=x11-libs/gtk+-2.2"
-
-inherit nsplugins eutils
 
 # Had to change the source directory because of this somewhat
 # non-standard naming convention
