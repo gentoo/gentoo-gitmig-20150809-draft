@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.8-r1.ebuild,v 1.2 2003/11/24 04:07:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.8-r1.ebuild,v 1.3 2004/01/26 01:01:20 vapier Exp $
 
 inherit fixheadtails
 
-DESCRIPTION="Network-UPS Tools."
-SRC_URI="http://www.exploits.org/nut/development/${PV%.*}/${P}.tar.gz"
+DESCRIPTION="Network-UPS Tools"
 HOMEPAGE="http://www.exploits.org/nut/"
+SRC_URI="http://www.exploits.org/nut/development/${PV%.*}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +28,7 @@ src_unpack() {
 		-i configure.in || die "sed failed"
 
 	ebegin "Recreating configure"
-	WANT_AUTOCONF_2_5=1 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 	eend $?
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.7.ebuild,v 1.1 2003/10/29 23:57:26 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.5.7.ebuild,v 1.2 2004/01/26 01:01:20 vapier Exp $
 
 DESCRIPTION="Network-UPS Tools."
 SRC_URI="http://www.exploits.org/nut/development/${PV%.*}/${P}.tar.gz"
@@ -21,7 +21,7 @@ src_unpack() {
 		-i configure.in || die "sed failed"
 
 	ebegin "Recreating configure"
-	WANT_AUTOCONF_2_5=1 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 	eend $?
 }
 

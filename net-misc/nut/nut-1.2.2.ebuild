@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.4 2003/12/05 21:13:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.2.ebuild,v 1.5 2004/01/26 01:01:20 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
@@ -30,7 +30,7 @@ src_unpack() {
 	cp configure.in configure.in.orig
 	sed -e "s:GD_LIBS.*=.*-L/usr/X11R6/lib \(.*\) -lXpm -lX11:GD_LIBS=\"\1:" \
 		configure.in.orig >configure.in
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {
