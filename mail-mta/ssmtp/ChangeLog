@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.21 2005/02/17 18:54:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.22 2005/02/17 18:59:44 luckyduck Exp $
+
+  17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ssmtp-2.61.ebuild:
+  stable on amd64. see #82380
 
   17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> ssmtp-2.61.ebuild:
   Stable on ppc and hppa.
