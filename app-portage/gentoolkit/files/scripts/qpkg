@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.2 2003/08/23 23:28:55 lanius Exp $
-ID='$Id: qpkg,v 1.2 2003/08/23 23:28:55 lanius Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.3 2003/09/30 18:34:46 mholzer Exp $
+ID='$Id: qpkg,v 1.3 2003/09/30 18:34:46 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -321,7 +321,7 @@ else
 		if [ ${arg} ]; then
 			# avoid ${arg}="db" from pulling in every installed package
 			temp="/var/db/pkg/.*${arg}"	
-			ipak=`echo ${ipak}|sed -e "s: :\n:g"|grep ${temp}`
+			ipak=`echo ${ipak}|sed -e "s: :\n:g"|grep -i ${temp}`
 		fi
 		if [ -n "${mask}" ]; then
 		    ipak=`echo ${ipak}|xargs -r egrep ${grepmask} "^KEYWORDS=.*[[:space:]\"\'](${mask})[[:space:]\"\']"`
@@ -334,7 +334,7 @@ else
 		    upak=`echo ${upak}|sed -e "s: :\n:g"|grep ${group}`
 		fi
 		if [ ${arg} ]; then
-		    upak=`echo ${upak}|sed -e "s: :\n:g"|grep ${arg}`
+		    upak=`echo ${upak}|sed -e "s: :\n:g"|grep -i ${arg}`
 		fi
 		if [ -n "${mask}" ]; then
 		    upak=`echo ${upak}|xargs -r egrep ${grepmask} "^KEYWORDS=.*[[:space:]\"\'](${mask})[[:space:]\"\']"`
