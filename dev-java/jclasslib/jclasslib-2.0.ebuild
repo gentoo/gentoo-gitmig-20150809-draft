@@ -1,13 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-2.0.ebuild,v 1.4 2004/10/20 09:11:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/jclasslib-2.0.ebuild,v 1.5 2005/04/02 18:39:44 axxo Exp $
 
 inherit java-pkg eutils
 
-DESCRIPTION="classlib bytecode viewer is a tool that visualizes all aspects of
-compiled Java class files and the contained bytecode. In addition, it contains a
-library that enables developers to read, modify and write Java class files and
-bytecode."
+DESCRIPTION="classlib bytecode viewer is a tool that visualizes all aspects of compiled Java class files and the contained bytecode. In addition, it contains a library that enables developers to read, modify and write Java class files and bytecode."
 
 HOMEPAGE="http://www.ej-technologies.com/products/jclasslib/overview.html"
 MY_PV=${PV/./_}
