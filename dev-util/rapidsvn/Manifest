@@ -1,4 +1,6 @@
 MD5 e69244ad92d8a1ca2849d0d0678c1970 rapidsvn-0.3.0.ebuild 1265
-MD5 13e7cf55b769f972c285385545039bbd ChangeLog 829
+MD5 501a67505cff55f4a206f5524649f2ca rapidsvn-0.5.0.ebuild 1246
+MD5 b1641c5f8c528324e568a298f95fe536 ChangeLog 983
 MD5 e8212a950e1f0fccf9fb8f1a7a361c71 metadata.xml 546
 MD5 defdae3eecae5fc15f277d890c518416 files/digest-rapidsvn-0.3.0 66
+MD5 f3f2d451769687fbe41d18f69ef60b76 files/digest-rapidsvn-0.5.0 66
