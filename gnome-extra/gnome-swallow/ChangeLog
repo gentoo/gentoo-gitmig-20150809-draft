@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-swallow
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.1 2003/06/08 20:23:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.2 2003/07/09 16:26:18 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-swallow-1.1.ebuild:
+  add pkgconfig dep
 
 *gnome-swallow-1.1 (08 Jun 2003)
 

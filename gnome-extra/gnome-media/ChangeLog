@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.22 2003/05/30 00:16:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.23 2003/07/09 16:23:42 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-media-2.2.0.ebuild,
+  gnome-media-2.2.1.1.ebuild:
+  dep cleanup. moved scrollkeeper to DEPEND
 
   30 May 2003; Barbato Luca <lu_zero@gentoo.org> gnome-media-2.2.1.1.ebuild:
   Added ppc to keywords.
