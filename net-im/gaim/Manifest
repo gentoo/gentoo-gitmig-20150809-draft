@@ -4,7 +4,7 @@ MD5 670e0f5acb82e1065d1055f6d407cdb9 gaim-0.75-r5.ebuild 3309
 MD5 78be5b331aa107c0ef01b5252eb8c87e gaim-0.72-r1.ebuild 2890
 MD5 cecb719b31af4ea5759fffa397de52be gaim-0.72.ebuild 2508
 MD5 9b0c0eb504517576c7d18406c8c52324 gaim-0.74-r2.ebuild 3858
-MD5 c6e7c1b047c4c1cb16ce925abc0a3e7f ChangeLog 20607
+MD5 c691fcda1ef499451954447e3eb6e601 ChangeLog 20652
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 4989dc76d941288934c783f52931762d files/gaim-0.75-static-prpls.patch 3710
 MD5 5993641de8d56c2c433f252997c3c39c files/digest-gaim-0.67 135
