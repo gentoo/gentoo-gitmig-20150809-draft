@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.2 2004/10/02 16:38:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.3 2004/10/03 06:33:49 mr_bones_ Exp $
 
 inherit java-utils
 
@@ -17,8 +17,8 @@ IUSE="jikes doc"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
-	doc? ( 
-		=app-text/docbook-xml-dtd-4.3* 
+	doc? (
+		=app-text/docbook-xml-dtd-4.3*
 		=app-text/docbook-xsl-stylesheets-1.65.1*
 	)
 	>=dev-java/ant-1.5.4

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5390252d25b069e2a5821aa1f711a5d4 jedit-4.1-r1.ebuild 2267
-MD5 a2a6b319f4bc80d967017318dd1e988e jedit-4.2.ebuild 2111
-MD5 fd6cc31cfb221879341ae3e8e0b244cc jedit-4.1.ebuild 1862
 MD5 2ec34bb2faf8db310f9f28eea8d450af ChangeLog 6170
+MD5 fd6cc31cfb221879341ae3e8e0b244cc jedit-4.1.ebuild 1862
+MD5 65795427bbd49c2da213bef050de6e7f jedit-4.2.ebuild 2114
 MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
-MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 5390252d25b069e2a5821aa1f711a5d4 jedit-4.1-r1.ebuild 2267
 MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1 66
-MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
 MD5 c29174550ae9f95fc60afd5cbf079f0c files/digest-jedit-4.1-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXtmL/rLF9B432nYRAiTBAJ0dlEr5fp0OY6Xed7yUP2ZjUYc8bACgigyp
-hpvF759pu7J0QkRVa9Yrk7Q=
-=3592
------END PGP SIGNATURE-----
+MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
