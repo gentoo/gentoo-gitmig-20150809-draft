@@ -1,8 +1,14 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.5 2002/07/29 00:51:14 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.6 2002/07/29 15:56:25 karltk Exp $
 
 *sbcl-0.7.6 (29 Jul 2002)
+
+  29 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sbcl-0.7.6.ebuild files/digest-sbcl-0.7.6 :
+
+  The x86 digest gets overwritten then doing digest update on ppc. We already
+  have a working x86 version, so I leave this open on ppc but close it on x86
+  until we get this fixed properly.
 
   29 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sbcl-0.7.6.ebuild files/digest-sbcl-0.7.6 :
 

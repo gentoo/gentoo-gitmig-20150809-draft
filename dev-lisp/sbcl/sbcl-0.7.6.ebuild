@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6.ebuild,v 1.2 2002/07/29 00:51:14 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6.ebuild,v 1.3 2002/07/29 15:56:25 karltk Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -25,7 +25,8 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="x86 ppc -sparc -sparc64" 
+# Digest doesn't work on x86
+KEYWORDS="-x86 ppc -sparc -sparc64" 
 PROVIDE="virtual/commonlisp"
 DEPEND=""
 RDEPEND="${DEPEND}"
