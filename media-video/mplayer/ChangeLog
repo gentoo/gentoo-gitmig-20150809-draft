@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.213 2004/10/17 02:26:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.214 2004/10/20 00:03:01 chriswhite Exp $
+
+  19 Oct 2004; Chris White <chriswhite@gentoo.org> :
+  Did filter flags on a few problematic flags as per Bug #67903.
 
   17 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   mplayer-1.0_pre5-r3.ebuild:

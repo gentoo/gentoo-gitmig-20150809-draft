@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.9 2004/10/17 02:26:22 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.10 2004/10/20 00:03:01 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -170,7 +170,7 @@ src_unpack() {
 
 src_compile() {
 
-	filter-flags -fPIE -fPIC
+	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2
 
 	local myconf=
 	################
@@ -353,7 +353,8 @@ src_compile() {
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
 	echo "${myconf}" > ${T}/configure-options
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--confdir=/usr/share/mplayer \
 		--datadir=/usr/share/mplayer \
 		--disable-runtime-cpudetection \
