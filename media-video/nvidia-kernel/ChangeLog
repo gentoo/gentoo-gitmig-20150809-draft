@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.96 2004/11/09 22:39:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.97 2004/11/11 23:01:56 eradicator Exp $
+
+  11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/1.0.6629/nv-amd64-shutup-warnings.patch,
+  nvidia-kernel-1.0.6629.ebuild:
+  Fixed installation on amd64.
 
   09 Nov 2004; Martin Schlemmer <azarah@gentoo.org>
   +files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch,

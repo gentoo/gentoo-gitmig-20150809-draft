@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.3 2004/11/09 22:39:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.4 2004/11/11 23:01:56 eradicator Exp $
 
 inherit eutils kernel-mod
 
@@ -96,8 +96,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/nv-pgd_offset.patch
 	# Fix calling of smp_processor_id() when preempt is enabled
 	epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
+
 	# Shutup pointer arith warnings
-	epatch ${FILESDIR}/${PV}/nv-shutup-warnings.patch
+	use x86 && epatch ${FILESDIR}/${PV}/nv-shutup-warnings.patch
+	use amd64 && epatch ${FILESDIR}/${PV}/nv-amd64-shutup-warnings.patch
 
 	# if you set this then it's your own fault when stuff breaks :)
 	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*
