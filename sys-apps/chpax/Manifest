@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae7b704f674cad185a25144c674144b3 ChangeLog 3714
+MD5 14c9547e6e491875352f2a05ec1bcd2a ChangeLog 3795
 MD5 e5d1d71f964cd590fbf1e02a2a76714a chpax-0.5.ebuild 942
 MD5 500e97cad2617303e752918cc5915e33 chpax-0.6.1.ebuild 1090
-MD5 d2f14a08ca337f97bc8531bdbbdc71d3 chpax-0.7.ebuild 1045
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 72a2363306e9700c7b37a69a1d0051bf chpax-0.7.ebuild 1044
 MD5 d95ac8cbc92ddd4a9e401455d79571f7 files/digest-chpax-0.5 59
 MD5 1ae95ccec87f81057389495cbc6bb641 files/digest-chpax-0.6.1 62
-MD5 add5e23e35065b6f32d1221f41b4b986 files/digest-chpax-0.7 59
 MD5 a76f6e6491b16c254c9aeecbec775478 files/pax-conf.d 2743
 MD5 f30daa23cf11e88be6678388f2561f8a files/pax-init.d 2536
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWMM5I1lqEGTUzyQRAu3BAJ0SBADaYY3OxBpXNX+ZQ2XzgJHubgCgqGm3
-8HpC22lGFqWU67RwprDeTFw=
-=IfrD
------END PGP SIGNATURE-----
+MD5 add5e23e35065b6f32d1221f41b4b986 files/digest-chpax-0.7 59

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.27 2004/09/28 01:49:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.28 2004/10/04 03:08:10 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> chpax-0.7.ebuild:
+  Stable on sparc.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/pax-init.d:
   Gentoo Technologies, Inc. -> Gentoo Foundation
