@@ -6,9 +6,12 @@
 	// tags to allow for output
 	$allow_tags = "<a>,<br>,<b>,<u>";
 
+	// make sure our uid, which dictates whether they're logged in or not, is all straight
 	if ( !isset($uid) ) {
 		$uid = 0;
 		session_register( 'uid' );
+	} else {
+		$uid = auth( $dbusername, $dbpassword );
 	}
 ?>
 
@@ -17,7 +20,7 @@ global $uid, $dbusername; ?>
 <!DOCTYPE HTML PUBLIC "http://www.w3.org/TR/REC-html40/loose.dtd" "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>Gentoo Linux dev-wiki - <?=$title;?></title>
+<title>Gentoo Linux Dev-Wiki - <?=$title;?></title>
 <style type="text/css">
 <!--
 	a:link		{font-weight: bold; font-size: xx-small; color: blue; }
@@ -27,14 +30,14 @@ global $uid, $dbusername; ?>
 
 	body		{background-color: #dddaec; color: black; font-size: x-small;
 			font-family: Verdana, Helvetica, Sans-serif; margin:0;
-			padding:0; }
+			padding:0; font-size: xx-small; }
 
 	p		{font-size: xx-small; }
 	td		{font-size: xx-small; }
 -->
 </style>
 </head>
-<body topmargin=0 leftmargin=0>
+<body topmargin=0 leftmargin=0 bgcolor="#dddaec">
 
 <table width="100%" height=96 border=0 cellpadding=0 cellspacing=0>
 <tr>
@@ -79,7 +82,9 @@ global $uid, $dbusername, $show_privates, $list; ?>
 			</tr>
 			</table>
 			</form>
-		</td></tr></table>
+			</td>
+		</tr>
+		</table>
 		</td></tr></table>
 
 		<img src="images/spacer.gif" height=10 alt="">
@@ -88,7 +93,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 		<table width="100%" border=0 cellpadding=1 cellspacing=0 bgcolor="black"><tr><td>
 		<table width="100%" border=0 cellpadding=3 cellspacing=0>
 		<tr>
-			<td bgcolor="#7bc1f7"><b>Gentoo Linux dev-wiki</b></td>
+			<td bgcolor="#7bc1f7"><b>Gentoo Linux Dev-Wiki</b></td>
 		</tr>
 		<tr>
 			<td bgcolor="white">
@@ -97,10 +102,42 @@ global $uid, $dbusername, $show_privates, $list; ?>
 				<li><a href="index.php?list=by_date">List by date</a>
 				<li><a href="index.php?list=by_developer">List by developer</a>
 				<li><a href="completed.php">List completed</a>
-				<?php if ( $uid ) { ?>
-					<li><a href="single.php?action=new_todo">Create a new todo</a>
-				<?php } ?>
 			</ul>
+				<?php if ( $uid ) { ?>
+			<ul>
+					<li><a href="single.php?action=new_todo">Create a new todo</a>
+					<li><a href="profileedit.php">Edit user profile</a>
+					<?php
+					// are we a team leader?
+					$query = mysql_query( "select leader,gid from teams" );
+					while ( $row = mysql_fetch_array($query) ) {
+						if ( $row['leader'] == $uid ) {
+							$leaderof = team_num_name( $row['gid'] );
+							break;
+						}
+					}
+					// are we an admin?
+					$query = mysql_query( "select admin from users where uid=$uid" );
+					list( $admin ) = mysql_fetch_row( $query );
+
+					if ( $leaderof ) { ?>
+						<li><a href="teamedit.php">Edit team <?=$leaderof;?></a>
+					<?php }
+					if ( $admin ) { ?>
+						<li><a href="useredit.php">Edit Users</a>
+					<?php } ?>
+			</ul>
+				<? } ?>
+
+			<p style="font-size:x-small;font-weight:bold;">Teams</p>
+			<ul>
+				<li><a href="teams.php?team=system">System</a>
+				<li><a href="teams.php?team=desktop">Desktop</a>
+				<li><a href="teams.php?team=server">Server</a>
+				<li><a href="teams.php?team=tools">Tools</a>
+				<li><a href="teams.php?team=infrastructure">Infrastructure</a>
+			</ul>
+
 
 			<p style="font-size:x-small;font-weight:bold;">Developers</p>
 			<ul>
@@ -116,7 +153,9 @@ global $uid, $dbusername, $show_privates, $list; ?>
 			<ul>
 				<li><a href="http://www.gentoo.org">Gentoo Linux</a>
 			</ul>
-		</td></tr></table>
+			</td>
+		</tr>
+		</table>
 		</td></tr></table>
 	</td>
 </tr>
@@ -130,7 +169,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 </html>
 <?php } #main_footer ?>
 
-<?php function print_todo( $title, $tid, $owner, $date, $public, $priority, $longdesc ) {
+<?php function print_todo( $title, $tid, $owner, $date, $public, $priority, $longdesc, $team, $branch ) {
 	// all args should be passed hot off the database
 	global $list, $uid, $allow_tags;
 
@@ -171,6 +210,12 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	else
 		$word = 'follow-ups';
 	$followups = "$followups $word";
+
+	$team = team_num_name( $team );
+	$branch = '';
+	if ( $team != 'Infrastructure' ) {
+		$branch = '-'.branch_num_name( $branch );
+	}
 		
 	?>
 	<table width="100%" border=0 cellpadding=1 cellspacing=0 bgcolor="black"><tr><td>
@@ -182,7 +227,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	<tr>
 		<td bgcolor="white" colspan=2>
 			<p style="padding:0;margin:0;"><?=$longdesc;?></p>
-			<p align="right" style="padding:5px 0 0 0;margin:0;"><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a><br><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</p>
+			<p align="right" style="padding:5px 0 0 0;margin:0;"><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)<br><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> on <?=$team;?><?=$branch;?></p>
 		</td>
 	</tr>
 	</table>
@@ -190,4 +235,45 @@ global $uid, $dbusername, $show_privates, $list; ?>
 
 	<img src="images/spacer.gif" height=7 alt="">
 	<?php
+} ?>
+
+<?php function auth ( $user, $pass ) {
+	// takes a username and a password and returns the uid if it's valid. 0 if it's not.
+	$result = mysql_query( "select uid from users where username='$user' and password='$pass'" );
+	if ( mysql_num_rows($result) ) {
+		list($uid) = mysql_fetch_row($result);
+		return $uid;
+	} else {
+		return 0;
+	}
+} ?>
+
+<?php function team_num_name ( $num ) {
+	if     ( $num == 0 ) $team = 'None';
+	elseif ( $num == 1 ) $team = 'All';
+	elseif ( $num == 2 ) $team = 'System';
+	elseif ( $num == 3 ) $team = 'Desktop';
+	elseif ( $num == 4 ) $team = 'Server';
+	elseif ( $num == 5 ) $team = 'Tools';
+	elseif ( $num == 6 ) $team = 'Infrastructure';
+	return $team;
+} ?>
+
+<?php function team_name_num ( $name ) {
+	if     ( $name == 'None' )           $num = 0;
+	elseif ( $name == 'All' )            $num = 1;
+	elseif ( $name == 'System' )         $num = 2;
+	elseif ( $name == 'Desktop' )        $num = 3;
+	elseif ( $name == 'Server' )         $num = 4;
+	elseif ( $name == 'Tools' )          $num = 5;
+	elseif ( $name == 'Infrastructure' ) $num = 6;
+	return $num;
+} ?>
+
+<?php function branch_num_name ( $num ) {
+	if     ( $num == 0 ) $branch = 'none';
+	elseif ( $num == 1 ) $branch = 'all';
+	elseif ( $num == 2 ) $branch = 'stable';
+	elseif ( $num == 3 ) $branch = 'unstable';
+	return $branch;
 } ?>

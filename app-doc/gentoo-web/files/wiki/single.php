@@ -7,19 +7,32 @@
 		if ( !$title || !$longdesc ) {
 			print '<p style="color:red;">You left out vital info. (title and/or todo description.) Please back up and try again.</p>';
 		} else {
-			if ( $priority == "low" ) $priority = 1;
+			if     ( $priority == "low" ) $priority = 1;
 			elseif ( $priority == "med" ) $priority = 2;
-			elseif ( $priority == "hi" ) $priority = 3;
-			else $priority = 0;
+			elseif ( $priority == "hi" )  $priority = 3;
+			else                          $priority = 0;
+
+			if     ( $branch == "none" )     $branch = 0;
+			elseif ( $branch == "all" )      $branch = 1;
+			elseif ( $branch == "stable" )   $branch = 2;
+			elseif ( $branch == "unstable" ) $branch = 3;
+
+			if     ( $team == 'None' )           $team = 0;
+			elseif ( $team == 'All' )            $team = 1;
+			elseif ( $team == 'System' )         $team = 2;
+			elseif ( $team == 'Desktop' )        $team = 3;
+			elseif ( $team == 'Server' )         $team = 4;
+			elseif ( $team == 'Tools' )          $team = 5;
+			elseif ( $team == 'Infrastructure' ) $team = 6;
 			
-			if ( $sharing == 'public' ) $sharing = 1;
-			else $sharing = 0;
+			if   ( $sharing == 'public' ) $sharing = 1;
+			else                          $sharing = 0;
 
 			if ( $action == 'new_todo' ) {
 				$already = mysql_query( "select tid from todos where longdesc='$longdesc' and title='$title'" );
 				list( $already ) = mysql_fetch_array( $already );
 				if ( !$already ) {
-					$query = "insert into todos set owner=$uid,title='$title',public=$sharing,priority=$priority,date=".time().",longdesc='$longdesc'";
+					$query = "insert into todos set owner=$uid,title='$title',public=$sharing,priority=$priority,branch=$branch,team=$team,date=".time().",longdesc='$longdesc'";
 					if ( $priority == 0 ) $query .= ",datecompleted=".time();
 					$result = mysql_query( $query );
 					$tid = mysql_insert_id();
@@ -27,7 +40,7 @@
 					$new_todo_post_success = 1;
 				}
 			} else {
-				$query = "update todos set title='$title',public=$sharing,priority=$priority,longdesc='$longdesc'";
+				$query = "update todos set title='$title',public=$sharing,priority=$priority,branch=$branch,team=$team,longdesc='$longdesc'";
 				if ( $priority == 0 ) $query .= ",datecompleted=".time();
 				$query .= " where tid=$tid";
 				$result = mysql_query( $query );
@@ -71,26 +84,24 @@
 	}
 
 
-	if ( $todo['priority'] == 0 ) {
-		$priority = 'complete';
-	} elseif ( $todo['priority'] == 1 ) {
-		$priority = 'low';
-	} elseif ( $todo['priority'] == 2 ) {
-		$priority = 'med';
-	} elseif ( $todo['priority'] == 3 ) {
-		$priority = 'hi';
-	}
+	if     ( $todo['priority'] == 0 ) $priority = 'complete';
+	elseif ( $todo['priority'] == 1 ) $priority = 'low';
+	elseif ( $todo['priority'] == 2 ) $priority = 'med';
+	elseif ( $todo['priority'] == 3 ) $priority = 'hi';
 
-	if ( $todo['public'] == 1 ) {
-		$public = 'public';
-	} else {
-		$public = 'private';
-	}
+	if   ( $todo['public'] == 1 ) $public = 'public';
+	else                          $public = 'private';
+
+	$branch = branch_num_name( $todo['branch'] );
 
 	if ( $action == 'new_todo' ) {
 		$priority = 'low';
 		$public = 'private';
+		$team = mysql_query( "select team from users where uid=$uid" );
+		list( $team ) = mysql_fetch_row( $team );
 	}
+
+	$team = team_num_name( $team );
 
 	if ( $action != 'new_todo' ) {
 		$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
@@ -126,6 +137,26 @@
 				<?php } else { ?>
 					<b>Todo posted:</b> <?=date( "n/j/y", $todo['date'] );?><br>
 				<?php } ?>
+				<b>Team:</b>
+				<?php if ( $theirs ) { ?>
+					<select name="team"><?php
+					if ( $team == 'None' ) {
+						print '<option>None</option><option>System</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
+					} elseif ( $team == 'System' ) {
+						print '<option>System</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
+					} elseif ( $team == 'Desktop' ) {
+						print '<option>Desktop</option><option>None</option><option>System</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
+					} elseif ( $team == 'Server' ) {
+						print '<option>Server</option><option>None</option><option>Desktop</option><option>System</option><option>Tools</option><option>Infrastructure</option>';
+					} elseif ( $team == 'Tools' ) {
+						print '<option>Tools</option><option>None</option><option>Desktop</option><option>Server</option><option>System</option><option>Infrastructure</option>';
+					} elseif ( $team == 'Infrastructure' ) {
+						print '<option>Infrastructure</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>System</option>';
+					}
+				?></select>
+				<?php } else {
+					print $team;
+				} ?><br>
 			</p>
 			</td>
 			<td>
@@ -156,7 +187,23 @@
 					}
 				?></select>
 				<?php } else {
-					print "$public - <img src=\"images/$public.gif\" width=16 height=16>";;
+					print "$public - <img src=\"images/$public.gif\" width=16 height=16>";
+				} ?><br>
+				<b>Branch:</b>
+				<?php if ( $theirs ) { ?>
+					<select name="branch"><?php
+					if ( $branch == 'all' ) {
+						print '<option>stable</option><option>unstable</option><option>none</option><option>all</option>';
+					} elseif ( $branch == 'unstable' ) {
+						print '<option>unstable</option><option>stable</option><option>none</option><option>all</option>';
+					} elseif ( $branch == 'all' ) {
+						print '<option>all</option><option>stable</option><option>unstable</option><option>none</option>';
+					} else {
+						print '<option>none</option><option>stable</option><option>unstable</option><option>all</option>';
+					}
+				?></select>
+				<?php } else {
+					print $branch;
 				}
 
 				if ( $uid && $uid != $todo['owner'] && $public == 'public' ) { ?>

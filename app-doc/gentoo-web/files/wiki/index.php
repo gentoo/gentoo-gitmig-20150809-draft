@@ -1,20 +1,22 @@
 <?php
 	include "functions.php";
 
-	if ( $action == 'login' ) {
+	if ( !$uid && $action == 'login' ) {
 		$result = mysql_query( "select * from users where username='$username'" );
 		list( $uid, $dbusername, $dbpassword ) = mysql_fetch_row( $result );
 		if ( $password == $dbpassword ) {
 			// login successful
 			session_register( 'uid' );
 			session_register( 'dbusername' );
+			session_register( 'dbpassword' );
 		} else {
 			unset( $uid );
 		}
 	} elseif ( $action == 'logout' && $uid ) {
 		session_unregister( 'uid' );
 		session_unregister( 'dbusername' );
-		unset( $uid, $dbusername );
+		session_unregister( 'dbpassword' );
+		unset( $uid, $dbusername, $dbpassword );
 	} elseif ( $action == 'grab_todo' && $uid ) {
 		$public = mysql_query( "select owner,public from todos where tid=$tid" );
 		list( $todo_uid, $todo_public ) = mysql_fetch_row( $public );
@@ -65,29 +67,29 @@
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
 		}
 	} elseif ( $list == 'by_date' ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by date desc,priority desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
 		}
 	} elseif ( $list == 'by_developer' && !$uid ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by developer/priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by owner,priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
 		}
 	} elseif ( $list == 'by_developer' && $uid ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by developer/priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0 and owner=$uid$query_where order by priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
 		}
 		$result = mysql_query( "select * from todos where owner!=$uid and priority!=0$query_where order by owner,priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
 		}
 	}
 	main_footer();
