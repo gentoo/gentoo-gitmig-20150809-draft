@@ -59,6 +59,10 @@ src_install() {
 	rm -f ${D}/usr/lib/tcl${V1}/include/generic/tcl.h
 	rm -f ${D}/usr/lib/tcl${V1}/include/generic/tclDecls.h
 	rm -f ${D}/usr/lib/tcl${V1}/include/generic/tclPlatDecls.h	
+
+	# install symlink for libraries
+	dosym /usr/lib/libtcl${V1}.a /usr/lib/libtcl.a
+	dosym /usr/lib/libtclstub${V1}.a /usr/lib/libtclstub.a
 	
 	cd ${S2}/unix
 	try make INSTALL_ROOT=${D} MAN_INSTALL_DIR=${D}/usr/share/man install
@@ -79,6 +83,10 @@ src_install() {
 	rm -f ${D}/usr/lib/tk${V2}/include/generic/tk.h
 	rm -f ${D}/usr/lib/tk${V2}/include/generic/tkDecls.h
 	rm -f ${D}/usr/lib/tk${V2}/include/generic/tkPlatDecls.h	
+
+	# install symlink for libraries
+	dosym /usr/lib/libtk${V2}.a /usr/lib/libtk.a
+	dosym /usr/lib/libtkstub${V2}.a /usr/lib/libtkstub.a
 	
 	ln -sf tclsh${V1} ${D}/usr/bin/tclsh
 	ln -sf wish${V2} ${D}/usr/bin/wish
