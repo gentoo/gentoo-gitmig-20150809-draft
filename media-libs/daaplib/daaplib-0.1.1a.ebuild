@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.3 2004/04/23 16:58:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.4 2004/04/25 17:28:50 eradicator Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.deleet.de/projekte/daap/daaplib/"
 SRC_URI="http://deleet.de/projekte/daap/daaplib/${PN}.${PV}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="static"
 DEPEND="app-arch/unzip"
 RDEPEND=""
