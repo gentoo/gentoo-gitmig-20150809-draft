@@ -1,7 +1,20 @@
-MD5 ae4a18c55ab47d12e87f2358a5b79989 blitz-0.7.ebuild 928
-MD5 413099bc5103f30475a2da876f692fc9 ChangeLog 1274
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2378092c1be2925334160ae17fba164c ChangeLog 1483
 MD5 ac0fb0d4cb76b098c5f6f6ef85555e5a blitz-0.6.ebuild 1132
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 0d094a795dfe2a48b69bb20806d7c7f6 files/blitz-0.7.diff 404
+MD5 ae4a18c55ab47d12e87f2358a5b79989 blitz-0.7.ebuild 928
+MD5 50ca48681699c621a1cc7e14b1ec19ef blitz-0.8.ebuild 1202
+MD5 d1f9260439ebbed770545edb520634ff files/digest-blitz-0.8 62
 MD5 de10c5070943a0175877a7c57662b130 files/digest-blitz-0.6 62
+MD5 0d094a795dfe2a48b69bb20806d7c7f6 files/blitz-0.7.diff 404
 MD5 25bdc3e906721240b60b78d884513dac files/digest-blitz-0.7 64
+MD5 aa12dee75dbef0e548cc6ddbd27fef5b files/blitz-0.8-makefile.patch 8084
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnflumdTrptrqvGERAvFRAKCWWL1FIYaPtYnsQ952ctXfIL0TmQCgjkQY
+Wna/uEpi4NMLk0AgUzCnwxI=
+=0wLx
+-----END PGP SIGNATURE-----

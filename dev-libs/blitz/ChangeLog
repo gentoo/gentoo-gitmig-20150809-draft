@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.11 2004/06/24 23:00:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.12 2004/11/19 13:47:24 dragonheart Exp $
+
+*blitz-0.8 (19 Nov 2004)
+
+  19 Nov 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/blitz-0.8-makefile.patch, +blitz-0.8.ebuild:
+  version bump thanks to Andy <andyreif@studcs.uni-sb.de> in bug #71678
 
   12 May 2004; Daniel Black <dragonheart@gentoo.org> blitz-0.7.ebuild,
   metatdata.xml:
