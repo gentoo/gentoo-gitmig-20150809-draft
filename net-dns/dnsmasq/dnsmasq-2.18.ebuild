@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.14.ebuild,v 1.1 2004/09/12 18:45:13 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.18.ebuild,v 1.1 2004/11/22 16:34:37 avenj Exp $
+
+#inherit eutils
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -13,8 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~amd64 ~ia64 ~s390"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+RDEPEND="virtual/libc"
+DEPEND=">=sys-apps/sed-4 ${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
