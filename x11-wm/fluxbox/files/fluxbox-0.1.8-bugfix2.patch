@@ -1,0 +1,100 @@
+Only in fluxbox-0.1.8-bugfix2/: fluxbox-0.1.8-bugfix1.patch
+diff -U 1 -r fluxbox-0.1.8/src/Configmenu.cc fluxbox-0.1.8-bugfix2/src/Configmenu.cc
+--- fluxbox-0.1.8/src/Configmenu.cc	Fri Apr 12 17:14:09 2002
++++ fluxbox-0.1.8-bugfix2/src/Configmenu.cc	Fri May  3 10:41:09 2002
+@@ -197,2 +197,4 @@
+ 			}
++			//save resources
++			Fluxbox::instance()->save_rc();
+ 		}
+@@ -292,2 +294,6 @@
+ 
++			//save resources
++			Fluxbox::instance()->save_rc();
++			
++			//toggle options
+ 			setItemSelected(0, !(configmenu->screen->isSloppyFocus() || 
+@@ -429,2 +435,4 @@
+ 			}
++			//save resources
++			Fluxbox::instance()->save_rc();
+ 		}
+@@ -640,3 +648,4 @@
+ 			}
+-
++			//save resources
++			Fluxbox::instance()->save_rc();
+ 			Fluxbox::instance()->reconfigureTabs(); //TODO
+diff -U 1 -r fluxbox-0.1.8/src/Tab.cc fluxbox-0.1.8-bugfix2/src/Tab.cc
+--- fluxbox-0.1.8/src/Tab.cc	Mon Apr 15 00:27:57 2002
++++ fluxbox-0.1.8-bugfix2/src/Tab.cc	Fri May  3 10:44:18 2002
+@@ -65,3 +65,4 @@
+ 			m_win->getScreen()->getTabPlacement() == PRIGHT) &&
+-			m_win->getScreen()->isTabRotateVertical()) {
++			m_win->getScreen()->isTabRotateVertical() &&
++			!m_win->isShaded()) {
+ 		m_size_w = m_win->getScreen()->getTabHeight();
+diff -U 1 -r fluxbox-0.1.8/src/Window.cc fluxbox-0.1.8-bugfix2/src/Window.cc
+--- fluxbox-0.1.8/src/Window.cc	Wed Apr 17 09:24:59 2002
++++ fluxbox-0.1.8-bugfix2/src/Window.cc	Fri May  3 10:34:31 2002
+@@ -241,4 +241,5 @@
+ 	if (transient) {
+-		decorations.maximize = decorations.handle =
+-			decorations.border = functions.maximize = false;
++		decorations.maximize =  functions.maximize = false;
++		//we can still use the handles to resize it
++		decorations.handle = decorations.border = true;
+ 	}	
+diff -U 1 -r fluxbox-0.1.8/src/fluxbox.cc fluxbox-0.1.8-bugfix2/src/fluxbox.cc
+--- fluxbox-0.1.8/src/fluxbox.cc	Sat Apr 20 12:10:48 2002
++++ fluxbox-0.1.8-bugfix2/src/fluxbox.cc	Fri May  3 10:47:20 2002
+@@ -1703,3 +1703,2 @@
+ 
+-	save_rc();
+ }
+diff -U 1 -r fluxbox-0.1.8/src/fluxbox.hh fluxbox-0.1.8-bugfix2/src/fluxbox.hh
+--- fluxbox-0.1.8/src/fluxbox.hh	Fri Apr 12 15:02:12 2002
++++ fluxbox-0.1.8-bugfix2/src/fluxbox.hh	Fri May  3 10:46:28 2002
+@@ -137,2 +137,3 @@
+ 	void saveGroupSearch(Window, FluxboxWindow *);	
++	void save_rc(void);
+ 	void removeMenuSearch(Window);
+@@ -242,3 +243,2 @@
+ 	void load_rc(void);
+-	void save_rc(void);
+ 	void reload_rc(void);
+diff -U 1 -r fluxbox-0.1.8/src/Toolbar.cc fluxbox-0.1.8-bugfix/src/Toolbar.cc
+--- fluxbox-0.1.8/src/Toolbar.cc	Wed Apr 10 01:16:28 2002
++++ fluxbox-0.1.8-bugfix/src/Toolbar.cc	Fri May  3 14:48:51 2002
+@@ -1170,3 +1170,3 @@
+ 			screen->getWorkspacemenu()->update();
+-
++			Fluxbox::instance()->save_rc();
+ 			reconfigure();
+@@ -1314,5 +1314,7 @@
+ 			toolbar->on_top = change;
+-				setItemSelected(1, change);
++			screen()->saveToolbarOnTop(toolbar->on_top);
++			setItemSelected(1, change);
+ 
+ 			if (toolbar->isOnTop()) toolbar->screen->raiseWindows((Window *) 0, 0);
++			
+ 			break;
+@@ -1324,2 +1326,3 @@
+ 	toolbar->do_auto_hide = change;
++	screen()->saveToolbarAutoHide(toolbar->do_auto_hide);
+ 	setItemSelected(2, change);
+@@ -1338,2 +1341,3 @@
+ 		}
++		Fluxbox::instance()->save_rc();
+ 	}
+@@ -1417,3 +1421,3 @@
+ #endif // SLIT
+-
++		Fluxbox::instance()->save_rc();
+ 	}
+@@ -1461,3 +1465,3 @@
+ #endif // SLIT
+-
++		Fluxbox::instance()->save_rc();
+ 	}
