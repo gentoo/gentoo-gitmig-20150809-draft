@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.28.ebuild,v 1.2 2004/08/26 08:42:53 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.28.ebuild,v 1.3 2004/08/29 13:39:08 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,6 +37,13 @@ filter-flags "-fno-default-inline"
 filter-flags "-funroll-loops"
 filter-flags "-funroll-all-loops"
 filter-flags "-fforce-addr"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	has_version ">=media-libs/xvid-1.0.0" || \
+	epatch ${FILESDIR}/xvid.patch
+}
 
 src_compile() {
 	local myconf

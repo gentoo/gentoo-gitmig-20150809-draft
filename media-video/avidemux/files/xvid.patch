@@ -1,0 +1,22 @@
+--- avidemux/ADM_encoder/adm_encxvid.cpp.orig	2004-08-29 02:29:31.000000000 -0500
++++ avidemux/ADM_encoder/adm_encxvid.cpp	2004-08-29 02:29:52.000000000 -0500
+@@ -41,6 +41,8 @@
+ };
+ #include "ADM_gui/GUI_xvidparam.h"
+ 
++#include <ADM_assert.h>
++
+ static vbr_control_t vbrstate;
+ #define aprintf printf
+ //static char *XvidInternal2pass_statfile=(const char *)"/tmp/xvid_int2pass.txt";
+--- avidemux/ADM_dialog/DIA_xvid.cpp.orig	2004-08-29 02:28:53.000000000 -0500
++++ avidemux/ADM_dialog/DIA_xvid.cpp	2004-08-29 02:29:08.000000000 -0500
+@@ -1,7 +1,7 @@
+ #include <config.h>
+ #include "ADM_lavcodec.h"
+ 
+-
++#include <ADM_assert.h>
+ 
+ #include <string.h>
+ #include <stdio.h>
