@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.2 2000/08/16 04:38:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r1.ebuild,v 1.3 2000/08/23 06:16:57 drobbins Exp $
 
-P=at-3.1.8
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
 DESCRIPTION="queues jobs for later execution"
-SRC_URI="ftp://ftp.kreonet.re.kr/.2/Linux/Jurix/source/chroot/appl/at/${P}.tar.bz2
-	 ftp://ftp.kreonet.re.kr/.2/Linux/Jurix/source/chroot/appl/at/${P}.dif"
+SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
+	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 
 src_compile() {
 
