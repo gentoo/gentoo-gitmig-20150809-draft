@@ -1,17 +1,24 @@
 # ChangeLog for sys-apps/xfsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.6 2002/10/05 08:25:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.7 2002/10/29 06:17:07 bcowan Exp $
+
+*xfsprogs-2.2.2-r1 (29 Oct 2002)
+
+  27 Oct 2002; Brad Cowan <bcowan@gentoo.org> xfsprogs-2.2.2-r1.ebuild 
+  files/digest-xfsprogs-2.2.2-r1 :
+  
+  Updated symlinks for bug# 9861.
 
 *xfsprogs-2.2.2 (27 Sep 2002)
-
-  27 Sep 2002; Brad Cowan <bcowan@gentoo.org> xfsprogs-2.2.2.ebuild
-  files/digest-xfsprogs-2.2.2 :
-  
-  version bump thanks to Hanno Boeck <hanno@gentoo.org>
 
   05 Oct 2002; Brad Cowan <bcowan@gentoo.org> xfsprogs-2.2.2.ebuild :
   
   Fixed symlinks and "modernized" ebuild.
+  
+  27 Sep 2002; Brad Cowan <bcowan@gentoo.org> xfsprogs-2.2.2.ebuild
+  files/digest-xfsprogs-2.2.2 :
+  
+  version bump thanks to Hanno Boeck <hanno@gentoo.org>
 
 *xfsprogs-20020330-r1.ebuild (26 July 2002)
 
