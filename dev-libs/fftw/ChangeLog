@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.26 2004/07/03 09:59:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.27 2004/07/09 21:57:17 hansmi Exp $
+
+  09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Fixed a compilation-error with Altivec and gcc 3.4.1
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> fftw-3.0.1.ebuild:
   Stable on alpha.

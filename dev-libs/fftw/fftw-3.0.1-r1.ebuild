@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.6 2004/07/02 04:41:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-3.0.1-r1.ebuild,v 1.7 2004/07/09 21:57:17 hansmi Exp $
 
 IUSE="3dnow sse mpi"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
@@ -56,8 +56,12 @@ src_compile() {
 		myconfdouble="$myconfdouble --enable-sse2"
 	elif use 3dnow; then
 		myconfsingle="$myconfsingle --enable-k7"
-	elif use altivec; then
-		myconfsingle="$myconfsingle --enable-altivec"
+	fi
+
+	# Altivec-support in fftw is currently broken
+	# with gcc 3.4
+	if [ "`gcc-version`" != "3.4" ]; then
+		myconfsingle="$myconfsingle `use_enable altivec`"
 	fi
 
 	cd "${S}-single"
