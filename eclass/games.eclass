@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.65 2004/06/14 14:18:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.66 2004/06/18 16:00:03 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -30,8 +30,8 @@ export GAMES_BINDIR="/usr/games/bin"
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
 # just add these two variables to your environment (aka /etc/profile)
-export GAMES_USER="${GAMES_USER:-games}"
-export GAMES_USER_DED="${GAMES_USER_DED:-games-ded}"
+export GAMES_USER="${GAMES_USER:-root}"
+export GAMES_USER_DED="${GAMES_USER_DED:-games}"
 export GAMES_GROUP="${GAMES_GROUP:-games}"
 
 egamesconf() {
@@ -82,8 +82,7 @@ dogameslib.so() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamesbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 newgamessbin() { gameswrapper ${FUNCNAME/games} "$@"; }
 
-#gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
-gamesowners() { chown root:${GAMES_GROUP} "$@"; }
+gamesowners() { chown ${GAMES_USER}:${GAMES_GROUP} "$@"; }
 gamesperms() { chmod u+rw,g+r-w,o-rwx "$@"; }
 prepgamesdirs() {
 	local dir=""
