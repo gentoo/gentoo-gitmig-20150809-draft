@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.1 2004/05/23 03:05:55 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1-r1.ebuild,v 1.2 2004/06/24 07:52:20 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64"
+KEYWORDS="x86 ~ppc amd64 ~alpha ~ia64"
 IUSE="doc debug jack-tmpfs caps"
 
 DEPEND=">=media-libs/alsa-lib-0.9.1
@@ -44,7 +44,12 @@ src_compile() {
 		&& myconf="--enable-html-docs --with-html-dir=/usr/share/doc/${PF}" \
 		|| myconf="--disable-html-docs"
 
-	use jack-tmpfs && myconf="${myconf} --with-default-tmpdir=/dev/shm" || myconf="${myconf} --with-default-tmpdir=/var/run/jack"
+	if use jack-tmpfs; then
+		myconf="${myconf} --with-default-tmpdir=/dev/shm"
+	else
+		myconf="${myconf} --with-default-tmpdir=/var/run/jack"
+	fi
+
 	use caps && myconf="${myconf} --enable-capabilities --enable-stripped-jackd"
 	use debug && myconf="${myconf} --enable-debug"
 
@@ -59,11 +64,15 @@ src_install() {
 		datadir=${D}/usr/share \
 		install || die
 
-	use jack-tmpfs || keepdir /var/run/jack && chmod 4777 ${D}/var/run/jack
+	if ! use jack-tmpfs; then
+		keepdir /var/run/jack
+		chmod 4777 ${D}/var/run/jack
+	fi
 
 	if use doc; then
 		mv ${D}/usr/share/doc/${PF}/reference/html \
 		   ${D}/usr/share/doc/${PF}/
-		rm -rf ${D}/usr/share/doc/${PF}/reference
 	fi
+
+	rm -rf ${D}/usr/share/doc/${PF}/reference
 }
