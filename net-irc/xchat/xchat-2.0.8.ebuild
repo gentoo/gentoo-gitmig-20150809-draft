@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.8.ebuild,v 1.1 2004/03/29 12:31:32 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.8.ebuild,v 1.2 2004/04/05 15:04:17 zul Exp $
 
 inherit flag-o-matic
 
@@ -44,6 +44,9 @@ src_compile() {
 	use xchatnogtk \
 		&& gtkconf="--disable-gtkfe" \
 		|| gtkconf="--enable-gtkfe"
+
+	# fix for sock5 vulnerability - see #46856
+	epatch ${FILESDIR}/xc208-fixsocks5.diff
 
 	econf \
 		${gtkconf} \

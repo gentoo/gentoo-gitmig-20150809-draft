@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.11 2004/01/04 01:34:08 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.12 2004/04/05 15:04:17 zul Exp $
 
 inherit eutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/xc1811fixststint.diff
+
+	# Fix for sock5 vulnerability - see #46856
+	epatch ${FILESDIR}/xc208-fixsocks5.diff
 
 	use python && ( \
 		cp configure configure.orig
