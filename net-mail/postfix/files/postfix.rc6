@@ -3,7 +3,8 @@
 PIDFILE=/var/spool/postfix/pid/master.pid
 
 depend() {
-    need sysklogd net
+    need net
+    use sysklogd metalog syslog-ng
 }
 
 start() {
