@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.192 2003/12/25 11:12:38 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.193 2003/12/26 17:53:02 taviso Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-crypt/gnupg:caps - Use Linux capabilities library to control privileges.
+app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-editors/nano:justify - Toggle the justify option ... god i hate that thing :)
 app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
