@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/gst-plugins-mad-0.8.2.ebuild,v 1.7 2004/08/22 11:00:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/gst-plugins-mad-0.8.2.ebuild,v 1.8 2004/08/28 02:38:41 tgall Exp $
 
 inherit gst-plugins
 
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~ia64 ~mips ppc64"
 
 IUSE=""
 
