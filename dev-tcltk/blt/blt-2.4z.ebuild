@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.1 2003/07/09 19:09:24 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.2 2003/07/09 19:25:47 cretin Exp $
 
 
 S="${WORKDIR}/${PN}${PV}"
@@ -16,6 +16,12 @@ KEYWORDS="x86"
 
 # hyper-optimizations untested...
 #
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/blt2.4z-install.diff
+}
+
 src_compile() {
 
 	cd ${S}
@@ -37,10 +43,7 @@ src_install() {
 	dodir /usr/share/man/mann
 	dodir /usr/include
 	emake \
-			prefix=${D}/usr \
-			exec_prefix=${D}/usr \
-			mandir=${D}/usr/share/man \
-			infodir=${D}/usr/share/info \
+			INSTALL_ROOT=${D} \
 			install || die	
 	
 	dodoc NEWS PROBLEMS README
