@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.4.ebuild,v 1.3 2004/03/08 12:20:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.1 2004/03/13 00:32:03 foser Exp $
 
 inherit eutils
 
@@ -40,8 +40,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-
-	./autogen.sh
 
 	# Abiword is not 64-bit safe.  This is a patch for AMD64.
 	if [ $ARCH = "amd64" ] ; then
