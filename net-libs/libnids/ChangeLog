@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.7 2003/07/26 11:24:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.8 2003/08/21 04:12:47 vapier Exp $
+
+*libnids-1.17_rc1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*libnids-1.16-r1 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add SLOT support with libnet SLOT support #17772.  This
+  deprecates 1.16 and makes 1.17+ the default.
+
+*libnids-1.16 (01 Feb 2002)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add ~ppc KEYWORDS #27012.
 
   26 Jul 2003; Hanno Boeck <hanno@gentoo.org> libnids-1.16.ebuild,
   files/libnids_gcc33_fix.gz:
@@ -9,15 +25,12 @@
   23 Jul 2003; Tavis Ormandy <taviso@gentoo.org> libnids-1.16.ebuild:
   marking ~alpha
 
-*libnids-1.16 (1 Feb 2002)
-
   07 Mar 20003; Martin Holzer <mholzer@gentoo.org> libnids-1.16.ebuild :
   Fixed Depend to libnet-1.0*. Closes #17017.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
