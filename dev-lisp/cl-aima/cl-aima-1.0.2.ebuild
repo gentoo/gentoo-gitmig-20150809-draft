@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2.ebuild,v 1.1 2003/10/14 03:10:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/cl-aima-1.0.2.ebuild,v 1.2 2003/10/15 17:11:36 mkennedy Exp $
 
 inherit common-lisp
 
@@ -42,4 +42,12 @@ src_install() {
 	common-lisp-system-symlink
 	dohtml doc/*
 	do-debian-credits
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }

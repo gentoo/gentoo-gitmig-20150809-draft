@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.27.2003.09.19.ebuild,v 1.1 2003/09/24 01:05:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.27.2003.09.19.ebuild,v 1.2 2003/10/15 17:10:09 mkennedy Exp $
 
 inherit common-lisp
 
@@ -21,9 +21,22 @@ CLPACKAGE=acl-compat
 
 S=${WORKDIR}/cl-portable-aserve-${MY_PV}
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PV}-lw-buffering.lisp-gentoo.patch
+}
+
 src_install() {
 	dodir /usr/share/common-lisp/source/
 	cp -r acl-compat/ ${D}/usr/share/common-lisp/source/
 	common-lisp-install acl-compat/acl-compat.asd
 	common-lisp-system-symlink
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }

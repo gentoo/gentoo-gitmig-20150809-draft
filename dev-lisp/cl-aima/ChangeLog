@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-aima
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/ChangeLog,v 1.1 2003/10/14 03:10:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aima/ChangeLog,v 1.2 2003/10/15 17:11:36 mkennedy Exp $
+
+  15 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-aima-1.0.2.ebuild:
+  add postrm, preinst
 
 *cl-aima-1.0.2 (13 Oct 2003)
 
