@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.9 2004/08/22 05:12:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.0.ebuild,v 1.10 2004/10/04 22:37:39 pvdabeel Exp $
 
 IUSE="sdl ssl ipv6"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Gnome NetMeeting client"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 
 DEPEND=">=dev-libs/pwlib-1.5.0
 	>=net-libs/openh323-1.12.0
