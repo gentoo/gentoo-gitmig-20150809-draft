@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.1 2003/10/10 07:12:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-2.0.1.0.ebuild,v 1.2 2003/10/21 03:09:28 brandy Exp $
 
 inherit kde-functions
 
@@ -21,6 +21,8 @@ DEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${MY_P}-gentoo.patch
 	cd ${S}/scripts
 	sed -i -e 's/^make/make ${MAKEOPTS}/' build_qcad.sh
 	sed -i -e 's/^\.\/configure/.\/configure --host=${CHOST}/' build_qcad.sh
