@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.10 2004/11/26 23:03:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.11 2004/11/27 20:18:01 chainsaw Exp $
+
+*musepack-tools-1.15s-r1 (27 Nov 2004)
+
+  27 Nov 2004; Tony Vroon <chainsaw@gentoo.org>
+  +musepack-tools-1.15s-r1.ebuild, -musepack-tools-1.15s.ebuild:
+  Add 16bit local USE-flag, closes bug #72500. Made oss dependency explicit as
+  to never break emerge world.
 
 *musepack-tools-1.15s (26 Nov 2004)
 

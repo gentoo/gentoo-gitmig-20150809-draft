@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s.ebuild,v 1.1 2004/11/26 23:03:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15s-r1.ebuild,v 1.1 2004/11/27 20:18:01 chainsaw Exp $
 
-IUSE="static esd oss"
+IUSE="static esd 16bit"
 
 inherit eutils flag-o-matic
 
@@ -24,10 +24,6 @@ DEPEND="${RDEPEND}
 	amd64? ( dev-lang/nasm )"
 
 src_unpack() {
-	if (! use esd && ! use oss); then
-		die "You must have either oss or esd active in your USE flags for xmms-musepack to work properly."
-	fi
-
 	unpack ${A}
 	cd ${S}
 
@@ -36,8 +32,6 @@ src_unpack() {
 
 	# Get rid of -mpreferred-stack-boundary=2 as it breaks amd64
 	sed -i 's:-mpreferred-stack-boundary=2::' Makefile
-
-	use oss || sed -i 's/#define USE_OSS_AUDIO/#undef USE_OSS_AUDIO/' mpp.h
 
 	sed -i 's/#define USE_IRIX_AUDIO/#undef USE_IRIX_AUDIO/' mpp.h
 
@@ -49,6 +43,8 @@ src_unpack() {
 	if ! ( use x86 || use amd64 ); then
 		sed -i 's/#define USE_ASM/#undef USE_ASM/' mpp.h
 	fi
+
+	use 16bit && sed -i 's|//#define MAKE_16BIT|#define MAKE_16BIT|' mpp.h
 }
 
 src_compile() {
