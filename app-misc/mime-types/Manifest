@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b37190190604c273608de9c636a41ed8 mime-types-1.0.ebuild 497
-MD5 ab72a0b4d98f9b0a303698f59b242a61 mime-types-1.0-r1.ebuild 508
-MD5 64d2021c8595e3672d2f8b835df9b495 ChangeLog 1365
+MD5 6fb59203488f34b8728c8ac9ee7a3c67 mime-types-1.0-r1.ebuild 514
+MD5 90c033845df532e13e8e3f0f9f6f4ff3 ChangeLog 1473
 MD5 70a0a661efdf25f44423fcf623e6a511 files/digest-mime-types-1.0-r1 68
 MD5 0d15f9f712d0699eebc5e3309135eb51 files/digest-mime-types-1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBF+uoCHk4+ZoBpvsRAuyvAJ9JmYO17xF3Xcywbxfi1cvbAE1/AACfRP16
+efZMQ0+CdYW8a9DA4Szux20=
+=Jidz
+-----END PGP SIGNATURE-----
