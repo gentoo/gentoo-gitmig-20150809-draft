@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.23.1.9.13.ebuild,v 1.2 2003/12/02 20:22:22 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.23.1.9.13.ebuild,v 1.3 2004/01/05 22:10:53 solar Exp $
 
 # Documentation on the patch contained in this kernel will be installed someday
 
