@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/intersync	
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.5 2003/06/12 21:21:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.6 2003/08/10 20:40:00 karltk Exp $
+
+*intersync-0.9.5_p2 (10 Aug 2003)
+
+  10 Aug 2003; <karltk@gentoo.org> intersync-0.9.5_p2.ebuild:
+  Fixes #25468; kernels with ACL support no longer bork compilation.
 
   12 Jun 2003; <msterret@gentoo.org> intersync-0.9.5.ebuild:
   add Header
