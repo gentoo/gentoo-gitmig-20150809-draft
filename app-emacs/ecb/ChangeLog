@@ -1,6 +1,18 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.4 2003/03/08 22:37:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.5 2003/09/21 03:52:32 mkennedy Exp $
+
+*ecb-1.96 (20 Sep 2003)
+
+  20 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> ecb-1.96.ebuild,
+  files/70ecb-gentoo.el, files/ecb-help.el-ecb-1.96-gentoo.diff:
+  version bump with improvements submitted by Marshall T. Vandegrift
+  <vandem2@rpi.edu> of bug #18863: Updated the project homepage, Removed
+  unnecessary dependancies, Added useful version numbers for dependancies, Made
+  the JDEE dependancy optional, based on the 'java' USE flag, Added useful
+  loading commands to the site-file, Changed the site-file to the '70' prefix,
+  so that it loads after EIEIO and semantic, Cleaned up patching and
+  documentation-generation
 
 *ecb-1.90 (31 Jan 2003)
 
