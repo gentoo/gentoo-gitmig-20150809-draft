@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkipi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.4 2005/02/09 21:12:31 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.5 2005/03/03 18:06:26 carlo Exp $
+
+  03 Mar 2005; Carsten Lohrke <carlo@gentoo.org> libkipi-0.1.1.ebuild:
+  stable on x86
 
   09 Feb 2005; Dominik Stadler <centic@gentoo.org> libkipi-0.1.ebuild:
   Mark 0.1 stable on x86
