@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.15 2004/10/13 20:11:41 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.2.ebuild,v 1.16 2004/12/05 21:23:54 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/linux/utils/file/${P}.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 alpha amd64 ia64 ppc64 sparc ppc"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
@@ -28,12 +28,11 @@ src_compile() {
 	# symlinks that are preventing shared libraries from
 	# functioning.
 	use static && append-flags -static
-
 	emake || die
 }
 
 src_install() {
-	dobin symlinks
+	dobin symlinks || die
 	doman symlinks.8
 	dodoc symlinks.lsm
 }
