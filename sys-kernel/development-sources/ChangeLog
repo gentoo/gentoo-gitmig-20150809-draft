@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.176 2005/03/25 03:35:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.177 2005/03/27 20:12:01 chainsaw Exp $
+
+*development-sources-2.6.11.6 (27 Mar 2005)
+
+  27 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
+  -development-sources-2.6.11.2.ebuild,
+  -development-sources-2.6.11.3.ebuild, development-sources-2.6.11.4.ebuild,
+  development-sources-2.6.11.5.ebuild, +development-sources-2.6.11.6.ebuild:
+  Version bump. 2.6.11.5 stable on x86. All 2.6.11.X ebuilds converted to use
+  patches as demonstrated by Rizwan Anwar <gentoo@epeeps.com> in bug #85559.
 
 *development-sources-2.6.11.5 (24 Mar 2005)
 
