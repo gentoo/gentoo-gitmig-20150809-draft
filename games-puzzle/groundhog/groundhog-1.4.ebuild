@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.2 2003/09/14 04:24:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.3 2003/09/14 04:37:58 vapier Exp $
 
 inherit games
 
@@ -16,6 +16,12 @@ IUSE="nls"
 DEPEND="virtual/x11
 	=x11-libs/gtk+-2*
 	=dev-libs/glib-2*"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc3.patch
+}
 
 src_compile() {
 	egamesconf `use_enable nls` || die
