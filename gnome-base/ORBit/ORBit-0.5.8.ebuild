@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.8.ebuild,v 1.8 2001/08/31 22:54:33 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.8.ebuild,v 1.9 2001/09/01 02:34:18 lordjoe Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -30,7 +30,7 @@ src_compile() {
 
 	assert "Configure failed."
 
-	make || die "Building failed.  # Doesn't work with -j 4 (hallski)
+	make || die "Building failed."  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
