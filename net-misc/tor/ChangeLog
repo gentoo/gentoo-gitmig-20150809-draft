@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.19 2004/10/06 13:56:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.20 2004/10/18 02:37:14 latexer Exp $
+
+*tor-0.0.8.1 (17 Oct 2004)
+
+  17 Oct 2004; <peter@gentoo.org> +tor-0.0.8.1.ebuild, -tor-0.0.8.ebuild:
+  Bump and remove 0.0.8 which is vulnerable to a remote DoS. See bug #67756.
 
 *tor-0.0.8 (06 Oct 2004)
 
