@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/findlib
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.1 2002/12/15 23:56:41 george Exp $
+
+*findlib-0.8.ebuild (15 ‰≈À 2002)
+
+  15 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, findlib-0.8.ebuild, files/digest-findlib-0.8 :
+  initial release
+  OCaml tool to find/use non-standard packages.
+  ebuild submitted by Matthieu Sozeau <mattam@netcourrier.com>
