@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.10 2004/03/12 11:43:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.11 2004/03/29 23:22:31 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls."
 HOMEPAGE="http://www.textuality.com/bonnie/"
