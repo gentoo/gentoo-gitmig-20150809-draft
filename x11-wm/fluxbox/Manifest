@@ -5,8 +5,9 @@ MD5 143110b2a988e0a383142062b0fa41b6 fluxbox-0.9.3.ebuild 2718
 MD5 584949bdc5b17f5f5219e820d739c815 fluxbox-0.9.4.ebuild 2718
 MD5 05b1b1b37d0da0bcbe5f826a04430791 fluxbox-0.9.5.ebuild 2718
 MD5 0dc4300bf996697cc40e684b63c63bc1 fluxbox-0.9.6_pre1.ebuild 2744
-MD5 1a97aa773eff9a85c4b13cccbda1de69 ChangeLog 14014
-MD5 0dc4300bf996697cc40e684b63c63bc1 fluxbox-0.9.6_pre4.ebuild 2744
+MD5 7d2823606df9408d8c203ad66e587aa2 fluxbox-0.9.6_pre4.ebuild 2742
+MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
+MD5 213779a1f627573e902518eb7c792e48 ChangeLog 14172
 MD5 3661fa0f4811d5de5119163ee43ac690 files/digest-fluxbox-0.1.12-r1 132
 MD5 1c3ae2ce22f7f2a778a8ad5a5631df28 files/digest-fluxbox-0.1.14-r1 67
 MD5 224efa97a7e52718fb828c036c6d91d9 files/digest-fluxbox-0.9.0 65
