@@ -1,0 +1,82 @@
+--- yammi-1.0/configure	2003-10-24 19:03:54.000000000 +0200
++++ yammi-1.0-gentoo/configure	2003-11-25 21:28:32.000000000 +0100
+@@ -1725,7 +1725,7 @@
+  id3lib support .......: $configure_enable_id3lib
+  " >&6;}
+ 
+-if test "x$configure_enable_KDE" = "xyes"; then
++#if test "x$configure_enable_KDE" = "xyes"; then
+ 
+   unset CDPATH
+ 
+@@ -1814,7 +1814,7 @@
+    kde_qt_dirs="$QTDIR /usr/lib/qt"
+ fi
+ 
+-fi
++#fi
+ 
+ ac_config_commands="$ac_config_commands default-1"
+ 
+@@ -15250,9 +15250,9 @@
+ 
+ # Prevent multiple expansion
+ 
+-if test "x$configure_enable_KDE" = "xyes"; then
+-    { echo "$as_me:15254: Adding KDE support " >&5
+-echo "$as_me: Adding KDE support " >&6;}
++#if test "x$configure_enable_KDE" = "xyes"; then
++#    { echo "$as_me:15254: Adding KDE support " >&5
++#echo "$as_me: Adding KDE support " >&6;}
+ 
+     # Extract the first word of "msgfmt", so it can be a program name with args.
+ set dummy msgfmt; ac_word=$2
+@@ -15381,9 +15381,9 @@
+ 	fi
+       fi
+ 
+-fi
++#fi
+ 
+-if test "x$configure_enable_KDE" = "xyes"; then
++#if test "x$configure_enable_KDE" = "xyes"; then
+     echo "$as_me:15387: checking for ANSI C header files" >&5
+ echo $ECHO_N "checking for ANSI C header files... $ECHO_C" >&6
+ if test "${ac_cv_header_stdc+set}" = set; then
+@@ -19950,6 +19950,8 @@
+ echo "$as_me:19950: result: $USE_RPATH" >&5
+ echo "${ECHO_T}$USE_RPATH" >&6
+ 
++# yyy: hacked by oliver, start if block for non-kde systems
++if test "x$configure_enable_KDE" = "xyes"; then
+ echo "$as_me:19953: checking for KDE" >&5
+ echo $ECHO_N "checking for KDE... $ECHO_C" >&6
+ 
+@@ -21194,7 +21196,7 @@
+   fi
+ done
+ 
+-else
++elif test "x$configure_enable_KDE" = "xyes"; then
+ 
+ # Check whether --enable-mt or --disable-mt was given.
+ if test "${enable_mt+set}" = set; then
+@@ -21308,6 +21310,9 @@
+   LIBQT="$LIBQT $LIBDL"
+ fi
+ 
++fi
++# yyy: hacked by oliver, end if block for non-kde systems
++
+ echo "$as_me:21311: checking for Qt" >&5
+ echo $ECHO_N "checking for Qt... $ECHO_C" >&6
+ 
+@@ -22021,7 +22026,7 @@
+ fi
+ test -z "$KDE_MT_LIBS" || LIB_QT="$LIB_QT $KDE_MT_LIBS"
+ 
+-fi
++#fi
+ 
+ echo "$as_me:22026: checking for main in -lstdc++" >&5
+ echo $ECHO_N "checking for main in -lstdc++... $ECHO_C" >&6
