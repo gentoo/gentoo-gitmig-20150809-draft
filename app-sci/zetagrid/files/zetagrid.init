@@ -1,3 +1,9 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header:
+/home/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r5.ebuild,v 1.1
+2003/02/25 22:51:26 tantive Exp $
+
 #!/sbin/runscript
 
 opts="${opts} progress"
@@ -6,7 +12,7 @@ ZETADIR=/opt/zetagrid/
 start() {
         ebegin "Starting zetagrid"
         cd ${ZETADIR}
-	JAVA_HOME="`/bin/grep -e "JAVA_HOME" /etc/profile.env | sed -e "s/^.*'\(.*\)'$/\1/"`"
+	JAVA_HOME="`/usr/bin/grep -e "JAVA_HOME" /etc/profile.env | sed -e "s/^.*'\(.*\)'$/\1/"`"
 	export PATH=$PATH:$JAVA_HOME/bin
         ./zeta.sh >/dev/null
         eend $? "Failed to start zetagrid"

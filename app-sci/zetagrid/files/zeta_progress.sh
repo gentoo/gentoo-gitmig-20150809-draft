@@ -1,3 +1,7 @@
+# $Header:
+/home/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.0-r5.ebuild,v 1.1
+2003/02/25 22:51:26 tantive Exp $
+
 # ======================================================================
 #  zeta_progress.sh      Start script for the ZetaGrid progress utility
 # ----------------------------------------------------------------------
