@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.5 2004/05/04 22:53:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r2.ebuild,v 1.6 2004/06/02 15:19:09 agriffis Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 	cd ${S}
 
-	if [ `use cjk` ] ; then
+	if use cjk ; then
 		epatch ${FILESDIR}/gs7.05.6-cjk.diff
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
@@ -100,12 +100,12 @@ src_install() {
 	dodoc doc/README doc/COPYING doc/COPYING.LGPL
 	dohtml doc/*.html doc/*.htm
 
-	if [ `use emacs` ]; then
+	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
 		doins doc/gsdoc.el
 	fi
 
-	if [ `use cjk` ] ; then
+	if use cjk ; then
 		dodir /usr/share/ghostscript/Resource
 		dodir /usr/share/ghostscript/Resource/Font
 		dodir /usr/share/ghostscript/Resource/CIDFont
