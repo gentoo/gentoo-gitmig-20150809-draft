@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.10 2005/01/31 23:50:46 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.11 2005/02/07 22:28:41 fserb Exp $
+
+  07 Feb 2005; Fernando Serboncini <fserb@gentoo.org>
+  pyopengl-2.0.0.44.ebuild, pyopengl-2.0.1.09.ebuild:
+  Fixed SED expression. Closes #81164
 
   31 Jan 2005; Fernando Serboncini <fserb@gentoo.org>
   -files/pyopengl-2.0.0.44-disable_togl.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.5 2005/01/31 23:50:46 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.6 2005/02/07 22:28:41 fserb Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -38,12 +38,12 @@ src_unpack()
 		TKEQ="None"
 	fi
 	SEDED="""
-s/tk = Tkinter.Tk()/tk = ${TKEQ}/;
-s/tk.getvar('tk_version')/str(Tkinter.TkVersion)/g;
-s/tk.getvar( 'tk_version' )/str(Tkinter.TkVersion)/g;
-s/tk.getvar('tcl_version')/str(Tkinter.TclVersion)/g;
-s/tk.getvar('tk_library')/${TKLIBRARY}/g;
-s/tk.getvar('tcl_library')/${TCLLIBRARY}/g;"""
+s:tk = Tkinter.Tk():tk = ${TKEQ}:;
+s:tk.getvar('tk_version'):str(Tkinter.TkVersion):g;
+s:tk.getvar( 'tk_version' ):str(Tkinter.TkVersion):g;
+s:tk.getvar('tcl_version'):str(Tkinter.TclVersion):g;
+s:tk.getvar('tk_library'):${TKLIBRARY}:g;
+s:tk.getvar('tcl_library'):${TCLLIBRARY}:g;"""
 	sed -i -e "${SEDED}" togl_setup.py
 
 }
