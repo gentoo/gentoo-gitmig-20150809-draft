@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.1 2003/10/29 23:45:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xwgui2/xwgui2-2.08.ebuild,v 1.2 2004/04/05 17:14:23 plasmaroo Exp $
 
-DESCRIPTION="xwGUI2 is an image and photo layout software for printing"
+DESCRIPTION="xwGUI2 is an image and photo layout application aimed for printing"
 HOMEPAGE="http://xwgui.automatix.de/"
 SRC_URI="http://xwgui.automatix.de/daten/xwgui-${PV}.tar.gz"
 LICENSE="GPL-2"
@@ -25,6 +25,10 @@ src_compile() {
 
 	patch -p0 -s < ${FILESDIR}/xwgui2-${PV}-makefilediff.patch || die
 
+	# This sorts out "invisible" input boxes due to a known
+	# XForms bug...
+	sed -e 's/20,xwGR/23,xwGR/' -i xwGUI/*.c || die
+
 	cd xwGUI || die
 	emake || die
 	echo
@@ -41,7 +45,6 @@ src_compile() {
 src_install() {
 
 	einstall || die
-
 	if [ -x /usr/bin/gimp-1.2 ]; then
 		cd xwprint2 || die
 
