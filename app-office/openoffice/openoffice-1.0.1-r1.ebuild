@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.7 2002/12/02 14:25:35 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r1.ebuild,v 1.8 2002/12/02 14:36:18 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -204,7 +204,7 @@ src_unpack() {
 
 	# Get OO to build with freetype-2.1.2
 	cd ${S}
-	cp ${DISTDIR}/freetype-${FT_VER}.tar.gz ${S}/freetype/download || die
+	cp ${DISTDIR}/freetype-${FT_VER}.tar.bz2 ${S}/freetype/download || die
 	cp ${FILESDIR}/${PV}/freetype-${FT_VER}.patch ${S}/freetype || die
 	epatch ${FILESDIR}/${PV}/${P}-use-freetype-${FT_VER}.patch
 
