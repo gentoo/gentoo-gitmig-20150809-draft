@@ -1,7 +1,7 @@
 MD5 6fe86faef45e7705d6d4972abdcf44c0 qt-3.2.2.ebuild 6228
 MD5 42cd5976a5be37ca6d3c663f2ed51bbf qt-3.2.1-r2.ebuild 6070
 MD5 232c9a440f58d6f1a15c750ba4a25c48 qt-3.1.2-r3.ebuild 4979
-MD5 e1e9469de8ac1122aff3d66918b81e1a qt-3.2.2-r1.ebuild 6270
+MD5 e7dd29ee0d73658a07a0e7a559380601 qt-3.2.2-r1.ebuild 6272
 MD5 3ea4b4de8bf408a89bad7560499c5517 qt-2.3.2-r1.ebuild 2274
 MD5 c47d4bd47ef74b87a7eaa1c5969ec48e qt-3.2.1.ebuild 4937
 MD5 651404c4830d5a1094cd9b8bad46d7de qt-3.2.1-r1.ebuild 5857
@@ -10,7 +10,7 @@ MD5 00e9d63f2373eecbf8d070845e3ed794 qt-3.1.0-r3.ebuild 4698
 MD5 aff33d960efe2f7ef7782bd0a7cc9441 qt-3.1.2-r4.ebuild 5340
 MD5 b1227e9708a51d583e96b533764e5f5c qt-3.1.1-r2.ebuild 4510
 MD5 c2026904ef73059c2f6e8138d2d62caa qt-3.2.0.ebuild 4339
-MD5 f8ce47389ec4e0c696c1a2b2c2c42877 ChangeLog 15109
+MD5 5b7120082e559a302330c5947e07b55a ChangeLog 15259
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 f036a81a9440e146ca67fb23dbb2b535 files/0013-qtabwidget-less_flicker.patch 2785
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
@@ -58,7 +58,7 @@ MD5 3b9e1d14819114b64b8bf770e1a474cd files/0011-listview_keys.patch 2520
 MD5 037b7ee164790946df6a2d6ea89f01fc files/digest-qt-2.3.2-r1 65
 MD5 8c9b47edf5949643d8dbeb3fecc40e7c files/qt-3.1.2-qfont-jp-family-subst-20030421.patch 22730
 MD5 bf7aed227565288222ea889c81b1e363 files/qt-3.1.2-qlistview-dnd.diff 469
-MD5 35e06da11c5dc8c0fd1c9860ed6937dc files/qt-3.2.2-crash-fix.patch 1013
+MD5 e6052859850285f5334e722a73b2645b files/qt-3.2.2-crash-fix.patch 1035
 MD5 cf7fad8d582c6b517b3555aba4e26fd1 files/0018-qlistview-paintcell.patch 1442
 MD5 39f840d6723a7e898394bc84efb224a2 files/qt-3.1.0-minimized.diff 272
 MD5 5469328b9b6197e8bbfbe3e1528e61ca files/0014-qiconview-autoscroll.patch 1915
