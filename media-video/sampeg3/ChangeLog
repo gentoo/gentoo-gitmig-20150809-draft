@@ -1,6 +1,10 @@
 # ChangeLog for media-video/sampeg3
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.2 2003/07/12 21:12:53 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.3 2004/03/18 09:54:42 phosphan Exp $
+
+  18 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> sampeg3-0.0.3.ebuild:
+  IUSE was not really used, setting to "" - removing superfluous or even
+  forbidden variable settings, see bug #44517
 
 *sampeg3-0.0.3 (27 Jun 2003)
  
