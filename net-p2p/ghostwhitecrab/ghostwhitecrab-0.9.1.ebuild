@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.1.ebuild,v 1.1 2004/11/25 00:35:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.1.ebuild,v 1.2 2004/11/27 18:47:59 squinky86 Exp $
 
 inherit eutils
 
@@ -65,4 +65,10 @@ src_install() {
 	newexe ${FILESDIR}/gwc.init gwc
 	dohtml doc/*.html doc/*.css doc/specs/*.html
 	dodoc doc/specs/*.txt examples/*
+}
+
+pkg_postinst() {
+	einfo "To have your cache submitted to the gnutella network,"
+	einfo "please submit it to:"
+	einfo "\thttp://gcachescan.jonatkins.com"
 }
