@@ -1,0 +1,81 @@
+diff -uNr gnome-vfs-2.8.1/libgnomevfs/eggdesktopentries.c gnome-vfs-2.8.1.patched/libgnomevfs/eggdesktopentries.c
+--- gnome-vfs-2.8.1/libgnomevfs/eggdesktopentries.c	2004-09-06 08:28:17.000000000 +0200
++++ gnome-vfs-2.8.1.patched/libgnomevfs/eggdesktopentries.c	2004-10-27 12:51:20.495171696 +0200
+@@ -224,7 +224,7 @@
+           g_free (path);
+ 
+           if (fd < 0 && file_error == NULL)
+-            g_set_error (&file_error, G_FILE_ERROR,
++            file_error = g_error_new (G_FILE_ERROR,
+                          g_file_error_from_errno (errno),
+                          _("File could not be opened: %s"),
+                          g_strerror (errno));
+@@ -261,10 +261,8 @@
+   gint fd;
+   gchar **data_dirs;
+   GError *file_error;
+-  GError *secondary_error;
+ 
+   file_error = NULL;
+-  secondary_error = NULL;
+ 
+ 
+   data_dirs = g_new0 (char *, 2);
+@@ -275,20 +273,18 @@
+   if (fd < 0)
+     { 
+       data_dirs = egg_get_secondary_data_dirs ();
+-      fd = egg_find_file_in_data_dirs (file, data_dirs, &secondary_error);
++      fd = egg_find_file_in_data_dirs (file, data_dirs, NULL);
+       g_strfreev (data_dirs);
+ 
+       if (fd >= 0)
+-       {
+-         g_error_free (file_error);
+-         file_error = NULL;
+-       }
++        {
++          g_error_free (file_error);
++          file_error = NULL;
++        }
+     }
+ 
+   if (file_error)
+     g_propagate_error (error, file_error);
+-  else if (secondary_error)
+-    g_propagate_error (error, secondary_error);
+ 
+   return fd;
+ }
+@@ -405,6 +401,7 @@
+     g_string_free (entries->parse_buffer, TRUE);
+ 
+   g_strfreev (entries->legal_start_groups);
++  g_free (entries->default_group_name);
+ 
+   tmp = entries->groups;
+   while (tmp != NULL)
+@@ -1912,9 +1909,9 @@
+     q = strstr (p, "@");
+ 
+   if (!q)
+-    country_len = q - p;
+-  else
+     country_len = strlen (p);
++  else
++    country_len = q - p;
+ 
+   if (country_len <= 0)
+     return NULL;
+@@ -1972,9 +1969,9 @@
+   q = strstr (p, "@");
+ 
+   if (!q)
+-    encoding_len = q - p;
+-  else
+     encoding_len = strlen (p);
++  else
++    encoding_len = q - p;
+ 
+   if (encoding_len <= 0)
+     {

@@ -4,12 +4,15 @@ MD5 38c1c3722f6f3174c951fb9e2f9a23d2 gnome-vfs-2.4.2-r1.ebuild 1049
 MD5 80dad5a0ab8a18445dc7ef2240ca5d1e gnome-vfs-2.6.2.ebuild 1760
 MD5 c63c2eb131b87cab24c9f164fe83be4d gnome-vfs-2.6.1.1.ebuild 1758
 MD5 913e7d93a9752a67076f89b9c1f680e3 gnome-vfs-1.0.5-r3.ebuild 1939
-MD5 9eede8b144891ab48d8dccfc33254b31 ChangeLog 13043
+MD5 17cccc7ae259c8fc8bb5d9d50988d437 gnome-vfs-2.8.1-r1.ebuild 2187
+MD5 3ba3e93e38198879a9a231aceb290ead ChangeLog 13267
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5decf8bb73287c8ce01500e5cd0ee463 files/digest-gnome-vfs-2.4.2-r1 69
+MD5 b1346620d53413ed5a6e5309c14c228c files/digest-gnome-vfs-2.8.1-r1 69
 MD5 6126fab0b179eb680b819593f4bf1412 files/digest-gnome-vfs-2.6.1.1 71
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r3 68
 MD5 76bd9665c0d55d08fcf71c2085ce3b9b files/gnome-vfs-2.8.1-howl_config.patch 950
+MD5 2cd7247981f899f8e3674866efec39d1 files/gnome-vfs-2.8.1-eggdesktop.patch 2104
 MD5 48146c7a23e8af499720b290a58b7417 files/digest-gnome-vfs-2.6.0 69
 MD5 b9a8c5cd605a7e483e1b93edee7155c0 files/digest-gnome-vfs-2.6.2 69
 MD5 b1346620d53413ed5a6e5309c14c228c files/digest-gnome-vfs-2.8.1 69

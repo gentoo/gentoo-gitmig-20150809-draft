@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.110 2004/10/18 16:30:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.111 2004/10/27 11:14:12 foser Exp $
+
+*gnome-vfs-2.8.1-r1 (27 Oct 2004)
+
+  27 Oct 2004; foser <foser@gentoo.org> gnome-vfs-2.8.1-r1.ebuild :
+  Add patch to fix issues in eggdesktop (#66695)
+  Thanks to Alex Rostovtsev <tetromino@gmail.com> for the notification
 
   18 Oct 2004; foser <foser@gentoo.org> gnome-vfs-2.8.1.ebuild :
   Fix libxml dep (#67949)
