@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.76 2004/07/14 00:14:55 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.77 2004/07/28 02:54:19 agriffis Exp $
+
+  27 Jul 2004; <agriffis@gentoo.org> gentoo-dev-sources-2.6.7-r11.ebuild:
+  Add ia64 keyword
 
 *gentoo-dev-sources-2.6.7-r11 (13 Jul 2004)
 
