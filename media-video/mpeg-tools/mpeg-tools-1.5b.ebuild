@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b.ebuild,v 1.16 2004/06/25 00:45:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b.ebuild,v 1.17 2004/07/14 22:01:48 agriffis Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ DEPEND="virtual/x11"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86"
+IUSE=""
 
 src_unpack () {
 	unpack ${A}

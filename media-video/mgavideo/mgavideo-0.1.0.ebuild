@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.9 2004/07/01 08:40:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mgavideo/mgavideo-0.1.0.ebuild,v 1.10 2004/07/14 21:59:02 agriffis Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ RDEPEND="virtual/kernel"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
