@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.7 2003/05/19 21:18:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.8 2003/06/12 22:25:59 seemant Exp $
+
+  12 Jun 2003; Seemant Kulleen <seemant@gentoo.org> wmcpuload-1.0.1.ebuild:
+  xpm is provided by xfree
 
 *wmcpuload-1.0.1 (19 May 2003)
 
