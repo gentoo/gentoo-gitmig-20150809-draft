@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.6 2003/01/12 19:57:53 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.7 2003/01/17 10:29:25 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -137,12 +137,11 @@ pkg_setup() {
 	fi
 
 	ewarn "****************************************************************"
-	ewarn " To get this thing to build at all, I had to use less agressive"
-	ewarn " CFLAGS and CXXFLAGS.  If this build thus fails, and you edited"
-	ewarn " this ebuild at all, or used too agressive compiler flags ..."
-	ewarn
-	ewarn "   You HAVE been Warned!"
-	ewarn
+	ewarn " It is important to note that OpenOffice.org is a very fragile  "
+	ewarn " build when it comes to CFLAGS.  A number of flags have already "
+	ewarn " been filtered out.  If you experience difficulty merging this  "
+	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
+	ewarn " merge again.					               "
 	ewarn "****************************************************************"
 }
 
@@ -309,10 +308,10 @@ src_unpack() {
 	if [ "$(echo ${JAVA_BINARY} | grep "jdk-1.4")" ]
 	then 
 	        epatch ${FILESDIR}/${PV}/${P}-fix-jdk-1.4.0.patch
-		epatch ${FILESDIR}/${PV}/${P}-xinteraction-fix.patch
 	fi
 
-
+	# Debian patch to fix an xinteraction handler build error (Seth)
+	epatch ${FILESDIR}/${PV}/${P}-xinteraction-fix.patch
 }
 
 get_EnvSet() {
