@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.7 2004/02/17 04:39:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.8 2004/04/28 03:27:32 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips ~amd64 ~ia64 ppc64"
-RESTRICT="nomirror"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ppc64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-devel/autoconf-2.54"
@@ -21,7 +21,7 @@ src_compile() {
 	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "" ]; then
 		replace-flags -O[3-9] -O2
 	fi
-	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+	filter-lfs-flags
 
 	epatch ${FILESDIR}/${P}-2.6.patch
 
@@ -39,7 +39,6 @@ src_install() {
 	# and /usr/man/man1 (at least).
 	# So, we do it by hand.
 	doman strace.1
-	dobin strace
-	dobin strace-graph
-	dodoc ChangeLog COPYRIGHT CREDITS NEWS PORTING README* TODO
+	dobin strace strace-graph || die
+	dodoc ChangeLog CREDITS NEWS PORTING README* TODO
 }
