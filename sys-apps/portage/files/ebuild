@@ -880,24 +880,12 @@ setp `/usr/sbin/pkgname ${tmpfoo}`
 #	exit 1
 #fi
 
-source ${1}
-if [ -e ${PEBUILD} ]
-then
-	source ${PEBUILD}
-fi
+#source ${1}
+#if [ -e ${PEBUILD} ]
+#then
+#	source ${PEBUILD}
+#fi
 
-#auto-generate ${A} based on ${SRC_URI} if ${A} isn't defined...
-if [ "${A}" = "" ]
-then
-	export SRC_URI
-	eval `dopython portage.gen_archnames`
-fi
-
-#set up dependency variables correctly...
-if [ "$RDEPEND" = "" ]
-then
-	RDEPEND="$DEPEND"
-fi
 if [ ! -z ${BUILD_PREFIX} ]
 then
     export BUILDDIR=${BUILD_PREFIX}/${PF}
@@ -922,12 +910,24 @@ then
     export D=${D}/
 fi
 
-#source ${1}
-#if [ -e ${PEBUILD} ]
-#then
-#	source ${PEBUILD}
-#fi
+source ${1}
+if [ -e ${PEBUILD} ]
+then
+	source ${PEBUILD}
+fi
 
+#set up dependency variables correctly...
+if [ "$RDEPEND" = "" ]
+then
+	RDEPEND="$DEPEND"
+fi
+
+#auto-generate ${A} based on ${SRC_URI} if ${A} isn't defined...
+if [ "${A}" = "" ]
+then
+	export SRC_URI
+	eval `dopython portage.gen_archnames`
+fi
 
 foo=2
 while [ $foo -le $# ]
