@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.22 2003/11/21 15:52:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.23 2003/12/01 21:58:57 weeve Exp $
+
+  01 Dec 2003; Jason Wever <weeve@gentoo.org> vnc-3.3.7.ebuild:
+  Marked stable on sparc.
 
   21 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> vnc-3.3.7.ebuild :
   Copied patch from tightvnc that fixes compilation if /tmp is set noexec. Closing #22356.
