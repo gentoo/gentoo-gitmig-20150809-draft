@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c663d22b9121047bbf7bbe89ef483c24 ChangeLog 16012
 MD5 b14e733dad85348f883a6214d21cfee7 bash-completion-20040704-r1.ebuild 2091
+MD5 af3569da6fcf332342a06a9bf8c75a4e ChangeLog 16111
+MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
 MD5 1e7793d7236ad87efdd637cb3901f980 bash-completion-20040711.ebuild 2093
 MD5 1b011357733edfecb50fa9220b67dc68 bash-completion-20041017-r1.ebuild 2205
+MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
 MD5 8bab911b492be2438048fb6378c1022a bash-completion-20050112-r1.ebuild 2641
-MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
-MD5 f91feed5003b64666851ef64c0b48d88 bash-completion-20041017-r3.ebuild 2625
 MD5 d104d1c53ee43b27eccdc936dca75104 bash-completion-20050120.ebuild 2638
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
 MD5 49e9f0b0674471ff56169ce7d9265fb2 files/digest-bash-completion-20040704-r1 151
 MD5 73c3177da25971c1db7bb6482b5d1580 files/digest-bash-completion-20040711 151
-MD5 62c632c282cbbd0b28ba064ec57e2111 files/20050112-gentoo.diff 2060
-MD5 236fd9c517ac5642cae8df109dbaf9f6 files/digest-bash-completion-20041017-r1 152
 MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
-MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050120-gentoo.diff 1894
+MD5 236fd9c517ac5642cae8df109dbaf9f6 files/digest-bash-completion-20041017-r1 152
 MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
+MD5 62c632c282cbbd0b28ba064ec57e2111 files/20050112-gentoo.diff 2060
+MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050120-gentoo.diff 1894
 MD5 fe7237a19c3586f2a331066b19b287ee files/digest-bash-completion-20050112-r1 152
 MD5 957010a4451559ef1486174db65b047c files/digest-bash-completion-20050120 152
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8Rlw0K3RJaeXx6cRAl/XAJ92VXczOpDNzULiXNU+iBzM9bWlhwCgouoh
-yNK6Oel4nkgk/LxCF6JE/qY=
-=RMG2
------END PGP SIGNATURE-----
