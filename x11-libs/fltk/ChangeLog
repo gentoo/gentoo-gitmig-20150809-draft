@@ -1,10 +1,13 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.4 2002/07/22 18:54:36 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.5 2002/07/22 19:31:50 owen Exp $
 
 *fltk-1.1.0_rc4 (16 Jul 2002)
   
   22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Reverted SLOT's back to "0" as the problem is with POSE, not fltk
+  and they seem to overright each other :(
+  
   Did some SLOT-fu so we don't break POSE.
 
   16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> fltk-1.1.0_rc4.ebuild

@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc4.ebuild,v 1.2 2002/07/22 18:54:36 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc4.ebuild,v 1.3 2002/07/22 19:31:50 owen Exp $
 
 MYVER=${PV/_/}
 S=${WORKDIR}/${PN}-${MYVER}
@@ -12,7 +12,7 @@ DEPEND="media-libs/libpng
 	opengl? ( virtual/opengl )"
 
 LICENSE="FLTK | GPL-2"
-SLOT="1.1rc4"
+SLOT="0"
 KEYWORDS="x86"
 
 src_compile() {
