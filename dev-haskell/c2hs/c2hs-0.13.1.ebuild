@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.1.ebuild,v 1.4 2005/01/01 18:03:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.1.ebuild,v 1.5 2005/03/14 18:52:06 kosmikus Exp $
 
 DESCRIPTION="An interface generator for Haskell"
 HOMEPAGE="http://www.cse.unsw.edu.au/~chak/haskell/c2hs/"
@@ -12,7 +12,8 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.2"
+DEPEND=">=virtual/ghc-6.2
+	!>=virtual/ghc-6.4"
 
 src_unpack() {
 	unpack ${A}

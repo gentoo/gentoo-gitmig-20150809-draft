@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.5 2005/01/01 18:03:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.6 2005/03/14 18:52:06 kosmikus Exp $
+
+  14 Mar 2005; Andres Loeh <kosmikus@gentoo.org> c2hs-0.13.1.ebuild,
+  c2hs-0.13.4.ebuild:
+  c2hs is not yet compatible with ghc-6.4.
 
 *c2hs-0.13.4 (17 Nov 2004)
 

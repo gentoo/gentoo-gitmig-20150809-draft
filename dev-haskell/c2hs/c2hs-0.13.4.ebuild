@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.4.ebuild,v 1.3 2005/01/01 18:03:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.4.ebuild,v 1.4 2005/03/14 18:52:06 kosmikus Exp $
 
 inherit ghc-package
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
-DEPEND=">=virtual/ghc-6.0"
+DEPEND=">=virtual/ghc-6.0
+	!>=virtual/ghc-6.4"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,16 @@
-MD5 f360735ea237d1b03eef8287cb49bb44 ChangeLog 756
-MD5 5e8dd77b643ec78153e5106d03c6759e c2hs-0.13.1.ebuild 1230
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d84aa3443e37626f00b45bbd273f8c3c c2hs-0.13.4.ebuild 1172
+MD5 8e59b2e9d91b7f046ac0e83c5f6e977b c2hs-0.13.1.ebuild 1248
+MD5 b313e1992883a5dbc8dc03d3a61603e8 ChangeLog 889
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 7448ffa19d87d8e896bf7bc147841523 c2hs-0.13.4.ebuild 1154
 MD5 553c80abca37c62b17c9e593c4ffae4e files/digest-c2hs-0.13.1 63
 MD5 dc62b4df81f84c2afb705bb38bcf0888 files/digest-c2hs-0.13.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCNd5SOKSBj1ObwosRAo74AJ45Pqrn1nNL9vLr4YlE7VYo58+zgACfdMBi
+TuZ5aG8KFqeUiMfbH/vVLF8=
+=M6Bz
+-----END PGP SIGNATURE-----
