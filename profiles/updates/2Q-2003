@@ -59,3 +59,4 @@ move media-video/xawtv media-tv/xawtv
 move media-video/zapping media-tv/zapping
 move x11-misc/nxtvepg media-tv/nxtvepg
 move media-video/tuxzap_programs media-video/tuxzap-programs
+move dev-util/libxml++ dev-cpp/libxmlpp
