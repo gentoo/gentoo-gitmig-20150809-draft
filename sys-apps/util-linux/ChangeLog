@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.2 2002/04/02 05:09:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.3 2002/04/08 13:47:52 azarah Exp $
+
+*util-linux-2.11o (8 Apr 2002)
+  
+  8 Apr 2002; M.Schlemmer <azarah@gentoo.org> util-linux-2.11o :
+
+  /bin/login that comes with sys-apps/shadow has a bug that gives a normal
+  user root priviliges in certain (usually if pam_limits is used).
 
 *util-linux-2.11l-r1 (1 Apr 2002)
 
