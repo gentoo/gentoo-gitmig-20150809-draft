@@ -1,6 +1,6 @@
 MD5 4625e529e2e42303f02eea8ef7e1668b genkernel-1.6.ebuild 589
 MD5 cf555ba463b2171d0e8ca93f5dc17016 genkernel-1.8.ebuild 686
-MD5 0d31e1a4d8f61b885c4ad8cf2716b9c6 genkernel-2.0.ebuild 1007
+MD5 e90e523a45f9186e62eda99f11f57d7b genkernel-2.0.ebuild 998
 MD5 d04e23ad65964cfd56f3d201f250838b genkernel-1.9.ebuild 696
 MD5 e7264afc71089b98dbf9af26516b152d ChangeLog 2615
 MD5 2f08c4c27b57d67ef9697d32ada781d7 metadata.xml 227
@@ -8,5 +8,5 @@ MD5 4e611a633363995ddc515d0f5c26fb46 files/README 288
 MD5 440e33e8603dd4aad622093a60c7e32e files/digest-genkernel-1.6 66
 MD5 85c20772dc52cc678fad96d09ebc44e2 files/digest-genkernel-1.8 66
 MD5 291fa3228fe4c8ef8f5d3a820984be53 files/digest-genkernel-1.9 66
-MD5 0af9347a64665131fcc5ac32c036a36a files/digest-genkernel-2.0 195
+MD5 1c5b50e9745fe2b735aa50aab6ee6e71 files/digest-genkernel-2.0 195
 MD5 dd2611bb1ae0689fbbb0ecdbca6e0cec files/bin-keymaps.tar.gz 17054
