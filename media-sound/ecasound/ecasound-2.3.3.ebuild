@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.3.ebuild,v 1.9 2004/07/12 23:09:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.3.3.ebuild,v 1.10 2004/09/22 21:55:16 eradicator Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis jack audiofile"
 
@@ -12,16 +12,15 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 sparc ~ppc amd64"
 
-DEPEND="virtual/libc
-	!sparc? ( jack?	( media-sound/jack-audio-connection-kit ) )
+DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
 	audiofile? ( media-libs/audiofile )
-	alsa?	( media-libs/alsa-lib )
-	oggvorbis?	( media-libs/libvorbis )
-	arts?	( kde-base/arts )
-	mikmod?	( media-libs/libmikmod )
-	python?		( dev-lang/python )
-	ncurses?	( sys-libs/ncurses )"
+	alsa? ( media-libs/alsa-lib )
+	oggvorbis? ( media-libs/libvorbis )
+	arts? ( kde-base/arts )
+	mikmod? ( media-libs/libmikmod )
+	python? ( dev-lang/python )
+	ncurses? ( sys-libs/ncurses )"
 
 # We don't make RDEPEND for vorbis-tools, mpg123/mpg321, timidity++ or lame -- no
 # use flags for them.

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.35 2004/09/15 18:48:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.36 2004/09/22 21:52:19 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  timidity++-2.13.0-r1.ebuild:
+  Removed sparc conditional around jack.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/init.d.timidity:

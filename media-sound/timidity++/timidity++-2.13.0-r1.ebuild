@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.8 2004/07/21 09:13:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.9 2004/09/22 21:52:19 eradicator Exp $
 
 inherit gnuconfig
 
@@ -26,7 +26,7 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	motif? ( >=x11-libs/openmotif-2.1 )
 	slang? ( >=sys-libs/slang-1.4 )
 	arts? ( kde-base/arts )
-	jack? ( !sparc? ( media-sound/jack-audio-connection-kit ) )
+	jack? ( media-sound/jack-audio-connection-kit )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
