@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.32 2003/12/07 17:55:32 strider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.33 2004/02/15 09:46:34 darkspecter Exp $
+
+  15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> ibm-jdk-1.4.1.ebuild:
+  set ppc in keywords
 
   07 Dec 2003; Adrian Almenar <strider@gentoo.org> ibm-jdk-1.3.1-r3.ebuild,
   ibm-jdk-1.4.1.ebuild:

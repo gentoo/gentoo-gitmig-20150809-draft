@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.4 2003/12/07 17:55:32 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.5 2004/02/15 09:46:34 darkspecter Exp $
 
 IUSE="doc"
 
@@ -17,7 +17,7 @@ SRC_URI=""
 RESTRICT="fetch"
 SLOT="1.4"
 LICENSE="IBM-ILNWP"
-KEYWORDS="x86 ~ppc -sparc -alpha -mips -arm"
+KEYWORDS="x86 ppc -sparc -alpha -mips -arm"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
