@@ -1,17 +1,17 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc6,v 1.6 2003/02/14 23:00:36 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc6,v 1.7 2004/03/04 19:29:40 vapier Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-        if [ -z "$IS_CONFIGURED" ] ; then
-                eerror "You need to setup /etc/conf.d/pure-ftpd first"
-                return 1
-        fi
+	if [ -z "$IS_CONFIGURED" ] ; then
+		eerror "You need to setup /etc/conf.d/pure-ftpd first"
+		return 1
+	fi
 }
 
 start() {
