@@ -1,31 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.26 2004/08/21 15:18:10 obz Exp $
-
-IUSE="doc nls kde"
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.27 2004/11/08 14:55:22 vapier Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="GNOME Core Libraries"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.4/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.4/${P}.tar.bz2"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha hppa amd64 ia64 sparc mips ppc ppc64"
-#  ppc"
+SLOT="1"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+IUSE="doc nls kde"
 
 RDEPEND=">=media-libs/imlib-1.9.10
-		>=media-sound/esound-0.2.23
-		=gnome-base/orbit-0*
-		=x11-libs/gtk+-1.2*
-		<=sys-libs/db-2
-		doc? ( app-text/docbook-sgml
-		       dev-util/gtk-doc )"
-
-DEPEND="nls? ( >=sys-devel/gettext-0.10.40
-				>=dev-util/intltool-0.11 )
-		${RDEPEND}"
-SLOT="1"
+	>=media-sound/esound-0.2.23
+	=gnome-base/orbit-0*
+	=x11-libs/gtk+-1.2*
+	<=sys-libs/db-2
+	doc? ( app-text/docbook-sgml
+		dev-util/gtk-doc )"
+DEPEND="${RDEPEND}
+	nls? ( >=sys-devel/gettext-0.10.40
+		>=dev-util/intltool-0.11 )"
 
 src_unpack() {
 	unpack ${A}
@@ -90,5 +87,5 @@ src_install() {
 
 	rm ${D}/usr/share/gtkrc*
 
-	dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
+	dodoc AUTHORS ChangeLog README NEWS HACKING
 }
