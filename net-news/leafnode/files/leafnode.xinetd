@@ -8,5 +8,5 @@ service nntp
 	wait        = no
 	user        = news
 	server      = /usr/sbin/leafnode
-	disable     = no
+	disable     = yes
 }
