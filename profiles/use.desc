@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.212 2005/01/06 04:59:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.213 2005/01/08 20:29:01 eradicator Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -71,6 +71,7 @@ emacs-w3 - Add support for Emacs/W3 where applicable
 #embedded - Reserved flag for the embedded herd
 empress - Adds support for the Empress database server
 empress-bcs - Adds local access support for the Empress database server
+emul-linux-x86 - Pull in binary support libraries for x86 applications
 encode - Adds support for MEncoder or LaME encoder, wherever applicable
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 esoob - Adds support for Easysoft OOD database
