@@ -115,3 +115,4 @@ move net-www/horde-pear www-apps/horde-pear
 move net-www/horde-sork www-apps/horde-sork
 move net-www/horde-turba www-apps/horde-turba
 move net-www/horde-vacation www-apps/horde-vacation
+move net-www/ids www-apps/ids
