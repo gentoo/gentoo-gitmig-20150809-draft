@@ -1,4 +1,4 @@
-MD5 3a91e497b59d6f75b00f6fa0c3d37f9b libtomcrypt-0.85.ebuild 751
-MD5 ab090050e11158517d6fa062b30f911d ChangeLog 942
-MD5 fcfac66b6043358fb9a1f272f25de48f files/0.85-doc-fix.patch 791
 MD5 63ee11a39f131d65d92730aa2f8c12f7 files/digest-libtomcrypt-0.85 63
+MD5 fcfac66b6043358fb9a1f272f25de48f files/0.85-doc-fix.patch 791
+MD5 03bda89fa0e09a403bd67dec33ca9548 libtomcrypt-0.85.ebuild 751
+MD5 3fd7c623a984d722b1b6b9c09702b7ad ChangeLog 942

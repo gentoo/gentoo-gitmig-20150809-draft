@@ -1,3 +1,5 @@
-MD5 22305b8cc449a84cd0dd83da5aee1e32 ChangeLog 625
-MD5 bb27f05f12a53e9c0c58f03f4a325f22 physfs-0.1.7.ebuild 652
 MD5 19935dae69688733353f82bab87d6855 files/digest-physfs-0.1.7 64
+MD5 d7760f04fdd2bc7f14e436476cb1013a files/digest-physfs-0.1.8 64
+MD5 bb27f05f12a53e9c0c58f03f4a325f22 physfs-0.1.7.ebuild 652
+MD5 03a835021ce6eaeb207a4174b93d96d9 ChangeLog 763
+MD5 e1b61be67a3b7514b7519d459c20dba9 physfs-0.1.8.ebuild 652

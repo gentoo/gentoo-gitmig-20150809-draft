@@ -1,4 +1,4 @@
-MD5 f03a0004c371ca723c9ef5c5d5bfb9b5 qsa-1.0_pre20030513.ebuild 784
-MD5 2d95cdbb009c44d63e42df1174613b4a ChangeLog 341
 MD5 07a92e22f605243fa3e6efcb4a1e7da5 files/digest-qsa-1.0_pre20030513 74
 MD5 0f2c8d390dff8aafa5d5e952af3ed4fe files/qsa-1.0_pre20030513-libdir-patch.diff 356
+MD5 2d95cdbb009c44d63e42df1174613b4a ChangeLog 341
+MD5 d8ec65c3d54ac5614be89d6fbb0c1baf qsa-1.0_pre20030513.ebuild 1148
