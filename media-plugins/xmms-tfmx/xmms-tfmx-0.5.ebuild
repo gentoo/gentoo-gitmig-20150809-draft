@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-tfmx/xmms-tfmx-0.5.ebuild,v 1.2 2004/06/29 16:39:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-tfmx/xmms-tfmx-0.5.ebuild,v 1.3 2004/09/03 09:01:37 eradicator Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 # amd64/sparc failed 0.5 -- eradicator
-KEYWORDS="~x86 -amd64 -sparc -ppc"
+KEYWORDS="x86 -amd64 -sparc -ppc"
 LICENSE="GPL-2"
 
 DEPEND="media-sound/xmms"
