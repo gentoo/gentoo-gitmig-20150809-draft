@@ -3,8 +3,8 @@ MD5 6458fd3af0b8547698f5e9e74f4df297 gnome-media-1.2.3-r2.ebuild 1178
 MD5 26ee063be22a5dfb16f3007718cecb43 gnome-media-2.2.2.ebuild 1033
 MD5 16a9ea7096e6b0a8de286448b8c13bbb gnome-media-2.0.2.5-r1.ebuild 1219
 MD5 d9efcc7e4fde747ed4147a9466a059a5 gnome-media-2.0.3.ebuild 1167
-MD5 0d80982f7326918c9953ff637c081279 gnome-media-2.4.0.ebuild 1096
-MD5 ddd54134602d0ec91f786d729cf5385b ChangeLog 3918
+MD5 5db3ae3175d16349081d3f0fbd055c14 gnome-media-2.4.0.ebuild 1102
+MD5 00cfde4df7049f53c3ddef53361f7a90 ChangeLog 4008
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9f506887fa661f2098abe44665a2def9 gnome-media-2.2.1.1.ebuild 1049
 MD5 10c005c7ff34041204243035b3ed9bbf files/digest-gnome-media-2.2.1.1 73
