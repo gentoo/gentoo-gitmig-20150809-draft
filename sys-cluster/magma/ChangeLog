@@ -1,0 +1,7 @@
+# ChangeLog for sys-cluster/magma
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/ChangeLog,v 1.1 2005/01/27 03:22:15 xmerlin Exp $
+
+  27 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> :
+  new in portage
+
