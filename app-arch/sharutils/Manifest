@@ -1,11 +1,21 @@
-MD5 ed50e2eb4f552a8c65458581eea86b62 sharutils-4.2.1-r7.ebuild 1243
-MD5 2e6efb947bb261171621dcba2143d1c6 sharutils-4.2.1-r9.ebuild 1368
-MD5 eac49f3daf8c614e5e435f11155f5584 sharutils-4.2.1-r6.ebuild 1359
-MD5 946228f20df0665c9a51a7ca34221e67 sharutils-4.2.1-r8.ebuild 1363
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9136157dad90f211f016fc86705dc7cf ChangeLog 3984
+MD5 eac49f3daf8c614e5e435f11155f5584 sharutils-4.2.1-r6.ebuild 1359
+MD5 ed50e2eb4f552a8c65458581eea86b62 sharutils-4.2.1-r7.ebuild 1243
+MD5 946228f20df0665c9a51a7ca34221e67 sharutils-4.2.1-r8.ebuild 1363
+MD5 69acb2457bb268a09e461732c918c98c sharutils-4.2.1-r9.ebuild 1364
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r6 67
+MD5 7d4e2f6e03e950c25babc22219bee53d files/sharutils-4.2.1-r6-gentoo.diff 3253
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r7 67
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r8 67
-MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r9 67
 MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
-MD5 7d4e2f6e03e950c25babc22219bee53d files/sharutils-4.2.1-r6-gentoo.diff 3253
+MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r9 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWsLtHTu7gpaalycRAiBtAKDLNtTuqXz6nhlLtw22+G06Ae7vpwCg0wpH
+4ZQRCvzDEmFKWj1ggoUm6kg=
+=FdjQ
+-----END PGP SIGNATURE-----
