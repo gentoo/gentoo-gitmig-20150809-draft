@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.10.ebuild,v 1.3 2002/12/15 14:03:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.10.ebuild,v 1.4 2002/12/16 16:08:04 aliz Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
@@ -30,7 +30,7 @@ PROVIDE="virtual/mta"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 sparc "
 
 src_unpack() {
 

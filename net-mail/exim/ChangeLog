@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.17 2002/12/15 14:03:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.18 2002/12/16 16:08:04 aliz Exp $
+
+  16 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> : exim-4.10.ebuild
+  Marked stable.  
 
   15 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> : exim-4.10.ebuild
   Added patch to fix security issue.
