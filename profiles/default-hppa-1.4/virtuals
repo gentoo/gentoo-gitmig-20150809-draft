@@ -53,3 +53,4 @@ virtual/ruby		dev-lang/ruby
 virtual/dev-manager	sys-fs/devfsd
 virtual/blas		app-sci/blas-atlas
 virtual/lapack		app-sci/lapack-atlas
+virtual/mailx		mail-client/mailx
