@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.2 2002/04/24 19:05:40 karltk Exp $
+
+*tcl-8.3.3-r1 (24 Apr 2002)
+
+  24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> tcl-8.3.3-r1.ebuild files/digest-tcl-8.3.3-r1:
+
+  Threading is now disabled as it breaks some packages, most notably lavaps.
+
+  Removed tcl-8.3.3.ebuild files/digest-tcl-8.3.3
 
 *tcl-8.3.3 (1 Feb 2002)
 
