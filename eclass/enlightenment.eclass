@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.22 2004/07/19 22:20:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.23 2004/08/10 03:06:53 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -9,18 +9,21 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
-USE_CVS="no"
+ECVS_STATE="release"
 if [ "${PV/.9999}" != "${PV}" ] ; then
-	USE_CVS="yes"
+	ECVS_STATE="live"
 	inherit cvs
+elif [ "${PV/.200?????/}" != "${PV}" ] ; then
+	ECVS_STATE="snap"
 fi
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
-if [ "${USE_CVS}" == "no" ] ; then
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	#	http://wh0rd.de/gentoo/distfiles/${P}.tar.bz2"
-fi
+case ${ECVS_STATE} in
+	release) SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz";;
+	snap)    SRC_URI="mirror://gentoo/${P}.tar.bz2";;
+	live)    SRC_URI="";;
+esac
 
 LICENSE="BSD"
 SLOT="0"
@@ -31,7 +34,10 @@ DEPEND="doc? ( app-doc/doxygen )
 	>=sys-devel/autoconf-2.58-r1"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/${PN}
+case ${ECVS_STATE} in
+	release)   S=${WORKDIR}/${P};;
+	snap|live) S=${WORKDIR}/${PN};;
+esac
 
 enlightenment_warning_msg() {
 	if [ "${PV/200}" != "${PV}" ] ; then
@@ -60,23 +66,25 @@ gettext_modify() {
 }
 
 enlightenment_src_unpack() {
-	[ "${USE_CVS}" == "no" ] && unpack ${A}
+	[ "${ECVS_STATE}" != "live" ] && unpack ${A}
 	gettext_modify
 }
 
 enlightenment_src_compile() {
-	[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
-	export WANT_AUTOMAKE="${EAUTOMAKE:-1.8}"
-	env \
-		PATH="${T}:${PATH}" \
-		NOCONFIGURE=yes \
-		USER=blah \
-		./autogen.sh \
-		|| enlightenment_die "autogen failed"
-	if [ ! -z "${EHACKLIBLTDL}" ] ; then
-		cd libltdl
-		autoconf || enlightenment_die "autogen in libltdl failed"
-		cd ..
+	if [ "${ECVS_STATE}" != "release" ] ; then
+		[ ! -z "${EHACKAUTOGEN}" ] && sed -i 's:.*configure.*::' autogen.sh
+		export WANT_AUTOMAKE="${EAUTOMAKE:-1.8}"
+		env \
+			PATH="${T}:${PATH}" \
+			NOCONFIGURE=yes \
+			USER=blah \
+			./autogen.sh \
+			|| enlightenment_die "autogen failed"
+		if [ ! -z "${EHACKLIBLTDL}" ] ; then
+			cd libltdl
+			autoconf || enlightenment_die "autogen in libltdl failed"
+			cd ..
+		fi
 	fi
 	econf ${MY_ECONF} || enlightenment_die "econf failed"
 	emake || enlightenment_die "emake failed"
