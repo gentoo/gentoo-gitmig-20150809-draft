@@ -1,5 +1,5 @@
-MD5 65775f4df471049e34528ea12b580037 ChangeLog 1511
-MD5 6d74d543e3f641839881cda58499b797 metadata.xml 250
+MD5 302fc9f7cb9c21f2edcd35169b5a4c79 ChangeLog 1648
+MD5 fe2f0a492565eb0ae0831e308df50664 metadata.xml 158
 MD5 c6c964d83d65687f1422e0ff78552132 synaptics-0.12.0.ebuild 1222
 MD5 abeeb906094c0d4aa2673e059d24f224 synaptics-0.12.1.ebuild 1515
 MD5 3f3218b104c0f1e2a64462e08e8e3651 files/synaptics-0.11.8-makefile-fixup.patch 457
