@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.7 2004/10/07 18:00:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.8 2004/10/07 21:58:32 matsuu Exp $
+
+  08 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> gjiten-2.3.ebuild:
+  Added ~amd64 to KEYWORDS.
 
 *gjiten-2.3 (08 Oct 2004)
 
