@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/openmosixview
+# ChangeLog for sys-cluster/pvm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.1 2002/11/13 21:19:32 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.2 2002/12/17 19:48:18 vapier Exp $
 
 
 *pvm-3.4.4 (13 Nov 2002)
