@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.5.ebuild,v 1.9 2004/09/19 07:49:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.5.ebuild,v 1.10 2004/09/24 13:08:33 vapier Exp $
 
 inherit libtool
 
@@ -10,13 +10,12 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc sparc mips alpha ~arm hppa ~amd64 ~ia64 ~ppc64 ~s390 ~macos ~ppc-macos"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~macos mips ~ppc ~ppc64 ~ppc-macos s390 sparc x86"
 IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
-	doc? ( !s390? ( >=dev-util/gtk-doc-1 ) )"
-
+	doc? ( >=dev-util/gtk-doc-1 )"
 RDEPEND="virtual/libc"
 
 src_compile() {
