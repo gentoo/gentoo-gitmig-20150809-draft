@@ -1,21 +1,21 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.3 2002/07/08 23:37:04 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.5.1.ebuild,v 1.1 2002/07/08 23:37:04 jnelson Exp $
 
-A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
+A="Zope-${PV}-src.tgz ZEO-1.0.tgz"
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
 SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz
-         http://www.zope.org/Products/ZEO/ZEO-1.0b3.tgz"
+         http://www.zope.org/Products/ZEO/ZEO-1.0.tgz"
 HOMEPAGE="http://www.zope.org"
 
 DEPEND="virtual/glibc 
-        =dev-lang/python-2.1*"
-RDEPEND="=dev-lang/python-2.1*"
-KEYWORDS="x86 ppc"
+        =dev-lang/python-2.1.3*"
+RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="as-is"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 
@@ -23,9 +23,9 @@ src_unpack() {
  
     if [ "`use zeo`" ]; then
        cd ${S}/lib/python
-       unpack ZEO-1.0b3.tgz
-       mv ZEO-1.0b3/ZEO ${S}/lib/python
-       rm -rf ZEO-1.0b3
+       unpack ZEO-1.0.tgz
+       mv ZEO-1.0/ZEO ${S}/lib/python
+       rm -rf ZEO-1.0
     fi
 }
 
@@ -88,7 +88,7 @@ src_install () {
     dodir /etc/init.d
     exeinto /etc/init.d
     newexe ${FILESDIR}/zope.rc6 zope
-    chown nobody.users ${ZVAR}/var/*
+    chown nobody.users ${D}/${ZVAR}/var/*
 }
 
 pkg_postinst() {

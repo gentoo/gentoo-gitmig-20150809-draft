@@ -1,10 +1,16 @@
 # ChangeLog for net-www/zope
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.2 2002/07/03 03:07:58 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.3 2002/07/08 23:37:04 jnelson Exp $
 
+*zope-2.5.1 (2 Jul 2002)
+  2 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.5.1.ebuild:
+  Use python 2.1.3 ebuild explicitly  
+  Thanks for Matt Behrens <matt@zigg.com>
+  Hopefully closes #468
+  
 *unreleased-as-yet-still-using-masked-zope-2.4.0-r6
 
-  1 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.4.0-r6
+  1 Jul 2002; Jon Nelson <jnelson@gentoo.org> zope-2.4.0-r6:
   Use new python2.1 ebuild explicitly
   Will probably update to zope 2.5.0 when I get some time, but
   2.4.0-r6 will build.
