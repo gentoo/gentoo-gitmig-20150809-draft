@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.8.ebuild,v 1.1 2005/01/24 23:45:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.8.ebuild,v 1.2 2005/01/25 00:06:57 mrness Exp $
 
 inherit kde-functions
 need-qt 3
@@ -13,7 +13,7 @@ SRC_URI="http://esvn.umputun.com/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="doc"
 RDEPEND="${RDEPEND}
 	dev-util/subversion"
 
@@ -28,4 +28,6 @@ src_install() {
 	dobin esvn-diff-wrapper
 
 	dodoc AUTHORS ChangeLog COPYING LICENSE README
+	useq doc && \
+		dohtml -r html-docs/*
 }
