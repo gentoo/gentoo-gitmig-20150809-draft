@@ -1,6 +1,15 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.16 2004/12/28 21:50:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.17 2004/12/29 10:43:54 ka0ttic Exp $
+
+*rkhunter-1.1.9 (29 Dec 2004)
+
+  29 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/rkhunter-1.1.9-specify-logfile.patch, rkhunter-1.1.8-r1.ebuild,
+  +rkhunter-1.1.9.ebuild:
+  New upstream release finally; now officially recognizes Gentoo 1.6
+  (>=sys-apps/baselayout-1.11.x) w/o whining about an unsupported OS at
+  run-time. Marked 1.1.8-r1 stable on x86.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
