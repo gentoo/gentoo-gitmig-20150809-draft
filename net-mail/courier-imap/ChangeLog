@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.21 2002/12/25 12:16:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.22 2002/12/31 08:07:44 raker Exp $
+
+*courier-imap-1.6.2 (31 Dec 2002)
+
+  31 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-imap-1.6.2.ebuild,
+  files/digest-courier-imap-1.6.2 :
+  Version bump.  new ebuild logic for unicode support.  Added postgres
+  use variable support.
 
 *courier-imap-1.6.1 (12 Dec 2002)
 
