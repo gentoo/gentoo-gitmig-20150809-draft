@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.11.ebuild,v 1.1 2003/02/18 18:26:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.11.ebuild,v 1.2 2003/02/19 12:26:21 raker Exp $
 
 HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
 [ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
@@ -25,12 +25,6 @@ pkg_setup() {
 		ewarn "directly instead of a version-dependant directory."
 		die "need to unmerge old version first"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	patch -p2 < ${FILESDIR}/${PF}-gentoo.diff || die
 }
 
 src_compile() {            
