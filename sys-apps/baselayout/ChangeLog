@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.109 2003/12/15 00:55:36 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.110 2003/12/26 23:21:36 azarah Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.8.6.12-r3 (27 Dec 2003)
+
+  27 Dec 2003; Martin Schlemmer <azarah@gentoo.org>
+  baselayout-1.8.6.12-r2.ebuild, baselayout-1.8.6.12-r3.ebuild:
+  Add some udev specific tweaks. Fix logic that deals with the unpacking of the
+  device-node-tarball.
 
   14 Dec 2003; Brad House <brad_mssw@gentoo.org>
   baselayout-1.8.6.12-r2.ebuild:
