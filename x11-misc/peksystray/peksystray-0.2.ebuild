@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.2.ebuild,v 1.3 2004/06/12 17:52:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/peksystray-0.2.ebuild,v 1.4 2004/06/19 14:05:00 pyrania Exp $
 
 inherit eutils
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 alpha"
 DEPEND="virtual/x11"
-
-S=${WORKDIR}/${P}
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

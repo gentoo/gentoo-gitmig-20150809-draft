@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.3 2004/04/25 20:49:07 squinky86 Exp $
-
-S="${WORKDIR}/Epplets-${PV}"
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/pogo-2.2.ebuild,v 1.4 2004/06/19 14:03:43 pyrania Exp $
 
 DESCRIPTION="Pogo is a neat launcher program for X"
 SRC_URI="http://www.ibiblio.org/propaganda/${PN}/${P}.tar.gz"
@@ -11,7 +9,6 @@ HOMEPAGE="http://www.ibiblio.org/propaganda/pogo/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-S=${WORKDIR}/${P}
 
 DEPEND="virtual/x11
 	media-libs/imlib

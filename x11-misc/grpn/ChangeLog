@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.2 2004/06/12 17:41:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.3 2004/06/19 14:08:51 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> grpn-1.1.2.ebuild:
+  Removed default ${S}, added IUSE.
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> grpn-1.1.2.ebuild:
   Stable on alpha.

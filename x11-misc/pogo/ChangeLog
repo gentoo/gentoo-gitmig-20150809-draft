@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pogo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.2 2004/04/25 20:49:07 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.3 2004/06/19 14:03:43 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> pogo-2.2.ebuild:
+  Removed default ${S}, added IUSE.
 
   25 Apr 2004; Jon Hood <squinky86@gentoo.org> pogo-2.2.ebuild:
   added "die"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tkseti
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.9 2004/03/23 18:46:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/ChangeLog,v 1.10 2004/06/19 14:02:48 pyrania Exp $
+
+  19 Jun 2004; <pyrania@gentoo.org> tkseti-3.06.ebuild:
+  Removed default ${S}, added IUSE.
 
   22 Mar 2004; Brandon Hale <tseng@gentoo.org> tkseti-3.06.ebuild:
   Fix DEPEND-ness, bug #45343
