@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.15 2004/04/20 16:51:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.16 2004/06/08 01:22:52 agriffis Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	emake mp3info || die
-	if [ `use gtk` ]; then
+	if use gtk; then
 		emake gmp3info || die "gtk mp3info failed"
 	fi
 }

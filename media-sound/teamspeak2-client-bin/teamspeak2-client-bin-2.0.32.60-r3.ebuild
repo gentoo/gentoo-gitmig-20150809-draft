@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.1 2004/04/25 00:07:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.2 2004/06/08 01:26:20 agriffis Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -58,7 +58,7 @@ src_install() {
 	fi
 	newins icon.xpm teamspeak.xpm
 
-	if [ `use kde` ] ; then
+	if use kde ; then
 		# Install a teamspeak.protocol file for kde/konqueror to accept
 		# teamspeak:// links
 		insinto $(kde-config --prefix)/share/services/

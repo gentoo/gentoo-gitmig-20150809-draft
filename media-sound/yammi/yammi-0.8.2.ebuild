@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.13 2004/05/10 23:59:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.14 2004/06/08 01:19:38 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -43,7 +43,7 @@ src_compile() {
 	use xmms || myconf="--disable-xmms"
 	use kde || myconf="--disable-KDE --disable-noatun ${myconf}"
 
-	if [ -z "`use xmms`" ] && [ -z "`use kde`" ]
+	if ! use xmms && ! use kde
 	then
 		myconf="--disable-ogglibs ${myconf}"
 	else
@@ -61,7 +61,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -z "`use kde`" ] && [ -z "`use xmms`" ]
+	if ! use kde && ! use xmms
 	then
 		ewarn "Yammi is compiled without support for xmms and noatun."
 		ewarn "Now the functionality of Yammi is very limited."

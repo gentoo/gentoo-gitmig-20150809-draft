@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.9 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.10 2004/06/08 01:23:43 agriffis Exp $
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 src_unpack() {
 	unpack ${A}
 
-	#if [ "`use nas`" ]; then
+	#if use nas; then
 	#	cd src
 	#	sed -e "s:^INCLUDES =:INCLUDES = -I/usr/X11R6/include:" \
 	#		-e "s:^splay_LDADD =:splay_LDADD = \$(NAS_LIBS):" \

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3info
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.8 2004/04/20 16:51:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.9 2004/06/08 01:22:52 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mp3info-0.8.4-r1.ebuild:
+  Fix use invocation
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mp3info-0.8.4-r1.ebuild:

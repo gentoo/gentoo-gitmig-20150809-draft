@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.6 2004/05/04 02:09:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.7 2004/06/08 01:18:36 agriffis Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 
 	# fix NLS problem (bug #7587)
-	if [ ! "`use nls`" ]
+	if ! use nls
 	then
 		cd ${S}/src/gui
 		mv swapfilegui.c swapfilegui.c.bad
@@ -54,7 +54,7 @@ src_unpack() {
 src_compile() {
 	local myconf="--enable-ladspa"
 
-	if [ `use gnome` ]
+	if use gnome
 	then
 		# Use a valid icon for the GNOME menu entry
 		cp src/gui/glame.desktop src/gui/glame.desktop.old
@@ -82,7 +82,7 @@ src_compile() {
 src_install () {
 	einstall || die "Installation failed"
 
-	if [ `use gnome` ]
+	if use gnome
 	then
 		dodir /usr/share/pixmaps
 		dosym ../glame/pixmaps/glame-logo.jpg \

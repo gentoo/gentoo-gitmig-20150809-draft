@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.11 2004/05/06 12:03:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.12 2004/06/08 01:16:50 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 		|| myconf="--disable-ladcca ${myconf}"
 	use alsa || myconf="--disable-alsa ${myconf}"
 	use jack || myconf="--disable-jack-support ${myconf}"
-	if [ `use sse` ]; then
+	if use sse; then
 		myconf="--enable-SSE ${myconf}"
 		# If your CFLAGS include optimizations for sse, ie:
 		# -march=pentium4 -mfpmath=sse -msse2
