@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.8 2004/07/26 09:41:02 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.9 2004/08/02 01:38:16 kang Exp $
+
+  01 Aug 2004; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-admin-1.2.3.ebuild:
+  Now uses newinitd instead of newexe. Also makes sure of setting the secoff
+  rights at postinst, even if it is only an upgrade, to prevent problems.
 
 *rsbac-admin-1.2.3 (26 Jun 2004)
 

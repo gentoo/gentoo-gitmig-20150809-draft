@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.3 2004/07/26 09:41:02 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.4 2004/08/02 01:38:16 kang Exp $
 
 inherit eutils
 
@@ -52,11 +52,12 @@ src_install() {
 	insinto /etc
 	newins ${FILESDIR}/rsbac.conf rsbac.conf
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/rklogd.init rklogd
+	newinitd ${FILESDIR}/rklogd.init rklogd
 
 	dodir /secoff
-	dodir /secoff/log
 	keepdir /secoff
+	dodir /secoff/log
+	keepdir /secoff/log
 }
 
 pkg_postinst() {
@@ -66,7 +67,8 @@ pkg_postinst() {
 
 	if ! id secoff; then
 		enewuser secoff 400 /bin/bash /secoff secoff || die "problem adding user secoff"
-		chmod 700 /secoff /secoff/log || die "problem changing permissions of /secoff and/or /secoff/log"
-		chown secoff:secoff -R /secoff || die "problem changing ownership of /secoff"
 	fi
+
+	chmod 700 /secoff /secoff/log || die "problem changing permissions of /secoff and/or /secoff/log"
+	chown secoff:secoff -R /secoff || die "problem changing ownership of /secoff"
 }
