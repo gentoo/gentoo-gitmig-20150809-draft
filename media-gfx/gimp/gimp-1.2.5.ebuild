@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.4 2003/06/17 22:57:21 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.1 2003/06/17 22:57:21 foser Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="1.2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 
 RDEPEND="=x11-libs/gtk+-1.2*
@@ -40,9 +40,10 @@ src_unpack() {
 src_compile() {
 
 	# fix problem with k6's (#22115)
-	is-flag "-march=k6*" && replace-flags "-march=k6*" "-march=i586"
+	replace-flags "-march=k6*" "-march=i586"
 
 	local mymake=""
+	local AA
 
 	use aalib || mymake="LIBAA= AA="
 	use gnome || mymake="${mymake} HELPBROWSER="
@@ -77,6 +78,8 @@ src_compile() {
 src_install() {
 
 	local mymake="" 
+	local AA
+
 	use aalib || mymake="LIBAA= AA="
 	use gnome || mymake="${mymake} HELPBROWSER="
   
