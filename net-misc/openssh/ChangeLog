@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.28 2003/01/21 07:57:18 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.29 2003/02/09 19:51:09 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *openssh-3.5_p1-r1 (20 Jan 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.12 2003/01/19 20:09:14 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.13 2003/02/09 19:51:09 gmsoft Exp $
 
 IUSE="ipv6 static pam tcpd"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 src_unpack() {
 	unpack ${A}
