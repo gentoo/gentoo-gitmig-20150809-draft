@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r1.ebuild,v 1.1 2004/03/14 22:17:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r1.ebuild,v 1.2 2004/03/17 15:01:29 vapier Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -10,12 +10,11 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc hppa ~amd64 ~ia64 ~mips"
 
 DEPEND=">=net-nds/portmap-5b-r6"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -28,19 +27,15 @@ src_unpack() {
 	# Please do not remove this again - fixes $S and $D in libtool linker
 	# scripts (.la files)
 	cd ${S}; elibtoolize
-
 }
 
 src_compile() {
-
 	use mips && gnuconfig_update
 	econf || die
 	emake || die
-
 }
 
 src_install() {
-
 	einstall || die
 
 	dosed "s:local_only = false:local_only = true:g" conf/fam.conf
@@ -48,12 +43,10 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/famd
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README
-
+	dodoc AUTHORS ChangeLog INSTALL NEWS TODO README
 }
 
 pkg_postinst() {
-
 	einfo "To enable fam on  boot you will have to add it to the"
 	einfo "default profile, issue the following command as root to do so."
 	echo
@@ -76,5 +69,4 @@ pkg_postinst() {
 	einfo "rm /etc/init.d/fam"
 	echo
 	einfo "The last command removes the old init script."
-
 }
