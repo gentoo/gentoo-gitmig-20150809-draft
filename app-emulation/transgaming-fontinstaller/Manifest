@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fbc486a38d5911d78fdc68be09214635 transgaming-fontinstaller-1.0.ebuild 733
 MD5 c1c12f3d69da60f405a9185164184185 ChangeLog 405
-MD5 7c861cfa02fbda5a1af5b0f96534e800 transgaming-fontinstaller-1.0.ebuild 707
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
 MD5 9ff5a60447291d39cf6229a54e633aa3 files/digest-transgaming-fontinstaller-1.0 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD4DBQFA6DO3HTu7gpaalycRArgSAJi9bLDt4pl6UgyW/D91cQbd3vViAJ0R6Pei
+aB7ER0OKhs0FiQhh+D6vgw==
+=X210
+-----END PGP SIGNATURE-----
