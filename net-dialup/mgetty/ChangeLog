@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.28 2004/04/28 10:10:32 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.29 2004/05/07 06:37:55 nerdboy Exp $
+
+*mgetty-1.1.30-r1 (06 May 2004)
+
+  06 May 2004; Steve Arnold <nerdboy@gentoo.org> mgetty-1.1.30-r1.ebuild:
+  added fix for bug 44231 submitted by Frank Cringle <fdc-glb@cliwe.ping.de>
 
   28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> mgetty-1.1.30.ebuild:
   drop unneeded $S definition
