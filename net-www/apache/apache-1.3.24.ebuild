@@ -1,12 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.23-r1.ebuild,v 1.1 2002/03/04 19:31:46 m0rpheus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.24.ebuild,v 1.1 2002/03/27 22:17:24 woodchip Exp $
 
-AV="1.3.23"
-MSV="2.8.7"
+AV=${PV}
+MSV="2.8.8"
 
-A="apache_${AV}.tar.gz mod_ssl-${MSV}-${AV}.tar.gz"
 S=${WORKDIR}/apache_${AV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
@@ -38,7 +36,7 @@ src_compile() {
 	--proxycachedir=/var/cache/httpd --includedir=/usr/include/apache \
 	--enable-module=all \
 	--enable-shared=max --suexec-caller=wwwrun \
-	--suexec-userdir=public_html --suexec-uidmin=96 \
+	--enable-suexec --suexec-userdir=public_html --suexec-uidmin=96 \
 	--suexec-gidmin=96 --suexec-safepath="/bin:/usr/bin" \
 	--disable-rule=EXPAT --with-perl=/usr/bin/perl ${myconf}
     assert "bad configure"
