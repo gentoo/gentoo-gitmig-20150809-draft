@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.30 2003/04/24 22:57:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.31 2003/05/18 17:36:25 spider Exp $
+
+  18 maj 2003; <spider@gentoo.org>libpng-1.0.15-r1.ebuild :
+  update to make libpng not overwrite libpng.pc, which broke fbdesk
 
   24 Apr 2003; Martin Schlemmer <azarah@gentoo.org> libpng-1.2.5-r4.ebuild :
   Fix it to default CC to "gcc" if not set, else build borks.
