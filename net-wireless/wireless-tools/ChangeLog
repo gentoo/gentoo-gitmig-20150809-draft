@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.38 2004/09/26 10:46:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.39 2004/10/11 17:49:12 brix Exp $
+
+  11 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  -wireless-tools-27_pre26-r1.ebuild, wireless-tools-27_pre26.ebuild:
+  Removing 27_pre26-r1 since building against kernel source is no longer needed.
+  Removing unused sed statement from 27_pre26.
 
 *wireless-tools-27_pre26-r1 (26 Sep 2004)
 

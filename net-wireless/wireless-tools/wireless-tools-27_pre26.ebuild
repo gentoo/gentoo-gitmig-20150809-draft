@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre26.ebuild,v 1.1 2004/09/07 15:39:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-27_pre26.ebuild,v 1.2 2004/10/11 17:49:12 brix Exp $
 
 MY_P=wireless_tools.${PV/_/\.}
 S=${WORKDIR}/${MY_P/.pre26/}
@@ -15,14 +15,9 @@ IUSE="nls"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 
-	check_KV
-
-	mv Makefile ${T}
-	sed -e "s:# KERNEL_SRC:KERNEL_SRC:" \
-		-e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" \
-		${T}/Makefile > Makefile
+	sed -i "s:^CFLAGS=:CFLAGS=${CFLAGS} :" \
+		${S}/Makefile
 }
 
 src_compile() {
