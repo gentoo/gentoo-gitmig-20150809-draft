@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9895ca8ff27e2ab656f9cb0b89018cf ChangeLog 5055
-MD5 81b7809bb877adad85d21033af3cdb3e eggdrop-1.6.15-r1.ebuild 2298
+MD5 01eacb1e997005572aa1ae93817dc4a5 ChangeLog 5148
 MD5 96e1d60a7f7de6f222a7ca068e3bad16 eggdrop-1.6.15.ebuild 1800
+MD5 81b7809bb877adad85d21033af3cdb3e eggdrop-1.6.15-r1.ebuild 2298
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 99910d6f3308503198d77a7cc5e323ef eggdrop-1.6.17.ebuild 2225
-MD5 e9830c3f4fb21aa6a8651d6e47bae613 files/digest-eggdrop-1.6.15 65
+MD5 8a224a62d39e504be8d50861f81a93e7 eggdrop-1.6.17.ebuild 2233
 MD5 4f41cb7335240a85a78f8674c9564e8a files/digest-eggdrop-1.6.15-r1 146
-MD5 1892518b7bb9c06cf7cfd46868012971 files/eggdrop-1.6.15-botchk.patch 2931
-MD5 e410ac6d9adce910c8f37daf99a4b0e1 files/eggdrop-1.6.15-config.patch 6182
-MD5 de237a9eaabae91f41afbd6d18448320 files/eggdrop-1.6.15-configure-in.patch 575
-MD5 2f73d0025c666719612e4d05c47a46dd files/eggdrop-1.6.15-mysql-use_ssl-fix.patch 300
+MD5 e9830c3f4fb21aa6a8651d6e47bae613 files/digest-eggdrop-1.6.15 65
 MD5 86513844ef13a664bc5bf7d1a68d2d59 files/eggdrop-1.6.15-potential-undef-tm-struct.patch 523
+MD5 2f73d0025c666719612e4d05c47a46dd files/eggdrop-1.6.15-mysql-use_ssl-fix.patch 300
+MD5 e410ac6d9adce910c8f37daf99a4b0e1 files/eggdrop-1.6.15-config.patch 6182
 MD5 6b09026c13cde0090d7b943e6a4e1535 files/digest-eggdrop-1.6.17 145
+MD5 de237a9eaabae91f41afbd6d18448320 files/eggdrop-1.6.15-configure-in.patch 575
+MD5 1892518b7bb9c06cf7cfd46868012971 files/eggdrop-1.6.15-botchk.patch 2931
 MD5 a0c1fc8d184c3a0214e009cf56fc86b1 files/eggdrop-installer 2264
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBccXFI1lqEGTUzyQRAjp6AJ4sh7/JmVnVIedL7q95+wkMLlj0xQCgv93E
-VkVLx5ofxL2nXdwR81bfnos=
-=7TAT
+iD8DBQFBhWqrugEuf3OQ0akRAkR7AJ9FJARS42MqILn3EQEc5UEhtEeUBgCgofgq
+9T3Qi3d8AW0F61E+YirDymM=
+=Lsv3
 -----END PGP SIGNATURE-----
