@@ -6,8 +6,12 @@
 		in biological and related scientific environments.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-biology enthält Software, die in biologischen
+		Die Kategorie sci-biology enthÃ€lt Software, die in biologischen
 		und verwandten wissenschaftlichen Umgebungen genutzt werden kann.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-biology contiene programas que pueden ser utilizados en
+		entornos relacionados con la biología.
 	</longdescription>
 </catmetadata>
 

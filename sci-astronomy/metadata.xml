@@ -6,8 +6,12 @@
 		in astronomical and related scientific environments.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-astronomy enthÃ€lt Software, die in astronomischen
+		Die Kategorie sci-astronomy enthÃâ¬lt Software, die in astronomischen
 		und verwandten wissenschaftlichen Umfeldern genutzt wird.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-astronomy contiene programas que pueden ser utilizados
+		en entornos relacionados con la astronomía.
 	</longdescription>
 </catmetadata>
 

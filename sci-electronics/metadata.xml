@@ -5,8 +5,12 @@
 		The sci-electronics category contains electronics packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-electronics enthält Pakete aus dem Bereich
+		Die Kategorie sci-electronics enthÃ€lt Pakete aus dem Bereich
 		Elektronik.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-electronics contiene paquetes relacionados con la
+		electrónica.
 	</longdescription>
 </catmetadata>
 

@@ -6,9 +6,13 @@
 		applications which do not fit any other sci-* category.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-misc enthält verschiedene wissenschaftliche
+		Die Kategorie sci-misc enthÃ€lt verschiedene wissenschaftliche
 		Anwendungen, welche in keine der anderen sci-* Kategorien
 		hineinpassen.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-misc contiene varias aplicaciones relacionadas con la
+		ciencia que no encajan en las otras categorías sci-*.
 	</longdescription>
 </catmetadata>
 

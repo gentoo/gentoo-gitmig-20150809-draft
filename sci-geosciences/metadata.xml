@@ -5,8 +5,12 @@
 		The sci-geosciences category contains geosciences-related software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-geosciences enthält Software aus dem Bereich der
+		Die Kategorie sci-geosciences enthÃ€lt Software aus dem Bereich der
 		Geowissenschaften.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-geosciences contiene programas relacionados con la
+		geología.
 	</longdescription>
 </catmetadata>
 

@@ -5,7 +5,11 @@
 		The sci-mathematics category contains mathematical software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-mathematics enthält mathematische Software.
+		Die Kategorie sci-mathematics enthÃ€lt mathematische Software.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-mathemathics contiene programas relacionados con las
+		matemáticas.
 	</longdescription>
 </catmetadata>
 

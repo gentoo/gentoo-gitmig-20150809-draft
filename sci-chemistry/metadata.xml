@@ -6,8 +6,12 @@
 		in chemistral scientific environments.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie sci-chemistry enthält Software, welche in chemischen
+		Die Kategorie sci-chemistry enthÃ€lt Software, welche in chemischen
 		und chemietechnischen Umgebungen genutzt werden kann.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría sci-chemistry contiene programas que pueden ser utilizados
+		en entornos relacionados con la química.
 	</longdescription>
 </catmetadata>
 
