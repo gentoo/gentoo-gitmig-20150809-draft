@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.4.ebuild,v 1.6 2004/01/19 02:28:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.4.ebuild,v 1.7 2004/02/07 04:28:27 latexer Exp $
 
 inherit eutils
 
@@ -30,6 +30,15 @@ fi
 # the kernel directory that pcmcia-cs should use for configuration.
 
 src_unpack() {
+	check_KV
+	okvminor="${KV#*.}" ; okvminor="${okvminor%%.*}"
+	if [ "${okvminor}" -gt 4 ]; then
+		eerror "This version of pcmcia-cs will NOT work with 2.6 kernels"
+		eerror "Please use pcmcia-cs-3.2.5-r1 in combination with *kernel* PCMCIA"
+		eerror "drivers to use PCMCIA on a 2.6 kernel."
+		die "This version of pcmcia-cs does not support 2.6 kernels"
+	fi
+
 	unpack ${P}.tar.gz
 
 	# pcmcia-cs now has the latest orinoco driver included
