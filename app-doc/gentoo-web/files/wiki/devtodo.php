@@ -37,7 +37,6 @@
 		<table border=0 cellpadding=2 cellspacing=0 bgcolor="#bdbacc">
 		<tr>
 			<td>&nbsp;</td>
-			<td align="center"><b>Unaffiliated&nbsp;&nbsp;</b></td>
 			<td align="center"><b>Regular&nbsp;&nbsp;</b></td>
 			<td align="center"><b>Leader</b></td>
 		</tr>
@@ -71,7 +70,6 @@
 			?>
 		<tr>
 			<td><b><?=$each['value'];?></b></td>
-			<td align="center"><?php if ($tm=='u') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
 			<td align="center"><?php if ($tm=='r') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
 			<td align="center"><?php if ($tm=='l') print '<img src="images/dot.gif" width=10 height=10 alt="">'; else print '&nbsp;'; ?></td>
 		</tr>
