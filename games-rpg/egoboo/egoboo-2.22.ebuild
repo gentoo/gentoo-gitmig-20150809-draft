@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.2 2003/10/01 23:11:46 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -56,8 +56,8 @@ src_install () {
 	cp setup.txt ${D}/usr/share/egoboo
 	cp ${FILESDIR}/${P}.sh ${D}/usr/bin/egoboo
 
-	#chown to root.users and chmod g+w to let regular users run the app
+	#chown to root:users and chmod g+w to let regular users run the app
 	cd ${D}/usr/share/egoboo
-	chown -R root.users *
+	chown -R root:users *
 	chmod -R g+w setup.txt basicdat players
 }

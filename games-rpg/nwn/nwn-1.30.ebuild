@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.30.ebuild,v 1.1 2003/09/10 06:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.30.ebuild,v 1.2 2003/10/01 23:12:37 mr_bones_ Exp $
 
 inherit games
 
@@ -68,7 +68,7 @@ pkg_postinst() {
 		einfo "    dialog.tlk"
 		einfo "    dialogF.tlk (French, German, Italian, and Spanish)"
 		einfo "2) Chown and chmod the files with the following commands"
-		einfo "    chown -R ${GAMES_USER}.${GAMES_GROUP} ${GAMES_PREFIX_OPT}/nwn"
+		einfo "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${GAMES_PREFIX_OPT}/nwn"
 		einfo "    chmod -R g+rwX ${GAMES_PREFIX_OPT}/nwn"
 		einfo "3) Run ${GAMES_PREFIX_OPT}/nwn/fixinstall as root"
 		einfo "4) Make sure that you are in group ${GAMES_GROUP}"
