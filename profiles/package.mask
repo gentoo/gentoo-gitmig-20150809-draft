@@ -248,8 +248,8 @@ dev-python/japanesecodecs
 sys-devel/spython
 
 # <pauldv@gentoo.org> (19 Jun 2003)
-# It is a beta version
->=app-office/openoffice-bin-1.1_beta2
+# It is a rc version
+=app-office/openoffice-bin-1.1_rc4
 
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
