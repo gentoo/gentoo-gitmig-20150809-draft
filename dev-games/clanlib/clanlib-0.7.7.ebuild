@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.4 2004/02/08 02:49:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.7.ebuild,v 1.5 2004/02/12 06:58:13 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,6 +27,7 @@ S=${WORKDIR}/ClanLib-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	find . -name .cvsignore -exec rm -f \{\} \;
 	epatch ${FILESDIR}/${PV}-port.patch
 	epatch ${FILESDIR}/${PV}-gl-prototype.patch
 }
@@ -57,14 +58,16 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodir /usr/share/doc/${PF}/html
-	mv ${D}/usr/share/doc/clanlib/* ${D}/usr/share/doc/${PF}/html/
-	rm -rf ${D}/usr/share/doc/clanlib
+	if use doc ; then
+		dodir /usr/share/doc/${PF}/html
+		mv ${D}/usr/share/doc/clanlib/* ${D}/usr/share/doc/${PF}/html/
+		rm -rf ${D}/usr/share/doc/clanlib
+		cp -r Examples ${D}/usr/share/doc/${PF}/
+	fi
 	mv ${D}/usr/include/{ClanLib-*/ClanLib,${P}}
 	rm -rf ${D}/usr/include/ClanLib-*
 	dobin ${FILESDIR}/clanlib-config
 	dodoc CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux
-	use doc && cp -r Examples ${D}/usr/share/doc/${PF}/
 }
 
 pkg_postinst() {
