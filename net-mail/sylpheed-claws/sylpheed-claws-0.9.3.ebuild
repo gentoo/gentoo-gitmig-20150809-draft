@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.3.ebuild,v 1.2 2003/07/12 23:33:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.3.ebuild,v 1.3 2003/07/13 00:15:24 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav"
 
@@ -112,8 +112,8 @@ src_install() {
 		} \
 		|| rm -rf ${D}/usr/share/gnome
 
-	mv ${D}/usr/share/pixmaps/sylpheed.png \
-		${D}/usr/share/pixmaps/sylpheed-claws.png
+	dodir /usr/share/pixmaps
+	mv sylpheed.png ${D}/usr/share/pixmaps/sylpheed-claws.png
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*
 	docinto tools
