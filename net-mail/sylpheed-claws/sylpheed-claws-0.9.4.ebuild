@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4.ebuild,v 1.3 2003/08/30 09:28:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4.ebuild,v 1.4 2003/09/04 00:20:46 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav"
 
@@ -24,6 +24,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	crypt? ( =app-crypt/gpgme-0.3.14 )
 	gnome? ( >=media-libs/gdk-pixbuf-0.16 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
+	xml? ( >=x11-libs/gtkmathview-0.4.2 )
 	spell? ( virtual/aspell-dict )
 	xface? ( >=media-libs/compface-1.4 )
 	clamav? ( net-mail/clamav )
@@ -76,6 +77,8 @@ src_compile() {
 	use pda && myconf="${myconf} --enable-jpilot"
 	
 	use nls || myconf="${myconf} --disable-nls"
+	
+	use xml && myconf="${myconf} --enable-mathml-viewer-plugin"
 	
 	#use gtkhtml \
 	#	&& myconf="${myconf} --enable-dillo-viewer-plugin" \
