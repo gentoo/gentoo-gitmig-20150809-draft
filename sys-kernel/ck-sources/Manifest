@@ -1,8 +1,18 @@
-MD5 96b134cb2ba3fa0249b9774778dcc9ed ck-sources-2.6.9-r2.ebuild 1102
-MD5 530dc5ea30a7af47c529ecb328cec60b ck-sources-2.4.27.ebuild 748
-MD5 193017cd27361b8ec8a62aacd683b2a1 ChangeLog 11762
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d2c91997803f88393f6e4cac7abf1fb ChangeLog 11844
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
+MD5 530dc5ea30a7af47c529ecb328cec60b ck-sources-2.4.27.ebuild 748
+MD5 96b134cb2ba3fa0249b9774778dcc9ed ck-sources-2.6.9-r2.ebuild 1102
+MD5 d4a740ae56c2049247083af387a22a85 files/ck-sources-2.4.27.CAN-2004-0394.patch 350
 MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.27.cmdlineLeak.patch 388
 MD5 9871695c91e35f1c48144f407ce4a119 files/digest-ck-sources-2.4.27 133
 MD5 6c6bc9269b5a3cddd6786805a04e40a1 files/digest-ck-sources-2.6.9-r2 129
-MD5 d4a740ae56c2049247083af387a22a85 files/ck-sources-2.4.27.CAN-2004-0394.patch 350
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBgq7dI1lqEGTUzyQRAjPeAKDFMoKSndij+xvuVrWOd8MGuxqh0gCgrvT1
+VdAJ9813IeX7eEhnYaid+sU=
+=ekO9
+-----END PGP SIGNATURE-----
