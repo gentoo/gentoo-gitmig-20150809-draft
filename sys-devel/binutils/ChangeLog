@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.20 2002/12/30 00:18:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.21 2003/01/07 22:26:28 tuxus Exp $
 
 *binutils-2.13.90.0.16-r1 (30 Dec 2002)
 
@@ -17,6 +17,10 @@
   Changed sparc ~sparc keywords
  
 *binutils-2.13.90.0.16 (29 Nov 2002)
+
+  07 Jan 2003: Jan Seidel <tuxus@gentoo.org> binutils-2.13.90.0.16.ebuild :
+  Add patches for mips
+  Added mips to keywords.
 
   29 Nov 2002; Nick Hadaway <raker@gentoo.org>
   binutils-2.13.90.0.16.ebuild, files/digest-binutils-2.13.90.0.16 :

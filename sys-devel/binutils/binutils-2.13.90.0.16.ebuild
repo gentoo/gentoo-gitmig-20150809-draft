@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.6 2002/12/17 08:33:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.7 2003/01/07 22:26:28 tuxus Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
-KEYWORDS="x86 ppc alpha sparc"
+KEYWORDS="x86 ppc alpha sparc mips"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -34,6 +34,14 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
+
+        # Add patches for mips
+        if [ "${ARCH}" = "mips" ]
+        then
+                cd ${S}
+                chmod +x mips/README
+                ./mips/README
+        fi
 	
 	local myconf=""
 	use nls && \
