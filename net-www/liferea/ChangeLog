@@ -1,6 +1,10 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.14 2004/09/05 07:07:57 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.15 2004/09/06 00:26:02 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> liferea-0.5.3.ebuild,
+  liferea-0.5.3b.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *liferea-0.5.3c (05 Sep 2004)
 

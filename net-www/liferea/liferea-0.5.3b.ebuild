@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/liferea-0.5.3b.ebuild,v 1.3 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/liferea-0.5.3b.ebuild,v 1.4 2004/09/06 00:26:02 ciaranm Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
@@ -29,7 +29,7 @@ pkg_setup(){
 	ewarn "you might lose it, please export to opml before upgrading to avoid"
 	ewarn "this issue."
 	ewarn "Please ctrl+c now if you'd like to save your feed list."
-	sleep 8
+	epause 8
 }
 
 DOCS="README AUTHORS ChangeLog COPYING"
