@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r1.ebuild,v 1.2 2004/08/25 02:40:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r1.ebuild,v 1.3 2004/10/04 03:37:54 iggy Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"
@@ -39,6 +39,7 @@ src_compile() {
 	mv -f Makefile.in.new Makefile.in || die
 
 	# Configure and build
+	set_arch_to_kernel
 	econf || die
 	emake KDIR=${WORKDIR}/build ARCH=i386 V=1 DEPMOD='' || die
 }
@@ -49,6 +50,7 @@ src_install () {
 
 	# Install to the image directory
 	make install DESTDIR=${D} || die
+	set_arch_to_portage
 }
 
 pkg_postinst() {
