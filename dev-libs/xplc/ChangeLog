@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xplc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.1 2004/12/05 21:42:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.2 2004/12/06 03:48:37 weeve Exp $
+
+  05 Dec 2004; Jason Wever <weeve@gentoo.org> xplc-0.3.10.ebuild:
+  Added ~sparc keyword wrt bug #70419.
 
 *xplc-0.3.10 (05 Dec 2004)
 
