@@ -18,7 +18,7 @@ DESCRIPTION="Full sources for Marc-Christian Peterson's WOLK kernel, based on 2.
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/mcp/${OKB}-WOLK/"
 SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 
 K_EXTRAEINFO="If there are issues with this kernel, then please direct any queries to the
 mailing list: http://sourceforge.net/mailarchive/forum.php?forum_id=8245.
