@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/rootstrap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.1 2003/09/19 17:55:22 lanius Exp $
+
+*rootstrap-0.3.13 (19 Sep 2003)
+
+  19 Sep 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
+  rootstrap-0.3.13.ebuild:
+  initial release
+
