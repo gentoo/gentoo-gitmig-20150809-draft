@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.06.ebuild,v 1.3 2003/06/22 12:16:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.06.ebuild,v 1.4 2004/01/25 10:50:21 eradicator Exp $
 
 inherit distutils
 
 DESCRIPTION="Python interface to XMMS"
-HOMEPAGE="http://www.via.ecp.fr/~flo/2002/PyXMMS/xmms.html"
-SRC_URI="http://www.via.ecp.fr/~flo/2002/PyXMMS/dist/${P}.tar.bz2"
+HOMEPAGE="http://people.via.ecp.fr/~flo/2002/PyXMMS/xmms.html"
+SRC_URI="http://people.via.ecp.fr/~flo/2002/PyXMMS/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha x86"
+KEYWORDS="alpha x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2"
