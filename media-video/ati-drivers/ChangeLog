@@ -1,6 +1,6 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.42 2004/06/19 16:25:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.43 2004/06/21 15:19:24 lu_zero Exp $
 
   19 Jun 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.9.0-r1.ebuild:
   Marked stable
@@ -31,7 +31,8 @@
 *ati-drivers-3.2.8-r2 (28 May 2004)
 
   28 May 2004; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-3.2.8-r2.ebuild:
-  Backport from 3.9.0
+  Backport from 3.9.0, thanks to Edward Kaplan <theymight.begiants@verizon.net>
+  for asking it and posting an ebuild.
 
 *ati-drivers-3.9.0 (27 May 2004)
 
