@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.1 2003/12/16 00:35:07 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.2 2003/12/16 00:40:32 sediener Exp $
 
 inherit perl-module
 CATEGORY="app-sci"
@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND="
 	dev-db/mysql
+	>=app-sci/ncbi-tools-20031103
 	>=app-sci/bioperl-1.2.3
 	>=app-sci/bioperl-run-1.2.2
 	dev-perl/XML-SimpleObject
