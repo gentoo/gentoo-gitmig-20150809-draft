@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.57 2003/02/13 03:05:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.58 2003/02/13 19:00:55 mkeadle Exp $
 
 *postfix-2.0.3 (28 Jan 2003)
+
+  13 Feb 2003; Matt Keadle <mkeadle@gentoo.org> postfix-2.0.3.ebuild :
+  Moved 'inherit eutils' statement back to the top of the ebuild.
+  Being placed midway through was causing the package description
+  to be replaced with "Based on the eutils eclass" instead of one
+  suitable for Postfix.
 
   12 Feb 2003; Nick Hadaway <raker@gentoo.org> postfix-2.0.3.ebuild :
   Changed CC=cc to CC=${CC}.  Thanks to Paul Prince on bug #15477

@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.7 2003/02/13 14:36:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.8 2003/02/13 19:00:55 mkeadle Exp $
+
+inherit eutils
 
 TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.3"
@@ -24,8 +26,6 @@ DEPEND=">=sys-libs/db-3.2
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
-
-inherit eutils
 
 is_postfix_installed() {
 	if [ -d /etc/postfix ] ; then
