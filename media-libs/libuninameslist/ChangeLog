@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libuninameslist
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.1 2004/05/17 17:01:32 usata Exp $
+
+*libuninameslist-20030713 (18 May 2004)
+
+  18 May 2004; Mamoru KOMACHI <usata@gentoo.org>
+  libuninameslist-20030713.ebuild:
+  Initial import. Ebuild submitted by Martin Diers <martin@diers.us>.
+  Bug #46686
+
