@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.0.ebuild,v 1.1 2003/10/25 18:51:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.0.ebuild,v 1.2 2003/10/25 19:16:56 lanius Exp $
 
 DESCRIPTION="ROX is a desktop environment, like GNOME, KDE and XFCE.  It is an attempt to bring some of the good features from RISC OS to Unix and Linux."
 HOMEPAGE="http://rox.sourceforge.net/"
@@ -37,6 +37,9 @@ src_install() {
 	cp -rf Choices ${D}/usr/share/
 	dodir /usr/share/Choices/Mime-icons
 	keepdir /usr/share/Choices/Mime-icons
+
+	dodir /usr/share/icons
+	dosym /usr/share/ROX-Filer/ROX /usr/share/icons/ROX
 }
 
 pkg_postinst() {
