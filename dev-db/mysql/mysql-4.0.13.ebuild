@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13.ebuild,v 1.2 2003/08/03 02:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13.ebuild,v 1.3 2003/08/15 13:01:51 lanius Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -28,7 +28,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	>=sys-libs/zlib-1.1.3
 	dev-lang/perl
 	sys-apps/procps
-	app-admin/gentoolkit"
+	app-portage/gentoolkit"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
 warning() {

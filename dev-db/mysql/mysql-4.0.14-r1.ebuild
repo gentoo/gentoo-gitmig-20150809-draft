@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.2 2003/08/11 17:37:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.3 2003/08/15 13:01:51 lanius Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -36,7 +36,7 @@ warning() {
 	ewarn "If you're upgrading from MySQL-3.x, you must recompile the other"
 	ewarn "packages on your system that link with libmysqlclient after the"
 	ewarn "upgrade completes.  To obtain such a list of packages for your"
-	ewarn "system, you may use 'revdep-rebuild' from app-admin/gentoolkit."
+	ewarn "system, you may use 'revdep-rebuild' from app-portage/gentoolkit."
 	ewarn
 	sleep 5
 }
