@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6f44f87cb48929e1a80b7653ca686f5 bnr2-0.14.4.ebuild 700
-MD5 45c7f28d0766b34ed3feffe50ed0260a bnr2-0.13.3.ebuild 720
-MD5 903d12eebe5a1a206927a8c91f325207 bnr2-0.14.6.ebuild 701
-MD5 ad143aeb68ea95eef5ef5f8bab0772e1 bnr2-0.12.7.ebuild 720
-MD5 ac2b680f30512f23a0af9aad3ae39d0f bnr2-0.14.5.ebuild 701
-MD5 513b8ed4db42c15a1556b5fce5d07eb0 ChangeLog 3221
+MD5 aaf5f471e9470550b7a51051cd9ebaf7 bnr2-0.14.4.ebuild 700
+MD5 4388fd2e81cf2999514b00d784ff2979 bnr2-0.13.3.ebuild 722
+MD5 29e9947fce10a428029a834f40d632d2 bnr2-0.14.6.ebuild 701
+MD5 54e41f06031952d76c64160d9faadfa9 bnr2-0.12.7.ebuild 722
+MD5 f3fb20982ca11d3307d5e3a7c61d1d77 bnr2-0.14.5.ebuild 701
+MD5 26e61eb8d3b9873c27e4d44205d2ecdd ChangeLog 3481
 MD5 4f864e62684c3ae155ebc52885a158bb metadata.xml 276
-MD5 d2397870dfb2cf2158d6af3b7e40fa61 files/bnr2 306
+MD5 467499aba5cae59cf28cb872cf75a8fe files/bnr2 306
 MD5 ab285354267d0da08b4bf292c6a85af8 files/digest-bnr2-0.12.7 137
 MD5 f2eddde17c9120feed344e474975a07d files/digest-bnr2-0.13.3 137
 MD5 7d43a074c0b4624c24ff7afefeee9fb0 files/digest-bnr2-0.14.4 137
@@ -17,7 +17,7 @@ MD5 3a8d4b77e68b157e723086dcf21ae885 files/digest-bnr2-0.14.6 137
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBzxP6I1lqEGTUzyQRApFiAKCZG+gSFwMPVHXANUv0dpc2oyb/0QCdEDCH
-zjLwl6c4SaILtJe+CT/8r5k=
-=Fq5/
+iD8DBQFB7BOLI1lqEGTUzyQRAtV+AKCn2R7SQvjd1D+YP+vXKfvmcXbiZACgml7x
+E5DySPWQ6CNwquGiB4E9jX4=
+=Ez41
 -----END PGP SIGNATURE-----
