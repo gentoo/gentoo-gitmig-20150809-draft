@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.15 2004/01/03 14:03:22 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.16 2004/01/04 02:21:57 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -24,6 +24,7 @@ DEPEND=">=app-arch/bzip2-1.0.1
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
+	>=x11-libs/qt-3.1
 	~kde-base/arts-1.1.4"
 
 RDEPEND="$DEPEND
@@ -39,9 +40,6 @@ use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 
 use x86 && myconf="$myconf --enable-fast-malloc=full"
-
-qtver-from-kdever ${PV}
-need-qt $selected_version
 
 set-kdedir $PV
 
