@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/foobillard
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.8 2004/06/24 23:24:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.9 2004/12/28 23:37:49 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/foobillard-3.0a-no_nvidia.patch, foobillard-3.0a.ebuild:
@@ -47,7 +50,7 @@
 
 *foobillard-1.5 (21 Jun 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> foobillard-1.5.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> foobillard-1.5.ebuild :
   Added KEYWORDS, SLOT.
 
   21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
