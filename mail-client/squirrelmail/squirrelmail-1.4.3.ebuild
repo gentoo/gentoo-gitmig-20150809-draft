@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.3.ebuild,v 1.3 2004/06/02 09:25:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.3.ebuild,v 1.4 2004/06/02 19:33:42 eradicator Exp $
 
 inherit webapp-apache eutils
 
@@ -59,6 +59,9 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-fortune.patch
+
+	cd ${S}/src
+	epatch ${FILESDIR}/${P}-compose.patch
 
 	# Now do the plugins
 	cd ${S}/plugins

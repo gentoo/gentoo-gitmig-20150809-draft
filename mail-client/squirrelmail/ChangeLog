@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.4 2004/06/02 09:25:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.5 2004/06/02 19:33:42 eradicator Exp $
+
+  02 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squirrelmail-1.4.3-r1.ebuild, squirrelmail-1.4.3.ebuild,
+  files/squirrelmail-1.4.3-compose.patch:
+  Trivial patch to fix double quoting of messages in replies.  Fixes bug #52656.
 
   02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> squirrelmail-1.4.3.ebuild:
   Stable on alpha, bug 52434.
