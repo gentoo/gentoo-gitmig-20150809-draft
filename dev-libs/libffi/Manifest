@@ -1,5 +1,5 @@
-MD5 3113b98f43bda47db0f39bd6f6e3aad1 libffi-1.20.ebuild 605
-MD5 b4e051e6bc4632bb7ad5bce267607b2e libffi-3.4.1.ebuild 7010
 MD5 e7ba4eda970ed57da8af323a97a719bd ChangeLog 1684
+MD5 3113b98f43bda47db0f39bd6f6e3aad1 libffi-1.20.ebuild 605
+MD5 b068965b8fc1e3e0e9d74ec4c3170f07 libffi-3.4.1.ebuild 6992
 MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64

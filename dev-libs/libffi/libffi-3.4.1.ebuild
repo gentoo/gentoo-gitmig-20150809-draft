@@ -34,11 +34,11 @@ inherit eutils flag-o-matic libtool
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 do_filter_flags() {
-    strip-flags
+	strip-flags
 
-    # In general gcc does not like optimization, and add -O2 where
-    # it is safe.  This is especially true for gcc 3.3 + 3.4
-    replace-flags -O? -O2
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
+	replace-flags -O? -O2
 
 	# xgcc isnt patched with propolice
 	filter-flags -fstack-protector-all
@@ -50,8 +50,8 @@ do_filter_flags() {
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
-    # ...sure, why not?
-    strip-unsupported-flags
+	# ...sure, why not?
+	strip-unsupported-flags
 }
 
 S=${WORKDIR}/gcc-${PV}
