@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libexif
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.1 2002/12/31 14:15:27 mholzer Exp $
+
+*libexif-0.5.8 (31 Dec 2002)
+
+  31 Dec 2002; Martin Holzer <mholzer@gentoo.org> libexif-0.5.8.ebuild files/digest-libexif-0.5.8 ChangeLog :
+  Initial Version. Thx to asl@launay.org for submitting this in #12607
+
