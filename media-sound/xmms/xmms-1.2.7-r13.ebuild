@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r13.ebuild,v 1.7 2002/10/12 11:30:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r13.ebuild,v 1.8 2002/10/14 03:51:02 seemant Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb"
 
@@ -29,7 +29,7 @@ DEPEND="app-arch/unzip
 	
 
 RDEPEND="${DEPEND}
-	directfb ( dev-libs/DirectFB )
+	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
