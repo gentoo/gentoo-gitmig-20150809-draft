@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/http-emacs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.1 2003/11/03 10:04:01 mkennedy Exp $
+
+*http-emacs-1.1 (03 Nov 2003)
+
+  03 Nov 2003; <mkennedy@gentoo.org> http-emacs-1.1.ebuild, metadata.xml,
+  files/50http-emacs-gentoo.el:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
