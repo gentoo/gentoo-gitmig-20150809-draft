@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0.ebuild,v 1.1 2005/03/14 21:39:03 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0.ebuild,v 1.2 2005/03/17 11:23:06 greg_g Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
 
 KEYWORDS="~x86 ~amd64 ~sparc"
-IUSE="alsa audiofile encode flac gstreamer mad oggvorbis speex theora xine"
+IUSE="alsa audiofile encode flac gstreamer jack mad oggvorbis speex theora xine"
 
 DEPEND="~kde-base/kdebase-${PV}
 	media-sound/cdparanoia
@@ -30,7 +30,7 @@ DEPEND="~kde-base/kdebase-${PV}
 src_unpack() {
 	kde_src_unpack
 
-	epatch "${FILESDIR}/kdemultimedia-3.4.0_beta1-amd64.patch"
+	epatch "${FILESDIR}/kdemultimedia-3.4.0-amd64.patch"
 }
 
 src_compile() {
