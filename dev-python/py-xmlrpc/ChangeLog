@@ -1,10 +1,13 @@
 # ChangeLog for dev-python/py-xmlrpc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.6 2003/02/12 06:33:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.7 2003/04/04 02:37:17 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *py-xmlrpc-0.8.8.2 (23 Apr 2002)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> py-xmlrpc-0.8.8.2.ebuild:
+  ebuild cleanups
 
   29 Jul 2002; George Shapovalov <george@gentoo.org> py-xmlrpc-0.8.7.ebuild, py-xmlrpc-0.8.8.2.ebuild :
 
