@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.18 2002/05/05 11:21:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.19 2002/05/05 20:01:40 azarah Exp $
+
+*mplayer-0.90_pre3-r1 (5 May 2002)
+ 
+ 5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre3-r1 :
+
+ Fix some compile problems for Gui, thanks to Gwenn Gueguen.
 
 *mplayer-0.90_pre3 (5 May 2002)
 

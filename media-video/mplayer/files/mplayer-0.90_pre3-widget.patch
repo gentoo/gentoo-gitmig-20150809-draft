@@ -1,0 +1,10 @@
+--- Gui/mplayer/widgets.c.orig	Sun May  5 21:53:25 2002
++++ Gui/mplayer/widgets.c	Sun May  5 21:54:24 2002
+@@ -25,6 +25,7 @@
+ 
+ #include "../../config.h"
+ #include "../../help_mp.h"
++#include "../../mp_msg.h"
+ 
+ GtkWidget     * SkinBrowser;
+ GtkWidget     * PlayList;
