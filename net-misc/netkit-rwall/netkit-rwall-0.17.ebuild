@@ -1,27 +1,25 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwall/netkit-rwall-0.17.ebuild,v 1.1 2004/10/23 17:27:58 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwall/netkit-rwall-0.17.ebuild,v 1.2 2004/10/24 09:53:19 wmertens Exp $
 
-#S=${WORKDIR}/netkit-rwall-${PV}
-#S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - rwall"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND="virtual/libc"
 
 src_compile() {
 	./configure || die
-	sed -i~ -e "s:-O2 -Wall:-Wall:" -e "s:-Wpointer-arith::" MCONFIG
-	make || die
+	mv MCONFIG MCONFIG.ori
+	sed -e "s:-O2 -Wall:-Wall:" -e "s:-Wpointer-arith::" MCONFIG.ori > MCONFIG
+	emake || die
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin  rwall/rwall
 	doman  rwall/rwall.1
