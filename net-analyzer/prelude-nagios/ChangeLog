@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/prelude-nagios
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.5 2004/03/15 22:58:02 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nagios/ChangeLog,v 1.6 2004/03/20 06:37:02 mboman Exp $
+
+  20 Mar 2004; Michael Boman <mboman@gentoo.org> prelude-nagios-0.0.2.ebuild,
+  prelude-nagios-0.0.3.ebuild:
+  Changed DEPEND and RDEPEND to fix bug 45110.
 
   16 Mar 2004; Michael Boman <mboman@gentoo.org> prelude-nagios-0.0.2.ebuild:
   Marked 0.0.2 stable on x86
