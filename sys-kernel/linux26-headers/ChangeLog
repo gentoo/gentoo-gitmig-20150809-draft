@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.4 2004/07/11 02:39:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.5 2004/07/12 01:05:47 azarah Exp $
+
+  12 Jul 2004; Martin Schlemmer <azarah@gentoo.org>
+  linux26-headers-2.6.6-r1.ebuild:
+  Mark ~ for x86.
 
   10 Jul 2004; Travis Tilley <lv@gentoo.org> linux26-headers-2.6.7-r1.ebuild:
   add back in -* keyword for brave (and possibly nutty) testers on non-keyworded
