@@ -1,0 +1,9 @@
+# ChangeLog for app-office/lxbank
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.1 2003/06/22 19:49:45 hanno Exp $
+
+*lxbank-0.1.6 (22 Jun 2003)
+
+  22 Jun 2003; Hanno Boeck <hanno@gentoo.org> lxbank-0.1.6.ebuild:
+  lxbank is a homebanking tool using openhbci.
+
