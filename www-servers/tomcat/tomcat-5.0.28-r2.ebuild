@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.4 2005/03/28 03:14:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.5 2005/04/04 15:02:12 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jdk-1.4
 	   >=dev-java/commons-dbcp-1.2.1
 	   >=dev-java/commons-digester-1.5
 	   >=dev-java/commons-fileupload-1.0
-	   >=dev-java/commons-httpclient-2.0
+	   =dev-java/commons-httpclient-2*
 	   >=dev-java/commons-el-1.0
 	   >=dev-java/commons-launcher-0.9
 	   >=dev-java/commons-logging-1.0.4
