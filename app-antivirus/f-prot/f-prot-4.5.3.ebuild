@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.3.ebuild,v 1.3 2005/01/30 13:06:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.3.ebuild,v 1.4 2005/02/03 08:32:46 ticho Exp $
 
 IUSE="emul-linux-x86"
 
@@ -45,11 +45,11 @@ src_install ()
 
 pkg_postinst() {
 	echo
-	einfo "Remember to run /opt/f-prot/tools/check-updates.pl regularly to keep virus"
+	einfo "Remember to run /opt/f-prot/check-updates.pl regularly to keep virus"
 	einfo "database up to date. Recommended method is to use cron. See manpages for"
 	einfo "cron(8) and crontab(5) for more info."
 	einfo "An example crontab entry, causing check-updates.pl to run every night at 4AM:"
 	echo
-	echo "0 4 * * * /opt/f-prot/tools/check-updates.pl >/dev/null"
+	echo "0 4 * * * /opt/f-prot/check-updates.pl >/dev/null"
 	echo
 }
