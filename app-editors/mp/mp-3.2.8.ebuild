@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.8.ebuild,v 1.1 2003/09/24 19:21:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.8.ebuild,v 1.2 2004/01/11 14:07:52 weeve Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="mp, the definitive text editor"
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}
 IUSE="ncurses gtk"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 src_compile() {
 	if [ -n "`use ncurses`" ] && [ -n "`use gtk`" ]; then emake || die;

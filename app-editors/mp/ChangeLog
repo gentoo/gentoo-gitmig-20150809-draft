@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.8 2003/09/24 19:21:52 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.9 2004/01/11 14:07:52 weeve Exp $
+
+  11 Jan 2004; Jason Wever <weeve@gentoo.org> mp-3.2.7.ebuild,
+  mp-3.2.8.ebuild:
+  Added ~sparc keyword to 3.2.7 and 3.2.8
 
 *mp-3.2.8 (25 Sep 2003)
 
