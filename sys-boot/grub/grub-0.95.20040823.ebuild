@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.9 2004/12/20 18:54:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.95.20040823.ebuild,v 1.10 2004/12/28 11:32:08 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	has_pie && CC="$(tc-getCC) `test_flag -fno-pic` `test_flag -nopie`"
 	has_ssp && CC="$(tc-getCC) `test_flag -fno-stack-protector`"
-	
+
 	autoconf || die "autoconf failed"
 	aclocal || die "aclocal failed"
 	WANT_AUTOMAKE=1.8 automake || die "automake failed"
