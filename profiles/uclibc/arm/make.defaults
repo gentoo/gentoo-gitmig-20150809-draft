@@ -1,5 +1,6 @@
 USE="arm berkdb ncurses python readline zlib uclibc"
 GRP_STAGE23_USE="arm berkdb ncurses python readline zlib uclibc"
+STAGE1_USE="uclibc"
 
 ARCH="arm"
 COMPILER="gcc3"
