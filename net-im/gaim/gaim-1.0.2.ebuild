@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2.ebuild,v 1.2 2004/10/20 14:00:58 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2.ebuild,v 1.3 2004/10/20 16:31:13 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -11,7 +11,8 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
-IUSE="nls perl spell nas crypt cjk gnutls silc eds debug"
+#IUSE="nls perl spell nas crypt cjk gnutls silc eds debug"
+IUSE="nls perl spell nas crypt cjk gnutls silc debug"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
@@ -25,8 +26,8 @@ DEPEND=">=x11-libs/gtk+-2.0
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	dev-libs/nss
 	gnutls? ( net-libs/gnutls )
-	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
-	eds? ( gnome-extra/evolution-data-server )"
+	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )"
+	#eds? ( gnome-extra/evolution-data-server )"
 
 PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.32 )"
 
@@ -77,7 +78,8 @@ src_compile() {
 	use spell || myconf="${myconf} --disable-gtkspell"
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
-	use eds || myconf="${myconf} --disable-gevolution"
+	myconf="${myconf} --disable-gevolution"
+	#use eds || myconf="${myconf} --disable-gevolution"
 
 	if use gnutls ; then
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
