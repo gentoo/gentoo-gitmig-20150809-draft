@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wampager
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/ChangeLog,v 1.10 2004/06/01 13:32:20 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/ChangeLog,v 1.11 2004/06/03 10:04:15 dholm Exp $
+
+*wampager-0.9.3 (03 Jun 2004)
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> +wampager-0.9.3.ebuild:
+  Version bump.
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> wampager-0.9.1.ebuild,
   wampager-0.9.ebuild:
