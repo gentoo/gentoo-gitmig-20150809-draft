@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.2 2003/10/26 20:22:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12-r1.ebuild,v 1.3 2003/10/29 17:36:36 usata Exp $
 
 inherit eutils
 
@@ -11,15 +11,15 @@ SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc"
-IUSE="debug png jpeg pdflib"
+IUSE="debug png jpeg pdflib fftw netcdf"
 
 DEPEND="virtual/x11
 	virtual/motif
 	>=sys-libs/zlib-1.0.3
-	>=dev-libs/fftw-2.1.3
-	>=app-sci/netcdf-3.0
 	>=media-libs/t1lib-1.3.1
 	>=media-libs/tiff-3.5
+	fftw? ( >=dev-libs/fftw-2.1.3 )
+	netcdf? ( >=app-sci/netcdf-3.0 )
 	png? ( >=media-libs/libpng-0.9.6 )
 	jpeg? ( media-libs/jpeg )
 	pdflib? ( >=media-libs/pdflib-4.0.3 )
@@ -76,8 +76,8 @@ src_compile() {
 	econf \
 		--enable-grace-home=/usr/share/grace \
 		--with-helpviewer=${gracehelpviewer} \
-		--with-fftw \
-		--enable-netcdf \
+		`use_with fftw` \
+		`use_enable netcdf` \
 		`use_enable debug` \
 		`use_enable jpeg jpegdrv` \
 		`use_enable png pngdrv` \
