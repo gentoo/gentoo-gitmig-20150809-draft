@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.3 2004/12/07 17:35:12 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.4 2004/12/08 21:22:17 slarti Exp $
 
 inherit eutils
 
@@ -84,7 +84,7 @@ src_compile() {
 		$(use_enable truetype xft) \
 		$(use_enable kde) \
 		$(use_enable gnome) \
-		$(use_enable disablexmb) \
+		$(use_enable !disablexmb xmb) \
 		--sysconfdir=/etc/X11/${PN} \
 		${myconf} || die "configure failed"
 

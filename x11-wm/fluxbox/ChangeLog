@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.131 2004/12/07 17:35:12 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.132 2004/12/08 21:22:17 slarti Exp $
+
+  07 Dec 2004; Tom Martin <slarti@gentoo.org> fluxbox-0.9.11.ebuild:
+  Fix my own stupidness with disablexmb.
 
   07 Dec 2004; Tom Martin <slarti@gentoo.org> fluxbox-0.9.11.ebuild:
   Added disablexmb local USE flag at the request of Ciaran
