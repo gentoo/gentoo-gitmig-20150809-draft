@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.17 2004/03/16 06:38:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.18 2004/03/18 21:45:22 aliz Exp $
 
   16 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> cscope-15.5.ebuild:
   Changed to not assign read-only variable PN. See bug #44712
@@ -20,6 +20,8 @@
   understand how to write a ChangeLog entry explaining their actions.
   cscope-15.5 fixes the bison incompatibility so Brandy's sed fix is no longer
   needed.  Add metadata.xml putting this ebuild into the vim and emacs herds.
+
+*cscope-15.4-r1 (15 Nov 2003)
 
   15 Nov 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> cscope-15.4-r1.ebuild:
   Fixed emacs lisp and site file installation.

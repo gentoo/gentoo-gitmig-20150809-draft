@@ -1,9 +1,11 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.18 2004/03/14 17:23:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.19 2004/03/18 21:45:24 aliz Exp $
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kdbg-1.2.5.3.ebuild:
   inherit kde instead of deprecated kde-base
+
+*kdbg-1.9.4 (25 Feb 2004)
 
   25 Feb 2004; Caleb Tennis <caleb@gentoo.org> :
   Version bump

@@ -1,8 +1,8 @@
 # ChangeLog for dev-util/perforce-cli
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-cli/ChangeLog,v 1.2 2004/01/15 05:37:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-cli/ChangeLog,v 1.3 2004/03/18 21:45:24 aliz Exp $
 
-*perforce-gui-2003.1 (14 Dec 2003)
+*perforce-cli-2003.1 (14 Dec 2003)
 
   14 Dec 2003; Stuart Herbert <stuart@gentoo.org> metadata.xml,
   perforce-gui-2003.1.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.9 2004/03/13 01:44:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.10 2004/03/18 21:45:23 aliz Exp $
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> insight-5.1.1.ebuild,
   insight-5.2.1.ebuild, insight-5.3.ebuild, insight-6.0.ebuild:
@@ -19,13 +19,13 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*insight-5.2.1; (1 Sep 2002)
+*insight-5.2.1 (1 Sep 2002)
 
   1 Sep 2002; Arcady Genkin <agenkin@thpoon.com> insight-5.2.1.ebuild :
 
   Updated version of the ebuild by Olivier Crete <tester@videotron.ca>.
 
-*insight-5.1.1; (15 Feb 2002)
+*insight-5.1.1 (15 Feb 2002)
 
   3 Mar 2002; Arcady Genkin <agenkin@thpoon.com> insight-5.1.1.ebuild :
 

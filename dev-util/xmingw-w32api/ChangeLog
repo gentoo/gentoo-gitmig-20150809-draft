@@ -1,8 +1,8 @@
 # ChangeLog for dev-util/xmingw-w32api
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.3 2004/03/17 14:43:33 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-w32api/ChangeLog,v 1.4 2004/03/18 21:45:24 aliz Exp $
 
-* xmingw-w32api-2.5 (17 Oct 2004)
+*xmingw-w32api-2.5 (17 Oct 2004)
 
   17 Mar 2004; Stefan Jones <cretin@gentoo.org> :
   New version, could be more complete W32 API?
@@ -11,7 +11,7 @@
   xmingw-w32api-2.4.ebuild:
   don't assign to P; use emake; error messages; tidy
 
-* xmingw-w32api-2.4 (01 Oct 2003)
+*xmingw-w32api-2.4 (01 Oct 2003)
 
   01 Oct 2003; Stefan Jones <cretin@gentoo.org> :
   Initial ebuild
