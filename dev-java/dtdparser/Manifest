@@ -1,0 +1,5 @@
+MD5 035b4e99190b1ebb779c8ff14c4d245e ChangeLog 392
+MD5 c0fc9bcf01742f1fb64967d2bd832f88 dtdparser-1.21.ebuild 1210
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 977b4c772bc01096ee71c8df9d288eb9 files/buildfile.patch 1180
+MD5 f9c01d5670a79a1b953e4666b76dd579 files/digest-dtdparser-1.21 63

@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/dtdparser
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.1 2005/01/22 17:46:27 luckyduck Exp $
+
+*dtdparser-1.21 (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/buildfile.patch, +dtdparser-1.21.ebuild:
+  Initial import. Fixes #75529
+
