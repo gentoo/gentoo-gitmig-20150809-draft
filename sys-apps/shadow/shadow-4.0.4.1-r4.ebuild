@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.15 2004/06/27 20:11:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r4.ebuild,v 1.1 2004/10/08 00:01:35 vapier Exp $
 
-inherit eutils libtool gnuconfig
+inherit eutils libtool gnuconfig flag-o-matic
 
 FORCE_SYSTEMAUTH_UPDATE="no"
-
 SELINUX_PATCH="shadow-4.0.4.1-selinux.diff"
 
-HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
+HOMEPAGE="http://shadow.pld.org.pl/"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~mips ~hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE="pam selinux nls"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="pam selinux nls uclibc"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
@@ -31,10 +30,13 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
 
+	# selinux loving
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+
+	# uclibc support, corrects NIS usage
+	use uclibc && epatch ${FILESDIR}/shadow-4.0.4.1-nonis.patch
 
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
@@ -57,50 +59,50 @@ src_unpack() {
 	# Patch to correct the definition if malloc, so that shadow can compile
 	# using gcc 3.4. see bug #47455 for more information
 	epatch ${FILESDIR}/${P}-gcc34-xmalloc.patch
+
+	# userdel has a bug when PAM is enabled that causes it to always exit 
+	# with an exit status of 1 #66687
+	epatch ${FILESDIR}/${P}-userdel-missing-brackets.patch
+
+	# Allows shadow configure detect newer systems properly
+	gnuconfig_update
+	elibtoolize
 }
 
 src_compile() {
-	# Allows shadow configure detect mips systems properly
-	gnuconfig_update
+	append-ldflags -Wl,-z,now
 
-	elibtoolize
-
-	local myconf
-	use pam \
-		&& myconf="${myconf} --with-libpam --with-libcrack" \
-		|| myconf="${myconf} --without-libpam"
-
-	./configure --disable-desrpc \
+	econf \
+		--disable-desrpc \
 		--with-libcrypt \
 		--with-libcrack \
 		--enable-shared=no \
 		--enable-static=yes \
-		--host=${CHOST} \
-		`use_enable nls` \
-		${myconf} || die "bad configure"
+		$(use_with pam libpam) \
+		$(use_enable nls) \
+		|| die "bad configure"
 
 	# Parallel make fails sometimes
 	emake -j1 || die "compile problem"
 }
 
 src_install() {
-	dodir /etc/default /etc/skel
+	make DESTDIR=${D} install || die "install problem"
 
-	make prefix=${D}/usr \
-		exec_prefix=${D} \
-		mandir=${D}/usr/share/man \
-		install || die "install problem"
+#	dodir /etc/default /etc/skel
+
+	# Remove libshadow and libmisc; see bug 37725 and the following
+	# comment from shadow's README.linux:
+	#   Currently, libshadow.a is for internal use only, so if you see
+	#   -lshadow in a Makefile of some other package, it is safe to
+	#   remove it.
+	rm -f ${D}/lib/lib{misc,shadow}.{a,la}
 
 	# Do not install this login, but rather the one from
 	# pam-login, as this one have a serious root exploit
 	# with pam_limits in use.
 	use pam && rm ${D}/bin/login
 
-	mv ${D}/lib ${D}/usr
-	dosed "s:/lib':/usr/lib':g" /usr/lib/libshadow.la
-	dosed "s:/lib/:/usr/lib/:g" /usr/lib/libshadow.la
-	dosed "s:/lib':/usr/lib':g" /usr/lib/libmisc.la
-	dosed "s:/lib/:/usr/lib/:g" /usr/lib/libmisc.la
 	dosym newgrp /usr/bin/sg
 	dosym useradd /usr/sbin/adduser
 	dosym vipw /usr/sbin/vigr
@@ -118,13 +120,12 @@ src_install() {
 	insinto /etc/default
 	insopts -m0600
 	doins ${FILESDIR}/default/useradd
-# From sys-apps/pam-login now
-#	insopts -m0644 ; doins ${FILESDIR}/login.defs
+	# From sys-apps/pam-login now
+	#insopts -m0644 ; doins ${FILESDIR}/login.defs
 
-	if use pam ; then
+	if use pam; then
 		insinto /etc/pam.d ; insopts -m0644
-		for x in ${FILESDIR}/pam.d/*
-		do
+		for x in ${FILESDIR}/pam.d/*; do
 			[ -f ${x} ] && doins ${x}
 		done
 		cd ${FILESDIR}/pam.d
@@ -149,7 +150,7 @@ src_install() {
 		[ -f ${x} ] && doman ${x}
 	done
 
-	if ! use pam ; then
+	if ! use pam; then
 		# Dont install the manpage, since we dont use
 		# login with shadow
 		rm -f ${D}/usr/share/man/man1/login.*
@@ -158,7 +159,7 @@ src_install() {
 	fi
 
 	cd ${S}/doc
-	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
+	dodoc ANNOUNCE INSTALL README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
 

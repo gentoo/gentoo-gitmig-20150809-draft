@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.4 2004/09/30 03:31:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.5 2004/10/08 00:01:35 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -8,8 +8,8 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 
 SELINUX_PATCH="shadow-4.0.4.1-selinux.diff"
 
-HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
+HOMEPAGE="http://shadow.pld.org.pl/"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.bz2"
 
 LICENSE="BSD"

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.68 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.69 2004/10/08 00:01:35 vapier Exp $
+
+*shadow-4.0.4.1-r4 (07 Oct 2004)
+
+  07 Oct 2004; Mike Frysinger <vapier@gentoo.org> +shadow-4.0.4.1-r4.ebuild
+  +files/shadow-4.0.4.1-userdel-missing-brackets.patch:
+  Add patch to fix exit status while using pam #66687 by Scott Beck/Jason
+  Rhinelander.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   shadow-4.0.4.1-r1.ebuild, shadow-4.0.4.1-r2.ebuild:
