@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.4 2002/11/02 21:35:51 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.5 2002/11/13 05:24:32 carpaski Exp $
 
 DESCRIPTION="A collection of Russian translations of Linux manual pages."
 HOMEPAGE="http://alexm.here.ru/manpages-ru/"
@@ -26,5 +26,5 @@ src_compile() {
 		
 src_install() {
 	make INSTALLPATH=${D}/usr/share/man LANG_SUBDIR=ru install || die
-	prepallman
+	prepallman /usr/share
 }
