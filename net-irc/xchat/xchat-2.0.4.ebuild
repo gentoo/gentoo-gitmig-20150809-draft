@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.13 2003/09/25 14:02:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.14 2003/10/05 10:40:30 foser Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ fi
 
 
 RDEPEND=">=dev-libs/glib-2.0.3
-	!xchatnogtk ( >=x11-libs/gtk+-2.0.3 )
+	!xchatnogtk? ( >=x11-libs/gtk+-2.0.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	python? ( dev-lang/python )
