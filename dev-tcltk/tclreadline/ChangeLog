@@ -1,8 +1,11 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.1 2002/11/07 22:39:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.2 2002/12/07 06:27:14 jmorgan Exp $
 
 *tclreadline-2.1.0 (07 Nov 2002)
+  
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> tclreadline-2.1.0.ebuild :
+  Removed ~sparc64 keyword
 
   07 Nov 2002; George Shapovalov <george@gentoo.org> tclreadline-2.1.0.ebuild :
 

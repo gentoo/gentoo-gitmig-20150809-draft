@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.1 2002/11/07 22:39:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0.ebuild,v 1.2 2002/12/07 06:27:14 jmorgan Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://umn.dl.sourceforge.net/sourceforge/tclreadline/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~spacr ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="=dev-lang/tcl-8.3*
 	sys-libs/readline"
