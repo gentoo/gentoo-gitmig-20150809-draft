@@ -1,0 +1,42 @@
+--- useradd.c.orig Thu Jan 18 16:41:33 2001
++++ useradd.c	Thu Jan 18 16:41:33 2001
+@@ -30,7 +30,7 @@
+ #include <config.h>
+
+ #include "rcsid.h"
+-RCSID(PKG_VER "$Id: useradd.diff,v 1.1 2001/01/18 18:31:53 achim Exp $")
++RCSID(PKG_VER "$Id: useradd.diff,v 1.1 2001/01/18 18:31:53 achim Exp $")
+
+ #include "prototypes.h"
+ #include "defines.h"
+@@ -471,7 +471,11 @@
+ 	 * Create a temporary file to copy the new output to.
+ 	 */
+
++#ifdef HAVE_MKSTEMP
++	mkstemp (new_file);
++#else
+ 	mktemp (new_file);
++#endif
+ 	if (!(ofp = fopen (new_file, "w"))) {
+ 		fprintf(stderr, _("%s: cannot create new defaults file\n"),
+ 			Prog);
+@@ -1686,7 +1690,7 @@
+ 	}
+ 
+ 	if (retval == PAM_SUCCESS) {
+-		retval = pam_start("shadow", pampw->pw_name, &conv, &pamh);
++		retval = pam_start("useradd", pampw->pw_name, &conv, &pamh);
+ 	}
+
+ 	if (retval == PAM_SUCCESS) {
+@@ -1765,7 +1769,7 @@
+ 	 * to that group, use useradd -g username username.
+ 	 * --bero
+ 	 */
+-	if (! (nflg || gflg)) {
++	if (!gflg) {
+ 	    if (getgrnam(user_name)) {
+                 fprintf(stderr, _("%s: group %s exists - if you want to add this user to that group, use -g.\n"), Prog, user_name);
+ 		exit(E_NAME_IN_USE);
+  
