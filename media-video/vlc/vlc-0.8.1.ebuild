@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.9 2005/02/27 23:54:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.10 2005/03/02 22:15:08 chriswhite Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -15,7 +15,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls utf8 debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg faad dts flac mpeg oggvorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg oggvorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -57,7 +57,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/libdvbpsi
-		faad?( >=media-libs/faad2-2.0-r2 )"
+		aac?( >=media-libs/faad2-2.0-r2 )"
 
 src_unpack() {
 	unpack ${A}
@@ -112,7 +112,7 @@ src_compile () {
 
 	econf \
 	$(use_enable altivec) \
-	$(use_enable utf8) \
+	$(use_enable unicode utf8) \
 	$(use_enable stream sout) \
 	$(use_enable httpd) \
 	$(use_enable vlm) \
@@ -153,7 +153,7 @@ src_compile () {
 	$(use_enable live livedotcom) \
 	$(use_enable mad) \
 	$(use_enable ffmpeg) \
-	$(use_enable faad) \
+	$(use_enable aac faad) \
 	$(use_enable a52) \
 	$(use_enable dts) \
 	$(use_enable mpeg libmpeg2) \
