@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.37 2004/08/09 18:28:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.38 2004/09/04 11:55:29 gmsoft Exp $
+
+*libgcrypt-1.2.0-r1 (04 Sep 2004)
+
+  04 Sep 2004; Guy Martin <gmsoft@gentoo.org> +files/libgcrypt-hppa.patch,
+  +libgcrypt-1.2.0-r1.ebuild:
+  Added a fix for relocation problem on hppa. Removed macos KEYWORDS until they
+  stabilize sys-devel/patch.
 
   09 Aug 2004; Guy Martin <gmsoft@gentoo.org> libgcrypt-1.2.0.ebuild:
   Stable on hppa.
