@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmdrawer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.1 2003/06/03 06:12:01 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.2 2003/06/03 08:36:54 bcowan Exp $
+
+*wmdrawer-0.10.1 (03 Jun 2003)
+
+  03 Jun 2003; Brad Cowan <bcowan@gentoo.org> wmdrawer-0.10.1.ebuild:
+  bumped version
 
 *wmdrawer-0.9.15 (03 Jun 2003)
 
