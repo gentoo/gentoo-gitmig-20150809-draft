@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.17 2004/09/24 08:29:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.18 2004/11/22 02:45:13 vapier Exp $
+
+*paragui-1.1.8 (21 Nov 2004)
+
+  21 Nov 2004; Mike Frysinger <vapier@gentoo.org> +paragui-1.1.8.ebuild:
+  Version bump #71783 by Bryan Duff.
 
   24 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> -paragui-1.0.3.ebuild:
   remove older ebuild
