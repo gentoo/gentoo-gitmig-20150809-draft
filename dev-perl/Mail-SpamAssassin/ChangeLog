@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.40 2004/01/19 19:39:43 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/ChangeLog,v 1.41 2004/01/24 07:58:46 robbat2 Exp $
+
+*Mail-SpamAssassin-2.63 (23 Jan 2004)
+
+  23 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  Mail-SpamAssassin-2.63.ebuild:
+  bug #38844, version bump
 
   19 Jan 2004; <tuxus@gentoo.org> Mail-SpamAssassin-2.62.ebuild:
   Added ~mips to KEYWORDS.
