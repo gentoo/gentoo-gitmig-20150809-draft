@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.7 2004/02/25 07:39:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.8 2004/03/11 02:34:01 zx Exp $
 
 inherit java-pkg
 
 S="${WORKDIR}/apache-ant-${PV}"
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
-SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-src.tar.bz2"
+http://archive.apache.org/dist/ant/source/apache-${PN}-${PV}-src.zip
 HOMEPAGE="http://ant.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
@@ -31,6 +31,9 @@ src_unpack() {
 src_compile() {
 
 	addwrite "/proc/self/maps"
+
+	[ -z ${JDK_HOME} ] && einfo "JDK_HOME not set, please check with java-config" && die
+
 	export JAVA_HOME=${JDK_HOME}
 	if [ `arch` == "ppc" ] ; then
 		# We're compiling _ON_ PPC
