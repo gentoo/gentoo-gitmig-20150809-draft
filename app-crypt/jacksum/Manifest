@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 cb8782a546f6b15d1253dd73de798a80 jacksum-1.4.0.ebuild 1083
 MD5 ac83d0f091d165baeffa1e0155419398 jacksum-1.5.0.ebuild 1094
-MD5 abb7b8bef3a8c245941dd390b1bdd207 ChangeLog 760
+MD5 2db6fa0f4631d66849e65c324aa6c4c0 ChangeLog 775
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d70a42e3ead229a1001fbe2b09ee2937 files/digest-jacksum-1.4.0 62
 MD5 a309849eb2163c087c093b09be3c0787 files/digest-jacksum-1.5.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfV3j/rLF9B432nYRAsI3AJ9oBfAJEl6SnNGhSlqOTNH/liZUswCgzcqZ
-x6Qj1KgSNfxNct0xH+xSKUk=
-=qRcj
+iD8DBQFBf7EA/rLF9B432nYRAs5KAJ9BLJQfBnbJPPvlmBl1AvISYWjGVgCeLqAL
+UDr98zDUxC/BSDq2h1Sy2A4=
+=cLfa
 -----END PGP SIGNATURE-----
