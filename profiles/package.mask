@@ -283,10 +283,6 @@ sys-apps/coreutils
 # please someone test 4.3.12 ..
 >=net-print/gimp-print-cups-4.3.10
 
-# <vapier@gentoo.org> (03 Mar 2003)
-# package compiles fine then doesnt run ...
-app-games/xboing
-
 # <azarah@gentoo.org> (24 Feb 2003)
 # This one is a fix that I did not think about
 # and could be a security hole.
