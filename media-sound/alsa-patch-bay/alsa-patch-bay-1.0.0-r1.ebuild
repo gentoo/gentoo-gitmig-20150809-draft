@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r1.ebuild,v 1.1 2004/07/02 23:46:26 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r1.ebuild,v 1.2 2004/07/03 18:28:27 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 IUSE="fltk"
 
