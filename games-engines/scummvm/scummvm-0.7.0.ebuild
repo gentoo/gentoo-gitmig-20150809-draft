@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.7 2005/02/21 19:39:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.8 2005/02/28 02:50:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,9 +15,8 @@ IUSE="alsa debug flac mad oggvorbis sdl zlib"
 RESTRICT="maketest"  # it only looks like there's a test there #77507
 
 RDEPEND="virtual/libc
-	virtual/x11
+	>=media-libs/libsdl-1.2.2
 	>media-libs/libmpeg2-0.3.1
-	sdl? ( >=media-libs/libsdl-1.2.2 )
 	oggvorbis? (
 		media-libs/libogg
 		media-libs/libvorbis
@@ -36,17 +35,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=
+	local myconf="--backend=sdl" # x11 backend no worky (bug #83502)
 
-	use sdl \
-		&& myconf="${myconf} --backend=sdl" \
-		|| myconf="${myconf} --backend=x11"
 	use debug \
 		|| myconf="${myconf} --disable-debug"
 	use oggvorbis \
 		|| myconf="${myconf} --disable-mpeg2"
 
-	# not an autoconf script so dont call econf
+	# NOT AN AUTOCONF SCRIPT SO DONT CALL ECONF
 	# mpeg2 support needs vorbis (bug #79149) so turn it off if -oggvorbis
 	./configure \
 		$(use_enable alsa) \
