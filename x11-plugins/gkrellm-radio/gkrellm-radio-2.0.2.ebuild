@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.2.ebuild,v 1.1 2003/01/18 17:59:31 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.2.ebuild,v 1.2 2003/01/18 18:04:37 mholzer Exp $ 
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A minimalistic GKrellM2 plugin to control radio tuners."
@@ -21,6 +21,6 @@ src_compile() {
 src_install () {
 	exeinto /usr/lib/gkrellm2/plugins
 	doexe radio.so
-	dodoc README Changelog TODO
+	dodoc README CHANGES 
 }
 
