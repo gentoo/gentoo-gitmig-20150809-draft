@@ -1,6 +1,6 @@
-# Copyright 2002-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r2.ebuild,v 1.3 2003/02/26 07:29:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r3.ebuild,v 1.1 2003/02/26 07:29:22 kutsuya Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -12,17 +12,35 @@ SLOT="0"
 
 KEYWORDS="~x86 ~sparc"
 
-RDEPEND="=dev-lang/python-2.1.3*"
+# This is for developers that wish to test Zope with virtual/python.
+# If this is a problem, let me know right away. --kutsuya@gentoo.org
+# I wondering if we need a USE flag for this. But I'm planning to have
+# a private environmental variable called PYTHON_SLOT_VERSION set in
+# ebuilds to build extensions for python2.1.
+
+if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
+	RDEPEND="virtual/python"
+	python='python'
+else
+	RDEPEND="=dev-lang/python-2.1.3*"
+	python='python2.1'
+fi
+	
 DEPEND="virtual/glibc
 		>=sys-apps/sed-4.0.5
-		app-admin/zope-config
 	   ${RDEPEND}"
+
+RDEPEND="app-admin/zope-config
+	${RDEPEND}"
 
 ZUID=zope
 ZGID=$(echo ${P} |sed -e "s:\.:_:g")
-ZSERVDIR="${DESTTREE}/share/zope/${PF}/"
-ZINSTDIR=$"/var/lib/zope/${ZGID}"
-CONFDIR="/etc/conf.d/"
+ZS_DIR=${ROOT}/usr/share/zope/
+ZI_DIR=${ROOT}/var/lib/zope/
+ZSERVDIR=${ZS_DIR}/${PF}/
+ZINSTDIR=${ZI_DIR}/${ZGID}
+CONFDIR=${ROOT}/etc/conf.d/
+RCNAME=zope-r2.initd
 
 # Narrow the scope of ownership/permissions.
 # Security plan:
@@ -43,36 +61,53 @@ setup_security()
     chmod -R o-rwx ${1}
 }
 
+#
+
 install_help()
 {
-	einfo "Need to setup an inituser (admin) before executing zope:"
+	einfo "Need to setup an inituser \(admin\) before executing zope:"
 	einfo "\tzope-config --zpasswd"
     einfo "To execute default Zope instance:"
 	einfo "\t/etc/init.d/${ZGID} start"
 }
 
-pkg_setup() {
+#
+
+pkg_setup() 
+{
+	if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
+		ewarn "WARNING: You set PYTHON_SLOT_VERSION=VIRTUAL. So this ebuild will"
+		ewarn "use python-2.2*. Zope Corp. only recommends using python-2.1.3 "
+		ewarn "with this version of zope. Emerge at your own risk."
+		sleep 12
+	fi	
     if ! groupmod ${ZGID} > /dev/null 2>&1 ; then
 		groupadd ${ZGID} || die "Can not add ${ZGID} group!"
     fi
     if ! id ${ZUID} > /dev/null 2>&1 ; then
-		useradd -d ${ZSERVDIR} -c "Zope dedicatedr-user" ${ZUID} \
+		useradd -d ${ZS_DIR} -c "Zope root user" -u 261 ${ZUID} \
 	|| die "Can not add ${ZUID} user!"
     fi
 }
+
+#
 
 src_unpack()
 {
 	unpack ${A}
 	# DateTime 2.6.0(only) rfc822 fix
-	einfo "Applying patches..."
+	einfo "Applying patch..."
 	bzcat ${FILESDIR}/${PV}/DateTime.py.bz2 \
 		> ${S}/lib/python/DateTime/DateTime.py	|| die "Patch failed"
 }
 
+#
+
 src_compile() {
-    python2.1 wo_pcgi.py || die "Failed to compile."
+    $python wo_pcgi.py || die "Failed to compile."
 }
+
+#
 
 src_install() {
 	dodoc LICENSE.txt README.txt
@@ -85,11 +120,11 @@ src_install() {
 
 	# Need to rip out the zinstance stuff out
     # but save as templates
-	mkdir .templates
+	mkdir -p .templates/import
+	cp import/README.txt .templates/import/
 	mv -f Extensions/ .templates/
-	mv -f import/ .templates/
 	mv -f var/ .templates/
-
+	
     # Add conf.d script.
     dodir /etc/conf.d
     echo "ZOPE_OPTS=\"-u zope\"" | \
@@ -98,10 +133,12 @@ src_install() {
     # Fill in environmental variables
     sed -i -e "/ZOPE_HOME=/ c\\ZOPE_HOME=${ZSERVDIR}\\ " \
         -e "/SOFTWARE_HOME=/ c\\SOFTWARE_HOME=${ZSERVDIR}/lib/python\\ " \
-	.templates/zope.confd
+		.templates/zope.confd
 
     # Add rc-script.
-    cp ${FILESDIR}/${PV}/zope-r1.initd .templates/zope.initd
+	#!! TODO: fill in $python in zope-r2.initd
+    sed -e "/python=/ c\\python=\"${python}\"\\ " ${FILESDIR}/${PV}/${RCNAME} \
+		> .templates/zope.initd
 
     # Copy the remaining contents of ${S} into the ${D}.
     dodir ${ZSERVDIR}
@@ -110,6 +147,9 @@ src_install() {
 	setup_security ${D}${ZSERVDIR} ${ZGID}
 }
 
+
+#
+
 pkg_postinst() 
 {
 	# Here we add our default zope instance.
@@ -117,6 +157,28 @@ pkg_postinst()
 		--zgid=${ZGID}
 	install_help
 }
+
+#
+
+pkg_postrm()
+{
+	# Remove the rcscript and confd file. Emerge won't do it because it 
+	# didn't add them. zope-config did added them. This will change when
+	# zope-config can remove instances.
+	
+	rm -f ${CONFDIR}/${ZGID} /etc/init.d/${ZGID}
+
+	
+	# Delete .default if this ebuild is the default. zprod-manager will
+	# have to handle a missing default;
+	local VERSION_DEF="$(zope-config --zidef-get)"
+	if [ "${ZGID}" = "$VERSION_DEF" ] ; then
+		rm -f ${ZI_DIR}/.default
+	fi
+}
+
+
+#
 
 pkg_config() 
 {	

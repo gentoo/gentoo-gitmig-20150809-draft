@@ -1,12 +1,22 @@
 # ChangeLog for net-www/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.10 2003/02/17 04:54:38 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/ChangeLog,v 1.11 2003/02/26 07:29:22 kutsuya Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords  
 
+*zope-2.6.0-r3 (25 Feb 2003)
+
+  25 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> zope-r2.initd : A bug fix 
+  revision mostly. Fixed dependencies. Changed SLOT back to 0, hopefully this 
+  won't cause too much trouble. Changed 'zope' user abit in pkg_seup().Added
+  RCNAME as a global varibale to ease revising the rcscripts. Fixed 'example
+  zope applications,' which was mention by Macros73 to be missing. Also added 
+  the option, for developers, of using virtual/python with 
+  PYTHON_SLOT_VERSION=VIRTUAL. 
+
 *zope-2.6.0-r2 (16 Feb 2003)
 
-  16 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : A major revison.
+  16 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : A major revision.
   New rcscript (along with zope-config) makes it possible to have several zope
   instances runing at the same time. Also has better PID management fixing 
   #14173. /etc/env.d/zope and /etc/conf.d/zope are now placed in 
