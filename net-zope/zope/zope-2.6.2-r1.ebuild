@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.2-r1.ebuild,v 1.1 2003/12/10 19:08:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.2-r1.ebuild,v 1.2 2003/12/13 12:37:36 lanius Exp $
 
 inherit eutils
 
@@ -31,10 +31,10 @@ else
 	python='python2.1'
 fi
 
-DEPEND="virtual/glibc
-		>=sys-apps/sed-4.0.5"
-
-RDEPEND=">=app-admin/zope-config-0.3"
+DEPEND="${RDEPEND}
+	virtual/glibc
+	>=sys-apps/sed-4.0.5
+	>=app-admin/zope-config-0.3"
 
 ZUID=zope
 ZGID=$(echo ${P} |sed -e "s:\.:_:g")
