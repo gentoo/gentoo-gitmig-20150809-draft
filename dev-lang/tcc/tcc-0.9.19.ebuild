@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.19.ebuild,v 1.1 2003/06/06 05:34:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.19.ebuild,v 1.2 2003/06/09 18:02:03 george Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ DESCRIPTION="A very small C compiler for ix86"
 HOMEPAGE="http://www.tinycc.org/"
 SRC_URI="http://fabrice.bellard.free.fr/tcc/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
 
@@ -38,7 +38,7 @@ src_install() {
 		libdir=${D}/usr/lib/ \
 		includedir=${D}/usr/include/ \
 		mandir=${D}/usr/share/man/ install || die
-	dodoc Changelog README TODO
+	dodoc Changelog README TODO VERSION COPYING
 	dohtml tcc-doc.html
 	mkdir ${D}/usr/share/doc/${PF}/examples
 	cp ex*.c ${D}/usr/share/doc/${PF}/examples/

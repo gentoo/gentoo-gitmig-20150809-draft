@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.7 2003/06/06 05:34:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.8 2003/06/09 18:02:03 george Exp $
+
+  09 Jun 2003; George Shapovalov <george@gentoo.org> tcc-0.9.19.ebuild :
+  changed LICENSE to LGPL-2.1 from GPL-2, seems to have changed recently.
+  Thanks to Brian Olsen <bnolsen@attbi.com> for notification
 
 *tcc-0.9.19 (05 May 2003)
 
