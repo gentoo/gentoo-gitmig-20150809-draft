@@ -1,5 +1,15 @@
-MD5 1667e48b8450f6e9150dcddf817c9660 ChangeLog 718
-MD5 5ef11878179d451985ee7157a416c27e metadata.xml 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 151db172c9493157c71687a4c9f35abd ChangeLog 789
+MD5 efeffbde29c22ca17eeb3a4c0d6032cb metadata.xml 222
 MD5 109674dddc89b0fb2a1f63ce188551ec spca50x-0.30.ebuild 1109
 MD5 a6035d449aa7f7e634a4895a657a1557 files/digest-spca50x-0.30 67
 MD5 1232527e39e754c862301ea81cf447fd files/spca50x-0.30-gentoo.patch 354
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB1f5J0K3RJaeXx6cRApbNAKCv3+bDIA2Kk1h3A4dyJ1OxfoiI3wCffZcL
+x18Nge9QSoOKtA6+JhUx24w=
+=nBFz
+-----END PGP SIGNATURE-----
