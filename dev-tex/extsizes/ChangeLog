@@ -1,0 +1,9 @@
+# ChangeLog for dev-tex/extsizes
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/extsizes/ChangeLog,v 1.1 2004/06/30 21:22:22 pclouds Exp $
+
+*extsizes-1.0 (01 Jul 2004)
+
+  01 Jul 2004; <pclouds@gentoo.org> extsizes-1.0.ebuild, metadata.xml:
+  New package, submitted by Adam Tenderhol <a-tenderholt@stanford.edu> #47164
+
