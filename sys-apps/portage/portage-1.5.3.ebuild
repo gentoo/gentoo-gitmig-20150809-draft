@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.1 2001/08/03 06:24:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.2 2001/08/04 02:10:10 pete Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -28,8 +28,11 @@ src_install() {
 
 	#python modules
 	cd ${FILESDIR}/${PPV}/pym
-	insinto /usr/lib/python2.0
+	insinto /usr/lib/python2.0/site-packages
 	doins xpak.py portage.py
+	# we gotta compile these modules
+	try spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
+	try spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
 	
 	#binaries and scripts
 	dodir /usr/lib/portage/bin
@@ -67,6 +70,7 @@ pkg_postinst() {
 		cd ${ROOT}/etc
 		ln -s /usr/portage/profiles/default make.profile
 	fi
+	mv ${D}/usr/lib/python2.0/portage.py ${D}/usr/lib/python2.0/portage.py.bak
+	mv ${D}/usr/lib/python2.0/xpak.py ${D}/usr/lib/python2.0/xpak.py.bak
+	rm -f ${D}/usr/lib/python2.0/{portage,xpak}.py{c,o}
 }
-
-
