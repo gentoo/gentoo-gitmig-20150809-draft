@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.5.ebuild,v 1.1 2001/10/30 02:22:37 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.5.ebuild,v 1.2 2001/10/30 02:26:36 lordjoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xchat irc client"
@@ -49,6 +49,7 @@ src_compile() {
 		done
 	fi
 	
+	patch -p1 < ${FILESDIR}/xc185fixbnc.diff
 	emake || die
 }
 
