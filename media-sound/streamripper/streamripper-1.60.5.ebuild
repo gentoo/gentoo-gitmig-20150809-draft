@@ -1,22 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.5.ebuild,v 1.1 2004/06/15 07:26:16 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.5.ebuild,v 1.2 2004/06/15 13:59:16 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Extracts and records individual MP3 file tracks from shoutcast streams"
 HOMEPAGE="http://streamripper.sourceforge.net/"
 SRC_URI="http://streamripper.sourceforge.net/files/${P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
 RDEPEND="media-libs/libmad"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.8"
 
@@ -37,5 +34,5 @@ src_unpack() {
 
 src_install() {
 	make install DESTDIR=${D} || die
-	dodoc COPYING TODO README THANKS readme_xfade.txt
+	dodoc TODO README THANKS readme_xfade.txt
 }
