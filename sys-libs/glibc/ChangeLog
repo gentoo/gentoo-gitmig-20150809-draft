@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.132 2004/02/24 18:34:52 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.133 2004/02/26 18:56:23 bazik Exp $
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> glibc-2.3.2-r9.ebuild:
+  Stable on sparc (was about time).
 
   24 Feb 2004; Alexander Gabert <pappy@gentoo.org>
   glibc-2.3.3_pre20040207.ebuild:
