@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10.ebuild,v 1.7 2003/09/08 20:40:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.1 2003/09/08 20:40:19 usata Exp $
 
 inherit eutils
 
@@ -18,7 +18,18 @@ DEPEND="virtual/x11
 	media-libs/libpng
 	media-libs/t1lib
 	>=media-libs/tiff-3.5
-	pdflib? ( >=media-libs/pdflib-3.0.2 )"
+	pdflib? ( >=media-libs/pdflib-3.0.2 )
+	>=sys-apps/sed-4
+	|| ( net-www/mozilla
+		net-www/mozilla-firebird
+		net-www/mozilla-firebird-bin
+		net-www/mozilla-firebird-cvs
+		net-www/opera
+		kde-base/kdebase
+		net-www/galeon
+		net-www/dillo
+		net-www/netscape-communicator
+		net-www/netscape-navigator )"
 
 src_unpack() {
 	unpack ${A}
@@ -29,6 +40,33 @@ src_unpack() {
 }
 
 src_compile() {
+
+	local gracehelpviewer
+
+	if has_version 'net-www/mozilla' ; then
+		gracehelpviewer="mozilla %s"
+	elif has_version 'net-www/mozilla-firebird' \
+		|| has_version 'net-www/mozilla-firebird-bin' \
+		|| has_version 'net-www/mozilla-firebird-cvs' ; then
+		gracehelpviewer="MozillaFirebird %s"
+	elif has_version 'net-www/opera' ; then
+		gracehelpviewer="opera %s"
+	elif has_version 'kde-base/kdebase' ; then
+		gracehelpviewer="konqueror %s"
+	elif has_version 'net-www/galeon' ; then
+		gracehelpviewer="galeon %s"
+	elif has_version 'net-www/dillo' ; then
+		gracehelpviewer="dillo %s"
+	else
+		gracehelpviewer="netscape %s"
+	fi
+
+	cp ${FILESDIR}/10grace ${T}/10grace
+	echo GRACE_HELPVIEWER="\"${gracehelpviewer}\"" >> ${T}/10grace
+
+	sed -i -e "s%doc/%/usr/share/doc/${PF}/html/%g" src/*
+	sed -i -e "s%examples/%/usr/share/doc/${PF}/examples/%g" src/xmgrace.c
+
 	econf \
 		--with-grace-home=/usr/share/grace \
 		`use_enable pdflib pdfdrv` \
@@ -64,6 +102,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make GRACE_HOME=${D}/usr/share/grace \
 		PREFIX=${D}/usr \
 		install || die
@@ -76,5 +115,5 @@ src_install() {
 	rm -f ${D}/usr/share/doc/${PF}/html/*.1
 
 	insinto /etc/env.d
-	doins ${FILESDIR}/10grace
+	doins ${T}/10grace
 }
