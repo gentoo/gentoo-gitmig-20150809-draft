@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.2.3.ebuild,v 1.4 2004/07/22 05:17:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.2.3.ebuild,v 1.5 2004/08/09 12:39:46 gmsoft Exp $
 inherit kde-dist
 
 IUSE=""
 DESCRIPTION="KDE SDK: kbabel, ..."
-KEYWORDS="x86 ~sparc amd64 ~ppc"
+KEYWORDS="x86 ~sparc amd64 ~ppc hppa"
 
 DEPEND="!dev-util/umbrello
 	!dev-util/kcachegrind
