@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2005.0/packages,v 1.1 2005/01/20 12:38:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2005.0/packages,v 1.2 2005/01/21 06:10:20 geoman Exp $
 
 # mips64 n32 packages
 
@@ -16,8 +16,8 @@
 
 # There is apparently something very funny in gcc-3.4.2 on n32.
 # Something related to GOT (global offset table).  Have to figure 
-# this out eventually.
-*<sys-devel/gcc-3.4.2
+# this out eventually. UPDATE: gcc-3.4.3 seems to work, unmasking
+#*<sys-devel/gcc-3.4.2
 
 # n32 needs a relatively modern glibc - Portage Atoms Broke?
 #-~sys-libs/glibc-2.3.4.20040808
