@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.1.17-r1.ebuild,v 1.1 2000/11/17 01:50:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.1.17-r1.ebuild,v 1.2 2000/11/17 10:11:33 achim Exp $
 
 A=${P}-patched.tar.gz
 S=${WORKDIR}/${P}-patched/build_unix
@@ -9,7 +9,7 @@ DESCRIPTION="Berkeley DB for transaction support in MySQL"
 SRC_URI="ftp://mysql.valueclick.com/mysql/Downloads/db/${A}
 	 http://download.sourceforge.net/pub/mirrors/mysql/Downloads/db/${A}"
 HOMEPAGE="http://www.mysql.com"
-DEPEND=">=sys-libs/glibc-2.2 !sys-libs/glibc-2.1.3 =sys-libs/db-1.8.5"
+DEPEND=">=sys-libs/glibc-2.2 !sys-libs/glibc-2.1.3 =sys-libs/db-1.85"
 
 src_compile() {
 
@@ -34,7 +34,7 @@ src_compile() {
 src_install () {
     cd ${S}
 	try make libdb=libdb-3.1.a libcxx=libcxx_3.1.a prefix=${D}/usr install
-    dolib.a libdb-3.1.a libdb_cxx-3.1.a
+    	dolib.a libdb-3.1.a libdb_cxx-3.1.a
 	dolib libdb-3.1.la libdb_cxx-3.1.la
 	cd ..
 	dodoc README LICENSE
@@ -42,5 +42,6 @@ src_install () {
 	dodir usr/include/db3
 	cd ${D}/usr/include
 	mv *.h db3
+	ln db3/db.h db.h
 }
 
