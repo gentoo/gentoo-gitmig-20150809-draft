@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.2 2004/03/07 18:48:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.3 2004/04/10 13:23:59 mr_bones_ Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -58,7 +58,7 @@ SRC_URI=""
 # --- end ebuild-configurable settings ---
 
 # add tla to deps
-newdepend "dev-util/tla"
+DEPEND="dev-util/tla"
 
 # registers archives mentioned in $ETLA_ARCHIVES
 tla_register_archives() {
