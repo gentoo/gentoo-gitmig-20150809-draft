@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/orsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.13 2004/10/15 16:19:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.14 2004/11/22 23:46:19 kingtaco Exp $
+
+  22 Nov 2004; Mike Doty <kingtaco@gentoo.org> :
+  ~amd64 incorrectly added.
 
   15 Oct 2004; David Holm <dholm@gentoo.org> orsa-0.6.1.ebuild:
   Added to ~ppc.
