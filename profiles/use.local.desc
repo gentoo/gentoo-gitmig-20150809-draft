@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.262 2004/03/06 02:18:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.263 2004/03/06 08:38:30 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -97,6 +97,7 @@ games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
+games-engines/exult:timidity - Add sound support (timidity)
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'The Reckoning' Mission Pack (xatrix)
