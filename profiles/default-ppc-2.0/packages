@@ -160,8 +160,8 @@ net-misc/rsync
 *sys-apps/netkit-base
 *sys-apps/procps
 *sys-apps/psmisc
-*sys-apps/raidtools
-*sys-apps/reiserfsprogs
+sys-apps/raidtools
+sys-apps/reiserfsprogs
 *sys-apps/sed
 *sys-apps/setserial
 *sys-apps/sh-utils
