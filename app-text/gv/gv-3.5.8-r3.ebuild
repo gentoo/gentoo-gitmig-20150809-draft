@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r3.ebuild,v 1.1 2004/04/08 10:36:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r3.ebuild,v 1.2 2004/04/27 20:42:40 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="standard ghostscript frontend used by programs like LyX"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
