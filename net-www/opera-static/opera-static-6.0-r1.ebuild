@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.0-r1.ebuild,v 1.1 2002/07/04 16:52:42 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera-static/opera-static-6.0-r1.ebuild,v 1.2 2002/07/04 17:00:43 agenkin Exp $
 
 DESCRIPTION="Opera web browser, version 6.0 Final, statically built. "
 HOMEPAGE="http://www.opera.com/linux/"
@@ -40,7 +40,7 @@ src_install() {
 	doins images/opera.xpm
 	insinto /etc/X11/applnk/Internet 
 	doins images/opera.xpm
-	insinto /usr/share/pixmaps 	
+	insinto /usr/share/pixmaps	
 	doins images/opera.xpm
 	
 	if [ "`use gnome`" ]
@@ -52,8 +52,8 @@ src_install() {
 	insinto /etc/env.d
 	doins ${FILESDIR}/10opera6
 
-        # Fix up the wrapper script /opt/opera/share/bin/opera
-        cd "${D}"/opt/opera/share/bin
-        sed -e "s|$D||g" < opera > opera.hacked
-        mv opera.hacked opera
+	# Fix up the wrapper script /opt/opera/share/bin/opera
+	cd "${D}"/opt/opera/share/bin
+	sed -e "s|$D||g" < opera > opera.hacked
+	mv opera.hacked opera
 }
