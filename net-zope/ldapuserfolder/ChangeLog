@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/ldapuserfolder
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.5 2004/09/11 21:42:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.6 2004/10/23 22:41:10 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -ldapuserfolder-2.0.ebuild,
+  -ldapuserfolder-2.1_beta3.ebuild, ldapuserfolder-2.4.ebuild:
+  remove old versions
 
 *ldapuserfolder-2.4 (11 Sep 2004)
 
