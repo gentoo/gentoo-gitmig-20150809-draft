@@ -1,37 +1,46 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.1_beta04.ebuild,v 1.1 2003/06/13 17:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.1_beta04.ebuild,v 1.2 2003/10/09 07:34:15 mr_bones_ Exp $
 
 MY_PV=${PV/./}; MY_PV=${MY_PV/_/}
-DESCRIPTION="powerful security toolkit for adding encryption to software"
+DESCRIPTION="Powerful security toolkit for adding encryption to software"
 HOMEPAGE="http://www.cs.auckland.ac.nz/~pgut001/cryptlib/"
 SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/beta/cl${MY_PV}.zip
 	doc? ( ftp://ftp.franken.de/pub/crypt/cryptlib/beta/manual.pdf )"
 
 LICENSE="Sleepycat"
-SLOT="0"
 KEYWORDS="x86"
+SLOT="0"
+
 IUSE="static doc"
 
 S=${WORKDIR}
 
 src_unpack() {
-	# cant use unpack cause we need the '-a' option
-	unzip -qoa ${DISTDIR}/${A}
+	# Can't use unpack because we need the '-a' option
+	unzip -qoa ${DISTDIR}/cl${MY_PV}.zip
 }
 
 src_compile() {
 	export SCFLAGS="-fpic -c -D__UNIX__ -DNDEBUG -I. ${CFLAGS}"
 	export CFLAGS="-c -D__UNIX__ -DNDEBUG -I. ${CFLAGS}"
 	if [ `use static` ] ; then
-		make CFLAGS="${CFLAGS}" SCFLAGS="${SCFLAGS}" || die "could not make static"
+		emake CFLAGS="${CFLAGS}" SCFLAGS="${SCFLAGS}" || \
+			die "emake static failed"
 	fi
-	make shared CFLAGS="${CFLAGS}" SCFLAGS="${SCFLAGS}" || die "could not make shared"
+	emake shared CFLAGS="${CFLAGS}" SCFLAGS="${SCFLAGS}" || \
+		die "emake shared failed"
 }
 
 src_install() {
-	dolib.so libcl.so*
-	use static && dolib.a libcl.a
-	insinto /usr/include ; doins cryptlib.h
-	dodoc README
+	dolib.so libcl.so*              || die "dolib.so failed"
+	if [ `use static` ] ; then
+		dolib.a libcl.a             || die "dolib.a failed"
+	fi
+	insinto /usr/include
+	doins cryptlib.h                || die "doins failed"
+	dodoc README                    || die "dodoc failed"
+	if [ `use doc` ] ; then
+		dodoc ${DISTDIR}/manual.pdf || die "dodoc failed (manual.pdf)"
+	fi
 }

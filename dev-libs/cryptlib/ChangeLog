@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.1 2003/06/13 17:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.2 2003/10/09 07:34:15 mr_bones_ Exp $
+
+  09 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  cryptlib-3.1_beta04.ebuild:
+  tidy; more error messages; actually install the manual if USE=doc
 
 *cryptlib-3.1_beta04 (13 Jun 2003)
 
