@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.9 2002/12/13 10:56:21 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.10 2003/01/02 09:46:39 aliz Exp $
+
+*xpdf-2.01 (02 Jan 2003)
+
+  02 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> xpdf-2.01.ebuild :
+  Security update.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
