@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ab9f1188b023147cd5cf48c8dbdcf49 ChangeLog 3180
+MD5 a7d2e7bfdd4f232cf5df3f619fc2515d ChangeLog 3273
 MD5 3de560fdc942502ab6e84e4e1b32a3aa gputils-0.12.2.ebuild 773
+MD5 1562ac57d5bd1be92b974227327ef26d gputils-0.12.3.ebuild 769
 MD5 249f9e9cf93a8d00daf939456ad7e22f gputils-0.12.4.ebuild 746
-MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 24d7c167879033e836eb6b921f87c6aa gputils-0.12.0.ebuild 720
-MD5 9aed14d423df781b213e58da5e62c40a gputils-0.12.3.ebuild 773
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 bdb19e884f01ed21113a7470d264be0d files/digest-gputils-0.12.2 67
 MD5 63155d52299b46085d5faac1605d958f files/digest-gputils-0.12.3 67
 MD5 1511ba91e00581e4559de7f5f07d30f1 files/digest-gputils-0.12.4 67
 MD5 2890ceb3d6cb92db4b4bc4f944ad97f3 files/digest-gputils-0.12.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBXIicmdTrptrqvGERAr/aAJ0T3j0OkSV+9vC+oBFCLsn57T4RvACgkqK8
-X3zmC+EkSCMNS++EH1zJ+gQ=
-=9E7S
------END PGP SIGNATURE-----
