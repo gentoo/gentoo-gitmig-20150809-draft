@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3094 2004/08/24 14:16:29 lucass Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3095 2004/08/24 14:59:25 foser Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <foser@gentoo.org> (24 Aug 2004)
+# up for removal (#61417)
+net-misc/gnupsc
 
 # <carlo@gentoo.org> (23 Aug 2004)
 # upstream development suspended
@@ -89,10 +93,6 @@ dev-util/mono-debugger
 # <foser@gentoo.org> (11 Aug 2004)
 # proposed gnome 2.8 module
 net-misc/vino
-
-# <foser@gentoo.org> (Aug 11 2004)
-# Unmaintained pack, up for removal (#50375)
-gnome-extra/nautilus-gtkhtml
 
 # <nakano@gentoo.org> (Aug 10 2004)
 # PostgreSQL-8* are still beta versions for testing purposes, 
@@ -678,10 +678,6 @@ app-emacs/monk
 # <george@gentoo.org> (15 Oct 2002)
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
-
-# <foser@gentoo.org> (13 Oct 2002)
-# gtkmm-addons is broken for gcc32
-x11-libs/gtkmm-addons
 
 # <kain@kain.org> (17 Sep 2002)
 # gcc 3.2 and kerberos v5 fixes for cyrus-sasl; still needs wider testing
