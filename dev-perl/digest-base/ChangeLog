@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/digest-base
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.2 2003/12/25 20:10:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.3 2003/12/28 05:05:52 iluxa Exp $
+
+  27 Dec 2003; Ilya Volynets <iluxa@gentoo.org> digest-base-1.05.ebuild:
+  Marked alpha stable to fix dependancy problem for dev-perl/Digest-MD5
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> digest-base-1.05.ebuild:
   Marked stable on sparc to fix the broken dependencies of dev-perl/Digest-MD5
