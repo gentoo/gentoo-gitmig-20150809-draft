@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.1 2004/07/10 09:39:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.2 2004/07/10 20:55:37 mr_bones_ Exp $
 
 inherit eutils gcc flag-o-matic games
 
@@ -27,7 +27,7 @@ HACKDIR="${GAMES_DATADIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 
-	# This copies the /sys/unix Makefile.*s to their correct places for 
+	# This copies the /sys/unix Makefile.*s to their correct places for
 	# seding and compiling.
 	cd "${S}/sys/unix"
 	source setup.sh || die
@@ -69,7 +69,7 @@ src_compile() {
 		|| qtver=2
 	cd ${S}/src
 	append-flags -I../include
-	
+
 	emake \
 		QTDIR=/usr/qt/${qtver} \
 		CC="$(gcc-getCC)" \
