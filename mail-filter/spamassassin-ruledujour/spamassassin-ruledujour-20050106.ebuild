@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/spamassassin-ruledujour-20050106.ebuild,v 1.1 2005/01/07 06:13:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/spamassassin-ruledujour-20050106.ebuild,v 1.2 2005/01/07 06:13:48 robbat2 Exp $
 
 DESCRIPTION="SpamAssassin - Rules Du Jour & My Rules Du Jour"
 HOMEPAGE="http://www.exit0.us/index.php/RulesDuJour http://www.rulesemporium.com/rules.htm"
@@ -29,7 +29,7 @@ src_install() {
 	# new config files
 	insinto /etc/rulesdujour
 	doins bin/config bin/rulesets
-	
+
 	# rules_du_jour itself
 	exeinto ${SPAMASSASSIN_LIBDIR}
 
