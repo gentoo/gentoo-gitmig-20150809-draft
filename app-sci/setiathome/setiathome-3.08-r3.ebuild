@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r1.ebuild,v 1.12 2004/06/24 22:17:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.08-r3.ebuild,v 1.1 2004/10/01 14:22:30 phosphan Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -45,7 +45,9 @@ src_install () {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/seti-init.d-r1 setiathome
 	insinto /etc/conf.d ; newins ${FILESDIR}/seti-conf.d-r1 setiathome
-	echo "#SETIATHOME_DIR=${I}">> ${D}/etc/conf.d/setiathome
+
+	exeinto /var/lib/setiathome
+	newexe ${FILESDIR}/setiathome-wrapper-r1 setiwrapper
 }
 
 pkg_postinst () {

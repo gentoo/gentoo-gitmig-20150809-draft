@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.22 2004/06/24 22:17:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.23 2004/10/01 14:22:30 phosphan Exp $
+
+  01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/setiathome-wrapper-r1, -setiathome-3.08-r1.ebuild,
+  -setiathome-3.08-r2.ebuild:
+  Fixing bug #65638 (additional threads rapidly fill logfiles)
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
   setiathome-3.03-r1.ebuild, setiathome-3.08-r1.ebuild,
