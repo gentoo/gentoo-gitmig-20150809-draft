@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.2-r1.ebuild,v 1.1 2005/01/13 15:14:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.2-r1.ebuild,v 1.2 2005/01/21 21:16:31 ticho Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_install () {
 	if use smtp; then
 		dosbin hotsmtpd/hotsmtpd
 		insinto /etc/xinetd.d
+		sed -i -e 's:^disable = no:disable = yes:' hotsmtpd/hotsmtpd.xinetd
 		newins hotsmtpd/hotsmtpd.xinetd hotsmtpd
 	fi
 
@@ -37,26 +38,20 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo ""
-	einfo " By default daemons that use xinetd are not started "
-	einfo "     automatically in gentoo"
+	echo
+	einfo " By default daemons that use xinetd are not started automatically in gentoo"
 	einfo " To activate do the following steps: "
 	einfo " - Edit the file /etc/xinetd.d/hotwayd and change disable "
 	einfo "   from yes to no "
-	einfo " - Add the following line to /etc/services: "
-	einfo "   hotwayd         110/tcp "
-	einfo " - Note: if you already have a daemon serving port 110 (the "
-	einfo "   default pop3 port); then change the port number to something "
-	einfo "   else; also change the port number in hotwayd "
-	einfo " - If you already had xinetd up and running, restart with "
-	einfo "   # /etc/init.d/xinetd restart "
-	einfo "   or "
-	einfo "   If the emerge also pulled in the xinetd package for you, do "
-	einfo "   # rc-update add xinetd default "
-	einfo "   # /etc/init.d/xinetd start "
-	einfo ""
+	einfo " - Restart xinetd with \`/etc/init.d/xinetd restart\` "
+	echo
 	if use smtp; then
 		einfo "You chose to install hotsmtpd, a SMTP proxy for hotmail. Please"
 		einfo "Configure /etc/xinetd.d/hotsmtpd and restart xinetd to start using it."
+		echo
+	fi
+	einfo "Set your e-mail applications to use port 1100 for receiving email."
+	if use smtp; then
+		einfo "Use port 2500 for sending email."
 	fi
 }
