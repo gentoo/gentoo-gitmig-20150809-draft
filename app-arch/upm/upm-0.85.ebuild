@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.6 2003/09/05 22:49:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.7 2003/10/03 15:38:11 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="4F"
 
 SLOT="0"
 
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 
 IUSE=""
 

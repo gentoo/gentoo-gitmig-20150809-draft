@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/upm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/ChangeLog,v 1.4 2003/03/28 11:00:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/ChangeLog,v 1.5 2003/10/03 15:38:11 agriffis Exp $
+
+  03 Oct 2003; Aron Griffis <agriffis@gentoo.org> upm-0.85.ebuild:
+  Stable on alpha
 
 *upm-0.85 (27 Dec 2002)
 
