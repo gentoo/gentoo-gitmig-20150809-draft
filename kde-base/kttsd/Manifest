@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a753d9088ffe4591bb2222232d4cdecf kttsd-3.4.0.ebuild 727
-MD5 5ebf9468803d4aac4373957178661f8a kttsd-3.4.0_rc1.ebuild 719
-MD5 bf48c0746190aa7640d4b5b32e44dc36 ChangeLog 973
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 bf48c0746190aa7640d4b5b32e44dc36 ChangeLog 973
+MD5 5ebf9468803d4aac4373957178661f8a kttsd-3.4.0_rc1.ebuild 719
+MD5 400c015e774cb3aa292bed18749f4dff kttsd-3.4.0.ebuild 732
 MD5 9bcbcb53359a15a0ba58301d37537222 files/digest-kttsd-3.4.0 76
 MD5 5f0be7b9eb006bf39c7a02c98c99d4f4 files/digest-kttsd-3.4.0_rc1 419
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwGpUpKYMelfdYERAvtCAJsHUeBdI+6vA22pPmxe/72i6xDX+QCfRs1n
-IN3PwC6oqZWhj5e9DJk0VuI=
-=GgAw
------END PGP SIGNATURE-----
