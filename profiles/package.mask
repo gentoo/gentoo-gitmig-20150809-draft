@@ -30,6 +30,7 @@ media-libs/nurbs++
 # azarah - 28 May 2002
 =x11-base/xfree-4.2.0-r11
 >=net-www/mozilla-1.0_rc3-r2
+=net-www/mozilla-1.0_rc3-r50
 
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
 # If you unmask mozilla, please do so to galeon and nautilus as well
