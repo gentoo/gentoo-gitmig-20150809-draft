@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta.ebuild,v 1.3 2003/04/09 23:05:32 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta.ebuild,v 1.4 2003/04/09 23:12:17 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -203,7 +203,7 @@ src_unpack() {
 	rm STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 	cd ${S}
-#	epatch ${FILESDIR}/${PV}/openoffice-xrender.patch
+	epatch ${FILESDIR}/${PV}/openoffice-xrender.patch
 	
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
