@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.3 2003/03/28 14:23:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.4 2003/04/25 08:58:45 phosphan Exp $
+
+*qwt-0.4.2_pre20030129 (25 Apr 2003)
+
+  25 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> 
+  qwt-0.4.2_pre20030129.ebuild :
+  Modified ebuild provided by Caleb Tennis <caleb@gentoo.org> for
+  pre-release of the next qwt version.
 
   28 Mar 2003; Patrick Kursawe <phosphan@gentoo.org>
   qwt-0.4.1-r1.ebuild :
