@@ -13,11 +13,11 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-22.0.0 0
 MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
 MD5 39e2f957cdbcb0ae028bb9b94312d85b files/emacs-21.3.50.desktop 206
-MD5 56ef36e51f5ae1399583055f028144b5 files/50emacs-21.3.50.envd 40
+MD5 ffdd28353d4bb08ee9ec653650458a40 files/50emacs-21.3.50.envd 39
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBX7TWVWNWqTUmv+0RAkz5AJ45/biXGmiSVOH2VgOZ9V2eZciz8QCfZMRY
-8D0qvU3Bn21M0p74OyK4dKw=
-=n7Jh
+iD8DBQFBX9uUVWNWqTUmv+0RAmXJAJ9lpH6BfluHrVWMmXM7re36FYGizgCeIfkY
+zU+UY8wOmQQ8fTjZKf0UXnk=
+=2zu7
 -----END PGP SIGNATURE-----
