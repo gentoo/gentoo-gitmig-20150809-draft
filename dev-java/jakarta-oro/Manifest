@@ -1,4 +1,14 @@
-MD5 f11c3507dfa5a195969bd2683d2eb513 jakarta-oro-2.0.8-r1.ebuild 1414
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5104522c74e46a8ab10542385c25f7d7 jakarta-oro-2.0.8-r1.ebuild 1412
 MD5 ad6333eb9e79cce98eeecbd01093bf22 ChangeLog 630
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7169b855e01ca0f635579587874f6868 files/digest-jakarta-oro-2.0.8-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUULu/rLF9B432nYRAt6TAKChkz2lf/+SN8kgd3j33lcx2fCNuwCfRtfT
+VewEO/4uITeEQ8Qfy5/sask=
+=Os6P
+-----END PGP SIGNATURE-----
