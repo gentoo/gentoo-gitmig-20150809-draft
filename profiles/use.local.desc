@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.685 2004/10/16 14:01:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.686 2004/10/17 01:53:33 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -543,6 +543,8 @@ net-www/mozilla:mozplaintext - Disallow HTML editing for email
 net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
+net-www/nvu:xprint - placeholder until mozilla eclass is modified for nvu
+net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
