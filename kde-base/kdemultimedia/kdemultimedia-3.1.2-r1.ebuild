@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.2-r1.ebuild,v 1.5 2003/07/16 16:45:25 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.2-r1.ebuild,v 1.6 2003/07/19 07:51:42 gmsoft Exp $
 inherit kde-dist flag-o-matic 
 
 IUSE="nas esd motif slang tcltk oggvorbis cdr"
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc hppa"
 
 newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/libvorbis-1.0_beta4
-	>=media-video/xanim-2.80.1
+	!hppa? ( >=media-video/xanim-2.80.1 )
 	nas? ( >=media-libs/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	motif? ( virtual/motif )
@@ -55,6 +55,8 @@ use cdr		|| KDE_REMOVE_DIR="kaudiocreator"
 
 # turn off kaudiocreator if cdr isn't in use
 [ -z "`use cdr`" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator"
+
+[ "${ARCH}" = "hppa" ] && KDE_REMOVE_DIR="$KDE_REMOVE_DIR kaudiocreator kscd mpeglib mpeglib_artsplug kioslave"
 
 myconf="$myconf $myaudio $myinterface"
 
