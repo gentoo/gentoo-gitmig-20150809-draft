@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-0.9.8.ebuild,v 1.1 2004/12/21 17:02:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-0.9.8.ebuild,v 1.2 2004/12/21 19:00:34 hanno Exp $
 
 DESCRIPTION="Generic Online Banking Interface"
-HOMEPAGE="http://www.aqmaniac.de/aqbanking/"
+HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
 SRC_URI="mirror://sourceforge/aqbanking/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
