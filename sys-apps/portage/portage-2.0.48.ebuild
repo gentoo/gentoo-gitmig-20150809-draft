@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48.ebuild,v 1.2 2003/05/20 09:56:27 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48.ebuild,v 1.3 2003/05/20 18:26:38 carpaski Exp $
 
 IUSE="build"
 
@@ -16,6 +16,12 @@ KEYWORDS="alpha arm hppa mips ppc sparc x86"
 #KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/pym
+	gzip -dc ${FILESDIR}/output.py.diff.gz | patch -p0
+}
 
 src_compile() {
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
