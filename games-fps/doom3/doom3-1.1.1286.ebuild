@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.1.1282.ebuild,v 1.5 2004/11/09 21:52:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.1.1286.ebuild,v 1.1 2004/11/26 21:28:57 wolf31o2 Exp $
 
 inherit games eutils
 
 DESCRIPTION="Doom III - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.doom3.com/"
 SRC_URI="ftp://ftp.idsoftware.com/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run
-	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run
-	mirror://gentoo/doom3.png"
+	ftp://dl.xs4all.nl/pub/mirror/idsoftware/idstuff/${PN}/linux/${PN}-linux-${PV}.x86.run"
 
 LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-IUSE="cdinstall opengl dedicated"
+IUSE="cdinstall alsa opengl dedicated"
 RESTRICT="nostrip"
 
 DEPEND="app-arch/bzip2
@@ -21,6 +20,7 @@ DEPEND="app-arch/bzip2
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )
+	alsa? ( >=media-libs/alsa-lib-1.0.6 )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-nvidia	)"
@@ -46,10 +46,17 @@ src_install() {
 	dodir ${dir}
 
 	insinto ${dir}
-	doins License.txt README version.info
+	doins License.txt README version.info doom3.png
 	exeinto ${dir}
 	doexe libgcc_s.so.1 libstdc++.so.5 || die "doexe libs"
-	doexe bin/Linux/x86/glibc-2.1/doom{,ded}.x86 || die "doexe exes"
+	doexe openurl.sh || die "openurl.sh"
+	if use x86; then
+		doexe bin/Linux/x86/doom{,ded}.x86 || die "doexe x86 exes"
+	elif use amd64; then
+		doexe bin/Linux/amd64/doom{,ded}.x86 || die "doexe amd64 exes"
+	else
+		die "Cannot copy executables!"
+	fi
 
 	insinto ${dir}/base
 	doins base/* || die "doins base"
@@ -73,7 +80,7 @@ src_install() {
 	use cdinstall && find ${Ddir} -exec touch '{}' \;
 
 	insinto /usr/share/pixmaps
-	doins ${DISTDIR}/doom3.png
+	doins doom3.png
 
 	prepgamesdirs
 	make_desktop_entry doom3 "Doom III" doom3.png
@@ -92,11 +99,5 @@ pkg_postinst() {
 		echo
 		einfo "To play the game run:"
 		einfo " doom3"
-	fi
-
-	# IA32 Emulation required for amd64
-	if use amd64 ; then
-		echo
-		ewarn "NOTE: IA32 Emulation must be compiled into your kernel for Doom3 to run."
 	fi
 }

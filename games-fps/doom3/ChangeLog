@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/doom3
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.5 2004/11/09 22:44:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.6 2004/11/26 21:28:57 wolf31o2 Exp $
+
+*doom3-1.1.1286 (26 Nov 2004)
+
+  26 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> -files/doom3,
+  -doom3-1.1.1282.ebuild, +doom3-1.1.1286.ebuild:
+  Version bumped to new patch-level with alsa and amd64 support.
 
   09 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest
