@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pmw
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.1 2002/03/19 17:45:32 agenkin Exp $
+
+*pmw-0.8.5 (<Mar 19, 2002>)
+
+  19 Mar 2002; Arcady Genkin <agenkin@thpoon.com> pmw-0.8.5.ebuild :
+  
+  Initial version of the package.
