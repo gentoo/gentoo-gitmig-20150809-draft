@@ -1,11 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.36 2004/07/13 09:00:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.37 2004/07/13 09:02:28 seemant Exp $
 
 *xterm-192 (13 Jul 2004)
 
   13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +xterm-192.ebuild:
-  Version bump, thanks to Donnie Berkholtz <spyderous@gentoo.org> in #gentoo-dev
+  Version bump, thanks to Donnie Berkholz <spyderous@gentoo.org> in #gentoo-dev
 
   10 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-191.ebuild:
   x86
