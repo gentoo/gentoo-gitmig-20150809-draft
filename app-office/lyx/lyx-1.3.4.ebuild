@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.1 2004/02/21 20:04:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.2 2004/02/21 20:25:10 usata Exp $
 
 inherit kde-functions
 
@@ -107,4 +107,13 @@ pkg_postinst() {
 	einfo "or, read http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html"
 	einfo "for instructions on using lyx's own preferences dialog to equal effect."
 	einfo "3. use lyx's qt interface (compile with USE=qt) for maximum effect."
+	einfo ""
+
+	if [ ! -n "`use qt`" ] ; then
+	einfo "================"
+	einfo ""
+	einfo "If you have a multi-head setup not using xinerama you can only use lyx"
+	einfo "on the 2nd head if not using qt (maybe due to a xforms bug). See bug #40392."
+	einfo ""
+	fi
 }
