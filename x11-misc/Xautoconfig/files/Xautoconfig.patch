@@ -1,0 +1,217 @@
+*** Xautoconfig.c.old	Mon Jun  7 17:27:37 2004
+--- Xautoconfig.c	Mon Jun  7 19:00:54 2004
+***************
+*** 1,7 ****
+! /* Xautoconfig: versatile XF86Config creation tool for powerpc
+   *
+   * Copyright (C) 2002-2003 Dan Burcaw <dburcaw@terrasoftsolutions.com>
+   * Copyright (C) 1999-2001 Tom Rini <trini@kernel.crashing.org>
+   *
+   */
+  
+--- 1,8 ----
+! /* Xautoconfig: versatile XF86Config/xorg.conf creation tool for powerpc
+   *
++  * Copyright (C) 2004 Matt Jarjoura <matt@tasonline.com>
+   * Copyright (C) 2002-2003 Dan Burcaw <dburcaw@terrasoftsolutions.com>
+   * Copyright (C) 1999-2001 Tom Rini <trini@kernel.crashing.org>
+   *
+   */
+  
+***************
+*** 31,58 ****
+--- 32,78 ----
+  extern void findVideoDevice(void);
+  extern void help();
+  extern void usage();
+  extern char * macMachineType(void);
+  
++ char XorgTest(void);
++ 
+  struct monitor_sync
+  {
+  	int h_min;
+  	int h_max; 
+  	int v_min;
+  	int v_max;
+  };
+  
++ /* Gentoo Likes Color, so I decided to add some to this tiny utility
++   since this is a gentoo specific application */
++ 
++ #define GENTOO_COLOR
++   
++ #ifdef GENTOO_COLOR
++   #define GENTOO_BOLD  "\x1b[01m"
++   #define GENTOO_RESET "\x1b[0m"
++   #define GENTOO_RED   "\x1b[31;06m"
++ #else
++   #define GENTOO_BOLD  ""
++   #define GENTOO_RESET ""
++   #define GENTOO_RED   ""
++ #endif
++ 
+  int main(int argc, char **argv) {
+  	FILE * f;
+  	int i, depth, fd;
+  	int anaconda = 0, rc = 0, offb = 0, fbdepth = 0, fbdev = 0, nv = 0;
+  	unsigned int xsstart, xsend, xtotal = 0;
+  	unsigned int ysstart, ysend, ytotal = 0;
+  	double drate, vrate, hrate;
+  	unsigned int htotal, vtotal;
+  	char manufacturer[4];
+  
++ 	char xorg = 0;
++ 	
+  	struct monitor_sync sync;
+  	struct fb_fix_screeninfo fix;
+  	struct fb_var_screeninfo var;
+  	struct edid1_info *edid_info = NULL;
+  
+***************
+*** 70,81 ****
+  	if (!rc && ioctl(fd, FBIOGET_VSCREENINFO, &var))
+  		rc = 2; /* Failure */
+  
+  	close(fd);
+  
+  	if (rc) {
+! 		fprintf(stderr, "Can't access %s. Exiting.\n", name);
+  		return -1;
+  	}
+  
+  	if (argc == 2)
+  	{
+--- 90,104 ----
+  	if (!rc && ioctl(fd, FBIOGET_VSCREENINFO, &var))
+  		rc = 2; /* Failure */
+  
+  	close(fd);
+  
++ 	printf("%sXautoconfig: Release 0.22.[Gentoo] %s\n\n", GENTOO_BOLD, GENTOO_RESET);
++ 	
+  	if (rc) {
+! 		fprintf(stderr, "%sCan't access %s. Exiting.%s\n", 
+! 				GENTOO_RED, name, GENTOO_RESET);
+  		return -1;
+  	}
+  
+  	if (argc == 2)
+  	{
+***************
+*** 187,208 ****
+  		if (!(f = fopen("/tmp/XF86Config.test", "w"))) {
+  			fprintf(stderr, "Can't write to /tmp/XF86Config.test. Exiting.\n");
+  			return -1;;
+  		}
+  	} else {
+! 		/* Let's be nice and backup an existing XF86Config */
+! 		if ((f = fopen("/etc/X11/XF86Config", "r"))) {
+! 		       system("mv /etc/X11/XF86Config /etc/X11/XF86Config.xautoconfig");
+  		}
+  
+! 		if (!(f = fopen("/etc/X11/XF86Config", "w"))) {
+! 			fprintf(stderr, "Can't write to /etc/X11/XF86Config. Exiting.\n");
+! 			return -1;;
+  		}
+  	}
+  
+- 
+  	/*** BEGIN XF86Config ***/
+  	fprintf(f, "%s", header);
+  
+  	/* fontpath */
+  	if (anaconda)
+--- 210,261 ----
+  		if (!(f = fopen("/tmp/XF86Config.test", "w"))) {
+  			fprintf(stderr, "Can't write to /tmp/XF86Config.test. Exiting.\n");
+  			return -1;;
+  		}
+  	} else {
+! 		
+! 		/* Test to see if it's xorg or XFree86 */
+! 		if (XorgTest())
+! 		{
+! 			xorg = 0;  /* false, using XF86Config */
+! 			
+! 			/* Let's be nice and backup an existing XF86Config */
+! 			if ((f = fopen("/etc/X11/XF86Config", "r"))) 
+! 			{
+! 				fclose(f);
+! 		       		printf("XF86Config found, moving to XF86Config.orig...\n");
+! 				system("mv /etc/X11/XF86Config /etc/X11/XF86Config.orig");
+! 			}
+! 
+! 			if (!(f = fopen("/etc/X11/XF86Config", "w"))) 
+! 			{
+! 				fprintf(stderr, "%sCan't write to /etc/X11/XF86Config. Exiting.%s\n",
+! 				GENTOO_RED, GENTOO_RESET);
+! 				return -1;
+! 			}
+  		}
++ 		else
++ 		{
++ 			xorg = 1;  /* true, using xorg.conf */
++ 		
++ 			/* Let's be nice and backup an existing XF86Config */
++ 			if ((f = fopen("/etc/X11/xorg.conf", "r"))) 
++ 			{
++ 				fclose(f);
++ 				printf("xorg.conf found, moving to xorg.conf.orig...\n");
++ 				system("mv /etc/X11/xorg.conf /etc/X11/xorg.conf.orig");
++ 			}
+  
+! 			if (!(f = fopen("/etc/X11/xorg.conf", "w"))) 
+! 			{
+! 				fprintf(stderr, "%sCan't write to /etc/X11/xorg.conf. Exiting.%s\n",
+! 				GENTOO_RED, GENTOO_RESET);
+! 				return -1;
+! 			}			
+  		}
+  	}
+  
+  	/*** BEGIN XF86Config ***/
+  	fprintf(f, "%s", header);
+  
+  	/* fontpath */
+  	if (anaconda)
+***************
+*** 400,408 ****
+      	fclose(f);
+  
+  	if (anaconda)
+  		fprintf(stdout, "Wrote /tmp/XF86Config.test\n");
+  	else
+! 		fprintf(stdout, "Wrote /etc/X11/XF86Config\n");
+! 
+  	return 0;
+  }
+--- 453,480 ----
+      	fclose(f);
+  
+  	if (anaconda)
+  		fprintf(stdout, "Wrote /tmp/XF86Config.test\n");
+  	else
+! 	{	
+! 		if (xorg)
+! 			fprintf(stdout, "Wrote /etc/X11/xorg.conf %s\n", GENTOO_RESET);
+! 		else
+! 			fprintf(stdout, "Wrote /etc/X11/XF86Config %s\n", GENTOO_RESET);
+! 	}
+! 		
+  	return 0;
+  }
++ 
++ /**
++  * @return char  true if running X.org, false XFree86 
++  */
++ char XorgTest(void)
++ {
++ 	FILE *f;
++ 	
++ 	if (!(f = fopen("/usr/X11R6/bin/Xorg", "r")))
++ 		return -1;
++ 	else
++ 		return 0;
++ }
++ 
