@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/guitoo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.6 2005/01/05 09:15:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.7 2005/02/05 21:17:48 centic Exp $
+
+  05 Feb 2005; Dominik Stadler <centic@gentoo.org> guitoo-0.47.0.ebuild,
+  guitoo-0.50.01.ebuild:
+  Mark stable on x86
 
   05 Jan 2005; Marcus Hanwell <cryos@gentoo.org> guitoo-0.50.01.ebuild:
   Marked ~amd64, bug 70039.
