@@ -9,7 +9,7 @@ need-kde 3.0.1
 DESCRIPTION="A KDE 3.x multifile replace utility"
 SRC_URI="mirror://sourceforge/kfilereplace/${P}.tar.bz2"
 HOMEPAGE="http://kfilereplace.sourceforge.net"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc  ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

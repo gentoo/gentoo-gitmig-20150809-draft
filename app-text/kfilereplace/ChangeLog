@@ -1,10 +1,13 @@
 # ChangeLog for app-text/kfilereplace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.7 2003/02/12 05:31:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kfilereplace/ChangeLog,v 1.8 2003/02/15 07:19:57 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *kfilereplace-0.7.0 (15 Jul 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> kfilereplace-0.7.0.ebuild :
+  set ~ppc in keywords
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> kfilereplace-0.7.0.ebuild :
   Added KEYWORDS, SLOT.
