@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.12 2004/11/12 19:18:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.13 2004/12/03 06:02:36 vapier Exp $
 
 ONIGURUMA="onigd2_3_2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 LICENSE="Ruby"
 SLOT="1.8"
 # please keep sorted
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 mips ppc ppc-macos ~s390 sparc x86 ppc64"
+KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ppc-macos ~s390 sparc x86 ppc64"
 IUSE="socks5 tcltk cjk doc threads"
 
 RDEPEND="virtual/libc
