@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.2 2004/10/05 19:42:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.3 2004/12/14 12:01:35 eradicator Exp $
 
-IUSE="mpeg4 howl"
+IUSE="faad howl"
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 
 DEPEND="sys-libs/zlib
 	howl? ( >=net-misc/howl-0.9.6-r1 )
-	mpeg4? ( media-libs/faad2 )
+	faad? ( media-libs/faad2 )
 	>=media-libs/libid3tag-0.15.0b
 	>=net-libs/libhttpd-persistent-1.3p-r8
 	>=media-libs/daaplib-0.1.1a"
