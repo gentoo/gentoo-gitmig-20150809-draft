@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.15 2003/12/20 07:51:53 rac Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.16 2004/03/09 05:27:21 geoman Exp $
+
+  09 Mar 2004; Stephen P. Becker <geoman@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  Added ~mips keyword.
 
 *SGMLSpm-1.03-r5 (19 Dec 2003)
 
