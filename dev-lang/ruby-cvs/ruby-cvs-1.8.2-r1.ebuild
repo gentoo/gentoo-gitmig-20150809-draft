@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.2 2004/09/01 08:07:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.3 2004/10/06 04:00:43 usata Exp $
 
-IUSE="socks5 tcltk doc"
+IUSE="socks5 tcltk doc threads"
 
 inherit flag-o-matic alternatives gnuconfig cvs eutils
 
@@ -64,8 +64,9 @@ src_compile() {
 
 	# disable install-doc because of yaml/parser
 	econf --program-suffix=${SLOT/./} --enable-shared \
-		`use_enable socks5 socks` \
-		`use_enable doc install-doc` \
+		$(use_enable socks5 socks) \
+		$(use_enable doc install-doc) \
+		$(use_enable threads pthread) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
