@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/openswan
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.1 2004/02/22 04:58:34 pfeifer Exp $
+
+*openswan-2.0.0 (22 Feb 2004)
+
+  22 Feb 2004; Jay Pfeifer <pfeifer@gentoo.org> : openswan-2.0.0.ebuild
+  Initial import.
+  Provides userspace IPsec tool/support for FreeS/WAN based 2.4 kernels
+  and native 2.6 (KAME) based IPsec. 2.6 support is a work in progress.
+  Enjoy :)

@@ -1,0 +1,5 @@
+MD5 c928b4d2b9526088607c606210826a57 openswan-2.0.0.ebuild 3088
+MD5 06bdf8687116c0513a7d1ba86bdad4fd ChangeLog 493
+MD5 5d96d9e4b6f6b113db0983e211adf85a metadata.xml 639
+MD5 4964e70ea4748681d56d068cc04db232 files/digest-openswan-2.0.0 67
+MD5 ba724ecd48887a714b7ff231c0a3ef18 files/openswan-2.0.0-gentoo.patch 17451

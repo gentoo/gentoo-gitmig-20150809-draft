@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>secure-tunneling</herd>
+<maintainer>
+  <email>pfeifer@gentoo.org</email>
+  <name>Jay Pfeifer</name>
+<!--  <description>Description of the maintainership</description> -->
+</maintainer>
+<longdescription>From the Openswan web site: Openswan is an Open Source 
+implementation of IPsec for the Linux operating system. Is it a code fork 
+of the FreeS/WAN project, started by a few of the developers who were 
+growing frustrated with the politics surrounding the FreeS/WAN project.</longdescription>
+</pkgmetadata>
