@@ -1,8 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/fnord/fnord-1.8.ebuild,v 1.1 2003/07/08 21:16:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/fnord/fnord-1.8.ebuild,v 1.2 2004/03/25 21:40:42 weeve Exp $
 
 S=${WORKDIR}/${P}
+
+# needed for replace-sparc64-flags
+inherit flag-o-matic
 
 DESCRIPTION="Yet another small httpd."
 SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2
@@ -29,6 +32,9 @@ pkg_setup() {
 }
 
 src_unpack() {
+	# Fix for bug #45716
+	replace-sparc64-flags
+
 	unpack ${A} ; cd ${S}
 	sed -i "s:^CFLAGS=-O.*:CFLAGS=${CFLAGS}:" Makefile
 
