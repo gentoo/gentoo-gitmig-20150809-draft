@@ -1,6 +1,6 @@
-# ChangeLog for net-analyzerkismetChangeLog/
+# ChangeLog for net-wireless/kismet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.4 2002/12/16 19:32:11 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.5 2002/12/17 19:45:46 vapier Exp $
 
 *kismet-2.6.2 (16 Dec 2002)
 
