@@ -1,38 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2.ebuild,v 1.13 2004/08/25 13:55:48 vapier Exp $
-
-IUSE="static nls bootstrap java build X multilib"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2.ebuild,v 1.14 2004/10/03 04:09:54 vapier Exp $
 
 inherit eutils flag-o-matic libtool
 
-# Compile problems with these (bug #6641 among others)...
-#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
-
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
+# The next command strips most flags from CFLAGS/CXXFLAGS.  If you do 
+# not like it, comment it out, but do not file bugreports if you run into
 # problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
 
-# gcc produce unstable binaries if compiled with a different CHOST.
-[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
+	# In general gcc does not like optimization ... we'll add -O2 where safe
+	filter-flags -O?
+
+	# Compile problems with these (bug #6641 among others)...
+	#filter-flags -fno-exceptions -fomit-frame-pointer -fforce-addr
+}
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -99,6 +82,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-* hppa"
+IUSE="static nls bootstrap java build X multilib"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -290,11 +274,8 @@ src_compile() {
 	#Fix linking problem with c++ apps which where linked agains a 3.2.2 libgcc
 	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
 
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc-3.3 ...
-	export CFLAGS="${CFLAGS/-O?/-O2}"
-	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	# Make sure we have sane CFLAGS
+	do_filter_flags
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.15 2004/09/25 18:51:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r3.ebuild,v 1.16 2004/10/03 04:09:54 vapier Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -16,9 +16,6 @@ do_filter_flags() {
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags -fno-exceptions -fomit-frame-pointer -fforce-addr
 }
-
-# gcc produce unstable binaries if compiled with a different CHOST.
-[ "${ARCH}" = "hppa" ] && export CHOST="hppa-unknown-linux-gnu"
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -94,7 +91,6 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-
 KEYWORDS="~x86 ~sparc ~mips ~alpha arm -hppa ~amd64 -ia64 ~ppc64 s390"
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
