@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.40 2003/12/08 22:06:43 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.41 2003/12/08 23:19:45 iggy Exp $
+
+  08 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2.ebuild,
+  courier-0.43.2.ebuild, courier-0.44.0.ebuild, courier-0.44.2.ebuild,
+  files/courier-0.42.2-gentoo.diff.bz2:
+  cleaning out old ebuilds/etc, and cleaning up touch .keep's
 
   08 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.42.2.ebuild:
   fixed the other chown in courier-0.42.2

@@ -168,7 +168,10 @@ src_install() {
 	keepdir /var/run/courier
 	# make install creates a ton of dirs that we want to keep
 	# and we don't want to run keepdir 900 times
-	find ${D} -type d -exec touch {}/.keep \;
+	#find ${D} -type d -exec touch {}/.keep \;
+	for dir2keep in `(cd ${D} && find . -type d)` ; do
+		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
+	done
 
 	local f
 	cd ${D}/etc/courier

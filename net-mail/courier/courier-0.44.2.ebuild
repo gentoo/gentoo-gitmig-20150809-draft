@@ -176,7 +176,6 @@ src_install() {
 	# and we don't want to run keepdir 900 times
 	#find ${D} -type d -exec touch {}/.keep \;
 	for dir2keep in `(cd ${D} && find . -type d)` ; do
-		einfo "keeping $dir2keep"
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
 	done
 
