@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4.ebuild,v 1.1 2002/10/05 19:29:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4.ebuild,v 1.2 2002/10/09 17:23:40 danarmak Exp $
 inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 # Only here, override kde.org's SRC_URI because of the unique 3.0.3a version number
-SRC_URI="mirror://kde/stable/3.0.3/src/$P.tar.bz2"
+SRC_URI="mirror://kde/stable/3.0.4/src/$P.tar.bz2"
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
 KEYWORDS="x86"
