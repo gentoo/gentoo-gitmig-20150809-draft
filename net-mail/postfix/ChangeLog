@@ -1,6 +1,24 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.87 2003/09/12 16:14:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.88 2003/09/24 05:08:51 max Exp $
+
+*postfix-2.0.16 (23 Sep 2003)
+
+  23 Sep 2003; Max Kalika <max@gentoo.org> postfix-2.0.16.ebuild,
+  files/gentestcrt.sh, files/postfix.rc6, files/smtp.pass, files/smtp.sasl:
+  This is new/testing/experimental: Bump to version 2.0.16 with the latest
+  available TLS, IPV6, and IPV6+TLS patches. Major cleanup/rewrite: quote
+  variables where possible; whitespace consistancy; drop creation of postfix
+  user -- already in baselayout; require >=dev-libs/cyrus-sasl-2; drop support
+  for cyrus-sasl-1.*; drop is_postfix_installed() routine; move most of the
+  compilation decisions to src_compile() out of src_unpack(); only use cd once
+  throughout the whole ebuild; make it die on sed errors; drop CC=gcc hack for
+  a cleaner bash solution; use /bin/sh postfix-install instead of manually
+  installing all the files -- simplifies the src_install() routine enormously;
+  install samples to the doc/defaults instead of /etc/postfix/sample; use newly
+  installed postconf to set defaults instead of custom patch/sed calls -- makes
+  it much more resilient to upstream changes; if USE=ssl, install default cert,
+  key, and pem files similar to net-mail/cyrus-imapd.
 
   12 Sep 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.15.ebuild:
   Cleanup

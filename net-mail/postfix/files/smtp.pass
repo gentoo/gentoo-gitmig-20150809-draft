@@ -1,0 +1,3 @@
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/smtp.pass,v 1.1 2003/09/24 05:08:51 max Exp $
+#
+# remotehost user:password

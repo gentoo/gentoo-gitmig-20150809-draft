@@ -1,0 +1,5 @@
+MD5 ac13776442ba7708e683bc1bfbadab2f postfix-2.0.16.tar.gz 1353520
+MD5 b39c08eabe807db4af5bcb1cafc9761e pfixtls-0.8.16-2.0.16-0.9.7b.tar.gz 234105
+MD5 8e0b85c6c131d367dc5b0d0d95e7e2c1 ipv6-1.18a-pf-2.0.16.patch.gz 45398
+MD5 b32876b1a02d3a8f6a93a66e574ddee7 tls+ipv6-1.18a-pf-2.0.16.patch.gz 278004
+MD5 5a0aa5ef6a231a593eb6c5628236a3e4 postfix-pg.postfix-2.0.0.2.patch 27419

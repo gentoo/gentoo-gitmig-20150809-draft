@@ -1,15 +1,15 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.10 2003/08/14 05:17:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.11 2003/09/24 05:08:51 max Exp $
+
+opts="reload"
 
 depend() {
 	need net
 	use logger dns ypbind
 	provide mta
 }
-
-PIDFILE=/var/spool/postfix/pid/master.pid
 
 start() {
 	ebegin "Starting postfix"
@@ -20,5 +20,11 @@ start() {
 stop() {
 	ebegin "Stopping postfix"
 	/usr/sbin/postfix stop &>/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading postfix"
+	/usr/sbin/postfix reload &>/dev/null
 	eend $?
 }
