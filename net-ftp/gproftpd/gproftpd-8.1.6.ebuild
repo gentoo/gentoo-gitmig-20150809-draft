@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.1.6.ebuild,v 1.3 2004/06/24 22:45:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.1.6.ebuild,v 1.4 2004/07/15 00:00:18 agriffis Exp $
 
 
 DESCRIPTION="GTK frontend to proftpd"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 
-IUSE="X gtk ssl gnome"
+IUSE="gnome ssl"
 
 # Requiring ProFTPD 1.2.9 due to security fixes
 DEPEND=">=net-ftp/proftpd-1.2.9
