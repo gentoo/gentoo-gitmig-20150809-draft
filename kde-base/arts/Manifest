@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17073bbac8bcb5a41ce8a255e0063950 ChangeLog 17234
-MD5 b2cae38471dd9e8e22b5a016f380f4f9 arts-1.3.1.ebuild 3032
-MD5 bab807d1a8aaeb6738fafd25d14dd63e arts-1.2.3.ebuild 2827
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 c72b2e50a7ae26dfc7f7a88aba17bc24 ChangeLog 17318
 MD5 7d6ae50bdf1adcd0bb79daccefa6ce94 arts-1.1.5.ebuild 2756
-MD5 1ca6f6da0d6019c6d3885e2f6a1d957f arts-1.3.2.ebuild 3182
 MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
-MD5 2397f14df73b06f4d1d899679481f3bc arts-1.3.0.ebuild 2977
 MD5 6d8f52083c2f7e211ceff377e2d60432 arts-1.2.2.ebuild 2822
+MD5 bab807d1a8aaeb6738fafd25d14dd63e arts-1.2.3.ebuild 2827
+MD5 2397f14df73b06f4d1d899679481f3bc arts-1.3.0.ebuild 2977
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 b2cae38471dd9e8e22b5a016f380f4f9 arts-1.3.1.ebuild 3032
+MD5 7c01392ab807510ec2125b3553060b78 arts-1.3.2.ebuild 3181
+MD5 68ec6c8e74dfea13c3bb54575b1c51d4 files/1.3.0-jack-configure.in.in.patch 694
+MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
+MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
 MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
 MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
+MD5 31e77598f97a91673f69ed4c44bd1f57 files/digest-arts-1.2.0 63
+MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
+MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
+MD5 afbe195b431271c6ccfe51cc58aced5c files/digest-arts-1.3.0 63
+MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
+MD5 258879d2a4fd175a96b7c80bb99a82cf files/digest-arts-1.3.1 63
+MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.1-alsa-bigendian.patch 571
 MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.2-alsa-bigendian.patch 571
 MD5 64df5930253711053181dcdbba96f42b files/arts-1.3.2-mcopidl.patch 418
-MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
-MD5 afbe195b431271c6ccfe51cc58aced5c files/digest-arts-1.3.0 63
-MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
-MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.1-alsa-bigendian.patch 571
-MD5 258879d2a4fd175a96b7c80bb99a82cf files/digest-arts-1.3.1 63
-MD5 68ec6c8e74dfea13c3bb54575b1c51d4 files/1.3.0-jack-configure.in.in.patch 694
-MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
-MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
-MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
 MD5 0a66e4f219b0dee9346c9c99ae4b15d0 files/digest-arts-1.3.2 63
-MD5 31e77598f97a91673f69ed4c44bd1f57 files/digest-arts-1.2.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0v7ougEuf3OQ0akRAsjiAKCJYnuXqoMwxiIYO7pMC9513AeTvACfbxWj
-tEV5ORri5C/aDM+j4RTjXns=
-=qMyU
------END PGP SIGNATURE-----
