@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.16 2004/09/30 21:32:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.17 2004/10/18 13:43:53 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -45,7 +45,7 @@ for opt in "$@" ; do
 	esac
 done
 
-MYPROFILEDIR="`readlink -f /etc/make.profile`"
+MYPROFILEDIR="$(readlink -f /etc/make.profile)"
 if [ ! -d "${MYPROFILEDIR}" ] ; then
 	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
 	exit 1
@@ -57,7 +57,7 @@ fi
 [ -e /etc/profile ] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 1999-2004 Gentoo Foundation.; Distributed under the GPLv2"
+echo -e "Copyright 1999-2004 Gentoo Foundation; Distributed under the GPLv2"
 if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
 	echo "Fetching all bootstrap-related archives ..."
 else
