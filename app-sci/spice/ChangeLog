@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/spice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.9 2004/08/21 13:10:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/spice/ChangeLog,v 1.10 2004/10/23 00:26:38 blubb Exp $
+
+  23 Oct 2004; Simon Stelling <blubb@gentoo.org> spice-3.5.5.ebuild:
+  added ~amd64
 
   21 Aug 2004; David Holm <dholm@gentoo.org> spice-3.5.5.ebuild:
   Added to ~ppc.
