@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.44 2004/05/02 00:18:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.45 2004/05/02 00:26:03 avenj Exp $
+
+  01 May 2004; Jon Portnoy <avenj@gentoo.org> rsync-2.6.2.ebuild :
+  Stable on AMD64 and x86.
 
   01 May 2004; Joshua Kinard <kumba@gentoo.org> rsync-2.6.2.ebuild:
   Marked stable on mips.
