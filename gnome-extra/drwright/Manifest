@@ -1,4 +1,14 @@
-MD5 3902840537d0df42c89e66dca6bd5bdf drwright-0.17.ebuild 817
-MD5 19731ea8800a7a88286031112a6608da ChangeLog 899
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd6b0465251432f596fb06138fe57f71 ChangeLog 1031
+MD5 155d745235ebe8a885f0616057f7adec drwright-0.17.ebuild 855
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ff4223130be1b9d8d90433bf3c9db842 files/digest-drwright-0.17 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxyJfRkyva5PS18kRAm4dAJ42NWMbKTqDZekAk5MBuHLLMIKICACgkovX
+fhLQwTlkzCf7DtscEG90mHI=
+=KLaB
+-----END PGP SIGNATURE-----

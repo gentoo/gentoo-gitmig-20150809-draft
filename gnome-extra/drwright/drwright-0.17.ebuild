@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.6 2004/08/19 22:58:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.7 2004/12/20 19:04:08 liquidx Exp $
 
 inherit gnome2 flag-o-matic gcc
 
@@ -24,11 +24,10 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
-src_compile() {
-
-	[ "`gcc-version`" = "3.3" ] && append-flags -Wno-strict-aliasing
-
-	gnome2_src_compile
-
+src_unpack() {
+	cd ${S}
+	unpack ${A}
+	# get rid of strict-aliasing warnings
+	sed -i -e 's/-Wall//' ${S}/src/Makefile.in ${S}/src/Makefile.am
 }
 
