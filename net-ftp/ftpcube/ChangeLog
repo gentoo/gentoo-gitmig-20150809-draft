@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/ftpcube
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.15 2003/05/05 20:29:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.16 2003/07/13 11:55:51 aliz Exp $
 
   05 May 2003; Alastair Tse <liquidx@gentoo.org> ftpcube-0.4.3.ebuild:
   added virtualx support to prevent failing when merging without X
@@ -37,6 +37,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*ftpcube-0.4.0 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *ftpcube-0.3.3 (20 Aug 2002)
 
   16 Oct 2002; foser <foser@gentoo.org> ftpcube-0.3.3.ebuild :

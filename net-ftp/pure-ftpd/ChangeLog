@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.13 2003/06/21 15:38:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.14 2003/07/13 11:55:51 aliz Exp $
 
 *pure-ftpd-1.0.15 (21 Jun 2003)
 
@@ -48,6 +48,11 @@
 
   14 Apr 2002; Bart Verwilst <verwilst@gentoo.org> : Upgraded version,
   removed old one.. New ebuild (1.0.11) includes pam fixes as well..
+
+*pure-ftpd-1.0.8-r1 (13 Feb 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *pure-ftpd-1.0.8 (01 Feb 2002)
 

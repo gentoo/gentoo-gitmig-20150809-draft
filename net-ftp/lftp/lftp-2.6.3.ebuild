@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.3.ebuild,v 1.6 2003/04/12 00:30:47 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.3.ebuild,v 1.7 2003/07/13 11:55:51 aliz Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -18,7 +18,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc ~alpha"
+KEYWORDS="x86 -ppc -sparc ~alpha"
 
 src_unpack() {
 
