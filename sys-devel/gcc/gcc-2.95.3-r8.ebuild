@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.18 2003/06/10 12:18:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.19 2003/06/25 19:21:39 vapier Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -33,7 +33,7 @@ strip-flags
 
 # Are we trying to compile with gcc3 ?  CFLAGS and CXXFLAGS needs to be
 # valid for gcc-2.95.3 ...
-gcc2_flags
+gcc2-flags
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
