@@ -1,7 +1,10 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.2 2002/11/25 22:45:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.3 2002/12/09 04:33:19 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *pysoulseek-0.4.9b (25 Nov 2002)
 
   25 Nov 2002; Mike Frysinger <vapier@gentoo.org> :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.0.ebuild,v 1.5 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria/aria-0.10.0.ebuild,v 1.6 2002/12/09 04:33:15 manson Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Aria is a download manager with a GTK+ GUI, it downloads files from
 SRC_URI="http://aria.rednoah.com/storage/sources/${P}.tar.bz2"
 HOMEPAGE="http://aria.rednoah.com"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 SLOT="0"
 
 RDEPEND="=dev-libs/glib-1.2*

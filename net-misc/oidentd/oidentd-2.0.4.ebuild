@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.4.ebuild,v 1.3 2002/10/23 15:22:01 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.4.ebuild,v 1.4 2002/12/09 04:33:17 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another (RFC1413 compliant) ident daemon"
 HOMEPAGE="http://dev.ojnk.net/"
 SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 

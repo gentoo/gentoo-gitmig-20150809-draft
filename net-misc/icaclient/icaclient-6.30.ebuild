@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30.ebuild,v 1.4 2002/10/04 06:12:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-6.30.ebuild,v 1.5 2002/12/09 04:33:16 manson Exp $
 
 S=${WORKDIR}/usr
 DESCRIPTION="ICA Client"
@@ -11,7 +11,7 @@ DEPEND="${RDEPEND} >=app-arch/rpm-3.0.6"
 LICENSE="as-is"
 SLOT="0"
 RESTRICT="fetch"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 dyn_fetch() {
 	for y in ${A} 

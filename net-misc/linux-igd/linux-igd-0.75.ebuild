@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/linux-igd-0.75.ebuild,v 1.3 2002/12/09 04:33:16 manson Exp $
 
 MY_PN="gateway"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -11,7 +11,7 @@ HOMEPAGE="http://linux-igd.sourceforge.net"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/linux-igd/${MY_PN}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND="net-misc/upnp
 	sys-apps/iptables"

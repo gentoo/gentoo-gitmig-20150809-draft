@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/gtm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.5 2002/08/19 16:49:11 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/ChangeLog,v 1.6 2002/12/09 04:33:16 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gtm-0.4.12 (19 Aug 2002)
 
   19 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> gtm-0.4.12.ebuild:

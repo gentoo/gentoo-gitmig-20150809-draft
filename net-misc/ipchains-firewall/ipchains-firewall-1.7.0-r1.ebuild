@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.9 2002/10/04 06:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.10 2002/12/09 04:33:16 manson Exp $
 
 S=${WORKDIR}/ipchains-firewall-1.7
 DESCRIPTION="IP-Chains Firewall Script "
 SRC_URI="http://firewall.langistix.com/download/${P}.tar.gz"
 HOMEPAGE="http://firewall.langistix.com/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="as-is"
 SLOT="0"
 

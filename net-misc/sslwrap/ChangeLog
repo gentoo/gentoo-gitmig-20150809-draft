@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.4 2002/07/12 15:15:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.5 2002/12/09 04:33:19 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sslwrap-2.0.6 (11 Jul 2002)
 
   11 Jul 2002; Brandon Low <lostlogic@gentoo.org> sslwrap-2.0.6.ebuild :

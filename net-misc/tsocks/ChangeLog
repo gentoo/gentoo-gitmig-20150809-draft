@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/tsocks
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/ChangeLog,v 1.3 2002/07/11 16:15:44 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/ChangeLog,v 1.4 2002/12/09 04:33:19 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 
 
 *tsocks-1.8beta4  (10 Jun 2002)

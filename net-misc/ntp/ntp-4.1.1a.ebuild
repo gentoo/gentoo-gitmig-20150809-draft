@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1a.ebuild,v 1.8 2002/10/20 18:52:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1a.ebuild,v 1.9 2002/12/09 04:33:17 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Time Protocol suite/programs"
 SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
 HOMEPAGE="http://www.ntp.org/"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc

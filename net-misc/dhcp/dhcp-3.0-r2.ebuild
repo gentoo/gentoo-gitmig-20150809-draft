@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0-r2.ebuild,v 1.6 2002/10/04 06:10:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0-r2.ebuild,v 1.7 2002/12/09 04:33:15 manson Exp $
 
 #This is only needed for a release with pl1 at the end.
 P="dhcp-3.0pl1"
@@ -10,7 +10,7 @@ DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP"
 LICENSE="isc-dhcp"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 SLOT="0"
 DEPEND="virtual/glibc sys-apps/groff"

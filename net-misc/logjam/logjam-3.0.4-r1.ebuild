@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.4 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-3.0.4-r1.ebuild,v 1.5 2002/12/09 04:33:16 manson Exp $
 
 IUSE="xmms gnome"
 
@@ -11,7 +11,7 @@ IUSE="xmms gnome"
 
 DESCRIPTION="A GTK+ LiveJournal Client"
 HOMEPAGE="http://logjam.danga.com"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=net-ftp/curl-7.9.3

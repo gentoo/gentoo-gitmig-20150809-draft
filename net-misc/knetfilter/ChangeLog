@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/knetfilter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.8 2002/10/24 21:09:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetfilter/ChangeLog,v 1.9 2002/12/09 04:33:16 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *knetfilter-3.0.3 (24 Oct 2002)
 
   24 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :

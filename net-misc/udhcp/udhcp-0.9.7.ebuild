@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.7.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.7.ebuild,v 1.3 2002/12/09 04:33:19 manson Exp $
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
 SRC_URI="http://udhcp.busybox.net/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 DEPEND=""
 
 S=${WORKDIR}/${P}

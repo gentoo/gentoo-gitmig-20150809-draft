@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-1.6.3.ebuild,v 1.9 2002/10/04 06:10:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-1.6.3.ebuild,v 1.10 2002/12/09 04:33:15 manson Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${A}"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=app-text/tetex-1.0.7-r2"

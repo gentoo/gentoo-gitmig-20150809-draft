@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.5 2002/10/04 06:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.32.ebuild,v 1.6 2002/12/09 04:33:16 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commandline-based, portable human IP stack for UNIX/Linux"
 SRC_URI="http://jeff.wwti.com/nemesis/${P}.tar.gz"
 HOMEPAGE="http://jeff.wwti.com/nemesis/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="as-is"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4_beta.ebuild,v 1.1 2002/10/19 13:32:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4_beta.ebuild,v 1.2 2002/12/09 04:33:15 manson Exp $
 
 IUSE="nls esd gnome oss"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P/_}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
 # Currently seems to be pretty borked
-KEYWORDS="-x86 -ppc -sparc -sparc64 -alpha"
+KEYWORDS="-x86 -ppc -sparc  -alpha"
 SLOT="0"
 LICENSE="nt"
 

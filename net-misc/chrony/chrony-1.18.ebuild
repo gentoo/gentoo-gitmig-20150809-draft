@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.7 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.18.ebuild,v 1.8 2002/12/09 04:33:15 manson Exp $
 
 IUSE="readline"
 
@@ -10,7 +10,7 @@ SRC_URI="http://chrony.sunsite.dk/download/${P}.tar.gz"
 HOMEPAGE="http://chrony.sunsite.dk"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc
 		readline? ( >=readline-4.1-r4 )"

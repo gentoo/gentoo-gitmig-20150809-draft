@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/kio_fish-1.1.2.ebuild,v 1.7 2002/11/30 20:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/kio_fish-1.1.2.ebuild,v 1.8 2002/12/09 04:33:16 manson Exp $
 
 inherit kde-base
 
@@ -12,7 +12,7 @@ SRC_URI="http://ich.bin.kein.hoschi.de/fish/${P}.tar.bz2"
 HOMEPAGE="http://ich.bin.kein.hoschi.de/fish/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_install() {
 	dodir /usr/kde/3/share/services

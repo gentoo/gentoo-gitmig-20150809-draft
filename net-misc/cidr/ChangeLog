@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/cidr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/ChangeLog,v 1.3 2002/07/06 14:42:41 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cidr/ChangeLog,v 1.4 2002/12/09 04:33:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *cidr-2.3.1 (1 Feb 2002)
 
   6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog cidr-2.3.1.ebuild:

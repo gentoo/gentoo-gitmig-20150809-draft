@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.6 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.6-r1.ebuild,v 1.7 2002/12/09 04:33:16 manson Exp $
 
 IUSE="pam"
 
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.75 )"
 RDEPEND="virtual/glibc net-www/apache"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 [ -z "$HTTPD_ROOT" ] && HTTPD_ROOT=/home/httpd
 

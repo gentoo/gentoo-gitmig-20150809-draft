@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slirp/slirp-1.0.13.ebuild,v 1.6 2002/10/04 06:15:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slirp/slirp-1.0.13.ebuild,v 1.7 2002/12/09 04:33:19 manson Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="Emulates a PPP or SLIP connection over a terminal"
 SRC_URI="http://download.sourceforge.net/slirp/slirp-1.0.13.tar.gz"
 HOMEPAGE="http://slirp.sourceforge.net"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="slirp"
 SLOT="0"
 

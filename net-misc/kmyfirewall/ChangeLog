@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/kmyfirewall
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.6 2002/11/23 16:27:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.7 2002/12/09 04:33:16 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *kmyfirewall-0.9.4 (23 Nov 2002)
 
   23 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :

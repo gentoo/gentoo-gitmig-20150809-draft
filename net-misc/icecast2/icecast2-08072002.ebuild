@@ -9,7 +9,7 @@ HOMEPAGE="http://www.icecast.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=media-libs/libvorbis-1.0
 		>=dev-libs/libxml-1.8.0"

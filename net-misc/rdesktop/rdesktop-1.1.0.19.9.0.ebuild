@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0.19.9.0.ebuild,v 1.2 2002/12/04 05:53:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0.19.9.0.ebuild,v 1.3 2002/12/09 04:33:18 manson Exp $
 
 PATCH_PV="19-9-0"
 PATCH_PV_SED=".${PATCH_PV//-/.}"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rdesktop/${MY_P}.tar.gz
         http://bibl4.oru.se/projects/rdesktop/rdesktop-unified-patch${PATCH_PV}.bz2"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
 
-KEYWORDS="x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ~ppc ~sparc "
 DEPEND="x11-base/xfree
         ssl? ( >=dev-libs/openssl-0.9.6b )"
 LICENSE="GPL-2"

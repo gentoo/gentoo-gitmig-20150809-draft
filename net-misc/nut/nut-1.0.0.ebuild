@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.0.0.ebuild,v 1.4 2002/10/12 21:42:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.0.0.ebuild,v 1.5 2002/12/09 04:33:17 manson Exp $
 
 IUSE="png"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Network-UPS Tools"
 SRC_URI="http://www.exploits.org/nut/release/${P}.tar.gz"
 HOMEPAGE="http://www.exploits.org/nut/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.8 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.9 2002/12/09 04:33:16 manson Exp $
 
 IUSE="ssl nls gnome"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
 SRC_URI="http://download.sourceforge.net/gtm/${P}.tar.gz"
 HOMEPAGE="http://gtm.sourceforge.net/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 

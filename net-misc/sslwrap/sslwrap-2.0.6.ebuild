@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.3 2002/10/04 06:15:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.4 2002/12/09 04:33:19 manson Exp $
 
 S=${WORKDIR}/${PN}${PV/.0./0}
 DESCRIPTION="TSL/SSL - Port Wrapper"
 SRC_URI="http://quiltaholic.com/rickk/sslwrap/${PN}${PV/.0./0}.tar.gz"
 HOMEPAGE="http://quiltaholic.com/rickk/sslwrap/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="sslwrap"
 SLOT="0"
 

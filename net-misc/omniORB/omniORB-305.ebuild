@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.8 2002/10/20 18:52:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.9 2002/12/09 04:33:17 manson Exp $
 
 S="${WORKDIR}/omni"
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -12,7 +12,7 @@ HOMEPAGE="http://sourceforge.net/projects/omniorb/"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="x86 -sparc -ppc -sparc64"
+KEYWORDS="x86 -sparc -ppc "
 
 DEPEND="dev-lang/python"
 

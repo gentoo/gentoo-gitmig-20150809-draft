@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.4 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.5 2002/12/09 04:33:19 manson Exp $
 
 IUSE="ssl"
 
 DESCRIPTION="Tunneling software to use the universal tunnel"
 HOMEPAGE="http://vtun.sourceforge.net"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND=">=sys-libs/zlib-1.1.4

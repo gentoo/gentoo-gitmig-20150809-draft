@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.7-r1.ebuild,v 1.4 2002/11/14 10:51:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.7-r1.ebuild,v 1.5 2002/12/09 04:33:19 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NIS Tools"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linux-nis.org/nis"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r6.ebuild,v 1.8 2002/10/19 23:31:17 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r6.ebuild,v 1.9 2002/12/09 04:33:17 manson Exp $
 
 S=${WORKDIR}/${P}   
 DESCRIPTION="Netkit - timed"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="x86 sparc sparc64 ppc"
+KEYWORDS="x86 sparc  ppc"
 LICENSE="bsd"
 SLOT="0"
 
