@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.12.ebuild,v 1.1 2004/10/06 15:50:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.12.ebuild,v 1.2 2004/10/06 18:30:38 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -53,6 +53,7 @@ src_unpack() {
 	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
 	# planned on disabling these debug statements before the release, but
 	# never got around to it.
+	# XXX: incvs
 	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
 
 	if use perl; then
@@ -161,6 +162,7 @@ src_compile() {
 	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
+		# XXX: incvs will no longer be needed in 2.5.13, configurable at run time
 		append-flags -DCR_DETECT_MOTION_METHOD_DEBUG
 	fi
 
