@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r7.ebuild,v 1.1 2004/05/28 21:26:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r7.ebuild,v 1.2 2004/06/05 00:28:36 kloeri Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -18,7 +18,7 @@ DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV/7/3}.tar.bz2"
 SLOT="${KV}"
-KEYWORDS="~alpha -sparc -x86 -ppc -hppa -mips"
+KEYWORDS="alpha -sparc -x86 -ppc -hppa -mips"
 
 src_unpack() {
 	unpack ${A}
