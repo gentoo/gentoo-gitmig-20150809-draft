@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.19 2005/02/14 04:58:16 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.20 2005/02/21 21:58:13 blubb Exp $
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> gammu-1.00.04.ebuild:
+  added ~amd64
 
 *gammu-1.00.04 (14 Feb 2005)
 
