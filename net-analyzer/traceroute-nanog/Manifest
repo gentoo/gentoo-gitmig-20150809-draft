@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2ff82772e3492c9a855f64849f53c5b9 traceroute-nanog-6.3.9.ebuild 964
-MD5 a4afb73e0ccd1e41e27085fd10d38916 traceroute-nanog-6.3.10-r1.ebuild 1052
-MD5 9da6722178e0b00ff13a9e73640b66e5 traceroute-nanog-6.3.10.ebuild 1010
-MD5 a26f3454aff61079c1977d3f3f33c6aa ChangeLog 1190
+MD5 09006bb0a6a13fd775083a682022ac92 ChangeLog 1286
 MD5 ac1e94ae6d3460cf9a5d5ae8ba5797e9 metadata.xml 267
+MD5 9da6722178e0b00ff13a9e73640b66e5 traceroute-nanog-6.3.10.ebuild 1010
+MD5 816734fe99f2a65b2abcc048ecc8922d traceroute-nanog-6.3.10-r1.ebuild 1055
 MD5 3d64910fb617c2be3b7e316b39daf553 files/digest-traceroute-nanog-6.3.9 154
-MD5 f5a8e999fcc86805c13e39fa86e8c276 files/digest-traceroute-nanog-6.3.10-r1 156
 MD5 4d714d13c66a6ac10f5183be8ab60279 files/digest-traceroute-nanog-6.3.10 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFcmkEZCkKN40op4RAhK+AKCTt5xgnytLXKkmufwI7XC89IdtKQCgt7x4
-8DYv2nccDCojqzJi9OjmYig=
-=7QRJ
------END PGP SIGNATURE-----
+MD5 f5a8e999fcc86805c13e39fa86e8c276 files/digest-traceroute-nanog-6.3.10-r1 156

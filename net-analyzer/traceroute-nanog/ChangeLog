@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traceroute-nanog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.7 2005/02/18 10:53:19 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.8 2005/04/02 15:25:16 pylon Exp $
+
+  02 Apr 2005; Lars Weiler <pylon@gentoo.org>
+  traceroute-nanog-6.3.10-r1.ebuild:
+  Added ~ppc.
 
 *traceroute-nanog-6.3.10-r1 (18 Feb 2005)
 
