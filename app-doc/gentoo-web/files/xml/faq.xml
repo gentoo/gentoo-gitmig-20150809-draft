@@ -176,7 +176,19 @@ the various configuration files is as follows (highest first):
 		being worked upon.  For the moment you can use
 		<c>emerge --pretend update</c> to list upgradable
 		packages, but the actual upgrading has to be done
-		package by package.</p></body>
+		package by package (using <c>ebuild</c> or 
+		<c>emerge</c>).</p></body>
+	</section>
+
+	<section>
+		<title>What if rsync doesn't work for me?</title>
+		<body><p>If you're behind a firewall that doesn't permit
+		rsync traffic, then you can instead download the daily
+		/usr/portage snapshot from 
+		<uri>http://cvs.gentoo.org/snapshots</uri>.  Just unpack
+		the tarball (using <c>tar xvjf portage-foo.tbz2</c>) in
+		the <path>/usr</path> directory.
+		</p></body>
 	</section>
 
 	<section>
