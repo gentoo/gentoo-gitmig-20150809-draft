@@ -32,10 +32,6 @@
 # this version by aliz has 2 rejects
 =sys-apps/pciutils-2.1.10
 
-# <blizzy@gentoo.org> (03 Aug 2002)
-# masked for testing
-=app-cdr/gtkcdlabel-0.6.8
-
 # Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
 # masked for testing
 =net-dialup/hsflinmodem-5.03.03.02072100
@@ -88,7 +84,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1167 2002/08/04 00:11:39 george Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1168 2002/08/04 00:49:39 blizzy Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
