@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.1 2003/02/01 06:14:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.2 2003/02/02 10:50:38 raker Exp $
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
@@ -33,9 +33,11 @@ src_compile() {
 }
 
 src_install() {
+	dodir /etc /bin /usr/share/man/man8
+	cp ${FILESDIR}/poppasswd ${D}/etc
 	make install
 	chown cmd5checkpw ${D}/etc/poppasswd
 	chmod 400 ${D}/etc/poppasswd
 	chown cmd5checkpw ${D}/bin/cmd5checkpw
-	chmod a+s ${D}/etc/cmd5checkpw
+	chmod a+s ${D}/bin/cmd5checkpw
 }

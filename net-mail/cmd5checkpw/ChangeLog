@@ -1,9 +1,14 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.1 2003/02/01 06:14:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.2 2003/02/02 10:50:38 raker Exp $
 
 *cmd5checkpw-0.22 (01 Feb 2003)
+
+  02 Feb 2003; Nick Hadaway <raker@gentoo.org> cmd5checkpw-0.22.ebuild,
+  files/poppasswd :
+  Fixed the installation problems and added an example /etc/poppasswd
 
   01 Feb 2003; Nick Hadaway <raker@gentoo.org> cmd5checkpw-0.22.ebuild,
   files/digest-cmd5checkpw-0.22 :
   New ebuild for support of a fully featured smtp auth in qmail.
+
