@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.10 2004/09/09 11:30:41 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.11 2004/09/28 12:11:22 fmccor Exp $
+
+  28 Sep 2004; Ferris McCormick <fmccor@gentoo.org> blas-config-1.0.0.ebuild:
+  Mark stable for sparc.  Works fine, and is needed for several app-sci upgrades.
 
 *blas-config-1.0.1 (24 Aug 2004)
 
