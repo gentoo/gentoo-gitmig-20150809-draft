@@ -1,4 +1,14 @@
-MD5 2957393e9380b62e48fe1ae09011a8ee lock-keys-applet-1.0.ebuild 714
-MD5 5e40826a0e5694b497ff6d82c7181583 ChangeLog 518
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 563fcb4b5c6482143309c70c7d80cbe2 lock-keys-applet-1.0.ebuild 721
+MD5 d967d313636d75d475d77987fb98cf37 ChangeLog 623
 MD5 0ac58e2f9959469d4d95da3276a4c2c6 files/digest-lock-keys-applet-1.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/kcRKRy60XGEcJIRAhELAJ42SGqH/UmvZXJnIXGWLCspfVEZogCeMXyZ
+6RAT92jaWPmwv0sOY8Yo7fk=
+=7t5k
+-----END PGP SIGNATURE-----
