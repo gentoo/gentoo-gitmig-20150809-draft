@@ -1,25 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d6053cb09d7606d3c443403835b133cc ChangeLog 17852
-MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
-MD5 8f9c39e1a1f7ad657433883606d247df bash-completion-20050121-r2.ebuild 2720
+MD5 f2a71fd63566910b086d82226d7c9b7e bash-completion-20050121-r4.ebuild 1936
 MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
 MD5 b8b1307836a8311de6750fff5048b09d bash-completion-20050121-r1.ebuild 2696
 MD5 a436b5b7f3dee45828cc9dd394ae900b bash-completion-20050121-r3.ebuild 1898
-MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
-MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
-MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
-MD5 7a421855615dce0df4bb65ce82852a0e files/digest-bash-completion-20050121-r2 152
+MD5 44c5b3135ff8dbe25ae11bc13a5f8b09 ChangeLog 18158
+MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
+MD5 8f9c39e1a1f7ad657433883606d247df bash-completion-20050121-r2.ebuild 2720
 MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
-MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
-MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r3 76
-MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
+MD5 9aca91cdcddd5454ebc4f17efe465d71 files/digest-bash-completion-20041017-r3 152
+MD5 b6b11ab0684a97cfd9a9ba78f5fa9f9a files/20041017-rcs.diff 574
 MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
+MD5 7a421855615dce0df4bb65ce82852a0e files/digest-bash-completion-20050121-r2 152
+MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r3 76
+MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r4 76
+MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
+MD5 d2cefd3e4878b47d485936839bdd39ab files/20050121-muttng.diff 2261
+MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
+MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRoHbugEuf3OQ0akRAnBJAJ4vrxJSWFAUAzhKWuw5nQEf0R4QsgCfaJiJ
-ZwOFAnx0s7YcSs10DTHFtwY=
-=DknP
+iD8DBQFCR/qsEZCkKN40op4RAnAdAJ9NUGT8SqFO56N5OHtsGkop45x6jQCfRa0f
+nLEu/ELrZ75Wm+pVSnvV9P0=
+=aIyd
 -----END PGP SIGNATURE-----

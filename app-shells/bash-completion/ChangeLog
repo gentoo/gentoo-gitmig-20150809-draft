@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.110 2005/03/27 09:49:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.111 2005/03/28 12:37:21 ka0ttic Exp $
+
+*bash-completion-20050121-r4 (28 Mar 2005)
+
+  28 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20050121-muttng.diff, +bash-completion-20050121-r4.ebuild:
+  Revision bump; extend mutt completion to also work with muttng. Thanks to
+  Marcin 'aye' Kryczek <aye@gentoo.pl> in bug 86853 for the patch.
 
   27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   bash-completion-20050121-r1.ebuild:

@@ -1,0 +1,69 @@
+--- bash_completion.orig	2005-03-27 23:40:42.000000000 -0500
++++ bash_completion	2005-03-27 23:42:50.000000000 -0500
+@@ -4544,7 +4544,7 @@
+ #
+ # Mutt doesn't have an "addressbook" like Pine, but it has aliases and
+ # a "query" function to retrieve addresses, so that's what we use here.
+-have mutt && {
++have mutt || have muttng && {
+ _muttaddr()
+ {
+ 	_muttaliases
+@@ -4577,9 +4577,10 @@
+ 	local -a conffiles aliases
+ 	cur=${COMP_WORDS[COMP_CWORD]}
+ 
+-	[ -f ~/.mutt/muttrc ] && muttrc="~/.mutt/muttrc"
+-	[ -f ~/.muttrc ] && muttrc="~/.muttrc"
++	[ -f ~/.${muttcmd}/${muttcmd}rc ] && muttrc="~/.${muttcmd}/${muttcmd}rc"
++	[ -f ~/.${muttcmd}rc ] && muttrc="~/.${muttcmd}rc"
+ 	[ -z "$muttrc" ] && return 0
++
+ 	conffiles=( $(eval _muttconffiles $muttrc $muttrc) )
+ 	aliases=( $( sed -rn 's|^alias[[:space:]]+([^[:space:]]+).*$|\1|p' \
+ 			$(eval echo ${conffiles[@]}) ) )
+@@ -4594,7 +4595,7 @@
+ 	local -a queryresults
+ 	cur=${COMP_WORDS[COMP_CWORD]}
+ 
+-	querycmd="$( mutt -Q query_command  | sed -r 's|^query_command=\"(.*)\"$|\1|; s|%s|'$cur'|' )"
++	querycmd="$( $muttcmd -Q query_command  | sed -r 's|^query_command=\"(.*)\"$|\1|; s|%s|'$cur'|' )"
+ 	if [ -z "$cur" -o -z "$querycmd" ]; then
+ 	    queryresults=()
+ 	else 
+@@ -4616,7 +4617,7 @@
+ 	# This is currently not working so well. Perhaps this function should
+ 	# just call _filedir() for the moment.
+ 	if [[ $cur == [=+]* ]]; then
+-		folder="$( mutt -Q folder | sed -r 's|^folder=\"(.*)\"$|\1|' )"
++		folder="$( $muttcmd -Q folder | sed -r 's|^folder=\"(.*)\"$|\1|' )"
+ 		: folder:=~/Mail
+ 
+ 		# Match any file in $folder beginning with $cur
+@@ -4625,7 +4626,7 @@
+ 		COMPREPLY=( ${COMPREPLY[@]#$folder/} )
+ 		return 0
+ 	elif [ "$cur" == !* ]; then
+-		spoolfile="$( mutt -Q spoolfile | sed -r 's|^spoolfile=\"(.*)\"$|\1|' )"
++		spoolfile="$( $muttcmd -Q spoolfile | sed -r 's|^spoolfile=\"(.*)\"$|\1|' )"
+ 		[ ! -z "$spoolfile" ] && eval cur="${cur/^!/$spoolfile}";
+ 	fi
+ 	_filedir
+@@ -4640,6 +4641,8 @@
+ 	prev=${COMP_WORDS[COMP_CWORD-1]}
+ 
+ 	COMPREPLY=()
++	
++	[ ${COMP_WORDS[0]} == muttng ] && muttcmd="muttng" || muttcmd="mutt"
+ 
+ 	case "$cur" in
+ 	-*)
+@@ -4670,7 +4673,7 @@
+ 	esac
+ 	
+ }
+-complete -F _mutt $default $filenames mutt
++complete -F _mutt $default $filenames mutt muttng
+ }
+ 
+ _configure_func()
