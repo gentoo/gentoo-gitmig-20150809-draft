@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.39 2004/08/02 22:16:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.40 2004/11/25 10:48:37 dragonheart Exp $
+
+  25 Nov 2004; Daniel Black <dragonheart@gentoo.org> elfutils-0.94-r1.ebuild:
+  fixed test routine as per bug #72347. Thanks to Sébastien DIAZ
+  <sebastien.diaz@alliancemedia.fr>
 
   02 Aug 2004; <solar@gentoo.org> elfutils-0.94-r1.ebuild:
   elfutils does not actually seem to compile currently in a uClibc environment

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.11 2004/10/24 05:26:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.12 2004/11/25 10:48:37 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -43,6 +43,12 @@ src_compile() {
 		`use_enable nls` \
 		|| die "./configure failed"
 	emake || die
+}
+
+src_test() {
+	cd ${S}
+	env LD_LIBRARY_PATH="${S}/libelf:${S}/libebl:${S}/libdw:${S}/libasm" \
+		make check || die "test failed"
 }
 
 src_install() {

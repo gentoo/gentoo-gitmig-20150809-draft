@@ -1,4 +1,14 @@
-MD5 0b537a60c3adaff16f4cee4721b03b6b ChangeLog 4667
-MD5 871683ce018f7950e08d1ede4665a793 elfutils-0.94-r1.ebuild 1692
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff3716ece05218187e857d33dca73445 ChangeLog 4853
+MD5 a5a498ffdbd0f6cb9a2f366caf602c04 elfutils-0.94-r1.ebuild 1828
 MD5 25da57fec6a38ed0c69ec6682b595398 files/elfutils-0.94-alpha-mips-atime.diff 699
 MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpbiLmdTrptrqvGERAuECAJwPcH/hZr4tdKiNOm4zIPRAZU0NSQCggnMi
+8q007LEZzu2Y/BDO/lAO5fM=
+=CrkR
+-----END PGP SIGNATURE-----
