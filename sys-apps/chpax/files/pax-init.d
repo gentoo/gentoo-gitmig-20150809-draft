@@ -8,22 +8,37 @@ depend() {
 
 checkconfig() {
 	if [ "x$CHPAX" = "x" ]; then
-		#CHPAX=/sbin/paxctl
-		CHPAX=/sbin/chpax
+		CHPAX="/sbin/chpax /sbin/paxctl"
 	fi
-	$CHPAX -v $CHPAX >/dev/null 2>&1 || return 1
+	# Find non-existant chpaxes
+	REALCHPAX=""
+	for i in $CHPAX; do
+		REALCHPAX="$REALCHPAX`$i -v $i >/dev/null 2>&1 && echo \ $i`"
+	done
+	if [ "x$REALCHPAX" = "x" ]; then
+		eerror "error:  none of the specified chpax commands exist!"
+		return 1
+	fi
+	CHPAX="$REALCHPAX"
 }
 
 chpax_flag() {
 	flag=$1
 	fname=$2
 
-	#einfo "chpax -$flag ${fname}"
-	if [ -w ${fname} ]; then
-		einfo "$CHPAX -$flag ${fname}"
-		$CHPAX -$flag ${fname}
-		[ $? != 0 ] && eerror "error: $CHPAX -$flag ${fname}"
-	fi
+	#if [ -w ${fname} ]; then
+		#einfo "-${flag} flagging ${fname}"
+		for i in $CHPAX; do
+			#einfo "    with $i"
+			# nonverbose is ultraquiet
+			if [ "$VERBOSE" = "yes" ]; then
+				$i -$flag ${fname}
+				[ $? != 0 ] && eerror "error: $i -$flag ${fname}"
+			else
+				$i -$flag ${fname} 2>/dev/null >/dev/null
+			fi
+		done
+	#fi
 }
 
 fix_exempts() {
@@ -33,6 +48,7 @@ fix_exempts() {
 	RANDMMAP_EXEMPT=`eval echo $RANDMMAP_EXEMPT`
 	MPROTECT_EXEMPT=`eval echo $MPROTECT_EXEMPT`
 	SEGMEXEC_EXEMPT=`eval echo $SEGMEXEC_EXEMPT`
+	PS_EXEC_EXEMPT=`eval echo $PS_EXEC_EXEMPT`
 	RANDEXEC_EXEMPT=`eval echo $RANDEXEC_EXEMPT`
 }
 
@@ -41,13 +57,16 @@ start() {
 
 	fix_exempts
 
-	for p in $PAGEEXEC_EXEMPT; do chpax_flag p ${p} ;done
-	for e in $TRAMPOLINE_EXEMPT; do chpax_flag e ${e} ;done
-	for r in $RANDMMAP_EXEMPT; do chpax_flag r ${r} ;done
-	for m in $MPROTECT_EXEMPT; do chpax_flag m ${m} ;done
-	for s in $SEGMEXEC_EXEMPT; do chpax_flag s ${s} ;done
-	for x in $RANDEXEC_EXEMPT; do chpax_flag x ${x} ;done
+	ebegin "Setting PaX flags on binaries"
+	for e in $TRAMPOLINE_EXEMPT; do chpax_flag e ${e}    ;done
+	for r in $RANDMMAP_EXEMPT;   do chpax_flag r ${r}    ;done
+	for m in $MPROTECT_EXEMPT;   do chpax_flag m ${m}    ;done
+	for p in $PAGEEXEC_EXEMPT;   do chpax_flag p ${p}    ;done
+	for s in $SEGMEXEC_EXEMPT;   do chpax_flag s ${s}    ;done
+	for s in $PS_EXEC_EXEMPT;    do chpax_flag psem ${s} ;done
+	for x in $RANDEXEC_EXEMPT;   do chpax_flag x ${x}    ;done
 
+	eend
 	return 0
 }
 
@@ -57,13 +76,15 @@ stop() {
 	[ "$ZERO_FLAG_MASK" = "yes" ] || return 0
 	fix_exempts
 	einfo "chpax zero flag masking"
-	for p in $PAGEEXEC_EXEMPT; do chpax_flag z ${p} ;done
-	for e in $TRAMPOLINE_EXEMPT; do chpax_flag z ${e} ;done
-	for r in $RANDMMAP_EXEMPT; do chpax_flag z ${r} ;done
-	for m in $MPROTECT_EXEMPT; do chpax_flag z ${m} ;done
-	for s in $SEGMEXEC_EXEMPT; do chpax_flag z ${s} ;done
-	for x in $RANDEXEC_EXEMPT; do chpax_flag z ${x} ;done
+	for p in $PAGEEXEC_EXEMPT;   do chpax_flag ze ${p} ;done
+	for e in $TRAMPOLINE_EXEMPT; do chpax_flag ze ${e} ;done
+	for r in $RANDMMAP_EXEMPT;   do chpax_flag ze ${r} ;done
+	for m in $MPROTECT_EXEMPT;   do chpax_flag ze ${m} ;done
+	for s in $SEGMEXEC_EXEMPT;   do chpax_flag ze ${s} ;done
+	for s in $PS_EXEC_EXEMPT;    do chpax_flag ze ${s} ;done
+	for x in $RANDEXEC_EXEMPT;   do chpax_flag ze ${x} ;done
 
 	return 0
 }
+
 
