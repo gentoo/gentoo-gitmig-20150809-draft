@@ -1,11 +1,21 @@
-MD5 950486478c515eb082a89dd17da0c315 xbox-sources-2.4.27-r3.ebuild 950
-MD5 8a8008a7e6f630b14e087675e5bd223b ChangeLog 4272
-MD5 4efcfef4b1fd64c0e5e48ec7f2ec9446 xbox-sources-2.6.8.1-r2.ebuild 864
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47e38907176eb2c7d5dd6aa9a3c996c5 ChangeLog 4348
 MD5 c2a56d354398d9255422286f7af425ee metadata.xml 351
-MD5 d1ccc2047be533c992f67270a150a210 files/xbox-sources-2.4.27.cmdlineLeak.patch 388
-MD5 452e04a312368605e145428c35bd0e05 files/xbox-sources-2.6.8.1.devPtmx.patch 572
-MD5 c2510fe1891f5a9effb12c2196922206 files/xbox-sources-2.6.7.cmdlineLeak.patch 281
+MD5 950486478c515eb082a89dd17da0c315 xbox-sources-2.4.27-r3.ebuild 950
+MD5 4efcfef4b1fd64c0e5e48ec7f2ec9446 xbox-sources-2.6.8.1-r2.ebuild 864
 MD5 d4a740ae56c2049247083af387a22a85 files/xbox-sources-2.4.26.CAN-2004-0394.patch 350
+MD5 d1ccc2047be533c992f67270a150a210 files/xbox-sources-2.4.27.cmdlineLeak.patch 388
+MD5 c2510fe1891f5a9effb12c2196922206 files/xbox-sources-2.6.7.cmdlineLeak.patch 281
+MD5 103bb9f9dd95f5afb332c235ee040cb2 files/digest-xbox-sources-2.4.27-r3 302
 MD5 2051e20891c2d7147a9ff72bb1bb2d81 files/digest-xbox-sources-2.6.8.1-r2 149
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/xbox-sources-2.4.27.XDRWrapFix.patch 1499
-MD5 103bb9f9dd95f5afb332c235ee040cb2 files/digest-xbox-sources-2.4.27-r3 302
+MD5 452e04a312368605e145428c35bd0e05 files/xbox-sources-2.6.8.1.devPtmx.patch 572
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBjXTRI1lqEGTUzyQRApGyAJ4kOXgBzY1SVEUzIuC9MYIAAUCH/wCghTEK
+NYe/RwQR4/0pX+dh0vBzUh4=
+=fqLy
+-----END PGP SIGNATURE-----
