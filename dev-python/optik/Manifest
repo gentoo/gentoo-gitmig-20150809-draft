@@ -1,0 +1,7 @@
+MD5 5acf0db1f1b31f1c2815e0a0ed0f2a2f ChangeLog 1363
+MD5 87ca0c76b29efeb6d44a71cd86809136 optik-1.2.ebuild 520
+MD5 fb03d2696aa1834d6aea237343550fde optik-1.3.ebuild 677
+MD5 1a3da17f591dc89cb09b1f6394371a11 optik-1.4.ebuild 667
+MD5 b757aba98cf0cbbfe8121044ce96437a files/digest-optik-1.2 60
+MD5 90a11d2a7f6c3f50647b6d155648cf85 files/digest-optik-1.3 60
+MD5 1dbb96b2b617f2e339b2a56c8fb83e76 files/digest-optik-1.4 119
