@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.4 2003/09/03 04:51:04 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.5 2003/09/16 15:46:27 max Exp $
+
+*xmltv-0.5.18 (16 Sep 2003)
+
+  16 Sep 2003; Max Kalika <max@gentoo.org> xmltv-0.5.18.ebuild:
+  Bump to version 0.5.18 and mark <= 0.5.17 stable.
 
 *xmltv-0.5.17 (02 Sep 2003)
 
