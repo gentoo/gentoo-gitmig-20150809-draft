@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.6 2002/03/29 16:29:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.7 2002/04/14 16:23:55 danarmak Exp $
+
+*wine-20020411 (14 Apr 2002)
+
+  14 Apr 2002; Dan Armak <danarmak@gentoo.org>: new upstream release
+
 
 *wine-20020310-r1 (29 Mar 2002)
 
