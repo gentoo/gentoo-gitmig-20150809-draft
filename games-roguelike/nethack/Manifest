@@ -1,6 +1,6 @@
 MD5 08abf2f83e1578527c6af5d0a86464bc ChangeLog 3619
+MD5 2723553c895a7c8e1b986edf685e1875 nethack-3.4.2.ebuild 4295
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 5e1d9d6a6f1baea5c59a602029a61078 nethack-3.4.2.ebuild 4292
 MD5 3041c3accc85e0785ba33198ca16331a nethack-3.4.3.ebuild 4343
 MD5 7dfa79bba03a240cb7bba2e84d8178ef files/3.4.3-GNOME-support.patch 1316
 MD5 004669e4ce554b5f7f92daaea2e2cebb files/3.4.3-QT-GNOME-support.patch 1507
