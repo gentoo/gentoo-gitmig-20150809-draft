@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.9 2004/06/24 22:03:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.10 2004/07/16 04:19:04 vapier Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -23,8 +23,9 @@ src_unpack() {
 	sed -i \
 		-e 's:-O6:@CXXFLAGS@:' src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
-	epatch "${FILESDIR}/${PV}-gcc34.patch"
-	epatch "${FILESDIR}/1.1.10-i865g.patch" # bug #53320
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+	epatch ${FILESDIR}/${PV}-i865g.patch #53320
+	epatch ${FILESDIR}/${PV}-GL.patch #48925
 }
 
 src_compile() {

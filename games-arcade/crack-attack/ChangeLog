@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.8 2004/06/24 22:03:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.9 2004/07/16 04:19:04 vapier Exp $
+
+  16 Jul 2004; Mike Frysinger <vapier@gentoo.org> +files/1.1.10-GL.patch,
+  crack-attack-1.1.10.ebuild:
+  Add a patch to fix GL funkiness #48925
 
   11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crack-attack-1.1.10.ebuild, files/1.1.10-i865g.patch:
