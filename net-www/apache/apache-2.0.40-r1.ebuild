@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.40-r1.ebuild,v 1.1 2002/09/13 08:48:17 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.40-r1.ebuild,v 1.2 2002/09/28 19:00:21 owen Exp $
 
 S="${WORKDIR}/httpd-${PV}"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz"
 HOMEPAGE="http://www.apache.org"
