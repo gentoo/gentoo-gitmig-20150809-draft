@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.7 2004/06/30 02:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.8 2005/03/05 13:30:07 wolf31o2 Exp $
 
 inherit games
 
@@ -48,9 +48,9 @@ src_unpack() {
 src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
-	exeinto /opt/descent3
+	exeinto ${dir}
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{descent3,nettest}
-	insinto /opt/descent3
+	insinto ${dir}
 
 	cp ${CDROM_ROOT}/{FAQ.txt,README,README.mercenary,d3.hog,icon.{bmp,xpm}} \
 		${Ddir}

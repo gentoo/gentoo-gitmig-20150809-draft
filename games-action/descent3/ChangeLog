@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.7 2004/06/24 21:54:30 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.8 2005/03/05 13:30:07 wolf31o2 Exp $
+
+  05 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b.ebuild:
+  Changing /opt/descent3 to dir variable and closing bug #84157.
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> descent3-1.4.0b.ebuild:
   fix use invocation
