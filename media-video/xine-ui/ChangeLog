@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.50 2004/04/14 15:10:49 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.51 2004/04/14 15:49:13 swtaylor Exp $
+
+  14 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> xine-ui-0.9.23-r1.ebuild:
+  purging xine-bugreport from .23 as well
 
 *xine-ui-0.9.22-r2 (14 Apr 2004)
 

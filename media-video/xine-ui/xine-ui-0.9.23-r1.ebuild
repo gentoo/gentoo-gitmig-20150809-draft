@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23-r1.ebuild,v 1.2 2004/04/13 19:18:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23-r1.ebuild,v 1.3 2004/04/14 15:49:13 swtaylor Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
+	rm misc/xine-bugreport
 	local myconf=""
 	use X || myconf="${myconf} --disable-x11 --disable-xv"
 	use nls || myconf="${myconf} --disable-nls"
