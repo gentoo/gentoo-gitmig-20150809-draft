@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.33 2002/09/11 20:02:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.34 2002/09/11 20:05:23 raker Exp $
 
 *postfix-1.1.11.20020822 (11 Sep 2002)
 
@@ -31,6 +31,9 @@
   people have been having with postfix.
 
 *postfix-1.1.11-r5 (23 Jul 2002)
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> postfix-1.1.11-r5.ebuild :
+  provide virtual/mda
 
   29 Aug 2002; Nick Hadaway <raker@gentoo.org> postfix-1.1.11-r5.ebuild :
   Fixed an logic for applying sasl2 related patch

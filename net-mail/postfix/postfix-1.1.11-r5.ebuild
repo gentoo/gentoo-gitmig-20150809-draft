@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.5 2002/08/30 14:41:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.6 2002/09/11 20:05:23 raker Exp $
 
 POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
 S=${WORKDIR}/${P}
@@ -14,7 +14,8 @@ LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc"
 
-PROVIDE="virtual/mta"
+PROVIDE="virtual/mta
+	 virtual/mda"
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )

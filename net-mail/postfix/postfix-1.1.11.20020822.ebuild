@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.3 2002/09/11 19:57:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.4 2002/09/11 20:02:55 raker Exp $
 
 PF_PV=1.1.11-20020822
 PF_P=postfix-${PF_PV}
@@ -17,7 +17,8 @@ LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc"
 
-PROVIDE="virtual/mta"
+PROVIDE="virtual/mta
+	 virtual/mda"
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	ldap? ( >=net-nds/openldap-1.2 )
