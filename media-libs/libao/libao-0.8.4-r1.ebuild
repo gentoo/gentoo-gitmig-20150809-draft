@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.9 2004/03/14 18:30:18 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.10 2004/03/26 16:30:22 eradicator Exp $
 
-inherit libtool
+inherit eutils libtool
 
 DESCRIPTION="the audio output library"
 HOMEPAGE="http://www.xiph.org/ao/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE="alsa arts esd nas mmap"
 
 RDEPEND="virtual/glibc
