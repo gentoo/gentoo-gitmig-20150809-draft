@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.4 2004/03/01 01:32:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.5 2004/03/04 01:26:05 latexer Exp $
+
+*rxvt-unicode-2.1 (03 Mar 2004)
+
+  03 Mar 2004; Peter Johanson <latexer@gentoo.org> rxvt-unicode-2.1.ebuild:
+  Bump. As of this version the binaries are named urxvt, urxvtc, urxvtd. This
+  should make it possible to install both rxvt and rxvt-unicode now. This
+  version won't block rxvt, once other's are removed, i'll remove the block from
+  rxvt too.
 
 *rxvt-unicode-2.0 (29 Feb 2004)
 
