@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-0.1.0.ebuild,v 1.1 2003/07/28 17:44:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-0.1.0.ebuild,v 1.2 2003/07/28 17:51:16 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="Spell checker wrapping library"
+DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
 
 SRC_URI="mirror://sourceforge/abiword/${P}.tar.gz"
@@ -26,3 +26,5 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+DOCS="AUTHORS BUGS COPYING.LIB ChangeLog HACKING MAINTAINERS NEWS README TODO"
