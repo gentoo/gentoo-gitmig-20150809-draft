@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/icecc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.4 2003/02/12 09:29:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/ChangeLog,v 1.5 2003/03/17 09:22:12 phosphan Exp $
+
+*icecc-1.5 (17 Mar 2003)
+
+  17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> icecc-1.5.ebuild
+  files/digest-icecc-1.5
+  new version - does not depend on the other tools by the same author
+  because it could aswell just fire up "vi" for every job - the helpers
+  are configurable. See icewm-tools for a convenience package that
+  depends on Vadim Khohlov's programs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
