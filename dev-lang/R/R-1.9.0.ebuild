@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0.ebuild,v 1.4 2004/05/17 11:33:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0.ebuild,v 1.5 2004/05/28 06:17:26 phosphan Exp $
 
-IUSE="atlas X tcltk gnome f77"
+IUSE="atlas X tcltk gnome"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -40,13 +40,8 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 pkg_setup() {
 	if [ -z $(which g77 2>/dev/null) ]; then
-		if ! use f77; then
-			eerror "g77 not found. Please re-emerge gcc with the USE flag"
-			eerror "f77 set."
-		else
 			eerror "g77 not found. Maybe the f77 USE flag was not set when"
 			eerror "you emerged gcc?"
-		fi
 		die "need g77."
 	fi
 }
