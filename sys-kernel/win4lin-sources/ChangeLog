@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.40 2004/11/12 20:30:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.41 2004/11/15 18:07:41 genstef Exp $
+
+*win4lin-sources-2.6.9 (15 Nov 2004)
+
+  15 Nov 2004; Stefan Schweizer <genstef@gentoo.org>
+  +files/win4lin-sources-2.6.9.binfmt_elf.patch,
+  +win4lin-sources-2.6.9.ebuild:
+  Version bump closes bug 62415 thanks to Derk W te Bokkel <derk@zapville.org>
 
 *win4lin-sources-2.4.26-r8 (12 Nov 2004)
 
