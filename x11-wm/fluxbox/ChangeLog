@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.122 2004/10/04 20:17:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.123 2004/10/04 21:35:41 ciaranm Exp $
+
+*fluxbox-0.9.10-r4 (04 Oct 2004)
+
+  04 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +fluxbox-0.9.10-r4.ebuild:
+  Bump. Pull in pretty much everything from upstream -cvs to date. This should
+  fix any remaining locale / font problems. Experimental XComposite support is
+  also available.
 
   25 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.10-r3.ebuild:
   Stable on x86, sparc after discussion with upstream. There may be an -r4
