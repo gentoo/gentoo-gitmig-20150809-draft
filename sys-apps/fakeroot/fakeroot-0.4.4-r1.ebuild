@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-0.4.4-r1.ebuild,v 1.7 2003/10/03 15:37:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-0.4.4-r1.ebuild,v 1.8 2004/02/20 21:19:42 vapier Exp $
 
 inherit gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.debian.org/debian/dists/potato/main/source/utils/${MY_P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ~ppc alpha"
+KEYWORDS="x86 ppc ~sparc alpha amd64"
 
 RDEPEND="virtual/glibc"
 
@@ -23,11 +23,6 @@ src_unpack() {
 	if use alpha; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
-}
-
-src_compile() {
-	econf || die "configure problem"
-	emake || die "compile problem"
 }
 
 src_install() {
