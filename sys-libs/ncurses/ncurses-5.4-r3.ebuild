@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r3.ebuild,v 1.6 2004/08/17 20:12:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r3.ebuild,v 1.7 2004/08/17 20:19:06 mr_bones_ Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha ~arm ~hppa ~amd64 ia64 ~ppc64 ~s390"
-IUSE="build bootstrap debug uclibc"
+IUSE="build bootstrap debug doc uclibc"
 
 DEPEND="virtual/libc"
 # This doesn't fix the problem. bootstrap builds ncurses again with
@@ -91,8 +91,7 @@ src_install() {
 	# Move static and extraneous ncurses libraries out of /lib
 	cd ${D}/${CONF_LIBDIR}
 	dodir /usr/${CONF_LIBDIR}
-	mv libform* libmenu* libpanel* ${D}/usr/${CONF_LIBDIR}
-	mv *.a ${D}/usr/${CONF_LIBDIR}
+	mv libform* libmenu* libpanel* *.a ${D}/usr/${CONF_LIBDIR}
 	# bug #4411
 	gen_usr_ldscript libncurses.so || die "gen_usr_ldscript failed"
 
@@ -154,9 +153,8 @@ src_install() {
 		fi
 
 		cd ${S}
-		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO
-		dodoc doc/*.doc
-		dohtml -r doc/html/
+		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO doc/*.doc
+		use doc && dohtml -r doc/html/
 	fi
 }
 
@@ -171,10 +169,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# Old ncurses may still be around from old build tbz2's.
-	rm -f /lib/libncurses.so.5.[23]
-	rm -f /usr/lib/lib{form,menu,panel}.so.5.[23]
+	rm -f /lib/libncurses.so.5.[23] /usr/lib/lib{form,menu,panel}.so.5.[23]
 	if [ "${CONF_LIBDIR}" != "lib" ] ;then
-		rm -f /${CONF_LIBDIR}/libncurses.so.5.[23]
-		rm -f /usr/${CONF_LIBDIR}/lib{form,menu,panel}.so.5.[23]
+		rm -f /${CONF_LIBDIR}/libncurses.so.5.[23] \
+			/usr/${CONF_LIBDIR}/lib{form,menu,panel}.so.5.[23]
 	fi
 }
