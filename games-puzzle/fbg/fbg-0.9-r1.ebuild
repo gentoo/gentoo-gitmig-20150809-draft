@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.1 2003/09/14 03:53:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.2 2004/02/04 20:05:36 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/fbg/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/x11
 	virtual/opengl
