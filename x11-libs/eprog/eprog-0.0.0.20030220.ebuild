@@ -1,24 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030220.ebuild,v 1.3 2003/03/11 22:54:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/eprog/eprog-0.0.0.20030220.ebuild,v 1.4 2003/03/20 13:03:45 seemant Exp $
 
-DESCRIPTION="convenience library for evas2"
-HOMEPAGE="http://www.rephorm.com/rephorm/code/eprog/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://wh0rd.tk/gentoo/distfiles/${P}.tar.bz2"
-
-LICENSE="as-is"
-SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="pic"
-
-DEPEND="virtual/x11
-	virtual/glibc
-	sys-devel/gcc
-	>=x11-libs/evas-1.0.0.2003*
-	>=x11-libs/ecore-0.0.2.2003*"
+IUSE=""
 
 S=${WORKDIR}/${PN}
+DESCRIPTION="convenience library for evas2"
+HOMEPAGE="http://www.rephorm.com/rephorm/code/eprog/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+
+DEPEND="virtual/x11
+	>=x11-libs/evas-1.0.0.2003*
+	>=x11-libs/ecore-0.0.2.2003*"
 
 pkg_setup() {
 	# the stupid gettextize script prevents non-interactive mode, so we hax it
@@ -29,7 +26,7 @@ pkg_setup() {
 
 src_compile() {
 	env PATH="${T}:${PATH}" WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
-	econf `use_with pic` --with-gnu-ld || die
+	econf || die
 	emake || die
 }
 
