@@ -1,0 +1,56 @@
+diff -aur ksensors-0.7.2.old/ksensors/cpupanel.cpp ksensors-0.7.2/ksensors/cpupanel.cpp
+--- ksensors-0.7.2.old/ksensors/cpupanel.cpp	2002-05-24 22:50:14.000000000 +0200
++++ ksensors-0.7.2/ksensors/cpupanel.cpp	2004-03-07 19:24:51.000000000 +0100
+@@ -38,7 +38,7 @@
+         ptr= strchr(buffer,':');
+         if(ptr) {
+           value= (const char *)(ptr+2);
+-          value.stripWhiteSpace();
++          value= value.stripWhiteSpace();
+         }
+         result= true;
+         break;
+diff -aur ksensors-0.7.2.old/ksensors/lmsensorpanel.cpp ksensors-0.7.2/ksensors/lmsensorpanel.cpp
+--- ksensors-0.7.2.old/ksensors/lmsensorpanel.cpp	2003-02-18 00:41:41.000000000 +0100
++++ ksensors-0.7.2/ksensors/lmsensorpanel.cpp	2004-03-07 19:25:17.000000000 +0100
+@@ -51,8 +51,8 @@
+      }
+      switch( sensor->getTempScale() )
+      {
+-      case Sensor::dgKelvin: valMask= "%0.fK"; break;
+-      default              : valMask= "%0.f^"; break;
++      case Sensor::dgKelvin: valMask= "%.1fK"; break;
++      default              : valMask= "%.1f^"; break;
+      }
+      break;
+ 
+@@ -63,7 +63,7 @@
+        arc->setValueMaxLimit( sensor->getValueMax(),0);
+        arc->setColorRanges(red,green,green);
+      }
+-     valMask= "%0.f RPM";
++     valMask= "%.0f RPM";
+      break;
+ 
+    case Sensor::lmVoltage :
+@@ -76,7 +76,7 @@
+        arc->setColorRanges(blue,QColor(0,200,150),blue);
+        arc->setArrowColor(darkBlue);
+      }
+-     valMask= "%0.2fv";
++     valMask= "%.2fv";
+      break;
+ 
+  }
+diff -aur ksensors-0.7.2.old/ksensors/lmsensor.cpp ksensors-0.7.2/ksensors/lmsensor.cpp
+--- ksensors-0.7.2.old/ksensors/lmsensor.cpp	2003-02-18 00:04:59.000000000 +0100
++++ ksensors-0.7.2/ksensors/lmsensor.cpp	2004-03-13 17:20:17.000000000 +0100
+@@ -69,7 +69,7 @@
+  bool valid= false;
+  while( (*data= sensors_get_all_features(*chip_name, nr1, nr2)) && (*data)->mapping!=SENSORS_NO_MAPPING) {
+    str= (*data)->name;
+-   if(str.find("_min")>=0) {
++   if(str.find("_min")>=0 || str.find("_low")>=0) {
+        sensors_get_feature(*chip_name, (*data)->number, &valMin);
+        valid= true;
+    } else
