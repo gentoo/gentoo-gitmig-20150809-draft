@@ -1,0 +1,73 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2004/12/08 13:03:03-08:00 davem@nuts.davemloft.net 
+#   [NET]: CMSG compat code needs signedness fixes too.
+#   
+#   Signed-off-by: David S. Miller <davem@davemloft.net>
+# 
+# net/compat.c
+#   2004/12/08 13:02:32-08:00 davem@nuts.davemloft.net +7 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# ChangeSet
+#   2004/12/10 09:52:42-08:00 torvalds@ppc970.osdl.org 
+#   Make sure VC resizing fits in s16.
+#   
+#   Noted by Georgi Guninski
+# 
+# drivers/char/vt.c
+#   2004/12/10 09:52:35-08:00 torvalds@ppc970.osdl.org +5 -0
+#   Make sure VC resizing fits in s16.
+# 
+diff -Nru a/net/compat.c b/net/compat.c
+--- a/net/compat.c	2005-02-15 11:46:30 -08:00
++++ b/net/compat.c	2005-02-15 11:46:30 -08:00
+@@ -124,6 +124,12 @@
+ 	 (struct compat_cmsghdr __user *)((msg)->msg_control) :		\
+ 	 (struct compat_cmsghdr __user *)NULL)
+ 
++#define CMSG_COMPAT_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
++
+ static inline struct compat_cmsghdr __user *cmsg_compat_nxthdr(struct msghdr *msg,
+ 		struct compat_cmsghdr __user *cmsg, int cmsg_len)
+ {
+@@ -154,11 +160,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG_COMPAT_ALIGN(ucmlen) <
+-		   CMSG_COMPAT_ALIGN(sizeof(struct compat_cmsghdr)))
+-			return -EINVAL;
+-		if((unsigned long)(((char __user *)ucmsg - (char __user *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG_COMPAT_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG_COMPAT_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/drivers/char/vt.c b/drivers/char/vt.c
+--- a/drivers/char/vt.c	2005-02-15 11:46:59 -08:00
++++ b/drivers/char/vt.c	2005-02-15 11:46:59 -08:00
+@@ -768,6 +768,8 @@
+  * [this is to be used together with some user program
+  * like resize that changes the hardware videomode]
+  */
++#define VC_RESIZE_MAXCOL (32767)
++#define VC_RESIZE_MAXROW (32767)
+ int vc_resize(int currcons, unsigned int cols, unsigned int lines)
+ {
+ 	unsigned long old_origin, new_origin, new_scr_end, rlth, rrem, err = 0;
+@@ -779,6 +781,9 @@
+ 
+ 	if (!vc_cons_allocated(currcons))
+ 		return -ENXIO;
++
++	if (cols > VC_RESIZE_MAXCOL || lines > VC_RESIZE_MAXROW)
++		return -EINVAL;
+ 
+ 	new_cols = (cols ? cols : video_num_columns);
+ 	new_rows = (lines ? lines : video_num_lines);
