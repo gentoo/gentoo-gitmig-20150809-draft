@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.0.ebuild,v 1.1 2002/08/19 20:11:10 stroke Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.0.ebuild,v 1.2 2002/10/04 06:16:36 vapier Exp $
 
 DESCRIPTION="A newsreader for the Gnome2 desktop"
 SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
