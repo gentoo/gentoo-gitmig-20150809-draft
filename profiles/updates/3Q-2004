@@ -160,3 +160,4 @@ move net-www/dansguardian www-proxy/dansguardian
 move net-www/junkbuster www-proxy/junkbuster
 move net-www/middleman www-proxy/middleman
 move net-www/ntlmaps www-proxy/ntlmaps
+move net-www/oops www-proxy/oops
