@@ -1,0 +1,69 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+USE="
+berkdb
+crypt
+cups
+encode
+gdbm
+gif
+gnome
+gpm
+gtk
+imlib
+jpeg
+kde
+libg++
+libwww
+mikmod
+motif
+ncurses
+nls
+oggvorbis
+opengl
+oss
+pam
+pdflib
+png
+python
+qt
+qtmt
+quicktime
+readline
+sdl
+slang
+spell
+ssl
+svga
+tcpd
+truetype
+X
+xml2
+xmms
+xv
+zlib
+"
+
+ARCH="hppa"
+COMPILER="gcc3"
+ACCEPT_KEYWORDS="hppa"
+
+# The following flags have historically been set in this file but I
+# believe it is redundant.  Commenting them out until proven they're
+# unneeded...  (16 Dec 02 agriffis)
+
+#CHOST=hppa-unknown-linux-gnu
+#PLATFORM=$CHOST
+#
+## Options passed to make during the build process
+#MAKEOPTS="-j2"
+#
+## Fetching command (5 tries, passive ftp for firewall compatibility)
+#FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
+## Global configure options
+#
+## C Compiler flags
+#CFLAGS="-O3 -pipe "
+## C++ Compiler flags
+#CXXFLAGS=${CFLAGS}
