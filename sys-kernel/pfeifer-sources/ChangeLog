@@ -1,22 +1,43 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.9 2003/05/10 16:20:02 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.10 2003/06/13 06:43:15 pfeifer Exp $
 
   TODO:
+    fix silent bootsplash with large mem vesafb fix...
+	update POM, USAGI, FreeSWAN, aic7xxx
+	update some of the docs
     better ide chipset support (ie. CSB6)
     fine tune gcc optimizations (yes, there is a bit more to look @)
     
   * Maybe:
     RSBAC
+	loop-aes
     NPTL (doubtful)
     skas - probably through yet another use flag... cause most will *not* want this
-  * Not in 2.4:
+  * Not in 2.4.x:
     XFS will wait for official inclusion in 2.6 til then xfs-sources is the Gentoo
     kernel for xfs support
 
+*pfeifer-sources-2.4.20.1_pre12 (13 Jun 2003)
+
+13 Jun 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre12.ebuild
+ Changes:
+ * Added most of ck7 - Thanks Con.
+ * Updated ipvs to 1.0.9
+ * Updated ea+acl+nfsacl to 0.8.59
+ * Updated grsecurity to 1.9.9h
+ * Updated systrace to 1.0.3
+ * Updated bluetooth support from MH to 2.4.20-MH9
+ * Added support for usb powermate
+ * Added support for nforce1/2 agp
+ * Added compile fixes for gcc3.3
+ * Added ioperm(<-- thanks frogger) & hashing security fixes
+ * Added prelim support for reiserfs xattrs+acl+trusted+nested :)
+ * Other things I am forgetting to mention
+
 *pfeifer-sources-2.4.20.1_pre11 (08 May 2003)
 
-08 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre11.ebuild
+08 May 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre11.ebuild
  Changes:
  * Added support for ipvs
  * Added support for usbvision
@@ -26,7 +47,7 @@
 
 *pfeifer-sources-2.4.20.1_pre10 (04 May 2003)
 
-04 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre10.ebuild
+04 May 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre10.ebuild
  Changes:
  * Added imq support & the ipv4 & ipv6 imq ipt patches
  * Updated Wireless Extensions to WE-15
@@ -38,7 +59,7 @@
 
 *pfeifer-sources-2.4.20.1_pre9 (03 May 2003)
 
-03 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre9.ebuild
+03 May 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre9.ebuild
  Changes:
  * Added usb scanners update from 16Apr2003
  * Added some minor grsecurity fixes
@@ -46,7 +67,7 @@
 
 *pfeifer-sources-2.4.20.1_pre8 (03 May 2003)
 
-03 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre8.ebuild
+03 May 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre8.ebuild
  Changes:
  * Added a few updates for ck6
  * Updated SuperFreeS/WAN to 1,99,7rc2
@@ -59,14 +80,14 @@
  * Updated ntfs to 2.1.4a
  * Updated grsecurity to 1.99g
  * Added initial support for systrace v1.2
- * Updated bluetooth support fro MH to 2.4.20-MH7
+ * Updated bluetooth support from MH to 2.4.20-MH7
  * Added kraxel patch which is v4l2 & other updates - see the docs
  * Fixed broken gcc optimizations... the overoptimization was breaking things
  * Other things I am forgetting to mention :)
 
 *pfeifer-sources-2.4.20.1_pre7 (15 Apr 2003)
 
-15 Apr 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre7.ebuild
+15 Apr 2003: Jay Pfeifer <pfeifer@gentoo.org> pfeifer-sources-2.4.20._pre7.ebuild
  Changes:
  * Added latest ck (12Apr2003) - thank you Con Kolivas! 
  * Added support for either rmap(default) or aavm (your choice)
