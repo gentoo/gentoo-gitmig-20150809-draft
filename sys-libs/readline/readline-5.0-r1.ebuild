@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.1 2004/09/29 13:54:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.2 2004/10/05 18:17:24 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -49,6 +49,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodir /$(get_libdir)
 	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
+	chmod a+rx ${D}/$(get_libdir)/*.so*
 
 	# Bug #4411
 	gen_usr_ldscript libreadline.so
