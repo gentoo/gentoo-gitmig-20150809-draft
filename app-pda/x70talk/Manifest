@@ -1,4 +1,14 @@
-MD5 b3dbf7d4499716df7b662a9a519f9596 ChangeLog 617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f30dc6bf9e83dfa97a6334be9d539a8b x70talk-0.1.4.ebuild 604
+MD5 2fad2249a0d3067bf90b0dbc26755f54 ChangeLog 727
 MD5 0226288fca481e9d6a585215edc12a48 metadata.xml 341
-MD5 826f8127d99cea1f4b0490c47f21c3a8 x70talk-0.1.4.ebuild 588
 MD5 8b12fd0c382a7b845e45f197c73a537b files/digest-x70talk-0.1.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOU4I1lqEGTUzyQRAqlNAJ9/DHefWd8qSeEZHSctopprofy/KwCfRvzk
+QSV60WwnApUKWMaDYzJOBLs=
+=AU1u
+-----END PGP SIGNATURE-----

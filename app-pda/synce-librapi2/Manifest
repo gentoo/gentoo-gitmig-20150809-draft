@@ -1,10 +1,20 @@
-MD5 dca82e1ab0008c77b68b850bfe0aa43a ChangeLog 1590
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 5295ed323511105070d504923eee1055 synce-librapi2-0.7.ebuild 659
-MD5 3cf38a9d690b78dd4cdeb6a5e9f3c10f synce-librapi2-0.8.1.ebuild 708
-MD5 c46a7abf376bc095d29f2b2328aba0a9 synce-librapi2-0.8.9.ebuild 710
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 29de09c59f61f79b4d4ead97f7a75389 synce-librapi2-0.9.0.ebuild 689
+MD5 c46a7abf376bc095d29f2b2328aba0a9 synce-librapi2-0.8.9.ebuild 710
+MD5 3cf38a9d690b78dd4cdeb6a5e9f3c10f synce-librapi2-0.8.1.ebuild 708
+MD5 ad9f17057655eddadd0624e0aed618bc synce-librapi2-0.7.ebuild 676
+MD5 0a4909576862965d9ffac80165da40f4 ChangeLog 1705
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 b8f8dd3fb65bc8010c1888e973947998 files/digest-synce-librapi2-0.7 70
 MD5 80909d9cc67db76633d236fa62ac7c00 files/digest-synce-librapi2-0.8.1 72
 MD5 7763746ee0503aaef267d97285ef8544 files/digest-synce-librapi2-0.8.9 72
 MD5 1cf4989a7fa70f83e3296dcb6d8cda6c files/digest-synce-librapi2-0.9.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrORgI1lqEGTUzyQRAm64AKDMWsZZWIdZae0mFKhh6flXtKfvXgCgnELc
+DBiqNsRM87tZE1+nfAzv67k=
+=+eFe
+-----END PGP SIGNATURE-----
