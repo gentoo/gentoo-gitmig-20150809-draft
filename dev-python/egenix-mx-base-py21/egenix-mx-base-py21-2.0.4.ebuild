@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base-py21/egenix-mx-base-py21-2.0.4.ebuild,v 1.1 2003/03/08 23:36:07 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base-py21/egenix-mx-base-py21-2.0.4.ebuild,v 1.2 2003/04/05 19:56:10 kutsuya Exp $
 
 PYTHON_SLOT_VERSION=2.1
 inherit distutils
@@ -12,7 +12,7 @@ DESCRIPTION="egenix utils for Python."
 SRC_URI="http://www.lemburg.com/files/python/${P_NEW}.tar.gz"
 HOMEPAGE="http://www.egenix.com/"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="eGenixPublic"
 IUSE=""
 
