@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.14 2003/03/28 09:23:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.15 2003/09/16 04:43:43 msterret Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -16,7 +16,7 @@ KEYWORDS="x86 ppc"
 RDEPEND="dev-util/dialog
 	app-shells/bash
 	sys-apps/diffutils
-	sys-apps/e2fsprogs
+	sys-fs/e2fsprogs
 	sys-apps/fileutils
 	sys-apps/grep
 	virtual/modutils
