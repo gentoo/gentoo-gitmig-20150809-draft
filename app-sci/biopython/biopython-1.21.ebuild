@@ -1,6 +1,6 @@
 # Copyright 1999-20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.10.ebuild,v 1.3 2003/08/08 23:36:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.21.ebuild,v 1.1 2003/08/08 23:36:18 george Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/python-2.0
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 src_compile() {
 	python setup.py build || die
@@ -24,8 +24,10 @@ src_compile() {
 }
 
 src_install() {
-	python setup.py install --prefix=${D}/usr || die
+	echo y | python setup.py install --prefix=${D}/usr || die
 
-	dodoc MANIFEST PKG-INFO README NEWS LICENSE CONTRIB
-	dodoc Doc/*
+	dodoc PKG-INFO README NEWS LICENSE CONTRIB
+	dodoc Doc/* Doc/install/*.txt
+	dohtml Doc/install/*.html
+	cp -r Doc/examples/ ${D}/usr/share/doc/${PF}/
 }
