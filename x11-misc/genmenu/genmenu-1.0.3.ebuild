@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.0.3.ebuild,v 1.3 2003/10/17 12:22:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.0.3.ebuild,v 1.4 2004/04/09 13:08:05 lanius Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="menu generator for Blackbox, WindowMaker, and Enlightenment"
 HOMEPAGE="http://projects.gtk.mine.nu/genmenu"
 SRC_URI="http://projects.gtk.mine.nu/archive/${PN}/${P}.tar.gz"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/genmenu
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.8 2003/10/17 12:22:46 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.9 2004/04/09 13:08:05 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> genmenu-1.0.3.ebuild:
+  remove S=${WORKDIR}/${P}
 
   17 Oct 2003; Heinrich Wendel <lanius@gentoo.org> genmenu-1.0.2.ebuild,
   genmenu-1.0.3.ebuild:
