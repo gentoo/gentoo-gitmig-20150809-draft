@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 a5804cffd54e4fa7af9fa8682e84f09b ChangeLog 416
 MD5 8bb2b6e3810c6d2f71a532ffebf2e781 metadata.xml 1371
 MD5 1b68d72a74011dcaf1640517e52bef45 eet-0.9.9.ebuild 341
-MD5 44706a2e41fb550fc7ecdc9cd1bc5c86 eet-0.9.9.20041226.ebuild 367
-MD5 ab4194fa4cb03f1e1d6e1785d924a1eb eet-9999.ebuild 357
+MD5 485db675352dce9acdd74b0185cba60f eet-0.9.9.20050116.ebuild 367
+MD5 f2fd4d2eab89efdfae8eb49e818535ef eet-9999.ebuild 357
 MD5 42ee23f69de04e3bd8f2d1c868881451 files/digest-eet-0.9.9 62
-MD5 411f17a5f8a980002cd4c562667c7c9b files/digest-eet-0.9.9.20041226 72
+MD5 ea09394f42b728544d8f42bec785e3bd files/digest-eet-0.9.9.20050116 72
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eet-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB0B39roRuSHgZdywRAiJ0AJ4//xA3Xym5PNsGO4O510stZdd9iACgjj9K
-Ar+ld0s+vNaFfA2NO+uRPKU=
-=G3xW
+iD4DBQFB6y7jroRuSHgZdywRAuZYAJjGyedQHMyVSWzuehUjtI3uV7tMAKCSUibT
+mOfTpMzNEZ/9PFUrUxMhIQ==
+=+6eB
 -----END PGP SIGNATURE-----
