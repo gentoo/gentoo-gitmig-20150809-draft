@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.5c.ebuild,v 1.2 2004/04/15 15:18:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.5c.ebuild,v 1.3 2004/05/30 22:18:22 robbat2 Exp $
 
 
 inherit kde
@@ -46,6 +46,11 @@ src_compile() {
 	kde_src_compile myconf configure
 	sed -i -e "s#\(kde_.* = \)\${prefix}\(.*\)#\1${KDEDIR}\2#g" Makefile */Makefile
 	kde_src_compile make
+}
+
+src_install() {
+	kde_src_install all
+	dobin pkp
 }
 
 pkg_postinst() {

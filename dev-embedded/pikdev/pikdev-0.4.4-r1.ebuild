@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4-r1.ebuild,v 1.2 2004/04/15 15:18:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4-r1.ebuild,v 1.3 2004/05/30 22:18:22 robbat2 Exp $
 
 
 inherit kde
@@ -8,11 +8,7 @@ need-kde 3
 
 DESCRIPTION="Graphical IDE for PIC-based application development"
 HOMEPAGE="http://pikdev.free.fr/"
-SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
-
-# restrict at Authors request
-RESTRICT="nomirror"
-
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"

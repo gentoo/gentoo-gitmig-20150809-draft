@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.5c-r1.ebuild,v 1.2 2004/05/30 22:18:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.6.ebuild,v 1.1 2004/05/30 22:18:22 robbat2 Exp $
 
 
 inherit kde
@@ -17,8 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="kde-base/kdelibs
-		x11-libs/qt
+RDEPEND="	x11-libs/qt
 		virtual/x11
 		sys-libs/zlib
 		dev-libs/expat
@@ -33,7 +32,9 @@ RDEPEND="kde-base/kdelibs
 		sys-devel/gcc
 		dev-embedded/gputils
 		app-admin/fam
-		virtual/glibc"
+		virtual/glibc
+		kde-base/kdelibs
+		"
 
 # build system uses some perl
 DEPEND="${RDEPEND}

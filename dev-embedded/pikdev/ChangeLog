@@ -1,6 +1,15 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.9 2004/04/27 09:07:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.10 2004/05/30 22:18:22 robbat2 Exp $
+
+*pikdev-0.6.6 (30 May 2004)
+*pikdev-0.6.5b (30 May 2004)
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> pikdev-0.4.4-r1.ebuild,
+  pikdev-0.4.4.ebuild, pikdev-0.6.5b.ebuild, pikdev-0.6.5c-r1.ebuild,
+  pikdev-0.6.5c.ebuild, pikdev-0.6.6.ebuild:
+  fix bug #52485 by adding source to gentoo mirrors, properly fix bug #48070,
+  and add some new versions.
 
 *pikdev-0.6.5c-r1 (25 Apr 2004)
 
