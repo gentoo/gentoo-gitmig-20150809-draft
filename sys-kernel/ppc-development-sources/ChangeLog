@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-development-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.14 2003/12/29 01:29:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.15 2004/01/02 07:27:56 darkspecter Exp $
+
+*ppc-development-sources-2.6.1_rc1-r1 (02 Jan 2004)
+
+  02 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  ppc-development-sources-2.6.1_rc1-r1.ebuild:
+  new snapshot, should finaly run fullspeed on new *books
 
   29 Dec 2003; Luca Barbato <lu_zero@gentoo.org>
   ppc-development-sources-2.6.0-r1.ebuild,
