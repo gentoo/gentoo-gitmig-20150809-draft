@@ -1,4 +1,4 @@
-MD5 f50900f034d5b1a7fd6f0ffce327df71 files/digest-gramadoir-0.2 65
-MD5 2c3e9fb55fa3c20f3f61f72de51d4fd0 ChangeLog 529
-MD5 0b4d3c975b3ebd92f33e44d426d9b03b gramadoir-0.2.ebuild 927
+MD5 24a472592ca0299a875f1a14d50b0b0d gramadoir-0.2.ebuild 920
+MD5 6f92ed383ca67812609fc1413ec4ad40 ChangeLog 522
 MD5 79139d7f8982f12a30b1ed62e4670bce metadata.xml 446
+MD5 f50900f034d5b1a7fd6f0ffce327df71 files/digest-gramadoir-0.2 65
