@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.6 2003/11/03 23:37:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.5.ebuild,v 1.7 2003/11/04 02:56:48 mr_bones_ Exp $
 
 DESCRIPTION="Libtabe provides bimsphone support for xcin-2.5+"
 HOMEPAGE="http://libtabe.sourceforge.net/"
@@ -17,7 +17,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-db3.patch 
+	epatch ${FILESDIR}/${P}-db3.patch
 }
 
 src_compile() {
