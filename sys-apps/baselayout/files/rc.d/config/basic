@@ -10,5 +10,5 @@ VERBOSE=yes				# Set VERBOSE to "no" if you would like a more quiet bootup.
 FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at startup.
 
 ARCH=`uname -m`				# Architecture
-NFSSERVER=yes				# Set to yes if you want to run an nfsserver
+NFSSERVER=no				# Set to yes if you want to run an nfsserver
 SUPERVISE="sysklogd sshd"               # Add the services you want to run supervised

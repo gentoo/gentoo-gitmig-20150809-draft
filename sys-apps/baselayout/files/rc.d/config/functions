@@ -42,7 +42,19 @@ function eend() {
         eecho "$ENOCH_ENDCOL$ENOCH_NORMAL[$ENOCH_BAD oops $ENOCH_NORMAL]"
     fi
     }
-    
+
+
+function supervised() {
+  local service=`basename $0`
+  for i in $SUPERVISE
+  do
+    if [ "$i" = "$service" ]
+    then
+      echo "0"
+    fi
+  done
+}
+
 function doservice() {
     WHOISME=`/usr/bin/whoami`
     if [ -x "$WHOISME" ]
@@ -54,25 +66,35 @@ function doservice() {
     fi
     if [ $# -ne 1 ]; then
         doservice usage
-        exit 1          
+        exit 1
         fi
     for arf in $opts; do
         eval do_${arf}=1
     done
-    
+
     case $1 in
         start)
             if [ ! $do_start ]; then
                 doservice usage
             else
-                start
+                if [ "`supervised`" ]
+                then
+                  supervise_start
+                else
+                  start
+                fi
             fi
             ;;
         stop)
             if [ ! $do_stop ]; then
                 doservice usage
             else
-                stop
+                if [ "`supervised`" ]
+                then
+                  supervise_stop
+                else
+                  stop
+                fi
             fi
             ;;
         reconfig)
@@ -86,9 +108,16 @@ function doservice() {
             if  ! (( $do_start && $do_stop )); then
                 doservice usage
             else
-                stop
-                sleep 3
-                start
+                if [ "`supervised`" ]
+                then
+                  supervise_stop
+                  sleep 3
+                  supervise_start
+                else
+                  stop
+                  sleep 3
+                  start
+                fi
             fi
             ;;
         *)
@@ -99,7 +128,7 @@ function doservice() {
             if (( $do_start && $do_stop )); then
                 foof="${foof}restart"
     fi
-            eecho "${foof}" 
+            eecho "${foof}"
             ;;
     esac
     }
@@ -111,4 +140,6 @@ function einfo() {
 function einfon() {
     eechon "$ENOCH_HILITE$1$ENOCH_NORMAL"
     }
+
+
 
