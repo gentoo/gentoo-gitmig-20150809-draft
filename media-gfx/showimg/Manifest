@@ -1,6 +1,16 @@
-MD5 6c5977cadfc9c0b0e78e03c6ee036148 ChangeLog 2309
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0e12cc98fb6e15b9e10a302a9bee68f ChangeLog 2423
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 68d6a7349ab40516f2ceaf8b5b33521a showimg-0.9.4.ebuild 666
 MD5 a91ba9dae0b77938a562edc400efaeec showimg-0.9.3.ebuild 536
+MD5 316b2f91dd91fd653d387f1ab33487ce showimg-0.9.4.ebuild 672
 MD5 3d134a866416bab7624adad930172d86 files/digest-showimg-0.9.3 66
 MD5 f469e88f42f5deee8f1d9b92e2c64b65 files/digest-showimg-0.9.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB21DmntT9W3vfTuoRAg82AKCwww/TAiT2s6WpMYrKuDtrHyiwlwCbBp/7
+2C6H37iFZcKVkRdbQxCOszw=
+=7L/0
+-----END PGP SIGNATURE-----
