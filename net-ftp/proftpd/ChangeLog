@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.41 2003/10/16 06:05:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.42 2003/10/21 09:57:42 raker Exp $
+
+  20 Oct 2003; Nick Hadaway <raker@gentoo.org> proftpd-1.2.9_rc3.ebuild:
+  Added files/1.2.9_rc3-reversedns.diff which was taken from the 
+  upstream cvs repository.  Gentoo bug #31465 and proftpd bug #2204.
 
 *proftpd-1.2.9_rc3 (16 Oct 2003)
 
