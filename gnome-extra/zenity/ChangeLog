@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.41 2004/12/11 10:49:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.42 2004/12/19 07:18:31 obz Exp $
+
+  19 Dec 2004; Mike Gardiner <obz@gentoo.org> zenity-2.8.1.ebuild:
+  Keyworded x86 and ppc for GNOME 2.8.1
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> zenity-2.8.0.ebuild:
   Stable on alpha.
