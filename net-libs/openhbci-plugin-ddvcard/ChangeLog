@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/openhbci-plugin-ddvcard
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci-plugin-ddvcard/ChangeLog,v 1.2 2003/09/26 10:27:14 hanno Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci-plugin-ddvcard/ChangeLog,v 1.3 2004/01/14 20:17:08 hanno Exp $
+
+*openhbci-plugin-ddvcard-0.4 (14 Jan 2004)
+
+  14 Jan 2004; Hanno Boeck <hanno@gentoo.org>
+  openhbci-plugin-ddvcard-0.4.ebuild:
+  Version bump. Fixes a bug that can destroy hbci-cards, so please update.
 
 *openhbci-plugin-ddvcard-0.3-r1 (28 Aug 2003)
 
