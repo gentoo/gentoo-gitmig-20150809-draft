@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-8.2.3.ebuild,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-8.2.3.ebuild,v 1.2 2002/07/09 21:38:29 nitro Exp $
 
 A="bind-src.tar.gz bind-doc.tar.gz"
 S=${WORKDIR}/src
@@ -10,6 +10,10 @@ DESCRIPTION="Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind/src/8.2.3/bind-src.tar.gz
          ftp://ftp.isc.org/isc/bind/src/8.2.3/bind-doc.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND"
+
+KEYWORDS="x86"
+LICENSE="as-is"
+SLOT="0"
 
 DEPEND="virtual/glibc 
 		>=sys-apps/groff-1.16.1 
