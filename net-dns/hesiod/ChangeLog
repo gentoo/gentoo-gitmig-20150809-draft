@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.7 2003/09/07 16:30:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.8 2003/10/20 09:47:19 lanius Exp $
+
+*hesiod-3.0.2-r1 (20 Oct 2003)
+
+  20 Oct 2003; Heinrich Wendel <lanius@gentoo.org> hesiod-3.0.2-r1.ebuild,
+  files/hesiod-3.0.2-redhat.patch.gz:
+  added dnscache and glibc patch from redhat
 
   07 Sep 2003; <iggy@gentoo.org> hesiod-3.0.2.ebuild:
   added filter-flags -fstack-protector, fixes bug #26332, thanks to kloeri
