@@ -7,7 +7,7 @@ MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
 MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
 MD5 69aa6844bbf39d86cde364729ca9f9dd files/cracklib-2.7-static-lib.patch 1328
 MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
-MD5 f252f69aea5cc7afe7268f4743dcfa27 files/cracklib-2.8_pre1-dictname.patch 250
+MD5 6ca09259ccdbc8451d989211ca46e757 files/cracklib-2.8_pre1-dictname.patch 500
 MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
 MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
 MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211

@@ -3,3 +3,8 @@
 @@ -99,1 +99,1 @@
 -AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(pkgdatadir)/pw_dict"'
 +AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(libdir)/cracklib_dict"'
+--- lib/Makefile.in
++++ lib/Makefile.in
+@@ -103,1 +103,1 @@
+-AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(pkgdatadir)/pw_dict"'
++AM_CPPFLAGS = -I. -I.. -I$(top_srcdir)/lib '-DDEFAULT_CRACKLIB_DICT="$(libdir)/cracklib_dict"'
