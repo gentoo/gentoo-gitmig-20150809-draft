@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/psemu-gpupetemesagl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.10 2003/07/16 01:41:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-gpupetemesagl/ChangeLog,v 1.11 2003/08/14 06:23:58 vapier Exp $
+
+*psemu-gpupetemesagl-1.73 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + games.eclass support.
 
 *psemu-gpupetemesagl-1.71 (15 Jul 2003)
 
