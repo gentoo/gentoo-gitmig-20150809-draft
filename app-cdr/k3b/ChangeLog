@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.41 2004/02/24 11:52:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.42 2004/03/06 12:32:47 lanius Exp $
+
+*k3b-0.11.6 (06 Mar 2004)
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.10.3-r2.ebuild,
+  k3b-0.11.2.ebuild, k3b-0.11.4.ebuild, k3b-0.11.6.ebuild, k3b-0.9.ebuild:
+  version bump (with linguas support, bug #43540), remove old versions
 
 *k3b-0.11.5 (24 Feb 2004)
 
