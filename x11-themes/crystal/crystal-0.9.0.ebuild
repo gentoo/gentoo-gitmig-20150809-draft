@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.9.0.ebuild,v 1.1 2004/11/09 08:40:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.9.0.ebuild,v 1.2 2004/12/11 16:19:45 config Exp $
 
 inherit kde
 need-kde 3.2
@@ -12,5 +12,5 @@ SRC_URI="http://www.kde-look.org/content/files/${KLV}-${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
