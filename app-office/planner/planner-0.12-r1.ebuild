@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12-r1.ebuild,v 1.1 2004/07/14 10:12:47 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12-r1.ebuild,v 1.2 2004/07/14 12:38:31 foser Exp $
 
 
 
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-extra/libgsf-1.4
 	app-text/scrollkeeper
 	libgda? ( >=gnome-extra/libgda-1.0 )
-	python? ( >=dev-python/pygtk-2.0 )"
+	python? ( >=dev-python/pygtk-2.0.0-r1 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0

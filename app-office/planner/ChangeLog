@@ -1,8 +1,11 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.9 2004/07/14 10:12:47 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.10 2004/07/14 12:38:31 foser Exp $
 
 *planner-0.12-r1 (14 Jul 2004)
+
+  14 Jul 2004; foser <foser@gentoo.org> planner-0.12-r1.ebuild :
+  Fix pygtk dep to a sandbox safe version (#56995)
 
   14 Jul 2004; <spider@gentoo.org> +planner-0.12-r1.ebuild:
   ugh. I goofed up and didnt notice the new python bindings, revamped the ebuild
