@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.26 2003/03/01 14:47:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.27 2003/04/14 12:50:20 foser Exp $
+
+*ggv-2.0.0 (14 Apr 2003)
+
+  14 Apr 2003; foser <foser@gentoo.org> ggv-2.0.0.ebuild :
+  New version, first stable gtk2 release
 
 *ggv-1.99.98 (04 Feb 2003)
 
