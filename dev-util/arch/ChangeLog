@@ -1,10 +1,17 @@
 # ChangeLog for dev-util/arch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/ChangeLog,v 1.7 2003/02/12 06:38:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/arch/ChangeLog,v 1.8 2003/03/19 03:44:17 zwelch Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*arch-1.0_pre17 (18 Mar 2003)
+
+  18 Mar 2003; Zach Welch <zwelch@gentoo.org> arch-1.0_pre17.ebuild:
+  bump version to latest
+
+
 *arch-1.0_pre15 (19 Apr 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
 
   19 Apr 2002; Ryan Phillips <rphillips@gentoo.org> arch-1.0_pre15.ebuild:
   
