@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.10.ebuild,v 1.3 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.12.ebuild,v 1.1 2003/11/25 22:56:51 hanno Exp $
 
 IUSE="nls spell"
 
@@ -21,6 +21,9 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
+	# Fix for icon location (bug #31770)
+	sed -i -e 's:ICONDIR/::g' data/bluefish.desktop.in
+
 	local myconf
 	myconf=""
 	# --enable-auto-optimization  let bluefish determine optimization
