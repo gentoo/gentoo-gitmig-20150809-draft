@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.279 2004/03/19 17:27:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.280 2004/03/20 18:56:43 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -234,17 +234,16 @@ net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
 net-www/monkeyd:php - Include support for php scripts
-net-www/mozilla:mozaccess - blank
-net-www/mozilla:mozcalendar - blank
+net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille)
+net-www/mozilla:mozcalendar - Enable mozilla calendar extension
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
-net-www/mozilla:mozinterfaceinfo - blank
 net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
 net-www/mozilla:moznoxft - Disable XFT support in mozilla and/or firefox
-net-www/mozilla:mozp3p - blank
+net-www/mozilla:mozp3p - Enable privacy practices standardization
 net-www/mozilla:mozsvg - Enable SVG support in mozilla and/or firefox
-net-www/mozilla:mozxmlterm - blank
+net-www/mozilla:mozxmlterm - Enable XML-based command-line terminal
 net-www/mozilla-firefox:moznoxft - Disable XFT support in mozilla and/or firefox
 net-www/mozilla-firefox:mozsvg - Enable SVG support in Mozilla and/or Firefox
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
