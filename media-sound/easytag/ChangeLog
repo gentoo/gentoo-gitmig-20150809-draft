@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.49 2004/12/04 17:58:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.50 2004/12/30 22:24:08 dsd Exp $
+
+*easytag-1.0-r1 (30 Dec 2004)
+
+  30 Dec 2004; Daniel Drake <dsd@gentoo.org> +files/easytag-ape-fix.patch,
+  +easytag-1.0-r1.ebuild:
+  Add APE crash fix, bug 70754
 
   04 Dec 2004; Tom Martin <slarti@gentoo.org> easytag-1.0.ebuild:
   Stable on amd64.

@@ -1,0 +1,20 @@
+For some odd APE files, monkey_stringify can be called with a profile value of 0.
+This causes us to return Names[-1] which is undefined behaviour. Here's a safe fallback
+which at least fixes the crash.
+
+Applies against easytag-1.0 and easytag-1.99.2
+
+--- easytag-1.0/src/libapetag/info_mac.c.orig	2004-12-29 00:57:23.234434264 +0000
++++ easytag-1.0/src/libapetag/info_mac.c	2004-12-29 01:03:58.440353832 +0000
+@@ -63,7 +63,10 @@
+         "Fast", "Normal", "High", "Extra-High", "Insane"
+     };
+     unsigned int profile2 = profile/1000;
+-    
++
++    if (profile2 == 0)
++        return na;
++
+     return (profile2 >= sizeof (Names) / sizeof (*Names)) ? na : Names[(profile2-1)];
+ }
+ 
