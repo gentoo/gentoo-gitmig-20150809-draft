@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.8.ebuild,v 1.2 2004/12/19 18:07:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.8.ebuild,v 1.3 2005/01/05 04:18:56 port001 Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ ns_lib=/usr/lib/${PN}/lib
 ns_bin=/usr/lib/${PN}/bin
 ns_mod=/usr/lib/${PN}/modules
 ns_data=/usr/share/${PN}
-ns_conf=/usr/share/${PN}/config
+ns_conf=/usr/share/${PN}/include
 ns_doc=/usr/share/doc/${P}
 ns_include=/usr/include/${PN}
 ns_pid=/var/run/${PN}
@@ -187,10 +187,12 @@ src_install () {
 	doins sample-config.tcl
 
 	insinto ${ns_conf}
-	newins ${FILESDIR}/${PV}/Makefile.global Makefile.global
+	doins ${FILESDIR}/${PV}/Makefile.global
 	newins ${S}/include/Makefile.global Makefile.global.orig
 	doins ${S}/include/Makefile.build
+	dosed "s:../include:${ns_conf}:g" /usr/share/aolserver/include/Makefile.build
 	doins ${S}/include/Makefile.module
+	dosed "s:../include:${ns_conf}:g" /usr/share/aolserver/include/Makefile.module
 
 	insinto ${ns_etc}
 	newins ${FILESDIR}/${PV}/config.tcl aolserver.tcl
