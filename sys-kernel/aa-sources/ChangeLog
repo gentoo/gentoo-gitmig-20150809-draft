@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.29 2004/02/27 11:52:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.30 2004/02/29 12:35:36 plasmaroo Exp $
+
+*aa-sources-2.4.23-r2 (29 Feb 2004)
+
+  29 Feb 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r2.ebuild:
+  Version bump; closes bug #43241.
 
   18 Feb 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r1.ebuild,
   files/aa-sources-2.4.23.munmap.patch:
