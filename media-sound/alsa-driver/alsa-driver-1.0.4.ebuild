@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.2 2004/04/04 18:39:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.4.ebuild,v 1.3 2004/04/06 17:42:29 eradicator Exp $
 
-inherit kernel-mod
+inherit kernel-mod flag-o-matic
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -75,6 +75,9 @@ src_compile() {
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-cards="${ALSA_CARDS}"
+
+	# Should fix bug #46901
+	filter-flags "-fomit-frame-pointer"
 
 	emake ARCH="${KER_ARCH}" || die "Parallel Make Failed"
 }
