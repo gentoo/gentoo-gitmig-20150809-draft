@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.3 2003/12/29 19:07:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14-r2.ebuild,v 1.4 2004/02/21 06:04:59 vapier Exp $
 
 inherit gcc fixheadtails
 
@@ -10,21 +10,25 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ia64"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa ia64"
 IUSE="tcpd debug"
 
 RDEPEND="virtual/glibc
-		 sys-libs/pam
-		 tcpd? ( sys-apps/tcp-wrappers )"
+	 sys-libs/pam
+	 tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
-		>=sys-apps/sed-4"
+	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S}     || die "cd failed"
-	epatch ${FILESDIR}/dante-1.1.14-socksify.patch || die "epatch failed"
-	epatch ${FILESDIR}/dante-1.1.14-bindresvport.patch || die "epatch failed"
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/dante-1.1.14-socksify.patch
+	epatch ${FILESDIR}/dante-1.1.14-bindresvport.patch
 	ht_fix_file `find ${S} -name 'configure'`
+	sed -i \
+		-e 's:/etc/socks\.conf:/etc/socks/socks.conf:' \
+		-e 's:/etc/sockd\.conf:/etc/socks/sockd.conf:' \
+		doc/{faq.ps,faq.tex,sockd.8,sockd.conf.5,socks.conf.5}
 }
 
 src_compile() {
