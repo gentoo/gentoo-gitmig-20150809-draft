@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.1.3.ebuild,v 1.10 2004/06/25 01:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.1.3.ebuild,v 1.11 2004/06/26 21:22:04 liquidx Exp $
 
 inherit distutils eutils
 
@@ -14,15 +14,9 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND="virtual/python
-	=sys-libs/db-4.0*"
+	=sys-libs/db-4.1*"
 
 DOCS="README.txt TODO.txt"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-db4.0.patch
-}
 
 src_compile() {
 	distutils_src_compile "--berkeley-db=/usr"
