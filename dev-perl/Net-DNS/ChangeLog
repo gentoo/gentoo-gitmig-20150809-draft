@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.20 2004/02/20 17:15:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.21 2004/02/27 13:39:58 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.39.ebuild,
+  Net-DNS-0.40.ebuild:
+  Superceded by unmasked ebuild
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> Net-DNS-0.40.ebuild:
+  Unmasking for x86 after 172 days
 
   20 Feb 2004; Aron Griffis <agriffis@gentoo.org> Net-DNS-0.40.ebuild:
   stable on alpha and ia64
