@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-infopipe
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.1 2004/11/13 19:07:36 chainsaw Exp $
+
+*bmp-infopipe-1.3 (13 Nov 2004)
+
+  13 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +files/1.3-includes.patch, +bmp-infopipe-1.3.ebuild:
+  Initial import, as requested by Andreas Haak in bug #67888. Ebuild by me,
+  provided ebuild was not usable.
+

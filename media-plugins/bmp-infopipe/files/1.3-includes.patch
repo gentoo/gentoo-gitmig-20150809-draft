@@ -1,0 +1,15 @@
+--- src/infopipe.c.orig	2004-11-13 18:44:33.022937288 +0000
++++ src/infopipe.c	2004-11-13 18:44:54.779629768 +0000
+@@ -26,9 +26,9 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
+-#include <xmms/plugin.h>
+-#include <xmms/util.h>
+-#include <xmms/xmmsctrl.h>
++#include <bmp/plugin.h>
++#include <bmp/util.h>
++#include <bmp/beepctrl.h>
+ 
+ #include "infopipe.h"
+ #include "../config.h"
