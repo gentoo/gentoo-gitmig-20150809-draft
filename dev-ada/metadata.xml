@@ -6,8 +6,12 @@
 		Ada programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-ada enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-ada enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Programmiersprache Ada.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-ada contiene librerias y utilidades referentes al
+		lenguaje de programación Ada.
 	</longdescription>
 </catmetadata>
 
