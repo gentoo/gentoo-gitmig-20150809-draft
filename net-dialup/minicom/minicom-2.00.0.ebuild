@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.10 2003/07/09 16:55:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.11 2003/08/21 07:56:48 aliz Exp $
 
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://www.netsonic.fi/~walker/${P}.src.tar.gz"
@@ -32,6 +32,6 @@ pkg_postinst() {
 	einfo "files using the XMODEM, YMODEM and ZMODEM protocols."
 	echo
 	einfo "If you need the capability of using the above protocols,"
-	einfo "make sure to install net-misc/lrsz."
+	einfo "make sure to install net-misc/lrzsz."
 	echo
 }
