@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.16 2004/01/23 19:45:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.17 2004/01/23 21:41:23 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -51,7 +51,7 @@ then
 		sys-apps/module-init-tools
 		sys-devel/make )"
 
-	PROVIDE="virtual/linux-sources virtual/alsa"
+	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" || PROVIDE="virtual/linux-sources virtual/alsa"
 
 elif [ "${ETYPE}" == "headers" ]
 then
