@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.39 2004/03/12 05:14:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.40 2004/03/12 11:21:15 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -96,6 +96,10 @@ filter-flags() {
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
 	return 0
+}
+
+filter-lfs-flags() {
+	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
 append-flags() {
