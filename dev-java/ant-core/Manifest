@@ -1,0 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 40aa3e15b499670f159be6f3c96753d3 ant-core-1.5.4.ebuild 3037
+MD5 8cec8253518c1ee0751248c4b05681ad ant-core-1.6.2.ebuild 2224
+MD5 913d10751ca851a8d51184584d6633c8 ChangeLog 13725
+MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
+MD5 b876b365c3d68c3dc528148056af16f9 files/1.5.4-ant 2278
+MD5 6826a8f87a7bfcc6d56c36a8cc9fff47 files/1.6.2-ant 4974
+MD5 4383441650437fec5622070e48e4324c files/build.sh-exit-fix.patch.gz 256
+MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
+MD5 8d86f265f37d0d73cdd2e8a3fd2ff6eb files/digest-ant-core-1.5.4 70
+MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-core-1.6.2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQgSk/rLF9B432nYRAnAhAKCYI/sDTtasIbOL9Bf6c2lbpQcsLACgy+6u
+fXMZKrWF/CnK4ZhcD1kU+tE=
+=4DlJ
+-----END PGP SIGNATURE-----

@@ -1,21 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a9e579c0585e31fa0f608df4fc596ab ant-1.5.4-r1.ebuild 3013
-MD5 1c32cf321566b712cf581daa76820de9 ant-1.6.2-r5.ebuild 2220
-MD5 a833a5807679d0593148982e4cf3c473 ChangeLog 13450
+MD5 8dc52446cb66040e15b4c0b5cc67b006 ant-1.6.2-r6.ebuild 476
+MD5 f11077b37250f9e923d7aceced92edbf ChangeLog 536
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
-MD5 9796e31a633d28a00242c76325bb85b4 files/20ant 26
-MD5 4383441650437fec5622070e48e4324c files/build.sh-exit-fix.patch.gz 256
-MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
-MD5 8d86f265f37d0d73cdd2e8a3fd2ff6eb files/digest-ant-1.5.4-r1 70
-MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-1.6.2-r5 74
-MD5 cf3e02894f5e6ceebcf81e03e473ee2c files/1.6.2-r5/ant 4962
-MD5 f8c9e03bf0f5924ebf9162718bf15169 files/1.5.4/ant 2275
+MD5 1e54d978c2dc4251878340f5bcd70076 ant-1.5.4-r2.ebuild 442
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ant-1.5.4-r2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ant-1.6.2-r6 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPCPB/rLF9B432nYRAsXMAKCSB91T9TEBOerWvP4MVmr44V1sjwCgoIey
-PD0PWDYIuklrB43k7mMMKgs=
-=upWL
+iD8DBQFBQgPs/rLF9B432nYRAhYbAJ9+fQKka7XZSV0V944COTBKLq7FwQCgzehB
+BH1EnWsU9Okwx4jHykaBJNg=
+=nMuO
 -----END PGP SIGNATURE-----
