@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.20 2003/04/23 00:22:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.21 2003/05/20 21:34:33 mkeadle Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -85,6 +85,10 @@ commonbox_src_compile() {
 	use gnome \
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome"
+
+	use xinerama \
+		&& myconf="${myconf} --enable-xinerama" \
+		|| myconf="${myconf} --disable-xinerama"
 
 	econf \
 		--sysconfdir=/etc/X11/${MYBIN} \
