@@ -1,6 +1,9 @@
 # ChangeLog for net-news/tin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/ChangeLog,v 1.10 2004/07/08 21:09:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/ChangeLog,v 1.11 2004/07/10 21:20:04 swegener Exp $
+
+  10 Jul 2004; Sven Wegener <swegener@gentoo.org> tin-1.6.2.ebuild:
+  Marked stable on x86.
 
   08 Jul 2004; Sven Wegener <swegener@gentoo.org> tin-1.4.5.ebuild,
   tin-1.6.0.ebuild:
