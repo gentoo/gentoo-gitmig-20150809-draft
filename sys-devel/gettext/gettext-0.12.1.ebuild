@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.21 2004/07/31 05:27:39 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.22 2004/10/03 09:34:02 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -55,10 +55,11 @@ src_install() {
 		lispdir=${D}/usr/share/emacs/site-lisp \
 		docdir=${D}/usr/share/doc/${PF}/html \
 		|| die
+	dosym msgfmt /usr/bin/gmsgfmt #43435
 
 	exeopts -m0755
 	exeinto /usr/bin
-	doexe misc/gettextize
+	doexe misc/gettextize || die "doexe"
 
 	#glibc includes gettext; this isn't needed anymore
 	rm -rf ${D}/usr/include
