@@ -66,7 +66,7 @@ dev-perl/CGI
 
 # <carpaski@gentoo.org> (22 Mar 2003)
 # Masked for testing! WEeeeee...
-=sys-apps/portage-2.0.47-r11
+>=sys-apps/portage-2.0.47-r11
 
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
