@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/nss-db
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.6 2004/06/24 23:07:50 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.7 2005/02/16 11:04:36 robbat2 Exp $
+
+*nss-db-2.2.3_pre1 (16 Feb 2005)
+
+  16 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +files/remake-all-db,
+  +nss-db-2.2.3_pre1.ebuild:
+  Finally, a new version of nss_db, from Redhat's upstream work, plus patches
+  from Mandrake.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> nss-db-2.2-r1.ebuild:
   Add inherit eutils

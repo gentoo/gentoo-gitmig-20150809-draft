@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.17 2004/06/24 23:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2-r1.ebuild,v 1.18 2005/02/16 11:04:36 robbat2 Exp $
 
 inherit libtool eutils
 
@@ -16,6 +16,7 @@ RDEPEND=">=sys-libs/db-3.2.3-r1"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	!>=sys-libs/glibc-2.3"
+IUSE=""
 
 S=${WORKDIR}/nss_db-${PV}
 

@@ -1,0 +1,4 @@
+MD5 b4440ba2865d28e9068e465426c19ede nss_db-2.2.3pre1.tar.gz 235360
+MD5 ec455e427bf7bf4daba3427fd4066db3 nss_db-2.2.3pre1-external.patch.bz2 1870
+MD5 d02a1a231c70e28320ed21e883be4d6a nss_db-2.2.3pre1-dbupgrade.patch.bz2 263
+MD5 e26590083b9f32d2c134d204ba0ad72e nss_db-2.2.3pre1-dbopen.patch.bz2 258
