@@ -1,6 +1,6 @@
 # Copyright 2000-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-7.3.ebuild,v 1.7 2004/07/13 17:30:56 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-7.3.ebuild,v 1.8 2004/07/14 14:10:12 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,6 +10,7 @@ DESCRIPTION="JDBC3 Driver for PostgreSQL"
 SRC_URI="http://jdbc.postgresql.org/download/${At}"
 HOMEPAGE="http://jdbc.postgresql.org/"
 KEYWORDS="x86 sparc amd64 ~ppc"
+IUSE=""
 LICENSE="POSTGRESQL"
 SLOT="1"
 DEPEND=""
