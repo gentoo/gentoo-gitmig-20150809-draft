@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.4 2004/06/03 20:28:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1-r1.ebuild,v 1.5 2004/06/08 01:08:23 agriffis Exp $
 
 inherit java nsplugins
 
@@ -46,7 +46,8 @@ src_install() {
 		> ${D}/etc/env.d/java/20${P} \
 		|| die "unable to install environment file"
 }
-src_postinst(){
+
+pkg_postinst(){
 	inst_plugin /opt/${P}/bin/javaplugin.so
 	true
 }
