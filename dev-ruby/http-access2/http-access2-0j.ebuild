@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j.ebuild,v 1.4 2003/07/12 13:03:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-access2/http-access2-0j.ebuild,v 1.5 2004/04/10 21:37:19 dholm Exp $
 
 MY_PV=${PV/0/}
 MY_P=${PN}-${MY_PV}
@@ -9,7 +9,7 @@ HOMEPAGE="http://rrr.jin.gr.jp/doc/http-access2/"
 SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/contrib/${MY_P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-lang/ruby-1.6"
 S=${WORKDIR}/${MY_P}
