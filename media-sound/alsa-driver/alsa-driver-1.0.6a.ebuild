@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.1 2004/08/23 21:44:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.6a.ebuild,v 1.2 2004/09/22 09:32:22 eradicator Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/alsa"
 
 SLOT="${KV}"
-KEYWORDS="~x86 ~ppc -sparc ~amd64 ~alpha ~ia64"
+KEYWORDS="x86 ~ppc -sparc amd64 ~alpha ~ia64"
 
 MY_P=${P/_rc/rc}
 SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
@@ -42,14 +42,16 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
-
 	epatch ${FILESDIR}/${PN}-1.0.5a-cs46xx-passthrough.patch
+
+	# SUBDIRS -> M
+	epatch ${FILESDIR}/${P}-kbuild.patch
 
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		epatch ${FILESDIR}/${PN}-1.0.5a-xbox-ac97.patch
 	fi
 
-	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
+	if kernel-mod_is_2_5_kernel || (kernel-mod_is_2_6_kernel && [ ${KV_PATCH} -lt 6 ]); then
 		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"
 
 		if ! [ -d "${FULL_KERNEL_PATH}" ]; then
@@ -68,16 +70,11 @@ src_unpack() {
 
 src_compile() {
 	# Default ARCH & kernel path to set in compilation and make
-	KER_ARCH=${ARCH}
 	KER_DIR=${KERNEL_DIR}
 
 	# If we're using a 2.5 or 2.6 kernel, use our copied kernel tree.
 	if [ -d "${T}/linux" ]; then
 		KER_DIR="${T}/linux"
-
-		# Set the kernel ARCH
-		use x86 && KER_ARCH="i386"
-		use amd64 && KER_ARCH="x86_64"
 	fi
 
 	econf `use_with oss` \
@@ -89,7 +86,8 @@ src_compile() {
 	# Should fix bug #46901
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 
-	emake ARCH="${KER_ARCH}" || die "Parallel Make Failed"
+	unset ARCH
+	emake || die "Parallel Make Failed"
 }
 
 

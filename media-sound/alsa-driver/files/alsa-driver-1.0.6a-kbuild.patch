@@ -1,0 +1,12 @@
+diff -Naur alsa-driver-1.0.6a.orig/Makefile alsa-driver-1.0.6a/Makefile
+--- alsa-driver-1.0.6a.orig/Makefile	2004-06-09 10:33:47.000000000 -0700
++++ alsa-driver-1.0.6a/Makefile	2004-09-22 02:23:58.924678651 -0700
+@@ -103,7 +103,7 @@
+ .PHONY: compile
+ compile: include/sound/version.h include/sndversions.h
+ ifdef NEW_KBUILD
+-	$(MAKE) -C $(CONFIG_SND_KERNELDIR) SUBDIRS=$(MAINSRCDIR)/kbuild $(MAKE_ADDS) modules
++	$(MAKE) -C $(CONFIG_SND_KERNELDIR) M=$(MAINSRCDIR)/kbuild $(MAKE_ADDS) modules
+ else
+ 	@for d in $(SUBDIRS); do if ! $(MAKE) -C $$d; then exit 1; fi; done
+ endif
