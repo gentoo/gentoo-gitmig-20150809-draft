@@ -1,5 +1,5 @@
-MD5 4d98a202129a3b9df8b2542c25e5642f ChangeLog 1536
-MD5 dfdd98b902c31f6717572a9f179ff272 gv-3.5.8-r2.ebuild 1358
+MD5 4af0e882bb90934ab00e558bdd05ad45 ChangeLog 1634
+MD5 a5f39ac1ea570c923390c7ae0b112f6b gv-3.5.8-r2.ebuild 1360
 MD5 8f60d24f315a2d3035f0fd78c06a3f9c files/3.5.8-gcc3.patch 490
 MD5 ed8bb15a47bee7c6c61f5b8f419391a1 files/digest-gv-3.5.8-r2 60
 MD5 7d78a05e583db8e620f61c7dfefddab3 files/gv-3.5.8-r2-gentoo.diff 2577
