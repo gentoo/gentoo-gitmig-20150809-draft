@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.3.1.ebuild,v 1.5 2004/12/10 20:22:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.3.1.ebuild,v 1.6 2004/12/12 19:10:10 danarmak Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -11,7 +11,8 @@ inherit kde-meta
 DESCRIPTION="KDE java bindings"
 KEYWORDS="~x86"
 IUSE=""
-COMMONDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV"
+#COMMONDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV"
+COMMONDEPEND="~kde-base/kdebase-$PV ~kde-base/qtjava-$PV"
 DEPEND="$COMMONDEPEND virtual/jdk"
 RDEPEND="$COMMONDPEND virtual/jre"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
@@ -31,7 +32,7 @@ src_unpack() {
 		mv $x $x.orig
 		sed -e "s:_CLASSPATH_:$(java-config -p qtjava):" $x.orig > $x
 		rm $x.orig
-    done
+	done
 }
 
 src_compile() {
