@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.4 2003/06/24 20:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29.ebuild,v 1.5 2003/07/02 12:47:28 aliz Exp $
 
 inherit cvs flag-o-matic eutils ccc
 
@@ -29,7 +29,7 @@ RESTRICT="nomirror"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 ~alpha"
 IUSE="static doc"
 
 DEPEND="virtual/glibc

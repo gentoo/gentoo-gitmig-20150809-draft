@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.1 2003/04/17 08:39:02 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.2 2003/07/02 12:47:28 aliz Exp $
 
 IUSE="ncurses"
 MY_PV=${PV%_*}-dev-${PV#*_pre}
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/zsh/development/${MY_PN}.tar.bz2
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
