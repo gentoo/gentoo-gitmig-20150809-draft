@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.17 2004/07/14 20:16:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libswf/libswf-0.99.ebuild,v 1.18 2004/07/20 14:40:36 phosphan Exp $
 
 S=${WORKDIR}/dist
 DESCRIPTION="A library for flash movies"
@@ -20,6 +20,8 @@ src_unpack () {
 	if [ -f dist.99.linux.tar ]; then
 		tar -xf dist.99.linux.tar
 	fi
+	cd ${S}
+	sed -e 's:\tswftest:\t./swftest:' -i Makefile || die "sed failed"
 }
 
 src_install () {
