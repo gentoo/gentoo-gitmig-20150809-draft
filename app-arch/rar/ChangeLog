@@ -4,6 +4,10 @@
 
 *rar-3.0 (29 May 2002)
 
+  05 Dec 2002; Jon Nall <nall@gentoo.org> rar-3.0.ebuild :
+  set -sparc -alpha based. removed sparc64 as 32-bit sparc
+  userland is converting to sparc
+
   31 Oct 2002; Mark Guertin <gerk@gentoo.org> rar-3.0.ebuild :
   set -ppc in keywords, this provides an x86 binary that
   is not executable.
