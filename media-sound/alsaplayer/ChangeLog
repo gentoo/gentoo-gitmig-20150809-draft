@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/alsaplayer
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.1 2002/04/26 19:33:14 seemant Exp $
+
+*alsaplayer-0.99.59 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> alsaplayer-0.99.59.ebuild
+  files/digest-alsaplayer-0.99.59
+
+  Music player which uses ALSA primarily
