@@ -1,0 +1,10 @@
+# ChangeLog for app-text/ghostscript-afpl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.1 2003/12/08 14:18:06 lanius Exp $
+
+*ghostscript-afpl-8.11 (08 Dec 2003)
+
+  08 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-afpl-8.11.ebuild, metadata.xml, files/gs-8.11-ijs.patch:
+  initial revision
+
