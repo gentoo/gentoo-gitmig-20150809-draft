@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.5 2003/09/29 17:52:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_beta1.ebuild,v 1.1 2003/09/29 17:52:02 usata Exp $
 
 inherit cannadic
 
 IUSE="tetex"
 
-MY_P="Canna36${PV#*_}"
+MY_P="Canna37${PV/*beta/b}"
 
 DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/canna/6059/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/canna/6125/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc -alpha"
 
 DEPEND="virtual/glibc
 	x11-base/xfree
@@ -24,18 +24,37 @@ RDEPEND="virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+
+	ewarn
+	ewarn "This is a development release! Beware! Vorsicht!!"
+	ewarn "Hit ^C to stop if you are not ready"
+	ewarn
+
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	sleep 8
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	find . -name '*.man' -o -name '*.jmn' | xargs sed -i.bak -e 's/1M/8/g'
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	sed -e "s%@cannapkgver@%${PF}%" \
+		${FILESDIR}/${P}-gentoo.diff.in > ${T}/${P}-gentoo.diff
+	epatch ${T}/${P}-gentoo.diff
 }
 
 src_compile() {
+
 	xmkmf || die
-	make Makefiles || die
-	# make includes
-	make canna || die
+	make libCannaDir=../lib/canna canna || die
 
 	if [ -n "`use tetex`" ] ; then
 		einfo "Compiling DVI, PS (and PDF) document"
@@ -61,6 +80,9 @@ src_install() {
 	# install default.canna (removed from Canna36p4)
 	insinto /usr/share/canna
 	newins misc/initfiles/verbose.canna default.canna
+
+	# cannakill should link to /usr/bin/catdic
+	dosym ../bin/catdic /usr/sbin/cannakill
 
 	dodir /usr/share/man/man8 /usr/share/man/ja/man8
 	for man in cannaserver cannakill ; do
@@ -93,23 +115,36 @@ src_install() {
 	fperms 775 /var/lib/canna/dic/{user,group}
 }
 
+pkg_postinst() {
+
+	update-cannadic-dir
+	einfo
+	einfo "Canna dictionary format has been changed."
+	einfo "You should rebuild app-dict/canna-* after emerge."
+	einfo
+}
+
 pkg_prerm () {
 
 	if [ -S /tmp/.iroha_unix/IROHA ] ; then
+		# make sure cannaserver get stopped because otherwise
+		# we cannot stop it with /etc/init.d after emerge -C canna
 		einfo
 		einfo "Stopping Canna for safe unmerge"
 		einfo
 		/etc/init.d/canna stop
+		touch ${T}/canna.cookie
 	fi
 }
 
 pkg_postrm () {
 
-	if [ -f /usr/sbin/cannaserver ] ; then
-		update-cannadic-dir
+	if [ -f /usr/sbin/cannaserver -a -e ${T}/canna.cookie ] ; then
+		#update-cannadic-dir
 		einfo
 		einfo "Restarting Canna"
 		einfo
 		/etc/init.d/canna start
+		rm -f ${T}/canna.cookie
 	fi
 }

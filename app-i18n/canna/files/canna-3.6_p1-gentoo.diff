@@ -17,7 +17,7 @@ diff -Naur Canna36p1.orig/Canna.conf Canna36p1/Canna.conf
 +cannaEtcDir = /etc/canna
 +cannaManDir = $(cannaPrefix)/share/man
  cannaIncDir = $(cannaPrefix)/include/canna
-+cannaDocDir = $(cannaPrefix)/share/doc/canna-3.6
++cannaDocDir = $(cannaPrefix)/share/doc/canna-3.6_p1
 +cannaShareDir = $(cannaPrefix)/share/canna
 +
 +LockDir = /tmp/.iroha_unix
@@ -107,7 +107,7 @@ diff -Naur Canna36p1.orig/cmd/catdic/Imakefile Canna36p1/cmd/catdic/Imakefile
 --- Canna36p1.orig/cmd/catdic/Imakefile	2002-11-07 23:46:02.000000000 +0900
 +++ Canna36p1/cmd/catdic/Imakefile	2002-12-02 22:03:25.000000000 +0900
 @@ -1,6 +1,9 @@
- /* $Id: canna-3.6_p1-gentoo.diff,v 1.1 2003/09/22 21:12:03 usata Exp $ */
+ /* $Id: canna-3.6_p1-gentoo.diff,v 1.2 2003/09/29 17:52:02 usata Exp $ */
  #include "../../Canna.conf"
  
 +/* gentoo: use hard links so that the image can be merged correctly */
