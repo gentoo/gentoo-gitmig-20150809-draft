@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.43 2005/01/20 22:56:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.44 2005/02/07 04:28:57 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> zlib-1.2.2.ebuild:
+  Marked stable on mips.
 
   20 Jan 2005; Marcus Hanwell <cryos@gentoo.org> zlib-1.2.2.ebuild:
   Marking stable on amd64.
