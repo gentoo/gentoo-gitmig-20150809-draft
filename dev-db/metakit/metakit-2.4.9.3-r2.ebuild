@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.1 2004/02/14 00:22:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.2 2004/02/20 04:49:07 kloeri Exp $
 
 inherit python
 
@@ -18,8 +18,15 @@ DEPEND=">=sys-apps/sed-4
 	tcltk? ( >=dev-lang/tcl-8.3.3-r2 )"
 
 src_unpack() {
+	python_version
+
 	unpack ${A} ; cd ${S}
-	sed -i "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS}:" unix/Makefile.in
+	# Fix all hardcoded python2.3 paths
+	for name in python/scxx/PWOBase.h python/PyHead.h python/PyStorage.cpp ; do
+		sed -i -e "s:Python.h:python${PYVER}/Python.h:" ${name}
+	done
+	sed -i -e "s:python2.3:python${PYVER}:" unix/configure
+	sed -i -e "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS}:" unix/Makefile.in
 }
 
 src_compile() {
