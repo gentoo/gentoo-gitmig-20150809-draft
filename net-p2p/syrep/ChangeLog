@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/syrep
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/ChangeLog,v 1.1 2004/12/23 13:33:08 ka0ttic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/ChangeLog,v 1.2 2005/03/15 14:23:07 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> syrep-0.6.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
 *syrep-0.6 (23 Dec 2004)
 
