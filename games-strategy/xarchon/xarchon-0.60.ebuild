@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.6 2004/06/24 23:30:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.7 2004/08/13 00:25:15 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.seul.org/pub/xarchon/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="esd joystick" # also has qt support but it fails :/
 
 RDEPEND="virtual/x11
