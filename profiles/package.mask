@@ -684,8 +684,8 @@ dev-libs/libIDL
 x11-libs/libzvt
 x11-libs/libwnck
 gnome-base/ORBit2
-gnome-base/bonobo-activation 
->=gnome-base/control-center-1.99.10.ebuild
+gnome-base/bonobo-activation
+>=gnome-base/control-center-1.99.10
 >=gnome-base/eel-1.1.14.ebuild
 gnome-base/gail
 >=gnome-base/gconf-1.1.0
