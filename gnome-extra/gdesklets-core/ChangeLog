@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.20 2004/04/05 03:22:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.21 2004/04/12 18:45:19 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gdesklets-core-0.26.ebuild:
+  Mark stable on amd64.
 
   04 Apr 2004; Aron Griffis <agriffis@gentoo.org> gdesklets-core-0.26.ebuild:
   Add ~alpha for bug 46601
