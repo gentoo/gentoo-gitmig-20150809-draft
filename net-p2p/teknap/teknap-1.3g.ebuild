@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.12 2004/03/13 09:13:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.13 2004/06/23 22:12:02 squinky86 Exp $
 
 IUSE="xmms gtk ipv6 tcpd"
 
@@ -11,7 +11,9 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.TekNap.com/ http://www.cactuz.org/jnbek/teknap"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+# please test the current ~testing ebuild, as this does not compile with latest gcc
+#KEYWORDS="x86 ppc"
+KEYWORDS="-x86 -ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
