@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.3.ebuild,v 1.2 2004/02/22 00:08:12 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.9.3.ebuild,v 1.3 2004/03/16 10:17:51 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Gnome Onscreen Keyboard"
 HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~ia64 ~ppc amd64"
+KEYWORDS="x86 ~sparc ~hppa ~alpha ~ia64 ~ppc amd64"
 
 IUSE=""
 
