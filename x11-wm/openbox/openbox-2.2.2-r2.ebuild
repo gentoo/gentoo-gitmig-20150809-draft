@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.2-r2.ebuild,v 1.3 2003/02/13 17:53:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.2.2-r2.ebuild,v 1.4 2003/04/18 01:54:47 foser Exp $
 
 IUSE="nls"
 
@@ -15,7 +15,7 @@ SLOT="2"
 LICENSE="BSD"
 KEYWORDS="~x86 ppc"
 
-DEPEND="x11-libs/xft"
+DEPEND="virtual/xft"
 
 MYBIN="${PN}-dev"
 mydoc="CHANGE* TODO LICENSE data/README*"

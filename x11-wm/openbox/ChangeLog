@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.30 2003/03/21 14:30:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.31 2003/04/18 01:54:47 foser Exp $
 
 *openbox-2.3.0 (07 Feb 2003)
+
+  18 Apr 2003; foser <foser@gentoo.org> openbox*.ebuild :
+  Fixed xft dep to be virtual
 
   21 Mar 2003; Jason Wever <weeve@gentoo.org> openbox-2.3.0.ebuild:
   Added sparc to keywords.
