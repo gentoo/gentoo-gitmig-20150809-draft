@@ -1,11 +1,15 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.2 2002/10/28 05:59:25 vapier Exp $
+
+*figlet-22-r1 (28 Oct 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added fix from #9804 (not all scripts were installed +x)
 
 *figlet-22 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
