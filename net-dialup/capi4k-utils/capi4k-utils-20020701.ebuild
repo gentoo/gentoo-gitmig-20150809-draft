@@ -1,6 +1,6 @@
 # Copyright 2002 Alexander Holler
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20020701.ebuild,v 1.6 2003/04/25 21:53:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20020701.ebuild,v 1.7 2003/05/03 09:05:05 killian Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -11,7 +11,7 @@ MY_P=${PN}-${YEAR_PV}-${MON_PV}-${DAY_PV}
 S=${WORKDIR}/${PN}
 DESCRIPTION="Capi4Linux Utils"
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz"
-HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux.de/"
+HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
