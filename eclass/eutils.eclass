@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.40 2003/07/02 23:01:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.41 2003/07/14 04:47:17 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -827,4 +827,54 @@ xpatch() {
 
 	done
 
+}
+
+# Unpack those pesky makeself generated files ...
+# They're shell scripts with the binary package tagged onto
+# the end of the archive.  Loki utilized the format as does
+# many other game companies.
+#
+# Usage: unpack_makeself [file to unpack] [offset]
+# - If the file is not specified then unpack will utilize ${A}.
+# - If the offset is not specified then we will attempt to extract
+#   the proper offset from the script itself.
+unpack_makeself() {
+	local src=$1
+	local skip=$2
+
+	[ -z "${src}" ] && src=${A}
+	[ -e ./${src} ] \
+		&& src=${PWD}/${src} \
+		|| src=${DISTDIR}/${src}
+	local shrtsrc=`basename ${src}`
+	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
+	if [ -z "${skip}" ] ; then
+		local ver="`grep -a '#.*Makeself' ${src} | awk '{print $NF}'`"
+		local skip=0
+		case ${ver} in
+			1.5.*)	# tested 1.5.{3,4,5} ... guessing 1.5.x series is same
+				skip=`grep -a ^skip= ${src} | cut -d= -f2`
+				;;
+			2.0|2.0.1)
+				skip=`grep -a ^$'\t'tail ${src} | awk '{print $2}' | cut -b2-`
+				;;
+			2.1.1)
+				skip=`grep -a ^offset= ${src} | awk '{print $2}' | cut -b2-`
+				let skip="skip + 1"
+				;;
+			*)
+				eerror "I'm sorry, but I was unable to support the Makeself file."
+				eerror "The version I detected was '${ver}'."
+				eerror "Please file a bug about the file ${shrtsrc} at"
+				eerror "http://bugs.gentoo.org/ so that support can be added."
+				die "makeself version '${ver}' not supported"
+				;;
+		esac
+		debug-print "Detected Makeself version ${ver} ... using ${skip} as offset"
+	fi
+
+	# we do this because otherwise a failure in gzip will cause 0 bytes to be sent
+	# to tar which will make tar not extract anything and exit with 0
+	local out="`tail +${skip} ${src} | gzip -cd | tar -x --no-same-owner -v -f -`"
+	[ -z "${out}" ] && die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
 }
