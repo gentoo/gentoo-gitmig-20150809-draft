@@ -1,4 +1,4 @@
-MD5 089f3eed01bf4f3335d6cc8b0cb8022d amphetadesk-0.93.1.ebuild 1389
-MD5 481af4691c4f4df03960cc8dee5cf1ca ChangeLog 377
 MD5 e974e73646575c737c41b43b1806f554 files/amphetadesk.initd 204
 MD5 94387e2d2ef31bb8f0e6671d89e4f827 files/digest-amphetadesk-0.93.1 75
+MD5 481af4691c4f4df03960cc8dee5cf1ca ChangeLog 377
+MD5 5a207f2373d2cb2481e37e2a40fd44b8 amphetadesk-0.93.1.ebuild 1385

@@ -1,4 +1,4 @@
-MD5 245449e29775aa09f18750c586881bfb ChangeLog 374
-MD5 7b3bf2683291a1a1ad4ea890d6de7a90 wsmake-0.6.4.ebuild 1126
 MD5 6d15df4a1798e50da3dd30c5bff389e0 files/digest-wsmake-0.6.4 251
 MD5 7cc535ed0163eab82da703f14632a0dd files/wsmake-0.6.4-bv.diff 308
+MD5 f1882250ed5a8a48c2b1a7d3d8ad601d wsmake-0.6.4.ebuild 1123
+MD5 245449e29775aa09f18750c586881bfb ChangeLog 374
