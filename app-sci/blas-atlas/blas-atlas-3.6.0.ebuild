@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.15 2004/10/10 18:43:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.16 2004/11/01 00:45:17 ribosome Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
@@ -79,15 +79,13 @@ src_compile() {
 	# Libraries will be installed in ${RPATH}/atlas and ${RPATH}/threaded-atlas:
 	RPATH="${DESTTREE}/lib/blas"
 
-	GCC="gcc"
-
 	if [ -n "${interactive}" ]
 	then
 		echo "${interactive}"
-		make config CC="${GCC} -DUSE_LIBTOOL -DINTERACTIVE" || die
+		make config CC="$(tc-getCC) -DUSE_LIBTOOL -DINTERACTIVE" || die
 	else
 		# Use ATLAS defaults for all questions:
-		(echo | make config CC="${GCC} -DUSE_LIBTOOL") || atlas_fail
+		(echo | make config CC="$(tc-getCC) -DUSE_LIBTOOL") || atlas_fail
 	fi
 
 	if [ "${ARCH}" == "sparc" ]; then
