@@ -780,3 +780,8 @@ sys-apps/texinfo
 # spider@gentoo.org 23 May 2002
 # This one doesn't build, looks abandondware
 app-arch/gnorpm
+
+
+# seemant@gentoo.org 26 May 2002
+# Masked while testing
+=media-libs/libpng-1.2.3
