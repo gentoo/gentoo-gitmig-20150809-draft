@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.28 2003/06/10 20:25:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.29 2003/06/16 19:46:58 msterret Exp $
+
+  16 Jun 2003; <msterret@gentoo.org> mjpegtools-1.6.1.ebuild:
+  use mirror:// in SRC_URI
 
   10 Jun 2003; <msterret@gentoo.org> mjpegtools-1.6.0-r7.ebuild:
   DEPEND on sed >= 4
