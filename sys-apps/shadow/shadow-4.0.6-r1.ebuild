@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6-r1.ebuild,v 1.1 2005/01/12 03:27:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.6-r1.ebuild,v 1.2 2005/01/16 12:34:32 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -68,6 +68,7 @@ src_unpack() {
 	# Allows shadow configure detect newer systems properly
 	gnuconfig_update
 	elibtoolize
+	epunt_cxx
 }
 
 src_compile() {
