@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.5 2003/03/03 08:57:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.6 2003/03/03 09:20:58 vapier Exp $
 
 inherit flag-o-matic 
 
-IUSE="png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
+IUSE="java png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -178,7 +178,7 @@ src_compile() {
 
 	use xml2 && myconf="${myconf} --with-dom"
 	use crypt && myconf="${myconf} --with-mcrypt --with-mhash --disable-posix-threads"
-	#use java && myconf="${myconf} --with-java=${JDK_HOME}"
+	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
 
