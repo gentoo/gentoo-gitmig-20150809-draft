@@ -1,5 +1,5 @@
-MD5 ecd5d67ed8935bab448779bfea550c83 rtg-0.7.4.ebuild 999
-MD5 e25c84fd1a2a0c0e81cacb709f6cbbbe metadata.xml 260
 MD5 26bc477cb990734a457c418fdf6e4d9b ChangeLog 329
+MD5 e25c84fd1a2a0c0e81cacb709f6cbbbe metadata.xml 260
+MD5 061a4bb9a8c97b5c4b297e4e1b42cc5f rtg-0.7.4.ebuild 1004
 MD5 6692acdf355eb282398b0e09eee80d02 files/digest-rtg-0.7.4 61
 MD5 95d2926c7d784e64b502842c3d3597b5 files/rtg-0.7.4-pathfix.patch 4074
