@@ -1,0 +1,29 @@
+diff -urN VFlib2-2.25.6.ORIG/configure VFlib2-2.25.6/configure
+--- VFlib2-2.25.6.ORIG/configure	2001-10-19 21:12:37.000000000 +0900
++++ VFlib2-2.25.6/configure	2003-06-25 07:46:04.000000000 +0900
+@@ -1155,7 +1155,7 @@
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ 
+ 
+-vflib2_version='2.25.2'
++vflib2_version='2.25.6'
+ 
+ 
+ CUR=24
+--- VFlib2-2.25.6.ORIG/vfontcap	1999-07-21 18:17:04.000000000 +0900
++++ VFlib2-2.25.6/vfontcap	2003-06-20 01:33:44.000000000 +0900
+@@ -33,9 +33,12 @@
+ ####
+ 
+ min:\
+-	:fc=watanabe-mincho:
++	:ft=freetype:\
++	:ff=/usr/X11R6/lib/X11/fonts/truetype/kochi-mincho-subst.ttf:
+ goth:\
+-	:fc=watanabe-mincho:
++	:ft=freetype:\
++	:ff=/usr/X11R6/lib/X11/fonts/truetype/kochi-gothic-subst.ttf:
++
+ #min:\
+ #	:ft=freetype:\
+ #	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw3.ttc:
