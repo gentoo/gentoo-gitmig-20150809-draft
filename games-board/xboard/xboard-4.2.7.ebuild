@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.2 2004/02/05 22:22:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.3 2004/02/22 17:18:14 brad_mssw Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.tim-mann.org/xboard.html"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/xboard/${P}.tar.gz"
 
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
