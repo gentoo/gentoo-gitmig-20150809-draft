@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.8 2003/07/24 18:17:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.1 2003/07/24 18:17:59 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -34,16 +34,16 @@ strip-flags
 export CFLAGS="${CFLAGS//-O?} -O2"
 export CXXFLAGS="${CFLAGS}"
 
-NPTL_VER="0.39"
+NPTL_VER="0.55"
 
-BRANCH_UPDATE="20030517-1"
+BRANCH_UPDATE="20030723"
 
 # Minimum kernel version for --enable-kernel
 export MIN_KV="2.4.1"
 # Minimum kernel version for enabling TLS and NPTL ...
 # NOTE: do not change this if you do not know what
 #       you are doing !
-export MIN_NPTL_KV="2.5.50"
+export MIN_NPTL_KV="2.5.72"
 
 MY_PV="${PV/_}"
 S="${WORKDIR}/${P%_*}"
@@ -55,17 +55,17 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
-#amd64-only for now (intentional)
-KEYWORDS="amd64"
+
+KEYWORDS="-* ~x86"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="LGPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND=">=sys-devel/gcc-3.3
-	nptl? ( >=sys-devel/gcc-3.3 )
-	mips? >=sys-devel/binutils-2.13.90.0.16 : >=sys-devel/binutils-2.13.90.0.18
+DEPEND=">=sys-devel/gcc-3.2.3-r1
+	nptl? ( >=sys-devel/gcc-3.3-r1 )
+	>=sys-devel/binutils-2.14.90.0.5
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
@@ -170,21 +170,26 @@ use_nptl() {
 		#   - a CHOST of "i486-pc-linux-gnu"
 		#   - a CHOST of "i586-pc-linux-gnu"
 		#   - a CHOST of "i686-pc-linux-gnu"
-		# - Or we have 'ppc' in USE
+		# - Or we have 'alpha' in USE
+		# - Or we have 'amd64' in USE
 		# - Or we have 'mips' in USE
-		if [ "`use x86`" ]
-		then
-			if [ "${CHOST/-*}" = "i486" -o \
-			     "${CHOST/-*}" = "i586" -o \
-				 "${CHOST/-*}" = "i686" ]
-			then
+		# - Or we have 'ppc' in USE
+		case ${ARCH} in
+			"x86")
+				if [ "${CHOST/-*}" = "i486" -o \
+				     "${CHOST/-*}" = "i586" -o \
+					 "${CHOST/-*}" = "i686" ]
+				then
+					return 0
+				fi
+				;;
+			"alpha"|"amd64"|"mips"|"ppc")
 				return 0
-			fi
-		fi
-		if [ "`use ppc`" -o "`use mips`" ]
-		then
-			return 0
-		fi
+				;;
+			*)
+				return 1
+				;;
+		esac
 	fi
 
 	return 1
@@ -240,13 +245,7 @@ pkg_setup() {
 			echo "yes"
 		fi
 
-		# Default disclaimer ...
 		echo
-		ewarn "Please note that NPTL support is still very experimental,"
-		ewarn "and could break your system!  Press ^C now if you do not know"
-		ewarn "what you are doing, and remove \"nptl\" from your USE ..."
-		echo
-		sleep 5
 	
 	elif use nptl &> /dev/null
 	then
@@ -334,13 +333,6 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 	fi
-	
-	# Fix missing include of unistd.h in nptl/unwind.c
-	# <azarah@gentoo.org> (17 May 2003)
-	if use_nptl
-	then
-		cd ${S}; epatch ${FILESDIR}/2.3.2/${P}-nptl-fix-include.patch
-	fi
 
 	if [ "${ARCH}" = "alpha" ]
 	then
@@ -381,7 +373,7 @@ setup_flags() {
 		
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
-			export CHOST=${CHOST/sparc/sparcv9}
+			export CHOST="${CHOST/sparc/sparcv9}"
 		fi
 	fi
 }
@@ -550,7 +542,6 @@ EOF
 
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
-
 }
 
 pkg_postinst() {

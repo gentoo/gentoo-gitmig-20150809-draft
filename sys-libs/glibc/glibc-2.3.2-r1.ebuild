@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.16 2003/07/18 19:32:39 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.17 2003/07/24 18:17:59 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -53,7 +53,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc -sparc alpha ~hppa ~arm ~mips"
+KEYWORDS="x86 ppc ~sparc alpha ~hppa ~arm ~mips"
 # Is 99% compadible, just some .a's bork.
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -329,15 +329,28 @@ setup_flags() {
 	# -freorder-blocks for all but ia64 s390 s390x
 	use ppc || append-flags "-freorder-blocks"
 
-	# Sparc support ...
-	replace-flags "-mcpu=ultrasparc" "-mcpu=v8 -mtune=ultrasparc"
-	replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
+	# Sparc/Sparc64 support
+	if [ `use sparc` ]; then
 
-	# -mvis for sparc64 (should this be always, or only with 64bit userspace ?
-	[ "${PROFILE_ARCH}" = "sparc64" ] && append-flags "-mvis"
+		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
+		replace-flags "-fcall-used-g7" ""
+		append-flags "-fcall-used-g6"
 
-	# -fcall-used-g7 for sparc and sparc64
-	use sparc && append-flags "-fcall-used-g7"
+		# Sparc64 Only support...
+		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
+
+			# Get rid of -mcpu options, the CHOST will fix this up
+			replace-flags "-mcpu=ultrasparc" ""
+			replace-flags "-mcpu=v9" ""
+
+			# Get rid of flags known to fail
+			replace-flags "-mvis" ""
+		
+			# Setup the CHOST properly to insure "sparcv9"
+			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
+			export CHOST=${CHOST/sparc/sparcv9}
+		fi
+	fi
 }
 
 src_compile() {
