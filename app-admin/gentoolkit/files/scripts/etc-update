@@ -19,8 +19,8 @@ mv_opts="-i"
 cp_opts="-i"
 
 # pager for use with diff commands (see NOTE_2)
-pager="less -E"
-#pager=""
+#pager="less -E"
+pager=""
 
 # vim-users: you CAN use vimdiff for diff_command. (see NOTE_1)
 diff_command="diff -uN %file1 %file2"

@@ -1,7 +1,16 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.8 2002/03/17 14:33:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.9 2002/03/18 21:52:17 karltk Exp $
 
+
+*gentoolkit-0.1.5-r2 (18 Mar 2002)
+
+  18 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.5-r1.ebuild files/scripts/etc-update:
+
+  etc-update: Removed the default "-E" option to less, which was causing a lot
+  of murmur in the crowd.
+
+  Removed old revisions.
 
 *gentoolkit-0.1.5-r1 (17 Mar 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.5-r1.ebuild,v 1.1 2002/03/17 14:33:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/gentoolkit-0.1.5-r2.ebuild,v 1.1 2002/03/18 21:52:17 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
