@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestorm/firestorm-0.5.2.ebuild,v 1.1 2003/05/12 19:06:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestorm/firestorm-0.5.2.ebuild,v 1.2 2003/07/13 11:49:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network IDS"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.scaramanga.co.uk/firestorm/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
