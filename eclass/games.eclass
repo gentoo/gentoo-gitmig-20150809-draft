@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.18 2002/11/30 00:59:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.19 2002/12/01 04:13:53 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -30,8 +30,8 @@ egamesconf() {
 			--host=${CHOST} \
 			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
-			--datadir=${GAMES_DATADIR}/${PN} \
-			--sysconfdir=${GAMES_SYSCONFDIR}/${PN} \
+			--datadir=${GAMES_DATADIR} \
+			--sysconfdir=${GAMES_SYSCONFDIR} \
 			--localstatedir=${GAMES_STATEDIR} \
 			"$@" || die "egamesconf failed"
 	else
