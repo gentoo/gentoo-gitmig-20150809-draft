@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.09.ebuild,v 1.5 2003/11/04 11:30:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.09.ebuild,v 1.6 2004/04/13 15:43:44 phosphan Exp $
 
 DESCRIPTION="TiLP is a linking program for Texas Instruments' graphing calculators."
 HOMEPAGE="http://tilp.sourceforge.net/"

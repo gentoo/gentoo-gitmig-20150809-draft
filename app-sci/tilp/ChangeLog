@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/tilp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.6 2004/03/31 08:24:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.7 2004/04/13 15:43:44 phosphan Exp $
+
+*tilp-6.68-r2 (13 Apr 2004)
+
+  13 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.68-r1.ebuild,
+  tilp-6.68-r2.ebuild, files/formatbug.patch:
+  Traced bug #40263 to a buffer overflow, provided patch.
 
   31 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> tilp-6.06.ebuild,
   tilp-6.68.ebuild:
