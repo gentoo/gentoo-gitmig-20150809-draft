@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.1 2005/03/25 16:32:09 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase-cvs/kazehakase-cvs-20050325.ebuild,v 1.2 2005/03/25 17:56:06 nakano Exp $
 
 inherit cvs eutils
 
@@ -60,7 +60,8 @@ src_unpack(){
 	mv data/Makefile.am data/Makefile.am.org
 	sed -e "s/^desktop_DATA = kazehakase.desktop/desktop_DATA = kazehakase-cvs.desktop/" \
 		data/Makefile.am.org > data/Makefile.am
-	mv data/kazehakase.desktop data/kazehakase-cvs.desktop
+
+	sed -e "s/kazehakase/kazehakase-cvs/" data/kazehakase.desktop > data/kazehakase-cvs.desktop
 }
 
 src_compile(){
