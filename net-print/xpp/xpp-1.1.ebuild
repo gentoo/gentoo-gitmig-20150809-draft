@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1.ebuild,v 1.8 2003/02/13 15:27:07 vapier Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1.ebuild,v 1.9 2003/02/14 21:34:57 vapier Exp $
 
 DESCRIPTION="X Printing Panel"
 SRC_URI="mirror://sourceforge/cups/${P}.tar.gz"
@@ -18,15 +16,12 @@ DEPEND="virtual/glibc
 	>=x11-libs/fltk-1.1.0_rc7"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/cups.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	export CXX=g++
 	export LDFLAGS="-L/usr/lib/fltk-1.1"
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
@@ -34,14 +29,9 @@ src_compile() {
 	econf || die "configure failed"
 
 	make || die "make failed"
-
 }
 
-src_install () {
-
+src_install() {
 	einstall || die "make install failed"
-
 	dodoc LICENSE ChangeLog README
-
 }
-
