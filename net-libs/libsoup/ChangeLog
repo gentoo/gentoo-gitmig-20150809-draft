@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.24 2004/03/22 09:58:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.25 2004/04/27 19:59:46 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libsoup-1.99.26-r1.ebuild,
+  libsoup-1.99.26.ebuild, libsoup-1.99.28.ebuild:
+  Add inherit eutils
 
 *libsoup-1.99.28 (22 Mar 2004)
 
