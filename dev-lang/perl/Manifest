@@ -1,4 +1,4 @@
-MD5 dc8d0c1e4aa8564e8ba883770192c394 ChangeLog 18268
+MD5 c3a46708ffb4094464dd8b0bf556d6c9 ChangeLog 18418
 MD5 ebec498837d1da4d4e8ae44d2b5670a2 perl-5.8.0-r10.ebuild 14043
 MD5 e0b0be0ba81d5c7749ec696b9119a8b1 perl-5.8.0-r9.ebuild 13570
 MD5 01b216e82ad890302a0becdc19244a10 perl-5.6.1-r10.ebuild 6819
@@ -8,7 +8,7 @@ MD5 21790711352b89f31e8891cffc966701 perl-5.8.0-r11.ebuild 9908
 MD5 2228fc782821168015bae5e1efdcc508 perl-5.8.0-r12.ebuild 10330
 MD5 dfc90df8facb64c32480222d71bc6701 perl-5.8.1_rc1.ebuild 10469
 MD5 ed129194c1f35a98c4961be4a978146f perl-5.8.1_rc2.ebuild 10474
-MD5 ed129194c1f35a98c4961be4a978146f perl-5.8.1_rc3.ebuild 10474
+MD5 baff2afa8b55c6bb888aaa42c689d9c0 perl-5.8.1_rc3.ebuild 10480
 MD5 8605f033c451df987f4631bbf9d7b481 files/digest-perl-5.8.0-r10 64
 MD5 cc61dca6d96347b5d93cfdde1514feb4 files/digest-perl-5.8.0-r9 860
 MD5 d2af75f06a64c5934db314ff38939cdd files/libperl-5.8.0-create-libperl-soname.patch 424
