@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.11 2003/01/27 19:34:27 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.12 2003/02/03 18:56:23 agriffis Exp $
+
+  03 Feb 2003; Aron Griffis <agriffis@gentoo.org> xft-2.0.1-r1.ebuild :
+  Mark stable on alpha so that gnome can build
  
   27 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> xft-2.0.1-r1.ebuild :
   Masked -ppc as we had to mask fontconfig dependency.
