@@ -1,0 +1,84 @@
+diff -ur kxicq/engine/kxengine.cpp kxicq/engine/kxengine.cpp
+--- kxicq/engine/kxengine.cpp	Tue Apr 23 21:24:47 2002
++++ kxicq/engine/kxengine.cpp	Sun Jul 28 18:02:43 2002
+@@ -718,7 +718,7 @@
+ {
+ 	if (AIM) AIM->setKeepAlive(send);
+ }
+-void kxEngine::setUseServerList(bool s=TRUE)
++void kxEngine::setUseServerList(bool s)
+ {
+ saveContactsOnServer=s;
+ if (AIM) AIM->setUseServerList(s);
+diff -ur kxicq/widgets/config/kxsettings_ignoreimpl.cpp kxicq/widgets/config/kxsettings_ignoreimpl.cpp
+--- kxicq/widgets/config/kxsettings_ignoreimpl.cpp	Sat Mar 30 22:04:58 2002
++++ kxicq/widgets/config/kxsettings_ignoreimpl.cpp	Sun Jul 28 18:12:15 2002
+@@ -29,7 +29,7 @@
+ #include <qlistview.h>
+ #include <qpushbutton.h>
+ 
+-kxSettings_IgnoreImpl::kxSettings_IgnoreImpl(QWidget *parent, const char *name,WFlags fl = 0 )
++kxSettings_IgnoreImpl::kxSettings_IgnoreImpl(QWidget *parent, const char *name,WFlags fl )
+ 	: kxSettings_Ignore(parent,name, fl)
+ {
+ 	addButton->setEnabled(FALSE);	
+diff -ur kxicq/widgets/config/kxsettings_initialimpl.cpp kxicq/widgets/config/kxsettings_initialimpl.cpp
+--- kxicq/widgets/config/kxsettings_initialimpl.cpp	Sun Mar 17 16:32:43 2002
++++ kxicq/widgets/config/kxsettings_initialimpl.cpp	Sun Jul 28 18:11:15 2002
+@@ -25,7 +25,7 @@
+ #include <qcheckbox.h>
+ #include <qspinbox.h>
+ 
+-kxSettings_InitialImpl::kxSettings_InitialImpl(QWidget *parent, const char *name,WFlags fl = 0 )
++kxSettings_InitialImpl::kxSettings_InitialImpl(QWidget *parent, const char *name,WFlags fl )
+ 	: kxSettings_Initial(parent,name, fl)
+ {
+   QStringList list;
+diff -ur kxicq/widgets/config/kxsettings_statusimpl.cpp kxicq/widgets/config/kxsettings_statusimpl.cpp
+--- kxicq/widgets/config/kxsettings_statusimpl.cpp	Sun Feb 17 21:09:53 2002
++++ kxicq/widgets/config/kxsettings_statusimpl.cpp	Sun Jul 28 18:08:32 2002
+@@ -25,7 +25,7 @@
+ #include <qcheckbox.h>
+ #include <qspinbox.h>
+ 
+-kxSettings_StatusImpl::kxSettings_StatusImpl(QWidget *parent, const char *name,WFlags fl = 0 )
++kxSettings_StatusImpl::kxSettings_StatusImpl(QWidget *parent, const char *name,WFlags fl )
+ 	: kxSettings_Status(parent,name, fl)
+ {
+ 	QObject::connect(statusCombo, SIGNAL(activated(int)), SLOT(activated(int)));
+diff -ur kxicq/widgets/kxreminderdialogimpl.cpp kxicq/widgets/kxreminderdialogimpl.cpp
+--- kxicq/widgets/kxreminderdialogimpl.cpp	Sat Feb  2 19:42:42 2002
++++ kxicq/widgets/kxreminderdialogimpl.cpp	Sun Jul 28 18:24:42 2002
+@@ -17,7 +17,7 @@
+ int nRemindIn = 22;
+ 
+ 
+-kxReminderDialogImpl::kxReminderDialogImpl(  kxReminderEvent *ev, kxReminderDaemon *reminderDaemon, QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 )
++kxReminderDialogImpl::kxReminderDialogImpl(  kxReminderEvent *ev, kxReminderDaemon *reminderDaemon, QWidget* parent, const char* name, bool modal, WFlags fl )
+   : kxReminderDialog( parent, name, modal, fl )
+ {
+   this->reminderDaemon = reminderDaemon;
+diff -ur kxicq/widgets/kxremindereditdialogimpl.cpp kxicq/widgets/kxremindereditdialogimpl.cpp
+--- kxicq/widgets/kxremindereditdialogimpl.cpp	Sat Feb  2 19:42:42 2002
++++ kxicq/widgets/kxremindereditdialogimpl.cpp	Sun Jul 28 18:23:59 2002
+@@ -13,7 +13,7 @@
+ #include <kglobal.h>
+ #include <kxcontact.h>
+ 
+-kxReminderEditDialogImpl::kxReminderEditDialogImpl(  kxReminderEventType type, int id, kxReminderDaemon *reminderDaemon, QWidget* parent = 0L, const char* name = 0, bool modal = FALSE, WFlags fl = 0 )
++kxReminderEditDialogImpl::kxReminderEditDialogImpl(  kxReminderEventType type, int id, kxReminderDaemon *reminderDaemon, QWidget* parent, const char* name, bool modal, WFlags fl )
+   : kxReminderEditDialog( parent, name, modal, fl )
+ {
+   this->reminderDaemon = reminderDaemon;
+diff -ur kxicq/widgets/kxreminderoverviewdialogimpl.cpp kxicq/widgets/kxreminderoverviewdialogimpl.cpp
+--- kxicq/widgets/kxreminderoverviewdialogimpl.cpp	Sun Jan 27 16:56:48 2002
++++ kxicq/widgets/kxreminderoverviewdialogimpl.cpp	Sun Jul 28 18:22:42 2002
+@@ -12,7 +12,7 @@
+ #define COL_ID   4
+ #define COL_TYPE 3
+ 
+-kxReminderOverviewDialogImpl::kxReminderOverviewDialogImpl( kxReminderDaemon *reminderDaemon, QWidget* parent = 0L, const char* name = 0, bool modal = FALSE, WFlags fl = 0 )
++kxReminderOverviewDialogImpl::kxReminderOverviewDialogImpl( kxReminderDaemon *reminderDaemon, QWidget* parent, const char* name, bool modal, WFlags fl )
+   : kxReminderOverviewDialog( parent, name, modal, fl )
+ {
+   this->reminderDaemon = reminderDaemon;
