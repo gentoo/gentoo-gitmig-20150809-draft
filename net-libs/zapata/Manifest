@@ -1,5 +1,5 @@
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 696530546bcf1db0b393b63e9e4a9dd3 zapata-0.7.0.ebuild 587
-MD5 66a99fe1d6bd18bf2d5ca90161fb9bba ChangeLog 435
+MD5 267d8ff5ceac7982c38b127bc356fceb zapata-0.7.0.ebuild 688
+MD5 6b25e60ba99f5ed4a4bbba9d333db617 ChangeLog 522
 MD5 8f713c5c619758af0969df6726f1b894 files/digest-zapata-0.7.0 63
 MD5 4b69b1ab63d63b74f00243cd336bc17a files/zapata-mkdir-usrlib.patch 359
