@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/elmo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.8 2004/08/27 13:15:37 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/ChangeLog,v 1.9 2004/10/20 19:08:18 citizen428 Exp $
+
+*elmo-1.3.2-r1 (20 Oct 2004)
+
+  20 Oct 2004; Michael Kohl <citizen428@gentoo.org> +elmo-1.3.2-r1.ebuild:
+  Fixing various things, see bug #63392.
 
 *elmo-1.3.2 (27 Aug 2004)
 

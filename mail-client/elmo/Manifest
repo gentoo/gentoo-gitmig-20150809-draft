@@ -1,6 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b7a3d14023e9286d79ef4cdcaeefe088 elmo-1.3.1.ebuild 791
 MD5 6cdb05ed53c558fa38661c5f0c4b9b56 elmo-0.6.ebuild 797
-MD5 bd26deeb0c9499bedf79795841832409 ChangeLog 1407
+MD5 e205c6365c2e4c4043fbe97cd868a91d elmo-1.3.2-r1.ebuild 1106
+MD5 81f70818e410fb933cbba223e1308612 ChangeLog 1554
 MD5 42524287228b5ac2413b54ea8f8c579c elmo-0.5.ebuild 797
 MD5 cacb53d68e2c3a3ab17570cddf992a76 metadata.xml 279
 MD5 48046076d88758562bb918573695ac69 elmo-1.3.2.ebuild 833
@@ -10,3 +14,11 @@ MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2 62
 MD5 eac6978f5d09308fe2a5363f92aeb520 files/digest-elmo-0.5 118
 MD5 87f647529d55e01dcfc9554b3932c1fc files/digest-elmo-0.6 60
 MD5 0d662e42a7373a07a363f75e07e1b428 files/digest-elmo-1.3.1-r1 62
+MD5 ae516ca333aa45e8df3b9964414f04ff files/digest-elmo-1.3.2-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdrez/UDVUK2NELYRAjErAJ9oYowDyW84BEQz1OqkZcNlVjulnQCdGu21
+QMiL9Q3LXYSAdK+R33ZfYS8=
+=YgBo
+-----END PGP SIGNATURE-----
