@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.18 2004/10/19 07:49:17 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.19 2004/12/29 08:50:02 corsair Exp $
+
+  29 Dec 2004; Markus Rothe <corsair@gentoo.org> MailTools-1.62.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> MailTools-1.60.ebuild:
   Stable on amd64.

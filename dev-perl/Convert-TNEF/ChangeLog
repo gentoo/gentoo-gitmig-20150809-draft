@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-TNEF
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.7 2004/06/25 00:16:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.8 2004/12/29 08:55:19 corsair Exp $
+
+  29 Dec 2004; Markus Rothe <corsair@gentoo.org> Convert-TNEF-0.17-r2.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

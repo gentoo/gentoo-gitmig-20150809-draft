@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.415.ebuild,v 1.5 2004/11/02 12:05:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.415.ebuild,v 1.6 2004/12/29 08:54:52 corsair Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~dskoll/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha ~ppc64"
 IUSE=""
 
 SRC_TEST="do"
