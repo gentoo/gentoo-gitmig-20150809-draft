@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.5 2000/09/15 20:09:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03-r1.ebuild,v 1.6 2000/09/26 03:51:49 drobbins Exp $
 
 P=qmail-mysql-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -100,10 +100,9 @@ src_install() {
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/boot
-	for i in home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 
-binm3+df
+	for i in home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
 	do
-	  doins $i $i
+	  doins $i
 	done
 
 	into /usr
@@ -117,7 +116,7 @@ ${O}/files/mysqldump
 	insopts -o root -g qmail -m 700
 	for i in qmail-lspawn qmail-start qmail-newu qmail-newmrh
 	do
-	  doins $i $i
+	  doins $i
 	done
 	
 	insopts -o root -g qmail -m 711
@@ -135,7 +134,7 @@ qmail-send splogger qmail-pw2u
 	condredirect bouncesaying except maildirmake maildir2mbox \
 	maildirwatch qail elq pinq config-fast
 	do
-	  doins $i $i
+	  doins $i 
 	done
 
 	into /usr
