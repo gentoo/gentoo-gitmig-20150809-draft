@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.15 2002/07/14 20:41:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.16 2002/07/19 20:38:03 g2boojum Exp $
+
+*cups-1.1.15-r2 (19 Jul 2002)
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  added ghostscript as an rdepend
 
 *cups-1.1.15 (17 Jun 2002)
 
