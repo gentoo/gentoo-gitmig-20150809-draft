@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.14 2004/07/23 07:33:47 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.15 2004/08/12 22:40:45 pfeifer Exp $
+
+*openswan-1.0.7 (12 Aug 2004)
+
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; openswan-1.0.7.ebuild:
+  Version bump for the 1.x users.
 
   23 Jul 2004; Jay Pfeifer <pfeifer@gentoo.org> : openswan-1.0.6.ebuild
   Fix depend on iproute2 closing bug #57263.
