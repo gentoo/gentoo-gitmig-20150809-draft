@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.4 2004/04/25 18:47:12 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.5 2004/04/25 20:47:25 squinky86 Exp $
 
 IUSE=""
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || "FastTrack plugin failed to install"
+	make install DESTDIR="${D}" || die "FastTrack plugin failed to install"
 
 }
 
