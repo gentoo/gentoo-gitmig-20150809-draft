@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.35 2002/12/16 20:52:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.36 2002/12/29 09:38:06 azarah Exp $
+
+  28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r3.ebuild :
+
+  Always add --with-headers=${ROOT}usr/include as option to ./configure, as
+  linux-headers are usually well tested, and in some cases we get weird
+  problems ...
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
 
