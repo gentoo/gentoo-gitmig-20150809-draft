@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3.ebuild,v 1.2 2003/03/18 18:02:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3.ebuild,v 1.3 2003/03/22 00:03:00 jayskwak Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -174,6 +174,12 @@ src_unpack() {
 	# Fix logic error when using RAW target
 	# <azarah@gentoo.org> (23 Feb 2003)
 	cd ${S}; epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
+
+    # Fix XIM input for gtk
+	if [ -n "`use cjk`" ]
+	then
+		cd ${S}; epatch ${FILESDIR}/1.3/${PN}-1.3-fix-gtkim.patch
+	fi
 
 	cd ${S}
 	export WANT_AUTOCONF_2_1=1
