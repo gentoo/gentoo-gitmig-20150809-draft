@@ -1,0 +1,16 @@
+? autoconf
+? automake
+? bin86
+? binutils
+? gcc
+? gdb
+? m4
+? make
+? patch
+? libtool
+? perl
+? python-basic
+? bc
+? flex
+? bison
+? liste
