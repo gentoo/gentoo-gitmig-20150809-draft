@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3425 2004/12/28 17:21:25 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3426 2004/12/28 19:37:30 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -52,7 +52,8 @@ media-sound/shoutcast-trans-bin
 # <humpback@gentoo.org> (25 Dec 2004)
 # People running artsd and skype with arts built using gcc 3.4.* 
 # complain about skype. This is not Gentoo specific
-net-im/skype
+#Lets have people trying this for a few days to see if bugs popup
+#net-im/skype
 
 # <robbat2@gentoo.org> (23 Dec 2004)
 # The upgrade process to this is non-trivial.
