@@ -1,6 +1,6 @@
-diff -ruN MPlayer-1.0pre5.orig/libvo/vo_x11.c MPlayer-1.0pre5/libvo/vo_x11.c
---- MPlayer-1.0pre5.orig/libvo/vo_x11.c	2004-10-05 20:33:25.882255632 +0200
-+++ MPlayer-1.0pre5/libvo/vo_x11.c	2004-10-05 20:33:48.286849616 +0200
+diff -urN MPlayer-1.0pre5.old/libvo/vo_x11.c MPlayer-1.0pre5/libvo/vo_x11.c
+--- MPlayer-1.0pre5.old/libvo/vo_x11.c	2004-10-15 21:54:24.809523440 -0700
++++ MPlayer-1.0pre5/libvo/vo_x11.c	2004-10-15 21:52:40.178429784 -0700
 @@ -39,7 +39,6 @@
  #include "sub.h"
  
@@ -17,10 +17,9 @@ diff -ruN MPlayer-1.0pre5.orig/libvo/vo_x11.c MPlayer-1.0pre5/libvo/vo_x11.c
  
  static vo_info_t info = {
      "X11 ( XImage/Shm )",
-Files MPlayer-1.0pre5.orig/postproc/.yuv2rgb_altivec.c.swp and MPlayer-1.0pre5/postproc/.yuv2rgb_altivec.c.swp differ
-diff -ruN MPlayer-1.0pre5.orig/postproc/swscale.c MPlayer-1.0pre5/postproc/swscale.c
---- MPlayer-1.0pre5.orig/postproc/swscale.c	2004-10-05 20:33:25.075378296 +0200
-+++ MPlayer-1.0pre5/postproc/swscale.c	2004-10-05 20:33:48.276851136 +0200
+diff -urN MPlayer-1.0pre5.old/postproc/swscale.c MPlayer-1.0pre5/postproc/swscale.c
+--- MPlayer-1.0pre5.old/postproc/swscale.c	2004-10-15 21:54:24.812522984 -0700
++++ MPlayer-1.0pre5/postproc/swscale.c	2004-10-15 21:52:40.181429328 -0700
 @@ -1728,7 +1728,7 @@
  	//FIXME factorize
  
@@ -30,10 +29,10 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/swscale.c MPlayer-1.0pre5/postproc/swsca
  #endif	
  	return 0;
  }
-diff -ruN MPlayer-1.0pre5.orig/postproc/swscale_internal.h MPlayer-1.0pre5/postproc/swscale_internal.h
---- MPlayer-1.0pre5.orig/postproc/swscale_internal.h	2004-10-05 20:33:25.075378296 +0200
-+++ MPlayer-1.0pre5/postproc/swscale_internal.h	2004-10-05 20:33:48.277850984 +0200
-@@ -19,6 +19,12 @@
+diff -urN MPlayer-1.0pre5.old/postproc/swscale_internal.h MPlayer-1.0pre5/postproc/swscale_internal.h
+--- MPlayer-1.0pre5.old/postproc/swscale_internal.h	2004-10-15 21:54:24.813522832 -0700
++++ MPlayer-1.0pre5/postproc/swscale_internal.h	2004-10-15 21:55:47.226994080 -0700
+@@ -19,6 +19,16 @@
  #ifndef SWSCALE_INTERNAL_H
  #define SWSCALE_INTERNAL_H
  
@@ -43,12 +42,16 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/swscale_internal.h MPlayer-1.0pre5/postp
 +#define AVV(x...) {x}
 +#endif
 +
++#ifdef HAVE_ALTIVEC
++#include <altivec.h>
++#endif
++
  #include "../mp_msg.h"
  
  #define MSG_WARN(args...) mp_msg(MSGT_SWS,MSGL_WARN, ##args )
-diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c
---- MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c	2004-10-05 20:33:25.073378600 +0200
-+++ MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c	2004-10-05 20:36:21.247596048 +0200
+diff -urN MPlayer-1.0pre5.old/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c
+--- MPlayer-1.0pre5.old/postproc/yuv2rgb_altivec.c	2004-10-15 21:54:24.818522072 -0700
++++ MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c	2004-10-15 21:52:40.185428720 -0700
 @@ -64,6 +64,7 @@
  */
  #include <stdio.h>
