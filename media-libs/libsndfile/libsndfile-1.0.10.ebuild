@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.10.ebuild,v 1.2 2004/07/16 17:46:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.10.ebuild,v 1.3 2004/07/19 09:35:10 eradicator Exp $
 
 DESCRIPTION="A C library for reading and writing files containing sampled sound"
 HOMEPAGE="http://www.mega-nerd.com/libsndfile/"
@@ -12,7 +12,7 @@ IUSE="static pic"
 DEPEND="virtual/libc"
 
 src_compile() {
-	myconf="${myconf} $(use_with pic pic)"
+	( use pic || use amd64 ) && myconf="${myconf} --with-pic"
 	myconf="${myconf} $(use_enable static static)"
 	econf $myconf  || die "./configure failed"
 	emake || die "emake failed"

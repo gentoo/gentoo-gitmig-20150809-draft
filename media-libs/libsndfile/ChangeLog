@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.26 2004/07/16 17:46:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.27 2004/07/19 09:35:10 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libsndfile-1.0.10.ebuild:
+  force --with-pic for amd64.
 
   17 Jul 2004; Chris White <chriswhite@gentoo.org> libsndfile-1.0.10.ebuild:
   Fixed and doc issues in the ebuild. Thanks to Stefan Briesenick
