@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.7 2004/10/23 08:05:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.8 2004/11/21 21:29:23 eradicator Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake targets || die
+	emake -j1 targets || die
 }
 
 src_test() {

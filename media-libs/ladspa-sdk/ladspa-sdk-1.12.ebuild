@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.13 2004/07/01 08:35:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.14 2004/11/21 21:29:23 eradicator Exp $
 
 IUSE=""
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake targets || die
+	emake -j1 targets || die
 }
 
 src_install() {

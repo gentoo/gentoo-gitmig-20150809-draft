@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.21 2004/10/07 02:53:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.22 2004/11/21 21:29:23 eradicator Exp $
+
+  21 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladspa-sdk-1.12-r1.ebuild, ladspa-sdk-1.12-r2.ebuild,
+  ladspa-sdk-1.12.ebuild:
+  -j1 to fix bug #71956.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladspa-sdk-1.12-r2.ebuild:
