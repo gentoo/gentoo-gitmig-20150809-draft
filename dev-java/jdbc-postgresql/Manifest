@@ -1,4 +1,5 @@
-MD5 ff8e130652e975cbba9010f1912cc2e8 jdbc-postgresql-2.7.3.ebuild 540
-MD5 827dc42b4c76c711cdfb8ff339cc95cf jdbc-postgresql-3.7.3.ebuild 540
+MD5 c74aa0644c4066396f6de8fd8ba7beb4 jdbc-postgresql-2.7.3.ebuild 658
+MD5 810ed0e1edec6997a2b32644b1b200bb jdbc-postgresql-3.7.3.ebuild 658
+MD5 bafdc6c4b542d65ec4cef4031ae14bd5 ChangeLog 881
 MD5 97025d204bd6ed6c78530c5131b95b23 files/digest-jdbc-postgresql-2.7.3 58
 MD5 927470f50a83ea9bf353f3d3e8c68c4f files/digest-jdbc-postgresql-3.7.3 58
