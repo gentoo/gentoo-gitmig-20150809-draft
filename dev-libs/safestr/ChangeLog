@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/safestr
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.4 2004/07/02 04:55:07 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.5 2005/02/11 11:52:58 ka0ttic Exp $
+
+*safestr-1.0.3 (11 Feb 2005)
+
+  11 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  safestr-1.0.2.ebuild, +safestr-1.0.3.ebuild:
+  Version bump.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> safestr-1.0.2.ebuild:
   virtual/glibc -> virtual/libc
