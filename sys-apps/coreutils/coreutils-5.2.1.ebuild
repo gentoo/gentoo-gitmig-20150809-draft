@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.1 2004/05/17 00:01:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.2 2004/05/17 05:12:11 seemant Exp $
 
 inherit eutils flag-o-matic
 
-PATCH_VER=0.1
+PATCH_VER=0.2
 I18N_VER=i18n-0.1
 PATCHDIR=${WORKDIR}/patch
 
