@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.2 2003/04/12 15:04:50 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.3 2003/04/28 02:24:39 lu_zero Exp $
+
+  28 Apr 2003; Luca Barbato <lu_zero@gentoo.org> faad2-1.1.ebuild:
+  added ~ppc keyword
 
 *faad2-1.1 (11 Apr 2003)
 
