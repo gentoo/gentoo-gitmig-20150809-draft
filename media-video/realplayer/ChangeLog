@@ -1,11 +1,22 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.5 2002/12/13 10:59:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.6 2003/01/08 23:08:50 seemant Exp $
+
+
+*realplayer-8-r4 (08 Jan 2003)
+
+  08 Jan 2003; Seemant Kulleen <seemant@gentoo.org> realplayer-8-r4.ebuild
+  files/realplayer.desktop files/mimeinfo files/digest-realplayer-8-r4 :
+
+  This is a new multi-architecture capable ebuild.  Currently, it will
+  install for ppc, sparc, alpha and x86 .  This ebuild
+  courtesy of the brilliance of: danny@ricin.com (Danny Pansters) in bug
+  #10066
+
+*realplayer-8-r3 (21 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*realplayer-8-r3 (21 Nov 2002)
-
   21 Nov 2002; phoen][x <phoenix@gentoo.org> realplayer-8-r3.ebuild,
   files/digest-realplayer-8-r3 :
   Switched to the new nsplugins layout.
