@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.83 2003/09/29 17:20:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.84 2003/10/05 20:41:09 mholzer Exp $
+
+  06 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.92.ebuild,
+  mplayer-1.0_pre1-r1.ebuild:
+  Adding aalib configure strings. Closes #21984.
 
   29 Sep 2003; Martin Holzer <mholzer@gentoo.org> :
   Fixing digest.
