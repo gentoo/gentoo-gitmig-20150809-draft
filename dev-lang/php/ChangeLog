@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.4 2002/02/18 21:01:05 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.5 2002/02/23 20:35:19 g2boojum Exp $
+
+*php-4.0.6-r5 ( 22 Feb 2002 )
+
+  22 Feb 2002; Grant Goodyear <g2boojum@gentoo.org> php-4.1.1-r4.ebuild
+
+  Now imap support should work.  Building php w/ imap support requires
+  the uw-imap library and headers (from uw-imap or pine).  Annoying
+  problem that uw-imap or pine needs to be compiled w/ SSL; otherwise
+  the php build will fail due to header problems.
 
 *php-4.0.6-r5 ( 18 Feb 2002 )
 

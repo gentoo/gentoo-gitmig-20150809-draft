@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r5.ebuild,v 1.1 2002/02/18 21:01:05 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r4.ebuild,v 1.1 2002/02/23 20:35:19 g2boojum Exp $
 
-A=${PN}-4.0.6.tar.gz
-S=${WORKDIR}/${PN}-4.0.6
+S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
-SRC_URI="http://www.php.net/distributions/${A}"
+SRC_URI="http://www.php.net/distributions/${P}.tar.gz"
 HOMEPAGE="http://www.php.net/"
 
 DEPEND="virtual/glibc
@@ -28,11 +27,13 @@ DEPEND="virtual/glibc
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
+	mhash? ( >=app-crypt/mhash-0.8 )
+	mcrypt? ( >=dev-libs/libmcrypt-2.4 )
 	X? ( virtual/x11 )
 	qt? ( =x11-libs/qt-2.3* )
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
-	imap? ( virtual/imap )
+	imap? ( virtual/imapUW )
 	flash? ( media-libs/libswf media-libs/ming )
 	xml2? ( dev-libs/libxml2 )
 	java? ( virtual/jdk )
@@ -57,37 +58,74 @@ RDEPEND="virtual/glibc
 	xml? ( >=app-text/sablotron-0.44 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	xml2? ( dev-libs/libxml2 )
-	imap? ( virtual/imap )
+	java? ( virtual/jdk )
 	"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${S}
+	if [ "`use java`" ] ; then
+
+		cp configure configure.orig
+		cat configure.orig | \
+			sed -e 's/LIBS="-lttf $LIBS"/LIBS="-lttf -lhpi $LIBS"/' \
+			> configure
+
+		cp ext/gd/gd.c ext/gd/gd.c.orig
+		cat ext/gd/gd.c.orig | \
+			sed -e "s/typedef FILE gdIOCtx;//" \
+			> ext/gd/gd.c
+	fi
+}
+
 src_compile() {
 
 	local myconf
 
-	use readline && myconf="${myconf} --with-readline"
-	use pam && myconf="${myconf} --with-pam"
-	use gettext && myconf="${myconf} --with-gettext"
-	use gdbm && myconf="${myconf} --with-gdbm=/usr"
-	use berkdb && myconf="${myconf} --with-db3=/usr"
-	use mysql && myconf="${myconf} --with-mysql=/usr"
-	use postgres && myconf="${myconf} --with-pgsql=/usr"
-	use odbc && myconf="${myconf} --with-unixODBC=/usr"
-	use ldap && myconf="${myconf} --with-ldap"
-	use imap && myconf="${myconf} --with-imap"
-	
+	# readline can only be used w/ CGI build, so I'll turn it off
+	#if [ "`use readline`" ] ; then
+	#  myconf="--with-readline"
+	#fi
+	# also, t1lib support seems to be broken: gcc: /usr/lib/.libs/libt1.so: No such file or directory
+
+	myconf="--without-readline --without-t1lib"
+	use pam && myconf="$myconf --with-pam"
+	use gettext && myconf="$myconf --with-gettext"
+	use gdbm && myconf="$myconf --with-gdbm=/usr"
+	use berkdb && myconf="$myconf --with-db3=/usr"
+	use mysql && myconf="$myconf --with-mysql=/usr"
+	use postgres && myconf="$myconf --with-pgsql=/usr"
+	use odbc && myconf="$myconf --with-unixODBC=/usr"
+	use ldap &&  myconf="$myconf --with-ldap" 
+
 	if [ "`use qt`" ] ; then
 		EXPORT QTDIR=/usr/qt/2 #hope this helps - danarmak
 		myconf="$myconf --with-qtdom" 
 	fi
-	
-	use libwww && myconf="${myconf} --with-xml" || myconf="${myconf} --disable-xml"
-	use flash && myconf="${myconf} --with-swf=/usr --with-ming=/usr"
-	
+
+	if [ "`use imap`" ] ; then
+		# need to see if imap was built w/ ssl support
+		local pkg=`tail -n 1 /var/db/pkg/virtual/imapUW/VIRTUAL`
+		if [ "`grep ssl /var/db/pkg/${pkg}/USE`" ] ; then
+			echo "imap compiled with SSL"
+			myconf="$myconf --with-imap-ssl"
+		else
+			echo "imap compiled w/o SSL"
+			myconf="$myconf --with-imap"
+		fi
+	fi
+	use libwww && myconf="$myconf --with-xml" || myconf="$myconf --disable-xml"
+	use flash && myconf="$myconf --with-swf=/usr --with-ming=/usr"
+
 	if [ "`use xml`" ] ; then
 		export LIBS="-lxmlparse -lxmltok"
 		myconf="$myconf --with-sablot=/usr"
 	fi
 
-	use xml2 && myconf="${myconf} --with-dom"
+	use xml2 && myconf="$myconf --with-dom"
+	use mhash && myconf="$myconf --with-mhash"
+	use mcrypt && myconf="$myconf --with-mcrypt"
+	use java && myconf="$myconf --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
 
@@ -96,31 +134,12 @@ src_compile() {
 		LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
 	fi
     
-
-    
-	./configure --enable-safe-mode \
-		--enable-ftp \
-		--enable-track-vars \
-		--with-gmp \
-		--enable-dbase \
-		--enable-sysvsem \
-		--enable-sysvshm \
-		--with-zlib=yes \
-		--enable-bcmath \
-		--enable-calendar \
-		--enable-versioning \
-		--enable-inline-optimization \
-		--enable-trans-sid \
-		--with-gd \
-		--with-ttf \
-		--with-t1lib \
-		--with-jpeg-dir=/usr/lib \
-		--prefix=/usr \
-		--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` \
-		--host=${CHOST} \
-		--with-apxs="/usr/sbin/apxs -ltiff" \
-		--with-exec-dir="/usr/lib/apache/bin" \
-		$myconf || die "./configure failed"
+	./configure --enable-safe-mode --enable-ftp --enable-track-vars --with-gmp \
+		--enable-dbase --enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
+		--enable-calendar --enable-versioning --enable-inline-optimization --enable-trans-sid \
+		--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib --prefix=/usr \
+		--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` --host=${CHOST} \
+		--with-apxs="/usr/sbin/apxs -ltiff" --with-exec-dir="/usr/lib/apache/bin" $myconf || die
 
 	make || die
 }
@@ -140,8 +159,6 @@ src_install() {
 }
 
 pkg_config() {
-
-	. ${ROOT}/etc/rc.d/config/functions
 
 	if [ -f "${ROOT}/etc/httpd/httpd.conf" ] ; then
 
