@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.30 2004/01/14 03:28:47 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.31 2004/04/09 07:15:00 iggy Exp $
+
+  09 Apr 2004; Brian Jackson <iggy@gentoo.org> ccache-2.3.ebuild:
+  added s390 keyword
 
   13 Jan 2004; Jon Portnoy <avenj@gentoo.org> ccache-2.3.ebuild :
   Stable on AMD64.
