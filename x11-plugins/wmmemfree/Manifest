@@ -1,5 +1,5 @@
-MD5 f00d1a89819aa8c5fea1616fcadfa311 wmmemfree-0.7-r1.ebuild 819
-MD5 e9760806cb5088d049ca20411f9c8f14 ChangeLog 1135
+MD5 d3738307a3a4f1ce6680fc9b531f3195 ChangeLog 1231
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 65d5ba00b529265033342dc441f3e53b wmmemfree-0.7-r1.ebuild 826
 MD5 549f2f0157314bd869f2a99bf0cb24f6 files/digest-wmmemfree-0.7-r1 65
 MD5 c06730f486985901cfe649e2236115dd files/wmmemfree-0.7-add-kernel-26-support.patch 2480
