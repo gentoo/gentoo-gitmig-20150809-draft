@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.1 2003/12/28 11:04:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.2 2003/12/28 16:30:39 azarah Exp $
 
 IUSE="nls build"
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 
 	einfo "Building gawk ..."
@@ -65,20 +65,34 @@ src_install() {
 		AWKINCDIR=${S} \
 		install || die
 
+	dodir /usr/bin
 	# In some rare cases, (p)gawk gets installed as (p)gawk- and not
 	# (p)gawk-${PV} ..  Also make sure that /bin/(p)gawk is a symlink
 	# to /bin/(p)gawk-${PV}.
-	for x in gawk pgawk
+	for x in gawk pgawk igawk
 	do
+		local binpath="/bin"
+
+		case ${x} in
+			igawk|pgawk)
+					binpath="/usr/bin"
+					;;
+		esac
+
 		if [ -f "${D}/bin/${x}" -a ! -f "${D}/bin/${x}-${PV}" ]
 		then
-			mv -f ${D}/bin/${x} ${D}/bin/${x}-${PV}
+			mv -f ${D}/bin/${x} ${D}/${binpath}/${x}-${PV}
 		elif [ -f "${D}/bin/${x}-" -a ! -f "${D}/bin/${x}-${PV}" ]
 		then
-			mv -f ${D}/bin/${x} ${D}/bin/${x}-${PV}
+			mv -f ${D}/bin/${x}- ${D}/${binpath}/${x}-${PV}
+		elif [ "${binpath}" = "/usr/bin" -a -f "${D}/bin/${x}-${PV}" ]
+		then
+			mv -f ${D}/bin/${x}-${PV} ${D}/${binpath}/${x}-${PV}
 		fi
+
 		rm -f ${D}/bin/${x}
-		dosym ${x}-${PV} /bin/${x}
+		dosym ${x}-${PV} ${binpath}/${x}
+		[ "${binpath}" = "/usr/bin" ] && dosym ../usr/bin/${x}-${PV} /bin/${x}
 	done
 
 	rm -f ${D}/bin/awk
