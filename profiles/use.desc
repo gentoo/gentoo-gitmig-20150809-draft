@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.196 2004/10/27 22:04:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.197 2004/11/06 17:04:38 danarmak Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -271,6 +271,7 @@ trusted - used by pcmcia-cs to see if a regular user can add and remove pcmcia c
 uclibc - Enable uclibc specific patches and build or link uclibc
 unicode - Adds support for Unicode
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
+usepackagedmakefiles - Makes 'split' kde-base ebuilds use prepackaged makfile tarballs. This is an experimental compilation speedup that doesn't affect output.
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Tells portage to install optional video files (used in some games)
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
