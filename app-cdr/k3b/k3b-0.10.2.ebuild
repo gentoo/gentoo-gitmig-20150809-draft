@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.1 2003/11/11 13:39:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.2 2003/11/15 15:43:17 caleb Exp $
 
 inherit kde
 need-kde 3.1
@@ -57,6 +57,7 @@ src_compile() {
 
 	# Build process of K3B
 	S=${WORKDIR}/k3b-${PV}
+	cd ${S} && aclocal
 	kde_src_compile myconf
 	myconf="$myconf --prefix=$KDEDIR -C"
 	kde_src_compile configure
