@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.3 2005/01/11 20:44:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.4 2005/01/12 16:51:28 slarti Exp $
 
 IUSE="nls static"
 
@@ -10,7 +10,7 @@ SRC_URI="http://laurikari.net/tre/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
 
 DEPEND="virtual/libc
 	sys-apps/gawk
