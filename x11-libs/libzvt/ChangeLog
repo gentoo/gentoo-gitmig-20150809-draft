@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libzvt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.15 2004/03/23 07:08:04 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.16 2004/04/05 13:44:12 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> libzvt-2.0.1-r2.ebuild:
+  Marking hppa
 
   23 Mar 2004; Chris Aniszczyk <zx@gentoo.org> libzvt-2.0.1-r2.ebuild:
   Added ~hppa

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5-r1.ebuild,v 1.4 2004/03/02 14:01:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5-r1.ebuild,v 1.5 2004/04/05 13:46:05 zx Exp $
 
 IUSE="xinerama xmms"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ignavus.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc alpha ~hppa ia64 amd64"
+KEYWORDS="x86 ~sparc ~ppc alpha hppa ia64 amd64"
 
 DEPEND="virtual/x11
 	xmms? ( media-sound/xmms >=media-libs/gdk-pixbuf-0.22.0 )"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.27 2004/03/02 14:01:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.28 2004/04/05 13:46:05 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> xosd-2.2.4-r2.ebuild,
+  xosd-2.2.5-r1.ebuild, xosd-2.2.5.ebuild:
+  Marking hppa
 
   02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> xosd-2.2.5-r1.ebuild:
   stable on x86
