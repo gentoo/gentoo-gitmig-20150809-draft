@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.11.ebuild,v 1.1 2004/04/16 04:00:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.11.ebuild,v 1.2 2004/04/21 23:29:41 rac Exp $
 
 inherit flag-o-matic eutils
 
@@ -29,10 +29,10 @@ DEPEND="virtual/os-headers
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="${DEPEND}
-	!build? !bootstrap? (
+	!build? ( !bootstrap? (
 		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
-	)"
+	) )"
 
 src_unpack() {
 	unpack ${A}
