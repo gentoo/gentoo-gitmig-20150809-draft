@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.45 2004/03/20 23:16:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.46 2004/03/23 17:56:31 foser Exp $
+
+*epiphany-1.2.1 (22 Mar 2004)
+
+  22 Mar 2004; foser <foser@gentoo.org> epiphany-1.2.1.ebuild
+  Gnome 2.6 final
 
 *epiphany-1.2.0 (20 Mar 2004)
 

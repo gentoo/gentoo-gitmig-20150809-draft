@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.0.ebuild,v 1.1 2004/03/20 23:16:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.2.1.ebuild,v 1.1 2004/03/23 17:56:31 foser Exp $
 
 inherit gnome2
 
