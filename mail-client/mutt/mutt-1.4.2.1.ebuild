@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.5 2004/08/17 18:18:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.6 2004/11/24 14:55:14 agriffis Exp $
 
 IUSE="cjk imap mbox nls slang ssl vanilla"
 
@@ -42,13 +42,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
 	if ! use vanilla; then
-		epatch ${DISTDIR}/${compressed_patch} || die
-		epatch ${DISTDIR}/${edit_threads_patch} || die
+		epatch ${DISTDIR}/${compressed_patch}
+		epatch ${DISTDIR}/${edit_threads_patch}
 	fi
 	if use cjk; then
 		cd ${WORKDIR}
 		unpack ${cjk_patch} && cd ${S} || die "unpack cjk failed"
-		epatch ${WORKDIR}/${cjk_patch%.t*}/patch-${PV}.tt.ja.1 || die
+		epatch ${WORKDIR}/${cjk_patch%.t*}/patch-${PV}.tt.ja.1
 	fi
 }
 
@@ -96,13 +96,13 @@ src_compile() {
 		# rr.compressed patch
 		myconf="${myconf} --enable-compressed"
 	fi
-	econf ${myconf} || die
+	econf ${myconf}
 	sed -i 's/README.UPGRADE//' doc/Makefile || die "sed failed"
 	make || die "make failed (myconf=${myconf})"
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v html | xargs gzip
 	if use mbox; then
 		echo "Not installing an /etc/Muttrc as mbox is default configuration"

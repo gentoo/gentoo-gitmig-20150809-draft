@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r3.ebuild,v 1.7 2004/10/23 07:53:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r3.ebuild,v 1.8 2004/11/24 14:55:14 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
@@ -33,7 +33,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	!vanilla? ( sys-libs/gdbm )"
 DEPEND="${RDEPEND}
 	net-mail/mailbase
-	!vanilla? ( nntp? ( sys-devel/automake sys-devel/autoconf ) )"
+	!vanilla? ( sys-devel/automake sys-devel/autoconf )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -129,12 +129,12 @@ src_compile() {
 		myconf="${myconf} --enable-hcache"
 	fi
 
-	econf ${myconf} || die
+	econf ${myconf}
 	make || die "make failed (myconf=${myconf})"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "install failed"
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt

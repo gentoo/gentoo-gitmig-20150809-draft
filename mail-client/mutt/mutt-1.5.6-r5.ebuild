@@ -1,37 +1,45 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6.ebuild,v 1.7 2004/11/24 14:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r5.ebuild,v 1.1 2004/11/24 14:55:14 agriffis Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp vanilla"
 
 edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
-nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
+nntp_patch="patch-${PV}.vvv.nntp-gentoo-r2.bz2"
 mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
+header_cache_patch="patch-${PV}.tg.hcache.11"
+pgp_timeout_patch="patch-${PV}.dw.pgp-timeout.1"
+auto_decode_patch="patch-${PV}.ddm.pgp-auto-decode.1"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
-	mirror://gentoo/${edit_threads_patch}
-	http://mutt.kiev.ua/download/${P}/${compressed_patch}
-	http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
-	nntp? ( mirror://gentoo/${nntp_patch} )"
+	!vanilla? (
+		mirror://gentoo/${edit_threads_patch}
+		http://mutt.kiev.ua/download/${P}/${compressed_patch}
+		http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
+		nntp? ( mirror://gentoo/${nntp_patch} )
+		http://wwwcip.informatik.uni-erlangen.de/~sithglan/mutt/${header_cache_patch}
+		http://www.woolridge.ca/mutt/patches/${pgp_timeout_patch}
+		http://www.pizzashack.org/mutt/${auto_decode_patch}
+	)"
 #	nntp? ( http://mutt.kiev.ua/download/${P}/${nntp_patch} )
 #	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
 
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )"
+	slang? ( >=sys-libs/slang-1.4.2 )
+	!vanilla? ( sys-libs/gdbm )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	net-mail/mailbase
-	!vanilla? ( nntp? ( sys-devel/automake sys-devel/autoconf ) )"
+	!vanilla? ( sys-devel/automake sys-devel/autoconf )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 mips ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ~ppc64 ~ppc-macos"
 
 
 pkg_setup() {
@@ -40,6 +48,7 @@ pkg_setup() {
 		einfo
 		einfo "NOTE: The USE variable 'imap' is not in your USE flags."
 		einfo "For imap support in mutt, you will need to restart the build with USE=imap"
+		einfo
 		echo
 	fi
 }
@@ -50,16 +59,18 @@ src_unpack() {
 		epatch ${DISTDIR}/${compressed_patch}
 		epatch ${DISTDIR}/${edit_threads_patch}
 		epatch ${DISTDIR}/${mbox_hook_patch}
-		if use nntp; then
-			epatch ${DISTDIR}/${nntp_patch}
-			# I don't know how much of this is truly necessary, but it
-			# was all in the ebuild proposed in bug 23196
-			aclocal -I m4					|| die "aclocal failed"
-			autoheader						|| die "autoheader failed"
-			make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
-			automake --foreign				|| die "automake failed"
-			autoconf						|| die "autoconf failed"
-		fi
+		epatch ${DISTDIR}/${header_cache_patch}
+		epatch ${DISTDIR}/${pgp_timeout_patch}
+		epatch ${DISTDIR}/${auto_decode_patch}
+		use nntp && epatch ${DISTDIR}/${nntp_patch}
+
+		# The following steps are necessary for the nntp patch and the
+		# header_cache_patch
+		aclocal -I m4					|| die "aclocal failed"
+		autoheader						|| die "autoheader failed"
+		make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
+		automake --foreign				|| die "automake failed"
+		WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
 	fi
 
 	# Fix a slang problem that is already fixed in upstream cvs
@@ -116,10 +127,12 @@ src_compile() {
 
 		# nntp patch
 		myconf="${myconf} $(use_enable nntp)"
+
+		# maildir_header_cache_patch
+		myconf="${myconf} --enable-hcache"
 	fi
 
 	econf ${myconf}
-	sed -i -e 's/README.UPGRADE//' doc/Makefile || die "sed failed"
 	make || die "make failed (myconf=${myconf})"
 }
 

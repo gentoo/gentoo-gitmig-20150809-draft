@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.22 2004/11/12 18:10:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.23 2004/11/24 14:55:14 agriffis Exp $
+
+*mutt-1.5.6-r5 (24 Nov 2004)
+
+  24 Nov 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.4.2.1.ebuild,
+  mutt-1.5.6-r2.ebuild, mutt-1.5.6-r3.ebuild, mutt-1.5.6-r4.ebuild,
+  +mutt-1.5.6-r5.ebuild, mutt-1.5.6.ebuild:
+  Bump to -r5 with auto_decode_patch #66545 and updated header_cache
+  patch.  Remove redundant dies after epatch and econf.  Fix DEPEND to
+  include automake and autoconf regardless of USE=nntp since the
+  header_cache patch also needs them.
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> mutt-1.5.6-r4.ebuild:
   Stable on sparc
