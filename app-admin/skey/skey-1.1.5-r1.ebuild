@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.1 2003/11/05 16:03:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.2 2003/11/05 16:52:58 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	#	- using manpages from NetBSD, which are of better quality.
 	#	- be a little bit more reasonable about password security..do we really have
 	#		to force people to have digits in there?
+	#	- hacked in support for shadow passwords.
 	#	- some other misc. stuff.
 	# (05 Nov 2003) -taviso@gentoo.org
 	unpack ${A}
