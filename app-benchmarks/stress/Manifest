@@ -1,5 +1,5 @@
 MD5 408b1f28365e579330e612e365402703 stress-0.17_pre7.ebuild 630
-MD5 8579bca516a2da20674c6983cdea8a4a stress-0.17_pre16.ebuild 631
-MD5 b70b2cfe395386b5583229e7b26c0153 ChangeLog 571
+MD5 85f28702444d6689f5799dd9753d19a9 stress-0.17_pre16.ebuild 630
+MD5 493e0cdd215ce5d8f8a12521ac8ef194 ChangeLog 707
 MD5 2a9eed914a2ed4e882f07a1b4f094ca1 files/digest-stress-0.17_pre16 68
 MD5 ab7a16fda496e20af4c0ae5c468971ea files/digest-stress-0.17_pre7 66
