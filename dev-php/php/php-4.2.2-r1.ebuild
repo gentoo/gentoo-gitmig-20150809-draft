@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.4 2002/08/30 16:59:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.5 2002/09/02 02:20:24 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,10 @@ SLOT="0"
 PROVIDE="virtual/php"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND=">=dev-libs/gmp-3.1.1
+DEPEND="
+	# too many users not being able to compile with gmp support
+	# - rphillips
+	# >=dev-libs/gmp-3.1.1
 	freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
@@ -153,7 +156,7 @@ src_compile() {
 
 	./configure \
 		--prefix=/usr \
-		--with-gmp \
+		# --with-gmp \
 		--with-bz2 \
 		--enable-ftp \
 		--enable-dbase \
