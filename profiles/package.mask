@@ -96,7 +96,7 @@ net-mail/exmh
 # NOTE: you must also unmask glibc-2.2.5-r5, as gcc-3.1.1 have
 #       stricker checking, and will fail otherwise
 >=sys-devel/gcc-3.1.1
-=sys-libs/glibc-2.2.5-r5
+#=sys-libs/glibc-2.2.5-r5
 
 # <danarmak@gentoo.org> (06 July 2002)
 # short-term mask for testing - see core post for details
