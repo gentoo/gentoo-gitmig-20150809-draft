@@ -1,0 +1,10 @@
+--- GSWAction.h.orig	2004-11-19 01:00:10.682762424 -0500
++++ GSWAction.h	2004-11-19 01:00:14.788138312 -0500
+@@ -56,7 +56,6 @@
+ /** Returns YES if self reponds to actionName **/
+ -(BOOL)isActionNamed:(NSString*)actionName;
+ 
+--(id)existingSession;
+ -(NSString*)sessionIDForRequest:(GSWRequest*)aRequest;
+ -(void)_initializeRequestSessionIDInContext:(GSWContext*)aContext;
+ 
