@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827-r1.ebuild,v 1.1 2004/12/23 03:53:03 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827-r1.ebuild,v 1.2 2004/12/23 20:42:10 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -70,7 +70,7 @@ src_unpack() {
 	else
 		unpack linux-drm-${PV}-kernelsource.tar.bz2
 	fi
-	unpack ${PF}-gentoo-${PATCHVER}.tar.bz2
+	unpack ${P}-gentoo-${PATCHVER}.tar.bz2
 
 	cd ${S}
 	cp ${PATCHDIR}/Makefile ${S}
