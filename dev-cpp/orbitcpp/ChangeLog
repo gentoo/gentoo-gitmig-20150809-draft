@@ -1,6 +1,8 @@
 # ChangeLog for dev-cpp/orbitcpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/orbitcpp/ChangeLog,v 1.7 2004/06/24 21:50:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/orbitcpp/ChangeLog,v 1.8 2004/07/17 21:11:53 aliz Exp $
+
+*orbitcpp-1.3.9 (11 Jun 2004)
 
   11 Jun 2004; Yi Qiang <khai@gentoo.org> :
   Version bump to resolve libbonobomm issues
