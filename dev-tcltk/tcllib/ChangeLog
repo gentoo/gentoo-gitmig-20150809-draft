@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tcllib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.12 2004/12/31 01:20:55 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.13 2005/03/27 03:54:30 matsuu Exp $
+
+*tcllib-1.7 (27 Mar 2005)
+
+  27 Mar 2005; MATSUU Takuto <matsuu@gentoo.org>
+  +files/tcllib-1.7-gentoo.patch, +tcllib-1.7.ebuild:
+  Version bumped.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

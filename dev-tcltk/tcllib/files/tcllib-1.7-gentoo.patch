@@ -1,0 +1,26 @@
+diff -Naur tcllib-1.7.orig/Makefile.in tcllib-1.7/Makefile.in
+--- tcllib-1.7.orig/Makefile.in	2004-10-06 10:35:21.000000000 +0900
++++ tcllib-1.7/Makefile.in	2005-03-27 12:48:02.238916520 +0900
+@@ -53,19 +53,19 @@
+ 		-no-examples -no-html \
+ 		-pkg-path   $(DESTDIR)$(pkglibdir) \
+ 		-nroff-path $(DESTDIR)$(mandir)/mann \
+-		-no-wait -no-gui
++		-no-wait -no-gui -no-apps
+ 
+ install-libraries:
+ 	$(TCLSH_PROG) `$(CYGPATH) $(srcdir)/installer.tcl` \
+ 		-pkg-path   $(DESTDIR)$(pkglibdir) \
+ 		-no-examples -no-html -no-nroff \
+-		-no-wait -no-gui
++		-no-wait -no-gui -no-apps
+ 
+ install-doc:
+ 	$(TCLSH_PROG) `$(CYGPATH) $(srcdir)/installer.tcl` \
+ 		-nroff-path $(DESTDIR)$(mandir)/mann \
+ 		-no-examples -no-pkgs -no-html \
+-		-no-wait -no-gui
++		-no-wait -no-gui -no-apps
+ 
+ test:
+ 	$(TCLSH_PROG) `$(CYGPATH) $(srcdir)/sak.tcl` test
