@@ -1,4 +1,6 @@
-MD5 8bac4cc6f233b76d87b2110122fdbd6c ChangeLog 861
+MD5 49d8126ef98fd9cb7fdc837e50e1e36f ChangeLog 989
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3a45add44eadad8289ffe321bfbaa518 xmms-scrobbler-0.3.1.ebuild 623
+MD5 a81cc364e08b04e679c8b895ad409bb3 xmms-scrobbler-0.3.2.ebuild 624
 MD5 c7215593200ae19c5420ed069875a3ce files/digest-xmms-scrobbler-0.3.1 73
+MD5 40f9a55ab4c5260671cb70a23e140ba7 files/digest-xmms-scrobbler-0.3.2 73
