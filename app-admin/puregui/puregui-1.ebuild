@@ -8,12 +8,11 @@ DESCRIPTION="A GUI to Configure Pure-FTPD"
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/puregui.tar.gz"
 HOMEPAGE="http://pureftpd.sourceforge.net"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+DEPEND="virtual/glibc
 	>=x11-libs/gtk+-1.2.10"
 
 src_compile() {
 
-    cd ${S}
     try ./configure --cache-file=${FILESDIR}/config.cache --prefix=/usr --host=${CHOST} --mandir=/usr/share --infodir=/usr/share/info
     try make
 
@@ -21,7 +20,6 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     try make DESTDIR=${D} install
     dodoc COPYING ChangeLog README
 
