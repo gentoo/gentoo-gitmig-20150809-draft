@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r4.ebuild,v 1.10 2005/03/12 22:36:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r5.ebuild,v 1.1 2005/03/12 22:36:23 solar Exp $
 
 inherit eutils
 
-PATCHLEVEL=26
+PATCHLEVEL=27
 DESCRIPTION="Standard Linux telnet client and server"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.tar.gz
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ppc64"
 IUSE="build"
 
 DEPEND=">=sys-libs/ncurses-5.2
