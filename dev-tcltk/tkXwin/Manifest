@@ -1,5 +1,5 @@
-MD5 6b8fa1589c85ab6849a917ec527b9bbb tkXwin-1.0.ebuild 769
-MD5 a1b8c0131f67cc78a32c4f3f550a255b ChangeLog 654
+MD5 52d73c0adf13fc66f3ed0dcd1dc3f5ee ChangeLog 736
+MD5 882f105c961878af9a6e7a9d3cd06ea6 tkXwin-1.0.ebuild 766
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 16ac6eb6d46fda5e7ea4a11a7550c999 files/1.0-Makefile.in.diff 796
 MD5 e2feb67c29f4f32389b38df970adadd7 files/digest-tkXwin-1.0 59
