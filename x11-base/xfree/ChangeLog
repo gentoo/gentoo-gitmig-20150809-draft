@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.249 2003/12/03 09:33:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.250 2003/12/03 10:20:28 spyderous Exp $
+
+  03 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  PATCH_VER 2.1.23. Rename
+  0160_all_4.2.99.4-IncludeSharedObjectInNormalLib.patch to
+  9015_all_4.2.99.4-IncludeSharedObjectInNormalLib.patch. Add
+  9016_all_4.3.0-libfontenc-IncludeSharedObjectInNormalLib.patch for amd64 issue
+  with KDE -- from Mike Harris. Add 0263_ia64_4.3.0-elfloader-dup-case.patch to
+  close bug #33353.
 
 *xfree-4.3.99.901 (03 Dec 2003)
 
