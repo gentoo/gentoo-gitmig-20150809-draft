@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.7 2004/06/24 22:26:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/komics-1.2.ebuild,v 1.8 2004/07/06 11:46:21 carlo Exp $
 
 inherit kde
-need-kde 3
 
 DESCRIPTION="Komics - a KDE panel applet for fetching comics strips from web."
 HOMEPAGE="http://www.orson.it/~domine/komics/"
@@ -16,10 +15,12 @@ IUSE="arts"
 
 S=${WORKDIR}/komics
 
-newdepend "dev-perl/HTML-Parser
+DEPEND="dev-perl/HTML-Parser
 	dev-perl/libwww-perl
 	dev-perl/URI
 	dev-perl/HTML-Tagset"
+RDEPEND=${DEPEND}
+need-kde 3
 
 src_unpack() {
 	kde_src_unpack
