@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/xscorch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/ChangeLog,v 1.2 2003/09/10 15:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/ChangeLog,v 1.3 2003/10/03 07:01:01 mr_bones_ Exp $
+
+  02 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  xscorch-0.1.16_rc2.ebuild:
+  make it so xscorch can find an uncompressed man page so it can display its
+  tooltips correctly (bug 30181); add more error messages and checking.
 
 *xscorch-0.1.16_rc2 (05 Sep 2003)
 
