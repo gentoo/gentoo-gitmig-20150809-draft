@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.14 2004/07/15 01:46:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.15 2004/07/17 01:08:18 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -20,17 +20,16 @@ src_unpack() {
 	unpack ${A}
 
 	# Copy filefuncs module's source over ...
-	cp -dR ${FILESDIR}/filefuncs ${WORKDIR}/ || die
+	cp -dR "${FILESDIR}/filefuncs" "${WORKDIR}/" || die "cp failed"
 
 	cd ${S}
 	# support for dec compiler.
-	[ "${CC}" == "ccc" ] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
-	epatch ${FILESDIR}/64bitnumfile.patch
+	[ "${CC}" == "ccc" ] && epatch "${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff"
+	epatch "${FILESDIR}/64bitnumfile.patch"
+	gnuconfig_update
 }
 
 src_compile() {
-	gnuconfig_update
-
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 	[ -z "${CBUILD}" ] || myconf="${myconf} --build=${CBUILD}"
@@ -44,11 +43,11 @@ src_compile() {
 		${myconf} \
 		|| die
 
-	emake || die "make failed"
+	emake || die "emake failed"
 
 	einfo "Building filefuncs module ..."
 	cd ${WORKDIR}/filefuncs
-	make AWKINCDIR=${S} || die "filefuncs make failed"
+	emake AWKINCDIR=${S} || die "filefuncs emake failed"
 }
 
 src_install() {
@@ -77,9 +76,9 @@ src_install() {
 		local binpath="/bin"
 
 		case ${x} in
-			igawk|pgawk)
-					binpath="/usr/bin"
-					;;
+		igawk|pgawk)
+				binpath="/usr/bin"
+				;;
 		esac
 
 		if [ -f "${D}/bin/${x}" -a ! -f "${D}/bin/${x}-${PV}" ]
@@ -120,8 +119,7 @@ src_install() {
 	then
 		cd ${S}
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
-		dodoc AUTHORS ChangeLog COPYING FUTURES
-		dodoc LIMITATIONS NEWS PROBLEMS POSIX.STD README
+		dodoc AUTHORS ChangeLog FUTURES LIMITATIONS NEWS PROBLEMS POSIX.STD README
 		docinto README_d
 		dodoc README_d/*
 		docinto awklib
