@@ -4,8 +4,8 @@ MD5 22144703425dd521d372c9766fcdbb14 DirectFB-0.9.19.ebuild 1666
 MD5 5b7db74f2af2c270a09407d93cbbfaaa DirectFB-0.9.16.ebuild 2901
 MD5 a61ed500410d82702f59bf7cd2efa95a DirectFB-0.9.16-r1.ebuild 2284
 MD5 b9f4a419a3e9b8140e23167f3534c072 DirectFB-0.9.18.ebuild 1663
-MD5 22144703425dd521d372c9766fcdbb14 DirectFB-0.9.19-r1.ebuild 1666
-MD5 0adbcbb45a133234b75333a0f567e27d ChangeLog 4732
+MD5 b1e0ecb30aef7776ce6ada5e9e1a4669 DirectFB-0.9.19-r1.ebuild 1787
+MD5 984306ddabe4d82161502b09a247ce4a ChangeLog 4877
 MD5 571198ea32e883b2f4efdd5c23520152 files/digest-DirectFB-0.9.16-r1 67
 MD5 0b9e70cc12aea75d1e65699d5cfa24aa files/digest-DirectFB-0.9.19-r1 68
 MD5 01ed46e3f45aa9ff9756bf2b46fe6376 files/digest-DirectFB-0.9.12 67
