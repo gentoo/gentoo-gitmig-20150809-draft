@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.17 2002/11/11 13:51:02 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.18 2002/12/03 12:27:25 seemant Exp $
+
+*aspell-0.50.3 (03 Dec 2002)
+
+  03 Dec 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.3.ebuild
+  files/digest-aspell-0.50.3 :
+
+  Jon Nall's changes were taken upstream for this release.
 
 *aspell-0.50.2-r1 (11 Nov 2002)
 
