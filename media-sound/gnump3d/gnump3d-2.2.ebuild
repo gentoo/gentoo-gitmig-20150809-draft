@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.2.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.2.ebuild,v 1.3 2003/04/18 18:27:53 malverian Exp $
 
 inherit eutils
 
@@ -38,8 +38,8 @@ src_install() {
 		doins templates/${a/templates}/*
 	done
 
-	insinto /etc/init.d
-	newins ${FILESDIR}/gnump3d-${PV}.rc6 gnump3d
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/gnump3d-${PV}.rc6 gnump3d
 
 	insinto /etc/gnump3d
 	doins etc/gnump3d.conf etc/mime.types
