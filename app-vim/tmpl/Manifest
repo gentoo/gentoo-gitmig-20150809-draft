@@ -1,4 +1,14 @@
-MD5 5aba91cc72cafc03ce592b85ee9f8126 tmpl-0.1.ebuild 426
-MD5 9096d95266b7b1a84c31382b413944b1 ChangeLog 959
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 68fbef84d0e49bab9945a7f18052cb4f tmpl-0.1.ebuild 499
+MD5 06df23a9c20913e10d7c67b960eace1a ChangeLog 1056
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 cc100163c4e76dbd3f7d9e962911f962 files/digest-tmpl-0.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBqM/FLLFUmVNQ7rkRApIPAJwPVJqljZ1DIHkE3nWa994oYZ6wfQCYn9rf
+esnneAD6SScP8QNfnmKlzg==
+=zI13
+-----END PGP SIGNATURE-----
