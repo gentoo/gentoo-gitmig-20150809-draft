@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.22 2003/06/23 22:25:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.23 2003/07/10 10:03:31 phosphan Exp $
+
+  10 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> lilo-22.3.4.ebuild,
+  lilo-22.5.1.ebuild, lilo-22.5.5.ebuild:
+  Updated SRC_URI, tarballs were moved to /obsolete. Ebuilds for new versions
+  should perhaps try ftp://metalab.unc.edu/pub/Linux/system/boot/lilo, at least
+  this location is encouraged in announcement as the "main distribution site".
 
 *lilo-22.5.5 (24 Jun 2003)
 
