@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.4 2005/02/01 04:43:50 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.5 2005/03/03 17:15:06 ciaranm Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	virtual/fam
 	dev-lang/perl
-	sys-apps/procps"
+	sys-process/procps"
 
 PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
