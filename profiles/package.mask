@@ -764,15 +764,11 @@ sys-apps/texinfo
 # Needs testing, but now works with gcc 3.1
 =sys-devel/perl-5.6.1-r4
 
-# mkennedy@gentoo.org 20 May 2002 
-# patch to support gcc3.1 -- masked until someone tests this with
-# gcc2.95.3
-=x11-libs/gtkmm-1.2.9-r1
-
 # mkennedy@gentoo.org 22 May 2002
 # patch to support gcc3.1 -- masked until someone tests this with
 # gcc2.95.3 etc.
 =net-www/galeon-1.2.1-r2
+
 # rphillips@gentoo.org 24 May 2002
 # masked until someone tests this with gcc3 and up
 # works with 2.95.3
