@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.18 2004/06/29 20:05:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.19 2004/09/19 15:33:49 tgall Exp $
+
+  19 Sep 2004; Tom Gall <tgall@gentoo.org> johntheripper-1.6-r3.ebuild:
+  stable on ppc64, bug #60890
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> johntheripper-1.6-r1.ebuild,
   johntheripper-1.6-r3.ebuild, johntheripper-1.6.ebuild:
