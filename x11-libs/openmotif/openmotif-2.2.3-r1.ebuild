@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.9 2005/02/17 19:15:24 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r1.ebuild,v 1.10 2005/02/17 22:34:59 kloeri Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
