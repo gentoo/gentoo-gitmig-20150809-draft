@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/ncmpc
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.1 2004/06/27 06:15:22 ferringb Exp $
+
+*ncmpc-0.10.1 (27 Jun 2004)
+
+  27 Jun 2004; Brian Harring <ferringb@gentoo.org> ChangeLog metadata.xml
+  ncmpc-0.10.1.ebuild files/digest-ncmpc-0.10.1
+  
+  Initial import.  Ebuild submitted by Florian Rohde <floggy@kistenkatze.de>.
+  See bug #48025.  
