@@ -1,6 +1,13 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.13 2005/01/01 16:41:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.14 2005/01/01 19:31:56 ka0ttic Exp $
+
+*vilistextum-2.6.7 (01 Jan 2005)
+
+  01 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/vilistextum-2.6.7-gentoo.diff,
+  +files/vilistextum-2.6.7-use-glibc-iconv.diff, +vilistextum-2.6.7.ebuild:
+  Version bump; currently package.mask'd however for testing. See bug 74694.
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)

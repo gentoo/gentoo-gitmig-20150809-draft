@@ -1,6 +1,20 @@
-MD5 7264af93afa721038e56085501d330bc ChangeLog 1174
-MD5 f8c0d4245b224a8116eefbfb8ee0f2ad vilistextum-2.6.1.ebuild 858
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7fde9249bf00210cad896d9cd17c022 vilistextum-2.6.7.ebuild 1042
 MD5 25d6558bda4fe590effde7ad5434713e vilistextum-2.6.2.ebuild 753
+MD5 f8c0d4245b224a8116eefbfb8ee0f2ad vilistextum-2.6.1.ebuild 858
+MD5 2d6b4249065cae202262ce49389433a6 ChangeLog 1448
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 3e32b501f3052d6273ee21ec47e2f008 files/digest-vilistextum-2.6.1 69
 MD5 5e6d1d0e6fcd4442e466c76b37d1bc89 files/digest-vilistextum-2.6.2 69
+MD5 d79c0d1c706b86af5646d2b997dac343 files/digest-vilistextum-2.6.7 70
+MD5 f6f9d4949fde1ad377dcb76bf10ae94f files/vilistextum-2.6.7-gentoo.diff 770
+MD5 35354ed16bb7fe59aba813fec80856dd files/vilistextum-2.6.7-use-glibc-iconv.diff 14707
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB1vrtEZCkKN40op4RAvsVAKCbE85IM4ijg/dV6+JOLfA6cwpf2gCeLN6H
+yxDsJ0drrn3Wy96VaJd8m3Y=
+=6q3h
+-----END PGP SIGNATURE-----
