@@ -1,4 +1,4 @@
-MD5 c300239791578a4b0c464f35c13cbb03 ChangeLog 471
-MD5 5c71fb4e3826a98362a5e659ae81e0be ant-contrib-1.0_beta1.ebuild 1151
+MD5 d5548b984afdbe9a38e88cf7dd636191 ant-contrib-1.0_beta1-r1.ebuild 1161
+MD5 d066942e502983273d40e1c7115b1763 ChangeLog 668
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
-MD5 ceb92d92286af34135f5d0bdcb5c67db files/digest-ant-contrib-1.0_beta1 74
+MD5 ceb92d92286af34135f5d0bdcb5c67db files/digest-ant-contrib-1.0_beta1-r1 74

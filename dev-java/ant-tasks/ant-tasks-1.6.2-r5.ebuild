@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r4.ebuild,v 1.4 2004/09/04 12:58:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.1 2004/09/10 19:41:12 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64 ppc sparc"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
-DEPEND="=dev-java/ant-1.6.2-r5
+DEPEND="=dev-java/ant-${PV}*
 	!dev-java/ant-optional
 	>=dev-java/java-config-1.2
 	>=dev-java/junit-3.8
@@ -45,7 +45,7 @@ src_compile() {
 		export THREADS_FLAG="green"
 	fi
 
-	local p="ant,junit"
+	local p="ant-core,junit"
 	use noantlr || p="${p},antlr"
 	use nobcel || p="${p},bcel"
 	use nobeanutils || p="${p},commons-beanutils"
@@ -67,7 +67,7 @@ src_compile() {
 	packages=${p}
 
 	libs=$(java-config -p ${packages})
-	./build.sh -Ddist.dir=${D}/usr/share/ant -lib ${libs} || die "build failed"
+	./build.sh -Ddist.dir=${D}/usr/share/ant-core -lib ${libs} || die "build failed"
 }
 
 src_install() {
@@ -88,10 +88,10 @@ src_install() {
 	use noxalan || jars="${jars} xalan1"
 	use javamail && jars="${jars} javamail"
 
-	dodir /usr/share/ant/lib
+	dodir /usr/share/ant-core/lib
 	for jar in ${jars}; do
 		java-pkg_dojar build/lib/ant-${jar}.jar
-		dosym /usr/share/${PN}/lib/ant-${jar}.jar /usr/share/ant/lib/
+		dosym /usr/share/${PN}/lib/ant-${jar}.jar /usr/share/ant-core/lib/
 	done
 }
 

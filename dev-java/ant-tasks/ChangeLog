@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.7 2004/09/05 06:03:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.8 2004/09/10 19:41:12 axxo Exp $
+
+*ant-tasks-1.6.2-r5 (10 Sep 2004)
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> -ant-tasks-1.6.2-r4.ebuild,
+  +ant-tasks-1.6.2-r5.ebuild:
+  revision bump: ant moved to ant-core
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
