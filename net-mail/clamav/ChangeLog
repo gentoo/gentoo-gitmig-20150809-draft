@@ -1,7 +1,12 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.17 2004/02/21 10:48:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.18 2004/03/22 08:50:11 lordvan Exp $
 
+*clamav-0.70_rc (21 Mar 2004)
+
+  21 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.70_rc.ebuild:
+  version bump (~arch)
+	
   21 Feb 2004; Hanno Boeck <hanno@gentoo.org> clamav-0.54-r1.ebuild,
   clamav-0.60-r1.ebuild, clamav-0.60.ebuild, clamav-0.65.ebuild:
   Removing all old ebuilds with security bugs.
