@@ -1,8 +1,9 @@
 #! /bin/sh
 
-#   Copyright (c) 2001-2002 The Apache Software Foundation.  All rights
+#   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.5.2/ant,v 1.1 2003/03/21 21:39:07 absinthe Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
@@ -30,13 +31,13 @@ fi
 
 # load user ant configuration
 if [ -f "$HOME/.antrc" ] ; then 
-  . $HOME/.antrc
+  . "$HOME/.antrc"
 fi
 
 ANT_HOME=/usr/share/ant
 
 # set ANT_LIB location
-ANT_LIB=${ANT_HOME}/lib
+ANT_LIB="${ANT_HOME}/lib"
 
 JAVACMD="`java-config --java`"
  
@@ -63,7 +64,7 @@ if [ -n "$JAVA_HOME" ] ; then
   fi
 
 else
-  echo "Warning: JAVA_HOME environment variable is not set."
+  echo "Warning: JAVA_HOME environment variable is not set (or not exported)."
   echo "  If build fails because sun.* classes could not be found"
   echo "  you will need to set the JAVA_HOME environment variable"
   echo "  to the installation directory of java."
