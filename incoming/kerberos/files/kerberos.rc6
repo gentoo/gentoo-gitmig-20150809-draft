@@ -1,0 +1,33 @@
+#!/sbin/runscript
+
+depend() {
+	need named
+}
+
+checkconfig() {
+	if [ ! -e /etc/krb5.conf ] ; then
+		eerror "You need an /etc/krb5.conf file first"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Kerberos KDC"
+	start-stop-daemon --start --quiet --exec /usr/sbin/krb5kdc
+	eend $?
+	ebegin "Starting Kerberos Adminsitration Servers"
+	start-stop-daemon --start --quiet --exec /usr/sbin/kadmind
+	#start-stop-daemon --start --quiet --exec /usr/sbin/v5passwdd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Kerberos Administration Servers"
+	#start-stop-daemon --stop --quiet --exec /usr/sbin/v5passwdd
+	start-stop-daemon --stop --quiet --exec /usr/sbin/kadmind
+	eend $?
+	ebegin "Stopping Kerberos KDC"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/krb5kdc
+	eend $?
+}
