@@ -1,0 +1,11 @@
+--- XMMS-mp3cue-0.94-orig/Makefile.in	2004-07-04 00:19:10.587636128 +0200
++++ XMMS-mp3cue-0.94/Makefile.in	2004-07-04 00:19:36.036767272 +0200
+@@ -4,7 +4,7 @@
+ INSTALL = @INSTALL@
+ LIBS = @LIBS@
+ CFLAGS = -O -Wall @CFLAGS@ @DEFS@ -DVERSION=\"@VERSION@\"
+-CPPFLAGS = -O -Wall @CFLAGS@ @DEFS@ -DVERSION=\"@VERSION@\"
++CPPFLAGS = -O -Wall -fPIC @CFLAGS@ @DEFS@ -DVERSION=\"@VERSION@\"
+ LDFLAGS = @LDFLAGS@ $(LIBS) -shared
+ PREFIX = @prefix@
+ INSTALLPATH = @libdir@
