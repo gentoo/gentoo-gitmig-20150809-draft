@@ -351,9 +351,9 @@ net-www/zope
 # soon as a new version is available in Portage, otherwise you'll pollute 
 # the still-under-high-development network with old protocols and such.
   
-net-p2p/gift
-net-p2p/kift
-net-p2p/giftcurs
+#net-p2p/gift
+#net-p2p/kift
+#net-p2p/giftcurs
 #note: kift and giftcurs depend on gift, so they need masking too. (drobbins, 7 Jul 2002)
 
 # Opera 6 final.
