@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/pine-maildir
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.3 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/ChangeLog,v 1.4 2003/01/13 05:48:15 raker Exp $
+
+*pine-maildir-4.50 (13 Jan 2003)
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> pine-maildir-4.50.ebuild,
+  files/digest-pine-maildir-4.50, files/{lots o' diffs} :
+  As the main pine branch doesn't have an updated pine with a maildir
+  patch available I am updating our pine-maildir build to make up for
+  this.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
