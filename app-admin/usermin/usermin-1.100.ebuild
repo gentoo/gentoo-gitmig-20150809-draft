@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.2 2004/12/19 07:21:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.3 2004/12/19 13:53:09 kloeri Exp $
 
 IUSE="ssl"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86 ~hppa"
+KEYWORDS="alpha amd64 ~ppc ~ppc64 sparc x86 ~hppa"
 
 RDEPEND="dev-lang/perl
 	sys-apps/lsof
