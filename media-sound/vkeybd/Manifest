@@ -1,13 +1,14 @@
-MD5 09207e3c2da36cfe74fc5754fb5fcd88 ChangeLog 2027
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a2c9c99072a4809d32c22b6baa71407 ChangeLog 2428
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 7b70927ca7091d16bad80750424e9d87 vkeybd-0.1.12.ebuild 1283
-MD5 07991359caf48a47a4a68d2132c046c8 vkeybd-0.1.13-r1.ebuild 1588
-MD5 667b363047ca8820d75f3451d7e41c44 vkeybd-0.1.15.ebuild 1291
-MD5 ff865aa6f311fa78914478083e85fb4b files/digest-vkeybd-0.1.12 64
-MD5 76ce852aa4d8139f0c0ea297ba4df6f1 files/digest-vkeybd-0.1.13-r1 64
+MD5 320f9b09819ae9c72dbe8c65e542c9ed vkeybd-0.1.15.ebuild 1347
 MD5 630f53e424226727789b4d73f97fa165 files/digest-vkeybd-0.1.15 64
-MD5 50662097f6756de017137af3c19d182b files/vkeybd-0.1.12-Makefile.destdir.patch 1020
-MD5 2c8d3d650a7f17d0365b3aca73cc0d16 files/vkeybd-0.1.12-Makefile.passvariables.patch 588
-MD5 eca9134ac4275c528a1a0f6bebb539d1 files/vkeybd-0.1.13-Makefile.passvariables.patch 736
-MD5 c23eb355f89281aee959a6d00abf95b7 files/vkeybd-0.1.13-alsa-fix.patch 644
-MD5 e39e9a9305c2368d63fac498f1414030 files/vkeybd-0.1.13-vkb.c-ladcca.patch 377
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkEGrArHZZzCEUG0RAldDAJ47rSt/HWQfs/UxYWehl+pRBW3u/QCff4+l
+VAudPzNQUyMdxZqZ0hHY7OY=
+=pfpS
+-----END PGP SIGNATURE-----
