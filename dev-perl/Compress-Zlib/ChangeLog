@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.10 2003/07/21 00:17:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.11 2003/11/09 14:39:57 mcummings Exp $
+
+  09 Nov 2003; Michael Cummings <mcummings@gentoo.org>
+  Compress-Zlib-1.22.ebuild:
+  100+ days, no bugs - unmasked
 
 *Compress-Zlib-1.22 (20 Jul 2003)
 
