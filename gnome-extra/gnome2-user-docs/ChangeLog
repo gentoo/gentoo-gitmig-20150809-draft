@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.16 2003/07/15 14:02:06 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.17 2003/09/12 00:15:58 spider Exp $
+
+*gnome2-user-docs-2.4.0 (12 Sep 2003)
+
+  12 Sep 2003; <spider@gentoo.org> gnome2-user-docs-2.4.0.ebuild:
+  versionbump
 
   15 Jul 2003; Todd Sunderlin <todd@gentoo.org> gnome2-user-docs-2.0.6.ebuild:
   Marked stable for sparc
