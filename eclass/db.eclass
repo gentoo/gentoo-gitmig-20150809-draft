@@ -1,11 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.9 2004/08/23 11:52:10 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 ECLASS=db
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS db_fix_so db_src_install_doc db_src_install_usrbinslot db_src_install_headerslot db_src_install_usrlibcleanup
+
+clean_links () {
+	# Clean out the symlinks so that they will not be recorded in the
+	# contents (bug #60732)
+	
+	if [ "${D}" = "" ]; then
+		die "Calling clean_links while \$D not defined"
+	fi
+
+	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so' -exec rm \{} \;
+	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*so.[23]' -exec rm \{} \;
+	find ${D}/usr/lib -maxdepth 1 -type l -name 'libdb[1._-]*a' -exec rm \{} \;
+	
+	rm ${D}/usr/include/db.h ${D}/usr/include/db_185.h
+}
 
 db_fix_so () {
 	cd ${ROOT}/usr/lib
