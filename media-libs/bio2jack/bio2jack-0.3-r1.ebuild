@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.3-r1.ebuild,v 1.10 2005/01/30 01:38:24 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/bio2jack-0.3-r1.ebuild,v 1.11 2005/01/30 23:50:55 mr_bones_ Exp $
 
 IUSE="static"
 
@@ -28,7 +28,7 @@ src_unpack() {
 	aclocal || die
 	automake || die
 	autoconf || die
-    libtoolize --copy --force ||die
+	libtoolize --copy --force ||die
 	elibtoolize || die
 }
 
