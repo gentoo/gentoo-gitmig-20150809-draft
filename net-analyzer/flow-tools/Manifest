@@ -1,6 +1,9 @@
-MD5 fa826cc1365c82517b6af0bb85ab2dcc flow-tools-0.67.ebuild 2066
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6185e7ec8d5fdcfe9ae3e734ac2c9895 flow-tools-0.67.ebuild 2066
 MD5 f59e2f2024f65a2a4f7eed1e324b373d flow-tools-0.66.ebuild 915
-MD5 36d69f4239dc9db276adc24463cc36c8 ChangeLog 1796
+MD5 7b149ef6a2eecfa993d8fcc573d3b7de ChangeLog 1796
 MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
 MD5 4274d0fb58b88876a5767ab9d1c6204c files/digest-flow-tools-0.66 67
 MD5 1101576a17a0a70941408d279474aa97 files/digest-flow-tools-0.67 67
@@ -9,3 +12,10 @@ MD5 3164389b3ab0f7170727e6ea6b419256 files/flow-tools-0.67-fix-configure.diff 35
 MD5 16e9d55df0b78a82c236db3bcad399a5 files/flow-tools-0.67-fix-a-zillion-warnings.diff 18805
 MD5 f16f4ba51648f2b7f0e3830bc7670f6e files/flow-tools-0.67-nodebug.patch 933
 MD5 eddbfc9694d3f0b00a46f84a0e58a651 files/flow-tools-0.67-memleak.patch 465
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHx/REZCkKN40op4RArOCAJwPkvDSix65xNUzdkoNrR5PJ7JW1QCffzFh
+tBxR+7VopzTuGg5dWgbtATQ=
+=vwUx
+-----END PGP SIGNATURE-----

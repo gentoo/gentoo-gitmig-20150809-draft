@@ -1,7 +1,10 @@
-MD5 b823b04b889c8726cd8c7ba8fe97840d etherape-0.9.1.ebuild 1209
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79a7e88f39635b6ed410b9b8a569d9e2 etherape-0.9.1.ebuild 1211
 MD5 86ed7cbef93ac3ea73732261ecd79ca9 etherape-0.8.2-r1.ebuild 1168
 MD5 8f52841a5c961e7167b5f3428490b69f etherape-0.9.0.ebuild 1258
-MD5 a337c4cc1bf0a1e51502323437052636 ChangeLog 2509
+MD5 649aad0f3319c3ff60846177cc13f9ee ChangeLog 2511
 MD5 d8307d213e01909e87c072d2b3e9450c metadata.xml 254
 MD5 0015559610bab6a40691241598863f72 files/etherape-0.9.0-libpcap-include.patch 399
 MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.1-res_mkquery.patch 466
@@ -10,3 +13,10 @@ MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.0-res_mkquery.patch 466
 MD5 4ec4396b2bd551ad7dc1ddc3ca92a8e1 files/digest-etherape-0.9.0 66
 MD5 4fd767ede3dba0573f180002530b3018 files/digest-etherape-0.9.1 66
 MD5 fa35a411bca4af227afb869da4781b0c files/digest-etherape-0.8.2-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHx9SEZCkKN40op4RAi5gAJ464nD02a23NG/sPq+jpjfyvJf5vgCfQ8TN
+vjAvOWzKKO+GiAzMvUUMcb0=
+=HLL3
+-----END PGP SIGNATURE-----
