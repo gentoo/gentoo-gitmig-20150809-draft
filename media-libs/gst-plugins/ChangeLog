@@ -1,0 +1,16 @@
+# ChangeLog for media-libs/gstreamer-plugins
+
+* gst-plugins-0.3.4 (26 Apr 2002)
+  26 apr 2002; Spider <spider@gentoo.org> gst-plugins-0.3.4.ebuild :
+  update configure
+  version
+  libtoolize
+
+  beware of breakage with avifile 0.7 
+
+
+* gst-plugins-0.3.3-r1 (28 Mar 2002)
+  
+  28 Mar 2002; A. Baguinski <artm@v2.nl> gst-plugins-0.3.3-r1.ebuild ChangeLog
+
+  Just started
