@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.2 2003/02/24 21:49:02 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.3 2003/02/24 21:53:03 rphillips Exp $
 
 inherit flag-o-matic 
 
@@ -246,7 +246,9 @@ src_install() {
 	mkdir ${D}/usr/lib/php/build
 	insinto /usr/lib/php/build
 	doins build/* pear/pear.m4 acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
-	
+
+	#fix 15976
+	chmod 755 ${D}/usr/bin/php/pear
 
     #revert Pear patch
     rm ${D}/usr/lib/php/PEAR/Registry.php
