@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.10 2002/04/10 02:49:59 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.11 2002/04/11 16:57:47 seemant Exp $
+
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> 
+  files/digest-postfix-1.1.7-r1 :
+
+  digest contains the md5 sums for the postfix tarball and the alternate
+  tarball.
 
 *postfix-1.1.7-r1 (8 Apr 2002)
 
