@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.26 2004/10/07 07:12:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.27 2004/11/03 06:36:12 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> libmcrypt-2.5.7.ebuild:
+  added to ~mips for testing
 
   07 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> libmcrypt-2.5.7.ebuild:
   Added to ~ppc-macos; bug #63593.
@@ -97,7 +100,7 @@
 
   5 May 2002: Martin Schlemmer <azarah@gentoo.org> libmcrypt-2.4.19-r1.ebuild :
 
-  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.26 2004/10/07 07:12:09 usata Exp $.
+  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.27 2004/11/03 06:36:12 psi29a Exp $.
 
 *libmcrypt-2.4.19 (1 Feb 2002)
 
