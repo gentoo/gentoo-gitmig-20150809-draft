@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/cache-mmap-0.081.ebuild,v 1.3 2004/06/25 00:09:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/cache-mmap-0.081.ebuild,v 1.4 2004/07/14 16:44:18 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://search.cpan.org/author/PMH/${MY_P}"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Test-Simple

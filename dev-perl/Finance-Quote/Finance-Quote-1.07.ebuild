@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.07.ebuild,v 1.9 2004/06/25 00:30:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.07.ebuild,v 1.10 2004/07/14 17:36:27 agriffis Exp $
 
 inherit perl-module
 
@@ -14,6 +14,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/Finance/${MY_P}.tar.gz"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc"
+IUSE=""
 
 DEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-TableExtract"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.97.ebuild,v 1.7 2004/06/25 00:10:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-2.97.ebuild,v 1.8 2004/07/14 16:47:11 agriffis Exp $
 
 inherit perl-module
 
@@ -13,5 +13,6 @@ HOMEPAGE="http://search.cpan.org/author/L/LD/LDS/CGI.pm-${PV}/"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha mips"
+IUSE=""
 
 DEPEND="|| ( >=dev-perl/File-Spec-0.82 >=dev-lang/perl-5.8.0-r12 )"

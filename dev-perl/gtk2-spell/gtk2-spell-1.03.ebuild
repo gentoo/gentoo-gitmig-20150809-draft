@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.2 2004/06/25 00:34:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.3 2004/07/14 17:45:10 agriffis Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://gtk2-perl.sf.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~hppa"
+IUSE=""
 
 DEPEND="${DEPEND}
 	>=x11-libs/gtk+-2*

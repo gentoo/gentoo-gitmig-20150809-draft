@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/Data-Compare-0.11.ebuild,v 1.3 2004/06/25 00:20:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/Data-Compare-0.11.ebuild,v 1.4 2004/07/14 17:11:14 agriffis Exp $
 
 inherit perl-module
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.cpan.org/authors/id/D/DC/DCANTRELL/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/File-Find-Rule

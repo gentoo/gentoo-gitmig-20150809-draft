@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.92.ebuild,v 1.3 2004/06/25 00:19:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.92.ebuild,v 1.4 2004/07/14 17:10:32 agriffis Exp $
 
 inherit perl-module
 
@@ -10,6 +10,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/M/MA/MARCUS/${P}.tar.gz"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND="dev-perl/Curses
 	dev-perl/Test-Pod
