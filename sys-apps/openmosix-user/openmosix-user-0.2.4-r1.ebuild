@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r1.ebuild,v 1.2 2002/09/23 17:22:57 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.4-r1.ebuild,v 1.3 2002/09/28 17:02:25 tantive Exp $
 
 S=${WORKDIR}/openMosixUserland-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}
 	sys-devel/perl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
 
 pkg_setup() {
