@@ -1,6 +1,9 @@
 # ChangeLog for games-board/mah-jong
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.1 2003/11/05 10:04:50 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.2 2004/03/18 09:39:08 mr_bones_ Exp $
+
+  18 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mah-jong-1.6.ebuild:
+  mark amd64 for bug #44639
 
 *mah-jong-1.6 (05 Nov 2003)
 
