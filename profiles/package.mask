@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# taviso@gentoo.org (30 Jul 03)
+# Unstable version, available for those
+# who need it.
+=x11-wm/fvwm-2.5.7
+
 # <strider@gentoo.org> (29 Jul 2003)
 # Alpha Ebuild, it breaks dev-java/ant
 # Also its not working very well
