@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.2 2004/04/27 08:30:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1.ebuild,v 1.3 2004/04/27 08:51:17 eradicator Exp $
 
 inherit rpm
 
@@ -181,4 +181,9 @@ pkg_postinstall() {
 	einfo "Two init scripts have been installed:"
 	einfo "maya-docs is for the document server (help system)."
 	einfo "aw_flexlm is for the license server"
+	einfo
+
+	# http://www.highend2d.com/boards/showthreaded.php?Cat=&Board=linuxforum&Number=174726&page=&view=&sb=&o=
+	ewarn "You should disable klipper, xfce4-clipman, and any other clipboard"
+	ewarn "utilities as they have been shown to cause maya to crash."
 }
