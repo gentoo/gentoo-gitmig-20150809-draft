@@ -1,6 +1,8 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.1 2002/04/24 21:57:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.2 2002/05/22 04:46:26 azarah Exp $
+
+*openoffice-1.0.0 (21 May 2002)
 
 *openoffice-641d (24 Apr 2002)
 
