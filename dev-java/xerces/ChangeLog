@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.43 2005/03/21 23:38:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.44 2005/03/23 18:16:42 luckyduck Exp $
+
+  23 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> xerces-2.3.0-r1.ebuild:
+  added missing xjavac dependency, thanks to gustavoz
 
   22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> xerces-2.6.2-r2.ebuild:
   added a patch that enables generation of the complete api documentation. issue
