@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wmdiscotux/xmms-wmdiscotux-1.3.ebuild,v 1.1 2003/09/17 02:35:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wmdiscotux/xmms-wmdiscotux-1.3.ebuild,v 1.2 2004/02/22 22:26:39 agriffis Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://fragment.stc.cx/files/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips "
 
 DEPEND="media-sound/xmms"
 
