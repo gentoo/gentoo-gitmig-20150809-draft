@@ -1,0 +1,46 @@
+#!/bin/sh
+
+spec=$1
+
+
+name=`echo $1 | sed "s/\([^/]*\)\///"`
+category=`echo $1 | sed "s/\/.*//"`
+
+if [ "$category" == "$name" ] ; then
+	category=
+fi
+
+function tryfile() {
+	local foo
+	foo=/var/db/pkg/$1/CONTENTS
+	bar=`ls $foo 2> /dev/null`
+	for i in $bar ; do
+		if [ -f "$i" ] ; then
+			echo $i
+			break
+		fi
+	done
+}
+
+file=`tryfile "${category}/${name}"`
+if [ -z $file ] ; then
+ file=`tryfile "${category}/${name}*"`
+ if [ -z $file ] ; then
+  file=`tryfile "${category}*/${name}"`
+  if [ -z $file ] ; then
+   file=`tryfile "${category}*/${name}*"`
+   if [ -z $file ] ; then
+    echo "!!! Package resembling ${category}/${name} not found"
+    exit 1
+   fi
+  fi
+ fi
+fi
+
+pkgname=`echo $file | sed -e "s:\/var\/db\/pkg\/::" -e "s:\/CONTENTS::"`
+
+files=`cat $file|grep "obj"|awk '{ print $2 }'`
+size=`(du -scb $files | tail -n 1 | awk '{ print $1 }') 2> /dev/null`
+
+echo "$pkgname $size ($[size/1024]KB)"
+

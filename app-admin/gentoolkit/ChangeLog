@@ -1,7 +1,16 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.10 2002/03/23 00:09:07 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.11 2002/04/10 19:27:29 karltk Exp $
 
+
+*gentoolkit-0.1.7 (10 Apr 2002)
+
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.7.ebuild files/scripts/pkg-size:
+
+  pkg-size: Added this script, which will tell the size of an installed 
+  package.
+
+  Removed old version.
 
 *gentoolkit-0.1.6 (22 Mar 2002)
 
