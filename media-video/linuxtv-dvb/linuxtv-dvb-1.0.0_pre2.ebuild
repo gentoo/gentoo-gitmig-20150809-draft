@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.5 2003/03/19 18:28:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.6 2003/03/22 18:25:16 mholzer Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -17,6 +17,7 @@ pkg_setup() {
 	einfo ""
 	einfo "Please make sure that the following option is enabled"
 	einfo "in your current kernel 'Multimedia devices'"
+	einfo "and /usr/src/linux point's to your current kernel"
 	einfo ""
 }
 
@@ -45,6 +46,7 @@ src_install() {
 
     # install szap
     dobin ${S}/apps/szap/[tsc]zap
+	dodoc ${S}/apps/szap/channels.conf-dvb*
 
     # 'install' test
     dodir /usr/share/doc/${P}/test
@@ -62,10 +64,11 @@ src_install() {
 
 
     # install docs
-    dodoc ${S}/doc/*
+    dodoc ${S}/doc/* 
     dodoc ${S}/driver/makedev.napi
-
-    # api docs still missing at the moment
+	dodir /usr/share/doc/${P}/dvbapi
+	insinto /usr/share/doc/${P}/dvbapi
+	doins ${S}/doc/dvbapi/*
 
     # install av7110_loadkeys docs
     dodir /usr/share/doc/${P}/av7110_loadkeys
@@ -87,6 +90,9 @@ src_install() {
     dodir /usr/share/doc/${P}/test
     insinto /usr/share/doc/${P}/test
     doins ${S}/apps/test/README
+	
+	cd ${S}
+	dodoc CONTRIBUTORS COPYING INSTALL README NEWS BUGS
 
 }
 
@@ -95,6 +101,14 @@ pkg_postinst() {
 	einfo ""
     einfo "If you don't use devfs, execute makedev.napi o create"
     einfo "the device nodes. The file is in /usr/share/doc/${PV}/"
+	einfo ""
+ 	einfo "now copy an appropriate from"
+	einfo "/usr/share/doc/${P}/channels.conf-XXX"
+	einfo "channel list for DVB-S/C/T"
+    einfo "		to ~/.szap/channels.conf"
+	einfo "		~/.czap/channels.conf"
+	einfo "		~/.tzap/channels.conf"
+	einfo "and then call szap for DVB-S, czap for DVB-C or tzap for DVB-T"
 	einfo ""
 }
 
