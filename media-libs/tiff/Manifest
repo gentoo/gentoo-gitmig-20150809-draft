@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f925228c821db1baed11c44493c746d0 tiff-3.6.1-r2.ebuild 2196
-MD5 e6bd4544253dff189dbae9e4db6c44e3 ChangeLog 4375
+MD5 bb0e56b9e5cb10f702c44f30a7a178ca ChangeLog 4459
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 8600f570fbfac18aae5a1d4186d280f4 tiff-3.6.1-r2.ebuild 2195
 MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site 488
 MD5 46287dce0914479f229a719830ab3fb3 files/digest-tiff-3.6.1-r2 378
 MD5 dca7d9db2819ce30468b1a44b7575aaa files/tiff-3.6.1-r1-man.so.patch 364
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBbaAs94CCfB4KcwwRAgcRAKCvrT1XBrKtc31k2yVtCWI96qRPAwCdH3+r
-JKvQEg1ckg+pf4mBbaGG70g=
-=kdSr
------END PGP SIGNATURE-----
