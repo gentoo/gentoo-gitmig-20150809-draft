@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.2.2.ebuild,v 1.1 2003/05/27 15:24:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.2.2.ebuild,v 1.2 2003/07/19 23:55:04 tester Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
@@ -10,7 +10,7 @@ DESCRIPTION="A set of gnome2 themes, with sets for users with limited or low vis
 HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-themes"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2

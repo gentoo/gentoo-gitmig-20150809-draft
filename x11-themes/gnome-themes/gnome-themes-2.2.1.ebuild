@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.2.1.ebuild,v 1.7 2003/07/02 18:03:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.2.1.ebuild,v 1.8 2003/07/19 23:55:04 tester Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A set of gnome2 themes, with sets for users with limited or low vis
 HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-themes"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa"
+KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2
