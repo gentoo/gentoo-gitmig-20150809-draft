@@ -1,6 +1,16 @@
-MD5 ff8b12fbc94243a5a01373c9a5a17069 ChangeLog 1057
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58fbc451d93e4bf5f22c78ada9276140 ChangeLog 1161
 MD5 b7905576bc61e3a51439debd203179e7 par2cmdline-0.3.ebuild 812
-MD5 76c0d163a4298536a11329c51baa87eb par2cmdline-0.4.ebuild 830
+MD5 48e478cd77cbe8f118db6eb8ebf0a8ec par2cmdline-0.4.ebuild 625
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 1aa64b174e55455b11c0e6492107ba10 files/digest-par2cmdline-0.3 67
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm4T8HTu7gpaalycRAgg7AKCw6jGC+UQ6eQDglfeME/8LGU5NRACfW6g8
+hpmbiSRZsNBgvrREnS7lLVY=
+=YRXn
+-----END PGP SIGNATURE-----
