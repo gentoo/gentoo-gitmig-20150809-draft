@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.13 2004/07/23 10:44:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5-r1.ebuild,v 1.14 2004/08/01 19:18:28 solar Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -24,6 +24,8 @@ src_unpack() {
 	cd ${S}
 	# add autohint patch from http://www.kde.gr.jp/~akito/patch/freetype2/2.1.5/
 	use cjk && epatch ${FILESDIR}/${SPV}/${P}-autohint-cjkfonts-20031105.patch
+
+	gnuconfig_update ${S}
 }
 
 src_compile() {

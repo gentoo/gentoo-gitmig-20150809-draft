@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.1 2004/07/20 00:31:05 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.2 2004/08/01 19:18:28 solar Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 SPV="`echo ${PV} | cut -d. -f1,2`"
 
@@ -29,6 +29,7 @@ src_unpack() {
 	# FIXME : patch hasn't been updated yet
 	# use cjk && epatch ${FILESDIR}/${SPV}/${P}-autohint-cjkfonts-20031130.patch
 
+	gnuconfig_update ${S}
 }
 
 src_compile() {
