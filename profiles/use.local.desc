@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1002 2005/03/11 01:05:49 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1003 2005/03/11 01:33:20 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -196,9 +196,9 @@ dev-lisp/gcl:ansi - build a GCL with ANSI support (else build a traditional CLtL
 dev-lisp/gcl:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl:gprof - build a GCL with profiling support
+dev-lisp/sbcl:callbacks - include support for a 3rd party patch to enable callbacks into Lisp
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
-dev-lisp/sbcl:callbacks - include support for a 3rd party patch to enable callbacks into Lisp
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
@@ -238,8 +238,8 @@ games-fps/alephone:lua - Enable Lua scripting support
 games-fps/doom3:cdinstall - Copies files from the CDROM rather than leaving it for the user
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
-games-fps/quake2-icculus:rogue - Build support for the 'The Reckoning' Mission Pack (xatrix)
-games-fps/quake2-icculus:xatrix - Build support for the 'Ground Zero' Mission Pack (rogue)
+games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
+games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-kids/gcompris:editor - Build the optional editor program.
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
@@ -264,8 +264,8 @@ games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/xqf:bzip2 - use bzip2 for data compression
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
-gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
+gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly for PDF previewing) (soon obsolecsed by 'pdfkit')
@@ -311,14 +311,14 @@ mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
-mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
-mail-filter/dspam:neural - Build neural support for dspam
-mail-filter/dspam:sqlite - Build sqlite 2 support
-mail-filter/dspam:sqlite3 - Build sqlite 2 support
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
 mail-filter/dspam:exim - Build with delivery options for exim
+mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
+mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
+mail-filter/dspam:sqlite - Build sqlite 2 support
+mail-filter/dspam:sqlite3 - Build sqlite 2 support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-mta/courier:fax - Enables fax support in the courier mail server
@@ -389,9 +389,9 @@ media-sound/gnusound:libsamplerate - Build gnusound with support for converting 
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
-media-sound/mpd:droproot - Run the daemon as non-root by default.
 media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
+media-sound/mpd:droproot - Run the daemon as non-root by default.
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rezound:soundtouch - compile with support for soundtouch
