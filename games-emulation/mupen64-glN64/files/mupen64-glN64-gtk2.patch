@@ -1,0 +1,16 @@
+--- glN64-0.4.1-rc2/Makefile.old	2005-01-07 12:21:52.532224798 -0800
++++ glN64-0.4.1-rc2/Makefile	2005-01-07 12:26:18.302433792 -0800
+@@ -1,11 +1,11 @@
+ DEFINES	=	-D__LINUX__ -DX86_ASM
+ CXX	=	g++
+-CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` `glib-config --cflags`
++CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `pkg-config --cflags gtk+-2.0 glib-2.0` -D_GTK2
+ #CXXFLAGS =	-I. $(DEFINES) `sdl-config --cflags` `gtk-config --cflags gtk gthread` \
+ #		 `glib-config --cflags` -g3 #-DDEBUG
+ LD	=	g++
+ LDFLAGS	=	-shared -Wl,-Bsymbolic
+-LIBS	=	`sdl-config --libs` `gtk-config --libs gtk gthread` `glib-config --libs` -lGL -lGLU
++LIBS	=	`sdl-config --libs` `pkg-config --libs gtk+-2.0 glib-2.0 gthread-2.0` -lGL -lGLU
+ TARGET	=	glN64-0.4.1.so
+ OBJECTS	=	2xSAI.o \
+ 		CRC.o \

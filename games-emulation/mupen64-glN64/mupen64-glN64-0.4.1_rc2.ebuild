@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2.ebuild,v 1.1 2005/01/06 04:29:40 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2.ebuild,v 1.2 2005/01/07 21:11:13 morfic Exp $
 
 inherit games
 
@@ -19,10 +19,10 @@ RDEPEND="media-libs/libsdl"
 
 src_compile () {
 	epatch ${FILESDIR}/${PN}-compile.patch || die "patch failed"
-
+	epatch ${FILESDIR}/${PN}-gtk2.patch
 	if use x86; then
 		if use asm; then
-			einfo "using x86 asm where aviable"
+			einfo "using x86 asm where available"
 		else
 			epatch ${FILESDIR}/${PN}-noasm.patch
 		fi
