@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r13.ebuild,v 1.1 2005/01/15 03:35:27 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r13.ebuild,v 1.2 2005/01/16 07:23:50 carpaski Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -14,9 +14,9 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="http://zarquon.twobit.net/gentoo/portage/${PF}.tar.bz2 http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 RESTRICT="nosandbox sandbox multilib-pkg-force"
 
-# Contact carpaski with a reason before you modify any of these.
-KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
-#KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
+# Contact carpaski with a reason before you modify any of these please.
+#KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
+KEYWORDS="  ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
