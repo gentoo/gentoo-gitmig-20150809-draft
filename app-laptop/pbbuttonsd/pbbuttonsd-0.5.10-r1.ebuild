@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.5.10-r1.ebuild,v 1.1 2004/04/21 11:52:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.5.10-r1.ebuild,v 1.2 2004/04/21 21:29:09 mr_bones_ Exp $
 
 inherit eutils
+
 DESCRIPTION="program to map special Powerbook/iBook keys in Linux"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
 SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
@@ -17,7 +18,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-    epatch ${FILESDIR}/${P}-compat.patch
+	epatch ${FILESDIR}/${P}-compat.patch
 }
 
 src_compile() {
