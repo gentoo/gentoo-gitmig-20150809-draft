@@ -3,7 +3,7 @@ MD5 01f7a8fd07110a4efa67aad2eb752185 basc-1.3.9-r1.ebuild 1863
 MD5 dcb8dc246c5de4b71523851e3328623c basc-1.3.9.ebuild 1860
 MD5 f771ec5e8f277ad4d47d4339d412ba85 metadata.xml 257
 MD5 ef0b96bcea6556e638594fd33069d98a basc-1.4.0.ebuild 1937
-MD5 ca32077c34b2dc8b332e79db5ca62f30 basc-1.5.0.ebuild 1970
+MD5 0288131fe2de9aa726190fe164388bea basc-1.5.0.ebuild 1988
 MD5 e2d5a46d807b9a6fc2aba48df22d2971 files/digest-basc-1.3.9 61
 MD5 e2d5a46d807b9a6fc2aba48df22d2971 files/digest-basc-1.3.9-r1 61
 MD5 9caadc0bb597176ab249c93650452438 files/digest-basc-1.4.0 61
