@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/kwest
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kwest/ChangeLog,v 1.1 2002/12/17 18:35:37 danarmak Exp $
+
+*kwest-1.0 (17 Dec 2002)
+
+  17 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  A kde3 frontend to Z-machine emulation. This is a port of the Unix
+  Frotz. Close bug #3514; submission by Peter Bienstman.
