@@ -1,7 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.52 2003/02/12 05:49:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.53 2003/02/28 21:10:19 nakano Exp $
 
+*postgresql-7.3.2 (01 Mar 2003)
+   01 Mar 2003: Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.2.ebuild:
+
+  version bump. masked for test.
+
+*postgresql-7.3.1 (31 Dec 2002)
   03 Feb 2003: Will Woods <wwoods@gentoo.org> postgresql-7.3.1.ebuild:
   added ~alpha keyword
 
@@ -9,8 +15,6 @@
   postgresql-7.3.ebuild: 
 
   Added sparc64 keyword - installs and runs just fine
-
-*postgresql-7.3.1 (31 Dec 2002)
 
   07 Feb 2003; Ryan Phillips <rphillisp@gentoo.org> postgresql-7.3.1.ebuild :
   Added egenix-mx-base dep for python support
