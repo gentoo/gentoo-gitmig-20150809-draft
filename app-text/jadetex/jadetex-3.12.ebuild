@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.22 2004/06/24 22:41:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.23 2004/07/01 14:09:19 tgall Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ DESCRIPTION="TeX macros used by Jade TeX output."
 HOMEPAGE="http://jadetex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jadetex/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ppc64"
 SLOT="0"
 LICENSE="freedist"
 
