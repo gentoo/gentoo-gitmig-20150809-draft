@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317-r1.ebuild,v 1.1 2004/03/24 00:23:08 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317-r1.ebuild,v 1.2 2004/03/24 00:24:10 avenj Exp $
 
 inherit flag-o-matic
 
@@ -13,6 +13,7 @@ SRC_URI="ftp://flux.cs.utah.edu/flux/oskit/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
+
 KEYWORDS="-* ~x86"
 DEPEND="doc? ( app-text/tetex )"
 IUSE="debug oskit-profiling oskit-noassert doc oskit-nobuild oskit-noconf"
