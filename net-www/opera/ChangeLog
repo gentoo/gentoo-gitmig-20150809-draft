@@ -1,8 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.14 2002/12/13 11:00:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.15 2003/01/03 00:38:50 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*opera-6.11-r1 (02 Jan 2003)
+  02 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Improved installation of KDE and Gnome icons.
+  Marked stable on x86.
  
 *opera-6.11 (5 Dec 2002)
   05 Dec 2002; Arcady Genkin <agenkin@gentoo.org> opera-6.11.ebuild :
