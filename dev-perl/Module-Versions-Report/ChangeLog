@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Versions-Report
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.1 2004/08/25 11:51:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.2 2004/08/29 00:15:49 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org>
+  Module-Versions-Report-1.02.ebuild:
+  Added missing IUSE.
 
 *Module-Versions-Report-1.02 (25 Aug 2004)
 

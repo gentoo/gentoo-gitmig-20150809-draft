@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Quoted
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.1 2004/08/25 12:10:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.2 2004/08/29 00:17:05 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> Text-Quoted-1.7.ebuild:
+  Added missing IUSE.
 
 *Text-Quoted-1.7 (25 Aug 2004)
 

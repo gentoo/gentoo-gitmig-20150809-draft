@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.1 2004/08/25 11:08:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.2 2004/08/29 00:12:27 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> Font-AFM-1.19.ebuild:
+  Added missing IUSE.
 
 *Font-AFM-1.19 (25 Aug 2004)
 

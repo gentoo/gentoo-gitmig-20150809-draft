@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Pcalc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.1 2004/08/26 10:02:28 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.2 2004/08/29 00:10:10 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> Date-Pcalc-1.2.ebuild:
+  Added missing IUSE.
 
 *Date-Pcalc-1.2 (26 Aug 2004)
 

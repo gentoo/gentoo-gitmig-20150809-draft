@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tree-Simple
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.1 2004/08/25 11:57:14 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.2 2004/08/29 00:18:15 rl03 Exp $
+
+  28 Aug 2004; Renat Lumpau <rl03@gentoo.org> Tree-Simple-1.05.ebuild:
+  Added missing IUSE.
 
 *Tree-Simple-1.05 (25 Aug 2004)
 
