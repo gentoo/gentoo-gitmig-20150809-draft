@@ -1,1 +1,2 @@
 CATALINA_HOME=/opt/jakarta/tomcat
+CONFIG_PROTECT=/opt/jakarta/tomcat/conf

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.7 2002/09/25 11:36:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.8 2002/09/26 19:40:51 blizzy Exp $
+
+  26 Sep 2002; Maik Schreiber <blizzy@gentoo.org> files/21tomcat:
+  Added CONFIG_PROTECT=/opt/jakarta/tomcat/conf so that configuration
+  files don't get lost when installing a new version.
 
 *tomcat-4.0.5 (25 Sep 2002)
 
