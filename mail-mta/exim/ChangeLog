@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.22 2005/01/10 17:14:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.23 2005/01/10 20:05:39 slarti Exp $
+
+  10 Jan 2005; Tom Martin <slarti@gentoo.org> exim-4.43-r2.ebuild:
+  Stable on amd64 for security bug 76893.
 
 *exim-4.43-r2 (10 Jan 2005)
 
