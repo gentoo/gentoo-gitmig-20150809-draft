@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 3c23679ee7e8e61f3212d4970c4954a4 ChangeLog 6805
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 28139d63538752f73c7bbaeddee844d7 attr-2.4.16.ebuild 1739
-MD5 9ef3cb6a863a0e595eceab112dfc9cf3 attr-2.4.19.ebuild 1542
+MD5 7a4c43f33a12eb8fb2b9d87b30e3bcd0 attr-2.4.19.ebuild 1476
 MD5 8c0ffc8078bf36ce6eb5c698e9df7e0f files/attr-no-man2pages.patch 398
 MD5 0ff138637c62baa5d93673c7ea95c977 files/digest-attr-2.4.16 67
 MD5 9884f12ef497050faff6f6418acae8e2 files/digest-attr-2.4.19 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB1GdMroRuSHgZdywRAsqXAJ479U9H68do4tAF/K4uJOPYotxa3QCgjbCJ
-J68e9cIZ2r9op5pbdI/INwo=
-=PTLm
+iD8DBQFB1GZtroRuSHgZdywRArBbAJ0atneGS225/jwgXsdLU8ZaLnBC7wCfVWNL
+11IH9CA9IJZoSPuhdb9LleU=
+=O36l
 -----END PGP SIGNATURE-----
