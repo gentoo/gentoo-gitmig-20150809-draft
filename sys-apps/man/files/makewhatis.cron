@@ -3,4 +3,4 @@
 # it updates the searchly database
 # for manpages
 
-/usr/sbin/makewhatis
+/bin/nice /usr/sbin/makewhatis
