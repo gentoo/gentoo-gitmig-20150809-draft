@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.38 2004/04/16 20:28:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.39 2004/04/20 15:53:48 eradicator Exp $
+
+*rhythmbox-0.8.0-r1 (20 Apr 2004)
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rhythmbox-0.8.0-r1.ebuild, rhythmbox-0.8.0.ebuild:
+  Fixed DEPs. Other ebuild cleanup per foser's request. Bump due to
+  gst-plugins-ogg DEP being added.
 
 *rhythmbox-0.8.0 (16 Apr 2004)
 

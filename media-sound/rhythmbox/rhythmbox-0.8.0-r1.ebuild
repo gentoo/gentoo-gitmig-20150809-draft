@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.0-r1.ebuild,v 1.1 2004/04/20 15:53:48 eradicator Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -8,19 +8,21 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="oggvorbis xine flac faad mad pda"
 SLOT="0"
 
-RDEPEND=">=x11-libs/gtk+-2.2.2
+RDEPEND=">=x11-libs/gtk+-2.2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libbonobo-2
 	!xine? ( >=media-libs/gst-plugins-0.8.0
 		 >=media-plugins/gst-plugins-gnomevfs-0.8.0
-		 oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.0 )
-		 mp3? ( >=media-plugins/gst-plugins-mad-0.8.0 ) )
+		 oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.0
+		              >=media-plugins/gst-plugins-ogg-0.8.0 )
+		 mad? ( >=media-plugins/gst-plugins-mad-0.8.0 )
+		 flac? ( >=gst-plugins-flac-0.8.0 ) )
 	xine? ( faad? ( >=media-libs/faad2-2.0_rc3 )
 		flac? ( >=media-libs/flac-1
 			>=media-libs/libid3tag-0.15.0b )
@@ -51,8 +53,10 @@ G2CONF="${G2CONF} \
 	$(use_enable pda ipod) \
 	--enable-mmkeys \
 	--enable-audiocd \
-	--enable-dashboard \
 	--disable-schemas-install"
+
+#	Disabled per foser's request
+#	--enable-dashboard \
 
 DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 	  MAINTAINERS NEWS README README.iPod THANKS TODO"
@@ -68,12 +72,7 @@ src_unpack( ) {
 }
 
 src_compile() {
-	filter-flags "-ffast-math"
+	# Removed by default per foser's request.  If you have problems, try removing -ffast-math
+	# filter-flags "-ffast-math"
 	gnome2_src_compile
 }
-
-src_install() {
-	gnome2_src_install
-	cd ${D}/usr/share/rhythmbox
-}
-
