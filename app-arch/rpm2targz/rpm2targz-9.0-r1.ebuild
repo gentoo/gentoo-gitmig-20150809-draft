@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r1.ebuild,v 1.9 2003/09/18 16:38:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r1.ebuild,v 1.10 2003/09/30 17:49:04 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ia64 x86 sparc ppc alpha hppa amd64"
+KEYWORDS="ia64 x86 sparc ppc alpha hppa amd64 ~mips"
 
 # NOTE: rpm2targz autodetects rpm2cpio at runtime, and uses it if available,
 #       so we don't explicitly set it as a dependency.
