@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.7 2004/06/25 00:27:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.8 2004/07/20 06:37:04 eradicator Exp $
+
+  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> trommler-3.3.ebuild:
+  Added to ~amd64
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> trommler-3.3.ebuild:
   Added IUSE.
