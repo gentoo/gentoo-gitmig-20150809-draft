@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.142 2004/10/08 21:55:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.143 2004/10/13 08:55:30 eradicator Exp $
+
+*xmms-1.2.10-r8 (13 Oct 2004)
+
+  13 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-1.2.10-r8.ebuild:
+  Updated to latest cvs upstream and dropped many gentoo patches that were
+  incorporated upstream from the patchset and recreated others to apply
+  against the new version. This release is currently missing cjk support, and
+  will be in package.mask atleast until cjk support is readded. Simplified
+  patching to use the epatch directory support. Added README.patches to
+  replace comments in ebuild.
 
 *xmms-1.2.10-r7 (08 Oct 2004)
 
