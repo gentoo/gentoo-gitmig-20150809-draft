@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.2 2002/08/26 20:15:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.3 2002/08/27 01:06:19 woodchip Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -206,14 +206,18 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	einfo "to have your apache.conf auto-updated for use with this module."
-	einfo "You should then edit your /etc/conf.d/apache file to suit."
+	einfo "To have Apache run php programs, please do the following:"
+	einfo "1. Execute the command:"
+	einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
+	einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
+	einfo
+	einfo "That will add the php mime types in your apache.conf file"
+	einfo "automagically and setup Apache to load php when it starts."
 	einfo
 	einfo "Please remeber:"
 	einfo "This install of PHP has set register_globals = On (lower security)"
-	einfo "Please read http://www.php.net/release_4_1_2.php (Section: External variables)"
-	einfo "for further informations."
+	einfo "Please read http://www.php.net/release_4_1_2.php"
+	einfo "(Section: External variables) for further information."
 	einfo
 }
 
@@ -224,4 +228,3 @@ pkg_config() {
 		before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf
 	:;
 }
-
