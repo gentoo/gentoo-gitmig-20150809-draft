@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.78 2004/06/03 23:06:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.79 2004/06/19 16:10:12 usata Exp $
+
+*libgtkhtml-3.0.10-r1 (20 Jun 2004)
+
+  20 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> libgtkhtml-3.0.10-r1.ebuild,
+  files/libgtkhtml-fix_preedit.patch:
+  Applied preedit patch to fix GTK+ immodules. Thanks to Atsushi Kobayashi
+  <loudear@iswebnet.com> for the ebuild, closing bug #54244
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> libgtkhtml-2.6.0.ebuild:
   Stable on mips.
