@@ -1,0 +1,20 @@
+--- karm/loging.cpp	Sat Aug 24 09:11:59 2002
++++ karm/loging.cpp	Sat Aug 24 08:53:30 2002
+@@ -58,7 +58,7 @@
+ 			} else if( type == LOG_NEW_SESSION_TIME) {
+ 				out << "<new_session_time ";
+ 			} else {
+-				cerr << "Programming error!";
++				std::cerr << "Programming error!";
+ 			}
+ 
+ 			out << "task=\"" << constructTaskName(task) << "\" "
+@@ -72,7 +72,7 @@
+ 
+ 			f.close();
+ 		} else {
+-			cerr << "Couldn't write to time-log file";
++			std::cerr << "Couldn't write to time-log file";
+ 		}
+ 	}
+ }
