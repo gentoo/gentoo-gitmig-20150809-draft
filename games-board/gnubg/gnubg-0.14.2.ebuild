@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.2 2004/06/24 22:17:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.3 2004/07/03 09:34:47 mr_bones_ Exp $
 
-inherit games
+inherit gnuconfig games
 
 WPV="0.14"
 DESCRIPTION="GNU BackGammon"
@@ -15,10 +15,11 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="gtk gtk2 readline guile X gdbm truetype nls png esd arts nas"
+IUSE="gtk gtk2 readline python guile X gdbm truetype nls png esd arts nas"
 
 # FIXME does this need to DEPEND on netpbm?
 RDEPEND="guile? ( dev-util/guile )
+	python? ( dev-lang/python )
 	truetype? ( =media-libs/freetype-1* )
 	gtk? (
 		gtk2? (
@@ -51,10 +52,11 @@ src_unpack() {
 			-e "s:-laudio:-L/usr/X11R6/lib/ -laudio:" configure.in || \
 				die "sed configure.in failed"
 	fi
+	gnuconfig_update
 }
 
 src_compile() {
-	local myconf=""
+	local myconf=
 	if use gtk ; then
 		# doesn't make any sense to add this without gtk or gtk2
 		if has_version x11-libs/gtk+extra ; then
@@ -78,16 +80,19 @@ src_compile() {
 	fi
 
 	# configure script doesn't handle this option correctly.
-	#	`use_with guile` \
+	#       `use_with guile` \
 	egamesconf \
-		`use_enable esd` \
-		`use_enable arts artsc` \
-		`use_enable nas` \
-		`use_with readline` \
-		`use_with X x` \
-		`use_with gdbm` \
-		`use_with truetype freetype` \
-		`use_enable nls` \
+		--disable-dependency-tracking \
+		--with-board3d \
+		$(use_with python) \
+		$(use_enable esd) \
+		$(use_enable arts artsc) \
+		$(use_enable nas) \
+		$(use_with readline) \
+		$(use_with X x) \
+		$(use_with gdbm) \
+		$(use_with truetype freetype) \
+		$(use_enable nls) \
 		${myconf} \
 		|| die
 	emake || die "emake failed"
