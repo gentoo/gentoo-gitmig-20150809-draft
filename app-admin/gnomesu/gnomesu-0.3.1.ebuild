@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.1 2003/06/08 19:43:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.2 2003/07/09 17:21:29 liquidx Exp $
 
 inherit gnome2
 
@@ -13,11 +13,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
 	>=gnome-base/libgnome-2	
 	>=gnome-base/libgnomeui-2
 	>=x11-libs/libzvt-2"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
   unpack ${A}
