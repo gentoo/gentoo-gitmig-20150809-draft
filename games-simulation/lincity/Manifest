@@ -1,4 +1,6 @@
-MD5 6c1a6bedb0aecb99c5e6995afb43835f ChangeLog 2130
+MD5 4f56d9c5cada382cd0373291c909af01 ChangeLog 2269
+MD5 9479d51082f7118f085cdacba40f25fd lincity-1.12.1.ebuild 1115
 MD5 1444c6a1a50d2893aa615a674dc14341 lincity-1.12.0.ebuild 1026
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f0ba06d7b7e0fea26804209c4efb2c7d files/digest-lincity-1.12.1 66
 MD5 ab16786b51b4a6d8733158798194505d files/digest-lincity-1.12.0 66
