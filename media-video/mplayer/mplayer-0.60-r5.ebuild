@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.1 2002/04/14 10:20:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r5.ebuild,v 1.2 2002/04/14 13:01:38 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -17,14 +17,14 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
-RDEPEND=">=media-libs/divx4linux-20011025
+RDEPEND="media-libs/divx4linux
 	>=media-libs/win32codecs-${PV}
 	dvd? ( media-libs/libdvdread
 	       media-libs/libdvdcss )
-	esd? ( media-sound/esound )
-	ggi? ( media-libs/libggi )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4
 	       media-libs/libpng )
+	esd? ( media-sound/esound )
+	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
 	alsa? ( media-libs/alsa-lib )
 	svga? ( media-libs/svgalib )
@@ -42,17 +42,16 @@ src_unpack() {
 	unpack MPlayer-${MY_PV}.tar.bz2 mp-arial-iso-8859-1.zip
 
 	# Fix bug with the default Skin
-	if [ "`use gtk`" ] ; then
+	use gtk && ( \
 		unpack default-skin-0.1.tar.bz2
-	
 		cd ${WORKDIR}/default
-		patch < ${FILESDIR}/default-skin.diff || die "skin patch failed"
-	fi
+		patch < ${FILESDIR}/default-skin.diff || die
+	)
 
-	if [ "`use mga`" ] ; then
+	use mga && ( \
 		cd ${S}/drivers;
 		patch < ${FILESDIR}/mga_vid_devfs.patch || die "mga patch failed"
-	fi
+	)
 	
 	#patch mplayer with the DXR3 patch
 	local module=""
@@ -89,7 +88,7 @@ src_compile() {
 	use sdl           || myconf="${myconf} --disable-sdl"
 	use ggi           || myconf="${myconf} --disable-ggi"
 	use svga          || myconf="${myconf} --disable-svga"
-	use fbcon         && myconf="${myconf} --enable-fbdev"
+	use directfb      && myconf="${myconf} --enable-fbdev"
 	use alsa          || myconf="${myconf} --disable-alsa"
 	use oggvorbis     || myconf="${myconf} --disable-vorbis"
 	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"
@@ -111,10 +110,9 @@ src_compile() {
 		    
 	emake all || die
 	
-	if [ "`use mga`" ] ; then
-		cd drivers
-		emake all
-	fi
+	use mga \
+		&& cd drivers \
+		&& emake all || die
 }
 
 src_install() {
@@ -134,8 +132,7 @@ src_install() {
 	doalldocs
 
 	# Install the default Skin and Gnome menu entry
-	if [ "`use gtk`" ] ; then
-	
+	use gtk && ( \
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
 		# Permissions is fried by default
@@ -145,14 +142,14 @@ src_install() {
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym /usr/bin/mplayer /usr/bin/gmplayer
-	fi
-	if [ "`use gnome`" ] ; then
+	)
 
+	use gnome && ( \
 		insinto /usr/share/pixmaps
 		newins ${S}/Gui/mplayer/pixmaps/icon.xpm mplayer.xpm
 		insinto /usr/share/gnome/apps/Multimedia
 		doins ${FILESDIR}/mplayer.desktop
-	fi
+	)
 
 	# Install the font used by OSD and the GUI
 	dodir /usr/share/mplayer/fonts
@@ -162,38 +159,23 @@ src_install() {
 
 	# This tries setting up mplayer.conf automagically
 	local video="sdl" audio="sdl"
-	if [ "`use X`" ] ; then
-		if [ "`use gtk`" ] ; then
-			video="xv"
-		elif [ "`use sdl`" ] ; then
-			video="sdl"
-		elif [ "`use xv`" ] ; then
-			video="xv"
-		elif [ "`use opengl`" ] ; then
-			video="gl"
-		elif [ "`use ggi`" ] ; then
-			video="ggi"
-                elif [ "`use dga`" ] ; then
-                        video="dga"
-		else
-			video="x11"
-		fi
-	else
-		if [ "`use fbcon`" ] ; then
-			video="fbdev"
-                elif [ "`use svga`" ] ; then
-                        video="svga"
-		elif [ "`use aalib`" ] ; then
-			video="aa"
-		fi
-	fi
-	if [ "`use sdl`" ] ; then
-		audio="sdl"
-	elif [ "`use alsa`" ] ; then
-		audio="alsa5"
-	elif [ "`use oss`" ] ; then
-		audio="oss"
-	fi
+	use X && (
+		use gtk && video="xv" \
+		|| use sdl && video="sdl" \
+		|| use xv && video="xv" \
+		|| use opengl && video="gl" \
+		|| use ggi && video="ggi" \
+		|| use dga && video="dga" \
+		|| video="x11"
+	) || (
+		use directfb && video="fbdev" \
+		|| use svga && video="svga" \
+		|| use aalib && video="aa"
+	)
+
+	use sdl && audio="sdl" \
+	|| use alsa && audio="alsa5" \
+	|| use oss audio="oss" \
 	
 	# Note to myself:  do not change " into '
 	sed -e "s/vo=xv/vo=${video}/"					\
@@ -207,10 +189,10 @@ src_install() {
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 
-	if [ "`use mga`" ] ; then
+	use mga && ( \
 		dodir /lib/modules/${KVERS}/kernel/drivers/char
 		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
-	fi
+	)
 }
 
 pkg_postinst() {
@@ -231,9 +213,9 @@ pkg_postinst() {
 	echo '#                                                                    #'
 	echo '#   after launching mplayer for the first time.                      #'
 	echo '#                                                                    #'
-	echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
+	use gtk \
+		|| echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
 	echo '######################################################################'
 	echo
 	depmod -a
 }
-
