@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.8 2002/04/01 17:08:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.9 2002/04/10 02:30:20 jnelson Exp $
+
+*postfix-1.1.7 (8 Apr 2002)
+
+  9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7.ebuild:  
+
+  Updated to postfix 1.1.7, and altered how the 'if use foo' constructs
+  are used. Closes #1612
 
 *postfix-1.1.6-r1 (1 Apr 2002)
 
