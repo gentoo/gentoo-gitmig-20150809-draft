@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.1.ebuild,v 1.4 2005/01/31 11:40:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.1.ebuild,v 1.5 2005/03/30 03:23:15 ka0ttic Exp $
 
 inherit eutils
 
@@ -11,24 +11,16 @@ inherit eutils
 #
 DESCRIPTION="Active OS fingerprinting tool - this is Xprobe2"
 SRC_URI="mirror://sourceforge/${PN}/${PN}2-${PV}.tar.gz"
-HOMEPAGE="http://www.sys-security.com/html/projects/X.html"
+HOMEPAGE="http://www.sys-security.com/index.php?page=xprobe"
 
 KEYWORDS="x86 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
-
-DEPEND="virtual/libpcap"
 IUSE=""
 
-src_unpack() {
-
-	unpack ${A}
-
-	#epatch ${FILESDIR}/${P}-gentoo.patch || die "epatch failed"
-}
+DEPEND="virtual/libpcap"
 
 src_compile() {
-
 	cd "${WORKDIR}/${PN}2-${PV}"
 	# needed due to broken configure script
 	unset CFLAGS
