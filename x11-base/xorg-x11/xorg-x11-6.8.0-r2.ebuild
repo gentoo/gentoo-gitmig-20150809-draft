@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.47 2004/11/03 19:01:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.48 2004/11/03 19:50:18 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1142,7 +1142,7 @@ clean_dynamic_libgl() {
 
 	# make sure we do not have any stale files lying around
 	# that could break things. Check old and new locations.
-	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL* \
+	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL\.* \
 		${ROOT}/usr/$(get_libdir)/libGL*
 }
 
