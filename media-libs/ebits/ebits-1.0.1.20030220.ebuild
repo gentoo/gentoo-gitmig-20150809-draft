@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ebits/ebits-1.0.1.20030220.ebuild,v 1.2 2003/02/22 08:28:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ebits/ebits-1.0.1.20030220.ebuild,v 1.3 2003/03/11 19:18:36 agriffis Exp $
 
 DESCRIPTION="provides layout functionality for graphical elements like window borders"
 HOMEPAGE="http://www.enlightenment.org/pages/ebits.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="pic"
 
 DEPEND="virtual/glibc
