@@ -81,7 +81,7 @@ sys-fs/reiserfsprogs
 >=sys-apps/xinetd-2.3.3-r6
 
 *sys-devel/autoconf
-*>=sys-devel/automake-1.6.1-r5
+*sys-devel/automake
 *sys-devel/bc
 *sys-devel/bison
 *sys-devel/flex

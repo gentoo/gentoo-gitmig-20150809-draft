@@ -49,7 +49,7 @@
 *app-arch/tar
 *>=sys-apps/texinfo-4.2-r1
 *sys-devel/autoconf
-*>=sys-devel/automake-1.6.1-r5
+*sys-devel/automake
 *sys-devel/bison
 *sys-devel/flex
 *>=sys-devel/libtool-1.4.1-r4

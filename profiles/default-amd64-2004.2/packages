@@ -2,10 +2,10 @@
 *>=sys-apps/baselayout-1.8.11
 *>=sys-apps/portage-2.0.50-r8
 *>=sys-apps/texinfo-4.5
-*>=sys-devel/automake-1.8.3
+*sys-devel/automake
 *>=sys-devel/binutils-2.15
 *>=sys-devel/gcc-3.3.3-r6
-*>=sys-devel/libtool-1.5
+*sys-devel/libtool
 *>=sys-libs/glibc-2.3.2
 *>=sys-libs/ncurses-5.4
 *>=sys-libs/pam-0.77

@@ -8,7 +8,6 @@
 
 # minimal versions
 -*>=net-misc/iputils-021109-r3
-*>=sys-devel/automake-1.8.5-r1
 *>=sys-devel/bison-1.875
 *>=sys-devel/libtool-1.5.2
 

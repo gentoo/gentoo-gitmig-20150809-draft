@@ -19,7 +19,6 @@
 # sash - static shell for system recovery
 
 >=sys-apps/texinfo-4.2-r1
->=sys-devel/automake-1.6.1-r5
 
 #these ones have the new rc6 style init scripts
 >=sys-libs/gpm-1.19.3-r5

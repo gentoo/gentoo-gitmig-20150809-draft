@@ -16,7 +16,7 @@
 *<sys-apps/shadow-5
 *>=app-arch/sharutils-4.2.1-r6
 *>=dev-lang/python-2.2-r4
-*>=sys-devel/automake-1.6.1-r5
+*sys-devel/automake
 *virtual/dev-manager
 *>=sys-libs/pam-0.75-r9
 

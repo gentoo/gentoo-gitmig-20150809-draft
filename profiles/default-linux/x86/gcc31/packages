@@ -29,7 +29,6 @@
 <sys-libs/db-3.2.10
 
 >=sys-libs/pam-0.75-r9
->=sys-devel/automake-1.6.1-r5
 
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6
