@@ -669,12 +669,6 @@ dev-lang/tcl-tk
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
 
-#seemant@gentoo.org 28 Mar 2002
-# sourceforge no longer has an ftp mirror for these themes
-# until we figure out how to use gtk.themes.org or gtk.classic.themes.org
-# frankly I am not sure that this ebuild is necessary
-=x11-libs/old-gtk-themes-1.0
-
 # moved theese to gphoto2
 =media-gfx/gphoto-2.0.0
 =media-gfx/gphoto-2.0.0-r1
