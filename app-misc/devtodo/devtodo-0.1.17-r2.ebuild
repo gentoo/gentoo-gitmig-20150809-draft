@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17-r2.ebuild,v 1.7 2004/09/27 22:53:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.17-r2.ebuild,v 1.8 2004/10/31 14:39:10 ciaranm Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~hppa amd64 ~ia64 ~s390 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha ~hppa amd64 ~ia64 ~s390 ppc64"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2 >=sys-libs/readline-4.1"
