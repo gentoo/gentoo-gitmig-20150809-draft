@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 a42dcc76c132b5e89aff50b7381590ae ChangeLog 5528
 MD5 4eb1abff335478b86f5c65997e0148f2 metadata.xml 222
-MD5 3934feba047fa7c68b209fc9f2df589b scite-1.6.1.ebuild 1888
+MD5 0a80d040b409243e36c7584a148e2ab8 scite-1.6.1.ebuild 1890
 MD5 2561568c62ec3edc2b46be6638c80427 files/scite.desktop 169
 MD5 c022b3ac9b612f257e304f7f90eb7f98 files/digest-scite-1.6.1 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhHGTHTu7gpaalycRAgYlAKCtLMVnLIdq6DeKlZW8HNmsRjJQKACgq3EA
-AZgzOS1m/bB4+Z7KqP0Dt74=
-=wvsw
+iD8DBQFBhHHpHTu7gpaalycRAkUcAJ95yMAUAynpIIenvkqfIekGdZjKoQCfUm6M
+sSZgrjp1T8qUGEYi2EKwwI8=
+=bccl
 -----END PGP SIGNATURE-----

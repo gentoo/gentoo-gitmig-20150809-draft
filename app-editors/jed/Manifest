@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e84a3fa4dfdb7aa85cbf7d04fab441b ChangeLog 3015
-MD5 1bb1cd0e4345e86feffa81186b9ae607 jed-0.99.16-r1.ebuild 1997
-MD5 9f945b1d6d14b5854c7e4d821b1f673f jed-0.99.16-r2.ebuild 2101
+MD5 2a23aaf83ce2c1907728109077628961 jed-0.99.16-r1.ebuild 2017
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 6ecd48789e4a99f0f3725102b42f4297 files/digest-jed-0.99.16-r1 64
+MD5 80b29f67eced903fb269151c0d9f0791 jed-0.99.16-r2.ebuild 2119
 MD5 6ecd48789e4a99f0f3725102b42f4297 files/digest-jed-0.99.16-r2 64
+MD5 6ecd48789e4a99f0f3725102b42f4297 files/digest-jed-0.99.16-r1 64
 MD5 9ddff99ca56880f5128ffcc4336460fe files/jed-0.99.16-gentoo-shmode.sl 2434
-MD5 b972e25cececf15ffc9e56d76d9f86a1 files/jed-0.99.16-jed.info.patch 1508
 MD5 57236ca58f912a25d88e6c9520df83a2 files/jed.info.diff 333
+MD5 b972e25cececf15ffc9e56d76d9f86a1 files/jed-0.99.16-jed.info.patch 1508
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHFLHTu7gpaalycRAuRdAJ0bBa8h9OTIX07+kmqKmDQsmh3dOQCg1B9s
+QnbOjdDku7bcmI0iyGiWZBY=
+=UYbB
+-----END PGP SIGNATURE-----
