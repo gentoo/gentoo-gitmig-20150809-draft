@@ -5,8 +5,10 @@ MD5 523e7508fde512b80444bdf35bf999b7 wesnoth-0.5.1.ebuild 1086
 MD5 8095bf0449b4c25a1f918c5bc30b3a16 wesnoth-0.5.ebuild 1191
 MD5 93568e78956478a481244d3dc74cbe5e wesnoth-0.6.1.ebuild 893
 MD5 f5d5b6d1503a3ba1e0b070681ad7b902 wesnoth-0.6.99.1.ebuild 918
+MD5 f5d5b6d1503a3ba1e0b070681ad7b902 wesnoth-0.6.99.2.ebuild 918
 MD5 12449f4d45609424ab20eb79f5f77baf files/digest-wesnoth-0.4.8 66
 MD5 906d61f6bd37904556d48a72fd3d7e7f files/digest-wesnoth-0.5 65
 MD5 d5ad9b90f362470f8749bf69f17eb378 files/digest-wesnoth-0.5.1 67
 MD5 a4c70d154e44e8992198d637fcb4e13a files/digest-wesnoth-0.6.1 67
 MD5 54b74b28b80b25f584a88dfdb4e1762d files/digest-wesnoth-0.6.99.1 70
+MD5 e966635a1c1ba1490da3e026499af97f files/digest-wesnoth-0.6.99.2 70
