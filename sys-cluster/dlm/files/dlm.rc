@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/files/dlm.rc,v 1.1 2005/03/22 13:39:42 xmerlin Exp $
+
+depend() {
+	use net
+	need cman
+	provide cluster-locking-manager
+}
+
+start() {
+	ebegin "Loading dlm module"
+	modprobe dlm
+	eend $?
+}
+
+stop() {
+	ebegin "Removing dlm module"
+	modprobe -r dlm &>/dev/null
+	eend $?
+}
+
