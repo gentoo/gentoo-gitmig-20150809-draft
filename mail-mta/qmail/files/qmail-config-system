@@ -1,6 +1,6 @@
 #!/bin/sh
 # Configuration System for Qmail
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/qmail-config-system,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/qmail-config-system,v 1.2 2004/07/18 03:29:51 dragonheart Exp $
 # This is a configuration system to make using and controlling the interesting parts of the qmail behavior simple
 # The only variable that needs to be set before running this is $SERVICE
 

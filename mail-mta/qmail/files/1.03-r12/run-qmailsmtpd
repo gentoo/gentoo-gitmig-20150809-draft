@@ -1,6 +1,6 @@
 #!/bin/sh
 # Gentoo Startup script for qmail's SMTP daemon
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/1.03-r12/run-qmailsmtpd,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/1.03-r12/run-qmailsmtpd,v 1.2 2004/07/18 03:29:51 dragonheart Exp $
 #
 # If you need to edit this file, please look at editing conf-smtpd and
 # conf-common first.  If you still need to change this file, you should
