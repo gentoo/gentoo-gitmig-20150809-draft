@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.3 2002/07/17 09:08:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.4 2002/08/25 16:12:16 danarmak Exp $
 
 S=${WORKDIR}/${P}
 QV="1.0"
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="=x11-libs/qt-3*
+DEPEND=">=x11-libs/qt-3
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_compile() {
