@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.0.6.ebuild,v 1.1 2004/07/26 03:46:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/pgpool-2.0.9.ebuild,v 1.1 2004/09/06 23:56:57 matsuu Exp $
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://www2b.biglobe.ne.jp/~caco/pgpool/"
