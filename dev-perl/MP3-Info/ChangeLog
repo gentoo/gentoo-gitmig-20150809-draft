@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MP3-Info
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.13 2003/07/19 08:13:51 rac Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.14 2004/01/08 00:51:44 gustavoz Exp $
+
+*MP3-Info-1.02-r1 (07 Jan 2004)
+
+  07 Jan 2004; <gustavoz@gentoo.org> MP3-Info-1.02-r1.ebuild:
+  also good for sparc
 
   19 Jul 2003; <rac@gentoo.org> :
   Allow Test-Simple dependency to be filled by >=perl-5.8.0-r12
