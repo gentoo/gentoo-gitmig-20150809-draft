@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.24 2004/10/06 19:38:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.25 2004/10/17 01:56:05 solar Exp $
+
+  16 Oct 2004; <solar@gentoo.org> lilo-22.5.9-r2.ebuild, lilo-22.6.ebuild:
+  removed erroneous RDEPEND on sed4
 
   06 Oct 2004; Tony Vroon <chainsaw@gentoo.org>
   files/lilo-22.6-devmapper_gentoo.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r2.ebuild,v 1.4 2004/09/06 18:17:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r2.ebuild,v 1.5 2004/10/17 01:56:05 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,10 +19,10 @@ SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* x86"
 
-RDEPEND=">=sys-apps/sed-4
-	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
+RDEPEND="devmap? ( >=sys-libs/device-mapper-1.00.08 )"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
+	>=sys-apps/sed-4
 	>=sys-devel/bin86-0.15.5"
 
 PROVIDE="virtual/bootloader"
