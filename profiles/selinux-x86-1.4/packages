@@ -46,7 +46,7 @@
 #*sys-apps/textutils
 #*sys-apps/fileutils
 #*sys-apps/sh-utils
-*=sys-apps/coreutils-4.5.9-r2
+*=sys-apps/coreutils-4.5.10
 
 # SELinux patched versions, these must be locked so that users don't
 # emerge unpatched utilities
