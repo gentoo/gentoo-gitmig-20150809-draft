@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.24 2003/01/03 09:33:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.25 2003/01/30 00:18:16 raker Exp $
+
+*openldap-2.0.27-r2 (29 Jan 2003)
+
+  29 Jan 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r2.ebuild,
+  files/digest-openldap-2.0.27-r2 files/slapd-2.1-r1.rc6,
+  files/slapd-2.1.conf :
+  Fixes some typos in -r1 and adds a slapd.conf based on suggestions
+  by claer@unixlover.com on bug #8780
 
 *openldap-2.0.27-r1 (01 Jan 2002)
 *openldap-2.1.10 (01 Jan 2002)
