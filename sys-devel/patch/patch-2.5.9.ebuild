@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.16 2004/05/08 14:24:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.17 2004/06/22 17:08:34 solar Exp $
 
 inherit flag-o-matic
 
@@ -30,15 +30,12 @@ src_compile() {
 	ac_cv_sys_long_file_names=yes \
 		./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
 	# workaround for hardened on amd64, 2nd part
-	if [ ${LDFLAGS_PIE} = "1" ]; then
+	if [ "${LDFLAGS_PIE}" = "1" ]; then
 		einfo "Patching Makefile..."
 		sed -i -e 's/^LDFLAGS =/& -pie/' Makefile || die "Patching Makefile failed!"
 	fi
-	if ! use static ; then
-		emake || die "emake failed"
-	else
-		emake LDFLAGS=-static || die "emake failed"
-	fi
+	use static && append-ldflags -static
+	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
