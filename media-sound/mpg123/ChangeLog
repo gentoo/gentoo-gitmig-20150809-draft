@@ -1,11 +1,18 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.8 2003/02/12 07:31:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.9 2003/03/20 04:17:30 zwelch Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*mpg123-0.59r-r2 (19 Mar 2003)
+
+  19 Mar 2003; Zach Welch <zwelch@gentoo.org> mpg123-0.59r-r2.ebuild,
+  files/mpg123-0.59r-make-fix.diff:
+  fix distcc compiles; see bug 16116
+
 *mpg123-0.59r-r1 (27 Apr 2002)
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
+ 
   22 Nov 2002; Will Woods <wwoods@gentoo.org> mpg123-0.59r-r1.ebuild :
   Added alpha keyword and patch.
 
