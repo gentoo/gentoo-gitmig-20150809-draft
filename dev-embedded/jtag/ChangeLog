@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/jtag
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.4 2004/06/24 22:07:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.5 2004/07/12 23:05:33 stkn Exp $
+
+*jtag-0.5.1-r1 (13 Jul 2004)
+
+  13 Jul 2004; <stkn@gentoo.org> +files/jtag-0.5.1-no-erase-overshoot.diff,
+  +jtag-0.5.1-r1.ebuild:
+  fixes a bug where jtag would erease one block too many while writing
+  a binary image to a flash rom
 
   27 Mar 2004; Daniel Black <dragonheart@gentoo.org> jtag-0.5.1.ebuild,
   metadata.xml:
