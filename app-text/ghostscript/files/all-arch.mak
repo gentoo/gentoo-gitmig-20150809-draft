@@ -15,7 +15,7 @@
 # License requires that the copyright notice and this notice be preserved on
 # all copies.
 
-# $Id: all-arch.mak,v 1.1 2000/08/07 15:35:01 achim Exp $
+# $Id: all-arch.mak,v 1.2 2000/08/25 15:10:22 achim Exp $
 #
 # Author:
 # 	Nelson H. F. Beebe
@@ -249,7 +249,7 @@ TARGETS			=
 
 #=======================================================================
 
-BINDIR			= /usr/local/bin
+BINDIR			= /usr/bin
 
 CHMOD			= chmod
 
