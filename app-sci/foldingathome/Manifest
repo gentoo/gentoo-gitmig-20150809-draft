@@ -1,0 +1,6 @@
+MD5 7536668701da7f7dcf6729a041c59d3c ChangeLog 1086
+MD5 a4bb0e9993806b0fdc3d2a585ca0059b foldingathome-3.14.ebuild 1120
+MD5 56f406edebe07442520c92497e593815 foldingathome-3.24.ebuild 1311
+MD5 507a00167f75ffe5044d132a477cdd8b files/digest-foldingathome-3.14 66
+MD5 ad7ecc18b7b0f523434d668ba40295f4 files/digest-foldingathome-3.24 143
+MD5 2ce9c3c1a96617c6caadff6e24ef32e9 files/folding-init.d 539

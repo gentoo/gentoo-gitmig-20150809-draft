@@ -1,0 +1,6 @@
+MD5 0d8ad492ca7f61149350aa6b2cb93054 ChangeLog 1194
+MD5 473d0a3ac47cf629ea58ea9d13520583 netcdf-3.5.0-r1.ebuild 710
+MD5 7ceda790221703f75ff8e2c50b4f2305 netcdf-3.5.0-r2.ebuild 1001
+MD5 fc4457bab8a911f12f9048c4a2c32322 files/digest-netcdf-3.5.0-r1 64
+MD5 fc4457bab8a911f12f9048c4a2c32322 files/digest-netcdf-3.5.0-r2 64
+MD5 9e5ecd4ed58179f2229becc0e93150ac files/gcc3-gentoo.patch 6826

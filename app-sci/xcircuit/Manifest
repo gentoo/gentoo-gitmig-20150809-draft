@@ -1,0 +1,7 @@
+MD5 de8cd461902ce8bd52e114ee8df41316 ChangeLog 1542
+MD5 26470919367c909ca75afe7a209c6839 xcircuit-2.5.4.ebuild 1222
+MD5 87d1d0b85c39b92c7ac515e76bf82494 xcircuit-2.5.5.ebuild 840
+MD5 ca649d4969dc9ee0ed87504dbf062042 files/digest-xcircuit-2.5.4 67
+MD5 3f779f7efbaa50b91424a66a5a4ff08e files/digest-xcircuit-2.5.5 67
+MD5 f3357e680f9c01d7d89b2a5b70ff8704 files/xcircuit-2.5.4-XQueryColor.patch 347
+MD5 0e02e248fa08f87a01fe3f9ceb73031e files/xcircuit-2.5.4-sigsegv.patch 311

@@ -1,0 +1,6 @@
+MD5 1104cf26ace88f4ec7687a15d3f83378 ChangeLog 880
+MD5 2f93016a5ad09b3c09dfa60cf1e0fb7c babel-1.6.ebuild 981
+MD5 89cff2c8f6593871433dc050f452fb55 files/10babel 27
+MD5 444ffe6f4986e1fb199a0f2a31cccd7d files/babel-1.6-gcc32.diff 549
+MD5 80848d0c7c776240d8295eadb1593a8e files/babel-1.6-gentoo.diff 569
+MD5 45d9ad9dceace9db87c213339d35e10d files/digest-babel-1.6 60
