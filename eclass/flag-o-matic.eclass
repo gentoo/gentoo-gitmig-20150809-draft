@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.31 2003/12/10 21:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.32 2003/12/21 06:50:15 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -48,12 +48,12 @@ INHERITED="$INHERITED $ECLASS"
 #### etexec-flags ####
 # hooked function for hardened-gcc that appends 
 # -yet_exec {C,CXX,LD}FLAGS when hardened-gcc is installed
-# and a package is filtering -fPIC
+# and a package is filtering -fPIC,-fpic, -fPIE, -fpie
 #
 #### fstack-flags ####
 # hooked function for hardened-gcc that appends
 # -yno_propolice to {C,CXX,LD}FLAGS when hardened-gcc is installed
-# and a package is filtering -fstack-protector
+# and a package is filtering -fstack-protector, -fstack-protector-all
 #
 
 # C[XX]FLAGS that we allow in strip-flags
@@ -93,8 +93,8 @@ filter-flags() {
 	# we do two loops to avoid the first and last char from being chomped.
 	for x in $@ ; do
 		case "${x}" in
-			-fPIC) etexec-flags;;
-			-fstack-protector) fstack-flags;;
+			-fPIC|-fpic|-fPIE|-fpie) etexec-flags;;
+			-fstack-protector|-fstack-protector-all) fstack-flags;;
 			*) ;;
 		esac
 	done
@@ -114,7 +114,7 @@ append-flags() {
 	CFLAGS="${CFLAGS} $@"
 	CXXFLAGS="${CXXFLAGS} $@"
 	for x in $@; do
-		[ "${x}" = "-fno-stack-protector" ] && fstack-flags
+		[ "${x}" = "-fno-stack-protector" -o "${x}" = "-fno-stack-protector-all" ] && fstack-flags
 	done
 	return 0
 }
