@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.03.ebuild,v 1.2 2002/09/30 22:36:01 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.03.ebuild,v 1.3 2002/10/04 21:01:53 vapier Exp $
 
 MY_P=${PN}-${PV/./_}
 S=${WORKDIR}/${MY_P}

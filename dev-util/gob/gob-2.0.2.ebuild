@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.2.ebuild,v 1.1 2002/08/20 19:58:09 stroke Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.2.ebuild,v 1.2 2002/10/04 20:58:58 vapier Exp $
 
 MY_P=${PN}2-${PV}
 S=${WORKDIR}/${MY_P}
