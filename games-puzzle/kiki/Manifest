@@ -1,4 +1,6 @@
-MD5 a6a002477a3a85af9031c484c8e86397 ChangeLog 606
+MD5 c0605862315f7c012f672b57d56d9e35 ChangeLog 797
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 feda1e6bf01b58ecac241ec0b62c4ae0 kiki-0.9.0-r1.ebuild 2107
 MD5 6c209b6c07867998c378875f4b29bddd kiki-0.9.0.ebuild 1690
 MD5 9721438ad8f7d2ff3cadd7c82d71eb94 files/digest-kiki-0.9.0 64
+MD5 9721438ad8f7d2ff3cadd7c82d71eb94 files/digest-kiki-0.9.0-r1 64
