@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0-r1.ebuild,v 1.2 2003/09/02 13:08:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/atari800-1.3.0-r1.ebuild,v 1.3 2003/09/04 01:17:11 msterret Exp $
 
 DESCRIPTION="Atari 800 emulator"
 HOMEPAGE="http://atari800.sourceforge.net/"
@@ -31,8 +31,8 @@ src_compile() {
 
 	local myconf
 	myconf="--enable-crashmenu --enable-break --enable-hints \
-	--enable-asm --enable-cursorblk --enable-led --enable-displayled \
-	--enable-sndclip --enable-linuxjoy --enable-sound"
+		--enable-asm --enable-cursorblk --enable-led --enable-displayled \
+		--enable-sndclip --enable-linuxjoy --enable-sound"
 
 	cd src
 	./configure --prefix=/usr --target=$target ${myconf}
