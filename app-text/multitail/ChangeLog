@@ -1,6 +1,14 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.16 2005/01/01 16:26:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.17 2005/01/13 12:07:51 ka0ttic Exp $
+
+*multitail-3.4.3 (13 Jan 2005)
+
+  13 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  multitail-3.0.6.ebuild, -multitail-3.2.3.ebuild, multitail-3.4.1.ebuild,
+  +multitail-3.4.3.ebuild:
+  Version bump for bug 73292. Marked 3.4.1 stable on x86. Install
+  multitail.conf in /etc, since multitail refuses to run w/o it.
 
 *multitail-3.4.1 (12 Nov 2004)
 
