@@ -5,6 +5,5 @@
 # The make.defaults file should never be changed
 
 ARCH="ppc"
-USERLAND="macos"
 ACCEPT_KEYWORDS="ppc-macos" 
 USE="ppc-macos"
