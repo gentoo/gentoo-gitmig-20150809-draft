@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.2 2004/04/06 03:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5.ebuild,v 1.3 2004/04/06 03:51:19 vapier Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www-124.ibm.com/linux/projects/iterm/releases/iterm-${PV}.tar.gz
 LICENSE="CPL-0.5"
 SLOT="0"
 KEYWORDS="~x86"
+
 DEPEND="virtual/x11
 	x11-libs/libiterm-mbt
 	sys-libs/zlib
@@ -19,22 +20,13 @@ DEPEND="virtual/x11
 S=${WORKDIR}/iterm/unix/fbiterm
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
-src_compile() {
-
-	econf || die
-	emake || die
-}
-
 src_install() {
-
 	einstall || die
-
 	dodoc AUTHORS ChangeLog README*
 }
 
