@@ -1,12 +1,22 @@
-MD5 c6a0ae06ecb14fa180f46f03b91c5e27 ChangeLog 4513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ec6dcddda50a0138e1f50eb0d1299798 metadata.xml 254
-MD5 e8fc1ce9c63f468205396334b2a16c48 openal-20020127.ebuild 2075
-MD5 a33a07e0d0e18acb564733a170473d12 openal-20040303.ebuild 1869
-MD5 22fca2f2778234209d07fe0c65b94696 openal-20040817.ebuild 1917
+MD5 cf487172566ddfbca971117246588ed5 openal-20020127.ebuild 2075
+MD5 454bb1025750d2addabd7e2511a8239b openal-20040817.ebuild 1948
+MD5 f3113f663dab848d00a11a26c7e4ba29 openal-20040303.ebuild 1871
+MD5 a1a2eb305846d967a15de5ba2e06ce09 ChangeLog 4651
 MD5 35b8b81a8d71be18d124e5bca01622fb files/digest-openal-20020127 68
-MD5 4751d1095a6b93726e35d53ad66d9839 files/digest-openal-20040303 69
 MD5 7a79e920a2131ac669da96c4cf5e66e9 files/digest-openal-20040817 69
-MD5 3ffc8792ba0039005def0a8fd9b572b1 files/openal-20040303-alsa_capture.diff 12171
+MD5 4751d1095a6b93726e35d53ad66d9839 files/digest-openal-20040303 69
 MD5 526498c24d3601f624e025aaa7c46de2 files/openal-20040817-alsa_capture.diff 12172
-MD5 7d1289ab83aa79eaa7e09d5e4ccacc45 files/openal-20040817-destdir.patch 498
+MD5 3ffc8792ba0039005def0a8fd9b572b1 files/openal-20040303-alsa_capture.diff 12171
 MD5 8072d11c3e5e44c43407bed8c67b4031 files/openalrc 221
+MD5 7d1289ab83aa79eaa7e09d5e4ccacc45 files/openal-20040817-destdir.patch 498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB49cfArHZZzCEUG0RAlZAAJ9p/EhRgHffWRgODTnS29VRyEolYwCeMYFI
+CWNp5GvCTOPAGY3+N9gWSlU=
+=a1zf
+-----END PGP SIGNATURE-----

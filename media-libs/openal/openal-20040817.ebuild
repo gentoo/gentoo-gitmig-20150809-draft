@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.6 2004/12/16 08:38:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.7 2005/01/11 13:39:03 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -38,7 +38,7 @@ src_compile() {
 	epatch ${FILESDIR}/${P}-destdir.patch
 
 	WANT_AUTOCONF=2.5 ./autogen.sh || die
-	econf ${myconf} --enable-paranoid-locks \
+	econf ${myconf} --enable-paranoid-locks --libdir=/usr/$(get_libdir) \
 		--enable-capture --enable-optimize || die
 	emake all || die
 }

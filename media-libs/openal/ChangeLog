@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.35 2004/12/16 08:38:35 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.36 2005/01/11 13:39:03 eradicator Exp $
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  openal-20040817.ebuild:
+  Install to the proper libdir.  Fixes bug #77154.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> openal-20040817.ebuild:
   Stable on ppc64
