@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.1 2003/02/24 21:45:00 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.2 2003/02/24 21:48:25 rphillips Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -189,7 +189,7 @@ src_compile() {
 src_install() {
 	addwrite /usr/share/snmp/mibs/.index
 
-	make INSTALL_ROOT=${D} install-cli install-pear install-headers install-programs install-modules || die
+	make INSTALL_ROOT=${D} install-cli install-pear install-headers install-programs install-modules install-build || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc RELEASE_PROCESS README.* TODO NEWS
@@ -205,10 +205,6 @@ src_install() {
 	doexe ${S}/pear/scripts/phpize
 	doexe ${S}/pear/scripts/php-config
 	doexe ${S}/pear/scripts/phpextdist
-
-	mkdir ${D}/usr/lib/php/build
-	insinto /usr/lib/php/build
-	doins build/* pear/pear.m4 acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
 
 	# Support for Java extension
 	#
