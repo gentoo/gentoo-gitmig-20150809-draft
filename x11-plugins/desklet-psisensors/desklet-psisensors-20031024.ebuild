@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20031024.ebuild,v 1.1 2003/10/26 12:17:37 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20031024.ebuild,v 1.2 2003/11/01 03:43:46 lu_zero Exp $
 
 MY_PN="PsiSensorPackage"
 MY_P=${MY_PN}-${PV}
@@ -13,7 +13,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.23
 	!x11-plugins/desklet-cpuinfo

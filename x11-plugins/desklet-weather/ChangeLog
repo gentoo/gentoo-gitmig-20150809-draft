@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-weather
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.2 2003/09/24 20:10:46 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.3 2003/11/01 03:46:20 lu_zero Exp $
+
+  01 Nov 2003; Luca Barbato <lu_zero@gentoo.org> desklet-weather-0.21.ebuild:
+  Marked ~ppc
 
   24 Sep 2003; Todd Sunderlin <todd@gentoo.org> desklet-weather-0.21.ebuild:
   added ~sparc keyword

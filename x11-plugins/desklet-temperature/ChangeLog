@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-temperature
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/ChangeLog,v 1.1 2003/10/09 15:31:59 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-temperature/ChangeLog,v 1.2 2003/11/01 03:45:30 lu_zero Exp $
+
+  01 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
+  desklet-temperature-0.1.ebuild:
+  Marked ~ppc
 
 *desklet-temperature-0.1 (09 Oct 2003)
 

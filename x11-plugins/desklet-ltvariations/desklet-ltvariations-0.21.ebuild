@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21.ebuild,v 1.1 2003/09/28 06:07:34 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.21.ebuild,v 1.2 2003/11/01 03:38:05 lu_zero Exp $
 
 DESKLET_NAME="LTVariations"
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22
 	>=x11-plugins/desklet-weather-0.21"

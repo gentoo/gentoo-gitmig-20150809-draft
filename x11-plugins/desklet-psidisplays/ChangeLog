@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-psidisplays
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.1 2003/10/26 12:25:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.2 2003/11/01 03:42:28 lu_zero Exp $
+
+  01 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
+  desklet-psidisplays-20031024.ebuild:
+  Marked ~ppc
 
 *desklet-psidisplays-20031024 (26 Oct 2003)
 
