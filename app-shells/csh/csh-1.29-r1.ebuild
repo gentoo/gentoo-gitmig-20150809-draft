@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.4 2003/06/13 09:21:59 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r1.ebuild,v 1.5 2003/06/16 19:06:02 taviso Exp $
 
 DESCRIPTION="Classic UNIX shell with C like syntax"
 HOMEPAGE="http://www.netbsd.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE="static doc"
 
 DEPEND="virtual/glibc
