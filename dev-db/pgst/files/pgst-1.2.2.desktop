@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PostgreSQL SQL Tool
+Comment=PostgreSQL database management tool
+Icon=/usr/share/pgst/pixmaps/db-editor.png
+Exec=/bin/bash /usr/share/pgst/pgst.sh
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Application;Database;
