@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.10 2004/09/02 11:11:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.3.0.ebuild,v 1.11 2004/09/03 03:53:50 tgall Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ppc ~ppc64"
 
 RDEPEND="dev-libs/expat"
 
