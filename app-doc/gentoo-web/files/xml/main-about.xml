@@ -17,7 +17,8 @@
 <body>
 		<p>
 		<b>Gentoo Linux is a versatile and fast, completely free x86-based Linux
-		distribution geared towards developers and network professionals.</b> Unlike other distros,
+		distribution geared towards developers and network professionals.</b> 
+		Unlike other distros,
 		Gentoo Linux has an advanced package management system called <b>Portage</b>.
 		<b>Portage</b> is a true ports system in the tradition of BSD ports, but is
 		Python-based and sports a number of advanced features including
@@ -28,18 +29,24 @@
 </body>
 </section>
 <section>
-<title>Gentoo Linux 1.0_rc5 Features</title>
+<title>Gentoo Linux 1.0_rc6 Features</title>
 <body>
-				<p>
-				<b>Gentoo Linux 1.0_rc5</b> (release candidate 5) features <b>Linux 2.4.4-ac9</b>+ and a modern <b>GNU</b> development environment (<b>glibc-2.2.3</b>, <b>gcc 2.95.3</b>),
-				<b>ReiserFS</b>, <b>LVM</b>, <b>ALSA</b>, <b>PCMCIA-CS</b> and <b>lm_sensors</b> support built-in to the kernel, <b>"vanilla"</b> (stock) kernel packages/compatibility for those who prefer unpatched kernels,
-				<b>Xfree86 4.1.0</b>, <b>OpenGL</b>, <b>KDE 2.1.1</b> and <b>GNOME 1.4</b>,
-				tcp-wrappers, xinetd, <b>iptables</b> and Linux <b>QoS</b> tools,
-				modern <b>qmail</b> (with optional <b>mysql</b> and <b>LDAP</b> support), <b>postfix</b> and <b>exim</b> MTAs,
-				<b>GRUB</b> boot loader (<b>LILO</b> is still available if you need it),
-				<b>800+ up-to-date ebuild scripts</b> for your favorite apps, tons more, and
-				of course <b>Portage</b> and a completely open design.
-				</p>
+	<p>
+	<b>Gentoo Linux 1.0_rc6</b> (release candidate 6) features <b>Linux 2.4.10</b>+ and 
+	a modern <b>GNU</b> development environment (<b>glibc-2.2.4</b>, <b>gcc 2.95.3</b>),
+	<b>ReiserFS</b>, <b>ext3</b>, <b>LVM</b>, <b>ALSA</b>, 
+	<b>PCMCIA-CS</b> and <b>lm_sensors</b> 
+	support built-in to the kernel, <b>"vanilla"</b> (stock) kernel 
+	packages/compatibility for those who prefer unpatched kernels,
+	<b>Xfree86 4.1.0</b>, <b>OpenGL</b>, <b>KDE 2.2.1</b> and <b>GNOME 1.4</b>,
+	tcp-wrappers, xinetd, <b>iptables</b> and Linux <b>QoS</b> tools,
+	modern <b>qmail</b> (with optional <b>mysql</b> and <b>LDAP</b> support), 
+	<b>postfix</b> and <b>exim</b> MTAs,
+	<b>GRUB</b> boot loader (<b>LILO</b> is still available if you need it),
+	<b>800+ up-to-date ebuild scripts</b> for your favorite apps, 
+	a new <b>dependency- (or need-) based set of init scripts</b>, tons more, and
+	of course <b>Portage</b> and a completely open design.
+	</p>
 </body>
 </section>
 <section>
@@ -47,7 +54,8 @@
 <body>
 		<p><b>Portage allows you to set up Gentoo Linux the way <e>you</e> like
 		it</b> -- with the optimization settings that you want, and with optional
-		build-time functionality (like <b>GNOME</b>, <b>KDE</b>, <b>mysql</b>, <b>ALSA</b>, <b>LDAP</b> support,
+		build-time functionality (like <b>GNOME</b>, <b>KDE</b>, <b>mysql</b>, 
+		<b>ALSA</b>, <b>LDAP</b> support,
 		etc.) enabled or disabled as you desire.  If you don't want <b>GNOME</b> on
 		your system, your apps won't have optional <b>GNOME</b> support enabled, and
 		if you do, then they will.  That's why we prefer thinking of Gentoo
@@ -61,7 +69,7 @@
 		Linux technologies and applications.  Tell Portage what ebuild you'd
 		like to install, and Portage will auto-download, unpack, patch,
 		configure, compile and install the package.  Thanks to Portage
-		auto-dependency resolution, you can install <b>KDE 2.1.1</b> or <b>GNOME 1.4</b>
+		auto-dependency resolution, you can install <b>KDE 2.2.1</b> or <b>GNOME 1.4</b>
 		by typing in a single command, and the resultant installed binaries
 		will be optimized and customized to your exact specifications.</p>
 
