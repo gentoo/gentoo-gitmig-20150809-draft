@@ -1,5 +1,5 @@
-MD5 66e7ec71e3eaca51b2debfd595ff7dde ChangeLog 2068
-MD5 5ee48e799aa00b49be596ec320e35402 rioutil-1.4.4.ebuild 901
+MD5 0cb93e94936369ffc71d9f0c4a310bff ChangeLog 2172
+MD5 4715aebcbada7563695c3cd1b525113f rioutil-1.4.4.ebuild 817
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 72a43d60ff9736ade5cf03ea35853db7 files/digest-rioutil-1.4.4 66
 MD5 980de0f7000d1b646ff0ce96a4f795b2 files/rioutil-1.4.4-26headers.patch 2266
