@@ -1,22 +1,20 @@
-# Copyright 2002 Michele Balistreri <brain87@gmx.net>
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.7.ebuild,v 1.1 2002/07/24 04:21:29 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ermixer-0.7.ebuild,v 1.2 2002/07/25 05:38:34 seemant Exp $
 
+S="${WORKDIR}/${P}"
 DESCRIPTION="A Full Featured Audio Mixer"
+SRC_URI="http://erevan.cuore.org/files/ermixer/${P}.tar.bz2"
 HOMEPAGE="http://ermixer.sourceforge.net"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
-SRC_URI="http://erevan.cuore.org/files/ermixer/${P}.tar.bz2"
-S="${WORKDIR}/${P}"
-
 src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf || die
 	emake || die
 }
 
