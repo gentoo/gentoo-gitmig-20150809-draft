@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.4 2005/01/03 01:49:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.4.1-r7.ebuild,v 1.5 2005/01/09 11:39:13 swegener Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="The Staden Package - Biological sequence handling and analysis"
 HOMEPAGE="http://staden.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-rel-${PV//./-}.tar.gz
-	doc? mirror://sourceforge/${PN}/course-1.1.tar.gz
+	doc? ( mirror://sourceforge/${PN}/course-1.1.tar.gz )
 	mirror://gentoo/${P}-missing-doc.tar.bz2"
 LICENSE="staden"
 
