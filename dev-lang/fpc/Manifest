@@ -1,4 +1,6 @@
-MD5 4840e12964f8eccb9349ee490fb4d66e ChangeLog 839
+MD5 612dc96055efaf9e7c65b26eadbdf863 ChangeLog 1078
 MD5 ab006e8367e315d5b6da8e44fccc0413 fpc-1.0.10.ebuild 901
 MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
+MD5 02b4df49c6b59a3a4f04e0bc3cf68783 fpc-1.9.4.ebuild 723
+MD5 80d2d5c870634f6f9380a17fc6af154f files/digest-fpc-1.9.4 67
 MD5 5c1bfc2f4cd68b7149ecfb6894315a80 files/digest-fpc-1.0.10 67
