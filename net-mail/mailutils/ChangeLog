@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.6 2004/07/09 03:09:40 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.7 2004/07/09 05:11:02 langthang Exp $
+
+*mailutils-0.5 (08 Jul 2004)
+
+  08 Jul 2004; Tuan Van<langthang@gentoo.org> +mailutils-0.5.ebuild:
+  Version bump.
 
   08 Jul 2004; Tuan Van<langthang@gentoo.org> mailutils-0.3.1-r1.ebuild:
   mark mailutils-0.3.1-r1 stable. mailutils-0.3.1 doesn't compile with gcc-3.3.
