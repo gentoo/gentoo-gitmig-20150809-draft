@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.20 2004/07/08 16:49:58 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.21 2004/07/11 10:19:48 eldad Exp $
+
+  11 Jul 2004; Eldad Zack <eldad@gentoo.org> -mtr-0.54-r1.ebuild:
+  Purged old unstable
 
   08 Jul 2004; Eldad Zack <eldad@gentoo.org> mtr-0.49-r1.ebuild,
   mtr-0.54-r1.ebuild, mtr-0.54-r2.ebuild, mtr-0.54.ebuild:
