@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r5.ebuild,v 1.2 2004/02/02 02:21:30 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r5.ebuild,v 1.3 2004/02/06 20:58:22 spock Exp $
 
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 HOMEPAGE="http://linux.tkdack.com/"
@@ -128,7 +128,7 @@ pkg_config() {
 			exit 1
 		fi
 
-		if [ $KV_MINOR >= 22 ]; then
+		if [ ${KV_MINOR} -ge 22 ]; then
 			bzip2 -dc ${ROOT}/usr/share/${PN}/bootsplash-3.0.7-2.4.22-vanilla.diff.bz2 | patch -p1 || die
 		else
 			bzip2 -dc ${ROOT}/usr/share/${PN}/bootsplash-3.0.7-2.4.20-vanilla.diff.bz2 | patch -p1 || die
