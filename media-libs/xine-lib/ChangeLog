@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.129 2004/06/28 11:03:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.130 2004/06/29 14:58:38 mholzer Exp $
+
+*xine-lib-1_rc5-r2 (29 Jun 2004)
+
+  29 Jun 2004; Martin Holzer <mholzer@gentoo.org>
+  +files/protect-CFLAGS.patch-1_rc5-r2, xine-lib-1_rc5-r1.ebuild,
+  +xine-lib-1_rc5-r2.ebuild, xine-lib-1_rc5.ebuild:
+  new protect-CFLAGS patch. closes 55534
 
 *xine-lib-1_rc5-r1 (28 Jun 2004)
 

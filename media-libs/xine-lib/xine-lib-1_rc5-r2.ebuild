@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5.ebuild,v 1.6 2004/06/29 14:58:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.1 2004/06/29 14:58:38 mholzer Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -58,7 +58,7 @@ src_unpack() {
 	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
 	#epatch ${FILESDIR}/${P}-gcc2_fix.patch
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
-	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV}
+	epatch ${FILESDIR}/protect-CFLAGS.patch-${PVR}
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-2.6.patch
 	# force 32 bit userland
@@ -78,9 +78,10 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -fstack-protector
+	filter-flags -maltivec -mabi=altivec -fstack-protector
 	filter-flags -fPIC
 	filter-flags -fforce-addr
+	filter-flags -fno-unit-at-a-time
 	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-web #49509
 
 	# fix build errors with sse2
@@ -102,15 +103,6 @@ src_compile() {
 
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
-
-	# Disable compiling of altivec-code if it's not in the
-	# USE-flags
-	if use ppc
-	then
-		use altivec \
-			&& myconf="${myconf} --enable-altivec" \
-			|| append-flags -U__ALTIVEC__
-	fi
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	use hppa \
