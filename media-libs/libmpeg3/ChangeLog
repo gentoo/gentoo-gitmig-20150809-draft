@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.26 2004/09/30 13:28:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.27 2004/09/30 13:46:24 phosphan Exp $
+
+  30 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> libmpeg3-1.5.2.ebuild:
+  Will get linking correctly now even if liba52 was compiled with djbfft.
+  Adding metadata.xml.
 
   30 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> libmpeg3-1.5.2.ebuild:
   Prefixed linker path with ${ROOT} (see bug #54377)
