@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (10 Oct 2003)
+# motif cleanups
+=openmotif-2.2.2-r3
+=openmotif-2.1.30-r2
+=lesstif-0.93.91
+
 # <carpaski@@gentoo.org> (8 Oct 2003)
 # python-2.2 python-2.3 integration ebuild
 >=sys-apps/portage-2.0.49-r11
