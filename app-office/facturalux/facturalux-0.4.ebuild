@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/facturalux-0.4.ebuild,v 1.1 2003/11/06 12:13:11 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/facturalux/facturalux-0.4.ebuild,v 1.2 2004/03/14 01:45:29 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="General purpose ERP/CRM software"
 HOMEPAGE="http://www.facturalux.org"
 SRC_URI="mirror://sourceforge/facturalux/${P}.tar.bz2
