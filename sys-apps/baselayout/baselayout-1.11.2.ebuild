@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.3 2004/10/13 19:13:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.2.ebuild,v 1.4 2004/10/13 23:20:03 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -253,7 +253,6 @@ src_install() {
 
 	cp -P ${S}/init.d/* ${D}/etc/init.d
 	chmod a+x ${D}/etc/init.d/*
-	doexe ${S}/init.d/*
 	insinto /etc/conf.d
 	doins ${S}/etc/conf.d/*
 	insinto /etc/env.d
