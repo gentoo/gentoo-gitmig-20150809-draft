@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.23 2004/08/14 00:41:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.24 2004/08/14 13:52:43 weeve Exp $
+
+  14 Aug 2004; Jason Wever <weeve@gentoo.org> bittornado-0.3.7.ebuild:
+  Added ~sparc keyword.
 
   13 Aug 2004; Jon Hood <squinky86@gentoo.org> -bittornado-0.3.2.ebuild,
   -bittornado-0.3.3.ebuild, bittornado-0.3.6.ebuild:
