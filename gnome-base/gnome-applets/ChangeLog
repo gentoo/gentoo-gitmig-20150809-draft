@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.8 2002/06/28 08:32:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.9 2002/07/25 12:38:00 spider Exp $
 
+*gnome-applets-2.0.1 (25 Jul 2002)
+ 25 Jul 2002; Spider <spider@gentoo.org> gnome-applets-2.0.1.ebuild :
+ Version bump. thanks to Manny for reminding me 
+  
 *gnome-applets-2.0.0-r1 (28 Jun 2002)
   28 Jun 2002; Spider <spider@gentoo.org> gnome-applets-2.0.0-r1.ebuild :
   automatic schema detection, libtoolize properly, debug properly, build the menu applet and use a single threaded build to try and detect errors.
