@@ -1,6 +1,7 @@
 MD5 8fe8d697581a87240d5729b112ddfa36 turck-mmcache-2.4.2.ebuild 2591
 MD5 f70fb61786a2c8d148e6a9c7b54d5b3f turck-mmcache-2.3.22.ebuild 2404
 MD5 4f11d817f510e117ecea35cf06410ebc turck-mmcache-2.4.4.ebuild 2590
+MD5 636fd7bb728b7ddf719731abf2a58fa6 turck-mmcache-2.4.6.ebuild 2590
 MD5 168accb4420df208a25c892a1667fa7b turck-mmcache-2.4.1.ebuild 2590
 MD5 2ff33d4b37007a31d9061cf43989fcce turck-mmcache-2.3.21.ebuild 2350
 MD5 0459beac3ce0b38cbe3e29c825c00c05 turck-mmcache-2.4.3.ebuild 2590
@@ -18,3 +19,4 @@ MD5 07bc310ecace6b50e79d5cccb1b1b701 files/digest-turck-mmcache-2.4.2 71
 MD5 bf570e54885feb7badb635bf2e542669 files/digest-turck-mmcache-2.4.3 71
 MD5 3814ad325615c45fbc555ddcd6798042 files/digest-turck-mmcache-2.4.4 71
 MD5 63ecc7979bc412d5d5d23ba104d981e8 files/digest-turck-mmcache-2.4.5 71
+MD5 a56fe385039b1cde093f6ec61bb384a2 files/digest-turck-mmcache-2.4.6 71
