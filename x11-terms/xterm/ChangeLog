@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.48 2004/10/13 14:05:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.49 2004/10/17 11:05:07 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xterm-196.ebuild:
+  stable on amd64.
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> xterm-196.ebuild:
   Stable on hppa.
