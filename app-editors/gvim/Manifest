@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2278f735499803b3f130ceb0969f8056 gvim-6.3-r4.ebuild 1083
-MD5 197de9c052ec9de50f4b64b98903b465 ChangeLog 17510
-MD5 466fc38251aa7e5c7fb50737ec5ccdfd gvim-6.3.068.ebuild 1111
-MD5 1fbbd099d9d5388cc226da7d0155d28d gvim-7.0_alpha20050321.ebuild 1236
-MD5 dd00e2d788cb78d53e7a9effc2aae8ae gvim-7.0_alpha20050326.ebuild 1236
 MD5 2bf3627d58fc5bc11e7deaebec4211c5 gvim-6.3-r2.ebuild 1084
+MD5 466fc38251aa7e5c7fb50737ec5ccdfd gvim-6.3.068.ebuild 1111
+MD5 dd00e2d788cb78d53e7a9effc2aae8ae gvim-7.0_alpha20050326.ebuild 1236
+MD5 df87bb0d475e4da7acff21613f12cecd gvim-6.3-r4.ebuild 1082
+MD5 1fbbd099d9d5388cc226da7d0155d28d gvim-7.0_alpha20050321.ebuild 1236
+MD5 1477efc8c1df2a29d4ee406cb5dfa36b ChangeLog 17599
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 5fedc57d438147906375b2ef60daa4b9 files/gvim.xpm 1371
-MD5 402d38e428c7b23a62b23f7e96250099 files/digest-gvim-6.3.068 275
-MD5 a3137e1d3f7ae220a1db3dde70cafb9c files/gvimrc-r1 1050
-MD5 99367dbfe85f20e78e648bdcf0760d86 files/gvim-completion 1200
-MD5 823c8bb76c4568a8ddb7a17accd057e7 files/gvimrc 780
-MD5 bbd46fbd80747c453693e4f2e258f106 files/gvim.desktop 845
-MD5 461a5fdc06cac13bb9c7d9c869d68e2e files/digest-gvim-6.3-r2 274
-MD5 89adcfac6079754bcf39aaed63e92704 files/digest-gvim-7.0_alpha20050326 157
 MD5 fd40cb6bcf70915df71cdfc65cd0ac7c files/digest-gvim-7.0_alpha20050321 157
+MD5 89adcfac6079754bcf39aaed63e92704 files/digest-gvim-7.0_alpha20050326 157
+MD5 a3137e1d3f7ae220a1db3dde70cafb9c files/gvimrc-r1 1050
+MD5 bbd46fbd80747c453693e4f2e258f106 files/gvim.desktop 845
+MD5 823c8bb76c4568a8ddb7a17accd057e7 files/gvimrc 780
+MD5 402d38e428c7b23a62b23f7e96250099 files/digest-gvim-6.3.068 275
+MD5 5fedc57d438147906375b2ef60daa4b9 files/gvim.xpm 1371
+MD5 99367dbfe85f20e78e648bdcf0760d86 files/gvim-completion 1200
+MD5 461a5fdc06cac13bb9c7d9c869d68e2e files/digest-gvim-6.3-r2 274
 MD5 b9203f742a2fb575ca24d486e177a9dc files/digest-gvim-6.3-r4 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRbsKLLFUmVNQ7rkRArbvAJ94YgoShu7pRIVwi8I3qaP47FcQSgCfddar
-H2uWauVJdkWOSfbsDwrHDIg=
-=pIDk
------END PGP SIGNATURE-----
