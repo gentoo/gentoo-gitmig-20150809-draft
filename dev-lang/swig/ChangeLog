@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.19 2003/12/26 13:53:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.20 2003/12/29 02:49:02 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> swig-1.3.19.ebuild:
+  Move to mips stable (~mips -> mips)
 
 *swig-1.3.20 (26 Dec 2003)
 
