@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.13 2004/06/24 22:26:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.14 2004/07/14 17:03:34 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Arphic Fonts"
@@ -13,6 +13,7 @@ SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 SLOT="0"
 LICENSE="Arphic"
 KEYWORDS="ia64 x86 ppc alpha sparc hppa amd64 mips"
+IUSE=""
 
 DEPEND="virtual/x11
 	x11-misc/ttmkfdir"
@@ -22,8 +23,8 @@ src_install() {
 	insinto /usr/share/fonts/ttf/zh_TW
 	doins b*.ttf
 	if test -r /usr/share/fonts/ttf/zh_TW/fonts.scale; then
-		tail +2 /usr/share/fonts/ttf/zh_TW/fonts.scale > tmp
-		tail +2 ${FILESDIR}/TW-fonts.scale >> tmp
+		tail -n +2 /usr/share/fonts/ttf/zh_TW/fonts.scale > tmp
+		tail -n +2 ${FILESDIR}/TW-fonts.scale >> tmp
 		echo $(sort -u tmp | wc -l) > newfont.scale
 		sort -u tmp >> newfont.scale
 		newins newfont.scale fonts.scale
@@ -33,8 +34,8 @@ src_install() {
 	insinto /usr/share/fonts/ttf/zh_CN
 	doins g*.ttf
 	if test -r /usr/share/fonts/ttf/zh_CN/fonts.scale; then
-		tail +2 /usr/share/fonts/ttf/zh_CN/fonts.scale > tmp
-		tail +2 ${FILESDIR}/CN-fonts.scale >> tmp
+		tail -n +2 /usr/share/fonts/ttf/zh_CN/fonts.scale > tmp
+		tail -n +2 ${FILESDIR}/CN-fonts.scale >> tmp
 		echo $(sort -u tmp | wc -l) > newfont.scale
 		sort -u tmp >> newfont.scale
 		newins newfont.scale fonts.scale
