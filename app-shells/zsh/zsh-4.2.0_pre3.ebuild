@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre1.ebuild,v 1.1 2004/02/26 21:55:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre3.ebuild,v 1.1 2004/03/05 23:59:40 pyrania Exp $
 
-IUSE="maildir ncurses static doc"
+IUSE="maildir ncurses static doc pcre"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~hppa"
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"
-RDEPEND=">=dev-libs/libpcre-3.9
+RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	sys-libs/libcap
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 
@@ -39,10 +39,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use ncurses && myconf="--with-curses-terminfo"
+	use ncurses && myconf="${myconf} --with-curses-terminfo"
 	use maildir && myconf="${myconf} --enable-maildir-support"
 	use static && myconf="${myconf} --disable-dynamic" \
 		&& LDFLAGS="${LDFLAGS} -static"
+	use pcre && myconf="${myconf} --enable-pcre"
 
 	econf \
 		--bindir=/bin \
