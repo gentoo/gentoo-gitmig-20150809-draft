@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.5 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.6 2003/03/04 11:11:49 jhhudso Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
 #
@@ -45,12 +45,18 @@ else
 	die "Eek!  I don't know how to interpret the version!"
 fi
 
+LANG="vim-${vim_version}-lang.tar.gz"
+if [ ! -z "${LANG}" ]; then
+	SRC_URI="${SRC_URI} nls? ( ftp://ftp.vim.org/pub/vim/extra/${LANG} )"
+fi
+
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
 src_unpack() {
 	unpack ${A}
+	unpack ${LANG}
 	# Fixup a script to use awk instead of nawk
 	cd ${S}/runtime/tools
 	mv mve.awk mve.awk.old
