@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.1 2005/01/26 10:36:25 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.2 2005/01/26 13:41:22 swegener Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="x11-libs/gtk+
 	media-libs/libsamplerate
 	media-video/mjpegtools
 	media-sound/rawrec
-	ffmpeg ( media-video/ffmpeg )
+	ffmpeg? ( media-video/ffmpeg )
 	quicktime? ( virtual/quicktime )
 	dvdr? ( media-video/dvdauthor )"
 

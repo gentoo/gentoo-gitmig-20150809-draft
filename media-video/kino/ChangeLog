@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.27 2005/01/26 10:36:25 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.28 2005/01/26 13:41:22 swegener Exp $
+
+  26 Jan 2005; Sven Wegener <swegener@gentoo.org> kino-0.7.5-r1.ebuild:
+  Added missing ? in *DEPEND.
 
   25 Jan 2005; Marc Hildebrand <zypher@gentoo.org> kino-0.7.5-r1.ebuild:
   Added ffmpeg-dep. Should close bug #70062.
