@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.24-r1.ebuild,v 1.1 2002/03/27 14:06:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.24-r1.ebuild,v 1.2 2002/03/27 23:12:32 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced partition modification system"
@@ -15,6 +15,15 @@ DEPEND="virtual/glibc
 	nls? ( >=sys-devel/gettext-0.10.38 )
 	python? ( >=dev-lang/python-2.0 )"
 
+src_unpack() {
+	unpack ${A}
+	if [ -z "`use nls`" ]
+	then
+		touch ${S}/parted/libintl.h
+	        touch ${S}/debug/clearfat/libintl.h
+		find ${S}/libparted/ -type d -exec touch {}/libintl.h \;
+	fi
+}
 
 src_compile() {
 
