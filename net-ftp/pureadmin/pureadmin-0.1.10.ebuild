@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.1 2004/06/08 02:31:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.2 2004/06/08 20:37:34 dholm Exp $
 
 IUSE="debug gnome"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/purify/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="sys-libs/glibc
 	sys-libs/zlib
