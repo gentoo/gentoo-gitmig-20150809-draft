@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.37.ebuild,v 1.5 2004/04/30 13:25:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.37.ebuild,v 1.6 2004/05/01 17:26:20 agriffis Exp $
 
-inherit gnome.org libtool
+inherit gnome.org libtool eutils
 
 IUSE="nls"
 

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.21 2004/04/30 13:25:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.22 2004/05/01 17:26:20 agriffis Exp $
+
+  01 May 2004; Aron Griffis <agriffis@gentoo.org> gnome-print-0.37.ebuild:
+  Add inherit eutils
 
   30 Apr 2004; foser <foser@gentoo.org> gnome-print-0.37.ebuild :
   Add patch to fix build with >=freetype-2.1.7, patch provided by Benoit <b.boissinot@ifrance.com> in #44114

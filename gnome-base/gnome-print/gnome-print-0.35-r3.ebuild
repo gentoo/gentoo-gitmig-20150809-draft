@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.21 2003/12/09 17:33:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.22 2004/05/01 17:26:20 agriffis Exp $
 
 IUSE="nls tetex"
 
