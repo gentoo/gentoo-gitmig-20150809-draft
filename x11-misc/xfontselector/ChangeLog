@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfontselector
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfontselector/ChangeLog,v 1.8 2004/01/25 22:44:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfontselector/ChangeLog,v 1.9 2004/04/11 07:46:56 lv Exp $
+
+  10 Apr 2004; Travis Tilley <lv@gentoo.org> xfontselector-0.9.2.ebuild:
+  changed xfree dependency to virtual/x11 and added ~amd64 keyword
 
   25 Jan 2004; Markus Nigbur <pyrania@gentoo.org> xfontselector-0.9.2.ebuild:
   Sourceforge mirrors are a good thing[tm].
