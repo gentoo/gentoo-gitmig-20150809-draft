@@ -1,6 +1,6 @@
 #!/sbin/runscript
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/init.d_ircd,v 1.1 2003/12/17 02:37:45 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/files/init.d_ircd,v 1.2 2004/07/18 03:59:42 dragonheart Exp $
 
 depend()
 {
