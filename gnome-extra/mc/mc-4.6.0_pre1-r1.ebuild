@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r1.ebuild,v 1.1 2002/10/24 22:11:32 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1-r1.ebuild,v 1.2 2002/10/25 03:53:10 bcowan Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -63,27 +63,24 @@ src_compile() {
 				--with-codepagedir=/var/lib/samba/codepages" \
 	    || myconf="${myconf} --without-samba"
 
-	LDFLAGS="-lcrypt -lncurses -lpam" ./configure --host=${CHOST} \
-						    --prefix=/usr \
-						    --mandir=/usr/share/man \
-						    --sysconfdir=/etc \
-						    --localstatedir=/var/lib \
-						    --with-vfs \
-						    --with-netrc \
-						    --with-ext2undel \
-						    --with-edit \
-						    ${myconf} || die
+	LDFLAGS="-lcrypt -lncurses -lpam" 
+	econf --host=${CHOST} \
+	    --prefix=/usr \
+	    --mandir=/usr/share/man \
+	    --sysconfdir=/etc \
+	    --localstatedir=/var/lib \
+	    --with-vfs \
+	    --with-netrc \
+	    --with-ext2undel \
+	    --with-edit \
+	    ${myconf} || die
 
 	emake || die  
 }
 
 src_install() {                               
-	make prefix=${D}/usr \
-	    mandir=${D}/usr/share/man \
-	    sysconfdir=${D}/etc \
-	    localstatedir=${D}/var/lib \
-	    install || die
-
+	einstall
+	
 	dodoc ABOUT-NLS COPYING* FAQ INSTALL* NEWS README*
 }
 
