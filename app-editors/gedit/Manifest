@@ -1,12 +1,22 @@
-MD5 cd80c4f8c54dcdafb857f9d5088e6cb5 ChangeLog 10270
-MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
-MD5 da16a84ad66966252735ff4e89da378f gedit-2.8.2.ebuild 871
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45a95de20e7cb7f79d451ac29910e7c3 ChangeLog 10352
 MD5 0c0ccaac81f3e44e2a7760907d6ce127 gedit-2.8.1.ebuild 872
+MD5 535c171ce0a120aad5fc0082aa5a2ee4 gedit-2.8.2.ebuild 866
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 41ebaa311afff0a146db6d6371aca89b gedit-2.6.2.ebuild 870
 MD5 78fe61c6756bd538020ada164ec883b7 gedit-2.8.0.ebuild 879
+MD5 41ebaa311afff0a146db6d6371aca89b gedit-2.6.2.ebuild 870
+MD5 291dcd2524b897c18af75968be9c0ef3 gedit-0.9.6-r1.ebuild 905
 MD5 b1cd4f5d4adf64b0c6ce68ebe818a495 files/digest-gedit-0.9.6-r1 64
-MD5 016d811ea6ff13074fe74363806ea7d5 files/digest-gedit-2.8.2 65
-MD5 ac75c9d25435bbdf2ec88f474d8bbe35 files/digest-gedit-2.8.1 65
-MD5 6d591a38f842abf41b8f4462dea4ec3f files/digest-gedit-2.6.2 65
 MD5 3559e65cd6237e86af0f0074bdfc4c6d files/digest-gedit-2.8.0 65
+MD5 6d591a38f842abf41b8f4462dea4ec3f files/digest-gedit-2.6.2 65
+MD5 ac75c9d25435bbdf2ec88f474d8bbe35 files/digest-gedit-2.8.1 65
+MD5 016d811ea6ff13074fe74363806ea7d5 files/digest-gedit-2.8.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4GqKCHk4+ZoBpvsRAsHzAJ410tvD498YzPsYIvhZAGBDjNAIdwCgtU2Y
+NHnXyF8YE/wf5e/UmO+5gJc=
+=iIv+
+-----END PGP SIGNATURE-----
