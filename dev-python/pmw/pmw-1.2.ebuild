@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.6 2004/05/15 19:22:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.7 2004/05/16 23:56:48 kloeri Exp $
 
 inherit distutils python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pmw.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pmw/Pmw.${PV}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha"
 LICENSE="MIT"
 IUSE=""
 
