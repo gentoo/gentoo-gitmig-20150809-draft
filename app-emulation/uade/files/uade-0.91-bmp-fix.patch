@@ -1,6 +1,6 @@
-diff -Naur uade-0.91-orig/plugindir/beepmp/uade.c uade-0.91/plugindir/beepmp/uade.c
---- uade-0.91-orig/plugindir/beepmp/uade.c	2004-07-27 16:22:37.000000000 +0200
-+++ uade-0.91/plugindir/beepmp/uade.c	2004-09-09 15:37:24.609571008 +0200
+diff -u -r uade-0.91-org/plugindir/beepmp/uade.c uade-0.91/plugindir/beepmp/uade.c
+--- uade-0.91-org/plugindir/beepmp/uade.c	2004-09-10 21:36:16.569584744 +0300
++++ uade-0.91/plugindir/beepmp/uade.c	2004-09-10 21:36:33.496011536 +0300
 @@ -305,9 +305,12 @@
  /* xmms calls this function to check song */
  static int is_our_file(char *filename) {
@@ -14,16 +14,25 @@ diff -Naur uade-0.91-orig/plugindir/beepmp/uade.c uade-0.91/plugindir/beepmp/uad
    ours = check_my_file(filename, 0, 0);
    if (ours) {
      FILE *f = fopen(filename, "rb");
-diff -Naur uade-0.91-orig/src/uade.c uade-0.91/src/uade.c
---- uade-0.91-orig/src/uade.c	2004-07-27 16:22:37.000000000 +0200
-+++ uade-0.91/src/uade.c	2004-09-09 15:38:58.252335144 +0200
-@@ -443,6 +443,9 @@
- {
-   int bytesread, status;
-   FILE *file;
+@@ -648,6 +651,10 @@
+   int *songdata;
+   char *tempname;
+   int have_name_hash;
 +  const char *prefix = "file://";
-+  if (strncasecmp(name, prefix, strlen(prefix)) == 0)
-+    name += strlen(prefix);
-   file = fopen(name, "rb");
-   if (!file) {
-     fprintf(stderr,"uade: couldn't load %s %s\n", expl, name);
++
++  if (strncasecmp(filename, prefix, strlen(prefix)) == 0)
++    filename += strlen(prefix);
+ 
+   if (playingbit) {
+     fprintf(stderr, "uade: A serious bug has been detected:\n");
+@@ -1059,6 +1066,10 @@
+ static void get_song_info(char *filename, char **title, int *length) {
+   char *temp;
+   char md5namehash[33];
++  const char *prefix = "file://";
++
++  if (strncasecmp(filename, prefix, strlen(prefix)) == 0)
++    filename += strlen(prefix);
+ 
+   temp = strrchr(filename, (int) '/');
+   if (temp) {

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.15 2004/09/09 14:04:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.16 2004/09/10 19:26:32 spock Exp $
+
+  10 Sep 2004; Michal Januszewski <spock@gentoo.org>
+  files/uade-0.91-bmp-fix.patch:
+  Updated the BMP fix. Thanks to Heikki Orsila for the new patch.
 
 *uade-0.91-r1 (09 Sep 2004)
 
