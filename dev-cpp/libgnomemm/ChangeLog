@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.14 2004/05/12 07:58:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.15 2004/05/21 13:59:26 khai Exp $
+
+  21 May 2004; Yi Qiang <khai@gentoo.org> libgnomemm-2.0.1.ebuild,
+  libgnomemm-2.6.0.ebuild:
+  Fixed slots, 2.0.0 and 2.0.1 are in same slot, changed 2.6 slot to 2.6
 
 *libgnomemm-2.6.0 (09 May 2004)
 
