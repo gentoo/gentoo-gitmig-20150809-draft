@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-19.0.0.ebuild,v 1.13 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-19.0.0.ebuild,v 1.14 2002/12/15 10:44:18 bjb Exp $
 
 
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pfdubois.com/numpy/"
 DEPEND="virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="as-is"
 
 PYTHON_VERSION=

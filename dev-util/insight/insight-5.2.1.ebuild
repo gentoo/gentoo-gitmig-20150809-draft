@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.2.1.ebuild,v 1.6 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.2.1.ebuild,v 1.7 2002/12/15 10:44:19 bjb Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 S=${WORKDIR}/${P}
 

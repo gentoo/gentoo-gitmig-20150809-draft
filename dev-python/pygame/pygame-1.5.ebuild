@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.ebuild,v 1.7 2002/12/09 04:21:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.5.ebuild,v 1.8 2002/12/15 10:44:19 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pygame.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 
 DEPEND="virtual/python
 	>=media-libs/libsdl-1.2.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.11 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.12 2002/12/15 10:44:18 bjb Exp $
 
 IUSE="wxwin gtk qt tcltk"
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/python-2.0
 #java? ( dev-python/jython ) Java Swing (javagui) http://www.jython.org
 
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 LICENSE="MIT"
 
 src_compile() {

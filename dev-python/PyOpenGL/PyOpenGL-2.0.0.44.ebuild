@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.7 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.8 2002/12/15 10:44:18 bjb Exp $
 
 inherit virtualx
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pyopengl/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc  alpha"
+KEYWORDS="x86 ~ppc -sparc alpha"
 
 DEPEND="virtual/python
 	>=media-libs/glut-3.7-r2

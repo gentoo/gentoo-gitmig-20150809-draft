@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11-r1.ebuild,v 1.4 2002/12/09 04:22:37 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11-r1.ebuild,v 1.5 2002/12/15 10:44:19 bjb Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 IUSE="nls"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.6 2002/12/09 04:22:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.0.3.ebuild,v 1.7 2002/12/15 10:44:19 bjb Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/2.0.2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1" 
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	>=x11-libs/libwnck-0.17

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.12 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.0.1.ebuild,v 1.13 2002/12/15 10:44:18 bjb Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,7 +16,7 @@ DEPEND="
 	>=dev-db/postgresql-7.1.3"
 
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 LICENSE="GPL-2"
 
 src_compile() {

@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
 HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="x86 ~ppc sparc  alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 
 
 DEPEND=">=dev-lang/python-2.2

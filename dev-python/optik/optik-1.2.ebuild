@@ -11,7 +11,7 @@ HOMEPAGE="http://optik.sourceforge.net/"
 DEPEND="virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 LICENSE="BSD"
 
 src_install () {

@@ -1,6 +1,6 @@
 # Copyright 1999-20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r3.ebuild,v 1.10 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r3.ebuild,v 1.11 2002/12/15 10:44:18 bjb Exp $
 
 IUSE="gnome opengl"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/python
 RDEPEND="${RDEPEND}"
 
 SLOT="0"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 LICENSE="GPL-2"
 
 src_compile() {
