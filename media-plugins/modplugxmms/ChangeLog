@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/modplugxmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.1 2002/12/16 01:18:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.2 2002/12/16 07:20:03 seemant Exp $
 
 *modplugxmms-2.03 (15 Dec 2002)
 
@@ -9,3 +9,5 @@
 
   Plugin for XMMS to play MOD files.  Ebuild by: oscar10@yifan.net
   (Theofilos Intzoglou) in bug #11372
+
+  Added step 4 from the INSTALL doc to pkg_postinst

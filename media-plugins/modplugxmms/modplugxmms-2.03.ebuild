@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.1 2002/12/16 01:18:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.2 2002/12/16 07:20:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for MOD-like music files"
@@ -16,4 +16,11 @@ DEPEND=">=media-sound/xmms-1.2.5-r1"
 src_install () {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
+}
+
+pkg_postinst() {
+	einfo "Open XMMS, go to options->preferences->I/O plugins."
+	einfo "If \"MikMod Player\" is listed under \"Input Plugins\", click on"
+	einfo "it and UNcheck \"Enable Plugin\"."
+	einfo "(If you don't disable MikMod, it will play mods instead of ModPlug.)"
 }
