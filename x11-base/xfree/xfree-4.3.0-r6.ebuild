@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.26 2004/04/19 19:33:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.27 2004/04/21 16:09:05 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -484,9 +484,13 @@ src_unpack() {
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
+			echo "#define HasSSESupport YES" >> config/cf/host.def
+			echo "#define MesaUseSSE YES" >> config/cf/host.def
 		else
 			echo "#define HasKatmaiSupport NO" >> config/cf/host.def
 			echo "#define MesaUseKatmai NO" >> config/cf/host.def
+			echo "#define HasSSESupport NO" >> config/cf/host.def
+			echo "#define MesaUseSSE NO" >> config/cf/host.def
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)

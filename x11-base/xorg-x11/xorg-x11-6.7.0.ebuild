@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.35 2004/04/20 01:31:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.36 2004/04/21 16:06:24 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -532,9 +532,13 @@ fi
 			then
 				echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 				echo "#define MesaUseKatmai YES" >> config/cf/host.def
+				echo "#define HasSSESupport YES" >> config/cf/host.def
+				echo "#define MesaUseSSE YES" >> config/cf/host.def
 			else
 				echo "#define HasKatmaiSupport NO" >> config/cf/host.def
 				echo "#define MesaUseKatmai NO" >> config/cf/host.def
+				echo "#define HasSSESupport NO" >> config/cf/host.def
+				echo "#define MesaUseSSE NO" >> config/cf/host.def
 			fi
 
 			# build with glide3 support? (build the tdfx_dri.o module)
