@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0_beta9-r3.ebuild,v 1.1 2003/11/05 22:44:48 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0_beta9-r3.ebuild,v 1.2 2003/11/05 22:46:09 darkspecter Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -47,7 +47,7 @@ src_unpack() {
 	cd  Documentation/DocBook
 	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
 		&& mv Makefile.new Makefile
-	
+
 	cd ${WORKDIR}/${PF}
 	#This is needed on > 2.5
 	MY_ARCH=${ARCH}
