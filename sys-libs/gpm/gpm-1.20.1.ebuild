@@ -1,20 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.21 2004/10/31 17:30:29 tgall Exp $
-
-# Please use this variable to keep patch names sane for our patches!
-PATCH_VER="1.0"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.22 2005/01/30 10:12:43 vapier Exp $
 
 inherit eutils
 
+PATCH_VER="1.0"
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
-# Future patch's for gpm should keep this format.  This should help others
-# maintain the ebuild and keep patch's simple and and easy to read.
-SRC_PATH="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2"
-GPM_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
-SRC_URI="${SRC_PATH}
-	${GPM_PATCHES}"
+SRC_URI="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,10 +24,9 @@ PATCHDIR=${WORKDIR}/patches
 src_unpack() {
 	unpack ${A}
 	unpack ${P}-patches-${PATCH_VER}.tar.bz2
+	cd ${S}
 
-	# This little hack turns off EMACS byte compilation.  We really
-	# don't want this thing auto-detecting emacs.
-	cd ${S}; epatch ${WORKDIR}/patches
+	epatch ${WORKDIR}/patches
 
 	# Add missing 'mkinstalldirs' script
 	cp -f /usr/share/automake/mkinstalldirs ${S}
