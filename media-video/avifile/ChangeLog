@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.82 2004/11/12 10:57:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.83 2004/11/16 08:51:01 phosphan Exp $
+
+  16 Nov 2004; Patrick Kursawe <phosphan@gentoo.org>
+  avifile-0.7.41.20041001.ebuild:
+  Adding compile bug fixes from -r1
 
 *avifile-0.7.41.20041001-r1 (12 Nov 2004)
 

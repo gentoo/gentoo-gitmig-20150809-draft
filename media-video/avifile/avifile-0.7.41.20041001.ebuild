@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.9 2004/10/23 14:35:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.10 2004/11/16 08:51:01 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,9 +48,22 @@ src_unpack() {
 	# make sure pkgconfig file is correct #53183
 	cd ${S}
 	epatch ${FILESDIR}/throw.patch
+	epatch ${FILESDIR}/${PN}-${PV}-gcc2.patch
 	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 	rm -f avifile.pc
-	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in
+	sed -i "/^includedir=/s:avifile$:avifile-${PV:0:3}:" avifile.pc.in \
+		|| die "sed failed (avifile.pc.in)"
+	sed -e "s:| sed s/-g//::" -i configure || die "sed failed (-g)"
+	# Fix qt detection
+	sed -i \
+		-e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
+		configure || die "sed failed (qt detection)"
+	# Fix hardcoded Xrender linking, bug #68899
+	if ! use X; then
+		sed -e 's/-lXrender//g' -i lib/video/Makefile.* \
+		|| die "sed failed (Xrender)"
+	fi
+
 }
 
 src_compile() {
@@ -99,11 +112,6 @@ src_compile() {
 	# borks, bug #11941.
 	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
 	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
-
-	# Fix qt detection
-	sed -i \
-		-e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
-		configure
 
 	filter-flags "-momit-leaf-frame-pointer"
 
