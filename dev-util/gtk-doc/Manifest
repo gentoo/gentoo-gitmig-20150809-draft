@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2f1e1a1eca977d78cacb6d15c1832e53 ChangeLog 3952
-MD5 df29f4e6c72dd67fb3bb9e534303d7c5 gtk-doc-1.1.ebuild 938
+MD5 674733f144d58b191d863617c7af362e gtk-doc-1.1.ebuild 938
+MD5 c75a505b5c98f9d108146836a3359e5c ChangeLog 4042
+MD5 cb1513999510ccbcbcac73c3d6120bdd gtk-doc-1.2-r1.ebuild 999
+MD5 dd124b008102c945d9a4cf4b944e55ac gtk-doc-1.2.ebuild 842
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 3f6a72028769fcdaf92a421a96671957 gtk-doc-1.2-r1.ebuild 1001
-MD5 b7ce91b597ca57ce27c0e52e3bab6539 gtk-doc-1.2.ebuild 845
 MD5 9e9bf533df75a1c8173b97715f5391a6 files/digest-gtk-doc-1.2-r1 64
 MD5 c036d436f5c42ec78ef0bb5507eb5437 files/digest-gtk-doc-1.1 64
 MD5 9e9bf533df75a1c8173b97715f5391a6 files/digest-gtk-doc-1.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxdJaugEuf3OQ0akRAgnFAJ9H5Z726yaz8cKlki+hSFB8HpFXVgCgg+xA
-OEvFoOPiTSLD1gQKrAqdPTw=
-=vnCy
------END PGP SIGNATURE-----

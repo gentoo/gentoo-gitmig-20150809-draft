@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.2.ebuild,v 1.5 2004/06/25 03:15:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.2.ebuild,v 1.6 2005/02/05 23:26:12 blubb Exp $
 
 inherit elisp-common gnome2
 

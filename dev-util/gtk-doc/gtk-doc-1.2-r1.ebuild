@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.2-r1.ebuild,v 1.5 2004/12/19 19:11:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.2-r1.ebuild,v 1.6 2005/02/05 23:26:12 blubb Exp $
 
 inherit elisp-common gnome.org
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gtk.org/"
 LICENSE="GPL-2"
 SLOT="0"
 # Before marking stable, check out bug #46268.
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~hppa ~amd64 ~ia64 s390"
+KEYWORDS="x86 ~ppc sparc ~mips alpha ~hppa amd64 ~ia64 s390"
 IUSE="emacs"
 
 DEPEND=">=app-text/openjade-1.3.1
