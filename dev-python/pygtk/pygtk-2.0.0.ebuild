@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.17.ebuild,v 1.3 2003/08/28 06:55:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.0.0.ebuild,v 1.1 2003/09/03 12:39:01 liquidx Exp $
 
 # since its a development version
 inherit debug gnome.org
