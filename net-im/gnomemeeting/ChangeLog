@@ -2,6 +2,15 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+*gnomemeeting-0.96.1-r1 (01 Apr 2003)
+
+  01 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  gnomemeeting-0.96.1-r1.ebuild,
+  files/gnomemeeting-0.96.1-pwcworkaround.patch:
+  backported patch from cvs to fix for PWC cameras. 
+  added gnome and ipv6 use flags. deps cleanup.
+  depends on newest openh323 and pwlib
+
 *gnomemeeting-0.96.1 (20 Mar 2003)
 
   20 Mar 2003; Alastair Tse <liquidx@gentoo.org> gnomemeeting-0.96.1.ebuild:
