@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.1 2002/08/05 01:13:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.2 2002/08/30 11:18:30 cybersystem Exp $
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
 SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/iproute2-2.4.7-now-ss010824.tar.gz"
 HOMEPAGE=""
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 DEPEND="virtual/glibc virtual/linux-sources"
 LICENSE="GPL-2"
