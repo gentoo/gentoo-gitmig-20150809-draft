@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.30 2004/10/19 02:42:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.31 2004/10/24 03:13:29 nerdboy Exp $
+
+*tiff-3.7.0 (23 Oct 2004)
+
+  23 Oct 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
+  +files/tiff-3.7.0-sharedlibsnamefix.patch,
+  +files/tiff-3.7.0-tiff2ps_float.patch, +tiff-3.7.0.ebuild:
+  new version to address bug 68096 (thanks to stan <stan@saticed.me.uk> for the
+  ebuild and patches). Should work with new hylafax 4.2-r1 ebuild.
 
   18 Oct 2004; Tom Gall <tgall@gentoo.org> tiff-3.6.1-r2.ebuild:
   stable on ppc64

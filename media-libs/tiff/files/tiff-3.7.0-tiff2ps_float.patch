@@ -1,0 +1,21 @@
+--- tiff-3.7.0.orig/tools/tiff2ps.c	2004-10-14 18:53:28.000000000 +0100
++++ tiff-3.7.0/tools/tiff2ps.c	2004-10-20 16:34:09.000000000 +0100
+@@ -411,7 +411,7 @@
+ static void
+ setupPageState(TIFF* tif, uint32* pw, uint32* ph, double* pprw, double* pprh)
+ {
+-	double xres = 0.0, yres = 0.0;
++	float xres = 0.0, yres = 0.0;
+ 
+ 	TIFFGetField(tif, TIFFTAG_IMAGEWIDTH, pw);
+ 	TIFFGetField(tif, TIFFTAG_IMAGELENGTH, ph);
+@@ -542,7 +542,8 @@
+ 	double pw, double ph, double lm, double bm, int cnt)
+ {
+ 	uint32 w, h;
+-	double ox, oy, prw, prh;
++	float ox, oy;
++	double prw, prh;
+ 	double scale = 1.0;
+ 	double left_offset = lm * PS_UNIT_SIZE;
+ 	double bottom_offset = bm * PS_UNIT_SIZE;
