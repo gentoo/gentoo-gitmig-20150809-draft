@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.53 2004/10/05 11:01:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.54 2004/10/13 17:26:20 voxus Exp $
+
+*gpgme-1.0.0-r2 (13 Oct 2004)
+
+  13 Oct 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +files/gpgme-1.0.0-assuan_fix.patch,
+  +gpgme-1.0.0-r2.ebuild:
+  Trivial configure fix, closing bug #66362.
+  Thanks to Gregorio Guidi <g.guidi@sns.it>.
 
   05 Oct 2004; Guy Martin <gmsoft@gentoo.org> gpgme-0.3.14-r1.ebuild:
   Stable on hppa.
