@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.1 2004/10/29 14:12:24 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.05.ebuild,v 1.2 2004/10/29 23:49:19 motaboy Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_install() {
-	kde_src_install
+	kde_src_install make
 	dohtml *.htm*
 	dodoc *.lsm
 }
