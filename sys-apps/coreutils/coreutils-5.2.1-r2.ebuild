@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.3 2004/11/12 15:37:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r2.ebuild,v 1.4 2004/12/13 15:29:04 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,6 +71,12 @@ src_unpack() {
 
 	# Sparc32 SMP bug fix -- see bug #46593
 	use sparc && echo -ne "\n\n" >> ${S}/src/pr.c
+
+	# Since we've patched many .c files, the make process will 
+	# try to re-build the manpages by running `./bin --help`.  
+	# When cross-compiling, we can't do that since 'bin' isn't 
+	# a native binary, so let's just install outdated man-pages.
+	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] && touch man/*.1
 }
 
 src_compile() {
