@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.5 2003/05/02 14:55:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.6 2003/07/09 17:26:55 liquidx Exp $
 
 IUSE=""
 DESCRIPTION="gnome front end to gnupg"
@@ -11,12 +11,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	>=app-crypt/gnupg-1.2.0
 	=app-crypt/gpgme-0.3.14
 	>=x11-libs/gtk+-2*
 	>=gnome-base/libgnome-2*
 	>=app-text/scrollkeeper-0.3*"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {                           
 	econf
