@@ -1,10 +1,17 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.4 2002/08/22 19:35:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.5 2002/08/29 18:39:22 raker Exp $
+
+*wxPython-2.3.2.1-r2 (29 Aug 2002)
+
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r2.ebuild,
+  file/digest-wxPython-2.3.2.1-r2, files/ledctrl.diff :
+  GLCANVAS and GIZMOS extensions are now re-enabled and we should have a
+  full-featured ebuild of wxPython.
 
 *wxPython-2.3.2.1-r1 (2 Jul 2002)
 
-  22 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r1,
+  22 Aug 2002; Nick Hadaway <raker@gentoo.org> wxPython-2.3.2.1-r1.ebuild,
   files/noglcanvas.diff, files/nogizmos.diff :
   Ebuild disables glcancas and gizmos extensions as they currently are 
   not building correctly.

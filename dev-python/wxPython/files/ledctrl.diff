@@ -1,0 +1,60 @@
+--- ledctrl.cpp	Thu Aug 29 12:36:52 2002
++++ ledctrl.cpp-cvs	Thu Aug 29 12:36:22 2002
+@@ -134,6 +134,7 @@
+ {
+     if (Value != m_Value)
+     {
++#ifdef __WXDEBUG__
+         if (!Value.IsEmpty())
+         {
+             for(size_t i=0; i<Value.Length(); i++) {
+@@ -142,6 +143,7 @@
+                              wxT("wxLEDNumberCtrl can only display numeric string values."));
+             }
+         }
++#endif
+ 
+         m_Value = Value;
+         RecalcInternals(GetClientSize());
+@@ -191,7 +193,7 @@
+             DrawDigit(MemDc, DIGITALL, i);
+ 
+         // Draw the digits.
+-        switch (m_Value[i])
++        switch (m_Value.GetChar(i))
+         {
+             case '0' :
+                 DrawDigit(MemDc, DIGIT0, i);
+@@ -230,7 +232,7 @@
+                 // just skip it
+                 break;
+             default :
+-                wxFAIL_MSG(_("Unknown digit value"));
++                wxFAIL_MSG(wxT("Unknown digit value"));
+                 break;
+         }
+     }
+@@ -318,12 +320,12 @@
+     if ((Height * 0.07) < 1)
+         m_LineMargin = 1;
+     else
+-        m_LineMargin = Height * 0.07;
++        m_LineMargin = (int)(Height * 0.07);
+ 
+     if ((Height * 0.35) < 1)
+         m_LineLength = 1;
+     else
+-        m_LineLength = Height * 0.35;
++        m_LineLength = (int)(Height * 0.35);
+ 
+     m_LineWidth = m_LineMargin;
+ 
+@@ -344,7 +346,7 @@
+             m_LeftStartPos = (ClientWidth - ValueWidth) / 2;
+             break;
+         default :
+-            wxFAIL_MSG(_("Unknown alignent value for wxLEDNumberCtrl."));
++            wxFAIL_MSG(wxT("Unknown alignent value for wxLEDNumberCtrl."));
+             break;
+     }
+ }
