@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r6.ebuild,v 1.1 2004/09/28 02:41:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r6.ebuild,v 1.2 2004/09/28 09:30:43 lv Exp $
 
 inherit eutils flag-o-matic gnuconfig gcc
 
@@ -51,6 +51,9 @@ src_unpack() {
 	# the environment because INPUTRC will override even after the
 	# user creates a ~/.inputrc
 	epatch ${FILESDIR}/${P}-etc-inputrc.patch
+
+	# Fix using bash with post-20040808 glibc ebuilds
+	epatch ${FILESDIR}/${P}-jobs.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h

@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.51 2004/09/28 02:41:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.52 2004/09/28 09:30:43 lv Exp $
+
+  28 Sep 2004; Travis Tilley <lv@gentoo.org> +files/bash-2.05b-jobs.patch,
+  +files/bash-3.0-jobs.patch, bash-2.05b-r10.ebuild, bash-2.05b-r9.ebuild,
+  bash-3.0-r5.ebuild, bash-3.0-r6.ebuild:
+  fixed using bash with post-20040808 glibc snapshots
 
 *bash-3.0-r6 (27 Sep 2004)
 

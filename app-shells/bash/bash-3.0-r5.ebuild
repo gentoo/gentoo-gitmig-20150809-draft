@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.6 2004/09/25 04:10:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r5.ebuild,v 1.7 2004/09/28 09:30:43 lv Exp $
 
 inherit eutils flag-o-matic gnuconfig gcc
 
@@ -74,6 +74,9 @@ src_unpack() {
 	# Chet Ramey (upstream maintainer) provided this patch to solve
 	# bug 60127 (bash 3 breaks array stripping)
 	epatch ${FILESDIR}/${P}-array-stripping.patch
+
+	# Fix using bash with post-20040808 glibc ebuilds
+	epatch ${FILESDIR}/${P}-jobs.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h

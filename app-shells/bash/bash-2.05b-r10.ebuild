@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.8 2004/09/25 04:10:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.9 2004/09/28 09:30:43 lv Exp $
 
 inherit gcc eutils flag-o-matic gnuconfig
 
@@ -44,6 +44,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-rbash.patch
 	# Fix parallel make, bug #41002.
 	epatch ${FILESDIR}/${P}-parallel-build.patch
+	# Fix using bash with post-20040808 glibc ebuilds
+	epatch ${FILESDIR}/${P}-jobs.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
