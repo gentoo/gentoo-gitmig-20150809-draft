@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ytalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.14 2005/01/04 04:47:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ChangeLog,v 1.15 2005/02/25 20:33:24 carlo Exp $
+
+*ytalk-3.3.0 (25 Feb 2005)
+
+  25 Feb 2005; Carsten Lohrke <carlo@gentoo.org> +ytalk-3.3.0.ebuild:
+  version bump (X support dropped, license changed to GPL)
 
 *ytalk-3.2.0 (03 Jan 2005)
 
