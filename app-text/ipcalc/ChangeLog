@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ipcalc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.10 2004/09/12 19:45:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ipcalc/ChangeLog,v 1.11 2004/09/14 05:04:26 solar Exp $
+
+*ipcalc-0.37 (14 Sep 2004)
+
+  14 Sep 2004; <solar@gentoo.org> +ipcalc-0.37.ebuild:
+  version bump
 
   12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> ipcalc-0.35.ebuild:
   Add ~alpha keyword, bug 63726.
