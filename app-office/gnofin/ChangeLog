@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnofin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/ChangeLog,v 1.4 2004/03/14 01:45:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnofin/ChangeLog,v 1.5 2004/03/25 18:38:26 jhuebel Exp $
+
+  25 Mar 2004; Jason Huebel,,, <jhuebel@gentoo.org> gnofin-0.8.4.ebuild:
+  updated ebuild to inherit gnuconfig and run gnuconfig_update
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gnofin-0.8.4.ebuild:
   Don't assign default to S; header fix
