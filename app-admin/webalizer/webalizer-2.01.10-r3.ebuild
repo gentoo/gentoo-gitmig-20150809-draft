@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.1 2003/06/22 19:33:01 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.2 2003/07/14 16:58:59 mholzer Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -56,7 +56,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute: \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
+	einfo "Execute: \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with webalizer."
 	einfo
 }

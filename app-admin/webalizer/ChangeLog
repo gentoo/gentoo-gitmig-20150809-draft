@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.13 2003/06/22 19:33:00 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.14 2003/07/14 16:58:59 mholzer Exp $
+
+  14 Jul 2003; Martin Holzer <mholzer@gentoo.org> webalizer-2.01.10-r3.ebuild:
+  Fixed Category in einfo. Closes #24427.
 
 *webalizer-2.01.10-r3 (22 Jun 2003)
 
