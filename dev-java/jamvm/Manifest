@@ -1,9 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd50265d5c7d02751808eb913957a3c4 jamvm-1.3.0.ebuild 971
 MD5 91d620b3425b62e10a0870b53359fe56 jamvm-1.2.4.ebuild 991
 MD5 f45e9211ca388c61328acdd200c8ad99 jamvm-1.2.3.ebuild 970
-MD5 5fda56403b10bfdc43b30575b5da204a ChangeLog 929
+MD5 ebfe7035be8ea0a863a79a7fab310145 ChangeLog 1068
 MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
 MD5 48daca66129e53f178e8567daaeeb6dd jamvm-1.2.5.ebuild 991
 MD5 993705327b355e08b0839151f016a3d6 files/1.2.2-classpath-fix.diff 521
 MD5 930c3e600d634c8af438e364074b01a6 files/digest-jamvm-1.2.3 63
 MD5 30ef1b6a730ddccf8bdae58c108c2f60 files/digest-jamvm-1.2.4 63
 MD5 66c258ef4f621b8380d4a9c2d1e85d77 files/digest-jamvm-1.2.5 63
+MD5 d8fa2dd92bb4b41f8b46fc264520b13d files/digest-jamvm-1.3.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCTZgx06ebR+OMO78RArWRAJ9cMygF2PBxbaxq0RkX3QrDio4MegCdH7FY
+/Ower10rPaTzac7drafYr+s=
+=zOUR
+-----END PGP SIGNATURE-----
