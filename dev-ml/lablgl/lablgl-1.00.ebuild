@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.3 2004/02/17 22:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.4 2004/04/17 10:35:50 lv Exp $
 
 IUSE="tcltk glut doc"
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/ocaml-3.05
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
 
 pkg_setup()
 {
