@@ -96,7 +96,7 @@ nxserver_pkg_postinst() {
 
 	l_szPasswd=passwd
 
-	if [ -f /usr/NX/etc/passwd -a -f /usr/NX/etc/passwords.sample ]; then
+	if [ -f /usr/NX/etc/passwd -a -f /usr/NX/etc/passwords ]; then
 		mv /usr/NX/etc/passwd /usr/NX/etc/passwords
 		l_szPasswd=passwords
 	fi
