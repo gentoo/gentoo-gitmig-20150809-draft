@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.1 2003/08/01 09:17:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nullmailer/nullmailer-1.00_rc7.ebuild,v 1.2 2003/08/03 09:56:45 robbat2 Exp $
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}
@@ -57,7 +57,8 @@ src_install () {
 	cp scripts/nullmailer-log.run ${D}/var/nullmailer/service/log/run
 	fperms 700 /var/nullmailer/service/log/run
 	# usablity
-	dosym /usr/lib/sendmail /usr/sbin/sendmail
+	dodir /usr/lib
+	dosym /usr/sbin/sendmail usr/lib/sendmail
 	# permissions stuff
 	keepdir /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	fperms 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
