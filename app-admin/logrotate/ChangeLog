@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.17 2003/06/09 21:04:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.18 2003/10/29 03:16:04 pebenito Exp $
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> logrotate-3.6.5-r1.ebuild,
+  logrotate-3.6.5.ebuild, files/logrotate-3.6.5-selinux.diff.bz2:
+  Switch SELinux patch from old API to new API.
 
   09 Jun 2003; <msterret@gentoo.org> logrotate-3.6.5-r1.ebuild:
   unmask for everyone
