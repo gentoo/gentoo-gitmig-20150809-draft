@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 357971ed2ecabde97de99e112b0b6977 ChangeLog 517
-MD5 aad9a064adafb947f024cfe34e944ce0 mencal-2.3.ebuild 601
+MD5 dd1f50e39478090424e0752c9a89d452 ChangeLog 592
+MD5 575c87fdfa2e07d5a49fff6be5afa096 mencal-2.3.ebuild 607
 MD5 e2d4c8ca64ced5227ce4d1a0511abdcc metadata.xml 328
 MD5 0e5cac01d86ebee998a3530fa9f26186 files/digest-mencal-2.3 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35fCHTu7gpaalycRAny9AJ4oz0nmfgDfUry3OUpQaZD5berMiACePZs9
-rQPw4IAqmml+nexX+Dm9XyY=
-=xnXn
------END PGP SIGNATURE-----
