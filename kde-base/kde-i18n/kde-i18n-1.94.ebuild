@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-1.94.ebuild,v 1.3 2000/10/06 01:12:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-1.94.ebuild,v 1.4 2000/10/23 11:27:15 achim Exp $
 
 A=kde-i18n.tar.bz2
 S=${WORKDIR}/kde-i18n
@@ -17,7 +17,7 @@ src_unpack () {
 
 }
 src_compile() {
-    try ./configure --prefix=/opt/kde --host=${CHOST} --with-ssl-dir=/usr \
+    try ./configure --prefix=/opt/kde2 --host=${CHOST} --with-ssl-dir=/usr \
 		--with-qt-dir=/usr/lib/qt-x11-2.2.0 \
 		--with-qt-includes=/usr/lib/qt-x11-2.2.0/include \
 		--with-qt-libs=/usr/lib/qt-x11-2.2.0/lib

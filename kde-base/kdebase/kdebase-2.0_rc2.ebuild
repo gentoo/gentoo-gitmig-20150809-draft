@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0_rc2.ebuild,v 1.1 2000/10/19 16:18:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.0_rc2.ebuild,v 1.2 2000/10/23 11:27:15 achim Exp $
 
 P=${PN}-2.0rc2
 A="${P}.tar.bz2"
@@ -16,7 +16,7 @@ src_compile() {
     export CFLAGS="${CFLAGS} -I/usr/X11R6/include"
     export CXXFLAGS="${CXXFLAGS} -I/usr/X11R6/include"
     export CPPFLAGS="${CXXFLAGS} -I/usr/X11R6/include"
-    try ./configure --prefix=/opt/kde --host=${CHOST} --with-shadow --with-x \
+    try ./configure --prefix=/opt/kde2 --host=${CHOST} --with-shadow --with-x \
 		--with-pam=yes --with-ldap \
 		--with-qt-dir=/usr/lib/qt-x11-2.2.1 \
 		--with-qt-includes=/usr/lib/qt-x11-2.2.1/include \

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.5.ebuild,v 1.2 2000/10/09 16:02:49 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.1.5.ebuild,v 1.3 2000/10/23 11:27:15 achim Exp $
 
 A=SDL-${PV}.tar.gz
 S=${WORKDIR}/SDL-${PV}
@@ -28,11 +28,6 @@ src_install() {
   dodoc *.html
   docinto html/docs
   dodoc docs/*.html
-  for i in audio cdrom events images opengl threads time video
-  do
-    docinto html/docs/$i
-    dodoc docs/$i/*
-  done
   
 }
 

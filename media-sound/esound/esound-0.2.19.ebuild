@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.19.ebuild,v 1.4 2000/09/15 20:09:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.19.ebuild,v 1.5 2000/10/23 11:27:15 achim Exp $
 
 P=esound-0.2.19
 A=${P}.tar.gz
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/esd --with-libwrap
+  try ./configure --host=${CHOST} --prefix=/usr \
+		  --sysconfdir=/etc/esd --with-libwrap
   try make
 }
 
