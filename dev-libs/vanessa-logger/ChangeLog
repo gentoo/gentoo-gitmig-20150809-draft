@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/vanessa-logger
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.1 2003/03/15 07:03:50 george Exp $
+
+*vanessa-logger-0.0.4_beta2.ebuild (14 Mar 2003)
+
+  14 Mar 2003; George Shapovalov <george@gentoo.org> vanessa-logger-0.0.4_beta2.ebuild, files/digest-vanessa-logger-0.0.4_beta2 :
+  initial release (#17401)
+  Generic logging layer that may be used to log to one or more of syslog, an open file handle or a file name.
+  ebuild submitted by Todd Punderson <todd@doonga.net>
