@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.60 2004/12/24 13:35:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.61 2004/12/24 22:57:14 fmccor Exp $
+
+  24 Dec 2004; Ferris McCormick <fmccor@gentoo.org> xpdf-3.00-r7.ebuild:
+  Stable for sparc, Security bug 75191.  Runs fine for me.
 
 *xpdf-3.00-r7 (24 Dec 2004)
 
