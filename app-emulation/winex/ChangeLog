@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.30 2003/07/29 06:49:33 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.31 2003/08/02 13:25:41 sergey Exp $
+
+  02 Aug 2003; Sergey Kuleshov <svyatogor@gentoo.org> winex-3000.ebuild:
+  Fixed a small type in einfo message.
 
 *winex-3000 (29 Jul 2003)
 
