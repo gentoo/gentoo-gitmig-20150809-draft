@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.8-r2.ebuild,v 1.8 2002/10/20 18:47:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.8-r2.ebuild,v 1.9 2002/11/28 17:55:28 gerk Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,7 +14,7 @@ DEPEND="virtual/python
         >=gnome-base/libglade-0.17-r1
         =x11-libs/gtk+-1.2*"
 
-KEYWORDS="x86 sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
 
