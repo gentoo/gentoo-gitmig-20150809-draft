@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.14 2004/05/01 00:45:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.15 2004/05/03 21:11:46 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,7 +20,7 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.7"
+DEPEND="$DEPEND >=net-www/webapp-config-1.6"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
@@ -243,6 +243,8 @@ function webapp_src_install ()
 	keepdir ${MY_PERSISTDIR}
 	fowners root:root ${MY_PERSISTDIR}
 	fperms 755 ${MY_PERSISTDIR}
+
+	HAS_webapp_src_install=1
 }
 
 # ------------------------------------------------------------------------
@@ -255,6 +257,12 @@ function webapp_src_install ()
 
 function webapp_pkg_setup ()
 {
+	# add sanity checks here
+
+	if [ "$SLOT+" != "${PVR}+" ]; then
+		die "ebuild sets SLOT, overrides webapp.eclass"
+	fi
+
 	# pull in the shared configuration file
 
 	. /etc/vhosts/webapp-config || die "Unable to open /etc/vhosts/webapp-config file"
@@ -316,6 +324,21 @@ function webapp_src_preinst ()
 
 function webapp_pkg_postinst ()
 {
+	# sanity checks, to catch bugs in the ebuild
+
+	if [ "$HAS_webapp_src_install+" == "+" ]; then
+		eerror
+		eerror "This ebuild did not call webapp_src_install() at the end"
+		eerror "of the src_install() function"
+		eerror
+		eerror "Please log a bug on http://bugs.gentoo.org"
+		eerror
+		eerror "You should use emerge -C to remove this package, as the"
+		eerror "installation is incomplete"
+		eerror
+		die "Ebuild did not call webapp_src_install() - report to http://bugs.gentoo.org"
+	fi
+
 	# if 'vhosts' is not set in your USE flags, we install a copy of
 	# this application in /var/www/localhost/htdocs/${PN}/ for you
 	
