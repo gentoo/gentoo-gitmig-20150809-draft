@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.43 2005/02/23 16:19:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.44 2005/02/25 17:05:03 wolf31o2 Exp $
+
+  25 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-tools-1.0.16.ebuild:
+  Added mkxf86config to RDEPEND on x86 and closing bug #83307.
 
   23 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-tools-1.0.16.ebuild:
