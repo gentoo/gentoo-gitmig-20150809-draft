@@ -1,14 +1,26 @@
-MD5 e687cb53195f14f15694c694f0007563 reiserfsprogs-3.6.17.ebuild 747
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2f86ad2dc35b267f5fd1271e857779e4 ChangeLog 7592
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 134d654574bd8f30a694fef24d691244 reiserfsprogs-3.6.18.ebuild 762
+MD5 c409f97f1f2148d26a0a1cb87178dbdc reiserfsprogs-3.6.11-r1.ebuild 1078
 MD5 55933735f5ada7d9876dd69c0074f1c6 reiserfsprogs-3.6.11.ebuild 836
+MD5 e687cb53195f14f15694c694f0007563 reiserfsprogs-3.6.17.ebuild 747
 MD5 b8d9a8e353a8c059bbab9ae4b0d81618 reiserfsprogs-3.6.8.ebuild 792
 MD5 cd597e4049faf262190c8b59faa44838 reiserfsprogs-3.6.13.ebuild 784
-MD5 c409f97f1f2148d26a0a1cb87178dbdc reiserfsprogs-3.6.11-r1.ebuild 1078
-MD5 afce5005ca6e46c5c4e326f129bcde6b ChangeLog 7430
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b4eeb93b06e335142e6fd3984030f841 files/blk_size.patch 1254
+MD5 a7ae129ac18f8e2c935d65298f0f88c4 files/digest-reiserfsprogs-3.6.17 72
+MD5 c29a2b313930bcc6a2c0fba4354c0520 files/digest-reiserfsprogs-3.6.11 72
+MD5 c29a2b313930bcc6a2c0fba4354c0520 files/digest-reiserfsprogs-3.6.11-r1 72
+MD5 e551421a01540edae18f223f5dca87ff files/digest-reiserfsprogs-3.6.13 72
+MD5 a73a34f948b4267ae53a2579bfab7e00 files/digest-reiserfsprogs-3.6.18 72
 MD5 f71b5a7289045ceb19f83e04ff079e09 files/digest-reiserfsprogs-3.6.8 71
 MD5 69ece3a13ceb67d23ad84f8578b83dff files/reiserfsprogs-3.6.11-2.6.patch 574
-MD5 c29a2b313930bcc6a2c0fba4354c0520 files/digest-reiserfsprogs-3.6.11-r1 72
-MD5 c29a2b313930bcc6a2c0fba4354c0520 files/digest-reiserfsprogs-3.6.11 72
-MD5 e551421a01540edae18f223f5dca87ff files/digest-reiserfsprogs-3.6.13 72
-MD5 a7ae129ac18f8e2c935d65298f0f88c4 files/digest-reiserfsprogs-3.6.17 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBJuYUHTu7gpaalycRAqKYAJkB7X6EmJGuy3UJFYt9ems4J9Di9ACguI3K
+kVg6p+N1I1LYziPVcLS1JpQ=
+=xf/d
+-----END PGP SIGNATURE-----
