@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (05 Aug 2002)
+# Masked for testing
+=sys-apps/util-linux-2.11t
+
 # <carpaski@gentoo.org) (05 Aug 2002)
 # Testing
 =media-sound/xmms-xosd-0.7.0-r1
