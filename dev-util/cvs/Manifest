@@ -1,6 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a3e041898daf24fb40cce19270eed884 cvs-1.11.17.ebuild 1533
 MD5 38a8d2c12313066d0beac1f55938e6b8 cvs-1.12.11.ebuild 1815
-MD5 7990f633a47f157e39c2438c32413404 ChangeLog 8580
+MD5 564712f52275d437bf8157808acc0599 cvs-1.11.19.ebuild 1542
+MD5 fafb837bf0bbed3109031c46e57af431 ChangeLog 8705
 MD5 33a7e30d11aa6acd3ec97af48d434231 cvs-1.12.10.ebuild 1815
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
 MD5 9cdc57174771018a08d7d3b8066e4ebd cvs-1.11.18.ebuild 1531
@@ -10,5 +14,13 @@ MD5 cc3afaf974475188ce0d80b0b919f611 files/digest-cvs-1.12.9 272
 MD5 a156ed2cb03477a919f3a5faa80cb2a4 files/cvspserver.xinetd.d 282
 MD5 0c0c93104720c2efffe1046ec8db290f files/digest-cvs-1.11.17 276
 MD5 f508ce9e581877cbd33e11fbac72fc59 files/digest-cvs-1.11.18 276
+MD5 a3b61b72d72962b0f4149a53c5d44671 files/digest-cvs-1.11.19 276
 MD5 b20f44a825bed58f0e28635b827cb7fd files/digest-cvs-1.12.10 276
 MD5 2d7e539e53af2be97ecf96f0ba454a18 files/digest-cvs-1.12.11 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCA5vUPgS8WLD64cERAjbbAKCM/QEiFxaHMX4FwmsdBJrfJMzxlQCfaUQJ
+PGxIR/fHIL3SQrjmPDLtrsI=
+=OVXX
+-----END PGP SIGNATURE-----
