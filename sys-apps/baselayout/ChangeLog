@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.189 2004/11/08 20:26:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.190 2004/11/08 20:32:46 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.6-r1 (08 Nov 2004)
+
+  08 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +baselayout-1.11.6-r1.ebuild, -baselayout-1.11.6.ebuild:
+  bump to -r1 (no changes to ebuild) to push out helpers.d update
 
   08 Nov 2004; Aron Griffis <agriffis@gentoo.org> baselayout-1.11.6.ebuild:
   Add installation of /lib/rcscripts/net.modules.d/helpers.d
