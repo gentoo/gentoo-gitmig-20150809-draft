@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.3 2004/02/28 04:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.4 2004/04/24 14:21:12 fmccor Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="A USENET software package designed for small sites"
@@ -11,7 +11,7 @@ DEPEND=">=dev-libs/libpcre-3.9
 	virtual/inetd"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="ipv6"
 
 src_compile() {

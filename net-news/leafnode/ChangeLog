@@ -1,6 +1,9 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.25 2004/02/26 17:05:30 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.26 2004/04/24 14:21:12 fmccor Exp $
+
+  24 Apr 2004; Ferris McCormick <fmccor@gentoo.org> leafnode-1.9.50.ebuild:
+  Add ~sparc keyword at user request (build verified)
 
 *leafnode-2.0.0_alpha20040206 (26 Feb 2004)
 
