@@ -1,9 +1,14 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.16 2004/08/12 20:37:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.17 2004/08/12 21:42:24 slarti Exp $
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.  Taking over as maintainer.
+
+  12 Aug 2004; Tom Martin <slarti@gentoo.org> gxine-0.3.3.ebuild:
+  Removing ~amd64 for now. The mozilla plugin causes the entire browser to crash
+  when invoked, and switching from fullscreen to windowed mode after watching a
+  DVD also causes a segfault.
 
   12 Aug 2004; Tom Martin <slarti@gentoo.org> gxine-0.3.3.ebuild:
   Marked ~amd64.
