@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.10 2003/12/14 23:43:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.11 2003/12/14 23:44:52 mholzer Exp $
+
+*perlmagick-5.5.7.14 (15 Dec 2003)
+
+  15 Dec 2003; Martin Holzer <mholzer@gentoo.org> perlmagick-5.5.7.14.ebuild:
+  Version bump.ed
 
 *perlmagick-5.5.7.11 (15 Dec 2003)
 
