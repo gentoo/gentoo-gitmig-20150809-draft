@@ -96,3 +96,4 @@ move app-sci/labplot media-gfx/labplot
 move app-sci/qmatplot media-gfx/qmatplot
 move app-sci/scigraphica media-gfx/scigraphica
 move app-sci/spectromatic media-gfx/spectromatic
+move app-sci/xd3d media-gfx/xd3d
