@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2002.11.ebuild,v 1.1 2002/12/11 08:04:00 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2002.11.ebuild,v 1.2 2002/12/11 08:07:47 george Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://cvs.haskell.org/Hugs/downloads/Nov2002/${MY_P}.tar.gz"
 HOMEPAGE="http://www.haskell.org/hugs"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc"
 LICENSE="as-is"
 
 DEPEND="virtual/glibc"
