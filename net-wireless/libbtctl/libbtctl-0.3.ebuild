@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.3.ebuild,v 1.10 2004/06/27 19:07:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.3.ebuild,v 1.11 2004/10/16 17:45:37 liquidx Exp $
 
 inherit gnome2
 
@@ -14,8 +14,8 @@ KEYWORDS="x86 ~sparc"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
-	>=net-wireless/bluez-utils-2
-	|| ( >=net-wireless/bluez-libs-2.7 ( <net-wireless/bluez-libs-2.7 net-wireless/bluez-sdp ) )"
+	>=net-wireless/bluez-utils-2.7
+	>=net-wireless/bluez-libs-2.7"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
