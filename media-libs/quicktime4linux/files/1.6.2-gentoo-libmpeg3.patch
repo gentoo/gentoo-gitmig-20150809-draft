@@ -1,0 +1,20 @@
+--- Makefile.orig	2003-07-26 17:58:29.000000000 -0400
++++ Makefile	2003-07-26 17:58:50.000000000 -0400
+@@ -8,7 +8,7 @@
+ DECORE_DIR := decore50
+ ENCORE_INCLUDE := $(ENCORE_DIR)/encore.h
+ DECORE_INCLUDE := $(DECORE_DIR)/decore.h
+-MPEG3_DIR := ../libmpeg3
++MPEG3_DIR := /usr/include/libmpeg3
+ OBJS := 
+ 
+ 
+@@ -207,7 +207,7 @@
+ 	$(OBJDIR)/$(ENCORE_DIR)/mbtransquant/intel_mmx
+ 
+ 
+-LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
++LIBS := $(OUTPUT) /usr/lib/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
+ 
+ $(shell echo  $(CFLAGS) > $(OBJDIR)/c_flags)
+ $(shell echo  $(LIBRAW_CFLAGS) > $(OBJDIR)/libraw_cflags)

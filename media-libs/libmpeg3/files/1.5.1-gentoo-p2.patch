@@ -1,0 +1,119 @@
+diff -urN libmpeg3.orig/bitstream.h libmpeg3/bitstream.h
+--- libmpeg3.orig/bitstream.h	Fri Dec 21 14:00:01 2001
++++ libmpeg3/bitstream.h	Mon Apr 15 14:13:12 2002
+@@ -1,7 +1,7 @@
+ #ifndef BITSTREAM_H
+ #define BITSTREAM_H
+ 
+-#include "mpeg3demux.h"
++#include <libmpeg3/mpeg3demux.h>
+ #include <sys/types.h>
+ 
+ //                                    next bit in forward direction
+diff -urN libmpeg3.orig/libmpeg3.h libmpeg3/libmpeg3.h
+--- libmpeg3.orig/libmpeg3.h	Fri Dec 21 10:48:14 2001
++++ libmpeg3/libmpeg3.h	Mon Apr 15 14:13:12 2002
+@@ -5,7 +5,7 @@
+ extern "C" {
+ #endif
+ 
+-#include "mpeg3private.h"
++#include <libmpeg3/mpeg3private.h>
+ 
+ 
+ /* Supported color models for mpeg3_read_frame */
+diff -urN libmpeg3.orig/mpeg3css.h libmpeg3/mpeg3css.h
+--- libmpeg3.orig/mpeg3css.h	Sun Sep 30 20:18:31 2001
++++ libmpeg3/mpeg3css.h	Mon Apr 15 14:13:12 2002
+@@ -2,7 +2,7 @@
+ #define MPEG3CSS_H
+ 
+ 
+-#include "mpeg3private.inc"
++#include <libmpeg3/mpeg3private.inc>
+ 
+ struct mpeg3_block 
+ {
+diff -urN libmpeg3.orig/mpeg3demux.h libmpeg3/mpeg3demux.h
+--- libmpeg3.orig/mpeg3demux.h	Fri Dec 21 14:02:21 2001
++++ libmpeg3/mpeg3demux.h	Mon Apr 15 14:13:12 2002
+@@ -1,7 +1,7 @@
+ #ifndef MPEG3DEMUX_H
+ #define MPEG3DEMUX_H
+ 
+-#include "mpeg3title.h"
++#include <libmpeg3/mpeg3title.h>
+ #include <stdio.h>
+ 
+ typedef struct
+diff -urN libmpeg3.orig/mpeg3io.h libmpeg3/mpeg3io.h
+--- libmpeg3.orig/mpeg3io.h	Mon Dec 17 06:05:07 2001
++++ libmpeg3/mpeg3io.h	Mon Apr 15 14:13:12 2002
+@@ -4,8 +4,8 @@
+ 
+ #include <stdio.h>
+ #include <stdint.h>
+-#include "mpeg3css.h"
+-#include "mpeg3private.inc"
++#include <libmpeg3/mpeg3css.h>
++#include <libmpeg3/mpeg3private.inc>
+ 
+ /* Filesystem structure */
+ /* We buffer in MPEG3_IO_SIZE buffers.  Stream IO would require back */
+diff -urN libmpeg3.orig/mpeg3title.h libmpeg3/mpeg3title.h
+--- libmpeg3.orig/mpeg3title.h	Wed Dec 19 06:28:25 2001
++++ libmpeg3/mpeg3title.h	Mon Apr 15 14:13:12 2002
+@@ -1,7 +1,7 @@
+ #ifndef MPEG3TITLE_H
+ #define MPEG3TITLE_H
+ 
+-#include "mpeg3io.h"
++#include <libmpeg3/mpeg3io.h>
+ 
+ // May get rid of time values and rename to a cell offset table.
+ // May also get rid of end byte.
+diff -urN libmpeg3.orig/mpeg3vtrack.h libmpeg3/mpeg3vtrack.h
+--- libmpeg3.orig/mpeg3vtrack.h	Thu Dec 20 08:19:18 2001
++++ libmpeg3/mpeg3vtrack.h	Mon Apr 15 14:13:12 2002
+@@ -1,8 +1,8 @@
+ #ifndef MPEG3_VTRACK_H
+ #define MPEG3_VTRACK_H
+ 
+-#include "mpeg3demux.h"
+-#include "video/mpeg3video.h"
++#include <libmpeg3/mpeg3demux.h>
++#include <libmpeg3/video/mpeg3video.h>
+ 
+ typedef struct
+ {
+diff -urN libmpeg3.orig/video/mpeg3video.h libmpeg3/video/mpeg3video.h
+--- libmpeg3.orig/video/mpeg3video.h	Sun Sep 30 20:18:31 2001
++++ libmpeg3/video/mpeg3video.h	Mon Apr 15 14:13:12 2002
+@@ -1,9 +1,9 @@
+ #ifndef MPEGVIDEO_H
+ #define MPEGVIDEO_H
+ 
+-#include "../bitstream.h"
+-#include "../mpeg3private.inc"
+-#include "idct.h"
+-#include "slice.h"
+-#include "../timecode.h"
++#include <libmpeg3/bitstream.h>
++#include <libmpeg3/mpeg3private.inc>
++#include <libmpeg3/video/idct.h>
++#include <libmpeg3/video/slice.h>
++#include <libmpeg3/timecode.h>
+ #endif
+diff -urN libmpeg3.orig/mpeg3atrack.h libmpeg3/atrack.h
+--- libmpeg3.orig/mpeg3atrack.h	2003-07-26 17:31:58.000000000 -0400
++++ libmpeg3/mpeg3atrack.h	2003-07-26 17:32:27.000000000 -0400
+@@ -1,7 +1,7 @@
+ #ifndef MPEG3ATRACK_H
+ #define MPEG3ATRACK_H
+ 
+-#include "mpeg3demux.h"
+-#include "audio/mpeg3audio.h"
++#include <libmpeg3/mpeg3demux.h>
++#include <libmpeg3/audio/mpeg3audio.h>
+ 
+ #endif

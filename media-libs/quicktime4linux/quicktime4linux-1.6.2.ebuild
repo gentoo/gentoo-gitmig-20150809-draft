@@ -1,26 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.5.5-r1.ebuild,v 1.11 2003/07/26 22:30:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.6.2.ebuild,v 1.1 2003/07/26 22:30:18 vapier Exp $
 
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
-SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng
 	!media-libs/libquicktime"
 PROVIDE="virtual/quicktime"
 
-S=${WORKDIR}/quicktime
-
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/quicktime_makefile.patch
+	epatch ${FILESDIR}/${PV}-gentoo-libmpeg3.patch
+	epatch ${FILESDIR}/${PV}-gentoo-sharedlib.patch
 }
 
 src_compile() {

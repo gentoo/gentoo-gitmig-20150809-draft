@@ -1,0 +1,21 @@
+--- Makefile.orig	2003-07-26 18:09:51.000000000 -0400
++++ Makefile	2003-07-26 18:21:16.000000000 -0400
+@@ -213,7 +213,7 @@
+ $(shell echo  $(LIBRAW_CFLAGS) > $(OBJDIR)/libraw_cflags)
+ $(shell echo  $(OBJS) $(LIBRAW_OBJS) $(DV_OBJS) $(DVMMXOBJS) $(DECOREMMX_OBJS) $(ENCOREMMX_OBJS) $(JPEG_NASM) $(JPEG_FAIL) $(FFMPEG_OBJS) $(FFMPEGIA32_OBJS) $(LAME_OBJS) > $(OBJDIR)/objs)
+ 
+-all: $(DIRS) $(OUTPUT)
++all: $(DIRS) $(OUTPUT) $(SHAREDOUTPUT)
+ 
+ $(DIRS):
+ 	if ! test -d $@ ; then mkdir -p $@ ; fi
+@@ -221,6 +221,9 @@
+ $(OUTPUT): $(LIBRAW_OBJS) $(DV_OBJS) $(DVMMXOBJ) $(OBJS) $(DVMMXOBJS) $(DECOREMMX_OBJS) $(ENCOREMMX_OBJS) $(JPEG_NASM) $(FFMPEG_OBJS) $(FFMPEGIA32_OBJS) $(LAME_OBJS) $(JPEG_FAIL) 
+ 	ar rcs $(OUTPUT) `cat $(OBJDIR)/objs`
+ 
++$(SHAREDOUTPUT): $(DVMMXOBJ) $(OBJS) $(DVMMXOBJS) $(ENCOREMMX_OBJS)
++	gcc -shared -o $(SHAREDOUTPUT) $(LIBRAW_OBJS) $(DV_OBJS) $(DVMMXOBJS) $(DECOREMMX_OBJS) $(ENCOREMMX_OBJS) $(JPEG_NASM) $(LAME_OBJS) $(JPEG_FAIL) $(FFMPEGIA32_OBJS)
++
+ $(OBJDIR)/qtdump: $(OBJDIR)/dump.o $(OUTPUT)
+ 	$(CC) -o $(OBJDIR)/qtdump $(OBJDIR)/dump.o $(LIBS)
+ 
