@@ -1,0 +1,6 @@
+MD5 7929c57a3a177c3c0f24ee86c22851ac kisdnwatch-01.00.08.ebuild 750
+MD5 103502e31ae64579319b85261365975e ChangeLog 499
+MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
+MD5 bf66245be83728192ade75947a7c2da4 files/kisdnwatch-01.00.08-Makefiles.patch 4609
+MD5 ed67b76fe789f96d44b658ee581ceb6e files/kisdnwatch-01.00.08-configure.patch 3679
+MD5 397f792877643704a4efda1166625fb1 files/digest-kisdnwatch-01.00.08 71

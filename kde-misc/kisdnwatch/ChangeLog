@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kisdnwatch
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.1 2004/10/29 23:56:48 motaboy Exp $
+
+*kisdnwatch-01.00.08 (30 Oct 2004)
+
+  30 Oct 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +files/kisdnwatch-01.00.08-Makefiles.patch,
+  +files/kisdnwatch-01.00.08-configure.patch, +kisdnwatch-01.00.08.ebuild:
+  New Ebuild, thanks to tuXXer and Stefan Briesenick. Closes bug
+
