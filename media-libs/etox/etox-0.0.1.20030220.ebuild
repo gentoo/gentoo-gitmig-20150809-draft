@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/etox/etox-0.0.1.20030220.ebuild,v 1.1 2003/02/20 12:31:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/etox/etox-0.0.1.20030220.ebuild,v 1.2 2003/02/22 08:49:09 vapier Exp $
 
 DESCRIPTION="type setting and text layout library"
 HOMEPAGE="http://www.enlightenment.org/pages/etox.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="pic"
 
 DEPEND="virtual/glibc
