@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.21.1_pre4.ebuild,v 1.5 2003/12/01 23:03:37 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.21.1_pre4-r1.ebuild,v 1.1 2004/01/06 23:54:17 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -18,9 +18,10 @@ IUSE="build crypt evms2 aavm usagi"
 ETYPE="sources"
 
 inherit kernel
-OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+
+OKV="2.4.21"
 EXTRAVERSION="-${PN/-*/}"
-[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-r1_pre4"
 KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
@@ -117,7 +118,10 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
-	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}-${PVR}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}-${PVR}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
 }
 
 pkg_postinst() {
