@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27_rc3.ebuild,v 1.2 2005/01/01 14:12:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27.ebuild,v 1.1 2005/01/12 08:48:06 dholm Exp $
 
 inherit eutils flag-o-matic
 
-MY_PV="0.8.27-RC3"
-S="${WORKDIR}/${PN}-${MY_PV}"
 DESCRIPTION="The Eggplant Umiquious Amiga Emulator"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
-SRC_URI="http://www.rcdrummond.net/uae/${PN}-${MY_PV}/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://www.rcdrummond.net/uae/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
