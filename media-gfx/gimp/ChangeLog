@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.30 2003/04/18 04:57:11 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.31 2003/04/19 10:49:22 foser Exp $
 
 *gimp-1.3.14 (16 Apr 2003)
+
+  19 Apr 2003; foser <foser@gentoo.org> gimp-1.3.14.ebuild :
+  Fixed slot to be 1.4 again
 
   18 Apr 2003; Philip Walls <malverian@gentoo.org> gimp-1.3.14.ebuild :
   Add silly make fix (in all other 1.3.x ebuilds) - Bug #19501

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.2 2003/04/18 04:57:11 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.3 2003/04/19 10:49:22 foser Exp $
 
 IUSE="doc python perl aalib png jpeg tiff gtkhtml"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Development series of Gimp"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.3/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
-SLOT="2"
+SLOT="1.4"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
