@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cweb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.1 2002/04/24 19:13:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.2 2002/09/29 07:48:13 satai Exp $
+
+*cweb-3.63-r1 (29 Sep 2002)
+
+  29 Sep 2002; Matthew Turk <satai@gentoo.org> cweb-3.63-r1.ebuild files/digest-cweb-3.63-r1 :
+
+  Now installing the cwebmac.tex file.  Very nice ebuild upgrade from JOhn
+  Steele Scott; closing #7931.
 
 *cweb-3.63 (24 Apr 2002)
 
