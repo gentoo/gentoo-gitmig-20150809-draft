@@ -979,3 +979,8 @@ net-mail/spamassassin
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
 >=app-cdr/eroaster-2.1.0
+
+# raker@gentoo.org 13 Jul 2002
+# sys-apps/baselayout-1.7.9-r2 with a modified /etc/services
+# waiting for approval from aliz@gentoo.org for cyrus-imapd additions
+=sys-apps/baselayout-1.7.9-r2
