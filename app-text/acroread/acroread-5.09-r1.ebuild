@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09-r1.ebuild,v 1.1 2004/09/22 12:29:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.09-r1.ebuild,v 1.2 2004/09/23 10:02:39 mr_bones_ Exp $
 
 inherit nsplugins eutils
 
 MY_P=linux-${PV/./}
-S=${WORKDIR}
 DESCRIPTION="Adobe's PDF reader"
-SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/${MY_P}.tar.gz"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
-IUSE="cjk noplugin"
+SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="Adobe"
+SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-
+IUSE="cjk noplugin"
 RESTRICT="nostrip"
+
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="cjk? ( media-fonts/acroread-asianfonts )
@@ -23,8 +22,10 @@ RDEPEND="cjk? ( media-fonts/acroread-asianfonts )
 
 INSTALLDIR=/opt/Acrobat5
 
+S="${WORKDIR}"
+
 pkg_setup() {
-	if [ ! `use noplugin` ]; then
+	if ! use noplugin ; then
 		einfo
 		einfo "gtk2 USE flag can cause a slowdown in Mozilla's performance"
 		einfo "especially when using the acroread plugin to view a PDF file."
@@ -33,7 +34,6 @@ pkg_setup() {
 }
 
 src_compile() {
-
 	tar -xvf LINUXRDR.TAR --no-same-owner
 	tar -xvf COMMON.TAR --no-same-owner
 
@@ -45,15 +45,18 @@ src_compile() {
 	# Workaround till lib symlinks change from lib64 to lib32
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
 	if use amd64 ; then
-		sed -i -e "s:^install_dir:export XLOCALEDIR=/usr/X11R6/lib32/X11/locale/\n&:1" acroread
+		sed -i \
+			-e "s:^install_dir:export XLOCALEDIR=/usr/X11R6/lib32/X11/locale/\n&:1" acroread \
+			|| die "sed failed"
 	fi
 }
 
 src_install() {
+	local i
 
 	dodir ${INSTALLDIR}
 	DIRS="Reader Resource"
-	!(use noplugin) && DIRS="${DIRS} Browsers"
+	use !noplugin && DIRS="${DIRS} Browsers"
 	for i in ${DIRS}
 	do
 		if [ -d ${i} ] ; then
@@ -67,10 +70,10 @@ src_install() {
 		acroread || die "sed acroread failed"
 
 	exeinto ${INSTALLDIR}
-	doexe acroread
+	doexe acroread || die "doexe failed"
 	dodoc README LICREAD.TXT
 
-	if [ ! `use noplugin` ]; then
+	if ! use noplugin ; then
 		dodir /opt/netscape/plugins
 		dosym ${INSTALLDIR}/Browsers/intellinux/nppdf.so /opt/netscape/plugins
 		inst_plugin ${INSTALLDIR}/Browsers/intellinux/nppdf.so
