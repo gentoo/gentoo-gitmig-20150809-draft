@@ -53,7 +53,7 @@ src_install () {
     cd ${S}/xpinstall/packager
     try make
     dodir /opt
-    tar xzf ${S}/dist/mozilla-i686-pc-linux-gnu.tar.gz -C ${D}/opt
+    tar xzf ${S}/dist/mozilla-`uname -m`-pc-linux-gnu.tar.gz -C ${D}/opt
     mv ${D}/opt/package ${D}/opt/mozilla
 
     exeinto /usr/bin
