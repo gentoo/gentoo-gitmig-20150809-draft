@@ -1,10 +1,16 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.11 2002/10/29 18:17:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.12 2002/10/30 18:29:35 vapier Exp $
 
-*wxPython-2.3.3.1-r1 (28 Oct 2002)
+*wxPython-2.3.3.1-r2 (30 Oct 2002)
 
-  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed all the crap put into the first 2.3.3.1 ebuild to build wxGTK and
+  updated the patch to remove glcanvas
+
+*wxPython-2.3.3.1-r1 (29 Oct 2002)
+
+  29 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   added some changes per discussion on #9693
 
 *wxPython-2.3.3.1 (28 Oct 2002)
