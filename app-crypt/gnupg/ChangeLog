@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.89 2004/12/31 08:44:25 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.90 2004/12/31 14:50:11 dragonheart Exp $
+
+  01 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.4.0.ebuild:
+  Changed !X use dependancy to X as per bug #76225. Thanks to Bjarke Istrup
+  Pedersen <Bjarke.ip@tekpunkt.dk> for pointing out the error of my ways
 
   31 Dec 2004; Markus Rothe <corsair@gentoo.org>
   +files/gnupg-1.2.6-ppc64.patch, gnupg-1.2.6.ebuild:

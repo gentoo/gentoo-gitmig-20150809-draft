@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0.ebuild,v 1.1 2004/12/19 03:19:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.0.ebuild,v 1.2 2004/12/31 14:50:11 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,8 +12,12 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc-macos ~s390 ~sparc ~x86 ~ia64 ~mips ~ppc64"
-IUSE="X ldap nls smartcard readline caps zlib idea bzip2 selinux"
+IUSE="ldap nls readline caps zlib idea bzip2 selinux"
 #static not working yet
+#
+# Disabling X and usb until dependancies has sufficient keywords
+# X
+# smartcard
 
 #!static? (
 #			ldap? ( net-nds/openldap )
@@ -25,11 +29,13 @@ RDEPEND="
 	ldap? ( net-nds/openldap )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
-	!X? ( media-gfx/xloadimage media-gfx/xli )
 	nls? ( sys-devel/gettext )
-	smartcard? ( dev-libs/libusb )
 	virtual/libc
 	readline? ( sys-libs/readline )"
+
+
+#	X? ( media-gfx/xloadimage media-gfx/xli )
+#	smartcard? ( dev-libs/libusb )
 
 # 	dev-lang/perl
 #	virtual/mta
@@ -39,9 +45,10 @@ DEPEND="ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	zlib? ( sys-libs/zlib )
 	bzip2? ( app-arch/bzip2 )
-	smartcard? ( dev-libs/libusb )
 	dev-lang/perl
 	virtual/libc"
+
+#	smartcard? ( dev-libs/libusb )
 
 src_unpack() {
 	unpack ${A}
