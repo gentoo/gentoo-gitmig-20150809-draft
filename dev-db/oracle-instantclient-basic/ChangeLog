@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.4 2004/11/19 16:33:52 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.5 2004/12/22 00:25:17 radek Exp $
+
+*oracle-instantclient-basic-10.1.0.3 (22 Dec 2004)
+
+  22 Dec 2004; Radoslaw Stachowiak <radek@gentoo.org>
+  +oracle-instantclient-basic-10.1.0.3.ebuild:
+  New version from upstream. ALso two big internal (gentoo) changes:
+  1. includes now sdk/devel packages (its small and almost always needed)
+  2. dont use -p1 ebuild version scheme, because it keeps ebuild simpler
+     and -1.rpm is de facto -rX for ebuild (kind of redundancy).
 
 *oracle-instantclient-basic-10.1.0.2_p1-r1 (19 Nov 2004)
 
