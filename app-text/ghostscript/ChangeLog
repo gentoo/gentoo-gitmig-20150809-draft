@@ -1,6 +1,16 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.5 2002/04/04 06:37:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.6 2002/04/28 18:40:09 jnelson Exp $
+
+*ghostscript-6.53-r2 (28 Apr 2002)
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org>: ghostscript-6.53-r2.ebuild
+  
+  Remove dependency on downloading zlib and png - use shared versions!
+  (Can't do that for libjpeg - see ghostscript docs)
+  Update to gimp-print 4.2.1
+  Use shared zlib and libpng
+  Patch ghostscript with a few additional patches
+  Closes #2010
 
 *ghostscript-6.53 (04 Apr 2002)
   04 Apr 2002 Spider <spider@gentoo.org>
