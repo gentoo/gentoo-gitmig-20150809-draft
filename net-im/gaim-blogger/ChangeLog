@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim-blogger
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.6 2004/04/27 18:16:07 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-blogger/ChangeLog,v 1.7 2004/05/31 22:03:49 rizzo Exp $
+
+*gaim-blogger-0.78 (31 May 2004)
+
+  31 May 2004; Don Seiler <rizzo@gentoo.org>; +gaim-blogger-0.78.ebuild:
+  Version bump for Bug #52599.
 
   27 Apr 2004; Don Seiler <rizzo@gentoo.org>; -gaim-blogger-0.76.ebuild:
   Removing obsolete version
