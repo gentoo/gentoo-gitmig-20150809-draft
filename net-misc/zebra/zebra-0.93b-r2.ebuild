@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r1.ebuild,v 1.5 2003/09/05 04:27:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.1 2003/09/05 04:27:52 solar Exp $
 
+inherit eutils
 S=${WORKDIR}/${P}
 IUSE="pam snmp ipv6 ospfapi"
 
@@ -12,7 +13,7 @@ SRC_URI="ftp://ftp.zebra.org/pub/zebra/${P}.tar.gz \
 HOMEPAGE="http://www.zebra.org"
 # Homepage for ospfapi
 HOMEPAGE="${HOMEPAGE} http://www.tik.ee.ethz.ch/~keller/ospfapi"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -21,23 +22,23 @@ DEPEND="virtual/glibc
 	pam? ( >=pam-0.75-r11 )
 	snmp? ( virtual/snmp )"
 
-RDEPEND="virtual/glibc sys-devel/binutils"
+RDEPEND="virtual/glibc
+	sys-devel/binutils"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${WORKDIR}
 	ln -s ${S} zebra
-
-	[ `use ospfapi` ] &&
-	 	epatch ospfapi-release_*-200[3-9]-[0-9][0-9]-[0-9][0-9].patch
-
-	##################################
-	# This fix is for zebra-0.93b only
-	##################################
-        cd ${S}/ospfd || die
-        epatch ${FILESDIR}/${P}/ospfd-assert-fix.patch
-        epatch ${FILESDIR}/${P}/ospfd-nbr-fix.patch
-	##################################
+	if [ `use ospfapi` ]; then
+		epatch ospfapi-release_*-200[3-9]-[0-9][0-9]-[0-9][0-9].patch
+	else
+		# This fix is for zebra-0.93b only
+		cd ${S}/ospfd || die
+		[ -f ${FILESDIR}/${P}/ospfd-assert-fix.patch ] &&
+			epatch  ${FILESDIR}/${P}/ospfd-assert-fix.patch
+		[ -f ${FILESDIR}/${P}/ospfd-nbr-fix.patch ] &&
+			epatch ${FILESDIR}/${P}/ospfd-nbr-fix.patch
+	fi
 }
 
 src_compile() {
@@ -101,4 +102,9 @@ pkg_postinst() {
 	einfo "Sample configuration files can be found in /etc/zebra/sample"
 	einfo "You have to create config files in /etc/zebra before"
 	einfo "starting any one of the daemons."
+	echo
+	einfo "Please note this is the last planned zebra release that Gentoo should support"        
+	einfo "GNU Zebra almost does not qualify as GNU Software, read the zebra mailing list for more info."
+	einfo "Gentoo will continue it's support of routing software using Quagga a GNU Zebra fork"
+ 
 }
