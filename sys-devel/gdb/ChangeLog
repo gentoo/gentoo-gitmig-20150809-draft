@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.36 2004/04/22 13:43:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.37 2004/04/27 21:50:18 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gdb-5.3-r1.ebuild,
+  gdb-5.3.90.ebuild, gdb-5.3.ebuild:
+  Add inherit eutils
 
   22 Apr 2004; Travis Tilley <lv@gentoo.org> gdb-6.0-r1.ebuild,
   gdb-6.0.ebuild:

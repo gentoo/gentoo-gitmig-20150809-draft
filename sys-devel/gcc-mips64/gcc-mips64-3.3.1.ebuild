@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.1.ebuild,v 1.3 2004/04/06 03:16:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.1.ebuild,v 1.4 2004/04/27 21:48:46 agriffis Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 # Variables 
 MYARCH="$(echo ${PN} | cut -d- -f2)"

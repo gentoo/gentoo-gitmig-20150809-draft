@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.15 2003/10/16 19:10:56 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.16 2004/04/27 21:47:26 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> flex-2.5.31-r1.ebuild:
+  Add inherit eutils
 
 *flex-2.5.31-r1 (17 Oct 2003)
 
