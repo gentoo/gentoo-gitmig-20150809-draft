@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.6_p20040623.ebuild,v 1.1 2004/08/04 17:27:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.6_p20040815.ebuild,v 1.1 2004/08/16 14:20:17 usata Exp $
 
 MY_PN="quiminputcontextplugin"
 #MY_P="${MY_PN}-${PV}"
-#S="${WORKDIR}/${MY_PN}"
-MY_P="${MY_PN}-bc-${PV/*_p/}"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_PN}"
+#MY_P="${MY_PN}-bc-${PV/*_p/}"
+#S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Qt immodules input method framework plugin for UIM"
 HOMEPAGE="http://uim.freedesktop.org/"
 #SRC_URI="http://mover.cool.ne.jp/others/immodule/${MY_P}.tar.gz"
 #SRC_URI="http://freedesktop.org/~tkng/${MY_PN}/${MY_P}.tar.gz"
-SRC_URI="http://freedesktop.org/~kzk/uim-qt/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${P/_p/-}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
@@ -26,8 +26,11 @@ pkg_setup() {
 	ewarn
 	ewarn "You need to install >=x11-libs/qt-3.3.2 with cjk USE flag enabled."
 	ewarn
-	if [ ! -e ${ROOT}usr/qt/3/include/qinputcontext.h ] ; then
+	if [ ! -e /usr/qt/3/include/qinputcontext.h ] ; then
 		die "You need to rebuild >=x11-libs/qt-3.3.2 with cjk USE flag enabled."
+	fi
+	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
+		die "Your Qt was not built against the latest immodule A PI. Please rebuild >=x11-libs/qt-3.3.2."
 	fi
 }
 
