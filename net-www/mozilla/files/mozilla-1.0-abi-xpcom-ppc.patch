@@ -1,12 +1,3 @@
-                # ABI Patch for ppc/xpcom for gcc-3.x
-                # http://bugzilla.mozilla.org/show_bug.cgi?id=142594
-
-                if [ "${ARCH}" = "ppc" ] ; then
-                        patch -p0 < ${FILESDIR}/mozilla-1.1-abi-xpcom-ppc.patch || die
-                fi
-
-
-
 Index: xpcom//reflect/xptcall/src/md/unix/Makefile.in
 ===================================================================
 RCS file: /cvsroot/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in,v
