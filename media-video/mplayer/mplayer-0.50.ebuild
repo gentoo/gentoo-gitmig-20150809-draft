@@ -3,22 +3,20 @@
 # Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>,
 #         Donny Davies <woodchip@gentoo.org>
 
-MY_P="MPlayer-0.50pre"
-PRE_VERSION="3"
-S=${WORKDIR}/${MY_P}?
+# Handle PREversions as well
+MY_VERSION="`echo ${PV} |sed -e 's/_//'`"
+S="${WORKDIR}/MPlayer-${MY_VERSION}"
 
 # Only install Skin if GUI should be build (gtk as USE flag)
+# NOTE: URC_URI="foo? ( ftp://ftp.foo.org/foo.tar.bz )" style will be used 
+# when included in release portage
 if [ "`use gtk`" ] ; then
-	A="${MY_P}${PRE_VERSION}.tar.bz2 default.tar.bz2 mp-arial-iso-8859-1.zip divx.dll"
-	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
+	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
 		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2
-		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-		 http://mplayerhq.hu/MPlayer/releases/divx.dll"
+		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 else		  
-        A="${MY_P}${PRE_VERSION}.tar.bz2 mp-arial-iso-8859-1.zip divx.dll"
-        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/${A}
-                 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-		 http://mplayerhq.hu/MPlayer/releases/divx.dll"
+        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
+                 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 fi
 
 DESCRIPTION="Media Player for Linux"
@@ -59,12 +57,7 @@ RDEPEND="virtual/glibc
 
 src_unpack() {
 
-	if [ "`use gtk`" ] ; then
-		unpack ${MY_P}${PRE_VERSION}.tar.bz2 default.tar.bz2 \
-			mp-arial-iso-8859-1.zip
-	else
-		unpack ${MY_P}${PRE_VERSION}.tar.bz2 mp-arial-iso-8859-1.zip
-	fi
+	unpack ${A}
 
 	# Fix bug with the default Skin
 	cd ${WORKDIR}/default
