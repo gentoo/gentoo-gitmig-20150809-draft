@@ -1,0 +1,11 @@
+*** src/dfa.h	Fri Apr 25 01:36:02 2003
+--- src/dfa.h.mod	Fri Apr 25 01:36:56 2003
+***************
+*** 428,432 ****
+--- 428,433 ----
+  
+  /* dfaerror() is called by the regexp routines whenever an error occurs.  It
+     takes a single argument, a NUL-terminated string describing the error.
+     The user must supply a dfaerror.  */
+  extern void dfaerror PARAMS ((const char *));
++ 
