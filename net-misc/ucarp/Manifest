@@ -1,3 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b63324a9a548d29d734a9ce346ccbe31 ucarp-1.1.ebuild 1163
+MD5 645f6eec496365147c033dfa08fb7087 ChangeLog 674
 MD5 8482b270f56141aa579113e78ab976ff ucarp-0.7.ebuild 726
-MD5 5694f99e67ca04e59ac5a6db3343e769 ChangeLog 544
+MD5 3f0a78b9bbdbe61fd16e25ceb4ff1627 files/digest-ucarp-1.1 61
 MD5 705d7cc5a9540cf4265ba8890308ef58 files/digest-ucarp-0.7 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBTe7FKtJO8LeSoosRAjoMAKCFzFRl+MzXGDN0Enlq3AsiT8gYpwCggi4/
+y4SZGfja3oIvruKS8OKLIiE=
+=bWXe
+-----END PGP SIGNATURE-----

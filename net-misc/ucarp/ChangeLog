@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ucarp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.3 2004/08/08 00:27:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.4 2004/09/19 20:40:23 tantive Exp $
+
+*ucarp-1.1 (19 Sep 2004)
+
+  19 Sep 2004; Michael Imhof <tantive@gentoo.org> +ucarp-1.1.ebuild:
+  Version bumped. Closes #64310.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> ucarp-0.7.ebuild:
   Typo in DESCRIPTION: implimentation -> implementation. Bug 59717.
