@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.11.0.ebuild,v 1.1 2002/10/28 13:20:38 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.11.0.ebuild,v 1.2 2002/11/01 12:21:43 foser Exp $
 
 IUSE="dvd"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.hadess.net/files/software/totem/${P}.tar.gz"
 HOMEPAGE="http://www.hadess.net/totem.php3"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/libgnomeui-2
