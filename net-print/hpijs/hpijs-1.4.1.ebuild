@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.7 2003/12/09 17:59:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.4.1.ebuild,v 1.8 2004/04/26 19:10:02 agriffis Exp $
 
 inherit gnuconfig
 
@@ -26,7 +26,7 @@ src_compile () {
 
 	epatch ${FILESDIR}/hpijs-${PV}-rss.1.patch
 
-	econf --disable-cups-install ${myconf}
+	econf --disable-cups-install ${myconf} || die "econf failed"
 
 	for i in Makefile; do
 		mv $i $i.orig ;
@@ -38,7 +38,7 @@ src_compile () {
 
 	if [ `use foomaticdb` ]; then
 		cd ../foomatic-db-hpijs-1.4-1
-		econf
+		econf || die "econf failed"
 		rm -fR data-generators/hpijs-rss
 		make || die
 		cd ../${P}

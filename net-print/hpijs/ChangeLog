@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.20 2004/04/22 18:22:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.21 2004/04/26 19:10:02 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> hpijs-1.4.1.ebuild,
+  hpijs-1.5.ebuild:
+  Add die following econf for bug 48950
 
   22 Apr 2004; Heinrich Wendel <lanius@gentoo.org> hpijs-1.5.ebuild:
   stable on x86
