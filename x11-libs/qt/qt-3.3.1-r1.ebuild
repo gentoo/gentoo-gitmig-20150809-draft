@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1-r1.ebuild,v 1.3 2004/03/27 18:01:41 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.1-r1.ebuild,v 1.4 2004/04/01 14:01:40 lv Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -163,4 +163,7 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 		doins $x
 	done
+
+	# needed to fix lib64 issues on amd64, see bug #45669
+	use amd64 && ln -s ${QTBASE}/lib ${D}/${QTBASE}/lib64
 }
