@@ -1,0 +1,9 @@
+# ChangeLog for app-office/kpdfimport
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpdfimport/ChangeLog,v 1.1 2004/03/18 21:08:13 centic Exp $
+
+*kpdfimport-0.5 (18 Mar 2004)
+
+  18 Mar 2004; Dominik Stadler <centic@gentoo.org> kpdfimport-0.5.ebuild:
+  New ebuild, thanks to Sidoine Mosiah PIERREL <sip@teamlog.fr>, see Bug 19771
+
