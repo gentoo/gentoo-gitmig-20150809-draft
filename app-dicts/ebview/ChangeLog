@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ebview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.14 2004/08/21 13:20:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.15 2004/08/28 13:34:13 usata Exp $
+
+  28 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ebview-0.3.5.ebuild,
+  -ebview-0.3.1-r1.ebuild, -ebview-0.3.2-r1.ebuild:
+  Marked 0.3.5 stable on ppc. Removed old ebuilds.
 
   21 Aug 2004; David Holm <dholm@gentoo.org> ebview-0.3.5.ebuild:
   Added to ~ppc.
