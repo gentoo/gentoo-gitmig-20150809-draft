@@ -1,8 +1,18 @@
-MD5 ae0f224dc66cd8c2f1ff1a5e37f3de0b phylip-3.61.ebuild 827
-MD5 6be0a97d7c6c48a80ccacb41680065df phylip-3.5.ebuild 1456
-MD5 4d8f84b42744a11547c845cfa8493b72 phylip-3.6.ebuild 844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce71ede2777f6e196c27980a53a7ddae ChangeLog 982
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
-MD5 77bbf087b7d892c8912f13ae85e74f32 files/digest-phylip-3.61 63
+MD5 e3e8ee33c6204b2395f4c2793cd95c7e phylip-3.5.ebuild 1401
+MD5 4d8f84b42744a11547c845cfa8493b72 phylip-3.6.ebuild 844
+MD5 ffb8dc265c840e7fb43d03cc6ed1822a phylip-3.61.ebuild 787
 MD5 cfa8a22ac65037bfe8dfefda7c4171f5 files/digest-phylip-3.5 57
 MD5 bb199081099f331eaaf2e491736e754e files/digest-phylip-3.6 62
+MD5 77bbf087b7d892c8912f13ae85e74f32 files/digest-phylip-3.61 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBU2LfHTu7gpaalycRAmWyAJwMLWOKehJEBL6dB03WamYZYFJQAACaAvfu
+1Oh7OkzmhwFTuDjPRcD2zVI=
+=VNsS
+-----END PGP SIGNATURE-----
