@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 2ffea8ec711780eeab79523e67b44b4a treecc-0.3.2.ebuild 639
-MD5 e241a7bf95bb33110f96d2c608c4a410 ChangeLog 1633
+MD5 767d0d9d25441c0e59908978d39287e4 treecc-0.3.4.ebuild 650
+MD5 bf09f2e39b5330a2834952b7de325e6b ChangeLog 1772
 MD5 7aafe9575b2ba436030a1cbd1b89fa99 metadata.xml 259
 MD5 d23bc75eb7bc429da177b93a27ed3b99 files/digest-treecc-0.3.2 64
+MD5 831c215ba797cf5d551555da52fe16c2 files/digest-treecc-0.3.4 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBIdWyPgS8WLD64cERArReAJ9kvQm1Odmhd5NAKImflTaUZNdHUQCeIXZX
-L3Hp3DHeOxYDLB3ugImXvc0=
-=5wqA
+iD8DBQFBg3V0PgS8WLD64cERAvU2AJ9LrN5qJHLWCI1epkeeESN4s5aThQCcCIyY
+/TifnEsoFOixKDiMXTe/Uso=
+=vTGD
 -----END PGP SIGNATURE-----
