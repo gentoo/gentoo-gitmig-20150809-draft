@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.8 2003/11/16 18:36:33 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.9 2004/01/07 14:50:31 gustavoz Exp $
+
+  07 Jan 2004; <gustavoz@gentoo.org> fribidi-0.10.4.ebuild:
+  marked stable on hppa
 
   16 Nov 2003; Brad House <brad_mssw@gentoo.org> fribidi-0.10.4.ebuild:
   mark stable on amd64
