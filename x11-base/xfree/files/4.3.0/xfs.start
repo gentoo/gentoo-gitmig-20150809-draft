@@ -2,10 +2,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.start,v 1.1 2003/02/28 04:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/xfs.start,v 1.2 2003/04/13 01:02:03 azarah Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
+
+opts="${opts} mkfontdirs"
 
 depend() {
 	use logger
@@ -256,6 +258,10 @@ setup_font_dirs() {
 		HOME="/root" /usr/bin/fc-cache -f
 		eend 0
 	fi
+}
+
+mkfontdirs() {
+	setup_font_dirs
 }
 
 start() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.6 2003/04/11 18:11:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.7 2003/04/13 01:02:03 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -141,7 +141,7 @@ src_unpack() {
 	unpack eurofonts-X11.tar.bz2
 	unpack xfsft-encodings.tar.bz2
 	
-	# remove bum font
+	# Remove bum encoding
 	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
 	
 	# Update the Savage Driver
@@ -311,14 +311,16 @@ src_unpack() {
 
 	if [ "${ARCH}" = "alpha" ]
 	then
-		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition neomagic i170 tdfx cirrus tseng trident chips apm fbdev ati vga v4l glint"  \
-			>> config/cf/host.def
+		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
+			neomagic i170 tdfx cirrus tseng trident chips apm fbdev ati \
+			vga v4l glint" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "ppc" ]
 	then
-		echo "#define XF86CardDrivers mga glint s3virge sis savage trident chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers XF86ExtraCardDrivers" \
-			>> config/cf/host.def
+		echo "#define XF86CardDrivers mga glint s3virge sis savage trident \
+			chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers \
+			XF86ExtraCardDrivers" >> config/cf/host.def
 	fi
 
 	if [ -n "`use xml`" ]
@@ -483,7 +485,14 @@ src_install() {
 	eend 0
 
 	# Change the silly red pointer to a white one ...
-	dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
+	if [ -f "${D}/usr/X11R6/lib/X11/icons/default/index.theme" ]
+	then
+		dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
+	
+	elif [ -f "${D}/usr/share/cursors/xfree/default/index.theme" ]
+	then
+		dosed 's:redglass:whiteglass:'/usr/share/cursors/xfree/default/index.theme
+	fi
 
 	# Standard symlinks
 	dodir /usr/{bin,include,lib}
@@ -521,7 +530,7 @@ src_install() {
 	dosym Xwrapper /usr/X11R6/bin/X
 	dosym ../../usr/X11R6/bin/XFree86 /etc/X11/X
 
-	# fix perms
+	# Fix perms
 	fperms 755 /usr/X11R6/lib/X11/xkb/geometry/sgi
 	fperms 755 /usr/X11R6/bin/dga
 
@@ -563,8 +572,10 @@ src_install() {
 	cp -a ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/* \
 		${D}/usr/X11R6/lib/X11/fonts/encodings
 	
-	gzip -9 -f ${D}/usr/X11R6/lib/X11/fonts/encodings/*.enc
-#	gzip -9 -f ${D}/usr/X11R6/lib/X11/fonts/encodings/large/*.enc
+	for x in ${D}/usr/X11R6/lib/X11/fonts/encodings/{.,large}/*.enc
+	do
+		[ -f "${x}" ] && gzip -9 -f ${x}
+	done
 	eend 0
 
 	ebegin "gemini-koi8 fonts..."
@@ -574,8 +585,6 @@ src_install() {
 	cd ${S}
 	cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
 	eend 0
-	
-	
 	
 	exeinto /etc/X11
 	# new session management script
