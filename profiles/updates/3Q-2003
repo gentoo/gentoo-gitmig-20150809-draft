@@ -11,3 +11,26 @@ move dev-libs/hlsdk dev-games/hlsdk
 move dev-libs/libggz dev-games/libggz
 move dev-libs/libnw dev-games/libnw
 move dev-libs/simgear dev-games/simgear
+move app-misc/xffm xfce-base/xffm
+move x11-wm/xfce4 xfce-base/xfce4
+move x11-wm/xfwm4 xfce-base/xfwm4
+move x11-themes/xfce4-themes xfce-extra/xfce4-themes
+move x11-themes/xffm-icons xfce-extra/xffm-icons
+move x11-themes/xfwm4-themes xfce-extra/xfwm4-themes
+move x11-misc/xfce-mcs-manager xfce-base/xfce-mcs-manager
+move x11-misc/xfce-mcs-plugins xfce-base/xfce-mcs-plugins
+move x11-misc/xfce-utils xfce-base/xfce-utils
+move x11-misc/xfce-iconbox xfce-extra/xfce-iconbox
+move x11-misc/xfce-mixer xfce-extra/xfce-mixer
+move x11-misc/xfce-panel xfce-base/xfce-panel
+move x11-misc/xfce-systray xfce-extra/xfce-systray
+move x11-misc/xfce-toys xfce-extra/xfce-toys
+move x11-misc/xfdesktop xfce-base/xfdesktop
+move x11-misc/xfprint xfce-base/xfprint
+move x11-libs/libxfce4mcs xfce-base/libxfce4mcs
+move x11-libs/libxfce4util xfce-base/libxfce4util
+move x11-libs/libxfcegui4 xfce-base/libxfcegui4
+
+
+
+
