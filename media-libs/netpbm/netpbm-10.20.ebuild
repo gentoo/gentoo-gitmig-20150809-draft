@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.1 2004/02/02 18:56:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.2 2004/02/20 10:42:02 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
 IUSE="svga jpeg tiff png zlib"
 RESTRICT="nomirror"
 
@@ -19,7 +19,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	zlib? ( sys-libs/zlib )
-	svga? ( media-libs/svgalib )"
+	x86? ( svga? ( media-libs/svgalib ) )"
 
 src_unpack() {
 	unpack ${A}

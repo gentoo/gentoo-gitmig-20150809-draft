@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.41 2004/02/02 18:56:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.42 2004/02/20 10:42:02 mr_bones_ Exp $
+
+*netpbm-10.19 (20 Feb 2004)
+
+  20 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> netpbm-10.11.14.ebuild,
+  netpbm-10.11.15.ebuild, netpbm-10.11.5-r3.ebuild, netpbm-10.18.7.ebuild,
+  netpbm-10.19.ebuild, netpbm-10.20.ebuild:
+  media-libs/svgalib is x86 only; arm needs deps first
 
 *netpbm-10.20 (02 Feb 2004)
 
