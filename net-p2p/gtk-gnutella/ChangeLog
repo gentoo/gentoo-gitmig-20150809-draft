@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.20 2004/02/11 20:46:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.21 2004/02/11 20:57:26 mholzer Exp $
+
+*gtk-gnutella-0.93.3 (11 Feb 2004)
+
+  11 Feb 2004; Martin Holzer <mholzer@gentoo.org> gtk-gnutella-0.93.3.ebuild:
+  Version bumped. Closes 41104
 
   11 Feb 2004; Martin Holzer <mholzer@gentoo.org> gtk-gnutella-0.91.1.ebuild,
   gtk-gnutella-0.92.ebuild, gtk-gnutella-0.93-r1.ebuild,
