@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.3 2004/02/29 09:19:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.4 2004/03/31 03:30:56 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="A bloody 2D action deathmatch-like game in ASCII-ART"
 HOMEPAGE="http://artax.karlin.mff.cuni.cz/~brain/0verkill/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="X"
 
-RDEPEND="X? ( x11-base/xfree )"
+RDEPEND="X? ( virtual/x11 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
