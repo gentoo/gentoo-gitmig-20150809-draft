@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.16 2004/02/27 02:36:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.17 2004/03/23 07:00:55 eradicator Exp $
+
+*gnunet-0.6.1c (22 Mar 2004)
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> gnunet-0.6.1c.ebuild:
+  Version bump and adding gtk, mysql, and crypt USE flag support closes bugs
+  #35873 and #45263.
 
 *gnunet-0.6.1b (26 Feb 2004)
 
