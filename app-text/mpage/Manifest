@@ -1,5 +1,5 @@
-MD5 ee1fb7f13b160c3f4b26c000cc098e6c ChangeLog 1198
 MD5 6bca4bcbeb13fa87bdee0426ddc7c1c9 mpage-2.5.1.ebuild 613
-MD5 e7dbb88fd81408ec977667efcdd882bb mpage-2.5.3.ebuild 760
+MD5 2b69fde2ac3a70f5478ca67068bb7548 mpage-2.5.3.ebuild 762
+MD5 019543a16e0ac12234181861739f1704 ChangeLog 1302
 MD5 2a33c8da350b70dc98f338492e4e83e6 files/digest-mpage-2.5.1 59
 MD5 3f1b883c1256eb756672bb6321fccd0b files/digest-mpage-2.5.3 59
