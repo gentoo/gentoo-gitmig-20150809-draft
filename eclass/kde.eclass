@@ -1,12 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.64 2002/11/01 11:16:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.65 2002/11/23 16:53:03 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
-
 inherit base kde-functions
 ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
+IUSE="$IUSE ppc"
+
+DESCRIPTION="Based on the $ECLASS eclass"
+HOMEPAGE="http://www.kde.org/"
 
 # is this a kde-base ebuid?
 case $PN in
@@ -26,13 +29,20 @@ case $PN in
 	    ;;
 esac
 
-newdepend /autotools
+# deps on the build tools
+if [ -n "$KDEBASE" -a -n "`use x86`" -a "${PV//3.1}" != "$PV" ]; then
+	DEPEND="$DEPEND >=sys-devel/automake-1.6.3"
+	einfo "foobar"
+else
+	DEPEND="$DEPEND sys-devel/automake"
+	einfo "not foobar"
+fi
+DEPEND="$DEPEND sys-devel/autoconf sys-devel/make"
+
+# all kde apps need this one
 newdepend "~kde-base/kde-env-3"
 
-DESCRIPTION="Based on the $ECLASS eclass"
-HOMEPAGE="http://www.kde.org/"
-
-# overridden in other places like kde-dist, kde-source and individual ebuilds
+# overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"
 
 kde_src_compile() {
