@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ez-ipupdate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.5 2003/02/12 07:55:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.6 2003/06/29 20:51:01 aliz Exp $
+
+*ez-ipupdate-3.0.11_beta8 (29 Jun 2003)
+
+  Daniel Ahlberg <aliz@gentoo.org> ez-ipupdate-3.0.11_beta8.ebuild :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
