@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.1.1.ebuild,v 1.1 2003/02/17 05:25:42 alain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.1.1.ebuild,v 1.2 2003/02/18 21:42:44 mholzer Exp $
 
 IUSE="kde"
 
@@ -10,7 +10,7 @@ SRC_URI="http://ppprs1.phy.tu-dresden.de/~trogisch/${PN}/download/LinCVS/${P}/${
 HOMEPAGE="http://www.lincvs.org"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 LICENSE="GPL-2"
 
 DEPEND="kde? ( >=kde-base/kdelibs-2 )
@@ -20,13 +20,7 @@ DEPEND="kde? ( >=kde-base/kdelibs-2 )
 RDEPEND="${DEPEND}
 	dev-util/cvs"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
-
 	qmake -o Makefile lincvs.pro
 	sed -e "s/^\tstrip/#\tstrip/" -i Makefile
 	make || die "make failed"
@@ -41,5 +35,3 @@ src_install () {
 	echo 'exec "/usr/share/LinCVS/AppRun" "$@"' >> ${S}/LinCVS/lincvs
 	dobin ${S}/LinCVS/lincvs
 }
-
-
