@@ -3,6 +3,22 @@
 
 # kde 3.0.1 - not available for fetching yet, but we lucky packagers have it
 >=x11-libs/qt-3.0.4.1
+>=kde-base/kde-3.0.1
+>=kde-base/kdeaddons-3.0.1
+>=kde-base/kdeadmin-3.0.1
+>=kde-base/kdeartwork-3.0.1
+>=kde-base/kdebase-3.0.1
+>=kde-base/kdebindings-3.0.1
+>=kde-base/kdeedu-3.0.1
+>=kde-base/kdegames-3.0.1
+>=kde-base/kdegraphics-3.0.1
+>=kde-base/kdelibs-3.0.1
+>=kde-base/kdemultimedia-3.0.1
+>=kde-base/kdenetwork-3.0.1
+>=kde-base/kdepim-3.0.1
+>=kde-base/kdesdk-3.0.1
+>=kde-base/kdetoys-3.0.1
+>=kde-base/kdeutils-3.0.1
 
 # fixed mouse scrolling in ppc xfree.  Masked for testing (daybird, 10 may)
 =x11-base/xfree-4.2.0-r10
