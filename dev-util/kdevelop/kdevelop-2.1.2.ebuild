@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.10 2002/08/22 23:28:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.11 2002/09/21 01:45:49 vapier Exp $
 
 inherit kde-base
 need-kde 3
 
 S=${WORKDIR}/${P}_for_KDE_3.0
 DESCRIPTION="KDevelop ${PV}"
-HOMEPAGE="www.kdevelop.org"
+HOMEPAGE="http://www.kdevelop.org/"
 SRC_PATH="kde/stable/3.0.2/src/${P}_for_KDE_3.0.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
