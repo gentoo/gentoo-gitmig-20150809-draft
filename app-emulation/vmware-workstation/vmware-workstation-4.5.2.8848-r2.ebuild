@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r2.ebuild,v 1.2 2004/11/04 21:42:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r2.ebuild,v 1.3 2004/11/09 14:17:55 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -25,7 +25,8 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
 IUSE=""
@@ -103,9 +104,9 @@ src_install() {
 	# A simple icon I made
 	dodir /opt/vmware/lib/icon
 	insinto /opt/vmware/lib/icon
-	doins ${FILESDIR}/vmware.png || die
+	doins ${DISTDIR}/vmware.png || die
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/vmware.png || die
+	doins ${DISTDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
