@@ -1,6 +1,18 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.12 2004/09/26 14:54:30 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.13 2004/10/14 05:50:22 st_lim Exp $
+
+*gammu-0.97.0 (14 Oct 2004)
+
+  14 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> -gammu-0.94.4.ebuild,
+  -gammu-0.95.0.ebuild, -gammu-0.96.0.ebuild, -gammu-0.97.0.ebuild,
+  gammu-0.98.0.ebuild, +gammu-0.98.9.ebuild:
+  Version bump for gammu to the latest test version.
+
+*gammu-0.98.0 (30 Sep 2004)
+
+  30 Sep 2004; Lim Swee Tat <st_lim@gentoo.org> gammu-0.98.0.ebuild:
+  Modified to solve the problem with -lsdp.
 
   26 Sep 2004; Lim Swee Tat <st_lim@gentoo.org> :
   Version bumped. I think the bluetooth portion is not working. Can someone with
