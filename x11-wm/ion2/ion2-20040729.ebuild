@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r3.ebuild,v 1.5 2004/06/28 23:51:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040729.ebuild,v 1.1 2004/07/31 12:21:10 twp Exp $
 
 inherit eutils
 
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
 HOMEPAGE="http://www.iki.fi/tuomov/ion/"
-SRC_URI="http://modeemi.fi/~tuomov/dl/ion-2-20040207.tar.gz"
+SRC_URI="http://modeemi.fi/~tuomov/ion/dl/ion-2-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha ~mips ppc ~sparc ~x86"
-IUSE="truetype xinerama"
+KEYWORDS="~alpha ~mips ~ppc ~sparc ~x86"
+IUSE="xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap
 	>=dev-lang/lua-5.0.2
 	>=sys-devel/libtool-1.4.3
-	!<=x11-wm/ion2-20040211-r2
-	>=sys-apps/sed-4"
-S=${WORKDIR}/ion-2-20040207
+	!<=x11-wm/ion2-20040211-r2"
+S=${WORKDIR}/ion-2-${PV}
 
 src_unpack() {
 
@@ -25,16 +24,7 @@ src_unpack() {
 
 	cd ${S}
 
-	epatch ${FILESDIR}/ion2-20040207-20040211.patch
-	epatch ${FILESDIR}/ion2-20040207-rename.patch
-
-	if use truetype; then
-		mkdir xftde
-		cp de/{*.c,*.h,Makefile} xftde
-		( cd xftde && epatch ${FILESDIR}/xftde-20040207.patch )
-		sed -i modulelist.mk \
-			-e 's/^\(MODULE_LIST =\)/\1 xftde/g'
-	fi
+	epatch ${FILESDIR}/ion2-20040601-rename.patch
 
 }
 
@@ -82,7 +72,7 @@ src_install() {
 		doins ${i}/*.h
 	done
 	insinto /usr/include/ion2/libtu
-	doins libtu/include/libtu/*
+	doins libtu/*.h
 
 	echo -e "#!/bin/sh\n/usr/bin/ion2" > ${T}/ion2
 	echo -e "#!/bin/sh\n/usr/bin/pwm2" > ${T}/pwm2
@@ -92,9 +82,4 @@ src_install() {
 	insinto /usr/share/xsessions
 	doins ${FILESDIR}/ion2.desktop ${FILESDIR}/pwm2.desktop
 
-}
-
-pkg_postinst() {
-	ewarn "Binaries and manual pages have been renamed to ion2"
-	ewarn "You might have to edit your .xsession/.xinitrc."
 }
