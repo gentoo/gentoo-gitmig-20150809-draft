@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.3 2004/01/24 10:53:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.4 2004/01/24 14:53:52 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -499,7 +499,10 @@ src_install() {
 		doins ${D}${INSTDIR}/share/gnome/net/.directory
 		doins ${D}${INSTDIR}/share/gnome/net/.order
 
-		for x in ${D}${INSTDIR}/share/gnome/net/*.desktop
+		# Change this to ooo*.desktop from *.desktop for now, since
+		# otherwise two sets of icons will appear in the GNOME menu.
+		# <brad@gentoo.org> (04 Aug 2003)
+		for x in ${D}${INSTDIR}/share/gnome/net/ooo*.desktop
 		do
 			# We have to handle soffice and setup differently
 			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
