@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.17 2003/06/20 20:47:23 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.18 2003/07/11 06:20:02 phosphan Exp $
+
+  11 Jul 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.11.ebuild, sane-backends-1.0.12.ebuild,
+  sane-backends-1.0.9.ebuild:
+  Updated download URIs
 
   20 Jun 2003; mkeadle <mkeadle@gentoo.org> sane-backends-1.0.11.ebuild:
   moving from ~x86 to stable. stable, and closes bug #23163.
