@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c31d06a3fb205ae41a5572206e43c2e8 metadata.xml 396
-MD5 ba45fa15ce8c2c9bbbf5905beeca2fd4 sdl-ttf-2.0.7.ebuild 945
-MD5 6d81b507bfa650f81d34917ca2b637f4 ChangeLog 2179
 MD5 06bb26c1583264d91ae52be7ec146c76 sdl-ttf-2.0.6.ebuild 843
+MD5 ff9ecab2f7e0e634a27a82b20be24ece ChangeLog 2272
+MD5 024225efca7782bc857e02bc56360600 sdl-ttf-2.0.7.ebuild 942
+MD5 c31d06a3fb205ae41a5572206e43c2e8 metadata.xml 396
 MD5 8f48e67286601f1dcf671ef135c3429f files/digest-sdl-ttf-2.0.7 66
-MD5 65f14a95508d9bc0c81cc8d8282b23ef files/digest-sdl-ttf-2.0.6 66
 MD5 d871a02468d1158e842e5faaf344beba files/ft2build.patch 340
+MD5 65f14a95508d9bc0c81cc8d8282b23ef files/digest-sdl-ttf-2.0.6 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/nMuKRy60XGEcJIRAkzuAKCZZ6I3d8j4D77EcGOBWSkp9d7quQCfcptB
-u8VFdw4+0vea0s8AzsEpZic=
-=Ft13
+iD4DBQFCB+mtugEuf3OQ0akRAukVAJ4mz9bg6T292aZbXbRadxwmciXxeACWLFuv
+D9p1yEQ//PIkwOn0RZxm4w==
+=nAAm
 -----END PGP SIGNATURE-----
