@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.22 2004/08/27 22:38:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.23 2004/08/28 00:51:46 ciaranm Exp $
+
+  28 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/vixie-cron-4.1-cron.deny, vixie-cron-4.1.ebuild:
+  Provide a sample cron.deny so that crontab works similarly to older versions
 
 *vixie-cron-4.1 (27 Aug 2004)
 
