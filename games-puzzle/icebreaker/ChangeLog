@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/icebreaker
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.4 2003/10/26 06:42:57 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.5 2004/06/24 23:06:28 agriffis Exp $
 
   25 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
   icebreaker-1.2.1.ebuild, icebreaker-1.9.2.ebuild:

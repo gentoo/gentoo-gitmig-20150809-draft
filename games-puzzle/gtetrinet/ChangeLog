@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/gtetrinet
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.6 2004/06/18 18:58:15 hansmi Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.7 2004/06/24 23:05:35 agriffis Exp $
 
   18 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> gtetrinet-0.7.5.ebuild:
   Added to ~ppc.
