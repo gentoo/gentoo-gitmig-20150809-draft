@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta5.ebuild,v 1.1 2004/11/23 10:42:55 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta5.ebuild,v 1.2 2004/11/30 21:06:36 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://postgresql/source/v8.0.0beta/${PN}-base-${MY_PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl nls python tcltk perl libg++ pam readline zlib doc"
+IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc"
 
 S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
@@ -30,6 +30,7 @@ DEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
+	xml2? ( dev-libs/libxml2 )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc
 	app-admin/sudo
@@ -98,6 +99,10 @@ src_compile() {
 	make || die
 	cd contrib
 	make || die
+	if use xml2; then
+		cd xml2
+		make || die
+	fi
 }
 
 src_install() {
@@ -114,6 +119,10 @@ src_install() {
 #	make DESTDIR=${D} install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+	if use xml2; then
+		cd ${S}/contrib/xml2
+		make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+	fi
 	cd ${S}
 	if use pg-hier; then
 		dodoc ${WORKDIR}/README-${P_HIERPG}.html || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.154 2004/11/23 10:42:55 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.155 2004/11/30 21:06:36 nakano Exp $
+
+  30 Nov 2004; Masatomo Nakano <nakano@gentoo.org>
+  postgresql-8.0.0_beta5.ebuild:
+  Added xml2 support. (#72942)
 
 *postgresql-8.0.0_beta5 (23 Nov 2004)
 

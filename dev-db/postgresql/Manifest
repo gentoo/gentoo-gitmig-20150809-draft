@@ -5,10 +5,10 @@ MD5 1d2540a8383fdae873c569307d3014cd postgresql-7.3.8.ebuild 7977
 MD5 cb8662f9d01e3ff4dd5de9d375ae31f0 postgresql-7.4.6.ebuild 10142
 MD5 43cd40217c38d9cb9b6a2449d50c8095 postgresql-7.3.7-r2.ebuild 7950
 MD5 f21ab43b9a00dca552cd35c635241df7 postgresql-7.4.3.ebuild 9760
-MD5 f9d823272eeea631a072e73a94ed26e2 postgresql-8.0.0_beta5.ebuild 7051
+MD5 2db62bb18c2ae29b50c7f04440c59ac2 postgresql-8.0.0_beta5.ebuild 7232
 MD5 fa39b30de3679dba54a788f4a4632e92 postgresql-7.4.5-r1.ebuild 10083
 MD5 b5bf2b1222e5fa77a17b0163f0f22d25 postgresql-7.4.5.ebuild 10070
-MD5 eb206a5c1c597f2d98e4afe3fc902e3d ChangeLog 27750
+MD5 fd1c4b668a28a46bf78fbbc65a936797 ChangeLog 27866
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 cd9e32f5a21def1a4e2d1ac0e042aa47 files/postgresql-7.3.7-gentoo.patch 529
 MD5 e9a2e5278a70bebace44f1ecf38129e6 files/postgresql-7.4.6-gentoo.patch 1160
