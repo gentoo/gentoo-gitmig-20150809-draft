@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.5.0.ebuild,v 1.1 2005/03/15 15:52:32 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.5.0.ebuild,v 1.2 2005/03/15 15:57:45 citizen428 Exp $
 
 inherit ruby gnome2
 
@@ -20,10 +20,10 @@ DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README TODO"
 
 RDEPEND="virtual/ruby
 	>=ruby-gettext-0.6.1
-	>=ruby-gnome2-0.10.1
-	>=ruby-libglade2-0.10.1
-	>=ruby-gconf2-0.10.1
-	>=ruby-gdkpixbuf2-0.10.1
+	>=ruby-gnome2-0.12.0
+	>=ruby-libglade2-0.12.0
+	>=ruby-gconf2-0.12.0
+	>=ruby-gdkpixbuf2-0.12.0
 	>=ruby-amazon-0.8.3"
 
 src_compile() {
