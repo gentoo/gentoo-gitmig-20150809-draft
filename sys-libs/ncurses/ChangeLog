@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.56 2004/03/12 05:25:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.57 2004/03/16 03:23:25 weeve Exp $
+
+  15 Mar 2004; Jason Wever <weeve@gentoo.org> ncurses-5.4-r1.ebuild,
+  ncurses-5.4.ebuild:
+  Marked ncurses-5.4.* to testing on sparc as it breaks things and never was in
+  testing first.
 
   12 Mar 2004; <solar@gentoo.org> ncurses-5.4-r1.ebuild:
   ncurses fails to link properly with global LDFLAGS=-pie so we filter it
