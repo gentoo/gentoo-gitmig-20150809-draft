@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.4.ebuild,v 1.1 2004/07/17 16:57:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.99.4.ebuild,v 1.2 2004/08/03 18:41:23 usata Exp $
 
 inherit gnome2 eutils
 
@@ -69,8 +69,7 @@ pkg_postinst() {
 	einfo "To use SCIM with both GTK2 and XIM, you should use the following"
 	einfo "in your user startup scripts such as .gnomerc or .xinitrc:"
 	einfo
-	einfo "LANG='your_language' scim -f socket -ne socket -d"
-	einfo "LANG='your_language' scim -f x11 -e socket -c socket -d"
+	einfo "LANG='your_language' scim -d"
 	einfo "export XMODIFIERS=@im=SCIM"
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
@@ -78,6 +77,8 @@ pkg_postinst() {
 	einfo
 	einfo "To use Chinese input methods:"
 	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "To use Korean input methods:"
+	einfo "	# emerge app-i18n/scim-hangul"
 	einfo "To use Japanese input methods:"
 	einfo "	# emerge app-i18n/scim-uim"
 	einfo "To use various input methods (more than 30 languages):"
