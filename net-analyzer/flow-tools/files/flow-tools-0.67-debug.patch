@@ -1,0 +1,10 @@
+--- flow-tools-0.67.orig/src/flow-export.c      2005-03-25 12:50:39.000000000 -0800
++++ flow-tools-0.67/src/flow-export.c   2005-03-25 12:51:02.000000000 -0800
+@@ -691,6 +691,7 @@
+   char *db_host, *db_name, *db_table, *db_user, *db_pwd, *db_tmp, *tmp;
+   int db_port;
+   int len;
++  int debug;
+
+   MYSQL mysql;
+

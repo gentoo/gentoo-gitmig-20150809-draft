@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.10 2005/03/19 13:47:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.11 2005/03/25 21:12:29 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> +files/flow-tools-0.67-debug.patch,
+  flow-tools-0.67.ebuild:
+  added Jeremy Hanmer's patch to make it working with USE=debug and added ~amd64
+  keyword, see bug #85416
 
   19 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> flow-tools-0.66.ebuild,
   flow-tools-0.67.ebuild:

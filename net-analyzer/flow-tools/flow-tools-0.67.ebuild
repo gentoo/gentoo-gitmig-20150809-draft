@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.67.ebuild,v 1.5 2005/03/19 13:47:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.67.ebuild,v 1.6 2005/03/25 21:12:29 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.eng.oar.net/pub/flow-tools/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mysql postgres debug"
 
 RDEPEND="virtual/libc
@@ -43,6 +43,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fix-a-zillion-warnings.diff
 	use debug || epatch ${FILESDIR}/${P}-nodebug.patch
 	epatch ${FILESDIR}/${P}-memleak.patch
+	epatch ${FILESDIR}/${P}-debug.patch
 
 	sed -i "s|\(^.*CFLAGS=\).*$|\1-Wall|" \
 		configure.in src/Makefile.am lib/Makefile.am || die "sed CFLAGS failed"
