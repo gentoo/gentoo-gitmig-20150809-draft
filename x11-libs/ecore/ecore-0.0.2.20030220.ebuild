@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.20030220.ebuild,v 1.2 2003/02/22 08:23:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.20030220.ebuild,v 1.3 2003/03/11 18:57:58 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenience library)"
 HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
@@ -9,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="pic"
 
 DEPEND="virtual/x11
@@ -27,6 +29,7 @@ pkg_setup() {
 
 src_compile() {
 	env PATH="${T}:${PATH}" WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
+	use alpha && append-flags -fPIC
 	econf `use_with pic` --with-gnu-ld || die
 	emake || die
 }
