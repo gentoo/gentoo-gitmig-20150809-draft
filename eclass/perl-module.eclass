@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.19 2002/08/14 13:54:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.20 2002/08/16 12:20:09 mcummings Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -26,7 +26,7 @@ perl-module_src_prep() {
 		perl Makefile.PL ${myconf}
 	else
 		perl Makefile.PL ${myconf} \
-		PREFIX=${D}/usr
+		PREFIX=${D}/usr 
 	fi
 }
 
@@ -48,23 +48,32 @@ perl-module_src_install() {
 	test -z ${mytargets} && mytargets="install"
 	
 	make \
-		PREFIX=${D}/usr \
-		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-		INSTALLMAN2DIR=${D}/usr/share/man/man2 \
-		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
-		INSTALLMAN4DIR=${D}/usr/share/man/man4 \
-		INSTALLMAN5DIR=${D}/usr/share/man/man5 \
-		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
-		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
-		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
-		${myinst} \
-		${mytargets} || die
+	PREFIX=${D}/usr \
+	INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+	INSTALLMAN2DIR=${D}/usr/share/man/man2 \
+	INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+	INSTALLMAN4DIR=${D}/usr/share/man/man4 \
+	INSTALLMAN5DIR=${D}/usr/share/man/man5 \
+	INSTALLMAN6DIR=${D}/usr/share/man/man6 \
+	INSTALLMAN7DIR=${D}/usr/share/man/man7 \
+	INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+	${myinst} \
+	${mytargets} || die
 
-	sed -e "s:${D}::g" \
-		${D}/${ARCH_LIB}/perllocal.pod \
-			> ${D}/${POD_DIR}/${P}.pod
-	
+
+	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
+	then
+	sed -e "s:${D}::g" ${D}${ARCH_LIB}/perllocal.pod > ${D}/${POD_DIR}/${P}.pod
+	cp ${D}/${POD_DIR}/${P}.pod ${D}/${POD_DIR}/${P}.pod.arch
 	rm -f ${D}/${ARCH_LIB}/perllocal.pod
+	fi
+	
+	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
+	then 
+	sed -e "s:${D}::g" ${D}${SITE_LIB}/perllocal.pod > ${D}/${POD_DIR}/${P}.pod
+	cp ${D}/${POD_DIR}/${P}.pod ${D}/${POD_DIR}/${P}.pod.site
+	rm -f ${D}/${SITE_LIB}/perllocal.pod
+	fi
 
 	dodoc Change* MANIFEST* README* ${mydoc}
 }
