@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.5 2003/09/07 03:13:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.6 2003/09/17 21:24:49 johnm Exp $
 
-inherit base
+inherit base fixheadtails
 
 DESCRIPTION="a make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -34,6 +34,10 @@ src_compile() {
 	else
 		buildwith="--buildwith=ghc"
 	fi
+
+	# fix all head/tail declarations
+	cd ${S}
+	ht_fix_all
 
 	# package uses non-standard configure, therefore econf does
 	# not work ...
