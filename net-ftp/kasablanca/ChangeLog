@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.4 2004/07/22 01:17:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.5 2004/08/19 11:18:32 voxus Exp $
+
+*kasablanca-0.4.0.1 (19 Aug 2004)
+
+  19 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org> +kasablanca-0.4.0.1.ebuild,
+  -kasablanca-0.4:
+  Version bump, closing bug #60856.
 
 *kasablanca-0.4 (22 Jul 2004)
 
