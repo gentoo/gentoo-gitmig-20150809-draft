@@ -8,7 +8,7 @@
 virtual/aspell-dict	app-dicts/aspell-en
 virtual/bootloader	sys-boot/bootx
 virtual/commonlisp	dev-lisp/sbcl
-virtual/cron		sys-apps/vixie-cron
+virtual/cron		sys-process/vixie-cron
 virtual/dhcpcd		net-misc/dhcpcd
 virtual/editor		app-editors/pico
 virtual/httpd-php	dev-php/mod_php

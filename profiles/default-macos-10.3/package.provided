@@ -94,7 +94,7 @@ sys-apps/sed-4.0.7
 sys-apps/tcp_wrappers-7.6
 sys-apps/tcp-wrappers-7.6-r8
 sys-apps/texinfo-4.6
-sys-apps/vixie-cron-3.0.1
+sys-process/vixie-cron-3.0.1
 sys-apps/xinetd-2.0.0
 sys-darwin/apple16x50serial-13
 sys-darwin/apple3com3c90x-7

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.16 2005/03/03 16:53:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.17 2005/03/05 21:00:48 ciaranm Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -36,7 +36,7 @@
 >=app-admin/logrotate-3.6.5-r1
 >=gnome-base/gdm-2.4.4.7
 >=sys-apps/fcron-2.9.4
->=sys-apps/vixie-cron-3.0.1-r2
+>=sys-process/vixie-cron-3.0.1-r2
 >=sys-libs/pwdb-0.61-r4
 
 # New API SELinux kernels
