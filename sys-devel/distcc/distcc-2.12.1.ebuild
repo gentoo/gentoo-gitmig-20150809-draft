@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.1 2004/01/09 07:42:30 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.2 2004/01/11 21:06:38 pyrania Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -126,8 +126,8 @@ pkg_postinst() {
 	ewarn "As of distcc-2.11, the only thing you have to do to configure distcc"
 	ewarn "is to set your hosts (see the Guide, above) and to add distcc to"
 	ewarn "the FEATURES line in /etc/make.conf"
-	ewarn "This version is using a new distcc-config. If you encounter problems with it"
-	ewarn "Please report errors to bug 27432 on the bugs.gentoo.org site"
+	ewarn "This version includes a new distcc-config. If you encounter problems with it,"
+	ewarn "please report them to our Bugzilla at bugs.gentoo.org"
 	echo ""
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"
