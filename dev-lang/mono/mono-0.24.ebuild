@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.21.ebuild,v 1.1 2003/02/28 13:49:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.24.ebuild,v 1.1 2003/05/08 13:22:39 foser Exp $
 
 inherit eutils mono
 
@@ -29,16 +29,16 @@ src_unpack() {
 	unpack ${A}
 
 	# add our own little in-place mcs script
-	echo "${S}/mono/jit/mono ${S}/runtime/mcs.exe \"\$@\" " > ${S}/runtime/mcs
+	echo "${S}/mono/mini/mono ${S}/runtime/mcs.exe \"\$@\" " > ${S}/runtime/mcs
 	chmod +x ${S}/runtime/mcs
 }
 
 src_compile() {
 	econf --with-gc=boehm || die
-	MAKEOPTS="-j1" emake || die "MONO compilation failure"
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
 
 	cd ${MCS_S}
-	PATH=${PATH}:${S}/runtime:${S}/mono/jit MONO_PATH=${MONO_PATH}:${S}/runtime emake -f makefile.gnu || die "MCS compilation failure"
+	PATH=${S}/runtime:${S}/mono/mini:${PATH} MONO_PATH=${S}/runtime:${MONO_PATH} emake -f makefile.gnu || die "MCS compilation failure"
 }
 
 src_install () {
@@ -52,6 +52,11 @@ src_install () {
 	# now install our own compiled dlls
 	cd ${MCS_S}
 	einstall || die
+
+	# install mono's logo
+	insopts -m0644
+	insinto /usr/share/pixmaps/mono
+	doins MonoIcon.png ScalableMonoIcon.svg
 
 	docinto mcs
 	dodoc AUTHORS COPYING README* ChangeLog INSTALL.txt
