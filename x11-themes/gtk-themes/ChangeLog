@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.7 2003/02/23 02:06:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.8 2003/03/30 22:43:18 foser Exp $
+
+*gtk-themes-2.0-r2 (30 Mar 2003)
+
+  30 Mar 2003; foser <foser@gentoo.org> gtk-themes-2.0-r2.ebuild :
+  Updated bumblebee version (#17197)
 
 *gtk-themes-2.0-r1 (29 Oct 2002)
 
