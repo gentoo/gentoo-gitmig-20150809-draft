@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b59e0e399b3c3a3dce8bf84c2061a2f5 ChangeLog 20929
-MD5 3d62fb9ff9c87c788d9b153cd2202e4a evolution-2.0.2.ebuild 4056
+MD5 e250343bfee48effd15c214a2ba84a6e ChangeLog 21026
+MD5 9847af28797af79d42fc37c031c1af3f evolution-2.0.2.ebuild 4055
 MD5 04034205a31f0b0feb05843eb5e64f2e evolution-1.4.6.ebuild 5702
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
 MD5 dad6657ce9376178fb561002aa40f5e0 evolution-1.2.4.ebuild 6251
@@ -21,7 +21,7 @@ MD5 8a4178ab2571a9be24e1c27cfedf20bb files/evolution-2.0.2-camel_typo.patch 298
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmdiNugEuf3OQ0akRAtZsAJ0ePXxfh2h5Z0e1nK7bqGqS4vhnkACdE15w
-pRHGNCqrgP9PVVMKdedwfrA=
-=Me1V
+iD8DBQFButJWugEuf3OQ0akRAjs8AJ4q73ifRuFyZ5FKMTizLzLqthOI0ACZAWMk
+NZvgYjq8xRDnk0nh05Uec8Y=
+=S9Db
 -----END PGP SIGNATURE-----
