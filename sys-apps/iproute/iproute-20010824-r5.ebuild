@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.12 2004/04/13 20:50:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.13 2004/04/20 18:01:46 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,7 +42,6 @@ src_unpack() {
 		ewarn "Your linux-headers in /usr/include/linux are too old to"
 		ewarn "support the HFSC scheduler.  It has been disabled."
 	fi
-	epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
 	rm include/linux/pkt_sched.h
 
 	# Now a little hack to handle kernel headers and stupid defines ...
