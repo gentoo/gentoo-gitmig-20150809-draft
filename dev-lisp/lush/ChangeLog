@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/lush
+# Copyright 2000-2003 Gentoo Technologies, Inc. and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.1 2003/09/01 20:02:39 mkennedy Exp $
+
+*lush-0.98 (01 Sep 2003)
+
+  01 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
