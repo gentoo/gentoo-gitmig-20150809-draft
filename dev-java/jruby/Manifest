@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5cf9d88febb96023a157530ded41fc11 ChangeLog 380
+MD5 1efaa2faef631997579751d7eb3e65d7 ChangeLog 381
 MD5 07b091ba5172e3eed2e558e8a4880ea2 jruby-0.7.0.ebuild 1191
 MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
 MD5 8730e65374f9b6f9cc4cd0c0b043e36a files/digest-jruby-0.7.0 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmZSfI1lqEGTUzyQRAm50AJ9wuRcTrZcFy+qoHzTS75qvkrGH/QCdE8oT
-rNuRe8zv4pzOZ6jtLwGBcGs=
-=aD5Q
+iD8DBQFBmjKtI1lqEGTUzyQRAqSYAKCmCQR82EThui/7/gvTy4Tsg5e0zwCfSSAH
+puYUhGZQWrGJc8RNi9eVkUg=
+=apY9
 -----END PGP SIGNATURE-----
