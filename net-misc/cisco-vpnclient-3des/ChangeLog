@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.21 2004/11/09 20:24:13 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.22 2005/02/08 22:22:47 wolf31o2 Exp $
+
+  08 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.6.00.0045-r1.ebuild:
+  Marking stable on x86 and removing amd64 KEYWORDS, which were accidentally
+  added by me in testing and were never removed.
 
 *cisco-vpnclient-3des-4.6.00.0045-r1 (09 Nov 2004)
 
