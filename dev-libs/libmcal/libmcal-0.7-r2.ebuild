@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r2.ebuild,v 1.2 2004/05/28 15:40:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r2.ebuild,v 1.3 2004/06/02 01:42:07 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.gz ${SRC_URI_BASE}/${DRIVERS}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~s390"
 IUSE="pam"
 
 DEPEND="pam? ( sys-libs/pam )"
@@ -62,4 +62,3 @@ pkg_postinst() {
 	# enforce perms
 	chmod 1777 ${ROOT}/var/spool/calendar
 }
-
