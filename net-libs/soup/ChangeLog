@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/soup
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.20 2003/07/06 11:41:27 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.21 2004/03/17 15:35:01 gustavoz Exp $
+
+  17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> soup-0.7.11.ebuild:
+  stable on sparc
 
   16 May 2003; Lars Weiler <pylon@gentoo.org> soup-0.7.11.ebuild:
   Set ppc in KEYWORDS
