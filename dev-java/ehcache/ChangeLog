@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/ehcache
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.1 2005/03/11 14:46:41 st_lim Exp $
+
+*ehcache-1.1 (11 Mar 2005)
+
+  11 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> +ehcache-1.1.ebuild:
+  Initial commit of ehcache.  There is no src file nor a build.xml.
+
