@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.2 2003/03/31 23:46:10 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.3 2003/04/01 10:10:31 pvdabeel Exp $
 
 IUSE="build crypt"
 
@@ -29,19 +29,14 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
 KEYWORDS="-x86 ~ppc -sparc -alpha"
-DEPEND=">=sys-devel/binutils-2.11.90.0.31"
+DEPEND=">=sys-devel/binutils-2.11.90.0.31 app-admin/addpatches"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-
-	cd ${KV}
-	# Kill patches we aren't suppposed to use, don't worry about 
-	# failures, if they aren't there that is a good thing!
-
-	# This is the ratified crypt USE flag, enables IPSEC
+	cd linux-${KV}
 	[ `use crypt` ] || rm 6*
-
+	cd ..
 	kernel_src_unpack
 }
