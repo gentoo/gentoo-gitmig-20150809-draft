@@ -363,3 +363,7 @@ dev-lang/tcl-tk
 # gbevin@gentoo.org, 7 Feb 2002
 # really not finished or tested, don't use !
 dev-util/subversion
+
+#tod@gentoo.org, 8 Feb 2002
+#buggy version, use 0.1.1 instead
+=dev-python/anygui-0.1
