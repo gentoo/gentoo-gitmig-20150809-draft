@@ -1,0 +1,50 @@
+#!/bin/bash
+#
+# tiny eclipse wrapper script to allow per user workbenches
+# under each user's home.
+#
+# (c) March 2003 D. Seyffer <uid0@getroot.de>
+#
+
+ECLIPSE_DIR="/usr/lib/eclipse"
+if [ "`basename $0`" = "eclipse-motif" ] ; then
+	ECLIPSE="${ECLIPSE_DIR}/eclipse-motif";
+else
+	ECLIPSE="${ECLIPSE_DIR}/eclipse";
+fi
+WORKBENCH="${HOME}/.eclipse/"
+
+###################################################
+
+if [ ! -d ${ECLIPSE_DIR} ] ; then
+	echo " Eclipse directory not found.";
+	exit 1;
+else 
+	echo " Eclipse found.";
+fi
+
+
+if [ ! -x ${ECLIPSE} ] ; then
+	echo " Eclipse executable not found or not executable.";
+	exit 1;
+else
+	echo " Executable found and is executable.";
+fi
+
+
+if [ ! -d ${WORKBENCH} ] ; then
+	echo " No existing workbench for current user!";
+	echo " First time startup? Will prepare and have eclipse create one...";
+	mkdir -p ${WORKBENCH}
+	if [ ! -d ${WORKBENCH} ] ; then
+		echo " Error creating workbench env!"; 
+		exit 1;
+	fi
+else
+	echo " Found existing workbench directory for current user.";
+fi
+
+echo " Starting Eclipse...";
+cd ${WORKBENCH}
+${ECLIPSE}	
+
