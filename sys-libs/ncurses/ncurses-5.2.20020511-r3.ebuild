@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r3.ebuild,v 1.3 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r3.ebuild,v 1.4 2003/01/06 21:20:34 tuxus Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="virtual/glibc
 	sys-apps/bzip2"
