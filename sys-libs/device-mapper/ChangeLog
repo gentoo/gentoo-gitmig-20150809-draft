@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.26 2005/02/23 04:06:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.27 2005/02/23 14:23:03 azarah Exp $
+
+  23 Feb 2005; Martin Schlemmer <azarah@gentoo.org> files/dm-start.sh:
+  Fix error printing.  Remove sourcing of functions.sh.
 
 *device-mapper-1.00.19-r2 (23 Feb 2005)
 

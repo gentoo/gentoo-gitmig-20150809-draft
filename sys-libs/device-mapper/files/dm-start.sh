@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/dm-start.sh:  Setup DM volumes at boot
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/files/dm-start.sh,v 1.1 2005/02/23 04:06:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/files/dm-start.sh,v 1.2 2005/02/23 14:23:03 azarah Exp $
 
 # char **get_new_dm_volumes(void)
 #
@@ -52,8 +52,6 @@ is_empty_dm_volume() {
 	return 1
 }
 
-source /sbin/functions.sh
-
 if [[ -x /sbin/dmsetup && -c /dev/mapper/control && -f /etc/dmtab ]]; then
 	[[ -n $(get_new_dm_volumes) ]] && \
 		einfo " Setting up device-mapper volumes:"
@@ -65,7 +63,7 @@ if [[ -x /sbin/dmsetup && -c /dev/mapper/control && -f /etc/dmtab ]]; then
 
 		ebegin "  Creating volume: ${volume}"
 		if ! eval ${x} &>/dev/null; then
-			eerror "  Error creating volume: ${volume}"
+			eend 1 "  Error creating volume: ${volume}"
 			# dmsetup still adds an empty volume in some cases,
 			#  so lets remove it
 			is_empty_dm_volume "${volume}" && \

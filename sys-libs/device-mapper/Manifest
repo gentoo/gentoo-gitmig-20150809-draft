@@ -1,4 +1,4 @@
-MD5 5cd465ceefc3f5a8d8670affed0e4cd9 ChangeLog 4668
+MD5 fbf0edac74e1be7318e98f6f3d9decd2 ChangeLog 4796
 MD5 442d3e7a8b2fef4163309008671617f1 device-mapper-1.00.07.ebuild 1037
 MD5 8ef457f9ac46b73b855b4a4e5ff9d7d3 metadata.xml 243
 MD5 9248ee9f47e68c45f432f62521cc0dde device-mapper-1.00.18-r1.ebuild 1192
@@ -14,7 +14,7 @@ MD5 4d88d6f3c209606108a397be140cc6a7 device-mapper-1.00.19-r2.ebuild 1465
 MD5 72b46f8a5544fa166e22dd6297071eda files/digest-device-mapper-1.00.08 70
 MD5 b6ee13a8f0d0d9a8600559f997c8ba9d files/digest-device-mapper-1.00.07 70
 MD5 3722791187466d3005f5b7f129c3ed7a files/digest-device-mapper-1.00.17 70
-MD5 f4a848bb043f6753ff65a223bbf44788 files/dm-start.sh 1941
+MD5 66a1d5bed9b6fa521d9d9b238826e0db files/dm-start.sh 1914
 MD5 bd2d95d83990e96a2e3a0f48b53d5abd files/digest-device-mapper-1.00.18 70
 MD5 b5dd92354fb75caa4956a92d5aa2e0ea files/digest-device-mapper-1.00.19 70
 MD5 b6ee13a8f0d0d9a8600559f997c8ba9d files/digest-device-mapper-1.00.07-r1 70
