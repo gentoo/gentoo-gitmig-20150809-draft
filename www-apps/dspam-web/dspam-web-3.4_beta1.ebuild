@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.3.11.ebuild,v 1.2 2005/01/18 02:58:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4_beta1.ebuild,v 1.1 2005/01/18 02:58:25 st_lim Exp $
 
 inherit webapp eutils
 
 MY_PN=${PN/-web/}
-MY_PV=${PV/_rc3/.pr1}
+MY_PV=${PV/_beta1/.beta.1}
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="Web based administration and user controls for dspam"
@@ -20,7 +20,7 @@ DEPEND=">=mail-filter/dspam-3.2_rc3
 	dev-perl/GD-Graph3d
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc"
 S=${WORKDIR}/${MY_P}
 HOMEDIR=/etc/mail/dspam
 
@@ -28,7 +28,7 @@ src_compile() {
 	local myconf
 
 	# these are the default settings
-	myconf="${myconf} --enable-daemon"
+	#myconf="${myconf} --enable-daemon"
 	#myconf="${myconf} --enable-nodalcore"
 	myconf="${myconf} --enable-homedir"
 	myconf="${myconf} --enable-long-username"
