@@ -1,6 +1,15 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.45 2004/04/07 22:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.46 2004/04/13 13:33:20 phosphan Exp $
+
+*xine-ui-0.9.23-r1 (13 Apr 2004)
+
+  13 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> xine-ui-0.9.13-r1.ebuild,
+  xine-ui-0.9.13.ebuild, xine-ui-0.9.21-r1.ebuild, xine-ui-0.9.21.ebuild,
+  xine-ui-0.9.22-r1.ebuild, xine-ui-0.9.22.ebuild, xine-ui-0.9.23-r1.ebuild,
+  xine-ui-0.9.23.ebuild, files/symlink-bug.patch:
+  Adding the patch for bug #45448 to every version in portage (symlink/tmpfile
+  bug). Bumped revisions, removed unpatched versions.
 
   07 Apr 2004; Aron Griffis <agriffis@gentoo.org> xine-ui-0.9.23.ebuild:
   Add ~alpha per bug 46903

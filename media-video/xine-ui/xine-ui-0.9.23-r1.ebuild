@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23.ebuild,v 1.8 2004/04/07 22:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.23-r1.ebuild,v 1.1 2004/04/13 13:33:20 phosphan Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/symlink-bug.patch"
 	epatch ${FILESDIR}/preserve-CFLAGS-${PV}.diff
 	epatch ${FILESDIR}/true-false.patch
 	use directfb || sed -i "s:dfb::" src/Makefile.in
