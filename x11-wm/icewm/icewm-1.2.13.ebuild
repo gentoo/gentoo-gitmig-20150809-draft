@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.1 2003/09/27 15:52:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.2 2003/09/30 04:17:35 bcowan Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -69,7 +69,7 @@ src_install(){
 	dohtml -a html,sgml doc/*
 
 	echo "#!/bin/bash" > icewm
-	echo "/usr/bin/icewm" >> icewm
+	echo "/usr/bin/icewm-session" >> icewm
 	exeinto /etc/X11/Sessions
 	doexe icewm
 }
