@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.21 2004/07/07 16:14:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.22 2004/07/09 19:22:40 agriffis Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -59,7 +59,7 @@ gnuconfig_do_update() {
 		fi
 		targetlist=`find "${startdir}" -name "${file}"`
 		if [ -n "$targetlist" ] ; then
-			for target in "$targetlist"; do
+			for target in $targetlist; do
 				einfo " Updating ${target/$startdir\//}"
 				cp -f ${configsubs_dir}/${file} "${target}"
 				eend $?
