@@ -2,7 +2,9 @@ MD5 b570e166448ab7450bd5c67d23baf1d1 ChangeLog 752
 MD5 74a094c575c49288bb104a181d1ae5af freelords-0.2.3.ebuild 1177
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 864f1e5bc19a996807c7972f2857c1e8 freelords-0.3.ebuild 1039
+MD5 a7223c94b80b0c503e41e0382c63629c freelords-0.3.1.ebuild 1032
 MD5 64ba42dc574811c9be69f0201cf0ecc4 files/0.2.3-gcc3.patch 1252
 MD5 a129248166e9830dd7ab2bb7a72c9e89 files/digest-freelords-0.2.3 67
 MD5 ab1b855445f4e0f4ccbc46662e0bf206 files/freelordsrc 147
 MD5 4b06c5d830e1f951b228edf50989b282 files/digest-freelords-0.3 66
+MD5 c64e4bc7bfb2479e2073bb3f5fdfa5fd files/digest-freelords-0.3.1 68
