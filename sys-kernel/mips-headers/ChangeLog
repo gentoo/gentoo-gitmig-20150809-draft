@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.27 2005/02/27 05:55:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.28 2005/03/24 19:59:32 kumba Exp $
+
+*mips-headers-2.6.11 (24 Mar 2005)
+
+  24 Mar 2005; Joshua Kinard <kumba@gentoo.org>
+  -files/mips-headers-2.6.10-ip27-build64.patch, -mips-headers-2.6.10.ebuild,
+  +mips-headers-2.6.11.ebuild, -mips-headers-2.6.8.1.ebuild:
+  Removed all prior 2.6.x headers inplace of 2.6.11, which has so far, worked
+  great for o32. n32 testing is still needed. Included also is a mips appCompat
+  patch to help things work in o32-land. Lastly, include experimental, 'sekret'
+  patch for preliminary mips nptl testing.
 
 *mips-headers-2.6.10 (27 Feb 2005)
 
