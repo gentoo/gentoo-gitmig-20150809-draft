@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libticables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.1 2003/07/20 05:24:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libticables/ChangeLog,v 1.2 2003/07/20 05:31:42 rphillips Exp $
+
+*libticables-3.7.2 (19 Jul 2003)
+
+  19 Jul 2003; Ryan Phillips <rphillips@gentoo.org> libticables-3.7.2.ebuild:
+  New version
 
 *libticables-3.6.3 (19 Jul 2003)
 
