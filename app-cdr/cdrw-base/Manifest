@@ -1,5 +1,5 @@
-MD5 08f117a560212e439df3505a32646456 ChangeLog 1317
-MD5 2a5c76704b8bbd236a3bc24101b2b017 cdrw-base-0.2.ebuild 552
+MD5 344e94a7b0382f17b12a0b13683db954 ChangeLog 1319
+MD5 249db8c83b7d6b56b6e95f6782a9bc39 cdrw-base-0.2.ebuild 555
 MD5 bece66eac9cbef2bdae7ac13f2da5044 metadata.xml 251
 MD5 0a031f31c753185c00153804aabfe8b0 files/devfs-0.2 529
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cdrw-base-0.2 0
