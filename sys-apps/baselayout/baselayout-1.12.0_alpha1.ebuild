@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha1.ebuild,v 1.1 2005/03/10 16:48:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha1.ebuild,v 1.2 2005/03/10 23:45:56 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -255,7 +255,7 @@ src_install() {
 
 	# List all the multilib libdirs in /etc/env/04multilib (only if they're 
 	# actually different from the normal
-	if [ $(number_abis) -ne 1 -o $(get_libdir) != "lib" ]; then
+	if has_multilib_profile || [[ $(get_libdir) != "lib" || -n ${CONF_MULTILIBDIR} ]]; then
 		echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
 	fi
 
