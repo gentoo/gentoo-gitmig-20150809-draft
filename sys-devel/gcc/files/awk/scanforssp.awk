@@ -3,7 +3,8 @@
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Contributor: Ned Ludd <solar@gentoo.org>
 # Contributor: Natanael Copa  <nat@c2i.net>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.5 2003/12/31 18:21:42 solar Exp $
+# Contributor: Carter Smithhart <derheld42@derheld.net>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/scanforssp.awk,v 1.6 2004/03/01 18:06:29 azarah Exp $
 
 
 # Does not seem to be used in this script.
@@ -157,6 +158,7 @@ BEGIN {
 		pipe = ("find " DIRLIST[x] "/ -type f -perm -1 2>/dev/null")
 		while ( (pipe | getline scan_files) > 0) {
 
+                    #print scan_files
 			# Do nothing if the file is located in gcc's internal lib path ...
 			if (scan_files ~ GCCLIBPREFIX) continue
 			# Or if its hardend files ...
@@ -164,11 +166,11 @@ BEGIN {
 			# Or not a elf image ...
 			if (iself(scan_files)) continue
 
-			scan_file_pipe = ("readelf -s " scan_files " 2>/dev/null")
+                        scan_file_pipe = ("readelf -s " scan_files " 2>&1")
 			while (((scan_file_pipe) | getline scan_data) > 0) {
-			
+                            bad = 0;
 				if (scan_data ~ /__guard@GCC/ || scan_data ~ /__guard@@GCC/) {
-
+                                bad = 1;
 					print
 
 					# 194: 00000000    32 OBJECT  GLOBAL DEFAULT  UND __guard@GCC_3.0 (3)
@@ -176,6 +178,15 @@ BEGIN {
 					split(scan_data, scan_data_nodes)
 					ewarn("Found " scan_data_nodes[8] " in " scan_files "!")
 					print
+                            }
+                            if (scan_data ~ /readelf: Error: Unable to seek/) {
+                                bad = 1;
+                                print
+                                ewarn("Error executing readelf. Bad block? Filesystem error? in " scan_files)
+                                print
+                            }
+
+                            if (bad) {
 
 					if (auto_etcat) {
 					
