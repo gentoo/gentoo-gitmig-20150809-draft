@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.4 2003/08/03 03:42:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.5 2003/08/05 16:57:26 vapier Exp $
 
 DESCRIPTION="tool for reading, sending and managing electronic messages"
 HOMEPAGE="http://www.washington.edu/pine/"
@@ -63,7 +63,7 @@ src_unpack() {
 	# gets rid of a call to stripwhitespace()
 	epatch ${FILESDIR}/pine-4.33-whitespace.patch || die
 
-	if [ `use debug`" ]; then
+	if [ "`use debug`" ]; then
 		cd ${S}/pine
 		sed -i "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
 			makefile.lnx
