@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-021209.ebuild,v 1.9 2004/06/24 23:24:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-021209.ebuild,v 1.10 2004/06/28 22:19:47 agriffis Exp $
 
 inherit kde
 
@@ -11,8 +11,10 @@ DESCRIPTION="Conectiva Crystal - Icon theme. Warning: included in >=kdeartwork-3
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tar.gz"
 HOMEPAGE="http://www.conectiva.com.br"
 KEYWORDS="x86 alpha ppc"
+IUSE=""
 SLOT="0"
 LICENSE="as-is"
+DEPEND=">=sys-apps/sed-4"
 
 # stripping hangs and we've no binaries
 RESTRICT="$RESTRICT nostrip"
