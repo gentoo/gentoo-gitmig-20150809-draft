@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_contribs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.10 2004/06/20 14:07:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.11 2004/06/20 15:29:18 zul Exp $
+
+  20 Jun 2004; Chuck Short <zul@gentoo.org> mod_contribs-1.0.8-r1.ebuild:
+  Ebuild cleanup.
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_contribs-1.0.8-r1.ebuild:
   Replaced CATEGORY with net-www.

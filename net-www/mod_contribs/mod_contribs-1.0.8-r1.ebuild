@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.14 2004/06/20 14:07:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.15 2004/06/20 15:29:18 zul Exp $
 
 # The mod_layout and mod_random that come in the archive are really old,
 # so I've replaced them with more current versions.
@@ -18,6 +18,8 @@ SLOT="0"
 
 DEPEND="virtual/glibc
 	=net-www/apache-1*"
+RDEPEND=""
+IUSE=""
 
 MY_MODS="mod_allowdev mod_auth_system mod_disallow_id mod_lock mod_random
 	mod_auth_cookie mod_bandwidth mod_eaccess mod_macro mod_roaming
