@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.5 2004/07/02 04:17:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.6 2005/01/01 18:04:54 eradicator Exp $
 
 DESCRIPTION="A documentation generator for Haskell"
 

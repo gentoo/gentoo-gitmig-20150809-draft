@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.4.ebuild,v 1.2 2004/11/22 22:11:33 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.13.4.ebuild,v 1.3 2005/01/01 18:03:46 eradicator Exp $
 
 inherit ghc-package
 

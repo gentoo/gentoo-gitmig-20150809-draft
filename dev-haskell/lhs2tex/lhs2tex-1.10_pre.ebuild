@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.4 2004/10/21 12:28:05 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.10_pre.ebuild,v 1.5 2005/01/01 18:05:45 eradicator Exp $
 
 SRC_URI="http://www.cs.uu.nl/~andres/lhs2tex/${P/_pre/pre}.tar.bz2"
 

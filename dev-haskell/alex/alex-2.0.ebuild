@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.6 2004/10/18 16:46:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.7 2005/01/01 18:03:20 eradicator Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
