@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.423 2004/06/07 07:04:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.424 2004/06/07 13:54:45 phosphan Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -66,7 +66,6 @@ app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-sci/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
-app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/sword:icu - Enable icu support for sword
@@ -106,7 +105,6 @@ dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-j2sdk:nptl - Enable support for NPTL 
 dev-lang/R:bzlib - use bzlib compression library
-dev-lang/R:pcre -  add perl compatible regular expressions support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
@@ -121,7 +119,6 @@ dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/redland:php - Enable the PHP interface
-dev-lisp/clisp:pcre - enable PCRE support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)

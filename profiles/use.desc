@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.162 2004/06/01 19:07:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.163 2004/06/07 13:54:45 phosphan Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -144,6 +144,7 @@ oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
 pam - Adds support PAM (Pluggable Authentication Modules)
 pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
+pcre - Adds support for Perl Compatible Regular Expressions
 pda - Adds support for portable devices.
 pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
