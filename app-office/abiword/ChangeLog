@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.26 2003/03/16 00:51:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.27 2003/03/21 17:30:22 foser Exp $
+
+*abiword-1.0.5 (16 Mar 2003)
+
+  16 Mar 2003; foser <foser@gentoo.org> abiword-1.0.5.ebuild :
+  New version
+  disabled gnome USE because it breaks
+  disabled perl USE because it never really worked
 
 *abiword-1.0.4 (26 Jan 2003)
   
