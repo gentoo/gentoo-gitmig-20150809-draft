@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1.ebuild,v 1.1 2003/07/11 15:08:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/lambdamoo-1.8.1-r1.ebuild,v 1.1 2003/07/12 07:29:18 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="networked mud that can be used for different types of collaborative software"
 HOMEPAGE="http://sourceforge.net/projects/lambdamoo/"
@@ -16,8 +18,7 @@ S=${WORKDIR}/MOO-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	autoconf
+	epatch ${FILESDIR}/${PV}-enable-outbound.patch
 }
 
 src_compile() {
