@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.39 2003/09/05 02:02:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.40 2003/09/05 02:10:23 spider Exp $
+
+  05 Sep 2003; <spider@gentoo.org> sylpheed-0.8.11.ebuild,
+  sylpheed-0.9.0.ebuild, sylpheed-0.9.2.ebuild, sylpheed-0.9.3.ebuild,
+  sylpheed-0.9.4-r1.ebuild, sylpheed-0.9.4.ebuild:
+  Fixed all syntax errors
 
 *sylpheed-0.9.4-r1 (05 Sep 2003)
 

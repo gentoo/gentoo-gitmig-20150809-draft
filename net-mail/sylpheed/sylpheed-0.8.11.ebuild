@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.11.ebuild,v 1.7 2003/08/30 09:27:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.11.ebuild,v 1.8 2003/09/05 02:10:23 spider Exp $
 
 inherit eutils
 
@@ -34,39 +34,39 @@ src_compile() {
 	local myconf
 
 	use gnome || myconf="${myconf} --disable-gdk-pixbuf --disable-imlib"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	use ssl && myconf="${myconf} --enable-ssl"
-	
+
 	use crypt && myconf="${myconf} --enable-gpgme"
-	
+
 	use pda && myconf="${myconf} --enable-jpilot"
-	
+
 	use ldap && myconf="${myconf} --enable-ldap"
-	
+
 	use ipv6 && myconf="${myconf} --enable-ipv6"
-	
+
 	use xface || myconf="${myconf} --disable-compface"
-	
-	econf ${myconf} 
+
+	econf ${myconf}
 
 	emake || die
 }
 
 src_install () {
-	einstall 	
+	einstall
 
-	dodir /usr/share/pixmaps 
+	dodir /usr/share/pixmaps
 	insinto /usr/share/pixmaps
 	doins *.png
-	
+
 	if use gnome
-	    then
+	then
 		dodir /usr/share/gnome/apps/Internet
 		insinto /usr/share/gnome/apps/Internet
 		doins sylpheed.desktop
 	fi
-	
+
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog* NEWS README* TODO*
 }

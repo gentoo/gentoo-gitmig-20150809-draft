@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.4-r1.ebuild,v 1.1 2003/09/05 02:02:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.4-r1.ebuild,v 1.2 2003/09/05 02:10:23 spider Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda gtk2"
 
@@ -36,7 +36,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/shared-mime.patch
 	use gtk2 && gunzip -dc ${DISTDIR}/sylpheed-${PV}-gtk2-${PATCHVER}.diff.gz >sylpheed-${PV}-gtk2-${PATCHVER}.diff
-	
+
 	use gtk2 && patch  <${FILESDIR}/gtk2-patch-fix.patch
 	use gtk2 && epatch  sylpheed-${PV}-gtk2-${PATCHVER}.diff
 }
@@ -50,41 +50,41 @@ src_compile() {
 		use gnome || myconf="${myconf} --disable-gdk-pixbuf --disable-imlib"
 		use nls || myconf="${myconf} --disable-nls"
 	fi
-	
-	
+
+
 	use ssl && myconf="${myconf} --enable-ssl"
-	
+
 	use crypt && myconf="${myconf} --enable-gpgme"
-	
+
 	use pda && myconf="${myconf} --enable-jpilot"
-	
+
 	use ldap && myconf="${myconf} --enable-ldap"
-	
+
 	use ipv6 && myconf="${myconf} --enable-ipv6"
-	
+
 	use xface || myconf="${myconf} --disable-compface"
-	
+
 	# build fails if this is done normally. dunno why and didn't bother to find out. : )
 	use gtk2 && ./autogen.sh
-	
-	econf ${myconf} 
+
+	econf ${myconf}
 
 	emake || die
 }
 
 src_install () {
-	einstall 	
+	einstall
 
-	dodir /usr/share/pixmaps 
+	dodir /usr/share/pixmaps
 	insinto /usr/share/pixmaps
 	doins *.png
-	
+
 	if use gnome
 	then
 		dodir /usr/share/gnome/apps/Internet
 		insinto /usr/share/gnome/apps/Internet
 		doins sylpheed.desktop
 	fi
-	
+
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog* NEWS README* TODO*
 }
