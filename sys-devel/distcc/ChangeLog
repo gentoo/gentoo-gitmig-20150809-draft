@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.67 2003/08/11 01:56:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.68 2003/08/12 16:30:37 lisa Exp $
+
+*distcc-2.10 (12 Aug 2003)
+
+  12 Aug 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.10.ebuild, files/2.10/conf,
+  files/2.10/distcc-config, files/2.10/init:
+  add distcc 2.10 and related files
 
   10 Aug 2003; Chris PeBenito <pebenito@gentoo.org> distcc-2.5-r1.ebuild,
   distcc-2.8-r2.ebuild, distcc-2.9.ebuild:
