@@ -1,8 +1,18 @@
-MD5 2b224ae9ee4f31a5244346da2aba434c ksensors-0.7.2-r1.ebuild 657
-MD5 4d974d83d9b392fd46d12a93de0df951 ksensors-0.7.2.ebuild 602
-MD5 d2342ee84181550f3e759dcb177b0fe9 ChangeLog 1485
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c69a63b5c993573639f0ead160ca02fc ChangeLog 1613
+MD5 64417ae658f7615f917bab0453797af4 ksensors-0.7.2-r1.ebuild 643
+MD5 d2b3c6aace644401b18d9b9d0bb67485 ksensors-0.7.2.ebuild 589
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 5735dac5885bda1ec14e3015ad47f87a files/startupcrash.diff 618
 MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2 66
-MD5 8c18772cb6400af497858e0c7f9658ec files/ksensors-0.7.2-scaling.diff 2085
 MD5 7e219e54436163ee72f99d92a157215a files/digest-ksensors-0.7.2-r1 66
+MD5 8c18772cb6400af497858e0c7f9658ec files/ksensors-0.7.2-scaling.diff 2085
+MD5 5735dac5885bda1ec14e3015ad47f87a files/startupcrash.diff 618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9C5U04iMKjbTpdgRAgWoAJ4rIwMSUuHxrpa3sUbhC/iT0FTE2gCfT5OX
+/oh0pkYsS3HXjRS7dk8NTg4=
+=EFOv
+-----END PGP SIGNATURE-----
