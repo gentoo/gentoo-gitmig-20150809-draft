@@ -1,14 +1,13 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.16 2003/08/03 05:04:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.17 2003/08/07 07:16:49 usata Exp $
 
-  27 May 2003; Tavis Ormandy <taviso@gentoo.org> xv-3.10a-r3.ebuild:
-  ccc support
+*xv-3.10a-r5 (07 Aug 2003)
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-  16 Jun 2003; Michael Nazaroff <naz@gentoo.org> :
-  Marked x86 as stable.
+  07 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> xv-3.10a-r5.ebuild,
+  files/xv-3.10a-r5-gentoo-Nu.patch:
+  Fixed install destination directories.  Thanks to Brandon Anderson
+  <branders@ccsoft.com> for bug report #25678.
 
 *xv-3.10a-r4 (31 Jul 2003)
 
@@ -21,6 +20,12 @@
 
 *xv-3.10a-r3 (03 Nov 2002)
 
+  16 Jun 2003; Michael Nazaroff <naz@gentoo.org> :
+  Marked x86 as stable.
+
+  27 May 2003; Tavis Ormandy <taviso@gentoo.org> xv-3.10a-r3.ebuild:
+  ccc support
+
   25 Mar 2003; Aron Griffis <agriffis@gentoo.org> xv-3.10a-r3.ebuild:
   Add ~alpha to KEYWORDS
 
@@ -30,6 +35,8 @@
 
 *xv-3.10a-r2 (05 Jun 2002)
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
   13 Oct 2002; Olivier Reisch <doctomoe@gentoo.org> xv-3.10a-r2.ebuild:
   Fixed the ebuild to apply patches correctly if we both have use ppc and use png
 
