@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r1.ebuild,v 1.7 2004/06/25 00:24:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r1.ebuild,v 1.8 2004/07/04 22:49:20 swegener Exp $
+
+inherit eutils
 
 IUSE=""
 
 DESCRIPTION="Brag collects and assembles multipart binary attachements from newsgroups."
 SRC_URI="mirror://sourceforge/brag/${P}.tar.gz"
-HOMEPAGE="http://brag.sourceforge.net"
+HOMEPAGE="http://brag.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,11 +22,16 @@ RDEPEND="dev-lang/tcl
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch < ${FILESDIR}/${P}-${PR}-gentoo.patch
+
+	epatch ${FILESDIR}/${PF}-gentoo.patch
+}
+
+src_compile() {
+	true
 }
 
 src_install() {
 	dobin brag
-	dodoc brag.spec CHANGES LICENSE README
+	dodoc CHANGES README
 	doman brag.1
 }
