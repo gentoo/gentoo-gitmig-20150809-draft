@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.1.6.ebuild,v 1.2 2004/11/11 23:00:36 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.1.10.ebuild,v 1.1 2004/11/16 20:29:40 squinky86 Exp $
 
 IUSE="gtk"
 DESCRIPTION="Limewire Java Gnutella client"

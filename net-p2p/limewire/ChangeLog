@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.10 2004/11/11 23:00:36 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.11 2004/11/16 20:29:40 squinky86 Exp $
+
+*limewire-4.1.10 (16 Nov 2004)
+
+  16 Nov 2004; Jon Hood <squinky86@gentoo.org> +limewire-4.1.10.ebuild,
+  -limewire-4.1.6.ebuild:
+  Version bump, remove old version.
 
   11 Nov 2004; Guillaume Destuynder <kang@gentoo.org> limewire-4.0.8.ebuild,
   limewire-4.1.6.ebuild, limewire-4.1.7.ebuild:
