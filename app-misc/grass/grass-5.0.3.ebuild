@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.1 2003/12/29 13:20:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.2 2004/01/11 13:35:34 lanius Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality."
 HOMEPAGE="http://grass.baylor.edu/"
@@ -34,7 +34,7 @@ DEPEND=">=sys-devel/make-3.80
 	postgres? ( >=dev-db/postgresql-7.3.2 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	gd? ( >=media-libs/libgd-1.8.3 )
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	truetype? ( >=media-libs/freetype-2.1.3 )"
 	#nviz? ( >=media-libs/mesa-3.5 )"
 
