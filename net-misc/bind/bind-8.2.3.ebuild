@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.3.ebuild,v 1.1 2001/02/15 16:41:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.3.ebuild,v 1.2 2001/02/15 18:17:31 achim Exp $
 
 A="bind-src.tar.gz bind-doc.tar.gz"
 S=${WORKDIR}/src
@@ -22,8 +22,8 @@ src_unpack() {
     cd ${S}/port/linux
     cp Makefile.set Makefile.set.orig
     sed -e "s:^'CC=.*:'CC=gcc':" \
-	-e "s:^'YACC=.*:'YACC=bison -y':" Makefile.set.orig > Makefile.set
-#    sed -e "s:CDEBUG=-O -g:CDEBUG=${CFLAGS}:" Makefile.set.orig > Makefile.set
+	-e "s:^'YACC=.*:'YACC=bison -y':" \
+	-e "s:CDEBUG=-O -g:CDEBUG=${CFLAGS}:" Makefile.set.orig > Makefile.set
 }
 
 src_compile() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.0.6-r2.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.0.6-r2.ebuild,v 1.2 2001/02/15 18:17:31 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,8 +21,8 @@ src_compile() {
 src_install() {
 
 	try make prefix=${D}/usr mandir=${D}/usr/share/man/man1 infodir=${D}/usr/share/info libexecdir=${D}/usr/lib/awk install
-
-        dodoc ChangeLog ACKNOWLEDGMENT COPYING FUTURES
+    dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
+    dodoc ChangeLog ACKNOWLEDGMENT COPYING FUTURES
 	dodoc LIMITATIONS NEWS PROBLEMS README
 	docinto README_d
 	dodoc README_d/*

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03.ebuild,v 1.3 2000/11/04 12:54:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03.ebuild,v 1.4 2001/02/15 18:17:31 achim Exp $
 
 A=${PN}-${PV}ii.tar.gz
 S=${WORKDIR}/${PN}
@@ -30,6 +30,8 @@ src_install () {
     dodir /usr/bin
     dodoc BUGS DOC README TODO COPYING ChangeLog
     try make
+    cd ${D}/usr/lib/perl5
+    mv SGMLS.pm site_perl/5.6.0/SGMLS.pm
 
 }
 
