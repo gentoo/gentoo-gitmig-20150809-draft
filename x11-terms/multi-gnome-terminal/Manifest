@@ -4,6 +4,7 @@ MD5 161d028b4c0995ff13af59a4b0e83d02 multi-gnome-terminal-1.5.2-r1.ebuild 1927
 MD5 4297cb8a540c87090fa72d5ca0cc7483 multi-gnome-terminal-1.5.2-r2.ebuild 1933
 MD5 adab4b3c8ef35e27c2878fbfcca2cf57 multi-gnome-terminal-1.5.2.ebuild 1797
 MD5 2f9636e4adcfb45b16323f1ea9bd1901 multi-gnome-terminal-1.6.1.ebuild 1934
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8e002d3e638c789dfdb651bae22a03a2 multi-gnome-terminal-1.6.2.ebuild 1938
 MD5 a248b8e97b95f9fc3ee55a9723e9825f files/digest-multi-gnome-terminal-1.5.1 80
 MD5 50c30318231ee0605eada1a30ab812b2 files/digest-multi-gnome-terminal-1.5.2 80
