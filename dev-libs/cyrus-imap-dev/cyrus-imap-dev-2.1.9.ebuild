@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.2 2002/10/20 18:41:50 vapier Exp $
-
-S=${WORKDIR}/cyrus-imapd-${PV}
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.9.ebuild,v 1.3 2002/11/30 01:27:01 vapier Exp $
 
 DESCRIPTION="Developer support for the Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -22,8 +20,9 @@ DEPEND="virtual/glibc
 	>=dev-libs/cyrus-sasl-2.1.2
 	>=sys-apps/tcp-wrappers-7.6"
 
-src_compile() {
+S=${WORKDIR}/cyrus-imapd-${PV}
 
+src_compile() {
 	local myconf
 	
 	use afs && myconf="--with-afs" \
@@ -45,7 +44,7 @@ src_compile() {
 		--with-com_err=yes \
 		--without-perl \
 		--disable-cyradm \
-		${myconf} || die "bad ./configure"
+		${myconf}
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
@@ -54,17 +53,13 @@ src_compile() {
 	make || die "compile problem"
 	cd ${S}/acap
 	make || die "compile problem"
-
 }
 
-src_install () {
-
+src_install() {
+	dodoc COPYRIGHT README*
 	cd ${S}/lib
 	mkdir -p -m 0755 ${D}usr/include/cyrus
 	emake DESTDIR=${D} install || die "compile problem"
 	cd ${S}/acap
 	emake DESTDIR=${D} install || die "compile problem"
-	cd ${S}
-	dodoc COPYRIGHT README*
-
 }
