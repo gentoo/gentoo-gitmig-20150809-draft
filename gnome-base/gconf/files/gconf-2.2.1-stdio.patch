@@ -1,0 +1,11 @@
+diff -NurB GConf-2.2.1-orig/backends/markup-tree.c GConf-2.2.1/backends/markup-tree.c
+--- GConf-2.2.1-orig/backends/markup-tree.c	2003-11-12 22:13:09.000000000 -0500
++++ GConf-2.2.1/backends/markup-tree.c	2003-11-12 22:14:09.000000000 -0500
+@@ -31,6 +31,7 @@
+ #include <dirent.h>
+ #include <limits.h>
+ #include <time.h>
++#include <stdio.h>
+ 
+ typedef struct
+ {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.7 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.1.ebuild,v 1.8 2003/11/13 03:42:10 leonardop Exp $
 
 IUSE="doc"
 
@@ -27,6 +27,13 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/gconf-${PV}-stdio.patch
+}
 
 src_install() {
 
