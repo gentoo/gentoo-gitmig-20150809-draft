@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.1 2003/10/02 18:28:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.2 2003/10/21 22:49:04 max Exp $
 
 inherit flag-o-matic
 
@@ -11,19 +11,19 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P/_p/pl}.tar.gz
 
 LICENSE="isc-dhcp"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~mips"
 IUSE="static"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${P/_p/pl}
+S="${WORKDIR}/${P/_p/pl}"
 
 src_unpack() {
-	unpack ${A} && cd ${S}
-	epatch ${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch
-	epatch ${DISTDIR}/dhcp-3.0+paranoia.patch
-	epatch ${FILESDIR}/dhcp-3.0pl2-user-option-fix.patch
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/dhcp-3.0pl2-user-option-fix.patch"
+	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
+	epatch "${DISTDIR}/dhcp-3.0+paranoia.patch"
 }
 
 src_compile() {
@@ -34,6 +34,8 @@ src_compile() {
 		filter-flags "-O"
 	fi
 
+	use static && append-flags -static
+
 	cat <<-END >> includes/site.h
 	#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
 	#define _PATH_DHCLIENT_DB "/var/lib/dhcp/dhclient.leases"
@@ -41,7 +43,6 @@ src_compile() {
 	#define DHCPD_LOG_FACILITY LOG_LOCAL1
 	END
 
-	use static && append-flags -static
 	cat <<-END > site.conf
 	CC = gcc ${CFLAGS}
 	LIBDIR = /usr/lib
