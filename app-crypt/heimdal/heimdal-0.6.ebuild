@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.16 2004/04/25 22:00:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.17 2004/05/06 10:06:53 dragonheart Exp $
 
 inherit libtool eutils
 
@@ -14,15 +14,19 @@ KEYWORDS="x86 sparc ppc alpha ia64 amd64 hppa mips"
 IUSE="ssl ldap berkdb ipv6"
 PROVIDE="virtual/krb5"
 
-DEPEND="
-	ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
-	!app-crypt/kth-krb
-	sys-devel/autoconf"
+	!app-crypt/kth-krb"
 	# ldap? ( net-nds/openldap )
 	# With this enabled, we create a multiple stage
 	# circular dependency with USE="ldap kerberos"
 	# -- Kain <kain@kain.org> 05 Dec 2002
+
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/gcc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -54,8 +58,8 @@ src_compile() {
 		--enable-shared"
 
 	use ssl \
-		&& myconf="--with-openssl=/usr" \
-		|| myconf="--without-openssl"
+		&& myconf="${myconf} --with-openssl=/usr" \
+		|| myconf="${myconf} --without-openssl"
 
 	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
 
