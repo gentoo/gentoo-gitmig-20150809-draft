@@ -1,0 +1,141 @@
+diff -ruN xosview-1.8.1-old/linux/diskmeter.cc xosview-1.8.1/linux/diskmeter.cc
+--- xosview-1.8.1-old/linux/diskmeter.cc	2003-11-21 01:42:56.436894888 +0000
++++ xosview-1.8.1/linux/diskmeter.cc	2003-11-21 01:56:46.750668008 +0000
+@@ -13,6 +13,8 @@
+ 
+ static const char STATFILENAME[] = "/proc/stat";
+ #define MAX_PROCSTAT_LENGTH 2048
++// kernel >= 2.5 support
++static const char VMSTATFILENAME[] = "/proc/vmstat";
+ 
+ DiskMeter::DiskMeter( XOSView *parent, float max ) : FieldMeterGraph(
+   parent, 3, "DISK", "READ/WRITE/IDLE")
+@@ -51,25 +53,55 @@
+     IntervalTimerStop();
+     total_ = maxspeed_;
+     char buf[MAX_PROCSTAT_LENGTH];
++    unsigned char new_kernel = 1;
++    std::ifstream vmstats( VMSTATFILENAME );
+     std::ifstream stats( STATFILENAME );
+ 
+-    if ( !stats )
++    if ( new_kernel && !vmstats )
+         {
+-        std::cerr <<"Can not open file : " <<STATFILENAME << std::endl;
+-        exit( 1 );
++        new_kernel = 0;
+         }
+ 
+-    // Find the line with 'page'
+-    stats >> buf;
+-    while (strncmp(buf, "page", 9))
++    if ( !new_kernel && !stats )
+         {
+-        stats.ignore(MAX_PROCSTAT_LENGTH, '\n');
+-        stats >> buf;
+-        }
++        std::cerr <<"Can not open file : " <<STATFILENAME << std::endl;
++	exit( 1 );
++	}
++
+ 
+-	// read values
+     unsigned long one, two;
+-    stats >> one >> two;
++
++    if (new_kernel) {
++        vmstats >> buf;
++        // kernel >= 2.5
++        while (!vmstats.eof() && strncmp(buf, "pgpgin", 7))
++            {
++            vmstats.ignore(1024, '\n');
++            vmstats >> buf;
++            }
++
++       // read first value
++        vmstats >> one;
++
++        while (!vmstats.eof() && strncmp(buf, "pgpgout", 7))
++            {
++            vmstats.ignore(1024, '\n');
++            vmstats >> buf;
++            }
++
++       // read second value
++        vmstats >> two;
++    } else {
++        stats >> buf;
++        while (strncmp(buf, "page", 9))
++            {
++            stats.ignore(1024, '\n');
++            stats >> buf;
++            }
++
++        // read values
++        stats >> one >> two;
++    }
+ 
+     // assume each "unit" is 1k.
+     // This is true for ext2, but seems to be 512 bytes
+diff -ruN xosview-1.8.1-old/linux/pagemeter.cc xosview-1.8.1/linux/pagemeter.cc
+--- xosview-1.8.1-old/linux/pagemeter.cc	2003-11-21 01:42:56.445893520 +0000
++++ xosview-1.8.1/linux/pagemeter.cc	2003-11-21 01:59:45.867438120 +0000
+@@ -14,7 +14,8 @@
+ 
+ static const char STATFILENAME[] = "/proc/stat";
+ #define MAX_PROCSTAT_LENGTH 2048
+-
++// kernel >= 2.5 support
++static const char VMSTATFILENAME[] = "/proc/vmstat";
+ 
+ PageMeter::PageMeter( XOSView *parent, float max )
+   : FieldMeterGraph( parent, 3, "PAGE", "IN/OUT/IDLE" ){
+@@ -50,18 +51,41 @@
+ void PageMeter::getpageinfo( void ){
+   total_ = 0;
+   char buf[MAX_PROCSTAT_LENGTH];
++  unsigned char new_kernel = 1;
++
++  std::ifstream vmstats( VMSTATFILENAME );
+   std::ifstream stats( STATFILENAME );
+ 
+-  if ( !stats ){
+-    std::cerr <<"Cannot open file : " <<STATFILENAME << std::endl;
+-    exit( 1 );
++  if ( new_kernel && !vmstats ){
++    new_kernel = 0;
+   }
+ 
+-  do {
+-    stats >>buf;
+-  } while (strncasecmp(buf, "swap", 5));
++  if ( !new_kernel && !stats ) {
++      std::cerr <<"Cannot open file : " <<STATFILENAME << std::endl;
++      exit( 1 );
++  }
+ 
+-  stats >>pageinfo_[pageindex_][0] >>pageinfo_[pageindex_][1];
++  if ( new_kernel ) {
++      // kernel >= 2.5
++      do {
++        vmstats >>buf;
++      } while (!vmstats.eof() && strncasecmp(buf, "pswpin", 7));
++
++      vmstats >>pageinfo_[pageindex_][0];
++
++      do {
++        vmstats >>buf;
++      } while (!vmstats.eof() && strncasecmp(buf, "pswpout", 8)) ;
++
++      vmstats >>pageinfo_[pageindex_][1];
++  } else {
++      // kernel < 2.5
++      do {
++        stats >>buf;
++      } while (strncasecmp(buf, "swap", 5));
++
++      stats >>pageinfo_[pageindex_][0] >>pageinfo_[pageindex_][1];
++  }
+ 
+   int oldindex = (pageindex_+1)%2;
+ 
