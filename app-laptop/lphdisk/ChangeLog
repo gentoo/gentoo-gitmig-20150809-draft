@@ -1,6 +1,6 @@
 # ChangeLog for app-laptop/lphdisk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/ChangeLog,v 1.3 2004/09/05 05:57:33 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/ChangeLog,v 1.4 2005/01/01 14:46:50 eradicator Exp $
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

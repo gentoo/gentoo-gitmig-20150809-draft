@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/acpitool-0.2.6.ebuild,v 1.1 2004/12/08 10:39:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/acpitool-0.2.6.ebuild,v 1.2 2005/01/01 14:45:11 eradicator Exp $
 
 DESCRIPTION="A small command line application, intended to be a replacement for the apm tool"
 HOMEPAGE="http://freeunix.dyndns.org:8088/site2/acpitool.shtml"

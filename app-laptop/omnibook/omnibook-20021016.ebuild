@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20021016.ebuild,v 1.1 2004/11/15 19:31:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20021016.ebuild,v 1.2 2005/01/01 14:47:18 eradicator Exp $
 
 MY_PV="2002-10-16"
 MY_P=${PN}-${MY_PV}

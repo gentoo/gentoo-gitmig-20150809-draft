@@ -1,6 +1,6 @@
 # ChangeLog for app-laptop/pbbuttonsd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.15 2004/10/06 02:36:05 pylon Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.16 2005/01/01 14:47:33 eradicator Exp $
 
   06 Oct 2004; Lars Weiler <pylon@gentoo.org>
   -files/pbbuttonsd-0.5.10-compat.patch,
