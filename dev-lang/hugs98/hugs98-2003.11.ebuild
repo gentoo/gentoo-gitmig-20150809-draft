@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.1 2003/12/01 16:52:55 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.2 2003/12/17 15:19:41 kosmikus Exp $
 
 IUSE="opengl"
 
@@ -22,6 +22,12 @@ src_compile() {
 	local myconf
 	if [ `use opengl` ]; then
 		myconf="--enable-hopengl"
+		# the nvidia drivers *seem* not to work together
+		# with pthreads
+		[ ! -f /etc/env.d/09opengl ] \
+			|| [ -z "`grep opengl/nvidia/lib /etc/env.d/09opengl`" ] \
+			&& myconf="$myconf --with-pthreads" \
+			|| myconf="--with-pthreads"
 	fi
 
 	# When timing is enabled, the build will fail at some

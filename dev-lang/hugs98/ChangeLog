@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.9 2003/12/01 16:52:55 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.10 2003/12/17 15:19:41 kosmikus Exp $
+
+  17 Dec 2003; Andres Loeh <kosmikus@gentoo.org> hugs98-2003.11.ebuild:
+  Pthreads and the NVIDIA OpenGL interface do not seem to work well together.
+  Temporarily disabling pthreads if using that interface (compare bug #34858).
 
 *hugs98-2003.11 (01 Dec 2003)
 
