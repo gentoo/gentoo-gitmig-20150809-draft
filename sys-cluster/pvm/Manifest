@@ -1,6 +1,7 @@
 MD5 3c214c86c2c560189674c4da50dd4484 ChangeLog 462
 MD5 df4a94a51f5b47e4d1eaba74355998d8 pvm-3.4.4.ebuild 994
 MD5 de7740b13abeadac51254efdbbcddfa5 pvm-3.4.4-r1.ebuild 1185
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4 57
 MD5 726a6a69ba5fb9e140e8f7e1a85c9c9d files/pvm-3.4.4-gentoo.diff 608
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r1 57
