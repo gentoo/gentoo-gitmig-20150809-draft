@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.24 2004/06/24 21:57:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.25 2004/07/16 02:52:25 tgall Exp $
+
+  15 Jul 2004; Tom Gall <tgall@gentoo.org> joe-3.0-r1.ebuild:
+  stable on ppc64, bug #55565
 
   30 May 2004; Christian Birchinger <joker@gentoo.org> joe-3.0-r1.ebuild:
   Marked stable on ppc
