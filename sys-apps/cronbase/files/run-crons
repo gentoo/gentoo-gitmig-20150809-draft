@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.6 2002/06/26 09:48:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.7 2002/11/13 05:10:55 woodchip Exp $
 #
 # 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
 #
@@ -45,7 +45,7 @@ do
 		#>= 30 days, 5 min -=> +43204 min
 		TIME="-cmin +43204" ;;
 	esac
-	find /var/spool/cron/lastrun/cron.$BASE $TIME -exec rm {} \;
+	find /var/spool/cron/lastrun -name cron.$BASE $TIME -exec rm {} \;
     fi
 
     # if there is no touch file, make one then run the scripts 

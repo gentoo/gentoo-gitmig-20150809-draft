@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.7 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.8 2002/11/13 05:10:55 woodchip Exp $
+
+*cronbase-0.2.1-r1 (13 Nov 2002)
+
+  13 Nov 2002; Donny Davies <woodchip@gentoo.org> run-crons : Fix #10409.
 
 *cronbase-0.2.1 (27 Jun 2002)
 
@@ -8,23 +12,16 @@
   Added KEYWORDS, SLOT.
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
-  
-  rethought rewrite and fixed a race. thanks go to jnelseon and george
-
+  rethought rewrite and fixed a race. thanks go to jnelseon and george.
 
 *cronbase-0.2 (24 Jun 2002)
 
   23 Jun 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
-  
   minor fixors/cleanups - suggested by jon nelson
 
-  20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :
-  
+  20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/run-crons :  
   moved lastrun to /var/spool/cron/lastrun
-
 
 *cronbase-0.01 (19 Apr 2002)
 
-  19 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
-
-  initial release ;-)
+  19 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog : initial release.
