@@ -1,10 +1,9 @@
 # ChangeLog for sec-policy/selinux-procmail
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.1 2004/07/05 02:49:50 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.2 2004/11/13 20:04:32 kaiowas Exp $
 
-*selinux-procmail-20040704 (04 Jul 2004)
+*selinux-procmail-20041028 (13 Nov 2004)
 
-  04 Jul 2004; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
-  +selinux-procmail-20040704.ebuild:
-  Initial commit, from #55337.
-
+  13 Nov 2004; petre rodan <kaiowas@gentoo.org>
+  -selinux-procmail-20040704.ebuild, +selinux-procmail-20041028.ebuild:
+  merge with nsa policy
