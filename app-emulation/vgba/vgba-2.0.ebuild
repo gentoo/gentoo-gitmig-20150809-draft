@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vgba/vgba-2.0.ebuild,v 1.1 2003/07/20 00:35:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vgba/vgba-2.0.ebuild,v 1.2 2003/09/07 07:10:00 vapier Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="emulator of the GameBoy Advance"
 HOMEPAGE="http://www.komkon.org/fms/VGBA/"
 SRC_URI="http://fms.komkon.org/VGBA/VGBA${PV/.}-Linux-80x86-bin.tar.Z"
 
-LICENSE=""
+LICENSE="VGBA"
 SLOT="0"
 KEYWORDS="-* x86"
 
