@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.2 2002/04/12 23:44:32 seemant Exp $
+
+*graphviz-1.7.15-r2 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> graphviz-1.7.15-r2.ebuild :
+
+  Compile against newest libpng
 
 *graphviz-1.7.15-r1 (1 Feb 2002)
 
