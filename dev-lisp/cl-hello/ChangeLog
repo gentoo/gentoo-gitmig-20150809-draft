@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-hello
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-hello/ChangeLog,v 1.1 2005/03/20 09:55:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-hello/ChangeLog,v 1.2 2005/03/21 07:23:44 mkennedy Exp $
+
+  21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-hello-0.2.ebuild:
+  Keywording for ~amd64
 
 *cl-hello-0.2 (20 Mar 2005)
 

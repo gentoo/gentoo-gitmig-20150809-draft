@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.4.5.ebuild,v 1.1 2005/03/16 17:39:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.4.5.ebuild,v 1.2 2005/03/21 07:19:31 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://weitz.de/cl-gd http://www.cliki.net/cl-gd"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller
