@@ -1,21 +1,23 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.1 2003/09/02 22:19:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.2 2003/09/06 11:27:55 liquidx Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
 SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.gz"
 
-IUSE="zlib doc lzo"
+IUSE="zlib doc crypt"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=dev-libs/libgcrypt-1.1.12
-	<app-crypt/opencdk-0.5.0
-	>=dev-libs/libtasn1-0.2
-	zlib? ( >=sys-libs/zlib-1.1 )
-	lzo? ( >=dev-libs/lzo-1.08 )"
+	crypt? ( <app-crypt/opencdk-0.5.0 )
+	zlib? ( >=sys-libs/zlib-1.1 )"
+
+# gnutls has its own version of these. so let us use those instead.
+#	>=dev-libs/libtasn1-0.1
+#   >=dev-libs/lzo-1.0	
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +26,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf  `use_with zlib` || die
+	econf  \
+		`use_with zlib` \
+		`use_enable crypt openpgp-authentication` \
+		--with-included-minilzo \
+		--with-included-libtasn1 || die
 	emake || die
 }
 
