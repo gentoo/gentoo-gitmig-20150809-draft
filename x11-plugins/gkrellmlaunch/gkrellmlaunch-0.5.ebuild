@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.6 2003/02/13 17:25:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.7 2003/09/04 13:32:53 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a Program-Launcher Plugin for GKrellM2"
@@ -11,7 +11,7 @@ DEPEND="=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc alpha"
 
 src_compile() {
 	make || die
