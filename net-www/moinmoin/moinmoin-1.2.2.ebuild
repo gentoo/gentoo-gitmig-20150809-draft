@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.2.2.ebuild,v 1.2 2004/07/10 04:20:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.2.2.ebuild,v 1.3 2004/07/17 09:45:01 dholm Exp $
 
 inherit webapp-apache
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN0}-${PV}
 DESCRIPTION="Python WikiClone"
 SRC_URI="http://download.sourceforge.net/${PN0}/${PN0}-${PV}.tar.gz"
 HOMEPAGE="http://moin.sourceforge.net"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 sparc ~amd64 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
