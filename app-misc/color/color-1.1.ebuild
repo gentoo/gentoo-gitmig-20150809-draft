@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.4 2003/10/25 19:58:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.5 2004/03/27 17:12:11 taviso Exp $
 
 inherit ccc
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86 alpha"
 IUSE=""
 DEPEND="virtual/glibc"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
