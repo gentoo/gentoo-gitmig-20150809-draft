@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.13 2004/11/11 14:28:25 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.14 2004/11/11 20:59:18 eradicator Exp $
+
+  11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -squirrelmail-1.4.3a.ebuild:
+  Removing insecure version.
 
   11 Nov 2004; <SeJo@gentoo.org> squirrelmail-1.4.3a-r2.ebuild:
   stable on ppc: 70739
