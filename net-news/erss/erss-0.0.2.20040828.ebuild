@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/erss/erss-0.0.2.20040710.ebuild,v 1.2 2004/08/11 03:24:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/erss/erss-0.0.2.20040828.ebuild,v 1.1 2004/09/01 03:34:54 vapier Exp $
 
 inherit enlightenment
 
