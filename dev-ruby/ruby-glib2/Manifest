@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84df586b0998e563c9964a8d3f60eac6 ChangeLog 2307
+MD5 41a7f35df51645a831119b7be18eac9d ChangeLog 2403
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 850fbdc9659bc51241aa6b19736b9160 ruby-glib2-0.11.0.ebuild 450
+MD5 2967f8d3b389a657d9fb654d680666ec ruby-glib2-0.11.0.ebuild 704
 MD5 96e57244518d157624002e341fc14c27 ruby-glib2-0.10.1.ebuild 447
 MD5 377ae681411d5d27416f38e9b9903632 ruby-glib2-0.8.0.ebuild 393
 MD5 daecf3bafbb8ca9e49fef04ee89ee300 ruby-glib2-0.8.1.ebuild 392
@@ -16,7 +16,7 @@ MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-glib2-0.9.1 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBpUgdVWNWqTUmv+0RAgIbAJ9/zq3vm10NdQIgluY0BJrLFSha2ACeOx4v
-7LbKB6JLEBglv0TAaLLPDdg=
-=rnSM
+iD8DBQFBpWMPVWNWqTUmv+0RArA2AKCzlFTxKCrzJTGa4Pa4hwTGRnJUGgCfaaB6
+O5IEB9zDqOSX24auhhUlTg4=
+=ZrBH
 -----END PGP SIGNATURE-----
