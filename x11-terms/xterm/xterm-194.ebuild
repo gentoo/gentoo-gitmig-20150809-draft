@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-192.ebuild,v 1.1 2004/07/13 09:00:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-194.ebuild,v 1.1 2004/08/09 20:47:30 seemant Exp $
 
 inherit eutils flag-o-matic
 
