@@ -24,6 +24,7 @@
 # <rac@gentoo.org> (10 Jul 2003)
 # unstable upstream, still needs some gentoo regression testing also
 =dev-lang/perl-5.8.1*
+=sys-devel/libperl-5.8.1*
 
 # <agenkin@gentoo.org> (10 Jul 2003)
 # xmms-aalsa package is permanently removed (bug #6797)
