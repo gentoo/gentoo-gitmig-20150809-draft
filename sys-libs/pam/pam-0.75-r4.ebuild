@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.3 2002/03/17 22:40:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.4 2002/03/17 22:52:25 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -10,7 +10,7 @@ DESCRIPTION="Pluggable Authentication Modules"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz"
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
-DEPEND=">=sys-libs/cracklib-2.7-r2
+DEPEND=">=sys-libs/cracklib-2.7-r3
 	>=sys-libs/glib-1.2.10
 	>=sys-libs/pwdb-0.61-r3
 	>=sys-devel/autoconf-2.13
