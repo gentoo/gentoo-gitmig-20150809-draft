@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.10 2004/05/08 21:31:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.11 2004/05/27 08:20:46 mr_bones_ Exp $
 
-inherit games eutils flag-o-matic
+inherit flag-o-matic eutils games
 
 DESCRIPTION="A 3D space simulator that allows you to trade and bounty hunt"
 HOMEPAGE="http://vegastrike.sourceforge.net/"
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="sdl"
 
-RDEPEND="virtual/glu
+RDEPEND="virtual/x11
+	virtual/glu
 	virtual/glut
 	virtual/opengl
 	media-libs/libsdl
@@ -23,27 +24,35 @@ RDEPEND="virtual/glu
 	dev-libs/expat
 	media-libs/openal
 	media-libs/sdl-mixer
-	virtual/x11
 	=x11-libs/gtk+-1*"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=sys-devel/autoconf-2.58"
 
-S=${WORKDIR}/${P}-installer
+S="${WORKDIR}/${P}-installer"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	for tar in ${P}-{data,source,setup}.tgz ; do
-		tar -zxf ${tar}
+		tar -zxf ${tar} || die "tar ${tar} failed"
 		# save space :)
 		rm ${tar}
 	done
-	epatch ${FILESDIR}/${PV}-endianess.patch
+	epatch "${FILESDIR}/${PV}-endianess.patch"
 
 	# Clean up data dir
 	find data -name CVS -type d -exec rm -rf '{}' \; >&/dev/null
 	find data -name '*~' -type f -exec rm -f '{}' \; >&/dev/null
+
+	# we install this as vsinstall so fix it up here.
+	mv vsfinalize vsinstall
+	epatch "${FILESDIR}/${PV}-vsinstall.patch"
+	sed -i \
+		-e "s!/usr/local/share/vegastrike!${GAMES_DATADIR}/vegastrike!" \
+		-e "s!/usr/local/bin!${GAMES_BINDIR}!" \
+		vsinstall \
+		|| die "sed vsinstall failed"
 
 	# Sort out directory references
 	sed -i \
@@ -52,25 +61,31 @@ src_unpack() {
 		-e "s!/usr/games/vegastrike!${GAMES_DATADIR}/vegastrike!" \
 		-e "s!/usr/local/bin!${GAMES_BINDIR}!" \
 		-e "s!/usr/local/lib/man!/usr/share/man!" \
-		data/documentation/vegastrike.1
+		data/documentation/vegastrike.1 \
+		|| die "sed data/documentation/vegastrike.1 failed"
+
+	cd ${S}/vegastrike
 	sed -i \
 		-e "s!/usr/games/vegastrike!${GAMES_DATADIR}/vegastrike!" \
 		-e "s!/usr/local/bin!${GAMES_BINDIR}!" \
-		vegastrike/launcher/saveinterface.cpp
+		launcher/saveinterface.cpp \
+		|| die "sed launcher/saveinterface.cpp failed"
 	sed -i \
 		"s!/usr/local/share/vegastrike!${GAMES_DATADIR}/vegastrike!" \
-		vegastrike/src/common/common.cpp
+		src/common/common.cpp \
+		|| die "sed src/common/common.cpp failed"
 	sed -i \
 		"s!/usr/share/local/vegastrike!${GAMES_DATADIR}/vegastrike!" \
-		vegastrike/src/filesys.cpp
+		src/filesys.cpp \
+		|| die "sed src/filesys.cpp failed"
 	sed -i \
-		-e "s!/usr/local/games/vegastrike!${GAMES_DATADIR}/vegastrike!" \
-		-e "s!/usr/local/bin!${GAMES_BINDIR}!" \
-		vsfinalize
-
-	cd ${S}/vegastrike
-	sed -i '/^SUBDIRS =/s:tools::' Makefile.am
-	sed -i 's:$(liblowlevel)::' src/networking/Makefile.am
+		-e '/^SUBDIRS =/s:tools::' \
+		Makefile.am \
+		|| die "sed Makefile.am failed"
+	sed -i \
+		-e 's:$(liblowlevel)::' \
+		src/networking/Makefile.am \
+		|| die "sed src/networking/Makefile.am failed"
 	aclocal || die "aclocal failed"
 	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 	automake -a || die "automake failed"
@@ -88,18 +103,19 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin vsfinalize vsinstall
-	newgamesbin vssetup/src/bin/setup vssetup
-	dogamesbin vegastrike/src/vegastrike
-	dogamesbin vegastrike/launcher/vslauncher
-	cp -rf vegastrike/src/networking/soundserver data/
+	dogamesbin \
+		vegastrike/src/vegastrike \
+		vegastrike/launcher/vslauncher \
+		vsinstall \
+		|| die "dogamesbin failed"
+	newgamesbin vssetup/src/bin/setup vssetup || die "newgamesbin failed"
+	cp -rf vegastrike/src/networking/soundserver data/ || die "cp failed"
 
 	doman data/documentation/*.1
 	dodoc data/documentation/*.txt
 
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -r data ${D}/${GAMES_DATADIR}/${PN}/
-
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r data/ "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed (data)"
 	prepgamesdirs
 }
 
