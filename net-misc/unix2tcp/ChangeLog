@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unix2tcp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.4 2004/05/08 17:12:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/ChangeLog,v 1.5 2004/06/06 09:41:05 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> unix2tcp-0.7.2.ebuild,
+  unix2tcp-0.8.2.ebuild:
+  x86 keyworded and QA - IUSE on both
 
   08 May 2004; David Holm <dholm@gentoo.org> unix2tcp-0.8.2.ebuild:
   Added to ~ppc.
