@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/bittorrent-stats
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.5 2004/07/03 12:18:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.6 2004/12/29 20:25:27 ciaranm Exp $
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   bittorrent-stats-3.2.1b-r4.ebuild:
   Change wxPython to wxpython.
 

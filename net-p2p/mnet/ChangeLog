@@ -1,11 +1,14 @@
 # ChangeLog for net-p2p/mnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.18 2004/08/02 18:45:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/ChangeLog,v 1.19 2004/12/29 20:26:29 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   02 Aug 2004; Jon Hood <squinky86@gentoo.org> mnet-0.6.2.383.ebuild:
   Stable on x86.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mnet-0.6.2.340.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mnet-0.6.2.340.ebuild,
   mnet-0.6.2.383.ebuild:
   Change wxPython to wxpython.
 

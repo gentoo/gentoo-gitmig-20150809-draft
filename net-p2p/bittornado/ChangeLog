@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.28 2004/11/23 18:52:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.29 2004/12/29 20:23:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Nov 2004; Jon Hood <squinky86@gentoo.org> bittornado-0.3.1.ebuild,
   bittornado-0.3.6.ebuild, bittornado-0.3.7.ebuild, bittornado-0.3.8.ebuild:
@@ -51,7 +54,7 @@
   04 Jul 2004; Martin Holzer <mholzer@gentoo.org> +bittornado-0.3.4.ebuild:
   Version bumped.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittornado-0.3.1.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bittornado-0.3.1.ebuild,
   bittornado-0.3.2.ebuild, bittornado-0.3.3.ebuild:
   Change wxPython to wxpython.
 

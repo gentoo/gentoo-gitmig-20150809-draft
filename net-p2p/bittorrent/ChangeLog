@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.38 2004/11/24 22:49:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.39 2004/12/29 20:24:39 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   bittorrent-3.4.2-r2.ebuild:
@@ -37,7 +40,7 @@
   +bittorrent-3.4.2-r1.ebuild, bittorrent-3.4.2.ebuild:
   new init script, stable x86 version bump, move to net-p2p herd (#55954)
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> bittorrent-3.3.0.ebuild,
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bittorrent-3.3.0.ebuild,
   bittorrent-3.4.1.ebuild, bittorrent-3.4.1a.ebuild, bittorrent-3.4.2.ebuild:
   Change wxPython to wxpython.
 
