@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mixer_app
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.11 2004/06/01 13:17:40 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.12 2004/06/14 00:21:44 spyderous Exp $
+
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; mixer_app-1.7.0.ebuild:
+  Change x11-base/xfree dependency to virtual/x11 (#47632).
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> mixer_app-1.7.0.ebuild,
   mixer_app-1.8.0.ebuild:
