@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.5 2002/11/23 14:53:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.36-r1.ebuild,v 1.6 2003/02/03 08:24:13 george Exp $
 
 DESCRIPTION="GNU Octave is a high-level language (MatLab compatible) intended for numerical computations"
 SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 	>=media-gfx/gnuplot-3.7.1-r3
 	>=dev-libs/fftw-2.1.3
 	>=dev-util/gperf-2.7.2
-	tetex ? ( >=tetex-1.0.7-r10 ) "
+	tetex? ( >=tetex-1.0.7-r10 ) "
 PROVIDE="dev-lang/octave"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
@@ -62,10 +62,10 @@ src_install() {
 octave-install-doc() {
 	echo "Installing documentation..."
 	insinto /usr/share/doc/${PF}
-	doins doc/faq/Octave-FAQ.dvi 
+	doins doc/faq/Octave-FAQ.dvi
 	doins doc/interpreter/octave.dvi
-	doins doc/liboctave/liboctave.dvi 
+	doins doc/liboctave/liboctave.dvi
 	doins doc/refcard/refcard-a4.dvi
-	doins doc/refcard/refcard-legal.dvi 
-	doins doc/refcard/refcard-letter.dvi 
+	doins doc/refcard/refcard-legal.dvi
+	doins doc/refcard/refcard-letter.dvi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/octave
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.9 2002/12/14 03:06:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.10 2003/02/03 08:24:13 george Exp $
+
+  02 Feb 2003; George Shapovalov <george@gentoo.org> octave-2.1.40.ebuild, octave-2.1.36-r1.ebuild :
+
+  fixed tetex optional dependency typo. Thanks to Daniel Karlsson <d.k@home.se> (#14685) for reporting this.
 
 *octave-2.1.40 (13 Dec 2002)
   
