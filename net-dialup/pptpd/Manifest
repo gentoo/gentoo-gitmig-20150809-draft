@@ -1,8 +1,16 @@
-MD5 fa02edd811526a9dc93ba9ef8fbcd41e ChangeLog 2022
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e29a9d70032635554622f4012486fa4a pptpd-1.2.1.ebuild 980
+MD5 f972875cefa2aaba83aa2785f4111260 ChangeLog 2162
 MD5 9ab2ee42bf5bf7cf16cfa9a1bfc00d51 metadata.xml 299
-MD5 93d70ff00fbb99bcf1c51320cce3cf64 pptpd-1.2.1.ebuild 982
-MD5 f65aab9fb25bfa9e2d5b4e8473ad85e3 pptpd-1.1.4_beta4.ebuild 1271
 MD5 25ef2baf82e8e7af70a8139693c49f69 files/digest-pptpd-1.2.1 63
-MD5 584922c862a24633123bc9af4ba32bd3 files/digest-pptpd-1.1.4_beta4 66
-MD5 bff575819b8997e7bbe743b95cb134cb files/pptpd-confd 131
 MD5 96fed26a1a72e947d12edda983f74d16 files/pptpd-init 386
+MD5 bff575819b8997e7bbe743b95cb134cb files/pptpd-confd 131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCDc47jiC39V7gKu0RArGbAKC6BLcJop3dJ4w20aOCXn9A9LVb3gCgmODS
+5TapiFGtwK81gdYXZiK0AaE=
+=2umi
+-----END PGP SIGNATURE-----
