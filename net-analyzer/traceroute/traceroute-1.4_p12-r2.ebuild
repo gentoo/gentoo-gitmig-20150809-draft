@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.9 2004/07/15 20:13:41 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r2.ebuild,v 1.10 2004/09/05 00:08:07 solar Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
 
 MY_P=${PN}-1.4a12
 S=${WORKDIR}/${MY_P}
@@ -32,13 +32,16 @@ src_compile() {
 	# -taviso
 	gnuconfig_update
 
+	# use non-lazy bindings for this suid app
+	append-ldflags -Wl,-z,now
+
 	# assume linux by default #26699
 	# -taviso
 	sed -i 's/t="generic"/t="linux"/g' ${S}/configure.in
 	autoreconf
 
 	econf || die
-	emake || die
+	emake LIBS="${LDFLAGS}" || die
 }
 
 src_install() {
