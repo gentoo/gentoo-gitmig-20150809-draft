@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p5.ebuild,v 1.1 2003/06/16 07:31:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p5.ebuild,v 1.2 2003/06/25 15:49:46 lostlogic Exp $
 
 MY_PN="bcrypt"
 KEYWORDS="~x86"
-SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz"
+SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
+	http://www.jetico.com/linux/BestCrypt.doc.tgz"
 HOMEPAGE="http://www.jetico.com"
 DESCRIPTION="Transparent filesystem encryption.  This is a Commercially Licensed Package, please read the license and ChangeLog for more information."
 S=${WORKDIR}/${MY_PN}	
@@ -29,6 +30,12 @@ src_compile() {
 }
 
 src_install() {
+	#Install docs
+	dohtml ${WORKDIR}/bchelp/*
+	dodir /usr/share/doc/bestcrypt-1.2_p5/html/img
+	insinto /usr/share/doc/bestcrypt-1.2_p5/html/img
+	doins ${WORKDIR}/bchelp/img/*
+
 	exeinto /etc/rc.d/init.d
 	doexe ${FILESDIR}/bcrypt
 	dodir	/usr/bin		\
