@@ -3,27 +3,17 @@
 
 # It's better to split it in four different packages
 
-P=nessus-1.0.4
-A="nessus-libraries-1.0.4.tar.gz nessus-core-1.0.4.tar.gz
-   nessus-plugins-1.0.4.tar.gz libnasl-1.0.4.tar.gz libnasl-patch-1"
+A="nessus-libraries-${PV}.tar.gz nessus-core-${PV}.tar.gz
+   nessus-plugins-${PV}.tar.gz libnasl-${PV}.tar.gz"
 S=${WORKDIR}
-DESCRIPTION="Nessus"
-SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/nessus-libraries-1.0.4.tar.gz
-	 ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/nessus-core-1.0.4.tar.gz
-	 ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/nessus-plugins-1.0.4.tar.gz
-	 ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/libnasl-1.0.4.tar.gz
-	 ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/libnasl-patch-1"
+DESCRIPTION="A remote security scanner for Linux"
+SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/nessus-libraries-${PV}.tar.gz
+	 ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/nessus-core-${PV}.tar.gz
+	 ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/nessus-plugins-${PV}.tar.gz
+	 ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/libnasl-${PV}.tar.gz"
 
 HOMEPAGE="http://www.nessus.org/"
 
-src_unpack () {
-  unpack nessus-libraries-1.0.4.tar.gz
-  unpack nessus-core-1.0.4.tar.gz
-  unpack nessus-plugins-1.0.4.tar.gz
-  unpack libnasl-1.0.4.tar.gz
-  cd ${S}/libnasl/nasl
-  patch -p0 < ${DISTDIR}/libnasl-patch-1
-}
 src_compile() {
 
   export PATH=${D}/usr/bin:$PATH
@@ -93,6 +83,10 @@ src_install() {
   docinto nessus-plugins
   dodoc docs/*.txt plugins/accounts/accounts.txt
   prepman
+
+  insinto /etc/rc.d/init.d
+  insopts -m 755
+  doins ${FILESDIR}/nessusd
 }
 
 
