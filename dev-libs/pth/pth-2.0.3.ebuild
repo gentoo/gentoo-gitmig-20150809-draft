@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.3.ebuild,v 1.2 2005/01/22 09:41:13 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.3.ebuild,v 1.3 2005/01/22 21:03:59 plasmaroo Exp $
 
 inherit fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~sparc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~ppc-macos ~sparc ~x86 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"
