@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/lilycomp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilycomp/ChangeLog,v 1.1 2004/11/22 04:56:20 agriffis Exp $
+
+*lilycomp-1.0.2 (21 Nov 2004)
+
+  21 Nov 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +lilycomp-1.0.2.ebuild:
+  New ebuild for lilycomp; graphical note entry program for use with LilyPond
+
