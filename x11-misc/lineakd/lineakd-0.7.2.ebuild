@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.4 2004/06/24 22:27:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.2.ebuild,v 1.5 2004/11/07 19:50:11 pyrania Exp $
+
+inherit eutils
 
 IUSE="xosd"
 
@@ -14,6 +16,12 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	xosd? ( x11-libs/xosd )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/lkey-cast.patch || die "epatch failed."
+}
 
 src_compile() {
 	econf `use_with xosd` --with-x || die
