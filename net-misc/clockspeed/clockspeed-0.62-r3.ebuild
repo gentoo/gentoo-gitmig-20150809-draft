@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.1 2003/12/12 00:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.2 2004/04/06 10:28:43 method Exp $
 
 inherit eutils
 
@@ -11,9 +11,10 @@ SRC_URI="http://cr.yp.to/clockspeed/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
-IUSE="static"
+IUSE="static selinux"
 
 DEPEND="sys-apps/groff"
+RDEPEND=" selinux? ( sec-policy/clockspeed )"
 
 src_unpack() {
 	unpack ${A}
