@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9577f39414ff99938fdadbd15ce5359 ant-core-1.5.4-r2.ebuild 3054
-MD5 aba64afd140b30d84928167fe772e427 ant-core-1.6.2.ebuild 2027
-MD5 908b63f693f18aa98eab41ff10521a72 ChangeLog 15627
+MD5 9c34cc475e6fa13377cb8ab429bef11b ant-core-1.6.2-r1.ebuild 2029
+MD5 ccac401a812dba8022fca4a1681f7cff ChangeLog 15863
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 d7186edf4c71dc0531330f90e2c08fe9 files/1.5.4-ant 2283
-MD5 4141327d57f1df13a203c332e485187c files/1.6.2-ant 5038
+MD5 d2eef430b3dd64cfa89d31eb16023e6f files/1.6.2-ant 5050
 MD5 4383441650437fec5622070e48e4324c files/build.sh-exit-fix.patch.gz 256
 MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
 MD5 8d86f265f37d0d73cdd2e8a3fd2ff6eb files/digest-ant-core-1.5.4-r2 70
+MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-core-1.6.2-r1 74
 MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
-MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-core-1.6.2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCRwKj06ebR+OMO78RAviXAJ0ayN9hNAbFQGYf88yz1/6xNRu+WACfe81S
+gM5BZeuM5kylhQq3DcfXrXc=
+=LFAp
+-----END PGP SIGNATURE-----
