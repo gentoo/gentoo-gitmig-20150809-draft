@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbrb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/ChangeLog,v 1.6 2003/10/30 15:34:44 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrb/ChangeLog,v 1.7 2003/12/04 16:45:38 tseng Exp $
+
+  04 Dec 2003; Brandon Hale <tseng@gentoo.org> bbrb-0.4.1.ebuild:
+  Fix bad DEPEND.
 
   30 Oct 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Added metadata.xml
