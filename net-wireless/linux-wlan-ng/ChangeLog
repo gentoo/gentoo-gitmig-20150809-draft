@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/linux-wlan-ng
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.43 2004/11/23 00:10:26 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.44 2005/01/06 01:01:05 gmsoft Exp $
+
+*linux-wlan-ng-0.2.1_pre23 (06 Jan 2005)
+
+  06 Jan 2005; Guy Martin <gmsoft@gentoo.org>
+  +files/linux-wlan-2.6.10-fix.diff, +linux-wlan-ng-0.2.1_pre23.ebuild:
+  Version bump. Now using linux-info.eclass for a cleaner output. Added ~hppa to
+  KEYWORDS.
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
