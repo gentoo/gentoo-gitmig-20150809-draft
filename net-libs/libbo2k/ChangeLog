@@ -1,0 +1,7 @@
+# ChangeLog for net-libs/libbo2k
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbo2k/ChangeLog,v 1.1 2003/09/11 12:27:15 lordvan Exp $
+
+*libbo2k-0.1.5pre (11 Sep 2003)
+    11 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org>: libbo2k-0.1.5_pre, ChangeLog, metadata.xml:
+    initial release
