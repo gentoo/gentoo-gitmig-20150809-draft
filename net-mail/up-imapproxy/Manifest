@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3eb7c94d582ad01eeafab2a246b3459 ChangeLog 788
+MD5 0e43b98bd1576630312d2091642042d8 ChangeLog 878
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a47d360bb719b8cbdabba0a43a602f0d up-imapproxy-1.2.2.ebuild 1263
 MD5 69e7d7e0b6b51a6e17e3b40b05ea0df4 up-imapproxy-1.2.1.ebuild 1267
+MD5 53f29757399eb39a06a2b21761e5035b up-imapproxy-1.2.2.ebuild 1268
 MD5 ee2fd39ec911915225c61fdec088ad97 files/digest-up-imapproxy-1.2.1 70
-MD5 8ee94f44751f64b541fc86fe406ac87f files/digest-up-imapproxy-1.2.2 70
 MD5 335caa9f1889ac28acefe57e99d6496b files/imapproxy.rc6 505
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBW/pO10xuJSrg3/sRApA+AJ9a2PTxZU+UFeiNCjxoLH2jxd9GPgCeMshG
-azwSyQAV/xcvbt0B3ojV16s=
-=27AN
------END PGP SIGNATURE-----
+MD5 8ee94f44751f64b541fc86fe406ac87f files/digest-up-imapproxy-1.2.2 70
