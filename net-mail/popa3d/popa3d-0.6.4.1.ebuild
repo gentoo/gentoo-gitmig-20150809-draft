@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1.ebuild,v 1.1 2004/07/28 16:00:10 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1.ebuild,v 1.2 2004/08/03 12:02:11 dholm Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ SRC_URI="http://www.openwall.com/popa3d/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 		pam? ( >=sys-libs/pam-0.72 )"
