@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/unace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.17 2005/01/01 11:59:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.18 2005/02/26 14:05:02 solar Exp $
+
+*unace-1.2b-r1 (26 Feb 2005)
+
+  26 Feb 2005; <solar@gentoo.org>
+  +files/unace-1.2b-CAN-2005-0160-CAN-2005-0161.patch, +unace-1.2b-r1.ebuild:
+  - security bump for unace-1.2b (the last) opensource release bug #81958. I'd
+  like for us to remove the binary only 2.2 which partially remains vuln. No
+  clear upgrade path. will p.mask or something
 
   27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> unace-1.2b.ebuild,
   unace-2.2.ebuild:
