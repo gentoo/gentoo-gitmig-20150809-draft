@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.8 2004/06/25 01:26:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.9 2004/06/25 20:12:26 agriffis Exp $
 
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
@@ -19,7 +19,7 @@ src_unpack() {
 
 	unpack Zope-${PV}-src.tgz
 
-	if [ "`use zeo`" ]; then
+	if use zeo; then
 		cd ${S}/lib/python
 		unpack ZEO-1.0b3.tgz
 		mv ZEO-1.0b3/ZEO ${S}/lib/python
@@ -69,7 +69,7 @@ src_install () {
 	dodir ${ZVAR}/import
 	dodir ${ZVAR}/Products
 
-	if [ "`use zeo`" ]; then
+	if use zeo; then
 		insinto ${ZVAR}
 		doins ${FILESDIR}/zctl.py  ${FILESDIR}/zope  ${FILESDIR}/zope.conf ${FILESDIR}/custom_zodb.py
 	fi
@@ -106,7 +106,7 @@ pkg_postinst() {
 		echo "You must run"
 		echo
 		echo /usr/share/zope/zpasswd.py /var/lib/zope/inituser
-		if [ "`use zeo`" ]; then
+		if use zeo; then
 			echo and edit /var/lib/zope/zope.conf
 		fi
 
