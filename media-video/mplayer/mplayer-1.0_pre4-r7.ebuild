@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.16 2004/10/20 23:23:28 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.17 2004/10/22 05:26:30 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -155,7 +155,7 @@ src_unpack() {
 
 src_compile() {
 
-	filter-flags -fPIE -fPIC
+	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2
 	local myconf=
 
 	if use dvd; then
