@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r2.ebuild,v 1.14 2004/06/24 22:07:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/gtop-1.0.13-r2.ebuild,v 1.15 2004/07/14 15:55:31 agriffis Exp $
 
 inherit eutils
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="gtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
@@ -51,4 +50,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
-
