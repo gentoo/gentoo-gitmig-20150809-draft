@@ -1,0 +1,12 @@
+diff -uNr file-roller-2.6.0/src/fr-command-tar.c file-roller-2.6.0.patched/src/fr-command-tar.c
+--- file-roller-2.6.0/src/fr-command-tar.c	2004-03-22 20:37:21.000000000 +0100
++++ file-roller-2.6.0.patched/src/fr-command-tar.c	2004-04-02 21:17:21.644928816 +0200
+@@ -300,7 +300,7 @@
+ 	if (path != NULL)
+ 		fr_process_begin_command (comm->process, "gtar");
+ 	else
+-		fr_process_begin_command (comm->process, "tar");
++		fr_process_begin_command (comm->process, "/bin/tar");
+ 	g_free (path);
+ }
+ 
