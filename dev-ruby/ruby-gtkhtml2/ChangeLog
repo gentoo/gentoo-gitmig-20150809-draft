@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gtkhtml2
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.1 2004/11/25 04:17:20 usata Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkhtml2/ChangeLog,v 1.2 2005/03/14 19:43:12 citizen428 Exp $
+
+*ruby-gtkhtml2-0.12.0 (14 Mar 2005)
+
+  14 Mar 2005; Michael Kohl <citizen428@gentoo.org>
+  +ruby-gtkhtml2-0.12.0.ebuild:
+  Version bump.
 
 *ruby-gtkhtml2-0.11.0 (25 Nov 2004)
 

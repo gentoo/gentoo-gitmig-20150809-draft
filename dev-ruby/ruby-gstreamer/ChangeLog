@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.8 2004/11/25 04:07:20 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.9 2005/03/14 19:40:02 citizen428 Exp $
+
+*ruby-gstreamer-0.12.0 (14 Mar 2005)
+
+  14 Mar 2005; Michael Kohl <citizen428@gentoo.org>
+  +ruby-gstreamer-0.12.0.ebuild:
+  Version bump.
 
 *ruby-gstreamer-0.11.0 (25 Nov 2004)
 

@@ -1,4 +1,6 @@
+MD5 5661d5a8f54804936c077e7de00dc87f ruby-libgda-0.12.0.ebuild 403
 MD5 99d5448e81306ef0d3a14dd6a3906f3e ruby-libgda-0.10.1.ebuild 472
 MD5 95012216a68eaa7e7f1fb5b33d736262 ChangeLog 612
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-libgda-0.10.1 74
+MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-libgda-0.12.0 75
