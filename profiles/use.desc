@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.193 2004/10/22 19:38:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.194 2004/10/24 07:12:31 fafhrd Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -101,6 +101,7 @@ gif - Adds GIF image support
 ginac - Adds app-sci/ginac (symbolic math) support
 gmp - Adds support for dev-libs/gmp (GNU MP library)
 gnome - Adds GNOME support
+gnustep - Adds integration with GNUstep environment
 gnutls - Adds support for net-libs/gnutls
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
