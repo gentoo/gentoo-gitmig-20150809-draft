@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.38 2003/03/09 14:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.39 2003/03/17 15:26:09 strider Exp $
  
   15 Dec 2002; Adrian Almenar <strider@gentoo.org>: Correct formating for all
   ebuilds so lintool doesnt complain. (Make them policy compliant).
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *sun-jdk-1.4.1.02 (06 Mar 2003)
+
+  17 Mar 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.1.02.ebuild:
+  Marked stable.
 
   09 Mar 2003; Seemant Kulleen <seemant@gentoo.org> sun-jdk-1.4.0-r5.ebuild,
   sun-jdk-1.4.0-r6.ebuild, sun-jdk-1.4.1.01-r1.ebuild,
@@ -19,6 +22,9 @@
   New bugfix release for sun-jdk.  Fixes bug #16855 & #16932.
 
 *sun-jdk-1.4.1.01-r1 (21 Nov 2002)
+
+  17 Mar 2003; Adrian Almenar <strider@gentoo.org> sun-jdk-1.4.1.01.ebuild:
+  Updated HOMEPAGE to archives of old jdks.
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> sun-jdk-1.4.1.01.ebuild,
   files/digest-sun-jdk-1.4.1.01 :

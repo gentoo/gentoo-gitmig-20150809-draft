@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.02.ebuild,v 1.2 2003/03/09 14:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.02.ebuild,v 1.3 2003/03/17 15:26:09 strider Exp $
 
 IUSE="doc mozilla"
 
@@ -14,7 +14,7 @@ SRC_URI=""
 
 SLOT="1.4"
 LICENSE="sun-bcla"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 
 DEPEND=">=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
