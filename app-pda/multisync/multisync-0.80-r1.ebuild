@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.7 2004/04/07 19:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.8 2004/04/07 23:19:05 mr_bones_ Exp $
 
 inherit eutils
 
@@ -32,8 +32,8 @@ DEPEND="virtual/glibc
 			=x11-libs/gtk+-1* )
 	)
 	irmc? ( >=sys-apps/irda-utils-0.9.15
-         >=net-wireless/bluez-utils-2.3
-         >=dev-libs/openobex-1.0.0 )
+		>=net-wireless/bluez-utils-2.3
+		>=dev-libs/openobex-1.0.0 )
 	opie? ( >=net-misc/curl-7.10.5 )
 	ldap? ( >=net-nds/openldap-2.0.27 )"
 
