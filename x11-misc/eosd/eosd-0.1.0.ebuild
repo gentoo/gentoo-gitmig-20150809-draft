@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/eosd-0.1.0.ebuild,v 1.5 2004/08/12 02:30:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/eosd-0.1.0.ebuild,v 1.6 2004/09/19 19:56:15 vapier Exp $
 
 DESCRIPTION="enlightened on-screen display draws anti-aliased text on your screen without creating a visible window"
-HOMEPAGE="http://code-monkey.de/index.php?eosd"
+HOMEPAGE="http://code-monkey.de/?eosd"
 SRC_URI="http://www.code-monkey.de/data/eosd/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
