@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.15 2003/09/22 23:36:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.16 2003/11/21 00:47:29 matsuu Exp $
+
+  21 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> emacs-cvs-21.3.50.ebuild:
+  Marked ~amd64
 
   23 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> emacs-cvs-21.3.50.ebuild:
   Defaults to use aspell if installed, see Bug #28527
