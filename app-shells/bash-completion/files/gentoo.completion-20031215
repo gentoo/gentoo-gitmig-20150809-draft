@@ -25,7 +25,7 @@ _rc()
 }
 complete -F _rc rc
 
-_rc-status()
+_rcstatus()
 {
 	local cur opts
 	COMPREPLY=()
@@ -37,7 +37,7 @@ _rc-status()
 	fi
 	return 0
 }
-complete -F _rc-status rc-status
+complete -F _rcstatus rc-status
 
 #
 # distcc-config completion command
