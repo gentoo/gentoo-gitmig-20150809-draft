@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.17 2004/06/24 22:35:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.18 2004/08/02 09:37:50 dholm Exp $
+
+  02 Aug 2004; David Holm <dholm@gentoo.org> vice-1.14-r1.ebuild:
+  Added to ~ppc.
 
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> vice-1.14.ebuild:
   removed older ebuild
