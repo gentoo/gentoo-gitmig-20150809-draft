@@ -1,10 +1,11 @@
-MD5 c08045a6914140ffcd165d141512f4ce ChangeLog 9207
+MD5 29406e069119678b9c84b428efffb1bd ChangeLog 10114
 MD5 aadd595cfe7c0c5bbcec70650b452401 binutils-2.11.92.0.12.3-r2.ebuild 3125
 MD5 011c5a33d84072e1af09ccf89cba6d61 binutils-2.11.92.0.7.ebuild 2357
 MD5 368c85b995c3ab74a32a09e573aba1f9 binutils-2.12.90.0.15.ebuild 3512
 MD5 fa1d184fbb7043a913d9307bd1b42fde binutils-2.12.90.0.7.ebuild 3594
-MD5 80f2fa713d5b94df03fbb9a4949595b0 binutils-2.14.90.0.2.ebuild 4792
+MD5 79266afa15f127cf69223166252095be binutils-2.14.90.0.2.ebuild 4831
 MD5 5ed1c40a92233028ce782a0c337603d9 binutils-2.13.90.0.16-r1.ebuild 4740
+MD5 9f03c16a4ec51e85ac88cfbb0004ef5f binutils-2.14.90.0.4.ebuild 4837
 MD5 2adeb2860e4df3cdcb96ef6cd5430ab1 binutils-2.13.90.0.18-r1.ebuild 5376
 MD5 92d499d1d77ed2571dda9ea61195fa05 binutils-2.13.90.0.18.ebuild 4580
 MD5 d7b4cc81d5633b9a2bca55e3f0b7205e binutils-2.13.90.0.20-r1.ebuild 5006
@@ -16,6 +17,7 @@ MD5 6c32de9a9503293bb03048f09dadc182 files/digest-binutils-2.11.92.0.7 74
 MD5 e6b97971464cab854a321254d84ae44f files/digest-binutils-2.12.90.0.15 75
 MD5 64f2cf145447cc0996540814afb15c68 files/digest-binutils-2.12.90.0.7 74
 MD5 bac15ed517ba3cc1eb3c08f463654aad files/digest-binutils-2.14.90.0.2 75
+MD5 a63b47640cf272a430fb444e023dad44 files/digest-binutils-2.14.90.0.4 75
 MD5 b7ccd9bdcb0ab7c26bcf2a3e4c2e2afc files/digest-binutils-2.13.90.0.16-r1 75
 MD5 4270b9eea6fb9d807bc63ba0a221ea9b files/digest-binutils-2.13.90.0.18 75
 MD5 d435975192db69b96d36c62e2ad0876c files/digest-binutils-2.13.90.0.18-r1 160
@@ -51,3 +53,4 @@ MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.20-array-sect
 MD5 2183b775b86400dd7eda35bf1ccee678 files/2.13/binutils-2.13.90.0.20-gas-mips-gprel.patch 945
 MD5 c98edbd5a87f00832a367a40a6e576d1 files/2.14/binutils-2.14.90.0.1-eh-frame-ro.patch 17942
 MD5 e941bf2e41367989d389e2988672f87a files/2.14/binutils-2.14.90.0.1-sparc-nonpic.patch 3147
+MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.patch 540

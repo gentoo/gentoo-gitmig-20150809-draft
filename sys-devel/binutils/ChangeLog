@@ -1,6 +1,26 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.50 2003/05/25 15:34:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.51 2003/05/26 21:40:36 kumba Exp $
+
+*binutils-2.14.90.0.4 (26 May 2003)
+
+  26 May 2003; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.4.ebuild:
+  New Version.  Masked for all archs except unstable/testing on mips.
+
+  26 May 2003; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.ebuild:
+  Added a patch for MIPS arch which fixes binutils so that it does not generate
+  a broken dynamic relocation table for the OpenSSL libs. This happens because
+  the global GOT entry count is too low. The bug itself was introduced in
+  binutils CVS by the following patch:
+  http://sources.redhat.com/cgi-bin/cvsweb.cgi/src/bfd/elfxx-mips.c.diff?r1=1.38
+  &r2=1.39&cvsroot=src
+
+  26 May 2003; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.ebuild:
+  Corrected a minor error in SRC_URI so that the
+  package is found in the right location on the kernel.org website.
 
 *binutils-2.11.92.0.7 (25 May 2003)
 
