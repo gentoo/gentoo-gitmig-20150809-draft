@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1.ebuild,v 1.3 2003/02/13 10:08:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1.ebuild,v 1.4 2003/05/09 19:54:41 taviso Exp $
 
 IUSE="doc"
 
@@ -16,8 +16,8 @@ DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
 	dev-libs/libots
 	dev-libs/libcpml
-	=x11-libs/openmotif-2.1.30-r1
-	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
+	>=x11-libs/openmotif-2.1.30-r1
+	doc? ( ~dev-java/java-sdk-docs-1.3.1 )"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
