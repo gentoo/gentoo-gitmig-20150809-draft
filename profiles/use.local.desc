@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.734 2004/11/12 06:07:59 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.735 2004/11/13 15:58:35 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -135,6 +135,7 @@ app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/xpdf:nodrm - Disable the drm feature decoder.
+app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
