@@ -1,0 +1,62 @@
+#!/bin/sh
+# Gentoo Mirror Selection tool
+# Copyright 2003 Mark Guertin <gerk@gentoo.org>
+# Distributed under the GPL v2
+# Jan 30, 2003
+
+# for now it has a static list of mirrors, but will move to a more
+# dynamic setup once the lists are in place to pull from
+
+MIRROR_LIST='
+http://distro.ibiblio.org/gentoo (USA) ""
+ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA) ""
+http://gentoo.oregonstate.edu (USA) ""
+ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp) ""
+http://mirrors.sunsite.dk/gentoo/ (Denmark) ""
+ftp://sunsite.dk/mirrors/gentoo/ (Denmark/ftp) ""
+http://gentoo.linux.no/ (Norway) ""
+ftp://gentoo.linux.no/pub/gentoo/ (Norway/ftp) ""
+http://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany) ""
+ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany/ftp) ""
+http://ftp.gentoo.or.kr/ (South_Korea) ""
+http://gentoo.gnukorea.org/ (South_Korea) ""
+ftp://ftp.dale.ro/pub/mirrors/ftp.ibiblio.org/pub/Linux/distributions/gentoo/ (Romania/ftp) ""
+http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands) ""
+ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands/ftp) ""
+ftp://ftp.rez-gif.supelec.fr/pub/Linux/distrib/gentoo/ (France/ftp) ""
+'
+
+MIRRORS=`dialog --title "GENTOO MIRRORS LIST" \
+  --checklist "Please select your desired mirror(s):" 20 80 12 \
+$MIRROR_LIST 2>&1 | sed "s:\"::g"`
+
+
+if [ ! "`echo $MIRRORS`" ] ; then
+	echo "no mirrors selected, exiting"
+	exit 1
+fi
+
+echo "Selected: $MIRRORS"
+
+# adjust settings in make.conf, all in one command to avoid complaints of make.conf being moved
+mv /etc/make.conf /etc/make.conf.old && cat /etc/make.conf.old | grep -v "GENTOO_MIRRORS" > /etc/make.conf && \
+
+echo "GENTOO_MIRRORS=\"$MIRRORS\"" >> /etc/make.conf
+
+# triple check, it make.conf doesn't exist and make.conf.old doesn, replace it and warn user that
+# something didn't work
+
+if [ ! -s /etc/make.conf ] ; then
+	echo "make.conf didn't get remade, something is wrong, reverting to old one"
+	mv /etc/make.conf.old /etc/make.conf
+else
+	# all is well, rm the make.conf.old
+	if [ "`grep GENTOO_MIRRORS /etc/make.conf`" ] ; then 
+		echo "Mirrors set successfully"
+		rm /etc/make.conf.old
+	else
+		echo "no mirrors set!"
+	fi
+
+fi
+

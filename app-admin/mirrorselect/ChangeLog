@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/mirrorselect
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mirrorselect/ChangeLog,v 1.1 2003/01/30 20:42:58 gerk Exp $
+
+*mirrorselect-0.1 (30 Jan 2003)
+  30 jan 2003; Mark Guertin <gerk@gentoo.org> mirrorselect-0.1.ebuild :
+  Initial release, quick and ditry little dialog based script to pick
+  your distfile mirror.  For now mirrors are hardcoded into script, but
+  this will move of to something more dynamic when possible
