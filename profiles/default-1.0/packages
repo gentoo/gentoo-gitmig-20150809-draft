@@ -184,6 +184,7 @@
 ~dev-libs/elfutils-0.5
 ~sys-devel/prelink
 <=app-arch/rpm-4.1
+<=app-emulation/fceultra-090
 
 # Needs >=readline-4.2
 <media-sound/cdcd-0.6.4
