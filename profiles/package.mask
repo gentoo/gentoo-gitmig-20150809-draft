@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3026 2004/07/28 13:56:00 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3027 2004/07/29 08:29:44 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <mr_bones_@gentoo.org> (Jul 29 2004)
+# Mask until 0.6.1b can replace it.  Upstream noticed a bug right after release.
+=games-engines/scummvm-0.6.1
 
 # <ciaranm@gentoo.org> (Jul 26 2004)
 # Mask kvim until vim7 is out. See bug #56992 for details.
