@@ -1,11 +1,8 @@
 # ChangeLog for media-video/vcdgear
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.4 2003/01/20 22:52:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.5 2003/01/20 22:54:30 mholzer Exp $
 
 *vcdgear-1.6e (23 Oct 2002)
-
-  20 Jan 2003; Martin Holzer <mholzer@gentoo.org> vcdgear-1.6e.ebuild :
-  Now installing into /opt/vcdgear. Closes #14227
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
