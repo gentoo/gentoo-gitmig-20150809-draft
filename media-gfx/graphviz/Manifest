@@ -1,5 +1,5 @@
-MD5 ed0cd2ae8ad32690a7f833adab1f2b56 graphviz-1.10.ebuild 1174
-MD5 dce45f2eb690e65b2fbd6582e2af5c80 ChangeLog 3951
+MD5 7c7071d5382a3be05b056007b5036202 graphviz-1.10.ebuild 1171
+MD5 3e15cacb5708ce6496de7ce15997be43 ChangeLog 4043
 MD5 e98595ce89ff0da26058b1e6e0ce3d31 metadata.xml 1540
 MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
 MD5 ea7e00b7c49179d3961458a98aee9d6c files/digest-graphviz-1.10 66
