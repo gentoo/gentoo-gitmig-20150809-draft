@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.14 2002/07/26 06:07:42 lostlogic Exp $
-ID='$Id: qpkg,v 1.14 2002/07/26 06:07:42 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.15 2002/09/03 02:46:41 lostlogic Exp $
+ID='$Id: qpkg,v 1.15 2002/09/03 02:46:41 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -113,7 +113,8 @@ do
 			usage=y
 			break
 		fi
-		arg=$a
+		# Kill a trailing slash
+		arg=${a%/}
 		;;
 		
 	esac
