@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.104 2004/12/29 01:49:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.105 2004/12/29 09:26:35 sejo Exp $
+
+  29 Dec 2004; <SeJo@gentoo.org> openssh-3.9_p1-r1.ebuild:
+  stable on ppc glsa: 59361
 
 *openssh-3.9_p1-r1 (28 Dec 2004)
 
