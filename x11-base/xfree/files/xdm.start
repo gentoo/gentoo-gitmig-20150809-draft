@@ -1,4 +1,5 @@
 #! /bin/bash
+#RCUPDATE:4:99:This line is required for script management
 # Copyright (c) 1996-99 SuSE GmbH Nuernberg, Germany.  All rights reserved.
 #
 # Author: Florian La Roche <florian@suse.de>, 1996
