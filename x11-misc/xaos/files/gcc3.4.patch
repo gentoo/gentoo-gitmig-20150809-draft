@@ -1,0 +1,227 @@
+diff -ru ./src/engine/docalc.c ../XaoS-3.1-new/./src/engine/docalc.c
+--- ./src/engine/docalc.c	2002-09-25 17:52:08.000000000 +0200
++++ ../XaoS-3.1-new/./src/engine/docalc.c	2004-10-05 12:16:32.000000000 +0200
+@@ -119,7 +119,7 @@
+ SCALC (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)  static unsigned int FUNCTYPE
+        SCALC (register number_t zre, register number_t zim,
+ 	      register number_t pre, register number_t pim)
+ #else
+@@ -127,7 +127,7 @@
+ CALC (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned
++REGISTERS(3)   static unsigned
+        CALC (register number_t zre, register number_t zim,
+ 	     register number_t pre, register number_t pim)
+ #endif
+@@ -256,7 +256,7 @@
+ SCALC (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)     static unsigned int FUNCTYPE
+        SCALC (register number_t zre, register number_t zim,
+ 	      register number_t pre, register number_t pim)
+ #else
+@@ -264,7 +264,7 @@
+ CALC (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)     static unsigned int FUNCTYPE
+        CALC (register number_t zre, register number_t zim,
+ 	     register number_t pre, register number_t pim)
+ #endif
+@@ -348,7 +348,7 @@
+ SPERI (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)     static unsigned int FUNCTYPE
+        SPERI (register number_t zre, register number_t zim,
+ 	      register number_t pre, register number_t pim)
+ #else
+@@ -356,7 +356,7 @@
+ PERI (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)     static unsigned int FUNCTYPE
+        PERI (register number_t zre, register number_t zim,
+ 	     register number_t pre, register number_t pim)
+ #endif
+@@ -471,7 +471,7 @@
+ SPERI (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)     static unsigned int FUNCTYPE
+        SPERI (register number_t zre, register number_t zim,
+ 	      register number_t pre, register number_t pim)
+ #else
+@@ -479,7 +479,7 @@
+ PERI (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+      CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
++REGISTERS(3)  static unsigned int FUNCTYPE
+        PERI (register number_t zre, register number_t zim,
+ 	     register number_t pre, register number_t pim)
+ #endif
+diff -ru ./src/engine/formulas.c ../XaoS-3.1-new/./src/engine/formulas.c
+--- ./src/engine/formulas.c	2003-01-10 11:26:12.000000000 +0100
++++ ../XaoS-3.1-new/./src/engine/formulas.c	2004-10-05 12:14:31.000000000 +0200
+@@ -251,7 +251,7 @@
+ truecolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+ 		  int mode, int inset)
+      CONSTF REGISTERS (3);
+-     static unsigned int
++REGISTERS(3)     static unsigned int
+        truecolor_output (number_t zre, number_t zim, number_t pre,
+ 			 number_t pim, int mode, int inset)
+ {
+@@ -445,7 +445,7 @@
+ color_output (number_t zre, number_t zim, unsigned int iter)
+      CONSTF REGISTERS (3);
+      static unsigned int
+-       color_output (number_t zre, number_t zim, unsigned int iter)
++REGISTERS(3)  color_output (number_t zre, number_t zim, unsigned int iter)
+ {
+   int i;
+   iter <<= SHIFT;
+@@ -529,7 +529,7 @@
+ incolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+ 		unsigned int iter)
+      CONSTF REGISTERS (3);
+-     static unsigned int
++REGISTERS(3)     static unsigned int
+        incolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+ 		       unsigned int iter)
+ {
+diff -ru ./src/engine/plane.c ../XaoS-3.1-new/./src/engine/plane.c
+--- ./src/engine/plane.c	2002-09-25 17:52:08.000000000 +0200
++++ ../XaoS-3.1-new/./src/engine/plane.c	2004-10-05 12:18:09.000000000 +0200
+@@ -53,7 +53,7 @@
+ };
+ 
+ 
+-void
++REGISTERS(3) void
+ recalculate (int plane, number_t * x1, number_t * y1)
+ {
+   number_t x = *x1, y = *y1;
+diff -ru ./src/engine/zoom.c ../XaoS-3.1-new/./src/engine/zoom.c
+--- ./src/engine/zoom.c	2003-02-03 17:16:41.000000000 +0100
++++ ../XaoS-3.1-new/./src/engine/zoom.c	2004-10-05 12:17:35.000000000 +0200
+@@ -1327,7 +1327,7 @@
+ static void
+ addprices (realloc_t * r, realloc_t * r2)
+ REGISTERS (3);
+-     static void addprices (realloc_t * r, realloc_t * r2)
++REGISTERS(3) static void addprices (realloc_t * r, realloc_t * r2)
+ {
+   realloc_t *r3;
+   while (r < r2)
+diff -ru ./src/engine/zoomd.c ../XaoS-3.1-new/./src/engine/zoomd.c
+--- ./src/engine/zoomd.c	2002-09-25 17:52:09.000000000 +0200
++++ ../XaoS-3.1-new/./src/engine/zoomd.c	2004-10-05 12:17:22.000000000 +0200
+@@ -28,7 +28,7 @@
+ static void
+ calcline (realloc_t * RESTRICT ry)
+ REGISTERS (3);
+-     static void calcline (realloc_t * RESTRICT ry)
++REGISTERS(3) static void calcline (realloc_t * RESTRICT ry)
+ {
+   number_t y;
+   int range = cfractalc.range;
+@@ -140,7 +140,7 @@
+ static void
+ calccolumn (realloc_t * RESTRICT rx)
+ REGISTERS (3);
+-     static void calccolumn (realloc_t * RESTRICT rx)
++REGISTERS (3)     static void calccolumn (realloc_t * RESTRICT rx)
+ {
+   number_t x;
+   int range = cfractalc.range;
+diff -ru ./src/ui/ui.c ../XaoS-3.1-new/./src/ui/ui.c
+--- ./src/ui/ui.c	2003-03-19 13:09:31.000000000 +0100
++++ ../XaoS-3.1-new/./src/ui/ui.c	2004-10-05 12:21:20.000000000 +0200
+@@ -97,6 +97,10 @@
+ 
+ xio_pathdata configfile;
+ static void ui_unregistermenus (void);
++static void ui_mkimages(int,int);
++static void
++main_loop (void)
++  NORETURN;
+ 
+ int prog_argc;
+ char **prog_argv;
+@@ -1732,10 +1736,7 @@
+   uih_updatemenus (uih, driver->name);
+ }
+ 
+-static void
+-main_loop (void)
+-  NORETURN;
+-     static void main_loop (void)
++NORETURN     static void main_loop (void)
+ {
+   int inmovement = 1;
+   int x, y, b, k;
+diff -ru ./src/ui-hlp/save.c ../XaoS-3.1-new/./src/ui-hlp/save.c
+--- ./src/ui-hlp/save.c	2003-02-03 17:16:44.000000000 +0100
++++ ../XaoS-3.1-new/./src/ui-hlp/save.c	2004-10-05 12:22:05.000000000 +0200
+@@ -294,7 +294,7 @@
+ static void
+ savepos (struct uih_context *uih)
+ REGISTERS (3);
+-     static void savepos (struct uih_context *uih)
++REGISTERS(3) static void savepos (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "view");
+@@ -308,7 +308,7 @@
+ static void
+ savepos2 (struct uih_context *uih)
+ REGISTERS (3);
+-     static void savepos2 (struct uih_context *uih)
++REGISTERS(3) static void savepos2 (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "animateview");
+@@ -322,7 +322,7 @@
+ static void
+ savepos3 (struct uih_context *uih)
+ REGISTERS (3);
+-     static void savepos3 (struct uih_context *uih)
++REGISTERS(3) static void savepos3 (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "morphview");
+diff -ru ./src/util/timers.c ../XaoS-3.1-new/./src/util/timers.c
+--- ./src/util/timers.c	2003-02-03 11:16:52.000000000 +0100
++++ ../XaoS-3.1-new/./src/util/timers.c	2004-10-05 12:22:05.000000000 +0200
+@@ -331,7 +331,7 @@
+ #endif
+ }
+ 
+-int
++REGISTERS(3) int
+ tl_lookup_timer (tl_timer * t)
+ {
+   if (t->stopped)
+@@ -409,7 +409,7 @@
+ #endif
+ }
+ 
+-void
++REGISTERS(3) void
+ tl_reset_timer (tl_timer * t)
+ {
+   if (t->stopped)

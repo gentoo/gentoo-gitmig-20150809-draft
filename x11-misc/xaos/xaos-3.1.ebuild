@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.9 2004/07/27 07:00:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1.ebuild,v 1.10 2004/10/05 10:27:45 phosphan Exp $
+
+inherit eutils
 
 IUSE="X svga aalib nls"
 
@@ -24,6 +26,12 @@ DEPEND="X? ( virtual/x11 )
 # xaos has ggi support, but it doesn't build
 #	ggi?   ( media-libs/libggi )
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gcc3.4.patch
+}
 
 src_compile() {
 	local myconf

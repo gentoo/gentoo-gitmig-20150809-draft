@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.11 2004/10/02 15:42:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.12 2004/10/05 10:27:45 phosphan Exp $
+
+  05 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +files/gcc3.4.patch,
+  xaos-3.1.ebuild:
+  Adding patch for gcc 3.4.
 
   27 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> xaos-3.1.ebuild:
   Added -sparc, see bug #58508

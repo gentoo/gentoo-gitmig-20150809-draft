@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bcaad8ae0594b19803a31bffdf512ce ChangeLog 1292
+MD5 af67cc92d6e8a47e2ec9a391812e5fe3 xaos-3.1.ebuild 1762
+MD5 cc6a3f9b83b538c8741e006ab933bc99 ChangeLog 1414
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 0a94617d56ecb7259536935faaf69edb xaos-3.1.ebuild 1671
 MD5 f15bb8d89c74bd6168e7e67b16b789d4 files/digest-xaos-3.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsxoI1lqEGTUzyQRAi9NAKCzocFuYnSpJufI7PUM/dRLaLOeNwCgvWuB
-dlAW7Oodvmh72Tb+dF9lVDI=
-=PHc3
------END PGP SIGNATURE-----
+MD5 7589bd8d57e0ddebeb3463df943ed3a2 files/gcc3.4.patch 7778
