@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.3 2004/02/27 03:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xarchon/xarchon-0.60.ebuild,v 1.4 2004/04/13 10:25:44 mr_bones_ Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="modelled after the golden oldie Archon game"
 HOMEPAGE="http://xarchon.seul.org/"
@@ -15,30 +15,34 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="esd joystick" # also has qt support but it fails :/
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	=x11-libs/gtk+-1*
 	<dev-util/glade-2
 	esd? ( media-sound/esound )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/${P}-gtk.patch
-	sed -i 's:gtk12-config:gtk-config:' configure
+	epatch "${WORKDIR}/${P}-gtk.patch"
+	sed -i \
+		-e 's:gtk12-config:gtk-config:' configure \
+			|| die "sed configure failed"
 }
 
 src_compile() {
 	local mysndconf
-	[ `use esd` ] \
+	use esd \
 		&& mysndconf="--with-esd-prefix=/usr" \
 		|| mysndconf="--disable-sound"
 	egamesconf \
 		--enable-network \
-		`use_enable joystick` \
+		$(use_enable joystick) \
 		--with-default-gtk \
 		${mysndconf} \
-		|| die
-	emake || die
+			|| die
+	emake || die "emake failed"
 }
 
 src_install() {
