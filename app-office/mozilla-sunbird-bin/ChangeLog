@@ -1,6 +1,12 @@
 # ChangeLog for app-office/mozilla-sunbird-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.1 2004/08/20 03:54:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/ChangeLog,v 1.2 2004/11/18 19:03:06 agriffis Exp $
+
+*mozilla-sunbird-bin-0.2.20041112 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-sunbird-bin-0.2.20041112.ebuild:
+  Update to 0.2 beta #69100
 
 *mozilla-sunbird-bin-0.2.20040812 (19 Aug 2004)
 
