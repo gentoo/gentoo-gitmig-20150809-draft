@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.3 2004/03/24 07:09:33 mr_bones_ Exp $ 
 
 inherit games
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="mikmod"
 
-DEPEND="=dev-games/clanlib-0.6.5*
-	mikmod? ( media-libs/libmikmod )
+RDEPEND="=dev-games/clanlib-0.6.5*
+	mikmod? ( media-libs/libmikmod )"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
@@ -24,25 +25,25 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}/source/linux
-	if [ ! `use mikmod` ] ; then
+	if ! use mikmod ; then
 		sed -i \
 			-e 's/^\(MIKMOD_LIBS\)/#\1/g' \
-			-e 's/^\(METHANE_FLAGS\)/#\1/g' \
-			makefile || die "mikmod sed failed"
+			-e 's/^\(METHANE_FLAGS\)/#\1/g' makefile \
+				|| die "mikmod sed failed"
 	fi
 }
 
 src_compile() {
 	cd source/linux
-	emake -j1 || die
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	dogamesbin source/linux/methane || die "couldnt install methane"
-	dodir ${GAMES_STATEDIR}
-	touch ${D}/${GAMES_STATEDIR}/methanescores
+	dogamesbin source/linux/methane || die "dogamesbin failed"
+	dodir "${GAMES_STATEDIR}"
+	touch "${D}/${GAMES_STATEDIR}/methanescores"
 	dodoc authors copying history install todo
 	dohtml ${S}/docs/*
 	prepgamesdirs
-	fperms g+w ${GAMES_STATEDIR}/methanescores
+	fperms g+w "${GAMES_STATEDIR}/methanescores"
 }
