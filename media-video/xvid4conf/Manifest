@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36cf014a815bf0d7215837137b3e9ef2 ChangeLog 406
+MD5 07b9d4d2c3612a6beda9dcba48510c7c xvid4conf-1.12.ebuild 652
+MD5 b23149c64292349cba869a0ff5ab6539 ChangeLog 398
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 b4e278c9fe12a60f40433d4a2d78ec4c xvid4conf-1.12.ebuild 658
 MD5 e61317a49a5ebc5be630a39411601239 files/digest-xvid4conf-1.12 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA08dcHTu7gpaalycRArcIAKCSaG4ThL4y7aqC12KkF3v/dNZCvgCfcJlM
-UM8QBd7gzmUYPZkU23n0wgQ=
-=wj1x
------END PGP SIGNATURE-----

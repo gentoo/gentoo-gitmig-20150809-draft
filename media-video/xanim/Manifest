@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 22576ef1afdc97a802dae059e4ede131 ChangeLog 2601
-MD5 aaea0b2b1b6e5bea22e14c2b3f01fc60 xanim-2.80.1-r4.ebuild 3180
+MD5 cc361de3ee1dfb71fd410f2fe70ecd36 ChangeLog 2594
+MD5 08cdf1df094c048ec9ec6b5b3f031285 xanim-2.80.1-r4.ebuild 3174
 MD5 6a40e5518b2aaa2929a2572c5d7ca79e files/Makefile 23423
-MD5 cd8f40081245fb40b09b20eae7f5fd73 files/Makefile.amd64 23429
 MD5 a04e6bf35b1c142eb7bbccfdc6c5280b files/digest-xanim-2.80.1-r4 878
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA08OtHTu7gpaalycRAud2AKCI6UHLfhV9xeEtG5b7r2GVD5/jIwCeLg6E
-N080Hj53twMU9FaTCiTWKHM=
-=1op+
------END PGP SIGNATURE-----
+MD5 cd8f40081245fb40b09b20eae7f5fd73 files/Makefile.amd64 23429
