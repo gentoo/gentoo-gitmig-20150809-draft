@@ -663,10 +663,6 @@ app-misc/ldapbrowser
 # masked because GNU Readline 4.2 is not in 1.0 default inclusion
 =media-sound/cdcd-0.6.4
 
-# <nitro@gentoo.org> (19 Jun 2002)
-# new version, please test
->=net-ftp/proftpd-1.2.6_rc1
-
 # new ebuild.  probably x86-only as well.
 app-misc/mwavem
 
