@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.78 2004/06/30 07:58:17 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.79 2004/07/02 05:26:46 cyfred Exp $
+
+*nvidia-kernel-1.0.6106 (02 Jul 2004)
+
+  02 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; metadata.xml,
+  +files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch,
+  +nvidia-kernel-1.0.6106.ebuild:
+  Commiting 6106 to CVS. Thanks to Kris Kersey (augustus) for getting this
+  version off the ground, and thanks to all the testers from bug #55714. This
+  version has 4K stacks support, includes SYSFS support and has the kernel
+  module and glx combined into one package.
 
   30 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>;
   +files/1.0.5336/NVIDIA_kernel-1.0-5336-kbuild-koutput-support.patch,
