@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.2 2004/10/08 18:20:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.3 2005/03/20 10:13:02 mkennedy Exp $
 
-inherit eutils gcc flag-o-matic
+inherit eutils gcc flag-o-matic elisp-common
 
 #erlang uses a really weird versioning scheme which caused quite a few problems already
 #Thus we do a slight modification converting all letters to digits to make it more sane (see e.g. #26420)
@@ -17,11 +17,14 @@ SRC_URI="http://www.erlang.org/download/${MY_P}-0.tar.gz"
 LICENSE="EPL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="X ssl"
+IUSE="X ssl emacs"
 
 DEPEND=">=dev-lang/perl-5.6.1
 	X? ( virtual/x11 )
-	ssl? ( >=dev-libs/openssl-0.9.7d )"
+	ssl? ( >=dev-libs/openssl-0.9.7d )
+	emacs? ( virtual/emacs )"
+
+SITEFILE=50erlang-gentoo.el
 
 S=${WORKDIR}/${MY_P}_${MyDate}
 
@@ -34,6 +37,12 @@ src_compile() {
 	[ "${ARCH}" = "amd64" ] && CHOST="x86_64-unknown-linux-gnu"
 	econf --enable-threads || die
 	make || die
+
+	if use emacs; then
+		pushd ${D}/lib/tools/emacs
+		elisp-compile *.el
+		popd
+	fi
 }
 
 src_install() {
@@ -57,4 +66,19 @@ src_install() {
 
 	## Clean up the no longer needed files
 	rm ${D}/${ERL_LIBDIR}/Install
+
+	if use emacs; then
+		pushd ${S}
+		elisp-install erlang lib/tools/emacs/*.el
+		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		popd
+	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
