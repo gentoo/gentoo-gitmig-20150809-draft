@@ -1,0 +1,8 @@
+# ChangeLog for dev-lang/spidermonkey
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.1 2003/02/24 01:59:06 vapier Exp $
+
+*spidermonkey-1.5_rc5 (23 Feb 2003)
+
+  23 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Asser Femø <asser@diku.dk>.
