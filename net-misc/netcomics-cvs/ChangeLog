@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/netcomics-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.1 2003/10/06 10:44:56 pyrania Exp $
+
+*netcomics-cvs-0.14.1 (06 Oct 2003)
+
+  06 Oct 2003; Markus Nigbur <pyrania@gentoo.org> netcomics-cvs-0.14.1.ebuild:
+  Initial import, thanks to Vaclav Slavik (bug 30437).
+
