@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.4 2004/11/11 23:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.5 2004/12/29 21:56:32 morfic Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-zlib.patch
+	epatch ${FILESDIR}/${P}-test_io.patch
 
 	export WANT_AUTOMAKE=1.6
 	export WANT_AUTOCONF=2.5

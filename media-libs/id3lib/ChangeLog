@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.30 2004/12/29 00:45:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.31 2004/12/29 21:56:32 morfic Exp $
+
+  29 Dec 2004; Daniel Goller <morfic@gentoo.org>
+  +files/id3lib-3.8.3-test_io.patch, id3lib-3.8.3-r3.ebuild:
+  Fixed make check, closing bug 64899
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
