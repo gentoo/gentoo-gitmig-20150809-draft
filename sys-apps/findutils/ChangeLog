@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.41 2005/02/20 17:40:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.42 2005/03/17 23:10:06 ciaranm Exp $
+
+*findutils-4.2.20 (17 Mar 2005)
+
+  17 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/findutils-4.2.20-selinux.diff, +findutils-4.2.20.ebuild:
+  Version bump
 
   20 Feb 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/findutils-4.2.18-gcc295.patch, findutils-4.2.18.ebuild:
