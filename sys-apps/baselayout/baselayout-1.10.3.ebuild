@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.3.ebuild,v 1.6 2004/10/06 04:41:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.3.ebuild,v 1.7 2004/10/14 22:38:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -388,7 +388,7 @@ pkg_postinst() {
 	# tarball.
 	if [[ ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]]; then
 		# Create a directory in which to work
-		x=$(mktemp -d ${ROOT}/tmp/devnodes.XXXXXXXXX) \
+		x=$(emktemp -d ${ROOT}/tmp/devnodes.XXXXXXXXX) \
 			&& cd "${x}" || die 'mktemp failed'
 
 		# Create temp device nodes
