@@ -1,6 +1,6 @@
 # emerge -n '>=sys-apps/portage-2.0.51'
 # rm /etc/make.profile
-# ln -s $(portageq portdir)/profiles/default-linux/sparc/sparc64/2004.3 /etc/make.profile
+# ln -s $(portageq portdir)/profiles/default-linux/sparc/sparc64/2005.0 /etc/make.profile
 # emerge system -pv
 
 The old profile is subject to removal any time after 2005.04.01!
