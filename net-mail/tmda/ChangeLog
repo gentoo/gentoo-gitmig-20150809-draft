@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.29 2003/03/09 04:25:46 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.30 2003/04/14 18:46:22 agenkin Exp $
+
+*tmda-0.74 (14 Apr 2003)
+
+  14 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Updated to 0.74.
+  tmda-cgi is now distributed separately, so somebody would have to write
+  an ebuild for that package now.
+  Made sure all the stuff under contrib/ gets installed.
 
 *tmda-0.71 ( 08 Mar 2003 )
 
