@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.28 2004/11/06 15:07:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.29 2004/11/06 15:40:15 weeve Exp $
+
+  06 Nov 2004; Jason Wever <weeve@gentoo.org> zip-2.3-r4.ebuild:
+  Stable on sparc wrt security bug #70227.
 
   06 Nov 2004; Olivier Crete <tester@gentoo.org> zip-2.3-r4.ebuild:
   Stable on x86 per #70227
