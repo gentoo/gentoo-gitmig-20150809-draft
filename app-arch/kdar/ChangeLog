@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/kdar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/ChangeLog,v 1.16 2005/03/22 15:22:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/ChangeLog,v 1.17 2005/03/30 12:21:47 matsuu Exp $
+
+*kdar-2.0.4 (30 Mar 2005)
+
+  30 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> -kdar-2.0.1.ebuild,
+  +kdar-2.0.4.ebuild:
+  Version bumped.
+  Removed old version.
 
 *kdar-2.0.3 (23 Mar 2005)
 
