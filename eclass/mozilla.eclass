@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.1 2004/08/04 23:30:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.2 2004/08/06 02:22:17 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -76,7 +76,7 @@ mozilla_conf() {
 	alpha)
 		# Mozilla won't link with X11 on alpha, for some crazy reason.
 		# set it to link explicitly here.
-		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L/usr/X11R6/lib -lX11/' \
+		sed -i 's/\(EXTRA_DSO_LDOPTS += $(MOZ_GTK_LDFLAGS).*$\)/\1 -L\/usr\/X11R6\/lib -lX11/' \
 			${S}/gfx/src/gtk/Makefile.in
 		;;
 
@@ -204,13 +204,17 @@ mozilla_conf() {
 		myconf="${myconf} --disable-xft $(use_enable truetype freetype2)"
 	fi
 
-	# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
-	if use mozsvg; then
-		export MOZ_INTERNAL_LIBART_LGPL=1
-		myconf="${myconf} --enable-svg --enable-svg-renderer-libart"
-	else
-		myconf="${myconf} --disable-svg"
-	fi
+#   This doesn't work on thunderbird and should be moved back to moz/ff ebuilds.
+#   I'm leaving it here, commented, as a reminder to myself. 
+#   (05 Aug 2004 agriffis)
+#
+#	# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
+#	if use mozsvg; then
+#		export MOZ_INTERNAL_LIBART_LGPL=1
+#		myconf="${myconf} --enable-svg --enable-svg-renderer-libart"
+#	else
+#		myconf="${myconf} --disable-svg"
+#	fi
 }
 
 # Simulate the silly csh makemake script
