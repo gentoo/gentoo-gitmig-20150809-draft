@@ -26,6 +26,6 @@ virtual/python		dev-lang/python
 virtual/ruby		dev-lang/ruby
 virtual/ssh			net-misc/openssh
 virtual/tetex		app-text/tetex
-virtual/textbrowser	net-www/links
+virtual/textbrowser	www-client/links
 virtual/w3m			www-client/w3m
 virtual/emacs		app-editors/emacs

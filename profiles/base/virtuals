@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.52 2005/03/05 20:58:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.53 2005/03/15 22:08:31 seemant Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -67,7 +67,7 @@ virtual/squeak-image		dev-lang/squeak-fullimage
 virtual/ssh					net-misc/openssh
 virtual/sylpheed			mail-client/sylpheed
 virtual/tetex				app-text/tetex
-virtual/textbrowser			net-www/links
+virtual/textbrowser			www-client/links
 virtual/tftp				net-ftp/tftp-hpa
 virtual/w3m					www-client/w3m
 virtual/winkernel			sys-kernel/win4lin-sources

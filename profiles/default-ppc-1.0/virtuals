@@ -21,7 +21,7 @@ sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/sylpheed	mail-client/sylpheed
 virtual/php	     dev-php/mod_php
 virtual/httpd-php				dev-php/mod_php
-virtual/textbrowser		net-www/links
+virtual/textbrowser		www-client/links
 virtual/mda				mail-filter/procmail
 virtual/xft	     x11-base/xorg-x11
 virtual/krb5			app-crypt/mit-krb5

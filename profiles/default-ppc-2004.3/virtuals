@@ -54,7 +54,7 @@ virtual/squeak-image	dev-lang/squeak-fullimage
 virtual/ssh		net-misc/openssh
 virtual/sylpheed	mail-client/sylpheed
 virtual/tetex		app-text/tetex
-virtual/textbrowser	net-www/links
+virtual/textbrowser	www-client/links
 virtual/tftp		net-ftp/tftp-hpa
 virtual/w3m		www-client/w3m
 virtual/w3m		www-client/w3m

@@ -18,7 +18,7 @@ virtual/php	     	dev-php/mod_php
 virtual/httpd-php	dev-php/mod_php
 virtual/ssh		net-misc/openssh
 virtual/tetex		app-text/tetex
-virtual/textbrowser	net-www/links
+virtual/textbrowser	www-client/links
 virtual/x11		x11-base/apple-xfree
 virtual/xft		x11-base/apple-xfree
 virtual/opengl		x11-base/apple-xfree
