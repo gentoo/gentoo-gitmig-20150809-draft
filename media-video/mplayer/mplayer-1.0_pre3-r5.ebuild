@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.6 2004/04/14 04:37:15 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.7 2004/04/19 22:34:26 wolf31o2 Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora ipv6 v4l v4l2"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2"
 
 inherit eutils flag-o-matic
 
@@ -30,11 +30,8 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	       >=media-libs/win32codecs-0.60 )
 	gtk? ( media-libs/libpng
 	       virtual/x11
-		!gtk2? ( =x11-libs/gtk+-1.2*
+			=x11-libs/gtk+-1.2*
 			=dev-libs/glib-1.2* )
-		gtk2? ( >=x11-libs/gtk+-2.0.6
-	        >=dev-libs/glib-2.0.6 )
-	)
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib
 	       media-libs/libungif )
@@ -98,9 +95,6 @@ src_unpack() {
 
 	# security problem, bug #46246
 	cd ${S}/libmpdemux; epatch ${FILESDIR}/vuln02-fix.diff
-
-	# Use gtk-2.x
-	cd ${S}; epatch ${FILESDIR}/${PN}-1.0-gtk2.patch
 
 	# Fix head/tail call for new coreutils
 	cd ${S}; epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
@@ -172,9 +166,6 @@ src_compile() {
 	use gtk \
 		&& myconf="${myconf} --enable-gui --enable-x11 \
 		                     --enable-xv --enable-vm --enable-png"
-
-	( use gtk && use gtk2 ) \
-		&& myconf="${myconf} --enable-gtk2"
 
 	use encode \
 		&& myconf="${myconf} --enable-mencoder --enable-tv" \
