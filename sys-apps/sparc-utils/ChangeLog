@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.12 2003/11/01 12:01:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.13 2003/11/01 13:06:43 weeve Exp $
+
+  01 Nov 2003; Jason Wever <weeve@gentoo.org> files/audioctl.init:
+  Forgot to add the audioctl init script for the 1.9-r2 bump.
 
 *sparc-utils-1.9-r2 (01 Nov 2003)
 
