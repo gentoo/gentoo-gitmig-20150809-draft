@@ -1,5 +1,7 @@
 MD5 ae29b6faeb879562282b5de975ef5c5f uim-2013.ebuild 788
 MD5 d95dc7035135baaa9c0edb33a2762f5a uim-2018.ebuild 735
 MD5 f5cc6309917523c1383ca0ccf706ae77 ChangeLog 519
+MD5 d2a7c6f4c65c5dd8ece14ec807ccee47 uim-2023.ebuild 735
 MD5 3bb8c1a4834e31c177de4931379f26e6 files/digest-uim-2013 60
 MD5 71b0142ac8f4c533875e57f62fd33b83 files/digest-uim-2018 60
+MD5 c7c39e7fbaae8dc42b41b2119acc139b files/digest-uim-2023 60

@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.2 2003/08/20 12:33:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.3 2003/08/25 17:44:41 usata Exp $
+
+*uim-2023 (26 Aug 2003)
+
+  26 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> uim-2023.ebuild:
+  Version bump
 
 *uim-2018 (20 Aug 2003)
 
@@ -10,6 +15,9 @@
   to GentooJP BugTrack
 
 *uim-2013 (17 Aug 2003)
+
+  26 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> uim-2013.ebuild:
+  Marked as stable
 
   17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> uim-2013.ebuild:
   Initial import
