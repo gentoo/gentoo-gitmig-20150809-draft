@@ -1,7 +1,10 @@
 # ChangeLog for app-admin/va-systemimager-server
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/va-systemimager-server/ChangeLog,v 1.1 2002/07/18 22:57:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/va-systemimager-server/ChangeLog,v 1.2 2002/10/18 20:46:41 aliz Exp $
 
 *va-systemimager-server-1.4.0 (18 Jul 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> va-systemimager-server-1.4.0.ebuild :
+  Updated SRC_URI to use mirror://.  
 
   18 Jul 2002; Daniel Robbins <drobbins@gentoo.org>: Added missing ChangeLog

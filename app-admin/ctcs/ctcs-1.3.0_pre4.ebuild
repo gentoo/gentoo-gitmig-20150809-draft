@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.4 2002/10/18 13:31:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.5 2002/10/18 20:46:41 aliz Exp $
 
 # ${A}        - the tarball itself             eg:  ${PORTDIR}/distfiles/t.tgz
 # ${P}        - program name-program version   eg:  foo-1.0
@@ -23,7 +23,7 @@ HOMEPAGE="http://sourceforge.net/projects/va-ctcs"
 # file:// is known to not work
 #
 # If the file is local on the HD, just leave it blank
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/va-ctcs/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/va-ctcs/${MY_P}.tar.gz"
 
 # See ${PORTDIR}/licenses ... pick one of the file names
 LICENSE="GPL-2"

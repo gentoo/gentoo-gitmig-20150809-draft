@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/va-systemimager-client/va-systemimager-client-1.4.0.ebuild,v 1.8 2002/10/04 03:46:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/va-systemimager-client/va-systemimager-client-1.4.0.ebuild,v 1.9 2002/10/18 20:46:41 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VA SystemImager software automates the installation of Linux to masses of similar machines."
-SRC_URI="http://download.sourceforge.net/systemimager/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/systemimager/${P}.tar.bz2"
 HOMEPAGE="http://systemimager.org"
 
 SLOT="0"
