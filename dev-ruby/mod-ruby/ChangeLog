@@ -1,8 +1,13 @@
 # ChangeLog for dev-ruby/mod-ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.7 2004/02/20 17:46:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.8 2004/02/20 18:15:13 usata Exp $
 
 *mod-ruby-1.1.1-r2 (21 Feb 2004)
+
+  21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> mod-ruby-1.1.1-r1.ebuild,
+  mod-ruby-1.1.1-r2.ebuild, mod-ruby-1.1.1.ebuild:
+  Fixed conditional statement when only apache2 is installed but apache2
+  USE flag is not set. Closing bug #41458
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> mod-ruby-1.1.1-r1.ebuild,
   mod-ruby-1.1.1-r2.ebuild, mod-ruby-1.1.1.ebuild:

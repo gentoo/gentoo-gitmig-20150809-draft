@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.1-r2.ebuild,v 1.3 2004/02/20 17:46:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.1-r2.ebuild,v 1.4 2004/02/20 18:15:13 usata Exp $
 
 MY_P=mod_ruby-${PV}
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
@@ -17,14 +17,18 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 
-	if [ "`use apache2`" ]; then
+	if [ "`use apache2`" -o "`has_version '=net-www/apache-1*'`" != 1 ]; then
 		:;
 	else
-		ewarn "apache support is UNTESTED"
+		ewarn "apache 1.3.x support is UNTESTED"
 	fi
 
 	local two
-	[ "`use apache2`" ] && two="2" || two=""
+	if [ -n "`use apache2`" -o "`has_version '=net-www/apache-1*'`" != 1 ]; then
+		two="2"
+	else
+		two=""
+	fi
 
 	./configure.rb --with-apxs=/usr/sbin/apxs${two}
 
