@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.25 2004/12/16 05:17:20 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.26 2004/12/27 17:41:33 ciaranm Exp $
+
+*gentoo-syntax-20041227 (27 Dec 2004)
+
+  27 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20041227.ebuild:
+  New version. Changes include an update to make arch detection work again
+  with the new make.defaults setup, extra error checking on make.conf SLOT and
+  CFLAGS, many new ebuild creation templates and new metadata and guidexml
+  syntax rules.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   gentoo-syntax-20041202.ebuild:
