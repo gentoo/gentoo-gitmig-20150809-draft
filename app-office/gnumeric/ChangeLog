@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.29 2003/04/14 12:23:02 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.30 2003/04/15 10:37:21 liquidx Exp $
+
+*gnumeric-1.1.16-r1 (15 Apr 2003)
+
+  15 Apr 2003; Alastair Tse <liquidx@gentoo.org> gnumeric-1.1.16-r1.ebuild,
+  files/gnumeric-1.1.16-scrollkeeper.patch:
+  enabled bonobo support. fixed installation paths with new gnome2 eclass.
+  fix scrollkeeper paths.
 
 *gnumeric-1.0.13 (14 Apr 2003)
 
