@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.711 2004/11/04 01:52:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.712 2004/11/04 14:25:54 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -57,6 +57,8 @@ app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
+app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
+app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
 app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
