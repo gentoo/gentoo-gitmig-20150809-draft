@@ -1,6 +1,9 @@
 # ChangeLog for app-text/biblestudy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.1 2004/05/03 20:27:51 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.2 2004/05/09 18:09:23 squinky86 Exp $
+
+  09 May 2004; Jon Hood <squinky86@gentoo.org> :
+  digests changed
 
 *biblestudy-1.0 (03 May 2004)
 
