@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20021121.ebuild,v 1.4 2003/02/13 06:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-ps/howto-ps-20021121.ebuild,v 1.5 2003/09/06 22:17:40 msterret Exp $
 
 MY_P="Linux-ps-HOWTOs-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,7 @@ src_install() {
 	dodir /usr/share/doc/howto
 	dodir /usr/share/doc/howto/ps
 	dosym /usr/share/doc/howto /usr/share/doc/HOWTO
-	
+
 	cd ${WORKDIR}
 	insinto /usr/share/doc/howto/ps
 	doins *

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.9 2003/07/16 15:47:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.10 2003/09/06 22:17:40 msterret Exp $
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
 SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"
@@ -37,16 +37,16 @@ src_install() {
 	dobin dox/dox man2html/dox-man2html info2html/dox-info2html tags2dox/dox-tags2dox htdig/dox-htdig
 	insinto ${PREFIX}/scripts
 	insopts -m 0755
-	doins pydoc2html/dox_pydoc.py pydoc2html/dox_inspect.py 
+	doins pydoc2html/dox_pydoc.py pydoc2html/dox_inspect.py
 	insinto ${PREFIX}/htdig
 	doins data/wrapper.html data/nomatch.html  data/syntax.html data/star.png data/star_blank.png data/bad_words
 	insinto ${PREFIX}/html/libc
-	doins libc/*.html 
+	doins libc/*.html
 	insinto ${PREFIX}/tocs
 	doins libc/libc.toc stl/STL.toc data/Perl.toc
 	insinto ${PREFIX}/indices
 	doins libc/libc.index stl/STL.index
 	insinto ${PREFIX}/html/stl
-	doins stl/*.html  stl/*.gif 
+	doins stl/*.html  stl/*.gif
 	doman data/dox.1 data/dox.5 data/dox-man2html.1 data/dox-info2html.1 data/dox-tags2dox.1 data/dox-htdig.1
 }

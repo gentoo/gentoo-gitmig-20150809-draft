@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.18.ebuild,v 1.8 2003/07/16 15:52:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.18.ebuild,v 1.9 2003/09/06 22:17:40 msterret Exp $
 
 DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Microsoft and KDE-DCOP flavors) and C."
 HOMEPAGE="http://www.doxygen.org"
@@ -27,7 +27,7 @@ src_unpack() {
      -e "s:^TMAKE_CXXFLAGS\(\t*\)= .*$:TMAKE_CXXFLAGS\1= ${CXXFLAGS}:" \
 	 tmake.conf.orig > tmake.conf
 }
-				
+
 src_compile()
 {
 
