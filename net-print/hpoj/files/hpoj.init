@@ -1,0 +1,16 @@
+#!/sbin/runscript
+depend() {
+	before cupsd
+}
+
+start() {
+	ebegin "Starting hpoj"
+	/usr/sbin/ptal-init start -q
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping hpoj"
+	/usr/sbin/ptal-init stop -q
+	eend $?
+}
