@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.20.ebuild,v 1.11 2003/09/09 08:48:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.20.ebuild,v 1.12 2003/09/16 16:09:45 dholm Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -31,7 +31,7 @@ KEYWORDS="ppc -x86 -sparc "
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl sys-devel/make"
 fi
 
 

@@ -1,0 +1,67 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.1 2003/09/16 16:09:45 dholm Exp $
+
+#OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+ETYPE="sources"
+
+inherit kernel
+OKV="2.4.22"
+KV=2.4.22-ppc-dev
+S=${WORKDIR}/linux-${KV}
+
+
+# What's in this kernel?
+
+# INCLUDED:
+#   benh 2.4.22-2
+#   Pegasos 20030902
+#   Amiga SFS 0.6
+#   Orinoco Monitor 0.13
+#   O_STREAMING
+#   GRsecurity 2.0-rc3
+#   ea+acl+nfsacl 0.8.60
+#   XFS 1.30
+#   Cryptoloop Jari
+#   Super FreeS/WAN 2.01
+#   x509 1.4.5
+#   Extra bootlogos
+#   Bootsplash 3.0.7 (Does not work on Macs)
+
+
+DESCRIPTION="Full developmental sources for the Gentoo Linux PPC kernel - Experimental!"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+	mirror://gentoo/patches-${OKV}-ppc-dev.tar.bz2"
+PROVIDE="virtual/linux-sources"
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
+LICENSE="GPL-2"
+SLOT="${KV}"
+KEYWORDS="~ppc -x86 -sparc -mips -hppa -alpha -arm"
+IUSE="build crypt"
+
+
+src_unpack() {
+	unpack ${A}
+	mv linux-${OKV} linux-${KV} || die "Unable to move kernel source tree to linux-${KV}"
+
+	cd ${WORKDIR}/${KV}
+	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
+	if [ -z "`use crypt`" ]; then
+		einfo "No Cryptographic support, dropping patches..."
+		for file in 6* ;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	else
+		einfo "Cryptographic patches will be applied"
+	fi
+
+	kernel_src_unpack
+}
+
+pkg_postinst() {
+	kernel_pkg_postinst
+
+	ewarn "Bootsplash currently does not work on Macs."
+}
