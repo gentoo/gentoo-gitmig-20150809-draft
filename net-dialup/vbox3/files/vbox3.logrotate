@@ -1,0 +1,16 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/files/vbox3.logrotate,v 1.1 2004/11/21 18:23:25 mrness Exp $
+#
+# vbox3 logrotate snippet for Gentoo Linux
+# contributed by Stefan Briesenick
+
+/var/log/vbox/vbox.tty* {
+    weekly
+    compress
+    rotate 99
+    size=1024k
+    notifempty
+    missingok
+    copytruncate
+}

@@ -1,0 +1,9 @@
+# ChangeLog for net-dialup/vbox3
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/vbox3/ChangeLog,v 1.1 2004/11/21 18:23:25 mrness Exp $
+
+*vbox3-0.1.9 (21 Nov 2004)
+
+  21 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +files/makefile-0.1.9.patch, +files/vbox3.logrotate, +vbox3-0.1.9.ebuild:
+  Initial import from bug #71845, thanks to Stefan Briesenick <sbriesen@gmx.de>.
