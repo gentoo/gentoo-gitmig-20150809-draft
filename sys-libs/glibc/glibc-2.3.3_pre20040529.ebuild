@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.7 2004/06/04 01:19:21 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.8 2004/06/04 03:33:41 tgall Exp $
 
 IUSE="nls pic build nptl erandom hardened"
 
@@ -59,14 +59,14 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="-* ~amd64 ~ppc64 ~mips"
+KEYWORDS="-* ~amd64 ppc64 ~mips"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
 DEPEND=">=sys-devel/gcc-3.2.3-r1
-	nptl? ( >=sys-devel/gcc-3.3.1-r1 
+	nptl? ( >=sys-devel/gcc-3.3.1-r1
 		amd64? ( >=sys-kernel/linux-headers-2.6.6 ) )
 	amd64? ( !nptl? ( =sys-kernel/linux-headers-2.4* ) )
 	>=sys-devel/binutils-2.14.90.0.6-r1
