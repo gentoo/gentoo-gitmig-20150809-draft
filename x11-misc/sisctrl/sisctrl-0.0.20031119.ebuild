@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.3 2004/04/11 15:25:22 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.4 2004/06/14 00:56:35 spyderous Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND=">=x11-base/xfree-4.3
+RDEPEND="virtual/x11
 	 >=dev-libs/glib-2.0
 	 >=x11-libs/gtk+-2.0"
 

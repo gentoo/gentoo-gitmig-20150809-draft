@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/chgres 
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.4 2003/11/03 08:19:08 abhishek Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/chgres/ChangeLog,v 1.5 2004/06/14 00:52:18 spyderous Exp $
+
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; chgres-0.1.ebuild:
+  Change x11-base/xfree dependency to virtual/x11 (#52153).
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml

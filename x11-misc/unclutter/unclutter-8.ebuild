@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8.ebuild,v 1.7 2004/06/12 17:53:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8.ebuild,v 1.8 2004/06/14 00:51:29 spyderous Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Hides mouse pointer while not in use."
@@ -12,7 +12,7 @@ LICENSE="public-domain"
 KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa"
 IUSE=""
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 
 
 src_compile() {
