@@ -1,1 +1,1 @@
-# I still need to compile this list
+# USE flags that don't work on Mac OS X
