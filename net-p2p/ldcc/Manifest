@@ -1,4 +1,4 @@
-MD5 4ebe1ca7b1f542e5fb864441310ae92e files/digest-ldcc-2.0.7 58
-MD5 e3d59d227d64590a745e501b42be4048 ChangeLog 397
-MD5 689f2e333bad2ddea9e3773e10a45bf5 ldcc-2.0.7.ebuild 672
+MD5 60122bc551589c4302e362381081c903 ChangeLog 506
+MD5 b18c9e49db43162f70113d23516c9891 ldcc-2.0.7.ebuild 667
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 4ebe1ca7b1f542e5fb864441310ae92e files/digest-ldcc-2.0.7 58
