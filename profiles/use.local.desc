@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.78 2003/07/31 00:25:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.79 2003/08/02 19:21:05 lisa Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -67,6 +67,7 @@ net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a 
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/ntp:parse-clocks - Add parse clock support
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
+net-www/memcached:php - Include the PHP API for memcached
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
