@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.17 2004/02/08 21:00:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.18 2004/02/10 06:21:10 darkspecter Exp $
+
+  10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> audiofile-0.2.5.ebuild:
+  set ppc in keywords
 
   08 Feb 2004; <spider@gentoo.org> audiofile-0.2.5.ebuild:
   stable x86
