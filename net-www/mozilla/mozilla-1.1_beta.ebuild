@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.2 2002/07/25 15:39:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.3 2002/07/26 00:24:34 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -60,6 +60,8 @@ src_unpack() {
 	unpack ${A}
 
 	# Fix a compile error with freetype-2.0.9 or later
+	#
+	# This is not needed with mozilla-1.1_beta anymore ...
 	cd ${S}
 #	patch -p1 < ${FILESDIR}/mozilla-new-freetype2.patch || die
 
@@ -128,11 +130,11 @@ src_compile() {
 
 	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
 		# for this we have to use freetype-2.0.8 included with XFree86
-		myconf="${myconf} --enable-xft \
-			--with-ft-prefix=/usr/X11R6 \
-			--with-ft-exec-prefix=/usr/X11R6/bin"
+		myconf="${myconf} --enable-xft --enable-freetype2"
+#			--with-ft-prefix=/usr/X11R6 \
+#			--with-ft-exec-prefix=/usr/X11R6/bin"
 			
-		export FT2_CONFIG="/usr/X11R6/bin/freetype-config"
+#		export FT2_CONFIG="/usr/X11R6/bin/freetype-config"
 	fi
 
 
@@ -353,6 +355,15 @@ pkg_postinst() {
 		fi
 	fi
 
+	# We do not yet want any JAVA plugins with gcc-3.x, as they cause
+	# mozilla to crash in some cases.
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] && [ "`use java`" ] ; then
+		if [ -L ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla` ] ; then
+			rm -f ${MOZILLA_FIVE_HOME}/plugins/`java-config --browser-plugin=mozilla`
+		fi
+	fi
+
 	# Take care of component registration
 
 	# Remove any stale component.reg
@@ -373,7 +384,9 @@ pkg_postinst() {
 	# Register components, setup Chrome .rdf files and fix file permissions
 	umask 022
 	${MOZILLA_FIVE_HOME}/regxpcom
-	chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+		chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+	fi
 	# Setup the default skin and locale to correctly generate the Chrome .rdf files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
 	echo "skin,install,select,classic/1.0" >> \
@@ -406,7 +419,9 @@ pkg_postrm() {
 		fi
 
 		${MOZILLA_FIVE_HOME}/regxpcom
-		chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+		if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
+			chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+		fi
 
 		find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
 		${MOZILLA_FIVE_HOME}/regchrome
