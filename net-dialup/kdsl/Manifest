@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e4a08b1e8d65122a04921a1ce8e0f2cb kdsl-0.5.ebuild 585
+MD5 1dd6025006dd1a510faf018deada88d5 kdsl-0.5.ebuild 584
 MD5 8e45da30180827efec385bed8d0919d7 metadata.xml 349
 MD5 2181d0d0d5e09af6295cc56be32042f7 ChangeLog 345
 MD5 b83bdfc8f19123454df20f2afb06f760 files/digest-kdsl-0.5 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmQYGjtv59x0+BrURAu6aAJ9H4QXlUI+RjKE9VIb7pZOaT6vQ9gCfX+Ct
-Bn5msMHb4H96jmHDtRUWPko=
-=jveX
+iD8DBQFBoFi8jtv59x0+BrURAh0xAKCEgfQ+u+bUH2r91TGKygOr9+ChRQCeL/gW
+Jy5+ElnOxiHbtSoB39qMkiI=
+=Ufc0
 -----END PGP SIGNATURE-----
