@@ -1,0 +1,19 @@
+--- plugins/irmc_sync/configure.orig	2004-07-01 17:20:02.033042906 +1000
++++ plugins/irmc_sync/configure	2004-07-01 17:20:51.129570206 +1000
+@@ -4308,13 +4308,13 @@
+ fi
+ 
+ SDP=0
+-echo "$as_me:$LINENO: checking for sdp_list_free in -lsdp" >&5
+-echo $ECHO_N "checking for sdp_list_free in -lsdp... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for sdp_list_free in -lbluetooth" >&5
++echo $ECHO_N "checking for sdp_list_free in -lbluetooth... $ECHO_C" >&6
+ if test "${ac_cv_lib_sdp_sdp_list_free+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lsdp  $LIBS"
++LIBS="-lbluetooth  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */

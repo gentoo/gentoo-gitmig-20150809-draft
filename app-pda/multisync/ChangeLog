@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.12 2004/07/01 19:23:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.13 2004/07/24 20:40:09 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/multisync-0.82-bluetooth-sdp.patch, multisync-0.82.ebuild:
+  added bluetooth sdp patch for multisync. thanks to Ronny Haryanto
+  <rh-gentoo@terasi.net> (#55758)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   multisync-0.80-r1.ebuild, multisync-0.81-r1.ebuild, multisync-0.81.ebuild:
