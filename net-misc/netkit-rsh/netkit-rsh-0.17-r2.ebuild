@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.3 2002/04/27 21:04:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.4 2002/07/09 09:39:42 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - rshd"
 SRC_URI="http://ftp.debian.org/debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
+KEYWORDS="x86"
+LICENSE="bsd"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2

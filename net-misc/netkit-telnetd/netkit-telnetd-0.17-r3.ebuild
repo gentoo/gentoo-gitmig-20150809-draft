@@ -1,12 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.1 2002/05/02 05:09:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r3.ebuild,v 1.2 2002/07/09 09:42:49 phoenix Exp $
 
 P2=netkit-telnet-${PV}
 S=${WORKDIR}/${P2}
 DESCRIPTION="Standard Linux telnet client"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P2}.tar.gz"
+KEYWORDS="x86"
+LICENSE="bsd"
+SLOT="0"
 
 DEPEND="virtual/glibc 
 	>=sys-libs/ncurses-5.2"

@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.5 2002/04/27 21:01:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.6 2002/07/09 09:36:09 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - routed"
 SRC_URI="http://ftp.debian.org/debian/pool/main/n/netkit-routed/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://packages.debian.org/unstable/net/routed.html"
+KEYWORDS="x86"
+LICENSE="bsd"
+SLOT="0"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
