@@ -1,11 +1,11 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.1 2004/02/02 16:55:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.2 2004/02/09 15:30:31 usata Exp $
 
 *kanatest-0.3.6 (03 Feb 2004)
 
   03 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> kanatest-0.3.6.ebuild,
   metadata.xml:
-  Initial import. Thanks to Jereon Hoek <jereon.hoek@datacenter-friesland.nl>
+  Initial import. Thanks to Jeroen Hoek <jeroen.hoek@datacenter-friesland.nl>
   for submitting the ebuild in bug #39973
 
