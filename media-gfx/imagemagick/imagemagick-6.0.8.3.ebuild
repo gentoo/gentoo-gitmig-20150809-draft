@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.8.1.ebuild,v 1.2 2004/09/21 20:47:29 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.8.3.ebuild,v 1.1 2004/09/21 20:47:29 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -71,7 +71,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install
-	mydoc="*.txt"
+	mydoc="*.txt www/*"
 
 	rm -f ${D}/usr/share/ImageMagick/*.txt
 

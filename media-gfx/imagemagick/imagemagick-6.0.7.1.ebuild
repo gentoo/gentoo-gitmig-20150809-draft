@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.10 2004/09/16 16:11:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.11 2004/09/21 20:47:29 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -63,7 +63,7 @@ src_compile() {
 		--with-threads \
 		--with-bzlib \
 		--without-dot \
-		--with-modles \
+		--with-modules \
 		${myconf} || die
 
 	emake || die "compile problem"
