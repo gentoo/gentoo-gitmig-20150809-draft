@@ -1,0 +1,12 @@
+#define HasZlib YES
+#define HasGcc2ForCplusplus YES
+#define ForceNormalLib YES
+#define BuildXinerama YES
+#define SharedLibXau YES
+#define BuildRman NO
+#define BuildHtmlManPages NO
+#define BuildAllSpecsDocs NO
+#define BuildSpecsDocs NO
+#define BuildGLULibrary NO
+#define SharedLibGLU NO
+#define NormalLibGLU NO
