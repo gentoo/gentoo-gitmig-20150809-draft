@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.323 2004/04/28 01:00:42 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.324 2004/04/28 14:40:26 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -22,6 +22,7 @@ app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
+app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
 app-misc/grass:nviz - support GLw functionality
