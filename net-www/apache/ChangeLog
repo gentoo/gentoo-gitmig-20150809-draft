@@ -4,8 +4,8 @@
 *apache-2.0.40-r1 (04 Sept 2002)
 
   04 Sept 2002; Nicholas Jones <carpaski@gentoo.org> :
-	Made it path compliant. Fixed the modules files. Fixed the init.d and
-	conf.d files. Still needs default configs and more tuning.
+  Made it path compliant. Fixed the modules files. Fixed the init.d and
+  conf.d files. Still needs default configs and more tuning.
 
 *apache-2.0.40 (15 Aug 2002)
 
@@ -13,6 +13,9 @@
   Initial release, needs a few modules cleaned up as well as paths
 
 *apache-1.3.26-r4 (3 Jul 2002)
+
+  14 Sep 2002; Donny Davies <woodchip@gentoo.org> mime_type_fix :
+  Add x-ogg; #7245.  Cleanup.
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Added ppc keyword
@@ -24,7 +27,6 @@
   Added KEYWORDS.
 
   3 Jul 2002; Brandon Low <lostlogic@gentoo.org> apache-1.3.26-r4.ebuild:
-
   Just .keep some directories we make so that they will be handled more 
   sanely in unmerge and clean operations.
 
@@ -42,9 +44,8 @@
   Added KEYWORDS.
 
   22 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
-
-  o Bugfix... Configs weren't actually changed properly.
-    Moved sed on DATA_DIR after configs were coppied from ${FILESDIR} 
+  Bugfix... Configs weren't actually changed properly.
+  Moved sed on DATA_DIR after configs were coppied from ${FILESDIR} 
 
 *apache-1.3.26-r1 (20 Jun 2002)
 
@@ -52,17 +53,15 @@
   Added KEYWORDS.
 
   20 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
+  Another attempt at fixing the LDAP user issue. Change the user check.
+  Also added in checks to make sure that DATA_DIR is set.
 
-  o Another attempt at fixing the LDAP user issue. Change the user check.
-    Also added in checks to make sure that DATA_DIR is set.
-
-  o Turn 'install-quiet' back on.	
+  Turn 'install-quiet' back on.	
 
 *apache-1.3.26 (19 Jun 2002)
 
   19 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
-	
-  o The real exploit fix. Also patched a mdk patch so that it applied.
+  The real exploit fix. Also patched a mdk patch so that it applied.
 
 *apache-1.3.24-r6 (18 Jun 2002)
 
@@ -70,13 +69,10 @@
   Added KEYWORDS.
 
   18 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
-
-  o ADDED PATCH FOR PROXY-HTTP1.1-CHUNKS EXPLOIT
-
-  o Fixed bug #2313 -- Better checks for group/user
-
-  o Fixed bug #3533 -- User can setup user/group and the homedir
-                       of the apache user will be the data directory
+  ADDED PATCH FOR PROXY-HTTP1.1-CHUNKS EXPLOIT
+  Fixed bug #2313 -- Better checks for group/user
+  Fixed bug #3533 -- User can setup user/group and the homedir
+                     of the apache user will be the data directory
 
 *apache-1.3.24-r2 (4 May 2002)
 
@@ -84,66 +80,59 @@
   Added KEYWORDS.
 
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Added LICENSE, SLOT, $Headers.
 
   26 Apr 2002; Donny Davies <woodchip@gentoo.org> :
-
-  o Made the user/group id's 81 in pkg_setup after thusly adding them to
-    Gentoo's baselayout.  No need to upgrade folks; cosmetic-only fix.
+  Made the user/group id's 81 in pkg_setup after thusly adding them to
+  Gentoo's baselayout.  No need to upgrade folks; cosmetic-only fix.
 
   10 Apr 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24-r1.ebuild,
   files/conf/commonapache.conf :
-
-  o Corrected the apache user's home directory (/var/www -> /home/httpd).
-  o Corrected the icons directory (/var/www/icons -> /home/httpd/icons).
-  o Ripped the php mime types from the commonapache.conf file.  I moved
-    them to the php package, as an addon config snippet.
-    (/etc/apache/conf/mod_php.conf)
+  Corrected the apache user's home directory (/var/www -> /home/httpd).
+  Corrected the icons directory (/var/www/icons -> /home/httpd/icons).
+  Ripped the php mime types from the commonapache.conf file.  I moved
+  them to the php package, as an addon config snippet.
+  (/etc/apache/conf/mod_php.conf)
 
 *apache-1.3.24-r1 (9 Apr 2002)
 
   9 Apr 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24-r1.ebuild :
-
-  o data is now in /home/httpd/{htdocs,icons,cgi-bin} (new standard location for Gentoo)
-  o server now runs as user/group apache
-  o mod_ssl was split into a separate package
-  o link with the mm library; provides modules with shared memory pools (EAPI_MM=SYSTEM)
-  o link with the system expat library
-  o all modules are now built using SHARED_CHAIN (smaller mod sizes)
-  o several patches from debian/mandrake are included.  the most interesting one is the
-    mandrake serverroot patch which makes configuring and organizing apache easier.
-  o the EAPI patch is now unconditionally included.  previously you only got it if you
-    had ssl in your USE variable.
-  o provide an easy way to tune up the HARD_SERVER_LIMIT
-  o created a build-time config file for the modules distributed with apache.  now you
-    can finely tune your own modules selection, and have your choices preserved across
-    upgrades.  a gentoo-only feature ;)
-  o suexec is now fixed and restricted to user/group apache.
-  o added some support scripts (from mandrake).  two of these allow easy addition and
-    removal of third-party modules into your apache.conf.  this should make writing
-    ebuilds for extra mods easier.  see net-www/mod_* for examples.
-  o the config files are now in /etc/apache/conf, conveniently organized into
-    separate directories for addon-modules and vhosts.  this simplifies things for
-    everybody and especially for those with complicated/large sites.
+  data is now in /home/httpd/{htdocs,icons,cgi-bin} (new standard location for Gentoo)
+  server now runs as user/group apache
+  mod_ssl was split into a separate package
+  link with the mm library; provides modules with shared memory pools (EAPI_MM=SYSTEM)
+  link with the system expat library
+  all modules are now built using SHARED_CHAIN (smaller mod sizes)
+  several patches from debian/mandrake are included.  the most interesting one is the
+  mandrake serverroot patch which makes configuring and organizing apache easier.
+  the EAPI patch is now unconditionally included.  previously you only got it if you
+  had ssl in your USE variable.
+  provide an easy way to tune up the HARD_SERVER_LIMIT
+  created a build-time config file for the modules distributed with apache.  now you
+  can finely tune your own modules selection, and have your choices preserved across
+  upgrades.  a gentoo-only feature ;)
+  suexec is now fixed and restricted to user/group apache.
+  added some support scripts (from mandrake).  two of these allow easy addition and
+  removal of third-party modules into your apache.conf.  this should make writing
+  ebuilds for extra mods easier.  see net-www/mod_* for examples.
+  the config files are now in /etc/apache/conf, conveniently organized into
+  separate directories for addon-modules and vhosts.  this simplifies things for
+  everybody and especially for those with complicated/large sites.
 
 *apache-1.3.24 (27 Mar 2002)
 
   27 Mar 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.24.ebuild :
-
   Bump up to apache-1.3.24, mod_ssl-2.8.8; fixes some security issues. This port is
   being re-written, will be ready soon.
 
 *apache-1.3.23 (4 Feb 2002)
 
   4 Feb 2002; Donny Davies <woodchip@gentoo.org> apache-1.3.23.ebuild :
-
   Bump apache to 1.3.23, mod_ssl to 2.8.6-1.3.23.
 
 *apache-1.3.22-r6 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
