@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashalot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.7 2004/03/07 09:18:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.8 2004/03/10 15:48:00 agriffis Exp $
+
+  10 Mar 2004; <agriffis@gentoo.org> hashalot-0.1.0.ebuild,
+  hashalot-0.2.0.ebuild:
+  Mark 0.1.0 stable on alpha and ia64. Add missing keywords to hashalot-0.2.0
+  (why were they dropped?)
 
 *hashalot-0.2.0 (07 Mar 2004)
 
