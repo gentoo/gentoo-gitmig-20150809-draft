@@ -1,11 +1,20 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.29 2003/01/08 22:13:47 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.30 2003/01/10 03:51:09 lu_zero Exp $
+
+
+*sylpheed-claws-0.8.8-r1 (10 Jan 2003)
+
+  10 Jan 2003; Luca Barbato <lu_zero@gentoo.org> sylpheed-claws-0.8.8-r1.ebuild,
+  files/digest-sylpheed-claws-0.8.8-r1, files/procmime.patch:
+  
+  Make it use shared-mime-info
 
 *sylpheed-claws-0.8.8 (26 Dec 2002)
   
   08 Jan 2003; Brad Cowan <bcowan@gentoo.org>:
   Added depend on mime-types, fixes bug #13412.
+
 
   1 Jan 2003; Martin Schlemmer <azarah@gentoo.org> sylpheed-claws-0.8.8.ebuild :
 
