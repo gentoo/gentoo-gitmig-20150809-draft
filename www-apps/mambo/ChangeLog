@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.1 2004/08/18 18:15:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.2 2004/08/30 19:25:34 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> mambo-4.5.ebuild:
+  Fixed DEPEND/RDEPEND, removed sleep
 
 *mambo-4.5 (18 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.ebuild,v 1.1 2004/08/18 18:15:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.ebuild,v 1.2 2004/08/30 19:25:34 rl03 Exp $
 
 inherit webapp
 
@@ -14,7 +14,6 @@ S=${WORKDIR}
 
 IUSE=""
 
-DEPEND="$DEPEND"
 RDEPEND="dev-db/mysql
 	virtual/php
 	net-www/apache"
@@ -22,7 +21,6 @@ RDEPEND="dev-db/mysql
 pkg_setup () {
 	webapp_pkg_setup
 	einfo "Please make sure that your PHP is compiled with zlib, XML, and MySQL support"
-	sleep 5
 }
 
 src_install () {
