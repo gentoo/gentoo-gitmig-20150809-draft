@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.1.ebuild,v 1.2 2003/10/24 09:23:22 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.4.1.ebuild,v 1.3 2003/10/24 10:01:12 obz Exp $
 
 inherit gnome2
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE=""
+IUSE="guile"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 LICENSE="GPL-2"
@@ -16,7 +16,8 @@ RDEPEND=">=app-text/scrollkeeper-0.3.8
 	>=gnome-base/gconf-2.0
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libgnome-2
-	>=gnome-base/libgnomeui-2"
+	>=gnome-base/libgnomeui-2
+	guile? ( dev-util/guile )"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.22
