@@ -1,10 +1,20 @@
-MD5 b1e001cfc8f5bf4e45f3f31b7e90926f align-28.ebuild 479
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48451683a5b3bf7a90c76768e942997f align-23.ebuild 435
+MD5 2d0ab166234d46ce57917b57d960aacc align-28.ebuild 476
+MD5 e245c061479727d5d91ea7e4c7e93b46 ChangeLog 2223
 MD5 4f353fb99009323f5fd92c7c85bcdf49 align-27.ebuild 433
-MD5 d5e4deece1a8a513b8d77c3c3343bf7f align-26.ebuild 437
-MD5 c150ec17e9efcc1625470e55d7b51c07 ChangeLog 2123
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
+MD5 d5e4deece1a8a513b8d77c3c3343bf7f align-26.ebuild 437
 MD5 bcfd2f0ad7175a8b8502a9faf0bc5a6a files/digest-align-23 60
-MD5 24fe13783170efd9a72e898a1adce9f3 files/digest-align-26 60
 MD5 8aa1c4b0487c057d0957bd9a49415b1f files/digest-align-27 60
 MD5 bcf8adf15332e65feb57ba3cf13b63df files/digest-align-28 60
+MD5 24fe13783170efd9a72e898a1adce9f3 files/digest-align-26 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBPOVILLFUmVNQ7rkRAhbyAKDLsuBnEiXZwpzFVjcl6+Rd1sR63gCgu7Si
+/NZXlUcio2vuPk+0U0xQjMo=
+=lJyD
+-----END PGP SIGNATURE-----
