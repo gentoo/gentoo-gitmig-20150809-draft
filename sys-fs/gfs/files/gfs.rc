@@ -1,77 +1,71 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.3 2005/03/23 14:35:55 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.4 2005/03/25 02:19:14 xmerlin Exp $
+
+opts="${opts} mountall"
 
 depend() {
 	use dns logger
 	use net
+	after gnbd-client clvmd
 	need cluster-manager cluster-locking-manager fenced
 	provide cluster
 }
 
-start() {
-	einfo "Starting gfs cluster:"
+mount_gfs_filesystems() {
+	local remaining=""
+	remaining="$(awk '!/^#/ && $3 ~ /gfs/  { if ($4 !~ "noauto") print $1 }' /etc/fstab)"
 	
-	if [ ! -f /etc/ntp.conf ] ; then
-		eerror "Please create /etc/ntp.conf"
-		eerror "Sample conf: /usr/share/ntp/ntp.conf"
-		eend 1
-	fi
+	if [ -n "${remaining}" ]; then
 	
-	local module
-	
-	# detect cluster/locking manager cman+dlm or gulm ?
-	if [ -d /proc/cluster/config/cman ]; then
-		if [ ! -d /proc/cluster/lock_dlm ]; then
-			modules="${modules} lock_dlm"
-		fi
-	else
-		if [ ! -d /proc/cluster/lock_gulm ]; then
-			modules="${modules} lock_gulm"
-		fi
-	fi
-
-	if [ ! -f /proc/fs/gfs ]; then
-		modules="${modules} gfs"
-	fi
-	
-	for module in ${modules}; do
-		ebegin "Loading ${module} kernel module"
-		modprobe ${module}
+		local device=""
+		local remaining_verified=""
 		
-		if [ "$?" -ne 0 ]
-		then
-			ewend 1 "Failed to load ${module} kernel module"
+		for device in ${remaining}; do
+			if [ -b ${device} ]; then
+				remaining_verified="${remaining_verified} ${device}"
+			else
+				if [ $(echo "${device}" | awk '$1 ~ /\/dev\/gnbd/') ]; then
+					ewarn "Please start /etc/init.d/gnbd-client before trying to mount GNBDs devices"
+				else
+					if [ $(echo "${device}" | awk '$1 ~ /\/dev\/vg/') ]; then
+						ewarn "Please start /etc/init.d/clvmd before trying to mount LVM volumes"
+					fi
+				fi
+			fi
+		done
+		
+		if [ -n "${remaining_verified}" ]; then
+			einfo "Mounting GFS filesystems"
+			device=""
+			for device in ${remaining_verified}; do
+				local target="$(awk '!/^#/ && $3 ~ /gfs/  { if ("$1" -eq "${device}" ) print $2 }' /etc/fstab)"
+				local mounted="$(awk '$3 ~ /gfs/  { if ("$1" -eq "${device}" ) print $2 }' /proc/mounts)"
+				
+				# mount only filesystems not already mounted
+				if [ -z "${mounted}" ]; then
+					ebegin "--> mounting ${device} on ${target}"
+					mount -t gfs ${device} ${target} >/dev/null
+					eend $?
+				else
+					einfo "--> ${device} already mounted on ${target}"
+					eend 0
+				fi
+			done
 		else
-			eend 0
+			einfo "No GFS filesystems to automount"
 		fi
-	done
-	
-	ebegin "Mounting GFS filesystems"
-	mount -at gfs >/dev/null
-	
-	if [ "$?" -ne 0 ]
-	then
-		ewend 1 "Could not mount all GFS filesystems!"
-	else
-		eend 0
 	fi
-	
-	return 0
 }
 
-stop() {
-	einfo "Stopping gfs cluster:"
-	
-	local sig retry
-	local remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
 
-	if [ -z "${remaining}" ]
+umount_gfs_filesystems() {
+	local sig retry
+	local remaining="$(awk '$3 ~ /gfs/ { print $2 }' /proc/mounts | sort -r)"
+
+	if [ -n "${remaining}" ]
 	then
-		ebegin "Unmounting GFS filesystems"
-		eend 0
-	else
 	        sig=
 	        retry=3
 	        while [ -n "${remaining}" -a "${retry}" -gt 0 ]
@@ -94,12 +88,52 @@ stop() {
 	                sig=-9
 	        done
 	fi
+}
 
+load_modules() {
 	local module modules
+	modules=$1
 	
+	for module in ${modules}; do
+		ebegin "Loading ${module} kernel module"
+		modprobe ${module}
+		eend $? "Failed to load ${module} kernel module"
+	done
+}
+
+unload_modules() {
+	local module modules
+	modules=$1
+	
+	for module in ${modules}; do
+		ebegin "Unloading ${module} kernel module"
+		modprobe -r ${module}
+		eend $? "Failed to unload ${module} kernel module"
+	done
+}
+
+load_gfs_modules() {
+	local modules
+	
+	# detect cluster/locking manager cman+dlm or gulm ?
+	if [ -d /proc/cluster/config/cman ]; then
+		if [ ! -d /proc/cluster/lock_dlm ]; then
+			modules="${modules} lock_dlm"
+		fi
+	else
+		if [ ! -d /proc/cluster/lock_gulm ]; then
+			modules="${modules} lock_gulm"
+		fi
+	fi
+	if [ ! -f /proc/fs/gfs ]; then
+		modules="${modules} gfs"
+	fi
+	load_modules ${modules}
+}
+
+unload_gfs_modules() {
 	if [ -f /proc/fs/gfs ]; then
-		modules="gfs"
-		modules="${modules} lock_harness"
+		modules="gfs lock_harness"
 	fi
 	if [ -d /proc/cluster/lock_dlm ]; then
 		modules="${modules} lock_dlm"
@@ -107,19 +141,30 @@ stop() {
 	if [ -d /proc/cluster/lock_gulm ]; then
 		modules="${modules} lock_gulm"
 	fi
-	
-	local module
-	for module in ${modules}; do
-		ebegin "Unloading ${module} kernel module"
-		modprobe -r ${module}
-		
-		if [ "$?" -ne 0 ]
-		then
-			ewend 1 "Failed to unload ${module} kernel module"
-		else
-			eend 0
-		fi
-	done
-	
-	return 0
+	unload_modules ${modules}
 }
+
+mountall() {
+	mount_gfs_filesystems
+}
+
+start() {
+	einfo "Starting gfs cluster:"
+	
+	if [ ! -f /etc/ntp.conf ] ; then
+		eerror "Please create /etc/ntp.conf"
+		eerror "Sample conf: /usr/share/ntp/ntp.conf"
+		eend 1
+	fi
+	
+	load_gfs_modules
+	mount_gfs_filesystems
+}
+
+stop() {
+	einfo "Stopping gfs cluster:"
+	
+	umount_gfs_filesystems
+	unload_gfs_modules
+}
+
