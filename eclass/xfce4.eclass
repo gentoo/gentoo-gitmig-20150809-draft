@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.10 2005/01/07 17:20:57 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.11 2005/01/10 17:48:02 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -17,12 +17,16 @@ INHERITED="$INHERITED $ECLASS"
 if [[ ${GOODIES_PLUGIN} = "1" ]]; then
     [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
     SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
-    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
+    [[ -z ${XFCE_VERSION} ]] \
+	&& XFCE_VERSION="4.1.99.3"
+    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
 
 if [[ ${PLUGIN} = "1" ]]; then
     MY_P="${PN}-plugin-${PV}"
-    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
+    [[ -z ${XFCE_VERSION} ]] \
+	&& XFCE_VERSION="4.1.99.3"
+    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${XFCE_VERSION}"
 fi
 
 [[ ${GOODIES} = "1" ]] \
@@ -40,6 +44,9 @@ fi
 [[ -z ${HOMEPAGE} ]] \
     && HOMEPAGE="http://www.xfce.org/"
 
+[[ -z ${XFCE_VERSION} ]] \
+    && XFCE_VERSION="${PV}"
+
 SLOT="0"
 IUSE="${IUSE} doc debug"
 
@@ -49,11 +56,11 @@ RDEPEND="virtual/x11
 	x11-libs/startup-notification
 	>=dev-libs/dbh-1.0.20
 	>=x11-themes/gtk-engines-xfce-2.2.4
-	>=xfce-base/xfce-mcs-manager-${PV}
-	${XFCE_RDEPEND}"
+	>=xfce-base/xfce-mcs-manager-${XFCE_VERSION}
+	${XRDEPEND}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	${XFCE_DEPEND}"
+	${XDEPEND}"
 
 [[ -z ${XFCE_S} ]] \
     && S="${WORKDIR}/${MY_P:-${P}}" \
