@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.11 2004/05/31 20:14:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.9.ebuild,v 1.12 2004/06/01 23:09:45 agriffis Exp $
 
 inherit kde
 
@@ -106,7 +106,7 @@ src_install() {
 	mv ${D}/usr/share/applnk/Settings/System/k3bsetup2.desktop ${D}/usr/share/applications
 	rm -fR ${D}/usr/share/applnk/
 
-	if [ `use monkey` ]; then
+	if use monkey; then
 		cd ../k3bmonkeyaudioplugin
 		make DESTDIR=${D} install || die
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.30 2004/05/31 20:14:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.31 2004/06/01 23:08:53 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 	local mygnome=""
 
 	# Gtk version is broken :(
-	#	if [ "`use gnome`" ] ; then
+	#	if use gnome ; then
 	#		mygnome=" --with-gnome"
 	#		CFLAGS="${CFLAGS} `/usr/bin/gtkmm-config --cflags`"
 	#		CXXFLAGS="${CXXFLAGS} `/usr/bin/gtkmm-config --cflags` -fno-exceptions"
@@ -74,7 +74,7 @@ src_install() {
 	dodoc CREDITS INSTALL README* Release*
 
 	# and now the optional GNOME frontend
-	#	if [ "`use gnome`" ]
+	#	if use gnome
 	#	then
 	#
 	#		# binary
