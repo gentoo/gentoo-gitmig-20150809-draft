@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.40 2004/12/21 13:19:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.41 2004/12/23 19:42:33 latexer Exp $
+
+  23 Dec 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
+  mono-1.0.5-r3.ebuild:
+  Make sure PLATFORM=linux, since this is borking on some architectures somehow.
+  See bug #75272.
 
   21 Dec 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.5-r2.ebuild,
   mono-1.0.5-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r3.ebuild,v 1.3 2004/12/21 13:19:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.5-r3.ebuild,v 1.4 2004/12/23 19:42:33 latexer Exp $
 
 inherit eutils mono flag-o-matic debug gcc
 
@@ -105,7 +105,7 @@ src_compile() {
 	echo "PATH=${S}/runtime:${PATH}" >> build/config.make
 	echo "export PATH" >> build/config.make
 	echo "export MONO_PATH" >> build/config.make
-	make || die "mcs compiler compilation failure"
+	emake -j1 PLATFORM=linux || die "mcs compiler compilation failure"
 	echo "prefix=/usr" >> build/config.make
 }
 
