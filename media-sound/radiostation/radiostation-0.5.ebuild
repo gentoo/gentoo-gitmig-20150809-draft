@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.10 2005/01/29 15:16:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiostation/radiostation-0.5.ebuild,v 1.11 2005/03/15 14:26:42 seemant Exp $
 
 inherit kde-functions
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 amd64 sparc"
 
 DEPEND="kde? ( >=kde-base/kdelibs-3.1 )
 	dev-util/dialog
-	net-www/lynx
+	www-client/lynx
 	net-misc/wget
 	media-sound/xmms"
 
