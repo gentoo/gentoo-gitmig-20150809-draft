@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.9 2004/06/25 00:39:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44-r1.ebuild,v 1.10 2004/07/14 18:29:30 agriffis Exp $
 
 inherit perl-module eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Write Perl subroutines in other languages"
 SRC_URI="http://www.cpan.org/authors/id/I/IN/INGY/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/doc/INGY/Inline-0.43/Inline.pod"
@@ -12,6 +11,7 @@ HOMEPAGE="http://search.cpan.org/doc/INGY/Inline-0.43/Inline.pod"
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 ~amd64 ~ppc sparc alpha hppa mips"
+IUSE="gtk2"
 
 DEPEND="${DEPEND}
 	dev-perl/Digest-MD5
