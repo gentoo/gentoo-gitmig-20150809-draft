@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta4.ebuild,v 1.5 2004/06/24 23:39:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta4.ebuild,v 1.6 2004/06/28 22:59:00 agriffis Exp $
 
 inherit eutils
 
-IUSE="png jpeg gif tiff truetype xinerama debug mmx"
+IUSE="debug gif jpeg mmx nls png tiff truetype xinerama"
 
 DESCRIPTION="Window manager based on the look and feel of the NeXTStep"
 HOMEPAGE="http://www.afterstep.org"
@@ -14,7 +14,7 @@ LICENSE="AFTERSTEP"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
