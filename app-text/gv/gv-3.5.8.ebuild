@@ -39,8 +39,7 @@ src_compile() {
 
 src_install () {
     
-    # BTW, how about using emake install?
-    
+    cd ${S}
     try make DESTDIR=${D} install
     try make DESTDIR=${D} install.man
     try make DESTDIR=${D} install.doc
