@@ -1,6 +1,4 @@
-MD5 ae025057b83db9c31187adafebfef826 kcmpureftpd-0.6.ebuild 476
 MD5 87021dc4f2409a45519ad97421fb5020 kcmpureftpd-0.8.ebuild 463
 MD5 033dedf5d147470a7c018361290c0aa9 ChangeLog 985
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 9ab06d05a7ff1d5b841b7f351fe65266 files/digest-kcmpureftpd-0.6 67
 MD5 ad07f828fb26ccdbf5bbb460f86dfe4a files/digest-kcmpureftpd-0.8 67
