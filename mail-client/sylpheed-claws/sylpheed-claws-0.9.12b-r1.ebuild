@@ -1,42 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12b.ebuild,v 1.1 2004/10/07 21:34:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12b-r1.ebuild,v 1.1 2004/10/17 23:06:51 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir mbox calendar xface"
 
 inherit eutils
 
 # setting up plugin related variables
-GS_PN=ghostscript-viewer
-GS_PV=0.8
-
-PGP_PN=pgpinline
-PGP_PV=0.2
-
-MAILDIR_PN=maildir
-MAILDIR_PV=0.6
-
-MBOX_PN=mailmbox
-MBOX_PV=0.9
-
-VCAL_PN=vcalendar
-VCAL_PV=0.4
-
-MY_GS=${GS_PN}-${GS_PV}
-MY_PGP=${PGP_PN}-${PGP_PV}
-MY_MAILDIR=${MAILDIR_PN}-${MAILDIR_PV}
-MY_MBOX=${MBOX_PN}-${MBOX_PV}
-MY_VCAL=${VCAL_PN}-${VCAL_PV}
+GS_VERSION="ghostscript-viewer-0.8"
+PGP_VERSION="pgpinline-0.2"
+MAILDIR_VERSION="maildir-0.6"
+MBOX_VERSION="mailmbox-0.9"
+VCAL_VERSION="vcalendar-0.4"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	pdflib? ( mirror://sourceforge/${PN}/${MY_GS}.tar.bz2 )
-	maildir? ( mirror://sourceforge/${PN}/${MY_MAILDIR}.tar.bz2 )
-	mbox? ( http://${PN}.sourceforge.net/downloads/${MY_MBOX}.tar.gz )
-	calendar? ( http://${PN}.sourceforge.net/downloads/${MY_VCAL}.tar.gz )
-	crypt? ( http://${PN}.sourceforge.net/downloads/${MY_PGP}.tar.gz )"
-
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -50,10 +29,7 @@ COMMONDEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=media-libs/gdk-pixbuf-0.16 )
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( virtual/aspell-dict )
-	pdflib? ( virtual/ghostscript )
-	nls? ( >=sys-devel/gettext-0.12 )
-	maildir? ( >=sys-libs/db-4.1 )
-	calendar? ( dev-libs/libical )"
+	nls? ( >=sys-devel/gettext-0.12 )"
 
 DEPEND="${COMMONDEPEND}
 	>=media-libs/compface-1.4
@@ -64,49 +40,20 @@ RDEPEND="${COMMONDEPEND}
 	net-mail/metamail
 	x11-misc/shared-mime-info"
 
+PDEPEND="gs? ( =mail-client/${PN}-${GS_VERSION} )
+		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
+		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )
+		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )
+		 calendar? ( =mail-client/${PN}-${VCAL_VERSION} )"
+
 PROVIDE="virtual/sylpheed"
 
 src_unpack() {
 	unpack ${A}
 
-	for plugin in ${MY_GS} ${MY_MAILDIR} ${MY_MBOX} ${MY_PGP} ${MY_VCAL}; do
-		[ -d "${WORKDIR}/${plugin}" ] && mv ${WORKDIR}/${plugin} ${S}/src/plugins/
-	done
-
 	# use shared-mime-info
 	cd ${S}/src
 	epatch ${FILESDIR}/procmime.patch
-	# apply ical compability patch
-	if use calendar; then
-		cd ${S}/src/plugins/${MY_VCAL}/src
-		epatch ${FILESDIR}/${MY_VCAL}-ical.patch
-	fi
-}
-
-plugin_compile() {
-	if [ -z "${2}" ] || use ${2}; then
-		local plugin_cflags
-		plugin_cflags="-I${S} -I${S}/src -I${S}/src/common -I${S}/src/gtk ${CFLAGS}"
-
-		cd ${S}/src/plugins/${1}
-		einfo "Compiling plugin: ${1}"
-		PKG_CONFIG_PATH=${S} \
-		CFLAGS="${plugin_cflags}" CXXFLAGS="${plugin_cflags}" \
-		SYLPHEED_CFLAGS_CFLAGS="${plugin_cflags} ${SYLPHEED_CLAWS_CFLAGS}" \
-			econf --with-sylpheed-dir=../.. || die "plugin configure failed: ${1}"
-
-		emake || die "plugin compile failed: ${1}"
-	fi
-}
-
-plugin_install() {
-	if [ -z "${2}" ] || use ${2}; then
-		einfo "Installing plugin: ${1}"
-		cd ${S}/src/plugins/${1}
-		make DESTDIR="${D}" plugindir="${ROOT}/usr/lib/${PN}/plugins" install || die "plugin install failed: ${1}"
-		docinto ${1}
-		dodoc AUTHORS ChangeLog INSTALL NEWS README
-	fi
 }
 
 src_compile() {
@@ -137,15 +84,6 @@ src_compile() {
 	# build the extra tools
 	cd ${S}/tools
 	emake || die
-
-	# build external plugins
-	plugin_compile ${MY_GS} pdflib
-	plugin_compile ${MY_MAILDIR} maildir
-	plugin_compile ${MY_MBOX} mbox
-	plugin_compile ${MY_PGP} crypt
-	plugin_compile ${MY_VCAL} calendar
-
-	cd ${S}
 }
 
 src_install() {
@@ -172,16 +110,6 @@ src_install() {
 	exeinto /usr/lib/${PN}/tools
 	doexe *.pl *.py *.rc *.conf *.sh gpg-sign-syl
 	doexe tb2sylpheed update-po uudec
-
-	# install external plugins
-	plugin_install ${MY_GS} pdflib
-	plugin_install ${MY_MAILDIR} maildir
-	plugin_install ${MY_MBOX} mbox
-	plugin_install ${MY_PGP} crypt
-
-	# work around broken libical ebuild
-	export LDFLAGS="${LDFLAGS} -lpthread"
-	plugin_install ${MY_VCAL} calendar
 }
 
 pkg_postinst() {
