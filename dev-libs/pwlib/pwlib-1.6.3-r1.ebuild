@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r1.ebuild,v 1.1 2004/03/12 01:41:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r1.ebuild,v 1.2 2004/03/19 00:29:19 stkn Exp $
 
-IUSE="ssl sdl ieee1394 alsa esd ldap"
+IUSE="ssl sdl ieee1394 alsa esd"
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
@@ -16,7 +16,7 @@ DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
 	dev-libs/expat
 	>=sys-apps/sed-4
-	ldap? ( net-nds/openldap )
+	net-nds/openldap
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )
 	alsa? ( media-libs/alsa-lib )
@@ -65,8 +65,10 @@ src_compile() {
 	use alsa \
 		&& plugins="${plugins} alsa"
 
-	use esd \
-		&& plugins="${plugins} esd"
+	if [ -n "`use esd`" ]; then
+		# fixes bug #45059
+		export ESDDIR=/usr
+	fi
 
 	# merge plugin options (safe way if default = "")
 	plugins="`echo ${plugins} | sed -e "y: :,:"`"
