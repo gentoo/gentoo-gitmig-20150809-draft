@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/gifsicle
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.1 2003/10/10 07:35:45 mr_bones_ Exp $
+
+*gifsicle-1.40 (10 Oct 2003)
+
+  10 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> gifsicle-1.40.ebuild:
+  initial commit (bug 23853)
+
