@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.117 2004/11/23 20:39:07 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.118 2004/11/23 22:33:24 johnm Exp $
+
+  23 Nov 2004; John Mylchreest <johnm@gentoo.org>
+  gentoo-dev-sources-2.6.9-r5.ebuild:
+  fixing ultra unipatch line, shouldnt use UNIPATCH_EXCLUDE from the ebuild.
 
 *gentoo-dev-sources-2.6.7-r15 (23 Nov 2004)
 
