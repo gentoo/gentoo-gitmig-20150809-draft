@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8304472b84ed0768e8dfb7030610589 ChangeLog 13998
-MD5 f46d05fe0172cb035a01f40d25242d30 metadata.xml 253
 MD5 47c429a9de6aa7dc6d211b511897de59 mutt-1.4.2.1.ebuild 3355
-MD5 da817d8d2fd14250490514577cdf23d0 mutt-1.5.6-r2.ebuild 4617
 MD5 f05d4ae1d5264d74311c231435e87b53 mutt-1.5.6-r3.ebuild 4574
+MD5 f46d05fe0172cb035a01f40d25242d30 metadata.xml 253
+MD5 5fc1582e9b41cf46830c0e225274fbee ChangeLog 14090
 MD5 562f5b6009dbb9e68c869d2eedaeedde mutt-1.5.6-r4.ebuild 4575
 MD5 778c46506f03eea15be9616869de3168 mutt-1.5.6.ebuild 4232
-MD5 4a49602ac786aad29065145123632a98 mutt-1.5.6-r5.ebuild 4726
+MD5 30bbaee56f61cacb2163c15394753e08 mutt-1.5.6-r5.ebuild 4723
 MD5 371998d5fbdc88d3d9b52c31725bb18c mutt-1.5.8-r1.ebuild 4256
+MD5 da817d8d2fd14250490514577cdf23d0 mutt-1.5.6-r2.ebuild 4617
+MD5 bbcce3c6f8bd265e1449c0631ea896b6 files/digest-mutt-1.5.6-r5 585
 MD5 74ddaf505ea8bd19fbeb1330a23506ea files/8patch-1.5.6.dyc.source_stat 1531
-MD5 6064ff5a3d1a71ccdb48f88872feb3a3 files/Muttrc 667
-MD5 30ce590d0284ffb0896857714c6a47d4 files/Muttrc.mbox 486
-MD5 cae412df424c3f499c539c93ebd02e48 files/digest-mutt-1.4.2.1 292
-MD5 6cba9546cde7ee8a8e67b44d27b62366 files/digest-mutt-1.5.6 367
-MD5 ea50c00af0676472a71638d84950b220 files/digest-mutt-1.5.6-r2 517
-MD5 34621fd7163fd6ffdbd78031eda37e6f files/digest-mutt-1.5.6-r3 508
 MD5 a3b8d5ca6c4f009d4a07b6463e44820c files/digest-mutt-1.5.6-r4 508
 MD5 25e242fd402f42d5bd5230dbe9ea68a6 files/slang.patch 493
-MD5 bbcce3c6f8bd265e1449c0631ea896b6 files/digest-mutt-1.5.6-r5 585
+MD5 ea50c00af0676472a71638d84950b220 files/digest-mutt-1.5.6-r2 517
+MD5 6064ff5a3d1a71ccdb48f88872feb3a3 files/Muttrc 667
+MD5 34621fd7163fd6ffdbd78031eda37e6f files/digest-mutt-1.5.6-r3 508
 MD5 17ca1e2a5696251d01b9b488bcb0fc79 files/digest-mutt-1.5.8-r1 581
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCI2x4KRy60XGEcJIRAnQGAKCRozuygpICIBl9FP4hIR4wj5jTuACgrWdA
-sZ1FJto32C86fPbaHY7HqWQ=
-=M3en
------END PGP SIGNATURE-----
+MD5 6cba9546cde7ee8a8e67b44d27b62366 files/digest-mutt-1.5.6 367
+MD5 30ce590d0284ffb0896857714c6a47d4 files/Muttrc.mbox 486
+MD5 cae412df424c3f499c539c93ebd02e48 files/digest-mutt-1.4.2.1 292
