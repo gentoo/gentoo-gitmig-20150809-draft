@@ -4,7 +4,7 @@ IFACE=eth0
 			 
 netup() {
 
-	/sbin/dhclient $IFACE
+	/sbin/dhcpcd $IFACE
 
 	#enabling rp_filter causes wacky packets to be auto-dropped by the kernel
 	if [ -e /proc/sys/net/ipv4/conf/${IFACE}/rp_filter ]
