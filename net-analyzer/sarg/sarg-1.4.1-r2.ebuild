@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.4.1-r2.ebuild,v 1.4 2004/07/10 11:35:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.4.1-r2.ebuild,v 1.5 2004/08/15 23:43:40 cyfred Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=net-www/squid-2.5.1"
+RDEPEND=">=www-proxy/squid-2.5.1"
 
 src_unpack() {
 	unpack ${A}
