@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/sylpheed-iconset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.18 2004/11/03 19:17:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-iconset/ChangeLog,v 1.19 2004/11/12 08:51:24 kloeri Exp $
+
+  12 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  sylpheed-iconset-20040525.ebuild:
+  Stable on alpha.
 
 *sylpheed-iconset-20040929 (03 Nov 2004)
 
