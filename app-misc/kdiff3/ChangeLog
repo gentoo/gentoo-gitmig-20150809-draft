@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kdiff3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.15 2004/05/01 12:11:16 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.16 2004/06/15 16:59:10 carlo Exp $
+
+*kdiff3-0.9.86 (15 Jun 2004)
+
+  15 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kdiff3-0.9.86.ebuild:
+  version bump
 
   01 May 2004; Dominik Stadler <centic@gentoo.org> kdiff3-0.9.80.ebuild,
   kdiff3-0.9.82.ebuild:
