@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.3.ebuild,v 1.6 2004/10/08 03:13:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.1 2004/10/09 23:04:33 vapier Exp $
 
 DESCRIPTION="Compatibility C++ and libc5 and libc6 libraries for programs new and old"
 HOMEPAGE="http://www.gentoo.org/"
@@ -30,6 +30,11 @@ src_unpack() {
 }
 
 src_install() {
+	if use x86 ; then
+		into /
+		dolib.so ld-linux.so.1*
+		rm -f ld-linux.so.1*
+	fi
 	into /usr
 	dolib.so *.so*
 	preplib /usr
