@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ohphone-1.4.1-r1.ebuild,v 1.6 2004/07/15 00:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ohphone-1.4.1-r1.ebuild,v 1.7 2004/09/25 09:49:22 pvdabeel Exp $
 
 DESCRIPTION="Command line H.323 client"
 HOMEPAGE="http://www.openh323.org/"
@@ -50,5 +50,8 @@ src_install() {
 	# fill in for other archs
 	if [ ${ARCH} = "x86" ]; then
 		dobin obj_linux_x86_r/ohphone
+	fi
+	if [ use ppc ]; then
+		dobin obj_linux_ppc_r/ohphone
 	fi
 }
