@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.73-r1.ebuild,v 1.2 2002/07/19 11:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.73-r1.ebuild,v 1.3 2002/09/14 01:57:08 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TV application for the bttv driver"
-SRC_URI="http://bytesex.org/xawtv/xawtv_3.73.tar.gz
-mirror://sourceforge/xaw-deinterlace/xaw-deinterlace-0.0.3.diff.bz2"
+SRC_URI="http://bytesex.org/xawtv/${PN}_${PV}.tar.gz
+	mirror://sourceforge/xaw-deinterlace/xaw-deinterlace-0.0.3.diff.bz2"
 HOMEPAGE="http://bytesex.org/xawtv/"
 
 SLOT="0"
@@ -16,16 +16,17 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.0.8
 	>=x11-base/xfree-4.0.1
-	motif? ( x11-libs/openmotif )	aalib? ( media-libs/aalib )
-	quicktime? ( media-libs/quicktime4linux )
-	alsa? ( media-libs/alsa-lib )"
+	alsa? ( media-libs/alsa-lib )
+	aalib? ( media-libs/aalib )
+	motif? ( x11-libs/openmotif )"
+	#quicktime? ( media-libs/quicktime4linux )
 
 
 src_unpack() {
 
-	unpack ${PN}_${PV}.tar.gz
+	unpack ${A}
 	cd ${S}
-	bzcat ${DISTDIR}/xaw-deinterlace-0.0.3.diff.bz2 | patch -p1
+	patch -p1 < ${WORKDIR}/xaw-deinterlace-0.0.3.diff || die
 
 }
 
@@ -39,9 +40,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-aa" \
 		|| myconf="${myconf} --disable-aa"
 
-	use quicktime \
-		&& myconf="${myconf} --enable-quicktime" \
-		|| myconf="${myconf} --disable-quicktime"
+#	use quicktime \
+#		&& myconf="${myconf} --enable-quicktime" \
+#		|| myconf="${myconf} --disable-quicktime"
 
 	use alsa \
 		&& myconf="${myconf} --enable-alsa" \
@@ -63,12 +64,11 @@ src_compile() {
 
 src_install() {
 	fontdir=${D}/usr/X11R6/lib/X11/fonts/misc
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+
+	einstall \
 		resdir=${D}/etc/X11 \
-		fontdir=${fontdir} \
-		install || die
+		fontdir=${fontdir} || die
+
 	# remove the bogus fonts.dir so it isn't "owned" by this ebuild
 	rm -f $fontdir/fonts.dir
 
@@ -76,7 +76,7 @@ src_install() {
 	dodoc Programming-FAQ README* TODO
 	dodoc UPDATE_TO_v3.0
 
-	insinto /usr/local/httpd/cgi-bin
+	insinto /home/httpd/cgi-bin
 	insopts -m 755
 	doins webcam/webcam.cgi
 }
