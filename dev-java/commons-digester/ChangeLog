@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.7 2003/04/26 05:36:58 strider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.8 2004/03/01 04:37:28 zx Exp $
+
+*commons-digester-1.5 (29 Feb 2004)
+
+  29 Feb 2004; Chris Aniszczyk <zx@gentoo.org> commons-digester-1.4.1.ebuild,
+  commons-digester-1.5.ebuild:
+  Version Bump. Closes #43325
+  Thanks to Pavel <hlobil@sympatico.ca> for the updated ebuild.
 
 *commons-digester-1.4.1 (22 Mar 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.1.ebuild,v 1.5 2004/03/01 04:37:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.5.ebuild,v 1.1 2004/03/01 04:37:28 zx Exp $
 
 inherit jakarta-commons
 
@@ -23,16 +23,19 @@ KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes junit"
 
 src_compile() {
-	cp LICENSE.txt ../LICENSE
-	echo "commons-collections.jar=`java-config --classpath=commons-collections`" > build.properties
-	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils`" >> build.properties
-	echo "commons-logging.jar=`java-config --classpath=commons-logging`" | sed s/\=.*:/\=/ >> build.properties
-	jakarta-commons_src_compile myconf make
-	use doc && jakarta-commons_src_compile makedoc
-	use doc && jakarta-commons_src_install html
+	local antflags="dist"
+	use doc && antflags="${antflags} javadoc"
+	use junit && antflags="${antflags} test"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	# UGLY HACK
-	mv ${S}/target/conf/MANIFEST.MF ${S}/target/classes/
-	cd ${S}/target/classes
-	zip -r ../${PN}-${PV}.jar org
+	use junit && antflags="${antflags} -Djunit.jar=`java-config --classpath=junit`"
+	antflags="${antflags} -Dcommons-beanutils.jar=`java-config --classpath=commons-beanutils`"
+	antflags="${antflags} -Dcommons-collections.jar=`java-config --classpath=commons-collections`"
+	antflags="${antflags} -Dcommons-logging.jar=/usr/share/commons-logging/lib/commons-logging.jar"
+	ant ${antflags}
+}
+
+src_install() {
+	java-pkg_dojar dist/${PN}.jar
+	use doc && dohtml -r dist/docs/api/*
 }
