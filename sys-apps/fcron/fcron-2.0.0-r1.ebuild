@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.3 2002/05/04 17:28:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r1.ebuild,v 1.4 2002/05/31 19:48:00 bangert Exp $
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
@@ -19,9 +19,11 @@ RDEPEND="!virtual/cron
 PROVIDE="virtual/cron"
 
 src_unpack() {
-
 	unpack ${A} ; cd ${S}
 	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die "bad patchfile"
+	# fix LIBOBJS vs AC_LIBOBJ problem
+	mv configure.in configure.in~
+	sed <configure.in~ >configure.in -e 's|LIBOBJS|AC_LIBOBJ|g'
 	autoconf || die "autoconf problem"
 }
 
