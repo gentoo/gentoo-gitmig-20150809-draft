@@ -1,4 +1,5 @@
-MD5 ce7720dc1955f961555ecf79ffc4b03c treeviewx-0.4.ebuild 1305
-MD5 86a4b3c2e093f1f59564775edb8ff7ec ChangeLog 811
+MD5 b8855715cf4f2c4cf6b2d8597b849f67 treeviewx-0.4.ebuild 1410
+MD5 1ce4c200e39a5fe2c439b8443856de37 ChangeLog 964
 MD5 4a02a793e1530b66640221d52ab8a8ab metadata.xml 523
+MD5 e2e09c5eff0990a96cbd5fab84e0685a files/nodeiterator.h.patch 650
 MD5 8d3f96dc6ba46b29f75306900104b6fa files/digest-treeviewx-0.4 58

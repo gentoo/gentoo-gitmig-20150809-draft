@@ -1,0 +1,31 @@
+--- nodeiterator.h.old	2002-02-24 15:37:17.000000000 -0500
++++ nodeiterator.h	2005-02-19 21:09:31.000000000 -0500
+@@ -20,7 +20,7 @@
+  */
+ 
+  // $Id: nodeiterator.h.patch,v 1.1 2005/02/20 02:31:40 ribosome Exp $
+- 
++
+ /**
+  * @file nodeiterator.h
+  *
+@@ -128,15 +128,15 @@
+ 
+ template <class N> N *PreorderIterator<N>::begin ()
+ {
+-	cur = root;
+-    return cur;
++	this->cur = this->root;
++    return this->cur;
+ }
+ 
+ template <class N> N *PreorderIterator<N>::next ()
+ {
+-	if (cur->GetChild())
++	if (this->cur->GetChild())
+     {
+-       	stk.push (cur);
++       	this->stk.push (cur);
+        	N *p = (N *)(cur->GetChild());
+         cur = p;
+     }
