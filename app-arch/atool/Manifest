@@ -1,8 +1,18 @@
-MD5 e7cbd256e66fe954f7a52ccb355b99e6 atool-0.27.0.ebuild 726
-MD5 8e25befe1d81deb45366bed0c0e27192 atool-0.28.0.ebuild 733
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6647ef199fd9ea71213a1a8926eaf1ee ChangeLog 1269
 MD5 cbcb56f652f59d7f65298558e020de57 atool-0.25.0.ebuild 608
-MD5 21e48cb9443de8afe88b0dd25e41069c ChangeLog 1049
+MD5 737bf5b52d6c501c15420cd992e2896f atool-0.28.0.ebuild 737
 MD5 11e5f54a97abb41296c28d7e43cf9a56 metadata.xml 229
+MD5 6adfba09e00cc8f55b504ef4c91ad063 atool-0.29.0.ebuild 738
 MD5 ef2573ce7a920d9df4200c7e9229a90e files/digest-atool-0.25.0 63
-MD5 50711b01ef0e647ede95cda005ade4da files/digest-atool-0.27.0 63
+MD5 d7b08b00e0af8eb9b2999f0d4301e134 files/digest-atool-0.29.0 63
 MD5 c50879aea648907f51f958efde7f3a54 files/digest-atool-0.28.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFBw89ZmdTrptrqvGERAgKHAJ45v8oQN1nzCucSwTAXW9OacEFB7wCfdUVZ
+q7xITvjDmOaz6pi9/CQEl0g=
+=UqKT
+-----END PGP SIGNATURE-----
