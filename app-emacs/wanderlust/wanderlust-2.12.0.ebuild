@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.33_pre20041202.ebuild,v 1.1 2004/12/02 10:57:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.12.0.ebuild,v 1.1 2004/12/26 04:21:26 usata Exp $
 
 inherit elisp
 
-MY_P="wl-${PV/_pre/-}"
+MY_P="wl-${PV/_/}"
 
 IUSE="ssl"
 
 DESCRIPTION="Wanderlust -- Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +22,7 @@ DEPEND=">=app-emacs/apel-10.6
 	virtual/semi
 	!app-emacs/wanderlust-cvs"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	use ssl && echo "(setq wl-install-utils t)" >> WL-CFG
