@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r1.ebuild,v 1.2 2004/08/22 17:50:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.1 2004/08/22 17:50:19 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/wolf-linux-goty-maps.x86.run
-	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-goty-maps.x86.run
-	ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.41-3.x86.run
+SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/Missions/wolf-linux-goty-maps.x86.run
+	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/Missions/wolf-linux-goty-maps.x86.run
 	mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/wolf-linux-1.41-3.x86.run
 	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-1.41-3.x86.run"
 
 LICENSE="RTCW"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="opengl dedicated"
 RESTRICT="nostrip nomirror"
 
@@ -24,6 +23,9 @@ RDEPEND="dedicated? ( app-misc/screen )
 	opengl? ( virtual/opengl )"
 
 S=${WORKDIR}
+
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license || die "License check failed"
@@ -36,10 +38,9 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
-	cp -r main Docs pb ${D}/${dir}/
+	cp -r main Docs pb ${Ddir}
 
 	exeinto ${dir}
 	doexe bin/Linux/x86/*.x86 openurl.sh
