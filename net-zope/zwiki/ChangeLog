@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/zwiki
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.6 2003/06/18 12:26:35 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.7 2003/06/21 02:58:24 kutsuya Exp $
+
+*zwiki-0.19.0 (20 Jun 2003)
+
+  20 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> zwiki-0.17.0.ebuild,
+  zwiki-0.19.0.ebuild: New version. Masked as unstable for all archs.
+
+  20 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> zwiki-0.17.0.ebuild:
+  Added MYDOC variable.
 
   18 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> zwiki-0.17.0.ebuild:
   ~ppc -> ppc

@@ -1,3 +1,5 @@
-MD5 0c0e63ecf1e5a5ee87f96552b0fe60d5 ChangeLog 853
-MD5 5a5687ac1cc4e37b2ca1a242477031ea zwiki-0.17.0.ebuild 445
+MD5 d464a5db4e34c64e0adf9815be7e417e ChangeLog 1124
+MD5 91b5d2fa34762ec0b5bf9549f8c28848 zwiki-0.19.0.ebuild 539
+MD5 d223f50075b5267f4616613da044d2c5 zwiki-0.17.0.ebuild 478
+MD5 0915c42c2f2c0a7723ab8e693c1e5e52 files/digest-zwiki-0.19.0 61
 MD5 b6bacbebb7018a450cd7521bfd0ed1d8 files/digest-zwiki-0.17.0 123
