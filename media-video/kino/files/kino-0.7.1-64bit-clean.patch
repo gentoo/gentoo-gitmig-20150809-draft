@@ -1,0 +1,20 @@
+--- src/image_filters.cc.orig	2004-05-30 21:43:30.933654616 +0200
++++ src/image_filters.cc	2004-05-30 21:42:57.000813192 +0200
+@@ -558,6 +558,7 @@
+ 	// Store these for future reference
+ 	this->menu = menu;
+ 	this->container = container;
++	this->selected_filter = 0;
+ 
+ 	// Add the filters to the menu
+ 	GtkMenu *menu_new = GTK_MENU( gtk_menu_new( ) );
+--- src/image_transitions.cc.orig	2004-05-30 21:52:45.700317264 +0200
++++ src/image_transitions.cc	2004-05-30 21:53:14.978866248 +0200
+@@ -471,6 +471,7 @@
+ 	// Store these for future reference
+ 	this->menu = menu;
+ 	this->container = container;
++	this->selected_transition = 0;
+ 
+ 	// Add the transitions to the menu
+ 	GtkMenu *menu_new = GTK_MENU( gtk_menu_new( ) );
