@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.3 2003/10/07 22:47:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.4 2003/10/08 23:21:06 rphillips Exp $
 
 inherit base eutils
 
@@ -36,8 +36,8 @@ src_install() {
 	doexe bin/makegeo
 	insinto usr/include
 	dolib.a libgeotiff.a
-	dolib.so libgeotiff.so.1.1.4
-	dosym libgeotiff.so.1.1.4 usr/lib/libgeotiff.so
+	dolib.so libgeotiff.so.${PV}
+	dosym libgeotiff.so.${PV} usr/lib/libgeotiff.so
 	doins xtiffio.h xtiffiop.h geotiff.h geotiffio.h geovalues.h geonames.h geokeys.h geo_tiffp.h geo_config.h geo_keyp.h geo_normalize.h cpl_serv.h cpl_csv.h epsg_datum.inc epsg_gcs.inc epsg_pm.inc epsg_units.inc geo_ctrans.inc epsg_ellipse.inc epsg_pcs.inc epsg_proj.inc epsg_vertcs.inc geokeys.inc
 	mkdir -p ${D}/usr/share/epsg_csv
 	insinto usr/share/epsg_csv
