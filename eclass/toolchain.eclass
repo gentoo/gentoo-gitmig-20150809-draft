@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.36 2004/10/25 23:24:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.37 2004/10/26 04:09:02 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -868,7 +868,7 @@ gcc_do_configure() {
 
 	# Incredibly theoretical cross-compiler support
 	confgcc="${confgcc} --host=${CHOST}"
-	if [ "${CTARGET}" != "${CHOST}" -a "${CTARGET}" != "" ] ; then
+	if [ "${CTARGET}" != "${CHOST}" ] ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target 
 		# for nearly all native systems. Therefore, we highly recommend you
@@ -914,7 +914,6 @@ gcc_do_configure() {
 		--disable-checking \
 		--disable-werror \
 		--disable-libunwind-exceptions \
-		--with-gnu-ld \
 		--enable-threads=posix"
 
 	# default arch support
@@ -1028,39 +1027,6 @@ gcc_do_make() {
 		LIBPATH="${LIBPATH}" BOOT_CFLAGS="${BOOT_CFLAGS} ${GCC_MAKE_TARGET}" \
 		|| die
 	popd
-}
-
-
-create_gcc_multilib_scripts() {
-	mkdir -p ${D}/${BINPATH}/
-	mkdir -p ${D}/usr/bin/
-
-	if has_m32 ; then
-
-		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-gcc -m32 "'"$@"' \
-			> ${D}/${BINPATH}/${CHOST}-gcc32-${PV}
-		chmod +x ${D}/${BINPATH}/${CHOST}-gcc32-${PV}
-		ln -s ../../${BINPATH}/${CHOST}-gcc32-${PV} ${D}/usr/bin/gcc32
-
-		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-g++ -m32 "'"$@"' \
-			> ${D}/${BINPATH}/${CHOST}-g++32-${PV}
-		chmod +x ${D}/${BINPATH}/${CHOST}-g++32-${PV}
-		ln -s ../../${BINPATH}/${CHOST}-g++32-${PV} ${D}/usr/bin/g++32
-
-	fi
-	if has_m64 ; then
-
-		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-gcc -m64 "'"$@"' \
-			> ${D}/${BINPATH}/${CHOST}-gcc64-${PV}
-		chmod +x ${D}/${BINPATH}/${CHOST}-gcc64-${PV}
-		ln -s ../../${BINPATH}/${CHOST}-gcc64-${PV} ${D}/usr/bin/gcc64
-
-		echo -e '#!/bin/sh \nexec '"/${BINPATH}/${CHOST}-g++ -m64 "'"$@"' \
-			> ${D}/${BINPATH}/${CHOST}-g++64-${PV}
-		chmod +x ${D}/${BINPATH}/${CHOST}-g++64-${PV}
-		ln -s ../../${BINPATH}/${CHOST}-g++64-${PV} ${D}/usr/bin/g++64
-
-	fi
 }
 
 
@@ -1218,6 +1184,11 @@ create_gcc_env_entry() {
 			LDPATH="${LDPATH}:${LIBPATH}/${path}"
 		done
 	fi
+
+	local mbits=
+	has_m32 && mbits="${mbits} 32"
+	has_m64 && mbits="${mbits} 64"
+	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
 
 	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
