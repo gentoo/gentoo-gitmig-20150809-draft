@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.20 2004/08/09 04:35:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.21 2004/08/09 22:31:42 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -53,7 +53,7 @@ DEPEND="$DEPEND
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	png? ( media-libs/libpng )
-	qdbm ( dev-db/qdbm )
+	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
 	sharedmem? ( dev-libs/mm )
