@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.6 2004/07/24 19:33:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.7 2004/07/30 21:09:05 arj Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -28,6 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-buffer-fix.patch
+	epatch ${FILESDIR}/${PN}-quotechar-fix.patch
 }
 
 src_compile() {

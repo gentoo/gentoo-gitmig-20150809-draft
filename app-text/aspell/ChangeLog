@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.49 2004/07/24 19:33:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.50 2004/07/30 21:09:05 arj Exp $
+
+  30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> aspell-0.50.5-r2.ebuild:
+  Bugfix for aspell --mode=email by Alex Efros. Very good work! (#48865).
 
   24 Jul 2004; Alastair Tse <liquidx@gentoo.org> aspell-0.50.5-r2.ebuild:
   fixed SRC_URI to use mirror://gnu (#55523)
