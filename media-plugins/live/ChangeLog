@@ -1,8 +1,13 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.5 2003/06/11 00:31:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.6 2003/06/26 23:54:30 lu_zero Exp $
 
-  10 Jun 2003; <msterret@gentoo.org> live-2003.01.28.ebuild,
+*live-2003.04.11 (12 Apr 2003)
+
+  27 Jun 2003; Luca Barbato <lu_zero@gentoo.org> live-2003.06.26.ebuild:
+  version bump, gcc-3.3 fix
+
+10 Jun 2003; <msterret@gentoo.org> live-2003.01.28.ebuild,
   live-2003.04.11.ebuild:
   DEPEND on sed >= 4
 
