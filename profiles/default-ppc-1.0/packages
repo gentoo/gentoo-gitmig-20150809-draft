@@ -33,6 +33,9 @@
 
 # PPC PROFILE
 
+# x86 asm in this one, might be fixable at a later date (?) Gerk - june 24 2002
+~media-video/drip
+
 # xine currently has (known) ppc problems
 <media-libs/xine-lib-0.9.11
 <media-video/xine-ui-0.9.11
