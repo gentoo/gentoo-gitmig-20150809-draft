@@ -75,7 +75,7 @@ app-admin/webconfig
 
 # needs testing first .. dont want a repeat of 1.30 (kde-pim do not build)
 # azarah (28/01/2002)
-=sys-devel/bison-1.32
+#=sys-devel/bison-1.32 #seems to work ....
 
 # broken
 =app-doc/quanta-docs-1.0
