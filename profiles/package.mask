@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2715 2004/02/24 03:23:07 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2716 2004/02/24 09:58:13 mr_bones_ Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <mr_bones_@gentoo.org> (24 Feb 2004)
+# bad depend
+=SoQt-20010601-r1
 
 # <lanius@gentoo.org> (23 Feb 2004)
 # beta version
