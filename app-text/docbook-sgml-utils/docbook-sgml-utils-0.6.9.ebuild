@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.9.ebuild,v 1.7 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.9.ebuild,v 1.8 2002/12/18 15:25:43 vapier Exp $
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
@@ -9,24 +9,21 @@ DESCRIPTION="Shell scripts to manage DocBook documents"
 SRC_URI="http://ftp.debian.org/debian/pool/main/d/docbook-utils/${MY_PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://sources.redhat.com/docbook-tools/"
 
-DEPEND=">=sys-devel/perl-5
-	app-text/docbook-dsssl-stylesheets"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
+DEPEND=">=sys-devel/perl-5
+	app-text/docbook-dsssl-stylesheets"
+
 src_compile() {
-
-	econf || die
+	econf
 	make || die
-
 }
 
-src_install () {
-
-	einstall || die
+src_install() {
+	einstall
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
-	mv ${D}/usr/doc/html/${MY_P} ${D}/usr/share/doc/${P}/html
+	mv ${D}/usr/doc/html/${MY_P} ${D}/usr/share/doc/${PF}/html
 	rm -r ${D}/usr/doc/
 }
