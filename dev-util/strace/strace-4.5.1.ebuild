@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.5 2004/02/02 22:11:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.6 2004/02/06 23:53:32 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
