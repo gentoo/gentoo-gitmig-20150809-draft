@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.2 2004/06/05 09:34:28 kloeri Exp $
+
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> qmail-1.03-r15.ebuild:
+  Stable on alpha.
 
   28 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata.xml.
