@@ -1,0 +1,10 @@
+# ChangeLog for net-www/online-bookmarks
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/online-bookmarks/ChangeLog,v 1.1 2004/06/17 12:32:11 jmglov Exp $
+
+*online-bookmarks-0.2.6 (17 Jun 2004)
+
+  17 Jun 2004; Josh Glover <jmglov@gentoo.org> metadata.xml,
+  online-bookmarks-0.2.6.ebuild:
+  This package was submitted by Josh Glover in bug #54196
+
