@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.21 2004/10/03 22:56:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.22 2004/10/05 19:32:41 liquidx Exp $
+
+  04 Oct 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
+  pegged gal/libgtkhtml/libsoup dependency for evo-1.4.6
 
   04 Oct 2004; Guy Martin <gmsoft@gentoo.org> evolution-2.0.1.ebuild:
   Added ~hppa to KEYWORDS.
