@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.7 2004/07/10 11:19:37 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.8 2004/09/13 17:21:44 squinky86 Exp $
 
 inherit eutils
 
@@ -18,14 +18,20 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="virtual/libc
+
+RDEPEND="virtual/libc
 	>=net-libs/libpcap-0.6.2-r1"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/tcpslice-1.1a3
 
 src_unpack() {
 	unpack ${A}
 	epatch ${DISTDIR}/tcpslice_1.1a3-1.1.diff.gz
+	cd ${S}
+	sed -i -e 's:net/bpf.h:pcap-bpf.h:g' tcpslice.c || die
 }
 
 src_compile() {
