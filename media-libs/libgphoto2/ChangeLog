@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.10 2003/09/02 23:13:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.11 2003/09/06 16:02:50 liquidx Exp $
+
+*libgphoto2-2.1.2-r1 (06 Sep 2003)
+
+  06 Sep 2003; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.1.2-r1.ebuild,
+  files/canon.powershot.usermap:
+  added Canon Powershow usb hotplug usermap. Compiled by james
+  <zeurx@hotmail.com> (#24988).
 
   03 Sep 2003; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.1.2.ebuild:
   added usbutils dep to make sure we get the latest non-conflicting 
