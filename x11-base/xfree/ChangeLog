@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.72 2002/12/16 18:39:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.73 2002/12/21 22:24:05 seemant Exp $
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
 
@@ -40,6 +40,12 @@
   Tweak to compile libs (for x86) and glx with -fPIC.
 
 *xfree-4.2.99.3 (13 Nov 2002)
+
+  21 Dec 2002; Seemant Kulleen <seemant@gentoo.org> :
+
+  updated snapshot again -- sis fixes.  andee and lanalyst in #gentoo were
+  invaluable for this ebuild, which is a lot better than before.  Many many
+  many many many thanks to them :)
 
   11 Dec 2002; Seemant Kulleen <seemant@gentoo.org> :
 
