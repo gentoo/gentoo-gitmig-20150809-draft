@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/vhdl-mode
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.1 2004/10/05 06:12:43 usata Exp $
+
+*vhdl-mode-3.33.2 (05 Oct 2004)
+
+  05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/50vhdl-mode-gentoo.el, +vhdl-mode-3.33.2.ebuild:
+  Initial import. Ebuild submitted by Michael Hordijk
+  <hoffbrinkle@hotmail.com>.  This closes bug #65953.
+
