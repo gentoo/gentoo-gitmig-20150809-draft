@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtksourceview-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.18 2005/03/11 03:15:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/ChangeLog,v 1.19 2005/03/15 00:13:18 latexer Exp $
+
+  14 Mar 2005; Peter Johanson <latexer@gentoo.org>
+  gtksourceview-sharp-0.5-r1.ebuild, -gtksourceview-sharp-0.5.ebuild:
+  Mark stable on x86, make sure we dep on 1.0.x gtk-sharp, and remove on older
+  version that didn't include split-up deps.
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org>
   gtksourceview-sharp-0.5-r1.ebuild, gtksourceview-sharp-0.5.ebuild:
