@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PerlQt
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/ChangeLog,v 1.9 2004/10/14 19:58:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/ChangeLog,v 1.10 2004/10/19 07:53:00 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> PerlQt-3.008-r1.ebuild:
+  KEYWORDS ~amd64.
 
   14 Oct 2004; David Holm <dholm@gentoo.org> PerlQt-3.008-r1.ebuild:
   Added to ~ppc.
