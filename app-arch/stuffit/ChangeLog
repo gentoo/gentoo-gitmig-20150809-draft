@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/stuffit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.9 2004/06/24 21:36:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.10 2004/09/13 20:09:03 blubb Exp $
+
+  13 Sep 2004; <blubb@gentoo.org> stuffit-5.2.0.611.ebuild:
+  removed all arches except x86 and added ~amd64 and added 
+  emul-linux-x86-baselibs-dependency for amd64
 
   16 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> stuffit-5.2.0.611.ebuild:
   Filled SRC_URI again, put download hints into pkg_nofetch, corrected
