@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v3
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.3.12.ebuild,v 1.2 2003/06/03 15:21:01 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.3.12.ebuild,v 1.3 2003/06/10 17:40:46 msterret Exp $
 
 inherit flag-o-matic
 replace-flags "-march=pentium3" "-mcpu=pentium3"
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc"
 
-DEPEND="sys-apps/sed
+DEPEND=">=sys-apps/sed-4
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-libs/ncurses"
