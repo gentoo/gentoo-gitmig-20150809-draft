@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/ezmlm-idx
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.1 2002/10/16 20:50:41 drobbins Exp $
+
+*ezmlm-idx-0.40 (16 Oct 2002)
+
+  16 Oct 2002; Daniel Robbins <drobbins@gentoo.org>: Initial release -- this
+  ebuild is a 3-in-1 with support for ezmlm-idx, ezmlm-idx-mysql and
+  ezmlm-idx-pgsql packages and all three of these ebuilds should be kept
+  in-sync.
