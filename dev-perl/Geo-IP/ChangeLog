@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.2 2003/06/30 00:44:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.3 2003/07/08 05:52:38 solar Exp $
+
+  08 Jul 2003; <solar@gentoo.org> metadata.xml:
+  Added metadata.xml
 
   29 Jun 2003; <solar@gentoo.org> Geo-IP-1.15.ebuild:
   Added ~sparc to keywords after testing on sparc64
