@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5.ebuild,v 1.2 2002/06/04 00:26:42 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5.ebuild,v 1.3 2002/06/04 00:40:57 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME control-center"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 
-RDEPEND=">=gnome-base/gnome-vfs-1.0.2-r1
+RDEPEND="=gnome-base/gnome-vfs-1.0*
          >=media-libs/gdk-pixbuf-0.11.0-r1"
 
 DEPEND="${RDEPEND}
