@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.339 2004/06/08 00:02:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.340 2004/06/11 08:43:37 spyderous Exp $
+
+*xfree-4.3.0-r7 (11 Jun 2004)
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; +xfree-4.3.0-r7.ebuild:
+  Move current -r6 to -r7 to make room for security update to -r5.
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xfree-4.3.0-r5.ebuild:
   remove obsolete comment
