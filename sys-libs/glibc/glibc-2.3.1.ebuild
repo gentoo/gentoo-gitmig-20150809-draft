@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.18 2002/10/20 05:45:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1.ebuild,v 1.1 2002/10/20 05:45:34 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -30,19 +30,26 @@ filter-flags "-fomit-frame-pointer -malign-double"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
+# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
+export CFLAGS="${CFLAGS//-O?} -O2"
+export CXXFLAGS="${CFLAGS}"
+
 S="${WORKDIR}/${P}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
-	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
+SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
+	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+# Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
-# drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND="sys-kernel/linux-headers
+# Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
+DEPEND=">=sys-devel/gcc-3.2-r1
+	>=sys-devel/binutils-2.13.90.0.4-r1
+	sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers
 	sys-apps/baselayout
@@ -51,102 +58,52 @@ RDEPEND="sys-kernel/linux-headers
 
 PROVIDE="virtual/glibc"
 
-# Lock glibc at -O2 -- linuxthreads needs it and we want to be conservative here
-export CFLAGS="${CFLAGS//-O?} -O2"
-export CXXFLAGS="${CFLAGS}"
+
+pkg_config() {
+	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]
+	then
+		eerror "************************************************"
+		eerror " As of glibc-2.3, gcc-3.2 or later is needed"
+		eerror " for the build to succeed!"
+		eerror "************************************************"
+		die "GCC too old!"
+	fi
+}
 
 src_unpack() {
-	unpack glibc-${PV}.tar.bz2 || die
-	cd ${S}
-	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
+	unpack glibc-${PV}.tar.gz || die
+	# Extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
-	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 > /dev/null || die
+	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 || die
 	cd ${S}
-	unpack glibc-linuxthreads-${PV}.tar.bz2 || die
+	unpack glibc-linuxthreads-${PV}.tar.gz || die
 	
-	# This patch apparently eliminates compiler warnings for some versions of gcc.
-	# For information about the string2 patch, see: 
-	# http://lists.gentoo.org/pipermail/gentoo-dev/2001-June/001559.html
-	einfo "Applying string2.h patch..."
-	cd ${S}; patch -p0 < ${FILESDIR}/glibc-2.2.4-string2.h.diff > /dev/null || die
-
-	# This next one is a new patch to fix thread signal handling.  See:
-	# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00120.html
-	# (Added by drobbins on 05 Mar 2002)
-	einfo "Applying threadsig patch..."
-	patch -p0 < ${FILESDIR}/${PV}/${P}-threadsig.diff > /dev/null || die
-
 	# This next patch fixes a test that will timeout due to ReiserFS' slow handling of sparse files
 	einfo "Applying test-lfs-timeout patch..."
 	cd ${S}/io; patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch > /dev/null || die
-
-	# A buffer overflow vulnerability exists in multiple implementations of DNS
-	# resolver libraries.  This affects glibc-2.2.5 and earlier. See bug #4923
-	# and:
-	#
-	#   http://www.cert.org/advisories/CA-2002-19.html
-	einfo "Applying dns-network-overflow patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-dns-network-overflow.diff >	/dev/null || die
-
-	# Security update for sunrpc
-	# <aliz@gentoo.org>
-	einfo "Applying sunrpc-overflow patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sunrpc-overflow.diff > /dev/null || die
-
-	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]; then
-		# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
-		# http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-		einfo "Applying divdi3 patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-divdi3.diff > /dev/null || die
-	fi
-	
-	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
-	# and should generally be ok, as it just fixes define order that causes scope
-	# problems with gcc-3.1.1.
-	# (Azarah, 14 Jul 2002)
-	einfo "Applying gcc311 patch..."
-	cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-gcc311.patch > /dev/null || die
-
-	if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "2" ]; then
-		cd ${S}
-		# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0228.html
-		# <azarah@gentoo.org> (13 Oct 2002)
-		einfo "Applying divbyzero patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}.divbyzero.patch > /dev/null || die
-		einfo "Applying restrict_arr patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}.restrict_arr.patch > /dev/null || die
-	fi
-
-	# Some patches to fixup build on alpha
-	if [ "${ARCH}" = "alpha" ]; then
-		cd ${S}
-		einfo "Applying alpha-gcc3-fix patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-gcc3-fix.diff > /dev/null || die
-		einfo "Applying alpha-pcdyn-fix patch..."
-		patch -p1 < ${FILESDIR}/${PV}/${P}-alpha-pcdyn-fix.diff > /dev/null || die
-	fi
-
-	# Some patches to fixup build on sparc and sparc64
-	if use sparc64 > /dev/null || use sparc > /dev/null
-	then
-		einfo "Applying sparc-misc patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc-misc.diff > /dev/null || die
-	fi
-
-	if use sparc64 > /dev/null
-	then
-		einfo "Applying seemant's sparc64-fixups patch..."
-		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-sparc64-fixups.diff > /dev/null || die
-	fi
 }
 
 src_compile() {
 	local myconf=""
-
+	
 	# If we build for the build system we use the kernel headers from the target
-	use build && myconf="${myconf} --with-header=${ROOT}usr/include"
+	use build \
+		&& myconf="${myconf} --with-header=${ROOT}usr/include"
+	# Set it without "build" as well, else it might use the current kernel's
+	# headers, which might just fail (the linux-headers package is usually well
+	# tested...)
 	
 	use nls || myconf="${myconf} --disable-nls"
+
+	# Thread Local Storage support.  This dont really work as of yet...
+#	use x86 && use tls \
+#		&& myconf="${myconf} --with-tls"
+	myconf="${myconf} --without-tls"
+
+	if [ "`uname -r | cut -d. -f2`" -ge "4" ]
+	then
+		myconf="${myconf} --enable-kernel=2.4.0"
+	fi
 	
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere
@@ -155,16 +112,13 @@ src_compile() {
 	../configure --host=${CHOST} \
 		--with-gd=no \
 		--without-cvs \
-		--enable-add-ons=linuxthreads \
+		--enable-add-ons=yes \
 		--disable-profile \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
-	# This next option breaks the Sun JDK and the IBM JDK
-	# We should really keep compatibility with older kernels, anyway
-	# --enable-kernel=2.4.0
 	
 	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
@@ -191,7 +145,7 @@ src_install() {
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
 			localedata/install-locales -C buildhere || die
-		
+	
 		einfo "Installing man pages and docs..."
 		# Install linuxthreads man pages
 		dodir /usr/share/man/man3
