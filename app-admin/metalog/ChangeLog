@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.7 2002/12/09 04:17:35 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.8 2002/12/10 20:08:35 wwoods Exp $
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
 *metalog-0.6-r10 (15 Jul 2002)
+
+  10 Dec 2002; Will Woods <wwoods@gentoo.org> : 
+  Added alpha to KEYWORDS.
 
   12 Oct 2002; Donny Davies <woodchip@gentoo.org> :
   Small fix for #8885.
