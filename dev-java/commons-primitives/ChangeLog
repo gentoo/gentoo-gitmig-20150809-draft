@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.8 2005/01/01 18:19:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.9 2005/03/27 18:01:37 luckyduck Exp $
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  commons-primitives-1.0.ebuild:
+  disabled junit tests as they are horrible broken, introduced support for the
+  source useflag.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   commons-primitives-1.0.ebuild:
