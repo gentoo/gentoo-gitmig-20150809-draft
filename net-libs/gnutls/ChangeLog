@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.27 2004/08/04 21:29:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.28 2004/08/04 22:20:46 liquidx Exp $
+
+  04 Aug 2004; Alastair Tse <liquidx@gentoo.org>
+  files/gnutls-1.0.14-extra.h.patch:
+  fixed extra.h patch
 
   04 Aug 2004; Alastair Tse <liquidx@gentoo.org> gnutls-1.0.17.ebuild:
   fixed opencdk dep. people should fix the deps rather than leave comments in

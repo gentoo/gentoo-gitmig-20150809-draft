@@ -5,7 +5,7 @@
  #define LIBGNUTLS_EXTRA_VERSION LIBGNUTLS_VERSION
  
 +#ifdef __cplusplus
-+#extern "C" {
++extern "C" {
 +#endif
 +
  /* SRP */
