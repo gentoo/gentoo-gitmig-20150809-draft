@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.2 2003/10/12 17:21:07 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.3 2004/02/09 10:19:04 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> apr-0.9.4.ebuild:
+  added amd64 keyword.
 
 *apr-0.9.4 (13 Oct 2003)
 

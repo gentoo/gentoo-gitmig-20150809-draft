@@ -1,5 +1,5 @@
-MD5 9e2a08f876d4d8f6c62ac9c3698fc350 ChangeLog 494
+MD5 b863ac63ed0016cd4fb67c1c3abf1f6d ChangeLog 588
 MD5 250c2c8d05696fb8970c3fde91947a22 apr-0.9.2.ebuild 1395
-MD5 8d08d9a83dfe934aaf1e9de8e6b43fc0 apr-0.9.4.ebuild 904
+MD5 b485ffe64b161cd4b9c24782a887378b apr-0.9.4.ebuild 914
 MD5 c885cd7c010db2b27e06c0a3c6f426c6 files/digest-apr-0.9.2 199
 MD5 322c68a2024ba4c63bc10a5e97bd79c5 files/digest-apr-0.9.4 128
