@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.1 2002/04/15 20:12:42 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.2 2002/04/16 00:55:05 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -29,7 +29,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	mhash? ( >=app-crypt/mhash-0.8 )
-	mcrypt? ( >=dev-libs/libmcrypt-2.4 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	X? ( virtual/x11 )
 	qt? ( =x11-libs/qt-2.3* )
 	xml? ( >=app-text/sablotron-0.44 )
@@ -133,7 +133,7 @@ src_compile() {
 
 	use xml2 && myconf="$myconf --with-dom"
 	use mhash && myconf="$myconf --with-mhash"
-	use mcrypt && myconf="$myconf --with-mcrypt"
+	use crypt && myconf="$myconf --with-mcrypt"
 	use java && myconf="$myconf --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
