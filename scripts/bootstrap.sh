@@ -31,6 +31,24 @@ export CFLAGS="`spython -c 'import portage; print portage.settings["CFLAGS"];'`"
 export CHOST="`spython -c 'import portage; print portage.settings["CHOST"];'`"
 export CXXFLAGS="`spython -c 'import portage; print portage.settings["CXXFLAGS"];'`"
 export MAKEOPTS="`spython -c 'import portage; print portage.settings["MAKEOPTS"];'`"
+PROXY="`spython -c 'import portage; print portage.settings["PROXY"];'`"
+if [ -n "${PROXY}" ] 
+then
+	echo "exporting PROXY=${PROXY}"
+	export PROXY
+fi
+HTTP_PROXY="`spython -c 'import portage; print portage.settings["HTTP_PROXY"];'`"
+if [ -n "${HTTP_PROXY}" ] 
+then
+	echo "exporting HTTP_PROXY=${HTTP_PROXY}"
+	export HTTP_PROXY
+fi
+FTP_PROXY="`spython -c 'import portage; print portage.settings["FTP_PROXY"];'`"
+if [ -n "${FTP_PROXY}" ] 
+then
+	echo "exporting FTP_PROXY=${FTP_PROXY}"
+	export FTP_PROXY
+fi
 
 export CONFIG_PROTECT=""
 #above allows portage to overwrite stuff
