@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/pegasos-sources
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/ChangeLog,v 1.1 2004/05/07 12:20:40 dholm Exp $
+
+*pegasos-sources-2.4.26 (07 May 2004)
+
+  07 May 2004; David Holm <dholm@gentoo.org> +metadata.xml,
+  +pegasos-sources-2.4.26.ebuild:
+  Initial import.
+
