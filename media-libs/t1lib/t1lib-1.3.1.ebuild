@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.24 2004/10/07 03:03:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.25 2004/11/03 06:39:31 psi29a Exp $
 
 inherit gnuconfig eutils
 
@@ -14,7 +14,7 @@ DEPEND="X? ( virtual/x11 )"
 
 SLOT="1"
 LICENSE="LGPL-2 GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
 
 src_unpack() {
 	unpack ${A}
