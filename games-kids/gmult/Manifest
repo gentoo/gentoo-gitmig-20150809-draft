@@ -1,4 +1,6 @@
+MD5 a44887997ab019abe21591f3e5625f22 gmult-3.0.ebuild 527
 MD5 cc89703310d55064eacb943623fc2797 gmult-2.1.ebuild 520
-MD5 148af077eb4661a9f75627475c12e04f ChangeLog 395
+MD5 289177a9a4a44e6f3956a9ff5fae53f6 ChangeLog 551
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 3a660fdf376e90fcba3b7209ba274fab files/digest-gmult-2.1 62
+MD5 c36b899f47c7e1e9d08d67c14bb878ef files/digest-gmult-3.0 62
