@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.8.1.ebuild,v 1.3 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.9.1.ebuild,v 1.1 2003/11/11 09:38:37 solar Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/middle-man"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="${IUSE} pam zlib"
 
 S=${WORKDIR}/${PN}
@@ -24,6 +24,11 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	[ -f ${FILESDIR}/${P}-gentoo.diff ] && epatch ${FILESDIR}/${P}-gentoo.diff
+	cd ${S}
+	if [ "$PV" = "1.9" ]; then
+		einfo "Patching Makefile.in to avoid sandbox problems"
+		sed -e s:"INSTALL) -d /var":"INSTALL) -d \$(DESTDIR)/var":g < Makefile.in > Makefile.out && mv Makefile.{out,in}
+	fi
 }
 
 src_compile() {
@@ -43,8 +48,8 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	mkdir -p ${D}/usr/share/man/man8/
-	einstall || die "einstall failed"
+	# mkdir -p ${D}/usr/share/man/man8/
+	make DESTDIR="${D}" install || die "einstall failed"
 
 	dodoc CHANGELOG COPYING
 	dohtml README.html
