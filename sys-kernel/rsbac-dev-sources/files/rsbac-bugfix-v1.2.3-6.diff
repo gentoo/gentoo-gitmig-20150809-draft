@@ -1,0 +1,339 @@
+Index: linux-2.4.27-rsbac-v1.2.3/include/rsbac/aci_data_structures.h
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/include/rsbac/aci_data_structures.h	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/include/rsbac/aci_data_structures.h	(working copy)
+@@ -1134,7 +1134,7 @@
+ #endif
+ 
+ 
+-#define RSBAC_USER_NR_ATTRIBUTES 28
++#define RSBAC_USER_NR_ATTRIBUTES 24
+ #define RSBAC_USER_ATTR_LIST { \
+       A_pseudo, \
+       A_log_user_based, \
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/help/syscalls.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/help/syscalls.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/help/syscalls.c	(working copy)
+@@ -1405,7 +1405,7 @@
+ 
+ int sys_rsbac_switch(enum rsbac_switch_target_t target, int value)
+   {
+-#ifdef CONFIG_RSBAC_SWITCH
++#if defined(CONFIG_RSBAC_SWITCH) || defined(CONFIG_RSBAC_SOFTMODE)
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+     char                         * switch_name;
+@@ -1509,6 +1509,7 @@
+               case SOFTMODE: rsbac_softmode = value;
+                   break;
+ #endif
++#ifdef CONFIG_RSBAC_SWITCH
+ #ifdef CONFIG_RSBAC_MAC
+               case MAC: rsbac_switch_mac = value;
+                   break;
+@@ -1557,6 +1558,7 @@
+               case RES: rsbac_switch_res = value;
+                   break;
+ #endif
++#endif /* SWITCH */
+               default:
+                 return (-RSBAC_EINVALIDMODULE);
+             }
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/adf/jail/jail_syscalls.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/adf/jail/jail_syscalls.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/adf/jail/jail_syscalls.c	(working copy)
+@@ -41,8 +41,10 @@
+ /*          Externally visible functions           */
+ /************************************************* */
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ extern long sys_chroot(const char * filename);
+ extern long sys_chdir(const char * filename);
++#endif
+ 
+ /* Create a jail for current process */
+ /* Note: It is allowed to create jails within jails, but with restrictions */
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_main.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_main.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_main.c	(working copy)
+@@ -333,6 +333,14 @@
+              && (sb_p->s_magic == PIPEFS_MAGIC)
+             )
+             return DO_NOT_CARE;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
++          /* No decision on pseudo sockfs */
++          if(   (target == T_FILE)
++             && (!RSBAC_MAJOR(tid.file.device))
++             && (!RSBAC_MINOR(tid.file.device))
++            )
++            return DO_NOT_CARE;
++#endif
+           switch(request)
+             {
+               case R_GET_STATUS_DATA:
+@@ -1008,6 +1016,7 @@
+         rsbac_pid_t parent_pid = 0;
+ 
+         /* Get owner's logging pseudo */
++        i_tid.user = owner;
+         if (rsbac_get_attr(GEN,T_USER,i_tid,A_pseudo,&i_attr_val,FALSE))
+           {
+             rsbac_ds_get_error("rsbac_adf_request()", A_pseudo);
+@@ -2448,6 +2457,7 @@
+ #endif /* SECDEL */
+ 
+ #ifdef CONFIG_RSBAC_SYM_REDIR
++EXPORT_SYMBOL(rsbac_symlink_redirect);
+ void rsbac_symlink_redirect(struct dentry * dentry_p, char * name)
+   {
+     int                            err;
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_check.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_check.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/adf/adf_check.c	(working copy)
+@@ -439,6 +439,7 @@
+               {
+                 case T_DIR: 
+                 case T_SCD:
++                case T_IPC:
+ #ifdef CONFIG_RSBAC_RW
+                 case T_FILE:
+                 case T_FIFO:
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/rc_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/rc_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/rc_data_structures.c	(working copy)
+@@ -146,7 +146,7 @@
+     off_t pos   = 0;
+     off_t begin = 0;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "stats_rc_proc_info(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1540,7 +1540,7 @@
+ 
+ int rsbac_stats_rc(void)
+   {
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_stats_rc(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/aci_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/aci_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/aci_data_structures.c	(working copy)
+@@ -9504,10 +9504,11 @@
+ /* All functions return 0, if no error occurred, and a negative error code  */
+ /* otherwise. The error codes are defined in rsbac_error.h.                 */
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ /* declare sys_kill */
+ extern long sys_kill(int pid, int sig);
++#endif
+ 
+-
+ #ifdef CONFIG_RSBAC_INIT_DELAY
+ int rsbac_init(kdev_t root_dev)
+ #else
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/pm_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/pm_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/pm_data_structures.c	(working copy)
+@@ -90,7 +90,7 @@
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ #endif
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "stats_pm_proc_info(): RSBAC not initialized\n");
+@@ -1661,7 +1661,7 @@
+     u_long                                   all_member_count = 0;
+     u_long                               all_count = 0;
+   
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "rsbac_stats_pm(): RSBAC not initialized\n");
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/acl_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/acl_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/acl_data_structures.c	(working copy)
+@@ -539,7 +539,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "stats_acl_proc_info(): RSBAC not initialized\n");
+@@ -759,7 +759,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "acl_acllist_proc_info(): RSBAC not initialized\n");
+@@ -1697,7 +1697,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "acl_grouplist_proc_info(): RSBAC not initialized\n");
+@@ -3057,7 +3057,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_stats_acl(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/mac_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/mac_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/mac_data_structures.c	(working copy)
+@@ -483,7 +483,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "stats_mac_proc_info(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -587,7 +587,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "mac_trulist_proc_info(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1174,7 +1174,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "rsbac_stats_mac(): RSBAC not initialized\n");
+@@ -1771,7 +1771,7 @@
+     struct rsbac_mac_device_list_item_t * device_p;
+     int err=0;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_mac_copy_fp_truset(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1822,7 +1822,7 @@
+ int rsbac_mac_copy_pp_truset(rsbac_pid_t old_p_set_id,
+                               rsbac_pid_t new_p_set_id)
+   {
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_mac_copy_pp_truset(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1850,7 +1850,7 @@
+     struct rsbac_mac_device_list_item_t * device_p;
+     long count;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_mac_get_f_trulist(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1904,7 +1904,7 @@
+                             rsbac_uid_t **trulist_p,
+                             rsbac_time_t **ttllist_p)
+   {
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_mac_get_p_trulist(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+Index: linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/auth_data_structures.c
+===================================================================
+--- linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/auth_data_structures.c	(revision 16)
++++ linux-2.4.27-rsbac-v1.2.3/rsbac/data_structures/auth_data_structures.c	(working copy)
+@@ -770,7 +770,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "stats_auth_proc_info(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -940,7 +940,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "auth_caplist_proc_info(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -1908,7 +1908,7 @@
+     union rsbac_target_id_t       rsbac_target_id;
+     union rsbac_attribute_value_t rsbac_attribute_value;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+ #ifdef CONFIG_RSBAC_RMSG
+         rsbac_printk(KERN_WARNING "rsbac_stats_auth(): RSBAC not initialized\n");
+@@ -2940,7 +2940,7 @@
+     struct rsbac_auth_device_list_item_t * device_p;
+     int err=0;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_auth_copy_fp_capset(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -2991,7 +2991,7 @@
+ int rsbac_auth_copy_pp_capset(rsbac_pid_t old_p_set_id,
+                               rsbac_pid_t new_p_set_id)
+   {
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_auth_copy_pp_capset(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -3020,7 +3020,7 @@
+     struct rsbac_auth_device_list_item_t * device_p;
+     long count;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_auth_get_f_caplist(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
+@@ -3098,7 +3098,7 @@
+   {
+     long count;
+ 
+-    if (!rsbac_is_initialized)
++    if (!rsbac_is_initialized())
+       {
+         printk(KERN_WARNING "rsbac_auth_get_p_caplist(): RSBAC not initialized\n");
+         return(-RSBAC_ENOTINITIALIZED);
