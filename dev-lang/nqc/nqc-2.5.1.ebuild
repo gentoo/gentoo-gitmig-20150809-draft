@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.7 2004/07/02 04:29:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.8 2005/03/22 23:45:47 ciaranm Exp $
 
 My_PV="`echo $PV|cut -d. -f1,2`.r`echo $PV|cut -d. -f3`"
 My_P="${PN}-${My_PV}"
@@ -29,9 +29,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "***************************************************************"
-	einfo "* To change the default serial name for nqc (/dev/ttyS0)set   *"
-	einfo "* the environment variable NQC_SERIAL and reemerge nqc, e.g.: *"
-	einfo "*  NQC_SERIAL='/dev/ttyS1' emerge nqc                         *"
-	einfo "***************************************************************"
+	einfo "To change the default serial name for nqc (/dev/ttyS0) set"
+	einfo "the environment variable NQC_SERIAL and reemerge nqc, e.g.:"
+	einfo " NQC_SERIAL='/dev/ttyS1' emerge nqc"
 }
