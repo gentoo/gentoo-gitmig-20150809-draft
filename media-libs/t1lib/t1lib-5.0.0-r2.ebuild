@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.9 2004/01/10 18:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.10 2004/02/08 14:57:21 usata Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="5"
-KEYWORDS="~x86 ~ppc ~sparc alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64 ia64"
 IUSE="X doc"
 
 DEPEND="X? ( virtual/x11 )"

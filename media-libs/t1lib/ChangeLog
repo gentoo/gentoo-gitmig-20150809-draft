@@ -2,6 +2,11 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.2 2002/04/16 01:14:04 seemant Exp
 
+  08 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  t1lib-5.0.0-r2.ebuild:
+  Marked stable on x86, removed me from maintainer position and
+  assigned it to fonts herd.
+
   10 Jan 2004; <agriffis@gentoo.org> t1lib-5.0.0-r2.ebuild:
   stable on alpha and ia64
 

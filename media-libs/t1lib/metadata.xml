@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>usata@gentoo.org</email>
-  <name>Mamoru KOMACHI</name>
-  <description>I maintain the package because there is no herd for
-  fonts. If font.eclass will be introduced to Portage and font herd
-  created, This package will belong to font herd.</description>
-</maintainer>
+<herd>fonts</herd>
 </pkgmetadata>
