@@ -25,16 +25,14 @@ alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for kde-base/kdelibs / kde-base/arts
 atlas - Adds support for atlas instead of blas in dev-lang/R 
-avi - Adds Win32 AVI support
+avi - Adds Win32 AVI support and also adds avifile support
 avifile - Adds support for media-video/avifile (Library for AVI-Files)
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootcd - Used for building a package without manpages, extras for ISO image
 bootstrap - Used for not building addons to key packages during bootstrap
 build - Used for not building addons to key packages during bootstrap
-css - Add CSS Support (Most likely DeCSS Support)
 cups - Add support for CUPS (Common Unix Printing System)
-decss - Adds support for DVDs
 dga - Adds DGA Support (Xfree86 )
 directfb - Adds support for dev-libs/DirectFB (library for FB devices)
 dvd - Adds support for DVDs
