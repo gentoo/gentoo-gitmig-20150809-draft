@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.2 2004/05/13 19:30:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.3 2004/05/26 02:48:20 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,11 +11,12 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc -alpha ~amd64 -hppa -ia64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc -alpha arm -hppa ~amd64 -ia64 ~s390"
 IUSE="X nls motif leim gnome Xaw3d lesstif"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/gdbm
+	!arm? (
 	X? ( virtual/x11
 		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b-r2
@@ -26,6 +27,7 @@ RDEPEND="sys-libs/ncurses
 			lesstif? ( x11-libs/lesstif )
 			!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
 		gnome? ( gnome-base/gnome-desktop )
+	)
 	)
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
