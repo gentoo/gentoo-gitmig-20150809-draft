@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.21 2005/01/27 21:56:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.22 2005/02/28 21:18:26 kito Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos sparc x86"
 IUSE="doc static"
 
 DEPEND="virtual/libc
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 pkg_preinst() {
 	# these could cause problems if they exist from
 	# earlier builds
-	for x in libdvdcss.so.0 libdvdcss.so.1
+	for x in libdvdcss.so.0 libdvdcss.so.1 libdvdcss.0.dylib libdvdcss.1.dylib
 	do
 		if [ -f /usr/$(get_libdir)/${x} ] || [ -L /usr/$(get_libdir)/${x} ]
 		then
