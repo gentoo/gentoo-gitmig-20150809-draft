@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/perforce-gui
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-cli/ChangeLog,v 1.1 2003/12/14 09:24:00 stuart Exp $
+
+*perforce-gui-2003.1 (14 Dec 2003)
+
+  14 Dec 2003; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  perforce-gui-2003.1.ebuild:
+  Initial import; closes bug #19586. Thanks to Ben Calvert
+  (ben@stonehenge-net.com) for an example ebuild
