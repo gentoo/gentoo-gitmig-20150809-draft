@@ -15,7 +15,7 @@ MD5 742e94a3c64e9b5cddc7ce7863d1afac files/digest-ant-1.6.1-r1 74
 MD5 f23c30dd83f31a015c2bdff2c2438bce files/1.6.1/ant 2489
 MD5 523c767d01ea19faa450124eb2361862 ChangeLog 10396
 MD5 46066831d2b15aafda5823bf4d3cf6ea ant-1.5.3-r5.ebuild 2951
-MD5 a3da5503a8f639b9f7e618c6e5ab2777 ant-1.5.4-r1.ebuild 3012
+MD5 ade7fc67ddc73e6f2fa30a40f26593a1 ant-1.5.4-r1.ebuild 3019
 MD5 28a3ced06105438991775cd1ff70c334 ant-1.6.0-r2.ebuild 1614
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 164302f627c933c0280b7b467cd7e6eb ant-1.6.0-r3.ebuild 1601
