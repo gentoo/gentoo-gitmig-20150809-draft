@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.ebuild,v 1.2 2003/09/17 19:18:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-1.0.ebuild,v 1.3 2003/10/04 17:10:36 leonardop Exp $
 
 inherit gnome2
 
@@ -41,5 +41,12 @@ pkg_setup () {
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!!"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc2_Werror_fix.patch
 }
 
