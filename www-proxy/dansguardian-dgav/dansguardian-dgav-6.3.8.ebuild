@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian-dgav/dansguardian-dgav-6.3.8.ebuild,v 1.2 2005/03/10 10:01:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian-dgav/dansguardian-dgav-6.3.8.ebuild,v 1.3 2005/03/10 22:13:54 mrness Exp $
 
 inherit eutils
 
@@ -47,11 +47,13 @@ src_compile() {
 }
 
 src_install() {
-	if [ -d "/etc/logrotate.d" ]; then mkdir -p ${D}/etc/logrotate.d; fi
+	if [ -d "/etc/logrotate.d" ]; then
+		dodir /etc/logrotate.d
+	fi
 	make install || die "make install failed"
 
-	dodir /etc/init.d
-	cp ${FILESDIR}/dansguardian.init ${D}/etc/init.d/dansguardian
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/dansguardian.init dansguardian
 
 	rm -rf ${D}/etc/rc.d
 
