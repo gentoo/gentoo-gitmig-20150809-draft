@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.5 2002/10/15 16:44:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.6 2002/11/10 00:36:14 rphillips Exp $
 
 inherit perl-module
 
@@ -19,6 +19,10 @@ RDEPEND="${DEPEND} >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38
 src_install() {
 	eval `perl '-V:installarchlib'`
 	mkdir -p ${D}/$installarchlib
+
+	cp ${S}/Makefile ${S}/Makefile.orig
+	cat ${S}/Makefile | sed -e "s!INSTALLMAN1DIR = /usr/share/man/man1!INSTALLMAN1DIR = ${D}/usr/share/man/man1!" -e "s!INSTALLMAN3DIR = /usr/share/man/man3!INSTALLMAN3DIR = ${D}/usr/share/man/man3!" > ${S}/Makefile.gentoo
+	mv ${S}/Makefile.gentoo ${S}/Makefile
 
 	make install || die
 
