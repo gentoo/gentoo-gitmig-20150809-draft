@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.1 2004/05/26 16:24:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.2 2004/06/11 22:42:06 lv Exp $
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
@@ -34,3 +34,6 @@ selinux
 
 # x86 binary only, used by php
 fdftk
+
+# masked
+3dfx

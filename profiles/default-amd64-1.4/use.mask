@@ -36,3 +36,7 @@ selinux
 # versions that are in portage do not support amd64, 
 # will be removed when Intel issues an update and it gets into portage
 ifc
+
+# masked
+3dfx
+

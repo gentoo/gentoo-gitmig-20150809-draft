@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.4 2004/06/10 01:46:12 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.5 2004/06/11 22:42:06 lv Exp $
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
@@ -39,3 +39,7 @@ fdftk
 # will be removed when Intel issues an update and it gets into portage
 # (it seems to be in the works)
 ifc
+
+# masked
+3dfx
+
