@@ -1,11 +1,15 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.4 2004/12/26 17:31:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.5 2004/12/27 02:58:33 eradicator Exp $
 
 *xchat-xsys-1.9.1 (26 Dec 2004)
 
   26 Dec 2004; Tony Vroon <chainsaw@gentoo.org> +xchat-xsys-1.9.1.ebuild:
   Version bump.
+
+  26 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xchat-xsys-1.9.0.ebuild:
+  Added to ~amd64.  multilib aware.
 
 *xchat-xsys-1.9.0 (19 Dec 2004)
 
