@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.12.ebuild,v 1.2 2003/08/18 17:36:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.13.ebuild,v 1.1 2003/10/26 20:22:11 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,18 @@ DEPEND="virtual/x11
 	>=media-libs/tiff-3.5
 	png? ( >=media-libs/libpng-0.9.6 )
 	jpeg? ( media-libs/jpeg )
-	pdflib? ( >=media-libs/pdflib-4.0.3 )"
+	pdflib? ( >=media-libs/pdflib-4.0.3 )
+	>=sys-apps/sed-4
+	|| ( net-www/mozilla
+		net-www/mozilla-firebird
+		net-www/mozilla-firebird-bin
+		net-www/mozilla-firebird-cvs
+		net-www/opera
+		kde-base/kdebase
+		net-www/galeon
+		net-www/dillo
+		net-www/netscape-communicator
+		net-www/netscape-navigator )"
 #	x11-libs/xmhtml
 
 S="${WORKDIR}/${P}"
@@ -30,14 +41,38 @@ S="${WORKDIR}/${P}"
 src_unpack() {
 	unpack ${A}
 
-	if has_version '>=media-libs/t1lib-5.0.0' ; then
-		epatch ${FILESDIR}/${P}-t1lib-fix-gentoo.patch
-	fi
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-helpviewer-gentoo.diff
 }
 
 src_compile() {
+
+	local gracehelpviewer
+
+	if has_version 'net-www/mozilla' ; then
+		gracehelpviewer="mozilla"
+	elif has_version 'net-www/mozilla-firebird' \
+		|| has_version 'net-www/mozilla-firebird-bin' \
+		|| has_version 'net-www/mozilla-firebird-cvs' ; then
+		gracehelpviewer="MozillaFirebird"
+	elif has_version 'net-www/opera' ; then
+		gracehelpviewer="opera"
+	elif has_version 'kde-base/kdebase' ; then
+		gracehelpviewer="konqueror"
+	elif has_version 'net-www/galeon' ; then
+		gracehelpviewer="galeon"
+	elif has_version 'net-www/dillo' ; then
+		gracehelpviewer="dillo"
+	else
+		gracehelpviewer="netscape"
+	fi
+
+	sed -i -e "s%doc/%/usr/share/doc/${PF}/html/%g" src/*
+	sed -i -e "s%examples/%/usr/share/doc/${PF}/examples/%g" src/xmgrace.c
+
 	econf \
-		--with-grace-home=/usr/share/grace \
+		--enable-grace-home=/usr/share/grace \
+		--with-helpviewer=${gracehelpviewer} \
 		--with-fftw \
 		--enable-netcdf \
 		`use_enable debug` \
@@ -76,6 +111,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make \
 		GRACE_HOME=${D}/usr/share/grace \
 		PREFIX=${D}/usr \
@@ -89,7 +125,4 @@ src_install() {
 	rm -f ${D}/usr/share/doc/${PF}/html/*.1
 
 	dosym /usr/share/doc/${PF}/examples /usr/share/grace/examples
-
-	insinto /etc/env.d
-	doins ${FILESDIR}/10grace || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.1 2003/09/08 20:40:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.2 2003/10/26 20:22:11 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="pdflib"
 
 DEPEND="virtual/x11
@@ -37,6 +37,8 @@ src_unpack() {
 	if has_version '>=media-libs/t1lib-5.0.0' ; then
 		epatch ${FILESDIR}/${P}-t1lib-fix-gentoo.patch
 	fi
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-helpviewer-gentoo.diff
 }
 
 src_compile() {
@@ -44,31 +46,29 @@ src_compile() {
 	local gracehelpviewer
 
 	if has_version 'net-www/mozilla' ; then
-		gracehelpviewer="mozilla %s"
+		gracehelpviewer="mozilla"
 	elif has_version 'net-www/mozilla-firebird' \
 		|| has_version 'net-www/mozilla-firebird-bin' \
 		|| has_version 'net-www/mozilla-firebird-cvs' ; then
-		gracehelpviewer="MozillaFirebird %s"
+		gracehelpviewer="MozillaFirebird"
 	elif has_version 'net-www/opera' ; then
-		gracehelpviewer="opera %s"
+		gracehelpviewer="opera"
 	elif has_version 'kde-base/kdebase' ; then
-		gracehelpviewer="konqueror %s"
+		gracehelpviewer="konqueror"
 	elif has_version 'net-www/galeon' ; then
-		gracehelpviewer="galeon %s"
+		gracehelpviewer="galeon"
 	elif has_version 'net-www/dillo' ; then
-		gracehelpviewer="dillo %s"
+		gracehelpviewer="dillo"
 	else
-		gracehelpviewer="netscape %s"
+		gracehelpviewer="netscape"
 	fi
-
-	cp ${FILESDIR}/10grace ${T}/10grace
-	echo GRACE_HELPVIEWER="\"${gracehelpviewer}\"" >> ${T}/10grace
 
 	sed -i -e "s%doc/%/usr/share/doc/${PF}/html/%g" src/*
 	sed -i -e "s%examples/%/usr/share/doc/${PF}/examples/%g" src/xmgrace.c
 
 	econf \
-		--with-grace-home=/usr/share/grace \
+		--enable-grace-home=/usr/share/grace \
+		--with-helpviewer=${gracehelpviewer} \
 		`use_enable pdflib pdfdrv` \
 		|| die
 
@@ -113,7 +113,4 @@ src_install() {
 	#mv ${D}/usr/share/doc/${PF}/html/*.1 ${D}/usr/share/man/man1
 	doman ${D}/usr/share/doc/${PF}/html/*.1
 	rm -f ${D}/usr/share/doc/${PF}/html/*.1
-
-	insinto /etc/env.d
-	doins ${T}/10grace
 }
