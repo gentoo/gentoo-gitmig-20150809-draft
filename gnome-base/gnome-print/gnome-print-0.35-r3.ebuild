@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.2 2002/04/01 01:12:51 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.3 2002/04/03 10:20:54 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME printing library"
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.gnome.org/"
 RDEPEND=">=media-libs/gdk-pixbuf-0.11.0-r1
 	>=gnome-base/gnome-libs-1.4.1.4
 	>=media-libs/freetype-2.0.1
-	>=dev-libs/libxml-1.8.17"
+	nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND}
-		sys-devel/perl
-		tex? ( app-text/tetex )
-     	>=app-text/ghostscript-6.50-r2
-		nls? ( sys-devel/gettext )"
+	sys-devel/perl
+   	>=app-text/ghostscript-6.50-r2
+	>=dev-libs/libxml-1.8.17
+	tex? ( app-text/tetex )
 
 src_unpack() {
 	unpack ${A}
