@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20041203.ebuild,v 1.1 2004/12/04 20:17:58 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20041203.ebuild,v 1.2 2004/12/05 21:36:57 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -37,7 +37,7 @@ pkg_setup() {
 	#  compiled with a specific use flag, so we do it ./configure
 	#  check-for-lib style ...
 	gcc ${FILESDIR}/helloworld.m -o $TMP/helloworld -lobjc || die \
-		"gcc must be compiled with Objective-C support! See the objc USE flag."
+		"gcc must be compiled with Objective-C support! See the objc USE flag.  NOTE: if you have to recompile gcc anyway, now may be the time to also add the 'gcj' use flag, so that libffi will also be compiled.  Any gcc-3 version with 'gcj' should work, however, if you are testing >=gcc-3.4.3-r1 'objc' USE flag on should also install libffi."
 
 	if use layout-from-conf-file && use layout-osx-like ; then
 		eerror "layout-from-conf-file and layout-osx-like are mutually exclusive use flags."
