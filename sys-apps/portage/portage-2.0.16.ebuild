@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.16.ebuild,v 1.1 2002/07/23 04:36:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.16.ebuild,v 1.2 2002/07/23 04:37:51 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -169,7 +169,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	chmod 4755 ${ROOT}var/cache/edb/dep
 	chown root.wheel ${ROOT}var/cache/edb/dep
-	[ -e ${ROOT}var/cache/edb/xcache.p ] && chmod 0664 ${ROOT}var/cache/edb/xcache.p && chown root.wheel ${ROOT}var/cache/edb/dep/xcache.p
+	[ -e ${ROOT}var/cache/edb/xcache.p ] && chmod 0664 ${ROOT}var/cache/edb/xcache.p && chown root.wheel ${ROOT}var/cache/edb/xcache.p
 	
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
