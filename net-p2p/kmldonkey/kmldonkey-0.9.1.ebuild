@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.8 2004/05/04 05:07:34 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.9.1.ebuild,v 1.9 2004/05/24 23:10:34 squinky86 Exp $
 
 IUSE=""
 
@@ -17,6 +15,15 @@ SLOT="0"
 DESCRIPTION="Provides integration for the MLDonkey P2P software and KDE 3"
 SRC_URI="http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.gibreel.net/projects/kmldonkey"
+
+RDEPEND="${DEPEND}
+	>=sys-apps/sed-4.0.7"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e 's:};:}:g' kcmdonkey/kcmdonkey.cpp || die
+}
 
 pkg_postinst() {
 	echo
