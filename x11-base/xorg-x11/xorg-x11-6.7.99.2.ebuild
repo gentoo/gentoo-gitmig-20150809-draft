@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.1 2004/08/13 21:02:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.2 2004/08/13 21:11:20 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -37,14 +37,14 @@ S="${WORKDIR}/xc"
 HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
 #	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
 # Latest Savage drivers:  http://www.probo.com/timr/savage40.html
 # Latest SIS drivers:  http://www.winischhofer.net/
 
-GENTOO_FILES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2"
+GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
@@ -53,7 +53,7 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
-	http://dev.gentoo.org/~spyderous/overlay/distfiles/${P}.tar.bz2"
+	mirror://gentoo/${P}.tar.bz2"
 #	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
@@ -834,7 +834,7 @@ update_config_files() {
 			${ROOT}/etc/X11/xorg.conf > ${ROOT}/etc/X11/._cfg0001_xorg.conf
 	fi
 }
-	
+
 
 src_install() {
 
