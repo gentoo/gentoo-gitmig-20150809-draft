@@ -1,4 +1,14 @@
-MD5 079a8ce2533a30a1ad6dc46ac556ee9d scim-m17n-0.1.1.ebuild 994
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 847d409203b557497c382dfdb4aa146f scim-m17n-0.1.1.ebuild 1002
+MD5 5c2de6b920b84c72f41bd5a99da18415 ChangeLog 1685
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 ad5e8f6beabe9a064e97fbac1fb5fab8 ChangeLog 1585
 MD5 40505cfad629794482118c6dcd0444f5 files/digest-scim-m17n-0.1.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBF8gcCHk4+ZoBpvsRAhoQAJ4sxcfbCG4bBHDMzUNt9MA2EHGhCACfYES0
+PziPXl0Vz2+4hM8YPXrwbQo=
+=PLnn
+-----END PGP SIGNATURE-----
