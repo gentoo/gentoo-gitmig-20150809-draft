@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.57 2004/11/29 12:42:21 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.58 2004/11/29 13:44:31 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -51,12 +51,6 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 IUSE="${IUSE} build doc"
 SLOT="${PV}"
-
-# Grab kernel version from KV_FULL
-KV_MAJOR=$(echo ${KV_FULL} | cut -d. -f1)
-KV_MINOR=$(echo ${KV_FULL} | cut -d. -f2)
-KV_PATCH=$(echo ${KV_FULL} | cut -d. -f3-)
-KV_PATCH=${KV_PATCH/[-_]*/}
 
 # set LINUX_HOSTCFLAGS if not already set
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
