@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.4 2004/06/24 23:25:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.5 2004/07/14 14:49:24 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64"
-IUSE=""
+IUSE="debug doc"
 
 DEPEND="sys-devel/libtool
 	doc? ( app-text/openjade
