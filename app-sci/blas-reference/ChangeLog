@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/blas-reference
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.3 2004/03/19 08:59:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.4 2004/04/23 15:32:30 george Exp $
+
+  23 Apr 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/Makefile.gz :
+  updated the Makefile to work with new libtool (added --tag=F77 in a few places),
+  also recompressed it with gzip (works better for small files)
 
   01 Feb 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild, files/* :
   as per discussion in #30453 renaming (plain) blas to blas-reference.

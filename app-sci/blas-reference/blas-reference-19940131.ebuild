@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.1 2004/02/02 03:13:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/blas-reference-19940131.ebuild,v 1.2 2004/04/23 15:32:30 george Exp $
 
 Name="blas"
 DESCRIPTION="FORTRAN reference implementation of the BLAS (linear algebra lib)"
@@ -40,11 +40,14 @@ ifc_info() {
 	fi
 }
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	cd ${S}
-	cp ${FILESDIR}/Makefile.bz2 .
-	bunzip2 Makefile.bz2
+	cp ${FILESDIR}/Makefile.gz .
+	gunzip Makefile.gz
+}
 
+src_compile() {
 	# Profile information will be installed in TOP_PATH:
 	TOP_PATH=${DESTTREE}/lib/blas
 	# Libraries will be installed in RPATH:
