@@ -1,0 +1,80 @@
+# ChangeLog for app-admin/ufed
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.1 2003/08/15 13:17:08 lanius Exp $
+
+*ufed-0.2 (15 Aug 2003)
+
+  15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> ufed-0.2.ebuild,
+  ufed-0.3.ebuild, ufed-0.31.ebuild, ufed-0.32.ebuild, ufed-0.33.ebuild,
+  ufed-0.34.ebuild:
+  moved from app-admin to app-portage
+
+*ufed-0.34 (12 Aug 2003)
+
+  12 Aug 2003; Fred Van Andel <fava@gentoo.org> ufed-0.34.ebuild,
+  New version committed in stable, fixed bug 26360   
+
+*ufed-0.33 (01 Aug 2003)
+
+  01 Aug 2003; Fred Van Andel <fava@gentoo.org> ufed-0.33.ebuild,
+  Fixed bug 25707. No version bump, ebuild change only.
+  
+*ufed-0.33 (22 July 2003)
+
+  04 May 2003; Fred Van Andel <fava@gentoo.org> ufed-0.33.ebuild,
+  New version committed in stable, fixed bugs 22680 and 24670   
+
+*ufed-0.32 (04 May 2003)
+
+  04 May 2003; Fred Van Andel <fava@gentoo.org> ufed-0.32.ebuild,
+  new version committed in stable
+  
+*ufed-0.31 (28 Apr 2003)
+
+  30 Apr 2003; Robin Johnson <robbat2@gentoo.org> Manifest,
+  files/digest-ufed-0.31: recommited digests since in error
+  
+  28 Apr 2003; Fred Van Andel <fava@gentoo.org> ufed-0.31.ebuild:
+  ufed-0.31 comitted in unstable 
+
+*ufed-0.3 (25 Apr 2003)
+
+  25 Apr 2003; Robin Johnson <robbat2@gentoo.org> ufed-0.3.ebuild:
+  new version, in unstable only for testing
+
+*ufed-0.2 (29 Dec 2002)
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> ufed-0.2.ebuild :
+  Added hppa to keywords.
+
+  17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, ufed-0.1.ebuild,
+  ufed-0.1.ebuild, ufed-0.2.ebuild:
+  Changed SRC_URI.
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> ufed-0.2.ebuild:
+  Mark stable on alpha
+
+  03 Mar 2003; Zach Welch <zwelch@gentoo.org> ufed-0.2.ebuild:
+  add arm keyword
+
+  23 Jan 2003; Jason Wever <weeve@gentoo.org> ufed-0.2.ebuild:
+  Added sparc to keywords.
+
+  29 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
+
+  29 Dec 2002; Maik Schreiber <blizzy@gentoo.org> ufed-0.1.ebuild:
+  Fixed SRC_URI.
+
+  18 Oct 2002; Mark Guertin <gerk@gentoo.org> ufed-0.1.ebuild:
+  Added ppc to keywords, works and is stable
+
+  12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ufed-0.1.ebuild:
+  Removed ~ppc, ~sparc, ~sparc64 and ~alpha from KEYWORDS again.
+  Too much confusion...
+
+  12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ufed-0.1.ebuild:
+  Added ~ppc, ~sparc, ~sparc64 and ~alpha to KEYWORDS.
+
+*ufed-0.1 (12 Oct 2002)
+
+  12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
