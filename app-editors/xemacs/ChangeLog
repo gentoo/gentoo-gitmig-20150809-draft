@@ -1,7 +1,12 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.47 2004/08/20 16:55:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.48 2004/08/28 00:47:59 rac Exp $
 
+*xemacs-21.4.15-r2 (27 Aug 2004)
+
+  27 Aug 2004; Robert Coie <rac@gentoo.org> +files/xemacs-21.4.15-gdbm.patch,
+  +xemacs-21.4.15-r2.ebuild:
+  gdbm 1.8.3 - bug 58350
 
   20 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xemacs-21.4.15-r1.ebuild:
   ppc keyworded.

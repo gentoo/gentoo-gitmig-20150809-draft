@@ -1,0 +1,16 @@
+--- xemacs-21.4.15/configure.in.orig	2004-01-24 15:37:54.000000000 +1100
++++ xemacs-21.4.15/configure.in	2004-08-25 11:08:37.532591944 +1000
+@@ -4420,11 +4420,11 @@
+ dnl Check for DBM support in libgdbm.
+ if test "$with_database_gdbm" != "no"; then
+   AC_CHECK_LIB(gdbm, dbm_open, [
+-   with_database_gdbm=yes with_database_dbm=no libdbm=-lgdbm], [
++   with_database_gdbm=yes with_database_dbm=no libdbm="-lgdbm_compat -lgdbm"], [
+    if test "$with_database_gdbm" = "yes"; then
+      XE_DIE("Required GNU DBM support cannot be provided.")
+    fi
+-   with_database_gdbm=no])
++   with_database_gdbm=no],-lgdbm_compat)
+ fi
+ 
+ dnl Check for DBM support in libc and libdbm.
