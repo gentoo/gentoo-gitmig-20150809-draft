@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-imho/cl-imho-1.3.1.ebuild,v 1.3 2004/05/09 06:25:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-imho/cl-imho-1.3.2.ebuild,v 1.1 2004/05/09 06:25:34 mkennedy Exp $
 
 inherit common-lisp
 
-DESCRIPTION="IMHO is a toolkit that provides facilities for building highly interactive web applications, like WebCheckout. Some of the features that are in a useful state at this point are: session management, componentized document construction, template-based HTML rendering, and Java/Javascript integration. It is a loose functional equivalent of Apple's WebObjects framework."
+DESCRIPTION="IMHO is a toolkit that provides facilities for building highly interactive web applications"
 HOMEPAGE="http://freesw.onshored.com/wwwdist/imho/
 	http://alpha.onshored.com/lisp-software/"
 SRC_URI="http://alpha.onshored.com/debian/local/${PN}_${PV}.orig.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cl-odcl
 	=net-www/apache-1*"
 
 CLPACKAGE=imho
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${P}.orig
 
 src_compile() {
 	cd apache && make CFLAGS="${CFLAGS} -Wall -Wstrict-prototypes -fPIC" || die
@@ -43,13 +42,4 @@ src_install() {
 		/usr/share/common-lisp/systems/imho.asd
 	dosym /usr/share/common-lisp/source/imho/imho.system \
 		/usr/share/common-lisp/systems/imho.system
-}
-
-
-pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
-}
-
-pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
