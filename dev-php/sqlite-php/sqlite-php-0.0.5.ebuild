@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.8 2004/06/25 01:25:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/sqlite-php-0.0.5.ebuild,v 1.9 2004/07/02 05:00:44 eradicator Exp $
 
 DESCRIPTION="PHP bindings for SQLite"
 SRC_URI="mirror://sourceforge/sqlite-php/${P}.tgz"
 HOMEPAGE="http://sourceforge.net/projects/sqlite-php/"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-php/php-4.2
 	>=dev-db/sqlite-2.7
 	!dev-php/PECL-sqlite"
