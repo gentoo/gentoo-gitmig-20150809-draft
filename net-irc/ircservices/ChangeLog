@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.7 2004/10/24 21:09:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.8 2004/11/13 17:27:36 swegener Exp $
+
+  13 Nov 2004; Sven Wegener <swegener@gentoo.org> ircservices-5.0.41.ebuild:
+  Marked stable on x86.
 
   24 Oct 2004; Sven Wegener <swegener@gentoo.org>
   -ircservices-5.0.40.ebuild, ircservices-5.0.41.ebuild:
