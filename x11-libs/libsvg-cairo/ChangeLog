@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/libsvg-cairo
+# ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.1 2004/03/17 23:50:01 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.2 2004/03/18 10:53:42 aliz Exp $
 
 *libsvg-cairo-0.1.4 (18 Mar 2004)
 
