@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/logwatch
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.18 2004/09/03 21:03:24 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.19 2005/01/11 14:01:01 ticho Exp $
+
+  11 Jan 2005; Andrej Kacian <ticho@gentoo.org> logwatch-4.3.2.ebuild,
+  logwatch-5.0.ebuild, logwatch-5.2.2.ebuild:
+  mail-client/mailx -> virtual/mailx in RDEPEND. For bug #73972.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   logwatch-5.0.ebuild, logwatch-5.2.2.ebuild:
