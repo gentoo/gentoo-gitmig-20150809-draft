@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.17 2004/07/01 19:32:55 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.18 2004/07/26 21:59:18 eradicator Exp $
+
+  26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  hydrogen-0.8.2-r4.ebuild:
+  Stable amd64 and x86.
 
 *hydrogen-0.8.2-r4 (01 Jul 2004)
 

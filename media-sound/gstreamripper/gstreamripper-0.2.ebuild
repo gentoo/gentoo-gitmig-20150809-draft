@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.3 2004/06/25 00:04:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.4 2004/07/26 22:02:15 eradicator Exp $
 
 IUSE=""
 
@@ -12,11 +12,10 @@ DESCRIPTION="GStreamripper, a GTK front-end to streamripper"
 
 HOMEPAGE="http://sourceforge.net/projects/gstreamripper/"
 SRC_URI="mirror://sourceforge/gstreamripper/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.4*
 	>=media-sound/streamripper-1.60.5"
