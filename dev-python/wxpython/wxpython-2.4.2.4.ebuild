@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.8 2004/08/19 02:33:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.9 2004/11/13 18:08:36 pythonhead Exp $
 
 inherit eutils wxwidgets
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ppc sparc alpha arm amd64 ia64 hppa ppc64"
 IUSE="gtk2 unicode opengl tiff jpeg png"
 
 RDEPEND=">=dev-lang/python-2.1
-	>=x11-libs/wxGTK-2.4.2
+	=x11-libs/wxGTK-2.4.2*
 	gtk2? ( >=x11-libs/gtk+-2.0
 		>=x11-libs/pango-1.2
 		>=dev-libs/glib-2.0 )
