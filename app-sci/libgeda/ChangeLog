@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/libgeda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/libgeda/ChangeLog,v 1.4 2004/06/24 22:08:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/libgeda/ChangeLog,v 1.5 2004/10/03 17:17:26 plasmaroo Exp $
+
+  03 Oct 2004; <plasmaroo@gentoo.org> libgeda-20040111.ebuild:
+  Added 'png' and 'static' USE flag support, thanks to Sascha Silbe for a
+  patch; bug #64183.
 
   05 Jun 2004; David Holm <dholm@gentoo.org> libgeda-20040111.ebuild:
   Added to ~ppc.
