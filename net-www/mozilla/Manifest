@@ -5,8 +5,8 @@ MD5 72fa2cd6d8e23ff56080e7d0be60a03d mozilla-1.4-r4.ebuild 17290
 MD5 08baec4773bf64b9747358227a4d274e mozilla-1.4.1.ebuild 17283
 MD5 4ace193b04968a35e9845d34f1d1e38a mozilla-1.5.ebuild 16455
 MD5 c4f31bd394a3bc59f70cc6f5454c0be6 mozilla-1.5-r1.ebuild 17012
-MD5 4e75a743e4382a69170f595966fad9e3 mozilla-1.6.ebuild 16885
 MD5 caa46c587600497e0c07158f55167842 ChangeLog 24737
+MD5 a5105737bc2de09abc5d26d227277047 mozilla-1.6.ebuild 16996
 MD5 3cbe151665ba43403e657607949244e8 files/digest-mozilla-1.3-r2 201
 MD5 965c8430aca20b99db6430555624b4d2 files/digest-mozilla-1.4-r3 201
 MD5 3fc638d05bf40a6d7a5d3296ee2a0449 files/digest-mozilla-1.4-r4 201

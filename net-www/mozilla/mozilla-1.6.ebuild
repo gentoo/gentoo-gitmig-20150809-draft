@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6.ebuild,v 1.5 2004/02/09 19:28:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6.ebuild,v 1.6 2004/02/15 17:08:33 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -592,6 +592,10 @@ pkg_postinst() {
 	ewarn "layout in /usr/lib/mozilla/include have changed and will"
 	ewarn "result in compile errors when compiling programs that need"
 	ewarn "mozilla headers and libs (galeon, nautilus, ...)"
+
+	einfo "/usr/lib/mozilla/defaults/pref is in CONFIG_PROTECT - don't"
+	einfo "forget to run etc-update!"
+	sleep 3;
 }
 
 pkg_postrm() {
