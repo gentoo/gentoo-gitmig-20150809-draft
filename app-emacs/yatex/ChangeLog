@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.2 2003/09/13 02:14:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.3 2003/09/21 16:28:59 usata Exp $
 
 *yatex-1.71 (12 Sep 2003)
 
@@ -10,6 +10,6 @@
   for reporting the bug.
 
   12 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> yatex-1.71.ebuild:
-  Initial import.  Ebuild submitted by Naoki Shindo
+  Initial import.  Ebuild submitted by Naoaki Shindo
   <shindo-n@zephyr.dti.ne.jp> at GentooJP BugTrack.
 
