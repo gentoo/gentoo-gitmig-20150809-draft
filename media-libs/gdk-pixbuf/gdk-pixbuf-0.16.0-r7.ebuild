@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.2 2002/04/03 00:46:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r7.ebuild,v 1.3 2002/04/03 10:25:31 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
@@ -30,6 +30,15 @@ src_compile() {
 
 	#update libtool, else we get the "relink bug"
 	libtoolize --copy --force
+	gdk-pixbuf-0.16.0-r7.ebuild
+	aclocal
+	autoconf
+	automake --add-missing
+
+	./configure 	\
+		--host=${CHOST} \
+		--prefix=/usr \
+		--sysconfdir=/etc/X11/gdk-pixbuf || die
 
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
@@ -46,9 +55,10 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc/X11/gdk-pixbuf \
-	     install || die
+	make 	\
+		prefix=${D}/usr \
+		sysconfdir=${D}/etc/X11/gdk-pixbuf \
+		install || die
 
 	#fix permissions on the loaders
 	chmod a+rx ${D}/usr/lib/gdk-pixbuf/loaders
