@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.108 2005/03/18 00:46:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.109 2005/03/22 22:42:49 kloeri Exp $
+
+  22 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> gnupg-1.4.1.ebuild:
+  Stable on alpha, bug 85547.
 
   17 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> gnupg-1.4.1.ebuild:
   Security Bug #85547, stable on x86.
