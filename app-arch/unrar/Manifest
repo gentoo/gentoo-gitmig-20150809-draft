@@ -1,8 +1,18 @@
-MD5 1507d781327dfc350a7eb9ef72f32fe1 unrar-3.4.2.ebuild 658
-MD5 2c87fa64b0202b7a9fd0e8a9fbc0a623 unrar-3.4.1.ebuild 658
-MD5 aad880bfea1858a926ad0f26fbdc081e ChangeLog 5747
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90ebe13cefb6d04bab239edcbb0554e8 ChangeLog 5844
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 ff1d64024d78894c6305cc7c1799d6da unrar-3.4.3.ebuild 674
+MD5 2c87fa64b0202b7a9fd0e8a9fbc0a623 unrar-3.4.1.ebuild 658
+MD5 1507d781327dfc350a7eb9ef72f32fe1 unrar-3.4.2.ebuild 658
+MD5 3c0a4f4ba680d894b803bd4f997f7086 unrar-3.4.3.ebuild 677
 MD5 f9f393a40de80264e70980046324be99 files/digest-unrar-3.4.1 66
 MD5 8818046df86873479674bf33aceef2dd files/digest-unrar-3.4.2 66
 MD5 3768e409b5d3aadc7f21c6a5da615ef2 files/digest-unrar-3.4.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2VWnKRy60XGEcJIRAvcIAJ49zF9tnEDkLVio0gYXOt581DCOXgCeNo1M
+nGdpCS+5w5HsCK6quyvobPY=
+=Twyu
+-----END PGP SIGNATURE-----
