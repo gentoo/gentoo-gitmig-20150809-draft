@@ -9,5 +9,9 @@
 		La categoría x11-plugins contiene paquetes de extensiones para
 		varias aplicaciones X11.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-plugins enthält Plugins für verschiedene 
+		X11-Applikationen.
+	</longdescription>
 </catmetadata>
 
