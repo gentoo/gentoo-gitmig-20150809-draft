@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/gspoof
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.1 2004/02/12 13:08:17 spock Exp $
+
+*gspoof-3.2 (12 Feb 2004)
+
+  12 Feb 2004; Michal Januszewski <spock@gentoo.org> gspoof-3.2.ebuild,
+  metadata.xml:
+  Initial commit, closes #40940. Ebuild submitted by Kev
+  <gentoobug@nixel.mine.nu>.
+
