@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ffbc42cc8f0cd91b0778225de9e1dfac ChangeLog 800
 MD5 bcd56e4f77ba294466be7a751b56c1e7 open-cobol-0.23.ebuild 774
-MD5 4e4adda5accf7a489bc7051f092950c3 ChangeLog 797
 MD5 2bb3def2d8c57d8d5cf9884e185c4fa2 files/digest-open-cobol-0.23 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW04KI1lqEGTUzyQRAtE6AJ96svqUW5tYoQhjwkD2TdZ25OHcBgCgtHQu
+u+048ndCjVW1H6HHNbjTblc=
+=/k6v
+-----END PGP SIGNATURE-----
