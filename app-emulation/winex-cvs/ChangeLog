@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.16 2003/07/12 11:37:22 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.17 2003/07/17 14:58:24 coronalvr Exp $
+
+  17 Jul 2003; Alex Veber <coronalvr@gentoo.org> winex-cvs-2.2.1.ebuild,
+  winex-cvs-3.0.ebuild, winex-cvs-3.1.ebuild:
+  added !>=sys-libs/glibc-2.3.2
 
 *winex-cvs-3.1 (24 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.3 2003/07/12 11:37:22 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.1.ebuild,v 1.4 2003/07/17 14:58:24 coronalvr Exp $
 
 IUSE="cups opengl nptl"
 
@@ -46,7 +46,8 @@ newdepend "sys-devel/gcc
 		dev-lang/tcl 
 		dev-lang/tk ) 
 	opengl? ( virtual/opengl )
-	cups? ( net-print/cups )"
+	cups? ( net-print/cups )
+	!>=sys-libs/glibc-2.3.2"
 
 src_unpack() {
 	if ! [ -z "`perl -V:archname 2> /dev/null | grep 'thread-multi'`" ]
