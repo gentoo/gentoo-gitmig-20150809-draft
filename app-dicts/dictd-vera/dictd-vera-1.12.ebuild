@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.3 2005/01/01 12:50:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.4 2005/02/27 11:39:54 nigoro Exp $
 
 pkg_dte="December 2003"
 
@@ -12,7 +12,7 @@ SRC_URI="http://home.snafu.de/ohei/FTP/vera-${PV}.tar.gz
 IUSE=""
 SLOT="0"
 LICENSE="FDL-1.1"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
 
 RDEPEND=">=app-text/dictd-1.5.5"
 

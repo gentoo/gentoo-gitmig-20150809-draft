@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.11 2005/01/01 12:50:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.12 2005/02/27 11:39:54 nigoro Exp $
+
+  27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-vera-1.12.ebuild:
+  added ~ppc64
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> dictd-vera-1.9_pre.ebuild:
   sync IUSE (missing)
