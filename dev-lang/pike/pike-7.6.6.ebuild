@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.4 2004/07/12 16:29:57 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.6.ebuild,v 1.5 2004/07/31 12:37:21 scandium Exp $
 # Contributions by Emil Skoldberg, Fredrik Mellstrom (see ChangeLog)
 
 inherit fixheadtails
@@ -14,7 +14,7 @@ SRC_URI="ftp://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="zlib?	( sys-libs/zlib )
 	pdflib? ( media-libs/pdflib )
@@ -81,12 +81,9 @@ src_install() {
 
 	if use doc; then
 		make INSTALLARGS="--traditional" buildroot="${D}" install || die
-	else
-		make INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die
-	fi
-
-	if use doc; then
 		einfo "Installing 60MB of docs, this could take some time ..."
 		dohtml -r ${S}/refdoc/traditional_manual ${S}/refdoc/modref
+	else
+		make INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die
 	fi
 }
