@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmlaunch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/ChangeLog,v 1.9 2004/06/24 22:55:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/ChangeLog,v 1.10 2004/07/09 23:00:51 slarti Exp $
+
+  09 Jul 2004; Tom Martin <slarti@gentoo.org> gkrellmlaunch-0.5.ebuild:
+  Marked ~amd64.
 
   21 Jan 2004; Sven Blumenstein <bazik@gentoo.org> gkrellmlaunch-0.5.ebuild:
   Stable on sparc.

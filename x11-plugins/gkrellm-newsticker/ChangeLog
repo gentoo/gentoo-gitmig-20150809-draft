@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-newsticker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/ChangeLog,v 1.6 2004/06/24 22:56:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-newsticker/ChangeLog,v 1.7 2004/07/09 23:09:38 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> gkrellm-newsticker-0.3.5.ebuild:
+  Marked ~amd64.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   gkrellm-newsticker-0.3.5.ebuild:
