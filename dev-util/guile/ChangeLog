@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/guile
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.36 2004/12/08 21:10:38 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.37 2005/01/28 11:03:43 liquidx Exp $
+
+*guile-1.6.7 (28 Jan 2005)
+
+  28 Jan 2005; Alastair Tse <liquidx@gentoo.org> +guile-1.6.7.ebuild:
+  version bump. should fix compile problems people are having? (#73920)
 
 *guile-1.6.6 (10 Dec 2004)
 
