@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.22.ebuild,v 1.1 2002/12/17 09:04:09 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.22.ebuild,v 1.2 2003/01/08 20:37:54 azarah Exp $
 
 IUSE="nls alsa"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND="virtual/python
 	nls? ( sys-devel/gettext )
