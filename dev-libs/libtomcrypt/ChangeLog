@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.9 2003/07/28 01:56:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.10 2003/09/09 13:24:16 vapier Exp $
+
+*libtomcrypt-0.90 (09 Sep 2003)
+
+  09 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump (thanks to Tom St Denis).
 
 *libtomcrypt-0.89 (27 Jul 2003)
 
