@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.11 2004/04/15 11:26:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.12 2004/04/17 12:56:11 plasmaroo Exp $
+
+*ppc-sources-crypto-2.4.20-r5 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/ppc-sources-crypto.CAN-2004-0177.patch,
+  +files/ppc-sources-crypto.CAN-2004-0178.patch,
+  -ppc-sources-crypto-2.4.20-r4.ebuild, +ppc-sources-crypto-2.4.20-r5.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
 *ppc-sources-crypto-2.4.20-r4 (15 Apr 2004)
 

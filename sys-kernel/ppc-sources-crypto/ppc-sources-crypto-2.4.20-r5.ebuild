@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r4.ebuild,v 1.1 2004/04/15 11:26:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r5.ebuild,v 1.1 2004/04/17 12:56:11 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -45,10 +45,13 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
-	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
-	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 
 	# Sometimes we have bad kernel symbols; remove them...
 	make mrproper || die
