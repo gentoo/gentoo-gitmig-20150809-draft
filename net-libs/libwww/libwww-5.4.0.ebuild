@@ -1,11 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.3.2-r1.ebuild,v 1.3 2002/06/19 20:37:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0.ebuild,v 1.1 2002/06/19 20:37:04 seemant Exp $
+
+inherit libtool
 
 MY_P=w3c-${P}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A general-purpose client side WEB API"
-SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tar.gz"
+SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz"
 HOMEPAGE="http://www.w3.org/Library/"
 
 SLOT=""
@@ -19,9 +21,15 @@ src_compile() {
 
 	local myconf
 
-	use mysql && myconf="--with-mysql"
+	use mysql \
+		&& myconf="--with-mysql" \
+		|| myconf="--without-mysql"
 	
-	use ssl && myconf="${myconf} --with-ssl"
+	use ssl \
+		&& myconf="${myconf} --with-ssl" \
+		|| myconf="${myconf} --without-ssl"
+
+	elibtoolize
 
 	./configure \
 		--with-zlib \

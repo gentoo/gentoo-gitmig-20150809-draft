@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.2 2002/06/19 20:37:04 seemant Exp $
+
+*libwww-5.4.0 (19 Jun 2002)
+
+  19 Jun 2002; Seemant Kulleen <seemant@gentoo.org> libwww-5.4.0.ebuild
+  files/digest-libwww-5.4.0 :
+
+  Version bump.
 
 *libwww-5.3.2-r1 (1 Feb 2002)
 
