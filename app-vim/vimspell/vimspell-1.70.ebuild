@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.70.ebuild,v 1.1 2003/11/30 02:41:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.70.ebuild,v 1.2 2003/12/29 08:59:06 ciaranm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: on-the-fly spell checking with aspell"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=465"
 LICENSE="GPL-1 | GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 
 # In theory, this plugin supports either aspell or ispell. However,
 # virtual/spell has been removed by seemant in favour of just using
