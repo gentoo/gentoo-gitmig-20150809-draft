@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (23 Apr 2003)
+# PHP ebuilds using new PHP eclass
+# Work in progress
+>=dev-php/mod_php-4.3.1-r3
+>=dev-php/php-4.3.1-r2
+
 # seemant@gentoo.org (22 Apr 2003)
 # the package is unmainteained and dead upstream. it will die in portage
 # accordingly.
