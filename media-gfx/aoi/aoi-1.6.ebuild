@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.6.ebuild,v 1.8 2004/06/24 22:32:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.6.ebuild,v 1.9 2004/07/30 20:53:34 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 DEPEND=""
 RDEPEND=">=virtual/jdk-1.2
-	dev-java/jmf
+	dev-java/jmf-bin
 	dev-java/ant"
 IUSE="doc"
 
