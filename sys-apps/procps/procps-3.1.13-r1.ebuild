@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13-r1.ebuild,v 1.1 2003/12/08 11:50:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.13-r1.ebuild,v 1.2 2004/02/08 20:34:44 vapier Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -9,22 +11,19 @@ DESCRIPTION="Standard informational utilities and process-handling tools -ps top
 SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 HOMEPAGE="http://procps.sourceforge.net/"
 
-inherit flag-o-matic
 
-replace-flags "-O3" "-O2"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ia64"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
-DEPEND="${RDEPEND}
-	>=sys-devel/gettext-0.10.35"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	replace-flags "-O3" "-O2"
 	# Use the CFLAGS from /etc/make.conf.
 	for file in `find . -iname "Makefile"`;do
 		sed -i "s:-O2:${CFLAGS}:" ${file}
