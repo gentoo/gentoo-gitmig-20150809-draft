@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.2 2004/04/09 23:24:53 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.3 2004/04/10 00:51:40 lv Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -17,6 +17,16 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# -fPIC is needed on amd64 because some applications are using live
+	# to make shared libraries, which wont work without -fPIC on that
+	# arch. The build system used isn't advanced enough to easily
+	# specify that the test programs dont need to be PIC themselves,
+	# and makefiles are generated on the fly, so I'm adding it as a
+	# global flag.
+	# Travis Tilley <lv@gentoo.org> 09 Apr 2004
+	use amd64 && append-flags -fPIC
+
 	sed -i.orig -e "s:-O:${CFLAGS} -Wno-deprecated:" config.linux
 	epatch ${FILESDIR}/gcc-3.3.patch
 	#quick fix, something better will follow.
