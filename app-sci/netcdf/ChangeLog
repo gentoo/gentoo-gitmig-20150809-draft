@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/netcdf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.9 2004/02/17 20:03:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.10 2004/03/03 13:37:45 phosphan Exp $
+
+  03 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> netcdf-3.5.0-r3.ebuild:
+  Some arches were missing in -r3 that were added to -r2, assume it was a
+  mistake.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> netcdf-3.5.0-r3.ebuild:
   stable on alpha and ia64 for the sake of dev-python/ScientificPython
