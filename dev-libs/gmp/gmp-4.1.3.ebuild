@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.10 2004/10/19 08:36:19 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.3.ebuild,v 1.11 2004/11/06 02:11:08 kloeri Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE="debug"
 
 DEPEND="sys-apps/gawk
