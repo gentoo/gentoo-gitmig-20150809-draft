@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r1.ebuild,v 1.6 2002/12/04 22:54:59 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r1.ebuild,v 1.7 2002/12/07 14:33:12 bjb Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/qt-x11-free-${PV}
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
 LICENSE="QPL-1.0"
-KEYWORDS="x86 ppc ~sparc ~sparc64"
+KEYWORDS="x86 ppc alpha ~sparc ~sparc64"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
@@ -56,6 +56,11 @@ src_unpack() {
 	    einfo 'Using environment definition of $CC'
 	    cp qmake.conf qmake.conf.orig
 	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
+	fi
+	# on alpha we need to compile everything with -fPIC
+	if [ ${ARCH} == "alpha" ]; then
+	    cp qmake.conf qmake.conf.orig
+	    sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
 	fi
 
 }
