@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/memprof
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.7 2004/03/13 01:44:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.8 2004/04/06 06:46:44 mr_bones_ Exp $
+
+  05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> memprof-0.5.1.ebuild:
+  IUSE; doc cleanup
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   memprof-0.4.1-r1.ebuild, memprof-0.5.1.ebuild:

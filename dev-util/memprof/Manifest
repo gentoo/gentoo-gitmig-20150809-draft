@@ -1,5 +1,5 @@
-MD5 5a726d9be2dc98a713248a61f13eb5f1 ChangeLog 1176
+MD5 78fc708d90c4d49ce3c7337259ed4492 ChangeLog 1274
 MD5 a4ef6dc90543e00c8f9c7fb98ca79355 memprof-0.4.1-r1.ebuild 857
-MD5 5b6f124d71942d7b952c1964794f050c memprof-0.5.1.ebuild 613
+MD5 e616e0a8afb0a03df6fb5b7dc28cfe40 memprof-0.5.1.ebuild 608
 MD5 76ca5c8cf016f199393f0b6ccb19f336 files/digest-memprof-0.4.1-r1 65
 MD5 ee00fab2d0e5589ad99a99326f00f691 files/digest-memprof-0.5.1 66
