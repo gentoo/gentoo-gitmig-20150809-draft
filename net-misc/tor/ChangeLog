@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.24 2005/01/04 18:50:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.25 2005/01/09 16:07:27 cryos Exp $
+
+  09 Jan 2005; Marcus Hanwell <cryos@gentoo.org> tor-0.0.9.2.ebuild:
+  Marked ~amd64, closes bug 76780.
 
 *tor-0.0.9.2 (04 Jan 2005)
 
