@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.17 2003/03/21 17:26:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.18 2003/04/28 02:15:05 liquidx Exp $
+
+*gnucash-1.8.2-r1 (28 Apr 2003)
+
+  28 Apr 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.2-r1.ebuild:
+  new gnucash that has ofx and hbci support.
+  also depends on new guile-1.6.x
 
 *gnucash-1.8.2 (21 Mar 2003)
 
