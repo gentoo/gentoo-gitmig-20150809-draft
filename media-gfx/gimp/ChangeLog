@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.84 2004/06/30 17:44:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.85 2004/07/15 19:13:26 gustavoz Exp $
+
+  15 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> gimp-2.0.0.ebuild:
+  Ship it on sparc.
 
   30 Jun 2004; Guy Martin <gmsoft@gentoo.org> gimp-2.0.0.ebuild:
   Marked stable on hppa.
