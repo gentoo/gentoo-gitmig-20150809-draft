@@ -539,11 +539,6 @@ sys-apps/mkisofs
 # stuff with deps that are missing; ebuilds have problems so I'm masking them
 net-mail/exmh
 
-
-# <danarmak@gentoo.org> (06 July 2002)
-# short-term mask for testing - see core post for details
-=x11-libs/qt-3.0.4.20020606-r2
-
 # <karltk@gentoo.org> (04 Jul 2002)
 # Has not received any testing.
 =net-www/cocoon-2.0.2
