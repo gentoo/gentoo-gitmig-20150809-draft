@@ -5,7 +5,10 @@
 		The gnome-base category contains core GNOME packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie gnome-base enthält die GNOME Basispakete.
+		Die Kategorie gnome-base enthÃ€lt die GNOME Basispakete.
+	</longdescription>
+	<longdescription lang="es">
+		La catagoría gnome-base contiene los paquetes principales de GNOME.
 	</longdescription>
 </catmetadata>
 

@@ -5,8 +5,11 @@
 		The gnome-extra category contains additional non-core GNOME packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie gnome-extra enthält zusätzliche GNOME-Pakete die nicht
+		Die Kategorie gnome-extra enthÃ€lt zusÃ€tzliche GNOME-Pakete die nicht
 		Teil des Basissystems sind.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría gnome-extra contiene paquetes adicionales de GNOME.
 	</longdescription>
 </catmetadata>
 
