@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tse3
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.3 2003/07/12 18:06:10 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.4 2004/05/25 15:42:59 jhuebel Exp $
+
+  25 May 2004; Jason Eric Huebel <jhuebel@gentoo.org>
+  +files/tse3-0.2.7-size_t-64bit.patch, tse3-0.2.7.ebuild:
+  patch for 64bit systems where size_t != unsigned int. provided by Evgeny
+  Stambulchik <fnevgeny@plasma-gate.weizmann.ac.il>
 
 *tse3-0.2.7 (15 Mar 2003)
 
