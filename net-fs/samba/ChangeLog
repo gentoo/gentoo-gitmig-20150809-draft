@@ -1,8 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.13 2002/08/27 20:39:48 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.14 2002/10/21 02:56:13 mjc Exp $
 
 *samba-2.2.5-r1 (Aug 27 2002)
+
+  20 Oct 2002; Michael Cohen <mjc@gentoo.org> samba-2.2.5-r1.ebuild,
+  added portldap use flag for my nifty ldap stuff coming up.  no need 
+  to bump version.
 
   27 Aug 2002; Donny Davies <woodchip@gentoo.org> samba-2.2.5-r1.ebuid,
   smb.conf.example :

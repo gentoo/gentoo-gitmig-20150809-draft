@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5-r1.ebuild,v 1.3 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5-r1.ebuild,v 1.4 2002/10/21 02:56:13 mjc Exp $
 
 IUSE="tcpd ldap cups ssl acl"
 
@@ -28,6 +28,12 @@ KEYWORDS="x86 ppc sparc64"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
+
+	if use portldap; then
+	cd ${S}/source
+	patch -p0 < $FILESDIR/nonroot-bind.diff || die
+	cd ${S}
+	fi
 
 	# fix kerberos include file collision..
 	cd ${S}/source/include
