@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripperdemo/spacetripperdemo-1.ebuild,v 1.2 2004/02/20 06:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripperdemo/spacetripperdemo-1.ebuild,v 1.3 2004/04/19 20:53:27 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,10 +11,12 @@ SRC_URI="http://www.btinternet.com/%7Ebongpig/${PN}.sh"
 LICENSE="POMPOM"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 S=${WORKDIR}
 
 src_unpack() {
+	check_license
 	unpack_makeself
 }
 
