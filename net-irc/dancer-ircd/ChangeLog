@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/dancer-ircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.13 2004/10/15 20:07:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.14 2004/10/16 18:43:28 vapier Exp $
+
+  16 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  dancer-ircd-1.0.31_p8-r1.ebuild:
+  Clean up ugly ebuild and make sure we install mkpasswd as $PN-mkpasswd #6428.
 
   15 Oct 2004; Sven Wegener <swegener@gentoo.org>
   dancer-ircd-1.0.31_p8-r1.ebuild:
