@@ -1,6 +1,20 @@
 # ChangeLog for net-wireless/linux-wlan-ng
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.30 2004/01/24 22:59:20 nerdboy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.31 2004/02/01 23:33:51 latexer Exp $
+
+*linux-wlan-ng-0.2.0-r3 (01 Feb 2004)
+
+  01 Feb 2004; Peter Johanson <latexer@gentoo.org>
+  linux-wlan-ng-0.1.16_pre4.ebuild, linux-wlan-ng-0.1.16_pre6.ebuild,
+  linux-wlan-ng-0.1.16_pre7.ebuild, linux-wlan-ng-0.1.16_pre8.ebuild,
+  linux-wlan-ng-0.1.16_pre9.ebuild, linux-wlan-ng-0.2.0-r1.ebuild,
+  linux-wlan-ng-0.2.0-r2.ebuild, linux-wlan-ng-0.2.0-r3.ebuild,
+  linux-wlan-ng-0.2.1_pre1.ebuild, linux-wlan-ng-0.2.1_pre2.ebuild,
+  linux-wlan-ng-0.2.1_pre3.ebuild:
+  Added 0.2.0-r3 which works for pcmcia-cs >= 3.2.5 in preparation for 3.2.5
+  getting marked stable and 3.2.7 getting added to portage. Include fix for
+  module-init-tools systems. Cleaned out lots of older dead ebuilds too to make
+  things prettier.
 
 *linux-wlan-ng-0.2.1_pre16 (24 Jan 2004)
 
