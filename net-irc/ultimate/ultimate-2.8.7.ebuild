@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.2 2003/10/27 17:41:55 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-2.8.7.ebuild,v 1.3 2004/02/15 04:36:24 weeve Exp $
 
 MY_P="${P/ultimate-/Ultimate}"
 DESCRIPTION="And IRCd server based on DALnet's DreamForge IRCd."
 SRC_URI="mirror://sourceforge/ultimate/${MY_P}.tar.gz"
 HOMEPAGE="http://www.shadow-realm.org"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug"
