@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Brandon Low <lostlogic@lostlogicx.com>
 # Maintainer: Brandon Low <lostlogic@lostlogicx.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.6 2002/05/08 05:51:47 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.7 2002/05/11 17:04:55 agenkin Exp $
 
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
@@ -12,7 +12,7 @@ RDEPEND="${DEPEND}
 	>=sys-apps/portage-1.9.10"
 
 SRC_URI="http://prdownloads.sourceforge.net/dxr3/${P/-modules/}.tar.gz"
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${P}/modules"
 
 
 src_unpack () {
@@ -24,8 +24,11 @@ src_unpack () {
 	# Portage should determine the version of the kernel sources
 	check_KV
 
-	cd ${S}/modules
+	cd ${S}
 	#Make the em8300 makefile cooperate with our kernel version
+	#and default to NTSC video output, xine and other players
+	#should be able to set this at runtime, but NTSC is a better
+	#default (I think)
 	sed 	-e 's/PAL/NTSC/g' \
 		-e "s/..shell.uname.-r./${KV}/" \
 		Makefile > Makefile.hacked
@@ -35,7 +38,6 @@ src_unpack () {
 
 src_compile ()  {
 
-	cd ${S}/modules
 	make clean all || die
 
 }
@@ -43,16 +45,16 @@ src_compile ()  {
 src_install () {
 
 	insinto "/usr/src/linux/include/linux"
-	doins include/linux/em8300.h
+	doins ../include/linux/em8300.h
 
 	# The driver goes into the standard modules location
 	insinto "/lib/modules/${KV}/kernel/drivers/video"
-	doins modules/em8300.o modules/bt865.o modules/adv717x.o
+	doins em8300.o bt865.o adv717x.o
 		
 	# Docs
-	dodoc modules/README-modoptions \
-	      modules/README-modules.conf \
-	      modules/devfs_symlinks
+	dodoc README-modoptions \
+	      README-modules.conf \
+	      devfs_symlinks
 
 	insinto /etc/modules.d
 	newins ${FILESDIR}/modules.em8300 em8300
