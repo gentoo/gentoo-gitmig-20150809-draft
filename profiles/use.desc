@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.89 2003/04/08 02:02:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.90 2003/04/13 08:59:56 seemant Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -135,6 +135,7 @@ wmf - Adds support for the wmf vector image format
 X - Adds support for XFree86
 Xaw3d - Adds support of the 3d athena widget set
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
+xinerama - Add support for XFree86's xinerama extension, which allows you to stretch your display across multiple monitors
 xml - Check/Support flag for XML library (version 1)
 xml2 - Check/Support flag for XML library (version 2)
 xmms - Check/Support for XMMS (X MultiMedia System) player.
