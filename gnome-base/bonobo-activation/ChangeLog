@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/bonobo-activation
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.31 2004/02/06 16:48:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.32 2004/05/26 10:49:16 gmsoft Exp $
+
+  26 May 2004; Guy Martin <gmsoft@gentoo.org> bonobo-activation-2.2.4.ebuild:
+  Marked stable on hppa.
 
   06 Feb 2004; <gustavoz@gentoo.org> bonobo-activation-2.2.4.ebuild:
   stable on sparc
