@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.2 2002/06/29 17:51:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.3 2002/06/30 03:09:40 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -40,6 +40,7 @@ src_unpack() {
 	# Azarah - 29 Jun 2002
 	#
 	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0476.html
+	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0589.html
 	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff || die
 	
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
