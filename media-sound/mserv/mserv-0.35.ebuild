@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.1 2004/03/11 08:23:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.2 2004/03/12 03:53:06 eradicator Exp $
 
 inherit webapp-apache eutils
 
@@ -21,10 +21,6 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	 net-www/apache
 	 oggvorbis? ( media-sound/vorbis-tools )"
 
-S=${WORKDIR}/${P}
-
-webapp-detect
-
 pkg_setup() {
 	enewgroup mserv > /dev/null || die
 	enewuser mserv -1 /bin/false /dev/null mserv -G audio > /dev/null || die
@@ -41,6 +37,8 @@ src_unpack() {
 }
 
 src_compile() {
+	webapp-detect
+
 	econf || die
 	emake || die
 
@@ -50,6 +48,8 @@ src_compile() {
 }
 
 src_install() {
+	webapp-detect
+
 	make DESTDIR=${D} install || die
 
 	dobin support/mservedit support/mservripcd support/mservplay
@@ -94,6 +94,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	webapp-detect
+
 	einfo
 	einfo "The wrapper program 'mservplay' is disabled for"
 	einfo "security reasons.  If you wish to use mservplay"
