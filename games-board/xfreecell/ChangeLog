@@ -1,0 +1,10 @@
+# ChangeLog for games-board/xfreecell
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/ChangeLog,v 1.1 2004/02/25 10:24:30 mr_bones_ Exp $
+
+*xfreecell-1.0.5b (25 Feb 2004)
+
+  25 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  xfreecell-1.0.5b.ebuild, files/xfreecell-1.0.5b-gentoo.patch:
+  initial commit; ebuild and patch supplied by bartron via bug #41713
+
