@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.4 2003/02/12 07:36:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.5 2003/11/18 17:23:32 mholzer Exp $
+
+  18 Nov 2003; Martin Holzer <mholzer@gentoo.org>
+  ati-gatos-4.2.0.11-r1.ebuild:
+  added RESTRICT="nomirror"
 
 *ati-gatos-4.2.0.11-r1 (19 August 2002)
 
