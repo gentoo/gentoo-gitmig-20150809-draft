@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59-r2.ebuild,v 1.2 2002/07/17 09:08:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59-r2.ebuild,v 1.3 2002/08/15 14:47:35 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK Instant Messenger client"
@@ -9,7 +9,7 @@ HOMEPAGE="http://gaim.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=sys-libs/db-1*
