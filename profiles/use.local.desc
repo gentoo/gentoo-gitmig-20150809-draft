@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.7 2003/03/27 10:13:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.8 2003/03/27 10:50:34 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -11,7 +11,7 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
-net-www/mozila:moznomail - If you do NOT want the mail client built with mozilla
+net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
 net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
 net-www/mozilla:moznoxft - blank
 net-www/mozilla:mozp3p - blank
