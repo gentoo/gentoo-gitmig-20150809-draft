@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.2 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.3 2004/04/12 02:06:11 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -18,7 +18,7 @@ LICENSE="Matrox"
 SLOT="${KV}"
 RESTRICT="fetch nostrip"
 
-RDEPEND=">=x11-base/xfree-4.2.0
+RDEPEND="virtual/x11
 	virtual/linux-sources"
 
 matrox_pkg_setup() {
@@ -28,23 +28,34 @@ matrox_pkg_setup() {
 	# Force XFree86 4.3.0, 4.2.1 or 4.2.0 to be installed unless FORCE_VERSION
 	# is set. Need FORCE_VERSION for 4.3.99/4.4.0 compatibility until Matrox
 	# comes up with drivers (spyderous)
-	local INSTALLED_X="`best_version x11-base/xfree`"
-	GENTOO_X_VERSION_REVISION="${INSTALLED_X/x11-base\/xfree-}"
-	GENTOO_X_VERSION="${GENTOO_X_VERSION_REVISION%-*}"
-	if [ "${GENTOO_X_VERSION}" != "4.3.0" ]
+	if has_version "x11-base/xfree"
 	then
-		if [ "${GENTOO_X_VERSION}" != "4.2.1" ]
+		local INSTALLED_X="`best_version x11-base/xfree`"
+		GENTOO_X_VERSION_REVISION="${INSTALLED_X/x11-base\/xfree-}"
+		GENTOO_X_VERSION="${GENTOO_X_VERSION_REVISION%-*}"
+		if [ "${GENTOO_X_VERSION}" -ne "4.3.0" ]
 		then
-			if [ "${GENTOO_X_VERSION}" != "4.2.0" ]
+			if [ "${GENTOO_X_VERSION}" -ne "4.2.1" ]
 			then
-				if [ -n "${FORCE_VERSION}" ]
+				if [ "${GENTOO_X_VERSION}" -ne "4.2.0" ]
 				then
-					GENTOO_X_VERSION="${FORCE_VERSION}"
-				else
-					die "These drivers require XFree86 4.3.0, 4.2.1 or 4.2.0. Do FORCE_VERSION=version-you-want emerge ${PN} (4.3.0, 4.2.1 or 4.2.0) to force installation."
+					if [ -n "${FORCE_VERSION}" ]
+					then
+						GENTOO_X_VERSION="${FORCE_VERSION}"
+					else
+						die "These drivers require XFree86 4.3.0, 4.2.1 or 4.2.0. Do FORCE_VERSION=version-you-want emerge ${PN} (4.3.0, 4.2.1 or 4.2.0) to force installation."
+					fi
 				fi
 			fi
 		fi
+	# xorg-x11 compatibility
+	elif has_version "x11-base/xorg-x11"
+	then
+		if [ "${FORCE_VERSION}" -ne "4.3.0" ]
+		then
+			die "Set FORCE_VERSION=4.3.0 to emerge this. Use at your own risk."
+		fi
+		GENTOO_X_VERSION="${FORCE_VERSION}"
 	fi
 }
 
