@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.21.0.ebuild,v 1.3 2003/08/07 03:34:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-0.21.0.ebuild,v 1.4 2003/12/29 11:33:14 mholzer Exp $
 
 MY_P=${P/pp/++}
 DESCRIPTION="C++ wrapper for the libxml XML parser library"
 HOMEPAGE="http://libxmlplusplus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libxmlplusplus/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
