@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.1 2005/01/08 10:37:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-4.0.ebuild,v 1.2 2005/01/08 10:46:54 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -21,6 +21,7 @@ DEPEND=">=net-libs/libpcap-0.8.3
 
 src_unpack() {
 	unpack ${A}
+	chown -R root:root ${S}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	use ppc64 && gnuconfig_update

@@ -1,10 +1,14 @@
---- Makefile.in.old	2003-12-19 22:25:28.000000000 +0900
-+++ Makefile.in	2004-08-22 19:10:32.854396336 +0900
-@@ -70,7 +70,7 @@
+--- Makefile.in.orig	2005-01-08 20:10:16.535337512 +0930
++++ Makefile.in	2005-01-08 20:11:12.594815176 +0930
+@@ -68,9 +68,9 @@
+ 	@echo 'char libpcap[] = "@V_PCAPVER@";' >> $@
+ 
  install: force
- 	./install-sh -c -s -m 550 -o bin -g @V_GROUP@ $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
- 	./install-sh -c -m 444 -o bin -g bin $(PROG).1 $(DESTDIR)$(MANDEST)/man1/$(PROG).1
+-	./install-sh -c -s -m 550 -o bin -g @V_GROUP@ $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
+-	./install-sh -c -m 444 -o bin -g bin $(PROG).1 $(DESTDIR)$(MANDEST)/man1/$(PROG).1
 -	[ -f /etc/$(PROG) ] || ./install-sh -c -o root -m 644 .trafshow /etc/$(PROG)
++	./install-sh -c -s -m 550 -o root -g @V_GROUP@ $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
++	./install-sh -c -m 444 -o root -g bin $(PROG).1 $(DESTDIR)$(MANDEST)/man1/$(PROG).1
 +	[ -f $(DESTDIR)/etc/$(PROG) ] || ./install-sh -c -o root -m 644 .trafshow $(DESTDIR)/etc/$(PROG)
  
  clean:
