@@ -1,9 +1,15 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.11 2003/06/23 00:21:07 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.12 2003/06/23 12:26:20 mcummings Exp $
 
   22 Jun 2003; <rac@gentoo.org> XML-DT-0.24.ebuild:
   re -x86 -amd64 to fix keywords
+
+*XML-DT-0.24.1 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org> XML-DT-0.24.1.ebuild,
+  XML-DT-0.24.ebuild, XML-DT-0.24.ebuild:
+  Removed 0.24. Author has released .24.1 per problems with makemaker in .24
 
 *XML-DT-0.24 (16 Jun 2003)
 
