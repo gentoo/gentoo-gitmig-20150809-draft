@@ -24,6 +24,7 @@ mmx
 sse
 sse2
 3dnow
+3dnowex
 
 icc
 
