@@ -13,18 +13,13 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="virtual/glibc"
 
 src_compile() {                           
-  cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try pmake
+	./configure --host=${CHOST} --prefix=/opt/gnome || die
+
+	emake || die
 }
 
 src_install() {                               
-  cd ${S}
-  try make prefix=${D}/opt/gnome install
+	make prefix=${D}/opt/gnome install || die
 
-  dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
-
-
-
-

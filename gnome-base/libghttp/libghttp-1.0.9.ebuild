@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9.ebuild,v 1.6 2001/08/23 10:12:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libghttp/libghttp-1.0.9.ebuild,v 1.7 2001/08/31 22:09:09 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,19 +11,19 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="virtual/glibc
-		>=gnome-base/gnome-env-1.0"
+	>=gnome-base/gnome-env-1.0"
 
 src_compile() {
+	./configure --host=${CHOST} --prefix=/opt/gnome 		\
+		    --mandir=/opt/gnome/man || die
 
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
-  try pmake
+	emake || die
 }
 
 src_install() {                               
+	make prefix=${D}/opt/gnome install || die
 
-        try make prefix=${D}/opt/gnome install
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 	docinto html
 	dodoc doc/ghttp.html
 }
-
