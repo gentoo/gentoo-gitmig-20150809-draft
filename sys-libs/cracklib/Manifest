@@ -8,7 +8,7 @@ MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 
 MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
 MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
 MD5 69aa6844bbf39d86cde364729ca9f9dd files/cracklib-2.7-static-lib.patch 1328
-MD5 54fd099e82280ba9b2715f7842615654 files/cracklib-2.7-cross-compile.patch 470
+MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
 MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
 MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
 MD5 70692d376ebaca787743b7e54d7dd49e files/cracklib-2.7-libdir.patch 762
@@ -16,7 +16,7 @@ MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtmbaroRuSHgZdywRAt/SAJ0Y9rZ161B5c29w5EV//LHDOCK9ggCePMbu
-xIO4Mgv+zXIoP/bOfEp9grg=
-=YiPK
+iD8DBQFBt1DuroRuSHgZdywRAnV9AJ9p852DjcAJK+RBYps54nbE9U0GtgCgk/JQ
+PnoEyy9ZMtiOQU5GvP+Hc8o=
+=6iWa
 -----END PGP SIGNATURE-----

@@ -5,5 +5,5 @@
  	$(MAKE) -C util install
  	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
 -	util/mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib util/packer $(DESTDIR)$(DICTPATH)
-+	PATH="${PATH}:./util" mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib packer $(DESTDIR)$(DICTPATH)
++	PATH="${PATH}:./util" mkdict $(SRCDICTS) | PATH="${PATH}:./util" LD_LIBRARY_PATH=cracklib packer $(DESTDIR)$(DICTPATH)
  	touch installed
