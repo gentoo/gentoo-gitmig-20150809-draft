@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.18 2004/07/01 07:55:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.19 2004/07/14 19:18:23 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/apps/graphics/convert/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+IUSE=""
 
 DEPEND="virtual/libc"
 

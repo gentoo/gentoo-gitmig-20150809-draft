@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.94.0125.ebuild,v 1.4 2004/06/24 22:59:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.94.0125.ebuild,v 1.5 2004/07/14 19:19:52 agriffis Exp $
 
 inherit fixheadtails
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/esdl/${P}.src.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND=">=dev-lang/erlang-9b
 	>=media-libs/libsdl-1.2.4"
