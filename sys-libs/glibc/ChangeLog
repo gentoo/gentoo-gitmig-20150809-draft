@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.103 2003/11/16 17:02:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.104 2003/11/18 19:04:15 azarah Exp $
+
+*glibc-2.3.2-r9 (18 Nov 2003)
+
+  18 Nov 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r9.ebuild:
+  - Update CVS branch to 20031115.
+  - With latest versions of glibc, a lot of apps failed on a PaX enabled
+  system with "cannot enable executable stack as shared object requires:
+  Permission denied".  This is due to PaX 'exec-protecting' the stack, and
+  ld.so then trying to make the stack executable due to some libraries not
+  containing the PT_GNU_STACK section.  Add dl_execstack-PaX-support.patch,
+  bug #32960.
+  - We do not want name_insert() in iconvconfig.c to be defined inside
+  write_output() as it causes issues with PaX.
 
 *glibc-2.3.1-r5 (16 Nov 2003)
 
