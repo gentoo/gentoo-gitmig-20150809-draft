@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_ssl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.62 2004/12/29 21:11:58 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.63 2005/01/08 21:43:06 hollow Exp $
+
+*mod_ssl-2.8.22 (08 Jan 2005)
+
+  08 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/10_mod_ssl.conf, +files/default-ssl.conf, +mod_ssl-2.8.22.ebuild:
+  Apache herd package refresh
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
