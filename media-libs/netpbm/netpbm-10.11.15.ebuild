@@ -1,25 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.15.ebuild,v 1.5 2004/06/07 23:33:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.15.ebuild,v 1.6 2004/06/11 13:09:14 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa amd64 ~ia64"
 IUSE="svga jpeg tiff png zlib"
-RESTRICT="nomirror"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	zlib? ( sys-libs/zlib )
-	x86? ( svga? ( media-libs/svgalib ) )"
+	svga? ( media-libs/svgalib )"
 
 src_unpack() {
 	unpack ${A}
@@ -27,24 +25,24 @@ src_unpack() {
 	cp Makefile.config.in Makefile.config
 
 	if use svga ; then
-	echo "LINUXSVGAHDR_DIR = /usr/include" >> Makefile.config
-	echo "LINUXSVGALIB = /usr/lib/libvga.so" >> Makefile.config
+		echo "LINUXSVGAHDR_DIR = /usr/include" >> Makefile.config
+		echo "LINUXSVGALIB = /usr/lib/libvga.so" >> Makefile.config
 	fi
 
 	if use jpeg ; then
-	echo "JPEGLIB = libjpeg.so" >> Makefile.config
+		echo "JPEGLIB = libjpeg.so" >> Makefile.config
 	fi
 
 	if use png ; then
-	echo "PNGLIB = libpng.so" >> Makefile.config
+		echo "PNGLIB = libpng.so" >> Makefile.config
 	fi
 
 	if use tiff ; then
-	echo "TIFFLIB = libtiff.so" >> Makefile.config
+		echo "TIFFLIB = libtiff.so" >> Makefile.config
 	fi
 
 	if use zlib ; then
-	echo "ZLIB = libz.so" >> Makefile.config
+		echo "ZLIB = libz.so" >> Makefile.config
 	fi
 
 	# Sparc support ...
@@ -55,8 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
-	MAKEOPTS="${MAKEOPTS} -j1"
-	emake CC="${CC}" CXX="${CXX}"|| die "emake failed"
+	emake -j1 CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" || die "emake failed"
 }
 
 src_install() {

@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r3.ebuild,v 1.6 2004/06/07 23:33:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.5-r3.ebuild,v 1.7 2004/06/11 13:09:14 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha ~hppa ~amd64"
 IUSE="svga"
-RESTRICT="nomirror"
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.2.1
-	x86? ( svga? ( media-libs/svgalib ) )"
+	svga? ( media-libs/svgalib )"
 
 src_unpack() {
 	unpack ${A}
@@ -39,8 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	MAKEOPTS="${MAKEOPTS} -j1"
-	emake CC="${CC}" CXX="${CXX}"|| die "emake failed"
+	emake -j1 CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" || die "emake failed"
 }
 
 src_install() {

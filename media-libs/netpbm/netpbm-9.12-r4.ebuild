@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.16 2004/01/14 17:45:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.17 2004/06/11 13:09:14 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 hppa"
+IUSE=""
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
@@ -24,21 +24,14 @@ src_unpack() {
 	# start fix
 	if [ ${ARCH} = "sparc" ]
 	then
-		filter-flags "-O3"
-		filter-flags "-O2"
-		filter-flags "-O"
+		filter-flags -O3 -O2 -O
 	fi
 	# end fix
 	sed -e "s:-O3:${CFLAGS}:" ${FILESDIR}/${PV}/Makefile.config >Makefile.config
 }
 
 src_compile() {
-	MAKEOPTS="${MAKEOPTS} -j1"
-	local myopts=""
-	[ -n ${CC} ] && myopts="${myopts} CC=\"${CC}\""
-	[ -n ${CXX} ] && myopts="${myopts} CXX=\"${CXX}\""
-	einfo "myopts=${myopts}"
-	emake ${myopts}|| die "Make failed"
+	emake -j1 CC="$(gcc-getCC)" CXX="$(gcc-getCXX)" || die "emake failed"
 }
 
 src_install() {
