@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20030111.ebuild,v 1.2 2003/02/13 15:30:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20040104.ebuild,v 1.1 2004/01/19 21:17:14 blkdeath Exp $
+
+inherit webapp-apache
 
 DESCRIPTION="redirector for squid that intercepts advertising, page counters and some web bugs"
 HOMEPAGE="http://adzapper.sourceforge.net/"
@@ -11,11 +13,19 @@ S="${WORKDIR}/adzap"
 SRC_URI="http://adzapper.sourceforge.net/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND=""
 RDEPEND="net-www/squid"
+
+webapp-detect || NO_WEBSERVER=1
+
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+}
 
 src_unpack() {
 	unpack ${A}
@@ -38,6 +48,11 @@ src_unpack() {
 }
 
 src_install() {
+	webapp-mkdirs
+
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/
+
 	cd ${S}/scripts
 	exeinto /etc/adzapper
 	doexe wrapzap zapchain squid_redirect
@@ -46,7 +61,7 @@ src_install() {
 	doins update-zapper*
 
 	cd ${S}/zaps
-	insinto /home/httpd/htdocs/zaps
+	insinto ${destdir}/zap
 	doins *
 }
 

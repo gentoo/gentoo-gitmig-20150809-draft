@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20031105.ebuild,v 1.1 2003/12/24 20:28:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/adzapper-20031105.ebuild,v 1.2 2004/01/19 21:17:14 blkdeath Exp $
 
 inherit webapp-apache
 
@@ -13,7 +13,7 @@ S="${WORKDIR}/adzap"
 SRC_URI="http://adzapper.sourceforge.net/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
 DEPEND=""
