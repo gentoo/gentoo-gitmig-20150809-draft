@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.8 2005/02/14 17:22:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.9 2005/02/14 19:17:27 eradicator Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -139,7 +139,7 @@ src_compile() {
 	elif [ "$PROFILE_ARCH" = "sparc" ]; then
 		./Configure linux-sparcv8 --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
-	elif [ "$PROFILE_ARCH" = "sparc64-multilib" -a "${ABI}" = "sparc64" ]; then
+	elif [ "${ABI}" = "sparc64" ]; then
 		./Configure linux64-sparcv9 --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	else
