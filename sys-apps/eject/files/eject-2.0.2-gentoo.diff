@@ -1,0 +1,66 @@
+diff -ur eject-2.0.2.orig/Makefile eject-2.0.2/Makefile
+--- eject-2.0.2.orig/Makefile	Sun Feb 14 15:49:02 1999
++++ eject-2.0.2/Makefile	Thu Mar  1 21:52:09 2001
+@@ -1,24 +1,28 @@
+ # Make file for eject
+ 
++DESTDIR=
++
+ # Default device to eject. Can be a partial name such as "cdrom" or
+ # a full device name such as "/dev/sda4".
+ DEFAULTDEVICE = \"cdrom\"
+ 
+ # Location to install binary. Default is /usr/local/bin. You may
+ # prefer to install it in /usr/bin or /sbin
+-BINDIR	= /usr/local/bin
+-#BINDIR=/usr/bin
++#BINDIR	= /usr/local/bin
++BINDIR=/usr/bin
+ #BINDIR=/usr/sbin
+ 
+ # Location to install man page. Default is /usr/local/man. You may
+ # prefer to install it in /usr/man
+-MANDIR	= /usr/local/man
++#MANDIR	= /usr/local/man
+ #MANDIR	= /usr/man
++MANDIR	= /usr/share/man
+ 
+ # File permissions for binary. Use MODE=4555 if you want to install it
+ # setuid root (see man page).
+-MODE	= 555
++#MODE	= 555
+ #MODE	= 4555
++MODE	= 755
+ 
+ # Compiler to use
+ CC	= gcc
+@@ -29,14 +33,15 @@
+ # Preprocessor options
+ # Define -DGETOPTLONG if you have GNU getopt_long()
+ # -I options are needed for some systems that do not have /usr/include/scsi
+-CPPFLAGS = -I/usr/src/linux -I/usr/src/linux/include -DDEFAULTDEVICE=$(DEFAULTDEVICE) -DGETOPTLONG
++CPPFLAGS = -DDEFAULTDEVICE=$(DEFAULTDEVICE) -DGETOPTLONG
+ 
+ # Compile and link options
+ # On a.out systems you might want to add -N when linking
+ # RPM_OPT_FLAGS can be set by rpm tool
+ # ...For production code
+-CFLAGS	= -Wall -O3 $(RPM_OPT_FLAGS)
+-LDFLAGS = -s
++OPT=-O2
++CFLAGS	= -Wall $(OPT)
++LDFLAGS =
+ # ...For debug
+ #CFLAGS	= -Wall -g
+ #LDFLAGS = -g
+@@ -48,8 +53,8 @@
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c eject.c
+ 
+ install: eject
+-	install -m $(MODE) eject $(BINDIR)/eject
+-	install -m 444 eject.1 $(MANDIR)/man1/eject.1
++	install -m $(MODE) eject $(DESTDIR)/$(BINDIR)/eject
++	install -m 644 eject.1 $(DESTDIR)/$(MANDIR)/man1/eject.1
+ 	@for dir in /bin /usr/bin /sbin /usr/sbin /usr/local/bin /usr/local/sbin ; do \
+ 	  test $(BINDIR) = $$dir  && continue ; \
+ 	  if [ -x $$dir/eject ] ; then  \

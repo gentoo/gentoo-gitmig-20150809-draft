@@ -196,8 +196,8 @@ variable settings. The variables you can set are:</p>
 </li><li>DESCRIPTION - a short, one line description of your package
 </li><li>SRC_URI - the URIs for every source file in your package, separated by whitespace; normally the first one is something like "ftp://ftp.company.com/pub/somepackage/${A}"
 </li><li>HOMEPAGE - your package's homepage
-</li><li>DEPEND - build dependencies; see the section "Package Dependencies"
-</li><li>RDEPEND - runtime dependencies; see the section "Package Dependencies"
+</li><li>DEPEND - build dependencies; see the section <a href="#dependencies">Package Dependencies</a>
+</li><li>RDEPEND - runtime dependencies; see the section <a href="#dependencies">Package Dependencies</a>
 </li></ul>
 <p>
 </body>
@@ -215,8 +215,13 @@ variable settings. The variables you can set are:</p>
 
 <section>
 <title>Introduction to the FHS</title>
-<body><p><!-- todo -->
-</p></body>
+<body>
+<p>The filesystem standard used in Gentoo Linux is the FHS,
+short for Filesystem Heirarchy Standard, version 2.0. A simplified
+description of the standard is given here; for a complete
+specification go to <a href="http://www.ibiblio.org/pub/Linux/docs/fhs/">http://www.ibiblio.org/pub/Linux/docs/fhs/</a>.</p>
+<p></p>
+</body>
 </section>
 
 <section>
@@ -233,12 +238,9 @@ variable settings. The variables you can set are:</p>
 <title>Public Scripts</title>
 <body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
 <ul>
-<li>ebuild
-</li><li>portage-merge
-</li><li>portage-unmerge
-</li><li>portage-maintain
-</li><li>pkgmerge
-</li><li>pkgname
+<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages
+</li><li>portage-maintain - compares the list of available and merged packages to show which can be upgraded
+</li><li>pkgmerge - merges a pre-packaged .tbz2 file for a package
 </li></ul>
 </body>
 </section>
@@ -282,7 +284,7 @@ variable settings. The variables you can set are:</p>
 </li><li>newlib.so
 </li><li>newman
 </li><li>newsbin
-</li><li>pkgmerge
+</li><li>pkgname - splits up a package name into its individual parts, i.e. its name, version, and release number
 </li><li>pmake
 </li><li>portage-maintain
 </li><li>prepall
