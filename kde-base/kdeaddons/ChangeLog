@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.41 2003/06/22 18:43:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.42 2003/06/29 22:51:03 darkspecter Exp $
+
+  30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> kdeaddons-3.1.1.ebuild:
+  set ppc in keywords
 
   21 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
   Removed old ebuilds: 3.0.5a, 3.1, 3.1.1-r1
