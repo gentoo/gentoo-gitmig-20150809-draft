@@ -6,12 +6,14 @@ MD5 a4010ca341fd815df8a6875a8fe289ef openldap-2.0.27.ebuild 2306
 MD5 7e223bf5e395fd7b935ed34f7833724a openldap-2.0.25-r1.ebuild 2420
 MD5 fff1c376523766e56dcb20916ee25919 openldap-2.0.27-r2.ebuild 3025
 MD5 723f02b57b67b7ccb28d48607c7abebb openldap-2.1.12.ebuild 3337
-MD5 0ad2ae20bfc88dd60175304517d99988 ChangeLog 8055
+MD5 81332ac5e039189b8294784c6b2f1632 ChangeLog 8307
+MD5 96f1a55e84f17cde24d9f1a7db6d39fb openldap-2.0.27-r4.ebuild 4773
 MD5 44c7dbcfe29bc1df9e576e5010c4674f files/slapd-2.1.conf 251
 MD5 32822e9d47a48af3b1da7e5a3c5c6229 files/digest-openldap-2.0.25-r1 65
 MD5 32822e9d47a48af3b1da7e5a3c5c6229 files/digest-openldap-2.0.25-r2 65
 MD5 bc676758f2d1726b75e1d04fd936d029 files/digest-openldap-2.0.27-r2 65
 MD5 bc676758f2d1726b75e1d04fd936d029 files/digest-openldap-2.0.27-r3 65
+MD5 bc676758f2d1726b75e1d04fd936d029 files/digest-openldap-2.0.27-r4 65
 MD5 2f3032e2a972520d1a5d428e11a6eb82 files/openldap-2.0.27-db3-gentoo.patch 5995
 MD5 8da86adedbe551c680dd6e102dfc303d files/gencert.sh 3505
 MD5 460d3869f98a805e246ce497ac7f5dc5 files/slapd-2.1.rc6 614
