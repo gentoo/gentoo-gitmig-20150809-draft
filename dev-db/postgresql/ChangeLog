@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.35 2002/10/08 23:56:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.36 2002/10/18 11:14:00 mcummings Exp $
 
 *postgresql-7.2.3 (08 Oct 2002)
+
+  18 Oct 2002; <mcummings@gentoo.org>
+
+  Added perl patch fix
 
   08 Oct 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.3.ebuild :
 
