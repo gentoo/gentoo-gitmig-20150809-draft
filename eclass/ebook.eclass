@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.9 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.10 2003/05/06 17:37:03 mholzer Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -44,11 +44,17 @@ fi
     _ebooksrcdir="${_src}"
     _ebookdevhelpfile="${_src}"    
 
+if [ "${EBOOKEXT}" = "" ]; then
+	ext="tar.gz"
+else
+	ext="${EBOOKEXT}"
+fi
+
 if [ "${SRC}" = "" ]; then
     SRC="${_src}"
 fi
 if [ "${SRC_URI}" = "" ]; then
-    SRC_URI="http://lidn.sourceforge.net/books_download/${SRC}.tar.gz"
+    SRC_URI="http://lidn.sourceforge.net/books_download/${SRC}.${ext}"
 fi    
     
 # Default directory to install de ebook devhelped book
@@ -71,10 +77,10 @@ if [ "${EBOOKDEVHELPFILE}" = "" ]; then
     EBOOKDEVHELPFILE=${_ebookdevhelpfile}
 fi
 
-S=${WORKDIR}/${EBOOKSRCDIR}
+S=${WORKDIR}
 ebook_src_unpack() {
 	debug-print-function $FUNCNAME $*
-	unpack ${SRC}.tar.gz
+	unpack ${SRC}.${ext}
 }
 
 ebook_src_install() {
