@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.2 2001/04/27 22:58:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.3 2001/04/28 20:02:57 achim Exp $
 
 P=wvdial-1.41
 A=${P}.tar.gz
@@ -19,8 +19,8 @@ src_compile() {
 
 src_unpack() {
     unpack ${A}
-#	doesn't seem to be needed anymore
-#   patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+    #doesn't seem to be needed anymore
+    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
     cd ${S}
     cp rules.mk rules.mk.orig
     sed -e "s/-g//g" -e "s/-O6/${CFLAGS}/" rules.mk.orig > rules.mk
