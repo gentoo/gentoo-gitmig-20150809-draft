@@ -1,10 +1,16 @@
 # ChangeLog for net-mail/ximian-connector
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.4 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.5 2003/01/27 01:45:09 nall Exp $
+
+*ximian-connector-1.2.1_p2 (18 Nov 2002)
+
+  26 Jan 2003; Jon Nall <nall@gentoo.org> ximian-connector-1.2.1_p2.ebuild :
+  modified to use latest release from ximian. also added get_connector.py 
+  script to download directions
+
+*ximian-connector-1.2.0 (18 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*ximian-connector-1.2.0 (18 Nov 2002)
 
   19 Nov 2002; Jon Nall <nall@gentoo.org> ximian-connector-1.2.0.ebuild :
   ximian's license doesn't allow redistribution of binaries. therefore,

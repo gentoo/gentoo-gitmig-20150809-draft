@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.0.ebuild,v 1.4 2003/01/27 01:45:09 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ximian-connector-1.2.1_p2.ebuild,v 1.1 2003/01/27 01:45:15 nall Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -20,25 +20,32 @@ elif [ `use x86` ]; then
 	XIMIAN_ARCH="i386"
 fi
 
-XIMIAN_REV=$(( `echo ${PR} | sed -e "s/r//"` + 1 ))
+# make the ximian rev from the package version
+# 1.2.1_p2 should result in 1.2.1-2
+XIMIAN_REV=`echo ${PV} | sed -e "s/_p/-/"`
 
-SRC_URI="${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.rpm"
+SRC_URI="${PN}-${XIMIAN_REV}.ximian.1.${XIMIAN_ARCH}.rpm"
 
 DEPEND="app-arch/rpm2targz
-        >=net-mail/evolution-1.2.0*"
-RDEPEND=">=net-mail/evolution-1.2.0*"
+        >=net-mail/evolution-1.2.1*"
+RDEPEND=">=net-mail/evolution-1.2.1*"
 
 pkg_setup() {
-        if [ ${ARCH} != "x86" && ${ARCH} != "ppc" ] ; then
+        if [ "${ARCH}" != "x86" -a "${ARCH}" != "ppc" ]
+		then
                 einfo "This package is only available for x86 and ppc, sorry"
                 die "Not supported on your ARCH"
         fi
 }
 
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${SRC_URI} ] ; then
+	if [ ! -f ${DISTDIR}/${SRC_URI} ]
+	then
 			einfo
-			einfo "Please download ${SRC_URI} from Ximian's redcarpet"
+			einfo "Please download ${SRC_URI} from Ximian's website"
+			einfo "The script at http://cvs.gentoo.org/~nall/get_connector.py"
+			einfo "might be useful."
+			einfo 
 			einfo "after it downloads, place the rpm in ${DISTDIR}"
 			einfo "NOTE: Ximian connector requires the purchase of a"
 			einfo "key from Ximian to function properly."
@@ -47,8 +54,8 @@ src_unpack() {
 	fi
 
 	rpm2targz ${DISTDIR}/${A}
-	mv ${WORKDIR}/${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.tar.gz ${DISTDIR}
-	unpack ${P}-${XIMIAN_REV}.ximian.${XIMIAN_REV}.${XIMIAN_ARCH}.tar.gz
+	mv ${WORKDIR}/${PN}-${XIMIAN_REV}.ximian.1.${XIMIAN_ARCH}.tar.gz ${DISTDIR}
+	unpack ${PN}-${XIMIAN_REV}.ximian.1.${XIMIAN_ARCH}.tar.gz
 }
 
 src_install() {
