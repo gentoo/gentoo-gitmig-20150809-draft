@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.5-r1.ebuild,v 1.3 2004/03/13 09:34:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/smpeg-xmms-0.3.5-r1.ebuild,v 1.4 2004/04/22 06:26:38 eradicator Exp $
+
+inherit eutils
 
 IUSE="sdl"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A MPEG Plugin for XMMS"
 SRC_URI="ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/${P}.tar.gz"
 HOMEPAGE="http://www.xmms.org/plugins_input.html"

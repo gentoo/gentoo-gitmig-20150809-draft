@@ -1,6 +1,10 @@
 # ChangeLog for media-video/smpeg-xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.8 2004/03/13 09:34:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.9 2004/04/22 06:26:38 eradicator Exp $
+
+  21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  smpeg-xmms-0.3.5-r1.ebuild:
+  Inherit eutils.
 
   13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   smpeg-xmms-0.3.5-r1.ebuild:
