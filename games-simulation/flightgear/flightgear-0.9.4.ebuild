@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.2.ebuild,v 1.3 2004/02/10 13:04:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.1 2004/04/02 21:43:25 seemant Exp $
 
-inherit games
+inherit games flag-o-matic
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
@@ -15,9 +15,9 @@ SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
-DEPEND="=dev-games/simgear-0.3.3*
+DEPEND="=dev-games/simgear-0.3.5*
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -26,6 +26,16 @@ src_unpack() {
 	sed -i \
 		-e 's:#include <simgear/screen/jpgfactory.hxx>:#include <simgear/screen/jpgfactory.hxx-faile-include>:g' \
 		configure || die "sed configure failed"
+}
+
+src_compile() {
+	use hppa && replace-flags -march=2.0 -march=1.0
+	egamesconf \
+		--with-multiplayer \
+		--with-network-olk \
+		--with-threads \
+		--with-x || die
+	emake || make || die
 }
 
 src_install() {

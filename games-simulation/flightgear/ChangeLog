@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.5 2003/11/11 02:52:26 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.6 2004/04/02 21:43:25 seemant Exp $
+
+*flightgear-0.9.4 (02 Apr 2004)
+
+  02 Apr 2004; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.2.ebuild,
+  flightgear-0.9.4.ebuild:
+  version bump. thanks to: Stefan Lesicnik <lists@lsd.za.com> in bug #46464
 
   10 Nov 2003; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.2.ebuild,
   flightgear-0.9.3.ebuild:
