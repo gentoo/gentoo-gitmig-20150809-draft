@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.nomachine.com/download/nxclient/RedHat-9.0/nxclient-${MY_PV}
 DEPEND=">=media-libs/jpeg-6b-r3
 	>=sys-libs/glibc-2.3.2-r1
 	>=sys-libs/zlib-1.1.4-r1
-	>=x11-base/xfree-4.3.0-r2
+	virtual/x11
 	>=net-misc/nxssh-1.3.0
 	>=net-misc/nxproxy-1.3.0
 	>=dev-libs/expat-1.95.6-r1
