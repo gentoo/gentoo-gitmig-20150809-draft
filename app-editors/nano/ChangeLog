@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.53 2004/06/02 01:43:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.54 2004/06/05 12:29:46 tuxus Exp $
+
+  05 Jun 2004; <tuxus@gentoo.org> nano-1.3.2.ebuild:
+  Stable on mips
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> nano-1.2.2.ebuild:
   Fix use invocation
