@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.5 2004/02/22 15:58:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.6 2004/03/02 16:43:56 iggy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nano-editor.org/dist/v1.3/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ppc64 s390"
 IUSE="nls build spell justify debug slang nomac wsconvert"
 
 DEPEND=">=sys-libs/ncurses-5.2
