@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.2.0.ebuild,v 1.1 2003/09/21 04:33:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.2.0.ebuild,v 1.2 2003/09/21 04:36:41 vapier Exp $
 
 inherit games eutils
 
 S=${WORKDIR}
-DESCRIPTION="A server for a multi-player mod for GTA3"
+DESCRIPTION="A server for a multi-player mod for GTA3: Vice City"
 HOMEPAGE="http://mtavc.com/"
 SRC_URI="MTAServer-Linux-${PV}.tar.gz"
 
