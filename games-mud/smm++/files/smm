@@ -1,9 +1,0 @@
-#!/usr/bin/wish
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/smm++/files/smm,v 1.1 2004/09/02 09:59:54 mr_bones_ Exp $
-
-set SMMPATH		$env(HOME)/.smm
-set SMMSRCPATH		GENTOODIR
-set SMMMAPWINDOW	0
-source $SMMSRCPATH/sources/startup.tcl
