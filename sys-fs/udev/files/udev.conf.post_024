@@ -1,5 +1,5 @@
 # /etc/udev/udev.conf:  main config file for udev
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/udev.conf.post_024,v 1.1 2004/04/21 23:57:04 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/udev.conf.post_024,v 1.2 2004/06/07 22:36:18 gregkh Exp $
 #
 # This file can be used to override some of udev's default values
 # for where it looks for files, and where it places device nodes.
@@ -24,7 +24,7 @@ udev_permissions="/etc/udev/permissions.d/"
 #                NOTE: do not set to anything else if you are not
 #                      sure you have everything needed for normal
 #                      user to function in the permissions file!
-default_mode="0666"
+default_mode="0660"
 
 # udev_log - set to "yes" if you want logging
 udev_log="no"

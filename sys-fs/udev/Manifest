@@ -1,9 +1,10 @@
-MD5 4a5ee025c80113b3b58b6676ea41e763 ChangeLog 10156
+MD5 6c97db9cdf1d7dd818f5fb544cefe814 ChangeLog 10330
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
 MD5 b1bbaa88170bd37fdd6af983e701cd90 udev-016-r2.ebuild 3727
 MD5 45db5cce6c6e4b5af07d0bb3ecf8e307 udev-024-r1.ebuild 3731
 MD5 67c56623dc9356124a926a6061aad909 udev-025-r1.ebuild 3821
 MD5 a6c3a71920f59dc127d418d7ba3c6a77 files/digest-udev-016-r2 62
+MD5 7ce9bba52fe0dc39b7b2ced37200fce2 files/udev.conf.post_024 1189
 MD5 cf9750c462c35531234ccb5f59b02e6b files/udev-015-no-wait-for-sleep.patch 1617
 MD5 61060bbdbb2d023f1b3ed90beabd89de files/udev-016-logging-config-option.patch 4070
 MD5 d0a7b64f76b612bef576c02a48e83caf files/udev-017-no-wait-for-sleep.patch 1673
@@ -17,4 +18,3 @@ MD5 ba39120cb35ab65a5b77b9036cc83beb files/udev.rules-018 4366
 MD5 5a1604faa5c8a1b5cf7a6a66f13fe226 files/udev.rules.post_012 4185
 MD5 882b525738c554bce2449356cd1fb9c5 files/digest-udev-024-r1 61
 MD5 63c1b792a1470ccaa74195f5debacd2f files/digest-udev-025-r1 61
-MD5 c8041b32f9adf7ab1c2c122787ae2980 files/udev.conf.post_024 1189
