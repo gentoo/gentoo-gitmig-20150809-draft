@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8-r1.ebuild,v 1.1 2002/03/24 08:21:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8-r1.ebuild,v 1.2 2002/04/09 22:07:33 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Object Activation Framework for GNOME"
@@ -27,29 +27,30 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
+	libtoolize --copy --force
+	
+	local myconf=""
 	if [ -z "`use nls`" ]
 	then
 		myconf="--disable-nls"
 	fi
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --mandir=/usr/share/man				\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    ${myconf} || die
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		${myconf} || die
 
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     mandir=${D}/usr/share/man					\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/var/lib \
+		install || die
 
 	dodoc AUTHORS COPYING* ChangeLog README
 	dodoc NEWS TODO
@@ -58,3 +59,4 @@ src_install() {
 pkg_postinst() {
 	ldconfig -r ${ROOT}
 }
+
