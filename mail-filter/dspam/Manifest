@@ -5,7 +5,7 @@ MD5 8a9f63381b83ec61043b30b73e198a7c dspam-3.3.11.ebuild 15365
 MD5 131ec22d19be622c4c86cc770e92064d dspam-3.3.8.ebuild 15592
 MD5 20edea3ad0550b84c620b0f70ea32411 dspam-3.4_beta1.ebuild 15468
 MD5 8be11ce1e8a5c7ea096a504c1079ccad dspam-3.4_beta2.ebuild 15468
-MD5 0a7bbfc7be6e87f0175737ce7786d113 dspam-3.4_beta3.ebuild 15468
+MD5 b3cdda2355a6fdf587d875cdd8428004 dspam-3.4_beta3.ebuild 15463
 MD5 dbfbe5a3bbe3347938107f5f5bd2197e metadata.xml 308
 MD5 c12a54112c6fec3530a7b1a368d04ac8 files/README.postfix 309
 MD5 e0469b961385fda4305602dc2519d319 files/README.qmail 2317

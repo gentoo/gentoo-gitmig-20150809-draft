@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_beta3.ebuild,v 1.1 2005/02/17 00:11:12 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_beta3.ebuild,v 1.2 2005/02/17 07:53:23 st_lim Exp $
 
 inherit eutils
 
@@ -13,10 +13,11 @@ HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
 IUSE="debug mysql neural oci8 postgres sqlite large-domain"
-DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
+DEPEND="mysql? ( >=dev-db/mysql-3.23 )
 		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( >=dev-db/sqlite-3 )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
+		>=sys-libs/db-4.0
 		"
 RDEPEND="sys-apps/cronbase
 		app-admin/logrotate"
