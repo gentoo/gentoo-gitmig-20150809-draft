@@ -3,6 +3,9 @@
 	mysql_connect( 'localhost', '##USER##', '##PASS##' );
 	mysql_select_db( '##DB##' );
 
+	// tags to allow for output
+	$allow_tags = "<a>,<br>,<b>,<u>";
+
 	if ( !isset($uid) ) {
 		$uid = 0;
 		session_register( 'uid' );
@@ -129,7 +132,11 @@ global $uid, $dbusername, $show_privates, $list; ?>
 
 <?php function print_todo( $title, $tid, $owner, $date, $public, $priority, $longdesc ) {
 	// all args should be passed hot off the database
-	global $list, $uid;
+	global $list, $uid, $allow_tags;
+
+	// strop unacceptable tags
+	$title = strip_tags( $title, $allow_tags );
+	$longdesc = strip_tags( $longdesc, $allow_tags );
 
 	$date = date( "j M Y", $date );
 

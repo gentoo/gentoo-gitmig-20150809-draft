@@ -95,6 +95,9 @@
 	$developer = mysql_query( 'select username from users where uid='.$todo['owner'] );
 	list( $developer ) = mysql_fetch_row( $developer );
 
+	$todo['title'] = strip_tags( $todo['title'], $allow_tags );
+	$todo['longdesc'] = strip_tags( $todo['longdesc'], $allow_tags );
+
 ?>
 <p>&nbsp;</p>
 <?php if ( $theirs ) { ?><form method="post" action="single.php?action=<?php if ( $action == 'new_todo' ) print 'new_todo'; else print 'update'; ?>"> <?php } ?>
