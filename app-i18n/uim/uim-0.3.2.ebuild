@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.0.1.ebuild,v 1.2 2004/03/07 16:52:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.2.ebuild,v 1.1 2004/03/07 16:52:01 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/Software/UimDownload/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="~x86 ~alpha"
 
 S="${WORKDIR}/${P}"
 
@@ -68,6 +68,8 @@ pkg_postinst() {
 	einfo "To use uim-prime you should emerge app-i18n/prime and make sure you have"
 	einfo ">=dev-libs/suikyo-1.3.0."
 	einfo
+	ewarn "If you are upgrading from uim-0.3.1 and using uim-skk, please check your"
+	ewarn "~/.skk-uim-jisyo and remove katakana index entry if any."
 
 	if [ "`use gtk`" ] ; then
 		gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
