@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.7.ebuild,v 1.2 2003/11/17 06:18:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.7.ebuild,v 1.3 2003/12/08 06:31:42 brad Exp $
 
 inherit nsplugins eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	src_mv_plugins /opt/MozillaFirebird/plugins
 
 	# Fixing permissions
-	chown -R root.root ${D}/opt/MozillaFirebird
+	chown -R root:root ${D}/opt/MozillaFirebird
 
 	# Truetype fonts
 	cd ${D}/opt/MozillaFirebird/defaults/pref

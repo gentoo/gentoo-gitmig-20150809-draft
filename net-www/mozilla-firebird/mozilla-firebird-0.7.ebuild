@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.11 2003/12/05 20:01:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.12 2003/12/08 06:30:37 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -210,7 +210,7 @@ src_install() {
 	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaFirebird
 
 	#fix permissions
-	chown -R root.root ${D}/usr/lib/MozillaFirebird
+	chown -R root:root ${D}/usr/lib/MozillaFirebird
 
 	# Plugin path setup (rescuing the existent plugins)
 	src_mv_plugins /usr/lib/MozillaFirebird/plugins
