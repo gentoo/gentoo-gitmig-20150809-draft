@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.10.ebuild,v 1.2 2004/02/12 22:45:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.10.ebuild,v 1.3 2004/05/30 09:21:49 robbat2 Exp $
 
 DESCRIPTION="Sendmail restricted shell, for use with MTAs other than Sendmail."
 HOMEPAGE="http://www.sendmail.org"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 DEPEND="sys-devel/m4
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
-	!net-mail/sendmail"
+	!mail-mta/sendmail"
 
 S="${WORKDIR}/sendmail-${PV}"
 
