@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.6 2005/01/01 23:04:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.7 2005/01/02 16:26:32 genstef Exp $
+
+  02 Jan 2005; Stefan Schweizer <genstef@gentoo.org> fuse-1.4.ebuild:
+  Back to the old fuse-1.4.ebuild, 1.4 has obviously a more broken
+  build-system than 2.1 and therefore does not work with linux-mod
 
   02 Jan 2005; Stefan Schweizer <genstef@gentoo.org> :
   Version 1.4 stable on x86
