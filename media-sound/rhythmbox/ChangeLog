@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/rhythmbox
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.13 2003/08/17 12:06:38 g2boojum Exp $
+
+*rhythmbox-0.5.0 (17 Aug 2003)
+
+  17 Aug 2003; Nick Hadaway <raker@gentoo.org> rhythmbox-0.5.0.ebuild:
+  New ebuild.  See bug #26789 for the plea.  gstreamer support will
+  be added in once gst-plugins-{vorbis,cdparanois} are unmasked and
+  the mad plugin is added to portage.
