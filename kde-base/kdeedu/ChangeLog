@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeedu
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.5 2002/08/01 19:41:08 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.6 2002/08/19 09:36:04 danarmak Exp $
+
+*kdeedu-3.0.3 (19 Aug 2002)
+
+  19 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New bugfix release. Enjoy!
 
 *kdeedu-3.0.2 (03 Jul 2002)
 

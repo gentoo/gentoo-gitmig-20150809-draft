@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.9 2002/08/01 19:42:19 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.10 2002/08/19 09:36:04 danarmak Exp $
+
+*kdegraphics-3.0.3 (19 Aug 2002)
+
+  19 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New bugfix release. Enjoy!
 
 *kdegraphics-3.0.2 (03 Jul 2002)
 
