@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4-r1.ebuild,v 1.3 2005/02/07 20:35:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4-r1.ebuild,v 1.4 2005/02/28 21:35:49 kito Exp $
 
 inherit eutils
 
@@ -25,7 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable static` || die "./configure failed"
+	use ppc-macos && myconf="--with-libdvdcss=/usr"
+	econf ${myconf} `use_enable static` || die "./configure failed"
 	emake || die "make failed"
 }
 
