@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.1.ebuild,v 1.1 2004/11/21 21:41:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.1.ebuild,v 1.2 2004/11/23 20:03:35 eradicator Exp $
 
 IUSE="oggvorbis"
 
@@ -17,7 +17,11 @@ DEPEND="oggvorbis? ( media-libs/libogg
 	media-libs/libmad"
 
 src_compile() {
-	econf $(use_enable oggvorbis ogg) || die "econf failed"
+	local myconf
+
+	# --enable-ogg doesn't enable ogg...
+	use oggvorbis || myconf="--disable-ogg"
+	econf ${myconf} || die "econf failed"
 
 	emake || die "build failed"
 }
