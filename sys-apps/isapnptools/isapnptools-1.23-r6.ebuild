@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.23-r1.ebuild,v 1.2 2001/09/02 04:13:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/isapnptools-1.23-r6.ebuild,v 1.1 2001/09/02 04:13:09 woodchip Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -37,7 +37,7 @@ src_install() {
     dodoc doc/README*  doc/*.txt test/*.txt
     dodoc etc/isapnp.*
 
-    exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/isapnp.rc5 isapnp
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/isapnp.rc6 isapnp
 
 }

@@ -1,0 +1,18 @@
+#!/bin/sh
+#RCUPDATE:boot:25:This line is required for script management
+#This will enumerate the ISA PnP Boards in the system, and configure them if
+#it finds the file $CONFFILE
+
+source /etc/rc.d/config/functions
+
+CONFFILE=/etc/isapnp.conf
+
+if [ -e $CONFFILE ]; then
+	if [ -e /sbin/isapnp ]
+	then
+		ebegin "Configuring ISA PnP devices"
+		/sbin/isapnp $CONFFILE 1>&2
+		eend $? "Error configuring ISA PnP"
+	fi
+fi
+

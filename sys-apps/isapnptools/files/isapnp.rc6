@@ -1,0 +1,16 @@
+#!/sbin/runscript
+
+depend() {
+	need localmount
+}
+
+start() {
+if [ -e /etc/isapnp.conf ]; then
+	if [ -e /sbin/isapnp ]
+	then
+		ebegin "Configuring ISA PnP devices"
+		/sbin/isapnp /etc/isapnp.conf 1>&2
+		eend $? "Error configuring ISA PnP"
+	fi
+fi
+}
