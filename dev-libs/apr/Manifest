@@ -2,15 +2,19 @@
 Hash: SHA1
 
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 8b655bfa4ae67ae4274f0de466f84a30 ChangeLog 2229
+MD5 3c9c2cd8ff38d18caaa37aa29c18bdd3 ChangeLog 2435
+MD5 aadbec5bc76c5f1060218e1625157190 apr-0.9.6-r1.ebuild 2237
+MD5 10841ca20a4c0947dcf9e2dc5d7e5e93 apr-0.9.5-r1.ebuild 2242
 MD5 8fe47d867b814b5b370b0ee7e0555e1e apr-0.9.5.ebuild 2185
 MD5 068e4d83429849cbae32d8194086efb2 apr-0.9.6.ebuild 2176
+MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r1 62
+MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r1 62
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6 62
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCJsiVjUHll2nfF60RAnRIAKChXRxWD745kejm/S7+w4mMoIthUACdEjlZ
-F0pzQUSzdEw+reUeDW7aCNs=
-=56SA
+iD8DBQFCKRhPjUHll2nfF60RAltjAJ0ekyCbUcVI/CUlQi+m7Jx+mLn/7gCfWayd
+j0fG+TzojL6BOBMtDU0Lh0U=
+=/pca
 -----END PGP SIGNATURE-----
