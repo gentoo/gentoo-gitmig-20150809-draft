@@ -1,6 +1,7 @@
 MD5 3055eb5bea9721822a0d7f49691566a4 ChangeLog 6780
 MD5 fad70e9b2b45ec8846f83b565fe812e4 bash-completion-20031225.ebuild 1478
 MD5 441d0966dd93e10f2f710b8a2bf3e08a bash-completion-20031215.ebuild 1470
+MD5 1dc8e7503e7e350f3382d37b612178cc metadata.xml 1023
 MD5 f0b200452477f05371b05c637e08107c bash-completion-20031125.ebuild 1458
 MD5 c85a85bd33aac22ae4872c85733e581f files/README.gentoo 491
 MD5 9b22241df7258cb9677cf9a1497e07c5 files/bash-completion 625
@@ -8,5 +9,5 @@ MD5 3c7995eee919c34f968dcde5d7b05ae0 files/digest-bash-completion-20031125 76
 MD5 b8d28a6cbf61ef90046af1b20810498b files/digest-bash-completion-20031225 76
 MD5 e305c1d5975de631e7be98e887a893e2 files/digest-bash-completion-20031215 76
 MD5 f96c9b92f176d02ecb313feb104f8af1 files/gentoo.completion 15731
-MD5 f84b4350433e3f579107d1da4a30332f files/gentoo.completion-20031225 16312
-MD5 f84b4350433e3f579107d1da4a30332f files/gentoo.completion-20031215 16312
+MD5 53adaff03778976e18fbc32c4ae59387 files/gentoo.completion-20031225 16310
+MD5 53adaff03778976e18fbc32c4ae59387 files/gentoo.completion-20031215 16310
