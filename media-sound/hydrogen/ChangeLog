@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.21 2004/10/20 05:29:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.22 2004/11/07 22:04:20 chriswhite Exp $
+
+*hydrogen-0.9.0 (08 Nov 2004)
+
+  08 Nov 2004; Chris White <chriswhite@gentoo.org> +hydrogen-0.9.0.ebuild:
+  Version bump to 0.9.0 per bug 68418. Thanks goes to Eric Shattow for providing
+  the ebuild.
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -hydrogen-0.8.1-r1.ebuild, -hydrogen-0.8.1.ebuild,
