@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9.ebuild,v 1.2 2003/06/03 07:35:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.0.9.ebuild,v 1.3 2003/09/07 00:11:41 msterret Exp $
 
 IUSE="ldap"
 
@@ -18,13 +18,13 @@ KEYWORDS="x86"
 
 src_compile() {
 	local myconf
-	
+
 	use ldap \
 		&& myconf="${myconf} --without-ldap" \
 		|| myconf="${myconf} --with-ldap"
-	
+
 	myconf="${myconf} --sysconfdir=/etc/amd"
-	
+
 	cd ${S}
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"

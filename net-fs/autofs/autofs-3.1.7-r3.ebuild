@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.9 2003/05/25 15:00:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.10 2003/09/07 00:11:41 msterret Exp $
 
 IUSE="ldap"
 
@@ -23,7 +23,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use ldap || myconf="--without-openldap"
-	export HAVE_LDAP=1 
+	export HAVE_LDAP=1
 	export LIBLDAP="$LIBLDAP -lldap -llber"
 	export LIBS="-lldap -llber $LIBS"
 	./configure --host=${HOST} --prefix=/usr ${myconf} || die

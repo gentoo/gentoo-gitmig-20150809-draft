@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r5.ebuild,v 1.8 2003/05/25 15:00:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r5.ebuild,v 1.9 2003/09/07 00:11:41 msterret Exp $
 
 IUSE="ldap"
 
@@ -16,22 +16,22 @@ LICENSE="GPL-2"
 KEYWORDS="x86 alpha ppc sparc"
 
 src_unpack() {
-	unpack ${A}  
+	unpack ${A}
 	cd ${S}
 	patch -p0 < ${FILESDIR}/ldap_config.patch || die
-	
+
 	cd ${S}/include
 	patch -p0 < ${FILESDIR}/automount.diff || die
 
 	cd ${S}/daemon
 	mv Makefile Makefile.orig
-	sed -e 's/LIBS \= \-ldl/LIBS \= \-ldl \-lnsl \$\{LIBLDAP\}/' Makefile.orig > Makefile 
+	sed -e 's/LIBS \= \-ldl/LIBS \= \-ldl \-lnsl \$\{LIBLDAP\}/' Makefile.orig > Makefile
 }
 
 src_compile() {
 	local myconf
 	use ldap || myconf="--without-openldap"
-	
+
 	./configure \
 	    --host=${HOST} \
 	    --prefix=/usr \
@@ -67,4 +67,4 @@ pkg_postinst() {
 	echo ""
 	einfo "Also the normal autofs status has been renamed stats"
 	einfo "as there is already a predefined Gentoo status"
-}	
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.2 2003/06/12 21:25:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.31-r1.ebuild,v 1.3 2003/09/07 00:11:41 msterret Exp $
 
 IUSE="amd doc"
 
@@ -29,7 +29,7 @@ src_install() {
 	cat Makefile.old | grep -v depmod > Makefile
 	einfo " Installing kernel module..."
 	make MODULESDIR=${D}/lib/modules/${KV} install || die
-	
+
 	# Install binaries
 	cd ${S}/shfsmount
 	dobin shfsmount
@@ -44,11 +44,11 @@ src_install() {
 	dodir /sbin
 	einfo " Adding /sbin/mount.shfs symlink..."
 	dosym /usr/bin/shfsmount /sbin/mount.shfs
-	
+
 	# Install docs
 	doman ${S}/docs/manpages/shfsmount.8 ${S}/docs/manpages/shfsumount.8
 	use doc && dohtml -r ${S}/docs/html
-	
+
 	# Install automount support (if desired)
 	if [ -n "`use amd`" ] ; then
 		einfo " Installing am-utils config files..."

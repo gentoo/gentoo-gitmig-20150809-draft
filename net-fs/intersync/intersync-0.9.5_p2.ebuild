@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/intersync-0.9.5_p2.ebuild,v 1.1 2003/08/10 20:35:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/intersync-0.9.5_p2.ebuild,v 1.2 2003/09/07 00:11:41 msterret Exp $
 
 DESCRIPTION="Intermezzo is an advanced replicating networked filesystem."
 HOMEPAGE="http://www.inter-mezzo.org"
@@ -22,20 +22,20 @@ src_compile () {
 	local myconf=""
 	has "net-www/apache" \
 		&& $myconf="${myconf} --with-apache-modules=/etc/apache/modules"
-	
+
 	./configure \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--datadir=/usr/share \
 		--libdir=/lib \
 		${myconf}
-		
+
 	emake || die "emake failed"
 }
 
 src_install () {
 	make DESTDIR=${D} install
-	
+
 	exeinto /etc/init.d ; newexe ${FILESDIR}/intersync.rc intersync
 	insinto /etc/conf.d ; newins ${FILESDIR}/intersync.conf intersync
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.3 2003/08/02 20:55:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.4 2003/09/07 00:11:41 msterret Exp $
 
 inherit check-kernel
 
@@ -32,7 +32,7 @@ pkg_setup() {
 		die "This only works with 2.4 kernels"
 	fi
 }
-	
+
 
 src_unpack() {
 	unpack ${A}
@@ -60,7 +60,7 @@ src_install () {
 	# Client
 
 	cd ${S}/${ARCH}/dest/root.client/usr/vice
-	
+
 	insinto /etc/afs/modload
 	doins etc/modload/*
 	insinto /etc/afs/C

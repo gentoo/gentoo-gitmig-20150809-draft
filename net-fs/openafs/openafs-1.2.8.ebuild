@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.7 2003/07/30 20:54:12 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.8 2003/09/07 00:11:41 msterret Exp $
 
 
 S=${WORKDIR}/${P}
@@ -58,7 +58,7 @@ src_install () {
   # Client
 
 	cd ${S}/${ARCH}/dest/root.client/usr/vice
-	
+
 	insinto /etc/afs/modload
 	doins etc/modload/*
 	insinto /etc/afs/C

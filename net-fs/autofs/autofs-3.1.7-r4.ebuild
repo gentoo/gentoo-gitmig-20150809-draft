@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r4.ebuild,v 1.5 2003/05/25 15:00:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r4.ebuild,v 1.6 2003/09/07 00:11:41 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel based automounter"
@@ -16,9 +16,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_unpack() {
-	unpack ${A}  
+	unpack ${A}
 	patch -p0 < ${FILESDIR}/nisyp.patch || die
-	
+
 	cd ${S}/include
 	patch -p0 < ${FILESDIR}/automount.diff || die
 }
@@ -26,7 +26,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use ldap || myconf="--without-openldap"
-	export HAVE_LDAP=1 
+	export HAVE_LDAP=1
 	export LIBLDAP="$LIBLDAP -lldap -llber -lresolv"
 	export LIBS="-lldap -llber -lresolv $LIBS"
 	./configure --host=${HOST} --prefix=/usr ${myconf} || die
@@ -61,4 +61,4 @@ pkg_postinst() {
 	echo ""
 	einfo "Also the normal autofs status has been renamed stats"
 	einfo "as there is already a predefined Gentoo status"
-}	
+}
