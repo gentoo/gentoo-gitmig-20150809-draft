@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.1-r1.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.1-r1.ebuild,v 1.3 2002/12/14 06:02:25 woodchip Exp $
 
 IUSE="pam ldap ssl sasl snmp"
 
@@ -21,7 +21,7 @@ RDEPEND="pam? >=sys-libs/pam-0.72
 	sasl? =dev-libs/cyrus-sasl-1*"
 DEPEND="${RDEPEND} sys-devel/perl"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ~ppc ~sparc  ~alpha"
 SLOT="0"
 
 src_unpack() {
@@ -127,6 +127,7 @@ src_install() {
 	insinto /etc/pam.d ; newins ${FILESDIR}/squid.pam squid
 	exeinto /etc/init.d ; newexe ${FILESDIR}/squid.rc6 squid
 	insinto /etc/conf.d ; newins ${FILESDIR}/squid.confd squid
+	exeinto /etc/cron.weekly ; doins ${FILESDIR}/squid.cron
 }
 
 pkg_postinst() {
