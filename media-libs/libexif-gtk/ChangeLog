@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif-gtk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.4 2003/06/10 22:37:55 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.5 2004/02/16 08:52:53 absinthe Exp $
+
+  16 Feb 2004; Dylan Carlson <absinthe@gentoo.org> libexif-gtk-0.3.3.ebuild:
+  added ~amd64 keyword.
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> libexif-gtk-0.3.3.ebuild:
   bumped to stable
