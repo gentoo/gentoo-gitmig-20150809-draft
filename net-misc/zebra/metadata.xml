@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+		<description>Primary Maintainer</description>
+	</maintainer>
+	<longdescription>Zebra is a routing software package that provides TCP/IP based routing services with routing protocols support such as RIPv1, RIPv2, RIPng, OSPFv2, OSPFv3, BGP-4, and BGP-4+ (*note Supported RFC::). Zebra also supports special BGP Route Reflector and Route Server behavior.  In addition to traditional IPv4 routing protocols, Zebra also supports IPv6 routing protocols. With SNMP daemon which supports SMUX protocol, Zebra provides routing protocol MIBs (*note SNMP Support::).</longdescription>
+</pkgmetadata>
