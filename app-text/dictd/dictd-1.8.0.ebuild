@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.11 2003/12/29 09:18:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.12 2004/02/21 00:41:53 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.dict.org/pub/dict/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ~arm  ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ia64 ppc64"
 
 DEPEND="virtual/glibc"
 
