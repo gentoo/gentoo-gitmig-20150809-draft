@@ -396,3 +396,6 @@ dev-lang/tcl-tk
 <=sys-kernel/linux-headers-2.4
 
 =dev-ruby/mod-ruby-0.9.7
+
+#security update
+<sys-libs/zlib-1.1.4
