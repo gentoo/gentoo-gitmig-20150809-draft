@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 ca0009717f7252f4f6ee5ca31a5a6b2e ChangeLog 1453
-MD5 4ee7b984fe5a57179623d2f090fe94cc gtkdiskfree-1.8.4.ebuild 718
-MD5 a15ee35b017849079ceebb72997d1104 files/digest-gtkdiskfree-1.8.4 69
+MD5 41732ed2064cbdba115858bb17a2d333 gtkdiskfree-1.9.3.ebuild 716
+MD5 46985ea76022b80753931414d58952cc files/digest-gtkdiskfree-1.9.3 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBm3s7HTu7gpaalycRAl5pAKC3/t0YcLSKfoy64lRn8EKDQ40VcQCgjV08
-S7QLXbuLRa2buBlwZC3J2xk=
-=1MWo
+iD8DBQFBoU9vHTu7gpaalycRAjbeAKCipRw/RHTL5gLe6QYXOe2Q0hfoJQCgh8Pi
+9lJq032z8mZWHjQ/u7nwrOo=
+=ykL/
 -----END PGP SIGNATURE-----
