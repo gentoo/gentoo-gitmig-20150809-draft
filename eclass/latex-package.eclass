@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.14 2003/06/09 07:14:03 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.15 2003/09/09 01:06:09 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -48,7 +48,7 @@
 inherit base
 INHERITED="$INHERITED $ECLASS"
 
-newdepend ">=app-text/tetex-1.0.7
+newdepend "virtual/tetex
        >=sys-apps/texinfo-4.2-r5"
 ECLASS=latex-package
 HOMEPAGE="http://www.tug.org/"
