@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.33 2004/11/15 21:17:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.34 2004/11/25 15:55:04 lv Exp $
+
+*nss-3.9.2-r2 (25 Nov 2004)
+
+  25 Nov 2004; Travis Tilley <lv@gentoo.org> -nss-3.9.2-r1.ebuild,
+  +nss-3.9.2-r2.ebuild:
+  get_libdir-ized and made nss work with an nspr in /usr/$(get_libdir)/nspr/.
+  stable on amd64
 
 *nss-3.9.2-r1 (15 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2-r1.ebuild,v 1.1 2004/11/15 21:17:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2-r2.ebuild,v 1.1 2004/11/25 15:55:04 lv Exp $
 
 inherit eutils
 
@@ -11,12 +11,12 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc"
+KEYWORDS="~x86 ~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc
 	app-arch/zip
-	>=dev-libs/nspr-4.3"
+	>=dev-libs/nspr-4.4.1-r2"
 
 src_unpack() {
 	unpack ${A}
@@ -25,12 +25,26 @@ src_unpack() {
 	echo 'INCLUDES += -I${ROOT}usr/include/nspr -I$(DIST)/include/dbm' \
 		>> ${S}/mozilla/security/coreconf/headers.mk || die "failed to append include"
 
-	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/lib/$(LIB_PREFIX)plc4:' \
-		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/lib/$(LIB_PREFIX)plds4:' \
+	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/'"$(get_libdir)"'/nspr/$(LIB_PREFIX)plc4:' \
+		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/'"$(get_libdir)"'/nspr/$(LIB_PREFIX)plds4:' \
 		-i ${S}/mozilla/security/nss/lib/ckfw/builtins/Makefile
-	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/lib/$(LIB_PREFIX)plc4:' \
-		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/lib/$(LIB_PREFIX)plds4:' \
+	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/'"$(get_libdir)"'/nspr/$(LIB_PREFIX)plc4:' \
+		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/'"$(get_libdir)"'/nspr/$(LIB_PREFIX)plds4:' \
 		-i ${S}/mozilla/security/nss/lib/fortcrypt/swfort/pkcs11/Makefile
+
+	# cope with nspr being in /usr/$(get_libdir)/nspr
+	sed -e 's:-L$(DIST)/lib.:-L$(DIST)/lib/ -L/usr/'"$(get_libdir)"'/nspr/ :g' \
+		-i ${S}/mozilla/security/nss/lib/ckfw/builtins/Makefile \
+		-i ${S}/mozilla/security/nss/lib/ckfw/builtins/manifest.mn \
+		-i ${S}/mozilla/security/nss/lib/ckfw/dbm/manifest.mn \
+		-i ${S}/mozilla/security/nss/cmd/platlibs.mk \
+		-i ${S}/mozilla/security/nss/cmd/pkiutil/platlibs.mk \
+		-i ${S}/mozilla/security/nss/lib/fortcrypt/swfort/pkcs11/Makefile \
+		-i ${S}/mozilla/security/nss/lib/freebl/config.mk \
+		-i ${S}/mozilla/security/nss/lib/nss/config.mk \
+		-i ${S}/mozilla/security/nss/lib/smime/config.mk \
+		-i ${S}/mozilla/security/nss/lib/softoken/config.mk \
+		-i ${S}/mozilla/security/nss/lib/ssl/config.mk
 
 	# modify install path
 	sed -e 's:SOURCE_PREFIX = $(CORE_DEPTH)/\.\./dist:SOURCE_PREFIX = $(CORE_DEPTH)/dist:' \
@@ -54,9 +68,9 @@ src_install () {
 
 	# put all *.a files in /usr/lib/nss (because some have conflicting names
 	# with existing libraries)
-	dodir /usr/lib/nss
-	cp -L */lib/*.a ${D}/usr/lib/nss || die "copying libs failed"
-	cp -L */lib/*.so ${D}/usr/lib/nss || die "copying shared libs failed"
+	dodir /usr/$(get_libdir)/nss
+	cp -L */lib/*.a ${D}/usr/$(get_libdir)/nss || die "copying libs failed"
+	cp -L */lib/*.so ${D}/usr/$(get_libdir)/nss || die "copying shared libs failed"
 
 	# all the include files
 	insinto /usr/include/nss
@@ -65,7 +79,7 @@ src_install () {
 
 	# coping with nss being in a different path
 	dodir /etc/env.d
-	echo 'LDPATH=/usr/lib/nss' > ${D}/etc/env.d/50nss
+	echo "LDPATH=/usr/$(get_libdir)/nss" > ${D}/etc/env.d/50nss
 
 	# NOTE: we ignore the binary files
 }
