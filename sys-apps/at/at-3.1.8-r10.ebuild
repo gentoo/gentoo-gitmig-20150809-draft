@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.8 2004/11/13 01:00:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r10.ebuild,v 1.9 2004/11/13 16:44:31 hansmi Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/a/at/at_${PV}-11.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc

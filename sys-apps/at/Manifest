@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23f7b1fdcfc5d77a348f6d7fea97fc14 at-3.1.8-r9.ebuild 1344
-MD5 0cca9afeea7da7a203e03bdf3d9b4f72 at-3.1.8-r10.ebuild 1870
-MD5 fec7c1b25237ee178beb947331630752 ChangeLog 2969
+MD5 cc8b7dab8afd989285d19ba0be017c89 at-3.1.8-r10.ebuild 1868
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
+MD5 387b2060e73f3c35f9ae761f6070d66d ChangeLog 3063
+MD5 23f7b1fdcfc5d77a348f6d7fea97fc14 at-3.1.8-r9.ebuild 1344
 MD5 f189f039555f37eb1a0792837d33ea04 files/at-3.1.8-longuser.patch 723
-MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r9 63
-MD5 342e834e06fdf58c877f1fc237f984de files/at.deny 121
-MD5 1fbee35c5519e1bcedc01e63faa85931 files/atd.rc6 506
 MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r10 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBlVzIEZCkKN40op4RAobUAJ9EI+dZtfoJvKmnKA2sqB9R9i3mjwCgnMx6
-YXdXTzS+MjQogCsfKZnnDAo=
-=/0Dv
------END PGP SIGNATURE-----
+MD5 342e834e06fdf58c877f1fc237f984de files/at.deny 121
+MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r9 63
+MD5 1fbee35c5519e1bcedc01e63faa85931 files/atd.rc6 506
