@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.3 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.4 2002/12/15 10:44:21 bjb Exp $
 
 P=${P/-/}
 DESCRIPTION="BNC (BouNCe) is used as a gateway to an IRC Server"
@@ -11,7 +11,7 @@ SRC_URI="http://gotbnc.com/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND="virtual/glibc"

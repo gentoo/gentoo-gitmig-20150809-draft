@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.1.ebuild,v 1.2 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.1.ebuild,v 1.3 2002/12/15 10:44:21 bjb Exp $
 
 DESCRIPTION="Chora is the Horde CVS viewer."
 HOMEPAGE="http://www.horde.org"
@@ -8,7 +8,7 @@ P=chora-1.1
 SRC_URI="ftp://ftp.horde.org/pub/chora/tarballs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.1
          >=app-text/rcs-5.7-r1

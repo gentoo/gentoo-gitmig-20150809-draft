@@ -7,7 +7,7 @@ SRC_URI="http://www.shorewall.net/pub/shorewall/${P}.tgz"
 HOMEPAGE="http://www.shorewall.net/"
 
 LICENSE="GPL"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc

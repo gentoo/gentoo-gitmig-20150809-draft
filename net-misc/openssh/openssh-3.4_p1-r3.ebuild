@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r3.ebuild,v 1.10 2002/12/10 04:12:02 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r3.ebuild,v 1.11 2002/12/15 10:44:21 bjb Exp $
 
 IUSE="ipv6 static pam tcpd"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 	local myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.7.ebuild,v 1.2 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.7.ebuild,v 1.3 2002/12/15 10:44:21 bjb Exp $
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.
@@ -13,7 +13,7 @@ SRC_URI="http://www.guru-group.fi/~too/sw/releases/identd.c
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND="virtual/glibc"

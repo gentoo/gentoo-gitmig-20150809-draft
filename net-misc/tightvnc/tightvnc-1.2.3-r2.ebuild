@@ -9,7 +9,7 @@ DESCRIPTION="A great client/server software package allowing remote network acce
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
 HOMEPAGE="http://www.tightvnc.com"
 
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 

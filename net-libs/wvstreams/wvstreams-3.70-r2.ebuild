@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 
 src_unpack() {
 

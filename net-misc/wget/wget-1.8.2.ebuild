@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.9 2002/12/09 04:33:19 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.10 2002/12/15 10:44:21 bjb Exp $
 
 IUSE="ssl nls static"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
 RDEPEND="virtual/glibc ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
