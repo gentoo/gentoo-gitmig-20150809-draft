@@ -5,5 +5,9 @@
 		The dev-java category contains libraries and utilities relevant to the
 		Java programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-java enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache Java.
+	</longdescription>
 </catmetadata>
 
