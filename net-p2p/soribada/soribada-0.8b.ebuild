@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/soribada/soribada-0.8b.ebuild,v 1.4 2002/07/26 05:09:57 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/soribada/soribada-0.8b.ebuild,v 1.5 2002/10/04 06:17:36 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Soribada (korean napster clone) client for linux"
