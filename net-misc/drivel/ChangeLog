@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/drivel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.1 2002/11/30 14:23:41 nall Exp $
+
+*net-misc/drivel-0.8.0 (30 Nov 2002)
+
+  30 Nov 2002; Jon Nall <nall@gentoo.org> drivel-0.8.0.ebuild,
+  ChangeLog, files/digest-drivel-0.8.0 :
+  initial import. 
