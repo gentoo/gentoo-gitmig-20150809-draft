@@ -1,0 +1,14 @@
+# ChangeLog for sys-kernel/aa-sources
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.1 2002/10/15 17:53:51 lostlogic Exp $
+
+*aa-sources-2.4.20_pre101 (15 Oct 2002)
+
+  15 Oct 2002; Brandon Low <lostlogic@gentoo.org> aa-sources-2.4.20_pre101.ebuild:
+
+  New package for -aa sources, the versioning is silly
+  because we really have 2 parts to the -pre number the
+  marcelo kernel pre version and the -ac subversion so 
+  _pre83 means -pre8-aa3.  This doesn't hold up if
+  there are more than 10 -ac versions for a -pre I hope
+  that -aa never sinks to that level ;-).
