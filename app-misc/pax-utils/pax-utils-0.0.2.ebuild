@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.2.ebuild,v 1.2 2003/11/10 16:32:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.2.ebuild,v 1.3 2004/05/02 05:59:37 solar Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.gz
 	http://dev.gentoo.org/~solar/pax/pax-utils-${PV}.tar.gz
 	http://pageexec.virtualave.net/pax-utils-${PV}.tar.gz"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 sparc ~ppc ~hppa ~amd64 ~ia64"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	use debug && export STRIP=touch
-	MAKEOPTS=-j1 emake  || die
+	MAKEOPTS=-j1 emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
