@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.1 2004/07/10 10:38:38 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.2 2004/07/24 14:40:56 eldad Exp $
 
 inherit eutils
 
@@ -76,26 +76,14 @@ src_compile() {
 			einfo "     man 5 portage"
 		)
 	elif use postgres ; then
-		myconf="${myconf} \
-		--with-pgsql-xdata \
-		--with-pgsql-status \
-		--with-pgsql-comments \
-		--with-pgsql-extinfo \
-		--with-pgsql-retention \
-		--with-pgsql-downtime"
+		myconf="${myconf} --with-pgsql-xdata"
 
 		if [ -r /usr/include/postgresql/pgsql/libpq-fe.h ] ; then
 			myconf="${myconf} --with-pgsql-inc=/usr/include/postgresql"
 		fi
 	fi
 
-	use mysql && myconf="${myconf} \
-		--with-mysql-xdata \
-		--with-mysql-status \
-		--with-mysql-comments \
-		--with-mysql-extinfo \
-		--with-mysql-retention \
-		--with-mysql-downtime"
+	use mysql && myconf="${myconf} --with-mysql-xdata"
 
 	use perl && myconf="${myconf} \
 		--enable-embedded-perl \

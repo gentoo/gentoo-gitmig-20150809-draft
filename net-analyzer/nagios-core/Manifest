@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 131a2fc3235192b2307cdf1bf5629d2e nagios-core-1.1-r6.ebuild 6336
-MD5 4384ff90c79dc97352f2491e3839c418 nagios-core-1.2-r2.ebuild 6856
-MD5 8a80d2404e8d29c5f772797cd1269a3f ChangeLog 5768
+MD5 bfee5353a9175d1e155ab795906d5f3b nagios-core-1.2-r2.ebuild 6592
+MD5 afcf50dd3c8066dee9a9cfa07bf35bc1 ChangeLog 5914
 MD5 67125e899e40330692585273a7839c41 metadata.xml 980
 MD5 6eb7cf1ed0a2e05fc402aeecfa0d6641 nagios-core-1.2-r1.ebuild 6618
 MD5 438710d052bd5b2d7fd5c86da55bace1 nagios-core-1.1-r4.ebuild 5741
@@ -14,3 +17,10 @@ MD5 de44d331b40a2395b74c5ebf887b7675 files/digest-nagios-core-1.1-r4 63
 MD5 de44d331b40a2395b74c5ebf887b7675 files/digest-nagios-core-1.1-r6 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r1 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAnQsT+MN7JbqCpMRAuiQAJ4rcP6cRyvehvDUiSbJeoUKyya8aQCeKIco
+cfkjC000+Q7bO9ADJDsB3rc=
+=j8x0
+-----END PGP SIGNATURE-----
