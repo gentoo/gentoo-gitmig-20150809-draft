@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.15 2003/07/01 09:58:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.16 2003/07/14 10:27:38 phosphan Exp $
+
+*doxygen-1.3.2 (14 Jul 2003)
+
+  14 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> doxygen-1.3.2.ebuild:
+  Version bump as requested in bug 24292
 
   01 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> doxygen-1.3.ebuild:
   Bug was not yet dead, had to add one more "addwrite" line
