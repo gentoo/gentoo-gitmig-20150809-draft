@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.184 2004/07/29 02:35:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.185 2004/07/29 22:08:57 chriswhite Exp $
+
+  30 Jul 2004; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre5-live.patch, mplayer-1.0_pre5-r2.ebuild:
+  Added fix for latest live-2004-07* for live USE flag.  Fixes Bug #58807.
 
   29 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre4-r7.ebuild,
   mplayer-1.0_pre5-r2.ebuild:
