@@ -1,0 +1,14 @@
+--- motif/lib/Xm/XpmWrFFrI.c.CAN-2004-0914_sec8	2004-11-29 14:56:12.848706139 +0100
++++ motif/lib/Xm/XpmWrFFrI.c	2004-11-29 14:56:12.872702854 +0100
+@@ -317,10 +317,7 @@
+ #ifndef NO_ZPIPE
+ 	size_t len = strlen(filename);
+ 
+-	if(len == 0                        ||
+-	   filename[0] == '/'              ||
+-	   strstr(filename, "../") != NULL ||
+-	   filename[len-1] == '/')
++	if(len == 0)
+ 		return(XpmOpenFailed);
+ 
+ 	if (len > 2 && !strcmp(".Z", filename + (len - 2))) {

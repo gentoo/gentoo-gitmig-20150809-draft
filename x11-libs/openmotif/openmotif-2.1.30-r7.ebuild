@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.3 2005/02/01 18:27:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.4 2005/02/14 14:52:23 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -12,8 +12,7 @@ SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="-*"
-#KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 PROVIDE="virtual/motif"
@@ -21,6 +20,9 @@ PROVIDE="virtual/motif"
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4"
+# x11-libs/motif-config
+
+SLOT="2.1"
 
 pkg_setup() {
 	# multilib includes don't work right in this package...
@@ -33,8 +35,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-xpm.diff
-	epatch ${FILESDIR}/CAN-2004-0914.patch
+	epatch ${FILESDIR}/${P}-CAN-2004-0687-0688.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0914.patch.bz2
+	epatch ${FILESDIR}/${P}-CAN-2004-0914_sec8.patch
 
 	ebegin "adjusting file permissions"
 	chmod -R ug+w .
@@ -51,23 +54,20 @@ src_unpack() {
 	echo >>$cfg "#define  LinuxCLibMajorVersion 6"
 	eend $? || die
 
-	sed -i -e "s:#define USE_BYACC               YES:#undef USE_BYACC:" config/cf/host.def
 
-	# move `system.mwmrc' from `lib/X11' to `lib/X11/mwm' (but install into
-	# `/etc/X11/mwm')
+	# move `system.mwmrc' from `lib/X11' to `lib/X11/mwm'
 	ebegin "patching 'clients/mwm/Imakefile' (mwm confdir)"
 	LC_ALL="C" sed -i \
 	  -e 's:\(SpecialObjectRule.*WmResParse\.o.*/lib/X11\)\(.*\):\1/mwm\2:'\
 	  -e 's:\(InstallNonExecFile.system\.mwmrc,\).*/lib/X11\(.*\):\1/etc/X11/mwm\2:'\
 	    "${S}/clients/mwm/Imakefile"
 	eend $? || die
-	#
 
-	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
+	epatch ${FILESDIR}/${PN}-2.1.30-imake-tmpdir.patch
 	# compile on gcc 2.9x
-	epatch ${FILESDIR}/${P}-imake-ansi.patch
-	epatch ${FILESDIR}/${P}-uil-bad_grammar_fix.diff
-	use ppc-macos && epatch ${FILESDIR}/${P}-darwin-netbsd.diff
+	epatch ${FILESDIR}/${PN}-2.1.30-imake-ansi.patch
+	epatch ${FILESDIR}/${PN}-2.1.30-uil-bad_grammar_fix.diff
+	use ppc-macos && epatch ${FILESDIR}/${PN}-2.1.30-darwin-netbsd.diff
 }
 
 src_compile() {
@@ -91,20 +91,19 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} VARDIR=${D}/var/X11/ install || die "make install"
+	make DESTDIR=${D} VARDIR=${D}/var install || die "make install"
 	make DESTDIR=${D} install.man || die "make install.man"
 
-	# these overlap with X11
+	# cleanups
 	local NOINSTBIN="imake lndir makedepend makeg mergelib mkdirhier xmkmf"
 	local NOINSTMAN1="imake lndir makedepend makeg mkdirhier xmkmf"
 
-	einfo "Cleaning up X11 stuff"
 	rm -fR ${D}/etc
 	for nib in ${NOINSTBIN}; do
 		f="${D}/usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
 	for nim in ${NOINSTMAN1}; do
-		if useq ppc-macos || useq macos ; then
+		if useq ppc-macos ; then
 			f="${D}/usr/X11R6/man/man1/${nim}.1"
 		else
 			f="${D}/usr/X11R6/man/man1/${nim}.1x"
@@ -112,19 +111,48 @@ src_install() {
 		 rm "$f" || die "rm $f"
 	done
 	rm -rf "${D}/usr/X11R6/lib/X11" || die "rm config"
+	rm -rf "${D}/usr/X11R6/include/X11" || die "rm config"
 	rm -rf "${D}/usr/X11R6/lib/bindings" || die "rm bindings"
 
-	# Install in /usr/lib
-	mv ${D}/usr/X11R6/lib ${D}usr/$(get_libdir)
+	dodir /usr/share/man
+	mv ${D}/usr/X11R6/man/* ${D}/usr/share/man/
+	dodir /usr/bin
+	mv ${D}/usr/X11R6/bin/* ${D}/usr/bin/
+	dodir /usr/include
+	mv ${D}/usr/X11R6/include/* ${D}/usr/include/
+	dodir /usr/$(get_libdir)
+	mv ${D}/usr/X11R6/lib/* ${D}/usr/$(get_libdir)/
+	rm -fR ${D}/usr/X11R6
 
-	dodir /usr/share
-	mv ${D}/usr/X11R6/man ${D}/usr/share
+
+	einfo "Fixing binaries"
+	for file in `ls ${D}/usr/bin`
+	do
+		mv ${D}/usr/bin/${file} ${D}/usr/bin/${file}-openmotif-2.1
+	done
+
+	einfo "Fixing libraries"
+	dodir /usr/$(get_libdir)/openmotif-2.1
+	mv ${D}/usr/$(get_libdir)/* ${D}/usr/$(get_libdir)/openmotif-2.1/
+
+	einfo "Fixing includes"
+	dodir /usr/include/openmotif-2.1/
+	mv ${D}/usr/include/* ${D}/usr/include/openmotif-2.1
+
+	einfo "Fixing man pages"
+	mans="1 3 5 7"
+	for man in $mans; do
+		dodir /usr/share/man/man${man}
+		for file in `ls ${D}/usr/share/man/man${man}`
+		do
+			file=${file/.${man}x/}
+			mv ${D}/usr/share/man/man$man/${file}.${man}x ${D}/usr/share/man/man${man}/${file}-openmotif-2.1.${man}
+		done
+	done
 
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
-}
 
-pkg_postinst() {
-	ewarn "This might break applications linked against libXm.so.3"
-	ewarn "Just rebuild these applications."
+	# insinto /et/env.d/motif openmotif-2.2
+	# motif-config openmotif-2.2
 }
