@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.3 2004/03/29 12:29:46 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.4 2004/03/29 15:45:00 stuart Exp $
 
 inherit eutils kernel-mod
 
@@ -20,10 +20,6 @@ DEPEND=">=net-www/apache-1.3.27-r1
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-       echo "Nothing to do."
-}
-
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	epatch ${DISTDIR}/${PN}_${PV}-1.diff.gz
@@ -31,10 +27,15 @@ src_unpack() {
 	rmdir ${P}
 	epatch ${S}/debian/patches/urlencoded-security-fix.diff
 
-	APPLY_25PATCH=0
-	kernel-mod_is_2_5_kernel && APPLY_25PATCH=1
-	kernel-mod_is_2_6_kernel && APPLY_25PATCH=1
+	APPLY_25PATCH=-1
+	kernel-mod_is_2_4_kernel && APPLY_25PATCH=0
+	[ "APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_5_kernel && APPLY_25PATCH=1
+	[ "APPLY_25PATCH" = "-1" ] && kernel-mod_is_2_6_kernel && APPLY_25PATCH=1
 	[ "$APPLY_25PATCH" = "1" ] && epatch ${FILESDIR}/fix_memory_display_kernel2.5.diff.gz
+}
+
+src_compile() {
+	einfo "Nothing to compile"
 }
 
 src_install() {
