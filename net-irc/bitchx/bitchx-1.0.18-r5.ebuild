@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r5.ebuild,v 1.1 2002/02/25 00:43:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r5.ebuild,v 1.2 2002/04/07 10:58:39 gbevin Exp $
 
 A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
@@ -21,7 +21,8 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
+	patch -p1 < ${FILESDIR}/${P}-dupver.patch || die
 }
 
 src_compile() {
