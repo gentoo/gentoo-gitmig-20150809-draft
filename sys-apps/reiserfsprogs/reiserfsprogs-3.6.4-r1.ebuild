@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.6 2003/02/13 16:13:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/reiserfsprogs-3.6.4-r1.ebuild,v 1.7 2003/03/11 06:04:02 seemant Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 filter-flags -fPIC
 
@@ -29,8 +29,7 @@ src_unpack() {
 	# I bet sparc needs this patch too, but I don't have a machine to test on.
 	if [ "${ARCH}" = "ppc" ]; then
 		cd ${S}
-		einfo "Applying asm/bitops.h patch"
-		patch -p0 < ${FILESDIR}/reiserfsprogs-3.6.4-bitops.patch || die
+		epatch ${FILESDIR}/reiserfsprogs-3.6.4-bitops.patch
 	fi
 }
 
