@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.37.ebuild,v 1.1 2004/08/14 21:38:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.37.ebuild,v 1.2 2004/08/14 22:55:05 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic
 
@@ -71,6 +71,8 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ircservices.init.d ircservices
+	insinto /etc/conf.d
+	newins ${FILESDIR}/ircservices.conf.d ircservices
 
 	doman docs/ircservices.8
 	newman docs/convert-db.8 ircservices-convert-db.8

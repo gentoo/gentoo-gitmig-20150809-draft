@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.2 2004/08/14 22:35:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.3 2004/08/14 22:55:05 swegener Exp $
+
+  15 Aug 2004; Sven Wegener <swegener@gentoo.org> +files/ircservices.conf.d,
+  files/ircservices.init.d, ircservices-5.0.37.ebuild:
+  Made the dependency on a local ircd to be up optional via
+  /etc/conf.d/ircservices.
 
   15 Aug 2004; Sven Wegener <swegener@gentoo.org> files/ircservices.init.d:
   Fixed init script.
