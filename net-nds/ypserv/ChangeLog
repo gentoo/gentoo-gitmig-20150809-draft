@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.12 2003/07/11 13:09:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.13 2003/07/12 00:34:46 woodchip Exp $
+
+  11 Jul 2003; Donny Davies <woodchip@gentoo.org> ypserv-2.8.ebuild:
+  Close #24284 and #24281.
 
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> ypserv-2.8.ebuild :
   Unmasked, security update.

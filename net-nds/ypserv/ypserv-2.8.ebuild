@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.2 2003/07/11 13:09:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.3 2003/07/12 00:34:48 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
@@ -26,10 +26,10 @@ src_install() {
 	doins etc/ypserv.conf etc/netgroup etc/netmasks
 
 	insinto /var/yp
-	doins etc/securenets
+	newins etc/securenets securenets.default
 
 	insinto /etc/conf.d
-	doins ${FILESDIR}/ypserv.confd ypserv
+	newins ${FILESDIR}/ypserv.confd ypserv
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ypserv.rc ypserv
