@@ -1,12 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9920198744faccbede83a90877be50fb ChangeLog 1908
 MD5 91795bc54a13a171931b3b8f662e4fc4 libofx-0.6.4-r1.ebuild 1047
-MD5 af75375852568e3ac91c86d24915861a libofx-0.6.5.ebuild 915
-MD5 1d3fb5c3b4a7841872ac6efbf121f22d libofx-0.6.6.ebuild 925
-MD5 70fe6b9b2b757fccd2fc17cd6d524bbf libofx-0.7.0.ebuild 928
 MD5 372d7464ac85978c0cfcaef6b06063b8 libofx-0.6.4.ebuild 903
+MD5 af75375852568e3ac91c86d24915861a libofx-0.6.5.ebuild 915
+MD5 2dbc821812a5b3f520ab513dfffcc447 libofx-0.6.6.ebuild 871
+MD5 5d04b4effba978b06980a56bd2b0e358 libofx-0.7.0.ebuild 875
 MD5 01e95323fd235e3559b8831adc8d1d34 files/digest-libofx-0.6.4 64
 MD5 01e95323fd235e3559b8831adc8d1d34 files/digest-libofx-0.6.4-r1 64
 MD5 aed194d8bebea157fe05b7ed84e57ba5 files/digest-libofx-0.6.5 64
-MD5 d7fd5ed3804d5fa2f2c14c1d212e5990 files/digest-libofx-0.6.6 64
 MD5 49ea3e257d9cc461e444c07e59396177 files/libofx-0.6.4-gcc2.patch 595
+MD5 d7fd5ed3804d5fa2f2c14c1d212e5990 files/digest-libofx-0.6.6 64
 MD5 432886ccebfb84d58c2e7d58346a37e2 files/digest-libofx-0.7.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBxuI+roRuSHgZdywRAqTGAJ4jIKXKhakQKjYa1AYZiZUrSptW2gCePHR4
+puA2+lzzPu/kSKFKQuBTHpM=
+=uNS/
+-----END PGP SIGNATURE-----
