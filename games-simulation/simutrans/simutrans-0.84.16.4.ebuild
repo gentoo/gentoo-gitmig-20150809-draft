@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.16.4.ebuild,v 1.1 2005/03/09 22:38:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.84.16.4.ebuild,v 1.2 2005/03/14 23:11:53 vapier Exp $
 
 inherit games
 
@@ -31,7 +31,7 @@ src_install() {
 	games_make_wrapper simutrans ./simutrans "${dir}"
 	keepdir "${dir}/save"
 	cp -R * "${D}/${dir}/" || die "cp failed"
-	find "${D}/${dir}/"{text,font} -type f | xargs chmod a-x
+	find "${D}/${dir}/"{text,font} -type f -print0 | xargs -0 chmod a-x
 	prepgamesdirs
 	fperms 2775 "${dir}/save"
 }
