@@ -1,14 +1,15 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.16 2003/02/25 18:58:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.17 2003/03/26 00:15:57 drobbins Exp $
 
+*lvm-user-1.0.7 (25 Mar 2002)
+
+  25 Mar 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.7.ebuild:
+  new upstream release.
+  
   23 Jan 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.6.ebuild:
   misplaced sed dependency is now a a DEPEND rather than an RDEPEND. No
   rev bump.
-  
-  12 Jan 2003; Daniel Robbins <drobbins@gentoo.org> lvm-user-1.0.6.ebuild:
-  removed dependency on kernel sources. This is no longer needed (see note in
-  the ebuild.)
   
   05 Dec 2003; Daniel Ahlberg <aliz@gentoo.org> lvm-user-1.0.6.ebuild :
   Unmasked for x86.  
@@ -25,8 +26,9 @@
 
 *lvm-user-1.0.5 (01 Aug 2002)
 
-  25 Feb 2003; Brandon Low <lostlogic@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild lvm-user-1.0.1_rc4.ebuild lvm-user-1.0.3.ebuild lvm-user-1.0.4.ebuild lvm-user-1.0.5.ebuild :
-  Fix nesteddies
+  25 Feb 2003; Brandon Low <lostlogic@gentoo.org> lvm-user-1.0.1_rc4-r1.ebuild
+  lvm-user-1.0.1_rc4.ebuild lvm-user-1.0.3.ebuild lvm-user-1.0.4.ebuild
+  lvm-user-1.0.5.ebuild : Fix nesteddies
 
   01 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> lvm-user-1.0.5.ebuild :
   
