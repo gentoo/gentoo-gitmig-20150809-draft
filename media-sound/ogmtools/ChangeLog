@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ogmtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.21 2004/11/17 19:15:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.22 2004/11/23 10:12:13 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ogmtools-1.5.ebuild:
+  Added to ~sparc.
 
 *ogmtools-1.5 (17 Nov 2004)
 

@@ -1,8 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.3 2004/09/03 17:05:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.4 2004/11/23 10:11:18 eradicator Exp $
+
+IUSE=""
 
 inherit eutils kde
+
+S="${WORKDIR}/musicman"
 
 DESCRIPTION="A Konqueror plugin for manipulating ID3 tags in MP3 files"
 HOMEPAGE="http://musicman.sourceforge.net/"
@@ -10,16 +14,13 @@ SRC_URI="mirror://sourceforge/musicman/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
-IUSE=""
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
-DEPEND=">=kde-base/kdebase-3.2.1 \
-	>=media-libs/jpeg-6b-r3 \
-	>=app-admin/fam-2.7.0 \
+DEPEND=">=kde-base/kdebase-3.2.1
+	kde-base/arts
+	>=media-libs/jpeg-6b-r3
+	>=app-admin/fam-2.7.0
 	>=media-libs/libart_lgpl-2.3.16"
-
-# The tar.gz doesn't create a musicman-0.11 directory
-S="${WORKDIR}/musicman"
 
 src_unpack() {
 	unpack ${A}
@@ -29,9 +30,6 @@ src_unpack() {
 }
 
 src_install() {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
+	einstall || die
+	dodoc AUTHORS ChangeLog README TODO
 }
