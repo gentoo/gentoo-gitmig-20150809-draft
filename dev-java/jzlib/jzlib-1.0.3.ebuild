@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.3.ebuild,v 1.3 2004/03/07 00:24:55 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.3.ebuild,v 1.4 2004/03/11 02:43:55 zx Exp $
+
+inherit java-pkg
 
 DESCRIPTION="JZlib is a re-implementation of zlib in pure Java."
 HOMEPAGE="http://www.jcraft.com/jzlib/"
@@ -32,7 +34,7 @@ src_compile() {
 
 src_install() {
 	mv dist/lib/jzlib-${PV}.jar dist/lib/jzlib.jar
-	dojar dist/lib/jzlib.jar || die "Failed Installing"
+	java-pkg_dojar dist/lib/jzlib.jar || die "Failed Installing"
 	dodoc LICENSE.txt README ChangeLog
 	cp -r example ${D}/usr/share/doc/${PN}-${PV}
 }

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.3 2004/03/07 00:26:24 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.13.ebuild,v 1.4 2004/03/11 02:44:53 zx Exp $
+
+inherit java-pkg
 
 DESCRIPTION="JSch is a pure Java implementation of SSH2."
 HOMEPAGE="http://www.jcraft.com/jsch/"
@@ -31,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	dojar dist/lib/jsch.jar || die "Failed Installing"
+	java-pkg_dojar dist/lib/jsch.jar || die "Failed Installing"
 	dodoc LICENSE.txt README ChangeLog
 	cp -r examples ${D}/usr/share/doc/${PN}-${PV}
 }
