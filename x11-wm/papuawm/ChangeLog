@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/papuawm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/papuawm/ChangeLog,v 1.1 2003/04/15 19:16:37 phoenix Exp $
+
+*papuawm-0.3 (15 Apr 2003)
+
+  15 Apr 2003; Tilman Klar <phoenix@gentoo.org> papuawm-0.3.ebuild, ChangeLog,
+  files/digest-papuawm-0.3 :
+  Initial import.  Ebuild submitted by Paul Fleischer <proguy@proguy.dk>.
+  Thanks for the contribution.
