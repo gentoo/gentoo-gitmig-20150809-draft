@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.15.ebuild,v 1.1 2003/06/09 18:30:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.15.ebuild,v 1.2 2003/06/10 06:59:57 raker Exp $
 
 DESCRIPTION="The world's fastest email server"
 HOMEPAGE="http://www.xmailserver.org/"
@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~sparc"
 IUSE=""
 DEPEND="virtual/glibc"
 
-pkg_preinst() {
+pkg_setup() {
         if ! grep -q ^xmail: /etc/group
         then
                 groupadd xmail || die "problem adding group xmail"
@@ -21,8 +21,6 @@ pkg_preinst() {
 		useradd -g xmail -d /dev/null -s /bin/false xmail \
                         || die "problem adding user xmail"
         fi
-	pwconv
-	grpconv
 }
 
 src_compile() {

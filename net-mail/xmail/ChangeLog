@@ -1,9 +1,12 @@
 # ChangeLog for net-mail/xmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.1 2003/06/09 18:30:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.2 2003/06/10 06:59:57 raker Exp $
 
 *XMail-1.15 (26 May 2003)
   
+  10 Jun 2003; Nick Hadaway <raker@gentoo.org> xmail-1.15.ebuild:
+  Moved the useradd/groupadd routine to pkg_setup
+
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> xmail-1.15.ebuild:
   Commented out the interactive portion of the ebuild and updated the 
   groupadd/useradd portion.
