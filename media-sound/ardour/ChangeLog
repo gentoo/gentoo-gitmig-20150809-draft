@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.37 2005/01/10 00:44:38 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.38 2005/02/04 04:14:17 jnc Exp $
+
+*ardour-0.9_beta24 (03 Feb 2005)
+
+  03 Feb 2005; Eric Shattow <jnc@gentoo.org> +ardour-0.9_beta24.ebuild:
+  Version bump. Usability improvements and bugfixes.
 
 *ardour-0.9_beta23 (09 Jan 2005)
 
