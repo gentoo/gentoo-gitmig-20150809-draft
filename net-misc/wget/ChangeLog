@@ -1,12 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.28 2003/11/19 09:38:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.29 2003/11/19 21:37:46 rajiv Exp $
 
 *wget-1.9-r1 (18 Nov 2003)
 
   19 Nov 2003; Nicholas Jones <carpaski@gentoo.org> wget-1.8.2-r3.ebuild,
-	wget-1.9-r1.ebuild, wget-1.9.1-r1.ebuild:	Fixed all the deps so that
-	autoconf and gettext were 'nls' USE. Added autoconf to 1.9-r1.
+  wget-1.9-r1.ebuild, wget-1.9.1-r1.ebuild:
+  Fixed all the deps so that autoconf and gettext were 'nls' USE. Added
+  autoconf to 1.9-r1.
 
   18 Nov 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2-r2.ebuild,
   wget-1.9-r1.ebuild, wget-1.9.1-r1.ebuild, wget-1.9.1.ebuild:
