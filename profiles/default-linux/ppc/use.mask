@@ -13,6 +13,7 @@ fdftk
 hdf
 icc
 icc-pgo
+ifc
 mmx
 mmx2
 real
