@@ -1,8 +1,8 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.20 2004/04/23 23:28:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.21 2004/04/23 23:30:56 agriffis Exp $
 
-  23 Apr 2004; <agriffis@gentoo.org> e2fsprogs-1.34-r1.ebuild,
+  23 Apr 2004; Aron Griffis <agriffis@gentoo.org> e2fsprogs-1.34-r1.ebuild,
   e2fsprogs-1.35.ebuild:
   Mark 1.34-r1 stable on ia64, and simultaneously mark 1.35 -ia64 until bug
   48829 (e2fsprogs-1.35 doesn't build on ia64) is resolved
