@@ -1,5 +1,5 @@
-MD5 b104f618ea30fe1cbd2fd83a1cd449ea ChangeLog 559
-MD5 67e6d44c94af537bab3de7b08fcffccb hostapd-0.1.0.ebuild 1079
+MD5 40a99e17017c42b8ef3fd7a5ba9f440a ChangeLog 560
+MD5 e7ebae5af10ec06f5ede99216b1337dc hostapd-0.1.0.ebuild 1079
 MD5 b852e83aa853d08d6f30ce4a89bf557d metadata.xml 461
 MD5 cf287b50f0ccd832a08fb3031281cd4f files/hostapd.init.d 858
 MD5 ebaf0a97df860deb10127e44d8c9f4de files/digest-hostapd-0.1.0 64

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.1.0.ebuild,v 1.1 2003/10/20 22:48:59 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.1.0.ebuild,v 1.2 2003/12/16 19:17:12 wschlich Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://hostap.epitest.fi/"
 SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=">=net-wireless/hostap-driver-0.1.0"
 S="${WORKDIR}/${P}"
