@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.46 2004/03/25 02:17:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.47 2004/03/27 01:23:53 avenj Exp $
+
+  26 Mar 2004; Jon Portnoy <avenj@gentoo.org> automake-1.8.3.ebuild :
+  Stable on AMD64.
 
 *automake-1.8.3 (24 Mar 2004)
 
