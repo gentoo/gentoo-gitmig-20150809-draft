@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.19 2003/07/20 14:20:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.20 2003/12/22 22:36:47 rac Exp $
+
+*libwww-perl-5.76 (22 Dec 2003)
+
+  22 Dec 2003; <rac@gentoo.org> libwww-perl-5.69-r2.ebuild,
+  libwww-perl-5.76.ebuild:
+  Install into vendordir, bump, address bug 30616
 
 *libwww-perl-5.69-r1 (20 Jul 2003)
 
