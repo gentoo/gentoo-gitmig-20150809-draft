@@ -1,4 +1,4 @@
---- /var/tmp/portage/arts-1.3.0/work/arts-1.3.0/configure.in.in	2004-08-05 13:53:14.000000000 -0500
+--- configure.in.in	2004-08-05 13:53:14.000000000 -0500
 +++ configure.in.in	2004-08-26 14:15:51.901070600 -0500
 @@ -697,6 +697,12 @@
  AC_SUBST(GLIB_LIBADD)
