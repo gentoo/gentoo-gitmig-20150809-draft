@@ -1056,6 +1056,97 @@ def dep_frontend():
 		dep_print(myparse[1])
 		return 1
 
+def port_currtree():
+	"""
+	This function builds a dictionary of current (recommended) packages on the system,
+	based on the contents of CURRENTFILE.  Dictionary format is:
+	mydict["cat/pkg"]=[
+					["cat/fullpkgname",["cat","pkg","ver","rev"]
+					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
+					]
+	"""
+	currentdict={}
+	currentfile=getsetting("CURRENTFILE")
+	if not os.path.isfile(currentfile):
+		return
+	mycurrent=open(currentfile,"r")
+	mylines=mycurrent.readlines()
+	for x in mylines:
+		if x[:2]!="./":
+			continue
+		myline=string.split(string.strip(x)[2:-7],"/")
+		if len(myline)!=3:
+			continue
+		fullpkg=string.join([myline[0],myline[2]],"/")
+		mysplit=catpkgsplit(fullpkg)
+		mykey=mysplit[0]+"/"+mysplit[1]
+		if not currentdict.has_key(mykey):
+			currentdict[mykey]=[]
+		currentdict[mykey].append([fullpkg,mysplit])
+	mycurrent.close()
+	return currentdict
+
+
+def port_insttree():
+	"""
+	This function builds a dictionary of installed packages on the system, based on
+	the contents of DBDIR.  Dictionary format is:
+	mydict["cat/pkg"]=[
+					["cat/fullpkgname",["cat","pkg","ver","rev"]
+					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
+					]
+	"""
+	installeddict={}
+	dbdir=getsetting("DBDIR")
+	if not os.path.isdir(dbdir):
+		return
+	origdir=os.getcwd()
+	os.chdir(dbdir)
+	for x in os.listdir(os.getcwd()):
+		for y in os.listdir(os.getcwd()+"/"+x):
+			fullpkg=x+"/"+y
+			mysplit=catpkgsplit(fullpkg)
+			mykey=x+"/"+mysplit[1]
+			if not installeddict.has_key(mykey):
+				installeddict[mykey]=[]
+			installeddict[mykey].append([fullpkg,mysplit])
+	os.chdir(origdir)
+	return installeddict
+
+def port_porttree():
+	"""
+	This function builds a dictionary of available ebuilds in the portage tree.
+	Dictionary format is:
+	mydict["cat/pkg"]=[
+					["cat/fullpkgname",["cat","pkg","ver","rev"]
+					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
+					]
+	"""
+	portagedict={}
+	mydir=getsetting("PORTDIR")
+	if not os.path.isdir(mydir):
+		return
+	origdir=os.getcwd()
+	os.chdir(mydir)
+	for x in categories:
+		for y in os.listdir(os.getcwd()+"/"+x):
+			if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
+				continue
+			if y=="CVS":
+				continue
+		for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
+			if mypkg[-7:] != ".ebuild":
+				continue
+			mypkg=mypkg[:-7]
+			mykey=x+"/"+y
+			fullpkg=x+"/"+mypkg
+			if not portagedict.has_key(mykey):
+				portagedict[mykey]=[]
+			portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
+	os.chdir(origdir)
+	return portagedict
+	
+	
 configdefaults=getconfig("/etc/make.defaults")
 configsettings=getconfig("/etc/make.conf")
 root=getsetting("ROOT")

@@ -5,70 +5,16 @@ import portage
 import string
 import sys
 
-portagedict={}
-portdir=portage.getsetting("PORTDIR")
-dbdir=portage.getsetting("DBDIR")
-currentfile=portage.getsetting("CURRENTFILE")
-
-if not os.path.isdir(portdir):
-	print "Couldn't find",portdir
-	print "Exiting."
-	sys.exit(1)
-if not os.path.isdir(dbdir):
-	print "Couldn't find",dbdir
-	print "Exiting."
-	sys.exit(1)
-os.chdir(portdir)
-	
-for x in portage.categories:
-	for y in os.listdir(os.getcwd()+"/"+x):
-		if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
-			continue
-		if y=="CVS":
-			continue
-		for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
-			if mypkg[-7:] != ".ebuild":
-				continue
-			mypkg=mypkg[:-7]
-			mykey=x+"/"+y
-			if not portagedict.has_key(mykey):
-				portagedict[mykey]=[]
-			portagedict[mykey].append([x+"/"+mypkg,portage.pkgsplit(mypkg)])
-
-#format: cat/basepkgname: [ cat/fullpkgname, mysplit ]
-installeddict={}
-os.chdir(dbdir)
-for x in os.listdir(os.getcwd()):
-	for y in os.listdir(os.getcwd()+"/"+x):
-		mysplit=portage.pkgsplit(y)
-		if not installeddict.has_key(x+"/"+mysplit[0]):
-			installeddict[x+"/"+mysplit[0]]=[]
-		installeddict[x+"/"+mysplit[0]].append([x+"/"+y,mysplit])
-
-#format: cat/basepkgname: [ cat/fullpkgname, mysplit ]
-currentdict={}
-mycurrent=open(currentfile,"r")
-mylines=mycurrent.readlines()
-for x in mylines:
-	if x[:2]!="./":
-		continue
-	myline=string.split(string.strip(x)[2:-7],"/")
-	if len(myline)!=3:
-		continue
-	mysplit=portage.pkgsplit(myline[2])
-	mykey=myline[0]+"/"+myline[1]
-	if not currentdict.has_key(mykey):
-		currentdict[mykey]=[]
-	currentdict[mykey].append([myline[0]+"/"+myline[2],mysplit])
-mycurrent.close()
-del mylines
+installeddict=portage.port_insttree()
+currentdict=portage.port_currtree()
+portagedict=portage.port_porttree()
 
 for mypkg in installeddict.keys():
 	#if there is one installed version, and one recommended version, and they both
 	#are the same version, don't list the package.  This package is up-to-date.
 	if (len(installeddict[mypkg])==1) and currentdict.has_key(mypkg): 
 		if len(currentdict[mypkg])==1: 
-			if portage.pkgcmp(currentdict[mypkg][0][1],installeddict[mypkg][0][1])==0:
+			if portage.pkgcmp(currentdict[mypkg][0][1][1:],installeddict[mypkg][0][1][1:])==0:
 				continue
 	print "Package",mypkg
 	print "Installed version(s):"
@@ -92,8 +38,7 @@ for mypkg in installeddict.keys():
 print "System (important) packages not installed:"
 print
 for x in currentdict.keys():
-	mysplit=string.split(currentdict[x][0][0],"/")[0]
-	if mysplit[0:4]=="sys-":
+	if currentdict[x][0][1][0][0:4]=="sys-":
 		#required package
 		if not installeddict.has_key(x):
 			print x
