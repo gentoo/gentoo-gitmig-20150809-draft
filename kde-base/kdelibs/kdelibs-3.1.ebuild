@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.10 2003/01/06 08:39:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.ebuild,v 1.11 2003/01/07 08:24:20 hannes Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -43,6 +43,12 @@ RDEPEND="$RDEPEND
 	>=sys-apps/portage-2.0.36" # for #7359
 
 myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
+use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
+use ssl		&& myconf="$myconf --with-ssl-dir=/usr"	|| myconf="$myconf --without-ssl"
+use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
+use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
+
+[ "$ARCH" == "x86" ] && myconf="$myconf --enable-fast-malloc=full"
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
@@ -53,21 +59,6 @@ src_unpack() {
 
     base_src_unpack
     kde_sandbox_patch ${S}/kio/misc/kpac
-
-}
-
-src_compile() {
-
-	kde_src_compile myconf
-
-	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
-	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
-	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
-	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
-	
-	[ "$ARCH" == "x86" ] && myconf="$myconf --enable-fast-malloc=full"
-	
-	kde_src_compile configure make
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.14 2003/01/06 08:39:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.15 2003/01/07 08:24:20 hannes Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -64,9 +64,7 @@ src_compile() {
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 	
-	[ "$ARCH" != "ppc" ] && \
-		[ "$ARCH" != "sparc" ] && [ "$ARCH" != "" ] && \
-		myconf="$myconf --enable-fast-malloc=full"
+	[ "$ARCH" == "x86" ] && myconf="$myconf --enable-fast-malloc=full"
 	
 	kde_src_compile configure make
 
