@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.11 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.12 2003/03/01 22:24:47 lostlogic Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -23,6 +23,7 @@ export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"
 
 src_unpack() {
 	unpack ${A}
+	chmod -R ug+w *
 	
 	cd ${WORKDIR}/${P}
 	patch -p0 < ${FILESDIR}/patch.3.2.9.1 || die
@@ -51,17 +52,18 @@ src_compile() {
 	echo
 	# Parallel make does not work
 	einfo "Building static libs..."
-	make libdb=libdb-3.2.a libdb-3.2.a || die
-	make libcxx=libdb_cxx-3.2.a libdb_cxx-3.2.a || die
+	emake libdb=libdb-3.2.a libdb-3.2.a || die
+	emake libcxx=libdb_cxx-3.2.a libdb_cxx-3.2.a || die
 	echo
 	einfo "Building db_dump185..."
-	/bin/sh ./libtool --mode=compile cc -c ${CFLAGS} -D_GNU_SOURCE \
+	/bin/sh ./libtool --mode=compile ${CC} -c ${CFLAGS} -D_GNU_SOURCE \
 		-I/usr/include/db1 -I../dist/../include -D_REENTRANT \
 		../dist/../db_dump185/db_dump185.c || die
 	gcc -s -static -o db_dump185 db_dump185.lo -L/usr/lib -ldb1 || die
 	echo
 	einfo "Building everything else..."
-	make libdb=libdb-3.2.a libcxx=libdb_cxx-3.2.a || die
+	MAKEOPTS="${MAKEOPTS} -j1"
+	emake libdb=libdb-3.2.a libcxx=libdb_cxx-3.2.a || die
 }
 
 src_install () {
