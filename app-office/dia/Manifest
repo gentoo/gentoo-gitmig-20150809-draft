@@ -1,10 +1,20 @@
-MD5 4f133c864b197352c6827e75d5118fae ChangeLog 5035
-MD5 1deb60317a37418e46523f75c062a156 dia-0.92.2.ebuild 1050
-MD5 1fd8f089f39232119b9d06989a94b6e5 dia-0.93.ebuild 1073
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb518d6f8ad077f066ba141deb3957bd ChangeLog 5123
 MD5 858a96d79b7c8b479edd95aedcf0c0c6 metadata.xml 589
+MD5 621a7c40a95848ec469d7eec865ee75e dia-0.93.ebuild 1070
+MD5 1deb60317a37418e46523f75c062a156 dia-0.92.2.ebuild 1050
 MD5 f9c1c9b012de0130c63da2b160b2e087 dia-0.94.ebuild 993
-MD5 7459df6c8efd61f2c725351d0da979ad files/dia-0.93-fix_py_prefix.patch 499
-MD5 6ea73da1387f009af48baa0137f0adf8 files/digest-dia-0.92.2 64
-MD5 1df50dee999cd3aa4746682bfc1d1d72 files/digest-dia-0.93 62
-MD5 8cf03116a588a016da9236ded497281c files/dia-0.92.2-freetype_include.patch 1534
 MD5 c6257d6dad2b46a83757991db3f3e6c5 files/digest-dia-0.94 62
+MD5 6ea73da1387f009af48baa0137f0adf8 files/digest-dia-0.92.2 64
+MD5 8cf03116a588a016da9236ded497281c files/dia-0.92.2-freetype_include.patch 1534
+MD5 7459df6c8efd61f2c725351d0da979ad files/dia-0.93-fix_py_prefix.patch 499
+MD5 1df50dee999cd3aa4746682bfc1d1d72 files/digest-dia-0.93 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuyjSugEuf3OQ0akRAq21AJ0WGkvsUOZoTCKoG8HG693s74eh+ACdHcRR
+ss1+ZVEFxmTBHgMNVZt0WDE=
+=4VkX
+-----END PGP SIGNATURE-----
