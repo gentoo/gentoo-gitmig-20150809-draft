@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sonic-rainbow
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.5 2004/07/08 23:26:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.6 2004/07/13 02:46:37 eradicator Exp $
+
+*sonic-rainbow-0.6.2.2 (12 Jul 2004)
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +sonic-rainbow-0.6.2.2.ebuild:
+  Version bump closes bug #56591.
 
   08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/sonic-rainbow-0.5.1-Makefile.patch,
