@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.16 2005/02/03 16:08:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.17 2005/03/26 22:23:48 twp Exp $
+
+*ion3-20050322 (26 Mar 2005)
+
+  26 Mar 2005; Tom Payne <twp@gentoo.org> -files/ion.desktop,
+  -ion3-20041104.ebuild, -ion3-20050102.ebuild, ion3-20050116.ebuild,
+  +ion3-20050322.ebuild:
+  Version bump. Remove references to ion3-svn. Remove old version.
 
   03 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> ion3-20050116.ebuild:
   Stable on sparc
