@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.1.ebuild,v 1.7 2002/08/14 12:12:29 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.1.ebuild,v 1.8 2002/08/18 13:11:13 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Tool for network monitoring and data acquisition"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {															 
 	into /usr
-	dobin tcpdump
+	dosbin tcpdump
 	doman tcpdump.1
 	dodoc *.awk
 	dodoc README FILES VERSION CHANGES
