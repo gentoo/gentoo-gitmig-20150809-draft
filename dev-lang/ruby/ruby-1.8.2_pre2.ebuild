@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.17 2004/10/23 06:07:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.18 2004/10/27 04:51:18 usata Exp $
 
 ONIGURUMA="onigd2_3_2"
 MY_P=${P/_pre/-preview}
@@ -92,7 +92,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
 
-	if use macos || use ppc-macos ; then
+	if use ppc-macos ; then
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
 	else
@@ -104,7 +104,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! ( use macos || use ppc-pacos ) ; then
+	if ! use ppc-macos ; then
 		ewarn
 		ewarn "Warning: Vim won't work if you've just updated ruby from"
 		ewarn "1.6.x to 1.8.x due to the library version change."
@@ -121,7 +121,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if ! ( use macos || use ppc-macos ) ; then
+	if use ppc-macos ; then
 		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 		fi
