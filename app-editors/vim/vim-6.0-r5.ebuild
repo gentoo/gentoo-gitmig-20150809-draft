@@ -1,8 +1,7 @@
 # Copyright 2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Authors Ben Beuchler <insyte@mazer.squad51.net> 
-#     and Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r4.ebuild,v 1.2 2002/02/16 18:47:50 agriffis Exp $
+# Maintainer: Aron Griffis <agriffis@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r5.ebuild,v 1.1 2002/02/16 18:47:50 agriffis Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -54,34 +53,6 @@ else
 	die "Eek!  I don't know how to interpret the version!"
 fi
 
-# Add in 6.0 patches
-#
-# For some reason this doesn't work.  Portage never fetches these
-# patches.	For the moment I'm putting them in vim/files until this is
-# resolved.
-#
-#if [ "$PV" = 6.0 ]; then
-#	 SRC_URI="$SRC_URI
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.001
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.002
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.003
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.004
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.005
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.006
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.007
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.010
-#			  ftp://ftp.us.vim.org/pub/vim/patches/6.0.011
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.001
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.002
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.003
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.004
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.005
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.006
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.007
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.010
-#			  ftp://ftp.vim.org/pub/vim/patches/6.0.011"
-#fi
-
 DESCRIPTION="Vi IMproved! ${PV}"
 HOMEPAGE="http://www.vim.org/"
 
@@ -111,7 +82,7 @@ src_unpack() {
 	cd $S/runtime/tools
 	mv mve.awk mve.awk.old
 	( read l; echo "#!/usr/bin/awk -f"; cat ) <mve.awk.old >mve.awk
-	# Apply patches, if appropriate
+	# Apply any patches available for this version
 	local patches=`echo $FILESDIR/$PV.[0-9][0-9][0-9]`
 	case "$patches" in
 		*\]) 
@@ -120,7 +91,7 @@ src_unpack() {
 		*)
 			cd $S
 			for a in $patches; do
-				patch -p0 < $a || echo $a >> /tmp/badpatches
+				patch -p0 < $a
 			done
 			;;
 	esac
@@ -185,11 +156,7 @@ src_install() {
 	dodoc README*
 	cd $D/usr/share/doc/$PF
 	ln -s ../../vim/*/doc $P
-	# Default .vimrc for users (this should be revisited)
-	insinto /etc/skel
-	newins $FILESDIR/vimrc .vimrc
-	# Don't install .vimrc for root since it might overwrite root's
-	# current .vimrc, if it exists.
-	#mkdir -p $D/root
-	#install -m644 $FILESDIR/vimrc $D/root/.vimrc
+	# Default vimrc and gvimrc (who cares if gvim wasn't built)
+	insinto /usr/share/vim
+	doins ${FILESDIR}/vimrc ${FILESDIR}/gvimrc
 }
