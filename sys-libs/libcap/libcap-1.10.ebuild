@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.14 2003/10/18 08:32:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.15 2003/11/16 15:05:53 pappy Exp $
 
 inherit base flag-o-matic
 
@@ -22,12 +22,21 @@ RDEPEND="python? ( >=virtual/python-2.2.1 )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# hardened-gcc needs this PIC patch to remove .TEXT relocations from the libcap library
+	has_version "sys-devel/hardened-gcc" && epatch ${FILESDIR}/${PF}-syscall.patch
 	epatch ${FILESDIR}/${PF}-python.patch
 }
 
 src_compile() {
 	PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
-	filter-flags -fPIC
+
+	# filter-flags the PIC option only if hcc is not found active
+	# and thats way the syscall removal patch will not be applied
+	if ! has_version sys-devel/hardened-gcc
+	then
+		filter-flags -fPIC
+	fi
+
 	local myflags=""
 	if [ `use python` ]; then
 		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
