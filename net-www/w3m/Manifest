@@ -1,5 +1,5 @@
-MD5 810dc2ce9d7810f521201397e3ca136f ChangeLog 7554
-MD5 e78aaa844c0d50350ffecfe2a0744f3f w3m-0.4.2-r3.ebuild 3617
+MD5 abb9bfca1278bca3c38c5d35444d896e ChangeLog 7744
+MD5 6379bf8220687c5df1df9a43b9b76fdc w3m-0.4.2-r3.ebuild 3621
 MD5 efd0e7ec20245e58a27edc22a41e8d04 w3m-0.4.2-r2.ebuild 3323
 MD5 ae37f0b018eb3457f9690ee35cefef0e w3m-0.4.2.ebuild 1939
 MD5 1f7b8fffb13d61fe43a3294dcf037926 w3m-0.3.2.2.ebuild 3732
@@ -11,9 +11,6 @@ MD5 1e0e222a0e5c3e7c2f9acca4fee13c7d files/digest-w3m-0.4.2-r3 208
 MD5 40e3d07e75b9f601f7b33cc5336214e7 files/digest-w3m-0.4.2-r2 72
 MD5 df74b28e72e6c2140a1dd6e4ea042e58 files/digest-w3m-0.3.2.2 64
 MD5 b289d2ea47e3369102b13b53f2bc47ac files/digest-w3m-0.4 60
-MD5 eda1478628d2167faea12ad67bac87b0 files/w3m.sh 490
-MD5 f0c1541c47ce452829b6142a8f64f82e files/w3mbookmark.sh.in 432
-MD5 4859057a6b1661358f58f2fceebcbaa0 files/w3mhelperpanel.sh.in 489
 MD5 00a360d12cc07d61c5fd5df08a53d261 files/w3m-0.4-alpha.patch 930
 MD5 fd7a37dd6717b69b356f6179a19e17b7 files/digest-w3m-0.4.1-r3 62
 MD5 ccf8db4eb493664368e4e4c77cea99d4 files/digest-w3m-0.4.2 61
