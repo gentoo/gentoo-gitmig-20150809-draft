@@ -227,7 +227,7 @@ these are the only tags that should appear immediately inside a
 <c>&lt;body&gt;</c> element.  Another thing -- these tags <e>should not</e> be
 stacked -- in other words, don't put a <c>&lt;note&gt;</c> element inside a
 <c>&lt;p&gt;</c> element.  As you might guess, the <c>&lt;pre&gt;</c> element
-preserves its whitespacing formatting, making it well-suited for code excerpts.</p>
+preserves its whitespace exactly, making it well-suited for code excerpts.</p>
 
 </body>
 </section>
