@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.2-r1.ebuild,v 1.2 2005/02/07 19:34:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.2-r1.ebuild,v 1.3 2005/02/14 08:39:28 joem Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Evolution module for connecting to Microsoft Exchange"
-HOMEPAGE="http://www.novell.com/products/connector/"
+HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
 LICENSE="GPL-2"
 
 SLOT="2.0"
