@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.6.ebuild,v 1.3 2003/02/28 04:54:15 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.6.ebuild,v 1.4 2003/03/13 22:19:03 bcowan Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -9,7 +9,7 @@ IUSE="esd gnome imlib nls spell truetype"
 
 DEPEND="virtual/x11
 	esd? ( media-sound/esound )
-	gnome? ( gnome-base/gnome )
+	gnome? ( gnome-base/gnome-libs )
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )"
