@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6.ebuild,v 1.3 2003/09/23 20:20:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6.ebuild,v 1.4 2003/11/05 14:58:29 genone Exp $
 
 MY_P=${P/_beta/-beta}
-DESCRIPTION="A simple utility to read the temperature of SMART IDE hard drives"
+DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives"
 SRC_URI="http://coredump.free.fr/linux/${MY_P}.tar.gz
 	mirror://gentoo/hddtemp.db"
 HOMEPAGE="http://coredump.free.fr/linux/hddtemp.php"
