@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/simgear-0.3.3.ebuild,v 1.1 2003/06/11 11:57:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/simgear/simgear-0.3.3.ebuild,v 1.2 2003/06/11 22:42:01 seemant Exp $
 
-IUSE="X gnome"
+IUSE=""
 
 MY_P=SimGear-${PV}
 S=${WORKDIR}/${MY_P}
