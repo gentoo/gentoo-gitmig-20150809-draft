@@ -1,4 +1,7 @@
-MD5 8cfd3a0fba6ab010e570f426d211f5f4 ChangeLog 8418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 408e300bb9e000dffed9f573fa3944ff ChangeLog 8533
 MD5 d094dcab1afd170dae62b054d98e3acb gpdf-0.132-r1.ebuild 1025
 MD5 a805385ef63f46517fcdf018fb0e08d9 gpdf-0.132-r2.ebuild 1169
 MD5 c26a102be26ff0116f7aa2f247d7c0e2 gpdf-2.8.0-r2.ebuild 1085
@@ -7,6 +10,7 @@ MD5 6eeb7ca08d8276606fb57add4b568c57 gpdf-2.8.1.ebuild 1054
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3ec94b0d7a37f7330404f3197c6bfbcd gpdf-2.8.2.ebuild 1130
 MD5 e06fcd62b6b87b6f28c39b79d1d76775 gpdf-2.8.3.ebuild 1061
+MD5 a5b1263cde701c5f87e689537af1bb18 gpdf-2.10.0.ebuild 1066
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r1 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132-r2 64
 MD5 f61386d00d5674f3bbb80b181e8cea3a files/digest-gpdf-2.8.0-r2 64
@@ -21,3 +25,11 @@ MD5 2fce5bedd61300fad1566a41f991a782 files/gpdf-xpdf_goo_sizet.patch 1424
 MD5 2a2fc64147e806f72bdda9e2e66731a0 files/digest-gpdf-2.8.2 64
 MD5 c32a612ce419b9930ff273cf382558bf files/gpdf-xpdf-3.00pl3.patch 346
 MD5 5bc556bc031d2f6ed2e0b609253e8b93 files/digest-gpdf-2.8.3 64
+MD5 388d05f1aabd1c48c3536ac69d0d8505 files/digest-gpdf-2.10.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLo3LXjcVihsel0ERAuKPAKCwjQIJxsx+R3FEVDhvlSHtfzxBDACdEfpV
+M8Kys/t6sNJP3ypjLGcxi1I=
+=iqzi
+-----END PGP SIGNATURE-----
