@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.54 2004/06/29 18:46:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.55 2004/07/05 01:04:29 aether Exp $
+
+*java-config-1.2.7 (04 Jul 2004)
+
+  04 Jul 2004; Jason Mobarak <aether@gentoo.org> +java-config-1.2.7.ebuild:
+  Changes in this release: bugs 52378, and 50218 fixed. Fixed a small logic error
+  in the --set-user-vm option. Option --show-active-vm added. Any option that
+  uses name of JVMs as selectors can now match prefixes. The option
+  --set-system-vm will now complain loudly if it can't find javac, jar and
+  javadoc for a particular VM, and it'll complain softly about a missing rmic.
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> java-config-1.2.6.ebuild:
   stable on ppc64, bug #55596
