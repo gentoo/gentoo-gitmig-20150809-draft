@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.19 2003/03/04 17:51:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.20 2003/03/25 05:47:04 lostlogic Exp $
 
 *bind-9.2.2 (04 Mar 2003)
+
+  24 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2.ebuild:
+  move to stable on x86, others please follow
 
   04 Mar 2003; Brandon Low <lostlogic@gentoo.org> bind-9.2.2.ebuild, 
   files/10bind.env:
