@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.6.3.ebuild,v 1.1 2004/09/13 16:29:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.8.1.ebuild,v 1.1 2004/11/24 17:30:57 obz Exp $
 
 inherit gnome2 eutils
 
@@ -30,8 +30,6 @@ src_unpack() {
 	cd ${S}
 	# Don't set the UTF-8 codeset before parsing command line arguments.
 	# Closes bug #45204.
-	# Slightly altered for 2.6.3, removed the obsolete first hunk
-	epatch ${FILESDIR}/${P}-utf8_fix.patch
+	epatch ${FILESDIR}/${PN}-2.6.3-utf8_fix.patch
 
 }
-
