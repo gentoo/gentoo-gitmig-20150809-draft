@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.23 2003/11/22 03:30:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.24 2003/11/30 01:20:53 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> ffmpeg-0.4.8.ebuild:
+  amd64 needs -fPIC to compile properly
 
   22 Nov 2003; Luca Barbato <lu_zero@gentoo.org> ffmpeg-0.4.8.ebuild:
   altivec related fix, thanks to Olivier <ocastan@noos.fr> for the report
