@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.2 2002/03/18 17:52:44 woodchip Exp $
+
+*proftpd-1.2.4-r7 (18 March 2002)
+
+  18 March 2002; Donny Davies <woodchip@gentoo.org> proftpd-1.2.4-r7.ebuild :
+
+  Fix compilation with USE ldap.  Closes #722, thanks goto rectrix@rectrix.cx (Tim Hobbs)
+  for report and suggested resolution.
 
 *proftpd-1.2.4-r6 (1 Feb 2002)
 
