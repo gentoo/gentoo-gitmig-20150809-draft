@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.10 2002/09/27 11:32:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.11 2002/09/27 11:39:28 seemant Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -182,7 +182,7 @@ src_install() {
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc RELEASE_PROCESS README.* TODO NEWS
-	dodoc ChangeLog* *.txt
+	dodoc *.txt
 
 	exeinto /usr/bin
 	doexe php
