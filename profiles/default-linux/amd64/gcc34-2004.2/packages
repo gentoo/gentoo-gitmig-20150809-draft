@@ -33,7 +33,6 @@
 *sys-apps/ed
 *sys-apps/file
 *sys-apps/findutils
-*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
