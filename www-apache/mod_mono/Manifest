@@ -13,4 +13,4 @@ MD5 c53ec7880bda0510f3d1aeccd179474f files/digest-mod_mono-1.0.5 66
 MD5 3c40535ec688be1562b0571ea0fe7da2 files/mod_mono-1.0.2-70_mod_mono.conf 614
 MD5 d89d30289a4e7cea16c558e170c5c7ec files/mod_mono-1.0.5-70_mod_mono.conf 915
 MD5 c53ec7880bda0510f3d1aeccd179474f files/digest-mod_mono-1.0.5-r1 66
-MD5 d89d30289a4e7cea16c558e170c5c7ec files/1.0.5-r1/70_mod_mono.conf 915
+MD5 7582229e0d91b8d103b06796b7731c58 files/1.0.5-r1/70_mod_mono.conf 910
