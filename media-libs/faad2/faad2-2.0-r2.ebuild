@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r2.ebuild,v 1.5 2004/09/02 17:55:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r2.ebuild,v 1.6 2005/03/25 23:52:56 luckyduck Exp $
 
 inherit eutils libtool flag-o-matic
 
