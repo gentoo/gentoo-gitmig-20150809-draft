@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.58 2004/11/03 06:38:13 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.59 2004/11/18 14:29:53 agriffis Exp $
+
+  20 Nov 2004; Aron Griffis <agriffis@gentoo.org> freetype-2.1.9.ebuild:
+  Add RDEPEND to block versions of moz/ff/tb lacking the freetype-2.1.8+ binary
+  compatibility patch
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> freetype-1.3.1-r4.ebuild,
   freetype-2.1.9.ebuild:

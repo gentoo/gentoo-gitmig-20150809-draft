@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.5 2004/11/03 06:38:13 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.6 2004/11/18 14:29:53 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -17,8 +17,16 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~ppc64 ~mips"
 #IUSE="zlib bindist cjk doc"
 IUSE="zlib bindist doc"
 
+# The RDEPEND below makes sure that if there is a version of moz/ff/tb
+# installed, then it will have the freetype-2.1.8+ binary compatibility patch.
+# Otherwise updating freetype will cause moz/ff/tb crashes.  #59849
+# 20 Nov 2004 agriffis
 DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
+RDEPEND="${DEPEND}
+	!<net-www/mozilla-1.7.3-r3
+	!<net-www/mozilla-firefox-1.0-r3
+	!<net-www/mozilla-thunderbird-0.9-r3"
 
 src_unpack() {
 
