@@ -21,7 +21,9 @@
 ##   End example
 ##
 
-
+# <robbat2@gentoo.org> (10 Jan 2004)
+# blocked for testing
+=net-mail/qmail-ldap-1.03-r3
 
 # <solar@gentoo.org> (Jan 11 2004) 
 # buffer overflow in control message handling. (not maintained?)
