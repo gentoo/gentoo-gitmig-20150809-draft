@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/barnyard
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.1 2003/08/10 01:23:54 solar Exp $
+
+*barnyard-0.1.0 (09 Aug 2003)
+
+  09 Aug 2003; <solar@gentoo.org> barnyard-0.1.0.ebuild, metadata.xml,
+  files/barnyard.confd, files/barnyard.rc6:
+  Initial import of barnyard to portage
+
