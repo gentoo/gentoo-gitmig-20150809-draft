@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.5 2005/01/04 12:59:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.6 2005/01/07 05:09:25 josejx Exp $
+
+  07 Jan 2005; Joseph Jezak <josejx@gentoo.org> tikiwiki-1.8.4.1.ebuild:
+  Marked ppc stable for bug #75568.
 
 *tikiwiki-1.8.4.1 (04 Jan 2005)
 
