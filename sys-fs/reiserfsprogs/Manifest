@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a84e7940bbd4dc93e8f478d95f2be1b ChangeLog 8181
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6919c4c9be162733451e5edecc076410 reiserfsprogs-3.6.18.ebuild 838
+MD5 649d528bf8792f20a26e6bba2d3a95df ChangeLog 8285
+MD5 44a97de11f7e2e82c3803e7325b11010 reiserfsprogs-3.6.18.ebuild 837
 MD5 3f155e063bf239299efc91906d400bb2 reiserfsprogs-3.6.19.ebuild 844
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 bfacf17a7c81391df97ec5f94590dc8e reiserfsprogs-3.6.17.ebuild 847
 MD5 a7ae129ac18f8e2c935d65298f0f88c4 files/digest-reiserfsprogs-3.6.17 72
 MD5 ccd4a14f4d1f52741c9f32ecb77c40cb files/digest-reiserfsprogs-3.6.19 72
 MD5 a73a34f948b4267ae53a2579bfab7e00 files/digest-reiserfsprogs-3.6.18 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdEktHTu7gpaalycRAl+mAJ0ZNvA6xy/xQ3FDyCoQiL/r+yxrqgCgv0Xz
-7vsBanYuw6ZGwCvySmU/Eo0=
-=0jU+
+iD8DBQFBhS5TugEuf3OQ0akRApF2AKCfM/PFzZT3ULEa7+2iF11+TJAP0QCeKhUC
+ETUeh4rWFV1NH1D5JHdgMHA=
+=Cohh
 -----END PGP SIGNATURE-----
