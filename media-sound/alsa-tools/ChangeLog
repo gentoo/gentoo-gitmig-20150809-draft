@@ -1,9 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.71 2005/03/20 02:23:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.72 2005/03/20 03:18:04 pylon Exp $
 
-  20 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-tools-1.0.7.ebuild:
-  Readded ppc to a newer version.
+  20 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-tools-1.0.8.ebuild:
+  Readded ppc to a 1.x version.
 
   16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-tools-1.0.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.24 2005/03/09 04:00:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.25 2005/03/20 03:17:25 pylon Exp $
+
+  20 Mar 2005; Lars Weiler <pylon@gentoo.org> alsa-headers-1.0.8.ebuild:
+  Readded ppc to a 1.x version.
 
   09 Mar 2005; Mike Gardiner <obz@gentoo.org> alsa-headers-1.0.7.ebuild:
   Keyworded ppc
