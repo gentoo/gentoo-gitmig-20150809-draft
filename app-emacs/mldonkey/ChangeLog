@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mldonkey
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.7 2004/10/09 20:07:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.8 2004/10/17 04:08:50 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> mldonkey-0.0.4a.ebuild:
+  Added ewarn; bug #50510.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -mldonkey-0.0.2a.ebuild,
   -mldonkey-0.0.3c.ebuild, mldonkey-0.0.4a.ebuild:
