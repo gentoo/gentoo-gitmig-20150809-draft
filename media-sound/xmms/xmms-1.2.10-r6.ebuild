@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.5 2004/10/04 04:58:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.6 2004/10/04 05:08:49 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc flac"
 
@@ -150,11 +150,6 @@ src_unpack() {
 #	done
 
 	elibtoolize
-
-	# Gentoo versioning
-	cd ${S}
-	sed -i "s:^ VERSION=.*$: VERSION=${PF}:" configure
-	sed -i "s:^\(%define\W*version\W*\).*$:\1${PF}": xmms.spec
 }
 
 src_compile() {
