@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.15 2004/07/14 01:10:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.16 2004/07/26 14:31:01 alexander Exp $
+
+  26 Jul 2004; Alexander Plank <alexander@gentoo.org> unison-2.9.1.ebuild:
+  adding macos keyword (thanks Philippe Bouamriou who started bug #57918)
 
   13 Jul 2004; Travis Tilley <lv@gentoo.org> unison-2.9.1.ebuild:
   adding back ~amd64 keyword
