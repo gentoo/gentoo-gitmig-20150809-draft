@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0.ebuild,v 1.1 2003/11/18 16:01:16 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.0.ebuild,v 1.2 2004/04/11 17:50:11 pyrania Exp $
 
 MY_P=${P/-/_}-6
-S=${WORKDIR}/${P}
 DESCRIPTION="A simplistic screen locking program for X"
 SRC_URI="mirror://debian/dists/potato/main/source/x11/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.debian.org/debian/dists/stable/main/source/x11/"

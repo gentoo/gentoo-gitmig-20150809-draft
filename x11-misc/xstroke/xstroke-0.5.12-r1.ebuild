@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12-r1.ebuild,v 1.2 2004/04/05 14:02:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/xstroke-0.5.12-r1.ebuild,v 1.3 2004/04/11 17:48:39 pyrania Exp $
 
 inherit eutils
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Gesture/Handwriting recognition engine for X"
 HOMEPAGE="http://dsn.east.isi.edu/xstroke/"
 SRC_URI="ftp://ftp.handhelds.org/pub/projects/${PN}/release-0.5/${P}.tar.gz"

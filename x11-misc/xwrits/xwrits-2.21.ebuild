@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.6 2003/02/13 17:21:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.7 2004/04/11 17:51:49 pyrania Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Xwrits reminds you to take wrist breaks, which will hopefully help you prevent repetitive stress injury. It pops up an X window when you should rest; you click on that window, then take a break"
 HOMEPAGE="http://www.lcdf.org/xwrits/"
 SRC_URI="http://www.lcdf.org/xwrits/${P}.tar.gz"

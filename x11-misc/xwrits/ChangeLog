@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xwrits
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.6 2003/11/04 03:40:44 abhishek Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.7 2004/04/11 17:51:49 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xwrits-2.21.ebuild:
+  Ebuild fixups.
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
