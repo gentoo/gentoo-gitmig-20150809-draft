@@ -3,4 +3,3 @@ MD5 8eb19845e0ec4d666fe3a81979c05797 horde-2.2.4.ebuild 2027
 MD5 7b23372659f53526afd7d88767f73464 horde-2.2.4_rc2.ebuild 2061
 MD5 d00b68f4d9082ed6fc81dd6232bed73f files/digest-horde-2.2.4 63
 MD5 4756531879d5176972aa08408d580362 files/digest-horde-2.2.4_rc2 67
-MD5 000a1ab336e266bcb9b173a4a1d12d2f files/2.2.1/vfs.sql 606
