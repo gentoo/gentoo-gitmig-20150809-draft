@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3348 2004/11/26 13:55:26 klieber Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3349 2004/11/26 21:04:27 lu_zero Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,7 +21,11 @@
 ##
 ##   End example
 ##
-
+# <lu_zero@gentoo.org> (26 Nov 2004)
+# Masking since the ebuild is broken and the package is going to have a
+# radical change.
+#
+media-libs/panotools
 # <klieber@gentoo.org> (26 Nov 2004)
 # The following packages contains a security vulnerability and has been
 # hard masked accordingly.
