@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.32.ebuild,v 1.2 2005/01/23 02:30:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.33.1.ebuild,v 1.1 2005/01/23 02:30:42 obz Exp $
 
 inherit gnome2 eutils
 
@@ -9,12 +9,13 @@ MY_P="${MY_PN}-${PV}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GNOME Desktop Applets: core library for the desktop applets"
-SRC_URI="http://www.pycage.de/download/gdesklets/${MY_P}.tar.bz2"
-HOMEPAGE="http://www.pycage.de/software_gdesklets.html"
+SRC_URI="http://www.pycage.de/download/gdesklets/${MY_P}.tar.bz2 \
+		 http://www.pycage.de/develbook/develbook.tar.bz2 "
+HOMEPAGE="http://gdesklets.gnomedesktop.org"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE=""
+IUSE="doc"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
 
 RDEPEND=">=dev-lang/python-2.3
@@ -25,8 +26,7 @@ RDEPEND=">=dev-lang/python-2.3
 	>=dev-python/pygtk-2.4
 	>=dev-python/gnome-python-2.6
 	>=x11-libs/gtk+-2.2
-	>=gnome-base/libgnomeui-2.2
-	>=dev-lang/swig-1.3"
+	>=gnome-base/libgnomeui-2.2"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -36,17 +36,31 @@ DEPEND="${RDEPEND}
 USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
+src_unpack() {
+	unpack ${A}
+	# Fix the TilingImage.py bug
+	cd ${S}/utils
+	sed -i -e "s/gnomevfs.exists(uri)/gnomevfs.exists(gnomevfs.URI(uri))/" \
+		TilingImage.py
+
+}
+
 src_install() {
 
 	gnome2_src_install
-	# there are two links that end up pointing inside the
-	# image that we need to fix up here
-	dosym /usr/share/gdesklets/gdesklets /usr/bin/gdesklets
-	dosym /usr/share/pixmaps/gdesklets.png \
-		  /usr/share/gdesklets/data/gdesklets.png
+	# Symlink the binaries from /usr/lib/gdesklets
+	# to /usr/bin
+	dosym /usr/lib/gdesklets/gdesklets-migration-tool \
+		  /usr/bin/gdesklets-migration-tool
+	dosym /usr/lib/gdesklets/gdesklets-daemon \
+		  /usr/bin/gdesklets-daemon
+	dosym /usr/lib/gdesklets/gdesklets-logview \
+		  /usr/bin/gdesklets-logview
+	dosym /usr/lib/gdesklets/gdesklets-shell \
+		  /usr/bin/gdesklets-shell
 
-	# install the migration tool
-	newbin migration-tool gdesklets-migration-tool
+	# Install the Developer's book documentation
+	use doc && dohtml -r ${WORKDIR}/develbook/*
 
 }
 
@@ -62,10 +76,10 @@ pkg_postinst() {
 	einfo "Next you'll need to start gdesklets using"
 	einfo "           /usr/bin/gdesklets start"
 	einfo "If you're using GNOME this can be done conveniently"
-	einfo "through Applications->Accessories->gDesklets menu item"
+	einfo "through Applications->Accessories->gDesklets"
 	echo ""
 	ewarn "If you are migrating from a previous version of "
-	ewarn "gDesklets, please convert your settings, using - "
+	ewarn "gDesklets, please convert your settings with - "
 	ewarn "         /usr/bin/gdesklets-migration-tool "
 	echo ""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.26.1.ebuild,v 1.4 2004/09/02 17:52:36 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.26.1.ebuild,v 1.5 2005/01/23 02:30:42 obz Exp $
 
 inherit gnome2
 
