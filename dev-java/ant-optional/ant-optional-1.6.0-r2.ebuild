@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.3 2004/01/20 04:23:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.4 2004/01/22 01:26:46 strider Exp $
 
 inherit java-pkg
 
@@ -63,7 +63,7 @@ src_install() {
 	java-pkg_dojar build/lib/ant-antlr.jar
 	dosym /usr/share/ant-optional/lib/ant-antlr.jar /usr/share/ant/lib/
 	java-pkg_dojar build/lib/ant-jakarta-bcel.jar
-	dosym /usr/share/ant-optional/lib/ant-jakarta-bcel.jar/usr/share/ant/lib/
+	dosym /usr/share/ant-optional/lib/ant-jakarta-bcel.jar /usr/share/ant/lib/
 	java-pkg_dojar build/lib/ant-junit.jar
 	dosym /usr/share/ant-optional/lib/ant-junit.jar /usr/share/ant/lib/
 	java-pkg_dojar build/lib/ant-vaj.jar
