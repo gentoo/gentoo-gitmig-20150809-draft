@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.168 2004/11/24 23:12:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.169 2004/11/30 19:34:30 gmsoft Exp $
+
+  30 Nov 2004; Guy Martin <gmsoft@gentoo.org> binutils-2.15.92.0.2-r1.ebuild:
+  Stable on hppa. Fix problems with libxml2 and others.
 
   24 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   binutils-2.15.92.0.2-r1.ebuild:
