@@ -7,4 +7,4 @@ MD5 e98da89f3a64d4842946223b199fd5c7 files/net-tools-1.60-cleanup-list-handling.
 MD5 20e7b471f6e27a8726a7d2b225ef1cf6 ChangeLog 5317
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5bbca71b140fc9fab957a2c58ac1ab96 net-tools-1.60-r7.ebuild 2824
-MD5 1eab476ec68be666fa01847bca6b5bf1 net-tools-1.60-r8.ebuild 2943
+MD5 627376bb9ba8e312dd5b2ccd4cc918a0 net-tools-1.60-r8.ebuild 2939

@@ -6,5 +6,5 @@ MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r3 67
 MD5 7abb095c2c2ecdbd465a1953cb443289 files/digest-diffutils-2.8.4-r4 67
 MD5 54eae8b19811c4b96f6f1583af48626a ChangeLog 4228
 MD5 f591a9b7747961624ef1daa0e1d473dd diffutils-2.8.4-r3.ebuild 2040
-MD5 b84c048f0c6d6b0e7c1a908deaa2583a diffutils-2.8.4-r4.ebuild 2246
+MD5 73ac8651083977ae7600c427cc066470 diffutils-2.8.4-r4.ebuild 2075
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
