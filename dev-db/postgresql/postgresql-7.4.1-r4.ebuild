@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.2 2004/02/23 19:43:06 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.3 2004/02/27 17:43:32 kumba Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -15,8 +15,9 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 ~mips"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
+inherit eutils gnuconfig
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -110,6 +111,9 @@ src_compile() {
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
+
+	# Detect mips systems properly
+	use mips && gnuconfig_update
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
