@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.2.0.ebuild,v 1.1 2004/01/22 22:27:38 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.2.0.ebuild,v 1.2 2004/02/03 01:27:08 mattam Exp $
 
 IUSE="gnome opengl debug glade svg"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 LICENSE="LGPL-2.1 as-is"
 
-DEPEND="=x11-libs/gtk+-2.2*
+DEPEND=">=x11-libs/gtk+-2.2*
 	>=dev-lang/ocaml-3.07
 	svg? ( >=gnome-base/librsvg-2.2* )
 	glade? ( >=gnome-base/libglade-2.0.1 )
