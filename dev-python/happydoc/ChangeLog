@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.5 2003/02/12 06:32:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.6 2003/04/04 22:29:13 liquidx Exp $
+
+*happydoc-2.1 (04 Apr 2003)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> happydoc-2.1.ebuild:
+  version bump and cleanup
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
