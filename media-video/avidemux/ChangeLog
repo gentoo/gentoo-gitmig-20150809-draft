@@ -1,15 +1,17 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.38 2004/05/04 03:54:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.39 2004/05/08 18:13:29 zypher Exp $
 
+*avidemux-2.0.24 (08 May 2004)
+
+  08 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
+  Version bump.
+  
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   avidemux-0.9-r1.ebuild, avidemux-2.0.18.ebuild, avidemux-2.0.20.ebuild,
   avidemux-2.0.22.ebuild:
   Changing mad dep to madplay.
 
-*avidemux-2.0.22 (27 Feb 2004)
-
-  01 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.22.ebuild:
   Removed divx4linux dep as it's not used anyway. Closes bug #45176
   bumped to stable
   
