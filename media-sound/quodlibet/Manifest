@@ -1,6 +1,16 @@
-MD5 ce95b84db38e350c68a79f70015eed5f quodlibet-0.4.ebuild 774
-MD5 a233bec1ac710c3ceab72cb265f7c386 ChangeLog 341
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e8ed6c80b63cdecefede31dc30603536 quodlibet-0.4.ebuild 774
+MD5 18c623ea99a5a89c2ab8598c603e3731 ChangeLog 463
 MD5 08aa57227627a54ee75b0fb5d484e67d metadata.xml 255
 MD5 ce95b84db38e350c68a79f70015eed5f quodlibet-0.3.ebuild 774
 MD5 f78ed0c8cfe30c7bcda6902f1f0cbd33 files/digest-quodlibet-0.3 64
 MD5 a0c349783cbf546ef6f05a37f85df9c6 files/digest-quodlibet-0.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlSe7E67gNkjlZFIRAtmFAJ9JmaxSdxIAd/bpxFpwOvDqayQevQCfUAsO
+dL6eR6XUCXDl655fkh1af4Q=
+=K43V
+-----END PGP SIGNATURE-----
