@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-tools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.1 2004/09/06 19:28:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/ChangeLog,v 1.2 2004/10/19 18:57:53 solar Exp $
+
+*madwifi-tools-0.1_pre20041019 (19 Oct 2004)
+
+  19 Oct 2004; <solar@gentoo.org> +madwifi-tools-0.1_pre20041019.ebuild:
+  updated snap of madwifi-tools for 2.6.9 kernels
 
 *madwifi-tools-0.1_pre20040906 (06 Sep 2004)
 
