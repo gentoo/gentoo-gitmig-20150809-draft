@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.15 2005/01/06 13:58:15 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.16 2005/01/06 17:58:59 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -24,6 +24,8 @@
 #											to be built automatically using the
 #											default pkg_compile/install. They
 #											are explained properly below.
+#											It will only make BUILD_TARGETS once
+#											in any directory.
 # NO_MODULESD	<string>					Set this to something to prevent
 #											modulesd file generation
 
@@ -258,7 +260,9 @@ linux-mod_pkg_setup() {
 linux-mod_src_compile() {
 	local modulename moduledir sourcedir moduletemp xarch i
 	xarch="${ARCH}"
-	unset ARCH	
+	unset ARCH
+	
+	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 
 	for i in ${MODULE_NAMES}
 	do
@@ -272,10 +276,15 @@ linux-mod_src_compile() {
 		moduledir="${moduledir:-misc}"
 		sourcedir="${sourcedir:-${S}}"
 		
-		einfo "Preparing ${modulename} module"
-		cd ${sourcedir}
-		emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module} || \
-			die Unable to make ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module}.
+		if [ ! -f "${sourcedir}/.built" ];
+		then
+			cd ${sourcedir}
+			einfo "Preparing ${modulename} module"
+			emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} || \
+				die Unable to make ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}.
+			touch ${sourcedir}/.built
+			cd ${OLDPWD}
+		fi
 	done
 	ARCH="${xarch}"
 }
@@ -299,6 +308,7 @@ linux-mod_src_install() {
 		cd ${sourcedir}
 		insinto /lib/modules/${KV_FULL}/${moduledir}
 		doins ${modulename}.${KV_OBJ}
+		cd ${OLDPWD}
 		
 		[ -z "${NO_MODULESD}" ] && generate_modulesd ${sourcedir}/${modulename}
 	done
