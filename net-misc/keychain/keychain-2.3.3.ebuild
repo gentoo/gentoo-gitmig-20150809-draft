@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.3.3.ebuild,v 1.2 2004/07/01 21:23:41 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.3.3.ebuild,v 1.3 2004/07/25 03:31:20 agriffis Exp $
 
 DESCRIPTION="ssh-agent manager"
 HOMEPAGE="http://www.gentoo.org/proj/en/keychain.xml"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
