@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.3 2004/10/10 22:28:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.4 2004/10/12 14:10:30 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -10,6 +10,21 @@ inherit eutils
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 #DEPEND="virtual/fortran" # Let's aim for this...
+
+# Which Fortran Compiler has been selected ?
+export FORTRANC
+
+# These are the options to ./configure / econf that enable the usage
+# of a specific Fortran Compiler. If your package uses a different
+# option that the one listed here, overwrite it in your ebuild.
+f77_CONF="--with-f77"
+f2c_CONF="--with-f2c"
+
+# This function prints the necessary options for the currently selected
+# Fortran Compiler.
+fortran_conf() {
+	echo $(eval echo \${$(echo -n ${FORTRANC})_CONF})
+}
 
 # need_fortran(<profiles>):
 #  profiles = <profile> ... <profile>
@@ -53,7 +68,7 @@ need_fortran() {
 				;;
 		esac
 	done
-	AVAILABLE="${AVAILABLE:1}"
+	AVAILABLE="${AVAILABLE/^[[:space:]]}"
 	if [ -z "${AVAILABLE}" ]; then
 		eerror "None of the needed Fortran Compilers ($@) is installed."
 		eerror "To install one of these, choose one of the following steps:"
@@ -83,16 +98,15 @@ need_fortran() {
 		einfo "Installed are: ${AVAILABLE}"
 		if [ -n "${F77}" -o -n "${FC}" -o -n "${F2C}" ]; then
 			if [ -n "${F77}" ]; then
-				FC="${F77}" # F77 overwrites FC
+				FC="${F77}"						# F77 overwrites FC
 			fi
 			if [ -n "${FC}" -a -n "${F2C}" ]; then
 				ewarn "Using ${FC} and f2c is impossible. Disabling f2c !"
-				F2C=""
-				MY_FORTRAN="$(basename ${FC})"
-				EXTRA_ECONF="${EXTRA_ECONF} --with-f77"
+				F2C=""							# Disabling f2c
+				MY_FORTRAN="$(basename ${FC})"	# set MY_FORTRAN to filename of
+												# the Fortran Compiler
 			elif [ -n "${F2C}" ]; then
 				MY_FORTRAN="$(basename ${F2C})"
-				EXTRA_ECONF="${EXTRA_ECONF} --with-f2c"
 			fi
 			case ${MY_FORTRAN} in
 				g77)
@@ -118,7 +132,8 @@ patch_fortran() {
 	if [ -z "${FORTRANC}" ]; then
 		return
 	fi
-	local PATCHES=${FILESDIR}/${P}-${FORTRANC}*
+	local PATCHES=$(find ${FILESDIR}/ -name "${P}-${FORTRANC}*")
+#local PATCHES=${FILESDIR}/${P}-${FORTRANC}*
 	local PATCH
 	if [ -n "${PATCHES}" ]; then
 		for PATCH in ${PATCHES}; do
