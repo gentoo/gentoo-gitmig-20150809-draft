@@ -21,3 +21,6 @@ sse2
 3dnow
 
 icc
+
+# Firebird doesnt build on amd64
+firebird
