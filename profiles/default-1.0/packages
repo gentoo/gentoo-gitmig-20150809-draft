@@ -168,7 +168,6 @@
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
-<=sys-apps/tcp-wrappers-7.6-r3
 <=app-sci/octave-2.0.17
 ~media-video/cinelerra
 
