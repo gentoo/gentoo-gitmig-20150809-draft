@@ -263,10 +263,6 @@ media-plugins/xmms-arts
 # development version
 >=app-office/abiword-1.1
 
-# <lu_zero@gentoo.org> (31 Mar 2003)
-# Waiting for comments from Bioware.
-app-games/nwn
-
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
