@@ -3,8 +3,8 @@ Index: source/gdi/print.cxx
 RCS file: /cvs/oo/gsl/vcl/source/gdi/print.cxx,v
 retrieving revision 1.24.4.4
 diff -u -r1.24.4.4 print.cxx
---- /vcl/source/gdi/print.cxx	2002/06/19 11:32:01	1.24.4.4
-+++ /vcl/source/gdi/print.cxx	2002/10/01 21:18:44
+--- ./vcl/source/gdi/print.cxx	2002/06/19 11:32:01	1.24.4.4
++++ ./vcl/source/gdi/print.cxx	2002/10/01 21:18:44
 @@ -532,7 +532,7 @@
  		if ( (pJobSetup->maPrinterName != pInfo->maPrinterName) ||
  			 (pJobSetup->maDriver != pInfo->maDriver) )
