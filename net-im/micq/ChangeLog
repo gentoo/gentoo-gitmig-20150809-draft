@@ -1,23 +1,25 @@
 # ChangeLog for net-im/micq
-# Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.6 2003/01/31 09:58:03 mholzer Exp $
+# Copyright 2001-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.7 2003/02/01 12:03:45 kutsuya Exp $
 
-* micq-0.4.9.4 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+*micq-0.4.10.1 (31 Jan 2003) Jason Shoemaker <kutsuya@gentoo.org>
+
+  31 Jan 2003; Jason Shoemaker <kutsuya@gentoo.org> ChangeLog,
+  micq-0.4.10.1.ebuild : Requested version update from: #13772, #14576
+	
+*micq-0.4.9.4 (08 Dec 2002) Bart Verwilst <verwilst@gentoo.org>	
 
   31 Jan 2003; Martin Holzer <mholzer@gentoo.org> micq-0.4.9.4.ebuild
-  ChangeLog :
-  Fixed SRC_URI. Closes #14826.
+  ChangeLog : Fixed SRC_URI. Closes #14826.	
 
-* micq-0.4.9.2b (12 August 2002)
+*micq-0.4.9.2b (12 August 2002) Sascha Schwabbauer <cybersystem@gentoo.org>
 
-  12 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, micq-0.4.9.2b.ebuild, files/digest-micq-0.4.9.2b :
+  12 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog,
+  micq-0.4.9.2b.ebuild, files/digest-micq-0.4.9.2b : Updated to the newest
+  version. Updated ebuild by Julien Gilli <jgilli@nerim.fr>.
 
-    Updated to the newest version..
-    Updated ebuild by Julien Gilli <jgilli@nerim.fr>..
+*micq-0.4.9 (07 August 2002) Sascha Schwabbauer <cybersystem@gentoo.org>
 
-* micq-0.4.9 (07 August 2002)
-      
-  07 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, micq-0.4.9.ebuild, files/digest-micq-0.4.9 :
-
-    Initial version in Portage now..
-    Initial ebuild by Julien Gilli <jgilli@nerim.fr>..
+  07 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog,
+  micq-0.4.9.ebuild, files/digest-micq-0.4.9 : Initial version in Portage now.
+  Initial ebuild by Julien Gilli <jgilli@nerim.fr>..
