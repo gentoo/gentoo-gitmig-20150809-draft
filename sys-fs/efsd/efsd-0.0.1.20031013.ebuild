@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/efsd/efsd-0.0.1.20031013.ebuild,v 1.1 2003/10/14 02:56:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/efsd/efsd-0.0.1.20031013.ebuild,v 1.2 2003/12/07 23:51:14 foser Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 DEPEND="${DEPEND}
 	dev-lang/perl"
 RDEPEND="${DEPEND}
-	app-admin/fam-oss
+	app-admin/fam
 	>=dev-libs/libxml2-2.3.10
 	>=dev-db/edb-1.0.4.20031013"
 
