@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.219 2005/01/24 22:32:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.220 2005/01/25 06:17:51 lu_zero Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -156,6 +156,7 @@ livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livec
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
 mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
+matroska - Adds support for the matroska container format
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
 mcal - Adds support for MCAL calender system
@@ -198,6 +199,7 @@ oci8 - Adds Oracle 8 Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX data files into gnucash and grisbi
+ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
 oggvorbis - Adds support for the OggVorbis audio encoding
 openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL
