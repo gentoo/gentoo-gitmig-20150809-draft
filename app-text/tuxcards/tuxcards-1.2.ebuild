@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.1.ebuild,v 1.2 2004/10/18 23:40:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.1 2004/10/18 23:40:37 ticho Exp $
 
 DESCRIPTION="A heirarchical text editor"
 HOMEPAGE="http://www.tuxcards.de"
@@ -18,8 +18,11 @@ src_compile() {
 	sed -e 's:/usr/local:/usr:g' \
 		-e 's:/usr/doc/tuxcards:/usr/share/tuxcards:g' tuxcards.pro > tuxpro && \
 		mv tuxpro tuxcards.pro
-	sed -e 's:/usr/local/doc:/usr/share:g' src/tuxcardsconfiguration.cpp > temp && \
-		mv temp src/tuxcardsconfiguration.cpp
+	sed -e 's:/usr/local/doc:/usr/share:g' src/CTuxCardsConfiguration.cpp > temp && \
+		mv temp src/CTuxCardsConfiguration.cpp
+	sed -e 's:/usr/local/bin/:/usr/bin/:g' src/gui/dialogs/optionsDialog/IOptionsDialog.ui > temp && \
+		mv temp src/gui/dialogs/optionsDialog/IOptionsDialog.ui
+
 	qmake tuxcards.pro
 
 	emake || die
