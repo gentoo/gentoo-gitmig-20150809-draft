@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.4.ebuild,v 1.1 2004/12/16 08:26:20 mr_bones_ Exp $
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.4.ebuild,v 1.2 2005/01/07 19:15:34 vapier Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="image file loading library"
@@ -18,16 +16,9 @@ DEPEND="sys-libs/zlib
 	>=media-libs/libsdl-1.2.4
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
-	tiff? ( media-libs/tiff )
-	gif? ( media-libs/giflib )"
+	tiff? ( media-libs/tiff )"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	gnuconfig_update
-}
 
 src_compile() {
 	econf \

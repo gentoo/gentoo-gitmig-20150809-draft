@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-image
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.18 2004/12/16 08:26:20 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.19 2005/01/07 19:15:34 vapier Exp $
+
+  07 Jan 2005; Mike Frysinger <vapier@gentoo.org> sdl-image-1.2.3-r1.ebuild,
+  sdl-image-1.2.4.ebuild:
+  Remove DEPEND on gif since it is an internal feature #77011 by P.L.Hayes.
 
 *sdl-image-1.2.4 (16 Dec 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.3-r1.ebuild,v 1.5 2004/11/03 00:15:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.3-r1.ebuild,v 1.6 2005/01/07 19:15:34 vapier Exp $
 
 inherit gnuconfig
 
@@ -19,8 +19,7 @@ DEPEND="sys-libs/zlib
 	>=media-libs/libsdl-1.2.4
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
-	tiff? ( media-libs/tiff )
-	gif? ( media-libs/giflib )"
+	tiff? ( media-libs/tiff )"
 
 src_unpack() {
 	unpack ${A}
