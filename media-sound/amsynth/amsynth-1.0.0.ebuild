@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.2 2004/03/03 04:11:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0.0.ebuild,v 1.1 2004/03/03 04:11:26 eradicator Exp $
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
@@ -34,11 +34,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use oss || myconf="--without-oss ${myconf}"
-	use alsa || myconf="--without-alsa ${myconf}"
-	use jack || myconf="--without-jack ${myconf}"
-	econf ${myconf} || die "configure failed"
+	econf `use_with oss` `use_with alsa` `use_with jack` || die "configure failed"
 	emake || die
 }
 
