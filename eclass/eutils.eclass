@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.51 2003/09/08 02:10:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.52 2003/09/13 19:24:21 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -456,6 +456,23 @@ get_number_of_jobs() {
 	fi
 }
 
+# Cheap replacement for when debianutils (and thus mktemp)
+# do not exist on the users system
+# vapier@gentoo.org
+#
+# Takes just 1 parameter (the directory to create tmpfile in)
+mymktemp() {
+	local topdir=$1
+	[ -z "${topdir}" ] && topdir=/tmp
+	if [ `which mktemp 2>/dev/null` ] ; then
+		mktemp -p ${topdir}
+	else
+		local tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
+		touch ${tmp}
+		echo ${tmp}
+	fi
+}
+
 # Simplify/standardize adding users to the system
 # vapier@gentoo.org
 #
@@ -478,8 +495,7 @@ enewuser() {
 	fi
 
 	# setup a file for testing usernames/groups
-	local tmpfile="`mktemp -p ${T}`"
-	touch ${tmpfile}
+	local tmpfile="`mymktemp ${T}`"
 	chown ${euser} ${tmpfile} >& /dev/null
 	local realuser="`ls -l ${tmpfile} | awk '{print $3}'`"
 
@@ -589,8 +605,7 @@ enewgroup() {
 	fi
 
 	# setup a file for testing groupname
-	local tmpfile="`mktemp -p ${T}`"
-	touch ${tmpfile}
+	local tmpfile="`mymktemp ${T}`"
 	chgrp ${egroup} ${tmpfile} >& /dev/null
 	local realgroup="`ls -l ${tmpfile} | awk '{print $4}'`"
 
