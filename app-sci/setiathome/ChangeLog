@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.24 2004/11/07 20:15:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.25 2004/11/07 21:30:05 ribosome Exp $
+
+*setiathome-3.03-r2 (07 Nov 2004)
+
+  07 Nov 2004; Olivier Fisette <ribosome@gentoo.org>
+  +setiathome-3.03-r2.ebuild:
+  Fixed insecure installation for version 3.03 (see bug #69868). All four arches
+  are maked unstable.
 
 *setiathome-3.08-r4 (07 Nov 2004)
 
