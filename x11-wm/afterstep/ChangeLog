@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.14 2003/10/21 09:59:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.15 2004/02/25 06:56:16 raker Exp $
+
+*afterstep-2.0_beta3 (25 Feb 2004)
+
+  25 Feb 2004; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta3.ebuild:
+  Version bump.  Stability changes.  No significant ebuild changes.
+  See bug #42029.
 
   21 Oct 2003; Nick Hadaway <raker@gentoo.org> afterstep-2.00_beta2.ebuild:
   See bug #31541.  Thanks to Doug Weimer and Mike Gardiner for providing

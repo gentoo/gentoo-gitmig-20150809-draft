@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta2.ebuild,v 1.3 2004/02/25 06:56:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta3.ebuild,v 1.1 2004/02/25 06:56:16 raker Exp $
 
 IUSE="png jpeg gif tiff truetype xinerama debug mmx"
 
 DESCRIPTION="Window manager based on the look and feel of the NeXTStep"
 HOMEPAGE="http://www.afterstep.org"
-SRC_URI="ftp://ftp.afterstep.org/devel/AfterStep-2.00.beta2.tar.bz2"
+SRC_URI="ftp://ftp.afterstep.org/devel/AfterStep-2.00.beta3.tar.bz2"
 
 LICENSE="AFTERSTEP"
 SLOT="0"
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	>=media-sound/sox-12.17.3"
 
-S="${WORKDIR}/AfterStep-2.00.beta2"
+S="${WORKDIR}/AfterStep-2.00.beta3"
 
 src_unpack () {
 	unpack ${A}
