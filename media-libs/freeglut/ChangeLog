@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.8 2004/11/03 15:41:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.9 2004/11/08 12:16:00 hardave Exp $
+
+  08 Nov 2004; Hardave Riar <hardave@gentoo.org> freeglut-2.2.0.ebuild:
+  Marked ~mips, bug #59095.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> freeglut-2.2.0.ebuild:
   Marked ~ppc64; bug #59095
