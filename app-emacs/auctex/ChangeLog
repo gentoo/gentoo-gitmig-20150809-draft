@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.18 2004/10/09 20:24:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.19 2004/10/13 22:23:23 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> auctex-11.53.ebuild:
+  Added --with-lispdir in response to bug #67402.
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> -auctex-11.51.ebuild,
   -auctex-11.52.ebuild, auctex-11.53.ebuild:
