@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.70 2005/01/06 14:07:27 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.71 2005/01/09 18:56:47 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -150,7 +150,7 @@ then
 	RDEPEND="${DEPEND}
 		 	 !build? ( >=sys-libs/ncurses-5.2
 			 dev-lang/perl
-			 sys-apps/module-init-tools
+			 virtual/modutils
 			 sys-devel/make )"
 
 	[ $(kernel_is_2_4) $? == 0 ] && PROVIDE="virtual/linux-sources" \
