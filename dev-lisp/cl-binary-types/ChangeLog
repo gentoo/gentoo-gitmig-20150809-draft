@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cl-binary-types
+# Copyright 2000-2003 Gentoo Technologies, Inc. and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/ChangeLog,v 1.1 2003/09/01 19:41:35 mkennedy Exp $
+
+*cl-binary-types-0.84 (01 Sep 2003)
+
+  01 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
