@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4.1.ebuild,v 1.1 2004/02/06 14:33:23 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4.1.ebuild,v 1.2 2004/05/27 06:58:31 kloeri Exp $
 
 inherit distutils
 
@@ -20,7 +20,7 @@ DEPEND="${DEPEND}
 	>=dev-python/Imaging-1.1.3
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/twisted-1.0.7
-	>=dev-python/mmpython-0.3
+	=dev-python/mmpython-0.3
 	>=media-video/mplayer-0.92
 	>=media-libs/freetype-2.1.4
 	>=media-libs/libsdl-1.2.5

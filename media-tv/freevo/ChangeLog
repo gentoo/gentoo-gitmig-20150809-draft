@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.12 2004/02/06 14:33:23 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.13 2004/05/27 06:58:31 kloeri Exp $
+
+  27 May 2004; Bryan Østergaard <kloeri@gentoo.org> freevo-1.4.1.ebuild,
+  freevo-1.4.ebuild:
+  Freevo 1.4.1 only works with mmpython-0.3. Thanks to Dirk Meyer
+  <dischi@tzi.de> (mmpython and freevo developer) for reporting this.
 
 *freevo-1.4.1 (06 Feb 2004)
 
