@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.342 2004/05/04 04:17:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.343 2004/05/04 18:16:36 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -98,7 +98,6 @@ dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
-dev-libs/uclibc:pie - adds support for Position Independent Executables
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
 dev-lisp/clisp:pcre - enable PCRE support
@@ -331,7 +330,6 @@ sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OS
 sys-devel/oskit:oskit-profiling - enable profiling support
 sys-devel/uclibc-buildroot:fullrpc - Defines xdr functions and some lesser used rpc stuff. Required for NFS
 sys-devel/uclibc-buildroot:nommu - No memory management unit on target architecture
-sys-devel/uclibc-buildroot:pie - adds support for Position Independent Executables
 sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protecton
 sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
@@ -353,7 +351,6 @@ sys-kernel/wolk-dev-sources:win4lin - Enable win4lin supoort (2.6.x kernel)
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
-sys-libs/glibc:pic - Build position independent code. Needed for prelink or the hardened toolchain
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:freetype - Enables Freetype font support
