@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.18 2004/11/15 20:13:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.19 2004/12/17 21:36:18 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> hexedit-1.2.10.ebuild:
+  Stable on ppc64
 
   15 Nov 2004; Markus Rothe <corsair@gentoo.org> hexedit-1.2.10.ebuild:
   Marked ~ppc64; bug #71168
