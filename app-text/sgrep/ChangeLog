@@ -1,0 +1,11 @@
+# ChangeLog for app-text/sgrep
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgrep/ChangeLog,v 1.1 2004/09/02 05:57:11 usata Exp $
+
+*sgrep-1.92a (02 Sep 2004)
+
+  02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +sgrep-1.92a.ebuild:
+  Initial import. Ebuild submitted by Martin Blais <blais@furius.ca>,
+  closing bug #41115.
+
