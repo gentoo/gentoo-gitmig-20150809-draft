@@ -1,28 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.5.ebuild,v 1.3 2003/03/20 13:50:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6.ebuild,v 1.1 2003/07/24 22:06:30 lostlogic Exp $
 
-VA="`echo ${PV}|sed -e 's:^\([0-9]*\)\..*$:\1:'`"
-VB="`echo ${PV}|sed -e 's:^[0-9]*\.\([0-9]*\)\..*$:\1:'`"
 FOLDER="${P}"
 SNAP=""
 
-MY_P=${P/_/}
+MY_P="${P/_/}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="An ncurses AOL Instant Messenger."
-HOMEPAGE="http://site.rpi-acm.org/info/naim/"
-SRC_URI="http://128.113.139.111/~n/.${PN}_archive/${VA}/${VB}/${FOLDER}${SNAP}.tar.gz"
-#P="`echo ${P}|sed -e 's:_.*$::'`"
+# This source might change... 
+#SRC_URI="http://site.n.ml.org/download/20030607190139/${PN}/${P}.tar.gz"
+SRC_URI="http://shell.n.ml.org/n/naim/${P}.tar.gz"
+HOMEPAGE="http://naim.n.ml.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~arm ~mips"
 
-DEPEND=">=sys-libs/ncurses-5.2
-	virtual/glibc"
+DEPEND=">=sys-libs/ncurses-5.2"
 
 
 src_compile() {
+	einfo "${MY_P}"
+
 	local myconf
 	myconf="--with-gnu-ld --enable-detach"
 	use static	&&	myconf="${myconf} --enable-static=yes"
@@ -32,7 +32,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/naim
+	dobin src/naim		
+	dosym /usr/bin/naim /usr/bin/nicq
+	dosym /usr/bin/naim /usr/bin/nirc
+	dosym /usr/bin/naim /usr/bin/nlily
 
 	doman naim.1
 
