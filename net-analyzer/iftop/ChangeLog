@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.11 2004/03/21 12:15:17 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.12 2004/03/21 21:04:23 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> iftop-0.16.ebuild:
+  Added ~sparc keyword.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> iftop-0.11.ebuild,
   iftop-0.12.ebuild, iftop-0.13.ebuild, iftop-0.14.ebuild:
