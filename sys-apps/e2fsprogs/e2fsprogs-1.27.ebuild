@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27.ebuild,v 1.7 2002/07/16 05:50:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27.ebuild,v 1.8 2002/08/03 19:53:59 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
@@ -84,6 +84,17 @@ src_install() {
 	ln -sf e2fsck fsck.ext3
 	rm mkfs.*
 	ln -sf mke2fs mkfs.ext2
-	rm -rf ${D}/usr/share/et ${D}/usr/share/ss
+
+	# 03 Aug 2002 <raker@gentoo.org>
+        # There are awk files that don't get installed when doing
+        # a 'make install'.  They are the template files for
+        # /bin/compile_et.
+
+        cd ${S}/lib/et
+        insinto /usr/share/et
+        doins et_c.awk et_h.awk
+        cd ${S}/lib/ss
+        insinto /usr/share/ss
+        doins ct_c.awk
 }
 

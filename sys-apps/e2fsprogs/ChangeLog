@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.4 2002/07/14 19:20:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.5 2002/08/03 19:53:59 raker Exp $
 
 *e2fsprogs-1.25-r1.ebuild (14 July 2002)
 
@@ -15,11 +15,19 @@
   14 Jul 2002; phoen][x <phoenix@gentoo.org> e2fsprogs-1.27-r1.ebuild :
   Added KEYWORDS, SLOT.
 
-  21 Jun 2002; Joachim Blaabejrg <styx@gentoo.org> e2fsprogs-1.27-r1.ebuild:
-
+  21 Jun 2002; Joachim Blaabejrg <styx@gentoo.org> e2fsprogs-1.27-r1.ebuild :
   Added ACL support.
 
+  03 Aug 2002; Nick Hadaway <raker@gentoo.org> e2fsprogs-1.27-r1.ebuild :
+  Updated ebuild to install /bin/compile_et's template files.  Fixes a
+  cyrus-imapd compile problem.
+
 *e2fsprogs-1.27 (21 March 2002)
+
+  03 Aug 2002; Nick Hadaway <raker@gentoo.org> e2fsprogs-1.27.ebuild :
+  Updated ebuild to install /bin/compile_et's template files.  Fixes a
+  cyrus-imapd compile problem.
+
 
 *e2fsprogs-1.25-r3 (1 Feb 2002)
 
