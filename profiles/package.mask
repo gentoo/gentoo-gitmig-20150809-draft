@@ -22,6 +22,16 @@
 ##   End example
 ##
 
+# Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
+# These packages have been replaced with the new gtk-engines-* form
+x11-themes/crux
+x11-themes/gtk-engines
+x11-themes/gtk-flat-theme
+x11-themes/gtk-thinice-engine
+x11-themes/gtk-thinice-theme
+x11-themes/gtk-xenophilia-engine
+x11-themes/gtk-xfce-engine
+
 # phoen][x <phoenix@gentoo.org (04 Aug 2002)
 # Bumped to new version. Masked for testing.
 =net-libs/libicq2000-0.3.2
@@ -136,7 +146,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1178 2002/08/04 14:34:09 phoenix Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1179 2002/08/04 14:52:36 leonardop Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
