@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.20 2003/02/12 06:50:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.21 2003/02/22 03:35:09 agriffis Exp $
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgnomeui-2.2.0.1.ebuild :
   Add ~alpha to KEYWORDS
 
 *libgnomeui-2.2.0.1 (30 Jan 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgnomeui-2.2.0.1.ebuild :
+  Mark stable on Alpha
 
   30 Jan 2003; foser <foser@gentoo.org> libgnomeui-2.2.0.1.ebuild :
   GNOME 2.2 rc2 commit
