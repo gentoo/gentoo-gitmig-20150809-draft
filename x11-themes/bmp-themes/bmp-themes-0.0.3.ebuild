@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmp-themes/bmp-themes-0.0.3.ebuild,v 1.1 2004/11/20 19:34:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmp-themes/bmp-themes-0.0.3.ebuild,v 1.2 2005/03/21 15:13:13 luckyduck Exp $
 
 DESCRIPTION="Collection of XMMS themes for Beep Media Player"
 HOMEPAGE="http://www.xmms.org"
@@ -102,7 +102,7 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~hppa"
 
 IUSE=""
 
