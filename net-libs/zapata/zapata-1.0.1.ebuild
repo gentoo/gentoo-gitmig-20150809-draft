@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/zapata-1.0.0.ebuild,v 1.2 2004/10/24 17:47:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/zapata-1.0.1.ebuild,v 1.1 2004/10/24 17:47:28 stkn Exp $
 
 IUSE=""
 
@@ -8,14 +8,14 @@ inherit eutils
 
 DESCRIPTION="Library of additional telephony related functions"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/old/zapata-${PV}.tar.gz"
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zapata-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~x86"
 
 DEPEND="virtual/libc
-	=net-misc/zaptel-1.0.0"
+	=net-misc/zaptel-1.0.1"
 
 src_unpack() {
 	unpack ${A}

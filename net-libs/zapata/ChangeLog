@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/zapata
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.10 2004/09/23 23:53:34 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.11 2004/10/24 17:47:28 stkn Exp $
+
+*zapata-1.0.1 (24 Oct 2004)
+
+  24 Oct 2004; <stkn@gentoo.org> zapata-1.0.0.ebuild, +zapata-1.0.1.ebuild:
+  version bump and SRC_URI update in 1.0.0
 
 *zapata-1.0.0 (24 Sep 2004)
 
