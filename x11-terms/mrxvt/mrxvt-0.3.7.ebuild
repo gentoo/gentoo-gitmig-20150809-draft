@@ -1,19 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.4.ebuild,v 1.2 2004/10/14 10:16:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.7.ebuild,v 1.1 2004/11/04 16:52:32 usata Exp $
 
-IUSE="debug xgetdefault"
+IUSE="debug truetype xgetdefault"
+#IUSE="${IUSE} utempter"
 
-DESCRIPTION="Multi-tabbed rxvt clone with transparent backround support"
+DESCRIPTION="Multi-tabbed rxvt clone with XFT, transparent background and CJK support"
 HOMEPAGE="http://materm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/materm/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc-macos"
+KEYWORDS="~x86 ~ppc-macos ~amd64 ~ppc"
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	virtual/x11
+	dev-libs/expat
+	media-libs/libpng
+	media-libs/jpeg
+	truetype? ( virtual/xft
+		media-libs/fontconfig
+		media-libs/freetype )"
+#	utempter? ( sys-apps/utempter )
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake"
@@ -65,6 +73,7 @@ src_compile() {
 		--enable-keepscrolling \
 		--enable-xft \
 		$(use_enable xgetdefault) \
+		$(use_enable truetype xft) \
 		$(use_enable debug) \
 		--disable-text-blink \
 		--disable-menubar \
