@@ -1,9 +1,9 @@
 # ChangeLog for net-libs/lcrzo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.13 2003/02/12 08:05:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.14 2003/03/27 18:42:08 woodchip Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*lcrzo-4.17.0 (27 Mar 2003)
+
 *lcrzo-4.16.0 (24 Oct 2002)
 
 *lcrzo-4.10 (6 Jun 2002)
