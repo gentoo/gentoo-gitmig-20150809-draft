@@ -1,4 +1,6 @@
-MD5 5f600777ade562797d8642fd661c7135 scim-tables-0.2.1.ebuild 691
+MD5 9cc962aa4e8f8fcc3f2e60ab085e7f9a scim-tables-0.2.1.ebuild 681
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 c6586c8512dcc45be20851ca49b1bbeb ChangeLog 362
+MD5 91c16c8dc03afc1fc43b4c05d789f30f scim-tables-0.2.2.ebuild 682
 MD5 c6de8b28ebe045b1ce480db4994024ec files/digest-scim-tables-0.2.1 70
+MD5 7223e772251a04a44d09c5b0c77440ce files/digest-scim-tables-0.2.2 70
