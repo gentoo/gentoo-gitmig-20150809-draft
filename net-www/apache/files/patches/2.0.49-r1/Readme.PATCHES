@@ -18,3 +18,4 @@ Name				Purpose
 
 00_ssl_engine.patch		Better error message for child crashing in SSL.
 00_ssl_verify_client.patch	Fixes 12355 from apache bugzilla.
+04_ssl_makefile.patch		Works around broken lex file in mod_ssl

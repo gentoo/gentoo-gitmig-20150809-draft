@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.24 2004/05/23 16:44:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.25 2004/05/26 12:24:16 stuart Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -26,7 +26,7 @@ DEPEND="dev-util/yacc
 	gdbm? ( sys-libs/gdbm )
 	doc? ( =app-doc/apache-manual-2.0.49-r1 )
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
-IUSE="berkdb gdbm ldap threads ipv6 doc"
+IUSE="berkdb gdbm ldap threads ipv6 doc ssl"
 
 apache_setup_vars() {
 	# Sets the USERDIR to default.
@@ -59,6 +59,8 @@ src_unpack() {
 	cd ${S} || die
 	epatch ${FILESDIR}/apache-2.0.49-gentoo.diff || die
 	epatch ${FILESDIR}/httpd-2.0.49-cgi.patch || die
+
+	epatch ${FILESDIR}/patches/${PVR}/04_ssl_makefile.patch || die
 
 	if use ipv6; then
 		epatch ${FILESDIR}/httpd-2.0.49-ipv6.patch
@@ -176,6 +178,10 @@ src_compile() {
 		--with-devrandom=/dev/urandom \
 		--host=${CHOST} ${myconf} || die "bad ./configure please submit bug report to bugs.gentoo.org. Include your config.layout."
 		#--with-mpm={worker|prefork|perchild|leader|threadpool}
+
+	# we don't want apache trying to re-compile the ssl_expr_parse.c file
+	# because the lex source is broken
+	touch modules/ssl/ssl_expr_scan.c
 
 	emake || die "problem compiling Apache2 :("
 
