@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.2 2004/02/26 16:13:25 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.3 2004/02/28 04:40:56 vapier Exp $
 
 S=${WORKDIR}/${P}.rel
-DESCRIPTION="leafnode - A USENET software package designed for small sites"
+DESCRIPTION="A USENET software package designed for small sites"
 SRC_URI="mirror://sourceforge/leafnode/${P}.rel.tar.bz2"
 RESTRICT="nomirror"
 HOMEPAGE="http://leafnode.sourceforge.net/"
