@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-1.4.ebuild,v 1.5 2004/07/14 17:44:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-1.4.ebuild,v 1.6 2004/08/31 16:19:01 absinthe Exp $
 
 DESCRIPTION="Static HTML image gallery generator"
 HOMEPAGE="http://www.stanford.edu/~epop/igal/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.stanford.edu/~epop/igal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 
 RDEPEND="dev-lang/perl

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/igal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.9 2004/06/24 22:42:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/ChangeLog,v 1.10 2004/08/31 16:19:01 absinthe Exp $
+
+  08 Aug 2004; Dylan Carlson <absinthe@gentoo.org> igal-1.4.ebuild:
+  KEYWORDS amd64.
 
 *igal-1.4 (16 Mar 2003)
 
