@@ -1,5 +1,16 @@
-MD5 9a30aaa8cd0d9830afc83c67e86f62cc ChangeLog 1585
-MD5 785d22e067b6258b71ba7986736fe26d kcpuload-1.9.1.ebuild 501
-MD5 d107c2cdb810b57da05ee42ed1c975f3 kcpuload-1.99.ebuild 459
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90ed40fdc60b4cfdc0adf2eebc00d9c8 kcpuload-1.9.1.ebuild 497
+MD5 436790c492b1acb65b35833ac9e5b31a kcpuload-1.99.ebuild 458
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 f61fbeedb700895e50002ee36b242164 ChangeLog 1784
 MD5 1832135d88cd144698b7fedf097857f5 files/digest-kcpuload-1.9.1 66
 MD5 1b8a8e2d12f8eb9e581a305b134f596f files/digest-kcpuload-1.99 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhD2cI1lqEGTUzyQRAkwVAKC+cT9ZCnw+15tw12BaKsC8h1y0OgCfU5Hm
+7EW41dFb6zZ64XlZiLHz+P0=
+=UULI
+-----END PGP SIGNATURE-----
