@@ -1,9 +1,15 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.32 2004/02/24 06:28:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.33 2004/02/24 20:16:42 azarah Exp $
+
+  24 Feb 2004; Martin Schlemmer <azarah@gentoo.org> svgalib-1.9.18.ebuild:
+  Some first time build fixes (cannot find libvga.so and libvgagl.so when
+  building threeDKit and demos).  Hopefully fix module issues (bug #42522
+  among others ...).
 
   24 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
-  Until linux 2.6 module building is sorted out, we disable the kernel module #42522.
+  Until linux 2.6 module building is sorted out, we disable the kernel module,
+  bug #42522.
 
   23 Feb 2004; <plasmaroo@gentoo.org> files/svgalib-1.9.17-linux2.6.patch,
   files/svgalib-1.9.18-linux2.6.patch:
