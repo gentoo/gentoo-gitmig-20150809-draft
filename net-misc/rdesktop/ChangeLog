@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.26 2003/11/19 19:18:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.27 2003/12/10 14:18:59 wolf31o2 Exp $
+
+*rdesktop-1.3.0-r1 (10 Dec 2003)
+
+  10 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  rdesktop-1.3.0-r1.ebuild, rdesktop-1.3.0.ebuild,
+  files/rdesktop-1.3.0-last-two-certs.patch:
+  Added certificate patch from rdesktop-cvs.  Bumped version.
 
   19 Nov 2003; Jason Wever <weeve@gentoo.org> rdesktop-1.3.0.ebuild:
   Marked stable on sparc.
