@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.1 2000/11/07 06:41:31 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.1.2.ebuild,v 1.2 2000/11/08 08:44:48 jerry Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -23,7 +23,6 @@ src_compile() {
 }
 
 src_install () {
-    cd ${S}
     try make prefix=${D}/usr exec_prefix=${D}/usr \
         persistentdir=${D}/var/ucd-snmp install
 
