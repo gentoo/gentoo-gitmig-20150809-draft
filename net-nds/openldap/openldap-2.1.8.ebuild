@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.8.ebuild,v 1.1 2002/11/26 02:57:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.8.ebuild,v 1.2 2002/11/26 03:02:35 raker Exp $
 
-IUSE="ssl tcpd readline ipv6 berkdb gdbm ldap sasl kerberos"
+IUSE="ssl tcpd readline ipv6 gdbm ldap sasl kerberos"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LDAP suite of application and development tools"
@@ -16,10 +16,10 @@ LICENSE="OPENLDAP"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.2a
+	>=sys-libs/db-4.0.14
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
-	berkdb?   ( >=sys-libs/db-4.0.14 )
 	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
 	sasl?     ( >=dev-libs/cyrus-sasl-2.1.7-r3 )
 	kerberos? ( >=app-crypt/krb5-1.2.6 )"
@@ -57,16 +57,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-wrappers" \
 		|| myconf="${myconf} --disable-wrappers"
 
-	if use berkdb; then
-		myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
-	elif use gdbm; then
-		myconf="${myconf} --enable-ldbm --with-ldbm-api=gdbm"
-	elif use ldap-none; then
-		myconf="${myconf} --disable-ldbm"
-	else
-		myconf="${myconf} --enable-ldbm --with-ldbm-api=auto"
-	fi
-
 	use ipv6 && myconf="${myconf} --enable-ipv6" \
 		|| myconf="${myconf} --disable-ipv6"
 
@@ -86,6 +76,8 @@ src_compile() {
 		--enable-shell \
 		--enable-sql \
 		--enable-slurpd \
+		--enable-ldbm \
+		--with-ldbm-api=auto \
 		${myconf} || die "configure failed"
 
 	make depend || die "make depend failed"
