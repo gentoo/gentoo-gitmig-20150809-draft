@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.23.ebuild,v 1.13 2004/07/02 08:38:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.23.ebuild,v 1.14 2004/07/15 03:13:24 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU lexical analyser generator"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://lex.sourceforge.net/"
@@ -10,6 +9,7 @@ HOMEPAGE="http://lex.sourceforge.net/"
 SLOT="0"
 LICENSE="FLEX"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE="build nls static"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
@@ -42,4 +42,3 @@ src_install() {
 
 	dosym flex /usr/bin/lex
 }
-

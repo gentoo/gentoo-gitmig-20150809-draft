@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.6 2004/07/02 08:38:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.7 2004/07/15 03:13:24 agriffis Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU lexical analyser generator"
 SRC_URI="mirror://sourceforge/lex/${P}.tar.bz2"
 HOMEPAGE="http://lex.sourceforge.net/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://lex.sourceforge.net/"
 SLOT="0"
 LICENSE="FLEX"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ppc64"
+IUSE="build nls static"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
