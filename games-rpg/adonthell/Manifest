@@ -1,5 +1,5 @@
 MD5 6211b46f79a2bbaea936f30e64a83713 files/0.3.3-configure.in.patch 528
 MD5 e944f3812b6938f625c3a2bba14b3b35 files/digest-adonthell-0.3.3-r1 72
-MD5 657ebeacdff5dd2b6906067c1a17c40a adonthell-0.3.3-r1.ebuild 943
 MD5 1282595a304b85c65ff92d874cf0cb4b ChangeLog 949
-MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 18dc569e653d998c59e13977a3044e79 adonthell-0.3.3-r1.ebuild 942
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
