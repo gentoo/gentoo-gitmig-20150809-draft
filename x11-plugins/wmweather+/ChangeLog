@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmweather+
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.7 2004/01/04 18:36:48 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.8 2004/03/14 00:02:33 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> wmweather+-2.5.ebuild:
+  Added ~mips keyword.
 
 *wmweather+-2.5 (06 Dec 2003)
 
