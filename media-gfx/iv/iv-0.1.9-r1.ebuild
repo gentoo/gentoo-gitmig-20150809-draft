@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9-r1.ebuild,v 1.1 2002/10/30 21:04:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9-r1.ebuild,v 1.2 2002/12/13 20:08:31 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This is an image viewer"
@@ -9,7 +9,7 @@ HOMEPAGE="http://wolfpack.twu.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/imlib-1.9.13
 	=x11-libs/gtk+-1.2*"
