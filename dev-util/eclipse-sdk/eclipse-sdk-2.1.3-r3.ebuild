@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.13 2004/07/14 23:25:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.14 2004/08/21 23:49:55 karltk Exp $
 
 inherit eutils
 
@@ -68,6 +68,13 @@ src_unpack() {
 	if use kde ; then
 		epatch ${FILESDIR}/02-konqueror_help_browser-2.1.patch
 	fi
+
+        # Turn off verbose mode and on errors in all build.xml files
+        for x in $(find . -type f -name "build.xml") ; do
+                sed -i -r \
+                        -e 's/failonerror="[^"]+"/failonerror="true"/' \
+                        -e 's/verbose="[^"]+"/verbose="false"/' $x
+        done
 
 	# This one required for the IBM JDK
 	addwrite "/proc/self/maps"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.5 2004/08/21 22:20:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.6 2004/08/21 23:49:55 karltk Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 pkg_setup() {
-
 
 	set_dirs
 
@@ -89,6 +88,13 @@ src_unpack() {
 	if use kde ; then
 		epatch ${FILESDIR}/02-konqueror_help_browser-2.1.patch
 	fi
+
+        # Turn off verbose mode and on errors in all build.xml files
+        for x in $(find . -type f -name "build.xml") ; do
+                sed -i -r \
+                        -e 's/failonerror="[^"]+"/failonerror="true"/' \
+                        -e 's/verbose="[^"]+"/verbose="false"/' $x
+        done
 
 	# Clean up all pre-built code
 	ant -q -Dws=gtk -Dos=linux clean
@@ -199,7 +205,8 @@ src_compile() {
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
 		# IBM JRE
 		einfo "Using the IBM JDK"
-		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/xml.jar:$(java-config --jdk-home)/jre/lib/core.jar:$(java-config --jdk-home)/jre/lib/graphics.jar"
+		# We must _not_ add xml.jar, here, as that breaks the compilation!
+		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/core.jar:$(java-config --jdk-home)/jre/lib/graphics.jar"
 	else
 		# Sun derived JREs (Blackdown, Sun)
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/rt.jar"
