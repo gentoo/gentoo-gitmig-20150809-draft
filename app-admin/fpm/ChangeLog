@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/fpm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.1 2003/12/06 00:38:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.2 2003/12/08 18:23:44 zul Exp $
+
+  08 Dec 2003; Chuck Short <zul@gentoo.org> fpm-0.59.ebuild:
+  Fixes cvs issue. Fixes #35207.
+  Ebuild improvements.
 
 *fpm-0.59 (05 Dec 2003)
 

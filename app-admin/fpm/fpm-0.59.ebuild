@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.59.ebuild,v 1.1 2003/12/06 00:38:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/fpm-0.59.ebuild,v 1.2 2003/12/08 18:23:44 zul Exp $
 
 DESCRIPTION="A password manager for gnome."
 SRC_URI="mirror://sourceforge/fpm/${P}.tar.gz"
@@ -17,13 +17,14 @@ DEPEND="virtual/glibc
 		x11-libs/gtk+
 		dev-libs/glib
 		nls? ( sys-devel/gettext )"
-RDEPEND=""
+RDEPEND="${DEPEND}
+		dev-util/cvs"
 
 S="${WORKDIR}/${P}"
 
 src_compile() {
 	./autogen.sh --prefix=/usr \
-	./configure --prefix=/usr \
+	./configure --prefix=/usr
 	emake || die "Make failed"
 }
 
