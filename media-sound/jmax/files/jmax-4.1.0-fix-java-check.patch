@@ -9,3 +9,14 @@
    java_major_version=`echo $java_version | sed 's/\([[0-9]][[0-9]]*\)\..*/\1/'`
    java_minor_version=`echo $java_version | sed 's/[[0-9]][[0-9]]*\.\([[0-9]][[0-9]]*\)\(\.[[0-9]][[0-9]]*\)*/\1/' | sed 's/_.*//g'`
  
+--- bin/jmax.in.orig	2004-09-15 11:59:41.575144987 -0700
++++ bin/jmax.in	2004-09-15 12:02:31.142218132 -0700
+@@ -208,7 +208,7 @@
+ check_java_version ()
+ {
+     java_to_test="$1"
+-    java_version=`$java_to_test -version 2>&1 | grep "version" | sed 's/java version//' | sed 's/\"//g' `
++    java_version=`$java_to_test -version 2>&1 | grep "version" | sed 's/java version//' | sed 's/\"//g' | sed 's/-.*//' `
+     if test -z $java_version; then
+ 	# domething bad with java version
+ 	return 1
