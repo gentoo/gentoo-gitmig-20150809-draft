@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.31 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.32 2003/02/21 14:07:46 phoenix Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -51,7 +51,8 @@ INHERITED="$INHERITED $ECLASS"
 # Username to use
 [ -z "$ECVS_USER" ] && ECVS_USER="anonymous"
 
-# Password to use if anonymous login is off
+# Password to use if anonymous login is off, or if 'anonymous' pserver access
+# uses a password and ECVS_ANON = yes
 [ -z "$ECVS_PASS" ] && ECVS_PASS=""
 
 # Module to be fetched, must be set explicitly -
@@ -273,8 +274,34 @@ elif myauth == "pserver":
 EndOfFile
 ########################### End of inline-python ##################################
 	else
+		# is anonymous cvs.
 		debug-print "$FUNCNAME: using anonymous cvs login"
+		# is there a password to use for login with this "anonymous" login
+		if [ -n $ECVS_PASS ]; then
+			debug-print "$FUNCNAME: using anonymous cvs login with password"
+
+# inline-python #
+/usr/bin/env python << EndOfFile
+
+import pexpect,os
+
+myuser	  = "${ECVS_USER}"
+mypasswd  = "${ECVS_PASS}"
+
+mytimeout = 10
+
+# implicitly myauth == "pserver" here.
+mycommand = "cvs login"
+child = pexpect.spawn(mycommand)
+child.expect("CVS password:",mytimeout)
+child.sendline(mypasswd)
+child.expect(pexpect.EOF)
+EndOfFile
+# End of inline-python #
+
+		fi
 		$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
+
 	fi
 
 	# log out and restore ownership
