@@ -1,9 +1,12 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.49 2004/06/12 23:14:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.50 2004/06/13 16:54:41 lu_zero Exp $
 
-  12 Jun 2004; Jason Wever <weeve@gentoo.org> webmin-1.150.ebuild:
+    12 Jun 2004; Jason Wever <weeve@gentoo.org> webmin-1.150.ebuild:
   Stable on sparc wrt to bug #53375.
+
+  13 Jun 2004; Luca Barbato <lu_zero@gentoo.org> webmin-1.150.ebuild:
+  Marked ppc
 
   12 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> -webmin-1.110.ebuild,
   -webmin-1.130-r1.ebuild, -webmin-1.140.ebuild:
