@@ -1,6 +1,6 @@
-# ChangeLog for media-plugins/gst-plugins-,usepack
+# ChangeLog for media-plugins/gst-plugins-musepack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.1 2005/01/06 14:17:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.2 2005/01/07 08:02:59 swegener Exp $
 
 *gst-plugins-musepack-0.8.7 (06 Jan 2005)
 
