@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.4 2002/05/26 21:50:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.5 2002/05/31 05:35:36 naz Exp $
+
+*gpm-1.20.0-r2 (29 May 2002)
+
+  29 May 2002; Micahel Nazaroff <naz@gentoo.org> gpm-1.20.0-r2.ebuild :
+
+  Ok with this added patch should take care of the svgalib and ncurses problem
+  hopefully. Moved the ebuild to r2 to update force update from the r1 when it's
+  unmasked.
 
 *gpm-1.19.6 (26 May 2002)
 
