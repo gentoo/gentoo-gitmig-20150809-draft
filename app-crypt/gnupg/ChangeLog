@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.81 2004/10/11 11:42:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.82 2004/10/13 23:34:13 lv Exp $
+
+  13 Oct 2004; Travis Tilley <lv@gentoo.org> gnupg-1.2.6.ebuild:
+  stable on amd64
 
   11 Oct 2004; Guy Martin <gmsoft@gentoo.org> gnupg-1.2.6.ebuild:
   Removed unneeded patch for hppa. Stable on hppa.
