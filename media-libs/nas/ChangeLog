@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.24 2004/06/24 23:17:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.25 2004/07/10 15:02:32 kugelfang Exp $
+
+  10 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/nas-1.6c-header.patch, nas-1.6c-r1.ebuild:
+  Added patch on amd64 to cure segfaults. BUG #44070
 
   19 Jun 2004; Tom Gall <tgall@gentoo.org> nas-1.6c-r1.ebuild:
   ~ppc64 bug #54449

@@ -1,0 +1,10 @@
+--- server/dia/main.c.orig	2004-07-10 16:26:02.392580536 +0200
++++ server/dia/main.c	2004-07-10 16:26:18.304161608 +0200
+@@ -51,6 +51,7 @@
+  * $Id: nas-1.6c-header.patch,v 1.1 2004/07/10 15:02:32 kugelfang Exp $
+  */
+ 
++#include <stdlib.h>
+ #include <stdio.h>
+ #include <audio/audio.h>
+ #include <audio/Aproto.h>

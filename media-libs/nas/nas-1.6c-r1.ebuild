@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.8 2004/06/24 23:17:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.9 2004/07/10 15:02:32 kugelfang Exp $
+
+inherit eutils
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
@@ -20,10 +22,16 @@ RDEPEND="virtual/x11"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use amd64 && epatch ${FILESDIR}/${P}-header.patch
+}
+
 src_compile() {
 	xmkmf
 	touch doc/man/lib/tmp.{_man,man}
-	emake World || die
+	CFLAGS="-O2 -ggdb" emake World || die
 }
 
 src_install () {
