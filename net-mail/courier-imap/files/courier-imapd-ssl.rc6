@@ -1,0 +1,36 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imapd-ssl.rc6,v 1.1 2002/06/13 19:01:00 nitro Exp $
+
+depend() {
+	need net authdaemond
+}
+
+source /etc/courier-imap/imapd-ssl
+
+checkconfig() {
+	if [ ! -e /etc/courier-imap/imapd-ssl ] ; then
+		eerror "You need an /etc/courier-imap/imapd-ssl file to run courier-imapd"
+		return 1
+	fi
+	if [ ! -e /etc/courier-imap/imapd.pem ] ; then
+		eerror "You need to create a SSL certificate to use IMAP over SSL"
+		eerror "Edit /etc/courier-imap/imapd.cnf, then run: mkimapdcert"
+		return 2
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting courier-imapd over SSL"
+	start-stop-daemon --quiet --start --exec /usr/bin/env - /usr/lib/courier-imap/gentoo-imapd-ssl.rc \
+		--pid=$SSLPIDFILE
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping courier-imapd over SSL"
+	start-stop-daemon --quiet --stop --pid=$SSLPIDFILE
+	eend $?
+}
