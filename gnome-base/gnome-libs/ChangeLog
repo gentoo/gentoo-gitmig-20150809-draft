@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-libs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.26 2004/03/13 23:36:12 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.27 2004/04/03 19:24:00 leonardop Exp $
+
+  03 Apr 2004; L. Boshell <leonardop@gentoo.org> gnome-libs-1.4.2.ebuild,
+  files/gnome-libs-1.4.2-gtkdoc_fixes.patch:
+  Added patch to fix gtk-doc issues. Closes bug #44439.
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gnome-libs-1.4.2.ebuild:
   Added ~mips keyword.

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.18 2004/03/13 23:36:12 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.19 2004/04/03 19:24:00 leonardop Exp $
 
 IUSE="doc nls kde"
 
 
-inherit libtool
+inherit eutils libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -30,7 +30,9 @@ SLOT="1"
 
 src_unpack() {
 	unpack ${A}
-
+	cd ${S}
+	# Correct problems with documentation. See bug #44439.
+	epatch ${FILESDIR}/${P}-gtkdoc_fixes.patch
 }
 
 src_compile() {
