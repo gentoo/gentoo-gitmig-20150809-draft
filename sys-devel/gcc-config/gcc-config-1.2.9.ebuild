@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.9.ebuild,v 1.1 2003/01/15 01:59:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.9.ebuild,v 1.2 2003/01/15 02:14:05 azarah Exp $
 
 DISABLE_GEN_GCC_WRAPPERS="yes"
 
@@ -17,6 +17,18 @@ DEPEND="virtual/glibc"
 
 
 src_install() {
+
+	# Setup PATH just in case ...
+	if /usr/bin/gcc-config --get-current-profile &> /dev/null || \
+	   /usr/sbin/gcc-config --get-current-profile &> /dev/null
+	then
+		if [ -x /usr/bin/gcc-config ]
+		then
+			export PATH="`/usr/bin/gcc-config --get-bin-path`:${PATH}"
+		else
+			export PATH="`/usr/sbin/gcc-config --get-bin-path`:${PATH}"
+		fi
+	fi
 
 	einfo "Compiling wrapper..."
 	gcc -O2 -Wall -o ${WORKDIR}/wrapper ${FILESDIR}/wrapper.c
