@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Alastair Tse <alastair.gentoo@liquidx.net>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglextmm/gtkglextmm-0.7.1.ebuild,v 1.1 2003/04/26 20:07:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglextmm/gtkglextmm-0.7.1.ebuild,v 1.2 2003/04/26 20:10:01 liquidx Exp $
 
 inherit gnome2
 
