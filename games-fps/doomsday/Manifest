@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8746da74b983aa22bfa561f899818e12 doomsday-1.8.0.ebuild 1135
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f685444ddf8a83c1f7d779eb05e45973 ChangeLog 369
+MD5 5f91dc6393ff5aba59c015a5ab9ccbd0 files/1.8.0-filename-case.patch 502
+MD5 5fa792096b783fb6b3cd3bd45c2f709c files/wrapper 136
+MD5 c9f45fe4b0c154013fe56c8915ebd3f1 files/digest-doomsday-1.8.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/fASHTu7gpaalycRAmd9AKC5O9pR67eDUmhn03D5A3uEcwA8QwCgjalS
+5J/I/PK3LcE+urs0Kp2LmSg=
+=soQA
+-----END PGP SIGNATURE-----

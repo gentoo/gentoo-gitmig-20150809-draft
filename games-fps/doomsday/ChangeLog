@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/doomsday
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.1 2004/07/21 04:24:36 vapier Exp $
+
+*doomsday-1.8.0 (21 Jul 2004)
+
+  21 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Hinrik Örn Sigurðsson #53793.

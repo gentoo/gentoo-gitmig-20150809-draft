@@ -1,0 +1,17 @@
+--- deng-1.8.0/Src/jDoom/d_main.c.orig	2004-07-20 23:26:09.811971144 -0400
++++ deng-1.8.0/Src/jDoom/d_main.c	2004-07-20 23:26:22.532300424 -0400
+@@ -139,10 +139,10 @@
+ 	fspec_t iwads[] = {
+ 		{"TNT.wad", "-tnt"},
+ 		{"Plutonia.wad", "-plutonia"},
+-		{"Doom2.wad", "-doom2"},
+-		{"Doom1.wad", "-sdoom"},
+-		{"Doom.wad", "-doom"},
+-		{"Doom.wad", "-ultimate"},
++		{"doom2.wad", "-doom2"},
++		{"doom1.wad", "-sdoom"},
++		{"doom.wad", "-doom"},
++		{"doom.wad", "-ultimate"},
+ 		{0, 0}
+ 	};
+ 	int     i, k;
