@@ -104,7 +104,14 @@ function doservice() {
                 reconfig
             fi
             ;;
-       restart)
+       	setup)
+			if [ ! $do_setup ]; then
+				doservice usage
+			else
+				setup
+			fi
+	  		;; 
+	   restart)
             if  ! (( $do_start && $do_stop )); then
                 doservice usage
             else
@@ -127,8 +134,8 @@ function doservice() {
                 done
             if (( $do_start && $do_stop )); then
                 foof="${foof}restart"
-    fi
-            eecho "${foof}"
+			fi
+            eecho "${foof}}"
             ;;
     esac
     }
