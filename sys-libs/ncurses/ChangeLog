@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.62 2004/04/03 00:48:42 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.63 2004/04/13 18:36:59 vapier Exp $
+
+  13 Apr 2004; Mike Frysinger <vapier@gentoo.org> ncurses-5.3-r1.ebuild 
+  ncurses-5.3-r2.ebuild ncurses-5.3-r3.ebuild ncurses-5.3-r4.ebuild 
+  ncurses-5.4.ebuild ncurses-5.4-r1.ebuild :
+  Prune out old ebuilds since KEYWORDS overrides the previous ones and 
+  add back in parallel support with 5.4 via (emake).  Tested on a P4 with -j
+  and on a 8way with -j16 ;).
 
   02 Apr 2004; Jon Portnoy <avenj@gentoo.org> ncurses-5.4.ebuild, 
   ncurses-5.4-r1.ebuild :

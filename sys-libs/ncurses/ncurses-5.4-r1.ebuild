@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.10 2004/04/03 00:48:42 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.11 2004/04/13 18:36:59 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
-filter-flags -fno-exceptions
 
 DESCRIPTION="Linux console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
@@ -32,7 +31,9 @@ src_unpack() {
 src_compile() {
 	local myconf=
 
-	[ -n "`use debug`" ] || myconf="${myconf} --without-debug"
+	filter-flags -fno-exceptions
+
+	use debug || myconf="${myconf} --without-debug"
 
 	# Shared objects are compiled properly with -fPIC, but
 	# standard libs also require this.
@@ -63,10 +64,10 @@ src_compile() {
 		--with-shared \
 		--with-rcs-ids \
 		--without-ada \
-		${myconf} || die "configure failed"
+		${myconf} \
+		|| die "configure failed"
 
-	# do not work with -j2 on P4 - <azarah@gentoo.org> (23 Oct 2002)
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -104,7 +105,7 @@ src_install() {
 	dodir /etc/env.d
 	echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > ${D}/etc/env.d/50ncurses
 
-	if [ -n "`use build`" ]
+	if use build
 	then
 		cd ${D}
 		rm -rf usr/share/man
