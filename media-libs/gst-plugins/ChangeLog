@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
 
+*gst-plugins-0.4.1 (22 Sep 2002)
+  22 Sep 2002; Spider <spider@gentoo.org> gst-plugins-0.4.1.ebuild :
+  a New hope.  crushed ;)  
+  aalib is broken
+  libdv is broken
+  dvdnav is untested  (I dont have a dvd-player. donate one and I'll test it ;)
+
+  
+  
 *gst-plugins-0.4.0-r2 (13 Sep 2002)
   13 Sep 2002; Spider <spider@gentoo.org> gst-plugins-0.4.0-r2.ebuild :
   fix for aalib by Rigo Ketelings <rigo@home.nl>
