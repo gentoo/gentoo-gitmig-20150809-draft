@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/kdirstat-2.3.7.ebuild,v 1.4 2004/06/28 17:17:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/kdirstat-2.3.7.ebuild,v 1.5 2004/06/30 13:12:29 agriffis Exp $
 
 inherit kde
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/kdirstat-2.4.0.ebuild,v 1.6 2004/06/28 17:17:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/kdirstat-2.4.0.ebuild,v 1.7 2004/06/30 13:12:29 agriffis Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KDirStat - nice KDE replacement to du command"
 HOMEPAGE="http://kdirstat.sourceforge.net/"
