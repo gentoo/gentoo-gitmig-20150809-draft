@@ -1,5 +1,8 @@
 
 
+  12 Feb 2004; <augustus@gentoo.org> mozilla-firefox-0.8.ebuild:
+  Made amd64 stable.
+
   12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild,
   files/icon/firefox-icon.png:
   Use the proper firefox icon in the GNOME menu rather than the Mozilla one.
