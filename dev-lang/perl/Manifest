@@ -1,4 +1,4 @@
-MD5 039399151aff0b9074381e9dc831f52a perl-5.8.2.ebuild 9144
+MD5 9129ca3bfefe60b0eeb776a8ebfb5a3c perl-5.8.2.ebuild 9141
 MD5 5e2ced5e0d331faea9122a21c49957b0 perl-5.6.1-r12.ebuild 7089
 MD5 6fa918519f79045619ee131c5cd6b38b perl-5.8.1-r1.ebuild 8736
 MD5 51da78b2203cbf4e81dafb6e24dd2e22 perl-5.8.0-r10.ebuild 14009
@@ -6,7 +6,7 @@ MD5 907c3574f85470b1f2148180f7321f20 perl-5.8.0-r9.ebuild 13534
 MD5 220bd838139aaf17ec8f8f6cc1a37c61 perl-5.8.0-r12.ebuild 10316
 MD5 33226bb561cd0f81cc4f7756c0f7f4c5 perl-5.6.1-r11.ebuild 6141
 MD5 039399151aff0b9074381e9dc831f52a perl-5.8.1-r2.ebuild 9144
-MD5 28e8f3460882472f78a1173a61d70228 ChangeLog 20154
+MD5 a464e32e867f114ee7ab5d4566e33c47 ChangeLog 20379
 MD5 31f5ae7d2343aa4819b892820b0ccaf7 perl-5.8.0-r11.ebuild 9890
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0339818063f904e5a6ebe6b16b4d819f perl-5.6.1-r10.ebuild 6666
@@ -21,8 +21,11 @@ MD5 28fe3868fd4e47ca609f7af6156c94ea files/5.6.1-op-test-fix.diff 503
 MD5 b8480b2ccbf7d5a7fe543b9e6f8dbc14 files/libperl_rebuilder 10260
 MD5 ea9bf02b28e73e19dc85eb07f2347460 files/5.6.1-builtin-fixup.diff 777
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.1-perldoc-emptydirs.patch 489
+MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.2-reorder-INC.patch 2211
 MD5 0a2e349a2e2fa8c18192d5e908f8533f files/perl-5.8.1_rc1-sockatmark-should-__THROW.patch 379
 MD5 013255dc6a00399b13caaf899a72e8db files/perl-5.8.0-reorder-INC.patch 2292
+MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.2-perldoc-emptydirs.patch 489
+MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.2-prelink-lpthread.patch 476
 MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2 64
 MD5 8605f033c451df987f4631bbf9d7b481 files/digest-perl-5.8.0-r10 64
 MD5 5c83a2e6f630182b708d39c7de034075 files/digest-perl-5.8.0-r11 188
