@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.2 2002/05/06 23:13:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.3 2002/07/26 04:42:16 gerk Exp $
 
 *XML-Parser-2.31 (6 May 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   6 May 2002; Seemant Kulleen <seemant@gentoo.org> XML-Parser-2.31.ebuild
   files/digest-XML-Parser-2.31 :

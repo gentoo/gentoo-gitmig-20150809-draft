@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.5 2002/05/27 02:19:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.6 2002/07/26 04:43:20 gerk Exp $
 
 *gtk-perl-0.7008-r4 (26 May 2002)
+
+  24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   26 May 2002; Seemant Kulleen <seemant@gentoo.org>
   gtk-perl-0.7008-r4.ebuild files/digest-gtk-perl-0.7008-r4 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r1.ebuild,v 1.5 2002/07/25 04:43:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r1.ebuild,v 1.6 2002/07/26 04:41:07 gerk Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5.2
