@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.63 2003/07/02 01:37:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.64 2003/07/17 03:59:24 pfeifer Exp $
+
+  16 Jul 2003; Jay Pfeifer <pfeifer@gentoo.org> glibc-2.3.2-r1.ebuild:
+  set stable on x86
 
   01 Jul 2003; Luca Barbato <lu_zero@gentoo.org> glibc-2.3.2-r1.ebuild:
   set stable on ppc
