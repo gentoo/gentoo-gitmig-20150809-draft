@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.26 2004/07/08 13:43:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.27 2004/07/20 00:36:32 wolf31o2 Exp $
+
+  19 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3120-r4.ebuild:
+  Added libsdl and openal to DEPEND and closing bug #57627.
 
 *ut2004-demo-3120-r4 (08 Jul 2004)
 

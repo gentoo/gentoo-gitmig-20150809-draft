@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r4.ebuild,v 1.1 2004/07/08 13:43:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r4.ebuild,v 1.2 2004/07/20 00:36:32 wolf31o2 Exp $
 
 inherit games
 
@@ -21,7 +21,9 @@ SLOT="0"
 KEYWORDS="-* x86 amd64"
 
 DEPEND="!dedicated? ( virtual/opengl )
-	alsa? ( >=media-libs/alsa-lib-1.0.2 ) "
+	alsa? ( >=media-libs/alsa-lib-1.0.2
+			>=media-libs/libsdl-1.2.6-r3
+			>=media-libs/openal-20040218 )"
 
 S=${WORKDIR}
 
