@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e77516d9cef9a7a08ac5fd0912c215cb ChangeLog 4397
+MD5 f40007a511afe5cc0675a41d1e675064 ChangeLog 4521
 MD5 48f25ed3cbc3814872e9b606f7b1b27c gpm-1.19.6.ebuild 1954
 MD5 e9c0ddac9ac5ba07c70865f9e61e232d gpm-1.20.0-r4.ebuild 1524
 MD5 b34834bd6488bd41e2846a966485a9be gpm-1.20.0-r5.ebuild 1588
 MD5 fdad89c8e160e20f82514d68f4fdac0f gpm-1.20.0-r6.ebuild 1714
-MD5 50af8718ed4707f0a0614460b9be66b9 gpm-1.20.1.ebuild 1977
+MD5 06827b1ae37886b709e38cd6b1f6d565 gpm-1.20.1.ebuild 2037
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c1d5de8b9dede53724d8a7dbd7192a7f files/digest-gpm-1.19.6 63
 MD5 69b1b0ae0692f03bd3685a6159b7938d files/digest-gpm-1.20.0-r4 130
@@ -19,10 +16,4 @@ MD5 146798e9d5d83b73a15b3ea40dfe6f7f files/gpm.rc5 588
 MD5 b1364fd3bf27cda742dbcfc87497cc18 files/gpm.rc6 951
 MD5 e24675823ef2f451c7f3f55c2c561b5b files/gpmInt.h 5090
 MD5 006069406dca2f0b2611fdc50878b83d files/svc-gpm 448
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsukI1lqEGTUzyQRAhlxAKCglQVMN2YrS794sXvFSEhg/LmlLwCfQpTI
-duXcx1aBGfzsg+DLB2H7rXQ=
-=S3cT
------END PGP SIGNATURE-----
+MD5 1e2ab7c222263d460e9e881f7a1558c7 files/gpm-linux26-headers.patch 423

@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2004-10-31 17:23:16.412105664 +0000
++++ src/Makefile.in	2004-10-31 17:23:45.636055416 +0000
+@@ -85,7 +85,7 @@
+ 	# create dependencies
+ 	for DEPS in `echo *.c */*.c`; do \
+ 	$(CC) -I. -I $(srcdir) -M @CPPFLAGS@ $(CPPFLAGS) $$DEPS | \
+-	$(SED) 's/\($*\)\.o\([ :]*\)/\1.o \1.lo\2/g'  >> $(DEPFILE) ; done
++	$(SED) 's/\($*\)\.o\([ :]+\)/\1.o \1.lo\2/g'  >> $(DEPFILE) ; done
+ 
+ ### INSTALL
+ check:	all

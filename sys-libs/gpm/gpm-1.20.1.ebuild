@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.20 2004/10/01 14:34:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.21 2004/10/31 17:30:29 tgall Exp $
 
 # Please use this variable to keep patch names sane for our patches!
 PATCH_VER="1.0"
@@ -37,6 +37,8 @@ src_unpack() {
 
 	# Add missing 'mkinstalldirs' script
 	cp -f /usr/share/automake/mkinstalldirs ${S}
+
+	use ppc64 && epatch ${FILESDIR}/gpm-linux26-headers.patch
 }
 
 src_compile() {
