@@ -1,6 +1,6 @@
 # Core Packages
 *>=sys-devel/binutils-2.14.90.0.5
-*>=sys-devel/gcc-3.3.1
+*sys-devel/gcc
 *dev-lang/python
 
 ##############################################################################
@@ -88,7 +88,7 @@
 *>=sys-devel/automake-1.6.1-r5
 *sys-devel/bc
 *sys-devel/bison
-*sys-devel/egcs64-sparc
+*sys-devel/gcc-sparc64
 *sys-devel/flex
 *sys-devel/gettext
 *>=sys-devel/libtool-1.4.1-r4
