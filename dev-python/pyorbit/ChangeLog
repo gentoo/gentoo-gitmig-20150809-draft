@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.9 2003/09/24 19:48:52 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.10 2003/10/23 23:27:04 liquidx Exp $
+
+  24 Oct 2003; Alastair Tse <liquidx@gentoo.org> pyorbit-1.99.5.ebuild,
+  pyorbit-1.99.6.ebuild, pyorbit-1.99.7.ebuild, pyorbit-2.0.0.ebuild:
+  cleanup and bump to x86 stable
 
   24 Sep 2003; Todd Sunderlin <todd@gentoo.org> pyorbit-2.0.0.ebuild:
   added ~sparc keyword
