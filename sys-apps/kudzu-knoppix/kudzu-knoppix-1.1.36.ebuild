@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.2 2004/05/14 21:25:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.3 2004/05/18 21:47:19 dholm Exp $
 
 MY_PV=${PV}-2
-S=${WORKDIR}/kuzdu-${PV}
+S=${WORKDIR}/kudzu-${PV}
 DESCRIPTION="Knoppix version of the Red Hat hardware detection tools"
 SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
