@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.34 2004/07/18 05:25:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.35 2004/07/27 13:30:31 dragonheart Exp $
+
+  27 Jul 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild,
+  pdnsd-1.1.11.ebuild, pdnsd-1.1.9.ebuild, -pdnsd-1.1.7a.ebuild:
+  enew{user,group} copied to pkg_preinst to fix binary packages (bug #58526).
+  Thanks to Thomas Matthijs <axxo@gentoo.org>. Removed old version
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild,
   pdnsd-1.1.11.ebuild:
