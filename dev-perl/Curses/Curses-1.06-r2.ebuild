@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.06-r2.ebuild,v 1.6 2003/09/11 01:12:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.06-r2.ebuild,v 1.7 2004/04/18 02:10:08 randy Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://cpan.valueclick.com/authors/id/W/WP/WPS/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha s390"
 
 DEPEND="${DEPEND}
 	>=sys-libs/ncurses-5"

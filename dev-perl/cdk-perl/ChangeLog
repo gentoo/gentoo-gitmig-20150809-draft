@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/cdk-perl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.7 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.8 2004/04/18 02:16:02 randy Exp $
+
+  17 Apr 2004; Michael McCabe <randy@gentoo.org>
+  cdk-perl-20010421-r1.ebuild:
+  added s390 to keywords
 
 *cdk-perl-20010421-r1 (21 Jun 2003)
  
