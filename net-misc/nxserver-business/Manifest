@@ -3,9 +3,10 @@ MD5 f851f47427e06dc2c9a050acb3a978eb ChangeLog 842
 MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
 MD5 1d0e4e8f3e21fc02b6ebd5dd317a178a nxserver-business-1.2.2.ebuild 489
 MD5 5e8af20fb3bf00110ce0231a0d6cdbb9 nxserver-business-1.2.2-r1.ebuild 521
-MD5 8f210a8d6a6d41a10454ff7a7f7ea153 nxserver-business-1.3.0.ebuild 529
+MD5 4313ff36ec952df2054fdbf447f9dba0 nxserver-business-1.3.0.ebuild 525
 MD5 d698349629896a24617eaf0952be85f1 files/digest-nxserver-business-1.2.2 72
 MD5 1de031c79005a3c2b9e42a6b07af210e files/digest-nxserver-business-1.3.0 72
 MD5 4bcc0fdcbb033ab9ece493b8667595cb files/digest-nxserver-business-1.2.2-r1 72
 MD5 f061a8820b1a202d18cc532549790380 files/digest-nxserver-business-1.2.2-r2 72
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.2.2/50nxserver 84
+MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.3.0/50nxserver 84
