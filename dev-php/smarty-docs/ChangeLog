@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.19 2005/01/08 21:17:28 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.20 2005/02/10 16:24:41 tomk Exp $
+
+*smarty-docs-2.6.7 (10 Feb 2005)
+
+  10 Feb 2005; Tom Knight <tomk@gentoo.org> +smarty-docs-2.6.7.ebuild:
+  Version bumped to 2.6.7
 
 *smarty-docs-2.6.5 (08 Jan 2005)
 
