@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.70.ebuild,v 1.3 2004/12/05 03:22:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.70.ebuild,v 1.4 2005/01/29 01:16:25 luckyduck Exp $
 
 IUSE="cddb"
 
@@ -25,7 +25,9 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable cddb) || die
+	econf \
+		$(use_enable cddb) \
+		"--disable-vcd-info"|| die
 	# had problem with parallel make (phosphan@gentoo.org)
 	emake -j1 || die
 }
