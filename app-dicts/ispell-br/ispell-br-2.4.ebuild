@@ -1,6 +1,6 @@
-# Copyright 2002-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ispell-br-2.4.ebuild,v 1.2 2003/02/12 13:22:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-br/ispell-br-2.4.ebuild,v 1.3 2003/02/13 06:26:44 vapier Exp $
 
 MY_P="br.ispell-${PV}"
 S=${WORKDIR}/${MY_P}
