@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.21 2004/08/19 08:29:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.22 2004/08/25 19:52:45 lv Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -19,6 +19,11 @@ do_filter_flags() {
 		setting="`get-flag march`"
 		[ ! -z "${setting}" ] && filter-flags -march="${setting}"
 	fi
+
+	# and on x86, we just need to filter the 3.4 specific amd64 -marchs
+	filter-flags -march=k8
+	filter-flags -march=athlon64
+	filter-flags -march=opteron
 
 	# gcc 3.3 doesn't support -march=pentium-m
 	replace-flags -march=pentium-m -march=pentium3
