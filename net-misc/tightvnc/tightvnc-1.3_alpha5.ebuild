@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.6 2004/09/20 02:45:27 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha5.ebuild,v 1.7 2004/09/21 23:30:14 morfic Exp $
 
-inherit eutils
+inherit eutils gcc
 
 IUSE="java tcpd"
 
@@ -34,7 +34,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.security.patch
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 	epatch ${FILESDIR}/x86.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/${P}-gcc34.patch
+	fi
 }
 
 src_compile() {
