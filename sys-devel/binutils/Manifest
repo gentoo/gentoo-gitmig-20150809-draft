@@ -12,8 +12,6 @@ MD5 87ca3fa1a3189445953eb76990dd07d2 binutils-2.14.90.0.7-r4.ebuild 6283
 MD5 9bdfdde9790fd6f215adcaecaa6806ad binutils-2.14.90.0.8-r1.ebuild 5050
 MD5 0c25a829197c155f46205e5a23ea4e16 binutils-2.15.90.0.3-r3.ebuild 4975
 MD5 0a2e87d8fa7ba203b47fc8f5c795ec42 binutils-2.15.91.0.1.ebuild 4707
-MD5 bee87af2b20fa4a86ccd53ba750bb1a9 binutils-2.15.91.0.1-r1.ebuild 4694
-MD5 a60b3fe5c1bbfb769311f07174840465 binutils-2.15.91.0.1-r2.ebuild 5034
 MD5 47b50dfab666ec01e53e417deeb957d5 binutils-2.15.91.0.2.ebuild 5161
 MD5 76228e4ad667857b1d8d271548dbf345 binutils-2.15.92.0.2.ebuild 5188
 MD5 5d78590cad68180dcaeac4774a2a8b5e binutils-2.15.92.0.2-r1.ebuild 4872
@@ -26,10 +24,8 @@ MD5 f5cb20158fe6b87f03a2366b68866343 files/digest-binutils-2.15.90.0.1.1-r3 161
 MD5 83bd52b9c2e975443e2a8b11b59c7441 files/digest-binutils-2.15.90.0.3-r3 159
 MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7-r4 75
 MD5 9ee0463e60aaa51448aba92f5fc86f04 files/digest-binutils-2.15.91.0.1 159
-MD5 56997eac01c0ed47fd5e4e15149f7b6e files/digest-binutils-2.15.91.0.1-r1 159
 MD5 66df5567226338b7504bbd3c25cea92c files/libiberty-pic.patch 370
 MD5 d7b731f4b07cbc162f9b1391317294b1 files/digest-binutils-2.15.92.0.2 159
-MD5 d80f5b9074c95367855aae7baa3cb0fc files/digest-binutils-2.15.91.0.1-r2 159
 MD5 754cfdc4c162c0cac9c073198f732fdb files/digest-binutils-2.15.91.0.2 159
 MD5 d57be7837bb42388ad4f1f9eec6fe699 files/digest-binutils-2.14.90.0.8-r1 160
 MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
@@ -87,7 +83,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBofULHTu7gpaalycRAjwpAKDOXdIwkRWFnVj4/VoKQSpA7WrrPQCg2onv
-xR6EWT6SPnPvGHtcGwgDOnI=
-=/U07
+iD8DBQFBopw0HTu7gpaalycRAviEAKC8xcydKwfiGxR1Y/coll/PN3/IrgCfRV3y
+0Lb93E5jpvgXCgwqVaOqEUU=
+=sBwr
 -----END PGP SIGNATURE-----
