@@ -1,23 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.0.1-r1.ebuild,v 1.2 2004/01/05 08:55:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1.1.ebuild,v 1.1 2004/02/08 19:09:07 vapier Exp $
 
-DESCRIPTION="Daemon to adjust CPU speed for kernel using the cpufreq patch."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+inherit eutils
+
+DESCRIPTION="Daemon to adjust CPU speed for power saving"
 HOMEPAGE="http://sourceforge.net/projects/cpufreqd/"
-KEYWORDS="x86"
-LICENSE="GPL-1"
-SLOT="0"
+SRC_URI="mirror://sourceforge/cpufreqd/${P}.tar.gz"
 
-src_compile() {
-	 epatch ${FILESDIR}/sysfs.diff || die
-	./configure \
-		--host=${CHOST} \
-		--prefix=/ \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc
-	make || die "compile of cpufreqd failed"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i '/^DAEMON=/s:/sbin/:/usr/sbin/:' scripts/gentoo/cpufreqd
 }
 
 src_install() {
@@ -27,15 +25,14 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${S}/scripts/gentoo/cpufreqd cpufreqd
 }
-pkg_postinst() {
 
+pkg_postinst() {
 	echo
-	einfo "A default config file is copied to /etc/cpufreqd.conf"
+	einfo "A default config file has been copied to /etc/cpufreqd.conf"
 	echo
 	einfo "CPUFreqd does not support using percentage frequencies on"
 	einfo "2.6 kernels where sysfs is used instead - please manually"
 	einfo "edit the config file to use an absolute value instead, if"
 	einfo "you are using a 2.6 series kernel."
 	echo
-
 }
