@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2.ebuild,v 1.3 2002/10/02 19:16:33 tantive Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2.ebuild,v 1.4 2002/10/17 01:52:18 vapier Exp $
 
 S=${WORKDIR}/openmosixview
 DESCRIPTION="cluster-management GUI for OpenMosix"
@@ -11,6 +10,7 @@ HOMEPAGE="http://www.openmosixview.com"
 DEPEND=">=x11-libs/qt-2.3.0
 	>=sys-apps/openmosix-user-0.2.4
 	>=sys-kernel/openmosix-sources-2.4.18"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -52,23 +52,23 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-        dodir /usr/sbin
+src_install() {
+	dodir /usr/sbin
 	dodir /usr/local/bin
 
-        make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
+	make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
 	cd ${S}/openmosixcollector
-        make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
+	make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
 	cd ${S}/openmosixanalyzer
-        make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
+	make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
 	cd ${S}/openmosixhistory
-        make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
+	make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
 	cd ${S}/openmosixprocs
-        make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
-    
-        dodoc COPYING README
+	make INSTALLBASEDIR=${D}usr INSTALLMANDIR=${D}usr/share/man DESTDIR=${D} INSTALLDIR=${D}usr install || die
 
-        exeinto /etc/init.d
+	dodoc COPYING README
+
+	exeinto /etc/init.d
 	newexe ${S}/openmosixcollector/openmosixcollector.init openmosixcollector
 }
 
