@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.8 2005/03/18 17:06:38 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.9 2005/03/24 22:25:42 greg_g Exp $
+
+*akregator-3.4.0-r1 (24 Mar 2005)
+
+  24 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdepim-3.4.0-akregator-fix.patch, +akregator-3.4.0-r1.ebuild,
+  -akregator-3.4.0.ebuild:
+  Add patch to avoid akregator messing with the archive (#86477).
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> akregator-3.4.0.ebuild:
   Added to ~ppc
