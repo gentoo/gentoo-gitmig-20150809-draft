@@ -1,15 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.9 2004/06/30 17:11:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/grass-5.0.3.ebuild,v 1.10 2004/08/11 15:36:54 usata Exp $
 
 DESCRIPTION="An open-source GIS with raster and vector functionality"
-HOMEPAGE="http://grass.itc.it/"
-SRC_URI="http://grass.ibiblio.org/${PN}5/source/${P}_src.tar.gz"
+HOMEPAGE="http://grass.itc.it/
+	http://www.grass-japan.org/FOSS4G/GRASS/grass-inten.html"
+SRC_URI="!nls? ( http://grass.ibiblio.org/${PN}5/source/${P}_src.tar.gz )
+	nls? ( http://www.grass-japan.org/FOSS4G/GRASS/${P/-/}_i18n_src.tar.gz
+	tcltk? ( http://www.grass-japan.org/FOSS4G/GRASS/tcltkgrass-i18n.tar.gz ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="tcltk png jpeg tiff postgres odbc gd motif truetype"
+IUSE="tcltk png jpeg tiff postgres odbc gd motif truetype nls"
 # Removed cause mesa never goes stable.
 # IUSE="${IUSE} nviz"
 
@@ -35,8 +38,11 @@ DEPEND=">=sys-devel/make-3.80
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	gd? ( >=media-libs/gd-1.8.3 )
 	motif? ( x11-libs/openmotif )
-	truetype? ( >=media-libs/freetype-2.1.3 )"
+	truetype? ( >=media-libs/freetype-2.1.3 )
+	nls? ( x11-terms/mlterm )"
 	#nviz? ( >=media-libs/mesa-3.5 )"
+
+use nls && S="${WORKDIR}/${P}-i18n"
 
 src_compile() {
 
@@ -82,17 +88,32 @@ src_compile() {
 	#&& myconf="${myconf} --with-glw" \
 	#|| myconf="${myconf} --without-glw"
 
+	use nls \
+	&& myconf="${myconf} --with-nls --with-freetype"
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=${D}/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
-	make || die "make failed"
+	emake -j1 || die "emake failed"
+
+	# clean ccache directories left in ${S}
+	find . -type d -name ".ccache" | xargs rm -rf
 }
 
 src_install() {
 	make install || die
 	dosed "s:^GISBASE=.*$:GISBASE=/usr/grass5:" \
 	  /usr/bin/grass5
+
+	if use nls && use tcltk ; then
+		pushd ${D}/usr/grass5
+		unpack tcltkgrass-i18n.tar.gz
+		dodoc AUTHORS BUGS NEWS.html README TODO.txt
+		dohtml REQUIREMENTS.html
+		rm [A-Z]*
+		popd
+	fi
 }
