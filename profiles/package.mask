@@ -73,6 +73,7 @@ media-libs/libfame
 app-arch/unarj
 app-emulation/zinc
 app-sci/setiathome
+x11-misc/tkseti
 
 # cybersystem@gentoo.org (17 Jul 2002)
 # Masking knapster2 - this package is broken on gcc 3.1
