@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.42 2005/01/12 12:10:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.43 2005/01/14 23:53:32 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> amarok-1.0.2.ebuild,
+  amarok-1.1.1.ebuild, amarok-1.2_beta2.ebuild, amarok-1.2_beta3.ebuild:
+  Changed deps on kdebase, kdemultimedia to accept kdebase-meta and
+  kdemultimedia-meta, the split 'meta' packages. This dep will be narrowed
+  down in the future to the precise split packages required.
 
 *amarok-1.2_beta3 (11 Jan 2005)
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/noteedit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.12 2004/10/15 09:16:55 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.13 2005/01/14 23:57:13 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> noteedit-2.6.2.ebuild:
+  Changed dep on kdemultimedia to accept kdemultimedia-meta, the split 'meta'
+  packages. This dep will be narrowed down in the future to the precise split
+  packages required.
 
   15 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -noteedit-2.5.3.ebuild, noteedit-2.6.2.ebuild:

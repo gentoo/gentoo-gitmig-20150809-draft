@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.6 2004/12/19 06:12:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.7 2005/01/14 23:55:59 danarmak Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND=">=kde-base/kdebase-3.2.1
+DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2.1 )
 	kde-base/arts
 	>=media-libs/jpeg-6b-r3
 	virtual/fam

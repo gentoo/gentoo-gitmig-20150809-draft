@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.23 2005/01/11 14:14:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.24 2005/01/14 23:59:24 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> rosegarden-4.0.9.8.ebuild,
+  rosegarden-4.0.9.91.ebuild, rosegarden-4.0.9.91_rc2.ebuild:
+  Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
+  This dep will be narrowed down in the future to the precise split packages
+  required.
 
 *rosegarden-4.0.9.91 (11 Jan 2005)
 

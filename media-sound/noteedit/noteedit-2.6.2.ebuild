@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.6.2.ebuild,v 1.6 2004/10/15 09:16:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.6.2.ebuild,v 1.7 2005/01/14 23:57:13 danarmak Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc amd64"
 
-DEPEND="kde-base/kdemultimedia
+DEPEND="|| ( kde-base/kdemultimedia-meta kde-base/kdemultimedia )
 	kde-base/arts
 	media-libs/tse3"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0-r1.ebuild,v 1.3 2004/09/03 21:08:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0-r1.ebuild,v 1.4 2005/01/15 00:01:22 danarmak Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=x11-libs/qt-3.1.0-r1
 	cdr? ( >=app-cdr/cdlabelgen-2.4.0 >=app-cdr/mp3burn-0.1 )
 	xmms? ( >=media-sound/xmms-1.2.7-r18 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1 >=media-sound/vorbis-tools-1.0-r1 )
-	kde? ( >=kde-base/kdebase-3.0.4 )"
+	kde? ( || ( kde-base/kdebase-meta >=kde-base/kdebase-3.0.4 ) )"
 
 src_unpack() {
 	unpack ${A}
