@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ada7f15e501ba9bf8b3143b07e08de2 celementtree-0.9.2.ebuild 726
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 73e9037e77dd93d88153146148443b11 ChangeLog 375
+MD5 c06f18827c4096ca2e52b39ef9d1059a files/digest-celementtree-0.9.2 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB7ApGz2gxt1z4IGYRAvTPAKCbMDQRv1pAgtYEBoqYA7AS/d2juwCbBnHM
+N8sFs4q+dr3VgXCUBGANIVQ=
+=5klr
+-----END PGP SIGNATURE-----
