@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.12 2005/01/12 11:42:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.13 2005/01/12 18:51:57 gustavoz Exp $
+
+  12 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> fhist-1.14.ebuild:
+  Stable on sparc
 
   12 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> fhist-1.14.ebuild,
   -fhist-1.8.ebuild:

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 91da3aa42b4b60f9a3e5fd78a6d6388f fhist-1.14.ebuild 889
-MD5 12fcbd5c0ac70edaa006cc00d6baa3c1 ChangeLog 1943
+MD5 c53679342e40b22961e68c1fa31293b0 ChangeLog 2036
+MD5 379ccbe4cc1ab653d17fd35f972467db fhist-1.10.ebuild 905
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 d648f641e87db5cfdd37440dc59982de fhist-1.10.ebuild 903
+MD5 ccd43d3ef1d1bdb7008326fa30c39289 fhist-1.14.ebuild 889
 MD5 5ce6fc792f19fbf5efadafde88bdf77e files/digest-fhist-1.10 62
 MD5 7a3663e01a7d2d76763490dd9448e563 files/digest-fhist-1.14 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB5Q2GEZCkKN40op4RAjuwAJwK7jikHkw0g+YcLohGo8hT30M70wCgnuWW
-1lqSOJG2DvDUSAYsD+3n9OM=
-=FXs2
+iD8DBQFB5XHVKRy60XGEcJIRAiUcAKCwkFcfQEuU8n93iTkjd4ZPxon6mwCghtpZ
+9V/RrRKjNuGYDV+PXGWAGgA=
+=IehE
 -----END PGP SIGNATURE-----
