@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.12.ebuild,v 1.1 2002/06/07 20:45:48 woodchip Exp $
+# $Header:
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.inet.no/dante/"
 RDEPEND="virtual/glibc sys-libs/pam tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND} sys-devel/perl"
 LICENSE="BSD"
+KEYWORDS="x86"
 SLOT="0"
 
 src_unpack() {
