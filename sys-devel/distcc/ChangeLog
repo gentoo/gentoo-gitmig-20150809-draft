@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.42 2003/05/21 10:15:09 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.43 2003/05/23 20:00:16 hanno Exp $
+
+*distcc-2.4.2 (23 May 2003)
+
+  23 May 2003; Hanno Boeck <hanno@gentoo.org> distcc-2.4.2.ebuild:
+  New version.
 
 *distcc-2.4 (21 May 2003)
 
