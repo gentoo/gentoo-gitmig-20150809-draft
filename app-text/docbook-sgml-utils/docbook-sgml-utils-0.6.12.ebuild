@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.15 2004/06/24 22:32:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.12.ebuild,v 1.16 2004/09/22 20:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -29,11 +29,11 @@ DEPEND=">=dev-lang/perl-5
 	tetex? ( app-text/jadetex )
 	|| ( net-www/lynx net-www/links )"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S} || die
 	patch -p1 < ${FILESDIR}/docbook-sgml-utils-frontend.patch || die
 	epatch ${FILESDIR}/${PN}-head-jw.patch
-	econf || die
-	make || die
 }
 
 src_install() {
