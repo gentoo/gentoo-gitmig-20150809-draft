@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.3 2004/12/31 08:32:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.4 2005/01/04 03:05:51 tester Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 KEYWORDS="~x86 ~amd64"
 
-IUSE="ipv6 mmx gtk v4l2 xvid nas alsa esd arts"
+IUSE="ipv6 mmx X v4l2 xvid nas alsa esd arts"
 
 RDEPEND="sys-devel/libtool
 	sys-devel/autoconf
@@ -24,7 +24,7 @@ RDEPEND="sys-devel/libtool
 	>=media-libs/faac-1.20.1
 	>=media-sound/lame-3.92
 	media-libs/libsdl
-	gtk? ( >=x11-libs/gtk+-2 )
+	X? ( >=x11-libs/gtk+-2 )
 	media-libs/libid3tag
 	xvid? ( media-libs/xvid )
 	nas? ( media-libs/nas virtual/x11 )
@@ -67,8 +67,9 @@ src_compile() {
 			$(use_enable esd)
 			$(use_enable alsa)
 			$(use_enable arts)
-			$(use_enable gtk gtk-glib)
-			$(use_enable gtk mp4live)"
+			$(use_enable X gtk-glib)
+			$(use_enable X player)
+			$(use_enable X mp4live)"
 	use v4l2 || myconf="${myconf} --disable-v4l2"
 
 	# ffmpeg support doesnt build even on gcc 3.3
