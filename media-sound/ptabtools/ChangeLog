@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ptabtools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.1 2004/09/12 23:25:45 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.2 2004/10/17 10:00:40 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> ptabtools-0.3.1.ebuild:
+  Added to ~ppc.
 
 *ptabtools-0.3.1 (12 Sep 2004)
 

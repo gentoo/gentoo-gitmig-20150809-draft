@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmidiarp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/ChangeLog,v 1.1 2004/10/03 04:39:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/ChangeLog,v 1.2 2004/10/17 10:01:14 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> qmidiarp-0.0.2.ebuild:
+  Added to ~ppc.
 
 *qmidiarp-0.0.2 (03 Oct 2004)
 
