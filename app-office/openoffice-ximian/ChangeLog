@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.10 2004/01/12 22:10:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.11 2004/01/14 10:03:47 pauldv Exp $
+
+*openoffice-ximian-1.1.49.2 (14 Jan 2004)
+
+  14 Jan 2004; Paul de Vrieze <pauldv@gentoo.org>
+  openoffice-ximian-1.1.49.2.ebuild:
+  For suka <suka@t0.or.at>:
+  *) Updated Ximian patchset
+  *) Removed work-arounds which are not necessary anymore
+  *) Some dependency cleanup
 
   12 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
   openoffice-ximian-1.1.48.ebuild:
