@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r1.ebuild,v 1.1 2003/12/02 19:41:26 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r1.ebuild,v 1.2 2003/12/04 22:08:44 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -37,8 +37,6 @@ src_unpack() {
 	bzcat ${DISTDIR}/gentoo-sources-${PVR}.patch.bz2 | patch -p1 \
 		|| die "Failed to patch kernel, please file a bug at bugs.gentoo.org"
 
-	#epatch ${FILESDIR}/do_brk_fix.patch
-
 	cd ${S}
 	make mrproper || die "make mrproper failed"
 	make include/linux/version.h || die "make include/linux/version.h failed"
@@ -49,9 +47,10 @@ pkg_postinst() {
 	kernel_pkg_postinst
 
 	einfo "If there are issues with this kernel, search http://bugs.gentoo.org/ for an"
-	einfo "existing bug. Only create a new bug if you have not found one that matches your"
-	einfo "issue. It is best to do an advanced search as the initial search has a very low"
-	einfo "yield. Assign bugs to x86-kernel@gentoo.org"
+	einfo "existing bug. Only create a new bug if you have not found one that matches"
+	einfo "your issue. It is best to do an advanced search as the initial search has a"
+	einfo "very low yield. Please assign your bugs to x86-kernel@gentoo.org."
 	echo
-	einfo "Please read the changelog and associated docs for more information."
+	einfo "Please read the ChangeLog and associated docs for more information."
+
 }
