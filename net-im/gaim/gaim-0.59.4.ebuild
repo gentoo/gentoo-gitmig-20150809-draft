@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.4.ebuild,v 1.1 2002/10/11 14:53:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.4.ebuild,v 1.2 2002/10/12 08:11:04 blocke Exp $
 
 IUSE="nas nls esd gnome arts gtk2 perl"
 
@@ -25,26 +25,13 @@ DEPEND="=sys-libs/db-1*
 
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-
-	unpack ${A}
-	
-	# patch for korean encoding
-	# It should be ok with other languages
-	# the patch only works with nls 
-	# PULLED -- got complaints it was hosing gtk2 non-korean users
-	# use nls && patch -p0 < ${FILESDIR}/${P}-korean.patch
-
-}
-
 src_compile() {
 	
 	local myconf gnomeopts
 
 	use esd  || myconf="--disable-esd"
 	use perl || myconf="${myconf} --disable-perl"
-	use nas \
-		&& myconf="${myconf} --enable-nas" \
+	use nas && myconf="${myconf} --enable-nas" \
 		|| myconf="${myconf} --disable-nas"
 
 	if [ "` use arts`" ]; then
@@ -77,7 +64,7 @@ src_compile() {
 	emake || die
 
 	# if gnome support is enabled (and gtk2 disabled), then build gaim_applet
-	if [ use gnome -a -z "`use gtk2`" ];
+	if [ "`use gnome`" -a -z "`use gtk2`" ];
 	then
 		gnomeopts="${gnomeopts} --with-gnome=${GNOME_PATH} --enable-panel"
 
