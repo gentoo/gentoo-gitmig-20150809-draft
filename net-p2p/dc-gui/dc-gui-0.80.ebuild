@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.1 2004/01/31 23:41:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.2 2004/02/21 06:07:13 vapier Exp $
 
 MY_P=${PN/-/_}2-${PV}
 DESCRIPTION="GUI for dctc"
@@ -9,7 +9,7 @@ SRC_URI="http://ac2i.homelinux.com/dctc/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
@@ -27,7 +27,7 @@ src_unpack() {
 	cd ${S}
 
 	# fix for #26708 (db4 support)
-	local dbfunc="`nm /usr/lib/libdb.so | grep \ db_env_create | awk '{print $3}'`"
+	local dbfunc="`grep '^#define.*db_env_create' /usr/include/db.h | awk '{print $NF}'`"
 	if [ "${dbfunc}" != "db_env_create" ] ; then
 		sed -i "s:db_env_create:${dbfunc}:g" configure
 	fi
