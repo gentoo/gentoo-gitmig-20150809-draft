@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.83 2003/09/08 01:49:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.84 2003/09/12 11:50:38 weeve Exp $
+
+*kdebase-3.2.0_alpha1 (12 Sep 2003)
+
+  12 Sep 2003; Jason Wever <weeve@gentoo.org> kdebase-3.2.0_alpha1.ebuild:
+  Marking as unusable as not all dependecies are met and hasn't been tested yet.
 
   07 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdebase-3.1.3.ebuild:
   x86 stable

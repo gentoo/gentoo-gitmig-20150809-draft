@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.86 2003/09/08 01:47:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.87 2003/09/12 11:51:24 weeve Exp $
+
+*kdelibs-3.2.0_alpha1 (12 Sep 2003)
+
+  12 Sep 2003; Jason Wever <weeve@gentoo.org> kdelibs-3.2.0_alpha1.ebuild:
+  Marking as unusable as not all dependecies are met and hasn't been tested yet.
 
   07 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-3.1.3-r1.ebuild:
   x86 stable

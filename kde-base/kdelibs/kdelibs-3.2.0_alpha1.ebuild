@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_alpha1.ebuild,v 1.1 2003/09/12 03:33:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_alpha1.ebuild,v 1.2 2003/09/12 11:51:24 weeve Exp $
 inherit kde
 
 MY_PV=3.1.91
@@ -8,7 +8,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 IUSE="alsa cups ipv6 ssl"
 DESCRIPTION="KDE libraries needed by all kde programs"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc -sparc ~alpha ~hppa"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.2"
 LICENSE="GPL-2 LGPL-2"
