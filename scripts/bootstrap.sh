@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.50 2003/10/30 23:39:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.51 2003/10/30 23:42:17 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -221,7 +221,7 @@ emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || 
 #
 # If you have questions or information about this change, like whether this
 # fixed or didn't fix the "zlib undefined symbol: xmalloc_set_program_name"
-# issue, please email rac@gentoo.orgm, drobbins@gentoo.org and
+# issue, please email rac@gentoo.org, drobbins@gentoo.org and
 # azarah@gentoo.org.
 
 emerge ${STRAP_EMERGE_OPTS} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
