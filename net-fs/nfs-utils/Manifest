@@ -16,11 +16,11 @@ MD5 b8368dca9c921631ed7019c5c08c3a11 files/nfsmount 1163
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r1 67
 MD5 972c19f796b7767aebc138eae1314090 files/nfs-3 5135
 MD5 3a3d8bd1a03bbf2c51a4e77a3516febd files/digest-nfs-utils-1.0.6-r4 67
-MD5 fb05ee33c977d298669f4290918027a8 files/nfs-5 5286
+MD5 b742d94fd6d6f719c994dc7920b878e5 files/nfs-5 5299
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBfQk5HTu7gpaalycRAnbWAKC5P+oM67lQTASL+E5jwH1CzOqDEQCg6m7+
-IW7//EhF2pzbYDolDmbvQMA=
-=c7CO
+iD8DBQFBfQlvHTu7gpaalycRAmc+AJoCXsS1vefLmh3OHGJPviA8moz9tQCfSEau
+r6s+a6WgVU/UcTvG1znGw08=
+=HArR
 -----END PGP SIGNATURE-----
