@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.10 2004/12/14 18:56:46 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.11 2004/12/17 15:12:07 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -75,6 +75,37 @@ set_arch_to_kernel() {
 set_arch_to_portage() {
 	export ARCH="${PORTAGE_ARCH}"
 }
+
+
+#
+# qeinfo "Message"
+# -------------------
+# qeinfo is a queit einfo call when EBUILD_PHASE
+# should not have visible output.
+#
+qeinfo() {
+    local outputmsg
+    outputmsg="${@}"
+    case "${EBUILD_PHASE}" in
+        depend)  unset outputmsg;;
+        clean)   unset outputmsg;;
+        preinst) unset outputmsg;;
+    esac
+    [ -n "${outputmsg}" ] && einfo "${outputmsg}"
+}
+
+qeerror() {
+    local outputmsg
+    outputmsg="${@}"
+    case "${EBUILD_PHASE}" in
+        depend) unset outputmsg;;
+        clean)  unset outputmsg;;
+        preinst) unset outputmsg;;
+    esac
+    [ -n "${outputmsg}" ] && einfo "${outputmsg}"
+}
+
+
 
 # File Functions
 # ---------------------------------------
@@ -185,31 +216,31 @@ get_version() {
 	unset KV_DIR
 
 	# KV_DIR will contain the full path to the sources directory we should use
-	einfo "Determining the location of the kernel source code"
+	qeinfo "Determining the location of the kernel source code"
 	[ -h "${KERNEL_DIR}" ] && KV_DIR="$(readlink -f ${KERNEL_DIR})"
 	[ -d "${KERNEL_DIR}" ] && KV_DIR="${KERNEL_DIR}"
 	
 	if [ -z "${KV_DIR}" ]
 	then
-		eerror "Unable to find kernel sources at ${KERNEL_DIR}"
-		einfo "This package requires Linux sources."
+		qeerror "Unable to find kernel sources at ${KERNEL_DIR}"
+		qeinfo "This package requires Linux sources."
 		if [ "${KERNEL_DIR}" == "/usr/src/linux" ] ; then
-			einfo "Please make sure that ${KERNEL_DIR} points at your running kernel, "
-			einfo "(or the kernel you wish to build against)."
-			einfo "Alternatively, set the KERNEL_DIR environment variable to the kernel sources location"
+			qeinfo "Please make sure that ${KERNEL_DIR} points at your running kernel, "
+			qeinfo "(or the kernel you wish to build against)."
+			qeinfo "Alternatively, set the KERNEL_DIR environment variable to the kernel sources location"
 		else
-			einfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
+			qeinfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
 		fi
 		die "Cannot locate Linux sources at ${KERNEL_DIR}"
 	fi
 
-	einfo "Found kernel source directory:"
-	einfo "    ${KV_DIR}"
+	qeinfo "Found kernel source directory:"
+	qeinfo "    ${KV_DIR}"
 
 	if [ ! -s "${KV_DIR}/Makefile" ]
 	then
-		eerror "Could not find a Makefile in the kernel source directory."
-		eerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		qeerror "Could not find a Makefile in the kernel source directory."
+		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
 		die "Makefile not found in ${KV_DIR}"
 	fi
 	
@@ -233,8 +264,8 @@ get_version() {
 	
 	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
 	then
-		eerror "Could not detect kernel version."
-		eerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		qeerror "Could not detect kernel version."
+		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
 		die "Could not parse version info from ${KV_DIR}/Makefile"
 	fi
 	
@@ -249,8 +280,8 @@ get_version() {
 	[ -d "${OUTPUT_DIR}" ] && KV_OUT_DIR="${OUTPUT_DIR}"
 	if [ -n "${KV_OUT_DIR}" ];
 	then
-		einfo "Found kernel object directory:"
-		einfo "    ${KV_OUT_DIR}"
+		qeinfo "Found kernel object directory:"
+		qeinfo "    ${KV_OUT_DIR}"
 		
 		KV_LOCAL="$(cat ${KV_OUT_DIR}/localversion* 2>/dev/null)"
 	fi
@@ -264,13 +295,13 @@ get_version() {
 	# And we should set KV_FULL to the full expanded version
 	KV_FULL="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}${KV_LOCAL}"
 	
-	einfo "Found sources for kernel version:"
-	einfo "    ${KV_FULL}"
+	qeinfo "Found sources for kernel version:"
+	qeinfo "    ${KV_FULL}"
 	
 	if [ ! -s "${KV_OUT_DIR}/.config" ]
 	then
-		eerror "Could not find a usable .config in the kernel source directory."
-		eerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
+		qeerror "Could not find a usable .config in the kernel source directory."
+		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources"
 		die ".config not found in ${KV_OUT_DIR}"
 	fi
 }
