@@ -1,9 +1,8 @@
 # ChangeLog for media-video/w3cam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.2 2002/12/09 04:26:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwcx/ChangeLog,v 1.3 2002/12/13 10:59:44 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *usb-pwcx-8.2.2 (25 Aug 2002)
 
