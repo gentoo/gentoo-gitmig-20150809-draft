@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.12 2004/10/22 11:57:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.13 2004/12/26 18:15:20 seemant Exp $
+
+*simgear-0.3.8_pre1 (26 Dec 2004)
+
+  26 Dec 2004; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.6.ebuild,
+  +simgear-0.3.8_pre1.ebuild:
+  version bump for flightgear-0.9.8_pre1, and moving 0.3.6 to stable for
+  flightgear-0.9.5
 
   22 Oct 2004; Martin Holzer <mholzer@gentoo.org> simgear-0.3.6.ebuild:
   adding forgotten depend
