@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.ebuild,v 1.2 2004/08/05 23:22:03 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.ebuild,v 1.3 2004/08/12 11:45:09 carlo Exp $
 
 MY_P=${P/_alpha/-test}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/hk-classes/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="mysql postgres sqlite odbc doc"
 
 # At least one of the following is required
