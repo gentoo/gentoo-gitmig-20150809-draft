@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.71 2004/05/29 19:53:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.72 2004/06/06 14:13:54 weeve Exp $
+
+  06 Jun 2004; Jason Wever <weeve@gentoo.org> fvwm-2.5.10-r3.ebuild:
+  Stable on sparc.
 
   29 May 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.10-r3.ebuild:
   marking -r3 stable on x86, added -r4 which adds two patches from cvs, 
