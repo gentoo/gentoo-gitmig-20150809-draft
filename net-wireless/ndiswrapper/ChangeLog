@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.12 2004/12/07 19:32:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.13 2004/12/19 07:27:26 cardoe Exp $
+
+*ndiswrapper-0.12-r1 (19 Dec 2004)
+
+  19 Dec 2004; Doug Goldstein <cardoe@gentoo.org>
+  +ndiswrapper-0.12-r1.ebuild:
+  Added support to properly detect if a user is using SWSUSP2 patches.
+  While they are now functioning, they will not function if applied and
+  then if it is not enabled in the kernel.
+  
+  Switched from kernel-mod to linux-info eclass.
 
 *ndiswrapper-0.12 (07 Dec 2004)
 
