@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.16 2003/12/13 00:41:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.17 2004/01/03 03:47:40 liquidx Exp $
+
+*python-docs-2.3.3 (03 Jan 2004)
+
+  03 Jan 2004; Alastair Tse <liquidx@gentoo.org> python-docs-2.2.3.ebuild,
+  python-docs-2.3.3.ebuild:
+  version bump, added arm to 2.2.3 keywords
 
   13 Dec 2003; Luca Barbato <lu_zero@gentoo.org> python-docs-2.3.2.ebuild:
   Marked ~ppc
