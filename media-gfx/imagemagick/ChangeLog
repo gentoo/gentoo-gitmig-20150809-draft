@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.4 2002/04/06 16:22:51 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.5 2002/04/06 16:36:06 jnelson Exp $
 
 *imagemagick-5.4.4 (6 Apr 2002)
 
@@ -9,6 +9,12 @@
   Updated to use the latest version of the tarball (5.4.4-4).
   Removed dependencies on virtual/glibc (because its implicit),
   and virtual/lpr (because its not needed)
+
+*imagemagick-5.4.4.4 (6 Apr 2002)
+
+  6 Apr 2002; Jon Nelson <jnelson@gentoo.org> imagemagick-5.4.4.4.ebuild :
+
+  Fixed typo in ebuild
 
 *imagemagick-5.4.3-r1 (3 March 2002)
 
