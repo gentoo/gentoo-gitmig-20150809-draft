@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.1 2004/02/06 03:33:08 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.2 2004/02/09 19:45:41 mr_bones_ Exp $
 
 IUSE="tcltk glut doc"
 
@@ -9,9 +9,9 @@ HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
 LICENSE="as-is"
 
 DEPEND=">=dev-lang/ocaml-3.05
-virtual/opengl
-glut ? ( media-libs/glut )
-tcltk? ( >=dev-lang/tcl-8.3*
+	virtual/opengl
+	glut? ( media-libs/glut )
+	tcltk? ( >=dev-lang/tcl-8.3*
 	>=dev-lang/tk-8.3* )"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
