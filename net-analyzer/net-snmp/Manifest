@@ -1,26 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c387667d1d0c930d0883b1e8d45d9fd ChangeLog 10932
-MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
-MD5 26c9697b92a17c3638878df783ee9086 net-snmp-5.2.ebuild 3691
 MD5 73bf480a8242080b62b404f58f5aad08 net-snmp-5.1.1.ebuild 2419
+MD5 52eb026d6ae2a93fa9c68a78d503ca07 net-snmp-5.2-r1.ebuild 3741
 MD5 0e119c9b21dd832cee5cf5d038c3f405 net-snmp-5.1.1-r1.ebuild 3590
 MD5 86deeb458a73a3d0336440e34323129e net-snmp-5.1.2.ebuild 3624
+MD5 83f15e22faf0447b33a1112760bca8a5 ChangeLog 11179
+MD5 26c9697b92a17c3638878df783ee9086 net-snmp-5.2.ebuild 3691
+MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
+MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
+MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
+MD5 4b5b02692d3398dcdb69a3188136dc25 files/digest-net-snmp-5.1.2 67
 MD5 93ce82e69e9c66badd05144fd498530c files/digest-net-snmp-5.2 65
+MD5 93ce82e69e9c66badd05144fd498530c files/digest-net-snmp-5.2-r1 65
+MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
 MD5 1cc5b20de8fc9e7c807195c320ab2f4b files/net-snmp-proc.patch 2448
 MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
-MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
-MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
 MD5 662833e61042a47d4bd8aaae404f4245 files/snmpd.rc6 710
-MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
-MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
 MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
-MD5 4b5b02692d3398dcdb69a3188136dc25 files/digest-net-snmp-5.1.2 67
+MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB37n4mdTrptrqvGERAmh8AJ94zuiTeMvByL56lP4EeFr0BQ5IhgCgnuEJ
-7eEkwhbsfpjPqtk48LL/vIQ=
-=abDV
+iD8DBQFB93R+EZCkKN40op4RArKFAJ9heoEByQsSLo01qAzVgV8e3Fmh7ACgxJWg
+q1JC5fCC6jJEUZ8UpZ7J7vY=
+=IqoB
 -----END PGP SIGNATURE-----

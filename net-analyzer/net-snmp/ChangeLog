@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.74 2005/01/08 10:46:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.75 2005/01/26 10:44:04 ka0ttic Exp $
+
+*net-snmp-5.2-r1 (26 Jan 2005)
+
+  26 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +net-snmp-5.2-r1.ebuild:
+  Revision bump; added local USE flag smux for bug 77871. Also, use ht_fix_all
+  from fixheadtails.eclass rather than the nasty sed ... * call.
 
   08 Jan 2005; Daniel Black <dragonheart@gentoo.org> net-snmp-5.2.ebuild:
   tail -1 problem fixed from bug #69775
