@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.4 2004/12/14 15:51:49 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.5 2004/12/14 16:02:40 absinthe Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	export OPTIMIZER="${CFLAGS}"
 	export DEBUG=-DNDEBUG
 
-	# Some archs need the PLATFORM var unset
+	# Some archs need the PLATFORM var unset 
 	if hasq ${ARCH} mips ppc sparc; then
 		unset PLATFORM
 	fi
