@@ -1,0 +1,8 @@
+# ChangeLog for app-crypt/pgpdump
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.1 2003/07/19 13:42:35 aliz Exp $
+
+*pgpdump-0.19 (19 Jul 2003)
+
+  19 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild submitted by Matsuu Takuto <matsuu@gentoo.org> in #21978.
