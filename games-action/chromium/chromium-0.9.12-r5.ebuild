@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.4 2004/03/28 09:32:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.5 2004/03/31 19:08:16 mr_bones_ Exp $
 
-inherit eutils games
+inherit flag-o-matic eutils games
 
 DESCRIPTION="Chromium B.S.U. - an arcade game"
 HOMEPAGE="http://www.reptilelabour.com/software/chromium/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="qt sdl oggvorbis"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	|| (
 		sdl? ( media-libs/libsdl
 			media-libs/smpeg )
@@ -24,8 +24,10 @@ DEPEND="virtual/glibc
 	qt? ( x11-libs/qt )
 	media-libs/openal
 	virtual/x11"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
-S=${WORKDIR}/Chromium-0.9
+S="${WORKDIR}/Chromium-0.9"
 
 src_unpack() {
 	unpack ${A}
@@ -35,13 +37,19 @@ src_unpack() {
 	has_version '=x11-libs/qt-3*' && epatch ${FILESDIR}/${PV}-qt3.patch
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
 	append-flags -DPKGBINDIR="'\"${GAMES_BINDIR}\"'"
-	sed -i "s:-O2 -DOLD_OPENAL:${CFLAGS}:" src/Makefile
-	sed -i "s:-g:${CFLAGS}:" src-setup/Makefile
-	sed -i "s:-O2:${CFLAGS}:" support/glpng/src/Makefile
+	sed -i \
+		-e "s:-O2 -DOLD_OPENAL:${CFLAGS}:" src/Makefile \
+			|| die "sed src/Makefile failed"
+	sed -i \
+		-e "s:-g:${CFLAGS}:" src-setup/Makefile \
+			|| die "sed src-setup/Makefile failed"
+	sed -i \
+		-e "s:-O2:${CFLAGS}:" support/glpng/src/Makefile \
+			|| die "sed support/glpng/src/Makefile failed"
 }
 
 src_compile() {
-	if [ `use sdl` ] ; then
+	if use sdl ; then
 		export ENABLE_SDL="yes"
 		export ENABLE_SMPEG="yes"
 	else
@@ -64,13 +72,13 @@ src_compile() {
 }
 
 src_install() {
-	exeinto ${GAMES_BINDIR}
-	doexe bin/chromium*
+	exeinto "${GAMES_BINDIR}"
+	doexe bin/chromium* || die "doexe failed"
 
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -r data ${D}/${GAMES_DATADIR}/${PN}/
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r data "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
 
-	find ${D} -name CVS -exec rm -rf '{}' \; >& /dev/null
+	find "${D}" -name CVS -exec rm -rf '{}' \; >& /dev/null
 
 	prepgamesdirs
 }
