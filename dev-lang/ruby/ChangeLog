@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.18 2003/05/14 18:35:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.19 2003/05/26 17:59:19 agriffis Exp $
+
+*ruby-1.8.0_pre2-r1 (26 May 2003)
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0_pre2-r1.ebuild,
+  files/ruby-1.8.0_pre2-socks.patch:
+  Fix bug 21719 with a local patch. Pay attention to socks5 and tcltk USE flags.
+  Add ~alpha to KEYWORDS
 
   14 May 2003; Luca Barbato <lu_zero@gentoo.org> ruby-1.6.8.ebuild :
   Added ppc to keywords.
