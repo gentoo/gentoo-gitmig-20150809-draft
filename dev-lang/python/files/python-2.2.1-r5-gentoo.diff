@@ -84,15 +84,6 @@ retrieving revision 1.73.4.7
 diff -u -r1.73.4.4 -r1.73.4.7
 --- python/python/dist/src/setup.py	2002/03/26 13:43:04	1.73.4.4
 +++ python/python/dist/src/setup.py	2002/08/08 19:52:42	1.73.4.7
-@@ -1,7 +1,7 @@
- # Autodetecting setup.py script for building the Python extensions
- #
- 
--__version__ = "$Revision: 1.1 $"
-+__version__ = "$Revision: 1.1 $"
- 
- import sys, os, getopt
- from distutils import sysconfig
 @@ -273,8 +273,6 @@
          exts.append( Extension('pwd', ['pwdmodule.c']) )
          # grp(3)
