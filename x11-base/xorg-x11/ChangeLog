@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.42 2004/06/01 06:21:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.43 2004/06/02 06:17:56 spyderous Exp $
+
+  02 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
+  Work around upgrade problem where people have Option "XkbRules" "xfree86" in
+  their config file.
 
   01 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   Prevent -fomit-frame-pointer and k6 flags from being used together (#49310).

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.44 2004/06/01 18:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.45 2004/06/02 06:17:56 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -1028,6 +1028,10 @@ EOF
 	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
 
+	# Work around upgrade problem where people have
+	# Option "XkbRules" "xfree86" in their config file
+	sed -i "s:^.*Option.*"XkbRules".*$::g" ${D}/etc/X11/xorg.conf.example
+
 	# Fix any installed config files for installing fonts to /usr/share/fonts
 	# This *needs* to be after all other installation so files aren't
 	# overwritten.
@@ -1048,7 +1052,12 @@ EOF
 				mkdir -p ${T}${DIR}
 			fi
 			cp ${ROOT}${FILE} ${T}${DIR}
+			# New font paths
 			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
+			# Work around upgrade problem where people have
+			# Option "XkbRules" "xfree86" in their config file
+			sed -i "s:^.*Option.*"XkbRules".*$::g" ${T}${FILE}
+
 			dodir ${DIR}
 			insinto ${DIR}
 			doins ${T}${FILE}
