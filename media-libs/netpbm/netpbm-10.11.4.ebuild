@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.4 2003/01/07 21:07:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.5 2003/01/12 14:20:57 mholzer Exp $
 
-IUSE="svga"
+IUSE="svga pic"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -31,6 +31,11 @@ src_unpack() {
 		else
 			cfg="config"
 		fi
+	fi
+
+	if [ -n "`use pic`" ]
+	then
+		CFLAGS="${CFLAGS} -fPIC"
 	fi
 
 	sed <${FILESDIR}/${PV}/Makefile.${cfg} >Makefile.config \
