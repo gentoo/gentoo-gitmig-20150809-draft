@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/konqueror-embedded/konqueror-embedded-20010207-r1.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/konqueror-embedded/konqueror-embedded-20010207-r1.ebuild,v 1.4 2002/07/14 19:40:29 aliz Exp $
 
 A=${PN}-snapshot.tar.gz
 S=${WORKDIR}/${PN}-snapshot
 DESCRIPTION=""
 SRC_URI="http://devel-home.kde.org/~hausmann/${A}"
-HOMEPAGE="http://www.kde.org"
+HOMEPAGE="http://www.konqueror.org/embedded.html"
+DESCRIPTION="The Konqueror/Embedded project attempts to build up a special version of the web browsing component of the KDE browser Konqueror (in particular its html rendering engine khtml and its io subsystem)"
 
 src_compile() {
 
