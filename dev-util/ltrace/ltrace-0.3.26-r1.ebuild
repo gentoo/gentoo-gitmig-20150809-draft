@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.26-r1.ebuild,v 1.4 2002/10/04 21:01:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.3.26-r1.ebuild,v 1.5 2002/11/07 01:50:05 nall Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ltrace shows runtime library call information for dynamically linked executables"
@@ -9,7 +9,7 @@ HOMEPAGE="http://packages.debian.org/unstable/utils/ltrace.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ~ppc"
 
 DEPEND="virtual/glibc"
 

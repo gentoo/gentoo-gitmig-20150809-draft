@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.4 2002/06/29 02:08:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.5 2002/11/07 01:50:04 nall Exp $
 
 *ltrace-0.3.26-r1 (28 Jun 2002)
+
+  06 Nov 2002; Jon Nall <nall@gentoo.org> ltrace-0.3.26-r1.ebuild :
+  added ~ppc to KEYWORDS
 
   28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> ltrace-0.3.26-r1.ebuild
   files/digest-ltrace-0.3.26-r1 :
