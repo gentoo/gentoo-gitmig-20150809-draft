@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.2 2004/09/05 07:13:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.3 2004/10/17 07:30:18 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> maven-bin-1.0_rc3.ebuild,
+  maven-bin-1.0_rc4.ebuild:
+  keywords ~amd64 to close #66602.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
