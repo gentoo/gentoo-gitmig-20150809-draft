@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb387bf3639772f7778f0d18acbd661b ChangeLog 707
-MD5 13954c77e7a61feff9e972191f23d2ef gbib-0.1.2.ebuild 1193
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 7bfe9650fdddf48a274cf10b0430e7ba files/digest-gbib-0.1.2 62
+MD5 13954c77e7a61feff9e972191f23d2ef gbib-0.1.2.ebuild 1193
+MD5 bb387bf3639772f7778f0d18acbd661b ChangeLog 707
 MD5 0ceb1e8222c34d072cc89b137d119fbd files/gbib-gentoo.patch 12670
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLKwQKRy60XGEcJIRAsHhAJ9iMUWVyablNKZPMK/D9ES2fvJC5gCdE9dr
-YjRaEIOPdsRyPwvyVHrsUXU=
-=MlAo
------END PGP SIGNATURE-----
+MD5 7bfe9650fdddf48a274cf10b0430e7ba files/digest-gbib-0.1.2 62

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 cca347d4b0e88766d322951ccf1e97e7 metadata.xml 570
 MD5 c1421fcb106fdaa8d545480d3cab0011 ChangeLog 5180
 MD5 9814e14a89852e1c2cd3d0b0f197f437 magicpoint-1.10a-r1.ebuild 2022
 MD5 3ff6f3ad6bc2ef0087359575ce33333f magicpoint-1.11b.ebuild 2471
-MD5 cca347d4b0e88766d322951ccf1e97e7 metadata.xml 570
+MD5 3948d3f1ee43af2138ad361b1bcab87b files/magicpoint-1.10a-r1-gentoo.diff 1833
+MD5 02b686f1f35a47738d8938fb0151d3d0 files/digest-magicpoint-1.11b 68
 MD5 63a502fcee80a92007cd49e113116b04 files/50mgp-mode-gentoo.el 167
 MD5 6ac7b3bc9c394f597bf182a0509154fc files/digest-magicpoint-1.10a-r1 68
-MD5 02b686f1f35a47738d8938fb0151d3d0 files/digest-magicpoint-1.11b 68
-MD5 3948d3f1ee43af2138ad361b1bcab87b files/magicpoint-1.10a-r1-gentoo.diff 1833
 MD5 fb8540abfe6224103b5d68b722e78119 files/magicpoint-1.11b-gentoo.diff 1412
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCOt2OVWNWqTUmv+0RAs1ZAJoCiEL0gelZ+Fdco0Z9b3YmgLQaWwCdEQde
-fQAYg1MBWhEdzA9WvuxeK2I=
-=+A/4
------END PGP SIGNATURE-----

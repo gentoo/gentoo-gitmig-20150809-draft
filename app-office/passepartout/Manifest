@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bbd870cdb771f25e028f0882dae45e1c passepartout-0.5.ebuild 688
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 1b1e48f0e86e7eeae7b9af2b1a6caf97 ChangeLog 579
 MD5 f1fa3a2e3a6ce22a84beaf710d94c386 passepartout-0.6.ebuild 689
+MD5 1b1e48f0e86e7eeae7b9af2b1a6caf97 ChangeLog 579
+MD5 bbd870cdb771f25e028f0882dae45e1c passepartout-0.5.ebuild 688
 MD5 34ea5a29ae5e1101593e83dd9829cc79 files/digest-passepartout-0.5 69
 MD5 f657b97bd6ce720fa98a561674558974 files/digest-passepartout-0.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCTh3nVWNWqTUmv+0RAoybAJ91nlEJ3E3cPzQ7CatduPy9jYIASgCgmykC
-aVABVEuNCfyxUCoAKFhR6qs=
-=NW/G
------END PGP SIGNATURE-----

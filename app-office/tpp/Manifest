@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 75d4015f47059c554ee9e90a045d5b9d tpp-1.1.1.ebuild 707
 MD5 3dd3b1906c628c71d52b1a1f9ad88009 ChangeLog 445
-MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
-MD5 a68630d34ea6a5425f0cbb36fb0af210 files/tpp-1.1.1-Makefile.patch 700
 MD5 88742db74aaaa305de59c9405e8f39c5 files/digest-tpp-1.1.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJbP3/UDVUK2NELYRAnJWAJ9zPlFrKCqFHWct7SVBH9SGNTbYHwCgikcW
-qVCOWKk33UWIsIGJFEMBwGE=
-=rsvP
------END PGP SIGNATURE-----
+MD5 a68630d34ea6a5425f0cbb36fb0af210 files/tpp-1.1.1-Makefile.patch 700
