@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.1-r1.ebuild,v 1.2 2003/05/08 21:03:10 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.1-r1.ebuild,v 1.3 2003/05/09 06:49:38 kumba Exp $
 
 IUSE="nls bootstrap build"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~x86 ~ppc -alpha -sparc ~mips -hppa -arm"
+KEYWORDS="~x86 ~ppc -alpha ~sparc ~mips -hppa -arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -66,10 +66,11 @@ src_unpack() {
 		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch
 
 	# Add patches for mips
-	if [ "${ARCH}" = "mips" ]
-	then
-		epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-gas-mips-gprel.patch
-	fi
+	# Appears to already be in 2.14.90.0.1....
+#	if [ "${ARCH}" = "mips" ]
+#	then
+#		epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-gas-mips-gprel.patch
+#	fi
 
 }
 
