@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.13.ebuild,v 1.7 2004/12/19 21:21:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.13.ebuild,v 1.8 2005/02/08 05:46:02 eradicator Exp $
 
 inherit distutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	distutils_python_version
 	addpredict ${QTDIR}/etc/settings
 
-	local myconf="-d /usr/lib/python${PYVER}/site-packages -b /usr/bin -v /usr/share/sip"
+	local myconf="-d /usr/$(get_libdir)/python${PYVER}/site-packages -b /usr/bin -v /usr/share/sip"
 	use debug && myconf="${myconf} -u"
 	has distcc ${FEATURES} || myconf="${myconf} -c"
 

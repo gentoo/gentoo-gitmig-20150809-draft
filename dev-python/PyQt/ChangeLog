@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.50 2004/12/30 21:06:19 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.51 2005/02/08 05:46:02 eradicator Exp $
+
+  07 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> PyQt-3.13.ebuild:
+  Multilib fix for python.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
