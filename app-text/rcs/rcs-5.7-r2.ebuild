@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.12 2004/03/12 08:48:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.13 2004/03/28 17:31:14 zx Exp $
 
 DESCRIPTION="Revision Control System"
 SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${P}.tar.gz"
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 RDEPEND="sys-apps/diffutils"
 
-KEYWORDS="x86 ppc sparc alpha ia64 amd64"
+KEYWORDS="x86 ppc sparc alpha ia64 amd64 ~hppa"
 
 src_compile() {
 	./configure \

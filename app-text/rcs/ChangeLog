@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.11 2004/03/12 08:48:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.12 2004/03/28 17:31:14 zx Exp $
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> rcs-5.7-r2.ebuild:
+  Marking ~hppa
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> :
   Don't assign default to S; header fix
