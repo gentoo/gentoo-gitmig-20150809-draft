@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.5 2003/11/04 09:43:11 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.6 2003/11/20 02:25:47 lu_zero Exp $
 
 IUSE="debug"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha sparc ~hppa amd64 ~mips"
+KEYWORDS="x86 ppc ~alpha sparc ~hppa amd64 ~mips"
 
 DEPEND="virtual/glibc"
 
