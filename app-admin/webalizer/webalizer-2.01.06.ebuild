@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.06.ebuild,v 1.2 2001/06/04 00:16:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.06.ebuild,v 1.3 2001/11/10 02:30:19 hallski Exp $
 
 P=webalizer-2.01-06
-A=${P}-src.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="Webalizer"
-SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/"${A}
+SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${P}-src.tar.bz2"
 HOMEPAGE="http://www.mrunix.net/webalizer/"
 
 DEPEND="virtual/glibc

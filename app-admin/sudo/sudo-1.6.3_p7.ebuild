@@ -2,13 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
 # Author Achim Gottinger <achim@gentoo.org> Update from p5 to p7
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.3_p7.ebuild,v 1.1 2001/04/09 20:11:58 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.3_p7.ebuild,v 1.2 2001/11/10 02:30:19 hallski Exp $
 
 P=${PN}-1.6.3p7
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Allows certain users/groups to run commands as root"
-SRC_URI="http://www.courtesan.com/sudo/dist/${A}"
+SRC_URI="http://www.courtesan.com/sudo/dist/${P}.tar.gz"
 HOMEPAGE="http://www.courtesan.com/sudo/"
 
 DEPEND="virtual/glibc

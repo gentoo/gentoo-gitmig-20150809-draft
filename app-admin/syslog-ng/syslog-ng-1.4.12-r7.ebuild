@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.12-r7.ebuild,v 1.2 2001/09/10 06:19:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.12-r7.ebuild,v 1.3 2001/11/10 02:30:19 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
-SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.4/${A}"
+SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.4/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
 
 RDEPEND="virtual/glibc >=dev-libs/libol-0.2.23"

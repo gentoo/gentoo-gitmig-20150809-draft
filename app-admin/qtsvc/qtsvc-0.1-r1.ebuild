@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.2 2001/11/10 02:30:19 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A QT frontend for svc"
-SRC_URI="http://www.together.net/~plomp/${A}"
+SRC_URI="http://www.together.net/~plomp/${P}.tar.gz"
 HOMEPAGE="http://www.together.net/~plomp/qtsvc.html"
 
 DEPEND=">=x11-libs/qt-x11-2.2.3"

@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.1 2001/04/05 15:13:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-1.12-r2.ebuild,v 1.2 2001/11/10 02:30:19 hallski Exp $
 
-P=killproc-1.12
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="killproc and assorted tools for boot scripts"
-SRC_URI="ftp://ftp.suse.com/pub/projects/init/${A}"
+SRC_URI="ftp://ftp.suse.com/pub/projects/init/${P}.tar.gz"
 
 DEPEND="virtual/glibc"
 
