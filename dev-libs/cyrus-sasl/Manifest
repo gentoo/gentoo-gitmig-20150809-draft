@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 04c0b54fe6928e86aef07b627b88765f cyrus-sasl-2.1.18-r2.ebuild 5430
 MD5 54f2bd76be47e4beec9b53b237d0e44f cyrus-sasl-2.1.19-r1.ebuild 7161
-MD5 5bcbc96e4c6db79ea075c0d08d1d5401 cyrus-sasl-2.1.20-r2.ebuild 9027
+MD5 16c4b4e3c8f0fbb432366de51b0e7c00 cyrus-sasl-2.1.20-r2.ebuild 9078
 MD5 bba00f641b9c816375ce3571c3d8e3d1 cyrus-sasl-2.1.20-r1.ebuild 8556
-MD5 85aaa3cebdc2087d4dda6c2acff9e0d0 ChangeLog 20351
+MD5 dd97a5f20cf710fe351a5fa4a243465f ChangeLog 20467
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 00be13f87e77be65152a9ad02d73ed94 cyrus-sasl-2.1.20.ebuild 7351
 MD5 a3a8fcefa0874e1fb97787a034880d9f files/cyrus-sasl-ntlm_impl-spnego.patch.gz 7430
@@ -48,7 +48,7 @@ MD5 c355c365d74408c00cdaa25beea6d4f7 files/digest-cyrus-sasl-2.1.20 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCEk9GViELBEf1JB0RAjqtAJ97EItqm9SC65BHvnrInzeVjbrZSACfcwby
-GW1cOGECNOxZVo88lQBNtLs=
-=nWaU
+iD8DBQFCElVrViELBEf1JB0RAjVVAJ0Zq1F7eYgMHTL5EhOEfqmst7+T9gCeNKlu
+giSzwg2LBaifYOuu0php+x8=
+=b/Hj
 -----END PGP SIGNATURE-----
