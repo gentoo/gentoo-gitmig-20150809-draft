@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.6-r3.ebuild,v 1.1 2002/03/18 12:33:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.6-r3.ebuild,v 1.2 2002/03/19 20:40:28 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Core components of the GNOME desktop environment"
@@ -11,10 +11,8 @@ HOMEPAGE="http://www.gnome.org/"
 RDEPEND=">=gnome-base/control-center-1.4.0.1-r1
 	 >=gnome-base/libglade-0.17-r1
 	 >=gnome-base/gnome-libs-1.4.1.2-r1
-	 >=gnome-base/gnome-print-0.35
-	 >=media-libs/gdk-pixbuf-0.16.0-r1"
-
-# print? ( >=gnome-base/gnome-print-0.35 )
+	 >=media-libs/gdk-pixbuf-0.16.0-r1
+	 cups? ( >=gnome-base/gnome-print-0.35 )"
 
 DEPEND="${RDEPEND}
         >=sys-apps/tcp-wrappers-7.6
