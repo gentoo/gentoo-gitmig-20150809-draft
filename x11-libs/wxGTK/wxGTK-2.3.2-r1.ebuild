@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tod Neidt <tneidt@fidnet.com>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r1.ebuild,v 1.4 2002/07/09 10:53:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r1.ebuild,v 1.5 2002/07/10 13:21:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="2.3"
 KEYWORDS="x86"
 

@@ -7,7 +7,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Gtk--Addons - a set of extensions to gtk[--]."
 SRC_URI="http://home.wtal.de/petig/Gtk/${MY_P}.tar.gz"
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-0.2.0.ebuild,v 1.2 2002/07/09 10:53:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-0.2.0.ebuild,v 1.3 2002/07/10 13:21:18 aliz Exp $
 
 DESCRIPTION="GL extentions for Gtk+ 2.0"
 HOMEPAGE="http://http://gtkglext.sourceforge.net/"
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
 
