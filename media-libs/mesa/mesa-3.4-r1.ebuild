@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.4 2001/04/23 19:59:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.4-r1.ebuild,v 1.5 2001/04/28 05:24:54 achim Exp $
 
 P=MesaLib-${PV}
 A0=${P}.tar.bz2
@@ -18,7 +18,12 @@ DEPEND="virtual/glibc
         ggi? ( >=media-libs/libggi-2.0_beta3 )
         svga? ( >=media-libs/svgalib-1.4.2-r1 )"
 
-PROVIDE="virtual/opengl"
+if [ "`use X`" ]
+then
+  PROVIDE="virtual/opengl virtual/glu virtual/glut"
+else
+  PROVIDE="virtual/opengl"
+fi
 
 src_compile() {
 
