@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1049 2005/03/28 12:28:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1050 2005/03/28 14:45:51 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -759,6 +759,7 @@ sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
+sys-kernel/vserver-sources:ngnet - Adds experimental NGNET patches by Herbert Poetzl (http://vserver.13thfloor.at/Experimental/NGNET/)
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
