@@ -1,3 +1,7 @@
 MD5 78986356bbeae53735d258f74b903278 ChangeLog 1028
 MD5 8eb4e47f53b4d7a4a76bd9323b2e69af gnut-0.4.28.ebuild 814
+MD5 c1ffdcfe19299f141627519261d21d5e gnut-0.4.28-r1.ebuild 841
+MD5 bf7e34c7ded1c8926a6786880b320d4c files/src.patch.gz 7676
 MD5 ccc61486c0d6e2bfa46fc0ead74c5897 files/digest-gnut-0.4.28 63
+MD5 19eaae9a91ea9091c76590225e9ccfa8 files/configure.patch.gz 639
+MD5 ccc61486c0d6e2bfa46fc0ead74c5897 files/digest-gnut-0.4.28-r1 63
