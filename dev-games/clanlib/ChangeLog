@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.24 2005/03/02 01:50:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.25 2005/03/02 02:33:55 vapier Exp $
+
+*clanlib-0.6.5-r3 (01 Mar 2005)
+
+  01 Mar 2005; Mike Frysinger <vapier@gentoo.org> +clanlib-0.6.5-r3.ebuild:
+  Touchup config script to not suck.
 
   01 Mar 2005; Mike Frysinger <vapier@gentoo.org>
   +files/clanlib-0.6.5-freetype.patch, clanlib-0.6.5-r2.ebuild:
