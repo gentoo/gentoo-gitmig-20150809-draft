@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.6 2004/12/30 21:03:58 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.7 2005/01/02 23:01:39 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.6.6.ebuild:
   Marking stable on x86 and amd64.
@@ -12,7 +15,7 @@
   Changing ownership to livecd herd, bumping to version 1.6.9, and closing bug
   #67312.
 
-  08 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyparted-1.6.6.ebuild:
+  08 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pyparted-1.6.6.ebuild:
   Remove default S and RDEPEND.
 
 *pyparted-1.6.6 (05 May 2004)
