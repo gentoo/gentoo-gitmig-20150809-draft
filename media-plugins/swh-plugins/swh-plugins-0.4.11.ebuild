@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.11.ebuild,v 1.1 2004/11/21 19:10:42 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.11.ebuild,v 1.2 2004/12/04 19:06:14 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://plugin.org.uk/releases/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="media-libs/ladspa-sdk
 	dev-libs/fftw

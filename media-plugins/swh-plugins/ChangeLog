@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.24 2004/11/21 19:10:42 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.25 2004/12/04 19:06:14 eradicator Exp $
+
+*swh-plugins-0.4.11 (04 Dec 2004)
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  swh-plugins-0.4.11.ebuild:
+  Stable amd64, x86.  See bug #69164.
 
   21 Nov 2004; Frank van de Pol <fvdpol@gentoo.org> :
   Version bump to 0.4.11 + amd64 PIC fix.
