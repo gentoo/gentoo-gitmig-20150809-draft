@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.10 2003/02/12 03:27:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.11 2003/03/28 12:18:22 pvdabeel Exp $
 
 *gpa-0.6.1 (07 Feb 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> gpc-0.6.1.ebuild: 
+  Add ~ppc keyword
 
   07 Feb 2003; J Robert Ray <jrray@gentoo.org> gpa-0.6.1.ebuild : Version bump,
   thanks to Erinn Looney-Triggs <erinnlooneytriggs@ekno.com> and Jacob Perkins
