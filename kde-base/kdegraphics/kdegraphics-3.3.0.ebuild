@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0.ebuild,v 1.6 2004/09/02 14:39:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0.ebuild,v 1.7 2004/09/03 13:41:44 caleb Exp $
 
 inherit kde-dist eutils
 
@@ -12,7 +12,7 @@ IUSE="gphoto2 imlib opengl scanner tetex"
 DEPEND="~kde-base/kdebase-${PV}
 	gphoto2? ( media-gfx/gphoto2 )
 	scanner? ( media-gfx/sane-backends )
-	tetex? ( virtual/tetex )
+	tetex? || ( >=app-text/tetex-2 app-text/ptex app-text/cstetex app-text/dvipdfm )
 	dev-libs/fribidi
 	opengl? ( virtual/glut virtual/opengl )
 	imlib? ( media-libs/imlib )
