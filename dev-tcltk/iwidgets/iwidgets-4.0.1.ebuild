@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.7 2004/04/22 20:11:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.8 2004/04/25 20:33:14 squinky86 Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || "einstall failed"
+	einstall || die "einstall failed"
 	dodoc CHANGES ChangeLog README license.terms
 	doman doc/*.n
 }
