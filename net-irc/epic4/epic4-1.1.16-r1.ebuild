@@ -1,27 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.16-r1.ebuild,v 1.3 2004/04/27 22:08:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.16-r1.ebuild,v 1.4 2004/05/30 02:05:52 vapier Exp $
 
-IUSE="ipv6 perl ssl tcltk"
+inherit flag-o-matic eutils
 
 DESCRIPTION="Epic4 IRC Client"
+HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://prbh.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
 	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20030114.tar.gz"
-HOMEPAGE="http://epicsol.org"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ia64 ~alpha hppa amd64"
+IUSE="ipv6 perl ssl tcltk"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	tcltk? ( dev-lang/tcl )"
 
-inherit flag-o-matic eutils
-replace-flags "-O?" "-O"
-
 src_compile() {
+	replace-flags "-O?" "-O"
+
 	myconf=""
 
 	epatch ${FILESDIR}/epic-defaultserver.patch
@@ -38,7 +38,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	einstall \
 		sharedir=${D}/usr/share \
 		libexecdir=${D}/usr/lib/misc || die

@@ -1,38 +1,34 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.5 2004/05/01 23:55:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.6 2004/05/30 02:05:52 vapier Exp $
 
-IUSE="ipv6 perl ssl"
+inherit flag-o-matic eutils
 
 DESCRIPTION="Epic4 IRC Client"
+HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20040308.tar.gz"
-HOMEPAGE="http://epicsol.org"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa sparc ~amd64"
+IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
-inherit flag-o-matic eutils
-replace-flags "-O?" "-O"
-
 src_compile() {
-	myconf=""
-
-	myconf="${myconf} `use_with ipv6`"
-	myconf="${myconf} `use_with perl`"
-	myconf="${myconf} `use_with ssl`"
+	replace-flags "-O?" "-O"
 
 	epatch ${FILESDIR}/epic-defaultserver.patch || die "patch failed"
 
 	econf \
 		--libexecdir=/usr/lib/misc \
-		${myconf} || die
-
+		`use_with ipv6` \
+		`use_with perl` \
+		`use_with ssl` \
+		|| die
 	make || die
 }
 
