@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.0.0.ebuild,v 1.1 2003/10/28 00:33:08 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.0.0.ebuild,v 1.2 2003/11/21 18:35:54 rphillips Exp $
 
 IUSE="ldap"
 
@@ -38,6 +38,7 @@ src_compile() {
 	    --host=${HOST} \
 	    --prefix=/usr \
 	    ${myconf} || die
+	sed -i -e '/^\(CFLAGS\|CXXFLAGS\|LDFLAGS\)[[:space:]]*=/d' Makefile.rules
 	make || die "make failed"
 }
 
