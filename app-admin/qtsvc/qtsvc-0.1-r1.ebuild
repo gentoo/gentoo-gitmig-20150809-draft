@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.23 2005/01/01 11:21:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.24 2005/03/03 18:13:52 ciaranm Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc"
 
 DEPEND="=x11-libs/qt-2*"
 RDEPEND="${DEPEND}
-	>=sys-apps/daemontools-0.70"
+	>=sys-process/daemontools-0.70"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
