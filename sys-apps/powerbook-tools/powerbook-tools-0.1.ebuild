@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.6 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerbook-tools/powerbook-tools-0.1.ebuild,v 1.7 2003/06/23 00:07:12 rac Exp $
 
-KEYWORDS="x86 amd64 -alpha -sparc -arm"
+KEYWORDS="ppc -mips -x86 -amd64 -alpha -sparc -arm"
 DESCRIPTION="A metapackage to install all the packages needed for good powerbook support"
 RDEPEND="sys-apps/pbbuttonsd
 	 sys-apps/gtkpbbuttons

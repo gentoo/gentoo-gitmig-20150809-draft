@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/powerprefs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/ChangeLog,v 1.7 2003/04/30 20:56:00 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerprefs/ChangeLog,v 1.8 2003/06/23 00:11:59 rac Exp $
+
+  22 Jun 2003; <rac@gentoo.org> powerprefs-0.2.1.ebuild,
+  powerprefs-0.2.ebuild, powerprefs-0.3.1.ebuild:
+  emergency keyword fix
 
   30 Apr 2003; Graham Forest <vladimir@gentoo.org> powerprefs-0.3.1.ebuild:
   Set stable on ppc to match pbbuttonsd version
