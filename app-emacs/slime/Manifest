@@ -1,3 +1,4 @@
+MD5 a0c4105695fd1d8228917d72dbff357b slime-1.0_beta.ebuild 1231
 MD5 6928ce3c592f74f5373b728d425031e5 slime-0.13.ebuild 1901
 MD5 e46aa4e17e6f11d713a4bcdb12b0003d ChangeLog 853
 MD5 a0c4105695fd1d8228917d72dbff357b slime-1.0_alpha.ebuild 1231
@@ -6,5 +7,6 @@ MD5 909ff27dec8d97d16b944bf184b638b6 files/digest-slime-0.13 63
 MD5 7eb1b2947936cd494ee8dd07fc2fbc0f files/README.Gentoo 284
 MD5 4ea22499288a1d3aed28b7a885dfabea files/swank.asd 1239
 MD5 910993d2e23f61b956f2df6fad49b657 files/70slime-gentoo.el 577
+MD5 f35cb3e504401b20a17265c68cc32802 files/digest-slime-1.0_beta 65
 MD5 e4086b50bade07de735b2e62d60c41cb files/swank-loader.lisp 50
 MD5 702882777d51e5b941f4d14bc4bd4028 files/digest-slime-1.0_alpha 66
