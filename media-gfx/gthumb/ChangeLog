@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.22 2003/09/01 06:44:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.23 2003/09/07 13:20:04 obz Exp $
+
+  07 Sep 2003; Mike Gardiner <obz@gentoo.org> gthumb-2.1.5.ebuild,
+  gthumb-2.1.6.ebuild:
+  Fixed libexif dependency to >=0.5.10
 
 *gthumb-2.1.6 (01 Sep 2003)
 
