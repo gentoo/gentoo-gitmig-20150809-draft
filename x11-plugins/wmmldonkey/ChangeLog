@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/wmmldonkey
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.1 2003/12/25 23:55:49 pyrania Exp $
+
+*wmmldonkey-0.003 (26 Dec 2003)
+
+  26 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  wmmldonkey-0.003.ebuild:
+  Initial import. Thanks to Marco Lui for the ebuild.
+
