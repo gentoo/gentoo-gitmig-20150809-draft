@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.67 2004/12/23 02:42:18 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.68 2005/01/03 11:33:40 josejx Exp $
+
+  03 Jan 2005; Joseph Jezak <josejx@gentoo.org> pygtk-2.4.1.ebuild:
+  Marked ppc stable for bug #74333.
 
   22 Dec 2004; Dylan Carlson <absinthe@gentoo.org> pygtk-2.4.1.ebuild:
   Stable on amd64, bug 74333.
