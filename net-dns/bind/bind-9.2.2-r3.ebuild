@@ -1,38 +1,42 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.12 2004/07/29 15:08:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.13 2004/10/09 17:32:04 vapier Exp $
 
-inherit eutils
-
-IUSE="doc ipv6 selinux ssl"
+inherit eutils gnuconfig libtool
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz ftp://ftp.isc.org/isc/bind9/${PV}/patch.${PV}-P1"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
+	ftp://ftp.isc.org/isc/bind9/${PV}/patch.${PV}-P1"
 
-KEYWORDS="x86 ppc sparc ~alpha hppa ~amd64 ppc64"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 hppa ppc ppc64 sparc x86"
+IUSE="doc ipv6 selinux ssl"
 
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
-
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
 src_unpack() {
-	unpack ${A} && cd ${S}
+	unpack ${A}
+	cd ${S}
 
 	epatch ${DISTDIR}/patch.${PV}-P1
 
 	# Adjusting PATHs in manpages
 	for i in `echo bin/{named/named.8,check/named-checkconf.8,nsupdate/nsupdate.8,rndc/rndc.8}`; do
-		sed -i -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
-		       -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
-		       -e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
-		       ${i}
+		sed -i \
+			-e 's:/etc/named.conf:/etc/bind/named.conf:g' \
+			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
+			${i} || die "sed $i"
 	done
+
+	gnuconfig_update
+	uclibctoolize
 }
 
 src_compile() {
@@ -41,19 +45,21 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-openssl"
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 
-	econf 	--sysconfdir=/etc/bind \
+	econf \
+		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--enable-threads \
 		--with-libtool \
-		${myconf} || die "econf failed"
+		${myconf} \
+		|| die "econf failed"
 
-	MAKEOPTS="${MAKEOPTS} -j1" emake || die "failed to compile bind"
+	emake -j1 || die "failed to compile bind"
 }
 
 src_install() {
 	einstall || die "failed to install bind"
 
-	dodoc CHANGES COPYRIGHT FAQ README
+	dodoc CHANGES FAQ README
 
 	use doc && {
 		docinto misc ; dodoc doc/misc/*
