@@ -1,5 +1,5 @@
---- perl-5.8.4.orig/lib/File/Path.pm
-+++ perl-5.8.4/lib/File/Path.pm
+--- Path.pm.old
++++ Path.pm
 @@ -72,27 +72,17 @@
  
  =item *

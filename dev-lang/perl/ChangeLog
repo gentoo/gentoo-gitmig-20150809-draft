@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.112 2005/03/11 15:13:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.113 2005/03/11 21:43:43 mcummings Exp $
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  files/CAN-2005-0448-rmtree.patch, perl-5.8.2-r4.ebuild,
+  perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild:
+  Patch is in the right place and works on any arch. Yay.
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r4.ebuild,
+  perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild:
+  The last rmtree patch contains a line that checks <archname>/Errno.pm in
+  your existing perl install. If your kernel changes between perl installs, it
+  dies horribly. Need to find a cleaner solution first. For everyone that just
+  bumped their perls, I am terribly sorry that this wasn't realized earlier.
 
   11 Mar 2005; Michael Cummings <mcummings@gentoo.org> -perl-5.8.2-r2.ebuild,
   -perl-5.8.2-r3.ebuild, -perl-5.8.4-r2.ebuild, -perl-5.8.4-r3.ebuild,
