@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/xffm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xffm/ChangeLog,v 1.1 2003/06/13 18:42:16 bcowan Exp $
+
+*xffm-3.90.381 (13 Jun 2003)
+
+  13 Jun 2003; Brad Cowan <bcowan@gentoo.org> xffm-3.90.381.ebuild:
+  Initial import.
+
