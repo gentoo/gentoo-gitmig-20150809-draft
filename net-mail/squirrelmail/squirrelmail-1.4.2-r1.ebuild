@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r1.ebuild,v 1.4 2003/12/08 22:50:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r1.ebuild,v 1.5 2003/12/15 20:23:58 stuart Exp $
 
 inherit webapp-apache
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ppc sparc alpha ~amd64"
 
-RDEPEND="virtual/php
+RDEPEND=">=mod_php-4.1
 	dev-perl/DB_File"
 DEPEND="${RDEPEND}"
 
@@ -36,6 +36,8 @@ src_compile() {
 }
 
 src_install() {
+	webapp-mkdirs
+
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/${PN}
 	dodir ${destdir}
