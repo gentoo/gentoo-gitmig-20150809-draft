@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/glastree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.2 2002/12/08 21:44:47 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.3 2002/12/15 20:56:13 sethbc Exp $
+
+*glastree-1.02 (15 Dec 2002)
+  15 Dec 2002; Seth Chandler <sethbc@gentoo.org> glastree-1.02.ebuild:
+  updated glastree as per bug 11315.
 
 *glastree-0.58 (08 Dec 2002)
   08 Dec 2002; Seth Chandler <sethbc@gentoo.org> glastree-0.58.ebuild:
