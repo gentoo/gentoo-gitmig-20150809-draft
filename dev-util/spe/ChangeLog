@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.11 2004/07/03 12:20:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.12 2004/07/12 01:06:24 kloeri Exp $
+
+  12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> -spe-0.4.2c.ebuild:
+  Remove old version.
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> spe-0.4.2c.ebuild,
   spe-0.5.1a.ebuild, spe-0.5.1d.ebuild:
