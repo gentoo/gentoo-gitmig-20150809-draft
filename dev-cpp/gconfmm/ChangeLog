@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.20 2005/02/10 06:54:46 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.21 2005/03/13 20:37:42 corsair Exp $
+
+  13 Mar 2005; Markus Rothe <corsair@gentoo.org> gconfmm-2.0.2.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   10 Feb 2005; Joe McCann <joem@gentoo.org> gconfmm-2.6.1.ebuild:
   fix bug 81413
