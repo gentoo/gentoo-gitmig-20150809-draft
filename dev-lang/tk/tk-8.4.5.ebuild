@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.5.ebuild,v 1.5 2004/01/03 20:25:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.5.ebuild,v 1.6 2004/02/22 08:43:20 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips amd64 ~ppc ppc64 ~ia64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa amd64 ppc64 ~ia64"
+RESTRICT="nomirror"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.47-r10
@@ -25,8 +26,6 @@ src_unpack() {
 	epatch ${FILESDIR}/remove-control-v-8.4.diff || die
 }
 
-# hyper-optimizations untested...
-#
 src_compile() {
 	cd ${S}/unix
 	econf \
