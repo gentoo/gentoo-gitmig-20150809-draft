@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.10 2003/03/20 23:41:41 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.11 2003/03/30 22:15:22 method Exp $
 
 inherit eutils
 
@@ -62,6 +62,8 @@ src_compile() {
 		myconf="${myconf} --with-kerberos4=/usr/athena"
 	fi
 	
+	use selinux && CFLAGS="${CFLAGS} -DWITH_SELINUX" 
+
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc/ssh \
@@ -78,6 +80,13 @@ src_compile() {
 	then
 		# statically link to libcrypto -- good for the boot cd
 		perl -pi -e "s|-lcrypto|/usr/lib/libcrypto.a|g" Makefile
+	fi
+
+	if [ "`use selinux`" ]
+	then
+		#add -lsecure
+		sed "s:LIBS=\(.*\):LIBS=\1 -lsecure:" < Makefile > Makefile.new
+		mv Makefile.new Makefile
 	fi
 	
 	emake || die "compile problem"
