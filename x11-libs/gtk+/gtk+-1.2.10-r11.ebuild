@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.4 2004/04/28 15:03:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.5 2004/06/03 15:02:26 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool
@@ -11,12 +11,11 @@ SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gento
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 mips"
+KEYWORDS="x86 ~ppc ~sparc mips ~alpha arm hppa ~amd64 ~ia64"
 IUSE="nls debug"
 
 RDEPEND="virtual/x11
 	=dev-libs/glib-1.2*"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext
 		dev-util/intltool )"
@@ -33,13 +32,12 @@ src_unpack() {
 }
 
 src_compile() {
-
 	elibtoolize
 
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 
-	if [ `use debug` ]
+	if use debug
 	then
 		myconf="${myconf} --enable-debug=yes"
 	else
@@ -56,12 +54,11 @@ src_compile() {
 }
 
 src_install() {
-
 	make install DESTDIR=${D} || die
 
 	preplib /usr
 
-	dodoc AUTHORS COPYING ChangeLog* HACKING
+	dodoc AUTHORS ChangeLog* HACKING
 	dodoc NEWS* README* TODO
 	docinto docs
 	cd docs
@@ -74,11 +71,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
 	ewarn "all themes it seems.  Please remove it manually as it will not due"
 	ewarn "to /env protection."
 	echo ""
 	einfo "The old gtkrc is available through the new Gentoo gtk theme."
-
 }
