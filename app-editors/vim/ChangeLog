@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.126 2004/10/20 14:19:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.127 2004/11/28 14:38:54 ciaranm Exp $
+
+*vim-7.0_alpha20041128 (28 Nov 2004)
+
+  28 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +vim-7.0_alpha20041128.ebuild:
+  Added package.masked vim-7.0aa ebuilds. Not suitable for general use.
 
   20 Oct 2004; Akinori Hattori <hattya@gentoo.org> vim-6.3-r1.ebuild:
   stable on ia64, bug #66772
