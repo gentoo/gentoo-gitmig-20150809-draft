@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.7 2004/06/25 00:59:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.8 2004/07/14 20:27:48 agriffis Exp $
 
 IUSE=""
 
 inherit perl-module
 
 MY_P=SOAP-Lite-${PV}
-S=${WORKDIR}/${P}
 DESCRIPTION="Provides a simple and lightweight interface to the SOAP protocol (sic) both on client and server side."
 
 SRC_URI="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.tar.gz"
