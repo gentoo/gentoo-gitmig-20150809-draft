@@ -1,6 +1,9 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.21 2003/05/27 04:36:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.22 2003/10/16 11:18:29 sergey Exp $
+
+  16 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org> tomcat-4.1.24-r1.ebuild:
+  Fixed permissions for /etc/conf.d/tomcat
 
 *tomcat-4.1.24-r1 (27 May 2003)
 

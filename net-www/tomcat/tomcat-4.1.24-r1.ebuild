@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.3 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24-r1.ebuild,v 1.4 2003/10/16 11:18:29 sergey Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -56,7 +56,7 @@ src_install() {
 
 	cp -a ${FILESDIR}/${PV}/tomcat.conf ${S}/tomcat
 	insinto /etc/conf.d
-	insopts -m0750
+	insopts -m0644
 	doins ${S}/tomcat
 
 	cp -a ${FILESDIR}/${PV}/21tomcat ${S}/21tomcat
