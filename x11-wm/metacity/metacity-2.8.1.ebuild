@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.1.ebuild,v 1.10 2004/10/01 06:24:15 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.1.ebuild,v 1.11 2004/11/08 16:56:16 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="Gnome default windowmanager"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 mips ppc64"
+KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 mips ppc64 arm"
 IUSE="xinerama"
 
 # not parallel-safe; see bug #14405
