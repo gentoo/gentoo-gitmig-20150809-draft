@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.16.ebuild,v 1.2 2003/11/10 21:12:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.16-r1.ebuild,v 1.1 2003/11/27 13:10:06 foser Exp $
 
 DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://www.gftp.org/${P}.tar.bz2"
@@ -19,7 +19,17 @@ DEPEND="virtual/x11
 		sys-libs/ncurses
 		=dev-libs/glib-1.2* )"
 
-RDEPEND="nls? ( sys-devel/gettext )"
+#RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}/lib
+	# fix problem in #34475
+	epatch ${FILESDIR}/${P}-ipv6_fix.patch
+
+}
 
 src_compile() {
 	local myconf
