@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-0.15.ebuild,v 1.2 2004/06/24 22:04:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-0.15.ebuild,v 1.3 2004/07/11 10:16:22 eldad Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ex-parrot.com/~pdw/iftop/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="sys-libs/ncurses
 		net-libs/libpcap"
