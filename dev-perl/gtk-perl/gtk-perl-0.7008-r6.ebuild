@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r6.ebuild,v 1.2 2002/11/05 16:14:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r6.ebuild,v 1.3 2002/11/05 23:28:49 seemant Exp $
 
 inherit perl-module
 
@@ -15,12 +15,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="${DEPEND}
-	media-libs/gdk-pixbuf"
-
-newdepend "=x11-libs/gtk+-1.2* \
-	dev-perl/XML-Writer \
-	dev-perl/XML-Parser \
-	gnome? ( gnome-base/gnome-libs media-libs/gdk-pixbuf ) "
+	media-libs/gdk-pixbuf
+	=x11-libs/gtk+-1.2*
+	dev-perl/XML-Writer
+	dev-perl/XML-Parser
+	gnome? ( gnome-base/gnome-libs )"
 
 mydoc="VERSIONS WARNING NOTES"
 
