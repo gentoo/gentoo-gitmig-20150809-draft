@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.16 2003/08/13 07:02:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.17 2003/08/24 17:57:42 usata Exp $
 
 *mew-3.3 (29 Jul 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.3.ebuild:
+  Marked stable on alpha and sparc
 
   13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.3.ebuild:
   Marked stable on x86 and ppc
@@ -18,6 +21,11 @@
   Added ssl USE flag.
 
 *mew-3.2-r1 (18 Jun 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.2-r1.ebuild,
+  mew-3.2.ebuild:
+  Removed for security risk with skey implementation.  This problem
+  is fixed in mew 3.3 and doesn't exist in mew 3.1
 
   03 Jul 2003; Masatomo Nakano <nakano@gentoo.org> mew-3.2-r1.ebuild:
   marked stable for x86,ppc
