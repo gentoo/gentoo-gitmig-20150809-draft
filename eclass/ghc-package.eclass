@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.1 2004/11/03 15:06:41 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.2 2004/11/03 20:38:35 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -73,7 +73,7 @@ ghc-register-pkg() {
 	for pkg in $(ghc-listpkg ${localpkgconf}); do
 		einfo "Registering ${pkg} ..."
 		$(ghc-getghcpkgbin) -f ${localpkgconf} -s ${pkg} \
-			| $(ghc-getghcpkg) -u --auto-ghci-libs --force
+			| $(ghc-getghcpkg) -u --force
 	done
 }
 
