@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.4.2.ebuild,v 1.2 2003/02/13 16:15:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.4.3.ebuild,v 1.1 2003/06/11 17:59:44 lostlogic Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
