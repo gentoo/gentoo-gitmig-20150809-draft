@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/makepasswd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.1 2002/06/12 12:26:06 carpaski Exp $
+
+*makepasswd-1.10 (12 Jun 2002)
+
+  12 Jun 2002; N.Jones <carpaski@gentoo.org> makepasswd-1.10.ebuild:
+    Initial ChangeLog. Ebuild submitted by Robert Coie <rac@intrigue.com>.
+ 
