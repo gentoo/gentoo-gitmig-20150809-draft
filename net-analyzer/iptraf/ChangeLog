@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.12 2003/08/01 14:37:29 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.13 2003/08/03 21:56:31 gmsoft Exp $
+
+*iptraf-2.7.0-r1 (03 Aug 2003)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> iptraf-2.7.0-r1.ebuild :
+  Added ipv6 support. Fixed a small bug with path. Marked unstable.
 
 *iptraf-2.7.0 (30 Aug 2002)
 
