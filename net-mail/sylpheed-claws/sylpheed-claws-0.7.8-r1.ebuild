@@ -1,13 +1,16 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws-nc/sylpheed-claws-nc-0.7.8.ebuild,v 1.2 2002/06/29 09:42:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.8-r1.ebuild,v 1.1 2002/06/29 09:42:36 seemant Exp $
 
 
-MY_P="sylpheed-${PV}claws-nc"
+MY_P="sylpheed-${PV}claws"
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Bleeding edge version of Sylpheed-Claws -- New Cache implementation."
+DESCRIPTION="Bleeding edge version of Sylpheed"
 SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 HOMEPAGE="http://sylpheed-claws.sf.net"
+
+SLOT=""
+LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	ssl? ( >=dev-libs/openssl-0.9.6b )
@@ -21,9 +24,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	
 RDEPEND="$DEPEND
 	nls? ( sys-devel/gettext )"
-
-SLOT="0"
-LICENSE="GPL-2"
 
 PROVIDE="virtual/sylpheed"
 
@@ -57,7 +57,7 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--program-suffix=-claws-nc \
+		--program-suffix=-claws \
 		${myconf} || die "./configure failed"
 
 	for i in `find . -name Makefile` ; do

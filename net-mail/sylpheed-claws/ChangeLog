@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.9 2002/06/17 05:25:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.10 2002/06/29 09:42:36 seemant Exp $
+
+*sylpheed-claws-0.7.8-r1 (29 Jun 2002)
+
+  29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.8-r1
+  files/digest-sylpheed-claws-0.7.8-r1 :
+
+  PROVIDEs virtual/sylpheed
 
 *sylpheed-claws-0.7.8 (16 Jun 2002)
 
