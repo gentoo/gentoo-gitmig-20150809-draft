@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.5 2003/03/27 14:18:42 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.6 2003/10/02 14:59:11 usata Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -17,29 +17,30 @@ DEPEND="media-libs/jpeg
 	virtual/x11"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.bz2
 	cd ${S}/src
 	cp feature.h feature.h.orig
 	sed "s:\(#define LINUX_KEYS\):/\*\1\*/:" \
 		feature.h.orig > feature.h
 
-	if [ "`use cjk`" ]; then
-		cd ${S}
-		patch -p1 < ${DISTDIR}/aterm-0.4.2-ja.patch
-	fi
-
+	cd ${S}
+	use cjk && epatch ${DISTDIR}/aterm-0.4.2-ja.patch
 }
 
 src_compile() {
 	local myconf
 
-	use cjk && myconf="$myconf --enable-kanji --enable-xim --enable-linespace"
-echo $myconf
+	# You can't --enable-big5 with aterm-0.4.2-ja.patch
+	# I think it's very bad thing but as nobody complains it
+	# and we don't have per-language flag atm, I stick to
+	# use --enable-kanji/--enable-thai (and leave --enable-big5)
+	use cjk && myconf="$myconf
+		--enable-kanji
+		--enable-thai
+		--enable-xim
+		--enable-linespace"
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--host=${CHOST} \
+	econf \
 		--enable-transparency \
 		--enable-fading \
 		--enable-background-image \
@@ -47,7 +48,7 @@ echo $myconf
 		--enable-graphics \
 		--enable-utmp \
 		--with-x \
-		$myconf
+		${myconf} || die
 
 	emake || die
 }
@@ -58,7 +59,8 @@ src_install () {
 	fperms g+s /usr/bin/aterm
 	fowners root.utmp /usr/bin/aterm
 
-	dodoc TODO ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.menu
+	doman doc/aterm.1
+	dodoc ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.*
 	docinto menu
 	dodoc doc/menu/*
 	dohtml -r .
