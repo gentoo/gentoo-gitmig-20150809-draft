@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.7 2001/08/31 03:11:59 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.8 2001/08/31 19:20:26 drobbins Exp $
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
@@ -54,10 +54,10 @@ src_compile() {
 		then
 			myconf="${myconf} --with-included-gettext --enable-nls"
 		else
-			myconf="${myconf} --enable-nls"
+			myconf="${myconf} --without-included-gettext --enable-nls"
 		fi
 	else
-		myconf="${myconf} --disable-nls"
+		myconf="${myconf} --with-included-gettext --disable-nls"
 	fi
 
 	# gcc does not like optimization
@@ -66,9 +66,8 @@ src_compile() {
 	export CXXFLAGS="${CXXFLAGS/-O?/}"
 
 	${S}/configure --prefix=${LOC} --mandir=${LOC}/share/man --infodir=${LOC}/share/info \
-	--enable-version-specific-runtime-libs \
-	--host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
-	--with-local-prefix=${LOC}/local ${myconf} --without-included-gettext || die
+	--enable-version-specific-runtime-libs --host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
+	--with-local-prefix=${LOC}/local ${myconf} || die
 
 	if [ -z "`use static`" ]
 	then
