@@ -4,5 +4,6 @@
     <herd>net-mail</herd>
     <maintainer>
         <email>robbat2@gentoo.org</email>
+        <name>Robin H. Johnson</name>
     </maintainer>
 </pkgmetadata>
