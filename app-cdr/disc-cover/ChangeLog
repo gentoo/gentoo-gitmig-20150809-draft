@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
+
+*disc-cover-1.1.1 (05 Jun 2002)
+  05 Jun 2002; C.Morey <peitolm@gentoo.org> disc-cover-1.1.1.ebuild
+  This has been moved from app-cdr/disc-over to app-cdr/disc-cover to resolve
+  the typo in the directory name, no other functionality has been changed.
