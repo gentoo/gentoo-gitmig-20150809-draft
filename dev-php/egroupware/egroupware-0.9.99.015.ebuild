@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.008.ebuild,v 1.11 2004/08/04 19:31:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.015.ebuild,v 1.1 2004/08/04 19:31:15 mholzer Exp $
 
 inherit webapp-apache
 
-MY_P=eGroupWare-${PV}-0
+MY_P=eGroupWare-${PV}-1
 S=${WORKDIR}/${PN}
 
 DESCRIPTION="Web-based GroupWare suite. It contains many modules"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/egroupware/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha amd64 ~sparc ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa"
 IUSE=""
 
 RDEPEND="virtual/php"
