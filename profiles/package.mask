@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (04 Oct 2002)
+# Masking pending unfreeze.
+app-games/koth
+
 # <danarmak@gentoo.org> (04 Oct 2002)
 # Masked until the freeze is over. This new version fixes bug #8127 so I committed it.
 >=app-editors/kile-1.2
