@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e6d2054787664ed29199a2e7a455dba rubytorrent-0.3.ebuild 968
-MD5 5f3b767c850c3d9a62187580d145cf1a ChangeLog 362
+MD5 e34121666c8ceac6646c817e798a916a rubytorrent-0.3.ebuild 985
+MD5 b75c625a9e0f657b6e6ab6b85eee0404 ChangeLog 461
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 7058fe999664918d8eac7aa0afd0cb29 files/digest-rubytorrent-0.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCEkhG/UDVUK2NELYRAtFcAJsFK1z5M8Fxb0SSIpfe/zSWoJTfqgCgoCk5
-naeo0Tf/Proohh1zmZBRJOk=
-=OTqY
+iD8DBQFCEoev/UDVUK2NELYRAnpoAJ9BbYi2ZRhLZ1qfam8HzbcPRhnKNACbBfWT
+Pu1g0NluNC1R8KsL59bAJ1w=
+=8aZr
 -----END PGP SIGNATURE-----
