@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.1 2003/04/05 20:01:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.2 2003/04/07 22:04:28 liquidx Exp $
 
-IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos"
+IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde"
 
 #provide Xmake and Xemake
 
@@ -208,6 +208,11 @@ src_install() {
 		localstatedir=/var/lib \
 		KDE_APPLNK_DIR=/usr/share/applnk \
 		install || die
+
+	# remove kde link if USE="-kde"
+	if [ -z "`use kde`" ]; then
+		rm -rf ${D}/usr/share/applnk
+	fi
 
 	dodoc AUTHORS COPYING* ChangeLog HACKING MAINTAINERS
 	dodoc NEWS README

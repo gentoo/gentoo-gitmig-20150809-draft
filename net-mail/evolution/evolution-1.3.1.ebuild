@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.4 2003/03/21 16:22:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.5 2003/04/07 22:04:28 liquidx Exp $
 
-IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos"
+IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
 inherit eutils flag-o-matic gnome.org libtool virtualx gnome2
 
@@ -172,12 +172,12 @@ src_install() {
 	#sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
 	#rm Makefile.old
     
-    # fix kde shortcut (evo-1.3.1)
+    # fix kde shortcut otherwise make install fails (evo-1.3.1)
     cd ${S}/data
     cp Makefile Makefile.old
 	sed -e 's,^install-kde-applnk:,install-kde-applnk:\n\t$(mkinstalldirs) $(DESTDIR)$(kdedesktopdir); \\,' Makefile.old > Makefile
     rm Makefile.old
-        
+
 	cd ${S}
 
 	# Install with $DESTDIR, as in some rare cases $D gets hardcoded
@@ -193,7 +193,12 @@ src_install() {
 		localstatedir=/var/lib \
 		KDE_APPLNK_DIR=/usr/share/applnk \
 		install || die
-
+	
+	# remove kde applnk if -kde
+	if [ -z "`use kde`" ]; then
+		rm -rf ${D}/usr/share/applnk
+	fi
+	
 	dodoc AUTHORS COPYING* ChangeLog HACKING MAINTAINERS
 	dodoc NEWS README
 }
