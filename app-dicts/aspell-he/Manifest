@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52c0bd24b46c9f9230e8e873c001855f ChangeLog 500
-MD5 d7876a74e65897df8d85270cc91c5392 aspell-he-0.8.0.ebuild 389
+MD5 8863bd384b6aa9a1b57375998389b758 ChangeLog 584
+MD5 51af7ad3c4b28fd3bb265ed40ba03dbe aspell-he-0.8.0.ebuild 396
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 ecaf712a297f9c6d7fcc1b809f3e2fcb files/digest-aspell-he-0.8.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZD1RI1lqEGTUzyQRAnsYAJ9N1M81MDFf9vyEUV2QObzKw3mqvQCgtNmh
-FRQjTWKW/3YyWL8e45IFm58=
-=ja7e
------END PGP SIGNATURE-----
