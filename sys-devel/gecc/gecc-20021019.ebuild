@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.3 2002/10/20 00:56:24 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.4 2002/10/20 01:50:25 lostlogic Exp $
 
 # comprehensive list of any and all USE flags leveraged in the build, 
 # with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
@@ -25,4 +25,28 @@ src_compile() {
 
 src_install() {
 	einstall || die "Install failed"
+	dodoc README
+
+	dodir /usr/bin/gecc_link
+	dosym /usr/bin/gecc /usr/bin/gecc_link/gcc
+	dosym /usr/bin/gecc /usr/bin/gecc_link/g++
+	dosym /usr/bin/gecc /usr/bin/gecc_link/c++
+	dosym /usr/bin/gecc /usr/bin/gecc_link/cc
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/conf.geccd geccd
+
+	insinto /etc/env.d
+	newins ${FILESDIR}/env.geccd 06geccd
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/rc.geccd geccd
+}
+
+pkg_postinst() {
+	einfo
+	einfo "To use gecc for you local compiles you will need to add"
+	einfo "/usr/bin/gecc to the front of your path, and add geccd"
+	einfo "to your default runlevel"
+	einfo
 }
