@@ -1,73 +1,76 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.7 2004/06/25 00:31:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r4.ebuild,v 1.1 2004/08/26 03:41:39 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
-# make it detect whether it's a 2.6 kernel and patch if necessary
+# removed ptune*.pl, need to make a seperate package for it
 
-inherit eutils
+# hackish I know
+ETYPE="headers"
+
+inherit eutils kernel
 
 DESCRIPTION="ivtv driver for Hauppauge PVR[23]50 cards"
 HOMEPAGE="http://ivtv.sourceforge.net"
 
-SRC_URI="mirror://sourceforge/ivtv/${P}.tar.gz
-	http://hauppauge.lightpath.net/software/pvr250/pvr250_17_21288.exe
-	mirror://gentoo/${PF}.patch"
+SRC_URI="mirror://gentoo/${P}-${PR}.tar.bz2
+	http://hauppauge.lightpath.net/software/pvr250/pvr250_18a_inf.zip"
 
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
+[ "`echo ${KV} | cut -f2 -d.`" == 6 ] && SANDBOX_DISABLED="1"
+
 IUSE="lirc"
 
-DEPEND="lirc? ( app-misc/lirc )"
+DEPEND="lirc? ( app-misc/lirc )
+	app-arch/unzip"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-
-	cd ${WORKDIR}/ivtv
-	epatch ${DISTDIR}/${PF}.patch || die "${PF} patch failed"
-	sed -i -e 's:include <linux/videodev2.h>:include "videodev2.h":' utils/radio.c
+	unpack ${P}-${PR}.tar.bz2
 }
 
 src_compile() {
-#	if `grep -q I2C_VERSION.*2\.8 /usr/src/linux/include/linux/i2c.h` ;then
-#		einfo "found new i2c in your kernel source"
-#		sed -i -e \
-#			's:^#CFLAGS += -DNEW_I2C:CFLAGS += -DNEW_I2C:' \
-#			${WORKDIR}/ivtv/driver/Makefile
-#	fi
+	set_arch_to_kernel
 
-	cd ${WORKDIR}/ivtv/driver
+	cd ${WORKDIR}/${P}-${PR}/driver
 	make || die "build of driver failed"
 
-	cd ${WORKDIR}/ivtv/utils
+	cd ${WORKDIR}/${P}-${PR}/utils
 	make ||  die "build of utils failed"
 }
 
 src_install() {
-	cd ${WORKDIR}/ivtv/utils
-	cp ${DISTDIR}/pvr250_17_21288.exe .
+	cd ${WORKDIR}/${P}-${PR}/utils
+	cp ${DISTDIR}/pvr250_18a_inf.zip .
 	dodir /lib/modules
-	touch ${D}/lib/modules/ivtv-{enc,dec}-fw.bin
-	./ivtvfwextract.pl pvr250_17_21288.exe \
+	touch ${D}/lib/modules/ivtv-fw-{enc,dec}.bin
+	./ivtvfwextract.pl pvr250_18a_inf.zip \
 		${D}/lib/modules/ivtv-fw-enc.bin \
 		${D}/lib/modules/ivtv-fw-dec.bin
 
-	cd ${WORKDIR}/ivtv
+	cd ${WORKDIR}/${P}-${PR}
 	dodoc README doc/*
 
-	cd ${WORKDIR}/ivtv/utils
-	dobin test_ioctl ivtvfbctl ivtvplay ptune-ui.pl ptune.pl record-v4l2.pl
-	dobin radio vbi mpegindex
+	cd ${WORKDIR}/${P}-${PR}/utils
+	newbin test_ioctl ivtvctl
+	newbin encoder ivtv-encoder
+	newbin fwapi ivtv-fwapi
+	newbin radio ivtv-radio
+	newbin vbi ivtv-vbi
+	newbin mpegindex ivtv-mpegindex
+	dobin ivtvfbctl ivtvplay
 	newdoc README README.utils
 	dodoc README.mythtv-ivtv README.ptune README.radio README.vbi zvbi.diff
 	dodoc lircd-g.conf lircd.conf lircrc
 
-	cd ${WORKDIR}/ivtv/driver
+	cd ${WORKDIR}/${P}-${PR}/driver
 	make DESTDIR=${D} install || die "installation of driver failed"
+
+	set_arch_to_portage
 
 	dodir /etc/modules.d
 
@@ -102,5 +105,13 @@ pkg_postinst() {
 	einfo "LIRC_OPTS=\"--with-x --with-driver=hauppauge --with-major=61"
 	einfo "	--with-port=none --with-irq=none\""
 	einfo "see http://ivtv.sourceforge.net for more info"
+	echo
 	einfo "to use vbi, you'll need a few other things, check README.vbi in the docs dir"
+	echo
+	einfo "you'll also need to add 'LIRCD_OPTS=\"--device=/dev/lirc/0\"' to /etc/conf.d/lircd"
+
+	if [ -f "/lib/modules/`uname -r`/kernel/drivers/media/video/msp3400.ko" ] ; then
+		ewarn "You have the msp3400 module that comes with the kernel. It isn't compatible"
+		ewarn "with ivtv. You need to back it up to somewhere else, then run depmod -ae again"
+	fi
 }
