@@ -15,7 +15,6 @@
 *>=sys-devel/automake-1.8.5-r1
 *>=sys-devel/bison-1.875
 *>=sys-devel/libtool-1.5.2
->=sys-libs/db-4.1.25_p1-r4
 
 # remove stuff not needed on uclibc
 # c++ stuff disabled
