@@ -1,4 +1,14 @@
-MD5 ed47f52ba32d1f6c6e7fd9d812fb1558 ChangeLog 520
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 69bd61de16c74c22893bb09f29950ee1 metadata.xml 159
-MD5 c5d831370296eaead6c0eddb8920f800 stardork-0.6.ebuild 554
+MD5 94cfe078cee3a0cca7aed6699bca90ed ChangeLog 603
+MD5 7ef9d1ee0d90da8a68a29b2b508cc3cd stardork-0.6.ebuild 561
 MD5 b294194235a1c000812ffebfbf9260af files/digest-stardork-0.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByDN560LfUIagIAkRAn4AAJsHoeB4WAsiCRhmsqSS1fMgz93OUQCdHhpk
+woEpcWDaVvettdPq88efFAo=
+=2xl0
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 03ed62b5a3af0aa6b563be8430ab8bb3 ChangeLog 1015
-MD5 62d03f3ad18d55fa610bdcd2ff66d6e4 ascii-invaders-0.1b.ebuild 770
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f6caf8e6feefcd369493d59a3ad76200 ChangeLog 1105
+MD5 218ca30d344bbd77b97cc3a2064b51e6 ascii-invaders-0.1b.ebuild 774
 MD5 d168d6164f61567c7d4489fa40b36db9 metadata.xml 389
 MD5 791d43b45f0a694f76cc82af11fe8eee files/digest-ascii-invaders-0.1b 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByDIO60LfUIagIAkRAvUJAJ90skz5Pc+6QDP99PfKpRUHrL4QBQCfX2HD
+sKrimhaOUXydBmnzA3DstVo=
+=hKr0
+-----END PGP SIGNATURE-----
