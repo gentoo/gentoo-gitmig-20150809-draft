@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.4 2003/09/06 22:37:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.5 2004/01/09 14:45:22 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-${PV}/"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~alpha ~ppc ~sparc hppa"
+KEYWORDS="x86 amd64 alpha ~ppc ~sparc hppa"
 
 DEPEND="virtual/glibc
 	>=dev-lang/perl-5
