@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tuxracer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/ChangeLog,v 1.6 2004/02/05 14:16:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/ChangeLog,v 1.7 2004/03/30 07:06:01 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> tuxracer-0.61-r3.ebuild:
+  Fix amd64 support. Closing #44475.
 
   05 Feb 2004; Aron Griffis <agriffis@gentoo.org> tuxracer-0.61-r3.ebuild:
   add ~alpha with -mieee

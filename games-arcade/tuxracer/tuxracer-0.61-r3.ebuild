@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.7 2004/02/29 10:09:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.8 2004/03/30 07:06:01 aliz Exp $
 
-inherit games eutils gcc flag-o-matic
+inherit games eutils gcc flag-o-matic gnuconfig
 
 DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep, snow-covered mountains"
 HOMEPAGE="http://tuxracer.sourceforge.net/"
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-configure.in.patch
 	epatch ${FILESDIR}/${PV}-gcc3.patch
 
+	gnuconfig_update
 	autoconf || die "autoconf failed"
 }
 
