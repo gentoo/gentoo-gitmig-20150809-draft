@@ -1,3 +1,13 @@
-MD5 56f2bb137747bc4d45b215f7467d4070 ChangeLog 1120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 801e5d5236d3f01e2920451ee109ffda zoneminder-0.9.12.ebuild 2001
+MD5 e9aa73c724f8194ddcc799a20f0c14bf ChangeLog 1203
 MD5 cf91c423242d440d538cec3f4cd0940b files/digest-zoneminder-0.9.12 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtmcI1lqEGTUzyQRAnb1AKCjMU52PVgJFTc42uImSqOJnmN4fACgoZzx
+4rrh3TGDKTwMtZs7wTljftI=
+=0PYa
+-----END PGP SIGNATURE-----

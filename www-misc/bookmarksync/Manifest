@@ -1,10 +1,20 @@
-MD5 c3fe8923ed01b8013363655863597b87 ChangeLog 2067
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a85dc4c73ff8570ab2783d443cdc2223 bookmarksync-0.3.1.ebuild 608
 MD5 503ac5224de9f88acd9ac109fb535427 bookmarksync-0.3.2.ebuild 609
 MD5 7bfd52cee52982d310c519fcc9bd7f8d bookmarksync-0.3.3.ebuild 871
 MD5 9058e26ae2218c395612c7c00013af96 bookmarksync-0.3.4.ebuild 877
 MD5 29ca50d5c99cbbe7c57ee1df65e0d3bf metadata.xml 495
+MD5 f5403130b70490190b63d1556329f944 ChangeLog 2147
 MD5 e9d3e569d5e3b22a0c39b68babd41a6d files/digest-bookmarksync-0.3.1 69
 MD5 9dd32e274bee7628a973c924ca72ec7d files/digest-bookmarksync-0.3.2 69
 MD5 19e3be17cd6a26afe690440c518b0831 files/digest-bookmarksync-0.3.3 69
 MD5 e27922d01ff8a960203609a9f9a730f2 files/digest-bookmarksync-0.3.4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOthPI1lqEGTUzyQRAu3CAKDN6hGjq6OKcEeyTu2KWpkRkgdbYACeMtvi
+jUH1CwVEvQJp2AOTfgl0T/g=
+=Y6ac
+-----END PGP SIGNATURE-----

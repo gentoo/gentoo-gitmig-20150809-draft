@@ -1,4 +1,14 @@
-MD5 6154a9cda11d063aa7232a40b318bac2 ChangeLog 890
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2ea1f6199b0214163d8147ac6cd2cd9 mergelog-4.5.ebuild 663
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
+MD5 d21dab50fad5e757a83a62f6c3ce651a ChangeLog 970
 MD5 3425ef0cd4dedea0fdfd2c086f83e26d files/digest-mergelog-4.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtjxI1lqEGTUzyQRAtBRAKCnpo8vUt2GbY+iL8crdtOanpqcugCg28WK
+Est4F9pwGQT8X7ENt8Dmjx4=
+=6t2f
+-----END PGP SIGNATURE-----
