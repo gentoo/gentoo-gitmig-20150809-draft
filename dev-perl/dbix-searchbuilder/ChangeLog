@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.4 2003/12/29 15:12:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.5 2003/12/30 13:28:28 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  dbix-searchbuilder-0.95.ebuild:
+  Tested on sparc and x86; no bugs reported
 
   29 Dec 2003; Jason Wever <weeve@gentoo.org> :
   removed stray digest file.
