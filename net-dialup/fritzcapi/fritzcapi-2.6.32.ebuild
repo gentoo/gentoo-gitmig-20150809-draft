@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.3 2005/02/17 22:54:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.4 2005/02/26 22:23:07 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -97,7 +97,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm
+	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm 
+	rpm_unpack ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm
 	cd ${S}
 	for ((CARD=0; CARD < ${#AVM_SRC[*]}; CARD++)); do
 		unpack ${AVM_FILES[CARD]}.tar.gz
@@ -119,9 +120,6 @@ src_install() {
 
 	dodir /lib/firmware /etc
 
-	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
-	echo "#" >>${D}/etc/capi.conf
-
 	[ "${FRITZCAPI_BUILD_TARGETS/xusb_CZ/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && \
 		dodoc ${S}/fritz.xusb_CZ/README.fxusb_CZ
 
@@ -129,7 +127,6 @@ src_install() {
 		insinto /lib/firmware
 		insopts -m0644
 		doins ${WORKDIR}/usr/lib/isdn/*
-		echo -e "#fcusb2\tput_here_your_firmware\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
 	)
 }
 

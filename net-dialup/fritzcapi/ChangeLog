@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.11 2005/02/17 22:54:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.12 2005/02/26 22:23:07 genstef Exp $
+
+  26 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  fritzcapi-2.6.32.ebuild:
+  Fixing firmware unpack, removing capi.conf example in favour of capi4k-utils
 
   18 Feb 2005; Alin Nastac <mrness@gentoo.org> fritzcapi-2.6.32.ebuild:
   Remove /lib/isdn symlink as is no longer required by the current version of
