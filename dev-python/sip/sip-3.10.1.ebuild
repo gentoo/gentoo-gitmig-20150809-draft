@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.10.ebuild,v 1.2 2004/03/18 01:37:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.10.1.ebuild,v 1.1 2004/03/18 01:37:38 caleb Exp $
 
 IUSE=""
 
