@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.9 2004/12/30 22:39:16 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.10 2005/01/12 19:57:52 kingtaco Exp $
+
+  12 Jan 2005; Mike Doty <kingtaco@gentoo.org> numarray-1.1.1.ebuild:
+  ~amd64 keyword added
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
