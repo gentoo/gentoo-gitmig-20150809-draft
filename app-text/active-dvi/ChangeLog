@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.10 2005/02/17 23:19:31 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.11 2005/03/18 16:49:58 mattam Exp $
+
+  18 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> active-dvi-1.6.0.ebuild:
+  Add ~ppc keyword.
 
   18 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> active-dvi-1.6.0.ebuild:
   Get the tex files location right.

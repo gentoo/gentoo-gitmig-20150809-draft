@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.2 2005/02/17 23:19:31 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.3 2005/03/18 16:49:58 mattam Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1"
 
 IUSE="cjk tcltk"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	>=dev-ml/camlimages-2.20
