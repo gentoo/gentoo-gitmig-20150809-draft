@@ -14,8 +14,7 @@
  @finalout
 @@ -96,30 +96,30 @@
  
--@dircategory GNU programming tools
-+@dircategory Miscellaneous
+ @dircategory GNU programming tools
  @direntry
 -* Autoconf: (autoconf).         Create source code configuration scripts
 +* Autoconf v2.5: (autoconf25).  Create source code configuration scripts

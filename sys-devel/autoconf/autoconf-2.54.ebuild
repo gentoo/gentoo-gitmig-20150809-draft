@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.5 2002/12/14 19:19:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.6 2002/12/14 19:48:30 azarah Exp $
 
 IUSE=""
 
@@ -54,6 +54,12 @@ src_compile() {
 	# ************ autoconf-2.13 ************
 	#
 	cd ${OLD_S}
+
+	perl -pi -e 's|\* Autoconf:|\* Autoconf v2.1:|' autoconf.texi
+	cp autoconf.texi autoconf.texi.orig
+	sed -e '/START-INFO-DIR-ENTRY/ i INFO-DIR-SECTION GNU programming tools' \
+		autoconf.texi.orig > autoconf.texi
+	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
