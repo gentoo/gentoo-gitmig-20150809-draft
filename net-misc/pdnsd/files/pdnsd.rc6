@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/pdnsd/pdnsd.conf ] ; then
+	eerror "You need an /etc/pdnsd/pdnsd.conf file first"
+	eerror "There is a  sample  in  /usr/share/doc/pdnsd"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting pdnsd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/pdnsd -- -d -p /var/run/pdnsd.pid
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping pdnsd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/pdnsd.pid
+    eend $?
+}
