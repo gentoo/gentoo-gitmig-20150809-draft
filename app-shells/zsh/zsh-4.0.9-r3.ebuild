@@ -1,26 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.2 2004/03/03 18:41:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.3 2004/04/07 20:08:32 vapier Exp $
 
-IUSE="maildir ncurses static doc cjk"
-
-DESCRIPTION="UNIX Shell similar to the Korn shell"
-HOMEPAGE="http://www.zsh.org/"
+inherit flag-o-matic eutils
 
 MYDATE="20040204"
-
+DESCRIPTION="UNIX Shell similar to the Korn shell"
+HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )
 	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )"
 
-SLOT="0"
 LICENSE="ZSH"
+SLOT="0"
 KEYWORDS="x86 alpha ~ppc ~sparc"
+IUSE="maildir ncurses static doc cjk"
 
-DEPEND="virtual/glibc
-	sys-apps/groff
-	${RDEPEND}"
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
+DEPEND="${RDEPEND}
+	virtual/glibc
+	sys-apps/groff"
 
 src_unpack() {
 	unpack ${A}
@@ -39,8 +38,9 @@ src_compile() {
 
 	use ncurses && myconf="--with-curses-terminfo"
 	use maildir && myconf="${myconf} --enable-maildir-support"
-	use static && myconf="${myconf} --disable-dynamic" \
-		&& LDFLAGS="${LDFLAGS} -static"
+	use static \
+		&& myconf="${myconf} --disable-dynamic" \
+		&& append-ldflags -static
 
 	econf \
 		--bindir=/bin \
@@ -79,7 +79,7 @@ src_install() {
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
 		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
@@ -93,7 +93,7 @@ pkg_preinst() {
 	# Our zprofile file does the job of the old zshenv file
 	# Move the old version into a zprofile script so the normal
 	# etc-update process will handle any changes.
-	if [ -f /etc/zsh/zshenv -a ! -f /etc/zsh/zprofile ]; then
-		mv /etc/zsh/zshenv /etc/zsh/zprofile
+	if [ -f ${ROOT}/etc/zsh/zshenv -a ! -f ${ROOT}/etc/zsh/zprofile ]; then
+		mv ${ROOT}/etc/zsh/zshenv ${ROOT}/etc/zsh/zprofile
 	fi
 }
