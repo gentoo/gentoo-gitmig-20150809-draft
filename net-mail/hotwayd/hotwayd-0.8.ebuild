@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.ebuild,v 1.1 2004/07/26 22:21:54 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/hotwayd-0.8.ebuild,v 1.2 2004/07/28 21:14:19 langthang Exp $
+
+inherit eutils
 
 DESCRIPTION="Hotmail to pop3 deamon"
 HOMEPAGE="http://hotwayd.sourceforge.net/"
@@ -14,8 +16,6 @@ IUSE=""
 
 DEPEND="sys-apps/xinetd
 	dev-libs/libxml2"
-
-inherit eutils
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-amd64.patch || die "epatch ${P}-amd64.patch failed"
