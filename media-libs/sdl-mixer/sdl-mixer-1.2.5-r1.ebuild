@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.10 2004/04/03 07:13:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.11 2004/04/11 06:06:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Simple Direct Media Layer Mixer Library"
 HOMEPAGE="http://www.libsdl.org/projects/SDL_mixer/index.html"
 SRC_URI="http://www.libsdl.org/projects/SDL_mixer/release/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
 IUSE="mpeg mikmod oggvorbis"
