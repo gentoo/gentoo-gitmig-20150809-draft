@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.2 2003/06/20 05:49:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.56.ebuild,v 1.3 2003/07/09 02:48:53 raker Exp $
 
 inherit eutils
 
@@ -54,6 +54,9 @@ src_unpack() {
 	epatch ${FILESDIR}/imap-2000-time.patch
 
 	epatch ${FILESDIR}/pine-4.33-whitespace.patch
+
+	# bug #23336 - makes pine transparent in terms that support it
+	epatch ${FILESDIR}/transparency.patch
 
 	if [ -n "$DEBUGBUILD" ]; then
  		cd ${S}/pine
