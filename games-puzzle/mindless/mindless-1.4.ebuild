@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.4.ebuild,v 1.1 2004/02/28 21:42:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.4.ebuild,v 1.2 2004/05/02 04:28:54 mr_bones_ Exp $
 
 inherit games
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/mindless/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="media-libs/gdk-pixbuf"
 
