@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/xmms-crossfade-0.3.2.ebuild,v 1.2 2003/07/12 18:40:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/xmms-crossfade-0.3.2.ebuild,v 1.3 2003/08/29 23:10:38 zul Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS Plugin for crossfading, and continuous output."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc" 
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-sound/xmms-1.2.5-r1"
