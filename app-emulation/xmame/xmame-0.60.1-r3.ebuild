@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Based on the 0.59.1 ebuild by Ben Lutgens <blutgens@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r3.ebuild,v 1.1 2002/08/07 07:50:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/xmame-0.60.1-r3.ebuild,v 1.2 2002/08/30 15:40:26 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
 SRC_URI="http://x.mame.net/download/${P}.tar.bz2"
 HOMEPAGE="http://x.mame.net"
+
 SLOT="0"
 LICENSE="xmame"
 
 DEPEND="virtual/x11
-		sdl? ( >=media-libs/libsdl-1.2.0 )
-		>=sys-libs/zlib-1.1.3-r2"
-RDEPEND=""
+	sdl? ( >=media-libs/libsdl-1.2.0 )
+	>=sys-libs/zlib-1.1.3-r2"
 
 # Please note modifications for ppc in this ebuild.  If you update the ebuild,
 # please either test on ppc, or send it to a ppc developer for testing before
@@ -90,14 +90,16 @@ src_compile() {
 
 src_install () {
 
-	make PREFIX=${D}/usr install
+	make \
+		PREFIX=${D}/usr \
+		MANDIR=${D}/usr/share/man/man6 \
+		install
 
-# dodoc gzips
 	dodoc doc/{changes.*,dga2.txt,gamelist.mame,readme.mame,xmamerc.dist}
 	dodoc doc/{xmame-doc.ps,xmame-doc.txt}
-# Don't really want html files gzipped
-	insinto /usr/share/doc/${P}/html
-	doins doc/*.html
+
+	dohtml -r doc
+
 	if [ "`use sdl`" ]; then
 		dosym xmame.SDL /usr/bin/xmame
 	else
