@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 IUSE=""
 SLOT="0"
 LICENSE="Conexant"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	emake all || die
