@@ -30,9 +30,10 @@ src_compile() {
     
     cd ${S}
     
+    # emake may not work
     try xmkmf
-    try emake Makefiles
-    try emake
+    try make Makefiles
+    try make
     
 }
 
