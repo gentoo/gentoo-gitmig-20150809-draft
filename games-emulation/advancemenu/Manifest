@@ -1,4 +1,6 @@
-MD5 d4544079135177a7a229e416859bf0f6 ChangeLog 1023
+MD5 92ca38014ab7b6876071a5ffd2400668 ChangeLog 1157
+MD5 28434d8d280430dc3d8fe69072c94c25 advancemenu-2.3.8.ebuild 1999
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 9d48bb1ec77c4c63b8bde999831112e2 advancemenu-2.3.5.ebuild 1999
+MD5 5bd6ebe43dd6e79784ce9c346f1af8b2 files/digest-advancemenu-2.3.8 70
 MD5 992cb5c2e15d9b2bd26c2e2e40ffe535 files/digest-advancemenu-2.3.5 70
