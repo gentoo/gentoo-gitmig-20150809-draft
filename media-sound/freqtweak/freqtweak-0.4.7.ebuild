@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.4.7.ebuild,v 1.10 2004/12/29 03:01:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/freqtweak-0.4.7.ebuild,v 1.11 2005/01/16 21:33:01 luckyduck Exp $
 
 DESCRIPTION="tool for FFT-based realtime audio spectral manipulation and display"
 HOMEPAGE="http://freqtweak.sourceforge.net"
