@@ -1,0 +1,12 @@
+diff -ur sbcl-0.8.9.original/src/runtime/GNUmakefile sbcl-0.8.9/src/runtime/GNUmakefile
+--- sbcl-0.8.9.original/src/runtime/GNUmakefile	2004-03-25 00:06:29.545754104 -0600
++++ sbcl-0.8.9/src/runtime/GNUmakefile	2004-03-25 00:08:43.216433072 -0600
+@@ -34,6 +34,7 @@
+ # symlink to Config-foo.
+ include Config
+ 
++CFLAGS += -DSBCL_HOME='"/usr/lib/sbcl"'
+ 
+ C_SRCS = alloc.c backtrace.c breakpoint.c coreparse.c \
+ 	dynbind.c gc-common.c globals.c interr.c interrupt.c \
+Only in sbcl-0.8.9/src/runtime: GNUmakefile~

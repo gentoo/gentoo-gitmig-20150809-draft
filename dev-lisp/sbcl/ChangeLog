@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.30 2004/03/24 21:52:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.31 2004/03/25 21:09:35 mkennedy Exp $
+
+*sbcl-0.8.9 (25 Mar 2004)
+
+  25 Mar 2004; <mkennedy@gentoo.org> sbcl-0.8.9.ebuild,
+  files/0.8.9/GNUmakefile-SBCL_HOME-gentoo.patch, files/0.8.9/README.Gentoo,
+  files/0.8.9/customize-target-features.lisp,
+  files/0.8.9/customize-target-features.lisp.no-threads,
+  files/0.8.9/install-clc.lisp,
+  files/0.8.9/posix-tests.lisp-sandbox-gentoo.patch,
+  files/0.8.9/sbcl-asdf-install.1, files/0.8.9/sbcl.sh, files/0.8.9/sbclrc:
+  New upstream minor version
 
   24 Mar 2004; <mkennedy@gentoo.org> sbcl-0.8.8.ebuild, files/0.8.8/sbclrc:
   Corrected path to system-wide SBCL configuration (should be /etc/sbclrc, not
