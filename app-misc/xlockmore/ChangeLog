@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.14 2003/03/29 03:15:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.15 2003/05/18 12:40:25 hanno Exp $
+
+*xlockmore-5.08.2 (17 May 2003)
+
+  17 May 2003; Hanno Boeck <hanno@gentoo.org> xlockmore-5.08.2.ebuild :
+  New version. Enabled vt-locking.
 
 *xlockmore-5.04 (10 Jun 2002)
 
