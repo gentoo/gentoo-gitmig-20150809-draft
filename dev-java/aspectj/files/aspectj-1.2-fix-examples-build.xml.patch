@@ -1,0 +1,13 @@
+diff -Naur org.aspectj.orig/modules/docs/dist/doc/examples/build.xml org.aspectj/modules/docs/dist/doc/examples/build.xml
+--- org.aspectj.orig/modules/docs/dist/doc/examples/build.xml   2004-06-23 15:45:44.000000000 +0200
++++ org.aspectj/modules/docs/dist/doc/examples/build.xml        2004-06-23 17:50:41.519250288 +0200
+@@ -66,7 +66,7 @@
+       <property name="example.dir"
+             location="${basedir}"/> 
+       <property name="aspectj.lib.dir"
+-            location="${basedir}/../../lib"/> 
++          location="/usr/share/aspectj/lib"/> 
+ 
+       <!-- required libraries - install or predefine -->
+       <property name="aspectjrt.jar"
+

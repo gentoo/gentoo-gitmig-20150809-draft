@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/aspectj
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.3 2004/06/24 22:17:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.4 2004/07/14 20:45:23 axxo Exp $
+
+*aspectj-1.2 (14 Jul 2004)
+
+  14 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
+  +files/aspectj-1.2-fix-examples-build.xml.patch,
+  +files/aspectj-1.2-fix-javadoc.patch,
+  +files/aspectj-1.2-version-gentoo.patch, +aspectj-1.2.ebuild:
+  new version, closes 53959
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> aspectj-1.1.1.ebuild:
   Add inherit eutils

@@ -1,0 +1,11 @@
+--- org.aspectj.orig/modules/docs/build.xml	2004-06-23 15:45:44.000000000 +0200
++++ org.aspectj/modules/docs/build.xml	2004-06-23 17:05:49.494500256 +0200
+@@ -173,7 +173,7 @@
+                     destdir="${docs.dist.dir}/doc/api"
+                 windowtitle="AspectJ(tm) runtime API"
+                        link="http://java.sun.com/j2se/1.4.2/docs/api"
+-                       classpath="${aspectj.modules.dir}/asm/bin;${aspectj.modules.dir}/bridge/bin;${aspectj.modules.dir}/util/bin;${aspectj.modules.dir}/lib/bcel/bcel.jar"
++                       classpath="${aspectj.modules.dir}/aj-build/jars/asm.jar;${aspectj.modules.dir}/aj-build/jars/util.jar;${aspectj.modules.dir}/aj-build/jars/bridge.jar;${aspectj.modules.dir}/lib/bcel/bcel.jar"
+                packagenames="org.aspectj.lang,org.aspectj.lang.reflect,org.aspectj.weaver.tools" />
+                <!-- note: link ineffective at avoiding see tag warning -->
+     </target>
