@@ -1,63 +1,77 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.1 2003/07/14 01:17:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.2 2003/10/11 13:21:01 usata Exp $
 
-IUSE=""
+inherit elisp-common
+
+IUSE="emacs"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
-SRC_URI="ftp://ftp.gnu.org/gnu/gcl/gcl-${PV}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
 PROVIDE="virtual/commonlisp"
 
 DEPEND=">=app-text/texi2html-1.64
 	>=dev-libs/gmp-4.1
-	app-text/tetex"
+	virtual/tetex"
+RDEPEND="${DEPEND}
+	emacs? ( virtual/emacs )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
+src_unpack() {
+
+	unpack ${A}
+	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
+	mv ${T}/makefile ${S}/info/makefile
+}
+
 src_compile() {
-	./configure --disable-statsysbfd --enable-locbfd --prefix=/usr || die
+
+	econf --enable-locbfd \
+		--disable-statsysbfd \
+		--enable-readline \
+		--enable-infodir=/usr/share/info \
+		--enable-emacsdir=/usr/share/emacs/site-lisp/gcl \
+		|| die
 	make || die
 }
 
 src_install() {
 
-	dodir /usr/share/info
-	dodir /usr/share/emacs/site-lisp/gcl
+	make DESTDIR=${D} install || die
 
-	make install prefix=${D}/usr MANDIR=${D}/usr/share/man \
-		INFO_DIR=${D}/usr/share/info EMACS_SITE_LISP=${D}/usr/share/emacs/site-lisp/gcl \
-		EMACS_DEFAULT_EL=${D}/usr/share/emacs/site-lisp/gcl/default.el \
-		|| die
+	rm -rf ${D}/usr/lib/${P}/info
 
-	rm -f ${D}/usr/share/infodir
+	if [ -n "`use emacs`" ] ; then
+		mv elisp/add-default.el ${T}/50gcl-gentoo.el
+		elisp-site-file-install ${T}/50gcl-gentoo.el
+		elisp-install ${PN} elisp/*
+	fi
 
-	mv ${D}/usr/lib/${P}/info/* ${D}/usr/share/info
-	rmdir ${D}/usr/lib/${P}/info/
-	rm ${D}/usr/share/emacs/site-lisp/gcl/default.el
+	dosed /usr/bin/gcl
+	fperms 0755 /usr/bin/gcl
 
-	mv ${D}/usr/bin/gcl ${D}/usr/bin/gcl.orig
-	sed -e "s:${D}::g" < ${D}/usr/bin/gcl.orig > ${D}/usr/bin/gcl
-	rm ${D}/usr/bin/gcl.orig
-
-	# fix the GCL_TK_DIR=/var/tmp/portage/gcl-2.4.3/image//
-	mv ${D}/usr/lib/${P}/gcl-tk/gcltksrv ${D}/usr/lib/${P}/gcl-tk/gcltksrv.orig
-	sed -e "s:${D}::g" < ${D}/usr/lib/${P}/gcl-tk/gcltksrv.orig > ${D}/usr/lib/${P}/gcl-tk/gcltksrv
-	rm ${D}/usr/lib/${P}/gcl-tk/gcltksrv.orig
-	chmod 0755 ${D}/usr/lib/${P}/gcl-tk/gcltksrv
-
-	chmod 0755 ${D}/usr/bin/gcl
+	# fix the GCL_TK_DIR=/var/tmp/portage/${P}/image//
+	dosed /usr/lib/${P}/gcl-tk/gcltksrv
+	fperms 0755 /usr/lib/${P}/gcl-tk/gcltksrv
 
 	#repair gcl.exe symlink
-	rm ${D}/usr/bin/gcl.exe
+	#rm ${D}/usr/bin/gcl.exe
 	dosym ../lib/${P}/unixport/saved_gcl /usr/bin/gcl.exe
 
-	#move docs to proper place
-	cd ${S}
-	dodoc readme* RELEASE* doc/*
-	mv ${D}/usr/share/info../doc/gcl-doc/* ${D}/usr/share/doc/${PF}
-	rm -rf ${D}/usr/share/info../
+	dodoc readme* RELEASE* ChangeLog* doc/*
+}
+
+pkg_postinst() {
+
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+
+	use emacs && elisp-site-regen
 }
