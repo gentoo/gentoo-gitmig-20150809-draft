@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.10 2005/01/01 15:40:21 eradicator Exp $
-
-
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.11 2005/02/05 03:40:09 joem Exp $
 
 inherit gnome2
 DESCRIPTION="Project manager for Gnome2"
@@ -29,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	dev-util/intltool
+	>=dev-util/intltool-0.29
 	doc? ( >=dev-util/gtk-doc-0.10 )"
 
 DOCS="AUTHORS COPYING ChangeL* INSTALL NEWS  README*"
@@ -37,14 +35,6 @@ DOCS="AUTHORS COPYING ChangeL* INSTALL NEWS  README*"
 # darn thing breaks in paralell make :/
 MAKEOPTS="${MAKEOPTS} -j1"
 G2CONF="${G2CONF} $(use_enable postgres)"
-
-
-src_unpack () {
-	unpack ${A}
-	cd ${S}
-	# Upstream has a newer intltool, doing this will fix some dependency problems
-	intltoolize --force && aclocal && autoconf && automake || die
-}
 
 pkg_postinst () {
 	gnome2_pkg_postinst

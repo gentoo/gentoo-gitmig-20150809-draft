@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.15 2005/01/02 21:43:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.16 2005/02/05 03:40:09 joem Exp $
+
+  04 Feb 2005; Joe McCann <joem@gentoo.org> planner-0.11.ebuild:
+  remove old intltool workaround, closes bug 80708
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
