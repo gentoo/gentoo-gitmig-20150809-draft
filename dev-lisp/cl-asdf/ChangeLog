@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-asdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.11 2004/06/24 23:40:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.12 2004/08/01 22:34:54 mkennedy Exp $
+
+*cl-asdf-1.84 (01 Aug 2004)
+
+  01 Aug 2004; <mkennedy@gentoo.org> +cl-asdf-1.84.ebuild:
+  New upstream version; Required by SBCL w/ package locking
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> cl-asdf-1.81.ebuild:
   adding s390 keyword
