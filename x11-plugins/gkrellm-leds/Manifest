@@ -1,7 +1,17 @@
-MD5 cb73fde617eb8a806aae2376b77a30c0 gkrellm-leds-0.8.0.ebuild 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47d9490fb05e4bff6fdd95e26cf58a95 gkrellm-leds-0.8.1.ebuild 718
 MD5 a8022702f1f1dd461adb006c07955ffb gkrellm-leds-0.6.1.ebuild 705
-MD5 8be46b57eef2bd2b7557690945c949a0 ChangeLog 1602
-MD5 c63ade2d66fc2663fb647c2ddfbd6a36 gkrellm-leds-0.8.1.ebuild 719
+MD5 454f1bc900ccc727ec8ea0900fcc8b8c ChangeLog 1704
+MD5 cb73fde617eb8a806aae2376b77a30c0 gkrellm-leds-0.8.0.ebuild 712
 MD5 852f969308b8f2fe57e7c3bc92c78ef6 files/digest-gkrellm-leds-0.6.1 63
-MD5 33b4c88351c4535432e6eb17dc257d00 files/digest-gkrellm-leds-0.8.0 63
 MD5 4c7f0317bf9bca196926345960809413 files/digest-gkrellm-leds-0.8.1 63
+MD5 33b4c88351c4535432e6eb17dc257d00 files/digest-gkrellm-leds-0.8.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl7lpugEuf3OQ0akRAqXSAJwK6upChV0ex1DMgnkdo/Y/u+ruHwCaAkCY
+y2cUOcovbiWHQnwiOFrLSGY=
+=2xPU
+-----END PGP SIGNATURE-----
