@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.1-r1.ebuild,v 1.6 2005/01/08 23:26:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.8.1-r1.ebuild,v 1.7 2005/01/22 06:52:35 vapier Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips ~ppc64 arm"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.0.1
@@ -53,7 +53,7 @@ src_install() {
 
 }
 
-kill_gconf () {
+kill_gconf() {
 
 	# this function will kill all running gconfd that could be causing troubles
 	if [ -x /usr/bin/gconftool ]
@@ -74,13 +74,13 @@ kill_gconf () {
 
 }
 
-pkg_setup () {
+pkg_setup() {
 
 	kill_gconf
 
 }
 
-pkg_preinst () {
+pkg_preinst() {
 
 	kill_gconf
 
@@ -91,7 +91,7 @@ pkg_preinst () {
 
 }
 
-pkg_postinst () {
+pkg_postinst() {
 
 	kill_gconf
 
@@ -103,6 +103,6 @@ pkg_postinst () {
 
 }
 
-DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
+DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO"
 
 USE_DESTDIR="1"
