@@ -1,20 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.4 2002/09/30 03:01:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.5 2002/11/30 02:43:23 vapier Exp $
 
 DESCRIPTION="Create & extract files from DOS .ARC files."
-
-DEPEND="virtual/glibc"
 MY_P="${PN}${PV}.pl8"
 SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${MY_P}.tar.Z"
-S=${WORKDIR}
-
 HOMEPAGE=""
+
 KEYWORDS="x86 -ppc"
 SLOT="0"
 LICENSE="ARC"
 
-src_unpack () {
+DEPEND="virtual/glibc"
+
+S=${WORKDIR}
+
+src_unpack() {
 	unpack ${A}
 	patch -p1 < ${FILESDIR}/${P}-timeh.patch
 	cat marc.c | sed -e 's/char \*arctemp2, \*mktemp();/char *arctemp2;/' \
@@ -28,11 +29,11 @@ src_unpack () {
 	sed "s:\$(OPT):${CFLAGS}:" Makefile.orig >Makefile
 }
 
-src_compile () {
+src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	into /usr
 	dobin arc marc
 	doman arc.1

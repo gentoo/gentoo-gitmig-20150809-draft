@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.9 2002/10/04 03:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.10 2002/11/30 02:47:19 vapier Exp $
 
 S=${WORKDIR}/par-cmdline
 DESCRIPTION="Parchive archive fixing tool"
@@ -25,8 +25,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-	exeinto /usr/bin
-	doexe par
+src_install() {
+	dobin par
 	dodoc COPYING AUTHORS NEWS README rs.doc
 }
