@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.14 2004/02/24 20:38:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.15 2004/02/24 21:54:08 wolf31o2 Exp $
+
+  24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild:
+  Added ~AMD64.
 
   24 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild,
   files/openal-20040218-alsa_capture.diff,
