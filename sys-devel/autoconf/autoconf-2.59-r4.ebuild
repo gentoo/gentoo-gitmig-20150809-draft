@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.10 2004/08/12 03:22:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.11 2004/10/06 17:55:37 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/texinfo-4.3
@@ -69,7 +69,7 @@ src_install() {
 	# install wrapper script for autodetecting the proper version
 	# to use.
 	exeinto /usr/lib/${PN}
-	newexe ${FILESDIR}/ac-wrapper-4.pl ac-wrapper.pl
+	doexe ${FILESDIR}/ac-wrapper.pl
 	dosed "s:2\.5x:${PV}:g" /usr/lib/${PN}/ac-wrapper.pl
 
 	#
