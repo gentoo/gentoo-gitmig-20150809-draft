@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.02.ebuild,v 1.2 2005/04/03 20:08:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.02.ebuild,v 1.3 2005/04/03 20:11:31 axxo Exp $
 
 inherit java eutils
 
@@ -119,9 +119,9 @@ src_install() {
 	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}/" \
 		-e "s/\(Name=Java\)/\1 Control Panel/" \
 		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
-		${T}/sun_java.desktop
+		${T}/sun_java-jre.desktop
 
-	domenu ${T}/sun_java.desktop
+	domenu ${T}/sun_java-jre.desktop
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
