@@ -1,5 +1,5 @@
-MD5 b616349b59fed6652131843090111800 ChangeLog 782
+MD5 5d7f45b72c6c7709f766098d89a3a89f ChangeLog 783
 MD5 b930e21bf22fd73f984ae65f871fdc2d metadata.xml 253
-MD5 ce231220c4c93e9b98b69d6e11f0871e kdenlive-0.2.4.ebuild 721
+MD5 1f899e8d0ba5a333937968bbc954feb7 kdenlive-0.2.4.ebuild 710
 MD5 9b7f530fe5c63b0114d2445b9d352e43 files/kdenlive-0.2.4-gcc34.patch 3723
 MD5 e0e37c5c67335b510278e92e08bb01d8 files/digest-kdenlive-0.2.4 67
