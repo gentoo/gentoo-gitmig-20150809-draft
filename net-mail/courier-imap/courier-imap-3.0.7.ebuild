@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.13 2004/08/31 02:40:34 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.14 2004/09/27 19:00:29 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha hppa amd64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha hppa amd64 ppc64 ia64"
 IUSE="fam berkdb gdbm debug ipv6 ldap mysql nls pam postgres selinux"
 #userpriv breaks linking against vpopmail
 RESTRICT="nouserpriv"
