@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-20020627-r1.ebuild,v 1.2 2004/07/13 21:11:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-20020627-r1.ebuild,v 1.3 2004/07/17 09:29:50 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-initial_LGPL.src.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=""
 IUSE=""
