@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ad0fc9f0c1f43cdf3ce146536c956fb ChangeLog 1742
-MD5 9617f9dfca54899d12630ad8257f22dd Term-ProgressBar-2.02.ebuild 586
-MD5 3c264f5c30c2904d02d68d6ddea32bb9 Term-ProgressBar-2.03.ebuild 570
-MD5 c66daf95d8de0923475d9091f56ff844 Term-ProgressBar-2.06-r1.ebuild 622
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 9617f9dfca54899d12630ad8257f22dd Term-ProgressBar-2.02.ebuild 586
+MD5 e0027949a9c678199f44e94b20e04fe0 ChangeLog 1846
+MD5 fcfe8416783ca4ce58ded673b6f5ffba Term-ProgressBar-2.06-r1.ebuild 618
+MD5 3c264f5c30c2904d02d68d6ddea32bb9 Term-ProgressBar-2.03.ebuild 570
 MD5 0f73d7a37aaefef3f41104b7b285d9de files/digest-Term-ProgressBar-2.02 72
-MD5 9ec06887ed46275d65de08c055462b70 files/digest-Term-ProgressBar-2.03 72
 MD5 cddf5a7ef6c653864d83a61836a18f89 files/digest-Term-ProgressBar-2.06-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOFodtG5z4I8BtQoRAumEAJ9GfZUYLso+HgY5dsdC0jGVvvDy6wCeL3vo
-gkxQxCeLsfaFfKzV7v832PM=
-=E0CL
------END PGP SIGNATURE-----
+MD5 9ec06887ed46275d65de08c055462b70 files/digest-Term-ProgressBar-2.03 72
