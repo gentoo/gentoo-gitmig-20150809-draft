@@ -1,10 +1,11 @@
 # ChangeLog for app-xemacs/text-modes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/text-modes/ChangeLog,v 1.7 2004/11/01 20:41:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/text-modes/ChangeLog,v 1.8 2004/12/16 09:57:52 corsair Exp $
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> text-modes-1.58.ebuild:
+  Stable on ppc64
 
-  text-modes-1.58.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> text-modes-1.58.ebuild:
   Marked ~ppc64; bug #67093
 
   15 Mar 2004; <rac@gentoo.org> metadata.xml, text-modes-1.58.ebuild:
