@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.12 2004/06/30 17:19:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.13 2004/10/22 00:33:09 mr_bones_ Exp $
 
 inherit php-lib
 
@@ -23,7 +23,7 @@ HTTPD_USER=root
 HTTPD_GROUP=root
 
 has_version "net-www/apache" && USE_APACHE=1 && inherit webapp-apache
-[ -n $"{USE_APACHE}" ] && webapp-detect || NO_WEBSERVER=1
+[ -n "${USE_APACHE}" ] && webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
 	if [ "${NO_WEBSERVER}" = "1" ]; then
