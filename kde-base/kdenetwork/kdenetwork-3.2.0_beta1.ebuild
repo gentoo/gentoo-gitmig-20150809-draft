@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0_beta1.ebuild,v 1.1 2003/11/01 13:10:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0_beta1.ebuild,v 1.2 2003/11/04 20:27:05 caleb Exp $
 inherit kde-dist
 
 IUSE="slp"
 DESCRIPTION="KDE network apps: kmail, kppp, knode..."
 KEYWORDS="~x86"
-DEPEND="=kde-base/kdebase-${PV}"
+newdepend "=kde-base/kdebase-${PV}"
 
 use slp 	&& myconf="$myconf --enable-slp"	|| myconf="$myconf --disable-slp"
 
