@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/par
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.1 2005/03/01 11:31:44 plasmaroo Exp $
+
+*par-00.05.01 (01 Mar 2005)
+
+  01 Mar 2005; <plasmaroo@gentoo.org> +par-00.05.01.ebuild:
+  Initial commit; bug #83595. Thanks to Lars Grunewaldt for the submission.
+
