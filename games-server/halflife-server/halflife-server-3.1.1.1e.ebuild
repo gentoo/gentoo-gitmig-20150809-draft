@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1d.ebuild,v 1.4 2004/02/20 07:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1e.ebuild,v 1.1 2004/04/18 08:36:45 vapier Exp $
 
 inherit games eutils
 
@@ -22,14 +22,10 @@ RDEPEND="dedicated? ( app-misc/screen )"
 S=${WORKDIR}/hlds_l
 
 pkg_nofetch() {
-	einfo "Please goto fileplanet and d/l ${MY_BIN}"
+	einfo "Please goto fileplanet and download ${MY_BIN}"
 	einfo "http://www.fileplanet.com/files/50000/58368.shtml"
-	echo
-	einfo "And then download hlds_l_3111d_update.tar.gz"
-	einfo "server: ftp.valvesoftware.com"
-	einfo "user: hlserver"
-	einfo "password: hlserver"
-	einfo "directory: Linux/"
+	einfo "And then download hlds_l_${MY_PV}_update.tar.gz"
+	einfo "http://www.3dgamers.com/dl/games/halflife/hlds_l_${MY_PV}_update.tar.gz"
 }
 
 src_unpack() {
