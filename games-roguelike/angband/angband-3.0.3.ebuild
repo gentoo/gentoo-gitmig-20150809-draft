@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.3.ebuild,v 1.1 2003/09/10 04:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.0.3.ebuild,v 1.2 2004/01/02 07:59:43 vapier Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="A Roguelike adventure game"
 HOMEPAGE="http://thangorodrim.net/"
 SRC_URI="ftp://clockwork.dementia.org/${PN}/Source/${P}.tar.gz"
 
-LICENSE="Moria | GPL-2"
+LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="X"
