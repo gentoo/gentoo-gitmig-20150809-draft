@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.1.0.ebuild,v 1.1 2004/08/02 20:44:33 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.1.0.ebuild,v 1.2 2004/09/03 20:34:07 eradicator Exp $
 
 DESCRIPTION="WavSplit is a simple command line tool to split WAV files"
 HOMEPAGE="http://sourceforge.net/projects/wavsplit/"
@@ -8,8 +8,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-#-sparc, -amd64: 1.0: "Only supports PCM wave format"
-KEYWORDS="~x86 -sparc -amd64"
+#-sparc, -amd64: 1.0: "Only supports PCM wave format" error message.
+KEYWORDS="x86 -sparc -amd64"
 IUSE=""
 DEPEND=""
 
