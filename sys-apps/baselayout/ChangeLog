@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.69 2003/03/21 07:38:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.70 2003/03/23 09:01:53 azarah Exp $
+
+  23 Mar 2003; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.6.4-r1.ebuild :
+  Fix the check for 'si::sysinit:/sbin/rc sysinit' in /etc/inittab to also
+  update inittab if the line is commented, thanks to report form
+  Norberto BENSA <nbensa@gmx.net>.
 
 *baselayout-1.8.6.4-r1 (21 Mar 2003)
 

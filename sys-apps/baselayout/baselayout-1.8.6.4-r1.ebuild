@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4-r1.ebuild,v 1.1 2003/03/21 07:38:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4-r1.ebuild,v 1.2 2003/03/23 09:01:53 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -595,7 +595,7 @@ EOF
 
 		# Replace and backup /etc/inittab (unless already in new format) 
 		if [ -f "${ROOT}/${inittab}" ] && \
-		   [ -z "$(grep 'si::sysinit:/sbin/rc sysinit' "${ROOT}/${inittab}")" ]
+		   [ -z "$(grep '^si::sysinit:/sbin/rc sysinit' "${ROOT}/${inittab}")" ]
 		then
 			ewarn "Backing up your old /etc/inittab, and replacing with new!"
 			ewarn "This is needed, as there were critical changes to /sbin/rc"
