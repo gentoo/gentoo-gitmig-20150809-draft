@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/httpd
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/httpd/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/httpd/ChangeLog,v 1.2 2003/02/12 03:53:55 vapier Exp $
 
 *httpd-0.5 (31 Oct 2002)
 
