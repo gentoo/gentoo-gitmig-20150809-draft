@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.5 2003/02/12 07:49:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.6 2003/10/03 23:57:42 pappy Exp $
+
+  04 Oct 2003; Alexander Gabert <pappy@gentoo.org> :
+  added current version 2.0.2 from lcamtuf homepage
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
