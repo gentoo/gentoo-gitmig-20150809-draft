@@ -1,0 +1,13 @@
+diff -Naur freebirth-0.3.2.orig/raw_wave.h freebirth-0.3.2/raw_wave.h
+--- freebirth-0.3.2.orig/raw_wave.h	2000-01-14 03:44:05.000000000 +0900
++++ freebirth-0.3.2/raw_wave.h	2003-05-31 21:35:42.000000000 +0900
+@@ -62,7 +62,7 @@
+ event *event_pitch_change_new(int seq_handle, double pitch);
+ 
+ // #define FB_SAMPLES "/usr/local/lib/freebirth"
+-#define FB_SAMPLES "."
++#define FB_SAMPLES "/usr/lib/freebirth"
+ 
+ /*
+   Local Variables:
+
