@@ -1,0 +1,27 @@
+diff -uNr bmp-itouch-0.1.4.2.ORIG/configure.ac bmp-itouch-0.1.4.2/configure.ac
+--- bmp-itouch-0.1.4.2.ORIG/configure.ac	2004-09-02 21:37:13.904436384 +0100
++++ bmp-itouch-0.1.4.2/configure.ac	2004-09-02 21:37:40.514391056 +0100
+@@ -46,6 +46,11 @@
+ AC_SUBST(BEEP_DATA_DIR)
+ CPPFLAGS="$CPPFLAGS $BEEP_CFLAGS"
+ 
++dnl make BEEP_DATA_DIR a variable in config.h
++AH_TEMPLATE(BEEP_DATA_DIR, "Path to bmp-touch.config")
++AC_DEFINE_UNQUOTED(BEEP_DATA_DIR, "$BEEP_DATA_DIR")
++
++
+ AM_GNU_GETTEXT_VERSION([0.10.35])
+ AM_GNU_GETTEXT
+ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$PACKAGE", [defined to gettext domain])
+diff -uNr bmp-itouch-0.1.4.2.ORIG/itouch.c bmp-itouch-0.1.4.2/itouch.c
+--- bmp-itouch-0.1.4.2.ORIG/itouch.c	2004-09-02 21:37:13.912435168 +0100
++++ bmp-itouch-0.1.4.2/itouch.c	2004-09-02 21:38:42.790923584 +0100
+@@ -1031,7 +1031,7 @@
+ 	ConfigFile *cfgfile;
+ 	gint i;
+ 
+-	if (cfgfile = xmms_cfg_open_file("/xmms-itouch.config")) {
++	if (cfgfile = xmms_cfg_open_file(BEEP_DATA_DIR "/bmp-itouch.config")) {
+ 		xmms_cfg_read_int(cfgfile, "Global", "config_count",
+ 				  &kbdcount);
+ 
