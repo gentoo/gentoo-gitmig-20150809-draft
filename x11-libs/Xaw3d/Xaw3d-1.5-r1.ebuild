@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/${P}.tar.gz
 #HOMEPAGE="http://"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"

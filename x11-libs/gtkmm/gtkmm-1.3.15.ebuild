@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.15.ebuild,v 1.3 2002/07/11 06:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/gtkmm-1.3.15.ebuild,v 1.4 2002/07/16 03:33:35 gerk Exp $
 
 # we want debug on the unstable branch
 inherit debug
@@ -10,7 +10,7 @@ DESCRIPTION="C++ interface for GTK+"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtkmm.sourceforge.net/"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 SLOT="2"
 DEPEND="virtual/glibc

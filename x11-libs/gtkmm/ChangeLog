@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.10 2002/07/15 14:39:53 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.11 2002/07/16 03:33:35 gerk Exp $
 
 *gtkmm-1.3.18 (15 Jul 2002)
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added ppc to keywords
+
   15 Jul 2002 ; Gabriele Giorgetti <stroke@gentoo.org> gtkmm-1.3.18.ebuild :
   New version. 
 
