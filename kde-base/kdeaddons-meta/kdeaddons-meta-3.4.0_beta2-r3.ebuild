@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta2-r3.ebuild,v 1.2 2005/02/17 15:06:37 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta2-r3.ebuild,v 1.3 2005/02/27 19:33:58 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -22,25 +22,8 @@ $(deprange $PV $MAXKDEVER kde-base/kate-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kicker-applets)
 $(deprange $PV $MAXKDEVER kde-base/kdeaddons-kfile-plugins)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-akregator)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-crashes)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-khtmlsettingsplugin)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-arkplugin)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-autorefresh)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-babelfish)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-dirfilter)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-domtreeviewer)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-fsview)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-imagerotation)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-kimgalleryplugin)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-kuick)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-minitools)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-rellinks)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-searchbar)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-sidebar)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-smbmounter)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-uachanger)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-validators)
-$(deprange $PV $MAXKDEVER kde-base/konqueror-webarchiver)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)
+$(deprange $PV $MAXKDEVER kde-base/konq-plugins)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-audio)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-images)
 arts? ( $(deprange $PV $MAXKDEVER kde-base/noatun-plugins) )

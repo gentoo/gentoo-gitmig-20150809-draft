@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.13 2005/02/11 18:50:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.14 2005/02/27 19:33:58 danarmak Exp $
+
+*kdeaddons-meta-3.4.0_beta2-r3 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  -kdeaddons-meta-3.4.0_beta1-r1.ebuild,
+  kdeaddons-meta-3.4.0_beta2-r3.ebuild:
+  Changed to depend on the new konq-plugins ebuild instead of the old
+  konqueror-* ones.
 
   11 Feb 2005; Dan Armak <danarmak@gentoo.org>
   kdeaddons-meta-3.4.0_beta1-r1.ebuild:
