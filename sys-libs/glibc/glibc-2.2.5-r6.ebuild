@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.3 2002/08/16 01:22:43 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r6.ebuild,v 1.4 2002/09/08 16:33:24 azarah Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -86,24 +86,29 @@ src_unpack() {
 	#
 	cd ${S}; patch -p1 < ${FILESDIR}/${P}-sunrpc-overflow.diff || die
 
-	if [ ${ARCH} == "x86" ]; then
+	if [ "${ARCH}" = "x86" ]; then
 	# This patch fixes the nvidia-glx probs, openoffice and vmware probs and such..
         # http://sources.redhat.com/ml/libc-hacker/2002-02/msg00152.html
-        cd ${S}
-        patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
+        cd ${S}; patch -p1 < ${FILESDIR}/glibc-divdi3.diff || die
 	fi
 	
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
 	# and should generally be ok, as it just fixes define order that causes scope
 	# problems with gcc-3.1.1.
 	# (Azarah, 14 Jul 2002)
-	patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311.patch || die
+	cd ${S}; patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311.patch || die
 
 	# Avoid "Error: illegal instruction" when compiling on sparc with gcc 3.1.1
-	if [ ${ARCH} == "sparc" -o ${ARCH} == "sparc64" ]; then
-		patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311-sparc.patch || die
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
+		cd ${S}; patch -p1 < ${FILESDIR}/glibc-2.2.5-gcc311-sparc.patch || die
 	fi
-
+	
+	# Some patches to fixup build on alpha
+	if [ "${ARCH}" = "alpha" ]; then
+		cd ${S}
+		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-gcc3-fix.diff || die
+		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-pcdyn-fix.diff || die
+	fi
 }
 
 src_compile() {
