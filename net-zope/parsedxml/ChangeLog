@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/parsedxml
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/parsedxml/ChangeLog,v 1.1 2003/03/25 11:51:26 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/parsedxml/ChangeLog,v 1.2 2003/04/06 01:24:31 kutsuya Exp $
 
 *parsedxml-1.3.1 (25 Mar 2003)
+
+  05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> parsedxml-1.3.1.ebuild:
+  ~x86 -> x86 and added ~ppc
 
   25 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> parsedxml-1.3.1.ebuild:
   Initial import. #17594
