@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.20 2004/07/01 21:41:25 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.21 2004/07/15 03:16:31 agriffis Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -75,7 +75,7 @@ src_compile() {
 	local myconf
 
 	# Allow OpenSSH to detect mips systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	myconf="\
 		$( use_with tcpd tcp-wrappers ) \
