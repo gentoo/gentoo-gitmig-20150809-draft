@@ -3,7 +3,7 @@
 #
 # Copyright (c) 1999 anonymous
 # Copyright (c) 1999 Balazs Scheidler
-# $Id: syslog-ng.conf.sample,v 1.2 2001/09/12 17:39:59 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.sample,v 1.3 2002/05/04 01:22:37 woodchip Exp $
 #
 # Syslog-ng configuration file, compatible with default Debian syslogd
 # installation. 

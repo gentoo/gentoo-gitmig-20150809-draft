@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/toshiba-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/ChangeLog,v 1.2 2002/02/08 23:07:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/ChangeLog,v 1.3 2002/05/04 01:22:37 woodchip Exp $
+
+*toshiba-utils-2.0.1-r1 (3 May 2002)
+
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Add LICENSE, SLOT, $Headers.
 
 *toshiba-utils-2.0.1 (8 Feb 2002)
 

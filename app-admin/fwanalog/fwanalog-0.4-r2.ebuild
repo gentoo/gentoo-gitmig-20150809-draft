@@ -1,12 +1,13 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4-r1.ebuild,v 1.1 2001/11/29 22:03:07 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fwanalog/fwanalog-0.4-r2.ebuild,v 1.1 2002/05/04 01:22:36 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
 SRC_URI="http://tud.at/programm/fwanalog/${P}.tar.gz"
 HOMEPAGE="http://tud.at/programm/fwanalog/"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="" # this is just a bash script
 RDEPEND="virtual/glibc

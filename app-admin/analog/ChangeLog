@@ -1,14 +1,18 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.4 2002/04/01 23:44:07 m0rpheus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.5 2002/05/04 01:22:34 woodchip Exp $
 
+*analog-5.22-r1 (3 May 2002)
 
-*analog-5.21 (2 Apr 2002)
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added LICENSE, SLOT.
+
+*analog-5.22 (2 Apr 2002)
 
   2 Apr 2002; Ferry Meyndert <m0rpheus@gentoo.org> analog-5.21.ebuild :
 	
   Removed 5.21. All versions too prior 5.22 have a css bug.
-
 
 *analog-5.21 (24 Feb 2002)
 

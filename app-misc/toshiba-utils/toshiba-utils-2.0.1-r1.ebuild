@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: (Jim Nutt) im@nuttz.org
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1.ebuild,v 1.1 2002/02/08 23:07:45 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.1 2002/05/04 01:22:37 woodchip Exp $
 
 DESCRIPTION="Toshiba Laptop Utilities"
 HOMEPAGE="http://www.buzzard.org.uk/toshiba/"
 
 S=${WORKDIR}/toshutils-${PV}
 SRC_URI="http://www.buzzard.org.uk/toshiba/toshutils-${PV}.tar.gz"
-DEPEND="virtual/glibc gtk? ( =x11-libs/gtk+-1* )"
+DEPEND="virtual/glibc X? ( =x11-libs/gtk+-1* )"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
