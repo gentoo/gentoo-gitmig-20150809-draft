@@ -80,9 +80,6 @@ media-plugins/xmms-aalsa
 # <carpaski@gentoo.org> (29 Jun 2003)
 # Masking 2.0.48-r2 for testing some cleanups and fixes
 >=sys-apps/portage-2.0.49_pre1
-=sys-apps/textutils-2.1-r1
-=sys-apps/fileutils-4.1.11-r2
-=sys-apps/sh-utils-2.0.15-r1
 
 # <liquidx@gentoo.org> (28 Jun 2003)
 # cjkcodecs replaces koreancodecs and possibly japanesecodecs
