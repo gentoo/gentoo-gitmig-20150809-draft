@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.40 2004/06/25 00:40:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.41 2004/06/25 22:52:45 morfic Exp $
+
+  25 Jun 2004; Daniel Goller <morfic@gentoo.org> ffmpeg-0.4.8.20040322-r1.ebuild:
+    ffmpeg-0.4.8.20040322-r1.ebuild adding patch for gcc 3.4.x 
+    closes 49383
 
   24 Jun 2004; Martin Holzer <mholzer@gentoo.org>
   ffmpeg-0.4.8.20040322-r1.ebuild, ffmpeg-0.4.8.20040322.ebuild:
