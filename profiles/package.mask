@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+
+# <verwilst@gentoo.org> (15 Sep 2002)
+# Masked for testing
+=dev-python/sip-3.4
+
 # <mkennedy@gentoo.org> (15 Sep 2002)
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
 # release that actually works.
