@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6.ebuild,v 1.7 2004/10/22 08:53:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6.ebuild,v 1.8 2005/01/20 16:07:04 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,8 +10,10 @@ HOMEPAGE="http://www.cs.princeton.edu/~appel/modern/java/JLex/"
 KEYWORDS="x86 ppc sparc ~amd64"
 LICENSE="jlex"
 SLOT="0"
-DEPEND="app-arch/zip"
-RDEPEND=">=virtual/jdk-1.2"
+DEPEND=">=virtual/jdk-1.2
+	app-arch/zip
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.2"
 IUSE="doc jikes"
 
 src_compile() {
