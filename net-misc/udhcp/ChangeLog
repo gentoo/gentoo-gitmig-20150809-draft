@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/udhcp
-# Copyright 2002 TelemetryBox Corporation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.3 2002/12/13 11:00:15 blizzy Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.4 2002/12/31 01:09:26 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*udhcp-0.9.8 (30 Dec 2002)
+
+  30 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
 *udhcp-0.9.7 (02 Aug 2002)
 
-  02 Aug 2002; Christoph Lameter <christoph@gentoo.org> udhcp-0.9.7.ebuild
+  02 Aug 2002; Christoph Lameter <christoph@gentoo.org> udhcp-0.9.7.ebuild :
   Ebuild written
 
