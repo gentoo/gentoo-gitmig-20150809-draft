@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/icebgset-1.0.ebuild,v 1.1 2003/07/30 10:16:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/icebgset-1.0.ebuild,v 1.2 2003/08/25 09:03:35 phosphan Exp $
 
 DESCRIPTION="IceWM background editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
 HOMEPAGE="http://icecc.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=qt-3.0.0"
 
