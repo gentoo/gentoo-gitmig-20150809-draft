@@ -1,5 +1,5 @@
-MD5 aee4173fbde52b412a2e79fe7670c65b ChangeLog 3387
-MD5 03c3a79f417f31c1f22a59dc64195dd6 gnome-print-0.37.ebuild 1465
+MD5 cdffad5493907d8624e8c20b58056bf3 ChangeLog 3480
+MD5 8386c67008e2a1f1ac5978254d2dc5f4 gnome-print-0.37.ebuild 1465
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8aba5ad8525bc9c93bb9374f7072cfa7 files/digest-gnome-print-0.37 69
 MD5 6fdff6b7ba3e66b73275be3788fdfc35 files/gnome-print-0.37-freetype_new_include.patch 3567
