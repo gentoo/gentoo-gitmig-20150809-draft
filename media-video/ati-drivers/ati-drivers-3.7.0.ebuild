@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.0.ebuild,v 1.2 2003/12/30 21:37:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.0.ebuild,v 1.3 2004/05/02 19:58:55 spyderous Exp $
 
 IUSE="qt kde gnome"
 
