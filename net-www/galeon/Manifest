@@ -4,7 +4,6 @@ MD5 5ba240f3317deb89c9f204ff152da7a4 galeon-1.3.10.ebuild 1673
 MD5 705499f0a5af3d2b115b23b70ec751f6 ChangeLog 10560
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 59ca1a1e92c8aca51986e7fe458bd0d9 galeon-1.2.12.ebuild 3571
-MD5 d7f05d8c910cd3bc11b799ef300ae13f files/galeon-1.2.6-to-printpreview.patch 448
 MD5 ac03f7ff1c8c933092c3ff11d59e998c files/digest-galeon-1.2.11 66
 MD5 436b77780200d51a954cfa3fc77e9e2d files/digest-galeon-1.2.12 66
 MD5 db8a0894d9e2b9bbd8ad10e2a10e0928 files/digest-galeon-1.3.10 67
