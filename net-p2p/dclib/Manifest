@@ -1,3 +1,4 @@
+MD5 f66da844898a66d3068fa5f890859f4a dclib-0.3.1.ebuild 743
 MD5 ffb57df91cb606f75f314156b5f4d26f dclib-0.2.20.ebuild 753
 MD5 8453e9f3bb8414024727a14cba3c0cbd dclib-0.2.22.ebuild 744
 MD5 f66da844898a66d3068fa5f890859f4a dclib-0.3.0.ebuild 743
@@ -6,9 +7,11 @@ MD5 23554144af7760e009f3854ed1e90a15 ChangeLog 4935
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.22-gcc2.patch 318
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.0-gcc2.patch 318
+MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.3.1-gcc2.patch 318
 MD5 6d7f9ee5723f2c699934aa8a6b5dae29 files/digest-dclib-0.2.20 65
 MD5 0e80e3d1905179f858af0d704dfcee8e files/digest-dclib-0.2.21 65
 MD5 e36ebc6e67287eb2fc377d914c0870ab files/digest-dclib-0.2.22 65
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.20-gcc2.patch 318
 MD5 baa8778c127486a1084a097e98405a9a files/digest-dclib-0.3.0 64
+MD5 e9dbbcbf785f5e63fbc90e86a6e88545 files/digest-dclib-0.3.1 64
 MD5 257441a8793e2c0b6849fca25911edcc files/dclib-0.2.21-gcc2.patch 318
