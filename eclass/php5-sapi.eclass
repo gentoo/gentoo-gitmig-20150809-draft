@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.13 2004/08/06 02:59:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.14 2004/08/06 16:54:51 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -41,6 +41,7 @@ DEPEND="$DEPEND
 	jpeg? ( >=media-libs/jpeg-6b )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
+	mcve? ( net-libs/libmonetra )
 	mhash? ( app-crypt/mhash )
 	mime? ( sys-apps/file )
 	ming? ( media-libs/ming )
@@ -220,6 +221,9 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_enable		"sqlite-utf8"	"nls"	0
 	fi
 
+	# MCVE needs openSSL
+	confutils_use_depend_all "mcve"		"ssl"
+	# A variety of extensions need DBA
 	confutils_use_depend_all "cdb"		"dba"
 	confutils_use_depend_all "berkdb"	"dba"
 	confutils_use_depend_all "flatfile"	"dba"
@@ -334,6 +338,7 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
 	enable_extension_with		"mcve"			"mcve"			1
+	enable_extension_with		"openssl-dir"	"mcve"			0 "/usr"
 	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
 	enable_extension_with		"mime-magic"	"mime"			0 "/usr/share/misc/file/magic.mime"
