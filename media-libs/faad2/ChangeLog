@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.20 2004/03/17 00:37:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.21 2004/03/19 13:16:01 foser Exp $
+
+  19 Mar 2004; foser <foser@gentoo.org> faad2-1.1.ebuild :
+  Fix libtool dep (#45110)
 
   16 Mar 2004; Jason Wever <weeve@gentoo.org> faad2-2.0_rc3.ebuild:
   Marked stable on sparc.
