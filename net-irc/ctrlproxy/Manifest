@@ -1,4 +1,4 @@
-MD5 47fa30855b8cde8e1b7dc55e5540aa2c files/digest-ctrlproxy-2.6 65
-MD5 b7d163c81acfe832696fa59cbc6f7501 ChangeLog 1438
+MD5 b82660ff922daa210814b247b5299c42 ChangeLog 1569
+MD5 86bec20c1b36b83108209f8387060dba ctrlproxy-2.6.ebuild 857
 MD5 397d073413aac58d3f99cef8f19457d8 metadata.xml 252
-MD5 80c959b882360d4fabd983ef75b5e144 ctrlproxy-2.6.ebuild 850
+MD5 47fa30855b8cde8e1b7dc55e5540aa2c files/digest-ctrlproxy-2.6 65
