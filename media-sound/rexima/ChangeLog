@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rexima
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.5 2004/04/05 05:20:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.6 2004/05/28 18:10:39 kugelfang Exp $
+
+  28 May 2004; Danny van Dyk <kugelfang@gentoo.org> rexima-1.4.ebuild:
+  Marked ~amd64.
 
   04 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> rexima-1.4.ebuild:
   ${PN}-${PV} -> ${P}
