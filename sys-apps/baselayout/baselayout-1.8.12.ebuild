@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.12.ebuild,v 1.4 2004/05/04 00:07:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.12.ebuild,v 1.5 2004/05/06 02:34:05 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -263,10 +263,6 @@ src_install() {
 	dosym share/man /usr/local/man
 	dosym share/doc	/usr/local/doc
 
-	# Symlink /boot/boot to . so that /boot can be a separate
-	# filesystem and config files still work
-	dosym . /boot/boot
-
 	#
 	# Setup files in /etc
 	#
@@ -478,6 +474,14 @@ pkg_postinst() {
 			fi
 		fi
 	fi
+
+	# Create /boot/boot symlink in pkg_postinst because sometimes
+	# /boot is a FAT filesystem.  When that is the case, then the
+	# symlink will fail.  Consequently, if we create it in
+	# src_install, then merge will fail.  AFAIK there is no point to
+	# this symlink except for misconfigured grubs.  See bug 50108
+	# (05 May 2004 agriffis)
+	ln -sn . ${ROOT}/boot/boot 2>/dev/null
 
 	# Create /etc/hosts in pkg_postinst so we don't overwrite an
 	# existing file during bootstrap
