@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.8.1.ebuild,v 1.1 2003/07/25 21:24:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/middleman-1.8.1.ebuild,v 1.2 2003/07/26 05:28:17 solar Exp $
 
 inherit eutils
 
@@ -11,13 +11,15 @@ HOMEPAGE="http://sourceforge.net/projects/middle-man"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="${IUSE} pam zlib"
 
 S=${WORKDIR}/${PN}
 
 DEPEND="virtual/glibc
-	sys-libs/zlib
-	dev-libs/libpcre"
+	dev-libs/libpcre
+	 pam? (	sys-libs/pam )
+	zlib? (	sys-libs/zlib )
+"
 
 src_unpack() {
 	unpack ${A}
@@ -25,19 +27,28 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}
+	local myconf=""
 	MAKEOPTS="-j1"
-	econf --sysconfdir=/etc/mman || die "econf failed"
+
+	cd ${S}	
+	for opt in ${IUSE}; do
+		use ${opt} && 
+			myconf="${myconf} --enable-${opt}" || 
+			myconf="$myconf --disable-${opt}"
+	done
+
+	econf --sysconfdir=/etc/mman ${myconf} || die "econf failed: ${myconf}"
 	emake || die "emake failed"
 }
 
 src_install() {
 	cd ${S}
-	#mkdir -p ${D}/etc/mman
 	mkdir -p ${D}/usr/share/man/man8/
 	einstall || die "einstall failed"
+
 	dodoc CHANGELOG COPYING
 	dohtml README.html
+
 	insinto /etc/conf.d
 	newins ${FILESDIR}/conf.d/mman mman
 	exeinto /etc/init.d
@@ -52,6 +63,6 @@ src_install() {
 pkg_postinst() { 
 	#einfo "A mman user has been added to your system if one did not already exist"
 	einfo "-"
-	einfo "Also init/conf scripts and a sample config has been provided for you."
+	einfo "Note: init/conf scripts and a sample config has been provided for you."
 	einfo "They can be found at or in /etc/conf.d/mman /etc/init.d/mman /etc/mman/"
 }
