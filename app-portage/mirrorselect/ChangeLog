@@ -1,8 +1,11 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.7 2003/09/29 19:57:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.8 2003/10/27 09:44:27 gmsoft Exp $
 
 *mirrorselect-0.82-r1 (29 Sep 2003)
+
+  27 Oct 2003; Guy Martin <gmsoft@gentoo.org> mirrorselect-0.82-r1.ebuild:
+  Marked stable on hppa.
 
   29 Sep 2003; John Mylchreest <johnm@gentoo.org>; metadata.xml,
   mirrorselect-0.82-r1.ebuild:
