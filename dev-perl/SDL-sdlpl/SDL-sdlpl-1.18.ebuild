@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.ebuild,v 1.1 2002/05/31 03:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.ebuild,v 1.2 2002/06/04 10:16:03 seemant Exp $
 
 
 inherit perl-module
@@ -16,6 +16,7 @@ DEPEND="${DEPEND}
 	virtual/opengl
 	>=media-libs/sdl-mixer-1.0.5
 	>=media-libs/sdl-image-1.0.0
+	mpeg? ( media-libs/smpeg )
 	truetype? ( >=media-libs/sdl-ttf-2.0.5 )"
 
 mydoc="BUGS COPYING TODO"
