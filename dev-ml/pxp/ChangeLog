@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/pxp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.4 2004/08/18 20:27:01 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.5 2004/08/25 13:29:32 mattam Exp $
+
+  25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -pxp-1.1.5.ebuild,
+  pxp-1.1.6.ebuild:
+  Move to findlib eclass, add doc USE flag.
 
 *pxp-1.1.6 (18 Aug 2004)
 
