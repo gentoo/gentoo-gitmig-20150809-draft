@@ -6,7 +6,7 @@ MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 acb0731490048e056e126272a140bfad files/sun-j2sdk-1.4.1 455
 MD5 1e67e25cf3e4581c754ec00e2e850cee files/sun-j2sdk-1.4.2 455
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-j2sdk-1.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-j2sdk-1.4.2 0
+MD5 8dd70a39cc87436b9e6f41ea3fbfd480 files/digest-sun-j2sdk-1.4.2 223
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-j2sdk-1.4.1-r1 0
 MD5 1592f54543a5a9c5b9ddd873bc1d5449 files/1.4.1/j2sdk-1.4.1-pthread.patch 1724
 MD5 527f4756568740c19c32b1e5eb59ee20 files/1.4.1/j2sdk-1.4.1-disable-sanity-check.patch 650
