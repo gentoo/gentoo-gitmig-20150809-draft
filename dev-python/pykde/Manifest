@@ -1,4 +1,4 @@
-MD5 33b1a8693489e87597155bd66e03e4df pykde-3.7.4-r2.ebuild 2164
-MD5 253d5f0dc3deee9738dd32a5fbeead62 ChangeLog 1964
+MD5 93c859a902dce456965f630139b8bc86 ChangeLog 2133
+MD5 252ddee57aa5bb0fa571c3135bbdf917 pykde-3.11_rc1.ebuild 1240
 MD5 8ffc620e0c006abd05da325a3f888251 metadata.xml 182
-MD5 9964a12f8d0110947df654b5969e69e1 files/digest-pykde-3.7.4-r2 63
+MD5 cae8cffe1658d73c48e616148021259f files/digest-pykde-3.11_rc1 66
