@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.4 2004/07/01 11:23:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.5 2004/08/19 23:21:47 mr_bones_ Exp $
 
 inherit games
 
@@ -29,27 +29,27 @@ S="${WORKDIR}/csmash-${PV}"
 
 src_unpack() {
 	unpack csmash-${PV}.tar.gz
-	cd ${S}
+	cd "${S}"
 	if use oggvorbis ; then
-		cp ${DISTDIR}/${MY_OGG} ${S}/ || die "cp failed"
+		cp "${DISTDIR}/${MY_OGG}" "${S}/" || die "cp failed"
 		sed -i \
 			-e "s:${MY_OGG}:${GAMES_DATADIR}/csmash/${MY_OGG}:" ttinc.h \
-				|| die "setting ogg loc"
+			|| die "setting ogg loc"
 	fi
 }
 
 src_compile() {
 	egamesconf \
-		`use_enable nls` \
+		$(use_enable nls) \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		|| die
-	emake || die "emake failed"
+	emake \
+		localedir="/usr/share" \
+		|| die "emake failed"
 }
 
 src_install() {
-	egamesinstall \
-		datadir="${D}/${GAMES_DATADIR_BASE}" \
-		|| die
+	make DESTDIR="${D}" install || die "make install failed"
 	if use oggvorbis ; then
 		insinto "${GAMES_DATADIR}/csmash"
 		doins "${MY_OGG}"
