@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.4 2000/12/17 20:09:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.5 2000/12/19 00:34:25 achim Exp $
 
 GPV="4.0.4"
 S=${WORKDIR}/${P}
@@ -42,7 +42,8 @@ src_install () {
     cd ${S}
     try make exec_prefix=${D}/usr  prefix=${D}/ \
 	MANDIR=${D}/usr/man PAMDIR=${D}/etc/pam.d \
-	INITDIR=${D}/etc/rc.d DOCDIR=${D}/usr/share/cups/doc install 
+	INITDIR=${D}/etc/rc.d DOCDIR=${D}/usr/share/cups/doc \
+	INCLUDEDIR=${D}/usr/include install 
     rm -rf ${D}/etc/rc.d
     rm -rf ${D}/usr/man/cat*
     cd ${S}
