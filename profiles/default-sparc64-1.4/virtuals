@@ -46,3 +46,4 @@ virtual/logger		app-admin/sysklogd
 
 virtual/ssh                                net-misc/openssh
 virtual/commonlisp		dev-lisp/cmucl dev-lisp/sbcl
+virtual/tftp			net-misc/tftp-hpa
