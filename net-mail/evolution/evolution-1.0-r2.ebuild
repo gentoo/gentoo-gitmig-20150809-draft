@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0-r2.ebuild,v 1.1 2001/12/09 15:26:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0-r2.ebuild,v 1.2 2001/12/09 21:29:04 hallski Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -28,7 +28,7 @@ DEPEND=">=gnome-extra/bonobo-conf-0.14
         >=dev-util/intltool-0.11
 	ssl?     ( >=net-www/mozilla-0.9.6-r3 )
 	ldap?    ( net-nds/openldap )
-	mozilla? ( >=net-www/mozilla-0.9.5-r1 )
+	mozilla? ( >=net-www/mozilla-0.9.6-r3 )
 	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2 )" 
 
 
