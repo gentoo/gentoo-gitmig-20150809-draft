@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.30.ebuild,v 1.6 2004/06/25 02:02:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-panel-applet/ruby-panel-applet-0.30.ebuild,v 1.7 2004/06/30 19:49:02 usata Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/panel-applet
 DESCRIPTION="Ruby Gnome Panel bindings"
@@ -20,7 +20,7 @@ src_compile() {
 }
 
 src_install() {
-	make site-install DESTDIR=${D}
+	make site-install DESTDIR=${D} || die "make site-install failed"
 	dodoc [A-Z]*
 	cp -dr sample ${D}/usr/share/doc/${PF}
 }
