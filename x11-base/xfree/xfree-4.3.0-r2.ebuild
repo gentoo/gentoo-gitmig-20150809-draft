@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.18 2003/04/21 10:13:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.19 2003/04/24 19:59:47 leahcim Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.1.2"
+PATCH_VER="1.1.3"
 FT2_VER="2.1.3"
 XCUR_VER="0.2"
 SISDRV_VER="180403-1"
@@ -201,10 +201,13 @@ src_unpack() {
 	then
 		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
 	fi
-
+# FIXME: bug #19812, 075 should be deprecated by 076, left as
+# TDFX_RISKY for feedback (put in -r3 if no problems)
 	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
 	then
-		rm #{WORKDIR}/patch/075*
+		rm -f ${WORKDIR}/patch/075*
+	else
+		rm -f ${WORKDIR}/patch/076*
 	fi
 
 	# Various Patches from all over
@@ -1025,6 +1028,7 @@ pkg_postinst() {
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
 	einfo "the 4.2.99 series."
+
 }
 
 pkg_postrm() {
