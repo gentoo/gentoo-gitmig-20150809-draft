@@ -1,37 +1,33 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.5 2004/05/12 11:11:10 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.6 2004/05/28 12:36:11 vapier Exp $
 
-inherit elisp-common
+inherit elisp-common flag-o-matic
 
-IUSE="emacs"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
-SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
-# uncomment and add to profiles when GCL is integrated into the common lisp controller
-# PROVIDE="virtual/commonlisp"
+SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="emacs"
 
 DEPEND=">=app-text/texi2html-1.64
 	>=dev-libs/gmp-4.1
 	virtual/tetex"
 RDEPEND="${DEPEND}
 	emacs? ( virtual/emacs )"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86"
+# uncomment and add to profiles when GCL is integrated into the common lisp controller
+# PROVIDE="virtual/commonlisp"
 
 src_unpack() {
-
 	unpack ${A}
 	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
 	mv ${T}/makefile ${S}/info/makefile
 }
 
 src_compile() {
-
 	# hardened gcc may automatically use PIE building,
 	# which does not work for this package so far
 	filter-flags "-fPIC"
@@ -46,7 +42,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	rm -rf ${D}/usr/lib/${P}/info
