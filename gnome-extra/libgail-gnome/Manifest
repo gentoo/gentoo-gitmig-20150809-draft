@@ -1,12 +1,22 @@
-MD5 bb64803f9c660c9437b09ddbe9b4bc9f libgail-gnome-1.0.2.ebuild 669
-MD5 da5c913d878767f4f09fdc20fa339589 ChangeLog 3968
-MD5 7814fc4ea5b3c68fb241bb2cb83fdeee libgail-gnome-1.0.3.ebuild 722
-MD5 d373ecd5801a934fb4312933c2ff4240 libgail-gnome-1.1.0.ebuild 715
-MD5 67004ffa2d64979bfb38ea6013ec3212 libgail-gnome-1.0.4.ebuild 721
-MD5 af2b329bd2dd5dff2518c99453941293 libgail-gnome-1.0.6.ebuild 721
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecc8371387e65e26ae66cc3cf2617fa7 ChangeLog 4061
+MD5 dfab09d3980d23113c04570fdce0d433 libgail-gnome-1.0.3.ebuild 720
+MD5 28c4e627f1e698fe747148206f9df508 libgail-gnome-1.0.2.ebuild 667
+MD5 a1a4792785cfa29c67f28f4bce2384db libgail-gnome-1.1.0.ebuild 714
+MD5 3d59960d757eca460179080eace4d33d libgail-gnome-1.0.6.ebuild 718
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
-MD5 13a26d372ce164353caa9a4d9b328702 files/digest-libgail-gnome-1.1.0 72
-MD5 30974557bd23460d2a2df239b9289c00 files/digest-libgail-gnome-1.0.2 72
+MD5 9dd60399ad4b721ce042e6fbfb1ab8f2 libgail-gnome-1.0.4.ebuild 721
 MD5 f67181804296c5735b6753b4a286b109 files/digest-libgail-gnome-1.0.4 72
+MD5 13a26d372ce164353caa9a4d9b328702 files/digest-libgail-gnome-1.1.0 72
 MD5 a9a5caaca84c91f53394be83b3ddc697 files/digest-libgail-gnome-1.0.6 72
+MD5 30974557bd23460d2a2df239b9289c00 files/digest-libgail-gnome-1.0.2 72
 MD5 d2c14673963cea43af4d18ce3d35829e files/digest-libgail-gnome-1.0.3 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4G/RCHk4+ZoBpvsRAr9RAJ9PW4ittu4g3+IT1+gcZTJDbuK6FwCgskpL
+Pi47YSf1MAhfsxl7cgYeywo=
+=bl13
+-----END PGP SIGNATURE-----

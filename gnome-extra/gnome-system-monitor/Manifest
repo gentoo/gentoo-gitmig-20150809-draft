@@ -1,18 +1,28 @@
-MD5 ebf289998c15bcd3022ed9d51cc9c7c8 ChangeLog 7674
-MD5 676d08f8c1e94b9e140de9b0ca502e20 gnome-system-monitor-2.7.0-r1.ebuild 904
-MD5 dc6c2b5b010aa9ebb4d8d5bdaf9d34c3 gnome-system-monitor-2.8.1-r1.ebuild 1030
-MD5 de6e9fbc941d9b5fad86d7d17d335bba gnome-system-monitor-2.6.0.ebuild 758
-MD5 f1d83ce1f957f360791c659000de4dc6 gnome-system-monitor-2.8.1.ebuild 923
-MD5 0c299594f2298bc18c00d22305126735 gnome-system-monitor-2.4.0.ebuild 893
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be520a5720eb39376405e25bae577b49 ChangeLog 7776
+MD5 3f3ab0ff3f9602fccba164a5cb7a59de gnome-system-monitor-2.7.0-r1.ebuild 904
+MD5 d4ae7aa0e05e64f5baa3b3d126ecc279 gnome-system-monitor-2.4.0.ebuild 891
+MD5 5f5057ec301c113e1c74d4798151fed7 gnome-system-monitor-2.8.1.ebuild 926
+MD5 4f8bf30f43e058eec2da2556610bd33a gnome-system-monitor-2.6.0.ebuild 757
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 f57f7ad9026f2b4d04f087611d97511b gnome-system-monitor-2.8.0.ebuild 893
-MD5 998687db7f5ab05119833a0131a25b11 files/digest-gnome-system-monitor-2.8.1-r1 79
-MD5 67bd440a0a6bbd96815b8a68d623ea28 files/digest-gnome-system-monitor-2.8.0 79
+MD5 e02eceb517740bc9ec23f627ffdd84fa gnome-system-monitor-2.8.0.ebuild 892
+MD5 868590863227a37a44452dcb03f029df gnome-system-monitor-2.8.1-r1.ebuild 1032
 MD5 f63333f7df598d3202491c069b5f6a99 files/gnome-system-monitor-2.4.0-fix_gtk+-2.4_build.patch 1173
+MD5 a154a9f86e926ea00a0779b875cebc67 files/digest-gnome-system-monitor-2.7.0-r1 79
+MD5 998687db7f5ab05119833a0131a25b11 files/digest-gnome-system-monitor-2.8.1-r1 79
+MD5 dd79207af7cf6082732128db4d74c083 files/digest-gnome-system-monitor-2.4.0 79
+MD5 9948d4c847a49ac1a9db168f46c0d376 files/gnome-system-monitor-execlp.patch 365
 MD5 944c4f8bbb9ce7f3a74df3f85d3dc4ac files/digest-gnome-system-monitor-2.6.0 79
 MD5 998687db7f5ab05119833a0131a25b11 files/digest-gnome-system-monitor-2.8.1 79
-MD5 9948d4c847a49ac1a9db168f46c0d376 files/gnome-system-monitor-execlp.patch 365
-MD5 cb821d6a95343091a60060f653b8ae00 files/gnome-system-monitor-2.8.1-usermem.patch 889
-MD5 dd79207af7cf6082732128db4d74c083 files/digest-gnome-system-monitor-2.4.0 79
-MD5 a154a9f86e926ea00a0779b875cebc67 files/digest-gnome-system-monitor-2.7.0-r1 79
 MD5 b39b1d001c6cfb36a860351aed50ddb3 files/gnome-system-monitor-devicesviewimprovements.patch 20935
+MD5 cb821d6a95343091a60060f653b8ae00 files/gnome-system-monitor-2.8.1-usermem.patch 889
+MD5 67bd440a0a6bbd96815b8a68d623ea28 files/digest-gnome-system-monitor-2.8.0 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4G0GCHk4+ZoBpvsRAtGVAJ4oAEny7h3xd+E2iRjAN7Ia+dshPQCbBiVJ
+5xaxDDNLENa9sJYiD7MXD78=
+=d4lu
+-----END PGP SIGNATURE-----

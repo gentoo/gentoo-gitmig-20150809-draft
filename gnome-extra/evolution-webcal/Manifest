@@ -1,4 +1,14 @@
-MD5 6a586812897ed1a7d003decaa7da1893 ChangeLog 1666
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 32a037b1572c50f869dd770b218b6e79 ChangeLog 1763
+MD5 8e490cd8424aabaab27b8ceb1d26cca7 evolution-webcal-2.0.1.ebuild 703
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 183cbc8623709a70f34f5417a415657d evolution-webcal-2.0.1.ebuild 704
 MD5 cf90204d66f7ac8860f2a301c9fcc388 files/digest-evolution-webcal-2.0.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4G6XCHk4+ZoBpvsRAnjIAKCty2IjepUz9WfOzSdjZcQypoKFDwCgpEST
+0z+xuGmqZIEsLnX+13bMZtA=
+=1OSW
+-----END PGP SIGNATURE-----
