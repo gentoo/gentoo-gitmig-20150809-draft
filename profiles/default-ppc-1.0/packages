@@ -40,8 +40,23 @@ net-www/netscape-flash
 net-www/netscape-navigator
 net-www/netscape-plugger
 
-# more precompiled x86 stuff (gerk)
-app-text/acroread
+# more precompiled and/or x86 only ebuilds
+# not avail for ppc (gerk)
+~app-text/acroread
+~app-emulation/vmware-workstation
+~app-emulation/wine
+~app-emulation/winesetuptk
+~app-emulation/winex
+~dev-java/ibm-jdk
+~dev-java/sun-jdk
+~dev-java/sun-j2ee
+~dev-java/ibm-jre
+~app-emulation/basiliskII
+
+# temp (to fix) currently x86 only builds 
+# that can be adjusted for ppc (gerk)
+~media-gfx/blender
+~media-video/ati-gatos
 
 # makes no sense on ppc
 ~sys-apps/lilo
