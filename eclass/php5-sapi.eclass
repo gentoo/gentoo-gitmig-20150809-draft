@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.33 2004/11/28 22:51:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.34 2004/12/14 09:15:02 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -500,5 +500,9 @@ php5-sapi_pkg_postinst() {
 
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php/turck-mmcache) you may need to recompile them now."
+
+	if use curl; then
+		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
+	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.51 2004/11/02 02:13:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.52 2004/12/14 09:15:02 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -642,6 +642,9 @@ php-sapi_pkg_postinst() {
 	fi
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php/turck-mmcache) you may need to recompile them now."
+	if use curl; then
+		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
+	fi
 }
 
 php-sapi_securityupgrade() {
