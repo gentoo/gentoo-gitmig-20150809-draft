@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0.ebuild,v 1.2 2003/03/16 07:05:25 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0.ebuild,v 1.3 2003/03/17 00:10:21 absinthe Exp $
 
 S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="Jakarta-Commons library for working with command line arguments and options"
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86"
 IUSE="jikes junit"
 
 src_compile() {
