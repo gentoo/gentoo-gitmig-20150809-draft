@@ -1,0 +1,28 @@
+Index: w3m.el
+===================================================================
+RCS file: /storage/cvsroot/emacs-w3m/w3m.el,v
+retrieving revision 1.980
+retrieving revision 1.981
+diff -u -r1.980 -r1.981
+--- w3m.el	18 Jan 2004 14:36:43 -0000	1.980
++++ w3m.el	22 Jan 2004 08:00:20 -0000	1.981
+@@ -3409,12 +3409,17 @@
+ 			 "URL: "))
+ 		   'w3m-url-completion nil nil initial
+ 		   'w3m-input-url-history)))
+-      (if (string= "" url) (setq url default))
++      (when (string= "" url)
++	(setq url default))
+       ;; remove duplication
+       (when (stringp url)
+ 	(setq w3m-input-url-history
+ 	      (cons url (delete url w3m-input-url-history))))
+-      url)))
++      ;; The return value of this function must contain a scheme part.
++      (if (and (string-match w3m-url-components-regexp url)
++	       (match-beginning 1))
++	  url
++	(concat "http://" url)))))
+ 
+ 
+ ;;; Cache:
