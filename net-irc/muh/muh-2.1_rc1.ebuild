@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.1 2003/09/30 19:14:16 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.1_rc1.ebuild,v 1.2 2003/10/02 00:44:59 hhg Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -22,4 +22,13 @@ src_compile() {
 src_install() {
 	einstall install || die "install failed"
 	dodoc AUTHORS COPYING INSTALL ChangeLog
+}
+
+pkg_postinst() {
+	einfo
+	einfo "You'll need to configure muh before running it"
+	einfo "Put your config in ~/.muh/muhrc"
+	einfo "A sample config is /usr/share/muhrc"
+	einfo "For more information, see the documentation"
+	einfo
 }
