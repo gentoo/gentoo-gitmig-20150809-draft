@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r3.ebuild,v 1.3 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r3.ebuild,v 1.4 2002/12/04 03:14:42 nall Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -25,7 +25,7 @@ RDEPEND="media-libs/jpeg
 	arts? ( kde-base/arts )"
 
 DEPEND="${RDEPEND}
-	media-libs/libmovtar
+	mmx? media-libs/libmovtar
 	quicktime? ( >=media-libs/quicktime4linux-1.5.5-r1 )
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )
 	mmx? ( dev-lang/nasm )
