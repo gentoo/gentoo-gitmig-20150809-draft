@@ -1,9 +1,19 @@
-MD5 1bce935d7612a1c0548f1033c70023bd ChangeLog 1770
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 97009527a3465711e1c6e409a96bfd98 nail-9.30.ebuild 2163
+MD5 5970df2c0468e5133603490ebea230f2 ChangeLog 1855
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 25e10468c82c6d87c2f1d0de632ffc79 nail-10.8.ebuild 2232
 MD5 b0277ba66a3cf6add95e348fb6211084 nail-10.7.ebuild 2114
-MD5 3c835bc31ca7d137a90ce92a3b3ec301 nail-10.8.ebuild 2237
+MD5 2a3e927f0b51d9d835a50e8e9befdc4a files/digest-nail-10.8 62
 MD5 7e34958d8627a2cf4e1097009af12d90 files/digest-nail-9.30 61
 MD5 27d928aaebf2ccd3a13caefad9648ff5 files/digest-nail-10.7 62
-MD5 2a3e927f0b51d9d835a50e8e9befdc4a files/digest-nail-10.8 62
 MD5 7382aa86560d45a33ff12f4a091a5cee files/nail-10.8-Makefile.patch 498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBUpln10xuJSrg3/sRAtdOAJ9g4U1ajAxjnXSmOjLWhzmn4XxeUwCeMRqn
+PRVcUkPIZf90EkU9qkQNZw4=
+=vrPO
+-----END PGP SIGNATURE-----
