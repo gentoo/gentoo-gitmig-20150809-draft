@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ruby-gnome-0.34.ebuild,v 1.8 2004/06/25 01:59:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ruby-gnome-0.34.ebuild,v 1.9 2004/07/01 11:02:52 usata Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86 alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc ~sparc"
 USE_RUBY="ruby16 ruby18 ruby19"
 
 DEPEND="virtual/ruby
@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	make site-install DESTDIR=${D}
+	make site-install DESTDIR=${D} || die "make site-install failed"
 	dodoc [A-Z]*
 	cp -dr sample doc ${D}/usr/share/doc/${PF}
 }
