@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/bind/files/named.rc6,v 1.4 2002/06/01 16:31:07 nitro Exp
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/files/innd,v 1.7 2004/09/07 22:29:04 swegener Exp $
 
 depend() {
 	need net

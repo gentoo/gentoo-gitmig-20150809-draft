@@ -1,6 +1,12 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.12 2004/09/07 04:05:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.13 2004/09/07 22:29:04 swegener Exp $
+
+  08 Sep 2004; Sven Wegener <swegener@gentoo.org> +files/2.4.1-berkdb.patch,
+  files/innd, inn-2.4.1.ebuild:
+  Added support for BerkeleyDB via the USE flag berkdb. Added support for the
+  local USE flags innkeywords and inntaggedhash that enable automatic keyword
+  generation support and use a tagged hash table for history.
 
 *inn-2.4.1 (07 Sep 2004)
 

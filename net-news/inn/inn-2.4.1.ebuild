@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.3 2004/09/07 05:54:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.4.1.ebuild,v 1.4 2004/09/07 22:29:04 swegener Exp $
 
-inherit fixheadtails ssl-cert
+inherit fixheadtails ssl-cert eutils
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="http://www.isc.org/products/INN"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 SLOT="0"
 LICENSE="as-is BSD"
 KEYWORDS="~x86"
-IUSE="ipv6 kerberos sasl ssl perl python tcltk"
+IUSE="ipv6 kerberos sasl ssl perl python tcltk berkdb inntaggedhash innkeywords"
 
 RDEPEND="virtual/mta
 	kerberos? ( virtual/krb5 )
@@ -19,17 +19,22 @@ RDEPEND="virtual/mta
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
 	tcltk? ( dev-lang/tcl )
-	app-arch/gzip"
-
+	berkdb? ( =sys-libs/db-3* )
+	virtual/gzip"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.13
-	sys-devel/libtool"
+	sys-devel/libtool
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	ht_fix_file configure support/fixscript.in
+	epatch ${FILESDIR}/2.4.1-berkdb.patch
+	ht_fix_file configure.in support/fixscript.in
+
+	export WANT_AUTOCONF="2.1"
+	autoconf || die "autoconf failed"
 
 	sed -i \
 		-e "s/ -B .OLD//" \
@@ -39,11 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_AUTOCONF="2.1"
-
-	libtoolize --force || die "libtoolize failed"
-	aclocal || die "aclocal failed"
-
 	econf \
 		--prefix=/usr/lib/news \
 		--mandir=/usr/share/man \
@@ -67,7 +67,11 @@ src_compile() {
 		$(use_with kerberos kerberos /usr) \
 		$(use_with sasl) \
 		$(use_with ssl openssl) \
+		$(use_with berkdb berkeleydb) \
 		$(use_enable ipv6) \
+		$(use_enable !inntaggedhash largefiles) \
+		$(use_enable inntaggedhash tagged-hash) \
+		$(use_enable innkeywords keywords) \
 		|| die "econf failed"
 	emake -j1 P="" || die "emake failed"
 }
