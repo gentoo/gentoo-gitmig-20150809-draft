@@ -1,16 +1,20 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.6 2003/03/02 20:02:35 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.7 2003/05/14 01:52:25 kumba Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *netselect-0.3 (11 Jul 2002)
 
+  13 May 2003; Joshua Kinard <kumba@gentoo.org> netselect-0.3.ebuild:
+  Added ~mips to KEYWORDS; Corrected ChangeLog errors a wee little.
+
   02 Mar 2003; Guy Martin <gmsoft@gentoo.org> netselect-0.3.ebuild :
-  Added hpp aot keywords.
+  Added hppa to KEYWORDS.
 
   27 Feb 2003; Will Woods <wwoods@gentoo.org> netselect-0.3.ebuild:
   Added alpha to KEYWORDS
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> netselect-0.3.ebuild :
 
