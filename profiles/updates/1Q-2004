@@ -22,3 +22,4 @@ move app-misc/celestia app-sci/celestia
 move net-nds/directory_administrator net-nds/directoryadministrator
 move sys-apps/thinkpad app-laptop/thinkpad
 move sys-apps/tpctl app-laptop/tpctl
+move sys-apps/configure-thinkpad app-laptop/configure-thinkpad
