@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.1 2004/05/27 13:39:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.59-r4.ebuild,v 1.2 2004/06/11 18:39:42 kloeri Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2.5"
-KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
 IUSE=""
 
 DEPEND=">=sys-apps/texinfo-4.3
