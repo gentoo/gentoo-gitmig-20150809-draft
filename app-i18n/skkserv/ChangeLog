@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skkserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.7 2003/05/17 10:53:49 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.8 2003/05/17 11:04:01 nakano Exp $
+
+*skkserv-9.6-r1 (17 May 2003)
+  17 May 2003; Masatomo Nakano <nakano@gentoo.org> skkserv-9.6-r2.ebuild:
+  Fixed bug.
 
 *skkserv-9.6-r1 (05 May 2003)
 
