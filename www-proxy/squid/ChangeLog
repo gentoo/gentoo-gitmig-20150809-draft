@@ -1,6 +1,12 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.29 2005/02/07 04:35:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.30 2005/02/09 12:55:38 cyfred Exp $
+
+*squid-2.5.7-r6 (09 Feb 2005)
+
+  09 Feb 2005; Andrew Bevitt <cyfred@gentoo.org> -squid-2.5.7-r5.ebuild,
+  +squid-2.5.7-r6.ebuild:
+  More patchset bumps
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> squid-2.5.7-r5.ebuild:
   Marked stable on mips.
@@ -99,7 +105,7 @@
   27 Aug 2004; Martin Holzer <mholzer@gentoo.org> squid-2.5.6-r2.ebuild:
   x86 stable
 
-  26 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.6-r2.ebuild:
+  26 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> squid-2.5.6-r2.ebuild:
   Stable on alpha, bug 61280.
 
 *squid-2.5.6-r2 (23 Aug 2004)
@@ -130,7 +136,7 @@
   +squid-2.4.7.ebuild, +squid-2.5.5-r2.ebuild, +squid-2.5.6.ebuild:
   Moved from net-www/squid to www-proxy/squid.
 
-  18 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.6.ebuild:
+  18 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> squid-2.5.6.ebuild:
   Keyworded ~alpha.
 
   16 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>; squid-2.5.6.ebuild:
@@ -177,7 +183,7 @@
   12 Jun 2004; Guy Martin <gmsoft@gentoo.org> squid-2.5.5-r2.ebuild:
   Marked stable on hppa.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.5-r2.ebuild:
+  12 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> squid-2.5.5-r2.ebuild:
   Stable on alpha, bug #53367.
 
 *squid-2.5.5-r2 (12 Jun 2004)
@@ -201,7 +207,7 @@
 
 *squid-2.5.5-r1 (01 May 2004)
 
-  01 May 2004; Bryan Østergaard <kloeri@gentoo.org> +files/squid-r1.cron,
+  01 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> +files/squid-r1.cron,
   +squid-2.5.5-r1.ebuild:
   New cron script, close bug #30475.
 
