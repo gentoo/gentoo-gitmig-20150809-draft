@@ -1,9 +1,12 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.7 2004/06/27 10:29:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.8 2004/06/27 18:26:50 liquidx Exp $
 
   27 Jun 2004; David Holm <dholm@gentoo.org> libbtctl-0.4.1.ebuild:
   Added to ~ppc.
+
+  27 Jun 2004; Alastair Tse <liquidx@gentoo.org> libbtctl-0.3.ebuild:
+  make libbtctl-0.3 compat with bluez-libs-2.7
 
 *libbtctl-0.4.1 (26 Jun 2004)
 

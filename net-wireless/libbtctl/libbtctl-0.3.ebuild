@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.3.ebuild,v 1.8 2004/06/25 00:46:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.3.ebuild,v 1.9 2004/06/27 18:26:50 liquidx Exp $
 
 inherit gnome2
 
@@ -15,8 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
 	>=net-wireless/bluez-utils-2
-	>=net-wireless/bluez-libs-2
-	>=net-wireless/bluez-sdp-1"
+	>=net-wireless/bluez-libs-2"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -24,3 +23,11 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="README NEWS ChangeLog AUTHORS COPYING"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's/-lsdp/-lsdp -lbluetooth/' ${S}/bluez-sdp.m4
+	cd ${S}
+	cat bluez-sdp.m4 bluez-libs.m4 >acinclude.m4
+	aclocal; autoconf
+}
