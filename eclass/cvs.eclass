@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.24 2002/11/19 12:54:22 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.25 2002/11/22 13:35:29 cretin Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -269,7 +269,7 @@ EndOfFile
 
 	# log out and restore ownership
 	su $ECVS_RUNAS -c "cvs logout" &> /dev/null
-	chown root ${T}/cvspass
+	chown `whoami` ${T}/cvspass
 }
 
 cvs_src_unpack() {
