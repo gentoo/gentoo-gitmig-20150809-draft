@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc3.ebuild,v 1.2 2003/11/09 16:59:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4_rc3.ebuild,v 1.3 2003/11/16 22:17:01 mholzer Exp $
+
+inherit distutils
 
 DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
@@ -29,8 +31,6 @@ DEPEND=">=dev-python/pygame-1.5.6
 	X? ( virtual/x11 )"
 
 S="${WORKDIR}/${P/_/}"
-
-inherit distutils
 
 src_compile() {
 	local myconf

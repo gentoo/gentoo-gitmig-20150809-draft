@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.7 2003/11/12 16:39:57 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.8 2003/11/16 22:17:01 mholzer Exp $
+
+  16 Nov 2003; Martin Holzer <mholzer@gentoo.org> freevo-1.4_rc2.ebuild,
+  freevo-1.4_rc3.ebuild, freevo-1.4_rc4.ebuild:
+  putting inherit on top of ebuild. Closes #32773
 
 *freevo-1.4_rc4 (12 Nov 2003)
 
