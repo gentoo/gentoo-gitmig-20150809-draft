@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/gcursor-0.061.ebuild,v 1.1 2004/11/05 02:31:34 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/gcursor-0.061.ebuild,v 1.2 2005/01/31 15:02:52 gustavoz Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2

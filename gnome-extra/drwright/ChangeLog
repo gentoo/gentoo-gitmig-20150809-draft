@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/drwright
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.8 2004/12/20 19:04:08 liquidx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.9 2005/01/31 15:01:56 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> drwright-0.17.ebuild:
+  Keyworded ~sparc
 
   20 Dec 2004; Alastair Tse <liquidx@gentoo.org> drwright-0.17.ebuild:
   better workaround for strict-aliasing warnings (#69330)

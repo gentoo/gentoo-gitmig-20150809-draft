@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcursor
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.4 2004/11/05 02:31:34 obz Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.5 2005/01/31 15:02:52 gustavoz Exp $
+
+  31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> gcursor-0.061.ebuild:
+  Keyworded ~sparc
 
 *gcursor-0.061 (05 Nov 2004)
 
