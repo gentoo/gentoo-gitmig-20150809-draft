@@ -317,10 +317,6 @@ net-mail/exmh
 # short-term mask for testing - see core post for details
 =x11-libs/qt-3.0.4.20020606-r2
 
-# <seemant@gentoo.org> (05 Jul 2002)
-# sandbox violation on /proc/sys/kernel/tainted
-=net-dialup/rp-pppoe-3.4
-
 # <karltk@gentoo.org> (04 Jul 2002)
 # Has not received any testing.
 =net-www/cocoon-2.0.2
