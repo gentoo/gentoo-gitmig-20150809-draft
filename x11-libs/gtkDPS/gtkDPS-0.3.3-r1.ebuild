@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.13 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3-r1.ebuild,v 1.14 2004/06/24 00:20:22 agriffis Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		myconf="--disable-nls"
 	fi
 

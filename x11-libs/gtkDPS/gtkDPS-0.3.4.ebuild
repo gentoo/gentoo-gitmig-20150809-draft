@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.7 2004/05/18 20:37:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.8 2004/06/24 00:20:22 agriffis Exp $
 
 inherit gnuconfig
 
@@ -20,22 +20,19 @@ DEPEND="virtual/glibc
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-	if [ "`use alpha`" ] || [ "`use amd64`" ]; then
-		gnuconfig_update || die "gnuconfig_update failed"
-	fi
+	# needed for alpha and amd64 ... but run everywhere
+	gnuconfig_update || die "gnuconfig_update failed"
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		myconf="--disable-nls"
 	fi
 
 	./configure --prefix=/usr --host=${CHOST} \
 		--with-x --with-dps $myconf || die
 	make || die
-
 }
 
 src_install () {
-
 	make prefix=${D}/usr install || die
 	dodoc COPYING* ChangeLog GTKDPS-VERSION HACKING NEWS README TODO
 }
