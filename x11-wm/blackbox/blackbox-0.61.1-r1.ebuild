@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.61.1-r1.ebuild,v 1.1 2001/10/12 01:02:45 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.61.1-r1.ebuild,v 1.2 2001/10/12 01:20:43 hallski Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="A Small fast full featured window manager for X"
@@ -12,7 +12,7 @@ DEPEND=">=x11-base/xfree-4.0"
 
 src_compile() {
 	./configure --host=${CHOST}					\
-		    --prefix=/usr/X11R6					\
+		    --prefix=/usr					\
 		    --sysconfdir=/etc/X11/blackbox
 
 	emake || die
