@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.4 2004/06/24 23:47:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ax25-tools-0.0.8-r1.ebuild,v 1.5 2004/06/30 02:11:56 vapier Exp $
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) administrative tools and daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -11,14 +11,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/zlib
 	>=dev-libs/libax25-0.0.5
 	X? ( virtual/x11 )"
 
 src_compile() {
 	# If X is disabled, do not build smdiag
-	COMPFLAGS=""
+	local COMPFLAGS=""
 	use X || COMPFLAGS="--without-x"
 	econf ${COMPFLAGS} || die
 	emake || die
@@ -30,7 +30,7 @@ src_install() {
 
 	rm -rf ${D}/usr/share/doc/ax25-tools
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README tcpip/ttylinkd.README \
+	dodoc AUTHORS ChangeLog NEWS README tcpip/ttylinkd.README \
 	user_call/README.user_call yamdrv/README.yamdrv dmascc/README.dmascc \
 	ax25-tools/ttylinkd.INSTALL
 
@@ -40,5 +40,4 @@ src_install() {
 	newexe ${FILESDIR}/rip98d.rc rip98d
 	newexe ${FILESDIR}/rxecho.rc rxecho
 	newexe ${FILESDIR}/ttylinkd.rc ttylinkd
-
 }
