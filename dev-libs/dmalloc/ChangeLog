@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dmalloc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.14 2004/12/29 22:13:14 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.15 2005/01/21 11:24:29 ka0ttic Exp $
+
+  21 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> dmalloc-4.8.2-r1.ebuild,
+  dmalloc-5.3.0.ebuild:
+  Marked stable on x86. Fixed paths to docs so that they're installed, removed
+  unnecessary make and make install targets, and added src_test() to both
+  ebuilds.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -15,8 +21,8 @@
 
 *dmalloc-5.3.0 (28 Feb 2004)
 
-  28 Feb 2004; David Holm <dholm@gentoo.org> dmalloc-5.3.0.ebuild,
-  files/dmalloc-5.3.0-fpic.patch:
+  28 Feb 2004; David Holm <dholm@gentoo.org> +dmalloc-5.3.0.ebuild,
+  +files/dmalloc-5.3.0-fpic.patch:
   Version bumped and added to ~ppc.
 
   27 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> dmalloc-5.2.4.ebuild:
