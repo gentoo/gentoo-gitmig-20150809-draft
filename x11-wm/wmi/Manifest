@@ -1,11 +1,17 @@
-MD5 215a3acda637e9c08e05b500371e4051 ChangeLog 1631
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3113eb62900633d059d2bcbad0ef8f7e metadata.xml 343
-MD5 d2d9fe1afa78aacf3ae6ec8442d024c2 wmi-7.ebuild 784
-MD5 83f6c87f2f00d47ac6328c805c15b9a5 wmi-8.ebuild 899
+MD5 0d06712f50fcbf407f023ab1e7e919c2 ChangeLog 1752
+MD5 f766df30c53b3e1634dd3a877494f21c wmi-10.ebuild 1060
 MD5 52dfd2f30501eecf59fb99dac167c5db wmi-9.ebuild 1045
-MD5 8c62144149c974dd73924e89293806da wmi-10.ebuild 1049
-MD5 f7f19525d1f04d7c2f698e824bca26b8 files/digest-wmi-9 57
-MD5 7e7e0f0cf7b852e02aad5dfe5dbc5946 files/digest-wmi-7 57
-MD5 e2f23f9622809956fd3bab1ca3ab5464 files/digest-wmi-8 57
 MD5 607f0418f6681898ac8da1fbe4e8b6e7 files/wmi.desktop 112
+MD5 f7f19525d1f04d7c2f698e824bca26b8 files/digest-wmi-9 57
 MD5 1bc69f6a689f8553a641ce0309ac1311 files/digest-wmi-10 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBeiJLVWNWqTUmv+0RAgA5AJ4r3svXwaKYUiMdymhGOmyScw8gpACgr97r
+ysKHMSudRgjhkJd9rp71obQ=
+=Ts4t
+-----END PGP SIGNATURE-----
