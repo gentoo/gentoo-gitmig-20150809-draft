@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.5 2004/06/13 14:22:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.6 2004/06/13 21:44:58 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -224,13 +224,15 @@ pkg_setup() {
 		einfo "Disabling PAM features in ${PN}..."
 	fi
 
-	if use static
+	if use static || use pie
 	then
 		# A static build disallows building the SDK.
 		# See config/xf86.rules.
+		# So does a DllModules YES (use pie) build (#50562)
+		# The latter is pending a potential patch.
 		if use sdk
 		then
-			die "The static USE flag is incompatible with gatos and sdk USE flags."
+			die "The static and pie USE flags are currently incompatible with the sdk USE flag."
 		fi
 	fi
 }

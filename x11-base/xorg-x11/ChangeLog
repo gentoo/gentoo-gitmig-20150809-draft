@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.52 2004/06/13 14:22:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.53 2004/06/13 21:44:58 spyderous Exp $
+
+  13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild:
+  Workaround for #50562 -- disallow pie+sdk build.
 
   13 Jun 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   Added ~mips keyword -- bug 53226
