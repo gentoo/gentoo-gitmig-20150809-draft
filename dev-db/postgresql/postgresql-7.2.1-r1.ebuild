@@ -133,6 +133,9 @@ src_install () {
 	dojar ${D}/usr/share/postgresql/java/postgresql.jar
 	rm ${D}/usr/share/postgresql/java/postgresql.jar
 
+	dodir ${D}/usr/include/postgresql/pgsql
+	ln -s ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
+
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
 
