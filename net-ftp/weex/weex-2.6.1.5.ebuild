@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5.ebuild,v 1.4 2004/08/09 22:46:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5.ebuild,v 1.5 2004/08/18 08:07:59 phosphan Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="sys-libs/ncurses"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use amd64 && epatch ${FILESDIR}/${P}-va_list.patch
+	epatch ${FILESDIR}/${P}-va_list.patch
 }
 
 src_compile() {

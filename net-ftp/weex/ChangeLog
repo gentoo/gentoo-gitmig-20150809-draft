@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/weex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.5 2004/08/09 22:46:23 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.6 2004/08/18 08:07:59 phosphan Exp $
+
+  18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> weex-2.6.1.5.ebuild:
+  Applying patch unconditionally now.
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> weex-2.6.1.5.ebuild:
   Added va_list patch to allow compilation on amd64, patch courtesy of Kugelfang

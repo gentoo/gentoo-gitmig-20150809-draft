@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c608a2671e1c838933855c85cf9720e9 weex-2.6.1.5.ebuild 758
-MD5 5143f829749dd6cce159a47fa43b7c0e ChangeLog 1138
+MD5 619c03be372a7d2f7b3cd75a2f6a8851 weex-2.6.1.5.ebuild 747
+MD5 6ad4af3e6d1956ecf2f5096719822089 ChangeLog 1253
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 522552e03b82ab5669fd21c558290691 files/weex-2.6.1.5-va_list.patch 559
 MD5 f1f9ddbb28fceadc880ed47de9560c6c files/digest-weex-2.6.1.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBF/7XCHk4+ZoBpvsRAvITAKDJIV+4ATEHEK/JtEnnYnoLwRCgqwCgoRnD
-2Ep2QrMF87Bzq7M4IY4qP5E=
-=pQxh
------END PGP SIGNATURE-----
