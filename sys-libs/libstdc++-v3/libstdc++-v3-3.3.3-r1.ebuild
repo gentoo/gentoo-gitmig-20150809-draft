@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.29 2004/10/30 16:32:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.30 2004/10/30 16:42:17 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -98,8 +98,6 @@ do_filter_flags() {
 	strip-unsupported-flags
 
 	strip-flags
-
-	einfo "CFLAGS: ${CFLAGS}"
 }
 
 S=${WORKDIR}/gcc-${PV}
