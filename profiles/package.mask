@@ -1189,9 +1189,6 @@ app-cdr/eroaster
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
 
-# jnelson@gentoo.org 6 Sep 2002
-# masking gramps-0.8.0 due to freeze
-=app-misc/gramps-0.8.0
 
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
