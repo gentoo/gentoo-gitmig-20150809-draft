@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pasm/pasm-1.6c.ebuild,v 1.2 2004/02/28 16:03:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pasm/pasm-1.7.ebuild,v 1.1 2004/04/24 22:09:46 dholm Exp $
 
 inherit eutils
 
