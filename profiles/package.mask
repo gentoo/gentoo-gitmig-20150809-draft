@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+
+# <malverian@gentoo.org> 07 Jun 2003
+# Development version of Anjuta for Gnome2
+# Masked for testing
+=anjuta-1.1.1
+
 # <rac@gentoo.org> 03 Jun 2003
 # testing
 =dev-lang/perl-5.8.0-r11
