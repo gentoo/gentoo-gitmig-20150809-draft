@@ -1,6 +1,16 @@
-MD5 01d6461245addcadb4bf163cdf8f3cc1 ChangeLog 521
-MD5 fd3371931645271b5f69409d79bf3473 cdegroot-db-0.08.ebuild 1072
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 8a493b5dc089dc8afc56c353d5bb8fa7 files/build.xml 1612
+MD5 38316f968de42ccc6c71b96a4c6a9205 cdegroot-db-0.08.ebuild 1080
+MD5 3077687729433e9a6df15ddfc363af2c ChangeLog 632
 MD5 0839e4d1aa7db825c3497cbf2f19792a files/cdegroot-db-0.08-gentoo.patch 7920
 MD5 f3cc57a67351b2ef9680cc84f976f0ac files/digest-cdegroot-db-0.08 72
+MD5 8a493b5dc089dc8afc56c353d5bb8fa7 files/build.xml 1612
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQXWBKRy60XGEcJIRAqeJAKCgU60Ki7a3G2CvbSQ0Q+nFhIhTiACfRxb7
+ikJ2XKq8ZNHsKfQxsfv7NfA=
+=U94S
+-----END PGP SIGNATURE-----
