@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 483f9165e5b2cefc91a0600dd6712458 ChangeLog 436
+MD5 b648c48020498d031b6f7d35ee0510ef ChangeLog 617
 MD5 b457e59ce7e80c06bf1d5f0ae4eac12c metadata.xml 514
 MD5 d02e0f37a927abbf5fd7f0821d1ea415 selinux-ipsec-tools-20040703.ebuild 400
 MD5 764318bec7ef808df623ee3f11d5664c selinux-ipsec-tools-20041007.ebuild 403
+MD5 900f9bc043a771e9827f225f78d7ab2f selinux-ipsec-tools-20041026.ebuild 403
 MD5 4b5117b8e766c6b5a43c10e934f2642e files/digest-selinux-ipsec-tools-20040703 79
 MD5 e16f6f807fbb6a92ef57e5de2345e162 files/digest-selinux-ipsec-tools-20041007 79
+MD5 2c73de8c7f7447b940146d3d7834dbcf files/digest-selinux-ipsec-tools-20041026 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeee8GSBEIeh4AEYRAgc7AJwNQjQrWETarYYgO/hnw1LznDP6wACfSpoZ
-jLmXsqhQZgp1eDleOZzTzHA=
-=gX89
+iD8DBQFBf+IgGSBEIeh4AEYRAh0kAJ9Ro28llB63tpg1VrV75Yd3aL1bpwCgifIX
+6tTQb/Ij8+cxw9G3MG7QuFA=
+=xJnC
 -----END PGP SIGNATURE-----
