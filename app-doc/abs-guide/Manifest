@@ -4,9 +4,10 @@ MD5 19874c0e6ba40c92c4980eebbd122603 abs-guide-2.2.ebuild 622
 MD5 2ce6ef452330c4ede8b43d084d2e7a40 abs-guide-2.4.ebuild 626
 MD5 8c018a5ce16195616727221da2dcc496 abs-guide-2.6.ebuild 621
 MD5 4366ee21b8dea3a42cd02710cb9a3b26 abs-guide-2.1.ebuild 583
-MD5 e93230db4b1efb5357cbae5a1272374b ChangeLog 1566
+MD5 1f53226def23caa2315c2afbe876b6fd ChangeLog 1648
 MD5 474613305b876d86cdcd3f0266e6be5b files/digest-abs-guide-2.1 66
 MD5 33e071f7b26b90574760b4db934e0b4f files/digest-abs-guide-2.2 66
 MD5 c81480cc08855ce41b51682289a0f1ac files/digest-abs-guide-2.3 66
 MD5 b2a72db066dea988d6027e962a1ea73e files/digest-abs-guide-2.4 66
 MD5 e73148818df4c6565a6cbd7112dd7f44 files/digest-abs-guide-2.5 66
+MD5 7da8a26edb03f060dd6cd91da51e7312 files/digest-abs-guide-2.6 66

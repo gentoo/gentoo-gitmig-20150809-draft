@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.12 2004/03/25 19:23:46 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.13 2004/03/27 23:48:51 zul Exp $
+
+  27 Mar 2004; Chuck Short <zul@gentoo.org> :
+  Fixed bad digest, closes #45888.
 
 *abs-guide-2.6 (25 Mar 2004)
 
