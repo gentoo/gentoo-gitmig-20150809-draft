@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.7.ebuild,v 1.4 2005/03/07 04:33:09 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.7.ebuild,v 1.5 2005/03/07 15:52:47 swegener Exp $
 
 inherit linux-mod
 
@@ -15,12 +15,10 @@ KEYWORDS="~x86"
 
 DEPEND=">=sys-cluster/magma-1.0_pre3
 	dev-libs/libxml2
-	sys-libs/zlib
-	"
+	sys-libs/zlib"
 
 RDEPEND="${DEPEND}
-	>=magma-plugins-1.0_pre5
-	"
+	>=sys-cluster/magma-plugins-1.0_pre5"
 
 src_compile() {
 	check_KV
