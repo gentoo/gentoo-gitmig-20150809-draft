@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.12 2004/12/08 14:27:23 eradicator Exp $
-
-IUSE="dedicated opengl alsa"
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.13 2004/12/15 13:25:58 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +11,10 @@ SRC_URI="mirror://3dgamers/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}-2.x8
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
+# This game is actively maintained by a developer with both x86 and amd64 kit.
+# DO NOT TOUCH THIS EBUILD WITHOUT THE PERMISSION OF wolf31o2!!!
 KEYWORDS="x86 amd64"
+IUSE="dedicated opengl"
 RESTRICT="nomirror nostrip"
 
 DEPEND="virtual/libc"
@@ -48,10 +49,6 @@ src_install() {
 	dogamesbin "${FILESDIR}/et" || die "dogamesbin failed"
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/et
 
-	if use amd64 && use alsa; then
-		dosed 's:exec:aoss32 exec:' ${GAMES_BINDIR}/et
-	fi
-
 	if use dedicated ; then
 		dogamesbin "${FILESDIR}/et-ded" || die "dogamesbin failed"
 		dosed "s:GENTOO_DIR:${dir}:" "${GAMES_BINDIR}/et-ded"
@@ -78,7 +75,7 @@ pkg_postinst() {
 	einfo "To play the game run:"
 	einfo " et"
 
-	if use dedicated ; then
+	if use dedicated; then
 		echo
 		einfo "To start a dedicated server run:"
 		einfo " /etc/init.d/et-ded start"
@@ -87,5 +84,10 @@ pkg_postinst() {
 		einfo " rc-update add et-ded default"
 		echo
 		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account"
+	fi
+	if use amd64; then
+		echo
+		einfo "If you are running an amd64 system and using ALSA, you must have"
+		einfo "ALSA 32-bit emulation enabled in your kernel for this to function properly."
 	fi
 }
