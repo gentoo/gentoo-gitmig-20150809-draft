@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.3 2004/03/09 18:05:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.4 2004/06/24 21:33:58 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
-if [ -z "${ECVS_BRANCH}" ]; then # user configurable
-	ECVS_BRANCH="FAIRLY-STABLE"
+if [ -z "${ECVS_BRANCH}" ]; then
+	ECVS_BRANCH="HEAD"
 fi
 ECVS_MODULE="slime"
 ECVS_USER="anonymous"
@@ -28,10 +28,6 @@ S="${WORKDIR}/slime"
 
 CLPACKAGE=swank
 
-# TODO: ilisp and slime both provide a hyperspec.el.  Erik Naggum's
-# hyperspec.el doesn't seem to be accessible anymore, but it would be
-# best to compare differences and provide app-emacs/hyperspec
-
 src_compile() {
 	echo "(add-to-list 'load-path \".\")" >script
 	emacs --batch -q -l script -f batch-byte-compile hyperspec.el slime.el || die
@@ -42,8 +38,7 @@ src_install() {
 	elisp-site-file-install ${FILESDIR}/70slime-gentoo.el
 	dodoc README* ChangeLog
 	insinto /usr/share/common-lisp/source/swank
-	# ChangeLog is needed at compile time!!
-	doins *.lisp ${FILESDIR}/swank.asd ChangeLog
+	doins *.lisp ${FILESDIR}/swank.asd ChangeLog # required at runtime
 	dodir /usr/share/common-lisp/systems
 	dosym /usr/share/common-lisp/source/swank/swank.asd \
 		/usr/share/common-lisp/systems
@@ -65,15 +60,6 @@ pkg_postinst() {
 
 SLIME notes for Gentoo
 ----------------------
-
-You can elect to set the ECVS_BRANCH environment variable when
-emerging slime-cvs.	 If unset, the default is to pull the
-FAIRLY-STABLE tag. eg.
-
-	ECVS_BRANCH=HEAD emerge slime-cvs
-
-While this ebuild attempts to work for the FAIRLY-STABLE tag, it may
-not always work with CVS HEAD.
 
 If you're interested in hacking this ebuild, slime-cvs uses its own
 swank.asd system definition file and swank-loader.lisp.
