@@ -203,7 +203,7 @@ We'll need to activate this swap next.</p>
 <pre>
 # <i>swapon /dev/hda3</i>
 # <i>mkdir /mnt/gentoo</i>
-# <i>mount /dev/hda3 /mnt/gentoo</i>
+# <i>mount /dev/hda2 /mnt/gentoo</i>
 # <i>mkdir /mnt/gentoo/boot</i>
 # <i>mount -o notail /dev/hda1 /mnt/gentoo/boot</i>
 </pre>
