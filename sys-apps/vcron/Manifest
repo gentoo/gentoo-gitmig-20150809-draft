@@ -1,5 +1,5 @@
-MD5 d3dab134871936a8c6173a705da07332 ChangeLog 2241
-MD5 e3e5ab81969208bd45842d8a3ec1e191 vcron-3.0.1-r1.ebuild 1549
+MD5 5297fbcebcdce2d2898932fbffed9dee ChangeLog 2242
+MD5 3c87d8eb2b917ca45256261e2fc2e745 vcron-3.0.1-r1.ebuild 1550
 MD5 7f79290c2f51c9dcee459c8a5636f652 files/vcron.rc6 520
 MD5 6a065c2a4012e573ebb852275516a1d4 files/crontab 563
 MD5 21a88e40cea6fde9bf6163e501b993dd files/digest-vcron-3.0.1-r1 140
