@@ -4,5 +4,4 @@ MD5 98434c07d60f5dbb74b0341ab9eb01ad ChangeLog 4549
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 bc47f96a12b21b779d57c0c2ad4b6837 files/mgetty-1.1.30-gentoo.diff 2771
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30-r1 70
-MD5 a1e05459ce2d5ff673bad552f355be4f files/mgetty-1.1.28-gentoo.diff 2308
 MD5 c9b070dfabf7bd139d53d263f869b4f0 files/digest-mgetty-1.1.30 70
