@@ -1,0 +1,9 @@
+# ChangeLog for dev-embedded/jtag
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.1 2004/02/24 14:45:36 tantive Exp $
+
+*jtag-0.5.1 (24 Feb 2004)
+
+  24 Feb 2004; Michael Imhof <tantive@gentoo.org> jtag-0.5.1.ebuild:
+  Initial import.
+
