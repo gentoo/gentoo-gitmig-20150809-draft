@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jud/jud-0.5.ebuild,v 1.6 2004/04/27 21:57:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jud/jud-0.5.ebuild,v 1.7 2004/05/24 00:45:52 humpback Exp $
 
 inherit eutils
 
-DESCRIPTION="Open Source Jabber User Directory"
+DESCRIPTION="User Directory for jabberd"
 HOMEPAGE="http://jud.jabberstudio.org/"
 SRC_URI="http://jud.jabberstudio.org/${P}.tar.gz"
 

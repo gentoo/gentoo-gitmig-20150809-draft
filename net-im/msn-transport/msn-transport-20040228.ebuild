@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040228.ebuild,v 1.1 2004/04/08 02:01:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040228.ebuild,v 1.2 2004/05/24 00:42:33 humpback Exp $
 
 MY_PV="1.2.8rc-cvs"
 S="${WORKDIR}/${PN}-${MY_PV}"
-DESCRIPTION="Open Source Jabber Server MSN transport"
+DESCRIPTION="MSN transport for jabberd"
 HOMEPAGE="http://msn-transport.jabberstudio.org/"
 SRC_URI="http://msn-transport.jabberstudio.org/${PN}-cvs.tar.gz"
 
