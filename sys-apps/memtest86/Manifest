@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0d4b12d48ff97d1278fd932f114dffe ChangeLog 3636
+MD5 0076775a66ee96e6304169122b9f8f1d ChangeLog 3829
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 257bd95abb74ad08d91cc86bc48996d6 memtest86-3.2.ebuild 1932
+MD5 e2581cba8e65a0a7ff450d36acfb6e02 memtest86-3.2.ebuild 1947
 MD5 64a30db4579e12539572f71ca895e1ed files/digest-memtest86-3.2 65
 MD5 9b8f71a15e2d7236b658f1f9e0fb79df files/memtest86-3.2-test-pic.patch 641
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4y0uroRuSHgZdywRAly+AJ9YEXlEtd7/MBWeXE/R8VmERULoFQCfUewI
-aFxp97l2Tj2oEF8ZXlKG7nI=
-=bQOz
+iD8DBQFB4zEBroRuSHgZdywRAhA5AJ90kQFOf9EqLcZJEyE6q3IZ444dnQCeIzY0
+75D6YLGCJfl++u6kpY4+V5I=
+=EtUi
 -----END PGP SIGNATURE-----
