@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.9 2004/07/10 10:39:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.10 2004/09/20 02:38:57 tgall Exp $
+
+  19 Sept 2004; Tom Gall <tgall@gentoo.org> boxes-1.0.1.ebuild:
+  stable on ppc64, bug #63659
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> boxes-1.0.1.ebuild:
   Marked ~amd64, fixed SRC_URI and HOMEPAGE.
