@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-1.44.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-1.44.ebuild,v 1.4 2004/01/18 17:42:46 jbms Exp $
 
 inherit elisp
 
@@ -17,23 +17,14 @@ DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}"
 
-SITEFILE=50haskell-mode-gentoo.el
-
-src_compile() {
-	 emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
-}
+SITEFILE="50${PN}-gentoo.el"
 
 src_install() {
-	elisp-install ${PN} *.el *.elc
-	elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	elisp_src_install
 	dohtml *.html *.hs
 }
 
 pkg_postinst() {
-	elisp-site-regen
+	elisp_pkg_postinst
 	einfo "See /usr/share/doc/${P}/html/installation-guide.html"
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
