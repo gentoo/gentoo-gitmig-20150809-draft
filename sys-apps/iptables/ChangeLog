@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.2 2002/03/21 06:10:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.3 2002/04/14 05:41:22 seemant Exp $
+
+*iptables-1.2.6a (13 Apr 2002)
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> iptables-1.2.6a.ebuild :
+
+  gaarde@yahoo.com (Paul Belt) in bug #1670 submitted the update.
 
 *iptables-1.2.5-r1 (20 Mar 2002)
 
