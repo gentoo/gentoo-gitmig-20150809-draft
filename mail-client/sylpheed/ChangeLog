@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.77 2005/03/07 12:46:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.78 2005/03/07 12:56:23 hattya Exp $
+
+  07 Mar 2005; Akinori Hattori <hattya@gentoo.org> -sylpheed-1.9.1.ebuild,
+  -sylpheed-1.9.2.ebuild, -sylpheed-1.9.4.ebuild:
+  remove ebuilds. they have a buffer overflow bug.
 
 *sylpheed-1.9.5 (07 Mar 2005)
 
