@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.22 2004/08/07 22:43:03 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.23 2004/10/10 00:24:02 weeve Exp $
+
+  09 Oct 2004; Jason Wever <weeve@gentoo.org> xxdiff-3.0.2.ebuild:
+  Added ~sparc keyword.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> xxdiff-2.6.ebuild:
   Typo in DESCRIPTION: simular -> similar. Bug 59717.
