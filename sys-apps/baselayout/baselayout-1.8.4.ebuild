@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.4.ebuild,v 1.1 2002/10/13 19:44:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.4.ebuild,v 1.2 2002/10/13 19:47:26 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -472,7 +472,7 @@ EOF
 
 	# Simple Release version for testing of features that *should* be
 	# present in the rc-scripts, etc.
-	echo "Gentoo Base System version ${SV}" > /etc/gentoo-release
+	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
 }
 
 pkg_postrm() {
