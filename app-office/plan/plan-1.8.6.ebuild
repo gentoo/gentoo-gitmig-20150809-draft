@@ -1,33 +1,32 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.3 2004/03/19 04:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.4 2004/04/07 18:59:39 vapier Exp $
 
-S="${WORKDIR}/${P}/src"
+inherit eutils
+
 DESCRIPTION="Motif based schedule planner"
 HOMEPAGE="http://www.bitrot.de/plan.html"
 SRC_URI="ftp://plan.ftp.fu-berlin.de/${P}.tar.gz"
 
-KEYWORDS="~x86 ~sparc"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif"
 
-src_unpack() {
+S=${WORKDIR}/${P}/src
 
+src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.tar.bz2
-
 }
 
 src_compile() {
-
 	make linux || die "make failed"
-
 }
-src_install() {
 
+src_install() {
 	make DESTDIR=${D} install || die
 	keepdir /usr/share/plan/netplan.dir
 
