@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.19.ebuild,v 1.5 2004/06/25 03:14:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.19.ebuild,v 1.6 2004/08/20 04:14:04 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.indexdata.dk/pub/${PN}/${P}.tar.gz"
 
 LICENSE="YAZ"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64 ~ia64 s390 ppc64"
 IUSE="tcpd"
 
 RDEPEND="dev-libs/libxml2
