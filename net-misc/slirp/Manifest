@@ -1,3 +1,16 @@
-MD5 8a9b03b8b012d58b90d8ee7e579a9020 slirp-1.0.13.ebuild 655
-MD5 866fb1a56cadef49b713f15837e9be4f ChangeLog 963
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4806c4c9ce92fcb0a8dedacf9c51c23 ChangeLog 1168
+MD5 8146992186d7880e1db52711531af345 slirp-1.0.13.ebuild 687
+MD5 3401eb32e240dc3bb678cea0ef5d3529 metadata.xml 248
+MD5 03bfd2c4670692a83797126cc725026f slirp-1.0.16.ebuild 688
 MD5 2b908b6c9c04be278468f88aa74f48c7 files/digest-slirp-1.0.13 64
+MD5 445e6d8262c2e3c7dd842ff8a4c31a46 files/digest-slirp-1.0.16 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqdY+jtv59x0+BrURAtbmAKC4XxPSEyCy1a1wMi9JZduzOJigDgCg6k1R
+/Phisl/F7mOZFX887uJLp94=
+=L92y
+-----END PGP SIGNATURE-----
