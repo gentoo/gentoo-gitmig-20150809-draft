@@ -238,3 +238,4 @@ move dev-libs/mkl sci-libs/mkl
 move app-sci/pariguide sci-mathematics/pariguide
 move app-sci/fann sci-mathematics/fann
 move dev-libs/atlas sci-libs/atlas
+move dev-libs/libgeotiff sci-libs/libgeotiff
