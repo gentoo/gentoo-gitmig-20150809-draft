@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.191-r1.ebuild,v 1.2 2004/10/02 18:44:02 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.191-r2.ebuild,v 1.1 2004/10/02 18:44:02 centic Exp $
 
 inherit eutils
 
@@ -27,16 +27,23 @@ src_unpack() {
 
 src_install() {
 	newsbin firehol.sh firehol
+
 	dodir /etc/firehol /etc/firehol/examples
 	insinto /etc/firehol/examples
-	doins examples/*
-	dodoc ChangeLog COPYING README TODO WhatIsNew
-	dohtml doc/*.html doc/*.css
+	doins examples/* || die
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/firehol.conf.d firehol || die
+
+	dodoc ChangeLog COPYING README TODO WhatIsNew || die
+	dohtml doc/*.html doc/*.css  || die
+
 	docinto scripts
-	dodoc get-iana.sh adblock.sh
-	doman man/*.1 man/*.5
+	dodoc get-iana.sh adblock.sh || die
+
+	doman man/*.1 man/*.5 || die
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/firehol.initrd firehol
+	newexe ${FILESDIR}/firehol.initrd firehol || die
 }
 
 pkg_postinst() {
