@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.3.2.ebuild,v 1.4 2004/08/26 03:11:17 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.3.2.ebuild,v 1.5 2004/09/24 14:43:05 ticho Exp $
 
 IUSE=""
 
-MY_P=fp-linux-ws-${PV}
+MY_P="fp-linux-ws-${PV}"
 S=${WORKDIR}/${PN}
 
 DESCRIPTION="Frisk Software's f-prot virus scanner"
@@ -21,11 +21,6 @@ PROVIDE="virtual/antivirus"
 SLOT="0"
 LICENSE="F-PROT"
 KEYWORDS="~x86 -sparc amd64 -ppc"
-
-src_compile ()
-{
-	echo "Nothing to compile."
-}
 
 src_install ()
 {

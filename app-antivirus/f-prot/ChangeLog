@@ -1,6 +1,16 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.5 2004/06/24 21:27:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.6 2004/09/24 14:43:05 ticho Exp $
+
+*f-prot-4.4.5 (24 Sep 2004)
+
+  24 Sep 2004; Andrej Kacian <ticho@gentoo.org> f-prot-4.2.1.ebuild,
+  f-prot-4.3.0.ebuild, f-prot-4.3.1.ebuild, f-prot-4.3.2.ebuild,
+  f-prot-4.3.5.ebuild, f-prot-4.4.1.ebuild, f-prot-4.4.2.ebuild,
+  +f-prot-4.4.5.ebuild:
+  Version bump to 4.4.5. Closes #64993, reported by Michael Cramer
+  <bigmichi1@bigmichi1.dyndns.org>. Removed unnecessary src_compile() from all
+  f-prot ebuilds. Put quotes around MY_P value, just in case.
 
 *f-prot-4.4.2 (02 Jun 2004)
 
