@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.31 2003/04/28 05:04:42 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.32 2003/07/12 07:58:47 robbat2 Exp $
+
+*screen-3.9.15-r1 (12 Jul 2003)
+
+  12 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> screen-3.9.15-r1.ebuild,
+  files/screen.pam.system-auth:
+  Updated screen.pam (in new screen.pam.system-auth copy) to use pam_stack
+  instead of pam_unix directly. Required for pam_ldap working properly.
 
 *screen-3.9.15 (13 Mar 2003)
 
