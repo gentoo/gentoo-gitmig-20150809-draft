@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.44 2004/07/04 19:07:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.45 2004/07/23 19:07:11 j4rg0n Exp $
+
+  23 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :
+  esound-0.2.34.ebuild: Unstable macos. Fully functional, except for init script
+  due to conflicts between baselayout and MacOS files.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> esound-0.2.34.ebuild:
   Stable on alpha.
