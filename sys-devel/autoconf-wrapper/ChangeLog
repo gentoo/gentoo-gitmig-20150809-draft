@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.1 2004/10/21 01:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.2 2004/11/14 03:40:51 vapier Exp $
+
+  13 Nov 2004; Mike Frysinger <vapier@gentoo.org> +files/ac-wrapper-1.sh,
+  autoconf-wrapper-1.ebuild:
+  Punt the perl version and use the bash version by Gregorio Guidi #66478.
 
 *autoconf-wrapper-1 (20 Oct 2004)
 
