@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.6,v 1.1 2004/02/04 05:04:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-1.6,v 1.2 2004/02/09 21:43:27 azarah Exp $
 
 
 source /etc/init.d/functions.sh
@@ -116,12 +116,12 @@ else
 	fi
 
 	#setup the /usr/lib/libGL.la symlink
+	if [ -e /usr/lib/libGL.la ]
+	then
+		rm -f /usr/lib/libGL.la
+	fi
 	if [ -e /usr/lib/opengl/${GL_IMPLEM}/lib/libGL.la ]
 	then
-		if [ -e /usr/lib/libGL.la ]
-		then
-			rm -f /usr/lib/libGL.la
-		fi
 		ln -sf /usr/lib/opengl/${GL_IMPLEM}/lib/libGL.la \
 			/usr/lib/libGL.la
 	fi
