@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.24 2005/01/01 11:58:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.25 2005/01/11 15:00:36 gmsoft Exp $
+
+  11 Jan 2005; Guy Martin <gmsoft@gentoo.org> mutt-1.5.6-r4.ebuild:
+  Stable on hppa.
 
   01 Jan 2005; Markus Rothe <corsair@gentoo.org> mutt-1.5.6-r5.ebuild:
   Stable on ppc64
