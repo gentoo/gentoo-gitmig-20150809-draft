@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.17 2005/03/08 02:56:59 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.18 2005/03/13 23:09:02 citizen428 Exp $
+
+  14 Mar 2005; Michael Kohl <citizen428@gentoo.org> :
+  Version bump.
 
   08 Mar 2005; Tom Payne <twp@gentoo.org>
   +files/ruby-gdkpixbuf2-0.11.0-fix-includes.patch,
