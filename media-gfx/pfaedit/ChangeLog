@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pfaedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.3 2003/02/12 07:03:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/ChangeLog,v 1.4 2003/03/18 14:28:41 danarmak Exp $
+
+  18 Mar 2003; Dan Armak <danarmak@gentoo.org> :
+  
+  Filter -mfpmath=sse and -mfpmath=sse,387 cflags, as they cause the build
+  to fail.
 
   07 Jan 2003; J Robert Ray <jrray@gentoo.org> : Unmasked for x86.
 

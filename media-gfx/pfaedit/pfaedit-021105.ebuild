@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-021105.ebuild,v 1.4 2003/02/13 12:36:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-021105.ebuild,v 1.5 2003/03/18 14:28:41 danarmak Exp $
+
+inherit flag-o-matic
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="postscript font editor and converter"
@@ -21,7 +23,9 @@ DEPEND="png? ( >=media-libs/libpng-1.2.4 )
 src_compile() {
 	local myconf=""
 	use X || myconf="--without-x"
-
+	
+	filter-flags -mfpmath=sse -mfpmath=sse,387
+	
 	econf ${myconf}
 	make || die
 }
