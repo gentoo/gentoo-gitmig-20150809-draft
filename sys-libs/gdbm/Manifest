@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a99b4b7943d3b6a2a28c770ed4c5c08 ChangeLog 2912
-MD5 d372d002aa15a2bf938b0921cd0c328f gdbm-1.8.0-r5.ebuild 1179
+MD5 0da94c30445435228bdfc634eaebaf3e ChangeLog 3001
+MD5 9712d476d6a9f0e5eb9ac75bf9080d11 gdbm-1.8.0-r5.ebuild 1300
 MD5 6b94f3dd2b27523240676944755bbbcb gdbm-1.8.3.ebuild 1310
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3 62
 MD5 8640084b5d1f0e27de1d1c7da372f00a files/gdbm-1.8.0-r5-gentoo.diff 6093
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBAo3mHTu7gpaalycRApakAJsEt6jltaEmxyvJmX0SloKa/rcx3QCeNZxM
-J+2YWwkjgU6apMV3pg3fjmw=
-=0enh
------END PGP SIGNATURE-----

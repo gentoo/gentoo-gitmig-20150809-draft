@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.19 2004/07/23 09:03:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.20 2004/07/24 17:13:55 azarah Exp $
+
+*device-mapper-1.00.07-r1 (24 Jul 2004)
+
+  24 Jul 2004; Martin Schlemmer <azarah@gentoo.org>
+  +device-mapper-1.00.07-r1.ebuild, +device-mapper-1.00.08-r1.ebuild,
+  +device-mapper-1.00.17-r1.ebuild, +device-mapper-1.00.18-r1.ebuild,
+  +device-mapper-1.00.19-r1.ebuild:
+  Add linker script to fixup bug #4411
 
 *device-mapper-1.00.19 (23 Jul 2004)
 
