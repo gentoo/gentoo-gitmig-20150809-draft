@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.1.0.ebuild,v 1.7 2004/12/19 06:52:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.1.0.ebuild,v 1.8 2005/01/01 11:11:02 corsair Exp $
 
 IUSE="doc yp"
 
@@ -12,7 +12,7 @@ SRC_URI="http://svn.xiph.org/releases/icecast/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ppc64 sparc x86"
 
 DEPEND="dev-libs/libxslt
 	media-libs/libogg
