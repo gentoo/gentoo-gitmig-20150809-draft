@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r2.ebuild,v 1.2 2003/01/05 00:55:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.40.ebuild,v 1.1 2003/02/09 07:56:52 seemant Exp $
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
 PROVIDE="virtual/motif"
 LICENSE="LGPL"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 
 DEPEND="virtual/x11"
@@ -25,10 +25,10 @@ src_unpack() {
 
 src_compile() {
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+	econf \
+		--prefix=/usr/X11R6 \
+		--sysconfdir=/etc/X11 \
+		--libdir=/usr/X11R6/lib \
 		--enable-static \
 		--enable-build-12 \
 		--enable-build-20 \
@@ -40,23 +40,24 @@ src_compile() {
 
 src_install() {
 	
-	emake prefix=${D}/usr \
-		exec_prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die	
+#	emake prefix=${D}/usr/X11R6 \
+#		exec_prefix=${D}/usr/X11R6 \
+#		libdir=${D}/usr/X11R6/lib \
+#		mandir=${D}/usr/share/man \
+#		infodir=${D}/usr/share/info \
+	make DESTDIR=${D} install || die	
 	
-	dosym /usr/lib/libXm.so.2.0.1 /usr/lib/libXm.so.1
+	dosym /usr/X11R6/lib/libXm.so.2.0.1 /usr/X11R6/lib/libXm.so.1
 
 	# This comes from x11-base/xfree!
 	rm -f ${D}/usr/lib/X11/config/host.def
 	
 	dodir /usr/share
-	mv ${D}/usr/man ${D}/usr/share/
+	mv ${D}/usr/X11R6/man ${D}/usr/share/
 	dodir /usr/share/doc/${P}
-	mv ${D}/usr/LessTif/*  ${D}/usr/share/doc/${P}/
+	mv ${D}/usr/X11R6/LessTif/*  ${D}/usr/share/doc/${P}/
 	# The LessTif directory should be empty now.
-	rmdir ${D}/usr/LessTif || die
+	rmdir ${D}/usr/X11R6/LessTif || die
 }
 
 pkg_postrm() {

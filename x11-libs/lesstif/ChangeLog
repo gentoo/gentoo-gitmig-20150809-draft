@@ -1,10 +1,17 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.8 2003/01/06 16:14:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.9 2003/02/09 07:56:52 seemant Exp $
 
-*lesstif-0.93.36-r3 (06 Jan 2002)
+*lesstif-0.93.40 (08 Feb 2003)
 
-  06 Jan 2002; Nick Hadaway <raker@gentoo.org>
+  08 Feb 2003; Seemant Kulleen <seemant@gentoo.org> lesstif-0.93.40.ebuild
+  files/digest-lesstif-0.93.40 :
+
+  Version bump -- fixes some bugs that nedit was experiencing.
+
+*lesstif-0.93.36-r3 (06 Jan 2003)
+
+  06 Jan 2003; Nick Hadaway <raker@gentoo.org>
   lesstif-0.93.36-r3.ebuild, files/digest-lesstif-0.93.36-r3 :
   New ebuild of lesstif which installs into /usr/X11R6 instead of /usr.
   The next step I envision is the ability to install both lesstif and
