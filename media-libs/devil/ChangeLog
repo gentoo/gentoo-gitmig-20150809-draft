@@ -1,12 +1,15 @@
 # ChangeLog for media-libs/devil
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.3 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.4 2002/12/31 14:38:32 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*Devil-1.6.5 (31 Dec 2002)
+
+  31 Dec 2002; Martin Holzer <mholzer@gentoo.org> devil-1.6.5.ebuild files/digest-devil-1.6.5 ChangeLog :
+  Version bumped. Closes #12960.
  
 *devil-1.6.1 (12 Jul 2002)
 
-  12 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> devil-1.6.1.ebuild, files/digest-devil-1.6.1, ChangeLog:
-
+  12 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> devil-1.6.1.ebuild files/digest-devil-1.6.1 ChangeLog :
   Initial import.
   ebuild submitted by Scott A. Friedman <friedman@ucla.edu>
+
