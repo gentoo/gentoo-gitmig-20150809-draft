@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-0.10.3.ebuild,v 1.6 2004/07/14 23:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.0.0.ebuild,v 1.1 2005/01/15 03:31:00 matsuu Exp $
 
 DESCRIPTION="A DNS-Server which gets its data from mysql-databases"
 HOMEPAGE="http://mydns.bboy.net/"
@@ -8,32 +8,36 @@ SRC_URI="http://mydns.bboy.net/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug mysql nls postgres ssl static zlib"
 
 RDEPEND="virtual/libc
-	mysql? ( dev-db/mysql )
-	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib )
+	|| (
+		mysql? ( dev-db/mysql )
+		postgres? ( dev-db/postgresql )
+		!postgres? ( dev-db/mysql )
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
 
 src_compile() {
-	if ! use mysql && ! use postgres; then
-		eerror "MyDNS needs either MySQL or PostgreSQL."
-		eerror "Please set USE=\"mysql\" or USE=\"postgres\", and try again."
-		die
+	local myconf
+
+	if use mysql || ! use postgres; then
+		myconf="${myconf} --with-mysql"
+	else
+		myconf="${myconf} --without-mysql --with-pgsql"
 	fi
 
 	econf --enable-alias \
 		`use_enable nls` \
 		`use_enable debug` \
 		`use_enable static static-build` \
-		`use_with postgres pgsql` \
-		`use_with mysql` \
 		`use_with ssl openssl` \
-		`use_with zlib` || die
+		`use_with zlib` \
+		${myconf} || die
 
 	emake || die
 }
@@ -42,10 +46,16 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc ABOUT-NLS AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
-	use mysql && dodoc QUICKSTART.mysql
-	use postgres && dodoc QUICKSTART.postgres
 
 	exeinto /etc/init.d; newexe ${FILESDIR}/mydns.rc6 mydns || die
+
+	if use mysql || ! use postgres; then
+		sed -i -e 's/__db__/mysql/g' ${D}/etc/init.d/mydns || die
+		dodoc QUICKSTART.mysql
+	else
+		sed -i -e 's/__db__/postgresql/g' ${D}/etc/init.d/mydns || die
+		dodoc QUICKSTART.postgres
+	fi
 }
 
 pkg_postinst() {
@@ -54,13 +64,13 @@ pkg_postinst() {
 	einfo
 	einfo "# /usr/sbin/mydns --dump-config > /etc/mydns.conf"
 	einfo "# chmod 0600 /etc/mydns.conf"
-	if use mysql ; then
-		einfo "# mysqladmin -u <username> -p create mydns"
-		einfo "# /usr/sbin/mydns --create-tables | mysql -u <user> -p mydns"
+	if use mysql || ! use postgres; then
+		einfo "# mysqladmin -u <useruname> -p create mydns"
+		einfo "# /usr/sbin/mydns --create-tables | mysql -u <username> -p mydns"
 		einfo
 		einfo "to create the tables in the MySQL-Database."
 		einfo "For more info see QUICKSTART.mysql."
-	elif use postgres ; then
+	else
 		einfo "# createdb mydns"
 		einfo "# /usr/sbin/mydns --create-tables | psql mydns"
 		einfo

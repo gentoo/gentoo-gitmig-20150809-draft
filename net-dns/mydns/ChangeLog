@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/mydns
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.9 2004/07/01 22:12:33 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.10 2005/01/15 03:31:00 matsuu Exp $
+
+*mydns-1.0.0 (15 Jan 2005)
+
+  15 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> files/mydns.rc6,
+  -mydns-0.10.3.ebuild, mydns-0.11.0.ebuild, +mydns-1.0.0.ebuild:
+  Version bumped.
+  Fixed init.d script. Bug 77895.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mydns-0.10.3.ebuild,
   mydns-0.11.0.ebuild:
