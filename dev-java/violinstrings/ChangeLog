@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/violinstrings
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.6 2004/10/22 10:31:05 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.7 2005/01/20 18:59:07 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  violinstrings-1.0.2.ebuild:
+  added missing jikes dependency. see #78819.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   violinstrings-1.0.2.ebuild:

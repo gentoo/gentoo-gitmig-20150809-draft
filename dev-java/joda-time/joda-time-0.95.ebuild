@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-0.95.ebuild,v 1.6 2004/10/22 09:14:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-0.95.ebuild,v 1.7 2005/01/20 19:03:00 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~amd64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.3
-		>=dev-java/ant-1.4"
+		>=dev-java/ant-1.4
+		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
 
 src_compile() {
