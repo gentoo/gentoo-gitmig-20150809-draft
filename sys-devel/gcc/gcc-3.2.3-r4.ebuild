@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.1 2004/01/27 10:04:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.2 2004/02/09 22:59:42 darkspecter Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -97,7 +97,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # this is a glibc-propolice forced bump to a gcc without guard 
 # when no binary on the system has references to guard@@libgcc
 # hppa has no dependency on propolice for gcc - skip this arch
-KEYWORDS="~ppc" #x86 ppc sparc alpha arm mips -hppa"
+KEYWORDS="ppc" #x86 ppc sparc alpha arm mips -hppa"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
