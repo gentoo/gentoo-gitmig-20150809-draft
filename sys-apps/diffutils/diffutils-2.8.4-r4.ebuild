@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.19 2004/11/12 15:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.20 2004/12/08 01:07:51 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -54,13 +54,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --build=${CHOST} `use_enable nls` || die "econf"
+	econf $(use_enable nls) || die "econf"
 
-	if use static ; then
-		emake LDFLAGS=-static || die
-	else
-		emake || die
-	fi
+	use static && append-ldflags -static
+	emake LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
@@ -69,6 +66,6 @@ src_install() {
 	if ! use build ; then
 		dodoc ChangeLog NEWS README
 	else
-		rm -rf ${D}/usr/share/info
+		rm -r ${D}/usr/share/info
 	fi
 }
