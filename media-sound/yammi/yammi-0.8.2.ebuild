@@ -9,7 +9,7 @@ inherit flag-o-matic
 S="${WORKDIR}/${P}"
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox 4 XMMS/Noatun"
-SRC_URI="mirror://sourceforge/yammi/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/yammi/${P}fixed.tar.gz"
 HOMEPAGE="http://yammi.sf.net"
 
 LICENSE="GPL-2"
@@ -29,10 +29,17 @@ DEPEND=">=x11-libs/qt-3.1.0-r1
 	>=vorbis-tools-1.0-r1 )
 	kde? ( >=kde-base/kde-3.0.4 )"
 
+src_unpack() {
+	unpack ${P}fixed.tar.gz
+}
+
 src_compile() {
 	# need to filter -fomit-frame-pointer for pentium II
 	is-flag "-march=pentium2" && filter-flags "-fomit-frame-pointer"
-
+	
+	#needed to let configure detect the id3libs correct
+	export LDFLAGS="-lstdc++"
+	
 	local myconf
 	use xmms || myconf="--disable-xmms"
 	use kde || myconf="--disable-noatun ${myconf}"
@@ -75,4 +82,5 @@ pkg_postinst() {
 		ewarn "**************************************************************************"
 	fi
 }
+
 
