@@ -1,0 +1,22 @@
+diff -ru file-4.07.orig/src/readelf.c file-4.07/src/readelf.c
+--- file-4.07.orig/src/readelf.c	2003-11-18 13:42:33.000000000 -0600
++++ file-4.07/src/readelf.c	2004-01-23 01:47:00.325387536 -0600
+@@ -260,7 +260,8 @@
+ 				break;
+ 			offset = donote(ms, nbuf, offset, (size_t)bufsize,
+ 			    class, swap, 4);
+-
++			if (offset == 0)
++			  break; /* or loop for ever */
+ 		}
+ 	}
+ 	return 0;
+@@ -633,6 +634,8 @@
+ 					break;
+ 				offset = donote(ms, nbuf, offset,
+ 				    (size_t)bufsize, class, swap, ph_align);
++				if (offset == 0)
++				  break; /* or loop for ever */
+ 			}
+ 			if (lseek(fd, savedoffset + offset, SEEK_SET)
+ 			    == (off_t)-1) {

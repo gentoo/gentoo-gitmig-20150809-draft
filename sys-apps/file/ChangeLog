@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.33 2004/01/22 23:54:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.34 2004/01/23 08:03:53 jhhudso Exp $
+
+*file-4.07-r1 (23 Jan 2004)
+
+  23 Jan 2004; Jared Hudson <jhhudso@gentoo.org> : Added a patch from source
+  changes found in the debian file package. This fixes a serious (IMO) bug
+  that causes a endless loop (100% cpu usage) when using file against certain
+  elf binaries.
+
 
   22 Jan 2004; <gustavoz@gentoo.org> file-4.06.ebuild:
   marked stable on sparc
