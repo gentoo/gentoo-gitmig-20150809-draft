@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/xmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.6 2003/07/24 03:06:51 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.7 2003/07/25 21:15:43 raker Exp $
+
+  25 Jul 2003; Nick Hadaway <raker@gentoo.org> files/xmailwizard:
+  Changed port 6017 to 29617 in the wizard to match the confd defaults.
 
   23 Jul 2003; Nick Hadaway <raker@gentoo.org> files/xmail.initd,
   files/xmail.confd:
