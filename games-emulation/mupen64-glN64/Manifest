@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b8f36239182a7123c9e61fad2b89fd82 mupen64-glN64-0.4.1_pre1.ebuild 751
 MD5 751dea9138d004b91233644e0135f5f2 ChangeLog 1574
-MD5 c035c7d49f68da9d889da03a5d73c749 mupen64-glN64-0.4.1_rc2.ebuild 1038
+MD5 c035c7d49f68da9d889da03a5d73c749 mupen64-glN64-0.4.1_rc2-r1.ebuild 1038
+MD5 23a3f5f5a4ea2cb20ced4d53e0e6f062 mupen64-glN64-0.4.1_rc2.ebuild 1001
 MD5 47f0e615c36a823f63220f4aec84d47f files/mupen64-glN64-compile.patch 1290
 MD5 9220d158fd6e0f37797eb2f7aae4c3c7 files/mupen64-glN64-noasm.patch 409
 MD5 d2f2bca612361154241f2b899673230e files/digest-mupen64-glN64-0.4.1_pre1 64
 MD5 e0e2f9111004f21e197569c2bd419c8a files/digest-mupen64-glN64-0.4.1_rc2 68
 MD5 7b7b92e1dd75295fa258e3f0e02d1d3c files/mupen64-glN64-gtk2.patch 808
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3vs2UpKYMelfdYERAiRIAJ9Ht048Iv4aoXHCEisxSzcMuOx97QCeILtS
-og9m2MDtkJJaLQrMREe87tQ=
-=pEys
------END PGP SIGNATURE-----
+MD5 e0e2f9111004f21e197569c2bd419c8a files/digest-mupen64-glN64-0.4.1_rc2-r1 68

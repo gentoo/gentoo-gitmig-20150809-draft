@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4.ebuild,v 1.2 2005/01/07 00:15:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r1.ebuild,v 1.1 2005/01/07 22:22:27 morfic Exp $
 
 inherit games gcc eutils libtool
 
@@ -29,7 +29,7 @@ DEPEND="sys-libs/zlib
 	gtk2? ( =x11-libs/gtk+-2* )"
 
 RDEPEND="${RDEPEND}
-	games-emulation/mupen64-glN64
+	>=games-emulation/mupen64-glN64-0.4.1_rc2-r1
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}"
