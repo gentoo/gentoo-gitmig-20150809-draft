@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/fastdb-2.55.ebuild,v 1.1 2003/01/05 06:52:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/fastdb/fastdb-2.55.ebuild,v 1.2 2003/02/13 10:01:41 vapier Exp $
 
 DESCRIPTION="OO-DBMS that holds all data in memory; interfaces for C/C++/Kylix"
 HOMEPAGE="http://www.garret.ru/~knizhnik/fastdb.html"
