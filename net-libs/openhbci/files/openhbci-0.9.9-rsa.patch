@@ -1,0 +1,25 @@
+--- openhbci-0.9.9/src/openhbci/core/rsakey.cpp	2003-05-07 21:20:24.000000000 +0100
++++ openhbci-0.9.9-new/src/openhbci/core/rsakey.cpp	2003-05-07 21:23:32.000000000 +0100
+@@ -336,13 +336,18 @@
+     myBIGNUM = BN_new(); \
+     myBIGNUM = BN_bin2bn((unsigned char*) tstring.data(), tstring.length(), myBIGNUM); \
+     rsaStruct->tstring = myBIGNUM; }
++
++  // since openssl uses blinding, we have to set 'e' even if this is the
++  // private key
++  BIGNUM *myExponent = BN_new();
++  BN_set_word(myExponent,DEFAULT_EXPONENT);
++  rsaStruct->e = myExponent;
++
+     if (isPublicKey()) {
+         BIGNUM *myModulus = BN_new();
+-        BIGNUM *myExponent = BN_new();
+-        BN_set_word(myExponent,DEFAULT_EXPONENT);
+-        myModulus = BN_bin2bn((unsigned char*) modulus.data(), modulus.length(), myModulus);
++        myModulus = BN_bin2bn((unsigned char*) modulus.data(), 
++							  modulus.length(), myModulus);
+         rsaStruct->n = myModulus;
+-        rsaStruct->e = myExponent;
+     } else {
+         BIGNUM *myBIGNUM;
+         NEXT(n);

@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openhbci
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.2 2003/04/29 10:16:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.3 2003/06/03 21:24:47 liquidx Exp $
+
+*openhbci-0.9.9-r1 (03 Jun 2003)
+
+  03 Jun 2003; Alastair Tse <liquidx@gentoo.org> openhbci-0.9.9-r1.ebuild,
+  files/openhbci-0.9.9-rsa.patch:
+  added added patch to fix crashes with openssl 0.9.6h. thanks to Andreas Grüner
+  <andreas.gruener@tiscali.de> (#21294)
 
 *openhbci-0.9.9 (28 Apr 2003)
 
