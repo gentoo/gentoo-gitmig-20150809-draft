@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.4 2002/06/09 03:08:16 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.5 2002/06/16 16:39:18 verwilst Exp $
+
+*mysql-3.23.49-r2 (16 June 2002)
+
+  16 June 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+  Made sure that mysql compiled on gentoo 1.3+ as well, where db 4.0.14 is 
+  the default... Stayed off 3.23.50, whoever updates mysql next, please 
+  take my changes here in account as well plz
 
 *mysql-3.23.50 (8 Jun 2002)
 
