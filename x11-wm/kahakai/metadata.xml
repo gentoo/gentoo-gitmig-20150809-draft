@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>desktop-wm</herd>
+	<longdescription>
+	Kahakai is a fork of the Waimea window manager, adding scripting support 
+	for many languages through SWIG.
+	</longdescription>	
+</pkgmetadata>
