@@ -76,6 +76,7 @@ app-admin/webconfig
 
 #untested/not approved stuff, please do not use
 >=sys-apps/portage-1.9_pre1
+>=sys-apps/portage-1.8.8
 
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
