@@ -1,5 +1,5 @@
 # this qt hasn't been tested
-=x11-libs/qt-x11-2.3.1
+#=x11-libs/qt-x11-2.3.1
 
 # this requires the incompatible readline version 4.2
 >=sys-apps/bash-2.05
@@ -13,6 +13,7 @@
 # incompatible
 >=sys-libs/readline-4.2
 >sys-devel/automake-1.4-r2
+>=media-libs/mesa-glue-3.5
 
 # broken
 app-admin/powertweak
@@ -72,6 +73,6 @@ app-text/sgml2x
 # broken
 >=media-gfx/autotrace-0.26
 # untested
->=x11-base/xfree-4.1.0
+>=x11-base/xfree-4.1.0-r1
 # incompatible
 >=sys-devel/autoconf-2.50
