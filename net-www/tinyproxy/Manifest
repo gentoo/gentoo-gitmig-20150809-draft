@@ -1,3 +1,4 @@
+MD5 6d67844acf09501fbfc18ef59bb3942e tinyproxy-1.6.1.ebuild 1093
 MD5 2326d76d63bb506ae68f6cf89ade9f31 files/digest-tinyproxy-1.6.1 67
-MD5 6e5302f00066c6a22ec97a0ccd669300 ChangeLog 646
-MD5 42ac545d2c980e1c421a27baa2e18146 tinyproxy-1.6.1.ebuild 1014
+MD5 85d9c918c5e1182678028b84550df4b3 files/tinyproxy.rc 457
+MD5 6997191ae33373777c17250443977678 ChangeLog 728
