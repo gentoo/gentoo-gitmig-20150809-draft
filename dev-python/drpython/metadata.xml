@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<longdescription>
+DrPython is a highly customizable, simple, and clean  
+editing environment for developing Python  programs. It 
+is intended primarily for use in schools, and is a tribute to 
+DrScheme.
+</longdescription>
+</pkgmetadata>

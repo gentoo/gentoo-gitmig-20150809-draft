@@ -1,0 +1,11 @@
+--- /var/tmp/portage/drpython-3.6.10/work/drpython-3.6.10/drpython.py	2004-11-08 19:36:14.000000000 -0800
++++ /var/tmp/abeni/drpython.py	2004-11-12 20:38:24.414029432 -0800
+@@ -42,6 +42,8 @@
+ 
+ #franz: stat is not used
+ import os.path, sys, os, shutil, re, string, operator, locale
++import wxversion
++wxversion.select("2.5")
+ import wx, wx.stc
+ import drScrolledMessageDialog
+ from drText import DrText

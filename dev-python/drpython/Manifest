@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea835f1b49e73aa262e074026f1176eb drpython-3.6.10.ebuild 799
+MD5 948a940cc7f534cf1b0b136f02d51a66 metadata.xml 381
+MD5 20a46f619886dffeb93090025663a035 ChangeLog 441
+MD5 fa7811eea5250f43772dc4601161c384 files/drpython.py-3.6.10.patch 403
+MD5 9c765d518e830b13bb56bd19d9fee8ae files/digest-drpython-3.6.10 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl0oe2jLqHNfbg2URAmpSAJ9saRTgGh6eGWqODL93HPtNcUarHgCfU2eE
+pVL5IUkdZGufaVl7GK8i2Ms=
+=2qcl
+-----END PGP SIGNATURE-----

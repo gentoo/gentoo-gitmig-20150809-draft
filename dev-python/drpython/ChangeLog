@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/drpython
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.1 2004/11/14 12:05:41 lucass Exp $
+
+*drpython-3.6.10 (14 Nov 2004)
+
+  14 Nov 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
+  +files/drpython.py-3.6.10.patch, +drpython-3.6.10.ebuild:
+  Initial import. Closing #55370. Thanks for help to Rob Cakebread.
+
