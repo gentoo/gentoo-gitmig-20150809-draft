@@ -1,7 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.80 2004/12/03 11:17:22 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.81 2004/12/06 15:43:52 zypher Exp $
 
+  06 Dec 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.14.ebuild:
+  Added Keyword ~ppc
+  
 *transcode-0.6.14 (15 Nov 2004)
 
   03 Dec 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.14.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.2 2004/12/03 11:17:22 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.3 2004/12/06 15:43:52 zypher Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jakemsr.com/transcode/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame freetype \
 	gtk imagemagick jpeg lzo mjpeg mpeg network oggvorbis pvm quicktime \
 	sdl sse theora v4l xvid xml2"
