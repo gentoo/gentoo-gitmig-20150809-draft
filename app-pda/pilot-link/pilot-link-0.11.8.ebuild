@@ -1,15 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.6 2003/12/14 01:11:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.7 2004/04/07 19:23:34 vapier Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="suite of tools for moving data between a Palm device and a desktop"
-SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 HOMEPAGE="http://www.pilot-link.org/"
+SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="perl java tcltk python png readline"
 
@@ -56,7 +56,7 @@ src_compile() {
 	# java fails w/emake
 	make || die
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/bindings/Perl
 		perl-module_src_prep
 		perl-module_src_compile
@@ -68,7 +68,7 @@ src_install() {
 
 	dodoc ChangeLog README doc/README* doc/TODO NEWS AUTHORS
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd ${S}/bindings/Perl
 		perl-module_src_install
 	fi
