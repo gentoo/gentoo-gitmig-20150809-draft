@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.12.ebuild,v 1.2 2003/09/10 18:59:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.12.ebuild,v 1.3 2003/11/14 20:06:50 seemant Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ IUSE="nls"
 DEPEND=">=games-util/qstat-25
 	=x11-libs/gtk+-1.2*
 	sys-devel/libtool
-	sys-apps/bzip2
+	app-arch/bzip2
 	media-libs/gdk-pixbuf"
 RDEPEND="nls? ( sys-devel/gettext )"
 
