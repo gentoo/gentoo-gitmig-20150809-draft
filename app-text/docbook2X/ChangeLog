@@ -1,8 +1,11 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.7 2003/01/03 06:44:01 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.8 2003/01/31 16:02:00 ykoehler Exp $
 
 *docbook2X-0.6.1-r1 (03 Jan 2003)
+
+  31 Jan 2003; Yannick Koehler <ykoehler@gentoo.org> :
+  Corrected syntax error in package description.
 
   03 Jan 2003; Matthew Turk <satai@gentoo.org> :
   changed to install everything as ${exe}.pl, to thus avoid the conflicts
@@ -12,6 +15,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *docbook2X-0.6.1 (1 Feb 2002)
+
+  31 Jan 2003; Yannick Koehler <ykoehler@gentoo.org> :
+  Corrected syntax error in package description.
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> docbook2X-0.6.1.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
