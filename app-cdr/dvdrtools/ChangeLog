@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/dvdrtools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.1 2003/03/19 16:05:13 carpaski Exp $
+
+*app-cdr/dvdrtools-0.1.4 (19 Mar 2003)
+
+  19 Mar 2003; Nicholas Jones <carpaski@gentoo.org> :
+  Initial ebuild submission.
