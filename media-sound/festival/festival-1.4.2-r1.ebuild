@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.1 2002/10/23 21:24:23 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r1.ebuild,v 1.2 2002/11/06 15:28:08 vapier Exp $
 
 S=${WORKDIR}/${PN}
 T=${WORKDIR}/speech_tools
@@ -39,15 +39,13 @@ KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="${DEPEND}"
-
 src_compile() {
 	cd ${T}
 	# This came from upstream as a quick fix to compile with gcc-3x
 	patch -p1 < ${FILESDIR}/${P}.patch || die
 
-	econf || die
-	# static inking seems to work <rigo@home.nl>
+	econf
+	# static linking seems to work <rigo@home.nl>
 	
 	if [ ${GCCPV} != "2.95.3" ] ; then
 		echo "COMPILERLIBS=/usr/lib/gcc-lib/i686-pc-linux-gnu/${GCCPV}/libstdc++.a /usr/lib/gcc-lib/i686-pc-linux-gnu/${GCCPV}/libgcc_s.so.1" >> ${T}/config/config
@@ -66,7 +64,7 @@ src_compile() {
 	emake || die
 
 	cd ${S}
-	econf || die
+	econf
 	pushd src/arch/festival/
 	cp festival.cc festival.cc.orig
 	sed -e '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' \
@@ -92,8 +90,7 @@ src_compile() {
 		bin/text2wave.orig > bin/text2wave
 }
 
-src_install () {
-
+src_install() {
 	# Install the binaries
 	cd ${WORKDIR}/festival/src/main
 	dobin festival
@@ -193,26 +190,19 @@ src_install () {
 ; American female
 ;(set! voice_default 'voice_us1_mbrola)
 EOF
-
 }
 
 pkg_postinst() {
-
 	einfo
-	einfo '#########################################################'
-	einfo '#                                                       #'
-	einfo '#     To test festival, simply type:                    #'
-	einfo '#         "saytime"                                     #'
-	einfo '#                                                       #'
-	einfo '#     Or for something more fun:                        #'
-	einfo '#         "echo "Gentoo can speak" | festival --tts"    #'
-	einfo '#                                                       #'
-	einfo '#     A sample ~/.festivalrc is provided in             #'
-	einfo '#         /usr/lib/festival/festivalrc                  #'
-	einfo '#                                                       #'
-	einfo '#     Emerge mbrola to enable some additional voices    #'
-	einfo '#                                                       #'
-	einfo '#########################################################'
+	einfo '    To test festival, simply type:'
+	einfo '        "saytime"'
 	einfo
-
+	einfo '    Or for something more fun:'
+	einfo '        "echo "Gentoo can speak" | festival --tts"'
+	einfo
+	einfo '    A sample ~/.festivalrc is provided in'
+	einfo '        /usr/lib/festival/festivalrc'
+	einfo
+	einfo '    Emerge mbrola to enable some additional voices'
+	einfo
 }
