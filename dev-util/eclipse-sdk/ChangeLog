@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.76 2004/12/24 01:40:45 karltk Exp $
+# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.77 2005/01/28 17:54:31 greg_g Exp $
+
+  28 Jan 2005; Gregorio Guidi <greg@gentoo.org> eclipse-sdk-3.0.1-r2.ebuild,
+  eclipse-sdk-3.1_pre4.ebuild:
+  Avoid installing things in /usr/kde.
 
 *eclipse-sdk-3.1_pre4 (24 Dec 2004)
 

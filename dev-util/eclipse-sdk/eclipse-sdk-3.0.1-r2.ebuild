@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.3 2004/11/24 18:30:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r2.ebuild,v 1.4 2005/01/28 17:54:31 greg_g Exp $
 
 inherit eutils java-utils
 
@@ -331,10 +331,8 @@ function install-desktop-entry() {
 
 	# Install KDE .desktop file
 	if use kde ; then
-		for x in /usr/kde/* ; do
-			insinto ${x}/share/applnk/Applications/
-			doins eclipse-${SLOT}.desktop
-		done
+		insinto /usr/share/applnk/Development
+		doins eclipse-${SLOT}.desktop
 	fi
 }
 
