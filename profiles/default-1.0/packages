@@ -1,3 +1,5 @@
+# This file created automagically by ./generate-packages.sh on Mon Apr 15 01:01:36 CEST 2002
+
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
 # OK; you're staring at this file and you have no idea what these stars are
@@ -68,7 +70,7 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*sys-apps/grub
+#*sys-apps/grub
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/iptables
@@ -164,3 +166,18 @@
 >=net-www/squid-2.4.2s-r6
 >=net-dialup/ppp-2.4.1-r6
 <=sys-apps/tcp-wrappers-7.6-r3
+
+# These lines added by ./generate-packages.sh ---------------------------------
+#
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-1.0/packages,v 1.19 2002/04/15 02:18:14 murphy Exp $
+#
+# SPARC specific packages
+*sys-apps/sparc-utils
+*sys-apps/silo
+
+# Not working, and should only be in 64
+#*sys-devel/sparc-egcs64
+
+# Fixes bug#1726
+>=sys-devel/patch-2.5.4-r4
+# End of lines added by ./generate-packages.sh --------------------------------
