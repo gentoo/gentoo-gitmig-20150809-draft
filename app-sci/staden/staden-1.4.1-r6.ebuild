@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r6.ebuild,v 1.3 2004/09/18 23:13:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r6.ebuild,v 1.4 2004/09/19 00:57:09 ribosome Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="${PN}"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc emboss"
+IUSE="doc"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
@@ -29,8 +29,6 @@ RDEPEND="app-shells/ksh
 	dev-tcltk/iwidgets
 	media-libs/libpng
 	virtual/x11"
-
-PDEPEND="emboss? ( app-sci/staden-emboss )"
 
 S=${WORKDIR}/${PN}-src-rel-${PV//./-}
 
@@ -219,6 +217,7 @@ src_compile() {
 	# Remove the prebuilt EMBOSS tcl/tk GUIs.
 	rm ${S}/tables/emboss_menu
 	rm -r ${S}/lib/spin2_emboss/acdtcl
+	rm -r ${S}/lib/spin_emboss/acdtcl
 
 	# Patch just built hypertext documentation.
 	cd ${S}/doc/manual
