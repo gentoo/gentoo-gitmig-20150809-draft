@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <bart.verwilst@pandora.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.0.1-r1.ebuild,v 1.5 2001/10/03 17:10:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.0.1-r1.ebuild,v 1.6 2001/10/05 13:34:41 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
-inherit kde-base kde-objprelink || die
+inherit kde-base || die
 
 DESCRIPTION="KDevelop ${PV}"
 HOMEPAGE="www.kdevelop.org"
