@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.13 2003/06/22 05:45:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r4.ebuild,v 1.14 2003/06/22 05:48:51 drobbins Exp $
 
 IUSE="nls pic build"
 
@@ -50,7 +50,7 @@ LICENSE="LGPL-2"
 
 # Portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 # Drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND="=sys-devel/gcc-3.2*
+DEPEND=">=sys-devel/gcc-3.2
 	>=sys-devel/binutils-2.13.90.0.16
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
