@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-benh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.5 2003/03/07 20:38:20 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.6 2003/03/23 17:54:36 pylon Exp $
+
+*ppc-sources-benh-2.4.20-r9 (23 Mar 2003)
+
+  23 Mar 2003; Lars Weiler <pylon@gentoo.org>
+  ppc-sources-benh-2.4.20-r9.ebuild:
+  version bump
 
 *ppc-sources-benh-2.4.20-r8 (07 Mar 2003)
 
