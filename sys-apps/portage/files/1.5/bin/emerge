@@ -91,18 +91,32 @@ class depgraph:
 			mygraph.delnode(mycurkey)
 		return retlist
 	
-	def syscreate(self,mylines):
+	def syscreate(self,mylines,update=0):
 		for x in mylines:
 			myline=string.join(string.split(x))
 			if not len(myline):
 				continue
 			if myline[0]=="#":
 				continue
-			mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
-			if not mykey:
-				print "\n!!! Warning: couldn't find match for",myline,"\n"
-				continue
-			self.create(portage.root+" "+mykey)
+			if not update:
+				mycheck=self.db[portage.root]["vartree"].depcheck(myline)
+				if mycheck[0]==0:
+					print "\n!!! Warning:",myline,"has an invalid depstring\n"
+					continue
+				if mycheck[1]==None:
+					continue
+				for x in mycheck[1]:
+					mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
+					if not mykey:
+						print "\n!!! Warning: couldn't find match for",myline,"\n"
+						continue
+					self.create(portage.root+" "+mykey)
+			else:
+				mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
+				if not mykey:
+						print "\n!!! Warning: couldn't find match for",myline,"\n"
+						continue
+				self.create(portage.root+" "+mykey)
 			
 	def display(self,mylist):
 		for x in mylist:
@@ -122,6 +136,8 @@ class depgraph:
 			self.db[x[0]]["vartree"].inject(x[1])
 
 pretend=0
+sysmode=0
+updmode=0
 if len(sys.argv)>=2:
 	if sys.argv[1]=="--pretend":
 		print
@@ -132,13 +148,18 @@ if len(sys.argv)>=2:
 	elif sys.argv[1]=="--help":
 		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
 		sys.exit(1)
-	if sys.argv[1]=="system":
+	if sys.argv[1] in ["system","update"]:
+		sysmode=1
+		if sys.argv[1]=="update":
+			updmode=1
+	#system profile mode
+	if sysmode: 
 		myfile=open(portage.root+"etc/make.profile/packages","r")
 		mylines=myfile.readlines()
 		myfile.close()
 		mydepgraph=depgraph()
 		print "Calculating system dependencies",
-		mydepgraph.syscreate(mylines)
+		mydepgraph.syscreate(mylines,updmode)
 		print " done!"
 		if pretend:
 			mydepgraph.display(mydepgraph.altlist())
@@ -146,6 +167,7 @@ if len(sys.argv)>=2:
 			mydepgraph.merge(mydepgraph.altlist())
 		sys.exit(0)
 
+#standard single mode
 for mypkg in sys.argv[1:]:
 	if len(mypkg)<=7:
 		print ">>> Error: short ebuild name, skipping..."
