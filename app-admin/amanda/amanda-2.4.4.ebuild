@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.2 2003/06/26 22:01:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.3 2003/06/26 22:04:32 robbat2 Exp $
 
 inherit eutils 
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -27,7 +27,6 @@ DEPEND="sys-libs/readline
 		berkdb? ( sys-libs/db )
 		gdbm? ( sys-libs/gdbm )
 		xfs? ( sys-apps/xfsdump )"
-		
 
 IUSE="pic debug gdbm berkdb samba xfs"
 
@@ -137,7 +136,10 @@ src_install() {
 	dodoc ${S}/docs/*
 	prepalldocs
 
-	use xfs && mkdir -p ${D}/var/xfsdump/inventory
+	if use xfs; then
+		dodir ${D}/var/xfsdump/inventory
+		mkdir -p ${D}/var/xfsdump/inventory
+	fi
 
     # einfo "Installing Amandahosts File for ${AMANDA_SERVER}"
     insinto ${AMANDA_USER_HOMEDIR}
