@@ -1,9 +1,6 @@
 # ChangeLog for media-sound/waif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.16 2004/07/19 22:58:01 eradicator Exp $
-
-  19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> :
-  ~sparc ~amd64wfxmms /home/jeremy/gentoo/sounds/xmms_segfault.mp3
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.17 2004/07/20 01:53:43 eradicator Exp $
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> waif-0.59.7.ebuild:
   ~sparc ~amd64
