@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23-r1.ebuild,v 1.4 2004/06/25 15:59:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.23-r1.ebuild,v 1.5 2004/07/19 23:49:51 squinky86 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"

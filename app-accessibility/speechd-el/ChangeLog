@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.4 2004/06/24 21:24:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.5 2004/07/19 23:56:45 squinky86 Exp $
+
+  19 Jul 2004; Jon Hood <squinky86@gentoo.org> speechd-el-0.4.ebuild:
+  stable on x86
 
 *speechd-el-0.4 (18 Jun 2004)
 
