@@ -45,7 +45,6 @@ flash - Adds support for creating flash files using Ming
 gb - Adds support for Gnome Basic to gnumeric
 gd - Adds support for sys-libs/gdbm (GNU database libraries)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
-gettext - Adds support for the GNU locale utilities
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
 glide - Adds media-libs/glide support to Xfree86
@@ -77,7 +76,7 @@ mcrypt
 mga
 mhash
 mitshm
-mmx
+mmx - Adds support for optimisations for Pentium MMX and Athlon class processors
 motif
 mozaccess-builtin
 mozctl
@@ -86,13 +85,13 @@ mozirc
 mozxmlterm
 mta
 mysql
-nas
+nas - Adds support for network audio sound
 ncurses
-nls
+nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus
 objprelink
 odbc
-oggvorbis
+oggvorbis - Adds support for the OggVorbis audio encoding
 opengl
 oss
 pam
