@@ -236,42 +236,42 @@ OUTPUT_PKGS_FAILED=""
 for pkg in ${PKGS_FAILED}; do OUTPUT_PKGS_FAILED="${OUTPUT_PKGS_FAILED} \=$pkg"; done
 
 if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
-   ewarn " "
+   echo
    ewarn "************************************************************"
    ewarn "* Packages that still need to be manually emerged :        *"
    ewarn "************************************************************"
    if [ -n "${OUTPUT_PKGS_MASKED}" ]; then
-      ewarn " "
+      echo
       ewarn " Masked Packages:"
 	  ewarn " ----------------"
       ewarn " Unmask the following packages (at your own risk) and  "
       ewarn " emerge them using this command after removing the '-p'"
       ewarn " parameter."
-      ewarn " "
+      echo
       ewarn " emerge -p ${OUTPUT_PKGS_MASKED}"
-      ewarn " "
+      echo
    fi
    if [ -n "${OUTPUT_PKGS_MISSING}" ]; then
-      ewarn " "   
+      echo
       ewarn " Missing Packages:"
 	  ewarn " -----------------"
       ewarn " These packages need to be updated because their versions do"
       ewarn " not exist in portage anymore."
-      ewarn " "
+      echo
       for x in ${OUTPUT_PKGS_MISSING}; do 
          echo "   ${x}"
       done
    fi
    if [ -n "${OUTPUT_PKGS_FAILED}" ]; then
-      ewarn " "   
+      echo
       ewarn " Failed Packaged:"
 	  ewarn " ----------------"
       ewarn " These packages have failed and need to be re-emerged again."
 	  ewarn " Alternatively, try re-running this script again to see if it"
 	  ewarn " can be fixed."
-      ewarn " "
+      echo
       ewarn " emerge -p ${OUTPUT_PKGS_FAILED}"
-      ewarn " "
+      echo
    fi
    
    elog "Python update completed with errors."
