@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.109 2004/06/29 16:28:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.110 2004/06/29 17:36:09 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysql-3.23.52-r1.ebuild,
+  mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild,
+  mysql-4.0.12.ebuild, mysql-4.0.13-r4.ebuild, mysql-4.0.14-r1.ebuild,
+  mysql-4.0.14-r2.ebuild, mysql-4.0.14.ebuild, mysql-4.0.15-r1.ebuild,
+  mysql-4.0.15.ebuild, mysql-4.0.16.ebuild, mysql-4.0.17.ebuild,
+  mysql-4.0.18-r1.ebuild, mysql-4.0.18-r2.ebuild, mysql-4.0.18.ebuild,
+  mysql-4.0.19.ebuild, mysql-4.0.20.ebuild:
+  remove bogus use sparc64
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysql-3.23.56.ebuild,
   mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild, mysql-4.0.12.ebuild:

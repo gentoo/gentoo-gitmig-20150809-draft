@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.18 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.19 2004/06/29 17:36:09 agriffis Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -50,7 +50,7 @@ src_compile() {
 	myconf="--with-thread-safe-client"
 # The following fix is due to a bug with bdb on sparc's. See: 
 # http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
-	if use sparc || use sparc64
+	if use sparc
 	then
 		myconf="${myconf} --without-berkeley-db"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.7 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20.ebuild,v 1.8 2004/06/29 17:36:09 agriffis Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -98,7 +98,7 @@ src_compile() {
 
 	#The following fix is due to a bug with bdb on sparc's. See:
 	#http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
-	if use sparc || use sparc64 || use alpha || use hppa || use mips
+	if use sparc || use alpha || use hppa || use mips
 	then
 		myconf="${myconf} --without-berkeley-db"
 	else
