@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b6cf159c7fc6998244095afffd1c87c1 gcc-config-1.3.7-r3.ebuild 1426
-MD5 7d2fe90bde1fc09514181aafbcd340db ChangeLog 12772
+MD5 5af7f23de1f7b79d6a6edc6facb481f3 ChangeLog 13007
 MD5 0a250a07d02f1343f64fe7f7bbdbd820 gcc-config-1.3.6-r4.ebuild 2636
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+MD5 2d0140e7f438c795905ea1e75d443a16 gcc-config-1.3.7-r4.ebuild 1426
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.6-r4 0
 MD5 2902e905147ff6ba0703f0f72660aa9a files/wrapper-1.4.3.c 8434
 MD5 5f5ba2d67203ed8386ae76352f15000d files/gcc-config-1.3.6 10285
-MD5 124a5e345bbd70ad6cd9ca2b8e8d4e6d files/gcc-config-1.3.7 11797
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.7-r4 0
+MD5 63e3b7a19daaa9442cc9fc21807f5e69 files/gcc-config-1.3.7 11815
 MD5 e64a89abafa7f6f7d16c2540fb0edcf4 files/wrapper-1.4.2.c 7381
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.7-r3 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBr9LmroRuSHgZdywRAkE8AJ93tys8ySdf5h7i6NzIDvS5RTBiKQCfVcFi
-fIWIuB0dg0WwsGneimtClq0=
-=O/nb
+iD8DBQFBsN1KroRuSHgZdywRAnfxAJ4tNK0Us0D38qSL/OU2fJymBqSywwCfU3/K
++Rlw0hukf0rTWb2a0xdnuz0=
+=VNRD
 -----END PGP SIGNATURE-----
