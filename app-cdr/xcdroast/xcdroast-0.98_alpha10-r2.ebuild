@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r1.ebuild,v 1.2 2002/06/12 03:23:49 lamer Exp
 
 S=${WORKDIR}/xcdroast-0.98alpha10
