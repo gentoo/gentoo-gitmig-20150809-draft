@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.9 2002/10/20 06:43:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.10 2002/11/25 04:39:33 vapier Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
@@ -23,6 +23,9 @@ INHERITED="$INHERITED $ECLASS"
 #### strip-flags ####
 # Strip C[XX]FLAGS of everything except known
 # good options.
+#
+#### get-flag <flag> ####
+# Find and echo the value for a particular flag
 #
 
 filter-flags () {
@@ -109,3 +112,13 @@ strip-flags() {
 	export CXXFLAGS="${NEW_CXXFLAGS}"
 }
 
+get-flag() {
+	local findflag="$1"
+
+	for f in ${CFLAGS} ${CXXFLAGS} ; do
+		if [ "${f/${findflag}}" != "${f}" ] ; then
+			echo "${f/-${findflag}=}"
+			return
+		fi
+	done
+}
