@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.11 2004/04/13 18:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.12 2004/04/15 02:37:21 vapier Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -67,7 +67,7 @@ src_compile() {
 		${myconf} \
 		|| die "configure failed"
 
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
