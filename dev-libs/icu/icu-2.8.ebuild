@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.8.ebuild,v 1.3 2004/04/19 23:50:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.8.ebuild,v 1.4 2004/05/05 09:15:28 dholm Exp $
 
 S=${WORKDIR}/${PN}/source
 DESCRIPTION="IBM Internationalization Components for Unicode"
@@ -9,7 +9,7 @@ HOMEPAGE="http://oss.software.ibm.com/icu/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~alpha"
+KEYWORDS="~x86 ~amd64 ~alpha ~ppc"
 
 DEPEND="virtual/glibc"
 
