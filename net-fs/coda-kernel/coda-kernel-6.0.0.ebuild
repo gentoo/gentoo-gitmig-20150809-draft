@@ -14,6 +14,7 @@ RESTRICT="nostrip"
 SLOT="${KV}"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.4"
 
