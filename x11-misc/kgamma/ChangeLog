@@ -2,6 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
 
+*kgamma-0.9 (25 May 2002)
+
+  25 May 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  New upstream version.
+
 *kgamma-0.2.3 (2 May 2002)
 
   2 May 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
