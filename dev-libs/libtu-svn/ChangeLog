@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/libtu-svn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.1 2004/04/12 11:48:10 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.2 2004/04/27 12:23:02 aliz Exp $
 
-*libtu-svn (12 Apr 2004)
+*libtu-svn-20040412 (12 Apr 2004)
 
   12 Apr 2004; Tom Payne <twp@gentoo.org> libtu-svn-20040412.ebuild :
   Initial release.

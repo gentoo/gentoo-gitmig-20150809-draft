@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/vanessa-logger
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.4 2004/04/26 01:19:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.5 2004/04/27 12:23:02 aliz Exp $
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   vanessa-logger-0.0.4_beta2.ebuild:
@@ -14,7 +14,7 @@
   vanessa-logger-0.0.4_beta2.ebuild:
   add ~alpha and ~ia64
 
-*vanessa-logger-0.0.4_beta2.ebuild (14 Mar 2003)
+*vanessa-logger-0.0.4_beta2 (14 Mar 2003)
 
   14 Mar 2003; George Shapovalov <george@gentoo.org> vanessa-logger-0.0.4_beta2.ebuild, files/digest-vanessa-logger-0.0.4_beta2 :
   initial release (#17401)
