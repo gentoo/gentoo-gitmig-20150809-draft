@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.0.ebuild,v 1.1 2003/04/17 13:42:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.0.ebuild,v 1.2 2003/06/15 18:31:25 mholzer Exp $
 
 IUSE="cups opengl"
 
@@ -122,6 +122,8 @@ src_install () {
 	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	rm ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	doman ${D}/usr/lib/${PN}/man/man5/wine.conf.5
+	rm ${D}/usr/lib/${PN}/man/man5/wine.conf.5
 
 	# Remove the executable flag from those libraries.
 	cd ${D}/usr/lib/winex-cvs/bin
