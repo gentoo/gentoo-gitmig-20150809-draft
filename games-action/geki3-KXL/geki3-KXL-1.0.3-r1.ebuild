@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/geki3-KXL-1.0.3-r1.ebuild,v 1.3 2004/02/20 06:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki3-KXL/geki3-KXL-1.0.3-r1.ebuild,v 1.4 2004/04/19 20:30:42 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://kxl.hn.org/"
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE=""
 
 DEPEND=">=dev-games/KXL-1.1.7"
 

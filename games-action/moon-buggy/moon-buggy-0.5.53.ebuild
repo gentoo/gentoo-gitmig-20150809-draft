@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53.ebuild,v 1.7 2004/03/19 21:11:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53.ebuild,v 1.8 2004/04/19 20:35:19 wolf31o2 Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.mathematik.uni-kl.de/~wwwstoch/voss/data/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
+IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5"
 DEPEND="${RDEPEND}

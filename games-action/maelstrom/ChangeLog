@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.8 2003/12/12 09:31:27 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.9 2004/04/19 20:33:48 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> maelstrom-3.0.5.ebuild,
+  maelstrom-3.0.6-r1.ebuild, maelstrom-3.0.6.ebuild:
+  Added IUSE.
 
   12 Dec 2003; Jon Portnoy <avenj@gentoo.org> maelstrom-3.0.6-r1.ebuild :
   AMD64 keywords.

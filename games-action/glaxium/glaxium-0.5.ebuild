@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.7 2004/02/29 09:20:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/glaxium-0.5.ebuild,v 1.8 2004/04/19 20:31:39 wolf31o2 Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -11,6 +11,7 @@ SRC_URI="http://xhosxe.free.fr/glaxium/glaxium_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
+IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5
 	>=media-libs/sdl-mixer-1.2.4

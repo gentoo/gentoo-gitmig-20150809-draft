@@ -1,6 +1,9 @@
 # ChangeLog for games-action/nighthawk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.4 2004/03/19 09:49:20 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.5 2004/04/19 20:37:55 wolf31o2 Exp $
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> nighthawk-2.2.ebuild:
+  Added IUSE.
 
   28 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> nighthawk-2.2.ebuild:
   use games eclass (bug 34644); inherit eutils for epatch; patch in src_unpack;
