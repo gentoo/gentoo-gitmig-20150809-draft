@@ -29,10 +29,10 @@
 # Spider <spider@gentoo.org> (04 Aug 2002)
 # seems that stroke got theese released before my changed ebuilds made it into the tree
 # theese remove debugging information from the builds, and change libtool behaviour.
-=dev-libs/glib-2.0.6-r1
-=x11-libs/gtk+-2.0.6-r1
-=x11-libs/pango-1.0.4-r1
-=dev-libs/atk-1.0.3-r1
+>=dev-libs/glib-2.0.6
+>=x11-libs/gtk+-2.0.6
+>=x11-libs/pango-1.0.4
+>=dev-libs/atk-1.0.3
 
 # Donny Davies <woodchip@gentoo.org> (03 Aug 2002)
 # Needs to wait for the next baselayout release.
@@ -100,7 +100,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1172 2002/08/04 10:21:15 carpaski Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1173 2002/08/04 10:25:52 stroke Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -1014,9 +1014,3 @@ app-cdr/eroaster
 # masked for testing
 =net-misc/udhcp-0.9.7
 
-# stroke@gentoo.org 4 Aug 2002
-# masked for testing
-=dev-libs/glib-2.0.6
-=dev-libs/atk-1.0.3
-=x11-libs/pango-1.0.4
-=x11-libs/gtk+-2.0.6
