@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.7 2004/02/21 19:55:25 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.8 2004/03/18 06:51:56 zx Exp $
+
+  18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> java-gtk-0.7.1.ebuild,
+  java-gtk-0.8.3.ebuild:
+  Clean up and classpath fix for bug #44990
 
 *java-gtk-0.8.3 (23 Feb 2004)
 

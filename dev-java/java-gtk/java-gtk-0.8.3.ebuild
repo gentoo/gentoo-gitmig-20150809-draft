@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.2 2004/03/01 06:38:45 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.3 2004/03/18 06:51:56 zx Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 SLOT="0.8"
 IUSE=""
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 S=${WORKDIR}/libgtk-java-${PV}
 
@@ -41,6 +41,6 @@ src_install() {
 	echo "DESCRIPTION=${DESCRIPTION}" \
 		> ${D}/usr/share/${PN}/package.env
 
-	echo "/usr/share/java-gnome/lib/gtk${SLOT}.jar"\
+	echo "CLASSPATH=/usr/share/java-gnome/lib/gtk${SLOT}.jar"\
 		>> ${D}/usr/share/${PN}/package.env
 }
