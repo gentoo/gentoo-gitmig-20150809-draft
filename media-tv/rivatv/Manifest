@@ -1,17 +1,27 @@
-MD5 3c1d7a7472102743a7d4a97b3cea7197 ChangeLog 2466
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89838e35d28b232894c7ebc8a9de1850 ChangeLog 2717
 MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
-MD5 d6c057012342f9fd519e1d5b9cb2f4f4 rivatv-0.8.0-r1.ebuild 1211
-MD5 f22ce71616a423134a471f36c31f9b79 rivatv-0.8.1.ebuild 1208
-MD5 581ce8ffa84cbe395da824d00e262650 rivatv-0.8.2.ebuild 991
-MD5 733c0df37974b897641be505bbbede50 rivatv-0.8.3.ebuild 1151
-MD5 712e7967445dcac7279162530eae81f9 rivatv-0.8.4.ebuild 1049
-MD5 ec5155f0710249497b26d2bdf9f868f7 rivatv-0.8.5-r1.ebuild 2442
-MD5 d286c2bc95ffe9237101f9c66155c995 rivatv-0.8.5.ebuild 1048
+MD5 91985a16ce121b0357f13cac7ff06f77 rivatv-0.8.0-r1.ebuild 1190
+MD5 3ced533304f863eb0423aa83ca3ed2ad rivatv-0.8.1.ebuild 1187
+MD5 2529b8221049913d7daa60cf99ebda97 rivatv-0.8.2.ebuild 970
+MD5 2a1e65d98b76518fdc6d120b5801554c rivatv-0.8.3.ebuild 1130
+MD5 81eb5a155668cc894508dee246c4f762 rivatv-0.8.4.ebuild 1028
+MD5 ebcd4bc7a981fb4cc9859028b04d8117 rivatv-0.8.5-r1.ebuild 2421
+MD5 7d4ad281585e9fe8b749dfbc1e62cfe8 rivatv-0.8.5.ebuild 1027
 MD5 94dc3c0091e479d11d285de52267521d files/digest-rivatv-0.8.0-r1 63
 MD5 c70f4f5b9e57a7ab53345aa005ac3733 files/digest-rivatv-0.8.1 64
 MD5 675738a65f00503869783cd7f88ce0b1 files/digest-rivatv-0.8.2 64
 MD5 b8ad0ea54d8eaf1691d5e98e1bf8a15b files/digest-rivatv-0.8.3 64
 MD5 acf3e72cc79919b0614cf5b2970274a5 files/digest-rivatv-0.8.4 64
-MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5 64
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r1 64
+MD5 f6b7a21ad2968b561a94db1b084fad7d files/rivatv-0.8.3-configure.patch 429
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD4DBQFBK/wzI1lqEGTUzyQRArPeAJiI/5QAlpvESMDszmuaVC8mmo7dAJ9gZSfE
+Rv78dwOyic4dPPnjk22ZIg==
+=Cf70
+-----END PGP SIGNATURE-----

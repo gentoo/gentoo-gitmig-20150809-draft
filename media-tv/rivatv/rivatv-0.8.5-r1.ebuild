@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r1.ebuild,v 1.1 2004/07/11 14:31:31 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.5-r1.ebuild,v 1.2 2004/08/25 02:40:43 swegener Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/rivatv/${P/_/-}.tar.gz"
+SRC_URI="mirror://sourceforge/rivatv/${P/_/-}.tar.gz"
 HOMEPAGE="http://rivatv.sourceforge.net/"
 DEPEND="virtual/x11
 	>=virtual/linux-sources-2.4.17"
