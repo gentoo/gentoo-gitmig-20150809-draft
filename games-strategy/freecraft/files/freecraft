@@ -12,4 +12,4 @@ if [ ! -d GENTOO_DATADIR/data/music ] ; then
 	exit 1
 fi
 
-freecraft -d GENTOO_DATADIR/data "$@"
+GENTOO_LIBDIR/freecraft -d GENTOO_DATADIR/data "$@"
