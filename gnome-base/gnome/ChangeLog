@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.98 2004/03/22 23:55:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.99 2004/03/24 04:53:44 leonardop Exp $
+
+*gnome-2.6_rc3 (23 Mar 2004)
+
+  23 Mar 2004; L. Boshell <leonardop@gentoo.org> gnome-2.6_rc3.ebuild:
+  Including accessibility packages.
 
 *gnome-2.6_rc2 (22 Mar 2004)
 

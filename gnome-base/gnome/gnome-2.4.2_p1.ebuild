@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.4 2004/03/17 22:47:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.5 2004/03/24 04:53:44 leonardop Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -111,7 +111,7 @@ RDEPEND="!gnome-base/gnome-core
 	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
 
-	accessibility? ( >=gnome-extra/libgail-gnome-1.0.2
+	accessibility? ( >=gnome-extra/libgail-gnome-1.0.3
 		>=gnome-extra/at-spi-1.3.16
 		>=app-accessibility/gnome-speech-0.3.2
 		>=app-accessibility/gnome-mag-0.10.9

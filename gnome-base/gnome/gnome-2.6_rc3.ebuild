@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc3.ebuild,v 1.1 2004/03/24 01:36:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_rc3.ebuild,v 1.2 2004/03/24 04:53:44 leonardop Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -106,16 +106,16 @@ RDEPEND="!gnome-base/gnome-core
 	>=net-analyzer/gnome-netstatus-2.5.92
 
 	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.7 )
-	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.7 )"
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.7 )
 
-#	accessibility? (
-#		>=gnome-extra/libgail-gnome-1.0.3
-#		>=gnome-base/gail-1.5.8
-#		at-spi
-#		gnome-speech
-#		gnome-mag
-#		gok
-#		gnopernicus )"
+	accessibility? (
+		>=gnome-extra/libgail-gnome-1.0.3
+		>=gnome-base/gail-1.6.0
+		>=gnome-extra/at-spi-1.4.0
+		>=app-accessibility/gnome-speech-0.3.2-r1
+		>=app-accessibility/gnome-mag-0.10.10
+		>=app-accessibility/gok-0.10.0
+		>=app-accessibility/gnopernicus-0.8.0 )"
 
 # gst stuff
 #	>=gnome-extra/nautilus-media-0.7
