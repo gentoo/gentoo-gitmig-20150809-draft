@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.81.1.ebuild,v 1.2 2004/04/21 06:02:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.81.1.ebuild,v 1.3 2004/06/06 23:21:50 agriffis Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -172,7 +172,7 @@ src_compile() {
 		emake DISPLAY_METHOD=xgl || die "emake failed (xgl)"
 		disp=1
 	fi
-	if  [ ${disp} -eq 0 ] || [ ! -z "`use X``use dga``use xv`" ] ; then
+	if  [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
@@ -208,7 +208,7 @@ src_install() {
 		make DISPLAY_METHOD=xgl install || die "install failed (xgl)"
 		disp=1
 	fi
-	if [ ${disp} -eq 0 ] || [ ! -z "`use X``use dga``use xv`" ] ; then
+	if [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
 
@@ -220,7 +220,7 @@ src_install() {
 
 	if use opengl ; then
 		dosym "${TARGET}.xgl" "${GAMES_BINDIR}/${TARGET}"
-	elif [ ! -z "`use X``use dga``use xv`" -o ${disp} -eq 0 ] ; then
+	elif [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
@@ -235,7 +235,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Your available MAME binaries are: ${TARGET}"
-	[ ! -z "`use X``use dga``use xv`" ] && einfo " ${TARGET}.x11"
+	if use X || use dga || use xv ; then
+		einfo " ${TARGET}.x11"
+	fi
 	use sdl > /dev/null                 && einfo " ${TARGET}.SDL"
 	use ggi > /dev/null                 && einfo " ${TARGET}.ggi"
 	use svga > /dev/null                && einfo " ${TARGET}.svgalib"
