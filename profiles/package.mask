@@ -356,10 +356,6 @@ dev-db/mergeant
 # and could be a security hole.
 =sys-apps/shadow-4.0.3-r4
 
-# <woodchip@gentoo.org> (23 Feb 2003)
-# It is alpha after all.
->=net-fs/samba-3.0_alpha
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
