@@ -2,6 +2,8 @@ MD5 87c040780ce54f11d32d5c68503216a7 ChangeLog 3456
 MD5 9e83cd63031aacb590ce182d99935cc9 bluez-libs-2.10.ebuild 642
 MD5 bb5e63a53a97752bbd9dabf3e68e45c4 bluez-libs-2.7.ebuild 531
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
+MD5 7a6aa98ad03ad3f4901a422eb20cb8ec bluez-libs-2.12.ebuild 643
 MD5 3582cb4d2e7e3578ac75f23798b13d25 files/digest-bluez-libs-2.10 67
 MD5 e9e80d4297e7ac6f8e8018d52f9a082c files/digest-bluez-libs-2.7 66
+MD5 de3e6042ceea4fbca926d59617ffdb36 files/bluez-libs-2.10-handsfree.patch 1030
+MD5 1cdc7bca3add1c6f448e180a44f506e4 files/digest-bluez-libs-2.12 67

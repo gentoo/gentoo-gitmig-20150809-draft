@@ -1,0 +1,19 @@
+--- bluez-libs-2.12/src/sdp.c.old	2004-12-20 19:08:56.489679664 +0000
++++ bluez-libs-2.12/src/sdp.c	2004-12-20 19:09:25.125326384 +0000
+@@ -107,6 +107,8 @@
+ 	{ GENERIC_TELEPHONY_SVCLASS_ID, "Generic Telephony" },
+ 	{ PANU_SVCLASS_ID,              "PAN user" },
+ 	{ NAP_SVCLASS_ID,               "Network access point" },
++	{ HANDSFREE_SVCLASS_ID,         "Handsfree"},
++	{ HANDSFREE_AUDIO_GW_SVCLASS_ID,"Handsfree Audio Gateway"},
+ 	{ GN_SVCLASS_ID,                "PAN group network" },
+ 	{ HID_SVCLASS_ID,               "Human Interface Device" },
+ 	{ CIP_SVCLASS_ID,               "Common ISDN Access" },
+@@ -133,6 +135,7 @@
+ 	{ PANU_PROFILE_ID,               "PAN user" },
+ 	{ NAP_PROFILE_ID,                "PAN access point" },
+ 	{ GN_PROFILE_ID,                 "PAN group network" },
++	{ HANDSFREE_PROFILE_ID,          "Handsfree"},
+ 	{ HID_PROFILE_ID,                "Human Interface Device" },
+ 	{ CIP_PROFILE_ID,                "Common ISDN Access" },
+ 	{ SAP_PROFILE_ID,                "SIM Access" },
