@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6106.ebuild,v 1.2 2004/07/06 14:42:12 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/emul-linux-x86-nvidia-1.0.6106.ebuild,v 1.3 2004/07/07 01:14:02 cyfred Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "Currently if you need to use 32 bit compatibility libraries"
-	einfo "you will need to set the LD_CONFIG_PATH variable"
+	einfo "you will need to set the LD_LIBRARY_PATH variable"
 	einfo " LD_LIBRARY_PATH=\"/usr/lib32/opengl/nvidia/lib\" <command>"
 	einfo
 }
