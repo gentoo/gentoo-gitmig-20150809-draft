@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.66.ebuild,v 1.2 2004/04/11 17:35:18 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.66.ebuild,v 1.3 2004/06/13 02:18:57 pyrania Exp $
 
 DESCRIPTION="MS-Explorer like file manager for X"
 HOMEPAGE="http://sourceforge.net/projects/xfe/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE="nls"
 
-DEPEND="x11-libs/fox"
+# fox-1.1* is incompatible
+DEPEND="=x11-libs/fox-1.0*"
 
 src_compile() {
 	econf `use_enable nls` || die
