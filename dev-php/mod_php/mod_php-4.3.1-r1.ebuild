@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.10 2003/03/09 02:33:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.11 2003/03/17 03:14:17 nakano Exp $
 
 inherit flag-o-matic 
 
@@ -125,14 +125,11 @@ src_compile() {
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
+	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 	use spell && myconf="${myconf} --with-pspell"
 	use gd && myconf="${myconf} --with-gd=/usr"
-
-	if [ "`use png`" ] ; then
-		myconf="${myconf} --with-png-dir=/usr/lib"
-	fi
+	use png && myconf="${myconf} --with-png-dir=/usr"
 
 	# And zlib, but we need to know if the user wants it - Quequero
 	if [ "`use zlib`" ] ; then
