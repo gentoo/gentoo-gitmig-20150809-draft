@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>net-dialup</herd>
 <maintainer>
 <email>spyderous@gentoo.org</email>
 <name>Donnie Berkholz</name>
+<description>Has PCI hardware for non ebuild/compile errors</description>
+</maintainer>
+<maintainer>
+<email>dragonheart@gentoo.org</email>
+<name>Daniel Black</name>
+<description>Strained brain getting kmod eclass compliant. Will fix ebuild/script errors</description>
 </maintainer>
 </pkgmetadata>

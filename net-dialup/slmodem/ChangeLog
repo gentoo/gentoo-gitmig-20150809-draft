@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.18 2004/08/02 02:51:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.19 2004/08/02 03:21:13 dragonheart Exp $
+
+  02 Aug 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
+  metadata updated. Dual maintence with spyderous
 
 *slmodem-2.9.9-r1 (02 Aug 2004)
 
