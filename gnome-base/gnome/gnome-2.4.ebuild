@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.ebuild,v 1.1 2003/09/12 19:53:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.ebuild,v 1.2 2003/09/13 00:27:35 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="as-is"
 SLOT="2.0"
+
+IUSE="cdr doc"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -98,9 +100,11 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=app-text/scrollkeeper-0.3.12
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.27.2"
+	>=dev-util/intltool-0.27.2
+	cdr? ( >=gnome-extra/nautilus-cd-burner-0.5.3 )
+	doc? ( >=dev-util/gtk-doc-0.15 )"
 
-# nautilus-cd-burner, accesibility stuff, gtk-doc (?)
+# accesibility still missing
 
 pkg_postinst () {
 	einfo "note that to change windowmanager to metacity do: "
