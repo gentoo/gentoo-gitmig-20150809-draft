@@ -1,4 +1,4 @@
-MD5 295d6fe1880cca289580a535916b4a7d ChangeLog 54229
+MD5 12fc896a86473a04933557fb75fdc8ca ChangeLog 54477
 MD5 784b3e3150529826ac47e99ec3514f90 apache-1.3.29-r2.ebuild 7178
 MD5 f35b6a00cbfa7ddd39face3420cd4fc6 apache-1.3.31-r1.ebuild 6739
 MD5 9a5242011f95057c3afabf1cc3973f11 apache-1.3.31-r2.ebuild 6864
@@ -13,8 +13,8 @@ MD5 451d45c9613e9ed7ee770085a8e28ef8 apache-2.0.51.ebuild 12831
 MD5 b1af5f9fb89636fb427805dfe9a3621c apache-2.0.52.ebuild 12834
 MD5 a419841198cd6a94b9dcf2e07f3c15b7 metadata.xml 617
 MD5 0bc87f432d6353df99d4ca1192dbb607 apache-2.0.52-r2.ebuild 12298
-MD5 7160ac34e063b1ed70f5f262d3e29135 apache-1.3.33-r1.ebuild 8626
-MD5 70484c05ffdffabd0c2e07a23db03b08 apache-2.0.52-r3.ebuild 11548
+MD5 7ee11979b35fe1539a4feb3d6c6b613c apache-1.3.33-r1.ebuild 8632
+MD5 cfed33fca49802175fe800d41f6bbd19 apache-2.0.52-r3.ebuild 11624
 MD5 625b80716912a469762650ef8480fde5 apache-2.0.52-r1.ebuild 12893
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
 MD5 998b4b7df08eb15641e0b9132443b365 files/apache-1.3.27-apachectl.patch 1328
@@ -52,8 +52,8 @@ MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
 MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
 MD5 710e7291039a6cba132568e32daede8a files/digest-apache-2.0.52-r2 213
-MD5 975bf0a5232f78d45ab4d3c8dca2ac8f files/digest-apache-1.3.33-r1 286
-MD5 891f842545098a8eca9fa61cb91f6f4b files/digest-apache-2.0.52-r3 150
+MD5 79fe350dca5b488a1b0f396caeb43248 files/digest-apache-1.3.33-r1 286
+MD5 c600aeef0fc691794b759685d39de6d5 files/digest-apache-2.0.52-r3 150
 MD5 3d94c56af17136b6c408f076c32e0362 files/2.0.49/40_mod_ssl.conf 3213
 MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
 MD5 819ee444395cf42ccc8009529a94af37 files/2.0.49/45_mod_dav.conf 583

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.12 2005/02/20 08:09:29 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.13 2005/02/20 22:34:47 vericgar Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050218"
+GENTOO_PATCHSTAMP="20050220"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
@@ -163,9 +163,11 @@ src_install () {
 	# Credits to advx.org people for these scripts. Heck, thanks for
 	# the nice layout and everything else ;-)
 	exeinto /usr/sbin
-	for i in apache2logserverstatus apache2splitlogfile gentestcrt.sh; do
+	for i in apache2logserverstatus apache2splitlogfile; do
 		doexe ${GENTOO_PATCHDIR}/scripts/${i}
 	done
+	# gentestcrt.sh only if USE=ssl
+	useq ssl && doexe ${GENTOO_PATCHDIR}/scripts/gentestcrt.sh
 
 	# some more scripts
 	for i in split-logfile list_hooks.pl logresolve.pl log_server_status; do
@@ -264,7 +266,7 @@ src_install () {
 		cd /etc/apache2/ssl
 		einfo
 		einfo "Generating self-signed test certificate in /etc/apache2/ssl..."
-		yes "" 2>/dev/null | ${ROOT}/usr/sbin/gentestcrt.sh >/dev/null 2>&1
+		yes "" 2>/dev/null | ${D}/usr/sbin/gentestcrt.sh >/dev/null 2>&1
 		einfo
 	fi
 
