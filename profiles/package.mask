@@ -22,6 +22,10 @@
 ##
 
 
+# <satai@gentoo.org> (29 Sep 2002)
+# Waiting for freeze to end.
+=dev-util/cweb-3.63-r1
+
 # <azarah@gentoo.org> (28 Sep 2002)
 # Test please, as this is going to be the next stable
 # moz (also for galeon-1.2.6)
