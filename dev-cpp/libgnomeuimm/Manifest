@@ -1,5 +1,5 @@
-MD5 6a12f4fdfe65817cf2c3f066fba9f65c ChangeLog 1580
-MD5 f2de5a75b3e6ab30c55f63ffba01f22c libgnomeuimm-2.0.0.ebuild 811
+MD5 5dc34033ce817fb135cb0310e99ec8a7 ChangeLog 1685
+MD5 029a7c15b73b3af5c8e00a06ed70ac00 libgnomeuimm-2.0.0.ebuild 813
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c83a0a49099d8d0393c0aaff4cfffcfa files/digest-libgnomeuimm-2.0.0 70
 MD5 e4bafc3bf0fd1bb08c2fadcb67af456e files/libgnomeuimm-2.0.0-gcc2_fix.patch 1237
