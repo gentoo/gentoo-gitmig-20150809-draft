@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.3_pre1.ebuild,v 1.1 2004/02/22 00:45:06 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.3_pre1.ebuild,v 1.2 2004/03/06 14:44:58 zx Exp $
 
 inherit java-pkg
 
@@ -12,6 +12,7 @@ IUSE="jikes"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND=">=virtual/jdk-1.4
+		dev-java/ant
 		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
