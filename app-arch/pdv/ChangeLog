@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pdv
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.3 2003/09/25 16:52:13 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.4 2004/06/01 22:55:55 agriffis Exp $
+
+  01 Jun 2004; Aron Griffis <agriffis@gentoo.org> pdv-1.5.1.ebuild:
+  Fix use invocation
 
 *pdv-1.5.1 (09 Jul 2003)
 

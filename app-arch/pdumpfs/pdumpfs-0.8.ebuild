@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/pdumpfs-0.8.ebuild,v 1.3 2004/04/11 16:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/pdumpfs-0.8.ebuild,v 1.4 2004/06/01 22:56:26 agriffis Exp $
 
 DESCRIPTION="a daily backup system similar to Plan9's dumpfs"
 HOMEPAGE="http://www.namazu.org/~satoru/pdumpfs/"
@@ -19,7 +19,7 @@ src_install() {
 
 	doman man/man8/pdumpfs.8
 
-	if [ "`use cjk`" ]; then
+	if use cjk; then
 		insinto /usr/share/man/ja/man8
 		doins man/ja/man8/pdumpfs.8
 	fi

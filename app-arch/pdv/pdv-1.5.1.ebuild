@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1.ebuild,v 1.4 2004/03/12 11:11:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1.ebuild,v 1.5 2004/06/01 22:55:55 agriffis Exp $
 
 DESCRIPTION="build a self-extracting and self-installing binary package"
 HOMEPAGE="http://pdv.sourceforge.net/"
@@ -23,7 +23,7 @@ src_compile() {
 src_install() {
 	dobin pdv pdvmkpkg || die
 	doman pdv.1 pdvmkpkg.1
-	if [ `use X` ]; then
+	if use X; then
 		dobin X11/xmpdvmkpkg || die
 		doman xmpdvmkpkg.1 || die
 	fi
