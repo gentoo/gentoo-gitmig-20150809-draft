@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 779a1cc77583167d91cc3fae3f85a8d6 ChangeLog 502
+MD5 c67fd3f8583707aae590592aa2fe80b5 ChangeLog 585
 MD5 ba9ebaf4ae28e1f0e7b3a18f1dbabe6e cuetools-0.2.ebuild 599
-MD5 a31b0a7ce64dfa2748f168450e648e07 cuetools-0.6.ebuild 641
+MD5 cf762d6593383ebb57cab7c3c48544ec cuetools-0.6.ebuild 645
 MD5 20142ba6cc8d912a097a83128164d9f4 files/digest-cuetools-0.2 63
 MD5 3890e579ea3b17a19cd2ddb39f2e6baf files/digest-cuetools-0.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9cOyHTu7gpaalycRAm0+AJ9i1pDABcQ8EhEwEASJ16xv4I6OTgCdGsAz
-9taJ5/CxR21pBVl2Km2GlOI=
-=S8AF
------END PGP SIGNATURE-----
