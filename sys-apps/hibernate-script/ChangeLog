@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hibernate-script
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/ChangeLog,v 1.11 2005/03/02 21:06:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hibernate-script/ChangeLog,v 1.12 2005/03/12 11:55:23 brix Exp $
+
+  12 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -hibernate-script-1.00.ebuild, -hibernate-script-1.01.ebuild,
+  -hibernate-script-1.02-r1.ebuild, -hibernate-script-1.02.ebuild,
+  -hibernate-script-1.03.ebuild, -hibernate-script-1.04.ebuild:
+  Pruned old versions.
 
   02 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
   hibernate-script-1.05.ebuild:
