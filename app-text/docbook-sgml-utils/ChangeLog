@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.5 2002/08/22 18:17:28 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.6 2002/09/06 02:18:03 satai Exp $
+
+*docbook-sgml-utils-0.6.11-r2 (22 Aug 2002)
+
+  05 Sep 2002; Matthew Turk <satai@gentoo.org> :
+
+  Fixing the problem with the HTML docs.  Closing 5401, finally.
 
 *docbook-sgml-utils-0.6.11-r1 (22 Aug 2002)
 
