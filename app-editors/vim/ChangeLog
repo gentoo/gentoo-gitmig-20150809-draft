@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.82 2003/12/29 02:35:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.83 2004/01/28 23:21:59 rphillips Exp $
+
+*vim-6.2-r6 (28 Jan 2004)
+
+  28 Jan 2004; <rphillips@gentoo.org> vim-6.2-r6.ebuild:
+  added -r6 with patche up to 214
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> vim-6.2-r5.ebuild:
   Move to mips stable (~mips -> mips)
