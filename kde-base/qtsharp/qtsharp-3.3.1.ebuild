@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/qtsharp-3.3.1.ebuild,v 1.1 2004/11/06 17:23:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/qtsharp-3.3.1.ebuild,v 1.2 2004/11/07 03:01:34 mr_bones_ Exp $
 
 KMNAME=kdebindings
 inherit kde-meta
@@ -12,6 +12,6 @@ IUSE=""
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
-    ewarn "This package is considered broken by upstream. You're on your own."
-    ewarn "This won't build. Portage doesn't have a csant ebuild yet."
+	ewarn "This package is considered broken by upstream. You're on your own."
+	ewarn "This won't build. Portage doesn't have a csant ebuild yet."
 }

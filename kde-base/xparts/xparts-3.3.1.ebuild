@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.1 2004/11/06 17:23:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.2 2004/11/07 03:02:13 mr_bones_ Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
@@ -16,9 +16,9 @@ DEPEND="=dev-libs/glib-1.2*
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
-    ewarn "This is considered to be broken by upstream. You're on your own."
+	ewarn "This is considered to be broken by upstream. You're on your own."
 }
-	
+
 src_unpack() {
 	kde-meta_src_unpack
 
@@ -35,4 +35,3 @@ src_unpack() {
 	fi
 	cd ${S} && make -f admin/Makefile.common
 }
-

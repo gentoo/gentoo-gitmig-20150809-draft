@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.3.1.ebuild,v 1.1 2004/11/06 17:23:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/kalyptus-3.3.1.ebuild,v 1.2 2004/11/07 02:59:44 mr_bones_ Exp $
 
 KMNAME=kdebindings
 inherit kde-meta
@@ -14,11 +14,11 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 # Weird build system, weirder errors.
 # You're welcome to fix this in a better way --danarmak
 src_compile () {
-    export S=$S/kalyptus
-    kde-meta_src_compile
+	export S=$S/kalyptus
+	kde-meta_src_compile
 }
 
 src_install() {
-    cd $S/kalyptus
-    make install DESTDIR=$D
+	cd $S/kalyptus
+	make install DESTDIR=$D
 }
