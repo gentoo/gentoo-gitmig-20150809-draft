@@ -696,3 +696,6 @@ x11-libs/gdkxft
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
 
+# agriffis@gentoo.org 29 Jul 2003
+# mask nforce-net-1.0.0261 for bug 24815
+=net-misc/nforce-net-1.0.0261*
