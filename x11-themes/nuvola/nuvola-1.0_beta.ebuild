@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0_beta.ebuild,v 1.2 2004/06/24 23:36:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0_beta.ebuild,v 1.3 2004/06/30 22:52:20 jhuebel Exp $
 
 inherit kde
 need-kde 3
@@ -11,7 +11,7 @@ DESCRIPTION="Nuvola SVG evolution of SKY icon theme."
 SRC_URI="http://www.icon-king.com/files/${MY_P}.tgz"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=5358"
 
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
 LICENSE="LGPL-2"
 
 SLOT="0"
