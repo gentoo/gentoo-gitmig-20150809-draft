@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.2 2005/02/01 05:38:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.3 2005/02/04 00:10:39 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -206,7 +206,7 @@ switch_profile() {
 		local ref=${ROOT}/${GCC_BIN_PATH}/${x}
 		[[ ${x} = "cc" ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
 		if [[ -x ${ref} ]] ; then
-			${CP} -f "${ROOT}/usr/libexec/gcc-config/wrapper" \
+			${CP} -f "${ROOT}/usr/lib/misc/gcc-config" \
 			         "${ROOT}/usr/bin/${x}"
 			touch -r "${ref}" "${ROOT}/usr/bin/${x}"
 
@@ -214,7 +214,7 @@ switch_profile() {
 			# This should probably get folded back into the wrapper ...
 			if [[ ${x:${#x}-3} = "gcc" ]] || [[ ${x:${#x}-3} = "g++" ]] ; then
 				for bits in ${GCCBITS} ; do
-					cp -f "${ROOT}/usr/libexec/gcc-config/wrapper" \
+					cp -f "${ROOT}/usr/lib/misc/gcc-config" \
 						"${ROOT}/usr/bin/${x}${bits}"
 				done
 			fi
@@ -223,7 +223,7 @@ switch_profile() {
 	# Only install cpp if switching to a native one
 	if ! is_cross_compiler ; then
 		${RM} -f "${ROOT}/lib/cpp"
-		${CP} -f "${ROOT}/usr/libexec/gcc-config/wrapper" "${ROOT}/lib/cpp"
+		${CP} -f "${ROOT}/usr/lib/misc/gcc-config" "${ROOT}/lib/cpp"
 	fi
 
 	# We need to make sure that libgcc_s.so makes it into /lib.
