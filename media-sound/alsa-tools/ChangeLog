@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/alsa-lib
+# ChangeLog for media-sound/alsa-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.9 2002/11/20 02:29:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.10 2002/12/17 19:41:56 vapier Exp $
 
 *alsa-tools-0.9.0_rc6 (19 Nov 2002)
 
