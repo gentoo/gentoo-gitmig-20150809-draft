@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/swarmcache
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swarmcache/ChangeLog,v 1.1 2005/01/06 23:17:04 luckyduck Exp $
+
+*swarmcache-1.0_pre20050106 (07 Jan 2005)
+
+  07 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +swarmcache-1.0_pre20050106.ebuild:
+  Initial import. Ebuild based on the contribution of Dan
+  <dan@intuitivelyobvious.net>. Fixes bug #67417.
+
