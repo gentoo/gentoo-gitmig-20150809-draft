@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.4 2004/06/25 00:42:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.5 2004/06/29 12:10:27 carlo Exp $
+
+  29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kdenlive-0.2.4.ebuild:
+  QA: IUSE, need-kde after R/DEPEND
 
   19 Mar 2004; Jason Wever <weeve@gentoo.org> kdenlive-0.2.4.ebuild:
   Added digest for kdenlive-0.2.4 ebuild.
