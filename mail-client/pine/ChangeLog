@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.5 2004/06/24 22:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.6 2004/06/30 06:58:58 merlin Exp $
+
+  30 Jun 2004; Cory Visi <merlin@gentoo.org> pine-4.50-r4.ebuild,
+  pine-4.58-r1.ebuild, pine-4.58-r2.ebuild, pine-4.58-r3.ebuild,
+  pine-4.58.ebuild, pine-4.60.ebuild:
+  Removed mailcap install to fix Bug 50433 in all versions
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> pine-4.60.ebuild:
   Fix use invocation

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.3 2004/06/24 22:17:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.4 2004/06/30 06:58:58 merlin Exp $
 
 inherit eutils
 
@@ -122,7 +122,9 @@ src_install() {
 
 	insinto /etc
 	doins doc/mime.types
-	donewins doc/mailcap.unx mailcap
+
+	# Only mailbase should install /etc/mailcap
+#	donewins doc/mailcap.unx mailcap
 
 	dodoc CPYRIGHT README doc/brochure.txt doc/tech-notes.txt
 	use mbox || dodoc README.maildir
