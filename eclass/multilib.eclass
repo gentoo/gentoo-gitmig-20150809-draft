@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.4 2005/01/12 20:27:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.5 2005/01/12 22:39:44 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -255,7 +255,7 @@ create_ml_includes() {
 			for dir in ${basedirs}; do
 				if [ -f "${D}/${dir}/${file}" ]; then
 					echo "#ifdef $(create_ml_includes-sym_for_dir ${dir} ${mlinfo})"
-					echo "#include \"$(create_ml_includes-relative_between ${dest} ${dir})/${file}\""
+					echo "#include \"$(create_ml_includes-relative_between ${dest}/$(dirname ${file}) ${dir}/${file})\""
 					echo "#endif /* $(create_ml_includes-sym_for_dir ${dir} ${mlinfo}) */"
 					echo ""
 				fi
@@ -267,19 +267,59 @@ create_ml_includes() {
 }
 
 # Helper function for create_ml_includes
-# TODO: This needs to be updated to spit out relative paths...
 create_ml_includes-relative_between() {
-	local from=${1}
-	local to=${2}
-	
-	strip_duplicate_slashes "${ROOT}${to}"
+	local src="$(create_ml_includes-tidy_path ${1})"
+	local dst="$(create_ml_includes-tidy_path ${2})"
+
+	src=(${src//\// })
+	dst=(${dst//\// })
+
+	local i
+	for ((i=0; i<${#src[*]}; i++)); do
+		[ "${dst[i]}" != "${src[i]}" ] && break
+	done
+
+	local common=$i
+
+	for ((i=${#src[*]}; i>common; i--)); do
+		echo -n ../
+	done
+
+	for ((i=common; i<${#dst[*]}-1; i++)); do
+		echo -n ${dst[i]}/
+	done
+
+	echo -n ${dst[i]}
 }
 
 # Helper function for create_ml_includes
-strip_duplicate_slashes () {
+create_ml_includes-tidy_path() {
+	local removed="${1}"
+
 	if [ -n "${1}" ]; then
-		local removed=${1/\/\//\/}
-		[ ${removed} != ${removed/\/\//\/} ] && removed=$(strip_duplicate_slashes "${removed}")
+		# Remove multiple slashes
+		while [ "${removed}" != "${removed/\/\//\/}" ]; do
+			removed=${removed/\/\//\/}
+		done
+
+		# Remove . directories
+		while [ "${removed}" != "${removed//\/.\//\/}" ]; do
+			removed=${removed//\/.\//\/}
+		done
+		[ "${removed##*/}" = "." ] && removed=${removed%/*}
+
+		# Removed .. directories
+		# I wonder if there's a non-trivial bashism for this one...
+		while [ "${removed}" !=  "$(echo ${removed} | sed -e 's:[^/]*/\.\./::')" ]; do
+			removed=$(echo ${removed} | sed -e 's:[^/]*/\.\./::')
+		done
+
+		# Remove trailing ..
+		removed=$(echo ${removed} | sed -e 's:/[^/]*/\.\.$::')
+
+		# Remove trailing /
+		[ "${removed##*/}" = "" ] && removed=${removed%/*}
+		
 		echo ${removed}
 	fi
 }
