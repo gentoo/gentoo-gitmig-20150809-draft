@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.79 2004/06/19 16:10:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.80 2004/06/19 16:36:19 usata Exp $
+
+  20 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> libgtkhtml-3.0.10-r1.ebuild:
+  keyword reset sparc to ~sparc.
 
 *libgtkhtml-3.0.10-r1 (20 Jun 2004)
 
