@@ -55,7 +55,12 @@ stop() {
 	wget --spider ${BASE}/submit?q=close_fds -q 
 	wget --spider ${BASE}/submit?q=save -q 
 	wget --spider ${BASE}/submit?q=kill -q 
-	sleep 10
+	# give it a chance to die:
+	local timeout=10
+	while [ $timeout -gt 0 ] && pgrep -u ${USER} mlnet &>/dev/null; do
+		sleep 1
+		let 'timeout--'
+	done
 	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet &>/dev/null
 	eend $?
 }

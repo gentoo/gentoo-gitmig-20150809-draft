@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r9.ebuild,v 1.1 2004/11/23 20:11:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r9.ebuild,v 1.2 2004/11/29 18:45:40 squinky86 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~ia64 hppa"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 hppa"
 
 RDEPEND="gtk? ( =dev-ml/lablgtk-1* )
 	>=dev-lang/ocaml-3.08

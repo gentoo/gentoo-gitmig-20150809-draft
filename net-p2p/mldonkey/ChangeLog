@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.76 2004/11/23 20:11:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.77 2004/11/29 18:45:40 squinky86 Exp $
+
+  29 Nov 2004; Jon Hood <squinky86@gentoo.org> files/mldonkey.initd,
+  -mldonkey-2.5.16-r7.ebuild, -mldonkey-2.5.16-r8.ebuild,
+  mldonkey-2.5.16-r9.ebuild, -mldonkey-2.5.28-r3.ebuild,
+  -mldonkey-2.5.28.ebuild:
+  2.5.16-r9 stable on x86 due to older versions getting banned, new init
+  script from Martin Bays <gentoo_bugz@zugzwang.port5.com>, #65245,
+  cleanup old ebuilds.
 
 *mldonkey-2.5.16-r9 (23 Nov 2004)
 
