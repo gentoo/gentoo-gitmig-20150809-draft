@@ -1,20 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r1.ebuild,v 1.1 2002/06/29 14:57:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r1.ebuild,v 1.2 2002/07/01 20:13:48 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
 SRC_URI="mirror://sourceforge/jocr/${P}.tar.gz"
 HOMEPAGE="http://altmark.nat.uni-magdeburg.de/~jschulen/ocr/"
 
-DEPEND="virtual/glibc
+RDEPEND=">=media-libs/netpbm-9.12-r1"
+
+DEPEND="${RDEPEND}
 	app-text/tetex
-	app-text/ghostscript
-	>=media-libs/netpbm-9.12-r1"
-
-RDEPEND="virtual/glibc
-	>=media-libs/netpbm-9.12-r1"
-
+	app-text/ghostscript"
 
 SLOT=""
 LICENSE="GPL"
@@ -44,41 +41,36 @@ src_unpack() {
 
 src_compile() {
 
-	export CFLAGS="${CFLAGS} -I/usr/include/pbm"
-	./configure --prefix=/usr --host=${CHOST} || die
+	econf || die
+	make
 	make src frontend database
-	use tetex && (\
+	use tetex && ( \
 		addwrite "/usr/share/texmf"
-		make \ 
-			prefix=${D}/usr \
-			sysconfdir=/${D}/etc \
-			mandir=${D}/usr/share/man \
-			datadir=${D}/usr/share \					
-			doc || die 
+		make examples || die
 	)
 }
 
 src_install () {
 
-	dobin bin/gocr
-	exeinto /usr/bin
-	doexe bin/gocr.tcl
-	dolib.a src/libPgm2asc.a
-	a
-	insinto /usr/include
-	doins src/gocr.h
-	insinto /usr/share/gocr/db
-	doins db/*
-	doman man/man1/gocr.1
-	dodoc AUTHORS BUGS CREDITS HISTORY README* REMARK.txt REVIEW TODO gpl.html
-	docinto txt
-	dodoc doc/*.txt
+	einstall || die
+#	dobin bin/gocr
+#	exeinto /usr/bin
+#	doexe bin/gocr.tcl
+#	dolib.a src/libPgm2asc.a
+#	insinto /usr/include
+#	doins src/gocr.h
+#	insinto /usr/share/gocr/db
+#	doins db/*
+#	doman man/man1/gocr.1
+#	dodoc AUTHORS BUGS CREDITS HISTORY README* REMARK.txt REVIEW TODO gpl.html
+#	docinto txt
+#	dodoc doc/*.txt
 
-	use tetex && ( \
-		insinto /usr/share/gocr/db
-		docinto ps
-		dodoc doc/ocr.ps
-	)
+#	use tetex && ( \
+#		insinto /usr/share/gocr/db
+#		docinto ps
+#		dodoc doc/ocr.ps
+#	)
 
 }
 
