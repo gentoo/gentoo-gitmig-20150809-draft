@@ -1,6 +1,9 @@
-# ChangeLog for net-dialup/pptp-php-gtk
+# ChangeLog for net-dialup/pptpconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.2 2004/09/27 13:39:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.3 2004/09/27 20:18:25 swegener Exp $
+
+  27 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *pptpconfig-20040722 (27 Sep 2004)
 
