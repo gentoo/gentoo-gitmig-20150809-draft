@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8.ebuild,v 1.1 2001/12/07 05:13:14 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8.ebuild,v 1.2 2002/03/21 15:34:18 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
@@ -34,5 +34,6 @@ src_install() {
 	make prefix=${D}/usr install || die
 
 	cd ${S}/doc
-	dodoc README* *.html *.txt BUGS FAQ
+	dodoc README* *.txt BUGS FAQ
+	dohtml *.html
 }

@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.2 2002/03/21 15:34:17 seemant Exp $
+
+*rxvt-2.7.8 (21 Mar 2002)
+ 
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> rxvt-2.7.8.ebuild :
+
+  HTML documentation no longer gzipped.
 
 *rxvt-2.7.8 (1 Feb 2002)
 
