@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.7 2003/03/24 03:18:55 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.8 2003/03/24 21:15:05 azarah Exp $
 
 IUSE="selinux"
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz
-    selinux? mirror://gentoo/${P}-selinux.patch.bz2"
+	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -28,31 +28,30 @@ RDEPEND=">=sys-libs/pam-0.75-r4
 
 
 pkg_preinst() {
-  	if [ -z "`use selinux`" ]
+	if [ -z "`use selinux`" ]
 	then 
-	     rm -f ${ROOT}/etc/pam.d/system-auth.new
+		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}
-
 	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
 	# else the session entries in /etc/pam.d/su never get executed, and
 	# pam_xauth for one, is then never used.  This should close bug #8831.
 	#
 	# <azarah@gentoo.org> (19 Oct 2002)
-	# (selinux doesn't like this patch. may fix later.)
 	use selinux || epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+	# (selinux doesn't like this patch. may fix later.)
 
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
 	epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
 
-	#necessary selinux patch
+	# Necessary selinux patch
 	use selinux && epatch ${DISTDIR}/${P}-selinux.patch.bz2
-
 }
 
 src_compile() {
@@ -110,40 +109,38 @@ src_install() {
 	insinto /etc/default
 	insopts -m0600
 	doins ${FILESDIR}/default/useradd
-
 # From sys-apps/pam-login now
-  	if [ -z "`use selinux`" ]
-	then
- #	insopts -m0644 ; doins ${FILESDIR}/login.defs
-	    insinto /etc/pam.d ; insopts -m0644
-	    cd ${FILESDIR}/pam.d
-	    for x in *              
-	      do
-	      [ -f ${x} ] && doins ${x}
-	    done
-	    newins system-auth system-auth.new
-	    newins shadow chage
-	    newins shadow chsh
-	    newins shadow chfn
-	    newins shadow useradd
-	    newins shadow groupadd
-	fi
-	cd ${S}
+#	insopts -m0644 ; doins ${FILESDIR}/login.defs
 
+	if [ -z "`use selinux`" ]
+	then
+		insinto /etc/pam.d ; insopts -m0644
+		for x in ${FILESDIR}/pam.d/*
+		do
+			[ -f ${x} ] && doins ${x}
+		done
+
+		cd ${FILESDIR}/pam.d
+		newins system-auth system-auth.new
+		newins shadow chage
+		newins shadow chsh
+		newins shadow chfn
+		newins shadow useradd
+		newins shadow groupadd
+	fi
+	
+	cd ${S}
 	# The manpage install is beyond my comprehension, and
 	# also broken. Just do it over.
 	rm -rf ${D}/usr/share/man/*
 	for x in man/*.[0-9]
 	do
-		[ -f ${x} ] || continue
-		local dir="${D}/usr/share/man/man${x##*.}"
-		mkdir -p ${dir}
-		cp ${x} ${dir}
+		[ -f ${x} ] && doman ${x}
 	done
 	
 	# Dont install the manpage, since we dont use
 	# login with shadow
-	#(selinux does, so we install the man pages in that case)
+	# (selinux does, so we install the man pages in that case)
 	use selinux || rm -f ${D}/usr/share/man/man1/login.*
 	# We use pam, so this is not applicable.
 	rm -f ${D}/usr/share/man/man5/suauth.*
@@ -163,28 +160,28 @@ src_install() {
 }
 
 pkg_postinst() {
-    if [ -z "`use selinux`" ]
-    then	
-	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
-	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
+	if [ -z "`use selinux`" ]
+	then	
+		local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
+		local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
-	if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
-	then
-		ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
-		ewarn "is being updated automatically. Your old "
-		ewarn "system-auth will be backed up as:"
-		ewarn
-		ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
-		echo
+		if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
+		then
+			ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
+			ewarn "is being updated automatically. Your old "
+			ewarn "system-auth will be backed up as:"
+			ewarn
+			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
+			echo
 		
-		cp -a ${ROOT}/etc/pam.d/system-auth \
-	              ${ROOT}/etc/pam.d/system-auth.bak;
-		mv -f ${ROOT}/etc/pam.d/system-auth.new \
-	              ${ROOT}/etc/pam.d/system-auth
-		rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
-	else
-		rm -f ${ROOT}/etc/pam.d/system-auth.new
+			cp -a ${ROOT}/etc/pam.d/system-auth \
+				${ROOT}/etc/pam.d/system-auth.bak;
+			mv -f ${ROOT}/etc/pam.d/system-auth.new \
+				${ROOT}/etc/pam.d/system-auth
+			rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
+		else
+			rm -f ${ROOT}/etc/pam.d/system-auth.new
+		fi
 	fi
-    fi
 }
 
