@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.62 2002/06/10 15:57:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.63 2002/06/18 16:25:11 g2boojum Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -142,7 +142,9 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-articles.xml > ${D}${WEBROOT}/index-articles.html || die
 	xsltproc $TEMPLATE xml/main-contract.xml > ${D}${WEBROOT}/index-contract.html || die
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
+	OLDROOT=${ROOT} ; unset ROOT
 	python python/genpkgxml.py ${T}/main-packages.xml || die
+	ROOT=${OLDROOT}
 	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
 	xsltproc $TEMPLATE xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	doins css/main-new.css css/resume.css
