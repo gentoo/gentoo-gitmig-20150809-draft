@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.7 2004/06/24 23:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.8 2004/07/03 22:43:38 fvdpol Exp $
 
 inherit eutils
 
 S=${WORKDIR}/bpmdj-2.0
 
 DESCRIPTION="Bpmdj, software for measuring the BPM of music and mixing"
-HOMEPAGE="http://bpmdj.strokemusic.org"
+HOMEPAGE="http://bpmdj.sourceforge.net/"
 SRC_URI="ftp://progpc26.vub.ac.be/pub/bpmdj/2.0/bpmdj-2.0.source.tgz
 	ftp://progpc26.vub.ac.be/pub/bpmdj/2.0/patch-2.0-to-2.0.1.gz"
 LICENSE="GPL-2"

@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.3.ebuild,v 1.3 2004/06/24 23:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.3.ebuild,v 1.4 2004/07/03 22:43:38 fvdpol Exp $
 
 DESCRIPTION="Bpmdj, software for measuring the BPM of music and mixing"
-HOMEPAGE="http://bpmdj.strokemusic.org"
+HOMEPAGE="http://bpmdj.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.source.tgz"
 RESTRICT="nomirror"
 
