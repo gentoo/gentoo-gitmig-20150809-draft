@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.10 2004/06/25 01:06:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.11 2004/07/08 23:35:58 kloeri Exp $
+
+  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
+  Stable on alpha.
 
   05 May 2004; Bryan Østergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
   Keyword ~alpha.
