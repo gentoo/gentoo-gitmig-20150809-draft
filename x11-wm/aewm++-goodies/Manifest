@@ -1,4 +1,5 @@
-MD5 3295ee3134c24120e3213a844b4a5a25 ChangeLog 448
-MD5 2495fa721013d6b88b58334c0840f4c7 aewm++-goodies-1.0.ebuild 929
+MD5 1dbe4d6faf4ffad5e48dad3a20f430ce ChangeLog 540
+MD5 079a3daf4bf58eeae364be64e8e994a3 aewm++-goodies-1.0.ebuild 933
+MD5 1b1b80021822585d8dbfbbe2cdbde62e metadata.xml 395
 MD5 c72a6ef4c8e075663a670c412947b7c7 files/aewm++-goodies-gcc3-gentoo.patch 2878
 MD5 e9d990dafb164f214da2cad9563f5579 files/digest-aewm++-goodies-1.0 70

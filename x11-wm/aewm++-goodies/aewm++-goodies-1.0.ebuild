@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.3 2003/09/06 04:16:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++-goodies/aewm++-goodies-1.0.ebuild,v 1.4 2004/01/08 02:05:03 avenj Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sapphire.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sapphire/${P/-/_}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 DEPEND="virtual/x11"
 
 S="${WORKDIR}/${PN/-/_}"
