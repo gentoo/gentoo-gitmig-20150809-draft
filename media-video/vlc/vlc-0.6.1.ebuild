@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.2 2003/08/05 17:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.3 2003/09/04 04:52:00 msterret Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -9,8 +9,8 @@
 
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
-      oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
-      wxwindows imlib mozilla dvb debug faad xosd matroska"
+	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
+	wxwindows imlib mozilla dvb debug faad xosd matroska"
 
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
@@ -53,7 +53,7 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/a52dec-0.7.4
 	>=media-libs/flac-1.1.0
 	>=media-libs/libdv-0.98
-        >=media-libs/libdvbpsi-0.1.3
+	>=media-libs/libdvbpsi-0.1.3
 	>media-video/ffmpeg-0.4.6
 	>media-libs/libmpeg2-0.3.1
 	>=media-video/mplayer-0.90"
@@ -64,9 +64,9 @@ DEPEND="X? ( virtual/x11 )
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
-    inherit kde-functions
-    set-kdedir 3
-    # $KDEDIR is now set to arts/kdelibs location
+	inherit kde-functions
+	set-kdedir 3
+	# $KDEDIR is now set to arts/kdelibs location
 fi
 
 src_unpack() {
@@ -98,9 +98,9 @@ src_compile(){
 	myconf="--disable-mga --enable-flac --with-gnu-ld"
 
 	#--enable-pth            GNU Pth support (default disabled)
-  	#--enable-st             State Threads (default disabled)
-  	#--enable-gprof          gprof profiling (default disabled)
-  	#--enable-cprof          cprof profiling (default disabled)
+	#--enable-st             State Threads (default disabled)
+	#--enable-gprof          gprof profiling (default disabled)
+	#--enable-cprof          cprof profiling (default disabled)
 	#--enable-mostly-builtin most modules will be built-in (default disabled)
 	#--disable-optimizations disable compiler optimizations (default enabled)
 	#--disable-altivec       disable AltiVec optimizations (default enabled on PPC)
@@ -142,17 +142,17 @@ src_compile(){
 
 	use truetype && myconf="${myconf} --enable-freetype"
 
-        use fbcon || myconf="${myconf} --disable-fb"
+	use fbcon || myconf="${myconf} --disable-fb"
 
-        use svga && myconf="${myconf} --enable-svgalib"
+	use svga && myconf="${myconf} --enable-svgalib"
 
 	use ggi && myconf="${myconf} --enable-ggi"
 
-        use 3dfx && myconf="${myconf} --enable-glide"
+	use 3dfx && myconf="${myconf} --enable-glide"
 
-        use aalib && myconf="${myconf} --enable-aa"
+	use aalib && myconf="${myconf} --enable-aa"
 
-        use oss || myconf="${myconf} --disable-oss"
+	use oss || myconf="${myconf} --disable-oss"
 
 	use esd && myconf="${myconf} --enable-esd"
 
@@ -180,7 +180,7 @@ src_compile(){
 
 	use joystick && myconf="${myconf} --enable-joystick"
 
-	use mozilla && \ 
+	use mozilla && \
 		myconf="${myconf} --enable-mozilla \
 		MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config \
 		XPIDL=/usr/bin/xpidl"
@@ -190,14 +190,14 @@ src_compile(){
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_6=1
 
-	# The buildorder.patch changes Makefile.am, so we need to 
+	# The buildorder.patch changes Makefile.am, so we need to
 	# run automake so the change is propogated
 	automake
 
 	econf ${myconf} || die "configure of VLC failed"
 
 	MAKEOPTS="${MAKEOPTS} -j1"
-        emake || die "make of VLC failed"
+	emake || die "make of VLC failed"
 }
 
 src_install() {

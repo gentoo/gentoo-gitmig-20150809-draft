@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.4 2003/08/05 17:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.5 2003/09/04 04:52:00 msterret Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet
@@ -11,8 +11,8 @@
 
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
-      oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
-      wxwindows imlib mozilla dvb matroska debug"
+	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
+	wxwindows imlib mozilla dvb matroska debug"
 
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
@@ -42,7 +42,7 @@ DEPEND="X? ( virtual/x11 )
 	mozilla? ( >=net-www/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 
+	oggvorbis? ( >=media-libs/libvorbis-1.0
 	             >=media-libs/libogg-1.0 )
 	qt? ( x11-libs/qt )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
@@ -54,7 +54,7 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/faad2-1.1
 	>=media-libs/flac-1.1.0
 	>=media-libs/libdv-0.98
-        >=media-libs/libdvbpsi-0.1.2
+	>=media-libs/libdvbpsi-0.1.2
 	>media-video/ffmpeg-0.4.6
 	>media-libs/libmpeg2-0.3.1
 	>=media-video/mplayer-0.90"
@@ -65,9 +65,9 @@ DEPEND="X? ( virtual/x11 )
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
-    inherit kde-functions
-    set-kdedir 3
-    # $KDEDIR is now set to arts/kdelibs location
+	inherit kde-functions
+	set-kdedir 3
+	# $KDEDIR is now set to arts/kdelibs location
 fi
 
 src_unpack() {
@@ -105,15 +105,15 @@ src_compile(){
 
 	use ggi && myconf="${myconf} --enable-ggi"
 
-        use 3dfx && myconf="${myconf} --enable-glide"
+	use 3dfx && myconf="${myconf} --enable-glide"
 
-        use svga && myconf="${myconf} --enable-svgalib"
+	use svga && myconf="${myconf} --enable-svgalib"
 
 	use sdl || myconf="${myconf} --disable-sdl"
 
-        use fbcon || myconf="${myconf} --disable-fb"
+	use fbcon || myconf="${myconf} --disable-fb"
 
-        use aalib && myconf="${myconf} --enable-aa"
+	use aalib && myconf="${myconf} --enable-aa"
 
 	use dvd \
 		&& myconf="${myconf} --enable-dvdread" \
@@ -125,7 +125,7 @@ src_compile(){
 
 	use alsa && myconf="${myconf} --enable-alsa"
 
-        use oss || myconf="${myconf} --disable-oss"
+	use oss || myconf="${myconf} --disable-oss"
 
 	use esd && myconf="${myconf} --enable-esd"
 
@@ -159,7 +159,7 @@ src_compile(){
 
 	use xvid && myconf="${myconf} --enable-xvid"
 
-	if [ "`use mozilla`" ]; then 
+	if [ "`use mozilla`" ]; then
 		myconf="${myconf} --enable-mozilla \
 			MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config \
 			XPIDL=/usr/bin/xpidl"

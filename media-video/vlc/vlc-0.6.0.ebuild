@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0.ebuild,v 1.4 2003/07/16 08:03:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0.ebuild,v 1.5 2003/09/04 04:52:00 msterret Exp $
 
-# NOTE: Some ideas for version specifics, etc...  have been referenced 
+# NOTE: Some ideas for version specifics, etc...  have been referenced
 # from the videolan.org ebuild.  Thanks guys!
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx matrox svga fbcon esd kde X alsa ggi oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc wxwindows imlib"
@@ -33,7 +33,7 @@ DEPEND="X? ( virtual/x11 )
 	mad? ( >=media-sound/mad-0.14.2b )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 
+	oggvorbis? ( >=media-libs/libvorbis-1.0
 	             >=media-libs/libogg-1.0 )
 	qt? ( x11-libs/qt )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
@@ -45,7 +45,7 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/faad2-1.1
 	>=media-libs/flac-1.1.0
 	>=media-libs/libdv-0.98
-        >=media-libs/libdvbpsi-0.1.2
+	>=media-libs/libdvbpsi-0.1.2
 	>media-video/ffmpeg-0.4.6
 	>media-libs/libmpeg2-0.3.1
 	>=media-video/mplayer-0.90"
@@ -62,13 +62,13 @@ DEPEND="X? ( virtual/x11 )
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
-    inherit kde-functions
-    set-kdedir 3
-    # $KDEDIR is now set to arts/kdelibs location
+	inherit kde-functions
+	set-kdedir 3
+	# $KDEDIR is now set to arts/kdelibs location
 fi
 
 src_unpack() {
-	
+
 	unpack ${A}
 	cd ${S}
 
@@ -107,17 +107,17 @@ src_compile(){
 
 	use ggi && myconf="${myconf} --enable-ggi"
 
-        use 3dfx && myconf="${myconf} --enable-glide"
+	use 3dfx && myconf="${myconf} --enable-glide"
 
-        use matrox && myconf="${myconf} --enable-mga"
+	use matrox && myconf="${myconf} --enable-mga"
 
-        use svga && myconf="${myconf} --enable-svgalib"
+	use svga && myconf="${myconf} --enable-svgalib"
 
 	use sdl || myconf="${myconf} --disable-sdl"
 
-        use fbcon || myconf="${myconf} --disable-fb"
+	use fbcon || myconf="${myconf} --disable-fb"
 
-        use aalib && myconf="${myconf} --enable-aa"
+	use aalib && myconf="${myconf} --enable-aa"
 
 	use dvd \
 		&& myconf="${myconf} --enable-dvdread" \
@@ -129,7 +129,7 @@ src_compile(){
 
 	use alsa && myconf="${myconf} --enable-alsa"
 
-        use oss || myconf="${myconf} --disable-oss"
+	use oss || myconf="${myconf} --disable-oss"
 
 	use esd && myconf="${myconf} --enable-esd"
 
@@ -183,7 +183,7 @@ src_compile(){
 }
 
 src_install() {
-	
+
 	einstall || die "make install failed"
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING INSTALL* \

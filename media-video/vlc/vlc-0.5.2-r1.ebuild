@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.3 2003/07/12 21:12:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.4 2003/09/04 04:52:00 msterret Exp $
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx esd kde X alsa ggi oggvorbis gnome xv oss sdl fbcon aalib"
 
@@ -36,9 +36,9 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
-    inherit kde-functions
-    set-kdedir 3
-    # $KDEDIR is now set to arts/kdelibs location
+	inherit kde-functions
+	set-kdedir 3
+	# $KDEDIR is now set to arts/kdelibs location
 fi
 
 src_unpack() {
@@ -78,18 +78,18 @@ src_compile(){
 	use xv\
 		&& myconf="${myconf} --enable-xvideo" \
 		|| myconf="${myconf} --diable-xvideo"
-		
+
 	use qt \
 		&& myconf="${myconf} --enable-qt" \
 		|| myconf="${myconf} --disable-qt"
-	
+
 	use dvd \
 		&& myconf="${myconf} \
 			--enable-dvd \
 			--enable-dvdread \
 			--enable-vcd" \
 		|| myconf="${myconf} --disable-dvd --disable-dvdread --disable-vcd"
-	
+
 	use esd \
 		&& myconf="${myconf} --enable-esd" \
 		|| myconf="${myconf} --disable-esd"
@@ -108,7 +108,7 @@ src_compile(){
 
 	use nls \
 		|| myconf="${myconf} --disable-nls"
-	
+
 	use 3dfx \
 		&& myconf="${myconf} --enable-glide" \
 		|| myconf="${myconf} --disable-glide"
@@ -116,15 +116,15 @@ src_compile(){
 	use arts \
 		&& myconf="${myconf} --enable-arts" \
 		|| myconf="${myconf} --disable-arts"
-	
+
 	use gnome \
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome"
-	
+
 	use ncurses \
 		&& myconf="${myconf} --enable-ncurses" \
 		|| myconf="${myconf} --disable-ncurses"
-	
+
 	use oggvorbis \
 		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-ogg"
@@ -132,7 +132,7 @@ src_compile(){
 	use alsa \
 		&& myconf="${myconf} --enable-alsa" \
 		|| myconf="${myconf} --disable-alsa"
-		
+
 	use oss \
 		&& myconf="${myconf} --enable-oss" \
 		|| myconf="${myconf} --disable-oss"
@@ -140,7 +140,7 @@ src_compile(){
 	use sdl \
 		&& myconf="${myconf} --enable-sdl" \
 		|| myconf="${myconf} --disable-sdl"
-	
+
 	use fbcon \
 		&& myconf="${myconf} --enable-fb" \
 		|| myconf="${myconf} --disable-fb"
@@ -156,9 +156,9 @@ src_compile(){
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_6=1
 
-	
+
 	autoconf || die
-	
+
 	econf \
 		--with-sdl \
 		--enable-release \
