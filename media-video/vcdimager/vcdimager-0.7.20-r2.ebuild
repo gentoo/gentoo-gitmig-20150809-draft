@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.1 2004/09/24 09:35:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.2 2004/11/24 14:09:23 eradicator Exp $
+
+IUSE="xml2"
 
 inherit eutils
 
@@ -10,8 +12,7 @@ SRC_URI="http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7_UNSTABLE/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~sparc"
-IUSE="xml2"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
 
 DEPEND=">=dev-libs/libcdio-0.66
 	dev-util/pkgconfig

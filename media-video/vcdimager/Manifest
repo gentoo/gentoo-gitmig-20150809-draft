@@ -1,14 +1,24 @@
-MD5 712456a351f70862c27ed97f0be50d87 ChangeLog 3266
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b20db6266d17a87f1be4afd428ba4d02 ChangeLog 3384
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 08c9eef275543d6d03e7ddb9519aaa49 vcdimager-0.7.20-r2.ebuild 1164
 MD5 c670ed9ec7d5db38afa076ea1d911404 vcdimager-0.7.17.ebuild 1151
 MD5 f4624d57ab33359de0998a76ec131a4c vcdimager-0.7.19.ebuild 1118
 MD5 60d1a565b768a8794d4cb9bea79995c1 vcdimager-0.7.20.ebuild 1117
 MD5 16c564330d2bc7236964e6029c28fd7b vcdimager-0.7.20-r1.ebuild 1195
-MD5 5e0c78969e48bd4c779ccda811e163e3 files/digest-vcdimager-0.7.20-r2 68
-MD5 c048409383703da86edcf956543bf4a7 files/vcdimager-0.7.20-libvcd.patch 3981
+MD5 6e2db1309580e025f2a5bc2851b5777a vcdimager-0.7.20-r2.ebuild 1163
 MD5 04fb826d136b198afa9cb1e5b115a63b files/digest-vcdimager-0.7.17 73
 MD5 bc5affe96540d5d15693b7cb5b0e16ea files/digest-vcdimager-0.7.19 73
 MD5 5e0c78969e48bd4c779ccda811e163e3 files/digest-vcdimager-0.7.20 68
 MD5 e82176935b2c91da5a4bc00977928d5c files/cdio.patch 301
 MD5 5e0c78969e48bd4c779ccda811e163e3 files/digest-vcdimager-0.7.20-r1 68
+MD5 c048409383703da86edcf956543bf4a7 files/vcdimager-0.7.20-libvcd.patch 3981
+MD5 5e0c78969e48bd4c779ccda811e163e3 files/digest-vcdimager-0.7.20-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpJYeArHZZzCEUG0RAsAeAJ98TWukSyvUeHEz5/NEmK/shuqg6gCeKsKT
+CLHAcBGqYxONJ4KeRJLscIU=
+=nZaU
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.21 2004/09/29 00:51:02 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.22 2004/11/24 14:09:23 eradicator Exp $
+
+  24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  vcdimager-0.7.20-r2.ebuild:
+  Stable amd64, sparc, x86.
 
   29 Sep 2004; Bart Lauwers <blauwers@gentoo.org> vcdimager-0.7.19.ebuild, vcdimager-0.7.20.ebuild:
   inherit eutils for $(get_libdir) support on new portage.
