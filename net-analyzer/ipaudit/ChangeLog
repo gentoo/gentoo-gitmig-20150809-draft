@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/ipaudit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipaudit/ChangeLog,v 1.1 2004/11/23 22:07:44 robbat2 Exp $
+
+*ipaudit-1.0_beta1 (23 Nov 2004)
+
+  23 Nov 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +ipaudit-1.0_beta1.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>
+
