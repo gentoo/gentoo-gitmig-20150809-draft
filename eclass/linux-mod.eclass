@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.11 2004/12/18 16:00:10 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.12 2004/12/18 16:22:13 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -24,6 +24,8 @@
 #											to be built automatically using the
 #											default pkg_compile/install. They
 #											are explained properly below.
+# NO_MODULESD	<string>					Set this to something to prevent
+#											modulesd file generation
 
 
 # MODULE_NAMES - Detailed Overview
@@ -127,26 +129,30 @@ generate_modulesd() {
 	
 	for arg in ${@}
 	do
-		# convert the modulename to uppercase
 		selectedmodule_full="${arg}"
+		# strip the directory
 		selectedmodule="${selectedmodule_full/*\//}"	
+		# convert the modulename to uppercase
 		selectedmodule="$(echo ${selectedmodule} | tr '[:lower:]' '[:upper:]')"
 
 		module_docs="MODULESD_${selectedmodule}_DOCS"
 		module_aliases="$(eval echo \$\{#MODULESD_${selectedmodule}_ALIASES[*]\})"
+		[ ${module_aliases} == 0 ] && unset module_aliases
 		module_docs="${!module_docs}"
+		modinfop="$(modinfo -p ${selectedmodule_full}.${KV_OBJ})"
 		
+		# By now we know if there is anything we can use to generate a file with
+		# so unset empty vars and bail out if we find nothing.
 		for parameter in ${!module_*}
 		do
 			[ -z "${!parameter}" ] && unset ${parameter}
 		done
-		
-		# OK, so now ${!module_*} only contains stuff from the ebuild.
-		# now we can do some proper work!
-		[ -z "${!module_*}" ] && return
+		[ -z "${!module_*}" -a -z "${modinfop}" ] && return
 
+		#so now we can set the configfilevar
 		module_config="${T}/modulesd-${selectedmodule}"
-		
+	
+		# and being working on things.	
 		ebegin "Preparing file for modules.d"
 		echo  "# modules.d config file for ${selectedmodule}" >> ${module_config}
 		echo  "# this file was automatically generated from linux-mod.eclass" >> ${module_config}
@@ -156,20 +162,20 @@ generate_modulesd() {
 			echo "#  Please read ${temp/*\//} for more info" >> ${module_config}
 		done
 
-		if [ ${module_aliases} -gt 0 ];
+		# like inserting any aliases
+		if [ ${module_aliases} > 0 ];
 		then
 			echo  "# Internal Aliases - Do not edit" >> ${module_config}
 			echo  "# ------------------------------" >> ${module_config}
-			
+
 			(( module_aliases-- ))
 			for temp in $(seq 0 ${module_aliases})
 			do
 				echo "alias $(eval echo \$\{MODULESD_${selectedmodule}_ALIASES[$temp]\})" >> ${module_config}
-				
-			done		
+			done
 		fi
 
-		modinfop="$(modinfo -p ${selectedmodule_full}.${KV_OBJ})"
+		# and then stating any module parameters defined from the module
 		if [ -n "${modinfop}" ];
 		then
 			echo >> ${module_config}
@@ -190,6 +196,7 @@ generate_modulesd() {
 			IFS="${xifs}"
 		fi
 		
+		# and any examples we can gather from them
 		if [ -n "${module_opts}" ];
 		then
 			echo >> ${module_config}
@@ -201,9 +208,11 @@ generate_modulesd() {
 			done
 		fi
 		
+		# then we install it
 		insinto /etc/modules.d
 		newins ${module_config} ${selectedmodule_full/*\//}
 		
+		# and install any documentation we might have.
 		[ -n "${module_docs}" ] && dodoc ${module_docs}
 	done
 	eend 0
@@ -292,7 +301,7 @@ linux-mod_src_install() {
 		insinto /lib/modules/${KV_FULL}/${moduledir}
 		doins ${modulename}.${KV_OBJ}
 		
-		generate_modulesd ${sourcedir}/${modulename}
+		[ -z "${NO_MODULESD}" ] && generate_modulesd ${sourcedir}/${modulename}
 	done
 }
 
