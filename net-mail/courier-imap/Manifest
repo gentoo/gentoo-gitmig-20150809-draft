@@ -4,7 +4,7 @@ MD5 cb363efa1adb26a68688073a195e92db courier-imap-3.0.2.ebuild 7919
 MD5 5eb71f3eba057864fcc42c17072dbf48 courier-imap-3.0.4.ebuild 8140
 MD5 4ef5905aa40b2667b360e61f67f877ab courier-imap-3.0.4-r1.ebuild 8157
 MD5 7159296d30dd5246f418b7de2bd34ad0 courier-imap-2.1.2-r2.ebuild 7901
-MD5 a9ea5724b9a6405c5de1bf0f3b9c1149 ChangeLog 11654
+MD5 d8949780617e272442c198dc60f9de3b ChangeLog 11654
 MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
 MD5 f89b65253a7cf543d5d74a24f47391ab files/authdaemond-3.0.4-r1 1083
 MD5 30a97b70bb55aebdacb2e80edc295de9 files/authdaemond.conf-3.0.4-r1 552
