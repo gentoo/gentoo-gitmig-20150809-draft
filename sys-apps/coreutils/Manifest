@@ -1,5 +1,5 @@
 MD5 3ba942f3d52e41ae12fc683369efaf04 coreutils-4.5.11-r1.ebuild 2512
-MD5 988123fa16d5e924ca60de1fe78d1e96 coreutils-5.0-r1.ebuild 2731
-MD5 0624bd1ad41c5175a7188e7cc7071ae2 ChangeLog 3138
+MD5 daae2f939d7655f62efb7142a6a81a6a coreutils-5.0-r1.ebuild 2732
+MD5 b4ee0bc732d3844209b79ba0021b3dd7 ChangeLog 3363
 MD5 0ff5f66b1d04c85d2434fa73547e67f3 files/digest-coreutils-4.5.11-r1 207
 MD5 d0d4edd45d2bebd31947fec9818be33e files/digest-coreutils-5.0-r1 213

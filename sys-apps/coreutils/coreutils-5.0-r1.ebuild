@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.4 2003/08/02 15:45:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r1.ebuild,v 1.5 2003/08/03 09:20:15 seemant Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
-	mirror://gentoo/${PN}-gentoo-1.1.tar.bz2
+	mirror://gentoo/${PN}-gentoo-1.2.tar.bz2
 	selinux? mirror://gentoo/${P}-selinux.patch.bz2"
 
 SLOT="0"
