@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.10.ebuild,v 1.3 2004/06/22 19:53:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.11.ebuild,v 1.1 2004/06/22 19:53:07 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
@@ -19,8 +19,8 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips"
-IUSE="threads doc"
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
+IUSE="threads doc nosource"
 
 DEPEND="dev-lisp/common-lisp-controller
 	sys-apps/texinfo
@@ -111,6 +111,12 @@ src_install() {
 	use doc && dodoc ${S}/doc/manual/*.{pdf,ps}
 
 	keepdir /usr/lib/common-lisp/sbcl
+
+	if ! use nosource; then
+		# install the SBCL source
+		find ${S}/src -type f -name \*.fasl |xargs rm -f
+		mv ${S}/src ${D}/usr/lib/sbcl/
+	fi
 
 	impl-save-timestamp-hack sbcl || die
 }
