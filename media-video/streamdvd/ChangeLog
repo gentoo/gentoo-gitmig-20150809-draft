@@ -1,6 +1,9 @@
 # ChangeLog for media-video/streamdvd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.8 2004/10/18 20:47:50 kugelfang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.9 2005/01/15 21:33:59 luckyduck Exp $
+
+  15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> streamdvd-0.4-r1.ebuild:
+  changed app-cdr/cdrtools dependency to virtual/cdrtools. see bug #77817.
 
   18 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> streamdvd-0.4-r1.ebuild:
   Marked ~amd64.
