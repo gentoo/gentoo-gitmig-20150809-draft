@@ -1,0 +1,99 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/files/xmail.initd,v 1.1 2003/06/09 18:30:15 raker Exp $
+
+depend() {
+	need net logger
+	use dns
+}
+
+checkconfig() {
+	if [ "$MAIL_NAME" == "" ] ; then
+		eerror "MAIL_NAME not set - check your /etc/conf.d/xmail file."
+	fi
+	if [ "$MAIL_ROOT" == "" ] ; then
+		eerror "MAIL_ROOT not set - check your /etc/conf.d/xmail file."
+	fi
+	if [ "$MAIL_PID" == "" ] ; then
+		eerror "MAIL_PID not set - check your /etc/conf.d/xmail file."
+	fi
+	if [ "$MAIL_CMD_LINE" == "" ] ; then
+		eerror "MAIL_CMD_LINE not set - check your /etc/conf.d/xmail file."
+	fi
+	if [ "$MAIL_EXEC" == "" ] ; then
+		eerror "MAIL_EXEC not set - check your /etc/conf.d/xmail file."
+	fi
+	if [ ! -f ${CHROOT}${MAIL_EXEC} ] ; then
+		eerror "$MAIL_EXEC not found!"
+	fi
+	set -e
+	ulimit -c 20000
+	
+	
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting $MAIL_NAME"
+	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/xmail 2>/dev/null`
+	EXIST="no"
+
+	if [ -z "${CHROOT}" -a ! -d "/chroot/xmail" ]; then
+		CHROOT="/chroot/xmail"
+	elif [ -d ${CHROOT} ]; then
+		EXISTS="yes"
+	fi
+
+	if [ ! "$EXISTS" = yes ]; then
+		einfo; einfo "Setting up the chroot directory..."
+		mkdir -m 700 -p ${CHROOT}
+	fi
+
+	for subdir in dev lib var/run var/MailRoot
+	do
+		if [ ! -d ${CHROOT}${subdir} ]
+		then
+			mkdir -p ${CHROOT}/${subdir}
+		fi
+	done
+	
+	if [ ! -c ${CHROOT}/dev/null ]
+	then
+		ls -Ll /dev/null |\
+		awk '{print sub(",","",$5) " " $6}' |\
+		xargs mknod ${CHROOT}/dev/null c
+	fi
+		
+	chown -R xmail.xmail ${CHROOT}
+
+	cp -R -u /etc/xmail/* ${CHROOT}${MAIL_ROOT}
+
+	cd ${CHROOT}
+	ldd var/MailRoot/bin/XMail |\
+		sed -n 's/[[:blank:]][^>]\+>[[:blank:]]\([[:graph:]]\+\).*/\1 lib\/ /p'\
+		|xargs -n 2 cp -u
+	start-stop-daemon --start -c xmail -r ${CHROOT} \
+		--startas ${MAIL_EXEC} --pidfile=${MAIL_PID} -- \
+		${MAIL_CMD_LINE} 
+	/sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 110 -j REDIRECT --to-ports 29110
+	/sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 25 -j REDIRECT --to-ports 29025
+	/sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 79 -j REDIRECT --to-ports 29079
+
+	eend $? "Failed to start $MAIL_NAME"
+}
+
+stop() {
+	ebegin "Stopping $MAIL_NAME"
+	/sbin/iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 110 -j REDIRECT --to-ports 29110
+	/sbin/iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 25 -j REDIRECT --to-ports 29025
+	/sbin/iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 79 -j REDIRECT --to-ports 29079
+	start-stop-daemon --stop --quiet --pidfile=${CHROOT}${MAIL_PID} --name $MAIL_NAME --retry 120 --oknodo --signal 2
+	
+	cd ${CHROOT}${MAIL_ROOT}
+	for i in *\.tab
+	do
+		cp -u -f $i /etc/xmail/ 
+	done
+	eend $? "Failed to stop $MAIL_NAME"
+}

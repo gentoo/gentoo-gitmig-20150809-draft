@@ -1,0 +1,65 @@
+#!/bin/sh
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/files/xmailwizard,v 1.1 2003/06/09 18:30:15 raker Exp $
+
+MAIL_ROOT=/chroot/xmail/var/MailRoot
+MAIL_CONF=/etc/xmail
+echo "Configuring XMail server ..."
+echo ""
+read -p "Create CtrlClnt login name: " LOGIN
+echo ""
+PASSWD1=1
+until
+	read -s -p "Enter CtrlClnt password: " PASSWD
+	echo ""
+	read -s -p "Enter password again: " PASSWD1
+	echo ""
+	[ $PASSWD1 == $PASSWD ]
+do
+	echo "Passwords do not match, please try again!"
+done
+read -p "Enter fully-qualified domain name (e.g. xmailserver.org): " MYDN
+echo ""
+## process with files
+echo -e "\"$LOGIN\"\t\"`$MAIL_ROOT/bin/XMCrypt $PASSWD`\"\n" >$MAIL_CONF/ctrlaccounts.tab
+cp $MAIL_CONF/server.tab $MAIL_CONF/server.tab.orig
+sed -e "s:xmailserver.test:$MYDN:" <$MAIL_CONF/server.tab.orig >$MAIL_CONF/server.tab
+cp /etc/mail/aliases $MAIL_CONF/aliases.tab
+perl -n -i'.orig' -e "if (!/^\$/ and ! /^#/) {s/: */\t/;s/^/${MYDN}\t/;print}" $MAIL_CONF/aliases.tab
+/etc/init.d/xmail start
+NETSTAT=`netstat -an | grep -c ":6017"`
+while [ $NETSTAT -eq 0 ]; do 
+	echo "XMail Ctrl server not yet running ... sleeping 10 seconds."
+	sleep 10
+	NETSTAT=`netstat -an | grep -c ":6017"` 
+done
+$MAIL_ROOT/bin/CtrlClnt -n 29617 -s localhost -u $LOGIN -p $PASSWD domainadd $MYDN
+read -n 1 -p "Do you want to add mailusers to $MYDN domain? (y/n): " YESNO
+echo ""
+while [ $YESNO == 'Y' -o $YESNO == 'y' ]
+do
+	read -p "Enter mailuser login: " USER
+	echo ""
+	PASS=1
+	until 
+		read -s -p "Enter mailuser password: " PASS
+		echo ""
+		read -s -p "Enter password again: " PASS1
+		echo ""
+		[ "$PASS" == "$PASS1" ] 
+	do
+		echo "Passwords do not match, please try again!"
+	done
+	$MAIL_ROOT/bin/CtrlClnt -n 29617 -s localhost -u $LOGIN -p $PASSWD useradd $MYDN $USER $PASS U
+	read -n 1 -p "Do you want to add more mailusers to $MYDN domain? (y/n): " YESNO
+	echo ""
+done
+/etc/init.d/xmail stop
+NETSTAT=`netstat -an | grep -c ":6017"`
+while [ $NETSTAT -ne 0 ]; do 
+	echo "There is(are) still $NETSTAT open connection(s) ... sleeping 10 seconds."
+	sleep 10
+	NETSTAT=`netstat -an | grep -c ":6017"` 
+done
+echo "Edit the MAIL_CMD_LINE property in /etc/conf.d/xmail to configure logging, TCP/IP bindings, threads, etc."

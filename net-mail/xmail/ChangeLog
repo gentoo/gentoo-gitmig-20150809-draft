@@ -1,0 +1,43 @@
+# ChangeLog for net-mail/xmail
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.1 2003/06/09 18:30:15 raker Exp $
+
+*XMail-1.15 (26 May 2003)
+  
+  09 Jun 2003; Nick Hadaway <raker@gentoo.org> xmail-1.15.ebuild:
+  Commented out the interactive portion of the ebuild and updated the 
+  groupadd/useradd portion.
+
+  26 May 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.15.ebuild,
+  xmail-1.15.ebuild, xmail.initd, xmail.confd, xmailwizard:
+  Files updated to chroot XMail into /chroot/xmail, running as unprivileged user
+
+*XMail-1.14 (21 Mar 2003)
+
+  21 Mar 2003; Kevin Williams <kwilliams@sark.com> xmail-1.12.ebuild, files/xmailwizard, files/xmail.initd, files/xmail.confd, files/15xmail :
+  ENV.D file for MAIL_ROOT variable,
+  CONF.D file for XMail configuration, 
+  INIT.D script greatly simplified, uses CONF.D file variables, 
+  automated configuration script - separated from ebuild
+
+  07 Apr 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12-r0.ebuild,
+  xmail-1.14-r0.ebuild, xmail.diff:
+  Update ebuild and patch to be independent of version numbers.
+
+*XMail-1.12 (07 Feb 2003)
+
+  18 Feb 2003; Kevin Williams <kwilliams@sark.com> xmail-1.12.ebuild, xmail.diff:
+  Initial import. 
+
+  11 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12.ebuild, xmail.diff
+  Updated ebuild and start/stop script to start and stop it by it's own
+  control functions
+  
+  13 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12.ebuild, xmail.diff
+  Updated ebuild and start/stop script to according to debian's directory
+  structure of XMail mailserver, thanks to Radim Kolar <hsn@cybermail.net>,
+  see http://home.worldonline.cz/~cz210552/xmail.html
+ 
+  18 Mar 2003; Sergey Ivanov <seriv@parkheights.dyndns.org> xmail-1.12-r0.ebuild
+  Fix some mistakes in interactive configure script of xmail and move mailboxes
+  from /etc/xmail to /var/mail. 
