@@ -1,14 +1,14 @@
-# ChangeLog for kde-base/kdesdk
+# ChangeLog for kde-base/kdeedu
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.2 2002/04/04 20:09:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.1 2002/04/04 20:09:23 danarmak Exp $
 
-*kdesdk-3.0 (4 Apr 2002)
+*kdeedu-3.0 (4 Apr 2002)
 
   4 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
 
   KDE 3.0 ebuilds. Based on the well-tested kde3pre ebuild set.
 
-*kdesdk-2.2.2 (1 Feb 2002)
+*kdebindings-2.2.2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

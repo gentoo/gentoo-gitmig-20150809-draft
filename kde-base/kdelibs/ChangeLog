@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.4 2002/03/24 22:05:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.5 2002/04/04 20:09:23 danarmak Exp $
+
+*kdelibs-3.0 (4 Apr 2002)
+
+  4 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
+
+  KDE 3.0 ebuilds. Based on the well-tested kde3pre ebuild set.
 
 *kdelibs-2.2.2-r4 (24 Mar 2002)
 
