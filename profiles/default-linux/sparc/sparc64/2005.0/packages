@@ -1,0 +1,8 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/packages,v 1.1 2005/01/11 01:19:50 gustavoz Exp $
+
+# Since we're running a sparc64 kernel w/ 32bit (v9) userland,
+# we need gcc-sparc64 for kernels.
+# Only use gcc-sparc64-3.3.x for now.  3.4.x users want the gcc34 profile
+*<sys-devel/gcc-sparc64-3.4.0
