@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.7.ebuild,v 1.1 2001/11/10 13:04:49 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.0.ebuild,v 1.1 2001/11/24 15:54:38 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small webbrowser for gnome that uses mozillas render engine"
@@ -11,12 +11,12 @@ HOMEPAGE="http://galeon.sourceforge.net"
 
 DEPEND=">=dev-libs/libxml-1.8.16
         >=dev-util/intltool-0.11
-	>=net-www/mozilla-0.9.5-r1
+	>=net-www/mozilla-0.9.6-r1
 	>=gnome-base/libglade-0.17-r1
 	>=gnome-base/gnome-core-1.4.0.4-r1
 	>=gnome-base/gnome-vfs-1.0.2-r1
-	>=gnome-base/gconf-1.0.4-r2
-	>=gnome-base/oaf-0.6.6-r1
+	>=gnome-base/gconf-1.0.7-r2
+	>=gnome-base/oaf-0.6.7
 	nls? ( sys-devel/gettext )"
 
 
