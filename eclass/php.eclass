@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.65 2003/07/14 00:39:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.66 2003/07/19 03:02:34 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -280,7 +280,7 @@ php_src_compile() {
 		myconf="${myconf} --without-gd"
 	fi
 	use png || [ -n "${REQUIREPNG}" ] && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
-	use jpeg || [ -n "${REQUIREJPG}" ] && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" LDFLAGS="${LDFLAGS} -ljpeg" || myconf="${myconf} --without-jpeg" 
+	use jpeg || [ -n "${REQUIREJPG}" ] && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" myconf="${myconf} --without-jpeg" 
 	use tiff || [ -n "${REQUIRETIFF}" ] && myconf="${myconf} --with-tiff-dir=/usr" LDFLAGS="${LDFLAGS} -ltiff" || myconf="${myconf} --without-tiff"
 
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
