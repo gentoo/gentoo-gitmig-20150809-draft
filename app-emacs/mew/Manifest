@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e46df647de3c4753b7c5e8d281dcb441 ChangeLog 4419
+MD5 f26278947dcb9c32da8db2391baea996 ChangeLog 4506
 MD5 b8a5a05dc587cbca65b831dedcd4488c metadata.xml 424
 MD5 a3f0650799251293f9376feba3f99ca1 mew-2.3-r1.ebuild 1032
 MD5 6a9f5d8ec3dae78e159642492ae114d8 mew-3.3.ebuild 1145
-MD5 4d58c915df7a8561f219c02dba652cf0 mew-4.1.ebuild 937
+MD5 aca75dfd26727b1c91e9d7913c8ad303 mew-4.1.ebuild 944
 MD5 b01c67ed2c3e6adf6f0895d1c0097b27 files/50mew-gentoo.el 187
 MD5 be2f43b958a3f2ddfffc249ff48c9332 files/digest-mew-2.3-r1 59
+MD5 ca3e822175d1e6350784c4aa0e28e57e files/digest-mew-4.1 59
 MD5 28ccf63b3de3b67fca74f72ce382fec4 files/digest-mew-3.3 59
 MD5 ce3d967439ce0410358389f065b7f8dd files/mew-smtp-2.3-gentoo.patch 632
-MD5 ca3e822175d1e6350784c4aa0e28e57e files/digest-mew-4.1 59
 MD5 dde1c4f5ab658fe3d1ea86164db3cc11 files/3.x/50mew-gentoo.el 246
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBrEP3VWNWqTUmv+0RAn9VAJ98loD2At6GQqh/0eCRYBgAY6FVrgCfbk4+
-wLCj4he4XmHkCwJ37Bs1+GE=
-=R2b4
------END PGP SIGNATURE-----
