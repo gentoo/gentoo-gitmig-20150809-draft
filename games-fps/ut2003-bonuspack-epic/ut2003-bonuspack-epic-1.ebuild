@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.2 2004/03/11 00:34:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.3 2004/03/17 12:13:38 wolf31o2 Exp $
 
 inherit games
 
@@ -40,6 +40,7 @@ src_install() {
 
 	exeinto ${dir}
 	doexe ${FILESDIR}/epic-installer
+	dodir ${Ddir}/System
 
 	cp -r ${S}/{Maps,Sounds,StaticMeshes,Textures} ${Ddir} \
 		|| die "Copying Maps/Sounds/Textures"
