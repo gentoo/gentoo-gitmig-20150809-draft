@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.0.ebuild,v 1.1 2003/08/04 04:31:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.0.ebuild,v 1.2 2003/08/11 00:05:08 pebenito Exp $
 
 IUSE=""
 
@@ -16,6 +16,7 @@ DEPEND="sys-libs/libselinux
 	sys-libs/pam"
 
 RDEPEND="${DEPEND}
+	sys-apps/mkinitrd
 	sys-apps/checkpolicy
 	sec-policy/selinux-base-policy"
 
@@ -40,4 +41,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install
+
+	dosbin ${FILESDIR}/rlpkg
 }

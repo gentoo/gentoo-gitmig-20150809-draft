@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.1 2003/08/04 04:31:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.2 2003/08/11 00:05:08 pebenito Exp $
+
+  10 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
+  policycoreutils-1.0.ebuild, files/rlpkg:
+  Add mkinitrd RDEP, add rlpkg.
 
 *policycoreutils-1.0 (03 Aug 2003)
 

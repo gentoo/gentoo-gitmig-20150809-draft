@@ -1,0 +1,77 @@
+#!/bin/bash
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/files/rlpkg,v 1.1 2003/08/11 00:05:08 pebenito Exp $
+
+# Author: Chris PeBenito <pebenito@gentoo.org>
+#	this probably isnt the cleanest script, but it works.
+#
+# TODO:	
+#	-maybe add a -l function to list the package's files + contexts
+#	-more informative messages, -h for help
+
+. /sbin/functions.sh
+PROG=`basename ${0}`
+
+if [ -z ${1} ]; then
+	echo "The Gentoo Linux package relabeler"
+	echo
+	echo "Usage: ${PROG} <pkg1> [<pkg2> ...]"
+	echo
+	echo "${PROG} relabels gentoo packages based on their CONTENTS file."
+	echo "Any files associated with a package, but not in the contents"
+	echo "will not be relabeled, so be careful!  When in doubt, a full"
+	echo "relabel should be done."
+	exit 1;
+fi
+
+while [ ${#} -gt 0 ]; do
+	build="${build} `find /var/db/pkg -iname CONTENTS | cut -d/ -f5,6 | grep ${1} | sort`"
+	shift
+done
+
+if [ "${build}" == " " ]; then
+	echo "No matching packages found."
+	exit 1
+fi
+
+# ask portage what POLICYDIR is set to (inline python)
+# this should catch env vars too
+POLICYDIR="`python << EndOfFile
+import portage
+print portage.settings['POLICYDIR'];
+EndOfFile`"
+
+if [ -z ${POLICYDIR} ]; then
+	POLICYDIR="/etc/security/selinux/src/policy"
+	ewarn "Warning, no POLICYDIR set, using ${POLICYDIR}."
+	echo
+fi
+
+# make sure the policydir exists
+if [ ! -d ${POLICYDIR} ]; then
+	echo "The policy directory ${POLICYDIR} doesnt exist!"
+	echo
+	echo "Set the policy dir in make.conf: POLICYDIR=\"/etc/security/selinux/src/mypolicy\""
+	exit 1
+fi
+
+einfo "Using file contexts from the policy in ${POLICYDIR}."
+
+# generate file_contexts as needed
+ebegin "Regenerating file contexts"
+[ -f ${POLICYDIR}/file_contexts/file_contexts ] && rm -f ${POLICYDIR}/file_contexts/file_contexts
+make -C ${POLICYDIR} file_contexts/file_contexts &> /dev/null
+
+# do a test relabel to make sure file contexts work (doesnt change any labels)
+echo "/etc/passwd" | setfiles ${POLICYDIR}/file_contexts/file_contexts -sqn
+ret=$?
+eend $ret
+
+[ $ret == "0" ] || exit $ret
+
+for i in ${build}; do
+	ebegin "Relabeling: ${i}"
+	awk '{ print $2 }' < /var/db/pkg/${i}/CONTENTS | setfiles ${POLICYDIR}/file_contexts/file_contexts -sq &> /dev/null
+	eend $?
+done
