@@ -3,7 +3,8 @@ MD5 0605cad192892662d9ab7bcf4292a278 binutils-2.11.92.0.12.3-r2.ebuild 3047
 MD5 b7ddfee30d6b7884c1b9088c6fde759d binutils-2.13.90.0.16-r1.ebuild 4661
 MD5 d7774659828753b66eedf647ed63a6f6 binutils-2.14.90.0.7.ebuild 5482
 MD5 1b11085f74185bfe7061a6fb01d62ebd binutils-2.12.90.0.15.ebuild 3501
-MD5 af23fe4f9e2cee25588575dd445ce7c5 ChangeLog 19091
+MD5 df6b75234c842e371111bfab0437d01f ChangeLog 19248
+MD5 e741e83d7f9e62eba31eb62ba61d5901 binutils-2.14.90.0.7-r1.ebuild 5522
 MD5 81a6c0292284ac5066b7c452dba54b57 binutils-2.14.90.0.2.ebuild 5583
 MD5 e56840c0286c1b40a114e80ced64dc45 binutils-2.13.90.0.18.ebuild 4572
 MD5 92e0fa5133dbba4ffefc25a217f28686 binutils-2.14.90.0.5-r1.ebuild 5781
@@ -22,6 +23,7 @@ MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r6 75
 MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7 75
 MD5 c2028bfe76e16c23a00a4ad36a5a36f2 files/digest-binutils-2.14.90.0.4.1-r1 77
 MD5 e6b97971464cab854a321254d84ae44f files/digest-binutils-2.12.90.0.15 75
+MD5 c19b60c5d77c4e0779d7820598b3b749 files/digest-binutils-2.14.90.0.7-r1 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r3 75
 MD5 f2fca878c36319fd0efd1606f4baf24e files/digest-binutils-2.14.90.0.5-r1 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
@@ -69,6 +71,7 @@ MD5 0d4022656708019a1b010c69dbf2442b files/2.14/binutils-2.14.90.0.5-ppc64-ldr.p
 MD5 8ca75664936a5e5043c6036bacbf88dc files/2.14/binutils-2.14.90.0.6-hppa-static.diff 2764
 MD5 5646b9e2ee56e1db7b52ed0b5d8b4c9b files/2.14/binutils-2.14.90.0.6-ia64-sdata.patch 1209
 MD5 e7283a4967ce5101a016b31e747e8442 files/2.14/binutils-2.14.90.0.4-cfi2.patch 18449
+MD5 6e629abfdfeb0c7be2c644dd461e90f3 files/2.14/binutils-2.14.90.0.7-ppc-reloc.patch 225625
 MD5 9a8373e9701722d6f950a3e5a812254a files/2.14/binutils-2.14.90.0.6-merge-speedup.patch 20690
 MD5 c1a6d53bb2eb89124a74f47b0bca0b89 files/2.14/binutils-2.14.90.0.5-ppc64-pie.patch 581
 MD5 4aa97425036b8c3fb98975ab06cab3ae files/2.14/binutils-2.14.90.0.4-pni.patch 16030
