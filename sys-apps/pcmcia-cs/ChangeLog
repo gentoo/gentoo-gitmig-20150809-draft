@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.23 2002/11/11 19:35:55 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.24 2002/11/17 20:28:46 hanno Exp $
+
+*pcmcia-cs-3.2.3 (17 Nov 2002)
+
+  17 Nov 2002; Hanno Boeck <hanno@gentoo.org> pcmcia-cs-3.2.3.ebuild :
+  New version. Cleaned up ebuild a lot.
+  Changes:
+  - Updated orinoco-driver to 0.13a
+  - Removed use of wavelan-keyword, orinoco-driver should be updated always.
+  - Remove replacement of ide_cs with ide-cs, this is fixed upstream.
+  - Some cleanups to make ebuild more readable and some lintool-fixes.
 
 *pcmcia-cs-3.2.2 (28 Oct 2002)
 
