@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r17.ebuild,v 1.3 2002/12/27 18:55:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r18.ebuild,v 1.1 2002/12/27 22:19:36 raker Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6"
 
@@ -37,16 +37,6 @@ src_unpack() {
 
 	cd ${S}
 
-	# For plugins such as avi4xmms, xmms needs to be linked to libstdcxx.
-	#
-	# NOTE: because we change a Makefile.am here, we run auto* at the
-	#       bottom.
-	#
-	# WARNING: Do not remove or feel my anger!!! :P
-	#
-# XMMS developers do not like this - <azarah@gentoo.org> (27 Dec 2002).
-#	epatch ${FILESDIR}/${P}-link-libstdc++.patch
-
 	# Patch to allow external programmes to have the "jump to" dialog box
 	epatch ${FILESDIR}/xmms-jump.patch
 
@@ -71,10 +61,12 @@ src_unpack() {
 		if use mmx || use 3dnow
 		then
 			epatch ${DISTDIR}/${P}-mmx.patch.gz
+			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-mmx.patch
+		else
+			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
 		fi
 	)
 
-	use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408.patch
 
 	[ ! -f ${S}/config.rpath ] && ( \
 		touch ${S}/config.rpath

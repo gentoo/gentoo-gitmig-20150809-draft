@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.37 2002/12/27 18:55:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.38 2002/12/27 22:19:36 raker Exp $
+
+*xmms-1.2.7-r18 (27 Dec 2002)
+
+  27 Dec 2002; Nick Hadaway <raker@gentoo.org> xmms-1.2.7-r18.ebuild,
+  files/digest-xmms-1.2.7-r18, files/xmms-ipv6-20020408-nommx.patch,
+  files/xmms-ipv6-20020408-mmx.patch :
+  Updated ebuild with the ipv6 patch split for the cases of mmx and
+  -mmx.  Thank azarah for bringing this to my attention. :)
 
   27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r17.ebuild :
   Remove the xmms-1.2.7-link-libstdc++.patch on request from XMMS developer
