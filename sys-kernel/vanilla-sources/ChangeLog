@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.39 2005/01/10 22:53:24 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.40 2005/01/12 23:13:38 dsd Exp $
+
+*vanilla-sources-2.6.11_rc1 (13 Jan 2005)
+
+  13 Jan 2005; Daniel Drake <dsd@gentoo.org> vanilla-sources-2.4.20.ebuild,
+  vanilla-sources-2.4.21.ebuild, vanilla-sources-2.4.22.ebuild,
+  vanilla-sources-2.4.23.ebuild, vanilla-sources-2.4.24-r1.ebuild,
+  vanilla-sources-2.4.25.ebuild, vanilla-sources-2.4.26.ebuild,
+  vanilla-sources-2.4.27.ebuild, vanilla-sources-2.4.28.ebuild,
+  +vanilla-sources-2.6.11_rc1.ebuild:
+  Version bump to 2.6.11-rc1 and ebuild simplifications
 
 *vanilla-sources-2.6.8.1 (11 Jan 2005)
 

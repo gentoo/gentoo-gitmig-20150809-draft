@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.18 2005/01/10 21:49:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.19 2005/01/12 23:13:38 dsd Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -9,9 +9,7 @@ inherit kernel-2
 
 DESCRIPTION="Full sources for the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2"
-
+SRC_URI="${KERNEL_URI}"
 KEYWORDS="x86 -ppc sparc alpha"
-IUSE=""
 
 UNIPATCH_LIST="${FILESDIR}/do_brk_fix.patch"
