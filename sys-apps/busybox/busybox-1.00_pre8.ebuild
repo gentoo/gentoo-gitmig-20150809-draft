@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.11 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.12 2004/09/11 08:08:42 dragonheart Exp $
 
 inherit eutils
 
@@ -48,14 +48,15 @@ src_unpack() {
 
 	if use savedconfig ; then
 		[ -r .config ] && rm .config
-		for conf in {${PN}-${PV}-${PR},${PN}-${PV},${PN}}.config; do
-			if [ -r /etc/${PN}/${CCHOST}/${conf} ]; then
-				cp /etc/${PN}/${CCHOST}/${conf} ${S}/.config
+		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
+			configfile=/etc/${PN}/${CCHOST}/${conf}.config
+			if [ -r ${configfile} ]; then
+				cp ${configfile} ${S}/.config
 				break;
 			fi
 		done
 		if [ -r "${S}/.config" ]; then
-			einfo "Found your /etc/${PN}/${CCHOST}/${conf} and using it."
+			einfo "Found your ${configfile} and using it."
 			return 0
 		fi
 	fi
@@ -135,7 +136,16 @@ src_install() {
 
 	into /
 	dobin busybox
-	if use make-busybox-symlinks ; then
+	if use make-busybox-symlinks ;
+	then
+		if [ ! "${VERY_BRAVE_OR_VERY_DUMB}" = "yes" ] && [ "${ROOT}" = "/" ];
+		then
+			ewarn "setting USE=make-busybox-symlinks and emerging to / is very dangerous."
+			ewarn "It WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
+			ewarn "If you are creating a binary only and not merging this is probably ok."
+			ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
+			die "silly options will destroy your system"
+		fi
 		make CROSS="${CROSS}" install || die
 		dodir /bin
 		cp -a _install/bin/* ${D}/bin/

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.41 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.42 2004/09/11 08:08:42 dragonheart Exp $
+
+  11 Sep 2004; Daniel Black <dragonheart@gentoo.org> busybox-1.00_pre8.ebuild,
+  busybox-1.00_rc3.ebuild:
+  Fixed saveconfig and make-busybox-symlinks as per bugs #60982 and #60805.
+  Thanks to Edward Flick <eddy@cdf-imaging.com> and Dirk Heinrichs
+  <ext-dirk.heinrichs@nokia.com>
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   busybox-1.00_pre8.ebuild, busybox-1.00_rc3.ebuild:
