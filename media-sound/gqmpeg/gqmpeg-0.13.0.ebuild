@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.13.0.ebuild,v 1.5 2002/07/21 15:24:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.13.0.ebuild,v 1.6 2002/07/29 04:52:11 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="front end to various audio players, including mpg123"
@@ -20,7 +20,7 @@ src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
 
-	econfigure ${myconf} || die
+	econf ${myconf} || die
 	emake || die
 }
 
