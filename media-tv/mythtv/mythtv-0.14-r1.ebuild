@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.4 2004/03/10 18:56:18 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.5 2004/04/26 18:38:25 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -113,7 +113,7 @@ src_compile() {
 
 	qmake -o "Makefile" "${PN}.pro"
 
-	econf
+	econf || die "econf failed"
 	emake -j1 || die "compile problem"
 }
 

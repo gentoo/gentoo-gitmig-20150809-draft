@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.14-r1.ebuild,v 1.2 2004/03/10 19:00:35 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.14-r1.ebuild,v 1.3 2004/04/26 18:36:23 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -114,7 +114,7 @@ src_compile() {
 
 	qmake -o "Makefile" "mythtv.pro"
 
-	econf
+	econf || die "econf failed"
 	emake -j1 || die "compile problem"
 }
 
