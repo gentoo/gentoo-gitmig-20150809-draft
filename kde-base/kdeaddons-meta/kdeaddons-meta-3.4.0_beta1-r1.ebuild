@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.5 2005/02/11 16:38:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.6 2005/02/11 18:50:27 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -43,25 +43,7 @@ $(deprange $PV $MAXKDEVER kde-base/konqueror-validators)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-webarchiver)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-audio)
 $(deprange $PV $MAXKDEVER kde-base/renamedlg-images)
-sdl? (
-$(deprange $PV $MAXKDEVER kde-base/noatun-blurscope)
-$(deprange $PV $MAXKDEVER kde-base/noatun-synaescope)
-$(deprange $PV $MAXKDEVER kde-base/noatun-tyler)
-$(deprange $PV $MAXKDEVER kde-base/noatun-tippercanoe)
-)
-arts? (
-$(deprange $PV $MAXKDEVER kde-base/noatun-pitchablespeed)
-$(deprange $PV $MAXKDEVER kde-base/noatun-wavecapture)
-$(deprange $PV $MAXKDEVER kde-base/noatun-alsaplayer)
-)
-$(deprange $PV $MAXKDEVER kde-base/noatun-alarm)
-$(deprange $PV $MAXKDEVER kde-base/noatun-charlatan)
-$(deprange $PV $MAXKDEVER kde-base/noatun-dub)
-$(deprange $PV $MAXKDEVER kde-base/noatun-ffrs)
-$(deprange $PV $MAXKDEVER kde-base/noatun-luckytag)
-$(deprange $PV $MAXKDEVER kde-base/noatun-lyrics)
-$(deprange $PV $MAXKDEVER kde-base/noatun-noatunmadness)
-$(deprange $PV $MAXKDEVER kde-base/noatun-oblique)
+$(deprange $PV $MAXKDEVER kde-base/noatun-plugins)
 "
 
 # the below are disabled from compialtion by upstream. ebuilds exist, but the software
