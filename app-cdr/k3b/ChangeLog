@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.30 2003/11/30 13:50:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.31 2003/12/04 20:18:56 caleb Exp $
+
+*k3b-0.10.3 (04 Dec 2003)
+
+  04 Dec 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.10.2.ebuild, k3b-0.10.3.ebuild:
+  New bug fix version, remove 0.10.2 as it has a nasty bug.
 
   30 Nov 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.10.2.ebuild:
   Add a note about where new k3bsetup program is located.
