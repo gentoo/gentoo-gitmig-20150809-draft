@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.55 2004/04/27 21:51:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.56 2004/05/04 16:23:04 tseng Exp $
+
+*proftpd-1.2.9-r2 (04 May 2004)
+
+  04 May 2004; Brandon Hale <tseng@gentoo.org> -proftpd-1.2.9-r1.ebuild,
+  +proftpd-1.2.9-r2.ebuild, -proftpd-1.2.9.ebuild:
+  Add patch to close privelage escalation bug, see bug #49496. Removing affected
+  versions.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> proftpd-1.2.9-r1.ebuild:
   Add inherit eutils

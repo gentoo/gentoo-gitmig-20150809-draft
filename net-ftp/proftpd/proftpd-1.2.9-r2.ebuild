@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.11 2004/04/21 02:25:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9-r2.ebuild,v 1.1 2004/05/04 16:23:04 tseng Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 IUSE="ldap pam postgres mysql ssl tcpd ipv6"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.proftpd.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc hppa ~alpha ppc ~mips"
+KEYWORDS="~x86 ~sparc ~hppa ~alpha ~ppc ~mips ~amd64"
 
 DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
@@ -23,6 +23,13 @@ DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch ${FILESDIR}/${P}-privescal-fix.patch
+}
 
 src_compile() {
 	local modules myconf
