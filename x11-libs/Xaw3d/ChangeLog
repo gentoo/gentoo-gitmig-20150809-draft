@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.12 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.13 2004/06/14 23:04:39 tgall Exp $
+
+  14 Jun 2004; Tom Gall <tgall@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  ~ppc64 initial x support, bug #53763
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> Xaw3d-1.5-r1.ebuild:
   Added IUSE=
