@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.5 2004/06/03 18:27:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.6 2004/06/07 02:40:27 agriffis Exp $
 
 IUSE="doc"
 
@@ -17,21 +17,7 @@ J_URI="ftp://ftp.tux.org/pub/java/JDK-${JV}"
 SRC_URI="amd64? ( ${J_URI}/amd64/${JREV}/j2re-${JV}-${JREV}-linux-amd64.bin )
 	x86? ( ${J_URI}/i386/${JREV}/j2re-${JV}-${JREV}-linux-i586-gcc3.2.bin )"
 #	sparc? ( ${J_URI}/sparc/${JREV}/j2re-${JV}-${JREV}-linux-sparc.bin )"
-
-
-if [ "${ARCH}" = "amd64" ]
-then
-	MY_A="j2re-${JV}-${JREV}-linux-amd64.bin"
-elif [ "${ARCH}" = "x86" ]
-then
-	MY_A="j2re-${JV}-${JREV}-linux-i586-gcc3.2.bin"
-elif [ "${ARCH}" = "sparc" ]
-then
-	MY_A="j2re-${JV}-${JREV}-linux-sparc.bin"
-elif [ "${ARCH}" = "ppc" ]
-then
-	MY_A="j2re-${JV}-${JREV}-linux-ppc.bin"
-fi
+#	ppc? ( ${J_URI}/ppc/${JREV}j2re-${JV}-${JREV}-linux-ppc.bin )"
 
 HOMEPAGE="http://www.blackdown.org"
 
@@ -40,7 +26,9 @@ LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* amd64"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.6"
+	>=dev-java/java-config-0.2.6
+	>=sys-apps/sed-4
+	>=sys-devel/gcc-3.2"
 
 PROVIDE="virtual/jre-1.4.2
 	virtual/java-scheme-2"
@@ -63,19 +51,18 @@ get_offset() {
 }
 
 src_unpack () {
-	local offset="`get_offset ${DISTDIR}/${MY_A}`"
+	local offset="`get_offset ${DISTDIR}/${A}`"
 
 	if [ -z "${offset}" ] ; then
 		eerror "Failed to get offset of tarball!"
 		die "Failed to get offset of tarball!"
 	fi
 
-	echo ">>> Unpacking ${MY_A}..."
-	tail -n +${offset} ${DISTDIR}/${MY_A} | tar --no-same-owner -jxp
+	echo ">>> Unpacking ${A}..."
+	tail -n +${offset} ${A} | tar --no-same-owner -jxp
 }
 
-unpack_jars()
-{
+unpack_jars() {
 	# New to 1.4.2 
 	local PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
 	local JAVAHOME="${D}/opt/${P}"
@@ -113,24 +100,16 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	if [ "${ARCH}" = "x86" ] ; then
-		PLATFORM="i386"
-	fi
+	case ${ARCH} in
+		amd64|x86) platform="i386" ;;
+		ppc) platform="ppc" ;;
+		sparc*) platform="sparc" ;;
+	esac
+	inst_plugin /opt/${P}/jre/plugin/${platform}/mozilla/javaplugin_oji.so
 
-	if [ "${ARCH}" = "amd64" ] ; then
-		PLATFORM="amd64"
-	fi
-
-	if [ "${ARCH}" = "sparc" ] ; then
-		PLATFORM="sparc"
-	fi
-
-	inst_plugin /opt/${P}/jre/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
-
-	dosed "s/standard symbols l/symbol/g" \
-		/opt/${P}/jre/lib/font.properties
 
 	# install env into /etc/env.d
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
@@ -155,7 +134,7 @@ pkg_postinst () {
 }
 
 pkg_prerm() {
-	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
+	if java-config -J | grep -q ${P} ; then
 		ewarn "It appears you are removing your default system VM!"
 		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
 	fi

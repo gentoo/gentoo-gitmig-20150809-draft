@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.12 2004/06/03 18:27:18 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.13 2004/06/07 02:40:27 agriffis Exp $
 
 inherit java nsplugins gcc
 
@@ -15,28 +15,44 @@ KEYWORDS="ppc"
 IUSE=""
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.5"
+	>=dev-java/java-config-0.2.5
+	>=sys-apps/sed-4
+	>=sys-devel/gcc-3.2"
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 
 src_unpack () {
-	if (use ppc) || (use sparc) || (use sparc64) ; then
-	# this is built on gcc 3.2 so only update if gcc 3.x is present
-	if [ "`gcc-major-version`" != "3" ] ; then
-		die "This is for gcc 3.x only"
+	typeset a want_gcc_ver
+
+	if [[ $(gcc-major-version) -eq 3 && $(gcc-minor-version) -ge 2 ]]; then
+		want_gcc_ver=3.2
+	else
+		want_gcc_ver=2.95
 	fi
 
-		tail -n +422 ${DISTDIR}/${A} | tar xjf -
-	else
-		unpack ${A}
-	fi
-	if (use sparc) || (use sparc64) ; then
+	for a in ${A}; do
+		if [[ ${a} == *gcc*.bin ]]; then
+			if [[ ${a} == *-gcc${want_gcc_ver}.bin ]]; then
+				echo ">>> Unpacking ${a}..."
+				tail -n +422 ${DISTDIR}/${a} | tar xjf - || die
+			fi
+		else
+			# Handle files (none right now) that don't have a gcc
+			# version dependency
+			unpack ${a}
+		fi
+	done
+
+	# On sparc the files are owned by 1000:100 for some reason
+	if use sparc || use sparc64 ; then
 		# The files are owned by 1000.100, for some reason.
 		chown -R root:root
 	fi
 }
 
 src_install () {
+	typeset platform
+
 	dodir /opt/${P}
 
 	cp -dpR ${S}/{bin,lib,man,plugin} ${D}/opt/${P}/
@@ -46,20 +62,14 @@ src_install () {
 	dohtml README.html
 
 	# Install mozilla plugin
-	if [ "${ARCH}" == "x86" ] ; then
-		PLATFORM="i386"
-	elif [ "${ARCH}" == "ppc" ] ; then
-		PLATFORM="ppc"
-	elif [ "${ARCH}" == "sparc" ] || [ "${ARCH}" == "sparc64" ] ; then
-		PLATFORM="sparc"
-	fi
-	inst_plugin /opt/${P}/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
+	case ${ARCH} in
+		amd64|x86) platform="i386" ;;
+		ppc) platform="ppc" ;;
+		sparc*) platform="sparc" ;;
+	esac
+	inst_plugin /opt/${P}/plugin/${platform}/mozilla/javaplugin_oji.so
 
-	mv ${D}/opt/${P}/lib/font.properties ${D}/opt/${P}/lib/font.properties.orig
-	sed "s/standard symbols l/symbol/g" \
-		< ${D}/opt/${P}/lib/font.properties.orig \
-		> ${D}/opt/${P}/lib/font.properties
-	rm ${D}/opt/${P}/lib/font.properties.orig
+	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/lib/font.properties
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 }
@@ -75,8 +85,8 @@ pkg_postinst () {
 }
 
 pkg_prerm() {
-	if [ ! -z "$(java-config -J | grep ${P})" ] ; then
+	if java-config -J | grep -q ${P} ; then
 		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+		ewarn "Please run java-config -L then java-config -S to set a new system VM!"
 	fi
 }
