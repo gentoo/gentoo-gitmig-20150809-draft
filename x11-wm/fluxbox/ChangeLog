@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.112 2004/07/23 10:52:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.113 2004/07/26 13:37:19 usata Exp $
+
+  26 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> fluxbox-0.9.9.ebuild:
+  Fixed truetype USE flag on macos.
 
   23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> fluxbox-0.9.9.ebuild:
   Added to macos. This closes bug #57883

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.13 2004/07/23 10:52:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.9.ebuild,v 1.14 2004/07/26 13:37:19 usata Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export PKG_CONFIG_PATH=/usr/X11R6/lib/pkgconfig:/usr/lib/pkgconfig
 	econf \
 		`use_enable nls` \
 		`use_enable xinerama` \
