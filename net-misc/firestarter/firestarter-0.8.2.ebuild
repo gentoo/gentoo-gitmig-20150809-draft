@@ -11,7 +11,7 @@ HOMEPAGE="http://firestarter.sf.net"
 
 LICENSE="GPL-2"
 
-DEPEND="=x11-libs/gtk+-1.2.10-r8
+DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
 	sys-apps/iptables"
 RDEPEND="${DEPEND}"
