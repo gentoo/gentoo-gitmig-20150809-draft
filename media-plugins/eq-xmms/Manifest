@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7df07d54b4764069c74af00d95bf00c5 eq-xmms-0.6.ebuild 973
+MD5 82c5df1d090ccca03d12bd4d536a0786 eq-xmms-0.6.ebuild 991
+MD5 f9ceb2831a6ec3216a8b69104ade3a0f eq-xmms-0.6-r1.ebuild 1056
+MD5 53f8680c8195e7302cbc113f07e5fae2 ChangeLog 1590
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e7f37e8e2be08df85b78c53a7a99fe52 ChangeLog 1454
-MD5 ab4f2e4bdb0dd7c5bf0861e694c06ae1 eq-xmms-0.6-r1.ebuild 1043
+MD5 db956a0ebfff40720bb6487f96564a00 files/eq-xmms-0.6-shade_fix.patch 1116
+MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
 MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6 63
 MD5 e2cda8be9765888166aa11cb345e6a41 files/eq-xmms-0.6-nonx86.patch 410
-MD5 2cf1a0e042cf2afb1366cd05f91bedce files/digest-eq-xmms-0.6-r1 63
-MD5 db956a0ebfff40720bb6487f96564a00 files/eq-xmms-0.6-shade_fix.patch 1116
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBZMFpArHZZzCEUG0RAi2DAJsEkwDU1gFeJqMUNiMpt/HIidH0PQCeIJKU
-rq0j0q+qqm7rATB1mdN+3f4=
-=VVsO
+iD8DBQFCNEy606ebR+OMO78RAt2jAKCGXL5EMJGu0WnaS/7xA8TljZ0r5gCbBLbX
+k3Yl3ZAbnhXWfppkH+8kHhM=
+=kZsU
 -----END PGP SIGNATURE-----

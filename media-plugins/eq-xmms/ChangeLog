@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/eq-xmms
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.8 2004/09/01 17:34:43 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.9 2005/03/13 14:22:41 luckyduck Exp $
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> eq-xmms-0.6-r1.ebuild,
+  eq-xmms-0.6.ebuild:
+  added elibtoolize call, fixes #85064
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   eq-xmms-0.6-r1.ebuild:
