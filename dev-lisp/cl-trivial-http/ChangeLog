@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-trivial-http
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-http/ChangeLog,v 1.1 2005/02/04 08:01:57 mkennedy Exp $
+
+*cl-trivial-http-1.1 (04 Feb 2005)
+
+  04 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-trivial-http-1.1.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
