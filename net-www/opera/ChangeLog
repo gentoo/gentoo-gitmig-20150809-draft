@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.45 2003/12/21 18:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.46 2003/12/30 07:25:46 seemant Exp $
+
+  29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> opera-7.50_alpha1.ebuild:
+  some cleanups, and switch to virtual/motif instead
 
   21 Dec 2003; Seemant Kulleen <seemant@gentoo.org> opera-7.50_alpha1.ebuild:
   SRC_URI fix

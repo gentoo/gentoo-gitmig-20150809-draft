@@ -1,14 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.3 2003/12/21 18:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.4 2003/12/30 07:25:46 seemant Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
 
+IUSE="gnome kde"
+
+MY_PV="7.50-20031219"
+OPERATYPE="1-static-qt"
+MY_P=${PN}-${MY_PV}.${OPERATYPE}.i386-en
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
-LICENSE="OPERA"
-IUSE="gnome kde"
+SRC_URI="http://snapshot.opera.com/unix/7.50-Preview-1/intel-linux/en/${MY_P}.tar.bz2"
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4"
@@ -16,17 +21,11 @@ DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
-	|| ( x11-libs/lesstif x11-libs/openmotif )"
+	virtual/motif"
 
-KEYWORDS="~x86"
 SLOT="0"
-
-OPERAVER="7.50-20031219"
-OPERATYPE="1-static-qt"
-
-SRC_URI="http://snapshot.opera.com/unix/7.50-Preview-1/intel-linux/en/${PN}-${OPERAVER}.${OPERATYPE}.i386-en.tar.bz2"
-
-S=${WORKDIR}/${A/.tar.bz2/}
+LICENSE="OPERA"
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}
