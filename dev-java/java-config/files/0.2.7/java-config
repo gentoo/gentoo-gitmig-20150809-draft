@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.7/java-config,v 1.1 2002/12/09 20:18:46 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/0.2.7/java-config,v 1.2 2002/12/09 21:04:03 strider Exp $
 
 version=0.2.7
 all_params="$*"
@@ -65,6 +65,7 @@ Options:
 	[--set-user-vm=<vm-id>]
 	[--set-system-classpath=package1,package2,...]
 	[--set-user-classpath=package1,package2,...]
+	[--clean-system-classpath]
 EOF
 	echo "Using ${JAVA_HOME}"
 	exit $1
@@ -336,8 +337,17 @@ while test $# -gt 0; do
 			fi
 		;;
 		--set-system-classpath=*)
-			echo "CLASSPATH=`calc_full_classpath $optarg`" > \
-				/etc/env.d/21java-classpath
+			if [ "$optarg" == "" ] ; then
+				 eerror "If you want to clean the classpath, please use --clean-system-classpath"
+			else
+				echo "CLASSPATH=`calc_full_classpath $optarg`" > \
+					/etc/env.d/21java-classpath
+			fi
+		;;
+		--clean-system-classpath)
+			if [ -f /etc/env.d/21java-classpath ]; then
+				rm -f /etc/env.d/21java-classpath
+			fi
 		;;
 		--set-user-classpath=*)
 			mkdir -p $HOME/.gentoo
