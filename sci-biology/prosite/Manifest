@@ -2,8 +2,9 @@ MD5 b56de82a54144ba9711c09571456ec52 prosite-18.44.ebuild 1002
 MD5 6642028d3b308f05fee6eac80f96401e prosite-18.41.ebuild 991
 MD5 994d8516e1affbba19d292c6b260ce0e prosite-18.43.ebuild 1001
 MD5 22955cec70e4b45146352b0a87fb5dfc prosite-18.39.ebuild 991
+MD5 926570449c34e8ab4f823258538b9c63 prosite-18.45.ebuild 1003
 MD5 6a6694e33deddfb777fa89943ec3170b prosite-18.40.ebuild 991
-MD5 0ea36345d7ed8c1258ebd1876c98618a ChangeLog 3061
+MD5 48ff4a3ea29130b838bab21228b03b74 ChangeLog 3183
 MD5 86f443d48bb3808f08bb5fb064d7c8af prosite-18.42.ebuild 1001
 MD5 81b73af5f2f4778bea2dde0b55620129 metadata.xml 810
 MD5 25b64419f510d86a6ef2bc2a9ef52b18 prosite-18.38.ebuild 991
@@ -14,3 +15,4 @@ MD5 9c2f10f8894ca2905205055e4b8d0063 files/digest-prosite-18.41 67
 MD5 75c7c97e1d2db43a764459b1350cc473 files/digest-prosite-18.42 67
 MD5 97cb2657bd1c13e76c24e5d72d575f57 files/digest-prosite-18.43 67
 MD5 006c40f58bf3bf4abd03888ab9d95122 files/digest-prosite-18.44 67
+MD5 84f1fe4c07d9217c8b5623756deef942 files/digest-prosite-18.45 67
