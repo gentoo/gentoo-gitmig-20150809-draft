@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.139 2005/03/31 03:32:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.140 2005/04/03 17:52:58 chrb Exp $
+
+  03 Apr 2005; Chris Bainbridge <chrb@gentoo.org> +files/xbox-1.0.8.patch,
+  alsa-driver-1.0.8.ebuild:
+  Re-added xbox support (bug #80989)
 
 *alsa-driver-1.0.9_rc2 (31 Mar 2005)
 

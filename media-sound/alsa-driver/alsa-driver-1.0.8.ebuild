@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.12 2005/03/31 00:28:18 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.13 2005/04/03 17:52:59 chrb Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -37,6 +37,10 @@ pkg_setup() {
 	#
 	ALSA_CARDS=${ALSA_CARDS:-all}
 
+	if [ "${PROFILE_ARCH}" == "xbox" ]; then
+		ALSA_CARDS='intel8x0'
+	fi
+
 	# Which drivers need PNP
 	local PNP_DRIVERS="interwave interwave-stb"
 
@@ -66,6 +70,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-msi_audigyls.patch
 
 	convert_to_m ${S}/Makefile
+
+	if [ "${PROFILE_ARCH}" == "xbox" ]; then
+		epatch ${FILESDIR}/xbox-1.0.8.patch
+	fi
 }
 
 src_compile() {
