@@ -1,6 +1,9 @@
 # ChangeLog for net-www/phpBB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.2 2004/08/27 16:02:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.3 2004/09/03 09:09:33 rl03 Exp $
+
+  03 Sep 2004; Renat Lumpau <rl03@gentoo.org> -phpBB-2.0.8a-r1.ebuild:
+  Obsolete version; removed by eversionrm tool
 
 *phpBB-2.0.10 (27 Aug 2004)
 

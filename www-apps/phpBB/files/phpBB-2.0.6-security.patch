@@ -1,9 +1,0 @@
---- includes/bbcode.php.org	2003-09-24 00:15:41.000000000 +0000
-+++ includes/bbcode.php	2003-09-24 00:22:05.000000000 +0000
-@@ -782,4 +782,4 @@
- 	return ( strlen($a['code']) > strlen($b['code']) ) ? -1 : 1;
- }
- 
--?>
-\ No newline at end of file
-+?>
