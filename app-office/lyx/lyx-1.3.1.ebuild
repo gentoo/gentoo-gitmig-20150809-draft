@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.7 2003/03/19 15:17:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.1.ebuild,v 1.1 2003/03/19 15:17:33 danarmak Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -34,11 +34,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# patch to fix compile problem with glibc 2.3.1 from lyx 1.3.x branch cvs.
-	# cf bugzilla.lyx.org #874.
-	patch -p0 < $FILESDIR/$P-glibc31.diff
-	patch -p0 < $FILESDIR/$P-autogen.sh.diff
-	cp -f $FILESDIR/$P-configure.in $S/configure.in
+	#cp -f $FILESDIR/$P-configure.in $S/configure.in
 }
 
 src_compile() {
@@ -54,11 +50,7 @@ src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
 
-	# note from bug #15692: don't set CFLAGS/CXXFLAGS in the env, beacuse that overrides
-	# some necessary default values. rather, pass that to configure.
-	# from 1.2.x, should be rechecked:
-	# -O3 and higher breaks
-	flags="${CFLAGS//-O[3..9]/-O2}"
+	flags="${CFLAGS}"
 	unset CFLAGS
 	unset CXXFLAGS
 	econf ${myconf} --enable-optimization="$flags"
@@ -80,15 +72,7 @@ pkg_postinst() {
 		einfo	"the matheditor not to display any special characters (the ones from"
 		einfo	"the Computer Modern font family). Generated documents (.dvi, .ps...)"
 		einfo	"are ok, since tex has right fonts from the bluesky package."
-		einfo	"Until a proper solution can be found, you can consider emerging"
-		einfo	"app-text/bakoma, which provides fonts lyx can use in the matheditor."
-		einfo	"However, the bakoma package has a restrictive license that does not"
-		einfo	"allow any usage in a commercial environment as well as some other"
-		einfo	"things, so be sure to read $PORTDIR/licenses/BaKoMa carefully first."
-		einfo	"LyX 3.1.1 (RSN) includes a partial fix for this issue that at least"
-		einfo	"allows the matheditor to display the names of the symbols instead of"
-		einfo	"wierd characters (e.g. an alpha will be replaced with the text 'alpha'",
-		einfo	"and not with a box)."
+		einfo	"A proper solution is being busily worked on."
 	fi
 
 }
