@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/kstreamripper
+# Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*mp3check-0.8.0 (16 Sep 2004)
+
+  16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/mp3check-0.8.0-gcc34.diff, +mp3check-0.8.0.ebuild:
+  initial import. Ebuild submitted by <kavol@email.cz> and adapted to meet
+  gentoo ebuild policies by <cparpart@surakware.net>
