@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.65-r1.ebuild,v 1.2 2003/02/07 06:39:07 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.68.ebuild,v 1.1 2003/02/07 06:39:07 gerk Exp $
 
 inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MOL (Mac-on-Linux) is a PPC-only program to run Mac OS X and under natively within Linux"
-SRC_URI="ftp://ftp.nada.kth.se/pub/home/f95-sry/Public/mac-on-linux/${P}.tgz"
+SRC_URI="http://cvs.gentoo.org/~gerk/distfiles/${P}.tgz"
 HOMEPAGE="http://www.maconlinux.net/"
 
-DEPEND="virtual/glibc"
-RDEPEND=""
+DEPEND=""
+RDEPEND="net-misc/dhcpcd
+       sys-apps/iptables"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc -x86 -sparc -alpha -mips"
@@ -19,10 +20,12 @@ IUSE=""
 src_compile() {
 
 	filter-flags -fsigned-char
-	./configure --prefix=/usr || die "This is a ppc-only package (time to buy that iBook, no?)"
+
 	# apply patch for dhcp config fix, closes bug #13136
 	cd ${S}
 	patch -p0 < ${FILESDIR}/dhcpd-mol.conf.patch || die "patch failed"
+
+	./configure --prefix=/usr || die "This is a ppc-only package (time to buy that iBook, no?)"
 	emake || die "Failed to compile MOL"
 
 }
