@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/ucspi-tcp-man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ucspi-tcp-man/ChangeLog,v 1.8 2004/06/24 21:50:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ucspi-tcp-man/ChangeLog,v 1.9 2004/08/13 11:17:22 slarti Exp $
+
+  13 Aug 2004; Tom Martin <slarti@gentoo.org> ucspi-tcp-man-20020317.ebuild:
+  Marked ~amd64; resolves bug 58742. Thanks to James Couzens
+  <jcouzens@codeshare.ca> for reporting.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   ucspi-tcp-man-20020317.ebuild:
