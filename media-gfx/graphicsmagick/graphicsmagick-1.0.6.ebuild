@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.0.6.ebuild,v 1.1 2004/06/05 21:14:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.0.6.ebuild,v 1.2 2004/06/07 22:07:18 agriffis Exp $
 
 inherit libtool flag-o-matic perl-module
 replace-flags k6-3 i586
@@ -64,7 +64,7 @@ src_compile() {
 		${myconf} || die
 
 	# make PerlMagick using portage tools instead of Makefile to avoid sandbox issues
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd PerlMagick
 		perl-module_src_prep
 		perl-module_src_compile
@@ -77,7 +77,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		cd PerlMagick
 		perl-module_src_install
 		cd ..

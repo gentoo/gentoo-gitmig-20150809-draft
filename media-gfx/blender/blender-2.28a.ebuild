@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28a.ebuild,v 1.3 2004/03/21 09:40:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28a.ebuild,v 1.4 2004/06/07 22:08:09 agriffis Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
@@ -33,50 +33,50 @@ src_compile() {
 	local myconf=""
 
 	# SDL Support
-	if [ -n "`use sdl`" ]
+	if use sdl
 	then
 		myconf="${myconf} --with-sdl=/usr"
 	fi
 
 	# JPG Support (Should be there by default, but I'll put it in anyways)
-	if [ -n "`use jpeg`" ]
+	if use jpeg
 	then
 		myconf="${myconf} --with-libjpeg=/usr"
 	fi
 
 	# PNG Support (Same as above)
-	if [ -n "`use png`" ]
+	if use png
 	then
 		myconf="${myconf} --with-libpng=/usr"
 	fi
 
 	# ./configure points at the wrong mozilla directories and will fail
 	# with this enabled. (A simple patch should take care of this)
-	#if [ -n "`use mozilla`" ]
+	#if use mozilla
 	#then
 	#	myconf="${myconf} --with-mozilla=/usr"
 	#fi
 
 	# TrueType support (For text objects)
-	if [ -n "`use truetype`" ]
+	if use truetype
 	then
 		myconf="${myconf} --with-freetype2=/usr"
 	fi
 
 	# Build Staticly
-	if [ -n "`use blender-static`" ]
+	if use blender-static
 	then
 		myconf="${myconf} --enable-blenderstatic"
 	fi
 
 	# Build the game engine (Fails in 2.28)
-	if [ -n "`use blender-game`" ]
+	if use blender-game
 	then
 		myconf="${myconf} --enable-gameblender"
 	fi
 
 	# Build the plugin (Will probably fail, especially without mozilla)
-	if [ -n "`use blender-plugin`" ]
+	if use blender-plugin
 	then
 		myconf="${myconf} --enable-blenderplugin"
 	fi

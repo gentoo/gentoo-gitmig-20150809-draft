@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.5 2004/01/10 11:09:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.6 2004/06/07 22:04:16 agriffis Exp $
 
 DESCRIPTION="Drawing program designed for young children (kids ages 3 and up)"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxpaint/"
@@ -27,14 +27,14 @@ src_compile() {
 	sed -i "s/^SDL_LIBS=/SDL_LIBS:=-lSDL_mixer /" Makefile
 	sed -i "s/^SDL_CFLAGS=/SDL_CFLAGS:=/" Makefile
 
-	if [ `use gnome` ]
+	if use gnome
 	then
 		sed -i "s:^GNOME_PREFIX=:GNOME_PREFIX=${D}:" Makefile
 	else
 		sed -i "s:^GNOME_PREFIX=.*:GNOME_PREFIX=:" Makefile
 	fi
 
-	if [ `use kde` ]
+	if use kde
 	then
 		sed -i "s:^KDE_PREFIX=:KDE_PREFIX=${D}:" Makefile
 		sed -i "s:^KDE_ICON_PREFIX=:KDE_ICON_PREFIX=${D}:" Makefile
