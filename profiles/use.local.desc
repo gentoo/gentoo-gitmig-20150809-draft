@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.501 2004/07/22 19:22:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.502 2004/07/22 20:48:48 ferringb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -273,7 +273,8 @@ media-sound/gnusound:libsamplerate - Build gnusound with support for converting 
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/mcdp:diet - Compile and link with dietlibc
-media-sound/mpd:aac - enable support for aac using the faad2 library
+media-sound/mpd:aac - Enable support for aac using the faad2 library
+media-sound/mpd:aac - Run the daemon as non-root by default.
 media-sound/muine:xine - Use Xine backend 
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rhythmbox:faad - Enables faad2 support
