@@ -2,6 +2,21 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+*xcdroast-0.98_alpha14-r2 (04 Sep 2003)
+
+  04 Sep 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha10-r3.ebuild,
+  xcdroast-0.98_alpha14-r2.ebuild, xcdroast-0.98_alpha14.ebuild,
+  files/xcdroast-0.98alpha14-dvd.patch:
+
+  Applied suggestions from Bug #26323.
+  
+  xcdroast makes now use of the USE-flag "dvd" which will compile it with
+  further DVD-write functionalities.  If this is to much overload for users
+  who only want DVD-read functionalities (and have set this USE-flag by
+  default), this USE-flag should be renamed and become a local one.
+
+  Removed some old ebuilds.
+
 *xcdroast-0.98_alpha14-r1 (17 Jul 2003)
 
   17 Jul 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha14-r1.ebuild:
