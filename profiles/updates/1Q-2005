@@ -198,3 +198,4 @@ move kde-base/kdebase-applnk kde-base/kdebase-data
 move net-www/links www-client/links
 move sys-apps/gcloop sys-block/gcloop
 move sys-apps/speedfreq sys-power/speedfreq
+move sys-apps/powernowd sys-power/powernowd
