@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.1 2004/05/11 22:31:08 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.0.ebuild,v 1.2 2004/05/13 16:46:50 randy Exp $
 
 inherit eutils
 
@@ -18,11 +18,12 @@ SRC_URI="mirror://gentoo/${PN}-${PV}-${STREAM}.tar.gz
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${KERNEL_VERSION}.tar.bz2"
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/linux390/april2004_recommended.shtml"
 LICENSE="GPL-2"
-KEYWORDS="s390"
+KEYWORDS="~s390"
 SLOT="0"
 DEPEND="virtual/glibc
 	net-analyzer/ucd-snmp
-	app-admin/genromfs"
+	app-admin/genromfs
+	dev-util/indent"
 
 PROVIDE="virtual/bootloader"
 
