@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.10 2004/10/14 03:27:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.11 2005/02/04 12:25:41 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -41,11 +41,11 @@ matrox_pkg_setup() {
 		local INSTALLED_X="`best_version x11-base/xfree`"
 		GENTOO_X_VERSION_REVISION="${INSTALLED_X/x11-base\/xfree-}"
 		GENTOO_X_VERSION="${GENTOO_X_VERSION_REVISION%-*}"
-		if [ "${GENTOO_X_VERSION}" -ne "4.3.0" ]
+		if [ "${GENTOO_X_VERSION}" != "4.3.0" ]
 		then
-			if [ "${GENTOO_X_VERSION}" -ne "4.2.1" ]
+			if [ "${GENTOO_X_VERSION}" != "4.2.1" ]
 			then
-				if [ "${GENTOO_X_VERSION}" -ne "4.2.0" ]
+				if [ "${GENTOO_X_VERSION}" != "4.2.0" ]
 				then
 					if [ -n "${FORCE_VERSION}" ]
 					then
