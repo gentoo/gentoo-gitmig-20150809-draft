@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.1 2004/11/06 15:51:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.2 2004/11/17 00:39:01 tester Exp $
 
 S="${WORKDIR}/${P/./_}"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -65,8 +65,9 @@ src_install() {
 	then
 		einfo "Installing the freedesktop notification plugin"
 		dodir /usr/lib/amsn/plugins/traydock
-		mv ${D}/usr/share/amsn/plugins/traydock/libtray.so ${D}/usr/lib/amsn/plugins/traydock
-		ln -s /usr/lib/amsn/plugins/traydock ${D}/usr/share/amsn/plugins/traydock
+		mv ${D}/usr/share/amsn/plugins/traydock/libtray.so ${D}/usr/lib/amsn/plugins/traydock/
+		rm -rf  ${D}/usr/share/amsn/plugins/traydock/
+		ln -s ../../../lib/amsn/plugins/traydock/ ${D}/usr/share/amsn/plugins/
 	else
 		rm -rf ${D}/usr/share/amsn/plugins/traydock
 	fi
@@ -79,7 +80,7 @@ src_install() {
 	rm -rf ${D}/usr/share/amsn/utils/
 
 	dodir /usr/bin/
-	ln -s /usr/share/amsn/amsn ${D}/usr/bin/amsn
+	ln -s ../share/amsn/amsn ${D}/usr/bin/amsn
 
 	cd ${D}/usr/share/amsn
 	dodoc TODO README FAQ CREDITS HELP
