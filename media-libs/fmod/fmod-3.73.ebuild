@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.3 2004/07/13 08:20:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.4 2004/07/13 15:57:00 scandium Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="fmod"
 KEYWORDS="-* x86 ~amd64"
 
-DEPEND"virtual/libc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	 amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
