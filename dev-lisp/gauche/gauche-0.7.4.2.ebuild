@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.2.ebuild,v 1.2 2004/03/14 13:17:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/gauche-0.7.4.2.ebuild,v 1.3 2004/03/28 14:18:36 hattya Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 IUSE="ipv6 nls"
 
@@ -26,6 +26,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gdbm-gentoo.diff
+	epatch ${FILESDIR}/${PN}-extract-1.13.diff
 	autoconf
 
 }

@@ -1,0 +1,11 @@
+--- doc/extract-1.13	2004-01-20 07:28:35.000000000 +0900
++++ doc/extract	2004-03-28 20:50:21.886561408 +0900
+@@ -67,7 +67,7 @@
+         (process-header cmd header) (in (read-line)))
+       (#/^\* ([^:]+)::(.*)?/ (#f node desc)
+         (process-menu node #f desc) (in (read-line)))
+-      (#/^\* ([^:]+):\s+([^.]+)\.(.*)?/ (#f tag node desc)
++      (#/^\* ([^:]+):\s+(.+)\.(.*)?/ (#f tag node desc)
+         (process-menu node tag desc) (in (read-line)))
+       (else (display
+              (regexp-replace-all #/@VERSION@/
