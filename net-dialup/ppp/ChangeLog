@@ -1,6 +1,39 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.35 2003/12/08 14:14:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.36 2003/12/22 15:16:18 lanius Exp $
+
+*ppp-2.4.2_beta3-r1 (22 Dec 2003)
+
+  22 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2_beta3-r1.ebuild,
+  files/2.4.2b3/confd.ppp0, files/2.4.2b3/net.ppp0:
+  added support for leased-line pppd setups (bug #33290)
+
+*ppp-2.4.2_beta3-r1 (22 Dec 2003)
+
+  22 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2_beta3-r1.ebuild,
+  files/2.4.2b3/README.mpls, files/2.4.2b3/cflags.patch,
+  files/2.4.2b3/chat-default, files/2.4.2b3/confd.ppp0, files/2.4.2b3/ip-down,
+  files/2.4.2b3/ip-up, files/2.4.2b3/killaddr-smarter.patch,
+  files/2.4.2b3/modules.ppp, files/2.4.2b3/mpls.patch, files/2.4.2b3/net.ppp0,
+  files/2.4.2b3/options-pppoe, files/2.4.2b3/options-pptp,
+  files/2.4.2b3/pppoe.html:
+
+  major cleanups:
+  - moved all cflags fixed to one patch
+  - added mpls support
+  - use pon, poff, plog scripts from ppp distribution
+  - added killaddr-smarter patch (http://seclists.org/lists/linux-kernel/2001/Jan/ 5745.html)
+  - added options files for pppoe and pptp
+  - fixed resolv.conf issues
+  - fixed stopping of net.ppp0
+  - some minor things i forgot
+
+  many thx to:
+  - Robert Cernansky <openhs@users.sourceforge.net> (bug#26920)
+  - Cory Visi <cory@visi.name> (bug #35381)
+  - Francesco Pretto <ceztko@libero.it> (bug #36081)
+  - Steve Hudson <shudson2@uwo.ca> (bug #26311)
+  - BlueRaven <blueraven@libero.it> (bug #31418)
 
   08 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.1-r14.ebuild:
   added alpha to keywords, stable on sparc
