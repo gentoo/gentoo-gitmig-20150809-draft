@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.8 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r7.ebuild,v 1.9 2003/12/01 21:59:51 iggy Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -128,6 +128,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-mdcount.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-devfs-snd-fix.patch
 	epatch ${FILESDIR}/gentoo-sources-2.4.20-ipt-realm.patch
+	epatch ${FILESDIR}/do_brk_fix.patch
 
 }
 

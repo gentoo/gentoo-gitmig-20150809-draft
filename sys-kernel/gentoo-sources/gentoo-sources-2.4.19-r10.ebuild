@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.13 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.14 2003/12/01 21:59:51 iggy Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -61,6 +61,8 @@ src_unpack() {
 	# This is the latest release of ACPI from 
 	# http://www.sourceforge.net/projects/acpi	
 	[ `use acpi4linux` ] || rm 70*
+
+	epatch ${FILESDIR}/do_brk_fix.patch
 
 	kernel_src_unpack
 }
