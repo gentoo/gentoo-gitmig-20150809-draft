@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.5 2002/07/04 16:26:33 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.6 2002/10/16 16:09:28 g2boojum Exp $
+
+*gotmail-0.7.3_p1 (16 Oct 2002)
+
+  16 Oct 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  New version
 
 *gotmail-0.7.2_p1 (04 Jul 2002)
 
