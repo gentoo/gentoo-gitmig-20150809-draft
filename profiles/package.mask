@@ -516,3 +516,8 @@ dev-lang/tcl-tk
 #I removed all gcc entries (so supposedly it is a clean install)
 #masked for a few days for testing
 dev-lang/gpc
+
+#seemant@gentoo.org
+#11 Apr 2002
+# USE dependent nls bloat reduction, but needs more testing
+=sys-apps/util-linux-2.11o-r1
