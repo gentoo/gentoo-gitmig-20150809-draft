@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.125 2004/02/23 16:06:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.126 2004/02/23 16:07:53 lostlogic Exp $
+
+  23 Feb 2004; Brandon Low <lostlogic@gentoo.org> mm-sources-2.6.2-r1.ebuild,
+  mm-sources-2.6.3_rc1-r1.ebuild, mm-sources-2.6.3_rc2-r1.ebuild,
+  mm-sources-2.6.3_rc3-r1.ebuild, files/2.6.3-rc1-mm1-nfs-fix.diff:
+  Remove cruft
 
 *mm-sources-2.6.3-r3 (23 Feb 2004)
 
