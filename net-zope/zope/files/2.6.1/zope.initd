@@ -2,7 +2,7 @@
 # Zope rc-script for Gentoo Linux
 # Copyright 2002-2003 by Jason Shoemaker
 # Distributed under the terms of the GNU General Public License, v2 or later.
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.6.1/zope.initd,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.6.1/zope.initd,v 1.2 2003/11/15 11:22:15 lanius Exp $
 
 python=
 
@@ -114,7 +114,7 @@ status()
 	einfo "--> Zope is alive."
     fi
 
-    return ! is_zope_dead
+    return ${?}
 }
 
 # If Zope is dead, remove PID file and start zope.

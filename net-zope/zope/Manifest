@@ -2,7 +2,7 @@ MD5 c3ebe912b17a673e13d5e3060922deee zope-2.4.0-r6.ebuild 2654
 MD5 e950559e4827e9a8bc9b0fc13b22d7ba zope-2.6.2.ebuild 3970
 MD5 4509cbc844e892ebbee71d651cb49f27 zope-2.5.1.ebuild 2618
 MD5 222c7b7ea3d77a668e9bfa391339897e zope-2.6.1.ebuild 4178
-MD5 4587432c005efbe3148b27e27219e22c ChangeLog 3166
+MD5 abcea79d37711e6495097ed39902bd44 ChangeLog 3292
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 f8fdebc428a825403b6ecdd86d8454e1 files/zope 5574
 MD5 111f2aacb074731c923a5eb93a53f6af files/zctl.py 9455
@@ -13,5 +13,5 @@ MD5 d7df33e05eba32d945c2e5b7ef037573 files/digest-zope-2.6.1 884
 MD5 ec5aa64aee4084891c2b104ef8effbfa files/digest-zope-2.6.2 64
 MD5 c8f695d11a964dd2410a3b200a71cf2f files/custom_zodb.py 219
 MD5 841ff9ee1831723a25c4ea88e5708c55 files/zope.conf 850
-MD5 c04cde7133bafce02f758f4086b8344b files/2.6.1/zope.initd 3674
+MD5 aa5133eb433964c63cf4644b743afeec files/2.6.1/zope.initd 3662
 MD5 e2bc676da913a7fe562407b9c7f622f0 files/2.6.1/zope.envd 922

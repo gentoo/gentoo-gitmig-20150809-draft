@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.7 2003/10/30 14:58:06 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.8 2003/11/15 11:22:15 lanius Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  15 Nov 2003; Heinrich Wendel <lanius@gentoo.org> files/2.6.1/zope.initd:
+  bug #33228, fixed init script status() function
 
 *zope-2.6.2 (30 Oct 2003)
 
