@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.22 2004/10/03 22:11:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.23 2004/10/04 03:55:11 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -487,9 +487,41 @@ create_hardened_specs_file() {
 }
 
 
+create_hardenednossp_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	cp Makefile Makefile.orig
+	sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE #' Makefile
+	mv xgcc xgcc.moo
+	mv gcc.o gcc.o.moo
+	make xgcc
+	einfo "Creating a hardened no-ssp gcc specs file"
+	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednossp.specs
+	# restore everything to normal
+	mv gcc.o.moo gcc.o
+	mv xgcc.moo xgcc
+	mv Makefile.orig Makefile
+	popd > /dev/null
+}
+
+
 split_out_specs_files() {
-	create_hardened_specs_file || die "failes to split out hardened specs"
+	create_hardened_specs_file || die "failed to split out hardened specs"
 	create_vanilla_specs_file || die "failed to split out vanilla specs"
+	create_hardenednossp_specs_file || die "failed to create nossp hardened specs"
+}
+
+
+do_gcc_config() {
+	local current_gcc_config="$(gcc-config -c)"
+	local current_specs="$(echo ${current_gcc_config} | awk -F - '{ print $6 }')"
+	[ -n "${current_specs}" ] && local use_specs="-${current_specs}"
+
+	# we only want to switch compilers if installing to / and we're not
+	# building a cross-compiler.
+	if [ "${ROOT}" == "/" -a "${CHOST}" == "${CCHOST}" ] ; then
+		# we dont want to lose the current specs setting!
+		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}${use_specs}
+	fi
 }
 
 
