@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.57 2005/03/19 15:23:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.58 2005/03/29 23:49:28 ticho Exp $
+
+*getmail-4.3.4 (29 Mar 2005)
+
+  29 Mar 2005; Andrej Kacian <ticho@gentoo.org> getmail-4.3.3.ebuild,
+  +getmail-4.3.4.ebuild:
+  Version bump. 4.3.3 stable on x86.
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> getmail-4.3.1.ebuild:
   Stable on alpha.
