@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.14 2003/07/28 15:36:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.15 2003/08/01 13:44:04 agriffis Exp $
+
+  01 Aug 2003; Aron Griffis <agriffis@gentoo.org> rp-pppoe-3.5.ebuild:
+  Add ~alpha to KEYWORDS for bug 18488
 
 *rp-pppoe-3.5 (23 May 2003)
 
