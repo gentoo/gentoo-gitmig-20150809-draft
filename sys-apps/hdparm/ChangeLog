@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.22 2003/04/01 01:20:04 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.23 2003/04/16 01:10:17 gmsoft Exp $
 
 *hdparm-5.3-r2 (01 Mar 2003)
+
+  16 Arp 2003; Guy Martin <gmsoft@gentoo.org> hdparm-5.3-r2.ebuild :
+  Marked stable on hppa.
 
   01 Apr 2003; Christian Birchinger <joker@gentoo.org> hdparm-5.3-r2.ebuild:
   Added sparc stable keyword
@@ -17,10 +20,10 @@
   updated the rc-scripts for hdparm, thanks to Justin "Nagash" Jones, this fixes
   bug 16603
 
+*hdparm-5.3-r1 (08 Dec 2002)
+
   17 Feb 2003; Guy Martin <gmsoft@gentoo.org> hdparm-5.3-r1.ebuild :
   Added hppa to keywords.
-
-*hdparm-5.3-r1 (08 Dec 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
