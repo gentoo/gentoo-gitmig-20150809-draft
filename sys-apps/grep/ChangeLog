@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.29 2004/06/24 22:08:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.30 2004/06/30 15:52:42 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r1.ebuild:
+  sync IUSE (+static)
 
   15 Jun 2004; <solar@gentoo.org> grep-2.5.1-r1.ebuild,
   files/grep-2.5.1-restrict_arr.patch:
