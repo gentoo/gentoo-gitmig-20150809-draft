@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.3 2005/03/29 16:24:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.4 2005/04/02 03:05:29 ka0ttic Exp $
+
+*gentoo-bashcomp-20050329-r1 (02 Apr 2005)
+
+  02 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20050329-fix-actionre.diff, -gentoo-bashcomp-20050329.ebuild,
+  +gentoo-bashcomp-20050329-r1.ebuild:
+  Revision bump; added diff to fix action bash glob.
 
 *gentoo-bashcomp-20050329 (29 Mar 2005)
 

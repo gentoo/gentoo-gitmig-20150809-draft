@@ -1,0 +1,11 @@
+--- tags/release-20050329/gentoo	2005-03-29 20:54:05.000000000 -0500
++++ trunk/gentoo	2005-03-30 21:08:54.000000000 -0500
+@@ -152,7 +152,7 @@
+     numwords=${#COMP_WORDS[*]}
+     curword=${COMP_CWORD}
+     compwords="${COMP_WORDS[*]}"
+-    actionre=' @(-[CPcis]|@(metadata|s@(y@(nc|stem)|earch)|regen|@(unmerg|prune)e|world|@(@(dep)@(clean)|@(in@(fo|ject)))))'
++    actionre='@(-[CPcis]|@(metadata|s@(y@(nc|stem)|earch)|regen|@(unmerg|prune)e|world|@(@(dep)@(clean)|@(in@(fo|ject)))))'
+     stopre=' @(depclean|info|metadata|regen|sy@(nc|stem)|world|--@(resume|s@(kipfirst|ync)))'
+     opts=''
+ 
