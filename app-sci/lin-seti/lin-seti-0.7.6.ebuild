@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.6.ebuild,v 1.2 2004/01/29 12:32:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/lin-seti-0.7.6.ebuild,v 1.3 2004/03/02 14:21:34 agriffis Exp $
 
 DESCRIPTION="A Seti@Home cache manager, cache-compatible with Seti Driver. Can be run as system daemon."
 HOMEPAGE="http://lin-seti.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa"
+KEYWORDS="x86 ppc sparc hppa"
 
 DEPEND="app-sci/setiathome"
 
