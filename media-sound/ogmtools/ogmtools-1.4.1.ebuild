@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.4.1.ebuild,v 1.1 2004/08/05 20:13:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.4.1.ebuild,v 1.2 2004/09/14 07:59:53 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="dvd"
 
 RDEPEND="dvd? ( media-libs/libdvdread )
