@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.2 2004/06/15 01:11:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.3 2004/06/24 15:52:20 dholm Exp $
 
 
 # EBuild details
@@ -9,7 +9,7 @@ HOMEPAGE="http://rr.codefactory.se"
 SRC_URI="ftp://ftp.codefactory.se/pub/RoadRunner/source/roadrunner/roadrunner-${PV}.tar.gz"
 LICENSE="Roadrunner"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 # static	= also build a static library
 # doc		= include documentation
