@@ -1,4 +1,14 @@
-MD5 eaa204629757cccd91a91b6a058b866f crypt-des-ede3-0.01.ebuild 643
-MD5 7cfe0ad6e298810db63745a23453a7d6 ChangeLog 889
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06cff1789cfaf4f526e3bf5c027a975c ChangeLog 993
+MD5 a167ae6e9274e9eb6cc4c7cefd7b25b8 crypt-des-ede3-0.01.ebuild 644
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 eec67ec184fc403d514e4b9188d65e1e files/digest-crypt-des-ede3-0.01 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5oe0KRy60XGEcJIRArKUAKC0iLzRHWGXhnucVWAEnEvCJDUeYgCdFQSy
+9NHtAGHksAnnC6QO4Y7ucIk=
+=cOrZ
+-----END PGP SIGNATURE-----

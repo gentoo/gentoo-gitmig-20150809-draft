@@ -1,4 +1,14 @@
-MD5 7e5b2fc8c223496384083ca64b053e54 ChangeLog 856
-MD5 79478e30eff708e70aa757a5cbc282b8 data-buffer-0.04.ebuild 591
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6a7eb7499d9672b586dc5385b75d114b ChangeLog 955
+MD5 9b819f4ef5f9a8274d0ab705ac0045b1 data-buffer-0.04.ebuild 593
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 679e4b4ebf63c2eb8cd8f298de239582 files/digest-data-buffer-0.04 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5ohuKRy60XGEcJIRAjLXAJ0THEs0lMMECIg0+VWmmqD+Gehl6gCeJmnh
+I3iHGQr6fjw2is+7OUQzc0Y=
+=KDro
+-----END PGP SIGNATURE-----
