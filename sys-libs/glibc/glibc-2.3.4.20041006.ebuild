@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.4 2004/10/12 04:10:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.5 2004/10/13 17:31:46 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~x86 -amd64 ~hppa ~ppc64 ~ppc"
+KEYWORDS="-* ~x86 ~amd64 ~hppa ~ppc64 ~ppc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -712,11 +712,11 @@ src_install() {
 	mkdir -p ${T}/thread-backup
 	mv ${D}/$(get_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	if use !nptlonly && want_nptl ; then
-		mkdir -o ${T}/thread-backup/tls
+		mkdir -p ${T}/thread-backup/tls
 		mv ${D}/$(get_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
 	fi
 	env -uRESTRICT prepallstrip
-	cp -R ${T}/thread-backup/* ${D}/lib/
+	cp -R -- ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/$(get_libdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -799,6 +799,12 @@ EOF
 	# This is our new config file for building locales
 	insinto /etc
 	doins ${FILESDIR}/locales.build
+
+	must_exist /$(get_libdir)/ libpthread.so.0
+}
+
+must_exist() {
+	test -e ${D}/${1}/${2} || die "${1}/${2} was not installed"
 }
 
 fix_lib64_symlinks() {

@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.275 2004/10/13 17:16:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.276 2004/10/13 17:31:46 lv Exp $
 
   13 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   Moved Lv's latest patch into do_arch{ia64|amd64}_patches() to avoid breakage
@@ -13,11 +13,16 @@
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   Stable on hppa.
 
+  13 Oct 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040808-r1.ebuild,
+  glibc-2.3.4.20041006.ebuild:
+  it seems the strange libpthread-not-installed bug was an ebuild quirk and not
+  a portage quirk. it should hopefully be fixed now. i've also added a safety
+  function to 2.3.4.20040808 and 2.3.4.20041006 that will prevent glibc from
+  installing if libpthread is missing, which will likely be expanded further in
+  the future. re-keyworded 2.3.4.20041006 ~amd64.
+
   12 Oct 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20041006.ebuild:
-  a portage quirk seems to be installing and then uninstalling libpthread on
-  amd64, so i'm re-keywording -amd64 until this is fixed. if you havent snagged
-  this bug, you should be safe. if you have nptl in USE, you -should- be able to
-  simply emerge glibc twice and portage will stop removing libpthread.
+  keyworded -amd64 for libpthread bug.
 
   11 Oct 2004; <solar@gentoo.org> glibc-2.3.4.20040808-r1.ebuild:
   marked 20040808-r1 stable x86 for 2004.3

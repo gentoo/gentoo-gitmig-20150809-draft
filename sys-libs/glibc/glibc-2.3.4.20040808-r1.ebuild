@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.6 2004/10/13 17:16:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.7 2004/10/13 17:31:46 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -602,9 +602,9 @@ src_install() {
 		install || die
 	# now, strip everything but the thread libs #46186
 	mkdir ${T}/thread-backup
-	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
+	mv ${D}/$(get_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
 	env -uRESTRICT prepallstrip
-	mv ${T}/thread-backup/* ${D}/lib/
+	mv ${T}/thread-backup/* ${D}/$(get_libdir)/ || die
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
 	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
@@ -691,6 +691,8 @@ EOF
 	# This is our new config file for building locales
 	insinto /etc
 	doins ${FILESDIR}/locales.build
+
+	must_exist /$(get_libdir)/ libpthread.so.0
 
 	# this whole section is useless, it fails if sandbox is LOADED, not if it's
 	# enabled. but forcing sandbox not to load isnt an option...
@@ -783,3 +785,9 @@ pkg_postinst() {
 		/sbin/init U &> /dev/null
 	fi
 }
+
+
+must_exist() {
+	test -e ${D}/${1}/${2} || die "${1}/${2} was not installed"
+}
+
