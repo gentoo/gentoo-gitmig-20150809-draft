@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/memcached-api-perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/ChangeLog,v 1.12 2004/09/10 17:09:21 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-perl/ChangeLog,v 1.13 2004/09/11 14:28:18 swegener Exp $
+
+  11 Sep 2004; Sven Wegener <swegener@gentoo.org>
+  memcached-api-perl-1.14.ebuild:
+  Added spaces to RDEPEND before and after parentheses.
 
 *memcached-api-perl-1.14 (10 Sep 2004)
 
