@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.4 2003/07/13 16:53:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/inn-2.3.5.ebuild,v 1.5 2003/09/07 00:16:42 msterret Exp $
 
 IUSE="ssl tcltk"
 
@@ -95,7 +95,7 @@ src_install() {
 	cd ${WORKDIR}
 	doman send-uucp.pl.8.gz
 	insinto /etc/news
-	doins send-uucp.cf 
+	doins send-uucp.cf
 	exeinto /usr/lib/news/bin
 	newexe send-uucp.pl send-uucp.pl
 }

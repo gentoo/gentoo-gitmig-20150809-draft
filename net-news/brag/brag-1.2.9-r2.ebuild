@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r2.ebuild,v 1.1 2003/08/27 05:23:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/brag/brag-1.2.9-r2.ebuild,v 1.2 2003/09/07 00:16:42 msterret Exp $
 
 IUSE=""
 
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	patch < ${FILESDIR}/${P}-r1-gentoo.patch
-}	
+}
 
 src_install() {
 	dobin brag

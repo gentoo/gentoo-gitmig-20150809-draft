@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20030621.ebuild,v 1.1 2003/06/27 06:35:12 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20030621.ebuild,v 1.2 2003/09/07 00:16:42 msterret Exp $
 
 S="${WORKDIR}/leafnode-2.0.0.alpha20030621b"
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
@@ -26,7 +26,7 @@ src_compile() {
 	#   env cf_cv_ipv6=yes /bin/sh ./configure YOUR_OPTIONS
 	# (of course, you need to replace YOUR_OPTIONS)
 	# ------------------------------------------------------
-	
+
 	use ipv6 && myconf="--with-ipv6" ||	export cf_cv_ipv6=no
 
 	econf \
@@ -46,7 +46,7 @@ src_install() {
 	# add .keep file to /var/lock/news to avoid ebuild to ignore the empty dir
 	keepdir /var/lock/news/
 	# ... and keep texpire from complaining about missing dir
-	keepdir /etc/leafnode/local.groups	
+	keepdir /etc/leafnode/local.groups
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/leafnode.xinetd leafnode-nntp
@@ -58,14 +58,14 @@ src_install() {
 
 	dodoc AUTHORS COPYING* CREDITS ChangeLog DEBUGGING ENVIRONMENT FAQ \
 	INSTALL NEWS TODO README README_FIRST UPDATING
-	dohtml README.html 
+	dohtml README.html
 }
 
 pkg_postinst() {
 	mkdir -p /var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
 	mkdir -p /var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
 	chown -R news:news /var/spool/news
-	
+
 	cat ${S}/README_FIRST | while read line ;
 	do
 		einfo $line

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/glitter-1.0-r1.ebuild,v 1.2 2003/06/08 01:15:09 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/glitter/glitter-1.0-r1.ebuild,v 1.3 2003/09/07 00:16:42 msterret Exp $
 
 DESCRIPTION="Glitter - a binary downloader for newsgroups"
 HOMEPAGE="http://www.mews.org.uk/glitter/"
@@ -26,7 +26,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc || die "./configure failed"
-	
+
 	emake || die
 }
 

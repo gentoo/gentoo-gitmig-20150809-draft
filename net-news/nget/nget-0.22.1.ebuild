@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.22.1.ebuild,v 1.5 2003/08/03 04:21:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.22.1.ebuild,v 1.6 2003/09/07 00:16:42 msterret Exp $
 
 NPVER=20011209
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	if use build; then
 		insinto /usr
-		dobin ${S}/src/nget	
+		dobin ${S}/src/nget
 		return
 	fi
 	make prefix=${D}/usr \
