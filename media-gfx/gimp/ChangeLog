@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.4 2002/02/23 01:56:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.5 2002/05/23 00:02:19 spider Exp $
+
+*gimp-1.3.5 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> gimp-1.3.5.ebuild:
+  in the big gnome2 move I'm adding this beta..
 
 *gimp-1.2.3-r2 (22 Feb 2002)
 
