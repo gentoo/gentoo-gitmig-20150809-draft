@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/upm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/ChangeLog,v 1.1 2002/12/27 17:15:33 cretin Exp $
+
+*upm-0.85 (27 Dec 2002)
+
+  27 Dec 2002; Stefan Jones <cretin@gentoo.org> :
+  Another package manager for your hacking pleasure
+
