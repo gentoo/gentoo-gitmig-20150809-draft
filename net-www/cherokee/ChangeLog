@@ -1,8 +1,8 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.14 2004/03/31 23:03:28 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.15 2004/04/08 12:14:10 bass Exp $
 
-*cherokee-0.15.0 (01 Apr 2004)
+*cherokee-0.4.15 (01 Apr 2004)
 
   01 Apr 2004; <bass@gentoo.org> cherokee-0.4.15.ebuild:
   New Version.
