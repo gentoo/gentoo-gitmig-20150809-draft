@@ -1,0 +1,11 @@
+--- main.c.orig	2004-07-25 00:52:19.000000000 -0700
++++ main.c	2004-07-25 00:52:39.000000000 -0700
+@@ -262,7 +262,7 @@
+ 	strcpy(copyfile, powwow_dir);
+     else
+ 	strcpy(copyfile, POWWOW_DIR);
+-    if (helpfile[strlen(helpfile) - 1] != '/')
++    if (copyfile[strlen(copyfile) - 1] != '/')
+ 	strcat(copyfile, "/");
+     strcat(copyfile, copyname);
+     if (access(copyfile, R_OK) == -1 && !access(copyname, R_OK))
