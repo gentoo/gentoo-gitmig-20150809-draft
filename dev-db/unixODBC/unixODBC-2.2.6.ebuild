@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.3 2003/12/04 20:21:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.4 2003/12/15 22:15:04 rphillips Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -9,12 +9,13 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~hppa ~alpha amd64 sparc"
-IUSE="qt gtk"
+IUSE="qt gnome"
 
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	qt? ( >=x11-libs/qt-3.0* )"
+	qt? ( >=x11-libs/qt-3.0* )
+	gnome? ( gnome-base/gnome-libs )"
 
 src_compile() {
 	local myconf
@@ -33,13 +34,13 @@ src_compile() {
 
 	make || die
 
-	if [ "`use gtk`" ]
+	if [ "`use gnome`" ]
 	then
 		cd gODBCConfig
 		./configure --host=${CHOST} \
 				--prefix=/usr \
 				--sysconfdir=/etc/unixODBC \
-				${myconf} || die
+				|| die
 
 		# not sure why these symlinks are needed. busted configure, i guess...
 		ln -s ../depcomp .
@@ -52,7 +53,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ "`use gtk`" ]
+	if [ "`use gnome`" ]
 	then
 		cd gODBCConfig
 		make DESTDIR=${D} install || die
