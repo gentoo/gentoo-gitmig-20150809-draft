@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.7 2002/10/05 05:39:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.8 2002/12/06 22:02:24 mholzer Exp $
 
 IUSE="nls"
 
@@ -8,7 +8,7 @@ inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/0.5/${P}.tar.bz2"
 HOMEPAGE="http://www.labs.redhat.com/orbit/"
 
 DEPEND="virtual/glibc 
