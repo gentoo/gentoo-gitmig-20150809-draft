@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/apollon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.4 2004/03/10 02:53:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.5 2004/04/08 18:48:34 centic Exp $
+
+*apollon-0.9.3 (08 Apr 2004)
+
+  08 Apr 2004; Dominik Stadler <centic@gentoo.org> apollon-0.9.3.ebuild:
+  Add ebuild for new Version 0.9.3, see Bug 47053. Should also close 
+  Bug 44389, Bug 30377 and maybe Bug 42203.
 
 *apollon-0.9.2 (09 Mar 2004)
 
