@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r1.ebuild,v 1.2 2002/11/30 18:18:03 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mjc-sources/mjc-sources-2.4.20-r1.ebuild,v 1.3 2002/12/01 18:50:40 lostlogic Exp $
 
 IUSE="build"
 
@@ -12,7 +12,7 @@ inherit kernel || die
 
 OKV=2.4.20
 KV=2.4.20-mjc1
-EXTRAVERSION=-mjc2
+EXTRAVERSION=-mjc1
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Full sources for MJC's Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
