@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/bluej
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bluej/ChangeLog,v 1.1 2003/05/25 00:28:38 tberman Exp $
+
+*bluej-1.2.2 (24 May 2003)
+
+  24 May 2003; Todd Berman <tberman@gentoo.org> bluej-1.2.2.ebuild,
+  files/bluej:
+  Initial Import, thanks to Heinrich Wendel for the ebuild submission this is
+  based on
+
