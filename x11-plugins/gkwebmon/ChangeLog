@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkwebmon
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/ChangeLog,v 1.1 2003/02/12 11:03:19 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkwebmon/ChangeLog,v 1.2 2004/03/25 02:47:55 pyrania Exp $
+
+*gkwebmon-0.2 (25 Mar 2004)
+
+  25 Mar 2004; Markus Nigbur <pyrania@gentoo.org> gkwebmon-0.2.ebuild:
+  Version bump. Closing bug #38336.
 
 *gkwebmon-0.1b (12 Feb 2003)
 
