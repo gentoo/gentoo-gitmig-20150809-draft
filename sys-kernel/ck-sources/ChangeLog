@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.77 2004/12/25 15:59:15 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.78 2004/12/29 02:45:11 kingtaco Exp $
+
+  28 Dec 2004; Mike Doty <kingtaco@gentoo.org> ck-sources-2.6.10-r1.ebuild:
+  ~amd64 keyword added
 
 *ck-sources-2.6.10-r1 (25 Dec 2004)
 

@@ -1,14 +1,24 @@
-MD5 b6e2f5aa9770de9a81272db5aa39f662 ck-sources-2.4.28-r1.ebuild 1089
-MD5 fdcab6015cff9a00d641352358d67734 ck-sources-2.6.10-r1.ebuild 724
-MD5 0a2dc152f17f0d10f53da3c998fd7f09 ChangeLog 16718
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c9c879d2b034eae4e91990b664624769 ChangeLog 16823
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
-MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
-MD5 001b0a631c9fc28133013a1f8f78f74c files/ck-sources-2.6.10.CAN-2004-1056.patch 8458
+MD5 b6e2f5aa9770de9a81272db5aa39f662 ck-sources-2.4.28-r1.ebuild 1089
+MD5 befc649424a0dbeb22f992247b725ba0 ck-sources-2.6.10-r1.ebuild 736
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ck-sources-2.4.28.CAN-2004-1016.patch 2835
-MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
+MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
+MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
 MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
 MD5 55eb417b53b98efb6e89557bbf35e51b files/digest-ck-sources-2.4.28-r1 214
-MD5 79a76d3cb0029b85d4303b0019e788a8 files/ck-sources-2.4.28.compileFix.patch 2070
-MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
-MD5 757ee1239c3f14645ccea3640d551e11 files/ck-sources-2.4.28.CAN-2004-1056.patch 11249
 MD5 b16a5ef5d8bdaf351a70ca61aa0e4bc2 files/digest-ck-sources-2.6.10-r1 131
+MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
+MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 388
+MD5 79a76d3cb0029b85d4303b0019e788a8 files/ck-sources-2.4.28.compileFix.patch 2070
+MD5 001b0a631c9fc28133013a1f8f78f74c files/ck-sources-2.6.10.CAN-2004-1056.patch 8458
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0hpA0K3RJaeXx6cRAtgFAJ9mO/OL8xkOJJ+/RqMrO+U4hmqiUACfVxBm
+n/V4//jUv/n/e9r940V42NY=
+=U4n3
+-----END PGP SIGNATURE-----
