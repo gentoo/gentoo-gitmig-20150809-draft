@@ -1,8 +1,11 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.5 2003/09/30 13:01:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.6 2003/11/10 14:15:34 usata Exp $
 
 *canna-cannadic-0.95a (22 Sep 2003)
+
+  10 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> canna-cannadic-0.95a.ebuild:
+  Considered as stable
 
   22 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> canna-cannadic-0.95a.ebuild:
   Version bumped.  Thanks to Hattya <hattya@inter7.jp> for reporting
