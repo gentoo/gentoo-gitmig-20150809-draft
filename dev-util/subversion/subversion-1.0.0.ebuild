@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.0.ebuild,v 1.4 2004/02/25 08:41:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.0.ebuild,v 1.5 2004/02/25 17:25:58 aliz Exp $
 
 inherit elisp-common libtool python
 
@@ -13,7 +13,7 @@ PYTHON_DIR=/usr/lib/python${PYVER}
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="ssl apache2 berkdb python emacs"
 
 S=${WORKDIR}/${PN}-${PV}
