@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.26 2003/11/03 07:06:43 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.27 2003/12/06 14:55:57 liquidx Exp $
+
+  06 Dec 2003; Alastair Tse <liquidx@gentoo.org> twisted-1.0.6.ebuild,
+  twisted-1.0.7.ebuild, twisted-1.0.7_rc1.ebuild, twisted-1.1.0.ebuild:
+  cleanup and fix gtk2 useflags (#34558)
 
 *twisted-1.1.0 (27 Oct 2003)
   03 Nov 2003; Thomas Raschbacher <lordvan@gentoo.org> twisted-1.1.0.ebuild:
