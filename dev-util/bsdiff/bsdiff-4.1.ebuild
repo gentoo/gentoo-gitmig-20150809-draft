@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.1.ebuild,v 1.6 2004/04/29 00:47:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/bsdiff-4.1.ebuild,v 1.7 2004/06/03 09:22:32 kloeri Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.daemonology.net/bsdiff/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD-protection"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips amd64 ~ia64"
 
 DEPEND="app-arch/bzip2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r1.ebuild,v 1.3 2004/05/10 23:30:33 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r1.ebuild,v 1.4 2004/06/03 09:24:34 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://sources.isc.org/devel/tools/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ppc ia64 ~sparc ~alpha ~mips ~hppa s390 amd64"
+KEYWORDS="x86 ppc ia64 ~sparc alpha ~mips ~hppa s390 amd64"
 
 src_compile() {
 	epatch ${FILESDIR}/mkstemp.patch
