@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.35 2004/11/08 23:55:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.36 2004/11/16 00:34:57 ka0ttic Exp $
+
+*vixie-cron-4.1-r4 (15 Nov 2004)
+
+  15 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> +vixie-cron-4.1-r4.ebuild:
+  Revision bump; fix /etc/pam.d/cron perms bug #71326
 
   09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   vixie-cron-4.1-r3.ebuild:
