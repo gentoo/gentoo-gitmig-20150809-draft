@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/quirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/ChangeLog,v 1.8 2004/06/24 23:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/ChangeLog,v 1.9 2004/09/01 02:35:17 swegener Exp $
+
+*quirc-0.9.84 (01 Sep 2004)
+
+  01 Sep 2004; Sven Wegener <swegener@gentoo.org> -files/0.9.83-gentoo.diff,
+  -quirc-0.9.82.ebuild, quirc-0.9.83-r1.ebuild, -quirc-0.9.83.ebuild,
+  +quirc-0.9.84.ebuild:
+  Version bump. Fixes bug #62350. Removed old ebuilds and updated dependencies.
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> quirc-0.9.82.ebuild,
   quirc-0.9.83-r1.ebuild, quirc-0.9.83.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.83-r1.ebuild,v 1.7 2004/06/24 23:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.83-r1.ebuild,v 1.8 2004/09/01 02:35:17 swegener Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ DESCRIPTION="A GUI IRC client scriptable in Tcl/Tk"
 SRC_URI="http://quirc.org/${P}.tar.gz"
 HOMEPAGE="http://quirc.org/"
 
-DEPEND="dev-lang/tcl
-	dev-lang/tk"
+DEPEND="<dev-lang/tcl-8.4
+	<dev-lang/tk-8.4"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,7 +20,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/0.9.83-r1-gentoo.diff
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 
 }
 
