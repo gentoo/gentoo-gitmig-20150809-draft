@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.1 2004/05/03 08:37:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.2 2004/05/05 17:43:05 taviso Exp $
 
 inherit eutils
 
@@ -28,9 +28,9 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 DEPEND="caps? ( sys-libs/libcap )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
-	>=dev-libs/libgcrypt-1.1.42
-	>=dev-libs/libksba-0.4.7
-	dev-libs/libassuan
+	>=dev-libs/libgcrypt-1.1.94
+	>=dev-libs/libksba-0.9.6
+	>=dev-libs/libassuan-0.6.5
 	sys-libs/zlib
 	virtual/glibc
 	dev-lang/perl
