@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r5.ebuild,v 1.3 2003/06/21 01:28:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r5.ebuild,v 1.4 2003/06/26 10:05:37 taviso Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -16,7 +16,7 @@ DESCRIPTION="The Mozilla Firebird Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firebird/"
 SRC_URI="http://komodo.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-${PV}-source.tar.bz2"
 
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6"
@@ -47,6 +47,14 @@ DEPEND="${RDEPEND}
 export MOZ_PHOENIX=1
 export MOZ_CALENDAR=0
 export MOZ_ENABLE_XFT=1
+
+src_unpack() {
+	unpack MozillaFirebird-${PV}-source.tar.bz2
+	
+	# alpha stubs patch from lfs project.
+	# <taviso@gentoo.org> (26 Jun 2003)
+	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+}
 
 src_compile() {
    local myconf="--disable-composer \
