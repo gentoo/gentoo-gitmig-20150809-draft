@@ -1,103 +1,42 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/speech-tools/speech-tools-1.2.3.ebuild,v 1.3 2004/01/26 08:57:19 vapier Exp $
+
+inherit eutils fixheadtails
 
 MY_P=${P/-/_}
-S=${WORKDIR}/speech_tools
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
-IUSE=""
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
-SITE="http://www.cstr.ed.ac.uk/download/festival/1.4.3"
-SRC_URI="${SITE}/${MY_P}-release.tar.gz"
+SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz"
 
-SLOT="0"
 LICENSE="FESTIVAL BSD as-is"
+SLOT="0"
 KEYWORDS="~x86"
 
 RDEPEND="virtual/glibc"
+
+S=${WORKDIR}/speech_tools
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
+	ht_fix_file config.guess
+	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
+	[ `use static` ] || sed -i 's/# SHARED=1/SHARED=1/' config/config.in
+	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
 }
 
 src_compile() {
-
-	cd ${S}
-
-	if [ ! -n "`use static`" ]
-	then
-		pushd ${S}/config
-		mv -f config.in config.in.orig
-		sed -e 's/# SHARED=1/SHARED=1/' config.in.orig > config.in
-		popd
-	fi
-
-	pushd ${S}/config/compilers
-	mv -f gcc_defaults.mak gcc_defaults.mak.orig
-	sed -e 's/-fno-implicit-templates //' gcc_defaults.mak.orig > gcc_defaults.mak
-	popd
-
-	econf
-
+	econf || die
 	make || die
-
 }
 
 src_install() {
-
 	into /usr/lib/speech-tools
 
-	if [ -n "`use static`" ]
-	then
-		cd ${S}/main
-		dobin align
-		dobin bcat
-		dobin ch_lab
-		dobin ch_track
-		dobin ch_utt
-		dobin ch_wave
-		dobin design_filter
-		dobin dp
-		dobin fringe_client
-		dobin na_play
-		dobin na_record
-		dobin ngram_build
-		dobin ngram_test
-		dobin ols
-		dobin ols_test
-		dobin pda
-		dobin pitchmark
-		dobin scfg_make
-		dobin scfg_parse
-		dobin scfg_test
-		dobin scfg_train
-		dobin sig2fv
-		dobin sigfilter
-		dobin spectgen
-		dobin siod
-		dobin tilt_analysis
-		dobin tilt_synthesis
-		dobin viterbi
-		dobin wagon
-		dobin wagon_test
-		dobin wfst_build
-		dobin wfst_run
-		dobin wfst_train
-		dobin xml_parser
-		cd ${S}/bin
-		dobin build_docbook_index
-		dobin cxx_to_docbook
-		dobin est_examples
-		dobin est_gdb
-		dobin est_program
-		dobin example_to_doc++
-		dobin make_wagon_desc
-		dobin pm
-		dobin raw_to_xgraph
-		dobin resynth
-		dobin tex_to_images
+	if [ `use static` ] ; then
+		dobin `find main/ -perm +1` `find bin/ -perm +1`
 	else
 		cd ${S}/bin
 		rm -f Makefile
@@ -105,8 +44,7 @@ src_install() {
 	fi
 
 	cd ${S}/lib
-	if [ ! -n "`use static`" ]
-	then
+	if [ ! `use static` ] ; then
 		dolib.so libestbase.so.1.2.3.1
 		dosym /usr/lib/speech-tools/lib/libestbase.so.1.2.3.1 /usr/lib/speech-tools/lib/libestbase.so
 		dolib.so libeststring.so.1.2
@@ -136,4 +74,3 @@ src_install() {
 	cd ${S}/lib
 	dodoc cstrutt.dtd
 }
-
