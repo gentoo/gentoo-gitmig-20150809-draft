@@ -1,6 +1,6 @@
 MD5 82ba4d66f539a469d378ace55799f833 postfix-2.0.10-r1.ebuild 6158
 MD5 566f7daa4609b8810c25756710ab63a1 postfix-2.0.13.ebuild 6382
-MD5 be3bcf948577a881d6bf8bcd689f1136 postfix-2.0.13-r1.ebuild 6399
+MD5 2b4daa88518a9b8c2ebf19144accdae5 postfix-2.0.13-r1.ebuild 6448
 MD5 656396a2cf9d1d2c05cd6b55dc9e988d postfix-2.0.9.ebuild 6242
 MD5 0adbbef42d28091a11b3b675345dae91 postfix-1.1.11.20020917-r1.ebuild 4942
 MD5 c1939447e7af5681008b1bb8e1cf7a95 postfix-2.0.12-r1.ebuild 6027
@@ -28,4 +28,5 @@ MD5 499f6d9f2295ba6e359ce568842d050c files/digest-postfix-2.0.10-r1 295
 MD5 6264e15636614de0cce39a66de79db5f files/digest-postfix-2.0.12-r1 295
 MD5 fbf57b537c7f42a7bf96f073ee3d22bf files/digest-postfix-2.0.13-r1 297
 MD5 7dea3c30c3550cbbcdf4aac0b6d8dffa files/smtpd-2.0.conf 138
+MD5 cada6258fd7febc632fd333523fa00d5 files/postfix-2.0.0/master.cf.diff 883
 MD5 803eb5ffc166aaaf2f3b78ddf71fe73d files/postfix-2.0.0/main.cf.diff 2382

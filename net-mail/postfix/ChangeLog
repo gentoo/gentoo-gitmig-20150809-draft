@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.81 2003/08/14 05:17:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.82 2003/08/16 02:26:12 g2boojum Exp $
+
+  15 Aug 2003; Nick Hadaway <raker@gentoo.org>  
+  files/2.0.0/master.cf.diff, files/postfix-2.0.13-r1.ebuild:
+  Added a patch for the master.cf based on suggestions by Alexander
+  Holler on bug #26130
 
   13 Aug 2003; Nick Hadaway <raker@gentoo.org> files/postfix.rc6:
   Added ypbind to the use list so NIS-related services are started
