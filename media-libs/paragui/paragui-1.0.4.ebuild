@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.0.4.ebuild,v 1.6 2004/07/14 20:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.0.4.ebuild,v 1.7 2005/03/17 17:09:50 luckyduck Exp $
 
 DESCRIPTION="A cross-platform high-level application framework and GUI library"
 HOMEPAGE="http://www.paragui.org/"
