@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.1 2001/12/26 07:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.2 2002/07/09 15:10:28 aliz Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -11,6 +11,9 @@ OKV=${PV}
 KV=${OKV}
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 # Patch versions. We now have a new system.  To enable a patch, set the patch version.  To disable
 # a patch, comment out the patch version and it won't be enabled.  In this ebuild, ACPI, low latency

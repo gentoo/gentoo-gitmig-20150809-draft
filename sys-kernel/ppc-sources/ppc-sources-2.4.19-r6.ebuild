@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Kain X <kain@gentoo.org>
 # Maintainer: Kain X <kain@gentoo.org>
-# $Id: ppc-sources-2.4.19-r6.ebuild,v 1.1 2002/06/12 07:28:42 kain Exp $ 
+# $Id: ppc-sources-2.4.19-r6.ebuild,v 1.2 2002/07/09 15:10:28 aliz Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -29,6 +29,8 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http:/
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="ppc"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then

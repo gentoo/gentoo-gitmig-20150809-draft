@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.2.21_pre3.ebuild,v 1.1 2002/05/12 21:42:40 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.2.21_pre3.ebuild,v 1.2 2002/07/09 15:10:28 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -32,6 +32,8 @@ PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ 
 		  http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html/
 		  http://www.namesys.com" 
+LICENSE="GPL-2"
+SLOT="0"
 
 KERNEL_ARCH=`echo $ARCH |\
   sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
