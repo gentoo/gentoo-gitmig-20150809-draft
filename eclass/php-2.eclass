@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.8 2004/01/05 00:31:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.9 2004/01/05 11:08:05 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -9,8 +9,6 @@ ECLASS=php
 INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
-
-function runningunstable() { has ~${ARCH} ${ACCEPT_KEYWORDS} > /dev/null ; }
 
 [ -z "${MY_PN}" ] && MY_PN=php
 if [ -z "${MY_PV}" ]; then
@@ -37,7 +35,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -86,7 +84,8 @@ RDEPEND="
    >=app-text/sablotron-0.97
    dev-libs/expat
    sys-libs/zlib 
-   virtual/mta"
+   virtual/mta
+   yaz? ( dev-libs/yaz )"
 
 # libswf is ONLY available on x86
 RDEPEND="${RDEPEND} flash? ( 
@@ -311,6 +310,7 @@ php_src_compile() {
 	myconf="${myconf} `use_with kerberos kerberos /usr` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
+	myconf="${myconf} `use_with yaz`"
 	if use curl; then
 		myconf="${myconf} --with-curlwrappers --with-curl=/usr"
 	else
@@ -377,7 +377,7 @@ php_src_compile() {
 	myconf="${myconf} --enable-dio"
 	myconf="${myconf} --enable-yp"
 
-	# recode is NOT used as it conflicts with IMAP and YAZ
+	# recode is NOT used as it conflicts with IMAP
 	# iconv is better anyway
 
 	# Now actual base PHP settings
