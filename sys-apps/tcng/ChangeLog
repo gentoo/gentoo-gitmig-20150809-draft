@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.2 2003/12/09 17:52:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.3 2003/12/17 11:58:17 robbat2 Exp $
+
+*tcng-9i (17 Dec 2003)
+
+  17 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> tcng-9h.ebuild,
+  tcng-9i.ebuild, files/tcng-9i-fixes.patch, files/tcng-9i-gentoo.patch:
+  new version upstream, major fixes, fix bug #35851, full tcsim support, block
+  old version out as it was badly badly broken
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> tcng-9h.ebuild:
   changed app-text/ghostscript to virtual/ghostscript

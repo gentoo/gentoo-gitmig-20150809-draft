@@ -1,4 +1,8 @@
-MD5 bd3f2a753bb647b8b8cd04995bd982d8 ChangeLog 535
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/Manifest,v 1.8 2003/12/17 11:58:17 robbat2 Exp $
+MD5 a1a41d1d705111a9654eceedcaf5e890 tcng-9i.ebuild 3485
+MD5 08abcdf9eebdd85f53ebfcbe1cdc0bd2 tcng-9h.ebuild 2485
+MD5 1d6f5667fdf13eebd8da7ad446aef4d0 ChangeLog 534
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f48e1f073f355b014becf0a78c873cc4 tcng-9h.ebuild 2461
+MD5 3795dfb12261c64ebd6a428e1c9cd9b9 files/digest-tcng-9i-r2 59
 MD5 452318324f0c5e0571d8db1a63ee78d2 files/digest-tcng-9h 270
+MD5 bba07d9e3d5362bf04936fd2450b2d27 files/digest-tcng-9i 276
