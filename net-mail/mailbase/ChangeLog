@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.10 2003/02/21 01:50:50 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.11 2003/04/18 20:30:57 tuxus Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -20,6 +20,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *mailbase-0.00-r4 (27 Jun 2002)
+
+  18 Apr 2003; Jan Seidel <tuxus@gentoo.org> mailbase-0.00-r4.ebuild :
+  Added mips to keywords.
 
   27 Jun 2002; Phil Bordelon <sunflare@gentoo.org> mailbase-0.00-r4.ebuild :
 

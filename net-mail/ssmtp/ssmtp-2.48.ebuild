@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.8 2003/04/05 03:36:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ssmtp-2.48.ebuild,v 1.9 2003/04/18 20:33:13 tuxus Exp $
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a
 Mailhub"
@@ -8,7 +8,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/${P}.tar.gz"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/system/mail/mta/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~hppa arm"
+KEYWORDS="x86 ppc sparc alpha ~hppa arm mips"
 LICENSE="GPL-2"
 IUSE=""
 
