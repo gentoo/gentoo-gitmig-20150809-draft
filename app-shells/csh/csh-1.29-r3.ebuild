@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.5 2004/05/31 17:45:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.6 2004/06/03 09:55:23 taviso Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -80,7 +80,7 @@ src_compile() {
 	append-flags -DTTYHOG=1024 -DMAXPATHLEN=4096 -D_GNU_SOURCE
 	append-flags -D_DIAGASSERT="assert"
 
-	# maybe they dont warn on BSD, but _damn_.
+	# maybe they dont warn on BSD, but on linux they are very noisy.
 	export NOGCCERROR=1
 
 	# if csh is a users preferred shell, they may want
