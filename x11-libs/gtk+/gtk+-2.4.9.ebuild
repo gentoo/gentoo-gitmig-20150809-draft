@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.3.ebuild,v 1.3 2004/06/29 04:47:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.9.ebuild,v 1.1 2004/08/29 12:50:08 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -17,9 +17,8 @@ RDEPEND="virtual/x11
 	>=dev-libs/glib-2.4
 	>=dev-libs/atk-1.0.1
 	>=x11-libs/pango-1.4
-	>=media-libs/libpng-1.2.1
-	>=x11-themes/gnome-icon-theme-1.2
 	x11-misc/shared-mime-info
+	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
 
@@ -27,7 +26,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	sys-devel/autoconf
 	doc? ( >=dev-util/gtk-doc-1 )"
-
 
 src_unpack() {
 
@@ -39,8 +37,9 @@ src_unpack() {
 	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
-	# define a sensible default icon theme
-	epatch ${FILESDIR}/${PN}-2.4.1-define_sensible_icon_theme.patch
+	# add smoothscroll support for usability reasons
+	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
+	epatch ${FILESDIR}/${PN}-2.4-smoothscroll.patch
 
 	autoconf || die
 
