@@ -491,7 +491,7 @@ move sys-apps/hfsutils sys-fs/hfsutils
 move sys-apps/jfsutils sys-fs/jfsutils
 move sys-apps/linux-ntfs sys-fs/linux-ntfs
 move sys-apps/lufs sys-fs/lufs
-move sys-apps/lvmuser sys-fs/lvmuser
+move sys-apps/lvm-user sys-fs/lvm-user
 move sys-apps/lvm2 sys-fs/lvm2
 move sys-apps/raidtools sys-fs/raidtools
 move sys-apps/reiserfsprogs sys-fs/reiserfsprogs
