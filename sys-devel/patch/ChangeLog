@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.8 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.9 2003/05/14 02:24:33 msterret Exp $
+
+*patch-2.5.4-r5 (01 May 2003)
+
+  01 May 2003; <msterret@gentoo.org> patch-2.5.4-r5.ebuild:
+  new patch ebuild that doesn't use try, but uses || die instead
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> patch-2.5.4-r4.ebuild :
   Added hppa to keywords.
