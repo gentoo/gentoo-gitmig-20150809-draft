@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/g2gui/g2gui-0.3.0_pre1.ebuild,v 1.1 2004/06/16 12:37:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/g2gui/g2gui-0.3.0_pre1.ebuild,v 1.2 2004/06/16 12:40:10 squinky86 Exp $
 
 MY_P=${P/_/-}-linux-jar-gtk
 S=${WORKDIR}/${MY_P}
@@ -10,6 +10,7 @@ HOMEPAGE="http://developer.berlios.de/projects/mldonkey/"
 SRC_URI="http://download.berlios.de/mldonkey/${MY_P}.tar.bz2"
 LICENSE="GPL-2 CPL-1.0"
 KEYWORDS="~x86"
+IUSE=""
 SLOT="0"
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/jdk"
