@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/xindice
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/ChangeLog,v 1.1 2003/04/11 20:10:21 phosphan Exp $
+
+*xindice-1.0 (11 Apr 2003)	
+
+  11 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> xindice-1.0.ebuild,
+  files/21xindice, files/xindice-1.0.patch, ChangeLog, files/xindice :
+  Initial import. Ebuild submitted by Matthieu Sozeau <mattam@netcourrier.com>
+  and modified by myself.
