@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0-r1.ebuild,v 1.8 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.0-r1.ebuild,v 1.9 2005/02/03 19:29:10 wolf31o2 Exp $
 
 MY_PV=${PV}-14
 DESCRIPTION="Hardware setup program"

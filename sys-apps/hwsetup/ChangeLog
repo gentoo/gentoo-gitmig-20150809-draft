@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.14 2004/09/03 21:03:23 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.15 2005/02/03 19:29:10 wolf31o2 Exp $
+
+  03 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r2.ebuild:
+  Patch is very trivial.  Marked stable on x86, alpha, and amd64.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   hwsetup-1.0-r1.ebuild, hwsetup-1.0-r2.ebuild:
