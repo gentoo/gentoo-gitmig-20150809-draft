@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rwho
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.4 2004/04/27 21:43:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.5 2004/06/07 20:04:03 kloeri Exp $
+
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> netkit-rwho-0.17.ebuild:
+  Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> netkit-rwho-0.17.ebuild:
   Add inherit eutils
