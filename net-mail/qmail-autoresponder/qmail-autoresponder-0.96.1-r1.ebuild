@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.5 2004/05/05 07:17:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.6 2004/05/30 10:57:42 robbat2 Exp $
 
 inherit fixheadtails eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 sparc ppc ~alpha ~mips ~hppa"
 DEPEND="virtual/glibc
 		dev-libs/bglibs
 		mysql? ( dev-db/mysql )"
-RDEPEND=">=net-mail/qmail-1.03-r7
+RDEPEND=">=mail-mta/qmail-1.03-r7
 		 mysql? ( dev-db/mysql )"
 
 src_unpack() {

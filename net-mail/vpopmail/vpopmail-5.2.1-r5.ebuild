@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.8 2004/04/26 12:28:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.9 2004/05/30 11:00:03 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 sparc"
 DEPEND="sys-apps/sed
 	sys-apps/ucspi-tcp
 	mysql? ( >=dev-db/mysql-3.23* )"
-RDEPEND="net-mail/qmail
+RDEPEND="mail-mta/qmail
 	virtual/cron
 	mysql? ( >=dev-db/mysql-3.23* )"
 

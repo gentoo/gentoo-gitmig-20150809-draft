@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.16 2004/02/22 16:30:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.17 2004/05/30 11:03:07 robbat2 Exp $
 
 inherit gcc
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-apps/ucspi-unix-0.34
-	>=net-mail/qmail-1.03-r7
+	>=mail-mta/qmail-1.03-r7
 	>=net-mail/qmail-autoresponder-0.95"
 
 src_unpack() {

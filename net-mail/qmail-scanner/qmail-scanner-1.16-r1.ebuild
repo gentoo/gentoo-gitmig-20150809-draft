@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r1.ebuild,v 1.5 2003/09/05 02:26:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r1.ebuild,v 1.6 2004/05/30 10:58:47 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=net-mail/tnef-1.1.1
 	>=net-mail/maildrop-1.3.9
 	>=dev-perl/DB_File-1.803-r2
-	>=net-mail/qmail-1.03-r8
+	>=mail-mta/qmail-1.03-r8
 	>=app-arch/unzip-5.42-r1
 	virtual/antivirus"
 

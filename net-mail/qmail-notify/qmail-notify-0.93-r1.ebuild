@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.2 2003/09/05 08:56:53 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-notify/qmail-notify-0.93-r1.ebuild,v 1.3 2004/05/30 10:58:08 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Delayed delivery notification for qmail."
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~sparc"
 DEPEND="virtual/glibc"
 
 RDEPEND="virtual/cron
-	net-mail/qmail"
+	mail-mta/qmail"
 
 src_compile() {
 	cd ${S}

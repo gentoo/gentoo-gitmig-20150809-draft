@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.1 2003/08/01 04:44:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.2 2004/05/30 10:58:20 robbat2 Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="qmail-queue multi-filter front end"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND="virtual/glibc"
-RDEPEND=">=net-mail/qmail-1.03-r8"
+RDEPEND=">=mail-mta/qmail-1.03-r8"
 
 QMAIL_BINDIR="/var/qmail/bin/"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40.ebuild,v 1.4 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx-pgsql/ezmlm-idx-pgsql-0.40.ebuild,v 1.5 2004/05/30 10:57:14 robbat2 Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86"
 DEPEND="sys-apps/grep sys-apps/groff"
-RDEPEND="net-mail/qmail"
+RDEPEND="mail-mta/qmail"
 PROVIDE="net-mail/ezmlm"
 
 if [ "$PN" = "${PB}-pgsql" ]

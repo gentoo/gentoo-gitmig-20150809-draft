@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r1.ebuild,v 1.2 2004/04/27 21:04:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r1.ebuild,v 1.3 2004/05/30 11:02:43 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 KEYWORDS="x86"
 IUSE=""
 DEPEND="sys-devel/gcc-config"
-PDEPEND="net-mail/qmail"
+PDEPEND="mail-mta/qmail"
 
 src_unpack() {
 	unpack ${P}.tar.gz

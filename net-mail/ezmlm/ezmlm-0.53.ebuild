@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.14 2004/04/27 20:56:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.15 2004/05/30 10:56:30 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc ~ppc ~alpha"
 
 DEPEND=" sys-apps/groff"
 
-RDEPEND="net-mail/qmail"
+RDEPEND="mail-mta/qmail"
 
 
 src_unpack() {
