@@ -1,12 +1,22 @@
-MD5 e787821e7c729e9b57e2c83b6227cf03 ChangeLog 7824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 28cf205ec30df84d5ad06f2e30aac56e ChangeLog 7967
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4bec3aa7879ca414aa76ce0e4e12b899 timidity++-2.13.2.ebuild 3869
-MD5 8cb854e36cfc0f4209017d0e3b62857b timidity++-2.13.2-r1.ebuild 4026
+MD5 c5cb12f2496be9fa662c2697d25fa27e timidity++-2.13.2-r1.ebuild 4025
+MD5 26aa048849a44c297649b9eb729142ac timidity++-2.13.2.ebuild 3862
 MD5 dbfc5d45b6177ffaf7dd74d4971a520a files/conf.d.timidity 912
+MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2-r1 71
 MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2 71
 MD5 67ee26f08d8de1243029a0a8849cd022 files/gnuconfig_update.patch 477
 MD5 dbc4910aa5c6a5681dd4f121b5db63e8 files/init.d.timidity 457
 MD5 16a4adec164836d4390dc6b0f9a69ce9 files/timidity++-2.13.2-gtk26.patch 588
 MD5 15fce5a2d3dfc834b4de65428105e63b files/timidity-update 2513
 MD5 80fb82d4216373cbf4efafd7719628e0 files/timidity.cfg-r1 669
-MD5 2762e58e610bb861189b3d6b424312fc files/digest-timidity++-2.13.2-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCS71LArHZZzCEUG0RAjc8AKCCeoOkurucdU8NPrOBptX+5TXcyQCfYywR
+shu9XU+agA4jHLWK45YNNN0=
+=JLwg
+-----END PGP SIGNATURE-----

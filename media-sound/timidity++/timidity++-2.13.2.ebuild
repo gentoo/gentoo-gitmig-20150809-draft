@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.7 2005/03/28 13:15:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.8 2005/03/31 09:04:44 eradicator Exp $
 
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
@@ -24,7 +24,7 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	gtk? ( =x11-libs/gtk+-1.2* )
 	nas? ( >=media-libs/nas-1.4 )
 	alsa? ( media-libs/alsa-lib )
-	motif? ( >=x11-libs/openmotif-2.1 )
+	motif? ( virtual/motif )
 	slang? ( >=sys-libs/slang-1.4 )
 	arts? ( kde-base/arts )
 	jack? ( media-sound/jack-audio-connection-kit )
