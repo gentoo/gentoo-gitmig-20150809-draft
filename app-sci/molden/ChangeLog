@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/molden
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.16 2004/11/20 11:37:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/molden/ChangeLog,v 1.17 2004/12/23 23:28:34 spyderous Exp $
+
+  23 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>; molden-4.1.ebuild:
+  x86.
 
   20 Nov 2004; Danny van Dyk <kugelfang@gentoo.org> molden-4.1.ebuild:
   Marked ~amd64.
