@@ -243,6 +243,3 @@ app-doc/tkinfo
 
 # Not sure what to do with this:
 dev-libs/libiconv
-
-# testing
-=net-im/licq-1.0.4
