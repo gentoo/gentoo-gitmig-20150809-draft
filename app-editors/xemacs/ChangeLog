@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.4 2002/04/12 22:48:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.5 2002/04/15 07:42:02 mkennedy Exp $
+
+*xemacs-21.4.6-r2 (15 Apr 2002)
+
+  15 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  xemacs-21.4.6-r2.ebuild, files/digest-xemacs-21.4.6-r2 :
+
+  Fixes the ESD/NAS/Wine issue mentioned in bug #1501, but not the
+  xemacs segfaulting/sandbox issues.
 
 *xemacs-21.4.6-r2 (12 Apr 2002)
 
