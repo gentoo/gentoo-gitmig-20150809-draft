@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2.ebuild,v 1.2 2004/08/14 19:54:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2.ebuild,v 1.3 2004/10/16 19:49:49 liquidx Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install () {
 	# with existing libraries)
 	dodir /usr/lib/nss
 	cp -L */lib/*.a ${D}/usr/lib/nss || die "copying libs failed"
-	dolib */lib/*.so
+	cp -L */lib/*.so ${D}/usr/lib/nss || die "copying shared libs failed"
 
 	# all the include files
 	insinto /usr/include/nss
