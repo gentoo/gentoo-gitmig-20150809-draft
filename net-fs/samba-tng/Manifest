@@ -1,3 +1,5 @@
+MD5 3f5e745498beb3fd507e6355fe1b75cf files/digest-samba-tng-0.4 66
 MD5 466bdeb5de32747a70a3c6b7d0a58141 files/digest-samba-tng-0.3.2 68
 MD5 127337aabbbb2a8832480efabf8bf6af samba-tng-0.3.2.ebuild 1188
-MD5 44b6d615a4a9dbd913cfaaee10a2d5b7 ChangeLog 348
+MD5 e6a521bdcc71dffdea2081509f403cce samba-tng-0.4.ebuild 1185
+MD5 9887109dd2ac889d04a481a8d4ffc76f ChangeLog 454
