@@ -150,3 +150,4 @@
 #bind is another package that seems to maintain multiple versions
 >=net-misc/netkit-timed-0.17-r6
 >=net-misc/pdnsd-1.1.6-r6
+>=net-mail/exim-3.32-r6
