@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/sparc-dev-sources-2.6.0_beta11.ebuild,v 1.2 2004/01/08 04:53:09 wesolows Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/sparc-dev-sources-2.6.2.ebuild,v 1.1 2004/02/06 06:36:55 wesolows Exp $
 
 IUSE="ultra1"
 
@@ -19,27 +19,30 @@ inherit kernel
 #Original Kernel Version before Patches
 # eg: 2.6.0-test11
 OKV=${PV/_beta/-test}
-OKV=${OKV/-r*//}
+OKV=${OKV/_rc/-rc}
+KV=${OKV}
 
 #Kernel version after patches
 # eg: 2.6.0-test8-bk1
-KV=${PV/_beta/-test}
-KV="${KV}-${PN/-*/}"
-
-[ ! "${PR}" == "r0" ] && KV="${KV}-${PR}"
+EXTRAVERSION=$(echo ${KV} | sed -e 's/[0-9]*\.[0-9]*\.[0-9]*//')
+EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
+KV=${KV//-*/}
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${KV}${EXTRAVERSION}"
 
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/sparc-sources-dev-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Sparc Linux development kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.6/linux-${OKV}.tar.bz2
+	http://www.kernel.org/pub/linux/kernel/v2.6/testing/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 
 S=${WORKDIR}/linux-${KV}
 KEYWORDS="~x86 -ppc ~sparc"
 SLOT="${KV}"
 
-DEPEND="${DEPEND} sys-apps/module-init-tools"
+DEPEND="${DEPEND} sys-apps/module-init-tools !<sys-apps/pciutils-2.1.11-r1"
 [ `uname -m` = "sparc64" ] && DEPEND="${DEPEND} >=sys-devel/gcc-sparc64-3.2.3"
 
 src_unpack() {
@@ -56,6 +59,7 @@ src_unpack() {
 pkg_postinst() {
 
 	kernel_pkg_postinst
+	keepdir /sys
 
 	# Display SUN Ultra 1 HME warning if it can be detected or if the machinetype is unknown.
 	if [ ! -r "/proc/openprom/name" -o "`cat /proc/openprom/name 2>/dev/null`" = "'SUNW,Ultra-1'" ]; then
