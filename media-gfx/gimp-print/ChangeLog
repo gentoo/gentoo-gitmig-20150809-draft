@@ -1,6 +1,8 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.2 2002/04/02 08:17:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.3 2002/04/28 23:47:28 azarah Exp $
+
+*gimp-print-4.2.1 (29 Apr 2002)
 
 *gimp-print-4.1.99_beta4-r1 (2 Apr 2002)
 
