@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.26 2004/09/19 18:55:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.27 2004/11/15 21:16:29 liquidx Exp $
+
+*nspr-4.4.1-r1 (15 Nov 2004)
+
+  15 Nov 2004; Alastair Tse <liquidx@gentoo.org> +nspr-4.4.1-r1.ebuild:
+  adding /etc/env.d entry to get around (#71004)
 
   19 Sep 2004; Martin Schlemmer <azarah@gentoo.org> nspr-4.4.1.ebuild:
   Do not install libs in /usr/bin.

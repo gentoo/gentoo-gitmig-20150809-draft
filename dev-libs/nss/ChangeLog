@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.32 2004/11/12 10:40:11 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.33 2004/11/15 21:17:30 liquidx Exp $
+
+*nss-3.9.2-r1 (15 Nov 2004)
+
+  15 Nov 2004; Alastair Tse <liquidx@gentoo.org> +nss-3.9.2-r1.ebuild:
+  adding /etc/env.d entry to get around (#71004)
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org> nss-3.9.2.ebuild:
   Keyworded ppc
