@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.1 2003/02/24 12:58:48 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.2.1-r1.ebuild,v 1.2 2003/02/25 07:00:48 jhhudso Exp $
 
 IUSE="png"
 
@@ -49,6 +49,13 @@ src_compile() {
 		--with-altpidpath=/var/state/nut \
 		--with-linux-hiddev \
 		--host=${CHOST} ${myconf} || die
+
+	cp ${S}/drivers/Makefile ${S}/drivers/Makefile.orig
+	sed -e "s:= bestups:= hidups bestups:" ${S}/drivers/Makefile.orig \
+		> ${S}/drivers/Makefile
+	cp ${S}/man/Makefile ${S}/man/Makefile.orig
+	sed -e "s:= powercom.8:= hidups.8 powercom.8:" \
+		${S}/man/Makefile.orig > ${S}/man/Makefile
 
 	emake || die
 
