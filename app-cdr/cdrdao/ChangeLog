@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.29 2004/02/07 02:44:12 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.30 2004/02/16 07:20:48 pylon Exp $
+
+*cdrdao-1.1.8 (16 Feb 2004)
+
+  16 Feb 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.8.ebuild,
+  files/gcdmaster.desktop:
+  Version bump.  Thanks to everybody in bug #41615
 
   07 Feb 2004; Lars Weiler <pylon@gentoo.org> cdrdao-1.1.7-r3.ebuild,
   metadata.xml:
