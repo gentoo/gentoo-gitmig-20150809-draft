@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.14 2004/04/25 14:12:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.15 2004/04/25 15:37:18 spock Exp $
+
+  25 Apr 2004; Michal Januszewski <spock@gentoo.org> xfractint-20.2.04.ebuild,
+  xfractint-20.2.05.ebuild, xfractint-20.3.00.ebuild,
+  xfractint-20.3.01.ebuild:
+  Added a replace-flags line for -funroll-all-loops. Closes bug #48923.
 
 *xfractint-20.3.01 (25 Apr 2004)
 

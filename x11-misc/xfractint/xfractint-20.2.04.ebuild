@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.12 2004/04/23 14:09:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.13 2004/04/25 15:37:18 spock Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_compile() {
 	cp Makefile Makefile.orig
 	sed -e "s:CFLAGS = :CFLAGS = $CFLAGS :" Makefile.orig >Makefile
 
+	replace-flags "-funroll-all-loops" "-funroll-loops"
 	emake
 }
 
