@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7231b0585c48fb4b44f0e686f5b7b870 gomd-cvs-0.2_beta1.ebuild 1225
 MD5 56f17e939c671bd71bf86cea0128cdbe ChangeLog 1296
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gomd-cvs-0.2_beta1 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD4DBQFBw2vJI1lqEGTUzyQRAmNKAJiafAL3rItDkbmmYV0yW7rpNbbeAJoCUF4S
+5fxy6ZM00LY2OUq86Amcjg==
+=VjfG
+-----END PGP SIGNATURE-----

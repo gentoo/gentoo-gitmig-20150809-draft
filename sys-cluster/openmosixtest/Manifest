@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 658eb85eafbf3be1d31e428f5c085391 openmosixtest-0.1-r6.ebuild 1925
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 e7363c237bfc0a6b04b3c6708c34becd ChangeLog 1670
 MD5 c099a95e9dfe8a2005ce1aaa7b2ed732 openmosixtest-0.1-r5.ebuild 1293
-MD5 45fc9003aef6f8a892b41cb5e4b34bdd files/digest-openmosixtest-0.1-r6 254
-MD5 1ac2bf88d854c88f0376c95bd11d8210 files/digest-openmosixtest-0.1-r5 67
-MD5 270cd3252452c457a58b09e2c46ce60e files/compile.ltp.sh 31
+MD5 e7363c237bfc0a6b04b3c6708c34becd ChangeLog 1670
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 4c2e4459f3ce435f59cfc4925a23febb files/compile.lmbench.sh 84
+MD5 270cd3252452c457a58b09e2c46ce60e files/compile.ltp.sh 31
+MD5 1ac2bf88d854c88f0376c95bd11d8210 files/digest-openmosixtest-0.1-r5 67
+MD5 45fc9003aef6f8a892b41cb5e4b34bdd files/digest-openmosixtest-0.1-r6 254
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBTeMTKtJO8LeSoosRAq0NAJ9sKyLk7m1Sj93D1X/FCEhId34giACgm5Ol
-GWUV5lw/Kq8ydYCkfceTdKg=
-=BwdG
+iD8DBQFBw2pRI1lqEGTUzyQRAgxJAKCpXXuWA9Pq1S3V5ADOQaIZbdif4QCfXvM0
+7UaCn4KtJFiQmOGqPCds4u4=
+=SGDk
 -----END PGP SIGNATURE-----

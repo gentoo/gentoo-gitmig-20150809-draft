@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0bb2b825bb3f0c55a865e73df6b2ed6f openmosixwebview-0.2.13.ebuild 1201
 MD5 87b9b97c749b5793668a137fe4c8e052 ChangeLog 671
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 edd227003ba45c2141ebf7677b07b75c files/apache.conf 184
 MD5 421481f267afdab92a093a25c83ee07a files/digest-openmosixwebview-0.2.13 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw2r9I1lqEGTUzyQRAglNAKDBtq1/CjY+7HojYTfauK7eAzpt5wCcCRHr
+9jhZwUCNXCUcsCDFYNT64x0=
+=BRuk
+-----END PGP SIGNATURE-----

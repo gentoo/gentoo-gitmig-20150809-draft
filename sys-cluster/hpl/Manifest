@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5eaf607d1e25e0a38a6877f6d1cc18b9 hpl-1.0.ebuild 1130
 MD5 b96826dd09ab2615648b49b904991422 ChangeLog 462
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 6ba8acccaf6e3ca998fe7383c6765457 files/digest-hpl-1.0 52
 MD5 56b70745bddaadc9125b94e1a92889e4 files/Make.gentoo_hpl_cblas_x86.diff.bz2 757
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw2jwI1lqEGTUzyQRArIiAJ0TAKFnhT9EdW+j+7+nK1mPf6v+awCfaWf2
+qUHPObS+RtFZgPBFmDazuts=
+=aFSK
+-----END PGP SIGNATURE-----

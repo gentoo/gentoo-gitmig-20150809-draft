@@ -1,11 +1,21 @@
-MD5 24f058a0fe81a28f379306f628d42ce3 ChangeLog 1738
-MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 1143604bbda9e9288f4e4c583e497adb pvm-3.4.4-r1.ebuild 1142
-MD5 915964c02253ff38e006fd1dd26fe798 pvm-3.4.4-r2.ebuild 1908
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4956f1b1adba4c9b9b65eadc528652ab pvm-3.4.4-r3.ebuild 1915
-MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r1 57
-MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r2 57
+MD5 915964c02253ff38e006fd1dd26fe798 pvm-3.4.4-r2.ebuild 1908
+MD5 1143604bbda9e9288f4e4c583e497adb pvm-3.4.4-r1.ebuild 1142
+MD5 24f058a0fe81a28f379306f628d42ce3 ChangeLog 1738
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 726a6a69ba5fb9e140e8f7e1a85c9c9d files/pvm-3.4.4-gentoo.diff 608
 MD5 cb7593c1f1921b55cd0eee8447204ba8 files/pvm-3.4.4-s390.patch 886
 MD5 1f52ad91cea65624c2bed0e33db5f7b4 files/pvm-3.4.4-x86_64-segfault.patch 2478
+MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r1 57
+MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r2 57
 MD5 c6d622987f4e06f522dcbc72cff9127d files/digest-pvm-3.4.4-r3 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw2kVI1lqEGTUzyQRAlexAKDCvWEUalpRjoOXm5haw5/TpTtD2ACgkbxK
+FAoSTH/ZMwqS4XoBqitCjmA=
+=y/eE
+-----END PGP SIGNATURE-----
