@@ -431,6 +431,7 @@ media-libs/libfame
 # needs testing.
 # Added other deps that depend on baselayout
 =sys-apps/baselayout-1.8.0
+=sys-apps/baselayout-1.8.1
 app-arch/unarj
 app-emulation/zinc
 app-sci/setiathome
@@ -932,7 +933,9 @@ dev-lang/tcl-tk
 
 # jhhudso@gentoo.org 3 Apr 2002
 # This is the new version of shadow, needs more beta testing
->=sys-apps/shadow-4.0.3
+#
+# Test ok, and is latest stable.  Azarah (08 Aug 2002)
+#>=sys-apps/shadow-4.0.3
 
 # spider@gentoo.org ; 21 May 2002; 
 # this is the gnome2 mask!
