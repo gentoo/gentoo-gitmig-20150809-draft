@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.5 2003/11/03 14:08:56 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.6 2003/11/04 18:40:21 taviso Exp $
 
 inherit eutils
 
@@ -58,9 +58,7 @@ src_unpack() {
 	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
 	# planned on disabling these debug statements before the release, but
 	# never got around to it.
-	if ! use debug; then
-		cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
-	fi
+	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
 }
 
 src_compile() {
