@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/emelfm2
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.1 2004/09/02 13:52:33 brad Exp $
+
+*emelfm2-0.0.9 (02 Sep 2004)
+
+  02 Sep 2004; Brad Laue <brad@gentoo.org> +metadata.xml,
+  +emelfm2-0.0.9.ebuild:
+  Add emelfm2, a GTK+ 2 port of emelfm.
+
