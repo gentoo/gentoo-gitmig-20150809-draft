@@ -25,7 +25,7 @@ MD5 2574d3f1b776f2df365737f456bfe435 files/digest-linux-headers-2.4.26 67
 MD5 1f7aaa49614b3055b6110518b1ed23ee files/digest-linux-headers-2.6.1 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-linux-headers-2.6.7 66
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
-MD5 cf73177a2d999dd3edd2f89818d116cb files/linux-headers-2.6.7-appCompat.patch 28592
+MD5 fdddc53af65793602d2c14df57a2d970 files/linux-headers-2.6.7-appCompat.patch 28971
 MD5 7f5b6765680735a897bb2fb9e227f6b6 files/linux-headers-2.6.0-appCompat.patch 17983
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
 MD5 aa9ba92e8479bdb5f69b03b5c72be866 files/linux-headers-2.6.4-unistd-nptl-fix.patch 362

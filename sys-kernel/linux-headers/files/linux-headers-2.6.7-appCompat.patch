@@ -893,14 +893,30 @@ diff -ur linux-2.6.7/include/linux/netfilter_ipv4/ip_tables.h linux-2.6.7-gentoo
 diff -ur linux-2.6.7/include/linux/pid.h linux-2.6.7-gentoo/include/linux/pid.h
 --- linux-2.6.7/include/linux/pid.h	2004-06-16 06:19:02.000000000 +0100
 +++ linux-2.6.7-gentoo/pid.h	2004-06-18 18:38:37.252859416 +0100
-@@ -1,6 +1,7 @@
+@@ -1,6 +1,8 @@
  #ifndef _LINUX_PID_H
  #define _LINUX_PID_H
  
 +#include <asm/atomic.h>
++
  enum pid_type
  {
  	PIDTYPE_PID,
+@@ -29,6 +31,8 @@
+ #define pid_task(elem, type) \
+ 	list_entry(elem, struct task_struct, pids[type].pid_chain)
+ 
++#ifdef __KERNEL__
++
+ /*
+  * attach_pid() and link_pid() must be called with the tasklist_lock
+  * write-held.
+@@ -61,4 +64,5 @@
+ 			elem = elem->next, prefetch(elem->next), 	\
+ 			task = pid_task(elem, type))
+ 
++#endif /* __KERNEL__ */
+ #endif /* _LINUX_PID_H */
 diff -ur linux-2.6.7/include/linux/netfilter_ipv6/ip6_tables.h linux-2.6.7/include/linux/netfilter_ipv6/ip6_tables.h
 --- linux-2.6.7/include/linux/netfilter_ipv6/ip6_tables.h	2004-06-16 06:20:04.000000000 +0100
 +++ linux-2.6.7-gentoo/netfilter_ipv6/ip6_tables.h	2004-06-18 18:46:47.451337920 +0100
