@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.5.ebuild,v 1.3 2005/02/16 18:07:28 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.5.ebuild,v 1.4 2005/03/03 18:51:35 pythonhead Exp $
 
 MY_P="${PN}-${PV}-src"
 DESCRIPTION="Ruby language bindings for the wxWidgets GUI toolkit"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="unicode"
 DEPEND=">=dev-lang/ruby-1.8
-	>=x11-libs/wxGTK-2.4.2-r3"
+	=x11-libs/wxGTK-2.4*"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
