@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3.ebuild,v 1.14 2004/06/24 22:04:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3.ebuild,v 1.15 2004/11/08 21:29:00 kloeri Exp $
 
 
 DESCRIPTION="iplog is a TCP/IP traffic logger"
@@ -10,7 +10,7 @@ HOMEPAGE="http://ojnk.sourceforge.net/"
 DEPEND="net-libs/libpcap"
 
 SLOT="0"
-LICENSE="GPL-2 | FDL-1.1"
+LICENSE="|| ( GPL-2 FDL-1.1 )"
 KEYWORDS="x86 ppc sparc "
 IUSE=""
 

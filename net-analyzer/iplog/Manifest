@@ -1,10 +1,20 @@
-MD5 dbb91e30bb7b0674fb3c224687655dbc ChangeLog 1577
-MD5 e6dbc23771cf4c8be1169cb8f1a49f32 iplog-2.2.3-r1.ebuild 798
-MD5 5d13e2a110d8dbce8134fc38ada899a6 iplog-2.2.3-r2.ebuild 853
-MD5 abfedba9e91b23dace8ad1e14c416c04 iplog-2.2.3.ebuild 698
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8aab336468955c6d736db499ca51c326 ChangeLog 1735
 MD5 8fc559ff5d9e3b70a355489f442eab25 metadata.xml 227
+MD5 6868867159c3315818900842d8a0d83c iplog-2.2.3-r1.ebuild 801
+MD5 462e8a144320df6519795e53f0b9fa35 iplog-2.2.3-r2.ebuild 863
+MD5 4e4b454a1aecee37039a29bc3eebaefd iplog-2.2.3.ebuild 701
+MD5 2189edd34b8ddf9bba2d97ba127b18c7 files/iplog.rc6 886
+MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r2 63
 MD5 48e8dfa989139e578e0ce8c35a090e39 files/2.2.3-DLT_LINUX_SSL.patch 7611
 MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3 63
 MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r1 63
-MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r2 63
-MD5 2189edd34b8ddf9bba2d97ba127b18c7 files/iplog.rc6 886
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBj+UmugEuf3OQ0akRAvnRAJ9chsnPqqKfnmgUCg5c4Gk8KxoQ/ACgmSZd
+8sgZdCh6EbkiicwAC+VP5BQ=
+=fp6J
+-----END PGP SIGNATURE-----

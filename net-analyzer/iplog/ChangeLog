@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iplog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.11 2004/06/24 22:04:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.12 2004/11/08 21:29:00 kloeri Exp $
+
+  08 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> iplog-2.2.3-r1.ebuild,
+  iplog-2.2.3-r2.ebuild, iplog-2.2.3.ebuild:
+  ~alpha keyword, fix license syntax.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> iplog-2.2.3-r1.ebuild,
   iplog-2.2.3-r2.ebuild, iplog-2.2.3.ebuild:
