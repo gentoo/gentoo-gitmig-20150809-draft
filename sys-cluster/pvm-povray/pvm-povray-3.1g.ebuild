@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.1 2003/09/09 19:45:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.2 2003/09/10 04:35:06 msterret Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="The Persistance Of Vision Ray Tracer - PVM version"
@@ -62,8 +62,8 @@ src_unpack() {
 
 src_compile() {
 	einfo 'Checking for $PVMROOT...'
-	
-	if [ -z "${PVMROOT}" ] 
+
+	if [ -z "${PVMROOT}" ]
 	then
 		eerror 'Please set your $PVMROOT correctly, it is now empty.'
 		eerror 'The $PVMROOT variable should point to your PVM '
