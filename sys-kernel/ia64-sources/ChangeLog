@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.8 2004/01/29 23:15:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.9 2004/02/18 20:33:14 plasmaroo Exp $
+
+*ia64-sources-2.4.24-r1 (18 Feb 2004)
+
+  18 Feb 2004; <plasmaroo@gentoo.org> ia64-sources-2.4.24-r1.ebuild,
+  files/ia64-sources-2.4.24.munmap.patch:
+  Added the patch for the mremap/munmap vulnerability. Bug #42024.
 
 *ia64-sources-2.4.24 (29 Jan 2004)
 
