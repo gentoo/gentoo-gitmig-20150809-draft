@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.3 2003/09/05 18:30:42 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r2.ebuild,v 1.4 2003/09/19 01:33:22 avenj Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.gentoo.org/~taviso/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ia64"
 IUSE="static doc"
 
 DEPEND="virtual/glibc
