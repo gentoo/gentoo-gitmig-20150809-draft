@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/corefonts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.14 2004/11/01 17:44:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.15 2004/11/04 11:46:07 usata Exp $
+
+  04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> corefonts-1-r2.ebuild,
+  corefonts-1.ebuild:
+  Removed cabextract from RDEPEND; bug #69601. Marked 1-r2 stable on x86,
+  alpha and ppc.
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r2.ebuild,v 1.2 2004/11/01 17:44:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r2.ebuild,v 1.3 2004/11/04 11:46:07 usata Exp $
 
 inherit font
 
@@ -20,10 +20,11 @@ SRC_URI="mirror://sourceforge/corefonts/andale32.exe
 
 LICENSE="MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
 IUSE="X"
 
 DEPEND="app-arch/cabextract"
+RDEPEND=""
 
 S=${WORKDIR}
 FONT_S=${WORKDIR}
