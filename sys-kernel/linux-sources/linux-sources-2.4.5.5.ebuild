@@ -153,7 +153,7 @@ src_unpack() {
 	cp -a drivers/md/lvm-snap.h ${T}
 	
 	echo "Applying ${KV} patch..."
-	try bzip2 -dc ${DISTDIR}/patch-2.4.5-ac5.bz2 | patch -p1
+	try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
 	
 	echo "Applying reiserfs-knfsd patch..."
 #	try gzip -dc ${DISTDIR}/linux-${OKV}-knfsd-${KNV}.patch.gz | patch -p1
@@ -169,8 +169,8 @@ src_unpack() {
 #	echo "Applying reiserfs patches..."
 #	try bzip2 -dc ${DISTDIR}/bigpatch-${OKV}.diff.bz2 | patch -p1
 	
-	echo "Applying ac5-reiserfs-quota patch..."
-	try patch -p1 < ${FILESDIR}/${PVR}/linux-${KV}-ac5-reiserfs-quota-gentoo.diff
+	echo "Applying ${KV}-reiserfs-quota patch..."
+	try patch -p1 < ${FILESDIR}/${PVR}/linux-${KV}-reiserfs-quota-gentoo.diff
 	
 	if [ "`use lvm`" ] || [ "`use alsa`" ] || [ "`use i2c`" ] || [ "`use lm_sensors`" ] || [ "`use pcmcia-cs`" ]
 	then
