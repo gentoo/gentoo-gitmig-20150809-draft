@@ -1,4 +1,6 @@
 MD5 75f30a5b8f49b356c47c776cb2b47659 groupoffice-1.97.ebuild 1865
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 2e7a28eaa28efffb037446283292ce8f ChangeLog 1515
+MD5 2238c4249e2606cfff602e53671c3e66 groupoffice-1.98.ebuild 1865
+MD5 404f062797549395e889f19e0e44b9b6 ChangeLog 1642
+MD5 b15c84531171edcc9266b5ec3e323151 files/digest-groupoffice-1.98 146
 MD5 e2b65de1f2effe5c02a1f8ef674059eb files/digest-groupoffice-1.97 146
