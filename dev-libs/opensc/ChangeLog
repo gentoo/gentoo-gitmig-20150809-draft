@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.1 2004/02/22 07:17:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.2 2004/03/12 23:48:25 vapier Exp $
 
 *opensc-0.8.1 (22 Feb 2004)
+
+  12 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add local USE to control building with pcsclite or openct #44345 by jochen.
 
   22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by Lars T. Mikkelsen/Peter Stuge #28202.
