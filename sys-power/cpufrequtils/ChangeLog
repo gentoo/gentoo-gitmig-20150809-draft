@@ -1,0 +1,26 @@
+# ChangeLog for sys-apps/cpufrequtils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.1 2005/03/14 23:36:14 ciaranm Exp $
+
+*cpufrequtils-0.2 (14 Mar 2005)
+
+  14 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +cpufrequtils-0.2.ebuild:
+  Moved from sys-apps/cpufrequtils to sys-power/cpufrequtils.
+
+  12 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -cpufrequtils-0.1.ebuild, -cpufrequtils-0.2_pre1.ebuild:
+  Pruned old versions.
+
+*cpufrequtils-0.2 (28 Feb 2005)
+
+  28 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +cpufrequtils-0.2.ebuild:
+  Version bump.
+
+*cpufrequtils-0.2_pre1 (22 Jan 2005)
+
+  22 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +cpufrequtils-0.1.ebuild, +cpufrequtils-0.2_pre1.ebuild:
+  Initial commit. Thank you to all who commented on bug #69320.
+
