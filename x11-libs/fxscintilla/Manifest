@@ -1,4 +1,5 @@
-MD5 3bcb61c403f55d4fa9ea71c9f7164d70 ChangeLog 553
+MD5 f7c0a4cae2d9342c06c3c6cae6053b2b fxscintilla-1.61.ebuild 688
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 4cad148dd5383013d1e0643564d4704e fxscintilla-1.55.ebuild 600
 MD5 e1ba02051ac553877ac1a16e5173aea3 files/digest-fxscintilla-1.55 68
+MD5 1ce56d864f623bdf3ad7aa24c5127988 files/digest-fxscintilla-1.61 68
