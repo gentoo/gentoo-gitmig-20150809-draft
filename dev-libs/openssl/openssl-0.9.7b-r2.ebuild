@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b-r2.ebuild,v 1.3 2003/09/18 01:04:43 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b-r2.ebuild,v 1.4 2003/09/19 13:41:06 aliz Exp $
 
 inherit eutils flag-o-matic gcc
 
-if [ "$( gcc-fullversion )" == "3.3" ]; then
+if [ "$( gcc-version )" == "3.3" ]; then
 	filter-flags "-fprefetch-loop-arrays"
 fi
 
