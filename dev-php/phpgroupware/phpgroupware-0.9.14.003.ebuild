@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.001.ebuild,v 1.6 2003/06/28 19:15:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.003.ebuild,v 1.1 2003/06/28 19:15:58 mholzer Exp $
 
-S=${WORKDIR}/phpGroupWare-${PV}
+S=${WORKDIR}/${PN}
 HTTPD_ROOT="/home/httpd/htdocs"
 HTTPD_USER="apache"
 HTTPD_GROUP="apache"
 
 DESCRIPTION="The phpGroupWare intranet/groupware tool and application framework."
-SRC_URI="http://www.phpgroupware.org/downloads_phpgw/phpGroupWare-${PV}.tar.bz2"
+SRC_URI="http://www.phpgroupware.org/downloads_phpgw/${P}.tar.bz2"
 HOMEPAGE="http://www.phpgroupware.org"
 
 LICENSE="GPL-2"
