@@ -1,6 +1,13 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.25 2003/06/20 09:49:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.26 2003/06/27 09:54:57 brad Exp $
+
+*licq-1.2.7 (27 Jun 2003)
+
+  27 Jun 2003; Brad Laue <brad@gentoo.org> licq-1.2.7.ebuild,
+  files/1.2.7-debugflag.patch:
+  Update to version 1.2.7 - many bugfixes in this version. Updated the
+  debugflags patch to suit.
 
   20 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> licq-1.2.6-r1.ebuild,
   files/1.2.6-debugflag.patch:

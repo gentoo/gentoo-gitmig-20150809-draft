@@ -1,0 +1,13 @@
+--- configure	2003-06-25 13:23:18.000000000 -0400
++++ configure.new	2003-06-27 05:14:46.000000000 -0400
+@@ -3335,8 +3335,8 @@
+ fi;
+ 
+ if test "$licqdaemon_use_debug" = "no"; then
+-  CXXFLAGS="`echo $CXXFLAGS | sed 's/-g[^ ]*//'`"
+-  CFLAGS="`echo $CFLAGS | sed 's/-g[^ ]*//'`"
++  CXXFLAGS="`echo $CXXFLAGS | sed \"s/-g[^ ]*//\"`"
++  CFLAGS="`echo $CFLAGS | sed \"s/-g[^ ]*//\"`"
+ fi
+ 
+ ac_ext=cc
