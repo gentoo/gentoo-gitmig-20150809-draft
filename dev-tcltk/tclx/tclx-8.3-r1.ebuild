@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.12 2004/08/30 19:51:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.13 2004/09/06 00:57:13 ciaranm Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 	ewarn ""
 	ewarn "You have been warned :)"
 	ewarn ""
-	sleep 5
+	epause 5
 
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/${P}-makecfg.patch
