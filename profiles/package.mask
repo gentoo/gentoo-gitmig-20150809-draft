@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> (4 Nov 2003)
+# Testing the ebuild, but not putting it in the tree creates more problems.
+# However I cannot vouch for it actually compiling
+app-office/openoffice-ximian
+
 # <pylon@gentoo.org> (2 Nov 2003)
 # Testing request from DVD-R-users
 =app-cdr/xcdroast-0.98_alpha15-r1
