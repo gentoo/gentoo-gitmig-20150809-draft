@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ippl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.6 2004/07/09 20:15:07 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.7 2005/04/02 13:15:58 mholzer Exp $
+
+  02 Apr 2005; Martin Holzer <mholzer@gentoo.org> ippl-1.4.14.ebuild:
+  adding keyword
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> ippl-1.4.14.ebuild:
   Added missing IUSE. Added metadata
