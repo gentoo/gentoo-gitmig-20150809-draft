@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cb669a0faa07efcdc13b2e1196d6b1e ChangeLog 1731
+MD5 f3e4257593ce92a85e2b6f684d2f68e0 ChangeLog 1818
 MD5 8f84fbb7a6c70bce37561a1f2f1c3c10 m17n-db-1.0.2.ebuild 627
 MD5 c33390859c365ef61f5ed251d23032de m17n-db-1.1.0.ebuild 614
+MD5 a5147509e82eae91b0a61914efbae80a m17n-db-1.2.0.ebuild 619
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 cd2c18422d2c70ac3c6eb550bd449dec m17n-db-1.2.0.ebuild 623
 MD5 725519f1fcca0eaf1183d941fe5039da files/digest-m17n-db-1.0.2 65
 MD5 e82ced78997e50904210b5ad6be543c9 files/digest-m17n-db-1.1.0 65
 MD5 1a392872e80608720f5525cc6e7f628f files/digest-m17n-db-1.2.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCEfs3KRy60XGEcJIRApGCAJ4l8KJKIPw+Lowxd6W0V5DBpAe1ZwCdGePT
-lkYgOHj3XvhJgy7OBfuX29E=
-=XJ80
------END PGP SIGNATURE-----
