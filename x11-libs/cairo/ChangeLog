@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.24 2004/12/21 10:49:06 kloeri Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.25 2005/01/01 20:39:16 twp Exp $
+
+  01 Jan 2005; Tom Payne <twp@gentoo.org> cairo-0.2.0.ebuild:
+  Updated libpixman dependency. Bug # 75185.
 
   21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> cairo-0.1.23-r1.ebuild:
   Stable on alpha.
