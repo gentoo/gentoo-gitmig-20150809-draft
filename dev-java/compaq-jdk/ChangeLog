@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/compaq-jdk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/ChangeLog,v 1.4 2003/05/09 19:54:41 taviso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/ChangeLog,v 1.5 2004/01/10 02:51:09 agriffis Exp $
+
+*compaq-jdk-1.3.1-r1 (08 Jan 2004)
+
+  08 Jan 2004; Aron Griffis <agriffis@gentoo.org> compaq-jdk-1.3.1-r1.ebuild,
+  files/compaq-jdk-1.3.1:
+  Fix bug 18773 by updating env.d file to include tools.jar.  Additionally
+  update this ebuild to download the rpm directly.  There doesn't appear to be
+  a web page for it any longer.
 
   09 May 2003; Tavis Ormandy <taviso@gentoo.org> compaq-jdk-1.3.1.ebuild:
   updating openmotif dependency.
