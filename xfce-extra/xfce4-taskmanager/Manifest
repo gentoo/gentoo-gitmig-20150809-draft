@@ -1,4 +1,6 @@
 MD5 cbcdad05fb89061346064408155d79aa xfce4-taskmanager-0.0.1.ebuild 424
-MD5 25744df0912720c1592cdf39ecdc4394 ChangeLog 369
+MD5 0aa23c42013e41e57b705ead62a405b9 xfce4-taskmanager-0.2.1.ebuild 740
+MD5 f7913e62897f901f1bc7b899e56324c9 ChangeLog 507
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 af52e0edd2212b36a154ab86aef7bd0e files/digest-xfce4-taskmanager-0.0.1 75
+MD5 1dc1cb79c47cfcdfdedb5a889f8fd5ea files/digest-xfce4-taskmanager-0.2.1 75
