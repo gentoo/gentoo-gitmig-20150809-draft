@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.25 2004/09/12 16:59:34 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.26 2004/10/13 20:56:53 lv Exp $
+
+  13 Oct 2004; Travis Tilley <lv@gentoo.org> grub-0.94-r1.ebuild:
+  stable on amd64
 
   12 Sep 2004; <rmoss@gentoo.org> grub-0.94-r1.ebuild, grub-0.94-r2.ebuild,
   grub-0.95.20040823.ebuild:
