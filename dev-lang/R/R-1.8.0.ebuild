@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.0.ebuild,v 1.1 2003/10/16 19:55:34 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.0.ebuild,v 1.2 2003/10/21 14:59:28 dholm Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -36,7 +36,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 src_compile() {
 
