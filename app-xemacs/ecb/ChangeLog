@@ -1,0 +1,11 @@
+# ChangeLog for app-xemacs/ecb
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ecb/ChangeLog,v 1.1 2003/02/22 12:46:39 rendhalver Exp $
+
+*ecb-1.01 (16 Dec 2002)
+
+  22 Feb 2003;  <rendhalver@gentoo.org> ecb-1.01.ebuild files/digest-ecb-1.01 :
+  Add ~alpha to KEYWORDS
+
+  16 Dec 2002; Rendhalver [Peter Brown] <rendhalver@gentoo.org> :
+  Initial import.
