@@ -1,0 +1,5 @@
+MD5 66d61357bc53965507c1dcbcd104fb5a mlton-20040227.ebuild 787
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
+MD5 59f93f78ac891b8e1a7ed95f186d1f2d ChangeLog 448
+MD5 fc40fd217231ed1183406f8f0bb9f8c2 files/digest-mlton-20040227 70
+MD5 08a12942c5d18a494e393d86ad43ae8d files/mlton-20040227-obsolete-flags.patch 1089
