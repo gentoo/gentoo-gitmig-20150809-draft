@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.1 2002/12/11 20:52:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.2 2002/12/11 20:54:36 lostlogic Exp $
 
 inherit eutils
 
@@ -66,7 +66,7 @@ pkg_postinst() {
 	fi
 
 	einfo "If you are not using devfs, loading the module automatically at"
-	einfo "boot up, you need to add \"NVdriver\" to your /etc/modules.autoload."
-	einfo
+	einfo "boot up, you need to add \"nvidia.o\" to your /etc/modules.autoload."
+	einfo "Please note this is a different module name than previos versions."
 }
 
