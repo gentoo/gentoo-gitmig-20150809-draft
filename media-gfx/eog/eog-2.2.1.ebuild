@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.9 2003/07/19 23:06:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.2.1.ebuild,v 1.10 2003/09/12 20:47:09 liquidx Exp $
 
 inherit gnome2
 
@@ -18,7 +18,6 @@ RDEPEND=">=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0.4
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonoboui-2.2
-	>=gnome-base/bonobo-activation-2.2
 	>=gnome-base/libglade-2.0.1
 	>=gnome-base/librsvg-2.0.1
 	>=gnome-base/eel-2.2.0
