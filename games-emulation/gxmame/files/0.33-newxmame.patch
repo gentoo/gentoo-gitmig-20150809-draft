@@ -1,0 +1,24 @@
+--- src/options.c.orig	2003-09-20 20:10:37.496519168 +1000
++++ src/options.c	2003-09-20 21:00:37.709417480 +1000
+@@ -6555,8 +6555,8 @@
+ 				"-%sanalogstick "
+ 				"%s "					/* joy */
+ 				"-%smouse "
+-				"-%shotrod "
+-				"-%shotrodse "
++				"%s "
++				"%s "
+ 				"-%susbpspad "
+ 				"-%srapidfire "
+ 				"%s "					/* trackball1 */
+@@ -6571,8 +6571,8 @@
+ 				(target->analogstick)?"":"no",
+ 				joy?joy:"",
+ 				(target->mouse)?"":"no",
+-				(target->hotrod)?"":"no",
+-				(target->hotrodse)?"":"no",
++				(target->hotrod)?"-ctrlr HotRod":"",
++				(target->hotrodse)?"-ctrlr HotRodSE":"",
+ 				(target->usbpspad)?"":"no",
+ 				(target->rapidfire)?"":"no",
+ 				trackball1?trackball1:"",
