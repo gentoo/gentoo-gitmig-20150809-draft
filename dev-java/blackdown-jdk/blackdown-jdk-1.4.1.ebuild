@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.4 2003/05/24 06:35:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.5 2003/06/19 00:48:55 absinthe Exp $
 
 IUSE="doc"
 
-inherit gcc java nsplugins
+inherit java nsplugins
 
 JREV="01"
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
 J_URI="ftp://ftp.gwdg.de/pub/languages/java/linux/JDK-${PV}"
-if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "2" ] ; then
+if [ "`gcc -dumpversion | cut -f1 -d.`" -eq "3" -a "`gcc -dumpversion | cut -f2 -d.`" -ge "2" ] ; then
 	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )"
 else
 	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc2.95.bin )"
