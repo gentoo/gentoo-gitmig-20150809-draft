@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.14 2003/01/06 09:09:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.15 2003/01/18 11:23:39 woodchip Exp $
+
+*grub-0.93.20030118 (18 Jan 2003)
+
+  18 Jan 2003; Donny Davies <woodchip@gentoo.org> :
+  New testing release; closing #11821, #13242.  See ebuild for patch list.
 
 *grub-0.92-r1 (02 Oct 2002)
  
   06 Jan 2002; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
-
   PROVIDE virtual/bootloader
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
@@ -78,8 +82,7 @@
 
 *grub-0.90-r4 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
