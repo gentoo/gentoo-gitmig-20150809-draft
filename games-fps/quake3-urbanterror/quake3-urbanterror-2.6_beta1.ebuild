@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-2.6_beta1.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-2.6_beta1.ebuild,v 1.2 2003/09/20 00:18:58 vapier Exp $
 
 MOD_DESC="total transformation realism based MOD"
 MOD_NAME=q3ut2
+MOD_BINS=ut2
 inherit games games-q3mod
 
 SRC_URI="http://network3.filefront.com/planetquake3/beta26_full.zip
