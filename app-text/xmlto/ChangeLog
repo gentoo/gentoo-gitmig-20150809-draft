@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.23 2004/09/15 08:49:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.24 2004/10/13 09:36:01 usata Exp $
+
+  13 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> xmlto-0.0.15.ebuild,
+  xmlto-0.0.17.ebuild, xmlto-0.0.18.ebuild:
+  Force app-text/docbook-xml-dtd-4.2 series. Thanks to Simone Gotti
+  <simone.gotti@email.it>, closing bug #67163.
 
 *xmlto-0.0.18 (15 Sep 2004)
 
