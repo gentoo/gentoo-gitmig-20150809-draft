@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.13 2004/04/11 17:27:40 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.14 2004/06/24 00:21:30 agriffis Exp $
 
 IUSE="gnome"
 
@@ -19,7 +19,7 @@ src_compile() {
 
 	local myconf
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		myconf="--prefix=/usr --enable-capplet"
 	else
