@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/multiimonc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.7 2004/07/11 11:19:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.8 2004/08/21 08:56:12 hansmi Exp $
+
+  21 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> multiimonc-0.3.4.ebuild:
+  Stable on x86 and ppc.
 
   11 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> multiimonc-0.3.3.ebuild:
   Stable on x86 and ppc.
