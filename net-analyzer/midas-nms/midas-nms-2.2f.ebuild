@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.3 2004/10/20 15:24:59 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.4 2004/10/21 08:45:41 bass Exp $
 
 inherit webapp
 
@@ -49,8 +49,8 @@ src_install () {
 	dodoc docs/INSTALL.txt
 
 	# Init files
-	doconfd ${FILESDIR}/midas-nms.conf
-	doinit ${FILESDIR}/midas-nms.init
+	newconfd ${FILESDIR}/midas-nms.conf midas-nms
+	newinitd ${FILESDIR}/midas-nms.init midas-nms
 }
 
 pkg_postinst() {
