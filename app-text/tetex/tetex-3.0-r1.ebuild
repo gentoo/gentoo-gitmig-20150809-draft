@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.2 2005/02/12 15:24:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.3 2005/02/21 13:48:37 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
@@ -50,7 +50,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	sed -i -e "/mktexlsr/,+3d" Makefile.in || die
+	sed -i -e "s/updmap-sys/updmap-sys --nohash/g" \
+		-e "/mktexlsr/,+3d" Makefile.in || die
 
 	use amd64 && replace-flags "-O3" "-O2"
 
