@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+W# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.6 2002/10/29 21:02:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.7 2002/11/17 09:23:54 vapier Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -39,11 +39,11 @@ RDEPEND=">=dev-lang/python-2.0
 	
 src_bootstrap() {
 	cd ${WORKDIR}
-	
+
 	# bootstrap subversion from version 0.9.0
 	unpack ${DISTDIR}/subversion-r1302.tar.gz
 	cd ${WORKDIR}/subversion-r1302
-	./configure \
+	econf \
 		--with-berkeley-db=${I_BDB} \
 		--enable-maintainer-mode \
 		--disable-shared
@@ -59,11 +59,12 @@ src_compile_bdb() {
 	cd ${S_BDB}
 	../dist/configure \
 		--prefix=/usr/svn \
-	    --mandir=/usr/svn/share/man \
-	    --infodir=/usr/svn/share/info \
-	    --datadir=/usr/svn/share \
-	    --localstatedir=/var/lib \
+		--mandir=/usr/svn/share/man \
+		--infodir=/usr/svn/share/info \
+		--datadir=/usr/svn/share \
+		--localstatedir=/var/lib \
 		--host=${CHOST} || die "../dist/configure of berkeley db failed"
+
 	# build berkeley db
 	emake || die "make of berkeley db failed"
 	# install temporary version of berkeley db
@@ -168,8 +169,7 @@ src_compile() {
 
 src_install () {
 	# copy the prior temporary installs to the image dir
-	mkdir -p ${D}/usr/svn
-	mkdir -p ${D}/usr/svn/lib
+	dodir /usr/svn/lib
 	cp -av ${I_BDB}/lib/* ${D}/usr/svn/lib || die "installation of berkeley db failed"
 	cp -av ${I_APACHE}/* ${D}/usr/svn || die "installation of apache failed"
 	cp -av ${I_SVN}/* ${D}/usr/svn || die "installation of subversion failed"
@@ -225,8 +225,7 @@ src_install () {
 ENDL
 
 	# setup gentoo to make using subversion easier
-	mkdir -p ${D}/var/lib/svn
-	mkdir -p ${D}/usr/svn/logs
+	dodir /var/lib/svn/logs
 	touch ${D}/usr/svn/logs/.keep
 	insinto /usr/bin
 	dosym /usr/svn/bin/svn /usr/bin/svn
