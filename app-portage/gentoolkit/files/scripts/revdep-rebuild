@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.4 2003/12/16 23:56:42 vapier Exp $
+# Copyright 1999-2004 Gentoo Foundation
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/revdep-rebuild,v 1.5 2004/07/14 21:36:33 agriffis Exp $
 
 # revdep-rebuild: Reverse dependency rebuilder.
 # Author: Stanislav Brabec <utx@gentoo.org>
