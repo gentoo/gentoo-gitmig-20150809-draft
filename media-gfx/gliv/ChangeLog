@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.5 2002/06/20 21:27:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.6 2002/06/28 20:58:24 azarah Exp $
+
+*gliv-1.5.3 (28 Jun 2002)
+
+  28 Jun 2002; Martin Schlemmer <azarah@gentoo.org> gliv-1.5.3.ebuild :
+
+  New version.  Resolves bug #4096 thanks to quick responce from the
+  author/maintainer of gliv :)
 
 *gliv-1.5.2 (20 Jun 2002)
 
