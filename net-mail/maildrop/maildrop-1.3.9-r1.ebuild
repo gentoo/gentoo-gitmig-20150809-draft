@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.3.9-r1.ebuild,v 1.1 2002/06/23 23:59:31 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.3.9-r1.ebuild,v 1.2 2002/06/24 13:49:11 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 src_compile() {
 	export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
-	export CFLAGS="$CFLAGS/-ffast-math/} -g"
+	export CFLAGS="${CFLAGS/-ffast-math/} -g"
 	# These next two lines are a MUST! If tries to unroll the loops in
 	# CFLAGS or CXXFLAGS maildrop will not compile :-( <lamer@gentoo.org>
 	export CFLAGS="${CFLAGS/-funroll-loops/} -g"
