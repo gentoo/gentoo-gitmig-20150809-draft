@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.9 2004/02/09 19:03:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.10 2004/02/09 19:12:10 gustavoz Exp $
+
+  09 Feb 2004; <gustavoz@gentoo.org> dvd+rw-tools-5.13.4.7.4.ebuild:
+  marked stable on sparc
 
   09 Feb 2004; Aron Griffis <agriffis@gentoo.org>
   dvd+rw-tools-5.17.4.8.6.ebuild:
