@@ -6,15 +6,8 @@
 . /etc/rc.d/config/functions
 
 # Test if we use devfs and start devfsd
-/sbin/devfsd /dev
+mount --bind /dev /dev-state
+mount -t devfs none /dev
+//sbin/devfsd /dev
 
-if [ -a /dev/.devfsd ]
-then
-  if [ -d /etc/devfs ]
-  then
-    ebegin "Restoring devices..."
-    /bin/cp -a /etc/devfs/* /dev
-    eend 0
-  fi
-fi
   

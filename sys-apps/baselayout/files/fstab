@@ -1,11 +1,26 @@
 # /etc/fstab: static file system information.
 #
+# noatime turns of atimes for increased performance (atimes normally aren't
+# needed; notail increases performance of ReiserFS (at the expense of storage
+# efficiency).  It's safe to drop the noatime options if you want and to 
+# switch between notail and tail freely.
+#
 # <fs>          <mountpoint>    <type>  	<opts>      		<dump/pass>
-/dev/#ROOT#	/		reiserfs	defaults		1 1
-/dev/#SWAP#	none            swap		sw			0 0
-/dev/cdrom	/mnt/cdrom	iso9660		noauto,ro		0 2
 
-#important stuff (proc, /dev/pts, /var/shm)
+dev/#BOOT#	/boot		ext2		noauto,noatime		1 1
+/dev/#ROOT#	/		reiserfs	notail,noatime		0 0
+/dev/#SWAP#	none            swap		sw			0 0
+/dev/#CD#	/mnt/cdrom	iso9660		noauto,ro		0 0
+
+# /proc should always be enabled
+# /proc/bus/usb should be enabled if you need usb support
+# no /dev devfs line is needed; mounting /dev is done by our devfs initscript
+
 proc		/proc           proc		defaults		0 0
-none		/dev/pts	devpts		mode=620		0 0
-shm		/dev/shm	shm		defaults		0 0
+none		/proc/bus/usb	usbdevfs	defaults		0 0
+
+# The following are optional; /dev/pts isn't needed for devfs; /dev/shm is
+# an example only (shm is a dynamically expandable/shrinkable ramdisk
+
+#none		/dev/pts	devpts		mode=620		0 0
+#shm		/dev/shm	shm		defaults		0 0

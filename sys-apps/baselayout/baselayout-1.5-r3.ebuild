@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.9 2001/05/27 02:58:08 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.10 2001/06/11 03:40:20 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -36,8 +36,7 @@ src_install()
 	dodir /usr/sbin
 	dosbin ${FILESDIR}/MAKEDEV ${FILESDIR}/run-crons
 	dodir /dev
-  	dodir /dev/pts
-	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
+  	dodir /dev-state
 	dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc /usr/bin/
 
 #FHS 2.1 stuff
@@ -50,7 +49,7 @@ src_install()
 
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib 
-	dodir /var /dev/shm /var/run /var/log/news
+	dodir /var /var/run /var/log/news
 	touch ${D}/var/log/lastlog
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
@@ -81,7 +80,7 @@ src_install()
 		dodir /etc/cron.$foo
 	done
 	chmod go-rwx ${D}/etc/shadow
-	dodir /dev/pts /lib /proc /mnt/floppy /mnt/cdrom
+	dodir /lib /proc /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
 	for x in boot halt 1 2 3 4 5 
@@ -114,17 +113,17 @@ src_install()
 	insinto /usr/bin
 	insopts -m0755
 	doins colors
-	dodir /dev
-	cd ${D}/dev
-	MAKEDEV generic-i386
-        MAKEDEV sg
-        MAKEDEV scd
-        MAKEDEV rtc 
-		MAKEDEV audio
-		MAKEDEV hde
-		MAKEDEV hdf
-		MAKEDEV hdg
-		MAKEDEV hdh
+	#dodir /dev
+	#cd ${D}/dev
+	#MAKEDEV generic-i386
+    #    MAKEDEV sg
+    #    MAKEDEV scd
+    #    MAKEDEV rtc 
+	#	MAKEDEV audio
+	#	MAKEDEV hde
+	#	MAKEDEV hdf
+	#	MAKEDEV hdg
+	#	MAKEDEV hdh
 	cd ${D}/etc/rc.d/config
 	cp runlevels runlevels.orig
 	sed -e 's:##OSNAME##:Gentoo Linux:g' -e "s:##ARCH##:${CHOST%%-*}:g" runlevels.orig > runlevels
