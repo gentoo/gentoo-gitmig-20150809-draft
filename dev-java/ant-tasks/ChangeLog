@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.18 2005/03/29 16:06:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.19 2005/04/02 23:41:26 luckyduck Exp $
+
+  03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> ant-tasks-1.6.2-r5.ebuild,
+  ant-tasks-1.6.2-r6.ebuild:
+  updated oro and regexp dependencies to reflect moves oro->jakarta-oro and
+  regexp->jakarta-regexp
 
 *ant-tasks-1.6.2-r7 (29 Mar 2005)
 
@@ -8,12 +13,6 @@
   +ant-tasks-1.6.2-r7.ebuild:
   moved from dev-java/oro to dev-java/jakarta-oro dependency. see #71337. also
   readded generation of the bsf.jar, fixes #59799
-
-*ant-tasks-1.6.2-r7 (29 Mar 2005)
-
-  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
-  +ant-tasks-1.6.2-r7.ebuild:
-  re-enabled generation of the ant-apache-bsf.jar, fixes #59799
 
 *ant-tasks-1.6.2-r6 (27 Mar 2005)
 
