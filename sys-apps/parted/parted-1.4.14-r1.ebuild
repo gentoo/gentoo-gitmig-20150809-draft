@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.14-r1.ebuild,v 1.1 2001/06/06 14:40:04 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.14-r1.ebuild,v 1.2 2001/06/24 20:18:20 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -13,12 +13,12 @@ HOMEPAGE="http://www.gnu.org/software/${PN}"
 RDEPEND="virtual/glibc
 	>=sys-apps/e2fsprogs-1.19-r2
 	readline? ( >=sys-libs/readline-4.1-r2 )
-	nls? ( >=sys-devel/gettext-0.10.38-r2 )
+	nls? ( sys-devel/gettext-0.10.38 )
 	python? ( >=dev-lang/python-2.0 )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.50
-	>=sys-devel/automake-1.4"
+	sys-devel/autoconf
+	sys-devel/automake"
 
 src_unpack() {
     unpack ${A}
