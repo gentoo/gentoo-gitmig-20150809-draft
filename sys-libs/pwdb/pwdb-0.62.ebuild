@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.12 2004/03/09 23:42:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.13 2004/04/26 05:51:28 vapier Exp $
 
 inherit eutils flag-o-matic
-
-IUSE="selinux"
 
 DESCRIPTION="Password database"
 HOMEPAGE="http://www.firstlinux.com/cgi-bin/package/content.cgi?ID=6886"
@@ -13,7 +11,8 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="BSD | GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE="selinux"
 
 DEPEND="virtual/glibc
 	selinux? ( sys-libs/libselinux )"
@@ -60,9 +59,8 @@ src_install() {
 	insinto /etc
 	doins conf/pwdb.conf
 
-	dodoc CHANGES Copyright CREDITS README
+	dodoc CHANGES CREDITS README
 	dohtml -r doc
 	docinto txt
 	dodoc doc/*.txt
 }
-
