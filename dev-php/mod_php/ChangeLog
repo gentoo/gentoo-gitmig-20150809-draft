@@ -1,7 +1,21 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.86 2003/06/25 05:18:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.87 2003/06/30 10:05:50 robbat2 Exp $
 
+*mod_php-4.3.2-r3 (30 Jun 2003)
+
+  30 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r3.ebuild,
+  files/digest-mod_php-4.3.2-r3:
+  Commited new version to ~x86 with hopefully all of the fixes required for
+  Apache1 and Apache2 required longterm. Uses new PHPSAPI and configuration
+  style. Apache2 enbling variable has CHANGED to PHP4, this is a breakage
+  compared to previously.
+  
+  30 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r1.ebuild,
+  mod_php-4.3.2-r2.ebuild, mod_php-4.3.2.ebuild, files/70_mod_php.conf:
+  Updated for new PHPSAPI variable. Moved configuration files to new style
+  cleanly (/etc/php/${PHPSAPI}-php${PHPMAJORVERSION}/php.ini).
+  
   24 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.2.3-r2.ebuild,
   mod_php-4.3.0-r2.ebuild, mod_php-4.3.1-r1.ebuild, mod_php-4.3.1-r2.ebuild,
   mod_php-4.3.1-r3.ebuild, mod_php-4.3.1.ebuild,
@@ -10,7 +24,7 @@
   files/digest-mod_php-4.3.1-r2, files/digest-mod_php-4.3.1-r3:
   Removed old ebuilds as per GLSA 200306-02.
 
-*mod_php-4.3.2-r2 (10 June 2003)
+*mod_php-4.3.2-r2 (10 Jun 2003)
 
   24 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
   Fix bug #23200
@@ -29,7 +43,7 @@
   Apache2 ONLY: uses apache2 version (no USE="apache2" needed)
   Apache1 AND Apache2: Use apache1 version unless the USE flag is in place.
 
-*mod_php-4.3.2-r1 (10 June 2003)
+*mod_php-4.3.2-r1 (10 Jun 2003)
 
   10 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r1.ebuild:
   Try to fix bug #22352. mod_php is now SLOTed by the major version of Apache

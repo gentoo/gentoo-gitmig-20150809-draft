@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.3 2003/06/19 03:10:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2.ebuild,v 1.4 2003/06/30 10:05:11 robbat2 Exp $
 
+PHPSAPI="cli"
 inherit php eutils
 
 IUSE="${IUSE} readline"
@@ -84,9 +84,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	# This is more correct information.
-	einfo 
+	php_pkg_postinst
 	einfo "This is a CLI only build."
 	einfo "You can not use it on a webserver."
-	einfo 
+}
+pkg_preinst() {
+	php_pkg_preinst
 }
