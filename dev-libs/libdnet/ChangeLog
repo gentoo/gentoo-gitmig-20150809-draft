@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.11 2004/08/05 20:04:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.12 2004/10/07 19:31:43 j4rg0n Exp $
 
 *libdnet-1.8-r1 (05 Aug 2004)
 
@@ -8,6 +8,9 @@
   added python support to ebuild
 
 *libdnet-1.8 (16 Jul 2004)
+
+  07 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> libdnet-1.8.ebuild:
+  Keyworded ~ppc-macos. Bug #57856
 
   16 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> libdnet-1.8.ebuild:
   Version bump, ebuild contributed by Justin Guyett <justin@soze.net>.
