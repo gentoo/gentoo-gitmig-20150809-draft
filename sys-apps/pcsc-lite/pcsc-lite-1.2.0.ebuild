@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.7 2004/10/30 21:40:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.0.ebuild,v 1.8 2005/01/23 11:10:29 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="https://alioth.debian.org/download.php/419/pcsc-lite-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~ppc64"
 IUSE="static"
 
 RDEPEND="!static? ( virtual/libc )
