@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
-source /etc/make.conf
-for x in `find /usr/portage/ -iname *.ebuild`
+source /etc/make.conf 
+touch ${DISTDIR}/.cleaned 
+sleep 3
+for x in `find /usr/portage/ -iname *.ebuild` 
 do
-	/usr/bin/ebuild ${x} touch
+	ebuild ${x} touch
 done
+if [ ! -d ${DISTDIR}-old ]
+then
+	mkdir ${DISTDIR}-old
+fi
+cd ${DISTDIR}
+for x in `find ! -newer .cleaned | grep ./` 
+do
+	mv $x ${DISTDIR}-old
+done
+du -k ${DISTDIR}
+du -k ${DISTDIR}-old
