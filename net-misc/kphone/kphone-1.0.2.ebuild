@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-1.0.2.ebuild,v 1.4 2003/06/12 21:35:31 msterret Exp $
 
 inherit kde-base || die
 
