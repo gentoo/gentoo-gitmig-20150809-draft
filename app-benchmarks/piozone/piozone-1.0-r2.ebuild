@@ -10,7 +10,7 @@ DEPEND="sys-devel/gcc"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.lysator.liu.se/pub/unix/piozone/${P}.tar.gz"
 
