@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.2.0.ebuild,v 1.3 2003/02/07 19:46:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.2.0.ebuild,v 1.4 2003/02/09 15:25:10 foser Exp $
 
 IUSE="doc"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="a CORBA framework "
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 LICENSE="LGPL-2.1 GPL-2"
 
 RDEPEND=">=dev-libs/glib-2.0.1
