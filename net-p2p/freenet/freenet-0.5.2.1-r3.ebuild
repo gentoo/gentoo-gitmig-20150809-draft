@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.3 2003/07/24 18:43:03 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r3.ebuild,v 1.4 2003/07/24 21:31:56 lostlogic Exp $
 
 IUSE=""
 
@@ -85,6 +85,7 @@ pkg_config() {
 		fi
 		wget http://freenetproject.org/snapshots/seednodes.ref -O /var/freenet/seednodes.ref
 		touch -d "1/1/1970" /var/freenet/seednodes.ref
+		chown freenet:freenet /var/freenet/seednodes.ref
 	fi
 
 	if [ -f /etc/freenet.conf ]; then
