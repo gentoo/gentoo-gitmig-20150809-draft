@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.31 2003/05/26 15:27:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.32 2003/05/28 11:44:39 agriffis Exp $
+
+*gvim-6.2_pre6-r1 (28 May 2003)
+
+  28 May 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2_pre6-r1.ebuild:
+  Add patch to make autoconf-2.57 work with Vim. This fixes bug 19438. Bram is
+  also integrating this patch into his sources.
 
 *gvim-6.2_pre6 (26 May 2003)
 

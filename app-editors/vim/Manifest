@@ -5,10 +5,10 @@ MD5 2dcc758706b7ab09352ea49f2f480d85 vim-6.2_pre4.ebuild 775
 MD5 3921851881b23d1ecdc1a9f7ff9e11cd vim-6.2_pre6.ebuild 792
 MD5 c1e211aaaabf14d6746829544e53b413 vim-6.2_pre1.ebuild 784
 MD5 c8241c77a55138468ec5745af3fd9c6d vim-6.2_pre3.ebuild 775
-MD5 eb5a713f7432171f0d3d0e80413c90de ChangeLog 10596
+MD5 ea5210f5b9c8c0b445d25fc9dea8e56c ChangeLog 10830
 MD5 77766d8697a1591edafebfdf7328fc3a vim-6.1-r21.ebuild 752
 MD5 375c2f013ea6a3a7ad2f5f297f681178 vim-6.2_pre5.ebuild 775
-MD5 84769129bfe9f8b9a7812ae74eca5321 vim-6.2_pre6-r1.ebuild 792
+MD5 ff57ad24e51584046983b2328b44e96c vim-6.2_pre6-r1.ebuild 795
 MD5 c1c3576985bcab3a31e4abd27ee00d07 files/digest-vim-6.2_pre1 201
 MD5 bd60e74d8b97496b46e4c67d6f3f250c files/digest-vim-6.2_pre2 202
 MD5 6308e9c63def2292a39768b027e7dd8d files/digest-vim-6.2_pre3 202
