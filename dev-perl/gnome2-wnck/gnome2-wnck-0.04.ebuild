@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtk2-perl/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-perl/glib-perl-1.042
 	>=dev-perl/gtk2-perl-1.042
