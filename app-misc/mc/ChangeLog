@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  31 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> mc-4.6.0-r10.ebuild:
+  Stable on sparc
+
 *mc-4.6.0-r10 (26 Aug 2004)
 
   26 Aug 2004; Heinrich Wendel <lanius@gentoo.org> +files/ebuild.syntax,
