@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Getopt-Mixed
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.1 2003/03/20 04:33:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.2 2003/06/09 07:09:42 rac Exp $
+
+  09 Jun 2003; <rac@gentoo.org> Getopt-Mixed-1.008.ebuild:
+  Fix header
 
 *Getopt-Mixed-1.008 (19 Mar 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.2 2003/02/12 06:24:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.3 2003/06/09 07:10:45 rac Exp $
+
+  09 Jun 2003; <rac@gentoo.org> SOAP-Lite-0.55.ebuild:
+  Fix header
 
 *SOAP-Lite-0.55 (21 Dec 2002)
 
