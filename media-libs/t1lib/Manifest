@@ -1,4 +1,7 @@
-MD5 c1bc986d925214ff6bb626a07805ea3a ChangeLog 4445
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 deb621c387dce102845dde395e51cdfd ChangeLog 4449
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 3f61b0574042c1a3af0bd095f4f3fc67 t1lib-1.3.1.ebuild 1447
 MD5 9f2b6ccb9b8955386421833a38931270 t1lib-5.0.0-r2.ebuild 1846
@@ -8,3 +11,10 @@ MD5 817757abf473e739c3314daca2aecea2 files/digest-t1lib-1.3.1 64
 MD5 fd18dc7d703e77e595bc054f2f4c0f20 files/digest-t1lib-5.0.0-r2 64
 MD5 60bcc4bc9f1f21b6f445e2dc1f462171 files/digest-t1lib-5.0.1 64
 MD5 31349cc7c0045a650519549f365906a9 files/digest-t1lib-5.0.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1cvI1lqEGTUzyQRAna2AJ0dqMl6kWNSz3jPXH+ruAHKyjgAngCff7iX
+OmQfiIrAPyYyqTdlIWURS0c=
+=yxXG
+-----END PGP SIGNATURE-----

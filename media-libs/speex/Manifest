@@ -1,4 +1,7 @@
-MD5 d2cb769b350081f450d343dc08e77ac5 ChangeLog 4023
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec99c8630c1bb1fa40f39e2ee282b14f ChangeLog 4117
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 95eaa8828e202eb779695caeb4cab87e speex-1.0.1.ebuild 904
 MD5 5ac13c5b23fd5790020fad61b62873b4 speex-1.0.2.ebuild 954
@@ -14,3 +17,10 @@ MD5 e103df8cbfd726cbc56768dd2a813130 files/digest-speex-1.0.3 63
 MD5 a5d42c5b528f40d191e53665f47995fd files/digest-speex-1.1.4 63
 MD5 6da617acf87c6c46c21e958ab494e9b0 files/digest-speex-1.1.5 63
 MD5 768ef53d9c1bd43a3bf3c173f3ba8ce9 files/digest-speex-1.1.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1daI1lqEGTUzyQRAi7yAKC9go22o6JBEpvwua9WP+dg7io3kACfQjrM
+Tb4AZTDFBnAjcYzij6kHNSc=
+=VtrP
+-----END PGP SIGNATURE-----

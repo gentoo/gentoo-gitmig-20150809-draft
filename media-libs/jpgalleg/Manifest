@@ -1,5 +1,15 @@
-MD5 838e48350333e0afb40a00bb8a96f918 jpgalleg-1.1.ebuild 1152
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c5acbc40698e3137c0061a7c7d94c874 ChangeLog 598
 MD5 be3633315fe4d8f240aeae87c493e21e jpgalleg-1.1-r1.ebuild 1269
-MD5 31c9091c9887390964bcc25773552928 ChangeLog 422
-MD5 ce07dc77998f88ba139410e60ad88061 files/digest-jpgalleg-1.1-r1 112
+MD5 838e48350333e0afb40a00bb8a96f918 jpgalleg-1.1.ebuild 1152
 MD5 ce07dc77998f88ba139410e60ad88061 files/digest-jpgalleg-1.1 112
+MD5 ce07dc77998f88ba139410e60ad88061 files/digest-jpgalleg-1.1-r1 112
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1exI1lqEGTUzyQRAsJaAJ4jALd/RAtv2cA1vDGdBsjHhanPMQCgn/GX
+0nzi3ddsDaGnReFQpwYe3L4=
+=NLhv
+-----END PGP SIGNATURE-----
