@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r3.ebuild,v 1.5 2004/12/03 17:48:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r2.ebuild,v 1.1 2004/12/23 21:18:58 chainsaw Exp $
 
-IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx"
+IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
 inherit flag-o-matic eutils
 
@@ -17,18 +17,14 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~sparc x86 ~hppa ~mips"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~hppa ~mips"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
-	>=dev-libs/libxml-1.8.15
 	>=gnome-base/libglade-2.3.1
-	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	esd? ( >=media-sound/esound-0.2.30 )
-	opengl? ( virtual/opengl )
-	oggvorbis? ( >=media-libs/libvorbis-1.0
-		     >=media-libs/libogg-1.0 )
+	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0 )
 	gnome? ( >=gnome-base/gnome-vfs-2.6.0
 	         >=gnome-base/gconf-2.6.0 )"
@@ -37,40 +33,33 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
-	unpack ${A}
+	if ! useq mp3; then
+		ewarn "MP3 support is now optional and you have not enabled it."
+	fi
 
+	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-mime.patch
-	epatch ${FILESDIR}/${P}-includefix.patch
+	epatch ${FILESDIR}/${PV}-noclick-resize.patch
+	epatch ${FILESDIR}/${PV}-bigendian.patch
 }
 
 src_compile() {
-	local myconf=""
-
 	# Bug #42893
 	replace-flags "-Os" "-O2"
-
-	if use gnome; then
-		myconf="${myconf} --enable-gconf --enable-gnome-vfs"
-	fi
-
-	if use mmx; then
-		myconf="${myconf} --enable-simd"
-	fi
 
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
 		--includedir=/usr/include/beep-media-player \
+		`use_with old-eq xmms-eq` \
+		`use_enable mmx simd` \
+		`use_enable gnome gconf` \
 		`use_enable oggvorbis vorbis` \
 		`use_enable esd` \
-		`use_enable mikmod` \
-		`use_with mikmod libmikmod` \
-		`use_enable opengl` \
+		`use_enable mp3` \
 		`use_enable nls` \
 		`use_enable oss` \
 		`use_enable alsa` \
-		${myconf} \
 		|| die
 
 	emake || die "make failed"
@@ -85,8 +74,10 @@ src_install() {
 
 	dosym /usr/include/beep-media-player/bmp /usr/include/beep-media-player/xmms
 
-	# We'll use xmms skins
-	dosym /usr/share/xmms/Skins /usr/share/beep/Skins
+	# XMMS skin symlinking; bug 70697
+	for SKIN in /usr/share/xmms/Skins/* ; do
+		dosym "$SKIN" /usr/share/bmp/Skins/
+	done
 
 	# Plugins want beep-config, this wasn't included
 	# Note that this one has a special gentoo modification
@@ -98,9 +89,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "This program is unstable on sparc when poking heavily with the GUI."
-	einfo "It's reportedly unstable on some x86 boxes also, YMMV."
-	echo
-	einfo "We're using xmms skins for the time being, they have been symlinked."
+	einfo "Your XMMS skins, if any, have been symlinked."
+	einfo "MP3 support is now optional, you may want to enable the mp3 USE-flag."
 	echo
 }
