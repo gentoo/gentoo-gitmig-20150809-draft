@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.3 2001/05/10 01:52:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.4 2001/06/04 21:57:52 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,23 +16,38 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 	python? ( >=dev-lang/python-2.0 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	gnome? ( >=gnome-base/gnome-core-1.4 )"
+        opengl? ( >=x11-libs/gtkglarea-1.2.2 )
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4 )"
 
-
+DEPEND=">=media-libs/imlib-1.9.8.1
+	>=dev-libs/libpcre-3.2
+	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
+	perl? ( >=sys-devel/perl-5.6 )
+	python? ( >=dev-lang/python-2.0 )
+	sdl? ( >=media-libs/libsdl-1.1.7 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+        opengl? ( >=x11-libs/gtkglarea-1.2.2 )
+	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
 src_compile() {
-    echo $USE
+
     local myconf
     if [ "`use tcltk`" ]
     then
         myconf="--enable-tcl=module --with-tcl=/usr/lib"
+    else
+        myconf="--enable-tcl=no"
     fi
     if [ "`use perl`" ]
     then
         myconf="$myconf --enable-perl=static"
+    else
+        myconf="$myconf --enable-perl=no"
     fi
     if [ "`use python`" ]
     then
 	myconf="$myconf --enable-python=static"
+    else
+        myconf="$myconf --enable-python=no"
     fi
     if [ "`use ssl`" ]
     then
@@ -44,9 +59,13 @@ src_compile() {
     fi
     if [ "`use gnome`" ]
     then
-	myconf="$myconf --enable-gnome"
+	myconf="$myconf --enable-gnome --enable-gdkimlib"
     fi
-    try DEBIAN_ENTITY_MAGIC=\"voodoo\" ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
+    if [ "`use opengl`" ]
+    then
+	myconf="$myconf --enable-gtkgl"
+    fi
+    try DEBIAN_ENTITY_MAGIC=\"voodoo\" CFLAGS=\"$CFLAGS -I/usr/X11R6/include\" ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
 	--enable-exec-class=yes \
 	--enable-gtk=module \
 	--enable-c=module $myconf \

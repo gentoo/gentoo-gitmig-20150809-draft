@@ -11,8 +11,12 @@ HOMEPAGE="http://gedit.sourceforge.net/"
 
 DEPEND=">=gnome-base/libglade-0.15
 	>=gnome-base/gnome-print-0.25
+        >=gnome-base/gnome-vfs-1.0
         nls? ( sys-devel/gettext )"
 
+RDEPEND=">=gnome-base/libglade-0.15
+	>=gnome-base/gnome-print-0.25
+        >=gnome-base/gnome-vfs-1.0"
 
 
 src_compile() {

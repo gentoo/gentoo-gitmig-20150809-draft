@@ -12,7 +12,10 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND=">=gnome-base/gnome-libs-1.2.10
 	>=media-libs/freetype-2.0.1
 	>=gnome-base/libxml-1.8
-	>=gnome-base/gdk-pixbuf-0.10"
+	>=gnome-base/gdk-pixbuf-0.10
+        >=app-arch/rpm-3.0.6"
+RDEPEND="virtual/glibc"
+
 
 src_compile() {                           
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
@@ -20,7 +23,7 @@ src_compile() {
   try make
 }
 
-src_install() {                               
+src_install() {
   try make DESTDIR=${D} install
   dodoc AUTHORS COPYING ChangeLog NEWS README*
 }

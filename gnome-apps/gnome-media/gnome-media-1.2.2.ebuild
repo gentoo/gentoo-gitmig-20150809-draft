@@ -9,8 +9,11 @@ DESCRIPTION="gnome-media"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-media/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-core-1.2.4
+DEPEND=">=gnome-base/gnome-libs-1.2.4
+        >=gnome-base/scrollkeeper-0.2
         nls? ( sys-devel/gettext )"
+
+RDEPEND=">=gnome-base/gnome-libs-1.2.4"
 
 src_compile() {                           
   local myconf

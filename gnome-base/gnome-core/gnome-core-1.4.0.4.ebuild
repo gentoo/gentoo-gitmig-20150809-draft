@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.2 2001/06/04 10:34:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.3 2001/06/04 21:57:52 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,16 +10,13 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
          ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
-RDEPEND=">=gnome-base/control-center-1.2.4
-	>=gnome-base/glibwww-0.2-r1
-        >=gnome-base/libghttp-1.0.9
-	>=gnome-base/libglade-0.16-r1
-	>=gnome-base/scrollkeeper-0.2"
+RDEPEND=">=gnome-base/control-center-1.2.4 >=gnome-base/libglade-0.16-r1"
 
 #gtkhtml? ( >=gnome-base/gtkhtml-0.7 )
 DEPEND="${RDEPEND}
         nls? ( sys-devel/gettext )
         >=sys-apps/tcp-wrappers-7.6
+        >=gnome-base/scrollkeeper-0.2
 	>=dev-util/xml-i18n-tools-0.8.4"
 
 

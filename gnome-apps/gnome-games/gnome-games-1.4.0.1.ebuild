@@ -9,9 +9,11 @@ DESCRIPTION="gnome-utils"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-core-1.2.4
-        >=sys-libs/ncurses-5.2
-        nls? ( sys-devel/gettext )"
+DEPEND=">=gnome-base/gnome-core-1.4.0.4
+        >=dev-util/guile-1.4
+        nls? ( sys-devel/gettext )
+        >=gnome-base/scrollkeeper-0.2"
+RDEPEND=">=gnome-base/gnome-core-1.4.0.4 >=dev-util/guile-1.4"
 
 src_compile() {
   local myconf

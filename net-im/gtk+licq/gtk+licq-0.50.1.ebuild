@@ -7,16 +7,17 @@ DESCRIPTION="gtk+licq"
 SRC_URI="http://gtk.licq.org/download/${A}"
 HOMEPAGE="http://gtk.licq.org"
 
-DEPEND="virtual/glibc sys-devel/perl
-        >=net-im/licq-1.0.2
-	>=x11-libs/gtk+-1.2.0"
+DEPEND="virtual/glibc sys-devel/perl nls? ( sys-devel/gettext )
+        >=net-im/licq-1.0.2 gnome? ( >=gnome-base/gnome-core-1.4.0.4 )
+	>=x11-libs/gtk+-1.2.0
+        spell? ( >=app-text/pspell-0.11.2 )"
 
 RDEPEND="virtual/glibc >=net-im/licq-1.0.2
-	>=x11-libs/gtk+-1.2.0
-        gnome? ( gnome-base/gnome-core )"
+	>=x11-libs/gtk+-1.2.0 gnome? ( >=gnome-base/gnome-core-1.4.0.4 )
+        spell? ( >=app-text/pspell-0.11.2 )"
 
 
-src_compile() {                           
+src_compile() {
   local myconf
   local myprefix
   myprefix="/opt/gnome"
@@ -24,6 +25,9 @@ src_compile() {
   then
     myconf="--disable-gnome"
     myprefix="/usr/X11R6"
+  fi
+  if [ -z "`use spell`" ] ; then
+    myconf="$myconf --disable-pspell"
   fi
   if [ -z "`use nls`" ]
   then
@@ -36,8 +40,8 @@ src_compile() {
 
 src_install() {
   local myprefix
-  myprefix="opt/gnome" 
-  if [ -z "`use gnome`"]
+  myprefix="opt/gnome"
+  if [ -z "`use gnome`" ]
   then
     myprefix="usr/X11R6"
   fi

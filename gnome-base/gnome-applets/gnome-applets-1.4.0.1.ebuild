@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.1.ebuild,v 1.1 2001/04/15 21:45:13 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.1.ebuild,v 1.2 2001/06/04 21:57:52 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,7 +14,12 @@ DEPEND="nls? ( sys-devel/gettext )
         >=gnome-base/gnome-core-1.4
 	>=gnome-base/libgtop-1.0.12
 	>=gnome-base/libghttp-1.0.9
-        >=gnome-base/scrollkeeper-0.2"
+        >=gnome-base/scrollkeeper-0.2
+        >=dev-util/xml-i18n-tools-0.8.4"
+
+RDEPEND=">=gnome-base/gnome-core-1.4
+	>=gnome-base/libgtop-1.0.12
+	>=gnome-base/libghttp-1.0.9"
 
 src_compile() {
 
