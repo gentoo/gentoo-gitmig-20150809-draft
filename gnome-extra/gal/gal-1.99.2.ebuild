@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.2.ebuild,v 1.1 2003/03/13 23:22:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.2.ebuild,v 1.2 2003/03/14 16:49:03 liquidx Exp $
 
 IUSE="doc"
 
@@ -39,14 +39,11 @@ src_compile() {
     fi
 
 	econf ${myconf} || die
-	emake || die
+	make || die # parallel make doesn't work
 }
 
 src_install() {
-	make prefix=${D}/usr \
-	     sysconfdir=${D}/etc \
-	     localstatedir=${D}/var/lib	\
-	     install || die
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
