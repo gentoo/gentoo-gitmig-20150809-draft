@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.18 2004/11/06 15:03:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.19 2004/11/17 14:09:37 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -65,6 +65,9 @@ src_compile() {
 	# where everything is compiled i686, nor with most non-essential 
 	# packages athlon-xp and only motif i686.  needs investigation.
 	replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
+
+	# fails to copmile with -jx
+	MAKEOPTS="${MAKEOPTS} -j1"
 
 	mkdir -p imports/x11
 	cd imports/x11
