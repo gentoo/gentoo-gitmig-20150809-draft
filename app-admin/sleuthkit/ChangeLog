@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sleuthkit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.5 2004/05/07 12:36:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.6 2004/05/07 13:52:56 dholm Exp $
+
+  07 May 2004; David Holm <dholm@gentoo.org> sleuthkit-1.69.ebuild:
+  Added to ~ppc.
 
   07 May 2004; Daniel Black <dragonheart@gentoo.org> sleuthkit-1.69.ebuild:
   Added IUSE
