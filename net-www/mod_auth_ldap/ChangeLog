@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_ldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.8 2004/06/25 00:59:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/ChangeLog,v 1.9 2004/08/08 00:33:27 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> mod_auth_ldap-2.4.1-r1.ebuild,
+  mod_auth_ldap-2.4.1.ebuild, mod_auth_ldap-2.4.2.ebuild:
+  Typo in DESCRIPTION: authorizaion -> authorization. Bug 59717.
 
   20 Jun 2004; Chuck Short <zul@gentoo.org> mod_auth_ldap-2.4.1-r1.ebuild,
   mod_auth_ldap-2.4.1.ebuild, mod_auth_ldap-2.4.2.ebuild:

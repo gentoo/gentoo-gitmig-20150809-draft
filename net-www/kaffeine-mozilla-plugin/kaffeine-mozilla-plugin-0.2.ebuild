@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.1 2004/08/06 14:44:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.2 2004/08/08 00:31:24 slarti Exp $
 
 inherit nsplugins
 
 MY_P=${P/-plugin/}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="The Kaffeine Mozilla starter plgin."
+DESCRIPTION="The Kaffeine Mozilla starter plugin."
 HOMEPAGE="http://kaffeine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kaffeine/${MY_P}.tar.bz2"
 
