@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.1 2003/09/19 20:32:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.2 2003/09/22 11:54:14 seemant Exp $
+
+  22 Sep 2003; Seemant Kulleen <seemant@gentoo.org> libbtctl-0.3.ebuild:
+  DEPEND should be pkgconfig not pkg-config. Thanks to: Nils Spengler
+  <nils.spengler@gmx.de> in bug #29325
 
 *libbtctl-0.3 (19 Sep 2003)
 
