@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.2 2001/11/10 02:54:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4-r1.ebuild,v 1.3 2002/01/26 03:50:10 aeoo Exp $
 
 S=${WORKDIR}/elvis-2.1_4
 DESCRIPTION="A vi/ex clone"
@@ -16,9 +16,9 @@ src_compile() {
 
     local myconf
     if [ "`use X`" ]; then
-	mconf="--with-x"
+	myconf="--with-x"
     else
-	mconf="--without-x"
+	myconf="--without-x"
     fi
     try ./configure --bindir=${D}/usr/bin --datadir=${D}/usr/share/elvis ${myconf}
     cp Makefile Makefile.orig
