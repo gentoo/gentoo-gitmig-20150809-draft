@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r2.ebuild,v 1.7 2004/06/25 00:46:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r2.ebuild,v 1.8 2004/07/09 22:11:18 lv Exp $
 
 
 inherit eutils
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.gz
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_4} )"
 
 HOMEPAGE="http://linux-wlan.org"
-DEPEND="sys-kernel/linux-headers
+DEPEND="virtual/os-headers
 		dev-libs/openssl
 		sys-apps/baselayout
 		pcmcia?	( sys-apps/pcmcia-cs )"
