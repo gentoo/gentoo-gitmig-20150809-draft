@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.82 2004/11/23 17:03:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.83 2004/11/24 17:05:20 morfic Exp $
+
+  24 Nov 2004; Daniel Goller <morfic@gentoo.org> icewm-1.2.16-r1.ebuild,
+  icewm-1.2.17.ebuild:
+  Putting Maintainer's arch first in accordance with law.
 
   23 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> icewm-1.2.17.ebuild:
   Stable on sparc
