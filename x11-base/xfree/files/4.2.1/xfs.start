@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.5 2002/10/28 07:46:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.1/xfs.start,v 1.6 2002/10/28 10:22:44 azarah Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -172,7 +172,7 @@ setup_font_dirs() {
 		ebegin "Indexing font dirs"
 		for x in ${pending_fontdirs}
 		do
-			einfo "  ${x}..."
+			ebegin "  ${x}"
 			# Only generate .scale files if there are
 			# truetype fonts present ...
 			if [ "${x/encodings}" = "${x}" -a \
@@ -190,8 +190,8 @@ setup_font_dirs() {
 					-e /usr/X11R6/lib/X11/fonts/encodings/large \
 					-- ${x} &> /dev/null
 			fi
+			eend 0
 		done
-		eend 0
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.24 2002/10/28 10:07:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.25 2002/10/28 10:22:44 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -511,6 +511,8 @@ pkg_postinst() {
 		einfo "Creating fonts.scale files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
+			[ -z "$(ls ${x}/)" ] && continue
+		
 			# Only generate .scale files if there are truetype
 			# fonts present ...
 			if [ "${x/encodings}" = "${x}" -a \
@@ -525,6 +527,8 @@ pkg_postinst() {
 		einfo "Generating fonts.dir files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
+			[ -z "$(ls ${x}/)" ] && continue
+		
 			if [ "${x/encodings}" = "${x}" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
