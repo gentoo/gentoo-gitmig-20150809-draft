@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.29 2005/03/13 13:54:01 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.30 2005/03/17 13:12:04 kang Exp $
+
+  17 Mar 2005; Guillaume Destuynder <kang@gentoo.org> :
+  Bump 2.6 to latest rsbacfixed. also includes netdev-random.
 
 *rsbac-sources-2.6.11 (13 Mar 2005)
 
