@@ -25,6 +25,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	dobin validateconf inspectsocks saveme
 	insinto /etc/socks
 	doins tsocks.conf.*.example
 	dodoc INSTALL
