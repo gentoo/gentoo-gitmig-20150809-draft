@@ -1,21 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a6e2c4466cf9c382131accb925b41594 ChangeLog 2906
 MD5 ad143aeb68ea95eef5ef5f8bab0772e1 bnr2-0.12.7.ebuild 720
 MD5 45c7f28d0766b34ed3feffe50ed0260a bnr2-0.13.3.ebuild 720
+MD5 c6f44f87cb48929e1a80b7653ca686f5 bnr2-0.14.4.ebuild 700
 MD5 4f864e62684c3ae155ebc52885a158bb metadata.xml 276
-MD5 f966fcf4e1b638044270157b12cdf31a bnr2-0.14.2.ebuild 700
-MD5 5b7c2b0169d8ba239135872ffa3151aa bnr2-0.14.4.ebuild 701
-MD5 98732ee9f83cd65f2094306a563516ee ChangeLog 2761
 MD5 d2397870dfb2cf2158d6af3b7e40fa61 files/bnr2 306
 MD5 ab285354267d0da08b4bf292c6a85af8 files/digest-bnr2-0.12.7 137
 MD5 f2eddde17c9120feed344e474975a07d files/digest-bnr2-0.13.3 137
-MD5 5b274684312c77e8ff3b2333f300079b files/digest-bnr2-0.14.2 137
 MD5 7d43a074c0b4624c24ff7afefeee9fb0 files/digest-bnr2-0.14.4 137
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBaaVVI1lqEGTUzyQRAp/gAKChsxH3Y3wGIdM+kdP74qBArf73ggCfTzqm
-wTV1NWzU/GrlgHANLUVi5Rw=
-=R8Eq
+iD8DBQFBlUy9I1lqEGTUzyQRAroqAJ9HW8Uco1zQeRm7/UrlJACxl70zxgCeJuy0
+tTdORmGp/GYGE06OhEtzh+c=
+=4CBE
 -----END PGP SIGNATURE-----

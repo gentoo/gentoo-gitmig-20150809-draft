@@ -1,6 +1,10 @@
 # ChangeLog for net-news/bnr2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.21 2004/10/10 21:10:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/ChangeLog,v 1.22 2004/11/12 23:52:23 swegener Exp $
+
+  13 Nov 2004; Sven Wegener <swegener@gentoo.org> -bnr2-0.14.2.ebuild,
+  bnr2-0.14.4.ebuild:
+  Marked 0.14.4 stable on x86. Removed old ebuild.
 
 *bnr2-0.14.4 (10 Oct 2004)
 
