@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.17 2004/06/25 15:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.18 2004/06/28 02:03:43 agriffis Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -447,7 +447,7 @@ EOF
 		done
 	fi
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${WORKDIR}/build
 

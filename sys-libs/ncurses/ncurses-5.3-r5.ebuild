@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.13 2004/06/24 23:07:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.14 2004/06/28 02:07:31 agriffis Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-	[ `use debug` ] && myconf="${myconf} --without-debug"
+	use debug && myconf="${myconf} --without-debug"
 
 	# Shared objects are compiled properly with -fPIC, but
 	# standard libs also require this.
@@ -98,7 +98,7 @@ src_install() {
 	# Build fails to create this ...
 	dosym ../share/terminfo /usr/lib/terminfo
 
-	if [ -n "`use build`" ]
+	if use build
 	then
 		cd ${D}
 		rm -rf usr/share/man

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.27 2004/06/25 15:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.28 2004/06/28 02:03:43 agriffis Exp $
 
 IUSE="nls pic build nptl debug"
 
@@ -130,7 +130,7 @@ use_nptl() {
 	# Enable NPTL support if:
 	# - We have 'nptl' in USE
 	# - We have linux-2.5 or later kernel (should prob check for 2.4.20 ...)
-	if [ -n "`use nptl`" -a "`get_KV`" -ge "`KV_to_int ${MIN_NPTL_KV}`"  ]
+	if use nptl && [ "`get_KV`" -ge "`KV_to_int ${MIN_NPTL_KV}`"  ]
 	then
 		# Enable NPTL support if:
 		# - We have 'x86' in USE and:
@@ -537,7 +537,7 @@ EOF
 		done
 	fi
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -575,7 +575,7 @@ EOF
 			timezone/install-others -C ${buildtarget} || die
 	fi
 
-	if [ "`use pic`" ]
+	if use pic
 	then
 		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;

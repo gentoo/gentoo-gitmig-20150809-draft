@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.9 2004/06/25 15:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.10 2004/06/28 02:03:43 agriffis Exp $
 
 IUSE="nls pic build debug"
 
@@ -245,7 +245,7 @@ src_install() {
 		install_root=${D} \
 		install -C buildhere || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		einfo "Installing Info pages..."
 		make PARALLELMFLAGS="${MAKEOPTS}" \
@@ -277,7 +277,7 @@ src_install() {
 			timezone/install-others -C buildhere || die
 	fi
 
-	if [ "`use pic`" ]
+	if use pic
 	then
 		find ${S}/buildhere -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
 		find ${S}/buildhere -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
