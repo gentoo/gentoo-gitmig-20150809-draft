@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/cookbook
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/cookbook/ChangeLog,v 1.1 2004/02/21 08:35:43 vapier Exp $
+
+*cookbook-1.2 (21 Feb 2004)
+
+  21 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Peep Pullerits #17663.
