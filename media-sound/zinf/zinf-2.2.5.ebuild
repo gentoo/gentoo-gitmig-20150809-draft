@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5.ebuild,v 1.2 2004/02/16 20:45:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5.ebuild,v 1.3 2004/02/22 20:06:17 aliz Exp $
 
 inherit kde-functions
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
 RDEPEND="=dev-libs/glib-1.2*
@@ -47,6 +47,11 @@ src_compile() {
 	myconf="${myconf} `use_enable arts`"
 	myconf="${myconf} `use_enable alsa`"
 	myconf="${myconf} `use_enable gnome cobra`"
+
+	if [ $ARCH == "amd64" ]; then
+		replace-flags -O? -O
+		append-flags -frerun-cse-after-loop
+	fi
 
 	if use arts; then
 		set-kdedir 3
