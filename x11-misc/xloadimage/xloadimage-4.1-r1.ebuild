@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.4 2003/04/06 19:36:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1-r1.ebuild,v 1.5 2003/04/18 17:17:42 seemant Exp $
 
 IUSE="tiff jpeg png"
 
@@ -11,14 +11,14 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Xloadimage is a utility which will view many different types of images under X11"
 HOMEPAGE="http://gopher.std.com/homepages/jimf/xloadimage.html"
 SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
-	mirror://gentoo/${P}-gentoo.diff.bz2
-	http://cvs.gentoo.org/~seemant/${P}-gentoo.diff.bz2"
+	mirror://gentoo/${P}-gentoo.diff.bz2"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~sparc ~ppc alpha arm"
+KEYWORDS="x86 ~sparc ~ppc alpha arm"
 
-DEPEND="x11-base/xfree
+DEPEND=">=sys-apps/sed-4.0.5
+	x11-base/xfree
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )"
@@ -32,8 +32,7 @@ src_unpack() {
 	# <azarah@gentoo.org> (1 Jan 2003)
 	epatch ${FILESDIR}/${P}-include-errno_h.patch
 	
-	cp Make.conf Make.conf.orig
-	sed -e "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf.orig >Make.conf
+	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
 
 	chmod +x ${S}/configure
 }
