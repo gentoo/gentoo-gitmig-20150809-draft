@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.2 2005/02/06 11:11:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.3 2005/03/29 22:02:35 genstef Exp $
 
 inherit eutils
 
@@ -29,23 +29,26 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 	epatch ${FILESDIR}/${PN}-fax-compatibility.patch
+	# apply CAPI V3 patch conditionally
+	grep 2>/dev/null -q CAPI_LIBRARY_V2 /usr/include/capiutils.h \
+		&& epatch ${FILESDIR}/${P}-capiv3.patch
 }
 
 src_compile() {
 	econf --localstatedir=/var \
-		--with-docdir=/usr/share/doc/${P} || die "econf failed."
+		--with-docdir=/usr/share/doc/${PF} || die "econf failed."
 	emake || die "parallel make failed."
 }
 
 src_install() {
 	emake DESTDIR=${D} install || die "install failed."
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/capisuite
+	dodir /etc/init.d
+	doinitd ${FILESDIR}/capisuite
 
 	keepdir /var/spool/capisuite/{done,failed,sendq,users}
 
-	dodoc AUTHORS COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 
 	exeinto /etc/cron.daily
 	doexe capisuite.cron

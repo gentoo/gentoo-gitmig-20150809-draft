@@ -1,0 +1,29 @@
+--- src/backend/capi.cpp.orig	2004-11-28 14:35:25.000000000 +0100
++++ src/backend/capi.cpp	2005-03-22 00:18:14.000000000 +0100
+@@ -148,7 +148,7 @@
+ 		<< " CIPValue 0x" << CIPValue << ", B1proto 0x" << B1protocol << ", B2proto 0x" << B2protocol <<", B3proto 0x" << B3protocol << endl;
+ 	}
+ 	unsigned info=CONNECT_REQ(&CMSG, applId, messageNumber, controller, CIPValue, calledPartyNumber, callingPartyNumber, NULL, NULL,
+-		B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
++		B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+ 	if (debug_level >= 2) {
+ 		debug << prefix() << "info: " << info << endl;
+ 	}
+@@ -181,7 +181,7 @@
+ 
+ 	if (debug_level >= 2)	    	debug << prefix() << ">SELECT_B_PROTOCOL_REQ: ApplId 0x" << hex << applId << ", MsgNr 0x" << messageNumber << ", PLCI 0x" << plci
+ 	 		     << ", B1protocol " << B1protocol << ", B2protocol " << B2protocol << ", B3protocol " << B3protocol << endl;
+-	unsigned info=SELECT_B_PROTOCOL_REQ(&CMSG, applId, messageNumber++, plci, B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration);
++	unsigned info=SELECT_B_PROTOCOL_REQ(&CMSG, applId, messageNumber++, plci, B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration, NULL);
+ 	if (debug_level >= 2)
+ 			debug << prefix() << "info: " << info << endl;
+ 
+@@ -295,7 +295,7 @@
+ 		 << reject << ", B1proto 0x" << B1protocol << ", B2proto 0x" << B2protocol << ", B3proto 0x" << B3protocol << endl;
+ 
+ 	_cmsg new_message;
+-	unsigned info=CONNECT_RESP(&new_message, applId, messageNumber, plci, reject, B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
++	unsigned info=CONNECT_RESP(&new_message, applId, messageNumber, plci, reject, B1protocol, B2protocol, B3protocol, B1configuration, B2configuration, B3configuration, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+ 	if (debug_level >= 2)
+ 		debug << prefix() << "info: " << info << endl;
+ 
