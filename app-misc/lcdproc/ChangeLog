@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.7 2003/02/12 05:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.8 2003/06/10 17:44:31 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> lcdproc-0.4.3-r1.ebuild,
+  lcdproc-0.4.3-r2.ebuild:
+  DEPEND on sed >= 4
 
 *lcdproc-0.4.3-r2 (05 Feb 2003)
 
@@ -33,7 +37,7 @@
   Removed autostarting of initscript.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
