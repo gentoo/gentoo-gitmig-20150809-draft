@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0.ebuild,v 1.2 2004/06/24 21:57:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0.ebuild,v 1.3 2004/07/01 17:16:13 squinky86 Exp $
 
 IUSE="mysql postgres"
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="QPL"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	net-libs/libpcap
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )"
