@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.27 2003/11/21 18:16:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.28 2003/11/21 18:25:30 rphillips Exp $
+
+  21 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild,
+  openafs-1.2.10.ebuild, files/openafs-pinstall-execve-1.2.10.patch:
+  added execve patch submitted from Ian on bug #31671 for versions >= 1.2.10
 
   21 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild,
   openafs-1.2.10.ebuild, openafs-1.2.8.ebuild, openafs-1.2.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10.ebuild,v 1.5 2003/11/21 18:16:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10.ebuild,v 1.6 2003/11/21 18:25:30 rphillips Exp $
 
 inherit check-kernel
 
@@ -36,9 +36,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# rphillips - does not apply correctly.  Is this still needed?
-	#cd ${S}
-	#epatch ${FILESDIR}/openafs-pinstall-execve.patch
+	cd ${S}
+	epatch ${FILESDIR}/openafs-pinstall-execve-1.2.10.patch
 }
 
 src_compile() {
