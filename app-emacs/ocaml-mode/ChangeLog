@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/ocaml-mode
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.1 2004/04/11 12:16:30 mattam Exp $
+
+*ocaml-mode-3.07 (11 Apr 2004)
+
+  11 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> ocaml-mode-3.07.ebuild,
+  files/50ocaml-mode-gentoo.el:
+  Initial import for the ocaml mode accompanying the standard distribution of
+  ocaml. Closes bug #43128. Thanks to liquidx@gentoo.org for initial ebuilds.
+
