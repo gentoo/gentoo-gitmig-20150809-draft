@@ -1,0 +1,12 @@
+# ChangeLog for media-libs/libsidplay
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.1 2002/07/18 19:02:59 karltk Exp $
+
+*libsidplay-1.36.54 (18 Jul 2002)
+
+  18 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> libsidplay-1.36.54.ebuild files/digest-1.36.54 :
+
+  libsidplay is a multi-platform C64 music player and SID chip emulator.
+
+  Initial import.
+
