@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.16 2004/04/27 20:54:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.17 2004/05/11 17:18:53 phosphan Exp $
+
+  11 May 2004; Patrick Kursawe <phosphan@gentoo.org> kino-0.7.1.ebuild:
+  Bumped gnome dependencies to 2.x, see bug #36242
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kino-0.6.4.ebuild:
   Add inherit eutils
