@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.4-r1.ebuild,v 1.3 2004/11/15 19:18:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.4-r1.ebuild,v 1.4 2005/02/06 11:11:09 mrness Exp $
 
 inherit eutils
 
