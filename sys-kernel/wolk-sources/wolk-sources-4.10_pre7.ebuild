@@ -17,6 +17,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 SRC_PATH="mirror://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+	mirror://sourceforge/wolk/linux-${OKV}-wolk4.0s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.0s-to-4.1s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.1s-to-4.2s.patch.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.2s-to-4.3s.patch.bz2
