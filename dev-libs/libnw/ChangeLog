@@ -1,8 +1,0 @@
-# ChangeLog for dev-libs/libnw
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnw/ChangeLog,v 1.1 2003/07/11 17:31:59 vapier Exp $
-
-*libnw-1.30.01 (11 Jul 2003)
-
-  11 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Francois Guimond <eyrdan@users.sourceforge.net> #20455.

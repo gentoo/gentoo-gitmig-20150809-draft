@@ -1,6 +1,0 @@
-MD5 6e8d6b04759d954a531f1928cb4d397a files/digest-ggz-client-libs-0.0.7 73
-MD5 3cfe0db81adbb18f98e13933004ef522 files/digest-ggz-client-libs-0.0.5-r1 73
-MD5 104ad789b738ff6ee3b1408cdc37bbf4 files/ggz-client-libs-0.0.5-gcc32.diff 649
-MD5 da6ba8dfb15498224ffd174f8fb91e33 ggz-client-libs-0.0.5-r1.ebuild 818
-MD5 6f15ae812de58acd897ec3834ebc6818 ggz-client-libs-0.0.7.ebuild 614
-MD5 b66d8541a08ceb8f6348c56ef5b51513 ChangeLog 795
