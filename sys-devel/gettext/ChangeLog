@@ -1,7 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.18 2003/07/01 15:11:16 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.19 2003/07/13 21:31:30 hanno Exp $
 
+*gettext-0.12 (13 Jul 2003)
+
+  13 Jul 2003; Hanno Boeck <hanno@gentoo.org> gettext-0.12.ebuild:
+  Version bump.
 
 *gettext-0.11.5-r1 (24 Nov 2002)
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> gettext-0.11.5-r1.ebuild:
