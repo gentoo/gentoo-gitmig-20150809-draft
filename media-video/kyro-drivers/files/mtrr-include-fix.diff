@@ -1,0 +1,10 @@
+--- hostfunc.c	2002-10-09 13:03:04.000000000 +0200
++++ hostfunc.c.fixed	2003-05-03 14:21:02.000000000 +0200
+@@ -39,6 +39,7 @@
+ #include <asm/pgtable.h>
+ #include <asm/pgalloc.h>
+ #include <asm/uaccess.h>
++#include <asm/mtrr.h>
+ 
+ #include "debug.h"
+ #include "hostfunc.h"

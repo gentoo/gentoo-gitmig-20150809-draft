@@ -1,0 +1,7 @@
+MD5 edbd57ae3d75e620264cb4a607b2d0b3 kyro-drivers-2.00.20.516.ebuild 1155
+MD5 05f3b61a3bdea27d114d2ac7ec2782b3 kyro-drivers-2.01.21.7.ebuild 1157
+MD5 4a37e0f1b51c835345248a2bcefad7e2 ChangeLog 1395
+MD5 fe2f0a492565eb0ae0831e308df50664 metadata.xml 158
+MD5 2308f8f2e7a449482a039aafc8c23c88 files/digest-kyro-drivers-2.00.20.516 68
+MD5 2b030d7956b28c42a2c37e60791e97a9 files/digest-kyro-drivers-2.01.21.7 66
+MD5 883c1813ce151154652f82412787ccb0 files/mtrr-include-fix.diff 272

@@ -1,0 +1,35 @@
+# ChangeLog for media-video/kyro-kernel
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/ChangeLog,v 1.1 2004/03/22 00:25:36 spyderous Exp $
+
+*kyro-drivers-2.01.21.7 (21 Mar 2004)
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  kyro-drivers-2.00.20.516.ebuild, kyro-drivers-2.01.21.7.ebuild,
+  metadata.xml, files/mtrr-include-fix.diff:
+  Move from kyro-kernel.
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  kyro-kernel-2.00.20.0427.ebuild:
+  Pull old version.
+
+*kyro-kernel-2.01.21.7 (21 Mar 2004)
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  kyro-kernel-2.01.21.7.ebuild, metadata.xml:
+  Version bump.
+
+*kyro-kernel-2.00.20.516 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  kyro-kernel-2.00.20.0427.ebuild, kyro-kernel-2.00.20.516.ebuild:
+  version bump, thanks to: Dan Bowtell <vrih@areti.co.uk> in bug #22041
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*kyro-kernel-2.00.20.0427 (27 Oct 2002)
+
+  27 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kyro-kernel-2.00.20.0427.ebuild files/digest-kyro-kernel-2.00.20.0427 :
+  Initial import. These are the binary, closed-source 2D and 3D drivers for 
+  the KyroII video card. We should probably divide this into -kernel and -glx
+  some time in the future.
