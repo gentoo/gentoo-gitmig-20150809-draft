@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.6 2004/10/12 06:57:28 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.7 2004/12/18 21:03:06 weeve Exp $
+
+  18 Dec 2004; Jason Wever <weeve@gentoo.org> wordpress-1.2-r1.ebuild:
+  Stable on sparc.
 
   12 Oct 2004; <SeJo@gentoo.org> :
   stable on ppc gsla: 65798
