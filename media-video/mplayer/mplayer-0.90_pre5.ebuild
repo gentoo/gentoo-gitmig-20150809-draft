@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5.ebuild,v 1.2 2002/06/10 12:44:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5.ebuild,v 1.3 2002/06/10 18:05:51 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -57,8 +57,7 @@ src_unpack() {
 	patch -p0 <${FILESDIR}/${P}-widget.patch || die "widget patch failed"
 	# Fixes include problem - Azarah (10 Jun 2002)
 	patch -p1 <${FILESDIR}/${P}-stream-include.patch || die
-	# Fixes install location for vidix drivers, thanks to user
-	# on gentoo-dev .. ill fix this when I get home
+	# Fixes install location for vidix drivers, thanks to Mezei Zoltan.
 	patch -p1 <${FILESDIR}/${P}-vidix-destpath.patch || die
 }
 
