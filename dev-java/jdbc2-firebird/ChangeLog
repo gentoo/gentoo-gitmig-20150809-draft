@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/jdbc2-firebird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/ChangeLog,v 1.2 2004/10/20 12:27:10 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/ChangeLog,v 1.3 2004/10/20 13:05:53 absinthe Exp $
 
-*jdbc3-firebird-1.5.3 (20 Oct 2004)
+*jdbc2-firebird-1.5.3 (20 Oct 2004)
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> +metadata.xml,
-  +jdbc3-firebird-1.5.3.ebuild:
+  +jdbc2-firebird-1.5.3.ebuild:
   Initial import. Closes bug 48331.
 
