@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.1 2003/09/12 16:07:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.2 2003/09/13 03:39:00 obz Exp $
 
 MY_PN="Sablot"
 MY_P="${MY_PN}-${PV}"
@@ -20,9 +20,9 @@ DEPEND=">=dev-libs/expat-1.95.6-r1
 	>=dev-perl/XML-Parser-2.3"
 
 DOCS="INSTALL README README_JS RELEASE src/TODO"
-	
+
 src_compile() {
-	
+
 	local myconf=""
 
 	use perl \
@@ -44,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	
+
 	einstall || die "Install failed"
 	dodoc ${DOCS}
 
