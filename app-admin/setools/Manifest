@@ -1,6 +1,18 @@
-MD5 74f7f7cac4f1aaeec0fc4cbbb69c77c4 ChangeLog 3520
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4eb2d5abb9e06d92977b63d638078594 ChangeLog 3710
 MD5 418c2991b69fcf9d551aba29ae6f2b2e metadata.xml 505
 MD5 13e52d885d7d7e58c881288711f9f5aa setools-1.4.1-r1.ebuild 3939
-MD5 19ce2ec64f0c97974303eac93d208e2a setools-1.5.1.ebuild 3411
+MD5 61da54039336b25ed833a7490dd6f246 setools-1.5.1.ebuild 3407
+MD5 051a1a06ff2418fa2c16b0ff9962fa83 setools-2.0.ebuild 3211
 MD5 893e9bc28118f0f7f7e229294bb11b33 files/digest-setools-1.4.1-r1 62
 MD5 abcb1839b6eeeaec895fd864ad412688 files/digest-setools-1.5.1 62
+MD5 224e84466ac339413624a81279600711 files/digest-setools-2.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCKGnGMTuwkQ6eEKsRArgcAKC7mh5z8e9nCscr7voMc/xl7GMgXwCfSvUh
+RRe9NBbM1vPHWIA2WnUMGFI=
+=XZ03
+-----END PGP SIGNATURE-----
