@@ -66,16 +66,15 @@ kde - Adds support for kde-base/kde (K Desktop Enviroment)
 lame - Adds support for the lame mp3 encoder
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
-libg++
-libgda
-libmpeg3
-libwww
-licq
-mcrypt
-mga
+libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
+libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
+libmpeg3 - Adds mpeg support to mplayer
+libwww - Adds libwww support (General purpose WEB API)
+mcrypt - Adds mcrypt support to php (contains several encryption algorithms)
+mga - Adds Matrox MGA support to mplayer
 mhash
 mitshm
-mmx - Adds support for optimisations for Pentium MMX and Athlon class processors
+mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif
 mozaccess-builtin
 mozctl
