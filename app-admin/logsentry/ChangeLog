@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.8 2003/09/26 20:45:47 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.9 2004/05/30 07:20:49 robbat2 Exp $
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org> logsentry-1.1.1.ebuild:
+  mailx move
 
   09 Jun 2003; <msterret@gentoo.org> logsentry-1.1.1.ebuild:
   DEPEND on sed >=4; use sed -i; fix SRC_URI and comment out HOMEPAGE since

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.13 2004/04/28 21:03:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.6.5-r1.ebuild,v 1.14 2004/05/30 07:19:36 robbat2 Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "If you wish to have logrotate e-mail you updates, please"
-	einfo "emerge net-mail/mailx and configure logrotate in"
+	einfo "emerge mail-client/mailx and configure logrotate in"
 	einfo "/etc/logrotate.conf appropriately"
 	einfo
 	einfo "Additionally, /etc/logrotate.conf may need to be modified"

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hpasm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.4 2004/03/30 05:48:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/ChangeLog,v 1.5 2004/05/30 07:17:56 robbat2 Exp $
+
+  30 May 2004; Robin H. Johnson <robbat2@gentoo.org>
+  hpasm-6.30.0.12-r1.ebuild:
+  mailx move
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
   hpasm-6.30.0.12-r1.ebuild:
