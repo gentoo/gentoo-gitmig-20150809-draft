@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.11 2002/07/12 21:19:52 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.12 2002/07/12 21:24:25 phoenix Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -31,13 +31,5 @@ src_install () {
     dodoc Changelog Copyright README TODO *.txt
 
 }
-
-pkg_postinst () {
-        # the rec binary doesnt exist anymore
-        if([ ! -e /usr/bin/rec ]) then
-                ln -s /usr/bin/play /usr/bin/rec
-        fi
-}
-
 
 
