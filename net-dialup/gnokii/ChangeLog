@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.28 2005/01/03 23:13:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.29 2005/02/06 13:44:14 mrness Exp $
+
+  06 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  -files/gnokii-0.5.4-nounix98pty.patch, -gnokii-0.5.10.ebuild,
+  -gnokii-0.6.0.ebuild, gnokii-0.6.4.ebuild:
+  Remove obsolete ebuilds and mark as stable on x86.
 
   04 Jan 2005; Guy Martin <gmsoft@gentoo.org> gnokii-0.6.3.ebuild:
   Stable on hppa.
