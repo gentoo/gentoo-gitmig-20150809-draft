@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/emu10k1-cvs-16042003.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/emu10k1-cvs-16042003.ebuild,v 1.4 2003/09/17 19:46:10 johnm Exp $
 
 MY_P="emu10k1"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy, Audigy2)"
@@ -22,6 +22,8 @@ pkg_setup() {
 }
 
 src_compile() {
+	epatch ${FILESDIR}/emu10k1-gcc-3.3.diff
+
 	echo "SEQUENCER_SUPPORT := y" > config
 	echo "MODVERSIONS := y" >> config
 	echo "DBGEMU := n" >> config
