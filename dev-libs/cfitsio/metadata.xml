@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<maintainer><email>nerdboy@gentoo.org</email></maintainer>
 </pkgmetadata>
