@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.14a.ebuild,v 1.3 2004/06/01 22:05:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.14a.ebuild,v 1.4 2004/06/14 14:37:41 hanno Exp $
 
 inherit gnome2 debug libtool
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/libgnomeui-2.0.5
 	>=gnome-base/gnome-vfs-2
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2.3.1
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
