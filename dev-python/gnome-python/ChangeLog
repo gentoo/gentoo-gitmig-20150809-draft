@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.8 2002/12/13 10:56:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.9 2003/02/09 18:56:50 foser Exp $
+
+*gnome-python-1.99.15 (09 Feb 2003)
+
+  09 Feb 2003; foser <foser@gentoo.org> gnome-python-1.99.15.ebuild :
+  New version
+  fixed deps and IUSE, now using pyorbit
+
+*gnome-python-1.4.4 (09 Feb 2003)
+
+  09 Feb 2003; foser <foser@gentoo.org> gnome-python-1.4.4.ebuild :
+  New version, just a bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
