@@ -1,5 +1,5 @@
 MD5 cd27be8a0ad61a4008a7ca13a261a845 openafs-1.2.10.ebuild 2247
-MD5 a1a9f2e2a0c7a51cf8adaeb0516dd34b ChangeLog 5098
+MD5 cd120d8610aace4d27af11f90f8f77f2 ChangeLog 5192
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 496031fdde3cbb725b1d32213cd2586e openafs-1.2.10-r1.ebuild 2437
 MD5 4584cc6910401787e1ebd81cfa06f060 files/CellServDB 41
@@ -9,5 +9,5 @@ MD5 1903c6a5e0aeedf794939945536341cd files/ThisCell 7
 MD5 19d17f83fbb3cc6c491476dba77eaad7 files/openafs-1.2.6.patch 822
 MD5 45e1a76f88876cef88c25ec042a236ed files/openafs-pinstall-execve.patch 1764
 MD5 e8488032f070544719cba9c7dbaf8108 files/digest-openafs-1.2.10 73
-MD5 56bd1a21b0690f7f543ca903a7d184ab files/afs.rc.rc6 5432
+MD5 c23e16f3f8957f7cb1986a349040f867 files/afs.rc.rc6 5427
 MD5 36dc33d8c6e647e8aacf8e69849a28a3 files/openafs-pinstall-execve-1.2.10.patch 1242

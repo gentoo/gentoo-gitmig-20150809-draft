@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.31 2003/11/26 01:12:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.32 2003/12/08 16:33:09 rphillips Exp $
+
+  08 Dec 2003; <rphillips@gentoo.org> files/afs.rc.rc6:
+  added Steven Jenkins patch, #26213
 
   25 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild:
   Added Tobias' fix for the tail problem
