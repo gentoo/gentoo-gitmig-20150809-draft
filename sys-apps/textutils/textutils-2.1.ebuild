@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.12 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.1.ebuild,v 1.13 2003/07/18 12:50:35 seemant Exp $
 
 IUSE="nls static build"
 
@@ -14,6 +14,15 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/doc
+	epatch ${FILESDIR}/${P}-gentoo.diff
+	rm coreutils.info
+	cd ${S}
+}
 
 src_compile() {
 	local myconf=""
