@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6-r2.ebuild,v 1.1 2002/01/04 22:05:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6-r2.ebuild,v 1.2 2002/01/04 22:30:39 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
@@ -33,8 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	#create missing script
-	echo 'mkdir -p "$@"' > ${S}/mkinstalldirs
+	if [ ! -e ${S}/mkinstalldirs ]
+	then
+		#create missing script
+		echo 'mkdir -p "$@"' > ${S}/mkinstalldirs
+	fi
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
