@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.2 2002/03/28 22:23:36 seemant Exp $
+
+*lame-3.91 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> lame-3.91.ebuild :
+
+  Changed the USE flag to "oggvorbis" instead of just "vorbis"
 
 *lame-3.91 (1 Feb 2002)
 
