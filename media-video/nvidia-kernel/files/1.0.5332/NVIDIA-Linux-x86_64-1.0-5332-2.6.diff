@@ -1,0 +1,151 @@
+diff -urN NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/Makefile NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/Makefile
+--- NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/Makefile	2004-01-09 16:07:06.000000000 -0500
++++ NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/Makefile	2004-01-22 10:18:12.177456272 -0500
+@@ -1,14 +1,14 @@
+ # This Makefile is automatically generated; do not edit
+-#   Generated on 'builder26' on Fri Jan  9 12:42:34 PST 2004
++#   Generated on 'builder3.nvidia.com' on Thu Jun 19 04:05:35 PDT 2003
+ 
+ LINUX_MODULE=nv-linux.o
+-DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -mcmodel=kernel -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=5332    -DNV_UNIX  -DNV_LINUX  -DNV_INT64_OK  -DNV_64_BITS  -DNVCPU_X86_64 
++DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DKBUILD_MODNAME="nvidia" -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4499     -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86_64 -DNV_64_BITS -DREMAP_PAGE_RANGE_5 -DKBUILD_MODNAME=nvidia
+ INCLUDES=-I.
+ 
+ OBJECTS=nv.o os-agp.o os-interface.o os-registry.o 
+ HEADERS=os-agp.h os-interface.h nv-linux.h nv-misc.h nv-memdbg.h nv.h  rmretval.h nvtypes.h  $(VERSION_HDR)
+ 
+-CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wpointer-arith  -Wno-multichar  -Werror -O -mno-red-zone -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual -Wno-error
++CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wno-cast-qual -Wno-multichar  -O2 -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual -mcmodel=kernel -nostdinc -iwithprefix include -fno-strict-aliasing -fno-common -mno-red-zone -mcmodel=kernel -pipe -fno-reorder-blocks -Wno-sign-compare -fno-asynchronous-unwind-tables -fomit-frame-pointer -Wdeclaration-after-statement -Wno-trigraphs -Wno-strict-prototypes 
+ 
+ RESMAN_KERNEL_MODULE=nv-kernel.o
+ 
+@@ -50,8 +50,10 @@
+ # allow specification of alternate include file tree on command line and extra defines
+ ifdef SYSINCLUDE
+ INCLUDES += -I$(SYSINCLUDE)
++INCLUDES += -I$(SYSINCLUDE)/asm/mach-default
+ else
+ INCLUDES += -I$(KERNINC)
++INCLUDES += -I$(KERNINC)/asm/mach-default
+ endif
+ 
+ ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 5)
+@@ -76,24 +78,62 @@
+ install: package-install
+ 
+ suser-sanity-check:
+-	@if ! sh conftest.sh suser_sanity_check nvidia; then exit 1; fi
++	@if ! sh conftest.sh suser_sanity_check; then \
++	  echo; \
++	  echo "You have insufficient privileges for this operation. Please "; \
++	  echo "run \"make install\" as root!                               "; \
++	  echo; \
++	  exit 1; \
++	fi
+ 
+ rmmod-sanity-check:
+-	@if ! sh conftest.sh rmmod_sanity_check nvidia; then exit 1; fi
+-
+-gcc-sanity-check:
+-	@if ! sh conftest.sh cc_sanity_check full_output $(CC); then exit 1; fi
+-
+-module: gcc-sanity-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
+-	ld -r -o nvidia.o $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
+-
+-package-install: module suser-sanity-check rmmod-sanity-check 
++	@if ! sh conftest.sh rmmod_sanity_check nvidia; then \
++	  echo; \
++	  echo "Unable to unload the currently loaded NVIDIA kernel module! "; \
++	  echo "Please be certain that you have exited X before attempting  "; \
++	  echo "to install this version.                                    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++cc-sanity-check:
++	@if ! sh conftest.sh cc_sanity_check $(CC); then \
++	  echo; \
++	  echo "You appear to be building the NVIDIA kernel module with a  "; \
++	  echo "compiler different from the one that was used to build the "; \
++	  echo "running kernel. This may be perfectly fine, but there are  "; \
++	  echo "cases where this can lead to unexpected behaviour and      "; \
++	  echo "system crashes.                                            "; \
++	  echo; \
++	  echo "If you know what you are doing and want to override this   "; \
++	  echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
++	  echo; \
++	  echo "In any other case, set the CC environment variable to the  "; \
++	  echo "name of the compiler that was used to build the kernel.    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++package-install: suser-sanity-check nvidia.o rmmod-sanity-check
++	if [ -d $(BROKENDIR) ]; then \
++		rm -f $(BROKENDIR)/NVdriver; \
++		rmdir --ignore-fail-on-non-empty $(BROKENDIR); \
++	fi && \
+ 	mkdir -p $(INSTALLDIR) && \
+-	$(INSTALL) -m 0664 -o root -g root nvidia.o $(INSTALLDIR)/nvidia.o$(O) && \
+-	PATH="$(PATH):/bin:/sbin" depmod -a && \
+-		PATH="$(PATH):/bin:/sbin" modprobe nvidia && \
++	rm -f $(INSTALLDIR)/NVdriver && \
++	$(INSTALL) -m 0664 -o root -g root nvidia.ko $(INSTALLDIR)/nvidia.ko$(O) && \
++	/sbin/depmod -a && \
++	/sbin/modprobe nvidia && \
+ 	sh makedevices.sh && \
+-	echo "nvidia.o installed successfully."; \
++	echo "nvidia.ko installed successfully."; \
++
++nvidia.o: cc-sanity-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
++	ld -d -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
++	if [ -x /usr/src/linux/scripts/modpost ]; then \
++		/usr/src/linux/scripts/modpost $@; \
++		$(CC) -c $(CFLAGS) nvidia.mod.c; \
++		ld -m elf_x86_64 -r -o nvidia.ko $@ nvidia.mod.o; \
++	fi
+ 
+ $(VERSION_HDR): 
+ 	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
+@@ -113,7 +153,7 @@
+ 
+ 
+ clean:
+-	$(RM) $(OBJECTS) $(LINUX_MODULE) $(VERSION_HDR) *.d NVdriver nvidia.o
++	$(RM) $(OBJECTS) $(LINUX_MODULE) $(VERSION_HDR) *.d NVdriver nvidia.o nvidia.ko nvidia.mod.c nvidia.mod.o
+ 
+ 
+ -include $(OBJECTS:%.o=%.d)
+diff -urN NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/nv-linux.h NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/nv-linux.h
+--- NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/nv-linux.h	2004-01-09 16:07:05.000000000 -0500
++++ NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/nv-linux.h	2004-01-22 10:09:29.821866392 -0500
+@@ -24,7 +24,7 @@
+ #  define KERNEL_2_4
+ #elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 0)
+ #  error This driver does not support 2.5 kernels!
+-#elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 7, 0) && defined(NVCPU_X86)
++#elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 7, 0) && ( defined(NVCPU_X86) || defined(NVCPU_X86_64) )
+ #  define KERNEL_2_6
+ #else
+ #  error This driver does not support development kernels!
+diff -urN NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/nv.c NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/nv.c
+--- NVIDIA-Linux-x86_64-1.0-5332-pkg0/usr/src/nv/nv.c	2004-01-09 16:07:05.000000000 -0500
++++ NVIDIA-Linux-x86_64-1.0-5332-pkg0-gentoo/usr/src/nv/nv.c	2004-01-22 10:11:51.897267648 -0500
+@@ -427,7 +427,8 @@
+         {
+             struct scatterlist *sg_ptr = &at->sg_list[i];
+ 
+-            sg_ptr->address = (char *) page_ptr->virt_addr;
++            sg_ptr->page = virt_to_page( page_ptr->virt_addr );
++	    sg_ptr->offset = offset_in_page( page_ptr->virt_addr );
+             sg_ptr->length  = PAGE_SIZE;
+ 
+             if (pci_map_sg(at->dev, sg_ptr, 1, PCI_DMA_BIDIRECTIONAL) == 0)
+@@ -435,7 +436,7 @@
+                 goto failed;
+             }
+ 
+-            page_ptr->dma_addr = sg_ptr->dma_address;
++            page_ptr->dma_addr = sg_dma_address(sg_ptr);
+         }
+ #endif

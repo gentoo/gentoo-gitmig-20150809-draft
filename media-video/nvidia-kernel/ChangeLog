@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.58 2004/01/10 01:29:54 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.59 2004/01/23 06:21:56 augustus Exp $
+
+*nvidia-kernel-1.0.5332 (23 Jan 2004)
+
+  23 Jan 2004; <augustus@gentoo.org> nvidia-kernel-1.0.5332.ebuild,
+  files/1.0.5332/NVIDIA-Linux-x86_64-1.0-5332-2.6.diff:
+  New NVIDIA driver 5332 released to public. See NVIDIA's page for full details:
+  http://www.nvidia.com/object/linux_display_amd64_1.0-5332.html
 
   10 Jan 2004; Martin Holzer <mholzer@gentoo.org>
   nvidia-kernel-1.0.3123-r2.ebuild, nvidia-kernel-1.0.4180.ebuild,
