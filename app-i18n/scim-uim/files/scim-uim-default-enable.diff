@@ -1,0 +1,57 @@
+Index: src/scim_uim_imengine.cpp
+===================================================================
+RCS file: /cvsroot/scim/scim-uim/src/scim_uim_imengine.cpp,v
+retrieving revision 1.9
+retrieving revision 1.10
+diff -u -r1.9 -r1.10
+--- src/scim_uim_imengine.cpp	21 Jun 2004 07:25:07 -0000	1.9
++++ src/scim_uim_imengine.cpp	3 Jul 2004 13:29:44 -0000	1.10
+@@ -22,7 +22,7 @@
+  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  * Boston, MA  02111-1307  USA
+  *
+- * $Id: scim-uim-default-enable.diff,v 1.1 2004/08/03 18:49:22 usata Exp $
++ * $Id: scim-uim-default-enable.diff,v 1.1 2004/08/03 18:49:22 usata Exp $
+  */
+ 
+ #define Uses_SCIM_UTILITY
+@@ -43,6 +43,7 @@
+ #define scim_imengine_module_create_factory uim_LTX_scim_imengine_module_create_factory
+ 
+ #define SCIM_CONFIG_IMENGINE_UIM_UUID    "/IMEngine/UIM/UUID-"
++#define SCIM_CONFIG_IMENGINE_UIM_ON_KEY  "/IMEngine/UIM/OnKey"
+ 
+ #define SCIM_PROP_PREFIX                 "/IMEngine/UIM"
+ 
+@@ -126,6 +127,7 @@
+ 
+ // first = name, second = lang
+ static std::vector <UIMInfo> __uim_input_methods;
++static KeyEvent              __uim_on_key;
+ 
+ static ConfigPointer _scim_config (0);
+ 
+@@ -150,6 +152,11 @@
+             return 0;
+         }
+ 
++        String on_key = config->read (SCIM_CONFIG_IMENGINE_UIM_ON_KEY, String ("Shift+space"));
++
++        if (!scim_string_to_key (__uim_on_key, on_key))
++            __uim_on_key = KeyEvent (SCIM_KEY_space, SCIM_KEY_ShiftMask);
++
+         uim_context uc = uim_create_context(NULL, "UTF-8", NULL,
+                                             NULL, uim_iconv, NULL);
+ 
+@@ -321,6 +328,11 @@
+                                        uim_cand_select_cb,
+                                        uim_cand_shift_page_cb,
+                                        uim_cand_deactive_cb);
++
++        if (__uim_on_key.is_key_press ())
++            uim_press_key (m_uc, convert_keycode (__uim_on_key.code), convert_keymask (__uim_on_key.mask));
++        else
++            uim_release_key (m_uc, convert_keycode (__uim_on_key.code), convert_keymask (__uim_on_key.mask));
+     }
+ }
+ 
