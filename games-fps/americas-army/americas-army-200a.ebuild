@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.4 2004/02/27 19:20:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.5 2004/03/02 14:31:15 vapier Exp $
 
 inherit games
 
@@ -30,8 +30,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself || die "Unpacking game"
-
+	unpack_makeself
 	tar -zxf setupstuff.tar.gz || die
 }
 
@@ -41,21 +40,20 @@ src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
-	tar -jxf armyops200a.tar.bz2 -C ${D}/${dir}/ || die
-	tar -jxf binaries.tar.bz2 -C ${D}/${dir}/ || die
+	tar -jxf armyops200a.tar.bz2 -C ${D}/${dir}/ || die "armyops untar failed"
+	tar -jxf binaries.tar.bz2 -C ${D}/${dir}/ || die "binaries untar failed"
 
 	dodoc README.linux
 	insinto ${dir} ; doins ArmyOps.xpm README.linux
 	insinto /usr/share/pixmaps ; doins ArmyOps.xpm
 	exeinto ${dir} ; doexe bin/armyops
 
-	sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/armyops > armyops
-	dogamesbin armyops
+	dogamesbin ${FILESDIR}/armyops
+	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/armyops
 	dosym ${dir}/armyops ${GAMES_BINDIR}/armyops
 
 	prepgamesdirs
 	make_desktop_entry armyops "America's Army" ArmyOps.xpm
-
 }
 
 pkg_postinst() {
