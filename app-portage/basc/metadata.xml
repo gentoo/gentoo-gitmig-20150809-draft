@@ -3,7 +3,17 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>pvdabeel@gentoo.org</email>
-<name>Pieter Van den Abeele</name>
+  <email>dma147@gentoo-stats.org</email>
+  <name>Alexander Mieland</name>
+  <description>Main project developer</description>
 </maintainer>
+<maintainer>
+  <email>pvdabeel@gentoo.org</email>
+  <name>Pieter Van den Abeele</name>
+  <description>app-portage/basc ebuild maintainer</description>
+</maintainer>
+<longdescription>
+BAS/c is the client software for the Gentoo stats aggregation online at
+http://www.gentoo-stats.org.
+</longdescription>
 </pkgmetadata>
