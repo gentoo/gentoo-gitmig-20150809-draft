@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.10 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.11 2002/12/19 18:06:13 aliz Exp $
+
+*xosd-2.0.1 (19 Dec 2002)
+
+  19 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> xosd-0.7.0.ebuild, xosd-1.0.2.ebuild,
+						xosd-2.0.0.ebuild :
+  Fixed header.
+
+  19 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

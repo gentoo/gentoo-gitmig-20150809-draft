@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-0.7.0.ebuild,v 1.10 2002/12/19 18:06:13 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows \
@@ -10,9 +10,10 @@ SRC_URI="http://www.ignavus.net/${P}.tar.gz"
 SLOT="0.7"
 
 DEPEND="virtual/x11"
-
+RDEPEND=${DEPEND}
+IUSE=""
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
 src_unpack() {
@@ -37,6 +38,6 @@ src_install () {
 	mv xosd.3 xosd-old.3
 	ls -l
 	doman osd_cat-old.1
-	doman xosd-old.3 
+	doman xosd-old.3
 	dodoc AUTHORS ChangeLog NEWS COPYING README
 }

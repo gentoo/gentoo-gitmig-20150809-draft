@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-xosd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xosd/ChangeLog,v 1.4 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xosd/ChangeLog,v 1.5 2002/12/19 18:06:13 aliz Exp $
+
+  19 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> xmms-xosd-1.0.2, xmms-xosd-2.0.0 :
+  Lintooled.
+
+*xmms-xosd-2.0.1 (19 Dec 2002)
+
+  19 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump.
 
 *xmms-xosd-2.0.0 (05 Nov 2002)
 
