@@ -18,9 +18,9 @@ def prepare_db():
     if not os.path.isdir(myroot+"var/db"):
 	os.mkdir(myroot+"var/db",0755)
     if not os.path.isdir(myroot+"var/db/pkg"):
-	os.mkdir(myroot+"/var/db/pkg",0755)
+	os.mkdir(myroot+"var/db/pkg",0755)
     if not os.path.isdir(myroot+"var/db/pkg/"+mycategory):
-	os.mkdir(myroot+"/var/db/pkg/"+mycategory,0755)
+	os.mkdir(myroot+"var/db/pkg/"+mycategory,0755)
     if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
 	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 

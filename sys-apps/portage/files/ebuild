@@ -92,6 +92,19 @@ pmake()
 	make ${MAKEOPTS} MAKE="make ${MAKEOPTS}" $* 
     }
 
+try() {
+	eval $*
+	if [ $? -ne 0 ]
+	then
+		echo 
+		echo '!!! '"ERROR: the $1 command did not complete successfully."
+		echo '!!! '"(\"$*\")"
+		echo '!!! '"Since this is a critical task, ebuild will be stopped."
+		echo
+		exit 1
+	fi
+}
+
 use() 
 {
 	local x
@@ -1191,6 +1204,9 @@ src_menu() {
 	dyn_install
 	dyn_package
 	;;
+	qmerge)
+	    dyn_merge
+	    ;;
  	merge)
             dyn_fetch
 	    dyn_unpack
