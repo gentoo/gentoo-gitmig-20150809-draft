@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.6.2.ebuild,v 1.5 2004/06/24 23:12:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf5/hdf5-1.6.2.ebuild,v 1.6 2004/06/25 21:34:22 kugelfang Exp $
 
 DESCRIPTION="general purpose library and file format for storing scientific data"
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~ia64 amd64"
 IUSE="static zlib ssl"
 
 DEPEND="zlib? ( sys-libs/zlib )"
