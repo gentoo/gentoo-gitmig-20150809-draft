@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad4fad6f80ab7be85d0dfe68bb684c28 ChangeLog 677
-MD5 a827d32318c39350ad467a009b866be6 fbgetty-0.1.698.ebuild 506
+MD5 48b115691a60c104615be8cb5184802e ChangeLog 763
+MD5 a25fa70b16ca4dc163cf96c952245031 fbgetty-0.1.698.ebuild 510
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 203d43edfc815c963c728bb81ac45c55 files/digest-fbgetty-0.1.698 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBm5qAjtv59x0+BrURArwxAJ9QFx0PY/BypPfTCT0ialnS0Yd7KwCgu3sc
-iTPL9AYkp5VHyJgCfqxVjsQ=
-=EZIT
------END PGP SIGNATURE-----
