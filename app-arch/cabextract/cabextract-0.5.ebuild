@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.10 2002/10/04 03:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.11 2002/10/17 12:48:56 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extracts files from Microsoft .cab files"
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf || die
