@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gtk-imonc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.1 2005/03/20 19:10:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.2 2005/03/20 21:11:47 hansmi Exp $
+
+  20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gtk-imonc-0.6.2.ebuild, gtk-imonc-0.6.3.ebuild, gtk-imonc-0.6.4.1.ebuild:
+  Removed src_install().
 
 *gtk-imonc-0.6.4.1 (20 Mar 2005)
 
