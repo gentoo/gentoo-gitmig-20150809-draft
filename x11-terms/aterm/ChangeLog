@@ -1,9 +1,14 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.7 2002/12/30 12:59:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.8 2003/01/19 17:00:13 nakano Exp $
+
+*aterm-0.4.2-r4 (19 Jan 2003)
+  19 Jan 2003; Masatomo Nakano <nakano@gentoo.org> aterm-0.4.2-r4.ebuild
+  files/digest-aterm-0.4.2-r4 :
+  added Kanji(Japanese chars) support and XIM support.
+  thanks to chutz@chubaka.net (Georgi Georgiev). bugs #13870
 
 *aterm-0.4.2-r3 (11 Jun 2002)
-
   30 Dec 2002; Martin Holzer <mholzer@gentoo.org> aterm-0.4.2-r3.ebuild :
   Change SRC_URI to use mirror://sf
 
