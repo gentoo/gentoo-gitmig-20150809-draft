@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.4 2003/02/13 16:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a-r1.ebuild,v 1.5 2003/03/05 11:34:03 seemant Exp $
 
 inherit eutils gnuconfig
 
@@ -27,9 +27,7 @@ src_unpack() {
 
 src_compile() {
 
-	./configure --host=${CHOST} --with-curses \
-		--prefix=/usr --mandir=/usr/share/man \
-		--infodir=/usr/share/info || die
+	econf --with-curses || die
 	
 	emake || die
 	cd shlib
@@ -46,6 +44,10 @@ src_install() {
 		infodir=${D}/usr/share/info install || die
 
 	cd ..
+
+	sed -i "s/#  include <config.h>//" tilde.h
+	insinto /usr/include/readline
+	doins tilde.h
 
 	dodir /lib
 	mv ${D}/usr/lib/*.so* ${D}/lib
