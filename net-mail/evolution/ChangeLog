@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.91 2004/03/07 21:44:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.92 2004/03/22 10:15:50 liquidx Exp $
+
+*evolution-1.4.6 (22 Mar 2004)
+
+  22 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
+  version bump
 
   07 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.5.ebuild:
   reinstate gnome2_pkg_postinst
