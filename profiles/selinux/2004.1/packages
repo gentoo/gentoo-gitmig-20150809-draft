@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/packages,v 1.5 2004/04/08 19:13:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/packages,v 1.6 2004/04/08 23:34:52 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
 
 # Core Packages
-*>=sys-apps/baselayout-1.8.7
+*>=sys-apps/baselayout-1.8.8
 
 # Base SELinux packages
 *>=sys-libs/libselinux-1.6
