@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.30 2005/02/19 20:14:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.31 2005/03/03 22:33:26 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -511,7 +511,7 @@ alt_prefix() {
 
 alt_libdir() {
 	if tc-is-cross-compiler; then
-		echo /usr/${CHOST}/$(get_libdir)
+		echo /usr/${CHOST}/lib
 	else
 		echo /$(get_libdir)
 	fi
@@ -519,7 +519,7 @@ alt_libdir() {
 
 alt_usrlibdir() {
 	if tc-is-cross-compiler; then
-		echo /usr/${CHOST}/$(get_libdir)
+		echo /usr/${CHOST}/lib
 	else
 		echo /usr/$(get_libdir)
 	fi

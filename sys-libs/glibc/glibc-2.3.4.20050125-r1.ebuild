@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.5 2005/03/03 05:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.6 2005/03/03 22:33:26 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -63,6 +63,9 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+is_crosscompile() {
+        [[ ${CHOST} != ${CTARGET} ]]
+}
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 
@@ -304,7 +307,7 @@ toolchain-glibc_src_install() {
 			install || die
 	fi
 
-	if tc-is-cross-compiler ; then
+	if is_crosscompile ; then
 		# Glibc doesn't setup multilib crosscompiled dirs right, but it
 		# sets up native multilib dirs right, so just do this when we
 		# crosscompile.
@@ -411,7 +414,7 @@ toolchain-glibc_src_install() {
 
 	#################################################################
 	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
-	tc-is-cross-compiler && return 0
+	is_crosscompile && return 0
 
 	# Everything past this point just needs to be done once... don't waste time building locale files twice...
 	is_final_abi || return 0
@@ -536,7 +539,7 @@ toolchain-glibc_pkg_postinst() {
 # note: intentionally undocumented.
 alt_headers() {
 	if [[ -z ${ALT_HEADERS} ]] ; then
-		if [[ ${CTARGET} != ${CHOST} ]] ; then
+		if is_crosscompile ; then
 			ALT_HEADERS="/usr/${CTARGET}/include"
 		else
 			ALT_HEADERS="/usr/include"
@@ -546,7 +549,7 @@ alt_headers() {
 }
 
 alt_prefix() {
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
+	if is_crosscompile ; then
 		echo /usr/${CTARGET}
 	else
 		echo /usr
@@ -554,16 +557,16 @@ alt_prefix() {
 }
 
 alt_libdir() {
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		echo /usr/${CTARGET}/$(get_libdir)
+	if is_crosscompile ; then
+		echo /usr/${CTARGET}/lib
 	else
 		echo /$(get_libdir)
 	fi
 }
 
 alt_usrlibdir() {
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		echo /usr/${CTARGET}/$(get_libdir)
+	if is_crosscompile ; then
+		echo /usr/${CTARGET}/lib
 	else
 		echo /usr/$(get_libdir)
 	fi
@@ -615,7 +618,7 @@ setup_flags() {
 			else
 				if is-flag "-mcpu=ultrasparc3"; then
 					CHOST="sparcv9b-unknown-linux-gnu"
-				elif { tc-is-cross-compiler && use nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
+				elif { is_crosscompile && use nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
 					CHOST="sparcv9-unknown-linux-gnu"
 				fi
 			fi
@@ -869,7 +872,7 @@ use_multilib() {
 		sparc)
 			case ${CHOST} in
 				sparc64*)
-					tc-is-cross-compiler || has_multilib_profile || use multilib
+					is_crosscompile || has_multilib_profile || use multilib
 					;;
 				*)
 					false
@@ -879,7 +882,7 @@ use_multilib() {
 		mips)
 			case ${CHOST} in
 				mips64*)
-					tc-is-cross-compiler || has_multilib_profile || use multilib
+					is_crosscompile || has_multilib_profile || use multilib
 					;;
 				*)
 					false
@@ -887,7 +890,7 @@ use_multilib() {
 			esac
 		;;
 		amd64|ppc64)
-			tc-is-cross-compiler || has_multilib_profile || use multilib
+			is_crosscompile || has_multilib_profile || use multilib
 		;;
 		*)
 			false
@@ -897,7 +900,7 @@ use_multilib() {
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
 crosscompile_setup() {
-	if tc-is-cross-compiler; then
+	if is_crosscompile; then
 		local VAR="CFLAGS_"${CHOST//-/_}
 		local VAL=${!VAR}
 
@@ -981,7 +984,7 @@ crosscompile_setup() {
 
 ### /ECLASS PUNTAGE ###
 
-if [[ ${CHOST} != ${CTARGET} ]] ; then
+if is_crosscompile ; then
 	SLOT="${CTARGET}-2.2"
 else
 	SLOT="2.2"
@@ -1071,7 +1074,7 @@ src_unpack() {
 			rm -f sysdeps/alpha/alphaev6/memcpy.S
 		;;
 		amd64)
-			if ! has_multilib_profile && ! tc-is-cross-compiler; then
+			if ! has_multilib_profile && ! is_crosscompile; then
 				# CONF_LIBDIR support
 				epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
 				sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
@@ -1098,7 +1101,7 @@ src_unpack() {
 	# Some configure checks fail on the first emerge through because they
 	# try to link.  This doesn't work well if we don't have a libc yet.
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
-	if tc-is-cross-compiler && ! has_version "${CATEGORY}/${PN}"; then
+	if is_crosscompile && ! has_version "${CATEGORY}/${PN}"; then
 		rm ${S}/sysdeps/sparc/sparc64/elf/configure{,.in}
 		rm ${S}/nptl/sysdeps/pthread/configure{,.in}
 	fi
@@ -1176,7 +1179,7 @@ src_install() {
 
 	# Handle stupid lib32 BS
 	unset OLD_LIBDIR
-	if [[ $(tc-arch) == "amd64" && ${ABI} == "x86" && $(get_libdir) != "lib" ]] && ! tc-is-cross-compiler; then
+	if [[ $(tc-arch) == "amd64" && ${ABI} == "x86" && $(get_libdir) != "lib" ]] && ! is_crosscompile; then
 		OLD_LIBDIR="$(get_libdir)"
 		LIBDIR_x86="lib"
 	fi
