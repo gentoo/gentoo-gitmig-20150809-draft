@@ -1,11 +1,14 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.5 2003/02/20 13:53:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.6 2003/03/29 11:18:02 seemant Exp $
 
   20 Feb 2003; Guy Martin <gmsoft@gentoo.org> figlet-22-r1.ebuild :
   Added hppa to keywords.
 
 *figlet-22-r1 (28 Oct 2002)
+
+  29 Mar 2003; Seemant Kulleen <seemant@gentoo.org> figlet-22-r1.ebuild:
+  HOMEPAGE fix by Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> figlet-22-r1.ebuild, figlet-22.ebuild :
   Changed sparc64 to sparc keyword

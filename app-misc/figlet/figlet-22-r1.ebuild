@@ -1,24 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.4 2003/02/20 13:53:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.5 2003/03/29 11:18:02 seemant Exp $
 
-S=${WORKDIR}/${PN}${PV}
+MY_P=${P/-/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="FIGlet is a program for making large letters out of ordinary text"
-SRC_URI="ftp://ftp.plig.org/pub/figlet/program/unix/${PN}${PV}.tar.gz"
-HOMEPAGE="http://st-www.cs.uiuc.edu/users/chai/figlet.html"
+HOMEPAGE="http://www.figlet.org/"
+SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa ~arm"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/portage-2.0.47-r10
+	>=sys-apps/sed-4.0.5"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
-	sed "s/CFLAGS = -g/CFLAGS = ${CFLAGS}/g" < Makefile > Makefile.new
-	mv -f Makefile.new Makefile
+	epatch ${FILESDIR}/${PF}-gentoo.diff
+	sed -i "s/CFLAGS = -g/CFLAGS = ${CFLAGS}/g" Makefile
 }
 
 
