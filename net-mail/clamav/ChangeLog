@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.8 2003/10/07 10:29:36 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.9 2003/10/27 10:07:06 raker Exp $
+
+*clamav-0.60-r1 (27 Oct 2003)
+
+  27 Oct 2003; Nick Hadaway <raker@gentoo.org> clamav-0.60-r1.ebuild:
+  Added support for the milter use flag which builds clamav-milter.
+  Associated docs coming soon.
 
   07 Oct 2003; Markus Nigbur <pyrania@gentoo.org> clamav-0.54-r1.ebuild,
   clamav-0.60.ebuild:
