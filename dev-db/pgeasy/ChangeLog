@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/pgeasy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.5 2004/10/01 12:47:23 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.6 2005/01/01 17:40:18 eradicator Exp $
 
   01 Oct 2004; <pyrania@gentoo.org> pgeasy-3.0.1.ebuild:
   Made epatch aware.

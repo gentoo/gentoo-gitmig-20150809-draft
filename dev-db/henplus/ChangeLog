@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/henplus
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.7 2004/08/24 03:19:06 zx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.8 2005/01/01 17:33:20 eradicator Exp $
 
   23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> henplus-0.9.5-r2.ebuild:
   Marking stable on x86

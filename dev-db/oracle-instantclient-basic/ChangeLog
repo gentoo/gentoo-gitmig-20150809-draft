@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.5 2004/12/22 00:25:17 radek Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.6 2005/01/01 17:39:11 eradicator Exp $
 
 *oracle-instantclient-basic-10.1.0.3 (22 Dec 2004)
 

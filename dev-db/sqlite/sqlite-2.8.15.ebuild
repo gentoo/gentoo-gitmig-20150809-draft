@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.12 2004/12/20 13:35:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.15.ebuild,v 1.13 2005/01/01 17:43:22 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.15 2004/12/29 01:04:44 ribosome Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.16 2005/01/01 17:41:32 eradicator Exp $
 
   28 Dec 2004; Olivier Fisette <ribosome@gentoo.org>
   postgis-0.7.5-r2.ebuild:

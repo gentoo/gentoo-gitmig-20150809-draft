@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1-r1.ebuild,v 1.1 2004/10/29 16:13:09 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1-r1.ebuild,v 1.2 2005/01/01 17:44:17 eradicator Exp $
 
 inherit debug eutils
 

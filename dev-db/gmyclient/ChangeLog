@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/gmyclient
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.7 2004/12/05 01:11:40 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.8 2005/01/01 17:33:07 eradicator Exp $
 
   05 Dec 2004; Daniel Black <dragonheart@gentoo.org> files/0.3-fix.patch,
   gmyclient-0.3.ebuild, +metadata.xml:

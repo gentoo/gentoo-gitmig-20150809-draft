@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/kexi-0.1_beta3.ebuild,v 1.3 2004/06/24 21:54:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/kexi-0.1_beta3.ebuild,v 1.4 2005/01/01 17:34:18 eradicator Exp $
 inherit kde
 need-kde 3.2
 

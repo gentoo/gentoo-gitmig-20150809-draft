@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/pgadmin3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.8 2004/06/29 17:13:13 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.9 2005/01/01 17:40:05 eradicator Exp $
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> pgadmin3-1.0.2.ebuild:
   add sed-4 dep

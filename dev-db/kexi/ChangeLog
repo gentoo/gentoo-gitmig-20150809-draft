@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/kexi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/ChangeLog,v 1.5 2004/09/11 14:12:25 aliz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kexi/ChangeLog,v 1.6 2005/01/01 17:34:18 eradicator Exp $
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> kexi-0.1_beta4.ebuild:
   Added amd64 keyword, closing #62064.

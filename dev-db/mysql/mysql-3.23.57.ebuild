@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.9 2004/06/29 17:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.10 2005/01/01 17:37:04 eradicator Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic

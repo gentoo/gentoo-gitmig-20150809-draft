@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/xbsql
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.4 2004/12/24 10:40:46 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.5 2005/01/01 17:45:00 eradicator Exp $
 
   24 Dec 2004; Simon Stelling <blubb@gentoo.org> xbsql-0.11.ebuild:
   added ~amd64

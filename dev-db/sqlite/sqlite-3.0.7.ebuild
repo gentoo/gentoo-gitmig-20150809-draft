@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.0.7.ebuild,v 1.2 2004/10/09 18:14:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.0.7.ebuild,v 1.3 2005/01/01 17:43:22 eradicator Exp $
 
 IUSE="nls"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r2.ebuild,v 1.5 2004/12/29 01:04:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r2.ebuild,v 1.6 2005/01/01 17:41:32 eradicator Exp $
 
 MY_PGSQL="postgresql-7.3.6"
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
