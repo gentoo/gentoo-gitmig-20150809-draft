@@ -1,4 +1,6 @@
 MD5 1cca6a05c62f208d671aa6f528c15d08 ChangeLog 1038
 MD5 1dd81322033425981221fe5ab2db598d gnome-audio-1.4.0-r2.ebuild 620
+MD5 ebcda1ce3dd62433a144cad18532d14e gnome-audio-2.0.0.ebuild 501
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 6e7a24238555970822189258b1eb81dc files/digest-gnome-audio-1.4.0-r2 70
+MD5 ce9d01add20e113921ecf2f38472aaf0 files/digest-gnome-audio-2.0.0 71
