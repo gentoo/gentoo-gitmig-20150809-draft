@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.8 2002/08/02 18:00:03 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.9 2002/08/11 20:10:37 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
@@ -20,6 +20,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
 	>=media-libs/libpng-1.2.1
+	>=sys-apps/portage-2.0.14
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
