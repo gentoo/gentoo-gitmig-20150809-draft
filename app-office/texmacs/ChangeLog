@@ -1,9 +1,14 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.17 2004/03/02 08:27:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.18 2004/03/11 15:56:12 usata Exp $
 
 *texmacs-1.0.3.3 (21 Feb 2004)
 *texmacs-1.0.3 (21 Feb 2004)
+
+  12 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> texmacs-1.0.3.3.ebuild,
+  texmacs-1.0.3.ebuild, files/TeXmacs.desktop:
+  Added TeXmacs appliations menu entry, contributed by Keith Lea
+  <keith@cs.oswego.edu>. Closing bug #43545
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> texmacs-1.0.1-r1.ebuild,
   texmacs-1.0.1.23.ebuild, texmacs-1.0.1.ebuild, texmacs-1.0.2.4.ebuild,

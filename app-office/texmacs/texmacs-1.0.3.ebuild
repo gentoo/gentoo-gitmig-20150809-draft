@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.ebuild,v 1.1 2004/02/20 19:50:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.3.ebuild,v 1.2 2004/03/11 15:56:12 usata Exp $
 
 # flag-o-matic functions now in portage, no need to inherit it
 
@@ -48,6 +48,9 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 	dodoc COMPILE COPYING LICENSE
+
+	insinto /usr/share/applications
+	doins ${FILESDIR}/TeXmacs.desktop
 
 	# now install the fonts
 	cd ${WORKDIR}
