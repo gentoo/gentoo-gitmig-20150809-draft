@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.2 2003/09/25 08:45:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.3 2003/10/31 15:55:12 usata Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
@@ -20,7 +20,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	gtk? ( =x11-libs/gtk+-1.2*
 		media-libs/gdk-pixbuf )
 	!gtk? ( imlib? ( >=media-libs/imlib-1.9.8
-			media-libs/libungif ) )
+		media-libs/libungif ) )
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"

@@ -1,6 +1,6 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.34 2003/10/31 15:41:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.35 2003/10/31 15:55:12 usata Exp $
 
 *w3m-0.4.2-r2 (01 Nov 2003)
 
@@ -35,6 +35,9 @@
   security hole and w3m-0.4.1{,-r1,-r2} are somewhat redundant.
 
 *w3m-0.4.2 (23 Sep 2003)
+
+  01 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2.ebuild:
+  Considered as stable
 
   23 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2.ebuild:
   Version bumped. Rewrote econf part according to new configure.
