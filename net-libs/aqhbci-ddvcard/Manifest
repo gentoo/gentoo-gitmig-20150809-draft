@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f1585749381117c6b619a409c982214a ChangeLog 730
 MD5 2bf38c30d02a702d617c42a90404b2ef aqhbci-ddvcard-0.9.4_beta.ebuild 695
+MD5 d23564ad49631b2393a78fcb75a53ded ChangeLog 867
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 9bbf2d8968b02fc05107006d9a381caa aqhbci-ddvcard-0.9.5_beta.ebuild 681
 MD5 63af4c68607028121457eda080c9a69f files/digest-aqhbci-ddvcard-0.9.4_beta 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2DubFdQwWVoAgN4RAhxAAKCvKZKbe/sMMiWkAhIPa7XnjI+HwQCfTF2m
-v1tFWnwYntsS2nKLOwZaxzM=
-=jCPO
------END PGP SIGNATURE-----
+MD5 2118cad5b6902e0143c1036d85dae761 files/digest-aqhbci-ddvcard-0.9.5_beta 76
