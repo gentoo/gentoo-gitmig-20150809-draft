@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.6 2002/10/05 05:39:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.7 2002/10/24 19:23:11 bass Exp $
 
 IUSE="mysql postgres opengl"
 
@@ -34,7 +34,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-pgsql" \
 		|| myconf="${myconf} --disable-pgsql"
 
-	econ \
+	econf \
 		linux \
 		--docdir=/usr/share/doc/${P} \
 		--enable-shared \
