@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.20 2004/10/27 11:19:26 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.21 2004/11/15 12:15:13 tantive Exp $
+
+  15 Nov 2004; Michael Imhof <tantive@gentoo.org> ace-5.4-r1.ebuild:
+  Marked stable on x86.
 
 *ace-5.4-r1 (27 Oct 2004)
 
