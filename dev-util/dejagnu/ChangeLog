@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/dejagnu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.1 2003/06/29 20:46:21 azarah Exp $
+
+*dejagnu-1.4.3 (29 Jun 2003)
+
+  29 Jun 2003; Martin Schlemmer <azarah@gentoo.org> dejagnu-1.4.3.ebuild:
+  Initial release.
+
