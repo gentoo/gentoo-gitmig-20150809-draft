@@ -1,14 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.15 2004/01/30 05:23:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.16 2004/04/07 18:58:54 vapier Exp $
+
+inherit kde-functions eutils
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
 	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE="nls cups qt debug gnome"
@@ -32,8 +34,7 @@ RDEPEND="${DEPEND}
 	app-text/sgmltools-lite
 	app-text/noweb
 	dev-tex/chktex"
-
-DEPEND="$DEPEND >=sys-devel/autoconf-2.58"
+DEPEND="${DEPEND} >=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}
@@ -43,8 +44,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [ `use qt` ]; then
-		inherit kde-functions
+	if use qt ; then
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
@@ -73,21 +73,20 @@ src_compile() {
 }
 
 src_install() {
-	einstall
-	dodoc README* UPGRADING INSTALL* ChangeLog NEWS COPYING ANNOUNCE ABOUT-NLS $DISTDIR/preferences
+	einstall || die
+	dodoc README* UPGRADING INSTALL* ChangeLog NEWS ANNOUNCE ABOUT-NLS $DISTDIR/preferences
 	insinto /usr/share/lyx/bind
 	doins $DISTDIR/hebrew.bind
 
 	# gnome menu entry
-	if use gnome; then
+	if use gnome ; then
 		insinto /usr/share/applications
 		doins ${FILESDIR}/lyx.desktop
 	fi
-
 }
 
 pkg_postinst() {
-	if [ `use qt` ] ; then
+	if use qt ; then
 		einfo	"WARNING: the QT gui, together with xft2+fontconfig (which you"
 		einfo	"almost certainly have), suffer from one infamous bug that causes"
 		einfo	"the matheditor not to display any special characters (the ones from"

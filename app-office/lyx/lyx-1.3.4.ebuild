@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.2 2004/02/21 20:25:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.3 2004/04/07 18:56:31 vapier Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -10,10 +10,10 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 	http://movementarian.org/latex-xft-fonts-0.1.tar.gz
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
 	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc amd64"
 IUSE="nls cups qt debug gnome"
 
 # these dependencies need looking at.
@@ -51,7 +51,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [ -n "`use qt`" ]; then
+	if use qt ; then
 		set-qtdir 3
 		myconf="$myconf --with-frontend=qt --with-qt-dir=${QTDIR}"
 	else
