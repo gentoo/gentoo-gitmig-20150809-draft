@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.6-r7.ebuild,v 1.9 2004/03/26 00:43:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7.ebuild,v 1.1 2004/03/26 00:43:59 solar Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure, small, anonymous only ftpd"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc ppc64"
+KEYWORDS="~x86 ~sparc ~ppc ppc64"
 
 src_compile() {
 	# local myconf

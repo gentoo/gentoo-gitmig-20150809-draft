@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.5 2003/02/12 07:58:48 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.6 2004/03/26 00:43:59 solar Exp $
+
+*oftpd-0.3.7 (25 Mar 2004)
+
+  25 Mar 2004; <solar@gentoo.org> oftpd-0.3.6-r7.ebuild, oftpd-0.3.7.ebuild:
+  Version bump. oftpd DoS vulnerability. bug #45738
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
