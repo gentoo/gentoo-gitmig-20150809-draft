@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.4 2005/02/12 06:08:18 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.5 2005/02/12 21:07:09 eradicator Exp $
+
+  12 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  quodlibet-0.8.1.ebuild:
+  Using virtualx eclass since make needs X for the PyGTK check.
 
 *quodlibet-0.8.1 (12 Feb 2005)
 
