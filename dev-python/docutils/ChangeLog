@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.12 2004/07/20 18:23:59 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.13 2004/11/01 00:13:09 g2boojum Exp $
+
+*docutils-0.3.5 (31 Oct 2004)
+
+  31 Oct 2004; Grant Goodyear <g2boojum@gentoo.org>
+  +files/docutils-0.3.5-extramodules.patch, docutils-0.3.3-r1.ebuild,
+  +docutils-0.3.5.ebuild:
+  0.3.3-r1 is now stable on x86.
+  
+  Added 0.3.5, thanks to Stephen Boulet (bug #59140).
 
 *docutils-0.3.3-r1 (20 Jul 2004)
 

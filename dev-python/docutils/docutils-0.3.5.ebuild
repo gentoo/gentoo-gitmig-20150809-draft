@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3-r1.ebuild,v 1.3 2004/11/01 00:13:09 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.5.ebuild,v 1.1 2004/11/01 00:13:09 g2boojum Exp $
 
 inherit distutils eutils
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
-SRC_URI="mirror://sourceforge/docutils/${P}-alpha.tar.gz"
+SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
+		 glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha"
-IUSE=""
+KEYWORDS="~x86 ~ppc ~alpha"
+IUSE="glep"
 
 DEPEND=">=dev-lang/python-2.1"
 
-# GLEP version
-GLEP_SRC=${FILESDIR}/glep-${PV}
+GLEP_SRC=${WORKDIR}/glep-${PV}
 
 src_unpack() {
 	unpack ${A}
