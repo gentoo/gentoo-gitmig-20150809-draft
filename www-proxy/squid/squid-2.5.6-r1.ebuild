@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.6-r1.ebuild,v 1.2 2004/08/20 02:08:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.6-r1.ebuild,v 1.3 2004/08/22 18:26:35 cyfred Exp $
 
 inherit eutils
 
-IUSE="pam ldap ssl sasl snmp debug"
+IUSE="pam ldap ssl sasl snmp debug uclibc"
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
@@ -57,7 +57,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
+	# Support for uclibc #61175
+	if use uclibc; then
+		local basic_modules="getpwnam,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
+	else
+		local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
+	fi
+
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
 	use sasl && basic_modules="SASL,${basic_modules}"
@@ -78,6 +84,15 @@ src_compile() {
 		myconf="${myconf} --enable-underscores"
 	fi
 
+	# Support for uclibc #61175
+	if use uclibc; then
+		myconf="${myconf} --enable-storeio='ufs,diskd,aufs,null' "
+		myconf="${myconf} --disable-async-io "
+	else
+		myconf="${myconf} --enable-storeio='ufs,diskd,coss,aufs,null' "
+		myconf="${myconf} --enable-async-io "
+	fi
+
 	./configure \
 		--prefix=/usr \
 		--bindir=/usr/bin \
@@ -91,7 +106,6 @@ src_compile() {
 		--enable-auth="basic,digest,ntlm" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
-		--enable-storeio="ufs,diskd,coss,aufs,null" \
 		--enable-basic-auth-helpers=${basic_modules} \
 		--enable-external-acl-helpers=${ext_helpers} \
 		--enable-ntlm-auth-helpers="SMB,fakeauth,no_check,winbind" \
@@ -101,7 +115,6 @@ src_compile() {
 		--enable-cache-digests \
 		--enable-delay-pools \
 		--enable-referer-log \
-		--enable-async-io \
 		--enable-truncate \
 		--enable-arp-acl \
 		--with-pthreads \
