@@ -430,3 +430,8 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =medusa-0.5.1-r4
+
+#spider@gentoo.org 21 Mar 2002
+# if you want it, you'll have to remerge all that link to the old version.
+# imlib, gdk-pixbuf and imlib2 are known.
+=media-libs/libpng-1.2.1
