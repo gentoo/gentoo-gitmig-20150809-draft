@@ -1,6 +1,14 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.22 2003/10/01 20:02:45 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.23 2003/10/12 12:54:51 usata Exp $
+
+*dillo-0.7.3-r2 (12 Oct 2003)
+
+  12 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> dillo-0.7.3-r2.ebuild:
+  Added I18N patch and cjk, truetype, ssl and nls IUSE flag. I18N
+  patch is applied if USE="cjk" and truetype, ssl and nls IUSE flags
+  will take effect only if you enabled USE="cjk". The patch also
+  includes tab and frame support and GUI configuration tool (GTK+).
 
   01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> dillo-0.7.3-r1.ebuild:
   Stable on alpha
