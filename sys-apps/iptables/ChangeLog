@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.20 2003/01/09 09:46:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.21 2003/01/09 18:15:14 joker Exp $
+
+*iptables-1.2.7a-r3 (09 Jan 2003)
+
+  09 Jan 2003; Christian Birchinger <joker@gentoo.org> :
+  Added new revsion with sparc64 limit rule fixes. 
 
   09 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
   Readded save() function, closes #7752.
