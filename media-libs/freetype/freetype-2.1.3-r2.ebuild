@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.14 2004/03/19 07:56:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.15 2004/05/16 08:51:59 vapier Exp $
 
 IUSE="doc"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gcc
 
 FT_SMOOTH_VER="20021210"
 
@@ -46,7 +46,7 @@ src_compile() {
 	# Just a check to see if the Bytecode Interpreter was enabled ...
 	if [ -z "`grep TT_Goto_CodeRange ${S}/objs/.libs/libfreetype.so`" ]
 	then
-		if [ "${CC}" != "ccc" ]; then
+		if [ "$(gcc-getCC)" != "ccc" ]; then
 			eerror "Could not enable Bytecode Interpreter!"
 			die "Could not enable Bytecode Interpreter!"
 		fi
