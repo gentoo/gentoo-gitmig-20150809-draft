@@ -1,0 +1,17 @@
+--- mw_debug.h.orig	2005-03-07 13:29:06.000000000 -0600
++++ mw_debug.h	2005-03-07 13:30:06.000000000 -0600
+@@ -8,9 +8,13 @@
+ 
+ #define NSTR(str) ((str != NULL)? str: "(null)")
+ 
+-
++#ifndef g_debug
+ #define g_debug(format...) g_log(G_LOG_DOMAIN, G_LOG_LEVEL_DEBUG, format)
++#endif
++
++#ifndef g_info
+ #define g_info(format...) g_log(G_LOG_DOMAIN, G_LOG_LEVEL_INFO, format)
++#endif
+ 
+ 
+ /**
