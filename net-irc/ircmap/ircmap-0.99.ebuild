@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.9 2004/07/24 01:48:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.10 2005/02/14 21:25:08 swegener Exp $
 
 DESCRIPTION="This script connects to the specified IRC server and creates a diagram of the network performing LINKS command."
 HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
@@ -32,7 +32,7 @@ src_install () {
 
 	eval `perl -V:installprivlib`
 
-	insinto ${D}/${installprivlib}/ircmap
+	insinto /${installprivlib}/ircmap
 	doins IHash.pm
 }
 
