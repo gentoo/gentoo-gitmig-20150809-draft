@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.4 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.5 2002/07/13 16:31:43 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
+
+SLOT="1.2"
 
 DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/autoconf
@@ -25,22 +27,43 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}/plug-ins/common
 	# compile with nonstandard psd_save plugin
 	cp ${FILESDIR}/psd_save.c .
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
 	cd ${S}
-	automake
-	autoconf
+	
+	if [ -f ${ROOT}/usr/share/gettext/config.rpath ] ; then
+		cp -f ${ROOT}/usr/share/gettext/config.rpath ${S}
+	else
+		touch ${S}/config.rpath
+		chmod 0755 ${S}/config.rpath
+	fi
+	
+	echo ">>> Reconfiguring package..."
+	export WANT_AUTOMAKE_1_4=1
+	export WANT_AUTOCONF_2_5=1
+	automake --add-missing
+	autoreconf --install --symlink &> ${T}/autoreconf.log || ( \
+		echo "DEBUG: working directory is: `pwd`" >>${T}/autoreconf.log
+		eerror "Reonfigure failed, please attatch the contents of:"
+		eerror
+		eerror "  ${T}/autoreconf.log"
+		eerror
+		eerror "in your bugreport."
+		# we need an error here, else the ebuild do not die
+		exit 1
+	) || die "running autoreconf failed"
 	touch plug-ins/common/gimp-1.2.3.tar.bz2
 }
 
 src_compile() {
-	local myconf
-	local mymake
-	local myvars
+	local myconf=""
+	local mymake=""
+	local myvars=""
 	if [ -z "`use nls`" ] ; then
-		myconf="--disable-nls"
+		myconf="${myconf} --disable-nls"
 	fi
 
 	if [ -z "`use perl`" ] ; then
@@ -81,14 +104,13 @@ src_compile() {
 			> plug-ins/common/Makefile
 	fi
 
-
 	# Doesn't work with -j 4 (hallski)
 	make ${mymake} || die
 }
 
 src_install() {
 
-	local mymake							   
+	local mymake="" 
 	if [ -z "`use aalib`" ] ; then
 		mymake="LIBAA= AA="
 	fi
@@ -125,8 +147,4 @@ src_install() {
 	docinto devel
 	dodoc devel-docs/*.txt
 }
-
-
-
-
 
