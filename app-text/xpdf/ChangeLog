@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.12 2003/01/05 00:55:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.13 2003/01/06 15:32:35 jmorgan Exp $
 
   05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> xpdf-2.01-r1.ebuild :
   Updated depend to virtual/motif.
@@ -16,8 +16,6 @@
   02 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> xpdf-2.01.ebuild :
   Security update.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *xpdf-1.01-r1 (13 Jul 2002)
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> xpdf-1.01.ebuild :
