@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.10 2004/06/09 07:30:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.11 2004/06/12 01:18:07 vapier Exp $
 
 MY_P="5533-Silver-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=5533"
 SRC_URI="http://www.kde-look.org/content/files/$MY_P.tar.bz2"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ~alpha ppc"
+KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
 IUSE=""
+
 DEPEND=""
 RDEPEND="virtual/x11"
 
@@ -19,9 +21,9 @@ src_install() {
 	X11_IMPLEM="${X11_IMPLEM##*\/}"
 	einfo "X11 implementation is ${X11_IMPLEM}."
 
-	mkdir -p ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/cursors/
+	dodir /usr/share/cursors/${X11_IMPLEM}/Silver/cursors/
 	cp -d  ${WORKDIR}/${MY_P:5}/Silver/cursors/* ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/cursors/ || die
-	dodoc ${WORKDIR}/${MY_P:5}/{COPYING,README}
+	dodoc ${WORKDIR}/${MY_P:5}/README
 }
 
 pkg_postinst() {
