@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.8.ebuild,v 1.1 2004/03/30 17:57:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.8.ebuild,v 1.2 2004/04/01 14:23:30 jhuebel Exp $
 
 inherit eutils
 
@@ -25,6 +25,14 @@ DEPEND=">=x11-libs/gtk+-2.2
 IUSE="nls oggvorbis"
 SLOT="0"
 KEYWORDS="~x86 ~ppc alpha ~amd64 ~hppa ~sparc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# AMD64 SMP Crash Fix, submitted by Brian Silverthorn <bcs26@cornell.edu>
+	epatch ${FILESDIR}/${P}-statuscheck-lp64.patch
+}
 
 src_compile() {
 	econf --disable-dependency-tracking `use_enable nls` || die
