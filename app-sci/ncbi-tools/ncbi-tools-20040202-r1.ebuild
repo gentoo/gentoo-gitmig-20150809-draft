@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040202-r1.ebuild,v 1.4 2004/04/19 11:43:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ncbi-tools-20040202-r1.ebuild,v 1.5 2004/05/04 23:17:05 kloeri Exp $
 
 DESCRIPTION="NCBI toolkit including the BLAST group of programs, entrez, ddv, udv, sequin and others"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz mirror://gentoo/${PN}-data.tar.gz"
 LICENSE="freedist"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha"
 IUSE="X png"
 
 DEPEND="app-shells/tcsh

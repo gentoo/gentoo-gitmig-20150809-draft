@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/bioperl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/ChangeLog,v 1.10 2004/04/19 22:48:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/ChangeLog,v 1.11 2004/05/04 23:14:06 kloeri Exp $
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> bioperl-1.2.ebuild:
+  Stable on alpha.
 
   20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> bioperl-1.4.ebuild:
   Added ~alpha to keywords.

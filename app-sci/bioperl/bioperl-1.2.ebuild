@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.5 2004/04/19 22:48:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.6 2004/05/04 23:14:06 kloeri Exp $
 
 inherit perl-module debug
 
@@ -10,7 +10,7 @@ SRC_URI="http://bioperl.org/ftp/DIST/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 IUSE="mysql gd"
 
 DEPEND="dev-perl/File-Temp
