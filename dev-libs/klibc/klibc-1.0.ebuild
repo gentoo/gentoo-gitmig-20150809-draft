@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.ebuild,v 1.1 2005/03/09 20:59:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.0.ebuild,v 1.2 2005/03/09 23:55:54 azarah Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -49,7 +49,7 @@ guess_arch() {
 
 	return 1
 }
-	
+
 
 src_unpack() {
 	unpack ${A}
@@ -76,8 +76,12 @@ src_unpack() {
 		eerror "(KERNEL_ARCH=\"${kernel_arch}\", ARCH=\"$(guess_arch)\")"
 		die "Your kernel sources are not configured for your chosen arch!"
 	fi
-	
+
 	cd ${S}
+
+	# If say LDFLAGS = "", then '' gets passed as arg to ld which borks
+	epatch ${FILESDIR}/${P}-makeklcc-empty-args.patch
+
 	ln -snf ${KV_DIR} linux
 }
 
