@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.10 2004/04/10 08:17:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.11 2004/04/27 02:57:19 randy Exp $
+
+  26 Apr 2004; Michael McCabe <randy@gentoo.org> tar-1.13.94.ebuild:
+  Marked stable on s390
 
 *tar-1.13.94 (10 Apr 2004)
 
