@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/files/pop3vscan,v 1.1 2002/07/10 21:18:34 bass Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting pop3vscan"
+	start-stop-daemon --start --quiet --pidfile /var/run/pop3vscan.pid --exec /usr/sbin/pop3vscan
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pop3vscan"
+	start-stop-daemon --stop --quiet --oknodo --pidfile /var/run/pop3vscan.pid
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting pop3vscan"
+	svc_stop
+	sleep 1
+	svc_start
+	eend $?
+}
