@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43-r4.ebuild,v 1.1 2004/08/28 16:30:21 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.43-r4.ebuild,v 1.2 2004/08/28 20:22:58 kloeri Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/${PF}-gentoo.diff
+	epatch ${WORKDIR}/${P}-r3-gentoo.diff
 	sed -i 's:${head} -:${head} -n :' chkrootkit
 	sed -i 's:/var/adm:/var/log:g' chklastlog.c
 }
