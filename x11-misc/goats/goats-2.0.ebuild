@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.1 2002/11/24 23:17:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/goats/goats-2.0.ebuild,v 1.2 2002/12/18 13:23:15 foser Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.menudo.freeserve.co.uk/goats.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=x11-libs/pango-1.0.4-r1
 	>=x11-libs/gtk+-2.0.6-r1
