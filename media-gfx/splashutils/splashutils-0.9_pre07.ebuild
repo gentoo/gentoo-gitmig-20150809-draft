@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.5 2004/08/30 14:55:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.6 2004/10/13 21:21:50 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.1"
 GENTOOSPLASH="splashutils-gentoo-0.1"
@@ -15,11 +15,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=media-libs/freetype-2
+RDEPEND=">=media-libs/freetype-2
 	media-libs/libpng
 	media-libs/jpeg
 	>=sys-apps/baselayout-1.10.4
 	!media-gfx/bootsplash"
+DEPEND="${RDEPEND}
+	virtual/linux-sources"
 
 S="${WORKDIR}/${P/_/-}"
 SM="${WORKDIR}/${MISCSPLASH}"
