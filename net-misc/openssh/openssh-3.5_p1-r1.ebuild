@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.1 2003/01/20 15:06:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.2 2003/01/21 07:57:18 raker Exp $
 
 IUSE="ipv6 static pam tcpd kerberos"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
 # This new rev will use the new openssl.
 RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
-	kerberos? ( virtual/krb5 )
+	kerberos? ( app-crypt/krb5 )
 	>=dev-libs/openssl-0.9.6d
 	sys-libs/zlib"
 
@@ -45,8 +45,17 @@ src_compile() {
 	use pam  || myconf="${myconf} --without-pam"
 	use pam  && myconf="${myconf} --with-pam"
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
+
+	# app-crypt/krb5
 	use kerberos && myconf="${myconf} --with-kerberos5"
 
+	# app-crypt/kth-krb
+	# KTH's implementation of kerberos IV
+	# KTH_KRB="yes" emerge openssh-3.5_p1-r1.ebuild
+	if [ ! -z $KTH_KRB ]; then
+		myconf="${myconf} --with-kerberos4=/usr/athena"
+	fi
+	
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc/ssh \

@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.27 2003/01/20 15:06:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.28 2003/01/21 07:57:18 raker Exp $
 
 *openssh-3.5_p1-r1 (20 Jan 2003)
+
+  21 Jan 2003; Nick Hadaway <raker@gentoo.org> openssh-3.5_p1-r1.ebuild :
+  Changed USE="kerberos" to depend on app-crypt/krb5 as heimdal is not
+  compatible currently.  Install app-crypt/kth-krb and set KTH_KRB="yes"
+  to enable Kerberos IV support.
 
   20 Jan 2003; Nick Hadaway <raker@gentoo.org> openssh-3.5_p1-r1.ebuild,
   files/digest-openssh-3.5_p1-r1 :
