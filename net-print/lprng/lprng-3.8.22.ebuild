@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.4 2003/10/31 13:35:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.5 2003/11/03 12:07:36 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,8 +38,8 @@ src_compile() {
 		--disable-setuid \
 		--with-userid=lp \
 		--with-groupid=lp \
-		--with-lpd-conf-path=/etc/lprng/lpd.conf \
-		--with-lpd-conf-perms=/etc/lprng/lpd.perms \
+		--with-lpd_conf_path=/etc/lprng/lpd.conf \
+		--with-lpd_perms_path=/etc/lprng/lpd.perms \
 		--libexecdir=/usr/lib \
 		--sysconfdir=/etc/lprng \
 		--mandir=/usr/share/man \
