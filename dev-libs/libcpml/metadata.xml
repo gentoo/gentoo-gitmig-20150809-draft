@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+CPML enables customers to significantly increase the precision and speed of mathematical calculations by more than 10 times compared to other mathematical libraries currently available on Linux. The Compaq Portable Math Library (CPML) is identical in content to that of Compaq Tru64 UNIX libm and consequently can be considered as a replacement for the Linux Alpha Libm.  In particular the CPML provides intrinsic function support for the C and Fortran languages as defined by the X/Open, ANSI C and ANSI Fortran standards. The CPML supports IEEE single, double and quad precision floating point formats.
+
+The standard CPML routines are significantly faster than the corresponding routines in the Linux Alpha libm and with a few exceptions are also faster than the corresponding libffm routines.
+</longdescription>
+</pkgmetadata>

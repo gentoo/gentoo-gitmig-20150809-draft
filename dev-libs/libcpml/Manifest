@@ -1,6 +1,7 @@
 MD5 89333b29e92af7c8f304ee5b855b240f libcpml-5.2.01-r1.ebuild 1336
 MD5 4c6d09dfa1ea462c467f30911f6631c5 libcpml-5.2.01.ebuild 1196
 MD5 e76bdb4b4142865f5349b48eab208692 ChangeLog 1191
+MD5 e8acb4c85baa3d2924ce7ac9441836ea metadata.xml 1084
 MD5 31dc5c5a92d3ca7c65adf9584c2ecf39 libcpml-5.2.01-r2.ebuild 1731
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libcpml-5.2.01-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libcpml-5.2.01-r2 0

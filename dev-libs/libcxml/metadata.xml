@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+  <name>Tavis Ormandy</name>
+</maintainer>
+<longdescription>
+Compaq Extended Math Library (CXML) is a set of mathematical subprograms that are optimized for the Alpha architecture. Included subprograms cover the areas of Basic Linear Algebra, Linear System and Eigenproblem Solvers, Sparse Linear System Solvers, Sorting, Random Number Generation, and Signal Processing.
+</longdescription>
+</pkgmetadata>
