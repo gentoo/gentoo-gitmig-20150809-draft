@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r7.ebuild,v 1.1 2005/02/04 00:22:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r7.ebuild,v 1.2 2005/02/04 16:27:05 mr_bones_ Exp $
 
 PATCH_LEVEL="1.8"
 BDB_VER="4.1.25"
@@ -59,7 +59,7 @@ apply_pam_patches() {
 	for x in redhat gentoo
 	do
 		rm -f "${patches}"
-		
+
 		# Need to be a '| while read x', as some lines may have spaces ...
 		cat "${S2}/list.${x}-patches" | grep -v '^#' | grep -v '^$' | while read y
 		do
