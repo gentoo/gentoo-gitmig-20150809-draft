@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.5.0-r1.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-ntfs/linux-ntfs-1.5.0-r1.ebuild,v 1.6 2002/07/21 20:05:56 gerk Exp $
 
 # NB: This project actually requires >=gcc.2.96!  This ebuild installs an
 # rpm binary package into /opt.  Eventually we'll compile it ourselves..
 
 DESCRIPTION="Utilities and library for accessing NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
