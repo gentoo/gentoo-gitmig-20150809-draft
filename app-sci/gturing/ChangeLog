@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gturing
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gturing/ChangeLog,v 1.1 2002/12/18 13:11:44 hanno Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gturing/ChangeLog,v 1.2 2004/03/08 17:40:33 augustus Exp $
+
+  08 Mar 2004; <augustus@gentoo.org> gturing-0.1.1.ebuild:
+  Added ~amd64 keyword.
 
 *gturing-0.1.1 (18 Dec 2002)
 
