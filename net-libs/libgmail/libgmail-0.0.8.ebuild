@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.0.8.ebuild,v 1.1 2004/09/17 00:51:06 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.0.8.ebuild,v 1.2 2004/10/09 21:35:47 slarti Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libgmail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
