@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.6 2005/03/11 02:36:28 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.7 2005/03/22 20:05:06 caleb Exp $
+
+*rails-0.11.0 (22 Mar 2005)
+
+  22 Mar 2005; Caleb Tennis <caleb@gentoo.org> +rails-0.11.0.ebuild:
+  version bump
 
 *rails-0.10.1 (10 Mar 2005)
 
