@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jgraph
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.1 2004/02/15 20:47:42 zx Exp $
+
+*jgraph-3.1 (15 Feb 2004)
+
+  15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> jgraph-3.1.ebuild:
+  Initial Import.
+  Thanks to Stanislas Nanchen <stan@hood.ch> for the suggestion. Bug #30578
+
