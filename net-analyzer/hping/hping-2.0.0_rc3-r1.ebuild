@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3-r1.ebuild,v 1.5 2004/11/11 19:22:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc3-r1.ebuild,v 1.6 2004/11/30 18:32:18 gmsoft Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.hping.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~hppa ~ia64 ~amd64 alpha ~ppc"
+KEYWORDS="x86 sparc hppa ~ia64 ~amd64 alpha ~ppc"
 IUSE="debug"
 
 DEPEND="net-libs/libpcap"
