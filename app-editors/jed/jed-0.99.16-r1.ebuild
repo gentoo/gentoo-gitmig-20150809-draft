@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.6 2003/06/05 13:42:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.7 2003/06/07 01:24:29 liquidx Exp $
 
 IUSE="X gpm truetype"
 
@@ -11,10 +11,11 @@ SRC_URI="ftp://ftp.jedsoft.org/pub/davis/jed/v0.99/${P0}.tar.bz2"
 HOMEPAGE="http://space.mit.edu/~davis/jed/"
 
 DEPEND=">=sys-libs/slang-1.4.5
+	>=sys-apps/sed-4
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
 	X? ( truetype? ( virtual/xft
-                >=media-libs/freetype-2.0 ) )"
+		>=media-libs/freetype-2.0 ) )"
 
 PROVIDE="virtual/editor"
 
@@ -82,7 +83,7 @@ src_install () {
 	doins lib/jed.conf
 	
 	# replace IDE mode with EMACS mode
-	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' ${D}/etc/jed.conf
+	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' ${D}/etc/jed.conf || die "patching jed.conf failed"
 
 	cd ${D}
 	rm -rf usr/share/jed/info

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.12 2003/06/05 13:42:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.13 2003/06/07 01:24:29 liquidx Exp $
+
+  07 Jun 2003; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r1.ebuild:
+  added sed-4 dep
 
   04 Jun 2003; Christian Birchinger <joker@gentoo.org> jed-0.99.16-r1.ebuild:
   Added sparc stable keyword
