@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.89 2004/12/18 16:28:30 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.90 2005/02/08 17:57:53 lanius Exp $
+
+*opera-7.54-r2 (08 Feb 2005)
+
+  08 Feb 2005; Heinrich Wendel <lanius@gentoo.org> +opera-7.54-r2.ebuild:
+  security bump
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> opera-7.54-r1.ebuild:
   stable on amd64; bug #74076

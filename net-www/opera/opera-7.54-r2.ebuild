@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha4.ebuild,v 1.3 2005/02/08 17:57:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54-r2.ebuild,v 1.1 2005/02/08 17:57:53 lanius Exp $
 
 IUSE="static spell"
 
-OPERAVER="7.60-20041203"
-OPERAFTPDIR="7.60-Preview-4"
+OPERAVER="7.54-20050131"
+OPERAFTPDIR="754u2"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -13,18 +13,25 @@ DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
-OPERA_URI="http://snapshot.opera.com/unix/${OPERAFTPDIR}/"
 SRC_URI="
-	x86? ( static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	sparc? ( static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
-	sparc? ( !static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
-	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
+	x86? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	x86? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	ppc? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
+	sparc? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
 
-#	amd64? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
-#	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 )
+# ppc shared version does not work as it uses gcc-2.95 - lanius
+#	ppc? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
+#	ppc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/ppc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
+
+# amd64 shared libs require app-emulation/emul-linux-x86-qtlibs-1 which is not stable yet
+#	amd64? ( static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+#	amd64? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+
+# sparc shared version does not work for me as it uses gcc-2.95 - eradicator
+#	sparc? ( static?  ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+#	sparc? ( !static? ( mirror://opera/linux/${OPERAFTPDIR}/final/en/sparc/shared/gcc-2.95/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )"
+
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4
@@ -35,14 +42,18 @@ RDEPEND="virtual/x11
 	media-libs/libexif
 	x11-libs/openmotif
 	spell? ( app-text/aspell )
-	amd64? ( static? ( app-emulation/emul-linux-x86-xlibs )
-	         !static? ( =app-emulation/emul-linux-x86-qtlibs-1* ) )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
+	!amd64? ( !sparc? ( !static? ( =x11-libs/qt-3* ) ) )"
 
-	x86? ( !static? ( =x11-libs/qt-3* ) )"
+#	static? (
+#		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
+#	!static? (
+#		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
+#		!amd64? ( =x11-libs/qt-3* ) )
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -116,4 +127,7 @@ pkg_postinst() {
 	einfo
 	einfo "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
 	einfo "and emerge app-text/aspell-language."
+	einfo
+	ewarn "This update will overwrite your search.ini if you"
+	ewarn "do not change the \"File Version\" to 4 in the file."
 }

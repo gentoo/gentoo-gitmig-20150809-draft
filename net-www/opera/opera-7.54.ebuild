@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.5 2004/10/26 17:59:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.54.ebuild,v 1.6 2005/02/08 17:57:53 lanius Exp $
 
 IUSE="static spell"
 
