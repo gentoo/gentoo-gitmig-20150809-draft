@@ -1,5 +1,15 @@
-MD5 93dfb77978af839b7026ce3cbe53e462 ChangeLog 943
-MD5 eabe87198f3ee254a53e2138812cba5e libclalsadrv-1.0.1.ebuild 872
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 68c1ac4f6402e9c3d0108a24f4e2669e ChangeLog 1062
+MD5 81f4d29db46132dec27c3fac26b3b9a3 libclalsadrv-1.0.1.ebuild 874
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
 MD5 d29b1e298284031cdb5a92b68c064972 files/digest-libclalsadrv-1.0.1 67
 MD5 bd13c609cd92e6c5da76125ed0f70e97 files/libclalsadrv-1.0.1-makefile.patch 892
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxQ2/ArHZZzCEUG0RAmwlAJ0Zkil0ybzCif7ItVRFlS3earSNPACeN77V
+POqLkDGLz1bzTZ/WhpGBU3s=
+=Whsy
+-----END PGP SIGNATURE-----
