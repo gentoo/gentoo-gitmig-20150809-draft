@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.5 2003/05/09 20:14:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.6 2003/08/13 18:05:46 wwoods Exp $
+
+  13 Aug 2003; Will Woods <wwoods@gentoo.org> mdadm-1.0.1.ebuild,
+  mdadm-1.2.0.ebuild:
+  Marked stable for alpha
 
 *mdadm-1.2.0 (29 Apr 2003)
 
