@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629.ebuild,v 1.2 2004/11/10 01:02:36 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629.ebuild,v 1.3 2004/11/10 01:23:54 cyfred Exp $
 
 inherit eutils
 
@@ -69,8 +69,14 @@ src_unpack() {
 	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
 
 	# Patchs go below here, add breif description
+	cd ${S}
+	# nVidia wants us to use nvidia-installer, removing warning.
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-makefile.patch
+	# Use the correct defines to make gtkglext build work
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-defines.patch
+	# Use some more sensible gl headers and make way for new glext.h
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-glheader.patch
 
-	# None at the moment
 }
 
 src_install() {

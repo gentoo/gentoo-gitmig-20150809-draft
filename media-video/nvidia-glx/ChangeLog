@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.65 2004/11/10 01:02:36 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.66 2004/11/10 01:23:54 cyfred Exp $
+
+  10 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
+  +files/1.0.6629/NVIDIA_glx-1.0.6629-defines.patch,
+  +files/1.0.6629/NVIDIA_glx-1.0.6629-glheader.patch,
+  +files/1.0.6629/NVIDIA_glx-1.0.6629-makefile.patch,
+  nvidia-glx-1.0.6629.ebuild:
+  Porting across GL patches for consistency, it was necessary in the end.
 
   10 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> nvidia-glx-1.0.6629.ebuild:
   Changing to error on xfree install, as opposed to dieing
