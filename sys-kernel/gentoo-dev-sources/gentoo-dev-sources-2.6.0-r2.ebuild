@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0-r2.ebuild,v 1.3 2004/01/05 21:28:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0-r2.ebuild,v 1.4 2004/01/05 22:00:49 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -27,7 +27,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	 ${GPV_SRC}"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="-* x86 amd64 ~mips ~hppa ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~mips ~hppa ~sparc ~alpha"
 PROVIDE="virtual/linux-sources virtual/alsa"
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
@@ -91,17 +91,18 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "IMPORTANT:"
-	eerror "ptyfs support has now been dropped from devfs and as a"
-	eerror "result you are now required to compile this support into"
-	eerror "the kernel. You can do so by enabling the following option"
-	eerror "	File systems -> Pseudo filesystems -> /dev/pts filesystem."
+	ewarn "Please note that ptyfs support has been removed from devfs"
+	ewarn "and you have to compile it in now, or else you will get"
+	ewarn "errors when trying to open a pty. The options are:"
+	ewarn "Device Drivers -> Character devices -> Unix98 PTY support and"
+	ewarn "File systems -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
-	eerror "To prevent the problem while uncompressing the kernel image"
-	eerror "you should also enable:"
-	eerror "	Input Devices (Input Device Support -> Input Devices),"
-	eerror "	Virtual Terminal (Character Devices -> Virtual Terminal),"
-	eerror "	vga_console (Graphics Support -> Console... -> VGA Text Console)"
-	eerror "	vt_console (Character Devices -> Support for Console...)."
+	ewarn "Also, note that you must compile in support for"
+	ewarn "input devices (Input device support->Input devices),"
+	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "vga_console (Graphics Support->Console...->VGA text console)"
+	ewarn "and the vt_console (Character Devices->Support for console...)."
+	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
+	ewarn "error."
 	echo
 }

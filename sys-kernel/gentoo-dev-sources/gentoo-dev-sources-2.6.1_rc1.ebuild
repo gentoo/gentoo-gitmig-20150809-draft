@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.7 2004/01/05 21:43:49 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.8 2004/01/05 22:00:49 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -56,18 +56,6 @@ SLOT="${KV}"
 KEYWORDS="-* ~x86 ~amd64 ~mips ~hppa ~sparc ~alpha"
 PROVIDE="virtual/linux-sources virtual/alsa"
 #RESTRICT="nomirror"
-if [ "${KEYWORDS}" = "-*" ]
-then
-	ewarn "------------------READ THIS BEFORE CONTINUING!!!!!---------------------"
-	ewarn "This ebuild is KEYWORDED -*.  This usually means it is in developement,"
-	ewarn "and may be missing important files, patches, etc.  It is NOT for general"
-	ewarn "use and you MUST NOT report bugs on this because you should not be using"
-	ewarn "ebuilds KEYWORDED -*.  I strongly suggest you reconsider testing this"
-	ewarn "ebuild.  brad_mssw will kill you if you report bugs on errors with this"
-	ewarn "ebuild.  YOU HAVE BEEN WARNED!"
-	ewarn "-----------------------------------------------------------------------"
-	sleep 10
-fi
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
@@ -79,6 +67,19 @@ then
 fi
 
 src_unpack() {
+	if [ "${KEYWORDS}" = "-*" ]
+	then
+		ewarn "------------------READ THIS BEFORE CONTINUING!!!!!---------------------"
+		ewarn "This ebuild is KEYWORDED -*.  This usually means it is in developement,"
+		ewarn "and may be missing important files, patches, etc.  It is NOT for general"
+		ewarn "use and you MUST NOT report bugs on this because you should not be using"
+		ewarn "ebuilds KEYWORDED -*.  I strongly suggest you reconsider testing this"
+		ewarn "ebuild.  brad_mssw will kill you if you report bugs on errors with this"
+		ewarn "ebuild.  YOU HAVE BEEN WARNED!"
+		ewarn "-----------------------------------------------------------------------"
+		sleep 10
+	fi
+
 	cd ${WORKDIR}
 
 	if [ "${GPV}" != "0" ]
@@ -143,17 +144,18 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "IMPORTANT:"
-	eerror "ptyfs support has now been dropped from devfs and as a"
-	eerror "result you are now required to compile this support into"
-	eerror "the kernel. You can do so by enabling the following option"
-	eerror "	File systems -> Pseudo filesystems -> /dev/pts filesystem."
+	ewarn "Please note that ptyfs support has been removed from devfs"
+	ewarn "and you have to compile it in now, or else you will get"
+	ewarn "errors when trying to open a pty. The options are:"
+	ewarn "Device Drivers -> Character devices -> Unix98 PTY support and"
+	ewarn "File systems -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
-	eerror "To prevent the problem while uncompressing the kernel image"
-	eerror "you should also enable:"
-	eerror "	Input Devices (Input Device Support -> Input Devices),"
-	eerror "	Virtual Terminal (Character Devices -> Virtual Terminal),"
-	eerror "	vga_console (Graphics Support -> Console... -> VGA Text Console)"
-	eerror "	vt_console (Character Devices -> Support for Console...)."
+	ewarn "Also, note that you must compile in support for"
+	ewarn "input devices (Input device support->Input devices),"
+	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
+	ewarn "vga_console (Graphics Support->Console...->VGA text console)"
+	ewarn "and the vt_console (Character Devices->Support for console...)."
+	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
+	ewarn "error."
 	echo
 }
