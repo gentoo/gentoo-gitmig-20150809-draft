@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openexr
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.1 2003/10/15 12:28:13 brandy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.2 2004/03/02 19:19:05 mholzer Exp $
+
+*openexr-1.0.7 (02 Mar 2004)
+
+  02 Mar 2004; Martin Holzer <mholzer@gentoo.org> openexr-1.0.7.ebuild:
+  Version bumped. Closes 37646
 
 *openexr-1.0.6 (16 Oct 2003)
 
