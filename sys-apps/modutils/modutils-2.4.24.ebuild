@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.24.ebuild,v 1.14 2004/06/24 22:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.24.ebuild,v 1.15 2004/06/30 02:55:09 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
 KEYWORDS="x86 -amd64 ppc sparc ~alpha hppa ~mips"
 SLOT="0"
 LICENSE="GPL-2"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 PROVIDE="virtual/modutils"
 
 src_unpack() {

@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.18 2004/06/25 03:08:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.19 2004/06/30 02:49:27 vapier Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
 DESCRIPTION="Lists open files for running Unix processes"
+HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
 SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.gz
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.gz"
-HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
-
-DEPEND="virtual/glibc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
+IUSE=""
+
+DEPEND="virtual/libc"
 
 #This pkg appears to be highly kernel-dependent.
 

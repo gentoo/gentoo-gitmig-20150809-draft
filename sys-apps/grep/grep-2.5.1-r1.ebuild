@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.23 2004/06/24 22:08:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.24 2004/06/30 02:37:18 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls build uclibc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

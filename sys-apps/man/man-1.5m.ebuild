@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.13 2004/06/24 22:14:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m.ebuild,v 1.14 2004/06/30 02:52:00 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha arm hppa ~amd64 ia64 s390"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="sys-apps/cronbase
 	>=sys-apps/groff-1.18"

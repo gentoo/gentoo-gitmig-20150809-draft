@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20010824-r5.ebuild,v 1.2 2004/06/25 03:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20010824-r5.ebuild,v 1.3 2004/06/30 02:43:13 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ IUSE="doc"
 DEPEND=">=virtual/os-headers-2.4.21
 	>=sys-apps/sed-4
 	doc? ( virtual/tetex )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/iproute2
 

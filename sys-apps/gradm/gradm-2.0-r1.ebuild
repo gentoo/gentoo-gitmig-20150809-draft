@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0-r1.ebuild,v 1.2 2004/06/24 22:08:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0-r1.ebuild,v 1.3 2004/06/30 02:36:33 vapier Exp $
 
 inherit flag-o-matic gcc
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~arm ~amd64" ; # ~alpha"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/bison
 	sys-devel/flex
 	sys-apps/chpax"

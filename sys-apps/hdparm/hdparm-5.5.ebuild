@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5.ebuild,v 1.7 2004/06/24 22:09:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.5.ebuild,v 1.8 2004/06/30 02:39:08 vapier Exp $
 
 inherit gcc eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -44,9 +44,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo ""
 	einfo "The rc-script for hdparm has been updated, so make sure "
 	einfo "that you etc-update.  The script is much more configurable"
 	einfo "for details please see /etc/conf.d/hdparm"
-	einfo ""
 }

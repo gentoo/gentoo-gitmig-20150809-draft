@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.4 2004/06/25 03:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.7.20040608.ebuild,v 1.5 2004/06/30 02:43:13 vapier Exp $
 
 inherit eutils gcc
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 IUSE="atm"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-libs/db
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}

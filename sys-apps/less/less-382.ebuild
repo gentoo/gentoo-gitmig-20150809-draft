@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382.ebuild,v 1.7 2004/06/25 03:08:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382.ebuild,v 1.8 2004/06/30 02:48:14 vapier Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa amd64 ~ia64 ~ppc64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2"
 
 src_install() {

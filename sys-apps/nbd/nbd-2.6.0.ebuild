@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbd/nbd-2.6.0.ebuild,v 1.2 2004/06/25 03:07:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nbd/nbd-2.6.0.ebuild,v 1.3 2004/06/30 02:53:07 vapier Exp $
 
 DESCRIPTION="Userland client/server for kernel network block device"
 HOMEPAGE="http://nbd.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}-2.6
 

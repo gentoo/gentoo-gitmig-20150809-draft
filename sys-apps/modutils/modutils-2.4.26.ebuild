@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.10 2004/06/24 22:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.26.ebuild,v 1.11 2004/06/30 02:55:09 vapier Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Standard kernel module utilities"
-SRC_URI="mirror://kernel/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
-KEYWORDS="~x86 -amd64 ppc ~sparc ~alpha ~hppa ~mips ~ia64 ppc64 s390"
-SLOT="0"
+SRC_URI="mirror://kernel/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"
+
 LICENSE="GPL-2"
-DEPEND="virtual/glibc"
+SLOT="0"
+KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~hppa -amd64 ~ia64 ppc64 s390"
+IUSE=""
+
+DEPEND="virtual/libc"
 PROVIDE="virtual/modutils"
 
 src_unpack() {
@@ -23,8 +26,6 @@ src_unpack() {
 src_compile() {
 	local myconf=
 	local mymake=
-
-	# filter-flags -fPIC
 
 	# see bug #3897 ... we need insmod static, as libz.so is in /usr/lib
 	#
@@ -45,11 +46,8 @@ src_compile() {
 
 src_install() {
 	local mymake=
-
 	[ ${ARCH} = "hppa" ] && mymake="ARCH=hppa"
-
 	einstall prefix="${D}" ${mymake} || die "make install failed"
 
-	dodoc COPYING CREDITS ChangeLog NEWS README TODO
+	dodoc CREDITS ChangeLog NEWS README TODO
 }
-
