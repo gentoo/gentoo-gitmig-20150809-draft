@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ruby-config-0.3.ebuild,v 1.13 2004/10/23 08:04:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ruby-config-0.3.ebuild,v 1.14 2005/02/20 03:34:59 usata Exp $
 
 DESCRIPTION="Utility to switch the ruby interpreter beging used"
 HOMEPAGE="http://www.gentoo.org/"
