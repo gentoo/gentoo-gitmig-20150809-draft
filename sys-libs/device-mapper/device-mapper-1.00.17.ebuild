@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17.ebuild,v 1.1 2004/04/24 17:04:35 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.17.ebuild,v 1.2 2004/04/24 17:20:14 max Exp $
 
 DESCRIPTION="Device mapper ioctl library for use with LVM2 utilities."
 HOMEPAGE="http://sources.redhat.com/dm/"
@@ -37,5 +37,5 @@ src_install() {
 	einstall sbindir="${D}/sbin" libdir="${D}/lib"
 	dolib.a lib/ioctl/libdevmapper.a
 
-	dodoc COPYING* INSTALL INTRO README VERSION
+	dodoc COPYING* INSTALL INTRO README VERSION WHATS_NEW
 }
