@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.16 2004/06/24 21:32:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.17 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  modlogan-0.8.10-r1.ebuild, modlogan-0.8.10.ebuild:
+  Masked modlogan-0.8.10.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  modlogan-0.8.10-r1.ebuild:
+  Masked modlogan-0.8.10-r1.ebuild stable for ppc
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> modlogan-0.8.10-r1.ebuild:
   Stable on alpha.

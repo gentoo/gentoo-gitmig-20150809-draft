@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/fpm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.8 2004/07/23 22:22:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fpm/ChangeLog,v 1.9 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> fpm-0.59.ebuild,
+  fpm-0.60.ebuild:
+  Masked fpm-0.60.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> fpm-0.59.ebuild:
+  Masked fpm-0.59.ebuild stable for ppc
 
   23 Jul 2004; Travis Tilley <lv@gentoo.org> fpm-0.60.ebuild:
   stable on amd64

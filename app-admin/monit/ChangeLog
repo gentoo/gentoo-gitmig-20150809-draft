@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.10 2004/07/03 12:40:48 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.11 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> monit-4.2.1.ebuild:
+  Masked monit-4.2.1.ebuild stable for ppc
 
 *monit-4.3 (03 Jul 2004)
 

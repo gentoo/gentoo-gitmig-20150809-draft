@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.25 2004/10/03 20:01:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.26 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  sysstat-5.0.5.ebuild:
+  Masked sysstat-5.0.5.ebuild stable for ppc
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> sysstat-5.0.5.ebuild:
   Added ~spac keyword, since it was missed in the version bump.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/lsat-0.9.0.ebuild,v 1.6 2004/06/25 18:03:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/lsat-0.9.0.ebuild,v 1.7 2004/10/05 02:58:11 pvdabeel Exp $
 
 DESCRIPTION="The Linux Security Auditing Tool"
 HOMEPAGE="http://usat.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://usat.sourceforge.net/code/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND="virtual/libc

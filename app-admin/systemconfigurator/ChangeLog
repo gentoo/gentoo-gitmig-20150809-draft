@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/systemconfigurator
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.7 2004/08/07 19:38:53 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.8 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  systemconfigurator-2.0.9.ebuild:
+  Masked systemconfigurator-2.0.9.ebuild stable for ppc
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> systemconfigurator-2.0.9.ebuild:
   Typo in DESCRIPTION fixed: consistant -> consistent. Bug 59717.

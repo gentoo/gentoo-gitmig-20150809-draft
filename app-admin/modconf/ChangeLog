@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/modconf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/ChangeLog,v 1.4 2004/06/24 21:31:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/ChangeLog,v 1.5 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  modconf-0.2.43.ebuild:
+  Masked modconf-0.2.43.ebuild stable for ppc
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> modconf-0.2.43.ebuild:
   Don't assign default to S; header fix

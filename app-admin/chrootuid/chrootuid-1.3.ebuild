@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3.ebuild,v 1.4 2004/06/29 19:26:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3.ebuild,v 1.5 2004/10/05 02:58:10 pvdabeel Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 DEPEND=">=sys-apps/sed-4"
 
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 

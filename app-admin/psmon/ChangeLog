@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.4 2004/06/24 21:35:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.5 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> psmon-1.0.4.ebuild:
+  Masked psmon-1.0.4.ebuild stable for ppc
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> psmon-1.0.4.ebuild:
   fix depend (bug #45110); tidy

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.18 2004/07/18 20:38:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.19 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  apachetop-0.11.ebuild, apachetop-0.12.ebuild:
+  Masked apachetop-0.12.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  apachetop-0.11.ebuild:
+  Masked apachetop-0.11.ebuild stable for ppc
 
   18 Jul 2004; Jason Wever <weeve@gentoo.org> apachetop-0.12.ebuild:
   Stable on sparc.

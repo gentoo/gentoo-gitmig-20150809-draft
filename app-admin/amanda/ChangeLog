@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.23 2004/07/15 17:26:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.24 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  amanda-2.4.4-r3.ebuild, amanda-2.4.4_p2-r1.ebuild:
+  Masked amanda-2.4.4_p2-r1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  amanda-2.4.4-r3.ebuild:
+  Masked amanda-2.4.4-r3.ebuild stable for ppc
 
 *amanda-2.4.4_p3 (15 Jul 2004)
 

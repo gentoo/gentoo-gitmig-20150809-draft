@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.6 2004/06/30 17:09:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.7 2004/10/05 02:58:11 pvdabeel Exp $
 
 DESCRIPTION="Makes usable statistics from your web site log file analysis"
 HOMEPAGE="http://www.reportmagic.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.reportmagic.org/rmagic-${PV}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="truetype"
 
 DEPEND="sys-libs/zlib

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/cronolog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.8 2004/06/24 21:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.9 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cronolog-1.6.2-r1.ebuild, cronolog-1.6.2.ebuild:
+  Masked cronolog-1.6.2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cronolog-1.6.2-r1.ebuild:
+  Masked cronolog-1.6.2-r1.ebuild stable for ppc
 
   09 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   cronolog-1.6.2-r1.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.7 2004/06/24 21:28:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gtkdiskfree-1.8.4.ebuild, gtkdiskfree-1.9.3.ebuild:
+  Masked gtkdiskfree-1.9.3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  gtkdiskfree-1.8.4.ebuild:
+  Masked gtkdiskfree-1.8.4.ebuild stable for ppc
 
 *gtkdiskfree-1.9.3 (18 Apr 2003)
 

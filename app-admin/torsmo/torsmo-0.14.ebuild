@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.14.ebuild,v 1.6 2004/06/25 23:12:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.14.ebuild,v 1.7 2004/10/05 02:58:11 pvdabeel Exp $
 
 DESCRIPTION="system monitor that sits in the corner of your desktop"
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/torsmo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND="virtual/libc

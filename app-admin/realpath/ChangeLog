@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.6 2004/06/27 23:00:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.7 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  realpath-1.9.10.ebuild, realpath-1.9.3.ebuild:
+  Masked realpath-1.9.3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  realpath-1.9.10.ebuild:
+  Masked realpath-1.9.10.ebuild stable for ppc
 
   27 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> realpath-1.9.10.ebuild:
   Stable on sparc, mips

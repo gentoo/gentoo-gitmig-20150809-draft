@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ccze
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.5 2004/09/30 20:39:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.6 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> ccze-0.2.1.ebuild:
+  Masked ccze-0.2.1.ebuild stable for ppc
 
   30 Sep 2004; Tom Martin <slarti@gentoo.org> ccze-0.2.1.ebuild:
   Marked ~amd64.

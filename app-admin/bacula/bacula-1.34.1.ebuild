@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.7 2004/08/05 23:18:35 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE="X gnome mysql readline sqlite ssl static tcpd"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.

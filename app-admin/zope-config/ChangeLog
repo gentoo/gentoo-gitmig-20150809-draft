@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.27 2004/10/03 16:46:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.28 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  zope-config-0.1-r1.ebuild, zope-config-0.4-r3.ebuild:
+  Masked zope-config-0.4-r3.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  zope-config-0.1-r1.ebuild:
+  Masked zope-config-0.1-r1.ebuild stable for ppc
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> zope-config-0.4-r3.ebuild:
   Stable on sparc.

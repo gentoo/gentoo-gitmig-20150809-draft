@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.5 2004/06/24 21:25:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.6 2004/10/05 02:58:10 pvdabeel Exp $
 
 DESCRIPTION="Displays the last new messages of a logfile"
 HOMEPAGE="http://fetchlog.sourceforge.net/"
 SRC_URI="mirror://sourceforge/fetchlog/fetchlog-0.94.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 IUSE="snmp"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/quickswitch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.17 2004/09/06 00:08:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.18 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  quickswitch-1.02.ebuild:
+  Masked quickswitch-1.02.ebuild stable for ppc
 
   06 Sep 2004; Lars Weiler <pylon@gentoo.org> quickswitch-1.05.ebuild:
   Stable on ppc.

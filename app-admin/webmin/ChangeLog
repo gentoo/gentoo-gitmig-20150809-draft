@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.61 2004/09/13 08:55:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.62 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  webmin-1.150-r1.ebuild:
+  Masked webmin-1.150-r1.ebuild stable for ppc
 
   13 Sep 2004; Guy Martin <gmsoft@gentoo.org> webmin-1.160.ebuild:
   Stable on hppa.

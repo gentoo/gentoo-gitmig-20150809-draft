@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.5 2004/07/09 19:42:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.6 2004/10/05 02:58:10 pvdabeel Exp $
 
 DESCRIPTION="A realtime Apache log analyzer"
 HOMEPAGE="http://clueful.shagged.org/apachetop/"
@@ -10,7 +10,7 @@ IUSE="apache2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~mips"
+KEYWORDS="x86 sparc ~mips ppc"
 
 DEPEND="!apache2? ( >=net-www/apache-1.3.28 )
 	apache2? ( >=net-www/apache-2.0.47 )

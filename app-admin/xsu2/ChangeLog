@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xsu2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu2/ChangeLog,v 1.9 2004/06/24 21:43:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu2/ChangeLog,v 1.10 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xsu2-0.2.5.ebuild:
+  Masked xsu2-0.2.5.ebuild stable for ppc
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> xsu2-0.2.5.ebuild :
   Stable on AMD64.

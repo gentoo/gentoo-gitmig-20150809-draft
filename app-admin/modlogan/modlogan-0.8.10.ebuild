@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10.ebuild,v 1.7 2004/06/24 21:32:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.10.ebuild,v 1.8 2004/10/05 02:58:11 pvdabeel Exp $
 
 DESCRIPTION="Logfile Analyzer"
 HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
@@ -9,7 +9,7 @@ SRC_URI="http://jan.kneschke.de/projects/modlogan/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64 ~ia64"
 IUSE="nls mysql"
 
 DEPEND="virtual/x11

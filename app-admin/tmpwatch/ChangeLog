@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.17 2004/09/22 23:46:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.18 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  tmpwatch-2.8.4.ebuild:
+  Masked tmpwatch-2.8.4.ebuild stable for ppc
 
   22 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> tmpwatch-2.9.1.1.ebuild:
   Re-added src_compile() to fix bug #64872

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.7 2004/06/24 21:29:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  integrit-3.02.00.ebuild:
+  Masked integrit-3.02.00.ebuild stable for ppc
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> integrit-3.02.00.ebuild:
   QA - IUSE fix

@@ -1,6 +1,23 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.38 2004/08/05 23:18:35 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.39 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bacula-1.32f-r5.ebuild, bacula-1.32f.ebuild, bacula-1.34.1.ebuild,
+  bacula-1.34.4.ebuild:
+  Masked bacula-1.34.4.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bacula-1.32f-r5.ebuild, bacula-1.32f.ebuild, bacula-1.34.1.ebuild:
+  Masked bacula-1.34.1.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bacula-1.32f-r5.ebuild, bacula-1.32f.ebuild:
+  Masked bacula-1.32f.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bacula-1.32f-r5.ebuild:
+  Masked bacula-1.32f-r5.ebuild stable for ppc
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> bacula-1.34.5.ebuild, 
   bacula-1.34.4.ebuild, bacula-1.34.1.ebuild, bacula-1.32f.ebuild, 

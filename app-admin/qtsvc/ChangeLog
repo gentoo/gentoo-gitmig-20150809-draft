@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/qtsvc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.9 2004/06/24 21:36:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/ChangeLog,v 1.10 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> qtsvc-0.2.ebuild:
+  Masked qtsvc-0.2.ebuild stable for ppc
 
   26 Apr 2004; Dominik Stadler <centic@gentoo.org> qtsvc-0.1-r1.ebuild,
   qtsvc-0.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu2/xsu2-0.2.5.ebuild,v 1.11 2004/06/24 21:43:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu2/xsu2-0.2.5.ebuild,v 1.12 2004/10/05 02:58:11 pvdabeel Exp $
 
 DESCRIPTION="Interface for 'su - username -c command' in GNOME2."
 HOMEPAGE="http://xsu.freax.eu.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://xsu.freax.eu.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND="=gnome-base/libgnome-2*

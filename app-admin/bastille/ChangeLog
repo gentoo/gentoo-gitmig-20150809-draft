@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.10 2004/07/10 00:10:58 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.11 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bastille-2.1.1-r1.ebuild, bastille-2.1.1-r2.ebuild:
+  Masked bastille-2.1.1-r2.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bastille-2.1.1-r1.ebuild:
+  Masked bastille-2.1.1-r1.ebuild stable for ppc
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> bastille-2.1.1-r2.ebuild:
   Marked ~amd64, closes #56483.

@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.24 2004/09/13 00:11:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.25 2004/10/05 02:58:10 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  conserver-8.1.4.ebuild, conserver-8.1.7.ebuild, conserver-8.1.8.ebuild:
+  Masked conserver-8.1.8.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  conserver-8.1.4.ebuild, conserver-8.1.7.ebuild:
+  Masked conserver-8.1.7.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  conserver-8.1.4.ebuild:
+  Masked conserver-8.1.4.ebuild stable for ppc
 
   13 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> conserver-8.1.9.ebuild:
   ~alpha keyword.

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/runset
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.9 2004/06/24 21:37:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.10 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> runset-1.6.ebuild:
+  Masked runset-1.6.ebuild stable for ppc
 
 *runset-1.6 (06 Jun 2004)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/lsat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.10 2004/06/24 21:31:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.11 2004/10/05 02:58:11 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lsat-0.8.8.ebuild,
+  lsat-0.9.0.ebuild:
+  Masked lsat-0.9.0.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lsat-0.8.8.ebuild:
+  Masked lsat-0.8.8.ebuild stable for ppc
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> lsat-0.9.0.ebuild :
   Stable on AMD64.
