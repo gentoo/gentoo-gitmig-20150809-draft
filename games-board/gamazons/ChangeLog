@@ -1,0 +1,10 @@
+# ChangeLog for games-board/gamazons
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gamazons/ChangeLog,v 1.1 2005/01/29 03:06:38 mr_bones_ Exp $
+
+*gamazons-0.83 (28 Jan 2005)
+
+  28 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +gamazons-0.83.ebuild:
+  initial commit - ebuild submitted by chkno@chkno.net via bug #77470
+
