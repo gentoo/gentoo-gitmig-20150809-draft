@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r3.ebuild,v 1.1 2004/11/12 20:38:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r4.ebuild,v 1.1 2004/11/19 23:17:23 plasmaroo Exp $
 
 ETYPE='sources'
 inherit kernel-2
@@ -16,6 +16,7 @@ UNIPATCH_LIST="
 	${DISTDIR}/linux-${OKV}-CAN-2004-0814.patch
 	${FILESDIR}/${PN}-2.6.7.cmdlineLeak.patch
 	${FILESDIR}/${P}.devPtmx.patch
+	${FILESDIR}/${P}.smbfs.patch
 	${FILESDIR}/${P}.binfmt_elf.patch"
 DESCRIPTION='Full sources for the Xbox Linux kernel'
 SRC_URI="${KERNEL_URI}
