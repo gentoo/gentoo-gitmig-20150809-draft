@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.40 2004/12/13 11:02:43 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.41 2005/01/04 12:43:19 eradicator Exp $
+
+  04 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  amarok-1.1.1.ebuild, amarok-1.2_beta2.ebuild:
+  Updating version on xine dependency per bug #70260.
 
   13 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -amarok-1.2_beta1.ebuild, amarok-1.2_beta2.ebuild:

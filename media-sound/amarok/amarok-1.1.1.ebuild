@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.12 2004/12/04 21:39:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.13 2005/01/04 12:43:19 eradicator Exp $
 
 IUSE="noamazon cjk xmms opengl xine arts gstreamer"
 
@@ -23,7 +23,7 @@ DEPEND="=media-libs/libvisual-0.1.6
 	arts? ( >=kde-base/arts-1.2 )
 	opengl? ( virtual/opengl )
 	xmms? ( >=media-sound/xmms-1.2 )
-	xine? ( >=media-libs/xine-lib-1_rc4 )
+	xine? ( >=media-libs/xine-lib-1_rc8 )
 	>=media-libs/tunepimp-0.3.0
 	>=dev-util/pkgconfig-0.9.0
 	>=media-libs/taglib-1.3
