@@ -1,9 +1,11 @@
 # ChangeLog for media-sound/xmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.1 2002/06/17 13:56:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.2 2002/09/11 15:23:56 karltk Exp $
 
 *xmp-2.0.5_pre3 (17 Jun 2002)
 
-  17 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xmp-2.0.5_pre3.ebuild files/digest-xmp-2.0.5_pre3 :
+  11 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xmp-2.0.5_pre3.ebuild :
+  It does not work with the 0.9.x ALSA series, so 0.5.x is required.
 
+  17 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xmp-2.0.5_pre3.ebuild files/digest-xmp-2.0.5_pre3 :
   Initial import.

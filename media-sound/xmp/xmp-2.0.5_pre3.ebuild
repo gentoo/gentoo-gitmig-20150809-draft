@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3.ebuild,v 1.2 2002/07/22 00:48:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3.ebuild,v 1.3 2002/09/11 15:23:56 karltk Exp $
 
 S="${WORKDIR}/${PN}-2.0.5-pre3"
 DESCRIPTION="Extended Module Player"
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 DEPEND="X? ( virtual/x11 )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
-	alsa? ( media-libs/alsa-lib )
+	alsa? ( =media-libs/alsa-lib-0.5* )
 	arts? ( kde-base/arts )
 	xmms? ( media-sound/xmms )"
 
