@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.15 2003/10/20 04:41:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.16 2003/12/16 17:41:51 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> kth-krb-1.2.2-r1.ebuild:
+  Added ~sparc keyword.
 
 *kth-krb-1.2.2-r1 (05 Oct 2003)
   
