@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.100 2004/09/12 07:16:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.101 2004/09/12 17:42:33 lv Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -63,6 +63,12 @@ get_libdir() {
 	# and of course, default to lib if CONF_LIBDIR isnt set
 	echo ${CONF_LIBDIR:=lib}
 }
+
+
+get_multilibdir() {
+	echo ${CONF_MULTILIBDIR:=lib32}
+}
+
 
 # Sometimes you need to override the value returned by get_libdir. A good
 # example of this is xorg-x11, where lib32 isnt a supported configuration,
