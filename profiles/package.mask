@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <naz@gentoo.org> (16 July 2003)
+# the cvs of gift is broken
+>=net-p2p/gift-cvs-0.10.0
+
 # <rac@gentoo.org> (15 July 2003)
 # emergency mask because of confirmed reports of compilation failure
 # see bug 24570
@@ -440,6 +444,40 @@ gnome-extra/gcalctool
 # gtkmm-addons is broken for gcc32
 x11-libs/gtkmm-addons
 
+<<<<<<< package.mask
+# <raker@gentoo.org> (25 Sep 2002)
+# version bump.  ssl and other fixes
+=net-mail/courier-imap-1.5.3
+# added choosable maildir/mbox support
+=net-mail/uw-imap-2001a-r3
+<<<<<<< package.mask
+# new ipv6 patch.  squashes ssl patch though.
+=sys-apps/ucspi-tcp-0.88-r4
+=======
+>>>>>>> 1.1966
+
+# <raker@gentoo.org> (23 Sep 2002)
+# masking libsndfile-1.0.0 due to API changes
+>=media-libs/libsndfile-1.0.0
+# adding libsndfile-1 compatible jack-audio-connection-kit
+>=media-sound/jack-audio-connection-kit-0.34.0-r2
+# adding libsndfile-1 compatible faac
+>=media-libs/faac-26102001-r1
+
+# <g2boojum@gentoo.org> (22 Sep 2002)
+# Mask perl-ldap while still semi-frozen
+dev-perl/perl-ldap
+
+# <lostlogic@gentoo.org> (21 Sep 2002)
+# Needed for lolo-sources-2.4.19.10_pre[1-5]
+=sys-apps/jfsutils-1.0.22
+
+# <satai@gentoo.org> (20 Sep 2002)
+# Too many problems.  Masking to fix.
+>app-text/tetex-1.0.7-r11
+
+=======
+>>>>>>> 1.2211
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
 =media-gfx/kimagemapeditor-0.9.5.1
@@ -659,6 +697,35 @@ x11-libs/gdkxft
 # masked for testing
 >=media-sound/ecasound-2.0.4
 
+<<<<<<< package.mask
+# stroke@gentoo.org 19 Aug 2002
+# Anjuta 1.0-beta1 (preview). masked for testing
+<<<<<<< package.mask
+>=dev-util/anjuta-0.9.9
+
+# naz@gentoo.org 23 Aug 2002
+# masked for testing
+=gnome-extra/mc-4.6.0_pre1
+=======
+>=dev-util/anjuta-0.9.99
+
+<<<<<<< package.mask
+<<<<<<< package.mask
+# prez@gentoo.org 29 Aug 2002
+# Does not build successfully in an ebuild (but builds just fine outside of one)
+# Needs more investigation as to why.
+dev-java/sun-j2sdk
+>>>>>>> 1.1387
+=======
+# jnelson@gentoo.org 6 Sep 2002
+# masking gramps-0.8.0 due to freeze
+=app-misc/gramps-0.8.0
+
+=======
+>>>>>>> 1.1779
+=======
+>>>>>>> 1.1790
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
+>>>>>>> 1.1724
