@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.62 2004/11/24 20:59:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.63 2004/11/25 13:27:22 axxo Exp $
+
+*blackdown-jdk-1.4.1-r1 (25 Nov 2004)
+
+  25 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +files/blackdown-jdk-1.4.1,
+  -files/blackdown-jdk-1.4.2_rc1-r1, +blackdown-jdk-1.4.1-r1.ebuild:
+  give sparc there jdk back, no longer installs the mozilla plugin, security
+  vuln #72221
 
   24 Nov 2004; Thomas Matthijs <axxo@gentoo.org> -files/blackdown-jdk-1.4.1,
   -files/blackdown-jdk-1.4.2, -blackdown-jdk-1.4.1.ebuild,
