@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/openag
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openag/ChangeLog,v 1.1 2002/04/26 11:09:55 seemant Exp $
+
+*openag-1.1.1 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> openag-1.1.1.ebuild
+  files/digest-openag-1.1.1 :
+
+  New package -- open source audiogalaxy command line client.
