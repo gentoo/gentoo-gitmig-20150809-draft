@@ -2,8 +2,8 @@ MD5 6b359ad3ed7fdab3951227d9f5018e15 openssl-0.9.7c.ebuild 4792
 MD5 69ad81d01cbeb155e1238e208018f7bd openssl-0.9.6k.ebuild 2601
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 f110bafc5ab22d7c5529adddca5c9312 openssl-0.9.7b-r3.ebuild 4790
-MD5 a51318d7bbb43f30206b5f782359dd97 ChangeLog 9186
-MD5 4227b7a2ac2c21b17f0c0c51dc5d6014 openssl-0.9.6k-r1.ebuild 3133
+MD5 fcc1fb6e625d77ba2445069374228aac ChangeLog 9185
+MD5 3b98a51d6ad3d2f89f0dfb772b17bb77 openssl-0.9.6k-r1.ebuild 3136
 MD5 9ec1d0cf71fb5fab0dfd0d8b409fcc9c openssl-0.9.7b.ebuild 3326
 MD5 e4af813471d470d25fb77231d324ad1c files/digest-openssl-0.9.6k 67
 MD5 a5a379391dfaaef98e4fe4198ff2ed2c files/openssl-0.9.6i-blinding.patch 1717
