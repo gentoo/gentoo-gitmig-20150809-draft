@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e7c558dd169c45bf0bed0317964ffa2 ChangeLog 546
-MD5 552cfb0ab38b9b399eb98483b8b266fa wmsound-0.9.5.ebuild 1126
+MD5 572daff455937ba257c0c60d632469d5 wmsound-0.9.5.ebuild 1135
+MD5 ac4c123fdd0b3d1bf53b67a164e2d239 ChangeLog 689
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 d04694a64e4326d5b21eaab7827c9c6c files/wmsound-ComplexProgramTargetNoMan.patch 304
-MD5 3bfb08591f212acd293b5f480afd4fab files/wmsound-config.patch 2466
-MD5 56668c80d9f0b2b99b5c9088016ed62a files/digest-wmsound-0.9.5 64
 MD5 07c8b3d33fbbbed1700c4515b5311721 files/wmsound-esd.patch 2799
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXUlhI7fK2cqeyXkRAmcDAKCKBTt1uDn0jSlGYiHA/iBVP9+TiQCfXEaj
-KVO/CefrXSNKJ0S8r0+kJoE=
-=6hTi
------END PGP SIGNATURE-----
+MD5 56668c80d9f0b2b99b5c9088016ed62a files/digest-wmsound-0.9.5 64
+MD5 3bfb08591f212acd293b5f480afd4fab files/wmsound-config.patch 2466
+MD5 d04694a64e4326d5b21eaab7827c9c6c files/wmsound-ComplexProgramTargetNoMan.patch 304
