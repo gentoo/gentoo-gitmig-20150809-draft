@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.6 2004/06/24 22:11:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.7 2004/06/30 02:36:03 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> erc-2.93.ebuild,
+  erc-3.0.ebuild, erc-4.0_rc2-r1.ebuild, erc-4.0_rc2.ebuild:
+  sync IUSE (missing)
 
 *erc-4.0_rc2-r1 (02 Nov 2003)
 
