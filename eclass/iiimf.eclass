@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.8 2004/09/14 10:56:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.9 2004/09/15 09:01:14 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -16,7 +16,7 @@ IMSDK_PV="r${PV//./_}"
 MY_PV="${IMSDK_PV/_pre/-svn}"
 MY_PV="${MY_PV/_p/-svn}"
 IMSDK_P="im-sdk-src-${MY_PV}"
-IMSDK="${IMSDK_P/-src/}}"
+IMSDK="${IMSDK_P/-src/}"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.openi18n.org/subgroups/im/IIIMF/"
