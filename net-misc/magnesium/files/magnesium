@@ -1,0 +1,3 @@
+#!/bin/sh
+export PYTHONPATH=${PYTHONPATH}:@MAGNESIUMPATH@
+exec /usr/lib/@MAGNESIUMPATH@/mg.py
