@@ -1,11 +1,14 @@
 # ChangeLog for media-libs/gdk-pixbuf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.21 2003/04/09 02:54:53 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.22 2003/07/04 05:33:20 gmsoft Exp $
 
   04 Feb 2003; Aron Griffis <agriffis@gentoo.org> gdk-pixbuf-0.22.0.ebuild :
   Mark stable on alpha
 
 *gdk-pixbuf-0.22.0 (22 Dec 2002)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> gdk-pixbuf-0.22.0.ebuild :
+  Added hppa to KEYWORDS.
 
   22 Dec 2002; foser <foser@gentoo.org> gdk-pixbuf-0.22.0.ebuild :
   New version, removed obsolete unpack hack
