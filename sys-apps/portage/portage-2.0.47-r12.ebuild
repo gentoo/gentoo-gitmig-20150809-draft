@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r12.ebuild,v 1.3 2003/03/29 18:01:27 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r12.ebuild,v 1.4 2003/03/30 01:06:56 carpaski Exp $
 
 IUSE="build"
 
@@ -257,3 +257,4 @@ pkg_postinst() {
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
 }
+

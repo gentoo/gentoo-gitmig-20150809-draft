@@ -1,5 +1,6 @@
 MD5 73094a2d75dca36817b40611589ea226 /files/portage-rescue-2.0.44-ppc.tbz2 168027
 MD5 6d52937c08dd84e08cc195f5bb9984e8 /files/portage-rescue-2.0.44-x86.tbz2 162695
+MD5 e2a623024faebb00c3d4120211535774 /files/repoman-headers.diff 1398
 MD5 c8ae76ad8a54697327ff0b6fe6d1b74b /files/README.RESCUE 811
-MD5 4848d03b4c027b03724f22a6e626a9d8 /portage-2.0.47-r12.ebuild 9033
+MD5 54534c15541b74bac874fa01b6751e7e /portage-2.0.47-r12.ebuild 9122
 MD5 96037531b02636b1f6839a5e096c3018 portage-2.0.47-r12.tar.bz2 192559
