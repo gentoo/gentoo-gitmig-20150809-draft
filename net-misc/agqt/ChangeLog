@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/agqt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/agqt/ChangeLog,v 1.1 2002/04/27 02:57:42 seemant Exp $
+
+*agqt-0.10 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> agqt-0.10.ebuild
+  files/digest-agqt-0.10 :
+
+  New audiogalaxy query tool.
