@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.24 2003/06/08 20:53:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.25 2003/06/22 20:18:42 kumba Exp $
+
+
+*gawk-3.1.2-r3 (27 Mar 2003)
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> gawk-3.1.2-r3.ebuild:
+  Changed ~sparc to sparc in KEYWORDS
+  Changed ~mips to mips in KEYWORDS
 
   08 Jun 2003; Brandon Low <lostlogic@gentoo.org> gawk-3.1.2-r3.ebuild:
   Mark unstable, see bug 21713 for reasons, will wait for 3.1.3 to have a new
@@ -15,8 +22,6 @@
 
   11 May 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.1-r2.ebuild :
   Mark stable for all, as next baselayout will need a gawk with filefuncs.
-
-*gawk-3.1.2-r3 (27 Mar 2003)
 
   26 Apr 2003; Christian Birchinger <joker@gentoo.org> gawk-3.1.2-r3.ebuild :
   Added stable sparc keyword
