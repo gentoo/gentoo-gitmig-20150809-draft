@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.4 2002/11/16 07:38:17 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.5 2002/12/02 17:57:05 drobbins Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -29,7 +29,7 @@ inherit kernel || die
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
-KEYWORDS="~x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 src_unpack() {
 	unpack ${A}
