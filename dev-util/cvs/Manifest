@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d6fa01ef0ee6aa5221f0efc4e2936cc9 ChangeLog 6035
+MD5 504659b7f29d8a79bb8c4509159f9b2f ChangeLog 6160
 MD5 216b9d22df9874321d9832a6c8bef55e cvs-1.11.15.ebuild 1059
-MD5 8ebae3cc7103880f378d0eb8770f4742 cvs-1.11.16-r1.ebuild 1544
-MD5 a473172b73b376c4709329cfb794448b cvs-1.11.16.ebuild 1059
+MD5 c9451866f669bd61aa99b8354db5237e cvs-1.11.16-r1.ebuild 1541
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
-MD5 a156ed2cb03477a919f3a5faa80cb2a4 files/cvspserver.xinetd.d 282
+MD5 412a726fbc97124ef10cf73634200b28 cvs-1.11.16.ebuild 1059
 MD5 9aa4157519644282981756acf68cf9bb files/digest-cvs-1.11.15 65
 MD5 6b80eecc7db14eb4380df9f56132a0ad files/digest-cvs-1.11.16 65
 MD5 8e39df136083e584b4b44ea89963a9f8 files/digest-cvs-1.11.16-r1 275
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAxPSSHTu7gpaalycRAp91AKCjfj8mISnmoOD8yVts+ZvMha8kCQCg6XjF
-0l2r5st3tjP7aNmDUW6ivF0=
-=oPli
------END PGP SIGNATURE-----
+MD5 a156ed2cb03477a919f3a5faa80cb2a4 files/cvspserver.xinetd.d 282
