@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.0.ebuild,v 1.1 2002/12/23 20:45:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.0.ebuild,v 1.2 2002/12/23 20:54:34 blizzy Exp $
 
 IUSE="ssl mysql sasl ldap ipv6"
 
@@ -137,6 +137,10 @@ src_install () {
 	doins ${S}/conf/{main,master}.cf ${FILESDIR}/saslpass
 	cd ${D}/etc/postfix
 	patch -p0 -N <${FILESDIR}/${PF}/main.cf.diff
+	mv main.cf main.cf.orig
+	sed <main.cf.orig >main.cf \
+		-e "s|/usr/share/doc/POSTFIX|/usr/share/doc/${PF}|"
+	chmod 644 main.cf
 	fperms 600 /etc/postfix/saslpass
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
