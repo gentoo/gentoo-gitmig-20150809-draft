@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/migrationtools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.5 2003/12/12 21:08:22 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.6 2004/03/30 07:56:26 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> migrationtools-44-r1.ebuild:
+  Adding amd64 keyword. Closing #43585.
 
   12 Dec 2003; Jason Wever <weeve@gentoo.org> migrationtools-44-r1.ebuild:
   Marked stable on sparc.

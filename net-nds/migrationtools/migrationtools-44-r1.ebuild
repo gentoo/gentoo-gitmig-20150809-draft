@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-44-r1.ebuild,v 1.6 2003/12/12 21:08:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-44-r1.ebuild,v 1.7 2004/03/30 07:56:26 aliz Exp $
 
 PN0=MigrationTools
 S=${WORKDIR}/${PN0}-${PV}
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.padl.com/pub/${PN0}-${PV}.tar.gz"
 HOMEPAGE="http://www.padl.com/OSS/MigrationTools.html"
 
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~amd64"
 LICENSE="as-is"
 
 DEPEND=""
