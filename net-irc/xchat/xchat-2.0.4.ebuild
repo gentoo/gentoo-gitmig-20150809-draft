@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.7 2003/09/04 12:38:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.8 2003/09/04 12:47:35 obz Exp $
 
 inherit eutils
 
@@ -12,16 +12,18 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
 IUSE="perl tcltk python ssl gtk mmx ipv6 nls"
+# Local use flag for the text frontend (bug #26427)
+IUSE="${IUSE} xchattext xchatnogtk"
 
 # Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
 if [ ${ARCH} = "sparc" ]
 then
-	replace-flags "-O3" "-O2"
+        replace-flags "-O3" "-O2"
 fi
 
 
 RDEPEND=">=dev-libs/glib-2.0.3
-	gtk? ( >=x11-libs/gtk+-2.0.3 )
+	!xchatnogtk ( >=x11-libs/gtk+-2.0.3 )
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	python? ( dev-lang/python )
@@ -35,9 +37,15 @@ src_compile() {
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
 	unset PYTHONPATH
-
+	
+	# test for local usage of xchatnogtk
+	local gtkconf 
+	use xchatnogtk \
+		&& gtkconf="--disable-gtkfe" \
+		|| gtkconf="--enable-gtkfe"
+	
 	econf \
-		`use_enable gtk gtkfe` \
+		${gtkconf} \
 		`use_enable ssl openssl` \
 		`use_enable perl` \
 		`use_enable python` \
@@ -45,10 +53,10 @@ src_compile() {
 		`use_enable mmx` \
 		`use_enable ipv6` \
 		`use_enable nls` \
-		--enable-textfe \
+		`use_enable xchattext textfe` \
 		--program-suffix=-2 \
 		|| die "Configure failed"
-
+	
 	MAKEOPTS="-j1" emake || die "Compile failed"
 }
 
@@ -60,21 +68,9 @@ src_install() {
 	einstall install || die "Install failed"
 
 	# install plugin development header
-	insinto /usr/include/xchat
+	insinto /usr/include/xchat	
 	doins src/common/xchat-plugin.h
 
 	dodoc AUTHORS COPYING ChangeLog README*
 }
 
-pkg_postinst( ) {
-
-	# warnings for people for who USE="gtk2 -gtk" doesnt behave as
-	# they expect, see bug #26427
-	if [ ! `use gtk` ]; then
-		echo ""
-		ewarn "If you wish to use the gtk2 frontend for xchat, please"
-		ewarn "USE=\"gtk\" emerge xchat"
-		echo ""
-	fi
-
-}
