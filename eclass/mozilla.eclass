@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.14 2004/09/15 20:21:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.15 2004/09/27 23:45:38 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -36,7 +36,7 @@ RDEPEND="virtual/x11
 		=dev-libs/glib-1.2*
 		=gnome-base/orbit-0* )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
-	>=net-www/mozilla-launcher-1.15"
+	>=net-www/mozilla-launcher-1.19"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
