@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-18e-r1.ebuild,v 1.2 2004/03/24 05:18:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/cmucl-source-18e-r1.ebuild,v 1.3 2004/05/09 14:22:44 dholm Exp $
 
 inherit common-lisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cmucl-source.html"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cl-asdf
