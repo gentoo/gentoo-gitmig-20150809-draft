@@ -1,6 +1,10 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.2 2002/06/12 19:19:11 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.3 2002/06/23 01:20:54 sandymac Exp $
+
+  22 Jun 2002; William McArthur <sandymac@gentoo.org> sendmail-8.12.4-r1.ebuild:
+
+  Fixed a type in the use ssl section, "-ssl" should have been "-lssl"
 
 *sendmail-8.12.4-r1 (12 June 2002)
 
