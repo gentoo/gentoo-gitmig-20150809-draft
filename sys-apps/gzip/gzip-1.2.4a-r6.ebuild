@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r6.ebuild,v 1.7 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r6.ebuild,v 1.8 2002/08/13 02:51:40 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU compressor"
@@ -19,13 +19,13 @@ src_unpack() {
 }
 
 src_compile() {
-    [ -z "`use nls`" ] && myconf="--disable-nls"
+	[ -z "`use nls`" ] && myconf="--disable-nls"
 	./configure --host=${CHOST} --prefix=/usr --exec-prefix=/ --mandir=/usr/share/man --infodir=/usr/share/info ${myconf} || die
 	emake || die
 }
 
 src_install() {
-    dodir /usr/bin /usr/share/man/man1
+	dodir /usr/bin /usr/share/man/man1
 	make prefix=${D}/usr exec_prefix=${D}/ mandir=${D}/usr/share/man/man1 infodir=${D}/usr/share/info install || die
 	cd ${D}/bin
 	for i in gzexe zforce zgrep zmore znew zcmp
@@ -52,7 +52,3 @@ src_install() {
 		rm -rf ${D}/usr
 	fi
 }
-
-
-
-
