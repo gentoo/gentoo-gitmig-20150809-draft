@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.12 2004/09/16 15:08:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.13 2004/12/29 00:09:40 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   fortune-mod-1.99.1.ebuild:
@@ -66,10 +69,10 @@
   19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
   Found the proper 'home' for fortune-mod
 
-  23 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
+  23 Aug 2002; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
   Added advisory about how enable offensive fortune.
 
-  20 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
+  20 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> fortune-mod-9708-r1.ebuild:
   Fixed problem with fortune-offensive. If you want it, need edit the
   ebuild and change $offensive= to $offensive=1
 
@@ -78,7 +81,7 @@
   19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
   Found the proper 'home' for fortune-mod
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> fortune-mod-9708.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> fortune-mod-9708.ebuild :
   Added LICENSE.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
