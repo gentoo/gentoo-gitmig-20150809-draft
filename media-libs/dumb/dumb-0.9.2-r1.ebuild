@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r1.ebuild,v 1.4 2004/03/01 16:06:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.2-r1.ebuild,v 1.5 2004/03/19 17:47:03 agriffis Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="IT/XM/S3M/MOD player library with click removal and IT filters"
 HOMEPAGE="http://dumb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dumb/${P}-fixed.tar.gz"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~alpha ~ia64"
 LICENSE="DUMB-0.9.2"
 SLOT="0"
 
