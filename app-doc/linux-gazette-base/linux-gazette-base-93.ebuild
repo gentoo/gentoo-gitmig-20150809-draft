@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-93.ebuild,v 1.1 2003/08/21 06:23:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-93.ebuild,v 1.2 2003/08/22 18:36:49 vapier Exp $
+
+# the SRC_URI always has the same file name ... make sure you
+# `rm ${DISTDIR}/lg-base.tar.gz` and make a new digest with
+# every version bump
 
 DESCRIPTION="Linux Gazette - common files"
 HOMEPAGE="http://www.linuxgazette.com/"
