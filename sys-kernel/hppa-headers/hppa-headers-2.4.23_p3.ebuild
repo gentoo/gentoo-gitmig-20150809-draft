@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.23_p3.ebuild,v 1.2 2003/12/05 21:47:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.23_p3.ebuild,v 1.3 2003/12/06 17:04:47 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-ETYPE="sources"
+ETYPE="headers"
 inherit kernel
 OKV="${PV/_p*/}"
 PATCH_LEVEL="${PV/${OKV}_p/}"
