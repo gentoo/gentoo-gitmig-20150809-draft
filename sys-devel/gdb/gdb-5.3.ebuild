@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.9 2003/05/19 22:50:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.3.ebuild,v 1.10 2003/05/26 21:40:02 taviso Exp $
 
 IUSE="nls objc"
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ppc ~sparc alpha hppa"
 DEPEND=">=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
 
-inherit flag-o-matic
+inherit flag-o-matic ccc
 replace-flags -O? -O2
 
 src_unpack() {
@@ -51,6 +51,8 @@ src_unpack() {
 		cd gdb/testsuite
 		autoconf || die
 	fi
+
+	is-ccc && hide-restrict-arr
 }
 
 src_compile() {
