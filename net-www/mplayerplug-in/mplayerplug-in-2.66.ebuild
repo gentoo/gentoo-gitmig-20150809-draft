@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.2 2004/06/25 01:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.3 2004/07/22 01:33:02 jbms Exp $
 
 inherit nsplugins
 
@@ -15,13 +15,28 @@ HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
 KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="gtk2"
 
-DEPEND=">=media-video/mplayer-0.92"
+DEPEND=">=media-video/mplayer-0.92
+	gtk2? (
+		>=x11-libs/gtk+-2.2.0
+		dev-libs/atk
+		>=dev-libs/glib-2.2.0
+		>=x11-libs/pango-1.2.1 )
+	!gtk2? (
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2* )"
 
 src_compile() {
 	local myconf
 	use x86 && myconf="${myconf} --with-gecko-sdk=${WORKDIR}/gecko-sdk"
+	if use gtk2; then
+		einfo Configuring to build using gtk2
+		myconf="${myconf} --enable-gtk2"
+	else
+		einfo Configuring to build using gtk1
+		myconf="${myconf} --disable-gtk2 --enable-gtk1"
+	fi
 	econf ${myconf} || die
 	emake || die
 }

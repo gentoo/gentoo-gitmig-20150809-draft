@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.25 2004/06/25 01:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.26 2004/07/22 01:33:02 jbms Exp $
+
+  18 Jul 2004; Jeremy Maitin-Shepard <jbms@gentoo.org>
+  mplayerplug-in-2.66.ebuild:
+  Added support for GTK1, so that the plugin works with mozilla browsers built
+  against GTK1
 
 *mplayerplug-in-2.66 (20 Jun 2004)
 
