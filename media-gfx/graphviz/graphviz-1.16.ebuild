@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.5 2004/12/14 10:17:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.16.ebuild,v 1.1 2004/12/14 10:17:47 robbat2 Exp $
 
 inherit gnuconfig eutils
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
-SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz
-		mirror://gentoo/graphviz-1.12-configure.ac.bz2"
+SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 
 LICENSE="as-is ATT"
 SLOT="0"
@@ -28,17 +27,6 @@ src_unpack() {
 
 	# Run gnuconfig_update on all arches, needed at least for mips
 	gnuconfig_update
-
-	# this next chunk will be obsolete when 1.13 comes out
-	# it's a buildfix so that graphviz will build when TckTk is NOT being used
-	# and is not installed.
-	epatch ${FILESDIR}/${P}-build.patch || die "Failed to patch"
-	einfo "Installing new configure.ac"
-	bzcat ${DISTDIR}/${P}-configure.ac.bz2 > ${S}/configure.ac || die "Failed to extract configure.ac"
-	einfo "Removing old configure.in"
-	rm -f ${S}/configure.in || die "Failed to remove old configure.in"
-	einfo "Running aclocal/automake/autoconf"
-	aclocal && automake && autoconf || die "Failed to aclocal/automake/autoconf"
 }
 
 src_compile() {
@@ -48,6 +36,7 @@ src_compile() {
 	# compile without tcltk support
 	use tcltk || myconf="${myconf} --without-tcl --without-tk"
 
+	myconf="${myconf} --enable-dynagraph"
 	econf ${myconf} || die "econf failed"
 
 	emake || die
@@ -56,9 +45,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS ChangeLog FAQ.txt INSTALL  MINTERMS.txt \
-		NEWS README
+	dodoc AUTHORS ChangeLog FAQ.txt INSTALL*  MINTERMS.txt \
+		NEWS README*
 
 	dohtml -r .
-	dodoc doc/*.pdf
+	dodoc doc/*.pdf doc/Dot.ref
 }
