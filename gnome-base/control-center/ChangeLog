@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.63 2004/05/14 04:03:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.64 2004/05/14 04:24:09 geoman Exp $
+
+  14 May 2004; Stephen P. Becker <geoman@gentoo.org> :
+  Stable on mips.
 
   14 May 2004; Stephen P. Becker <geoman@gentoo.org>
   control-center-1.4.0.5-r1.ebuild, control-center-2.4.0.ebuild:
