@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r1.ebuild,v 1.2 2004/10/16 18:15:46 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r1.ebuild,v 1.3 2004/11/03 11:53:46 axxo Exp $
 
 inherit java-pkg
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.2
+	app-arch/unzip
 	>=dev-java/ant-1.4
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.2
