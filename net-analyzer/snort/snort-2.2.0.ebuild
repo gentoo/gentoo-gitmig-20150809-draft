@@ -1,18 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.0.ebuild,v 1.5 2004/07/01 20:18:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.2.0.ebuild,v 1.1 2004/08/15 12:06:50 eldad Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
-SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
+SRC_URI="http://www.snort.org/dl/${P}.tar.gz
+	snortsam? ( http://www.snortsam.net/files/snort-plugin/snortsam-patch.tar.gz )"
 #	prelude? ( http://www.prelude-ids.org/download/releases/snort-prelude-reporting-patch-0.2.5.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc -alpha ~amd64"
-IUSE="ssl postgres mysql flexresp"
+IUSE="ssl postgres mysql flexresp selinux snortsam"
+
+# Local useflag snortsam: patch snort for use with snortsam package.
+
 # snort 2.1.x does not have prelude patches yet
 # IUSE="${IUSE} prelude"
 # snort 2.1.x has discontinued smb alert output, and no 3rd party have done them yet
@@ -37,7 +41,9 @@ RDEPEND="virtual/libc
 	>=net-libs/libpcap-0.6.2-r1
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )
+	selinux? ( sec-policy/selinux-snort )
+	snortsam? ( net-analyzer/snortsam )"
 #	samba? ( net-fs/samba )
 #	prelude? ( >=dev-libs/libprelude-0.8 )
 
@@ -45,13 +51,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	gnuconfig_update
+
 	#is this needed in 2.0? -Method
 	#epatch ${FILESDIR}/${P}-configure.patch
-	use flexresp && epatch ${FILESDIR}/${PV}-libnet-1.0.patch
+	use flexresp && epatch ${FILESDIR}/2.1.2-libnet-1.0.patch
 
-	epatch ${FILESDIR}/${P}-gcc3.patch
+	epatch ${FILESDIR}/snort-2.1.3-gcc3.patch
 
-	epatch ${FILESDIR}/snort-drop-calculation.diff
+	#epatch ${FILESDIR}/snort-drop-calculation.diff
 
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" etc/snort.conf
 
@@ -60,6 +68,12 @@ src_unpack() {
 	#	epatch ../${P/.1.0/.0.2}-prelude.diff
 	#	sh ./autogen.sh
 	#)
+
+	use snortsam && (
+		cd ..
+		./patchsnort.sh ${S}
+		cd ${S}
+	)
 }
 
 src_compile() {
