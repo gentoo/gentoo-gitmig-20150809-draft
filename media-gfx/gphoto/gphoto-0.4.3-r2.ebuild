@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r2.ebuild,v 1.9 2003/02/13 12:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto/gphoto-0.4.3-r2.ebuild,v 1.10 2003/02/22 16:34:29 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,11 @@ src_compile() {
 		--sysconfdir=/etc/gnome \
 		${myconf} || die
 	make clean || die
-	pmake || die
+
+	# This package doesn't always build when parallelized, changed
+	# from emake to make (22 Feb 2003 agriffis).
+	# See bug #14404
+	make || die
 }
 
 src_install() {
