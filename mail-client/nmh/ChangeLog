@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.11 2004/09/23 09:39:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.12 2004/09/25 22:25:49 weeve Exp $
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> nmh-1.1.ebuild:
+  Stable on sparc.
 
   23 Sep 2004; Andrej Kacian <ticho@gentoo.org> nmh-1.1.ebuild:
   Stable on x86.
