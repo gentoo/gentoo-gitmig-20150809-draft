@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.28 2003/06/02 23:11:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.29 2003/06/02 23:14:38 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -323,6 +323,9 @@ src_unpack() {
 		then
 			echo "#define HasMMXSupport	YES" >> config/cf/host.def
 			echo "#define MesaUseMMX YES" >> config/cf/host.def
+		else
+			echo "#define HasMMXSupport	NO" >> config/cf/host.def
+			echo "#define MesaUseMMX NO" >> config/cf/host.def
 		fi
 		if [ -n "`use 3dnow`" ]
 		then
@@ -336,6 +339,9 @@ src_unpack() {
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
+		else
+			echo "#define HasKatmaiSupport NO" >> config/cf/host.def
+			echo "#define MesaUseKatmai NO" >> config/cf/host.def
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)

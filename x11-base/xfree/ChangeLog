@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.141 2003/06/02 23:11:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.142 2003/06/02 23:14:38 seemant Exp $
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
+  did similar things for mmx and sse use flag disables, at Tom's suggestion in
+  the bug
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   3dnow support disabled if USE flag for it is disabled. Thanks to: Tom
