@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.2 2003/06/05 04:08:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.46.ebuild,v 1.3 2003/06/17 16:57:40 woodchip Exp $
 
 inherit eutils
 
@@ -28,10 +28,15 @@ src_unpack() {
 	cd ${S} || die
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
+	#avoid utf-8 charset problems
+	export LC_CTYPE=C
+
+	#The GNU people deprecated the -1 shortcut!
+	perl -pi -e 's|head -1|head -n 1|;' srclib/apr/build/buildcheck.sh
+
 	#give it the stamp
 	perl -pi -e 's|" PLATFORM "|Gentoo/Linux|;' server/core.c
-	#fix perl with perl! and avoid utf-8 charset problems
-	export LC_CTYPE=C
+	#fix perl with perl!
 	find -type f | xargs perl -pi -e \
 		"s|/usr/local/bin/perl|/usr/bin/perl|g; \
 		s|/usr/local/bin/perl5|/usr/bin/perl|g; \
@@ -42,7 +47,7 @@ src_unpack() {
 
 	#allow users to customize their data directory by setting the
 	#home directory of the 'apache' user elsewhere.
-	local datadir=`grep ^apache: /etc/passwd | cut -d: -f6`
+	local datadir=`getent passwd apache | cut -d: -f6`
 	if [ -z "$datadir" ]
 	then
 		datadir="/home/httpd"
@@ -176,7 +181,7 @@ src_install () {
 	perl -pi -e "s/(APU_BUILD_DIR=).*/\1\"\"/" ${D}/usr/bin/apu-config
 
 	#protect the suexec binary
-	local gid=`grep ^apache: /etc/group |cut -d: -f3`
+	local gid=`getent group apache |cut -d: -f3`
 	[ -z "${gid}" ] && gid=81
 	fowners root.${gid} /usr/sbin/suexec
 	fperms 4710 /usr/sbin/suexec
@@ -226,7 +231,7 @@ src_install () {
 	use ldap && doins ${FILESDIR}/2.0.40/46_mod_ldap.conf
 
 	#drop in a convenient link to the manual
-	local datadir=`grep ^apache: /etc/passwd | cut -d: -f6`
+	local datadir=`getent passwd apache | cut -d: -f6`
 	[ -z "$datadir" ] && datadir="/home/httpd"
 	dosym /usr/share/doc/${PF}/manual ${datadir}/htdocs/manual
 
