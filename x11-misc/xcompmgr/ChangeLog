@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.10 2004/11/06 00:06:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.11 2004/11/06 00:19:36 spyderous Exp $
+
+  05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Remove longdescription, it's wrong.
 
   05 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -xcompmgr-0.1_pre20040821-r1.ebuild, xcompmgr-1.1.ebuild:
