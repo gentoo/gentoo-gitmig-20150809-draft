@@ -1,0 +1,15 @@
+--- src/driver_alsa.c.org	2004-01-03 15:55:31.000000000 +0100
++++ src/driver_alsa.c	2004-01-03 15:56:19.000000000 +0100
+@@ -48,6 +48,12 @@
+ 
+ #ifdef DRIVER_ALSA
+ 
++#include <alsa/version.h>
++#if SND_LIB_MAJOR==1
++#define ALSA_PCM_OLD_HW_PARAMS_API
++#define ALSA_PCM_NEW_HW_PARAMS_API
++#endif
++
+ #include <alsa/asoundlib.h>
+ 
+ // shamelessly ripped from alsaplayer alsa-final driver:
