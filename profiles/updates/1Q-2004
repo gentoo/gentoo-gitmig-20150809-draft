@@ -27,3 +27,4 @@ move sys-apps/tpb app-laptop/tpb
 move sys-apps/acpi4asus app-laptop/acpi4asus
 move sys-apps/i8kutils app-laptop/i8kutils
 move sys-apps/radeontool app-laptop/radeontool
+move app-misc/toshiba-utils app-laptop/toshiba-utils
