@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a.ebuild,v 1.11 2002/10/16 09:50:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2a.ebuild,v 1.12 2002/10/25 17:16:58 wwoods Exp $
+
+inherit gnuconfig
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
@@ -15,6 +17,12 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	>=sys-apps/bash-2.05a-r3"
+
+src_unpack() {
+	unpack ${A}
+	# config.sub doesn't recognize alphaev67+, update it
+	use alpha && gnuconfig_update
+}
 
 src_compile() {
 
