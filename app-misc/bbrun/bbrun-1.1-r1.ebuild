@@ -1,6 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbrun/bbrun-1.1-r1.ebuild,v 1.4 2001/08/15 19:25:27 lordjoe Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

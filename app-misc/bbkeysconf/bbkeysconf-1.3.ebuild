@@ -1,6 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbkeysconf/bbkeysconf-1.3.ebuild,v 1.2 2001/08/15 19:23:16 lordjoe Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

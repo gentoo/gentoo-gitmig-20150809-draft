@@ -3,6 +3,7 @@
 # Author Gontran Zepeda <gontran@gontran.net>
 # Based on bbkeys*.ebuild by Joe Bormolini <lordjoe> and 
 # blackbox*.ebuild by Ben Lutgens <lamer>
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bbpager/bbpager-0.3.0.ebuild,v 1.2 2001/08/15 19:23:57 lordjoe Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
