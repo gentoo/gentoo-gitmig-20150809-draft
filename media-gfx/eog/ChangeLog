@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.83 2004/12/23 23:44:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.84 2004/12/29 00:30:34 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eog-2.8.2.ebuild:
   Stable on alpha.
@@ -53,7 +56,7 @@
   Gnome 2.8 release
   Fix deps
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> eog-2.6.1.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eog-2.6.1.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> eog-2.6.1.ebuild:
@@ -68,7 +71,7 @@
   28 Jul 2004; Tom Gall <tgall@gentoo.org> eog-2.6.1.ebuild:
   stable on ppc64, bug #58191
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> eog-2.6.0.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eog-2.6.0.ebuild:
   Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> eog-2.6.0.ebuild:

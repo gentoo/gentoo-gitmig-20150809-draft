@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.31 2004/10/19 15:34:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.32 2004/12/29 00:33:00 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gnuplot-4.0-r1.ebuild:
   Support for emacs. Thanks to P.L.Hayes <paul@wolfbone.ath.cx>; bug #66765.
@@ -38,7 +41,7 @@
   files/header-order.patch:
   Added a patch for bug #49263 and corrected the header.
 
-  05 May 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> gnuplot-3.8j.ebuild:
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnuplot-3.8j.ebuild:
   Stable on alpha.
 
 *gnuplot-4.0 (27 Apr 2004)

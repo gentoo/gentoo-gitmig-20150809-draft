@@ -1,11 +1,14 @@
 # ChangeLog for media-gfx/cthumb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.9 2004/10/13 20:59:56 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cthumb/ChangeLog,v 1.10 2004/12/29 00:29:39 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> cthumb-4.2.ebuild:
   Marked ~amd64, see bug 64361.
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> cthumb-4.2.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cthumb-4.2.ebuild:
   Stable on alpha.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.9 2004/12/23 13:50:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.10 2004/12/29 00:37:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Hanno Boeck <hanno@gentoo.org> skencil-0.6.16.ebuild:
   Added pyxml to dependencies.
@@ -9,7 +12,7 @@
   skencil-0.6.16_pre3.ebuild:
   HOMEPAGE update thanks to: James Kyte <james.kyte@gmail.com> in bug #67452
 
-  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> skencil-0.6.16.ebuild,
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> skencil-0.6.16.ebuild,
   skencil-0.6.16_pre3.ebuild:
   dev-python/Imaging renamed to dev-python/imaging.
 

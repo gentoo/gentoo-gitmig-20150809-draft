@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.16 2004/12/16 09:46:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.17 2004/12/29 00:38:21 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> xfig-3.2.4-r2.ebuild:
   Stable on ppc64
@@ -18,7 +21,7 @@
   02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +xfig-3.2.4-r2.ebuild:
   Added shapepatch. Thanks to Geoffrey <geoffrey@andrews.edu>, see bug #20877.
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xfig-3.2.4-r1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xfig-3.2.4-r1.ebuild:
   Stable on alpha.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> xfig-3.2.4-r1.ebuild:
