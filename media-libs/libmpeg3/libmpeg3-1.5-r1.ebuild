@@ -1,25 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.16 2003/07/18 05:12:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.17 2003/07/26 22:33:10 vapier Exp $
 
 inherit flag-o-matic
 
-IUSE=""
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="An mpeg library for linux"
-SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
 HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
+SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~alpha hppa"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 RDEPEND="sys-libs/zlib 
 	media-libs/jpeg"
-
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
+
+S=${WORKDIR}/${PN}
 
 filter-flags -fPIC
 filter-flags -fno-common
@@ -27,7 +25,6 @@ filter-flags -fno-common
 [ $ARCH = hppa ] && append-flags -fPIC
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -38,13 +35,10 @@ src_unpack() {
 }
 
 src_compile() {
-	
-	export CFLAGS=${CFLAGS}
-	make ${myconf} || die
+	make || die
 }
 
-src_install () {
-
+src_install() {
 	# This patch patches the .h files that get installed into /usr/include
 	# to show the correct include syntax '<>' instead of '""'  This patch
 	# was also generated using info from SF's src.rpm
@@ -60,5 +54,4 @@ src_install () {
 	dolib.a ${CHOST%%-*}/libmpeg3.a
 	
 	dohtml -r docs
-
 }
