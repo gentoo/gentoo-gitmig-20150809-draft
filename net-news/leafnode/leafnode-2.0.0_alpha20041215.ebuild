@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041215.ebuild,v 1.1 2004/12/18 01:25:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041215.ebuild,v 1.2 2004/12/19 01:23:15 swegener Exp $
+
+inherit flag-o-matic
 
 MY_P=${P/_/.}a
 
@@ -19,6 +21,8 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
+	append-ldflags -Wl,-z,now
+
 	econf \
 		--sysconfdir=/etc/leafnode \
 		--with-runas-user=news \
@@ -32,35 +36,34 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	# remove the spool dirs -- put them back in during pkg_postinst, so that
-	# they don't get removed during an unmerge or upgrade
 	rm -rf ${D}/var/spool
-
-	# add .keep file to /var/lock/news to avoid ebuild to ignore the empty dir
 	keepdir /var/lock/news
-	# ... and keep texpire from complaining about missing dir
-	keepdir /etc/leafnode/local.groups
+
+	insinto /etc/leafnode
+	doins ${FILESDIR}/{local.groups,moderators} || die "doins failed"
 
 	insinto /etc/xinetd.d
-	newins ${FILESDIR}/leafnode.xinetd leafnode-nntp
+	newins ${FILESDIR}/leafnode.xinetd leafnode-nntp || die "newins failed"
 
 	exeinto /etc/cron.hourly
-	doexe ${FILESDIR}/fetchnews.cron
+	doexe ${FILESDIR}/fetchnews.cron || die "doexe failed"
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/texpire.cron
+	doexe ${FILESDIR}/texpire.cron || die "doexe failed"
 
 	dodoc \
 		AUTHORS COPYING* CREDITS ChangeLog DEBUGGING ENVIRONMENT FAQ \
-		INSTALL NEWS TODO README README_FIRST UPDATING
-	dohtml README.html
+		INSTALL NEWS TODO README README_FIRST UPDATING || die "dodoc failed"
+	dohtml README.html || die "dohtml failed"
 }
 
 pkg_postinst() {
-	dodir ${ROOT}/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
-	dodir ${ROOT}/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
-	chown -R news:news ${ROOT}/var/spool/news
+	mkdir -p ${ROOT}/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
+	mkdir -p ${ROOT}/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
 
-	zcat ${ROOT}/usr/share/doc/${PF}/README_FIRST.gz | while read line ;
+	chown -R news:news ${ROOT}/var/spool/news
+	find ${ROOT}/var/spool/news -type d -exec chmod 02775 {} \;
+
+	zcat ${ROOT}/usr/share/doc/${PF}/README_FIRST.gz | while read line
 	do
 		einfo $line
 	done
