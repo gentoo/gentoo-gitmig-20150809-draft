@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.4 2005/02/11 16:33:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta1-r1.ebuild,v 1.5 2005/02/11 16:38:43 caleb Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -18,18 +18,7 @@ $(deprange $PV $MAXKDEVER kde-base/knewsticker-scripts)
 $(deprange $PV $MAXKDEVER kde-base/ksig)
 $(deprange $PV $MAXKDEVER kde-base/vimpart)
 $(deprange $PV $MAXKDEVER kde-base/kaddressbook-plugins)
-$(deprange $PV $MAXKDEVER kde-base/kate-openheader)
-$(deprange $PV $MAXKDEVER kde-base/kate-snippets)
-$(deprange $PV $MAXKDEVER kde-base/kate-textfilter)
-$(deprange $PV $MAXKDEVER kde-base/kate-xmlcheck)
-$(deprange $PV $MAXKDEVER kde-base/kate-xmltools)
-$(deprange $PV $MAXKDEVER kde-base/kate-scripts)
-$(deprange $PV $MAXKDEVER kde-base/kate-htmltools)
-$(deprange $PV $MAXKDEVER kde-base/kate-modeline)
-$(deprange $PV $MAXKDEVER kde-base/kate-kpybrowser)
-$(deprange $PV $MAXKDEVER kde-base/kate-cppsymbolviewer)
-$(deprange $PV $MAXKDEVER kde-base/kate-filelistloader)
-$(deprange $PV $MAXKDEVER kde-base/kate-tabbarextension)
+$(deprange $PV $MAXKDEVER kde-base/kate-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kicker-applets)
 $(deprange $PV $MAXKDEVER kde-base/kdeaddons-kfile-plugins)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-akregator)
@@ -78,10 +67,5 @@ $(deprange $PV $MAXKDEVER kde-base/noatun-oblique)
 # the below are disabled from compialtion by upstream. ebuilds exist, but the software
 # likely just doesn't work.
 BROKEN="
-$(deprange $PV $MAXKDEVER kde-base/kate-filetemplates)
-$(deprange $PV $MAXKDEVER kde-base/kate-helloworld)
-$(deprange $PV $MAXKDEVER kde-base/kate-insertcommand)
-$(deprange $PV $MAXKDEVER kde-base/kate-kjswrapper)
-$(deprange $PV $MAXKDEVER kde-base/kate-make)
 sdl? ( $(deprange $PV $MAXKDEVER kde-base/noatun-nexscope) )
 "
