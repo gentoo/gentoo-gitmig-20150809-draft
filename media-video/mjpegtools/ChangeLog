@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.22 2003/03/01 14:48:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.23 2003/04/29 21:08:33 mholzer Exp $
 
 *mjpegtools-1.6.1 (09 Feb 2003)
 
@@ -9,6 +9,9 @@
   Version bumped. Submitted by mathewalexander@surewest.net in #10970.
 
 *mjpegtools-1.6.0-r7 (27 Dec 2002)
+
+  29 Apr 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7.ebuild:
+  Adding filtering. Closes #16238.
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> mjpegtools-1.6.0-r7.ebuild:
   Added ~sparc to keywords.
