@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.76 2004/12/11 10:24:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.77 2004/12/19 06:39:01 obz Exp $
+
+  19 Dec 2004; Mike Gardiner <obz@gentoo.org> ggv-2.8.1.ebuild:
+  Keyworded x86 and ppc for GNOME 2.8.1
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ggv-2.8.0.ebuild:
   Stable on alpha.
