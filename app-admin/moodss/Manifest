@@ -1,6 +1,16 @@
-MD5 2e91cad31afaa05096268d016811abff moodss-19.0.ebuild 933
-MD5 d0b207afe03d78aa032dd755f011d4fe moodss-18.1.ebuild 886
-MD5 cca68b0d7af199a1ebb18310ae8f077a ChangeLog 424
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aadcbfe8ebe5e3537d489ae2c9f314f3 ChangeLog 519
+MD5 e62aa81262c659549de72751b65d2999 moodss-18.1.ebuild 884
+MD5 f4456637a9f1fc3e244e0674028908ca moodss-19.0.ebuild 933
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 635752da6123bab1f81e0439dc8c6bf6 files/digest-moodss-18.1 65
 MD5 b558ac9fbea7a0127341e2d7b08fb814 files/digest-moodss-19.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPDXI7fK2cqeyXkRAsXDAKC1VaF6viHYehZnhPms02M/HJ/0QACg576E
+Jh9mD3oIlk4ecN6lkW/nrYw=
+=zn6x
+-----END PGP SIGNATURE-----
