@@ -1,9 +1,0 @@
-# ChangeLog for sys-apps/nettrom
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nettrom/ChangeLog,v 1.1 2003/02/24 21:22:07 zwelch Exp $
-
-*nettrom-2.3.3 (23 Feb 2003)
-
-  23 Feb 2003; Zach Welch <zwelch@gentoo.org> nettrom-2.3.3.ebuild files/digest-nettrom-2.3.3 :
-  Add new ebuild for Netwinder bootloader
-
