@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.8 2003/07/13 11:30:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.9 2003/12/06 21:30:45 lanius Exp $
+
+  06 Dec 2003; Heinrich Wendel <lanius@gentoo.org> nagios-nrpe-1.8-r1.ebuild:
+  bug 34355
 
 *nagios-nrpe-1.8-r1	(17 Jun 2003)
   17 Jun 2003; Dean Bailey <alron@gentoo.org> nagios-nrpe-1.8-r1 :
