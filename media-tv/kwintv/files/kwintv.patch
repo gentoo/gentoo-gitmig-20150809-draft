@@ -1,0 +1,20 @@
+===================================================================
+RCS file: /home2/webcvs/mirror/kdenonbeta/kwintv/kwintv/wintvstreamview.cpp,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -p -r1.4 -r1.5
+--- kdenonbeta/kwintv/kwintv/wintvstreamview.cpp	2002/03/01 08:18:30	1.4
++++ kdenonbeta/kwintv/kwintv/wintvstreamview.cpp	2002/04/12 12:12:22	1.5
+@@ -61,10 +61,10 @@ wintvstreamview::wintvstreamview
+ (
+         rcfile * _rc,
+ 	QWidget* parent,
+-	const char* name
++	const char* _name
+ )
+ 	:
+-	wintvstreamviewData( parent, name )
++	wintvstreamviewData( parent, _name )
+ {
+   int i,p;
+   int px,py;
