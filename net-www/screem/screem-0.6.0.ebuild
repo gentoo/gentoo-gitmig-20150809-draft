@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.7 2003/09/06 02:05:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.8 2004/02/17 00:45:29 mr_bones_ Exp $
 
 IUSE="ssl zlib"
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/libgnome-2.0.2
-	>=gnome/base/libgnomeui-2.0.2
+	>=gnome-base/libgnomeui-2.0.2
 	>=dev-libs/libxml2-2.4.3
 	>=gnome-base/libglade-1.99.2
 	>=gnome-base/gconf-1.2.1
