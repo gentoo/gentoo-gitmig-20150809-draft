@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.2 2003/03/02 19:27:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.ebuild,v 1.3 2003/03/05 18:39:54 azarah Exp $
 
 inherit libtool flag-o-matic
 
@@ -26,7 +26,7 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=dev-libs/lzo-1.08
 	>=media-libs/libfame-0.9.0
 	>=media-gfx/imagemagick-5.4.9.0
-	=media-libs/netpbm-9.12*
+	media-libs/netpbm
 	X? ( virtual/x11 )
 	avi? (	>=media-video/avifile-0.7.25 )
 	mpeg? ( media-libs/libmpeg3 )
@@ -34,11 +34,25 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	sdl? ( media-libs/libsdl )
 	quicktime? ( media-libs/quicktime4linux media-libs/openquicktime )"
 
+src_unpack() {
+	unpack ${A}
+
+	if has_version  '>=media-libs/netpbm-9.13'
+	then
+		einfo "New netbpm (>9.12)..."
+		cp ${S}/contrib/subrip/Makefile ${S}/contrib/subrip/Makefile.orig
+		sed -e 's:-lppm:-lnetpbm:' \
+			${S}/contrib/subrip/Makefile.orig > ${S}/contrib/subrip/Makefile
+	else
+		einfo "Old netbpm (<=9.12)..."
+	fi
+}
+
 src_compile() {
 	# fix invalid paths in .la files of plugins
 	elibtoolize
 
-	local myconf
+	local myconf=
 	myconf="--with-dvdread"
 
 	use mmx \

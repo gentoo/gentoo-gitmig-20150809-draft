@@ -1,8 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.30 2003/03/02 19:27:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.31 2003/03/05 18:39:54 azarah Exp $
 
 *transcode-0.6.3 (24 Feb 2003)
+
+  05 Mar 2003; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.3.ebuild :
+  Get to work with latest netpbm (10.*0).
 
   02 Mar 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.ebuild :
   Marked as stable.
