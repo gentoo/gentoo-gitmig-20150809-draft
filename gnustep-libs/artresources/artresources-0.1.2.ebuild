@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.7 2004/11/23 20:37:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.8 2004/12/13 23:08:49 fafhrd Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="GNUstep ArtResources library for GNUstep Backend library"
 
 SRC_URI="http://w1.423.telia.com/~u42308495/alex/backart/ArtResources-${PV}.tar.bz2"
 HOMEPAGE="http://w1.423.telia.com/~u42308495/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha amd64"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
@@ -31,5 +31,6 @@ src_install() {
 	dodir $(egnustep_system_root)/Library/Fonts
 	insinto $(egnustep_system_root)/Library/Fonts
 	cp -a *.nfont ${D}$(egnustep_system_root)/Library/Fonts
+	chown -R root:root ${D}$(egnustep_system_root)/Library/Fonts
 }
 
