@@ -1,0 +1,11 @@
+# ChangeLog for media-radio/xlog
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.1 2004/06/28 01:18:43 killsoft Exp $
+
+*xlog-0.9.6 (27 Jun 2004)
+
+  27 Jun 2004; <killsoft@gentoo.org> +metadata.xml, +xlog-0.9.6.ebuild:
+  New ebuild.
+  Thanks to Steven Harms for the initial ebuild.
+  Closes bug 49456
+
