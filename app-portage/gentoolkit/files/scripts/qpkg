@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.6 2003/11/02 14:26:02 mholzer Exp $
-ID='$Id: qpkg,v 1.6 2003/11/02 14:26:02 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.7 2003/11/30 20:26:55 genone Exp $
+ID='$Id: qpkg,v 1.7 2003/11/30 20:26:55 genone Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -233,7 +233,7 @@ if [ "${grepmask}" ]; then
 fi
 
 	#First dig out the list of packages with duplicates
-	find /var/db/pkg -iname "*${arg}*.ebuild" 2> /dev/null > /tmp/qpkg.lst
+	find /var/db/pkg/ -iname "*${arg}*.ebuild" 2> /dev/null > /tmp/qpkg.lst
 	dups=`cat /tmp/qpkg.lst | cut -f7 -d/ |
 		sed -e 's:\.ebuild$::; s:-r[0-9]*$::; s:-[^-]*$::; /^$/d' |
 		sort | 

@@ -133,7 +133,7 @@ X="\([^/]*\)"
 if [ ${verb} ];then
 	echo -e "${CY}Retrieving currently merged packages.${NO}"
 fi
-find /var/db/pkg -name '*.ebuild' | \
+find /var/db/pkg/ -name '*.ebuild' | \
 	sed -e "s:/var/db/pkg/::" \
 		-e "s:${X}/${X}/${X}:\1/\2:" | \
 	sort -u >> ${tmp}/current
@@ -173,7 +173,7 @@ if [ ${verb} ]; then
 fi
 
 cat ${tmp}/current | grep -f ${tmp}/world | sort > ${tmp}/world.inst
-find /usr/portage ${PORTDIR_OVERLAY} -iname '*.ebuild' | \
+find /usr/portage/ ${PORTDIR_OVERLAY} -iname '*.ebuild' | \
 	cut -f4,6 -d/ | sed -e 's:\.ebuild::' > ${tmp}/ebuilds
 grep -xf ${tmp}/world.inst ${tmp}/ebuilds >> ${tmp}/world.new
 
