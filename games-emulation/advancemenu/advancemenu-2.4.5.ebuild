@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.1.ebuild,v 1.2 2005/01/31 05:16:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.5.ebuild,v 1.1 2005/01/31 05:16:37 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -10,26 +10,29 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-IUSE="alsa debug expat fbcon oss sdl slang static svga zlib"
+KEYWORDS="~ppc ~x86"
+IUSE="alsa debug expat fbcon ncurses oss sdl slang static svga truetype zlib"
 
 RDEPEND="virtual/libc
 	games-emulation/advancemame
 	alsa? ( media-libs/alsa-lib )
 	expat? ( dev-libs/expat )
+	ncurses? ( sys-libs/ncurses )
 	sdl? ( media-libs/libsdl )
 	slang? ( sys-libs/slang )
 	svga? ( >=media-libs/svgalib-1.9 )
-	x86? ( >=dev-lang/nasm-0.98 )
+	truetype? ( >=media-libs/freetype-2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
+	x86? ( >=dev-lang/nasm-0.98 )
 	fbcon? ( virtual/os-headers )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	ln -s $(which nasm) "${T}/${CHOST}-nasm"
+	cd "${S}"
+	use x86 && ln -s $(which nasm) "${T}/${CHOST}-nasm"
 	use sdl && ln -s $(which sdl-config) "${T}/${CHOST}-sdl-config"
+	use truetype && ln -s $(which freetype-config) "${T}/${CHOST}-freetype-config"
 }
 
 src_compile() {
@@ -39,6 +42,8 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable expat) \
 		$(use_enable fbcon fb) \
+		$(use_enable ncurses) \
+		$(use_enable truetype freetype) \
 		$(use_enable oss) \
 		$(use_enable sdl) \
 		$(use_enable slang) \
@@ -52,9 +57,9 @@ src_compile() {
 
 src_install() {
 	dogamesbin advmenu advcfg advv || die "dogamesbin failed"
-	dodoc HISTORY README RELEASE obj/doc/*.txt
-	doman obj/doc/*.1
-	dohtml obj/doc/*.html
+	dodoc HISTORY README RELEASE doc/*.txt
+	doman doc/*.1
+	dohtml doc/*.html
 	prepgamesdirs
 }
 
