@@ -3,7 +3,7 @@ MD5 b24de60c1eeda6be9a4e4d17a06191ce kdegames-2.2.2-r1.ebuild 487
 MD5 2df21a42b3519b94e7502ddefbee32c5 kdegames-3.0.4.ebuild 311
 MD5 e2cfb99a87ffd63e60cbc7645f0cc294 kdegames-3.0.5b.ebuild 360
 MD5 44bfb5d49818228b019239ed26618239 kdegames-3.1.1.ebuild 1050
-MD5 58bce298e845520866b102ac5b84e620 kdegames-3.1.2.ebuild 1058
+MD5 eea0e25827363563bd246bc9a85764ec kdegames-3.1.2.ebuild 1061
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 245411bbbf6ddc4fe9698b192374f69f files/digest-kdegames-2.2.2-r1 135
 MD5 73a3b61ff37f70ff995d3eaf9ae3e7d5 files/digest-kdegames-3.0.4 68
