@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.2 2004/02/20 06:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.36.2.ebuild,v 1.3 2004/06/03 19:35:22 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -70,7 +70,7 @@ src_install() {
 
 	insinto /usr/share/icons
 	doins ${WORKDIR}/*.png
-	if [ `use kde` ] ; then
+	if use kde ; then
 		insinto /usr/share/applnk/Games
 		doins ${FILESDIR}/Raine.desktop
 	fi
