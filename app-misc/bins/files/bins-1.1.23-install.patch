@@ -1,0 +1,74 @@
+--- install.sh.orig	2003-12-21 23:44:07.361074109 -0800
++++ install.sh	2003-12-21 23:48:53.443159629 -0800
+@@ -20,11 +20,12 @@
+ PREFIX="${PREFIX:-/usr/local}"
+ RC="${RC:-/etc/bins}"
+ 
++SHARE="${PREFIX}/share"
+ DESTDIR=`echo "$DESTDIR"|sed 's%/$%%'`
+ PREFIX=$DESTDIR/`echo "$PREFIX"|sed 's%^/%%'`
+ PREFIX=`echo "$PREFIX"|sed 's%/$%%'`
+-RC=$DESTDIR/`echo "$RC"|sed 's%^/%%'`
+-RC=`echo "$RC"|sed 's%/$%%'`
++DESTRC=$DESTDIR/`echo "$RC"|sed 's%^/%%'`
++DESTRC=`echo "$DESTRC"|sed 's%/$%%'`
+ 
+ BIN="$PREFIX/bin"
+ SHARE="$PREFIX/share"
+@@ -54,7 +55,7 @@
+ Press Enter to go on or Crtl-C to stop now...
+ !EoF
+ 
+-read dummy
++#read dummy
+ 
+ install_binaries()
+ {
+@@ -79,31 +80,31 @@
+ 
+ install_config()
+ {
+-  mkdir -p $RC 2>/dev/null || true
+-  if [ -w $RC ]; then
++  mkdir -p $DESTRC 2>/dev/null || true
++  if [ -w $DESTRC ]; then
+     echo "Installing configuration file in $RC"
+-    cp binsrc $RC
++    cp binsrc $DESTRC
+     echo "Installing default HTML templates in $RC/templates.default"
+-    if [ ! -d $RC/templates.default ] ; then
+-      mkdir $RC/templates.default
++    if [ ! -d $DESTRC/templates.default ] ; then
++      mkdir $DESTRC/templates.default
+     fi
+-    cp templates/*.html $RC/templates.default
++    cp templates/*.html $DESTRC/templates.default
+     echo "Installing joi HTML templates in $RC/templates.joi"
+-    if [ ! -d $RC/templates.joi ] ; then
+-      mkdir $RC/templates.joi
++    if [ ! -d $DESTRC/templates.joi ] ; then
++      mkdir $DESTRC/templates.joi
+     fi
+-    cp templates.joi/*.html $RC/templates.joi
+-    cp -R templates.joi/static $RC/templates.joi
++    cp templates.joi/*.html $DESTRC/templates.joi
++    cp -R templates.joi/static $DESTRC/templates.joi
+     echo "Installing satyap HTML templates in $RC/templates.satyap"
+-    if [ ! -d $RC/templates.satyap ] ; then
+-      mkdir $RC/templates.satyap
++    if [ ! -d $DESTRC/templates.satyap ] ; then
++      mkdir $DESTRC/templates.satyap
+     fi
+-    cp templates.satyap/*.html $RC/templates.satyap
+-    cp -R templates.satyap/static $RC/templates.satyap
+-    chmod -R a+r $RC/*
++    cp templates.satyap/*.html $DESTRC/templates.satyap
++    cp -R templates.satyap/static $DESTRC/templates.satyap
++    chmod -R a+r $DESTRC/*
+     return 0
+   else
+-    echo "Cannot write to $RC."
++    echo "Cannot write to $DESTRC."
+     return 1
+   fi
+ }
