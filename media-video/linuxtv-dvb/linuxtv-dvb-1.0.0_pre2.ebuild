@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.2 2003/03/06 19:31:44 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2.ebuild,v 1.3 2003/03/08 17:23:29 lordvan Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -43,6 +43,16 @@ src_install() {
     dodir /usr/share/doc/${P}/test
     insinto /usr/share/doc/${P}/test
     doins ${S}/apps/test/*
+
+    # install headers
+    dodir /usr/include/linux
+    insinto /usr/include/linux
+    doins ${S}/include/linux/em8300.h
+
+    dodir /usr/include/linux/dvb
+    insinto /usr/include/linux/dvb
+    doins ${S}/include/linux/dvb/*.h
+
 
     # install docs
     dodoc ${S}/doc/*
