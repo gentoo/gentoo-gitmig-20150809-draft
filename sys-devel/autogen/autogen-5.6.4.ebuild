@@ -1,6 +1,6 @@
-# Copyright 2004-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.6.4.ebuild,v 1.2 2004/12/08 21:23:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.6.4.ebuild,v 1.3 2004/12/09 21:37:38 mr_bones_ Exp $
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
