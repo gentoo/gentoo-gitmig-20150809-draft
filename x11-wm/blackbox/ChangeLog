@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.26 2003/10/21 23:07:17 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.27 2003/11/11 23:47:27 tseng Exp $
+
+  11 Nov 2003; Brandon Hale <tseng@gentoo.org> blackbox-0.65.0-r2.ebuild:
+  Disabling NLS until it becomes slightly less than horribly broken upstream.
 
   11 Oct 2003; Joel Hill <hillster@gentoo.org> blackbox-0.65.0-r2.ebuild:
   typo, closes #30890
