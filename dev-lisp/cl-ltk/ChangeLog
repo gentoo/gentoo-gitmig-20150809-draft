@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ltk
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ltk/ChangeLog,v 1.4 2004/09/04 20:41:11 mkennedy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ltk/ChangeLog,v 1.5 2005/02/03 00:01:16 mkennedy Exp $
+
+*cl-ltk-0.8.7 (02 Feb 2005)
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-ltk-0.8.7.ebuild:
+  New upstream version
 
 *cl-ltk-0.8.6 (04 Sep 2004)
 
