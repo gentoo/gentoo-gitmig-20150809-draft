@@ -1,5 +1,15 @@
-MD5 2a3c68c007b472b9b229d0d3e98bb6d1 ChangeLog 890
-MD5 c2489c90a356a3f12a90e354732afa3b towitoko-2.0.7.ebuild 673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9a555c5e37804389bb468313251bf4b ChangeLog 984
 MD5 dd8ae1acff98a9218a99bc4e73db4596 towitoko-2.0.7-r1.ebuild 1000
+MD5 c2489c90a356a3f12a90e354732afa3b towitoko-2.0.7.ebuild 673
 MD5 81881a4cebffc91702e0833113649970 files/digest-towitoko-2.0.7 66
 MD5 81881a4cebffc91702e0833113649970 files/digest-towitoko-2.0.7-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0e/I1lqEGTUzyQRAoC4AKDHO0RRsdwSGWhU9unbaFrgFCpuPwCgyVYt
+rX5ysUtLPV1jSXSQb2G979M=
+=y2tb
+-----END PGP SIGNATURE-----

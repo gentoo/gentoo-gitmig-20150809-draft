@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6c02c6d59663e4ed539ced3fa634220 ChangeLog 1180
 MD5 4c43d40ab10cc9b3fa3d0777b8a0d6ac tdfsb-0.0.7.ebuild 698
-MD5 49c4e685469e38869de90c8f0ba6b1ab ChangeLog 1243
 MD5 54cec60b414fbe6ae6b06b92cce47c59 files/digest-tdfsb-0.0.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW0cyI1lqEGTUzyQRAuUpAJ9FlKnBBZLjwqdXYYMGbD339oM+8wCeJYp3
+GAfXeYiF93TufWkyHZICCug=
+=XJom
+-----END PGP SIGNATURE-----
