@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.5 2004/12/07 19:33:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.6 2005/03/02 11:06:51 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -128,6 +128,11 @@ src_install() {
 	doins vmlinuz-${KERNEL_VERSION}
 
 	# pxe stuff
+	insinto /tftboot/pxe
+	doins pxelinux.0 initrd-2.4.26-ltsp-2.gz bzImage-2.4.26-ltsp-2
+	insinto /tftboot/pxelinux.cfg
+	doins pxelinux.cfg/default
+
 	insinto /tftpboot/pxe
 	doins ${FILESDIR}/eb-5.0.9-rtl8139.lzpxe
 	doins ${FILESDIR}/eb-5.0.9-eepro100.lzpxe
@@ -136,6 +141,7 @@ src_install() {
 	# config stuff
 	cd ltsp-utils
 	dosbin ltspcfg
+	echo "LTSP_DIR=/opt/ltsp" > ${D}/etc/ltsp.conf
 	dosbin ltspinfo
 	dosbin ltspadmin
 	dodoc COPYING
