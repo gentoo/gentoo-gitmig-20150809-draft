@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.59 2004/12/11 08:22:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.60 2004/12/11 11:00:07 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libgtop-2.8.0.ebuild:
+  Stable on alpha.
 
 *libgtop-2.8.2 (11 Dec 2004)
 
