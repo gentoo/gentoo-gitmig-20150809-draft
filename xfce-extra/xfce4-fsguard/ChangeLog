@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-fsguard
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.1 2003/11/09 16:49:05 bcowan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard/ChangeLog,v 1.2 2004/03/19 03:48:36 bcowan Exp $
+
+*xfce4-fsguard-0.2.0 (18 Mar 2004)
+
+  18 Mar 2004; Brad Cowan <bcowan@gentoo.org> xfce4-fsguard-0.2.0.ebuild:
+  Version bump. Fixes memory leak reported in bug #45096.
 
 *xfce4-fsguard-0.1.0 (09 Nov 2003)
 

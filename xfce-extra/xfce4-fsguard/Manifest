@@ -1,4 +1,6 @@
-MD5 8f7c572c535f3a8346eb4f71dda8b739 ChangeLog 375
+MD5 3a4260caf6647b8862354b307d151a8b ChangeLog 544
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 fc24c92529e61fc6a02f3b982b4dfff8 xfce4-fsguard-0.2.0.ebuild 728
 MD5 fecfd2aa83f7c5cde2866f71fa39f566 xfce4-fsguard-0.1.0.ebuild 727
+MD5 aea530a0461b5517dd158f40d610ff18 files/digest-xfce4-fsguard-0.2.0 78
 MD5 a3c8d7a8d6276ef0585455c28fa44664 files/digest-xfce4-fsguard-0.1.0 78
