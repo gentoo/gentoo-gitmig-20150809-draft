@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.0.ebuild,v 1.12 2004/07/14 14:27:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.6.ebuild,v 1.1 2004/08/19 11:43:59 foser Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc ~sparc mips ~alpha hppa amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~macos"
 IUSE="doc"
 
 DEPEND=">=dev-util/pkgconfig-0.14
@@ -21,9 +21,14 @@ RDEPEND="virtual/libc"
 
 src_compile() {
 
-	elibtoolize
+	if use macos; then
+		glibtoolize
+	else
+		elibtoolize
+	fi
 
-	econf --with-threads=posix \
+	econf \
+		--with-threads=posix \
 		`use_enable doc gtk-doc` \
 		|| die
 
@@ -33,7 +38,8 @@ src_compile() {
 
 src_install() {
 
-	einstall || die
+	# einstall || die
+	make DESTDIR=${D} install || die
 
 	# Consider invalid UTF-8 filenames as locale-specific.
 	# FIXME : we should probably move to suggesting G_FILENAME_ENC
@@ -41,4 +47,5 @@ src_install() {
 	echo "G_BROKEN_FILENAMES=1" > ${D}/etc/env.d/50glib2
 
 	dodoc AUTHORS ChangeLog* README* INSTALL NEWS*
+
 }
