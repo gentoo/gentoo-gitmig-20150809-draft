@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 292236aff7dc666eee4a9b0508baff9b ChangeLog 1605
+MD5 582d198de04030b45c83a2e1287b1d53 ChangeLog 1730
+MD5 fd8b5c49bac1bf8ac784493120347a9a qstat-2.6.ebuild 700
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 77b85e62ff9c1a2b85e34bcddd98a28b qstat-2.5c.ebuild 724
-MD5 48264fe2a96ed9df61232a707ce86a7d qstat-2.6.ebuild 671
 MD5 e0b0af4302e67d21a77364daf231b37c files/digest-qstat-2.5c 60
 MD5 4c6bd6c9dcda3d5e4a889b4c5ed5f81f files/digest-qstat-2.6 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBIWDzHTu7gpaalycRAo2ZAKDVrwgiT/MxUI8z5Fo/2TyQX1kZbQCcDwHV
-DT5JZRP7PQcKYI03mKpQV/0=
-=9GZp
------END PGP SIGNATURE-----
