@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.2 2005/01/12 11:13:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.3 2005/01/12 12:03:46 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -216,7 +216,7 @@ prep_ml_includes() {
 				local args="${dir}"
 				local abi
 				for abi in $(get_abi_order); do
-					args="${args} $(get_abi_CDEFINE ${abi})${dir}.${abi}"
+					args="${args} $(get_abi_CDEFINE ${abi}):${dir}.${abi}"
 				done
 				create_ml_includes ${args}
 			done
@@ -272,7 +272,16 @@ create_ml_includes-relative_between() {
 	local from=${1}
 	local to=${2}
 	
-	echo "${ROOT}${to}"
+	strip_duplicate_slashes "${ROOT}${to}"
+}
+
+# Helper function for create_ml_includes
+strip_duplicate_slashes () {
+	if [ -n "${1}" ]; then
+		local removed=${1/\/\//\/}
+		[ ${removed} != ${removed/\/\//\/} ] && removed=$(strip_duplicate_slashes "${removed}")
+		echo ${removed}
+	fi
 }
 
 # Helper function for create_ml_includes
