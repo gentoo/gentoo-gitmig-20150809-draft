@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.9 2004/09/22 08:27:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.10 2004/12/08 01:16:49 swtaylor Exp $
+
+  07 Dec 2004; Scott W Taylor <swtaylor@gentoo.org> procmail-3.22-r6.ebuild:
+  remove mail-mta/courier block
 
   22 Sep 2004; Andrej Kacian <ticho@gentoo.org> procmail-3.22-r6.ebuild:
   Use epatch instead of patch in src_compile()

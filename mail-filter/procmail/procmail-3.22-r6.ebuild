@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.10 2004/11/08 08:53:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.11 2004/12/08 01:16:49 swtaylor Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips s390 ppc64"
 IUSE="mbox"
 PROVIDE="virtual/mda"
 
-DEPEND="virtual/libc !mail-mta/courier virtual/mta"
+DEPEND="virtual/libc virtual/mta"
 RDEPEND="virtual/libc"
 
 src_compile() {
