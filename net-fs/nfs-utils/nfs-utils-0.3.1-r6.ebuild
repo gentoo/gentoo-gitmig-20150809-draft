@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Originally written by Achim Gottinger <achim@gentoo.org>
 # Heavily updated for nfs-utils-0.3.1 by Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.3 2001/09/24 17:19:23 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.4 2001/09/24 18:18:03 lamer Exp $
 
 A=$P.tar.gz
 S=$WORKDIR/$P
@@ -17,9 +17,9 @@ RDEPEND="virtual/glibc
          >=net-nds/portmap-5b-r6"
 
 src_unpack() {
-    unpack $A || die
-    cd $S || die
-    patch -p1 < $FILESDIR/$PF-gentoo.diff || die
+    unpack $A 
+    cd $S 
+    patch -p1 < $FILESDIR/$PF-gentoo.diff 
 }
 
 src_compile() {
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
     # MANDIR doesn't pick up install_prefix
     make install install_prefix=$D MANDIR=$D/usr/share/man 
-	 into /etc
+	 insinto /etc
 	 newins $FILESDIR/exports-${PVR} exports
     dodoc ChangeLog COPYING README
     docinto linux-nfs
@@ -49,5 +49,5 @@ src_install() {
 	 exeinto /etc/init.d
     newexe ${FILESDIR}/nfs-${PVR} nfs
     newexe ${FILESDIR}/nfsmount-${PVR} nfsmount 
-    ln -s $D/etc/rc.d/init.d/nfs{,mount} $D/etc/runlevels/default 
+    ln -s /etc/init.d/nfs{,mount} /etc/runlevels/default 
 }
