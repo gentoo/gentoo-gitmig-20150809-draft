@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.42 2004/06/16 01:22:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.43 2004/06/16 01:52:15 dragonheart Exp $
+
+  16 Jun 2004; Daniel Black <dragonheart@gentoo.org> slocate-2.7-r5.ebuild:
+  uclibc patch is in DISTDIR. Thanks Mr Bones
 
   16 Jun 2004; Daniel Black <dragonheart@gentoo.org> slocate-2.7-r5.ebuild:
   uclibc patch thanks to Peter S. Mazinger <ps.m@gmx.net>

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.12 2004/06/16 01:22:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.13 2004/06/16 01:52:15 dragonheart Exp $
 
 inherit flag-o-matic
 
@@ -21,8 +21,9 @@ RDEPEND="sys-apps/shadow"
 
 src_unpack() {
 	unpack ${A}
-	use uclibc && epatch ${FILESDIR}/sl_fts.patch
+	use uclibc && epatch ${DISTDIR}/slocate-${PV}-uclibc-sl_fts.patch
 }
+
 src_compile() {
 	filter-lfs-flags
 	econf || die
