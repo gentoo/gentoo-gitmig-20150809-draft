@@ -2,6 +2,14 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+*tvtime-0.9.7 (01 Mar 2003)
+
+  01 Mar 2003; Matt Keadle <mkeadle@gentoo.org> tvtime-0.9.7.ebuild
+  files/digest-tvtime-0.9.7 :
+
+  Bump to latest release. Default /etc/tvtime/tvtimerc is now installed
+  as well as the man pages
+
 *tvtime-0.9.6 (13 Dec 2002)
 
   13 Dec 2002; Matt Keadle <mkeadle@gentoo.org> tvtime-0.9.6.ebuild
