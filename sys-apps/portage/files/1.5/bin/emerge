@@ -37,6 +37,7 @@ class depgraph:
 		self.digraph.addnode(mybigkey,myparent)
 		for dep in mydep.keys():
 			mycheck=self.db[dep]["vartree"].depcheck(mydep[dep])
+			print "mycheck",mycheck
 			if mycheck[0]==0:
 				print "!!! depgraph.create() error: string format:",mydep
 				return 0
@@ -98,6 +99,9 @@ class depgraph:
 			if retval:
 				print "!!! emerge aborting."
 				sys.exit(1)
+			#dynamically update our database	
+			self.db[x[0]]["vartree"].inject(x[1])
+
 pretend=0
 if len(sys.argv)>=2:
 	if sys.argv[1]=="--pretend":
