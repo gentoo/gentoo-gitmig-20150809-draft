@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.2 2004/11/13 12:22:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.3 2004/11/13 15:08:24 mrness Exp $
 
 inherit eutils
 
@@ -95,7 +95,7 @@ pkg_postinst() {
 	einfo "/usr/share/doc/${PN}/README.gentoo.gz"
 	einfo ""
 	einfo "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
-	einfo "Please run the following command:"
-	einfo "  emerge suse-isdn-firmware"
-	einfo "You will probably find your board's firmware in /usr/share/isdn"
+	einfo "If you run"
+	einfo "  emerge capi4k-firmware"
+	einfo "you will probably find your board's firmware in /usr/share/isdn."
 }

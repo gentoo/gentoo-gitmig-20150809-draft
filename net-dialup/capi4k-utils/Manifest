@@ -5,7 +5,7 @@ MD5 6fe5c709ff40b883d16bc03f64378e31 ChangeLog 3232
 MD5 8a68cd59daa9bd143ce9987778320b62 capi4k-utils-20040810.ebuild 1760
 MD5 22354caf6445da21e5ebe8609a9e7012 capi4k-utils-20041006.ebuild 2267
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 0d20849aed2b524d25501ce0769d0909 capi4k-utils-20041006-r2.ebuild 3036
+MD5 89d21e442b3a609ac0b751def94828a3 capi4k-utils-20041006-r2.ebuild 3011
 MD5 befd926d2f898c15846c2f7452853ec1 files/capi-init-20040810 609
 MD5 b1de4263d145b4fb13baf0e4791e49a0 files/capi-init-20041006 617
 MD5 9bc030e6ab061e50f16efb0def04f0b6 files/capi4k-utils-2004-10-06-fPIC.patch 286
@@ -21,7 +21,7 @@ MD5 2fe94d2623c5b129780b72bacaf4a7bc files/20041006/rcapid.xinetd 236
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBlfy0jtv59x0+BrURAhleAKDrkjIyaBMIkTR0ySwk3fr2SfLs4wCfR26l
-E9Ya8yIoTzb5YiGrl2KgkN8=
-=LsHp
+iD4DBQFBliQYjtv59x0+BrURAn9qAKDEa3o8sUi1rphXqM8EK0wsnb60VACYyYSH
+zFuzrRf7MG4Kmh3fx/DiKA==
+=r/bJ
 -----END PGP SIGNATURE-----
