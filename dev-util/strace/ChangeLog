@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/strace
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.9 2003/01/01 03:43:17 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.10 2003/02/12 06:46:52 vapier Exp $
 
 *strace-4.4-r1 (31 Dec 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/lincvs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.6 2002/12/30 12:15:27 mholzer Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.7 2003/02/12 06:45:02 vapier Exp $
 
 *lincvs-1.0.0 (30 Dec 2002)
 
