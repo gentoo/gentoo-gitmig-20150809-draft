@@ -21,6 +21,14 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (27 Sep 2002)
+# version bumps to many XFS utilities...need testing Thanks to Hanno
+=sys-apps/xfsprogs-2.2.2 
+=sys-apps/acl-2.0.18
+=sys-apps/attr-2.0.9
+=sys-apps/dmapi-2.0.5
+=sys-apps/xfsdump-2.1.5
+
 # <azarah@gentoo.org> (27 Sep 2002)
 #latest gnome-spell
 =app-text/gnome-spell-0.5
