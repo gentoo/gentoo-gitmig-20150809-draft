@@ -1,0 +1,774 @@
+diff -Naur sp/base_class/vec_mat_aux.cc speech_tools/base_class/vec_mat_aux.cc
+--- sp/base_class/vec_mat_aux.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/base_class/vec_mat_aux.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -453,15 +453,15 @@
+ 	return (a.a_no_check(0,0) * a.a_no_check(1,1)) - 
+ 	    (a.a_no_check(0,1) * a.a_no_check(1,0));
+     
+-    float p;
++    double p;
+     
+     // create cofactor matrix
+     j = 1;
+     for (i = 0; i < n; ++i)
+     {
+-	p = (float)(i + j + 2);	// because i & j should start at 1
++	p = (double)(i + j + 2);	// because i & j should start at 1
+ 	//	cout << "power " <<p << endl;
+-	A[i] = pow(-1.0, p) * determinant(sub(a, i, j));
++	A[i] = pow((double)-1.0, p) * determinant(sub(a, i, j));
+     }
+     //    cout << "cofactor " << A;
+     
+diff -Naur sp/config/compilers/gcc_defaults.mak speech_tools/config/compilers/gcc_defaults.mak
+--- sp/config/compilers/gcc_defaults.mak	2002-11-29 07:34:50.000000000 -0600
++++ speech_tools/config/compilers/gcc_defaults.mak	2003-06-22 04:45:11.000000000 -0500
+@@ -45,7 +45,7 @@
+ COMPILER_VERSION_COMMAND=$(CXX) -v 2>&1 | tail -1 | sed -e 's/^....//'
+ 
+ CFLAGS  = $(GCC_SYSTEM_OPTIONS) $(CC_OTHER_FLAGS)
+-CXXFLAGS  =  $(GCC_SYSTEM_OPTIONS) -fno-implicit-templates $(CC_OTHER_FLAGS)
++CXXFLAGS  =  $(GCC_SYSTEM_OPTIONS) $(CC_OTHER_FLAGS)
+ 
+ DEBUG_CCFLAGS   = -g
+ DEBUG_CXXFLAGS  = -g
+diff -Naur sp/config/config.in speech_tools/config/config.in
+--- sp/config/config.in	2002-07-22 17:58:44.000000000 -0500
++++ speech_tools/config/config.in	2003-06-22 04:45:11.000000000 -0500
+@@ -61,7 +61,7 @@
+ # VERBOSE=1
+ # DEBUG=1
+ # PROFILE=gprof
+-# SHARED=1
++SHARED=1
+ 
+ ## Directory specific selections which override the above
+ 
+diff -Naur sp/grammar/ngram/EST_Ngrammar.cc speech_tools/grammar/ngram/EST_Ngrammar.cc
+--- sp/grammar/ngram/EST_Ngrammar.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/grammar/ngram/EST_Ngrammar.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -579,7 +579,7 @@
+ 	return false;
+     }
+     
+-    p_num_states = (int)pow(vocab->length(),p_order-1);
++    p_num_states = (int)pow((double)vocab->length(),(double)p_order-1);
+     p_states = new EST_NgrammarState[p_num_states];
+     for (i=0; i < p_num_states; i++)
+ 	p_states[i].init(i,pred_vocab);
+@@ -597,7 +597,7 @@
+ 	return false;
+     }
+     
+-    p_num_states = (int)pow(vocab->length(),p_order-1);
++    p_num_states = (int)pow((double)vocab->length(),(double)p_order-1);
+     p_states = new EST_NgrammarState[p_num_states];
+     
+     return (bool)(p_states != NULL);
+diff -Naur sp/grammar/ngram/ngrammar_aux.cc speech_tools/grammar/ngram/ngrammar_aux.cc
+--- sp/grammar/ngram/ngrammar_aux.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/grammar/ngram/ngrammar_aux.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -110,7 +110,7 @@
+     }
+   
+   for(int r=first;r<=last;r++)
+-    N[r] = exp(a)* pow((float)r, b);
++    N[r] = exp(a)* pow((double)r, (double)b);
+   
+   return true;
+ }
+@@ -252,7 +252,7 @@
+ 		  for (i=1;i<ff.n();i++)
+ 		    total += ff(i);
+ 		  
+-		  ff[0] = pow(n.get_vocab_length(),n.order()) - total;
++		  ff[0] = pow((double)n.get_vocab_length(),(double)n.order()) - total;
+ 	      }
+ 	}
+ 	break;
+@@ -285,7 +285,7 @@
+ 		  double total=0;
+ 		  for (i=1;i<ff.n();i++)
+ 		    total += ff(i);
+-		  ff[0] = pow(n.get_vocab_length(),this_order) - total;
++		  ff[0] = pow((double)n.get_vocab_length(),(double)this_order) - total;
+ 
+ 
+ 
+diff -Naur sp/grammar/ngram/ngrammar_io.cc speech_tools/grammar/ngram/ngrammar_io.cc
+--- sp/grammar/ngram/ngrammar_io.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/grammar/ngram/ngrammar_io.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -756,7 +756,7 @@
+ 	n.print_freqs(*ost,floor);
+     else if (n.representation() == EST_Ngrammar::backoff)
+     {
+-	int total_ngrams = (int)pow(n.get_vocab_length(),n.order()-1);
++	int total_ngrams = (int)pow((double)n.get_vocab_length(),(double)n.order()-1);
+ 	
+ 	for(i=0;i<total_ngrams;i++)
+ 	{
+@@ -903,7 +903,7 @@
+ 	// word in the ngram is the least significant 'bit'
+ 	
+ 	// number of ngrams, excluding last word, is
+-	int total_ngrams = (int)pow(n.get_vocab_length(),n.order()-1);
++	int total_ngrams = (int)pow((double)n.get_vocab_length(),(double)n.order()-1);
+ 	
+ 	for(i=0;i<total_ngrams;i++)
+ 	{
+diff -Naur sp/grammar/wfst/wfst_train.cc speech_tools/grammar/wfst/wfst_train.cc
+--- sp/grammar/wfst/wfst_train.cc	2002-12-26 14:29:40.000000000 -0600
++++ speech_tools/grammar/wfst/wfst_train.cc	2003-06-22 07:34:42.000000000 -0500
+@@ -95,7 +95,7 @@
+ 	LISP s = NIL;
+ 	do
+ 	{
+-	    t = ts.get();
++	    t = (EST_String)ts.get();
+ 	    id = wfst.in_symbol(t);
+ 	    if (id == -1)
+ 	    {
+diff -Naur sp/include/EST_Chunk.h speech_tools/include/EST_Chunk.h
+--- sp/include/EST_Chunk.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_Chunk.h	2003-06-22 04:55:05.000000000 -0500
+@@ -49,7 +49,9 @@
+ #    define HAVE_WALLOC_H (1)
+ #endif
+ 
+-#include <iostream.h>
++using namespace std;
++
++#include <iostream>
+ #include <limits.h>
+ #include <sys/types.h>
+ 
+diff -Naur sp/include/EST_Complex.h speech_tools/include/EST_Complex.h
+--- sp/include/EST_Complex.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_Complex.h	2003-06-22 05:28:46.000000000 -0500
+@@ -39,7 +39,7 @@
+ 
+ #ifndef __EST_COMPLEX_H__
+ #define __EST_COMPLEX_H__
+-
++using namespace std;
+ #include "EST_iostream.h"
+ #include <math.h>
+ 
+diff -Naur sp/include/EST_dynamic_model.h speech_tools/include/EST_dynamic_model.h
+--- sp/include/EST_dynamic_model.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_dynamic_model.h	2003-06-22 04:44:56.000000000 -0500
+@@ -39,7 +39,7 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <fstream.h>
++#include <fstream>
+ #include "EST.h"
+ #include "EST_model_types.h"
+ 
+diff -Naur sp/include/EST_iostream.h speech_tools/include/EST_iostream.h
+--- sp/include/EST_iostream.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_iostream.h	2003-06-22 04:44:56.000000000 -0500
+@@ -50,8 +50,8 @@
+ #   include <iostream.h>
+ #   include <strstrea.h>
+ #elif defined(SYSTEM_IS_UNIX)
+-#   include <iostream.h>
+-#   include <strstream.h>
++#   include <iostream>
++#   include <strstream>
+ #elif defined(SYSTEM_IS_WIN32)
+ #   include "win32/EST_iostream_win32.h"
+ #   include <strstrea.h>
+diff -Naur sp/include/EST_lattice_io.h speech_tools/include/EST_lattice_io.h
+--- sp/include/EST_lattice_io.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_lattice_io.h	2003-06-22 04:44:56.000000000 -0500
+@@ -40,8 +40,8 @@
+ #ifndef __EST_LATTICE_IO_H__
+ #define __EST_LATTICE_IO_H__
+ 
+-#include <String.h>
+-#include <ostream.h>
++#include <String>
++#include <ostream>
+ #include "sp_common_types.h"
+ #include "wp_grammar.h"
+ #include "EST_lattice.h"
+diff -Naur sp/include/EST_model_types.h speech_tools/include/EST_model_types.h
+--- sp/include/EST_model_types.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_model_types.h	2003-06-22 04:44:56.000000000 -0500
+@@ -39,7 +39,7 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <fstream.h>
++#include <fstream>
+ #include "EST.h"
+ #include "EST_Handleable.h"
+ #include "EST_THandle.h"
+diff -Naur sp/include/EST_String.h speech_tools/include/EST_String.h
+--- sp/include/EST_String.h	2001-04-04 08:11:27.000000000 -0500
++++ speech_tools/include/EST_String.h	2003-06-22 05:07:19.000000000 -0500
+@@ -37,15 +37,15 @@
+ #ifdef HAVE_CONFIG_H
+ #    include "est_string_config.h"
+ #endif
+-
++using namespace std;
+ class EST_String;
+ class EST_Regex;
+ 
+ #define EST_Regex_max_subexpressions 10
+ 
+-#include <string.h>
++#include <string>
+ #ifdef NO_EST
+-#    include <iostream.h>
++#    include <iostream>
+ #else
+ #    include "EST_iostream.h"
+ #endif
+diff -Naur sp/include/EST_THash.h speech_tools/include/EST_THash.h
+--- sp/include/EST_THash.h	2002-12-26 09:48:53.000000000 -0600
++++ speech_tools/include/EST_THash.h	2003-06-22 07:24:49.000000000 -0500
+@@ -35,8 +35,8 @@
+ 
+ #ifndef __EST_THASH_H__
+ #define __EST_THASH_H__
+-
+-#include <iostream.h>
++using namespace std;
++#include <iostream>
+ #include "EST_String.h"
+ #include "EST_system.h"
+ #include "EST_bool.h"
+@@ -274,34 +274,76 @@
+   * has a different default hash function.
+   */
+ 
++template<class V>  class EST_TStringHash;
++
+ template<class V>
+-class EST_TStringHash : public EST_THash<EST_String, V> {
++class EST_StringHash_Pair {
+ public:
++  EST_String k;
++  V v;
++private:
++  EST_StringHash_Pair<V> *next;
++  friend class EST_TStringHash<V>;
++};
++
++template<class V>
++class EST_TStringHash : public EST_THash<EST_String, V> {
++private:
++  static V Dummy_Value;
++  unsigned int p_num_entries;
++  unsigned int p_num_buckets;
++  EST_StringHash_Pair<V> **p_buckets;
++  unsigned int (*p_hash_function)(const EST_String &key, unsigned int size);
++
++protected:
++  struct IPointer_s {  unsigned int b; EST_StringHash_Pair<V> *p; };
++  typedef struct IPointer_s IPointer;
++  void skip_blank(IPointer &ip) const 
++    {
++      while (ip.p==NULL && ip.b<p_num_buckets)
++	{ip.b++; ip.p = ip.b<p_num_buckets?p_buckets[ip.b]:0; } 
++    }
++  
++  void point_to_first(IPointer &ip) const 
++    { ip.b=0; ip.p = ip.b<p_num_buckets?p_buckets[ip.b]:0; 
++    skip_blank(ip);}
++
++  void move_pointer_forwards(IPointer &ip) const 
++    { 
++      ip.p = ip.p->next; 
++      skip_blank(ip);
++    }
++
++  bool points_to_something(const IPointer &ip) const { return ip.b<p_num_buckets; }
++
++  EST_StringHash_Pair<V> &points_at(const IPointer &ip) { return *(ip.p); }
+ 
++  friend class EST_TStructIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> >;
++  friend class EST_TRwStructIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> >;
++  friend class EST_TIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> >;
++  friend class EST_TRwIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> >;
++
++public:
+   /// Create a string hash table of <parameter>size</parameter> buckets.
+   EST_TStringHash(int size) : EST_THash<EST_String, V>(size, StringHash) {};
+ 
+   /// An entry returned by the iterator is a key value pair.
+-  typedef EST_Hash_Pair<EST_String, V> Entry;
+-
+-/*    struct IPointer_s{  unsigned int b; Entry *p; };
+-      typedef struct IPointer_s IPointer; */
+-
++  typedef EST_StringHash_Pair<V> Entry;
+ 
+   /// Give the iterator a sensible name.
+-  typedef EST_TStructIterator< EST_THash<EST_String, V>, IPointer, EST_Hash_Pair<EST_String, V> > Entries;
+-
+-  typedef EST_TRwStructIterator< EST_THash<EST_String, V>, IPointer, EST_Hash_Pair<EST_String, V> > RwEntries;
+-  //@}
++  typedef EST_TStructIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> > Entries;
++  typedef EST_TRwStructIterator< EST_TStringHash<V>, IPointer, EST_StringHash_Pair<V> > RwEntries;
+ 
++protected:
++  struct IPointer_k_s {  unsigned int b; EST_StringHash_Pair<V> *p; };
++  typedef struct IPointer_k_s IPointer_k;
++  
++public:
+   typedef EST_String KeyEntry;
+ 
+-/*  struct IPointer_k_s {  unsigned int b; EST_Hash_Pair<EST_String, V> *p; };
+-    typedef struct IPointer_k_s IPointer_k; */
+-
+   /// Give the iterator a sensible name.
+-  typedef EST_TIterator< EST_THash<EST_String, V>, IPointer_k, EST_String > KeyEntries;
+-  typedef EST_TRwIterator< EST_THash<EST_String, V>, IPointer_k, EST_String > KeyRwEntries;
++  typedef EST_TIterator< EST_TStringHash<V>, IPointer_k, EST_String > KeyEntries;
++  typedef EST_TRwIterator< EST_TStringHash<V>, IPointer_k, EST_String > KeyRwEntries;
+ };
+ 
+ 
+diff -Naur sp/include/EST_TList.h speech_tools/include/EST_TList.h
+--- sp/include/EST_TList.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_TList.h	2003-06-22 04:44:56.000000000 -0500
+@@ -43,7 +43,7 @@
+ #ifndef __Tlist_H__
+ #define __Tlist_H__
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "EST_common.h"
+ #include "EST_UList.h"
+ #include "EST_TSortable.h"
+diff -Naur sp/include/EST_TMatrix.h speech_tools/include/EST_TMatrix.h
+--- sp/include/EST_TMatrix.h	2001-07-25 06:02:36.000000000 -0500
++++ speech_tools/include/EST_TMatrix.h	2003-06-22 05:25:18.000000000 -0500
+@@ -41,7 +41,8 @@
+ #ifndef __TMatrix_H__
+ #define __TMatrix_H__
+ 
+-#include <iostream.h>
++using namespace std;
++#include <iostream>
+ #include "EST_rw_status.h"
+ #include "EST_TVector.h"
+ #include "instantiate/EST_TMatrixI.h"
+diff -Naur sp/include/EST_TTimeIndex.h speech_tools/include/EST_TTimeIndex.h
+--- sp/include/EST_TTimeIndex.h	2001-04-04 08:11:27.000000000 -0500
++++ speech_tools/include/EST_TTimeIndex.h	2003-06-22 04:44:56.000000000 -0500
+@@ -35,7 +35,7 @@
+ #ifndef __EST_TTIMEINDEX_H__
+ #define __EST_TTIMEINDEX_H__
+ 
+-#include <iostream.h>
++#include <iostream>
+ 
+ /** A time index for a container. The container defines how to get an
+   * object and so on, this lets you find a point in the container not
+diff -Naur sp/include/EST_TVector.h speech_tools/include/EST_TVector.h
+--- sp/include/EST_TVector.h	2003-01-12 15:29:02.000000000 -0600
++++ speech_tools/include/EST_TVector.h	2003-06-22 05:32:34.000000000 -0500
+@@ -40,7 +40,8 @@
+ #ifndef __EST_TVector_H__
+ #define __EST_TVector_H__
+ 
+-#include <iostream.h>
++using namespace std;
++#include <iostream>
+ #include "EST_bool.h"
+ #include "EST_rw_status.h"
+ 
+diff -Naur sp/include/EST_UList.h speech_tools/include/EST_UList.h
+--- sp/include/EST_UList.h	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/include/EST_UList.h	2003-06-22 04:44:56.000000000 -0500
+@@ -41,7 +41,7 @@
+ #ifndef __EST_ULIST_H__
+ #define __EST_ULIST_H__
+ 
+-#include <iostream.h>
++#include <iostream>
+ #include "EST_common.h"
+ #include "EST_String.h"
+ 
+diff -Naur sp/intonation/tilt/tilt_utils.cc speech_tools/intonation/tilt/tilt_utils.cc
+--- sp/intonation/tilt/tilt_utils.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/intonation/tilt/tilt_utils.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -378,9 +378,9 @@
+ 
+     x = (t / (dur)) * 2.0;
+     if (x < 1.0)
+-	val = pow(x, 2.0);
++	val = pow((double)x, 2.0);
+     else
+-	val = 2 - pow((2 - x), 2.0);
++	val = 2 - pow((double)(2.0 - x), 2.0);
+ 	
+     val = (val / 2.0);
+ 	
+@@ -398,9 +398,9 @@
+     x = (t / length) * 2.0;
+     
+     if (x < 1.0)
+-	val = pow(x, curve);
++	val = pow((double)x, (double)curve);
+     else
+-	val = 2 - pow((2 - x), curve);
++	val = 2 - pow((double)(2.0 - x), (double)curve);
+     
+     val = val / 2.0;
+     
+diff -Naur sp/ling_class/EST_relation_aux.cc speech_tools/ling_class/EST_relation_aux.cc
+--- sp/ling_class/EST_relation_aux.cc	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/ling_class/EST_relation_aux.cc	2003-06-22 05:38:20.000000000 -0500
+@@ -416,7 +416,7 @@
+ 	if (k->F("end") > lab.head()->F("end"))
+ 	    break;
+ 
+-    filename = k->f("file");
++    filename = (EST_String)k->f("file");
+     a.f.set("name", (filename + ext));
+     kstart = 0.0;
+     
+@@ -454,7 +454,7 @@
+ 	    k = next(k);
+ 	    kstart = start(k);
+ 	    a.clear();
+-	    filename = k->f("file");
++	    filename = (EST_String)k->f("file");
+ 	    a.f.set("name", (filename + ext));
+ 	}
+ 	else
+diff -Naur sp/main/wfst_run_main.cc speech_tools/main/wfst_run_main.cc
+--- sp/main/wfst_run_main.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/main/wfst_run_main.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -213,7 +213,7 @@
+ 	   (int)R.samples(),R.mean()*100,(1-R.mean())*100);
+     if (al.present("-perplexity"))
+     {
+-	printf("perplexity is %f\n", pow(2.0,(-1 * (sumlogp/count))));
++	printf("perplexity is %f\n", pow(2.0,(double)(-1 * (sumlogp/count))));
+     }
+ 
+     if (ofd != stdout)
+diff -Naur sp/sigpr/filter.cc speech_tools/sigpr/filter.cc
+--- sp/sigpr/filter.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/sigpr/filter.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -419,7 +419,7 @@
+ 	
+     // check frequency_response has dimension 2^N
+     int N = fastlog2(frequency_response.n());
+-    if(frequency_response.n() !=  (int)pow(2,(float)N)){
++    if(frequency_response.n() !=  (int)pow(2,(double)N)){
+ 	cerr << "Desired frequency response must have dimension 2^N" << endl;
+ 	return EST_FVector(0);
+     }
+@@ -470,10 +470,10 @@
+     int i;
+     int N=10;			// good minimum size
+     
+-    int fft_size = (int)pow(2, N);
++    int fft_size = (int)pow(2.0, (double)N);
+     while(fft_size < order*4){	// rule of thumb !?
+ 	N++;
+-	fft_size = (int)pow(2, N);
++	fft_size = (int)pow(2.0, (double)N);
+     }
+     
+     // freq response is from 0 to sampling freq and therefore
+diff -Naur sp/sigpr/sigpr_frame.cc speech_tools/sigpr/sigpr_frame.cc
+--- sp/sigpr/sigpr_frame.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/sigpr/sigpr_frame.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -499,7 +499,7 @@
+ {
+     power = 0.0;
+     for (int i = 0; i < frame.length(); i++)
+-	power += pow(frame(i), 2.0);
++	power += pow((double)frame(i), 2.0);
+ 
+     power /= frame.length();
+ }
+diff -Naur sp/siod/slib_math.cc speech_tools/siod/slib_math.cc
+--- sp/siod/slib_math.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/siod/slib_math.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -14,14 +14,13 @@
+ 
+ LISP numberp(LISP x)
+ {if FLONUMP(x) return(truth); else return(NIL);}
+-
+-static LISP plus(LISP args)
++static LISP lplus(LISP args)
+ {
+     LISP l;
+     double sum;
+     for (sum=0.0,l=args; l != NIL; l=cdr(l))
+     {
+-	if (NFLONUMP(car(l))) err("wrong type of argument to plus",car(l));
++	if (NFLONUMP(car(l))) err("wrong type of argument to lplus",car(l));
+ 	sum += FLONM(car(l));
+     }
+     return flocons(sum);
+@@ -138,7 +137,7 @@
+  init_subr_1("number?",numberp,
+  "(number? DATA)\n\
+   Returns t if DATA is a number, nil otherwise.");
+- init_lsubr("+",plus,
++ init_lsubr("+",lplus,
+  "(+ NUM1 NUM2 ...)\n\
+   Returns the sum of NUM1 and NUM2 ...  An error is given is any argument\n\
+   is not a number.");
+diff -Naur sp/speech_class/EST_track_aux.cc speech_tools/speech_class/EST_track_aux.cc
+--- sp/speech_class/EST_track_aux.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/speech_class/EST_track_aux.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -351,7 +351,7 @@
+     mean /= n;
+     
+     for (i = 0, var = 0.0; i < tr.num_frames(); ++i)
+-	var += tr.track_break(i) ? 0.0 : pow(tr.a(i, channel) - mean, 2.0);
++	var += tr.track_break(i) ? 0.0 : pow((double)(tr.a(i, channel) - mean), 2.0);
+     
+     var /= n;
+     sd = sqrt(var);
+@@ -369,7 +369,7 @@
+     
+     for (i = 0; i < size; ++i)
+ 	if (a.val(i) && b.val(i))
+-	    sum += pow((a.a(i, channel) - b.a(i, channel)), 2.0);
++	    sum += pow((double)(a.a(i, channel) - b.a(i, channel)), 2.0);
+     
+     sum = sqrt(sum / size);
+     return sum;
+@@ -461,7 +461,7 @@
+     for (p = tl.head(); p; p = next(p))
+ 	for (i = 0; i < tl(p).num_frames(); ++i)
+ 	    if (!tl(p).track_break(i))
+-		var +=  pow(tl(p).a(i, channel) - mean, 2.0);
++		var +=  pow((double)(tl(p).a(i, channel) - mean), 2.0);
+ 
+     var /= n;
+     sd = sqrt(var);
+diff -Naur sp/speech_class/EST_TrackFile.cc speech_tools/speech_class/EST_TrackFile.cc
+--- sp/speech_class/EST_TrackFile.cc	2002-09-28 09:15:02.000000000 -0500
++++ speech_tools/speech_class/EST_TrackFile.cc	2003-06-22 07:30:59.000000000 -0500
+@@ -570,15 +570,15 @@
+     
+     while (1)
+     {
+-	t = ts.get_upto_eoln();
++	t = (EST_String)ts.get_upto_eoln();
+ 	//	cout << "t=" << t << endl;
+ 	if (t.contains("teaching output included"))
+ 	    teaching = 1;
+ 	if (!t.contains(":"))
+ 	    break;
+ 	str.open_string(t);
+-	k = str.get_upto(":");
+-	v = str.get_upto_eoln();
++	k = (EST_String)str.get_upto(":");
++	v = (EST_String)str.get_upto_eoln();
+ 	if (k == "No. of output units")
+ 	    num_channels = v.Int();
+ 	if (k == "No. of patterns")
+diff -Naur sp/speech_class/EST_wave_cuts.cc speech_tools/speech_class/EST_wave_cuts.cc
+--- sp/speech_class/EST_wave_cuts.cc	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/speech_class/EST_wave_cuts.cc	2003-06-22 07:28:07.000000000 -0500
+@@ -67,7 +67,7 @@
+ 	if (end < start)
+ 	    continue;
+ 	wave_subwave(a, sig, start, end-start);
+-	filename = k->f("file");
++	filename = (EST_String)k->f("file");
+ 	a.set_name(filename + ext);
+ 	wl.append(a);
+ 	start = end;
+@@ -87,7 +87,7 @@
+     for (k = keylab.head(); k; k = next(k))
+     {
+ 	end = k->F("end",0);
+-	key_file_name = k->f("file");
++	key_file_name = (EST_String)k->f("file");
+ 	if (key_file_name == file)
+ 	{
+ 	    wave_subwave(part, sig, start, end-start);
+diff -Naur sp/speech_class/EST_wave_temp.cc speech_tools/speech_class/EST_wave_temp.cc
+--- sp/speech_class/EST_wave_temp.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/speech_class/EST_wave_temp.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -83,7 +83,7 @@
+     mean /= n;
+     
+     for (i = 0, mean = 0.0; i < tr.num_samples(); ++i)
+-	var += pow(tr.a(i, channel) - mean, 2.0);
++	var += pow((double)(tr.a(i, channel) - mean), 2.0);
+     
+     var /= n;
+     sd = sqrt(var);
+@@ -96,7 +96,7 @@
+     float sum = 0;
+     
+     for (i = 0; i < size; ++i)
+-      sum += pow((a.a(i, channel) - b.a(i, channel)), 2.0);
++      sum += pow((double)(a.a(i, channel) - b.a(i, channel)), 2.0);
+     
+     sum = sqrt(sum / size);
+     return sum;
+@@ -110,7 +110,7 @@
+     for (i = 0; i < size; ++i)
+     {
+       // cout << i << " " << a.a(i, channel) << " " << b.a(i, channel) << endl;
+-	sum += fabs(a.a(i, channel) - b.a(i, channel));
++	sum += fabs((double)(a.a(i, channel) - b.a(i, channel)));
+     }
+     return sum / size;
+ }
+diff -Naur sp/speech_class/ssff.cc speech_tools/speech_class/ssff.cc
+--- sp/speech_class/ssff.cc	2001-04-04 06:55:32.000000000 -0500
++++ speech_tools/speech_class/ssff.cc	2003-06-22 07:29:24.000000000 -0500
+@@ -99,7 +99,7 @@
+     
+     while (ts.peek() != "-----------------")
+     {
+-	c = ts.get();
++	c = (EST_String)ts.get();
+ 	if (c == "Comment")
+ 	    ts.get_upto_eoln();
+ 	else if (c == "Start_Time")
+@@ -124,9 +124,9 @@
+ 	}
+ 	else if (c == "Column")
+ 	{
+-	    name = ts.get();
+-	    type = ts.get();
+-	    size = ts.get();
++	    name = (EST_String)ts.get();
++	    type = (EST_String)ts.get();
++	    size = (EST_String)ts.get();
+ 	    cname = EST_String("Channel_")+itoString(num_channels);
+ 	    channels.set(cname+".name",name);
+ 	    channels.set(cname+".type",type);
+@@ -141,7 +141,7 @@
+ 		 (c == "preemphasis") ||
+ 		 (c == "frame_duration"))
+ 	{
+-		type = ts.get();
++		type = (EST_String)ts.get();
+ 		if (type == "SHORT")
+ 		    tr.f_set(c,atoi(ts.get().string()));
+ 		else if (type == "DOUBLE")
+diff -Naur sp/stats/EST_multistats.cc speech_tools/stats/EST_multistats.cc
+--- sp/stats/EST_multistats.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/stats/EST_multistats.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -89,7 +89,7 @@
+     {
+ 	v[j] = 0.0;
+ 	for (i = 0; i < m.num_rows(); ++i)
+-	    v[j] += pow(m(i, j) - u(j), 2.0);
++	    v[j] += pow((double)(m(i, j) - u(j)), 2.0);
+ 	v[j] /= m.num_rows() - 1; // sample variance
+     }
+     
+@@ -183,7 +183,7 @@
+ 	{
+ 	    P(i, j) = 0.0;
+ 	    for (k = 0; k < p; ++k)
+-		P(i, j) += pow(gu(i, k) - gu(j, k), 2.0) / gv(k);
++		P(i, j) += pow((double)(gu(i, k) - gu(j, k)), 2.0) / gv(k);
+ 	    P(i, j) /= p;
+ 	}
+     return P;
+@@ -228,7 +228,7 @@
+     float P = 0.0;
+     
+     for (k = 0; k < n; ++k)
+-	P += pow(ui(k) - uj(k), 2.0) / v(k);
++	P += pow((double)(ui(k) - uj(k)), 2.0) / v(k);
+     P /= n;
+     
+     return P;
+diff -Naur sp/stats/wagon/dlist.cc speech_tools/stats/wagon/dlist.cc
+--- sp/stats/wagon/dlist.cc	2001-04-04 08:11:28.000000000 -0500
++++ speech_tools/stats/wagon/dlist.cc	2003-06-22 07:32:46.000000000 -0500
+@@ -83,7 +83,7 @@
+ 
+     for (p=dataset.head(); p != 0; p=next(p))
+     {
+-	predict = dlist->predict(*dataset(p));
++	predict = (EST_String)dlist->predict(*dataset(p));
+ 	type = dataset.ftype(0);
+ 	real = wgn_discretes[type].name(dataset(p)->get_int_val(0));
+ 	pairs.add_item(real,predict,1);
+diff -Naur sp/stats/wagon/wagon.cc speech_tools/stats/wagon/wagon.cc
+--- sp/stats/wagon/wagon.cc	2001-09-30 14:13:33.000000000 -0500
++++ speech_tools/stats/wagon/wagon.cc	2003-06-22 07:33:26.000000000 -0500
+@@ -276,7 +276,7 @@
+     for (p=dataset.head(); p != 0; p=next(p))
+     {
+ 	pnode = tree.predict_node((*dataset(p)));
+-	predict = pnode->get_impurity().value();
++	predict = (EST_String)pnode->get_impurity().value();
+ 	if (wgn_count_field == -1)
+ 	    count = 1.0;
+ 	else
+diff -Naur sp/testsuite/hash_example.cc speech_tools/testsuite/hash_example.cc
+--- sp/testsuite/hash_example.cc	2003-06-22 04:36:32.000000000 -0500
++++ speech_tools/testsuite/hash_example.cc	2003-06-22 04:44:56.000000000 -0500
+@@ -71,8 +71,8 @@
+ 
+ EST_THash<int,float> logs(100);
+ 
+-logs.add_item(12, log(12));
+-logs.add_item(34, log(34));
++logs.add_item(12, log(12.0));
++logs.add_item(34, log(34.0));
+ 
+ cout << "length of `fred' = " << lengths.val("fred") << "\n";
+ cout << "log of 34' = " << logs.val(34) << "\n";
+diff -Naur sp/testsuite/hash_regression.cc speech_tools/testsuite/hash_regression.cc
+--- sp/testsuite/hash_regression.cc	2002-12-27 07:00:24.000000000 -0600
++++ speech_tools/testsuite/hash_regression.cc	2003-06-22 07:43:57.000000000 -0500
+@@ -71,7 +71,7 @@
+   {
+     EST_String line;
+ 
+-    line = file.get();
++    line = (EST_String)file.get();
+ 
+     if (file.eof())
+       break;
+diff -Naur sp/utils/EST_ServiceTable.cc speech_tools/utils/EST_ServiceTable.cc
+--- sp/utils/EST_ServiceTable.cc	2002-12-26 09:46:20.000000000 -0600
++++ speech_tools/utils/EST_ServiceTable.cc	2003-06-22 05:24:16.000000000 -0500
+@@ -42,8 +42,8 @@
+ #include "EST_error.h"
+ #include "EST_Token.h"
+ #include "EST_ServiceTable.h"
+-#include <iomanip.h>
+-#include <iostream.h>
++#include <iomanip>
++#include <iostream>
+ #include <time.h>
+ 
+ #if defined(SYSTEM_IS_WIN32)
+@@ -142,7 +142,7 @@
+ 
+       str.must_get("=");
+ 
+-      EST_Token val = str.get_upto_eoln();
++      EST_String val = str.get_upto_eoln();
+ 
+       if (!entries.t.present(name))
+ 	{
+@@ -160,7 +160,7 @@
+       else if (type=="type")
+ 	entry.type=val;
+       else if (type=="port")
+-	entry.port=val;
++	entry.port=strtol(val, NULL, 10);
+       else if (type=="cookie")
+ 	entry.cookie=val;
+       else
+

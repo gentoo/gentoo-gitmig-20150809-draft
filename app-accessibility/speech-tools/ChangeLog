@@ -1,0 +1,35 @@
+# ChangeLog for media-sound/speech-tools
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.1 2004/03/17 03:44:00 eradicator Exp $
+
+*speech-tools-1.2.3 (16 Mar 2004)
+
+  16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  speech-tools-1.2.3.ebuild, files/58speech-tools,
+  files/speech-tools-gcc3.3.diff:
+  Moved from media-sound/speech-tools to app-accessibility/speech-tools.
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3.ebuild:
+  Change compile-time paths in scripts to fix bug #36128. Removed USE=static
+  options as they bork.
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> speech-tools-1.2.3.ebuild:
+  Broken on sparc, see bug 41329.
+
+  18 Feb 2004; <augustus@gentoo.org> speech-tools-1.2.3.ebuild:
+  Added amd64 to keywords. festival works fine on AMD64. Marked stable since
+  it's the only release.
+
+  11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speech-tools-1.2.3.ebuild:
+  Stable on x86
+
+*speech-tools-1.2.3 (20 Jul 2003)
+
+  20 Jul 2003; jje <jje@gentoo.org> speech-tools-1.2.3.ebuild,
+  files/58speech-tools, files/speech-tools-gcc3.3.diff:
+  Initial revision. More of the bounty from #22053.
+  
+  Submitted by: Paul Giordano <giordano@covad.net>
+
