@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.46 2004/04/13 13:33:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.47 2004/04/13 15:48:00 tester Exp $
+
+  13 Apr 2004; <tester@gentoo.org> xine-ui-0.9.22-r1.ebuild:
+  Fixed net-misc/curl dependency
 
 *xine-ui-0.9.23-r1 (13 Apr 2004)
 

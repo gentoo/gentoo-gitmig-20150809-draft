@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.22-r1.ebuild,v 1.1 2004/04/13 13:33:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.22-r1.ebuild,v 1.2 2004/04/13 15:48:01 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1_rc0
-	>=net-ftp/curl-7.10.2
+	>=net-misc/curl-7.10.2
 	lirc? ( app-misc/lirc )
 	X? ( virtual/x11 )
 	media-libs/aalib
