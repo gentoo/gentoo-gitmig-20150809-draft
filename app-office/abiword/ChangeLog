@@ -1,6 +1,15 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.13 2002/08/06 17:39:41 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.14 2002/08/23 15:45:02 seemant Exp $
+
+*abiword-1.0.2-r1 (23 Aug 2002)
+
+  23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> abiword-1.0.2-r1.ebuild
+  files/digest-abiword-1.0.2-r1 :
+
+  Compile against the new modified pspell-ispell stuff.  Basically, that
+  stuff is still pspell-ispell, but compiled against the new aspell (which
+  contains pspell).
 
 *abiword-1.0.2 (??)
 
