@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: 
-
-### Gentoo for Mac OS X profile ###
-
-# Packages we want emerge system to install in addition to default-darwin/packages

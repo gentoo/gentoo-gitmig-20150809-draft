@@ -7,4 +7,5 @@ export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/X11R6/lib/pkgconfig"
 
 alias libtool=glibtool
 alias libtoolize=glibtoolize
+
 [ -x /usr/bin/gsed ] && alias sed=gsed

@@ -6,5 +6,5 @@
 
 # Things we want emerge system to install for all Darwin profiles
 
-*virtual/editor
 *sys-apps/sed
+*virtual/editor
