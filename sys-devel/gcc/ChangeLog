@@ -1,13 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.76 2003/03/05 19:01:15 method Exp $
-
-*gcc-3.2.2-r4 (05 Mar 2003)
-
-  05 Mar 2003; Joshua Brindle <method@gentoo.org> gcc-3.2.2-r4.ebuild:
-  replace-flags "-march=pentium4" "-march=pentium3" to fix bug #16867
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.77 2003/03/05 19:46:22 method Exp $
 
 *gcc-3.2.2-r3 (03 Mar 2003)
+
+  05 Mar 2003; Joshua Brindle <method@gentoo.org> gcc-3.2.2-r3.ebuild :
+  replace-flags for pentium4 for bug #16867, add optimizations for x86 only  
 
   03 Mar 2003; Joshua Brindle <method@gentoo.org> gcc-3.2.2-r3.ebuild :
   Fixed strip-flags to allow certain known stable optimizations including:
