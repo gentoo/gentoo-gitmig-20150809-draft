@@ -42,6 +42,7 @@ if ( $submitted ) {
 
 				// make sure they're not already a leader; skip this group if so.
 				unset( $newlead );
+				reset( $leaders );
 				while ( $each = each($leaders) ) {
 					if ( $each['value'] == $xuid ) {
 						// whoops! this guy's already a lead of the group
@@ -62,6 +63,7 @@ if ( $submitted ) {
 		// revoke leaderships
 		$oldleads = explode( ',', $oldleads );
 		if ($leads) reset( $leads );
+		reset( $oldleads );
 		while ( $ol = each($oldleads) ) {
 			if (!$ol['value']) break;
 			$tmp = 1;
@@ -76,6 +78,8 @@ if ( $submitted ) {
 				$leaders = mysql_query( 'select leader from teams where gid='.$ol['value'] );
 				list( $leaders ) = mysql_fetch_row( $leaders );
 				$leaders = explode( ',', $leaders );
+				unset( $newl );
+				reset( $leaders );
 				while ( $each = each($leaders) ) {
 					// we're removing the user. if we hit the xuid, skip 'em,
 					// otherwise, pile 'em onto the new array
@@ -188,13 +192,14 @@ if ( !$xuid ) {
 					if ( $cur['value'] == $each['key'] ) $tm = 'r';
 				}
 				// are they the team LEADER?!?! :)
-				$ldr = mysql_query( 'select leader from teams where gid='.$each['key'] );
-				list( $ldr ) = mysql_fetch_row( $ldr );
+				$ldr = mysql_query( 'select leader,gid from teams where gid='.$each['key'] );
+				list( $ldr, $thegid ) = mysql_fetch_row( $ldr );
 				$ldr = explode( ',', $ldr );
+				reset( $ldr );
 				while ( $pair = each($ldr) ) {
 					if ( $pair['value'] == $xuid ) {
 						$tm = 'l';
-						$oldlead[] = $pair['key'];
+						$oldlead[] = $thegid;
 						break;
 					}
 				}

@@ -35,29 +35,29 @@
 	}
 
 	// query for stats
-	$unassigned = mysql_query( "select tid from todos where public=1 and team=$team_num and priority!= 0" );
+	$unassigned = mysql_query( "select tid from todos where public=1 and team=$team_num and priority!=0" );
 	$unassigned = mysql_num_rows( $unassigned );
 
-	$outstanding = mysql_query( "select tid from todos where priority!=0 and team=$team_num and priority!= 0" );
+	$outstanding = mysql_query( "select tid from todos where priority!=0 and team=$team_num" );
 	$outstanding = mysql_num_rows( $outstanding );
 
 	if ( $team_num != 6 ) {
-	   $us = mysql_query( "select tid from todos where public=1 and branch=2 and team=$team_num and priority!= 0" );
+	   $us = mysql_query( "select tid from todos where public=1 and branch=2 and team=$team_num and priority!=0" );
 	   $us = mysql_num_rows( $us );
 
-	   $os = mysql_query( "select tid from todos where priority!=0 and branch=2 and team=$team_num and priority!= 0" );
+	   $os = mysql_query( "select tid from todos where branch=2 and team=$team_num and priority!=0" );
 	   $os = mysql_num_rows( $os );
 
-	   $uu = mysql_query( "select tid from todos where public=1 and branch=3 and team=$team_num and priority!= 0" );
+	   $uu = mysql_query( "select tid from todos where public=1 and branch=3 and team=$team_num and priority!=0" );
 	   $uu = mysql_num_rows( $uu );
       
-	   $ou = mysql_query( "select tid from todos where priority!=1 and branch=3 and team=$team_num and priority!= 0" );
+	   $ou = mysql_query( "select tid from todos where branch=3 and team=$team_num and priority!=0" );
 	   $ou = mysql_num_rows( $ou );
 
-	   $un = mysql_query( "select tid from todos where public=1 and branch=0 and team=$team_num and priority!= 0" );
+	   $un = mysql_query( "select tid from todos where public=1 and branch=0 and team=$team_num and priority!=0" );
 	   $un = mysql_num_rows( $un );
 
-	   $on = mysql_query( "select tid from todos where priority!=1 and branch=0 and team=$team_num and priority!= 0" );
+	   $on = mysql_query( "select tid from todos where branch=0 and team=$team_num and priority!= 0" );
 	   $on = mysql_num_rows( $on );
 	}
 ?>

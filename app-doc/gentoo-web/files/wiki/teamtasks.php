@@ -21,25 +21,25 @@ if ( !$q || !$team ) {
 	$result = mysql_query( "select * from todos where public=1 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Unassigned Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'o' ) {
-	$result = mysql_query( "select * from todos where priority!=0 and team=$team and priority!=0 order by priority desc" );
+	$result = mysql_query( "select * from todos where team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Outstanding Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'us' ) {
 	$result = mysql_query( "select * from todos where public=1 and branch=2 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Unassigned Stable Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'os' ) {
-	$result = mysql_query( "select * from todos where priority!=0 and branch=2 and team=$team and priority!=0 order by priority desc" );
+	$result = mysql_query( "select * from todos where branch=2 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Outstanding Stable Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'uu' ) {
 	$result = mysql_query( "select * from todos where public=1 and branch=3 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Unassigned Unstable Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'ou' ) {
-	$result = mysql_query( "select * from todos where priority!=1 and branch=3 and team=$team and priority!=0 order by priority desc" );
+	$result = mysql_query( "select * from todos where branch=3 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Outstanding Unstable Tasks for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'un' ) {
 	$result = mysql_query( "select * from todos where public=1 and branch=0 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Unassigned Tasks on Neither Branch for <?=$teamname;?> Team</p><?php
 } elseif ( $q == 'on' ) {
-	$result = mysql_query( "select * from todos where priority!=1 and branch=0 and team=$team and priority!=0 order by priority desc" );
+	$result = mysql_query( "select * from todos where branch=0 and team=$team and priority!=0 order by priority desc" );
 	?><p style="font-size:medium;font-weight:bold;">Outstanding Tasks on Neither Branch for <?=$teamname;?> Team</p><?php
 } else {
 	print '<p style="font-color:red;">You must access this page from a teams page.</p>';
