@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.2 2003/04/15 02:34:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r2.ebuild,v 1.3 2003/04/18 01:32:26 foser Exp $
 
 IUSE=""
 
@@ -19,7 +19,8 @@ RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.53a"	
+	>=sys-devel/autoconf-2.53a
+	!>=x11-base/xfree-4.3-r2"	
 
 PROVIDE="virtual/xft"
 

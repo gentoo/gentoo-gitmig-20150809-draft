@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.19 2003/04/08 13:36:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.20 2003/04/18 01:32:26 foser Exp $
 
 *xft-2.0.1-r2 (08 Apr 2003)
+
+  18 Apr 2003; foser <foser@gentoo.org> xft-2.0.1-r2.ebuild :
+  Added xfree-4.3-r2 blocking depend because it contains its own xft2 lib
 
   08 Apr 2003; Martin Schlemmer <azarah@gentoo.org> xft-2.0.1-r1.ebuild :
   Fix headers to install to /usr/X11R6/include/X11, and not symlinked dir
