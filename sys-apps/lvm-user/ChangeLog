@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lvm-user
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/ChangeLog,v 1.2 2002/02/08 16:56:29 drobbins Exp $
+
+*lvm-user-1.0.1_rc4-r1 (8 Feb 2002)
+
+  8 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: remove "-fomit-frame-pointer"
+  from $CFLAGS if it's in there.  This closes bug #598.
 
 *lvm-user-1.0.1_rc4 (1 Feb 2002)
 
