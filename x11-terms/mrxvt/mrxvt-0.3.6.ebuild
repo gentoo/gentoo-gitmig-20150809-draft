@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.6.ebuild,v 1.2 2004/10/23 18:29:37 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.6.ebuild,v 1.3 2004/10/31 23:21:16 dragonheart Exp $
 
 IUSE="debug truetype xgetdefault"
 #IUSE="${IUSE} utempter"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/materm/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc-macos ~amd64"
+KEYWORDS="~x86 ~ppc-macos ~amd64 ~ppc"
 
 RDEPEND="virtual/libc
 	virtual/x11
