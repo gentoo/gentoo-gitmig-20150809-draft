@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.1 2003/06/12 11:26:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2-r1.ebuild,v 1.2 2003/06/15 23:20:23 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -40,8 +40,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# xft/slighthint stuff from RH
 	cd ${S}; epatch ${FILESDIR}/${PN}-2-xftprefs.patch
-	# 'fix' for problem described in #22576
-	epatch ${FILESDIR}/${P}-revert_gtkwidget.patch
+	# fix for problem described in #22576
+	epatch ${FILESDIR}/${P}-gtkwidget_pixmap_expose.patch
 
 	autoconf || die
 }

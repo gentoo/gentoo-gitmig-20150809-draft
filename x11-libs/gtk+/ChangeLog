@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.68 2003/06/12 11:26:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.69 2003/06/15 23:20:23 foser Exp $
 
 *gtk+-2.2.2-r1 (12 Jun 2003)
+
+  16 Jun 2003; foser <foser@gentoo.org> gtk+-2.2.2-r1.ebuild, gtk+-2.2.2-gtkwidget_pixmap_expose.patch :
+  Replace reverting patch with correct upstream patch for #22576
 
   12 Jun 2003; foser <foser@gentoo.org> gtk+-2.2.2-r1.ebuild :
   Added patch to 'fix' pixbuf corruption issues (#22576)
