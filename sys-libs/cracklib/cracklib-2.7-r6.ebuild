@@ -1,24 +1,28 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.6 2003/02/09 16:51:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.7 2003/02/11 11:32:09 seemant Exp $
+
+inherit eutils
+
+IUSE=""
 
 S="${WORKDIR}/cracklib,${PV}"
 DESCRIPTION="Cracklib"
 SRC_URI="ftp://ftp.debian.org/debian/dists/potato/main/source/utils/cracklib2_${PV}.orig.tar.gz"
 HOMEPAGE="http://www.users.dircon.co.uk/~crypto/"
 
+SLOT="0"
 LICENSE="CRACKLIB"
 KEYWORDS="x86 ppc sparc alpha mips hppa"
-SLOT="0"
 
-DEPEND="virtual/glibc sys-apps/miscfiles"
+DEPEND="sys-apps/miscfiles"
 
 src_unpack() {
 
  	unpack ${A}
 	cd ${S}
-	patch -p1 <${FILESDIR}/${P}-redhat.patch || die
-	patch -p1 <${FILESDIR}/${P}-gentoo-new.diff || die
+	epatch ${FILESDIR}/${P}-redhat.patch
+	epatch ${FILESDIR}/${P}-gentoo-new.diff
 }
 
 src_compile() {
