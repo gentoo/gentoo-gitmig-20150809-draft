@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0-r1.ebuild,v 1.1 2003/03/20 12:55:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0-r1.ebuild,v 1.2 2003/03/22 08:27:51 vladimir Exp $
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~ppc"
 
 DEPEND="virtual/x11
 	virtual/glibc
