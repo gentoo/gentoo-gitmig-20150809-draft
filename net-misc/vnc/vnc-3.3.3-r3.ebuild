@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.9 2003/06/09 11:51:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r3.ebuild,v 1.10 2003/07/16 07:31:11 pvdabeel Exp $
 
 IUSE="java tcpd"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.uk.research.att.com/vnc/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -sparc "
+KEYWORDS="x86 -sparc -ppc"
 
 DEPEND="virtual/x11
 	tcpd? ( sys-apps/tcp-wrappers )
