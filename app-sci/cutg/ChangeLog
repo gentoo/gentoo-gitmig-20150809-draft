@@ -1,0 +1,11 @@
+# ChangeLog for app-sci/cutg
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/cutg/ChangeLog,v 1.1 2004/06/25 03:31:35 ribosome Exp $
+
+*cutg-141.0 (24 Jun 2004)
+
+  24 Jun 2004; Olivier Fisette <ribosome@gentoo.org>
+  cutg-141.0.ebuild, metadata.xml :
+  Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
+  Reference: Gentoo Bugzilla, bug #54322
+
