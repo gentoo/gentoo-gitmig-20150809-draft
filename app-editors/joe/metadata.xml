@@ -3,9 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>joker@gentoo.org</email>
-  <name>Christian Birchinger</name>
-  <description>Basic ebuild maintenance only. Feel free to take over maintainership.</description>
+  <email>jmaynard@gentoo.org</email>
+  <name>Jay Maynard</name>
 </maintainer>
 <longdescription>
   JOE (Joe's own editor) has the feel of most IBM PC text editors: The
