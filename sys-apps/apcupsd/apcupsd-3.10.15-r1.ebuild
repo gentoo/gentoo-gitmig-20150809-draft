@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.4 2004/10/23 23:14:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.5 2004/10/27 11:38:06 tantive Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_compile() {
 		--with-log-dir=${XLOGDIR} \
 		--with-upstype=usb \
 		--with-upscable=usb \
-		--with-serial-dev=/dev/usb/hid/hiddev[0-9] \
+		--with-serial-dev=/dev/usb/hiddev[0-9] \
 		--with-net-port=6666 \
 		--with-nis-port=3551 \
 		--enable-usb \
