@@ -1,8 +1,18 @@
-MD5 a1848924f4f1b76333480c924795429b ChangeLog 1285
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 50ae983cde7540b80514d241467b22ce omniorbpy-2.0.ebuild 2020
 MD5 1278b1bf46b7e364b96a7df0022de07b omniorbpy-2.2.ebuild 2021
 MD5 bdd9ab1e64ff3f2636f52d4a6955e124 omniorbpy-2.3.ebuild 2032
+MD5 f5d93acdd86c493cdb1ee1060d617e32 ChangeLog 1367
 MD5 3b2f7d612501c7be35937d732281147a files/digest-omniorbpy-2.0 65
 MD5 e5b594489f3bb0ca7f36138194697abe files/digest-omniorbpy-2.2 65
 MD5 83c93e6e67ee905f02269466a4f296fd files/digest-omniorbpy-2.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOr+wI1lqEGTUzyQRArhlAJ9ZCh/gMFH4UX5u69BBqcwxlD0SPwCdEa1l
+MYy/WX7dPlLnfO6qJGvBXHM=
+=dImM
+-----END PGP SIGNATURE-----

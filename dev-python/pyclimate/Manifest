@@ -1,6 +1,16 @@
-MD5 0b0e9fba24686ca08014eed6a05db3b4 pyclimate-1.2.1.ebuild 968
-MD5 c9afbf7c8b342ae9c7fe6542d02332b2 pyclimate-1.2.1-r1.ebuild 1339
-MD5 680feea9e0e65f64c239660d7bf08dcc ChangeLog 1142
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5711f48155e6a9f7f569dab40265e627 metadata.xml 729
+MD5 c9afbf7c8b342ae9c7fe6542d02332b2 pyclimate-1.2.1-r1.ebuild 1339
+MD5 0b0e9fba24686ca08014eed6a05db3b4 pyclimate-1.2.1.ebuild 968
+MD5 32c3a7ba504cacbe47cfc7e456d5cd38 ChangeLog 1223
 MD5 f8ee275409815fba5c7c815d370748bf files/digest-pyclimate-1.2.1 67
 MD5 f8ee275409815fba5c7c815d370748bf files/digest-pyclimate-1.2.1-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOr/ZI1lqEGTUzyQRArnsAJ0QlG+/3KOd2/whqzUEJPN0fsA3DQCfc954
+NlG9makiF5GpxlfrMWu8pKk=
+=MW1d
+-----END PGP SIGNATURE-----
