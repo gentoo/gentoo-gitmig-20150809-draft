@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.2b.ebuild,v 1.1 2004/06/29 16:58:06 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.2.2b.ebuild,v 1.2 2004/06/29 17:42:41 vapier Exp $
 
-DESCRIPTION="A scalable configuration management system."
+DESCRIPTION="A scalable configuration management system"
 HOMEPAGE="http://www.bitkeeper.com/"
 SRC_URI="alpha? ( bk-${PV}-alpha-glibc22-linux.bin )
 	arm? ( bk-${PV}-arm-glibc21-linux.bin )
@@ -13,26 +13,27 @@ SRC_URI="alpha? ( bk-${PV}-alpha-glibc22-linux.bin )
 	s390? ( bk-${PV}-s390-glibc22-linux.bin )
 	sparc? ( bk-${PV}-sparc-glibc21-linux.bin )
 	x86? ( bk-${PV}-x86-glibc23-linux.bin )"
+
 LICENSE="BKL"
 SLOT="0"
 KEYWORDS="alpha arm hppa ia64 mips ppc s390 sparc x86"
-RESTRICT="fetch"
 IUSE="X"
+RESTRICT="fetch"
 
 DEPEND=""
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-lang/tcl-8.3.4
 	X? ( >=dev-lang/tk-8.3.4 )"
 
 S=${WORKDIR}
 
 pkg_nofetch() {
-	eerror "You need to perform the following steps to install this package:"
-	eerror " - Sign up at ${HOMEPAGE}"
-	eerror " - Check your email and visit the download location"
-	eerror " - Download ${A} and place it in ${DISTDIR}"
-	eerror " - emerge this package again"
-	eerror "Run 'bk regression' to verify the installation. (Recommended)"
+	einfo "You need to perform the following steps to install this package:"
+	einfo " - Sign up at ${HOMEPAGE}"
+	einfo " - Check your email and visit the download location"
+	einfo " - Download ${A} and place it in ${DISTDIR}"
+	einfo " - emerge this package again"
+	einfo "Run 'bk regression' to verify the installation. (Recommended)"
 }
 
 src_unpack() {
@@ -78,7 +79,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if grep -H bitkeeper /etc/man.conf; then
+	if grep -H bitkeeper ${ROOT}/etc/man.conf; then
 		eerror "Previous BitKeeper ebuilds induced a misconfiguration when sys-apps/man was"
 		eerror "next upgraded. You appear to have fallen victim--edit /etc/man.conf and look"
 		eerror "for the definition of CMP. It should refer to /usr/bin/cmp, not the"
