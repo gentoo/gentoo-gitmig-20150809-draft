@@ -1,9 +1,8 @@
-MD5 fab7dd270473e219b60862c6a4a50a1e kbarcode-1.6.0_rc2.ebuild 598
 MD5 7b6bf2cf88da74aed8af5b276cdbc7ad kbarcode-1.2.1.ebuild 490
 MD5 413f4c33b29d0e9923cb19525d9db996 kbarcode-1.5.5.ebuild 555
-MD5 bc24feeb3f6f166919a19fedb4774a24 kbarcode-1.6.0.ebuild 556
+MD5 bca3e967a1f478389fc2519fb0271329 kbarcode-1.6.0.ebuild 781
 MD5 cfbbfddb2e9a421f97f51ac5696423b5 kbarcode-1.2.0.ebuild 489
-MD5 0b444d4afb0c731b70ec11da2734a3ce ChangeLog 1238
+MD5 f76b039dfbc933cbbbb4e4b287462e2e ChangeLog 1406
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 70c6a14dcc503d3ae53eab5c4943d3c0 kbarcode-1.5.4.ebuild 555
 MD5 0ac808b9629d1ec8288e8f0e8e33434e files/digest-kbarcode-1.2.0 66
@@ -11,4 +10,3 @@ MD5 553f4a3e013763ebe62e0614abd0a157 files/digest-kbarcode-1.2.1 66
 MD5 882adaa37165d394a276210907ca619f files/digest-kbarcode-1.5.4 136
 MD5 49a54155431743316e2fa7237f3137ab files/digest-kbarcode-1.5.5 136
 MD5 f870e659316d155ee5f14fc2c4059464 files/digest-kbarcode-1.6.0 136
-MD5 2064344c0e85c8c4bc157fdd4434fd3c files/digest-kbarcode-1.6.0_rc2 139
