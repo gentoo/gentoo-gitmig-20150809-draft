@@ -1,5 +1,5 @@
-MD5 9e84aba73285a8feb96f6fe1c2433f1e ChangeLog 6058
-MD5 02902327637dc2aec55976ea529f1676 DirectFB-0.9.20.ebuild 2462
+MD5 6a44d39d00834b0581c921ac4bb81fc4 ChangeLog 6153
+MD5 90def45a147843f7c403412998ec3d51 DirectFB-0.9.20.ebuild 2456
 MD5 b798773c0060701f402cec4cddc05f5d metadata.xml 754
 MD5 ba5b8492b20c817af4f669c914a4fe04 files/0.9.20-linux-2.6.patch 809
 MD5 938ad0cd729c90ede0f844b39cbeffa5 files/digest-DirectFB-0.9.20 68

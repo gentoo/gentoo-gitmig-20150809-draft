@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.38 2004/03/14 16:30:35 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.39 2004/04/18 15:07:29 lv Exp $
+
+  18 Apr 2004; Travis Tilley <lv@gentoo.org> DirectFB-0.9.20.ebuild:
+  marking as stable on amd64
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> DirectFB-0.9.20.ebuild:
   Masking on mips because of unsupported hardware.

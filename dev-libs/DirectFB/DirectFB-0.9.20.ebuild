@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.13 2004/03/21 16:50:35 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.14 2004/04/18 15:07:29 lv Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc -sparc alpha hppa ia64 -mips ~amd64"
+KEYWORDS="x86 ppc -sparc alpha hppa ia64 -mips amd64"
 IUSE="jpeg gif png truetype mpeg mmx sse fusion"
 
 DEPEND="dev-lang/perl
