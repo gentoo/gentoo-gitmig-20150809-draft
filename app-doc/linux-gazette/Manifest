@@ -1,4 +1,4 @@
-MD5 07defac955d1c1f638bb54492b581163 ChangeLog 389
+MD5 aff4da495c93ee3631dedfbfe4031024 ChangeLog 3396
 MD5 1d4e0c67b96ea63d728f5e7231624f13 linux-gazette-01.ebuild 485
 MD5 651f2e7679432761a0468b097ea9a796 linux-gazette-02.ebuild 346
 MD5 651f2e7679432761a0468b097ea9a796 linux-gazette-03.ebuild 346
@@ -92,6 +92,7 @@ MD5 68ade95c033bec5654a9cebe9de826ce linux-gazette-90.ebuild 484
 MD5 68ade95c033bec5654a9cebe9de826ce linux-gazette-91.ebuild 484
 MD5 68ade95c033bec5654a9cebe9de826ce linux-gazette-92.ebuild 484
 MD5 68ade95c033bec5654a9cebe9de826ce linux-gazette-93.ebuild 484
+MD5 68ade95c033bec5654a9cebe9de826ce linux-gazette-94.ebuild 484
 MD5 bf96048eaaf75dc07b7bd5731bbb3faf files/digest-linux-gazette-01 67
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-02 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-03 0
@@ -185,3 +186,4 @@ MD5 d699d40f18ddabb4fad8a7363f1d2bda files/digest-linux-gazette-90 62
 MD5 9bda63a6ad5d50b61b7c233f8b257707 files/digest-linux-gazette-91 63
 MD5 bc24f008d2df8eb8d6969663bad996d7 files/digest-linux-gazette-92 63
 MD5 9f5171bdb183d799ff3ee12476eae2a0 files/digest-linux-gazette-93 62
+MD5 ddda9b3ff58520a5ff9cad6fc7639ee4 files/digest-linux-gazette-94 62
