@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3-r1.ebuild,v 1.7 2003/12/17 03:42:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3-r1.ebuild,v 1.8 2003/12/30 21:28:28 mr_bones_ Exp $
 
 IUSE="tcpd"
 # The release candidates are named syslog-ng-1.6.0rc1 for example
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="syslog replacement with advanced filtering features"
-SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/${MY_P}.tar.gz"
+SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/old/${MY_P}.tar.gz"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
 
 SLOT="0"
