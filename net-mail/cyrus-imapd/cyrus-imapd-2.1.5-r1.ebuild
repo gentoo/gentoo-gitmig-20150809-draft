@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r1.ebuild,v 1.1 2002/08/14 03:40:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r1.ebuild,v 1.2 2002/08/22 18:04:14 raker Exp $
 
 inherit perl-module
 
@@ -31,7 +31,8 @@ DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2
-	>=sys-apps/tcp-wrappers-7.6"
+	>=sys-apps/tcp-wrappers-7.6
+	net-mail/mailbase"
 
 
 # recommended: flex, maybe: net-snmp, postfix, perl?, afs, inn, tcl (cyradm)
@@ -55,10 +56,14 @@ src_compile() {
 
 	local myconf
 	
-	use afs || myconf="--without-afs"
-	use snmp || myconf="${myconf} --without-ucdsnmp"
-	use ssl || myconf="${myconf} --without-openssl"
-    	use perl || myconf="${myconf} --without-perl --disable-cyradm"
+	use afs && myconf="--with-afs" \
+		|| myconf="--without-afs"
+	use snmp && myconf="${myconf} --with-ucdsnmp=/usr" \
+		|| myconf="${myconf} --without-ucdsnmp"
+	use ssl && myconf="${myconf} --with-openssl=/usr" \
+		|| myconf="${myconf} --without-openssl"
+    	use perl && myconf="${myconf} --with-perl --enable-cyradm" \
+		|| myconf="${myconf} --without-perl --disable-cyradm"
 
 
 	./configure \
@@ -66,11 +71,11 @@ src_compile() {
 		--without-krb \
 		--without-gssapi \
 		--enable-listext \
-		--disable-cyradm \
 		--with-cyrus-group=mail \
 		--enable-shared \
 		--enable-netscapehack \
 		--with-com_err=yes \
+		--with-sasl=/usr/lib \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	# make depends break with -f... in CFLAGS

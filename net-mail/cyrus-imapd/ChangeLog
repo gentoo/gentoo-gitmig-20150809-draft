@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.7 2002/08/14 03:40:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.8 2002/08/22 18:04:14 raker Exp $
 
 *cyrus-imapd-2.1.5-r1 (13 Aug 2002)
+
+  22 Aug 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.5-r1.ebuild :
+  Added RDEPEND on net-mail/mailbase.  Closes bug #6573.
 
   13 Aug 2002; Nick Hadaway <raker@gentoo.org>
   cyrus-imapd-2.1.5-r1.ebuild, files/digest-cyrus-imapd-2.1.5-r1 :
