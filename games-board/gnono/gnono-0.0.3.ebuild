@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-0.0.3.ebuild,v 1.2 2004/02/29 10:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-0.0.3.ebuild,v 1.3 2004/04/13 09:25:50 mr_bones_ Exp $
 
 inherit games
 
@@ -20,8 +20,8 @@ DEPEND="gnome-base/gnome-libs
 	=x11-libs/gtk+-1.2*"
 
 src_compile() {
-	egamesconf `use_enable nls` || die
-	emake || die
+	egamesconf $(use_enable nls) || die
+	emake || die "emake failed"
 }
 
 src_install() {

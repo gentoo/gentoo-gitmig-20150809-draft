@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.2 2004/02/29 10:25:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.3 2004/04/13 09:27:18 mr_bones_ Exp $
 
 inherit games
 
@@ -23,12 +23,12 @@ RDEPEND="${DEPEND}
 	dev-games/cardpics"
 
 src_compile() {
-	egamesconf `use_enable gnome gnome2` || die
-	emake || die
+	egamesconf $(use_enable gnome gnome2) || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	mv ${D}/${GAMES_DATADIR}/locale ${D}/usr/share/
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 	prepgamesdirs
