@@ -1,52 +1,52 @@
-
                             The Artistic License
-                         Version 2.0beta4, October 2000
+                         Version 2.0beta5, October 2001
 
-                         Copyright (C) 2000, Larry Wall.
-        Everyone is permitted to copy and distribute verbatim copies
-         of this license document, but changing it is not allowed.
+          Copyright (C) 2000, 2001 Larry Wall, Bradley M. Kuhn.
+       Everyone is permitted to copy and distribute verbatim copies
+        of this license document, but changing it is not allowed.
 
                                   Preamble
 
 This copyright license states the terms under which a given free software
 Package may be copied, modified and/or redistributed, while the
-Originator(s) maintain some artistic control over the future
-development of that Package (at least as much artistic control as can be
-given under copyright law while still making the Package open source and
-free software).
+Originator(s) maintain some artistic control over the future development of
+that Package (at least as much artistic control as can be given under
+copyright law while still making the Package open source and free software).
 
 This license is bound by copyright law, and thus it legally applies only to
 works which the copyright holder has permitted copying, distribution or
 modification under the terms of the Artistic License, Version 2.0.
 
 You are reminded that You are always permitted to make arrangements wholly
-outside of a given copyright license directly with the copyright
-holder(s) of a given Package. If the terms of this license
-impede your ability to make full use of the Package, You are encouraged to
-contact the copyright holder(s) and seek a different licensing
-arrangement.
+outside of a given copyright license directly with the copyright holder(s)
+of a given Package.  If the terms of this license impede your ability to
+make full use of the Package, You are encouraged to contact the copyright
+holder(s) and seek a different licensing arrangement.
+
 
                                 Definitions
 
 "Package" refers to the collection of files distributed by the
-Originator(s), and derivatives of that collection of files
-created through textual modification.
+          Originator(s), and derivatives of that collection of files created
+          through textual modification.
 
-"Standard Version" refers to the Package if it has not been modified, or
-has been modified only in ways suggested by the Originator(s).
+"Standard Version" refers to the Package if it has not been modified, or has
+                   been modified only in ways suggested by the
+                   Originator(s).
 
-"Modified Version" refers to the Package, if it has been changed by You
-via textual modification of the source code, and such changes were not
-suggested by the Originator(s).
+"Modified Version" refers to the Package, if it has been changed by You via
+                   textual modification of the source code, and such changes
+                   were not suggested by the Originator(s).
 
-"Originator" refers to the author(s) and/or copyright
-holder(s) of the Standard Version of the Package.
+"Originator"       refers to the author(s) and/or copyright holder(s) of the
+                   Standard Version of the Package.
 
-"You" and "Your" refers to any person who would like to copy,
-distribute, or modify the Package.
+"You" and "Your" refers to any person who would like to copy, distribute, or
+                 modify the Package.
 
-"Distribution Fee" is any fee that You charge for providing a copy of
-this Package to another party. It does not refer to licensing fees.
+"Distribution Fee" is any fee that You charge for providing a copy of this
+                   Package to another party.  It does not refer to licensing
+                   fees.
 
 "Freely Available" means that:
 
@@ -60,12 +60,14 @@ this Package to another party. It does not refer to licensing fees.
            corresponding machine-readable source code is included with the
            item.
 
+
          Permission for Use and Modification Without Redistribution
 
   (1) You are permitted to use the Standard Version and create and use
       Modified Versions for any purpose without restriction, provided that
       you do not redistribute the Modified Version to others outside of your
       company or organization.
+
 
            Permissions for Redistribution of the Standard Version
 
@@ -84,7 +86,9 @@ this Package to another party. It does not refer to licensing fees.
       of the original license of the Standard Version as if it were the
       Standard Version.
 
- Permissions for Redistribution of Modified Versions of the Package as Source
+
+ Permissions for Redistribution of Modified Versions of the Package as Sour=
+ce
 
   (4) You may modify your copy of the source code of this Package in any way
       and distribute that Modified Version (either gratis or for a
@@ -107,12 +111,13 @@ this Package to another party. It does not refer to licensing fees.
            the Standard Version.
 
        (c) permit and encourage anyone who receives a copy of the Modified
-           Version permission to make your modifications Freely Available in
-           some specific way.                                               
+           Version to make your modifications Freely Available in some
+           specific way.
 
       If Your Modified Version is in turn derived from a Modified Version
       made by a third party, then You are still required to ensure that Your
       Modified Version complies with the requirements of this license.
+
 
       Permissions for Redistribution of Non-Source Versions of Package
 
@@ -147,8 +152,9 @@ this Package to another party. It does not refer to licensing fees.
            that source code Freely Available) of the Modified Version via
            mail order.
 
+
         Permissions for Inclusion of the Package in Aggregate Works
-  
+ =20
   (7) You may aggregate this Package (either the Standard Version or
       Modified Version) with other packages and distribute the resulting
       aggregation provided that You do not charge a licensing fee for the
@@ -169,6 +175,7 @@ this Package to another party. It does not refer to licensing fees.
       scripts that require the Package, but do not otherwise give the casual
       user direct access to the Package itself.
 
+
         Items That are Never Considered Part of a Modified Version Package
 
   (9) Works (including, but not limited to, subroutines and scripts) that
@@ -179,6 +186,7 @@ this Package to another party. It does not refer to licensing fees.
       are not considered parts of the Package itself, and are not bound by
       the terms of the Package's license.
 
+
               Acceptance of License and Disclaimer of Warranty
 
  (10) You are not required to accept this License, since you have not signed
@@ -188,6 +196,7 @@ this Package to another party. It does not refer to licensing fees.
       License.  Therefore, by copying, modifying or distributing Standard
       and Modified Versions of the Package, you indicate your acceptance of
       the license of the Package.
+
 
  (11) Disclaimer of Warranty:
 
