@@ -1,9 +1,15 @@
-MD5 680525413cbe1937bc6a8a26730c1e0c esearch-0.5.3.ebuild 857
-MD5 5861876c4bb3b139d77b5795dfd2a358 esearch-0.6.1.ebuild 869
-MD5 44e5c30ae6fa1601e14f3b554ac76664 esearch-0.6.ebuild 944
-MD5 102d74d3c9bb8c3182ada66d392a36af ChangeLog 2649
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
-MD5 fc6a7836734e3ceceb907fa67a16134f files/digest-esearch-0.6 62
-MD5 52f7276b6ad7d7e1b3e41226d0bcce16 files/digest-esearch-0.5.3 64
-MD5 80781824f6a27f9da34526ad8a24a1a0 files/digest-esearch-0.6.1 64
+MD5 f28b2aef4f60f3a19f7f23a2b3c4a3ee ChangeLog 2938
+MD5 77864a68765096ffe5e8d8b840bd8f95 esearch-0.6.2.ebuild 859
 MD5 5cc41b341ae3198b00e2f8fb353c9658 files/eupdatedb.cron 615
+MD5 c86fa62acc6e7a3d1cb984f8a37d005c files/digest-esearch-0.6.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA4ztA6J2i8a8J4okRAtCeAJ9NbHbwsfgElBRNiH3lhEpw9Rl5gACdF6Lu
+Vf6/i/HFyDcKk5pIYBWLttc=
+=DPZR
+-----END PGP SIGNATURE-----
