@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.10 2004/03/21 14:34:33 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.11 2004/03/25 22:55:19 weeve Exp $
+
+  25 Mar 2004; Jason Wever <weeve@gentoo.org> honeyd-0.8.ebuild:
+  Added ~sparc keyword.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> honeyd-0.4a.ebuild,
   honeyd-0.5.ebuild:
