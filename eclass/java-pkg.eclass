@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.12 2004/09/09 12:38:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.13 2004/09/10 09:11:41 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -80,8 +80,7 @@ java-pkg_doso()
 	
 	# Check for arguments
 	if [ -z "$*" ] ; then
-		echo "${0}: at least one argument needed"
-		exit 1
+		die "at least one argument needed"
 	fi
 
 	# Make sure directory is created
@@ -93,7 +92,7 @@ java-pkg_doso()
 		mysrc=$(java-pkg_do_getsrc_)
 
 		# Install files
-		install -m 0644 "${mysrc}" "${D}${sodest}"
+		install -m 0755 "${mysrc}" "${D}${sodest}" || die "${mysrc} not found"
 	done
 	lp_pkg="${sodest}"
 	
@@ -149,8 +148,7 @@ java-pkg_dojar()
 
 	# Check for arguments
 	if [ -z "$*" ] ; then
-		echo "${0}: at least one argument needed"
-		exit 1
+		die "at least one argument needed"
 	fi
 
 	# Make sure directory is created
@@ -182,8 +180,7 @@ java-pkg_dowar()
 	
 	# Check for arguments
 	if [ -z "$*" ] ; then
-		echo "${0}: at least one argument needed"
-		exit 1
+		die "at least one argument needed"
 	fi
 	
 	if [ -z "${WARDESTTREE}" ] ; then
