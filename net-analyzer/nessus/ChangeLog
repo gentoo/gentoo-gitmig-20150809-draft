@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.28 2004/06/24 22:10:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.29 2004/07/11 10:24:00 eldad Exp $
+
+  11 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  nessus-2.0.10a.ebuild, nessus-2.0.7-r1.ebuild, nessus-2.0.7.ebuild,
+  nessus-2.0.8a.ebuild, nessus-2.0.9.ebuild:
+  Added metadata, added missing IUSE
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> nessus-2.0.10a.ebuild:
   Stable on alpha.
