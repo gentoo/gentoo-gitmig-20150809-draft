@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.1 2003/10/27 17:53:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.0_p1-r1.ebuild,v 1.2 2003/11/29 16:24:26 usata Exp $
 
-IUSE="truetype gtk gtk2 nls imlib nopixbuf bidi"
+IUSE="truetype gnome gtk gtk2 imlib bidi nls"
 
 MY_P="${P/_p?/}"
 PATCH_P="${P/_p/pl}"
@@ -17,17 +17,13 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 LICENSE="BSD"
 
-DEPEND="virtual/x11
-	gtk? ( =x11-libs/gtk+-1.2*
-		nls? ( sys-devel/gettext ) )
-	|| (
-		!nopixbuf? ( media-libs/gdk-pixbuf )
-		imlib? ( media-libs/imlib )
-		gtk2? ( =x11-libs/gtk+-2* )
-		virtual/x11
-	)
+DEPEND="gnome? ( gtk? ( gtk2? ( =x11-libs/gtk+-2* ) ) :
+			( >=media-libs/gdk-pixbuf-0.18.0 ) )
+	!gnome? ( imlib? >=media-libs/imlib-1.9.14 : virtual/x11 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	truetype? ( =media-libs/freetype-2* )
-	bidi? ( dev-libs/fribidi )"
+	bidi? ( >=dev-libs/fribidi-0.10.4 )
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -36,25 +32,25 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf imagelib
 
-	if [ ! `use nopixbuf` ] ; then
-		myconf="--with-imagelib=gdk-pixbuf1"
-	elif [ `use imlib` ] ; then
-		myconf="--with-imagelib=imlib"
-	elif [ `use gtk2` ] ; then
-		myconf="--with-imagelib=gdk-pixbuf2"
-	else
-		myconf="--with-imagelib="
+	if [ -n "`use gnome`" ] ; then
+		if [ -n "`use gtk`" -a -n "`use gtk2`" ] ; then
+			imagelib="gdk-pixbuf2"
+		else
+			imagelib="gdk-pixbuf1"
+		fi
+	elif [ -n "`use imlib`" ] ; then
+		imagelib="imlib"
 	fi
 
 	use gtk || myconf="${myconf} --with-tools=mlclient,mlcc"
 
-	econf \
+	econf --enable-utmp \
 		`use_enable truetype anti-alias` \
-		`use_enable nls` \
 		`use_enable bidi fribidi` \
-		--enable-utmp \
+		`use_enable nls` \
+		--with-imagelib=${imagelib} \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
