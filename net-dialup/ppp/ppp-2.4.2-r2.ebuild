@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.13 2004/09/25 07:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.14 2004/11/08 03:53:44 nerdboy Exp $
 
 inherit eutils gnuconfig
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch.gz
 	epatch ${FILESDIR}/${PV}/cflags.patch
 	epatch ${FILESDIR}/${PV}/pcap.patch
-	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
+	epatch ${FILESDIR}/${PV}/mppe-mppc-1.0.patch.gz
 
 	if use atm && use x86; then
 		einfo "Enabling PPPoATM support"
