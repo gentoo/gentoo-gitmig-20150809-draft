@@ -1,12 +1,17 @@
 # ChangeLog for app-misc/scmxx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/ChangeLog,v 1.3 2003/01/06 01:12:13 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/ChangeLog,v 1.4 2003/01/06 01:19:43 agenkin Exp $
 
-*scmxx-0.6.0 (2 May, 2002)
+*scmxx-0.6.3.5 (05 Jan, 2003)
+
+  05 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  New version.
+
+*scmxx-0.6.0 (02 May, 2002)
 
   05 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Fixed download location.
   	
-  2 May 2002; Arcady Genkin <agenkin@thpoon.com> scmxx-0.6.0.ebuild :
+  02 May 2002; Arcady Genkin <agenkin@thpoon.com> scmxx-0.6.0.ebuild :
   Initial version of the ebuild, submitted by Oyvind Repvik
   <oyvind.repvik@siemenssg.com>.
