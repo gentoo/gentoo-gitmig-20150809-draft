@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.35 2004/04/16 19:03:29 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.36 2004/04/27 16:28:27 tseng Exp $
+
+  27 Apr 2004; Brandon Hale <tseng@gentoo.org> gentoo-0.11.48.ebuild:
+  Stable on x86.
 
 *gentoo-0.11.48 (16 Apr 2004)
 
