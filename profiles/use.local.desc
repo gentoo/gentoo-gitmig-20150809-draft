@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.801 2004/12/16 15:47:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.802 2004/12/17 03:33:43 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -248,13 +248,11 @@ dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/adodb-py:postgresql - Support psycopg (python postgresql bindings)
-dev-python/anygui:wxwin - enable wxwin support
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
-dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
 dev-ruby/ruby-amazon:geoip - enable GeoIP support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
@@ -725,7 +723,6 @@ x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
-x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/xscreensaver:offensive - Adds screensavers that are not-safe-for-work.
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
