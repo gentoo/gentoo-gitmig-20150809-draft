@@ -1,10 +1,17 @@
 # ChangeLog for dev-util/gpsim
-# Copyright 2003 Alex Holden <alex@alexholden.net>; Distributed under the GPL
-# $Header:
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.2 2003/10/21 03:22:21 robbat2 Exp $
+
+*gpsim-0.20.14-r1 (20 Oct 2003)
+
+  20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> gpsim-0.20.14-r1.ebuild,
+  files/gpsim-0.20.14-gcc33.patch:
+  add gcc3.3 fix, install more docs
 
 *gpsim-0.20.14 (08 Feb 2003)
 
-  08 Feb 2003; Alex Holden <alex@alexholden.net> gpsim-0.20.14.ebuild files/digest-gpsim-0.20.14 :
+  08 Feb 2003; Alex Holden <alex@alexholden.net> gpsim-0.20.14.ebuild
+  files/digest-gpsim-0.20.14 :
   
   gpsim is a full-featured software simulator for Microchip PIC
   microcontrollers distributed under the GNU General Public License.
