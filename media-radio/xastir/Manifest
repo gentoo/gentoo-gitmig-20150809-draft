@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d3774567fb64cef93cecab6d7410e0c ChangeLog 435
-MD5 7ad0b2141a2f5468f96e9ef5e28afabd xastir-1.2.0.ebuild 559
+MD5 bf797dd473feea790082c496032ead7a ChangeLog 550
+MD5 04253c9d67e39e01ae363538fa1a766f xastir-1.2.0.ebuild 540
 MD5 28c8839ac6e0340f6d489f1104c0fea7 files/digest-xastir-1.2.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFA4iGpHTu7gpaalycRAj7yAJ9er7rK74VsvcmCZdB8wVPhug0tGwCgmsGD
-FXAB1dlPXfDheAIRyzXCJaw=
-=2cR5
+iD8DBQFBK/o+I1lqEGTUzyQRAkIcAJ0fyNPazWqZ7JAPS/7elJXGvRj44QCeKyxh
+mtTrcNrZKzXt9UREjoOkEJM=
+=Typq
 -----END PGP SIGNATURE-----
