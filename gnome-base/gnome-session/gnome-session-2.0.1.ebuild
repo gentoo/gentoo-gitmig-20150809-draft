@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.1.ebuild,v 1.1 2002/06/17 19:33:21 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.1.ebuild,v 1.2 2002/06/17 19:56:51 stroke Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -20,7 +20,7 @@ LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
-	>=gnome-base/libgnomeui-2.0.1
+	>=gnome-base/libgnomeui-2.0.0
 	>=gnome-base/libgnomecanvas-2.0.1
 	>=sys-devel/gettext-0.10.40
 	>=sys-apps/tcp-wrappers-7.6"
