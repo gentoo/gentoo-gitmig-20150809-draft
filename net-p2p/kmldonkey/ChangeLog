@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.11 2004/06/29 00:10:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.12 2004/08/14 14:50:31 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> kmldonkey-0.8.ebuild:
+  Trimmed trailing whitespace.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> kmldonkey-0.10_pre3.ebuild,
   kmldonkey-0.8.ebuild, kmldonkey-0.9.1.ebuild:

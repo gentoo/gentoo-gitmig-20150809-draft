@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.8.ebuild,v 1.10 2004/06/29 00:10:00 carlo Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.8.ebuild,v 1.11 2004/08/14 14:50:31 swegener Exp $
 
 inherit kde
 
