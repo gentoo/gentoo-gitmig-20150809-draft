@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.1 2004/05/12 03:05:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.2 2004/05/12 19:28:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ KEYWORDS="~x86"
 IUSE="ifc doc"
 
 DEPEND="virtual/glibc
-	ifc? ( >=sys-devel/libtool-1.5 ) : ( sys-devel/libtool )
+	ifc? ( >=sys-devel/libtool-1.5 )
+	!ifc? ( sys-devel/libtool )
 	=app-sci/blas-atlas-3.6.0
 	app-sci/lapack-config
 	ifc? ( dev-lang/ifc )"
