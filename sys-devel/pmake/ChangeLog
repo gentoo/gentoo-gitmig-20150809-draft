@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.7 2004/01/15 05:20:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.8 2004/02/07 15:04:07 agriffis Exp $
+
+*pmake-1.45-r3 (07 Feb 2004)
+
+  07 Feb 2004; <agriffis@gentoo.org> pmake-1.45-r3.ebuild:
+  Clean up this ebuild. Fix the arch support, which was messy and (I think)
+  wrong because CFLAGS was being overridden without including the defines. This
+  fixes bug 39159
 
   15 Jan 2004; Jon Portnoy <avenj@gentoo.org> pmake-1.45-r2.ebuild :
   Stable on AMD64.
