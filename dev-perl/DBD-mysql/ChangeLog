@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.18 2003/12/24 21:57:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.19 2003/12/24 21:58:34 mcummings Exp $
+
+  24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  DBD-mysql-2.1004-r2.ebuild, DBD-mysql-2.1004-r3.ebuild:
+  Version no longer available from CPAN
 
 *DBD-mysql-2.9003 (24 Dec 2003)
 
