@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.1 2004/10/28 09:25:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.7.0.ebuild,v 1.2 2004/11/21 10:51:27 dragonheart Exp $
 
 IUSE="nls static"
 
@@ -10,7 +10,7 @@ SRC_URI="http://laurikari.net/tre/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="virtual/libc
 	sys-apps/gawk
@@ -22,7 +22,8 @@ DEPEND="virtual/libc
 	dev-util/pkgconfig"
 
 RDEPEND="virtual/libc
-	!app-misc/glimpse"
+	!app-misc/glimpse
+	!app-text/agrep"
 
 src_compile() {
 	# Build TRE library.
@@ -45,7 +46,7 @@ src_install() {
 
 
 pkg_postinst() {
-	ewarn "Both app-misc/glimpse and this package provide agrep."
+	ewarn "Both app-misc/glimpse, app-text/agrep and this package provide agrep."
 	ewarn "they seem to be similar but just to let you know."
 	ewarn "If this causes a problem please do a bug report"
 	ewarn "bugs.gentoo.org."
