@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.3.ebuild,v 1.6 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.3.ebuild,v 1.7 2004/11/05 16:47:36 plasmaroo Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -87,7 +87,7 @@ src_compile ()  {
 	echo -n ' '; einfo "that contain 'No such file' references."
 	echo; echo '>>> Compiling...'
 
-	emake CC=${CC} LINUX=$LINUX clean all
+	emake CC=$(tc-getCC) LINUX=$LINUX clean all
 	if [ $? != 0 ]; then
 		eerror "I2C requires the source of a compatible kernel"
 		eerror "version installed in /usr/src/linux"
@@ -100,7 +100,7 @@ src_compile ()  {
 
 src_install() {
 	emake \
-		CC=${CC} \
+		CC=$(tc-getCC) \
 		LINUX=$LINUX \
 		LINUX_INCLUDE_DIR=/usr/include/linux \
 		DESTDIR=${D} \

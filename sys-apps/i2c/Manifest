@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a1f9b4cfb9119ca00f0d8004053d994 ChangeLog 4748
-MD5 5d52b4f6a19458dff0650893ebed4ce7 i2c-2.6.5-r1.ebuild 1195
-MD5 6642416551db0c18eb3dbb67deb3b025 i2c-2.7.0.ebuild 1303
 MD5 1e81182034227eda3927cb8c41c266b6 i2c-2.8.0.ebuild 3992
-MD5 18fef11b51948f9b8bdc5d371e91be30 i2c-2.8.1.ebuild 4014
-MD5 5a238204690d2cefeff6209576ec9f66 i2c-2.8.2.ebuild 4014
+MD5 2b9b81e3a1e7bbbc2d4c3d4b7aec0b02 ChangeLog 4939
+MD5 b34b8d84d7ba0ea136599cb29fd2ce62 i2c-2.8.3.ebuild 4029
+MD5 e23e32e51e5a84476183d38f69bb85c8 i2c-2.8.2.ebuild 4043
+MD5 c2cbc46911448643914206860cfd21a5 i2c-2.8.1.ebuild 4043
+MD5 754518b923128cb5bc4bc240d44b8cd6 i2c-2.8.7.ebuild 3958
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
-MD5 f5910700b5897b94df93e255ecb95811 i2c-2.8.3.ebuild 4000
-MD5 06ac0a5290f8cf20adb05fe1f5829aa2 i2c-2.8.4.ebuild 3925
-MD5 0b9b152fd70dd3031b4d472735b6fbe2 i2c-2.8.7.ebuild 3930
-MD5 d84d7499f269712cfe07ef43c5a3a966 i2c-2.8.8.ebuild 3915
+MD5 6642416551db0c18eb3dbb67deb3b025 i2c-2.7.0.ebuild 1303
+MD5 72e4212b9152ef26263d1c38087cc741 i2c-2.8.4.ebuild 3953
+MD5 4c54f09d392c6ddd3ef44f5a5484aa3c i2c-2.8.8.ebuild 3943
+MD5 5d52b4f6a19458dff0650893ebed4ce7 i2c-2.6.5-r1.ebuild 1195
 MD5 3576df9f3c7882d48106168eb8f7d51a files/digest-i2c-2.6.5-r1 61
+MD5 3617d4ccdde4f981beb017ae657d9f5d files/digest-i2c-2.8.4 61
+MD5 9a742c848861fdb77a2ece979a81edc3 files/i2c-2.8.0-alphaCompile.patch 353
+MD5 4a11fc0743bbab53667047d79e3ddb47 files/digest-i2c-2.8.2 61
 MD5 2e2470d20cbace5964fe8d32fd87200e files/digest-i2c-2.7.0 61
+MD5 3d1523487606d28ad6cb49a5f34b1601 files/digest-i2c-2.8.7 61
+MD5 3fcbcb26e62ebb13ccb35be0a7de2f3c files/digest-i2c-2.8.3 61
+MD5 5e9a39e8feddd0556a74c69946cac4ba files/digest-i2c-2.8.8 61
 MD5 98815b3534b98fe332ebd0121be2c5c0 files/digest-i2c-2.8.0 61
 MD5 6fd48fab2a59dd0de9299437a6a4ac01 files/digest-i2c-2.8.1 61
-MD5 4a11fc0743bbab53667047d79e3ddb47 files/digest-i2c-2.8.2 61
-MD5 9a742c848861fdb77a2ece979a81edc3 files/i2c-2.8.0-alphaCompile.patch 353
-MD5 3fcbcb26e62ebb13ccb35be0a7de2f3c files/digest-i2c-2.8.3 61
-MD5 3617d4ccdde4f981beb017ae657d9f5d files/digest-i2c-2.8.4 61
-MD5 3d1523487606d28ad6cb49a5f34b1601 files/digest-i2c-2.8.7 61
-MD5 5e9a39e8feddd0556a74c69946cac4ba files/digest-i2c-2.8.8 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBitw6HTu7gpaalycRAgPlAKCp/V8g3qKWffXe+IIq8VHYfLRv2wCfSO5A
-ri38LyYErqnafqpjfyWWuZE=
-=tX6w
------END PGP SIGNATURE-----
