@@ -1,4 +1,4 @@
-MD5 6370c1e119eef30cb0699af44269a6eb ChangeLog 296
-MD5 df319f39933b20302fc648764c58da4e pdns-2.9.8.ebuild 917
+MD5 5fb0d09291a2414913463a4f3658c320 ChangeLog 499
+MD5 3f890673f6c88cc98addaa08fc7acab9 pdns-2.9.8.ebuild 964
 MD5 0969ab0b2776f09c9aeb74b0996c4426 files/pdns 533
 MD5 edc11ac6841533c59818f2c1fb9f2a01 files/digest-pdns-2.9.8 62
