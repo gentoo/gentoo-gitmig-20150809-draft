@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mips64emul
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/ChangeLog,v 1.4 2005/01/01 14:14:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/ChangeLog,v 1.5 2005/03/16 01:25:09 vapier Exp $
+
+*mips64emul-0.3 (16 Mar 2005)
+
+  16 Mar 2005; Mike Frysinger <vapier@gentoo.org> +mips64emul-0.3.ebuild:
+  Version bump.
 
 *mips64emul-0.2 (11 Sep 2004)
 
