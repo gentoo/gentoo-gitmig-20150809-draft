@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.14 2004/05/26 14:43:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.15 2004/05/27 06:08:08 vapier Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
 	>=sys-libs/zlib-1.1.4
-	!arm? ( mysql? ( >=dev-db/mysql-3.23.26 ) )
+	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="!dev-libs/9libs
 	>=sys-devel/autoconf-2.13
