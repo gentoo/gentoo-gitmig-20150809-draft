@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.3 2002/12/12 15:53:12 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.00-r1.ebuild,v 1.4 2002/12/15 17:07:27 hannes Exp $
 
 IUSE="gtk"
 DESCRIPTION="edonkey, opennap,... client written in ocaml"
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/mldonkey/stable/${P}.sources.tar.gz
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="gtk? ( >=lablgtk-1.2.3 )
         >=ocaml-3.06
 		>=perl-5.6.1"
