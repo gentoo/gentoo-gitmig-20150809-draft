@@ -9,7 +9,6 @@ SRC_URI="http://telia.dl.sourceforge.net/sourceforge/libraw1394/${PN}_${PV}.tar.
 S=${WORKDIR}/${P}
 
 DEPEND=""
-RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="x86 ppc"
 

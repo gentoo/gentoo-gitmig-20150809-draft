@@ -9,7 +9,6 @@ SRC_URI="http://telia.dl.sourceforge.net/sourceforge/libavc1394/${P}.tar.gz"
 S=${WORKDIR}/${P}
 
 DEPEND=">=libraw1394-0.8"
-RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
