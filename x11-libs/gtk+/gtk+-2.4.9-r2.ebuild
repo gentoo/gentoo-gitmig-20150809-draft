@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.14.ebuild,v 1.2 2004/12/26 10:03:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.9-r2.ebuild,v 1.1 2004/12/26 10:03:25 corsair Exp $
 
 inherit libtool flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
-	mirror://gentoo/gtk+-2.4-smoothscroll-r1.patch
 	amd64? ( http://dev.gentoo.org/~lv/gtk+-2.4.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="ppc64"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
@@ -35,6 +34,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	# security fixes (#64230)
+	epatch ${FILESDIR}/${P}-xpm_ico_secure.patch
+
 	# Turn of --export-symbols-regex for now, since it removes
 	# the wrong symbols
 	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
@@ -42,8 +44,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
-	epatch ${DISTDIR}/${PN}-2.4-smoothscroll-r1.patch
-
+	epatch ${FILESDIR}/${PN}-2.4-smoothscroll.patch
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	use amd64 && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
@@ -91,7 +92,7 @@ src_install() {
 	dodir /etc/env.d
 	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
 
-	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
+	dodoc AUTHORS ChangeLog* HACKING INSTALL NEWS* README*
 
 }
 
@@ -103,5 +104,9 @@ pkg_postinst() {
 
 	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
 	gdk-pixbuf-query-loaders >	/${GTK2_CONFDIR}/gdk-pixbuf.loaders
+
+	einfo "For gtk themes to work correctly after an update, you might have to rebuild your theme engines."
+	einfo "Executing 'qpkg -f -nc /usr/lib/gtk-2.0/2.2.0/engines | xargs emerge' should do the trick if"
+	einfo "you upgrade from gtk+-2.2 to 2.4 (requires gentoolkit)."
 
 }
