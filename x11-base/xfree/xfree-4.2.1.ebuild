@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.21 2002/10/25 22:35:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.22 2002/10/26 14:30:24 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -382,6 +382,8 @@ src_install() {
 
 	# Remove libz.a, as it causes problems (bug #4777)
 	rm -f ${D}/usr/X11R6/lib/libz.a
+	# And do not forget the includes (bug #9470)
+	rm -f ${D}/usr/X11R6/include/{zconf.h,zlib.h}
 
 	exeinto /etc/X11
 	# new session management script
