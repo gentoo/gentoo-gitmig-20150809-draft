@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.8-r1.ebuild,v 1.2 2003/01/15 03:19:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.8-r1.ebuild,v 1.3 2003/02/10 05:28:43 vapier Exp $
 
 inherit kde-functions eutils
 
@@ -27,9 +27,10 @@ DEPEND="=sys-libs/db-1*
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}/plugins
-	use ssl && unpack encrypt.tar.gz
-	use ssl && epatch encrypt/patchfile.0.59.5 || die
-	cd ${S}
+	use ssl && {
+		unpack encrypt.tar.gz
+		epatch encrypt/patchfile.0.59.5
+	}
 }
 
 src_compile() {
