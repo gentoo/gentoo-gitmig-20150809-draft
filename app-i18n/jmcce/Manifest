@@ -1,5 +1,15 @@
-MD5 adc2ee905f95492fadfbce66ebd8ce39 ChangeLog 515
-MD5 7260e7db23aecf06d4814b905ec6cc70 jmcce-1.4_rc2.ebuild 960
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2dc2e2ffda72271fe0b634e5980dbb37 ChangeLog 644
+MD5 5cfa96f42c6da4d8898f98ac44b88232 jmcce-1.4_rc2.ebuild 1098
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 e77919af8495197697785325e0809b82 files/digest-jmcce-1.4_rc2 65
 MD5 69726c3d942600fbd25f0e519a26dfff files/jmcce-1.4_rc2-gcc3-gentoo.diff 568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlgwNVWNWqTUmv+0RAvJuAJ4/TJCHxpjQVhTkY0sFsTXyVUgCowCgpfyv
+gY5ovbVhI5WiKSCQoErE0jM=
+=+j1u
+-----END PGP SIGNATURE-----

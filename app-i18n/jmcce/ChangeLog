@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/jmcce
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/ChangeLog,v 1.3 2004/06/24 21:47:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/ChangeLog,v 1.4 2004/11/13 13:35:14 usata Exp $
+
+  13 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> jmcce-1.4_rc2.ebuild:
+  Force automake-1.4 in genconf.sh. This closes bug #54466.
 
   22 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> jmcce-1.4_rc2.ebuild,
   files/jmcce-1.4_rc2-gcc3-gentoo.diff:

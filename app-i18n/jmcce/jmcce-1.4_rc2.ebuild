@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.7 2004/06/24 21:47:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.8 2004/11/13 13:35:14 usata Exp $
 
 inherit gcc eutils
 
@@ -16,8 +16,11 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=media-libs/svgalib-1.4.3
+RDEPEND=">=media-libs/svgalib-1.4.3
 	>=sys-libs/ncurses-4.2"
+DEPEND="${RDEPEND}
+	sys-devel/automake
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
@@ -28,7 +31,8 @@ src_unpack() {
 }
 
 src_compile() {
-	./genconf.sh || die
+	sed -i "s:automake:automake-1.4:g" genconf.sh || die "sed"
+	./genconf.sh || die "genconf.sh failed"
 	econf --sysconfdir=/etc/jmcce || die "econf failed"
 	emake -j1 || die "make failed"
 }
