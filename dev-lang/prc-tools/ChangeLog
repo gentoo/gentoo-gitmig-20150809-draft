@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/prc-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.7 2005/01/04 17:47:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.8 2005/01/27 19:15:57 plasmaroo Exp $
+
+  27 Jan 2005; <plasmaroo@gentoo.org> prc-tools-2.3-r1.ebuild:
+  Bump texi2html $DEPEND to 1.70; bug #79719.
 
 *prc-tools-2.3-r1 (04 Jan 2005)
 
