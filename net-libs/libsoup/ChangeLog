@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.45 2005/01/23 01:31:27 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.46 2005/02/04 05:16:51 joem Exp $
+
+*libsoup-2.2.2 (03 Feb 2005)
+
+  03 Feb 2005; Joe McCann <joem@gentoo.org> +libsoup-2.2.2.ebuild:
+  Version bump
 
   22 Jan 2005; Scott W Taylor <swtaylor@gentoo.org> libsoup-2.2.1.ebuild:
   nuke GNUTLS_CERT_NOT_TRUSTED which does not exist in gnutls-1.1.23. closes
