@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.16 2005/03/22 20:40:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.17 2005/03/23 19:42:50 genstef Exp $
+
+*fuse-2.2.1 (23 Mar 2005)
+
+  23 Mar 2005; Stefan Schweizer <genstef@gentoo.org> +fuse-2.2.1.ebuild:
+  version bump thanks to Jim Faulkner <dogshu@sdf.lonestar.org> in bug 86336
 
   22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> fuse-1.4.ebuild:
   added ~amd64 to 1.4 as well. fixes #86002
