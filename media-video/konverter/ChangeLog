@@ -1,6 +1,10 @@
 # ChangeLog for media-video/konverter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.5 2004/06/25 00:42:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/ChangeLog,v 1.6 2004/07/03 21:58:17 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> konverter-0.5.ebuild,
+  konverter-0.6.ebuild:
+  QA: need-kde after R/DEPEND
 
   12 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> konverter-0.6.ebuild:
   marked ~amd64
