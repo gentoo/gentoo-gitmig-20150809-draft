@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.1 2004/03/31 09:34:38 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.2 2004/03/31 09:35:50 mboman Exp $
 
 IUSE="ssl readline tcpd ncurses"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=net-libs/libpcap-0.5.2

@@ -2,7 +2,7 @@ MD5 59439ca507978130d6364fbf2eeb0611 ChangeLog 2391
 MD5 65de78a42cd109cc0decb1d74653273d ntop-2.0.99_rc2-r2.ebuild 2493
 MD5 c4f912362ce17bfdda7b36b6d5811f59 ntop-2.2.ebuild 2115
 MD5 41f2e23a544538ff2910aaacc59a3099 ntop-2.2c.ebuild 2883
-MD5 d83e6c57086f365d0348fcb1cc06ba9e ntop-3.0.ebuild 1475
+MD5 632361e5109f6e25bbbf3c9870e33687 ntop-3.0.ebuild 1478
 MD5 df4eb0246df23eb41403d56015663d99 metadata.xml 362
 MD5 35c576fac5bd8cbf0da850ccc00dd924 files/digest-ntop-3.0 58
 MD5 e8f42646f3226a9ad43cac51773512f0 files/digest-ntop-2.0.99_rc2-r2 65
