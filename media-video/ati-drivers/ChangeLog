@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.71 2005/02/01 19:44:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.72 2005/02/05 13:55:32 absinthe Exp $
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
+  +files/fglrx-2.6-pagetable.patch, ati-drivers-8.8.25-r3.ebuild:
+  4-level page table patch for 2.6.11 kernels (should be ok with =< 2.6.10 too).
 
   01 Feb 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/8.8.25-via-amd64.patch, ati-drivers-8.8.25-r3.ebuild,
