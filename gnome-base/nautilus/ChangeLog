@@ -1,11 +1,14 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.51 2003/06/29 22:21:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.52 2003/07/04 22:10:07 gmsoft Exp $
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> nautilus-2.2.4.ebuild:
   set ppc in keywords
 
 *nautilus-2.2.4-r5 (24 Jun 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> nautilus-2.2.4-r5.ebuild :
+  Added ~hppa to KEYWORDS.
 
   24 Jun 2003; foser <foser@gentoo.org> nautilus-2.2.4-r5.ebuild :
   Added gnome-cups-manager dep as noticed by <matt@schick.mine.nu> (#23382)
@@ -24,6 +27,9 @@
   New version, added snap-to-grid patch from HEAD
 
 *nautilus-2.2.3 (31 Mar 2003)
+
+  04 Jul 2003; Guy martin <gmsoft@gentoo.org> nautilus-2.2.3.ebuild :
+  Added hppa to KEYWORDS.
 
   31 Mar 2003; foser <foser@gentoo.org> nautilus-2.2.3.ebuild :
   New version 
