@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7.ebuild,v 1.1 2003/05/11 02:01:10 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7.ebuild,v 1.2 2003/05/15 11:33:02 jje Exp $
 
 IUSE="doc"
 
@@ -24,7 +24,6 @@ DEPEND="$DEPEND
         dev-libs/glib
 	>=media-libs/alsa-lib-0.9.0_rc6
 	>=media-libs/libsndfile-1.0.0
-	>=x11-libs/fltk-1.1.1
 	!media-sound/jack-audio-connection-kit
 	doc? ( app-doc/doxygen )"
 PROVIDE="virtual/jack"
