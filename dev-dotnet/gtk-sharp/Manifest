@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f954dc59a7f5a178356dfa3d769151b3 ChangeLog 7155
 MD5 e7e039def233223f00dddd0fc202ac08 gtk-sharp-1.0.2.ebuild 1325
+MD5 489dd00a944cb6d424c2df4ac3b7c03e gtk-sharp-1.0.4-r1.ebuild 1391
 MD5 166e9563ea830ae47510ac18f30c6d7a gtk-sharp-1.0.4.ebuild 1319
-MD5 5ab15ea67c37e631de3524c8a8c2a636 gtk-sharp-1.0.4-r1.ebuild 1385
-MD5 0b36a4b5b028633e9534cd3aff11d7a0 ChangeLog 7053
 MD5 e06909c47712ae995f4879eefb22e38b metadata.xml 160
-MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gtk-sharp-1.0.4-r1 147
 MD5 9eb4072ab135bd19b04413c16707c809 files/digest-gtk-sharp-1.0.2 68
 MD5 4ab18ac87ac1bf96db94fa7496d21af8 files/digest-gtk-sharp-1.0.4 68
+MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gtk-sharp-1.0.4-r1 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCENwo5mJXAu5GbtIRApNMAJ4pRquCNrzzgDfQDU0QS9p/2eMLVwCfQZ9u
+uaMNZingmtzT2ClznZRLJko=
+=etkd
+-----END PGP SIGNATURE-----
