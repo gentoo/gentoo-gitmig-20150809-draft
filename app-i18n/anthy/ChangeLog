@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.11 2004/03/01 16:31:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.12 2004/03/13 11:02:59 hattya Exp $
+
+*anthy-5100b (13 Mar 2004)
+
+  13 Mar 2004; Akinori Hattori <hattya@gentoo.org> anthy-5100b.ebuild:
+  version bumped.
 
 *anthy-5100 (01 Mar 2004)
 
