@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.9 2005/01/19 12:47:10 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.10 2005/01/25 21:53:19 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -70,6 +70,16 @@ check_cflags() {
 
 setup_cflags() {
 	check_cflags "-nopie -fno-stack-protector -fno-stack-protector-all"
+}
+
+pkg_setup() {
+	if ! has_version virtual/ghc; then
+		eerror "This ebuild needs a version of GHC to bootstrap from."
+		eerror "Please emerge dev-lang/ghc-bin to get a binary version."
+		eerror "You can either use the binary version directly or emerge"
+		eerror "dev-lang/ghc afterwards."
+		die "virtual/ghc version required to build"
+	fi
 }
 
 src_unpack() {

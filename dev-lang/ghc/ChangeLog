@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.49 2005/01/19 12:47:10 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.50 2005/01/25 21:53:19 kosmikus Exp $
+
+  25 Jan 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild:
+  Dependency resolution for virtuals changed in portage. Temporily adapted the
+  ebuild to quit with an informative error message until a real solution comes
+  to mind. (Bug #79509)
 
   19 Jan 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild:
   Marked stable on x86.
