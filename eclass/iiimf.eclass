@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.2 2003/09/14 00:02:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.3 2003/09/14 01:38:51 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.openi18n.org/subgroups/im/IIIMF/"
 SRC_URI="http://www.openi18n.org/download/docs/im-sdk/${IMSDK_P}.tar.bz2"
 
 LICENSE="MIT X11"
-KEYWORDS=""		# set this!
+KEYWORDS="~x86"
 SLOT="0"
 
 IUSE="debug"
