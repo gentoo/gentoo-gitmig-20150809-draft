@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.34 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.35 2003/04/28 05:51:20 pylon Exp $
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdepim-3.1.1.ebuild:
+  Set ppc in KEYWORDS
 
 *kdepim-3.0.5b (08 Apr 2003)
 

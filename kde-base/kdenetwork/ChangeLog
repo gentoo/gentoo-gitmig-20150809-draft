@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.36 2003/04/19 17:24:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.37 2003/04/28 05:51:20 pylon Exp $
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdenetwork-3.1.1-r1.ebuild:
+  Set ppc in KEYWORDS
 
 *kdenetwork-3.1.1-r1 (19 Apr 2003)
 

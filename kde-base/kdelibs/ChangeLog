@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.75 2003/04/27 13:43:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.76 2003/04/28 05:51:20 pylon Exp $
 
   27 Apr 2003; Dan Armak <danarmak@gentoo.org> kdelibs-2.2.2a-r1.ebuild,
   kdelibs-2.2.2a-r2.ebuild, kdelibs-3.0.4-r1.ebuild, kdelibs-3.0.5a-r1.ebuild,
@@ -9,6 +9,9 @@
   kdelibs-3.1.ebuild:
   Adapt for changes in kde eclasses: don't inherit kde.org, and don't call
   newdepend /c.
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdelibs-3.1.1-r1.ebuild:
+  Set ppc in KEYWORDS
 
 *kdelibs-2.2.2a-r2 (11 Apr 2003)
 

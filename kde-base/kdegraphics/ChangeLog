@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.41 2003/04/14 21:07:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.42 2003/04/28 05:51:20 pylon Exp $
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> kdegraphics-3.1.1.ebuild:
+  Set ppc in KEYWORDS
 
   15 Apr 2003; Dan Armak <danarmak@gentoo.org> kdegraphics-3.1.1a-r1.ebuild:
   Add a dep on libieee1284 on x86 if scanner is in use. Requires portage 2.0.47

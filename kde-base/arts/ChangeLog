@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.42 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.43 2003/04/28 05:51:20 pylon Exp $
 
 *arts-1.0.5b (08 Apr 2003)
 
@@ -14,6 +14,9 @@
   Added matching change to latest revision of kdelibs-3.0.5a.
 
 *arts-1.1.1 (14 Mar 2003)
+
+  28 Apr 2003; Lars Weiler <pylon@gentoo.org> arts-1.1.1.ebuild:
+  Set ppc in KEYWORDS
 
   20 Mar 2003; Jason Wever <weeve@gentoo.org> arts-1.1.1.ebuild:
   Changed ~sparc keyword to sparc.
