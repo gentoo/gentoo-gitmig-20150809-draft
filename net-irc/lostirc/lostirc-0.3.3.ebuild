@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.7 2004/07/17 13:59:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.8 2004/10/04 22:32:24 pvdabeel Exp $
 
 inherit base
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 DEPEND=">=sys-apps/sed-4*
 	=dev-cpp/gtkmm-2.2.11
 	>=dev-libs/libsigc++-1.2"
