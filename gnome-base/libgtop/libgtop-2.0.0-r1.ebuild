@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.0.0-r1.ebuild,v 1.1 2002/06/26 23:27:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.0.0-r1.ebuild,v 1.2 2002/07/19 13:26:12 stroke Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
-DESCRIPTION=""
+DESCRIPTION="libgtop"
 SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
 
 RDEPEND=">=x11-libs/gtk+-2.0.0
 	>=dev-libs/glib-2.0.0"

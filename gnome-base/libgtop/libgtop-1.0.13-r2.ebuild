@@ -1,12 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.2 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.3 2002/07/19 13:26:12 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libgtop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnome.org/"
+SLOT="1"
+LICENSE="LGPL-2.1"
+KEYWORDS="x86"
 
 RDEPEND=">=sys-devel/bc-1.06
 	 >=sys-libs/readline-4.1
