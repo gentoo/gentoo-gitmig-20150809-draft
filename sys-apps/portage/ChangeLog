@@ -1,7 +1,60 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.2 2002/02/04 23:59:25 gbevin Exp $
 
+*portage-1.8.9_pre1 (5 Feb 2002)
+
+  5 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre1.ebuild :
+  Install emerge to /usr/bin instead of /usr/sbin.
+
+  4 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre1.ebuild,
+  files/digest-portage-1.8.9_pre1, files/portage-1.8.9_pre1.tar.bz2 :
+  
+  - Reinstated support for the "ebuild help" command which seems to have
+    disappeared somewhere along prior updates.
+  - Added description and default entry for the imlib USE variable.
+  - Added flag to prozilla to disable prozilla's waiting for a user's keypress
+    when a failure occurs.
+  - Added alternative short flags for most emerge invocation options.
+  - Emerge now doesn't unmerge the last version of an installed version by
+    default anymore, to really remove all instanced of packages the --all flag
+    has to be used, the --safe flag is deprecated.
+  - Made it possible to run emerge --help and --search as non root.
+  - All emerge output can now be turned to black and white by setting the
+    NOCOLOR variable in make.conf or make.globals to true.
+  - Implemented the ! dependency for ebuild authors which prevents incompatible
+    packages from being installed on the same system at the same time.
+  - Added binary compatibility slots. By default packages now install to their
+    version number without the release number. Ebuild authors of packages that
+	are expected to remain binary compatible across version changes, should
+	add the SLOT variable to their ebuilds. The SLOT variable should contain a
+	number. When a new package version is compatible with an older one, the same
+	number should be used for the SLOT variable, this makes portage
+	automatically unmerge the older package for which the new one is a drop-in
+	replacement.
+
+*portage-1.8.8-r1 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.8-r1.ebuild,
+  files/digest-portage-1.8.8-r1, files/portage-1.8.8-r1.tar.bz2 :
+  
+  - Made env-update disregard backup files.
+  - Added --pretend support to emerge --unmerge instead of interactively asking
+    to proceed.
+  - Implemented to noauto maintainer flag for all relevant ebuild commands.
+  - Added a pkg_setup() function for ebuild authors which is executed before
+    anything else and can be typically used for package configuration actions or
+    required system checks
+  
+*portage-1.8.8 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.8.ebuild,
+  files/digest-portage-1.8.8, files/portage-1.8.8.tar.bz2 :
+  
+  - Added emerge --unmerge support with an optional --safe option.
+  - Cleaned up the handling of package names without categories to make it a
+    drop-in replacement anywhere in portage.
+  
 *portage-1.8.7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
