@@ -1,6 +1,14 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.23 2004/11/02 13:03:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.24 2004/11/18 18:37:15 nakano Exp $
+
+  18 Nov 2004; Masatomo Nakano <nakano@gentoo.org>
+  -files/kazehakase-0.1.8.1-gentoo.patch,
+  -files/kazehakase-0.1.9-gentoo.patch, -files/kazehakase-0.1.9_fix.patch,
+  -kazehakase-0.1.8.1-r1.ebuild, -kazehakase-0.1.8.1.ebuild,
+  -kazehakase-0.1.9-r1.ebuild, -kazehakase-0.1.9.ebuild,
+  kazehakase-0.2.1.ebuild:
+  Makred stable on x86
 
 *kazehakase-0.2.1 (02 Nov 2004)
 

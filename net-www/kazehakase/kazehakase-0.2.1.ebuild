@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.1.ebuild,v 1.1 2004/11/02 13:03:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.1.ebuild,v 1.2 2004/11/18 18:37:15 nakano Exp $
 
 IUSE="migemo estraier thumbnail"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/12026/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND=">=net-www/mozilla-1.6
