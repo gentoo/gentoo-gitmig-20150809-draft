@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.21 2005/03/10 22:46:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.22 2005/03/11 00:06:16 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -925,8 +925,8 @@ crosscompile_setup() {
 		local VAR="CFLAGS_"${CTARGET//-/_}
 		CFLAGS=${!VAR-"-O2"}
 
-		case $(tc-arch) in
-			amd64)
+		case ${CTARGET} in
+			x86_64*)
 				export CFLAGS_x86="${CFLAGS_x86--m32}"
 				export CHOST_x86="i686-pc-linux-gnu"
 				export CDEFINE_x86="__i386__"
@@ -940,7 +940,7 @@ crosscompile_setup() {
 				export MULTILIB_ABIS="amd64"
 				export DEFAULT_ABI="amd64"
 			;;
-			mips)
+			mips64*)
 				export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
 				export CHOST_o32="mips-unknown-linux-gnu"
 				export CDEFINE_o32="_ABIO32"
@@ -959,7 +959,7 @@ crosscompile_setup() {
 				export MULTILIB_ABIS="n64 n32"
 				export DEFAULT_ABI="n32"
 			;;
-			ppc64)
+			powerpc64*)
 				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
 				export CHOST_ppc="powerpc-unknown-linux-gnu"
 				export CDEFINE_ppc=""
@@ -975,7 +975,7 @@ crosscompile_setup() {
 
 				die "ppc64 crosscompile not yet supported.  Bug a ppc64 dev to fill in the CDEFINE values in the glibc ebuild."
 			;;
-			sparc)
+			sparc64*)
 				export CFLAGS_sparc32="${CFLAGS_sparc--m32}"
 				export CHOST_sparc32="sparc-unknown-linux-gnu"
 				export CDEFINE_sparc32="!__arch64__"
