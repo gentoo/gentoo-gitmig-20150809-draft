@@ -1,3 +1,4 @@
+MD5 625d4b4ed678e672710d1b45c75d109e gentoo-0.11.45.ebuild 1238
 MD5 3d5a603cef60372a8e5e2a082134ae67 gentoo-0.11.35.ebuild 1237
 MD5 a3b415ddc5e7cfe3fb93f8244177f3c2 ChangeLog 4280
 MD5 ed45cd85015bdbac57d3298ae206c274 metadata.xml 256
@@ -6,4 +7,5 @@ MD5 aacaff95d7c69f7ed32c9b0bda155431 gentoo-0.11.34.ebuild 1194
 MD5 034556a2d45ee36695eb6a8a4a556d1a files/digest-gentoo-0.11.34 67
 MD5 754f6f795ffce0ebece438be1b4ace23 files/digest-gentoo-0.11.35 67
 MD5 69d9492859ba7bfa26d8c606200c8230 files/digest-gentoo-0.11.43 67
+MD5 04ccb49d40018a91c781f5c3c7daecb7 files/digest-gentoo-0.11.45 67
 MD5 5ce199fdf587f5572c2269660f3edf67 files/gentoo.desktop 142
