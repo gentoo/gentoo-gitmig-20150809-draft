@@ -1,29 +1,32 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23.ebuild,v 1.2 2002/07/18 04:09:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23.ebuild,v 1.3 2002/09/22 18:53:52 blocke Exp $
 
-DESCRIPTION="This is a sample skeleton ebuild file"
-HOMEPAGE="http://oregano.codefactory.se/"
-LICENSE="GPL-2"
-DEPEND="x11-libs/gtk+
-	gnome? gnome-base/gnome"
-RDEPEND="${DEPEND}"
-SRC_URI="ftp://ftp.codefactory.se/pub/CodeFactory/software/oregano/${P}.tar.gz"
 S=${WORKDIR}/${P}
+SRC_URI="ftp://ftp.codefactory.se/pub/CodeFactory/software/oregano/${P}.tar.gz"
+DESCRIPTION="Oregano is an application for schematic capture and simulation of electrical circuits."
+HOMEPAGE="http://oregano.codefactory.se/"
+
+DEPEND="=x11-libs/gtk+-1.2*
+		>=gnome-base/gnome-libs-1.4
+		>=gnome-base/libglade-0.17 <gnome-base/libglade-2.0.0
+		>=gnome-base/gnome-print-0.30
+		>=dev-libs/libxml-1.8.17
+		>=app-sci/spice-3.5.5"
+RDEPEND="${DEPEND}"
+
 SLOT="0"
 KEYWORDS="x86"
+LICENSE="GPL-2"
 
 src_compile() {
 	local myconf
-	[ `use nls` ] || myconf="${myconf} --disable-nls"
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	use nls || myconf="--disable-nls"
+
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	einstall || die
 }
