@@ -1,9 +1,19 @@
-MD5 3d60c190f7aca1b22ed5cc0f71f608f5 libglademm-2.2.0.ebuild 792
-MD5 b1cdc44f85de76dba0d896fa97e818d0 libglademm-2.0.1.ebuild 676
-MD5 f803c1e4a3d0edfcb28b217fa953222d libglademm-2.4.0.ebuild 830
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 376e72ec1f35b3cd256aded509ada3cf ChangeLog 2599
+MD5 b1cdc44f85de76dba0d896fa97e818d0 libglademm-2.0.1.ebuild 676
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 fba26004ca4c706e09907a03214c0bde libglademm-2.4.0.ebuild 837
+MD5 3d60c190f7aca1b22ed5cc0f71f608f5 libglademm-2.2.0.ebuild 792
 MD5 0731a8a0e452b8680e9c1a35542a7cf0 files/digest-libglademm-2.0.1 68
-MD5 66fd7d47c340bb225311c438b12ceca1 files/digest-libglademm-2.2.0 69
 MD5 512533da32d18333ca7dbb1a7c33224c files/digest-libglademm-2.4.0 69
+MD5 66fd7d47c340bb225311c438b12ceca1 files/digest-libglademm-2.2.0 69
 MD5 5ac30e5282b1a834df569338b0acf267 files/gcc34.patch 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBPooRHTu7gpaalycRAn74AKDh5X4vnJ9MX7pd4k5Sn6er0waZhwCaAjNU
+JN+IPdloy1EkGbn4yWIHrkg=
+=Yar0
+-----END PGP SIGNATURE-----
