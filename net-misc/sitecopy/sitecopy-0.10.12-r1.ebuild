@@ -1,12 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.2 2002/07/09 10:56:20 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/sitecopy/${P}.tar.gz"
 HOMEPAGE="http://www.lyr.org/sitecopy/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
+
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
 	>=dev-libs/libxml-1.8.15

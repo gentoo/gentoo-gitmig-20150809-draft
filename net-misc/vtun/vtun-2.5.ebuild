@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Bryce Allen <ballen@mum.edu>
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5.ebuild,v 1.3 2002/07/09 11:21:13 phoenix Exp $
 
 S=${WORKDIR}/vtun
 DESCRIPTION="Create virtual tunnels over TCP/IP networks with traffic shaping, encryption, and compression"
 SRC_URI="mirror://sourceforge/vtun/${P}.tar.gz"
 HOMEPAGE="http://vtun.sourceforge.net/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 # NOTE: you also need the tun/tap driver compiled into your kernel
 #		to do tun/tap tunneling

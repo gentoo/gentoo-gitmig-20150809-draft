@@ -1,16 +1,18 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.1 2002/03/19 05:40:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.2 2002/07/09 11:11:02 phoenix Exp $
 
 *stunnel-3.22-r1 (18 Mar 2002)
 
-  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> stunnel-3.22-r1.ebuild :
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> stunnel-3.22-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+  Removed old ebuilds from the tree.
 
+  18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> stunnel-3.22-r1.ebuild :
   Unmasked it, and made the dep >= instead of >, and added ChangeLog file.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  This changelog is targetted to users. This means that the comments should be
+    This changelog is targetted to users. This means that the comments should be
   well explained and written in clean English. 
   
   Every new version or revision of the package has to be marked by a '*'

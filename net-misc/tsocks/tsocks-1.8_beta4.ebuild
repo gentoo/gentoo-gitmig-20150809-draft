@@ -8,6 +8,8 @@ HOMEPAGE="http://tsocks.sourceforge.net/"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
 SRC_URI="http://ftp1.sourceforge.net/${PN}/${PN}-1.8beta4.tar.gz"
+KEYWORDS="x86"
+SLOT="0"
 
 S=${WORKDIR}/tsocks-1.8
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.1 2002/06/06 16:19:09 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.5-r2.ebuild,v 1.2 2002/07/09 11:21:13 phoenix Exp $
 
 DESCRIPTION="Tunneling software to use the universal tunnel"
 HOMEPAGE="http://vtun.sourceforge.net"
+KEYWORDS="x86"
 LICENSE="GPL-2"
+SLOT="0"
 DEPEND=">=sys-libs/zlib-1.1.4
 	>=dev-libs/lzo-1.07
 	ssl? ( >=dev-libs/openssl-0.9.6c-r1 )

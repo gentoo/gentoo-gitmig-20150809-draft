@@ -1,13 +1,19 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.6 2002/05/08 05:03:10 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.7 2002/07/09 10:51:40 phoenix Exp $
 
 *rsync-2.5.5-r1 (07 May 2002)
+
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.5-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
   07 May 2002; Kain <kain@kain.org> rsync-2.5.5-r1.ebuild : Fix dependency to
   libpopt again so that build images not made from a virgin install will work.
 
 *rsync-2.5.5 (02 May 2002)
+
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.5.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
   02 May 2002; Daniel Robbins <drobbins@gentoo.org>: new ebuild to hopefully
   fix some "dead rsync --daemon" processes... the problem that just won't go
@@ -15,24 +21,34 @@
 
 *rsync-2.5.4-r1 (18 Apr 2002)
 
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.4-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
   18 Apr 2002; kain <kain@kain.org> rsync-2.5.4-r1.ebuild : Fix dependency to
   libpopt so build images made with this will work.
 
 *rsync-2.5.4 (15 Mar 2002)
 
-  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> rsync-2.5.4.ebuild :
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.4.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
+  15 Mar 2002; Bruce A. Locke <blocke@shivan.org> rsync-2.5.4.ebuild :
   Update to 2.5.4 (with zlib security fix)
 
 *rsync-2.5.2-r1 (1 Mar 2002)
+
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.2-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
 
   1 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : Closed remote denial of
   service attack/hung process problem reopened in 2.5.2 due to a missing patch.
 
 *rsync-2.5.2 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.2.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

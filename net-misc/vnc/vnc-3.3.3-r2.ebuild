@@ -2,14 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@hotmail.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.7 2002/04/27 21:13:04 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.3-r2.ebuild,v 1.8 2002/07/09 11:32:31 phoenix Exp $
 
 MY_P="vnc-3.3.3r2_unixsrc"
 S=${WORKDIR}/vnc_unixsrc
-DESCRIPTION=""
+DESCRIPTION="A remote display system which allows you to view a computing 'desktop' environment from anywhere."
 SRC_URI="http://www.uk.research.att.com/vnc/dist/${MY_P}.tgz"
 HOMEPAGE="http://www.uk.research.att.com/vnc/index.html"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/x11"
 

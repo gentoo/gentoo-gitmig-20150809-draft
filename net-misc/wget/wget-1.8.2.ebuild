@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.1 2002/05/30 05:21:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2.ebuild,v 1.2 2002/07/09 11:36:09 phoenix Exp $
 
 NPVER=20011209
 S=${WORKDIR}/${P}
@@ -11,6 +11,9 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
 RDEPEND="virtual/glibc ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 	unpack ${P}.tar.gz

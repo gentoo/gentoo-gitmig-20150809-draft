@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Danial Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.22-r1.ebuild,v 1.1 2002/03/19 05:40:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.22-r1.ebuild,v 1.2 2002/07/09 11:11:02 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TSL/SSL - Port Wrapper"
@@ -9,6 +9,9 @@ SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 HOMEPAGE="http://www.stunnel.org/"
 DEPEND="virtual/glibc >=dev-libs/openssl-0.9.6c"
 RDEPEND=">=dev-libs/openssl-0.9.6c"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A}; cd ${S}

@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.3 2002/04/29 08:41:56 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.4 2002/07/09 10:58:10 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A secure, lightweight ident daemon."
 SRC_URI="http://www.uncarved.com/slidentd/${P}.tar.gz"
 HOMEPAGE="http://www.uncarved.com/slidentd/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="dev-libs/dietlibc
 	dev-libs/libowfat"

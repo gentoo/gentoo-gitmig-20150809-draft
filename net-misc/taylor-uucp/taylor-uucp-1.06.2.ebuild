@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Stéphane Dupille <sdupille@teaser.fr>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.06.2.ebuild,v 1.1 2002/06/21 21:28:37 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/taylor-uucp-1.06.2.ebuild,v 1.2 2002/07/09 11:16:43 phoenix Exp $
 
 A="uucp-${PV}.tar.gz"
 S=${WORKDIR}/uucp-1.06.1	# This should be a .2 bug the package is messed
 DESCRIPTION="Taylor UUCP"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/uucp/${A}"
 HOMEPAGE="http://www.airs.com/ian/uucp.html"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 

@@ -5,21 +5,27 @@
 
 *vtun-2.5-r2 (28 April 2002)
 
-  06 June 2002; Mike Jones <ashmodai@gentoo.org> vtun-2.5-r2.ebuild
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> vtun-2.5-r2.ebuild :
+  Added KEYWORDS, SLOT.
 
+  06 June 2002; Mike Jones <ashmodai@gentoo.org> vtun-2.5-r2.ebuild
   Added a patch for the configure script which prevents errors under gcc 3.1 when
   /usr/include is manually appended to the include search path.
 
 *vtun-2.5-r1 (28 April 2002)
 
-  28 May 2002; Preston A. Elder <prez@gentoo.org> vtun-2.5-r1.ebuild
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> vtun-2.5-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
+  28 May 2002; Preston A. Elder <prez@gentoo.org> vtun-2.5-r1.ebuild
   Accomodated for /usr/include/md5.h left from cyrus-sasl.
 
 *vtun-2.5 (28 April 2002)
 
-  28 April 2002; Bryce Allen <ballen@mum.edu> vtun-2.5.ebuild ChangeLog files/digest-vtun-2.5 files/vtun.rc files/vtund-start.conf :
-  
+  09 Jul 2002; phoen][x <phoenix@gentoo.org> vtun-2.5.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.
+
+  28 April 2002; Bryce Allen <ballen@mum.edu> vtun-2.5.ebuild ChangeLog files/digest-vtun-2.5 files/vtun.rc files/vtund-start.conf :  
   Initial revision.
   Includes a few patches for the excellent PLD folks, specifically
   to fix a bison issue, and to add DESTDIR to the 'make install' command.
