@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.74 2005/01/10 04:43:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.75 2005/01/12 02:42:12 stkn Exp $
+
+  12 Jan 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3.ebuild:
+  Changed MAKEOPTS="..." to emake -j1, removed RESTRICT.
 
   10 Jan 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.6.6-r1.ebuild,
   pwlib-1.8.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3.ebuild,v 1.6 2005/01/10 04:43:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3.ebuild,v 1.7 2005/01/12 02:42:12 stkn Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,6 @@ DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="mirror://sourceforge/openh323/${MY_P}-src-tar.gz"
 
-RESTRICT="nomirror"
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha"
@@ -30,7 +29,6 @@ DEPEND=">=sys-devel/bison-1.28
 		media-plugins/libdc1394 )
 	esd? ( media-sound/esound )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
@@ -103,7 +101,7 @@ src_compile() {
 		-e "s:^\(CCFLAGS[\s]*=.*\) -I/usr/include:\1:" \
 		${S}/make/ptlib-config
 
-	emake opt || die "make failed"
+	emake -j1 opt || die "make failed"
 }
 
 src_install() {
