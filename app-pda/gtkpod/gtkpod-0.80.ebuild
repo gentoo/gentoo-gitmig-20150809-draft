@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.80.ebuild,v 1.2 2004/07/06 16:09:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.80.ebuild,v 1.3 2004/07/09 21:45:52 mr_bones_ Exp $
 
 inherit eutils
 
