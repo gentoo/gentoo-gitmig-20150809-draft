@@ -3,7 +3,12 @@
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
 *xcdroast-0.98_alpha13 (04 Jan 2003)
-  
+ 
+  05 Jan 2002; Seemant Kulleen <seemant@gentoo.org>
+  xcdroast-0.98_alpha13.ebuild :
+
+  NLS bloat reduction
+ 
   04 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump (thanks to Lars Weiler <lars.weiler@chaosdorf.de>).
   This one works with cdrtools 2.0.
