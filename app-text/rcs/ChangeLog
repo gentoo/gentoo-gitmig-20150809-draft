@@ -1,10 +1,13 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.7 2003/02/12 05:34:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.8 2003/03/14 21:22:13 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rcs-5.7-r2 (16 Jun 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> rcs-5.7-r2.ebuild:
+  Mark stable on alpha
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> rcs-5.7-r2.ebuild :
   Added LICENSE, SLOT.
