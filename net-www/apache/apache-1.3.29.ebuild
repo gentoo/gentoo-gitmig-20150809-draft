@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29.ebuild,v 1.5 2004/02/22 16:51:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29.ebuild,v 1.6 2004/04/01 23:34:50 zul Exp $
 
 inherit eutils
 
@@ -69,6 +69,9 @@ src_unpack() {
 
 	# Detect db4 correctly
 	epatch ${FILESDIR}/apache-1.3.27_db4_gentoo.patch || die
+
+	# Fixes mod_auth_db compile breakages with db4.0
+	epatch ${FILESDIR}/apache-1.3.29_mod_auth_db.patch
 }
 
 src_compile() {
