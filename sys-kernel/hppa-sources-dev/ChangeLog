@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hppa-sources-dev
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/ChangeLog,v 1.5 2003/08/12 16:51:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/ChangeLog,v 1.6 2003/08/13 15:24:34 gmsoft Exp $
+
+*hppa-sources-dev-2.4.21_p10 (13 Aug 2003)
+
+  13 Aug 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-dev-2.4.21_p10.ebuild :
+  Version bump. Correction of the grsec-cryptoloop patch (removed some hunk). Removed _p8.
 
 *hppa-sources-dev-2.4.21_p9 (06 Aug 2003)
 
