@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.235 2004/12/18 19:49:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.236 2004/12/18 19:52:16 chriswhite Exp $
+
+  19 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r5.ebuild:
+  Arrg, forgot to bump down ppc64 keywords :|.
 
 *mplayer-1.0_pre5-r5 (19 Dec 2004)
 
