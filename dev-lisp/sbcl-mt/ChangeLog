@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/sbcl-mt
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl-mt/ChangeLog,v 1.1 2003/10/16 20:49:51 mkennedy Exp $
+
+*sbcl-mt-0.8.4.20 (16 Oct 2003)
+
+  16 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  sbcl-mt-0.8.4.20.ebuild, files/customize-target-features.lisp,
+  files/sbcl-mt.rc:
+  initial import
+
