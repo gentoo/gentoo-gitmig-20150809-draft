@@ -49,11 +49,12 @@ exit 0
  }
 --- sysdeps/generic/unsecvars.h	2004-08-03 18:13:13 -0400
 +++ sysdeps/generic/unsecvars.h	2004-08-03 18:11:41 -0400
-@@ -3,6 +3,7 @@
+@@ -3,6 +3,8 @@
     with a '\0' explicitly.  */
  #define UNSECURE_ENVVARS \
    "LD_PRELOAD\0"							      \
 +  "LD_DEBUG\0"								      \
++  "LD_TRACE_PRELINKING\0"							      \
    "LD_LIBRARY_PATH\0"							      \
    "LD_ORIGIN_PATH\0"							      \
    "LD_DEBUG_OUTPUT\0"							      \

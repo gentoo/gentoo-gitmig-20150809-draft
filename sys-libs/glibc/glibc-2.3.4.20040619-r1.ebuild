@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.14 2004/09/06 00:40:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.15 2004/09/06 05:25:49 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -273,7 +273,7 @@ setup_locales() {
 }
 
 
-pkg_setup() {
+glibc_setup() {
 	# genone this block of code breaks things. 
 	# Check if we are going to downgrade, we don't like that
 	#local old_version
@@ -476,6 +476,10 @@ do_ssp_patches() {
 
 
 src_unpack() {
+
+	# we only need to check this one time. Bug #61856
+	glibc_setup
+
 	# Check NPTL support _before_ we unpack things to save some time
 	want_nptl && check_nptl_support
 

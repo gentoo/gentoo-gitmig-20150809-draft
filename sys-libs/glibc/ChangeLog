@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.249 2004/09/06 00:40:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.250 2004/09/06 05:25:49 solar Exp $
+
+  06 Sep 2004; <solar@gentoo.org> files/glibc-sec-hotfix-20040804.patch,
+  glibc-2.3.3.20040420-r1.ebuild, glibc-2.3.4.20040619-r1.ebuild:
+  added LD_TRACE_PRELINKING to list of sysdeps/generic/unsecvars.h to avoid info
+  leaking with suid apps
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   glibc-2.3.4.20040619-r1.ebuild, glibc-2.3.4.20040808.ebuild:

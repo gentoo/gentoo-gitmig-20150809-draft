@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r1.ebuild,v 1.5 2004/08/31 18:46:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r1.ebuild,v 1.6 2004/09/06 05:25:49 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -133,28 +133,29 @@ use_nptl() {
 	return 1
 }
 
-pkg_setup() {
+glibc_setup() {
 	# Check if we are going to downgrade, we don't like that
-	local old_version
-
-	old_version="`best_version glibc`"
-	old_version="${old_version/sys-libs\/glibc-/}"
-
-	if [ "$old_version" ]; then
-		if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
-			if [ "${FORCE_DOWNGRADE}" ]; then
-				ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
-			else
-				eerror "Downgrading glibc is not supported and we strongly recommend that"
-				eerror "you don't do it as it WILL break all applications compiled against"
-				eerror "the new version (most likely including python and portage)."
-				eerror "If you are REALLY sure that you want to do it set "
-				eerror "     FORCE_DOWNGRADE=1"
-				eerror "when you try it again."
-				die "glibc downgrade"
-			fi
-		fi
-	fi
+	#local old_version
+	#
+	#old_version="`best_version glibc`"
+	#old_version="${old_version/sys-libs\/glibc-/}"
+	#
+	#if [ "$old_version" ]; then
+	# The vercmp fails if this ebuild is -r[0-9..] Please fix.
+	#	if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
+	#		if [ "${FORCE_DOWNGRADE}" ]; then
+	#			ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
+	#		else
+	#			eerror "Downgrading glibc is not supported and we strongly recommend that"
+	#			eerror "you don't do it as it WILL break all applications compiled against"
+	#			eerror "the new version (most likely including python and portage)."
+	#			eerror "If you are REALLY sure that you want to do it set "
+	#			eerror "     FORCE_DOWNGRADE=1"
+	#			eerror "when you try it again."
+	#			die "glibc downgrade"
+	#		fi
+	#	fi
+	#fi
 
 	# We need gcc 3.2 or later ...
 	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]
@@ -245,6 +246,9 @@ pkg_setup() {
 src_unpack() {
 
 	local LOCAL_P="${PN}-${MY_PV}"
+
+	# we only need to check this one time. Bug #61856
+	glibc_setup
 
 	unpack glibc-${MY_PV}.tar.bz2
 
