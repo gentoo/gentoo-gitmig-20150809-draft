@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050131.ebuild,v 1.2 2005/03/11 19:06:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050308.ebuild,v 1.1 2005/03/11 19:06:10 ticho Exp $
 
-IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast"
+IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast ao"
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="!media-sound/mpd
 	flac? ( >=media-libs/flac-1.1.0 )
 	mikmod? ( media-libs/libmikmod )
 	alsa? ( media-libs/alsa-lib )
-	>=media-libs/libao-0.8.4
+	ao? ( >=media-libs/libao-0.8.4 )
 	sys-libs/zlib
 	dev-util/gperf
 	icecast? ( media-libs/libshout )"
@@ -46,6 +46,7 @@ src_compile() {
 		`use_enable !mad id3tag` \
 		`use_enable mikmod libmikmodtest` \
 		`use_enable mikmod mod` \
+		`use_enable ao` \
 		`use_enable icecast shout` || die "could not configure"
 
 	emake || die "emake failed"
@@ -87,14 +88,25 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "libao prior to 0.8.4 has issues with the ALSA drivers"
-	einfo "please refer to the FAQ"
-	einfo "http://www.musicpd.org/wiki/moin.cgi/MpdFAQ if you are having problems."
-	einfo
+	echo
 	einfo "The default config now binds the daemon strictly to localhost, rather than"
 	einfo "to all available IPs."
 	echo
+	if use ao; then
+		einfo "libao prior to 0.8.4 has issues with the ALSA drivers"
+		einfo "please refer to the FAQ"
+		einfo "http://www.musicpd.org/wiki/moin.cgi/MpdFAQ if you are having problems."
+		echo
+	else
+		draw_line
+		ewarn "As you're not using libao for audio output, you need to adjust audio_output"
+		ewarn "sections in /etc/mpd.conf to use ALSA or OSS. See"
+		ewarn "/usr/share/doc/${PF}/mpdconf.example.gz."
+		draw_line
+		echo
+	fi
 	ewarn "Note that this is just a development version of Music Player Daemon,"
 	ewarn "so if you want to report any bug, please state this fact in your"
 	ewarn "report, as well as the fact that you used a ${P} Gentoo ebuild."
+	echo
 }
