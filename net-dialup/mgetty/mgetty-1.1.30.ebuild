@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.7 2003/12/26 13:49:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.8 2004/01/15 03:49:22 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,7 +17,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~alpha ~ia64"
 IUSE="doc"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.19 2003/12/26 13:49:21 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.20 2004/01/15 03:49:22 agriffis Exp $
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> mgetty-1.1.30.ebuild:
+  add ~alpha and ~ia64
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> mgetty-1.1.30.ebuild:
   Marked stable on sparc to fix the broken dependencies of hylafax.
