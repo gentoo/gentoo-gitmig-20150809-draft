@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/lwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.4 2003/02/12 09:52:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.5 2003/08/21 21:35:16 seemant Exp $
+
+*lwm-1.1.5 (21 Aug 2003)
+
+  21 Aug 2003; Seemant Kulleen <seemant@gentoo.org> lwm-1.1.5.ebuild:
+  version bump thanks to Jim Nutt <jim@nuttz.org> in bug #24553
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
