@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.0.20031018.ebuild,v 1.3 2004/04/08 10:55:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.0.20031018.ebuild,v 1.4 2004/04/26 12:52:23 agriffis Exp $
 
 MY_P=${P/3.0.0./3.0-}
 
@@ -19,7 +19,7 @@ DEPEND="samba? ( net-fs/samba )
 	virtual/ghostscript"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
