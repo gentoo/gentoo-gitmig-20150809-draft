@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.6 2003/05/12 21:36:08 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.7 2003/11/06 16:17:05 tantive Exp $
 
 depend() {
 	need net
@@ -41,9 +41,15 @@ else
     AUTODISC=1
 fi
 
+OMnode=""
+if [ -f /etc/openmosix/om-node-num ]
+then
+  OMnode="-p $(< /etc/openmosix/om-node-num)"
+fi
+
 # Check the map-file for sanity
 if [ $AUTODISC -eq 0 ]; then
-    setpe -c -f $OMOSIX_MAP &> /dev/null
+    setpe $OMnode -c -f $OMOSIX_MAP &> /dev/null
     if [ ! $? -eq 0 ]; then
         einfo "openMosix: Invalid configuration in map-file $OMOSIX_MAP, using autodiscovery"
         AUTODISC=1
@@ -75,7 +81,7 @@ fi
             SETPE_OPTIONS=""
 	    [ $MYOMID ] && SETPE_OPTIONS="$SETPE_OPTIONS -p $MYOMID"
 	    [ $MOSGATES ] && SETPE_OPTIONS="$SETPE_OPTIONS -g $MOSGATES"
-	    setpe -W $SETPE_OPTIONS -f $OMOSIX_MAP
+	    setpe $OMnode -W $SETPE_OPTIONS -f $OMOSIX_MAP
        else
             # Configurate openMosix with the omdiscd
 	    OMDISCD_OPTIONS=""
