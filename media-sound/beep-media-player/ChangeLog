@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.23 2004/10/22 10:09:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.24 2004/10/31 11:01:16 eradicator Exp $
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  beep-media-player-0.9.7_rc2-r2.ebuild:
+  Only install .desktop to applications.
 
   22 Oct 2004; Guy Martin <gmsoft@gentoo.org>
   beep-media-player-0.9.7_rc2-r2.ebuild:

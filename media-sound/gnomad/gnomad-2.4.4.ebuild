@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.4.ebuild,v 1.7 2004/09/14 16:30:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.4.ebuild,v 1.8 2004/10/31 11:00:14 eradicator Exp $
 
 IUSE=""
 
@@ -32,10 +32,7 @@ RDEPEND="${DEPEND}
 	>=dev-util/intltool-0.21"
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodir /usr/share/gnome/apps/Multimedia
-	cp ${D}/usr/share/applications/${MY_PN}.desktop ${D}/usr/share/gnome/apps/Multimedia
-	dodir /usr/share/applnk/Multimedia
-	cp ${D}/usr/share/applications/${MY_PN}.desktop ${D}/usr/share/applnk/Multimedia
+	make DESTDIR="${D}" install || die
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

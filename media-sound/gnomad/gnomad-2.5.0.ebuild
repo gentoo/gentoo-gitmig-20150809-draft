@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.5.0.ebuild,v 1.2 2004/10/06 08:43:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.5.0.ebuild,v 1.3 2004/10/31 11:00:14 eradicator Exp $
 
 IUSE=""
 
@@ -33,9 +33,6 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodir /usr/share/gnome/apps/Multimedia
-	cp ${D}/usr/share/applications/${MY_PN}.desktop ${D}/usr/share/gnome/apps/Multimedia
-	dodir /usr/share/applnk/Multimedia
-	cp ${D}/usr/share/applications/${MY_PN}.desktop ${D}/usr/share/applnk/Multimedia
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.8 2004/10/20 05:24:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.9 2004/10/31 10:58:29 eradicator Exp $
 
 IUSE="nls oggvorbis"
 
@@ -34,9 +34,6 @@ src_compile() {
 
 src_install () {
 	make DESTDIR="${D}" install || die
-
-	insinto /usr/share/applnk/Multimedia
-	doins ${D}/usr/share/applications/grip.desktop
 
 	dodoc AUTHORS CREDITS ChangeLog README TODO
 }

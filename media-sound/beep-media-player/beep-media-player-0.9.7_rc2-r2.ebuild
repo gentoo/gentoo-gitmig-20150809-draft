@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.8 2004/10/22 10:09:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7_rc2-r2.ebuild,v 1.9 2004/10/31 11:01:16 eradicator Exp $
 
 IUSE="nls gnome opengl oggvorbis mikmod alsa oss esd mmx jack lirc mad sndfile"
 
@@ -88,10 +88,6 @@ src_install() {
 	doins beep/beep_mini.xpm
 
 	dosym /usr/include/beep-media-player/bmp /usr/include/beep-media-player/xmms
-
-	# Get the app registered for KDE
-	insinto /usr/share/applnk/Multimedia
-	doins ${D}/usr/share/applications/bmp.desktop
 
 	# We'll use xmms skins
 	dosym /usr/share/xmms/Skins /usr/share/beep/Skins
