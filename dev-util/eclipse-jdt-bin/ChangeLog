@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-jdt-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-jdt-bin/ChangeLog,v 1.6 2003/02/12 06:41:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-jdt-bin/ChangeLog,v 1.7 2003/04/23 04:09:52 latexer Exp $
+
+*eclipse-jdt-bin-2.1 (24 Apr 2003)
+
+  24 Apr 2003; Peter Johanson <latexer@gentoo.org> eclipse-jdt-bin-2.1.ebuild:
+  Bump
 
 *eclipse-jdt-bin-2.0 (14 Jul 2002)
 
