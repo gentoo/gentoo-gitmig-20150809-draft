@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.22 2004/05/03 02:49:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.23 2004/05/11 14:35:53 randy Exp $
 
 inherit libtool gnuconfig flag-o-matic eutils
 
@@ -39,6 +39,8 @@ src_compile() {
 
 	use amd64 && gnuconfig_update
 	use ppc64 && gnuconfig_update
+	use s390 && gnuconfig_update
+
 
 	# For some reason, elibtoolize stopped doing its job in the last couple
 	# of days on this ebuild, and amd64 won't compile it anymore, need to
