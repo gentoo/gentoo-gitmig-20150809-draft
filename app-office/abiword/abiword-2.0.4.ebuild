@@ -1,20 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.3.ebuild,v 1.1 2004/02/07 18:34:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.4.ebuild,v 1.1 2004/03/07 14:59:31 foser Exp $
 
 inherit eutils
 
-IUSE="spell jpeg xml2 gnome debug"
+IUSE="spell jpeg xml2 gnome debug doc"
 
+S_P=${S}/${PN}-plugins
+S_D=${S}/${PN}-docs
 S=${WORKDIR}/${P}/abi
-S_P=${WORKDIR}/${P}/${PN}-plugins
 
 DESCRIPTION="Fully featured yet light and fast cross platform word processor"
 HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -39,6 +40,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
+
+	# Abiword is not 64-bit safe.  This is a patch for AMD64.
+	if [ $ARCH = "amd64" ] ; then
+		epatch ${FILESDIR}/${PN}-2.0.3-amd64.patch || die
+	fi
 
 	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
 	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
@@ -93,4 +99,13 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
+	# install documentation
+
+	cd ${WORKDIR}/${P}/abiword-docs
+	sed -e 's:prefix = /usr/local:prefix = /usr:g' Makefile > Makefile.new
+	mv Makefile.new Makefile
+	make DESTDIR=${D} || die
+
 }
+
+USE_DESTDIR="1"
