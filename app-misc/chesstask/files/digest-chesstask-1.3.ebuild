@@ -1,0 +1,1 @@
+19e9b93ee0678860273eccb2836cd767 *ChessTask1_3src.zip
