@@ -5,8 +5,7 @@ import portage
 import string
 import os
 
-myroot=portage.getsetting("ROOT")
 for x in sys.argv[1:]:
 	mysplit=string.split(x,"/")
-	portage.unmerge(myroot,mysplit[0],mysplit[1])
+	portage.unmerge(mysplit[0],mysplit[1])
 

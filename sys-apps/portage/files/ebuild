@@ -17,18 +17,10 @@ fi
 #allow any envvars to be set like QTDIR, even if Qt was just installed
 source /etc/profile
 export PATH=/usr/lib/portage/bin:${PATH}
-eval `import-settings PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM`
+eval `import-settings PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS PORTDIR DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM ROOT`
 export DEPEND
 
 initvars() {
-	#fix up ROOT path so that it always has a / after it
-	local rlen
-	rlen=$(( ${#ROOT} -1 ))
-	if [ "${ROOT:${rlen}:1}" != "/" ]
-	then
-    		export ROOT=${ROOT}/
-	fi
-
 	export DESTTREE=/usr
 	export INSDESTTREE=""
 	export EXEDESTTREE=""
@@ -556,7 +548,7 @@ dyn_install() {
 dyn_merge() {
     trap "" SIGINT SIGQUIT
     #not interruptible, so that the db doesn't get garbled
-    if [ -d ${ROOT}/var/db/pkg/${CATEGORY}/${PF} ]
+    if [ -d ${ROOT}var/db/pkg/${CATEGORY}/${PF} ]
     then
 	echo 
 	echo '!!!' "${PF} already merged -- unmerge first" 
@@ -566,7 +558,7 @@ dyn_merge() {
     echo
     pkg_preinst
     #/usr/sbin/portage-merge
-	dopython portage.merge $ROOT $CATEGORY $PF $D
+	dopython portage.merge "$ROOT" "$CATEGORY" "$PF" "$D"
 	cd ${BUILDDIR}
     #zap it so that people don't look at a bad image and get confused
     rm -rf image
@@ -577,7 +569,7 @@ dyn_merge() {
 dyn_unmerge() {
     trap "" SIGINT SIGQUIT
     #/usr/sbin/portage-unmerge ${PF}
-    dopython portage.unmerge $ROOT $CATEGORY $PF
+    dopython portage.unmerge "$ROOT" "$CATEGORY" "$PF"
     trap SIGINT_SIGQUIT
 }
 

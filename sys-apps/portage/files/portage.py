@@ -100,21 +100,21 @@ def getmtime(x):
 def md5(x):
 	return string.upper(fchksum.fmd5t(x)[0])
 
-def prepare_db(myroot,mycategory,mypackage):
-    if not os.path.isdir(myroot+"var"):
-	os.mkdir(myroot+"var",0755)
-    if not os.path.isdir(myroot+"var/db"):
-	os.mkdir(myroot+"var/db",0755)
-    if not os.path.isdir(myroot+"var/db/pkg"):
-	os.mkdir(myroot+"var/db/pkg",0755)
-    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory):
-	os.mkdir(myroot+"var/db/pkg/"+mycategory,0755)
-    if not os.path.isdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage):
-	os.mkdir(myroot+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
+def prepare_db(mycategory,mypackage):
+    if not os.path.isdir(root+"var"):
+	os.mkdir(root+"var",0755)
+    if not os.path.isdir(root+"var/db"):
+	os.mkdir(root+"var/db",0755)
+    if not os.path.isdir(root+"var/db/pkg"):
+	os.mkdir(root+"var/db/pkg",0755)
+    if not os.path.isdir(root+"var/db/pkg/"+mycategory):
+	os.mkdir(root+"var/db/pkg/"+mycategory,0755)
+    if not os.path.isdir(root+"var/db/pkg/"+mycategory+"/"+mypackage):
+	os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
-def pathstrip(x,myroot,mystart):
+def pathstrip(x,mystart):
     cpref=os.path.commonprefix([x,mystart])
-    return [myroot+x[len(cpref)+1:],x[len(cpref):]]
+    return [root+x[len(cpref)+1:],x[len(cpref):]]
 
 def pkgscript(x,myebuildfile):
 	myresult=getstatusoutput("/usr/bin/ebuild "+myebuildfile+" "+x)
@@ -127,11 +127,11 @@ def pkgscript(x,myebuildfile):
 		print
 		print myresult[1]
 
-def mergefiles(outfile,myroot,mystart):
+def mergefiles(outfile,mystart):
 	mycurpath=os.getcwd()
 	myfiles=os.listdir(mycurpath)
 	for x in myfiles:
-		floc=pathstrip(os.path.normpath(mycurpath+"/"+x),myroot,mystart)
+		floc=pathstrip(os.path.normpath(mycurpath+"/"+x),mystart)
 		if os.path.islink(x):
 			myto=os.readlink(x)
 			if os.path.exists(floc[0]):
@@ -158,11 +158,11 @@ def mergefiles(outfile,myroot,mystart):
 			outfile.write("dir "+floc[1]+"\n")
 			mywd=os.getcwd()
 			os.chdir(x)
-			mergefiles(outfile,myroot,mystart)
+			mergefiles(outfile,mystart)
 			os.chdir(mywd)
 		elif os.path.isfile(x):
 			mymd5=md5(mycurpath+"/"+x)
-			if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+			if movefile(x,pathstrip(mycurpath,mystart)[0]+"/"+x):
 				zing="<<<"
 			else:
 				zing="!!!"
@@ -172,53 +172,49 @@ def mergefiles(outfile,myroot,mystart):
 			outfile.write("obj "+floc[1]+" "+mymd5+" "+getmtime(floc[0])+"\n")
 		elif isfifo(x):
 			zing="!!!"
-			if not os.path.exists(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):	
-				if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+			if not os.path.exists(pathstrip(mycurpath,mystart)[0]+"/"+x):	
+				if movefile(x,pathstrip(mycurpath,mystart)[0]+"/"+x):
 					zing="<<<"
-			elif isfifo(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
-				os.unlink(pathstrip(mycurpath,myroot,mystart)[0]+"/"+x)
-				if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+			elif isfifo(pathstrip(mycurpath,mystart)[0]+"/"+x):
+				os.unlink(pathstrip(mycurpath,mystart)[0]+"/"+x)
+				if movefile(x,pathstrip(mycurpath,mystart)[0]+"/"+x):
 					zing="<<<"
 			print zing+" "+floc[0]
 			outfile.write("fif "+floc[1]+"\n")
 		else:
-			if movefile(x,pathstrip(mycurpath,myroot,mystart)[0]+"/"+x):
+			if movefile(x,pathstrip(mycurpath,mystart)[0]+"/"+x):
 				zing="<<<"
 			else:
 				zing="!!!"
 			print zing+" "+floc[0]
 			outfile.write("dev "+floc[1]+"\n")
 
-def merge(myroot,mycategory,mypackage,mystart):
-	if myroot=="":
-		myroot="/"
+def merge(mycategory,mypackage,mystart):
 	mystart=os.path.normpath(mystart)
 	os.chdir(mystart)
 	print 
-	print ">>> Merging contents of",mystart,"to "+myroot
-	print ">>> Logging merge to "+myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
-	prepare_db(myroot,mycategory,mypackage)
-	outfile=open(myroot+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
-	mergefiles(outfile,myroot,mystart)
+	print ">>> Merging contents of",mystart,"to "+root
+	print ">>> Logging merge to "+root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS"
+	prepare_db(mycategory,mypackage)
+	outfile=open(root+"var/db/pkg/"+mycategory+"/"+mypackage+"/CONTENTS","w")
+	mergefiles(outfile,mystart)
 	outfile.close()
 	print
 	print ">>>",mypackage,"merged."
 	print
 
-def unmerge(myroot,category,pkgname):
-	if myroot=="":
-		myroot="/"
-	if os.path.isdir(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname)):
-		if myroot=="/":
+def unmerge(category,pkgname):
+	if os.path.isdir(os.path.normpath(root+"var/db/pkg/"+category+"/"+pkgname)):
+		if root=="/":
 			print "Unmerging",pkgname+"..."
 		else:
-			print "Unmerging",pkgname,"from",myroot+"..."
+			print "Unmerging",pkgname,"from",root+"..."
 		print
 	else:
 		print pkgname,"not installed"
 		return
 	try:	
-		contents=open(os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/CONTENTS"))
+		contents=open(os.path.normpath(root+"var/db/pkg/"+category+"/"+pkgname+"/CONTENTS"))
 	except:
 		print "Error -- could not open CONTENTS file for", pkgname+".  Aborting."
 		return	
@@ -227,7 +223,7 @@ def unmerge(myroot,category,pkgname):
 		mydat=string.split(line)
 		# we do this so we can remove from non-root filesystems
 		# (use the ROOT var to allow maintenance on other partitions)
-		mydat[1]=os.path.normpath(myroot+mydat[1][1:])
+		mydat[1]=os.path.normpath(root+mydat[1][1:])
 		if mydat[0]=="obj":
 			#format: type, mtime, md5sum
 			pkgfiles[mydat[1]]=[mydat[0], mydat[3], mydat[2]]
@@ -250,7 +246,7 @@ def unmerge(myroot,category,pkgname):
 	# we don't want to automatically remove the ebuild file listed
 	# in the CONTENTS file.  We'll do after everything else has 
 	# completed successfully.
-	myebuildfile=os.path.normpath(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+pkgname+".ebuild")
+	myebuildfile=os.path.normpath(root+"var/db/pkg/"+category+"/"+pkgname+"/"+pkgname+".ebuild")
 	if pkgfiles.has_key(myebuildfile):
 		del pkgfiles[myebuildfile]
 
@@ -287,7 +283,7 @@ def unmerge(myroot,category,pkgname):
 				print "--- !sym  ","sym", obj
 				continue
 			mydest=os.readlink(obj)
-			if os.path.exists(os.path.normpath(myroot+mydest)):
+			if os.path.exists(os.path.normpath(root+mydest)):
 				if mydest != pkgfiles[obj][2]:
 					print "--- !destn","sym", obj
 					continue
@@ -319,14 +315,14 @@ def unmerge(myroot,category,pkgname):
 	#postrm script
 	pkgscript("postrm",myebuildfile)	
 	#recursive cleanup
-	for thing in os.listdir(myroot+"var/db/pkg/"+category+"/"+pkgname):
-		os.unlink(myroot+"var/db/pkg/"+category+"/"+pkgname+"/"+thing)
-	os.rmdir(myroot+"var/db/pkg/"+category+"/"+pkgname)
+	for thing in os.listdir(root+"var/db/pkg/"+category+"/"+pkgname):
+		os.unlink(root+"var/db/pkg/"+category+"/"+pkgname+"/"+thing)
+	os.rmdir(root+"var/db/pkg/"+category+"/"+pkgname)
 	print
-	if myroot=="/":
+	if root=="/":
 		print pkgname,"unmerged."
 	else:
-		print pkgname,"unmerged from",myroot+"."
+		print pkgname,"unmerged from",root+"."
 
 def getenv(mykey):
 	if os.environ.has_key(mykey):
@@ -596,9 +592,9 @@ def isspecific(mypkg):
 
 def isinstalled(mycatpkg):
 	mycatpkg=string.split(mycatpkg,"/")
-	if not os.path.isdir("/var/db/pkg/"+mycatpkg[0]):
+	if not os.path.isdir(root+"var/db/pkg/"+mycatpkg[0]):
 		return 0
-	mypkgs=os.listdir("/var/db/pkg/"+mycatpkg[0])
+	mypkgs=os.listdir(root+"var/db/pkg/"+mycatpkg[0])
 	if isjustname(mycatpkg[1]):
 		# only name specified
 		for x in mypkgs:
@@ -620,7 +616,7 @@ def installedcmp(mycatpkg):
 		is installed."""
 		
 	mycatpkg=string.split(mycatpkg,"/")
-	mypkgs=os.listdir("/var/db/pkg/"+mycatpkg[0])
+	mypkgs=os.listdir(root+"var/db/pkg/"+mycatpkg[0])
 	mypkglist=[]
 	for x in mypkgs:
 		mysplit=pkgsplit(x)
@@ -1050,5 +1046,10 @@ def dep_frontend():
 
 configdefaults=getconfig("/etc/make.defaults")
 configsettings=getconfig("/etc/make.conf")
+root=getsetting("ROOT")
+if len(root)==0:
+	root="/"
+elif root[-1]!="/":
+	root=root+"/"
 #dep_print( dep_parse(">=net-misc/openssh-2.2.0 >=sys-libs/slang-1.4.2")[1])
 #dep_print( dep_parse("=sys-libs/pam-0.72-r1 bar/foo || ( sys-libs/zlib foo/bar )")[1])

@@ -11,7 +11,7 @@ def cleanup():
 	shutil.rmtree("/tmp/portage-pkg/"+mypkg,1)
 
 for x in sys.argv[1:]:
-
+	x=os.path.abspath(x)
 	#make sure pkg exists
 
 	if not os.path.exists(x):
@@ -58,6 +58,6 @@ for x in sys.argv[1:]:
 		cleanup()
 		continue
 
-	portage.merge(portage.getsetting("ROOT"),mycat,mypkg,os.getcwd())
+	portage.merge(mycat,mypkg,os.getcwd())
 	cleanup()
 print ">>> Done."
