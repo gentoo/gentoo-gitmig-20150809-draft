@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.2 2001/11/23 01:04:00 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6.ebuild,v 1.3 2001/11/23 04:34:24 azarah Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla web browser"
-
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${PV}/src/${PN}-source-${PV}.tar.gz"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${PV}/src/${PN}-source-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
 PROVIDE="virtual/x11-web-browser"
@@ -41,6 +40,14 @@ src_compile() {
 		myconf="${myconf} --enable-strip-libs"
 	fi
 
+	# If this dont buildwith mozirc in USE, then you are on your own
+	# Dont enable venkman, etc, as it is already build ...
+	if [ "`use mozirc`" ] ; then
+		myconf="${myconf} --with-extensions=default,irc"
+	else
+		myconf="${myconf} --with-extensions=default"
+	fi
+
 	export BUILD_MODULES=all
 
 	./configure  --host=${CHOST}					\
@@ -55,7 +62,6 @@ src_compile() {
 		     --with-java-supplement				\
 		     --with-extensions=default				\
 		     --enable-optimize=-O3				\
-		     --with-extensions=default,inspector,venkman,irc    \
 		     --with-default-mozilla-five-home=/usr/lib/mozilla	\
 		     ${myconf} || die
 
