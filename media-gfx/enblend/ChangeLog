@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/enblend
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.1 2005/02/24 04:02:01 lu_zero Exp $
+
+*enblend-2.1 (24 Feb 2005)
+
+  24 Feb 2005; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +enblend-2.1.ebuild:
+  First commit, thanks to David Grant <david.grant@telus.net> for the updated
+  ebuild
+
