@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.80 2004/11/12 04:18:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.81 2004/11/25 05:29:14 obz Exp $
+
+*control-center-2.8.1 (25 Nov 2004)
+
+  25 Nov 2004; Mike Gardiner <obz@gentoo.org> -control-center-2.4.0.ebuild,
+  -control-center-2.6.0.3.ebuild, control-center-2.6.1.ebuild,
+  control-center-2.8.0.ebuild, +control-center-2.8.1.ebuild:
+  New version, removed old versions. Also needed a not-arm? for the alsa
+  dependency, as alsa-lib isn't available on arm
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   control-center-2.8.0.ebuild:

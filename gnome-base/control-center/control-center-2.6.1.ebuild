@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.9 2004/11/08 22:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.1.ebuild,v 1.10 2004/11/25 05:29:14 obz Exp $
 
 # FIXME : double check all the acme stuff
 inherit gnome2 eutils
@@ -30,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	media-sound/esound
 	>=x11-wm/metacity-2.4.5
 	>=x11-libs/libxklavier-1.02
-	alsa? ( >=media-libs/alsa-lib-0.9 )
+	!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
 	gstreamer? ( >=media-libs/gst-plugins-0.8 )
 	!gnome-extra/fontilus
 	!gnome-extra/themus
