@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.43 2004/08/23 19:17:14 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.44 2004/08/24 11:23:13 kugelfang Exp $
+
+  24 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  files/anjuta-1.2.2-64bit.patch:
+  Fixed the 64bit patch, BUG #50255.
 
   23 Aug 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.2-r1.ebuild,
   anjuta-1.2.2.ebuild:

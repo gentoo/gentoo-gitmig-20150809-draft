@@ -107,3 +107,15 @@
  struct _AnjutaProperty
  {
  	GtkWidget                *object;
+--- src/compiler_options.c	2004-04-08 07:21:41.000000000 -0500
++++ src/compiler_options.c	2004-08-24 04:04:46.201104024 -0500
+@@ -352,7 +352,7 @@
+ 	gchar *pkg_cmd;
+	FILE  *pkg_fd;
+	gchar *line;
+-	gint   length;
++	size_t   length;
+	GtkTreeIter iter;
+
+	int i = 0;
+			
