@@ -240,3 +240,6 @@ app-doc/tkinfo
 
 # This really needs some testing
 =net-dialup/ppp-2.4.1-r6
+
+# Build fails for some people ... drobbins are you finished with this ?
+>=sys-kernel/linux-sources-2.4.15
