@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r5.ebuild,v 1.5 2003/10/12 22:52:33 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r14.ebuild,v 1.1 2003/10/12 22:52:33 carpaski Exp $
 
 IUSE="build"
 
@@ -13,10 +13,23 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="alpha amd64 arm hppa mips ppc sparc x86 ia64"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+
+# Contact carpaski a reason before you modify any of these.
+KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+
 LICENSE="GPL-2"
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) selinux? ( dev-python/python-selinux )"
+
+python_version() {
+	local tmpstr="$(/usr/bin/python -V 2>&1 )"
+	export PYVER_ALL="${tmpstr#Python }"
+
+	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
+	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
+	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
+	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
+	cd ${S}/src; ${CC:-gcc} ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox-1.1
 	if [ "${ARCH}" = "x86" ]; then
 		make CFLAGS="-march=i386 -O1 -pipe" || die
@@ -70,13 +83,18 @@ src_install() {
 	use build && [ -f /etc/make.conf ] && rm -f ${D}/etc/make.conf
 
 	doins etc-update.conf dispatch-conf.conf
+
+
 	#python modules
 	cd ${S}/src/python-missingos
 	chmod +x setup.py
 	./setup.py install --root ${D} || die
+
+
+	dodir /usr/lib/portage/pym
 	cd ${S}/pym
-	insinto /usr/lib/python2.2/site-packages
-	doins xpak.py portage.py output.py cvstree.py
+	insinto /usr/lib/portage/pym
+	doins *.py ../bin/emergehelp.py
 
 
 	#binaries, libraries and scripts
@@ -99,6 +117,8 @@ src_install() {
 	dosym ../lib/portage/bin/ebuild.sh /usr/sbin/ebuild.sh
 
 	dosym ../lib/portage/bin/etc-update /usr/sbin/etc-update
+	dosym ../lib/portage/bin/dispatch-conf /usr/sbin/dispatch-conf
+	dosym ../lib/portage/bin/archive-conf /usr/sbin/archive-conf
 	dosym ../lib/portage/bin/fixpackages /usr/sbin/fixpackages
 
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
@@ -111,7 +131,6 @@ src_install() {
 	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
 	dosym ../lib/portage/bin/regenworld /usr/sbin/regenworld
 	dosym ../lib/portage/bin/emerge-webrsync /usr/sbin/emerge-webrsync
-	dosym ../lib/portage/bin/dispatch-conf /usr/sbin/dispatch-conf
 
 	dosym newins /usr/lib/portage/bin/donewins
 
@@ -154,9 +173,12 @@ pkg_postinst() {
 	if [ ! -f "/etc/portage/package.mask" ]; then
 	  if [ -f "/etc/portage/profiles/package.mask" ]; then
 			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
+			einfo "/etc/portage/profiles/package.mask is now /etc/portage/package.mask"
+			einfo "a hardlink has been created to the new location if it exists in profiles"
+			einfo "already."
+			echo
 		fi
 	fi
-
 	echo
 	eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
 	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
@@ -165,10 +187,6 @@ pkg_postinst() {
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
 	einfo "and other system packages is fairly important for the continued health"
 	einfo "of your system."
-	echo
-	einfo "/etc/portage/profiles/package.mask has been moved to /etc/portage/package.mask"
-	einfo "a hardlink has been created to the new location if the file exists in profiles"
-	einfo "already."
 	echo
 	if [ -z "$PORTAGE_TEST" ]; then
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
@@ -186,7 +204,7 @@ pkg_postinst() {
 		# Kill the existing counter and generate a new one.
 		echo -n "Recalculating the counter... "
 		mv /var/cache/edb/counter /var/cache/edb/counter.old
-		python -c 'import portage; portage.counter_tick_core("/")' &>/dev/null
+		python -c 'import portage; portage.db["/"]["vartree"].dbapi.counter_tick("/")' &>/dev/null
 		if [ -f /var/cache/edb/counter ] ; then
 			echo "Counter updated successfully."
 			rm -f /var/cache/edb/counter.old
@@ -216,10 +234,10 @@ pkg_postinst() {
 			for x in *
 			do
 				[ ! -d "$x" ] && continue
-				#go into each category directory so we don't overload the python2.2 command-line
+				#go into each category directory so we don't overload the python command-line
 				cd $x
 				#fix silly output from this command (hack)
-				python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
+				python ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
 			cd ..
 			done
 			echo ">>> Database upgrade complete."
@@ -230,27 +248,42 @@ pkg_postinst() {
 		install -d -m2775 -o root -g portage ${ROOT}var/cache/edb/dep
 	fi
 
+	# Old place of install
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/output.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/cvstree.py[co]
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py[co]
+
+	# Old place of install
+	rm -f ${ROOT}usr/lib/portage/pym/portage.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/output.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/cvstree.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/getbinpkg.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/emergehelp.py[co]
+	rm -f ${ROOT}usr/lib/portage/pym/dispatch_conf.py[co]
+
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
 
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/output.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/output.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/portage.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/output.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/cvstree.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/getbinpkg.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/dispatch_conf.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/pym/emergehelp.py')" || die
 
 	if has ccache $FEATURES && has userpriv $FEATURES; then
 		chown -R portage:portage /var/tmp/ccache &> /dev/null
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
 }
-
 
