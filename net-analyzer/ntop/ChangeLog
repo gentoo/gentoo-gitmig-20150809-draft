@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.20 2004/03/31 09:34:38 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.21 2004/04/14 17:39:12 squinky86 Exp $
 
 *ntop-3.0 (31 Mar 2004)
+
+  14 Apr 2004; Jon Hood <squinky86@gentoo.org> ntop-3.0.ebuild:
+  added libgd and libpng to dependencies, closes bug 46469.
 
   31 Mar 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
   ntop-3.0.ebuild:
