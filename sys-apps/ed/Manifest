@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f65f890bb8e07a77fa27888e6db32139 ChangeLog 2657
+MD5 9020c94e756e3c51303606f298d03f8e ChangeLog 2837
+MD5 fe11e0ded7a0d23a1974e46851c11442 ed-0.2-r6.ebuild 1535
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 90f4a89ff36d4673f28be667a62f381f ed-0.2-r5.ebuild 1535
-MD5 23a8b5483bac37c6fcd9bbb73efaf502 files/0.2-mkstemp.patch 981
+MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r6 58
+MD5 0c8a87453a1d75e2ff8ed4510b306de0 files/0.2-mkstemp.patch 979
 MD5 549e2478edb18002261ae5dd055bcf5b files/0.2-info-dir.patch 373
-MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r5 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4ZToroRuSHgZdywRAqsCAJ9VOf8mCFsBvssMRZMycA/LXIiwzQCfRms0
-jADkSQ5/A6u+xEZkxXmRTH0=
-=0nw0
+iD8DBQFB4rTnroRuSHgZdywRAtiqAKCQuO9YKde1/8Klt65yCxq4gnC0agCfSRLS
+czKhhzN5vbQq8F+pRcv9h7o=
+=HAkF
 -----END PGP SIGNATURE-----

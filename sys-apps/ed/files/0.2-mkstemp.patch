@@ -26,7 +26,7 @@ diff -Naur ed-0.2/buf.c ed-0.2-2/buf.c
    strcpy (sfn, "/tmp/ed.XXXXXX");
 -  if (mktemp (sfn) == NULL || (sfp = fopen (sfn, "w+")) == NULL)
 +  sfd = mkstemp(sfn);
-+    if ((sfd == -1) || (sfp = fdopen (sfn, "w+")) == NULL)
++  if ((sfd == -1) || (sfp = fdopen (sfd, "w+")) == NULL)
      {
        fprintf (stderr, "%s: %s\n", sfn, strerror (errno));
        sprintf (errmsg, "Cannot open temp file");
