@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/lutelwall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.1 2005/03/27 18:11:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.2 2005/03/27 19:41:57 hansmi Exp $
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> lutelwall-0.96.ebuild:
+  Added to ~ppc.
 
 *lutelwall-0.96 (27 Mar 2005)
 
