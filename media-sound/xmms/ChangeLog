@@ -1,12 +1,15 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.65 2003/09/12 17:36:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.66 2003/09/12 19:27:39 seemant Exp $
 
 *xmms-1.2.8 (12 Sep 2003)
 
   12 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.8.ebuild,
   files/xmms-1.2.8-mpg123j.patch:
-  version bump
+  version bump.  Note that this now comes with a sexy gentoo ice skin made
+  by: Jamie McDonald <jamie@firenet.uk.com>.  He releases this to us, for
+  Gentoo's exclusive use under the Artistic license.  Note to any other
+  distros, please get his permission before distributing the skin yourself.
 
 *xmms-1.2.7-r25 (16 Aug 2003)
 

@@ -1,7 +1,7 @@
 MD5 67719e9afde51fc778b8882f48bebfc2 xmms-1.2.7-r23.ebuild 5233
 MD5 1f4fb5fbbf7591ead0b68071825b2de3 xmms-1.2.7-r25.ebuild 5652
 MD5 5013cb7f0010b3daa8efd1548cbe83b4 xmms-1.2.7-r20.ebuild 4923
-MD5 9433baab1978399004d7532ecb3bd06b xmms-1.2.8.ebuild 4353
+MD5 d359bfc510a7386fc6fa6c05de58136a xmms-1.2.8.ebuild 4350
 MD5 9a952d54b29b7f42e619f0ac0593b956 ChangeLog 12017
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e7e0c91780b115aaad1a1ed534bf7ae8 files/xmms-ipv6-20020408-mmx.patch 9210
@@ -18,4 +18,4 @@ MD5 a03fa7e2151194a6db4850897d16d128 files/xmms-1.2.7-mpg123j.patch 9333
 MD5 39f39107d92e83b2e4af125ac73e248d files/xmms-1.2.8-mpg123j.patch 9390
 MD5 3137a462e1b8c82c5c2a8d7c4d983ee9 files/xmms-ipv6-20020408-nommx.patch 9214
 MD5 344a691c05256b9b1259c5e47ec644cc files/xmms-diskwriter-audio.patch 1039
-MD5 abd1369a84af3f41235664c2444c8307 files/digest-xmms-1.2.8 64
+MD5 fbf93424bfa854be82f8844ddac855ec files/digest-xmms-1.2.8 122
