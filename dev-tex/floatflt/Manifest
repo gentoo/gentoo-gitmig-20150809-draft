@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c62e0a4b784229313523e7584d043078 ChangeLog 645
 MD5 62399114c75aafcae01217feabd20bcb floatflt-1.31a.ebuild 662
-MD5 1e65ca9083c1d0a2f34c4269c187c2a0 ChangeLog 542
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 334f49057e2692bb8b1ffd35d6b3eae8 files/digest-floatflt-1.31a 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1NCI1lqEGTUzyQRAhLeAKDTW50XOmA0QBMZchuveojj2i+qtACfecUh
+075ya8q0mzUnf0po/E9xKQQ=
+=nwT5
+-----END PGP SIGNATURE-----
