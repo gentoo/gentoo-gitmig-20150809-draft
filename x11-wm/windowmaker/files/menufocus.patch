@@ -1,0 +1,37 @@
+diff -Naur ./WindowMaker-0.91.0/src/switchmenu.c WindowMaker-0.91.0.mod2/src/switchmenu.c
+--- ./WindowMaker-0.91.0/src/switchmenu.c	2004-10-18 19:41:54.000000000 -0700
++++ WindowMaker-0.91.0.mod2/src/switchmenu.c	2004-11-22 03:56:48.540567984 -0800
+@@ -231,7 +231,11 @@
+         char *t;
+         int idx;
+ 
+-        if (wwin->flags.internal_window || WFLAGP(wwin, skip_window_list))
++        if (wwin->flags.internal_window || WFLAGP(wwin, skip_window_list) 
++	    || ((wwin->wm_gnustep_attr 
++	        && wwin->wm_gnustep_attr->flags & GSWindowLevelAttr) 
++	    	&& (wwin->wm_gnustep_attr->window_level  == WMMainMenuWindowLevel
++		    || wwin->wm_gnustep_attr->window_level == WMSubmenuWindowLevel)))
+             return;
+ 
+         if (wwin->frame->title)
+diff -Naur ./WindowMaker-0.91.0/src/window.c WindowMaker-0.91.0.mod2/src/window.c
+--- ./WindowMaker-0.91.0/src/window.c	2004-10-22 20:11:10.000000000 -0700
++++ WindowMaker-0.91.0.mod2/src/window.c	2004-11-22 03:56:48.540567984 -0800
+@@ -340,17 +340,6 @@
+         wwin->client_flags.no_appicon = 1;
+     }
+ 
+-    /* temporary solution to avoid GS menus in our window list.
+-     * it's temporary because it's not the proper way: windows at the
+-     * floating level are also skipped from the window list with this.
+-     * Fix it -Dan */
+-    if (gs_hints->flags & GSWindowLevelAttr) {
+-        if (gs_hints->window_level == WMMainMenuWindowLevel ||
+-            gs_hints->window_level == WMSubmenuWindowLevel) {
+-            wwin->client_flags.skip_window_list = 1;
+-        }
+-    }
+-
+ }
+ 
+ 

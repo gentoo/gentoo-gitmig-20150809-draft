@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.3 2004/11/23 20:40:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.91.0-r1.ebuild,v 1.4 2004/11/24 05:43:51 fafhrd Exp $
 
 inherit eutils gnustep-funcs
 
@@ -29,6 +29,12 @@ KEYWORDS="~x86 ~ppc ~sparc amd64 ~mips"
 if use gnustep; then
 	egnustep_install_domain "System"
 fi
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/menufocus.patch || die "menu focus patch failed"
+}
 
 src_compile() {
 	local myconf
