@@ -3,7 +3,8 @@ MD5 76fde55c6ffece27a13fd976d5fb51b6 fvwm-2.5.8-r4.ebuild 10169
 MD5 babbec50812f1dd2af1b76b9afa837af fvwm-2.4.17.ebuild 3961
 MD5 a52e679cbc4958400b382099353e03f7 fvwm-2.5.8-r3.ebuild 10167
 MD5 175ef9160684ed93b20ffcfc478b058b fvwm-2.5.8-r5.ebuild 10414
-MD5 5d2d1743962af09e4f91a6ce6efb8860 ChangeLog 11179
+MD5 87c65ee57a0be0601ebc7391f66e59fa fvwm-2.5.9.ebuild 9316
+MD5 71d93c796e6a57d28f2b0ddab2e71a84 ChangeLog 11482
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 6a0ba650b7f07dc1e6e94ea256a8ec94 fvwm-2.5.8-r2.ebuild 9684
 MD5 e2ceb5d855c5406a09d82442196efad8 files/README.transluceny.gz 5788
@@ -14,11 +15,14 @@ MD5 b2af3c1c8fe4f142e2b8debbb5c59a94 files/digest-fvwm-2.4.17 65
 MD5 38cb0131791d07053b5d90bf21d1993f files/fvwm-translucent-menus.diff.gz 3582
 MD5 91ad7db238311a86a2e0d27c9186264c files/fvwm-2.5.8-FvwmScript-Quit-reboot.diff 307
 MD5 8ebd7b398d3c580ca5067c78f8642ae1 files/fvwm-2.5.8-taskbar-margins.diff 1384
+MD5 0fcb3587e80a443304b2e6878b6eab0a files/fvwmtabs-2.8-insecure-tmp-handling.diff 2349
+MD5 d15c4e05878e8e2b8a9d5edcf30abdc2 files/fvwm-2.5.9-translucent-menus.diff.gz 58529
 MD5 977c11b7ca7c17cff7a14d1d4a0136f4 files/fvwm-2.5.8-perllib-disconnect.diff 1179
 MD5 5dc401c9f6a50da0bfa85a025749652a files/fvwm-2.5.8-fvwm-menu-directory-security.diff 382
 MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
 MD5 2bdb17132f9d7f352002a1fbace7fca1 files/acinclude.m4 61423
 MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
+MD5 386c07fa21d42bd8cbe743e3632de418 files/digest-fvwm-2.5.9 127
 MD5 e52e1c9212c856d5de29c603678dc52e files/digest-fvwm-2.5.7-r5 127
 MD5 ebe3c015c02ef069b110e30f3e84cf49 files/digest-fvwm-2.5.8-r2 127
 MD5 ebe3c015c02ef069b110e30f3e84cf49 files/digest-fvwm-2.5.8-r3 127
