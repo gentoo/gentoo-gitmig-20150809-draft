@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.4.1.ebuild,v 1.2 2002/12/30 10:33:06 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.4.1-r1.ebuild,v 1.1 2002/12/30 10:33:06 lordvan Exp $
 
 inherit eutils gnome2
 
@@ -44,8 +44,9 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-compile-warnings=yes #turn of -Werror
-	emake
+	# disable -Werror
+	econf --enable-compile-warnings=yes 
+	emake || die "compile failed"
 }
 
 src_install () {
