@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.1 2004/09/10 13:25:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.2 2004/09/10 13:41:45 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://jakarta.apache.org/commons/validator/"
 SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz mirror://gentoo/commons-validator-1.1.3-gentoo-missingfiles.tar.bz2"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
-	app-arch/zip
 	jikes? ( dev-java/jikes )
 	junit? ( >=junit-3.8.1 )"
 RDEPEND=">=virtual/jre-1.3
