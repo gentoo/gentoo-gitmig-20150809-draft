@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.22 2004/10/30 00:31:54 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.23 2004/10/30 09:42:54 s4t4n Exp $
+
+  30 Oct 2004; Michele Noberasco <s4t4n@gentoo.org> windowmaker-0.91.0.ebuild:
+  Added ~x86 keyword...
 
 *windowmaker-0.91.0 (29 Oct 2004)
 
