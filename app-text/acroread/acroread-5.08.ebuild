@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.7 2004/04/28 17:47:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.8 2004/04/28 17:55:33 lanius Exp $
 
 inherit nsplugins eutils
 
@@ -56,7 +56,7 @@ src_install() {
 		-e "s:\$PROG =.*:\$PROG = '${INSTALLDIR}/acroread.real':" \
 		acroread || die "sed acroread failed"
 
-	exeinto /opt/bin
+	exeinto ${INSTALLDIR}
 	doexe acroread
 	dodoc README LICREAD.TXT
 	dodir /opt/netscape/plugins
