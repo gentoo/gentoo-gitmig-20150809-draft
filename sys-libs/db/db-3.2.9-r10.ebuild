@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.7 2004/05/02 17:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.8 2004/06/17 01:47:26 mr_bones_ Exp $
 
-inherit gnuconfig
-inherit libtool
-inherit eutils
-inherit db
+inherit gnuconfig libtool eutils db
 
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
 HOMEPAGE="http://www.sleepycat.com/"

@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.11 2004/02/22 12:39:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r9.ebuild,v 1.12 2004/06/17 01:47:26 mr_bones_ Exp $
 
 IUSE="doc"
 
-inherit libtool
-inherit eutils
-inherit db
+inherit libtool eutils db
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
