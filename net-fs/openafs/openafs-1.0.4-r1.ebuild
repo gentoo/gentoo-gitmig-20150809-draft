@@ -83,6 +83,7 @@ src_install () {
   dosym /etc/afs /usr/vice/etc
   dosym /etc/afs/afsws /usr/afsws/etc
 
+  dodoc ${FILESDIR}/README
 }
 
 pkg_postinst () {
