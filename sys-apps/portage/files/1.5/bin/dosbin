@@ -12,17 +12,20 @@ if [ ${#} -lt 1 ]
     do
 	if [ -x ${x} ]
 	then
-            if [ -z "$DEBUG" ]
-            then
+		if [ -z "$DEBUG" ]
+		then
 	        MYVAL=`file ${x} | grep "ELF"` 
 	        if [ "$MYVAL" ]
 	        then
-		    strip ${x}
-                fi
+				strip ${x}
+			fi
 	    fi
-	    install -m0755 ${x} ${D}${DESTTREE}/sbin
+	    #if executable, use existing perms
+		install -m0755 ${x} ${D}${DESTTREE}/sbin
 	else
-	    echo "${0}: ${x} is not executable or does not exist"
+		#otherwise, use reasonable defaults
+		echo ">>> dosbin: making ${x} executable..."
+		install -m0755 --owner=root --group=root ${x} ${D}${DESTTREE}/sbin
 	fi
     done
 
