@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.21 2004/03/04 14:38:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.22 2004/03/21 10:07:54 kumba Exp $
+
+  21 Mar 2004; Joshua Kinard <kumba@gentoo.org> Storable-1.0.14-r1.ebuild,
+  Storable-1.0.14.ebuild, Storable-2.04-r1.ebuild, Storable-2.04.ebuild,
+  Storable-2.07-r1.ebuild, Storable-2.07.ebuild, Storable-2.09.ebuild:
+  Marked 2.07-r1 stable on mips, added ~mips to 2.09
 
   04 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> Storable-2.09.ebuild:
   marked stable on sparc, fixes tests
