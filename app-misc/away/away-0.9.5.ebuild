@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5.ebuild,v 1.1 2004/02/06 22:56:45 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5.ebuild,v 1.2 2004/04/11 14:46:14 pyrania Exp $
 
 DESCRIPTION="Terminal locking program with few additional features"
 HOMEPAGE="http://unbeatenpath.net/software/away/"
 SRC_URI="http://unbeatenpath.net/software/away/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc"
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-libs/pam-0.75"
 
