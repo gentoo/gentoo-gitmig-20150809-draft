@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.97 2004/12/24 18:23:50 plasmaroo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.98 2005/01/01 22:05:06 plasmaroo Exp $
+
+*gentoo-sources-2.4.28-r4 (01 Jan 2005)
+
+  01 Jan 2005; <plasmaroo@gentoo.org> -gentoo-sources-2.4.28-r3.ebuild,
+  +gentoo-sources-2.4.28-r4.ebuild:
+  Version bump. Fixes bugs #71715 and #71837.
 
 *gentoo-sources-2.4.22-r21 (24 Dec 2004)
 
