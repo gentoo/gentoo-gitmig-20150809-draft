@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/nfbtrans
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.1 2004/05/02 01:02:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/ChangeLog,v 1.2 2004/05/02 11:53:10 dholm Exp $
+
+  02 May 2004; David Holm <dholm@gentoo.org> nfbtrans-7.70.ebuild:
+  Added to ~ppc.
 
 *nfbtrans-7.70 (01 May 2004)
 
