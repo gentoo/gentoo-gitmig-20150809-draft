@@ -12,8 +12,7 @@ hppa		default-linux/hppa/2004.3			stable
 ia64		default-linux/ia64/2004.3			stable
 m68k		default-linux/m68k					dev
 mips		default-linux/mips/2004.2			stable
-ppc			default-ppc-2004.2					stable
-ppc			default-linux/ppc/2004.3			dev
+ppc			default-linux/ppc/2004.3			stable
 ppc64		default-ppc64-2004.1				dev
 ppc-macos	default-darwin/macos/10.3			dev
 ppc-od		default-darwin/od/ppc				dev
