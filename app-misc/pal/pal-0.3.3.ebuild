@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.3.ebuild,v 1.2 2004/03/16 12:56:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.3.ebuild,v 1.3 2004/04/13 20:50:05 kugelfang Exp $
 
 IUSE=""
 DESCRIPTION="pal command-line calendar program"
@@ -9,7 +9,7 @@ HOMEPAGE="http://palcal.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 S="${WORKDIR}/${P}/src"
 

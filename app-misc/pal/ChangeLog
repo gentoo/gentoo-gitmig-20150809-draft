@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.7 2004/03/16 12:56:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.8 2004/04/13 20:50:05 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> pal-0.3.3.ebuild:
+  marked ~amd64
 
   16 Mar 2004; David Holm <dholm@gentoo.org> pal-0.3.3.ebuild:
   Added to ~ppc.
