@@ -1,8 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.5 2002/07/26 15:29:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.6 2002/07/26 15:38:19 raker Exp $
 
 *openldap-2.0.25 (17 Jul 2002)
+
+  26 Jul 2002; Nick Hadaway <raker@gentoo.org> files/slapd.rc6 :
+
+  Added --pidfile /var/state/openldap/slapd.pid to files/slapd.rc6 to supress
+  error messages when shutting doesn slapd.
 
   26 Jul 2002; Nick Hadaway <raker@gentoo.org>
 
