@@ -1,0 +1,32 @@
+--- vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/bus/xf86Sbus.h.sparc	2004-06-20 18:02:36.782820000 -0400
++++ vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/bus/xf86Sbus.h	2004-06-20 18:02:53.602820000 -0400
+@@ -27,6 +27,7 @@
+ 
+ #if defined(linux)
+ #include <asm/types.h>
++#include <linux/fb.h>
+ #include <asm/fbio.h>
+ #include <asm/openpromio.h>
+ #elif defined(SVR4)
+--- vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_io.c.sparc	2004-03-04 12:48:09.000000000 -0500
++++ vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_io.c	2004-06-20 16:50:48.442820000 -0400
+@@ -117,7 +117,7 @@
+ 
+ static int
+ KIOCSRATE_ioctl_ok(int rate, int delay) {
+-#ifdef KIOCSRATE
++#if defined(KIOCSRATE) && !defined(__sparc__)
+    struct kbd_rate kbdrate_s;
+    int fd;
+ 
+--- vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_kbd.c.sparc	2004-03-04 12:48:09.000000000 -0500
++++ vnc-4.0b5-unixsrc/xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_kbd.c	2004-06-20 16:50:48.452820000 -0400
+@@ -145,7 +145,7 @@
+ 
+ static int
+ KIOCSRATE_ioctl_ok(int rate, int delay) {
+-#ifdef KIOCSRATE
++#if defined(KIOCSRATE) && !defined(__sparc__)
+    struct kbd_rate kbdrate_s;
+    int fd;
+ 
