@@ -1,13 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.2.3_p1.ebuild,v 1.2 2002/05/31 02:31:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.2.3_p1.ebuild,v 1.3 2002/05/31 02:32:58 agenkin Exp $
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
-RDEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
+RDEPEND="virtual/glibc
+	pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
 	>=dev-libs/openssl-0.9.6d
 	sys-libs/zlib"
 
