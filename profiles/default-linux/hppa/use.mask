@@ -1,3 +1,8 @@
+# 10 Mar 2005 Stefan Knoblich <stkn@gentoo.org>
+# This needs zaptel and pri
+bri
+florz
+
 # 20 Feb 2005 Guy Martin <gmsoft@gentoo.org>
 # Hardware for asterisk not yet tested
 zaptel
