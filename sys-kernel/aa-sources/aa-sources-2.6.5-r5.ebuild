@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.7 2004/07/09 13:56:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.6.5-r5.ebuild,v 1.8 2004/07/15 03:44:57 agriffis Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0075.patch ${FILESDIR}/${P}.CAN-2004-0228.patch ${FILESDIR}/${P}.CAN-2004-0229.patch ${FILESDIR}/${P}.CAN-2004-0427.patch ${FILESDIR}/${PN}.CAN-2004-0497.patch ${FILESDIR}/${P}.FPULockup-53804.patch ${FILESDIR}/${P}.IPTables-RDoS.patch ${FILESDIR}/${P}.ProcPerms.patch"
 K_PREPATCHED="yes"
@@ -16,3 +16,4 @@ HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/andrea/"
 SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/andrea/kernels/v2.6/${KV}.bz2"
 
 KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+IUSE=""
