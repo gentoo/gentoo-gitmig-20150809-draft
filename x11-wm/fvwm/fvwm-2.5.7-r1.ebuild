@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.1 2003/08/05 20:00:51 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.2 2003/08/05 20:26:41 taviso Exp $
 
 inherit gnuconfig
 
@@ -251,4 +251,11 @@ pkg_postinst() {
 	ewarn "available:"
 	ewarn "	$ ${HILITE}emerge -pv fvwm${NORMAL}"
 	ewarn
+	use perl && use tcltk && {
+		einfo "The FvwmTabs module has been installed (USE=\"perl tcltk\")."
+		einfo "For more information, visit"
+		einfo "http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
+		einfo
+		einfo "The fvwmtabrc has been installed into /usr/share/doc/${PF}"
+	}
 }
