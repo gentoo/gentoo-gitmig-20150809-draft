@@ -1,0 +1,35 @@
+--- NVIDIA-Linux-x86-1.0-6111-pkg1/usr/src/nv/nv.c	2004-09-20 23:29:14.953986656 +0200
++++ NVIDIA-Linux-x86-1.0-6111-pkg1.az/usr/src/nv/nv.c	2004-09-20 23:29:36.414724128 +0200
+@@ -639,7 +639,7 @@
+     u8     cap_ptr;
+     int    func, slot;
+ 
+-    dev = pci_find_class(class << 8, NULL);
++    dev = pci_get_class(class << 8, NULL);
+     do {
+         for (func = 0; func < 8; func++) {
+             slot = PCI_SLOT(dev->devfn);
+@@ -650,7 +650,7 @@
+             if (cap_ptr)
+                 return fn;
+         }
+-        dev = pci_find_class(class << 8, dev);
++        dev = pci_get_class(class << 8, dev);
+     } while (dev);
+ 
+     return NULL;
+@@ -3484,12 +3484,12 @@
+     struct pci_dev *dev = NULL;
+     int count = 0;
+ 
+-    dev = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8, dev);
++    dev = pci_get_class(PCI_CLASS_DISPLAY_VGA << 8, dev);
+     while (dev)
+     {
+         if ((dev->vendor == 0x10de) && (dev->device >= 0x20))
+             count++;
+-        dev = pci_find_class(PCI_CLASS_DISPLAY_VGA << 8, dev);
++        dev = pci_get_class(PCI_CLASS_DISPLAY_VGA << 8, dev);
+     }
+     return count;
+ }
