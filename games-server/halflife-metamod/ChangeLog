@@ -1,6 +1,11 @@
 # ChangeLog for games-server/halflife-metamod
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/ChangeLog,v 1.3 2004/02/22 00:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/ChangeLog,v 1.4 2004/04/16 17:38:12 vapier Exp $
+
+*halflife-metamod-1.17-r1 (16 Apr 2004)
+
+  16 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix original release (fixed config locations #42043).
 
 *halflife-metamod-1.17 (21 Feb 2004)
 
