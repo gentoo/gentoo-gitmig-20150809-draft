@@ -1,0 +1,8 @@
+# ChangeLog for dev-perl/Sex
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sex/ChangeLog,v 1.1 2002/10/21 05:16:33 vapier Exp $
+
+*Sex-0.69 (21 Oct 2002)
+
+  21 Oct 2002; Mike Frysinger <vapier@gentoo.org> Sex-0.69.ebuild :
+  Initial import.  Ebuild submitted by me ;)
