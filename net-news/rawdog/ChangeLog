@@ -1,0 +1,15 @@
+# ChangeLog for net-www/rawdog
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.1 2005/03/23 16:50:38 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +rawdog-1.12.ebuild:
+  Moved from net-www/rawdog to net-news/rawdog.
+
+*rawdog-1.12 (08 Jun 2004)
+
+  08 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org> :
+  Initial commit. Closing bug #35673. Thanks for David Dorward.
+  Marked testing on all architectures, because it should works
+  everywhere where python does.
+
