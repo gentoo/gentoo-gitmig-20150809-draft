@@ -1,0 +1,21 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.1 2002/02/20 06:12:22 tod Exp $
+
+*R-1.4.1 (19 Feb 2002)
+
+  19 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, R-1.4.1.ebuild :
+  
+  Initial commit. R is GNU S - A language and environment for statistical
+  computing and graphics. Gnome and tcltk gui's are available if in USE.
+  
+  If gnome, a rudimentary menu entry is made under Applications.
+  However, it has the annoying tendency to pop up a terminal window to start
+  the gui. (todo 1)  
+  
+  Also, the html files are not accessible from the toolbar menu entry unless
+  you happen to be running netscape. (todo 2)
+  
+  This ebuild makes use of a new USE variable, 'atlas', which will compile
+  R using the auto-tuned blas libraries provided by atlas. NOTE: atlas ebuild
+  currently only provides static libraries. Shared libraries are in the works.
