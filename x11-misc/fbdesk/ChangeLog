@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/fbdesk
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.1 2003/01/26 22:42:00 bcowan Exp $
+
+*fbdesk-1.1.2 (26 Jan 2003)
+
+  26 Jan 2003; Brad Cowan <bcowan@gentoo.org> fbdesk-1.1.2.ebuild,
+  files/digest-fbdesk-1.1.2, ChangeLog:
+  Initial import.  Ebuild submitted by Laurent Maestracci <laurent@maestracci.net>.
+  
