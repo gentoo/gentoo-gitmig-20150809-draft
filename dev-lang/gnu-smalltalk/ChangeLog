@@ -1,0 +1,11 @@
+# ChangeLog for dev-lang/gnu-smalltalk
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.1 2004/07/09 04:34:37 mkennedy Exp $
+
+*gnu-smalltalk-2.1.8 (08 Jul 2004)
+
+  08 Jul 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +files/2.1.8-gst-package-mktemp-gentoo.patch,
+  +files/50gnu-smalltalk-gentoo.el, +gnu-smalltalk-2.1.8.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
