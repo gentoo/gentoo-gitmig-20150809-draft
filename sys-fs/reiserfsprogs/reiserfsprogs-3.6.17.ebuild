@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.17.ebuild,v 1.11 2004/10/10 06:04:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.17.ebuild,v 1.12 2004/10/10 06:12:01 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -27,5 +27,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Failed to install"
 	dosym reiserfsck /sbin/fsck.reiserfs
+	dosym mkreiserfs /sbin/mkfs.reiserfs
 	dodoc ChangeLog INSTALL README
 }
