@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r3.ebuild,v 1.1 2004/06/15 17:03:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r3.ebuild,v 1.2 2004/06/15 22:16:25 mr_bones_ Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -8,7 +8,7 @@
 # grsec-2.0-preX which has alot more features.
 
 # the only thing that should ever differ in one of these 1.9.x ebuilds
-# and 2.x of the same kernel version is the KEYWORDS and header. 
+# and 2.x of the same kernel version is the KEYWORDS and header.
 # shame cvs symlinks don't exist
 
 ETYPE="sources"
@@ -72,7 +72,7 @@ src_unpack() {
 	epatch ${FILESDIR}/2.4.26-CAN-2004-0394.patch
 	# Fix local DoS bug #53804
 	epatch ${FILESDIR}/2.4.26-signal-race.patch
-	
+
 	mkdir docs
 	touch docs/patches.txt
 	kernel_universal_unpack
