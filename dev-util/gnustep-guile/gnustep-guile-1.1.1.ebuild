@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.1.1.ebuild,v 1.1 2003/07/13 01:21:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-guile/gnustep-guile-1.1.1.ebuild,v 1.2 2003/07/15 08:08:39 raker Exp $
 
 inherit gnustep
 
@@ -14,7 +14,3 @@ DEPEND=">=dev-util/gnustep-base-1.6.0
 	>=dev-util/guile-1.6"
 RDEPEND="virtual/glibc"
 S=${WORKDIR}/${P}
-
-src_compile() {
-	egnustepmake2
-}
