@@ -1,0 +1,4 @@
+*ed2k-gtk-gui-0.6.2 (21 Apr 2004)
+
+  21 Apr 2004; Jon Hood <squinky86@gentoo.org> ed2k-gtk-gui-0.6.2.ebuild:
+  Initial commit, thanks to ares <ares@serversecurity.org>, #48525
