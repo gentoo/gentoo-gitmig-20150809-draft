@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.8 2004/06/25 02:08:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.9 2004/09/27 23:02:09 matsuu Exp $
+
+*tcllib-1.6.1 (28 Sep 2004)
+
+  28 Sep 2004; MATSUU Takuto <matsuu@gentoo.org> +tcllib-1.6.1.ebuild:
+  Version bumped.
 
   03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tcllib-1.6.ebuild:
   Stable on alpha.
