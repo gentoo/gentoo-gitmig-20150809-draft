@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.04.ebuild,v 1.5 2004/07/14 13:39:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05.ebuild,v 1.1 2004/07/14 13:39:39 axxo Exp $
 
-IUSE="gnome kde mozilla"
+IUSE="doc gnome kde mozilla"
 
 inherit java nsplugins
 
-At="j2re-1_4_2_04-linux-i586.bin"
-S="${WORKDIR}/j2re1.4.2_04"
+At="j2re-1_4_2_05-linux-i586.bin"
+S="${WORKDIR}/j2re1.4.2_05"
 DESCRIPTION="Sun's J2SE Platform"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SRC_URI=${At}
@@ -30,7 +30,7 @@ lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-1.4.2_04-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-1.4.2_05-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
