@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.5 2003/03/16 14:27:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.6 2003/03/16 14:35:51 liquidx Exp $
 
 inherit nsplugins kde
 
@@ -132,6 +132,6 @@ pkg_postinst() {
 	echo
 	einfo "Finished installing RealPlayer8 into ${BASE}"
 	einfo "You can start the player by running 'realplay'"
-	einfo "You should agree to the terms in ${BASE}/LICENSE or unmerge"
+	einfo "You have to agree to the terms in ${BASE}/LICENSE or unmerge"
 	echo
 }
