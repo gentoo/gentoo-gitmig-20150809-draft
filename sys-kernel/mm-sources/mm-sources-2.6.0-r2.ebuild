@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta9-r5.ebuild,v 1.1 2003/11/21 20:34:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0-r2.ebuild,v 1.1 2003/12/30 01:15:00 tseng Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel
 
-OKV=${PV/_beta/-test}
+OKV=${PV}
 
 EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
@@ -25,7 +25,7 @@ inherit eutils
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV/_beta/-test}.tar.bz2
 mirror://kernel/linux/kernel/people/akpm/patches/2.6/${PV/_beta/-test}/${KV}/${KV}.bz2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
 PROVIDE="virtual/linux-sources
