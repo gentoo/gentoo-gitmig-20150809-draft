@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmonetra
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.10 2005/02/04 12:19:15 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.11 2005/04/01 15:30:51 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> libmonetra-4.2.2.ebuild:
+  stable on ia64
 
   04 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> libmonetra-4.1.ebuild:
   Marked stable on amd64, as required by bug 60442.
