@@ -1,4 +1,4 @@
-MD5 783b12fbbe266ec7b9e072a8b586c17b ChangeLog 5834
+MD5 1037207046acc11eddf76426aa522c0b ChangeLog 5959
 MD5 4ba4a6d08c451e52eeb86ac25ac0cb6d metadata.xml 253
 MD5 08044297da7d9f2face8e1edce1c8298 tmda-0.80.ebuild 1551
 MD5 c98081c92f693a7c4faf4d5b32d1bb5b tmda-0.82.ebuild 1551
@@ -7,7 +7,7 @@ MD5 a6d30e23c7e8622f24b658105122022a tmda-0.87.ebuild 1552
 MD5 ed119bab813da6d3abb5c8d645905d5e tmda-0.89.ebuild 1573
 MD5 69d21896f4d8e4a8921ef7e7567bab03 tmda-0.90.ebuild 1573
 MD5 f00d7d03735bf1b107c97d6ab20773bb tmda-0.92.ebuild 1579
-MD5 f00d7d03735bf1b107c97d6ab20773bb tmda-1.0.ebuild 1579
+MD5 e99f13c84e202076897dda3f136e88e1 tmda-1.0.ebuild 1578
 MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0 57
 MD5 42462478761427da2aeb91f7bdd47328 files/digest-tmda-0.80 58
 MD5 cd268ee6ff6b0b618d5033beafe75465 files/digest-tmda-0.82 58
