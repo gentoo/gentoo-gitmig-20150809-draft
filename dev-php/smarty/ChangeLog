@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.1 2003/05/11 13:14:35 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.2 2003/09/28 03:15:56 twp Exp $
+
+*smarty-2.6.0_rc1 (28 Sep 2003)
+
+  28 Sep 2003; Tom Payne <twp@gentoo.org> smarty-2.6.0_rc1.ebuild :
+  Version bump. Added metadata.xml.
 
 *smarty-2.5.0 (11 May 2003)
 
