@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/epplet-base/ChangeLog,v 1.1 2002/04/26 21:52:06 tod Exp $
+
+*epplet-base-0.5 ( 26 Apr 2002 )
+
+  26 Apr 2002; Tod Neidt <tod@gentoo.org> epplet-base-0.5.ebuild :
+ 
+  Initial commit. Ebuild submitted by Paul Fleischer.
