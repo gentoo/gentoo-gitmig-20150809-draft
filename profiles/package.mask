@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3605 2005/02/11 21:16:17 cardoe Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3606 2005/02/11 23:38:47 taviso Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,7 +34,7 @@ www-apps/wordpress
 dev-lisp/tbnl
 
 # Tavis Ormandy <taviso@gentoo.org> (9 Feb 2005)
-# Masked for security audit.
+# Masked pending security audit.
 www-client/prozilla
 
 # Peter Johanson <latexer@gentoo.org> (8 Feb 2005)
@@ -616,12 +616,6 @@ media-video/cinelerra
 # <ribosome@gentoo.org> (09 Jan 2005)
 # Beta release
 =sci-biology/vienna-rna-1.5_beta
-
-# <taviso@gentoo.org> (08 Jan 2005)
-# Package is now available via cpan, users should
-# use the g-cpan.pl utility to install (see man page).
-# masking in preparation for removal, send comments.
-app-dicts/gramadoir
 
 # <vericgar@gentoo.org> (07 Jan 2005)
 # Apache herd package refresh
@@ -1302,10 +1296,6 @@ dev-libs/libiconv
 
 #untested, author mentions an error
 media-libs/id3lib-docs
-
-# stricter syntax required, easily broken.
-# -taviso 13 Mar 2004
-=x11-misc/habak-0.2.3
 
 # broken (achim)
 app-text/sgml2x
