@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.9 2003/09/04 12:33:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.10-r1.ebuild,v 1.10 2003/11/09 23:45:22 weeve Exp $
 
 IUSE="ssl"
 
@@ -16,7 +16,7 @@ DEPEND="media-libs/speex
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc -sparc"
 
 src_compile() {
 	export PWLIBDIR=/usr/share/pwlib
