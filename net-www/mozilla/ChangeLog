@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.4 2002/02/07 14:19:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.5 2002/02/15 11:16:47 azarah Exp $
+
+  15 Feb 2002; M.Schlemmer <azarah@gentoo.org> mozilla-0.9.8-r3.ebuild :
+
+  Hopefully fix package building dud mozilla binary.  Further fixes to stale
+  components and chrome problem.
 
 *mozilla-0.9.8-r2 (7 Feb 2002)
 
