@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.1 2003/10/31 15:41:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2-r2.ebuild,v 1.2 2003/11/04 19:56:44 usata Exp $
 
 IUSE="X nopixbuf imlib imlib2 xface ssl migemo gpm cjk"
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
 LICENSE="w3m"
+# since it is a CVS snapshot, we better not change keywords to stable
 KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
 DEPEND="${RDEPEND}
@@ -22,10 +23,11 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
 	>=dev-libs/boehm-gc-6.2
 	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
-		imlib2? ( >=media-libs/imlib2-1.0.5 )
+		imlib2? ( >=media-libs/imlib2-1.1.0-r2 )
 		imlib? ( >=media-libs/imlib-1.9.8 )
 		virtual/glibc )
 	)
+	!X? ( imlib2? ( >=media-libs/imlib2-1.1.0-r2 ) )
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	migemo? ( >=app-text/migemo-0.40 )
@@ -49,22 +51,28 @@ pkg_setup() {
 
 w3m_src_compile() {
 
-	local myconf migemo_command imglib
+	local myconf migemo_command imagelib
 
 	if [ -n "`use X`" ] ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
 		if [ ! -n "`use nopixbuf`" ] ; then
-			imglib="gdk_pixbuf"
+			imagelib="gdk-pixbuf"
 		elif [ -n "`use imlib2`" ] ; then
-			imglib="imlib2"
+			imagelib="imlib2"
 		elif [ -n "`use imlib`" ] ; then
-			imglib="imlib"
+			imagelib="imlib"
 		else
-			# defaults to gdk_pixbuf
-			imglib="gdk_pixbuf"
+			# defaults to gdk-pixbuf
+			imagelib="gdk-pixbuf"
 		fi
 	else
-		myconf="${myconf} --enable-image=no"
+		if [ -n "`use imlib2`" ] ; then
+			myconf="${myconf} --enable-image=fb"
+			imagelib="imlib2"
+		else
+			myconf="${myconf} --enable-image=no"
+			imagelib="no"
+		fi
 	fi
 
 	if [ -n "`use migemo`" ] ; then
@@ -80,7 +88,7 @@ w3m_src_compile() {
 		--with-mailer=/bin/mail \
 		--with-browser=/usr/bin/mozilla \
 		--with-termlib=ncurses \
-		--with-imglib="${imglib}" \
+		--with-imagelib="${imagelib}" \
 		--with-migemo="${migemo_command}" \
 		`use_enable cjk m17n` \
 		`use_enable gpm mouse` \
@@ -89,24 +97,20 @@ w3m_src_compile() {
 		${myconf} "$@" || die
 
 	# emake borked
-	make all || die "make failed"
-	make all || die "make failed"
+	make all || make all || die "make failed"
 }
 
 src_unpack() {
 
 	unpack ${W3M_CVS_P}.tar.gz
 	cd ${S}
-	#epatch ${FILESDIR}/${PF}-gentoo.diff
-	#epatch ${FILESDIR}/${P}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
-	#epatch ${FILESDIR}/${P}-imglib-gentoo.diff
 }
 
 src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
-	autoconf || die
+	#autoconf || die "autoconf failed"
 
 	if [ -n "`use cjk`" ] ; then
 
