@@ -1,4 +1,15 @@
-MD5 aee957fe47081596564f64fc59d15974 hdf-4.2.0-r3.ebuild 1715
-MD5 b7d01423901e63cef6f78a384b30a9ed ChangeLog 1259
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 31ebffcb0bffbbbe7afc4b7715deb823 ChangeLog 1463
+MD5 5478f5a5007a144268b33dd61d9d8340 hdf-4.2.0-r3.ebuild 2137
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 bdb6c3501721a0f1f6b81f2f9b052028 files/digest-hdf-4.2.0-r3 61
+MD5 f9fd921ea3f86b6fc072704cf5e064d5 files/hdf-4.2.0-shared-libs.patch 17794
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB9sQw5mJXAu5GbtIRAsGlAJwNMyS0wc+FZxarwU/7YbCyiy7M2ACfT4fd
+7cwkUXhnBSvaKctV/E056K8=
+=MjWC
+-----END PGP SIGNATURE-----
