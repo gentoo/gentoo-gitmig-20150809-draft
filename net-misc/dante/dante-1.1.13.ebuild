@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.18 2004/02/21 20:37:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.19 2004/06/13 11:06:55 agriffis Exp $
 
 inherit gcc
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	local myconf
 	use tcpd || myconf="--disable-libwrap"
-	[ `use debug` ] || myconf="${myconf} --disable-debug"
+	use debug || myconf="${myconf} --disable-debug"
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
