@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.101 2003/06/11 22:49:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.102 2003/06/23 20:04:42 solar Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -110,6 +110,7 @@ png - Adds support for libpng (PNG images)
 pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
 postgres - Adds support for the postgresql database
 prebuilt - Flag to enable or disable options for prebuilt (GRP)  packages (eg. due to licensing issues)
+prelude - Adds support/bindings for the Prelude Intrusion Detection System
 python - Adds support/bindings for the Python language
 qt - Adds support for the Qt library.
 quicktime - Adds support for OpenQuickTime
