@@ -22,7 +22,7 @@
 ##
 
 
-# <tantive@gentoo.org> (18 Oct 2002)
+# <tantive@gentoo.org> (10 Oct 2002)
 # Version bumped, masked due to move
 =sys-apps/usermode-utilities-20020906
 =sys-apps/usermode-utilities-20020821
@@ -42,12 +42,6 @@
 =sys-kernel/usermode-sources-2.4.19-r10
 =sys-kernel/usermode-sources-2.4.19-r11
 =sys-kernel/usermode-sources-2.4.19-r12
-
-# <tantive@gentoo.org> (08 Oct 2002)
-# Version bumped, masked for testing.
-=dev-util/usermode-20020906
-=dev-util/usermode-20020821
-=dev-util/usermode-20020729
 
 # <mkeadle@gentoo.org> (07 Oct 2002)
 # Masked for short testing of new Openbox
@@ -722,7 +716,6 @@ net-misc/radvd
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while g2boojum approves
 =sys-kernel/usermode-sources-2.4.18-r2
-=dev-util/usermode-20020718
 
 # <owen@gentoo.org> (22 Jul 2002)
 # Broken against latest FLTK. Hopefully will be fixed with a new POSE.
