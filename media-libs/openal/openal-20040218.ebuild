@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.3 2004/02/20 23:38:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.4 2004/02/24 20:38:05 wolf31o2 Exp $
 
 IUSE="alsa arts esd sdl debug oggvorbis mpeg"
 DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
@@ -32,7 +32,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug-maximus"
 
 	cd ${S}/linux
-	use alsa && epatch ${FILESDIR}/${P}-alsa_capture.diff
+	use alsa && epatch ${FILESDIR}/openal-20040219-alsa_capture.diff
 	WANT_AUTOCONF_2_5=1 ./autogen.sh || die
 	./configure  --prefix=/usr ${myconf} --enable-paranoid-locks \
 		--enable-capture --enable-optimize || die

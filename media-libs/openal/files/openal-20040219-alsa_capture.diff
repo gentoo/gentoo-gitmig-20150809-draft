@@ -4,7 +4,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/al_ext.c,v
 retrieving revision 1.6
 diff -u -r1.6 al_ext.c
 --- src/al_ext.c	20 Jun 2003 19:23:05 -0000	1.6
-+++ src/al_ext.c	16 Feb 2004 20:18:38 -0000
++++ src/al_ext.c	19 Feb 2004 17:49:28 -0000
 @@ -993,5 +993,9 @@
  		return ALC_TRUE;
  	}
@@ -21,7 +21,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/al_main.c,v
 retrieving revision 1.9
 diff -u -r1.9 al_main.c
 --- src/al_main.c	10 Aug 2003 07:58:31 -0000	1.9
-+++ src/al_main.c	16 Feb 2004 20:18:38 -0000
++++ src/al_main.c	19 Feb 2004 17:49:28 -0000
 @@ -133,6 +133,7 @@
  
  #ifdef CAPTURE_SUPPORT
@@ -36,7 +36,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/al_queue.c,v
 retrieving revision 1.4
 diff -u -r1.4 al_queue.c
 --- src/al_queue.c	20 Jun 2003 19:23:06 -0000	1.4
-+++ src/al_queue.c	16 Feb 2004 20:18:38 -0000
++++ src/al_queue.c	19 Feb 2004 17:49:29 -0000
 @@ -51,6 +51,8 @@
  		return;
  	}
@@ -76,7 +76,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/al_source.c,v
 retrieving revision 1.22
 diff -u -r1.22 al_source.c
 --- src/al_source.c	15 Jan 2004 11:49:44 -0000	1.22
-+++ src/al_source.c	16 Feb 2004 20:18:39 -0000
++++ src/al_source.c	19 Feb 2004 17:49:30 -0000
 @@ -595,9 +595,7 @@
  			"alSourcefv: %d is an invalid source id", sid );
  
@@ -109,7 +109,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/alc/alc_context.c,v
 retrieving revision 1.10
 diff -u -r1.10 alc_context.c
 --- src/alc/alc_context.c	20 Jun 2003 19:23:06 -0000	1.10
-+++ src/alc/alc_context.c	16 Feb 2004 20:18:39 -0000
++++ src/alc/alc_context.c	19 Feb 2004 17:49:30 -0000
 @@ -1525,6 +1525,9 @@
  	return deviceHandle->cc;
  }
@@ -136,7 +136,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/arch/alsa/alsa.c,v
 retrieving revision 1.7
 diff -u -r1.7 alsa.c
 --- src/arch/alsa/alsa.c	25 Jan 2004 17:11:57 -0000	1.7
-+++ src/arch/alsa/alsa.c	16 Feb 2004 20:18:40 -0000
++++ src/arch/alsa/alsa.c	19 Feb 2004 17:49:30 -0000
 @@ -46,7 +46,8 @@
   * get either the default device name or something the
   * user specified
@@ -168,7 +168,7 @@ diff -u -r1.7 alsa.c
 +
 +	get_in_device_name(card_name, 256);
 +
-+	err = snd_pcm_open(&handle, card_name, SND_PCM_STREAM_CAPTURE, 0);
++	err = snd_pcm_open(&handle, card_name, SND_PCM_STREAM_CAPTURE, SND_PCM_NONBLOCK);
 +	if(err < 0)
 +	{
 +		const char *serr = snd_strerror(err);
@@ -256,7 +256,7 @@ diff -u -r1.7 alsa.c
  
  	_alBlitBuffer = alsa_blitbuffer;
  
-@@ -140,13 +200,160 @@
+@@ -140,13 +200,161 @@
  	return retval;
  }
  
@@ -276,22 +276,21 @@ diff -u -r1.7 alsa.c
 +	snd_pcm_uframes_t buffer_size, period_size;
 +	snd_pcm_t *phandle = 0;
 +	int err, dir;
-+	snd_output_t *out;
 +
 +	if( (ai == NULL) || (ai->handle == NULL) )
 +		return AL_FALSE;
 +
 +
-+	if (*fmt == AL_FORMAT_QUAD8_LOKI)
-+		*fmt = AL_FORMAT_STEREO8;
-+	if (*fmt == AL_FORMAT_QUAD16_LOKI)
-+		*fmt = AL_FORMAT_STEREO16;
++	if ((*fmt == AL_FORMAT_QUAD8_LOKI) || (*fmt == AL_FORMAT_STEREO8))
++		*fmt = AL_FORMAT_MONO8;
++	if ((*fmt == AL_FORMAT_QUAD16_LOKI) || (*fmt == AL_FORMAT_STEREO16))
++		*fmt = AL_FORMAT_MONO16;
 +
-+	ai->channels    = (unsigned int) _al_ALCHANNELS(*fmt);
++	ai->channels    = 1;
 +	ai->format      = (unsigned int) AL2ALSAFMT(*fmt);
 +	ai->speed       = (unsigned int) *speed;
 +	ai->framesize   = (unsigned int) FRAMESIZE(ai->format, ai->channels);
-+	ai->bufframesize= (snd_pcm_uframes_t) *bufsiz / ai->framesize * 4;
++	ai->bufframesize= (snd_pcm_uframes_t) 8192;
 +	ai->periods     = 2;
 +
 +	_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
@@ -305,7 +304,6 @@ diff -u -r1.7 alsa.c
 +			ai->channels, ai->format, ai->speed, ai->framesize, ai->bufframesize, ai->periods);
 +
 +	phandle = ai->handle;
-+	snd_output_stdio_attach (&out, stderr, 0);
 +
 +	snd_pcm_hw_params_alloca(&setup);
 +	err = snd_pcm_hw_params_any(phandle, setup);
@@ -356,18 +354,23 @@ diff -u -r1.7 alsa.c
 +
 +
 +	/* sampling rate */
-+	err = snd_pcm_hw_params_set_rate_near(phandle, setup, &ai->speed, NULL);
++	err = snd_pcm_hw_params_set_rate(phandle, setup, ai->speed, 0);
 +	if(err < 0)
 +	{
 +		_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +				"set_read_alsa: could not set speed: %s",snd_strerror(err));
 +
 +		return AL_FALSE;
-+	} else if (err > 0) /* err is sampling rate if > 0 */
-+		ai->speed = (unsigned int) err;
-+
++	}
 +
 +	/* Set number of periods. Periods used to be called fragments. */
++	err = snd_pcm_hw_params_set_period_size(phandle, setup, 4096, 0);
++	if (err < 0) {
++		_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
++				"set_read_alsa: %s\n", snd_strerror(err));
++		return AL_FALSE;
++	}
++
 +	err = snd_pcm_hw_params_set_periods(phandle, setup, ai->periods, 0);
 +	if (err < 0) {
 +		_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
@@ -375,9 +378,7 @@ diff -u -r1.7 alsa.c
 +		return AL_FALSE;
 +	}
 +
-+	snd_pcm_hw_params_dump (setup, out);
 +	err = snd_pcm_hw_params_set_buffer_size(phandle, setup, ai->bufframesize);
-+	snd_pcm_hw_params_dump (setup, out);
 +	if (err < 0) {
 +		_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +				"set_read_alsa: %s, size: %d, speed: %d\n",
@@ -397,6 +398,7 @@ diff -u -r1.7 alsa.c
 +			"set_read_alsa (info): Buffersize = %i (%i)",buffer_size, *bufsiz);
 +	_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +			"set_read_alsa (info): Periodsize = %i", period_size);
++	*bufsiz = buffer_size * ai->framesize;
 +
 +	err = snd_pcm_hw_params(phandle, setup);
 +	if(err < 0)
@@ -416,18 +418,14 @@ diff -u -r1.7 alsa.c
 +
 +	_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +			"set_read_alsa: handle: %p, phandle: %p\n", handle, phandle);
-+	snd_output_close (out);
 +	ai->setup_read = 1;
 +
 +	return AL_TRUE;
  }
  
  ALboolean set_write_alsa(void *handle,
-@@ -159,54 +366,56 @@
- 	snd_pcm_uframes_t buffer_size, period_size;
- 	snd_pcm_t *phandle = 0;
+@@ -161,52 +369,52 @@
  	int err, dir;
-+	snd_output_t *out;
  
  	if( (ai == NULL) || (ai->handle == NULL) )
 -	  return AL_FALSE;
@@ -467,7 +465,6 @@ diff -u -r1.7 alsa.c
  
 -        phandle = ai->handle;
 +	phandle = ai->handle;
-+	snd_output_stdio_attach (&out, stderr, 0);
  
  	snd_pcm_hw_params_alloca(&setup);
  	err = snd_pcm_hw_params_any(phandle, setup);
@@ -505,7 +502,7 @@ diff -u -r1.7 alsa.c
  
  		return AL_FALSE;
  	}
-@@ -216,16 +425,15 @@
+@@ -216,16 +424,15 @@
  	err = snd_pcm_hw_params_set_channels(phandle, setup, ai->channels);
  	if(err < 0)
  	{
@@ -529,7 +526,7 @@ diff -u -r1.7 alsa.c
  
  			return AL_FALSE;
  		}
-@@ -233,51 +441,53 @@
+@@ -233,51 +440,51 @@
  
  
  	/* sampling rate */
@@ -567,9 +564,7 @@ diff -u -r1.7 alsa.c
 -        if (err < 0) {
 -                _alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 -			"set_write_alsa: %s\n", snd_strerror(err));
-+	snd_pcm_hw_params_dump (setup, out);
 +	err = snd_pcm_hw_params_set_buffer_size(phandle, setup, ai->bufframesize);
-+	snd_pcm_hw_params_dump (setup, out);
 +	if (err < 0) {
 +		_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +				"set_write_alsa: %s, size: %d, speed: %d\n",
@@ -610,7 +605,7 @@ diff -u -r1.7 alsa.c
  		return AL_FALSE;
  	}
  
-@@ -285,10 +495,15 @@
+@@ -285,10 +492,14 @@
  	if(err < 0)
  	{
  		_alDebug(ALD_MAXIMUS,  __FILE__, __LINE__,
@@ -621,13 +616,12 @@ diff -u -r1.7 alsa.c
  
 +	_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
 +			"set_write_alsa: handle: %p, phandle: %p\n", handle, phandle);
-+	snd_output_close (out);
 +	ai->setup_write = 1;
 +
  	return AL_TRUE;
  }
  
-@@ -300,16 +515,16 @@
+@@ -300,16 +511,16 @@
  	int data_len = bytes;
  	int channels = 0;
  	int err;
@@ -648,7 +642,7 @@ diff -u -r1.7 alsa.c
  
  	while(data_len > 0)
  	{
-@@ -347,6 +562,40 @@
+@@ -347,6 +558,44 @@
  
  	return;
  }
@@ -669,18 +663,22 @@ diff -u -r1.7 alsa.c
 +
 +	phandle = ai->handle;
 +	frames = (snd_pcm_uframes_t) bufsize / ai->framesize;
-+grab:
 +
-+	_alDebug(ALD_MAXIMUS, __FILE__, __LINE__,
-+			"set_read_alsa: handle: %p, phandle: %p\n", handle, phandle);
++grab:
 +	ret = snd_pcm_readi (phandle, pdata, frames);
 +	if (ret < 0) {
-+		fprintf(stderr, "Error, overrun: %d, trying to recover.\n", ret);
-+		ret = snd_pcm_prepare(phandle);
-+		if (ret < 0)
-+			fprintf(stderr, "Unable to recover: %d\n", ret);
-+		else
-+			goto grab;
++		if (ret == -EAGAIN)
++			return 0;
++		else if (ret == -EPIPE) {
++			fprintf(stderr, "Error, overrun occurred, trying to recover.\n");
++			ret = snd_pcm_prepare(phandle);
++			if (ret < 0)
++				fprintf(stderr, "Unable to recover: %d\n", ret);
++			else
++				goto grab;
++		} else {
++			fprintf(stderr, "Unknown error occurred: %d.\n", ret);
++		}
 +		return 0;
 +	} else
 +		return ret * ai->framesize;
@@ -695,7 +693,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/arch/alsa/alsa.h,v
 retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 alsa.h
 --- src/arch/alsa/alsa.h	18 Mar 2002 14:41:44 -0000	1.1.1.1
-+++ src/arch/alsa/alsa.h	16 Feb 2004 20:18:40 -0000
++++ src/arch/alsa/alsa.h	19 Feb 2004 17:49:30 -0000
 @@ -17,5 +17,8 @@
  			  ALuint *bufsiz,
  			  ALenum *fmt,
@@ -711,7 +709,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/arch/interface/interface_so
 retrieving revision 1.3
 diff -u -r1.3 interface_sound.c
 --- src/arch/interface/interface_sound.c	20 Jun 2003 19:23:07 -0000	1.3
-+++ src/arch/interface/interface_sound.c	16 Feb 2004 20:18:40 -0000
++++ src/arch/interface/interface_sound.c	19 Feb 2004 17:49:31 -0000
 @@ -413,6 +413,8 @@
  		  bytes = capture_emu10k1(handle, capture_buffer, bufsiz);
  		  break;
@@ -727,18 +725,26 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/arch/linux/lin_dsp.c,v
 retrieving revision 1.8
 diff -u -r1.8 lin_dsp.c
 --- src/arch/linux/lin_dsp.c	8 Aug 2003 12:42:08 -0000	1.8
-+++ src/arch/linux/lin_dsp.c	16 Feb 2004 20:18:40 -0000
-@@ -446,6 +446,9 @@
++++ src/arch/linux/lin_dsp.c	19 Feb 2004 17:49:31 -0000
+@@ -439,13 +439,14 @@
+ }
+ 
+ /* capture data from the audio device */
+-ALsizei capture_nativedevice(UNUSED(void *handle),
+-			  UNUSED(void *capture_buffer),
+-			  UNUSED(int bufsiz)) {
++ALsizei capture_nativedevice(void *handle,
++			  void *capture_buffer,
++			  int bufsiz) {
+ 	int read_fd = *(int *)handle;
  	int retval;
  
  	retval = read(read_fd, capture_buffer, bufsiz);
 +
-+/*if (retval < 0) printf("%s\n", strerror(errno));*/
-+
  	return retval > 0 ? retval : 0;
  }
  
-@@ -633,7 +636,7 @@
+@@ -633,7 +634,7 @@
  		 * This is for reading.  Don't really use
  		 * the speed argument.
  		 */
@@ -753,7 +759,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/extensions/al_ext_capture.c
 retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 al_ext_capture.c
 --- src/extensions/al_ext_capture.c	18 Mar 2002 14:41:44 -0000	1.1.1.1
-+++ src/extensions/al_ext_capture.c	16 Feb 2004 20:18:40 -0000
++++ src/extensions/al_ext_capture.c	19 Feb 2004 17:49:31 -0000
 @@ -45,6 +45,11 @@
  	AL_EXT_PAIR(alCaptureStop_EXT),
  	AL_EXT_PAIR(alCaptureGetData_EXT),
@@ -795,7 +801,7 @@ diff -u -r1.1.1.1 al_ext_capture.c
  		}
  		if(temp == NULL) {
  			fprintf(stderr, "could not canonize data\n");
-@@ -203,3 +210,227 @@
+@@ -203,3 +210,228 @@
  	}
  	return size;
  }
@@ -1003,10 +1009,11 @@ diff -u -r1.1.1.1 al_ext_capture.c
 +/* !!! FIXME: should query hardware here and do read in alcCaptureSamples() */
 +ALint __alcGetAvailableSamples(ALvoid)
 +{
-+    static ALubyte buf[1024];
-+    ALsizei got = alCaptureGetData_EXT(buf, sizeof (buf),
-+                                       captureFmt, captureFreq);
-+    if (got > 0)
++    static ALubyte buf[2048];
++    ALsizei got;
++    
++    while ((got = alCaptureGetData_EXT(buf, sizeof (buf),
++                                       captureFmt, captureFreq)) > 0)
 +        __alRingBufferPut(&captureRing, buf, got);
 +
 +    /*printf("got %d have %d\n", (int) got, (int) (__alRingBufferSize(&captureRing) / captureFmtSize));*/
@@ -1029,7 +1036,7 @@ RCS file: /usr/local/cvs-repository/openal/linux/src/extensions/al_ext_capture.h
 retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 al_ext_capture.h
 --- src/extensions/al_ext_capture.h	18 Mar 2002 14:41:44 -0000	1.1.1.1
-+++ src/extensions/al_ext_capture.h	16 Feb 2004 20:18:40 -0000
++++ src/extensions/al_ext_capture.h	19 Feb 2004 17:49:31 -0000
 @@ -13,6 +13,16 @@
  
  #include <AL/alext.h>
