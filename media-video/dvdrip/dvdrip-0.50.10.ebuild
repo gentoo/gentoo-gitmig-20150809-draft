@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.48.5.ebuild,v 1.2 2003/02/10 14:12:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.10.ebuild,v 1.1 2003/04/17 18:28:23 mholzer Exp $
 
-IUSE="oggvorbis cdr gnome"
+IUSE="cdr gnome"
 
 inherit perl-module
 
@@ -20,20 +20,26 @@ SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="oggvorbis? ( media-sound/ogmtools )
-	gnome? ( gnome-extra/gtkhtml )
+DEPEND=" gnome? ( gnome-extra/gtkhtml )
 	cdr? ( >=media-video/vcdimager-0.7.12
 		>=app-cdr/cdrdao-1.1.7
-		app-cdr/cdrtools )
-	>=media-video/transcode-0.6.2
-	media-gfx/imagemagick
+		>=app-cdr/cdrtools-2.0 )
+	>=media-video/transcode-0.6.3
+	>=media-gfx/imagemagick-5.5.3
+	sys-apps/procps
 	dev-perl/gtk-perl
 	dev-perl/Storable
 	dev-perl/Event"
 
-RDEPEND=">=net-analyzer/fping-2.3"
+RDEPEND=">=net-analyzer/fping-2.3
+		>=media-sound/ogmtools-0.972
+		>=media-video/mjpegtools-1.6.0"
 
 src_install () {
 	perl-module_src_install
-	cp -a ${S}/contrib ${D}/usr/share/doc/${P}
+}
+
+pkg_postinst () {
+	einfo "If you want to use the cluster-mode, you need to SUID fping"
+	einfo "chmod u+s /usr/sbin/fping"
 }
