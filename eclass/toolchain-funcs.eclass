@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.12 2004/12/13 23:49:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.13 2004/12/14 05:04:09 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -95,6 +95,7 @@ tc-is-cross-compiler() {
 	"${tmpfile}".bin &>/dev/null
 	ret=$?
 	rm -f "${tmpfile}" "${tmpfile}".bin
+	return ${ret}
 }
 
 
