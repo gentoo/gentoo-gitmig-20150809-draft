@@ -172,7 +172,7 @@ diff -urN tct-1.15.orig/lazarus/lazarus tct-1.15/lazarus/lazarus
 -	$magic_file = "/etc/magic";
 -	warn "Couldn't find $ETC/magic, switching over to $magic_file\n";
 -	}
-+$magic_file="/usr/share/misc/file/magic"
++$magic_file="/usr/share/misc/file/magic";
 +die "Can't find $magic_file\n" unless (-f $magic_file);
 +
  
