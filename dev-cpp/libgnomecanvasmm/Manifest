@@ -1,6 +1,6 @@
 MD5 75ce705f82d4d6e4004ce60c489109c2 ChangeLog 1564
 MD5 1b3446b77fd3fbabe8d1d7423b711fea libgnomecanvasmm-2.0.0.ebuild 643
-MD5 e06d45b4ee7acc221170db9079acc8f7 libgnomecanvasmm-2.0.1.ebuild 756
+MD5 d10badfc0b7d013eafc192caefc18b5e libgnomecanvasmm-2.0.1.ebuild 741
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 374e73c2ee23f5d948e866b203faaf63 files/digest-libgnomecanvasmm-2.0.0 74
 MD5 503f4b94ee2876c2eb123fb633749c34 files/digest-libgnomecanvasmm-2.0.1 74
