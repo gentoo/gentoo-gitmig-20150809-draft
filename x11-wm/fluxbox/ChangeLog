@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.20 2002/08/04 22:08:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.21 2002/08/15 16:33:01 karltk Exp $
 
 *fluxbox-0.1.10 (14 Jul 2002)
   04 Aug 2002; Spider <spider@gentoo.org> fluxbox-0.1.10.ebuild :
@@ -69,8 +69,7 @@
 
 *fluxbox-0.1.8 (1.9 Apr 2002)
 
-  19 Apr 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.8.ebuild,
-  files/digest-fluxbox-0.1.8 :
+  19 Apr 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.8.ebuild, files/digest-fluxbox-0.1.8 :
 
   Version bump to newest stable
 
@@ -100,7 +99,7 @@
   applications (which are completely compatible with fluxbox) to run without
   having to emerge blackbox as well.
 
-*fluxbox-0.1.7-r1 (9 Mar 2002)
+*fluxbox-0.1.7-r2 (9 Mar 2002)
 
   9 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> fluxbox-0.1.7-r2.ebuild :
 
@@ -112,7 +111,8 @@
 
   9 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> fluxbox-0.1.7-r1.ebuild :
 
-  Added proper GNOME dependencies (#943).
+  Added proper GNOME dependencies (#943). Thanks to Daniel Mettler 
+  <mettlerd@icu.unizh.ch>.
 
 *fluxbox-0.1.7 (2 Mar 2002)
 
