@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.34 2004/11/25 15:55:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.35 2004/11/29 01:57:25 geoman Exp $
+
+  28 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
+  +files/nss-3.9.2-mips64.patch, nss-3.9.2-r2.ebuild:
+  added patch for proper detection of mips64 systems
 
 *nss-3.9.2-r2 (25 Nov 2004)
 

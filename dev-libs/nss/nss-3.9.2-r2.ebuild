@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2-r2.ebuild,v 1.1 2004/11/25 15:55:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.9.2-r2.ebuild,v 1.2 2004/11/29 01:57:25 geoman Exp $
 
 inherit eutils
 
@@ -51,6 +51,7 @@ src_unpack() {
 		-i ${S}/mozilla/security/coreconf/source.mk
 
 	cd ${S}; epatch ${FILESDIR}/${PN}-${PV}-ppc64.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-${PV}-mips64.patch
 }
 
 src_compile() {
