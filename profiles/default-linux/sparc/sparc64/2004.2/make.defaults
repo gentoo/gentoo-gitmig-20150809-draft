@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/make.defaults,v 1.10 2005/01/12 23:08:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.2/make.defaults,v 1.11 2005/01/20 17:27:33 fmccor Exp $
 
 # Compiler flags
 CFLAGS="-O2 -pipe"
@@ -10,6 +10,6 @@ CXXFLAGS=${CFLAGS}
 FEATURES="sandbox ccache"
 
 # USE settings
-USE="arts avi berkdb bitmap-fonts crypt cups encode esd fortran f77 fbcon font-server foomaticdb gdbm gif gtk gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline slang sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib gtk2"
+USE="arts avi berkdb bitmap-fonts crypt cups dlloader encode esd fortran f77 fbcon font-server foomaticdb gdbm gif gtk gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline slang sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib gtk2"
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses gtk2"
