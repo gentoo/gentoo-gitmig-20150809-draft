@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.4.ebuild,v 1.3 2004/11/29 20:07:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.5.ebuild,v 1.1 2004/11/29 20:07:40 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/dmidecode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ia64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
@@ -23,6 +23,7 @@ src_unpack() {
 	sed -i \
 		-e "s:-O2:${CFLAGS}${ARCHFLAGS}:" \
 		-e "s:man/man8:share/man/man8:g" \
+		-e "s:/usr/local:${D}/usr:" \
 		Makefile || die "manpage sed failed"
 }
 
@@ -32,6 +33,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/sbin /usr/share/man/man8
-	make PREFIX=${D}/usr install || die "make install failed"
+	make install || die "make install failed"
 	dodoc README AUTHORS CHANGELOG
 }
