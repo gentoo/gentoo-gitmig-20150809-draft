@@ -2,7 +2,7 @@ MD5 7283c56dd4492e77d4cb57fcdbfc5073 mplayer-1.0_pre2.ebuild 11644
 MD5 f2f52852127fe37ed19906370cb75c47 mplayer-1.0_pre3-r1.ebuild 11930
 MD5 39d469abd40c45483fbd0065b3208a40 mplayer-1.0_pre3.ebuild 11743
 MD5 2d23c2a645687d95406c6a7227ab67a3 mplayer-1.0_pre1-r1.ebuild 11452
-MD5 740c77fdab11e155871e8f516cff65d0 ChangeLog 18378
+MD5 e1daa0eba2887b38100b276bc410907c ChangeLog 18379
 MD5 b07c440358433d6b5797469720ab9d44 mplayer-0.92.ebuild 11775
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 059e03d1d2c965b04a5e53ed850de64a files/mplayer-0.90_rc4-gtk2.patch 6183
