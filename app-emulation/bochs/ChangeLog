@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/darcnes
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.1 2002/02/13 19:28:34 danarmak Exp $
+
+*bochs-1.3 (12 Feb 2002)
+
+  12 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  Initial version.
