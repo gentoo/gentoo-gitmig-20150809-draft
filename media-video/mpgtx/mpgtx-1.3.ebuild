@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.9 2004/09/29 22:29:36 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.10 2004/10/18 21:28:23 kugelfang Exp $
 
 inherit eutils gcc
 
@@ -8,7 +8,7 @@ DESCRIPTION="mpgtx a command line MPEG audio/video/system file toolbox"
 SRC_URI="mirror://sourceforge/mpgtx/${P}.tgz"
 HOMEPAGE="http://mpgtx.sourceforge.net/"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
