@@ -1,6 +1,9 @@
-# ChangeLog for net-www/horde-mnemo
+# ChangeLog for www-apps/horde-mnemo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.2 2004/08/15 16:31:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.3 2004/09/05 08:40:27 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> horde-mnemo-1.1.1.ebuild,
   horde-mnemo-1.1.2.ebuild:

@@ -1,6 +1,9 @@
-# ChangeLog for net-www/horde-turba
+# ChangeLog for www-apps/horde-turba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.2 2004/08/15 16:40:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.3 2004/09/05 08:44:07 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> horde-turba-1.2.2.ebuild:
   Deps updated to reflect net-www split

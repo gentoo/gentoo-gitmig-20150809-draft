@@ -1,6 +1,9 @@
-# ChangeLog for net-misc/nut
+# ChangeLog for www-apps/nut
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/ChangeLog,v 1.3 2004/09/03 17:17:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/ChangeLog,v 1.4 2004/09/05 08:51:28 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> nut-2.0.0.ebuild:
   Masked nut-2.0.0.ebuild stable for ppc

@@ -1,6 +1,9 @@
-# ChangeLog for net-www/browser-config
+# ChangeLog for www-apps/browser-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/browser-config/ChangeLog,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/browser-config/ChangeLog,v 1.3 2004/09/05 08:30:39 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   browser-config-1.0.ebuild, browser-config-1.1.ebuild:

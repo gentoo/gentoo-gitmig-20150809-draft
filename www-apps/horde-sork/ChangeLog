@@ -1,6 +1,9 @@
-# ChangeLog for net-www/horde-sork
+# ChangeLog for www-apps/horde-sork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-sork/ChangeLog,v 1.2 2004/08/15 16:38:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-sork/ChangeLog,v 1.3 2004/09/05 08:43:26 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> horde-sork-0.ebuild:
   Deps updated to reflect net-www split

@@ -1,6 +1,9 @@
-# ChangeLog for net-www/horde-forwards
+# ChangeLog for www-apps/horde-forwards
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-forwards/ChangeLog,v 1.2 2004/08/15 16:27:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-forwards/ChangeLog,v 1.3 2004/09/05 08:38:19 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> horde-forwards-2.2.ebuild:
   Deps updated to reflect net-www split
