@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.81 2003/09/27 22:31:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.82 2003/09/27 22:50:27 solar Exp $
+
+*mplayer-1.0_pre1-r1 (27 Sep 2003)
+
+  27 Sep 2003; <solar@gentoo.org> mplayer-1.0_pre1-r1.ebuild,
+  files/vuln01-fix.diff:
+  security fix for devel branch
 
 *mplayer-0.92 (28 Sep 2003)
 
