@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/bonobo-activation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.27 2003/08/12 15:28:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.28 2003/08/24 09:56:02 gmsoft Exp $
 
 *bonobo-activation-2.2.4 (12 Aug 2003)
 
@@ -9,6 +9,9 @@
   bonobo-activation-2.2.3 bumped to stable on x86, new version 2.2.4 added
 
 *bonobo-activation-2.2.3 (12 Jul 2003)
+
+  24 Aug 2003; Guy Martin <gmsoft@gentoo.org> bonobo-activation-2.2.3.ebuild :
+  Marked stable on hppa.
 
   12 Jul 2003; foser <foser@gentoo.org> bonobo-activation-2.2.3.ebuild :
   New version
