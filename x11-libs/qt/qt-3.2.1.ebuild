@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.1 2003/08/28 03:20:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.2 2003/08/28 03:26:10 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -35,6 +35,7 @@ export QTDIR=${S}
 src_unpack() {
 	unpack ${A}
 
+	export QTDIR=${S}
 	cd ${S}
 	
 	cp configure configure.orig
@@ -74,6 +75,8 @@ _EOF_
 }
 
 src_compile() {
+	export QTDIR=${S}
+
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 
@@ -104,6 +107,8 @@ src_compile() {
 }
 
 src_install() {
+	export QTDIR=${S}
+
 	# binaries
 	into $QTBASE
 	dobin bin/*
