@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# By James Stumme (zeurx@hotmail.com)
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Usermin"
+	/usr/sbin/usermin start --pidfile /var/run/usermin.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Usermin"
+	/usr/sbin/usermin stop --pidfile /var/run/usermin.pid
+	eend $?
+}
