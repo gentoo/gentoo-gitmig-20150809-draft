@@ -39,12 +39,6 @@
 # Masking for prelink testing.
 >sys-apps/portage-2.0.45-r6
 
-# <hannes@gentoo.org> (15 Dec 2002)
-# masking arts-1.0.4-r1, because it may be the solution to bug #10338,
-# but it's not sure.
-=kde-base/arts-1.0.4-r1
->=kde-base/arts-1.1.0_rc5
-
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
@@ -66,6 +60,7 @@ app-text/psgml
 
 # <danarmak@gentoo.org> (08 Dec 2002)
 # kde 3.1 rc5: masked permanently
+>=kde-base/arts-1.1.0_rc5
 ~kde-base/arts-1.1.0_rc5
 ~kde-base/kde-3.1_rc5
 ~kde-base/kdeaddons-3.1_rc5
