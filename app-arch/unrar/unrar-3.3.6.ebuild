@@ -1,25 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.5 2004/05/12 20:14:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.3.6.ebuild,v 1.6 2004/06/10 05:52:32 mr_bones_ Exp $
 
-IUSE=""
 MY_PN=${PN}src
-S=${WORKDIR}/unrar
 DESCRIPTION="Uncompress rar files"
-SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 HOMEPAGE="http://www.rarlab.com/rar_add.htm"
+SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="unRAR"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc alpha hppa amd64"
+IUSE=""
 
 DEPEND=""
 
+S="${WORKDIR}/unrar"
+
 src_compile() {
-	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" || die
+	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" || die "emake failed"
 }
 
 src_install() {
-	dobin unrar
-	dodoc readme.txt license.txt
+	dobin unrar || die "dobin failed"
+	dodoc readme.txt
 }
