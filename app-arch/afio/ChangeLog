@@ -2,7 +2,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
 *afio-2.4.7 (26 May 2002)
-	
+
+        14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+	Added ppc keyword
+
 	26 May 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog
 	afio-2.4.7.ebuild, files/digest-afio-2.4.7
 
