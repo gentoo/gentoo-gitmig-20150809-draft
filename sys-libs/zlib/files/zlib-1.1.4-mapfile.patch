@@ -1,0 +1,79 @@
+--- configure.orig	2003-11-04 20:00:19.192057400 -0800
++++ configure	2003-11-04 20:00:22.524327784 -0800
+@@ -72,7 +72,8 @@
+   SFLAGS=${CFLAGS-"-fPIC -O3"}
+   CFLAGS="$cflags"
+   case `(uname -s || echo unknown) 2>/dev/null` in
+-  Linux | linux) LDSHARED=${LDSHARED-"gcc -shared -Wl,-soname,libz.so.1"};;
++  Linux | linux) LDSHARED=${LDSHARED-"gcc -shared -Wl,-soname,libz.so.1"}
++		 MAPFILE=${MAPFILE-"-Wl,--version-script,mapfile"};;
+   *)             LDSHARED=${LDSHARED-"gcc -shared"};;
+   esac
+ else
+@@ -104,7 +105,8 @@
+ 	     LDSHARED=${LDSHARED-"cc -dy -KPIC -G"};;
+   SunOS\ 5*) SFLAGS=${CFLAGS-"-fast -xcg89 -KPIC -R."}
+              CFLAGS=${CFLAGS-"-fast -xcg89"}
+-	     LDSHARED=${LDSHARED-"cc -G"};;
++	     MAPFILE=${MAPFILE-"-M mapfile"}
++	     LDSHARED=${LDSHARED-"cc -G"};;
+   SunOS\ 4*) SFLAGS=${CFLAGS-"-O2 -PIC"}
+ 	     CFLAGS=${CFLAGS-"-O2"}
+ 	     LDSHARED=${LDSHARED-"ld"};;
+@@ -138,6 +140,7 @@
+     echo 'No shared library suppport; try without defining CC and CFLAGS'
+     shared=0;
+   fi
++  LDSHARED="${LDSHARED} ${MAPFILE}"
+ fi
+ if test $shared -eq 0; then
+   LDSHARED="$CC"
+--- /dev/null	2003-10-15 22:31:52.000000000 -0700
++++ mapfile	2003-11-04 19:44:59.742269984 -0800
+@@ -0,0 +1,46 @@
++{
++	global:
++		zlibVersion ;
++		deflateInit_ ;
++		deflateInit2_ ;
++		deflate ;
++		deflateSetDictionary ;
++		deflateCopy ;
++		deflateReset ;
++		deflateParams ;
++		deflateEnd ;
++		inflateInit_ ;
++		inflateInit2_ ;
++		inflate ;
++		inflateSetDictionary ;
++		inflateSync ;
++		inflateReset ;
++		inflateEnd ;
++		compress ;
++		compress2 ;
++		uncompress ;
++		gzopen ;
++		gzdopen ;
++		gzsetparams ;
++		gzread ;
++		gzwrite ;
++		gzprintf ;
++		gzputs ;
++		gzgets ;
++		gzputc ;
++		gzgetc ;
++		gzflush ;
++		gzseek ;
++		gzrewind ;
++		gztell ;
++		gzeof ;
++		gzclose ;
++		gzerror ;
++		adler32 ;
++		crc32 ;
++		zError ;
++		inflateSyncPoint ;
++		get_crc_table ;
++	local:
++		*;
++};
