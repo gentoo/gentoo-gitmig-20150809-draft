@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.11-r1.ebuild,v 1.2 2003/08/24 20:38:22 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.11-r1.ebuild,v 1.3 2003/09/07 03:11:16 agriffis Exp $
 
 DESCRIPTION="A multipurpose documentation format for Ruby"
 HOMEPAGE="http://www2.pos.to/~tosh/ruby/rdtool/en/index.html"
@@ -9,11 +9,12 @@ LICENSE="Ruby GPL-1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-lang/ruby-1.6.4
-	dev-ruby/amstd
-	dev-ruby/optparse
+DEPEND=">=dev-lang/ruby-1.8.0
 	>=dev-ruby/racc-1.3
-	dev-ruby/strscan"
+	dev-ruby/amstd"
+	# These are part of ruby as of 1.8.0 (06 Sep 2003 agriffis)
+	# dev-ruby/optparse
+	# dev-ruby/strscan
 
 src_compile() {
 	ruby rdtoolconf.rb || die
