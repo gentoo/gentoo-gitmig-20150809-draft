@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.20 2004/12/20 03:33:32 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.21 2005/03/14 19:45:13 bass Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -13,6 +13,7 @@ ECLASS=ebook
 INHERITED="$INHERITED $ECLASS"
 HOMEPAGE="http://lidn.sourceforge.net"
 
+IUSE="kde"
 SLOT="0"
 LICENSE="OPL"
 KEYWORDS="x86 ppc amd64"
@@ -65,7 +66,8 @@ if [ "${DEVHELPROOT}" = "" ]; then
 	DEVHELPROOT="usr/share/devhelp"
 fi
 if [ "${RDEPEND}" = "" ]; then
-	RDEPEND=">=dev-util/devhelp-0.6"
+	RDEPEND="kde? ( dev-uitl/kdevelop )
+	       !kde? ( >=dev-util/devhelp-0.6 )"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
 	DESCRIPTION="${P} ebook based on $ECLASS eclass"
