@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.4.ebuild,v 1.1 2004/01/10 17:16:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.2.4.ebuild,v 1.2 2004/01/10 17:44:21 usata Exp $
 
 IUSE="gtk nls debug"
 
@@ -23,6 +23,14 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
 
 # for debugging use
 use debug && RESTRICT="nostrip"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
+}
 
 src_compile() {
 
