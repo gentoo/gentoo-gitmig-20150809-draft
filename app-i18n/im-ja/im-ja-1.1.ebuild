@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.1.ebuild,v 1.3 2004/06/24 21:46:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.1.ebuild,v 1.4 2004/06/27 18:24:22 usata Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ppc ~alpha"
+KEYWORDS="x86 ~sparc ppc alpha"
 SLOT="0"
 
 DOCS="AUTHORS README ChangeLog TODO"

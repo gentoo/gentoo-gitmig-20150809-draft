@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.25 2004/06/24 21:46:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.26 2004/06/27 18:24:22 usata Exp $
+
+  28 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  im-ja-1.1.ebuild:
+  Stable on alpha. Remove yakina from maintainer's position as he retired.
 
   24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.1.ebuild:
   Stable on x86 and ppc
