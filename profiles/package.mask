@@ -22,7 +22,8 @@
 >=dev-util/kdevelop-2.1.2
 
 #testing only (drobbins, 25 Jun 2002)
-=sys-apps/portage-2.0.8
+#portage 2.0.8 is fast and apparently the most stable Portage 2.x release so far, unmasking:
+#=sys-apps/portage-2.0.8
 =sys-apps/portage-2.0.6
 
 #masked for testing (drobbins, 19 Jun 2002)
