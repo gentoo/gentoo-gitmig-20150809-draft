@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.30 2004/04/26 03:11:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.31 2004/06/02 02:38:07 lv Exp $
+
+  01 Jun 2004; Travis Tilley <lv@gentoo.org> libdv-0.102.ebuild:
+  stable on amd64
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libdv-0.101.ebuild,
   libdv-0.102.ebuild, libdv-0.99-r1.ebuild:
