@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.1 2004/10/11 06:44:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.2 2004/12/28 19:58:15 ribosome Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="doc"
 
 RDEPEND="virtual/libc
-	dev-libs/buddy
+	sci-libs/buddy
 	dev-libs/libtecla
 	>=dev-libs/gmp-4.1.3
 	>=sys-devel/gcc-3.4.3"
