@@ -6,9 +6,8 @@ inherit kde-base || die
 
 need-kde 3.0.1
 
-S="${WORKDIR}/kfilereplace-0.7.0-pre2"
 DESCRIPTION="A KDE 3.x multifile replace utility"
-SRC_URI="mirror://sourceforge/kfilereplace/kfilereplace-0.7.0-pre2.tar.bz2"
+SRC_URI="mirror://sourceforge/kfilereplace/${P}.tar.bz2"
 HOMEPAGE="http://kfilereplace.sourceforge.net"
 LICENSE="GPL-2"
 
