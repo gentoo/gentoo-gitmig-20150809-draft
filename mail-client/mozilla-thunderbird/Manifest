@@ -1,25 +1,25 @@
-MD5 5dd0418c191830dfcfd74400e3f9608c metadata.xml 182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c58ca518cdc7c51740e01bdd12468e68 ChangeLog 1849
-MD5 b66149facdffab872a673cc1079aa02d mozilla-thunderbird-0.7.1-r1.ebuild 8930
-MD5 ad5b9545e85d2ac34b27155ec91c49cf mozilla-thunderbird-0.6-r1.ebuild 8160
-MD5 a05abceb3c526fe3743a6d5170a71637 mozilla-thunderbird-0.8.ebuild 5017
-MD5 99688371eccbeb9b11de44f8a6cc73ec mozilla-thunderbird-0.7.ebuild 9366
-MD5 c74114232fbdae584d048d8551b07775 mozilla-thunderbird-0.6-r2.ebuild 8548
+MD5 5dd0418c191830dfcfd74400e3f9608c metadata.xml 182
 MD5 be10069a89669d1f424f9279479aa597 mozilla-thunderbird-0.7.3-r1.ebuild 4880
-MD5 8087d227cd6779d986a33da306258c5a mozilla-thunderbird-0.7.1.ebuild 8924
+MD5 a05abceb3c526fe3743a6d5170a71637 mozilla-thunderbird-0.8.ebuild 5017
 MD5 1adb062c6ed356e75ec53d1e35c9d350 files/MozillaThunderbird 302
-MD5 b8e2d94130909e157cb9797c7bad7807 files/digest-mozilla-thunderbird-0.7.1-r1 207
 MD5 63e247da983ffc7766b795be757e00e6 files/digest-mozilla-thunderbird-0.7.3-r1 207
-MD5 0f0c19fd0806629d146784983456665e files/digest-mozilla-thunderbird-0.6-r1 205
-MD5 01baaec335e2ea398d435042e5f32f88 files/digest-mozilla-thunderbird-0.7 208
 MD5 2f72a8b70f733c46b922c38c3d9afb46 files/ipc-1.0.6-nsPipeChannel.patch 614
-MD5 9c81a4440289d9f3a44b142b9217d845 files/digest-mozilla-thunderbird-0.8 205
+MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
 MD5 1adb062c6ed356e75ec53d1e35c9d350 files/thunderbird 302
 MD5 f014f20584305e86670ed50e990745db files/thunderbird-0.7-init.tar.bz2 3345
-MD5 0f0c19fd0806629d146784983456665e files/digest-mozilla-thunderbird-0.6-r2 205
-MD5 6efbd38338dcc7e43d21b85ae1990422 files/digest-mozilla-thunderbird-0.7.1 207
-MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+MD5 9c81a4440289d9f3a44b142b9217d845 files/digest-mozilla-thunderbird-0.8 205
 MD5 e30291e992d71bccac5937cca9696da0 files/enigmail/Makefile-enigmail 1560
 MD5 68a7617a6d3f0f37904cd6aaa90fe1ba files/enigmail/Makefile-ipc 1596
 MD5 1c810870d0c92c730341e491c310e2d4 files/icon/mozillathunderbird.desktop 184
 MD5 04115f0e204444eac76a092a63c89027 files/icon/thunderbird-icon.png 6499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcvzBI1lqEGTUzyQRArAfAJ96h4WRdfy1TOl3ovIGcrrDMtsaKQCfceIZ
+OCj1yH0qynBNZSR9mcr5EWc=
+=eY7G
+-----END PGP SIGNATURE-----

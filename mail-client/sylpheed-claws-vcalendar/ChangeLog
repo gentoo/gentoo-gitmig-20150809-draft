@@ -1,0 +1,11 @@
+# ChangeLog for mail-client/sylpheed-claws-vcalendar
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.1 2004/10/17 23:10:46 genone Exp $
+
+*sylpheed-claws-vcalendar-0.4 (18 Oct 2004)
+
+  18 Oct 2004; <genone@gentoo.org> +metadata.xml,
+  +files/vcalendar-0.4-ical.patch, +sylpheed-claws-vcalendar-0.4.ebuild:
+  initial commit, this package was split from the main sylpheed-claws package
+  for easier maintenance.
+
