@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.75 2004/10/13 20:37:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.76 2004/10/15 21:03:50 swegener Exp $
+
+  15 Oct 2004; Sven Wegener <swegener@gentoo.org> screen-4.0.2.ebuild:
+  Fixed the nethack USE flag which was always activated. Thanks to Horst
+  Schirmeier <gentoo@schirmeier.com> in bug #67127. Modified to use non-lazy
+  bindings.
 
   13 Oct 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Added to the shell-tools herd.

@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.19 2004/09/04 04:15:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.20 2004/10/15 21:03:50 swegener Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
 HOMEPAGE="http://www.gnu.org/software/screen/"
-#SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 SRC_URI="mirror://gnu/screen/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -56,8 +55,10 @@ src_compile() {
 	# check config.h for other settings such as the
 	# max-number of windows allowed by screen.
 	append-flags "-DPTYMODE=0620 -DPTYGROUP=5"
+	append-ldflags -Wl,-z,now
+
 	use pam && append-flags "-DUSE_PAM"
-	use nethack && append-flags "-DNETHACK"
+	use nethack || append-flags "-DNONETHACK"
 
 	econf \
 		$(use_enable pam) \
