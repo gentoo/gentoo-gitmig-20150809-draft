@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.3.ebuild,v 1.1 2003/10/22 19:22:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.5.ebuild,v 1.1 2003/12/05 08:59:48 usata Exp $
 
 IUSE="arts esd gnome nls"
 

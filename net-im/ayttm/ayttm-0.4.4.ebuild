@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.4.ebuild,v 1.1 2003/10/28 11:37:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.4.ebuild,v 1.2 2003/12/05 08:59:48 usata Exp $
 
 IUSE="arts esd gnome nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ayttm.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/audiofile
