@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.82 2005/01/14 00:43:45 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.83 2005/01/14 11:19:05 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -740,6 +740,7 @@ detect_version() {
 	then
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
 		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
+		[ "${PN/-*/}" == "vserver" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
