@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.19 2004/08/25 00:04:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.20 2004/11/04 01:18:27 wolf31o2 Exp $
+
+*cisco-vpnclient-3des-4.6.00.0045 (03 Nov 2004)
+
+  03 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.0.1a-r1.ebuild,
+  cisco-vpnclient-3des-4.0.3b-r4.ebuild, cisco-vpnclient-3des-4.0.5.ebuild,
+  +cisco-vpnclient-3des-4.6.00.0045.ebuild:
+  Version bumped to latest version and updated all ebuilds to use the
+  kernel-mod eclass rather than kmod eclass. This should resolve bugs #68738,
+  #68449, and #69870.
 
   24 Aug 2004; Mike Frysinger <vapier@gentoo.org> files/vpnclient.rc,
   cisco-vpnclient-3des-4.0.5.ebuild:

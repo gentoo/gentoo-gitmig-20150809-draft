@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.7 2004/07/01 20:54:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.8 2004/11/04 01:18:27 wolf31o2 Exp $
 
-inherit eutils
+inherit eutils kernel-mod
 
 MY_PV=${PV/a/.A-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -34,7 +34,9 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26-gentoo.patch
+	if kernel-mod_is_2_6_kernel; then
+		epatch ${FILESDIR}/${PV}-linux26-gentoo.patch
+	fi
 
 	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
 	# Jesse Becker (jbecker@speakeasy.net)
@@ -43,7 +45,7 @@ src_unpack() {
 }
 
 src_compile () {
-	check_KV
+	unset ARCH
 	sh ./driver_build.sh /lib/modules/${KV}/build
 	[ ! -f ./cisco_ipsec ] && die "Failed to make module 'cisco_ipsec'"
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient_init
@@ -74,3 +76,4 @@ src_install() {
 pkg_postinst() {
 	einfo  "You must run \`/etc/init.d/vpnclient start\` before using the client."
 }
+

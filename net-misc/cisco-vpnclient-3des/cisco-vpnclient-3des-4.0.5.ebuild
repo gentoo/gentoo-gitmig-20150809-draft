@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5.ebuild,v 1.3 2004/08/25 00:04:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5.ebuild,v 1.4 2004/11/04 01:18:27 wolf31o2 Exp $
 
-inherit eutils kmod
+inherit eutils kernel-mod
 
 MY_PV=${PV}.Rel-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -11,7 +11,7 @@ SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
 
 LICENSE="cisco-vpn-client"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="fetch"
 
@@ -39,10 +39,7 @@ src_unpack() {
 }
 
 src_compile () {
-	check_KV
-	if is_kernel 2 5 || is_kernel 2 6 ; then
-		unset ARCH
-	fi
+	unset ARCH
 	sh ./driver_build.sh /lib/modules/${KV}/build
 	[ ! -f ./cisco_ipsec -a ! -f ./cisco_ipsec.ko ] \
 		&& die "Failed to make module 'cisco_ipsec'"
@@ -62,7 +59,7 @@ src_install() {
 	dobin ipseclog cisco_cert_mgr
 
 	insinto /lib/modules/${KV}/CiscoVPN
-	if is_kernel 2 5 || is_kernel 2 6 ; then
+	if kernel-mod_is_2_6_kernel ; then
 		doins cisco_ipsec.ko
 	else
 		doins cisco_ipsec
