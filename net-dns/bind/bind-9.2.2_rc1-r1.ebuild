@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r1.ebuild,v 1.2 2002/08/20 04:02:46 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r1.ebuild,v 1.3 2002/09/11 04:04:59 rphillips Exp $
 
 MY_P=${P/_}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="BIND - Name Server"
+DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
 
@@ -13,12 +13,22 @@ LICENSE="as-is"
 SLOT="0"
 
 DEPEND="sys-apps/groff
-	ssl? ( >=dev-libs/openssl-0.9.6e )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${MY_P}.tar.gz && cd ${S}
+
+	# Adjusting PATHs in manpages
+	for i in `echo bin/{named/named.8,check/named-checkconf.8,nsupdate/nsupdate.8,rndc/rndc.8}`; do
+	sed -e 's:/etc/named.conf:/etc/bind/named.conf:g' -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+	-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' < ${i} > ${i}.new
+	mv --force ${i}.new ${i} ; done
+}
+
 src_compile() {
-	local myconf
+	local myconf=""
 
 	use ssl && myconf="${myconf} --with-openssl"
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
@@ -27,25 +37,13 @@ src_compile() {
 		--localstatedir=/var \
 		--enable-threads \
 		--with-libtool \
-		${myconf} || die "failed to configure bind"
+		${myconf}
 
 	make || die "failed to compile bind"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "failed to install bind"
-	
-	for x in `grep -l -d recurse -e '/etc/named.conf' -e '/etc/rndc.conf' -e '/etc/rndc.key' ${D}/usr/share/man`; do
-		cp ${x} ${x}.orig
-		sed -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
-			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
-			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' ${x}.orig > ${x}
-		rm ${x}.orig
-	done
-	
-	find ${D}/usr/share/man ! -name "*[1-8]gz" -type f -exec gzip -f "{}" \;
-	insinto /usr/share/man/man5 ; doins ${FILESDIR}/named.conf.5.gz
-	doman ${FILESDIR}/nslookup.8
+	einstall
 	
 	dodoc CHANGES COPYRIGHT FAQ README
 
@@ -62,7 +60,7 @@ src_install() {
 	cd ${D}/usr/share/doc/${PF}
 	tar pjxf ${FILESDIR}/dyndns-samples.tbz2
 
-	dodir /etc/bind /var/bind /var/bind/pri /var/bind/sec
+	dodir /etc/bind /var/bind/{pri,sec}
 
 	insinto /etc/bind ; doins ${FILESDIR}/named.conf
 	# ftp://ftp.rs.internic.net/domain/named.ca:
@@ -72,9 +70,15 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc6 named
 	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
 	
-	dosym /var/bind/named.ca /var/bind/root.cache 
-	dosym /var/bind/pri /etc/bind/pri
-	dosym /var/bind/sec	/etc/bind/sec
+	dosym ../../var/bind/named.ca /var/bind/root.cache 
+	dosym ../../var/bind/pri /etc/bind/pri
+	dosym ../../var/bind/sec /etc/bind/sec
+}
+
+pkg_preinst() {
+	# Let's get rid of those tools and their manpages since they're provided by bind-tools
+	rm -f ${D}/usr/share/man/man1/{dig.1.gz,host.1.gz}
+	rm -f ${D}/usr/bin/{dig,host,nslookup}
 }
 
 pkg_postinst() {
@@ -87,40 +91,54 @@ pkg_postinst() {
 	chown -R named:named ${ROOT}/var/bind
 
 	echo
-	einfo "Bind-9.2.2_rc1 version and higher now include chroot support."
-	einfo "If you would like to run bind in chroot, run:"
+	einfo "You can edit /etc/conf.d/named to customize named settings"
+	echo
+	einfo "The BIND ebuild now includes chroot support."
+	einfo "If you like to run bind in chroot AND this is a new install OR"
+	einfo "your bind doesn't already run in chroot, simply run:"
 	einfo "\`ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\`"
+	einfo "Before running the above command you might want to change the chroot"
+	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
 	echo
 }
 
 pkg_config() {
-	# chroot concept contributed by j2ee (kevin@aptbasilicata.it)
 
-	mkdir -p /chroot/{dns/{dev,etc,var/run/named}}
-	chown -R named:named /chroot/dns/var/run/named
-	cp -R /etc/bind /chroot/dns/etc/
-	cp /etc/localtime /chroot/dns/etc/localtime
-	chown named:named /chroot/dns/etc/bind/rndc.key
-	chgrp named	/chroot/dns/etc/bind/named.conf
-	cp -R /var/bind /chroot/dns/var/
-	chown -R named:named /chroot/dns/var/bind/{pri,sec}
-	mknod /chroot/dns/dev/zero c 1 5
-	mknod /chroot/dns/dev/random c 1 8
-	chmod 666 /chroot/dns/dev/{random,zero}
+	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/named 2>/dev/null`
 
-	chmod 700 /{chroot,chroot/dns}
-	chown named:named /chroot/dns
+	if [ -z "$CHROOT" -a ! -d "/chroot/dns" ]; then
+		CHROOT="/chroot/dns"
+	elif [ -d ${CHROOT} ]; then 
+		eerror; eerror "${CHROOT:-/chroot/dns} already exists. Quitting."; eerror; EXISTS="yes"
+	fi
 
-	cp /etc/conf.d/named /etc/conf.d/named.orig
-	sed -e 's:^#CHROOT="/chroot/dns"$:CHROOT="/chroot/dns":' \
-		/etc/conf.d/named.orig > /etc/conf.d/named
-	rm -f /etc/conf.d/named.orig
+	if [ ! "$EXISTS" = yes ]; then
+		echo ; einfon "Setting up the chroot directory..."
+		mkdir -m 700 -p ${CHROOT}
+		mkdir -p ${CHROOT}/{dev,etc,var/run/named}
+		chown -R named:named ${CHROOT}/var/run/named
+		cp -R /etc/bind ${CHROOT}/etc/
+		cp /etc/localtime ${CHROOT}/etc/localtime
+		chown named:named ${CHROOT}/etc/bind/rndc.key
+		cp -R /var/bind ${CHROOT}/var/
+		chown -R named:named ${CHROOT}/var/
+		mknod ${CHROOT}/dev/zero c 1 5
+		mknod ${CHROOT}/dev/random c 1 8
+		chmod 666 ${CHROOT}/dev/{random,zero}
+		chown named:named ${CHROOT}
 
-	echo 
-	einfo "Check your config files in /chroot/dns"
-	einfo "Add the following to your root .bashrc or .bash_profile: "
-	einfo "   alias rndc='rndc -k /chroot/dns/etc/bind/rndc.key'"
-	einfo "Then do the following: "
-	einfo "   source /root/.bashrc or .bash_profile"
-	echo
+		grep -q "^#[[:blank:]]\?CHROOT" /etc/conf.d/named ; RETVAL=$?
+		if [ $RETVAL = 0 ]; then
+			sed 's/^# \?\(CHROOT.*\)$/\1/' /etc/conf.d/named > /etc/conf.d/named.orig 2>/dev/null
+			mv --force /etc/conf.d/named.orig /etc/conf.d/named
+		fi
+
+		sleep 1; echo " Done."; sleep 1
+		echo
+		einfo "Add the following to your root .bashrc or .bash_profile: "
+		einfo "   alias rndc='rndc -k ${CHROOT}/etc/bind/rndc.key'"
+		einfo "Then do the following: "
+		einfo "   source /root/.bashrc or .bash_profile"
+		echo
+	fi
 }
