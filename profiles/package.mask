@@ -217,10 +217,6 @@ media-sound/libsidutils
 # maxima depending on cmucl and not cmucl-bin needs testing
 =app-sci/maxima-5.9.0-r2
 
-# <lanius@gentoo.org> (3. Oct 2003)
-# Beta release, not completly working
-=net-dialup/ppp-2.4.2_beta3
-
 # <agenkin@gentoo.org> (02 Oct 2003)
 # deprecated.  now comes as part of app-cdf/cdrtools
 # bug #18539
