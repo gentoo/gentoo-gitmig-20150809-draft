@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.8 2004/09/02 11:27:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.9 2004/09/07 05:04:14 leonardop Exp $
+
+*gnome-system-tools-0.92.0 (06 Sep 2004)
+
+  06 Sep 2004; <leonardop@gentoo.org> gnome-system-tools-0.92.0.ebuild:
+  New release. Resolves bug #61086.
+
+  06 Sep 2004; <leonardop@gentoo.org> gnome-system-tools-0.34.0-r1.ebuild:
+  Marked stable on x86.
 
   02 Sep 2004; Travis Tilley <lv@gentoo.org> gnome-system-tools-0.33.0.ebuild:
   stable on amd64

@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-0.34.0.ebuild,v 1.3 2004/08/19 19:40:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-0.92.0.ebuild,v 1.1 2004/09/07 05:04:14 leonardop Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 RDEPEND="net-misc/openssh
@@ -26,3 +26,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
 USE_DESTDIR="1"
+
+# --enable-disks is not supported for Gentoo at the moment.
+G2CONF="${G2CONF} --enable-boot --enable-services"
