@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.5 2004/06/25 02:08:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.6 2004/07/27 23:44:11 robbat2 Exp $
 
 DESCRIPTION="Tcl/C++ interface library"
 SF_PN="otcl-tclcl"
@@ -16,9 +16,14 @@ DEPEND=">=dev-lang/tcl-8.3.2
 		>=dev-tcltk/otcl-1.0.8"
 
 src_compile() {
-	econf || die
-	sed 's|$(LIBRARY_TCL)/http/http.tcl|$(LIBRARY_TCL)/http2.4/http.tcl|g' -i Makefile
-	emake || die
+	local tclv tkv
+	tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
+	tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
+	local myconf="--with-tcl-ver=${tclv} --with-tk-ver=${tkv}"
+	econf ${myconf} || die "econf failed"
+	sed 's|$(LIBRARY_TCL)/http.*/http.tcl|$(LIBRARY_TCL)/http2.4/http.tcl|g' \
+		-i Makefile || die "sed failed"
+	emake || die "emake failed"
 }
 
 src_install() {
