@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.2 2003/05/12 18:39:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r7.ebuild,v 1.3 2003/05/12 18:40:11 robbat2 Exp $
 
 IUSE=""
 
@@ -21,7 +21,6 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	sys-apps/miscfiles"
 
 src_unpack() {
-
  	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-redhat.patch
