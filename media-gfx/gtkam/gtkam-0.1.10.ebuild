@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.6 2003/11/09 22:01:47 obz Exp $
 
 IUSE="nls gnome jpeg"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A frontend for gPhoto 2"
-HOMEPAGE="http://gphoto.org/gphoto2/gtk.html"
+HOMEPAGE="http://gphoto.org/proj/gtkam"
 SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 SLOT="0"
