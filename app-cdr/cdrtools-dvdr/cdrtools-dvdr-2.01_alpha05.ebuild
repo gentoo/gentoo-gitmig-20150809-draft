@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha05.ebuild,v 1.2 2003/06/29 16:01:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools-dvdr/cdrtools-dvdr-2.01_alpha05.ebuild,v 1.3 2003/09/04 00:44:10 pylon Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 	# Add support for 2.5 kernels
 	# <azarah@gentoo.org> (05 Feb 2003)
 	epatch ${FILESDIR}/${PN/-dvdr}-2.01-kernel25-support.patch || die
-	
+
 	cd ${S}/DEFAULTS
 	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
 	mv Defaults.linux.hacked Defaults.linux
