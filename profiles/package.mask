@@ -44,7 +44,7 @@ net-misc/djbdns
 
 # add Glide3 support to xfree .. need some testing first
 # azarah (28/01/2002)
->=x11-base/xfree-4.2.0-r6
+>=x11-base/xfree-4.2.0-r7
 
 # earlier versions are exploitable
 <sys-apps/at-3.1.8-r7
