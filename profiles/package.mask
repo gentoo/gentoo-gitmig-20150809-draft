@@ -145,12 +145,6 @@ app-office/ical
 # initial ebuild masked for testing
 =app-i18n/xcin-2.5.2.3
 
-# Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1179 2002/08/04 14:52:36 leonardop Exp $
-# repoman had a field day
-sys-apps/discover
-sys-apps/discover-data
-
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
 dev-python/anygui
