@@ -3,4 +3,4 @@ MD5 fcc20c7b30e20c7bc95f2accdfe8f569 files/prc-tools-2.2-compilefix.patch 6620
 MD5 e94278d85c02d1338bad0e3c7f0f8f4a files/prc-tools-2.3-compilefix.patch 8621
 MD5 648aed143fbc78e74758d6f2664cf5e0 ChangeLog 673
 MD5 a5c50833bcc05f696a75e5dc8bb9eb4d metadata.xml 225
-MD5 a09eb7ba8b6a21cfe3f7f9a47c41019d prc-tools-2.3.ebuild 3343
+MD5 33ee1fcce508824d00d04a16260e7423 prc-tools-2.3.ebuild 3350
