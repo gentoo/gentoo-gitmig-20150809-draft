@@ -1,3 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f5c98efbdd3b13219907edb0d6a7d4a ChangeLog 15940
+MD5 9dc4a618b56b5e6b4386523dd9c869c9 metadata.xml 373
+MD5 70172eea79bd0ccb6f357d1dba8803a2 samba-3.0.1-r1.ebuild 11339
+MD5 8dc040986a2a1db5e79dbfe3d2d72010 samba-3.0.2a-r2.ebuild 12185
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 b610fd35d7a0a9de510e31d85345d14a files/lmhosts 124
 MD5 f402c2c4103f4c13ac3cc5fa165940db files/nonroot-bind.diff 757
@@ -23,7 +30,10 @@ MD5 d95c7a841071087246ef23a1f72b890f files/winbind-init 491
 MD5 f3a4b3b0a8162ae87779846d7e6adbbf files/digest-samba-3.0.1-r1 202
 MD5 990fe15ff8a0e79f39069fff6475536d files/samba-3.0.2a-smbprint.patch 1224
 MD5 89ef79072e3e08e4caada278e2c3b280 files/digest-samba-3.0.2a-r2 204
-MD5 4f5c98efbdd3b13219907edb0d6a7d4a ChangeLog 15940
-MD5 9dc4a618b56b5e6b4386523dd9c869c9 metadata.xml 373
-MD5 70172eea79bd0ccb6f357d1dba8803a2 samba-3.0.1-r1.ebuild 11339
-MD5 9759c3820567454b3971ce7d61151e14 samba-3.0.2a-r2.ebuild 12196
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAyLsiHTu7gpaalycRAgBdAJ9qIo1JvygKiAgBo8tdr0pU+AqUDACglSDY
+We8fyPvdAtW9LE5tp8tq9Ic=
+=tACu
+-----END PGP SIGNATURE-----

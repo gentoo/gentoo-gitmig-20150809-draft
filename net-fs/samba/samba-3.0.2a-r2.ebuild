@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.10 2004/05/28 03:08:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.11 2004/06/10 19:48:05 vapier Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ _COMMON_DEPS="dev-libs/popt
 	xml? ( dev-libs/libxml2 sys-libs/zlib )
 	acl? ( sys-apps/acl )
 	cups? ( net-print/cups )
-	!arm? ( ldap? ( net-nds/openldap ) )
+	ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )
 	python? dev-lang/python"
 DEPEND="sys-devel/autoconf
