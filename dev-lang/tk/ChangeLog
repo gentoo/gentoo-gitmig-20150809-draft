@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.41 2004/08/25 05:33:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.42 2004/08/31 02:32:51 tgall Exp $
+
+  30 Aug 2004; Tom Gall <tgall@gentoo.org> tk-8.4.6-r1.ebuild:
+  stable on ppc64, bug #61745
 
   25 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tk-8.4.6-r1.ebuild:
   Stable on x86

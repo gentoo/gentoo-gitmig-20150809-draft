@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a823210b507a54f418a5e9019b98bf3 tk-8.4.6-r1.ebuild 2404
+MD5 f6b43a3c9c2e289623821687131b61d3 ChangeLog 5917
 MD5 37d9be6d753633a1cb6704052776ab1f metadata.xml 159
-MD5 4b2dd8eaebcba794c16bb95e4c4a493a ChangeLog 5824
 MD5 c0b1f981d4f6585bafb4a21b5ba30df7 tk-8.3.4-r1.ebuild 2413
+MD5 4ddd8907a8dd60d0dce3351f5ac3b9ae tk-8.4.6-r1.ebuild 2409
 MD5 70e63c1f63eee5928b53f0601b694061 tk-8.4.6.ebuild 2386
 MD5 0321d3bb5b70142a415de40ae2d5e3d4 files/digest-tk-8.3.4-r1 192
-MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6-r1 64
-MD5 c1c1e9dfac0e70f21ef1a73e6dc76b8f files/tk-wm-maxsize.patch 896
-MD5 3e8db8239fe4e68f5107a7a1d4f2f85b files/remove-control-v.diff 400
 MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6 64
+MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6-r1 64
 MD5 e662e61449ea86b439ceb41463762cdc files/remove-control-v-8.4.diff 449
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBLCTCFhz/XBeRBtARAudOAJ484uX1N2kBI6+GVLyapBEQb6JrIACfbhTi
-I2N1jyY7qkEjYIErhT3P4wk=
-=+jua
------END PGP SIGNATURE-----
+MD5 3e8db8239fe4e68f5107a7a1d4f2f85b files/remove-control-v.diff 400
+MD5 c1c1e9dfac0e70f21ef1a73e6dc76b8f files/tk-wm-maxsize.patch 896
