@@ -15,7 +15,6 @@ alsa		media-libs/alsa-lib
 arts		kde-base/kdelibs
 berkdb		sys-libs/db
 bonobo		gnome-base/bonobo
-cups		net-print/cups
 directfb	dev-libs/DirectFB
 esd		media-sound/esound
 gdbm		sys-libs/gdbm

@@ -337,10 +337,6 @@ app-misc/ldapbrowser
 # to have it in /bin.
 <sys-apps/gawk-3.1.0-r3
 
-# <seemant@gentoo.org> (24 Jul 2002)
-# masked for testing.  a replacement of the system's sed programme
-=sys-apps/supersed-3.58
-
 # <spider@gentoo.org> (25 Jul 2002)
 # fixes buildproblems for me. please teset
 #
