@@ -1,10 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.49 2002/05/07 19:26:22 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.50 2002/07/12 21:42:38 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
+INHERITED="$INHERITED $ECLASS"
+
 newdepend /autotools
 
 DESCRIPTION="Based on the $ECLASS eclass"
@@ -23,12 +25,7 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
-			case $KDEMAJORVER in
-			    2) myconf="$myconf --prefix=${KDE2DIR}";;
-			    3) myconf="$myconf --prefix=${KDE3DIR}";;
-			    *) echo "!!! $ECLASS: $FUNCNAME: myconf: could not set --prefix based on \$KDEMAJOVER=\"$KDEMAJORVER\"" && exit 1;;
-			esac
+			myconf="$myconf --prefix=${PREFIX} --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
@@ -43,7 +40,7 @@ kde_src_compile() {
 				if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
 			    done
 			    debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
-			    emake -f $makefile
+			    make -f $makefile
 			    [ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 			fi
 
@@ -53,7 +50,7 @@ kde_src_compile() {
 		make)
 			export PATH="${KDEDIR}/bin:${PATH}"
 			debug-print-section make
-			emake || die "died running emake, $FUNCNAME:make"
+			 emake || die "died running emake, $FUNCNAME:make"
 			;;
 		all)
 			debug-print-section all
