@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.308 2004/12/15 21:48:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.309 2004/12/23 11:16:02 stuart Exp $
+
+*apache-2.0.52-r2 (23 Dec 2004)
+
+  23 Dec 2004; Stuart Herbert <stuart@gentoo.org> apache-2.0.52-r2.ebuild:
+  Improvements for first-time installation of Apache
 
   15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
   Fix broken digest, bug 74531.

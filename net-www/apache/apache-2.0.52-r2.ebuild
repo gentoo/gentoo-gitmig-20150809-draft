@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r2.ebuild,v 1.1 2004/12/14 23:55:28 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r2.ebuild,v 1.2 2004/12/23 11:16:02 stuart Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -8,7 +8,7 @@ PATCH_LEVEL="${PV}"
 S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
-SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
+SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.gz
 	http://dev.gentoo.org/~stuart/apache/apache-patches-${PVR}.tar.bz2
 	http://dev.gentoo.org/~stuart/apache/apache-conf-${PVR}.tar.bz2"
 
@@ -231,22 +231,20 @@ src_install () {
 	cd ${S}
 	#Credits to advx.org people for these scripts. Heck, thanks for
 	#the nice layout and everything else ;-)
-	exeinto /usr/sbin
 	for i in apache2logserverstatus apache2splitlogfile
 	do
-		doexe ${APACHE_CONFDIR}/usr/sbin/$i
+		dosbin ${APACHE_CONFDIR}/usr/sbin/$i
 	done
 	exeinto /usr/lib/ssl/apache2-mod_ssl
 	doexe ${APACHE_CONFDIR}/usr/lib/ssl/apache2-mod_ssl/gentestcrt.sh
 
 	#some more scripts
-	exeinto /usr/sbin
 	for i in split-logfile list_hooks.pl logresolve.pl log_server_status
 	do
-		doexe ${S}/support/$i
+		dosbin ${S}/support/$i
 	done
 	#the ssl version of apache bench
-	doexe support/.libs/ab-ssl
+	dosbin support/.libs/ab-ssl
 
 	#move some mods to extramodules
 	dodir /usr/lib/apache2-extramodules
@@ -256,24 +254,17 @@ src_install () {
 		mv ${D}/usr/lib/apache2/modules/$i ${D}/usr/lib/apache2-extramodules
 	done
 
-	# additional apache configuration
-	for x in `cd ${APACHE_CONFDIR} && find ./etc/apache2 -type f -print` ; do
-		insinto `dirname $x`
-		doins ${APACHE_CONFDIR}/$x
-	done
+	#tidy up
+	mv ${D}/usr/sbin/envvars* ${D}/usr/lib/apache2/build
+	dodoc ${D}/etc/apache2/conf/*-std.conf
+	rm -f ${D}/etc/apache2/conf/*.conf
+	rm -rf ${D}/var/log ${D}/var/run
 
-	# additional utilities
-	for x in `cd ${APACHE_CONFDIR} && find ./usr/sbin -type f -print` ; do
-		insinto `basename $x`
-		doexe ${APACHE_CONFDIR}/$x
-	done
-	pwd
-
-	# init support
-	insinto /etc/conf.d
-	doins ${APACHE_CONFDIR}/etc/conf.d/apache2
-	exeinto /etc/init.d
-	doexe ${APACHE_CONFDIR}/etc/init.d/apache2
+	# install our default config files
+	cd ${D}
+	( cd ${APACHE_CONFDIR} && tar -cpvf - * ) | tar -xpvf -
+	find etc/apache2 -type f -exec chmod 644 {} \;
+	find etc/apache2 -type f -exec chown apache:apache {} \;
 
 	#drop in a convenient link to the manual
 	if use doc; then
@@ -310,12 +301,6 @@ src_install () {
 	mv -v usr/share/man/man8/logresolve.8 usr/share/man/man8/logresolve2.8
 	mv -v usr/share/man/man8/rotatelogs.8 usr/share/man/man8/rotatelogs2.8
 	mv -v usr/share/man/man8/suexec.8 usr/share/man/man8/suexec2.8
-
-	#tidy up
-	mv ${D}/usr/sbin/envvars* ${D}/usr/lib/apache2/build
-	dodoc ${D}/etc/apache2/conf/*-std.conf
-	rm -f ${D}/etc/apache2/conf/*.conf
-	rm -rf ${D}/var/run ${D}/var/log
 
 	# Fix for dav and SSL dirs
 	keepdir /var/lib/dav
