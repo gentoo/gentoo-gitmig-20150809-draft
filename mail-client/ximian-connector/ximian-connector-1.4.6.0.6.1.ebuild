@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.6.0.6.1.ebuild,v 1.1 2004/05/30 03:08:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.6.0.6.1.ebuild,v 1.2 2004/05/30 10:58:27 robbat2 Exp $
 
 inherit rpm gnome2
 
@@ -27,7 +27,7 @@ XIMIAN_V=${END_V#[0-9]*.}
 
 SRC_URI="${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.${XIMIAN_ARCH}.rpm"
 
-RDEPEND="=net-mail/evolution-${MY_PV}*
+RDEPEND="=mail-client/evolution-${MY_PV}*
 	>=gnome-extra/gal-1.99.11
 	>=app-crypt/mit-krb5-1.2
 	net-libs/linc"

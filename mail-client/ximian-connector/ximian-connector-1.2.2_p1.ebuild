@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.1 2004/05/30 03:08:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.2 2004/05/30 10:58:27 robbat2 Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -25,7 +25,7 @@ fi
 XIMIAN_REV=`echo ${PV} | sed -e "s/_p/-/"`
 
 SRC_URI="${PN}-${XIMIAN_REV}.ximian.1.${XIMIAN_ARCH}.rpm"
-RDEPEND="=net-mail/evolution-1.2*"
+RDEPEND="=mail-client/evolution-1.2*"
 DEPEND="app-arch/rpm2targz
 		${RDEPEND}"
 
