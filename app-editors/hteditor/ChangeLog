@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.4 2003/08/08 23:12:26 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.5 2004/03/16 02:35:08 george Exp $
+
+*hteditor-0.7.4 (15 Mar 2004)
+
+  15 Mar 2004; George Shapovalov <george@gentoo.org> hteditor-0.7.4.ebuild :
+  new version (#25209)
 
 *hteditor-0.7.3 (08 Aug 2003)
 
