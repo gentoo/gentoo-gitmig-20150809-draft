@@ -1,21 +1,21 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.8 2001/11/10 12:45:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.2.ebuild,v 1.9 2002/03/30 01:26:22 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="glade"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/glade/${P}.tar.gz"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://glade.gnome.org/"
 
 RDEPEND=">=x11-libs/gtk+-1.2.10-r4
-	 gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
-         bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+	bonobo? ( >=gnome-base/bonobo-1.0.9-r1 )"
 
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-        >=dev-util/intltool-0.11
-        >=app-text/scrollkeeper-0.2"
+	nls? ( sys-devel/gettext 
+	>=dev-util/intltool-0.11 )
+	>=app-text/scrollkeeper-0.2"
 
 src_compile() {
 	local myopts
@@ -43,18 +43,18 @@ src_compile() {
 	fi
 
 	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --disable-gnome-db 					\
-		    ${myopts}  || die
+		--prefix=/usr					\
+		--sysconfdir=/etc					\
+		--disable-gnome-db 					\
+		${myopts}  || die
 
 	emake || die
 }
 
 src_install() {
 	make prefix=${D}/usr 						\
-	     sysconfdir=${D}/etc 					\
-	     install || die
+		sysconfdir=${D}/etc 					\
+		install || die
 
 	dodoc AUTHORS COPYING* FAQ NEWS README* TODO
 }

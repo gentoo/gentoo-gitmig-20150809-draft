@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.2 2002/03/30 01:26:22 seemant Exp $
+
+*glade-0.6.2 (29 Mar 2002)
+
+  29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> glade-0.6.2.ebuild :
+
+  Cleaned up ebuild a little.
 
 *glade-0.6.2 (1 Feb 2002)
 
