@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-208.ebuild,v 1.2 2005/02/23 09:42:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-208.ebuild,v 1.3 2005/02/27 14:44:46 karltk Exp $
 
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
@@ -49,11 +49,11 @@ src_install () {
 	doman *
 	rm -rf ${D}/usr/share/drscheme/man
 
-	for x in background-help-desk drscheme games help-desk mzc \
+	for x in drscheme games help-desk mzc \
 		setup-plt tex2page web-server web-server-monitor \
 		web-server-text
 	do
-		mysed /usr/share/drscheme/bin/${x}
+		mysed /usr/share/drscheme/bin/${x} || die "Failed to patch ${x}"
 	done
 
 	cd ${D}/usr/share/drscheme/bin
