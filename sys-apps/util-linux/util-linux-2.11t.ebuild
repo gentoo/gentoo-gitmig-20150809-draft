@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11t.ebuild,v 1.1 2002/08/05 12:48:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11t.ebuild,v 1.2 2002/08/14 03:15:47 murphy Exp $
 
 CRYPT_PATCH_P=${PN}-${PV/1t/1r}
 S=${WORKDIR}/${P}
@@ -8,7 +8,7 @@ DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
 	crypt? ( http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${CRYPT_PATCH_P}.patch.gz )"
 HOMEPAGE=""
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc

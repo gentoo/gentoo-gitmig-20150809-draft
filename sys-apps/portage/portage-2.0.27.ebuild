@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.27.ebuild,v 1.1 2002/08/07 18:07:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.27.ebuild,v 1.2 2002/08/14 03:13:35 murphy Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 
 #We need this if/then/else clause for compatibility with stuff that doesn't know !build?

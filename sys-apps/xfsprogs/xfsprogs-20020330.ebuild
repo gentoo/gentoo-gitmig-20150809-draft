@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.9 2002/07/21 21:20:08 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.10 2002/08/14 03:36:16 murphy Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs filesystem utilities"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/xfs-cmd-${PV}.tar.bz2"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="LGPL-2.1"
 

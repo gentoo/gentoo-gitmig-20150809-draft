@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.1 2002/07/29 14:58:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5k.ebuild,v 1.2 2002/08/14 03:08:02 murphy Exp $
 
 NV=1.5k
 S=${WORKDIR}/${PN}-${NV}
@@ -14,7 +14,7 @@ RDEPEND="virtual/glibc
 	sys-apps/groff"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 
 src_unpack() {

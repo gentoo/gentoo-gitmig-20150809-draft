@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.4 2002/08/01 19:33:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.5 2002/08/14 03:16:24 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/texinfo/${P}.tar.gz
 	ftp://ftp.gnu.org/pub/gnu/texinfo/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

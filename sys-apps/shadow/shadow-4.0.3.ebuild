@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.7 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.8 2002/08/14 03:31:56 murphy Exp $
 
 inherit libtool
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 HOMEPAGE="http://shadow.pld.org.pl/"
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
