@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.4 2004/06/24 23:41:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.5 2004/07/15 01:12:44 agriffis Exp $
 
 inherit gnuconfig
 
 IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk imlib"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
 HOMEPAGE="http://www.fvwm.org/"
@@ -32,7 +31,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	use alpha && gnuconfig_update
+	gnuconfig_update
 
 	# CFLAGS containing comma will break this, so change it for !
 	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' ${S}/utils/Makefile.am

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r6.ebuild,v 1.6 2004/06/28 23:45:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r6.ebuild,v 1.7 2004/07/15 01:12:44 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,19 +39,17 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		virtual/x11"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
-# XXX:	netpbm is used by FvwmScript-ScreenDump...im assuming anyone with 
+# XXX:	netpbm is used by FvwmScript-ScreenDump...im assuming anyone with
 # 	`use noxpm` will not want them.
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 
-	# this patch enables fast translucent menus in fvwm..yummy! this is a 
-	# minor tweak of a patch posted to fvwm-user mailing list by Olivier 
+	# this patch enables fast translucent menus in fvwm..yummy! this is a
+	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
 	cd ${S}; epatch ${FILESDIR}/fvwm-translucent-menus.diff.gz
 
@@ -60,10 +58,10 @@ src_unpack() {
 	# never got around to it.
 	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
 
-	# FvwmTabs uses /tmp/.fvwmtabs.state for storing state files by default, 
-	# this probably isnt a good idea security wise, allowing someone to do 
-	# damage with symlinks. It will also break if multiple users try using 
-	# the same location simultaneously...probably should use File::Temp, but 
+	# FvwmTabs uses /tmp/.fvwmtabs.state for storing state files by default,
+	# this probably isnt a good idea security wise, allowing someone to do
+	# damage with symlinks. It will also break if multiple users try using
+	# the same location simultaneously...probably should use File::Temp, but
 	# moving it into ~/.fvwmtabs.state will do for now.
 	if use perl; then
 		cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
@@ -76,9 +74,9 @@ src_unpack() {
 		eend $?
 	fi
 
-	# this patch from cvs, regarding a message sent to the fvwm-workers 
-	# mailing list in <20031111234845.A12314@deepblue.milkyway.com.au>, 
-	# perllib applications were getting destroyed before the ON_EXIT 
+	# this patch from cvs, regarding a message sent to the fvwm-workers
+	# mailing list in <20031111234845.A12314@deepblue.milkyway.com.au>,
+	# perllib applications were getting destroyed before the ON_EXIT
 	# handler could be invoked.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.8-perllib-disconnect.diff
 
@@ -279,8 +277,8 @@ src_install() {
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
 
-	# neat utility for testing fvwm behaviour on applications setting various 
-	# hints, creates a simple black window with configurable hints set. 
+	# neat utility for testing fvwm behaviour on applications setting various
+	# hints, creates a simple black window with configurable hints set.
 	if use debug; then
 		dobin ${S}/tests/hints/hints_test
 		newdoc ${S}/tests/hints/README README.hints

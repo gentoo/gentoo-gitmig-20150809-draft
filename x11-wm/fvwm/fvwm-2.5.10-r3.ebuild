@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r3.ebuild,v 1.8 2004/07/07 02:08:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r3.ebuild,v 1.9 2004/07/15 01:12:44 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,13 +41,11 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${A}
 
-	# this patch enables fast translucent menus in fvwm..yummy! this is a 
-	# minor tweak of a patch posted to fvwm-user mailing list by Olivier 
+	# this patch enables fast translucent menus in fvwm..yummy! this is a
+	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
 	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.9-translucent-menus.diff.gz
 
@@ -251,8 +249,8 @@ src_install() {
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
 
-	# neat utility for testing fvwm behaviour on applications setting various 
-	# hints, creates a simple black window with configurable hints set. 
+	# neat utility for testing fvwm behaviour on applications setting various
+	# hints, creates a simple black window with configurable hints set.
 	if use debug; then
 		dobin ${S}/tests/hints/hints_test
 		newdoc ${S}/tests/hints/README README.hints
