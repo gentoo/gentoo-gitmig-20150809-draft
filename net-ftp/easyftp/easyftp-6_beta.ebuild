@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/easyftp/easyftp-6_beta.ebuild,v 1.4 2002/09/23 20:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/easyftp/easyftp-6_beta.ebuild,v 1.5 2002/10/12 21:44:59 vapier Exp $
 
 S=${WORKDIR}
 DESCRIPTION="An EASY GUI FTP Client (QT based)"
@@ -14,10 +14,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
+	patch -p0<${FILESDIR}/easyftp-gcc3.2.diff
 	emake || die
 }
 
-src_install () {
+src_install() {
 	exeinto /usr/bin/
 	doexe easyFTP
 	dodoc README
