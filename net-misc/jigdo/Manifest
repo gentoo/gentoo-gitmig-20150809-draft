@@ -1,8 +1,18 @@
-MD5 ef2578953e06f49e462dc629334a8a2a ChangeLog 1132
-MD5 5853207fad7b04d83b2c43993084fa39 jigdo-0.7.0.ebuild 1418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e23c19eb37af8edfc2cf88d7c9c6ae1a jigdo-0.7.1.ebuild 1352
+MD5 a6db676983b2ff5f36483a96475231c0 jigdo-0.7.0.ebuild 1439
+MD5 ac83ed42ccfa9b6e0b52e5ad30e74835 ChangeLog 1262
 MD5 de7df99d5dcb2fa3a99617144a7e6257 metadata.xml 637
-MD5 d16d5f0f45b823d48433762dad665877 jigdo-0.7.1.ebuild 1329
-MD5 ba134b43460d2b9a0378c9ccbfc4fc6e files/digest-jigdo-0.7.0 64
 MD5 11774b7665bf0dab10a58d268dcd8b9e files/jigdo-gentoo-db3.patch 311
 MD5 c49b767331699f22f72518da29438c56 files/makefile.patch 524
+MD5 ba134b43460d2b9a0378c9ccbfc4fc6e files/digest-jigdo-0.7.0 64
 MD5 8c21d38829a146b462aa547977fabab8 files/digest-jigdo-0.7.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrPNVI1lqEGTUzyQRAq23AKC0QLPt6dutK/MtS/Mia7637yphXQCeM33Z
+jOkBG8z9EtaLm+ms2rNaMqY=
+=EuEZ
+-----END PGP SIGNATURE-----

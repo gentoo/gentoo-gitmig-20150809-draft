@@ -1,8 +1,11 @@
-MD5 9c7fdd5bd63afad51bd8cff451bb79a1 zebra-0.93b.ebuild 1366
-MD5 0d842f719412ebd8bbfe1d4c65c122a3 zebra-0.93b-r1.ebuild 3143
-MD5 b7020a64e602ad1402a363890ef8c58c zebra-0.93a.ebuild 1367
-MD5 d9e8c784df948ca50f69bffd35a867f0 zebra-0.93b-r2.ebuild 3453
-MD5 bedf433805f173fef10e54466c9ad6c8 ChangeLog 2416
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c7f091cc04c051c0a849fad9ee12860d zebra-0.93b.ebuild 1376
+MD5 eb0afa1a275750179261089801c9fd9a zebra-0.93b-r1.ebuild 3152
+MD5 4b11717ffad0dc322f8d2bd0c9b03404 zebra-0.93a.ebuild 1376
+MD5 bc128f941650f82d9086a64d067be94d zebra-0.93b-r2.ebuild 3462
+MD5 a4fc674c6b4b3fb2f781c68260a81cd4 ChangeLog 2588
 MD5 835a18bdea3e212a65476814510d00b6 metadata.xml 898
 MD5 1aea49f1bd903cd18e3a3ff2292c2639 files/digest-zebra-0.93a 64
 MD5 0fd0812e7d1180d5965b9b997cd10011 files/digest-zebra-0.93b 64
@@ -24,3 +27,10 @@ MD5 0d856ce3a7d12a6cc45488f5de6f0a66 files/init.d/zebra.initd 1329
 MD5 fdac977ad8c0a9ea56b7421690e83df0 files/init.d/ripngd.initd 1278
 MD5 09b1bed72022639400585b3afd90d3af files/init.d/bgpd.initd 1314
 MD5 859828f4efbb50dd9fec3b8048a899fe files/init.d/ospf6d.initd 1097
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrPQKI1lqEGTUzyQRAkMRAKCxfkE6t6Lz4Y4niLEN7PnlOwQriQCfT51p
+ocknJxUsjl02+O1Q12Ksra8=
+=baOZ
+-----END PGP SIGNATURE-----
