@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.4 2002/06/03 03:50:36 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.5 2002/06/11 01:01:35 seemant Exp $
+
+*rrdtool-1.0.35-r3 (10 Jun 2002)
+
+  10 Jun 2002; Seemant Kulleen <seemant@gentoo.org> rrdtool-1.0.35-r3.ebuild
+  files/digest-rrdtool-1.0.35-r3 :
+
+  Made fixes so it installs the binaries into /usr/bin and there are also
+  some perl specific things that need to be done (perl was made an optional
+  dep) which are done through the perl-module eclass now.
 
 *rrdtool-1.0.35-r2 (2 Jun 2002)
 	2 Jun 2002; Ben Lutgens <lamer@gentoo.org> rrdtool-1.0.35-r1
