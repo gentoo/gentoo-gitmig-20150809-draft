@@ -716,6 +716,8 @@ gnome-extra/libgnomecanvasmm
 gnome-extra/libgnomemm
 gnome-extra/libgnomeuimm
 
+=net-mail/balsa-2.0.1
+
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
 =app-arch/rar-3.0_beta5
