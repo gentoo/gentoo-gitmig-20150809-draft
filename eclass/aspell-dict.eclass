@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.8 2002/12/09 11:33:24 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.9 2003/02/12 13:33:41 seemant Exp $
 
 # The aspell-dict eclass is designed to streamline the construction of
 # ebuilds for the new aspell dictionaries (from gnu.org) which support
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${MY_P}.tar.bz2"
 DEPEND=">=app-text/aspell-0.50"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
 
 aspell-dict_src_compile() {
 	./configure || die
