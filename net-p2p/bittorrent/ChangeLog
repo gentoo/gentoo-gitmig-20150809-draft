@@ -1,0 +1,9 @@
+# ChangeLog for net-p2p/bittorrent 
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.1 2002/11/05 03:01:59 blocke Exp $
+
+*bittorrent-3.0.1 (04 Nov 2002)
+
+  04 Nov 2002; Bruce A. Locke <blocke@shivan.org> bittorrent-3.0.1.ebuild:
+  Initial version.
+
