@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.1.ebuild,v 1.1 2003/07/15 03:50:39 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.1.ebuild,v 1.2 2003/09/04 07:26:31 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -26,13 +26,13 @@ DEPEND="=xfce-base/libxfce4util-${PV}
 	=xfce-base/xfce4-panel-${PV}"
 	#=xfce-extra/xfce4-systray-${PV}
 	#=xfce-extra/xfce4-iconbox-${PV}
-	
+
 src_install() {
 	dodir /etc/X11/Sessions
 	echo startxfce4 > ${D}/etc/X11/Sessions/XFCE-4
 	fperms 755 /etc/X11/Sessions/XFCE-4
-	
+
 	einfo "This is just a wrapper script to install all the components of Xfce4"
 	einfo "Use startxfce4 to initialize. You also might want to emerge the extras"
-	einfo "like xffm-icons, xfwm4-themes,xfce4-mixer, and xfce4-toys."	
+	einfo "like xffm-icons, xfwm4-themes,xfce4-mixer, and xfce4-toys."
 }

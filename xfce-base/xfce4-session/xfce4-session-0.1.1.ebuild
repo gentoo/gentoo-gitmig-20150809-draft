@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-0.1.1.ebuild,v 1.2 2003/07/15 20:42:27 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-0.1.1.ebuild,v 1.3 2003/09/04 07:21:36 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -13,13 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
-DEPEND=">=x11-libs/gtk+-2.0.6                                                   
-        dev-util/pkgconfig                                                      
-        dev-libs/libxml2                                                        
-        xfce-base/xfce4"                                                 
+DEPEND=">=x11-libs/gtk+-2.0.6
+	dev-util/pkgconfig
+	dev-libs/libxml2
+	xfce-base/xfce4"
 
 src_install() {
 	make DESTDIR=${D} install || die
-	
 	dodoc AUTHORS INSTALL NEWS COPYING README ChangeLog TODO
 }

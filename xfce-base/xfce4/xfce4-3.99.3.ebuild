@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.3.ebuild,v 1.1 2003/09/03 23:23:17 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-3.99.3.ebuild,v 1.2 2003/09/04 07:26:31 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -26,7 +26,7 @@ DEPEND="=xfce-base/xfce4-base-${PV}
 	>=xfce-extra/xfce4-showdesktop-0.1.1
 	>=xfce-extra/xfce4-minicmd-0.1.1
 	>=xfce-extra/xfce4-netload-0.1.3"
-	
+
 src_install() {
 	einfo "This is just a wrapper script to install all the components of Xfce4 and"
 	einfo "all the extras."
