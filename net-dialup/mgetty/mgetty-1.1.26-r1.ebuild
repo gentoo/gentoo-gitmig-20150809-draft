@@ -19,8 +19,6 @@ src_compile() {
 	patch -p0 < ${FILESDIR}/mgetty-${PV}-gentoo.diff
 	cd ..
 	sed -e 's/var\/log\/mgetty/var\/log\/mgetty\/mgetty/' policy.h-dist > policy.h
-	mv Makefile Makefile.orig
-	sed -e 's/INFODIR=$(prefix)\/info/INFODIR=$(prefix)\/share\/info/' Makefile.orig > Makefile
 	emake || die
 	cd voice
 	emake || die
@@ -36,7 +34,7 @@ src_install () {
 	
 	dodir /var/spool
 	dodir /usr/share/info
-	make prefix=${D}/usr spool=${D}/var/spool install || die
+	make prefix=${D}/usr INFODIR=${D}/usr/share CONFDIR=${D}/etc spool=${D}/var/spool install || die
 	cd voice
 	make prefix=${D}/usr spool=${D}/var/spool install || die
 
