@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.84 2004/06/25 02:47:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.85 2004/07/20 19:39:59 stuart Exp $
+
+*subversion-1.0.6 (20 Jul 2004)
+
+  20 Jul 2004; Stuart Herbert <stuart@gentoo.org> +subversion-1.0.6.ebuild:
+  Version bump for security problem; see bug #57747
 
   24 Jun 2004; <pauldv@gentoo.org> subversion-1.0.4-r1.ebuild:
   Clarify the ebuild config comment (bug #54940)
