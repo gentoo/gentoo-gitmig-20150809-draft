@@ -1,7 +1,7 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8.ebuild,v 1.4 2001/08/29 02:38:04 woodchip Exp $
+# Maintainer: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/dosfstools-2.8-r1.ebuild,v 1.1 2002/01/24 22:15:25 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dos filesystem tools"
@@ -10,9 +10,11 @@ HOMEPAGE="ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -e "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" -e "s:\/usr\/man:\/share\/man:" Makefile | cat > Makefile
+	unpack ${A} ; cd ${S}
+	mv Makefile Makefile.orig
+	sed -e "s:PREFIX\ \=:PREFIX\ \=\ \/usr:" \
+		-e "s:\/usr\/man:\/share\/man:" \
+		Makefile.orig > Makefile
 }
 
 src_compile() {
