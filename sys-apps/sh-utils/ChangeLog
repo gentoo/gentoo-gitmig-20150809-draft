@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.2 2002/03/14 22:27:00 seemant Exp $
+
+*sh-utils-2.0.11-r2 (12 Mar 2002)
+
+  12 Mar 2002 Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Added a patch to uname.c from the nuname package.  This allows display in the
+  uname output of more kinds of processors (AuthenticAMD, Cyrix, and possibly
+  Alpha, even though Gentoo does not exist for Alphas yet :).
 
 *sh-utils-2.0.11-r1 (1 Feb 2002)
 
