@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.6 2003/01/31 18:36:01 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.7 2003/01/31 20:28:34 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -64,8 +64,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-# keywording-x86, needs too many fixes to have in ~x86 right now (Seth)
-KEYWORDS="-x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -123,19 +122,18 @@ pkg_setup() {
 		eerror "system VM before proceeding:"
 		eerror
 		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-1.4.1_beta"
+		eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
 		eerror " # env-update"
 		eerror " # source /etc/profile"
 		eerror
-		eerror "At the time of writing, this was version 1.4.1_beta, so please"
-		eerror "adjust the version according to the version installed in"
+		eerror "Please adjust <VERSION> according to the version installed in"
 		eerror "/opt."
 		eerror
 		eerror "If you however want to test another JDK (not officially supported),"
 		eerror "you could do the following:"
 		eerror
 		eerror " # export FORCE_JAVA=yes"
-		eerror
+		eerror 
 		die
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.9 2003/01/27 18:56:01 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.10 2003/01/31 20:28:34 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -114,26 +114,25 @@ pkg_setup() {
 
 	if [ -z "$(echo ${JDK_HOME} | grep "blackdown")" ] && [ "${FORCE_JAVA}" != "yes" ]
 	then
-		eerror
-		eerror "This ebuild has only been tested with the blackdown port of"
-		eerror "java.  If you use another java implementation, it could fail"
-		eerror "horribly, so please merge the blackdown-jdk and set it as"
-		eerror "system VM before proceeding:"
-		eerror
-		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-1.4.1_beta"
-		eerror " # env-update"
-		eerror " # source /etc/profile"
-		eerror
-		eerror "At the time of writing, this was version 1.4.1_beta, so please"
-		eerror "adjust the version according to the version installed in"
-		eerror "/opt."
-		eerror
-		eerror "If you however want to test another JDK (not officially supported),"
-		eerror "you could do the following:"
-		eerror
-		eerror " # export FORCE_JAVA=yes"
-		eerror
+                eerror
+                eerror "This ebuild has only been tested with the blackdown port of"
+                eerror "java.  If you use another java implementation, it could fail"
+                eerror "horribly, so please merge the blackdown-jdk and set it as"
+                eerror "system VM before proceeding:"
+                eerror
+                eerror " # emerge blackdown-jdk"
+                eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
+                eerror " # env-update"
+                eerror " # source /etc/profile"
+                eerror
+                eerror "Please adjust <VERSION> according to the version installed in"
+                eerror "/opt."
+                eerror 
+                eerror "If you however want to test another JDK (not officially supported),"
+                eerror "you could do the following:"
+                eerror 
+                eerror " # export FORCE_JAVA=yes"
+                eerror
 		die
 	fi
 
