@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.9 2004/04/19 19:45:03 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r5.ebuild,v 1.10 2004/05/18 03:13:47 vapier Exp $
 
 inherit flag-o-matic
 
@@ -10,16 +10,16 @@ SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc sparc alpha hppa mips ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 DEPEND="sys-apps/shadow
 	>=sys-apps/sed-4
 	sys-devel/automake"
-
 RDEPEND=""
 
 src_compile() {
-	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+	filter-lfs-flags
 	econf || die
 	emake || die
 }
@@ -40,7 +40,7 @@ src_install() {
 	sed -i -e 's,^\([[:space:]]*\)\(/usr/bin/updatedb\),\1nice \2,' \
 		${D}/etc/cron.daily/slocate
 
-	dodoc INSTALL LICENSE COPYING AUTHORS NEWS README ChangeLog
+	dodoc INSTALL AUTHORS NEWS README ChangeLog
 
 	# man page fixing
 	rm -f ${D}/usr/share/man/man1/locate.1.gz
