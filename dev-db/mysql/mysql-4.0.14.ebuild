@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.2 2003/07/28 23:24:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14.ebuild,v 1.3 2003/07/28 23:26:18 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -59,13 +59,13 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	#required for qmail-mysql
-	patch -p0 < ${FILESDIR}/mysql-4.0-nisam.h.diff || die
+	patch -p0 < ${FILESDIR}/${PN}-4.0-nisam.h.diff || die
 	#zap startup script messages
-	patch -p1 < ${FILESDIR}/mysql-4.0.4-install-db-sh.diff || die
+	patch -p1 < ${FILESDIR}/${PN}-4.0.4-install-db-sh.diff || die
 	#zap binary distribution stuff
-	patch -p1 < ${FILESDIR}/mysql-4.0.14-mysqld-safe-sh.diff || die
+	patch -p1 < ${FILESDIR}/${PN}-4.0.14-mysqld-safe-sh.diff || die
 	#for correct hardcoded sysconf directory
-	patch -p1 < ${FILESDIR}/mysql-4.0-my-print-defaults.diff || die
+	patch -p1 < ${FILESDIR}/${PN}-4.0-my-print-defaults.diff || die
 	#patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
 
 	# attempt to get libmysqlclient_r linked against ssl if USE="ssl" enabled
