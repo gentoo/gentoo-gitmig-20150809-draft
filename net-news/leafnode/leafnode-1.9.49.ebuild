@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.49.ebuild,v 1.3 2004/02/25 20:33:25 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.49.ebuild,v 1.4 2004/02/26 16:13:25 blkdeath Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
@@ -11,7 +11,7 @@ DEPEND=">=dev-libs/libpcre-3.9
 	virtual/inetd"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="ipv6"
 
 src_compile() {
