@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10.ebuild,v 1.4 2004/04/14 20:23:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10.ebuild,v 1.5 2004/05/05 01:13:00 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -39,9 +39,11 @@ src_install() {
 	use nls && { ./build lang fr || die; }
 	./build lang en || die
 	for f in ${D}/usr/X11R6/lib/X11/app-defaults/* ; do
-		sed -i \
-			-e "s:/usr/games/lib/scrabble/:${GAMES_DATADIR}/${PN}/:" ${f} \
-				|| die "sed ${f} failed"
+		if [ -f ${f} ] ; then
+			sed -i \
+				-e "s:/usr/games/lib/scrabble/:${GAMES_DATADIR}/${PN}/:" ${f} \
+					|| die "sed ${f} failed"
+		fi
 	done
 	dodoc CHANGES README
 	prepgamesdirs
