@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r6.ebuild,v 1.3 2002/12/19 21:46:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r6.ebuild,v 1.4 2002/12/20 16:56:41 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -150,11 +150,11 @@ src_install () {
 	export LC_ALL=C
 	cd ${S}
 	
-	insinto /usr/lib/perl5/${PV}/${myarch}/CORE/
+	insinto /usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE/
 	doins ${WORKDIR}/libperl.so
-	dosym /usr/lib/perl5/${PV}/${myarch}/CORE/libperl.so /usr/lib/libperl.so
+	dosym /usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE/libperl.so /usr/lib/libperl.so
 	#Fix for "stupid" modules and programs
-	dodir /usr/lib/perl5/site_perl/${PV}/${myarch}
+	dodir /usr/lib/perl5/site_perl/${PV}/${myarch}${mythreading}
 
 
 	make DESTDIR=${D} INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die "Unable to make install"
@@ -162,7 +162,7 @@ src_install () {
 	cp -f utils/h2ph utils/h2ph_patched
 	patch -p1 < ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
 
-	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched -a -d ${D}/usr/lib/perl5/${PV}/${myarch} <<EOF
+	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched -a -d ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading} <<EOF
 asm/termios.h
 syscall.h
 syslimits.h
@@ -176,12 +176,12 @@ EOF
 	#This is to fix a missing c flag for backwards compat
 	
 
-	cp ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm.bak
-	sed -e "s:ccflags=':ccflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm.bak >	${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm
-	cp ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm	${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm.bak
-	sed -e "s:cppflags=':cppflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm
+	cp ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm.bak
+	sed -e "s:ccflags=':ccflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm.bak >	${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
+	cp ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm	${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm.bak
+	sed -e "s:cppflags=':cppflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
 
-	rm -f ${D}/usr/lib/perl5/${PV}/${myarch}/Config.pm.bak
+	rm -f ${D}/usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm.bak
 	rm -f ${D}/usr/lib/perl5/${PV}/Config.pm.4install
 
 
