@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.0.ebuild,v 1.1 2004/08/18 22:21:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.5.0.ebuild,v 1.2 2004/08/19 09:56:42 mr_bones_ Exp $
 
 inherit distutils
 
@@ -81,9 +81,9 @@ pkg_postinst() {
 	if [ "`/bin/ls -l /etc/localtime | grep Europe`" ] ; then
 		myconf="${myconf} --tv=pal"
 	fi
-	if [ "`use matrox`" ] ; then
+	if use matrox ; then
 		myconf="${myconf} --geometry=768x576 --display=mga"
-	elif [ "`use X`" ] ; then
+	elif use X ; then
 		myconf="${myconf} --geometry=800x600 --display=x11"
 	else
 		myconf="${myconf} --geometry=800x600 --display=fbdev"
