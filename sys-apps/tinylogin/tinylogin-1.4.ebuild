@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tinylogin/tinylogin-1.4.ebuild,v 1.9 2005/01/26 23:47:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tinylogin/tinylogin-1.4.ebuild,v 1.10 2005/01/26 23:51:47 xmerlin Exp $
 
 DESCRIPTION="worlds smallest login/passwd/getty/etc"
 HOMEPAGE="http://tinylogin.busybox.net/"
@@ -11,12 +11,13 @@ SLOT="0"
 KEYWORDS="x86 arm amd64"
 IUSE="static"
 
-DEPEND="virtual/libc
+DEPEND="virtual/libc"
+
+RDEPEND="!static? ( virtual/libc )
 	!sys-apps/pam-login
 	!sys-apps/shadow
-	!sys-apps/sysvinit"
-
-RDEPEND="!static? ( virtual/libc )"
+	!sys-apps/sysvinit
+	"
 
 src_compile() {
 	local myconf=""
