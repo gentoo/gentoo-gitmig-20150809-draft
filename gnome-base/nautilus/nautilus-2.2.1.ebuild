@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.12 2003/09/11 01:15:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.1.ebuild,v 1.13 2003/09/12 20:04:27 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,6 @@ RDEPEND="app-admin/fam-oss
 	>=dev-libs/libxml2-2.4.7
 	>=gnome-base/gnome-vfs-2.1.5
 	>=media-sound/esound-0.2.27
-	>=gnome-base/bonobo-activation-2
 	>=gnome-base/eel-${PV}
 	>=gnome-base/libgnome-2.1.1
 	>=gnome-base/libgnomeui-2.1.1
