@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.1 2003/06/16 00:33:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.2 2003/06/16 12:23:15 mcummings Exp $
 
 IUSE="opengl"
 
@@ -26,6 +26,7 @@ DEPEND="${DEPEND}
 
 mydoc="DEPNDENCIES DEVELOPMENT MANIFEST* COPYING Release_Notes TODO"
 
+
 src_unpack() {
 
 	unpack ${A}
@@ -45,8 +46,10 @@ src_unpack() {
 src_install () {
 	
 	perl-module_src_install
-
-	mv ${D}/usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/HtmlDocs \
+	mkdir -p ${D}/usr/doc/${P}/html
+	eval `perl '-V:version'`
+	PERLVERSION=${version}
+	mv ${D}/usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/HtmlDocs/PDL \
 		${D}/usr/doc/${P}/html
 
 	mydir=${D}/usr/doc/${P}/html/PDL
@@ -56,5 +59,5 @@ src_install () {
 		dosed ${i/${D}}
 	done
 
-	dosed /usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/pdldoc.db 
+	dosed /usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/pdldoc.db 
 }
