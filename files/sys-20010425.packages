@@ -66,7 +66,6 @@
 ./sys-devel/gdb/gdb-5.0-r2.ebuild
 ./sys-devel/flex/flex-2.5.4a-r3.ebuild
 ./sys-devel/make/make-3.79.1-r3.ebuild
-./sys-devel/perl/perl-5.6.0-r6.ebuild
 ./sys-devel/perl/perl-5.6.1.ebuild
 ./sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild
 ./sys-devel/bin86/bin86-0.15.4-r1.ebuild
