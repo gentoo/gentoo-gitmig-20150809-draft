@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.8 2004/12/09 05:57:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.9 2004/12/14 17:11:55 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -53,7 +53,7 @@ ETYPE="gcc-compiler"
 
 # arch/libc configurations known to be stable with {PIE,SSP}-by-default
 SSP_STABLE="x86 sparc amd64"
-SSP_UCLIBC_STABLE=""
+SSP_UCLIBC_STABLE="arm mips ppc x86"
 PIE_GLIBC_STABLE="x86 sparc amd64"
 PIE_UCLIBC_STABLE="x86 mips ppc"
 
