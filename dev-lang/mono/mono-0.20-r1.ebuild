@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.20-r1.ebuild,v 1.1 2003/02/27 17:06:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.20-r1.ebuild,v 1.2 2003/02/28 13:00:42 foser Exp $
 
 inherit eutils mono
 
@@ -28,12 +28,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	# patch to select a diff corlib rootdir 
-	# needed for in-place mcs compilation
-	# patch by foser <foser@gentoo.org>
-	epatch ${FILESDIR}/${P}-unix_rootdir_env.patch
-
 	# add our own little in-place mcs script
 	echo "${S}/mono/jit/mono ${S}/runtime/mcs.exe \"\$@\" " > ${S}/runtime/mcs
 	chmod +x ${S}/runtime/mcs
@@ -44,7 +38,7 @@ src_compile() {
 	MAKEOPTS="-j1" emake || die "MONO compilation failure"
 
 	cd ${MCS_S}
-	PATH=${PATH}:${S}/runtime:${S}/mono/jit MONO_ROOTDIR=${S}/runtime emake -f makefile.gnu || die "MCS compilation failure"
+	PATH=${PATH}:${S}/runtime:${S}/mono/jit MONO_PATH=${MONO_PATH}:${S}/runtime emake -f makefile.gnu || die "MCS compilation failure"
 }
 
 src_install () {

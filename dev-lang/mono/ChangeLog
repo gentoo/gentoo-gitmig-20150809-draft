@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.14 2003/02/27 17:09:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.15 2003/02/28 13:00:42 foser Exp $
 
 *mono-0.20-r1 (27 Feb 2003)
+
+  28 Feb 2003; foser <foser@gentoo.org> mono-0.20-r1.ebuild :
+  Removed redundant patch, there was another way to do this duh :/
 
   27 Feb 2003; foser <foser@gentoo.org> mono-0.20-r1.ebuild :
   Compiles mcs from scratch now
