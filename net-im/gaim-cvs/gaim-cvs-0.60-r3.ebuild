@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.1 2003/02/09 23:59:52 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.2 2003/02/10 00:34:40 sethbc Exp $
 
 IUSE="nls perl"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gaim.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="=sys-libs/db-1*
 	!net-im/gaim
