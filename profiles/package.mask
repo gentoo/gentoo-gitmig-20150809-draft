@@ -281,21 +281,11 @@ dev-java/mysql-jdbc-1.2.3-r1
 dev-lang/swig/swig-1.3_alpha5-r2
 
 # Moved all of gkrellm stuff to x11-misc
-# app-admin/gkrellm-gnome
-# app-misc/gkrellkam
-# app-misc/gkrellm-seti
-# app-misc/gkrellmlaunch
-# app-misc/gkrellweather
-# media-sound/gkrellm-volume
-# media-sound/gkrellmms
-# net-misc/gkrellmwireless
-
-x11-misc/gkrellm-gnome
-x11-misc/gkrellkam
-x11-misc/gkrellm-seti
-x11-misc/gkrellmlaunch
-x11-misc/gkrellweather
-x11-misc/gkrellm-volume
-x11-misc/gkrellmms
-x11-misc/gkrellmwireless
-
+app-admin/gkrellm-gnome
+app-misc/gkrellkam
+app-misc/gkrellm-seti
+app-misc/gkrellmlaunch
+app-misc/gkrellweather
+media-sound/gkrellm-volume
+media-sound/gkrellmms
+net-misc/gkrellmwireless
