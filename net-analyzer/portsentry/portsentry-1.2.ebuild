@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r7.ebuild,v 1.7 2003/07/08 20:58:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.1 2003/07/08 20:58:54 mholzer Exp $
 
 DESCRIPTION="Automated port scan detector and response tool"
 # Seems like CISCO took the site down?
 HOMEPAGE="http://sourceforge.net/projects/sentrytools/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/sentrytools/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=sys-apps/sed-4"
+S=${WORKDIR}/${PN}_beta
 
 src_unpack() {
 
