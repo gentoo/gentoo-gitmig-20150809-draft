@@ -2,4 +2,4 @@ MD5 a32ebae2672a2861808c9eeaf316fdd4 files/digest-karchiver-3.0.1 68
 MD5 e410da025f23012ddbe6c1bde93fa54f files/digest-karchiver-3.0.3 68
 MD5 8e6d8e96b49a2b16ea9094202f583c9c karchiver-3.0.1.ebuild 519
 MD5 954afa7e03fd22ceb8420c8a42525fd7 ChangeLog 722
-MD5 440e38cfdbf6fa8b5d78eba05a223bb1 karchiver-3.0.3.ebuild 510
+MD5 1f94f45ed937a989b63a911b5c632f9d karchiver-3.0.3.ebuild 507
