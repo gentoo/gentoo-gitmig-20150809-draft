@@ -1,0 +1,59 @@
+--- mailx-old/aux.c	Thu Aug 27 18:51:52 1998
++++ mailx-8.1.1/aux.c	Thu Aug 27 18:52:00 1998
+@@ -287,13 +287,14 @@
+ 	register char *max;
+ 
+ 	max=dest+size-1;
+-	while (dest<=max && *src!='\0') {
++	while (dest<=max) {
+ 		if (isupper(*src)) {
+ 			*dest++ = tolower(*src);
+ 		} else {
+ 			*dest++ = *src;
+ 		}
+-		src++;
++		if (*src++ == 0)
++                  break;
+ 	}
+ }
+ 
+--- mailx-old/fio.c	Thu Aug 27 18:51:52 1998
++++ mailx-8.1.1/fio.c	Thu Aug 27 18:52:01 1998
+@@ -416,21 +416,22 @@
+ 		return NOSTR;
+ 	}
+ 	close(pivec[1]);
+-	l = read(pivec[0], xname, BUFSIZ);
++	l = read(pivec[0], xname, PATHSIZE);
++	if (l < 0) {
++		perror("read");
++		close(pivec[0]);
++		return NOSTR;
++	}
+ 	close(pivec[0]);
+ 	if (wait_child(pid) < 0 && wait_status.w_termsig != SIGPIPE) {
+ 		fprintf(stderr, "\"%s\": Expansion failed.\n", name);
+ 		return NOSTR;
+ 	}
+-	if (l < 0) {
+-		perror("read");
+-		return NOSTR;
+-	}
+ 	if (l == 0) {
+ 		fprintf(stderr, "\"%s\": No match.\n", name);
+ 		return NOSTR;
+ 	}
+-	if (l == BUFSIZ) {
++	if (l == PATHSIZE) {
+ 		fprintf(stderr, "\"%s\": Expansion buffer overflow.\n", name);
+ 		return NOSTR;
+ 	}
+@@ -459,7 +460,7 @@
+ 		return (-1);
+ 	if (*folder == '/') {
+ 		strncpy(name, folder, size);
+-		name[size]='\0';
++		name[size-1]='\0';
+ 	} else {
+ 		snprintf(name, size, "%s/%s", homedir, folder);
+ 	}

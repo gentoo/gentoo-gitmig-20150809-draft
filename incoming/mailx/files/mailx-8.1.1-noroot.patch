@@ -1,0 +1,21 @@
+--- mailx-8.1.1/Makefile.noroot	Tue Aug 31 13:19:35 1999
++++ mailx-8.1.1/Makefile	Tue Aug 31 13:19:35 1999
+@@ -39,7 +39,7 @@
+ 	rm -f $(PROG) *.o *~
+  
+  install:
+-	install -c -m 2755 -o root -g mail -s $(PROG) $(DESTDIR)/usr/bin/
++	install -c -m 2755 -s $(PROG) $(DESTDIR)/usr/bin/
+ 	install -c -m 644 $(MFILES) $(DESTDIR)/usr/man/man1/
+ 	cd misc && install -c -m 644 $(EFILES) $(DESTDIR)/etc/
+ 	cd misc && install -c -m 644 $(SFILES) $(DESTDIR)/usr/lib/
+--- mailx-8.1.1/pathnames.h.noroot	Tue Aug 31 13:19:42 1999
++++ mailx-8.1.1/pathnames.h	Tue Aug 31 13:19:52 1999
+@@ -37,6 +37,7 @@
+  *	$NetBSD: pathnames.h,v 1.4 1996/06/08 19:48:34 christos Exp $
+  */
+ 
++#include <paths.h>
+ /* mail installed files */
+ #define _PATH_HELP	"/usr/lib/mail.help"
+ #define _PATH_TILDE	"/usr/lib/mail.tildehelp"

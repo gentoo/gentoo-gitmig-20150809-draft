@@ -1,0 +1,367 @@
+diff -ru mailx-8.1.1.orig/aux.c mailx-8.1.1/aux.c
+--- mailx-8.1.1.orig/aux.c	Fri Jun 14 10:26:55 1996
++++ mailx-8.1.1/aux.c	Sat Jun 20 04:48:36 1998
+@@ -280,16 +280,21 @@
+  * Copy a string, lowercasing it as we go.
+  */
+ void
+-istrcpy(dest, src)
++istrcpy(dest, src, size)
+ 	register char *dest, *src;
++	int size;
+ {
++	register char *max;
+
+-	do {
+-		if (isupper(*src))
++	max=dest+size-1;
++	while (dest<=max && *src!='\0') {
++		if (isupper(*src)) {
+ 			*dest++ = tolower(*src);
+-		else
++		} else {
+ 			*dest++ = *src;
+-	} while (*src++ != 0);
++		}
++		src++;
++	}
+ }
+
+ /*
+@@ -606,10 +611,13 @@
+ 				break;
+ 			cp++;
+ 			if (first) {
+-				strcpy(namebuf, cp);
++				strncpy(namebuf, cp, LINESIZE);
+ 				first = 0;
+-			} else
+-				strcpy(rindex(namebuf, '!')+1, cp);
++			} else {
++				cp2=rindex(namebuf, '!')+1;
++				strncpy(cp2, cp, (namebuf+LINESIZE)-cp2);
++			}
++			namebuf[LINESIZE-2]='\0';
+ 			strcat(namebuf, "!");
+ 			goto newname;
+ 		}
+@@ -691,7 +699,8 @@
+ 	 * Lower-case the string, so that "Status" and "status"
+ 	 * will hash to the same place.
+ 	 */
+-	istrcpy(realfld, field);
++	istrcpy(realfld, field, BUFSIZ);
++	realfld[BUFSIZ-1]='\0';
+ 	if (ignore[1].i_count > 0)
+ 		return (!member(realfld, ignore + 1));
+ 	else
+diff -ru mailx-8.1.1.orig/cmd1.c mailx-8.1.1/cmd1.c
+--- mailx-8.1.1.orig/cmd1.c	Fri Jun 14 10:26:56 1996
++++ mailx-8.1.1/cmd1.c	Sat Jun 20 04:07:39 1998
+@@ -465,7 +465,7 @@
+ 	char dirname[BUFSIZ];
+ 	char *cmd;
+
+-	if (getfold(dirname) < 0) {
++	if (getfold(dirname, BUFSIZ) < 0) {
+ 		printf("No value set for \"folder\"\n");
+ 		return 1;
+ 	}
+diff -ru mailx-8.1.1.orig/cmd2.c mailx-8.1.1/cmd2.c
+--- mailx-8.1.1.orig/cmd2.c	Fri Jun 14 10:26:56 1996
++++ mailx-8.1.1/cmd2.c	Sat Jun 20 04:49:54 1998
+@@ -496,7 +496,8 @@
+ 	if (*list == NOSTR)
+ 		return igshow(tab, which);
+ 	for (ap = list; *ap != 0; ap++) {
+-		istrcpy(field, *ap);
++		istrcpy(field, *ap, BUFSIZ);
++		field[BUFSIZ-1]='\0';
+ 		if (member(field, tab))
+ 			continue;
+ 		h = hash(field);
+diff -ru mailx-8.1.1.orig/cmd3.c mailx-8.1.1/cmd3.c
+--- mailx-8.1.1.orig/cmd3.c	Fri Jun 14 10:26:57 1996
++++ mailx-8.1.1/cmd3.c	Sat Jun 20 04:41:37 1998
+@@ -65,8 +65,9 @@
+ 	char *shell;
+ 	char cmd[BUFSIZ];
+
+-	(void) strcpy(cmd, str);
+-	if (bangexp(cmd) < 0)
++	(void) strncpy(cmd, str, BUFSIZ);
++	cmd[BUFSIZ-1]='\0';
++	if (bangexp(cmd, BUFSIZ) < 0)
+ 		return 1;
+ 	if ((shell = value("SHELL")) == NOSTR)
+ 		shell = _PATH_CSHELL;
+@@ -103,8 +104,9 @@
+ char	lastbang[128];
+
+ int
+-bangexp(str)
++bangexp(str, size)
+ 	char *str;
++	int size;
+ {
+ 	char bangbuf[BUFSIZ];
+ 	register char *cp, *cp2;
+@@ -144,7 +146,8 @@
+ 		printf("!%s\n", bangbuf);
+ 		fflush(stdout);
+ 	}
+-	strcpy(str, bangbuf);
++	strncpy(str, bangbuf, size);
++	str[size-1]='\0';
+ 	strncpy(lastbang, bangbuf, 128);
+ 	lastbang[127] = 0;
+ 	return(0);
+diff -ru mailx-8.1.1.orig/collect.c mailx-8.1.1/collect.c
+--- mailx-8.1.1.orig/collect.c	Fri Jun 14 10:26:58 1996
++++ mailx-8.1.1/collect.c	Sat Jun 20 04:52:40 1998
+@@ -268,7 +268,8 @@
+ 			hp->h_bcc = cat(hp->h_bcc, extract(&linebuf[2], GBCC));
+ 			break;
+ 		case 'd':
+-			strcpy(linebuf + 2, getdeadletter());
++			strncpy(linebuf + 2, getdeadletter(), LINESIZE - 2);
++			linebuf[LINESIZE-1]='\0';
+ 			/* fall into . . . */
+ 		case 'r':
+ 		case '<':
+Only in mailx-8.1.1: collect.c.orig
+diff -ru mailx-8.1.1.orig/extern.h mailx-8.1.1/extern.h
+--- mailx-8.1.1.orig/extern.h	Fri Jun 14 10:26:59 1996
++++ mailx-8.1.1/extern.h	Sat Jun 20 04:52:40 1998
+@@ -94,7 +94,7 @@
+ int	 append __P((struct message *, FILE *));
+ int	 argcount __P((char **));
+ void	 assign __P((char [], char []));
+-int	 bangexp __P((char *));
++int	 bangexp __P((char *, int));
+ int	 blankline __P((char []));
+ void	 brokpipe __P((int));
+ int	 charcount __P((char *, int));
+@@ -130,7 +130,7 @@
+ int	 file __P((void *));
+ struct grouphead *
+ 	 findgroup __P((char []));
+-void	 findmail __P((char *, char *));
++void	 findmail __P((char *, char *, int));
+ int	 first __P((int, int));
+ void	 fixhead __P((struct header *, struct name *));
+ void	 fmt __P((char *, struct name *, FILE *, int));
+@@ -139,7 +139,7 @@
+ void	 free_child __P((int));
+ int	 from __P((void *));
+ off_t	 fsize __P((FILE *));
+-int	 getfold __P((char *));
++int	 getfold __P((char *, int));
+ int	 gethfield __P((FILE *, char [], int, char **));
+ int	 getmsglist __P((char *, int *, int));
+ int	 getrawlist __P((char [], char **, int));
+@@ -164,7 +164,7 @@
+ int	 ishead __P((char []));
+ int	 isign __P((char *, struct ignoretab []));
+ int	 isprefix __P((char *, char *));
+-void	 istrcpy __P((char *, char *));
++void	 istrcpy __P((char *, char *, int));
+ const struct cmd *
+ 	 lex __P((char []));
+ void	 load __P((char *));
+diff -ru mailx-8.1.1.orig/fio.c mailx-8.1.1/fio.c
+--- mailx-8.1.1.orig/fio.c	Fri Jun 14 10:27:00 1996
++++ mailx-8.1.1/fio.c	Sat Jun 20 04:52:40 1998
+@@ -74,7 +74,7 @@
+ 	char linebuf[LINESIZE];
+
+ 	/* Get temporary file. */
+-	(void)sprintf(linebuf, "%s/mail.XXXXXX", tmpdir);
++	(void)snprintf(linebuf,LINESIZE,"%s/mail.XXXXXX", tmpdir);
+ 	if ((c = mkstemp(linebuf)) == -1 ||
+ 	    (mestmp = Fdopen(c, "r+")) == NULL) {
+ 		(void)fprintf(stderr, "mail: can't open %s\n", linebuf);
+@@ -336,7 +336,7 @@
+ 	 */
+ 	switch (*name) {
+ 	case '%':
+-		findmail(name[1] ? name + 1 : myname, xname);
++		findmail(name[1] ? name + 1 : myname, xname, PATHSIZE);
+ 		return savestr(xname);
+ 	case '#':
+ 		if (name[1] != 0)
+@@ -351,13 +351,13 @@
+ 			name = "~/mbox";
+ 		/* fall through */
+ 	}
+-	if (name[0] == '+' && getfold(cmdbuf) >= 0) {
+-		sprintf(xname, "%s/%s", cmdbuf, name + 1);
++	if (name[0] == '+' && getfold(cmdbuf, PATHSIZE) >= 0) {
++		snprintf(xname, PATHSIZE, "%s/%s", cmdbuf, name + 1);
+ 		name = savestr(xname);
+ 	}
+ 	/* catch the most common shell meta character */
+ 	if (name[0] == '~' && (name[1] == '/' || name[1] == '\0')) {
+-		sprintf(xname, "%s%s", homedir, name + 1);
++		snprintf(xname, PATHSIZE, "%s%s", homedir, name + 1);
+ 		name = savestr(xname);
+ 	}
+ 	if (!anyof(name, "~{[*?$`'\"\\"))
+@@ -366,7 +366,7 @@
+ 		perror("pipe");
+ 		return name;
+ 	}
+-	sprintf(cmdbuf, "echo %s", name);
++	snprintf(cmdbuf, PATHSIZE, "echo %s", name);
+ 	if ((shell = value("SHELL")) == NOSTR)
+ 		shell = _PATH_CSHELL;
+ 	pid = start_command(shell, 0, -1, pivec[1], "-c", cmdbuf, NOSTR);
+@@ -409,17 +409,20 @@
+  * Determine the current folder directory name.
+  */
+ int
+-getfold(name)
++getfold(name, size)
+ 	char *name;
++	int size;
+ {
+ 	char *folder;
+
+ 	if ((folder = value("folder")) == NOSTR)
+ 		return (-1);
+-	if (*folder == '/')
+-		strcpy(name, folder);
+-	else
+-		sprintf(name, "%s/%s", homedir, folder);
++	if (*folder == '/') {
++		strncpy(name, folder, size);
++		name[size]='\0';
++	} else {
++		snprintf(name, size, "%s/%s", homedir, folder);
++	}
+ 	return (0);
+ }
+
+@@ -436,7 +439,7 @@
+ 	else if (*cp != '/') {
+ 		char buf[PATHSIZE];
+
+-		(void) sprintf(buf, "~/%s", cp);
++		(void) snprintf(buf, PATHSIZE, "~/%s", cp);
+ 		cp = expand(buf);
+ 	}
+ 	return cp;
+diff -ru mailx-8.1.1.orig/lex.c mailx-8.1.1/lex.c
+--- mailx-8.1.1.orig/lex.c	Fri Jun 14 10:27:03 1996
++++ mailx-8.1.1/lex.c	Sat Jun 20 04:52:40 1998
+@@ -134,9 +134,12 @@
+ 	}
+ 	shudclob = 1;
+ 	edit = isedit;
+-	strcpy(prevfile, mailname);
+-	if (name != mailname)
+-		strcpy(mailname, name);
++	strncpy(prevfile, mailname, PATHSIZE);
++	prevfile[PATHSIZE-1]='\0';
++	if (name != mailname) {
++		strncpy(mailname, name, PATHSIZE);
++		mailname[PATHSIZE-1]='\0';
++	}
+ 	mailsize = fsize(ibuf);
+ 	if ((otf = fopen(tempMesg, "w")) == NULL) {
+ 		perror(tempMesg);
+@@ -616,10 +619,10 @@
+ 			s++;
+ 	}
+ 	ename = mailname;
+-	if (getfold(fname) >= 0) {
++	if (getfold(fname, BUFSIZ-1) >= 0) {
+ 		strcat(fname, "/");
+ 		if (strncmp(fname, mailname, strlen(fname)) == 0) {
+-			sprintf(zname, "+%s", mailname + strlen(fname));
++			snprintf(zname, BUFSIZ, "+%s", mailname + strlen(fname));
+ 			ename = zname;
+ 		}
+ 	}
+Only in mailx-8.1.1: lex.c.orig
+diff -ru mailx-8.1.1.orig/list.c mailx-8.1.1/list.c
+--- mailx-8.1.1.orig/list.c	Fri Jun 14 10:27:03 1996
++++ mailx-8.1.1/list.c	Sat Jun 20 04:34:40 1998
+@@ -515,7 +515,8 @@
+ 	int quotec;
+
+ 	if (regretp >= 0) {
+-		strcpy(lexstring, string_stack[regretp]);
++		strncpy(lexstring, string_stack[regretp], STRINGLEN);
++		lexstring[STRINGLEN-1]='\0';
+ 		lexnumber = numberstack[regretp];
+ 		return(regretstack[regretp--]);
+ 	}
+@@ -695,10 +696,12 @@
+ 	register char *cp, *cp2, *backup;
+
+ 	str++;
+-	if (strlen(str) == 0)
++	if (strlen(str) == 0) {
+ 		str = lastscan;
+-	else
+-		strcpy(lastscan, str);
++	} else {
++		strncpy(lastscan, str, 128);
++		lastscan[127]='\0';
++	}
+ 	mp = &message[mesg-1];
+
+ 	/*
+diff -ru mailx-8.1.1.orig/main.c mailx-8.1.1/main.c
+--- mailx-8.1.1.orig/main.c	Fri Jun 14 10:27:05 1996
++++ mailx-8.1.1/main.c	Sat Jun 20 04:59:18 1998
+@@ -48,6 +48,12 @@
+ #endif
+ #endif /* not lint */
+
++/*
++ * Most strcpy/sprintf functions have been changed to strncpy/snprintf to
++ * correct several buffer overruns (at least one ot them was exploitable).
++ * Sat Jun 20 04:58:09 CEST 1998 Alvaro Martinez Echevarria <alvaro@lander.es>
++ */
++
+ #include "rcv.h"
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+diff -ru mailx-8.1.1.orig/v7.local.c mailx-8.1.1/v7.local.c
+--- mailx-8.1.1.orig/v7.local.c	Fri Jun 14 10:27:09 1996
++++ mailx-8.1.1/v7.local.c	Sat Jun 20 04:34:57 1998
+@@ -60,15 +60,19 @@
+  * mail is queued).
+  */
+ void
+-findmail(user, buf)
++findmail(user, buf, size)
+ 	char *user, *buf;
++	int size;
+ {
+ 	char *mbox;
+
+-	if (!(mbox = getenv("MAIL")))
+-		(void)sprintf(buf, "%s/%s", _PATH_MAILDIR, user);
+-	else
+-		(void)strcpy(buf, mbox);
++	if (!(mbox = getenv("MAIL"))) {
++		(void)snprintf(buf, size, "%s/%s", _PATH_MAILDIR, user);
++	} else {
++		(void)strncpy(buf, mbox, size);
++		buf[size-1]='\0';
++	}
++
+ }
+
+ /*
+
+--- end forwarded text
+
+
+--
+Joel "Espy" Klecker    Debian GNU/Linux Developer    <mailto:jk@espy.org>
+<http://www.espy.org/>                          <ftp://ftp.espy.org/pub/>
+

@@ -1,0 +1,66 @@
+--- mailx-8.1.1/main.c.setuid	Mon Aug  7 14:27:56 2000
++++ mailx-8.1.1/main.c	Mon Aug  7 14:33:12 2000
+@@ -233,14 +233,30 @@
+ 	input = stdin;
+ 	rcvmode = !to;
+ 	spreserve();
+-	if (!nosrc)
+-		load(_PATH_MASTER_RC);
+-	/*
+-	 * Expand returns a savestr, but load only uses the file name
+-	 * for fopen, so it's safe to do this.
+-	 */
+-	load(expand("~/.mailrc"));
++
++	/* Only load command file if we are not running setuid
++	   - From under a setuid program or something */
++	if ( getuid() == geteuid() ) {
++		if (!nosrc)
++			load(_PATH_MASTER_RC);
++		/*
++	 	 * Expand returns a savestr, but load only uses the file name
++		 * for fopen, so it's safe to do this.
++		 */
++		load(expand("~/.mailrc"));
++	}
++	
+ 	if (!rcvmode) {
++		/* In send mode, turn off interactive if
++		   we are setuid or not running from
++      		   a terminal */
++		if ( value( "interactive" ) != NOSTR &&
++		     ( getuid() != geteuid() || !isatty(0)) )
++		{
++			char *interactive[] = { "interactive", NULL };
++			unset( interactive );
++		}	
++		
+ 		mail(to, cc, bcc, smopts, subject);
+ 		/*
+ 		 * why wait?
+--- mailx-8.1.1/vars.c~	Fri Jun 14 10:27:09 1996
++++ mailx-8.1.1/vars.c	Thu Aug 10 20:20:21 2000
+@@ -110,17 +110,21 @@
+ 
+ /*
+  * Get the value of a variable and return it.
+- * Look in the environment if its not available locally.
++ * Look in the environment if its not available locally. (for upper case vars)
+  */
+ 
+ char *
+ value(name)
+ 	char name[];
+ {
++  int str_isupper(char *s) {
++    while (*s && isupper(*s)) s++;
++    return *s == 0;
++  }
+ 	register struct var *vp;
+ 
+ 	if ((vp = lookup(name)) == NOVAR)
+-		return(getenv(name));
++		return(str_isupper(name) ? getenv(name) : NULL);
+ 	return(vp->v_value);
+ }
+ 
