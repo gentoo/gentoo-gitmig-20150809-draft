@@ -106,7 +106,7 @@ dev-libs/libtomcrypt
 # <azarah@gentoo.org> (07 Jan 2003)
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
->=sys-apps/baselayout-1.8.6.0
+#>=sys-apps/baselayout-1.8.6.0
 
 # <jhhudso@gentoo.org> (24 Dec 2002)
 # Testing xemacs without sandbox disable, since --pdump has been added
@@ -391,7 +391,7 @@ x11-terms/powershell
 
 # <raker@gentoo.org> (11 Sep 2002)
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
->=net-mail/qmail-1.03-r9
+=net-mail/qmail-1.03-r9
 
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
@@ -829,7 +829,7 @@ gnome-extra/libgnomeuimm
 gnome-extra/gal2
 >=app-office/gnumeric-1.1.3
 
->=net-irc/xchat-1.9.1
+#>=net-irc/xchat-1.9.1
 
 >=dev-util/glade-1.1.0
 >=dev-util/glademm-1.1.0
