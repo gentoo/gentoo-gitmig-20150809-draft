@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.58 2005/02/18 22:08:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.59 2005/03/03 02:39:53 ticho Exp $
+
+*uw-imap-2004c-r3 (03 Mar 2005)
+
+  03 Mar 2005; Andrej Kacian <ticho@gentoo.org> uw-imap-2004c-r1.ebuild,
+  +uw-imap-2004c-r3.ebuild:
+  Revision bump to restrict cleartext LOGIN to SSL/TLS sessions by default.
+  Introduced "clearpasswd" USE flag to toggle this restriction. Suggested by
+  Tero Pelander <tpeland@tkukoulu.fi> in bug #83797. 2004c-r1 stable on x86.
 
   18 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org>
   uw-imap-2004c-r2.ebuild:
@@ -12,10 +20,10 @@
   +uw-imap-2004c-r2.ebuild:
   Don't install pam.d files. #79240. Depend on mailbase-0.00-r8 at least
 
-  01 Feb 2005; Olivier Crête <tester@gentoo.org> :
+  01 Feb 2005; Olivier CrĂŞte <tester@gentoo.org> :
   Stable on x86 per security bug #79874
 
-  30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
+  30 Jan 2005; Bryan Ăstergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
   Stable on alpha, bug 79874.
 
 *uw-imap-2004c-r1 (01 Feb 2005)
@@ -59,7 +67,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> uw-imap-2004a.ebuild:
   Stable on amd64.
 
-  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004a.ebuild:
+  05 Dec 2004; Bryan Ăstergaard <kloeri@gentoo.org> uw-imap-2004a.ebuild:
   Stable on alpha, bug 72323.
 
   24 Nov 2004; Christian Birchinger <joker@gentoo.org> uw-imap-2004a.ebuild:
@@ -73,7 +81,7 @@
   Removed mbox USE flag from 2002e-r4 and 2004a, as it is not used at all.
   Inherit flag-o-matic.
 
-  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  31 Oct 2004; Bryan Ăstergaard <kloeri@gentoo.org>
   uw-imap-2002e-r4.ebuild:
   Stable on alpha.
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r1.ebuild,v 1.2 2005/03/03 02:39:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r3.ebuild,v 1.1 2005/03/03 02:39:53 ticho Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P="imap-${PV}1"
 S=${WORKDIR}/${MY_P}
@@ -13,8 +13,8 @@ HOMEPAGE="http://www.washington.edu/imap/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha ~amd64"
-IUSE="ipv6 ssl pic kerberos"
+KEYWORDS="~x86 ~sparc ~ppc ~hppa ~alpha ~amd64"
+IUSE="ipv6 ssl pic kerberos clearpasswd"
 
 PROVIDE="virtual/imapd"
 PROVIDE="${PROVIDE} virtual/imap-c-client"
@@ -22,8 +22,33 @@ DEPEND="!net-mail/vimap
 	!virtual/imap-c-client
 	virtual/libc
 	>=sys-libs/pam-0.72
+	>=net-mail/mailbase-0.00-r8
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )"
+
+pkg_setup() {
+	if use clearpasswd; then
+		echo
+		ewarn "Building uw-imap with cleartext LOGIN allowed. Disable \"clearpasswd\" USE"
+		ewarn "flag to restrict cleartext LOGIN to SSL/TLS sessions only."
+		echo
+	else
+		echo
+		ewarn "Building uw-imap with cleartext LOGIN restricted to SSL/TLS sessions only."
+		ewarn "Enable \"clearpasswd\" flag to allow unrestricted cleartext LOGIN."
+		echo
+	fi
+	# ewarn people not using pam with this file
+	if ! built_with_use net-mail/mailbase pam;
+	then
+		echo
+		ewarn "It is recommended to have the net-mail/mailbase package"
+		ewarn "  built with the pam use flag activated. Please rebuild"
+		ewarn "  net-mail/mailbase with pam activated."
+		echo
+		epause 3
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -77,7 +102,12 @@ src_compile() {
 	if use ssl; then
 		cd ${S}
 		echo ${mymake}
-		yes | make lnp ${mymake} ${ipver} SSLTYPE=unix EXTRACFLAGS="${CFLAGS}" || die
+		if use clearpasswd; then
+			yes | make lnp ${mymake} ${ipver} SSLTYPE=unix EXTRACFLAGS="${CFLAGS}" || die
+		else
+			yes | make lnp ${mymake} ${ipver} SSLTYPE=unix.nopwd EXTRACFLAGS="${CFLAGS}" || die
+		fi
+
 
 		local i
 		for i in imapd ipop3d; do
@@ -141,9 +171,16 @@ src_install() {
 	dodoc docs/rfc/*.txt
 
 	# gentoo config stuff
-	insinto /etc/pam.d
-	newins ${FILESDIR}/uw-imap.pam-system-auth imap
-	newins ${FILESDIR}/uw-imap.pam-system-auth pop
+
+	## Those are now provided by mailbase
+	#   but if mailbase didn't provide them, install needed files
+	if ! built_with_use net-mail/mailbase pam;
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/uw-imap.pam-system-auth imap
+		newins ${FILESDIR}/uw-imap.pam-system-auth pop
+	fi
+
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/uw-imap.xinetd  imap
 	newins ${FILESDIR}/uw-ipop2.xinetd ipop2
