@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.7.ebuild,v 1.2 2004/02/20 06:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/winesetuptk-0.7.ebuild,v 1.3 2004/03/21 17:05:43 jhuebel Exp $
 
 MY_P1=tcltk-${P}
 MY_P=${P/-/}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.winehq.org"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/x11"
 
