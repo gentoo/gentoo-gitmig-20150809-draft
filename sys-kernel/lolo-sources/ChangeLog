@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.32 2002/12/31 23:13:09 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.33 2003/01/02 08:43:44 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
@@ -10,7 +10,22 @@
   * USAGI patch from mattjf
   * Whatever else I'm forgetting
 
-*lolo-sources-2.4.20.1_rc1 (2002)
+*lolo-sources-2.4.20.1_rc2 (02 Jan 2003)
+
+  Changes from _rc1:
+  * Drop smptimers makes this thing die under load
+  * Make XFS an optional useflag with a warning about JFS
+
+  I'd like to give Joel Hill (Hillster on IRC) a huge
+  thanks with this one, because without him I would have
+  never been able to load test it properly and found the
+  cause of random deadness on SMP boxes.
+
+*lolo-sources-2.4.20.1_rc1 (31 Dec 2002)
+
+  02 Jan 2003; Brandon Low <lostlogic@gentoo.org>:
+  Mark unstable, cuz it is.
+
   Well we've finally made it to an _rc kernel here... at this point 
   it is bug fixes and tiny hardware modules ONLY
 
