@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r2.ebuild,v 1.1 2003/06/04 19:42:21 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p3-r2.ebuild,v 1.2 2003/06/07 01:16:11 rac Exp $
 
 MY_P="Canna36p3"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +14,8 @@ IUSE=""
 SRC_URI="http://downloads.sourceforge.jp/canna/2181/${MY_P}.tar.gz"
 
 DEPEND="virtual/glibc
-	x11-base/xfree"
+	x11-base/xfree
+	>=sys-apps/sed-4"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
