@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/sms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.7 2004/07/01 21:53:47 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.8 2004/09/07 06:16:25 dragonheart Exp $
+
+*sms-2.0.0_rc1 (07 Sep 2004)
+
+  07 Sep 2004; Daniel Black <dragonheart@gentoo.org> -sms-1.9.2i.ebuild,
+  +sms-1.9.2m.ebuild, +sms-2.0.0_rc1.ebuild:
+  version bump as per bug #62976 
+  Thanks to Adam Piatyszek <ediap@et.put.poznan.pl>.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> sms-1.9.2i.ebuild,
   sms-1.9.2k.ebuild, sms-1.9.2l.ebuild:

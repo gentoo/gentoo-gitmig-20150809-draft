@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-1.9.2i.ebuild,v 1.4 2004/07/01 21:53:47 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/sms-1.9.2m.ebuild,v 1.1 2004/09/07 06:16:25 dragonheart Exp $
 
 DESCRIPTION="Command line program for sending SMS to Polish GSM mobile phone users"
 HOMEPAGE="http://ceti.pl/~miki/komputery/sms.html"
@@ -13,11 +13,13 @@ RDEPEND="virtual/libc
 	sys-libs/gdbm"
 
 DEPEND="${RDEPEND}
-	sys-devel/gcc"
+	sys-devel/gcc
+	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	sed -i -e 's:^CFLAGS.*::' Makefile
 	emake || die
 }
 
