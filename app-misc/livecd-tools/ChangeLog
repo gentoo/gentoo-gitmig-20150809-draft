@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.40 2005/01/29 21:57:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.41 2005/02/17 17:46:30 corsair Exp $
+
+  17 Feb 2005; Markus Rothe <corsair@gentoo.org> livecd-tools-1.0.13.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *livecd-tools-1.0.13 (29 Jan 2005)
 
