@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.2 2001/08/27 14:43:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r4.ebuild,v 1.3 2001/08/28 03:02:00 drobbins Exp $
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3.tar.gz
@@ -68,7 +68,7 @@ src_compile() {
 	${S}/configure --prefix=${LOC} --mandir=${LOC}/share/man --infodir=${LOC}/share/info \
 	--enable-version-specific-runtime-libs \
 	--host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
-	--with-local-prefix=${LOC}/local ${myconf} || die
+	--with-local-prefix=${LOC}/local ${myconf} --without-included-gettext || die
 
 	if [ -z "`use static`" ]
 	then
