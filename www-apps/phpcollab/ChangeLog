@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/phpcollab
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/ChangeLog,v 1.1 2004/08/30 15:05:57 rl03 Exp $
+
+*phpcollab-2.4 (30 Aug 2004)
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +files/postinstall-en.txt, +phpcollab-2.4.ebuild:
+  Initial ebuild. Thanks to Gunnar Wrobel <php@gunnarwrobel.de> for his ebuild.
+  Closes #57277.
+

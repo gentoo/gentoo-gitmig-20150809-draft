@@ -1,0 +1,7 @@
+You will need to create a new database. Consult your user manual.
+
+Browse to installation/setup.php
+
+When you are done, delete installation/setup.php, and login at index.php
+
+Edit includes/settings.php to fine-tune the installation.
