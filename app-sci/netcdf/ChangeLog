@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/netcdf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.7 2004/01/12 19:54:40 nerdboy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/ChangeLog,v 1.8 2004/02/06 15:50:15 aliz Exp $
 
   12 Jan 2004; <nerdboy@gentoo.org> netcdf-3.5.0-r3.ebuild,
   netcdf-3.5.0-r2.ebuild, metadata.xml:
