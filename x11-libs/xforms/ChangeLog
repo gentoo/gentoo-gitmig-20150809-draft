@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.14 2003/05/23 10:48:52 pauldv Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.15 2004/02/09 09:04:41 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> xforms-1.0.ebuild:
+  added amd64 keyword.
 
   23 May 2003; Paul de Vrieze <pauldv@gentoo.org> xforms-1.0_rc4.ebuild:
   Fix description, which was from skel.ebuild
