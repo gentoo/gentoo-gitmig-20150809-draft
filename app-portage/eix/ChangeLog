@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.14 2005/02/27 17:55:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.15 2005/03/10 22:19:16 hollow Exp $
+
+*eix-0.2.2_alpha (10 Mar 2005)
+
+  10 Mar 2005; Benedikt Boehm <hollow@gentoo.org> +eix-0.2.2_alpha.ebuild:
+  Version bump
 
   27 Feb 2005; Jason Wever <weeve@gentoo.org> eix-0.2.1.ebuild:
   Added ~sparc keyword.
