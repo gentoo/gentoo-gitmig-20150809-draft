@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.6.ebuild,v 1.1 2003/11/23 01:38:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.2.6.ebuild,v 1.2 2004/04/16 19:56:59 randy Exp $
 
 DESCRIPTION="This is the library which provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/libtasn1/${P}.tar.gz"
 IUSE="doc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 s390"
 
 DEPEND=">=dev-lang/perl-5.6
 	dev-util/yacc"
