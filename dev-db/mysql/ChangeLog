@@ -1,8 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.10 2002/07/07 23:36:23 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.11 2002/07/25 08:25:55 rphillips Exp $
 
 *mysql-3.23.51-r2 (07 Jul 2002)
+
+  25 Jul 2002; Ryan Phillips <rphillips@gentoo.org> mysql-3.23.51-r2.ebuild :
+
+  The -tcpd- patch appears to have been fixed upstream.  It has been
+  removed from the ebuild
 
   07 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r2.ebuild :
 

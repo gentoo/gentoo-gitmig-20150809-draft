@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r2.ebuild,v 1.1 2002/07/07 23:36:23 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.51-r2.ebuild,v 1.2 2002/07/25 08:25:55 rphillips Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -44,7 +44,8 @@ src_unpack() {
 	# for correct hardcoded sysconf directory
 	patch -p1 < ${FILESDIR}/mysql-3.23-my-print-defaults.diff || die
 	# 3.23.51: hrmph.. not sure whats going on with this..
-	patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
+	# rphillips - appears to have been fixed upstream
+	# patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
 }
 
 src_compile() {
