@@ -1,11 +1,21 @@
-MD5 463867c2bb45ede78395950e9f53c47a ChangeLog 2240
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2418262d75a5959dfbf52802d77df8a9 ChangeLog 2450
 MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
-MD5 abf8a3da8f7c9380bb1f5217ad3da6cf roundup-0.5.6.ebuild 834
-MD5 78dca6b77e532faa59c749c353cdda1d roundup-0.5.8.ebuild 844
-MD5 a2595be8ab07448df45ab604d0c09d23 roundup-0.6.4.ebuild 906
-MD5 b75d37c0f7c8589651208aebe5c287ea roundup-0.7.6.ebuild 1364
+MD5 bf8a7f0e5e929d85b7fa01a8f238669c roundup-0.5.6.ebuild 824
+MD5 7882ddc445679873a20d08618dcb6add roundup-0.5.8.ebuild 832
+MD5 8a3bb76eab5c10abc93a09ac680e3088 roundup-0.6.4.ebuild 894
+MD5 d8baf61e61807162d25d03acebd913c6 roundup-0.7.6.ebuild 1372
 MD5 7d5f9adaaa2f73b32c8dc22108358ba9 files/digest-roundup-0.5.6 65
 MD5 25f3fa02512e6a3ba8561a8798073815 files/digest-roundup-0.5.8 65
 MD5 4d7d00a2645573f2152a0a255fd9d1e1 files/digest-roundup-0.6.4 65
 MD5 36b397bc661ee56ad092acfd8c59df02 files/digest-roundup-0.7.6 65
 MD5 48ba3a85d0081aaadb9f6fe1d0ae26b5 files/roundup 1070
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtX4I1lqEGTUzyQRAsdRAJ44brQiRE8gPKrkaXDScwfLRsUTgQCfYXmc
+6rzU5//gIMQ5vXMLhuUV/Mc=
+=rwIU
+-----END PGP SIGNATURE-----

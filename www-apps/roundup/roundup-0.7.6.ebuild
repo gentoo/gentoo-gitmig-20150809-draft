@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-0.7.6.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-0.7.6.ebuild,v 1.3 2004/09/05 09:01:37 swegener Exp $
 
 inherit eutils
 
@@ -10,6 +10,7 @@ HOMEPAGE="http://roundup.sourceforge.net"
 KEYWORDS="x86 sparc ~amd64 ppc"
 LICENSE="as-is"
 SLOT="0"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.2
 	>=sys-libs/db-3.2.9"
