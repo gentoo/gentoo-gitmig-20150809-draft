@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre9.ebuild,v 1.1 2003/09/26 03:15:27 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.6_pre9.ebuild,v 1.2 2003/11/04 06:47:35 kumba Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.fluxbox.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
 
 DEPEND="virtual/x11
 		>=sys-devel/autoconf-2.52"
