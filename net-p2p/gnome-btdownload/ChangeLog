@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/gnome-btdownload
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnome-btdownload/ChangeLog,v 1.1 2004/07/01 09:06:57 squinky86 Exp $
+
+*gnome-btdownload-0.0.11 (01 Jul 2004)
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org>
+  +gnome-btdownload-0.0.11.ebuild:
+  Initial ebuild. Thanks to David Nielsen <Lovechild@foolclan.com> and Ed Catmur
+  <ed@catmur.co.uk> for the ebuild. Closes #36138
+
