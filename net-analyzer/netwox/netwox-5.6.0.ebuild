@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.6.0.ebuild,v 1.3 2003/12/27 04:05:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.6.0.ebuild,v 1.4 2004/03/21 12:53:39 mboman Exp $
 
 DESCRIPTION="Toolbox of over 400 utilities for testing Ethernet/IP networks"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwox/"
@@ -9,6 +9,7 @@ SRC_URI="http://www.laurentconstantin.com/common/netw/${PN}/download/v${PV/.*}/$
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="=net-libs/netwib-${PV}*"
 
