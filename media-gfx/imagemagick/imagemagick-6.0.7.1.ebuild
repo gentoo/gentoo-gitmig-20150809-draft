@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.13 2004/10/17 08:06:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.0.7.1.ebuild,v 1.14 2004/11/02 01:38:06 spyderous Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -21,8 +21,7 @@ IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz"
 DEPEND=">=sys-apps/sed-4
 	app-arch/bzip2
 	sys-libs/zlib
-	X? ( virtual/x11
-		>=app-text/dgs-0.5.9.1 )
+	X? ( virtual/x11 )
 	cups?   ( virtual/ghostscript )
 	jpeg? ( >=media-libs/jpeg-6b )
 	lcms? ( >=media-libs/lcms-1.06 )
