@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/bluej-bin-2.0.0.ebuild,v 1.2 2004/10/22 10:51:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/bluej-bin-2.0.2.ebuild,v 1.1 2004/11/17 13:54:14 lanius Exp $
 
 inherit java-pkg
 
@@ -38,7 +38,6 @@ src_install()
 	dodir /usr/share/bluej/
 	cp -R lib ${D}/usr/share/bluej/
 	java-pkg_dojar lib/*.jar
-	#java-pkg_dojar lib/*.zip
 	cp -R examples ${D}/usr/share/bluej/
 
 	dobin ${FILESDIR}/bluej

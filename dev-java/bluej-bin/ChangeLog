@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/bluej-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/ChangeLog,v 1.5 2004/10/22 10:51:41 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/ChangeLog,v 1.6 2004/11/17 13:54:14 lanius Exp $
+
+*bluej-bin-2.0.2 (17 Nov 2004)
+
+  17 Nov 2004; <heino@gentoo.org> -bluej-bin-2.0.0.ebuild,
+  +bluej-bin-2.0.2.ebuild:
+  version bump
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> bluej-bin-1.3.5.ebuild,
   bluej-bin-2.0.0.ebuild:
