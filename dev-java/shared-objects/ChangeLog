@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/shared-objects
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.1 2004/07/20 00:08:20 karltk Exp $
+
+*shared-objects-1.4 (20 Jul 2004)
+
+  20 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> shared-objects-1.4.ebuild:
+  Initial import. Ebuild submitted by myself.
