@@ -7,32 +7,18 @@
 -Gentoo : LinuxCommon, FilePickers, GlobalDesktopFiles, NonArkCommon, Gcc34, GentooOnly, NoRpath
 -GentooGNOME : Gentoo, GnomeVFS, NovellOnly
 -GentooKDE : Gentoo, KDECommon
-+GentooBase : LinuxCommon, FilePickers, GlobalDesktopFiles, NonArkCommon, NoRpath
++GentooBase : LinuxCommon, FilePickers, GlobalDesktopFiles, NonArkCommon, Gcc34, NoRpath
 +Gentoo : GentooBase
 +GentooGNOME : GentooBase, GnomeVFS, NovellOnly
 +GentooKDE : GentooBase, KDECommon
  
  # somewhat odder:
  Win32 : VCLPlug, Common, ODKFixes, VBABits, Win32Only, NoRpath
-@@ -1225,20 +1225,6 @@
- 
- ########################################################
- 
--[ Gcc34 ]
--gcc34-main.diff
--gcc34-nojava-fix.diff
+@@ -1228,7 +1228,6 @@
+ [ Gcc34 ]
+ gcc34-main.diff
+ gcc34-nojava-fix.diff
 -gcc34-nptl-fix.diff
--gcc34-stlport.diff
--gcc34-sal-link-to-libsupc++.diff
--
--########################################################
--
--[ GentooOnly, RedHatOnly ]
--gcc34-gnome.diff
--
--########################################################
--
- [ TestLayout ]
- # the beginnings of layout
- gui-window-layout.diff
-
+ gcc34-stlport.diff
+ gcc34-sal-link-to-libsupc++.diff
+ 

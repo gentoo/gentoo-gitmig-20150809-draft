@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.106 2005/01/28 17:01:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.107 2005/01/28 19:16:36 suka Exp $
+
+  28 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/1.1.4/gentoo-1.3.8.patch, openoffice-ximian-1.3.8.ebuild:
+  The GCC 3.4 patches also work with gcc 3.3.x, so we don't have to check for
+  gcc-version before applying them. That's fine cause now we can let the
+  ooo-patchset do the work, which cleans up the ebuild a bit.
 
   28 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.8.ebuild:
