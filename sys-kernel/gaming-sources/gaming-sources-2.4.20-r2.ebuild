@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r2.ebuild,v 1.1 2003/04/17 00:35:59 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r2.ebuild,v 1.2 2003/04/21 02:14:10 livewire Exp $
 
 IUSE="build"
 
@@ -14,7 +14,7 @@ OKV="2.4.20"
 EXTRAVERSION="-gaming-r2"
 KV="${OKV}${EXTRAVERSION}"
 S=${WORKDIR}/linux-${KV}
-CKV=6_2.4.20
+CKV=4_2.4.20
 
 DESCRIPTION="Full sources for the Gentoo gaming-optimized kernel"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
