@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.26 2003/10/31 03:16:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.27 2003/10/31 04:21:01 seemant Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -32,13 +32,13 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 
 	if [ ! `is-flag "-fomit-frame-pointer"` ]
 	then
 		append-flags "-fomit-frame-pointer"
 	fi
-	
+
 	local myconf
 
 	use static && myconf="${myconf} --enable-static"
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-		
+
 	einstall \
 		man3dir=${D}/usr/share/man/man3 || die
 
