@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.6.ebuild,v 1.2 2004/09/05 08:23:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.6.ebuild,v 1.3 2004/12/14 22:25:08 mr_bones_ Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="dev-python/wxpython
+DEPEND="<dev-python/wxpython-2.5
 		dev-python/pyxml"
 
 S="${WORKDIR}/${MY_P}"
