@@ -1,6 +1,14 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.10 2005/03/05 08:49:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.11 2005/04/02 23:39:33 matsuu Exp $
+
+*snack-2.2.9 (02 Apr 2005)
+
+  02 Apr 2005; MATSUU Takuto <matsuu@gentoo.org> metadata.xml,
+  +snack-2.2.9.ebuild:
+  Version bumped. cleanup ebuild.
+  Added threads and python USE flags.
+  Maintainership to tcltk herd
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> snack-2.2.4.ebuild:
   Stable on ppc64
