@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1.ebuild,v 1.1 2003/11/21 20:12:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/gtkada-2.2.1.ebuild,v 1.2 2004/01/04 18:48:52 aliz Exp $
 
 inherit gnat
 
@@ -20,6 +20,11 @@ RDEPEND=""
 
 S="${WORKDIR}/${Name}-${PV}"
 
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/${PN}-2.2.0-gentoo.patch
+}
+
 src_compile() {
 	local myconf
 	myconf=""
@@ -27,7 +32,6 @@ src_compile() {
 	use nls    || myconf="${myconf} --disable-nls"
 	use opengl && myconf="${myconf} --with-GL=auto"
 
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch
 	sed -i -e "s|-I\$prefix/include|-I/usr/lib/ada/adainclude|" \
 		src/gtkada-config.in
 	sed -i -e "s|-L\$prefix/include|-L/usr/lib/ada/adalib|" \

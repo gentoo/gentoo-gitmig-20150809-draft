@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/gps-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.4 2003/12/12 05:08:44 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.5 2004/01/04 18:48:52 aliz Exp $
 
   11 Dec 2003; George Shapovalov <george@gentoo.org> gps-bin-1.2.2.ebuild:
   fixed symlink to create the correct point version (#35596)
@@ -11,7 +11,7 @@
   17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
   Added metadata.xml.
 
-*gps-bin-1.2.2.ebuild (09 Aug 2003)
+*gps-bin-1.2.2 (09 Aug 2003)
 
   09 Aug 2003; George Shapovalov <george@gentoo.org> gps-bin-1.2.2.ebuild, Manifest, files/{10gps-bin,digest-gps-bin-1.2.2} :
   initial release (#24630)

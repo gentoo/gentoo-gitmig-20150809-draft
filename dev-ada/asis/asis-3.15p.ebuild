@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.8 2003/10/28 20:01:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.9 2004/01/04 18:48:52 aliz Exp $
 
 inherit gnat
 
@@ -17,9 +17,8 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 src_unpack() {
-	unpack "${P}-src.tgz"
-	cd "${S}"
-	patch -p1 < "${FILESDIR}/${P}.diff"
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/${P}.diff
 }
 
 src_compile() {
