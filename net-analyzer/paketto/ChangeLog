@@ -1,0 +1,8 @@
+# ChangeLog for net-analyzer/paketto
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.1 2002/11/23 20:18:35 vapier Exp $
+
+*paketto-1.0 (23 Nov 2002)
+
+  23 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Benjamin Ritcey <gentoo@ritcey.com>.
