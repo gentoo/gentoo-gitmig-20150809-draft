@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.13 2004/09/18 03:03:03 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.14 2004/10/02 15:04:26 pfeifer Exp $
+
+*adodb-4.53 (02 Oct 2004)
+
+  02 Oct 2004; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.53.ebuild:
+  Version bump. 
 
   17 Sep 2004; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.52.ebuild:
   Mark stable on x86.
@@ -12,7 +17,7 @@
 
   09 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org> adodb-4.0.5.ebuild,
   adodb-4.50.ebuild, adodb-4.51.ebuild:
-  Fix RDEPEND for virtual-php since nothing less than 4.38 is the tree. 
+  Fix RDEPEND for virtual-php since nothing less than 4.38 is in the tree. 
 
   03 Aug 2004; <agriffis@gentoo.org> adodb-4.51.ebuild:
   add ~ia64 #56295
