@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.6 2002/12/24 13:15:08 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.7 2003/01/03 07:06:37 hannes Exp $
+
+*mldonkey-2.02-r1 (03 Jan 2003)
+
+  03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> mldonkey-2.02-r1.ebuild:
+  added pango patch if USE=mldonkeypango is set.
 
 *mldonkey-2.02 (24 Dec 2002)
 
