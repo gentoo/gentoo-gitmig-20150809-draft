@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk2/mod_jk2-2.0.4.ebuild,v 1.1 2004/12/11 01:18:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk2/mod_jk2-2.0.4.ebuild,v 1.2 2004/12/11 01:20:17 karltk Exp $
 
 DESCRIPTION="JK2 module that is used to connect tomcat to apache2 using the ajp13 protocol"
 HOMEPAGE="http://jakarta.apache.org/tomcat/connectors-doc/jk2/index.html"
 SRC_URI="mirror://apache/jakarta/tomcat-connectors/jk2/source/jakarta-tomcat-connectors-jk2-${PV}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="=net-www/apache-2*
 	>=virtual/jdk-1.4"

@@ -1,5 +1,5 @@
-MD5 8f0c98828a0932c82af687bd7a060857 mod_jk2-2.0.4.ebuild 1528
-MD5 e756d74dffe50c1f1d7459896fe8ace4 ChangeLog 458
+MD5 7c4f95b67d24f5531ded6ae9cbc920ec mod_jk2-2.0.4.ebuild 1535
+MD5 b98bdfdded6cd72c135dae063d0e11f9 ChangeLog 595
 MD5 349d3af72865d1e69d5d48d7c6d8a944 metadata.xml 159
 MD5 c6bcf5cf5fd668fefc072e92dd64ca1c files/89_mod_jk2.conf 588
 MD5 bc2adcea4c36c1955a114a0a22d3d0c9 files/workers2.properties 171
