@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.36 2004/12/29 20:13:08 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.37 2005/02/11 20:58:27 kaiowas Exp $
+
+  11 Feb 2005; petre rodan <kaiowas@gentoo.org> stunnel-3.22-r2.ebuild,
+  stunnel-3.26.ebuild, stunnel-4.04-r1.ebuild, stunnel-4.04-r2.ebuild,
+  stunnel-4.04-r3.ebuild, stunnel-4.05.ebuild:
+  added selinux RDEPEND - bug 79750
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

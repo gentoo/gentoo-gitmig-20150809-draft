@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.26.ebuild,v 1.9 2004/10/14 14:32:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-3.26.ebuild,v 1.10 2005/02/11 20:58:27 kaiowas Exp $
 
 inherit eutils
 
@@ -11,9 +11,10 @@ SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc alpha ppc ~amd64 ~ppc-macos"
-IUSE=""
+IUSE="selinux"
 
-RDEPEND=">=dev-libs/openssl-0.9.6j"
+RDEPEND=">=dev-libs/openssl-0.9.6j
+	selinux? ( sec-policy/selinux-stunnel )"
 DEPEND="${RDEPEND}
 	virtual/libc"
 
