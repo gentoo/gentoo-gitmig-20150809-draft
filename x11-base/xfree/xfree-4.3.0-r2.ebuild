@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.30 2003/06/03 00:41:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.31 2003/06/05 01:32:47 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -369,6 +369,14 @@ src_unpack() {
 			chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers \
 			XF86ExtraCardDrivers" >> config/cf/host.def
 	fi
+
+    if [ "${ARCH}" = "sparc" ]
+    then
+        echo "#define XF86CardDrivers sunffb sunleo suncg6 suncg3 suncg15 \
+        suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
+        XF86OSCardDrivers XF86ExtraCardDrivers \
+        DevelDrivers" >> config/cf/host.def
+    fi
 
 	if [ -n "`use xml`" ]
 	then
