@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6400c48b00c7c64da46529cca7fb94f7 rifiuti-20040505_p1.ebuild 660
+MD5 e7061e00f31f66521b2231654e92e49e ChangeLog 390
 MD5 feba8170292590aeb74f51a1ec44fdb8 metadata.xml 315
-MD5 ebd7f6c982c543af1df2a78a00d9015d ChangeLog 391
+MD5 43895841c36545869aa75a060df10acb rifiuti-20040505_p1.ebuild 659
 MD5 ba597d3e2ba9a117e74ac447ce538da9 files/digest-rifiuti-20040505_p1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvLFPmdTrptrqvGERAk29AKCOObEknM3QZKZCr0E0oiKK1HL79wCeLQ8/
-6t/bLjiErPEJt+4Tn5J2+gs=
-=zeTz
------END PGP SIGNATURE-----

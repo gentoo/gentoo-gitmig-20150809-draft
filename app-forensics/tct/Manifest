@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f05050ec19ea40d649a3bf46b2e6dac tct-1.15-r1.ebuild 2507
-MD5 1bb4a5dbd19cd3607064aaad65cab831 tct-1.15.ebuild 2343
-MD5 8898e6a4abf587391e4dca30c0f19c3a ChangeLog 992
+MD5 78a1e4199dc94f2f050d132edeea6d1b ChangeLog 995
 MD5 41bbb72e2d5a56f8446b18931f49c48a metadata.xml 236
-MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
+MD5 b09e4d5a8929bc0d27b844736a922007 tct-1.15.ebuild 2348
+MD5 b28108ec662c44053134c847a7a239ef tct-1.15-r1.ebuild 2510
 MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15 60
-MD5 5a8ca858fffe912a24b5239392257ee4 files/tct-1.15-r1-gentoo.diff 5909
+MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
 MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15-r1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkhcaEZCkKN40op4RAhh1AJ0bmsaeLhF1jV7VgUgjqN5VYfWWRACfVE7U
-HqXBdD3fffsQlpjROqZuW0w=
-=Y2/j
------END PGP SIGNATURE-----
+MD5 5a8ca858fffe912a24b5239392257ee4 files/tct-1.15-r1-gentoo.diff 5909

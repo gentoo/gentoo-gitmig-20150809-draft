@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a1f702729d19acca03a2abc1d59b874 galleta-20040505_p1.ebuild 674
+MD5 b60f92a25b1412b83df1ecc321316d59 ChangeLog 390
+MD5 b1bbe9bb404b086f28b013bbca9843d5 galleta-20040505_p1.ebuild 673
 MD5 7383e502bbfe4bb327de704889dfd5d6 metadata.xml 311
-MD5 0b2dbb8b4fc95d1318f3aec8d6936b5c ChangeLog 391
 MD5 02a8fd4606aa31fb7b4f329318d956d4 files/digest-galleta-20040505_p1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvKw6mdTrptrqvGERAoCNAJ4ng9XUZQ3rUbMxgUPnb6d+bgIWUwCeLNkb
-yM+56nnZcIKec2Bmygf/Bxc=
-=hRPT
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c6586d5925113c3074caee89effd8f5 regviewer-0.1.ebuild 1027
-MD5 cec296c8a9fca1ab3bb8a2695fe9096b ChangeLog 383
+MD5 4eb785893193db226e0d35b8b2297676 ChangeLog 382
 MD5 905f73ad32e3912c04ad371b1a38de52 metadata.xml 539
+MD5 ebc33c4ee8b3db701125739f872e74ed regviewer-0.1.ebuild 1026
 MD5 bec32da31766226a75b745647632fdc8 files/digest-regviewer-0.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvCrAmdTrptrqvGERAouzAJ9Y/tKOty1apVJs5UNJ2TftBUFwkgCaA5Lb
-Kx2rm26mwqBhrlgw2prGS3k=
-=tK1y
------END PGP SIGNATURE-----
