@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.1 2004/06/20 19:43:23 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.2 2004/06/23 20:55:07 dholm Exp $
+
+  23 Jun 2004; David Holm <dholm@gentoo.org> basket-0.4.0d.ebuild:
+  Added to ~ppc.
 
 *basket-0.4.0d (20 Jun 2004)
 
