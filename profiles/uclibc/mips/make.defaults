@@ -1,5 +1,5 @@
-USE="mips berkdb ncurses python readline zlib uclibc"
-GRP_STAGE23_USE="mips berkdb ncurses python readline zlib uclibc"
+USE="mips berkdb ncurses readline zlib uclibc"
+GRP_STAGE23_USE="mips berkdb ncurses readline zlib uclibc"
 STAGE1_USE="uclibc"
 
 ARCH="mips"

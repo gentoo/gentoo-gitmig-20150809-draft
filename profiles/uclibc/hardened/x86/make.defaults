@@ -1,5 +1,5 @@
-USE="x86 berkdb crypt ncurses python readline ssl tcpd zlib pic pie hardened uclibc"
-GRP_STAGE23_USE="x86 berkdb crypt ncurses python readline ssl tcpd zlib pic pie hardened uclibc"
+USE="x86 berkdb crypt ncurses readline ssl tcpd zlib pic pie hardened uclibc"
+GRP_STAGE23_USE="x86 berkdb crypt ncurses readline ssl tcpd zlib pic pie hardened uclibc"
 
 ARCH="x86"
 COMPILER="gcc3"
