@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.3 2002/10/31 22:10:25 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.1.ebuild,v 1.4 2002/11/05 03:09:37 rphillips Exp $
 
 IUSE="X zlib ldap nls"
 
@@ -24,7 +24,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	use ldap || myconf="${myconf} --disable-ldap"
 	use zlib || myconf="${myconf} --with-included-zlib"
-	use X && 
+	use X && myconf="${myconf} --with-photo-viewer=xview"
 
 	#Still needed?
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
