@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.12 2004/01/09 12:31:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c-r1.ebuild,v 1.13 2004/01/15 13:52:50 aliz Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~hppa ~arm ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~mips ~hppa ~arm amd64 ~ia64 ppc64"
 
 src_unpack() {
 	unpack ${A}
@@ -46,7 +46,7 @@ src_unpack() {
 	fi
 
 	if [ "$(gcc-version)" == "3.3" ] || [ "$(gcc-version)" == "3.2" ] ; then
-		filter-flags -fprefetch-loop-arrays
+		filter-flags -fprefetch-loop-arrays -freduce-all-givs
 	fi
 
 	# replace CFLAGS
