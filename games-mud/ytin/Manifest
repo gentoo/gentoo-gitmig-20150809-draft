@@ -1,4 +1,6 @@
-MD5 9fcf3be8d8adc5f6d5b9d00ff288a593 ChangeLog 881
+MD5 2bf1e858a35f7f1195ea949cf9ad2210 ChangeLog 1030
 MD5 6e45145462827bec45fcb7a1bf9233ac ytin-1.83.5.ebuild 943
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 2506e67e7ad2c3523d489779f5e952e8 ytin-1.83.5-r1.ebuild 946
 MD5 aa55b01a5f2363e4c115d49c0447d345 files/digest-ytin-1.83.5 56
+MD5 aa55b01a5f2363e4c115d49c0447d345 files/digest-ytin-1.83.5-r1 56

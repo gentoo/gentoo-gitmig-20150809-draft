@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/ytin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ChangeLog,v 1.4 2004/03/24 05:16:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/ytin/ChangeLog,v 1.5 2004/03/24 05:17:37 mr_bones_ Exp $
+
+*ytin-1.83.5-r1 (23 Mar 2004)
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ytin-1.83.5-r1.ebuild:
+  rev bump to get new install location
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ytin-1.83.5.ebuild:
   don't rdepend on sed; error check sed; use dogamesbin
