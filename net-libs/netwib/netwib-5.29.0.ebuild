@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.29.0.ebuild,v 1.1 2005/03/24 01:08:55 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.29.0.ebuild,v 1.2 2005/04/01 14:48:39 vanquirius Exp $
+
+# NOTE: netwib, netwox and netwag go together, bump all or bump none
 
 inherit toolchain-funcs
 
