@@ -1,0 +1,16 @@
+# ChangeLog for media-video/ati-drivers
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.1 2002/12/26 22:56:00 bcowan Exp $
+
+*ati-drivers-2.5.1 (26 Dec 2002)
+  
+  26 Dec 2002; Brad Cowan <bcowan@gentoo.org> ati-drivers-2.5.1.ebuild,
+  ChangeLog, files/digest-ati-drivers-2.5.1:
+  Initial import.
+   
+  29 Nov 2002; Luca Barbato <lu_zero@psxfanatics.com> ati-drivers-2.5.1.ebuild,
+  ChangeLog, files/digest-ati-drivers-2.5.1:
+  Initial ebuild for the ati precompiled drivers.
+  The idea of using cpio is from the icc ebuilds, the rest is from the nvidia-*
+  ebuilds.
+
