@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.2 2003/04/24 10:18:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r2.ebuild,v 1.3 2003/04/24 18:30:57 robbat2 Exp $
 
 inherit php eutils
 
@@ -20,12 +20,10 @@ src_compile() {
 	
 	use readline && myconf="${myconf} --with-readline"
 
-	
 	myconf="${myconf} \
 		--disable-cgi \
 		--enable-cli \
-		--enable-pcntl \
-		--with-pear"
+		--enable-pcntl"
 	
 	php_src_compile
 
