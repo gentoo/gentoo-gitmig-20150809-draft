@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.32 2005/01/26 21:50:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.33 2005/03/27 19:09:56 luckyduck Exp $
+
+*xalan-2.6.0-r2 (27 Mar 2005)
+
+  27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +xalan-2.6.0-r2.ebuild:
+  moved from dev-java/regexp to dev-java/jakarta-regexp dependency, see #71336.
+  keyworded ~amd64 and introduced support for the jikes and source useflag.
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org> xalan-2.6.0-r1.ebuild:
   Stable on ppc64
