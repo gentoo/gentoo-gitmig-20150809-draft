@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.17 2005/01/23 11:50:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/packages,v 1.18 2005/02/14 12:36:13 eradicator Exp $
 
 # Sometimes necessary to trick programs into thinking we're really
 # a sparc32 system.
@@ -11,10 +11,10 @@
 *virtual/os-headers
 
 # Force toolchain versions that have been tested to work and are multilib aware
-*>=sys-apps/portage-2.0.51-r9
+*>=sys-apps/portage-2.0.51-r13
 *>=sys-devel/binutils-2.15.92.0.2-r2
 -*<sys-devel/gcc-3.4.1
 *>=sys-devel/gcc-3.4.3-r1
-*>=sys-libs/glibc-2.3.4.20040808-r1
-*>=sys-devel/gcc-config-1.3.9
->=sys-devel/distcc-2.18.3-r1
+*>=sys-libs/glibc-2.3.4.20041102
+*>=sys-devel/gcc-config-1.3.10
+>=sys-devel/distcc-2.18.3-r4
