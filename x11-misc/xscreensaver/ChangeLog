@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.14 2002/12/13 11:00:55 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.15 2003/02/04 00:24:45 seemant Exp $
+
+*xscreensaver-4.07 (03 Feb 2003)
+
+  03 Feb 2003; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.07.ebuild
+  files/digest-xscreensaver-4.07 :
+
+  Version bump.
+
+*xscreensaver-4.06-r2 (26 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -14,8 +23,6 @@
 
   26 Oct 2002; Maik Schreiber <blizzy@gentoo.org> xscreensaver-4.06-r2.ebuild:
   Remove /usr/share/control-center/capplets/screensaver-properties.desktop.
-
-*xscreensaver-4.06-r2 (26 Oct 2002)
 
   26 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06-r2.ebuild:
   Redo the whole thing not to depend on gtk+-2.0 by default, and enable
