@@ -1,0 +1,5 @@
+MD5 6f4b95e5d6038367ec4a97bfd2f39053 TkZinc-3.2.100.ebuild 930
+MD5 ae7d35b0e9210b59b954696dbed0ab91 metadata.xml 260
+MD5 d25f537b32d643ed8f108c76c71d86b2 ChangeLog 357
+MD5 9afdeb5a2ecca7f53e8af3c9afd4d64f files/digest-TkZinc-3.2.100 68
+MD5 8f62e724d25db6215c67b8e00fc02785 files/without-opengl.patch 267
