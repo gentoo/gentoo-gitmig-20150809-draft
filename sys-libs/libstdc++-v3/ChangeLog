@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.28 2004/11/01 04:28:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.29 2004/11/11 09:33:09 kumba Exp $
+
+  11 Nov 2004; Joshua Kinard <kumba@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild,
+  libstdc++-v3-3.3.4.ebuild:
+  Marked unstable on sparc.
 
   31 Oct 2004; Joshua Kinard <kumba@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   Marked stable on mips.
