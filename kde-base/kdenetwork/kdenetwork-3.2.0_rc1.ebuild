@@ -1,13 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.1.2.ebuild,v 1.6 2003/09/06 23:54:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0_rc1.ebuild,v 1.1 2004/01/19 03:25:39 caleb Exp $
 inherit kde-dist
 
-IUSE=""
-DESCRIPTION="KDE network apps: kmail, kppp, knode..."
-KEYWORDS="x86 ppc sparc alpha hppa"
-newdepend "=kde-base/kdebase-${PV}*"
+IUSE="slp samba"
+DESCRIPTION="KDE network apps: kopete, kppp, kget. kmail and knode are now in kdepim."
+KEYWORDS="~x86 ~sparc ~amd64"
+DEPEND="~kde-base/kdebase-${PV}
+	slp? ( net-libs/openslp )
+	samba? ( net-fs/samba )
+	!net-im/kopete
+	!net-wireless/kwifimanager"
+RDEPEND="$DEPEND"
 
+myconf="$myconf `use_enable slp`"
 
 src_install() {
 	kde_src_install
