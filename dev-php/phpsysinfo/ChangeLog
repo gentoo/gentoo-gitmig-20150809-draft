@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.8 2004/03/19 10:16:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.9 2004/03/21 14:56:37 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> phpsysinfo-2.1.ebuild:
+  adding categorie. see 45110 for details
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> phpsysinfo-2.1-r1.ebuild:
   Inherit eutils and amd64 unmask.
