@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.09.ebuild,v 1.13 2005/01/12 23:34:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.09.ebuild,v 1.14 2005/03/23 19:15:37 mcummings Exp $
 
 inherit perl-module
 
@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
 IUSE="nls"
 
+SRC_TEST="do"
+
 # Twig ONLY works with expat 1.95.5
 DEPEND="${DEPEND}
 	>=dev-perl/XML-Parser-2.31
@@ -24,8 +26,3 @@ DEPEND="${DEPEND}
 	dev-perl/XML-XPath
 	>=dev-libs/expat-1.95.5
 	nls? ( >=dev-perl/Text-Iconv-1.2-r1 )"
-
-src_compile() {
-	perl-module_src_compile
-	perl-module_src_test || die "test failed"
-}

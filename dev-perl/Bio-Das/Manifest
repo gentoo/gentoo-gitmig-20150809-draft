@@ -1,4 +1,16 @@
-MD5 52d8314f4c23994517e31cd9e665145a Bio-Das-0.93.ebuild 590
-MD5 321360d10c0f22c2eb76cdeefea1a104 ChangeLog 569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 91e52d62dc16e242f1b134c54cd1ca9c Bio-Das-0.93.ebuild 594
+MD5 1c36c83993914cd35054ee2c2eff44fd ChangeLog 720
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
+MD5 f959b751148d3eff4453c39f88ece87b Bio-Das-1.00.ebuild 615
 MD5 db389ae95116a7f5d4027ab2f159d764 files/digest-Bio-Das-0.93 64
+MD5 d79a95f4b1a4eae8c9100b5e053aeb08 files/digest-Bio-Das-1.00 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQcFItG5z4I8BtQoRAkNFAJ9oun9csyrIgh9Ah3n5TUPVNgyzSwCeKuZ+
+oIC+tWCVJTRG4JmnafPSmXc=
+=yknA
+-----END PGP SIGNATURE-----
