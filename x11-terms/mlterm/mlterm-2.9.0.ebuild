@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.0.ebuild,v 1.3 2005/01/12 18:39:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.0.ebuild,v 1.4 2005/02/10 08:53:18 usata Exp $
 
 IUSE="truetype gtk imlib bidi nls uim"
 #IUSE="${IUSE} m17n-lib iiimf"
