@@ -1,14 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@cvs.gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.0.ebuild,v 1.1 2001/12/31 23:46:18 azarah Exp $
-
-# Drip needs automake-1.5 exactly
-AMAKEVER=1.5b
-ACONFVER=2.52
-
-. /usr/portage/eclass/inherit.eclass || die
-inherit autotools || die
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r1.ebuild,v 1.1 2002/04/06 15:54:48 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Drip - A DVD to DIVX convertor frontend"
@@ -16,14 +9,14 @@ SRC_URI="${SRC_URI} http://drip.sourceforge.net/files/${P}.tar.gz"
 HOMEPAGE="http://drip.sourceforge.net/"
 
 RDEPEND="gnome-base/gnome-libs
-	>=media-video/avifile-0.6
+	=media-video/avifile-0.6*
 	media-libs/libdvdcss
 	media-libs/libdvdread
 	media-libs/gdk-pixbuf"
 	
-DEPEND="${DEPEND}
-	${RDEPEND}
-	dev-lang/nasm"
+DEPEND="${RDEPEND}
+	dev-lang/nasm
+	>=sys-devel/automake-1.5-r1"
 
 
 src_unpack() {
@@ -31,13 +24,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	patch < ${FILESDIR}/drip-0.8.0-automake.diff || die
+	cp encoder/plugin-loader.cpp encoder/plugin-loader.cpp.orig
+	sed -e "s:/usr/local/lib:/usr/lib:g" \
+		encoder/plugin-loader.cpp.orig >encoder/plugin-loader.cpp
 }
 
 src_compile() {
 
-	install_autotools
-        
+	libtoolize --copy --force
+
 	local myconf
 	use nls || myconf="--disable-nls"
 
