@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20021219.ebuild,v 1.1 2003/01/19 15:25:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.3.20021219.ebuild,v 1.2 2003/01/19 16:17:05 mholzer Exp $
 
 IUSE="sdl mmx mpeg sse dvd encode X quicktime avi"
 
@@ -24,13 +24,14 @@ DEPEND=">=media-libs/a52dec-0.7.3
 	>=media-libs/libdv-0.9.5
 	>=dev-lang/nasm-0.98.34
 	X? ( virtual/x11 )
-	avi? ( <=media-video/avifile-0.7.22
-	>=media-video/avifile-0.7.4 )
+	avi? (	<=media-video/avifile-0.7.22
+		>=media-video/avifile-0.7.4 )
 	dvd? ( media-libs/libdvdread )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.89 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( media-libs/quicktime4linux )
+	media-libs/libdvdread
 	>=media-video/mplayer-0.90_pre10
 	=media-libs/netpbm-9.12*"
 
@@ -124,4 +125,3 @@ src_install () {
 	einfo "This ebuild uses subtitles !!!"
 	einfo ""
 }
-
