@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4.1-r2.ebuild,v 1.1 2003/04/10 10:59:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4.1-r2.ebuild,v 1.2 2003/10/04 01:14:37 strider Exp $
 
 S=${WORKDIR}/${PN}-j_2_4_1
 DESCRIPTION="XSLT processor"
@@ -16,6 +16,7 @@ KEYWORDS="x86 sparc ppc"
 IUSE="doc"
 
 src_compile() {
+	CLASSPATH=$CLASSPATH:`pwd`/bin/xercesImpl.jar:`pwd`/bin/bsf.jar:`pwd`/src\
 	ant jar ${myc} || die "build failed"
 
 	if [ -n "`use doc`" ] ; then
