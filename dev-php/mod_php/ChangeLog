@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.153 2004/06/25 01:17:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.154 2004/06/28 00:15:12 robbat2 Exp $
+
+*mod_php-4.3.7-r1 (27 Jun 2004)
+
+  27 Jun 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.7-r1.ebuild,
+  files/70_mod_php.conf:
+  fix bugs 55150, 52165, 52912 and 55129
 
   23 Jun 2004; Stuart Herbert <stuart@gentoo.org> :
   Added support for hardenedphp into mod_php 4.3.7
