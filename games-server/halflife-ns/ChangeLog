@@ -1,0 +1,13 @@
+# ChangeLog for app-games/halflife-ns
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/ChangeLog,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+*halflife-ns-2.0 (03 Aug 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #25712.
+
+*halflife-ns-1.04 (08 Jul 2003)
+
+  08 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

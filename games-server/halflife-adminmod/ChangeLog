@@ -1,0 +1,19 @@
+# ChangeLog for app-games/halflife-adminmod
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/ChangeLog,v 1.1 2003/09/10 05:51:10 vapier Exp $
+
+*halflife-adminmod-2.50.56a (12 Aug 2003)
+
+  12 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
+
+*halflife-adminmod-2.50.52 (08 Jul 2003)
+
+  26 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Tweak default config files ... turn off default pws and stuff.
+
+  25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added halflife-modsetup support.
+
+  08 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

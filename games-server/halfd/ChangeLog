@@ -1,0 +1,8 @@
+# ChangeLog for app-games/halfd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halfd/ChangeLog,v 1.1 2003/09/10 05:51:10 vapier Exp $
+
+*halfd-2.19 (26 Jul 2003)
+
+  26 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me #25188.

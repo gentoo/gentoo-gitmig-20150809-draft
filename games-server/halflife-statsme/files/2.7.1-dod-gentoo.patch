@@ -1,0 +1,26 @@
+--- motd.cfg.orig	2003-08-10 14:35:31.000000000 -0400
++++ motd.cfg	2003-08-10 14:53:09.000000000 -0400
+@@ -7,0 +8 @@
++sm_motd "   This server is powered by Gentoo Linux"
+@@ -10,0 +12 @@
++sm_motd "   Larry the Cow is:  on the prowl"
+--- statsme.cfg.orig	2003-08-10 14:35:37.000000000 -0400
++++ statsme.cfg	2003-08-10 14:54:42.000000000 -0400
+@@ -20 +20 @@
+-sm_menupassword "root" // To display public menu type as player in the console: statsme_menu root
++//sm_menupassword "gentoostat" // To display public menu type as player in the console: statsme_menu root
+@@ -68 +68 @@
+-sm_ranktitle "Top 15"
++sm_ranktitle "Larry the Cow's Top 15"
+@@ -88 +88 @@
+-sm_menu "Top15 Rank\y\R{sm_mode&c?ON:OFF}" "sm_rankcmd {sm_mode&c?\'\':top15};sm_mode {sm_mode&c?remove:set} c"
++sm_menu "Larry the Cow's Top15 Rank\y\R{sm_mode&c?ON:OFF}" "sm_rankcmd {sm_mode&c?\'\':top15};sm_mode {sm_mode&c?remove:set} c"
+--- scripts/gresuc.cfg.org	2003-08-10 14:44:34.000000000 -0400
++++ scripts/gresuc.cfg	2003-08-10 14:45:07.000000000 -0400
+@@ -7 +7 @@
+-sm_do "{#.gs0=Ha! Ha! Ha! {k.name} good job!}"
++sm_do "{#.gs0=HAHA {k.name} blew up like Larry the Cow !}"
+--- scripts/headshot.cfg.org	2003-08-10 14:44:34.000000000 -0400
++++ scripts/headshot.cfg	2003-08-10 14:45:58.000000000 -0400
+@@ -17,0 +18 @@
++sm_do "{#.txths7={v.name}'s head just got tipped over by Larry the Cow!}"

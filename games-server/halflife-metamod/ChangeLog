@@ -1,0 +1,13 @@
+# ChangeLog for app-games/halflife-metamod
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/ChangeLog,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+*halflife-metamod-1.16.2 (06 Aug 2003)
+
+  06 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + default to binary install #25236.
+
+*halflife-metamod-1.16 (08 Jul 2003)
+
+  08 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

@@ -1,0 +1,6 @@
+MD5 808a8631750538467a9bcf2bba8b5d70 files/digest-halflife-hlguard-1.41 60
+MD5 9f40c4af0ea9c0b44083202aee530e75 files/digest-halflife-hlguard-1.50.02 63
+MD5 45da6ec4629a3110beb890fb2ad7fadf files/modsetup 1350
+MD5 185556b505ecd2ab3cb1cb0ccc36f04e halflife-hlguard-1.41.ebuild 810
+MD5 f4c361f36123be68b168d7c4c0fcf22f ChangeLog 505
+MD5 753b8e4acaf6da1bb8bfcc9a6842f12b halflife-hlguard-1.50.02.ebuild 958

@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+    use net
+}
+
+start() {
+    ebegin "Starting monopd server"
+    start-stop-daemon --start -q -b --exec /usr/games/bin/monopd
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping monopd server"
+    start-stop-daemon --stop -q --exec /usr/games/bin/monopd
+    eend $?
+}

@@ -1,0 +1,33 @@
+# ChangeLog for app-games/monopd
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+*monopd-0.8.2-r1 (25 Aug 2003)
+
+  25 Aug 2003; Michael Sterrett <msterret@gentoo.org> monopd-0.8.2-r1.ebuild,
+  files/monopd:
+  Added a monopd file for /etc/init.d supplied by Nikolas Garofil via bug 27322
+
+  21 Aug 2003; Michael Sterrett <msterret@gentoo.org> monopd-0.8.2.ebuild:
+  add error message for make install
+
+*monopd-0.8.2 (19 Jul 2003)
+
+  19 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #24819 + games.eclass support.
+
+*monopd-0.7.0 (06 Jan 2003)
+
+  06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> monopd-0.7.0.ebuild:
+  version bump, thanks to cap@capsi.com (Rob Kaper) (bug #9872)
+
+*monopd-0.4.3-r1 (1 Oct 2002)
+
+  01 Oct 2002; Mike Frysinger <vapier@gentoo.org> monopd-0.4.3-r1.ebuild :
+  Old version installed some parts into ${D}/${D}/ ... fixed that
+
+*monopd-0.4.3 (1 Aug 2002)
+
+  1 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> monopd-0.4.3.ebuild
+  First relase 
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while :; do
+	GENTOO_DIR/hlstats.pl 2>1 >> /var/log/hlstats.log
+	echo >> /var/log/hlstats.log
+	sleep 5
+done

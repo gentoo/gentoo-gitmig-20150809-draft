@@ -1,0 +1,51 @@
+#!/bin/bash
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-hlguard/files/modsetup,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+source GENTOO_CFGDIR/modsetup.conf || { echo "Could not find config file!" ; exit 1 ; }
+
+moddir=${PWD}
+plugindir=${moddir}/../addons/hlguard/
+
+gen_default_cfgs() {
+	mkdir ${moddir}/addons
+	ln -s ../../addons/hlguard addons/hlguard
+	#local m=${moddir}
+	#local c=${plugindir}/
+	#for f in statsme.cfg ; do
+	#	[ ! -e ${m}/${f} ] \
+	#		&& cp ${c}/${f} ${m}/
+	#done
+}
+
+while :; do
+case $1 in
+	help)
+		file=`dialog --title "Statsme help" \
+			--menu "Select Help File:" 16 80 10 \
+			hlg_readme.txt.gz 'Basic readme' \
+			http://docs.unitedadmins.com/HLGuard/en/index.htm 'Online Docs' \
+			http://docs.unitedadmins.com/HLGuard/en/about_config_files.htm 'Config files' 2>&1`
+		[ $? -eq 0 ] || exit 0
+		[ "${file:0:4}" != "http" ] && file=/usr/share/doc/halflife-hlguard-*/${file}
+		[ "${file:${#file}-3}" == "htm" ] \
+			&& ${BROWSER} ${file} \
+			|| less ${file}
+		;;
+	config)
+		gen_default_cfgs
+		file=`dialog --title "Statsme config files" \
+			--help-button \
+			--menu "Select file to Edit:" 16 80 10 \
+			hlguard.cfg 'Main configuration file' 2>&1`
+		if [ "${file:0:4}" == "HELP" ] ; then
+			$0 help
+		else
+			[ -z "${file}" ] && exit 0
+			${EDITOR} ${moddir}/addons/hlguard/${file}
+		fi
+		;;
+	*)
+		exit 0
+		;;
+esac
+done

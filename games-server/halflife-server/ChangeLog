@@ -1,0 +1,31 @@
+# ChangeLog for app-games/halflife-server
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Author:  Alexander Gretencord <arutha@gmx.de>
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/ChangeLog,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+*halflife-server-3.1.1.1d (10 Jul 2003)
+
+  30 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump ... and i think this one likes new glibc :)
+
+*halflife-server-3.1.1.1.1c (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  I like patches, dont you ?
+
+*halflife-server-3.1.1.1 (08 Jul 2003)
+
+  08 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Ah, about time this guy was updated.  Only took mmmmmmmm a year ...
+
+*halflife-server-1.1.1.0 (25 July 2002)
+
+  25 July 2002; Seemant Kulleen <seemant@gentoo.org>
+  halflife-server-1.1.1.0.ebuild :
+  Added LICENSE and also put RESTRICT="nostrip" and export DEBUG=yes so that
+  it compiles and _runs_
+
+*halflife-server-1.1.1.0 (5 July 2002)
+
+  05 Jul 2002; Bart Verwilst <verwilst@gentoo.org> :
+  Initial ebuild

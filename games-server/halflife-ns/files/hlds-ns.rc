@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/files/hlds-ns.rc,v 1.1 2003/09/10 05:51:11 vapier Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting halflife ns dedicated"
+	screen -A -m -d -S hlds-ns su - GENTOO_GAMES_USER -c "GENTOO_DIR/hlds-ns ${HLDS_OPTS}" &
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping halflife ns dedicated"
+	local ppid=`screen -list | grep hlds-ns | awk -F . '{ print $1 }' | sed -e s/.//`
+	if [ -z "${ppid}" ] ; then
+		eend 1 "Lost screen session"
+	else
+		local cpid=`pstree -p ${ppid} | sed -e 's:^.*hlds_run(::' -e 's:).*$::'`
+		kill ${ppid} ${cpid}
+		eend $? "Could not kill hlds-ns"
+	fi
+}

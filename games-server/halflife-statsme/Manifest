@@ -1,0 +1,7 @@
+MD5 aceace1c6cd2d9bfb16fb9a6b4e143d1 files/2.7.1-cstrike-gentoo.patch 1546
+MD5 7a993e740e1fc1663a01586d6fab08e1 files/2.7.1-dod-gentoo.patch 1352
+MD5 7a993e740e1fc1663a01586d6fab08e1 files/2.7.1-tfc-gentoo.patch 1352
+MD5 e32b27a9e2015eed8a9b57bac39d641f files/digest-halflife-statsme-2.7.1 437
+MD5 29d1dd74400175067ab9d347a79705d3 files/modsetup 1484
+MD5 afc98f5edcfb6495f41b230ab6390c5c ChangeLog 368
+MD5 1a4922c44016fa97f45e73c54d37f05a halflife-statsme-2.7.1.ebuild 1871
