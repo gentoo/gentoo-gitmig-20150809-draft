@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0.ebuild,v 1.3 2003/03/14 21:26:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0.ebuild,v 1.4 2003/03/20 12:47:11 seemant Exp $
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
@@ -29,7 +29,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	env WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
-	econf `use_with pic` --with-gnu-ld || die
+	econf --with-gnu-ld || die
 	emake || die
 }
 
