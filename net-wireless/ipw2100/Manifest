@@ -6,7 +6,7 @@ MD5 8a68b74057e911e6804f77dc21959e80 metadata.xml 282
 MD5 78f6d8f071cd7615df4ad78abf3e55d0 ipw2100-0.44.ebuild 2305
 MD5 1396122738f1bdc3902e7dc6dde31776 ipw2100-0.55-r1.ebuild 3069
 MD5 b3a600a244bd8a64fd8ade3036a390e1 files/digest-ipw2100-0.55-r1 124
-MD5 fa49e742e2eb33e3bad4c4390f135522 files/digest-ipw2100-0.55-r2 193
+MD5 feb0687b42df7addb26274578808b9aa files/digest-ipw2100-0.55-r2 193
 MD5 0a8c00c1860d7bb54686e647740f23d0 files/ipw2100-0.55-modparam-perm.patch 769
 MD5 1ce1888cb1dcbc65bc76ba8f3f7875b9 files/ipw2100-0.55_manual-disable.patch 2898
 MD5 5ccd21f930c68d8fd53afe3a87bcd56e files/digest-ipw2100-0.44 124
