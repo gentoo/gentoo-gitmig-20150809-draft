@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kcpuload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.6 2004/03/21 19:42:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.7 2004/06/19 03:27:25 mr_bones_ Exp $
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kcpuload-1.9.1.ebuild,
+  kcpuload-1.99.ebuild:
+  Add missing SLOT and IUSE
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> kcpuload-1.99.ebuild:
   Added ~sparc keyword.
