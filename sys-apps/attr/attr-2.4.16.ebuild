@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.16.ebuild,v 1.2 2004/09/02 06:39:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.16.ebuild,v 1.3 2004/10/10 00:28:58 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ~sparc x86"
 IUSE="nls debug static"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
