@@ -1,0 +1,29 @@
+--- gmanedit-0.3.3.orig/src/callbacks.c	2000-09-06 04:46:47.000000000 -0700
++++ gmanedit-0.3.3.orig/src/callbacks.c	2003-04-17 00:35:10.000000000 -0700
+@@ -821,13 +821,14 @@
+ 
+ 	if (datos==NULL)
+ 	{
+-		strcpy(command,"xterm -e man -l ");
++		// forget "xterm -e man -l", it doesn't work
++		strcpy(command,"xterm -e man ");
+ 		strcat(command,temp);
+ 	}
+ 	else
+ 	{
+ 		strcpy(command,datos);
+-		strcat(command," -l ");
++		strcat(command," ");
+ 		strcat(command,temp);
+ 	}	
+ 
+@@ -851,6 +852,9 @@
+ 
+ 	if (bytes_written>0)
+ 		ejecuta(command);
++	// calling unlink here, without a pause, would cause the preview 
++	//window to open, then close immediately
++	sleep(2);
+ 	unlink(temp);
+ }
+ 
