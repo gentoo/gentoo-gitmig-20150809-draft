@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.5 2004/02/25 13:58:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.6 2004/06/09 23:46:09 agriffis Exp $
 
 DESCRIPTION="SSH.COM free for Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
@@ -43,5 +43,5 @@ src_install() {
 	newexe ${FILESDIR}/sshd2 sshd2
 
 	cd ${D}/usr
-	[ `use openssh` ] && find bin sbin share/man -type l -exec rm '{}' \;
+	use openssh && find bin sbin share/man -type l -exec rm '{}' \;
 }
