@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/selinux-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.18 2003/08/14 18:41:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.19 2003/08/14 18:50:19 pebenito Exp $
+
+*selinux-sources-2.4.21-r2 (14 Aug 2003)
+
+  14 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-sources-2.4.21-r2.ebuild:
+  New upstream version. NOTE: This has the new SELinux API, backported from 2.6.
+  The userland is libselinux, not libsecure (selinux-small).
 
   14 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-sources-2.4.20-r5.ebuild, selinux-sources-2.4.21.ebuild:
