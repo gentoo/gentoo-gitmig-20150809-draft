@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.3.ebuild,v 1.1 2004/06/21 23:04:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.3.ebuild,v 1.2 2004/06/22 11:29:32 humpback Exp $
 
 SVER="0_90_0_3"
 RESTRICT="fetch"
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.${PN}.com/"
 SRC_URI="
 		qt? ( ${PN}_ver-${SVER}.tar.bz2 )
 		!qt? ( ${PN}_ver-${SVER}-staticQT.tar.bz2 )"
-LICENSE="skype"
+LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="qt arts esd"
 DEPEND="qt? ( >=x11-libs/qt-3.2 )
 		>=sys-libs/glibc-2.2.5"
 S="${WORKDIR}/${PN}_ver-${SVER}"
@@ -44,12 +44,18 @@ src_unpack() {
 }
 
 src_install() {
-	mv skype skype.bin
-	cp ${FILESDIR}/artsskype skype
+	## Install the wrapper script
+	if ( use arts  ||  use esd );
+	then
+		mv skype skype.bin
+		cp ${FILESDIR}/artsskype skype
+	fi
+
 	dodir /opt/skype
 	exeopts -m0755
 	exeinto /opt/skype
-	doexe skype skype.bin
+	doexe skype
+	use arts && doexe skype.bin
 	insinto /opt/skype
 	doins call_in.wav
 	dodir /usr/share/applnk/Internet
@@ -63,7 +69,7 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		doins ${S}/icons/${SIZE}/${PN}.png
 	done
-	fowners root:audio /opt/skype/skype.bin
+	use arts && fowners root:audio /opt/skype/skype.bin
 	fowners root:audio /opt/skype/skype
 	dodir /usr/bin/
 	dosym /opt/skype/skype /usr/bin/skype

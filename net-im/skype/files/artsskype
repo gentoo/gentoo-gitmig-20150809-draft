@@ -1,30 +1,35 @@
 #!/bin/bash
 progname="skype"
 progpath="/opt/${progname}/"
-shellcheck=` which artsshell 2> /dev/null `
+shellcheck1=` which artsshell 2> /dev/null `
+shellcheck2=` which esd 2> /dev/null `
 artsdcheck=` ps x | grep artsd | grep -v grep `
-if [[ -z ${shellcheck} ]]
+esdcheck=` ps x | grep esd | grep -v grep `
+
+if [[ -z ${shellcheck1} || -z ${shellcheck2} ]]
 then
-	echo "No installed artsshell found"
+	echo "No installed artsshell or esd found"
 	echo "Assuming you're running no sound daemon"
 	echo "Starting ${progname} without a sound wrapper"
 	${progpath}/${progname}.bin
 				
 else
-	if [ ${shellcheck} == ${KDEDIR}/bin/artsshell ]
+	if [[ ${shellcheck1} == ${KDEDIR}/bin/artsshell && -n ${artsdcheck} ]]
 	then
-		echo "installed artsshell found"
-		echo "Checking for a running artsd"
-		if [[ -n ${artsdcheck} ]]
-		then
-			echo "Running artsd found"
-			echo "Starting artsd wrapped ${progname}"
-			artsdsp ${progpath}/${progname}.bin
-		else
-			echo "No running artsd found"
-			echo "Starting ${progname} without artsd"
-			${progpath}/${progname}.bin
-		fi
+		echo "Running artsd found"
+		echo "Starting artsd wrapped ${progname}"
+		artsdsp ${progpath}/${progname}.bin
+
+	elif [[ ${shellcheck2} == /usr/bin/esd && -n ${esdcheck} ]]
+	then
+		echo "Running esd found"
+                echo "Starting esd wrapped ${progname}"
+		esddsp ${progpath}/${progname}.bin
+	else
+		echo "No running artsd or esd found"
+		echo "Starting ${progname} without sound daemon"
+		${progpath}/${progname}.bin
 	fi
+	
 fi
 exit 0
