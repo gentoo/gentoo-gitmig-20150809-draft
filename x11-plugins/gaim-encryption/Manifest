@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb162c17660316ce0125f9de02a01d6f gaim-encryption-2.29.ebuild 1109
-MD5 7e47bcb93b8e653c508092d637b3c749 gaim-encryption-2.30.ebuild 1088
-MD5 f10f1caad1b77674a58acf2635e52910 gaim-encryption-2.28.ebuild 1114
 MD5 81e5a55e6345e3153d2a42c982594b8f ChangeLog 7130
+MD5 bb162c17660316ce0125f9de02a01d6f gaim-encryption-2.29.ebuild 1109
+MD5 f10f1caad1b77674a58acf2635e52910 gaim-encryption-2.28.ebuild 1114
 MD5 ab7db4bf9ff48c8de9da14fd12f6c15c metadata.xml 344
-MD5 4199a4a07c312219c1667706cd77df4f files/digest-gaim-encryption-2.28 72
+MD5 cc005ac55d490b7c0f12ad5c7fba8ac8 gaim-encryption-2.30.ebuild 1108
 MD5 571e96ba73294761bf61482053d3f169 files/digest-gaim-encryption-2.29 72
 MD5 95c12d6da2c16c80baccdd20cb9032b4 files/digest-gaim-encryption-2.30 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQyiLCHk4+ZoBpvsRAm4xAJ9xPhMRxrIE/YCaYZSvIHKF2Ow6jgCgx9E+
-rEa+pfuW5auvpORgrMaUP/I=
-=k1zm
------END PGP SIGNATURE-----
+MD5 4199a4a07c312219c1667706cd77df4f files/digest-gaim-encryption-2.28 72
