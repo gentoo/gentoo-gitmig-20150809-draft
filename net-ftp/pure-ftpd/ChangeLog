@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.9 2003/01/29 21:54:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.10 2003/02/09 22:09:17 raker Exp $
+
+*pure-ftpd-1.0.14 (09 Feb 2003)
+
+  09 Feb 2003; Nick Hadaway <raker@gentoo.org> pure-ftpd-1.0.14.ebuild,
+  files/digest-pure-ftpd-1.0.14 :
+  Version bump.  Added some logic to complete ldap support as suggested
+  in bug #15367 by claer@unixlover.com
 
 *pure-ftpd-1.0.13a (28 Jan 2003)
 
