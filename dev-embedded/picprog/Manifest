@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ae8c4a8b9deb676e25bc9221b413906c ChangeLog 1171
+MD5 942a206faeb84775c815dc89fc9f1ba2 ChangeLog 1261
 MD5 c5b5ceb7ecb0df0ecfd4508c06ee7f37 metadata.xml 289
-MD5 07abe42183c219340141d5ebac6101c9 picprog-1.7.ebuild 721
+MD5 5a0058363591f339f840f0bc417cdca4 picprog-1.7.ebuild 725
 MD5 79a6e2dea0b6d3fb42e3f3c45ee4a3ea picprog-1.5.ebuild 719
 MD5 3e8cd3cc950d9f05b234c9571c773e2b picprog-1.6.ebuild 721
 MD5 646f6161041a00507756e0c3e261df62 files/digest-picprog-1.7 62
 MD5 e725cab6fcb759047ce4fe2907b12bdf files/digest-picprog-1.5 62
 MD5 227aaa83f2e3548bb1896840fc746792 files/digest-picprog-1.6 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA4W30HTu7gpaalycRAtJkAKDDOnzhHSdtIxx2qVRsuZez+13yHQCfTKuU
-p/kDnMWgGy+CNiWtkLfVHYE=
-=GmAx
+iD8DBQFA+hT1mdTrptrqvGERAnvPAJ45+BDEvUmzgMM5Ccq5U8hDb3Y/9gCfbnHX
+hGZeLMUykf9VxAmbV9DkGo8=
+=kEls
 -----END PGP SIGNATURE-----
