@@ -1,14 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9.ebuild,v 1.2 2003/09/29 18:33:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9.ebuild,v 1.3 2003/11/16 19:20:27 iggy Exp $
 
 IUSE="build"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
-
-ETYPE="sources"
-
-inherit kernel
 
 OKV=2.4.20
 WOLK_MAJOR=4
@@ -17,6 +13,10 @@ EXTRAVERSION=-wolk${WOLK_MAJOR}.${WOLK_MINOR}s
 BASE=-wolk${WOLK_MAJOR}.0s
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
+
+ETYPE="sources"
+inherit kernel
+
 DESCRIPTION="Working Overloaded Linux Kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 WOLK_PATCHLIST="linux-${OKV}${BASE}.patch.bz2"
