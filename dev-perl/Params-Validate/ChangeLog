@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.14 2004/04/10 04:24:22 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.15 2004/04/10 15:15:02 esammer Exp $
+
+  10 Apr 2004; Eric Sammer <esammer@gentoo.org> Params-Validate-0.74.ebuild:
+  Fixed message about missing CREDITS and UPGRADE mentioned in comment #3
+  in bug #46573. These are no longer included in the package.
 
 *Params-Validate-0.74 (10 Apr 2004)
 

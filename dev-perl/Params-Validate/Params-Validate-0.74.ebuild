@@ -17,8 +17,6 @@ KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
 DEPEND="${DEPEND}
 	dev-perl/Attribute-Handlers"
 
-mydoc="CREDITS UPGRADE"
-
 src_install () {
 
 	perl-module_src_install
