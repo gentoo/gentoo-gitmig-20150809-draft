@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.15 2002/05/28 08:52:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.16 2002/06/09 02:19:59 seemant Exp $
+
+*gtk+-2.0.3-r1 (8 Jun 2002)
+
+  8 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-2.0.3-r1.ebuild
+  files/digest-gtk+-2.0.3-r1 :
+
+  Option for directfb-patched gtk libs.  This actually gets and compiles a
+  separate source tarball from directfb.org
 
 *gtk+-2.0.3 (28 May 2002)                                                    
   28 May 2002; Spider <spider@gentoo.org> gtk+-2.0.3.ebuild:

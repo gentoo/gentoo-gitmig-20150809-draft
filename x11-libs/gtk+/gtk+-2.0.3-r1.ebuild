@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.2-r6.ebuild,v 1.1 2002/05/28 02:08:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.3-r1.ebuild,v 1.1 2002/06/09 02:19:59 seemant Exp $
 
 SLOT="2"
 
@@ -14,33 +14,34 @@ CFLAGS="${CFLAGS} -g"
 CXXFLAGS="${CXXFLAGS} -g"
 
 
-S=${WORKDIR}/${P}
+use directfb && MY_P=gtk+-directfb-${PV} || MY_P=${P}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Gimp ToolKit + "
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.0/${P}.tar.bz2"
+ORIG="ftp://ftp.gtk.org/pub/gtk/v2.0/${MY_P}.tar.bz2"
+DFB="http://directfb.org/download/GTK+-DirectFB/${MY_P}.tar.gz"
+use directfb && SRC_URI=${DFB} || SRC_URI=${ORIG}
 HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.0.1
-	>=dev-libs/atk-1.0.1
-	>=x11-libs/pango-1.0.1
+	>=dev-libs/glib-2.0.3
+	>=dev-libs/atk-1.0.2
+	>=x11-libs/pango-1.0.2
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	tiff? ( >=media-libs/tiff-3.5.7 )"
+	tiff? ( >=media-libs/tiff-3.5.7 )
+	directfb? ( dev-libs/DirectFB )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	 doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_compile() {
-
 	# seems things broke here.. odd readding to test
-#  commented out to commit mainline gtk+
-#	libtoolize --copy --force
+	#  commented out to commit mainline gtk+
+	#	libtoolize --copy --force
 	local myconf
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
-# reported to break without png 
-#	use png ||  myconf="${myconf} --without-libpng"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
 	
