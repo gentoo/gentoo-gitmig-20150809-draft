@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.21.2.ebuild,v 1.1 2003/11/27 12:47:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.21.2.ebuild,v 1.2 2003/11/27 14:06:38 liquidx Exp $
 
 inherit gnome2 python distutils
 
@@ -38,13 +38,18 @@ src_unpack() {
 		-i ${S}/Makefile || die "sed failed"
 	sed -e "s:/usr/bin/env python2.2:/usr/bin/env python${PYVER}:" \
 		-i ${S}/src/straw
+	# probably can remove in next version - fixes f.truncate() errors.
+	# http://savannah.nongnu.org/bugs/?func=detailitem&item_id=6816
+	EPATCH_OPTS="-d ${S}/src/lib" epatch ${FILESDIR}/${P}-convert_config.patch
 }
 
 src_compile() {
 	export LC_ALL="C"
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"	
+	# disable gconftool from violating sandbox, reported upstream.
+	# remove in next version.
+	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	emake || die "make failed"
-	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL	
+	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 }
 
 src_install() {
