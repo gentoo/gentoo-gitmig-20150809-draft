@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.5 2004/06/24 22:58:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/robotfindskitten-1.4142135.349.ebuild,v 1.6 2004/09/04 23:18:06 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rfk/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="x86 sparc amd64 ~ppc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
