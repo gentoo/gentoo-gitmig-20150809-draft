@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.10 2003/02/10 03:58:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.11 2003/02/17 23:31:11 azarah Exp $
 
 *module-init-tools-0.9.9 (01 Feb 2003)
+
+  18 Feb Feb 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.9 :
+  Hack modprobe to look at /etc/modprobe.devfs rather than /etc/modules.devfs
+  ... this is to support a later modules-update that should generate this and
+  fix the lot of errors/warnings during devfs/hotplug startup.
 
   09 Feb 2003; Brandon Low <lostlogic@gentoo.org> module-init-tools-0.9.9 :
   Make not die if the user doesn't have a modules.conf file already...
