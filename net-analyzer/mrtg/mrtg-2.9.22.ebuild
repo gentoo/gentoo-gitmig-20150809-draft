@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.9.22.ebuild,v 1.9 2004/10/04 23:00:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.9.22.ebuild,v 1.10 2005/01/05 23:25:01 swtaylor Exp $
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/"
