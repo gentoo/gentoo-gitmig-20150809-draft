@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.21 2004/02/29 22:50:36 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.22 2004/03/02 23:45:56 weeve Exp $
+
+  02 Mar 2004; Jason Wever <weeve@gentoo.org> chkrootkit-0.42b.ebuild:
+  Stable on sparc I am, yes.
 
 *chkrootkit-0.43 (29 Feb 2004)
 
