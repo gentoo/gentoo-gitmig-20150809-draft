@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 149c0ead631630d3183e9a47f818a429 vimspell-1.84.ebuild 2316
-MD5 a4275a45c62e12bda9e74755d00dd5a8 ChangeLog 2286
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 c8da307d58ac696dc526ffd6a435385e vimspell-1.70.ebuild 2307
 MD5 cb7f5533cafc691168272ebc32bf8bee vimspell-1.84-r1.ebuild 2475
+MD5 f115032c7075372d8d9bf94619dc5c55 ChangeLog 2393
+MD5 149c0ead631630d3183e9a47f818a429 vimspell-1.84.ebuild 2316
 MD5 9e1f58a5d383fb6d5112dc5b4cb0f08d vimspell-1.84-r2.ebuild 2576
-MD5 bff67b402df306aff4515298e7472816 files/vimspell-1.84-aspell-0.6.patch 6219
+MD5 c8da307d58ac696dc526ffd6a435385e vimspell-1.70.ebuild 2307
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 520de6488ff85f36d4f694cff73dd30b files/vimspell-1.84-explorersyntax.patch 509
+MD5 7101dd811b1925b8c3eb3c8544a289c0 files/digest-vimspell-1.84-r2 65
+MD5 6a4ee637c8498ba26e82c61844aa5e55 files/digest-vimspell-1.70 65
 MD5 7101dd811b1925b8c3eb3c8544a289c0 files/digest-vimspell-1.84 65
 MD5 7101dd811b1925b8c3eb3c8544a289c0 files/digest-vimspell-1.84-r1 65
-MD5 7101dd811b1925b8c3eb3c8544a289c0 files/digest-vimspell-1.84-r2 65
-MD5 520de6488ff85f36d4f694cff73dd30b files/vimspell-1.84-explorersyntax.patch 509
-MD5 6a4ee637c8498ba26e82c61844aa5e55 files/digest-vimspell-1.70 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBu3tougEuf3OQ0akRAiAtAJ0YG+pu30dUzaTq5qLdSzweI8ESDACfWyw3
-ow+WKhXCAOd8j1aMW+2yXKQ=
-=KUTM
------END PGP SIGNATURE-----
+MD5 bff67b402df306aff4515298e7472816 files/vimspell-1.84-aspell-0.6.patch 6219
