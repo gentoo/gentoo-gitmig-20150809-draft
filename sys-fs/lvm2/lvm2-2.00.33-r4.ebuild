@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.33-r3.ebuild,v 1.1 2005/03/23 03:27:12 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.33-r4.ebuild,v 1.1 2005/04/04 19:22:43 rocket Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -22,7 +22,7 @@ src_compile() {
 	# http://www.gentoo.org/doc/en/lvm2.xml
 	# fixes http://bugs.gentoo.org/show_bug.cgi?id=84463
 	local myconf
-	use nolvmstatic || myconf="$(use_enable static_link)"
+	use nolvmstatic || myconf="--enable-static_link"
 
 	econf $(use_enable readline) ${myconf}
 	emake || die "compile problem"
