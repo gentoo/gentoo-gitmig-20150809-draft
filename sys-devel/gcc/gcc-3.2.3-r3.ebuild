@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r3.ebuild,v 1.1 2003/11/27 22:02:17 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r3.ebuild,v 1.2 2003/11/28 19:08:16 pappy Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -215,7 +215,7 @@ src_unpack() {
 			ewarn "this sys-libs/glibc has __guard object and __stack_smash_handler functions"
 			ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
 			ewarn "please do not press crtl-C or crtl-Z during this period - it will continue"
-			SCANPATH="$(for i in $(cat /etc/ld.so.conf | grep -v '^\#'); do echo -n $i; echo -n ' '; done) $(echo ${PATH} | sed 's,:, ,g')"
+			SCANPATH="$(for i in $(cat /etc/ld.so.conf | grep -v '/usr/lib/gcc-lib' | grep -v '^\#'); do echo -n $i; echo -n ' '; done) $(echo ${PATH} | sed 's,:, ,g')"
 			if [ "$(find ${SCANPATH} -type f -perm -1 -maxdepth 9 -exec readelf -s {} \; 2>&1 | grep "__guard\@GCC" 2>&1 1>/dev/null; echo $?)" == "0" ]
 			then
 				eerror "found binaries that are dynamically linked to the libgcc with __guard@@GCC"
