@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 783c95f532b1485c76df82e1f11b1335 epiphany-extensions-1.4.5.ebuild 901
+MD5 e3b6a13f0fa087461978fc844167f045 epiphany-extensions-1.6.0.ebuild 1212
+MD5 5658c758cfb93cce64983b99fc62ffb2 ChangeLog 1517
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 b250fd39ea0ac27bbd179459f66d1197 epiphany-extensions-1.6.0.ebuild 1204
-MD5 527eafc56e2861f0ca8c43cf40238d26 ChangeLog 1413
-MD5 01ced8c924663aef907498afafdb1167 files/digest-epiphany-extensions-1.4.5 78
 MD5 707f7a46f60ea0b7cf60bda490cdbf9e files/digest-epiphany-extensions-1.6.0 78
-MD5 cc94941ad96bbbd969542ee260c77e4c files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch 1034
 MD5 6b4caa4057fe795d71689814affe5100 files/epiphany-extensions-1.6.0-fix_includes.patch 1412
+MD5 cc94941ad96bbbd969542ee260c77e4c files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch 1034
+MD5 01ced8c924663aef907498afafdb1167 files/digest-epiphany-extensions-1.4.5 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQh0BKRy60XGEcJIRAgYqAJsEulrD27J/7h84FYw3DYevkEXEXgCfRs7G
+jQBBHt0Tj+br4lODlPW8k6c=
+=Z4Pf
+-----END PGP SIGNATURE-----
