@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/xmms-infopipe-1.3.ebuild,v 1.10 2004/04/22 17:51:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/xmms-infopipe-1.3.ebuild,v 1.11 2004/04/27 19:42:29 pvdabeel Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.beastwithin.org/users/wwwwolf/code/xmms/infopipe.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~sparc ~amd64 ~ppc hppa"
+KEYWORDS="x86 ~alpha ~sparc ~amd64 ppc hppa"
 
 DEPEND="media-sound/xmms"
 
