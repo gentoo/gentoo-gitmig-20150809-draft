@@ -509,3 +509,8 @@ move x11-libs/gtkglextmm dev-cpp/gtkglextmm
 move sys-apps/nictools-pci sys-apps/nictools
 move app-emacs/migemo app-text/migemo
 move media-video/dvb-mpegtools media-video/libdvb
+move app-doc/mini-howto-html app-doc/howto-html
+move app-doc/mini-howto-html-single app-doc/howto-html-single
+move app-doc/mini-howto-pdf app-doc/howto-pdf
+move app-doc/mini-howto-ps app-doc/howto-ps
+move app-doc/mini-howto-text app-doc/howto-text
