@@ -1,10 +1,15 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.4 2002/08/08 15:48:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.5 2002/08/15 00:47:16 seemant Exp $
 
 *pdflib-4.0.1-r3 (3 Apr 2002)
 
-  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> pdflib-4.0.1-r3 :
+  14 Aug 2002; Seemant Kulleen <seemant@genoo.org> pdflib-4.0.1-r1.ebuild :
+
+  Added libpng as a dependency.  Closes bug #6480 by bar4ka@bol.com.br
+  (bar4ka)
+
+  08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> pdflib-4.0.1-r3.ebuild :
 
   Added "--with-zlib" configure flag.  Closes bug #6205 by sponge80@msn.com
   (Nicholas)

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.6 2002/08/14 13:08:10 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.7 2002/08/15 00:47:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -14,7 +14,8 @@ KEYWORDS="x86 sparc sparc64"
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=sys-devel/perl-5.1 )
 	python? ( >=dev-lang/python-2.0 )
-	java? ( >=virtual/jdk-1.3 )"
+	java? ( >=virtual/jdk-1.3 )
+	media-libs/libpng"
 
 
 src_compile() {
