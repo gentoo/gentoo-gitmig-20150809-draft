@@ -40,7 +40,6 @@
 virtual/os-headers
 >=app-admin/sysklogd-1.4.1
 *dev-lang/python
-# xfree 4.2.1 will be the initial version for alpha 
 >=x11-base/xfree-4.2.1
 # sash - static shell for system recovery
 *app-shells/sash
@@ -53,8 +52,8 @@ virtual/os-headers
 *app-shells/bash
 *sys-apps/bzip2
 *sys-apps/kbd
-*sys-apps/cpio
 *sys-apps/coreutils
+*sys-apps/cpio
 *sys-apps/debianutils
 *sys-apps/diffutils
 *sys-fs/e2fsprogs
