@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.16 2003/01/01 00:47:24 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.17 2003/01/29 05:39:24 raker Exp $
+
+*lame-3.93.1-r1 (28 Jan 2003)
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> lame-3.93.1-r1.ebuild,
+  files/digest-lame-3.93.1-r1 :
+  Got rid of the autotools and libtool workarounds and just sed'd the
+  configure script gtk detection.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> lame-3.93.1.ebuild :
   Run autoreconf to fix the ./configure script not detecting gtk-config
