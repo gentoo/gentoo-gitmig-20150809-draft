@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.8 2004/11/12 15:29:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r3.ebuild,v 1.9 2004/11/25 07:21:10 carpaski Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,9 +53,10 @@ check_multilib() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i "s:^CFLAGS =.*:CFLAGS = :" src/sandbox-1.1/Makefile
+	sed -i "s:^CFLAGS =.*:CFLAGS = :"           src/sandbox-1.1/Makefile
 	sed -i "/PORTAGE_RESTRICT.*'')/s:''):' '):" pym/portage.py
-	sed -i "s/self.config/self.options/" bin/dispatch-conf
+	sed -i "s/self.config/self.options/"        bin/dispatch-conf
+	sed -i "/proz /d;/Prozilla/d"               cnf/make.conf*
 	epatch ${FILESDIR}/gcc-2.95-libsandbox.patch
 }
 
