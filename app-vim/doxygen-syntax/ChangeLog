@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/doxygen-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/ChangeLog,v 1.3 2005/02/13 18:27:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/ChangeLog,v 1.4 2005/02/18 18:53:39 ciaranm Exp $
+
+  18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  doxygen-syntax-1.9.ebuild:
+  x86 sparc mips stable
 
   13 Feb 2005; Markus Rothe <corsair@gentoo.org> doxygen-syntax-1.9.ebuild:
   Added ~ppc64 to KEYWORDS
