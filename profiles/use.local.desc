@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.171 2003/11/11 14:28:34 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.172 2003/11/19 19:31:32 weeve Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -130,7 +130,10 @@ net-dialup/ppp:activefilter - enable activefilter support
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
-net-im/bitlbee:msn - Enable msn messenger protocol support
+net-im/bitlbee:jabber - Enable jabber protocol support
+net-im/bitlbee:msn - Enable MSN Messenger protocol support
+net-im/bitlbee:oscar - Enable Oscar (AIM/ICQ) protocol support
+net-im/bitlbee:yahoo - Enable Yahoo Messenger protocol support
 net-im/jabber-server:j-noaim - If you do NOT want the AIM/ICQ transport built with jabber-server
 net-im/jabber-server:j-nojud - If you do NOT want the Jabber User Directory built with jabber-server
 net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
