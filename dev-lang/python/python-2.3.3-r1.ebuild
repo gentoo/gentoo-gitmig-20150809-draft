@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.22 2004/09/24 10:47:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.23 2004/10/18 20:22:02 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -154,7 +154,7 @@ src_install() {
 	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
 		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib64/python${PYVER}/config/Makefile
 	else
-	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
+		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
 	fi
 
 	# install python-updater in /usr/sbin

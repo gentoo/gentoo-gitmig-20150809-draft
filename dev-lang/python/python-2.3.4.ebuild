@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.14 2004/10/17 22:54:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.15 2004/10/18 20:22:02 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -157,6 +157,14 @@ src_install() {
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
+
+	if use build ; then
+		rm -rf ${D}/usr/lib/python2.3/{test,encodings,email,lib-tk,bsddb/test}
+	else
+		use uclibc && rm -rf ${D}/usr/lib/python2.3/{test,bsddb/test}
+		use berkdb || rm -rf ${D}/usr/lib/python2.3/bsddb
+		( use !X || use !tcltk ) || rm -rf ${D}/usr/lib/python2.3/lib-tk
+	fi
 }
 
 pkg_postrm() {
