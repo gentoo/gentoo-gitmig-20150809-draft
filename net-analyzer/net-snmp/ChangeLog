@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.27 2003/10/20 07:01:39 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.28 2003/10/20 14:25:35 max Exp $
+
+  20 Oct 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r2.ebuild:
+  Make the perl-tk stuff depend on the X USE flag as well. Remove some things
+  that don't work anyway when USE=-perl.
 
   20 Oct 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r2.ebuild:
   Add perl? ( dev-perl/perl-tk ) to RDEPEND.

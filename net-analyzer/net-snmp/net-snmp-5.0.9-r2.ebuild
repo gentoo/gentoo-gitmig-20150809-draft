@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r2.ebuild,v 1.3 2003/10/20 13:58:15 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.9-r2.ebuild,v 1.4 2003/10/20 14:25:35 max Exp $
 
 DESCRIPTION="Software for generating and retrieving SNMP data."
 HOMEPAGE="http://net-snmp.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~arm ~hppa ~alpha"
-IUSE="perl ssl ipv6 tcpd"
+IUSE="perl ipv6 ssl tcpd X"
 
 PROVIDE="virtual/snmp"
 DEPEND="virtual/glibc
@@ -17,10 +17,10 @@ DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/sed-4
 	perl? ( >=sys-devel/libperl-5.6.1 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	ssl? ( >=dev-libs/openssl-0.9.6d )"
+	ssl? ( >=dev-libs/openssl-0.9.6d )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 RDEPEND="${DEPEND}
-	perl? ( dev-perl/perl-tk )
+	perl? ( X? ( dev-perl/perl-tk ) )
 	!virtual/snmp"
 
 src_compile() {
@@ -54,6 +54,11 @@ src_install () {
 
 	if [ "`use perl`" ] ; then
 		make DESTDIR="${D}" perlinstall || die "make perlinstall failed"
+		if [ ! "`use X`" ] ; then
+			rm -f "${D}/usr/bin/tkmib"
+		fi
+	else
+		rm -f "${D}/usr/bin/mib2c" "${D}/usr/bin/tkmib"
 	fi
 
 	dodoc AGENT.txt ChangeLog FAQ INSTALL NEWS PORTING README* TODO
