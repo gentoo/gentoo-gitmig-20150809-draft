@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.7 2003/07/13 02:15:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.8 2003/07/16 04:09:35 vapier Exp $
 
 inherit games
 
@@ -34,6 +34,10 @@ games-q3mod_src_install() {
 	if [ -d ${MOD_NAME} ] ; then
 		dodir ${bdir}
 		mv ${MOD_NAME} ${D}/${bdir}/
+	fi
+	if [ -d baseq3 ] ; then
+		dodir ${bdir}
+		mv baseq3 ${D}/${bdir}/
 	fi
 	if [ ! -z "`ls ${S}/* 2> /dev/null`" ] ; then
 		dodir ${mdir}
