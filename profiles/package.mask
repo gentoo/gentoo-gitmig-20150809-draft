@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# scandium@gentoo.org (19 Aug 2003)
+# security holes !
+<=net-p2p/xmule-1.4.3
+
 # pebenito@gentoo.org (17 Aug 2003)
 # yet another masking for new selinux api
 >=sec-policy/selinux-base-policy-20030817
