@@ -1,6 +1,6 @@
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 002e711613fc2191fd77cbf09a14664d XML-XSH-1.6.ebuild 583
-MD5 1dafaef6a33dc785b69c3d800968cc66 XML-XSH-1.8.2.ebuild 645
+MD5 ca7ceb9d4ebf25d16e12942f867423c9 XML-XSH-1.8.2.ebuild 625
 MD5 14bc2ee5a348ef2e07ac96482ed53707 ChangeLog 838
 MD5 d2b0a6cbc8197a33bfe541e75d00d1c8 files/digest-XML-XSH-1.8.2 65
 MD5 4715dce6e8fca585973bbcaa5e38dce4 files/digest-XML-XSH-1.6 63
