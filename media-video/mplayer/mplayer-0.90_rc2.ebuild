@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.1 2002/12/26 20:37:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.2 2003/01/06 23:20:34 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -33,7 +33,8 @@ RDEPEND="!x86? ( >=media-libs/xvid-0.9.0 )
 	dvd? ( media-libs/libdvdnav )
 	gtk? ( !gtk2 ( =x11-libs/gtk+-1.2*
 	               =dev-libs/glib-1.2* )
-	       media-libs/libpng )
+	       media-libs/libpng
+	       >=x11-base/xfree-4.2.1-r2 )
 	gtk2? ( >=x11-libs/gtk+-2.0.6
 	        >=dev-libs/glib-2.0.6 )
 	jpeg? ( media-libs/jpeg )
@@ -64,7 +65,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 
 src_unpack() {
@@ -187,6 +188,14 @@ src_compile() {
 		REALLIBDIR="/opt/RealPlayer8/Codecs"
 	else
 		REALLIBDIR="/usr/lib/real"
+	fi
+	
+	# For lirc support as the auto-detect doesn't seem to work
+	if [ -f /usr/include/lirc/lirc_client.h ]
+	then
+		myconf="${myconf} --enable-lirc"
+	else
+		myconf="${myconf} --disable-lirc"
 	fi
 
 	# Crashes on start when compiled with most optimizations.
