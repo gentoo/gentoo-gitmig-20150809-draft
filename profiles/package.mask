@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# drobbins@gentoo.org (07 Jul 2002)
+# stuff with deps that are missing; ebuilds have problems so I'm masking them
+net-mail/exmh
+
+
 # azarah@gentoo.org (07 Jul 2002)
 # Add a snapshot for gcc-3.1.1, which also resolves bug #4411,
 # and also should enable a bootstrap && emerge system with
@@ -314,6 +319,9 @@ net-www/zope
 # the still-under-high-development network with old protocols and such.
   
 net-p2p/gift
+net-p2p/kift
+net-p2p/giftcurs
+#note: kift and giftcurs depend on gift, so they need masking too. (drobbins, 7 Jul 2002)
 
 # Opera 6 final.
 # This package requires that qt2 package were linked against libpng 1.0.12,
