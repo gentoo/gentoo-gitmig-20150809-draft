@@ -7,7 +7,8 @@ net-misc/netkit-telnetd
 net-misc/openssh
 net-misc/rsync
 net-misc/wget
-sys-apps/at
+#does everyone really need at?
+#sys-apps/at
 sys-apps/bash
 sys-apps/bzip2
 sys-apps/console-data
