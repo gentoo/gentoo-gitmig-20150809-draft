@@ -1,0 +1,8 @@
+# ChangeLog for sys-cluster/ccs
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/ChangeLog,v 1.1 2004/06/27 15:13:20 zypher Exp $
+
+*iddev-20040626 (25 Jun 2004)
+
+  27 Jun 2003; Marc Hildebrand <zypher@gentoo.org> iddev-20040626.ebuild:
+  Initial import.
