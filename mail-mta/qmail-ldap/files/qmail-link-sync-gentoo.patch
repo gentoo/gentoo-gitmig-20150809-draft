@@ -1,0 +1,55 @@
+diff -u qmail-1.03/qmail-local.c qmail-1.03-linksync/qmail-local.c
+--- qmail-1.03/qmail-local.c	2004-01-09 13:48:14.000000000 -0800
++++ qmail-1.03-linksync/qmail-local.c	2004-01-09 13:54:25.041334954 -0800
+@@ -1,5 +1,6 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <fcntl.h>
+ #include <unistd.h>
+ #include "readwrite.h"
+ #include "sig.h"
+@@ -159,6 +160,9 @@
+  }
+   
+  if (link(fntmptph,fnnewtph) == -1) goto fail;
++ if ((fd = open(fnnewtph, O_RDONLY)) < 0 ||
++ 	fsync(fd) < 0 || close(fd) < 0) goto fail;
++
+    /* if it was error_exist, almost certainly successful; i hate NFS */
+  tryunlinktmp(); _exit(0);
+ 
+diff -u qmail-1.03/qmail-queue.c qmail-1.03-linksync/qmail-queue.c
+--- qmail-1.03/qmail-queue.c	2004-01-09 13:48:14.000000000 -0800
++++ qmail-1.03-linksync/qmail-queue.c	2004-01-09 13:53:10.766069219 -0800
+@@ -1,5 +1,6 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <fcntl.h>
+ #include <unistd.h>
+ #include "readwrite.h"
+ #include "sig.h"
+@@ -172,6 +173,7 @@
+ {
+  unsigned int len;
+  char ch;
++ int fd;
+ #ifdef BIGBROTHER
+  unsigned int xlen, n;
+  char *x;
+@@ -222,6 +224,7 @@
+ #endif
+ 
+  if (link(pidfn,messfn) == -1) die(64);
++ if ((fd = open(messfn, O_RDONLY)) < 0 || fsync(fd) < 0 || close(fd) < 0) die(64);
+  if (unlink(pidfn) == -1) die(63);
+  flagmademess = 1;
+ 
+@@ -312,6 +315,8 @@
+  if (fsync(intdfd) == -1) die_write();
+ 
+  if (link(intdfn,todofn) == -1) die(66);
++ if ((fd = open(todofn, O_RDONLY)) < 0 ||
++     fsync(fd) < 0 || close(fd) < 0) die(66);
+ 
+  triggerpull();
+  return 0;

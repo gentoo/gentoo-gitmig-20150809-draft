@@ -1,0 +1,5 @@
+MD5 622f65f982e380dbe86e6574f3abcb7c qmail-1.03.tar.gz 220668
+MD5 8edda59102180973dd1bb546da7de160 qmail-0.0.0.0.patch 450
+MD5 4e1f2d8315e7e2a5482798c9d19fac4d sendmail-flagf.patch 863
+MD5 0c9ea59691ad08440e927a600b0bb5fd qmail-ldap-1.03-20040101.patch.gz 224532
+MD5 f4579bf5e099ab973252f168f47af203 qmail-ldap-1.03-r2-tls.patch.bz2 737

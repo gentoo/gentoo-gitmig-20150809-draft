@@ -1,0 +1,6 @@
+#!/bin/sh
+QMAILDUID=`id -u qmaild`
+NOFILESGID=`id -g qmaild`
+exec /usr/bin/softlimit -m 8000000 \
+	/usr/bin/tcpserver -H -R -v -p -x /etc/tcp.smtp.cdb \
+	-u $QMAILDUID -g $NOFILESGID 0 smtp rblsmtpd /var/qmail/bin/qmail-smtpd /var/qmail/bin/auth_smtp /usr/bin/true 2>&1

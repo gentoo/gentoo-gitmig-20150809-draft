@@ -1,0 +1,34 @@
+--- Makefile.old	2004-01-08 19:03:20.288589831 -0800
++++ Makefile	2004-01-08 19:07:26.942655958 -0800
+@@ -17,7 +17,7 @@
+ # -DQMQP_COMPRESS to use the QMQP on the fly compression (for clusters)
+ # -DQUOTATRASH to include the Trash in the quota calculation (normaly it is not)
+ # -DSMTPEXECCHECK to enable smtp DOS/Windows executable detection
+-#LDAPFLAGS=-DQLDAP_CLUSTER -DEXTERNAL_TODO -DDASH_EXT -DDATA_COMPRESS -DQMQP_COMPRESS
++LDAPFLAGS=-DEXTERNAL_TODO -DBIGTODO -DDASH_EXT -DALTQUEUE
+ 
+ # Perhaps you have different ldap libraries, change them here
+ LDAPLIBS=-L/usr/local/lib -lldap -llber
+@@ -55,18 +55,18 @@
+ MNW=-DMAKE_NETSCAPE_WORK 
+ 
+ # to enable the auto-maildir-make feature uncomment the next line
+-#MDIRMAKE=-DAUTOMAILDIRMAKE
++MDIRMAKE=-DAUTOMAILDIRMAKE
+ 
+ # to enable the auto-homedir-make feature uncomment the next line
+-#HDIRMAKE=-DAUTOHOMEDIRMAKE
++HDIRMAKE=-DAUTOHOMEDIRMAKE
+ 
+ # on most systems we need this to make auth_pop and auth_imap
+ #SHADOWLIBS=-lcrypt
+ # OpenBSD and other Systems do not have libcrypt, so comment the line out
+ # if you get linking problems.
+ # To use shadow passwords under some Linux OS, uncomment the next two lines.
+-#SHADOWLIBS=-lcrypt -lshadow
+-#SHADOWOPTS=-DPW_SHADOW
++SHADOWLIBS=-lcrypt -lshadow
++SHADOWOPTS=-DPW_SHADOW
+ # To use shadow passwords under Solaris, uncomment the SHADOWOPTS line.
+ 
+ # to enable the possibility to log and debug imap and pop uncoment the
