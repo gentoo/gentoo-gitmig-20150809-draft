@@ -1,4 +1,13 @@
-MD5 879eddeedb1c5910c241afc40a028376 ChangeLog 579
-MD5 91b9993dce75ca8f735aede7d61c4c2a pointless-0.5-r1.ebuild 1182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ae068bb3e5bbfdc55fd2e7891338e2b4 pointless-0.5.ebuild 996
+MD5 69119dc83507d71ec5456e53adb87973 ChangeLog 699
 MD5 4312f2ad98982827b01bb9ceeaa075b5 files/digest-pointless-0.5 66
-MD5 4312f2ad98982827b01bb9ceeaa075b5 files/digest-pointless-0.5-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0bmaI1lqEGTUzyQRAu+aAJ4ufPTFaVdqlaVA2IHOh7/YqwnLsQCgqeqi
+Toy+zYG+5W2yz9m79MXut24=
+=fvKV
+-----END PGP SIGNATURE-----
