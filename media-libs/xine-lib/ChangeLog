@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.56 2003/05/12 14:51:30 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.57 2003/07/14 03:28:50 drobbins Exp $
 
 *xine-lib-1_beta12 (12 May 2003)
+
+  13 May 2003; Daniel Robbins <drobbins@gentoo.org> xine-lib-1_beta12.ebuild:
+  parallel build failed; forcing -j1. No rev bump.
 
   12 May 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
