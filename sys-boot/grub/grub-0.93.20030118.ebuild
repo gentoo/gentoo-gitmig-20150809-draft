@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.5 2004/01/30 07:22:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.6 2004/05/12 13:03:24 pappy Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fstack-protector
+	filter-flags -fPIC
 
 	### i686-specific code in the boot loader is a bad idea; disabling to ensure 
 	### at least some compatibility if the hard drive is moved to an older or 
@@ -52,16 +53,14 @@ src_compile() {
 
 	use static && export LDFLAGS="${LDFLAGS} -static"
 
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
-		# the configure script has problems with -nostdlib
-		CC="${CC} -yet_exec -yno_propolice"
-	fi
+	# hardened automatic PIC plus PIE building should be suppressed
+	# because of assembler instructions that cannot be compiled PIC
+	HARDENED_CFLAGS="`test_flag -fno-pic` `test_flag -nopie` `test_flag -fno-stack-protector`"
 
-	econf --exec-prefix=/ \
+	econf CC="${CC:=gcc} ${HARDENED_CFLAGS}" --exec-prefix=/ \
 		--disable-auto-linux-mem-opt || die
-	emake || die
+
+	emake CC="${CC:=gcc} ${HARDENED_CFLAGS}" || die
 }
 
 src_install() {

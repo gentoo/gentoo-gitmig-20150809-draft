@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.14 2004/05/06 22:35:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.15 2004/05/12 13:03:24 pappy Exp $
+
+  12 May 2004; Alexander Gabert <pappy@gentoo.org> grub-0.93.20030118.ebuild:
+  removed hardened-gcc logic, added logic for suppressing PIE and SSP
 
   06 May 2004; Mike Frysinger <vapier@gentoo.org>
   +files/grub-0.94-gcc3.4.patch, grub-0.94-r1.ebuild:
