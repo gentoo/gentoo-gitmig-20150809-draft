@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.8 2004/06/24 22:40:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.9 2004/07/06 02:49:10 malc Exp $
+
+  06 Jul 2004; <malc@gentoo.org> xfe-0.66.ebuild:
+  Keyword ~amd64, closes bug #56037
 
   13 Jun 2004; <pyrania@gentoo.org> xfe-0.66.ebuild:
   Changed DEPEND to =x11-libs/fox-1.0*
