@@ -10,5 +10,5 @@ MD5 6dc9d5e8a060c78c1b1943b27296b7af files/digest-abook-0.5.1 63
 MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2 63
 MD5 6dc9d5e8a060c78c1b1943b27296b7af files/digest-abook-0.5.1-r1 63
 MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
-MD5 57683803307c12852566a0373212ba6d files/abook-0.5.2-filter.diff 1155
+MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
 MD5 3b62ad1d9ad437a4dfc2c8ad9c96a2e4 files/0.5.1-01_mutt-filter 281
