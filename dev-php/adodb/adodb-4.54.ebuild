@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.54.ebuild,v 1.3 2005/01/06 02:55:55 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-4.54.ebuild,v 1.4 2005/01/18 18:43:13 kloeri Exp $
 
 inherit php-lib
 
@@ -10,7 +10,7 @@ MY_P=${PN}${PV//./}
 SRC_URI="mirror://sourceforge/adodb/${MY_P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ia64 ~alpha ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~ia64 alpha ~sparc ~ppc ~amd64"
 IUSE=""
 DEPEND=""
 RDEPEND="virtual/php"
