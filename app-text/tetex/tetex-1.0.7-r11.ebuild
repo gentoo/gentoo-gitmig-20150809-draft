@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.4 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r11.ebuild,v 1.5 2002/11/05 12:22:03 aliz Exp $
 
 IUSE="ncurses X libwww png"
 
@@ -30,8 +30,7 @@ RDEPEND=">=sys-devel/perl-5.2
 
 
 src_unpack() {
-
-	unpack teTeX-src-1.0.7.tar.gz
+	unpack ${P}.tar.gz
 
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
@@ -77,7 +76,7 @@ src_compile() {
 
 	use libwww \
 		&& myconf="${myconf} --with-system-wwwlib \
-		                     --with-libwww-include=/usr/include"
+		                     --with-libwww-include=/usr/include/w3c-libwww"
 
 	use png \
 		&& myconf="${myconf} --with-system-pnglib"
