@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d689fb5240921ed479e50ef11f2f22f7 ChangeLog 833
 MD5 c0702d918b85d95e721706313c853d2c metadata.xml 458
-MD5 8148818af2592211ad25c2ecbfdb9c4a cfengine-syntax-20050105.ebuild 606
+MD5 930d808b7612138f4116e5041caa1b6a cfengine-syntax-20050105.ebuild 619
 MD5 b330217855c083729c77dea5494ea6c8 files/digest-cfengine-syntax-20050105 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFlbYCHk4+ZoBpvsRAnLPAJwJdU4Uk2bD65hvn2SI8r+OUb2ETQCfXw88
-D+QB62aAzxVJavwaxbrjrKg=
-=oBPf
------END PGP SIGNATURE-----
