@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r3.ebuild,v 1.2 2004/01/13 04:36:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r3.ebuild,v 1.3 2004/03/27 19:20:38 spock Exp $
 
+IUSE=""
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 HOMEPAGE="http://linux.tkdack.com/"
 SRC_URI="mirror://gentoo/bootsplash-${PV}-${PR}.tar.bz2"

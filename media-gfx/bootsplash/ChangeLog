@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.30 2004/03/20 15:48:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.31 2004/03/27 19:20:38 spock Exp $
+
+  27 Mar 2004; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6-r10.ebuild, bootsplash-0.6-r11.ebuild,
+  bootsplash-0.6-r12.ebuild, bootsplash-0.6-r3.ebuild,
+  bootsplash-0.6-r8.ebuild, bootsplash-0.6-r9.ebuild:
+  Ebuild clean-ups, added empty IUSE vars.
 
   20 Mar 2004; Michal Januszewski <spock@gentoo.org>
   bootsplash-0.6-r10.ebuild, bootsplash-0.6-r11.ebuild:
