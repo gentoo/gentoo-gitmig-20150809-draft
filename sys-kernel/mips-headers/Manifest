@@ -1,5 +1,5 @@
-MD5 41f93ca08fabefe3df6be2c70888af7c ChangeLog 1246
-MD5 bba8b4c80a9c90d171471fd4012b2161 mips-headers-2.4.21-r1.ebuild 1242
+MD5 9fedea627e10b05f7d1f49bd9e0caa7f ChangeLog 1398
+MD5 e4988edd9c3d45e45d78cbedbac15309 mips-headers-2.4.21-r1.ebuild 1304
 MD5 753ea71ed4348cc51863f347f7dc73f0 mips-headers-2.4.21-r2.ebuild 1128
 MD5 747353be86040c7e4c49b553f3467b7c files/digest-mips-headers-2.4.21-r1 160
 MD5 054c3c8e9c8804a13c79d01ec52793ed files/mips-patches-gcc-makefile-fix.patch 915

@@ -1,6 +1,7 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.4 2003/08/04 05:56:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.5 2003/08/05 02:28:20 kumba Exp $
+
 
 *mips-headers-2.4.21-r2 (04 Aug 2003)
 
@@ -9,7 +10,11 @@
   New snapshot of linux-mips CVS from 20030803
   Uses a diff between linux-2.4.21 and mipscvs tree to avoid large tarballs on distfiles-local
 
-*mips-headers-2.4.21_pre4-r1 (05 Jul 2003)
+*mips-headers-2.4.21-r1 (05 Jul 2003)
+
+  04 Aug 2003; Joshua Kinard <kumba@gentoo.org> mips-headers-2.4.21-r1.ebuild:
+  Changed ~mips to mips in KEYWORDS
+  Added a PROVIDE and EXTRAVERSION line
 
   05 Jul 2003; Joshua Kinard <kumba@gentoo.org> :
   ebuild for CVS Snapshot (20030705) of linux-mips.org kernel, tagged linux_2_4
