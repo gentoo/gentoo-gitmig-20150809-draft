@@ -1,13 +1,17 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.36 2003/11/21 18:04:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.37 2003/11/22 05:17:07 lu_zero Exp $
+
+  22 Nov 2003; Luca Barbato <lu_zero@gentoo.org> vlc-0.6.2.ebuild,
+  files/0.6.2-mozilla-fix.patch:
+  Patch to build mozilla plugin on mozilla-1.5*
 
   21 Nov 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.2.ebuild:
   The Mozilla plugin only works with Mozilla 1.4 currently.
 
   19 Oct 2003; Max Kalika <max@gentoo.org> vlc-0.6.2.ebuild:
-  Revert location of libdvd, it belongs in media-libs but was only partly moved
-  there previously.
+  Revert location of libdvd, it belongs in media-libs but was only 
+  partly moved there previously.
 
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.2.ebuild:
   Fixed portage location of libdvb.  Marked stable for x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.9 2003/11/21 18:04:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.10 2003/11/22 05:17:07 lu_zero Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -40,7 +40,7 @@ DEPEND="X? ( virtual/x11 )
 	lirc? ( app-misc/lirc )
 	mad? ( >=media-sound/mad-0.14.2b )
 	matroska? ( >=media-libs/libmatroska-0.4.4 )
-	mozilla? ( =net-www/mozilla-1.4* )
+	mozilla? ( >=net-www/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 >=media-libs/libogg-1.0 )
@@ -56,13 +56,14 @@ DEPEND="X? ( virtual/x11 )
 	>=media-libs/flac-1.1.0
 	>=media-libs/libdv-0.98
 	>=media-libs/libdvbpsi-0.1.3
-	=media-video/ffmpeg-0.4.7*
+	>=media-video/ffmpeg-0.4.7
 	>media-libs/libmpeg2-0.3.1
 	>=media-video/mplayer-0.90"
 
 # mplayer is a required dependancy until the libpostproc code becomes
 # a separate packages or until ffmpeg gets support for installing
 # the library.
+
 
 # get kde and arts paths
 if [ -n "`use kde`" -o -n "`use arts`" ]; then
@@ -73,6 +74,10 @@ fi
 
 src_unpack() {
 	unpack ${A}
+
+	# Mozilla plugin related fix
+	epatch ${FILESDIR}/${PV}-mozilla-fix.patch
+
 	cd ${S}
 
 	# if qt3 is installed, patch vlc to work with it instead of qt2
