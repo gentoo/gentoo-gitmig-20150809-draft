@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 da0f3c23523cf73328d26d6a6b4428c5 vanessa-adt-0.0.4_beta4.ebuild 698
+MD5 5ef3aabf205d0cd98261b8c8f7a1f3c9 vanessa-adt-0.0.6.ebuild 817
 MD5 b5ddadd3ac12d956f3d511a599543370 ChangeLog 1005
-MD5 d035b5646ad35b62c5d53c415b80a613 vanessa-adt-0.0.4_beta4.ebuild 698
-MD5 9e64319ee4f693497393674b7c544a46 vanessa-adt-0.0.6.ebuild 678
-MD5 5faef8112552c3089fb6c5137f8a6d47 files/digest-vanessa-adt-0.0.4_beta4 74
+MD5 4821c19c6bb72e3366ef45d4b9c7a806 metadata.xml 352
 MD5 d7bfb3d94820160428c97a37e57f0b18 files/digest-vanessa-adt-0.0.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW07yI1lqEGTUzyQRArs7AKCXrdv+mgOfWWdG5F7rmOfXNktyEQCcDf19
-X95t0HE65m8v6xhmvf98JDA=
-=t+/x
------END PGP SIGNATURE-----
+MD5 5faef8112552c3089fb6c5137f8a6d47 files/digest-vanessa-adt-0.0.4_beta4 74

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/vanessa-adt-0.0.4_beta4.ebuild,v 1.6 2004/08/03 11:48:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/vanessa-adt-0.0.4_beta4.ebuild,v 1.7 2005/01/21 21:47:18 xmerlin Exp $
 
 DESCRIPTION="Provides Abstract Data Types (ADTs) Includes queue, dynamic array, hash and key value ADT."
 HOMEPAGE="http://www.vergenet.net/linux/vanessa/"
