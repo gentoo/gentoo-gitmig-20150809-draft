@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.8 2004/01/15 03:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.9 2004/01/18 04:09:09 vapier Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE="build"
 
 DEPEND="virtual/glibc"
 
 pkg_setup() {
-	check_KV
+	use build || check_KV
 }
 
 src_unpack() {
@@ -29,6 +30,11 @@ src_unpack() {
 
 	# Get modversions.h include right if we have CONFIG_MODVERSIONS set.
 	epatch ${FILESDIR}/${P}-modversions_h.patch
+
+	# Disable kernel module support while building stages #38403
+	if [ `use build` ] ; then
+		sed -i 's:installmodule ::' Makefile
+	fi
 }
 
 src_compile() {
@@ -48,8 +54,10 @@ src_compile() {
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
 
-	make INCLUDEDIR="/usr/src/linux/include" -C kernel/svgalib_helper \
-		clean all || die "Failed to build kernel module!"
+	if [ ! `use build` ] ; then
+		make INCLUDEDIR="/usr/src/linux/include" -C kernel/svgalib_helper \
+			clean all || die "Failed to build kernel module!"
+	fi
 
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs \
 		|| die "Failed to build demoprogs!"
