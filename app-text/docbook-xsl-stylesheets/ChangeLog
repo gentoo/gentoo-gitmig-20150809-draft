@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.25 2004/01/14 01:12:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.26 2004/01/14 12:59:35 obz Exp $
+
+  14 Jan 2004; Mike Gardiner <obz@gentoo.org>
+  docbook-xsl-stylesheets-1.62.0.ebuild:
+  Marked stable on x86 (should've been done a while ago), and removed old 1.62.0
+  ebuild
 
   13 Jan 2004; <gustavoz@gentoo.org> docbook-xsl-stylesheets-1.62.0-r1.ebuild:
   stable on hppa

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.4.ebuild,v 1.6 2004/01/11 01:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.62.4.ebuild,v 1.7 2004/01/14 12:59:35 obz Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="~x86 ia64 ~ppc ~hppa ~amd64 ~sparc alpha"
+KEYWORDS="x86 ia64 ~ppc ~hppa ~amd64 ~sparc alpha"
 IUSE=""
 
 DEPEND="dev-libs/libxml2"
