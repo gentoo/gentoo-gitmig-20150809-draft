@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.1 2004/04/19 23:07:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0-r1.ebuild,v 1.2 2004/05/14 17:05:28 zul Exp $
 
 MAX_NICK_LENGTH=30
 MAX_CLIENTS=500
@@ -70,7 +70,7 @@ src_unpack()
 	# * Remove creation of logdirs under prefix. Use /var/log/ircd instead.
 	# * Remove symlinking which won't work in sandbox. Done in src_install().
 	# Sed hardcoded CFLAGS to those in make.conf.
-	patch -p1 < ${FILESDIR}/${PF}.diff || die "patch failed"
+	patch -p1 < ${FILESDIR}/${P}.diff || die "patch failed"
 	cp configure configure.dist
 	sed -e "s:IRC_CFLAGS=\"-O2 -g \":IRC_CFLAGS=\"${CFLAGS}\":" \
 		< configure.dist > configure
