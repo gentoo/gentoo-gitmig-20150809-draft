@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/ccc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.1 2003/04/12 03:44:48 agriffis Exp $
+
+*ccc-6.5.6.002 (11 Apr 2003)
+
+  11 Apr 2003; Aron Griffis <agriffis@gentoo.org> ccc-6.5.6.002.ebuild:
+  Initial import.  Ebuild submitted by Tavis Ormandy <itaviso@sdf.lonestar.org>
+
