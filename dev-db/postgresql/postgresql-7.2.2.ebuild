@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.3 2002/08/26 10:15:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.4 2002/08/26 13:49:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -118,15 +118,19 @@ src_install () {
 	rm -rf ${D}/usr/doc ${D}/mnt
 	exeinto /usr/bin
 	
-	dojar ${D}/usr/share/postgresql/java/postgresql.jar
-	rm ${D}/usr/share/postgresql/java/postgresql.jar
+	if [ `use java` ]; then
+		dojar ${D}/usr/share/postgresql/java/postgresql.jar
+		rm ${D}/usr/share/postgresql/java/postgresql.jar
+	fi
 
 	dodir /usr/include/postgresql/pgsql
 	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
 
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
+}
 
+pkg_postinst() {
 	einfo ">>> Execute the following command"
 	einfo ">>> ebuild  /var/db/pkg/dev-db/${P}/${P}.ebuild config"
 	einfo ">>> to setup the initial database environment."
