@@ -17,7 +17,7 @@ SRC_URI="${SOURCE_HTTP}"
 HOMEPAGE="http://www.xmms.org/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 RDEPEND="app-arch/unzip
