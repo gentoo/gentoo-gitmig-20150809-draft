@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.21 2004/10/27 14:33:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.22 2004/10/29 12:31:49 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5.5.ebuild:
+  removed nomirror, why was it there?
 
 *rhino-1.5.5 (23 Oct 2004)
 

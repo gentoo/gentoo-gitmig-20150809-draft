@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5.ebuild,v 1.1 2004/10/23 16:07:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5.ebuild,v 1.2 2004/10/29 12:31:49 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -18,7 +18,6 @@ DEPEND="dev-java/ant-core
 	app-arch/unzip
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
-RESTRICT="nomirror"
 
 src_unpack() {
 	unpack ${MY_P}.zip
