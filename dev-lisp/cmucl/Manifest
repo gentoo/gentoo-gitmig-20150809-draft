@@ -1,23 +1,33 @@
-MD5 b401311ce19432f8225d7ce3362325bd cmucl-18e-r4.ebuild 2938
-MD5 db4a931ee39d986d6bc514e159986173 cmucl-19a.ebuild 3061
-MD5 637141c1d7519ba02ab16ba8073f86f4 cmucl-18e-r1.ebuild 3327
-MD5 29904b2e98286ec168bc9c87b0f3b0ac cmucl-18e-r3.ebuild 3411
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8f0849ab792a63ef81e036ee02f636e6 cmucl-18e-r2.ebuild 3195
-MD5 699422c16c59fdda3afc97e8b45bc4b7 ChangeLog 1975
+MD5 f1cebda29518b65205e70794d9986e8d cmucl-18e-r4.ebuild 2947
+MD5 637141c1d7519ba02ab16ba8073f86f4 cmucl-18e-r1.ebuild 3327
 MD5 485e34143c90280ddfaacdc2309ffe35 cmucl-18e.ebuild 2669
+MD5 1464be48a0d837be66f87c8b9be96978 ChangeLog 2101
+MD5 29904b2e98286ec168bc9c87b0f3b0ac cmucl-18e-r3.ebuild 3411
 MD5 929688a2167434e2a4f0169de47e7428 metadata.xml 1107
-MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r3 137
+MD5 9bd0015554dd77e0356aab136a9f9d9d cmucl-19a.ebuild 3070
 MD5 3e3791768309ef2b15c4e342b300980b files/digest-cmucl-18e 205
-MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
 MD5 a4b38b2a7ceb581cb18dc2c730f56370 files/digest-cmucl-19a 239
-MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r2 137
 MD5 3e3791768309ef2b15c4e342b300980b files/digest-cmucl-18e-r1 205
-MD5 b23a0a0d355d92b1a2123de8acd61418 files/19a/install-clc.lisp 1749
-MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19a/README.Gentoo 848
-MD5 190f38f6f6f33f3e1ceee848d2583573 files/19a/site-init.lisp.in 1935
-MD5 14ccb382eaa0a2c94834328a413cc906 files/19a/cmucl.sh 2701
-MD5 03cd0504ac8f5c50f17bf31d6d9d3293 files/19a/herald-save.lisp-gentoo.patch 891
-MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/18e/README.Gentoo 848
-MD5 190f38f6f6f33f3e1ceee848d2583573 files/18e/site-init.lisp.in 1935
+MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r2 137
+MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r3 137
+MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
 MD5 379cf3aca883a7097c0410f96be55378 files/18e/install-clc.lisp-gentoo.patch 1294
 MD5 306ba9e5615290fb688a46f7c0efdc07 files/18e/herald-save.lisp-gentoo.patch 751
+MD5 190f38f6f6f33f3e1ceee848d2583573 files/18e/site-init.lisp.in 1935
+MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/18e/README.Gentoo 848
+MD5 b23a0a0d355d92b1a2123de8acd61418 files/19a/install-clc.lisp 1749
+MD5 03cd0504ac8f5c50f17bf31d6d9d3293 files/19a/herald-save.lisp-gentoo.patch 891
+MD5 14ccb382eaa0a2c94834328a413cc906 files/19a/cmucl.sh 2701
+MD5 190f38f6f6f33f3e1ceee848d2583573 files/19a/site-init.lisp.in 1935
+MD5 997a2bfdcd98bc978f6c3b79ba8f2264 files/19a/README.Gentoo 848
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOsiI1lqEGTUzyQRAsqgAJ4k6RbJSDMnjY5TSIBOd+xe8Sm/zQCfeQiW
+PZvrK9GvI23pjVnZiq+iqQo=
+=iGF3
+-----END PGP SIGNATURE-----

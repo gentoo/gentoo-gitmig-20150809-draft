@@ -1,45 +1,55 @@
-MD5 f003e76281bf53f32d4460e4f4c21c28 ChangeLog 6694
-MD5 d30c58eb606d1697ee9a7cd018f53037 clisp-2.28.ebuild 1195
-MD5 a657b7ad6a59b8db8a3b1ea37dfda24c clisp-2.29.ebuild 1267
-MD5 06c63b00df414c368ae3467766a18719 clisp-2.30-r1.ebuild 2158
-MD5 36d396e39520f0d4bedae13307b86eee clisp-2.30.ebuild 1405
-MD5 fc1b329239b46272f593df766e201888 clisp-2.31-r1.ebuild 3825
-MD5 49e5eb654b722e6b01af89db9664528e clisp-2.31.ebuild 2904
-MD5 02bad54136a782a49b1ebea18e55cc1b clisp-2.32-r1.ebuild 3699
-MD5 a728f8364a969e22a4a59e74f44601bf clisp-2.32.ebuild 3788
-MD5 de46df1ab30e6391089f0e24380e5690 clisp-2.33-r1.ebuild 4219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f650ea6cb64556c586dc21277b13c5f clisp-2.33-r2.ebuild 4119
 MD5 7fbe736b19c5a723e49951309d082ac0 clisp-2.33.1.ebuild 4122
-MD5 69004dfad4b7fad971a75f8e2e981b4a clisp-2.33.2-r1.ebuild 4242
+MD5 a728f8364a969e22a4a59e74f44601bf clisp-2.32.ebuild 3788
+MD5 d30c58eb606d1697ee9a7cd018f53037 clisp-2.28.ebuild 1195
+MD5 06c63b00df414c368ae3467766a18719 clisp-2.30-r1.ebuild 2158
+MD5 de46df1ab30e6391089f0e24380e5690 clisp-2.33-r1.ebuild 4219
+MD5 49e5eb654b722e6b01af89db9664528e clisp-2.31.ebuild 2904
+MD5 02bad54136a782a49b1ebea18e55cc1b clisp-2.32-r1.ebuild 3699
 MD5 00c823917b6a3897235602ebc5fd8aee clisp-2.33.2.ebuild 4122
 MD5 17fb50c17071dc190e13cb47508b55c0 clisp-2.33.ebuild 4060
+MD5 a657b7ad6a59b8db8a3b1ea37dfda24c clisp-2.29.ebuild 1267
+MD5 173acfe603594bffe9eccd8af8206f07 clisp-2.33.2-r1.ebuild 4253
+MD5 4fe3bc3e7ee45b7769a61b366f6019a3 ChangeLog 6805
 MD5 485cde76397408cf913fc6d4c7a45a67 metadata.xml 882
+MD5 fc1b329239b46272f593df766e201888 clisp-2.31-r1.ebuild 3825
+MD5 36d396e39520f0d4bedae13307b86eee clisp-2.30.ebuild 1405
+MD5 bf978d68f0161bacd6772c07dfade6fa files/install-clc.lisp 484
 MD5 c112ebf612bf8e262c4285fd4c7e9553 files/clisp-2.30-gentoo.patch 1301
-MD5 ec015c64b7aca6f6721123c27d7d921c files/clisp-2.30-linux.lisp-upstream.patch 4712
-MD5 7a720fb7b329a505c3cdb556b166aba7 files/clisp.sh 2810
 MD5 2ce1383673bccf5309622a0c11c0aca0 files/digest-clisp-2.28 64
 MD5 7642efead569d6dbdd43a8d5a89df0a8 files/digest-clisp-2.29 64
 MD5 4408eb96e1169c101473012aee6c87ca files/digest-clisp-2.30 64
-MD5 4408eb96e1169c101473012aee6c87ca files/digest-clisp-2.30-r1 64
 MD5 27760908e107e35ff838560fb5381d5b files/digest-clisp-2.31 64
-MD5 27760908e107e35ff838560fb5381d5b files/digest-clisp-2.31-r1 64
 MD5 da9eb2a136566bdce0620c950df941b2 files/digest-clisp-2.32 64
-MD5 da9eb2a136566bdce0620c950df941b2 files/digest-clisp-2.32-r1 64
 MD5 ec706829fc32d6d1aa4c4acc56e755a7 files/digest-clisp-2.33 64
-MD5 ec706829fc32d6d1aa4c4acc56e755a7 files/digest-clisp-2.33-r1 64
-MD5 ec706829fc32d6d1aa4c4acc56e755a7 files/digest-clisp-2.33-r2 64
 MD5 a9cfca152741adf66c83f97408c735fd files/digest-clisp-2.33.1 66
 MD5 9a2df7725b74af8b8b9f3db39b350e79 files/digest-clisp-2.33.2 66
+MD5 ec015c64b7aca6f6721123c27d7d921c files/clisp-2.30-linux.lisp-upstream.patch 4712
+MD5 4408eb96e1169c101473012aee6c87ca files/digest-clisp-2.30-r1 64
+MD5 27760908e107e35ff838560fb5381d5b files/digest-clisp-2.31-r1 64
+MD5 da9eb2a136566bdce0620c950df941b2 files/digest-clisp-2.32-r1 64
+MD5 ec706829fc32d6d1aa4c4acc56e755a7 files/digest-clisp-2.33-r1 64
+MD5 ec706829fc32d6d1aa4c4acc56e755a7 files/digest-clisp-2.33-r2 64
 MD5 9a2df7725b74af8b8b9f3db39b350e79 files/digest-clisp-2.33.2-r1 66
-MD5 bf978d68f0161bacd6772c07dfade6fa files/install-clc.lisp 484
+MD5 7a720fb7b329a505c3cdb556b166aba7 files/clisp.sh 2810
 MD5 9b76ca10cf785d54c75803e8fddc91cb files/2.31/bindings-glibc-linux.lisp-gentoo.patch 1292
 MD5 9db8f3ac2974a7d9725148ecc0709cc8 files/2.31/bindings-wildcard-fnmatch.c-gentoo.patch 1248
 MD5 ff3506766c1fc9216e04f650f39c0e94 files/2.31/fastcgi-Makefile.in-gentoo.patch 654
-MD5 83877a7508037b3286d37fc12f09650c files/2.32/fastcgi-Makefile.in-gentoo.patch 663
 MD5 ed4100707b93b34a7825b915690e9ccd files/2.32/format.lisp-gentoo.patch 651
-MD5 e4c6fe13416cfc355e04ae4fc2a01d50 files/2.33/berkely-db-configure-gentoo.patch.gz 3765
-MD5 4e46c2b7e0788acfbbee8e3b25ae782b files/2.33/fastcgi-Makefile.in-gentoo.patch 710
+MD5 83877a7508037b3286d37fc12f09650c files/2.32/fastcgi-Makefile.in-gentoo.patch 663
 MD5 d0bf00200c853600adc899f2cb1fb907 files/2.33/format.lisp-gentoo.patch 651
+MD5 4e46c2b7e0788acfbbee8e3b25ae782b files/2.33/fastcgi-Makefile.in-gentoo.patch 710
+MD5 e4c6fe13416cfc355e04ae4fc2a01d50 files/2.33/berkely-db-configure-gentoo.patch.gz 3765
 MD5 2e3ac08aeb220af54163a8b41026e355 files/2.33.1/fastcgi-Makefile.in-gentoo.patch 670
 MD5 a9325cfeff703a21e63dbd2b3aad34c1 files/2.33.2/fastcgi-Makefile.in-gentoo.patch 670
 MD5 3eb393d2fbfe2e395744f45ce0d3e4f0 files/2.33.2/glibc-linux.lisp-sigpause-gentoo.patch 622
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOqJI1lqEGTUzyQRAs+pAKCuXAQ23bpberGnhhDA+csZs+5rSwCdGzeL
+zcuV7AAS2+f8eOzHmI0rbDU=
+=VFIW
+-----END PGP SIGNATURE-----
