@@ -1,15 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.9.ebuild,v 1.5 2004/09/13 02:29:43 eradicator Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.10.ebuild,v 1.1 2004/09/13 02:29:43 eradicator Exp $
 
 IUSE="oggvorbis mp3"
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
 HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool/"
-SRC_URI="http://pwp.netcabo.pt/paol/tagtool/${P}.tar.gz
-		mirror://gentoo/${P}-configure.patch.tar.bz2"
+SRC_URI="http://pwp.netcabo.pt/paol/tagtool/${P}.tar.gz"
 
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
@@ -18,35 +15,28 @@ DEPEND=">=x11-libs/gtk+-2.4.0-r1
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	#fix the strange upstream configure logic
-	epatch ${DISTDIR}/${P}-configure.patch.tar.bz2
-}
+KEYWORDS="~x86 ~ppc ~amd64"
 
 src_compile() {
 	cd ${S}
 
 	local myconf
 	myconf=""
-	myconf="${myconf} $(use_enable mp3)"
-	myconf="${myconf} $(use_enable oggvorbis vorbis)"
 
-	#add some configure logic to prevent a dying ebuild
+	# Stupid configure thinks --enable-{mp3,vorbis} disables it.
+	# add some configure logic to prevent a dying ebuild
 	if use !mp3 && use !oggvorbis
 	then
 		ewarn "Vorbis or mp3 must be selected."
 		ewarn "Defaulting to mp3, please cancel this emerge"
 		ewarn "if you do not want mp3 support."
-		myconf="--enable-mp3"
+		myconf="--disable-vorbis"
+	else
+		use mp3 || myconf="${myconf} --disable-mp3"
+		use oggvorbis || myconf="${myconf} --disable-vorbis"
 	fi
 
-	econf \
-		${myconf} || die "econf failed"
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 
