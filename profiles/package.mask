@@ -41,10 +41,6 @@
 # until bug #12538 can be resolved
 =x11-libs/qt-3.1.1
 
-# <aliz@gentoo.org> (20 Dec 2002)
-# Masked until lordvan takes a look
-=net-print/cups-1.1.18
-
 # <danarmak@gentoo.org> (19 Dec 2002)
 # cvs snapshot in testing for bug #7131
 =net-irc/kvirc-3.0.0_pre20021217
