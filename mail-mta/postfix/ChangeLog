@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.63 2005/04/04 17:00:50 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.64 2005/04/05 17:37:13 langthang Exp $
+
+*postfix-2.2.2-r1 (05 Apr 2005)
+
+  05 Apr 2005; Tuấn Văn <langthang@gentoo.org> +postfix-2.2.2-r1.ebuild:
+  sync VDA patch.
 
 *postfix-2.2.2 (04 Apr 2005)
 
