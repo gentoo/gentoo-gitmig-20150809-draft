@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.61 2003/10/17 13:27:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.62 2003/10/21 18:54:18 foser Exp $
+
+*nautilus-2.4.1 (21 Oct 2003)
+
+  21 Oct 2003; foser <foser@gentoo.org> nautilus-2.4.0.ebuild :
+  New version, fix automake stuff for cups
+  Add patch to support audio preview via gst (by <foser@gentoo.org>)
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> nautilus-2.4.0.ebuild:
   Stable on alpha
