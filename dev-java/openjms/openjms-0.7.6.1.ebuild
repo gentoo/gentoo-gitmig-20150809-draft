@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1.ebuild,v 1.2 2005/03/23 18:40:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1.ebuild,v 1.3 2005/03/29 16:40:40 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -30,7 +30,7 @@ RDEPEND="virtual/jdk
 	dev-java/jms
 	dev-java/jta
 	dev-java/log4j
-	dev-java/oro
+	=dev-java/jakarta-oro-2.0*
 	~dev-java/servletapi-2.3
 	=dev-java/xerces-2.3*"
 

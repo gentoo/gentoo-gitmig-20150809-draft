@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r2.ebuild,v 1.3 2004/10/22 11:45:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r2.ebuild,v 1.4 2005/03/29 16:36:54 luckyduck Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-lang-1.0
 	>=dev-java/commons-logging-1.0
 	>=dev-java/commons-validator-1.0
-	>=dev-java/oro-2.0.6
+	=dev-java/jakarta-oro-2.0*
 	=dev-java/servletapi-2.3*"
 IUSE="doc jikes"
 KEYWORDS="~x86 ~ppc ~amd64"
@@ -38,7 +38,7 @@ src_compile() {
 	antflags="${antflags} -Dstruts-legacy.jar=`java-config -p struts-legacy`"
 	antflags="${antflags} -Dcommons-digester.jar=`java-config -p commons-digester`"
 	antflags="${antflags} -Dcommons-fileupload.jar=`java-config -p commons-fileupload`"
-	antflags="${antflags} -Djakarta-oro.jar=`java-config -p oro`"
+	antflags="${antflags} -Djakarta-oro.jar=`java-config -p jakarta-oro-2.0`"
 	antflags="${antflags} -Dservlet.jar=`java-config -p servletapi-2.3`"
 	antflags="${antflags} -Dcommons-lang.jar=`java-config -p commons-lang`"
 	antflags="${antflags} -Dcommons-logging.jar=`java-config -p commons-logging | sed 's/.*://'`"
