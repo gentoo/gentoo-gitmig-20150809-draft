@@ -1,5 +1,3 @@
-MD5 e63f80ea9b8f733f19a71576a69a0a94 ChangeLog 688
-MD5 83a2f5e4aa008836e5dd529472bb2274 jftpgw-0.13.1.ebuild 719
-MD5 e73c11ae4aa144ae382a8bd5ebd3b3fb jftpgw-0.13.4.ebuild 721
-MD5 91bb84852abceeb182d727e3f91d8d78 files/digest-jftpgw-0.13.1 65
 MD5 5b8929834163de8835af5442df0500ff files/digest-jftpgw-0.13.4 65
+MD5 e63f80ea9b8f733f19a71576a69a0a94 ChangeLog 688
+MD5 327d5a14a49174a406eadf8b857be11b jftpgw-0.13.4.ebuild 629
