@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.13 2004/06/25 02:24:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.4.ebuild,v 1.14 2004/07/14 22:54:57 agriffis Exp $
 
 inherit gnuconfig elisp-common
 
-S=${WORKDIR}/${P}
 DESCRIPTION="CScope - interactively examine a C program"
 SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 HOMEPAGE="http://cscope.sourceforge.net"
