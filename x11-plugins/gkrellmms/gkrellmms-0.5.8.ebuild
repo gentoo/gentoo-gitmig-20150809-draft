@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-0.5.8.ebuild,v 1.9 2004/06/24 22:56:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-0.5.8.ebuild,v 1.10 2004/08/08 01:01:05 slarti Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
-DESCRIPTION="A sweet plugin to controll xmms from gkrellm"
+DESCRIPTION="A sweet plugin to control xmms from gkrellm"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/gkrellmms.phtml"
 

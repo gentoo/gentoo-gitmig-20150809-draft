@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.12 2004/06/28 20:44:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmDownload/wmDownload-0.1.2a.ebuild,v 1.13 2004/08/08 01:02:10 slarti Exp $
 
 S=${WORKDIR}/wmDownload
 
 IUSE=""
-DESCRIPTION="dockapp that displays how much data you've recieved on each eth and ppp device."
+DESCRIPTION="dockapp that displays how much data you've received on each eth and ppp device."
 SRC_URI="mirror://sourceforge/wmdownload/${P}.tar.gz"
 HOMEPAGE="http://wmdownload.sourceforge.net/"
 

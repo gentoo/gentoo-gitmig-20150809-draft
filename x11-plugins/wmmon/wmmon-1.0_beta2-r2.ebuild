@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r2.ebuild,v 1.4 2004/08/03 15:58:48 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r2.ebuild,v 1.5 2004/08/08 01:06:01 slarti Exp $
 
 inherit eutils
 
 S="${WORKDIR}/${PN}.app"
 IUSE=""
-DESCRIPTION="Dockable system resources monitor applette for WindowMaker"
+DESCRIPTION="Dockable system resources monitor applet for WindowMaker"
 WMMON_VERSION=1_0b2
 SRC_URI="http://rpig.dyndns.org/~anstinus/Linux/${PN}-${WMMON_VERSION}.tar.gz"
 HOMEPAGE="http://www.bensinclair.com/dockapp/"

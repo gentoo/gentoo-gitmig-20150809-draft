@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/autoprofile-2.07.ebuild,v 1.5 2004/07/16 13:09:56 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/autoprofile-2.07.ebuild,v 1.6 2004/08/08 01:00:02 slarti Exp $
 
-DESCRIPTION=" AutoProfile is a fully-featured profile manager for the popular instant messanger client Gaim."
+DESCRIPTION=" AutoProfile is a fully-featured profile manager for the popular instant messenger client Gaim."
 HOMEPAGE="http://hkn.eecs.berkeley.edu/~casey/autoprofile/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"

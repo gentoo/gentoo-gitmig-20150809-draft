@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.7 2004/06/28 20:48:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.8.ebuild,v 1.8 2004/08/08 01:04:17 slarti Exp $
 
 IUSE="gtk"
 
-DESCRIPTION="WindowMaker DockApp/Grellm2 pluggin that fetches the DSL usage information for Australian ISP Internode"
+DESCRIPTION="WindowMaker DockApp/Grellm2 plugin that fetches the DSL usage information for Australian ISP Internode"
 HOMEPAGE="http://www.earthmagic.org/?software"
 SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
 LICENSE="GPL-2"

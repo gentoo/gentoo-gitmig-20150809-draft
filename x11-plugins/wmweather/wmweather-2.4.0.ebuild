@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.10 2004/07/01 11:44:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.11 2004/08/08 01:07:39 slarti Exp $
 
 IUSE=""
-DESCRIPTION="Dockable applette for WindowMaker that shows weather."
+DESCRIPTION="Dockable applet for WindowMaker that shows weather."
 HOMEPAGE="http://www.godisch.de/debian/wmweather/"
 SRC_URI="http://www.godisch.de/debian/wmweather/${P}.tar.gz"
 
