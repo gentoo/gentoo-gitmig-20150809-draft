@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.4 2003/07/13 01:54:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.5 2003/08/02 18:19:46 taviso Exp $
+
+  02 Aug 2003; Tavis Ormandy <taviso@gentoo.org> c-client-2002d.ebuild:
+  stable on alpha
 
   12 Jul 2003; Jason Wever <weeve@gentoo.org> c-client-2002d.ebuild:
   Changed ~sparc keyword to sparc to fix dependency borkage.
