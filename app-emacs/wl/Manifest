@@ -1,4 +1,5 @@
 MD5 a74545efb23ae006d89a69ead03f8313 wl-2.8.1.ebuild 1262
+MD5 74f5fb69c12588c2ea72f8baf1c1091f wl-2.10.1-r1.ebuild 1462
 MD5 74f5fb69c12588c2ea72f8baf1c1091f wl-2.10.1.ebuild 1462
 MD5 4694a65c4ac9fdb68c775efd35cc5c57 wl-2.10.0-r1.ebuild 1321
 MD5 eca35eca5e14fd8d79c3e9662eb858c5 wl-2.10.0.ebuild 1255
@@ -8,3 +9,4 @@ MD5 3ad7747decc89ea13c0b23de355b79bb files/digest-wl-2.10.0 61
 MD5 2cc71c29a99b30471c7dbecae5f49382 files/digest-wl-2.10.1 61
 MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wl-2.8.1 61
 MD5 3ad7747decc89ea13c0b23de355b79bb files/digest-wl-2.10.0-r1 61
+MD5 2cc71c29a99b30471c7dbecae5f49382 files/digest-wl-2.10.1-r1 61
