@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.104 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.105 2004/09/02 14:39:33 caleb Exp $
+
+  02 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.3.0.ebuild:
+  Make imlib dep optional
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdegraphics-3.1.5.ebuild, kdegraphics-3.2.1.ebuild,

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0.ebuild,v 1.5 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0.ebuild,v 1.6 2004/09/02 14:39:33 caleb Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
 KEYWORDS="~x86 ~amd64 ppc64 ~sparc ppc"
-IUSE="gphoto2 tetex scanner opengl"
+IUSE="gphoto2 imlib opengl scanner tetex"
 
 DEPEND="~kde-base/kdebase-${PV}
 	gphoto2? ( media-gfx/gphoto2 )
@@ -15,7 +15,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	tetex? ( virtual/tetex )
 	dev-libs/fribidi
 	opengl? ( virtual/glut virtual/opengl )
-	media-libs/imlib
+	imlib? ( media-libs/imlib )
 	virtual/ghostscript
 	media-libs/tiff
 	x86? ( scanner? sys-libs/libieee1284 )
@@ -39,6 +39,9 @@ src_compile() {
 
 	use scanner	|| DO_NOT_COMPILE="$DO_NOT_COMPILE kooka libkscan"
 
-	myconf="$myconf --with-imlib --with-imlib-config=/usr/bin"
+	use imlib \
+		&& myconf="$myconf --with-imlib --with-imlib-config=/usr/bin" \
+		|| myconf="$myconf --without-imlib"
+
 	kde_src_compile
 }
