@@ -1,29 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.2.0.ebuild,v 1.3 2004/06/24 23:43:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.2.0.ebuild,v 1.4 2004/06/30 17:16:54 vapier Exp $
 
 inherit common-lisp
 
 DESCRIPTION="CL-GD is a library for Common Lisp which provides an interface to the GD Graphics Library for the dynamic creation of images. It is based on UFFI and should thus be portable to all CL implementations supported by UFFI."
-HOMEPAGE="http://weitz.de/cl-gd
-	http://www.cliki.net/cl-gd"
+HOMEPAGE="http://weitz.de/cl-gd http://www.cliki.net/cl-gd"
 SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="dev-lisp/common-lisp-controller
 	>=dev-lisp/cl-uffi-1.3.4
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/freetype
-	>=media-libs/libgd-2.0.15
+	>=media-libs/gd-2.0.15
 	sys-libs/zlib
 	virtual/commonlisp"
 
 CLPACKAGE=cl-gd
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	gcc ${CFLAGS} -fPIC -c cl-gd-glue.c
