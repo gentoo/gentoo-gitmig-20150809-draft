@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.1.ebuild,v 1.11 2003/02/13 13:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2.ebuild,v 1.1 2003/03/04 17:51:41 lostlogic Exp $
 
 MY_P=${P//-tools}
+MY_P=${MY_P/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="bind tools: dig, nslookup, and host"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${MY_P}.tar.gz"
-HOMEPAGE="http://www.isc.org/BIND/bind9.html"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
+HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
 
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~alpha ~hppa"
 LICENSE="as-is"
 SLOT="0"
 

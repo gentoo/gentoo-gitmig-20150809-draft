@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2_rc1-r1.ebuild,v 1.11 2003/02/13 13:56:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.1 2003/03/04 17:51:45 lostlogic Exp $
 
 IUSE="ssl ipv6 doc"
 
-MY_P=${P/_}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
-HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
+HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="as-is"
 SLOT="0"
 
@@ -19,13 +17,15 @@ DEPEND="sys-apps/groff
 
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz && cd ${S}
+	unpack ${A} && cd ${S}
 
 	# Adjusting PATHs in manpages
 	for i in `echo bin/{named/named.8,check/named-checkconf.8,nsupdate/nsupdate.8,rndc/rndc.8}`; do
-	sed -e 's:/etc/named.conf:/etc/bind/named.conf:g' -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
-	-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' < ${i} > ${i}.new
-	mv --force ${i}.new ${i} ; done
+		sed -i -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
+		       -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+		       -e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
+		       ${i}
+	done
 }
 
 src_compile() {
@@ -40,22 +40,25 @@ src_compile() {
 		--with-libtool \
 		${myconf}
 
-	make || die "failed to compile bind"
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die "failed to compile bind"
 }
 
 src_install() {
-	einstall
+	einstall || die "failed to install bind"
 	
 	dodoc CHANGES COPYRIGHT FAQ README
 
 	use doc && {
-	docinto misc ; dodoc doc/misc/*
-	docinto html ; dodoc doc/arm/*
-	docinto	draft ; dodoc doc/draft/*
-	docinto rfc ; dodoc doc/rfc/*
-	docinto contrib ; dodoc contrib/named-bootconf/named-bootconf.sh \
-	contrib/nanny/nanny.pl
+		docinto misc ; dodoc doc/misc/*
+		docinto html ; dodoc doc/arm/*
+		docinto	draft ; dodoc doc/draft/*
+		docinto rfc ; dodoc doc/rfc/*
+		docinto contrib ; dodoc contrib/named-bootconf/named-bootconf.sh \
+		contrib/nanny/nanny.pl
 	}
+
+	insinto /etc/env.d
+	newins ${FILESDIR}/10bind.env 10bind
 
 	# some handy-dandy dynamic dns examples
 	cd ${D}/usr/share/doc/${PF}
@@ -63,10 +66,10 @@ src_install() {
 
 	dodir /etc/bind /var/bind/{pri,sec}
 
-	insinto /etc/bind ; doins ${FILESDIR}/named.conf
+	insinto /etc/bind ; newins ${FILESDIR}/named.conf-r1 named.conf
 	# ftp://ftp.rs.internic.net/domain/named.ca:
 	insinto /var/bind ; doins ${FILESDIR}/named.ca
-	insinto /var/bind/pri ; doins ${FILESDIR}/{127.0.0,localhost}
+	insinto /var/bind/pri ; doins ${FILESDIR}/{127,localhost}
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc6 named
 	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
@@ -91,16 +94,16 @@ pkg_postinst() {
 		${ROOT}/var/bind/pri ${ROOT}/var/bind/sec
 	chown -R named:named ${ROOT}/var/bind
 
-	echo
+	einfo
 	einfo "You can edit /etc/conf.d/named to customize named settings"
-	echo
+	einfo
 	einfo "The BIND ebuild now includes chroot support."
 	einfo "If you like to run bind in chroot AND this is a new install OR"
 	einfo "your bind doesn't already run in chroot, simply run:"
 	einfo "\`ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\`"
 	einfo "Before running the above command you might want to change the chroot"
 	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
-	echo
+	einfo
 }
 
 pkg_config() {
@@ -114,7 +117,7 @@ pkg_config() {
 	fi
 
 	if [ ! "$EXISTS" = yes ]; then
-		echo ; einfon "Setting up the chroot directory..."
+		einfo ; einfon "Setting up the chroot directory..."
 		mkdir -m 700 -p ${CHROOT}
 		mkdir -p ${CHROOT}/{dev,etc,var/run/named}
 		chown -R named:named ${CHROOT}/var/run/named
@@ -135,11 +138,11 @@ pkg_config() {
 		fi
 
 		sleep 1; echo " Done."; sleep 1
-		echo
+		einfo
 		einfo "Add the following to your root .bashrc or .bash_profile: "
 		einfo "   alias rndc='rndc -k ${CHROOT}/etc/bind/rndc.key'"
 		einfo "Then do the following: "
 		einfo "   source /root/.bashrc or .bash_profile"
-		echo
+		einfo
 	fi
 }
