@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/mpglen
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/ChangeLog,v 1.1 2004/10/06 20:08:02 trapni Exp $
+
+*mpglen-0.1 (21 Aug 2004)
+
+  21 Aug 2004; Christian Parpart <cparpart@surakware.net>:
+  Initial import. Ebuild submitted (#64511) 
+  by henning <henning@wh9.tu-dresden.de>.
+  Adapted to meet gentoo policies.
