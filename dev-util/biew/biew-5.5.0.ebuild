@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.1 2004/02/12 11:27:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.2 2004/02/13 11:39:42 spock Exp $
 
 IUSE="slang ncurses"
 
@@ -23,7 +23,7 @@ src_unpack() {
 
 	sed -i "s/USE_MOUSE=.*/USE_MOUSE=y/" makefile
 	sed -i 's:/usr/local:/usr:' biewlib/sysdep/generic/unix/os_dep.c
-	sed -i "s/CFLAGS += -O2 -fomit-frame-pointer -DNDEBUG=1/CFLAGS +=/" makefile.inc
+	sed -i "s/CFLAGS += -O2 -fomit-frame-pointer/CFLAGS +=/" makefile.inc
 #	sed -i "s/TARGET_OS=.*/TARGET_OS=linux/" makefile
 }
 

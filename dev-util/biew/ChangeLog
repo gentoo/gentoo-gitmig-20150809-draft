@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/biew
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.1 2004/02/12 11:27:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.2 2004/02/13 11:39:42 spock Exp $
+
+  13 Feb 2004; Michal Januszewski <spock@gentoo.org> biew-5.5.0.ebuild:
+  A small CFLAGS fix, closes #41428.
 
 *biew-5.5.0 (12 Feb 2004)
 
