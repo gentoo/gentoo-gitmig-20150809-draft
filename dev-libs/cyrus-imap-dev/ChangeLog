@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.25 2004/10/29 23:29:41 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.26 2004/11/24 17:30:00 langthang Exp $
+
+  24 Nov 2004; Tuan Van <langthang@gentoo.org>
+  -files/cyrus-imapd-2.2.8-db4.patch, -cyrus-imap-dev-2.2.8.ebuild:
+  stable 2.2.10, remove old version.
 
   29 Oct 2004; Tuan Van <langthang@gentoo.org> -files/2.1.14-db4.patch,
   -files/cyrus-imap-dev-2.1.12-libwrap.patch,

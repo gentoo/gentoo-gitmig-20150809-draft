@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.8.ebuild,v 1.4 2004/10/29 20:50:23 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.2.10.ebuild,v 1.1 2004/11/24 17:30:00 langthang Exp $
 
 inherit eutils gnuconfig
 
@@ -39,7 +39,7 @@ src_unpack() {
 	fi
 
 	# DB4 detection and versioned symbols.
-	epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch" || die "patch failed."
+	#epatch "${FILESDIR}/cyrus-imapd-${PV}-db4.patch" || die "patch failed."
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
