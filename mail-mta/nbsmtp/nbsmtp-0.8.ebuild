@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.8.ebuild,v 1.3 2004/07/01 19:53:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.8.ebuild,v 1.4 2004/07/14 16:51:10 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="The No-Brainer SMTP"
@@ -14,6 +14,7 @@ PROVIDE="virtual/mta"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 src_compile() {
 	gcc ${CFLAGS} -o nbsmtp nbsmtp.c || die
