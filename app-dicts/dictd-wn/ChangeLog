@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.12 2005/01/01 12:50:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.13 2005/02/27 12:01:49 nigoro Exp $
+
+  27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-wn-1.5-r1.ebuild:
+  added ~ppc64
 
   30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> metadata.xml:
   QA - IUSE fix and {add missing,correct} metatata.xml.
