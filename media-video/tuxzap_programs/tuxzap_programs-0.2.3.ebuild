@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap_programs/tuxzap_programs-0.2.3.ebuild,v 1.1 2003/03/07 15:19:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap_programs/tuxzap_programs-0.2.3.ebuild,v 1.2 2003/03/08 09:07:41 lordvan Exp $
 
 DESCRIPTION="mpegtools package for manipulation of various MPEG file formats"
 HOMEPAGE="http://www.metzlerbros.org/dvb/"
@@ -11,6 +11,7 @@ KEYWORDS="~x86"
 IUSE="gtk"
 DEPEND=">=media-video/linuxtv-dvb-1.0.0_pre2
 	>=media-video/libdvb-0.2.1
+	>=dev-libs/cdk-4.9.10.20020809
 	gtk? ( =x11-libs/gtk+-1.2* )"
 #RDEPEND=""
 S=${WORKDIR}/${P}
