@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.78 2004/06/11 14:30:14 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.79 2004/06/12 14:45:13 satya Exp $
+
+  12 Jun 2004; Christian Andreetta <satya@gentoo.org> metadata.xml,
+  files/samba-init:
+  minor init script, as per bug #53676
 
 *samba-3.0.4-r1 (11 Jun 2004)
 
