@@ -1,0 +1,92 @@
+--- xine-lib-1-rc8/configure.ac	2004-12-14 22:06:47.000000000 +0000
++++ xine-lib/configure.ac	2004-12-30 09:55:16.000000000 +0000
+@@ -18,6 +18,11 @@
+ XINE_MINOR=0
+ XINE_SUB=0
+ 
++if test $XINE_SUB -eq 0 ; then
++  XINE_SUBPART="";
++else
++  XINE_SUBPART=".$XINE_SUB"
++fi
+ 
+ dnl The libtool version numbers (LT_*); Don't even think about faking this!
+ dnl 
+@@ -45,14 +50,14 @@
+ dnl    libname.so.(LT_CURRENT - LT_AGE).LT_AGE.LT_REVISION
+ 
+ LT_CURRENT=12
+-LT_REVISION=0
++LT_REVISION=1
+ LT_AGE=11
+ 
+ dnl for a release tarball do "rm .cvsversion" before "make dist"
+ if test -f .cvsversion; then
+   XINE_PRE="cvs"
+ else
+-  XINE_PRE="rc8"
++  XINE_PRE=""
+ fi
+ 
+ AC_SUBST(XINE_MAJOR)
+@@ -69,10 +74,10 @@
+ AC_SUBST(LT_REVISION)
+ AC_SUBST(LT_AGE)
+ 
+-dnl TAR_NAME="xine-lib-"$XINE_MAJOR.$XINE_MINOR.$XINE_SUB$XINE_PRE
+-dnl SPEC_VERSION=$XINE_MAJOR.$XINE_MINOR.$XINE_SUB$XINE_PRE
+-TAR_NAME="xine-lib-"$XINE_MAJOR-$XINE_PRE
+-SPEC_VERSION=${XINE_MAJOR}_$XINE_PRE
++SPEC_VERSION=$XINE_MAJOR.$XINE_MINOR${XINE_SUBPART}$XINE_PRE
++TAR_NAME="xine-lib-"$SPEC_VERSION
++dnl TAR_NAME="xine-lib-"$XINE_MAJOR-$XINE_PRE
++dnl SPEC_VERSION=${XINE_MAJOR}_$XINE_PRE
+ 
+ AC_SUBST(TAR_NAME)
+ AC_SUBST(SPEC_VERSION)
+@@ -84,8 +89,8 @@
+ AC_CANONICAL_TARGET
+ 
+ dnl
+-dnl AM_INIT_AUTOMAKE("xine-lib", $XINE_MAJOR.$XINE_MINOR.$XINE_SUB$XINE_PRE)
+-AM_INIT_AUTOMAKE("xine-lib", $XINE_MAJOR-$XINE_PRE)
++AM_INIT_AUTOMAKE("xine-lib", $SPEC_VERSION)
++dnl AM_INIT_AUTOMAKE("xine-lib", $XINE_MAJOR-$XINE_PRE)
+ 
+ 
+ dnl ---------------------------------------------
+@@ -487,28 +492,21 @@
+ dnl Check for Xv and XvMC support (iconv is also tested here?)
+ dnl ----------------------------------------------
+ 
+-dnl static linking is preferred!
+-dnl but only dynamic linking is possible when using libtool < 1.4.0
++dnl With recent XFree86 or Xorg, dynamic linking is preferred!
++dnl Only dynamic linking is possible when using libtool < 1.4.0
+ 
+-dnl ----------------------------------------------
+-dnl SECTION: Check for Xv and XvMC support (iconv is also tested here?)
+-dnl ----------------------------------------------
+ AC_ARG_WITH(xv-path, AC_HELP_STRING([--with-xv-path=path], [where libXv is installed]),
+             xv_path="$withval",)
+ 
+ AC_ARG_ENABLE(shared-xv,
+-        AC_HELP_STRING([--enable-shared-xv],[Enable this to force linking against libXv.so]),
+-        xv_prefer_shared="yes",
+-        xv_prefer_shared="no")
++        AC_HELP_STRING([--enable-static-xv],[Enable this to force linking against libXv.a]),
++        xv_prefer_shared="no",
++        xv_prefer_shared="yes")
+ 
+ if test x"$no_x" != "xyes"; then
+-
+-  dnl -----------------------------------------------
+-  dnl   Finding install Xv library
+-  dnl -----------------------------------------------
+   AC_FIND_LIBXV
+-
+ fi
++AM_CONDITIONAL(HAVE_XV, test x$ac_have_xv = "xyes")
+ 
+ 
+ host_or_hostalias="$host"

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.185 2005/01/04 10:32:02 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.186 2005/01/04 17:41:02 chriswhite Exp $
+
+  05 Jan 2005; Chris White <chriswhite@gentoo.org>
+  +files/xine-lib-1_rc8-configure.ac.patch, xine-lib-1_rc8-r1.ebuild:
+  Re-fix bug #706220 with a correct patch for xine-lib_rc8-r1. Thanks to James
+  Stockton for the patch.
 
   04 Jan 2005; Hardave Riar <hardave@gentoo.org> xine-lib-1_rc8-r1.ebuild:
   Stable on mips, bug #74475.

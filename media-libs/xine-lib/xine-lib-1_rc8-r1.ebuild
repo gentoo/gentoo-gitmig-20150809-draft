@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.15 2005/01/04 10:32:02 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.16 2005/01/04 17:41:02 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -64,7 +64,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-x11.patch
 
 	# fixes bad xv checking
-	epatch ${FILESDIR}/${PN}-configure.ac.patch
+	epatch ${FILESDIR}/${P}-configure.ac.patch
 
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
