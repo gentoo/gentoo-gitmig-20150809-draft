@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.2 2004/03/06 15:41:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.3 2004/03/06 16:12:00 lanius Exp $
 
 DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -130,7 +130,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}dev/.devfsd ]
+	if [ ! -e ${ROOT}dev/.devfsd || ! -e ${ROOT}dev/.udev ]
 	then
 		if [ ! -e ${ROOT}dev/ppp ]; then
 			mknod ${ROOT}dev/ppp c 108 0
