@@ -25,16 +25,16 @@ term		:	jfbterm
 #	絶対パス or PWDからの相対パス
 #
 ################################################################################
-# you need x11-misc/shinonome
-fontset : iso646-1973irv,pcf,L,/usr/X11R6/lib/X11/fonts/shinonome/shnm8x16a.pcf.gz
+# you need >=media-fonts/shinonome-0.9.10
+fontset : iso646-1973irv,pcf,L,/usr/share/fonts/shinonome/shnm8x16a.pcf.gz
 +fontset: ansix3.4-1968,alias,L,iso646-1973irv
-+fontset: jisc6226-1978,pcf,L,/usr/X11R6/lib/X11/fonts/shinonome/shnmk16.pcf.gz
++fontset: jisc6226-1978,pcf,L,/usr/share/fonts/shinonome/shnmk16.pcf.gz
 +fontset: jisx0208-1983,alias,L,jisc6226-1978
-+fontset: jisc6220-1969roman,pcf,L,/usr/X11R6/lib/X11/fonts/shinonome/shnm8x16r.pcf.gz
++fontset: jisc6220-1969roman,pcf,L,/usr/share/fonts/shinonome/shnm8x16r.pcf.gz
 +fontset: jisc6220-1969kana,alias,R,jisc6220-1969roman
 +fontset: gb2312-80,pcf,L,/usr/X11R6/lib/X11/fonts/misc/gb16fs.pcf.gz
-# you need x11-misc/baekmuk-fonts-2.0-r1 
-+fontset: ksc5601-1987,pcf,L,/usr/X11R6/lib/X11/fonts/baekmuk/gulim16.pcf.gz
+# you need >=media-fonts/baekmuk-fonts-2.1-r1 
++fontset: ksc5601-1987,pcf,L,/usr/share/fonts/baekmuk/gulim16.pcf.gz
 
 ################################################################################
 #
