@@ -1,37 +1,29 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.5-r2.ebuild,v 1.6 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.6-r3.ebuild,v 1.1 2002/10/21 20:26:41 seemant Exp $
 
 IUSE="tiff doc jpeg directfb"
 
-inherit libtool
+inherit libtool flag-o-matic
 
 SLOT="2"
-KEYWORDS="x86 ppc sparc sparc64"
-
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
-
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gimp ToolKit + "
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.0/${P}.tar.bz2
-	directfb? ( mirror://gentoo//${PN}-directfb-${PV}-gentoo.patch.bz2 )"
+	mirror://gentoo//${PN}-directfb-${PV}-gentoo.patch.bz2"
 HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2.1"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.0.4
-	>=dev-libs/atk-1.0.2
-	>=x11-libs/pango-1.0.3
+	>=dev-libs/glib-2.0.6-r1
+	>=dev-libs/atk-1.0.3-r1
+	>=x11-libs/pango-1.0.4-r1
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	directfb? ( dev-libs/DirectFB )"
+	directfb? ( >=dev-libs/DirectFB-0.9.13 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -41,32 +33,33 @@ src_unpack() {
 	
 	unpack ${P}.tar.bz2
 	cd ${S}
-	use directfb && ( \
-		( bzcat ${DISTDIR}/${PN}-directfb-${PV}-gentoo.patch.bz2 \
-			| patch -p1 ) || die
-	)
+	if use directfb
+	then
+		bzcat ${DISTDIR}/${PN}-directfb-${PV}-gentoo.patch.bz2 | patch -p1 \
+			|| die
+	fi
 }
 
 src_compile() {
+	# see bug 8762
+	replace-flags "-O3" "-O2"
+
 	elibtoolize
 	
 	local myconf=""
-	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
+	use doc \
+		&& myconf="${myconf} --enable-gtk-doc" \
+		|| myconf="${myconf} --disable-gtk-doc"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
-	
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--with-gdktarget=x11 \
-		${myconf} \
-		--enable-debug || die
-# enable debug since glib fails if we disable it
+	if [ -n "$DEBUG" ]; then
+		myconf="${myconf}  --enable-debug"
+	fi
+		
+	econf --with-gdktarget=x11 ${myconf} || die
 
 # gtk+ isn't multithread friendly due to some obscure code generation bug
-#	make || die
+	make || die
 }
 
 src_install() {
