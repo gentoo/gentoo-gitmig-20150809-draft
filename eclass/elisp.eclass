@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.1 2002/10/29 04:40:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.2 2003/02/09 09:40:43 mkennedy Exp $
 
 # This eclass sets the site-lisp directory for emacs-related packages.
 
@@ -36,7 +36,7 @@ elisp-site-regen() {
 ;;; -----------------------------------------------------------------
 
 EOF
-	ls ${SITELISP}/[0-9][0-9]* |sort -n | \
+	ls ${SITELISP}/[0-9][0-9]* |sort -n |grep -vE '~$' | \
 	while read sf 
 	do
 		einfo "  Addding $sf..."  
