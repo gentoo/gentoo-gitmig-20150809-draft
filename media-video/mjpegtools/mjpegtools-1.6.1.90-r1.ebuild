@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.1 2003/09/19 23:23:18 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.2 2003/09/23 22:25:18 max Exp $
 
 inherit flag-o-matic
 
@@ -53,6 +53,16 @@ src_compile() {
 	fi
 
 	econf ${myconf}
+
+	if has_version 'sys-devel/hardened-gcc' ; then
+		for i in `find "${S}" -name "Makefile"` ; do
+			sed -e "s:CC = gcc:CC = gcc -yet_exec:g" \
+				-e "s:CXX = gcc:CXX = g++ -yet_exec:g" \
+				-e "s:CXXCPP = gcc -E:CXX = g++ -E -yet_exec:g" \
+				-i "${i}" || die "sed failed"
+		done
+	fi
+
 	emake || die "compile problem"
 }
 

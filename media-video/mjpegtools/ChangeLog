@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.37 2003/09/20 20:05:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.38 2003/09/23 22:25:18 max Exp $
+
+  23 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90-r1.ebuild:
+  Forward-port the hardened-gcc fixes.
 
   20 Sep 2003; Alexander Gabert <pappy@gentoo.org> mjpegtools-1.6.1.90.ebuild:
   added hardened-gcc exclusion gcc flags for failing assembler
