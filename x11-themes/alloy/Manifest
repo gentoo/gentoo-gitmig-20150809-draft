@@ -3,6 +3,8 @@ MD5 011c9c4a61be26c3b43e97ec2c62defc alloy-0.5.ebuild 1002
 MD5 1c30798f06e114af555c1fd1d1f9559b alloy-0.4.1a.ebuild 976
 MD5 c455289a7af13c00c9a6e2d5678312ef ChangeLog 1298
 MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
+MD5 b956bf023e3ed2adee69fdbd61d325d0 alloy-0.5.1.ebuild 505
 MD5 83cef07294a10e85d11213b8fd03e77c files/digest-alloy-0.4.1a 69
+MD5 53fd8ca922638c1fb4efcb81758e6bf0 files/digest-alloy-0.5.1 70
 MD5 19e2fd6943c957dd1a7456d1ad3a5759 files/digest-alloy-0.3 66
 MD5 0564fc1325f639fc6dfb14324538eb09 files/digest-alloy-0.5 68
