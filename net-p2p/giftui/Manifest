@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 592564b6ba70078c49731e5bb3d98cc1 giftui-0.3.1.ebuild 576
-MD5 740c2150d45c389e10e9efe54796eebd giftui-0.4.1.ebuild 972
-MD5 09690e3230f4988f13d71e6c1d4aa5a3 ChangeLog 2133
+MD5 dd3bc4fe83394e7333d7308204cde842 giftui-0.3.1.ebuild 539
+MD5 1ad004218726c1522d6e2ecc8c58775c giftui-0.4.1.ebuild 974
+MD5 2f7eecfc97297e5c70cf639d51435bce ChangeLog 2242
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 40bfcba195763791682cf11aef06f32a files/0.4.1-gentoo.patch 580
 MD5 99a230235e2682c6f55c7b129bf8d395 files/digest-giftui-0.3.1 65
 MD5 50756165a3e142ab3ee5f305751f126e files/digest-giftui-0.4.1 65
 MD5 36442a789cd241e3147198c3a1076c08 files/main.c.diff 503
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBrPSRI1lqEGTUzyQRAqQYAKCSDFVFySDw89w2tq5Q0WsluRhKyQCgtrO6
-hy1dDMBUTpkMrhKiYKIJ44Q=
-=E6h1
+iD8DBQFB6CrpcAgAdbxYsnERAixQAKCTLh4EOhWqc7bjtKS9udLq/gFBxgCfaiyU
+Vtds6BqCcsYF0T++EebN8OQ=
+=FB/n
 -----END PGP SIGNATURE-----
