@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r3.ebuild,v 1.1 2004/11/04 16:15:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r3.ebuild,v 1.2 2004/11/07 08:16:53 ka0ttic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
 IUSE="selinux pam"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
@@ -52,10 +52,11 @@ src_compile() {
 	# that our changes to LDFLAGS are picked up.
 
 	append-ldflags -Wl,-z,now
-	sed -i "s:gcc \(-Wall.*\):$(tc-getCC) \1 ${CFLAGS}:" Makefile
-	sed -i "s:^\(LDFLAGS[ \t]\+=\).*:\1 ${LDFLAGS}:" Makefile
+	sed -i -e "s:gcc \(-Wall.*\):$(tc-getCC) \1 ${CFLAGS}:" \
+		-e "s:^\(LDFLAGS[ \t]\+=\).*:\1 ${LDFLAGS}:" Makefile \
+		|| die "sed Makefile failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
