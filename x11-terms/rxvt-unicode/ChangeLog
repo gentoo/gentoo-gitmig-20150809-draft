@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.5 2004/03/04 01:26:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.6 2004/03/11 17:06:46 latexer Exp $
+
+*rxvt-unicode-2.2 (11 Mar 2004)
+
+  11 Mar 2004; Peter Johanson <latexer@gentoo.org> rxvt-unicode-2.2.ebuild,
+  files/rxvt-unicode-2.2-set_name-fix.diff:
+  Bump. Included a small fix to stop segfaults when quiting due to errant string
+  handling.
 
 *rxvt-unicode-2.1 (03 Mar 2004)
 

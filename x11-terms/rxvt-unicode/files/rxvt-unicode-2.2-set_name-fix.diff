@@ -1,0 +1,12 @@
+diff -aur rxvt-unicode-2.2-orig/src/defaultfont.h rxvt-unicode-2.2/src/defaultfont.h
+--- rxvt-unicode-2.2-orig/src/defaultfont.h	2004-03-05 17:03:38.000000000 -0500
++++ rxvt-unicode-2.2/src/defaultfont.h	2004-03-11 11:49:30.658286008 -0500
+@@ -74,7 +74,7 @@
+   void set_name (char *name)
+   {
+     if (this->name) free (this->name); // let the compiler optimize
+-    this->name = name;
++    this->name = strdup(name);
+   }
+ 
+   rxvt_font () { name = 0; }
