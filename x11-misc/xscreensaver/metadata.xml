@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer><email>liquidx@gentoo.org</email></maintainer>
+<maintainer>
+	<email>liquidx@gentoo.org</email>
+	<description>looking for volunteers to take over maintaining this</description>
+</maintainer>
 </pkgmetadata>
