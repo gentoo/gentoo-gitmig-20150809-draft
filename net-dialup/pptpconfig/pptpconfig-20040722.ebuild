@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20040722.ebuild,v 1.2 2004/11/07 13:09:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/pptpconfig-20040722.ebuild,v 1.3 2004/11/29 18:27:45 jhuebel Exp $
 
 DESCRIPTION="Configuration and management program for PPTP Client tunnels"
 HOMEPAGE="http://pptpclient.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pptpclient/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=""
