@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.8 2003/05/30 13:41:34 seemant Exp $
 
-inherit perl-post
+inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MakeMaker Perl Module"
@@ -20,7 +20,7 @@ src_compile() {
 }
 
 src_install () {
-	perl-post_perlinfo
+	perlinfo
 	dodir ${POD_DIR}
 		        
 	test -z ${mytargets} && mytargets="install"

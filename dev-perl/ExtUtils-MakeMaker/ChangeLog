@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.17 2003/02/22 07:47:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.18 2003/05/30 13:41:34 seemant Exp $
+
+*ExtUtils-MakeMaker-6.05-r3 (30 May 2003)
+
+  30 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  ExtUtils-MakeMaker-6.03-r1.ebuild, ExtUtils-MakeMaker-6.05-r1.ebuild,
+  ExtUtils-MakeMaker-6.05-r3.ebuild, ExtUtils-MakeMaker-6.05-r4.ebuild:
+  inherit perl-module instead of perl-post. also cleaned out crust
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
