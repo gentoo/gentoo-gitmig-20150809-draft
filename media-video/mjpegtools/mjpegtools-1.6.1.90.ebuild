@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90.ebuild,v 1.3 2003/09/19 16:48:42 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90.ebuild,v 1.4 2003/09/20 20:05:58 pappy Exp $
 
 inherit flag-o-matic
 
@@ -48,6 +48,15 @@ src_compile() {
 	fi
 
 	econf ${myconf}
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version 'sys-devel/hardened-gcc' && find ${W} -name "Makefile" -type f -exec \
+		sed -i "s:CC = gcc:CC = gcc -yet_exec:g" {} \;
+	has_version 'sys-devel/hardened-gcc' && find ${W} -name "Makefile" -type f -exec \
+		sed -i "s:CXX = gcc:CXX = g++ -yet_exec:g" {} \;
+	has_version 'sys-devel/hardened-gcc' && find ${W} -name "Makefile" -type f -exec \
+		sed -i "s:CXXCPP = gcc -E:CXX = g++ -E -yet_exec:g" {} \;
+
 	emake || die "compile problem"
 }
 
