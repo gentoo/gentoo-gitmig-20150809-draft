@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.6 2003/07/09 07:36:05 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.7 2003/07/12 09:28:02 raker Exp $
 
 inherit eutils
 
@@ -29,6 +29,21 @@ RDEPEND="virtual/glibc
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+pkg_setup() {
+	if [ "${SASL1}" != "yes" ]; then
+		ewarn ""
+		ewarn "For linking with SASLv1..." 
+		ewarn "emerge dev-libs/cyrus-sasl-1.5.27-r6 (or newest 1.x series build)"
+		ewarn "SASL1=yes emerge ${PVR}.ebuild"
+		ewarn ""
+		sleep 2
+	else
+		ewarn ""
+		ewarn "You are building ${PVR} linking to SASLv1"
+		ewarn ""
+	fi
+}
 
 pkg_preinst() {
 	if ! grep -q ^ldap: /etc/group
@@ -95,6 +110,11 @@ src_compile() {
 		&& myconf="${myconf} --enable-ldbm --with-ldbm-api=gdbm" \
    		|| myconf="${myconf} --enable-ldbm --with-ldbm-api=berkeley"
 
+	if [ "${SASL1}" = "yes" ]; then
+		myconf="${myconf} --with-cyrus-sasl"
+	else
+		myconf="${myconf} --without-cyrus-sasl"
+	fi
 
 	econf \
 		--libexecdir=/usr/lib/openldap \
@@ -103,7 +123,6 @@ src_compile() {
 		--enable-phonetic \
 		--enable-dynamic \
 		--enable-ldap \
-		--without-cyrus-sasl \
 		--disable-spasswd \
 		--enable-passwd \
 		--enable-shell \
@@ -182,4 +201,12 @@ pkg_postinst() {
 	chmod 0640 /etc/openldap/slapd.conf
 	chown root:ldap /etc/openldap/slapd.conf.default
 	chmod 0640 /etc/openldap/slapd.conf.default
+
+	if [ "${SASL1}" != "yes" ]; then
+		einfo ""
+		einfo "For linking with SASLv1..." 
+		einfo "emerge dev-libs/cyrus-sasl-1.5.27-r6 (or newest 1.x series build)"
+		einfo "SASL1=yes emerge ${PVR}.ebuild"
+		einfo ""
+	fi
 }
