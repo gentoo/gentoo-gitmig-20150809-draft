@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.3.ebuild,v 1.2 2004/01/21 20:28:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.3.ebuild,v 1.3 2004/03/13 00:26:17 mr_bones_ Exp $
 
 inherit distutils
 DESCRIPTION="ESR's utility for making fast comparisons among large source trees"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	 http://www.catb.org/~esr/comparator/${P}.tar.gz"
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 #DEPEND='' inherit handles this
 DEPEND="${DEPEND} app-text/xmlto"
