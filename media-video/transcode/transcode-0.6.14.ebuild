@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.6 2005/01/17 16:26:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.7 2005/01/22 03:18:15 eradicator Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -66,6 +66,7 @@ src_compile() {
 
 	append-flags -DDCT_YUV_PRECISION=1
 	econf \
+		--with-mod-path=/usr/$(get_libdir)/transcode \
 		$(use_enable X x) \
 		$(use_enable 3dnow) \
 		$(use_enable a52) \
