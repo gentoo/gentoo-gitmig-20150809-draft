@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.99 2004/10/09 19:30:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.100 2004/10/13 01:48:16 pylon Exp $
+
+  13 Oct 2004; Lars Weiler <pylon@gentoo.org> metadata.xml:
+  Package is now member of the opti-media herd.
 
   09 Oct 2004; Tom Gall <tgall@gentoo.org> cdrtools-2.01.ebuild:
   stable on ppc64, bug #63187
