@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre9.ebuild,v 1.7 2003/03/04 20:46:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.1 2003/03/04 20:46:34 latexer Exp $
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
 
@@ -8,10 +8,8 @@ PCMCIA_VERSION="`$(which cardmgr) -V 2>&1 | $(which cut) -f3 -d' '`"
 PCMCIA_CS="pcmcia-cs-${PCMCIA_VERSION}"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
 
-MY_P=${P/_/-}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="The linux-wlan Project"
-SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz 
+SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.gz 
 		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )"
 
 HOMEPAGE="http://linux-wlan.org"
@@ -46,7 +44,7 @@ src_unpack() {
 	mv man/Makefile man/Makefile.orig
 	sed -e "s:mkdir:#mkdir:" \
 		-e "s:cp nwepgen.man:#cp nwepgen.man:" \
-		-e "s:\t\$(TARGET:\t#\$(TARGET:" \
+		-e "s:\t\$(TARGET_:\t#\$(TARGET_:" \
 		man/Makefile.orig > man/Makefile
 
 	mv etc/wlan/Makefile etc/wlan/Makefile.orig
