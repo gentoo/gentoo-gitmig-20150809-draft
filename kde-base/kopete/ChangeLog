@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.7 2005/03/26 00:41:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.8 2005/04/03 23:46:26 greg_g Exp $
+
+*kopete-3.4.0-r1 (03 Apr 2005)
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdenetwork-3.4.0-kopete-logout.patch,
+  +files/kdenetwork-3.4.0-kopete-spaces.patch, +kopete-3.4.0-r1.ebuild:
+  Add patches for bug #86446 (crash on logout) and for bug #87485 (handling of
+  names with spaces).
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> kopete-3.4.0.ebuild:
   Added ~sparc keyword.

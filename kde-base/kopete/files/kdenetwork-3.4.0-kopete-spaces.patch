@@ -1,0 +1,225 @@
+diff -Nur kdenetwork-3.4.0.orig/kopete/protocols/oscar/aim/aimcontact.cpp kdenetwork-3.4.0/kopete/protocols/oscar/aim/aimcontact.cpp
+--- kdenetwork-3.4.0.orig/kopete/protocols/oscar/aim/aimcontact.cpp	2005-02-23 11:30:54.000000000 +0100
++++ kdenetwork-3.4.0/kopete/protocols/oscar/aim/aimcontact.cpp	2005-04-04 01:41:26.000000000 +0200
+@@ -145,7 +145,7 @@
+ 
+ void AIMContact::userInfoUpdated( const QString& contact, const UserDetails& details )
+ {
+-	if ( contact.lower() != contactId().lower() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 
+ 	kdDebug(OSCAR_RAW_DEBUG) << k_funcinfo << contact << endl;
+@@ -179,7 +179,7 @@
+ 
+ void AIMContact::userOnline( const QString& userId )
+ {
+-	if ( userId.lower() == contactId().lower() )
++	if ( Oscar::normalize( userId ) == Oscar::normalize( contactId() ) )
+ 	{
+ 		kdDebug(OSCAR_RAW_DEBUG) << k_funcinfo << "Getting more contact info" << endl;
+ 		setOnlineStatus( mProtocol->statusOnline );
+@@ -197,7 +197,7 @@
+ 
+ void AIMContact::updateAwayMessage( const QString& contact, const QString& message )
+ {
+-	if ( contact.lower() != contactId().lower() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 	else
+ 	{
+@@ -220,7 +220,7 @@
+ 
+ void AIMContact::updateProfile( const QString& contact, const QString& profile )
+ {
+-	if ( contact.lower() != contactId().lower() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 	
+ 	setProperty( mProtocol->clientProfile, profile );
+diff -Nur kdenetwork-3.4.0.orig/kopete/protocols/oscar/icq/icqcontact.cpp kdenetwork-3.4.0/kopete/protocols/oscar/icq/icqcontact.cpp
+--- kdenetwork-3.4.0.orig/kopete/protocols/oscar/icq/icqcontact.cpp	2005-02-03 23:52:07.000000000 +0100
++++ kdenetwork-3.4.0/kopete/protocols/oscar/icq/icqcontact.cpp	2005-04-04 01:41:26.000000000 +0200
+@@ -106,7 +106,7 @@
+ 
+ void ICQContact::userOnline( const QString& userId )
+ {
+-	if ( userId != contactId() )
++	if ( Oscar::normalize( userId ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 
+ 	kdDebug(OSCAR_ICQ_DEBUG) << "Setting " << userId << " online" << endl;
+@@ -116,7 +116,7 @@
+ 
+ void ICQContact::userOffline( const QString& userId )
+ {
+-	if ( userId != contactId() )
++	if ( Oscar::normalize( userId ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 
+ 	kdDebug(OSCAR_ICQ_DEBUG) << "Setting " << userId << " offline" << endl;
+@@ -130,7 +130,7 @@
+ 		setOnlineStatus( mProtocol->statusManager()->waitingForAuth() );
+ 
+ 	QString nickname = property( Kopete::Global::Properties::self()->nickName() ).value().toString();
+-	if ( nickname.isEmpty() || nickname == contactId() )
++	if ( nickname.isEmpty() || Oscar::normalize( nickname ) == Oscar::normalize( contactId() ) )
+ 	{
+ 		int time = ( KApplication::random() % 25 ) * 1000;
+ 		kdDebug(OSCAR_ICQ_DEBUG) << k_funcinfo << "updating nickname in " << time/1000 << " seconds" << endl;
+@@ -164,7 +164,7 @@
+ 
+ void ICQContact::slotGotAuthReply( const QString& contact, const QString& reason, bool granted )
+ {
+-	if ( contact != contactId() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 	
+ 	kdDebug(OSCAR_ICQ_DEBUG) << k_funcinfo << endl;
+@@ -189,7 +189,7 @@
+ 
+ void ICQContact::slotGotAuthRequest( const QString& contact, const QString& reason )
+ {
+-	if ( contact != contactId() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 	
+ 	ICQAuthReplyDialog replyDialog;
+@@ -202,7 +202,7 @@
+ 
+ void ICQContact::receivedLongInfo( const QString& contact )
+ {
+-	if ( contact.lower() != contactId().lower() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 	{
+ 		if ( m_infoWidget )
+ 			m_infoWidget->delayedDestruct();
+@@ -224,7 +224,7 @@
+ 
+ void ICQContact::receivedShortInfo( const QString& contact )
+ {
+-	if ( contact != contactId() )
++	if ( Oscar::normalize( contact ) != Oscar::normalize( contactId() ) )
+ 		return;
+ 	
+ 	ICQShortInfo shortInfo = mAccount->engine()->getShortInfo( contact );
+diff -Nur kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssiauthtask.cpp kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssiauthtask.cpp
+--- kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssiauthtask.cpp	2005-01-30 16:09:38.000000000 +0100
++++ kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssiauthtask.cpp	2005-04-04 01:41:26.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include "transfer.h"
+ #include "buffer.h"
+ #include "connection.h"
++#include "oscarutils.h"
+ 
+ #include <kdebug.h>
+ 
+@@ -135,7 +136,7 @@
+ {
+ 	Buffer* buf = transfer()->buffer();
+ 	
+-	QString uin = buf->getBUIN();
++	QString uin = Oscar::normalize( buf->getBUIN() );
+ 	QString reason = buf->getBSTR();
+ 	
+ 	buf->getWord(); // 0x0000 - Unknown
+@@ -149,7 +150,7 @@
+ {
+ 	Buffer* buf = transfer()->buffer();
+ 	
+-	QString uin = buf->getBUIN();
++	QString uin = Oscar::normalize( buf->getBUIN() );
+ 	QString reason = buf->getBSTR();
+ 	
+ 	buf->getWord(); // 0x0000 - Unknown
+@@ -164,7 +165,7 @@
+ {
+ 	Buffer* buf = transfer()->buffer();
+ 	
+-	QString uin = buf->getBUIN();
++	QString uin = Oscar::normalize( buf->getBUIN() );
+ 	bool accepted = buf->getByte();
+ 	QString reason = buf->getBSTR();
+ 	
+@@ -186,7 +187,7 @@
+ {
+ 	Buffer* buf = transfer()->buffer();
+ 	
+-	QString uin = buf->getBUIN();
++	QString uin = Oscar::normalize( buf->getBUIN() );
+ 	
+ 	kdDebug( OSCAR_RAW_DEBUG ) << k_funcinfo << "User " << uin << " added you to the contact list" << endl;
+ 	emit contactAddedYou( uin );
+diff -Nur kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssilisttask.cpp kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssilisttask.cpp
+--- kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssilisttask.cpp	2005-01-25 16:10:19.000000000 +0100
++++ kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssilisttask.cpp	2005-04-04 01:41:26.000000000 +0200
+@@ -110,6 +110,9 @@
+ 			tlvList.append( t );
+ 		}
+ 		
++		if ( itemType == ROSTER_CONTACT )
++			itemName = Oscar::normalize( itemName );
++		
+ 		Oscar::SSI s( itemName, groupId, itemId, itemType, tlvList );
+ 		s.setTLVListLength( tlvLength );
+ 		
+diff -Nur kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssimodifytask.cpp kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssimodifytask.cpp
+--- kdenetwork-3.4.0.orig/kopete/protocols/oscar/liboscar/ssimodifytask.cpp	2005-02-01 20:41:08.000000000 +0100
++++ kdenetwork-3.4.0/kopete/protocols/oscar/liboscar/ssimodifytask.cpp	2005-04-04 01:41:26.000000000 +0200
+@@ -41,7 +41,7 @@
+ {
+ }
+ 
+-void SSIModifyTask::onGo( )
++void SSIModifyTask::onGo()
+ {
+ 	sendSSIUpdate();
+ }
+@@ -62,7 +62,10 @@
+ {
+ 	m_opType = Add;
+ 	m_opSubject = Contact;
+-	Oscar::SSI oldItem = m_ssiManager->findContact( contact );
++	
++	QString newContact = Oscar::normalize( contact );
++	
++	Oscar::SSI oldItem = m_ssiManager->findContact( newContact );
+ 	Oscar::SSI groupItem = m_ssiManager->findGroup( group );
+ 	
+ 	if ( !groupItem )
+@@ -81,7 +84,7 @@
+ 	}
+ 	
+ 	kdDebug( OSCAR_RAW_DEBUG ) << k_funcinfo << "creating new SSI item for " << contact << " in group " << group << endl;
+-	Oscar::SSI newItem( contact, groupItem.gid(), m_ssiManager->nextContactId(), ROSTER_CONTACT, tlvList );
++	Oscar::SSI newItem( newContact, groupItem.gid(), m_ssiManager->nextContactId(), ROSTER_CONTACT, tlvList );
+ 	m_newItem = newItem;
+ 	return true;
+ }
+@@ -90,7 +93,7 @@
+ {
+ 	m_opType = Remove;
+ 	m_opSubject = Contact;
+-	m_oldItem = m_ssiManager->findContact( contact );
++	m_oldItem = m_ssiManager->findContact( Oscar::normalize( contact ) );
+ 	kdDebug(OSCAR_RAW_DEBUG) << k_funcinfo << "Scheduling" << m_oldItem.name() << " for removal" << endl;
+ 	return true;
+ }
+@@ -99,7 +102,7 @@
+ {
+ 	m_opType = Change;
+ 	m_opSubject = Group;
+-	m_oldItem = m_ssiManager->findContact( contact );
++	m_oldItem = m_ssiManager->findContact( Oscar::normalize( contact ) );
+ 	Oscar::SSI oldGroupItem;
+ 	if ( m_oldItem.isValid() )
+ 		oldGroupItem = m_ssiManager->findGroup( newGroup );
+@@ -138,7 +141,7 @@
+ 	return true;
+ }
+ 
+-bool SSIModifyTask::removeGroup( const QString & groupName )
++bool SSIModifyTask::removeGroup( const QString& groupName )
+ {
+ 	m_opType = Remove;
+ 	m_opSubject = Group;
