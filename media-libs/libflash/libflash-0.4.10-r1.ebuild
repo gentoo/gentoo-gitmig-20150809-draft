@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.9 2003/08/31 10:34:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.10 2003/11/23 13:27:43 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for flash animations"
@@ -12,7 +12,7 @@ DEPEND="media-libs/jpeg
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_unpack() {
 
