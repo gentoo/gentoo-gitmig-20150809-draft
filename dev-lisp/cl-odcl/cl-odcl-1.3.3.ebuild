@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.3.ebuild,v 1.5 2004/07/14 15:57:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.3.ebuild,v 1.6 2004/08/07 22:05:14 slarti Exp $
 
 inherit common-lisp
 
-DESCRIPTION="A Commmon Lisp library of utility functions. This package contains a number of useful utility functions for Lisp developers.  Include are editing contexts, a transaction system, a filesystem database with indexing, a LRU cache algorithm, time functions, simple i18n/l10n, developer diagnostics, a test regression system, SMTP mailer, object property sets and utility functions related to lists, strings and numbers."
+DESCRIPTION="A Common Lisp library of utility functions. This package contains a number of useful utility functions for Lisp developers.  Include are editing contexts, a transaction system, a filesystem database with indexing, a LRU cache algorithm, time functions, simple i18n/l10n, developer diagnostics, a test regression system, SMTP mailer, object property sets and utility functions related to lists, strings and numbers."
 HOMEPAGE="http://alpha.onshored.com/lisp-software/#odcl"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-odcl/${PN}_${PV}.orig.tar.gz"
 LICENSE="LGPL-2.1"
