@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.21 2004/04/26 12:12:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.22 2004/04/27 18:43:20 gustavoz Exp $
+
+  27 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  sgml-common-0.6.3-r4.ebuild:
+  Stable on sparc
 
   26 Apr 2004; Mike Gardiner <obz@gentoo.org> sgml-common-0.6.3-r3.ebuild,
   sgml-common-0.6.3-r4.ebuild:
