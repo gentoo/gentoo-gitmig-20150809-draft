@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.26.ebuild,v 1.1 2004/04/10 06:42:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.26.ebuild,v 1.2 2004/04/11 21:37:13 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -47,7 +47,7 @@ pkg_setup() {
 
 	# Figure out what architecture we are, and set ARCH appropriately
 	ARCH="$(uname -m)"
-	ARCH=`echo ${ARCH} | sed -e s/[i].86/i386/ -e s/x86/i386/`
+	ARCH="$(echo ${ARCH} | sed -e s/i.86/i386/)"
 }
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21-r1.ebuild,v 1.8 2004/04/07 07:48:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21-r1.ebuild,v 1.9 2004/04/11 21:37:13 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -28,7 +28,7 @@ KEYWORDS="-* amd64 sparc x86 -mips s390"
 pkg_setup() {
 	# Figure out what architecture we are, and set ARCH appropriately
 	ARCH="$(uname -m)"
-	ARCH=`echo $ARCH | sed -e s/[i].86/i386/ -e s/x86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/amd64/x86_64/`
+	ARCH="$(echo ${ARCH} | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)"
 	[ "$ARCH" == "sparc" -a "$PROFILE_ARCH" == "sparc64" ] && ARCH=sparc64
 
 
@@ -75,7 +75,7 @@ src_compile() {
 
 	# If this is sparc, then generate asm_offsets.h
 	if [ -n "`use sparc`" ]; then
-		make dep ARCH=${ARCH} || die "Failed to run 'make dep'"
+		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
 }
 
