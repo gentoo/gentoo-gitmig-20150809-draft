@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (15 Sep 2002)
+# Masking the ut2003-demo for testing
+app-games/ut2003-demo
+
 # <mcummings@gentoo.org> (14 Sep 2002)
 # These should *never* have made it out
 =media-libs/libgd-2.0.1
