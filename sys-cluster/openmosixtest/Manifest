@@ -1,10 +1,20 @@
-MD5 c81fe3cb2ec03d2d2f8a3e9ae6b02d57 openmosixtest-0.1-r4.ebuild 1229
-MD5 7389d11110a17dd3c388b89aeab9423a openmosixtest-0.1-r6.ebuild 1949
-MD5 c099a95e9dfe8a2005ce1aaa7b2ed732 openmosixtest-0.1-r5.ebuild 1293
-MD5 b7de6293a17e1d9991ffa9e300082f5f ChangeLog 1439
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3799462eab3ccaed9ae5bc5c0579e4da ChangeLog 1562
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
+MD5 c81fe3cb2ec03d2d2f8a3e9ae6b02d57 openmosixtest-0.1-r4.ebuild 1229
+MD5 c099a95e9dfe8a2005ce1aaa7b2ed732 openmosixtest-0.1-r5.ebuild 1293
+MD5 658eb85eafbf3be1d31e428f5c085391 openmosixtest-0.1-r6.ebuild 1925
 MD5 4c2e4459f3ce435f59cfc4925a23febb files/compile.lmbench.sh 84
 MD5 270cd3252452c457a58b09e2c46ce60e files/compile.ltp.sh 31
 MD5 281a4a11c41b2929034eef57346c56e0 files/digest-openmosixtest-0.1-r4 65
 MD5 1ac2bf88d854c88f0376c95bd11d8210 files/digest-openmosixtest-0.1-r5 67
 MD5 45fc9003aef6f8a892b41cb5e4b34bdd files/digest-openmosixtest-0.1-r6 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBLAE8I1lqEGTUzyQRAtl0AKDPRkNtbLyMEFYSwv4ono6eEVX0ZwCg3OCZ
+ItCVDVA87J+zQyBsBLr2ayA=
+=Wd0w
+-----END PGP SIGNATURE-----
