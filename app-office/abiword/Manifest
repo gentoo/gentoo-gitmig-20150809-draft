@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 498d6eaacd8ef30cb5e7899581d45be5 abiword-2.2.5.ebuild 2286
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 c1dd6a0b3013723b94de456111e7ddc1 ChangeLog 13843
+MD5 d5d82cc67f7336d44eb337a19859b606 ChangeLog 13928
 MD5 728e85c3f04c02a833f996e3a6ecfbdf abiword-2.0.10.ebuild 2440
-MD5 35cdba95ed09c59496ddfec50c2c6577 abiword-2.2.3.ebuild 2345
 MD5 9ba3c56a7ac3936cbf08b6f956b1ce2f abiword-2.2.2.ebuild 2262
-MD5 3b6aacecf03d65d9c41833afe9d29687 files/digest-abiword-2.2.2 68
-MD5 05bd382bc17a222b7d38e46dd90350c0 files/digest-abiword-2.2.5 68
-MD5 b99de998f7d17ea36a6f83bea33406be files/digest-abiword-2.2.3 68
+MD5 3b90ace084b980656148dafec7f0dc76 abiword-2.2.3.ebuild 2342
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 498d6eaacd8ef30cb5e7899581d45be5 abiword-2.2.5.ebuild 2286
 MD5 4b3719f3158acf5c443b4739886272f4 files/digest-abiword-2.0.10 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQBzrKRy60XGEcJIRApPHAJ9wO6EuBsH0gCmCEJR6Zf8ZJxYkzwCcCwXA
-tTSt8Fmw0Tp9eP3hh0+/gqk=
-=VLv+
------END PGP SIGNATURE-----
+MD5 3b6aacecf03d65d9c41833afe9d29687 files/digest-abiword-2.2.2 68
+MD5 b99de998f7d17ea36a6f83bea33406be files/digest-abiword-2.2.3 68
+MD5 05bd382bc17a222b7d38e46dd90350c0 files/digest-abiword-2.2.5 68
