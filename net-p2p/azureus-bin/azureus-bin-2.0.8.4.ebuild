@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.5 2004/06/25 00:28:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.4.ebuild,v 1.6 2004/07/01 22:40:01 eradicator Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="gtk kde"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 RDEPEND="${DEPEND}
 	dev-java/commons-cli
