@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.31 2003/03/15 19:46:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.32 2003/03/29 04:58:11 woodchip Exp $
+
+  28 Mar 2003; Donny Davies <woodchip@gentoo.org> :
+  Clean out all old stuff.
 
 *samba-2.2.8 (15 Mar 2003)
 
@@ -9,7 +12,7 @@
 
 *samba-3.0_alpha22 (11 Mar 2003)
 
-  11 Mar 2003; Donny Davies <woodchip@gentoo.org> :  Version bump.  Add
+  11 Mar 2003; Donny Davies <woodchip@gentoo.org> : Version bump.  Add
   dynrpc modules.  Fix readline configure.  Python stuff still has issues.
 
 *samba-2.2.8_pre2 (01 Mar 2003)
@@ -19,7 +22,7 @@
 
 *samba-3.0_alpha21 (22 Feb 2003)
 
-  22 Feb 2003; Donny Davies <woodchip@gentoo.org> :  Initial import.
+  22 Feb 2003; Donny Davies <woodchip@gentoo.org> : Initial import.
   Added to package.mask for now.
 
 *samba-2.2.8_pre1 (22 Feb 2003)
