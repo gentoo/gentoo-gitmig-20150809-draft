@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/autorespond
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.9 2004/07/01 22:28:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/ChangeLog,v 1.10 2004/12/13 23:36:15 ticho Exp $
+
+  14 Dec 2004; Andrej Kacian <ticho@gentoo.org> autorespond-2.0.4.ebuild:
+  Stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   autorespond-2.0.4.ebuild:
