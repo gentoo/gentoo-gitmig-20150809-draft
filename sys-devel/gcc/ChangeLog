@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.294 2004/07/25 14:22:02 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.295 2004/07/27 03:19:05 lv Exp $
+
+  26 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch, gcc-3.4.1-r1.ebuild,
+  gcc-3.4.1.ebuild:
+  added a patch that should fix a ppc64 specific internal compiler error that
+  shows up when compiling mozilla
 
   25 Jul 2004; Daniel Goller <morfic@gentoo.org> gcc-3.4.1.ebuild:
   Marking ~x86 for gcc 3.4 profile

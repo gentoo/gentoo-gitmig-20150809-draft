@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.12 2004/07/25 14:22:02 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.13 2004/07/27 03:19:05 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -489,6 +489,7 @@ src_unpack() {
 	epatch ${FILESDIR}/3.4.0/gcc34-ia64-lib64.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-multi32-hack.patch
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
+	epatch ${FILESDIR}/3.4.1/gcc341-ppc64-mozilla-ICE-fix.patch
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
