@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.17 2005/01/26 01:43:28 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.18 2005/01/26 17:15:16 xmerlin Exp $
+
+  26 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> :
+  fixed memory overwrite in bio patch
 
   26 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org>
   -files/drbd-0.7-bio.patch, -drbd-0.7.8-r1.ebuild, -drbd-0.7.8.ebuild,
