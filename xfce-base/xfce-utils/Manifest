@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5a827c735da9fe54ca1579d3500f18f7 ChangeLog 5567
-MD5 f8b0d28fca91cd41dcfd71d9569003b8 xfce-utils-4.0.6.ebuild 1092
-MD5 8483fbeca02f518198e06bb01d55eb74 xfce-utils-4.2.0.ebuild 495
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 f8b0d28fca91cd41dcfd71d9569003b8 xfce-utils-4.0.6.ebuild 1092
+MD5 2d4ccb4da3cb887af96e72305e09787c xfce-utils-4.2.0.ebuild 493
 MD5 36cfb57721de1080726f288c17acd532 files/digest-xfce-utils-4.0.6 68
 MD5 55d9e3f0f93fe625260dc740c557f6a3 files/digest-xfce-utils-4.2.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCVLmugEuf3OQ0akRArAcAKCEbGrW6CS1uWzRqbRX0PQ2V25tFQCfRgXQ
-ks5Q1Gah9MSB0OHwaL+sA6I=
-=7YGU
------END PGP SIGNATURE-----

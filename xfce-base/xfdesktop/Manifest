@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cc699ee6d8290cc5a6e0659cb3a99e5 xfdesktop-4.2.0.ebuild 392
 MD5 aa5828be4cad58c592532a705117398f ChangeLog 5558
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 0dd913780ddfb5b20e9e7e5c2155393f xfdesktop-4.0.6.ebuild 971
-MD5 052b500a074aceabbdf0c51b1c50c312 files/digest-xfdesktop-4.2.0 69
+MD5 34b8248148e70360c405369cb5efdecb xfdesktop-4.2.0.ebuild 391
 MD5 5a42f394e1b742861d369baced86b7b2 files/digest-xfdesktop-4.0.6 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCU1YugEuf3OQ0akRAmHKAJ9kWumsDdsU0f7TwAOik1wNDilHjgCgjUgw
-9AYsXQynq0MSAO4lg3SPR24=
-=Nsrg
------END PGP SIGNATURE-----
+MD5 052b500a074aceabbdf0c51b1c50c312 files/digest-xfdesktop-4.2.0 69
