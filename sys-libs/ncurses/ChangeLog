@@ -1,9 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.18 2002/12/09 04:37:29 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.19 2002/12/09 22:26:26 azarah Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  10 Dec Martin Schlemmer <azarah@gentoo.org> ncurses-5.3-r1.ebuild :
+  Mark as stable for x86.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords
  
 *ncurses-5.2-r7 (26 Oct 2002)
 *ncurses-5.2.20020511-r3 (26 Oct 2002)
