@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.5 2002/12/30 12:00:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.6 2002/12/30 12:15:27 mholzer Exp $
+
+*lincvs-1.0.0 (30 Dec 2002)
+
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> lincvs-1.0.0.ebuild files/digest-lincvs-1.0.0 ChangeLog :
+  Version bumped.
 
 *lincvs-0.9.90 (23 Jul 2002)
 
