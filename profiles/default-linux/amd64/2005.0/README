@@ -16,7 +16,18 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 14) emerge -upv system
 15) emerge -uv system
 
-Note, The order is VERY important.
+Notes:
+The order is VERY important.
+
 You MUST do every step even if you already have that version installed.
 emerging glibc the second time is optional if you don't want to use my
 options.
+
+The script for step 12 isn't yet ready.  It's safe to skip for now.
+
+The glibc binpkg that I have in my devspace is compiled with userlocales
+to decrease the filesize and give infra a break.  If you need all the locales,
+please use http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2-alllocales (not there yet)
+
+Also, I am rebuilding glibc as I accidently used gcc-3.3.5-r1 for the above
+binpkg.  Where would the best place be to host this file?
