@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4.ebuild,v 1.1 2003/03/16 10:05:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.4.ebuild,v 1.2 2003/03/17 15:59:24 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -189,8 +189,14 @@ src_install() {
 	dosym ../var/tmp /usr/tmp
 	
 	keepdir /home
-	keepdir /usr/include /usr/src /usr/portage
+	keepdir /usr/include /usr/src
 	keepdir /usr/X11R6/include/{X11,GL} /usr/X11R6/lib
+	# If it already exist, do not recreate, else we get
+	# problems when /usr/portage mounted as ro NFS, etc.
+	if [ ! -d "${ROOT}/usr/portage" ]
+	then
+		keepdir /usr/portage
+	fi
 	
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
