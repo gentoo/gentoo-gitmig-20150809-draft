@@ -1,13 +1,12 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-devils/dictd-devils-0.ebuild,v 1.2 2001/04/24 22:58:35 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-devils/dictd-devils-0.ebuild,v 1.3 2002/04/27 08:32:43 seemant Exp $
 
-#P=
-A=devils-dict-pre.tar.gz
+MY_P=devils-dict-pre
 S=${WORKDIR}
 DESCRIPTION=""
-SRC_URI="ftp://ftp.dict.org/pub/dict/pre/${A}"
+SRC_URI="ftp://ftp.dict.org/pub/dict/pre/${MY_P}.tar.gz"
 HOMEPAGE="http://www.dict.org"
 
 DEPEND=">=app-text/dictd-1.5.5"
@@ -20,19 +19,19 @@ src_install () {
 }
 
 pkg_postinst() {
-if [ -f /etc/dict/dictd.conf ]; then
-cat >> /etc/dict/dictd.conf << __EOF__
-database devils { data "/usr/lib/dict/devils.dict.dz"
+    if [ -f /etc/dict/dictd.conf ]; then
+        cat >> /etc/dict/dictd.conf << __EOF__
+        database devils { data "/usr/lib/dict/devils.dict.dz"
                   index "/usr/lib/dict/devils.index" }
 __EOF__
-fi
+    fi
 }
 
 pkg_postrm() {
-if [ -f /etc/dict/dictd.conf ]; then
-  cat /etc/dict/dictd.conf | sed -e '/devils/d' > /etc/dict/dictd.conf.$$
-  mv /etc/dict/dictd.conf.$$ /etc/dict/dictd.conf
-fi
+    if [ -f /etc/dict/dictd.conf ]; then
+        cat /etc/dict/dictd.conf | sed -e '/devils/d' > /etc/dict/dictd.conf.$$
+        mv /etc/dict/dictd.conf.$$ /etc/dict/dictd.conf
+    fi
 }
 
 # vim: ai et sw=4 ts=4
