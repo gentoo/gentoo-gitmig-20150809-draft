@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.11.ebuild,v 1.3 2003/07/13 00:23:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.12.ebuild,v 1.1 2003/07/13 00:23:01 foser Exp $
 
 inherit gnome2 eutils
 
-IUSE="ssl gtkhtml perl ldap"
+IUSE="ssl gtkhtml perl ldap crypt"
 DESCRIPTION="Email client for GNOME"
 SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
 HOMEPAGE="http://balsa.gnome.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="net-mail/mailbase
 	>=dev-libs/glib-2
@@ -23,13 +23,14 @@ RDEPEND="net-mail/mailbase
 	>=gnome-base/libgnomeprintui-2.1.4
 	>=net-libs/libesmtp-0.8.11
 	virtual/aspell-dict
+	>=app-text/scrollkeeper-0.1.4
 	ssl? ( dev-libs/openssl )
 	perl? ( >=dev-libs/libpcre-3.4 )
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
+	crypt? ( =app-crypt/gpgme-0.3.14* )"
 
 DEPEND="dev-util/pkgconfig
-	>=app-text/scrollkeeper-0.1.4
 	${RDEPEND}"
 
 src_compile() {
@@ -54,7 +55,9 @@ src_compile() {
 		--with-mailpath=/var/mail || die "configure libmutt failed"
 
 	# threads diabled because of 17079
-	econf ${myconf} --disable-threads || die "configure balsa failed"
+	econf ${myconf} \
+		`use_with crypt gpgme` \
+		--disable-threads || die "configure balsa failed"
 
 	emake || die "emake failed"
 }
