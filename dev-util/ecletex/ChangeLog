@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ecletex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.6 2004/11/03 11:46:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ChangeLog,v 1.7 2004/11/15 10:57:58 karltk Exp $
+
+  15 Nov 2004; <karltk@gentoo.org> -files/build.xml-0.0.2,
+  -ecletex-0.0.2.ebuild, ecletex-0.0.3.ebuild:
+  Compile-time depend on 3.0.0, not any 3.0.
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> ecletex-0.0.2.ebuild,
   ecletex-0.0.3.ebuild:
