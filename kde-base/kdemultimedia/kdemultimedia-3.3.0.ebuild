@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0.ebuild,v 1.8 2004/09/09 16:33:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0.ebuild,v 1.9 2004/09/09 19:02:04 caleb Exp $
 
 inherit kde-dist flag-o-matic eutils
 
@@ -17,7 +17,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	oggvorbis? ( media-sound/vorbis-tools )
 	xine? ( >=media-libs/xine-lib-1_beta12 )
 	alsa? ( media-libs/alsa-lib )
-	speex? ( media-libs/speex )
+	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	media-libs/taglib media-libs/tunepimp
 	!media-sound/juk"
 
