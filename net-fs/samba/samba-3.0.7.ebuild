@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.3 2004/09/14 08:51:49 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.7.ebuild,v 1.4 2004/09/16 13:16:48 satya Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,6 +23,7 @@ S=${WORKDIR}/${PN}${_CVS}
 SRC_URI="mirror://samba/${PN}${_CVS}.tar.gz
 	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2
 	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
+RESTRICT="nomirror"
 
 _COMMON_DEPS="dev-libs/popt
 	readline? sys-libs/readline
