@@ -37,6 +37,11 @@
 # Gerk - July 4, 2002
 ~media-libs/gstreamer
 
+# gstreamer plugins also have problems (qcam specifically)
+# this can likely be fixed if gstreamer can be fixed
+# Gerk - July 8, 2002
+~media-libs/gst-plugins
+
 # Looks like a whole bunch of x86 stuff in the ebuild that I'm not sure
 # will work so great on the PPC so it's masked for PPC testing. 
 # Owen - July 0/02
