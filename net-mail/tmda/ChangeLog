@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.4 2002/02/20 03:19:48 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.5 2002/03/02 03:33:30 agenkin Exp $
+
+*tmda-0.48 ( 1 Mar 2002 )
+
+  1 Mar 2002; Arcady Genkin <agenkin@thpoon.com> tmda-0.48.ebuild :
+
+  Version 0.48 is released.
+  Make sure to read /usr/share/doc/tmda-0.48/UPGRADE.gz for important info
+  if upgrading from a previous version.
 
 *tmda-0.47 ( 19 Feb 2002 )
 
