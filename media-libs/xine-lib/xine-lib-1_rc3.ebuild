@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3.ebuild,v 1.2 2003/12/19 00:03:53 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc3.ebuild,v 1.3 2003/12/27 14:50:58 plasmaroo Exp $
 
 inherit eutils flag-o-matic
 
@@ -71,6 +71,8 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-gcc2_fix.patch
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
 	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV} || die
+	# plasmaroo: Kernel 2.6 headers patch
+	epatch ${FILESDIR}/xine-lib-2.6.patch || die
 }
 
 src_compile() {

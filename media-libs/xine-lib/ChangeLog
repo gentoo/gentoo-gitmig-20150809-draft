@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.79 2003/12/19 00:03:53 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.80 2003/12/27 14:50:58 plasmaroo Exp $
+
+  27 Dec 2003; <plasmaroo@gentoo.org> xine-lib-1_rc3.ebuild,
+  files/xine-lib-2.6.patch:
+  Added a patch to make xine-lib work with 2.6 kernel includes - closes bug
+  #36564.
 
   18 Dec 2003; Brandon Hale <tseng@gentoo.org> xine-lib-1_rc2.ebuild,
   xine-lib-1_rc3.ebuild:
