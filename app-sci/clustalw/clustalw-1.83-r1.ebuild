@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.3 2004/10/06 02:03:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83-r1.ebuild,v 1.4 2004/10/14 12:22:09 gongloo Exp $
+
+inherit gcc
 
 DESCRIPTION="General purpose multiple alignment program for DNA and proteins"
 HOMEPAGE="http://www.embl-heidelberg.de/~seqanal/"
@@ -18,6 +20,7 @@ S=${WORKDIR}/${PN}${PV}
 src_unpack(){
 	unpack ${A}
 	cd ${S}
+	# No longer needed. see emake line below.
 	sed -i -e "s/CC	= cc/CC	= ${CC:gcc}/" makefile
 	sed -i -e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" makefile
 	sed -i -e "s/LFLAGS	= -O -lm/LFLAGS	= -lm ${CFLAGS}/" makefile
@@ -25,7 +28,7 @@ src_unpack(){
 }
 
 src_compile() {
-	emake || die
+	CC=${CC:-$(gcc-getCC)} emake || die
 }
 
 src_install() {
