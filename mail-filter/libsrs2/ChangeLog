@@ -1,0 +1,8 @@
+# ChangeLog for mail-filter/libsrs2
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.1 2004/07/25 15:55:26 pfeifer Exp $
+
+*libsrs2-1.0.16 (24 Jul 2004)
+
+  24 Jul 2004; Jay Pfeifer <pfeifer@gentoo.org> : libsrs2-1.0.16.ebuild
+  Initial import.
