@@ -1,8 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.56 2004/02/26 02:43:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.57 2004/03/05 10:30:33 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
+# Maintained by the Perl herd <perl@gentoo.org>
 #
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
@@ -14,17 +15,34 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	src_compile src_install src_test \
 	perlinfo updatepod
 
-eval `perl '-V:version'`
+
 newdepend ">=dev-lang/perl-5.8.0-r12"
 SRC_PREP="no"
 SRC_TEST="skip"
 
+PERL_VERSION=""
+SITE_ARCH=""
 SITE_LIB=""
 ARCH_LIB=""
 POD_DIR=""
+MMSIXELEVEN=""
 
+getperlinfo() {
+	eval `perl '-V:version'`
+	PERL_VERSION=${version}
+	eval `perl '-V:installsitearch'`
+	SITE_ARCH=${installsitearch}
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+	eval `perl '-V:installsitearch'`
+	SITE_LIB=${installsitearch}
 # handling of DESTDIR changed in makemaker 6.11
-MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
+	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
+}
+
+getperlinfo
 
 perl-module_src_prep() {
 	SRC_PREP="yes"
@@ -70,10 +88,6 @@ perl-module_src_install() {
 	dodir ${POD_DIR}
 	
 	test -z ${mytargets} && mytargets="install"
-	eval `perl '-V:installsitearch'`
-	SITE_ARCH=${installsitearch}
-	eval `perl '-V:installarchlib'`
-	ARCH_LIB=${installarchlib}
 					 
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build install
@@ -168,12 +182,6 @@ perlinfo() {
 
 	if [ -f /usr/bin/perl ]
 	then 
-		eval `perl '-V:installarchlib'`
-		eval `perl '-V:installsitearch'`
-		ARCH_LIB=${installarchlib}
-		SITE_LIB=${installsitearch}
-
-		eval `perl '-V:version'`
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
 	fi
 
