@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openssh
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.59 2004/01/04 12:02:17 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.60 2004/01/08 10:07:50 solar Exp $
+
+  08 Jan 2004; <solar@gentoo.org> openssh-3.5_p1-r1.ebuild,
+  openssh-3.6.1_p2.ebuild, openssh-3.7.1_p2-r1.ebuild,
+  openssh-3.7.1_p2-r2.ebuild:
+  ppc64/mips nightmare.. had to remove tcpd and skey support for various arches
+  due to other things not being marked stable on those arches
+
+*openssh-3.7.1_p2-r2 (08 Jan 2004)
+
+  08 Jan 2004; <solar@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
+  added feature request for chrooting via sshd bug #26615
 
   04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r1.ebuild:
   Changeing sshd user shell. Closing #35063.

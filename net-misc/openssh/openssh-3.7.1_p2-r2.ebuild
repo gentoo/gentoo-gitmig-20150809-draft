@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.8 2004/01/08 10:07:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.1 2004/01/08 10:07:50 solar Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -20,8 +20,8 @@ SRC_URI="mirror://openssh/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64 ppc64"
-IUSE="ipv6 static pam tcpd kerberos skey selinux X509"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64 ~ppc64"
+IUSE="ipv6 static pam tcpd kerberos skey selinux X509 chroot"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
@@ -58,6 +58,9 @@ src_unpack() {
 		# updates to skey implementation.
 		epatch ${FILESDIR}/${PN}-skeychallenge-args.diff
 	}
+
+	# feature request bug #26615
+	use chroot && epatch ${FILESDIR}/${PN}-${PV}-chroot.patch
 }
 
 src_compile() {
