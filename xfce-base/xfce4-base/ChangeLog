@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-base
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/ChangeLog,v 1.31 2004/09/18 16:39:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/ChangeLog,v 1.32 2004/10/04 18:51:00 bcowan Exp $
+
+*xfce4-base-4.1.90 (04 Oct 2004)
+
+  04 Oct 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-base-4.1.90.ebuild:
+  Beta version of new 4.2 release. Contains too numerous improvements to list.
 
   18 Sep 2004; Tom Gall <tgall@gentoo.org> xfce4-base-4.0.6.ebuild:
   stable on ppc64, bug #57744
