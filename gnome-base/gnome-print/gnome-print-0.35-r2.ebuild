@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r2.ebuild,v 1.7 2002/10/05 05:39:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r2.ebuild,v 1.8 2002/12/07 00:14:46 mholzer Exp $
 
 IUSE="nls tetex"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME printing library"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/0.35/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"

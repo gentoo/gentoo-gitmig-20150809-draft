@@ -1,33 +1,29 @@
 # ChangeLog for gnome-base/gnome-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.10 2002/07/23 21:07:48 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/ChangeLog,v 1.11 2002/12/07 00:14:46 mholzer Exp $
+
+*gnome-print-0.35-r3 (3 Apr 2002)
+
+  06 Dez 2002; Martin Holzer <mholzer@gentoo.org> gnome-print-0.35-r3.ebuild gnome-print-0.35-r2.ebuild :
+  Fixed SRC_URI
 
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
-
   Changed tex USE flag to tetex instead.
 
   9 Apr 2002; M.Schlemmer <azarah@gentoo.org> gnome-print-0.35-r3.ebuild :
-
   Libtoolize to prevent possible relink problems, as well as invalid paths
   in .la files.
 
-*gnome-print-0.35-r3 (3 Apr 2002)
-
   3 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
-
   libxml is a compile time dependency.
 
-*gnome-print-0.35-r3 (01 Apr 2002)
   01 Apr 2002; Spider <spider@gentoo.org> gnome-print-0.35-r3.ebuild: 
-    updated to have libxml as dependency
-
-*gnome-print-0.35-r3 (29 Mar 2002)
+  updated to have libxml as dependency
 
   29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r3.ebuild :
-
   libglade is not a necessary compile-time or run-time dependency.  As such,
   this finally sorts out the libglade/bonobo/gnome-print circular dependency
   issue, and libglade can now be compiled with bonobo support.
@@ -35,14 +31,11 @@
 *gnome-print-0.35-r2 (18 Mar 2002)
 
   18 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gnome-print-0.35-r2.ebuild :
-
   Added gnome-libs as a compile-time dependency and cleaned up the sed statement
   in src_unpack().
 
 *gnome-print-0.35-r1 (10 Mar 2002)
 
   10 Mar 2002; Bruce A. Locke <blocke@shivan.org> gnome-print-0.35-r1.ebuild :
-
   NLS fixes submitted by seemant@rocketmail.com (Seemant Kulleen)
-
 
