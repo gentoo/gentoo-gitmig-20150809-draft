@@ -1,0 +1,45 @@
+# This is a list of USE flags that should not be used on alpha.
+
+# These will probably never be supported, for obvious reasons (wrong arch)
+svga
+icc
+icc-pgo
+mmx
+sse
+x86
+3dnow
+
+# These are debatable, since technically an alpha could support this hardware
+pcmcia
+3dfx
+
+# The rest should work in theory. Feel free to test and remove.
+# doesn't compile
+alsa
+
+# No hardware to test
+pda
+
+# Can't get USB working to test
+gphoto2
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+
+# No apm support on alpha
+apm
+
+# alpha doesn't have java support other than compaq-j*, which isn't a
+# current version.  must mask this to keep things sane
+java
+
+# firebird appears to be x86-only (the db, not the browser)
+firebird
+
+# tcc is x86-only
+tcc
+
+# I don't think that openafs really works on other architectures,
+# despite some internal Gentoo efforts (mine) to port it
+afs
