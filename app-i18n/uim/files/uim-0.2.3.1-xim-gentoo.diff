@@ -1,0 +1,16 @@
+diff -urN uim-0.2.3.1.ORIG/xim/main.cpp uim-0.2.3.1/xim/main.cpp
+--- uim-0.2.3.1.ORIG/xim/main.cpp	2004-01-06 03:51:10.000000000 +0900
++++ uim-0.2.3.1/xim/main.cpp	2004-01-06 18:11:13.858801800 +0900
+@@ -412,9 +412,11 @@
+ 	char *lang = strdup(uim_get_im_language(uc, i));
+ 	Locale *lc = getLocale(lang);
+ 	if (!lc) {
++	    free(name);
++	    free(lang);
+ 	    continue;
+ 	}
+-	XimServer *xs = new XimServer(lc, name, lang);
++	XimServer *xs = new XimServer(lc, strdup(name), strdup(lang));
+ 	bool res = xs->setupConnection();
+ 	if (!res) {
+ 	    delete xs;
