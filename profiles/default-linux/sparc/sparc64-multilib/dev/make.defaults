@@ -1,25 +1,35 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.2 2004/12/14 03:46:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.3 2004/12/14 06:42:47 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
 
-# Used in ebuilds for verifying 64bit userland
+# Used in ebuilds for verifying multilib userland
 PROFILE_ARCH="sparc64-multilib"
 
-# In theory, we should be able to just change this (in make.conf) to switch
-# between building for 32/64bit
+# In theory, we should be able to just change this (in make.conf)
+# to choose which of our multilib CHOSTS is default.  This should
+# be sparc-unknown-linux-gnu once the functionality I envision gets
+# encorporated into portage.
 CHOST="sparc64-unknown-linux-gnu"
 
-# Always use the sparc64 kernel
+# This isn't implemented in portage.
+# MULTILIB_CHOSTS lists all the CHOSTS you want to build for when
+# you emerge a package.  The libs that get installed will be for
+# all of these CHOSTs, but the applications will for ${CHOST}.
+
+MULTILIB_CHOSTS="sparc64-unknown-linux-gnu sparc-unknown-linux-gnu"
+CFLAGS_sparc64-unknown-linux-gnu="-m64"
+CXXFLAGS_sparc64-unknown-linux-gnu="${CFLAGS_sparc64-unknown-linux-gnu}"
+LIBDIR_sparc64-unknown-linux-gnu="lib64"
+CFLAGS_sparc-unknown-linux-gnu="-m32"
+CXXFLAGS_sparc-unknown-linux-gnu="${CFLAGS_sparc-unknown-linux-gnu}"
+LIBDIR_sparc-unknown-linux-gnu="lib"
+
+# We have the sparc64 platform
 PLATFORM="sparc64-unknown-linux-gnu"
 
-# Compiler flags
-CFLAGS="-O2 -pipe"
-CXXFLAGS=${CFLAGS}
-
-# Misc
 FEATURES="sandbox ccache autoconfig"
 
 # Catalyst stage/grp USE
@@ -28,15 +38,13 @@ GRP_STAGE23_USE="berkdb gpm ipv6 -java multislot multilib ncurses nls -nptl pam 
 # Sane, minimal USE settings
 USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups fortran f77 fbcon gif jpeg nls png tiff truetype usb xpm xrandr xv"
 
+# This will get removed once the per-chost functionality is in portage
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib"
 
+# For compatibility with what I see in other multilib profiles, but this should
+# be removed once portage has a more sane multilib setup
 ARCH_WRAPPER="sparc32"
-
 CHOST32="sparc-unknown-linux-gnu"
 CC32="gcc32"
 CPP32="g++32"
-
-CHOST64="sparc64-unknown-linux-gnu"
-CC64="gcc64"
-CPP64="g++64"
