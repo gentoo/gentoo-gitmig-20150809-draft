@@ -1,0 +1,12 @@
+# ChangeLog for app-misc/rpc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.1 2003/02/24 02:50:52 george Exp $
+
+*rpc-0.97.ebuild (23 Feb 2003)
+
+  23 Feb 2003; George Shapovalov <george@gentoo.org> rpc-0.97.ebuild, files/digest-rpc-0.97 :
+  initial release (#13209)
+  rpc is a fullscreen console-based RPN calculator that uses the curses library. Its operation is similar to that of 
+  modern HP calculators, but data entry has been optimized for efficiency on a PC keyboard. Its features include 
+  extensive scientific calculator functionality, command completion, and a visible interactive stack.
+  ebuild submitted by Bernardo S. A. Silva <bsaslinux@globo.com>
