@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.15 2004/12/20 09:42:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.16 2004/12/23 07:39:24 phosphan Exp $
+
+  21 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> -xephem-3.5.2.ebuild,
+  -xephem-3.6.1.ebuild, xephem-3.6.2.ebuild, -xephem-3.6.ebuild:
+  Big cleanup. Removing fetch restriction after getting mirror permission from
+  the developers.
 
   20 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> xephem-3.6.2.ebuild:
   Declaring latest version stable because the package has fetch restriction and
