@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.5 2003/10/18 21:10:33 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.6 2004/01/06 09:21:29 mr_bones_ Exp $
+
+  06 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> spim-6.5.ebuild:
+  manual install; better X use support; use sed -i; skip test since it needs
+  installed files to work; use mirror://gentoo since the archive isn't
+  versioned upstream.
 
   19 Oct 2003; Brandy Westcott brandy@gentoo.org spim-6.5.ebuild:
   Fixed typo in ebuild
