@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.6 2002/07/04 05:52:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.7 2002/07/04 16:38:28 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -44,7 +44,8 @@ src_unpack() {
 }	
 
 src_compile() {
-	python ${S}/python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
+	cd ${S}
+	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
 }
 
 src_install() {
@@ -128,26 +129,30 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	OLDROOT=${ROOT} ; unset ROOT
 	
+	#This can only be done in ${T} since ${S} may be a live CVS tree
+	cd ${T}
 	mkdir -p xml/packages
 	dodir ${WEBROOT}/packages/
 	insinto ${WEBROOT}/packages/
 	#we're getting bonkers stuff in the main packages pages, so lets make sure it's empty
-	rm  -f ${T}/main-packages.xml
-	python python/genpkgxml.py ${T}/main-packages-old-style.xml || die
-	python python/genpkgxml-v2.py ${T}/main-packages.xml || die
+	python ${S}/python/genpkgxml.py ${T}/main-packages-old-style.xml || die
+	python ${S}/python/genpkgxml-v2.py ${T}/main-packages.xml || die
 	for DIR in `ls xml/packages`
 	do
-		for FILE in  `ls xml/packages/${DIR} | sed 's/.xml//'`
+		dodir ${WEBROOT}/packages/${DIR}
+		for FILE in  `ls xml/packages/${DIR}`
 		do
+			FILE=${FILE%.xml}
 			echo -n "."	
-			xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html
+			xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html || die
 		done
 	done
 
 	ROOT=${OLDROOT}
+	
 	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
 	xsltproc $TEMPLATE ${T}/main-packages-old-style.xml > ${D}${WEBROOT}/index-packages-old.html || die
-	xsltproc $TEMPLATE xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
+	xsltproc $TEMPLATE ${S}/xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	
 	#install XSL for later use
 	dodir ${WEBROOT}/xsl
