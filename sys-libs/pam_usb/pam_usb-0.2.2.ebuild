@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/pam_usb-0.2.2.ebuild,v 1.3 2004/05/26 11:21:50 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_usb/pam_usb-0.2.2.ebuild,v 1.4 2004/05/28 19:18:58 kugelfang Exp $
 
 inherit eutils
 
@@ -19,10 +19,10 @@ DEPEND="ssl? ( dev-libs/openssl )
 	sys-libs/pam"
 
 src_compile() {
-	if [ "${ARCH}" = "amd64" ]; then
-		# append-flags / CFLAGS doesnt work...
-		sed -i -e "s/CFLAGS. *=/& -fPIC/" src/Makefile
-	fi
+	# append-flags / CFLAGS doesnt work...
+	# applying the patch to all archs now as agriffis suggested
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/28
+	sed -i -e "s/CFLAGS. *=/& -fPIC/" src/Makefile
 	emake || die "make failed"
 }
 
