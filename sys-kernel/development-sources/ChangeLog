@@ -1,18 +1,24 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.66 2003/12/30 15:13:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.67 2004/01/05 21:12:59 plasmaroo Exp $
+
+*development-sources-2.6.1_rc1 (05 Jan 2004)
+
+  05 Jan 2004; <plasmaroo@gentoo.org> development-sources-2.6.1_rc1.ebuild:
+  Bumped, secured against the mremap(2) vulnerability - closes bug 
+  #37310 and helps bug #37292.
 
 *development-sources-2.6.0 (18 Dec 2003)
 
   18 Dec 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0.ebuild:
   Add official 2.6.0 branch. Please do not patch this kernel, it should stay
-  vanilla, gentoo-dev-sources is the one you want to patch
+  vanilla, gentoo-dev-sources is the one you want to patch...
 
   09 Dec 2003; <spider@gentoo.org> development-sources-2.6.0_beta7-r3.ebuild,
   development-sources-2.6.0_beta7-r5.ebuild,
   development-sources-2.6.0_beta7.ebuild:
-  fixing chown issues, everything is johnm's fault.
+  Fixing chown issues.
 
 *development-sources-2.6.0_beta11 (26 Nov 2003)
 
