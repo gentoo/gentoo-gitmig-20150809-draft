@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.6.0.ebuild,v 1.3 2003/12/27 04:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.6.0.ebuild,v 1.4 2004/01/03 17:33:59 vapier Exp $
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwib/"
@@ -20,6 +20,7 @@ src_unpack() {
 	cd ${S}/src
 
 	sed -i \
+		-e 's:-ansi::' \
 		-e 's:/usr/local:/usr:g' \
 		-e "s:-O2:${CFLAGS}:" \
 		genemake config.dat
