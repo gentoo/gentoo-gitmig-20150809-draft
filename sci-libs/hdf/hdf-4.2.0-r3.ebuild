@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.2 2004/12/29 00:31:18 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.3 2005/01/25 22:05:47 kugelfang Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic fortran
 
 # substitute second dot by "r"
 MY_PV=${PV/./X}
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/pub/outgoing/hdf4/hdf${MY_PV}/hdf${MY_PV}.t
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/hdf4.html"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="x86 amd64 ppc"
 SLOT="0"
 IUSE="szip"
 
@@ -26,17 +26,33 @@ DEPEND="sys-libs/zlib
 		>=sys-apps/sed-4
 		szip? ( sci-libs/szip )"
 
-pkg_setup() {
-	if ! which &>/dev/null g77; then
-		die "g77 not found, please re-emerge gcc with f77 in your USE flags."
-	fi
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-shared-libs.patch
 }
 
 src_compile() {
+	# We need shared libraries, see BUG #75415.
+	# To use libtool for shared libs, we need above patch and the following lines.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/24
+	aclocal
+	libtoolize --copy --force
+	automake --add-missing
+	autoconf
+
+	# BUG #75415, the shipped config/linux-gnu settings are broken.
+	# -Wsign-compare does not work with g77, causing lack of -fPIC for shared
+	# objects.
+	sed -i -e 's|-Wsign-compare||g' ${S}/config/linux-gnu
+
 	local myconf="--enable-production"
+
 	use szip && myconf="${myconf} --with-szlib=/usr"
 	use ppc && append-flags -DSUN
+
 	econf ${myconf} || die "configure failed"
+
 	make LDFLAGS="${LDFLAGS} -lm" || die "make failed"
 }
 
