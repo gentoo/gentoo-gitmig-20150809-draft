@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r3.ebuild,v 1.1 2004/01/12 05:33:24 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r3.ebuild,v 1.2 2004/01/12 22:17:54 rizzo Exp $
 
 IUSE="nls perl spell nas mozilla cjk debug ssl"
 
@@ -25,6 +25,7 @@ DEPEND="=sys-libs/db-1*
 	mozilla? ( net-www/mozilla )
 	!mozilla? ( dev-libs/nss )
 	spell? ( >=app-text/gtkspell-2.0.2 )"
+PDEPEND="ssl? ( net-im/gaim-encryption )"
 
 src_unpack() {
 	unpack ${P}.tar.bz2 || die
