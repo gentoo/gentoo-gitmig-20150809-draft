@@ -1,7 +1,15 @@
-MD5 1059854cea8dbed0ed3bd0749bcb9126 ChangeLog 1103
-MD5 d83e85ea1d5850c66b26498d2d2b3585 cm-2.4.0.ebuild 1147
-MD5 688a6320dd151de5b02a5880fd7a97d6 cm-2.4.2.ebuild 1158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 275ff48eda9a68de2758c5895fc2ab6b ChangeLog 1220
+MD5 8895ed193b4115521a7b9d35ea71822b cm-2.4.2.ebuild 966
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 39b2e2aa6a9ea57538cfaf1b1967f197 files/cm-2.4.0-exec 160
-MD5 606a027bb2fa39a2aec9c66ca394eaa8 files/digest-cm-2.4.0 60
 MD5 96488265785c0bf4e9e394238f5b8e23 files/digest-cm-2.4.2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBdi5bArHZZzCEUG0RAtWuAJ9zLU8cLnRnvXuj2xycRzfBfPo7TgCXQrNl
+CINMPBBDh9LpJVVabFGBhA==
+=+T1e
+-----END PGP SIGNATURE-----
