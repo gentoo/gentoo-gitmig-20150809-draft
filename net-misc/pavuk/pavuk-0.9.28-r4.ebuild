@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28-r4.ebuild,v 1.2 2004/09/12 11:59:37 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.28-r4.ebuild,v 1.3 2004/09/24 00:08:39 vapier Exp $
 
 inherit eutils
 
-IUSE="ssl X gtk gnome mozilla socks5 nls"
-
-S="${WORKDIR}/${PN}-0.9pl28"
 DESCRIPTION="Web spider and website mirroring tool"
 HOMEPAGE="http://www.pavuk.org/"
 SRC_URI="http://www.pavuk.org/sw/${PN}-0.9pl28.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+SLOT="0"
+KEYWORDS="ppc sparc x86"
+IUSE="ssl X gtk gnome mozilla socks5 nls"
 
 DEPEND=">=sys-apps/sed-4
 	sys-devel/gettext
@@ -24,6 +22,8 @@ DEPEND=">=sys-apps/sed-4
 	gnome? ( <gnome-base/gnome-panel-1.5 )
 	mozilla? ( net-www/mozilla )
 	socks5? ( net-misc/tsocks )"
+
+S="${WORKDIR}/${PN}-0.9pl28"
 
 src_unpack() {
 	unpack ${A}
@@ -41,8 +41,9 @@ src_unpack() {
 }
 
 src_compile() {
-	EXTRA_ECONF="--enable-threads --with-regex=auto" \
-		econf \
+	econf \
+		--enable-threads \
+		--with-regex=auto \
 		$(use_with X x) \
 		$(use_enable ssl) \
 		$(use_enable gtk) \
@@ -66,7 +67,7 @@ src_install() {
 
 	einstall || die
 
-	dodoc ABOUT-NLS README CREDITS FAQ NEWS AUTHORS COPYING BUGS \
+	dodoc README CREDITS FAQ NEWS AUTHORS BUGS \
 		TODO MAILINGLIST ChangeLog wget-pavuk.HOWTO jsbind.txt \
 		pavuk_authinfo.sample  pavukrc.sample
 }
