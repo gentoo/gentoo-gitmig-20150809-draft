@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-lirc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-lirc/ChangeLog,v 1.1 2005/03/19 18:13:28 chainsaw Exp $
+
+*bmp-lirc-0.2.2 (19 Mar 2005)
+
+  19 Mar 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +bmp-lirc-0.2.2.ebuild:
+  Initial commit, ebuild based on the one submitted by Russell Cloran
+  <russell@rucus.ru.ac.za> in bug #84983.
+
