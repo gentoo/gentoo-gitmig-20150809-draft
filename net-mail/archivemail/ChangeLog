@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/archivemail
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.1 2003/03/26 12:49:29 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.2 2003/06/05 03:33:48 jmorgan Exp $
+
+  04 Jun 2003; Jack Morgan <jmorgan@gentoo.org> archivemail-0.6.1.ebuild:
+  Added ~sparc keyword
 
 *archivemail-0.6.1 (11 Mar 2003)
 
