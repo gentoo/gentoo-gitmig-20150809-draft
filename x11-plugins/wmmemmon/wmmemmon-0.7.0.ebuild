@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.7 2004/04/13 18:29:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-0.7.0.ebuild,v 1.8 2004/06/19 04:04:02 kloeri Exp $
 
-S=${WORKDIR}/${P}
-
+IUSE=""
 DESCRIPTION="A program to monitor memory/swap usages."
 SRC_URI="http://www.sh.rim.or.jp/~ssato/src/${P}.tar.gz"
 HOMEPAGE="http://www.sh.rim.or.jp/~ssato/dockapp/index.shtml#wmmemmon"
