@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.13 2003/02/27 18:43:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.14 2003/02/28 03:24:07 zwelch Exp $
+
+*apcupsd-3.10.5-r3 (27 Feb 2003)
+
+  27 Feb 2003; Zach Welch <zwelch@gentoo.org> apcupsd-3.10.5-r3.ebuild:
+  fix bug 16476
 
 *apcupsd-3.10.5-r2 (27 Feb 2003)
 
