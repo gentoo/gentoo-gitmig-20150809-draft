@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.8.2-r1.ebuild,v 1.1 2003/03/17 13:35:52 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.8.6-r1.ebuild,v 1.1 2003/12/11 19:15:44 tantive Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
@@ -36,7 +36,7 @@ pkg_postinst() {
 	einfo "Zetagrid is now installed in /opt/zetagrid"
 	einfo "Please change zeta.cfg for configuration issues!"
 	einfo "More information about setup can be found at"
-	einfo "http://cvs.gentoo.org/~tantive"
+	einfo "http://dev.gentoo.org/~tantive"
 	einfo
 	einfo "Zetagrid can be started using zeta.sh"
 	einfo "Progress information is displayed by zeta_progress.sh or"
