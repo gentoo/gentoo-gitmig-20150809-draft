@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.3 2003/08/16 08:16:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.4 2003/08/18 01:05:08 g2boojum Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -190,8 +190,8 @@ src_compile(){
 
 	use joystick && myconf="${myconf} --enable-joystick"
 
-	use mozilla && \ 
-		myconf="${myconf} --enable-mozilla \
+	use mozilla \
+		&& myconf="${myconf} --enable-mozilla \
 		MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config \
 		XPIDL=/usr/bin/xpidl"
 
@@ -202,14 +202,14 @@ src_compile(){
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_6=1
 
-	econf ${myconf} || die "configure of VLC failed"
+	econf ${myconf} || die "configure failed"
 
 	if [ `gcc-major-version` -eq 2 ]; then
 		sed -i s:"-fomit-frame-pointer":: vlc-config
 	fi
 
 	MAKEOPTS="${MAKEOPTS} -j1"
-        emake || die "make of VLC failed"
+        emake || die "make failed"
 }
 
 src_install() {
