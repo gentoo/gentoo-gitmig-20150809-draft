@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.2 2004/05/01 08:26:28 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.3 2004/05/01 20:55:06 pvdabeel Exp $
 IUSE="doc"
 
 inherit java nsplugins
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 
 
 if [ `use ppc` ]; then
-	S=${WORKDIR}/IBMjava2-ppc-141
+	S=${WORKDIR}/IBMJava2-ppc-141
 else
 	S=${WORKDIR}/IBMJava2-141
 fi;
@@ -32,9 +32,8 @@ src_compile() { :; }
 
 src_install() {
 	# Copy all the files to the designated directory 
-	dodir ${D}opt
-	dodir ${D}opt/${P}
-	cp -dpR ${S}/jre/* ${D}opt/${P}/
+	dodir /opt/${P}
+	cp -dpR ${S}/jre/* ${D}/opt/${P}/
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc ${S}/docs/COPYRIGHT
