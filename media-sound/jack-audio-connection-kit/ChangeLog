@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.37 2004/07/09 09:51:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.38 2004/07/24 05:51:56 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -jack-audio-connection-kit-0.75.0.ebuild,
+  -jack-audio-connection-kit-0.90.1-r1.ebuild,
+  -jack-audio-connection-kit-0.90.1.ebuild:
+  Removing old versions.  Moving auto* and doxygen out of RDEPEND.
 
   09 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-audio-connection-kit-0.75.0.ebuild,
