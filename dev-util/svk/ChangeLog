@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/svk
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.1 2004/11/27 06:31:08 pclouds Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.2 2005/02/05 23:37:36 absinthe Exp $
+
+*svk-0.29 (05 Feb 2005)
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
+  +files/svk-0.29-nognupgtest.patch, +svk-0.29.ebuild:
+  Version bump; added keywords ~amd64.  Added 'crypt' USE for gpg signing.
 
 *svk-0.26 (27 Nov 2004)
 
