@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.37 2003/04/07 04:33:12 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.38 2003/06/02 22:19:25 foser Exp $
+
+*pango-1.2.2 (03 Jun 2003)
+
+  03 Jun 2003; foser <foser@gentoo.org> pango-1.2.2.ebuild :
+  New version, updated slighthint patch from RH 
+  Use gnome2 eclass
 
 *pango-1.2.1-r1 (28 Feb 2003)
 
