@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.2 2004/05/17 05:12:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.3 2004/05/18 03:25:51 vapier Exp $
 
 inherit eutils flag-o-matic
 
-PATCH_VER=0.2
+PATCH_VER=0.3
 I18N_VER=i18n-0.1
 PATCHDIR=${WORKDIR}/patch
 
@@ -47,15 +47,6 @@ src_unpack() {
 	mv ${PATCHDIR}/mandrake/025* ${PATCHDIR}/excluded
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_VER}.patch
-
-	# Fixed patch for s390 to close bug 47965
-	# 
-	if use s390
-	then
-		mv ${PATCHDIR}/generic/003* ${PATCHDIR}/excluded
-		einfo Applying s390 patches
-		epatch ${FILESDIR}/003_all_coreutils-gentoo-uname-s390.patch || die
-	fi
 
 	# Apply the ACL patches. 
 	# WARNING: These CONFLICT with the SELINUX patches
