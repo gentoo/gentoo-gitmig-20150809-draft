@@ -1,6 +1,10 @@
 # ChangeLog for net-www/scgi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/scgi/ChangeLog,v 1.1 2003/08/12 04:42:02 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/scgi/ChangeLog,v 1.2 2003/10/29 04:50:31 robbat2 Exp $
+
+  28 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  scgi-1.2_alpha1.ebuild:
+  tweak ebuild, add metadata.xml
 
 *scgi-1.2_alpha1 (12 Aug 2003)
 
