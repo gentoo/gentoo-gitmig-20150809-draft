@@ -1,14 +1,17 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.7.ebuild,v 1.2 2002/05/22 20:26:30 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.7.ebuild,v 1.3 2002/07/21 03:07:46 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="A command line editor for id3v2 tags."
 HOMEPAGE="http://id3v2.sourceforge.net/"
+SRC_URI="http://unc.dl.sourceforge.net/sourceforge/id3v2/${P}.tar.gz"
 
 DEPEND="media-libs/id3lib"
 
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/id3v2/${P}.tar.gz"
-S=${WORKDIR}/${P}
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack()
 {

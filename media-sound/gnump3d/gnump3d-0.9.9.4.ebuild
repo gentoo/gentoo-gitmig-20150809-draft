@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.3 2002/07/11 06:30:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-0.9.9.4.ebuild,v 1.4 2002/07/21 03:07:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
@@ -8,8 +8,11 @@ SRC_URI="mirror://sourceforge/gnump3d/${P}.tar.gz"
 HOMEPAGE="http://gnump3d.sourceforge.net/"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}
-	>=sys-devel/perl-5.6.1"
+RDEPEND=">=sys-devel/perl-5.6.1"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}

@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.1.ebuild,v 1.2 2002/07/11 06:30:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.1.ebuild,v 1.3 2002/07/21 03:07:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based Audio CD Ripper"
 SRC_URI="http://www.nostatic.org/grip/${P}.tar.gz"
 HOMEPAGE="http://www.nostatic.org/grip"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=sys-libs/db-1*
@@ -33,12 +37,7 @@ src_compile() {
 	sed -e "s/LDFLAGS =/LDFLAGS = -lcdda_interface -lcdda_paranoia/" \
 		src/Makefile.in.orig > src/Makefile.in
 
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--sysconfdir=/etc \
-		${myconf} || die
-
+	econf ${myconf} || die
 	emake || die
 }
 
@@ -49,5 +48,5 @@ src_install () {
 		sysconfdir=${D}/etc \
 		install || die
 
-	dodoc ABOUT-NLS AUTHORS CREDITS LICENSE CHANGES README TODO
+	dodoc AUTHORS CREDITS COPYING ChangeLog README TODO NEWS
 }

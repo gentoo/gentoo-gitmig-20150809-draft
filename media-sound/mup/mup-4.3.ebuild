@@ -1,16 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.4 2002/07/11 06:30:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.5 2002/07/21 03:07:47 seemant Exp $
 
 S=${WORKDIR}/${P}
-
+MY_P="${PN}43"
 DESCRIPTION="Mup is a shareware program for printing music. It takes an input file containing ordinary (ASCII) text describing music, and produces PostScript output for printing the musical score described by the input."
-SRC_URI="ftp://ftp.arkkra.com/pub/unix/mup43src.tar.gz ftp://ftp.arkkra.com/pub/unix/mup43doc.tar.gz"
+SRC_URI="ftp://ftp.arkkra.com/pub/unix/${MY_P}src.tar.gz
+ftp://ftp.arkkra.com/pub/unix/${MY_P}doc.tar.gz"
 HOMEPAGE="http://www.arkkra.com"
 
-DEPEND="virtual/glibc
-	virtual/x11
+DEPEND="virtual/x11
 	>=media-libs/svgalib-1.4.3"
+
+SLOT="0"
+LICENSE="Arkkra"
+KEYWORDS="x86"
 
 src_unpack() {
 

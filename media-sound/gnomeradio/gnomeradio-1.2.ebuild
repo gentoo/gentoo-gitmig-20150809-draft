@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.2.ebuild,v 1.1 2002/07/16 13:50:00 stroke Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.2.ebuild,v 1.2 2002/07/21 03:07:46 seemant Exp $ 
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -13,8 +13,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME2 radio tuner"
 SRC_URI="http://mfcn.ilo.de/gnomeradio/${P}.tar.gz"
 HOMEPAGE="http://mfcn.ilo.de/gnomeradio/"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND=">=dev-libs/glib-2.0.4
@@ -30,11 +31,7 @@ DEPEND=">=dev-libs/glib-2.0.4
 RDEPEND="${DEPEND} >=dev-util/pkgconfig-0.12.0"
 
 src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
+	econf
 		--localstatedir=/var/lib \
 		--enable-platform-gnome-2 \
 		--enable-debug=yes || die "configure failed"

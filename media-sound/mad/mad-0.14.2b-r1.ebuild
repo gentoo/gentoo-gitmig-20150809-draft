@@ -1,30 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r1.ebuild,v 1.3 2002/07/11 06:30:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r1.ebuild,v 1.4 2002/07/21 03:07:46 seemant Exp $
 
 S=${WORKDIR}/${P}
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-
 HOMEPAGE="http://mad.sourceforge.net/"
 DESCRIPTION="A high-quality MP3 decoder"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-DEPEND="sys-devel/gcc 
-		virtual/glibc 
-		sys-devel/ld.so
-		nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc sys-devel/ld.so"
+DEPEND="sys-devel/ld.so
+	esd? ( media-sound/esound )"
+RDEPEND="nls? ( sys-devel/gettext )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
 src_compile() {
-	confopts="--infodir=/usr/share/info --mandir=/usr/share/man \
-			  --prefix=/usr --host=${CHOST} --enable-static \
-			  --disable-debugging --enable-shared --enable-fpm=intel"
+	local myconf
 
-	use nls || confopts="${confopts} --disable-nls"
+	use esd || myconf="${myconf} --without-esd"
+	use nls || myconf="${myconf} --disable-nls"
 
-	./configure ${confopts} || die
+	econf \
+		--enable-static \
+		--enable-shared \
+		${myconf} || die
 	emake || die
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
+
+	dodoc CHANGES COPY* CREDITS README TODO VERSION
 }

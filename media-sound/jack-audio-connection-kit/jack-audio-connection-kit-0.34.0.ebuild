@@ -1,20 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.34.0.ebuild,v 1.1 2002/06/06 12:22:31 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.34.0.ebuild,v 1.2 2002/07/21 03:07:46 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="A low-latency audio server"
 HOMEPAGE="http://jackit.sourceforge.net/"
+SRC_URI="http://download.sf.net/jackit/${P}.tar.gz"
 
 # libjack is LGPL, the rest is GPL
-LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
+LICENSE="GPL-2 LGPL-2.1"
+KEYWORDS="x86"
 
 DEPEND="dev-libs/glib
-        >=media-libs/alsa-lib-0.9.0_rc1"
+	>=media-libs/alsa-lib-0.9.0_rc1"
 
 RDEPEND="${DEPEND}"
-
-SRC_URI="http://download.sf.net/jackit/${P}.tar.gz"
 
 src_compile() {
 

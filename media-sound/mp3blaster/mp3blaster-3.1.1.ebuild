@@ -1,17 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.2 2002/07/10 18:25:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.1.ebuild,v 1.3 2002/07/21 03:07:46 seemant Exp $
 
-A=${PN}-3.1.1.tar.gz
-S=${WORKDIR}/${PN}-3.1.1
+S=${WORKDIR}/${P}
 DESCRIPTION="MP3 command line player"
-SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${A}"
+SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${P}.tar.gz"
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster"
 
 DEPEND=">=sys-libs/ncurses-5.2
-        nas? ( >=media-libs/nas-1.4.1 )
-        mysql? ( >=dev-db/mysql-3.23.36 )
-        oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
+	nas? ( >=media-libs/nas-1.4.1 )
+	mysql? ( >=dev-db/mysql-3.23.36 )
+	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf
@@ -21,13 +24,15 @@ src_compile() {
 
 	(cd src;patch -l <${FILESDIR}/mp3blaster-3.1.1-gcc3.1-fixes_cl.patch)
 
-	./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf} || die
+	econf ${myconf} || die
 
-	if [ "`use nas`" ] ; then
+	use nas && ( \
 		cd src
 		sed -e "s:^INCLUDES =:INCLUDES = -I/usr/X11R6/include:" \
-			-e "s:^splay_LDADD =:splay_LDADD = \$(NAS_LIBS):" Makefile | cat > Makefile
-		cd ..
+			-e "s:^splay_LDADD =:splay_LDADD = \$(NAS_LIBS):" \
+			Makefile | cat > Makefile
+
+		cd ${S}
 	fi
 
 	# parallel make does not work

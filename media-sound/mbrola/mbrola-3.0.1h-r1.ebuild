@@ -14,6 +14,10 @@ HOMEPAGE="http://tcts.fpms.ac.be/synthesis/mbrola.html"
 
 DEPEND=">=media-sound/festival-1.4.2"
 
+SLOT="0"
+LICENSE="MBROLA"
+KEYWORDS="x86"
+
 src_install () {
 
 	# Take care of main binary
