@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.10 2004/11/05 19:29:36 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.11 2004/11/24 08:50:25 ticho Exp $
+
+  24 Nov 2004; Andrej Kacian <ticho@gentoo.org>
+  mail-notification-0.8.1.ebuild:
+  Stable on x86.
 
 *mail-notification-0.8.1 (05 Nov 2004)
 
