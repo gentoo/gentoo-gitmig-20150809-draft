@@ -1,6 +1,26 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.12 2003/12/17 19:44:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.13 2003/12/26 23:32:44 azarah Exp $
+
+*udev-011 (27 Dec 2003)
+
+  27 Dec 2003; Martin Schlemmer <azarah@gentoo.org> udev-011.ebuild,
+  files/udev-011-ide-devfs-form-fixes.patch, files/udev-011-ide-devfs.patch,
+  files/udev-011-no-wait-for-sleep.patch,
+  files/udev-011-unlink-before-symlink.patch, files/udev.conf,
+  files/udev.permissions, files/udev.rules:
+  Update version. Fix udev_db path to point to /dev, else it is not writable
+  early during boot. Fix permissions on /dev/ptmx, else we use old style PTYs.
+  Update udev.permissions to also include devfs paths. Update udev.rules to use
+  some devfs layout for easy initial transition. Update included script
+  (udev-011-ide-devfs*.patch) that handles ide devfs symlinks to also generate
+  /dev/{cdroms,discs} ones. Fix udev to first remove any existing
+  nodes/fifo's/sockets/etc before trying to create a symlink, else it silently
+  fails without debugging enabled (udev-011-unlink-before-symlink.patch). Add
+  hack so that we can disable the sleep period udev have (its there so that udev
+  do not try to access the sysfs info before the kernel created the entries) -
+  we do not need it when we disable sleep, as the entries are already created
+  (udev-011-no-wait-for-sleep.patch).
 
 *udev-009 (17 Dec 2003)
 
