@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.8 2004/10/28 20:19:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.8.ebuild,v 1.9 2005/02/05 21:21:00 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~amd64"
 IUSE="static"
-DEPEND="virtual/os-headers"
+DEPEND="virtual/libc virtual/os-headers"
+RDEPEND="!static? ( virtual/libc )"
 
 src_unpack() {
 	unpack ${MY_PN}.${PV}.tar.gz
