@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.4_rc1.ebuild,v 1.1 2004/12/17 14:12:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.4_rc1.ebuild,v 1.2 2004/12/21 21:03:41 genstef Exp $
 
 DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
@@ -15,7 +15,8 @@ RDEPEND=">=dev-libs/glib-2.2
 	 >=sys-apps/hal-0.2.98"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-admin/sudo"
 
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.7 2004/12/17 14:12:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.8 2004/12/21 21:03:41 genstef Exp $
+
+  21 Dec 2004; Stefan Schweizer <genstef@gentoo.org> ivman-0.4_rc1.ebuild:
+  Adding missing sudo dep, thanks to Thomas Frase <thomas.frase@gmx.net> in
+  bug 74917
 
 *ivman-0.4_rc1 (17 Dec 2004)
 
