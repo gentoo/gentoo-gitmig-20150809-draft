@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/fceultra
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.2 2003/09/10 16:00:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.3 2003/09/17 10:07:04 msterret Exp $
+
+*fceultra-081-r1 (17 Sep 2003)
+
+  17 Sep 2003; Michael Sterrett <msterret@gentoo.org> fceultra-081-r1.ebuild:
+  put fceultra-081-r1.ebuild back in for the default-1.0 folks. (bug 28321)
 
   21 Jul 2003; Phil Bordelon <sunflare@gentoo.org> :
   Just a note that the patches vapier committed are from Jeff Balk
