@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6.4.ebuild,v 1.8 2004/08/07 10:19:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6.4.ebuild,v 1.9 2005/01/25 18:46:20 rizzo Exp $
 
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"

@@ -1,6 +1,13 @@
 # ChangeLog for net-im/naim
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.50 2004/11/14 19:44:19 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.51 2005/01/25 18:46:20 rizzo Exp $
+
+*naim-0.11.7.3 (25 Jan 2005)
+
+  25 Jan 2005; Don Seiler <rizzo@gentoo.org> metadata.xml,
+  naim-0.11.7.2.ebuild, +naim-0.11.7.3.ebuild:
+  Version bump, also adding DEPEND on screen since we do --enable-detach.
+  Closes bugs #79398 and #77658.
 
   14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> naim-0.11.7.2.ebuild:
   Stable on alpha.
