@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.7 2003/03/10 22:39:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.8 2003/08/03 14:24:30 weeve Exp $
+
+  03 Aug 2003; Jason Wever <weeve@gentoo.org> gv-3.5.8-r2.ebuild:
+  Added sparc to keywords to fix big #25043.
 
 *gv-3.5.8-r2 (03 Oct 2002)
 

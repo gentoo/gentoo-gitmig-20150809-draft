@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.5 2003/03/10 22:39:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.6 2003/08/03 14:24:30 weeve Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely
@@ -12,7 +12,7 @@ HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc x86 alpha"
+KEYWORDS="ppc x86 alpha sparc"
 
 # There's probably more, but ghostscript also depends on it,
 # so I can't identify it
