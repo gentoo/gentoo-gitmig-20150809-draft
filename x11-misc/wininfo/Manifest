@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82f4eedbdb483e82dec0c896975058f2 ChangeLog 341
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 f300ad4fcdb7a6760fa3383e6d7ccbea wininfo-0.7.ebuild 649
+MD5 4b3ae60b69eaa061faa8bbf489d7658e files/digest-wininfo-0.7 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBszQqI7fK2cqeyXkRAu9TAJ49z+NUdH7KkposM8YXukC/uQ9VjQCgukQU
+2U8X508JFSdg2WYTnibX0ow=
+=gSzL
+-----END PGP SIGNATURE-----
