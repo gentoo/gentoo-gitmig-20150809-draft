@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.3 2004/09/02 20:17:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.4 2004/11/12 18:11:56 vapier Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="3dfx alsa arts dga esd ggi joystick net opengl sdl svga X xv"
 
 RDEPEND="sys-libs/zlib
@@ -75,7 +75,7 @@ src_unpack() {
 	if use ppc ; then
 		sed -i \
 			-e '/LD.*--relax/s:^# ::' \
-			|| die "sed Makefile (ppc/LD) failed"
+			Makefile || die "sed Makefile (ppc/LD) failed"
 	fi
 
 	toggle_feature sdl JOY_SDL

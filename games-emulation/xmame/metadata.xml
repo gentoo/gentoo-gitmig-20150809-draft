@@ -4,7 +4,6 @@
 <herd>games</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 Mame is an arcade machine emulator. Started in 1997 by Nicola Salmoria, mame started out as a 
