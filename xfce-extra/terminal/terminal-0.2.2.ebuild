@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.0.ebuild,v 1.3 2005/01/02 17:39:27 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.2.ebuild,v 1.1 2005/01/02 17:39:27 bcowan Exp $
 
 MY_P="${PN/t/T}-${PV}"
 S=${WORKDIR}/${MY_P}
