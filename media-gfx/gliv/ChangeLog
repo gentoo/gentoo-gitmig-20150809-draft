@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.10 2003/08/24 09:34:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.11 2003/11/25 23:06:28 mr_bones_ Exp $
+
+*gliv-1.8 (25 Nov 2003)
+
+  25 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> gliv-1.8.ebuild:
+  version bump
 
 *gliv-1.7.1 (24 Aug 2003)
 
