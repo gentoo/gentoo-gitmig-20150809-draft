@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/python/python-2.0.ebuild,v 1.1 2001/01/11 23:19:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/python/python-2.0.ebuild,v 1.2 2001/01/12 01:09:01 drobbins Exp $
 
 P=spython-1.5.2      
 S=${WORKDIR}/Python-2.0
@@ -43,6 +43,11 @@ src_unpack() {
    mv md5.h ../md5_2.h
    sed -e 's:"md5.h":"md5_2.h":' md5.c > ../md5_2.c
    sed -e 's:"md5.h":"md5_2.h":' fchksum.c > ../fchksum.c
+
+	#for some reason, python 2.0 can't find /usr/lib/python2.0 without this fix to the source code.
+	cd ${S}/Python
+	cp pythonrun.c pythonrun.c.orig
+	sed -e 's:static char \*default_home = NULL:static char \*default_home = "/usr":' pythonrun.c.orig > pythonrun.c
 }
 
 
