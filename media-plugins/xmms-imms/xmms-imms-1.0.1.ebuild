@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.1.ebuild,v 1.6 2004/06/24 23:40:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.1.ebuild,v 1.7 2004/06/28 09:11:01 eradicator Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-makefile.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	WANT_AUTOCONF=2.5
 	autoheader

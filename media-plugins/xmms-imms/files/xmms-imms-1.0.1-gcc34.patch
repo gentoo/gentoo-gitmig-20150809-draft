@@ -1,0 +1,50 @@
+diff -Naur imms-1.0.1.orig/immstool.cc imms-1.0.1/immstool.cc
+--- imms-1.0.1.orig/immstool.cc	2004-02-25 12:53:33.000000000 -0800
++++ imms-1.0.1/immstool.cc	2004-06-28 02:03:18.703330999 -0700
+@@ -4,6 +4,7 @@
+ #include <list>
+ #include <utility>
+ 
++#include <math.h>
+ #include <assert.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+diff -Naur imms-1.0.1.orig/strmanip.h imms-1.0.1/strmanip.h
+--- imms-1.0.1.orig/strmanip.h	2004-02-25 12:53:33.000000000 -0800
++++ imms-1.0.1/strmanip.h	2004-06-28 02:04:14.096265724 -0700
+@@ -25,7 +25,7 @@
+     ostringstream str;
+     str << i;
+     return str.str();
+-};
++}
+ 
+ // Double up single quotes to escape them sqlite style
+ inline string escape_string(const string &in)
+@@ -57,7 +57,7 @@
+     if (hours)
+         s << hours << "h";
+     return s.str();
+-};               
++}               
+ 
+ inline string string_tolower(string s)
+ {
+@@ -65,7 +65,7 @@
+        *i = tolower(*i);
+ 
+     return s;
+-};
++}
+ 
+ inline string string_brfilter(string s)
+ {
+@@ -90,7 +90,7 @@
+         }
+     }
+     return news;
+-};            
++}
+ 
+ string string_normalize(string s);
+ string title_filter(const string &title);
