@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/psemu-spunull
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-spunull/ChangeLog,v 1.1 2003/08/14 06:29:44 vapier Exp $
+
+*psemu-spunull-1.0 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
