@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.9 2002/05/03 00:54:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.10 2002/05/17 15:42:30 prez Exp $
+
+*gcc-3.1 (17 May 2002)
+
+  17 May 2002; Preston Elder <prez@gentoo.org> gcc-3.1 :
+
+  Added the 3.1 ebuild.
 
 *gcc-3.0.4-r6 (2 May 2002)
 

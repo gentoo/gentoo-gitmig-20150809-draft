@@ -767,3 +767,7 @@ app-editors/gtk-xemacs
 # g2boojum@gentoo.org 14 May 2002
 # courier needs to have .maildir stuff fixed
 net-mail/courier
+
+# prez@gentoo.org 17 May 2002
+# needs testing
+sys-devel/gcc-3.1
