@@ -1,0 +1,85 @@
+--- flow/gsl/configure.in.in	2002-07-25 16:44:55.000000000 +0300
++++ flow/gsl/configure.in.in	2003-05-08 21:23:54.000000000 +0300
+@@ -40,23 +40,34 @@
+ 
+ AC_DEFUN(AC_GSL_REQUIREMENTS,
+ [
++
+     dnl === Ogg/Vorbis check ===
+-    ov_headers=0
+-    AC_CHECK_LIB(vorbisfile, ov_read_float,
+-      [AC_CHECK_HEADER(ogg/ogg.h, ov_headers=`expr $ov_headers + 1`)]
+-      [AC_CHECK_HEADER(vorbis/vorbisfile.h, ov_headers=`expr $ov_headers + 1`)]
+-      [AC_CHECK_HEADER(vorbis/vorbisenc.h, ov_headers=`expr $ov_headers + 1`)]
+-      ,
+-      ov_headers=0, -lvorbisenc -lvorbis -logg)
+-    if test $ov_headers = 3 ; then
+-      GSL_LIBS="$GSL_LIBS -lvorbisfile -lvorbisenc -lvorbis -logg"
+-	  GSL_HAVE_OGGVORBIS=1
++    AC_ARG_ENABLE(vorbis,
++    [  --disable-arts-vorbis       disable arts Ogg Vorbis support],
++    [arts_want_vorbis="$enableval"],[arts_want_vorbis="yes"])
++    
++    if test "$arts_want_vorbis" = "yes"; then
++	ov_headers=0
++        AC_CHECK_LIB(vorbisfile, ov_read_float,
++          [AC_CHECK_HEADER(ogg/ogg.h, ov_headers=`expr $ov_headers + 1`)]
++          [AC_CHECK_HEADER(vorbis/vorbisfile.h, ov_headers=`expr $ov_headers + 1`)]
++          [AC_CHECK_HEADER(vorbis/vorbisenc.h, ov_headers=`expr $ov_headers + 1`)]
++          ,
++          ov_headers=0, -lvorbisenc -lvorbis -logg)
++        if test $ov_headers = 3 ; then
++          GSL_LIBS="$GSL_LIBS -lvorbisfile -lvorbisenc -lvorbis -logg"
++          GSL_HAVE_OGGVORBIS=1
++        else
++          GSL_HAVE_OGGVORBIS=0
++          dnl AC_MSG_WARN([failed to detect Ogg/Vorbis library (>=1.0rc3) or headers])
++        fi
++	dnl AC_DEFINE(GSL_HAVE_OGGVORBIS,1,[Define if you want Ogg Vorbis support unconditionally])	
+     else
+-	  GSL_HAVE_OGGVORBIS=0
+-	  dnl AC_MSG_WARN([failed to detect Ogg/Vorbis library (>=1.0rc3) or headers])
++	GSL_HAVE_OGGVORBIS=0
+     fi
+     AC_SUBST(GSL_HAVE_OGGVORBIS)
+ 
++
+     dnl check for ov_read_float parameter count (differs in 1.0 vs. rc3)
+     if test $GSL_HAVE_OGGVORBIS = 1; then
+       AC_MSG_CHECKING([for ov_read_float() from rc3])
+@@ -75,17 +86,25 @@
+     fi
+ 
+     dnl === libmad MPEG decoder check ===
+-    mad_detect=0
+-    AC_CHECK_LIB(mad, mad_synth_frame,
+-      [AC_CHECK_HEADER(mad.h, mad_detect=1)]
+-      ,
+-      mad_detect=0, -lmad)
+-    if test $mad_detect = 1 ; then
+-      GSL_LIBS="$GSL_LIBS -lmad"
+-      GSL_HAVE_LIBMAD=1
++    AC_ARG_ENABLE(libmad,
++    [  --disable-libmad       disable arts MAD mp3 decoder support],
++    [arts_want_libmad="$enableval"],[arts_want_libmad="yes"])
++    
++    if test "$arts_want_libmad" = "yes"; then
++        mad_detect=0
++        AC_CHECK_LIB(mad, mad_synth_frame,
++          [AC_CHECK_HEADER(mad.h, mad_detect=1)]
++          ,
++          mad_detect=0, -lmad)
++        if test $mad_detect = 1 ; then
++          GSL_LIBS="$GSL_LIBS -lmad"
++          GSL_HAVE_LIBMAD=1
++        else
++          dnl AC_MSG_WARN([failed to detect libmad (MPEG I-III audio decoder) or headers])
++          GSL_HAVE_LIBMAD=0
++        fi
+     else
+-      dnl AC_MSG_WARN([failed to detect libmad (MPEG I-III audio decoder) or headers])
+-      GSL_HAVE_LIBMAD=0
++	GSL_HAVE_LIBMAD=0
+     fi
+     AC_SUBST(GSL_HAVE_LIBMAD)
+ 
