@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.6 2003/11/24 04:56:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.7 2003/11/24 22:24:15 vapier Exp $
 
 MY_P=${P/\./-}
 DESCRIPTION="MIDI and audio sequencer and notation editor."
@@ -11,8 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/gcc
-	>=kde-base/kdelibs-3.0
+DEPEND=">=kde-base/kdelibs-3.0
 	kde-base/kdemultimedia
 	>=x11-libs/qt-3
 	virtual/alsa
