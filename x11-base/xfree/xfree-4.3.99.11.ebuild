@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.1 2003/08/30 21:30:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.2 2003/09/02 10:31:31 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -479,7 +479,7 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
-	FAST=1 emake World || die
+	FAST=1 emake World WORLDOPTS=  || die
 
 	if use nls
 	then
