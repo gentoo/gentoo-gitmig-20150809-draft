@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.4 2005/02/01 16:56:36 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.5 2005/02/04 13:55:18 hollow Exp $
 
 inherit eutils gnuconfig
 
@@ -175,8 +175,8 @@ src_install () {
 	done
 
 	# symlink the default mpm
-	for i in prefork worker metux peruser threadpool leader; do
-		if [ -x /usr/sbin/apache2.${i} ]; then
+	for i in prefork worker metuxmpm peruser threadpool leader; do
+	if [ -x ${D}/usr/sbin/apache2.${i} ]; then
 			dosym /usr/sbin/apache2.${i} /usr/sbin/apache2
 			break
 		fi
