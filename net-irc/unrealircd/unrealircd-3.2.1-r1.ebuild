@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1-r1.ebuild,v 1.3 2004/08/14 20:43:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1-r1.ebuild,v 1.4 2004/08/15 15:57:50 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -36,6 +36,12 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	use hub  && myconf="${myconf} --enable-hub"
+	use ipv6 && myconf="${myconf} --enable-inet6"
+	use zlib && myconf="${myconf} --enable-ziplinks"
+	use ssl  && myconf="${myconf} --enable-ssl"
+
 	econf \
 		--with-listen=5 \
 		--with-dpath=${D}/etc/unrealircd \
@@ -48,10 +54,7 @@ src_compile() {
 		--with-fd-setsize=1024 \
 		--enable-dynamic-linking \
 		--enable-prefixaq \
-		$(use_enable zlib ziplinks) \
-		$(use_enable ssl) \
-		$(use_enable hub) \
-		$(use_enable ipv6 inet6) \
+		${myconf} \
 		|| die "econf failed"
 
 	sed -i \
@@ -74,7 +77,7 @@ src_install() {
 	dosym /var/lib/unrealircd /etc/unrealircd/tmp
 
 	insinto /etc/unrealircd
-	doins badwords.*.conf help.conf spamfilter.conf
+	doins badwords.*.conf help.conf spamfilter.conf dccallow.conf
 	newins doc/example.conf unrealircd.conf
 
 	use ssl \
