@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.87 2005/01/17 21:20:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.88 2005/01/18 19:13:06 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -290,6 +290,7 @@ kde-base/kdepim kde-base/knotes
 kde-base/kdepim kde-base/kode
 kde-base/kdepim kde-base/konsolekalendar
 kde-base/kdepim kde-base/kontact
+kde-base/kdepim kde-base/kontact-specialdates
 kde-base/kdepim kde-base/korganizer
 kde-base/kdepim kde-base/korn
 kde-base/kdepim kde-base/kpilot
@@ -431,7 +432,6 @@ deprange() {
 	echo -n " )"
 }
 deprange-list() {
-
 	# Assign, parse params
 	local MINVER=$1; shift
 	local MAXVER=$1; shift
