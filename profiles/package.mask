@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (02 Dec 2002)
+# portage-2.0.45 out for testing. Bug Fixes+.
+=sys-apps/portage-2.0.45
+
 # <strider@gentoo.org> (02 Dec 2002)
 # ibm-jdk-1.4.0 causes problems with other
 # java packages, so masking it.
