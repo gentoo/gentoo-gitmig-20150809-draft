@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.26 2005/04/03 11:03:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.27 2005/04/04 15:00:14 axxo Exp $
+
+  04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> jabref-1.6.ebuild,
+  jabref-1.7.ebuild:
+  change dep to reflect commons-httpclient slotting
 
   03 Apr 2005; Thomas Matthijs <axxo@gentoo.org> jabref-1.7.ebuild:
   don't make a stupid 'super' jar

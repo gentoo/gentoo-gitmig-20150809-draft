@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.5 2005/03/31 02:46:44 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.6.ebuild,v 1.6 2005/04/04 15:00:14 axxo Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/antlr-2.7.3
 	=dev-java/jgoodies-looks-1.2*
 	>=dev-java/commons-logging-1.0.4
-	>=dev-java/commons-httpclient-2"
+	=dev-java/commons-httpclient-2*"
 
 src_unpack() {
 	unpack ${A}
