@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r3.ebuild,v 1.3 2003/12/23 12:58:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.1 2003/12/23 12:58:41 lanius Exp $
 
 IUSE="X"
 VBOX_V=0.1.9
@@ -25,7 +25,10 @@ RDEPEND=">=sys-apps/portage-2.0.47-r10
 		dev-lang/tcl
 	)"
 
-DEPEND="${RDEPEND} virtual/linux-sources"
+DEPEND="${RDEPEND}
+	virtual/linux-sources
+	sys-devel/libtool
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
@@ -37,7 +40,7 @@ src_unpack() {
 	cd ${S}
 
 	# Patch .config file to suit our needs
-	cat ${FILESDIR}/${MY_PVR}/config | { \
+	cat ${FILESDIR}/${PV}-r4/config | { \
 		if use X >/dev/null; then
 			cat
 		else
@@ -58,14 +61,14 @@ src_unpack() {
 	# Patch in order to make generic config for countries which are not known to isdnlog source
 	epatch ${FILESDIR}/${MY_PVR}/gentoo.patch
 
-	#disabling device creation the easy way:
+	# disabling device creation the easy way:
 	echo "#!/bin/bash" > scripts/makedev.sh
 	echo "true" >> scripts/makedev.sh
 
 	epatch ${FILESDIR}/gcc33-multiline.patch
 
-	#disable vbox
-	sed -i -e "s:CONFIG_VBOX=y::" .config
+	(cd capi20; libtoolize --force)
+	(cd capiinfo; ln -s /usr/share/automake-1.6/depcomp)
 }
 
 src_compile() {
@@ -106,7 +109,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Please edit:"
 	einfo
