@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.3 2003/09/06 23:56:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.4 2003/11/18 04:53:03 brandy Exp $
 
 DESCRIPTION="Giram (Giram is really a modeller). A 3d modeller for POV-ray"
 HOMEPAGE="http://www.giram.org"
@@ -19,6 +19,14 @@ DEPEND="${RDEPEND}
 	"
 
 S=${WORKDIR}/${P}
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}/povfront
+	sed -i -e "s:strlen (g_config_file_to_parse) == 0:g_config_file_to_parse == NULL:" povfront.c
+
+}
 
 src_compile() {
 	./configure \
