@@ -2,5 +2,7 @@ MD5 3972e8fcb8a4d80b1758d4d11b5220da ChangeLog 784
 MD5 1c052e00eb39506aa1b54ec02045995a metadata.xml 504
 MD5 468c3ca0beea5473b5c69dcc83e0a4ba ppc-development-sources-2.6.0_beta9-r3.ebuild 2971
 MD5 a82cac4830e249222b9d6aa506a6117e ppc-development-sources-2.6.0_beta9-r4.ebuild 2971
+MD5 a82cac4830e249222b9d6aa506a6117e ppc-development-sources-2.6.0_beta9-r5.ebuild 2971
 MD5 82c462ec939a497add3a635d399298d9 files/digest-ppc-development-sources-2.6.0_beta9-r3 146
 MD5 23355c925f3ea8c119c6dda82d6c8a68 files/digest-ppc-development-sources-2.6.0_beta9-r4 146
+MD5 6529a7632804727ce1cd9e415d15f446 files/digest-ppc-development-sources-2.6.0_beta9-r5 146
