@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.10 2002/07/03 15:44:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.11 2002/07/13 19:24:18 raker Exp $
+
+*WindowMaker-0.80.1-r2 (13 Jul 2002)
+
+  13 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  WindowMaker-0.80.1-r2.ebuild files/digest-WindowMaker-0.80.1-r1:
+
+  Changed WPrefs.app utility to install in /usr/share/GNUstep instead of
+  /usr/GNUstep.  Closes bug #4893.  This ebuild also does not require
+  gnustep-env.
 
 *WindowMaker-0.80.1-r1 (03 Jul 2002)
 

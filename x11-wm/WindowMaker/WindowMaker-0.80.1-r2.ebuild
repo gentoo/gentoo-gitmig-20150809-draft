@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.3 2002/07/13 19:24:18 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -20,9 +20,6 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-
-#NOTE: the default menu has the wrong path for the WMPrefs utility.  
-# Needs fixing.
 
 src_unpack() {
 
@@ -81,7 +78,7 @@ src_compile() {
 		--enable-newstyle \
 		--enable-superfluous \
 		--enable-usermenu \
-		--with-appspath=/usr/GNUstep \
+		--with-appspath=/usr/share/GNUstep \
 		--with-pixmapdir=/usr/share/pixmaps \
 		${myconf} || die
 	
@@ -114,9 +111,9 @@ src_install() {
 	     mandir=${D}/usr/share/man \
 	     infodir=${D}/usr/share/info \
 	     sysconfdir=${D}/etc/X11 \
-	     wprefsdir=${D}/usr/GNUstep/WPrefs.app \
-	     wpdatadir=${D}/usr/GNUstep/WPrefs.app \
-	     wpexecbindir=${D}/usr/GNUstep/WPrefs.app \
+	     wprefsdir=${D}/usr/share/GNUstep/WPrefs.app \
+	     wpdatadir=${D}/usr/share/GNUstep/WPrefs.app \
+	     wpexecbindir=${D}/usr/share/GNUstep/WPrefs.app \
 	     install || die
 
 	cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
