@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/luabind
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/ChangeLog,v 1.4 2004/04/08 01:49:10 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/ChangeLog,v 1.5 2004/04/17 03:19:12 weeve Exp $
+
+*luabind-6-r1 (16 Apr 2004)
+
+  16 Apr 2004; Jason Wever <weeve@gentoo.org> luabind-6-r1.ebuild:
+  Added ~sparc keyword.
 
   07 Apr 2004; Ryan Phillips <rphillips@gentoo.org> luabind-6.ebuild:
   There is a make process for this project.
