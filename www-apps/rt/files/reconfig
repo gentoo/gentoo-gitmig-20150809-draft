@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ $1 = "start" -o $1 = "install" ]; then
+	# fix location
+	sed -i "s|${MY_HOSTROOTDIR}|${VHOST_ROOT}|g" /usr/bin/standalone_httpd /usr/bin/rt-crontool /usr/bin/webmux.pl /usr/lib/RT.pm
+	sed -i "s|${MY_HOSTROOTDIR}|\/usr|" /usr/bin/mason_handler.scgi
+	sed -i "s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|" /usr/lib/RT.pm /usr/bin/rt-mailgate
+
+	# fix permissions
+	chown -R  ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} /var/rt
+
+	# check for upgrades
+	cd ${MY_HOSTROOTDIR}/rt-config/upgrade
+	for a in *; do
+		if test ${a} '>' ${PV}; then
+			echo "It looks like you need to upgrade your database."
+			echo "To do that, execute"
+			echo "cd ${MY_HOSTROOTDIR}/rt-config/upgrade"
+			echo "rt-setup-database --action schema --datadir ${a}"
+			echo "DO NOT DO THIS without reading /usr/share/doc/${P}/README.gz first"
+			break
+		fi
+	done
+
+else
+	echo $1
+fi

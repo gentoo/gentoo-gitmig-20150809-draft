@@ -1,0 +1,39 @@
+
+***********************************************************
+You now need to edit your local config files,
+which will be located in ${VHOST_ROOT}/rt-config/RT_Config.pm and RT_SiteConfig.pm
+
+BE SURE TO READ /usr/share/doc/${P}/README.gz , especially if
+you'd prefer to use an alias, or if you want to setup RT's e-mail gateway
+				
+RT documentation can be found at http://www.bestpractical.com/rt/docs.html
+If you need more help, consider searching the mailing list (Google site:lists.fsck.com )
+
+***********************************************************
+1. If this is a new install, you now need to initialize RT's database.
+
+For MySQL:
+rt-setup-database --action init --dba root --prompt-for-dba-password
+For PostgreSQL:
+rt-setup-database --action init --dba postgres --prompt-for-dba-password
+
+For this to work, PostgreSQL needs to listen on TCP 5432:
+In your postgresql.conf, set tcpip_socket = true, port = 5432
+
+***********************************************************
+2. Read the README to configure your webserver for RT. For the impatient:
+put this in ${MY_INSTALLDIR}/.htaccess
+AddDefaultCharset UTF-8
+
+PerlModule Apache::DBI
+PerlRequire /usr/bin/webmux.pl
+
+SetHandler perl-script
+PerlHandler RT::Mason
+
+***********************************************************
+3. Restart your webserver (e.g., for Apache: /etc/init.d/apache restart )
+
+***********************************************************
+4. Note that the default login is 'root', and the password is 'password'. It is
+a Good Idea(TM) to change the defaults to something more secure.
