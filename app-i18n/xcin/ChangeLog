@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xcin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.5 2003/05/23 22:03:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.6 2003/11/04 00:27:11 liquidx Exp $
+
+  04 Nov 2003; Alastair Tse <liquidx@gentoo.org> xcin-2.5.3_pre2.ebuild,
+  files/xcin-2.5.3_pre2-db3.patch:
+  added db-3 patch from Palatis <palatis@gentoo.org.tw> (#32655)
 
   23 May 2003; Alastair Tse <liquidx@gentoo.org> files/gentoo-xcinrc:
   fix wrong xcin path in xcinrc
