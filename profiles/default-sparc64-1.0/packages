@@ -36,7 +36,7 @@
 *>=sys-apps/baselayout-1.7.3
 *>=sys-apps/portage-1.8.9_pre25
 *~sys-devel/binutils-2.11.92.0.12.3
-*=sys-devel/gcc-2.95.3-r5
+*=sys-devel/gcc-2.95.3-r7
 *~sys-libs/glibc-2.2.5
 ~sys-kernel/linux-headers-2.4.18
 >=sys-apps/sysklogd-1.4.1
@@ -93,8 +93,7 @@
 *sys-apps/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
 #sys-apps/tcp-wrappers
-#texinfo is now provided by gcc
-#*sys-apps/texinfo
+*>=sys-apps/texinfo-4.2-r1
 *sys-apps/textutils
 *sys-apps/util-linux
 *sys-apps/which
@@ -169,7 +168,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.12 2002/06/24 01:35:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.13 2002/07/01 11:30:42 blauwers Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
