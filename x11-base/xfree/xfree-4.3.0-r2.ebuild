@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.45 2003/10/05 08:45:11 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.46 2003/10/14 02:09:48 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -47,7 +47,7 @@ USE_SNAPSHOT="no"
 PATCH_VER="1.1.8"
 FT2_VER="2.1.3"
 XCUR_VER="0.2"
-SISDRV_VER="180403-1"
+SISDRV_VER="131003-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
 
@@ -59,7 +59,7 @@ SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+X_PATCHES="http://dev.gentoo.org/~spyderous/xfree/patchsets/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
