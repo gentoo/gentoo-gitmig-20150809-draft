@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_rc1.ebuild,v 1.1 2003/07/06 08:38:40 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_rc1.ebuild,v 1.2 2003/07/08 17:28:21 raker Exp $
 
 inherit eutils libtool
 
@@ -21,7 +21,9 @@ RDEPEND="gnome-base/gnome-libs
 	media-gfx/imagemagick
 	media-libs/gdk-pixbuf
 	dev-libs/libxml2
-	sys-apps/eject"
+	sys-apps/eject
+	>=sys-devel/gcc-3"
+# As of 0.9.0-RC1 gcc3 is required
 	
 DEPEND="${RDEPEND}
 	dev-lang/nasm
