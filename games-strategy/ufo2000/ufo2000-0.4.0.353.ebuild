@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.4.0.353.ebuild,v 1.3 2004/06/28 21:46:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.4.0.353.ebuild,v 1.4 2004/06/29 10:08:27 mr_bones_ Exp $
 
 inherit games
 
@@ -29,13 +29,13 @@ src_unpack() {
 
 	cd "${S}/XCOMDEMO"
 	unpack xcomdemo.zip
-	unzip -LL XCOM.EXE -d ..
+	unzip -qLL XCOM.EXE -d ..
 	rm XCOM.EXE
 	mv ../xcomdemo/* "${S}/XCOMDEMO/"
 
 	cd "${S}/TFTDDEMO"
 	unpack terror.zip
-	unzip -LL TFTD.ZIP
+	unzip -qLL TFTD.ZIP
 	rm TFTD.ZIP
 }
 
