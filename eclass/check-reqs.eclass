@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.1 2004/11/19 20:57:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.2 2004/11/21 15:11:50 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -8,7 +8,7 @@
 # build requirements in terms of memory or disc space. It provides a function
 # which should usually be called during pkg_setup().
 #
-# From a user perspective, the variable BUILDREQS_ACTION can be set to:
+# From a user perspective, the variable CHECKREQS_ACTION can be set to:
 #    * "warn" (default), which will display a warning and wait for 15s
 #    * "error", which will make the ebuild error out
 #    * "ignore", which will not take any action
@@ -24,27 +24,27 @@
 #     # values in MBytes
 #
 #     # need this much memory (does *not* check swap)
-#     BUILDREQS_MEMORY="256"
+#     CHECKREQS_MEMORY="256"
 #
 #     # need this much temporary build space
-#     BUILDREQS_DISK_BUILD="2048"
+#     CHECKREQS_DISK_BUILD="2048"
 #
 #     # install will need this much space in /usr
-#     BUILDREQS_DISK_USR="1024"
+#     CHECKREQS_DISK_USR="1024"
 #
 #     # install will need this much space in /var
-#     BUILDREQS_DISK_VAR="1024"
+#     CHECKREQS_DISK_VAR="1024"
 #
 #     # go!
 #     check_reqs
 # }
 #
-# You should *not* override the user's BUILDREQS_ACTION setting, nor should you
+# You should *not* override the user's CHECKREQS_ACTION setting, nor should you
 # attempt to provide a value if it is unset. Note that the environment variables
 # are used rather than parameters for a few reasons:
 #   * easier to do if use blah ; then things
 #   * we might add in additional requirements things later
-# If you don't specify a value for, say, BUILDREQS_MEMORY, then the test is not
+# If you don't specify a value for, say, CHECKREQS_MEMORY, then the test is not
 # carried out.
 #
 # These checks should probably mostly work on non-Linux, and they should
@@ -58,30 +58,30 @@ INHERITED="$INHERITED $ECLASS"
 check_reqs() {
 	[ -n "$1" ] && die "Usage: check_reqs"
 
-	export BUILDREQS_NEED_SLEEP="" BUILDREQS_NEED_DIE=""
-	if [ "$BUILDREQS_ACTION" != "ignore" ] ; then
-		[ -n "$BUILDREQS_MEMORY" ] && check_build_memory
-		[ -n "$BUILDREQS_DISK_BUILD" ] && check_build_disk \
-			"${PORTAGE_TMPDIR}" "\${PORTAGE_TMPDIR}" "${BUILDREQS_DISK_BUILD}"
-		[ -n "$BUILDREQS_DISK_USR" ] && check_build_disk \
-			"${ROOT}/usr"  "\${ROOT}/usr" "${BUILDREQS_DISK_USR}"
-		[ -n "$BUILDREQS_DISK_VAR" ] && check_build_disk \
-			"${ROOT}/var"  "\${ROOT}/var" "${BUILDREQS_DISK_VAR}"
+	export CHECKREQS_NEED_SLEEP="" CHECKREQS_NEED_DIE=""
+	if [ "$CHECKREQS_ACTION" != "ignore" ] ; then
+		[ -n "$CHECKREQS_MEMORY" ] && check_build_memory
+		[ -n "$CHECKREQS_DISK_BUILD" ] && check_build_disk \
+			"${PORTAGE_TMPDIR}" "\${PORTAGE_TMPDIR}" "${CHECKREQS_DISK_BUILD}"
+		[ -n "$CHECKREQS_DISK_USR" ] && check_build_disk \
+			"${ROOT}/usr"  "\${ROOT}/usr" "${CHECKREQS_DISK_USR}"
+		[ -n "$CHECKREQS_DISK_VAR" ] && check_build_disk \
+			"${ROOT}/var"  "\${ROOT}/var" "${CHECKREQS_DISK_VAR}"
 	fi
 
-	if [ -n "${BUILDREQS_NEED_SLEEP}" ] ; then
+	if [ -n "${CHECKREQS_NEED_SLEEP}" ] ; then
 		echo
 		ewarn "Bad things may happen! You may abort the build by pressing ctrl+c in"
 		ewarn "the next 15 seconds."
 		ewarn " "
 		einfo "To make this kind of warning a fatal error, add a line to /etc/make.conf"
-		einfo "setting BUILDREQS_ACTION=\"error\". To skip build requirements checking,"
-		einfo "set BUILDREQS_ACTION=\"ignore\"."
+		einfo "setting CHECKREQS_ACTION=\"error\". To skip build requirements checking,"
+		einfo "set CHECKREQS_ACTION=\"ignore\"."
 		epause 15
 	fi
 
-	if [ -n "${BUILDREQS_NEED_DIE}" ] ; then
-		eerror "Bailing out as specified by BUILDREQS_ACTION"
+	if [ -n "${CHECKREQS_NEED_DIE}" ] ; then
+		eerror "Bailing out as specified by CHECKREQS_ACTION"
 		die "Build requirements not met"
 	fi
 }
@@ -89,7 +89,7 @@ check_reqs() {
 # internal use only!
 check_build_memory() {
 	[ -n "$1" ] && die "Usage: check_build_memory"
-	check_build_msg_begin "${BUILDREQS_MEMORY}" "MBytes" "RAM"
+	check_build_msg_begin "${CHECKREQS_MEMORY}" "MBytes" "RAM"
 	if [ -r /proc/meminfo ] ; then
 		actual_memory=$(sed -n -e '/MemTotal:/s/^[^:]*: *\([0-9]\+\) kB/\1/p' \
 			/proc/meminfo)
@@ -99,9 +99,9 @@ check_build_memory() {
 			actual_memory=$(echo $actual_memory | sed -e 's/^[^:=]*[:=]//' )
 	fi
 	if [ -n "${actual_memory}" ] ; then
-		if [ ${actual_memory} -lt $((1024 * ${BUILDREQS_MEMORY})) ] ; then
+		if [ ${actual_memory} -lt $((1024 * ${CHECKREQS_MEMORY})) ] ; then
 			eend 1
-			check_build_msg_ick "${BUILDREQS_MEMORY}" "MBytes" "RAM"
+			check_build_msg_ick "${CHECKREQS_MEMORY}" "MBytes" "RAM"
 		else
 			eend 0
 		fi
@@ -144,14 +144,14 @@ check_build_msg_skip() {
 
 # internal use only!
 check_build_msg_ick() {
-	if [ "${BUILDREQS_ACTION}" == "error" ] ; then
+	if [ "${CHECKREQS_ACTION}" == "error" ] ; then
 		eerror "Don't have at least ${1}${2} ${3}"
 		echo
-		export BUILDREQS_NEED_DIE="yes"
+		export CHECKREQS_NEED_DIE="yes"
 	else
 		ewarn "Don't have at least ${1}${2} ${3}"
 		echo
-		export BUILDREQS_NEED_SLEEP="yes"
+		export CHECKREQS_NEED_SLEEP="yes"
 	fi
 }
 
