@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.2 2003/10/20 19:12:16 vapier Exp $
 
 inherit games
 
@@ -71,6 +71,8 @@ pkg_postinst() {
 	touch ${dir}/hltv.cfg
 	touch ${dir}/{dmc,ricochet,tfc,valve}/{server.cfg,liblist.gam,mapcycle.txt,motd.txt}
 
+	games_pkg_postinst
+
 	einfo "To start the dedicated server, just run"
 	einfo "/etc/init.d/hlds start"
 	echo
@@ -80,6 +82,4 @@ pkg_postinst() {
 	echo
 	einfo "To configure your server, just edit the file:"
 	einfo "${GAMES_PREFIX_OPT}/halflife/valve/server.cfg"
-
-	games_pkg_postinst
 }
