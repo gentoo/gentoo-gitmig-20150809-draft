@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.42 2003/09/02 08:44:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.43 2003/09/06 17:55:23 pappy Exp $
+
+  06 Sep 2003; Alexander Gabert <pappy@gentoo.org> db-3.2.9-r7.ebuild,
+  db-3.2.9-r9.ebuild, db-4.0.14-r2.ebuild:
+  added hardened-gcc exclude flags for proper compilation
 
 *db-3.2.9-r9 (02 Sep 2003)
 
