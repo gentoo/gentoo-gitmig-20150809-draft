@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/preview-latex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/ChangeLog,v 1.1 2004/02/01 08:05:44 usata Exp $
+
+*preview-latex-0.7.8 (01 Feb 2004)
+
+  01 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  preview-latex-0.7.8.ebuild:
+  Initial import. Ebuild submitted by Felix Kurth <felix@fkurth.de>
+  in bug #30692
+
