@@ -1,7 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r7.ebuild,v 1.3 2002/03/19 13:43:54 gbevin Exp $
+# Maintainer Thilo Bangert <bangert@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r7.ebuild,v 1.4 2002/05/12 00:07:33 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -13,7 +14,7 @@ HOMEPAGE="http://www.qmail.org/
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
          http://www.qmail.org/big-todo.103.patch
          http://www.qmail.org/big-concurrency.patch
-         http://www.flounder.net/qmail/qmail-dns-patch"
+         http://www.ckdhr.com/ckd/qmail-103.patch"
 
 DEPEND="virtual/glibc
 	sys-apps/groff
@@ -38,7 +39,7 @@ src_unpack() {
     cd ${S}
 
     echo "Applying dns patch..."
-    patch < ${DISTDIR}/qmail-dns-patch
+    patch < ${DISTDIR}/qmail-103.patch
 
     echo "Applying big-todo patch..."
     patch < ${DISTDIR}/big-todo.103.patch

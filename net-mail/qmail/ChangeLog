@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.3 2002/03/19 13:43:54 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.4 2002/05/12 00:07:33 bangert Exp $
+
+  12 May 2002; Thilo Bangert <bangert@gentoo.org> qmail-1.03-r7.ebuild :
+  fixed location for dns patch. added new digest to reflect the change
 
   19 Mar 2002; G.Bevin <gbevin@gentoo.org> qmail-1.03-r7.ebuild :
   Added net-mail/dot-forward to RDEPEND
