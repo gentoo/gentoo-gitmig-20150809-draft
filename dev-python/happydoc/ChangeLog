@@ -1,11 +1,15 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.1 2002/05/15 02:53:21 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.2 2002/07/28 02:51:32 george Exp $
 
 # Author Gontran Zepeda <gontran@gontran.net>
 
 *happydoc-2.0.1 (14 May 2002)
 
+  26 Jul 2002; George Shapovalov <george@gentoo.org> happydoc-2.0.1.ebuild :
+  
+  added KEYWORDS,SLOT,LICENSE,
+  
   14 May 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog happydoc-2.0.1.ebuild :
   
   Thanks to Gontran Zepeda <gontran at gontran.net> for the original ebuild
