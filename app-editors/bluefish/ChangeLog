@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.20 2003/05/22 18:20:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.21 2003/07/21 10:37:44 raker Exp $
+
+*bluefish-0.10 (21 Jul 2003)
+
+  21 Jul 2003; Nick Hadaway <raker@gentoo.org> bluefish-0.10.ebuild:
+  Got rid of the sed mess.  Changed the install stanza accordingly.
+  Added nls and spell USE variables.
 
   22 May 2003; Jason Wever <weeve@gentoo.org> bluefish-0.9.ebuild:
   Changed ~sparc keyword to sparc.
