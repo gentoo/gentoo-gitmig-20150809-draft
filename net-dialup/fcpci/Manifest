@@ -1,0 +1,6 @@
+MD5 05ab8a8a4ccd30f0aec666a20a46f45e ChangeLog 463
+MD5 fd9dd6d4c4c67dcf936f9b35931b529a fcpci-03.09.10.ebuild 1248
+MD5 b48bc8f2b5f1b4009654b77d4ee8b1cc fcpci-03.10.02.ebuild 1186
+MD5 90cc176e076cf2b4cfd1bf929679fa63 files/digest-fcpci-03.09.10 74
+MD5 a8deb5bd6be2291d0af5ac6be6f35ca8 files/tools.c.diff 556
+MD5 a9248e51d7bf2980d55b7e5872c378f7 files/digest-fcpci-03.10.02 74

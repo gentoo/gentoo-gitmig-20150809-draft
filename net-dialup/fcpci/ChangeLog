@@ -1,7 +1,12 @@
 # ChangeLog for net-dialup/fcpci
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer Alexander Holler <holler@ahsoftware.de>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.2 2003/02/12 07:52:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.3 2003/04/25 21:30:14 mholzer Exp $
+
+*fcpci-03.10.02 (25 Apr 2003)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> fcpci-03.10.02.ebuild:
+  Version bumped. Submitted by Georg Lippold <georg.lippold@gmx.de> in #12348.
 
 *fcpci-03.09.10 (9 Aug 2002)
 
