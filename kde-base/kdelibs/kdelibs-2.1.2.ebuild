@@ -18,6 +18,7 @@ DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	>=media-libs/audiofile-0.1.9
 	>=x11-libs/qt-x11-2.3.0
         >=sys-apps/bzip2-1.0.1
+	>=dev-libs/libpcre-3.4
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
@@ -28,6 +29,7 @@ RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9
          >=media-libs/tiff-3.5.5
          >=sys-apps/bzip2-1.0.1
+	 >=dev-libs/libpcre-3.4
 	 >=x11-libs/qt-x11-2.3.0
          >=kde-base/kde-env-2.1-r1
          app-text/sgml-common

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.3.ebuild,v 1.1 2001/06/21 17:46:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.3.ebuild,v 1.2 2001/06/23 21:34:37 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,7 @@ src_compile() {
       mkdir ${S}/interfaces/IDirectFBVideoProvider/no
       cp /usr/lib/libmpeg3.a ${S}/interfaces/IDirectFBVideoProvider/no
     else
-      myconf="$myconf --without-libmpeg3"
+      myconf="$myconf --disable-libmpeg3"
     fi
     if [ "$DEBUG" ] ; then
       myconf="$myconf --enable-debug"
