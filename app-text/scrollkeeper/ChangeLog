@@ -1,6 +1,9 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.28 2003/11/08 15:31:58 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.29 2003/11/15 02:57:50 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> scrollkeeper-0.3.12.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> scrollkeeper-0.3.12.ebuild:
   added sparc keyword

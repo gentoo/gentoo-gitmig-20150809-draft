@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.42 2003/11/08 15:29:17 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.43 2003/11/15 03:02:34 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> ggv-2.4.0.2.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> ggv-2.4.0.1.ebuild:
   added sparc keyword

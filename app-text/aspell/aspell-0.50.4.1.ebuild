@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.4.1.ebuild,v 1.2 2003/11/01 22:52:24 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.4.1.ebuild,v 1.3 2003/11/15 03:01:26 agriffis Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm -amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm -amd64 ia64"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

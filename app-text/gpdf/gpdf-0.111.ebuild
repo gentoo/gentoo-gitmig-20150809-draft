@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.111.ebuild,v 1.2 2003/10/23 00:49:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.111.ebuild,v 1.3 2003/11/15 03:02:52 agriffis Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc alpha ~sparc ~amd64 ia64"
 
 RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libbonobo-2.2.1
