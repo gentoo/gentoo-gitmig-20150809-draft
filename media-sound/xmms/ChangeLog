@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.126 2004/06/16 03:33:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.127 2004/06/18 19:12:46 eradicator Exp $
+
+*xmms-1.2.10-r5 (18 Jun 2004)
+
+  18 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-1.2.10-r5.ebuild:
+  Allow NULL titles to be passed to xmms_charset_recode_id3(). Closes bug
+  #49273.
 
 *xmms-1.2.10-r4 (15 Jun 2004)
 
