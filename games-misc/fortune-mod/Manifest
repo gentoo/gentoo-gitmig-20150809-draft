@@ -1,5 +1,6 @@
 MD5 d3adb40b7c5f63929f86ed102af1ca66 ChangeLog 1961
 MD5 8893fd591363dfc9457f1faabe49e9d6 fortune-mod-9708-r1.ebuild 1392
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 69ebce3aec1f10dead82c52fd02c1350 files/9708-Makefile.patch 1305
 MD5 53d07a3874dcef229e5e19296a9d8db1 files/9708-ppc-rot.patch 226
 MD5 45891a0eae39a7ec90b6f2433147874f files/digest-fortune-mod-9708-r1 69
