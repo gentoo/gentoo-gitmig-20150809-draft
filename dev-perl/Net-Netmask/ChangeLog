@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.5 2003/02/12 06:21:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.6 2003/06/16 14:02:52 mcummings Exp $
+
+  16 Jun 2003; Michael Cummings <mcummings@gentoo.org> :
+  CPAN version bump; needs testing
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
