@@ -1,4 +1,16 @@
-MD5 f07c96f44706152049c0eba177f7d4b2 ChangeLog 2888
-MD5 fae6aeecbfb43bc998709193e09c3365 bnc-2.9.3.ebuild 873
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18e063437ffc90c42de00476003c3c0a bnc-2.9.3-r1.ebuild 978
+MD5 71e823f931c6b08aa8d4c4c5967058f8 bnc-2.9.3-r2.ebuild 1030
+MD5 fe980cd52190654322cadf345abe6a84 ChangeLog 3180
 MD5 b2fd9f07925d7c1a3f1ed2366d0c74ba metadata.xml 221
-MD5 a6f25e4b520bc1540a80f78bb419d53f files/digest-bnc-2.9.3 59
+MD5 a6f25e4b520bc1540a80f78bb419d53f files/digest-bnc-2.9.3-r1 59
+MD5 a6f25e4b520bc1540a80f78bb419d53f files/digest-bnc-2.9.3-r2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUGL+I1lqEGTUzyQRAt/wAJ48RdmWQXvaK2d8Vzlv6FwRyaUz4ACfSznq
+5z8mV+fBVH/WSEJWrQzZN5c=
+=R6Be
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.22 2005/01/29 04:04:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.23 2005/04/03 21:41:12 swegener Exp $
+
+*bnc-2.9.3-r2 (03 Apr 2005)
+*bnc-2.9.3-r1 (03 Apr 2005)
+
+  03 Apr 2005; Sven Wegener <swegener@gentoo.org> -bnc-2.9.3.ebuild,
+  +bnc-2.9.3-r1.ebuild, +bnc-2.9.3-r2.ebuild:
+  Two revision bumps. One for distributing the fix for bug #87463. And the
+  other one for testing the ssl USE flag.
 
 *bnc-2.9.3 (28 Jan 2005)
 

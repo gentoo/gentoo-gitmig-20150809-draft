@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.3.ebuild,v 1.1 2005/01/29 04:04:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.3-r2.ebuild,v 1.1 2005/04/03 21:41:12 swegener Exp $
 
 inherit eutils
 
@@ -11,22 +11,28 @@ SRC_URI="http://gotbnc.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ppc sparc x86"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+IUSE="ssl"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	sed -i -e s:./mkpasswd:/usr/bin/bncmkpasswd: ${S}/bncsetup || die
+}
+
 src_compile() {
-	econf || die "econf failed"
+	econf $(use_with ssl) || die "econf failed"
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 	mv mkpasswd bncmkpasswd
 }
 
 src_install() {
 	dobin bnc bncchk bncsetup bncmkpasswd || die "dobin failed"
-	dodoc CHANGES README example.conf motd
+	dodoc ChangeLog README example.conf motd
 }
 
 pkg_postinst() {
