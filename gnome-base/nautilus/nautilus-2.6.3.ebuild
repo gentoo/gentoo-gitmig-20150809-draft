@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3.ebuild,v 1.5 2004/08/05 23:18:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3.ebuild,v 1.6 2004/08/08 00:59:28 lv Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A filemanager for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
-KEYWORDS="x86 ~ppc ~alpha sparc hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc ~alpha sparc hppa amd64 ~ia64 ~mips"
 IUSE="oggvorbis cups gstreamer mad"
 # 
 # eel was not updated the last run, return eel to the following the next bump:
