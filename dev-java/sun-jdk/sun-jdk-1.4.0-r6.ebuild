@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r6.ebuild,v 1.1 2002/09/11 16:56:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r6.ebuild,v 1.2 2002/09/27 03:02:52 mkennedy Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -24,7 +24,7 @@ PROVIDE="virtual/jre-1.4
 	
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux GNUZIP Tar shell script\" package format of the SDK) and move it to ${DISTDIR}. Note: You can find archived releases from http://java.sun.com/products/archive/"
+		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}. Note: You can find archived releases from http://java.sun.com/products/archive/"
 	fi
 	tail +336 ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
