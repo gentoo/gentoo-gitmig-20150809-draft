@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.7 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.8 2002/12/11 02:17:28 blauwers Exp $
+
+*freenet-0.5.0.6 (11 Dec 2002)
+
+  10 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
+  Version bump.
 
 *freenet-0.5.0.5 (05 Nov 2002)
 
