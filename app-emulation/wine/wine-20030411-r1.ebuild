@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.5 2003/04/16 09:44:58 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411-r1.ebuild,v 1.1 2003/04/16 14:18:14 mholzer Exp $
 
 inherit eutils base
 
@@ -106,6 +106,8 @@ src_install () {
 	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	rm ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	doman ${D}/usr/lib/${PN}/man/man5/wine.conf.5
+	rm ${D}/usr/lib/${PN}/man/man5/wine.conf.5
 
 	# Remove the executable flag from those libraries.
 	cd ${D}/usr/lib/wine/lib/wine
@@ -119,6 +121,4 @@ pkg_postinst() {
 	einfo "Use /usr/bin/regedit-wine to import registry files into the"
 	einfo "wine registry."
 	einfo ""
-	einfo "If you have further questions, enhancements or patches"
-	einfo "send an email to phoenix@gentoo.org"
 }
