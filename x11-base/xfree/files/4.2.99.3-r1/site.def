@@ -26,7 +26,13 @@
 #define Freetype2LibDir        /usr/lib
 /* #define BuildFreetype2Library  YES */
 #define UseFontconfig          YES
+/* This is currently broken, so we depend on fontconfig, and then
+   just do not install any fontconfig related files ... */
 /* #define HasFontconfig          YES */
+
+/* We PDEPEND on Xft2, and link XFree86 only to the static lib,
+   so that we will not have conflicting files for Xft2 from 
+   x11-base/xfree and x11-libs/xft ... */
 #define SharedLibXft           NO
 #define SharedLibXft1          YES
 

@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.76 2002/12/23 18:12:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.77 2002/12/24 18:44:25 azarah Exp $
+
+  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
+                                                    xfree-4.2.99.3-r1.ebuild :
+
+  Do not let portage strip binaries and libraries, as then it stips the
+  DRI modules, which breaks things.  Change 4.2.99.3-r1 to compile fontconfig,
+  but then we just remove all fontconfig related stuff.  This should fix things
+  for Seemant and others.
 
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild,
                                                     xfree-4.2.99.3-r1.ebuild :

@@ -1,6 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.9 2002/12/23 18:12:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.10 2002/12/24 18:44:25 azarah Exp $
+
+# Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
+# that only we only strip stuff that are safe to strip ...
+DEBUG="yes"
+RESTRICT="nostrip"
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -81,7 +86,6 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${X_PATCHES}
 	${X_DRIVERS}
 	truetype? ( ${MS_FONT_URLS} )"
-#	mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
@@ -92,12 +96,11 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
-	sys-devel/libtool
 	sys-devel/perl
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=x11-base/opengl-update-1.4
-	truetype? ( >=x11-misc/ttmkfdir-2.0
-		 app-arch/cabextract )"
+	>=x11-misc/ttmkfdir-2.0
+	truetype? ( app-arch/cabextract )"
 	
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -105,8 +108,7 @@ RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=media-libs/fontconfig-2.1
-	>=x11-base/opengl-update-1.4
-	truetype? ( >=x11-misc/ttmkfdir-2.0 )"
+	>=x11-base/opengl-update-1.4"
 # Above fontconfig is just to make sure user have a fixed version installed.
 
 PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
@@ -120,18 +122,9 @@ src_unpack() {
 	unpack X${MY_SV}src-{1,2,3}.tgz \
 		fcpackage.${FC2_VER/\./_}.tar.gz \
 		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
-#		freetype-${FT2_VER}.tar.bz2
 
 	# Fix permissions
 	chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
-
-	# Deploy our custom freetype2.  We want it static for stability,
-	# and because some things in Gentoo depends the freetype2 that
-	# is distributed with XFree86.
-#	ebegin "Updating Freetype2"
-#	rm -rf ${S}/extras/freetype2
-#	mv ${WORKDIR}/freetype-${FT2_VER} ${S}/extras/freetype2 || die
-#	eend 0
 
 	# Install the glide3 headers for compiling the tdfx driver
 	if [ -n "`use 3dfx`" ]
@@ -298,11 +291,6 @@ src_unpack() {
 			rm -f ${x}.orig
 		fi
 	done
-
-	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
-#	einfo "Applying Xft quality hack..."
-#	cd ${S}/lib/Xft
-#	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 > /dev/null || die
 }
 
 src_compile() {
@@ -517,6 +505,34 @@ src_install() {
 		fi
 	done
 	eend 0
+
+	einfo "Striping binaries and libraries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+	           grep -v ' shared object,' | \
+	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+		if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
+	# Now do the libraries ...
+	for x in ${D}/usr/{lib,lib/opengl/xfree/lib}/*.so.* \
+		${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
+	do
+		if [ -f ${x} ]
+		then
+			echo "`echo ${x} | sed -e "s|${D}||"`"
+			strip --strip-debug ${x} || :
+		fi
+	done
 }
 
 pkg_preinst() {
@@ -560,12 +576,6 @@ pkg_preinst() {
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
 	fi
 
-	# This one was borked, so make sure fixed one gets installed.
-	if [ -L ${ROOT}/usr/lib/X11 ]
-	then
-		rm -f ${ROOT}/usr/lib/X11
-	fi
-
 	# clean the dinamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [ -d ${ROOT}/usr/lib/opengl/xfree ]
@@ -582,7 +592,7 @@ pkg_preinst() {
 
 	# make sure we do not have any stale files lying round
 	# that could break things.
-	rm -f ${ROOT}/usr/X11R6/lib/libGL.*
+	rm -f ${ROOT}/usr/X11R6/lib/libGL*
 }
 
 update_XftConfig() {
@@ -780,7 +790,7 @@ pkg_postrm() {
 		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
 		ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-		ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
+		ln -snf ../X11R6/lib ${ROOT}/usr/lib/X11
 	fi
 }
 

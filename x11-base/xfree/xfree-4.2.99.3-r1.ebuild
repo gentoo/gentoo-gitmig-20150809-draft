@@ -1,6 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.3 2002/12/23 18:12:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.4 2002/12/24 18:44:25 azarah Exp $
+
+# Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
+# that only we only strip stuff that are safe to strip ...
+DEBUG="yes"
+RESTRICT="nostrip"
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -33,7 +38,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="yes"
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 FT2_VER="2.1.3"
 SISDRV_VER="141202-1"
 SAVDRV_VER="1.1.26t"
@@ -103,8 +108,9 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	sys-devel/perl
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=media-libs/fontconfig-2.1-r1
+	media-libs/libpng
 	>=x11-base/opengl-update-1.4
-	>=x11-misc/ttmkfdir-2.0-r1
+	>=x11-misc/ttmkfdir-3.0.4
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )"
 	
@@ -114,8 +120,9 @@ RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=media-libs/fontconfig-2.1-r1
+	media-libs/libpng
 	>=x11-base/opengl-update-1.4
-	>=x11-misc/ttmkfdir-2.0-r1
+	>=x11-misc/ttmkfdir-3.0.4
 	pam? ( >=sys-libs/pam-0.75 )"
 
 PDEPEND=">=x11-libs/xft-2.0.1-r1
@@ -305,10 +312,6 @@ src_compile() {
 
 src_install() {
 
-	# Since we do not build fontconfig internally, we need to add
-	# this, or things breaks.
-	ln -s /usr/bin/fc-cache ${S}/exports/bin/fc-cache
-
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
@@ -322,10 +325,16 @@ src_install() {
 		make install DESTDIR=${D} || die
 	fi
 
-	# These could cause problems, so remove them ...
-	rm -f ${D}/usr/X11R6/bin/xft-config
-	rm -f ${D}/usr/X11R6/lib/libXft.{a,so}
+	# We do not want these, so remove them ...
 	rm -rf ${D}/usr/X11R6/include/X11/Xft
+	rm -f ${D}/usr/X11R6/lib/libXft.{a,so}
+	rm -f ${D}/usr/X11R6/bin/xft-config
+	rm -f ${D}/usr/X11R6/man/man3/Xft.3x*
+	rm -rf ${D}/usr/X11R6/include/fontconfig
+	rm -f ${D}/usr/X11R6/lib/libfontconfig.*
+	rm -f ${D}/usr/X11R6/bin/fontconfig-config
+	rm -f ${D}/usr/X11R6/man/man3/fontconfig.3x*
+	rm -rf ${D}/etc/fonts/
 
 	# This one needs to be in /usr/lib
 	insinto /usr/lib/pkgconfig
@@ -518,6 +527,34 @@ src_install() {
 		fi
 	done
 	eend 0
+
+	einfo "Striping binaries and libraries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+	           grep -v ' shared object,' | \
+	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+	if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
+	# Now do the libraries ...
+	for x in ${D}/usr/{lib,lib/opengl/xfree/lib}/*.so.* \
+		${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
+	do
+		if [ -f ${x} ]
+		then
+			echo "`echo ${x} | sed -e "s|${D}||"`"
+			strip --strip-debug ${x} || :
+		fi
+	done
 }
 
 pkg_preinst() {
@@ -561,12 +598,6 @@ pkg_preinst() {
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
 	fi
 
-	# This one was borked, so make sure fixed one gets installed.
-	if [ -L ${ROOT}/usr/lib/X11 ]
-	then
-		rm -f ${ROOT}/usr/lib/X11
-	fi
-
 	# clean the dinamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [ -d ${ROOT}/usr/lib/opengl/xfree ]
@@ -583,7 +614,7 @@ pkg_preinst() {
 
 	# make sure we do not have any stale files lying round
 	# that could break things.
-	rm -f ${ROOT}/usr/X11R6/lib/libGL.*
+	rm -f ${ROOT}/usr/X11R6/lib/libGL*
 }
 
 update_XftConfig() {
@@ -647,7 +678,7 @@ pkg_postinst() {
 		#  3)  Now Generate fonts.dir files.
 		#
 		#  CID fonts is a bit more involved, but as we do not install any,
-		#  I am not going to bother.
+		#  thus I am not going to bother.
 		#
 		#  <azarah@gentoo.org> (20 Oct 2002)
 		#
@@ -675,7 +706,7 @@ pkg_postinst() {
 				if [ "${x/encodings}" = "${x}" -a \
 				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
-					${ROOT}/usr/X11R6/bin/ttmkfdir \
+					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
 				fi
@@ -783,7 +814,7 @@ pkg_postrm() {
 		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
 		ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-		ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
+		ln -snf ../X11R6/lib ${ROOT}/usr/lib/X11
 	fi
 }
 

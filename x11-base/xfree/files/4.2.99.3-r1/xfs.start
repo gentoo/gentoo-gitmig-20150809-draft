@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3-r1/xfs.start,v 1.1 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3-r1/xfs.start,v 1.2 2002/12/24 18:44:25 azarah Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -173,7 +173,7 @@ setup_font_dirs() {
 			if [ "${x/encodings}" = "${x}" -a \
 			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
-				/usr/X11R6/bin/ttmkfdir \
+				/usr/X11R6/bin/ttmkfdir -x 2 \
 					-e /usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 					-o ${x}/fonts.scale -d ${x} &> /dev/null
 			fi
