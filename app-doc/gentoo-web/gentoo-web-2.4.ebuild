@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.6 2002/10/16 00:18:54 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.7 2002/10/22 14:00:53 peitolm Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -20,12 +20,7 @@ DEPEND="${RDEPEND}"
 src_unpack() {
 	local myhost
 	myhost=`hostname`
-	if [ "$myhost" = "laptop.kicks-ass.net" ]
-	then
-		echo -e "\e[32;1mMEEKROB detected.\e[0m"
-		GENTOO_SRCDIR=/home/meekrob/gentoo-src
-		WEBROOT=/home/httpd/htdocs
-	elif [ "$myhost" = "inventor.gentoo.org" ]
+	if [ "$myhost" = "inventor.gentoo.org" ]
 	then
 		echo -e "\e[32;1mDROBBINS detected.\e[0m"
 		GENTOO_SRCDIR=/home/drobbins/gentoo-src
@@ -67,7 +62,7 @@ src_install() {
 	
 	local x
 	local y
-	for y in en es fr nl cz de
+	for y in en es fr nl cz de ja
 	do
 		cd ${S}/xml/doc/${y}
 		for x in *.xml
