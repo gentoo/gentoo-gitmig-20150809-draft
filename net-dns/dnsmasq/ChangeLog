@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.48 2004/08/14 18:36:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.49 2004/09/12 18:45:13 avenj Exp $
+
+*dnsmasq-2.14 (12 Sep 2004)
+
+  12 Sep 2004; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.14.ebuild :
+  Version bump, upstream summarizes changes as "a collection of
+  tweaks to the DHCP server"
 
 *dnsmasq-2.13 (14 Aug 2004)
 
