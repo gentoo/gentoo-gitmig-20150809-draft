@@ -12,8 +12,8 @@ SRC_URI="http://web.wt.net/~billw/gkrellm/Plugins/${P}.tar.gz"
 HOMEPAGE="http://web.wt.net/~billw/gkrellm/Plugins.html"
 
 DEPEND="virtual/glibc
-	>=app-admin/gkrellm-1.0.4
-	>=gnome-base/gnome-core-1.4"
+	>=app-admin/gkrellm-1.2.2-r1
+	>=gnome-base/gnome-core-1.4.0.4-r1"
 
 src_compile() {
 

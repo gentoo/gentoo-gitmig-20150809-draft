@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.8 2001/08/11 04:45:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.9 2001/10/07 11:11:07 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="An XML Framework"
 SRC_URI="http://www.entity.cx/Download/files/${A}"
 HOMEPAGE="http://www.entity.cx"
 
-DEPEND=">=media-libs/imlib-1.9.8.1
+DEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
 	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
@@ -17,17 +17,17 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
         opengl? ( >=x11-libs/gtkglarea-1.2.2 )
-	gnome? ( >=gnome-base/gnome-core-1.4.0.4 )"
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )"
 
-RDEPEND=">=media-libs/imlib-1.9.8.1
+RDEPEND=">=media-libs/imlib-1.9.10-r1
 	>=dev-libs/libpcre-3.2
 	tcltk? ( >=dev-lang/tcl-tk-8.1.1 )
 	perl? ( >=sys-devel/perl-5.6 )
 	python? ( >=dev-lang/python-2.0i-r4 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-        opengl? ( >=x11-libs/gtkglarea-1.2.2 )
-	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
+        opengl? ( >=x11-libs/gtkglarea-1.2.2-r1 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
 src_compile() {
 
