@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.2 2003/05/18 11:29:12 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.3 2003/06/16 14:48:24 yakina Exp $
 
 MY_PN="Mule-UCS"
 DESCRIPTION="A character code translator."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.m17n.org/mule/
 SRC_URI="http://gentoojp.sourceforge.jp/distfiles/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=">=app-editors/emacs-20.4"
 S="${WORKDIR}/${MY_PN}-current"
