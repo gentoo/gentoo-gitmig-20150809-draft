@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3490 2005/01/14 12:49:56 johnm Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3491 2005/01/14 14:10:29 lu_zero Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <lu_zero@gentoo.org> (14 Jan 2005)
+# Cinelerra is too broken to be fixed
+media-video/cinelerra
+media-video/cinelerra-cvs
 
 # <danarmak@gentoo.org> (14 Jan 2005)
 # Beta release of KDE 3.4 - split ebuilds
