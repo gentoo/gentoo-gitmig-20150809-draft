@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.47 2004/03/30 15:02:21 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.48 2004/03/30 22:25:15 stkn Exp $
+
+  31 Mar 2004; Stefan Knoblich <stkn@gentoo.org> pwlib-1.5.2-r3.ebuild:
+  Marked stable on x86
 
   30 Mar 2004; Jon Portnoy <avenj@gentoo.org> pwlib-1.5.2-r3.ebuild :
   Stable on AMD64.
