@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.1.ebuild,v 1.1 2003/07/24 16:48:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-4.1.2.ebuild,v 1.1 2003/08/14 03:04:08 g2boojum Exp $
 
 IUSE=""
 
