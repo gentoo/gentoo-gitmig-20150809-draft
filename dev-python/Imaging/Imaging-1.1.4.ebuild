@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.9 2004/03/14 21:17:31 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.10 2004/04/06 03:03:31 vapier Exp $
 
-inherit distutils
+inherit distutils flag-o-matic
 
-IUSE="tcltk"
-
-DESCRIPTION="Python Imaging Library (PIL)."
+DESCRIPTION="Python Imaging Library (PIL)"
 HOMEPAGE="http://www.pythonware.com/products/pil/index.htm"
 SRC_URI="http://www.effbot.org/downloads/${P}.tar.gz"
 
-SLOT="0"
-KEYWORDS="x86 sparc ~alpha ~ppc ~amd64"
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
+IUSE="tcltk"
 
 DEPEND="virtual/python
 	>=media-libs/jpeg-6a
@@ -22,7 +21,7 @@ DEPEND="virtual/python
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p0 setup.py < ${FILESDIR}/${P}-setup.py.patch
+	patch -p0 setup.py < ${FILESDIR}/${P}-setup.py.patch || die
 }
 
 src_compile() {
@@ -40,8 +39,7 @@ src_compile() {
 	cd ${S}; distutils_src_compile
 }
 
-src_install ()
-{
+src_install() {
 	local mydoc="CHANGES* CONTENTS"
 	distutils_src_install
 	distutils_python_version
@@ -52,4 +50,3 @@ src_install ()
 	doins libImaging/ImPlatform.h
 	doins libImaging/ImConfig.h
 }
-
