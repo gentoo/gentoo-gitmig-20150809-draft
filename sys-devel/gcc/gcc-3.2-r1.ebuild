@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r1.ebuild,v 1.1 2002/08/27 20:55:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r1.ebuild,v 1.2 2002/09/09 20:35:01 azarah Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -196,6 +196,16 @@ src_compile() {
 }
 
 src_install() {
+	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# this can break the build.
+	for x in cd ${WORKDIR}/build/gcc/include/*
+	do
+		if [ -L ${x} ]
+		then
+			rm -f ${x}
+		fi
+	done
+
 	# Do the 'make install' from the build directory
 	cd ${WORKDIR}/build
 	S="${WORKDIR}/build" \
