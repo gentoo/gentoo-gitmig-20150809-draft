@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.5 2004/02/09 18:58:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.6 2004/04/01 07:49:04 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> protux-0.16.0.ebuild,
+  protux-0.17.8.ebuild, protux-0.20.0.ebuild:
+  Removed explicit S=.  Stable on x86.
 
   09 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> protux-0.16.0.ebuild,
   protux-0.17.8.ebuild, protux-0.20.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.0.ebuild,v 1.2 2004/02/09 18:58:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.0.ebuild,v 1.3 2004/04/01 07:49:04 eradicator Exp $
 
 inherit kde-functions
 
@@ -11,9 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/protux/${P}.tar.gz"
 IUSE="static"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
-
-S="${WORKDIR}/${P}"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	>=x11-libs/qt-3
