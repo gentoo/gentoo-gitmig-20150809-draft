@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.7 2002/11/17 21:59:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.8 2002/11/17 22:03:49 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -23,7 +23,7 @@ export GAMES_ENVD="90games"
 export GAMES_USER="root"
 export GAMES_GROUP="games"
 
-egameconf() {
+egamesconf() {
 	if [ -x ./configure ] ; then
 		./configure \
 			--prefix=${GAMES_PREFIX} \
@@ -61,14 +61,14 @@ gameswrapper() {
 	into ${oldtree}
 }
 
-dogamebin() { gameswrapper bin $@; }
-dogamesbin() { gameswrapper sbin $@; }
-dogamelib() { gameswrapper lib $@; }
-dogamelib.a() { gameswrapper lib.a $@; }
-dogamelib.so() { gameswrapper lib.so $@; }
+dogamesbin() { gameswrapper bin $@; }
+dogamessbin() { gameswrapper sbin $@; }
+dogameslib() { gameswrapper lib $@; }
+dogameslib.a() { gameswrapper lib.a $@; }
+dogameslib.so() { gameswrapper lib.so $@; }
 
-gameowners() { chown ${GAMES_USER}.${GAMES_ROOT} $@; }
-gameperms() { chmod ug+r,o-rwx $@; }
+gamesowners() { chown ${GAMES_USER}.${GAMES_ROOT} $@; }
+gamesperms() { chmod ug+r,o-rwx $@; }
 
 gamesenv() {
 	echo "LDPATH=\"${GAMES_LIBDIR}\"" > /etc/env.d/${GAMES_ENVD}
