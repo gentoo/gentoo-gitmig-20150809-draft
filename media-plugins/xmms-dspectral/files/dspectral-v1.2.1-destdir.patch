@@ -1,0 +1,16 @@
+--- Makefile.old	2002-11-10 11:01:04.000000000 -0800
++++ Makefile	2003-03-28 19:48:17.000000000 -0800
+@@ -32,9 +32,10 @@
+ 	rm -f *.o core *~
+ 
+ install:
+-	install lib$(NAME).so $(INSTALL-DIR) 
+-	mkdir -p $(XMMS_DATADIR)/$(THEME_SUBDIR)
+-	install bg_*.xpm $(XMMS_DATADIR)/$(THEME_SUBDIR)
++	mkdir -p $(DESTDIR)/$(INSTALL-DIR)
++	install lib$(NAME).so $(DESTDIR)/$(INSTALL-DIR) 
++	mkdir -p $(DESTDIR)/$(XMMS_DATADIR)/$(THEME_SUBDIR)
++	install bg_*.xpm $(DESTDIR)/$(XMMS_DATADIR)/$(THEME_SUBDIR)
+ 
+ release: lib$(NAME).so
+ 	strip lib$(NAME).so
