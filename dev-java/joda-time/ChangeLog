@@ -1,6 +1,8 @@
 # ChangeLog for dev-java/joda-time
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.1 2004/02/26 05:28:36 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.2 2004/03/02 08:54:26 aliz Exp $
+
+*joda-time-0.9.5 (28 Feb 2004)
 
   28 Feb 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml:
   Initial Import.
