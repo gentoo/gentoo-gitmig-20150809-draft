@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.7.ebuild,v 1.1 2003/10/04 14:45:48 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.7.ebuild,v 1.2 2003/10/12 18:09:13 coronalvr Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/missing_namespace.patch
+	epatch ${FILESDIR}/nls.patch
 }
 
 src_compile() {
