@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.3.1.ebuild,v 1.1 2004/07/25 15:59:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.3.1.ebuild,v 1.2 2004/08/19 02:19:41 agriffis Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
 
 src_install() {
 	exeinto /usr/sbin
