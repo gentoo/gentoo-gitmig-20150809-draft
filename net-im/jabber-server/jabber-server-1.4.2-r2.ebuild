@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.24 2003/04/25 20:56:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.25 2003/09/05 23:58:58 msterret Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -43,30 +43,29 @@ src_compile() {
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
 	sed 's:pstrdup(jabberd__runtime,HOME):"/var/spool/jabber":' jabberd/jabberd.c.orig > jabberd/jabberd.c
 	rm -f jabberd/jabberd.c.orig
-	./configure ${myconf} || die 
+	./configure ${myconf} || die
 	make || die
 
-        cd ${S}/aim-transport
-	./configure || die 
-        make || die
+	cd ${S}/aim-transport
+	./configure || die
+	make || die
 	make install
 
-        cd ${S}/msn-transport
+	cd ${S}/msn-transport
 	./bootstrap || die
-        ./configure || die
-        make || die
+	./configure || die
+	make || die
 
 	cd ${S}/mu-conference
-	make || die 
+	make || die
 
-        cd ${S}/yahoo-transport-2
-        make || die
-
+	cd ${S}/yahoo-transport-2
+	make || die
 }
 
 src_install() {
-        exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r1 jabber
-        dodir /usr/sbin /etc/jabber /usr/lib/jabber /var/log/jabber
+	exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r1 jabber
+	dodir /usr/sbin /etc/jabber /usr/lib/jabber /var/log/jabber
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log
 	dodir /var/spool/jabber
@@ -91,36 +90,36 @@ src_install() {
 
 pkg_postinst() {
 	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
-        if [ -z $test_group ]
-        then
+	if [ -z $test_group ]
+	then
 		groupadd jabber
 	fi
 
 	local test_user=`grep ^jabber: /etc/passwd | cut -d: -f1`
 	if [ -z $test_user ]
-	then 
+	then
 		useradd jabber -s /bin/false -d /var/spool/jabber -g jabber -m
 	fi
-	
-	chown jabber.jabber /etc/jabber 
+
+	chown jabber.jabber /etc/jabber
 	chown jabber.jabber /usr/sbin/jabberd
 	chown jabber.jabber /var/log/jabber -R
 	chown jabber.jabber /var/spool/jabber -R
-	chmod o-rwx /etc/jabber 
+	chmod o-rwx /etc/jabber
 	chmod o-rwx /usr/sbin/jabberd
 	chmod o-rwx /var/log/jabber -R
 	chmod o-rwx /var/spool/jabber -R
 	chmod u+rwx /usr/sbin/jabberd
-	chmod g-x /etc/jabber 
+	chmod g-x /etc/jabber
 	chmod g-x /usr/sbin/jabberd
 	chmod g-x /var/log/jabber -R
 	chmod g-x /var/spool/jabber -R
-	chmod g+rw /etc/jabber 
+	chmod g+rw /etc/jabber
 	chmod g+rw /usr/sbin/jabberd
 	chmod g+rw /var/spool/jabber -R
 	chmod g+rw /var/log/jabber -R
 	chmod u+xs /usr/sbin/jabberd
-	
+
 	einfo "Change 'localhost' to your server's domainname in the /etc/jabber/*.xml configs first"
 	einfo "To enable SSL connections, execute /etc/jabber/self-cert.sh"
 	einfo "(Only if compiled with SSL support (ssl in USE)"

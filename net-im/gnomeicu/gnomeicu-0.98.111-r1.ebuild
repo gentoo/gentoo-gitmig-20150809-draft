@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.6 2003/05/09 22:52:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.111-r1.ebuild,v 1.7 2003/09/05 23:58:58 msterret Exp $
 
 
 inherit debug
@@ -19,13 +19,13 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
 	>=sys-libs/gdbm-1.8.0
-	>=gnome-base/libglade-2.0.0	
+	>=gnome-base/libglade-2.0.0
 	<net-libs/gnet-2
 	>=gnome-base/gnome-panel-2.0.0"
 RDEPEND="sys-devel/gettext"
 
 
-src_compile() {                           
+src_compile() {
 	local myconf
 
 	myconf="--prefix=/usr --with-debug"

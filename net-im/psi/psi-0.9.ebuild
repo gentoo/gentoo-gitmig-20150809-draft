@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.4 2003/06/30 17:09:35 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.ebuild,v 1.5 2003/09/05 23:58:58 msterret Exp $
 inherit kde-functions
 
 IUSE="ssl crypt"
@@ -30,18 +30,15 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	./configure --prefix=/usr || die
 	make || die
 	mv src/psi psi
 
-        if [ "`use ssl`" ]; then
-                cd ${WORKDIR}/qssl-${QV}
-                qmake qssl.pro
-                make
-        fi	
-
-
+	if [ "`use ssl`" ]; then
+		cd ${WORKDIR}/qssl-${QV}
+		qmake qssl.pro
+		make
+	fi
 }
 
 src_install() {
@@ -65,7 +62,7 @@ src_install() {
 	cp -r ./sound $LIBDIR
 	cp -r ./certs $LIBDIR
 
-	dodoc README COPYING 
+	dodoc README COPYING
 
 
 

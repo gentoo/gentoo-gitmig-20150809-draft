@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.67-r1.ebuild,v 1.1 2003/08/25 14:56:15 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.67-r1.ebuild,v 1.2 2003/09/05 23:58:57 msterret Exp $
 
 IUSE="nls perl spell nas ssl"
 
@@ -8,7 +8,7 @@ DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
 EV=2.08
 SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2
-        ssl? ( mirror://sourceforge/gaim-encryption/gaim-encryption-${EV}.tar.gz )"
+	ssl? ( mirror://sourceforge/gaim-encryption/gaim-encryption-${EV}.tar.gz )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -40,9 +40,9 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-        use perl || myconf="${myconf} --disable-perl"
-        use spell || myconf="${myconf} --disable-gtkspell"
-        use nls  || myconf="${myconf} --disable-nls"
+	use perl || myconf="${myconf} --disable-perl"
+	use spell || myconf="${myconf} --disable-gtkspell"
+	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
 	econf ${myconf} || die "Configuration failed"

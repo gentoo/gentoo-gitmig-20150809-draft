@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.31.ebuild,v 1.2 2003/08/29 20:31:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.31.ebuild,v 1.3 2003/09/05 23:58:58 msterret Exp $
 
 MYVER=${PV}
 S=${WORKDIR}/${PN}-${MYVER}
@@ -24,12 +24,12 @@ src_unpack() {
 }
 
 src_compile() {
-    ./configure --prefix=/usr || die "configure failed"
-    #make
-    # fixing it ..
-    cp ${FILESDIR}/Makefile-1.31 ${S}/Makefile
-    pwd
-    make
+	./configure --prefix=/usr || die "configure failed"
+	#make
+	# fixing it ..
+	cp ${FILESDIR}/Makefile-1.31 ${S}/Makefile
+	pwd
+	make
 }
 
 src_install() {

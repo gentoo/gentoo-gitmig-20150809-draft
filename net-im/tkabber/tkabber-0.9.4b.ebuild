@@ -1,6 +1,6 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.4b.ebuild,v 1.2 2003/04/23 17:02:47 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.4b.ebuild,v 1.3 2003/09/05 23:58:58 msterret Exp $
 
 DESCRIPTION="Featurefull Jabber client for tcl/tk."
 HOMEPAGE="http://www.jabber.ru/projects/tkabber/index_en.html"
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} PREFIX=/usr install || die
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL README
 	dohtml README.html
 

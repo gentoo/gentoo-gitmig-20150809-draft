@@ -16,10 +16,10 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
-    imlib? ( media-libs/imlib )"
+	imlib? ( media-libs/imlib )"
 
 src_compile() {
-	
+
 	if [ -n "`use imlib`" ]
 	then
 		einfo "Compiling the freedesktop notification plugin"
@@ -40,14 +40,14 @@ src_install() {
 		mkdir -p ${D}/usr/share/pixmaps
 		cp -a ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
 	fi
-	
+
 
 	if [ -n "`use kde`" ]
 	then
 		dodir ${D}/usr/share/applnk
 		cp ${FILESDIR}/amsn.desktop ${D}/usr/share/applnk/
 		einfo "Installing KDE Icons in default theme"
-		mkdir -p ${D}/${KDEDIR}/share/icons/default.kde 
+		mkdir -p ${D}/${KDEDIR}/share/icons/default.kde
 		cp -a ${S}/icons/* ${D}/${KDEDIR}/share/icons/default.kde
 	fi
 

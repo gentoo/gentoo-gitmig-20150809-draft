@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.7 2003/08/13 23:36:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99-r1.ebuild,v 1.8 2003/09/05 23:58:58 msterret Exp $
 
-inherit gnome2 
+inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
@@ -11,14 +11,14 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ~alpha amd64" 
+KEYWORDS="x86 sparc ~ppc ~alpha amd64"
 
 DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.23
 	>=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
 	>=sys-libs/gdbm-1.8.0
-	>=gnome-base/libglade-2.0.0	
+	>=gnome-base/libglade-2.0.0
 	<net-libs/gnet-2
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.12.0

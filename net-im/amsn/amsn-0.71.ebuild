@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.71.ebuild,v 1.4 2003/04/15 17:48:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.71.ebuild,v 1.5 2003/09/05 23:58:57 msterret Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvarro's Messenger client for MSN"
@@ -15,7 +15,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
 
 src_compile() {
-	
+
 	make \
 		prefix=${D}/usr \
 		gnomelinks=${D}/etc/X11/applnk/Internet \
@@ -31,7 +31,7 @@ src_install() {
 		install || die
 
 	rm -f ${D}/usr/bin/amsn
-	ln -s /usr/share/amsn/amsn ${D}/usr/bin/amsn	
+	ln -s /usr/share/amsn/amsn ${D}/usr/bin/amsn
 
 	dodoc LEEME TODO README GNUGPL
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/caim/caim-0.03.ebuild,v 1.6 2003/02/13 14:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/caim/caim-0.03.ebuild,v 1.7 2003/09/05 23:58:57 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Console AIM Client"
@@ -14,26 +14,20 @@ LICENSE="LGPL-2.1 | GPL-2"
 KEYWORDS="x86"
 
 src_unpack() {
-
-    unpack ${P}.tar.gz
-    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-    cd ${S}
-    echo "CFLAGS += ${CFLAGS}" >> Makefile.rules
-
+	unpack ${P}.tar.gz
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	cd ${S}
+	echo "CFLAGS += ${CFLAGS}" >> Makefile.rules
 }
 
 src_compile() {
-
-    emake || die
-
+	emake || die
 }
 
 src_install () {
-
-    dobin client/caim
-    dolib libfaim.so
-    dodoc README Changes
-    docinto libfaim
-    dodoc faimdocs/BUGS faimdocs/CHANGES faimdocs/README
- 
+	dobin client/caim
+	dolib libfaim.so
+	dodoc README Changes
+	docinto libfaim
+	dodoc faimdocs/BUGS faimdocs/CHANGES faimdocs/README
 }

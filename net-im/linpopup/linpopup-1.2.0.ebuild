@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-1.2.0.ebuild,v 1.2 2003/02/13 14:11:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-1.2.0.ebuild,v 1.3 2003/09/05 23:58:58 msterret Exp $
 
 MY_P=LinPopUp-${PV}
 DESCRIPTION="LinPopUp, for sending/receiving WinPopup messages via Samba"
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=net-fs/samba-2.2.7
-        =x11-libs/gtk+-1.2*"
+	=x11-libs/gtk+-1.2*"
 
 S=${WORKDIR}/${MY_P}/src
 
@@ -30,7 +30,7 @@ src_install() {
 	doins ../extra/gtkrc
 	insinto /usr/share/${P}/pixmaps
 	doins ../pixmaps/little_igloo.xpm
-	
+
 	# Install messages.dat if not already present
 	if [ ! -f /var/lib/linpopup/messages.dat ]
 	then

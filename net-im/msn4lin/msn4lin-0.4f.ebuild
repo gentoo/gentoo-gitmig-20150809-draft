@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4f.ebuild,v 1.2 2003/07/13 12:44:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/msn4lin-0.4f.ebuild,v 1.3 2003/09/05 23:58:58 msterret Exp $
 
 S=${WORKDIR}/${MY_P}
 MY_P=${PN}-tcl
@@ -10,15 +10,15 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-${PV}.tar.gz"
 HOMEPAGE="http://msn4lin.sourceforge.net/"
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
-	
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_unpack() {
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_install() {
@@ -33,5 +33,5 @@ src_install() {
 	echo "#!/bin/sh" > comprobar
 	echo "#!/bin/sh" > actualizar
 	ln -sf /usr/share/msn4lin-tcl/msn4lin ${D}/usr/bin/msn4lin
-	
+
 }

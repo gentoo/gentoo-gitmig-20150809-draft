@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-2.1.ebuild,v 1.1 2003/08/28 13:35:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-2.1.ebuild,v 1.2 2003/09/05 23:58:58 msterret Exp $
 
 inherit distutils
 
@@ -22,7 +22,7 @@ src_install() {
 	cd ${S}
 	dobin msn
 	dobin msnsetup
-	
+
 	insinto /usr/share/doc/${PF}
 	doins msnrc.sample
 }

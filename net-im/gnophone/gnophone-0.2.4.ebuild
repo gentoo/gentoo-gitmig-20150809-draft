@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.3 2003/04/16 17:52:58 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.4 2003/09/05 23:58:58 msterret Exp $
 
 IUSE=""
 
@@ -42,9 +42,9 @@ src_compile() {
 	local myconf
 
 	use mozilla \
-                && myconf="${myconf} 
-			--with-mozilla-home=/usr/lib/mozilla 
-			--with-mozilla-lib=/usr/lib/mozilla 
+		&& myconf="${myconf}
+			--with-mozilla-home=/usr/lib/mozilla
+			--with-mozilla-lib=/usr/lib/mozilla
 			--with-mozilla-include=/usr/lib/mozilla/include" \
 		|| myconf="${myconf} --disable-mozilla"
 	use esd \

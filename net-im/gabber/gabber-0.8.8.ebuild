@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.8 2003/07/19 20:58:36 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.9 2003/09/05 23:58:57 msterret Exp $
 
 inherit flag-o-matic gcc
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.7
-	<gnome-base/libglade-2.0.0 
+	<gnome-base/libglade-2.0.0
 	<gnome-extra/gal-1.99
 	>=dev-cpp/gnomemm-1.2.2
 	<dev-cpp/gtkmm-1.3.0
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}/omf-install
 	sed -i -e "s/-scrollkeeper-update.*//" Makefile.in
 
@@ -55,7 +55,7 @@ src_compile() {
 	econf ${myconf} \
 		`use_enable xmms` \
 		`use_enable nls` || die "configure failed"
-		
+
 	emake || die "make failed"
 }
 

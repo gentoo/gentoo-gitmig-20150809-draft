@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.3 2003/06/20 09:49:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6-r1.ebuild,v 1.4 2003/09/05 23:58:58 msterret Exp $
 
 inherit kde-base
 need-kde 3.0
 
-DESCRIPTION="ICQ Client with v8 support" 
+DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 
@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="x86"
 IUSE="ssl socks5 qt kde ncurses"
 
-# we can't have conditional dependencies so "use kde && inherit kde-base" 
+# we can't have conditional dependencies so "use kde && inherit kde-base"
 # won't work -- messes up dep caching.
 
 # need-kde and their eclass friends inject things into DEPEND. But we only
@@ -58,11 +58,11 @@ src_compile() {
 
 	econf ${myconf} || die
 	emake || die
-	
+
 	# Create the various plug-ins
 
 	# First, the Qt plug-in
-	if [ "`use qt`" ] 
+	if [ "`use qt`" ]
 	then
 		# A hack to build against the latest QT:
 		local v
@@ -112,13 +112,13 @@ src_install() {
 	dodoc ChangeLog INSTALL README*
 
 	# Install the plug-ins
-	if [ "`use qt`" ] 
+	if [ "`use qt`" ]
 	then
 		cd ${S}/plugins/qt-gui
-		make DESTDIR=${D} install || die	
+		make DESTDIR=${D} install || die
 		docinto plugins/qt-gui
 		dodoc README*
-		
+
 		# fix bug #12436, see my comment there
 ##		if [ "`use kde`" ]; then
 ##			cd $D/usr/lib/licq

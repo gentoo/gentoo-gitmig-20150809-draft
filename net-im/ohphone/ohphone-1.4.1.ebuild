@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ohphone-1.4.1.ebuild,v 1.1 2003/09/03 10:35:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ohphone/ohphone-1.4.1.ebuild,v 1.2 2003/09/05 23:58:58 msterret Exp $
 
 DESCRIPTION="Command line H.323 client"
 HOMEPAGE="http://www.openh323.org/"
@@ -28,7 +28,7 @@ src_compile() {
 src_install() {
 	cd ${WORKDIR}/${PN}
 	doman ohphone.1
-	
+
 	# fill in for other archs
 	if [ ${ARCH} = "x86" ]; then
 		dobin obj_linux_x86_r/ohphone

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.8 2003/02/13 14:09:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.94.1.ebuild,v 1.9 2003/09/05 23:58:58 msterret Exp $
 
 IUSE="sdl ssl"
 
@@ -58,7 +58,7 @@ src_compile() {
 
 	use sdl && myconf="${myconf} --with-sdl-prefix=/usr" \
 		|| myconf="${myconf} --disable-sdltest"
-		
+
 	export PWLIBDIR=/usr/share/pwlib
 	export OPENH323DIR=/usr/share/openh323
 
@@ -78,5 +78,5 @@ src_compile() {
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO"
 G2CONF="${G2CONF} --enable-platform-gnome-2"
 SCHEMAS="gnomemeeting.schema"
-	
-															
+
+

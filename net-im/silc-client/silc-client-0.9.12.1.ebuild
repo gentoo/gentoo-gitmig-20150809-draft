@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.12.1.ebuild,v 1.3 2003/04/24 22:31:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.12.1.ebuild,v 1.4 2003/09/05 23:58:58 msterret Exp $
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -20,7 +20,7 @@ src_compile() {
 	local myconf
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 	use socks5 && myconf="${myconf} --with-socks5"
-	
+
 	econf \
 		--prefix=/usr \
 		--datadir=/usr/share/${PN} \
@@ -58,7 +58,7 @@ src_install() {
 	mv ${D}/usr/libsilc.la ${D}/usr/lib/
 	rmdir ${D}/usr/share/silc/
 	rmdir ${D}/usr/include
-	
+
 	dodir /usr/share/man
 	mv ${D}/man1 ${D}/usr/share/man
 }

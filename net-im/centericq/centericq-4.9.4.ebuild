@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.4.ebuild,v 1.2 2003/07/13 12:44:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.4.ebuild,v 1.3 2003/09/05 23:58:57 msterret Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_compile() {
 	local myopts=""
 
 	use nls || myopts="--disable-nls"
-	
+
 	econf ${myopts} || die "Configure failed"
 	emake || die "Compilation failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.3.ebuild,v 1.6 2003/02/13 14:07:48 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/everybuddy/everybuddy-0.4.3.ebuild,v 1.7 2003/09/05 23:58:57 msterret Exp $
 
 IUSE="arts esd gnome nls"
 
@@ -33,7 +33,7 @@ src_compile() {
 		&& myconf="${myconf} --with-gnome" \
 		|| myconf="${myconf} --without-gnome"
 
-	
+
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"

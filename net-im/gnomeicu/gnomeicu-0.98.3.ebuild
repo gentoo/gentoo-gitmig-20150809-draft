@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.3.ebuild,v 1.8 2003/05/09 22:52:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.3.ebuild,v 1.9 2003/09/05 23:58:58 msterret Exp $
 
 IUSE="nls esd gnome"
 
-inherit debug 
+inherit debug
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
@@ -14,7 +14,7 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	>=sys-libs/gdbm-1.8.0
 	=gnome-base/libglade-0.17*
-	>=media-libs/gdk-pixbuf-0.9.0	
+	>=media-libs/gdk-pixbuf-0.9.0
 	>=net-libs/gnet-1.1.0
 	gnome? ( =gnome-base/gnome-panel-1.4* )
 	esd? ( >=media-sound/esound-0.2.23 )"
@@ -27,18 +27,18 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-src_compile() {                           
+src_compile() {
 	local myconf
 
 	myconf="--prefix=/usr"
 
 	use esd || myconf="${myconf} --disable-esd-test"
-	
+
 	# Disabling socks5 support. if socks5 is present
 	# in USE, gnomeicu buid will fail. Check ChangeLog
-	# for more info about this issue. stroke@gentoo.org 
+	# for more info about this issue. stroke@gentoo.org
 	# use socks5 && myconf="${myconf} --enable-socks5"
-	
+
 	use nls || ( \
 		myconf="${myconf} --disable-nls"
 		mkdir ./intl
@@ -48,7 +48,7 @@ src_compile() {
 	# remove the panel applet if you dont use gnome,
 	# nice hack for gnome2 compability
 
-	use gnome || myconf="${myconf} --disable-applet" 	
+	use gnome || myconf="${myconf} --disable-applet"
 
 	econf \
 		${myconf} --enable-debug || die

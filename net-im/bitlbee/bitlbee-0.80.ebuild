@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.80.ebuild,v 1.4 2003/08/16 14:32:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.80.ebuild,v 1.5 2003/09/05 23:58:57 msterret Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	[ -n "${CC}" ] \
 		&& ${CC} ${CFLAGS} bitlbeed.c -o bitlbeed \
 		|| gcc ${CFLAGS} bitlbeed.c -o bitlbeed
-												
+
 }
 
 src_install() {
@@ -43,9 +43,9 @@ src_install() {
 	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,TODO}
 	dohtml -A sgml doc/*.sgml
 	doman doc/bitlbee.8
-	
+
 	dobin utils/bitlbeed
-	
+
 	insinto /etc/xinetd.d
 	newins doc/bitlbee.xinetd bitlbee
 }

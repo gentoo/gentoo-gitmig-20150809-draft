@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.6.ebuild,v 1.2 2003/08/27 09:58:40 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.6.ebuild,v 1.3 2003/09/05 23:58:57 msterret Exp $
 
 inherit eutils
 
@@ -36,17 +36,17 @@ src_compile() {
 	# --disable-aim      Build without AIM
 	# --disable-irc      Build without IRC
 	# --disable-jabber   Build without Jabber
- 	# --disable-rss      Build without RSS reader
-	# --no-konst         Don't add contact list items 
+	# --disable-rss      Build without RSS reader
+	# --no-konst         Don't add contact list items
 	#                    supplied by author by default
 	local myopts="--with-gnu-ld"
 
 	use nls || myopts="${myopts} --disable-nls"
 
 	use nls && myopts="${myopts} --with-fribidi"
-	
+
 	use ssl && myopts="${myopts} --with-ssl"
-	
+
 	econf ${myopts} || die "Configure failed"
 	emake || die "Compilation failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.6.ebuild,v 1.2 2003/02/13 14:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.6.ebuild,v 1.3 2003/09/05 23:58:58 msterret Exp $
 inherit kde-base
 
 LICENSE="GPL-2"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 #    need-qt 3
 #    myconf="$myconf --enable-kde"
 #else
-    need-kde 3
+	need-kde 3
 #    myconf="$myconf --disable-kde"
 #fi
 #

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.7.ebuild,v 1.3 2003/02/13 14:13:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.7.ebuild,v 1.4 2003/09/05 23:58:58 msterret Exp $
 
 IUSE="ssl kde"
 [ -n "`use kde`" ] && inherit kde-base
@@ -16,26 +16,24 @@ SLOT="0"
 newdepend "ssl? ( dev-libs/openssl )"
 
 if [ -n "`use ssl`" ]; then
-    myconf="$myconf --enable-openssl"
+	myconf="$myconf --enable-openssl"
 else
-    myconf="$myconf --disable-openssl"
+	myconf="$myconf --disable-openssl"
 fi
 
 if [ -n "`use kde`" ]; then
-    need-kde 3
-    myconf="$myconf --enable-kde"
+	need-kde 3
+	myconf="$myconf --enable-kde"
 else
-    need-qt 3
-    myconf="$myconf --disable-kde"
+	need-qt 3
+	myconf="$myconf --disable-kde"
 fi
 
 src_compile() {
+	[ -n "`use kde`" ] && kde_src_compile myconf
+	myconf="$myconf --prefix=/usr"
 
-    [ -n "`use kde`" ] && kde_src_compile myconf
-    myconf="$myconf --prefix=/usr"
-    
-    cd $S
-    ./configure $myconf || die
-    emake || die
-
+	cd $S
+	./configure $myconf || die
+	emake || die
 }
