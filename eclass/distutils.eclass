@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.19 2003/10/17 07:14:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.20 2003/10/19 11:40:25 lanius Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -44,11 +44,15 @@ distutils_src_install() {
 	else
 		${python} setup.py install --root=${D} "$@" || die
 	fi		
-	
-	dodoc CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO
-	dodoc CONTRIBUTORS LICENSE COPYING*
-	dodoc Change* MANIFEST* README*
-	
+
+	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
+	DDOCS="${DDOCS} CONTRIBUTORS LICENSE COPYING*"
+	DDOCS="${DDOCS} Change* MANIFEST* README*"
+
+	for doc in ${DDOCS}; do
+		[ -s "$doc" ] && dodoc $doc
+	done
+
 	[ -n "${DOCS}" ] && dodoc ${DOCS}
 	
 	# deprecated! please use DOCS instead.
