@@ -23,6 +23,12 @@
 			destdir="${build.dir}"
 			source="${target.jdk}"
 			target="${target.jdk}" />
+
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
 	</target>
 
 	<!-- build the jar file -->
