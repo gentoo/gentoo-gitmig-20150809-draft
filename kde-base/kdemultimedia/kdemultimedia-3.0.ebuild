@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.ebuild,v 1.2 2002/04/03 23:44:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.ebuild,v 1.3 2002/04/04 21:39:21 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -19,8 +19,8 @@ newdepend ">=sys-libs/ncurses-5.2
 	slang? ( >=sys-libs/slang-1.4.4 )
 	app-cdr/cdrtools
 	>=app-cdr/cdrdao-1.1.5
-	>=media-sound/mpg123-0.59r"
-#	tcltk? ( >=dev-lang/tcl-tk.8.0.5-r2 )"
+	>=media-sound/mpg123-0.59r
+	tcltk? ( >=dev-lang/tcl-tk.8.0.5-r2 )"
 
 src_unpack() {
     
@@ -47,8 +47,8 @@ src_compile() {
 	use motif	&& myinterface="$myinterface,motif" && myconf="$myconf --enable-motif"
 	use gtk		&& myinterface="$myinterface,gtk"   && myconf="$myconf --enable-gtk"
 	use slang	&& myinterface="$myinterface,slang" && myconf="$myconf --enable-slang"
-#	use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
-	myconf="$myconf --disable-tcltk"
+	use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
+	#myconf="$myconf --disable-tcltk"
 
 	myconf="$myconf $myaudio $myinterface"
 
