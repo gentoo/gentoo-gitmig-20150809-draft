@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r1.ebuild,v 1.3 2004/06/24 21:58:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r1.ebuild,v 1.4 2004/07/14 14:21:32 agriffis Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ftp.edome.net/demot/actionpelit/phobia3-linux.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=""
 RDEPEND="kde-base/arts
