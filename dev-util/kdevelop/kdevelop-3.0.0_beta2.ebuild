@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_beta2.ebuild,v 1.1 2003/12/08 15:32:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.0_beta2.ebuild,v 1.2 2003/12/08 21:28:05 caleb Exp $
 
-inherit kde
+inherit kde distutils
 need-kde 3
 
 IUSE="doc java python ruby"
@@ -27,8 +27,10 @@ newdepend "dev-lang/perl
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
 
+distutils_python_version
+
 use java && myconf="$myconf --enable-javasupport --with-java=`java-config --jdk-home`" || myconf="$myconf --disable-javasupport"
-use python && myconf="$myconf --enable-scripting --with-pythondir=/usr/lib/python2.2" || myconf="$myconf --disable-scripting"
+use python && myconf="$myconf --enable-scripting --with-pythondir=/usr/lib/python${PYVER}" || myconf="$myconf --disable-scripting"
 use ruby || myconf="$myconf --disable-ruby"
 
 src_unpack()
