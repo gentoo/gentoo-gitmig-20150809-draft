@@ -1,10 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.1 2002/06/01 13:22:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.2 2002/06/07 11:08:06 danarmak Exp $
 
-# The real version of LyX is 1.1.6fix4. As Portage has no support for
-# arbitrary suffixes like 'fix', this is translated into 1.1.6.4.
 S=${WORKDIR}/${P}
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -31,12 +29,11 @@ RDEPEND="$DEPEND
 	app-text/rcs
 	dev-util/cvs
 	app-text/sgmltools-lite
-	app-text/noweb"
-#	app-text/chktex"
+	app-text/noweb
+	app-text/chktex"
 
 src_compile() {
 	
-	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	[ -n "$DEBUG" ] && myconf="$myconf --enable-debug" || myconf="$myconf --disable-debug"
 	
