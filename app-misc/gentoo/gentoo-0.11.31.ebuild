@@ -1,33 +1,28 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.28.ebuild,v 1.2 2002/07/25 17:19:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.31.ebuild,v 1.1 2002/08/05 15:39:42 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.obsession.se/gentoo/"
 
+DEPEND="=x11-libs/gtk+-1.2*"
+RDEPEND="nls? ( sys-devel/gettext )"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="=x11-libs/gtk+-1.2*"
-RDEPEND="nls? ( sys-devel/gettext )"
-
-src_unpack() {
-
-	unpack ${A}
-
-	use nls && ( \
-		cd ${S}/src
-		cp gentoo.h gentoo.h.orig
-		sed "s:#undef ENABLE_NLS:#define ENABLE_NLS:" \
-			gentoo.h.orig > gentoo.h
-	)
-}
-
 src_compile() {
-	econf --sysconfdir=/etc/gentoo || die "./configure failed"
+	
+	local myconf
+
+	use nls || myconf="${myconf} --disable-nls"
+	econf \
+		--sysconfdir=/etc/gentoo \
+		${myconf} || die "./configure failed"
+
 	emake || die
 }
 
