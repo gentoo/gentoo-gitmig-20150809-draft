@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.1 2004/10/11 11:32:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/gauche-kakasi-0.1.ebuild,v 1.2 2004/11/23 11:41:08 hattya Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gauche.sf.net/"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 

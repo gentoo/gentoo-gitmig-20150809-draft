@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-kakasi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/ChangeLog,v 1.1 2004/10/11 11:32:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-kakasi/ChangeLog,v 1.2 2004/11/23 11:41:08 hattya Exp $
+
+  23 Nov 2004; Akinori Hattori <hattya@gentoo.org> gauche-kakasi-0.1.ebuild:
+  stable on x86.
 
 *gauche-kakasi-0.1 (11 Oct 2004)
 
