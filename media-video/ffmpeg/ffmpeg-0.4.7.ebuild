@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.10 2004/12/14 12:16:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.11 2005/02/06 18:30:56 luckyduck Exp $
 
 inherit eutils flag-o-matic
 
@@ -66,3 +66,5 @@ src_install() {
 	insinto /etc
 	doins doc/ffserver.conf
 }
+
+src_test() { :; }

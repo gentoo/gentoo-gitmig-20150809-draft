@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.47 2004/12/16 10:32:45 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.48 2005/02/06 18:30:56 luckyduck Exp $
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ffmpeg-0.4.7.ebuild,
+  ffmpeg-0.4.8.20040222.ebuild, ffmpeg-0.4.8.20040322-r1.ebuild,
+  ffmpeg-0.4.8.20040322.ebuild, ffmpeg-0.4.8.ebuild, ffmpeg-0.4.9_pre1.ebuild:
+  added dummy src_test() to fix #77212
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> ffmpeg-0.4.9_pre1.ebuild:
   Stable on ppc64
