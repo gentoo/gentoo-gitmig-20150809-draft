@@ -1,21 +1,20 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.1 2001/12/27 04:06:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.2 2002/03/04 22:08:48 karltk Exp $
 
 S=${WORKDIR}/ijb20
-
 DESCRIPTION="Filtering HTTP proxy"
-
 SRC_URI="http://www.waldherr.org/redhat/rpm/srpm/junkbuster-2.0.2-8.tar.gz"
-
 HOMEPAGE="http://internet.junkbuster.com"
 
-DEPEND=""
-#RDEPEND=""
+DEPEND="virtual/glibc"
+RDEPEND="$DEPEND"
 
 src_compile() {
-	emake || die
+	unset CXXFLAGS
+	unset CFLAGS
+	make || die
 }
 
 src_install () {

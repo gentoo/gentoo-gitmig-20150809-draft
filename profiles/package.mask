@@ -96,7 +96,7 @@ app-admin/webconfig
 #(12/22/01 - drobbins)
 
 #untested/not approved stuff, please do not use
->=sys-apps/portage-1.8.9_pre1
+#>=sys-apps/portage-1.8.9_pre1
 >=sys-apps/portage-1.9_pre1
 
 #incomplete and very dangerous < Danarmak >
