@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.17 2003/03/18 21:21:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.18 2003/03/18 21:36:25 mholzer Exp $
+
+*net-tools-1.60-r6 (18 Mar 2003)
+
+  18 Mar 2003; Martin Holzer <mholzer@gentoo.org> net-tools-1.60-r5.ebuild,
+  net-tools-1.60-r5.ebuild, net-tools-1.60-r6.ebuild:
+  Fixed manpages are not installed cause of nls use flag.
 
 *net-tools-1.60-r5 (16 Jul 2002)
 
