@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.1_pre8-r1.ebuild,v 1.2 2001/01/22 05:16:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.1_pre8-r1.ebuild,v 1.3 2001/02/05 23:45:10 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.1-pre8
@@ -69,7 +69,7 @@ src_unpack() {
 src_compile() {
 	#LVM tools are included even in the linux-sources package
 	cd ${S}/extras/LVM/0.9.1_beta2
-	try ./configure --prefix=/ --mandir=/usr/man
+	try ./configure --prefix=/ --mandir=/usr/man --with-kernel_dir="${S}"
 	try make
 
 	if [ "$PN" != "linux" ]
