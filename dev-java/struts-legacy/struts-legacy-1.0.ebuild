@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0.ebuild,v 1.1 2004/03/17 07:37:41 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0.ebuild,v 1.2 2004/03/17 07:50:05 zx Exp $
 
 inherit java-pkg
 
-DESCRIPTION="Batik is a Java(tm) technology based toolkit for applications or applets that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as viewing, generation or manipulation."
+DESCRIPTION="Jakarta Struts Legacy Library"
 SRC_URI="mirror://apache/jakarta/struts/struts-legacy/${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/struts/"
 IUSE="doc jikes"
