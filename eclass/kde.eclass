@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.95 2004/04/16 00:27:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.96 2004/05/05 14:48:35 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -73,6 +73,7 @@ kde_src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 	# things that should access the real homedir
 	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"	
+	[ -n "$UNSERMAKE" ] && addwrite "/usr/kde/unsermake"
 	
 	while [ "$1" ]; do
 
@@ -81,7 +82,7 @@ kde_src_compile() {
 				debug-print-section myconf
 				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-mt"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
-				myconf="$myconf --disable-dependency-tracking"
+				[ -z "$UNSERMAKE" ] && myconf="$myconf --disable-dependency-tracking"
 				if [ `use debug` ]; then
 					myconf="$myconf --enable-debug=full --with-debug"
 				else
@@ -95,7 +96,7 @@ kde_src_compile() {
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot			
-				if [ ! -f "./configure" ]; then
+				if [ ! -f "./configure" ] || [ -n "$UNSERMAKE" ]; then
 					for x in Makefile.cvs admin/Makefile.common; do
 						if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
 					done
