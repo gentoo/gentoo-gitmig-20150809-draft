@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Seemant Kulleen <seemant@gentool.org> (01 Aug 2002)
+# the dependency is on an old, now removed version of PyQt
+dev-python/anygui
+
 # Kevyn Shortell <trance@gentoo.org> (01 Aug 2002)
 # both .92 and 93 do not compile on x86 or ppc, masking.
 net-im/gnomemeeting
@@ -44,7 +48,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1145 2002/08/01 09:35:17 trance Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1146 2002/08/01 12:44:00 seemant Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
