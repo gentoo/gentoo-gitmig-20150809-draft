@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.4 2003/12/14 20:22:02 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r2.ebuild,v 1.5 2003/12/15 00:55:36 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~arm ~hppa ~ia64"
+KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha ~mips ~arm ~hppa ~ia64"
 
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
@@ -549,17 +549,26 @@ pkg_postinst() {
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a \
+	
+	# Added devfs check 
+	# brad_mssw@gentoo.org 12/14/2003
+	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a ! -e "${ROOT}/dev/.devfsd" -a \
 	     -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
-		if [ -z "$(use build)" -a -z "$(use bootstrap)" ] || \
-		   ([ -n "$(use selinux)" ] && \
-		    [ -n "$(use build)" -o -n "$(use bootstrap)" ])
-		then
+		# USE="-* build" in catalyst, so this never gets called when
+		# creating a stage1 build.  So I'm commenting out this
+		# elaborate if statement
+		# brad_mssw@gentoo.org 12/14/2003
+		einfo "populating /dev in base system"
+#		if [ -z "$(use build)" -a -z "$(use bootstrap)" ] || \
+#		   ([ -n "$(use selinux)" ] && \
+#		    [ -n "$(use build)" -o -n "$(use bootstrap)" ])
+#		then
+			mkdir -p "${ROOT}/dev"
 			einfo "Populating /dev with device nodes..."
 			tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" \
 				-C "${ROOT}/dev"
-		fi
+#		fi
 	fi
 
 	echo
