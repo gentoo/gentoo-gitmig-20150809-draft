@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.8 2004/06/30 13:24:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.9 2004/07/21 20:33:06 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
 MY_P=${P/-/,}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Password Checking Library"
 HOMEPAGE="http://www.crypticide.org/users/alecm/"
 SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
@@ -21,6 +20,8 @@ DEPEND="${RDEPEND}
 	uclibc? ( app-arch/gzip )
 	sys-devel/gcc-config"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
 	unpack ${A}
 
@@ -32,26 +33,30 @@ src_unpack() {
 	# add compressed dict support, taken from shadow-4.0.4.1
 	use uclibc && epatch ${FILESDIR}/${PN}-${PV}-gzip.patch
 
-	sed -e 's|/usr/dict/words|/usr/share/dict/words|' -i util/create-cracklib-dict
+	sed -i \
+		-e 's|/usr/dict/words|/usr/share/dict/words|' \
+		util/create-cracklib-dict \
+		|| die "sed util/create-cracklib-dict failed"
 
-	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && \
-		sed -i -e 's:CFLAGS += -g :CFLAGS += -g3 :' ${S}/cracklib/Makefile
+	if [ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] ; then
+		sed -i \
+			-e 's:CFLAGS += -g :CFLAGS += -g3 :' ${S}/cracklib/Makefile \
+			|| die "sed ${S}/cracklib/Makefile failed"
+	fi
 }
 
 src_compile() {
-	# filter-flags -fstack-protector
-	# Parallel make does not work for 2.7
-	make all || die
+	emake all || die "emake failed"
 }
 
 src_install() {
 	dodir /usr/{lib,sbin,include} /lib
 	keepdir /usr/share/cracklib
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Needed by pam
-	if ( [ ! -f "${D}/usr/lib/libcrack.a" ] && use pam )
+	if [ ! -f "${D}/usr/lib/libcrack.a" ] && use pam
 	then
 		eerror "Could not find libcrack.a which is needed by core components!"
 		die "Could not find libcrack.a which is needed by core components!"
