@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.5.ebuild,v 1.1 2004/10/17 03:09:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.5.ebuild,v 1.2 2004/10/17 16:10:57 usata Exp $
 
 IUSE="debug truetype xgetdefault"
 #IUSE="${IUSE} utempter"
 
-DESCRIPTION="Multi-tabbed rxvt clone with transparent backround support"
+DESCRIPTION="Multi-tabbed rxvt clone with XFT, transparent background and CJK support"
 HOMEPAGE="http://materm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/materm/${P}.tgz"
 
