@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9-r1.ebuild,v 1.4 2002/07/25 12:57:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.5.9-r1.ebuild,v 1.5 2002/07/29 05:05:09 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Rotates, compresses, and mails system logs"
@@ -9,9 +9,10 @@ HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-libs/popt-1.5"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	cp Makefile Makefile.orig
