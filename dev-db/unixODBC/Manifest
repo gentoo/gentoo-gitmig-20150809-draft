@@ -1,14 +1,24 @@
-MD5 c7bb325055855bdb626f58d264881e32 ChangeLog 4427
-MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 c9ac848fe04e27de6420aaa64ce0f4bf unixODBC-2.0.8.ebuild 1092
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 798d73782d49579aeb92d10b6a03fc89 unixODBC-2.2.2.ebuild 1290
-MD5 fcdddb89a4e227ad1cb2170d10565195 unixODBC-2.2.6-r1.ebuild 1593
+MD5 c9ac848fe04e27de6420aaa64ce0f4bf unixODBC-2.0.8.ebuild 1092
 MD5 c99806e811b686f705b99db1f9c64d53 unixODBC-2.2.6.ebuild 1492
-MD5 449f39c2ba171492f3580d5ba49db0a4 unixODBC-2.2.8.ebuild 1861
+MD5 fcdddb89a4e227ad1cb2170d10565195 unixODBC-2.2.6-r1.ebuild 1593
+MD5 34ad0a2006b5ad14d26359be71114551 unixODBC-2.2.8.ebuild 1912
+MD5 fcdbc54db88cb42e75e211546cae4bb7 ChangeLog 4543
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
+MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
+MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.6-configure.in.patch 239
+MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6-r1 67
 MD5 f383c7806ba5f687ba55d5f1bc6a36aa files/digest-unixODBC-2.0.8 67
 MD5 0f7614b93d6ede252ed2f7d7ff1aac90 files/digest-unixODBC-2.2.2 67
 MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6 67
-MD5 4eaaa819fc28ee784da166d14e9f7fad files/digest-unixODBC-2.2.6-r1 67
 MD5 a60388d8cb9cb0dca3df5429fb364051 files/digest-unixODBC-2.2.8 67
-MD5 ffd3cee4e2a1f6dffc130557ccda934b files/gentoo-yac.diff 316
-MD5 89baf6f14a595b00635ca0b91ee525de files/unixODBC-2.2.6-configure.in.patch 239
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3nN+EZCkKN40op4RAiZIAJ0fFGl7Jv9HJ4Qq1M2bfDS1Y89A/QCfQZJo
+jDMUIvcCqj4JRY0R+YTaWgI=
+=jmPu
+-----END PGP SIGNATURE-----
