@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libIDL
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.32 2004/12/29 22:19:53 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.33 2005/01/22 21:39:33 j4rg0n Exp $
+
+  22 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> libIDL-0.8.4.ebuild:
+  Unstable ppc-macos
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -11,7 +14,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> libIDL-0.8.4.ebuild:
   Stable on amd64.
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libIDL-0.8.4.ebuild:
+  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> libIDL-0.8.4.ebuild:
   Stable on alpha.
 
   11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> libIDL-0.8.4.ebuild:
@@ -31,7 +34,7 @@
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> libIDL-0.8.3.ebuild:
   Stable on sparc
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libIDL-0.8.3.ebuild:
+  04 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> libIDL-0.8.3.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Tom Gall <tgall@gentoo.org> libIDL-0.8.3.ebuild:

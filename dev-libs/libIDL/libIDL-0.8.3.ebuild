@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.3.ebuild,v 1.13 2004/10/27 16:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.3.ebuild,v 1.14 2005/01/22 21:39:33 j4rg0n Exp $
 
 inherit gnome2
 
