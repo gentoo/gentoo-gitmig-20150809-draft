@@ -1,18 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.5 2003/02/23 20:04:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r7.ebuild,v 1.1 2003/02/27 06:20:43 vapier Exp $
 
 inherit eutils
 
-IUSE="ipv6 static"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="Excellent high-performance DNS services."
+DESCRIPTION="Excellent high-performance DNS services"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~sparc ~ppc ~alpha ~mips ~hppa"
+IUSE="ipv6 static"
 
 RDEPEND=">=sys-apps/daemontools-0.70
 	sys-apps/ucspi-tcp"
@@ -24,11 +22,11 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 
 src_unpack() {
 	unpack ${A}
-	
 	cd ${S}
-	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
-	epatch  ${DISTDIR}/round-robin.patch
 
+	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
+	epatch ${DISTDIR}/round-robin.patch
+	epatch ${FILESDIR}/${PV}-errno.patch
 	use ipv6 && epatch ${WORKDIR}/djbdns-1.05-ipv6-gentoo.diff
 }
 

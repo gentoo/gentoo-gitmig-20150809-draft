@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.16 2003/02/18 10:05:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.17 2003/02/27 06:20:43 vapier Exp $
+
+*djbdns-1.05-r7 (26 Feb 2003)
+
+  26 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  errno fix for #16396 (#16267).
 
 *djbdns-1.05-r6 (12 Feb 2003)
 
