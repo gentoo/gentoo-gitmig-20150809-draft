@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
+<maintainer>
+  <email>usata@gentoo.org</email>
+  <name>Mamoru KOMACHI</name>
+  <description>I'm not currently using it by myself, so if you are
+  an active user and willing to take maintainership of it, please
+  contact me personally.
+  </description>
+</maintainer>
 </pkgmetadata>

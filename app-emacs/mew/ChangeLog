@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.17 2003/08/24 17:57:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.18 2003/09/13 00:18:04 usata Exp $
 
 *mew-3.3 (29 Jul 2003)
 
@@ -70,6 +70,11 @@
   Version bump.
 
 *mew-2.3-r1 (07 Aug 2003)
+
+  13 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.3-r1.ebuild:
+  Fixed mandir.  Added cjk IUSE flag to determine whether to install
+  Japanese info.  You may need to add (auto-compression-mode) to your
+  .emacs file to read Japanese info correctly.
 
   13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.3-r1.ebuild:
   Marked stable
