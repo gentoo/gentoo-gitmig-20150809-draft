@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.7 2004/05/12 20:04:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.8 2004/05/24 00:16:51 vapier Exp $
 
 inherit eutils
 
@@ -19,9 +19,10 @@ SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
 	mirror://gentoo/${MY_P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
-SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86 ~ppc ~sparc alpha hppa ~mips amd64 ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -62,4 +63,3 @@ src_install () {
 	cd ${S}
 	dodoc ChangeLog README
 }
-
