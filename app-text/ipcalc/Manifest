@@ -1,5 +1,5 @@
 MD5 77a0a0b7daf584bea95d58dda8da0297 ChangeLog 1215
-MD5 a1c4beb37335495c0e1964b2a77ab79f ipcalc-0.37.ebuild 699
-MD5 9b9dd70c74f75802472f449c70f49cdd ipcalc-0.35.ebuild 692
+MD5 284d06b815258878a7db319b3a078f6f ipcalc-0.35.ebuild 687
+MD5 d8307d278aba283fc3597bad14986975 ipcalc-0.37.ebuild 695
 MD5 ef5f53a6735c525771c20b1e5efbda4f files/digest-ipcalc-0.35 61
 MD5 db6d4e6711e63467c59f936c53991bd2 files/digest-ipcalc-0.37 61

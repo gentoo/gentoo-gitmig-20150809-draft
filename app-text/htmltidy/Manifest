@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6f8254e8f803b7a8a809876cdd510d4 htmltidy-4.8.6.ebuild 2529
-MD5 de1eaa439d32075bd4a0eb92fd87c2e5 htmltidy-3.10.29.ebuild 2524
 MD5 1edc2a1e949630e6fff475421048f38c ChangeLog 3873
+MD5 16d71c94f752899b2e55c57a5d1b2266 htmltidy-3.10.29.ebuild 2521
+MD5 6adc4939a32a29cc2fb05edfce6513f0 htmltidy-4.8.6.ebuild 2525
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 2fe7c73c1e39e2714ee35931b23b0b22 files/03-htmltidy-docbook.patch 2948
-MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
 MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
 MD5 47ad3e22b233024cc46fa12e2e56656b files/03-html2db-null.patch 4249
+MD5 2fe7c73c1e39e2714ee35931b23b0b22 files/03-htmltidy-docbook.patch 2948
 MD5 3e05bf3979c6a34b1b4166a2caee4024 files/04-htmltidy-docbook.patch 2975
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBar1oCHk4+ZoBpvsRAhxLAJ9s4Tsc0NmDHgysx1pXzX3n2N46twCfcC2G
-mPanivrJNSrPIKwRGBqVd3c=
-=do3b
------END PGP SIGNATURE-----
+MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
