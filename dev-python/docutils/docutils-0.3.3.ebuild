@@ -1,20 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3_pre20030530-r3.ebuild,v 1.5 2004/06/12 21:08:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3.ebuild,v 1.1 2004/06/12 21:08:12 kloeri Exp $
+
+inherit distutils eutils
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P}.tgz"
+SRC_URI="mirror://sourceforge/docutils/${P}-alpha.tar.gz"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE=""
 
-inherit distutils
-
 DEPEND=">=dev-lang/python-2.1"
-S=${WORKDIR}/${PN}
+
+# GLEP version
+GLEP_SRC=${FILESDIR}/glep-${PVR}
+
+src_unpack() {
+	unpack ${A}
+	# simplified algorithm to select installing optparse and textwrap
+	epatch ${FILESDIR}/${P}-extramodules.patch
+}
 
 src_compile() {
 	distutils_src_compile
@@ -48,14 +56,14 @@ src_install() {
 	do
 		install_txt_doc $doc
 	done
-	# Gentoo GLEP tools
-	newbin ${FILESDIR}/glep.py docutils-glep.py
-	distutils_python_version
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
-	newins ${FILESDIR}/glepread.py glep.py
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
-	newins ${FILESDIR}/glepstrans.py gleps.py
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
-	newins ${FILESDIR}/glep_htmlwrite.py glep_html.py
-}
 
+	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
+	distutils_python_version
+	newbin ${GLEP_SRC}/glep.py docutils-glep.py
+	insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
+	newins ${GLEP_SRC}/glepread.py glep.py
+	insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
+	newins ${GLEP_SRC}/glepstrans.py gleps.py
+	insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
+	newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py
+}
