@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/gnomedb-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.5 2005/02/07 19:33:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomedb-sharp/ChangeLog,v 1.6 2005/02/21 19:44:06 latexer Exp $
+
+*gnomedb-sharp-1.0.6 (20 Feb 2005)
+
+  20 Feb 2005; Peter Johanson <latexer@gentoo.org>
+  +gnomedb-sharp-1.0.6.ebuild:
+  Bump.
 
   07 Feb 2005; David Holm <dholm@gentoo.org> gnomedb-sharp-1.0.4.ebuild:
   Added to ~ppc.
