@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.27 2003/01/22 17:33:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.28 2003/01/25 17:42:32 mholzer Exp $
 
 *imagemagick-5.5.3.2 (03 Jan 2003)
+
+  25 Jan 2003; Martin Holzer <mholzer@gentoo.org> imagemagick-5.5.3.2.ebuild
+  using flag-o-magic to force i586 for k6. Closes #14343.
 
   03 Jan 2003; Seemant Kulleen <seemant@gentoo.org>
   imagemagick-5.5.3.2.ebuild files/digest-imagemagick-5.5.3.2 :
