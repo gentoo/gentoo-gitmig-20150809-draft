@@ -1,7 +1,16 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.2 2002/07/18 14:40:44 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.3 2002/09/03 08:34:46 mkennedy Exp $
 
+*nload-0.5.0 (3 Sep 2002)
+
+  3 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  nload-0.5.0.ebuild, files/digest-nload-0.5.0,
+  files/nload-0.5.0-gcc-gentoo.patch :
+
+  Resolves bug #7399. Version bump to 0.5.0 and add patch to correct
+  C++ compile problems on gcc3.2. Added minor fix to get a happy
+  repoman.
 
 *nload-0.4.0 (14 Jun 2002)
 
