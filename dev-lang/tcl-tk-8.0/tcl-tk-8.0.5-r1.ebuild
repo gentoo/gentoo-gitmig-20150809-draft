@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.0/tcl-tk-8.0.5-r1.ebuild,v 1.1 2000/08/07 18:11:24 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.0/tcl-tk-8.0.5-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
 #
 
 P=tcl-tk-8.0.5
@@ -22,7 +22,6 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}"
 HOMEPAGE="http:/dev.scriptics.com/software/tcltk/"
 
 DESCRIPTION="Tool Command Language"
-CATEGORY=dev-lang
 
 # hyper-optimizations untested...
 #

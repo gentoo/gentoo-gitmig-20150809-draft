@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.0-r1.ebuild,v 1.1 2000/08/07 18:11:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.0-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
 
 P=php-4.0.0
 A="php-4.0.0.tar.gz number4.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting languag"
-CATEGORY=dev-lang
 SRC_URI="http://www.php.net/distributions/php-4.0.0.tar.gz
 	 http://www.php.net/extra/number4.tar.gz"
 HOMEPAGE="http://www.php.net"
