@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.1.ebuild,v 1.3 2003/10/22 19:22:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.4.3.ebuild,v 1.1 2003/10/22 19:22:42 usata Exp $
 
 IUSE="arts esd gnome nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Are you talking to me? - MSN, Jabber, IRC, ICQ, AIM, SMTP instant messenger"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-HOMEPAGE="http://ayttm.sourceforge.net"
+HOMEPAGE="http://ayttm.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/audiofile
@@ -21,25 +21,13 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 src_compile() {
 
-	local myconf="--enable-smtp --enable-xft"
-
-	use arts \
-		&& myconf="--enable-arts" \
-		|| myconf="--disable-arts"
-
-	use esd \
-		&& myconf="${myconf} --enable-esd" \
-		|| myconf="${myconf} --disable-esd"
-
-	use gnome \
-		&& myconf="${myconf} --with-gnome" \
-		|| myconf="${myconf} --without-gnome"
-
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
-
-	econf ${myconf} || die
+	econf \
+		--enable-smtp \
+		--enable-xft \
+		`use_enable arts` \
+		`use_enable esd` \
+		`use_enable gnome` \
+		`use_enable nls` || die
 	emake || die
 
 }
