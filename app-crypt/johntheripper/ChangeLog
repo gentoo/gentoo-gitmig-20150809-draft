@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.13 2004/05/22 01:42:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.14 2004/05/24 00:21:54 dragonheart Exp $
+
+*johntheripper-1.6.37-r1 (24 May 2004)
+
+  24 May 2004; Daniel Black <dragonheart@gentoo.org>
+  +johntheripper-1.6.37-r1.ebuild, -johntheripper-1.6.37.ebuild:
+  Fixed patches
 
 *johntheripper-1.6.37 (22 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37.ebuild,v 1.1 2004/05/22 01:42:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.1 2004/05/24 00:21:54 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/john/"
 SRC_URI="http://www.openwall.com/john/b/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}-gentoo.patch"
+	mirror://gentoo/${PF/theripper/}-gentoo.patch"
 
 #
 # john-{$PV}-gentoo.patch is a heavly hacked combination of:
@@ -20,6 +20,7 @@ SRC_URI="http://www.openwall.com/john/b/${MY_P}.tar.gz
 #        ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6-mysql-1.diff
 #        ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6.31-eggpatch-8.diff.gz
 #
+
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -38,13 +39,18 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${DISTDIR}/${MY_P}-gentoo.patch
+	epatch ${DISTDIR}/${PF/theripper/}-gentoo.patch
 }
 
 src_compile() {
 	cd src
-	sed -i -e "s:-march=i486::" -e "s:-Wall -O2:${CFLAGS}:" \
+	sed -i -e "s:^\(CFLAGS =.*\):\1 ${CFLAGS}:" \
 		Makefile
+
+	sed -i -e 's:^#define CFG_ALT_NAME.*:#define CFG_ALT_NAME "/etc/john.ini":' \
+	-e 's:^#define WORDLIST_NAME.*:#define WORDLIST_NAME "/usr/share/john/password.lst":' \
+	params.h
+
 	local OPTIONS="EGG=true"
 	use kerberos && OPTIONS="${OPTIONS} KERBEROS=true"
 	use ntlm && OPTIONS="${OPTIONS} NTLM=true"
@@ -52,10 +58,10 @@ src_compile() {
 	use mysql && OPTIONS="${OPTIONS} MYSQL=true"
 
 	if use x86 ; then
-		local K6=is-flag "-march=k6-3" || is-flag "-march=k6-2" || is-flag "-march=k6"
 		if use mmx ; then
 			emake ${OPTIONS} linux-x86-mmx-elf || die "Make failed"
-		elif ${K6} ; then
+		elif is-flag "-march=k6-3" || is-flag "-march=k6-2" \
+			|| is-flag "-march=k6"; then
 			emake ${OPTIONS} linux-x86-k6-elf || die "Make failed"
 		else
 			emake ${OPTIONS} generic || die "Make failed"
