@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.11 2004/06/24 22:12:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.12 2004/12/28 21:20:17 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> gnus-5.10.6.ebuild:
   Stable on sparc.
@@ -9,7 +12,7 @@
   gnus-5.10.6.ebuild:
   fix use invocation
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnus-5.10.6.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnus-5.10.6.ebuild:
   Stable on alpha.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnus-5.10.3.ebuild,
