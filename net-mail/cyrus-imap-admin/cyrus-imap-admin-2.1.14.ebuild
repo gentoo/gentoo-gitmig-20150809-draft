@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.14.ebuild,v 1.3 2003/09/05 08:43:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.14.ebuild,v 1.4 2003/09/10 01:16:25 rac Exp $
 
 inherit perl-module eutils
 
@@ -29,7 +29,6 @@ DEPEND="virtual/glibc
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.14
 	>=sys-apps/tcp-wrappers-7.6
-	dev-perl/ExtUtils-MakeMaker
 	dev-perl/Term-ReadLine-Perl
 	dev-perl/TermReadKey
 	sys-libs/libtermcap-compat"
