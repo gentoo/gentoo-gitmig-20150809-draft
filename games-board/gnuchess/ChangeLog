@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.5 2004/01/24 13:22:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.6 2004/01/30 22:19:24 mr_bones_ Exp $
+
+*gnuchess-5.07 (30 Jan 2004)
+
+  30 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> gnuchess-5.07.ebuild:
+  version bump (bug 39906)
 
   24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> gnuchess-5.05.ebuild,
   gnuchess-5.06.ebuild:
