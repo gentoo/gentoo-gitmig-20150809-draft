@@ -1,4 +1,14 @@
-MD5 782e5ef8c55928dd6a10ecf7d6885e86 active-dvi-1.4.0.ebuild 2395
-MD5 eacd0304fd39e17073bc3690bcfba1e6 ChangeLog 930
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 220746e1b7524161fd35929d89bfd716 active-dvi-1.4.0.ebuild 2411
+MD5 80dbd122c24d3e4149fcddc707bba382 ChangeLog 1052
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 93c4ba321a1dbd54e7f85e41348902b7 files/digest-active-dvi-1.4.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBO6jULLFUmVNQ7rkRAjmOAKDDQT2Kq8/nBz5gHSKByj43BRnxuwCglHic
+pNUlbzeRr1Q7yUwGxOgHjRU=
+=kbfQ
+-----END PGP SIGNATURE-----
