@@ -25,8 +25,7 @@ alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 apm - Adds APM (Advanced Power Management) support
 arts - Adds support for kde-base/kdelibs / kde-base/arts
 atlas - Adds support for atlas instead of blas in dev-lang/R 
-avi - Adds Win32 AVI support and also adds avifile support
-avifile - Adds support for media-video/avifile (Library for AVI-Files)
+avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootcd - Used for building a package without manpages, extras for ISO image
