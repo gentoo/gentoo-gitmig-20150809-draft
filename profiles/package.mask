@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <karltk@gentoo.org> (28 Jul 2002)
+# being tested on x86, ppc
+=dev-lisp/sbcl-0.7.6
+
 # <verwilst@gentoo.org> (28 Jul 2002)
 # stupid thing can't find a c++ compiler half the time
 >=sys-apps/groff-1.1.17
