@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.19 2003/08/25 10:14:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.20 2003/09/10 16:49:54 phosphan Exp $
+
+  10 Sep 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.12-r1.ebuild:
+  Fixed access violation when generating sane.ps (bug #28303).
+  Now bug 23974 should really be dead.
 
 *sane-backends-1.0.12-r1 (25 Aug 2003)
 

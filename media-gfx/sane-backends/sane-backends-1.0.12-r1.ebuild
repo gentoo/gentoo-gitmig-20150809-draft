@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.12-r1.ebuild,v 1.2 2003/09/06 23:56:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.12-r1.ebuild,v 1.3 2003/09/10 16:49:54 phosphan Exp $
 
 IUSE=""
 
@@ -41,7 +41,7 @@ src_unpack() {
         eend 0
 
 	#only generate the .ps and not the fonts
-	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M0 -o sane.ps:' \
+	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
 		${S}/doc/Makefile.in
 }
 
