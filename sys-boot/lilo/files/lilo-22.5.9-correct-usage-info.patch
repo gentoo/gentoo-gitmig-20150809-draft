@@ -1,0 +1,13 @@
+diff -uNr lilo-22.5.8-ORIG/lilo.c lilo-22.5.8/lilo.c
+--- lilo-22.5.8-ORIG/lilo.c	2004-06-07 19:47:58.028442608 +0100
++++ lilo-22.5.8/lilo.c	2004-06-07 19:50:17.837188448 +0100
+@@ -336,7 +336,8 @@
+     fprintf(errstd,"%7s%s -M /dev/XXX [ mbr | ext ]\tinstall master boot record\n","",name);
+     fprintf(errstd,"%7s%s -T help \t\t\tlist additional options\n", "", name);
+     fprintf(errstd,"%7s%s -X\t\t\t\tinternal compile-time options\n", "", name);
+-    fprintf(errstd,"%7s%s -V [ -v ]\t\t\tversion information\n\n","",name);
++    fprintf(errstd,"%7s%s -V\t\t\t\tversion information\n","",name);
++    fprintf(errstd,"%7s%s -v\t\t\t\tverbose mode\n\n","",name);
+     exit(1);
+ }
+ 
