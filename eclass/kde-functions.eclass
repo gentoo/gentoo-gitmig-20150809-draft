@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.104 2005/02/11 16:20:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.105 2005/02/11 16:35:30 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -44,11 +44,7 @@ kde-base/kdeaddons kde-base/kdeaddons-docs-kate-plugins
 kde-base/kdeaddons kde-base/kdeaddons-docs-kicker-applets
 kde-base/kdeaddons kde-base/kdeaddons-docs-konq-plugins
 kde-base/kdeaddons kde-base/kdeaddons-kfile-plugins
-kde-base/kdeaddons kde-base/kicker-kbinaryclock
-kde-base/kdeaddons kde-base/kicker-kolourpicker
-kde-base/kdeaddons kde-base/kicker-ktimemon
-kde-base/kdeaddons kde-base/kicker-math
-kde-base/kdeaddons kde-base/kicker-mediacontrol
+kde-base/kdeaddons kde-base/kicker-applets
 kde-base/kdeaddons kde-base/knewsticker-scripts
 kde-base/kdeaddons kde-base/konqueror-akregator
 kde-base/kdeaddons kde-base/konqueror-arkplugin
