@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/zebra
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.8 2003/07/13 12:01:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/ChangeLog,v 1.9 2003/09/05 04:27:52 solar Exp $
+
+*zebra-0.93b-r2 (05 Sep 2003)
+
+  05 Sep 2003; <solar@gentoo.org> zebra-0.93b-r1.ebuild,
+  zebra-0.93b-r2.ebuild:
+  Please note this is the last planned zebra release that Gentoo should support.
+  GNU Zebra almost does not qualify as GNU Software, read the zebra mailing list
+  for more info. Gentoo will continue it's support of routing software using
+  Quagga a GNU Zebra fork
 
   13 Jul 2003; <solar@gentoo.org> zebra-0.93b-r1.ebuild:
   Amir Guindehi amir@datacore.ch submitted the first zebra ebuild to the
