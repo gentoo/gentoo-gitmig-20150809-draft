@@ -14,6 +14,7 @@ else
 	#1.0 and later
 	PYTHON=/usr/bin/python
 fi
+
 #We really need to upgrade baselayout now that it's possible:
 myBASELAYOUT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/baselayout | sed 's:^\*::'`
 myPORTAGE=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-apps/portage | sed 's:^\*::'`
@@ -22,6 +23,8 @@ myBINUTILS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/binutil
 myGCC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
 myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
 myTEXINFO=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-apps/texinfo |sed 's:^\*::'`
+myZLIB=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-libs/zlib |sed 's:^\*::'`
+myNCURSES=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-libs/ncurses |sed 's:^\*::'`
 
 echo "Using $myBASELAYOUT"
 echo "Using $myPORTAGE"
@@ -30,14 +33,26 @@ echo "Using $myGCC"
 echo "Using $myGETTEXT"
 echo "Using $myGLIBC"
 echo "Using $myTEXINFO"
+echo "Using $myZLIB"
+echo "Using $myNCURSES"
 
 #This should not be set to get glibc to build properly. See bug #7652.
 LD_LIBRARY_PATH=""
 
+#We do not want stray $TMP or $TMPDIR settings
+unset TMP TMPDIR
+
 cleanup() {
-	cp /etc/make.conf.build /etc/make.conf
+	if [ -f /etc/make.conf.build ]
+	then
+		mv -f /etc/make.conf.build /etc/make.conf
+	fi
 	exit $1
 }
+
+#Trap ctrl-c and stuff.  This should fix the users make.conf
+#not being restored.
+trap "cleanup" INT QUIT TSTP
 
 #USE may be set from the environment so we back it up for later.
 export ORIGUSE="`$PYTHON -c 'import portage; print portage.settings["USE"];'`"
@@ -69,15 +84,22 @@ then
 	export FTP_PROXY
 fi
 
-export CONFIG_PROTECT="-*"
 # disable autoclean, or it b0rks
 export AUTOCLEAN="no"
+
+export CONFIG_PROTECT="-*"
 #above allows portage to overwrite stuff
+
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
 emerge $myBASELAYOUT $myTEXINFO $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
 export USE="$ORIGUSE bootstrap"
-emerge $myGLIBC $myBASELAYOUT $myTEXINFO $myGETTEXT $myBINUTILS $myGCC || cleanup 1
+emerge $myGLIBC $myBASELAYOUT $myTEXINFO $myGETTEXT $myZLIB $myBINUTILS $myGCC || cleanup 1
+#ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
+export USE="$ORIGUSE"
+emerge $myNCURSES"
+
 #restore original make.conf
 cleanup 0
+
