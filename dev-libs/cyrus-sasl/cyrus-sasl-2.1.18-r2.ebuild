@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r2.ebuild,v 1.4 2004/08/02 11:42:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18-r2.ebuild,v 1.5 2004/08/10 20:39:31 langthang Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -86,6 +86,11 @@ src_compile() {
 	myconf="${myconf} `use_with mysql` `use_enable mysql sql`"
 	myconf="${myconf} `use_with postgres pgsql` `use_enable postgres sql`"
 	myconf="${myconf} `use_enable java` `use_with java javahome ${JAVA_HOME}`"
+
+	# fix for bug #59634. langthang 20040810.
+	if ! use ssl; then
+		myconf="${myconf} --without-des"
+	fi
 
 	if use mysql || use postgres ; then
 		myconf="${myconf} --enable-sql"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.3 2004/07/26 16:27:25 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.19.ebuild,v 1.4 2004/08/10 20:39:31 langthang Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -44,9 +44,9 @@ pkg_setup() {
 		einfo "to build cyrus-sasl with Berkeley database as your SASLdb backend."
 		)
 		echo
-		ewarn "Waiting 30 seconds before starting..."
+		ewarn "Waiting 10 seconds before starting..."
 		ewarn "(Control-C to abort)..."
-		sleep 30
+		sleep 10
 	fi
 
 	echo
@@ -58,8 +58,8 @@ pkg_setup() {
 	einfo "SASLAUTHD_OPTS=\"\${SASLAUTH_MECH} -a pam -r\""
 	einfo "Don't forget to restart the service: \`/etc/init.d/saslauthd restart\`."
 	echo
-	einfo "Pause 30 seconds before continuing."
-	sleep 30
+	einfo "Pause 10 seconds before continuing."
+	sleep 10
 }
 
 src_unpack() {
@@ -107,6 +107,11 @@ src_compile() {
 	myconf="${myconf} `use_with mysql` `use_enable mysql sql`"
 	myconf="${myconf} `use_with postgres pgsql` `use_enable postgres sql`"
 	myconf="${myconf} `use_enable java` `use_with java javahome ${JAVA_HOME}`"
+
+	# fix for bug #59634. langthang 20040810.
+	if ! use ssl; then
+		myconf="${myconf} --without-des"
+	fi
 
 	if use mysql || use postgres ; then
 		myconf="${myconf} --enable-sql"
