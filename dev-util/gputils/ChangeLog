@@ -1,9 +1,14 @@
 # ChangeLog for dev-util/gputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/ChangeLog,v 1.5 2003/06/27 09:34:32 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/ChangeLog,v 1.6 2003/09/22 20:14:56 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
+*gputils-0.11.6 (22 Sep 2003)
+
+  22 Sep 2003; Stefan Jones <cretin@gentoo.org> :
+  New unstable version
+	
 *gputils-0.11.4 (27 Jun 2003)
 
   27 Jun 2003; Stefan Jones <cretin@gentoo.org> :
