@@ -1,0 +1,4 @@
+MD5 4009d9eb928ff19d39accdd3010e5961 ChangeLog 288
+MD5 86539016af97446c30e3d5fd8838fd7f macosd-0.1.7.ebuild 1210
+MD5 43cd825ea802fb0841d757bb667229cf files/macosd-0.1.7-include-fix.diff 1068
+MD5 b06e205ccef0f87bc5dca70acf5e99a7 files/digest-macosd-0.1.7 65
