@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.2 2004/08/10 12:03:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50.ebuild,v 1.3 2004/08/16 07:13:37 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jumpbump.mine.nu/port/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
-IUSE="svga fbcon"
+IUSE="X svga fbcon"
 
 RDEPEND="virtual/libc
 	X? ( virtual/x11 )
