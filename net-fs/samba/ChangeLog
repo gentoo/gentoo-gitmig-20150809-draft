@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.90 2004/07/22 14:46:42 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.91 2004/07/23 17:53:14 satya Exp $
+
+*samba-3.0.5-r1 (23 Jul 2004)
+
+  23 Jul 2004; Christian Andreetta <satya@gentoo.org> metadata.xml,
+  +files/samba-3.0.x-python-setup.patch,
+  +files/samba-3.0.x-smbumount-uid32.patch, +files/samba-3.0.x.patch,
+  +samba-3.0.5-r1.ebuild, samba-3.0.5.ebuild:
+  Various contributors (see comments in ebuild): development traced in bug #58090
 
 *samba-3.0.5 (22 Jul 2004)
 
