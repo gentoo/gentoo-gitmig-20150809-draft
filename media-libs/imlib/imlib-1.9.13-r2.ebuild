@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.13.ebuild,v 1.1 2002/03/17 21:45:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.13-r2.ebuild,v 1.1 2002/04/12 18:47:27 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Imlib is a general Image loading and rendering library."
@@ -10,28 +10,25 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 	 ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="virtual/glibc
-	>=media-libs/giflib-4.1.0
-	>=media-libs/libpng-1.0.7
-	>=media-libs/tiff-3.5.5
-	>=media-libs/libungif-4.1.0
-	>=sys-libs/zlib-1.1.3-r2
+DEPEND="virtual/x11
 	>=x11-libs/gtk+-1.2.10-r4
-	virtual/x11"
+	>=media-libs/tiff-3.5.5
+	gif? ( >=media-libs/giflib-4.1.0 )
+	png? ( >=media-libs/libpng-1.2.1 )
+	jpeg? ( >=media-libs/jpeg-6b )"
 
 src_compile() {
 	
 	#update libtool to fix "relink" bug
 	libtoolize --copy --force
-	aclocal
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
-		--sysconfdir=/etc/imlib \
-		|| die
-	emake
+		--sysconfdir=/etc/imlib || die
+		
+	emake || die
 }
 
 src_install() {
@@ -42,11 +39,10 @@ src_install() {
 		sysconfdir=${D}/etc/imlib \
 		install || die
 
-  preplib /usr
+	preplib /usr
 
-  dodoc AUTHORS COPYING* ChangeLog README
-  dodoc NEWS
-  docinto html
-  dodoc doc/*.gif doc/index.html
+	dodoc AUTHORS COPYING* ChangeLog README
+	dodoc NEWS
+	dohtml -r doc
 }
 
