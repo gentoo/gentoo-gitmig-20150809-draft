@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.3 2003/08/27 10:55:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.4 2003/09/04 12:59:30 stuart Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -83,6 +83,72 @@ kernel-mod_getversion ()
 	KV_TYPE="$KV_MK_TYPE"
 
 	einfo "Building for Linux ${KV_VERSION_FULL} found in ${KERNEL_DIR}"
+}
+
+kernel-mod_checkzlibinflate_configured ()
+{
+	einfo "Checking for status of CONFIG_ZLIB_INFLATE support in your kernel"
+
+	. ${KERNEL_DIR}/.config || die "kernel has not been configured yet"
+	[ "$CONFIG_ZLIB_INFLATE" != "y" ] && kernel-mod_badconfig_zlib
+	[ "$CONFIG_ZLIB_DEFLATE" != "y" ] && kernel-mod_badconfig_zlib
+
+	# bug #27882 - zlib routines are only linked into the kernel
+	# if something compiled into the kernel calls them
+	#
+	# plus, for the cloop module, it appears that there's no way
+	# to get cloop.o to include a static zlib if CONFIG_MODVERSIONS
+	# is on
+
+	# get the line numbers of the lines that default CONFIG_ZLIB_INFLATE
+	# to 'y'
+
+	local LINENO_START
+	local LINENO_END
+	local SYMBOLS
+	local x
+
+	LINENO_END="`grep -n 'CONFIG_ZLIB_INFLATE y' ${KERNEL_DIR}/lib/Config.in | cut -d : -f 1`"
+	LINENO_START="`head -n $LINENO_END ${KERNEL_DIR}/lib/Config.in | grep -n 'if \[' | tail -n 1 | cut -d : -f 1`"
+	(( LINENO_AMOUNT = $LINENO_END - $LINENO_START ))
+	(( LINENO_END = $LINENO_END - 1 ))
+	
+	SYMBOLS="`head -n $LINENO_END ${KERNEL_DIR}/lib/Config.in | tail -n $LINENO_AMOUNT | sed -e 's/^.*\(CONFIG_[^\" ]*\).*/\1/g;'`"
+
+	# okay, now we have a list of symbols
+	# we need to check each one in turn, to see whether it is set or not
+
+	for x in $SYMBOLS ; do
+		if [ "${!x}" = "y" ]; then
+			# we have a winner!
+			einfo "${x} ensures zlib is linked into your kernel - excellent"
+			return 0
+		fi
+	done
+
+	# if we get to here, the kernel config needs changing
+	#
+	# I have made this an error, because otherwise this warning will
+	# scroll off the top of the screen and be lost
+
+	eerror
+	eerror "This kernel module requires ZLIB library support."
+	eerror "You have enabled zlib support in your kernel, but haven't enabled"
+	eerror "enabled any option that will ensure that zlib is linked into your"
+	eerror "kernel."
+	eerror
+	eerror "Please ensure that you enable at least one of these options:"
+	eerror
+
+	for x in $SYMBOLS ; do
+		eerror "  * $x"
+	done
+
+	eerror
+	eerror "Please remember to recompile and install your kernel, and reboot"
+	eerror "into your new kernel before attempting to load this kernel module."
+
+	die "Kernel doesn't include zlib support"
 }
 
 kernel-mod_src_compile ()
