@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.12 2004/07/01 07:59:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.13 2004/07/07 18:33:17 hardave Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 IUSE="alsa oss oggvorbis mad encode"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 ~mips"
 LICENSE="LGPL-2.1"
 
 DEPEND="virtual/libc
@@ -17,6 +19,10 @@ DEPEND="virtual/libc
 	mad? media-sound/madplay"
 
 src_compile () {
+
+	# Needed on mips and probablly others
+	gnuconfig_update
+
 	# 12.17.4 has mp3 encoding/decoding if you have madlibs and lame
 	# using alsa by default
 	local myconf

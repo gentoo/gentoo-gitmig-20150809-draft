@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.23 2004/07/01 07:59:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.24 2004/07/07 18:33:17 hardave Exp $
+
+  07 Jul 2004; Hardave Riar <hardave@gentoo.org> sox-12.17.4-r1.ebuild:
+  Added ~mips KEYWORD and gnuconfig_update
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sox-12.17.3-r3.ebuild, sox-12.17.4-r1.ebuild:
