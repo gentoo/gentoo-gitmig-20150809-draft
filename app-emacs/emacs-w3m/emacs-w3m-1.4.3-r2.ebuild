@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.2.ebuild,v 1.5 2005/01/01 13:44:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.3-r2.ebuild,v 1.1 2005/03/05 15:19:08 usata Exp $
 
-inherit elisp
+inherit elisp eutils
 
 IUSE=""
 MY_P="${P/_/}"
@@ -10,14 +10,14 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="emacs-w3m is an interface program of w3m on Emacs."
 HOMEPAGE="http://emacs-w3m.namazu.org"
-SRC_URI="http://emacs-w3m.namazu.org/${MY_P}.tar.gz"
+SRC_URI="http://emacs-w3m.namazu.org/${MY_P}.tar.gz
+	mirror://gentoo/w3m-e23.el.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc"
+KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 
-DEPEND="virtual/emacs
-	virtual/w3m"
+DEPEND="virtual/w3m"
 
 pkg_setup() {
 	# use async doesn't ensure you built w3m with async flag,
@@ -31,7 +31,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	mv w3m-e23.el ${S} || die
+	cd ${S}
+	epatch ${FILESDIR}/${P}-e23.diff
+}
+
 src_compile() {
+	autoconf || die
 	./configure --prefix=/usr \
 		--with-lispdir=${SITELISP}/${PN} \
 		--with-icondir=/usr/share/${PN}/icon
