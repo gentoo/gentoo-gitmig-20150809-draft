@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r1.ebuild,v 1.4 2004/06/24 23:29:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r1.ebuild,v 1.5 2004/07/15 02:23:37 agriffis Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Qmail Queue Repair Application with support for big-todo"
 SRC_URI="http://www.netmeridian.com/e-huss/${P}.tar.gz
 		mirror://qmail/queue-fix-todo.patch"
@@ -37,4 +36,3 @@ src_install () {
 	doins queue-fix
 	dodoc README CHANGES
 }
-
