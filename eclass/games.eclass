@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.60 2004/03/31 23:45:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.61 2004/04/02 02:18:15 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -143,19 +143,15 @@ games_ut_unpack() {
 		die "You must provide an argument to games_ut_unpack"
 	fi
 	if [ -f "${ut_unpack}" ]; then
-		./ucc-bin decompress ${ut_unpack} --nohomedir || die "uncompressing file ${ut_unpack}"
+		./ucc-bin decompress ${ut_unpack} --nohomedir 2>&1 \
+			|| die "uncompressing file ${ut_unpack}"
 	fi
 	if [ -d "${ut_unpack}" ]; then
 		for f in `find ${ut_unpack} -name '*.uz*' -printf '%f '` ; do
-			./ucc-bin decompress ${ut_unpack}/${f} --nohomedir || die "uncompressing file ${f}"
-			#mv System/${f:0:${#f}-3} ${ut_unpack} || die "moving file ${f}
-			rm ${ut_unpack}/${f} || die "deleting compressed file ${f}"
+			./ucc-bin decompress ${ut_unpack}/${f} --nohomedir 2>&1 \
+				|| die "uncompressing file ${f}"
+			rm -f ${ut_unpack}/${f} || die "deleting compressed file ${f}"
 		done
-		#for f in `find ${ut_unpack} -name '*.uz' -printf '%f '` ; do
-		#	./ucc-bin decompress ${ut_unpack}/${f} --nohomedir || die "uncompressing file ${f}"
-		#	mv System/${f:0:${#f}-4} ${ut_unpack} || die "moving file ${f}"
-		#	rm ${ut_unpack}/${f} || die "deleting compressed file ${f}"
-		#done
 	fi
 }
 
