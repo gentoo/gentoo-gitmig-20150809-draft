@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/seaview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/ChangeLog,v 1.4 2004/06/25 01:44:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/seaview/ChangeLog,v 1.5 2004/11/01 02:54:57 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> seaview-1-r1.ebuild:
+  Added to x86.
 
 *seaview-1 (24 Jun 2004)
 
