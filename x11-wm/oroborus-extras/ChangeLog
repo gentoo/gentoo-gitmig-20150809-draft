@@ -1,7 +1,12 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.2 2002/04/10 10:16:29 spider Exp $
 
+*oroborus-extras-2.0.1-r1 (09 Apr 2002)
+  9 Apr 2002; Spider <spider@gentoo.org>
+  Add an update to depend on  =x11-libs/gtk+-1.2*
+  No need in upping the -r for an dependency
+  
 *oroborus-extras-2.0.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
