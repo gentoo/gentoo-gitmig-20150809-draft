@@ -1,6 +1,16 @@
-MD5 55189e774547dc651e97c91f0ea9e882 ChangeLog 1035
-MD5 1fa07c249f92c90bc09037361d6b5677 jasspa-microemacs-20021205.ebuild 1546
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 898190d3ccfd2f9f0ff1e7120e471255 jasspa-microemacs-20040301.ebuild 1712
+MD5 55189e774547dc651e97c91f0ea9e882 ChangeLog 1035
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 1fa07c249f92c90bc09037361d6b5677 jasspa-microemacs-20021205.ebuild 1546
 MD5 311c5a9595e89418254035a3e5330f2a files/digest-jasspa-microemacs-20021205 79
-MD5 27b5e8bca2502ac6ac6da3df19038057 files/digest-jasspa-microemacs-20040301 344
+MD5 f2126111b13fb10129895df8aa7b417b files/digest-jasspa-microemacs-20040301 287
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPUdI1lqEGTUzyQRAgiOAKC1uwtf+xoVJAVayIruIV9wkDbUNgCeOdw/
+7BS2/MwboPRzN+KZygrVrKU=
+=53nk
+-----END PGP SIGNATURE-----
