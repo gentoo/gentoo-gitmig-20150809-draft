@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.4.2.ebuild,v 1.3 2002/10/17 00:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.4.2.ebuild,v 1.4 2002/10/20 18:40:23 vapier Exp $
 
 S="${WORKDIR}/TinyCA"
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 DEPEND=">=dev-libs/openssl-0.9.6b
 	>=dev-perl/MIME-Base64-2.12
 	>=dev-perl/perl-tk-800.024"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.62b.ebuild,v 1.3 2002/10/17 00:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.62b.ebuild,v 1.4 2002/10/20 18:40:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="pretty printing of your mails"
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="app-text/tetex"
-RDEPEND="${DEPEND}"
 
 src_install() {
 	# understanding the install part of the Makefiles.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15.ebuild,v 1.5 2002/10/17 00:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.15.ebuild,v 1.6 2002/10/20 18:40:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A index/query system to search a large set of files quickly"
@@ -12,7 +12,6 @@ LICENSE="BSD"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	make clean

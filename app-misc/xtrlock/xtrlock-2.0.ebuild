@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0.ebuild,v 1.6 2002/10/17 00:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xtrlock/xtrlock-2.0.ebuild,v 1.7 2002/10/20 18:40:23 vapier Exp $
 
 MY_P=${PN}_${PV}-6
 S=${WORKDIR}/${P}
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	xmkmf || die

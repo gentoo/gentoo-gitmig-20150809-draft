@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-7.0-r1.ebuild,v 1.7 2002/10/17 00:08:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-7.0-r1.ebuild,v 1.8 2002/10/20 18:40:21 vapier Exp $
 
 MY_P=cku197
 S=${WORKDIR}
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	net-dialup/xc"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

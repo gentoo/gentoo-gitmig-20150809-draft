@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.8.0.ebuild,v 1.3 2002/10/17 00:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.8.0.ebuild,v 1.4 2002/10/20 18:40:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
@@ -17,7 +17,6 @@ DEPEND=">=dev-lang/python-2.0
 	dev-python/PyXML
 	dev-python/Imaging
 	dev-python/ReportLab"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz

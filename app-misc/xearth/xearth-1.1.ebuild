@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xearth/xearth-1.1.ebuild,v 1.3 2002/10/17 00:50:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xearth/xearth-1.1.ebuild,v 1.4 2002/10/20 18:40:23 vapier Exp $
 
 S=${WORKDIR}/${P}
 HOMEPAGE="http://www.cs.colorado.edu/~tuna/xearth/"
@@ -13,7 +13,6 @@ LICENSE="xearth"
 KEYWORDS="x86"
 
 DEPEND="virtual/x11"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.6 2002/10/17 14:16:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.7 2002/10/20 18:40:22 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A file manager that implements the popular two-pane design."
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

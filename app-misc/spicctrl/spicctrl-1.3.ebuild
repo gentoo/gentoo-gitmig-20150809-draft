@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spicctrl/spicctrl-1.3.ebuild,v 1.2 2002/10/17 00:52:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spicctrl/spicctrl-1.3.ebuild,v 1.3 2002/10/20 18:40:23 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="spicctrl - Tool for the sonypi-Device (found in Sony Vaio Notebooks)"
@@ -13,7 +13,6 @@ KEYWORDS="~x86 -ppc -sparc -sparc64"
 IUSE=""
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die
