@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.122 2005/03/08 12:00:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.123 2005/03/08 12:07:07 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1209,14 +1209,9 @@ gcc_do_filter_flags() {
 	#   used by xgcc for building stage2/3 compiler
 
 	if is_crosscompile; then
+		# Set this to something sane for both native and target
 		CFLAGS="-O2 -pipe"
-	fi
 
-	# If we're doing make all or making a crosscompiler, optimize
-	# our stage1.
-	# If we're a cross-compiler, set BOOT_CFLAGS, CFLAGS, and CXXFLAGS
-	# for our target.
-	if is_crosscompile; then
 		local VAR="CFLAGS_"${CTARGET//-/_}
 		CXXFLAGS=${!VAR}
 	fi
