@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/tmda
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.27 2003/02/12 08:17:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/ChangeLog,v 1.28 2003/02/23 08:14:16 agenkin Exp $
+
+*tmda-0.70 ( 23 Feb 2003 )
+
+  23 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Updated to 0.70.
+  New contrib scripts for vpomail users.
+  Now packaging all of the the contrib stuff into /usr/lib/tmda/contrib.
 
 *tmda-0.69 ( 05 Feb 2003 )
 
