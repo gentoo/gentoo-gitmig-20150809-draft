@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r6.ebuild,v 1.1 2002/08/23 17:50:37 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r6.ebuild,v 1.2 2002/08/25 22:10:04 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -23,7 +23,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {                           
 	local myconf=""
