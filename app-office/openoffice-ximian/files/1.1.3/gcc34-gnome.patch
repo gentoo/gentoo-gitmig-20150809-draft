@@ -1,0 +1,24 @@
+--- ucb/source/ucp/gvfs/directory.hxx   2004-11-09 17:19:07.354395360 +0100
++++ ucb/source/ucp/gvfs/directory.hxx   2004-11-09 17:24:48.330559104 +0100
+@@ -37,7 +37,7 @@
+ };
+ 
+ 
+-struct gvfs::DataSupplier_Impl;
++struct DataSupplier_Impl;
+ class DataSupplier : public ucb::ResultSetDataSupplier
+ {
+ private:
+--- ucb/source/ucp/gvfs/makefile.mk    2004-11-09 18:36:49.317669216 +01
+00
++++ ucb/source/ucp/gvfs/makefile.mk    2004-11-09 18:44:41.145940416 +01
+00
+@@ -4,6 +4,8 @@
+ ENABLE_EXCEPTIONS=TRUE
+ NO_BSYMBOLIC=TRUE
+ 
++LINKFLAGSDEFS = # do not fail with missing symbols
++
+ # Version
+ UCPGVFS_MAJOR=1
+ 
