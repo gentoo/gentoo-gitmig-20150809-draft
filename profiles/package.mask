@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <vapier@gentoo.org> (02 Sep 2003)
+# version for ppl to unmask until we get the balls to
+# unmask it for everyone ;)
+=dev-libs/openssl-0.9.7b-r1
+
 # <liquidx@gentoo.org> (02 Sep 2003)
 # Breaks API from 0.4.x, gnutls will break if unmasked.
 >=app-crypt/opencdk-0.5
