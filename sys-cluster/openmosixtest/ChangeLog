@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmosixtest
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.5 2004/08/25 03:02:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.6 2004/09/19 19:50:29 tantive Exp $
+
+  19 Sep 2004; Michael Imhof <tantive@gentoo.org>
+  -openmosixtest-0.1-r4.ebuild:
+  Cleaned out old ebuild.
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> openmosixtest-0.1-r6.ebuild:
   Changed SRC_URI to use mirror:// syntax.
