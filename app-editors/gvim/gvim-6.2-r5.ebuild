@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.2-r5.ebuild,v 1.6 2003/12/08 03:40:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.2-r5.ebuild,v 1.7 2003/12/09 13:02:47 agriffis Exp $
 
 inherit vim
 
 VIM_VERSION="6.2"
-VIM_GENTOO_PATCHES="vim-6.2.140-gentoo-patches.tar.bz2"
+VIM_GENTOO_PATCHES="vim-6.2.069-gentoo-patches.tar.bz2"
 VIM_ORG_PATCHES="vim-6.2.140-patches.tar.bz2"
 
 SRC_URI="${SRC_URI}
