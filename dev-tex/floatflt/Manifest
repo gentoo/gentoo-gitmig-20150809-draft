@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 d2396991ad622691968222262a0fc6cc ChangeLog 738
-MD5 e1e50c059b0fd78a93b413c1e1aca5a4 floatflt-1.31a.ebuild 697
+MD5 2b0bf8677d6785e6e396fb9f4645aabc floatflt-1.31a.ebuild 696
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 334f49057e2692bb8b1ffd35d6b3eae8 files/digest-floatflt-1.31a 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcUWTVWNWqTUmv+0RAkP2AJ0bxE0y7lFzF4ukXREeGTuP/829pACeMXXZ
-IGu+QIUzUr6CVUlfQwDwiiw=
-=0s2H
+iD8DBQFBjbb8VWNWqTUmv+0RAk3LAJ9Y6FfCSEWX5uFH0OnMr3+6eGdQ9ACgjtIH
+bzyKDW4+F+NLcCp1pnoVBJU=
+=QFDa
 -----END PGP SIGNATURE-----
