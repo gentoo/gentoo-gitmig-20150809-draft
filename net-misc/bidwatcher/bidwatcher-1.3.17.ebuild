@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.16.ebuild,v 1.2 2005/02/20 09:24:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bidwatcher/bidwatcher-1.3.17.ebuild,v 1.1 2005/02/20 09:24:08 mholzer Exp $
 
 
 MY_P=${P/_rc/-rc}
