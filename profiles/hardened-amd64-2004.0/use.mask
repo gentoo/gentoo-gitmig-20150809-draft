@@ -1,0 +1,26 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-amd64-2004.0/use.mask,v 1.1 2004/05/05 01:20:59 lv Exp $
+
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+#sse
+#sse2
+3dnow
+
+# x86 binary only for now
+icc
+
+# Firebird doesnt build on amd64
+firebird
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+
+# x86 binary only, used by php
+fdftk
