@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.45 2004/03/14 06:43:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.46 2004/05/05 06:39:17 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -18,15 +18,14 @@ if [ "${ETYPE}" = "sources" ]
 then
 	#kbd is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-			  >=sys-devel/binutils-2.11.90.0.31 )
+			>=sys-devel/binutils-2.11.90.0.31 )
 		app-admin/addpatches"
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
-			   dev-lang/perl
-			   virtual/modutils
-			   sys-devel/make )"
+			dev-lang/perl
+			virtual/modutils
+			sys-devel/make )"
 	PROVIDE="virtual/linux-sources"
-	
 elif [ "${ETYPE}" = "headers" ]
 then
 	PROVIDE="virtual/kernel virtual/os-headers"
@@ -101,14 +100,12 @@ kernel_universal_unpack() {
 }
 
 kernel_src_unpack() {
-
 	kernel_exclude
 
 	/usr/bin/addpatches . ${WORKDIR}/linux-${KV} || \
 		die "Addpatches failed, bad KERNEL_EXCLUDE?"
 
 	kernel_universal_unpack
-
 }
 
 kernel_src_compile() {
@@ -141,13 +138,13 @@ kernel_src_install() {
 				cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
 			done
 		fi
-		
+
 		if [ ! -f patches.txt ]
 		then
 			# patches.txt is empty so lets use our ChangeLog
 			[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check out the changelog for this package to find out more" > patches.txt
 		fi
-			
+
 		if [ -f patches.txt ]; then
 			dodoc patches.txt
 		fi
@@ -159,6 +156,7 @@ kernel_src_install() {
 		rm -rf ${D}/usr/include/linux/modules
 		dodir /usr/include/asm
 		cp -ax ${S}/include/asm/* ${D}/usr/include/asm
+		use arm && dosym arch-ebsa110 /usr/include/asm/arch
 	fi
 }
 
@@ -172,16 +170,15 @@ kernel_pkg_preinst() {
 }
 
 kernel_pkg_postinst() {
-
 	[ "$ETYPE" = "headers" ] && return
 	if [ ! -e ${ROOT}usr/src/linux ]
 	then
 		rm -f ${ROOT}usr/src/linux
-	if [ "`use ppc`" ]
+		if use ppc
 		then
-		ln -sf ${PF} ${ROOT}/usr/src/linux
+			ln -sf ${PF} ${ROOT}/usr/src/linux
 		else
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux
+			ln -sf linux-${KV} ${ROOT}/usr/src/linux
 		fi
 	fi
 
@@ -193,5 +190,4 @@ kernel_pkg_postinst() {
 	einfo "For example, this kernel will require:"
 	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
 	echo
-
 }
