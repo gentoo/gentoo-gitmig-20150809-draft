@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.50.ebuild,v 1.1 2004/12/28 14:48:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.50.ebuild,v 1.2 2004/12/28 21:01:42 ribosome Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	>=dev-libs/fftw-2.1.3
 	>=dev-util/gperf-2.7.2
 	zlib? ( sys-libs/zlib )
-	hdf5? ( dev-libs/hdf5 )
+	hdf5? ( sci-libs/hdf5 )
 	tetex? ( virtual/tetex )"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
