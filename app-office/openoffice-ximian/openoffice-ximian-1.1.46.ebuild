@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.2 2003/11/13 09:42:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.46.ebuild,v 1.3 2003/11/14 12:39:58 seemant Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -100,7 +100,7 @@ DEPEND="${RDEPEND}
 	!app-office/openoffice-bin
 	!app-office/openoffice
 	>=sys-apps/findutils-4.1.20-r1
-	!sys-apps/star"
+	!app-arch/star"
 
 # fix a bug with tcsh and dircolors
 #
