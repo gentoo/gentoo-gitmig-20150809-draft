@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r5.ebuild,v 1.1 2003/07/30 08:50:42 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r5.ebuild,v 1.2 2003/08/11 07:46:07 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -8,10 +8,6 @@ DESCRIPTION="Apache module for PHP"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~arm"
 EXCLUDE_DB4_FIX=1
 EXCLUDE_PEAR_FIX=1
-
-DEPEND="${DEPEND}
-	>=net-www/apache-1.3.26-r2
-	apache2? ( >=net-www/apache-2.0.43-r1 ) "
 
 detectapache() {
 	local domsg=
@@ -51,7 +47,15 @@ SLOT="${APACHEVER}"
 
 PHPSAPI="apache${APACHEVER}"
 
+# BIG FAT WARNING!
+# the php eclass requires the PHPSAPI setting!
+# In this case the PHPSAPI setting is dependant on the detectapache function
+# above this point as well!
 inherit php eutils
+
+DEPEND="${DEPEND}
+	>=net-www/apache-1.3.26-r2
+	apache2? ( >=net-www/apache-2.0.43-r1 )"
 
 src_unpack() {
 	php_securityupgrade
