@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.3 2003/09/03 12:59:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5-r2.ebuild,v 1.4 2003/09/28 17:48:01 pyrania Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -15,7 +15,6 @@ DEPEND="cups? ( >=net-print/cups-1.1.14 )
 	sys-libs/readline
 	gtk? ( =x11-libs/gtk+-1.2* )
 	dev-lang/perl
-	!media-gfx/gimp-print-cups
 	foomaticdb? ( net-print/foomatic-db-engine )"
 
 LICENSE="GPL-2"
