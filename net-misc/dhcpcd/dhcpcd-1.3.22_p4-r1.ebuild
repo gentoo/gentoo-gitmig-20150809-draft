@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.1 2003/09/06 23:50:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.2 2003/09/07 00:47:37 drobbins Exp $
 
 inherit gnuconfig
 
@@ -39,8 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --prefix="" --sysconfdir=/var/lib --mandir=/usr/share/man
-	emake
+	./configure --prefix="" --sysconfdir=/var/lib --mandir=/usr/share/man || die
+	emake || die
 }
 
 src_install () {
