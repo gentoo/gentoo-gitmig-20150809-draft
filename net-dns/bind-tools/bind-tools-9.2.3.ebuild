@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.1 2003/11/11 22:36:34 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3.ebuild,v 1.2 2003/11/11 23:16:32 blkdeath Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -16,21 +16,37 @@ SLOT="0"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	econf || die "configure failed"
+	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
+
+	econf ${myconf} || die "configure failed"
 
 	export MAKEOPTS="${MAKEOPTS} -j1"
 
 	cd ${S}/lib/isc
-	emake || die "make failed in /lib/isc"
-
+	make && ld -shared -s -o libisc.so -whole-archive libisc.a \
+	|| die "make failed in /lib/isc"
+	cp libisc.so ../../bin/dig/ || die
+			
 	cd ${S}/lib/dns
-	emake || die "make failed in /lib/dns"
+	make && ld -shared -s -o libdns.so -whole-archive libdns.a \
+	|| die "make failed in /lib/dns"
+	cp libdns.so ../../bin/dig/ || die
 
 	cd ${S}/bin/dig
-	emake || die "make failed in /bin/dig"
+	cp Makefile Makefile.org
+	sed -e 's:../../lib/dns/libdns.a:libdns.so:' \
+	-e 's:../../lib/isc/libisc.a:libisc.so:' \
+	Makefile.org > Makefile || die
+	make || die "make failed in /bin/dig"
 }
 
 src_install() {
+	cd ${S}/lib/dns
+	dolib libdns.so
+
+	cd ${S}/lib/isc
+	dolib libisc.so
+	
 	cd ${S}/bin/dig
 	dobin dig host nslookup
 	doman dig.1 host.1
