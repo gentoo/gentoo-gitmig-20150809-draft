@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.17 2004/04/15 02:10:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.18 2004/04/15 15:11:08 spyderous Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~mips"
 IUSE="truetype Xaw3d"
 
-DEPEND="x11-base/xorg-x11
+DEPEND="|| ( x11-base/xorg-x11 x11-base/xfree )
 	sys-apps/utempter
 	Xaw3d? ( x11-libs/Xaw3d )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.16 2004/04/15 02:10:22 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.17 2004/04/15 15:11:08 spyderous Exp $
+
+  15 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-179.ebuild,
+  xterm-184.ebuild:
+  Modify dependency to include possible x11-base/xfree.
 
   14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> xterm-184.ebuild:
   Added ~mips keyword.

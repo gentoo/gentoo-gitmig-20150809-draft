@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.11 2004/04/09 19:57:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.12 2004/04/15 15:11:08 spyderous Exp $
 
 IUSE="truetype"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-DEPEND="x11-base/xorg-x11
+DEPEND="|| ( x11-base/xorg-x11 x11-base/xfree )
 	sys-apps/utempter"
 
 src_compile() {
