@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.25 2004/07/24 06:50:11 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.26 2004/07/26 04:01:01 j4rg0n Exp $
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
+  Fixed Manifest.
 
   24 Jul 2004; Hasan Khalil <gongloo@gentoo.org> ctags-5.5.4.ebuild:
   Stable on macos as per Bug 57927.
