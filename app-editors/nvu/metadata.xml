@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mozilla</herd>
+<maintainer>
+  <email>chriswhite@gentoo.org</email>
+</maintainer>
+<longdescription>
+A WYSIWYG type editor, similiar to Dreamweaver for *nix systems.  It's based on the mozilla layout system Gecko.
+</longdescription>
+</pkgmetadata>

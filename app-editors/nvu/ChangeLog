@@ -1,0 +1,71 @@
+# ChangeLog for net-www/nvu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.1 2005/03/23 16:43:16 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/nvu-0.50-dir.patch, +files/nvu-0.50-freetype-compile.patch,
+  +files/nvu-0.50-nvu.patch, +files/mozconfig, +files/mozconfig2,
+  +files/nvu.desktop, +metadata.xml, +nvu-0.50.ebuild, +nvu-0.60.ebuild,
+  +nvu-0.81.ebuild, +nvu-0.90.ebuild:
+  Moved from net-www/nvu to app-editors/nvu.
+
+*nvu-0.90 (13 Mar 2005)
+
+  13 Mar 2005; Chris White <chriswhite@gentoo.org> +nvu-0.90.ebuild:
+  Bump to version 0.90.
+
+*nvu-0.81 (11 Mar 2005)
+
+  11 Mar 2005; Chris White <chriswhite@gentoo.org> +files/mozconfig2,
+  +files/nvu-0.50-freetype-compile.patch, +nvu-0.81.ebuild:
+  New version of nvu, latest comming once I figure out where they hid it.
+  Thanks to Jory A. Pratt for both the patches and putting up with me :P.
+
+  22 Dec 2004; Chris White <chriswhite@gentoo.org> files/nvu.desktop:
+  Fixed a typo in the .desktop file as per Bug #75010.
+
+*nvu-0.60 (09 Dec 2004)
+
+  09 Dec 2004; Chris White <chriswhite@gentoo.org> +nvu-0.60.ebuild:
+  Bumped to version 0.60 as per bug #73532. Thanks to basic <basic@mozdev.org>
+  for the ebuild diff submission.
+
+  27 Nov 2004; Chris White <chriswhite@gentoo.org> nvu-0.50.ebuild:
+  Fixed LICENSE per bug #72559.
+
+  23 Oct 2004; Simon Stelling <blubb@gentoo.org> nvu-0.50.ebuild:
+  added ~amd64
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org> nvu-0.50.ebuild:
+  Added ~sparc keyword.
+
+  18 Oct 2004; Joseph Jezak <josejx@gentoo.org> nvu-0.50.ebuild:
+  Added ~ppc.
+
+  21 Oct 2004; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Updated metadata with <longdescription>.
+
+  16 Oct 2004; Chris White <chriswhite@gentoo.org> files/mozconfig,
+  +files/nvu-0.50-dir.patch, +files/nvu-0.50-nvu.patch, nvu-0.50.ebuild:
+  Fixed directory issues, .desktop issue, and fixed bug #67658 by patching nvu
+  script.
+
+  15 Oct 2004; Chris White <chriswhite@gentoo.org> -files/.mozconfig,
+  +files/mozconfig, nvu-0.50.ebuild:
+  One more fix for QA. Made the .mozconfig file visable in the files/ directory
+  so people can see it :).
+
+  15 Oct 2004; Chris White <chriswhite@gentoo.org> files/.mozconfig,
+  nvu-0.50.ebuild:
+  Fixed ebuild to use the global entry for .desktop files. Fixed .mozconfig to
+  use a more standard /usr/lib/nvu path, which also fixed the .desktop entry
+  icon not showing.
+
+*nvu-0.50 (14 Oct 2004)
+
+  14 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/.mozconfig, +files/nvu-0.50-prefix.patch, +files/nvu.desktop,
+  +nvu-0.50.ebuild:
+  Intial import to the tree. Thanks goes to the people of Bug #40821 for their
+  help. Package.masked as it is a testing version.
+
