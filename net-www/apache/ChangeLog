@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.131 2004/04/22 01:54:00 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.132 2004/04/23 18:53:20 zul Exp $
+
+  23 Apr 2004; Chuck Short <zul@gentoo.org>
+  files/apache-1.3.27_db4_gentoo.patch:
+  Updated 1.3.29 db4 patch to support db4.1. Closes #48795.
 
   22 Apr 2004; Chuck Short <zul@gentoo.org> files/apachesplitlogfile:
   Fixed error message in apachesplitlogfiles to make it more understandable.
