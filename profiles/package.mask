@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3620 2005/02/14 10:24:37 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3621 2005/02/14 13:26:34 lanius Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -143,8 +143,11 @@ dev-lisp/cl-imho
 # Masked for testing dependend packages
 >=sys-libs/db-4.3
 
-# Heinrich Wendel <lanius@gentoo.org> (01 Feb 2005)
+# Heinrich Wendel <lanius@gentoo.org> (14 Feb 2005)
+# ebuilds for SLOTed motif, bug #81829
 =x11-libs/lesstif-0.94.0-r1
+=x11-libs/openmotif-2.1.30-r7
+=x11-libs/openmotif-2.2.3-r1
 
 # Benedikt Boehm <hollow@gentoo.org> (30 Jan 2005)
 # Apache herd package refresh
