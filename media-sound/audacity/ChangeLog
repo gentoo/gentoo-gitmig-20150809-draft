@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.18 2004/03/03 23:07:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.19 2004/03/13 10:07:25 eradicator Exp $
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audacity-1.2.0.ebuild:
+  readded wxgtk unicode check...
 
   04 Mar 2004; David Holm <dholm@gentoo.org> audacity-1.2.0.ebuild:
   Added to ~ppc.

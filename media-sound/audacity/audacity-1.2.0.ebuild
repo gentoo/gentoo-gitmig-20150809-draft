@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0.ebuild,v 1.2 2004/03/03 23:07:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0.ebuild,v 1.3 2004/03/13 10:07:25 eradicator Exp $
 
 inherit eutils
 
@@ -32,6 +32,16 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 S="${WORKDIR}/${MY_P}"
 
 DOC="LICENSE.txt README.txt audacity-1.2-help.htb"
+
+pkg_setup() {
+	if wx-config --cppflags | grep gtk2u >& /dev/null; then
+		einfo "Audacity will not build if wxGTK was compiled"
+		einfo "with unicode support.  If you are using a version of"
+		einfo "wxGTK <= 2.4.2, you must set USE=-gtk2.  In newer versions,"
+		einfo "you must set USE=-unicode."
+		die "wxGTK must be re-emerged without unicode suport"
+	fi
+}
 
 src_compile() {
 	local myconf;
