@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32d8dd8576036274a3ff38bc15478000 yelp-2.6.5.ebuild 952
-MD5 eb66ea4b0d26cef8332e6f1874a9bf26 ChangeLog 8400
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 cb8205b8a95d518e0a0407eaf64be335 yelp-2.4.2.ebuild 868
 MD5 d9c28e84565e2965ffd6fa7bafff70fb yelp-2.6.2.ebuild 835
-MD5 586ee65a37cc83ef4222522869f3fd20 yelp-2.6.0.ebuild 845
-MD5 63e467f03b938c45837e479c93d547b0 yelp-2.6.1.ebuild 845
 MD5 b03dae1c44e6c8a337936f18e8bd45e0 yelp-2.6.4.ebuild 928
-MD5 0cf1e0f8c2d2235fc75a784741638f77 files/digest-yelp-2.6.5 63
-MD5 3cc5005ee15816000841f6abfa15e909 files/digest-yelp-2.6.4 63
+MD5 63e467f03b938c45837e479c93d547b0 yelp-2.6.1.ebuild 845
+MD5 cb8205b8a95d518e0a0407eaf64be335 yelp-2.4.2.ebuild 868
+MD5 4d929627f4c03ba376ca8464cccdbdc0 yelp-2.6.5.ebuild 951
+MD5 586ee65a37cc83ef4222522869f3fd20 yelp-2.6.0.ebuild 845
+MD5 c72074a075b7c3a69a36b2755066173f ChangeLog 8490
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5c3187494762706268a83d298ed70ed1 files/digest-yelp-2.4.2 63
-MD5 b3f4bb2439f62b72847b6ed744fcffbe files/digest-yelp-2.6.2 63
-MD5 d3fa3016a8d381dc0bd303a75bc88538 files/yelp-2-speed_fix.patch 14137
 MD5 df2c88704653695b75b2962b83153d05 files/digest-yelp-2.6.0 63
-MD5 d13c2fbe43ee623230084d6f7bd6ec25 files/yelp-2.6.4-makedepfix.patch 948
 MD5 8df713e174b2fc332eef4bdc2710a14a files/digest-yelp-2.6.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPbguugEuf3OQ0akRAp6EAKCSZ3VkcNU8QofqJYOMy30IcK1AxQCfYpMX
-mqbSiYiVjlQwuXyiW0YweQw=
-=UOGQ
------END PGP SIGNATURE-----
+MD5 b3f4bb2439f62b72847b6ed744fcffbe files/digest-yelp-2.6.2 63
+MD5 3cc5005ee15816000841f6abfa15e909 files/digest-yelp-2.6.4 63
+MD5 0cf1e0f8c2d2235fc75a784741638f77 files/digest-yelp-2.6.5 63
+MD5 d3fa3016a8d381dc0bd303a75bc88538 files/yelp-2-speed_fix.patch 14137
+MD5 d13c2fbe43ee623230084d6f7bd6ec25 files/yelp-2.6.4-makedepfix.patch 948
