@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.49 2004/06/11 13:48:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.50 2004/06/15 05:27:24 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> man-1.5l-r6.ebuild, man-1.5m-r1.ebuild:
+  fixed up nls usage for uclibc
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> man-1.5m-r1.ebuild:
   Stable on alpha.
