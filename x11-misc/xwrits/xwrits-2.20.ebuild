@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.20.ebuild,v 1.7 2003/02/13 17:21:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.20.ebuild,v 1.8 2004/05/22 01:50:15 port001 Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc "
 
-DEPEND="x11-base/xfree"
+DEPEND="virtual/x11"
 
 src_compile() {
 
