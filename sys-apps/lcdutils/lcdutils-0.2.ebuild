@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/lcdutils-0.2.ebuild,v 1.2 2004/06/10 07:06:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/lcdutils-0.2.ebuild,v 1.3 2004/06/10 07:09:04 kumba Exp $
 
 DESCRIPTION="Cobalt RaQ/Qube LCD Writing and Button reading utilities"
 HOMEPAGE=""
@@ -17,10 +17,12 @@ S=${WORKDIR}/${P}
 pkg_setup() {
 	# This package is aimed primarily at Cobalt Microserver systems.  Mips originally, but it
 	# is reported to work on x86-based systems as well.
-	echo -e ""
-	ewarn "This package is only for Cobalt Microserver systems.  Its use on other types of"
-	ewarn "hardware is untested."
-	echo -e ""
+	if [ "${PROFILE_ARCH}" != "cobalt" ]; then
+		echo -e ""
+		ewarn "This package is only for Cobalt Microserver systems.  Its use on other types of"
+		ewarn "hardware is untested."
+		echo -e ""
+	fi
 }
 
 src_unpack() {
