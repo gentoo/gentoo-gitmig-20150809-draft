@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.10 2003/08/10 15:20:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.11 2003/09/30 19:52:03 aliz Exp $
+
+*teapop-0.3.7-r1 (30 Sep 2003)
+
+  30 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> teapop-0.3.7-r1.ebuild:
+  Version bump, added a couple of more arguments to configure
+
+*teapop-0.3.7 (30 Sep 2003)
+
+  30 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> teapop-0.3.7.ebuild:
+  Security update
 
   10 Aug 2003; <iggy@gentoo.org> teapop-0.3.5.ebuild, files/teapop-confd,
   files/teapop-init:
