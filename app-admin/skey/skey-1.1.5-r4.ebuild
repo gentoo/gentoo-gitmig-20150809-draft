@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.3 2004/09/23 16:28:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.4 2004/10/07 20:39:55 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 src_install() {
 	doman skey.1 skeyaudit.1 skeyinfo.1 skeyinit.1 skeyprune.8
 	dobin skey skeyinit skeyinfo || die
-	newbin skeyprune.pl skeyprune
+	newsbin skeyprune.pl skeyprune
 	newbin skeyaudit.sh skeyaudit
 	dolib.a libskey.a
 	dolib.so libskey.so.1.1.5 libskey.so.1.1 libskey.so.1 libskey.so
