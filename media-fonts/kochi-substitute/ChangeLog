@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/kochi-substitute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.17 2004/07/01 10:48:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.18 2004/07/29 02:33:05 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> kochi-substitute-20030809-r3.ebuild:
+  stable on ppc64 
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   kochi-substitute-20030809-r2.ebuild, kochi-substitute-20030809.ebuild:
