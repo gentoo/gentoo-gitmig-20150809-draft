@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.15 2005/01/09 00:50:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.19.ebuild,v 1.16 2005/03/21 21:03:34 luckyduck Exp $
 
 inherit eutils
 
@@ -42,3 +42,5 @@ src_install() {
 	dodoc AUTHORS BUGS COPYING ChangeLog FAQ HACKING INSTALL
 	dodoc NEWS README THANKS TODO
 }
+
+src_test() { :; }

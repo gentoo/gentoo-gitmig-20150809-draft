@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.5 2005/02/07 08:47:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.6 2005/03/21 21:03:34 luckyduck Exp $
 
 IUSE="xml2"
 
@@ -44,3 +44,5 @@ src_install() {
 
 	dodoc AUTHORS BUGS ChangeLog FAQ HACKING NEWS README THANKS TODO
 }
+
+src_test() { :; }
