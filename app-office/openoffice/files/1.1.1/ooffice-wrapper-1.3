@@ -30,18 +30,9 @@ OOVERSION="OpenOffice.org ${PV}"
 ##
 [ -r /etc/openoffice/openoffice.conf ] && . /etc/openoffice/openoffice.conf
 
-# Migration to new user install dir
-if [ -d "$HOME/.openoffice/1.1.0" ] ; then
-     mv $HOME/.openoffice/1.1.0 $HOME/.openoffice/1.1
-     sed -i -e s/'.openoffice\/1.1.0'/'.openoffice\/1.1'/g $HOME/.sversionrc 
-     sed -i -e s/org1.1.0/org/g $HOME/.openoffice/1.1/user/basic/*.xlc
-     sed -i -e s/1.1.0/1.1/g $HOME/.openoffice/1.1/user/basic/*.xlc
-     echo "Your user install dir has been moved over to the new version"
-fi
-
-#Make smooth up- and downgrading between minor versions possible
-if [ -e "$HOME/.sversionrc" ] ; then
-     sed -i -e s/1.1.0/1.1.1/g $HOME/.sversionrc
+if [ ! -x "$HOME/.openoffice/1.1.1" ] ; then
+     echo "You are starting this version of OpenOffice.org for the first time"
+     echo "As the user install has changed again you will have to redo your settings"
 fi
 
 ###

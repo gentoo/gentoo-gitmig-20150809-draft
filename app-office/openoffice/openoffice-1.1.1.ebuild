@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.1 2004/03/31 09:01:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.2 2004/04/01 12:02:51 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -51,7 +51,6 @@ export WANT_GCC_3="yes"
 
 LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org"
-MY_PV="${PV/.1}"
 S="${WORKDIR}/oo_${PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_source.tar.bz2
@@ -440,7 +439,7 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${MY_PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
 
 	# Install wrapper script
