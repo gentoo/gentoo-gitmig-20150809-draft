@@ -1,0 +1,5 @@
+MD5 2d640d894a8bb797dc891837ec564719 bsh-1.2-r7.ebuild 785
+MD5 91bdeaa770f2830e76f67d8d265f82af ChangeLog 281
+MD5 384f6478120bb234d69d32a30a37175f files/bsh.Console 721
+MD5 b80f6f6a8aaaa765da9ccfd696363d8e files/bsh.Interpreter 732
+MD5 21e5032685b7867cb02451abb400ffb3 files/digest-bsh-1.2-r7 58

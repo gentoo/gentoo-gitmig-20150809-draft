@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/bsh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.1 2003/05/15 03:57:52 absinthe Exp $
+
+*bsh-1.2-r7 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org> bsh-1.2-r7.ebuild,
+  files/bsh.Console, files/bsh.Interpreter:
+  Initial import.
+
