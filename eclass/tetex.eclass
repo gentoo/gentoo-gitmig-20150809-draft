@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.4 2003/12/29 16:42:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.5 2004/01/02 02:56:09 seemant Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -17,22 +17,23 @@ if [ -z "${TETEX_PV}" ] ; then
 	TETEX_PV=${PV}
 fi
 
+IUSE="X"
+
 S=${WORKDIR}/tetex-src-${TETEX_PV}
 TETEX_SRC="tetex-src-${TETEX_PV}.tar.gz"
 TETEX_TEXMF="tetex-texmf-${TETEX_PV}.tar.gz"
 TETEX_TEXMF_SRC="tetex-texmfsrc-${TETEX_PV}.tar.gz"
 
 DESCRIPTION="a complete TeX distribution"
+HOMEPAGE="http://tug.org/teTeX/"
 SRC_PATH_TETEX=ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib
 SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}"
-HOMEPAGE="http://tug.org/teTeX/"
 
-KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="X"
+KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~amd64"
 
 newdepend "!app-text/tetex
 	!app-text/ptex
