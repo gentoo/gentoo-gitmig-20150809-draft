@@ -5,8 +5,8 @@
 # on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
 <=sys-apps/shadow-5
 
-# 19 Jan 2002 -- until at has a security fix, we need this:
-sys-apps/at
+# earlier versions are exploitable
+<sys-apps/at-3.1.8-r7
 
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
