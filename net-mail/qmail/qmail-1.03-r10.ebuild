@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.5 2003/02/05 01:46:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.6 2003/02/05 05:38:14 raker Exp $
 
 IUSE="ssl"
 
@@ -13,7 +13,8 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://members.elysium.pl/brush/qmail-smtpd-auth/dist/qmail-smtpd-auth-0.31.tar.gz
 	http://www.jedi.claranet.fr/qmail-link-sync.patch
 	http://www.nrg4u.com/qmail/ext_todo-20030105.patch
-	http://www.qmail.org/big-concurrency.patch"
+	http://www.qmail.org/big-concurrency.patch
+	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch"
 DEPEND="virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
@@ -59,6 +60,12 @@ src_unpack() {
 
 	# Increase limits for large mail systems
 	epatch ${DISTDIR}/big-concurrency.patch || die
+
+	# Treat 0.0.0.0 as a local address
+	epatch ${DISTDIR}/qmail-0.0.0.0.patch || die
+
+	# Let the system decide how to define errno
+	epatch ${FILESDIR}/${PV}-${PR}/errno.patch || die
 
 	if [ `use ssl` ]; then
 		echo "gcc ${CFLAGS} -DTLS" > conf-cc
