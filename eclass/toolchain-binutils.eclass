@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.8 2004/12/01 21:29:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.9 2004/12/02 19:39:59 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -9,7 +9,7 @@
 inherit eutils libtool flag-o-matic gnuconfig
 ECLASS=toolchain-binutils
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_prerm
 
 export CTARGET="${CTARGET:-${CHOST}}"
 
@@ -181,5 +181,20 @@ EOF
 }
 
 toolchain-binutils_pkg_postinst() {
+	# Make sure this ${CTARGET} has a binutils version selected
+	[[ -e ${ROOT}/etc/env.d/binutils/config-${CTARGET} ]] && return 0
 	binutils-config ${CTARGET}-${PV}
+}
+
+toolchain-binutils_pkg_prerm() {
+	local curr=$(binutils-config -c)
+	[ "${curr}" != "${CTARGET}-${PV}" ] && return 0
+
+	# if user was so kind as to unmerge the version we have 
+	# active, then switch to another version
+	local choice=$(binutils-config -l | grep ${CTARGET} | grep -v ${CTARGET}-${PV})
+	choice=${choice/* }
+	[ -z "${choice}" ] && return 0
+
+	binutils-config ${choice}
 }
