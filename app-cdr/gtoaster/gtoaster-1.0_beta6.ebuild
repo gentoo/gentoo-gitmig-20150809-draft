@@ -1,12 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.6 2002/10/31 01:22:59 raker Exp $
-
-IUSE="nls esd gnome oss oggvorbis"
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.7 2002/11/30 02:27:34 vapier Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
-S=${WORKDIR}/gtoaster
+S=${WORKDIR}/${PN}
 
 DESCRIPTION="GTK+ Frontend for cdrecord"
 SRC_URI="http://gnometoaster.rulez.org/archive/${MY_P}.tgz"
@@ -15,11 +13,11 @@ HOMEPAGE="http://gnometoaster.rulez.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+IUSE="nls esd gnome oss oggvorbis"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
 	esd? ( >=media-sound/esound-0.2.22 )"
-
 RDEPEND="=x11-libs/gtk+-1.2*
 	>=app-cdr/cdrtools-1.11
 	app-cdr/cdrdao
@@ -32,15 +30,11 @@ RDEPEND="=x11-libs/gtk+-1.2*
 		>=media-sound/oggtst-0.0 )"
 
 src_unpack() {
-
-	unpack ${A}
-	cd ${S}
+	unpack ${A} ; cd ${S}
 	patch -p1 < ${FILESDIR}/scdtosr.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	local myconf=""
 	use nls	|| myconf="$myconf --disable-nls"
 
@@ -56,20 +50,16 @@ src_compile() {
 		&& myconf="$myconf --with-oss" \
 		|| myconf="$myconf --without-oss"
 
-	
-	econf ${myconf} || die "configure failed"
-
+	econf ${myconf}
 	emake || die "parallel make failed"
 }
 
 src_install() {
-
-	einstall || die
-
+	einstall
 	dodoc ABOUT-NLS AUTHORS ChangeLog* COPYING INSTALL NEWS README TODO
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ] ; then
+	if [ `use gnome` ] ; then
 		insinto /usr/share/pixmaps
 		doins ${S}/icons/gtoaster.png
 		insinto /usr/share/gnome/apps/Applications

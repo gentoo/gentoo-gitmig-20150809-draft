@@ -1,25 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0.ebuild,v 1.3 2002/10/17 12:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbkup/cdbkup-1.0.ebuild,v 1.4 2002/11/30 02:26:31 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="cdbkup performs full or incremental backups of local or remote filesystems onto CD-R(W)s."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://cdbkup.sourceforge.net/"
-
-DEPEND="virtual/glibc 
-        >=app-cdr/cdrtools-1.11.28
-        >=sys-apps/eject-2.0.10"
-
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-src_unpack() {
-	unpack ${A}
+DEPEND="virtual/glibc 
+        >=app-cdr/cdrtools-1.11.28
+        >=sys-apps/eject-2.0.10"
 
-	cd ${S}
+src_unpack() {
+	unpack ${A} ; cd ${S}
 
 	cp Makefile.in Makefile.in.orig
 	sed "s:doc/cdbkup:doc/${P}:" Makefile.in.orig > Makefile.in
@@ -29,13 +25,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	myconf="--with-snardir=/etc/cdbkup --with-dumpgrp=users"
-
-	econf ${myconf} || die "configure failed"
+	econf --with-snardir=/etc/cdbkup --with-dumpgrp=users
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc COMPLIANCE  ChangeLog README  TODO 
+	dodoc COMPLIANCE ChangeLog README TODO 
 }
