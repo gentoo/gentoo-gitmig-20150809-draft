@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.9 2004/04/26 03:49:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.10 2004/06/15 08:48:20 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://ban.joh.cam.ac.uk/~cr212/xmms-midi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 DEPEND="media-sound/xmms
 	media-sound/timidity++"
@@ -31,9 +31,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -f /etc/timidity.cfg ]
-	then
-		einfo "*** WARNING: XMMS will play all MIDI files silently until a"
-		einfo "working timidity.cfg has been placed in /etc!"
-	fi
+	einfo "*** WARNING: XMMS will play all MIDI files silently until a"
+	einfo "working timidity.cfg has been placed in /etc!  If you don't"
+	einfo "know how to do that, then just try emerging timidity-eawpatches"
 }

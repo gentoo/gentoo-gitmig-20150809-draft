@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-midi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/ChangeLog,v 1.6 2004/04/26 03:49:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/ChangeLog,v 1.7 2004/06/15 08:48:20 eradicator Exp $
+
+  15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-midi-0.03.ebuild:
+  Added more info to postinst().
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> xmms-midi-0.03.ebuild:
   Add die following econf for bug 48950
