@@ -1,13 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d-r1.ebuild,v 1.2 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.1 2002/07/15 18:51:37 azarah Exp $
+
+inherit virtualx
 
 # IMPORTANT:  This is extremely alpha!!!
+
+# Note for gcc-3.1 users:  The produced build do not look as stable as it should
+#                          be ... there are some weird glitches and crashes.
 
 # notes:
 # This will take a HELL of a long time to compile, be warned.
 # According to openoffice.org, it takes approximately 12 hours on a
 # P3/600 with 256mb ram.  And thats where building is its only task.
+#
+# It takes about 6 hours on my P4 1.8 with 512mb memory, and the
+# build only needs about 2.1GB of disk space - Azarah.
 #
 # You will also need a bucketload of diskspace ... in the order of
 # 4-5 gb free to store all the compiled files and installation
@@ -22,13 +30,14 @@
 # needs to be updated via a script or some program, not a tarball.
 
 LOC="/opt"
-MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
-S="${WORKDIR}/oo_${PV}_src"
+#MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
+MAIN_VER="641"
+S="${WORKDIR}/oo_$(echo ${PV} |cut -d '.' -f 1,2)_src"
 DESCRIPTION="OpenOffice productivity suite"
-SRC_URI="http://ny1.mirror.openoffice.org/${PV}/oo_${PV}_src.tar.bz2
-	http://sf1.mirror.openoffice.org/${PV}/oo_${PV}_src.tar.bz2
+SRC_URI="http://ny1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
+	http://sf1.mirror.openoffice.org/${PV}/OOo_${PV}_source.tar.bz2
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
-	http://www.ibiblio.org/gentoo/distfiles/${PN}-${PV}-registry.tbz2"
+	http://www.ibiblio.org/gentoo/distfiles/${PN}-${PV}b-registry.tbz2"
 HOMEPAGE="http://www.openoffice.org"
 
 COMMONDEPEND=">=sys-libs/glibc-2.1
@@ -51,27 +60,86 @@ COMMONDEPEND=">=sys-libs/glibc-2.1
 # with gcc-2.95.3.
 #
 # Azarah -- 14 April 2002
-RDEPEND="${COMMONDEPEND}
-	>=sys-devel/gcc-3.0.4-r3"
+RDEPEND="${COMMONDEPEND}"
+#	>=sys-devel/gcc-3.0.4-r6"
 DEPEND="${COMMONDEPEND}
-	>=sys-devel/gcc-3.0.4-r3
 	app-shells/tcsh"
+#	>=sys-devel/gcc-3.0.4-r6"
 
 # All these are included with the source archive ...
 #       >=dev-util/dmake-3.2.1
 
 SLOT="0"
 
-GCC_VER="`gcc --version`"
-
 # fix a bug with tcsh and dircolors
 #
 # Azarah -- 10 April 2002
 export LS_COLORS=""
 
+gcc-version() {
+
+	local CC="gcc"
+	
+	if [ "`eval echo \`${CC} -dumpversion\` | cut -f1 -d.`" -ne 3 ]
+	then
+		# We use the dual/multiple install of gcc-3.x if the user
+		# have 2.95.3 as base
+		if [ -x /usr/bin/gcc-3.1 ]
+		then
+			CC="gcc-3.1"
+		elif [ -x /usr/bin/gcc-3.0 ]
+		then
+			CC="gcc-3.0"
+		fi
+	fi
+	
+	echo "`${CC} -dumpversion | cut -f1,2 -d.`"
+}
+
+gcc-fullversion() {
+
+	local CC="gcc"
+
+	if [ "`eval echo \`${CC} -dumpversion\` | cut -f1 -d.`" -ne 3 ]
+	then
+		# We use the dual/multiple install of gcc-3.x if the user
+		# have 2.95.3 as base
+		if [ -x /usr/bin/gcc-3.1 ]
+		then
+			CC="gcc-3.1"
+		elif [ -x /usr/bin/gcc-3.0 ]
+		then
+			CC="gcc-3.0"
+		fi
+	fi
+
+	echo "`${CC} -dumpversion`"
+}
+
+gcc-libpath() {
+
+	local CC="gcc"
+
+	if [ "`eval echo \`${CC} -dumpversion\` | cut -f1 -d.`" -ne 3 ]
+	then
+		# We use the dual/multiple install of gcc-3.x if the user
+		# have 2.95.3 as base
+		if [ -x /usr/bin/gcc-3.1 ]
+		then
+			CC="gcc-3.1"
+		elif [ -x /usr/bin/gcc-3.0 ]
+		then 
+			CC="gcc-3.0"
+		fi
+	fi
+
+	echo "/usr/lib/gcc-lib/`${CC} -dumpmachine`/`gcc-fullversion`"
+}
+
 src_unpack() {
+
 	cd ${WORKDIR}
-	unpack oo_${PV}_src.tar.bz2 gpc231.tar.Z
+	unpack OOo_${PV}_source.tar.bz2 gpc231.tar.Z
 	cd ${WORKDIR}/gpc231
 	cp gpc.* ${S}/external/gpc
 	cd ${S}
@@ -79,13 +147,23 @@ src_unpack() {
 	# This allows JDK 1.4.0 to be used
 	patch -p1 <${FILESDIR}/${PV}/${P}-configure.patch || die
 
-	# Debian patches to fix build problems with gcc-3.0.4
+	# Debian patches to fix build problems with gcc-3.x
 	#
 	# Azarah -- 23 April 2002
 	patch -p1 <${FILESDIR}/${PV}/${P}-exception-sprecs.patch || die
 	patch -p1 <${FILESDIR}/${PV}/${P}-clk-tck-gcc-3.patch || die
 	patch -p1 <${FILESDIR}/${PV}/${P}-define-XSetIMValues.patch || die
-	patch -p1 <${FILESDIR}/${PV}/${P}-use-libstdc++-3.0.4.patch || die
+	if [ "`gcc-version`" = "3.1" ]
+	then
+		if [ "`gcc-fullversion`" = "3.1.1" ]
+		then
+			patch -p1 <${FILESDIR}/${PV}/${P}-use-libstdc++-4.0.1.patch || die
+		else
+			patch -p1 <${FILESDIR}/${PV}/${P}-use-libstdc++-4.0.0.patch || die
+		fi
+	else
+		patch -p1 <${FILESDIR}/${PV}/${P}-use-libstdc++-3.0.4.patch || die
+	fi
 	patch -p1 <${FILESDIR}/${PV}/${P}-class-SwpHtStart-SAR.patch || die
 
 
@@ -106,16 +184,43 @@ src_unpack() {
 	# Misc Debian patches to fixup build
 	#
 	# Azarah -- 22 April 2002
-#	patch -p1 <${FILESDIR}/${PV}/${P}-no-mozab.patch || die
+	if [ "`gcc-version`" = "3.1" ]
+	then
+		patch -p1 <${FILESDIR}/${PV}/${P}-no-mozab.patch || die
+	fi
 	patch -p1 <${FILESDIR}/${PV}/${P}-remove-libstdc-from-scp.patch || die
 
-	# Fix STLport to use gcc-3.x/g++-3.x as compilter when we have
-	# gcc-2.95.3 as base compiler.
+	# Fix STLport to use gcc-3.x/g++-3.x as compilter
 	#
 	# Azarah -- 15 April 2002
-	if [ 0`echo ${GCC_VER} | cut -f1 -d.` -eq 2 ]
+	patch -p1 <${FILESDIR}/${PV}/${P}-STLport-gcc2-gcc3.patch || die
+	if [ "`gcc-version`" = "3.1" ]
 	then
-		patch -p1 <${FILESDIR}/${PV}/${P}-STLport-gcc2-gcc3.patch || die
+		patch -p1 <${FILESDIR}/${PV}/${P}-STLport-gcc31.patch || die
+	fi
+
+	# Some gcc-3.1 only fixes
+	if [ "`gcc-version`" = "3.1" ]
+	then
+		# Fix ./configure for gcc-3.1
+		cd ${S}/config_office
+		cp configure configure.orig
+		sed -e 's:CC --version:CC -dumpversion:g' \
+			-e 's:_gccincname1="g++-v3":_gccincname1="g++-v31":g' \
+			configure.orig > configure
+
+		cd ${S}
+		# Fix awk script to correctly compute the version string for gcc-3.1
+		if [ "`gcc-fullversion`" = "3.1" ]
+		then
+			patch -p1 <${FILESDIR}/${PV}/${P}-gcc31-getcompver.patch || die
+		fi
+
+		# Fix header not supporting 3.1
+		cd ${S}/cppu/inc/uno
+		cp lbnames.h lbnames.h.orig
+		sed -e 's:__GNUC_MINOR__ == 0:__GNUC_MINOR__ == 1:g' \
+			lbnames.h.orig > lbnames.h
 	fi
 
 	# Now for our optimization flags ...
@@ -130,25 +235,21 @@ src_unpack() {
 
 src_compile() {
 
-	local myargs=""
-	if [ 0`echo ${GCC_VER} | cut -f1 -d.` -eq 3 ]
+	local myargs="--enable-gcc3"
+	if [ "`gcc -dumpversion | cut -f1 -d.`" -eq 2 ]
 	then
-		myargs="${myargs} --enable-gcc3"
-	else
-		myargs="${myargs} --enable-gcc3"
-
 		# We use the dual/multiple install of gcc-3.x if the user
 		# have 2.95.3 as base
 		#
 		# Azarah -- 15 April 2002
-		if [ -x /usr/bin/gcc-3.0 ]
+		if [ -x /usr/bin/gcc-3.1 ]
 		then
-			export CC=gcc-3.0
-			export CXX=g++-3.0
-		elif [ -x /usr/bin/gcc-3.1 ]
+			export CC="gcc-3.1"
+			export CXX="g++-3.1"
+		elif [ -x /usr/bin/gcc-3.0 ]
 		then
-			export CC=gcc-3.1
-			export CXX=g++-3.1
+			export CC="gcc-3.0"
+			export CXX="g++-3.0"
 		else
 			die "Cannot find gcc version 3.0 or later"
 		fi
@@ -158,8 +259,28 @@ src_compile() {
 	#
 	# Azarah -- 15 April 2002
 	mkdir -p ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
-	cp -f /lib/libgcc_s.so.1* ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
-	cp -f /usr/lib/libstdc++.so.3* ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
+	if [ "`gcc-version`" = "3.1" ]
+	then
+		cd ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
+		if [ -f /usr/lib/libstdc++.so.4 ]
+		then
+			cp /usr/lib/libstdc++.so.4* . || die "Could not copy gcc-libs!"
+			cp /lib/libgcc_s-3.1.so.1 . || die "Could not copy gcc-libs!"
+			ln -s libgcc_s-3.1.so.1 libgcc_s.so
+			ln -s libgcc_s-3.1.so.1 libgcc_s.so.1
+		else
+			cp `gcc-libpath`/libstdc++.so.4* . || die "Could not copy gcc-libs!"
+			cp `gcc-libpath`/libgcc_s.so* . || die "Could not copy gcc-libs!"
+		fi
+		cd ${S}
+	else
+		cp -f /usr/lib/libstdc++.so.3* ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
+		cp -f /lib/libgcc_s-3.0.4.so.1 ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
+		cd ${S}/solver/${MAIN_VER}/unxlngi4.pro/lib
+		ln -s libgcc_s-3.0.4.so.1 libgcc_s.so
+		ln -s libgcc_s-3.0.4.so.1 libgcc_s.so.1
+		cd ${S}
+	fi
 
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
@@ -174,15 +295,64 @@ src_compile() {
 		--with-x || die
 
 	cd ${S}
-	./bootstrap || die "Bootstrap failed!"
+	# Build needs X to compile!
+	export maketype="./bootstrap"
+	virtualmake || die "Bootstrap failed!"
 
-	tcsh -c "source LinuxIntelEnv.Set; dmake" || die "Build failed!"
+	# Build needs X to compile!
+	export maketype="tcsh"
+	echo 'source LinuxIntelEnv.Set; dmake' > build.tcsh
+	virtualmake build.tcsh || die "Build failed!"
 
-	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set |awk '{print $3}'`"
-	[ -d ${S}/instsetoo/${GVERDIR} ] || die "Cannot find build dir!"
+	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set | awk '{print $3}'`"
+	[ -d ${S}/instsetoo/${GVERDIR} ] || die "Cannot find build directory!"
 }
 
 pkg_setup() {
+
+	if [ "`gcc-version`" = "2.95" ]
+	then
+		eerror
+		eerror "This build needs gcc-3.0.4 or later, but due to profile"
+		eerror "settings, it cannot DEPEND on it, so please merge it"
+		eerror "manually:"
+		eerror
+		eerror " #  ebuild /usr/portage/sys-devel/gcc/gcc-<version>.ebuild merge"
+		eerror
+		eerror "Where <version> is the version and revision of the ebuild you"
+		eerror "want to use.  Have a look in /usr/portage/sys-devel/gcc/ for"
+		eerror "available ebuilds."
+		eerror
+		eerror "As of writing, gcc-3.0.4 seemed to create the most stable"
+		eerror "builds (more so than gcc-3.1)."
+		eerror
+		die
+	fi
+
+	if [ -z "`echo ${JDK_HOME} | grep blackdown`" ] && [ "${FORCE_JAVA}" != "yes" ]
+	then
+		eerror
+		eerror "This ebuild has only been tested with the blackdown port of"
+		eerror "java.  If you use another java implementation, it could fail"
+		eerror "horribly, so please merge the blackdown-jdk and set it as"
+		eerror "system VM before proceeding:"
+		eerror
+		eerror " # emerge blackdown-jdk"
+		eerror " # java-config --set-system-vm=blackdown-jdk-1.3.1"
+		eerror " # env-update"
+		eerror " # source /etc/profile"
+		eerror
+		eerror "At the time of writing, this was version 1.3.1, so please"
+		eerror "adjust the version according to the version installed in"
+		eerror "/opt."
+		eerror
+		eerror "If you however want to test another JDK (not officially supported),"
+		eerror "you could do the following:"
+		eerror
+		eerror " # export FORCE_JAVA=yes"
+		eerror
+		die
+	fi
 
 	# This gets in our way ... we MUST use the JDK version, not gcj's
 	if [ -f /usr/include/jni.h ]
@@ -204,7 +374,7 @@ src_install() {
 	# This allows us to change languages without editing the ebuild.
 	[ -z "$LANGUAGE" ] && LANGUAGE=01
 
-	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set |awk '{print $3}'`"
+	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set | awk '{print $3}'`"
 
 	# This next lot is not really tested, and could fail horridly.
 	# what I basically do, is generate three scripts with
@@ -266,12 +436,12 @@ src_install() {
 	# Install binary with "./setup -net" to generate.
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry
 	rm -rf *
-	tar -jxpf ${DISTDIR}/${PN}-${PV}-registry.tbz2 || \
+	tar -jxpf ${DISTDIR}/${PN}-${PV}b-registry.tbz2 || \
 		die "Could not unpack registry!"
 	# Fix paths
 	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry/instance/org/openoffice/Office
 	cp Common.xml Common.xml.orig
-	sed -e "s:/opt/OpenOffice.org641:${LOC}/OpenOffice-${PV}:g" \
+	sed -e "s:/opt/OpenOffice\.org1\.0:${LOC}/OpenOffice-${PV}:g" \
 		Common.xml.orig >Common.xml
 	rm -f Common.xml.orig
 
@@ -309,7 +479,8 @@ pkg_postinst() {
 		done
 		${LOC}/OpenOffice-${PV}/program/gentoo-createdb.sh || die
 		echo ">>> Registering components (this may take a few minutes)..."
-		${LOC}/OpenOffice-${PV}/program/gentoo-register.sh &>/dev/null || die
+		export maketype="${LOC}/OpenOffice-${PV}/program/gentoo-register.sh"
+	    virtualmake &>/dev/null || die
 	fi
 
 	# Make sure these do not get nuked.

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.3 2002/06/07 18:16:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.4 2002/07/15 18:51:36 azarah Exp $
+
+*openoffice-1.0.0-r2 (15 Jul 2002)
+
+  15 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+  General updates to handle changes in our gcc ebuilds;
+  Support for gcc-3.1.1.  Also updated the registry .. old
+  had version 641 in title, etc.
 
 *openoffice-1.0.0-r1 (7 Jun 2002)
 
