@@ -1,7 +1,17 @@
-MD5 b881a12dfbd2701434592e9e2a3fb050 ChangeLog 973
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 20b3f3d49e08dc97363eaf5497eb776d asmon-0.62.ebuild 749
-MD5 111fab0fc09a6938770f5a8ad7317454 asmon-0.64.ebuild 706
-MD5 7b0913a99b68877e50ea847c8242f12d files/asmon-alpha.diff 819
-MD5 bf02e91d30bd8f286faac1484d86a30f files/asmon-cflags.diff 512
+MD5 0cc49378917f4cf2f83eda8a389f833f ChangeLog 1052
+MD5 54de4e747b9b8babd4f19e04a1a63e98 asmon-0.64.ebuild 704
 MD5 2f3b3737e0b104f481cfd0cbd66f5ac3 files/digest-asmon-0.62 60
 MD5 18e342fd8a446660ae6583d7bbc6a8cd files/digest-asmon-0.64 61
+MD5 bf02e91d30bd8f286faac1484d86a30f files/asmon-cflags.diff 512
+MD5 7b0913a99b68877e50ea847c8242f12d files/asmon-alpha.diff 819
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPv5I7fK2cqeyXkRAiZwAKCf2ni/yHwQ8ZCK6ibEFxmrpV+gRwCgs98+
+Cz7t5Bvnhq/F5A05D+uCWyM=
+=fd/2
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
-MD5 16027fd4af1e5c9dc5c60bdfbd1156ed ChangeLog 592
-MD5 10f30cd2af0b9bf9e56ec674e68237c4 gkrellm-gamma-2.03.ebuild 582
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30e924d5f95c332ca7f1c7ab60772dda ChangeLog 679
+MD5 71cd4727a72081a32cdb523d2bf2e2e2 gkrellm-gamma-2.03.ebuild 580
 MD5 b862c88d160f3585f6184dd2161c9aac files/digest-gkrellm-gamma-2.03 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPxPI7fK2cqeyXkRAth7AJ4vJTgFS9nHo4OpG6TuVuIqa/arRgCg6nfb
+xKV5RfxBsGKkOljqSFxORP4=
+=4yjZ
+-----END PGP SIGNATURE-----
