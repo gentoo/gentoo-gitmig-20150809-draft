@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.5 2002/10/17 14:31:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.6 2003/01/14 22:26:43 mholzer Exp $
 
 MY_P=linux-${PV/./}
 S=${WORKDIR}
@@ -31,8 +31,10 @@ src_install () {
 	dodir ${INSTALLDIR}
 	for i in Browsers Reader Resource
 	do
+		if [ -d ${i} ] ; then
 		chown -R root.root ${i}
 		cp -a ${i} ${D}${INSTALLDIR}
+		fi
 	done
 	
 
