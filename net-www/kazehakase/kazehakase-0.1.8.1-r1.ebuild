@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.ebuild,v 1.2 2004/07/29 12:35:02 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.1-r1.ebuild,v 1.1 2004/08/09 18:35:10 nakano Exp $
 
 inherit eutils
 
@@ -8,10 +8,10 @@ IUSE="migemo estraier"
 
 DESCRIPTION="Kazehakase is a browser with gecko engine like Epiphany or Galeon."
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/10580/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/10618/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="GPL-2"
 
 DEPEND="${DEPEND}
@@ -42,6 +42,11 @@ pkg_setup(){
 		eerror
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile(){

@@ -1,6 +1,13 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.14 2004/07/30 22:12:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.15 2004/08/09 18:35:10 nakano Exp $
+
+*kazehakase-0.1.8.1-r1 (09 Aug 2004)
+
+  09 Aug 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/kazehakase-0.1.8.1-gentoo.patch, +kazehakase-0.1.8.1-r1.ebuild,
+  -kazehakase-0.1.8.ebuild:
+  Modified for mozilla-1.7.2. Removed old ebuild.
 
   31 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> kazehakase-0.1.8.1.ebuild:
   Added to ~amd64.
