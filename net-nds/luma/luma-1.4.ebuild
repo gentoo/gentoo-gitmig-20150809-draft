@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-1.4.ebuild,v 1.2 2004/10/29 18:38:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-1.4.ebuild,v 1.3 2004/11/03 14:42:59 sejo Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${P}-r1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE="samba"
 
 RDEPEND=">=x11-libs/qt-3.2
