@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.1.ebuild,v 1.12 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.1.ebuild,v 1.13 2003/04/23 00:15:45 lostlogic Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ LICENSE="as-is"
 KEYWORDS="x86 ppc sparc"
 IUSE="gif png"
 
-DEPEND="sys-apps/supersed"
+DEPEND="=sys-apps/sed-4*"
 RDEPEND="app-text/ghostscript
 	app-text/tetex
 	media-libs/netpbm
@@ -67,10 +67,10 @@ src_install() {
 	doins .keep
 
 	# clean the perl scripts up to remove references to the sandbox
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/pstoimg.pl
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/latex2html.pl
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/cfgcache.pm
-	ssed -i "s:${T}::g" ${D}/usr/lib/latex2html/l2hconf.pm
+	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/pstoimg.pl
+	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/latex2html.pl
+	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/cfgcache.pm
+	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/l2hconf.pm
 }
 
 pkg_postinst() {

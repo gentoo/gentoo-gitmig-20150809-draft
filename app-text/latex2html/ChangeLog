@@ -1,6 +1,6 @@
 # ChangeLog for app-text/latex2html
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.11 2003/03/10 22:42:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex2html/ChangeLog,v 1.12 2003/04/23 00:15:45 lostlogic Exp $
 
 *latex2html-2002.2 (08 Nov 2002)
 
@@ -21,6 +21,9 @@
   twanger@bluetwanger.de (Markus Bertheau)
 
 *latex2html-2002.1 (18 Jun 2002)
+
+  22 Apr 2003; Brandon Low <lostlogic@gentoo.org> latex2html-2002.1.ebuild:
+  Change supersed dependencies
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> latex2html-2002.ebuild :
   Added LICENSE, SLOT.
