@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 DESCRIPTION="Proxy daemon for a commercial version control system"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 #RDEPEND=""
 S=${WORKDIR}
 RESTRICT="nomirror nostrip"
-MY_FILES=$FILESDIR/perforce-2003.1/
+MY_FILES=$FILESDIR/perforce-proxy-2003.1/
 
 src_unpack ()
 {
