@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3457 2005/01/07 18:52:19 vericgar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3458 2005/01/07 22:03:38 vericgar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -46,6 +46,7 @@
 =net-www/mod_injection-0.3.1-r1
 =net-www/mod_layout-3.2.1-r1
 =net-www/mod_layout-4.0.1a-r1
+=net-www/mod_dav-1.0.3-r3
 =net-www/mod_ldap_userdir-1.1.4-r1
 =net-www/mod_limitipconn-0.22-r1
 =net-www/mod_loopback-2.01-r1
