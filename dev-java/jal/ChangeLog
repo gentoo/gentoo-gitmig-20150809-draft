@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jal
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.7 2004/12/04 12:49:34 karltk Exp $
+
+*jal-20031117 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jal-20031117.ebuild:
+  Initial import. Ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>.
