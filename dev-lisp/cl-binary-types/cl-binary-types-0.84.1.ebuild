@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.84.1.ebuild,v 1.3 2004/06/24 23:41:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.84.1.ebuild,v 1.4 2004/07/14 15:22:14 agriffis Exp $
 
 inherit common-lisp eutils
 
@@ -21,7 +21,6 @@ DEPEND="dev-lisp/common-lisp-controller
 
 CLPACKAGE=binary-types
 
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
