@@ -1,9 +1,15 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.42 2004/05/30 22:57:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.43 2004/06/04 18:02:44 plasmaroo Exp $
 
-* ppc-sources <pvdabeel@gentoo.org> :
-  ppc-sources is the 2.4 vanilla tree + benh + pegasos 
+*ppc-sources-2.4.26-r1 (04 Jun 2004)
 
-* ppc-sources-2.4.19 <pvdabeel@gentoo.org> :
-  First official ppc kernel release
+  04 Jun 2004; <plasmaroo@gentoo.org> +ppc-sources-2.4.26-r1.ebuild,
+  -ppc-sources-2.4.26.ebuild, +files/ppc-sources-2.4.26.CAN-2004-0394.patch:
+  Added the CAN-2004-0394 patch; bug #47881.
+
+* ppc-sources <pvdabeel@gentoo.org>:
+  ppc-sources is now the 2.4 vanilla tree + benh + pegasos.
+
+* ppc-sources-2.4.19 <pvdabeel@gentoo.org>:
+  First official PPC kernel release.
