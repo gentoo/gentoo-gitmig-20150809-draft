@@ -1,0 +1,100 @@
+To: vim-dev@vim.org
+Subject: Patch 6.0.012
+Fcc: outbox
+From: Bram Moolenaar <Bram@moolenaar.net>
+------------
+
+Patch 6.0.012
+Problem:    Polish translations contain printf format errors, this can result
+            in a crash when using one of them.
+Solution:   Fix for translated messages. (Michal Politowski)
+Files:      src/po/pl.po
+
+
+*** ../vim60.11/src/po/pl.po	Sat Sep 15 14:57:02 2001
+--- src/po/pl.po	Thu Oct 18 13:26:10 2001
+***************
+*** 221,227 ****
+  #: diff.c:133
+  #, c-format
+  msgid "E96: Can not diff more than %ld buffers"
+! msgstr "E96: Nie mogê zró¿nicowaæ wiêcej ni¿ %ls buforów"
+  
+  #: diff.c:641
+  msgid "E97: Cannot create diffs"
+--- 221,227 ----
+  #: diff.c:133
+  #, c-format
+  msgid "E96: Can not diff more than %ld buffers"
+! msgstr "E96: Nie mogê zró¿nicowaæ wiêcej ni¿ %ld buforów"
+  
+  #: diff.c:641
+  msgid "E97: Cannot create diffs"
+***************
+*** 383,389 ****
+  #: edit.c:3355
+  #, c-format
+  msgid "match %d"
+! msgstr "pasuje %s"
+  
+  #: eval.c:693
+  #, c-format
+--- 383,389 ----
+  #: edit.c:3355
+  #, c-format
+  msgid "match %d"
+! msgstr "pasuje %d"
+  
+  #: eval.c:693
+  #, c-format
+***************
+*** 571,577 ****
+  #: eval.c:8143
+  #, c-format
+  msgid "%s returning #%ld"
+! msgstr "%s zwraca #%d"
+  
+  #: eval.c:8146
+  #, c-format
+--- 571,577 ----
+  #: eval.c:8143
+  #, c-format
+  msgid "%s returning #%ld"
+! msgstr "%s zwraca #%ld"
+  
+  #: eval.c:8146
+  #, c-format
+***************
+*** 2178,2184 ****
+  #: if_cscope.c:407 if_cscope.c:451
+  #, c-format
+  msgid "stat(%s) error: %d"
+! msgstr "stat(%s) b³±d: %s"
+  
+  #: if_cscope.c:460 if_cscope.c:467
+  #, c-format
+--- 2178,2184 ----
+  #: if_cscope.c:407 if_cscope.c:451
+  #, c-format
+  msgid "stat(%s) error: %d"
+! msgstr "stat(%s) b³±d: %d"
+  
+  #: if_cscope.c:460 if_cscope.c:467
+  #, c-format
+*** ../vim60.11/src/version.c	Thu Oct 18 13:28:47 2001
+--- src/version.c	Thu Oct 18 13:26:33 2001
+***************
+*** 608,609 ****
+--- 608,611 ----
+  {   /* Add new patch number below this line */
++ /**/
++     12,
+  /**/
+
+-- 
+hundred-and-one symptoms of being an internet addict:
+88. Every single time you press the 'Get mail' button...it does get new mail.
+
+ ///  Bram Moolenaar -- Bram@moolenaar.net -- http://www.moolenaar.net  \\\
+(((   Creator of Vim -- http://vim.sf.net -- ftp://ftp.vim.org/pub/vim   )))
+ \\\  Help me helping AIDS orphans in Uganda - http://iccf-holland.org  ///
