@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-fep/uim-fep-0.1.9.ebuild,v 1.2 2004/05/02 11:47:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-fep/uim-fep-0.2.3.ebuild,v 1.1 2004/05/07 18:08:37 usata Exp $
 
 IUSE="unicode"
 
