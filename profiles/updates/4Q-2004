@@ -45,3 +45,4 @@ move x11-misc/kgamma kde-misc/kgamma
 move app-misc/mwavem net-dialup/mwavem
 move net-misc/linesrv net-dialup/linesrv
 move net-misc/tftp-hpa net-ftp/tftp-hpa
+move net-wireless/wpa-supplicant net-wireless/wpa_supplicant
