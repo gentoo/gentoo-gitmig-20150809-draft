@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.14 2005/01/22 21:27:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.15 2005/01/23 21:06:37 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -436,7 +436,7 @@ src_compile() {
 	# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
 	# so... we have to help it along.
 	if use gif; then
-		sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+		sed -e "s:GIF_LIB =:GIF_LIB = -lgif:" -i config.mak
 	fi
 
 	einfo "Make"

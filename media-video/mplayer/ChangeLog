@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.259 2005/01/22 21:27:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.260 2005/01/23 21:06:37 luckyduck Exp $
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
+  applied patch to make distcc compiling possible. fixes bug #77235
 
   23 Jan 2005; Chris White <chriswhite@gentoo.org>
   mplayer-1.0_pre5-r5.ebuild, mplayer-1.0_pre6.ebuild:
