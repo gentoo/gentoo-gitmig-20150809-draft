@@ -1,0 +1,18 @@
+--- intl/Makefile~	Fri Feb  9 19:04:07 2001
++++ intl/Makefile	Mon Apr 30 14:21:10 2001
+@@ -53,6 +53,7 @@
+ 
+ ifeq (no,$(cross-compiling))
+ ifeq (yes,$(build-shared))
++ifneq (no,$(PERL)) 
+ ifneq ($(strip $(MSGFMT)),:)
+ tests: $(objpfx)mtrace-tst-gettext $(objpfx)tst-translit.out \
+        $(objpfx)tst-gettext2.out
+@@ -65,6 +66,7 @@
+ 	$(SHELL) -e $< $(common-objpfx) $(common-objpfx)intl/
+ $(objpfx)tst-gettext2.out: tst-gettext2.sh $(objpfx)tst-gettext2
+ 	$(SHELL) -e $< $(common-objpfx) $(common-objpfx)intl/
++endif
+ endif
+ endif
+ endif

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r2.ebuild,v 1.1 2001/04/09 05:33:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r3.ebuild,v 1.1 2001/04/30 14:23:12 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -25,7 +25,7 @@ src_unpack() {
     unpack glibc-${PV}.tar.gz
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-    for i in mtrace-perl mtrace-tst-loading-perl posix-bug-regex2-mem-perl configure.in configure
+    for i in mtrace-perl mtrace-tst-loading-perl mtrace-intl-perl posix-bug-regex2-mem-perl configure.in configure
     do
       echo "Applying $i patch..."
       patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
