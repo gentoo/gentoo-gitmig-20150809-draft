@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-misc/lphdisk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/ChangeLog,v 1.1 2002/07/19 04:19:02 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/ChangeLog,v 1.2 2002/11/06 06:22:41 vapier Exp $
 
 *lphdisk-0.9.1.ebuild (19 Jul 2002)
 
