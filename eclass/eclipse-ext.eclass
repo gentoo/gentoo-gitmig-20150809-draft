@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.2 2004/06/05 21:14:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.3 2004/06/10 15:43:55 karltk Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
@@ -52,11 +52,12 @@ function eclipse-ext_require-slot {
 function eclipse-ext_create-ext-layout {
 	local type=$1
 	if [ "${type}" == "binary" ] ; then
-		eclipse_ext_basedir="/opt/eclipse-extensions-${eclipse_ext_slot}"
+		eclipse_ext_basedir="/opt/eclipse-extensions-${eclipse_ext_slot}/eclipse"
 		dodir ${eclipse_ext_basedir}/eclipse/{features,plugins}
 		touch ${D}/${eclipse_ext_basedir}/eclipse/.eclipseextension
 	else
 		eclipse_ext_basedir="/usr/lib/eclipse-${eclipse_ext_slot}"
+		dodir ${eclipse_ext_basedir}/{features,plugins}
 	fi
 }
 
@@ -83,7 +84,7 @@ function eclipse-ext_install-features {
 
 	for x in $* ; do
 		if [ -f $x/feature.xml ] ; then
-			cp -a $x ${D}/${eclipse_ext_basedir}/eclipse/features
+			cp -a $x ${D}/${eclipse_ext_basedir}/features
 		fi
 	done
 }
@@ -110,8 +111,10 @@ function eclipse-ext_install-plugins {
 	fi
 
 	for x in $* ; do
-		if [ -f $x/plugin.xml ] ; then
-			cp -a $x ${D}/${eclipse_ext_basedir}/eclipse/plugins
+		if [ -d "$x" ] && [ -f "$x/plugin.xml" ] ; then
+			cp -a $x ${D}/${eclipse_ext_basedir}/plugins
+		else
+			eerror "$x not a a plugin directory!"
 		fi
 	done
 }
