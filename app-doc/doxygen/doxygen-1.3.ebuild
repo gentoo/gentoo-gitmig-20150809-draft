@@ -1,20 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.2 2003/05/19 20:30:07 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.3 2003/06/08 05:27:40 seemant Exp $
+
+IUSE="doc qt"
 
 DESCRIPTION="Doxygen is a documentation system for C++, C, Java, IDL (Corba, Microsoft, and KDE-DCOP flavors) and to some extent PHP and C#."
 HOMEPAGE="http://www.doxygen.org"
-LICENSE="GPL-2"
+SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-IUSE="doc qt"
 RDEPEND="media-gfx/graphviz
 	doc? ( app-text/tetex )
 	qt? ( x11-libs/qt )"
-DEPEND="$RDEPEND"
 
-SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
+DEPEND=">=sys-apps/sed-4
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
