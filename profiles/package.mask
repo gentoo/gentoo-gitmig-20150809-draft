@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3544 2005/01/30 14:37:42 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3545 2005/01/30 17:48:54 motaboy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -77,7 +77,7 @@ dev-java/sun-j2sdk
 
 # <motaboy@gentoo.org> (22 Jan 2005)
 # Mask kdebluetooth version as it depends on kitchensync-3.4 that is masked.
-=net-wireless/kdebluetooth-0.0.20050122-r1
+=net-wireless/kdebluetooth-0.0.20050122-r3
 
 # <hollow@gentoo.org> (22 Jan 2005)
 # Apache herd package refresh
