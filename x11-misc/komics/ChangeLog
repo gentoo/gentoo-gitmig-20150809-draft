@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/komics
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/komics/ChangeLog,v 1.1 2004/02/05 12:38:33 aliz Exp $
+
+*komics-1.0 (05 Feb 2004)
+
+  05 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> komics-1.0.ebuild:
+  Initial import
+
