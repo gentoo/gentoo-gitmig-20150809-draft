@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.1 2003/09/17 21:15:18 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fixheadtails.eclass,v 1.2 2003/11/26 22:13:35 mr_bones_ Exp $
 #
 # Author John Mylchreest <johnm@gentoo.org>
 
 ECLASS=fixheadtails
 INHERITED="$INHERITED $ECLASS"
+DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 # ht_fix_all
 # This fixes all files within the current directory.
@@ -15,32 +16,25 @@ INHERITED="$INHERITED $ECLASS"
 # This fixes the files passed by PARAM
 # to be used for specific files. ie: ht_fix_file "${FILESDIR}/mypatch.patch"
 
-ht_fix_all() {
-	local MATCHES
-
-	einfo "Replacing obsolete head/tail with posix compliant ones"
-	for MATCHES in $(grep -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | cut -f1 -d: | sort -u) ; do
-		cp -f ${MATCHES} ${MATCHES}.orig
-        	sed -e 's/head -\(.*\)/head -n \1/' -e 's/tail \([-+]\)\(.*\)/tail -n \1\2/' \
-			< ${MATCHES}.orig \
-        		> ${MATCHES}
-		rm ${MATCHES}.orig
-	done
+do_sed_fix() {
+	sed -i \
+		-e 's/head -\(.*\)/head -n \1/' \
+		-e 's/tail \([-+]\)\(.*\)/tail -n \1\2/' ${1} || \
+			die "sed ${1} failed"
 }
 
 ht_fix_file() {
 	local i
 
-	einfo "Replacing obsolete head/tail with posix compliant ones"
+	einfo "Replacing obsolete head/tail with POSIX compliant ones"
 	for i in "${@}"
 	do
-		if [ -n "$(grep -i -e "head -[ 0-9]" -e "tail [+-][ 0-9]" ${i})" ] ; then
-			cp -f ${i} ${i}.orig
-			sed -e 's/head -\(.*\)/head -n \1/' -e 's/tail \([-+]\)\(.*\)/tail -n \1\2/' \
-				< ${i}.orig \
-				> ${i}
-			rm ${i}.orig
-		fi
+		do_sed_fix ${i}
 	done
-eend
+}
+
+ht_fix_all() {
+	local MATCHES
+	MATCHES="$(grep -l -i -R -e "head -[ 0-9]" -e "tail [+-][ 0-9]" * | sort -u)"
+	ht_fix_file ${MATCHES}
 }
