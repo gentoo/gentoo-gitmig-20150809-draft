@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jruby
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.1 2004/11/16 00:17:20 karltk Exp $
+
+*jruby-0.7.0 (16 Nov 2004)
+
+  16 Nov 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jruby-0.7.0.ebuild:
+  Initial import. Ebuild submitted by Saleem A. <compnerd@compnerd.org>.
