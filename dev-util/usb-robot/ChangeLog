@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/usb-robot
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.1 2004/03/06 10:53:07 pyrania Exp $
+
+*usb-robot-0.2.0 (06 Mar 2004)
+
+  06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> usb-robot-0.2.0.ebuild:
+  Initial import. Thanks to Julien TIERNY <julien.tierny@wanadoo.fr> (bug
+  #42247).
+
