@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.4 2004/12/29 21:54:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.5 2004/12/29 22:38:21 mrness Exp $
 
 inherit kernel-mod eutils
 
@@ -21,10 +21,6 @@ RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )"
 
 pkg_setup() {
-	if [ "${KV_MAJOR}" -eq 2 -a "${KV_MINOR}" -eq 6 -a "${KV_PATCH}" -ge 10 ]; then
-		eerror "This package isn't compatible with kernel versions >= 2.6.10!"
-		die "unsupported kernel version"
-	fi
 	kernel-mod_check_modules_supported
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r3.ebuild,v 1.1 2004/12/29 21:54:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r3.ebuild,v 1.2 2004/12/29 22:38:21 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -21,10 +21,15 @@ RDEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )"
 
 pkg_setup() {
+	MODULE_NAMES=""
 	if kernel_is ge 2 6 10; then
-		eerror "This package isn't compatible with kernel versions >= 2.6.10!"
-		die "unsupported kernel version"
+		ewarn "slamr isn't compatible with kernel versions >= 2.6.10!"
+		ewarn "It will not be installed"
+	else
+		MODULE_NAMES="slamr(extra:${S}/drivers)"
 	fi
+	useq usb && MODULE_NAMES="${MODULE_NAMES} slusb(extra:${S}/drivers)"
+	BUILD_TARGETS="all"
 
 	local CONFIG_CHECK=""
 	if useq alsa; then
@@ -34,21 +39,21 @@ pkg_setup() {
 		CONFIG_CHECK="${CONFIG_CHECK} USB"
 	fi
 
-	MODULE_NAMES="slamr(extra:${S}/drivers)"
-	useq usb && MODULE_NAMES="${MODULE_NAMES} slusb(extra:${S}/drivers)"
-	BUILD_TARGETS="all"
-
 	linux-mod_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to apply patch for fixing usb_endpoint"
+	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to apply fix for usb_endpoint"
 
 	# http://marc.theaimsgroup.com/?l=gentoo-dev&m=109672618708314&w=2
 	if kernel_is ge 2 6 6; then
 		sed -i 's:SUBDIRS=:M=:g' drivers/Makefile
+	fi
+
+	if kernel_is ge 2 6 10; then
+		epatch ${FILESDIR}/${P}-fix-for-2.6.10.patch || die "failed to apply fix for kernels >= 2.6.10"
 	fi
 }
 
@@ -100,7 +105,8 @@ src_install() {
 	#Create device nodes, add module aliases and install hotplug script
 	make -C drivers DESTDIR=${D} KERNEL_DIR="${ROOT}/usr/src/linux" install-devices
 	insinto /etc/modules.d/; insopts -m0644; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
-	insinto /etc/hotplug/usb; insopts -m0755; newins ${FILESDIR}/slusb.hotplug slusb
+	useq usb &&
+		( insinto /etc/hotplug/usb; insopts -m0755; newins ${FILESDIR}/slusb.hotplug slusb )
 
 	dodir /etc/hotplug/blacklist.d
 	echo -e "slusb\nslamr\nsnd-intel8x0m" >> ${D}/etc/hotplug/blacklist.d/55-${PN}
