@@ -1,7 +1,10 @@
 # ChangeLog for app-misc/tdfsb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.5 2004/03/14 10:54:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.6 2004/03/19 15:28:06 gustavoz Exp $
+
+  19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> tdfsb-0.0.7.ebuild:
+  not sparc compatible
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> tdfsb-0.0.7.ebuild:
   Don't assign default to S; header fix
