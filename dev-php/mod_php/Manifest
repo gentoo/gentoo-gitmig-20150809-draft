@@ -1,6 +1,7 @@
 MD5 ad12767019b879b7c9fdd216bf02992c mod_php-4.3.2.ebuild 3396
 MD5 9a9440cc176c36cf06f31d0a2cd96129 mod_php-4.3.3-r2.ebuild 5287
 MD5 2ffcbd3deb771e2765ea62a15aa6160f mod_php-4.3.2-r5.ebuild 5113
+MD5 102240490b25b7503488fab4a31dd575 mod_php-4.3.4-r1.ebuild 5334
 MD5 baaa4e7f9b1f85ece366d0a48203ffd4 mod_php-4.3.3_rc3.ebuild 5132
 MD5 3224efbbbd51297bd8a9999a79c7a1df mod_php-4.3.4.ebuild 5289
 MD5 70c4a70166685022a7ef99e972141843 mod_php-4.3.2-r2.ebuild 3699
@@ -27,3 +28,4 @@ MD5 63f7765d77e10eeef4b306480cd5d200 files/digest-mod_php-4.3.2-r5 137
 MD5 e007fc4a17373504abd024180c0d0b3f files/digest-mod_php-4.3.3-r1 137
 MD5 e007fc4a17373504abd024180c0d0b3f files/digest-mod_php-4.3.3-r2 137
 MD5 e007fc4a17373504abd024180c0d0b3f files/digest-mod_php-4.3.3-r3 137
+MD5 5547bf31e6a425747226d5984cff04e9 files/digest-mod_php-4.3.4-r1 137
