@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.4 2004/04/20 17:50:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.5 2004/05/12 18:28:51 eradicator Exp $
 
 IUSE=""
 
@@ -16,10 +16,9 @@ SRC_URI="http://fanthom.math.put.poznan.pl/~gyver/crystality/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
-DEPEND="media-sound/xmms
-	>=sys-libs/glibc-2.1.3"
+DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A}
