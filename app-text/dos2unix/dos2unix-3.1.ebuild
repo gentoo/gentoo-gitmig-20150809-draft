@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.2 2002/12/01 16:59:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-3.1.ebuild,v 1.3 2002/12/22 22:49:00 joker Exp $
 
 DESCRIPTION="Dos2unix converts DOS or MAC text files to UNIX format"
 HOMEPAGE=""
@@ -8,7 +8,7 @@ SRC_URI="http://www2.tripleg.net.au/dos2unix.builder/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 
 DEPEND=""
 RDEPEND="!app-text/hd2u"

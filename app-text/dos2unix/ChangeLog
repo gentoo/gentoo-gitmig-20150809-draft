@@ -1,8 +1,11 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.1 2002/12/01 05:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.2 2002/12/22 22:49:00 joker Exp $
 
 *dos2unix-3.1 (01 Dec 2002)
+
+  22 Dec 2002; Christian Birchinger <joker@gentoo.org>:
+  Added "sparc" keyword.
 
   01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by José Fonseca <j_r_fonseca@yahoo.co.uk>.
