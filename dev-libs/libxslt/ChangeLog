@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.55 2004/02/09 16:49:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.56 2004/02/10 06:24:00 darkspecter Exp $
+
+  10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> libxslt-1.1.2.ebuild:
+  set ppc in keywords
 
   09 Feb 2004; <gustavoz@gentoo.org> libxslt-1.1.2.ebuild:
   stable on hppa and sparc
