@@ -5,8 +5,11 @@
 		The xfce-extra category contains non-core XFCE applications.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie xfce-extra enthält zusätzliche Software für den
+		Die Kategorie xfce-extra enthÃ€lt zusÃ€tzliche Software fÃŒr den
 		XFCE-Desktop.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría xfce-extra contiene paquetes no esenciales de XFCE.
 	</longdescription>
 </catmetadata>
 
