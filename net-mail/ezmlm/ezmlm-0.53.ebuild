@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Maintainer: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.2 2002/04/27 21:46:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53.ebuild,v 1.3 2002/05/14 18:00:49 bangert Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,16 +14,17 @@ DESCRIPTION="Simple yet powerful mailing list manager for qmail."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
 HOMEPAGE="http://cr.yp.to/software/ezmlm.html"
+LICENSE="as-is"
+
 
 src_compile() {
 	cd ${S}
 	mkdir tmp
-	echo "./tmp" > conf-bin
-	echo "./tmp" > conf-man
+	echo "/usr" > conf-bin
+	echo "/usr/share/man" > conf-man
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
 	emake || die
-	make setup check || die
 }
 
 src_install () {
