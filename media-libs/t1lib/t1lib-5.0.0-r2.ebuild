@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.5 2003/10/06 17:25:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.6 2003/10/30 08:14:59 usata Exp $
 
 inherit gnuconfig flag-o-matic
 
 IUSE="X doc"
 
 S=${WORKDIR}/${P}
-DESCRIPTION="A Type 1 Rasterizer Library for UNIX/X11"
+DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
 SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
 
-DEPEND="X? ( virtual/x11 )
-	tetex? ( virtual/tetex )"
+DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
 LICENSE="LGPL-2 GPL-2"
