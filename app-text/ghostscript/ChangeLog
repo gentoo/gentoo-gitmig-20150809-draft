@@ -1,61 +1,49 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.9 2002/07/04 03:17:54 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.10 2002/07/11 06:45:55 drobbins Exp $
+
+*ghostscript-7.05.3 (10 Jul 2002)
+
+  10 Jul 2002; Daniel Robbins <drobbins@gentoo.org> Switched from GNU to ESP
+  Ghostscript since the latter contains much better printer device support.
 
 *ghostscript-7.05-r2 (03 Jul 2002)
 
-  03 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
-  Added HL-1250 driver.  Thanks to Bardur Arantsson
+  03 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  : Added HL-1250
+  driver.  Thanks to Bardur Arantsson
 
 *ghostscript-7.0.5-r1 (28 Jun 2002)
 
-  28 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
-  added cups pstoraster support
+  28 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> : added cups pstoraster
+  support
 
 *ghostscript-7.05 (26 May 2002
-  26 May: Bart Verwilst: Upgraded to 7.05, added lexmark 3200 driver.. 
+  
+  26 May 2002; Bart Verwilst: Upgraded to 7.05, added lexmark 3200 driver..
   Closes bugs #2614 and #2698 
 
 *ghostscript-6.53-r2 (28 Apr 2002)
-  28 Apr 2002; Jon Nelson <jnelson@gentoo.org>: ghostscript-6.53-r2.ebuild
   
-  Remove dependency on downloading zlib and png - use shared versions!
-  (Can't do that for libjpeg - see ghostscript docs)
-  Update to gimp-print 4.2.1
-  Use shared zlib and libpng
-  Patch ghostscript with a few additional patches
+  28 Apr 2002; Jon Nelson <jnelson@gentoo.org>: ghostscript-6.53-r2.ebuild
+  Remove dependency on downloading zlib and png - use shared versions!  (Can't
+  do that for libjpeg - see ghostscript docs) Update to gimp-print 4.2.1; Use
+  shared zlib and libpng; Patch ghostscript with a few additional patches;
   Closes #2010
 
 *ghostscript-6.53 (04 Apr 2002)
-  04 Apr 2002 Spider <spider@gentoo.org>
-  fix the static reference to /var/tmp/portage in the patch.
+  
+  04 Apr 2002 Spider <spider@gentoo.org> fix the static reference to
+  /var/tmp/portage in the patch.
 
 *ghostscript-6.53 (7 Mar 2002)
 
-  7 Mar 2002; G.Bevin <gbevin@gentoo.org>:
-  
-  Upgraded to GNU ghostscript version 6.53.
-  Upgrade libpng to v1.2.1.
-  Upgraded gimp-print to v4.2.0.
-  Added support for Samsung GDI device output which is used by low-budget
-  Lexmark laser printers.
-  The HP IJS is now included in the standard Ghostscript distrubution, no need
-  to patch anymore.
+  7 Mar 2002; G.Bevin <gbevin@gentoo.org>: Upgraded to GNU ghostscript version
+  6.53.  Upgrade libpng to v1.2.1.  Upgraded gimp-print to v4.2.0.  Added
+  support for Samsung GDI device output which is used by low-budget Lexmark
+  laser printers.  The HP IJS is now included in the standard Ghostscript
+  distrubution, no need to patch anymore.
 
 *ghostscript-6.50-r4 (4 Feb 2002)
 
-  4 Feb 2002; Steve Flack <steve_flack@ntlworld.com>:
-  
-  Submitted a new ebuild with patches to support HP-developed HPIJS drivers.
-
-*ghostscript-6.50-r3 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  4 Feb 2002; Steve Flack <steve_flack@ntlworld.com>: Submitted a new ebuild
+  with patches to support HP-developed HPIJS drivers.
