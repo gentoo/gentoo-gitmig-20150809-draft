@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/rudiments
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.3 2004/06/24 21:51:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.4 2004/07/16 22:05:23 matsuu Exp $
+
+*rudiments-0.26.3 (17 Jul 2004)
+
+  17 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +rudiments-0.26.3.ebuild:
+  Version bumped.
+  Added to ~amd64.
+  Fixed some problems.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   rudiments-0.25.1.ebuild:
