@@ -1,11 +1,17 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.12 2003/01/15 22:59:51 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.13 2003/02/04 18:13:31 seemant Exp $
+
+*libgd-1.8.3-r6 (15 Jan 2003)
+  
+  04 Feb 2003; Sseemant Kulleen <seemant@gentoo.org> libgd-1.8.3-r6.ebuild :
+
+  Removed dependency on sed-4 because it is buggy on ppc.  Switched to
+  normal gnu-sed syntax. Closes bug #15022 by Rajiv Manglani
+  <rajiv@gentoo.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*libgd-1.8.3-r6 (15 Jan 2003)
-
   15 Jan 2003; Brandon Low <lostlogic@gentoo.org> libgd-1.8.3-r6.ebuild:
   Drop dependency on supersed, switch to >=sed-4.0.  This is unstable on the
   ppc pending the stability of sed-4 on the ppc.

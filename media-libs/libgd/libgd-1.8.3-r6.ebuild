@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r6.ebuild,v 1.1 2003/01/15 22:59:40 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r6.ebuild,v 1.2 2003/02/04 18:13:33 seemant Exp $
 
 IUSE="X"
 
@@ -14,8 +14,7 @@ SLOT="0"
 LICENSE="as-is | BSD"
 KEYWORDS="x86 ~ppc sparc"
 
-DEPEND=">=sys-apps/sed-4.0
-	media-libs/libpng
+DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( =media-libs/freetype-1.3* )"
@@ -44,16 +43,17 @@ src_unpack() {
 		&& compopts="${compopts} -DHAVE_LIBTTF" \
 		&& libsopts="${libsopts} -lttf"
 	
+	cp Makefile ${T}
 	if use truetype
 	then
-		sed -i -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 			-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
 			-e "s:^\(INCLUDEDIRS\)=:\1=-I/usr/include/freetype :" \
-		Makefile
+		${T}/Makefile > Makefile
 	else
 		sed -i -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
-		Makefile
+		${T}/Makefile > Makefile
 	fi
 
 }
