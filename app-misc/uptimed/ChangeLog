@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.15 2004/08/04 13:28:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.16 2004/09/11 18:03:44 ka0ttic Exp $
+
+*uptimed-0.3.3 (11 Sep 2004)
+
+  11 Sep 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +uptimed-0.3.3.ebuild:
+  Version bump (bug #54958)
 
   04 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> uptimed-0.3.1.ebuild:
   Added ~sparc, bug #59390

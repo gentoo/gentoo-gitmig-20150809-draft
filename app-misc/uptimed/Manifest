@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 351d6333acd209cc4b6e63efbdc818a0 ChangeLog 1675
 MD5 af1032c2d8d0d97ccb3638a1f16d04ec uptimed-0.3.1.ebuild 1126
+MD5 b3932e2a979d024b6aef96dd7dbb32c8 uptimed-0.3.3.ebuild 1121
 MD5 1b0f70d0251f2ce88c11f1c59e3edfd0 uptimed-0.3.0-r1.ebuild 1055
-MD5 0346bc0bdd669e17390e7885a3e136f9 files/uptimed-0.2.0.patch 1130
+MD5 e0e76a38d48bcb9fc47afa5dbae181a9 ChangeLog 1823
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 d8a64a6a00566bb245d3e2a523ab4191 files/uptimed 520
 MD5 b288b16ae3891f2fe74994ee41960bfd files/digest-uptimed-0.3.0-r1 66
 MD5 c412374fc67b261ecc1a2c7c9dc7bf04 files/digest-uptimed-0.3.1 66
+MD5 de862272721a735c1b372cd6d6d794e8 files/digest-uptimed-0.3.3 66
+MD5 0346bc0bdd669e17390e7885a3e136f9 files/uptimed-0.2.0.patch 1130
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBEOP3LLFUmVNQ7rkRAqEaAJ0ZjQaDsRN9BYkpR5K9M8S0Hb53rACfQIOf
-g+ngGc95wRQcc2R63za1+tA=
-=XG8m
+iD8DBQFBQz4JEZCkKN40op4RAjyrAJ9Fq1Suso9+KUb9r5wsMW+IoYTUOgCfUv1u
+3p48Gn9SpnCScsDOOCkL3HM=
+=CJ8t
 -----END PGP SIGNATURE-----
