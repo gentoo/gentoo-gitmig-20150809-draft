@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.10 2004/06/12 21:04:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605.ebuild,v 1.11 2004/06/16 15:36:27 lu_zero Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -310,6 +310,12 @@ src_unpack() {
 		# Need to install into /lib for n32-only userland for now.
 		# Propper solution is to make all userland /lib{32|64}-aware.
 		use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
+	fi
+
+	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/2.3.4/glibc-2.3.4-nptl-altivec.patch
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
