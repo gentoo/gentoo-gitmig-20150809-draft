@@ -1,5 +1,5 @@
 MD5 8538d2fcb9c757e93f68cba3040e5f40 ChangeLog 1042
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 54e46089771ef12d7d9b13ffd96039b6 evkeyd-0.1_pre7.ebuild 711
-MD5 1dfda5c692189c84a1a314f42ace9402 files/evkeyd.rc 488
+MD5 d42a6ebfc086fcb0ec0304806772fd6f evkeyd-0.1_pre7.ebuild 619
+MD5 6c71378ccb8985cdd61762c3f447c74e files/evkeyd.rc 482
 MD5 c27007872204d890c558963ce1d0b716 files/digest-evkeyd-0.1_pre7 65
