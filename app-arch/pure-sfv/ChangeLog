@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.2 2003/12/13 18:22:15 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.3 2004/04/13 22:17:10 weeve Exp $
+
+  13 Apr 2004; Jason Wever <weeve@gentoo.org> pure-sfv-0.3.ebuild:
+  Added ~sparc keyword.
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> pure-sfv-0.3.ebuild:
   mark stable on amd64
