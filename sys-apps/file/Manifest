@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 be6cac92523efa73fd08ced0f02dcadb ChangeLog 10163
-MD5 9b6860e1cbed3cbc03402dbde98fcd98 file-4.12.ebuild 1858
+MD5 9fb5c3d48dddf5c9b43afca89570d93e ChangeLog 10308
+MD5 5fef75779bd2c2e254149276b5b9fc64 file-4.12.ebuild 2050
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 deefcaad96da75f331ac1ab9d9bc23f9 file-4.10.ebuild 1900
 MD5 7164ccd6e5dc2c32c0d7911178ea8bd0 file-4.10-r1.ebuild 1909
 MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10 61
 MD5 d83caef7e9c2a9719022f57de134edae files/file-4.10-mconvert.patch 476
 MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
+MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.12-cross-compile.patch 964
 MD5 04e04c973cb0c88d19b0028d8ed05007 files/file-4.xx-mips-gentoo.diff 4694
 MD5 8cf0ba615168e0a01ddd576d39b19efe files/digest-file-4.10-r1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvPRproRuSHgZdywRAu4wAJ9LlYZdueQ7fUm91g/5C4CcW2oCPQCfSnSx
-tcgPJBb3mFZz/a++LWbNsc0=
-=svZb
+iD4DBQFBvisZroRuSHgZdywRAk5dAJ9NpRWMPB9XLJF7O7xQ69Ut8ZARIwCYrjoU
+07VwqhYTo0I8wJWBx8xuQw==
+=RFlV
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.54 2004/11/05 09:32:31 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.55 2004/12/13 23:50:23 vapier Exp $
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/groff-1.19.1-parallel-make.patch, groff-1.19.1-r2.ebuild:
+  Clean up the ebuild. Add support for cross-compiling. Try to fix parallel
+  build (works for me :D).
 
   05 Nov 2004; Hardave Riar <hardave@gentoo.org> groff-1.19.1-r2.ebuild:
   Stable on mips, bug #68404.

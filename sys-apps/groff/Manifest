@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e7c08a6a850bff52f83a1612edcf275 ChangeLog 7465
+MD5 f72b9211d08e8ca8201d50bfe90c4e33 ChangeLog 7685
 MD5 6095957ce1651ff7d72b6c285cddfbd9 groff-1.18.1-r4.ebuild 3140
-MD5 e1be5a1a4b1ef8931d3b152d07fdd3b1 groff-1.19.1-r2.ebuild 3031
+MD5 58b6e27032ccf499957971c0998f596e groff-1.19.1-r2.ebuild 3167
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
 MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r2 65
@@ -14,10 +14,11 @@ MD5 b70471bdc7015ddf030d176b3a0f2d5f files/groff-1.19.1-stack.patch 3659
 MD5 8f3336cc924f20e480ac76ee94f0611e files/groff-1.19.1-tmpfile.patch 710
 MD5 e0ea59264695cc68dc9947e4611dde5d files/groff-man-UTF-8.diff 391
 MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
+MD5 64d15253bef046fc681356d45aecf417 files/groff-1.19.1-parallel-make.patch 1067
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvf5XroRuSHgZdywRAitsAJ957za/Ll/nsHIRPZdZH9XTHhaJigCgkiHZ
-oMdoqsobKb30virKXUZHRKE=
-=zY2d
+iD8DBQFBvireroRuSHgZdywRAtXgAJ44ZkHZGnp/LrzKoD0AjRi8YJqMLwCeLvBR
+1cIBSk7ZLKUh8RiDsoS6KjA=
+=9Dlr
 -----END PGP SIGNATURE-----
