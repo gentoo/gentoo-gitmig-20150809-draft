@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4fad78f1f28854dbc7f985c64a3ea258 ChangeLog 538
+MD5 51a2c7874cf17aaaaa319f6c1c912754 ChangeLog 651
 MD5 41d6c0ba999d7b4af929e07368693a3f metadata.xml 261
 MD5 9158c225e2c427351554935f52ec5017 mod_bw-0.5_rc1.ebuild 696
 MD5 4992afc22d51cafed2167d4bdb66d7e5 mod_bw-0.5.ebuild 692
+MD5 9f4fcdc43de98c9e46f3f7b8f0e10f07 mod_bw-0.6.ebuild 692
 MD5 e45b84221c7a081fd11c7f44b083b0e9 files/11_mod_bw.conf 511
 MD5 7fff28dc6fff1c1ce2dcc9d6a36ffe5b files/digest-mod_bw-0.5 58
 MD5 e115388638f885e2b23d665bae2bed12 files/digest-mod_bw-0.5_rc1 61
+MD5 dfac2de074a4b16c95034264d21f9f61 files/digest-mod_bw-0.6 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCHx5bmPFBzbX68WERAly2AJ92RKGCNZunpirF3VbV4hcft/uEiQCdH+ol
-NMrKGCgaPQ5T8eOjmiy7bQQ=
-=tAPO
+iD8DBQFCJJ+GmPFBzbX68WERAukaAJ9JKCMqyrXf6QsQJQTraMlnxYOIKACfaZiQ
+D7uOLa23Yxn8Z23J0CRAnTQ=
+=joXi
 -----END PGP SIGNATURE-----
