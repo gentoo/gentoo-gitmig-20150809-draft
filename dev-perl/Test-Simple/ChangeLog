@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.7 2003/02/12 06:24:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.8 2003/03/20 18:22:53 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *Test-Simple-0.47 (16 Nov 2002)
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> Test-Simple-0.47.ebuild :
+  Added hppa to KEYWORDS.
 
   16 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   Test-Simple-0.47.ebuild, files/digest-Test-Simple-0.47 :
