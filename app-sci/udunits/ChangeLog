@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/udunits
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/ChangeLog,v 1.12 2004/11/08 23:13:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/ChangeLog,v 1.13 2004/12/11 18:52:14 kloeri Exp $
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> udunits-1.12.1.ebuild:
+  Stable on alpha.
 
   08 Nov 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.1.ebuild:
   fixed perl test issues and added ~amd64 to keywords; all udunits libs and

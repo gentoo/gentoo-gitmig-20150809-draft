@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.4 2004/11/08 23:13:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.5 2004/12/11 18:52:14 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.Z"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc alpha ~mips ~hppa"
 
 DEPEND="dev-lang/perl
 	sys-apps/sed"

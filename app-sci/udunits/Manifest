@@ -1,10 +1,20 @@
-MD5 d9ac6c0fc006420036863e7b8d966362 ChangeLog 1633
-MD5 176a9013a3fbf4d813fbe2ae5c54b409 metadata.xml 583
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a7d30831e40b3a89db1131e37aaf403 ChangeLog 1728
 MD5 ddfce36f93129e93d379bdda1cc19a00 udunits-1.12.0.ebuild 1853
-MD5 83d3ca112ac9ed9bea158c3a1bf02a61 udunits-1.12.1.ebuild 2007
-MD5 cea4faba4689abec3805139902ddd0d2 files/digest-udunits-1.12.0 65
+MD5 c8f20b665cc398db1a0d42f95cb79201 udunits-1.12.1.ebuild 2005
+MD5 176a9013a3fbf4d813fbe2ae5c54b409 metadata.xml 583
 MD5 3fdb828dd9ab28f5f06e2456b1c96c65 files/digest-udunits-1.12.1 65
+MD5 cea4faba4689abec3805139902ddd0d2 files/digest-udunits-1.12.0 65
 MD5 922ab296149176fd2c78ebf4654916ee files/udunits_configure_in.patch 241
-MD5 3dc5d09377cb0326220d293cec108569 files/udunits_customize.patch 375
-MD5 5b85e692f66a2a74d7c4e1d74a729e23 files/udunits_lib_make.patch 895
 MD5 c4058b93662ad2beab9763c8120c85f4 files/udunits_master_mk.patch 1234
+MD5 5b85e692f66a2a74d7c4e1d74a729e23 files/udunits_lib_make.patch 895
+MD5 3dc5d09377cb0326220d293cec108569 files/udunits_customize.patch 375
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBu0HougEuf3OQ0akRAiyOAJ0SAM4bNDZmhIG1rWeo4i5KyuxfnACfRGD1
+0+pTCrI139HuoljyP5DnCaE=
+=fQHU
+-----END PGP SIGNATURE-----
