@@ -1,5 +1,5 @@
 MD5 12d54637162b98f72bff1c2fd8c4a92a ChangeLog 953
-MD5 24c2bebc199182859441b2b0a2eb3114 epiphany-0.7.0.ebuild 1222
+MD5 5309c7316344cd577b60718a902c522a epiphany-0.7.0.ebuild 1218
 MD5 1dc4ce81786cfd36fab6ca96775e769a epiphany-0.6.1.ebuild 1088
 MD5 8b7e0d5dbefcdc3398812d365dfcfb8a files/digest-epiphany-0.7.0 68
 MD5 e9b02b08287ab6b521a54faaa0074207 files/ppc_va_list.patch 552

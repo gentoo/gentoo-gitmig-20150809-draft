@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.0.ebuild,v 1.3 2003/06/09 16:18:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.0.ebuild,v 1.4 2003/06/09 16:19:25 lu_zero Exp $
 
 inherit gnome2 debug
 
@@ -32,11 +32,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
 src_unpack () {
-		unpack ${A}
-		cd ${S}
-		if [ "${ARCH}" = "ppc" ] ; then
+	unpack ${A}
+	cd ${S}
+	if [ "${ARCH}" = "ppc" ] ; then
 		epatch ${FILESDIR}/ppc_va_list.patch
-		fi
+	fi
 }
 
 pkg_setup () {
