@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/konserve
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.10 2004/02/29 16:51:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.11 2004/03/21 00:10:38 weeve Exp $
+
+  20 Mar 2004; Jason Wever <weeve@gentoo.org> konserve-0.10.2.ebuild:
+  Added ~sparc keyword.
 
 *konserve-0.10.2 (25 Feb 2004)
 
