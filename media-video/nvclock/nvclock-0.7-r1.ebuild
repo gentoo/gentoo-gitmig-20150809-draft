@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7.ebuild,v 1.2 2003/11/05 15:18:25 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.1 2003/11/05 17:06:38 malverian Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	epatch ${FILESDIR}/configure.in.diff || die
+	mv configure.in configure.ac
 	./autogen.sh || die
 
 	export QTDIR=/usr/qt/3
@@ -36,7 +37,18 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
+	dodir /usr/bin /etc/init.d /etc/conf.d
 	einstall || die
+
+	cp ${FILESDIR}/nvclock_initd ${D}/etc/init.d/nvclock
+	cp ${FILESDIR}/nvclock_confd ${D}/etc/conf.d/nvclock
+
+	chmod u+x ${D}/etc/init.d/nvclock
+
 	dodoc AUTHORS COPYING README
+}
+
+pkg_postinst() {
+	einfo "To enable card overclocking at startup, edit your /etc/conf.d/nvclock"
+	einfo "accordingly and then run: rc-update add nvclock default"
 }
