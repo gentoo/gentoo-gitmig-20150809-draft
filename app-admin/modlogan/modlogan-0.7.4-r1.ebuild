@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.15 2003/02/13 05:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.16 2003/07/16 14:44:23 pvdabeel Exp $
 
 IUSE="nls mysql"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://jan.kneschke.de/projects/modlogan/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc "
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/x11
 	dev-libs/libxml
