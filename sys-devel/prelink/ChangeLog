@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.28 2004/04/11 11:29:02 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.29 2004/04/13 10:08:02 cretin Exp $
 
 *prelink-20040317 (05 Apr 2004)
+
+  13 Apr 2004; Stefan Jones <cretin@gentoo.org> :
+  Add dep for elfutils-0.94 as per bug 47644
 
   11 Apr 2004; Stefan Jones <cretin@gentoo.org> :
   Mark as stable for all remaining archs
