@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/oftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.10 2004/03/31 19:29:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.11 2004/04/28 17:55:56 eradicator Exp $
+
+  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  oftpd-0.3.7-r1.ebuild:
+  Added IUSE.
 
 *oftpd-0.3.7-r1 (31 Mar 2004)
 

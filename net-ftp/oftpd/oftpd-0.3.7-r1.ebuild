@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.1 2004/03/31 19:29:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.2 2004/04/28 17:55:56 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Secure, small, anonymous only ftpd"
 SRC_URI="http://www.time-travellers.org/oftpd/${P}.tar.gz"
