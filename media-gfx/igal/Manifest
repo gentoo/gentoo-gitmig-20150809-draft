@@ -1,5 +1,5 @@
-MD5 3b0d7718162c05ff79b18cc0bfac3a37 ChangeLog 951
-MD5 0b538114edf8eff20bc7c2438f31ef65 igal-1.4.ebuild 833
+MD5 0217f46f7b79f52f8a05d7e52583f43b ChangeLog 1045
+MD5 36053ad480665062dd4e02559ec22d1c igal-1.4.ebuild 839
 MD5 686285d9a04bf84e0d0f1870c55ce390 metadata.xml 460
 MD5 d2d3c3175f976c6f7dc1261af34756ea files/digest-igal-1.4 187
 MD5 943b5dbcddc3a985b05ab6a76f01cdda files/igal-1.4-gentoo.diff 4306
