@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.11 2004/06/02 21:38:49 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.12 2004/06/09 21:45:30 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	# global flag.
 	# Travis Tilley <lv@gentoo.org> 09 Apr 2004
 	use amd64 && append-flags -fPIC
+	use ppc && append-flags -fPIC
 
 	sed -i.orig -e "s:-O:${CFLAGS} -Wno-deprecated:" config.linux
 	epatch ${FILESDIR}/gcc-3.3.patch
