@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.1.ebuild,v 1.3 2005/01/09 11:43:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/libtifiles-0.6.1.ebuild,v 1.4 2005/03/11 11:48:24 sekretarz Exp $
 
 DESCRIPTION="Various TI file formats support for the TiLP calculator linking program"
 HOMEPAGE="http://tilp.info/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/tilp/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="nls"
 
 RDEPEND="sci-libs/libticables
