@@ -2,7 +2,7 @@ MD5 f2193d3a327e5328b066c43a85be6b16 qmail-1.03-r11.ebuild 11396
 MD5 9f63e83d10743897e07c25c28a6c57f3 qmail-1.03-r9.ebuild 9963
 MD5 a44e4287eb93476321e39985a7217b65 qmail-1.03-r10.ebuild 11152
 MD5 2e824ec277afa32dfbc8a5b796ecb15d qmail-1.03-r8.ebuild 8115
-MD5 2494d3577575290d78f7ab5f8ade3e50 qmail-1.03-r12.ebuild 12591
+MD5 34c7fe6f7eef2b75134b85c32347487a qmail-1.03-r12.ebuild 13580
 MD5 954962b289db93ff4f3b934fe5fdfa9e ChangeLog 10277
 MD5 ff596e74b015e067a180fc78855aa87a metadata.xml 360
 MD5 e0686e52df7f0c840a7ac2bfe1fd291a files/tcp.qmqp.sample 337
@@ -13,7 +13,7 @@ MD5 48a1e168db29ab4e6c57f1ac135ee2bf files/digest-qmail-1.03-r9 323
 MD5 55b519379b1330f57110fa6d60982cff files/tcp.pop3.sample 285
 MD5 1fa33b460954492678129c60520e9cba files/digest-qmail-1.03-r10 442
 MD5 d6b150617bc5d76374fe010fc2902923 files/digest-qmail-1.03-r11 764
-MD5 d237b78d8862ff565265161b144c9b23 files/digest-qmail-1.03-r12 1155
+MD5 a1ac3318481064fc73553bec0cb8d554 files/digest-qmail-1.03-r12 1496
 MD5 76d218a258e2ec859ab80c377351afce files/tcp.qmtp.sample 370
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03-r8/rc 108
 MD5 71aa0894c118dda3405f1f847944158c files/1.03-r8/qmail-queue.patch 1512
