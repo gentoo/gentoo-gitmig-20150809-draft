@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.1 2004/07/06 03:13:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.3.2.ebuild,v 1.2 2004/07/06 20:07:04 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -19,4 +19,5 @@ DEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/librsvg-2.0
 	>=gnome-base/gconf-2.0
-	>=media-libs/gstreamer-0.8"
+	>=media-libs/gstreamer-0.8
+	media-libs/gst-plugins"

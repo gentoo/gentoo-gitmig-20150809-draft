@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.14 2004/07/06 03:13:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.15 2004/07/06 20:07:04 mr_bones_ Exp $
+
+  06 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  monkey-bubble-0.3.2.ebuild:
+  Missed media-libs/gst-plugins dep (bug #56244)
 
 *monkey-bubble-0.3.2 (05 Jul 2004)
 
