@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2687 2004/02/09 05:10:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2688 2004/02/09 19:28:32 caleb Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -166,11 +166,6 @@ app-portage/kportage
 # <robbat2@gentoo.org> (05 Jan 2004)
 # This is the new pre-release, block it for the moment
 >=net-mail/vpopmail-5.4*
-
-# <caleb@gentoo.org> (05 Jan 2004)
-# Remask this qt
-=x11-libs/qt-3.3.0_beta1
-=x11-libs/qt-3.3.0
 
 # <lanius@gentoo.org> (31 Dec 2003)
 # fix version scheme
