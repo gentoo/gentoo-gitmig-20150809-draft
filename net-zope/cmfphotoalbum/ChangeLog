@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/cmfphotoalbum
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.5 2003/04/17 19:23:23 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphotoalbum/ChangeLog,v 1.6 2003/06/22 20:20:23 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfphotoalbum-0.2.ebuild:
+  ~x86 ~ppc -> x86 ppc
 
 *cmfphotoalbum-0.2 (17 Apr 2003)
 
