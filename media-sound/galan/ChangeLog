@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/galan
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.4 2004/02/01 12:31:14 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.5 2004/02/04 13:04:42 torbenh Exp $
+
+*galan-0.3.0_beta3 (04 Feb 2004)
+
+  04 Feb 2004; <torbenh@gentoo.org> galan-0.2.13d.ebuild, galan-0.2.14.ebuild,
+  galan-0.3.0_beta3.ebuild, metadata.xml:
+  Added galan-0.3.0_beta3.
+  removed the other arch keywords, because repoman mourns around.
+  liblrdf is not in the other archs and jack-audio-connection-kit
+  neither.
 
   01 Feb 2004; Brian Harring <ferringb@gentoo.org> galan-0.2.14.ebuild, 
   files/galan-0.2.14-alsalib-fix.patch:
