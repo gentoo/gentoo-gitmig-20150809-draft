@@ -717,6 +717,8 @@ x11-terms/gnome-terminal
 >=media-gfx/eog-0.110.0
 >=net-news/pan-0.11.90
 >=media-gfx/gimp-1.3.5
+>=app-text/gnome-spell-1.0_pre1
+
 gnome-extra/yelp
 gnome-extra/metatheme
 gnome-extra/nautilus-gtkhtml
