@@ -1,10 +1,11 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.3 2003/10/01 11:45:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.4 2003/10/02 16:05:33 usata Exp $
 
-  26 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-ss-4507.ebuild,
-  anthy-ss-4515.ebuild, anthy-ss-4519.ebuild:
-  Moved snapshots from app-i18n/anthy
+*anthy-ss-4601 (2 Oct 2003)
+
+  2 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-ss-4601.ebuild:
+  Version bumped. Added ~alpha, ~sparc and ~ppc keywords
 
 *anthy-ss-4524 (26 Sep 2003)
 
