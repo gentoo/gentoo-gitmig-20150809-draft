@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 010cbcfa02a4dffe0d293e288922d99a kdissert-0.3.4.1.ebuild 781
-MD5 03d7df5b0665dcfb672f8ebf40e2f22c kdissert-0.3.6.ebuild 856
+MD5 5d3f1c36b3a8182f8e2f3ee209a1f348 kdissert-0.3.6.ebuild 863
 MD5 cdafd65e434b2c013b53823c7cd77e06 kdissert-0.3.5.ebuild 696
-MD5 7cfd00c26eb73b333b85a46fb0eccab9 ChangeLog 1138
+MD5 db40a025f63c8a8ef1901c0f86e64dda ChangeLog 1249
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 f4bfb50fc5d619dbbe7102f0ad3f8099 files/kdissert-0.3.2-SConstruct.diff 313
 MD5 4f7e7353ae67f197de664e852187d003 files/digest-kdissert-0.3.4.1 69
 MD5 1be4f9959c8afa92eb4e8ed1a3af5341 files/digest-kdissert-0.3.5 67
 MD5 ef77b4610b24300747f45ae4149a0596 files/digest-kdissert-0.3.6 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCPopbntT9W3vfTuoRAv+3AJwN5sjcje1Mfn1UvznjqzssWMntoQCgiAOx
+yisWg1qCYmno4XVFvVZtZ7c=
+=rcxM
+-----END PGP SIGNATURE-----

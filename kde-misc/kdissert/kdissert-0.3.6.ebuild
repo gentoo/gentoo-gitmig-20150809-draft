@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.3.6.ebuild,v 1.1 2005/02/28 23:09:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.3.6.ebuild,v 1.2 2005/03/21 08:48:10 cryos Exp $
 
 inherit kde
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kde-apps.org/content/files/12725-${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 IUSE=""
 
 DEPEND="dev-util/scons"

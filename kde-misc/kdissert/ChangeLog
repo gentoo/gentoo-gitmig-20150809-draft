@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdissert
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.8 2005/02/28 23:09:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/ChangeLog,v 1.9 2005/03/21 08:48:10 cryos Exp $
+
+  21 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kdissert-0.3.6.ebuild:
+  Marked ~amd64, closes bug 86086.
 
 *kdissert-0.3.6 (01 Mar 2005)
 
