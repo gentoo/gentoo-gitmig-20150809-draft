@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10-r4.ebuild,v 1.1 2001/10/15 00:06:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10-r4.ebuild,v 1.2 2001/11/24 01:53:25 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -41,7 +41,6 @@ ACPIV=20010920
 # so we need no sources
 [ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.ibiblio.org/gentoo/distfiles/lvm-${LVMV}-${KV}.patch.bz2
-ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
 http://www.tech9.net/rml/linux/preempt-kernel-rml-2.4.10-7.patch
 http://www.uow.edu.au/~andrewm/linux/2.4.10-low-latency.patch.gz
 http://www.uow.edu.au/~andrewm/linux/ext3-dir-speedup.patch

@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre5.ebuild,v 1.2 2001/11/24 01:53:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.13.ebuild,v 1.3 2001/11/24 01:53:25 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-OKV=2.4.14
-KV=2.4.15-pre5
+OKV=${PV}
+KV=${KV}
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 if [ $PN = "linux-extras" ] 
@@ -38,18 +38,22 @@ LVMV=1.0.1-rc4
 EXT3V=0.9.15
 LOWLV=2.4.15-pre5
 PREEV="${KV}-1"
+MOSV=1.5.2
+EXT3P="ext3-2.4-${EXT3V}-`echo ${KV} |sed -e 's:\.::g' -e 's:-::'`"
 
+[ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
 [ "${PN}" = "linux-sources" ] && DESCRIPTION="Linux kernel version ${KV} - full sources"
 [ "${PN}" = "linux-extras" ] && DESCRIPTION="Linux kernel support tools and libraries"
 
 # We use build in /usr/src/linux in case of linux-extras
 # so we need no sources
-[ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/testing/patch-${KV}.bz2
+[ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kernel-rml-2.4.15-pre4-1.patch
-http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz
-http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"
+http://www.mosix.cs.huji.ac.il/ftps/MOSIX-${MOSV}.tar.gz"
+
+#http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"
+#http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/2.4/preempt-kernel-rml-2.4.15-pre4-1.patch
+#http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz
 	
 [ "$PN" != "linux-extras" ] && PROVIDE="virtual/kernel"
 
@@ -58,20 +62,31 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.sistina.com/lvm/
 	  http://developer.intel.com/technology/iapc/acpi/"
 
-if [ $PN = "linux-sources" ]
+DEPEND=">=sys-apps/modutils-2.4.2 sys-devel/perl"
+#these deps are messed up; fix 'em and add ncurses (required my mosix compile, menuconfig)
+if [ $PN = "linux" ]
 then
-	RDEPEND=">=sys-libs/ncurses-5.2"
+#	RDEPEND="mosix? ( ~sys-apps/mosix-user-${MOSV} ) >=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
+	RDEPEND=">=sys-apps/e2fsprogs-1.22 >=sys-apps/util-linux-2.11f >=sys-apps/reiserfs-utils-3.6.25-r1"
+elif [ $PN = "linux-sources" ]
+then
+	if [ "`use build`" ]
+	then
+		DEPEND=""
+		RDEPEND=""
+	else
+		#ncurses is required for "make menuconfig"
+		RDEPEND=">=sys-libs/ncurses-5.2"
+	fi
 elif [ $PN = "linux-extras" ]
 then
-	RDEPEND=">=sys-apps/e2fsprogs-1.22 \
-		>=sys-apps/util-linux-2.11f \
-		>=sys-apps/reiserfs-utils-3.6.25-r1 \
-		mosix? (~sys-apps/mosix-user-${MOSV} ) \
-		lvm? ( >=sys-apps/lvm-user-1.0.1_rc4 ) \
-		>=sys-apps/modutils-2.4.2"
-	DEPEND="~sys-kernel/linux-sources-${PV}"	
+	#linux-extras/headers requires a rev of the current kernel sources to be installed
+	RDEPEND="~sys-kernel/linux-sources-${PV}"
+elif [ $PN = "linux-headers" ]
+then
+	DEPEND=""
+	RDEPEND=""
 fi
-#linux-headers depends on nothing.
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${KS}/include"
 
@@ -99,17 +114,15 @@ src_unpack() {
 	[ "$PN" = "linux-extras" ] && return
 	mkdir ${S2}
 
-	#unpack kernel and apply reiserfs-related patches
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 	mv linux linux-${KV} || die
 	dodir /usr/src/linux-${KV}-extras
-
+	cd ${KS2}
+	tar -xz --no-same-owner -f ${DISTDIR}/MOSIX-${MOSV}.tar.gz MOSIX-${MOSV}/patches.${OKV}
 	cd ${S}
-	patchorama ${DISTDIR}/patch-${KV}.bz2 ${DISTDIR}/${LOWLV}-low-latency.patch.gz ${DISTDIR}/preempt-kernel-rml-2.4.15-pre4-1.patch
-	
+	patchorama ${KS2}/MOSIX-${MOSV}/patches.${OKV}
 	echo "Preparing for compilation..."
-	cd ${S}
 	
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
@@ -143,12 +156,79 @@ src_compile() {
 	elif [ "${PN}" = "linux-sources" ]
 	then
 		echo
+	else
+		if [ $PN = "linux" ]
+		then
+			cd ${KS}
+			make symlinks || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" dep || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" bzImage || die
+			make HOSTCFLAGS="${LINUX_HOSTCFLAGS}" LEX="flex -l" modules || die
+		fi
+		#LVM tools are included in the linux and linux-extras pakcages
+	#	cd ${KS2}/LVM/${LVMV}
+	#
+	#	# This is needed for linux-extras
+	#	if [ -f "Makefile" ]
+	#	then
+	#		make clean || die
+	#	fi
+	#	# I had to hack this in so that LVM will look in the current linux
+	#	# source directory instead of /usr/src/linux for stuff - pete
+	#	CFLAGS="${CFLAGS} -I${KS}/include" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${KS}" || die
+	#	make || die
 	fi
-	#all of linux-extras compilation is now external (in other packages)
 }
 
 src_install() {
-	if [ "$PN" = "linux-sources" ]
+
+	if [ "${PN}" = "linux" ] || [ "${PN}" = "linux-extras" ]
+	then
+	#	dodir /usr/lib
+	
+	#	cd ${KS2}/LVM/${LVMV}/tools
+	#	CFLAGS="${CFLAGS} -I${KS}/include" make install -e prefix=${D} mandir=${D}/usr/share/man sbindir=${D}/sbin libdir=${D}/lib || die
+		#no need for a static library in /lib
+	#	mv ${D}/lib/*.a ${D}/usr/lib
+	
+		if [ "${PN}" = "linux" ] 
+		then
+			dodir /usr/src/linux-${KV}
+			cd ${D}/usr/src
+			#grab includes and documentation only
+			echo ">>> Copying includes and documentation..."
+			cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+			cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
+	       
+			#grab compiled kernel
+			dodir /boot/boot
+			insinto /boot/boot
+			cd ${S}
+			doins arch/i386/boot/bzImage
+	    
+			#grab modules
+			# Do we have a bug in modutils ?
+			# Meanwhile we use this quick fix (achim)
+	    
+			install -d ${D}/lib/modules/`uname -r`
+			make INSTALL_MOD_PATH=${D} modules_install || die
+			
+			cd ${S}
+			depmod -b ${D} -F ${S}/System.map ${KV}	
+			#rm -rf ${D}/lib/modules/`uname -r`
+			#fix symlink
+			cd ${D}/lib/modules/${KV}
+			rm build
+			ln -sf /usr/src/linux-${KV} build
+		fi
+
+		cd ${KS2}/cloop-${CLOOPV}
+		insinto /lib/modules/${KV}/kernel/drivers/block
+		doins cloop.o
+		into /usr
+		dobin create_compressed_fs extract_compressed_fs
+		
+	elif [ "$PN" = "linux-sources" ]
 	then
 		dodir /usr/src
 		cd ${S}
