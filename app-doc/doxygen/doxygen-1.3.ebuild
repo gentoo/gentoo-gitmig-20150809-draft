@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.8 2003/07/16 15:52:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.ebuild,v 1.9 2003/09/02 07:52:16 phosphan Exp $
 
 IUSE="doc qt"
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha"
 
 RDEPEND="media-gfx/graphviz
-	doc? ( app-text/tetex )
+	doc? ( app-text/tetex
+		app-text/ghostscript )
 	qt? ( x11-libs/qt )"
 
 DEPEND=">=sys-apps/sed-4
