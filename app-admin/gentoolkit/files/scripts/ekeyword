@@ -14,7 +14,7 @@ die "syntax: ekeyword { arch | ~arch | -arch } ebuild...\n" unless @ARGV > 1;
 my $kw = shift @ARGV;
 (my $arch = $kw) =~ s|^[-~]||;
 
-die "$kw doesn't look like a keyword to me\n" unless $kw =~ /^\w+$/;
+die "$kw doesn't look like a keyword to me\n" unless $arch =~ /^\w+$/;
 
 for my $f (@ARGV) {
     open I, "<$f"       or die "Can't read $f: $!\n";
