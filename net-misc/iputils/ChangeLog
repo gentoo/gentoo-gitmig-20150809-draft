@@ -1,16 +1,19 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.14 2003/08/12 12:35:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.15 2003/09/21 17:32:25 vapier Exp $
+
+*iputils-020927 (03 Jan 2003)
+
+  21 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add static support #29202.
 
   12 Aug 2003; Jason Wever <weeve@gentoo.org> iputils-020927.ebuild:
   Changed ~sparc keyword to sparc.
 
-*iputils-020927 (03 Jan 2003)
-
-  7 Jul 2003; Jan Seidel <tuxus@gentoo.org> iputils-020927.ebuild:
+  07 Jul 2003; Jan Seidel <tuxus@gentoo.org> iputils-020927.ebuild:
   Mark stable on mips
 
-  1 Jul 2003; Luca Barbato <lu_zero@gentoo.org> iputils-020927.ebuild:
+  01 Jul 2003; Luca Barbato <lu_zero@gentoo.org> iputils-020927.ebuild:
   Mark stable on ppc
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> iputils-020927.ebuild:
@@ -21,7 +24,7 @@
   permanent fix can be implemented. Was breaking emerge system for 
   users with doc in USE.
 
-  6 Apr 2003; Guy Martin <gmsoft@gentoo.org> iputils-020927.ebuild :
+  06 Apr 2003; Guy Martin <gmsoft@gentoo.org> iputils-020927.ebuild :
   Marked stable on hppa. Changed depend sys-kernel/linux-headers to virtual/os-headers.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> iputils-020927.ebuild :

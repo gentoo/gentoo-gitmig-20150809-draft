@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.13 2003/09/17 23:52:15 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020927.ebuild,v 1.14 2003/09/21 17:32:25 vapier Exp $
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"
-SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}.tar.gz"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
+SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 sparc alpha ppc hppa mips amd64 ia64"
-#IUSE="doc"
-IUSE=""
+IUSE="static" #doc
 
 DEPEND="virtual/glibc
 	virtual/os-headers"
@@ -18,8 +17,9 @@ DEPEND="virtual/glibc
 #		dev-perl/SGMLSpm
 #		app-text/docbook-sgml-dtd
 #		app-text/docbook-sgml-utils )
-
 RDEPEND="virtual/glibc"
+
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,6 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use static && LDFLAGS="${LDFLAGS} -static"
 	make KERNEL_INCLUDE="/usr/include" || die
 #	if [ "`use doc`" ]; then
 #		make html || die
@@ -37,7 +38,7 @@ src_compile() {
 	make man || die
 }
 
-src_install () {
+src_install() {
 	into /
 	dobin ping ping6
 	dosbin arping
