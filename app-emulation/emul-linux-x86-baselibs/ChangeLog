@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.10 2004/06/30 03:15:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.11 2004/08/15 08:27:16 lv Exp $
+
+  15 Aug 2004; Travis Tilley <lv@gentoo.org>
+  emul-linux-x86-baselibs-1.1-r3.ebuild:
+  stable on amd64 to fix bug 60355
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   emul-linux-x86-baselibs-1.1-r3.ebuild:
