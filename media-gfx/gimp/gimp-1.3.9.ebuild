@@ -1,17 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.7-r1.ebuild,v 1.4 2002/10/05 05:39:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.9.ebuild,v 1.1 2002/10/12 13:31:17 foser Exp $
 
 IUSE="doc"
 
-
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
-
+inherit debug
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Development series of Gimp"
@@ -36,7 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.0
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
-	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
+	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_compile() {
 	local myconf
