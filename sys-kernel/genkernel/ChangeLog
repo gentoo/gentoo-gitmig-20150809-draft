@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.7 2003/09/04 05:17:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.8 2003/09/10 08:07:45 drobbins Exp $
+
+* genkernel-1.7 (10 Sep 2003)
+
+  10 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: Genkernel now FHS-compliant;
+  sed redirect fix. Also, MAKEOPTS now comes from Portage/make.conf. This closes
+  bugs 27920, 27948.
 
 * genkernel-1.6 (03 Sep 2003)
 
