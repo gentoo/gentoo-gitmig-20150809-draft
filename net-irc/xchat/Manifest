@@ -1,19 +1,26 @@
-MD5 fcd1eb1efa64a7337e203bca5832e7ac xchat-2.0.10.ebuild 2124
-MD5 fbd4942d8fa8a91245ae77e988148cdb xchat-1.8.11.ebuild 2266
-MD5 e862cd62853b7ae38fc97f1fcedfcab8 xchat-1.8.11-r1.ebuild 2267
-MD5 548285e3c87cbd6dba10827e0e306b4e xchat-2.0.8-r1.ebuild 2072
-MD5 973918920ff26252c8d80804b43bf13d xchat-2.0.10-r1.ebuild 2218
-MD5 c8531ae956e5932d14719e420d762b71 xchat-2.0.9.ebuild 2132
-MD5 c7a7980c17925334874c0457ea29397c xchat-2.0.7-r1.ebuild 2072
-MD5 e3d604fa06523fc3fbdcfc5a69cf8f87 ChangeLog 16107
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
-MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
-MD5 cadc31076541d914ac76a6b556bc4fb6 files/digest-xchat-2.0.10-r1 66
-MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
-MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
+MD5 e862cd62853b7ae38fc97f1fcedfcab8 xchat-1.8.11-r1.ebuild 2267
+MD5 c7a7980c17925334874c0457ea29397c xchat-2.0.7-r1.ebuild 2072
+MD5 548285e3c87cbd6dba10827e0e306b4e xchat-2.0.8-r1.ebuild 2072
+MD5 2d43b704437a16331e576f10daa6a9b3 xchat-2.0.9.ebuild 2131
+MD5 152998c08e57b02d2516bb51ccee96c9 xchat-2.0.10-r1.ebuild 2259
+MD5 b19e1b0a90796e221fe2efbdffbc6779 ChangeLog 16405
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
-MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11 65
-MD5 cadc31076541d914ac76a6b556bc4fb6 files/digest-xchat-2.0.10 66
 MD5 15dadb9b77f7536f6c7769689fc883c9 files/digest-xchat-2.0.7-r1 64
 MD5 aac7b6be8968c5e6e1bdf580546a18fd files/digest-xchat-2.0.8-r1 64
+MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
+MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
+MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 181879489fb6c5d1607d85d099f36ec7 files/xc2010-fixtabcomp.diff 721
+MD5 cadc31076541d914ac76a6b556bc4fb6 files/digest-xchat-2.0.10-r1 66
+MD5 ce08cfd7b93fbb37e1d9b510747a58d5 files/xc2010-fixfocus.diff 676
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+RTOAXomK8S72HoRAmrsAJ91Yg8xTostcsWwR16Y9OB63x40qACgiAxm
+xgoGYBiI2lQA4WQZTCGxcDY=
+=sVUo
+-----END PGP SIGNATURE-----
