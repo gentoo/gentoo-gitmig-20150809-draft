@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.8 2004/10/03 13:00:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.9 2004/10/06 14:00:39 usata Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -57,7 +57,8 @@ font_xft_config() {
 
 	# create fontconfig cache
 	einfo "Creating fontconfig cache..."
-	HOME="/root" /usr/bin/fc-cache -f "${D}/usr/share/fonts/${PN}"
+	# Mac OS X has fc-cache at /usr/X11R6/bin
+	HOME="/root" fc-cache -f "${D}/usr/share/fonts/${PN}"
 
 }
 
