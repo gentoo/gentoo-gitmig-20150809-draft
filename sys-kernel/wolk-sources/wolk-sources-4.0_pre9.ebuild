@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_pre9.ebuild,v 1.1 2003/01/26 23:50:50 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_pre9.ebuild,v 1.2 2003/02/10 07:06:27 sethbc Exp $
 
 IUSE="build"
 
@@ -36,6 +36,8 @@ src_install() {
 
 pkg_postinst() {
                 rm -f ${ROOT}usr/src/linux
-                ln -sf linux-${KV} ${ROOT}/usr/src/linux
+                
+				# DONT DO THIS, ITS BAD
+				# ln -sf linux-${KV} ${ROOT}/usr/src/linux
 }
 
