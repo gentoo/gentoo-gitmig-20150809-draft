@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Leigh Dyer <lsd@linuxgamers.net>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.ebuild,v 1.1 2002/04/20 18:26:23 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-0.0.2.ebuild,v 1.2 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convenience library for Xlib from the enlightenment project"
-SRC_URI="http://prdownloads.sourceforge.net/enlightenment/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://www.enlightenment.org"
 
 DEPEND="x11-base/xfree"

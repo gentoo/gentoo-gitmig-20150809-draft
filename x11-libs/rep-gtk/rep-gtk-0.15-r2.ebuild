@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.15-r2.ebuild,v 1.2 2002/05/23 06:50:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.15-r2.ebuild,v 1.3 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK/GDK bindings for the librep Lisp environment"
-SRC_URI="http://prdownloads.sourceforge.net/rep-gtk/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/rep-gtk/${P}.tar.gz"
 HOMEPAGE="http://rep-gtk.sourceforge.net/"
 
 DEPEND="=x11-libs/gtk+-1.2*

@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Kalen Petersen <kalenp@cs.washington.edu>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.93-r1.ebuild,v 1.1 2002/03/27 23:31:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.93-r1.ebuild,v 1.2 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A program to render images of the earth into the X root window"
-SRC_URI="http://prdownloads.sourceforge.net/xplanet/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xplanet/${P}.tar.gz"
 HOMEPAGE="http://xplanet.sourceforge.net/"
 
 DEPEND="virtual/x11"

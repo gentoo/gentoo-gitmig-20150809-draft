@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.5 2002/05/23 06:50:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.6 2002/05/27 17:27:40 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="XFce is a lightweight desktop environment for various UNIX systems."
-SRC_URI="http://prdownloads.sourceforge.net/xfce/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xfce/${P}.tar.gz"
 HOMEPAGE="http://www.xfce.org/"
 
 DEPEND="virtual/x11

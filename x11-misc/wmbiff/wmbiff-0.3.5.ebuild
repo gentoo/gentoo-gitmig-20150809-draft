@@ -1,12 +1,12 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
 # Maintainer: Vitaly Kushneriuk<vitaly@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbiff/wmbiff-0.3.5.ebuild,v 1.1 2002/02/07 08:09:44 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbiff/wmbiff-0.3.5.ebuild,v 1.2 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}/wmbiff
 
 DESCRIPTION=""
-SRC_URI="http://prdownloads.sourceforge.net/wmbiff/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/wmbiff/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/wmbiff/"
 DEPEND="virtual/glibc x11-base/xfree"
 #RDEPEND=""

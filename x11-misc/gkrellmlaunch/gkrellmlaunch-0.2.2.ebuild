@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmlaunch/gkrellmlaunch-0.2.2.ebuild,v 1.1 2001/12/12 04:33:21 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmlaunch/gkrellmlaunch-0.2.2.ebuild,v 1.2 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a Program-Launcher Plugin for Gkrellm"
-SRC_URI="http://prdownloads.sourceforge.net/gkrellmlaunch/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gkrellmlaunch/${P}.tar.gz"
 
 HOMEPAGE="http://gkrellmlaunch.sourceforge.net/"
 

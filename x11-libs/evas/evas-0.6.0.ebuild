@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Leigh Dyer <lsd@linuxgamers.net>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.6.0.ebuild,v 1.2 2002/04/23 20:40:04 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.6.0.ebuild,v 1.3 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="OpenGL-accelerated canvas library from the enlightenment project"
-SRC_URI="http://prdownloads.sourceforge.net/enlightenment/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.bz2"
 HOMEPAGE="http://www.enlightenment.org"
 
 DEPEND="x11-base/xfree

@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
 # Modified by Matthew Jimenez
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.62.1-r2.ebuild,v 1.4 2002/04/30 11:03:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.62.1-r2.ebuild,v 1.5 2002/05/27 17:27:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small, fast, full-featured window manager for X"
-SRC_URI="http://prdownloads.sourceforge.net/blackboxwm/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/blackboxwm/${P}.tar.gz"
 HOMEPAGE="http://blackboxwm.sf.net/"
 
 DEPEND="virtual/x11"

@@ -6,7 +6,7 @@
 S="${WORKDIR}/Epplets-${PV}"
 
 DESCRIPTION="Base files for Enlightenment epplets and some epplets"
-SRC_URI="http://prdownloads.sourceforge.net/enlightenment/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 HOMEPAGE="http://sourceforge.net/projects/enlightenment"
 
