@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.54 2003/11/10 20:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.55 2003/11/30 23:17:09 plasmaroo Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -125,9 +125,9 @@ games_src_compile() {
 # pkg_postinst function ... create env.d entry and warn about games group
 games_pkg_postinst() {
 	gamesenv
-	echo
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the '${GAMES_GROUP}' group."
+	echo
 	einfo "See the usermod(8) manpage for more information."
 	echo
 }
