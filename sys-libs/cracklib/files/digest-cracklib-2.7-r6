@@ -1,1 +1,4 @@
-MD5 7f810e310c7f2df33d1eaa2b41ab2435 cracklib2_2.7.orig.tar.gz 20901
+MD5 954e8e0d53c6f878366e472a90917356 /files/cracklib-2.7-redhat.patch 1224
+MD5 a5ad08dab289908e24f7657e31a69733 /files/cracklib-2.7-gentoo-new.diff 4229
+MD5 cbdc43535256454704c8a7f5043b1d70 /cracklib-2.7-r6.ebuild 1122
+MD5 0c84ad7413d9dd3e5c2eaa5f97d53c4a cracklib,2.7.tar.gz 21059

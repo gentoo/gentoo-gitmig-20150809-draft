@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.14 2003/02/20 22:00:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.15 2003/03/29 11:21:21 seemant Exp $
 
 *cracklib-2.7-r6 (25 Oct 2002)
+
+  29 Mar 2003; Seemant Kulleen <seemant@gentoo.org> cracklib-2.7-r6.ebuild:
+  HOMEPAGE fix by Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> cracklib-2.7-r6.ebuild :
   Added arm to keywords.

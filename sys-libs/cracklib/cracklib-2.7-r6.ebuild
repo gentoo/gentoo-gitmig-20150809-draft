@@ -1,21 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.10 2003/02/20 22:00:24 zwelch Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.11 2003/03/29 11:21:22 seemant Exp $
 
 IUSE=""
 
-S="${WORKDIR}/cracklib,${PV}"
-DESCRIPTION="Cracklib"
-SRC_URI="ftp://ftp.debian.org/debian/dists/potato/main/source/utils/cracklib2_${PV}.orig.tar.gz"
-HOMEPAGE="http://www.users.dircon.co.uk/~crypto/"
+MY_P=${P/-/,}
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="Password Checking Library"
+HOMEPAGE="http://www.crypticide.org/users/alecm/"
+SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="CRACKLIB"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
-DEPEND="sys-apps/miscfiles"
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	sys-apps/miscfiles"
 
 src_unpack() {
 
