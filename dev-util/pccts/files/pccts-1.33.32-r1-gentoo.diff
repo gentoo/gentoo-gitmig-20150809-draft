@@ -47,3 +47,23 @@
  	printf("ANTLR = $(BIN)%santlr\n", DirectorySymbol);
  	printf("DLG = $(BIN)%sdlg\n", DirectorySymbol);
  	if (num_sors>0) printf("SOR = $(BIN)%ssor\n", DirectorySymbol);
+--- pccts/sorcerer/lib/sorlist.c	1999-06-30 03:15:56.000000000 +0200
++++ pccts/sorcerer/lib/sorlist.c.new	2003-05-23 11:11:09.000000000 +0200
+@@ -28,6 +28,7 @@
+  */
+ #include <stdio.h>
+ #include <setjmp.h>
++#include "pcctscfg.h"
+ 
+ #ifdef PCCTS_USE_STDARG
+ #include <stdarg.h>
+--- pccts/sorcerer/lib/sintstack.c	1999-06-30 15:08:06.000000000 +0200
++++ pccts/sorcerer/lib/sintstack.c.new	2003-05-23 12:54:26.000000000 +0200
+@@ -28,6 +28,7 @@
+  */
+ #include <stdio.h>
+ #include <setjmp.h>
++#include "pcctscfg.h"
+ 
+ #ifdef PCCTS_USE_STDARG
+ #include <stdarg.h>
