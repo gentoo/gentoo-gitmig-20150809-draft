@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.9 2005/01/01 13:16:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.10 2005/03/05 08:49:12 corsair Exp $
+
+  05 Mar 2005; Markus Rothe <corsair@gentoo.org> snack-2.2.4.ebuild:
+  Stable on ppc64
 
   01 Jan 2005; Markus Rothe <corsair@gentoo.org> snack-2.2.4.ebuild:
   Added ~ppc64 to KEYWORDS
