@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.3 2002/07/19 10:47:49 seemant Exp $
 
 inherit libtool
 
@@ -10,6 +10,7 @@ DESCRIPTION="Tools for MJPEG video"
 SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz
 	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
+
 LICENSE="as-is"
 SLOT="1"
 KEYWORDS="x86"

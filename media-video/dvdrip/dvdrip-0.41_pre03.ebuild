@@ -12,6 +12,10 @@ DESCRIPTION="dvd::rip is a graphical frontend for transcode"
 SRC_URI="http://www.exit1.org/dvdrip/${MY_URL}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 
+SLOT="0"
+LICENSE="Artistic | as-is"
+KEYWORDS="x86"
+
 DEPEND=">=media-video/transcode-0.6.0_pre4-r1
 	media-gfx/imagemagick
 	gnome-extra/gtkhtml

@@ -6,13 +6,15 @@ S=${WORKDIR}/${PN}${PV}
 SRC_URI="http://www.evil3d.net/download/${PN}/${PN}${PV}.tar.gz"
 DESCRIPTION="NVIDIA overclocking utility"
 HOMEPAGE="http://www.evil3d.net/products/nvclock/"
-LICENSE="GPL-2"
 
 RDEPEND="virtual/glibc
 	gtk? ( virtual/x11 =x11-libs/gtk+-1.2* )
 	qt? ( virtual/x11 x11-libs/qt )"
 DEPEND="$RDEPEND sys-devel/autoconf"
-SLOT=0
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf

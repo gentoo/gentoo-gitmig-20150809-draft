@@ -1,16 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.12.0-r1.ebuild,v 1.4 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.12.0-r1.ebuild,v 1.5 2002/07/19 10:47:49 seemant Exp $
 
+S="${WORKDIR}/${P}"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card libraries"
 HOMEPAGE="http://dxr3.sourceforge.net"
-
 SRC_URI="mirror://sourceforge/dxr3/${P/-libraries/}.tar.gz"
 
 DEPEND="media-video/em8300-modules
-        x11-libs/gtk+"
+	x11-libs/gtk+"
 
-S="${WORKDIR}/${P}"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 
 src_unpack () {
 
@@ -59,6 +62,8 @@ src_install () {
 	#this isn't how the installer does this, but it makes more
 	#sense than copying it like they do.
 	dosym /usr/share/em8300/microcode_upload.pl /usr/bin/em8300init
+
+	dodoc AUTHORS COPYING ChangeLog NEWS README
 
 }
 

@@ -1,16 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.9 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.12.0.ebuild,v 1.10 2002/07/19 10:47:49 seemant Exp $
 
+S="${WORKDIR}/${P}/modules"
 DESCRIPTION="em8300 (RealMagic Hollywood+/Creative DXR3) video decoder card kernel modules"
 HOMEPAGE="http://dxr3.sourceforge.net"
+SRC_URI="mirror://sourceforge/dxr3/${P/-modules/}.tar.gz"
 
 DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND}
 	>=sys-apps/portage-1.9.10"
 
-SRC_URI="mirror://sourceforge/dxr3/${P/-modules/}.tar.gz"
-S="${WORKDIR}/${P}/modules"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 
 src_unpack () {

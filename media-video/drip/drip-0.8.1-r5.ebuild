@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.3 2002/07/19 10:47:49 seemant Exp $
 
 AF_MINOR_VER="$(avifile-config --data-dir | cut -d. -f2)"
 S=${WORKDIR}/${P}
@@ -20,6 +20,9 @@ DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=sys-devel/automake-1.5-r1"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 

@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.1 2002/07/09 09:21:00 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.0-r3.ebuild,v 1.2 2002/07/19 10:47:49 seemant Exp $ 
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="Teletext viewer for X11"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/video/${P}.tar.gz"
 HOMEPAGE="http://www.goron.de/~froese/"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=x11-base/xfree-4.0.1
+DEPEND="virtual/x11
 	>=media-libs/libpng-1.0.12"
 	
 
