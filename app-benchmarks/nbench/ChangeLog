@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/nbench
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.2 2004/11/08 01:01:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.3 2004/11/19 04:17:47 morfic Exp $
+
+  18 Nov 2004; Daniel Goller <morfic@gentoo.org> nbench-2.2.1.ebuild:
+  Added support for LDFLAGS
 
 *nbench-2.2.1 (07 Nov 2004)
 
