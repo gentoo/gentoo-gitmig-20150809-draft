@@ -1,0 +1,267 @@
+diff -u -r openldap-2.0.27/build/openldap.m4 openldap-2.0.27-new/build/openldap.m4
+--- openldap-2.0.27/build/openldap.m4	2002-08-28 06:51:42.000000000 +0100
++++ openldap-2.0.27-new/build/openldap.m4	2003-05-10 00:56:10.000000000 +0100
+@@ -260,7 +260,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -332,7 +332,7 @@
+ #ifdef HAVE_DB_185_H
+ 	choke me;
+ #else
+-#include <db.h>
++#include <db3/db.h>
+ #endif
+ #ifndef NULL
+ #define NULL ((void *)0)
+@@ -408,7 +408,7 @@
+ dnl Find any DB
+ AC_DEFUN([OL_BERKELEY_DB],
+ [ol_cv_berkeley_db=no
+-AC_CHECK_HEADERS(db.h)
++AC_CHECK_HEADERS(db3/db.h)
+ if test $ac_cv_header_db_h = yes; then
+ 	OL_BERKELEY_DB_LINK
+ 	if test "$ol_cv_lib_db" != no ; then
+@@ -422,14 +422,14 @@
+ dnl Find old Berkeley DB 1.85/1.86
+ AC_DEFUN([OL_BERKELEY_COMPAT_DB],
+ [ol_cv_berkeley_db=no
+-AC_CHECK_HEADERS(db_185.h db.h)
++AC_CHECK_HEADERS(db_185.h db3/db.h)
+ if test $ac_cv_header_db_185_h = yes -o $ac_cv_header_db_h = yes; then
+ 	AC_CACHE_CHECK([if Berkeley DB header compatibility], [ol_cv_header_db1],[
+ 		AC_EGREP_CPP(__db_version_1,[
+ #if HAVE_DB_185_H
+ #	include <db_185.h>
+ #else
+-#	include <db.h>
++#	include <db3/db.h>
+ #endif
+ 
+  /* this check could be improved */
+diff -u -r openldap-2.0.27/configure openldap-2.0.27-new/configure
+--- openldap-2.0.27/configure	2002-09-23 02:06:54.000000000 +0100
++++ openldap-2.0.27-new/configure	2003-05-10 00:58:40.000000000 +0100
+@@ -12410,7 +12410,7 @@
+ 
+ 	if test $ol_with_ldbm_api = bcompat; then \
+ 		ol_cv_berkeley_db=no
+-for ac_hdr in db_185.h db.h
++for ac_hdr in db_185.h db3/db.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -12464,7 +12464,7 @@
+ #if HAVE_DB_185_H
+ #	include <db_185.h>
+ #else
+-#	include <db.h>
++#	include <db3/db.h>
+ #endif
+ 
+  /* this check could be improved */
+@@ -12511,7 +12511,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12575,13 +12575,13 @@
+ fi
+ 
+ if test $ol_cv_lib_db = no ; then
+-	echo $ac_n "checking for Berkeley DB link (-ldb)""... $ac_c" 1>&6
+-echo "configure:12580: checking for Berkeley DB link (-ldb)" >&5
++	echo $ac_n "checking for Berkeley DB link (-ldb-3)""... $ac_c" 1>&6
++echo "configure:12580: checking for Berkeley DB link (-ldb-3)" >&5
+ if eval "test \"\${ol_cv_db_db+set}\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   
+-	ol_DB_LIB=-ldb
++	ol_DB_LIB=-ldb-3
+ 	ol_LIBS=$LIBS
+ 	LIBS="$ol_DB_LIB $LIBS"
+ 
+@@ -12592,7 +12592,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12651,7 +12651,7 @@
+ echo "$ac_t""$ol_cv_db_db" 1>&6
+ 
+ 	if test $ol_cv_db_db = yes ; then
+-		ol_cv_lib_db=-ldb
++		ol_cv_lib_db=-ldb-3
+ 	fi
+ fi
+ 
+@@ -12673,7 +12673,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12754,7 +12754,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12835,7 +12835,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12916,7 +12916,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -12988,7 +12988,7 @@
+ 
+ 	else
+ 		ol_cv_berkeley_db=no
+-for ac_hdr in db.h
++for ac_hdr in db3/db.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -13028,7 +13028,7 @@
+ fi
+ done
+ 
+-if test $ac_cv_header_db_h = yes; then
++if test $ac_cv_header_db3_db_h = yes; then
+ 	ol_cv_lib_db=no
+ if test $ol_cv_lib_db = no ; then
+ 	echo $ac_n "checking for Berkeley DB link (default)""... $ac_c" 1>&6
+@@ -13048,7 +13048,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13112,13 +13112,13 @@
+ fi
+ 
+ if test $ol_cv_lib_db = no ; then
+-	echo $ac_n "checking for Berkeley DB link (-ldb)""... $ac_c" 1>&6
+-echo "configure:13117: checking for Berkeley DB link (-ldb)" >&5
++	echo $ac_n "checking for Berkeley DB link (-ldb-3)""... $ac_c" 1>&6
++echo "configure:13117: checking for Berkeley DB link (-ldb-3)" >&5
+ if eval "test \"\${ol_cv_db_db+set}\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   
+-	ol_DB_LIB=-ldb
++	ol_DB_LIB=-ldb-3
+ 	ol_LIBS=$LIBS
+ 	LIBS="$ol_DB_LIB $LIBS"
+ 
+@@ -13129,7 +13129,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13188,7 +13188,7 @@
+ echo "$ac_t""$ol_cv_db_db" 1>&6
+ 
+ 	if test $ol_cv_db_db = yes ; then
+-		ol_cv_lib_db=-ldb
++		ol_cv_lib_db=-ldb-3
+ 	fi
+ fi
+ 
+@@ -13210,7 +13210,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13291,7 +13291,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13372,7 +13372,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13453,7 +13453,7 @@
+ #ifdef HAVE_DB_185_H
+ # include <db_185.h>
+ #else
+-# include <db.h>
++# include <db3/db.h>
+ #endif
+ 
+ #ifndef DB_VERSION_MAJOR
+@@ -13540,7 +13540,7 @@
+ #ifdef HAVE_DB_185_H
+ 	choke me;
+ #else
+-#include <db.h>
++#include <db3/db.h>
+ #endif
+ #ifndef NULL
+ #define NULL ((void *)0)
+diff -u -r openldap-2.0.27/include/ldbm.h openldap-2.0.27-new/include/ldbm.h
+--- openldap-2.0.27/include/ldbm.h	2002-01-04 20:38:16.000000000 +0000
++++ openldap-2.0.27-new/include/ldbm.h	2003-05-10 00:56:10.000000000 +0100
+@@ -38,7 +38,7 @@
+ #	ifdef HAVE_DB1_DB_H
+ #		include <db1/db.h>
+ #	else
+-#		include <db.h>
++#		include <db3/db.h>
+ #	endif
+ #endif
+ 
