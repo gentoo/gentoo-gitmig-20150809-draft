@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.80.ebuild,v 1.1 2002/12/17 18:36:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.81.ebuild,v 1.1 2003/01/22 14:50:44 vapier Exp $
 
 DESCRIPTION="http://libtomcrypt.iahu.ca/"
 HOMEPAGE="http://libtomcrypt.iahu.ca/"
@@ -17,6 +17,5 @@ src_compile() {
 }
 
 src_install() {
-	patch -p0 < ${FILESDIR}/makefile-path.patch
 	make DESTDIR=${D} install || die
 }
