@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fada4ed46ce5de5f6b12c38e2b0c242b ChangeLog 740
+MD5 3358fb7bf5890a6b8d3c2539f1e1c518 pyid3lib-0.5.1.ebuild 562
+MD5 1dc5b8f732171baddba4273bdb6d1514 ChangeLog 819
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 91f06b4b24fb6b6217df5529d16a0997 pyid3lib-0.5.1.ebuild 571
 MD5 954c4fdd7b57f3b41aa117d00dde0bfc files/digest-pyid3lib-0.5.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+eu8mdTrptrqvGERAu36AKCU80W6TAB8yMfuoiAvrKAJa6r1TwCfT1pL
-BVKY6Kq8+er9TWhOnnR19Lc=
-=Jhly
------END PGP SIGNATURE-----
