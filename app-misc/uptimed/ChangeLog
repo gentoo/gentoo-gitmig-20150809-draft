@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.8 2003/09/20 15:04:31 pyrania Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.9 2004/02/15 11:39:57 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> uptimed-0.3.0-r1.ebuild:
+  Added to ~ppc.
 
 *uptimed-0.3.0-r1 (20 Sep 2003)
 
