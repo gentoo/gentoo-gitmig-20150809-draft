@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.21.ebuild,v 1.1 2004/03/08 16:54:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.21.ebuild,v 1.2 2004/04/30 16:03:59 usata Exp $
 
 inherit elisp
 
@@ -9,15 +9,13 @@ HOMEPAGE="http://ecb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="java"
 DEPEND="virtual/emacs
 	>=app-emacs/speedbar-0.14_beta4
 	>=app-emacs/semantic-1.4
 	>=app-emacs/eieio-0.17
 	java? ( app-emacs/jde )"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}

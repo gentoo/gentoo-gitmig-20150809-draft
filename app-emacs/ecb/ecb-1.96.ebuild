@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.96.ebuild,v 1.3 2004/04/06 03:45:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-1.96.ebuild,v 1.4 2004/04/30 16:03:59 usata Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="java"
 
 DEPEND="virtual/emacs
