@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b5d161faa10932729684d686ed4f780 ibmonitor-1.2.ebuild 641
-MD5 99f267dfceb940e570bd9206d3a192e3 ChangeLog 879
+MD5 5d711e845dad8f28ec85a818770484f8 ChangeLog 1063
+MD5 603e8641efc09d955d933688bb2f185b ibmonitor-1.2.ebuild 647
 MD5 6a7e4840daad04c507882a3eb886a299 metadata.xml 225
+MD5 86bfd3a95d8af657956b700d276b34cc ibmonitor-1.3.ebuild 628
 MD5 fb3fa1c176facc0f3e4043934da01e35 files/digest-ibmonitor-1.2 64
+MD5 ab14a077f2dacfaf58b0fb03a0472d0e files/digest-ibmonitor-1.3 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBII15T+MN7JbqCpMRAje7AJ98uee5e0B0n+yZkli9BE4HRMdLmwCfesvL
-RTEN5dNyJfw3IrCe/54btJw=
-=nCrZ
+iD8DBQFB4NNWmdTrptrqvGERAm4XAJ9gLMdUhadTuxr/fmU8+7X4D64wggCgnIx7
+EpJa0KqRKz8Zi266KPhrWZU=
+=HNs3
 -----END PGP SIGNATURE-----
