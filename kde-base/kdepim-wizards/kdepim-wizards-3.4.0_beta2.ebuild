@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-3.4.0_beta2.ebuild,v 1.1 2005/02/05 11:39:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-3.4.0_beta2.ebuild,v 1.2 2005/02/06 05:29:47 danarmak Exp $
 
 KMNAME=kdepim
 KMMODULE=wizards
@@ -36,7 +36,9 @@ KMCOPYLIB="
 	libkabc_groupwise kresources/groupwise
 	libkcalkolab kresources/kolab/kcal
 	libkabckolab kresources/kolab/kabc
-	libknoteskolab kresources/kolab/knotes"
+	libknoteskolab kresources/kolab/knotes
+	libkcal_newexchange kresources/newexchange
+	libkabc_newexchange kresources/newexchange"
 KMEXTRACTONLY="
 	libkdepim/
 	libkcal/
@@ -45,9 +47,11 @@ KMEXTRACTONLY="
 	knotes/
 	certmanager/lib/
 	kmail"
-KMCOMPILEONLY="kresources/slox/
+KMCOMPILEONLY="kresources/slox
 		kresources/groupwise
-		kresources/egroupware"
+		kresources/egroupware
+		kresources/lib
+		libemailfunctions"
 
 src_compile() {
 	export DO_NOT_COMPILE="kresources" && kde-meta_src_compile myconf configure
@@ -60,6 +64,7 @@ src_compile() {
 	cd ${S}/kresources/egroupware && make kcal_egroupwareprefs.h
 	cd ${S}/kresources/egroupware && make kabc_egroupwareprefs.h
 	cd ${S}/kresources/egroupware && make knotes_egroupwareprefs.h
+	cd ${S}/kresources/lib && make kresources_groupwareprefs.h
 
 	kde-meta_src_compile make
 }
