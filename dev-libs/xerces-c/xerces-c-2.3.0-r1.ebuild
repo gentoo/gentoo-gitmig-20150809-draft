@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0.ebuild,v 1.2 2003/06/10 03:14:59 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r1.ebuild,v 1.1 2003/06/10 03:14:59 zhen Exp $
 
 MY_PV=${PV//./_}
 
@@ -14,8 +14,8 @@ DEPEND="virtual/glibc"
 #RDEPEND=""
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="-x86 -ppc"
-IUSE=""
+KEYWORDS="~x86 ~ppc"
+IUSE="doc"
 
 #S=${WORKDIR}/${MY_P/xerces-c/xerces-c-src}
 S=${WORKDIR}/${PN}-src_${MY_PV}
@@ -33,13 +33,15 @@ src_install () {
 	cd src/xercesc
 	make PREFIX="${D}/usr" install
 	
-	dodir /usr/share/doc/${P}
-	cp -a ${S}/samples ${D}/usr/share/doc/${P}
+	if [ "`use doc`" ]; then
+		dodir /usr/share/doc/${P}
+		cp -a ${S}/samples ${D}/usr/share/doc/${P}
+		dohtml -r doc/html
+	fi
 
 	cd ${S}
 	dodoc STATUS LICENSE LICENSE.txt credits.txtles version.incl xerces-c.spec
 	dohtml Readme.html
-	dohtml -r doc/html
-	
+		
 	unset XERCESCROOT
 }
