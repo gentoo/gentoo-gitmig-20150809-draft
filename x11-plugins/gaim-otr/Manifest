@@ -1,4 +1,6 @@
-MD5 f6feba3eb286ef7bbd1865634564f1d8 ChangeLog 454
 MD5 e4cb8399da4f9d247a13b5bc3b03a7c7 gaim-otr-1.0.1.ebuild 799
 MD5 772dce3497d3125e130d268b63273b24 metadata.xml 226
+MD5 9d286673cc66a5ae938c6f376d7f579f ChangeLog 589
+MD5 3ddd1980da86c5f72be8bef73f5cb4ec gaim-otr-1.0.2.ebuild 799
 MD5 38c912f054ef1733b1c843f400063c08 files/digest-gaim-otr-1.0.1 65
+MD5 587b9bbdee97b77975a9217a9be6d2b7 files/digest-gaim-otr-1.0.2 65

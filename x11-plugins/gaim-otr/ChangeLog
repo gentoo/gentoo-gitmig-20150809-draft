@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-otr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.2 2005/01/04 18:08:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.3 2005/01/17 21:24:40 rizzo Exp $
+
+*gaim-otr-1.0.2 (17 Jan 2005)
+
+  17 Jan 2005; Don Seiler <rizzo@gentoo.org> +gaim-otr-1.0.2.ebuild:
+  Version bump, closes bug #78411
 
   04 Jan 2005; Simon Stelling <blubb@gentoo.org> gaim-otr-1.0.1.ebuild:
   added ~amd64
