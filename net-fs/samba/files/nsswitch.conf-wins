@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/nsswitch.conf-wins,v 1.1 2002/05/06 19:57:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/nsswitch.conf-wins,v 1.2 2004/07/18 03:55:05 dragonheart Exp $
 passwd:      files
 group:       files
 

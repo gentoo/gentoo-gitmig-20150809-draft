@@ -2,7 +2,7 @@
 use strict;
 package smbldap_conf;
 
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/smbldap_conf.pm,v 1.1 2002/10/24 22:26:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/smbldap_conf.pm,v 1.2 2004/07/18 03:55:05 dragonheart Exp $
 # smbldap-tools.conf : Q & D configuration file for smbldap-tools
 
 #  This code was developped by IDEALX (http://IDEALX.org/) and
