@@ -1,0 +1,12 @@
+diff -ur komics.orig/src/komics.h komics/src/komics.h
+--- komics.orig/src/komics.h	2004-11-28 19:25:01.040662672 +0000
++++ komics/src/komics.h	2004-11-28 19:25:27.710608224 +0000
+@@ -29,7 +29,7 @@
+ #include "komicsiface.h"
+ 
+ class KProcess;
+-namespace KIO { class Job; };
++namespace KIO { class Job; }
+ class KTempFile;
+ class KPopupMenu;
+ class KomicsPreferences;
