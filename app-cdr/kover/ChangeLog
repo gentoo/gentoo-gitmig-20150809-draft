@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/kover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.17 2005/01/01 12:17:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.18 2005/01/01 14:09:28 dragonheart Exp $
+
+  01 Jan 2005; Daniel Black <dragonheart@gentoo.org> -kover-2.8.7.ebuild,
+  kover-2.9.5.ebuild, +kover-2.9.6.ebuild:
+  version bump as per bug #76091. Marked kover-2.9.5 x86 stable. Removed old
+  version. Version bump notification thanks to Miguel Revilla Rodríguez
+  <yo@miguelrevilla.com>
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> kover-2.9.3.ebuild:
   Stable on sparc.
