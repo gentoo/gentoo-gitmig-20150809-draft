@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.14 2003/09/07 02:28:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r3.ebuild,v 1.15 2003/12/10 04:00:45 seemant Exp $
 
 IUSE="nls build static"
 
@@ -48,6 +48,10 @@ src_unpack() {
 	# Removes waitpid() call after pclose() on piped diff stream, closing
 	# bug #11728, thanks to D Wollmann <converter@dalnet-perl.org>
 	epatch ${FILESDIR}/${P}-sdiff-no-waitpid.patch
+
+	# The diff man page is better in the man-pages package so we disable it
+	# from installing here
+	epatch ${FILESDIR}/${P}-no-manpage.patch
 }
 
 src_compile() {

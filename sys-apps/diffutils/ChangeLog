@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.26 2003/11/07 10:59:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.27 2003/12/10 04:00:45 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> diffutils-2.7.7.ebuild,
+  diffutils-2.8.4-r1.ebuild, diffutils-2.8.4-r2.ebuild,
+  diffutils-2.8.4-r3.ebuild, diffutils-2.8.4-r4.ebuild:
+  diff man page installation disabled in this package, since it blows goats. The
+  diff man page is installed by the man-pages package
 
   07 Nov 2003; Tavis Ormandy <taviso@gentoo.org> diffutils-2.8.4-r4.ebuild:
   stable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.5 2003/11/07 10:59:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.4-r4.ebuild,v 1.6 2003/12/10 04:00:45 seemant Exp $
 
 IUSE="nls build static"
 
@@ -13,12 +13,12 @@ filter-flags "-mpowerpc-gfxopt"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools to make diffs and compare files"
-SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
+SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz"
 
-KEYWORDS="x86 alpha ia64"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~arm ~amd64 ia64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.47-r10
@@ -53,6 +53,10 @@ src_unpack() {
 	# diff dump core, closing #24238.
 	# <taviso@gentoo.org> (1 Aug 2003)
 	epatch ${FILESDIR}/${P}-tabsize-dumps-core.diff
+
+	# the manpage for diff is better provided by the man-pagees package, so
+	# we disable it here
+	epatch ${FILESDIR}/${P}-no-manpage.patch
 }
 
 src_compile() {
@@ -66,7 +70,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall
+	einstall || die
 
 	if [ -z "`use build`" ] ; then
 		dodoc COPYING ChangeLog NEWS README
