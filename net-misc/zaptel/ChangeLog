@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.4 2004/03/16 00:28:12 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.5 2004/03/17 20:45:57 stkn Exp $
+
+  17 Mar 2004; Stefan Knoblich <stkn@gentoo.org> zaptel-0.8.1.ebuild:
+  fixed SRC_URI
 
   16 Mar 2004; Stefan Knoblich <stkn@gentoo.org> zaptel-0.7.0.ebuild:
   removed blocking of dev-sources (bug #44588)
