@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.37 2003/01/15 01:47:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.38 2003/01/23 15:41:01 gerk Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -138,7 +138,7 @@ then
 # Second stage of boostrap
 #
 export USE="${ORIGUSE} bootstrap"
-emerge --usepkg --buildpkg ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
+emerge ${myGLIBC} ${myBASELAYOUT} ${myTEXINFO} ${myGETTEXT} ${myZLIB} ${myBINUTILS} ${myGCC} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
 emerge ${myNCURSES} || cleanup 1
