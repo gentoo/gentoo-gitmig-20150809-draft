@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.0a-r2.ebuild,v 1.4 2004/07/01 20:19:11 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/snort_inline-2.1.0a-r2.ebuild,v 1.5 2004/07/08 16:53:31 eldad Exp $
 
 inherit eutils
 
@@ -32,8 +32,6 @@ RDEPEND="virtual/libc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

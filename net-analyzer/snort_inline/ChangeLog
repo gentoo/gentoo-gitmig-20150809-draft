@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort_inline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.9 2004/07/05 12:20:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.10 2004/07/08 16:53:31 eldad Exp $
+
+  08 Jul 2004; Eldad Zack <eldad@gentoo.org> snort_inline-2.1.0a-r1.ebuild,
+  snort_inline-2.1.0a-r2.ebuild, snort_inline-2.1.0a.ebuild,
+  snort_inline-2.1.1.ebuild:
+  Tidy
 
   05 Jul 2004; Eldad Zack <eldad@gentoo.org> snort_inline-2.1.1.ebuild:
   Added a search for the location of libipq includes. Closes #49492. Thanks to

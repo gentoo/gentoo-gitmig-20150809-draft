@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.7 2004/06/24 22:07:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.8 2004/07/08 16:49:58 eldad Exp $
 
 IUSE="gtk"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="My TraceRoute. Excellent network diagnostic tool."
 SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54-r2.ebuild,v 1.1 2004/06/30 23:24:44 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54-r2.ebuild,v 1.2 2004/07/08 16:49:58 eldad Exp $
 
 IUSE="gtk ipv6"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="My TraceRoute. Excellent network diagnostic tool."
 SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz ipv6? ( http://debian.fabbione.net/debian-ipv6/dists/sid/ipv6/pool/mtr_${PV}-1.0.ipv6.r1.diff.gz )"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
