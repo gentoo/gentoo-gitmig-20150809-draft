@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.8 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.9 2002/12/16 18:19:07 azarah Exp $
+
+  16 Dec 2002; Martin Schlemmmer <azarah@gentoo.org> gawk-3.1.1-r1.ebuild :
+  Fix rare case where gawk do not get installed as /bin/gawk-$PV, but
+  rather /bin/gawk-.  Fix missing docs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

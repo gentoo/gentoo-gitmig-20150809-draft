@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.1-r1.ebuild,v 1.3 2002/12/15 10:44:21 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.1-r1.ebuild,v 1.4 2002/12/16 18:19:07 azarah Exp $
 
 IUSE="nls build"
 
@@ -37,7 +37,16 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		libexecdir=${D}/usr/lib/awk \
 		install || die
-		
+	
+	# In some rare cases, gawk gets installed as gawk- and not gawk-${PV} ..
+	if [ -f ${D}/bin/gawk -a ! -f ${D}/bin/gawk-${PV} ]
+	then
+		mv -f ${D}/bin/gawk ${D}/bin/gawk-${PV}
+	elif [ -f ${D}/bin/gawk- -a ! -f ${D}/bin/gawk-${PV} ]
+	then
+		mv -f ${D}/bin/gawk ${D}/bin/gawk-${PV}
+	fi
+	
 	rm -f ${D}/bin/{awk,gawk}
 	dosym gawk-${PV} /bin/awk
 	dosym gawk-${PV} /bin/gawk
@@ -53,12 +62,10 @@ src_install() {
 	if [ -z "`use build`" ] 
 	then
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
-		dodoc ChangeLog ACKNOWLEDGMENT COPYING FUTURES
-		dodoc LIMITATIONS NEWS PROBLEMS README
+		dodoc AUTHORS ChangeLog COPYING FUTURES
+		dodoc LIMITATIONS NEWS PROBLEMS POSIX.STD README
 		docinto README_d
 		dodoc README_d/*
-		docinto atari
-		dodoc atari/ChangeLog atari/README.1st
 		docinto awklib
 		dodoc awklib/ChangeLog
 		docinto pc
