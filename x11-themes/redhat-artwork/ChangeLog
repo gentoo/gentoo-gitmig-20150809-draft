@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.37 2004/09/05 09:57:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.38 2004/10/04 02:47:32 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  redhat-artwork-0.73.ebuild, redhat-artwork-0.95.ebuild,
+  redhat-artwork-0.96.ebuild:
+  Update to install properly for xfree or xorg-x11, add virtual/x11 to RDEPEND.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

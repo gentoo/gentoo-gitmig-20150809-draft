@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.14 2004/07/13 20:30:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.15 2004/10/04 02:47:32 spyderous Exp $
 
 inherit eutils rpm
 
@@ -25,8 +25,8 @@ DEPEND=">=sys-devel/autoconf-2.58
 		>=kde-base/kdebase-3.0.2 )
 	gtk2? ( >=x11-libs/gtk+-2* )"
 # Because one may only want to use the theme with kde OR gtk OR Metacity
-# OR gdm, we don't want any run-time dependencies...
-RDEPEND=""
+# OR gdm, we don't want either as run-time dependencies...
+RDEPEND="virtual/x11"
 
 # We need to change some RedHat-specific stuff to Gentoo-style...
 _replace() {
@@ -164,11 +164,15 @@ src_install () {
 	sed -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop > GdmGreeterTheme.desktop.mod
 	mv GdmGreeterTheme.desktop.mod GdmGreeterTheme.desktop
 
-	# move cursors to /usr/share/cursors/xfree
+	# move cursors to /usr/share/cursors/${X11_IMPL}
+	X11_IMPLEM_P="$(portageq best_version ${ROOT} virtual/x11)"
+	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	X11_IMPLEM="${X11_IMPLEM##*\/}"
+
 	for x in Bluecurve Bluecurve-inverse; do
-		dodir /usr/share/cursors/xfree/${x}
-		mv ${D}/usr/share/icons/${x}/cursors ${D}/usr/share/cursors/xfree/${x}
-		dosym /usr/share/cursors/xfree/${x}/cursors /usr/share/icons/${x}/cursors
+		dodir /usr/share/cursors/${X11_IMPLEM}/${x}
+		mv ${D}/usr/share/icons/${x}/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/${x}
+		dosym /usr/share/cursors/${X11_IMPLEM}/${x}/cursors /usr/share/icons/${x}/cursors
 	done
 
 	# remove xmms skin if unneeded

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.5 2004/08/13 22:34:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.6 2004/10/04 02:47:32 spyderous Exp $
 
 inherit eutils rpm
 
@@ -26,8 +26,8 @@ DEPEND=">=sys-devel/autoconf-2.58
 		>=kde-base/kdebase-3.0.2 )
 	gtk2? ( >=x11-libs/gtk+-2* )"
 # Because one may only want to use the theme with kde OR gtk OR Metacity
-# OR gdm, we don't want any run-time dependencies...
-RDEPEND=""
+# OR gdm, we don't want either as run-time dependencies...
+RDEPEND="virtual/x11"
 
 # We need to change some RedHat-specific stuff to Gentoo-style...
 _replace() {
