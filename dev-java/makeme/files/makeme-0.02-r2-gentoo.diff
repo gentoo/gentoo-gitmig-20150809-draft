@@ -1,0 +1,24 @@
+--- Makefile.orig	2003-05-24 00:08:09.000000000 -0400
++++ Makefile	2003-05-24 00:08:33.000000000 -0400
+@@ -7,18 +7,8 @@
+ 
+ build:
+ 	#first run antlr.Tool
+-	CLASSPATH=/usr/share/java/antlrall.jar kaffe antlr.Tool -o gnu/makeme/parser gnu/makeme/parser/makeme.g
+-	CLASSPATH=/usr/share/kaffe/Klasses.jar:/usr/share/java/antlrall.jar:. jikes -d . $(JAVA_SOURCES)
++	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlrall.jar $(JAVA_HOME)/bin/java antlr.Tool -o gnu/makeme/parser gnu/makeme/parser/makeme.g
++	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlrall.jar:. jikes -d . $(JAVA_SOURCES)
+ 
+ install:
+-#	cp -Rv $(JAVA_CLASSES) $(DESTDIR)/usr/share/java/repository
+-	fastjar cvf makeme.jar $(JAVA_CLASSES)
+-	fastjar xvf makeme.jar $(DESTDIR)/usr/share/java/repository
+-	install teaseme $(DESTDIR)/usr/bin/
+-clean:
+-	rm -f $(JAVA_CLASSES)
+-	rm -f makeme.jar
+-
+-
+-
+-
++	jar cvf makeme.jar $(JAVA_CLASSES)
