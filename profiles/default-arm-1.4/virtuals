@@ -38,3 +38,4 @@ virtual/inetd			sys-apps/netkit-base
 virtual/antivirus		net-mail/clamav
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
+virtual/ghc		dev-lang/ghc-bin
