@@ -1,8 +1,14 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.28 2003/05/31 05:03:01 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.29 2003/06/11 07:24:47 jmorgan Exp $
 
-*exim-4.14 (30 My 2003)
+*exim-4.20 (10 Jun 2003)
+
+  10 Jun 2003; Jack Morgan <jmorgan@gentoo.org> exim-4.20.ebuild:
+  Added new edbuild. Includes exiscan-acl support. Thanks to Tim Schafer <tschafer@hotmail.com>
+  Closes bug #21302
+
+*exim-4.14 (30 May 2003)
 
   30 May 2003; Jack Morgan <jmorgan@gentoo.org> exim-4.14.ebuild:
   Updates exiscan, closes bug #20613 
