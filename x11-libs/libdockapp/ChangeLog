@@ -1,11 +1,18 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.2 2002/10/08 12:56:11 raker Exp $
+
+*libdockapp-0.4.0-r1 (08 Oct 2002)
+
+  08 Oct 2002; Nick Hadaway <raker@gentoo.org>
+  libdockapp-0.4.0-r1.ebuild, files/digest-libdockapp-0.4.0-r1,
+  files/libdockapp-0.4.0-r1-gentoo.diff :
+  libtoolize, aclocal, autoconf, THEN configure.  The ebuild now
+  installs a static AND shared library as well.
 
 *libdockapp-0.4.0 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
