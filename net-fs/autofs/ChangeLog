@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.4 2002/04/11 13:31:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.5 2002/04/17 04:34:25 seemant Exp $
+
+*autfofs-3.1.7-r3 (16 Apr 2002)
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> autofs-3.1.7-r3.ebuild
+  files/digest-autofs-3.1.7-r3 :
+
+  I did not bump the revision number up last time.  That would have been a good
+  idea to do.
 
 *autofs-3.1.7-r2 (11 Apr 2002)
 
