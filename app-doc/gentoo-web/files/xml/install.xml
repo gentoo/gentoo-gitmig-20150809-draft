@@ -159,7 +159,7 @@ boot and root partition should be tagged as a "Linux" partitions (type 83) even
 if you're using ReiserFS.  Your swap partition should be tagged as "Linux swap"
 (type 82).  Here's a screenshot of an example partition layout.  In this
 example, <path>/dev/hda1</path> is the boot partition (256Mb), <path>/dev/hda2</path> is the swap
-partition (256Mb), and <path>/dev/hda3</path> is the root partition (1.5Mb).  Notice that
+partition (256Mb), and <path>/dev/hda3</path> is the root partition (1.5Gb).  Notice that
 <path>/dev/hda1</path> has the bootable flag set (you can set this with the <c>a</c> option.)
 Once you've created your partitions, remember to write your changes using the
 <c>w</c> option.
