@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r3.ebuild,v 1.2 2005/03/03 09:57:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004c-r3.ebuild,v 1.3 2005/03/03 12:16:26 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,8 +37,8 @@ pkg_setup() {
 			ewarn "Enable \"clearpasswd\" flag to allow unrestricted cleartext LOGIN."
 		else
 			ewarn "You have disabled SSL for uw-imap, but want cleartext passwords restricted to"
-			ewarn "SSL/TLS sessions only. Either enable \"ssl\" USE flag, or disable"
-			ewarn "\"clearpasswd\" USE flag."
+			ewarn "SSL/TLS sessions only. Either enable \"ssl\" USE flag, or \"clearpasswd\""
+			ewarn "USE flag."
 			die "Impossible USE flag combination, see above message"
 		fi
 	fi
