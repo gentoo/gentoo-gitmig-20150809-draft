@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.49 2003/12/15 23:12:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.50 2004/01/05 17:12:48 gustavoz Exp $
+
+  05 Jan 2004; <gustavoz@gentoo.org> eel-2.4.1.ebuild:
+  stable for sparc and hppa, needed for nautilus 2.4.1
 
   16 Dec 2003; <spider@gentoo.org> eel-2.4.1.ebuild:
   KEYWORDS="x86" in order to get nautilus x86. Fixes crasher-bug on
