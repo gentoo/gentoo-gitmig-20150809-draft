@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.6 2004/11/01 04:03:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.7 2004/11/11 23:28:16 suka Exp $
 
 # Notes:
 #
@@ -110,13 +110,11 @@ pkg_setup() {
 		fi
 	fi
 
-	ewarn "****************************************************************"
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again.					               "
-	ewarn "****************************************************************"
 
 	set_languages
 }
@@ -528,7 +526,6 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " To start OpenOffice.org, run:"
 	einfo
 	einfo "   $ ooffice"
@@ -536,7 +533,5 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
-	einfo
-	einfo "******************************************************************"
 }
 
