@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/qlcr
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/ChangeLog,v 1.1 2005/02/26 11:32:04 genstef Exp $
+
+*qlcr-0.4.0 (26 Feb 2005)
+
+  26 Feb 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +qlcr-0.4.0.ebuild:
+  New ebuild thanks to Andre Kloth <bugs-gentoo@blubbmon.de> in bug 82824
+
