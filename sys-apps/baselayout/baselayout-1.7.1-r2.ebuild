@@ -1,22 +1,25 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.0-r1.ebuild,v 1.1 2002/01/20 21:55:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.1-r2.ebuild,v 1.1 2002/02/26 00:07:41 azarah Exp $
 
-SV=1.2.5
+SV=1.2.6
 #sysvinit version
 SVIV=2.83
 S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2
-	 ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+#	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 src_unpack() {
 	unpack ${A}
+
+	echo ">>> Unpacking rc-scripts-${SV}.tar.bz2"
+	tar -jxf ${FILESDIR}/rc-scripts-${SV}.tar.bz2
 	
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -60,10 +63,8 @@ keepdir() {
 	done
 }
 
-src_install()
-{
-	local foo
-	local altmerge
+defaltmerge() {
+	#define the "altmerge" variable.
 	altmerge=0
 	#special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
 	#(because it conflicts with some makefiles)
@@ -79,6 +80,13 @@ src_install()
 			altmerge=1
 		fi
 	fi
+}
+
+
+src_install()
+{
+	local foo
+	defaltmerge
 	keepdir /sbin
 	exeinto /sbin
 	doexe ${T}/runscript
@@ -92,7 +100,7 @@ src_install()
 	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
-keepdir /home
+	keepdir /home
 	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
@@ -180,32 +188,13 @@ keepdir /home
 		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		#this is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
-		cd ${D}/lib/dev-state
 	else
 		#normal
 		keepdir /dev
 		keepdir /lib/dev-state
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-		cd ${D}/dev
 	fi	
-
-	# we dont want to create devices if this is not a bootstrap and devfs
-	# is used, as this was the cause for all the devfs problems we had
-	if [ ! $altmerge -eq 1 ]
-	then
-		#These devices are also needed by many people and should be included
-		echo "Making device nodes... (this could take a minute or so...)"
-		${S}/sbin/MAKEDEV generic-i386
-		${S}/sbin/MAKEDEV sg
-		${S}/sbin/MAKEDEV scd
-		${S}/sbin/MAKEDEV rtc 
-		${S}/sbin/MAKEDEV audio
-		${S}/sbin/MAKEDEV hde
-		${S}/sbin/MAKEDEV hdf
-		${S}/sbin/MAKEDEV hdg
-		${S}/sbin/MAKEDEV hdh
-	fi
 
 	cd ${S}/sbin
 	into /
@@ -286,6 +275,26 @@ keepdir /home
 }
 
 pkg_postinst() {
+	#doing device node creation in pkg_postinst() now so they aren't recorded in CONTENTS.
+	#latest CVS-only version of Portage doesn't record device nodes in CONTENTS at all.
+	defaltmerge
+	# we dont want to create devices if this is not a bootstrap and devfs
+	# is used, as this was the cause for all the devfs problems we had
+	if [ ! $altmerge -eq 1 ]
+	then
+		cd ${D}/dev
+		#These devices are also needed by many people and should be included
+		echo "Making device nodes... (this could take a minute or so...)"
+		${S}/sbin/MAKEDEV generic-i386
+		${S}/sbin/MAKEDEV sg
+		${S}/sbin/MAKEDEV scd
+		${S}/sbin/MAKEDEV rtc 
+		${S}/sbin/MAKEDEV audio
+		${S}/sbin/MAKEDEV hde
+		${S}/sbin/MAKEDEV hdf
+		${S}/sbin/MAKEDEV hdg
+		${S}/sbin/MAKEDEV hdh
+	fi
 	#we create the /boot directory here so that /boot doesn't get deleted when a previous
 	#baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
@@ -337,25 +346,26 @@ EOF
 		fi
 	fi
 	
-	#force update of /etc/devfsd.conf
-	#just until everybody upgrade that is ...
-	if [ -e /etc/devfsd.conf ]
-	then
-		mv /etc/devfsd.conf /etc/devfsd.conf.old
-		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
-
-		echo
-		echo "*********************************************************"
-		echo "* This release use a new form of /dev management, so    *"
-		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
-		echo "* to this one.  Any old versions will be renamed to     *"
-		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
-		echo "* do not save your settings before adding entries, and  *"
-		echo "* if you really need to, just add missing entries and   *"
-		echo "* try not to delete lines from the new devfsd.conf.     *"
-		echo "*********************************************************"
-		echo
-	fi
+#it should be ok now, and gets irritating to revert my changes all the time ;/
+#	#force update of /etc/devfsd.conf
+#	#just until everybody upgrade that is ...
+#	if [ -e /etc/devfsd.conf ]
+#	then
+#		mv /etc/devfsd.conf /etc/devfsd.conf.old
+#		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
+#
+#		echo
+#		echo "*********************************************************"
+#		echo "* This release use a new form of /dev management, so    *"
+#		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
+#		echo "* to this one.  Any old versions will be renamed to     *"
+#		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
+#		echo "* do not save your settings before adding entries, and  *"
+#		echo "* if you really need to, just add missing entries and   *"
+#		echo "* try not to delete lines from the new devfsd.conf.     *"
+#		echo "*********************************************************"
+#		echo
+#	fi
 	
 	#restart devfsd
 	#we dont want to restart devfsd when bootstrapping, because it will

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.3 2002/02/20 07:23:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.4 2002/02/26 00:07:41 azarah Exp $
+
+*baselayout-1.7.1-r2 (25 Feb 2002)
+
+  25 Feb 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.1-r2.ebuild :
+
+  Change devices to be created in ${D}/dev and not ${D}/lib/dev-state, as they
+  are for use only when devfs is not used.
 
 *baselayout-1.7.1-r1 (20 Feb 2002)
 
