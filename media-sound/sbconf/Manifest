@@ -1,5 +1,5 @@
+MD5 281d9b7b1ceec7b1379e32dccd24c5f6 sbconf-1.0.ebuild 941
 MD5 6118904073db0d9c2cc617e48623c4cf ChangeLog 623
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 df62500ad806441628ff005fbf2361d8 sbconf-1.0.ebuild 949
-MD5 8a13cff427ab7b0899c9ca90fe114154 files/digest-sbconf-1.0 59
 MD5 ce92f9f4e6f5b9c8c0e6a2d0070bd49c files/sbconf-gentoo-path.diff 566
+MD5 8a13cff427ab7b0899c9ca90fe114154 files/digest-sbconf-1.0 59
