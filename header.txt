@@ -1,5 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header$
+# Author First Last <flast@gentoo.org>
+# $Header: /home/cvsroot/gentoo-x86/header.txt,v 1.2 2000/07/28 00:36:33 drobbins Exp $
 
 
