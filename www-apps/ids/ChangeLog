@@ -1,6 +1,9 @@
 # ChangeLog for net-www/ids
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.1 2004/08/15 15:03:59 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ids/ChangeLog,v 1.2 2004/08/18 17:31:21 rl03 Exp $
+
+  18 Aug 2004; Renat Lumpau <rl03@gentoo.org> :
+  Converted to webapp.eclass (bug #58379).
 
 *ids-0.83_beta2 (15 Aug 2004)
 
