@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a638f1afd9ac1de2201d52898ba34ea mrtg-2.9.22.ebuild 1003
 MD5 9a5a93ec1fb27067a466215ea79b052c mrtg-2.10.15.ebuild 1067
 MD5 1478cbda8cc0bead4164037f43ad9708 mrtg-2.11.0.ebuild 1070
 MD5 c2e8d481bfc0ee11706739f2254a2eab mrtg-2.10.14.ebuild 1054
-MD5 b923da5bb94474b2c6acccdd10dfa65c ChangeLog 4258
+MD5 9cef90ad2c13bc30d1a03e9c89439789 ChangeLog 4258
 MD5 9683bb7323c40d69b48d54ad0eb169ed metadata.xml 221
-MD5 b3a974ef92f8c7a758d731979de22ee1 mrtg-2.11.1.ebuild 992
+MD5 7852c72c7ccc38d9d1e3ff0d27cb44d3 mrtg-2.11.1.ebuild 992
 MD5 600205c986160fe48cd6053e39f74644 files/digest-mrtg-2.11.0 64
 MD5 892b30d2bab4ab965453b5bef89cfecb files/digest-mrtg-2.11.1 64
 MD5 b984863c1e7c00e4a0829e901c6cc492 files/digest-mrtg-2.9.22 64
@@ -12,3 +15,10 @@ MD5 85c2c5bcbc07346b4d167bc4ebe4ba9a files/digest-mrtg-2.10.14 65
 MD5 99d47668bd56ffee8a76da73dfcdf81c files/digest-mrtg-2.10.15 65
 MD5 c9944b21a429dee42089beb12fde4dec files/mrtg.rc 1280
 MD5 a8d246d324b90fd1e37cc912d4651372 files/mrtg.confd 512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHyVJEZCkKN40op4RAoVeAJ9vPOMR7hTqxc3nbNzIldZGKsNmNgCgl7Qv
+qAIJ42h0tgPPNjmr6hF5Olc=
+=1FXz
+-----END PGP SIGNATURE-----
