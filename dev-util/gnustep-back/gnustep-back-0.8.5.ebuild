@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.5.ebuild,v 1.1 2003/06/26 22:51:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.5.ebuild,v 1.2 2003/06/29 21:34:57 raker Exp $
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"
@@ -46,8 +46,9 @@ src_compile() {
 		sed "s,^WITH_XFT=.*,WITH_XFT=no," config.make > config.make.new
 		sed "s,-lXft,," config.make.new > config.make
 	fi
-        
-	make || die
+
+	mkdir -p $TMP/fakehome/GNUstep        
+	make HOME=$TMP/fakehome GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep || die
 }
 
 src_install () {

@@ -1,10 +1,13 @@
 # ChangeLog for dev-util/gnustep-back
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.9 2003/06/26 22:51:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.10 2003/06/29 21:34:57 raker Exp $
+
+  29 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.5.ebuild:
+  Small fix to hopefully resolve bug #19698
 
 *gnustep-back-0.8.5 (26 Jun 2003)
 
-  26 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.3.ebuild:
+  26 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.5.ebuild:
   Version bump.  Marked stable for x86.  Added some comments in the ebuild
   so people can choose a graphics library other than xlib.  (dps or art).
   Still only supports xft1 so keeping the sed magic.
