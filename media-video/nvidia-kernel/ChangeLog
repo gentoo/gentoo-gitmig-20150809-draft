@@ -1,6 +1,16 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.73 2004/04/30 15:00:14 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.74 2004/05/11 03:32:12 cyfred Exp $
+
+*nvidia-kernel-1.0.5336-r3 (11 May 2004)
+
+  11 May 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +nvidia-kernel-1.0.5336-r3.ebuild:
+  Changing ebuild style to use the new kmod.eclass and fix the problem of the
+  __this-modpost.patch being incorporated into the new 2.6.6 kernel tree. This
+  has a trade off that all kernels <2.6.6_rc1 will have to use addwrite to
+  /usr/src/linux for the time being, nvidia should fix this for the next
+  release. Also adding warning about 4K Stacks to stem bug reports.
 
   01 May 2004; Andrew Bevitt <cyfred@gentoo.org>;
   nvidia-kernel-1.0.4363-r3.ebuild, nvidia-kernel-1.0.4496-r3.ebuild,
