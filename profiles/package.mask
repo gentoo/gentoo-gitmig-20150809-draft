@@ -241,11 +241,6 @@ net-misc/gift
 media-video/xine-d4d
 media-video/xine-d5d
 
-# xine-0.9.12 released masking for testing on all arches
-# 23 Jun 2002, Brandon Low <lostlogic@gentoo.org>
-=media-libs/xine-lib-0.9.12
-=media-video/xine-ui-0.9.12
-
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
 # Only tested with the SMC2632W card, should unmask
