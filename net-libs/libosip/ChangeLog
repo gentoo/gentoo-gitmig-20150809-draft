@@ -1,0 +1,13 @@
+# ChangeLog for net-libs/libosip
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header:
+
+*libosip-0.8.8 (27 aug 2002)
+
+  27 Aug 2002; Paul Belt <gaarde@gentoo.org> :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
