@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.51 2003/01/27 21:39:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.52 2003/01/28 12:16:54 danarmak Exp $
+
+*kdebase-3.1-r1, 3.0.5a-r2 (28 Jan 2003)
+
+  28 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New revisions to fix bug #7179. This part of the fix removes the hardcoded
+  KDEDIRS setting from startkde, allowing the env.d files from kde-env to
+  set it. This is a bug/fix almost noone cares about, so no need to upgrade
+  unless you know what this is. Masked at first for initial testing.
 
   27 Jan 2003; Dan Armak <danarmak@gentoo.org> files/3.1/startkde-3.1-gentoo.diff  :
 
