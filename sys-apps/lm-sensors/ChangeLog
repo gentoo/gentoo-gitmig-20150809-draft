@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lm-sensors
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.14 2004/01/04 20:12:25 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.15 2004/01/11 20:10:15 lostlogic Exp $
+
+*lm-sensors-2.8.2.20040111 (11 Jan 2004)
+
+  11 Jan 2004; Brandon Low <lostlogic@gentoo.org>
+  lm-sensors-2.8.2.20040111.ebuild:
+  Add a CVS snapshot which should work for users of 2.6.1 kernels who were
+  getting errors reading temperatures with 2.8.2
 
   04 Jan 2004; <plasmaroo@gentoo.org> files/rc:
   Updated initialization script - closes bug #37083.
