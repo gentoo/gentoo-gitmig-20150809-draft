@@ -1,7 +1,11 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.14 2002/12/13 10:56:58 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.15 2002/12/21 14:02:39 hannes Exp $
 
+*kdeutils-3.0.5a (21 Dec 2002)
+
+  21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kdeutils-3.0.5a.ebuild:
+  version bump
 
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> kdeutils-3.1_rc5.ebuild :
   Added sparc keyword

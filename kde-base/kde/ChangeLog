@@ -1,7 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.17 2002/12/13 10:56:57 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.18 2002/12/21 14:02:39 hannes Exp $
 
+*kde-3.0.5a
+
+  21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kde-3.0.5a.ebuild:
+  version bump
 
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> kde-3.1_rc5.ebuild :
   Added sparc keyword
