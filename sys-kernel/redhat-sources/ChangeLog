@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/redhat-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.9 2003/02/23 08:22:30 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.10 2003/03/01 11:43:39 seemant Exp $
+
+*redhat-sources-2.4.20.2.48-r1 (01 Mar 2003)
+
+  01 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  redhat-sources-2.4.20.2.48-r1.ebuild:
+  rpm2targz uses TMPDIR now. Thanks to: Jamie Anderson
+  <gentoo.mail@jamieanderson.org> in bug #16586
 
 *redhat-sources-2.4.20.2.48 (23 Feb 2003)
 
