@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.16 2004/10/27 15:04:50 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.17 2004/11/21 19:52:09 sekretarz Exp $
+
+*synergy-1.1.9 (21 Nov 2004)
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  -synergy-0.9.13.ebuild, -synergy-1.0.0.ebuild, -synergy-1.0.14.ebuild,
+  +synergy-1.1.9.ebuild:
+  Version bump, ebuild clean up, fixed gcc-3.4 compile issues, bug #66450
 
   27 Oct 2004; <pyrania@gentoo.org> synergy-1.0.14.ebuild,
   synergy-1.0.2.ebuild, synergy-1.0.8.ebuild:
