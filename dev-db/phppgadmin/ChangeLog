@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.10 2003/07/17 16:01:50 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.11 2003/07/22 03:17:10 nakano Exp $
+
+*phppgadmin-3.0.0-r4 (22 Jul 2003)
+
+  22 Jul 2003; Masatomo Nakano <nakano@gentoo.org> phppgadmin-3.0.0-r4.ebuild:
+  Fixed bug about install path.
 
 *phppgadmin-3.0.0-r3 (17 Jul 2003)
 	
