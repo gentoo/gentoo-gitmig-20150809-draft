@@ -41,11 +41,6 @@
 # x86 asm in this one, might be fixable at a later date (?) Gerk - june 24 2002
 ~media-video/drip
 
-# xine currently has (known) ppc problems
-#<media-libs/xine-lib-0.9.11
-#<media-video/xine-ui-0.9.11
-#<media-video/xine-dvdnav-0.9.11
-
 # vnc code (even from vendor) not very ppc happy at all
 # tightvnc works, so masking this for now - Gerk June 26 2002
 ~net-misc/vnc
@@ -100,9 +95,9 @@
 *app-arch/ncompress
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.35
-*=sys-devel/binutils-2.13.90.0.4
-*>=sys-devel/gcc-3.2
-*=sys-libs/glibc-2.2.5-r7
+*=sys-devel/binutils-2.13.90.0.16
+*>=sys-devel/gcc-3.2.1
+*=sys-libs/glibc-2.3.1-r2
 *sys-apps/texinfo
 sys-kernel/ppc-sources
 >=sys-apps/sysklogd-1.4.1
