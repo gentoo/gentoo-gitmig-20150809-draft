@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.18 2004/09/18 18:36:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.19 2004/09/28 20:31:55 eradicator Exp $
+
+  28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> gok-0.11.8.ebuild:
+  Added doc to IUSE.
 
 *gok-0.11.8 (18 Sep 2004)
 
