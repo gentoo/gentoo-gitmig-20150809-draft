@@ -1,2 +1,4 @@
-MD5 cfebe0b832aa3e73a2dff113b672638f xmlsec-1.2.2.ebuild 1585
+MD5 fcd8d7172bce8bafe2bcbfcee8969012 xmlsec-1.2.2.ebuild 1482
+MD5 e2567d7c5cc0faf32aff8587a4c21a78 ChangeLog 387
+MD5 19c95ef82bbe44f2aba5f597b1f083dc files/xmlsec-1.2.2-nss-nspr-configure.in.patch 3407
 MD5 9282130b1728ab77d64063bfb5f417bd files/digest-xmlsec-1.2.2 66

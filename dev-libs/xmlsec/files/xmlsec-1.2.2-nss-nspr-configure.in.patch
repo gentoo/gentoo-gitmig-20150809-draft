@@ -1,0 +1,115 @@
+--- configure.in	2004-01-04 09:49:32.000000000 +0000
++++ configure.in	2004-01-04 10:44:59.295911997 +0000
+@@ -519,34 +519,17 @@
+     NSPR_FOUND="no"
+     NSPR_PRINIT_H=""
+ 
+-    if test "z$with_nspr" != "z" ; then
+-	NSPR_PREFIX="$with_nspr"
+-	NSPR_CFLAGS="-I$with_nspr/include"
+-	if test "z$with_gnu_ld" = "zyes" ; then
+-	    NSPR_LIBS="-Wl,-rpath-link -Wl,$with_nspr/lib -L$with_nspr/lib $NSPR_LIBS_LIST"
+-	else
+-	    NSPR_LIBS="-L$with_nspr/lib $NSPR_LIBS_LIST"
+-	fi
+-	NSPR_INCLUDES_FOUND="yes"
+-	NSPR_LIBS_FOUND="yes"
+-	NSPR_PRINIT_H="$with_nspr/include/prinit.h"
+-    else
+-	for dir in $ac_nss_inc_dir ; do
+-    	    if test -f $dir/nspr/prinit.h ; then
+-    		dnl do not add -I/usr/include because compiler does it anyway
+-        	if test "z$dir" = "z/usr/include" ; then
+-    		    NSPR_CFLAGS=""
+-    		else
+-    		    NSPR_CFLAGS="-I$dir/nspr"
+-    		fi
++    for dir in $ac_nss_inc_dir ; do
++    	if test -f $dir/nspr/prinit.h ; then
++		NSPR_CFLAGS="-I$dir/nspr"
+ 		NSPR_INCLUDES_FOUND="yes"
+ 		NSPR_PRINIT_H="$dir/nspr/prinit.h"
+     		break
+-    	    fi
+-	done
++	fi
++    done
+ 	
+-	for dir in $ac_nss_lib_dir ; do
+-    	    if test -f $dir/libnspr4.so ; then
++    for dir in $ac_nss_lib_dir ; do
++    	if test -f $dir/libnspr4.so ; then
+ 		dnl do not add -L/usr/lib because compiler does it anyway
+         	if test "z$dir" = "z/usr/lib" ; then
+             	    NSPR_LIBS="$NSPR_LIBS_LIST"
+@@ -559,9 +542,8 @@
+ 		fi
+ 		NSPR_LIBS_FOUND="yes"
+ 		break
+-	    fi
+-	done
+-    fi
++	fi
++    done
+ 
+     if test "z$NSPR_INCLUDES_FOUND" = "zyes" -a "z$NSPR_LIBS_FOUND" = "zyes" ; then
+ 	OLD_CPPFLAGS=$CPPFLAGS
+@@ -591,37 +573,21 @@
+     NSS_LIBS_FOUND="no"
+     NSS_NSS_H=""
+ 
+-    if test "z$with_nss" != "z" ; then
+-	NSS_CFLAGS="$NSS_CFLAGS -I$with_nss/include"
+-	if test "z$with_gnu_ld" = "zyes" ; then
+-	    NSS_LIBS="$NSS_LIBS -Wl,-rpath-link -Wl,$with_nss/lib -L$with_nss/lib $NSS_LIBS_LIST"
+-        else
+-	    NSS_LIBS="$NSS_LIBS -L$with_nss/lib $NSS_LIBS_LIST"
+-        fi
+-	NSS_INCLUDES_FOUND="yes"
+-	NSS_LIBS_FOUND="yes"
+-	NSS_NSS_H="$with_nss/include/nss.h"
+-    else
+-	for dir in $ac_nss_inc_dir ; do
+-	    if test -f $dir/nss/nss.h ; then
+-        	dnl do not add -I/usr/include because compiler does it anyway
+-    		if test "z$dir" = "z/usr/include" ; then
+-        	    NSS_CFLAGS="$NSS_CFLAGS"
+-		else
+-            	    NSS_CFLAGS="$NSS_CFLAGS -I$dir/nss"
+-		fi
++    for dir in $ac_nss_inc_dir ; do
++	if test -f $dir/nss/nss.h ; then
++		NSS_CFLAGS="$NSS_CFLAGS -I$dir/nss"
+     		NSS_INCLUDES_FOUND="yes"
+     		NSS_NSS_H="$dir/nss/nss.h"
+     		break
+-    	    fi
+-        done
++	fi
++    done
+        
+-        for dir in $ac_nss_lib_dir ; do
+-    	    if test -f $dir/libnss3.so ; then
+-        	dnl do not add -L/usr/lib because compiler does it anyway
++    for dir in $ac_nss_lib_dir ; do
++        if test -f $dir/libnss3.so ; then
++    	   	dnl do not add -L/usr/lib because compiler does it anyway
+     		if test "z$dir" = "z/usr/lib" ; then
+         	    NSS_LIBS="$NSS_LIBS_LIST"
+-                else
++		else
+             	    if test "z$with_gnu_ld" = "zyes" ; then
+     			NSS_LIBS="-Wl,-rpath-link -Wl,$dir -L$dir $NSS_LIBS_LIST"
+             	    else
+@@ -630,9 +596,8 @@
+ 		fi
+     		NSS_LIBS_FOUND="yes"
+     		break
+-	    fi
+-	done
+-    fi
++	fi
++    done
+ 
+     if test "z$NSS_INCLUDES_FOUND" = "zyes" -a "z$NSS_LIBS_FOUND" = "zyes" ; then
+        OLD_CPPFLAGS=$CPPFLAGS
