@@ -1,26 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.4 2004/03/06 16:28:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.5 2004/03/29 00:44:01 vapier Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
-
 HOMEPAGE="http://multisync.sourceforge.net/"
-
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
 SRC_URI="mirror://sourceforge/multisync/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="x86"
-
 # evo   - evolution plugin
 # irmc  - bluetooth/irmc/irda plugin ( local )
 # opie  - opie plugin                ( local )
 # ldap  - ldap plugin - experimental
-
 IUSE="evo irmc opie ldap bluetooth"
 
 DEPEND="virtual/glibc
@@ -39,7 +33,7 @@ DEPEND="virtual/glibc
 							 >=net-wireless/bluez-sdp-1.0
 					         >=net-wireless/bluez-utils-2.3 )
 				)
-		opie? ( >=net-ftp/curl-7.10.5 )
+		opie? ( >=net-misc/curl-7.10.5 )
 		ldap? ( >=net-nds/openldap-2.0.27
 				>=dev-libs/cyrus-sasl-2.1.4 )"
 
@@ -47,22 +41,13 @@ DEPEND="virtual/glibc
 
 S=${WORKDIR}/${P}
 
-PLUGINS="backup_plugin syncml_plugin"
-
-if [ `use irmc` ] ; then
-	PLUGINS="${PLUGINS} irmc_sync"
-fi
-if [ `use evo` ] ; then
-	PLUGINS="${PLUGINS} evolution_sync"
-fi
-
-if [ `use opie` ] ; then
-	PLUGINS="${PLUGINS} opie_sync"
-fi
-
-if [ `use ldap` ] ; then
-	PLUGINS="${PLUGINS} ldap_plugin"
-fi
+make_plugin_list() {
+	export PLUGINS="backup_plugin syncml_plugin"
+	use irmc && PLUGINS="${PLUGINS} irmc_sync"
+	use evo && PLUGINS="${PLUGINS} evolution_sync"
+	use opie && PLUGINS="${PLUGINS} opie_sync"
+	use ldap && PLUGINS="${PLUGINS} ldap_plugin"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -73,6 +58,8 @@ src_unpack() {
 }
 
 src_compile() {
+	make_plugin_list
+
 	einfo "Building Multisync with these plugins:"
 	for plugin_dir in ${PLUGINS}
 	do
@@ -93,7 +80,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}
+	make_plugin_list
 	einstall || die "Multisync install failed!"
 	for plugin_dir in ${PLUGINS}
 	do
