@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/karamba-news_panel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/ChangeLog,v 1.1 2003/05/04 03:47:34 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-news_panel/ChangeLog,v 1.2 2003/10/10 16:14:20 mholzer Exp $
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org>
+  karamba-news_panel-0.5.ebuild:
+  Added Depends. Closes #20782.
 
 *karamba-news_panel-0.5 (03 May 2003)
 
