@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.5 2004/06/25 02:13:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2.ebuild,v 1.6 2004/10/09 21:39:42 usata Exp $
+
+inherit latex-package
 
 S="${WORKDIR}/${PN}"
 LICENSE="LPPL-1.2"
@@ -11,10 +13,11 @@ HOMEPAGE="http://planck.psu.edu/~boris/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 DEPEND="virtual/tetex"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="x86 ~amd64 ~sparc"
 IUSE=""
 
 src_compile() {
+	addwrite /var/cache/fonts/
 	ebegin "Compiling ${PN}"
 	latex envlab.ins || die
 	pdflatex elguide.tex || die
@@ -23,21 +26,10 @@ src_compile() {
 }
 
 src_install() {
-	ebegin "Installing ${PN}"
-	dodir /usr/share/texmf/tex/latex/envlab
-	cp -Rv envlab.{cfg,sty} ${D}/usr/share/texmf/tex/latex/envlab
-	dodoc elguide.pdf envlab.pdf readme.v12
-	eend
-}
+	latex-package_src_install
 
-pkg_postinst() {
-	ebegin "Updating LaTeX Module Index"
-	texhash
-	eend
-}
+	insinto ${TEXMF}/tex/latex/${PN}
+	doins *.cfg
 
-pkg_postrm() {
-	ebegin "Updating LaTeX Module Index"
-	texhash
-	eend
+	dodoc readme.v12
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.6 2004/06/25 02:13:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.7 2004/10/09 21:39:42 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> envlab-1.2.ebuild:
+  Stable on x86.
 
   06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> envlab-1.2.ebuild:
   Added ~sparc, #50245
