@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/hostap-utils-0.2.4.ebuild,v 1.6 2005/01/14 17:22:13 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/hostap-utils-0.2.4.ebuild,v 1.7 2005/01/18 11:19:18 brix Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
-RDEPEND=">=net-wireless/hostap-driver-0.2.4"
 DEPEND="virtual/libc"
 
 src_compile() {
