@@ -1,10 +1,17 @@
 # ChangeLog for x11-plugins/wmappl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.6 2004/06/24 23:05:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.7 2004/08/23 19:52:19 s4t4n Exp $
+
+*wmappl-0.71 (23 Aug 2004)
+
+  23 Aug 2004; Michele Noberasco <s4t4n@gentoo.org>; wmappl-0.71.ebuild:
+  Version bump. Closes #61307. Also adding missing digest file.
+  wmappl-0.6.ebuild:
+  Update HOMEPAGE and SRC_URI...
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*wmappl-0.6 (7-Feb-2002)
+*wmappl-0.6 (07 Feb 2002)
 
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
