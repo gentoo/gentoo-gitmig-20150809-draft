@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.12.ebuild,v 1.2 2002/11/29 11:42:42 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.12.ebuild,v 1.3 2002/11/30 21:36:42 vapier Exp $
 
 MY_P=${P}-1.3.27
-
-DESCRIPTION="An SSL module for the Apache Web server"
-HOMEPAGE="http://www.modssl.org"
-KEYWORDS="x86 ppc sparc sparc64"
-
 S=${WORKDIR}/${MY_P}
+DESCRIPTION="An SSL module for the Apache Web server"
 SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"
+HOMEPAGE="http://www.modssl.org/"
 
-DEPEND="=net-www/apache-1* >=dev-libs/openssl-0.9.6c"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="as-is"
 SLOT="0"
+
+DEPEND="=net-www/apache-1*
+	>=dev-libs/openssl-0.9.6c"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -38,7 +38,7 @@ src_install() {
 	doexe pkg.contrib/*.sh ${FILESDIR}/gentestcrt.sh
 
 	dodoc ANNOUNCE CHANGES CREDITS LICENSE NEWS README*
-	mkdir -p ${D}/usr/share/doc/${PF}/html
+	dodir /usr/share/doc/${PF}/html
 	cp -a pkg.ssldoc/* ${D}/usr/share/doc/${PF}/html
 
 	insinto /etc/apache/conf/vhosts

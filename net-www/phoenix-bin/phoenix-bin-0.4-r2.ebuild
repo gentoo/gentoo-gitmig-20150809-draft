@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.3 2002/11/21 22:48:44 gerk Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.4-r2.ebuild,v 1.4 2002/11/30 21:39:22 vapier Exp $
 
 MY_PN=${PN/-bin/}
 S=${WORKDIR}/${MY_PN}
@@ -23,7 +21,7 @@ RDEPEND=">=sys-libs/lib-compat-1.0-r2
 src_install() {
 	# Plugin path creation
 	PLUGIN_DIR="/usr/lib/nsbrowser/plugins" 
-	mkdir -p ${D}/${PLUGIN_DIR}
+	dodir /${PLUGIN_DIR}
 
 	dodir /usr/lib
 
