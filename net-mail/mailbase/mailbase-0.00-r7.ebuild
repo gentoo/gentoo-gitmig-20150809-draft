@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r7.ebuild,v 1.1 2005/02/10 21:44:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r7.ebuild,v 1.2 2005/02/10 23:02:29 ferdy Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -24,13 +24,13 @@ pkg_setup() {
 
 	for i in pop pop3 pop3s pops imap imap4 imap4s imaps;
 	do
-		if [[ -e /etc/pam.d/${i} ]]
+		if [[ -e ${ROOT}/etc/pam.d/${i} ]]
 		then
-			lineold="`head -n 1 /etc/pam.d/${i}`"
+			lineold="`head -n 1 ${ROOT}/etc/pam.d/${i}`"
 
 			if [[ "${lineorig}" != "${lineold}" ]]
 			then
-				ewarn "/etc/pam.d/${i} exists and wasn't provided by mailbase"
+				ewarn "${ROOT}/etc/pam.d/${i} exists and wasn't provided by mailbase"
 				(( filestoremove++ ))
 			fi
 		fi
