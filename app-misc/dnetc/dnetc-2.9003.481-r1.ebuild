@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481-r1.ebuild,v 1.7 2004/06/24 22:08:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9003.481-r1.ebuild,v 1.8 2004/07/11 02:19:06 agriffis Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -53,7 +53,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Either configure your email adress in /etc/conf.d/dnetc"
+	einfo "Either configure your email address in /etc/conf.d/dnetc"
 	einfo "or create the configuration file /opt/distributed.net/dnetc.ini"
 }
 
