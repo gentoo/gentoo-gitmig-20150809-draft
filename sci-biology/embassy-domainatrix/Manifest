@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72739aa1c0a939fef54518ef1b5188e9 embassy-domainatrix-1.0.0.ebuild 347
-MD5 dcc86de78615b3cd449c719f97939458 ChangeLog 831
+MD5 f62e86120440e200212af083d5d003f4 ChangeLog 935
+MD5 7940ca3677dc04fc3e516acc8daea92c embassy-domainatrix-1.0.0.ebuild 356
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 2cfc7dc10348dc74cffc22396f14c678 files/digest-embassy-domainatrix-1.0.0 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy34kI1lqEGTUzyQRAkNNAKCfK1Poos0iWU8Br7UIaG7boe4DPgCghiq2
-N9MTBjwVIGDgSshDG65NM/w=
-=sdYs
------END PGP SIGNATURE-----
