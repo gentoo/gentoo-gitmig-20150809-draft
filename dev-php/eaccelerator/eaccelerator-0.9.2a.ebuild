@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.2a.ebuild,v 1.2 2005/02/20 09:59:52 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.2a.ebuild,v 1.3 2005/02/20 12:25:27 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="yes"
 inherit php-ext-source
 
 DESCRIPTION="A PHP Accelerator & Encoder."
-HOMEPAGE="http://eaccelerator.sourceforge.net/"
+HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
 S=${WORKDIR}/eaccelerator
 IUSE=""
