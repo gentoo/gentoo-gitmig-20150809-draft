@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.36 2004/08/13 16:36:05 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.37 2004/08/16 04:13:18 weeve Exp $
+
+  15 Aug 2004; Jason Wever <weeve@gentoo.org> ettercap-0.7.0.ebuild:
+  Bringin' back the ~sparc keyword.  Aww yeah.
 
   13 Aug 2004; Eldad Zack <eldad@gentoo.org> ettercap-0.7.0.ebuild:
   Re-fix -ssl issue
