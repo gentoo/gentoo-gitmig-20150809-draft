@@ -1,0 +1,19 @@
+--- configure.old	2003-05-11 12:29:03.000000000 +0100
++++ configure	2003-05-11 12:29:09.000000000 +0100
+@@ -8038,14 +8038,10 @@
+ fi
+ 
+ 
+-
+-if rpm -q libusb-devel > /dev/null 2>&1; then
+-  RPM_LIBUSB_DEVEL_TRUE=
+-  RPM_LIBUSB_DEVEL_FALSE='#'
+-else
++# don't let rpm -q run or else it'll break sandbox.
+   RPM_LIBUSB_DEVEL_TRUE='#'
+   RPM_LIBUSB_DEVEL_FALSE=
+-fi
++
+ 
+ 
+ if test "x$GCC" = "xyes"; then
