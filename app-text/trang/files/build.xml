@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<project name="trang" default="jar">
+	<!-- compiles the sources -->
+	<target name="compile">
+		<mkdir dir="../build" />
+	
+		<javac srcdir="." 
+			destdir="../build"
+			classpath="lib/xerces.jar">
+		</javac>
+		
+		<!-- we need the *.properties at the correct 
+		     position in the jar archive!        -->
+		<copy todir="../build">
+		<fileset dir=".">
+			<include name="**/*.properties" />
+		</fileset>
+		</copy>
+	</target>
+
+	<!-- create the jar archive -->
+	<target name="jar" depends="compile">
+		<mkdir dir="../jar" />
+	
+		<jar jarfile="../jar/trang.jar"
+			basedir="../build"
+			manifest="META-INF/MANIFEST.MF">
+		</jar>
+	</target>
+</project>

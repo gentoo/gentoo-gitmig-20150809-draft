@@ -2,13 +2,16 @@
 Hash: SHA1
 
 MD5 9943fec0fec168f1a93a9d5c6814c3f7 trang-20030619.ebuild 757
-MD5 49a19df1569591f6a29cf56dabf3f926 ChangeLog 797
+MD5 9d35039743d84b2427c9133a00247352 ChangeLog 1001
 MD5 79a5dd1b805e5bca495aec6d6a73826b metadata.xml 176
+MD5 55eaaab66ad44c637e9dbcc93b88bfd3 trang-20030619-r1.ebuild 1103
 MD5 15d93b4d4f695718d4ab66cf366b1e42 files/digest-trang-20030619 63
+MD5 15d93b4d4f695718d4ab66cf366b1e42 files/digest-trang-20030619-r1 63
+MD5 4067ed3d01d556519f8f66f469e56374 files/build.xml 669
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBiMac/rLF9B432nYRAtJnAKCqQlZZ/cDsZUedNU1OtsvBtWg6vgCgsPL1
-yvxZ1gzcUIBIsX+one1E/9k=
-=gARo
+iD8DBQFBl4Q8/rLF9B432nYRAnU6AKC8LyrB/Ve1oqzcMuN9bLkbxQGnwACgwso7
+jf+h5Uc22XHcZHtsZkp3yp0=
+=Yu43
 -----END PGP SIGNATURE-----
