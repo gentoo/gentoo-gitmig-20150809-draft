@@ -1,4 +1,6 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4cb1591e3fff0d64e48c1f8c44373be6 ChangeLog 575
 MD5 73052a2f8a16a918d8038efb5a756b42 Class-Inspector-1.ebuild 594
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 73052a2f8a16a918d8038efb5a756b42 Class-Inspector-1.04.ebuild 594
 MD5 c29219a3f94b0b3dc7eeb821f7067664 files/digest-Class-Inspector-1 68
+MD5 e39b4a673172886478848571d92ba7ac files/digest-Class-Inspector-1.04 71

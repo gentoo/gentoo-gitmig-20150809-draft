@@ -1,4 +1,6 @@
+MD5 8e0355b179b418520983a536eadbb5d4 ChangeLog 421
 MD5 2e0b168ddc849c6bee8d97dd3eaccb11 Clone-0.13.ebuild 556
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8e0355b179b418520983a536eadbb5d4 ChangeLog 421
+MD5 2e0b168ddc849c6bee8d97dd3eaccb11 Clone-0.15.ebuild 556
 MD5 545dc5a29763eda862f23342dab972d3 files/digest-Clone-0.13 60
+MD5 91b6b75986d48a294a67abf7c36adb21 files/digest-Clone-0.15 60

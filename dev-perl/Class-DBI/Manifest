@@ -1,4 +1,6 @@
 MD5 2dc6bca3d143c5af77e31b2e57766b4e ChangeLog 470
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 28a2c7de7f5dd6f68461cb29b5d34dca Class-DBI-0.95.ebuild 776
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 28a2c7de7f5dd6f68461cb29b5d34dca Class-DBI-0.96.ebuild 776
 MD5 8fc8a7f7daf7396054bbd2d98c0d191d files/digest-Class-DBI-0.95 65
+MD5 24cfe54414ca526572a8558e5d2839df files/digest-Class-DBI-0.96 65
