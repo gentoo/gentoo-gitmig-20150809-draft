@@ -1,9 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e6e8fc5266d56115d3396677b14265dc ChangeLog 5692
+MD5 10cd4cf8b9787c24ddfcc43de8a231d6 ChangeLog 5980
+MD5 d874b9fa0ea62dbc8cf550e6e62c6de0 kbd-1.12-r3.ebuild 2210
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ba92fa17bb846a40b30c25cfec05bd1e kbd-1.12-r2.ebuild 1894
+MD5 b392b9b6ce5edd6e37767cecb3d97187 kbd-1.12-r2.ebuild 1891
+MD5 66f1d8aeb65761d1150262a4c1255274 files/digest-kbd-1.12-r3 118
+MD5 015486b311baa80949762f8091a89d5e files/kbd-1.12-cz-qwerty-map.patch 5293
+MD5 590a77d26b0b25a4217435ffa8bcd18a files/kbd-1.12-debian.patch 2628
 MD5 3e2652f1b8451784488b743b6e0dd556 files/kbd-1.12-find-map-fix.patch 957
 MD5 7c826f293d2f1ae5c4de4031c19cd47d files/digest-kbd-1.12-r2 60
 MD5 6e007f04a80358ea81b27c80498a4808 files/kbd-1.08-terminal.patch 925
@@ -11,7 +15,7 @@ MD5 3492e6d5769a7bcb8d19dddf46f3a08e files/kbd-1.12-kbd_repeat-v2.patch 756
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcV2FHTu7gpaalycRAipxAJ9F3KWU3qhVq+YJ7upu4mH0demkzgCfes4e
-j1Xk4xMpZayOCbB+nLd7Pbg=
-=9WQP
+iD8DBQFBfeTQHTu7gpaalycRAtteAJ9PLbmSZCJeELqeS2xXQvmgNlNbGgCbB4Qd
+21V5nUCDH1FRO4P+N6laf2U=
+=jnrk
 -----END PGP SIGNATURE-----
