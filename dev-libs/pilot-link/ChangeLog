@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.17 2003/05/16 01:00:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.18 2003/05/27 18:18:00 weeve Exp $
+
+  27 May 2003; Jason Wever <weeve@gentoo.org> pilot-link-0.11.5-r2.ebuild:
+  Changed ~sparc keyword to sparc.
 
   16 May 2003; Lars Weiler <pylon@gentoo.org> pilot-link-0.11.7-r1.ebuild:
   Set ppc in KEYWORDS
