@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.5.1.ebuild,v 1.1 2004/02/19 01:38:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.5.1.ebuild,v 1.2 2004/05/04 02:05:43 eradicator Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/python
-	media-sound/mad"
+	media-sound/madplay"
 
 src_compile() {
 	./config_unix.py --prefix /usr || die
