@@ -54,6 +54,8 @@
 >=kde-i18n/kde-i18n-xh-2.2.1-r1
 >=kde-i18n/kde-i18n-zh_CN.GB2312-2.2.1-r1
 >=kde-i18n/kde-i18n-zh-TW.Big5-2.2.1-r1
+>=dev-util/kdevelop-2.0.1
+=app-office/koffice-1.1
 
 #db-3.2.9 is untested by the system team
 >=sys-libs/db-3.2.9
