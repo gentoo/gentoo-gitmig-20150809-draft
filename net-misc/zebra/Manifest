@@ -1,5 +1,7 @@
+MD5 122a878efde20a1fc40817371a0146ad zebra-0.93b.ebuild 1317
 MD5 122a878efde20a1fc40817371a0146ad zebra-0.93a.ebuild 1317
 MD5 1b7eab649f0b4dbfc98a5dfa56a9a60b ChangeLog 506
 MD5 1aea49f1bd903cd18e3a3ff2292c2639 files/digest-zebra-0.93a 64
+MD5 0fd0812e7d1180d5965b9b997cd10011 files/digest-zebra-0.93b 64
 MD5 5cc027d5ee8a3a1564d0e21423461b49 files/zebra.confd 638
 MD5 3892c41d7ffc5ea4049987524758b908 files/zebra.initd 383
