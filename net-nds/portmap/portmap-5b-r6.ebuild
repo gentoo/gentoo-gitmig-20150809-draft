@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r6.ebuild,v 1.1 2001/09/16 19:14:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r6.ebuild,v 1.2 2001/09/25 01:48:41 woodchip Exp $
 
 P=portmap-5b
 A=portmap_5beta.tar.gz
@@ -27,12 +27,15 @@ src_compile() {
 }
 
 src_install() {
-    mkdir -p $D/sbin $D/usr/sbin $D/usr/share/man/man8
-    mkdir -p $D/etc/init.d $D/etc/runlevels/default
-    install -m755 portmap $D/sbin
-    install -m755 pmap_dump pmap_set $D/usr/sbin
-    install -m644 portmap.8 pmap_dump.8 pmap_set.8 $D/usr/share/man/man8
-    install -m755 $FILESDIR/portmap-$PVR $D/etc/init.d/portmap
-    ln -s ../../init.d/portmap $D/etc/runlevels/default/portmap
+    into / ; dosbin portmap
+    into /usr ; dosbin pmap_dump pmap_set
+    doman portmap.8 pmap_dump.8 pmap_set.8
+
+    exeinto /etc/init.d
+    newexe ${FILESDIR}/portmap.rc6 portmap
+
+    # is this really the sort of thing we wanna be doing? :)
+    # ln -s ../../init.d/portmap $D/etc/runlevels/default/portmap
+
     dodoc BLURB CHANGES README
 }
