@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <mr_bones_@gentoo.org> (13 Oct 2003)
-# Masked until the DESTDIR stuff is fixed
-=games-puzzle/enigma-0.81
-
 # <vapier@gentoo.org> (13 Oct 2003)
 # if you're still using this i just deprecated you
 x11-libs/eprog
