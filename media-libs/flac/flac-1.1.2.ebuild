@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.1 2005/02/18 22:49:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.2 2005/02/19 15:10:05 lu_zero Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc-macos ~sparc ~x86 ~ppc
+~ppc64"
 IUSE="sse xmms"
 
 RDEPEND=">=media-libs/libogg-1.0_rc2
@@ -29,8 +30,9 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-m4.patch
 	epatch ${FILESDIR}/${P}-libtool.patch
-	#epatch ${FILESDIR}/${P}-altivec.patch.gz (non-Darwin PPC AltiVec patch needs to be ported)
-
+	epatch ${FILESDIR}/${P}-gas.patch
+	epatch ${FILESDIR}/${P}-makefile.patch
+	./autogen.sh || die "autogen failed"
 	elibtoolize --reverse-deps
 }
 
