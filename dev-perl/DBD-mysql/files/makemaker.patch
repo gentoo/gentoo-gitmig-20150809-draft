@@ -1,0 +1,10 @@
+--- Makefile.PL.orig	Tue Apr 16 09:51:39 2002
++++ Makefile.PL	Tue Apr 16 09:54:32 2002
+@@ -77,7 +77,6 @@
+ $cflags .= " -DDBD_MYSQL_WITH_SSL" if $opt->{'ssl'};
+ my %o = ( 'NAME' => 'DBD::mysql',
+ 	  'INC' => $cflags,
+-	  'EXE_FILES' => 'dbimon pmysql',
+ 	  'dist'         => { 'SUFFIX'       => ".gz",
+ 			      'DIST_DEFAULT' => 'all installhtml tardist',
+ 			      'COMPRESS'     => "gzip -9f" },
