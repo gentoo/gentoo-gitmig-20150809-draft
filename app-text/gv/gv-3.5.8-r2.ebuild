@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.3 2003/02/13 09:38:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r2.ebuild,v 1.4 2003/03/01 04:22:03 vapier Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely
 # different configurations, eliminating the gv.man/gv._man problem
 
-S=${WORKDIR}/${P}
-DESCRIPTION="gv is a standard ghostscript frontend used e.g. by LyX"
+DESCRIPTION="standard ghostscript frontend used by programs like LyX"
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
 
@@ -28,7 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	cp config.Unix 1
 	sed -e 's:usr/local:usr:' 1 > config.Unix
 	rm 1
@@ -50,19 +48,12 @@ src_compile() {
 		sleep 2s
 	fi
 	
-
 	cd ${S}
 	emake || die
 }
 
-src_install () {
-	
-	cd ${S}
+src_install() {
 	make DESTDIR=${D} install || die
-	# make DESTDIR=${D} install.man  || die # don't use this!!!
 	make GV_DOCDIR=${D}/usr/share/doc/${PF} install.doc || die
-	
-	cd ${S}/doc
-	cp gv.man gv.man.1
-	doman gv.man.1
+	newman doc/gv.man gv.1
 }
