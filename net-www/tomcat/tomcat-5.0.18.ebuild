@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.2 2004/02/16 01:04:02 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.3 2004/02/22 07:27:17 zx Exp $
+
+inherit eutils
 
 DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 SRC_URI="http://apache.mirrors.pair.com/jakarta/tomcat-`echo ${PV} | cut -b 1`/v${PV}/bin/jakarta-${P}.tar.gz"
@@ -10,6 +12,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND="sys-apps/sed"
 RDEPEND=">=virtual/jdk-1.2"
+IUSE="doc jikes"
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -18,6 +21,10 @@ src_unpack() {
 	tar xzf ${DISTDIR}/${At} || die
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo.diff
+
+	if [ ! `use doc` ] ; then
+		rm -rf webapps/{tomcat-docs,jsp-examples,servlets-examples}
+	fi
 }
 
 
@@ -36,7 +43,8 @@ pkg_setup() {
 src_install() {
 	TOMCAT_HOME="/opt/tomcat"
 	INSTALLING="yes"
-	DIROPTIONS="--mode=0755 --owner=tomcat --group=tomcat"
+	DIROPTIONS="--mode=0750 --owner=tomcat --group=tomcat"
+
 
 	# Create directories
 	dodir ${TOMCAT_HOME}
@@ -55,10 +63,11 @@ src_install() {
 
 	cp -a ${FILESDIR}/${PV}/tomcat.init ${S}/tomcat
 	insinto /etc/init.d
-	insopts -m0755
+	insopts -m0750
 	doins ${S}/tomcat
 
 	cp -a ${FILESDIR}/${PV}/tomcat.conf ${S}/tomcat
+	use jikes && epatch ${FILESDIR}/${PV}/jikes.diff
 	insinto /etc/conf.d
 	insopts -m0644
 	doins ${S}/tomcat
@@ -78,8 +87,8 @@ src_install() {
 
 	dodoc RELEASE-NOTES RUNNING.txt LICENSE
 
-	chown -R tomcat.tomcat ${S}
-	DIROPTIONS="--mode=0755 --owner=tomcat --group=tomcat"
+	chown -R tomcat:tomcat ${S}
+	DIROPTIONS="--mode=0750 --owner=tomcat --group=tomcat"
 	dodir ${TOMCAT_HOME}/common
 	dodir ${TOMCAT_HOME}/common/classes
 	dodir ${TOMCAT_HOME}/webapps
@@ -133,7 +142,7 @@ pkg_postinst() {
 	einfo " value by editing /etc/tomcat/server.xml."
 	einfo " "
 	einfo " To test Tomcat while it's running, point your web browser to:"
-	einfo " http://${HOSTNAME}:8080/"
+	einfo " http://localhost:8080/"
 	einfo " "
 	einfo " "
 	einfo " BUGS:"
