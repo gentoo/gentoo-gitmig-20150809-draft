@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.2.2.ebuild,v 1.5 2004/08/26 03:03:41 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mpqc/mpqc-2.2.2.ebuild,v 1.6 2004/09/21 10:09:22 kugelfang Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mpqc/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 # Should work on x86, amd64 and ppc, at least
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="doc X"
 
 DEPEND="sys-devel/flex
