@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.16 2004/09/10 10:04:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.17 2004/09/10 10:12:23 axxo Exp $
+
+  10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jython-2.1-r5.ebuild:
+  removed -source 1.3 bug 63480
 
   10 Sep 2004; Thomas Matthijs <axxo@gentoo.org> files/jython,
   jython-2.1-r5.ebuild:

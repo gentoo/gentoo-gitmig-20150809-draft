@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.4 2004/09/10 10:04:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.5 2004/09/10 10:12:23 axxo Exp $
 
 inherit java-pkg
 
@@ -46,7 +46,7 @@ src_compile() {
 		exclude="${exclude} ! -name PyServlet.java"
 	#fi
 
-	find org -name "*.java" ${exclude} | xargs ${javac} -classpath ${cp} -source 1.3 -nowarn || die "Failed to compile"
+	find org -name "*.java" ${exclude} | xargs ${javac} -classpath ${cp} -nowarn || die "Failed to compile"
 
 	find org -name "*.class" | xargs jar cf jython-${PV}.jar
 }
