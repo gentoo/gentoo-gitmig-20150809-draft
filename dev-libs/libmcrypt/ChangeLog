@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.8 2002/06/30 20:30:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.9 2002/07/01 18:09:01 azarah Exp $
+
+*libmcrypt-2.5.1-r4 (1 Jul 2002)
+
+  1 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Ok, officially bug #3940 is fixed with -r3, but r4 is just the
+  final with cleanups, etc.  Thanks Jon.
 
 *libmcrypt-2.5.1-r3 (30 Jun 2002)
 
@@ -38,7 +45,7 @@
 
   5 May 2002: Martin Schlemmer <azarah@gentoo.org> libmcrypt-2.4.19-r1.ebuild :
 
-  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.8 2002/06/30 20:30:07 azarah Exp $.
+  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.9 2002/07/01 18:09:01 azarah Exp $.
 
 *libmcrypt-2.4.19 (1 Feb 2002)
 
