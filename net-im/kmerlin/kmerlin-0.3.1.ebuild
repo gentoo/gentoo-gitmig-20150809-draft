@@ -5,6 +5,9 @@
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
+need-kdelibs 2.1
+need-qt 2.2
+
 S=${WORKDIR}/${P}
 DESCRIPTION="KMerlin 0.3.1"
 SRC_URI="http://prdownloads.sourceforge.net/kmsn/kmerlin-0.3.1.tar.gz"
