@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.1 2003/07/08 07:23:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.2 2003/07/08 20:22:46 robbat2 Exp $
 
 inherit eutils 
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -38,8 +38,6 @@ ENVDFILE="97amanda"
 TMPENVFILE="${MYTMPDIR}/${ENVDFILE}"
 
 amanda_variable_setup() {
-	# places for us to work in
-	mkdir -p ${MYFILESDIR} ${MYTMPDIR}
 
 	# Setting vars
 	local currentamanda 
@@ -92,8 +90,6 @@ amanda_variable_setup() {
 	# Re-apply the new settings if any
 	[ -n "${currentamanda}" ] && eval `echo "${currentamada}"`
 
-	# Now we store the settings we just created
-	set | egrep "^AMANDA_" > ${TMPENVFILE}
 }
 
 pkg_setup() {
@@ -106,6 +102,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	amanda_variable_setup
+	# places for us to work in
+	mkdir -p ${MYFILESDIR} ${MYTMPDIR}
+	# Now we store the settings we just created
+	set | egrep "^AMANDA_" > ${TMPENVFILE}
 }
 
 src_compile() {
