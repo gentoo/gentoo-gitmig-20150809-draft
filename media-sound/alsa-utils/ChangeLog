@@ -1,11 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.74 2004/11/12 10:22:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.75 2004/11/12 11:11:49 eradicator Exp $
 
-  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  -alsa-utils-1.0.2.ebuild, -alsa-utils-1.0.5.ebuild,
-  alsa-utils-1.0.6.ebuild:
-  Removing old versions.
+*alsa-utils-1.0.7 (12 Nov 2004)
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> -files/alsa-0.5.10,
+  -files/alsa-modules.conf-rc, -files/alsa-utils-0.5.10-aplay-destdir.diff,
+  -files/alsa-utils-1.0.4-alsaconf.patch, -alsa-utils-1.0.2.ebuild,
+  -alsa-utils-1.0.5.ebuild, alsa-utils-1.0.6.ebuild, +alsa-utils-1.0.7.ebuild:
+  Version bump. Removing old versions.
 
   06 Nov 2004; Lars Weiler <pylon@gentoo.org> alsa-utils-1.0.6.ebuild:
   Stable on ppc.
