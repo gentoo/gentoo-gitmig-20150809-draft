@@ -1,0 +1,21 @@
+--- hardware-monitor-0.7/src/pixbuf-drawing.hpp	2003-08-25 22:45:16.000000000 +0800
++++ hardware-monitor-0.7-patched/src/pixbuf-drawing.hpp	2004-11-05 01:59:35.716420136 +0800
+@@ -89,8 +89,6 @@
+ class PixelPosition
+ {
+ public:
+-  PixelPosition()
+-  {}
+ 
+   PixelPosition(unsigned char *pixel, int rs, int chnls)
+     : data(pixel), rowstride(rs), channels(chnls)
+@@ -152,9 +150,6 @@
+   typedef Pixel reference;
+   typedef std::ptrdiff_t difference_type;
+ 
+-  PixelIterator()
+-  {}
+-  
+   PixelIterator(const Glib::RefPtr<Gdk::Pixbuf> &p,
+ 		unsigned int x, unsigned int y)
+     : width(p->get_width()), channels(p->get_n_channels()),
