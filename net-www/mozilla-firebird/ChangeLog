@@ -1,10 +1,17 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.33 2004/01/27 19:42:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.34 2004/01/28 04:18:50 agriffis Exp $
+
+  27 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
+  Update files/MozillaFirebird to handle the case when Thunderbird is running.
+  Thanks to Denys Dmytriyenko in bug 38102
 
   27 Jan 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firebird-0.7-r1.ebuild:
   stable on alpha and ia64
+
+  21 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
+  Use full path to xdpyinfo which can help when executing MozillaFirebird via ssh
 
   14 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
   Use more powerful MozillaFirebird startup script from bug 38102. Not doing a

@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.2 2004/01/14 20:50:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/files/MozillaFirebird,v 1.3 2004/01/28 04:18:50 agriffis Exp $
 
 # Set to "window" if you prefer new Firebird windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"tab"}
@@ -44,7 +44,7 @@ done
 
 # Try to start in an existing session; check all screens
 declare -a screens=(
-  $(xdpyinfo | awk '
+  $(/usr/X11R6/bin/xdpyinfo | awk '
     /^name of display:/ { 
       disp = substr($NF, 0, index($NF, ".")-1) 
     }
@@ -58,14 +58,15 @@ for s in $DISPLAY "${screens[@]}"; do
 done
 retval=$?
 
-if [[ $retval -eq 2 ]] ; then
-  # No running windows found, so start a new instance
-  ${fbpath}/MozillaFirebird "${args[@]}"
+if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
+  # 2 = No running windows found, so start a new instance
+  # 3 = Thunderbird is running, but doesn't handle openURL command
+  #     (or it might be an unresponsive Firebird)
+  ${fbpath}/MozillaFirebird "${args[@]}" && exit 0
   retval=$?
+  echo "MozillaFirebird exited with non-zero status ($retval)" >&2
 elif [[ $retval -eq 1 ]] ; then
   echo "Unable to connect to X server" >&2
-elif [[ $retval -eq 3 ]] ; then
-  echo "Unable to send command to running Mozilla Firebird instance" >&2
 else
   echo "Unknown error $retval from mozilla-xremote-client" >&2
 fi
