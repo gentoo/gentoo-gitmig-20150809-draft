@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.16 2004/06/15 17:07:43 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.17 2004/06/18 21:25:44 centic Exp $
+
+*amarok-1.0 (18 Jun 2004)
+
+  18 Jun 2004; Dominik Stadler <centic@gentoo.org>
+  +files/amarok-1.0-cjk-a.diff, +amarok-1.0.ebuild:
+  Add Version 1.0, fixes Bug 54251 and add ~amd64, fixes Bug 54305
 
 *amarok-1.0_beta4 (15 Jun 2004)
 
