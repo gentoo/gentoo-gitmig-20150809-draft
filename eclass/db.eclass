@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.13 2005/02/02 10:36:04 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.14 2005/03/24 12:32:06 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 ECLASS=db
@@ -41,9 +41,14 @@ db_fix_so () {
 	cd ${ROOT}/usr/include
 	target=`find . -type d -maxdepth 1 -name 'db[0-9]*' | sort  -g |cut -d/ -f2- | tail -n1`
 	if [ -n "${target}" ] && [ -e "${target}/db.h" ]; then
+		einfo "Creating db.h symlinks to ${target}"
 		ln -sf ${target}/db.h .
 		ln -sf ${target}/db_185.h .
 	elif [ ! -e "${target}/db.h" ]; then
+		if [ -n ${target} ]; then ewarn "Could not find ${target}/db.h"
+		elif
+			einfo "Apparently you just removed the last instance of $PN. Removing the symlinks"
+		fi
 		rm db.h db_185.h
 	fi
 }
