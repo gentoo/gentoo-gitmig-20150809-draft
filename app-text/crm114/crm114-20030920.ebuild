@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20030920.ebuild,v 1.1 2003/09/24 21:54:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20030920.ebuild,v 1.2 2004/02/22 07:24:23 mr_bones_ Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/crm114/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64"
 
 DEPEND=">=sys-apps/sed-4
 	virtual/glibc"
