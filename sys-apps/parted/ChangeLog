@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.61 2004/12/20 23:53:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.62 2004/12/22 17:56:51 gustavoz Exp $
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> parted-1.6.15.ebuild,
+  parted-1.6.18.ebuild:
+  Keyworded ~sparc - this does NOT mean it can do proper sun disklabels.
+  Feedback is welcome.
 
   16 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing ownership to livecd herd.
