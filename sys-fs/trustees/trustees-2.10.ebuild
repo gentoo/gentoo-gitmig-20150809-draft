@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.6 2004/07/01 21:51:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.7 2004/07/15 03:43:13 agriffis Exp $
 
 DESCRIPTION="Advanced permission management system (ACLs) for Linux."
 HOMEPAGE="http://trustees.sourceforge.net/"
@@ -9,6 +9,7 @@ SRC_URI="http://trustees.sourceforge.net/download/${PN}.${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/libc
 	virtual/linux-sources"
