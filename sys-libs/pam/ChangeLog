@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.22 2003/01/08 18:46:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.23 2003/01/18 14:47:14 tuxus Exp $
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r11.ebuild :
   Mark stable.
@@ -42,6 +42,9 @@
   Generate the linker scripts in /usr/lib to fix bug #4411.
 
 *pam-0.75-r9 (24 Oct 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   24 Oct 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r9.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.3 2002/12/09 22:47:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r6.ebuild,v 1.4 2003/01/18 14:45:19 tuxus Exp $
 
 S="${WORKDIR}/cracklib,${PV}"
 DESCRIPTION="Cracklib"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.debian.org/debian/dists/potato/main/source/utils/cracklib2_${
 HOMEPAGE="http://www.users.dircon.co.uk/~crypto/"
 
 LICENSE="CRACKLIB"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 
 DEPEND="virtual/glibc sys-apps/miscfiles"
