@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.6 2004/07/01 20:57:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.7 2004/07/15 02:43:55 agriffis Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -22,11 +22,7 @@ S=${WORKDIR}/${P/_p/-pl}
 
 src_unpack() {
 	unpack ${A}
-	use alpha && gnuconfig_update
-	use amd64 && gnuconfig_update
-	use hppa && gnuconfig_update
-	use ia64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	cd ${S}
 	#Started working on this patch from an older version I found; then

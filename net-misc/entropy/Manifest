@@ -1,6 +1,6 @@
 MD5 56c87504068849e2169678e486c2e2c7 entropy-0.8.2.415.ebuild 1720
 MD5 7bce416c4e8ee40633647930fb35f2af ChangeLog 600
-MD5 1ee68593b162899574a94be20e600303 entropy-0.7.1.384.ebuild 979
+MD5 2f52ac77f1efd28d871df71af6dea6a2 entropy-0.7.1.384.ebuild 992
 MD5 5b5d42195d023961aff488df450727af files/entropy.conf.d 274
 MD5 20f717222713978db27aade168a58b7c files/digest-entropy-0.7.1.384 66
 MD5 3881e0923ce99231017d5c9dde6f543b files/digest-entropy-0.8.2.415 66
