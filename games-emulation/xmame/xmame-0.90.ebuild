@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.90.ebuild,v 1.1 2005/01/24 06:00:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.90.ebuild,v 1.2 2005/02/12 20:35:13 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -119,7 +119,10 @@ src_unpack() {
 		-e "s:[Xx]mame:${TARGET}:g" \
 		doc/*.6 \
 		|| die "sed man pages failed"
+	# no, we don't want to install setuid (bug #81693)
 	sed -i \
+		-e 's/^doinstallsuid/notforus/' \
+		-e 's/doinstallsuid/doinstall/' \
 		-e '/^QUIET/s:^:#:' src/unix/unix.mak \
 		|| die "sed src/unix/unix.mak failed"
 }
