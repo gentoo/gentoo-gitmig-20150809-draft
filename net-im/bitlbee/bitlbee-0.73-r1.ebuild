@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.73-r1.ebuild,v 1.4 2003/09/05 23:58:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.73-r1.ebuild,v 1.5 2003/10/16 15:16:56 pyrania Exp $
 
 inherit eutils
 
-DESCRIPTION="Bitlbee is an irc to IM gateway that support mutliple IM protocols"
+DESCRIPTION="Bitlbee is an irc to IM gateway that support multiple IM protocols"
 HOMEPAGE="http://www.lintux.cx/bitlbee.html"
 SRC_URI="http://www.lintux.cx/downloads/${P}.tar.gz"
 
