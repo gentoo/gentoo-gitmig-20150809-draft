@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.43 2004/04/06 04:25:16 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.44 2004/04/08 21:53:15 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -66,13 +66,15 @@ INHERITED="$INHERITED $ECLASS"
 
 # C[XX]FLAGS that we allow in strip-flags
 setup-allowed-flags() {
-	export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
-	case "${ARCH}" in
-		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
-		amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-		alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-		ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-	esac
+	if [ -z "${ALLOWED_FLAGS}" ] ; then
+		export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -pipe -g"
+		case "${ARCH}" in
+			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+			ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+		esac
+	fi
 
 	# C[XX]FLAGS that we are think is ok, but needs testing
 	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
