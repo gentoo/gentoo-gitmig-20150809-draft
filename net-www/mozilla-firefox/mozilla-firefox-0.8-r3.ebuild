@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.5 2004/04/26 17:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.6 2004/04/26 22:37:22 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -190,9 +190,10 @@ src_compile() {
 	append-flags -s -fforce-addr
 
 	if [[ $(gcc-major-version) -eq 3 ]]; then
-		# Currently gcc-3.2 or older do not work well if we specify "-march"
-		# and other optimizations for pentium4.
-		if [[ $(gcc-minor-version) -lt 3 ]]; then
+		# gcc-3 prior to 3.2.3 doesn't work well for pentium4
+		if [[ $(gcc-minor-version) -lt 2 || 
+			( $(gcc-minor-version) -eq 2 && $(gcc-micro-version) -lt 3 ) ]]
+		then
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
