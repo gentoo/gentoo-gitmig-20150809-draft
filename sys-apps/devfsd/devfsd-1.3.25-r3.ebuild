@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r3.ebuild,v 1.7 2003/07/16 13:38:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.25-r3.ebuild,v 1.8 2003/09/06 16:01:40 pappy Exp $
 
 IUSE=""
 
@@ -19,7 +19,10 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
   	unpack ${A}
-	
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	has_version 'sys-devel/hardened-gcc' && append-flags '-yet_exec'
+
 	cd ${S}
 	cp GNUmakefile GNUmakefile.orig
 	sed -e "s:-O2:${CFLAGS}:g" \
