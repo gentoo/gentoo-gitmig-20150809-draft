@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/kochi-fonts
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.1 2003/06/27 13:31:19 yakina Exp $
+
+*kochi-substitute-20030626 (27 June 2003)
+
+  27 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> kochi-substitute-20030626.ebuild,
+  files/digest-kochi-substitute-20030626, ChangeLog:
+
+  Initial import. Ebuild submitted by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
+  and desperado <desperado@s17.xrea.com> at GentooJP.
