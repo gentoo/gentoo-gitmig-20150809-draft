@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.12 2003/11/24 21:31:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.13 2004/02/28 22:23:51 liquidx Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
 	myconf="${myconf} --datadir=/usr/share/sgml/${P}"
-	econf ${myconf}
+	econf ${myconf} $(use_enable nsl)
 	emake pkgdocdir=/usr/share/doc/${PF} || die "parallel make failed"
 }
 
