@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/gaul-devel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gaul-devel/ChangeLog,v 1.1 2004/02/29 08:28:35 george Exp $
+
+*gaul-devel-0.1846.ebuild (29 Feb 2004)
+
+  29 Feb 2004; George Shapovalov <george@gentoo.org> gaul-devel-0.1846.ebuild, Manifest, files/{digest-gaul-devel-0.1846} :
+  initial release (#22147)
+  Genetic Algorithm Utility Library
+  ebuild submitted by Kalin KOZHUHAROV <kalin@ThinRope.net>
