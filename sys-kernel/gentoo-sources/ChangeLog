@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.31 2003/09/21 12:06:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.32 2003/09/24 19:31:53 plasmaroo Exp $
+
+  24 Sep 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
+  files/gentoo-sources-2.4.20-sched-interrupt.patch:
+  Added scheduler fix which should solve some PCMCIA issues.
 
   21 Sep 2003; <plasmaroo@gentoo.org> files/gentoo-sources-2.4.20-gcc33.patch:
   Added ip_nat_core.c GCC3.3 fix [Bug 28561 et al.]
