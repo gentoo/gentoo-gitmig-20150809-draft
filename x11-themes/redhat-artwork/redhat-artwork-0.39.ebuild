@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.3 2002/09/02 22:58:02 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.39.ebuild,v 1.4 2002/09/02 23:17:41 blocke Exp $
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
@@ -120,7 +120,7 @@ src_install () {
 
 	# replace redhat logo with gnome logo from happygnome theme
 	sed -e 's|<normal file="rh_logo-header.png"/>|<normal file="/usr/share/gdm/themes/happygnome/gnome-logo.png"/>|' \
-		-e 's|<pos x="3%" y="3%" width="398" height="128" anchor="nw"/>|<pos x="3%" y="5%"/>|' \
+		-e 's|<pos x="3%" y="5%" width="398" height="128" anchor="nw"/>|<pos x="3%" y="3%"/>|' \
 		Bluecurve.xml > Bluecurve.xml.mod || die
 
 	mv Bluecurve.xml.mod Bluecurve.xml
