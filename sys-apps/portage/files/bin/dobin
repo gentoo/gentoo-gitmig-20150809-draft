@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ${mynum} -lt 1 ]
+if [ ${#} -lt 1 ]
 then
 	echo "${0}: at least one argument needed"
 	return
