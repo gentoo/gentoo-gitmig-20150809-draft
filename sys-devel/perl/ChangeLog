@@ -1,7 +1,12 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.35 2002/12/27 20:58:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.36 2003/01/03 16:36:46 mcummings Exp $
 
+  03 jan 2002; Michael Cummings <mcummings@gentoo.org perl-5.6.1-r10:
+  small fix to regex of x2p/makefile - cp'ied the process further down the
+  ebuild since this is rebuilt at each stage. This is for gcc-3.2 users 
+  in particular and should take care of bug 12853
+  
   27 Dec 2002;  Michael Cummings <mcummings@gentoo.org>
   perl-5.8.0-r7.ebuild:
    
