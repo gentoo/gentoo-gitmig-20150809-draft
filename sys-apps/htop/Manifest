@@ -2,9 +2,9 @@ MD5 020b4efe4fa36b5cef244fcde361b247 htop-0.3.3.ebuild 769
 MD5 7ec08e475e2d5573310210bbc10124cd htop-0.3.2.ebuild 769
 MD5 bc36ae07abd5e2b12482dda3497dbab1 htop-0.4.ebuild 767
 MD5 eb4bbf8601e9cc359a1f91d669379c1a metadata.xml 568
-MD5 ec7f27055ed936cdbfb77e56e283f14c htop-0.4.1.ebuild 769
+MD5 371b30d4865c8e49d43da54a2bfbc86d htop-0.4.1.ebuild 775
 MD5 0c90e2811414666d1218ae1955436472 htop-0.3.1.ebuild 769
-MD5 db268cca708e6274de03136f545f2dc8 ChangeLog 1601
+MD5 a8381fc21be57bfa01545b4f75b4e8fb ChangeLog 1734
 MD5 be8931b5d3dd834b9ca8f718797cda57 htop-0.3.ebuild 661
 MD5 8123f72d136ab55139efee23411e3ab6 files/digest-htop-0.3 59
 MD5 47f1850a95a3c5c1447a7606ca9ff1ad files/digest-htop-0.3.1 61
