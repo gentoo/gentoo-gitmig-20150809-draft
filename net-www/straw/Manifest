@@ -1,0 +1,6 @@
+MD5 a41379caafccbf5136e90c499acd7194 ChangeLog 1082
+MD5 0f1dd258f5aca86d53924b89b2b52635 straw-0.17.ebuild 1040
+MD5 f80ba11e624ad8de26cc2a4536987684 straw-0.18.1.ebuild 1026
+MD5 d3ab185b54b840f82eb035de7a3b99c6 files/digest-straw-0.17 62
+MD5 bfe8aacef8491a2c886d3d0729015326 files/digest-straw-0.18.1 64
+MD5 810ae33c0057c6a5dbb8bf4eace7cdc8 files/straw-0.13.2-Makefile-dir.patch 503

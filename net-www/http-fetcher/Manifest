@@ -1,0 +1,7 @@
+MD5 25dc633d01b8f35ee575c05e856f59e2 ChangeLog 833
+MD5 fc4cef2a2d88880b33e15964bffaa7c5 http-fetcher-1.0.1-r1.ebuild 1143
+MD5 191201b4e0a39ed9fff0fe237db36abc http-fetcher-1.0.1.ebuild 875
+MD5 5bed14995f10b0fafebd610a6b74deaf files/buffer-overflow-gentoo.patch 1173
+MD5 986a8927fbf78398c94af18534ae8786 files/digest-http-fetcher-1.0.1 70
+MD5 986a8927fbf78398c94af18534ae8786 files/digest-http-fetcher-1.0.1-r1 70
+MD5 81ec499439ffb3a7dd72c50fa3285a26 files/errno-link-gentoo.patch 584

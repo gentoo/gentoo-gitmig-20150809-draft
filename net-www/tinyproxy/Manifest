@@ -1,0 +1,5 @@
+MD5 22d4a4321cfce2bd4bc4d24586f0772d ChangeLog 444
+MD5 1517ca1d804ca037a092a3414b818871 tinyproxy-1.5.1.ebuild 750
+MD5 81e70765bba26ade73bbeed5aa238ea7 tinyproxy-1.5.2.ebuild 685
+MD5 16911b3b8eeb6d48ba5bc96281919cd6 files/digest-tinyproxy-1.5.1 67
+MD5 20e624078d8194826fc262d14530e2bb files/digest-tinyproxy-1.5.2 67

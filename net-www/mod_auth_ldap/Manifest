@@ -1,0 +1,5 @@
+MD5 cd043414654ead71c2a5a0faeb324519 ChangeLog 521
+MD5 8b8d90f1d66f9824bc1994931f86be45 mod_auth_ldap-2.4.1.ebuild 1555
+MD5 8e27cb64926af0962345b6ee75f7744d files/digest-mod_auth_ldap-2.4.1 64
+MD5 065e832893289b1878b7e3b89a2cef0d files/mod_auth_ldap-2.4.1-register.patch 746
+MD5 7c887a1226ef0c99f4068014a05b2135 files/mod_auth_ldap.conf 667
