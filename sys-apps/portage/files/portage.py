@@ -1176,6 +1176,8 @@ def port_porttree():
 	origdir=os.getcwd()
 	os.chdir(mydir)
 	for x in categories:
+		if not os.path.isdir(os.getcwd()+"/"+x):
+			continue
 		for y in os.listdir(os.getcwd()+"/"+x):
 			if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
 				continue

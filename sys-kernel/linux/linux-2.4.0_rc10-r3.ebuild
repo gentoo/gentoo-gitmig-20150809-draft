@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc10-r2.ebuild,v 1.1 2000/11/23 06:52:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r3.ebuild,v 1.1 2000/11/25 03:36:12 drobbins Exp $
 
 S=${WORKDIR}/linux
 if [ "$PN" = "linux" ]
@@ -42,6 +42,9 @@ src_compile() {
 		try make modules
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
 		make NVdriver
+		cd ${S}/extras/alsa-driver-0.5.9d
+		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+		try make
 	fi
 	cd ${S}/extras/LVM/0.9
 	try ./configure --prefix=/
@@ -151,6 +154,14 @@ src_install() {
 		doins arch/i386/boot/bzImage
 		#grab modules
 		try make INSTALL_MOD_PATH=${D} modules_install
+		#install ALSA modules
+		cd ${S}/extras/alsa-driver-0.5.9d
+		dodir /lib/modules/2.4.0-test10/misc
+		cp modules/*.o ${D}/lib/modules/2.4.0-test10/misc
+		dodir /usr/include/linux
+		insinto /usr/include/linux
+		cd include
+		doins asound.h asoundid.h asequencer.h ainstr_*.h
 		#install nvidia driver
 		cd ${S}/extras/NVIDIA_kernel-0.9-5
 		insinto /lib/modules/2.4.0-test10/video
