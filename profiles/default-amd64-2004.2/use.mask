@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.5 2004/07/22 10:49:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.2/use.mask,v 1.6 2004/08/03 00:20:11 robbat2 Exp $
 
 # WON'T BUILD - SECTION
 
@@ -59,3 +59,24 @@ uclibc
 
 # altivec is a ppc instruction set.
 altivec
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+pfpro
+solid
+sybase
+sybase-ct

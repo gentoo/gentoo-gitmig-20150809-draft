@@ -44,3 +44,27 @@ tcc
 # despite some internal Gentoo efforts (mine) to port it
 afs
 uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct

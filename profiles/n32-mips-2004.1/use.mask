@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.2 2004/06/26 23:29:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.3 2004/08/03 00:20:11 robbat2 Exp $
 
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
@@ -57,3 +57,27 @@ ia64
 ppc64
 s390
 uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct

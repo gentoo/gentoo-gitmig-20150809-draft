@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.4 2004/06/26 23:29:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/cobalt-mips-2004.1/use.mask,v 1.5 2004/08/03 00:20:11 robbat2 Exp $
 
 
 # Chris PeBenito <pebenito@gentoo.org>
@@ -55,3 +55,27 @@ ppc64
 s390
 
 uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
