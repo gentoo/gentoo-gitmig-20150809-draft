@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.19 2005/03/17 20:54:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.20 2005/03/22 19:28:02 fafhrd Exp $
+
+  22 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  gnustep-back-art-0.9.5_pre20050312.ebuild:
+  missed freetype-2.1.9 change in dependency
 
 *gnustep-back-art-0.9.4-r1 (17 Mar 2005)
 
