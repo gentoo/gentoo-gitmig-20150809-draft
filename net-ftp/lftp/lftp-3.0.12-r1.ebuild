@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.12.ebuild,v 1.1 2004/12/07 09:37:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.12-r1.ebuild,v 1.1 2004/12/18 22:04:41 dragonheart Exp $
 
 inherit eutils
 
@@ -36,6 +36,12 @@ RDEPEND="nls? ( sys-devel/gettext )
 	sys-libs/readline
 	socks5? ( sys-libs/pam )
 	socks5? ( >=net-misc/dante-1.1.12 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+	epatch ${FILESDIR}/${P}.patch || die 'patch failed'
+}
 
 src_compile() {
 	local myconf="`use_enable nls`"

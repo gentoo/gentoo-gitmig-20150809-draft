@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.68 2004/12/07 09:37:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.69 2004/12/18 22:04:41 dragonheart Exp $
+
+*lftp-3.0.12-r1 (19 Dec 2004)
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> +lftp-3.0.12-r1.ebuild,
+  +files/lftp-3.0.12.patch, -lftp-3.0.12.ebuild:
+  Patch added to prevent segfault. Thanks to Jeffrey Litvin <litvin.j@neu.edu>
+  for the patch reference and Thomas Jäger <tjjr@tj.no> for Bug #74815
 
 *lftp-3.0.12 (07 Dec 2004)
 
