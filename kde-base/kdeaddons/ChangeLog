@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.121 2005/02/16 02:15:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.122 2005/02/22 19:07:02 hardave Exp $
+
+  22 Feb 2005; Hardave Riar <hardave@gentoo.org> kdeaddons-3.3.2.ebuild:
+  Marked ~mips
 
   15 Feb 2005; Jason Wever <weeve@gentoo.org> kdeaddons-3.4.0_beta2.ebuild:
   Added ~sparc keyword.
