@@ -1,11 +1,14 @@
 # ChangeLog for net-analyzer/tleds
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.7 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.8 2004/01/08 05:29:35 vapier Exp $
+
+*tleds-1.05_beta11 (2 Jul 2002)
+
+  08 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add init.d script #37423.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*tleds-1.05_beta11 (2 Jul 2002)
-
   14 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Fix for #9104 ... ebuild was not properly respecting '-X' ...
 

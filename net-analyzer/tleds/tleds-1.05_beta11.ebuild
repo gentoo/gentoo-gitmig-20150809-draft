@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.8 2003/02/13 13:51:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.9 2004/01/08 05:29:35 vapier Exp $
 
-IUSE="X"
+inherit eutils
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P/eta11/}
@@ -11,17 +11,18 @@ HOMEPAGE="http://www.hut.fi/~jlohikos/tleds/"
 SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${MY_P/11/10}.tgz
 	http://www.hut.fi/~jlohikos/tleds/public/${MY_P}.patch.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"
 
 src_unpack() {
 	unpack tleds-1.05beta10.tgz
 	cd ${S}
-	bzcat ${DISTDIR}/${MY_P}.patch.bz2 | patch  || die
-	patch < ${FILESDIR}/${P}-gentoo.patch || die
+	epatch ${DISTDIR}/${MY_P}.patch.bz2
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -38,4 +39,9 @@ src_install() {
 
 	doman tleds.1
 	dodoc README COPYING Changes
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/tleds.init.d tleds
+	insinto /etc/conf.d
+	newins ${FILESDIR}/tleds.conf.d tleds
 }
