@@ -1,10 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.21 2004/01/05 22:00:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.22 2004/01/06 14:04:32 brad_mssw Exp $
 
   05 Jan 2004; John Mylchreest <johnm@gentoo.org>
   gentoo-dev-sources-2.6.0-r2.ebuild, gentoo-dev-sources-2.6.1_rc1.ebuild:
   Quick update of the postinst
+
+*gentoo-dev-sources-2.6.1_rc1-r1 (06 Jan 2004)
+
+  06 Jan 2004; Brad House <brad_mssw@gentoo.org>
+  gentoo-dev-sources-2.6.1_rc1-r1.ebuild:
+  compile error on libata fixed. added acpi patches
 
   05 Jan 2004; Brad House <brad_mssw@gentoo.org>
   gentoo-dev-sources-2.6.0-r1.ebuild, gentoo-dev-sources-2.6.0.ebuild,
