@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.6.0.6.1.ebuild,v 1.3 2004/06/24 22:19:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.4.6.0.6.1.ebuild,v 1.4 2004/08/06 03:08:16 liquidx Exp $
 
 inherit rpm gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ximian.com"
 IUSE=""
 LICENSE="Ximian-Connector"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips"
+KEYWORDS="x86 -ppc -sparc -alpha -mips"
 RESTRICT="nomirror fetch nostrip"
 
 # there doesn't seem to be one for ppc anymore
