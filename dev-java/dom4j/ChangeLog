@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.13 2004/10/16 17:11:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.14 2004/10/17 07:27:43 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dom4j-1.4-r1.ebuild:
+  Version bump.  keywords ~amd64 to close bug #67313.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> dom4j-1.4-r1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
