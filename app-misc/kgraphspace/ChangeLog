@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kgraphspace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.5 2004/03/14 17:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.6 2004/06/19 03:29:45 mr_bones_ Exp $
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  kgraphspace-0.3.0_pre1.ebuild:
+  add missing IUSE and SLOT
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   kgraphspace-0.3.0_pre1.ebuild:
