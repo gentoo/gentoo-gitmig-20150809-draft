@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.4 2003/09/21 10:08:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.5 2003/10/12 21:06:17 usata Exp $
 
 inherit elisp
 
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
 	sys-apps/texinfo
-	app-text/tetex
+	virtual/tetex
 	app-text/texi2html"
 
 S="${WORKDIR}/${P}+${DEBCVS}"
@@ -35,10 +35,8 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/emacs/site-lisp/ilisp
-	doins *.el *.elc
-	insinto /usr/share/emacs/site-lisp/ilisp/extra
-	doins extra/*.el extra/*.elc
+	elisp-install ${PN} *.el *.elc
+	elisp-install ${PN}/extra extra/*.el extra/*.elc
 
 	insinto /etc/ilisp
 	doins debian/ilisp*.el
@@ -61,17 +59,15 @@ src_install() {
 	dohtml docs/*.html
 	dodoc docs/*.ps
 
-	insinto /usr/share/emacs/site-lisp
-	doins ${FILESDIR}/50ilispclc-gentoo.el
+	elisp-site-file-install ${FILESDIR}/50ilispclc-gentoo.el
 	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome
 }
 
 pkg_postinst() {
 	elisp-site-regen
-	chown -R cl-builder.cl-builder /usr/lib/ilisp
+	chown -R cl-builder:cl-builder /usr/lib/ilisp
 	/usr/sbin/register-common-lisp-source ${PN}
 	clc-autobuild-library ilisp yes
-
 }
 
 pkg_postrm() {
