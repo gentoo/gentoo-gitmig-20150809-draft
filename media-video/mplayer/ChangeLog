@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.234 2004/12/02 07:04:30 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.235 2004/12/18 19:49:56 chriswhite Exp $
+
+*mplayer-1.0_pre5-r5 (19 Dec 2004)
+
+  19 Dec 2004; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre5-r5-configure.patch, mplayer-1.0_pre4-r7.ebuild,
+  mplayer-1.0_pre5-r2.ebuild, mplayer-1.0_pre5-r3.ebuild,
+  +mplayer-1.0_pre5-r5.ebuild:
+  Bumping to pre5-r5 as per bug #74473. Tested on 20 randomly encoded .avis,
+  mp3s, and even streaming video/audio. Marked x86 stable.
 
   02 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r4.ebuild:
   vo -> ao in alsa warning.

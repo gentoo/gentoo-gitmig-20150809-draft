@@ -1,0 +1,17 @@
+--- configure.old	2004-12-19 03:16:56.005070176 +0900
++++ configure	2004-12-19 03:17:24.785694856 +0900
+@@ -5901,13 +5901,7 @@
+ 
+ # Checking for CFLAGS
+ _stripbinaries=yes
+-if test "$_profile" != "" || test "$_debug" != "" ; then
+-  CFLAGS="-W -Wall -O2 $_march $_mcpu $_debug $_profile"
+-  if test "$_cc_major" -ge "3" ; then
+-    CFLAGS=`echo "$CFLAGS" | sed -e 's/\(-Wall\)/\1 -Wno-unused-parameter/'`
+-  fi
+-  _stripbinaries=no
+-elif test -z "$CFLAGS" ; then
++if test -z "$CFLAGS" ; then
+   if test "$host_arch" != "mips" ; then
+     CFLAGS="-O4 $_march $_mcpu -pipe -ffast-math -fomit-frame-pointer"
+   else
