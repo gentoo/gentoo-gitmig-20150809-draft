@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.4 2004/02/20 07:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.5 2004/04/20 02:21:46 vapier Exp $
 
 DESCRIPTION="Kyra Sprite Engine"
 HOMEPAGE="http://www.grinninglizard.com/kyra/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/kyra/kyra_src_${PV//./_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc"
 IUSE="doc opengl"
 
 DEPEND=">=media-libs/libsdl-1.2
