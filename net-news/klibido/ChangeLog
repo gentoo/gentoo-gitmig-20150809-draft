@@ -1,0 +1,10 @@
+# ChangeLog for net-news/klibido
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/klibido/ChangeLog,v 1.1 2004/12/02 03:27:11 jhuebel Exp $
+
+*klibido-0.2.0 (01 Dec 2004)
+
+  01 Dec 2004; Jason Huebel <jhuebel@gentoo.org> +metadata.xml,
+  +klibido-0.2.0.ebuild:
+  new ebuild
+
