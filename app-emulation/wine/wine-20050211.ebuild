@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.2 2005/02/20 02:30:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050211.ebuild,v 1.3 2005/03/08 16:49:41 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,11 +26,13 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	gif? ( media-libs/libungif )
 	jpeg? ( media-libs/jpeg )
 	glut? ( virtual/glut )
-	lcms? ( media-libs/lcms )"
+	lcms? ( media-libs/lcms )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-soundlibs
+	)"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	sys-devel/bison
-	sys-devel/gcc
 	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	sys-devel/flex"
 
@@ -101,8 +103,8 @@ src_install() {
 		includedir="${D}"/usr/include/wine \
 		sysconfdir="${D}"/etc/wine \
 		mandir="${D}"/usr/share/man \
-		libdir="${D}"/usr/lib \
-		dlldir="${D}"/usr/lib/wine \
+		libdir="${D}"/usr/$(get_libdir) \
+		dlldir="${D}"/usr/$(get_libdir)/wine \
 		install || die
 	use doc && dodoc documentation/*.pdf
 
