@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.101 2004/09/03 18:24:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.102 2004/09/03 19:45:31 caleb Exp $
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   db-3.2.9-r10.ebuild, db-4.0.14-r2.ebuild:
@@ -9,6 +9,9 @@
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   db-3.2.9-r10.ebuild:
   Masked db-3.2.9-r10.ebuild stable for ppc
+
+  03 Sep 2004; Caleb Tennis <caleb@gentoo.org> -db-3.3.11.ebuild:
+  Removing package.masked version
 
   02 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> :
   fix missing digest bug #62562.
