@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.14 2004/06/17 06:32:33 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.15 2004/06/18 19:53:04 dholm Exp $
+
+  18 Jun 2004; David Holm <dholm@gentoo.org> bridge-utils-1.0.4.ebuild:
+  Added to ~ppc.
 
   17 Jun 2004; Jared Hudson <jhhudso@gentoo.org> bridge-utils-0.9.6-r1.ebuild,
   bridge-utils-0.9.6.ebuild, bridge-utils-1.0.4.ebuild:
