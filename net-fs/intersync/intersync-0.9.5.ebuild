@@ -11,7 +11,7 @@ KEYWORDS="x86"
 DEPEND="net-ftp/curl
 	media-gfx/transfig
 	>=dev-libs/glib-2*
-	>=gnome-base/libghttp-1.0.9
+	>=gnome-base/libghttp-1.0.9-r3
 	>=sys-kernel/linux-headers-2.4"
 
 SRC_URI="ftp://ftp.inter-mezzo.org/pub/intermezzo/${P}.tar.gz"
