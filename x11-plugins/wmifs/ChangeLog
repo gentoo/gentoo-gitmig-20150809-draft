@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmifs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.12 2004/08/21 04:58:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.13 2004/08/23 20:07:11 s4t4n Exp $
+
+  23 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> -wmifs-1.3_beta1.ebuild:
+  Remove older ebuilds...
 
   20 Aug 2004; Jason Wever <weeve@gentoo.org> wmifs-1.3_beta1-r2.ebuild:
   Stable on sparc.
