@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.42 2005/02/10 13:14:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.43 2005/02/14 22:47:01 tove Exp $
+
+  14 Feb 2005; Torsten Veller <tove@gentoo.org>
+  files/mgetty-1.1.31-r1-gentoo.diff, mgetty-1.1.31-r1.ebuild:
+  Doesn't install /var/spool/voice/.code and /var/spool/voice/messages/Index
+  any longer. Added sample scripts to /usr/share/mgetty on request (#80366).
 
 *mgetty-1.1.31-r1 (10 Feb 2005)
 

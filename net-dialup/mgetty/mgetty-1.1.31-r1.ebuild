@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.31-r1.ebuild,v 1.1 2005/02/10 13:14:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.31-r1.ebuild,v 1.2 2005/02/14 22:47:01 tove Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -57,10 +57,6 @@ src_unpack() {
 		-e "/mv -f \$(SBINDIR)/d" \
 		-i ${S}/Makefile
 
-	# update patch
-	sed -e 's/-f \$(VOICE_DIR)\//-f \/var\/spool\/voice\//' \
-		-i ${S}/voice/Makefile
-
 	sed -e "/^doc-all:/s/mgetty.asc mgetty.info mgetty.dvi mgetty.ps/mgetty.info/" \
 		-i ${S}/doc/Makefile
 	if use doc; then
@@ -100,7 +96,7 @@ src_install () {
 		PHONE_GROUP=fax \
 		PHONE_PERMS=755 \
 		spool=${D}/var/spool \
-		install vgetty-install install-callback || die
+		install vgetty-install install-callback || die "make install failed."
 
 	cd ${S}
 	dodoc BUGS ChangeLog README.1st Recommend THANKS TODO \
@@ -124,25 +120,18 @@ src_install () {
 	docinto samples/new_fax
 	dodoc samples_new_fax.all/*
 
-	#generate missing fonts if any.
-	if [ -f ${S}/doc/missfont.log ] ; then
-		echo '#!/bin/bash' >genfonts.sh
-		cat missfont.log >>genfonts.sh
-		chmod +x genfonts.sh
-		dodoc genfonts.sh
-	fi
+	insinto /usr/share/"${PN}"
+	doins -r patches frontends
+	insinto /usr/share/"${PN}"/voice
+	doins -r voice/{contrib,Perl,scripts}
+
+	keepdir /var/spool/voice/messages
+	keepdir /var/spool/fax/outgoing/locks
+	keepdir /var/spool/fax/incoming
+	diropts -m 0755 -o root -g fax
+	keepdir /var/spool/voice/incoming
 }
-
 pkg_postinst() {
-	#generate missing fonts if any.
-	if [ -x {$ROOT}/usr/share/doc/${PF}/genfonts.sh ]; then
-		{$ROOT}/usr/share/doc/${PF}/genfonts.sh
-	fi
-
-	if [ ! -d ${ROOT}/var/spool/fax/incoming ]; then
-		mkdir -p ${ROOT}/var/spool/fax/incoming
-	fi
-	if [ ! -d ${ROOT}/var/spool/fax/outgoing/locks ]; then
-		mkdir -p ${ROOT}/var/spool/fax/outgoing/locks
-	fi
+	einfo "${ROOT}/var/spool/voice/.code and ${ROOT}/var/spool/voice/messages/Index"
+	einfo "are not longer created by this automatically!"
 }
