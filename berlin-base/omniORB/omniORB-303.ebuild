@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.4 2001/05/02 22:48:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.5 2001/05/03 10:37:38 achim Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_3.tar.gz"
 S=${WORKDIR}/omni
@@ -63,6 +63,9 @@ src_install () {
     cp -af lib/python/* ${D}/${T}/lib/python/
     doman man/man[15]/*.[15]
 
+    exeinto /etc/rc.d/init.d
+    doexe ${FILESDIR}/omniORB
+
     dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_303 THIS_IS_omniORB_3_0_3
     cd doc
     docinto print
@@ -76,4 +79,9 @@ src_install () {
     dodoc omniORB/*.{gif,html}
 
 }
-
+pkg_postinst() {
+  if [ ! -e "${ROOT}etc/omniORB.cfg" ] ; then
+    echo "ORBInintialHost `uname -n`" > ${ROOT}etc/omniORB.cfg
+    echo "ORBInitialPort 8200" > ${ROOT}etc/omniORB.cfg
+  fi
+}
