@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.7.1.ebuild,v 1.3 2004/10/17 23:17:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.9.ebuild,v 1.1 2004/11/19 19:33:30 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -16,7 +16,7 @@ RESTRICT="nostrip"
 KEYWORDS="-* ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="gnome"
+IUSE=""
 
 DEPEND="virtual/libc"
 RDEPEND="virtual/x11
@@ -44,14 +44,12 @@ src_install() {
 	dosym /usr/libexec/mozilla-launcher /usr/bin/thunderbird-bin
 
 	# Install icon and .desktop for menu entry
-	if use gnome; then
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/icon/mozillathunderbird-bin-icon.png
-		# Fix bug 54179: Install .desktop file into /usr/share/applications
-		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
-		insinto /usr/share/applications
-		doins ${FILESDIR}/icon/mozillathunderbird-bin.desktop
-	fi
+	insinto /usr/share/pixmaps
+	doins ${FILESDIR}/icon/mozillathunderbird-bin-icon.png
+	# Fix bug 54179: Install .desktop file into /usr/share/applications
+	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+	insinto /usr/share/applications
+	doins ${FILESDIR}/icon/mozillathunderbird-bin.desktop
 
 	# Normally thunderbird-bin-0.7 must be run as root once before it
 	# can be run as a normal user.  Drop in some initialized files to

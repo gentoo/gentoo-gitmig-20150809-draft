@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.13 2004/09/16 03:42:22 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.14 2004/11/19 19:33:30 agriffis Exp $
+
+*mozilla-thunderbird-bin-0.9 (19 Nov 2004)
+
+  19 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-thunderbird-bin-0.7.1.ebuild,
+  -mozilla-thunderbird-bin-0.7.3.ebuild, mozilla-thunderbird-bin-0.8.ebuild,
+  +mozilla-thunderbird-bin-0.9.ebuild:
+  Bump to 0.9 #70017, mark 0.8 stable, trim old ebuilds
 
   15 Sep 2004; Brad Laue <brad@gentoo.org> mozilla-thunderbird-bin-0.8.ebuild:
   Install application icon by default for both KDE and GNOME
