@@ -2,21 +2,21 @@
 #explanation of why something is getting masked
 
 # kde 3.0.1 - not available for fetching yet, but we lucky packagers have it
->=kde-base/arts-1.0.1 # Tested, and re-digested [ OK ]
->=x11-libs/qt-3.0.4.1 # Tested, digested [ OK ]
+>=kde-base/arts-1.0.1 
+>=x11-libs/qt-3.0.4.1 
 >=app-doc/qt-docs-3.0.4.1
 >=kde-base/kde-3.0.1
 >=kde-base/kdeaddons-3.0.1
 >=kde-base/kdeadmin-3.0.1
->=kde-base/kdeartwork-3.0.1 # Tested, digest ok. [ OK ]
->=kde-base/kdebase-3.0.1 # Quite a lot of changes, better test first.. digest ok.
+>=kde-base/kdeartwork-3.0.1
+>=kde-base/kdebase-3.0.1 
 >=kde-base/kdebindings-3.0.1
 >=kde-base/kdeedu-3.0.1
 >=kde-base/kdegames-3.0.1
->=kde-base/kdegraphics-3.0.1 # Tested, re-digested [ OK ]
->=kde-base/kdelibs-3.0.1 # Tested, re-digested [ OK ]
->=kde-base/kdemultimedia-3.0.1 # Some kind of timidity prob? (teatime reported it) didn't check it yet
->=kde-base/kdenetwork-3.0.1 # Tested, re-digested [ OK ]
+>=kde-base/kdegraphics-3.0.1
+>=kde-base/kdelibs-3.0.1 
+>=kde-base/kdemultimedia-3.0.1
+>=kde-base/kdenetwork-3.0.1 
 >=kde-base/kdepim-3.0.1
 >=kde-base/kdesdk-3.0.1
 >=kde-base/kdetoys-3.0.1
