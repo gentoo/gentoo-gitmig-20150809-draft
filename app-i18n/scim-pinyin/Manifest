@@ -1,4 +1,14 @@
-MD5 ec5b28eb45664fe3af542bc38b3f4fe8 scim-pinyin-0.5.0.ebuild 658
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee5b3ba6995dbc05e13f2aeaf561d4ec ChangeLog 525
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 7f5a6df785516b135ba6b896fcfb234d ChangeLog 424
+MD5 9fa526e6799294ef009e520f0c836035 scim-pinyin-0.5.0.ebuild 656
 MD5 aaaf8119fc5aeda2f148f5c98eb12652 files/digest-scim-pinyin-0.5.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPou5VWNWqTUmv+0RAtVOAJ9xnCxXyQoybXQgYRPcnmoXA/WbwQCZAce+
+ZA44nVFTKI2oGGX+b0Jh0hQ=
+=t+1j
+-----END PGP SIGNATURE-----
