@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.574 2004/08/20 15:43:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.575 2004/08/20 17:21:31 sekretarz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -275,6 +275,7 @@ media-gfx/graphicsmagick:jbig - enable jbig support
 media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
 media-gfx/graphicsmagick:lzw - enable LZW support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
+media-gfx/imagemagick:graphviz - enable graphviz support
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/opendx:cdf - Adds cdf data exchange format
