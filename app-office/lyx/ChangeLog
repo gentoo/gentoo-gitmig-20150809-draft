@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.53 2004/11/17 13:01:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.54 2004/12/03 03:40:27 usata Exp $
+
+  03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> files/lyx.desktop,
+  lyx-1.3.5.ebuild:
+  Use CXXFLAGS instead of CFLAGS (bug #73164) and pass -fno-stack-protector
+  (bug #72875). Also corrected Desktop Entry for LyX (bug #72808).
 
   17 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> lyx-1.3.5.ebuild:
   Stable on sparc

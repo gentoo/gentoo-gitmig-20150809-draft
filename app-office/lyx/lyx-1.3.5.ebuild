@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5.ebuild,v 1.6 2004/11/17 13:01:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5.ebuild,v 1.7 2004/12/03 03:40:27 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -63,7 +63,7 @@ src_compile() {
 
 	export WANT_AUTOCONF=2.5
 
-	local flags="${CFLAGS}"
+	local flags="${CXXFLAGS} -fno-stack-protector"
 	unset CFLAGS
 	unset CXXFLAGS
 	econf \
