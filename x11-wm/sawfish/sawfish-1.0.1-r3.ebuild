@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r3.ebuild,v 1.2 2002/04/02 04:06:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r3.ebuild,v 1.3 2002/04/02 22:03:54 seemant Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,7 +14,8 @@ DEPEND=">=dev-libs/rep-gtk-0.15-r1
 	imlib? ( >=media-libs/imlib-1.9.10-r1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
-	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )"
+	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1
+		>=media-libs/gdk-pixbuf-0.11.0-r1 )"
 
 RDEPEND="${DEPEND}
 	>=x11-libs/gtk+-1.2.10-r4
