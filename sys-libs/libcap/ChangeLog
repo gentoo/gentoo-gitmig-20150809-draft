@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.14 2003/11/05 01:22:31 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.15 2003/11/16 15:05:53 pappy Exp $
+
+  16 Nov 2003; Alexander Gabert <pappy@gentoo.org> libcap-1.10.ebuild:
+  removed text relocations out of the libcap library for hardened-gcc via
+  syscall removal patch
 
   04 Nov 2003; Brad House <brad_mssw@gentoo.org> libcap-1.10-r3.ebuild:
   add amd64 flag
