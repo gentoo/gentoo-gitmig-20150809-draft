@@ -23,7 +23,7 @@ src_compile() {
 
 src_install () {
 
-    exeinto /usr/share/gkrellm/plugins
+    exeinto /usr/lib/gkrellm/plugins
     doexe gkrellweather.so
     dobin GrabWeather 
     dodoc README ChangeLog COPYING
