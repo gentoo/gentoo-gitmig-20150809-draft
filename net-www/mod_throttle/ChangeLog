@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_throttle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.12 2005/01/04 19:07:30 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.13 2005/03/01 01:13:02 beu Exp $
+
+  01 Mar 2005; Elfyn McBratney <beu@gentoo.org>
+  mod_throttle-3.1.2-r1.ebuild:
+  Kill sed in global scope.
 
   04 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   mod_throttle-3.1.2-r1.ebuild:
