@@ -1,13 +1,16 @@
 # ChangeLog for sys-apps/console-data
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/ChangeLog,v 1.9 2003/02/24 22:34:58 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/ChangeLog,v 1.10 2003/04/02 20:53:54 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *console-data-1999.08.29-r2 (1 Feb 2002)
+
+  02 Arp 2003; Martin Holzer <mholzer@gentoo.org> console-data-1999.08.29-r2.ebuild ChangeLog :
+  Updated SRC_URI and Homepage. Closes #18654.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> console-data-1999.08.29-r2.ebuild :
   Marked as stable for mips.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (ppc)

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/console-data-1999.08.29-r2.ebuild,v 1.12 2003/02/24 22:34:58 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-data/console-data-1999.08.29-r2.ebuild,v 1.13 2003/04/02 20:53:54 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Data (fonts, keymaps) for the consoletools package"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/keyboards/${P}.tar.gz"
-HOMEPAGE="http://altern.org/ydirson/en/lct/data.html"
+SRC_URI="mirror://sourceforge/lct/${PN}_${PV}.orig.tar.gz"
+HOMEPAGE="http://lct.sourceforge.net/data.html"
 KEYWORDS="x86 ppc sparc ~alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
