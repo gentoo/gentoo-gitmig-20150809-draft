@@ -7,14 +7,12 @@ S=${WORKDIR}/j2sdkee1.3.1
 DESCRIPTION="Sun's Java 2 Enterprise Edition Development Kit"
 SRC_URI=""
 HOMEPAGE="http://java.sun.com/j2ee/download.html#sdk"
-
 DEPEND="virtual/glibc"
 RDEPEND=">=virtual/jre-1.3.1"
-
 PROVIDE="virtual/j2ee-1.3.1"
-
-LICENSE="SUN Binary"
+LICENSE="sun-bcla"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
