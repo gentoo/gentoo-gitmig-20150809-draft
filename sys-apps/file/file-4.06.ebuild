@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.15 2004/04/27 21:04:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.06.ebuild,v 1.16 2004/06/16 01:44:28 dragonheart Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -12,6 +12,7 @@ HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 KEYWORDS="x86 amd64 ~ppc sparc alpha hppa mips ia64 ppc64"
 SLOT="0"
 LICENSE="as-is"
+IUSE="uclibc"
 
 DEPEND="virtual/glibc"
 
@@ -26,12 +27,15 @@ src_unpack() {
 	if [ "${ARCH}" = "mips" ]; then
 		epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
 	fi
+	# uclibc support
+	epatch ${FILESDIR}/${PN}-4.08-uclibc.patch
+	epatch ${FILESDIR}/ltconfig-uclibc.patch
 }
 
 src_compile() {
 
-	# If running mips64, we need updated configure data
-	use mips && gnuconfig_update
+	# If running mips64 or uclibc, we need updated configure data
+	( use mips || use uclibc ) && gnuconfig_update
 
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.6 2004/06/10 18:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.7 2004/06/16 01:44:28 dragonheart Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE=""
+IUSE="build uclibc"
 
 DEPEND="virtual/glibc"
 
@@ -25,6 +25,10 @@ src_unpack() {
 	# on MIPS machines to a specific format so that other programs can
 	# recognize things.
 	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
+
+	# uclibc support
+	epatch ${FILESDIR}/${P}-uclibc.patch
+	epatch ${FILESDIR}/ltconfig-uclibc.patch
 }
 
 src_compile() {
