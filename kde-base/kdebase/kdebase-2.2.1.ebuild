@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1.ebuild,v 1.1 2001/09/19 06:24:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1.ebuild,v 1.2 2001/09/19 08:10:11 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Base"
@@ -102,9 +102,6 @@ src_install() {
   mv ${D}/usr/bin/startkde.tmp ${D}/usr/bin/startkde
   chmod a+x ${D}/usr/bin/startkde
 
-  insinto /usr/share/config/kdm
-  doins ${FILESDIR}/kdmrc
-  
   exeinto /usr/X11R6/bin/wm
   doexe ${FILESDIR}/{kde${PV},xsession}
   cd ${D}/usr/X11R6/bin/wm
