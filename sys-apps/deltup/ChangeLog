@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/deltup
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/deltup/ChangeLog,v 1.1 2003/06/08 08:44:31 seemant Exp $
+
+*deltup-0.3.4 (08 Jun 2003)
+
+  08 Jun 2003; Seemant Kulleen <seemant@gentoo.org> deltup-0.3.4.ebuild:
+  new package for a patch system for distfiles. Essentially an implementation of
+  deltas for upgrading. Package was written (and ebuild submitted) by: John
+  Joseph Whitney <jjw@linuxmail.org> in bug #18354
+
