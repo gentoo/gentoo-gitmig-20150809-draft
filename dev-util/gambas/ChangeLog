@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.1 2003/11/18 00:24:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.2 2003/12/02 07:13:39 genone Exp $
+
+*gambas-0.72 (02 Dec 2003)
+
+  02 Dec 2003; Marius Mauch <genone@gentoo.org> gambas-0.71.ebuild,
+  gambas-0.72.ebuild:
+  version bump
+  fixing some copy+paste bugs
+  fixing optional dependencies (stupid configure script has no disable options)
 
 *gambas-0.71 (18 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.71.ebuild,v 1.1 2003/11/18 00:24:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.72.ebuild,v 1.1 2003/12/02 07:13:39 genone Exp $
 
 
 DESCRIPTION="a RAD tool for BASIC"
@@ -27,17 +27,19 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use kde \
-		 && myconf="${myconf} --with-kde-includes=${KDEDIR}/include" \
-		|| myconf="${myconf} --without-kde-includes"
-	use postgres \
-		&& myconf="${myconf} --with-postgresql-includes=/usr/include/postgresql" \
-		|| myconf="${myconf} --without-postgresql-includes"
-	use mysql \
-		&& myconf="${myconf} --with-postgresql-includes=/usr/include/mysql" \
-		|| myconf="${myconf} --without-postgresql-includes"
+
+	myconf="${myconf} `use_with kde kde-includes ${KDEDIR}/include`"
+	myconf="${myconf} `use_with mysql mysql-includes /usr/include/mysql`"
+	myconf="${myconf} `use_with postgres postgresql-includes /usr/include/postgresql/server`"
+	myconf="${myconf} `use_with sdl sdl-includes /usr/include/SDL`"
 
 	econf ${myconf} || die
+
+	use kde || sed -i "s:#define HAVE_KDE_COMPONENT 1:#undef HAVE_KDE_COMPONENT:" config.h
+	use mysql || sed -i "s:#define HAVE_MYSQL_COMPONENT 1:#undef HAVE_MYSQL_COMPONENT:" config.h
+	use postgres || sed -i "s:#define HAVE_PGSQL_COMPONENT 1:#undef HAVE_PGSQL_COMPONENT:" config.h
+	use sdl || sed -i "s:#define HAVE_SDL_COMPONENT 1:#undef HAVE_SDL_COMPONENT:" config.h
+
 	emake || die
 }
 
