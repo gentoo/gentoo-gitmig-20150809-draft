@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.22 2004/09/03 07:31:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.23 2004/09/03 16:48:52 foser Exp $
+
+*multi-gnome-terminal-1.6.2-r1 (03 Sep 2004)
+
+  03 Sep 2004; foser <foser@gentoo.org> multi-gnome-terminal-1.6.2-r1.ebuild :
+  Add patch disabling the logging of keystrokes (#62322)
 
   03 Sep 2004; Luca Barbato <lu_zero@gentoo.org>
   +files/multi-gnome-terminal-1.6.2-gcc-3.4.patch,
