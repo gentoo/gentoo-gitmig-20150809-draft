@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1.ebuild,v 1.1 2004/09/21 00:43:42 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.1 2004/10/27 16:19:07 morfic Exp $
 
 DESCRIPTION="The Persistence Of Vision Ray Tracer"
 SRC_URI="ftp://ftp.povray.org/pub/povray/Official/Unix/povray-3.6.tar.bz2"
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 IUSE="X svga"
 
 DEPEND="media-libs/libpng
-	media-libs/tiff
+	>=media-libs/tiff-3.6.1
 	media-libs/jpeg
 	sys-libs/zlib
 	X? ( virtual/x11 )
