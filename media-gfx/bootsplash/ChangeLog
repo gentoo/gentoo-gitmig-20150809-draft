@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.41 2004/05/20 21:16:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.42 2004/05/29 23:32:55 spock Exp $
+
+*bootsplash-0.6.1 (30 May 2004)
+
+  30 May 2004; Michal Januszewski <spock@gentoo.org> +bootsplash-0.6.1.ebuild:
+  This release features: 2.6.7 kernels support, fix for splash_renderc kernel
+  oops, bootsplash data splitted into 3 files to avoid unnecessary downloads.
 
   20 May 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   bootsplash-0.6-r16.ebuild:

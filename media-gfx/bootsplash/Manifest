@@ -4,8 +4,10 @@ MD5 e16cdb6111c70fc029012a7073e6fed2 bootsplash-0.6-r16.ebuild 6687
 MD5 33d70b8a984accf25a24501dfc3c018e bootsplash-0.6-r13.ebuild 6401
 MD5 772479757f4d076162ccae0267dc304d bootsplash-0.6-r15.ebuild 6773
 MD5 735549a7b5a1f2f93febea613d8b2dd3 bootsplash-0.6-r10.ebuild 5622
-MD5 aec36e6162454c81ea966bf13e2cd87b ChangeLog 8227
+MD5 e5d6da7cd159298c77a6f25a03ec9d71 bootsplash-0.6.1.ebuild 2983
+MD5 9251f1186843d9dd73476e2839449c78 ChangeLog 8493
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 726928711fd5cbfa499b4ede2ed722a8 files/digest-bootsplash-0.6.1 226
 MD5 6a993c12a7aad0735a4783e1f7c2c968 files/digest-bootsplash-0.6-r8 70
 MD5 415eead25ab7491fad79afd276c53124 files/digest-bootsplash-0.6-r10 71
 MD5 76ccf0b26a417828b751dacf918ec867 files/digest-bootsplash-0.6-r13 71
