@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.3 2003/02/13 09:12:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.1.0.ebuild,v 1.4 2003/06/20 23:08:30 msterret Exp $
 
 DESCRIPTION="Secure file wiping utility based on Peter Gutman's patterns"
 SRC_URI="mirror://sourceforge/wipe/${P}.tar.bz2"
@@ -10,8 +10,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
+DEPEND="virtual/glibc
+    >=sys-apps/sed-4"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e '28 i\#include <errno.h>' ${S}/rand.c || die "sed rand.c failed"
+}
+
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "compile problem"
 }
 
