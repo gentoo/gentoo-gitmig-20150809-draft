@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4.ebuild,v 1.3 2005/02/08 17:02:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4.ebuild,v 1.4 2005/02/08 19:52:28 corsair Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="21"
-KEYWORDS="x86 ~ppc sparc ~alpha ~arm ~hppa ~amd64 -ia64 ~s390 ~ppc64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~arm ~hppa ~amd64 -ia64 ~s390 ppc64"
 IUSE="X Xaw3d gnome leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
