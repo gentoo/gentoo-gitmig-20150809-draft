@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.1.ebuild,v 1.1 2001/12/15 14:26:48 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.1-r1.ebuild,v 1.1 2001/12/18 21:45:02 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -16,6 +16,8 @@ DEPEND=">=media-libs/libpng-1.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-libs/nas-1.4.1 )
 	objprelink? ( dev-util/objprelink )
+	mysql? ( >=dev-db/mysql-3.2.10 )
+	odbc? ( >=dev-db/unixODBC-2.0 )
 	virtual/x11"
 
 QTBASE=/usr/lib/qt-x11-${PV}
@@ -36,7 +38,7 @@ src_unpack() {
 #    cat tmp tmp2 > qmake.conf
 #    rm tmp tmp2
 
-    use objprelink && patch -p0 < ${FILESDIR}/qt-x11-3-objprelink.patch
+    use objprelink && patch -p0 < ${FILESDIR}/qt-x11-3.0.1-objprelink.patch
 	
 	cd ${S}
 	mv tools/assistant/helpdialogimpl.cpp tools/assistant/helpdialogimpl.cpp_orig
@@ -54,6 +56,10 @@ src_compile() {
 
 	use nas			&& myconf="${myconf} -system-nas-sound"
 	use gif			&& myconf="${myconf} -qt-gif"
+	
+	use mysql		&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
+	use odbc		&& myconf="${myconf} -plugin-sql-odbc"
+
 	[ "$DEBUG" ]	&& myconf="${myconf} -debug" 			|| myconf="${myconf} -release -no-g++-exceptions"
 
 	./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
