@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.7 2002/06/25 23:51:36 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.8 2002/06/25 23:52:13 gerk Exp $
   
   25 June 2002; Mark Guertin <gerk@gentoo.org> changelog:
 
@@ -9,7 +9,7 @@
   against it.  have seen this in PPC land before as well,  If kdelibs is 
   built with svgalib (or any other lib) linked and you remove it you will run 
   into same problem if you don't rebuild the kdelibs after removing.
-
+  Closes bug #4111
 
   10 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
 
