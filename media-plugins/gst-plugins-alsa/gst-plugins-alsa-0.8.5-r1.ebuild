@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/gst-plugins-alsa-0.8.5-r1.ebuild,v 1.6 2005/01/22 06:38:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/gst-plugins-alsa-0.8.5-r1.ebuild,v 1.7 2005/01/25 00:43:56 eradicator Exp $
 
 inherit eutils gst-plugins
 
-KEYWORDS="x86 ~ppc ~amd64 ia64 ~mips hppa ~ppc64 ~sparc"
+KEYWORDS="x86 ~ppc ~amd64 ia64 ~mips hppa ~ppc64 sparc"
 IUSE=""
 
 DEPEND=">=media-libs/alsa-lib-1.0.7"
