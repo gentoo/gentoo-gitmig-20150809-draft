@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.10 2004/02/06 22:53:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.11 2004/03/27 20:22:19 spock Exp $
+
+inherit eutils
 
 MY_P=xfract${PV}
 
@@ -12,6 +14,7 @@ SRC_URI="http://www.fractint.org/ftp/old/linux/${MY_P}.zip"
 KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="freedist"
+IUSE=""
 
 DEPEND="app-arch/unzip
 	virtual/glibc
