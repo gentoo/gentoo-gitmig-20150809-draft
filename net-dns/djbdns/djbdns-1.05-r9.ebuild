@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r8.ebuild,v 1.8 2004/03/27 16:03:29 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r9.ebuild,v 1.1 2004/03/27 16:03:29 jhhudso Exp $
 
-IUSE="ipv6 static"
+IUSE="ipv6 static fwdzone roundrobin"
 
 inherit eutils
 
-PATCHVER=0.2
 DESCRIPTION="Excellent high-performance DNS services"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
-	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
-	http://www.legend.co.uk/djb/dns/round-robin.patch
-	ipv6? ( mirror://gentoo/${P}-ipv6-gentoo-${PATCHVER}.diff.bz2 )"
+	fwdzone? ( http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch )
+	roundrobin? ( http://www.legend.co.uk/djb/dns/round-robin.patch )
+	ipv6? ( http://www.fefe.de/dns/djbdns-1.05-test20.diff.bz2 )"
 
 SLOT="0"
 LICENSE="as-is"
@@ -25,11 +24,24 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
-	epatch ${DISTDIR}/round-robin.patch
+	# Warning that ipv6 may not be used with fwdzone or roundrobin currently
+	use ipv6 && ( use fwdzone || use roundrobin ) && \
+	eerror "ipv6 cannot currently be used with the fwdzone or roundrobin patch." && \
+	eerror && \
+	eerror "If you would like to see ipv6 support along with one of those other patches" && \
+	eerror "please submit a working patch that combines ipv6 with either fwdzone or " && \
+	eerror "roundrobin but not both at the same time, since the latter 2 patches are " && \
+	eerror "mutually exclusive according to bug #31238" && exit -1
+
+	use fwdzone && use roundrobin && \
+	eerror "fwdzone and roundrobin do not work together according to bug #31238" && exit -1
+
+	use fwdzone && epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
+	use roundrobin && epatch ${DISTDIR}/round-robin.patch
+	use ipv6 && epatch ${WORKDIR}/djbdns-1.05-test20.diff
+
 	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/headtail.patch
-	use ipv6 && epatch ${WORKDIR}/djbdns-1.05-ipv6-gentoo-${PATCHVER}.diff
 }
 
 src_compile() {
@@ -48,7 +60,7 @@ src_install() {
 	dobin *-conf dnscache tinydns walldns rbldns pickdns axfrdns \
 	      *-get *-data *-edit dnsip dnsipq dnsname dnstxt dnsmx \
 	      dnsfilter random-ip dnsqr dnsq dnstrace dnstracesort
-	#Fix #20690.
+
 	use ipv6 && dobin dnsip6 dnsip6q
 
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION

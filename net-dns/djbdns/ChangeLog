@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.22 2003/11/16 21:39:32 pyrania Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.23 2004/03/27 16:03:28 jhhudso Exp $
+
+  27 Mar 2004; Jared Hudson <jhhudso@gentoo.org> :
+  fwdzone and roundrobin local use flags added to enable their respective
+  patches. ipv6 will not work with roundrobin and fwdzone currently because the
+  only patch we have for that combines all three. The problem with this is that
+  fwdzone and roundrobin do not work together according to bug #31238. Due to this
+  we are now using the original ipv6 patch when applicable.
 
   16 Nov 2003; Markus Nigbur <pyrania@gentoo.org> djbdns-1.05-r8.ebuild,
   files/headtail.patch:
