@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.30.ebuild,v 1.4 2004/08/10 03:39:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.34.ebuild,v 1.1 2004/09/07 18:52:29 rizzo Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="A clone of the popular board game The Settlers of Catan"
 HOMEPAGE="http://gnocatan.sourceforge.net/"
-SRC_URI="mirror://sourceforge/gnocatan/${P}.tar.gz"
+#SRC_URI="mirror://sourceforge/gnocatan/${P}.tar.gz"
+SRC_URI="http://gnocatan.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libgnomeui-2.2*
@@ -23,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog README"
+	DOCS="ABOUT-NLS AUTHORS ChangeLog README COPYING INSTALL TODO NEWS"
 	gnome2_src_install
 }
