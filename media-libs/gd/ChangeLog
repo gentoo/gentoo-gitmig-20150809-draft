@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.7 2004/08/08 13:20:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.8 2004/10/30 22:00:52 vapier Exp $
+
+*gd-2.0.30 (30 Oct 2004)
+
+  30 Oct 2004; Mike Frysinger <vapier@gentoo.org> +gd-2.0.30.ebuild:
+  Version bump for security and stuff #69070.
 
   08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gd-2.0.26.ebuild:
   Stable on alpha.

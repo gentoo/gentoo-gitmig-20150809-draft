@@ -1,10 +1,20 @@
-MD5 04c4a4959111121b7efb85e050c0726c ChangeLog 6915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 795e8835d446aa3f1514fedc8c082b22 ChangeLog 7057
+MD5 45c3e4f26e85dd60cb7d8fde1f7200a4 gd-2.0.30.ebuild 959
 MD5 e1e99ec5ea5356a9a95a8a32cca42525 gd-2.0.28.ebuild 953
 MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
-MD5 004e15a80e066f9161579d88bb989002 gd-2.0.26.ebuild 1370
 MD5 92245c1143479ca38c07f068460a7bb4 gd-1.8.4-r2.ebuild 2220
 MD5 09cc9995071652c954638c7ed2590dee files/1.8.4-jpeg-inc.patch 419
+MD5 e9f2abd6a0ef05426a70dd19610678c9 files/digest-gd-2.0.30 61
 MD5 7f1d011b6f09a5125c3c5151abbb2f56 files/digest-gd-2.0.28 133
 MD5 1b0c2bb216ba3a29f024514a934ca995 files/digest-gd-1.8.4-r2 60
 MD5 c700ef06f9532087e4f27487633179a9 files/1.8.4-dec-alpha-compiler.diff 725
-MD5 e170e167d4c3799d6a5acba599bdc9f2 files/digest-gd-2.0.26 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhA8/HTu7gpaalycRAiQ2AKCyaTi8XCiFksq5Oz0gIsk+KiC5CgCg8LYi
+H9ObItzQXTVsUzoTTXv7m+4=
+=Q9/2
+-----END PGP SIGNATURE-----
