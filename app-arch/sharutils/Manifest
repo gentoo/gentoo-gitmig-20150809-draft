@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76be54b2e5752b6f04cda0121ab8642b ChangeLog 5657
+MD5 0e32d3485b43fbc2b25d5c9b61f44316 sharutils-4.2.1-r11.ebuild 1440
 MD5 8aeb6ef65c0671a04a49ff323b520333 sharutils-4.2.1-r10.ebuild 1419
-MD5 1dfd586e2d636dfb07d8922ed2df84a3 sharutils-4.2.1-r11.ebuild 1442
-MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r10 67
-MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
+MD5 9119daebffadae3a9eefe0abd397ab7d ChangeLog 5764
 MD5 567118e62dd91c695bdffe56281a5324 files/sharutils-4.2.1-buffer-limits.patch 1980
-MD5 5c7abe1494f7d3b105dd3907b6898474 files/sharutils-4.2.1-gentoo.patch 2438
+MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r10 67
 MD5 a0ed4cfc65c5d37392c6b3816d3fbdbe files/digest-sharutils-4.2.1-r11 67
+MD5 5c7abe1494f7d3b105dd3907b6898474 files/sharutils-4.2.1-gentoo.patch 2438
 MD5 ca22218be478144a5275a31e4ba88e75 files/sharutils-4.2.1-tempfile.patch 3249
+MD5 aeb2dc437bac48b13e8ebc1d632013ad files/sharutils-4.2.1-buffer-check.patch 2416
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCUqzDKRy60XGEcJIRAtptAJ9t4Rqx/KP50bF+eTp/TrBY1SUj7ACgtMsx
-JzwbwZrDwLku0t8cHxMmRnU=
-=sWNR
+iD8DBQFCUsdTM+I1L6GK/u4RAnmkAJ4iTGfm94a3u7VzoxWZAxoClddZiACdEQsP
+Fj381Q5AP0hRX6WelF8OP2s=
+=iwyR
 -----END PGP SIGNATURE-----
