@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 472fcbc096ab4d3187194a64a5b6530a vdr-1.2.6-r1.ebuild 1401
-MD5 858116ee4314daf8c820b1a8cc83f6ab ChangeLog 1478
+MD5 18272eaea33d52308502f81665471d3c ChangeLog 1614
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 aa18122fb081cdc19d419d53ad1f63de files/vdr-1.2.6_CAN-2005-0071.patch 893
 MD5 5df3de1f888e3fc8f8ba27623a19f40b files/digest-vdr-1.2.6-r1 62
-MD5 d0dc33e6e7863372013487b940482044 files/vdr-1.2.6-gentoo.diff 1848
+MD5 aa8d0f66c8831be73c049584d6143c8b files/vdr-1.2.6-gentoo.diff 1995
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCM4RO06ebR+OMO78RAidYAJ40TEmkqNlii5ytpZdRywfYDmScUQCfSJzY
-XdDxzUPDJFct/1Cdft3cXBs=
-=IFuT
+iD8DBQFCPGe006ebR+OMO78RAgdkAJ9qDouMeAVUE5h0hFqtcNX4J5bjTgCeMh4g
+uhRFyCbg6HHATF4b0mIP2Kw=
+=l6L9
 -----END PGP SIGNATURE-----

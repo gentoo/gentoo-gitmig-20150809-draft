@@ -1,6 +1,19 @@
---- Makefile.org	2003-03-11 21:30:41.000000000 +0000
-+++ Makefile	2003-03-11 21:47:14.000000000 +0000
-@@ -16,8 +16,8 @@
+diff -uprN vdr-1.2.6.orig/config.h vdr-1.2.6/config.h
+--- vdr-1.2.6.orig/config.h	2005-03-19 18:34:22.799245568 +0100
++++ vdr-1.2.6/config.h	2005-03-19 18:34:27.120588624 +0100
+@@ -137,7 +137,7 @@ public:
+   bool Save(void)
+   {
+     bool result = true;
+-    T *l = (T *)First();
++    T *l = (T *)cList<T>::First();
+     cSafeFile f(fileName);
+     if (f.Open()) {
+        while (l) {
+diff -uprN vdr-1.2.6.orig/Makefile vdr-1.2.6/Makefile
+--- vdr-1.2.6.orig/Makefile	2005-03-19 18:34:22.796246024 +0100
++++ vdr-1.2.6/Makefile	2005-03-19 18:52:32.140640504 +0100
+@@ -16,8 +16,8 @@ CXXFLAGS ?= -g -O2 -Wall -Woverloaded-vi
  
  DVBDIR   = ../DVB
  DTVDIR   = ./libdtv
@@ -10,8 +23,8 @@
 +BINDIR   = /usr/bin
  
  PLUGINDIR= ./PLUGINS
- 
-@@ -117,12 +117,18 @@
+ PLUGINLIBDIR= $(PLUGINDIR)/lib
+@@ -121,12 +121,15 @@ plugins-clean:
  # Install the files:
  
  install:
@@ -19,12 +32,9 @@
 -	@gzip -c vdr.1 > $(MANDIR)/man1/vdr.1.gz
 -	@gzip -c vdr.5 > $(MANDIR)/man5/vdr.5.gz
 +	@mkdir -p $(DESTDIR)$(BINDIR)
-+	@mkdir -p $(BINDIR)
 +	@cp vdr runvdr $(DESTDIR)$(BINDIR)
 +	@mkdir -p $(DESTDIR)$(MANDIR)/man1
 +	@mkdir -p $(DESTDIR)$(MANDIR)/man5
-+	@mkdir -p $(MANDIR)/man1
-+	@mkdir -p $(MANDIR)/man5
 +	@gzip -c vdr.1 > $(DESTDIR)$(MANDIR)/man1/vdr.1.gz
 +	@gzip -c vdr.5 > $(DESTDIR)$(MANDIR)/man5/vdr.5.gz
  	@if [ ! -d $(VIDEODIR) ]; then\
@@ -35,22 +45,10 @@
              fi
  
  # Source documentation:
-diff -ru ./config.h ../vdr-1.2.6-new/config.h
---- ./config.h	2003-11-14 14:29:13.000000000 +0100
-+++ ../vdr-1.2.6-new/config.h	2004-10-27 08:48:41.652515906 +0200
-@@ -137,7 +137,7 @@
-   bool Save(void)
-   {
-     bool result = true;
--    T *l = (T *)First();
-+    T *l = (T *)cList<T>::First();
-     cSafeFile f(fileName);
-     if (f.Open()) {
-        while (l) {
-diff -ru ./plugin.c ../vdr-1.2.6-new/plugin.c
---- ./plugin.c	2003-08-30 16:52:58.000000000 +0200
-+++ ../vdr-1.2.6-new/plugin.c	2004-10-27 08:54:26.068755758 +0200
-@@ -162,7 +162,7 @@
+diff -uprN vdr-1.2.6.orig/plugin.c vdr-1.2.6/plugin.c
+--- vdr-1.2.6.orig/plugin.c	2005-03-19 18:34:22.810243896 +0100
++++ vdr-1.2.6/plugin.c	2005-03-19 18:34:27.120588624 +0100
+@@ -162,7 +162,7 @@ bool cDll::Load(bool Log)
    const char *error = dlerror();
    if (!error) {
       void *(*creator)(void);
