@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.7 2004/03/06 23:27:48 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/avalon-phoenix-4.0.4.ebuild,v 1.8 2004/06/03 13:33:14 agriffis Exp $
 
 MY_P=phoenix-${PV}
 DESCRIPTION="Avalon Phoenix is a API for java-based servers"
@@ -18,11 +18,11 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 
-	if [ -n "`use jikes`" ]
+	if use jikes
 	then
 		echo "build.compiler=jikes\n" > ${S}/.ant.properties
 	fi
-	if [ -n "`use debug`" ]
+	if use debug
 	then
 		echo "build.debug=on\n" >> ${S}/.ant.properties
 	else
