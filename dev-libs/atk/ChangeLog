@@ -1,7 +1,10 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-libs/atk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.4 2002/05/28 08:44:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.5 2002/08/03 22:51:39 stroke Exp $
 
+*atk-1.0.3 (4 Aug 2002)
+  4 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> atk-1.0.3.ebuild :
+  New version
 
 *atk-1.0.2 (28 May 2002)
   28 May 2002; Spider <spider@gentoo.org> atk-1.0.2.ebuild :
