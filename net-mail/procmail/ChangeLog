@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.15 2002/12/23 02:28:21 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.16 2003/02/05 19:26:10 agriffis Exp $
+
+  05 Feb 2003; Aron Griffis <agriffis@gentoo.org> procmail-3.22-r5.ebuild :
+  Mark stable on alpha
 
 *procmail-3.22-r5 (28 Oct 2002)
 
