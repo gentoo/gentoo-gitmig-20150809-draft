@@ -1,0 +1,12 @@
+diff -ur ion-20020207/src/key.c ion-20020207.quotefix/src/key.c
+--- ion-20020207/src/key.c	2002-02-06 00:29:01.000000000 +0100
++++ ion-20020207.quotefix/src/key.c	2002-09-11 07:22:22.000000000 +0200
+@@ -93,7 +93,7 @@
+ {
+ 	XKeyEvent *ev=&xev->xkey;
+  	if(ev->type==KeyRelease)
+-		return TRUE;
++		return FALSE;
+ 	if(ismod(ev->keycode))
+ 		return FALSE;
+ 	assert(WTHING_IS(thing, WClientWin));
