@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.1 2004/02/18 10:25:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.2 2004/02/18 10:29:09 liquidx Exp $
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -28,8 +28,7 @@ src_unpack() {
 	# some quick touches to the Makefile, bump the version
 	# and make use of our CFLAGS
 	cp Makefile Makefile.orig
-	sed -e "/VERSION/s/0.0.3/${PV}/" \
-		-e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" < Makefile.orig > Makefile
+	sed -e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" < Makefile.orig > Makefile
 
 	# and again, in the scintilla part
 	cd ${S}/scintilla/gtk
