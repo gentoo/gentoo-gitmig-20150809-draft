@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20040702.ebuild,v 1.4 2004/09/20 01:55:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20050224.ebuild,v 1.1 2005/02/25 02:38:25 pebenito Exp $
 
 IUSE="build"
 
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+#KEYWORDS="x86 ppc sparc amd64"
 DEPEND="build? ( sys-devel/make
 		 sys-devel/m4 )"
 RDEPEND="sys-devel/m4
@@ -24,7 +25,9 @@ S=${WORKDIR}/base-policy
 # deprecated policies:
 DEPRECATED="domains/program/devfsd.te domains/program/opt.te
 	file_contexts/program/devfsd.fc file_contexts/program/opt.fc
-	file_contexts/users.fc"
+	file_contexts/users.fc domains/program/inetd.te
+	domains/program/tcpd.te file_contexts/program/inetd.fc
+	file_contexts/program/tcpd.fc macros/program/ypbind_macros.te"
 
 src_compile() {
 	return
