@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/liblrdf
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.1 2003/02/18 08:03:19 raker Exp $
+
+*liblrdf-0.2.3 (18 Feb 2003)
+
+  18 Feb 2003; Nick Hadaway <raker@gentoo.org> liblrdf-0.2.3.ebuild,
+  files/digest-liblrdf-0.2.3 :
+  New ebuild for the support of ardour-cvs
