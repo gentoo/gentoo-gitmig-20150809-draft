@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ruby-config-0.3.1.ebuild,v 1.1 2004/08/30 17:20:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ruby-config-0.3.1.ebuild,v 1.2 2004/09/03 23:07:51 usata Exp $
 
 inherit eutils
 
@@ -13,9 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~macos ~ppc64"
 IUSE=""
 
-DEPEND="virtual/ruby"
-RDEPEND="${DEPEND}
-	!<dev-ruby/ri-1.8b-r1"
+RDEPEND="!<dev-ruby/ri-1.8b-r1"
+PDEPEND="virtual/ruby"
 
 S="${WORKDIR}"
 
