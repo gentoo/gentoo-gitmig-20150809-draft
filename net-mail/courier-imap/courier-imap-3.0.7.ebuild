@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.15 2004/11/02 22:21:45 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.16 2004/11/29 22:57:40 ticho Exp $
 
 inherit eutils gnuconfig
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0
-	fam? ( app-admin/fam )
+	fam? ( virtual/fam )
 	selinux? ( sec-policy/selinux-courier-imap )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -151,7 +151,7 @@ src_compile() {
 	myconf="${myconf} --without-redhat"
 
 	# bug #29879 - FAM support
-	#if has_version 'app-admin/fam' && ! use fam; then
+	#if has_version 'virtual/fam' && ! use fam; then
 	#	ewarn "FAM will be detected by the package and support will be enabled"
 	#	ewarn "The package presently provides no way to disable fam support if you don't want it"
 	#fi
