@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.14 2004/02/06 04:10:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.15 2004/02/29 19:26:44 weeve Exp $
+
+  29 Feb 2004; Jason Wever <weeve@gentoo.org> loudmouth-0.15.1.ebuild:
+  Come on baby, do the ~sparc.
 
 *loudmouth-0.15.1 (06 Feb 2004)
 
