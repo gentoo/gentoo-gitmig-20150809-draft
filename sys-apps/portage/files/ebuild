@@ -1,0 +1,1254 @@
+#!/bin/bash
+# Copyright 1999-2000 Daniel Robbins, Gentoo Technologies, Inc.
+# Distributed under the GPL
+
+# stuff to add:
+# DISTDIR, WORKDIR (WRKDIR) support (relocatable)
+# PATCHDIR support for src_unpack (to get to patches distributed with the 
+# port rather than auto-downloaded.  Maybe make it another target ??? nah
+# CATEGORIES - place package in /usr/src/packages/All, symlink from 
+# /usr/src/sys/packages/${CATEGORY} for cd-rom distribution
+# add BUILD_DEPENDS
+# add RUN_DEPENDS
+# add LIB_DEPENDS ? (make dependency as library-generic as possible)
+# add 
+# possibly add PREFIX support
+# add post-install and post-deinstall (for calling ldconfig, install-int)
+
+export PROXY
+export HTTP_PROXY
+export FTP_PROXY
+
+if [ "`whoami`" != "root" ]
+then
+    echo "Since ebuild can modify critical system files, only root is"
+    echo "allowed to use the ebuild system."
+    exit 1
+fi
+
+source /etc/make.conf
+
+initvars() {
+	#fix up ROOT path so that it always has a / after it
+	local rlen
+	rlen=$(( ${#ROOT} -1 ))
+	if [ "${ROOT:${rlen}:1}" != "/" ]
+	then
+    		export ROOT=${ROOT}/
+	fi
+
+
+	DESTTREE=/usr
+	INSDESTTREE=""
+	EXEDESTTREE=""
+	DOCDESTTREE=""
+	INSOPTIONS="-m0644"
+	if [ -n "$DEBUG" ]
+	then
+		EXEOPTIONS="-m0755"	
+	else
+		EXEOPTIONS="-m0755 -s"
+	fi
+	LIBOPTIONS="-m0644"
+	MOPREFIX=${P%-*}
+	KVERS=`uname -r`
+}
+
+initvars
+
+src_unpack() 
+    {  
+	unpack ${A} 
+    }
+
+src_compile() 
+    { 
+	return 
+    }
+
+src_install() 
+    { 
+	return 
+    }
+
+pkg_preinst()
+    {
+	return
+    }
+
+pkg_postinst()
+    {
+	return
+    }
+
+pkg_prerm()
+    {
+	return
+    }
+
+pkg_postrm()
+    {
+	return
+    }
+
+bz2unpack() 
+    { 
+	tar -x --use=bzip2 -f $1 
+    }
+
+gzunpack() 
+    { 
+	tar xzf $1 
+    }
+
+pmake() 
+    { 
+	make ${MAKEOPTS} MAKE="make ${MAKEOPTS}" $* 
+    }
+
+use() 
+{
+	local x
+	for x in "$USE"
+	do
+		if [ "${1}" = "${x}" ]
+		then
+			echo "${x}"
+			return
+		fi
+		return
+	done
+}
+
+dyn_digest() {
+    local x
+    if [ ! -d ${FILESDIR} ]
+    then
+	install -d ${FILESDIR}
+    fi
+    rm -f ${FILESDIR}/digest
+    for x in ${A}
+    do
+	if [ ! -e ${DISTDIR}/${x} ]
+	then
+	    echo '!!! Cannot compute message digests: '${x} not found
+	    echo "error, aborting."
+	    exit 1
+	else
+	    mymd5=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
+	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/digest
+	fi
+    done
+    echo ">>> Computed message digests."
+}
+
+digest_check() {
+    if [ ! -e ${FILESDIR}/digest ]
+    then
+	echo '!!!'" No message digest file found."
+	echo '!!!'" Maintainer: ebuild digest to update message digests."
+	return 1
+    fi
+    if [ ! -e ${DISTDIR}/${1} ]
+    then
+	echo '!!!'" ${1} not found."
+	echo '!!!'" Ebuild fetch to retrieve files."
+	return 1
+    fi	
+    local mycdigest=`grep " ${1}" ${FILESDIR}/digest | cut -f2 -d" "`
+    if [ -z "$mycdigest" ]
+    then
+	echo
+	echo '!!!'" No message digest found for ${1}."
+	echo '!!!'" Maintainer: ebuild digest to update message digests."
+	echo
+	return 1
+    fi
+    local mydigest=`md5sum ${DISTDIR}/${1} | cut -f1 -d" "`
+    if [ "$mycdigest" != "$mydigest" ]
+    then
+	echo
+	echo '!!!'" ${1}: message digests do not match!"
+	echo '!!!'" ${1} is corrupt or incomplete"
+	echo ">>> md5 con ${mycdigest}"
+	echo ">>> md5 now ${mydigest}"
+	echo ">>> Please delete/redownload ${DISTDIR}/${1}"
+	echo
+	return 1
+    else
+	echo ">>> md5 ;-) ${1}"
+    fi
+    return 0
+}
+
+
+dyn_fetch() {
+	local y
+	for y in ${A}
+	do
+		if [ ! -e ${DISTDIR}/${y} ]
+		then
+			echo ">>> Fetching ${y}..."
+			echo
+			local x
+			local _SRC_URI
+			_SRC_URI=`/usr/bin/queryhost.sh "${SRC_URI}"`
+			for x in ${_SRC_URI}
+			do
+				if [ ! -e ${DISTDIR}/${y} ]; then
+			    		if [ $y == ${x##*/} ]
+			    		then
+						echo ">>> Trying site ${x}..."
+						eval ${FETCHCOMMAND}
+						if [ $? -ne 0 ]
+		        			then
+			    				echo '!!!'" Couldn't download ${y}.  Aborting."
+			    				exit 1
+						fi
+		    			fi
+				fi
+			done
+			echo
+    		fi	
+	done
+	for y in ${A}
+	do
+		digest_check ${y}
+		if [ $? -ne 0 ]
+		then
+			exit 1
+		fi
+	done
+}
+
+dyn_unpack() {
+    trap "abort_unpack" SIGINT SIGQUIT
+    local unpackwork="yes"
+    if [ -e ${WORKDIR} ]
+    then
+	local x
+	for x in $A $EBUILD
+	do
+		echo ">>> Checking ${x}'s mtime..."
+		if [ ${DISTDIR}/${x} -nt ${WORKDIR} ]
+		then
+			echo ">>> ${x} has been updated; recreating WORKDIR..."
+			rm -rf ${WORKDIR}
+			break
+		fi
+	done
+	echo ">>> WORKDIR is up-to-date, not unpacking. (clean to force unpack)"
+	unpackwork="no"
+     fi
+     if [ "$unpackwork" = "yes" ]
+     then
+	install -m0700 -d ${WORKDIR}
+	cd ${WORKDIR}
+	echo ">>> Unpacking source..."
+	src_unpack
+	echo ">>> Source unpacked."
+	cd ..
+    fi
+    trap SIGINT SIGQUIT
+}
+
+unpack() {
+    local x
+    for x in "$@"
+    do
+	echo ${x}
+	case "${x##*.}" in
+		gz)
+	    		gzunpack ${DISTDIR}/${x}
+	  		;;
+		tgz)
+	    		gzunpack ${DISTDIR}/${x}
+	  		;;
+		Z)
+	    		gzunpack ${DISTDIR}/${x}
+	  		;;
+		bz2)
+	    		bz2unpack ${DISTDIR}/${x}
+	    		;;
+		tbz2)
+	    		bz2unpack ${DISTDIR}/${x}
+	    		;;
+        	*)
+            		echo "Archive format not recognized."
+	    		exit
+	    		;;
+        esac
+    done			
+}
+
+
+dyn_clean() {
+    if [ -d ${WORKDIR} ]
+    then
+	rm -rf ${WORKDIR} 
+    fi
+    if [ -d ${BUILDDIR}/image ]
+    then
+	rm -rf ${BUILDDIR}/image
+    fi
+    rm -rf ${BUILDDIR}/.compiled
+}
+
+into() {
+    if [ $1 = "/" ]
+    then
+	DESTTREE=""
+    else
+	DESTTREE=$1
+	if [ ! -d ${D}${DESTTREE} ]
+	then
+	    install -d ${D}${DESTTREE}
+	fi
+    fi
+}
+
+insinto() {
+    if [ $1 = "/" ]
+    then
+	INSDESTTREE=""
+    else
+	INSDESTTREE=$1
+	if [ ! -d ${D}${INSDESTTREE} ]
+	then
+	    install -d ${D}${INSDESTTREE}
+	fi
+    fi
+}
+
+exeinto() {
+    if [ $1 = "/" ]
+    then
+	EXEDESTTREE=""
+    else
+	EXEDESTTREE=$1
+	if [ ! -d ${D}${EXEDESTTREE} ]
+	then
+	    install -d ${D}${EXEDESTTREE}
+	fi
+    fi
+}
+docinto() {
+    if [ $1 = "/" ]
+    then
+	DOCDESTTREE=""
+    else
+	DOCDESTTREE=$1
+	if [ ! -d ${D}usr/doc/${P}/${DOCDESTTREE} ]
+	then
+	    install -d ${D}usr/doc/${P}/${DOCDESTTREE} 
+	fi
+    fi
+}
+dodoc() {
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    if [ ! -d ${D}/usr/doc/${P} ]
+	    then
+		install -d ${D}/usr/doc/${P}
+	    fi
+	    if [ -z ${DOCDESTTREE} ]
+	    then
+		install -m0644 ${x} ${D}/usr/doc/${P}
+		gzip -9 ${D}/usr/doc/${P}/${x##*/}
+	    else
+		install -m0644 ${x} ${D}usr/doc/${P}/${DOCDESTTREE}
+		gzip -9 ${D}usr/doc/${P}/${DOCDESTTREE}/${x##*/}
+	    fi
+	else
+	    echo "${0}: ${x} does not exist."
+	fi
+    done
+}
+
+prepstrip() {
+    if [ -n "${DEBUG}" ]
+    then
+	return
+    fi	
+    local x
+    for x in $@
+    do
+	strip ${D}${x}/*
+    done
+}
+
+preplib.so() {
+    if [ -n "${DEBUG}" ]
+    then
+	return
+    fi	
+    local x
+    for x in $@
+    do
+	strip --strip-unneeded ${D}${x}/*.so*
+    done
+}
+
+prepinfo() {
+  if [ -z "$1" ]
+  then
+    rm -f ${D}/usr/info/dir
+    gzip -9 ${D}/usr/info/*
+  else
+    rm -f ${D}/$1/info/dir
+    gzip -9 ${D}/$1/info/*
+  fi
+}
+
+prepman() {
+  local x
+  local y
+  if [ -z "$1" ] ; then z=${D}/usr/man ; else z=${D}/$1/man ; fi
+    for x in ${z}/* 
+    do
+	local y
+	for y in ${x}/*
+	do
+	    if [ -h ${y} ]
+	    then
+		#symlink
+		local linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
+	        echo "$linkto $y.gz"
+		ln -sf ${linkto} ${y}.gz
+		rm ${y}
+	    else
+		gzip -f -9 ${y}
+            fi	
+	done
+    done
+}
+
+
+doman() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    local myloc=$DESTTREE
+    if [ "$myloc" = "" ]
+    then
+        myloc=/usr
+    fi
+    local x
+    for x in "$@"
+    do
+	local md=${x##*.}
+	local mandir
+	mandir=man${md:0:1}
+	if [ -e ${x} ]
+	then
+	    if [ ! -d ${D}${myloc}/man/${mandir} ]
+	    then
+		install -d ${D}${myloc}/man/${mandir}
+	    fi
+	    install -m0644 ${x} ${D}${myloc}/man/${mandir}
+	    gzip -9 ${D}${myloc}/man/${mandir}/${x##*/}
+	else
+	    echo "${0}: ${x} does not exist."
+	fi
+    done
+}
+
+doinfo() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}/usr/info ]
+    then
+	install -d ${D}/usr/info
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    install -m0644 ${x} ${D}/usr/info
+	    gzip -9 ${D}/usr/info/${x##*/}
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+    done
+}
+
+dolib() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/lib ]
+    then
+	install -d ${D}${DESTTREE}/lib
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    install ${LIBOPTIONS} ${x} ${D}${DESTTREE}/lib
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+    done
+}
+
+#To be used for dynamic .so libraries
+dolib.so() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/lib ]
+    then
+	install -d ${D}${DESTTREE}/lib
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    install -m0755 ${x} ${D}${DESTTREE}/lib
+	    if [ -z "$DEBUG" ]
+            then
+	        strip --strip-unneeded ${D}${DESTTREE}/lib/${x##*/}
+            fi
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+    done
+}
+
+#To be used for static .a libraries
+dolib.a() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/lib ]
+    then
+	install -d ${D}${DESTTREE}/lib
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    install -m0644 ${x} ${D}${DESTTREE}/lib
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+    done
+}
+
+dobin() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/bin ]
+    then
+	install -d ${D}${DESTTREE}/bin
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -x ${x} ]
+	then
+            if [ -z "$DEBUG" ]
+	    then
+	        local MYVAL
+		MYVAL=`file ${x} | grep "executable"` 
+	        if [ -n "$MYVAL" ]
+	        then
+		    strip ${x}
+                fi
+            fi
+	    install ${x} ${D}${DESTTREE}/bin
+	else
+	    echo "${0}: ${x} is not executable or does not exist"
+	fi
+    done
+}
+
+dosbin() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/sbin ]
+    then
+	install -d ${D}${DESTTREE}/sbin
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -x ${x} ]
+	then
+            if [ -z "$DEBUG" ]
+            then
+	        local MYVAL=`file ${x} | grep "executable"` 
+	        if [ "$MYVAL" ]
+	        then
+		    strip ${x}
+                fi
+	    fi
+	    install -m0754 ${x} ${D}${DESTTREE}/sbin
+	else
+	    echo "${0}: ${x} is not executable or does not exist"
+	fi
+    done
+}
+
+#symlink
+dosym() {
+    if [ ${#} -ne 2 ]
+    then
+	echo "${0}: two arguments needed"
+	return
+    fi
+    local target=${1}
+    local linkname=${2}
+    ln -sf ${target} ${D}${linkname}
+}
+
+#hard link
+dohard() {
+    if [ ${#} -ne 2 ]
+    then
+	echo "${0}: two arguments needed"
+	return
+    fi
+    local mysrc=${1}
+    local mydest=${2}
+    ln -f ${D}${mysrc} ${D}${mydest}
+}
+    
+#mkdir
+dodir() {
+    if [ ${#} -ne 1 ]
+    then
+	echo "${0}: one argument needed"
+	return
+    fi
+    install -d ${D}${1}
+}
+
+fperms() {
+    if [ ${#} -ne 2 ]
+    then
+	echo "${0}: two arguments needed"
+	return
+    fi
+    chmod ${1} ${D}/${2}
+}
+
+fowners() {
+    if [ ${#} -ne 2 ]
+    then
+	echo "${0}: two arguments needed"
+	return
+    fi
+    chown ${1} ${D}/${2}
+}
+
+
+insopts() {
+    INSOPTIONS=""
+    for x in $*
+    do
+	#if we have a debug build, let's not strip anything
+	if [ -n "$DEBUG" ] &&  [ "$x" = "-s" ]
+	then
+	    continue
+        else
+             INSOPTIONS="$INSOPTIONS $x"
+        fi
+    done
+}
+
+doins() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${INSDESTTREE} ]
+    then
+	install -d ${D}${INSDESTTREE}
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -L $x ]
+	then
+	    cp $x ${WORKDIR}
+	    install ${INSOPTIONS} ${WORKDIR}/${x##*/} ${D}${INSDESTTREE}
+	else
+	    install ${INSOPTIONS} ${x} ${D}${INSDESTTREE}
+	fi
+    done
+}
+
+newdoc() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        dodoc ${T}/${2}
+}
+
+newman() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        doman ${T}/${2}
+}
+
+newexe() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        doexe ${T}/${2}
+}
+
+newbin() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        dobin ${T}/${2}
+}
+
+newlib.so() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        dolib.so ${T}/${2}
+}
+
+newlib.a() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        dolib.a ${T}/${2}
+}
+
+newsbin() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        dosbin ${T}/${2}
+}
+
+newins() {
+        rm -rf ${T}/${2}
+        cp ${1} ${T}/${2}
+        doins ${T}/${2}
+}
+
+donewins() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${INSDESTTREE} ]
+    then
+	install -d ${D}${INSDESTTREE}
+    fi
+    install -D ${INSOPTIONS} ${1} ${D}${INSDESTTREE}/${2}
+
+}
+
+exeopts() {
+    EXEOPTIONS=""
+    for x in $*
+    do
+	#if we have a debug build, let's not strip anything
+	if [ -n "$DEBUG" ] &&  [ "$x" = "-s" ]
+	then
+	    continue
+        else
+             EXEOPTIONS="$EXEOPTIONS $x"
+        fi
+    done
+}
+
+libopts() {
+    LIBOPTIONS=""
+    for x in $*
+    do
+	#if we have a debug build, let's not strip anything
+	if [ -n "$DEBUG" ] &&  [ "$x" = "-s" ]
+	then
+	    continue
+        else
+             LIBOPTIONS="$LIBOPTIONS $x"
+        fi
+    done
+}
+
+doexe() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${EXEDESTTREE} ]
+    then
+	install -d ${D}${EXEDESTTREE}
+    fi
+    local x
+    for x in "$@"
+    do
+	install ${EXEOPTIONS} ${x} ${D}${EXEDESTTREE}
+    done
+}
+
+domo() {
+    local mynum=${#}
+    if [ ${mynum} -lt 1 ]
+    then
+	echo "${0}: at least one argument needed"
+	return
+    fi
+    if [ ! -d ${D}${DESTTREE}/share/locale ]
+    then
+	install -d ${D}${DESTTREE}/share/locale/
+    fi
+    local x
+    for x in "$@"
+    do
+	if [ -e ${x} ]
+	then
+	    local mytiny=${x##*/}
+	    local mydir=${D}${DESTTREE}/share/locale/${mytiny%.*}/LC_MESSAGES
+	    if [ ! -d ${mydir} ]
+	    then
+		install -d ${mydir}
+	    fi
+	    install -m0644 ${x} ${mydir}/${MOPREFIX}.mo
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+    done
+}
+
+abort_compile() {
+    echo 
+    echo '*** Compilation Aborted ***'
+    echo
+    cd ${BUILDDIR} #original dir
+    rm -f .compiled
+    trap SIGINT SIGQUIT
+    exit 1
+}
+
+abort_unpack() {
+    echo 
+    echo '*** Unpack Aborted ***'
+    echo
+    cd ${BUILDDIR} #original dir
+    rm -f .unpacked
+    rm -rf work
+    trap SIGINT SIGQUIT
+    exit 1
+}
+
+abort_package() {
+    echo 
+    echo '*** Packaging Aborted ***'
+    echo
+    cd ${BUILDDIR} #original dir
+    rm -f .packaged
+    rm -f ${PKGDIR}/All/${P}.t*
+    trap SIGINT SIGQUIT
+    exit 1
+}
+
+abort_image() {
+    echo 
+    echo '*** Imaging Aborted ***'
+    echo
+    cd ${BUILDDIR} #original dir
+    rm -rf image
+    trap SIGINT SIGQUIT
+    exit 1
+}
+
+dyn_compile() {
+    trap "abort_compile" SIGINT SIGQUIT
+    export CFLAGS CXXFLAGS LIBCFLAGS LIBCXXFLAGS
+    if [ ${BUILDDIR}/.compiled -nt ${WORKDIR} ]
+    then
+	echo ">>> It appears that ${P} is already compiled.  skipping."
+	echo ">>> (clean to force compilation)"
+	trap SIGINT SIGQUIT
+	return
+    fi
+    cd ${S}
+    src_compile 
+    cd ${BUILDDIR}
+    touch .compiled
+    trap SIGINT SIGQUIT
+}
+
+dyn_pkginfo() {
+    local PNAME=${P}.${PACKAGE}
+    echo ${P} ${PKGDIR}/All ${PKGDIR}/All/${PNAME}
+}
+
+dyn_package() {
+    trap "abort_package" SIGINT SIGQUIT
+    cd ${BUILDDIR}/image
+    local PNAME=${P}.${PACKAGE}
+    echo ">>> Creating ${PNAME} in ${PKGDIR}/All..."
+    if [ ! -e ${PKGDIR} ]
+    then
+	mkdir ${PKGDIR}
+    fi
+    if [ ! -e ${PKGDIR}/All ]
+    then
+        mkdir ${PKGDIR}/All
+    fi    
+    if [ "$PACKAGE" = "tbz2" ]
+    then
+	tar cvf ${PKGDIR}/All/${P}.tar *
+	bzip2 ${PKGDIR}/All/${P}.tar
+	mv ${PKGDIR}/All/${P}.tar.bz2 ${PKGDIR}/All/${PNAME}	
+    elif [ "$PACKAGE" = "tgz" ]
+    then
+ 	tar czvf ${PKGDIR}/All/${PNAME} *
+    else
+	echo '!!! Package format '${PACKAGE}' not recognized.  Please correct /etc/make.conf'
+	exit 1
+    fi
+    if [ ! -e ${PKGDIR}/${CATEGORY} ]
+    then
+        mkdir ${PKGDIR}/${CATEGORY}
+    fi
+    ln -sf ${PKGDIR}/All/${PNAME} ${PKGDIR}/${CATEGORY}/${PNAME}
+    echo ">>> Done."
+    cd ${BUILDDIR}
+    touch .packaged
+    trap SIGINT SIGQUIT
+}
+
+dyn_install() {
+    trap "abort_image" SIGINT SIGQUIT
+    rm -rf ${BUILDDIR}/image
+    mkdir ${BUILDDIR}/image
+    cd ${S}
+    echo
+    echo ">>> Install ${P} into ${D}"
+    src_install
+    install -d -m0700 ${D}/var/db/pkg/${P}
+    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${P}
+    echo ">>> Completed installing into ${D}"
+    echo
+    cd ${BUILDDIR}
+    trap SIGINT SIGQUIT
+}
+
+dyn_merge() {
+    trap "" SIGINT SIGQUIT
+    #not interruptible, so that the db doesn't get garbled
+    if [ -d ${ROOT}/var/db/pkg/${P} ]
+    then
+	echo 
+	echo '!!!' "${P} already merged -- unmerge first" 
+	echo
+	exit 1
+    fi
+    echo
+    pkg_preinst
+    /usr/sbin/merge.py
+    cd ${BUILDDIR}
+    #zap it so that people don't look at a bad image and get confused
+    rm -rf image
+    pkg_postinst
+    trap SIGINT SIGQUIT
+}
+
+dyn_unmerge() {
+    trap "" SIGINT SIGQUIT
+    #stub unmerge function for now
+    cd ${BUILDDIR}
+    /usr/sbin/unmerge.py ${P}
+    if [ $? -ne 0 ]
+    then
+	exit
+    fi
+    trap SIGINT_SIGQUIT
+}
+
+dyn_spec() {
+
+    tar czf /usr/src/redhat/SOURCES/${P}.tar.gz ${P}.* files
+
+    local V
+
+    V=${P#${O##*/}*}
+    V=${V/[!digit]/}
+    V=${V/-/.}
+
+    cat <<__END1__ > ${P}.spec
+Summary: ${DESCRIPTION}
+Name: ${O##*/}
+Version: ${V}
+Release: 1
+Copyright: GPL
+Group: portage/${CATEGORY}
+Source: ${P}.tar.gz
+Buildroot: ${D}
+%description
+${DESCRIPTION}
+
+%prep
+%setup -c
+
+%build
+
+%install
+
+%clean
+
+%files
+/
+__END1__
+
+}
+dyn_rpm () {
+    dyn_spec
+    rpm -bb ${P}.spec
+    local V
+
+    V=${P#${O##*/}*}
+    V=${V/[!digit]/}
+    V=${V/-/.}
+    local W
+    W="portage/${CATEGORY}"
+    
+    install -D /usr/src/redhat/RPMS/i386/${O##*/}-${V}-1.i386.rpm ${RPMDIR}/${W}/${O##*/}-${V}.rpm
+}
+
+dyn_help() {
+	echo
+	echo "Portage v1.1"
+	echo "Copyright 2000 Gentoo Technologies, Inc."
+	echo 
+	echo "How to use the ebuild command:"
+	echo 
+	echo "The first argument to ebuild should be an existing .ebuild file."
+	echo
+	echo "One or more of the following options can then be specified.  If more"
+	echo "than one option is specified, each will be executed in order."
+	echo
+	echo "  fetch       : download source archive(s) and patches"
+	echo "  unpack      : unpack/patch sources (auto-fetch if needed)"
+	echo "  compile     : compile sources (auto-fetch/unpack if needed)"
+	echo "  merge       : merge image into live filesystem, recording files in db"
+	echo "                (auto-fetch/unpack/compile if needed)"
+	echo "  unmerge     : remove package from live filesystem"
+	echo "  clean       : clean up all source and temporary files"
+	echo
+	echo "The following settings will be used for the ebuild process:"
+	echo
+	echo "  package     : ${P}" "( \${P} )"
+	echo "  description : ${DESCRIPTION}"
+	echo "  system      : ${CHOST}" "( \${CHOST} )"
+	echo "  c flags     : ${CFLAGS}" "( \${CFLAGS} )"
+	echo "  c++ flags   : ${CXXFLAGS}" "( \${CXXFLAGS} )"
+	echo "  make flags  : ${MAKEOPTS}" "( \${MAKEOPTS} )"
+	echo -n "  build mode  : "
+	if [ -n "${DEBUG}" ]
+	then
+	    echo "debug (large)"
+	else
+	    echo "production (stripped)"
+	fi
+	echo "  merge to    : ${ROOT}" "( \${ROOT} )"
+	echo "  db location : ${ROOT}var/db/pkg/${P}/CONTENTS"
+	echo 
+	if [ -n "$USE" ]
+	then
+	    echo "Additionally, support for the following toolkits will be enabled if necessary:"
+	    echo 
+	    echo "  ${USE}"
+	fi    
+	echo
+}
+
+src_menu() {
+    MYDIR=${BUILDDIR}
+    if [ "$1" = "p" ]
+    then
+	echo ${P}
+	exit 0
+    fi
+
+    local MYfoo
+    for MYfoo in "$@" 
+    do
+	case "${MYfoo}" in
+	noop)
+	    ;;
+	unpack)
+	    dyn_fetch
+	    dyn_unpack
+	    ;;
+	compile)
+            dyn_fetch
+	    dyn_unpack
+	    dyn_compile
+            ;;
+	prerm|postrm|preinst|postinst)
+	    pkg_${MYfoo}
+	    ;;
+	help|clean|fetch|digest|pkginfo|pkgloc|unmerge)
+	    dyn_${MYfoo}
+	    ;;
+	package)
+            dyn_fetch
+	    dyn_unpack
+            dyn_compile
+            dyn_install
+	    dyn_package
+	    ;;
+ 	merge)
+            dyn_fetch
+	    dyn_unpack
+	    dyn_compile
+            dyn_install
+            dyn_merge
+	    ;;
+	rpm)
+            dyn_fetch
+	    dyn_unpack
+	    dyn_compile
+            dyn_install	
+	    dyn_rpm
+	    ;;
+	*)
+	    echo "Please specify a valid command."
+	    echo
+            dyn_help
+	esac
+    done
+    cd $MYDIR
+}
+
+#dummy value for help printouts
+P=packagename
+
+if [ $# -lt 2 ]
+then
+	echo
+	echo '!!!' "At least two arguments expected."
+	dyn_help
+	exit 1
+fi
+
+if [ ! -e ${1} ]
+then
+	echo
+	echo '!!!' "${1} not found."
+	dyn_help
+	exit 1
+fi
+
+export STARTDIR=`pwd`
+export O=`dirname ${STARTDIR}/${1}`
+export EBUILD=${1}
+export PEBUILD=${O}/files/${PLATFORM}.ebuild
+export FILESDIR=${O}/files
+
+source ${1}
+if [ -e ${PEBUILD} ]
+then
+	source ${PEBUILD}
+fi
+
+if [ -z "$FETCHCOMMAND" ]
+then
+   FETCHCOMMAND="/usr/bin/wget --passive-ftp \${x} -P \${DISTDIR}"
+fi
+
+if [ ! -z ${BUILD_PREFIX} ]
+then
+    export BUILDDIR=${BUILD_PREFIX}/${CATEGORY}/${P}
+else
+    export BUILDDIR=${O}
+fi
+if [ ! -d ${BUILDDIR} ]
+then
+   install -d ${BUILDDIR}
+fi
+
+export T=${BUILDDIR}/temp
+if [ ! -d ${T} ]
+then
+   install -d ${T}
+fi
+export WORKDIR=${BUILDDIR}/work
+export D=${BUILDDIR}/image
+dlen=$(( ${#D} -1 ))
+if [ "${D:${dlen}:1}" != "/" ]
+then
+    export D=${D}/
+fi
+
+if [ -z ${DISTDIR} ]
+then
+    export DISTDIR=/usr/portage/distfiles
+fi
+if [ -z ${PKGDIR} ]
+then
+    export PKGDIR=/usr/portage/packages
+fi
+
+source ${1}
+if [ -e ${PEBUILD} ]
+then
+	source ${PEBUILD}
+fi
+
+export P
+
+# Set Perl-Installation Enviroment
+
+for i in ARCHLIB PRIVLIB BIN MAN1DIR MAN3DIR SCRIPT SITEARCH SITELIB
+do
+  install=`echo $i | awk '{ printf "%s%s","install",tolower($1) }'`
+  install=`perl "-V:$install"  | sed -e "s:.*/image/\(.*\)'\;:\1:"`
+  PERLINSTALL=`echo INSTALL$i=$D$install $PERLINSTALL`
+done
+export PERLINSTALL
+
+foo=2
+while [ $foo -le $# ]
+do
+eval "src_menu \${${foo}}"
+if [ $? -ne 0 ]
+then
+        echo "***error***"
+        exit 1
+fi
+foo=$(( $foo + 1))
+done
