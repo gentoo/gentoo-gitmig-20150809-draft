@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.2 2004/03/10 02:04:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.3 2004/04/11 16:51:01 usata Exp $
 
 inherit python
 
@@ -21,10 +21,10 @@ DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
 	=dev-libs/libsigc++-1.0*
 	media-libs/plib
-	truetype? ( >=media-libs/freetype-2* )
+	truetype? ( >=media-libs/freetype-2 )
 	doc? ( app-text/xmlto )
-	python? ( >=dev-lang/python-2.2* )
-	ruby? ( >=dev-lang/ruby-1.6* )"
+	python? ( >=dev-lang/python-2.2 )
+	ruby? ( virtual/ruby )"
 
 src_unpack() {
 
