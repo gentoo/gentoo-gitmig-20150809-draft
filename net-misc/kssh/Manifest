@@ -1,5 +1,5 @@
-MD5 12b2f262e7b9987c338af5b6eee476b8 ChangeLog 998
+MD5 8c5e1ef7992b2c26ab6e5d69ce4f5ced ChangeLog 1078
 MD5 33783e57caa25d84d896d9e48d7f8876 kssh-0.6.ebuild 501
-MD5 dbf03d5f8a1954adbeebfc64385dc90d kssh-0.7.ebuild 478
+MD5 1bdf5cd40cb9b40810a9096594361ead kssh-0.7.ebuild 478
 MD5 a0facf6bdb5286c306ddd87f4d4647ec files/digest-kssh-0.6 63
 MD5 4c3c8f2d16263edcc08db53c5e0929ea files/digest-kssh-0.7 60

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kssh/ChangeLog,v 1.9 2004/03/14 17:30:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kssh/ChangeLog,v 1.10 2004/04/07 23:28:47 lv Exp $
+
+  07 Apr 2004; Travis Tilley <lv@gentoo.org> kssh-0.7.ebuild:
+  added ~amd64 keyword
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kssh-0.6.ebuild,
   kssh-0.7.ebuild:
