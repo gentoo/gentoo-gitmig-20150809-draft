@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.14.ebuild,v 1.1 2004/03/18 08:36:35 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.14.ebuild,v 1.2 2004/03/18 13:43:08 dholm Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ SRC_URI="http://argouml.tigris.org/files/documents/4/0/$PN-$PV/ArgoUML-${PV}.tar
 		http://argouml.tigris.org/files/documents/4/0/argouml-${PV}/cookbook-${PV}.pdf )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 RESTRICT="nomirror"
 IUSE="doc"
 RDEPEND=">=virtual/jre-1.2*"
