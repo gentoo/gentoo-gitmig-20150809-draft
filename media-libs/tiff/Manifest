@@ -1,10 +1,10 @@
-MD5 9e21cc02fc1be635a96ec64759c3203f ChangeLog 3283
+MD5 f7e06bc680790dde50a2d7ab0134e003 ChangeLog 3423
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 c31d9d63858dbe4359a2fe322cf9270a tiff-3.5.5.ebuild 1694
 MD5 6ef6236d88b8697f8a0d0cd0c137fbe9 tiff-3.5.7-r1.ebuild 1088
 MD5 1f5924fda085dbb6d5cde797be448269 tiff-3.6.0.ebuild 1076
 MD5 6541afecc746d30a44f0d28b7ba912d3 tiff-3.6.0_beta2.ebuild 1069
-MD5 29e2e3d047efd363e79e21681baf7a12 tiff-3.6.1-r1.ebuild 1691
+MD5 d758a61aee7ae3013c6c8fc8d96762f6 tiff-3.6.1-r1.ebuild 1776
 MD5 d219bd7d9f4ff3a5380d73f9b7943a8e tiff-3.6.1.ebuild 1069
 MD5 0f539d87b6bbcccd29b4e881d7572fe7 tiff-3.5.7-r2.ebuild 1247
 MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site 488
@@ -16,3 +16,4 @@ MD5 0bdb0f11a1ee24db3e7fc07875ca4c44 files/digest-tiff-3.6.0_beta2 70
 MD5 f53e1604a1fd165e2e83afca8a3e63aa files/digest-tiff-3.6.1 64
 MD5 9401ca061c9d5140dfbefbac98d58212 files/digest-tiff-3.6.1-r1 145
 MD5 5e55504066911b414c36963ad6ca9070 files/digest-tiff-3.5.7-r2 63
+MD5 dca7d9db2819ce30468b1a44b7575aaa files/tiff-3.6.1-r1-man.so.patch 364

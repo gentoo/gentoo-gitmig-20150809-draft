@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.24 2004/09/17 04:31:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.25 2004/09/20 07:05:36 nerdboy Exp $
+
+  19 Sep 2004; Steve Arnold <nerdboy@gentoo.org>
+  +files/tiff-3.6.1-r1-man.so.patch, tiff-3.6.1-r1.ebuild:
+  added patch to fix bug 35778
 
 *tiff-3.5.7-r2 (16 Sep 2004)
 

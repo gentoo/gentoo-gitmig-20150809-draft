@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.9 2004/09/17 04:31:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.10 2004/09/20 07:05:36 nerdboy Exp $
+
+inherit eutils
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}
@@ -30,6 +32,7 @@ src_unpack() {
 	cd ${S}
 	cp ${FILESDIR}/config.site config.site
 	echo "DIR_HTML="${D}/usr/share/doc/${PF}/html"" >> config.site
+	epatch ${FILESDIR}/${PF}-man.so.patch || die "man.so patch failed"
 }
 
 src_compile() {
