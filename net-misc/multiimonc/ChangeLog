@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/multiimonc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.4 2004/06/24 23:57:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.5 2004/07/02 07:44:41 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  multiimonc-0.3.2.ebuild, multiimonc-0.3.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> multiimonc-0.3.2.ebuild:
   Marked stable on ppc and x86.

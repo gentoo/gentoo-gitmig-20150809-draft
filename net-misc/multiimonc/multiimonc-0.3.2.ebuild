@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.2.ebuild,v 1.4 2004/06/24 23:57:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.2.ebuild,v 1.5 2004/07/02 07:44:41 eradicator Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=x11-libs/wxGTK-2.4.1
-		virtual/glibc
+		virtual/libc
 		virtual/x11"
 
 src_compile() {
