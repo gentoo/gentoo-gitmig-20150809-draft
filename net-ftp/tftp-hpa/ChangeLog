@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/tftp-hpa
+# ChangeLog for net-ftp/tftp-hpa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.1 2004/12/09 20:56:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.2 2004/12/10 00:11:10 swegener Exp $
 
 *tftp-hpa-0.40 (09 Dec 2004)
 
