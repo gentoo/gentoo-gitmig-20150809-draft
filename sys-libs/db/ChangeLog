@@ -1,11 +1,20 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.30 2003/05/28 15:37:35 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.31 2003/05/30 10:04:24 pauldv Exp $
+
+*db-4.1.25 (30 May 2003)
+
+  30 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.1.25.ebuild:
+  Add new upstream version db-4.1.25.
 
   28 May 2003; Grant Goodyear <g2boojum@gentoo.org> db-4.0.14.ebuild:
   Changed goofy "-x86" mask to "~x86" masks, since the package
   is still hard-masked in package.mask.  (This way those of us
   trying to test this package can use package.unmask!)
+
+  28 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.9-r5.ebuild:
+  Masking db-3.2.9-r5 as testing. This should be stable. The only changes are
+  the renaming of all tools from db_<bla> to db3_<bla>
 
   25 May 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.9-r5.ebuild,
   db-4.0.14.ebuild, db-4.1.24.ebuild:
