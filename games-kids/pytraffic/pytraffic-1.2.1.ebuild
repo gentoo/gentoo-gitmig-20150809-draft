@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-1.2.1.ebuild,v 1.2 2004/12/31 06:13:07 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-1.2.1.ebuild,v 1.3 2005/01/02 07:10:43 vapier Exp $
 
 inherit distutils games
 
@@ -37,10 +37,11 @@ src_install() {
 	prepgamesdirs
 }
 
+pkg_postrm() {
+	distutils_pkg_postrm
+}
+
 pkg_postinst() {
-	if has_version ">=dev-lang/python-2.3"; then
-		python_version
-		python_mod_optimize ${ROOT}usr/share/games/${PN}12
-	fi
+	distutils_pkg_postinst
 	games_pkg_postinst
 }
