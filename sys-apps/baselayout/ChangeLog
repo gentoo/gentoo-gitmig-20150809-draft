@@ -1,9 +1,21 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.161 2004/07/09 18:54:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.162 2004/07/12 03:11:19 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.10.1-r2 (11 Jul 2004)
+
+  11 Jul 2004; Aron Griffis <agriffis@gentoo.org> +baselayout-1.10.1-r2.ebuild:
+  - Get rid of ROOT trick which had the potential to break binary installs.
+  - Make /sys directory on all installations, not just ppc, since it will be
+    needed anywhere 2.6 is running.
+  - Create default runlevel symlinks in pkg_postinst instead of src_install
+    since it tests content of ${ROOT}. 
+  - Create device nodes in pkg_postinst for the same reason. Don't call
+	/sbin/init U in pkg_postinst since that is handled by the sysvinit ebuild
+	now.
 
 *baselayout-1.9.4-r3 (09 Jul 2004)
 
