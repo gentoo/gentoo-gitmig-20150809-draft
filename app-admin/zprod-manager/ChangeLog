@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.8 2004/09/26 09:48:34 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.9 2004/09/26 21:31:55 radek Exp $
+
+*zprod-manager-0.2 (26 Sep 2004)
+
+  26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org>
+  +files/0.2/zprod-manager, +zprod-manager-0.2.ebuild:
+  small: remove unnecessary ZPROD_FLIST_FPATH.
+  small: fixed interactive mode bug in list handling.
+  small: fixed chown to operate only on selected products.
+  BIG: changed chmod of installed products to 770/660 (other have no rights)
 
   26 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>;
   zprod-manager-0.1-r1.ebuild:
