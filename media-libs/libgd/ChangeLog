@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.19 2003/02/23 14:58:34 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.20 2003/02/23 15:04:37 dragon Exp $
 
 *libgd-2.0.11 (23 Feb 2003)
 
-  23 Feb 2003; root <root@gentoo.org> libgd-2.0.11.ebuild files/gd-2.0.11-gif-support.patch.bz2 :
+  23 Feb 2003; Nicholas Wourms <dragon@gentoo.org> libgd-2.0.11.ebuild files/gd-2.0.11-gif-support.patch.bz2 :
   Added patch for gif support when USE="gif".  Added ~arch keywords to
   correspond to the keywords from 1.8.4. This package also needed to be
   elibtoolized.  Also, this gd requires a modern libpng and freetype,
