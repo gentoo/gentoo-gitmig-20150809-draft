@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.29 2004/09/22 12:45:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.30 2004/10/31 22:34:32 kito Exp $
+
+  31 Oct 2004; Kito <kito@gentoo.org> lcms-1.12.ebuild, lcms-1.13.ebuild:
+  added ~ppc-macos
 
 *lcms-1.13 (22 Sep 2004)
 
