@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.17 2004/06/02 13:37:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.18 2004/06/02 17:02:46 usata Exp $
+
+*wanderlust-2.10.1-r2 (03 Jun 2004)
+
+  03 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> wanderlust-2.10.1-r2.ebuild,
+  wanderlust-2.11.28_pre20040516.ebuild:
+  Added backport patches from wl-2_10. Removed old CVS snapshot.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> wanderlust-2.10.1-r1.ebuild:
   Fix use invocation
