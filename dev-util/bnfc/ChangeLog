@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/bnfc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.1 2004/10/26 15:01:03 kosmikus Exp $
+
+*bnfc-2.1.2 (26 Oct 2004)
+
+  26 Oct 2004; Andres Loeh <kosmikus@gentoo.org> bnfc-2.1.2.ebuild,
+  metadata.xml:
+  Initial import, as suggested in bug #54750.
+
