@@ -1,0 +1,31 @@
+--- com/gallery/GalleryRemote/util/ExifImageUtils.java 200y-06-02 22:16:29.000000000 +0200
++++ com/gallery/GalleryRemote/util/ExifImageUtils.java 2004-09-02 10:46:06.429159424 +0200
+@@ -53,9 +53,6 @@
+ 				}
+ 					
+ 				return null;
+-			} catch (FileNotFoundException e) {
+-				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+-				return null;
+ 			} catch (JpegProcessingException e) {
+ 				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+ 				return null;
+@@ -130,9 +127,6 @@
+ 					Log.log(Log.LEVEL_TRACE, MODULE, "Angle: " + af.angle + " Flipped: " + af.flip);
+ 					return af;
+ 				}
+-			} catch (FileNotFoundException e) {
+-				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+-				return null;
+ 			} catch (JpegProcessingException e) {
+ 				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+ 				return null;
+@@ -153,8 +147,6 @@
+ 
+ 				// todo: this doesn't do anything at present: the library can only READ
+ 				// EXIF, not write to it...
+-			} catch (FileNotFoundException e) {
+-				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+ 			} catch (JpegProcessingException e) {
+ 				Log.logException(Log.LEVEL_ERROR, MODULE, e);
+ 			}
