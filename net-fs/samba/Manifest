@@ -4,11 +4,13 @@ MD5 cd9f3589a14d50054a0b1e4e129602af samba-3.0.6-r4.ebuild 14203
 MD5 7ad9048a4062a3c8ce96af16abb18e4c samba-3.0.9.ebuild 16191
 MD5 fc36819e4e02fa146e936aa31947ad27 samba-3.0.6-r3.ebuild 14226
 MD5 9025af06e2c7a6149580a8309231b0e8 samba-3.0.9-r1.ebuild 16378
+MD5 deb2ab624a8e99a9cd4eb2ca2a10d2b4 samba-3.0.10.ebuild 16192
 MD5 826ef7c1a083b2b7f564dc5198072698 samba-3.0.8.ebuild 16812
-MD5 d43fe1fd8a7597e75981dd1bc08abc8d ChangeLog 24937
+MD5 b10f59de49927de62b6e4338fd432e05 ChangeLog 25058
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 7c1f458c46d453971ac7ca85c290f7a3 samba-3.0.8-r1.ebuild 17126
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
+MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
 MD5 a7cc90ba23d86b1d90f65645826dde19 files/smbldap_conf.pm 7095
 MD5 cbaa5a39d9bd67b13f8131b426a4256b files/samba-2.2.5-gp-reloc-fix.patch 431
