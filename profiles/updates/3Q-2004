@@ -121,3 +121,4 @@ move net-www/lxr www-apps/lxr
 move net-www/moinmoin www-apps/moinmoin
 move net-www/mypictures www-apps/mypictures
 move net-www/mythweb www-apps/mythweb
+move net-misc/nut www-apps/nut
