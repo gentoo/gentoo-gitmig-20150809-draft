@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>ppc</herd>
+<longdescription>
+PBButtons is a programm suite to support laptop specific functions and make them 
+available again under Linux. Basically it was developed to support the special 
+hotkeys of an Apple iBook, Powerbook or TiBook but since version 0.5 the design 
+has been changed to support all kind of laptop or notebook.
+
+With this programms the keys for the display brightness, the volume of speaker 
+and headphone, the mute key and the eject key will do their job as expected. The 
+daemon also do some power management tasks including low battery warnings, 
+dimming the display if idle, sleep on command, etc.
+
+The main part of PBButtons is the daemon pbbuttonsd which work as a server that 
+do all the work. It runs in background and is preferable started at boot time. 
+Multiple clients could register themselves to get messages about events from the 
+server.
+
+One of the clients is gtkpbbuttons. It displays small GTK popup windows each time 
+a message from the daemon pbbuttonsd appeares.
+</longdescription>
+</pkgmetadata>
