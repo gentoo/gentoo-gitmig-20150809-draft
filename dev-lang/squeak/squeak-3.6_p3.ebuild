@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.1 2004/04/28 16:19:19 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.6_p3.ebuild,v 1.2 2004/05/09 15:23:48 dholm Exp $
 
 inherit nsplugins libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www-sor.inria.fr/~piumarta/squeak/unix/release/Squeak-${MY_PV}.s
 	mozilla? ( http://squeakland.org/installers/SqueakPlugin.image.zip )"
 LICENSE="Apple"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X nas mmx mozilla"
 # a ffi flag would be nice
 
