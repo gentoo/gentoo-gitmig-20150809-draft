@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.0.2.ebuild,v 1.1 2005/02/04 22:56:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/luma-2.1.3.ebuild,v 1.1 2005/03/16 17:12:50 carlo Exp $
 
 inherit eutils
 
@@ -25,6 +25,16 @@ DEPEND=">=x11-libs/qt-3.2
 	samba? ( >=dev-python/py-smbpasswd-1.0 )"
 
 src_install() {
+	# need to update files for newer sip/pyqt versions (SizePolicy: int -> enum)
+	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
+	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
+	addpredict "$QTDIR/etc/settings"
+	for F in `find . -iname "*\.ui"` ; do
+		rm ${F%ui}py
+		pyuic ${F} > ${F%ui}py
+	done
+
 	dodir /usr
 	python install.py --prefix=${D}/usr
+	make_desktop_entry "luma" Luma "/usr/share/luma/icons/luma-128.png" "System;Qt"
 }
