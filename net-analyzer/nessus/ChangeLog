@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.4 2002/07/02 13:31:24 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.5 2002/07/17 10:41:02 carpaski Exp $
+
+*nessus-1.2.2-r1 (17 Jul 2002)
+
+  17 Jul 2002; Nicholas Jones <carpaski@gentoo.org> nessus-1.2.2-r1.ebuild:
+
+  SLOT and KEYWORDS additions.
+	Removed duplicated 'make install' calls.
+	Added die comments. (Added notice about possible breaking with nessus-1.0.*)
 
 *nessus-1.2.2 (02 Jul 2002)
 
