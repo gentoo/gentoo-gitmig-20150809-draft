@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.5 2002/08/26 16:04:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.6 2002/08/26 16:48:25 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -32,8 +32,8 @@ DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.0
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jdk-1.3
-	virtual/jre-1.3
+PROVIDE="virtual/jdk-1.3.1
+	virtual/jre-1.3.1
 	virtual/java-scheme-2"
 SLOT="1.3"
 LICENSE="sun-bcla"
