@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.35 2004/12/14 09:38:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.36 2004/12/19 02:45:15 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -322,7 +322,7 @@ php5-sapi_src_unpack () {
 	# Patch for session persistence bug
 	epatch ${FILESDIR}/php5_soap_persistence_session.diff
 
-    # stop php from activating the apache config, as we will do that ourselves
+	# stop php from activating the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php5,-i -n php5,g' $i
 	done
@@ -366,7 +366,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"ingres"		"ingres"		1
 	enable_extension_with		"interbase"		"interbase"		1
 	# ircg extension not supported on Gentoo at this time
-	enable_extension_with		"kerberos"		"kerberos"		1
+	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
