@@ -3,3 +3,7 @@
 # must use a SELinux profile
 selinux
 uclibc
+
+# Jon portnoy <avenj@gentoo.org>
+# PPC-specific.
+altivec

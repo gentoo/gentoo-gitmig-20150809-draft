@@ -2,3 +2,7 @@
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# Jon Portnoy <avenj@gentoo.org>
+# PPC-specific.
+altivec
