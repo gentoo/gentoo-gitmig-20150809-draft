@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3106 2004/08/26 11:49:10 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3107 2004/08/26 15:16:36 lucass Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <lucass@gentoo.org> (26 Aug 2004)
+# unstable branch of pygtk
+=dev-python/pygtk-2.3*
 
 # <lanius@gentoo.org> (26 Aug 2004)
 # this is an technology preview
