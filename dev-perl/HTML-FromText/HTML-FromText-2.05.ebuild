@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.2 2004/06/25 00:35:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.3 2004/07/14 17:48:40 agriffis Exp $
 
 inherit perl-module
 
@@ -11,6 +11,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/C/CW/CWEST/${P}.tar.gz"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+IUSE=""
 
 SRC_TEST="do"
 
@@ -19,4 +20,3 @@ DEPEND="dev-perl/HTML-Parser
 	dev-perl/Exporter-Lite
 	>=dev-perl/Scalar-List-Utils-1.14
 	dev-perl/Email-Find"
-
