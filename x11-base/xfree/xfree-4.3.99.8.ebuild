@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.8.ebuild,v 1.4 2003/07/27 06:23:48 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -43,7 +44,7 @@ USE_SNAPSHOT="yes"
 NOMIRROR="1"
 
 PATCH_VER="2.1.3"
-FT2_VER="2.1.3"
+FT2_VER="2.1.4"
 XCUR_VER="0.2"
 SISDRV_VER="110603-1"
 SAVDRV_VER="1.1.27t"
@@ -108,7 +109,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
 	>=dev-libs/expat-1.95.3
-	>=media-libs/freetype-${FT2_VER}-r2
+	>=media-libs/freetype-${FT2_VER}
 	>=media-libs/fontconfig-2.1-r1
 	>=x11-base/opengl-update-1.4
 	>=x11-misc/ttmkfdir-3.0.4
