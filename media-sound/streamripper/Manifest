@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ed4411f2507ecc5a83f4a234dd81279c ChangeLog 1262
-MD5 bac1d3b039ed290f77ded36d9ebc3786 streamripper-1.60.ebuild 1005
-MD5 76e93f88d5dd205462fbd51c7c2b9672 streamripper-1.32-r2.ebuild 758
+MD5 53bff846f5133c786ac543112e9016b0 streamripper-1.60.ebuild 997
+MD5 452b14e21c9f9343ad4b7576be47600e streamripper-1.32-r2.ebuild 751
+MD5 2ea229eb0a756f405e095464378d519d streamripper-1.60.5.ebuild 971
+MD5 a4ec2be4d111f8a844e25b5a06d666ca ChangeLog 1252
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 69abc6442cd2247c32cceea2323a3b99 streamripper-1.60.5.ebuild 977
-MD5 2288ebab62148f6e89111ee55bd0ad9a files/digest-streamripper-1.60 149
-MD5 16e69f7f5518a4f268d058830c61f7b9 files/digest-streamripper-1.60.5 71
-MD5 462c52302e394dc8b61def99acfc1b15 files/digest-streamripper-1.32-r2 148
 MD5 f94e062e1163eb08366cd10276bbb2c7 files/1.32-http-auth.patch 3463
-MD5 e7f48c69571878c1462918c755772c49 files/streamripper-1.60.5-interface.patch 14184
+MD5 462c52302e394dc8b61def99acfc1b15 files/digest-streamripper-1.32-r2 148
+MD5 2288ebab62148f6e89111ee55bd0ad9a files/digest-streamripper-1.60 149
 MD5 541244ccd6075be3d6b8faea14a3171d files/streamripper-1.60.5-syslibmad.patch 2290
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzwFpHTu7gpaalycRAsuGAKDHfxb+tPEc3WTg7zLCOLfU8aNaZgCguwdf
-pF5hcAAJ5Z2GltWlMW1THCI=
-=da0I
------END PGP SIGNATURE-----
+MD5 e7f48c69571878c1462918c755772c49 files/streamripper-1.60.5-interface.patch 14184
+MD5 16e69f7f5518a4f268d058830c61f7b9 files/digest-streamripper-1.60.5 71
