@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>desktop-wm</herd>
+	<longdescription>
+	WindowLab is a small and simple window manager of novel design. It is 
+	click-to-focus, shares its window depth policy with the Amiga, and has 
+	a window resizing/reshaping method similar to that of 8-1/2 from Plan 9.
+	</longdescription>	
+</pkgmetadata>

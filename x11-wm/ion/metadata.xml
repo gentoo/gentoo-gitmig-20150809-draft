@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>desktop-wm</herd>
+	<longdescription>
+	Ion is a tiling (no overlapping windows) window manager that also has 
+	PWM-style tabbed frames which can contain multiple client windows. These 
+	features help keeping windows organized and quickly switching between 
+	them. Ion was designed primarily as an efficient and unobtrusive window 
+	manager for users who prefer the keyboard.
+	</longdescription>	
+</pkgmetadata>
