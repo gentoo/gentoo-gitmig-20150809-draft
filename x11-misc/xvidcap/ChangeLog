@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvidcap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.10 2004/10/06 21:24:12 sekretarz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.11 2005/01/28 19:26:56 luckyduck Exp $
+
+  28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> xvidcap-1.1.3-r1.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79850
 
 *xvidcap-1.1.3-r1 (06 Oct 2004)
 

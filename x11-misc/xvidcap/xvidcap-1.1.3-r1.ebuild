@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r1.ebuild,v 1.1 2004/10/06 21:21:09 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r1.ebuild,v 1.2 2005/01/28 19:26:56 luckyduck Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Screen capture utility enabling you to create videos of your deskto
 HOMEPAGE="http://xvidcap.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xvidcap/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 LICENSE="GPL-2"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.0.0 )
 	>=media-video/ffmpeg-0.4.9_pre1
