@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.4.2.ebuild,v 1.4 2005/01/29 15:59:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.4.2.ebuild,v 1.5 2005/02/06 02:11:30 ka0ttic Exp $
 
 inherit debug eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-5.3.0-fpic.patch
 	epatch ${FILESDIR}/${P}-respect-DESTDIR.diff
+	epatch ${FILESDIR}/${P}-sandbox.patch
 }
 
 src_compile() {

@@ -1,0 +1,102 @@
+diff -Naur dmalloc-5.4.2.orig/configure dmalloc-5.4.2/configure
+--- dmalloc-5.4.2.orig/configure	2005-02-04 17:33:49.922306392 -0800
++++ dmalloc-5.4.2/configure	2005-02-04 17:59:03.332233112 -0800
+@@ -5443,7 +5443,7 @@
+   heap_p += size;
+   return pnt;
+ }
+-char *calloc (int number, int size) {
++static char *calloc (int number, int size) {
+   char *start, *pnt, *end;
+   if (main_b) _exit(0);
+   /* it should be already 0s */
+@@ -5453,7 +5453,7 @@
+   while (pnt < end) { *pnt++ = '\0'; }
+   return start;
+ }
+-char *realloc (char *old_pnt, int new_size) {
++static char *realloc (char *old_pnt, int new_size) {
+   char *start, *pnt, *end;
+   if (main_b) _exit(0);
+   start = malloc (new_size);
+@@ -5717,14 +5717,14 @@
+ static char heap_mem[102400], *heap_p = heap_mem;
+ free (char *pnt) {
+ }
+-char *malloc (int size) {
++static char *malloc (int size) {
+   char *pnt;
+   getenv("PATH");
+   pnt = heap_p;
+   heap_p += size;
+   return pnt;
+ }
+-char *calloc (int number, int size) {
++static char *calloc (int number, int size) {
+   char *start, *pnt, *end;
+   getenv("PATH");
+   /* it should be already 0s */
+@@ -5734,7 +5734,7 @@
+   while (pnt < end) { *pnt++ = '\0'; }
+   return start;
+ }
+-char *realloc (char *old_pnt, int new_size) {
++static char *realloc (char *old_pnt, int new_size) {
+   char *start, *pnt, *end;
+   getenv("PATH");
+   start = malloc (new_size);
+diff -Naur dmalloc-5.4.2.orig/configure.ac dmalloc-5.4.2/configure.ac
+--- dmalloc-5.4.2.orig/configure.ac	2005-02-04 17:54:41.131093744 -0800
++++ dmalloc-5.4.2/configure.ac	2005-02-04 16:36:10.5.4.25872 -0800
+@@ -330,14 +330,14 @@
+ static int main_b = 0;
+ static char heap_mem[102400], *heap_p = heap_mem;
+ free () { if (main_b) _exit(0); }
+-char *malloc (int size) {
++static char *malloc (int size) {
+   char *pnt;
+   if (main_b) _exit(0);
+   pnt = heap_p;
+   heap_p += size;
+   return pnt;
+ }
+-char *calloc (int number, int size) {
++static char *calloc (int number, int size) {
+   char *start, *pnt, *end;
+   if (main_b) _exit(0);
+   /* it should be already 0s */
+@@ -347,7 +347,7 @@
+   while (pnt < end) { *pnt++ = '\0'; }
+   return start;
+ }
+-char *realloc (char *old_pnt, int new_size) {
++static char *realloc (char *old_pnt, int new_size) {
+   char *start, *pnt, *end;
+   if (main_b) _exit(0);
+   start = malloc (new_size);
+@@ -388,14 +388,14 @@
+ static char heap_mem[102400], *heap_p = heap_mem;
+ free (char *pnt) {
+ }
+-char *malloc (int size) {
++static char *malloc (int size) {
+   char *pnt;
+   getenv("PATH");
+   pnt = heap_p;
+   heap_p += size;
+   return pnt;
+ }
+-char *calloc (int number, int size) {
++static char *calloc (int number, int size) {
+   char *start, *pnt, *end;
+   getenv("PATH");
+   /* it should be already 0s */
+@@ -405,7 +405,7 @@
+   while (pnt < end) { *pnt++ = '\0'; }
+   return start;
+ }
+-char *realloc (char *old_pnt, int new_size) {
++static char *realloc (char *old_pnt, int new_size) {
+   char *start, *pnt, *end;
+   getenv("PATH");
+   start = malloc (new_size);
