@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.3.ebuild,v 1.1 2005/04/05 05:11:43 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.3.ebuild,v 1.2 2005/04/06 00:44:52 pythonhead Exp $
 
 inherit toolchain-funcs
 
@@ -25,9 +25,6 @@ S=${WORKDIR}/${PN}/gtk
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}/scintilla/gtk
-	#This xpm bug should be fixed upstream in 1.6.4:
-	mv ../src/xpm.cxx ../src/XPM.cxx
-	mv ../src/xpm.h ../src/XPM.h
 	sed -i makefile \
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \

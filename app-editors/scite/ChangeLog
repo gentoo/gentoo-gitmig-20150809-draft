@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.36 2005/04/05 05:11:43 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.37 2005/04/06 00:44:52 pythonhead Exp $
+
+  06 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.3.ebuild:
+  Fixed digest - upstream changed tarball. Good news is I removed the renaming
+  of xpm to XPM files which they fixed. bug# 88100
 
 *scite-1.6.3 (05 Apr 2005)
 
