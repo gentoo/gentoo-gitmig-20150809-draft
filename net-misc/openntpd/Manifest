@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4ca33cef996e66f398633e37119b8a49 ChangeLog 364
+MD5 f528d974b1147434c07f18cbfa63a468 openntpd-20040719p.ebuild 861
+MD5 884500fac6f116fe62dda8c2ba097934 files/digest-openntpd-20040719p 70
+MD5 40406a8c669abef5421b9a27d94101e0 files/ntpd.conf.d 239
+MD5 8a0259f9ecda3b0f51569511b1709dce files/ntpd.rc 911
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/a55HTu7gpaalycRAuFWAKCa82yyCd79VmUAvZgM5QpaJCGN/ACg+cee
+u7XXkGhhpvwGChSsQ6+CRk8=
+=etD4
+-----END PGP SIGNATURE-----
