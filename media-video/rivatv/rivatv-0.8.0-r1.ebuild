@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/media-video/rivatv/rivatv-0.8.0.ebuild,v 1.1 2002/06/07 15:12:59 blauwers Exp
+# $Header: /var/cvsroot/gentoo-x86/media-video/rivatv/rivatv-0.8.0-r1.ebuild,v 1.6 2003/06/12 21:13:56 msterret Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="kernel driver for nVidia based cards with video-in"

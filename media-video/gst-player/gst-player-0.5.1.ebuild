@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header :$
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.5.1.ebuild,v 1.5 2003/06/12 21:12:48 msterret Exp $
 
 # debug since its still in devel
 inherit gnome2 debug

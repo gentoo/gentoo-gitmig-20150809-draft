@@ -2,6 +2,10 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  12 Jun 2003; <msterret@gentoo.org> tvtime-0.9.5.ebuild, tvtime-0.9.6.ebuild,
+  tvtime-0.9.7.ebuild, tvtime-0.9.8.1.ebuild, tvtime-0.9.8.2.ebuild:
+  fix Header
+
 *tvtime-0.9.8.2 (09 May 2003)
 
   09 May 2003; mkeadle <mkeadle@gentoo.org> tvtime-0.9.8.2.ebuild
