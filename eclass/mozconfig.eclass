@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.5 2004/12/22 21:46:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.6 2005/02/17 16:57:26 corsair Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -59,7 +59,7 @@ mozconfig_init() {
 			# The other builds have an initial --enable-extensions in their
 			# .mozconfig.  The "default" set in configure applies to mozilla
 			# specifically.
-			: >.mozconfig || die "initial mozconfig creation failed" 
+			: >.mozconfig || die "initial mozconfig creation failed"
 			mozconfig_annotate "" --enable-extensions=default ;;
 		*firefox)
 			cp browser/config/mozconfig .mozconfig \
@@ -83,7 +83,7 @@ mozconfig_init() {
 		mozconfig_annotate "from CFLAGS" --enable-optimize=-O0
 	elif [[ ${ARCH} == hppa ]]; then
 		mozconfig_annotate "more than -O0 causes segfaults on hppa" --enable-optimize=-O0
-	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
+	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 || ${ARCH} == ppc64 ]]; then
 		mozconfig_annotate "more than -O1 causes segfaults on 64-bit (bug 33767)" \
 			--enable-optimize=-O1
 	elif is-flag -O1; then
@@ -107,6 +107,10 @@ mozconfig_init() {
 	alpha|amd64|ia64)
 		# Historically we have needed to add this manually for 64-bit
 		append-flags -fPIC
+		;;
+
+	ppc64)
+		append-flags -fPIC -mminimal-toc
 		;;
 
 	ppc)
