@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.1 2003/04/23 09:50:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.2 2003/04/23 10:03:42 robbat2 Exp $
 ECLASS=php
 INHERITED="$INHERITED $ECLASS"
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$SRC_URI" ] 	&& SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
-IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap jpeg ldap libwww mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml xml2"
+IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap jpeg ldap libwww mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml xml2 java"
 #removed: java gmp
 #both cause breakage
 
@@ -31,6 +31,7 @@ DEPEND="${DEPEND}
     gd? ( media-libs/libgd )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
     imap? ( >=net-mail/uw-imap-2001a-r1 )
+	java? ( >=virtual/jdk-1.4 )
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
     libwww? ( >=net-libs/libwww-5.3.2 )
@@ -115,6 +116,7 @@ php_src_compile() {
 	use freetds && myconf="${myconf} --with-sybase=/usr"
 	use gd && myconf="${myconf} --with-gd=/usr"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
+	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
 	#--- check out this weirdness
 	#use jpeg && myconf="${myconf} --with-jpeg-dir=/usr"
 	#use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib" || myconf="${myconf} --without-jpeg"
