@@ -1,17 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e0d988504ab8096deffacf5009cf7a6 vanilla-sources-2.6.10.ebuild 472
-MD5 12151ead61905d210e51a9e1ba1b5a3c vanilla-sources-2.6.8.1.ebuild 336
+MD5 c9f4ec8e215e861a23ce284de799370e vanilla-sources-2.6.8.1.ebuild 452
 MD5 68128dda92f5926a54dc86bf3dd6da6b vanilla-sources-2.4.25.ebuild 583
 MD5 3c6b43e0540a750a723ef0cbc0e313d9 vanilla-sources-2.4.20.ebuild 547
-MD5 e8966e3338d8e57e1611f3d381f8381d vanilla-sources-2.6.5.ebuild 336
+MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
 MD5 7fdfbd3a3a66ade847e5c4bba9c77ed4 vanilla-sources-2.2.26.ebuild 2738
 MD5 91cfeecb934ba67cab9aa712c7a2a024 vanilla-sources-2.4.27.ebuild 521
 MD5 d354a53c79720fe471a144852d850fc3 vanilla-sources-2.0.40.ebuild 2739
 MD5 0dbb5284e07759b1ceee8aef92d90ace vanilla-sources-2.4.22.ebuild 568
-MD5 8d95c1d4320d7f8e6b7e903dfd6a555d vanilla-sources-2.6.7.ebuild 342
-MD5 db8ccec699581e3c8bb0c8399dce1ef4 vanilla-sources-2.6.9.ebuild 340
+MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
+MD5 76348a2338f66e79052bdfd8de84941d vanilla-sources-2.6.9.ebuild 454
 MD5 87a3b88b56ee6091bb006768fe414be6 vanilla-sources-2.4.26.ebuild 521
 MD5 c5b223b11d1ed047b1dd31e6a8e08948 vanilla-sources-2.4.21.ebuild 574
-MD5 9a0df4d150e7f03f12e5f72f9c7e6c45 ChangeLog 8448
+MD5 ff99b40beacc853863f81eb34480b9d1 ChangeLog 8711
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 56eb8e3456090e6549636748fef46f05 vanilla-sources-2.4.28.ebuild 521
 MD5 bcb7d05156e62f0ac230cf6e52d8b951 vanilla-sources-2.4.23.ebuild 521
@@ -34,3 +37,10 @@ MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
 MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
 MD5 c8049633904d58c1e059003850ae10fc files/digest-vanilla-sources-2.6.9 66
 MD5 18bed04a1b45de515096089cc10913ec files/digest-vanilla-sources-2.6.8.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4yVXiJcSIUGNthERAkqOAKCI5ccgDCYujQ6GnvBgFdOf2PuxYgCePTGj
+2c6FKLh9aUBeTCUArvCtWJM=
+=TV8o
+-----END PGP SIGNATURE-----
