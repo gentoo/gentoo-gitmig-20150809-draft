@@ -8,7 +8,7 @@ SRC_URI="http://open.nit.ca/download/${P}.0.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~hppa"
-IUSE="gtk qt oggvorbis speex fam berkdb gdbm pam zlib ssl"
+IUSE="gtk qt oggvorbis speex fam berkdb gdbm pam"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( >=x11-libs/qt-3.0.5 )
@@ -19,8 +19,8 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	>=sys-libs/db-3
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	pam? ( >=sys-libs/pam-0.75 )
-	zlib? ( >=sys-libs/zlib-1.1.4 )
-	ssl? ( dev-libs/openssl )"
+	>=sys-libs/zlib-1.1.4
+	dev-libs/openssl"
 
 DEPEND="${RDEPEND}
 	virtual/glibc"
@@ -41,12 +41,12 @@ src_compile() {
 		`use_with oggvorbis vorbis` \
 		`use_with fam` \
 		`use_with gdbm` \
-		`use_with ssl openssl` \
 		`use_with pam` \
 		`use_with qt` \
-		`use_with zlib` \
 		--enable-verbose \
 		--with-bdb \
+		--with-openssl \
+		--with-zlib \
 		|| die
 	make || die "compile failed"
 }

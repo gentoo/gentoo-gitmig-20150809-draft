@@ -5,4 +5,4 @@ diff -ruN wvstreams-3.74.0/vars.mk wvstreams-3.74.0.fix/vars.mk
  libwvutils.a libwvutils.so: $(call objects,utils)
  libwvutils.so: -lz -lcrypt
  
-+uniconf/daemon/uniconfdaemon: libuniconf.so libwvutils.so -ldb-3
++uniconf/daemon/uniconfdaemon: libuniconf.so libwvutils.so -ldb
