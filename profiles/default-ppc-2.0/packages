@@ -143,7 +143,7 @@ sys-apps/sysklogd
 *app-shells/sash
 *sys-devel/perl
 *net-ftp/ftp
-net-misc/dhcpcd
+*net-misc/dhcpcd
 net-misc/netkit-telnetd
 net-misc/rsync
 *net-misc/wget
