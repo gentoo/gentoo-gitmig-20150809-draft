@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/gmyclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.2 2003/02/12 05:48:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.3 2003/05/25 10:55:51 liquidx Exp $
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> gmyclient-0.3.ebuild:
+  fixed gnome desktop shortcut installation (#13932)
 
 *gmyclient-0.3 (03 Nov 2002)
 
