@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.5 2003/05/02 09:41:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/files/openmosix.init,v 1.6 2003/05/12 21:36:08 tantive Exp $
 
 depend() {
 	need net
@@ -73,13 +73,13 @@ fi
         if [ $AUTODISC -eq 0  ]; then
             # Static configuration via $OMOSIX_MAP
             SETPE_OPTIONS=""
-	    [ $MYOMID ] && $SETPE_OPTIONS="$SETPE_OPTIONS -p $MYOMID"
-	    [ $MOSGATES ] && $SETPE_OPTIONS="$SETPE_OPTIONS -g $MOSGATES"
+	    [ $MYOMID ] && SETPE_OPTIONS="$SETPE_OPTIONS -p $MYOMID"
+	    [ $MOSGATES ] && SETPE_OPTIONS="$SETPE_OPTIONS -g $MOSGATES"
 	    setpe -W $SETPE_OPTIONS -f $OMOSIX_MAP
        else
             # Configurate openMosix with the omdiscd
 	    OMDISCD_OPTIONS=""
-	    [ $AUTODISCIF ] && $OMDISCD_OPTIONS="$OMDISCD_OPTIONS -i $AUTODISCIF"
+	    [ $AUTODISCIF ] && OMDISCD_OPTIONS="$OMDISCD_OPTIONS -i $AUTODISCIF"
 	    omdiscd $OMDISCD_OPTIONS
        fi
 
