@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.7 2004/07/01 11:18:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.8 2004/08/07 21:08:59 slarti Exp $
 
 inherit games
 
-DESCRIPTION="Soldier of Fortune - First-person shooter based on the mercinary trade"
+DESCRIPTION="Soldier of Fortune - First-person shooter based on the mercenary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
 SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/sof/sof-${PV}-cdrom-x86.run
 	ftp://snuffleupagus.animearchive.org/loki/updates/sof/sof-${PV}-cdrom-x86.run"
