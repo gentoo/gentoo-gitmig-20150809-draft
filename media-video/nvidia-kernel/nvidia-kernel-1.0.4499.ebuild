@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.4 2004/01/29 09:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4499.ebuild,v 1.5 2004/04/28 22:19:49 steel300 Exp $
 
 inherit eutils
 
@@ -57,28 +57,6 @@ get_KV_info() {
 	export KV_micro="$(echo "${KV_full}" | cut -d. -f3 | sed -e 's:[^0-9].*::')"
 }
 
-is_2_5_kernel() {
-	get_KV_info
-
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
-is_2_6_kernel() {
-	get_KV_info
-
-	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 6 ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
 src_unpack() {
 	cd ${WORKDIR}
 	unpack NVIDIA_kernel-1.0-4499.tar.gz
@@ -96,7 +74,7 @@ src_unpack() {
 	cd ${S}
 	einfo "Linux kernel ${KV_major}.${KV_minor}.${KV_micro}"
 
-	if is_2_5_kernel || is_2_6_kernel
+	if is_kernel 2.5 || is_kernel 2.6
 	then
 		EPATCH_SINGLE_MSG="Applying 2.6.x patch ..." \
 		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-${NV_V}-2.6-20031014.diff
