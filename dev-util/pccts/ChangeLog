@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.8 2003/02/12 06:45:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.9 2003/05/23 13:16:05 phosphan Exp $
+
+  23 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  files/pccts-1.33.32-r1-gentoo.diff:
+  Updated the patch for some gcc3.3 compile problem (bug 21528) - no revision
+  bump necessary.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
