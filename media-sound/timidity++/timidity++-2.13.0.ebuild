@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0.ebuild,v 1.4 2004/06/25 00:26:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0.ebuild,v 1.5 2004/07/04 23:08:59 fvdpol Exp $
 
 inherit gnuconfig
 
@@ -105,7 +105,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "A timidity config file has been installed in"
-	einfo "/usr/share/timitidy/config/timidity.cfg. This"
+	einfo "/usr/share/timidity/config/timidity.cfg. This"
 	einfo "file must to copied into /usr/share/timidity/"
 	einfo "and edited to match your configuration."
 	einfo ""
