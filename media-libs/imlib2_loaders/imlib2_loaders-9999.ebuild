@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-9999.ebuild,v 1.1 2004/10/22 12:45:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-9999.ebuild,v 1.2 2005/01/17 03:54:15 vapier Exp $
 
 EHACKAUTOGEN=YES
 EAUTOMAKE=1.6
