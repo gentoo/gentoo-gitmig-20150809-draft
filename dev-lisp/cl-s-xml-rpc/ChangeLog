@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-s-xml-rpc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml-rpc/ChangeLog,v 1.1 2004/07/11 04:52:01 mkennedy Exp $
+
+*cl-s-xml-rpc-20040709 (09 Jul 2004)
+
+  09 Jul 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-s-xml-rpc-20040709.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
