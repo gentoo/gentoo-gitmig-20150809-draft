@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.10 2005/03/13 13:22:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.11 2005/03/18 21:12:41 agriffis Exp $
+
+  18 Mar 2005; Aron Griffis <agriffis@gentoo.org> yaml-0.35.ebuild,
+  yaml-0.36.ebuild:
+  Add ia64 and ~ia64 keywords
 
 *yaml-0.36 (13 Mar 2005)
 
