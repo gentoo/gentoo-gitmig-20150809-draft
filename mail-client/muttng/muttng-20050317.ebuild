@@ -1,6 +1,6 @@
-# Copyright 2005 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050317.ebuild,v 1.2 2005/03/17 19:31:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050317.ebuild,v 1.3 2005/03/18 10:34:56 swegener Exp $
 
 DESCRIPTION="mutt-ng is the next generation of mutt."
 HOMEPAGE="http://www.muttng.org/"
@@ -19,7 +19,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 	slang?  ( >=sys-libs/slang-1.4.2 )
 	gnutls? ( >=net-libs/gnutls-1.0.17 )
 	gpgme?  ( >=app-crypt/gpgme-0.9.0 )
-	sasl?   ( >=cyrus-sasl-2 )"
+	sasl?   ( >=dev-libs/cyrus-sasl-2 )"
 DEPEND="${RDEPEND}
 	net-mail/mailbase"
 
