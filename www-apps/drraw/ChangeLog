@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/drraw
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/ChangeLog,v 1.1 2004/08/29 10:59:53 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/ChangeLog,v 1.2 2004/08/30 19:12:27 rl03 Exp $
+
+  30 Aug 2004; Renat Lumpau <rl03@gentoo.org> drraw-2.0.1.ebuild:
+  Fixed DEPEND/RDEPEND
 
 *drraw-2.0.1 (29 Aug 2004)
 
