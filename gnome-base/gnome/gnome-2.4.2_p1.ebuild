@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.1 2004/02/14 18:47:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2_p1.ebuild,v 1.2 2004/02/17 16:47:32 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -12,8 +12,8 @@ IUSE="cdr dvdr doc accessibility samba"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
+# DEV ONLY EBUILD
+KEYWORDS="~x86"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -52,7 +52,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomeui-2.4.0.1
 
 	>=dev-libs/libxml2-2.6.6
-	>=dev-libs/libxslt-1.1.2
+	>=dev-libs/libxslt-1.1.3
 
 	>=gnome-extra/acme-2.4.2-r1
 	>=gnome-extra/bug-buddy-2.4.2
@@ -62,7 +62,6 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/eel-2.4.2
 	>=gnome-base/nautilus-2.4.2
 	>=gnome-extra/nautilus-media-0.3.3.1
-
 
 	!hppa? ( >=net-www/epiphany-1.0.7 )
 
@@ -99,7 +98,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgtop-2.0.8
 	>=gnome-base/librsvg-2.4
 	>=x11-libs/libwnck-2.4.0.1-r1
-	>=x11-wm/metacity-2.6.3
+	>=x11-wm/metacity-2.6.5
 	>=gnome-extra/zenity-1.8
 
 	>=x11-libs/startup-notification-0.5
@@ -125,7 +124,7 @@ RDEPEND="!gnome-base/gnome-core
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.29
+	>=dev-util/intltool-0.30
 	doc? ( >=dev-util/gtk-doc-1.1 )"
 
 pkg_postinst () {
