@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.10.ebuild,v 1.2 2000/08/16 04:38:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.10.ebuild,v 1.3 2000/09/15 20:08:57 drobbins Exp $
 
 P=abiword-0.7.10
 A="abi-0.7.10.tar.gz abidistfiles-0.7.10.tar.gz expat-0.7.10.tar.gz 
@@ -24,12 +24,12 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  make prefix=/opt/gnome/ UNIX_CAN_BUILD_STATIC=0
+  try make prefix=/opt/gnome/ UNIX_CAN_BUILD_STATIC=0
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/opt/gnome  UNIX_CAN_BUILD_STATIC=0 install
+  try make prefix=${D}/opt/gnome  UNIX_CAN_BUILD_STATIC=0 install
 }
 
 
