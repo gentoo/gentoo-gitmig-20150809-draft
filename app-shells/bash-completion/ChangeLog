@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.78 2004/11/09 12:30:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.79 2004/11/12 10:57:56 ka0ttic Exp $
+
+*bash-completion-20041017-r1 (12 Nov 2004)
+
+  12 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +bash-completion-20041017-r1.ebuild:
+  Don't install subversion completion since >=dev-util/subversion-1.1.1-r1
+  provides a much better one.
 
   09 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> files/bash-completion:
   Updated profile.d file to also source anything in ~/.bash_completion.d
