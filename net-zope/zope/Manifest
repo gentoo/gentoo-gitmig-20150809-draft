@@ -2,9 +2,9 @@ MD5 05451aa19ac4681fd16a5a480f1c7ea5 zope-2.7.1.ebuild 3860
 MD5 63ef64592d4abf31e444d6cce4228ada zope-2.7.2-r1.ebuild 5042
 MD5 95db19264fc46abc1bf3fd25469fcc56 zope-2.6.4-r1.ebuild 5359
 MD5 a7b4f0510d44c03e310bf769fee46b18 zope-2.7.2.ebuild 4745
-MD5 fa1477fc8cd7e7c005566f85df69c613 ChangeLog 8216
+MD5 0d5ff9dac960d9b84c6c119323e57050 ChangeLog 8302
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 678ea438136a95374ceac49820c51650 zope-2.7.2-r2.ebuild 3300
+MD5 5c45b90a744a1f1fbbe99e0ed2d65a71 zope-2.7.2-r2.ebuild 3301
 MD5 ddddbf81a9803fef7474cb22df00a924 files/digest-zope-2.6.4-r1 64
 MD5 c8b31c146de4f24ffcb5442630034d50 files/digest-zope-2.7.2-r1 62
 MD5 c8b31c146de4f24ffcb5442630034d50 files/digest-zope-2.7.2-r2 62
