@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.112.1.ebuild,v 1.1 2004/02/14 16:07:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.112.1.ebuild,v 1.2 2004/02/21 11:41:58 spider Exp $
 
 inherit gnome2 flag-o-matic eutils
 
@@ -21,7 +21,8 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0"
+	>=dev-util/pkgconfig-0.12.0
+	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS CHANGES ChangeLog COPYING INSTALL NEWS README*"
 
