@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.5.93.ebuild,v 1.1 2004/03/20 12:47:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.6.0.ebuild,v 1.1 2004/03/22 23:37:34 foser Exp $
 
 inherit gnome2 eutils
 
@@ -39,12 +39,20 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# should fix parallel install #45315
+	epatch ${FILESDIR}/${PN}-2.6-parallel_install.patch
+
+}
+
+src_compile() {
+
+	gnome2_src_configure
+
 	# FIXME : uh yeah, this is nice
 	# We should patch in a switch here and send it upstream
-	sed -i 's:--load:-v:' gnome-panel/Makefile.am
+	sed -i 's:--load:-v:' gnome-panel/Makefile || die
 
-	WANT_AUTOMAKE=1.7 aclocal || die
-	WANT_AUTOMAKE=1.7 automake || die
+	emake || die
 
 }
 

@@ -1,0 +1,24 @@
+diff -ru gnome-panel-2.5.93/gnome-panel/Makefile.am gnome-panel-2.5.93-new/gnome-panel/Makefile.am
+--- gnome-panel-2.5.93/gnome-panel/Makefile.am	2004-02-06 10:04:50.000000000 -0600
++++ gnome-panel-2.5.93-new/gnome-panel/Makefile.am	2004-03-21 15:30:23.935813144 -0600
+@@ -43,7 +43,7 @@
+ 	GNOME_Panel-stubs.c	\
+ 	GNOME_Panel-skels.c	\
+ 	GNOME_Panel-common.c	\
+-	GNOME_Panel.h		\
++	$(top_builddir)/gnome-panel/GNOME_Panel.h		\
+ 	$(NULL)
+ 
+ $(CORBA_SRCLIST): $(top_srcdir)/idl/GNOME_Panel.idl $(ORBIT_IDL)
+diff -ru gnome-panel-2.5.93/gnome-panel/Makefile.in gnome-panel-2.5.93-new/gnome-panel/Makefile.in
+--- gnome-panel-2.5.93/gnome-panel/Makefile.in	2004-03-15 05:47:50.000000000 -0600
++++ gnome-panel-2.5.93-new/gnome-panel/Makefile.in	2004-03-21 15:30:33.409372944 -0600
+@@ -273,7 +273,7 @@
+ 	GNOME_Panel-stubs.c	\
+ 	GNOME_Panel-skels.c	\
+ 	GNOME_Panel-common.c	\
+-	GNOME_Panel.h		\
++	$(top_builddir)/gnome-panel/GNOME_Panel.h		\
+ 	$(NULL)
+ 
+ 
