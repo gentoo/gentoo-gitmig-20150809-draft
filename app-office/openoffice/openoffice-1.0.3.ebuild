@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.4 2003/04/10 21:20:36 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.5 2003/04/10 22:27:19 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -369,8 +369,9 @@ src_compile() {
 	# Enable ccache for this build (Az)
 	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -d /usr/bin/ccache -a -x /usr/bin/ccache/ccache ]
+	     -x /usr/bin/ccache ]
 	then
+		einfo "We're using ccache for this build..."
 		# Build uses its own env with $PATH, etc, so
 		# we take the easy way out. (Az)
 		export CC="/usr/bin/ccache ${CC}"
@@ -382,6 +383,7 @@ src_compile() {
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
 		 -x /usr/bin/distcc ]
 	then
+		einfo "We're using distcc for this build..."
 		# Do not bump ECPUS if the user did not touch it, as currently
 		# it -PP do not work properly (segfaulting). (Az)
 		[ "$(echo ${DISTCC_HOSTS} | wc -w)" -gt 1 -a "${ECPUS}" -qt 1 ] && \
