@@ -82,3 +82,4 @@ move app-sci/generic-genome-browser sci-biology/generic-genome-browser
 move app-sci/emboss sci-biology/emboss
 move app-sci/embassy-domainatrix sci-biology/embassy-domainatrix
 move app-sci/embassy-emnu sci-biology/embassy-emnu
+move app-sci/embassy-esim4 sci-biology/embassy-esim4
