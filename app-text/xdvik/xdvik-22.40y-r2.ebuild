@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.8 2004/10/16 10:26:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.9 2004/10/17 01:59:48 usata Exp $
 
 inherit eutils
 
@@ -15,15 +15,14 @@ SRC_URI="mirror://sourceforge/xdvi/${MY_P}.tar.gz
 	cjk? ( http://www.nn.iij4u.or.jp/~tutimura/tex/${XDVIK_JP}.patch.gz )"
 HOMEPAGE="http://sourceforge.net/projects/xdvi/"
 
-KEYWORDS="x86 alpha ppc sparc ~amd64 ppc64"
+KEYWORDS="x86 alpha amd64 arm hppa ia64 macos ppc ppc64 ppc-macos sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/t1lib-1.3
-	app-text/ptex
-	!app-text/tetex
 	virtual/x11
-	cjk? ( media-fonts/kochi-substitute )
+	virtual/tetex
+	cjk? ( >=media-libs/freetype-2 )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
 
 src_unpack () {

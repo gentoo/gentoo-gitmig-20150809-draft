@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.16 2004/10/16 10:26:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.17 2004/10/17 01:59:48 usata Exp $
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/xdvik-22.40y-j1.17-vfontcap-gentoo.diff, -xdvik-22.40y-r1.ebuild,
+  xdvik-22.40y-r2.ebuild:
+  Added all arches from tetex-2.0.2-r3.
 
 *xdvik-22.84.3 (16 Oct 2004)
 
