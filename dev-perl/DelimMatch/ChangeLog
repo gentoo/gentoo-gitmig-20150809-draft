@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DelimMatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.14 2004/07/04 08:14:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.15 2004/12/24 15:03:46 nigoro Exp $
+
+  25 Dec 2004; Yuta SATOH <nigoro@gentoo.org> DelimMatch-1.06.ebuild:
+  added ~ppc64
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> DelimMatch-1.06.ebuild:
   Stable on alpha.
