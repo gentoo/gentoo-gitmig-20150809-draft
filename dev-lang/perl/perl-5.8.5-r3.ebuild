@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r3.ebuild,v 1.1 2005/01/26 17:11:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5-r3.ebuild,v 1.2 2005/02/05 12:05:51 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -123,6 +123,13 @@ src_unpack() {
 
 	# An additional tempfile patch, bug 75696
 	epatch ${FILESDIR}/file_path_rmtree.patch
+
+	# Bug 80460, perlsuid vulnerability
+	if use perlsuid
+	then
+		epatch ${FILESDIR}/CAN-2005-0156-suid.patch
+	fi
+
 
 }
 
