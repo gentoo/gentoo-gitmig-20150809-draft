@@ -1,7 +1,17 @@
-MD5 9dc2eb4b39644f50088f3b9183b3dc57 ChangeLog 863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6cdd17500c27fc133c3ea6977843aa3a mondo-0.9a.ebuild 1070
+MD5 d6b2b440bea903881099df4fffd67295 mondo-0.9.ebuild 986
+MD5 b38919a3c4bde3506472ab7bd02e4b36 ChangeLog 1166
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9a277bde6d5535adaf0c188e303b3f38 mondo-0.9.ebuild 990
-MD5 a17913b59805212b40b2741c5dad3a35 mondo-0.9a.ebuild 1072
-MD5 31a789bf3b48f4401438830acf457686 files/digest-mondo-0.9 62
 MD5 132f0055743c53c2748b6f0e7b8ad2bb files/mondo.sh 643
 MD5 5722aa0fa20a3f7a76b2dad8860a1f50 files/digest-mondo-0.9a 63
+MD5 31a789bf3b48f4401438830acf457686 files/digest-mondo-0.9 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIeHDI1lqEGTUzyQRAkmKAKC6Ue0lGLE8GPeDjP4+DrQyvXmb4wCfaYkQ
+Y0Vc2mYehMcs09rb1YXvsIE=
+=jcP/
+-----END PGP SIGNATURE-----
