@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.8 2002/10/04 05:49:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.9 2002/10/05 05:39:15 drobbins Exp $
+
+IUSE="mpeg arts esd x86 sdl oggvorbis alsa"
 
 LIBVER="0.0.6"
 

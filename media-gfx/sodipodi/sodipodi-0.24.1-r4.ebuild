@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r4.ebuild,v 1.5 2002/10/04 05:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.24.1-r4.ebuild,v 1.6 2002/10/05 05:39:15 drobbins Exp $
+
+IUSE="nls bonobo"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Vector illustrating application for GNOME"

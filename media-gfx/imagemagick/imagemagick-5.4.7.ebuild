@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.ebuild,v 1.8 2002/10/04 05:45:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.ebuild,v 1.9 2002/10/05 05:39:15 drobbins Exp $
+
+IUSE="perl X cups xml2 lcms"
 
 inherit libtool
 inherit perl-module

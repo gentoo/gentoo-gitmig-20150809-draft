@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.6 2002/10/04 05:45:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.7 2002/10/05 05:39:15 drobbins Exp $
+
+IUSE="icc X svga version"
 
 S=${WORKDIR}/povray31
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
