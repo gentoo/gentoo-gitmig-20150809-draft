@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.13 2004/07/30 14:54:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.14 2004/07/31 02:51:37 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -27,10 +27,9 @@ DEPEND=">=x11-libs/gtk+-2.0
 	dev-libs/nss
 	gnutls? ( net-libs/gnutls )
 	krb4? ( app-crypt/mit-krb5 )
-	!mips? (
-		evo? ( mail-client/evolution )
-		silc? ( >=net-im/silc-toolkit-0.9.12-r2 )
-	)"
+	silc? ( >=net-im/silc-toolkit-0.9.12-r2 )
+	evo? ( mail-client/evolution )"
+
 PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.28 )"
 
 print_gaim_warning() {
@@ -97,11 +96,9 @@ src_compile() {
 		myconf="${myconf} --enable-gnutls=no"
 	fi
 
-	if ! use mips ; then
-		if use silc ; then
-			myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit"
-			myconf="${myconf} --with-silc-libs=/usr/lib"
-		fi
+	if use silc ; then
+		myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit"
+		myconf="${myconf} --with-silc-libs=/usr/lib"
 	fi
 
 	myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
