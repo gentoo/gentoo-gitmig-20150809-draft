@@ -1,6 +1,10 @@
 # ChangeLog for net-www/twiki
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.1 2003/12/30 17:11:48 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/twiki/ChangeLog,v 1.2 2004/01/22 23:53:14 mholzer Exp $
+
+  23 Jan 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild,
+  files/twiki.conf:
+  running outside of apache
 
 *twiki-20030201 (30 Dec 2003)
 
