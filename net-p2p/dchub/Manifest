@@ -3,8 +3,8 @@ MD5 9b23fa9a42452dd224a6bd2e998b6e33 dchub-0.4.2.ebuild 813
 MD5 d0bed7ae81ec6807d3919f14233b419f dchub-0.5.2.ebuild 832
 MD5 786d1c4327c37c5308cf8b90bb5f94cc ChangeLog 1691
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 7d38dc5d741350afaaf012d84161eb2b files/dchub.init.d 1024
+MD5 8c69e07d3efd31080f8cd768d75dd7ad files/dchub.init.d 1018
 MD5 36c3b6cc0ed725ab1641de5616d1d921 files/digest-dchub-0.4.2 63
 MD5 af7c25da6383293d6532c8fe53e0abe1 files/digest-dchub-0.4.5 63
 MD5 592f7f777a42dffa24db7fde87dc2dcb files/digest-dchub-0.5.2 63
-MD5 017dd28ae9744ecfdaa5cb9adbc79c32 files/dchub.conf.d 1616
+MD5 3be14814c18259089fe0aa301a4eb6af files/dchub.conf.d 1610
