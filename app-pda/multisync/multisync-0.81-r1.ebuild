@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.3 2004/01/14 14:00:09 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.1 2004/01/14 14:00:09 tad Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 
@@ -28,11 +28,7 @@ DEPEND="virtual/glibc
 		>=gnome-base/libgnome-2.2
 		>=gnome-base/ORBit2-2.8.2
 		>=dev-libs/openssl-0.9.6j
-		evo?  ( gtk2? ( =net-mail/evolution-1.4*
-				=x11-libs/gtk+-2* ) :
-		      ( =net-mail/evolution-1.2*
-				=x11-libs/gtk+-1* )
-		)
+		evo?  ( =net-mail/evolution-1.4* )
 		irmc? ( >=sys-apps/irda-utils-0.9.15
 		         >=net-wireless/bluez-utils-2.3
 		         >=dev-libs/openobex-1.0.0 )
