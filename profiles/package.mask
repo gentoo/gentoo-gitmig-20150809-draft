@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (16 Apr 2003)
+# not yet released
+=app-office/koffice-1.3_beta1
+
 # <danarmak@gentoo.org> (15 Apr 2003)
 # qt with custom CFLAGS - might be dangrous but you're welcome to test :-)
 =x11-libs/qt-3.1.2-r2
