@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.1 2002/07/19 20:11:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/setiathome-3.03-r1.ebuild,v 1.2 2002/07/19 20:52:43 rphillips Exp $
 
 # generic archive name, this should be a link to the real archive
 A="${P}.tar"
@@ -19,6 +19,8 @@ DEPEND=">=virtual/glibc-2.1
 		>=sys-apps/baselayout-1.8.0"
 RDEPEND=">=virtual/glibc-2.1
 	X? ( x11-base/xfree )"
+SLOT="0"
+LICENSE="proprietary"
 
 src_unpack () {
 	if [ ! -e ${DISTDIR}/${A} ] ; then
