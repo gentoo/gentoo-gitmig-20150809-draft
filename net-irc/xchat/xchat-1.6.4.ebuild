@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.6.4.ebuild,v 1.2 2001/06/05 19:43:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.6.4.ebuild,v 1.3 2001/06/11 11:23:02 hallski Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -9,7 +9,9 @@ DESCRIPTION="xchat"
 SRC_URI="http://www.xchat.org/files/source/1.6/"${A}
 HOMEPAGE="http://www.xchat.org/"
 
-DEPEND=">=gnome-base/gdk-pixbuf-0.11.0 nls? ( >=sys-devel/gettext-0.10.38 )
+DEPEND=">=gnome-base/gdk-pixbuf-0.11.0 
+        perl? ( sys-devel/perl )
+	nls? ( >=sys-devel/gettext-0.10.38 )
 	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
         ssl? ( >=dev-libs/openssl-0.9.6a )"
 
@@ -26,7 +28,8 @@ src_unpack() {
 src_compile() {
 
   local myopts
-  if [ -n "`use gnome`" ]
+
+  if [ "`use gnome`" ]
   then
 	myopts="--enable-gnome --enable-panel --prefix=/opt/gnome"
   else
@@ -34,12 +37,15 @@ src_compile() {
   fi
   if [ "`use ssl`" ] ; then
         myopts="$myopts --enable-openssl"
-  fi
+  fi 
+  if [ -z "`use perl`" ] ; then
+        myopts="$myopts --disable-perl"
+  fi 
   if [ -z "`use nls`" ] ; then
         myopts="$myopts --disable-nls"
   fi
-  try ./configure --host=${CHOST} --disable-perl --disable-python ${myopts}
-  try make
+  try ./configure --host=${CHOST} --disable-python ${myopts}
+  try pmake
 }
 
 src_install() {
