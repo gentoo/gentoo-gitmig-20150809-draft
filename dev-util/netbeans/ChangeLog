@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.16 2004/04/15 16:29:17 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.17 2004/04/22 17:33:21 mholzer Exp $
+
+*netbeans-3.6 (22 Apr 2004)
+
+  22 Apr 2004; Martin Holzer <mholzer@gentoo.org> netbeans-3.6.ebuild:
+  Verison bumped. Closes 48202
 
   15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> netbeans-3.5.1.ebuild:
   marked ~amd64
