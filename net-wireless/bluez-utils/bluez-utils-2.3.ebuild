@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3.ebuild,v 1.2 2003/05/09 16:16:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.3.ebuild,v 1.3 2003/05/21 17:55:37 latexer Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -8,11 +8,12 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="gtk"
 DEPEND="sys-devel/bison
 		sys-devel/flex
 		>=net-wireless/bluez-libs-2.4"
-RDEPEND=">=net-wireless/bluez-libs-2.4"
+RDEPEND=">=net-wireless/bluez-libs-2.4
+		 gtk? ( >=dev-python/pygtk-0.6.11 )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -20,14 +21,20 @@ src_unpack() {
 	# Fix some installation locations
 
 	for dir in rfcomm tools; do
-		mv $dir/Makefile.in ${T}/Makefile.in
+		mv -f $dir/Makefile.in ${T}/Makefile.in
 		sed -e "s:\$(prefix)/usr/share/man:\@mandir\@:" \
 			${T}/Makefile.in > $dir/Makefile.in;
 	done
 
-	mv hcid/Makefile.in ${T}/Makefile.in
+	mv -f hcid/Makefile.in ${T}/Makefile.in
 	sed -e "s:\$(prefix)/etc/bluetooth:/etc/bluetooth:" \
 		${T}/Makefile.in > hcid/Makefile.in
+	
+	if [ ! `use gtk` ]; then
+		mv -f scripts/Makefile.in ${T}/Makefile.in
+		sed -e "s:= bluepin:= :" \
+			${T}/Makefile.in > scripts/Makefile.in
+	fi
 }
 
 src_compile() {
