@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Maintainer: Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.2 2002/04/27 21:46:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.3 2002/04/29 08:49:21 bangert Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,11 +18,8 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 
 	#make sure stuff get's installed the right places
-	mv configure configure.orig
-	sed -e "s:^cgidir=.*:cgidir=\"/etc/vmailmgr/cgi-bin\":" \
-		-e "s:^phpdir=.*:phpdir=\"/etc/vmailmgr/php\":" \
-		configure.orig > configure
-	chmod ug+x configure
+	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+
 }
 
 src_compile() {
@@ -39,7 +36,7 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 
-	#add documentation
+	dodoc AUTHORS INSTALL README TODO NEWS
 
 	exeinto /var/lib/supervise/vmailmgrd
 	newexe ${S}/scripts/vmailmgrd.run run
@@ -51,8 +48,10 @@ src_install () {
 	newexe ${S}/scripts/autoresponder.sh vdeliver-postdeliver
 
 	doexe ${FILESDIR}/checkvpw-loginfail
-	doexe ${FILESDIR}/socket-file
-	doexe ${FILESDIR}/separators
+	
+	insinto /etc/vmailmgr
+	doins ${FILESDIR}/socket-file
+	doins ${FILESDIR}/separators
 
 }
 

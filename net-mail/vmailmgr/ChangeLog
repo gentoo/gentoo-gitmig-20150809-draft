@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.2 2002/04/27 21:46:45 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.3 2002/04/29 08:49:21 bangert Exp $
+
+  29 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
+
+  fix install locations for the courier-imap auth lib and php and cgi scripts
 
 *vmailmgr-0.96.9-r1 (16 Apr 2002)
 
