@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/shc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.1 2003/01/06 05:26:09 george Exp $
+
+*shc-3.4.ebuild (05 Jan 2003)
+
+  05 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, shc-3.4.ebuild, files/digest-shc-3.4 :
+  initial release (#12633)
+  ebuild submitted by Tom <Eckert.Thomas@gmx.net>.
+  shc is a compiler/scrambler for interpreter-languages. As long as the
+  interpreter can read it's script from the command-line you can use shc
+  to hide your code -- well this is not very open-source like, but
+  sometimes this may be wanted. The main-target was shell-code.
