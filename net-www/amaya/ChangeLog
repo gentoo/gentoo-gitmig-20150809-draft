@@ -1,6 +1,12 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.2 2002/06/02 13:04:47 stroke Exp $
+
+*amaya-6.1 (2 June 2002)
+  
+  2 June 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog:
+ 
+  New release.  
 
 *amaya-4.1-r1 (1 Feb 2002)
 
