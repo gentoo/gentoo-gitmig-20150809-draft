@@ -55,3 +55,4 @@ move dev-java/bluej dev-java/bluej-bin
 move dev-java/cryptix-jce-bin dev-java/cryptix-jce-bin
 move dev-java/datavision dev-java/datavision-bin
 move dev-java/dbconnectionbroker dev-java/dbconnectionbroker-bin
+move dev-java/dbunit dev-java/dbunit-bin
