@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.17 2003/05/25 21:34:18 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.18 2003/06/01 00:09:32 pebenito Exp $
+
+  31 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003040709-r2.ebuild, files/newrole, files/run_init:
+  Fix dep back to pam to fix circular dependancy. Install /etc/pam.d files from
+  FILESDIR.
 
   25 May 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-small-2003011510-r4.ebuild, selinux-small-2003040709-r1.ebuild,

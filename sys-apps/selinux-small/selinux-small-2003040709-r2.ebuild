@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r2.ebuild,v 1.2 2003/05/25 21:34:18 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r2.ebuild,v 1.3 2003/06/01 00:09:32 pebenito Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
 	sys-devel/flex
-	sys-apps/shadow
+	sys-libs/pam
         || (
                 >=sys-kernel/selinux-sources-2.4.20-r1
                 >=sys-kernel/hardened-sources-2.4.20-r1
@@ -116,9 +116,8 @@ src_install() {
 	doexe ${S}/devfsd/devfsd-se.so
 
 	# install pam stuff
-	dodir /etc/pam.d
-	sed "/pam_rootok.so/d" /etc/pam.d/su > ${D}/etc/pam.d/newrole
-	cp ${D}/etc/pam.d/newrole ${D}/etc/pam.d/run_init
+	insinto /etc/pam.d
+	doins ${FILESDIR}/{newrole,run_init}
 }
 
 pkg_postinst() {
