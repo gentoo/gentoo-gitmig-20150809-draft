@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.46 2003/01/20 01:44:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.47 2003/01/21 22:08:55 azarah Exp $
+
+  21 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc3.ebuild :
+
+  Add --with-x11incdir=/usr/X11R6/include as a temporary fix for bug #14311.
 
 *mplayer-0.90_rc3 (20 Jan 2003)
 
