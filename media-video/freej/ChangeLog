@@ -1,6 +1,9 @@
 # ChangeLog for media-video/freej
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/freej/ChangeLog,v 1.1 2004/11/20 02:03:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/freej/ChangeLog,v 1.2 2004/11/30 16:35:36 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Fixed herd in metadata.xml.
 
 *freej-0.7 (20 Nov 2004)
 
