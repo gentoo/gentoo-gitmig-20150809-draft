@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-1.8.2.ebuild,v 1.4 2004/06/25 02:23:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.0.5.ebuild,v 1.1 2005/01/01 13:58:19 dragonheart Exp $
 
 inherit debug flag-o-matic
 
-SHORT_PV=1.8
+SHORT_PV=2.0
 
 DESCRIPTION="Cross platform Make"
 HOMEPAGE="http://www.cmake.org/"
@@ -12,10 +12,10 @@ SRC_URI="http://www.cmake.org/files/v${SHORT_PV}/${P}.tar.gz"
 
 LICENSE="CMake"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE=""
 
-DEPEND="sys-libs/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	strip-flags
@@ -29,4 +29,5 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "install failed"
+	mv ${D}usr/share/doc/cmake ${D}usr/share/doc/${PF}
 }
