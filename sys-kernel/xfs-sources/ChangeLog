@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.37 2004/01/07 13:55:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.38 2004/01/20 22:03:37 livewire Exp $
+
+*xfs-sources-2.4.24 (20 Jan 2004)
+
+  20 Jan 2004; <livewire@gentoo.org> xfs-sources-2.4.24.ebuild,
+  xfs-sources-2.4.23-r1.ebuild:
+  marked 2.4.23-r1 stable
+  bumped to 2.4.24
+  added: proconfig,ecc,speakup,forcedeth
 
 *xfs-sources-2.4.19-r3 (07 Jan 2004)
 
