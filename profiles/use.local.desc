@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.147 2003/10/21 22:15:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.148 2003/10/25 03:26:36 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -58,6 +58,7 @@ dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-python/anygui:wxwin - enable wxwin support
+dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
