@@ -1,5 +1,5 @@
-MD5 2ba0597f788c0dd2ba56f9e1d2c54b9e ChangeLog 327
+MD5 dd6d735465bf2f19f85fafd33025c9ad ChangeLog 321
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 1a2dc502c09b69efe6ea28dcaef92650 python-levenshtein-0.10.ebuild 854
+MD5 1344aa752bae586d3c108b5f74ecb0df python-levenshtein-0.10.ebuild 848
 MD5 9386c7a55d7d4bd7aa2d653baac0e31a files/genextdoc.py 7030
 MD5 b70cf5172bba268fb303713db9f5dd3e files/digest-python-levenshtein-0.10 75
