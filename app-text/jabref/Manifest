@@ -1,4 +1,6 @@
+MD5 e72860e63a5da28e149678d7e6c2ac1d jabref-1.19.ebuild 874
 MD5 a222dd517868c9b0b091596aebd4d7f4 jabref-1.1.ebuild 732
-MD5 1b1862f01c3a680bde5c4bfbd0d5a89a ChangeLog 410
+MD5 c34a1a85411db7728f7f94d0ccc00fe7 ChangeLog 487
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 e927012f660b4432b66708f29b366faa files/digest-jabref-1.1 67
+MD5 420caba01b5b5b9ba1354dd226a690b4 files/digest-jabref-1.19 68

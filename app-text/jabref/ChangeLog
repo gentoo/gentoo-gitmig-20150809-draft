@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.1 2004/02/16 17:52:56 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.2 2004/02/20 01:09:52 zx Exp $
+
+  19 Feb 2004; Chris Aniszczyk <zx@gentoo.org> :
+  Version bump. Bug #42190
 
 *jabref-1.1 (16 Feb 2004)
 
