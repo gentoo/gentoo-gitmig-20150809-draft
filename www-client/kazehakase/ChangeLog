@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.5 2005/03/25 14:06:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.6 2005/03/25 16:36:08 nakano Exp $
+
+  25 Mar 2005; Masatomo Nakano <nakano@gentoo.org> kazehakase-0.2.5.ebuild:
+  Removed !kazehakase-cvs dependency since conflict problem has been removed.
 
   25 Mar 2005; Masatomo Nakano <nakano@gentoo.org>
   +files/kazehakase-0.2.5-gentoo.patch, kazehakase-0.2.5.ebuild:

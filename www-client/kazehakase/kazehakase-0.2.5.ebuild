@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.5.ebuild,v 1.3 2005/03/25 14:06:38 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.5.ebuild,v 1.4 2005/03/25 16:36:08 nakano Exp $
 
 inherit eutils
 
@@ -22,9 +22,6 @@ DEPEND=">=www-client/mozilla-1.7
 	migemo? ( || ( app-text/migemo app-text/cmigemo ) )
 	estraier? ( app-text/estraier )
 	thumbnail? ( virtual/ghostscript )"
-
-RDEPEND="${DEPEND}
-	!www-client/kazehakase-cvs"
 
 pkg_setup(){
 	local moz_use="$(</var/db/pkg/`best_version www-client/mozilla`/USE)"
