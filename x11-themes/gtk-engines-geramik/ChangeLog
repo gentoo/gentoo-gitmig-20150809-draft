@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-geramik
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.9 2003/05/02 17:00:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/ChangeLog,v 1.10 2003/06/02 18:49:03 brad Exp $
+
+*gtk-engines-geramik-0.24 (02 June 2003)
+
+  02 June 2003; Brad Laue brad@gentoo.org> gtk-engines-geramik-0.24* :
+  Mark stable
 
 *gtk-engines-geramik-0.24 (02 May 2003)
 
