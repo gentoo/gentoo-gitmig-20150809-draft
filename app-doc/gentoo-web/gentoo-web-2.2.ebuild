@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.20 2001/10/06 17:22:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.21 2001/10/10 21:39:31 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -25,18 +25,24 @@ src_install() {
 	local x
 	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial
 	do
-		xsltproc xsl/guide-main.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html || die
+		xsltproc xsl/resume-html.xsl xml/${x}.xml > ${D}/usr/local/httpd/htdocs/doc/${x}.html || die
 	done
 	dodir /usr/local/httpd/htdocs/images
 	insinto /usr/local/httpd/htdocs/images
 	cd ${FILESDIR}/images
-	doins paypal.png gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-* keychain-2.gif
+	doins paypal.png gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-* keychain-2.gif gentoo-2.gif
 	insinto /usr/local/httpd/htdocs
 	doins favicon.ico
+	
+
+	
 	#dynamic firewalls tools page
 	cd ${FILESDIR}
 	xsltproc xsl/guide-main.xsl xml/dynfw.xml > ${D}/usr/local/httpd/htdocs/projects/dynfw.html	|| die
 	xsltproc xsl/guide-main.xsl xml/project-xml.xml > ${D}/usr/local/httpd/htdocs/projects/xml.html	|| die
+	
+	#resume
+	xsltproc xsl/resume-html.xsl xml/resume.xml > ${D}/usr/local/httpd/htdocs/resume.html || die
 	
 	#both URLs should work
 	dodir /usr/local/httpd/htdocs/projects/keychain
@@ -52,12 +58,12 @@ src_install() {
 	
 	insinto /usr/local/httpd/htdocs
 
-	xsltproc xsl/guide-main.xsl xml/main-news.xml > ${D}/usr/local/httpd/htdocs/index.html || die
-	xsltproc xsl/guide-main.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index-about.html || die
-	xsltproc xsl/guide-main.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html || die
-	xsltproc xsl/guide-main.xsl xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html || die
+	xsltproc xsl/resume-html.xsl xml/main-news.xml > ${D}/usr/local/httpd/htdocs/index.html || die
+	xsltproc xsl/resume-html.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index-about.html || die
+	xsltproc xsl/resume-html.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html || die
+	xsltproc xsl/resume-html.xsl xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html || die
 
-	doins css/main-new.css
+	doins css/main-new.css css/resume.css
 	
 	#install XSL for later use
 	dodir /usr/local/httpd/htdocs/xsl

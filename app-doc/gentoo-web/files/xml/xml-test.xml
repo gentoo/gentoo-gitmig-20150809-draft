@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<guide>
+<title>Gentoo Linux Documentation Guide</title>
+<author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
+
+<abstract>This guide shows you how to compose web documentation using the new lightweight Gentoo guide
+XML syntax.  This syntax is the official format for Gentoo Linux documentation, and this document
+itself was created using guide XML.  This guide assumes a basic working knowledge of XML and HTML.
+</abstract>
+
+<version>1.0</version>
+<date>29 Mar 2001</date>
+
+<chapter>
+<title>Guide basics</title>
+
+<section>
+<title>Guide XML design goals</title>
+<body>
+
+<p> The guide XML syntax is lightweight yet expressive, so that it is easy to
+learn yet also provides all the features we need for the creation of web
+documentation.  The number of tags is kept to a minimum -- just those we need.
+This makes it easy to transform guide into other formats, such as DocBook
+XML/SGML or web-ready HTML.  </p>
+
+<p>The goal is to make it easy to <e>create</e> and <e>transform</e> guide XML
+documents.</p>
+
+</body>
+</section>
+
+</chapter>
+</guide>
+

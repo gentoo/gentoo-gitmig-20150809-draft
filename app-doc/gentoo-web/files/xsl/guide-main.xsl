@@ -38,53 +38,12 @@
 					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
 				</table>
 			</td>
-<!--			<td width="99%" valign="bottom" bgcolor="#000000">
-				<table class="menu" border="0" cellpadding="10" cellspacing="0">
-				<tr>
-					<td valign="top">
-						<xsl:variable name="mylink"><xsl:value-of select="/guide/@link"/></xsl:variable>
-						main menu ::<br/>
-						&#160;<a class="oldlink" href="/index.html">About Gentoo Linux</a><br/>
-						&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> 
-						&#160;<a class="oldlink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a><br/> 
-						&#160;<a class="oldlink" href="/index-changelog.html">CVS Changelog</a><br/> 
-						&#160;<a class="oldlink" href="/index-projects.html">Projects</a><br/> 
-						<br/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<xsl:choose>
-						<xsl:when test="/guide/@type='project'">
-							projects
-						</xsl:when>
-						<xsl:otherwise>
-							docs 
-						</xsl:otherwise>
-						</xsl:choose>
-						::
-						<a class="highlight" href="{$mylink}">
-						<xsl:choose>
-						<xsl:when test="/guide/subtitle">
-							<xsl:value-of select="/guide/title"/>: <xsl:value-of select="/guide/subtitle"/>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="/guide/title"/>
-						</xsl:otherwise>
-						</xsl:choose>
-						</a>
-					</td>
-				</tr>
-				</table>
-			</td>
-		-->
 		</tr>
 		<tr>
 			<td valign="top" align="right" bgcolor="#ffffff">
 		
 <!--content begin-->
 
-<!--Netscape 4.7 hack table start-->
 <!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
 <tr><td width="99%" class="content" valign="top" align="left">
@@ -111,7 +70,7 @@
 <!--		<xsl:variable name="me"><xsl:value-of select="/guide/@link"/></xsl:variable>-->
 		<option value="#{$chapid}"><xsl:number/>. <xsl:value-of select="title"/></option>
 <!--
-		&#160;<xsl:number/>&#160;<a class="altlink" href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
+		&#160;<xsl:number/>&#160;<a  href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
 	<xsl:value-of select="/guide/@link"/>
 	<option value="showdoc.html?i=1514&p=1">Select											
 
@@ -169,7 +128,7 @@
 					Contents:<br/>	
 						<xsl:for-each select="chapter">
 						<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
-						&#160;<xsl:number/>&#160;<a class="altlink" href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
+						&#160;<xsl:number/>&#160;<a  href="#{$chapid}"><xsl:value-of select="title"/></a><br/>
 						</xsl:for-each>		
 					</td>
 				</tr> -->
@@ -239,215 +198,65 @@ of your sale will go towards further Gentoo Linux development.</p>
 <xsl:template match="/mainpage">
 <html>
 <head>
-    <link title="new" rel="stylesheet" href="/main-new.css" type="text/css"></link>
+    <link title="new" rel="stylesheet" href="/resume.css" type="text/css"></link>
 	<title>Gentoo Linux -- <xsl:value-of select="title"/></title>
 </head>
-<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
-	<!--<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">-->
+<body bgcolor="#ffffff">
+	
 	<table border="0" width="100%" cellspacing="0" cellpadding="0">
 		<tr>
-			<td valign="top" height="125" width="1%" bgcolor="#45347b">
-				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="88"><a href="/index.html"><img border="0" src="/images/gtop-s.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="36"><a href="/index.html"><img border="0" src="/images/gbot-s.gif"/></a></td></tr>
-	</table>
+			<td align="left" valign="top">
+			<img src="/images/icon-linux.png"/>
 			</td>
-			
-			<td colspan="2" valign="bottom" align="left" bgcolor="#000000">
-				<p class="menu">
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='news'">
-							<a class="highlight" href="/index.html"> gentoo.org News</a> |
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index.html"> gentoo.org News</a> |
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='about'">
-							<a class="highlight" href="/index-about.html"> About Gentoo Linux</a> |
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index-about.html"> About Gentoo Linux</a> |
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='download'">
-							<a class="highlight" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='changelog'">
-							<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index-changelog.html">CVS Changelog</a> |
-						</xsl:otherwise>
-					</xsl:choose>
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='projects'">
-							<a class="highlight" href="/index-projects.html">Projects</a>
-						</xsl:when>
-						<xsl:otherwise>
-							<a class="menulink" href="/index-projects.html">Projects</a>
-						</xsl:otherwise>
-					</xsl:choose>
-				</p>
+			<td rowspan="2" valign="top">	
+				<!--main area-->
+				<xsl:apply-templates select="chapter"/> 
 			</td>
 		</tr>
 		<tr>
-			<td valign="top" align="right" width="1%" bgcolor="#dddaec">
-				<!--<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">-->
-				<table width="100%" cellspacing="0" cellpadding="0" border="0">
-					<tr><td height="1%" valign="top" align="right">
-							<img src="/images/gridtest.gif"/>
-					</td></tr>
-					<tr><td height="99%" valign="top" align="right">
-						<!--info goes here-->			
-						<table cellspacing="0" cellpadding="5" border="0">
-						<!--<table width="90%" height="100%" cellspacing="0" cellpadding="5" border="0">-->
-						<tr><td valign="top">
-						<p class="altmenu">
-						Download Mirrors:<br/>
-							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
-							<a class="altlink" href="http://cfx5.tgv.net/">tgv.net (France, high speed)</a><br/>
-							<a class="altlink" href="ftp://ftp.ilug-bom.org.in/Linux/distributions/gentoo/">ILUG Bombay (India)</a><br/><br/>
-<a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
-<img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
-User Docs:<br/>
-						<font color="#ff0000">Updated</font> <a class="altlink" href="/doc/faq.html">FAQ</a><br/>
-						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
-						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
-						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
-						<font color="#ff0000">New for 1.0_rc6!</font><a class="altlink" href="/doc/build.html">"From Source" CD Install Guide</a><br/>
-						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
+			<td>
+				<br/><br/>
+				<p>Welcome to gentoo.org, the home of Gentoo Linux</p>
+				<p>
+					Download Mirrors:<br/>
+							<a href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
+							<a href="http://cfx5.tgv.net/">tgv.net (France, high speed)</a><br/>
+							<a href="ftp://ftp.ilug-bom.org.in/Linux/distributions/gentoo/">ILUG Bombay (India)</a><br/><br/>
+
+				</p>
+				<p>
+					User Docs:<br/>
+						<font color="#ff0000">Updated</font> <a href="/doc/faq.html">FAQ</a><br/>
+						<a  href="/doc/desktop.html">Desktop Guide</a><br/>
+						<a  href="/doc/portage-user.html">Portage User Guide</a><br/>
+						<font color="#ff0000">New!</font> <a  href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
+						<font color="#ff0000">New for 1.0_rc6!</font><a  href="/doc/build.html">"From Source" CD Install Guide</a><br/>
+						<a  href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
 						<br/>
 										<a href="http://www.qksrv.net/click-477620-57886" target="_top" >
 					<img src="http://www.qksrv.net/image-477620-57886" width="88" height="31" alt="Online Auto Loans" border="0"/></a><br/><br/>	
+					</p>
 						Developer Docs:<br/>
-						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/cvs-tutorial.html">CVS Tutorial</a><br/>
-						<font color="#ff0000">Updated 21 Sep 2001:</font> <a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
-						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
+						<font color="#ff0000">New!</font> <a  href="/doc/cvs-tutorial.html">CVS Tutorial</a><br/>
+						<font color="#ff0000">Updated 21 Sep 2001:</font> <a  href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
+						<a  href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
 						<br/>
 	
 						Mailing Lists:<br/>
-						<font color="#ff0000">New!</font> <a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/>
-						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo">complete list</a><br/>
+						<font color="#ff0000">New!</font> <a  href="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</a><br/>
+						<a  href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/>
+						<a  href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/>
+						<a  href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/>
+						<a  href="http://cvs.gentoo.org/mailman/listinfo">complete list</a><br/>
 						<br/>
 						Other Resources:<br/>
-						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
-						IRC: #gentoo on <a class="altlink" href="http://www.openprojects.net/">OPN</a><br/>
-						<br/><br/></p></td></tr></table>
-					</td></tr>
-				</table>
-			</td>
-			<td valign="top" align="right" bgcolor="#ffffff">
-				<table border="0" cellspacing="5" cellpadding="0" width="100%">
-				<tr>
-					<td class="content" valign="top" align="left">
-					<xsl:choose>
-						<xsl:when test="/mainpage/@id='news'">
-							<img src="/images/gentoo-new.gif"/>
-							<br/>
-							<br/>
-							<xsl:apply-templates select="newsitems"/>
-						</xsl:when>
-						<xsl:otherwise>
-							<p class="subhead"><xsl:value-of select="/mainpage/title"/></p> 
-							<br/>
-							<xsl:apply-templates select="chapter"/> 
-							<br/>
-							<br/>
-						</xsl:otherwise>
-					</xsl:choose>
-						<!--content end-->
-					</td>
-				</tr>
-				</table>
-			</td>
-			<td width="1%" bgcolor="#dddaec" valign="top">
-				<table border="0" cellspacing="5" cellpadding="0">
-				<tr>
-				<td>
-				<img src="/images/line.gif"/>
-				</td>
-				</tr>
-				<tr>
-				<td align="center" class="alttext">
-					Updated <xsl:value-of select="/mainpage/date"/>
-				</td>
-				</tr>
-				<tr>
-				<td>
-				<img src="/images/line.gif"/>
-				</td>
-				</tr>
-				<tr>
-				<td align="center">
-					<p class="alttext">Support our development efforts by donating via credit card!</p>
-							<!-- Begin PayPal Logo -->
-						<form action="https://www.paypal.com/cgi-bin/webscr" methd="post">
-						<input type="hidden" name="cmd" value="_xclick"/>
-						<input type="hidden" name="business" value="drobbins@gentoo.org"/>
-						<input type="hidden" name="item_name" value="Gentoo Linux Support"/>
-						<input type="hidden" name="item_number" value="1000"/>
-						<input type="hidden" name="image_url" value="http://www.gentoo.org/images/paypal.png"/>
-						<input type="hidden" name="no_shipping" value="1"/>
-						<input type="hidden" name="return" value="http://www.gentoo.org"/>
-						<input type="hidden" name="cancel_return" value="http://www.gentoo.org"/>
-						<input type="image" src="http://images.paypal.com/images/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"/>
-						</form>
-						<!-- End PayPal Logo -->
-				</td>
-				</tr>
-				<tr>
-				<td>
-				<img src="/images/line.gif"/>
-				</td>
-				</tr>
-				<tr>
-				<td align="center">
-					<p class="alttext">Purchase RAM using this link, and a percentage
-of your sale will go towards further Gentoo Linux development.</p>
-<a href="http://www.qksrv.net/click-477620-5032687" target="_top" ><img src="http://www.qksrv.net/image-477620-5032687" width="125" height="125" alt="DDR Memory at Crucial.com" border="0"/></a>
-						<p class="alttext">Why these guys?  Because <b>cvs.gentoo.org</b> and <b>inventor.gentoo.org</b> use high-quality Crucial RAM. We know that it's good stuff because we rely on it ourselves.</p>
-				</td></tr>
-			<tr>
-				<td>
-				<img src="/images/line.gif"/>
-				</td>
-				</tr>
-					</table>
-			</td>
-			<!--
-			<td width="15%" class="infotext" valign="top" align="left" bgcolor="#ddddff">
-				<table border="0" cellspacing="5" cellpadding="0" width="100%">
-				<tr>
-					<td>
-						<br/>
-					</td>
-				</tr>
-			</table>
-			</td>
-			-->
-		</tr>
-		<tr>
-			<td align="right" class="infohead" width="100%" colspan="3" bgcolor="#7a5ada">
-			Copyright 2001 Gentoo
-		Technologies, Inc.  Questions, Comments, Corrections?  Email <a class="highlight"
-		href="mailto:gentoo-dev@gentoo.org">gentoo-dev@gentoo.org</a>.
-			</td>
+						<a  href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
+						IRC: #gentoo on <a  href="http://www.openprojects.net/">OPN</a><br/>
+</td>
 		</tr>
 	</table>
 </body>
 </html>
-
 </xsl:template>
 
 <xsl:template match="newsitems">
@@ -499,7 +308,7 @@ of your sale will go towards further Gentoo Linux development.</p>
 </xsl:template>
 
 <xsl:template match="author/mail">
-	<b><a class="altlink" href="mailto:{@link}"><xsl:value-of select="."/></a></b>
+	<b><a  href="mailto:{@link}"><xsl:value-of select="."/></a></b>
 </xsl:template>
 
 <xsl:template match="author">
