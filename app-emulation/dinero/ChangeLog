@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/dinero
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.1 2003/02/04 06:02:08 lostlogic Exp $
+
+*dinero-4.7 (03 Feb 2003)
+
+  03 Feb 2003; Brandon Low <lostlogic@gentoo.org> dinero-4.7.ebuild,
+  files/digest-dinero-4.7, ChangeLog:
+  New package added to unstable, cache simulator.  I use it for
+  school, maybe you will too.
