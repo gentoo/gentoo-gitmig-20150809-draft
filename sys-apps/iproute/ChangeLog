@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.4 2002/08/05 01:13:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.5 2002/08/05 01:15:03 drobbins Exp $
 
 *iproute-20010824-r1 (04 Aug 2002)
 
@@ -8,7 +8,7 @@
   support, which is now always enabled.  We include a "pkt_sched.h" Linux
   kernel header in our patch that has been htb3-enabled.  This allows us to
   always be able to compile-in htb3 support, even if the local kernel sources
-  don't include such support.
+  don't include such support; this closes bugs #5780, #6018.
 
   04 Aug 2002; Daniel Robbins <drobbins@gentoo.org> We now install Debian's man
   pages which are strangely absent from Debian's binary package.
