@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.1 2003/10/03 11:34:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.2 2003/12/30 12:44:55 mcummings Exp $
+
+  30 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> :
+  No bugs reported against this package. Tested installation and functionality
+  on a sparc and x86, both good.
 
 *Test-Manifest-0.92 (03 Oct 2003)
 
