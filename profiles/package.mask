@@ -1027,11 +1027,6 @@ x11-base/xdirectfb
 # masked coz it's a cvs release
 =x11-wm/blackbox-0.65.0.20020702
 
-# raker@gentoo.org 05 Jul 2002
-# masking unstable gnustep builds
->=dev-util/gnustep-make-1.3.0
->=dev-util/gnustep-base-1.3.0
-
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
 # maintainership.
