@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.51 2004/11/07 23:58:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.52 2004/11/08 00:21:46 tester Exp $
+
+  07 Nov 2004; Olivier Crete <tester@gentoo.org> iptables-1.2.11-r3.ebuild:
+  Stable on x86 per security bug #70240
 
   07 Nov 2004; Jason Wever <weeve@gentoo.org> iptables-1.2.11-r3.ebuild:
   Stable on sparc wrt security bug #70240.
