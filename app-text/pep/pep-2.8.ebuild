@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.6 2004/07/01 12:01:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.7 2004/10/09 21:23:37 usata Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://folk.uio.no/gisle/enjoy/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="x86 ppc ~sparc ~mips"
 IUSE=""
 
 DEPEND="app-arch/unzip
