@@ -1,4 +1,4 @@
-MD5 6567d182a8779018e93b4331acc0598b ChangeLog 6386
+MD5 4075512ba8f05f13257b147e45ca3e97 ChangeLog 6486
 MD5 41bc05dc406a74ccb81469035d595c7f cups-1.1.14-r4.ebuild 3137
 MD5 d5ea1d0e6e41ea35f88c0821f5dd3b4a cups-1.1.15-r2.ebuild 3274
 MD5 66aa54b02f913417a66671dbd634e7ad cups-1.1.16.ebuild 3499
@@ -13,7 +13,7 @@ MD5 5484493b0e4d631f7ccea67f988ff0e6 files/cups-1.1.18-str75.patchv2 7223
 MD5 4d42d58387ed0a01b5f4e49ace9a8c0a files/cups.pam 232
 MD5 543135cac63f9e38f45d656c1b1ef36c files/cups.xinetd 366
 MD5 15f6b6e65285629a82a5d80abec81b1c files/cupsd.conf-1.1.18 20509
-MD5 aa64ed775e375893356f41b7a60f9086 files/cupsd.rc6 505
+MD5 37723ab7b4fdb60035e76e8740dca1f4 files/cupsd.rc6 517
 MD5 7f2456e05feba9417282438030ea7590 files/cupsomatic 38029
 MD5 9f459d1a2164887e23368edc897e0490 files/digest-cups-1.1.14-r4 72
 MD5 2334aff554d1eddef103bf89353495a1 files/digest-cups-1.1.15-r2 74
