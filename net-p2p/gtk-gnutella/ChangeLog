@@ -1,6 +1,8 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.30 2004/06/25 00:33:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.31 2004/07/17 22:16:13 aliz Exp $
+
+*gtk-gnutella-0.94 (15 Jul 2004)
 
 *gtk-gnutella-0.93.4 (24 Jun 2004)
 
