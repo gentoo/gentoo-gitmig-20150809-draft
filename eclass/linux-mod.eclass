@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.8 2004/12/06 22:05:08 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.9 2004/12/06 22:23:17 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -120,7 +120,7 @@ linux-mod_src_compile() {
 	xarch="${ARCH}"
 	unset ARCH	
 
-	for i in "${MODULE_NAMES}"
+	for i in ${MODULE_NAMES}
 	do
 		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
 		modulename="${i/(*/}"
@@ -139,7 +139,7 @@ linux-mod_src_compile() {
 linux-mod_src_install() {
 	local modulename moduledir sourcedir module_temp i
 
-	for i in "${MODULE_NAMES}"
+	for i in ${MODULE_NAMES}
 	do
 		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
 		modulename="${i/(*/}"
