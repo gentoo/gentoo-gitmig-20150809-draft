@@ -1,0 +1,10 @@
+# ChangeLog for app-doc/chmlib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.1 2003/09/10 07:33:04 sergey Exp $
+
+*chmlib-0.31 (10 Sep 2003)
+
+  10 Sep 2003; Sergey Kuleshov <svyatogor@gentoo.org> chmlib-0.31.ebuild:
+  Initial commit of chmlib. Closing the bug #21342. Thanks to Andrew Kirilenko
+  <icedank@gmx.net> for the contributed ebuild.
+
