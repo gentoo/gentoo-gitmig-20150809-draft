@@ -1,0 +1,43 @@
+diff -urpN NVIDIA_kernel-1.0-4349/nv.c NVIDIA_kernel-1.0-4349-2.5.68/nv.c
+--- NVIDIA_kernel-1.0-4349/nv.c	2003-04-22 22:12:56.000000000 +0200
++++ NVIDIA_kernel-1.0-4349-2.5.68/nv.c	2003-04-22 22:11:25.000000000 +0200
+@@ -108,7 +108,7 @@ int           nv_kern_mmap(struct file *
+ unsigned int  nv_kern_poll(struct file *, poll_table *);
+ int           nv_kern_ioctl(struct inode *, struct file *, unsigned int, unsigned long);
+ void          nv_kern_bh(void *);
+-void          nv_kern_isr(int, void *, struct pt_regs *);
++irqreturn_t   nv_kern_isr(int, void *, struct pt_regs *);
+ void          nv_kern_rc_timer(unsigned long);
+ #ifdef CONFIG_PM
+ int           nv_kern_pm(struct pm_dev *dev, pm_request_t rqst, void *data);
+@@ -869,10 +869,10 @@ static void __exit nvidia_exit_module(vo
+     do {
+         int i;
+         for (i = 0; nv_dev_handle[i] != 0; i++) {
+-            devfs_unregister(nv_dev_handle[i]);
++            devfs_remove("nvidia%d", i);
+         }
+     } while(0);
+-    devfs_unregister(nv_ctl_handle);
++    devfs_remove("nvidiactl");
+ #endif
+ }
+ 
+@@ -1594,7 +1594,7 @@ int nv_kern_ioctl(
+  * driver receives an interrupt
+  *    if someone waiting, then hand it off.
+  */
+-void nv_kern_isr(
++irqreturn_t nv_kern_isr(
+     int   irq,
+     void *arg,
+     struct pt_regs *regs
+@@ -1610,6 +1610,8 @@ void nv_kern_isr(
+         NV_ATOMIC_INC(nvl->bh_count);
+         tasklet_schedule(&nvl->tasklet);
+     }
++
++	return IRQ_HANDLED;
+ }
+ 
+ void nv_kern_bh(
