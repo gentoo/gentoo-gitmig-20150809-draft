@@ -1,5 +1,5 @@
-MD5 96390b4426e0204a45d86eb88ea1ba13 cl-fare-matcher-1.1-r1.ebuild 1191
-MD5 5510aa114024d54f2b4309e7b449f10f ChangeLog 589
+MD5 0ae75e1cc3e6aff937d0d3a589f05ed4 ChangeLog 700
+MD5 999096099ad7fd928e3f59101f4cf63c cl-fare-matcher-1.1-r1.ebuild 1198
 MD5 105c51cb859347e43b2224d7d8910b14 cl-fare-matcher-1.1.ebuild 1337
 MD5 f1a4087a6699fbee0e1a4dd995f36f9a metadata.xml 545
 MD5 58343c4e451be25b9a6610466862a60b files/clisp-utf8-gentoo.patch 560

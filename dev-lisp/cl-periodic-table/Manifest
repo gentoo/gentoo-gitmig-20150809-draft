@@ -1,5 +1,5 @@
-MD5 03fabb405c7b171423329204a3f341b2 cl-periodic-table-1.0.ebuild 837
-MD5 cc970213c33e3e3d9509a3dbf5a339d6 ChangeLog 468
+MD5 8668ec27908b15fa2280c6f6862ff62b ChangeLog 578
+MD5 1abc61868999c640a96f7161de7d3b46 cl-periodic-table-1.0.ebuild 844
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 5d6ee097fac58eb3a46edc7b07112feb files/1.0-gentoo.patch 718
 MD5 ff4d847af0d487e5560396419c14ae39 files/digest-cl-periodic-table-1.0 68
