@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/IO-Digest
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/ChangeLog,v 1.1 2004/11/27 05:56:57 pclouds Exp $
+
+*IO-Digest-0.10 (27 Nov 2004)
+
+  27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +IO-Digest-0.10.ebuild:
+  New ebuild
+
