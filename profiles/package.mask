@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3267 2004/10/19 21:43:37 hansmi Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3268 2004/10/20 21:24:43 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -824,13 +824,6 @@ media-libs/id3lib-docs
 # stricter syntax required, easily broken.
 # -taviso 13 Mar 2004
 =x11-misc/habak-0.2.3
-
-# Unmask these two, as the latest (automake-1.6-r1 and autoconf-2.53)
-# should do some autodetection magic.
-#
-# Azarah (26/03/2002)
-#
-<sys-devel/autoconf-2.53a
 
 # broken (achim)
 app-text/sgml2x
