@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.7 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/tclgpgme-1.0.ebuild,v 1.8 2004/06/19 08:08:55 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~sparc"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
