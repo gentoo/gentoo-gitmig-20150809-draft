@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.912 2005/01/28 19:58:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.913 2005/01/29 15:30:32 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -437,6 +437,11 @@ media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/avidemux:a52 - Enables support for decoding ATSC A/52 streams used in DVD
+media-video/avifile:dmalloc - Enable support for the Debug Malloc Library
+media-video/avifile:dpms - Enable support for DPMS
+media-video/avifile:sblive - Enable the AC3 passthrough plugin for SBlive soundcards
+media-video/avifile:v4l - Enable support for the v4l video interface 
+media-video/avifile:vidix - Build the vidix drivers
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/cinelerra-cvs:ffmpeg - Enable ffmpeg support
