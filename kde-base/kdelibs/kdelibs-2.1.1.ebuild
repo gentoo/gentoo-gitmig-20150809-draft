@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.1 2001/03/28 15:26:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.1.ebuild,v 1.2 2001/04/19 02:31:08 achim Exp $
 
 V=2.1
 A=${P}.tar.bz2
@@ -25,7 +25,8 @@ DEPEND=">=sys-devel/gcc-2.95.2
 
 RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=media-libs/audiofile-0.1.9
-	 >=x11-libs/qt-x11-2.3.0"
+	 >=x11-libs/qt-x11-2.3.0
+     =kde-base/kde-env-2.1"
 
 src_unpack() {
     unpack ${A}
