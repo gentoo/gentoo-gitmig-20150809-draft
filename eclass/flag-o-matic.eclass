@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.37 2004/02/21 07:19:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.38 2004/02/26 06:47:23 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -123,6 +123,7 @@ replace-cpu-flags() {
 	for oldcpu in "$@" ; do
 		replace-flags -march=${oldcpu} -march=${newcpu}
 		replace-flags -mcpu=${oldcpu} -mcpu=${newcpu}
+		replace-flags -mtune=${oldcpu} -mtune=${newcpu}
 	done
 	return 0
 }
