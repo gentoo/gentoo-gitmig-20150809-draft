@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tony Murray <murrant@bvu.edu>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.1.ebuild,v 1.2 2002/12/11 08:11:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.3.ebuild,v 1.1 2002/12/11 08:11:35 lostlogic Exp $
 
 # This includes backwards compatability for stable kernels
 
@@ -11,7 +11,7 @@ DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/people/rusty/modules/${P}.tar.bz2
 		http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -68,7 +68,7 @@ src_install () {
 	${S}/modules.conf2modprobe.conf /etc/modules.conf ${D}/etc/modprobe.conf || die "Could not create modprobe.conf"
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 
-	#Notify user of crap, hope for a better way ;-)
+	#Notify user of evilness, hope for a better way ;-)
 	einfo "This overwrites the modutils files, so if you remove this,"
 	einfo "remember to remerge modutils.  However, this package has"
 	einfo "installed a copy of the modutils files with suffix .old"
