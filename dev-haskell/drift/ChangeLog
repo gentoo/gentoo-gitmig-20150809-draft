@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/drift
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.1 2004/11/18 22:30:35 kosmikus Exp $
+
+*drift-2.0.4 (18 Nov 2004)
+
+  18 Nov 2004; Andres Loeh <kosmikus@gentoo.org> +metadata.xml,
+  +drift-2.0.4.ebuild:
+  Initial import, as suggested in bug #69995.
+
