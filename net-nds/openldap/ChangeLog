@@ -1,9 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.23 2003/01/02 11:13:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.24 2003/01/03 09:33:20 raker Exp $
 
 *openldap-2.0.27-r1 (01 Jan 2002)
 *openldap-2.1.10 (01 Jan 2002)
+
+  03 Jan 2002; Nick Hadaway <raker@gentoo.org> openldap-2.1.10.ebuild :
+  Added dependancy on net-libs/openslp.
 
   02 Jan 2002; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r1.ebuild,
   openldap-2.1.10.ebuild. files/slapd-2.1.rc6 :

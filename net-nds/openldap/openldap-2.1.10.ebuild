@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.10.ebuild,v 1.2 2003/01/02 11:13:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.10.ebuild,v 1.3 2003/01/03 09:33:20 raker Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm ldap sasl kerberos odbc"
 
@@ -17,6 +17,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.2a
 	>=sys-libs/db-4.0.14
+	>=net-libs/openslp-1.0.9
 	tcpd?	  ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl?	  ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/readline-4.1 )
