@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.4 2004/06/11 00:19:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.5 2004/06/11 03:48:26 vapier Exp $
 
 inherit eutils flag-o-matic
-
-IUSE="truetype Xaw3d unicode"
 
 DESCRIPTION="Terminal Emulator for X Windows"
 HOMEPAGE="http://dickey.his.com/xterm/"
@@ -13,10 +11,10 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa amd64 ~mips"
+IUSE="truetype Xaw3d unicode"
 
 DEPEND="virtual/x11
 	sys-apps/utempter
-	sys-libs/libtermcap-compat
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack() {
