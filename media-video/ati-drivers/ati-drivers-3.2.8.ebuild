@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.8.ebuild,v 1.1 2003/10/08 23:27:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.8.ebuild,v 1.2 2003/10/13 00:03:35 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -98,7 +98,8 @@ src_compile() {
 	cd ${WORKDIR}
 	rm -fR usr/share
 	cd usr/X11R6/
-	rm -fR bin/firegl*.bz2 bin/LICENSE.* bin/fgl_glxgears src
+	rm -fR bin/firegl*.bz2 bin/LICENSE.* bin/fgl_glxgears
+	rm -fR ${WORKDIR}/usr/src
 }
 
 pkg_preinst() {
