@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.4 2002/07/16 02:29:19 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.5 2002/07/26 16:12:53 danarmak Exp $
 
 inherit kde-base || die
 
@@ -29,24 +29,12 @@ need-autoconf 2.5
 src_compile() {
 
     myconf="$myconf --enable-all"
-    kde_src_compile myconf
+    kde_src_compile myconf configure
 
     #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
-    CXXFLAGS2="$CXXFLAGS"
-    CFLAGS2="$CFLAGS"
+    kde_remove_flag kchart/kdchart -fomit-frame-pointer
 
-    CFLAGS=${CFLAGS/-fomit-frame-pointer}
-    CXXFLAGS=${CXXFLAGS/-fomit-frame-pointer}
-    cd ${S}
-    kde_src_compile configure
-    cd ${S}/kchart/kdchart
-    make
-
-    CFLAGS="$CFLAGS2"
-    CXXFLAGS="$CXXFLAGS2"
-    cd ${S}
-    kde_src_compile configure
-    make
-
+    kde_src_compile make
+	
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.11 2002/07/16 02:29:19 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.12 2002/07/26 16:12:53 danarmak Exp $
 
 inherit kde-base || die
 
@@ -32,24 +32,12 @@ src_compile() {
 
     myconf="$myconf --enable-all"
     myconf="$myconf --with-extra-libs=/usr/lib/python2.2/config"
-    kde_src_compile myconf
+    kde_src_compile myconf configure
     export LIBPYTHON="`python-config --libs`"
 
     #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
-    CXXFLAGS2="$CXXFLAGS"
-    CFLAGS2="$CFLAGS"
-
-    CFLAGS=${CFLAGS/-fomit-frame-pointer}
-    CXXFLAGS=${CXXFLAGS/-fomit-frame-pointer}
-    cd ${S}
-    kde_src_compile configure
-    cd ${S}/kchart/kdchart
-    make
-
-    CFLAGS="$CFLAGS2"
-    CXXFLAGS="$CXXFLAGS2"
-    cd ${S}
-    kde_src_compile configure
-    make
-
+    kde_remove_flag kchart/kdchart -fomit-frame-pointer
+	
+    kde_src_compile make
+	
 }
