@@ -1,0 +1,30 @@
+--- libexif-0.6.9/libexif/exif-data.c~	2005-03-03 22:54:52.333049248 +0100
++++ libexif-0.6.9/libexif/exif-data.c	2005-03-03 22:50:57.117807400 +0100
+@@ -640,7 +640,7 @@
+ #endif
+ 
+ 	/* Byte order (offset 6, length 2) */
+-	if (ds < 12)
++	if (ds < 14)
+ 		return;
+ 	if (!memcmp (d + 6, "II", 2))
+ 		data->priv->order = EXIF_BYTE_ORDER_INTEL;
+@@ -659,12 +659,18 @@
+ 	printf ("IFD 0 at %i.\n", (int) offset);
+ #endif
+ 
++	if (ds < 6 + 4 + offset)
++		return;
++
+ 	/* Parse the actual exif data (offset 14) */
+ 	exif_data_load_data_content (data, data->ifd[EXIF_IFD_0], d + 6,
+ 				     ds - 6, offset);
+ 
+ 	/* IFD 1 offset */
+ 	n = exif_get_short (d + 6 + offset, data->priv->order);
++	if (ds < 6 + offset + 2 + 12 * n + 4)
++		return;
++
+ 	offset = exif_get_long (d + 6 + offset + 2 + 12 * n, data->priv->order);
+ 	if (offset) {
+ #ifdef DEBUG
