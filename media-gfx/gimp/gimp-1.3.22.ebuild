@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.20-r1.ebuild,v 1.3 2003/10/08 13:48:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.22.ebuild,v 1.1 2003/11/10 08:41:33 liquidx Exp $
 
-IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
+IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X altivec"
 
 inherit debug flag-o-matic libtool
 
@@ -18,16 +18,19 @@ KEYWORDS="~x86 ~ppc ~hppa ~sparc"
 replace-flags -Os -O2
 MAKEOPTS="${MAKEOPTS} -j1"
 
-RDEPEND=">=x11-libs/gtk+-2.2
+# FIXME : some more things can be (local) USE flagged
+RDEPEND=">=dev-libs/glib-2.2
+	>=x11-libs/gtk+-2.2.2
 	>=x11-libs/pango-1.2
-	>=dev-libs/glib-2.2
+	>=media-libs/fontconfig-2.2
+	>=media-libs/libart_lgpl-2.3.8-r1
+
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2
 		media-libs/libexif )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-		>=media-libs/libart_lgpl-2.3.8-r1
 
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
@@ -43,23 +46,22 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 src_unpack() {
+
 	unpack ${A}
 
 	cd ${S}
-
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
 
-	# Fix screenshooter (diff from CVS)
-	epatch ${FILESDIR}/gimp-1.3.20-screenshot_fix.patch
-
 	# note: this make elibtoolize do some weird things, so disabling - liquidx
 	# replace ltmain.sh from libtool 1.5a with libtool 1.4.x
 	#cd ${S}; aclocal; automake; libtoolize --force; autoconf
+
 }
 
 src_compile() {
+
 	# Since 1.3.16, fixes linker problems when upgrading
 	elibtoolize
 
@@ -74,6 +76,7 @@ src_compile() {
 	econf ${myconf} \
 		`use_enable mmx` \
 		`use_enable sse` \
+		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
 		`use_enable python` \
 		`use_with X x` \
@@ -86,9 +89,11 @@ src_compile() {
 		--disable-print || die
 
 	emake || die
+
 }
 
 src_install() {
+
 	# Workaround portage variable leakage
 	local AA=
 
@@ -100,10 +105,13 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
 		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
+
 }
 
 pkg_postinst() {
+
 	ewarn "The ${SV} Gimp series have been reslotted to SLOT 2."
 	ewarn "To clean up old ${SV} version remove all ${SV} series and recompile."
+
 }
 
