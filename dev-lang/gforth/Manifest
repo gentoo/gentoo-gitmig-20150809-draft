@@ -1,0 +1,7 @@
+MD5 2a03052cfc8970dde707aa535584ce42 ChangeLog 754
+MD5 45ddcf3cf569665acd9f94efd62b4c18 gforth-0.5.0.ebuild 1376
+MD5 bb1ef77abf459dfe0c394f69788a6c6a gforth-0.6.1.ebuild 1393
+MD5 74edc6d12c9a8d2858070dc09e2c264c files/50gforth-gentoo.el 200
+MD5 7a30c3b5440bf0523287414f644ce1db files/digest-gforth-0.5.0 65
+MD5 a046426efcf946fd34d9ad1f22311bc9 files/digest-gforth-0.6.1 65
+MD5 47338bda82d2c5cbd41aa03a5eaeea2a files/gforth.el-gentoo.patch 1428
