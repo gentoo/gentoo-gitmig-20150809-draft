@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.40 2004/02/15 17:28:41 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.41 2004/02/15 18:12:49 johnm Exp $
+
+*gentoo-dev-sources-2.6.2-r1 (15 Feb 2004)
+
+  15 Feb 2004; John Mylchreest <johnm@gentoo.org>
+  gentoo-dev-sources-2.6.2-r1.ebuild, gentoo-dev-sources-2.6.3_rc3.ebuild:
+  fixing dnotify problem in 2.6.2-r1, added squashfs support and marked stable
+  on x86
 
 *gentoo-dev-sources-2.6.3_rc3 (15 Feb 2004)
 
