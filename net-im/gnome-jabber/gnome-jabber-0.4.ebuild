@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.9 2004/12/03 17:04:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnome-jabber/gnome-jabber-0.4.ebuild,v 1.10 2005/01/15 12:33:35 blubb Exp $
 
 inherit gnome2
 
@@ -28,5 +28,6 @@ src_unpack () {
 	unpack ${A}
 	cd ${S}
 	sed -i -e 's:/usr/local:/usr:g' gnome-jabber.schemas.in
-	intltoolize -f && aclocal && autoconf && automake -a || die
+	intltoolize -f && aclocal && autoconf && automake -a &&
+	libtoolize --force --copy || die
 }
