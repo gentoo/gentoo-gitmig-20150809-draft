@@ -1,0 +1,54 @@
+# ChangeLog for sys-apps/pmud 
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Id: ChangeLog,v 1.1 2004/03/16 04:50:41 warpzero Exp $
+
+*pmud-0.10.1-r3 (04 Mar 2004)
+
+  04 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add a debian patch #39132 by Colin Leroy.
+
+*pmud-0.10.1-r2 (14 July 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> pmud-0.10.1-r1.ebuild pmud-0.10.1-r2.ebuild :
+  This is definitely not for mips.
+
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> pmud-0.10.1-r2.ebuild :
+
+  Changed src_install to only install X related apps and manpages if we
+  have USE="X"
+
+  23 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> files/pmud.start
+  Also redirected stder & stdout to /dev/null on stop().
+
+  19 Jul 2002; Mark Guertin <gerk@gentoo.org> files/pmud.start
+  Added >/dev/null 2>&1 to surpress extra output of pmud at system startup
+  fixing bug #5218
+
+  17 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Fixed keywords (please be sure you know what programs are before you set
+  keywords, this will _not_ run on x86).  Fixed typo in makefile-x.diff
+  (was CLAGS now is CFLAGS)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pmud-0.10.1-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*pmud-0.10-r2 <kain@kain.org> ChangeLog:
+	
+	Mon Apr 29 10:12 2002 CST; kain <kain@kain.org>
+	Fixed the format of the X dependency line in pmud-0.10.1-r1.ebuild
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pmud-0.10.1-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*pmud-0.10-r1 <pvdabeel@gentoo.org> ChangeLog:
+ 	
+	Mon Apr 29 23:15:43 2002 CEST; pvdabeel <pvdabeel@gentoo.org> 
+	Bug #2238: added pmud-makefile-x-gentoo.diff, new version
+
+*pmud-0.10.1 <kain@kain.org> ChangeLog:
+
+	Sat, 13 Apr 2002 23:04:14 -0500; kain <kain@kain.org> pmud/*:
+	Import of PMUD to gentoo. This works (kindof) on my Mac.
+	On my TiBook, X is screwed if you are using the radeonfb driver and
+	not a fbdev setup if you use this. :(  Could someone try this with a
+	normal XFree 4.2.0/TiBook G4 and tell me what they get?

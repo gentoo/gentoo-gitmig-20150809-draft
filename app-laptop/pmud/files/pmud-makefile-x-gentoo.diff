@@ -1,0 +1,21 @@
+--- pmud-0.10.1/Makefile~	Mon Apr 29 12:31:01 2002
++++ pmud-0.10.1/Makefile	Mon Apr 29 12:56:04 2002
+@@ -39,7 +39,8 @@
+ 	$(CC) $(CFLAGS) -o fblevel fblevel.c
+ 
+ xmouse: xmouse.c
+-	$(CC) $(CLAGS) -o xmouse xmouse.c -L/usr/X11R6/lib -lX11
++	(test -e /usr/X11R6/include/X11/Xlib.hh && \
++	$(CC) $(CFLAGS) -o xmouse xmouse.c -L/usr/X11R6/lib -lX11; true)
+ 
+ tcp.o: tcp.c tcp.h
+ 	$(CC) $(CFLAGS) -c tcp.c
+@@ -49,7 +50,7 @@
+ 	install -c snooze /sbin
+ 	install -c wakebay /sbin
+ 	install -c fblevel /sbin
+-	install -c xmouse /usr/X11R6/bin
++	(test -e xmouse && install -c xmouse /usr/X11R6/bin; true)
+ 	install -c Batmon /usr/bin
+ 	install -c -D pwrctl /etc/power/pwrctl
+ 	cp pmud.rc /etc/rc.d/init.d/pmud

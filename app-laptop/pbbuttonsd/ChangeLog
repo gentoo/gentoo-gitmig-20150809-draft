@@ -1,0 +1,127 @@
+# ChangeLog for sys-apps/pbbuttonsd
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.1 2004/03/16 04:43:28 warpzero Exp $
+
+  15 Mar 2004; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.9-r1.ebuild:
+  Typo in the CONFIG_PROTECT mask fixed
+
+*pbbuttonsd-0.5.9-r1 (14 Mar 2004)
+
+  14 Mar 2004; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.9-r1.ebuild,
+  files/pbbuttonsd-compat.patch:
+  Made sure the library includes are compatible with kmilo
+
+*pbbuttonsd-0.5.9 (07 Mar 2004)
+
+  07 Mar 2004; Lars Weiler <pylon@gentoo.org> pbbuttonsd-0.5.9.ebuild:
+  Version bump.
+
+*pbbuttonsd-0.5.8 (07 Feb 2004)
+
+  10 Feb 2004; Mike Frysinger <vapier@gentoo.org> pbbuttonsd.rc6 :
+  Clean up init.d script.  Using start-stop-daemon is a kludge when
+  the app itself supports daemonizing.
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> pbbuttonsd-0.5.8.ebuild:
+  Version bump.
+
+*pbbuttonsd-0.5.7 (10 Jan 2004)
+
+  10 Jan 2004; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.7.ebuild:
+  New version, should fix bug #37729
+
+*pbbuttonsd-0.5.6-r1 (12 Dec 2003)
+
+  12 Dec 2003; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.6-r1.ebuild,
+  files/pbbuttonsd.rc5:
+  Minor changes
+
+  30 Nov 2003; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.6.ebuild:
+  minor fix
+
+*pbbuttonsd-0.5.6 (26 Nov 2003)
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> pbbuttonsd-0.5.6.ebuild:
+  New version
+
+*pbbuttonsd-0.5.3a (08 May 2003)
+
+  08 May 2003; Todd Heim <heim@gentoo.org> pbbuttonsd-0.5.3a.ebuild:
+  version bumped, removed keywords for !ppc archs
+ 
+*pbbuttonsd-0.5.2-r1 (17 Dec 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild :
+  This is definitely not for mips. Fixed changelog to work with echangelog.
+
+  17 Dec 2002; Jon Nall <nall@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild,
+  files/pbbuttons-0.5.2-replace_pmud.patch :
+  patched to actually use the pmud replacement code.
+
+*pbbuttonsd-0.5.2 (17 0ct 2002)
+
+  14 Mar 2003; Mark Guertin <gerk@gentoo.org> pbbuttonsd-0.5.2-r1.ebuild,
+  pbbuttonsd-0.5.2.ebuild:
+  set ppc in keywords
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.5.2.ebuild :
+  This is definitely not for mips.
+
+  17 Oct 2002; Kain <kain@kain.org> pbbuttonsd-0.5.2.ebuild :
+
+  New ebuild for upstream enhancements and fixes.  Pbbuttonsd is no longer
+  PowerMac only, but I haven't tested this on non-ppc yet.
+  This is an important update to pbbuttonsd, as its functionality is enhanced
+  on PPC platforms, and is made more predictable.
+
+*pbbuttonsd-0.4.10a (28 Jul 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.4.10a.ebuild :
+  This is definitely not for mips.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pbbuttonsd-0.4.10a.ebuild :
+
+  New ebuild due to bugfixes upstream.
+
+*pbbuttonsd-0.4.9-r2 (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r2.ebuild :
+  Added KEYWORDS.
+
+*pbbuttonsd-0.4.9-r1 (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.9-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+*pbbuttonsd-0.4.10 (14 July 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.4.10.ebuild :
+  This is definitely not for mips.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> pbbuttonsd-0.4.10.ebuild :
+  Added KEYWORDS.
+
+*pbbuttons-0.4.10 (Sat Jun  8 11:38:34 EST 2002); gerk <gerk@gentoo.org>:
+
+June 21 2002 Gerk (gerk@gentoo.org):
+
+	added ARCH checks, no revision bump
+
+Sat Jun  8 11:38:34 EST 2002; gerk <gerk@gentoo.org>:
+	Upated for new release
+
+*pbbuttons-0.4.9-r2 (Mon Jun  3 21:39:42 EST 2002); gerk <gerk@gentoo.org>:
+
+Mon Jun  3 21:39:42 EST 2002; gerk <gerk@gentoo.org>:
+	Added init scripts to add to runlevel and set SLOT, LICENSE and
+	RDEPEND in ebuild.
+
+*pbbuttons-0.4.9-r1 (Wed May 8 23:28:00 2002 EST); daybird <daybird@gentoo.org>:
+
+Wed May 8 23:28:00 2002 EST; daybird <daybird@gentoo.org>: 
+	
+	OK, so this is the second ebuild (forgot the changelog the first time).
+	It now installs sandbox-safe, and config file goes into /etc, not 
+	/usr/etc (so it willbe protected by config_protect).

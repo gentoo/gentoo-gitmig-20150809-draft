@@ -1,0 +1,43 @@
+# ChangeLog for sys-apps/powerprefs
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.1 2004/03/16 04:52:22 warpzero Exp $
+
+*powerprefs-0.4.3 (07 Feb 2004)
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> powerprefs-0.4.3.ebuild:
+  Version bump
+
+  15 Dec 2003; Luca Barbato <lu_zero@gentoo.org> powerprefs-0.3.1.ebuild:
+  dep fixed
+
+*powerprefs-0.4.2 (26 Nov 2003)
+
+  26 Nov 2003; Luca Barbato <lu_zero@gentoo.org> powerprefs-0.4.2.ebuild:
+  New version
+
+  22 Jun 2003; <rac@gentoo.org> powerprefs-0.2.1.ebuild,
+  powerprefs-0.2.ebuild, powerprefs-0.3.1.ebuild:
+  emergency keyword fix
+
+  30 Apr 2003; Graham Forest <vladimir@gentoo.org> powerprefs-0.3.1.ebuild:
+  Set stable on ppc to match pbbuttonsd version
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*powerprefs-0.3.1 (17 Oct 2002)
+
+  17 Oct 2002; Kain <kain@kain.org> powerprefs-0.3.1.ebuild :
+
+  This is a powerprefs update to bring us up-to-date with pbbuttonsd-0.5+.
+
+*powerprefs-0.2.1 - June 21 2002 Gerk (gerk@gentoo.org)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> powerprefs-0.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> powerprefs-0.2.1.ebuild :
+  Added KEYWORDS.
+	added ARCH check, no revision bump
+
+*powerprefs-0.2.1 (08 Jun 2002)
+	Updated build for new vendor release - Gerk
