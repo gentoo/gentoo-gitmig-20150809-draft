@@ -1,11 +1,14 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.2 2002/08/14 10:45:12 pvdabeel Exp $
 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer - added SLOT
 
 *netcat-110 (1 Feb 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ppc keyword
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
