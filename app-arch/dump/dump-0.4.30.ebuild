@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.30.ebuild,v 1.9 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.30.ebuild,v 1.10 2002/12/16 00:40:05 seemant Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -41,7 +41,7 @@ src_compile() {
 		|| myconf="--disable-readline"
 
 	use static \
-		&& myconf="${myconf} --snable-static" \
+		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --enable-shared"
 
 	econf \

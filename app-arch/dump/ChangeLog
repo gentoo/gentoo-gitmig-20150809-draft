@@ -1,11 +1,17 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.11 2002/12/13 10:55:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.12 2002/12/16 00:40:05 seemant Exp $
+
+*dump-0.4.31 (13 Aug 2002)
+
+  15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.31.ebuild
+  dump-0.4.30.ebuild dump-0.4.29.ebuild :
+
+  changed "snable-static to "enable-static"  Thanks to: a-wall@qwest.net in
+  bug #12216
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*dump-0.4.31 (13 Aug 2002)
-
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> dump-0.4.31.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
