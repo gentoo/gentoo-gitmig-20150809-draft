@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.37 2003/04/22 09:17:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.38 2003/04/22 20:43:29 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -163,15 +163,6 @@ cvs_fetch() {
 		fi
 	fi
 
-	# the server string with the password in it
-	# needed for mode=update too as we may not be inside ECVS_MODULE but only inside ECVS_TOP_DIR
-	# however putting the password in in update mode can break (?)
-	if [ "$mode" == "checkout" ]; then
-		export CVSROOT=":${ECVS_AUTH}:${ECVS_USER}:${ECVS_PASS}@${ECVS_SERVER}"
-	else
-		export CVSROOT=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
-	fi
-
 	# prepare a cvspass file just for this session, we don't want to mess with ~/.cvspass
 	touch "${T}/cvspass"
 	export CVS_PASSFILE="${T}/cvspass"
@@ -179,16 +170,27 @@ cvs_fetch() {
 		chown "$ECVS_RUNAS" "${T}/cvspass"
 	fi
 
+	# the server string with the password in it, for login
+	cvsroot_pass=":${ECVS_AUTH}:${ECVS_USER}:${ECVS_PASS}@${ECVS_SERVER}"
+	# ditto without the password, for checkout/update after login, so that
+	# the CVS/Root files don't contain the password in plaintext
+	cvsroot_nopass=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
+
 	# commands to run
-	cmdupdate="${run} ${ECVS_CVS_COMMAND} update ${ECVS_UP_OPTS} ${ECVS_MODULE}"
-	cmdcheckout="${run} ${ECVS_CVS_COMMAND} checkout ${ECVS_CO_OPTS} ${ECVS_MODULE}"
+	cmdlogin="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_pass}\" login"
+	cmdupdate="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" update ${ECVS_UP_OPTS} ${ECVS_MODULE}"
+	cmdcheckout="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" checkout ${ECVS_CO_OPTS} ${ECVS_MODULE}"
 
 	cd "${ECVS_TOP_DIR}"
 	if [ "${ECVS_AUTH}" == "pserver" ]; then
+		einfo "Running $cmdlogin"
+		eval $cmdlogin
 		if [ "${mode}" == "update" ]; then
-			$cmdupdate
+			einfo "Running $cmdupdate"
+			eval $cmdupdate
 		elif [ "${mode}" == "checkout" ]; then
-			$cmdcheckout
+			einfo "Running $cmdcheckout"
+			eval $cmdcheckout
 		fi
 #	elif [ "${ECVS_AUTH}" == "ext" ]; then
 #		# for ext there's also a possible ssh prompt, code not yet written
