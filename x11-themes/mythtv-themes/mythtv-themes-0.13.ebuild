@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.13.ebuild,v 1.4 2004/06/28 22:45:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.13.ebuild,v 1.5 2005/02/27 10:04:16 eradicator Exp $
 
 RESTRICT="nomirror"
 
