@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1.ebuild,v 1.3 2003/07/18 13:05:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20030629_pre1-r1.ebuild,v 1.1 2003/07/18 13:05:12 raker Exp $
 
 inherit enlightenment eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 		>=media-libs/libart_lgpl-2.0
 		>=gnome-base/libgnomecanvas-2.0 )
-	mad? ( media-sound/mad )
+	mad? ( media-libs/libmad media-libs/libid3tag )
 	truetype? ( =media-libs/freetype-2* )
 	media-libs/libao
 	virtual/glibc
