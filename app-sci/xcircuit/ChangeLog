@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/xcircuit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.17 2004/06/24 22:21:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.18 2004/06/25 22:46:07 plasmaroo Exp $
+
+*xcircuit-3.2.22 (25 Jun 2004)
+
+  25 Jun 2004; <plasmaroo@gentoo.org> +xcircuit-3.2.22.ebuild:
+  Version bump.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> xcircuit-3.1.31.ebuild:
   Fix use invocation
