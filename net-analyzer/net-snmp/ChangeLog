@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.51 2004/07/16 02:26:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.52 2004/07/21 19:51:20 eldad Exp $
+
+*net-snmp-5.1.1-r1 (21 Jul 2004)
+
+  21 Jul 2004; Eldad Zack <eldad@gentoo.org> +files/net-snmp-lm_sensors.patch,
+  +net-snmp-5.1.1-r1.ebuild:
+  Added lm_sensor support (only for amd64 and x86). Thanks to Joshua Gerrish
+  <jgerrish@itsdarkhere.com> for the patch. Closes #57450.
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> net-snmp-5.1.1.ebuild:
   added ~ppc64, bug #55548
