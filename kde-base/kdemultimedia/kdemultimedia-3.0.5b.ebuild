@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.5b.ebuild,v 1.4 2004/01/19 03:29:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.5b.ebuild,v 1.5 2004/02/16 01:15:47 caleb Exp $
 inherit kde-dist flag-o-matic eutils
 
 IUSE="nas esd motif gtk slang tcltk"
@@ -16,7 +16,7 @@ newdepend ">=sys-libs/ncurses-5.2
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	slang? ( >=sys-libs/slang-1.4.4 )
-	>=media-sound/mpg123-0.59r
+	virtual/mpg123
 	tcltk? ( >=dev-lang/tk-8.0.5-r2 )"
 #	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
