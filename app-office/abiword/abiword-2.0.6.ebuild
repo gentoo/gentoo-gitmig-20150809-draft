@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.4 2004/04/20 19:54:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.6.ebuild,v 1.5 2004/04/21 22:09:56 foser Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ src_compile() {
 		`use_enable gnome` \
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
-		--disable debug \
+		--disable-debug \
 		--enable-bidi \
 		--enable-threads \
 		--without-ImageMagick \
@@ -67,7 +67,7 @@ src_compile() {
 	cd ${S_P}
 
 	econf \
-		`use_enable debug` \
+		--disable-debug \
 		--enable-all \
 		--with-abiword=${S} \
 		--without-ImageMagick || die
