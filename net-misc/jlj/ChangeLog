@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/jlj
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/ChangeLog,v 1.1 2004/08/01 17:37:06 bass Exp $
+
+*jlj-2.5 (01 Aug 2004)
+
+  01 Aug 2004; bass@gentoo.org +jlj-2.5.ebuild:
+  First version, thanks to Luke Macken <lewk@csh.rit.edu>
+
