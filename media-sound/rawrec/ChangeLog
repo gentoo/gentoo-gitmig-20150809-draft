@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/rawrec
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.1 2003/06/26 16:15:28 robh Exp $
+
+*rawrec-0.9.98 (26 Jun 2003)
+
+  26 Jun 2003; robh <robh@gentoo.org> rawrec-0.9.98.ebuild:
+  Inital version. Thanks to Denis Boehme, closes #19614
+
