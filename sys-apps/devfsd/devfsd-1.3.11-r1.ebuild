@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins et al <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.11-r1.ebuild,v 1.1 2001/06/11 03:40:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devfsd/devfsd-1.3.11-r1.ebuild,v 1.2 2001/06/11 12:58:07 blutgens Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Daemon for the Linux Device Filesystem"
@@ -9,7 +9,8 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/daemons/devfsd/devfsd-v
 HOMEPAGE="http://www.atnf.csiro.au/~rgooch/linux/"
 
 src_unpack() {
-  	cd ${S}
+  	unpack ${A}
+	cd ${S}
   	patch -p0 < ${FILESDIR}/${P}-GNUmakefile-gentoo.diff
 }
 
