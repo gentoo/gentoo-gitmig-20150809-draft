@@ -1,35 +1,30 @@
 # ChangeLog for misc-net/firestarter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/ChangeLog,v 1.1 2002/07/06 14:30:28 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/ChangeLog,v 1.2 2002/07/06 15:01:33 phoenix Exp $
 
 *firestarter-0.8.2 (27 May 2002)
 
   06 Jul 2002; phoen][x <phoenix@gentoo.org> firestarter-0.8.2.ebuild:
-
   Added KEYWORDS. Renamed Chanelog to ChangeLog.
   
-
   09 Jun 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
-
-	fixed minor bug with pixmaps
+  fixed minor bug with pixmaps
 
   03 Jun 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
-
   Doc creation added
 
   01 Jun 2002;  J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
-
   USE nls variable support
 
   01 Jun 2002; Bruce A. Locke <blocke@shivan.org> firestarter-0.8.2.ebuild:
-
   GTK+ dependency fix
 
-  27 May 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
-	First relase.
-
   30 May 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
-  	Fixed problem with gtk.
+  Fixed problem with gtk.
+
+  27 May 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
+  First relase.
+
 
 
