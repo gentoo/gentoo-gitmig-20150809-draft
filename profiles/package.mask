@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3430 2004/12/29 20:13:53 dsd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3431 2004/12/29 21:59:59 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,8 +22,13 @@
 ##   End example
 ##
 
-# <dsd@gentoo.org> (29 Dec 2004)
-# eradicator says its broken
+# <eradicator@gentoo.org> (29 Dec 2004)
+# Works occassionally... I think the problem might be related to using
+# an old (2.3) evms_activate in an initrd and then running evms_activate
+# again in the boot scripts because my system hangs with that call (sometimes)
+# but never with the 2.3 one in the initrd.  Masking until I can figure out
+# what is really wrong.  If you use this, please report success/failure
+# to me.
 =sys-fs/evms-2.5.0
 
 # <brix@gentoo.org> (29 Dec 2004)
