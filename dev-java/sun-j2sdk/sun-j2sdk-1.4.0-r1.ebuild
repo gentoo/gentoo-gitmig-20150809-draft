@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.1 2002/11/07 22:53:26 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.2 2002/11/08 08:15:52 cretin Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -115,7 +115,12 @@ src_compile () {
 	export DEV_ONLY=true 
 
 	cd ${S}/control/make
-	make || die
+	# MUST use make, we DONT want any -j options!
+    JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+	if [ -z "$JOBS" ]; then
+	   JOBS=1
+	fi
+	make HOTSPOT_BUILD_JOBS=${JOBS} || die
 
 	export LD_PRELOAD=$LD_PRELOAD_SAVE
 }
