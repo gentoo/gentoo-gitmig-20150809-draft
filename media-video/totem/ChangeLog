@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.35 2004/10/22 12:22:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.36 2004/10/23 11:00:26 swegener Exp $
+
+  23 Oct 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Corrected herd in metadata.xml. (media-video -> video)
 
 *totem-0.99.19 (22 Oct 2004)
 
