@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.5 2004/06/25 01:40:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.6 2004/09/07 22:04:29 pythonhead Exp $
+
+  07 Sep 2004; Rob Cakebread <pythonhead@gentoo.org> pyme-0.5.1.ebuild:
+  Version bump. Fixed 0.5.1 to compile against gpgme-0.9.0-r1. Added src_test().
+  Thanks Daniel Black <dragonheart@gentoo.org> Closes bug #59702.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyme-0.5.1.ebuild:
   Remove default S.
