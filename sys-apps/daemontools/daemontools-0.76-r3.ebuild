@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r3.ebuild,v 1.11 2004/06/28 16:02:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r3.ebuild,v 1.12 2004/06/30 14:50:12 agriffis Exp $
 
 inherit eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="http://cr.yp.to/daemontools/${P}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
-IUSE="selinux"
+IUSE="selinux static"
 
 DEPEND="virtual/libc"
 RDEPEND="selinux? ( sec-policy/selinux-daemontools )"
