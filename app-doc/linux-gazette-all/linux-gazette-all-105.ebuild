@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-105.ebuild,v 1.1 2004/08/24 02:50:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-105.ebuild,v 1.2 2004/10/26 03:19:58 vapier Exp $
 
 DESCRIPTION="Linux Gazette - all issues"
 HOMEPAGE="http://linuxgazette.net/"
@@ -104,4 +104,10 @@ RDEPEND="
 	=app-doc/linux-gazette-97
 	=app-doc/linux-gazette-98
 	=app-doc/linux-gazette-99
+	=app-doc/linux-gazette-100
+	=app-doc/linux-gazette-101
+	=app-doc/linux-gazette-102
+	=app-doc/linux-gazette-103
+	=app-doc/linux-gazette-104
+	=app-doc/linux-gazette-105
 	"

@@ -1,17 +1,6 @@
 # ChangeLog for app-doc/linux-gazette-all
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/ChangeLog,v 1.7 2004/08/09 11:19:42 slarti Exp $
-
-  09 Aug 2004; Tom Martin <slarti@gentoo.org> linux-gazette-all-99.ebuild:
-  Marked stable on amd64.
-
-  14 Jul 2004; Tom Martin <slarti@gentoo.org> :
-  Marked ~amd64.
-
-*linux-gazette-all-99 (29 Jun 2004)
-
-  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> linux-gazette-all-99.ebuild:
-  sync IUSE (missing)
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/ChangeLog,v 1.8 2004/10/26 03:19:58 vapier Exp $
 
 *linux-gazette-all-* (21 Aug 2003)
 
