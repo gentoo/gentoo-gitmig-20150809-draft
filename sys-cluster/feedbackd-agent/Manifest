@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f608fe2931c6f301a340a225e2f9574a ChangeLog 732
-MD5 50ec7bc42dcf016725b26006a11d2a1a feedbackd-agent-0.3.1.ebuild 969
+MD5 e8552a434a2ee82ff949f72820ddee28 ChangeLog 845
 MD5 4e9f87b9fbd6d78d60ff38d0e44ea686 feedbackd-agent-0.4.ebuild 894
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 7ca761c8ea4dcc887a66cdb55cdde95d files/digest-feedbackd-agent-0.3.1 73
 MD5 560fedeed92761d71d6662879450213e files/compile-gnu-source.patch 346
 MD5 9fcb982882658662ebc45f5e46d3b527 files/digest-feedbackd-agent-0.4 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+Jc+gMUyd/cdjWsRAj3rAJ4qDNsjVvwxyOmPK/CpBiwp/bSbRwCfQvo6
-0OU6spSofM4gdO3yKZwo9mM=
-=DAjQ
+iD8DBQFB+Jw7gMUyd/cdjWsRAld5AJ9/qb9xKs9yY0HrbOnDKnXdOZ56pACdGf2P
+k4Ctemep+xRjcBG5MIW0fL4=
+=qnZ6
 -----END PGP SIGNATURE-----
