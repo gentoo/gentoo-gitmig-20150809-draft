@@ -1,3 +1,5 @@
-MD5 1b416d9baba17608442fcb7970ed8a06 fbpanel-1.0.ebuild 600
-MD5 d03965d5db6f78aa6eaa8790f60b4591 ChangeLog 417
+MD5 b25520bc228ceaff5e298f3175c716b1 fbpanel-1.0.ebuild 599
+MD5 6202d7ee5949dfe9028f0d233e525bc7 ChangeLog 554
+MD5 9575f49ebb87cfb5fced4d630fef4e8f fbpanel-2.2.ebuild 600
 MD5 609c521cff6f6110ae7e60489df594e1 files/digest-fbpanel-1.0 59
+MD5 1af919db07346f446abc1b826c2ced49 files/digest-fbpanel-2.2 59
