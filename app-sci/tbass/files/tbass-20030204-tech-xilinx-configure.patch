@@ -1,0 +1,83 @@
+*** balsa-tech-xilinx-20021029/configure.old	Thu Mar 13 17:17:48 2003
+--- balsa-tech-xilinx-20021029/configure	Thu Mar 13 17:26:04 2003
+***************
+*** 275,281 ****
+  program_transform_name=s,x,x,
+  silent=
+  site=
+! srcdir=
+  verbose=
+  x_includes=NONE
+  x_libraries=NONE
+--- 275,281 ----
+  program_transform_name=s,x,x,
+  silent=
+  site=
+! srcdir=.
+  verbose=
+  x_includes=NONE
+  x_libraries=NONE
+***************
+*** 673,687 ****
+  else
+    ac_srcdir_defaulted=no
+  fi
+! if test ! -r $srcdir/$ac_unique_file; then
+!   if test "$ac_srcdir_defaulted" = yes; then
+!     { echo "$as_me: error: cannot find sources ($ac_unique_file) in $ac_confdir or .." >&2
+!    { (exit 1); exit 1; }; }
+!   else
+!     { echo "$as_me: error: cannot find sources ($ac_unique_file) in $srcdir" >&2
+!    { (exit 1); exit 1; }; }
+!   fi
+! fi
+  srcdir=`echo "$srcdir" | sed 's%\([^\\/]\)[\\/]*$%\1%'`
+  ac_env_build_alias_set=${build_alias+set}
+  ac_env_build_alias_value=$build_alias
+--- 673,687 ----
+  else
+    ac_srcdir_defaulted=no
+  fi
+! #if test ! -r $srcdir/$ac_unique_file; then
+! #  if test "$ac_srcdir_defaulted" = yes; then
+! #    { echo "$as_me: error: cannot find sources ($ac_unique_file) in $ac_confdir or .." >&2
+! #   { (exit 1); exit 1; }; }
+! #  else
+! #    { echo "$as_me: error: cannot find sources ($ac_unique_file) in $srcdir" >&2
+! #   { (exit 1); exit 1; }; }
+! #  fi
+! #fi
+  srcdir=`echo "$srcdir" | sed 's%\([^\\/]\)[\\/]*$%\1%'`
+  ac_env_build_alias_set=${build_alias+set}
+  ac_env_build_alias_value=$build_alias
+***************
+*** 1533,1546 ****
+  fi
+  
+  
+! if test ${BALSA_CONFIG}; then :
+! else
+! 	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+!    { (exit 1); exit 1; }; }
+! fi
+  
+! ac_default_prefix=`${BALSA_CONFIG} -d`
+  prefix=${ac_default_prefix}
+  echo installed Balsa prefix is: ${ac_default_prefix}
+  
+--- 1533,1546 ----
+  fi
+  
+  
+! #if test ${BALSA_CONFIG}; then :
+! #else
+! #	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! #echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+! #   { (exit 1); exit 1; }; }
+! #fi
+  
+! ac_default_prefix=/usr
+  prefix=${ac_default_prefix}
+  echo installed Balsa prefix is: ${ac_default_prefix}
+  

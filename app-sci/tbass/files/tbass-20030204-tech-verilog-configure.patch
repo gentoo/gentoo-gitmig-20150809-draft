@@ -1,0 +1,33 @@
+*** balsa-tech-verilog-20030204/configure.old	Thu Mar 13 16:51:29 2003
+--- balsa-tech-verilog-20030204/configure	Thu Mar 13 16:51:32 2003
+***************
+*** 1610,1623 ****
+  fi
+  
+  
+! if test ${BALSA_CONFIG}; then :
+! else
+! 	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+!    { (exit 1); exit 1; }; }
+! fi
+  
+! ac_default_prefix=`${BALSA_CONFIG} -d`
+  prefix=${ac_default_prefix}
+  echo installed Balsa prefix is: ${ac_default_prefix}
+  
+--- 1610,1623 ----
+  fi
+  
+  
+! #if test ${BALSA_CONFIG}; then :
+! #else
+! #	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! #echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+! #   { (exit 1); exit 1; }; }
+! #fi
+  
+! ac_default_prefix=/usr
+  prefix=${ac_default_prefix}
+  echo installed Balsa prefix is: ${ac_default_prefix}
+  
