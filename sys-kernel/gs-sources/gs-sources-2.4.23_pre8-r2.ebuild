@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8.ebuild,v 1.2 2004/01/06 19:32:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8-r2.ebuild,v 1.1 2004/01/06 19:32:38 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -32,10 +32,11 @@ DESCRIPTION="This kernel stays up to date with current kernel -pres,
 	superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 mirror://gentoo/patches-${KV}.tar.bz2"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc"
 SLOT="${KV}"
 
 src_unpack() {
+
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 	cd ${KV} || die
@@ -53,4 +54,9 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+	cd ${S} && epatch ${FILESDIR}/${P}-af_irda.patch || die
+
+	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
+	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+
 }
