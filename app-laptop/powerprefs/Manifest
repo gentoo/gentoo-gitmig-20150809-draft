@@ -3,7 +3,7 @@ MD5 4d120bf6975fc7c0a1838feba9eba75b powerprefs-0.4.2.ebuild 938
 MD5 a574544c69a4b9667058982610972cd7 powerprefs-0.3.1.ebuild 937
 MD5 18e9988e115dbfc86d8488df95f11aa8 powerprefs-0.2.ebuild 914
 MD5 dc212458f47f81a7f16436fd8e551952 powerprefs-0.4.3.ebuild 938
-MD5 a0a00b0ec7d6e47de5253726ca780ce1 ChangeLog 1426
+MD5 e0c85649967f9196a3f9d251028a0adc ChangeLog 1424
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f2caefb8a6164c82f500def610cd7a2b files/digest-powerprefs-0.2 66
 MD5 4d7efecc2d3edef1639991bd93ad56b5 files/digest-powerprefs-0.2.1 68

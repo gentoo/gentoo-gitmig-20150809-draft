@@ -1,6 +1,6 @@
 MD5 116513651e80025a535867d6613f2e27 pmud-0.10.1-r2.ebuild 1165
 MD5 c05a976d7b32d0925090ff01fc394ee8 pmud-0.10.1-r3.ebuild 1212
-MD5 1f5684b9f7b75e515332023984dea4e5 ChangeLog 2031
+MD5 cfa2ab92b6254ca77c7f8c8a47a0e1a8 ChangeLog 2029
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f056db07040f37f07402f93828875cf8 files/pmud-makefile-x-gentoo.diff 699
 MD5 0b3d50c84748990675bd8da75fefa048 files/power.conf 1611
