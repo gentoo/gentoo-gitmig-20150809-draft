@@ -1,8 +1,13 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.16 2003/02/12 08:52:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.17 2003/02/21 11:29:09 raker Exp $
 
 *opera-6.11-r1 (02 Jan 2003)
+
+  21 Feb 2003; Nick Hadaway <raker@gentoo.org> opera-6.11-r1.ebuild :
+  Modifed the OPERA_VARIANT section so the correct file version 
+  is actually downloaded.
+
   02 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Improved installation of KDE and Gnome icons.
   Marked stable on x86.

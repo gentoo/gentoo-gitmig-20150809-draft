@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.11-r1.ebuild,v 1.2 2003/02/13 15:40:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.11-r1.ebuild,v 1.3 2003/02/21 11:29:09 raker Exp $
 #
 # By default, the statically linked version of opera will be
 # installed.  There are two other variations of the package that this
@@ -18,7 +18,7 @@
 #
 # Example of compiling a non-default variant:
 #
-#   env OPERA_VARIANT=shared-3.2 emerge opera
+#   OPERA_VARIANT=shared-3.2 emerge opera
 #
 
 DESCRIPTION="Opera web browser."
@@ -32,22 +32,18 @@ RDEPEND="virtual/x11"
 KEYWORDS="x86"
 SLOT="0"
 
-case "${OPERA_VARIANT}" in
-	shared-3.2)
+if [ "$OPERA_VARIANT" = "shared-3.2" ]; then
 	    RDEPEND="${RDEPEND} =x11-libs/qt-3*"
 	    OPERA_VERSION="4-shared-qt"
 	    URL_DIR="shared/gcc-3.2/"
-	    ;;
-	shared-2.95)
+elif [ "$OPERA_VARIANT" = "shared-2.95" ]; then
 	    RDEPEND="${RDEPEND} =x11-libs/qt-3*"
 	    OPERA_VERSION="2-shared-qt"
 	    URL_DIR="shared/gcc-2.95/"
-	    ;;
-	*)
+else
 	    OPERA_VERSION="1-static-qt"
 	    URL_DIR="static/"
-	    ;;
-esac
+fi
 
 NV=6.11-20021129.${OPERA_VERSION}.i386
 SRC_URI="http://www.panix.com/opera/files/linux/611/final/en/i386/${URL_DIR}/opera-${NV}.tar.gz"
@@ -55,7 +51,6 @@ S=${WORKDIR}/opera-${NV}
 
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	sed -e "s:/etc:${D}/etc:g" \
@@ -85,7 +80,6 @@ src_compile() {
 
 
 src_install() {
-
 	# Prepare installation directories for Opera's installer script.
 	dodir /etc
 	if [ "`use kde`" ]
@@ -121,5 +115,4 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
-
 }
