@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.19 2004/12/28 22:05:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.20 2004/12/29 00:23:43 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *exim-4.43-r1 (28 Dec 2004)
 
@@ -18,7 +21,7 @@
   exim-4.43.ebuild:
   KEYWORDS ~amd64 to close bug 61163.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Stable on alpha.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> exim-4.42.ebuild:
@@ -30,7 +33,7 @@
   +exim-4.43.ebuild:
   New Version Bump and Bump of 4.42 to stable.
 
-  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  04 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Keyword ~alpha.
 
   05 Sep 2004; Guy Martin <gmsoft@gentoo.org> exim-4.41.ebuild,
@@ -117,7 +120,7 @@
   11 May 2004; Guy Martin <gmsoft@gentoo.org> exim-4.34.ebuild:
   Marked stable on hppa.
 
-  11 May 2004; Bryan Østergaard <kloeri@gentoo.org> exim-4.34.ebuild:
+  11 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> exim-4.34.ebuild:
   Stable on alpha, bug #50217.
 
   11 May 2004; Jon Portnoy <avenj@gentoo.org> exim-4.34.ebuild :
