@@ -1,4 +1,6 @@
 MD5 4948a42b1563d389b9bbbd1941e12934 metadata.xml 215
+MD5 20ab685b913f6d940248d3bd23ba7c70 bazaar-1.1.1.ebuild 1244
 MD5 d5282be2f328cf895c9e477826af4f8c bazaar-1.1.ebuild 1176
-MD5 7af1135026cabad8ba6d69b8f536de07 ChangeLog 345
+MD5 10e416c1e93f3530be47026be9d60b93 ChangeLog 461
 MD5 eaa5b71323255191ecd40198fc60ce67 files/digest-bazaar-1.1 64
+MD5 e290be39ff970403bfe53594fc846602 files/digest-bazaar-1.1.1 65
