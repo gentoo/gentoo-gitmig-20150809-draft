@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/halflife-metamod-1.17.ebuild,v 1.1 2004/02/22 00:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-metamod/halflife-metamod-1.17.ebuild,v 1.2 2004/04/16 17:32:56 vapier Exp $
 
 inherit games gcc
 
@@ -21,12 +21,12 @@ S=${WORKDIR}/metamod-${PV}
 
 src_unpack() {
 	unpack ${A}
-	[ `use src` ] && [ `gcc-major-version` -eq 3 ] \
+	use src && [ `gcc-major-version` -eq 3 ] \
 		&& sed -i 's:-malign:-falign:g' `find -name Makefile`
 }
 
 src_compile() {
-	[ `use src` ] || return 0
+	use src || return 0
 	make \
 		SDKTOP=${GAMES_LIBDIR}/hlsdk \
 		CCO="${CFLAGS}" \
@@ -39,7 +39,7 @@ src_install() {
 	local dir=${GAMES_PREFIX_OPT}/halflife/addons/metamod
 	dodir ${dir}
 
-	if [ `use src` ] ; then
+	if use src ; then
 		make \
 			SDKTOP=${GAMES_LIBDIR}/hlsdk \
 			INST_DIR=${D}/${dir} \
@@ -51,7 +51,7 @@ src_install() {
 		doins dlls/*.so
 	fi
 	insinto ${dir}
-	doins doc/metamod.ini
+	doins doc/*.ini
 
 	insinto /usr/include/metamod
 	doins metamod/*.h
