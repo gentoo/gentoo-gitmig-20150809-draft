@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.3 2004/03/24 04:41:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.4 2004/06/23 00:27:01 mr_bones_ Exp $
 
 inherit games
 
@@ -8,9 +8,9 @@ DESCRIPTION="DJ Delorie's Ace of Penguins solitaire games"
 HOMEPAGE="http://www.delorie.com/store/ace/"
 SRC_URI="http://www.delorie.com/store/ace/${P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/x11
@@ -34,7 +34,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
-	rm docs/COPYING
 	dohtml docs/*
 	prepgamesdirs
 }
