@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.80 2004/11/26 21:58:50 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.81 2004/12/06 07:36:20 obz Exp $
+
+*gedit-2.8.2 (06 Dec 2004)
+
+  06 Dec 2004; Mike Gardiner <obz@gentoo.org> +gedit-2.8.2.ebuild:
+  New version
 
   26 Nov 2004; Benjamin Schindler <benjamin@gentoo.org> gedit-2.8.0.ebuild:
   Stable on amd64
