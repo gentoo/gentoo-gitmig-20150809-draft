@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.1 2003/03/29 03:40:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.2 2003/03/29 03:50:42 seemant Exp $
 
 MY_P=${PN/xmms-/}-v${PV}
 S=${WORKDIR}/${MY_P}
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 	# patch in DESTDIR support
-	epatch ${FILESDIR}/${PN}-destdir.patch
+	epatch ${FILESDIR}/${MY_P}-destdir.patch
 }
 
 src_compile() {     
