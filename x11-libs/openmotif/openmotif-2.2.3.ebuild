@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.8 2005/02/04 23:31:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.9 2005/02/06 11:21:25 vapier Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -10,11 +10,10 @@ DESCRIPTION="Open Motif"
 HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="MOTIF"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~ppc-macos sparc x86"
-
-PROVIDE="virtual/motif"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~ppc-macos sparc x86"
+IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
@@ -22,10 +21,10 @@ DEPEND="virtual/libc
 	sys-devel/automake
 	sys-devel/autoconf
 	!virtual/motif"
-
 RDEPEND="virtual/libc
 	virtual/x11
 	!virtual/motif"
+PROVIDE="virtual/motif"
 
 pkg_setup() {
 	# multilib includes don't work right in this package...
