@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/ebook-gcc
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebook-find/ChangeLog,v 1.1 2003/05/06 19:29:17 mholzer Exp $
+
+*ebook-find-4.1 (06 May 2003)
+
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-find-4.1:
+  Initial version.
