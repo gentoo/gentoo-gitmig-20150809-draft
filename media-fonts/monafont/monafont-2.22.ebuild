@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.1 2003/07/26 19:38:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.2 2003/07/30 23:40:48 usata Exp $
 
 DESCRIPTION="Japanese bitmap fonts suitable for browsing 2ch"
 HOMEPAGE="http://monafont.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 IUSE=""
 DEPEND="virtual/x11
 	dev-lang/perl
