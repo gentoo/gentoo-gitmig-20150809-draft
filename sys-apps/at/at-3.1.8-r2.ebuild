@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r2.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r2.ebuild,v 1.2 2001/02/27 12:11:44 achim Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -20,7 +20,9 @@ src_unpack() {
     unpack ${P}.tar.bz2
     cd ${S}
     patch -p0 < ${DISTDIR}/${P}.dif
-
+    cp configure.in configure.orig
+    patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff
+    autoconf
 }
 
 src_compile() {

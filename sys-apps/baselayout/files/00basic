@@ -1,7 +1,7 @@
-PATH=/bin:/usr/bin:/usr/local/bin
-ROOTPATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-LDPATH=/usr/local/lib:/usr/lib/gcc-lib/i486-pc-linux-gnu/2.95.2
-MANPATH=/usr/man
-INFODIR=/usr/info
+PATH=/usr/local/bin
+ROOTPATH=/usr/local/bin
+LDPATH=/usr/local/lib
+MANPATH=/usr/share/man
+INFODIR=/usr/share/info
 CVS_RSH=ssh
 PAGER=/usr/bin/most

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r3.ebuild,v 1.2 2001/01/31 20:49:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r3.ebuild,v 1.3 2001/02/27 12:11:44 achim Exp $
 
 P=findutils-4.1      
 A=${P}.tar.gz
@@ -12,8 +12,8 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/findutils/${A}
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc
-	 sys-apps/bash"
+RDEPEND="virtual/glibc"
+
 
 src_compile() {                           
     try ./configure --prefix=/usr --host=${CHOST}
