@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.11 2003/03/12 16:03:24 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.12 2003/03/12 20:17:46 tantive Exp $
 
 *usermode-utilities-20030205-r1 (12 Mar 2003)
+
+  12 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  Unmasked
 
   12 Mar 2003; Michael Imhof <tantive@gentoo.org>
   Added -DTUNTAP to emake. Should close #16384.
