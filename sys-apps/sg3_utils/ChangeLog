@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/sg3_utils
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.1 2004/02/10 22:33:46 plasmaroo Exp $
+
+*sg3_utils-1.06 (10 Feb 2004)
+
+  10 Feb 2004; <plasmaroo@gentoo.org> sg3_utils-1.06.ebuild:
+  Initial commit, closes bug #28981.
+
