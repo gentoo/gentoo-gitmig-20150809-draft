@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.1 2004/05/05 21:33:29 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.2 2004/05/06 12:30:54 karltk Exp $
 
 inherit java-pkg
 
@@ -72,7 +72,7 @@ src_compile() {
 		--classpath ../../target/classes/ \
 		groovy/ui/Console.groovy || die "Failed to invoke groovyc"
 
-	jar uf ../../target/groovy-1.0-beta-4.jar groovy/ui/Console.class || die "Failed to backpatch Console.class"
+	jar uf ../../target/groovy-1.0-beta-4.jar groovy/ui/Console*.class || die "Failed to backpatch Console*.class"
 }
 
 generate_script() {
