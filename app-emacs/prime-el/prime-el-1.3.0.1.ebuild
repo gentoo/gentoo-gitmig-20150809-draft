@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.3.0.1.ebuild,v 1.1 2004/01/19 22:44:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.3.0.1.ebuild,v 1.2 2004/02/06 06:49:15 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 S="${WORKDIR}/${P}"
 
