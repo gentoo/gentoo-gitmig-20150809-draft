@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostview
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.9 2004/02/23 14:50:26 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.10 2004/03/30 09:47:06 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> ghostview-1.5-r1.ebuild:
+  Adding amd64 keyword. Closing #44902.
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> ghostview-1.5-r1.ebuild:
   Stable on sparc.
