@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.39 2003/11/21 19:51:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.40 2003/11/24 16:03:49 brad_mssw Exp $
+
+  24 Nov 2003; Brad House <brad_mssw@gentoo.org> automake-1.7.7.ebuild:
+  someone bumped up the coreutils deps, but
+  didn't bump up all deps for different arches.  Please let me know if
+  marking this stable on amd64 causes any problems.
 
   21 Nov 2003; Aron Griffis <agriffis@gentoo.org> automake-1.7.8.ebuild:
   Stable on ia64 and alpha in support of coreutils DEPEND
