@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.14 2002/10/26 19:20:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.1 2002/10/26 19:20:14 vapier Exp $
 
 IUSE="nls odbc jpeg png opengl"
 
@@ -66,8 +66,6 @@ src_compile() {
 		&& myconf="${myconf} --with-libjpeg" \
 		|| myconf="${myconf} --without-libjpeg"
 
-	gunzip < ${FILESDIR}/${P}.diff.gz | patch -p1
-	
 	econf ${myconf} || die "configuration failed"
 	
 	make || die "make failed"

@@ -1,8 +1,17 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.12 2002/09/11 15:11:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.13 2002/10/26 19:20:13 vapier Exp $
+
+*wxGTK-2.3.3 (26 Oct 2002)
+
+  26 Oct 2002; Mike Frysinger <vapier@gentoo.org> wxGTK-2.3.3.ebuild :
+  Version bump (#9693) + pkg_setup addition (#9470)
 
 *wxGTK-2.3.2-r2 (29 Aug 2002)
+
+  26 Oct 2002; Mike Frysinger <vapier@gentoo.org> wxGTK-2.3.2-r2.ebuild :
+  Added pkg_setup to handle zlib/zconf header files that prevented compiling.
+  Thanks to Martin Schlemmer for pkg_setup #9470
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org> wxGTK-2.3.2-r2.ebuild :
   Changed optional gif support to required GIF support as you cannot
