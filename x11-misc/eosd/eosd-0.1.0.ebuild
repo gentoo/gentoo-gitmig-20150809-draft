@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/eosd-0.1.0.ebuild,v 1.4 2004/06/24 22:17:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/eosd/eosd-0.1.0.ebuild,v 1.5 2004/08/12 02:30:49 vapier Exp $
 
 DESCRIPTION="enlightened on-screen display draws anti-aliased text on your screen without creating a visible window"
 HOMEPAGE="http://code-monkey.de/index.php?eosd"
@@ -11,10 +11,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=media-libs/imlib2-1.1.0
-	>=x11-libs/ecore-1.0.0.20031013_pre4"
+DEPEND=">=media-libs/imlib2-1.1.1
+	>=x11-libs/ecore-1.0.0_pre7"
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	make install DESTDIR=${D} || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
