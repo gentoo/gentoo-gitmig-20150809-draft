@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/pyge
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/ChangeLog,v 1.1 2004/06/20 06:29:31 pythonhead Exp $
+
+*pyge-0.6.1.2 (19 Jun 2004)
+
+  19 Jun 2004; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +files/help_file_location-0.6.1.2.diff, +pyge-0.6.1.2.ebuild:
+  Initial commit bug# 54044. Thanks Tim Cera <timcera@earthlink.net> for the
+  ebuild
+
