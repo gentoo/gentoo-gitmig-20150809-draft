@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.15 2005/03/09 05:40:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.16 2005/04/01 17:23:45 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> sysfsutils-1.2.0.ebuild:
+  stable on ia64
 
   08 Mar 2005; Tom Gall <tgall@gentoo.org> sysfsutils-1.2.0.ebuild:
   stable on ppc64, used as part of iprutils
