@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.29 2004/09/29 03:25:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.30 2004/10/02 06:46:52 brad Exp $
+
+  02 Oct 2004; Brad Laue <brad@gentoo.org> mozilla-launcher-1.21.ebuild:
+  Version bump, needed by firefox 1.0Pre, security update.
 
 *mozilla-launcher-1.21 (28 Sep 2004)
 
