@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/advancecomp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.1 2003/10/31 20:14:40 taviso Exp $
+
+*advancecomp-1.8 (31 Oct 2003)
+
+  31 Oct 2003; Tavis Ormandy <taviso@gentoo.org> advancecomp-1.8.ebuild,
+  files/advancecomp-bzip2-compile-plz-k-thx.diff:
+  Initial import, thanks to Per Wigren <wigren@home.se> for providing the 
+  ebuild this was based on in #23158
+
