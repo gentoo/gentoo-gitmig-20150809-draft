@@ -5,7 +5,7 @@
 <maintainer>
   <email>tantive@gentoo.org</email>
 <!--  <name>Michael Imhof</name> -->
-<!--  <description>openmosix-sources</description> -->
+<!--  <description>Release manager, patch manager</description> -->
 </maintainer>
-<!-- <longdescription>Long description of the package</longdescription> -->
+<!-- <longdescription></longdescription> -->
 </pkgmetadata>
