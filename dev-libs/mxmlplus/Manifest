@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bac6f50a92a01fbcc11d0495ea51033 mxmlplus-0.9.2.ebuild 998
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 cace96313d535c1a4e889020ed0879d8 ChangeLog 476
+MD5 42fe34e0a1fae5ac75b0bc33b6846d18 files/digest-mxmlplus-0.9.2 69
+MD5 5cbfe3186a42322a7b1b05c6f29c069e files/mxmlplus-0.9.2-fixblanks.patch 586
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjgUyVWNWqTUmv+0RAo+RAKCDgrmaMpdUUkQDcq0Mm2gl4m58KACgtC7u
+sHWjkotOpNds+FEp8HvRRD8=
+=CsXr
+-----END PGP SIGNATURE-----
