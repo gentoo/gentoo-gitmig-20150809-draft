@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.2 2004/09/03 15:46:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.3 2004/09/04 13:00:36 axxo Exp $
 
 inherit java-pkg
 
@@ -10,14 +10,13 @@ MY_PV="21"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.class"
 LICENSE="JPython"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc ~amd64"
 IUSE="readline jikes"
 # servlet
 
 DEPEND=">=virtual/jdk-1.2
 	readline? ( >=dev-java/libreadline-java-0.8.0 )
-	jikes? ( >=dev-java/jikes-1.18 )
-	!dev-java/jython-bin"
+	jikes? ( >=dev-java/jikes-1.18 )"
 #	servlet? ( >=net-www/tomcat-5.0 )
 
 src_unpack() {
