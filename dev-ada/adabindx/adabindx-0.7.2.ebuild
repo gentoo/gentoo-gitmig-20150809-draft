@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.5 2003/10/06 00:08:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2.ebuild,v 1.6 2003/10/28 13:31:37 dholm Exp $
 #
 
 inherit gnat
@@ -10,7 +10,7 @@ SRC_URI="http://home.arcor.de/hfvogt/${P}.tar.bz2"
 HOMEPAGE="http://home.arcor.de/hfvogt/programming.html"
 
 LICENSE="GMGPL"
-DEPEND="dev-lang/gnat
+DEPEND=">=dev-lang/gnat-3.14p
 	virtual/x11"
 RDEPEND=""
 KEYWORDS="x86 ~ppc"
@@ -49,5 +49,20 @@ src_install () {
 
 	#install examples
 	cp -r examples ${D}/usr/share/doc/${PF}/
+
+	#set up environment
+	dodir /etc/env.d
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55adabindx
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
+		>> ${D}/etc/env.d/55adabindx
+}
+
+pkg_postinst() {
+	einfo "The envaironment has been set up to make gnat automatically find files for"
+	einfo "AdaBindX. In order to immediately activate these settings please do:"
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo "Otherwise the settings will become active next time you login"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.5 2003/10/06 00:09:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.6 2003/10/28 13:33:58 dholm Exp $
 
 inherit gnat
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.rfc1149.net/download/adasockets/${P}.tar.gz"
 HOMEPAGE="http://www.rfc1149.net/devel/adasockets/"
 LICENSE="GMGPL"
 
-DEPEND="dev-lang/gnat"
+DEPEND="<dev-lang/gnat-5.*"
 RDEPEND=""
 SLOT="0"
 IUSE=""
@@ -45,4 +45,19 @@ src_install () {
 	doinfo doc/adasockets.info
 	doman man/adasockets-config.1
 	dobin src/adasockets-config
+
+	#set up environment
+	dodir /etc/env.d
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55adasockets
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
+		>> ${D}/etc/env.d/55adasockets
+}
+
+pkg_postinst() {
+	einfo "The envaironment has been set up to make gnat automatically find files for"
+	einfo "AdaSockets. In order to immediately activate these settings please do:"
+	einfo "env-update"
+	einfo "source /etc/profile"
+	einfo "Otherwise the settings will become active next time you login"
 }
