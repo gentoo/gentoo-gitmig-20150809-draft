@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.3 2002/03/13 06:02:06 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.4 2002/03/21 10:43:37 seemant Exp $
+
+*gtk+-1.2.10-r6 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtk+-1.2.10-r6.ebuild :
+
+  Changed the html documentation step to not be gzipped.  This is a small
+  enough change that it shouldn't matter to have users remerge it.
 
 *gtk+-1.2.10-r6 (13 Mar 2002)
 

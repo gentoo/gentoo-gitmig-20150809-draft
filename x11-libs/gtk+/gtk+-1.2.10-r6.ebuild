@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r6.ebuild,v 1.1 2002/03/13 06:02:06 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r6.ebuild,v 1.2 2002/03/21 10:43:37 seemant Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -65,9 +65,7 @@ src_install() {
 	docinto docs
 	cd docs
 	dodoc *.txt *.gif text/*
-	cd html
-	docinto html
-	dodoc *.html *.gif
+	dohtml html/*.html *.gif
 
 	#install nice, clean-looking gtk+ style
 	insinto /usr/share/themes/Gentoo/gtk
