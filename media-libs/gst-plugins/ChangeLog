@@ -1,7 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.38 2003/08/24 16:04:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.39 2003/09/07 19:33:01 foser Exp $
+
+*gst-plugins-0.6.3 (07 Sep 2003)
+
+  07 Sep 2003; foser <foser@gentoo.org> gst-plugins-0.6.3.ebuild :
+  New ebuild, uses the new eclass structure
 
 *gst-plugins-0.5.2-r1 (24 Aug 2003)
 
