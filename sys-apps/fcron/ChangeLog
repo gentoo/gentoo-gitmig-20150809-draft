@@ -1,0 +1,20 @@
+# ChangeLog for app-admin/fcron
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.1 2002/04/20 22:03:25 bangert Exp $
+
+
+  20 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/fcron.rc6 :
+
+  added "logger hostname" to need - "backport" from app-admin/fcron/files/fcron.rc6 
+
+  19 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/fcron.rc6 :
+
+  added "provide cron"
+  
+  19 Apr 2002; Thilo Bangert <bangert@gentoo.org> frcon-2.0.0-r1.ebuild :
+  
+  added RDEPEND="!virtual/cron sys-apps/cronbase" and PROVIDE="virtual/cron"
+  changed spooldir to /var/spool/cron
+  added symlink for crontab
+  fixed html docs
+  installed default config with crontabs located in /var/spool/cron/crontabs

@@ -13,7 +13,7 @@
 
 # check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
 
-*/15 * * * *   test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
+*/15 * * * *     /usr/bin/test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
 0 *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
 0 0  * * *      rm -f /var/spool/cron/lastrun/cron.daily
 0 0  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
