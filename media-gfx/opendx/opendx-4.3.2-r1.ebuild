@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.4 2004/12/28 20:37:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2-r1.ebuild,v 1.5 2004/12/29 00:12:42 ribosome Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -30,7 +30,7 @@ IUSE="hdf cdf netcdf tiff imagemagick szip" # java doc"
 
 DEPEND="virtual/x11
 	x11-libs/openmotif
-	szip? ( dev-libs/szip )
+	szip? ( sci-libs/szip )
 	hdf? ( sci-libs/hdf )
 	cdf? ( sci-libs/cdf )
 	netcdf? ( sci-libs/netcdf )
