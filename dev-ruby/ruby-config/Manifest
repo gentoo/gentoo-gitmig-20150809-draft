@@ -1,5 +1,5 @@
-MD5 863edc0ee00574a262508ed959ed12ec ruby-config-0.2.ebuild 520
-MD5 216f1c09e017049814fc8aa02a31c923 ChangeLog 1272
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 2abdae70ec9d34f80170060b09991687 ChangeLog 1380
+MD5 f4bddee957284109e04082ef95ba2895 ruby-config-0.2.ebuild 520
 MD5 8137ead9e83f2570ea0b5ebf4cd2224c files/ruby-config.sh 2732
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-config-0.2 0
