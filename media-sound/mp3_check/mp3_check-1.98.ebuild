@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3_check/mp3_check-1.98.ebuild,v 1.9 2004/04/18 15:45:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3_check/mp3_check-1.98.ebuild,v 1.10 2004/04/20 16:50:39 eradicator Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
+
 DESCRIPTION="MP3 consistancy checker"
 HOMEPAGE="http://sourceforge.net/projects/mp3check/"
 SRC_URI="mirror://sourceforge/mp3check/${P}.tar.gz"

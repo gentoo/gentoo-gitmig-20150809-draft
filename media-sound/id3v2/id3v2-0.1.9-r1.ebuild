@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.9-r1.ebuild,v 1.6 2004/04/08 07:48:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.9-r1.ebuild,v 1.7 2004/04/20 16:47:36 eradicator Exp $
+
+inherit eutils
+
+IUSE=""
 
 DESCRIPTION="A command line editor for id3v2 tags."
 HOMEPAGE="http://id3v2.sourceforge.net/"

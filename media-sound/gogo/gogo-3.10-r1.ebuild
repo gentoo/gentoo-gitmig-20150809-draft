@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.9 2004/03/01 05:37:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.10 2004/04/20 16:45:00 eradicator Exp $
+
+inherit eutils
+IUSE=""
 
 MY_PV=310pl3
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"

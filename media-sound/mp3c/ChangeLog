@@ -1,5 +1,8 @@
 # ChangeLog for media-sound/mp3c
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3c-0.27.ebuild:
+  QA fix.
 
 *mp3c-0.27 (18 Jun 2002)
 

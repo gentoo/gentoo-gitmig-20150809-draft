@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.9 2004/03/09 19:01:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.10 2004/04/20 16:46:22 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="Gramofile is an audio recording/editing program whose main goal is to allow recording of analog audio for digital remastering."
 HOMEPAGE="http://panic.et.tudelft.nl/~costar/gramofile/"
@@ -17,18 +19,15 @@ IUSE=""
 DEPEND="sys-libs/ncurses \
 	=dev-libs/fftw-2*"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	patch < ${DISTDIR}/tappin3a.patch
-	patch < ${DISTDIR}/tappin3b.patch
+	epatch ${DISTDIR}/tappin3a.patch
+	epatch ${DISTDIR}/tappin3b.patch
 }
 
 src_compile() {
-	sed -e "s/CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER/CFLAGS \= -Wall `echo ${CFLAGS}` -DTURBO_MEDIAN -DTURBO_BUFFER/" Makefile > Makefile.new
-	mv Makefile.new Makefile
+	sed -i -e "s/CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER/CFLAGS \= -Wall `echo ${CFLAGS}` -DTURBO_MEDIAN -DTURBO_BUFFER/" Makefile 
 	make || die
 }
 
