@@ -1,0 +1,32 @@
+# ChangeLog for sys-fs/ntfsprogs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.1 2003/09/15 18:17:31 seemant Exp $
+
+*ntfsprogs-1.7.1 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> ntfsprogs-1.7.1.ebuild:
+  moved from sys-apps to sys-fs
+
+  06 Aug 2003; Martin Holzer <mholzer@gentoo.org> ntfsprogs-1.7.1.ebuild:
+  need gcc-2.96+
+
+  10 Jun 2003; <msterret@gentoo.org> ntfsprogs-1.7.1.ebuild:
+  DEPEND on sed >= 4
+
+*ntfsprogs-1.7.1 (31 May 2003)
+
+  31 May 2003; Brandon Low <lostlogic@gentoo.org> ntfsprogs-1.7.1.ebuild:
+  Move package to new name, and bump version thangs to bug 18713
+
+*linux-ntfs-1.6.0 (02 Nov 2002)
+
+  02 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Compile the project ourselves, thanks to cory@visi.name; #9810.
+
+*linux-ntfs-1.5.0-r1 (1 Feb 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  updated keywords (-ppc -sparc -sparc64) - this is a binary pkg for x86.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> :
+  Added LICENSE, KEYWORDS, SLOT.
