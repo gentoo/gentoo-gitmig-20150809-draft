@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1.ebuild,v 1.1 2004/11/02 22:57:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.1.ebuild,v 1.2 2004/11/08 19:41:45 corsair Exp $
 
 inherit eutils debug python
 
@@ -11,7 +11,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2.2
