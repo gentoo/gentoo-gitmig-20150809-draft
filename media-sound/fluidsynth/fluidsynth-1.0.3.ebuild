@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.6 2004/04/03 06:00:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.7 2004/04/08 07:52:53 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,12 +12,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
-IUSE="alsa ladcca jack sse"
+IUSE="alsa jack sse"
 
-DEPEND="ladcca? ( media-libs/ladcca ) \
-	jack? ( virtual/jack ) \
+DEPEND="jack? ( virtual/jack ) \
 	media-libs/ladspa-sdk \
 	alsa? ( media-libs/alsa-lib )"
+
+# Removed as it doesn't support new ladcca yet ... bug #46916
+# ladcca? ( media-libs/ladcca ) \
+
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +32,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--enable-ladspa"
-	use ladcca || myconf="--disable-ladcca ${myconf}"
+#	use ladcca || myconf="--disable-ladcca ${myconf}"
 	use alsa || myconf="--disable-alsa ${myconf}"
 	use jack || myconf="--disable-jack-support ${myconf}"
 	if [ `use sse` ]; then
