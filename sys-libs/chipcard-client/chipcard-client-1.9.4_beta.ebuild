@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/chipcard-client-1.9.4_beta.ebuild,v 1.2 2004/12/26 19:57:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/chipcard-client/chipcard-client-1.9.4_beta.ebuild,v 1.3 2004/12/27 01:31:20 kloeri Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.libchipcard.de"
 SRC_URI="mirror://sourceforge/libchipcard/chipcard2_client-${PV/_/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~alpha"
 
 IUSE="debug ssl"
 
