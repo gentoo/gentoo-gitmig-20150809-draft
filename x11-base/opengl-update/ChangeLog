@@ -1,0 +1,10 @@
+# ChangeLog for x11-base/opengl-update
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.1 2002/05/12 18:33:22 azarah Exp $
+
+*opengl-update-1.0 (12 May 2002)
+
+  12 May 2002; Martin Schlemmer <azarah@gentoo.org> ChangeLog :
+  
+  Added initial version of opengl-update.
+  
