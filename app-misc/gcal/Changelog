@@ -1,0 +1,12 @@
+# ChangeLog for app-misc/gcal
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/Changelog,v 1.1 2003/02/10 13:57:28 seemant Exp $
+
+*gcal-3.01 (24 Aug 2002)
+
+  24 Aug 2002; Burton Samograd <kruhft@kruhft.dyndns.org> ChangeLog,
+  gcal-3.01.ebuild, files/digest-gcal-3.01 :
+
+  New ebuild. GNU cal (also called gcal) is a much more powerful
+  replacement for the standard unix cal program. Initial import by
+  seemant.
