@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.20 2004/07/25 04:42:10 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.21 2004/07/26 00:51:52 mr_bones_ Exp $
 
 inherit eutils
 
@@ -22,8 +22,8 @@ src_unpack() {
 }
 
 src_compile() {
-        local myconf=""
-        [ `use macos` ] && myconf="--enable-nls" || myconf="`use_enable nls`"
+	local myconf=""
+	use macos && myconf="--enable-nls" || myconf="`use_enable nls`"
 
 	# Compaq Java segfaults trying to build gettext stuff, and there's
 	# no good way to tell gettext to refrain from building the java
