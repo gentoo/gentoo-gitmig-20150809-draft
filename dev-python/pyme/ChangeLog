@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.2 2003/02/12 06:33:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.3 2003/04/04 18:31:09 liquidx Exp $
 
 *pyme-0.5.1 (26 Nov 2002)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> pyme-0.5.1.ebuild:
+  bump to stable
 
   26 Nov 2002; J Robert Ray <jrray@gentoo.org> :
   New ebuild.
