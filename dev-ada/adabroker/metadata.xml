@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>ada</herd>
+<longdescription>AdaBroker is a set of tools and libraries that can be used to develop CORBA applications in Ada. It provides an IDL parser, Ada code generator, the CORBA predefined Ada support packages (defined by the Ada mapping).</longdescription>
+</pkgmetadata>
