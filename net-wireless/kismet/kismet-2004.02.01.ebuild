@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.02.01.ebuild,v 1.1 2004/02/29 02:50:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.02.01.ebuild,v 1.2 2004/05/01 21:44:15 kloeri Exp $
 
 MY_P=${P/2004.02/feb.04}
 ETHEREAL_VERSION="0.9.13"
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
 SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz
-	 ethereal? (http://www.ethereal.com/distribution/ethereal-${ETHEREAL_VERSION}.tar.bz2)"
+	 ethereal? (http://www.ethereal.com/distribution/all-versions/ethereal-${ETHEREAL_VERSION}.tar.bz2)"
 
 LICENSE="GPL-2"
 SLOT="0"
