@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.29 2004/06/24 22:41:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.30 2004/07/21 02:18:24 tgall Exp $
+
+  20 Jul 2004; Tom Gall <tgall@gentoo.org> graphviz-1.10.ebuild:
+  stable on ppc64, bug #57163
 
   05 Jun 2004; Stephen P. Becker <geoman@gentoo.org> graphviz-1.10.ebuild:
   Added gnuconfig tweak for mips.
