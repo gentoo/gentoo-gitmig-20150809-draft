@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23-r2.ebuild,v 1.1 2005/01/19 23:18:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23-r2.ebuild,v 1.2 2005/01/22 02:47:01 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -108,7 +108,11 @@ src_unpack() {
 
 	for d in ${S} ${S}/innobase; do
 		cd ${d}
-		autoconf
+		# WARNING, plain autoconf breaks it!
+		#autoconf
+		# must use this instead
+		WANT_AUTOCONF=2.59 autoreconf --force
+		# Fix the evil "libtool.m4 and ltmain.sh have a version mismatch!"
 		libtoolize --copy --force
 		# Saving this for a rainy day, in case we need it again
 		#WANT_AUTOMAKE=1.7 automake
