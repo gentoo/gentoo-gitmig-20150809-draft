@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.39 2003/12/26 03:17:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.40 2003/12/29 15:23:09 gmsoft Exp $
+
+  29 Dec 2003; Guy Martin <gmsoft@gentoo.org> wxGTK-2.4.1-r1.ebuild:
+  Marked stable on hppa.
 
   25 Dec 2003; Jason Wever <weeve@gentoo.org> wxGTK-2.4.1-r1.ebuild:
   Marked stable on sparc.
