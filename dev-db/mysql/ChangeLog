@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.57 2003/07/12 11:34:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.58 2003/07/12 15:14:05 woodchip Exp $
+
+  12 Jul 2003; Donny Davies <woodchip@gentoo.org> mysql-4.0.13-r3.ebuild:
+  Marked x86 stable.
 
   12 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
   Change note about rebuilder.sh to revdep-rebuild.
