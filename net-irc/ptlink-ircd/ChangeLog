@@ -1,0 +1,42 @@
+# ChangeLog for net-irc/ptlink
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.1 2004/07/10 22:24:03 swegener Exp $
+
+*ptlink-ircd-6.18.1 (11 Jul 2004)
+
+  11 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +files/ptlink-ircd.conf.d, +files/ptlink-ircd.init.d,
+  +ptlink-ircd-6.18.1.ebuild:
+  Renamed from net-irc/ptlink and version bumped.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ptlink-6.14.2.ebuild,
+  ptlink-6.16.2.ebuild:
+  virtual/glibc -> virtual/libc
+
+  09 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> ptlink-6.16.2.ebuild:
+  Added ~sparc, #53446
+
+  29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  ptlink-6.14.2.ebuild, ptlink-6.16.2.ebuild:
+  Masked ptlink-6.16.2.ebuild testing for ppc
+
+  29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  ptlink-6.14.2.ebuild:
+  Masked ptlink-6.14.2.ebuild testing for ppc
+
+*ptlink-6.16.2 (11 Mar 2004)
+
+  11 Mar 2004; Chuck Short <zul@gentoo.org> ptlink-6.14.2.ebuild,
+  ptlink-6.16.2.ebuild:
+  Version bump, closes #44304.
+
+  24 Oct 2003; Chuck Short <zul@gentoo.org> files/ptlinkircd.rc:
+  rc script fix up.
+
+*ptlink-6.14.2 (11 Oct 2003)
+
+  11 Oct 2003; Chuck Short <zul@gentoo.org> metadata.xml,
+  ptlink-6.14.2.ebuild, files/ptlinkircd.confd, files/ptlinkircd.rc:
+  Added new ebuild by James Webster jimmyj@netstat.org.
+  Closes bug #15007.
+
