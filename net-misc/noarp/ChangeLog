@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/noarp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.4 2005/02/25 17:03:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.5 2005/02/28 00:47:48 xmerlin Exp $
 
-*noarp-1.2.3-r1 (26 Mar 2005)
+*noarp-1.2.3-r1 (26 Feb 2005)
 
-  26 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  26 Feb 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
   +noarp-1.2.3-r1.ebuild, +noarp-2.0.2.ebuild:
   added noarp-2.0.2 for 2.6.x kernels, improved noarp-1.x ebuild (r1)
 

@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 909c1038f00a5215744079d7c0202cf1 ChangeLog 667
+MD5 36f991b5ecaf9dcede063a1edf3b816e ChangeLog 667
 MD5 4307008581c66a36632da5641d2dfd8e noarp-1.2.3.ebuild 707
 MD5 41c9f23881ebff54ec28d42925ceae55 noarp-2.0.2.ebuild 917
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
@@ -12,7 +12,7 @@ MD5 bb721051346f0f70e6de75e276b3c87b files/digest-noarp-1.2.3-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCRd+FgMUyd/cdjWsRAlg4AJ9/6toTXSXq81rz9iCWmbkTRdeH6ACgjklu
-mex8pn5r1+8JggOwLF+Mvaw=
-=ys27
+iD8DBQFCIng9gMUyd/cdjWsRApMhAJ40VUfr3TwHiq623OHBhjXWPKFTVQCfU4sK
+iLKiYQT7puFGW79XFxgdMT8=
+=sMDr
 -----END PGP SIGNATURE-----
