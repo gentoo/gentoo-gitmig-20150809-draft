@@ -1,15 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a971d8d59f8c462d8651882eba46297 ppp-2.4.2-r6.ebuild 5404
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 3190fd8db6e5622f1106f3b332d068e5 ppp-2.4.1-r14.ebuild 4714
 MD5 3f0c928a5721f56d967603b1878f648a ChangeLog 13326
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 b109af0767940076444e51dbf3275f16 ppp-2.4.1-r14.ebuild 4698
 MD5 20502c85d128ae0dd4545dc3ae3eec6b ppp-2.4.2-r1.ebuild 4276
-MD5 24f264eef320520caee8597fb071405b ppp-2.4.2.ebuild 3957
 MD5 210b3f9616a92005171f3f25c33c1638 ppp-2.4.2-r2.ebuild 4462
+MD5 5a971d8d59f8c462d8651882eba46297 ppp-2.4.2-r6.ebuild 5404
+MD5 24f264eef320520caee8597fb071405b ppp-2.4.2.ebuild 3957
 MD5 140bc2a08334d3546f43259934da603e files/chat-default 347
 MD5 1a60baf88a301c6eed8472a01b3691eb files/confd.ppp0 3312
+MD5 8d2dfaf7418945cb19864167542b14c0 files/digest-ppp-2.4.2 61
 MD5 4fda43c2f3f8b5b58a58e5d238991c0b files/digest-ppp-2.4.1-r14 65
 MD5 8368eb79ad4618c3c6753801b5c4c689 files/gcc3.3-multiline.patch 1673
 MD5 47bae70427ec4cb3ea1cc87ae799d0e3 files/gcc33-amd64.patch 1207
@@ -22,34 +20,26 @@ MD5 05b7394b35a2342033b52134568bf6b8 files/poff 2723
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
 MD5 44cc662ba9aa61dd9add3ddd4c5ded57 files/pon.1 3607
 MD5 eb5dfeb9b6a2c8b4b2f23df4980952e0 files/ppp-2.4.1-MSCHAPv2-fix.patch 507
-MD5 c07c26f0d600a1fde9752fa06fc4b0c3 files/digest-ppp-2.4.2-r6 194
 MD5 f82a3ae0dba4ce6031bbf1405071e827 files/ppp-2.4.1-r10.patch 311
+MD5 c07c26f0d600a1fde9752fa06fc4b0c3 files/digest-ppp-2.4.2-r6 194
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/pppoe.html 7605
-MD5 8d2dfaf7418945cb19864167542b14c0 files/digest-ppp-2.4.2 61
 MD5 8d2dfaf7418945cb19864167542b14c0 files/digest-ppp-2.4.2-r1 61
 MD5 8d2dfaf7418945cb19864167542b14c0 files/digest-ppp-2.4.2-r2 61
-MD5 f7a8c95af55d9cca703c15cdf9386ad4 files/2.4.2/control_c.patch 402
 MD5 1fd88dda7f4996799c69a9501d42cc23 files/2.4.2/README.mpls 530
 MD5 bc88eaf56862e5ebf8f45ec5ada4bb90 files/2.4.2/cflags.patch 1857
 MD5 a2eaeceee980ff6e183abfa370fc685c files/2.4.2/chat-default 353
 MD5 ef28c96687409a340c6cd66e21dc58db files/2.4.2/confd.ppp0 2786
 MD5 4d031363e70aa42076bf484fa8bdc9d6 files/2.4.2/ip-down 743
 MD5 0fea1d14ab99bdbbbb5b6e652e105bd3 files/2.4.2/ip-up 1083
-MD5 8eaba18dd4e6f49c9fd2d35ab8572458 files/2.4.2/killaddr-smarter.patch.gz 2257
-MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/2.4.2/modules.ppp 268
 MD5 927fc5dafad76c9c1ee7f0259e9244b7 files/2.4.2/mpls.patch.gz 3151
+MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/2.4.2/modules.ppp 268
 MD5 ae851489b48d5c639c8c6da1fe02a5af files/2.4.2/net.ppp0 4414
 MD5 fa2a5b8df496922fa2fb592115953b6b files/2.4.2/options-pppoe 53
 MD5 2890b47660f967a07ac5b211850e46c5 files/2.4.2/options-pptp 238
-MD5 99aa8428a441ff748dc88892a8e98266 files/2.4.2/pcap.patch 728
-MD5 971013ca1ccc5a25acffdb3ff9edff4e files/2.4.2/pppoatm.diff.gz 3567
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.2/pppoe.html 7605
+MD5 99aa8428a441ff748dc88892a8e98266 files/2.4.2/pcap.patch 728
+MD5 8eaba18dd4e6f49c9fd2d35ab8572458 files/2.4.2/killaddr-smarter.patch.gz 2257
+MD5 971013ca1ccc5a25acffdb3ff9edff4e files/2.4.2/pppoatm.diff.gz 3567
 MD5 9d798912edc0a47727afcd7aac100957 files/2.4.2/stdopt-mppe-mppc-0.82.patch.gz 10108
 MD5 bd6bee3df13537a8550d2f39131eab0d files/2.4.2/pppoatm-2.diff.gz 3489
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbjP8mdTrptrqvGERAnpOAJ9UVulqERGLPKWJV/gkrPDT1moPeQCZAWor
-4BZg5PaAVstnCuct7ZAgOn8=
-=gNJP
------END PGP SIGNATURE-----
+MD5 f7a8c95af55d9cca703c15cdf9386ad4 files/2.4.2/control_c.patch 402
