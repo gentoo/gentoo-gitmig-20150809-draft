@@ -114,6 +114,7 @@ svga - Adds support for SVGAlib (graphics library)
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
+tiff - Adds support for the tiff image format
 truetype - Adds support for FreeType and/or FreeType2 fonts
 trusted
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else
