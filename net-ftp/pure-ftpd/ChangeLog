@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.4 2002/10/12 14:41:42 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.5 2002/11/25 23:20:48 vapier Exp $
+
+*pure-ftpd-1.0.12-r1 (25 Nov 2002)
+
+  25 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added support for lfs #11215
 
 *pure-ftpd-1.0.12 (12 Oct 2002)
 
