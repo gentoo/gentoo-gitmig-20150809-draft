@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.3.ebuild,v 1.3 2004/02/27 16:20:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.3.ebuild,v 1.4 2004/04/27 17:57:38 agriffis Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -27,3 +29,4 @@ src_install () {
 	einstall || die "make install failed"
 	dodoc ${S}/LICENSE.*
 }
+

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.11 2004/04/27 15:48:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.12 2004/04/27 17:57:38 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libebml-0.6.0.ebuild,
+  libebml-0.6.3.ebuild, libebml-0.6.4.ebuild, libebml-0.6.5.ebuild:
+  Add flag-o-matic for bug 49179
 
 *libebml-0.7.0 (27 Apr 2004)
 
