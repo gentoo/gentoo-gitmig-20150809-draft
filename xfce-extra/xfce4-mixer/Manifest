@@ -1,4 +1,6 @@
 MD5 850342865fe5ed697365b72308248cc8 xfce4-mixer-4.0.0.ebuild 824
+MD5 efd469e13b6ea60cd6dc537334304688 xfce4-mixer-4.0.1.ebuild 827
 MD5 1755833c12c3004b072577ef67949738 ChangeLog 1020
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 c64ab055e3b60c6e3668fc8aae59ca95 files/digest-xfce4-mixer-4.0.0 69
+MD5 bd7d5d1029216e0a210d6724e5bb5199 files/digest-xfce4-mixer-4.0.1 69
