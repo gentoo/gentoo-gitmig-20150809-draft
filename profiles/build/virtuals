@@ -12,3 +12,4 @@ sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/os-headers	sys-kernel/linux-headers
 virtual/modutils sys-apps/modutils
 virtual/aspell-dict           app-dicts/aspell-en
+virtual/skkserv		app-i18n/skkserv
