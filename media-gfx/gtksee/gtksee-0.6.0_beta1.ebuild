@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/gtksee-0.6.0_beta1.ebuild,v 1.1 2004/11/09 03:21:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/gtksee-0.6.0_beta1.ebuild,v 1.2 2004/11/15 20:10:02 mr_bones_ Exp $
 
 DESCRIPTION="A simple but functional image viewer/browser - ACD See alike."
 HOMEPAGE="http://gtksee.berlios.de/"
-SRC_URI="http://download.berlios.de/gtksee/${P/_beta1/b}.tar.gz"
+SRC_URI="http://download.berlios.de/gtksee/${P/_beta1/b-1}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/libpng-1.2.1
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${P/_beta1/b}"
+S="${WORKDIR}/${P/_beta1/b-1}"
 
 src_compile() {
 	econf \
