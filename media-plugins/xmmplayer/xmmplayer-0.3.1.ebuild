@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.3.1.ebuild,v 1.3 2004/02/15 12:06:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.3.1.ebuild,v 1.4 2004/02/25 20:43:54 mr_bones_ Exp $
 
 DESCRIPTION="XMMPlayer is an input plugin for XMMS"
 HOMEPAGE="http://thegraveyard.org/xmmplayer.php"
@@ -8,7 +8,7 @@ SRC_URI="http://thegraveyard.org/files/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="media-sound/xmms
 	media-video/mplayer"
