@@ -1,0 +1,11 @@
+# ChangeLog for x11-terms/hanterm-xf
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm-xf/ChangeLog,v 1.1 2004/08/02 16:28:36 usata Exp $
+
+*hanterm-xf-2.0.5 (03 Aug 2004)
+
+  03 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +hanterm-xf-2.0.5.ebuild:
+  Initial import. Thanks to Jeong Jin-Hyo <minuetto@oslab.knu.ac.kr> and Park
+  Ji-in <mithrandir@electrang.net>. This closes bug #15170.
+
