@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.13 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r3.ebuild,v 1.14 2003/10/12 17:10:51 foser Exp $
 
 IUSE="nls"
 
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/guile-1.4
 	dev-util/indent
 	=dev-libs/glib-1.2*
+	=x11-libs/gtk+-1.2*
 	dev-libs/libxml
 	dev-libs/popt
 	gnome-base/oaf
