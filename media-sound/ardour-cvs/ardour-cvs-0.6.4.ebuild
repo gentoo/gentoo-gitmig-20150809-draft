@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.2 2003/05/09 10:59:30 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.3 2003/05/11 02:35:12 jje Exp $
 
 IUSE="nls"
 
@@ -36,8 +36,8 @@ S="${WORKDIR}/${PN/-cvs/}"
 
 src_compile() {
 
-	local myconf
-
+	local myconf="--disable-dependency-tracking"
+	export WANT_AUTOCONF_2_5=1
 	sh autogen.sh
         # nasty little hack to create version.h, will remove when this
         # is fixed upstream...
