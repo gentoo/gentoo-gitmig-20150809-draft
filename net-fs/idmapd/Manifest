@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 440606a08aecbf96c318aad6d6a3802e idmapd-1.5.ebuild 982
+MD5 03ec899f0ff4b22f10d6f69d8dee6b33 ChangeLog 329
+MD5 8b91dd662c9509cf90c2998397d2a69b files/digest-idmapd-1.5 62
+MD5 c0c2fa8dc80b342974cf24b421011371 files/1.5-no-string.patch 336
+MD5 8a20934e1bc8e95dd7bf32a208393af5 files/idmapd.confd 294
+MD5 e1d1628aa480d116a9e8f5940cfab60e files/idmapd.rc 928
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAxeFrHTu7gpaalycRAvz2AJ9hqIC4E5rGnUeqp3gYj2Xb5e3nLQCfdRti
+olned4w2LjRka8Gt5SPRLMI=
+=kJiV
+-----END PGP SIGNATURE-----
