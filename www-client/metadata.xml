@@ -7,5 +7,9 @@
 	<longdescription lang="es">
 		La categoría www-client contiene clientes del world wide web (WWW).
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie www-client enthält verschiedene Clientprogramme für
+		das WWW wie z.B. Browser, Download-Utilities und RSS-Aggregatoren.
+	</longdescription>
 </catmetadata>
 
