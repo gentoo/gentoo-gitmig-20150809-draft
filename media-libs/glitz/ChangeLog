@@ -1,8 +1,9 @@
 # ChangeLog for media-libs/glitz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.9 2005/03/07 16:52:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.10 2005/03/07 16:56:16 corsair Exp $
 
-  07 Mar 2005; Markus Rothe <corsair@gentoo.org> glitz-0.4.0.ebuild:
+  07 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  glitz-0.3.0.20050115.ebuild, glitz-0.4.0.ebuild:
   Stable on ppc64
 
 *glitz-0.3.0.20050115 (23 Feb 2005)
