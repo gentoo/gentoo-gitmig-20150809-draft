@@ -42,10 +42,6 @@
 # Masked while the system people put this through the test
 =sys-apps/bash-2.05b
 
-# <nitro@gentoo.org> 23 Jul 2002
-# Masked net-snmp-5.0.2a for testing
-=net-analyzer/net-snmp-5.0.2a
-
 # <phoen][x@gentoo.org> 23 Jul 2002
 # Masked fping-2.4_beta2-r1 for testing
 =net-analyzer/fping-2.4_beta2-r1
