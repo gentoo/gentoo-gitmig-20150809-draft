@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.1.4.ebuild,v 1.3 2004/01/23 14:13:34 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.2.1.ebuild,v 1.1 2004/01/23 14:13:34 torbenh Exp $
 
 DESCRIPTION="ALSA sequencer event viewer/filter."
 HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
 LICENSE="GPL-2"
 
-DEPEND=">=media-libs/alsa-lib-0.5.0
+DEPEND=">=media-libs/alsa-lib-0.9.0
 	x11-libs/gtk+"
 
 SLOT="0"
