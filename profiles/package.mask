@@ -167,10 +167,6 @@ x11-libs/gtkmm-addons
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
 
-# <agenkin@gentoo.org> (04 Oct 2002)
-# Masking pending unfreeze.
-app-games/koth
-
 # <aliz@gentoo.org> (3 Oct 2002)
 # Masked for testing
 =app-sci/magic-7.1-r1
