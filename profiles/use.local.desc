@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.975 2005/02/27 23:53:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.976 2005/02/28 15:49:44 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -354,8 +354,10 @@ media-libs/tiff:lzw-tiff - Enable external lzw compression support
 media-libs/tiff:private - Install additional "private" headers
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/win32codecs:xanim - Installs the xanim video codecs
+media-libs/xine-lib:cle266 - Suport for the via XvMC libs
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
 media-libs/xine-lib:fb - Adds framebuffer support
+media-libs/xine-lib:ffmpeg - Use external ffmpeg library instead on internal one
 media-libs/xine-lib:i8x0 - Support the i8x0 XvMC libs
 media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
 media-libs/xine-lib:vidix - Support for vidix video output
