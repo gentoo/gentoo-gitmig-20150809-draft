@@ -10,7 +10,7 @@
 @@ -116,4 +116,5 @@
  
  local (@dirlist) = &parse_arguments (@ARGV);
-+push (@dirlist, "/usr/share/aclocal");
++push (@dirlist, "/usr/share/aclocal") if (!grep(/^--acdir/, @ARGV));
  &scan_m4_files (@dirlist);
  &scan_configure;
 @@ -203,5 +204,5 @@

@@ -1,20 +1,15 @@
 # ChangeLog for sys-devel/automake
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.68 2005/01/30 13:54:13 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.69 2005/01/30 14:27:30 vapier Exp $
 
   30 Jan 2005; Mike Frysinger <vapier@gentoo.org>
-  +files/automake-1.5-ccnoco-test.patch,
-  +files/automake-1.5-dirnames-test.patch, automake-1.5.ebuild:
-  Add patches from fedora to fix ccnoco/dirname tests #79505.
+  +files/automake-1.5-test-fixes.patch, automake-1.5.ebuild:
+  Add patches from fedora to fix ccnoco/dirname tests #79505.  Also touch up 
+  our slot patch to not append /usr/share/aclocal if --acdir is passed since 
+  that's (1) wrong and (2) it breaks the aclocalii test.  Update the tail/head 
+  syntax of the insthook test to fix incorrect failure.
 
   30 Jan 2005; Mike Frysinger <vapier@gentoo.org> automake-1.4_p6.ebuild:
-  Add a few patches from fedora and dont run error.test since its known to fail
-  and no one really cares to fix it in this old version #79529.
-
-  30 Jan 2005; Mike Frysinger <vapier@gentoo.org>
-  -files/automake-1.4_p5-ignore-duplicates.patch,
-  +files/1.4/00_all_ansi2knr-stdlib.patch, +files/1.4/00_all_libtoolize.patch,
-  +files/1.4/00_all_subdirs-89656.patch, automake-1.4_p6.ebuild:
   Add a few patches from fedora and dont run error.test since its known to fail
   and no one really cares to fix it in this old version #79529.
 
