@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f250c20d33bf82a7bc4adea72acfd1de ChangeLog 14311
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c850bb5568f05caabc233989b82acdd7 nautilus-1.0.6-r9.ebuild 3404
-MD5 53e99bee707ea7b11a3a3ae65d0e1e18 nautilus-2.6.1.ebuild 2364
-MD5 73ba3a6828dc3e7bedcfac1766521411 nautilus-2.6.0.ebuild 2360
-MD5 eb950ae24616a55e6444d19301c286aa nautilus-2.6.3.ebuild 2731
-MD5 a4d139a096c5618a8243c9942705920d nautilus-2.4.2.ebuild 2086
-MD5 3c3aaf41e7a86cbd3c4a917205dfe701 nautilus-2.6.3-r1.ebuild 3008
-MD5 d4bc68502d8068e69979a041eba8b3b6 nautilus-2.8.0.ebuild 2741
+MD5 666ced824d4d7a4c8cbd7fe0b550db35 nautilus-2.6.1.ebuild 2369
+MD5 b895718bc0b4715522971180e30c5cf6 nautilus-2.6.0.ebuild 2363
+MD5 4832dda31e70f02d519882327b43ecb6 nautilus-2.6.3.ebuild 2734
+MD5 e9bb531321dc38a8351e22267dc06220 nautilus-2.4.2.ebuild 2090
+MD5 a67cd136892af33c8eba094604ce0f4b nautilus-2.6.3-r1.ebuild 3013
+MD5 30784b957cf837208856ae47399ff8c9 nautilus-2.8.0.ebuild 2746
 MD5 3db7f854e279f4032b8d1e86d64157aa files/digest-nautilus-1.0.6-r9 68
 MD5 404b6778dc9a6be0f00f197099fe2870 files/digest-nautilus-2.6.1 68
 MD5 9a42848d2be57a20167878a2996c5ec5 files/digest-nautilus-2.6.0 68
@@ -35,10 +32,3 @@ MD5 ba6864f5fd16f269567214a308a87a5d files/digest-nautilus-2.8.0 68
 MD5 001005b2812396e74d726f1497eeb68b files/nautilus-2.6.3-libexif-0.6.patch 749
 MD5 7cb2f285f24e86a90c6a65b0b9356d39 files/macros/gnome.m4 16426
 MD5 486b971d706aec59655a72282d3feb0b files/macros/nautilus-macros.m4 7993
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhYu3HTu7gpaalycRAjH0AJkBwyQn7YeBDSBDbRLSeU02lRNH6ACg0ovv
-AyvhmRvlLMFOWiaL8a1iHNg=
-=s2Yn
------END PGP SIGNATURE-----
