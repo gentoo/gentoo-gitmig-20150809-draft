@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0.20050116.ebuild,v 1.1 2005/01/17 03:51:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0.20050220.ebuild,v 1.1 2005/02/21 10:45:37 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
