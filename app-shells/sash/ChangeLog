@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.22 2004/05/12 20:08:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.23 2004/05/15 20:40:52 kumba Exp $
+
+  15 May 2004; Joshua Kinard <kumba@gentoo.org> sash-3.6.ebuild:
+  Marked stable on mips.
 
   12 May 2004; Bryan Østergaard <kloeri@gentoo.org> sash-3.6.ebuild:
   Stable on alpha.
