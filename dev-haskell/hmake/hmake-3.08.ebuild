@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.3 2003/06/27 14:02:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.4 2003/07/03 13:22:49 kosmikus Exp $
 
 inherit base
 
@@ -22,18 +22,15 @@ RDEPEND="readline?    ( sys-libs/readline )
 	!nhc98?       ( dev-libs/gmp
 			sys-libs/readline )"
 
+# if using readline, hmake depends also on ncurses; but
+# readline already has this dependency
+
 src_compile() {
 	local buildwith
 	local arch
 
 	if [ "`use nhc98`" ]; then
 		buildwith="--buildwith=nhc98"
-		# Makefile is erroneous; we need to fix it
-		pushd hmake-3.07
-			mv Makefile Makefile.orig
-			sed -e "s/^TARGETS.*=/TARGETS = hmake-nhc hi-nhc/" \
-				Makefile.orig > Makefile
-		popd
 	else
 		buildwith="--buildwith=ghc"
 	fi
