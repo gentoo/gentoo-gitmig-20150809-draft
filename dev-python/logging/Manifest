@@ -1,4 +1,14 @@
-MD5 6d63b1d755f9d9711620ab69271f4bad ChangeLog 654
-MD5 85fbe84e8b8b7acd29a60cbb30237a35 logging-0.4.7.ebuild 659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 40ce2ebabd63edce73d33bd4408a2dc8 ChangeLog 654
+MD5 d1e304e4fb97f634bade5b790268c2b5 logging-0.4.7.ebuild 659
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 6f782707ef56c8f21234aac23074feff files/digest-logging-0.4.7 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBvaYxtZcznfol0URAgudAJ9SqhcisPl2AYv+2uhLGHRXv7oUXACg1CFo
+x5A2GfdZ68ieKMSixwnBl0k=
+=EyPh
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 59677136c3a1c3200219f1b17d5be690 ChangeLog 723
-MD5 5f3eadddc866d7fab3c70c27a116aa2c lupy-0.1.5.5.1.ebuild 572
-MD5 62b5d221f42a4c6c05375143a71bb156 lupy-0.2.1.ebuild 575
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 687b5d834ea33635b3c591de871a967e ChangeLog 720
+MD5 3864d8be41281f533d86005b487129d4 lupy-0.1.5.5.1.ebuild 569
+MD5 6a8c093ffea10c4afe499069cd40771f lupy-0.2.1.ebuild 572
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
 MD5 0f60e060b28ea362d83860a419037ac5 files/digest-lupy-0.1.5.5.1 65
 MD5 fc06876de6c00000062b0458ac1a4be2 files/digest-lupy-0.2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBvYPxtZcznfol0URAiN/AKCOBjsytn23wH7Md6Tl1+4O7OTN3gCfdGLr
+ZTtgSIVQ5LDczlh4tDc6jhQ=
+=VI3f
+-----END PGP SIGNATURE-----

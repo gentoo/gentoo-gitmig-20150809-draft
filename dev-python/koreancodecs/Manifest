@@ -1,4 +1,14 @@
-MD5 f4bb13c3da1e0ae152934ecd9cd56963 ChangeLog 447
-MD5 43fc2a366978eabfde42b25e6d17db0a koreancodecs-2.0.5.ebuild 656
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed2ac872bf7d84a3e5588392065a927d ChangeLog 444
+MD5 6420c27aa40faacdcf609865bfc4a688 koreancodecs-2.0.5.ebuild 653
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 149cb8b1332753c2ebf5b5b275aa86eb files/digest-koreancodecs-2.0.5 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCBvcyxtZcznfol0URAoUKAKC2a5ofdfRVxMCOVEO9yasTZAEKXwCg3wpm
+vDUXZstPeL4e37RTuF/9OKI=
+=CkY/
+-----END PGP SIGNATURE-----
