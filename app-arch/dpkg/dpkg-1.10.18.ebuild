@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.10-r1.ebuild,v 1.2 2003/09/20 20:33:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.18.ebuild,v 1.1 2004/01/23 19:07:11 lanius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=dev-lang/perl-5.6.0
 	>=sys-libs/ncurses-5.2-r7
@@ -22,7 +22,7 @@ src_compile() {
 	cd main
 	ln -s ../archtable
 	cd ..
-	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${PN}-${PV}.patch
 	./configure || die
 	make || die
 }
