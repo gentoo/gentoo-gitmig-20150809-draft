@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r1.ebuild,v 1.2 2004/11/21 21:29:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r1.ebuild,v 1.3 2005/01/02 08:30:12 vapier Exp $
 
 IUSE=""
 
