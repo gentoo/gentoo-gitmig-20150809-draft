@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.94.ebuild,v 1.1 2003/11/23 00:58:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.94.ebuild,v 1.2 2003/11/23 01:07:31 mholzer Exp $
 
 inherit webapp-apache
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Group-Office is a powerfull modular Intranet application framework. It runs *nix using PHP and has several database support."
 HOMEPAGE="http://group-office.sourceforge.net/"
 SRC_URI="mirror://sourceforge/group-office/${P}.tar.gz
-	mirror://sourceforge/group-office/GO-theme-Crystal-1.9.tar.gz"
+	mirror://sourceforge/group-office/GO-theme-crystal-1.93.tar.gz"
 RESTRICT="nomirror"
 
 LICENSE="GPL-2"
@@ -34,7 +34,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	unpack GO-theme-Crystal-1.9.tar.gz
+	unpack GO-theme-crystal-1.93.tar.gz
 }
 
 src_install() {
