@@ -1,0 +1,12 @@
+# default: off
+# description: The cups-lpd mini daemon accepts jobs from a remote LPD client.
+
+service printer
+{
+	socket_type = stream
+	protocol    = tcp
+	wait        = no
+	user        = lp
+	server      = /usr/lib/cups/daemon/cups-lpd
+	disable     = yes
+}
