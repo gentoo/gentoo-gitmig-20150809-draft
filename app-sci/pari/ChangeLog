@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/pari
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.14 2004/03/15 14:05:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.15 2004/04/19 12:06:55 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pari-2.1.4.ebuild,
+  pari-2.1.5-r1.ebuild, pari-2.1.5.ebuild:
+  Cleanup
 
 *pari-2.1.5-r2 (15 Mar 2004)
 
