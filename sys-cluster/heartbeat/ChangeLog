@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/heartbeat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.28 2004/10/18 16:00:00 iggy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.29 2005/01/22 14:57:07 xmerlin Exp $
+
+  22 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> heartbeat-1.2.2.ebuild,
+  heartbeat-1.2.3.ebuild:
+  fixed copyright header, added some missing dirs /var/lib/heartbeat/{ckpt,ccm}
+  etc
 
   18 Oct 2004; <iggy@gentoo.org> heartbeat-1.2.3.ebuild:
   bump to x86
