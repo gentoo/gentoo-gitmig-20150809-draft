@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.15 2003/02/21 17:25:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.16 2003/03/16 22:43:24 mholzer Exp $
 
 *webmin-1.070 (21 Feb 2003)
+
+  16 Mar 2003; Martin Holzer <mholzer@gentoo.org> webmin-1.050-r2.ebuild,
+  webmin-1.060.ebuild, webmin-1.070.ebuild:
+  Changed SRC_URI to use mirror://sf.
 
   21 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
