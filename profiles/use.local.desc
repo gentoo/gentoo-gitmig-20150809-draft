@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1001 2005/03/11 00:55:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1002 2005/03/11 01:05:49 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -311,11 +311,13 @@ mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
+mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
+mail-filter/dspam:neural - Build neural support for dspam
+mail-filter/dspam:sqlite - Build sqlite 2 support
+mail-filter/dspam:sqlite3 - Build sqlite 2 support
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
 mail-filter/dspam:exim - Build with delivery options for exim
-mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
-mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
