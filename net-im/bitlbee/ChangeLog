@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.9 2003/06/25 01:28:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.10 2003/07/02 14:49:07 weeve Exp $
+
+  02 Jul 2003; Jason Wever <weeve@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *bitlbee-0.80 (24 Jun 2003)
 
