@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/cream
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.1 2004/02/07 18:35:29 ciaranm Exp $
+
+*cream-0.28 (07 Feb 2004)
+
+  07 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.28.ebuild,
+  metadata.xml:
+  Initial ebuild, thanks to TGL <degrenier@easyconnect.fr> in bug #40522
+
