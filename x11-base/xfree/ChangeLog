@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.367 2004/11/17 17:45:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.368 2004/11/17 18:33:27 spyderous Exp $
+
+  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Update credits on xpm-secfix-thomas.diff.
 
   17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-4.3.0-r8.ebuild:
@@ -16,7 +19,9 @@
   buffer overflow; stack-based overflows with sprintf() and string functions;
   replaces popen() with s_popen(); path traversal issues; buffer underruns;
   and memory leaks (missing free(), found by Egbert Eich). Patch by Thomas
-  Biege and Matthiew Herrb.
+  Biege and Matthiew Herrb. Petr Mladek identified the initial vulnerabilities
+  and provided a patch that was later expanded on. Jacques A. Vidrine aided in
+  the code audit and patch review. This issue is identified as CAN-2004-0914.
 
   10 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-4.3.0-r7.ebuild:

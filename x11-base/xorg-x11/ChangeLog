@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.209 2004/11/17 18:24:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.210 2004/11/17 18:32:11 spyderous Exp $
+
+  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Update credits on xpm-secfix-thomas.diff.
 
   17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
@@ -30,7 +33,9 @@
   buffer overflow; stack-based overflows with sprintf() and string functions;
   replaces popen() with s_popen(); path traversal issues; buffer underruns;
   and memory leaks (missing free(), found by Egbert Eich). Patch by Thomas
-  Biege and Matthiew Herrb.
+  Biege and Matthiew Herrb. Petr Mladek identified the initial vulnerabilities
+  and provided a patch that was later expanded on. Jacques A. Vidrine aided in
+  the code audit and patch review. This issue is identified as CAN-2004-0914.
 
   16 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
