@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r5.ebuild,v 1.1 2002/02/25 19:50:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1-r5.ebuild,v 1.2 2002/04/12 15:51:45 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -13,14 +13,14 @@ DEPEND="virtual/glibc
 	>=dev-libs/gmp-3.1.1
 	~media-libs/freetype-1.3.1
 	>=media-libs/jpeg-6b
-        >=media-libs/tiff-3.5.5
+	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.7
-        >=media-libs/libgd-1.8.3
+	>=media-libs/libgd-1.8.3
 	>=media-libs/t1lib-1.0.1
 	>=net-www/apache-1.3
 	pam? ( >=sys-libs/pam-0.75 )
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
-	gettext? ( sys-devel/gettext )
+	nls? ( sys-devel/gettext )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	berkdb? ( >=sys-libs/db-3 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
@@ -90,7 +90,7 @@ src_compile() {
 
 	myconf="--without-readline --without-t1lib"
 	use pam && myconf="$myconf --with-pam"
-	use gettext && myconf="$myconf --with-gettext"
+	use nls && myconf="$myconf --with-gettext"
 	use gdbm && myconf="$myconf --with-gdbm=/usr"
 	use berkdb && myconf="$myconf --with-db3=/usr"
 	use mysql && myconf="$myconf --with-mysql=/usr"
