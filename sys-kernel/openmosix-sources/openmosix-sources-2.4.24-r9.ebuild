@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r7.ebuild,v 1.1 2004/11/16 11:49:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r9.ebuild,v 1.1 2004/11/27 16:33:57 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -57,6 +57,7 @@ src_unpack() {
 	epatch ${DISTDIR}/linux-2.4.26-CAN-2004-0814.patch || die "Failed to add CAN-2004-0814"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0841-fix_ldisc_switch.patch || die "Antipatch failed."
 	epatch ${DISTDIR}/linux-2.4.27-nfs3-xdr.patch.bz2 || die "Failed to add nfs3-xdk patch"
+	epatch ${FILESDIR}/${PN}-${PV}-smbfs.patch || die "Failed to add smbfs patch"
 
 	kernel_universal_unpack
 }
