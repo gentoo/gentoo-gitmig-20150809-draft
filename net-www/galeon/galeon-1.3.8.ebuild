@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.8.ebuild,v 1.2 2003/09/13 02:03:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.8.ebuild,v 1.3 2003/10/21 15:27:05 mholzer Exp $
 
 inherit gnome2 debug libtool
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 HOMEPAGE="http://galeon.sourceforge.net"
 SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
+RESTRICT="nomirror"
 
 IUSE=""
 LICENSE="GPL-2"

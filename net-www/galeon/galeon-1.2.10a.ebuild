@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.10a.ebuild,v 1.5 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.10a.ebuild,v 1.6 2003/10/21 15:27:05 mholzer Exp $
 
 IUSE="nls"
 
@@ -13,6 +13,7 @@ DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc alpha ~sparc"
