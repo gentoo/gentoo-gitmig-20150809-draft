@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.2 2002/12/09 04:41:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.3 2003/02/13 17:28:05 vapier Exp $
 
 S=${WORKDIR}/${P}/${PN}
 DESCRIPTION="WindowMaker DockApp: Battery/Power status monitor for laptops"

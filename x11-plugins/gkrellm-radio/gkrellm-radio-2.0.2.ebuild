@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.2.ebuild,v 1.2 2003/01/18 18:04:37 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.2.ebuild,v 1.3 2003/02/13 17:24:15 vapier Exp $ 
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A minimalistic GKrellM2 plugin to control radio tuners."
