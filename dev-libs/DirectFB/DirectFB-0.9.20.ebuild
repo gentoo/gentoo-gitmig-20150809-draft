@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.14 2004/04/18 15:07:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.15 2004/05/05 01:05:08 lv Exp $
 
-inherit eutils
+inherit eutils 64-bit
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -34,6 +34,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-linux-2.6.patch
+
+	# This patch changes ints to longs where appropriate
+	64-bit && epatch ${FILESDIR}/DirectFB-0.9.20-64bit.diff
+
+	# This patch enables simd optimisations for amd64. Since mmx and sse are
+	# masked USE flags on amd64 due to their enabling x86 specific asm more
+	# often than not, we'll just enable them by default. All x86_64 cpus
+	# should support mmx and see. Travis Tilley <lv@gentoo.org>
+	use amd64 && epatch ${FILESDIR}/DirectFB-0.9.20-simd-amd64.diff
+
 	sed -i 's:wm97xx_ts=yes:wm97xx_ts=no:' configure #36924
 }
 
@@ -52,6 +62,8 @@ src_compile() {
 	econf CPPFLAGS="${mycppflags}" \
 		`use_enable mmx` \
 		`use_enable sse` \
+		`use_enable amd64 mmx` \
+		`use_enable amd64 sse` \
 		`use_enable mpeg libmpeg3` \
 		`use_enable jpeg` \
 		`use_enable png` \

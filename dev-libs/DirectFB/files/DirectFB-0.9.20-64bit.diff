@@ -1,0 +1,117 @@
+diff -urN DirectFB-0.9.20.orig/interfaces/IDirectFBFont/idirectfbfont_default.c DirectFB-0.9.20/interfaces/IDirectFBFont/idirectfbfont_default.c
+--- DirectFB-0.9.20.orig/interfaces/IDirectFBFont/idirectfbfont_default.c	2003-07-08 18:25:48.000000000 +0200
++++ DirectFB-0.9.20/interfaces/IDirectFBFont/idirectfbfont_default.c	2004-01-08 23:32:07.000000000 +0100
+@@ -147,7 +147,7 @@
+                     else
+                          key = index;
+ 
+-                    dfb_tree_insert (font->glyph_infos, (void*) key, data);
++                    dfb_tree_insert (font->glyph_infos, (void*)(unsigned long)key, data);
+ 
+                     start = i + 1;
+                     index++;
+@@ -165,7 +165,7 @@
+           else
+                key = index;
+ 
+-          dfb_tree_insert (font->glyph_infos, (void*) key, data);
++          dfb_tree_insert (font->glyph_infos, (void*) (unsigned long)key, data);
+      }
+ 
+      dfb_surface_soft_lock( surface, DSLF_WRITE, &dst, &pitch, 0 );
+diff -urN DirectFB-0.9.20.orig/interfaces/IDirectFBFont/idirectfbfont_ft2.c DirectFB-0.9.20/interfaces/IDirectFBFont/idirectfbfont_ft2.c
+--- DirectFB-0.9.20.orig/interfaces/IDirectFBFont/idirectfbfont_ft2.c	2003-08-25 19:10:53.000000000 +0200
++++ DirectFB-0.9.20/interfaces/IDirectFBFont/idirectfbfont_ft2.c	2004-01-08 23:30:27.000000000 +0100
+@@ -120,7 +120,7 @@
+      else
+           index = FT_Get_Char_Index( face, glyph );
+ 
+-     load_flags = (FT_Int) face->generic.data;
++     load_flags = (FT_Int)(unsigned long) face->generic.data;
+      load_flags |= FT_LOAD_RENDER;
+ 
+      if ((err = FT_Load_Glyph( face, index, load_flags ))) {
+@@ -225,7 +225,7 @@
+      else
+           index = FT_Get_Char_Index( face, glyph );
+ 
+-     load_flags = (FT_Int) face->generic.data;
++     load_flags = (FT_Int)(unsigned long) face->generic.data;
+ 
+      if ((err = FT_Load_Glyph( face, index, load_flags ))) {
+           HEAVYDEBUGMSG( "DirectB/FontFT2: "
+@@ -530,7 +530,7 @@
+           }
+      }
+ 
+-     face->generic.data = (void *) load_flags;
++     face->generic.data = (void *)(unsigned long) load_flags;
+      face->generic.finalizer = NULL;
+ 
+      font = dfb_font_create();
+diff -urN DirectFB-0.9.20.orig/src/core/colorhash.c DirectFB-0.9.20/src/core/colorhash.c
+--- DirectFB-0.9.20.orig/src/core/colorhash.c	2003-10-01 14:02:21.000000000 +0200
++++ DirectFB-0.9.20/src/core/colorhash.c	2004-01-08 23:30:27.000000000 +0100
+@@ -182,7 +182,7 @@
+ {
+      Colorhash    *hash;
+      unsigned int  pixel = PIXEL_ARGB(a, r, g, b);
+-     unsigned int  index = (pixel ^ (unsigned int) palette) % HASH_SIZE;
++     unsigned int  index = (pixel ^ (unsigned long) palette) % HASH_SIZE;
+ 
+      DFB_ASSERT( hash_field != NULL );
+      DFB_ASSERT( hash_field->hash != NULL );
+diff -urN DirectFB-0.9.20.orig/src/core/fbdev/fbdev.c DirectFB-0.9.20/src/core/fbdev/fbdev.c
+--- DirectFB-0.9.20.orig/src/core/fbdev/fbdev.c	2003-10-09 04:05:57.000000000 +0200
++++ DirectFB-0.9.20/src/core/fbdev/fbdev.c	2004-01-08 23:30:27.000000000 +0100
+@@ -367,7 +367,7 @@
+      dfb_fbdev->framebuffer_base = mmap( NULL, dfb_fbdev->shared->fix.smem_len,
+                                          PROT_READ | PROT_WRITE, MAP_SHARED,
+                                          dfb_fbdev->fd, 0 );
+-     if ((int)(dfb_fbdev->framebuffer_base) == -1) {
++     if ((long)(dfb_fbdev->framebuffer_base) == -1) {
+           PERRORMSG( "DirectFB/core/fbdev: "
+                      "Could not mmap the framebuffer!\n");
+           SHFREE( dfb_fbdev->shared );
+diff -urN DirectFB-0.9.20.orig/src/core/fonts.c DirectFB-0.9.20/src/core/fonts.c
+--- DirectFB-0.9.20.orig/src/core/fonts.c	2003-10-13 05:58:04.000000000 +0200
++++ DirectFB-0.9.20/src/core/fonts.c	2004-01-08 23:30:27.000000000 +0100
+@@ -101,7 +101,7 @@
+      DFBResult      ret;
+      CoreGlyphData *data;
+ 
+-     if ((data = dfb_tree_lookup (font->glyph_infos, (void *)glyph)) != NULL) {
++     if ((data = dfb_tree_lookup (font->glyph_infos, (void *)(long)glyph)) != NULL) {
+           *glyph_data = data;
+           return DFB_OK;
+      }
+@@ -173,7 +173,7 @@
+                data->start = data->width = data->height = 0;
+           }
+ 
+-          dfb_tree_insert (font->glyph_infos, (void *) glyph, data);
++          dfb_tree_insert (font->glyph_infos, (void *)(long) glyph, data);
+      }
+ 
+      *glyph_data = data;
+diff -urN DirectFB-0.9.20.orig/src/misc/tree.c DirectFB-0.9.20/src/misc/tree.c
+--- DirectFB-0.9.20.orig/src/misc/tree.c	2003-08-15 13:33:10.000000000 +0200
++++ DirectFB-0.9.20/src/misc/tree.c	2004-01-08 23:30:27.000000000 +0100
+@@ -76,7 +76,7 @@
+                       void *value)
+ {
+      int inserted = 0;
+-     int fast_key = (unsigned int) key - 32;
++     long fast_key = (unsigned long) key - 32;
+ 
+      if (fast_key >= 0 && fast_key < 96)
+           tree->fast_keys[fast_key] = value;
+@@ -91,7 +91,7 @@
+                         void *key)
+ {
+      Node *node;
+-     int fast_key = (unsigned int) key - 32;
++     long fast_key = (unsigned long) key - 32;
+ 
+      if (fast_key >= 0 && fast_key < 96)
+           return tree->fast_keys[fast_key];
