@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.5.ebuild,v 1.1 2004/12/12 19:08:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/wput-0.5.ebuild,v 1.2 2005/01/12 11:56:21 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://itooktheredpill.dyndns.org/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="debug"
 
 DEPEND="virtual/libc"
