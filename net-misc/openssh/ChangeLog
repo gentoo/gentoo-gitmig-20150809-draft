@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.51 2003/09/20 01:02:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.52 2003/09/23 16:11:55 solar Exp $
+
+*openssh-3.7.1_p2 (23 Sep 2003)
+
+  23 Sep 2003; <solar@gentoo.org> openssh-3.7.1_p2.ebuild:
+  security update. http://www.openssh.com/txt/sshpam.adv
 
   19 Sep 2003; Chris PeBenito <pebenito@gentoo.org>
   openssh-3.7.1_p1-r1.ebuild, openssh-3.7.1_p1.ebuild:
