@@ -1,0 +1,12 @@
+#!/sbin/runscript
+# Copyright 2002 Sean Russell
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+start() {
+	uptimed -b
+	start-stop-daemon --quiet --start --pidfile /var/run/uptimed --exec /usr/sbin/uptimed
+}
+
+stop() {
+	start-stop-daemon --quiet --stop --pidfile /var/run/uptimed
+}
