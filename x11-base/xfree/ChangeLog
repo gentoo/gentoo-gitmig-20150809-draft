@@ -1,6 +1,23 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.318 2004/04/13 04:34:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.319 2004/04/13 15:49:14 spyderous Exp $
+
+  13 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  PATCH_VER 2.1.26.16. Drop
+  9016_all_4.3.0-libfontenc-IncludeSharedObjectInNormalLib.patch and
+  9015_all_4.2.99.4-IncludeSharedObjectInNormalLib.patch, combine into one
+  larger patch 9015_all_4.3.0-IncludeSharedObjectInNormalLib.patch to force all
+  libs to PIC (#40646, #44274). solar says there shouldn't be any negative
+  performance impact on any arch from PIC static libs. Add
+  9300_all_4.3.0-ncurses-xf86cfg-bool-conflict.patch to avoid conflict of bool
+  between ncurses-5.4 and xf86cfg (#43491). Add
+  9550_all_4.3.0-nls-cjk-utf8.patch to change fontset order for UTF-8 in
+  XLC_LOCALE, from Kang-Ho Song <khsongdr@yahoo.com> (#46392). Ported from
+  upstream patches. Add 9113_all_4.3.0-xterm-make-optional.patch and use
+  external xterm (Mike Harris). This now depends on x11-terms/xterm. Fix a
+  doc-building error with BuildLinuxDocText, which actually prevents some docs
+  from building. Enhance XVendorString to show PATCH_VER and make it compliant
+  with upstream.
 
   13 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Restore ChangeLog. Somehow I managed to erase most of it on version 1.315.

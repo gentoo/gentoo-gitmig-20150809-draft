@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.20 2004/04/12 05:30:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.21 2004/04/13 15:49:14 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -29,7 +29,7 @@ RESTRICT="nostrip"
 IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos pam pie"
 IUSE_INPUT_DEVICES="synaptics wacom"
 
-PATCH_VER="2.1.26.15"
+PATCH_VER="2.1.26.16"
 FILES_VER="0.1.5"
 RENDER_VER="0.8"
 XRENDER_VER="0.8.4"
@@ -121,7 +121,8 @@ PDEPEND="x86? (
 			input_devices_synaptics? ( x11-misc/synaptics )
 			input_devices_wacom? ( x11-misc/linuxwacom )
 		)
-	media-fonts/ttf-bitstream-vera"
+	media-fonts/ttf-bitstream-vera
+	x11-terms/xterm"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -361,7 +362,7 @@ src_unpack() {
 
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILES_DIR}/${PV}/site.def config/cf/host.def || die
-	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
+	echo "#define XVendorString \"Gentoo Linux (The XFree86 Project, Inc ${PV}, revision ${PR}-${PATCH_VER})\"" \
 		>> config/cf/host.def
 
 	# Makes ld bail at link time on undefined symbols
@@ -382,6 +383,9 @@ src_unpack() {
 	echo "#define MiscManDir \$(MANSOURCEPATH)7" >> config/cf/host.def
 	echo "#define MiscManSuffix 7x /* use just one tab or cpp will die */" \
 		>> config/cf/host.def
+
+	# Don't build xterm -- use external
+	echo "#define BuildXterm NO" >> config/cf/host.def
 
 	# We're using Xwrapper instead -- so that nothing else needs to be
 	# set uid any more.
@@ -454,11 +458,6 @@ src_unpack() {
 		echo "#define HasPamMisc NO" >> config/cf/host.def
 	fi
 
-	if use nls
-	then
-		echo "#define XtermWithI18N YES" >> config/cf/host.def
-	fi
-
 	if use x86
 	then
 		# build with glide3 support? (build the tdfx_dri.o module)
@@ -521,7 +520,6 @@ src_unpack() {
 		local DOC="NO"
 	fi
 
-	echo "#define BuildLinuxDocText ${DOC}" >> config/cf/host.def
 	echo "#define BuildLinuxDocHtml ${DOC}" >> config/cf/host.def
 	echo "#define BuildLinuxDocPS ${DOC}" >> config/cf/host.def
 	echo "#define BuildSpecsDocs ${DOC}" >> config/cf/host.def
@@ -716,12 +714,6 @@ EOF
 		${D}/etc/X11/XF86Config.example
 	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/fs/config
-
-	# Make sure the user running xterm can only write to utmp.
-	fowners root:utmp /usr/X11R6/bin/xterm
-	fperms 2755 /usr/X11R6/bin/xterm
-	# bug 24414, somehow it slips through stripping later in the ebuild
-	strip ${D}/usr/X11R6/bin/xterm
 
 	# Fix permissions on locale/common/*.so
 	for x in ${D}/usr/X11R6/lib/X11/locale/lib/common/*.so*
