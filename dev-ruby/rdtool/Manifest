@@ -1,5 +1,5 @@
-MD5 1d4800d8ce32c40810bd53d055250045 ChangeLog 2897
+MD5 102f9f335239b676ab2ad6ca53d27c76 ChangeLog 3005
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a97177fb7f8ebd789120ade6a9eb102b rdtool-0.6.14-r1.ebuild 1145
+MD5 64768149b38c187c5a82ee6b33bdb210 rdtool-0.6.14-r1.ebuild 1154
 MD5 a289d9c3c2372213817cc6502ea49a95 files/50rdtool-gentoo.el 174
 MD5 41064cf5f81f7c2640dd70e4792df30b files/digest-rdtool-0.6.14-r1 64
