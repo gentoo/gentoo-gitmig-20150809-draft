@@ -11,7 +11,6 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gal-0.6
 	>=gnome-base/control-center-1.2.4
-	>=gnome-base/glibwww-0.2-r1
         >=gnome-base/libghttp-1.0.9
         >=gnome-base/libunicode-0.4
         >=dev-util/xml-i18n-tools-0.8.4
