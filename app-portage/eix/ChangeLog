@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.8 2005/02/01 14:31:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.9 2005/02/02 17:41:56 hollow Exp $
+
+  02 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/0.2.0_alpha-bugfixes.patch, -files/0.2.0_alpha-portdir.patch,
+  eix-0.2.0_alpha.ebuild:
+  removed portdir patch which is in a generic bugfix patch. fixes #80241
 
   01 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
   +files/0.2.0_alpha-portdir.patch, eix-0.2.0_alpha.ebuild:

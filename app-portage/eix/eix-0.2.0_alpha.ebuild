@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.0_alpha.ebuild,v 1.2 2005/02/01 14:31:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.0_alpha.ebuild,v 1.3 2005/02/02 17:41:56 hollow Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND="sys-apps/portage
 	virtual/libc"
 
 src_compile() {
-	epatch ${FILESDIR}/${PV}-portdir.patch || die "portdir patch failed"
+	epatch ${FILESDIR}/${PV}-bugfixes.patch || die "portdir patch failed"
 
 	aclocal
 	libtoolize --force --copy
