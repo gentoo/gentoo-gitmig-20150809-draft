@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.137 2004/12/26 10:03:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.138 2004/12/28 21:58:33 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *gtk+-2.4.9-r2 (26 Dec 2004)
 
@@ -58,7 +61,7 @@
   gtk+-2.4.9-r1.ebuild:
   stable on mips
 
-  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> gtk+-2.4.9-r1.ebuild:
+  20 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> gtk+-2.4.9-r1.ebuild:
   Stable on alpha, bug 64240.
 
   20 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gtk+-2.4.9-r1.ebuild:
@@ -81,7 +84,7 @@
   29 Aug 2004; foser <foser@gentoo.org. gtk+-2.4.9.ebuild :
   New release
 
-  24 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gtk+-2.4.4.ebuild:
+  24 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gtk+-2.4.4.ebuild:
   Stable on alpha.
 
   22 Aug 2004; Travis Tilley <lv@gentoo.org> gtk+-2.4.4.ebuild,
@@ -149,7 +152,7 @@
   19 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> gtk+-2.4.1.ebuild:
   sparc stable
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gtk+-2.4.1.ebuild:
+  16 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gtk+-2.4.1.ebuild:
   Stable on alpha.
 
 *gtk+-2.4.3 (15 Jun 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.8 2004/12/15 23:10:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.9 2004/12/28 22:05:11 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xview-3.2-r1.ebuild:
   Stable on alpha.
@@ -10,10 +13,10 @@
 
 *xview-3.2-r1 (02 Oct 2004)
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> +xview-3.2-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +xview-3.2-r1.ebuild:
   Bump patches, new ebuild provided by genstef in #gentoo-bugs.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xview-3.2.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xview-3.2.ebuild:
   Stable on alpha.
 
   30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml, xview-3.2.ebuild:

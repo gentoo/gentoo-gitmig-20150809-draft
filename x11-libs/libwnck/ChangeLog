@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.68 2004/12/23 23:15:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.69 2004/12/28 22:00:31 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libwnck-2.8.1.ebuild:
   Stable on alpha.
@@ -47,7 +50,7 @@
   libwnck-2.6.2.1.ebuild:
   Masked libwnck-2.6.2.1.ebuild stable for ppc
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libwnck-2.6.2.1.ebuild:
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libwnck-2.6.2.1.ebuild:
   Stable on alpha.
 
   07 Aug 2004; Travis Tilley <lv@gentoo.org> libwnck-2.6.2.1.ebuild:
@@ -70,7 +73,7 @@
   11 Jul 2004; <spider@gentoo.org> +libwnck-2.6.2.1.ebuild:
   Bump to latest version
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libwnck-2.6.0.1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libwnck-2.6.0.1.ebuild:
   Stable on alpha.
 
   04 Jun 2004; Stephen P. Becker <geoman@gentoo.org> libwnck-2.6.0.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.39 2004/12/16 08:45:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.40 2004/12/28 21:56:27 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> fltk-1.1.4.ebuild:
   Stable on ppc64
@@ -17,7 +20,7 @@
   19 Aug 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org> fltk-1.1.4.ebuild:
   add ~mips
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> fltk-1.1.4.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> fltk-1.1.4.ebuild:
   Stable on alpha.
 
   01 May 2004; Andrew Bevitt <cyfred@gentoo.org>; +metadata.xml,

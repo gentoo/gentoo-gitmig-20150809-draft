@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.82 2004/12/24 00:01:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.83 2004/12/28 22:01:47 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> :
   Stable on alpha.
@@ -49,7 +52,7 @@
   14 Aug 2004; Stephen P. Becker <geoman@gentoo.org> pango-1.4.1.ebuild:
   Stable on mips - bug 59692
 
-  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> pango-1.4.1.ebuild:
+  13 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pango-1.4.1.ebuild:
   Stable on alpha, bug 59692.
 
   08 Aug 2004; Luca Barbato <lu_zero@gentoo.org> pango-1.4.1.ebuild:
@@ -81,7 +84,7 @@
   19 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> pango-1.4.0.ebuild:
   sparc stable
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pango-1.4.0.ebuild:
+  16 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pango-1.4.0.ebuild:
   Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> pango-1.4.0.ebuild:

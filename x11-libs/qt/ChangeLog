@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.179 2004/12/28 17:21:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.180 2004/12/28 22:03:05 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *qt-4.0.0_beta1-r1 (28 Dec 2004)
 
@@ -58,7 +61,7 @@
   22 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.3.ebuild:
   Updated immodule for Qt patch (fixes plugins/input path).
 
-  21 Aug 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> qt-3.3.3.ebuild:
+  21 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> qt-3.3.3.ebuild:
   Stable on alpha, bug 60855.
 
   20 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> qt-3.3.3.ebuild:
@@ -104,7 +107,7 @@
   26 Jul 2004; Tom Gall <tgall@gentoo.org> qt-3.3.2.ebuild:
   stable on ppc64
 
-  19 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> qt-3.3.2.ebuild:
+  19 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> qt-3.3.2.ebuild:
   Stable on alpha.
 
 *qt-3.3.1-r2 (09 Jul 2004)
