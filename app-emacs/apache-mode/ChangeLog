@@ -1,8 +1,8 @@
 # ChangeLog for app-emacs/apache-mode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.2 2003/02/12 03:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.3 2003/06/29 19:00:22 aliz Exp $
 
-*apache-mode (04 Nov 2002)
+*apache-mode-1.0 (04 Nov 2002)
 
   04 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   apache-mode-1.0.ebuild, files/50apache-mode-gentoo.el,

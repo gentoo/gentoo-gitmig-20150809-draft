@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ilisp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.5 2003/06/11 19:44:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.6 2003/06/29 19:00:22 aliz Exp $
+
+*ilisp-5.12.0-r2 (11 Jun 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   11 Jun 2003; root <root@gentoo.org> files/50ilisp-gentoo.el:
   ported to use common-lisp-controller
