@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.1 2002/02/01 21:53:39 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.2 2002/02/09 05:42:07 drobbins Exp $
+
+*icewm-1.0.9.2-r1 (8 Feb 2002)
+
+  8 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: Added support for imlib,
+  fixed sysconfdir path.  This closes bug #610.
 
 *icewm-1.0.9.2 (1 Feb 2002)
 
