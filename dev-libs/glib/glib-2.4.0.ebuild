@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.0.ebuild,v 1.1 2004/03/18 17:52:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.0.ebuild,v 1.2 2004/03/22 05:24:57 vapier Exp $
 
 inherit libtool
 
@@ -20,7 +20,6 @@ DEPEND=">=dev-util/pkgconfig-0.14
 RDEPEND="virtual/glibc"
 
 src_install() {
-
 	elibtoolize
 
 	econf --with-threads=posix \
@@ -34,18 +33,5 @@ src_install() {
 	dodir /etc/env.d
 	echo "G_BROKEN_FILENAMES=1" > ${D}/etc/env.d/50glib2
 
-	dodoc AUTHORS ChangeLog* COPYING README* INSTALL NEWS*
-
-}
-
-pkg_postinst() {
-
-	env-update
-
-}
-
-pkg_postrm() {
-
-	env-update
-
+	dodoc AUTHORS ChangeLog* README* INSTALL NEWS*
 }
