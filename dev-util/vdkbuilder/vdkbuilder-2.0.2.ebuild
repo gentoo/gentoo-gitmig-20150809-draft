@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.3 2002/07/23 13:28:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.4 2002/08/11 22:41:26 seemant Exp $
 
 MY_P=${P/builder/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A RAD Application Development tool based on VDK (The Visual Development Kit)."
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-HOMEPAGE="vdkbuilder.sf.net"
+HOMEPAGE="http://vdkbuilder.sf.net"
 
 SLOT="0"
 LICENSE="GPL-2"

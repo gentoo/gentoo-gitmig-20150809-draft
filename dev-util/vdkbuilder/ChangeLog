@@ -1,7 +1,6 @@
 # ChangeLog for dev-utils/vdkbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.1 2002/06/19 23:40:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.2 2002/08/11 22:41:26 seemant Exp $
 
 *vdkbuilder-2.0.2 (20 Jun 2002)
 
