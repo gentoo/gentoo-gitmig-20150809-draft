@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.7 2004/07/15 02:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.8 2004/10/18 08:57:23 robbat2 Exp $
 
-inherit eutils
+inherit eutils gcc
 
 DESCRIPTION="SMTP Relaying Control designed for qmail & tcpserver."
 HOMEPAGE="http://untroubled.org/relay-ctrl/"
@@ -31,8 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	myCC="$(gcc-getCC)"
+	echo "${myCC} ${CFLAGS}" > conf-cc
+	echo "${myCC} ${LDFLAGS}" > conf-ld
 	emake || die
 }
 
