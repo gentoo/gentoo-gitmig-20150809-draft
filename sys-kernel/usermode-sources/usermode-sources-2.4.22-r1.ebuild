@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.22-r1.ebuild,v 1.2 2003/12/05 20:26:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.22-r1.ebuild,v 1.3 2003/12/28 13:58:05 lanius Exp $
 
 UML_VERSION="${PV}"
 UML_PATCH="uml-patch-2.4.22-5"
@@ -53,4 +53,11 @@ src_install() {
 		mv linux-${UML_VERSION} ${D}/usr/src/uml/
 }
 
-
+pkg_postinst() {
+	# create linux symlink
+	if [ ! -e ${ROOT}usr/src/uml/linux ]
+	then
+		rm -f ${ROOT}usr/src/uml/linux
+		ln -sf ${ROOT}usr/src/uml/linux-${PV} ${ROOT}usr/src/uml/linux
+	fi
+}

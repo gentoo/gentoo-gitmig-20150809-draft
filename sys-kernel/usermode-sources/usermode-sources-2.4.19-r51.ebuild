@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.19-r51.ebuild,v 1.6 2003/12/05 20:26:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.19-r51.ebuild,v 1.7 2003/12/28 13:58:05 lanius Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -63,5 +63,3 @@ src_install() {
 		cd ${D}/usr/src/uml
 		ln -sf linux-${KV} linux
 }
-
-
