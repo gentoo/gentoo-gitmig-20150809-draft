@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/hap
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.3 2004/11/02 14:58:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.4 2004/11/24 09:53:15 ticho Exp $
+
+  24 Nov 2004; Andrej Kacian <ticho@gentoo.org> hap-3.7.ebuild:
+  Stable on x86.
 
   02 Nov 2004; Aron Griffis <agriffis@gentoo.org> hap-3.7.ebuild:
   add ~alpha
