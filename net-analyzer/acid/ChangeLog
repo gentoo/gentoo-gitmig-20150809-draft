@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.9 2005/02/26 03:41:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.10 2005/03/29 12:05:49 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> acid-0.9.6_beta23.ebuild:
+  added ~amd64 to KEYWORDS, fixes #73861
 
   26 Feb 2005; Daniel Black <dragonheart@gentoo.org> acid-0.9.6_beta23.ebuild:
   Changed dependancy to php4 only as per bug #79609. Thanks Nicolas-Loïc 
