@@ -1,10 +1,16 @@
 # ChangeLog for x11-misc/genmenu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.13 2004/06/28 19:55:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.14 2004/08/18 10:03:42 lanius Exp $
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> genmenu-1.0.3.ebuild,
   genmenu-1.0.6.ebuild:
   glibc -> libc
+
+*genmenu-1.0.7 (18 Aug 2004)
+
+  18 Aug 2004; Heinrich Wendel <lanius@gentoo.org> genmenu-1.0.6.ebuild,
+  genmenu-1.0.7.ebuild:
+  version bump, bug #58803, mark 1.0.6 stable on x86
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> genmenu-1.0.3.ebuild:
   Add inherit eutils
