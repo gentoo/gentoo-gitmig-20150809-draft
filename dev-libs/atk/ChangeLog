@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.27 2003/07/01 18:07:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.28 2003/08/24 17:46:17 obz Exp $
+
+  25 Aug 2003; Mike Gardiner <obz@gentoo.org> atk-1.2.4.ebuild:
+  Moved to stable on x86
 
 *atk-1.2.4 (13 May 2003)
 
