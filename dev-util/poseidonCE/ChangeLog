@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/poseidonCE
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.15 2004/12/22 12:31:21 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/ChangeLog,v 1.16 2005/01/10 04:16:22 weeve Exp $
+
+  09 Jan 2005; Jason Wever <weeve@gentoo.org> poseidonCE-3.0.1.ebuild:
+  Added ~sparc keyword.
 
   22 Dec 2004; Thomas Matthijs <axxo@gentoo.org> poseidonCE-3.0.1.ebuild:
   use make_desktop_entry 74999

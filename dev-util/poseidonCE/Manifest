@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d299c6d254ec8fd31d430301da36e81c poseidonCE-3.0.0.ebuild 2252
-MD5 bf9547bd856038a524064912322a48b9 poseidonCE-2.5.0.ebuild 2228
-MD5 77503fcd7bf7110b5d9dafa272e76821 poseidonCE-2.4.1.ebuild 2227
-MD5 4fc524725e2ca2e537c34bb072bf9b7d poseidonCE-3.0.1.ebuild 1463
-MD5 7ec1e33430de2693c6865ae3848af969 ChangeLog 2020
+MD5 3a7ce6126381b5c8ee2df924c5fbe139 ChangeLog 2117
 MD5 43293b026ec087097be1c686eb7dfdc0 metadata.xml 1559
-MD5 9b89d17df7cffb4a0df4afbabc7e669c poseidonCE-2.5.1.ebuild 2228
-MD5 d3cc528e08fd53fd8f14b9b4ac103928 files/digest-poseidonCE-2.4.1 67
+MD5 e52337d34029923f1523f30e17ca2ad6 poseidonCE-2.5.0.ebuild 2229
+MD5 9af4b20ba931a8645974d8abd7464e81 poseidonCE-2.4.1.ebuild 2228
+MD5 77acec0ae87ea2453ea8096e9b4efb42 poseidonCE-2.5.1.ebuild 2229
+MD5 6bf02010d6980e5e57193334372bf900 poseidonCE-3.0.0.ebuild 2250
+MD5 f2a4bc259723cff61c2f66dc7a8a25e4 poseidonCE-3.0.1.ebuild 1471
 MD5 173241b038eda4e390861877955680cd files/digest-poseidonCE-2.5.0 67
+MD5 d3cc528e08fd53fd8f14b9b4ac103928 files/digest-poseidonCE-2.4.1 67
 MD5 09926486389c9b04a396a94d15b7d42d files/digest-poseidonCE-2.5.1 67
 MD5 dfeaaf51bb4ccaec417922e9ddb7e8bb files/digest-poseidonCE-3.0.0 67
 MD5 de26dcc2d2f480d788b929b7137894ca files/digest-poseidonCE-3.0.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByWkq/rLF9B432nYRAlJtAJ9nB5/+nKH1WpsGoYQw3HmFwoNY/gCbBPNu
-epZRQrmlHktXtEeJfa999aE=
-=9BHB
------END PGP SIGNATURE-----
