@@ -1,0 +1,23 @@
+--- mup/prntdata.c.orig	2004-07-21 06:38:36.000000000 +0200
++++ mup/prntdata.c	2004-07-21 06:39:49.000000000 +0200
+@@ -2717,6 +2717,20 @@
+ 
+ {
+ 	int grpsize, grpvalue;
++        /* If we are passed the first group, it could be a space,
++         * in which case we need to use the below staff's group instead.
++         */
++        if (gs_p->grpcont == GC_SPACE) {
++                /* Need to hop to below staff. Go down the chord to find
++                 * the matching cross-staff beam group. */
++                do {
++                        if ((gs_p = gs_p->gs_p) == (struct GRPSYL *) 0) {
++                                pfatal("can't find matching beam chord");
++                        }
++
++                /* skip any lyrics and such till we find the beamed-to group */
++                } while (gs_p->beamto != BT_ABOVE);
++        }
+ 
+ 	/* need to skip past any groups of the wrong kind */
+ 	grpsize = gs_p->grpsize;
