@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.8 2003/12/14 04:22:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.9 2003/12/29 21:08:51 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -9,33 +9,41 @@ HOMEPAGE="http://pantransit.reptiles.org/prog/"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc hppa"
 
 DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.0.5
 	>=media-libs/jpeg-6b-r2"
 
-src_compile() {
-	cp Imakefile Imakefile.orig
-	sed -e "/^DEFINES =/s/$/ -DHAVE_GUNZIP/" < Imakefile.orig > Imakefile
+src_unpack() {
 
-	/usr/X11R6/bin/xmkmf || die
+	unpack ${A}
 
-	cp Makefile Makefile.orig
-	sed -e "/CDEBUGFLAGS =/s/=.*/= ${CFLAGS}/" < Makefile.orig > Makefile
+	cd ${S}
+	
+	sed -i Imakefile \
+		-e "/^DEFINES =/s/$/ -DHAVE_GUNZIP/" \
+		-e "/CCOPTIONS =/s/=.*/=/"
 
 	# This is a hack to avoid a parse error on /usr/include/string.h
 	# when _BSD_SOURCE is defined. This may be a bug in that header.
-	cp png.c png.c.orig
-	sed -e "/^#include \"xli.h\"/i#undef _BSD_SOURCE" < png.c.orig > png.c
+	sed	-i png.c \
+		-e "/^#include \"xli.h\"/i#undef _BSD_SOURCE"
 
 	# This hack will allow xli to compile using gcc-3.3
-	cp rlelib.c rlelib.c.orig
-	sed -e "s/#include <varargs.h>//" < rlelib.c.orig > rlelib.c
+	sed -i rlelib.c \
+		-e "s/#include <varargs.h>//"
 
-	emake || die
 }
+
+src_compile() {
+
+	/usr/X11R6/bin/xmkmf || die
+	
+	emake CDEBUGFLAGS="${CFLAGS}" || die
+}
+
 
 src_install() {
 	into /usr

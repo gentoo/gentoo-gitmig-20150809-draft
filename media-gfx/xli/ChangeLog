@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.5 2003/12/14 04:22:42 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.6 2003/12/29 21:08:51 gmsoft Exp $
+
+  29 Dec 2003; Guy Martin <gmsoft@gentoo.org> xli-1.17.0.ebuild :
+  Added hppa to KEYWORDS and moved sed stuff in src_unpack.
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> xli-1.17.0.ebuild:
   Make stable on ppc
