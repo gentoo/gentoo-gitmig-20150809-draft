@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31531b83a91defd42116c0a69c7db58e kbrain-0.1.3.ebuild 486
-MD5 28e8cdf5a7365c4aa617ab43ff8cdbc5 ChangeLog 1136
+MD5 a115d7e31f0a74627bf0da11818d156f ChangeLog 1139
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 dfd825077e0db8c8f18798e5f9a1a4e4 files/digest-kbrain-0.1.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpRvoI1lqEGTUzyQRAh+tAJ9zMg5ob8ftiTAlC6YWynhvy7aK/gCeN/Af
+srzk5W5aTWlJhB7a14H7I58=
+=G9fS
+-----END PGP SIGNATURE-----
