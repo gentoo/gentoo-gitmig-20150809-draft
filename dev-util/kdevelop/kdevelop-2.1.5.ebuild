@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.8 2004/01/26 00:19:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.9 2004/01/30 05:42:29 drobbins Exp $
 
 inherit kde eutils
 need-kde 3.1
@@ -17,7 +17,11 @@ SRC_URI="mirror://kde/stable/${P}/src/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-DEPEND=">=kde-base/kdebase-3
+#Several of these runtime dependencies should probably only be
+#in DEPEND. DEPEND is for what is needed to build, RDEPEND is
+#for what is needed to run. RDEPEND is used when merging from
+#.tbz2. (drobbins)
+RDEPEND=">=kde-base/kdebase-3
 	>=dev-util/kdoc-2.0_alpha24
 	>=dev-util/kdbg-1.2.5.3
 	>=net-www/htdig-3.1.6
@@ -29,6 +33,8 @@ DEPEND=">=kde-base/kdebase-3
 	app-doc/kdelibs-apidocs
 	=sys-devel/flex-2.5.4*
 	dev-lang/perl"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"
