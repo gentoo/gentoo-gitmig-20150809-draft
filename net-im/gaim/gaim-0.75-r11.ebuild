@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r11.ebuild,v 1.2 2004/03/26 14:33:36 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r11.ebuild,v 1.3 2004/04/01 02:42:19 lv Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -75,7 +75,18 @@ src_compile() {
 	local myconf
 	use perl || myconf="${myconf} --disable-perl"
 	use spell || myconf="${myconf} --disable-gtkspell"
-	use nls  || myconf="${myconf} --disable-nls"
+
+	# starting with gaim 0.75-r11, nls support depends on a version of
+	# gettext that isn't amd64-friendly
+	if [ `use amd64` ]
+	then
+		einfo "WARNING - nls support in gaim is disabled on amd64, see bug #46253"
+		myconf="${myconf} --disable-nls"
+	else
+		use_enable nls
+	fi
+	#use nls  || myconf="${myconf} --disable-nls"
+
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
 	NSS_LIB=/usr/lib
