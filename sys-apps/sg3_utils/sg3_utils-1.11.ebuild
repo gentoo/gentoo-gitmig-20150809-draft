@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.11.ebuild,v 1.2 2005/03/10 05:54:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.11.ebuild,v 1.3 2005/03/14 04:59:17 vapier Exp $
 
 inherit eutils
 
@@ -28,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	newbin ${DISTDIR}/rescan-scsi-bus.sh || die 'Failed to install rescan-scsi-bus.sh!'
+	dobin ${DISTDIR}/rescan-scsi-bus.sh || die 'Failed to install rescan-scsi-bus.sh!'
 	einstall DESTDIR="${D}" PREFIX=/usr || die 'Failed to install sg3_utils!'
 }
