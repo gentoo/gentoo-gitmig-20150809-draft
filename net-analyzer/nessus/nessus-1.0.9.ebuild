@@ -1,6 +1,6 @@
 #Copyright 2000 Achim Gottinger
 #Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.9.ebuild,v 1.1 2001/11/15 13:18:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.9.ebuild,v 1.2 2001/11/15 14:28:36 achim Exp $
 
 
 # It's better to split it in four different packages
@@ -25,10 +25,6 @@ RDEPEND="virtual/glibc virtual/x11
         >=sys-libs/zlib-1.1.3
 	>=x11-libs/gtk+-1.2.10-r4"
 
-src_unpack() {
-	unpack ${A}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-}
 
 src_compile() {
 
