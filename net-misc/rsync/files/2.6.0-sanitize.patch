@@ -1,0 +1,200 @@
+Index: options.c
+===================================================================
+RCS file: /cvsroot/rsync/options.c,v
+retrieving revision 1.139
+retrieving revision 1.141
+diff -u -b -B -r1.139 -r1.141
+--- options.c	22 Feb 2004 08:56:43 -0000	1.139
++++ options.c	27 Mar 2004 19:42:13 -0000	1.141
+@@ -21,6 +21,8 @@
+ #include "rsync.h"
+ #include "popt.h"
+ 
++extern int sanitize_paths;
++extern char curr_dir[MAXPATHLEN];
+ extern struct exclude_struct **exclude_list;
+ 
+ int make_backups = 0;
+@@ -359,7 +361,7 @@
+   {"timeout",          0,  POPT_ARG_INT,    &io_timeout, 0, 0, 0 },
+   {"temp-dir",        'T', POPT_ARG_STRING, &tmpdir, 0, 0, 0 },
+   {"compare-dest",     0,  POPT_ARG_STRING, &compare_dest, 0, 0, 0 },
+-  {"link-dest",        0,  POPT_ARG_STRING, 0,              OPT_LINK_DEST, 0, 0 },
++  {"link-dest",        0,  POPT_ARG_STRING, &compare_dest,  OPT_LINK_DEST, 0, 0 },
+   /* TODO: Should this take an optional int giving the compression level? */
+   {"compress",        'z', POPT_ARG_NONE,   &do_compression, 0, 0, 0 },
+   {"daemon",           0,  POPT_ARG_NONE,   &daemon_opt, 0, 0, 0 },
+@@ -469,6 +471,7 @@
+ {
+ 	int opt;
+ 	char *ref = lp_refuse_options(module_id);
++	const char *arg;
+ 	poptContext pc;
+ 
+ 	if (ref && *ref)
+@@ -517,12 +520,18 @@
+ 			break;
+ 
+ 		case OPT_EXCLUDE_FROM:
+-			add_exclude_file(&exclude_list, poptGetOptArg(pc),
++			arg = poptGetOptArg(pc);
++			if (sanitize_paths)
++				arg = alloc_sanitize_path(arg, curr_dir);
++			add_exclude_file(&exclude_list, arg,
+ 					 MISSING_FATAL, ADD_EXCLUDE);
+ 			break;
+ 
+ 		case OPT_INCLUDE_FROM:
+-			add_exclude_file(&exclude_list, poptGetOptArg(pc),
++			arg = poptGetOptArg(pc);
++			if (sanitize_paths)
++				arg = alloc_sanitize_path(arg, curr_dir);
++			add_exclude_file(&exclude_list, arg,
+ 					 MISSING_FATAL, ADD_INCLUDE);
+ 			break;
+ 
+@@ -566,7 +575,6 @@
+ 
+ 		case OPT_LINK_DEST:
+ #if HAVE_LINK
+-			compare_dest = (char *)poptGetOptArg(pc);
+ 			link_dest = 1;
+ 			break;
+ #else
+@@ -660,6 +668,26 @@
+ 	if (relative_paths < 0)
+ 		relative_paths = files_from? 1 : 0;
+ 
++	*argv = poptGetArgs(pc);
++	if (*argv)
++		*argc = count_args(*argv);
++	else
++		*argc = 0;
++
++	if (sanitize_paths) {
++		int i;
++		for (i = *argc; i-- > 0; )
++			(*argv)[i] = alloc_sanitize_path((*argv)[i], NULL);
++		if (tmpdir)
++			tmpdir = alloc_sanitize_path(tmpdir, curr_dir);
++		if (compare_dest)
++			compare_dest = alloc_sanitize_path(compare_dest, curr_dir);
++		if (backup_dir)
++			backup_dir = alloc_sanitize_path(backup_dir, curr_dir);
++		if (files_from)
++			files_from = alloc_sanitize_path(files_from, curr_dir);
++	}
++
+ 	if (!backup_suffix)
+ 		backup_suffix = backup_dir ? "" : BACKUP_SUFFIX;
+ 	backup_suffix_len = strlen(backup_suffix);
+@@ -690,12 +718,6 @@
+ 	if (do_progress && !verbose)
+ 		verbose = 1;
+ 
+-	*argv = poptGetArgs(pc);
+-	if (*argv)
+-		*argc = count_args(*argv);
+-	else
+-		*argc = 0;
+-
+ 	if (files_from) {
+ 		char *colon;
+ 		if (*argc != 2) {
+@@ -718,9 +740,6 @@
+ 				exit_cleanup(RERR_SYNTAX);
+ 			}
+ 		} else {
+-			extern int sanitize_paths;
+-			if (sanitize_paths)
+-				sanitize_path(strdup(files_from), NULL);
+ 			filesfrom_fd = open(files_from, O_RDONLY|O_BINARY);
+ 			if (filesfrom_fd < 0) {
+ 				rsyserr(FERROR, errno,
+Index: clientserver.c
+===================================================================
+RCS file: /cvsroot/rsync/clientserver.c,v
+retrieving revision 1.118
+retrieving revision 1.117
+diff -u -b -B -r1.118 -r1.117
+--- clientserver.c	27 Mar 2004 09:44:01 -0000	1.118
++++ clientserver.c	4 Feb 2004 17:06:07 -0000	1.117
+@@ -423,19 +423,6 @@
+ 		}
+ 	}
+ 
+-	if (sanitize_paths) {
+-		/*
+-		 * Note that this is applied to all parameters, whether or not
+-		 *    they are filenames, but no other legal parameters contain
+-		 *    the forms that need to be sanitized so it doesn't hurt;
+-		 *    it is not known at this point which parameters are files
+-		 *    and which aren't.
+-		 */
+-		for (i = 1; i < argc; i++) {
+-			sanitize_path(argv[i], NULL);
+-		}
+-	}
+-
+ 	argp = argv;
+ 	ret = parse_arguments(&argc, (const char ***) &argp, 0);
+ 
+Index: proto.h
+===================================================================
+RCS file: /cvsroot/rsync/proto.h,v
+retrieving revision 1.184
+retrieving revision 1.185
+diff -u -b -B -r1.184 -r1.185
+--- proto.h	17 Feb 2004 23:13:06 -0000	1.184
++++ proto.h	27 Mar 2004 09:44:34 -0000	1.185
+@@ -260,6 +260,7 @@
+ void strlower(char *s);
+ void clean_fname(char *name);
+ void sanitize_path(char *p, char *reldir);
++char *alloc_sanitize_path(const char *path, const char *rootdir);
+ char *push_dir(char *dir, int save);
+ int pop_dir(char *dir);
+ char *full_fname(char *fn);
+Index: util.c
+===================================================================
+RCS file: /cvsroot/rsync/util.c,v
+retrieving revision 1.132
+retrieving revision 1.133
+diff -u -b -B -r1.132 -r1.133
+--- util.c	17 Feb 2004 23:13:10 -0000	1.132
++++ util.c	27 Mar 2004 09:44:49 -0000	1.133
+@@ -775,6 +775,34 @@
+ 	*sanp = '\0';
+ }
+ 
++/* Works much like sanitize_path(), with these differences:  (1) a new buffer
++ * is allocated for the sanitized path rather than modifying it in-place; (2)
++ * a leading slash gets transformed into the rootdir value (which can be empty
++ * or NULL if you just want the slash to get dropped); (3) no "reldir" can be
++ * specified. */
++char *alloc_sanitize_path(const char *path, const char *rootdir)
++{
++	char *buf;
++	int rlen, plen = strlen(path);
++
++	if (*path == '/' && rootdir)
++		rlen = strlen(rootdir);
++	else
++		rlen = 0;
++	if (!(buf = new_array(char, rlen + plen + 1)))
++		out_of_memory("alloc_sanitize_path");
++	if (rlen)
++		memcpy(buf, rootdir, rlen);
++	memcpy(buf + rlen, path, plen + 1);
++
++	if (rlen)
++		rlen++;
++	sanitize_path(buf + rlen, NULL);
++	if (rlen && buf[rlen] == '.' && buf[rlen+1] == '\0')
++		buf[rlen-1] = '\0';
++
++	return buf;
++}
+ 
+ char curr_dir[MAXPATHLEN];
+ unsigned int curr_dir_len;
