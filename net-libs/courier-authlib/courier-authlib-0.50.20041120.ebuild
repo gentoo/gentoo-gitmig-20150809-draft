@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041120.ebuild,v 1.1 2004/11/21 22:39:52 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.50.20041120.ebuild,v 1.2 2004/11/27 04:47:35 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -67,7 +67,7 @@ src_compile() {
 		use mysql && ewarn "vpopmail found. authmysql will not be built."
 		use postgres && ewarn "vpopmail found. authpgsql will not be built."
 	else
-		myconf="${myconf} --without-authvchkpw `use_with mysql authmysql` `use_with postgres authpostgres`"
+		myconf="${myconf} --without-authvchkpw `use_with mysql authmysql` `use_with postgres authpgsql`"
 	fi
 
 	use debug && myconf="${myconf} debug=true"

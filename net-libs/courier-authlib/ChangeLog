@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.4 2004/11/27 03:53:37 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.5 2004/11/27 04:47:35 swtaylor Exp $
+
+  26 Nov 2004; Scott W Taylor <swtaylor@gentoo.org>
+  courier-authlib-0.50.20041120.ebuild:
+  fix postgres
 
   26 Nov 2004; Scott W Taylor <swtaylor@gentoo.org>
   files/courier-authlib-initd:
