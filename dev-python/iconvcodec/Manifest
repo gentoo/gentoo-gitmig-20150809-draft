@@ -1,6 +1,6 @@
 MD5 b794fb69846a80a70062429f68ddfa6f ChangeLog 482
 MD5 ab78b63664dc0b26b9b11617cfa812a8 iconvcodec-1.1.1.ebuild 557
-MD5 95b78795c66ec11536fd7166cf129b79 iconvcodec-1.1.2.ebuild 541
+MD5 7c3a839a24216ea2a0bd62b1e120812a iconvcodec-1.1.2.ebuild 540
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 c4f888f1be34eab8d39ac013f0e57913 files/digest-iconvcodec-1.1.1 67
 MD5 0283f098a009256482fe81f46930a4ff files/digest-iconvcodec-1.1.2 67

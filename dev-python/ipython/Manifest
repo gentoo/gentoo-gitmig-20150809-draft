@@ -1,6 +1,4 @@
 MD5 b2d35c20a9c3f6a45952c86783457189 ChangeLog 506
-MD5 b139cbd563b6134dec51caa19f3dfe79 ipython-0.4.0.ebuild 641
-MD5 85e4d8effd011f6368c484f8cf780ba5 ipython-0.5.0.ebuild 641
+MD5 db07296bfdea2affd1b343f0f9d49add ipython-0.5.0.ebuild 640
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 18bb316eea4b9f454c9ad402b773bc4a files/digest-ipython-0.4.0 65
 MD5 398c8603e20a6f2b983f654f1cd5a380 files/digest-ipython-0.5.0 65

@@ -1,6 +1,4 @@
-MD5 0a675761baf357af60069f67f5e28b2c numarray-0.8.ebuild 570
 MD5 a4c251275cafe1bce7c88d553f5b7425 ChangeLog 460
-MD5 fa4bfc9c657cd72e2cef8ec9c6e7157d numarray-0.7.ebuild 572
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 4ddabc1435a9a4996d01c9985c885694 files/digest-numarray-0.7 64
+MD5 101d93cc8e4e7e4dde1a40054aaed655 numarray-0.8.ebuild 570
 MD5 5c95280b58164f97854a8807e94ddee3 files/digest-numarray-0.8 64
