@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<maintainer>
-		<email>mboman@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<longdescription>Unified alert/log spool reader and output handler for Snort! This program decouples output overhead from the Snort network intrusion detection system and allows Snort to run at full speed.</longdescription>
+<herd>netmon</herd>
+<longdescription>Fast output system for Snort</longdescription>
 </pkgmetadata>

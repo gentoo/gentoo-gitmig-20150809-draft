@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>mboman@gentoo.org</email>
-  <name>Michael Boman</name>
-  <description>Interim Maintainer</description>
-</maintainer>
 <longdescription>Tele Traffic Taper (ttt) - Real-time Graphical Remote Traffic Monitor</longdescription>
 </pkgmetadata>

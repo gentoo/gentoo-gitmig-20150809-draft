@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>mboman@gentoo.org</email>
-  <name>Michael Boman</name>
-  <description>Interim Maintainer</description>
-</maintainer>
-<longdescription>IP accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like MRTG.</longdescription>
+<longdescription>ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg</longdescription>
 </pkgmetadata>

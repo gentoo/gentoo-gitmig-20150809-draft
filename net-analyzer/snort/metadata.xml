@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<maintainer>
-		<email>mboman@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-<longdescription>Snort is a lightweight network intrusion detection system, capable of performing real-time traffic analysis and packet logging on IP networks. It can perform protocol analysis, content searching/matching and can be used to detect a variety of attacks and probes, such as buffer overflows, stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and much more. Snort uses a flexible rule based language to describe traffic that it should collect or pass, and a modular detection engine. Snort has a real-time alerting capability, with alert mechanisms for syslog, a user specified file, or a UNIX socket.</longdescription>
+<herd>netmon</herd>
+<longdescription>Libpcap-based packet sniffer/logger/lightweight IDS</longdescription>
 </pkgmetadata>

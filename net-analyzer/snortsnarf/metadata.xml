@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<maintainer>
-		<email>mboman@gentoo.org</email>
-		<description>Interim Maintainer</description>
-	</maintainer>
+<herd>netmon</herd>
 <longdescription>Snort Snarf parses Snort log files, and converts them into easy-to-read HTML files.</longdescription>
 </pkgmetadata>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<maintainer>
-		<email>mboman@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
-<longdescription>snort_inline is basically a modified version of Snort that accepts packets from iptables, via libipq, instead of libpcap. It then uses new rule types (drop, sdrop, reject) to tell iptables whether the packet should be dropped, rejected, modified, or allowed to pass based on a snort rule set.  Think of this as an Intrusion Prevention System (IPS) that uses existing Intrusion Detection System (IDS) signatures to make decisions on packets that traverse snort_inline.</longdescription>
+<herd>netmon</herd>
+<longdescription>Intrusion Prevention System (IPS) based on Snort</longdescription>
 </pkgmetadata>
