@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.14 2003/11/12 12:15:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.1 2003/11/27 16:28:17 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama perl nls png bid
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( mirror://gentoo/FvwmTabs-2.4.tar.gz )"
+		perl? ( mirror://gentoo/FvwmTabs-2.6.tar.gz )"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
@@ -29,7 +29,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		stroke? ( >=dev-libs/libstroke-0.4 )
 		perl? ( tcltk? ( >=dev-lang/tk-8.3.4
 						>=dev-perl/perl-tk-800.024-r2
-						>=dev-perl/X11-Protocol-0.51-r1 ) )
+						>=dev-perl/X11-Protocol-0.52 ) )
 		truetype? ( virtual/xft
 					>=media-libs/fontconfig-2.1-r1
 					>=dev-libs/expat-1.95.6-r1 )
@@ -67,6 +67,13 @@ src_unpack() {
 	# moving it into ~/.fvwmtabs.state will do for now.
 	if use perl; then
 		cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
+
+		# I'll supply a default icon for FvwmTabs, this removes the need for
+		# installing an iconset, this one comes from the fvwm_icons package.
+		ebegin "	Setting default icon for FvwmTabs"
+			sed -i 's#/usr/share/icons/mini/mini-happy.xpm#/usr/share/fvwm/mini-happy.xpm#g' \
+				FvwmTabs FvwmTabs.1 fvwmtabrc
+		eend $?
 	fi
 
 	# this patch from cvs, regarding a message sent to the fvwm-workers 
@@ -212,6 +219,10 @@ src_install() {
 			doexe ${WORKDIR}/FvwmTabs
 			dodoc ${WORKDIR}/fvwmtabrc ${WORKDIR}/README.fvwmtabs
 			doman ${WORKDIR}/FvwmTabs.1
+
+			# install default drag and drop icon.
+			insinto /usr/share/fvwm
+			newins ${FILESDIR}/mini.happy.xpm mini-happy.xpm
 		else
 			# Remove the Tk bindings (requires perl-tk)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
