@@ -1,5 +1,5 @@
---- /var/tmp/portage/kgpg-0.8.2/work/kgpg-0.8.2/kgpg/Makefile.am.orig	2002-10-12 21:35:39.000000000 +0200
-+++ /var/tmp/portage/kgpg-0.8.2/work/kgpg-0.8.2/kgpg/Makefile.am	2002-10-24 19:22:28.000000000 +0200
+--- kgpg/Makefile.am.orig	2002-10-12 21:35:39.000000000 +0200
++++ kgpg/Makefile.am	2002-10-24 19:22:28.000000000 +0200
 @@ -35,9 +35,6 @@
  	$(INSTALL_DATA) $(srcdir)/hi22-action-kgpg_manage.png $(kde_icondir)/hicolor/22x22/actions/kgpg_manage.png
  	
