@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-CD-disc-cover
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.10 2003/05/07 21:56:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.11 2003/06/08 04:37:01 rac Exp $
+
+  07 Jun 2003; <rac@gentoo.org> Audio-CD-disc-cover-0.05.ebuild:
+  Add IUSE
 
 *Audio-CD-disc-cover-0.05 (07 May 2003)
 

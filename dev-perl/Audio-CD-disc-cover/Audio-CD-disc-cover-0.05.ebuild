@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.1 2003/05/07 21:56:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.2 2003/06/08 04:37:01 rac Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl Module needed for app-cdr/disc-cover"
 HOMEPAGE="http://home.wanadoo.nl/jano/disc-cover.html"
 SRC_URI="http://home.wanadoo.nl/jano/files/${MY_P}.tar.gz"
-
+USE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
