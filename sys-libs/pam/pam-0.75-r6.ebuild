@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r6.ebuild,v 1.1 2002/04/04 06:43:33 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r6.ebuild,v 1.2 2002/04/04 08:14:21 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -79,6 +79,26 @@ src_compile() {
 src_install() {
 	make MANDIR="/usr/share/man" \
 		install || die
+
+	#make sure every module built.
+	#do not remove this, as some module can fail to build
+	#and effectively lock the user out of his system.
+	for x in modules/pam_*
+	do
+		if [ -d ${x} ]
+		then
+			if ! ls -1 ${D}/lib/security/`basename ${x}`*.so
+			then
+				if [ -z "`use berkdb`" ] && \
+				   [ "`basename ${x}`" = "pam_userdb" ]
+				then
+					continue
+				fi
+				echo ERROR `basename ${x}` module did not build.
+				exit 1
+			fi
+		fi
+	done
 
 	dodoc CHANGELOG Copyright README
 	docinto modules

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.4 2002/04/04 06:43:33 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.5 2002/04/04 08:14:21 azarah Exp $
+
+  04 Apr 2002; M.Schlemmer <azarah@gentoo.org> pam-0.75-r6.ebuild :
+
+  Add module build checking back as we do not want some module to 
+  silently fail and lock the user out of his system.
 
 *pam-0.75-r6 (04 Apr 2002)
 
