@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.8 2003/10/06 06:48:36 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.9 2003/10/27 23:57:30 kloeri Exp $
+
+  28 Oct 2003; Bryan Østergaard <kloeri@gentoo.org>
+  mod_python-3.0.3.ebuild:
+  Fix bug when using Python-2.3 closing bug #32018.
 
   05 Oct 2003; Rob Cakebread <pythonhead@gentoo.org>
   mod_python-3.0.0_beta4.ebuild, mod_python-3.0.1.ebuild:
