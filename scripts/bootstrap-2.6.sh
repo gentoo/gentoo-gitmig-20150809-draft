@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.8 2004/06/25 15:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.9 2004/07/09 22:55:50 lv Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -127,11 +127,11 @@ then
 	# have proper linux headers ...
 	if [ "${ORIGUSE}" != "${ORIGUSE/nptl}" -a \
 	     "${ORIGUSE}" = "${ORIGUSE/-nptl}" ] && \
-	   [ -z "`portageq best_visible / '>=sys-kernel/linux-headers-2.6.0'`" ]
+	   [ -z "`portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0'`" ]
 	then
 		echo
-		eerror "You need to have >=sys-kernel/linux-headers-2.6.0 unmasked!"
-		eerror "Please edit the latest >=sys-kernel/linux-headers-2.6.0 package,"
+		eerror "You need to have >=sys-kernel/linux26-headers-2.6.0 unmasked!"
+		eerror "Please edit the latest >=sys-kernel/linux26-headers-2.6.0 package,"
 		eerror "and add your ARCH to KEYWORDS."
 		echo
 		cleanup 1
