@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.31 2003/06/12 23:34:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.32 2003/06/28 01:00:29 tberman Exp $
+
+*exim-4.20-r1 (27 Jun 2003)
+
+  27 Jun 2003; Todd Berman <tberman@gentoo.org> exim-4.20-r1.ebuild,
+  files/exim-4.20-maildir.patch:
+  Great fixup by srcerer <tschafer@hotmail.com>, including (but not limited to)
+  logging to /var/log/exim, maildir support via USE, exiscan and exiscan-acl
+  also follow maildir USE variable, assorted other small fixed and closed bugs
+  (#21513, #21480, #21302)
 
   12 Jun 2003; <msterret@gentoo.org> exim-4.20.ebuild:
   add Header
