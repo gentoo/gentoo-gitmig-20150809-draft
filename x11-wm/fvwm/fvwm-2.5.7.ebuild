@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.9 2003/07/31 00:29:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.10 2003/07/31 10:57:40 taviso Exp $
 
 inherit gnuconfig
 
@@ -153,18 +153,20 @@ pkg_postinst() {
 	ewarn "The Gentoo FVWM ebuild has been altered since the 2.4.x Branch."
 	ewarn "The following features that you did not request are now"
 	ewarn "controlled via USE flags, and not enabled automatically:"
-	use readline	|| ewarn "	Readline support in FvwmConsole"
-	use stroke		|| ewarn "	Mouse Gestures"
-	use xinerama	|| ewarn "	Xinerama Support"
-	use cjk			|| ewarn "	Multibyte Character Support"
-	use perl		|| ewarn "	FVWM Perl bindings"
-	use nls			|| ewarn "	Native Language Support"
-	use png			|| ewarn "	PNG Support"
-	use bidi		|| ewarn "	Bidirectional Language Support"
-	use rplay		|| ewarn "	RPlay Support in FvwmEvent"
-	use gtk			|| ewarn "	FvwmGTK (gtk+ support) (previously didnt honour USE flag)"
+	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
+	use stroke		|| ewarn "	Mouse Gestures [stroke]"
+	use xinerama	|| ewarn "	Xinerama Support [xinerama]"
+	use cjk			|| ewarn "	Multibyte Character Support [cjk]"
+	use perl		|| ewarn "	FVWM Perl bindings [perl]"
+	use nls			|| ewarn "	Native Language Support [nls]"
+	use png			|| ewarn "	PNG Support [png]"
+	use bidi		|| ewarn "	Bidirectional Language Support [bidi]"
+	use rplay		|| ewarn "	RPlay Support in FvwmEvent [rplay]"
+	use gtk			|| ewarn "	FvwmGTK (gtk+ support) (previously didnt honour USE flag) [gtk]"
+	ewarn
 	ewarn "If you require any of the features listed above, you should remerge"
-	ewarn "FVWM with the appropriate USE flags."
+	ewarn "FVWM with the appropriate USE flags. Use this command to see the flags"
+	ewarn "available:"
 	ewarn "	$ emerge -pv fvwm"
 	ewarn
 	
