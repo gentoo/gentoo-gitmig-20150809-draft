@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/linux-ntfs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/ChangeLog,v 1.2 2003/10/30 02:19:31 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/ChangeLog,v 1.3 2004/04/26 19:32:12 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> linux-ntfs-1.6.0.ebuild:
+  Add die following econf for bug 48950
 
   29 Oct 2003; Seemant Kulleen <seemant@gentoo.org> linux-ntfs-1.6.0.ebuild:
   DESCRIPTION fix, closing bug #31927 by Matt Keadle <mkeadle@mkeadle.org>
