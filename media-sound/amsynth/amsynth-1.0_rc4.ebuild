@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.3 2004/03/15 02:32:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.0_rc4.ebuild,v 1.4 2004/04/27 19:57:06 agriffis Exp $
+
+inherit eutils
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
