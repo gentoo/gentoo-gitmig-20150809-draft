@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.11.ebuild,v 1.6 2003/08/12 04:38:24 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.11.ebuild,v 1.7 2003/09/07 00:36:08 msterret Exp $
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
@@ -10,7 +10,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc mips alpha arm hppa"
 
-DEPEND="virtual/glibc 
+DEPEND="virtual/glibc
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 RDEPEND="${DEPEND} dev-lang/perl"
 
@@ -39,7 +39,7 @@ src_install() {
 	newman xinetd/xinetd.log.man xinetd.log.8
 	newman xinetd/xinetd.man xinetd.8
 	doman xinetd/itox.8
-	
+
 	newdoc xinetd/sample.conf xinetd.conf.dist.sample
 	newdoc ${FILESDIR}/xinetd.conf xinetd.conf.default || die
 	dodoc AUDIT INSTALL README TODO CHANGELOG COPYRIGHT
