@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.2 2004/03/21 09:48:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20031119.ebuild,v 1.3 2004/04/11 15:25:22 pyrania Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.winischhofer.net/sis/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=x11-base/xfree-4.3
 	 >=dev-libs/glib-2.0

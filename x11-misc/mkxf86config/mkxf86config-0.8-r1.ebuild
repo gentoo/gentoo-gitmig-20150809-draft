@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r1.ebuild,v 1.1 2004/02/24 20:11:15 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r1.ebuild,v 1.2 2004/04/11 15:20:06 pyrania Exp $
 
 IUSE="livecd"
 
@@ -13,7 +13,7 @@ DESCRIPTION="xf86config setup program"
 SRC_URI="http://developer.linuxtag.net/knoppix/sources/${MY_P}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
