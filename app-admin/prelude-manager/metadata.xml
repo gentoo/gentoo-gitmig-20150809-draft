@@ -6,5 +6,5 @@
 		<email>solar@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
-	<longdescription></longdescription>
+	<longdescription>Prelude-IDS Manager</longdescription>
 </pkgmetadata>
