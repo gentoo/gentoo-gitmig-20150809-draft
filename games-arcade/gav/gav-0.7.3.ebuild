@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.7.3.ebuild,v 1.3 2004/02/23 06:14:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.7.3.ebuild,v 1.4 2004/02/23 18:41:42 mr_bones_ Exp $
 
 inherit games
 
@@ -53,6 +53,12 @@ src_unpack() {
 
 	# no reason to have executable files in the themes
 	find . -type f -exec chmod a-x \{\} \;
+}
+
+src_compile() {
+	egamesconf || die
+	# bug #41530 - doesn't like the hot parallel make action.
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
