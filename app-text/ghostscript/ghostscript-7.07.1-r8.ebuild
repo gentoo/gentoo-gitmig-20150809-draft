@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.17 2004/12/05 17:23:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.1 2004/12/05 17:23:53 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/espgs/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
-IUSE="X cups cjk emacs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="X cups cjk emacs gtk"
 
 RDEPEND="virtual/libc
 	>=media-libs/jpeg-6b
@@ -24,9 +24,10 @@ RDEPEND="virtual/libc
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
 	cups? ( net-print/cups )
+	gtk? ( >=x11-libs/gtk+-2.0 )
 	!virtual/ghostscript
-	media-libs/fontconfig
 	media-fonts/gnu-gs-fonts-std"
+#	media-libs/fontconfig"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -45,8 +46,8 @@ src_unpack() {
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 
-	# add fontconfig support
-	epatch ${FILESDIR}/gs7.07.1-fontconfig-rh.patch.2.bz2
+	# add fontconfig support (this patch is broken)
+	# epatch ${FILESDIR}/gs7.07.1-fontconfig-rh.patch.2.bz2
 
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
 	epatch ${FILESDIR}/ghostscript-7.05.6.man.patch
@@ -71,17 +72,21 @@ src_unpack() {
 	# insecure tempfile handling
 	epatch ${FILESDIR}/gs${PV}-tempfile.patch
 
-	# krgb support
-	cd src
-	epatch ${FILESDIR}/gs7.07.1-krgb.patch.gz
+	# krgb support (currently broken)
+	#( cd src; epatch ${FILESDIR}/gs7.07.1-krgb.patch.gz )
 
 	# Fix the garbage collector on ia64 and ppc
 	epatch ${FILESDIR}/gs-fix-gc.patch
+
+	# fix dynamic build
+	echo '#include "png.h"' >> src/png_.h
+	sed -i -e "s:CFLAGS_SO=-fPIC:CFLAGS_SO=-fPIC -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include:" Makefile.in
 }
 
 src_compile() {
 	local myconf
-	myconf="--with-ijs --with-omni --without-gimp-print"
+	myconf="--with-ijs --without-gimp-print"
+	use gtk && myconf="${myconf} --with-omni"
 
 	# bug #56998, only compiled-in fontpath is searched when running 
 	# gs -DPARANOIDSAFER out.ps
@@ -103,6 +108,7 @@ src_compile() {
 	autoconf
 	econf ${myconf} || die "econf failed"
 	emake -j1 || die "make failed"
+	emake so -j1 || die "make failed"
 
 	cd ijs
 	econf || die "econf failed"
@@ -112,6 +118,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" soinstall || die "make install failed"
 
 	rm -fr ${D}/usr/share/ghostscript/7.07/doc || die
 	dodoc doc/README doc/COPYING doc/COPYING.LGPL
