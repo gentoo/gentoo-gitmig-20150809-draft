@@ -1,12 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.36 2003/05/04 19:07:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.37 2003/05/04 19:31:59 mholzer Exp $
 
 *transcode-0.6.4_pre20030311 (04 May 2003)
 
   04 May 2003; Martin Holzer <mholzer@gentoo.org>
   transcode-0.6.4_pre20030311.ebuild, transcode-0.6.4_pre20030409.ebuild:
   Fixing path to mplayer libpostproc. Closes #16896.
+  Removed mplayer from depend. Closes #20062.
 
 *transcode-0.6.4.20030409 (16 Apr 2003)
 
