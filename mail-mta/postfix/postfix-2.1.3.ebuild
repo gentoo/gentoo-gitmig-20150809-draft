@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.2 2004/08/15 23:51:22 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.3 2004/08/15 23:57:36 langthang Exp $
 
 inherit eutils ssl-cert
 
@@ -40,7 +40,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	# put out warnings to work around bug #45764
-	if has_version '<=mail-mta/postfix-2.1.4'; then
+	if has_version '<=mail-mta/postfix-2.0.18'; then
 		echo
 		ewarn "You are upgrading from postfix-2.0.18 or earlier, one of the empty queue"
 		ewarn "directory get deleted during unmerge the older version (#45764). Please run"
