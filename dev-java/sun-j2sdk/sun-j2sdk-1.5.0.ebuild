@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.5.0.ebuild,v 1.1 2005/01/30 21:19:55 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.5.0.ebuild,v 1.2 2005/01/31 21:01:28 cretin Exp $
 
 inherit java
 
@@ -63,7 +63,7 @@ pkg_setup() {
 		die "The version of java set by java-config doesn't contain javac"
 	fi
 
-	if [ `java-config --java-version 2>&1 | grep "1\.4\."  | wc -l` -lt 1 ]  ; then
+	if [ `java-config --java-version 2>&1 | grep "1\.[45]\."  | wc -l` -lt 1 ]  ; then
 		eerror "JDK is too old, >= 1.4 is required"
 		die "The version of jdk pointed to by java-config is not >=1.4"
 	fi
