@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sonar/sonar-0.2.ebuild,v 1.1 2004/10/06 11:43:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sonar/sonar-0.2.ebuild,v 1.2 2005/01/29 21:25:45 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.4
-	>=net-libs/libpcap-0.8.3"
+	virtual/libpcap"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/raccess
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.9 2004/09/03 16:13:36 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.10 2005/01/29 21:23:50 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> raccess-0.7.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
   03 Sep 2004; <blubb@gentoo.org> raccess-0.7.ebuild:
   added ~amd64 keyword

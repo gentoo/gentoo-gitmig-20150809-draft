@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4_beta3.ebuild,v 1.6 2004/07/01 21:30:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/nemesis-1.4_beta3.ebuild,v 1.7 2005/01/29 21:23:11 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha"
 IUSE=""
 RDEPEND="virtual/libc
-	>=net-libs/libpcap-0.6.2-r1"
+	virtual/libpcap"
 DEPEND="${RDEPEND}
 	>=net-libs/libnet-1.0.2a-r3
 	<net-libs/libnet-1.1"

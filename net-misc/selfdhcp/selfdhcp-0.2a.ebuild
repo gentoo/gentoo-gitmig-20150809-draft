@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a.ebuild,v 1.1 2004/08/25 16:58:00 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/selfdhcp-0.2a.ebuild,v 1.2 2005/01/29 21:25:08 dragonheart Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND="dev-libs/popt
 		dev-libs/libxml2
 		>=net-libs/libnet-1.0.2
-		>=net-libs/libpcap-0.7"
+		virtual/libpcap"
 
 src_compile() {
 	gnuconfig_update

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/selfdhcp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.2 2004/08/25 16:58:00 tantive Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/selfdhcp/ChangeLog,v 1.3 2005/01/29 21:25:08 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> selfdhcp-0.2.ebuild,
+  selfdhcp-0.2a.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *selfdhcp-0.2a (25 Aug 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ucarp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.4 2004/09/19 20:40:23 tantive Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.5 2005/01/29 21:26:23 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> ucarp-0.7.ebuild,
+  ucarp-1.1.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *ucarp-1.1 (19 Sep 2004)
 

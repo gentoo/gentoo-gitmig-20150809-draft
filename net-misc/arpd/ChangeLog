@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/arpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.5 2004/06/24 23:34:44 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.6 2005/01/29 21:21:15 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> arpd-0.2.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *arpd-0.2 (14 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.3.ebuild,v 1.9 2004/10/01 12:36:21 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/knock-0.3.ebuild,v 1.10 2005/01/29 21:22:33 dragonheart Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="A simple port-knocking daemon"
 HOMEPAGE="http://www.zeroflux.org/knock/"
 SRC_URI="http://www.zeroflux.org/knock/${P}.tar.gz"
 
-DEPEND=">=net-libs/libpcap-0.8.3-r1"
+DEPEND="virtual/libpcap"
 
 KEYWORDS="x86 ~amd64"
 SLOT="0"

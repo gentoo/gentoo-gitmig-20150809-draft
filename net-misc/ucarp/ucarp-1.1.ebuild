@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.1.ebuild,v 1.1 2004/09/19 20:40:23 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.1.ebuild,v 1.2 2005/01/29 21:26:23 dragonheart Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ Strong points of the CARP protocol are : very low overhead, cryptographically si
 "
 HOMEPAGE="http://www.ucarp.org"
 LICENSE="GPL-2"
-DEPEND=">=net-libs/libpcap-0.8.3-r1"
+DEPEND="virtual/libpcap"
 SRC_URI="ftp://ftp.ucarp.org/pub/ucarp/${P}.tar.gz"
 
 SLOT="0"

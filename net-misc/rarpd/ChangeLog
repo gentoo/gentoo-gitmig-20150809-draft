@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rarpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.8 2004/06/25 00:07:43 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rarpd/ChangeLog,v 1.9 2005/01/29 21:24:27 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> rarpd-1.1-r2.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *rarpd-1.1-r2 (03 Nov 2003)
 

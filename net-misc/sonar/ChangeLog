@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sonar
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sonar/ChangeLog,v 1.1 2004/10/06 11:43:48 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sonar/ChangeLog,v 1.2 2005/01/29 21:25:45 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> sonar-0.2.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *sonar-0.2 (06 Oct 2004)
 
