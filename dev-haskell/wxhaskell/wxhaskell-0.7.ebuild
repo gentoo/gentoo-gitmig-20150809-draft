@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.7.ebuild,v 1.2 2004/06/02 21:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.7.ebuild,v 1.3 2004/06/13 10:42:40 kosmikus Exp $
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/wxhaskell/${PN}-src-${PV}.zip"
 LICENSE="wxWinLL-3"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="doc"
 
