@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.28 2004/10/11 04:21:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.29 2004/10/11 04:42:55 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -120,6 +120,9 @@ gcc-compiler-pkg_setup() {
 		eerror "Please enable multilib if you want to use both n32 & n64";
 		die "Invalid USE flag combination";
 	fi
+
+	# we dont want to use the installed compiler's specs to build gcc!
+	unset GCC_SPECS || :
 }
 
 gcc-library-pkg_setup() {
