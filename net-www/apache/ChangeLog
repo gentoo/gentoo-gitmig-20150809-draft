@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.224 2004/07/08 16:27:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.225 2004/07/09 10:36:31 zul Exp $
+
+  10 Jul 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r4.ebuild:
+  Apparently I cant spell.
 
   09 Jul 2004; Chuck Short <zul@gentoo.org> files/2.0.49/commonapache2.conf:
   Fixed buglet. Closes #56457.
