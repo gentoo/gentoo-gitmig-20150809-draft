@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.3 2004/07/15 01:12:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.4 2004/07/31 01:54:52 tgall Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ppc64"
 LICENSE="GPL-2 FVWM"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1

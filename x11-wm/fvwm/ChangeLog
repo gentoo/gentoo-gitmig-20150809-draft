@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.77 2004/07/10 11:11:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.78 2004/07/31 01:54:52 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org>  fvwm-2.5.10-r6.ebuild:
+  stable on ppc64, bug #57040
 
 *fvwm-2.5.10-r6 (10 Jul 2004)
 
