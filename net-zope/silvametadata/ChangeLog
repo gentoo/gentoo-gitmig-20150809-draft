@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/silvametadata
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silvametadata/ChangeLog,v 1.1 2004/09/28 15:35:09 radek Exp $
+
+*silvametadata-0.8 (28 Sep 2004)
+
+  28 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +silvametadata-0.8.ebuild:
+  Initial release for silva-1.0.2
+
