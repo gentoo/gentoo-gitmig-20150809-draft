@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/efac
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*mozilla-firebird 0.6 (02 June 2003)
+
+  02 June 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6.ebuild :
+  Initial import, based on ideas taken from phoenix-cvs, bug 21216 and others.
