@@ -1,0 +1,1191 @@
+diff -u -d -r vsftpd-1.1.3.orig/Changelog vsftpd-1.1.3/Changelog
+--- vsftpd-1.1.3.orig/Changelog	Sat Nov  9 18:17:39 2002
++++ vsftpd-1.1.3/Changelog	Mon Nov 11 21:18:27 2002
+@@ -637,3 +637,4 @@
+ At this point: 1.1.3 package released
+ -------------------------------------
+ 
++- IPv6, EPRT and EPSV (RFC 2428) support by Cougar <cougar@random.ee>
+diff -u -d -r vsftpd-1.1.3.orig/ftpcodes.h vsftpd-1.1.3/ftpcodes.h
+--- vsftpd-1.1.3.orig/ftpcodes.h	Tue Oct 22 02:11:42 2002
++++ vsftpd-1.1.3/ftpcodes.h	Mon Nov 11 21:18:27 2002
+@@ -17,6 +17,7 @@
+ #define FTP_TRANSFEROK        226
+ #define FTP_ABOROK            226
+ #define FTP_PASVOK            227
++#define FTP_EPSVOK            229
+ #define FTP_LOGINOK           230
+ #define FTP_CWDOK             250
+ #define FTP_RMDIROK           250
+@@ -42,6 +43,7 @@
+ #define FTP_BADHELP           502
+ #define FTP_NEEDUSER          503
+ #define FTP_NEEDRNFR          503
++#define FTP_NOPROTOSUPPORT    522
+ #define FTP_LOGINERR          530
+ #define FTP_FILEFAIL          550
+ #define FTP_NOPERM            550
+diff -u -d -r vsftpd-1.1.3.orig/ftpdataio.c vsftpd-1.1.3/ftpdataio.c
+--- vsftpd-1.1.3.orig/ftpdataio.c	Thu Jul  4 00:09:29 2002
++++ vsftpd-1.1.3/ftpdataio.c	Mon Nov 11 21:18:27 2002
+@@ -9,6 +9,10 @@
+  * includes sends and receives, files and directories.
+  */
+ 
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <arpa/inet.h>
++
+ #include "ftpdataio.h"
+ #include "session.h"
+ #include "ftpcmdio.h"
+@@ -72,8 +76,9 @@
+ vsf_ftpdataio_get_pasv_fd(struct vsf_session* p_sess)
+ {
+   static struct vsf_sysutil_sockaddr* s_p_accept_addr = 0;
+-  struct vsf_sysutil_ipv4addr cmd_conn_addr;
+-  struct vsf_sysutil_ipv4addr remote_addr;
++  struct vsf_sysutil_ipaddr cmd_conn_addr;
++  struct vsf_sysutil_ipaddr remote_addr;
++  unsigned int socklen = 0;
+   int remote_fd = vsf_sysutil_accept_timeout(p_sess->pasv_listen_fd,
+                                              &s_p_accept_addr,
+                                              tunable_accept_timeout);
+@@ -87,12 +92,25 @@
+    * Reject the connection if it wasn't from the same IP as the
+    * control connection.
+    */
+-  cmd_conn_addr = vsf_sysutil_sockaddr_get_ipaddr(p_sess->p_remote_addr);
+-  remote_addr = vsf_sysutil_sockaddr_get_ipaddr(s_p_accept_addr);
++  vsf_sysutil_sockaddr_get_ipaddr(&cmd_conn_addr, p_sess->p_remote_addr);
++  vsf_sysutil_sockaddr_get_ipaddr(&remote_addr, s_p_accept_addr);
+   if (!tunable_pasv_promiscuous)
+   {
+-    if (vsf_sysutil_memcmp(cmd_conn_addr.data, remote_addr.data,
+-                           sizeof(cmd_conn_addr)) != 0)
++    switch (cmd_conn_addr.family) {
++      case AF_INET:
++        {
++          socklen = sizeof(struct in_addr);
++          break;
++        }
++      case AF_INET6:
++        {
++          socklen = sizeof(struct in6_addr);
++          break;
++        }
++    }
++    if ((cmd_conn_addr.family != remote_addr.family) ||
++        (!socklen) ||
++        (vsf_sysutil_memcmp(&cmd_conn_addr.data, &remote_addr.data, socklen) != 0))
+     {
+       vsf_cmdio_write(p_sess, FTP_BADSENDCONN, "Security: Bad IP connecting.");
+       vsf_sysutil_close(remote_fd);
+@@ -107,7 +125,7 @@
+ vsf_ftpdataio_get_port_fd(struct vsf_session* p_sess)
+ {
+   int retval;
+-  int remote_fd;
++  int remote_fd = -1;
+   if (tunable_connect_from_port_20)
+   {
+     if (tunable_one_process_model)
+@@ -121,7 +139,22 @@
+   }
+   else
+   {
+-    remote_fd = vsf_sysutil_get_ipv4_sock();
++    switch (((struct sockaddr*)p_sess->p_remote_addr)->sa_family) {
++      case AF_INET:
++        {
++          remote_fd = vsf_sysutil_get_ipv4_sock();
++          break;
++        }
++      case AF_INET6:
++        {
++          remote_fd = vsf_sysutil_get_ipv6_sock();
++          break;
++        }
++      default:
++        {
++          die("unknown protocol family");
++        }
++    }
+   }
+   retval = vsf_sysutil_connect_timeout(remote_fd, p_sess->p_port_sockaddr,
+                                        tunable_connect_timeout);
+diff -u -d -r vsftpd-1.1.3.orig/main.c vsftpd-1.1.3/main.c
+--- vsftpd-1.1.3.orig/main.c	Fri Oct 25 20:46:20 2002
++++ vsftpd-1.1.3/main.c	Mon Nov 11 21:18:27 2002
+@@ -121,7 +121,7 @@
+    */
+   vsf_log_init(&the_session);
+   str_alloc_text(&the_session.remote_ip_str,
+-                 vsf_sysutil_inet_ntoa(the_session.p_remote_addr));
++                 vsf_sysutil_inet_ntop(the_session.p_remote_addr));
+   /* Set up options on the command socket */
+   vsf_cmdio_sock_setup();
+   if (tunable_setproctitle_enable)
+diff -u -d -r vsftpd-1.1.3.orig/postlogin.c vsftpd-1.1.3/postlogin.c
+--- vsftpd-1.1.3.orig/postlogin.c	Sun Sep 22 23:35:27 2002
++++ vsftpd-1.1.3/postlogin.c	Mon Nov 11 21:18:27 2002
+@@ -5,6 +5,10 @@
+  * postlogin.c
+  */
+ 
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <arpa/inet.h>
++
+ #include "postlogin.h"
+ #include "session.h"
+ #include "oneprocess.h"
+@@ -26,11 +30,13 @@
+ static void handle_pwd(struct vsf_session* p_sess);
+ static void handle_cwd(struct vsf_session* p_sess);
+ static void handle_pasv(struct vsf_session* p_sess);
++static void handle_epsv(struct vsf_session* p_sess);
+ static void handle_retr(struct vsf_session* p_sess);
+ static void handle_cdup(struct vsf_session* p_sess);
+ static void handle_list(struct vsf_session* p_sess);
+ static void handle_type(struct vsf_session* p_sess);
+ static void handle_port(struct vsf_session* p_sess);
++static void handle_eprt(struct vsf_session* p_sess);
+ static void handle_stor(struct vsf_session* p_sess);
+ static void handle_mkd(struct vsf_session* p_sess);
+ static void handle_rmd(struct vsf_session* p_sess);
+@@ -128,6 +134,11 @@
+     {
+       handle_pasv(p_sess);
+     }
++    else if (tunable_pasv_enable &&
++             str_equal_text(&p_sess->ftp_cmd_str, "EPSV"))
++    {
++      handle_epsv(p_sess);
++    }
+     else if (str_equal_text(&p_sess->ftp_cmd_str, "RETR"))
+     {
+       handle_retr(p_sess);
+@@ -157,6 +168,11 @@
+     {
+       handle_port(p_sess);
+     }
++    else if (tunable_port_enable &&
++             str_equal_text(&p_sess->ftp_cmd_str, "EPRT"))
++    {
++      handle_eprt(p_sess);
++    }
+     else if (tunable_write_enable &&
+              (tunable_anon_upload_enable || !p_sess->is_anonymous) &&
+              str_equal_text(&p_sess->ftp_cmd_str, "STOR"))
+@@ -344,9 +360,14 @@
+ {
+   static struct mystr s_pasv_res_str;
+   static struct vsf_sysutil_sockaddr* s_p_sockaddr;
+-  struct vsf_sysutil_ipv4port listen_port;
+-  struct vsf_sysutil_ipv4addr listen_ipaddr;
++  struct vsf_sysutil_ipaddr the_addr;
++  struct vsf_sysutil_ipport listen_port;
++  struct vsf_sysutil_ipaddr listen_ipaddr;
+   int bind_retries = 10;
++  if (((struct sockaddr*)p_sess->p_remote_addr)->sa_family != AF_INET) {
++      vsf_cmdio_write(p_sess, FTP_BADCMD, "PASV command not allowed for IPv6 sessions, use EPSV instead.");
++      return;
++  }
+   pasv_cleanup(p_sess);
+   port_cleanup(p_sess);
+   p_sess->pasv_listen_fd = vsf_sysutil_get_ipv4_sock();
+@@ -375,10 +396,10 @@
+     the_port = (unsigned short) scaled_port;
+     vsf_sysutil_sockaddr_alloc_ipv4(&s_p_sockaddr);
+     vsf_sysutil_sockaddr_set_port(s_p_sockaddr,
+-                                  vsf_sysutil_ipv4port_from_int(the_port));
++                                  vsf_sysutil_ipport_from_int(the_port));
+     /* Bind to same address we got the incoming connect on */
+-    vsf_sysutil_sockaddr_set_ipaddr(s_p_sockaddr,
+-      vsf_sysutil_sockaddr_get_ipaddr(p_sess->p_local_addr));
++    vsf_sysutil_sockaddr_get_ipaddr(&the_addr, p_sess->p_local_addr);
++    vsf_sysutil_sockaddr_set_ipaddr(s_p_sockaddr, &the_addr);
+     retval = vsf_sysutil_bind(p_sess->pasv_listen_fd, s_p_sockaddr);
+     if (!vsf_sysutil_retval_is_error(retval))
+     {
+@@ -408,17 +429,17 @@
+   else
+   {
+     /* Use address of bound socket for passive address */
+-    listen_ipaddr = vsf_sysutil_sockaddr_get_ipaddr(s_p_sockaddr);
++    vsf_sysutil_sockaddr_get_ipaddr(&listen_ipaddr, s_p_sockaddr);
+   }
+   listen_port = vsf_sysutil_sockaddr_get_port(s_p_sockaddr);
+   str_alloc_text(&s_pasv_res_str, "Entering Passive Mode (");
+-  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data[0]);
++  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data.ipv4[0]);
+   str_append_text(&s_pasv_res_str, ",");
+-  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data[1]);
++  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data.ipv4[1]);
+   str_append_text(&s_pasv_res_str, ",");
+-  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data[2]);
++  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data.ipv4[2]);
+   str_append_text(&s_pasv_res_str, ",");
+-  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data[3]);
++  str_append_ulong(&s_pasv_res_str, listen_ipaddr.data.ipv4[3]);
+   str_append_text(&s_pasv_res_str, ",");
+   str_append_ulong(&s_pasv_res_str, listen_port.data[0]);
+   str_append_text(&s_pasv_res_str, ",");
+@@ -428,6 +449,103 @@
+ }
+ 
+ static void
++handle_epsv(struct vsf_session* p_sess)
++{
++  static struct mystr s_pasv_res_str;
++  static struct vsf_sysutil_sockaddr* s_p_sockaddr;
++  struct vsf_sysutil_ipaddr the_addr;
++  struct vsf_sysutil_ipport listen_port;
++  struct vsf_sysutil_ipaddr listen_ipaddr;
++  int bind_retries = 10;
++  pasv_cleanup(p_sess);
++  port_cleanup(p_sess);
++  switch (((struct sockaddr*)p_sess->p_remote_addr)->sa_family) {
++    case AF_INET:
++      {
++        p_sess->pasv_listen_fd = vsf_sysutil_get_ipv4_sock();
++        break;
++      }
++    case AF_INET6:
++      {
++        p_sess->pasv_listen_fd = vsf_sysutil_get_ipv6_sock();
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
++  while (--bind_retries)
++  {
++    int retval;
++    unsigned short the_port;
++    double scaled_port;
++    /* IPPORT_RESERVED */
++    unsigned short min_port = 1024;
++    unsigned short max_port = 65535;
++    if (tunable_pasv_min_port > min_port && tunable_pasv_min_port < max_port)
++    {
++      min_port = tunable_pasv_min_port;
++    }
++    if (tunable_pasv_max_port > min_port && tunable_pasv_max_port < max_port)
++    {
++      max_port = tunable_pasv_max_port;
++    }
++    the_port = vsf_sysutil_get_random_byte();
++    the_port <<= 8;
++    the_port |= vsf_sysutil_get_random_byte();
++    scaled_port = (double) min_port;
++    scaled_port += ((double) the_port / (double) 65535) *
++                   ((double) max_port - min_port);
++    the_port = (unsigned short) scaled_port;
++    switch (((struct sockaddr*)p_sess->p_remote_addr)->sa_family) {
++      case AF_INET:
++        {
++          vsf_sysutil_sockaddr_alloc_ipv4(&s_p_sockaddr);
++          break;
++        }
++      case AF_INET6:
++        {
++          vsf_sysutil_sockaddr_alloc_ipv6(&s_p_sockaddr);
++          break;
++        }
++      default:
++        {
++          die("unknown address family");
++        }
++    }
++    vsf_sysutil_sockaddr_set_port(s_p_sockaddr,
++                                  vsf_sysutil_ipport_from_int(the_port));
++    /* Bind to same address we got the incoming connect on */
++    vsf_sysutil_sockaddr_get_ipaddr(&the_addr, p_sess->p_local_addr);
++    vsf_sysutil_sockaddr_set_ipaddr(s_p_sockaddr, &the_addr);
++    retval = vsf_sysutil_bind(p_sess->pasv_listen_fd, s_p_sockaddr);
++    if (!vsf_sysutil_retval_is_error(retval))
++    {
++      break;
++    }
++    if (vsf_sysutil_get_error() == kVSFSysUtilErrADDRINUSE)
++    {
++      continue;
++    }
++    die("vsf_sysutil_bind");
++  }
++  if (!bind_retries)
++  {
++    die("vsf_sysutil_bind");
++  }
++  vsf_sysutil_listen(p_sess->pasv_listen_fd, 1);
++  /* Get the address of the bound socket, for the port */
++  vsf_sysutil_getsockname(p_sess->pasv_listen_fd, &s_p_sockaddr);
++  vsf_sysutil_sockaddr_get_ipaddr(&listen_ipaddr, s_p_sockaddr);
++  listen_port = vsf_sysutil_sockaddr_get_port(s_p_sockaddr);
++  str_alloc_text(&s_pasv_res_str, "Entering Extended Passive Mode (|||");
++  str_append_ulong(&s_pasv_res_str, htons(*(unsigned short *)listen_port.data));
++  str_append_text(&s_pasv_res_str, "|)");
++  vsf_cmdio_write_str(p_sess, FTP_EPSVOK, &s_pasv_res_str);
++}
++
++static void
+ handle_retr(struct vsf_session* p_sess)
+ {
+   static struct mystr s_mark_str;
+@@ -661,12 +779,16 @@
+ handle_port(struct vsf_session* p_sess)
+ {
+   static struct mystr s_tmp_str;
+-  struct vsf_sysutil_ipv4addr the_addr;
+-  struct vsf_sysutil_ipv4port the_port;
++  struct vsf_sysutil_ipaddr the_addr;
++  struct vsf_sysutil_ipport the_port;
+   unsigned char vals[6];
+   int i;
+-  struct vsf_sysutil_ipv4addr remote_addr =
+-    vsf_sysutil_sockaddr_get_ipaddr(p_sess->p_remote_addr);
++  struct vsf_sysutil_ipaddr remote_addr;
++  if (((struct sockaddr*)p_sess->p_remote_addr)->sa_family != AF_INET) {
++      vsf_cmdio_write(p_sess, FTP_BADCMD, "PORT command not allowed for IPv6 sessions, use EPRT instead.");
++      return;
++  }
++  vsf_sysutil_sockaddr_get_ipaddr(&remote_addr, p_sess->p_remote_addr);
+   pasv_cleanup(p_sess);
+   port_cleanup(p_sess);
+   str_copy(&s_tmp_str, &p_sess->ftp_arg_str);
+@@ -696,7 +818,8 @@
+      */
+     str_copy(&s_tmp_str, &s_rhs_comma_str);
+   }
+-  vsf_sysutil_memcpy(the_addr.data, vals, sizeof(the_addr.data));
++  the_addr.family = AF_INET;
++  vsf_sysutil_memcpy(the_addr.data.ipv4, vals, sizeof(the_addr.data.ipv4));
+   vsf_sysutil_memcpy(the_port.data, &vals[4], sizeof(the_port.data));
+   /* SECURITY:
+    * 1) Reject requests not connecting to the control socket IP
+@@ -704,8 +827,8 @@
+    */
+   if (!tunable_port_promiscuous)
+   {
+-    if (vsf_sysutil_memcmp(the_addr.data, remote_addr.data,
+-                           sizeof(the_addr.data)) != 0 ||
++    if (vsf_sysutil_memcmp(the_addr.data.ipv4, remote_addr.data.ipv4,
++                           sizeof(the_addr.data.ipv4)) != 0 ||
+         vsf_sysutil_is_port_reserved(the_port))
+     {
+       vsf_cmdio_write(p_sess, FTP_BADCMD, "Illegal PORT command.");
+@@ -715,9 +838,82 @@
+   }
+   vsf_sysutil_sockaddr_alloc_ipv4(&p_sess->p_port_sockaddr);
+   vsf_sysutil_sockaddr_set_port(p_sess->p_port_sockaddr, the_port);
+-  vsf_sysutil_sockaddr_set_ipaddr(p_sess->p_port_sockaddr, the_addr);
++  vsf_sysutil_sockaddr_set_ipaddr(p_sess->p_port_sockaddr, &the_addr);
+   vsf_cmdio_write(p_sess, FTP_PORTOK,
+                   "PORT command successful. Consider using PASV.");
++}
++
++static void
++handle_eprt(struct vsf_session* p_sess)
++{
++  static struct mystr s_tmp_str;
++  static struct mystr s_rhs_delim_str;
++  struct vsf_sysutil_ipaddr the_addr;
++  struct vsf_sysutil_ipport the_port;
++  unsigned short i;
++  struct vsf_sysutil_ipaddr remote_addr;
++  char delim;
++  int net_prt;
++  unsigned int addrlen = 0;
++
++  vsf_sysutil_sockaddr_get_ipaddr(&remote_addr, p_sess->p_remote_addr);
++  pasv_cleanup(p_sess);
++  port_cleanup(p_sess);
++  str_copy(&s_tmp_str, &p_sess->ftp_arg_str);
++  delim = str_get_char_at(&s_tmp_str, 0);
++  str_split_char(&s_tmp_str, &s_rhs_delim_str, delim);
++  str_copy(&s_tmp_str, &s_rhs_delim_str);
++  str_split_char(&s_tmp_str, &s_rhs_delim_str, delim);
++  net_prt = str_atoi(&s_tmp_str);
++  str_copy(&s_tmp_str, &s_rhs_delim_str);
++  str_split_char(&s_tmp_str, &s_rhs_delim_str, delim);
++  switch (net_prt) {
++    case 1:
++      {
++        struct sockaddr_in sin4;
++        inet_pton(AF_INET, str_getbuf(&s_tmp_str), &sin4.sin_addr);
++        vsf_sysutil_memcpy(the_addr.data.ipv4, &sin4.sin_addr, sizeof(the_addr.data.ipv4));
++        the_addr.family = AF_INET;
++        addrlen = sizeof(struct in_addr);
++        vsf_sysutil_sockaddr_alloc_ipv4(&p_sess->p_port_sockaddr);
++        break;
++      }
++    case 2:
++      {
++        struct sockaddr_in6 sin6;
++        inet_pton(AF_INET6, str_getbuf(&s_tmp_str), &sin6.sin6_addr);
++        vsf_sysutil_memcpy(the_addr.data.ipv6, &sin6.sin6_addr, sizeof(the_addr.data.ipv6));
++        the_addr.family = AF_INET6;
++        addrlen = sizeof(struct in6_addr);
++        vsf_sysutil_sockaddr_alloc_ipv6(&p_sess->p_port_sockaddr);
++        break;
++      }
++    default:
++      {
++        vsf_cmdio_write(p_sess, FTP_NOPROTOSUPPORT, "Illegal EPRT command - unknown network protocol. Only AF_INET and AF_INET6 supported");
++        return;
++      }
++  }
++  str_copy(&s_tmp_str, &s_rhs_delim_str);
++  str_split_char(&s_tmp_str, &s_rhs_delim_str, delim);
++  i = htons(str_atoi(&s_tmp_str));
++  vsf_sysutil_memcpy(the_port.data, &i, sizeof(the_port.data));
++  /* SECURITY:
++   * 1) Reject requests not connecting to the control socket IP
++   * 2) Reject connects to privileged ports
++   */
++  if ((the_addr.family != remote_addr.family) ||
++      (vsf_sysutil_memcmp(&the_addr.data, &remote_addr.data, addrlen) != 0 ||
++      vsf_sysutil_is_port_reserved(the_port)))
++  {
++    vsf_cmdio_write(p_sess, FTP_BADCMD, "Illegal EPRT command.");
++    port_cleanup(p_sess);
++    return;
++  }
++  vsf_sysutil_sockaddr_set_port(p_sess->p_port_sockaddr, the_port);
++  vsf_sysutil_sockaddr_set_ipaddr(p_sess->p_port_sockaddr, &the_addr);
++  vsf_cmdio_write(p_sess, FTP_PORTOK,
++                  "EPRT command successful. Consider using EPSV.");
+ }
+ 
+ static void
+diff -u -d -r vsftpd-1.1.3.orig/privops.c vsftpd-1.1.3/privops.c
+--- vsftpd-1.1.3.orig/privops.c	Fri Sep 21 19:17:10 2001
++++ vsftpd-1.1.3/privops.c	Mon Nov 11 21:18:27 2002
+@@ -9,6 +9,10 @@
+  * Look for suitable paranoia in this file.
+  */
+ 
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <arpa/inet.h>
++
+ #include "privops.h"
+ #include "session.h"
+ #include "sysdeputil.h"
+@@ -35,15 +39,35 @@
+ vsf_privop_get_ftp_port_sock(struct vsf_session* p_sess)
+ {
+   static struct vsf_sysutil_sockaddr* p_sockaddr;
+-  struct vsf_sysutil_ipv4port the_port;
++  struct vsf_sysutil_ipaddr the_addr;
++  struct vsf_sysutil_ipport the_port;
+   int retval;
+-  int s = vsf_sysutil_get_ipv4_sock();
+-  vsf_sysutil_activate_reuseaddr(s);
+-  vsf_sysutil_sockaddr_alloc_ipv4(&p_sockaddr);
+-  the_port = vsf_sysutil_ipv4port_from_int(tunable_ftp_data_port);
++  int s = -1;
++
++  switch (((struct sockaddr*)p_sess->p_remote_addr)->sa_family) {
++    case AF_INET:
++      {
++        s = vsf_sysutil_get_ipv4_sock();
++        vsf_sysutil_activate_reuseaddr(s);
++        vsf_sysutil_sockaddr_alloc_ipv4(&p_sockaddr);
++        break;
++      }
++    case AF_INET6:
++      {
++        s = vsf_sysutil_get_ipv6_sock();
++        vsf_sysutil_activate_reuseaddr(s);
++        vsf_sysutil_sockaddr_alloc_ipv6(&p_sockaddr);
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
++  the_port = vsf_sysutil_ipport_from_int(tunable_ftp_data_port);
+   vsf_sysutil_sockaddr_set_port(p_sockaddr, the_port);
+-  vsf_sysutil_sockaddr_set_ipaddr(p_sockaddr,
+-    vsf_sysutil_sockaddr_get_ipaddr(p_sess->p_local_addr));
++  vsf_sysutil_sockaddr_get_ipaddr(&the_addr, p_sess->p_local_addr);
++  vsf_sysutil_sockaddr_set_ipaddr(p_sockaddr, &the_addr);
+   retval = vsf_sysutil_bind(s, p_sockaddr);
+   if (retval != 0)
+   {
+diff -u -d -r vsftpd-1.1.3.orig/standalone.c vsftpd-1.1.3/standalone.c
+--- vsftpd-1.1.3.orig/standalone.c	Fri Oct 25 20:28:17 2002
++++ vsftpd-1.1.3/standalone.c	Mon Nov 11 21:18:27 2002
+@@ -7,6 +7,8 @@
+  * Code to listen on the network and launch children servants.
+  */
+ 
++#include <sys/socket.h>
++
+ #include "standalone.h"
+ 
+ #include "parseconf.h"
+@@ -27,8 +29,8 @@
+ static void do_reload(void);
+ static void prepare_child(int sockfd);
+ static unsigned int handle_ip_count(
+-    struct vsf_sysutil_ipv4addr* p_accept_addr);
+-static void drop_ip_count(struct vsf_sysutil_ipv4addr* p_ip);
++    struct vsf_sysutil_ipaddr* p_accept_addr);
++static void drop_ip_count(struct vsf_sysutil_ipaddr* p_ip);
+ 
+ static unsigned int hash_ip(unsigned int buckets, void* p_key);
+ static unsigned int hash_pid(unsigned int buckets, void* p_key);
+@@ -37,13 +39,13 @@
+ vsf_standalone_main(void)
+ {
+   struct vsf_sysutil_sockaddr* p_sockaddr = 0;
+-  struct vsf_sysutil_ipv4addr listen_ipaddr;
+-  int listen_sock = vsf_sysutil_get_ipv4_sock();
++  struct vsf_sysutil_ipaddr listen_ipaddr;
++  int listen_sock = -1;
+   int retval;
+-  s_p_ip_count_hash = hash_alloc(256, sizeof(struct vsf_sysutil_ipv4addr),
++  s_p_ip_count_hash = hash_alloc(256, sizeof(struct vsf_sysutil_ipaddr),
+                                  sizeof(unsigned int), hash_ip);
+   s_p_pid_ip_hash = hash_alloc(256, sizeof(int),
+-                               sizeof(struct vsf_sysutil_ipv4addr), hash_pid);
++                               sizeof(struct vsf_sysutil_ipaddr), hash_pid);
+   if (tunable_setproctitle_enable)
+   {
+     vsf_sysutil_setproctitle("LISTENER");
+@@ -51,16 +53,33 @@
+   vsf_sysutil_install_sighandler(kVSFSysUtilSigCHLD, handle_sigchld, 0);
+   vsf_sysutil_install_async_sighandler(kVSFSysUtilSigHUP, handle_sighup);
+ 
+-  vsf_sysutil_activate_reuseaddr(listen_sock);
+-  vsf_sysutil_sockaddr_alloc_ipv4(&p_sockaddr);
+-  vsf_sysutil_sockaddr_set_port(
+-      p_sockaddr, vsf_sysutil_ipv4port_from_int(tunable_listen_port));
+-  if (!tunable_listen_address ||
+-      vsf_sysutil_inet_aton(tunable_listen_address, &listen_ipaddr) == 0)
++  if (tunable_listen_address)
+   {
++    if (vsf_sysutil_inet_aton(tunable_listen_address, &listen_ipaddr))
++    {
++      listen_sock = vsf_sysutil_get_ipv4_sock();
++      vsf_sysutil_sockaddr_alloc_ipv4(&p_sockaddr);
++    }
++    else if (vsf_sysutil_inet_pton(tunable_listen_address, &listen_ipaddr))
++    {
++      listen_sock = vsf_sysutil_get_ipv6_sock();
++      vsf_sysutil_sockaddr_alloc_ipv6(&p_sockaddr);
++    }
++    else
++    {
++      die("illegal listen address");
++    }
++  }
++  else
++  {
++    listen_sock = vsf_sysutil_get_ipv6_sock();
+     listen_ipaddr = vsf_sysutil_sockaddr_get_any();
++    vsf_sysutil_sockaddr_alloc_ipv6(&p_sockaddr);
+   }
+-  vsf_sysutil_sockaddr_set_ipaddr(p_sockaddr, listen_ipaddr);
++  vsf_sysutil_activate_reuseaddr(listen_sock);
++  vsf_sysutil_sockaddr_set_port(
++      p_sockaddr, vsf_sysutil_ipport_from_int(tunable_listen_port));
++  vsf_sysutil_sockaddr_set_ipaddr(p_sockaddr, &listen_ipaddr);
+   retval = vsf_sysutil_bind(listen_sock, p_sockaddr);
+   
+   vsf_sysutil_free(p_sockaddr);
+@@ -76,7 +95,7 @@
+     struct vsf_client_launch child_info;
+     static struct vsf_sysutil_sockaddr* p_accept_addr;
+     int new_child;
+-    struct vsf_sysutil_ipv4addr ip_addr;
++    struct vsf_sysutil_ipaddr ip_addr;
+     /* NOTE - wake up every 10 seconds to make sure we notice child exit
+      * in a timely manner (the sync signal framework race)
+      */
+@@ -91,7 +110,7 @@
+     {
+       continue;
+     }
+-    ip_addr = vsf_sysutil_sockaddr_get_ipaddr(p_accept_addr);
++    vsf_sysutil_sockaddr_get_ipaddr(&ip_addr, p_accept_addr);
+     ++s_children;
+     child_info.num_children = s_children;
+     child_info.num_this_ip = handle_ip_count(&ip_addr);
+@@ -139,7 +158,7 @@
+ }
+ 
+ static void
+-drop_ip_count(struct vsf_sysutil_ipv4addr* p_ip)
++drop_ip_count(struct vsf_sysutil_ipaddr* p_ip)
+ {
+   unsigned int count;
+   unsigned int* p_count =
+@@ -171,11 +190,11 @@
+     reap_one = (unsigned int)vsf_sysutil_wait_reap_one();
+     if (reap_one)
+     {
+-      struct vsf_sysutil_ipv4addr* p_ip;
++      struct vsf_sysutil_ipaddr* p_ip;
+       /* Account total number of instances */
+       --s_children;
+       /* Account per-IP limit */
+-      p_ip = (struct vsf_sysutil_ipv4addr*)
++      p_ip = (struct vsf_sysutil_ipaddr*)
+         hash_lookup_entry(s_p_pid_ip_hash, (void*)&reap_one);
+       drop_ip_count(p_ip);      
+       hash_free_entry(s_p_pid_ip_hash, (void*)&reap_one);
+@@ -203,11 +222,30 @@
+ static unsigned int
+ hash_ip(unsigned int buckets, void* p_key)
+ {
+-  struct vsf_sysutil_ipv4addr* p_addr = (struct vsf_sysutil_ipv4addr*)p_key;
+-  unsigned int val = p_addr->data[0] << 24;
+-  val |= p_addr->data[1] << 16;
+-  val |= p_addr->data[2] << 8;
+-  val |= p_addr->data[3];
++  struct vsf_sysutil_ipaddr* p_addr = (struct vsf_sysutil_ipaddr*)p_key;
++  unsigned int val = 0;
++  switch (p_addr->family) {
++    case AF_INET:
++      {
++        val  = p_addr->data.ipv4[0] << 24;
++        val |= p_addr->data.ipv4[1] << 16;
++        val |= p_addr->data.ipv4[2] << 8;
++        val |= p_addr->data.ipv4[3];
++        break;
++      }
++    case AF_INET6:
++      {
++        val  = (p_addr->data.ipv6[0] ^ p_addr->data.ipv6[4] ^ p_addr->data.ipv6[8] ^ p_addr->data.ipv6[12]) << 24;
++        val |= (p_addr->data.ipv6[1] ^ p_addr->data.ipv6[5] ^ p_addr->data.ipv6[9] ^ p_addr->data.ipv6[13]) << 16;
++        val |= (p_addr->data.ipv6[2] ^ p_addr->data.ipv6[6] ^ p_addr->data.ipv6[10] ^ p_addr->data.ipv6[14]) << 8;
++        val |= (p_addr->data.ipv6[3] ^ p_addr->data.ipv6[7] ^ p_addr->data.ipv6[11] ^ p_addr->data.ipv6[15]);
++        break;
++      }
++    default:
++      {
++        die("unknown protocol family");
++      }
++  }
+   return val % buckets;
+ }
+ 
+@@ -219,7 +257,7 @@
+ }
+ 
+ static unsigned int
+-handle_ip_count(struct vsf_sysutil_ipv4addr* p_accept_addr)
++handle_ip_count(struct vsf_sysutil_ipaddr* p_accept_addr)
+ {
+   unsigned int* p_count =
+     (unsigned int*)hash_lookup_entry(s_p_ip_count_hash, (void*)p_accept_addr);
+diff -u -d -r vsftpd-1.1.3.orig/sysutil.c vsftpd-1.1.3/sysutil.c
+--- vsftpd-1.1.3.orig/sysutil.c	Fri Oct 25 20:32:52 2002
++++ vsftpd-1.1.3/sysutil.c	Mon Nov 11 21:18:27 2002
+@@ -1425,6 +1425,17 @@
+   return retval;
+ }
+ 
++int
++vsf_sysutil_get_ipv6_sock(void)
++{
++  int retval = socket(PF_INET6, SOCK_STREAM, IPPROTO_TCP);
++  if (retval < 0)
++  {
++    die("socket");
++  }
++  return retval;
++}
++
+ struct vsf_sysutil_socketpair_retval
+ vsf_sysutil_unix_dgram_socketpair(void)
+ {
+@@ -1444,7 +1455,23 @@
+ vsf_sysutil_bind(int fd, const struct vsf_sysutil_sockaddr* p_sockptr)
+ {
+   struct sockaddr* p_sockaddr = (struct sockaddr*) p_sockptr;
+-  return bind(fd, p_sockaddr, sizeof(struct sockaddr_in));
++  switch (p_sockaddr->sa_family) {
++    case AF_INET:
++      {
++        return bind(fd, p_sockaddr, sizeof(struct sockaddr_in));
++        break;
++      }
++    case AF_INET6:
++      {
++        return bind(fd, p_sockaddr, sizeof(struct sockaddr_in6));
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
++  return -1;
+ }
+ 
+ void
+@@ -1461,7 +1488,7 @@
+ vsf_sysutil_accept_timeout(int fd, struct vsf_sysutil_sockaddr** p_sockptr,
+                            unsigned int wait_seconds)
+ {
+-  struct sockaddr_in remote_addr;
++  struct sockaddr_in6 remote_addr;
+   int retval;
+   fd_set accept_fdset;
+   struct timeval timeout;
+@@ -1498,14 +1525,26 @@
+   {
+     return -1;
+   }
+-  if (remote_addr.sin_family != AF_INET)
+-  {
+-    die("can only support ipv4 currently");
+-  }
+   if (p_sockptr)
+   {
+-    *p_sockptr = vsf_sysutil_malloc(sizeof(remote_addr));
+-    vsf_sysutil_memcpy(*p_sockptr, &remote_addr, sizeof(remote_addr));
++    switch (remote_addr.sin6_family) {
++      case AF_INET:
++        {
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in));
++          vsf_sysutil_memcpy(*p_sockptr, &remote_addr, sizeof(struct sockaddr_in));
++          break;
++        }
++      case AF_INET6:
++        {
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in6));
++          vsf_sysutil_memcpy(*p_sockptr, &remote_addr, sizeof(struct sockaddr_in6));
++          break;
++        }
++      default:
++        {
++          die("can only support ipv4 and ipv6 currently");
++         }
++    }
+   }
+   return retval;
+ }
+@@ -1514,14 +1553,31 @@
+ vsf_sysutil_connect_timeout(int fd, const struct vsf_sysutil_sockaddr* p_addr,
+                             unsigned int wait_seconds)
+ {
+-  const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_addr;
+-  unsigned int addrlen = sizeof(*p_sockaddr);
+   int retval;
+   if (wait_seconds > 0)
+   {
+     vsf_sysutil_activate_noblock(fd);
+   }
+-  retval = connect(fd, (const struct sockaddr*)p_sockaddr, addrlen);
++  switch (((const struct sockaddr*)p_addr)->sa_family) {
++    case AF_INET:
++      {
++        const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_addr;
++        unsigned int addrlen = sizeof(struct sockaddr_in);
++        retval = connect(fd, (const struct sockaddr*)p_sockaddr, addrlen);
++        break;
++      }
++    case AF_INET6:
++      {
++        const struct sockaddr_in6* p_sockaddr = (const struct sockaddr_in6*) p_addr;
++        unsigned int addrlen = sizeof(struct sockaddr_in6);
++        retval = connect(fd, (const struct sockaddr*)p_sockaddr, addrlen);
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
+   if (retval < 0 && errno == EINPROGRESS)
+   {
+     fd_set connect_fdset;
+@@ -1561,7 +1617,7 @@
+ void
+ vsf_sysutil_getsockname(int fd, struct vsf_sysutil_sockaddr** p_sockptr)
+ {
+-  struct sockaddr_in the_addr;
++  struct sockaddr_in6 the_addr;
+   int retval;
+   unsigned int socklen = sizeof(the_addr);
+   vsf_sysutil_sockaddr_clear(p_sockptr);
+@@ -1570,18 +1626,44 @@
+   {
+     die("getsockname");
+   }
+-  if (the_addr.sin_family != AF_INET)
+-  {
+-    die("can only support ipv4 currently");
++  switch (the_addr.sin6_family) {
++    case AF_INET:
++      {
++        struct sockaddr_in *the_ipv4addr = (struct sockaddr_in*) &the_addr;
++        *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in));
++        vsf_sysutil_memcpy(*p_sockptr, the_ipv4addr, sizeof(struct sockaddr_in));
++        break;
++      }
++    case AF_INET6:
++      {
++        struct sockaddr_in6 *the_ipv6addr = (struct sockaddr_in6*) &the_addr;
++        if (IN6_IS_ADDR_V4MAPPED(&the_ipv6addr->sin6_addr))
++        {
++          struct sockaddr_in the_ipv4addr;
++          the_ipv4addr.sin_family = AF_INET;
++          vsf_sysutil_memcpy(&the_ipv4addr.sin_port, &the_ipv6addr->sin6_port, sizeof(the_ipv4addr.sin_port));
++          vsf_sysutil_memcpy(&the_ipv4addr.sin_addr, &the_ipv6addr->sin6_addr.in6_u.u6_addr16[6], sizeof(the_ipv4addr.sin_addr));
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in));
++          vsf_sysutil_memcpy(*p_sockptr, &the_ipv4addr, sizeof(struct sockaddr_in));
++        }
++        else
++        {
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in6));
++          vsf_sysutil_memcpy(*p_sockptr, the_ipv6addr, sizeof(struct sockaddr_in6));
++        }
++        break;
++      }
++    default:
++      {
++        die("can only support ipv4 and ipv6 currently");
++      }
+   }
+-  *p_sockptr = vsf_sysutil_malloc(sizeof(the_addr));
+-  vsf_sysutil_memcpy(*p_sockptr, &the_addr, sizeof(the_addr));
+ }
+ 
+ void
+ vsf_sysutil_getpeername(int fd, struct vsf_sysutil_sockaddr** p_sockptr)
+ {
+-  struct sockaddr_in the_addr;
++  struct sockaddr_in6 the_addr;
+   int retval;
+   unsigned int socklen = sizeof(the_addr);
+   vsf_sysutil_sockaddr_clear(p_sockptr);
+@@ -1590,12 +1672,38 @@
+   {
+     die("getpeername");
+   }
+-  if (the_addr.sin_family != AF_INET)
+-  {
+-    die("can only support ipv4 currently");
++  switch (the_addr.sin6_family) {
++    case AF_INET:
++      {
++        struct sockaddr_in *the_ipv4addr = (struct sockaddr_in*) &the_addr;
++        *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in));
++        vsf_sysutil_memcpy(*p_sockptr, the_ipv4addr, sizeof(struct sockaddr_in));
++        break;
++      }
++    case AF_INET6:
++      {
++        struct sockaddr_in6 *the_ipv6addr = (struct sockaddr_in6*) &the_addr;
++        if (IN6_IS_ADDR_V4MAPPED(&the_ipv6addr->sin6_addr))
++        {
++          struct sockaddr_in the_ipv4addr;
++          the_ipv4addr.sin_family = AF_INET;
++          vsf_sysutil_memcpy(&the_ipv4addr.sin_port, &the_ipv6addr->sin6_port, sizeof(the_ipv4addr.sin_port));
++          vsf_sysutil_memcpy(&the_ipv4addr.sin_addr, &the_ipv6addr->sin6_addr.in6_u.u6_addr16[6], sizeof(the_ipv4addr.sin_addr));
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in));
++          vsf_sysutil_memcpy(*p_sockptr, &the_ipv4addr, sizeof(struct sockaddr_in));
++        }
++        else
++        {
++          *p_sockptr = vsf_sysutil_malloc(sizeof(struct sockaddr_in6));
++          vsf_sysutil_memcpy(*p_sockptr, the_ipv6addr, sizeof(struct sockaddr_in6));
++        }
++        break;
++      }
++    default:
++      {
++        die("can only support ipv4 and ipv6 currently");
++      }
+   }
+-  *p_sockptr = vsf_sysutil_malloc(sizeof(the_addr));
+-  vsf_sysutil_memcpy(*p_sockptr, &the_addr, sizeof(the_addr));
+ }
+ 
+ void
+@@ -1630,45 +1738,112 @@
+ }
+ 
+ void
++vsf_sysutil_sockaddr_alloc_ipv6(struct vsf_sysutil_sockaddr** p_sockptr)
++{
++  struct sockaddr_in6 new_addr;
++  vsf_sysutil_sockaddr_clear(p_sockptr);
++  *p_sockptr = vsf_sysutil_malloc(sizeof(new_addr));
++  vsf_sysutil_memclr(&new_addr, sizeof(new_addr));
++  new_addr.sin6_family = AF_INET6;
++  vsf_sysutil_memcpy(*p_sockptr, &new_addr, sizeof(new_addr));
++}
++
++void
+ vsf_sysutil_sockaddr_set_ipaddr(struct vsf_sysutil_sockaddr* p_sockptr,
+-                                struct vsf_sysutil_ipv4addr the_addr)
++                                struct vsf_sysutil_ipaddr* the_addr)
+ {
+-  struct sockaddr_in* p_sockaddr = (struct sockaddr_in*) p_sockptr;
+-  vsf_sysutil_memcpy(&p_sockaddr->sin_addr.s_addr, the_addr.data,
++  switch (the_addr->family) {
++    case AF_INET:
++      {
++        struct sockaddr_in* p_sockaddr = (struct sockaddr_in*) p_sockptr;
++        p_sockaddr->sin_family = the_addr->family;
++        vsf_sysutil_memcpy(&p_sockaddr->sin_addr.s_addr, &the_addr->data.ipv4,
+                      sizeof(p_sockaddr->sin_addr.s_addr));
++        break;
++      }
++    case AF_INET6:
++      {
++        struct sockaddr_in6* p_sockaddr = (struct sockaddr_in6*) p_sockptr;
++        p_sockaddr->sin6_family = the_addr->family;
++        vsf_sysutil_memcpy(&p_sockaddr->sin6_addr, &the_addr->data.ipv6,
++                     sizeof(p_sockaddr->sin6_addr));
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
++  return;
+ }
+ 
+-struct vsf_sysutil_ipv4addr
+-vsf_sysutil_sockaddr_get_ipaddr(const struct vsf_sysutil_sockaddr* p_sockptr)
++void
++vsf_sysutil_sockaddr_get_ipaddr(struct vsf_sysutil_ipaddr *d_sockptr, const struct vsf_sysutil_sockaddr* p_sockptr)
+ {
+-  struct vsf_sysutil_ipv4addr retval;
+-  const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_sockptr;
+-  vsf_sysutil_memcpy(retval.data, &p_sockaddr->sin_addr.s_addr,
+-                     sizeof(retval.data));
+-  return retval;
++  const struct sockaddr* p_sockaddr = (const struct sockaddr*) p_sockptr;
++  switch (p_sockaddr->sa_family) {
++    case AF_INET:
++      {
++        const struct sockaddr_in* p_sockaddr4 = (const struct sockaddr_in*) p_sockptr;
++        d_sockptr->family = p_sockaddr4->sin_family;
++        vsf_sysutil_memcpy(&d_sockptr->data, &p_sockaddr4->sin_addr,
++                           sizeof(p_sockaddr4->sin_addr));
++        break;
++      }
++    case AF_INET6:
++      {
++        const struct sockaddr_in6* p_sockaddr6 = (const struct sockaddr_in6*) p_sockptr;
++        d_sockptr->family = p_sockaddr6->sin6_family;
++        vsf_sysutil_memcpy(&d_sockptr->data, &p_sockaddr6->sin6_addr,
++                           sizeof(p_sockaddr6->sin6_addr));
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
++  return;
+ }
+ 
+-struct vsf_sysutil_ipv4addr
++struct vsf_sysutil_ipaddr
+ vsf_sysutil_sockaddr_get_any(void)
+ {
+-  struct vsf_sysutil_ipv4addr retval;
++  struct vsf_sysutil_ipaddr retval;
+   vsf_sysutil_memclr(&retval, sizeof(retval));
++  retval.family = AF_INET6;
+   return retval;
+ }
+ 
+-struct vsf_sysutil_ipv4port
++struct vsf_sysutil_ipport
+ vsf_sysutil_sockaddr_get_port(const struct vsf_sysutil_sockaddr* p_sockptr)
+ {
+-  struct vsf_sysutil_ipv4port retval;
+-  const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_sockptr;
+-  vsf_sysutil_memcpy(retval.data, &p_sockaddr->sin_port, sizeof(retval.data));
++  struct vsf_sysutil_ipport retval;
++  switch (((const struct sockaddr*)p_sockptr)->sa_family) {
++    case AF_INET:
++      {
++        const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_sockptr;
++        vsf_sysutil_memcpy(retval.data, &p_sockaddr->sin_port, sizeof(retval.data));
++        break;
++      }
++    case AF_INET6:
++      {
++        const struct sockaddr_in6* p_sockaddr = (const struct sockaddr_in6*) p_sockptr;
++        vsf_sysutil_memcpy(retval.data, &p_sockaddr->sin6_port, sizeof(retval.data));
++        break;
++      }
++    default:
++      {
++        die("unknown address family");
++      }
++  }
+   return retval;
+ }
+ 
+-struct vsf_sysutil_ipv4port
+-vsf_sysutil_ipv4port_from_int(unsigned int port)
++struct vsf_sysutil_ipport
++vsf_sysutil_ipport_from_int(unsigned int port)
+ {
+-  struct vsf_sysutil_ipv4port retval;
++  struct vsf_sysutil_ipport retval;
+   unsigned short netorder_port = htons(port);
+   vsf_sysutil_memcpy(retval.data, &netorder_port, sizeof(retval.data));
+   return retval;
+@@ -1676,7 +1851,7 @@
+ 
+ void
+ vsf_sysutil_sockaddr_set_port(struct vsf_sysutil_sockaddr* p_sockptr,
+-                              struct vsf_sysutil_ipv4port the_port)
++                              struct vsf_sysutil_ipport the_port)
+ {
+   struct sockaddr_in* p_sockaddrin = (struct sockaddr_in*) p_sockptr;
+   vsf_sysutil_memcpy(&p_sockaddrin->sin_port, the_port.data,
+@@ -1684,7 +1859,7 @@
+ }
+ 
+ int
+-vsf_sysutil_is_port_reserved(const struct vsf_sysutil_ipv4port the_port)
++vsf_sysutil_is_port_reserved(const struct vsf_sysutil_ipport the_port)
+ {
+   unsigned short netorder_port;
+   vsf_sysutil_memcpy(&netorder_port, the_port.data, sizeof(netorder_port));
+@@ -1696,19 +1871,54 @@
+ }
+ 
+ const char*
+-vsf_sysutil_inet_ntoa(const struct vsf_sysutil_sockaddr* p_sockptr)
++vsf_sysutil_inet_ntop(const struct vsf_sysutil_sockaddr* p_sockptr)
+ {
+-  const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_sockptr;
+-  return inet_ntoa(p_sockaddr->sin_addr);
++  switch (((struct sockaddr*)p_sockptr)->sa_family) {
++    case AF_INET:
++      {
++        const struct sockaddr_in* p_sockaddr = (const struct sockaddr_in*) p_sockptr;
++        return inet_ntoa(p_sockaddr->sin_addr);
++        break;
++      }
++    case AF_INET6:
++      {
++        static char buf[INET6_ADDRSTRLEN];
++        const struct sockaddr_in6* p_sockaddr = (const struct sockaddr_in6*) p_sockptr;
++        return inet_ntop(AF_INET6, &p_sockaddr->sin6_addr, buf, INET6_ADDRSTRLEN);
++        break;
++      }
++    default:
++      {
++       die("unknown address family");
++      }
++  }
++  return 0;
+ }
+ 
+ int
+-vsf_sysutil_inet_aton(const char* p_text, struct vsf_sysutil_ipv4addr* p_addr)
++vsf_sysutil_inet_aton(const char* p_text, struct vsf_sysutil_ipaddr* p_addr)
+ {
+   struct in_addr sin_addr;
+   if (inet_aton(p_text, &sin_addr))
+   {
+-    vsf_sysutil_memcpy(p_addr, &sin_addr.s_addr, sizeof(*p_addr));
++    vsf_sysutil_memcpy(&p_addr->data, &sin_addr.s_addr, sizeof(*p_addr));
++    p_addr->family = AF_INET;
++    return 1;
++  }
++  else
++  {
++    return 0;
++  }
++}
++
++int
++vsf_sysutil_inet_pton(const char* p_text, struct vsf_sysutil_ipaddr* p_addr)
++{
++  struct in6_addr sin_addr;
++  if (inet_pton(AF_INET6, p_text, &sin_addr))
++  {
++    vsf_sysutil_memcpy(&p_addr->data, &sin_addr, sizeof(*p_addr));
++    p_addr->family = AF_INET6;
+     return 1;
+   }
+   else
+diff -u -d -r vsftpd-1.1.3.orig/sysutil.h vsftpd-1.1.3/sysutil.h
+--- vsftpd-1.1.3.orig/sysutil.h	Fri Oct 25 20:32:29 2002
++++ vsftpd-1.1.3/sysutil.h	Mon Nov 11 21:18:27 2002
+@@ -193,11 +193,15 @@
+ 
+ /* Socket handling */
+ struct vsf_sysutil_sockaddr;
+-struct vsf_sysutil_ipv4addr
++struct vsf_sysutil_ipaddr
+ {
+-  unsigned char data[4];
++  unsigned short int family;
++  union {
++    unsigned char ipv4[4];
++    unsigned char ipv6[16];
++  } data;
+ };
+-struct vsf_sysutil_ipv4port
++struct vsf_sysutil_ipport
+ {
+   unsigned char data[2];
+ };
+@@ -208,18 +212,20 @@
+ };
+ void vsf_sysutil_sockaddr_clear(struct vsf_sysutil_sockaddr** p_sockptr);
+ void vsf_sysutil_sockaddr_alloc_ipv4(struct vsf_sysutil_sockaddr** p_sockptr);
++void vsf_sysutil_sockaddr_alloc_ipv6(struct vsf_sysutil_sockaddr** p_sockptr);
+ void vsf_sysutil_sockaddr_set_ipaddr(struct vsf_sysutil_sockaddr* p_sockptr,
+-                                     struct vsf_sysutil_ipv4addr the_addr);
+-struct vsf_sysutil_ipv4addr vsf_sysutil_sockaddr_get_ipaddr(
++                                     struct vsf_sysutil_ipaddr* the_addr);
++void vsf_sysutil_sockaddr_get_ipaddr(struct vsf_sysutil_ipaddr *d_sockptr,
+   const struct vsf_sysutil_sockaddr* p_sockptr);
+-struct vsf_sysutil_ipv4addr vsf_sysutil_sockaddr_get_any(void);
+-struct vsf_sysutil_ipv4port vsf_sysutil_ipv4port_from_int(unsigned int port);
++struct vsf_sysutil_ipaddr vsf_sysutil_sockaddr_get_any(void);
++struct vsf_sysutil_ipport vsf_sysutil_ipport_from_int(unsigned int port);
+ void vsf_sysutil_sockaddr_set_port(struct vsf_sysutil_sockaddr* p_sockptr,
+-                                   struct vsf_sysutil_ipv4port the_port);
+-struct vsf_sysutil_ipv4port vsf_sysutil_sockaddr_get_port(
++                                   struct vsf_sysutil_ipport the_port);
++struct vsf_sysutil_ipport vsf_sysutil_sockaddr_get_port(
+   const struct vsf_sysutil_sockaddr* p_sockptr);
+-int vsf_sysutil_is_port_reserved(const struct vsf_sysutil_ipv4port);
++int vsf_sysutil_is_port_reserved(const struct vsf_sysutil_ipport);
+ int vsf_sysutil_get_ipv4_sock(void);
++int vsf_sysutil_get_ipv6_sock(void);
+ struct vsf_sysutil_socketpair_retval
+   vsf_sysutil_unix_dgram_socketpair(void);
+ int vsf_sysutil_bind(int fd, const struct vsf_sysutil_sockaddr* p_sockptr);
+@@ -246,10 +252,12 @@
+ void vsf_sysutil_shutdown_failok(int fd);
+ int vsf_sysutil_recv_peek(const int fd, void* p_buf, unsigned int len);
+ 
+-const char* vsf_sysutil_inet_ntoa(
++const char* vsf_sysutil_inet_ntop(
+   const struct vsf_sysutil_sockaddr* p_sockptr);
+ int vsf_sysutil_inet_aton(
+-  const char* p_text, struct vsf_sysutil_ipv4addr* p_addr);
++  const char* p_text, struct vsf_sysutil_ipaddr* p_addr);
++int vsf_sysutil_inet_pton(
++  const char* p_text, struct vsf_sysutil_ipaddr* p_addr);
+ 
+ /* User database queries etc. */
+ struct vsf_sysutil_user;
