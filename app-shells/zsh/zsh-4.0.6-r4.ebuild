@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r4.ebuild,v 1.2 2003/09/06 22:23:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r4.ebuild,v 1.3 2003/09/11 01:03:59 msterret Exp $
 
 IUSE="ncurses"
 
@@ -58,7 +58,7 @@ src_install() {
 
 	dodoc ChangeLog META-FAQ README INSTALL LICENCE config.modules
 	docinto StartupFiles
- 	dodoc StartupFiles/z*
+	dodoc StartupFiles/z*
 
 	insinto /etc/zsh
 	doins ${FILESDIR}/zshenv

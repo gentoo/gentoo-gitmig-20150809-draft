@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1.ebuild,v 1.5 2003/08/20 10:18:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1.ebuild,v 1.6 2003/09/11 01:03:59 msterret Exp $
 
 inherit eutils
 
@@ -77,7 +77,7 @@ src_install() {
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
 	docinto StartupFiles
- 	dodoc StartupFiles/z*
+	dodoc StartupFiles/z*
 }
 
 pkg_preinst() {

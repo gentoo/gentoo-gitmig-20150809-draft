@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.12 2003/03/01 04:01:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.13 2003/09/11 01:03:59 msterret Exp $
 
 DESCRIPTION="Unix shell embedded in Scheme"
 SRC_URI="ftp://ftp.scsh.net/pub/scsh/0.6/${P}.tar.gz"
@@ -17,7 +17,7 @@ src_compile() {
 		--libdir=/usr/lib \
 		--includedir=/usr/include \
 		|| die
-        make || die
+	make || die
 }
 
 src_install() {
@@ -26,7 +26,7 @@ src_install() {
 		htmldir=${D}/usr/share/doc/${PF}/html \
 		incdir=${D}/usr/include \
 		mandir=${D}/usr/share/man/man1 \
-                libdir=${D}/usr/lib \
+		libdir=${D}/usr/lib \
 		|| die
 	dodoc RELEASE
 
