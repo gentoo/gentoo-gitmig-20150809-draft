@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/comedi/comedi-0.7.68.ebuild,v 1.3 2004/07/13 20:27:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/comedi/comedi-0.7.68.ebuild,v 1.4 2004/10/04 03:22:56 iggy Exp $
 
-inherit kernel-mod
+inherit kernel-mod eutils
 
 DESCRIPTION="Comedi - COntrol and MEasurement Device Interface for Linux"
 SRC_URI="ftp://ftp.comedi.org/pub/comedi/${P}.tar.gz"
@@ -18,20 +18,13 @@ src_compile()
 
 	addpredict ${KERNEL_DIR}
 
-	# The stuff below is taken from the kernel's Makefile.  The problem here is that
-	# we need the ARCH variable to be set to what the kernel is expecting, but the Gento
-	# build system overrides it, so we'll force it to what the kernel wants for the 
-	# compilation phase.
-
-	LOCALARCH=$(uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
-		-e s/arm.*/arm/ -e s/sa110/arm/ \
-		-e s/s390x/s390/ -e s/parisc64/parisc/ )
-
-	ARCH=${LOCALARCH} ./configure --prefix=${D}/usr --libdir=${D}/lib --with-linuxdir=${KERNEL_DIR}
+	set_arch_to_kernel
+	./configure --prefix=${D}/usr --libdir=${D}/lib --with-linuxdir=${KERNEL_DIR}
 	emake
 }
 
 src_install()
 {
 	make install
+	set_arch_to_portage
 }
