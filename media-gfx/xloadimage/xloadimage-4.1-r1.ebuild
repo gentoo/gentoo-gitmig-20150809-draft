@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r1.ebuild,v 1.1 2004/03/13 12:02:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r1.ebuild,v 1.2 2004/04/25 03:42:28 psi29a Exp $
 
 inherit alternatives
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha hppa amd64 ia64"
+KEYWORDS="x86 sparc ppc alpha hppa amd64 ia64 ~mips"
 IUSE="tiff jpeg png"
 
 DEPEND=">=sys-apps/sed-4.0.5
