@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.5.10-r1.ebuild,v 1.2 2004/04/21 21:29:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.5.10-r1.ebuild,v 1.3 2004/06/14 08:39:22 kloeri Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~ppc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-apps/baselayout-1.8.6.12-r1"

@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.2.1.ebuild,v 1.2 2004/06/04 05:13:48 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/powerprefs-0.2.1.ebuild,v 1.3 2004/06/14 08:36:08 kloeri Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="powerprefs is a PPC-only program to interface with special Powerbook/iBook keys in Linux"
 SRC_URI="http://www.cymes.de/members/joker/projects/pbbuttons/tar/${P}.tar.gz"
 HOMEPAGE="http://www.cymes.de/members/joker/projects/pbbuttons/pbbuttons.html"
 KEYWORDS="ppc"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="x11-libs/gtk+"

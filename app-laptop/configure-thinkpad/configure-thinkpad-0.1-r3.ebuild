@@ -6,6 +6,7 @@ DESCRIPTION="Thinkpad gnome configuration utility for tpctl"
 SRC_URI="mirror://sourceforge/tpctl/${P}.tar.gz"
 HOMEPAGE="http://tpctl.sourceforge.net/configure-thinkpad.html"
 KEYWORDS="~x86 -amd64 -ppc -mips -sparc"
+IUSE=""
 
 RDEPEND=">=app-laptop/tpctl-4.8
 	>=x11-libs/gtk+-2.2
