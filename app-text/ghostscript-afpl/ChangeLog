@@ -1,16 +1,15 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.6 2004/01/13 14:35:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.7 2004/01/15 17:57:37 lanius Exp $
+
+  15 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
+  ghostscript-afpl-8.11.ebuild, ghostscript-afpl-8.12.ebuild,
+  ghostscript-afpl-8.13.ebuild:
+  stable bump; remove old versions
 
   13 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
   ghostscript-afpl-8.13.ebuild:
   fixed font path
-
-*ghostscript-afpl-8.13 (08 Jan 2004)
-
-  08 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
-  ghostscript-afpl-8.13.ebuild:
-  version bump
 
 *ghostscript-afpl-8.13 (08 Jan 2004)
 
