@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.13 2003/07/29 14:54:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.14 2003/08/20 10:02:58 mcummings Exp $
+
+*URI-1.25 (20 Aug 2003)
+
+  20 Aug 2003; Michael Cummings <mcummings@gentoo.org> URI-1.25.ebuild:
+  CPAN Update - feature fix/add
 
 *URI-1.24 (29 Jul 2003)
 
