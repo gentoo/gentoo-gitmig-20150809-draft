@@ -2,11 +2,11 @@ MD5 c710b5a9e0d43592b6076e41894fecf2 file-4.07-r1.ebuild 1616
 MD5 cb23301c27d4a9fd31c6b5100e41a18c file-3.41.ebuild 997
 MD5 605c72d3a6c8eb460232237356134a72 file-4.07.ebuild 1564
 MD5 720ff71d900c2c319fdc992a6abf8474 file-4.02.ebuild 1000
-MD5 73fb7c0d1831e107ee38bb6ca329aed6 file-4.09.ebuild 1727
+MD5 9668aa36be3c878e958d7d719c1336bb file-4.09.ebuild 1743
 MD5 a5c87f7115785296946c86229f165385 file-4.06.ebuild 1696
-MD5 f35afb5d10fe6aec67647e16713200de ChangeLog 7155
+MD5 fb8f9b7dac31afef3b3a1880cf47b120 ChangeLog 7279
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f2f8fb9aa51be0048b8f32c9a9a51fbc file-4.08.ebuild 1536
+MD5 66a8f934dca9edff5b2a469cc7a6a727 file-4.08.ebuild 1550
 MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
 MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
 MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673

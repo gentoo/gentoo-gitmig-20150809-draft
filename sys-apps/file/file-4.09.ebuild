@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.8 2004/06/28 16:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.09.ebuild,v 1.9 2004/07/12 16:08:52 solar Exp $
 
 inherit flag-o-matic gnuconfig eutils
 use python && inherit distutils
@@ -51,7 +51,7 @@ src_install() {
 		dodoc ChangeLog MAINT README
 		use python && cd python && distutils_src_install
 	else
-		rm -rf ${D}/usr/share/man
+		rm -rf ${D}/usr/share/man ${D}/usr/lib/*.a
 	fi
 }
 

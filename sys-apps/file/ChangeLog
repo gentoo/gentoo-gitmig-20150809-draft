@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.50 2004/06/30 15:50:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.51 2004/07/12 16:08:52 solar Exp $
+
+  12 Jul 2004; <solar@gentoo.org> file-4.08.ebuild, file-4.09.ebuild:
+  remove the unneeded lib/*.a cruft from a stage1 build
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> file-3.41.ebuild,
   file-4.02.ebuild, file-4.06.ebuild, file-4.07-r1.ebuild, file-4.07.ebuild,

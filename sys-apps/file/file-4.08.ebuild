@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.10 2004/06/30 15:50:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.11 2004/07/12 16:08:52 solar Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -50,6 +50,6 @@ src_install() {
 	if ! use build ; then
 		dodoc ChangeLog MAINT README
 	else
-		rm -rf ${D}/usr/share/man
+		rm -rf ${D}/usr/share/man ${D}/usr/lib/*.a
 	fi
 }
