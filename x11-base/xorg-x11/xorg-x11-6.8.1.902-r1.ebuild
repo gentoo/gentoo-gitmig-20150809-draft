@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.2 2005/01/24 09:15:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.3 2005/01/24 09:21:04 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -283,25 +283,7 @@ pkg_preinst() {
 
 	update_config_files
 
-	for G_FONTDIR in ${G_FONTDIRS}; do
-		# Get rid of deprecated directories so our symlinks in the same location
-		# work -- users shouldn't be placing fonts here so that should be fine,
-		# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
-		remove_font_dirs
-
-		# clean out old fonts.* and encodings.dir files, as we
-		# will regenerate them
-		# Not Speedo or CID, as their fonts.scale files are "real"
-		if [ "${G_FONTDIR}" != "CID" -a "${G_FONTDIR}" != "Speedo" ]; then
-			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
-				-o -name 'encodings.dir' -exec rm -f {} \;
-		fi
-	done
-
-	# No longer used by xorg-x11
-	if [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/truetype ]; then
-		rm -rf ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/truetype
-	fi
+	cleanup_fonts
 
 	move_app_defaults_to_etc
 
@@ -313,14 +295,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-
-	local x=""
-
 	env-update
 
 	if [ "${ROOT}" = "/" ]; then
-		umask 022
-
 		font_setup
 
 		if use opengl; then
@@ -330,31 +307,13 @@ pkg_postinst() {
 
 	remove_old_compose_files
 
-	# These need to be owned by root and the correct permissions
-	# (bug #8281)
-	for x in ${ROOT}/tmp/.{ICE,X11}-unix; do
-		if [ ! -d ${x} ]; then
-			mkdir -p ${x}
-		fi
-
-		chown root:root ${x}
-		chmod 1777 ${x}
-	done
+	setup_tmp_files
 
 	print_info
 }
 
 pkg_postrm() {
-
-	# Fix problematic links
-	if [ -x ${ROOT}/usr/X11R6/bin/Xorg ]; then
-		ln -snf ../X11R6/bin ${ROOT}/usr/bin/X11
-		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
-		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
-		if use opengl; then
-			ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
-		fi
-	fi
+	fix_links
 }
 
 ###############
@@ -1408,6 +1367,28 @@ update_config_files() {
 	fi
 }
 
+cleanup_fonts() {
+	for G_FONTDIR in ${G_FONTDIRS}; do
+		# Get rid of deprecated directories so our symlinks in the same location
+		# work -- users shouldn't be placing fonts here so that should be fine,
+		# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
+		remove_font_dirs
+
+		# clean out old fonts.* and encodings.dir files, as we
+		# will regenerate them
+		# Not Speedo or CID, as their fonts.scale files are "real"
+		if [ "${G_FONTDIR}" != "CID" -a "${G_FONTDIR}" != "Speedo" ]; then
+			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+				-o -name 'encodings.dir' -exec rm -f {} \;
+		fi
+	done
+
+	# No longer used by xorg-x11
+	if [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/truetype ]; then
+		rm -rf ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/truetype
+	fi
+}
+
 remove_font_dirs() {
 		if [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR} ]; then
 			# local directory is for sysadmin-added fonts, so save it
@@ -1471,6 +1452,8 @@ clean_dynamic_libgl() {
 ##################
 
 font_setup() {
+	umask 022
+
 	# These cause ttmkfdir to segfault :/
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.8x.enc.gz
 	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.16.enc.gz
@@ -1612,6 +1595,20 @@ remove_old_compose_files() {
 	done
 }
 
+setup_tmp_files() {
+	# These need to be owned by root and the correct permissions
+	# (bug #8281)
+	local x=""
+	for x in ${ROOT}/tmp/.{ICE,X11}-unix; do
+		if [ ! -d ${x} ]; then
+			mkdir -p ${x}
+		fi
+
+		chown root:root ${x}
+		chmod 1777 ${x}
+	done
+}
+
 print_info() {
 	echo
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
@@ -1640,4 +1637,16 @@ print_info() {
 	# Try to get people to read /usr/X11R6/libdir move
 	ebeep 5
 	epause 10
+}
+
+fix_links() {
+	# Fix problematic links
+	if [ -x ${ROOT}/usr/X11R6/bin/Xorg ]; then
+		ln -snf ../X11R6/bin ${ROOT}/usr/bin/X11
+		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
+		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
+		if use opengl; then
+			ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
+		fi
+	fi
 }
