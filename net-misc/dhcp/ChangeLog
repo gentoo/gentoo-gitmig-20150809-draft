@@ -1,11 +1,15 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.15 2003/02/24 19:42:04 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.16 2003/03/01 19:38:54 weeve Exp $
 
   17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> dhcp-3.0_p2.ebuild :
   Unmasked, security update.
 
 *dhcp-3.0_p2 (15 Jan 2003)
+
+  01 Mar 2003; Jason Wever <weeve@gentoo.org> dhcp-3.0_p2.ebuild:
+  Applied fix for bug #11960 to omit -O flags so dhcp will no longer bus error
+  on sbus sparcs.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcp-3.0_p2.ebuild :
   Added testing mips keyword to the ebuild.
