@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.5 2004/06/24 23:07:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.6 2004/11/01 20:47:15 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  calendar-1.19.ebuild:
+  Marked ~ppc64; bug #67097
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> calendar-1.19.ebuild:
   Stable on alpha
