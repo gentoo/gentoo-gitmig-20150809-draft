@@ -1,0 +1,8 @@
+# ChangeLog for dev-db/aqua-data-studio
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/ChangeLog,v 1.1 2004/02/15 02:48:15 zx Exp $
+
+  14 Feb 2004; <zx@gentoo.org> :
+  Initial Import.
+  Thanks to Thiemo Kellner <thiemo@thiam.ch> for the original ebuild. Bug #22702
+
