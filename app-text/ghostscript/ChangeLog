@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.30 2003/04/03 18:40:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.31 2003/06/02 14:04:57 seemant Exp $
+
+*ghostscript-7.05.6-r1 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  ghostscript-7.05.5-r1.ebuild, ghostscript-7.05.5-r2.ebuild,
+  ghostscript-7.05.6-r1.ebuild, ghostscript-7.05.6.ebuild:
+  fonts moved from x11-misc to media-fonts
 
 *ghostscript-7.05.6 (05 Mar 2003)
 

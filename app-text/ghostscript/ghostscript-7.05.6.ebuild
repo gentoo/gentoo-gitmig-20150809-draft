@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.4 2003/04/03 18:17:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.5 2003/06/02 14:04:57 seemant Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -20,9 +20,9 @@ DEPEND="virtual/glibc
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 ) 
-	cjk? ( x11-misc/arphicfonts
-		x11-misc/kochi-fonts
-		x11-misc/baekmuk-fonts )
+	cjk? ( media-fonts/arphicfonts
+		media-fonts/kochi-fonts
+		media-fonts/baekmuk-fonts )
 	cups? gimp-print : gimp-print-cups"
 
 S=${WORKDIR}/espgs-${PV}
