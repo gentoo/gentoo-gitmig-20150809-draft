@@ -1,3 +1,5 @@
-MD5 57eebaa8759eb476ba192c83e1a60554 files/digest-aqmoney-0.6.1 65
-MD5 ce998d4a6f05b61e88c8e11c0ad4c43c ChangeLog 375
+MD5 161153ba874c4aa753bce7ae75f09008 ChangeLog 490
 MD5 d86fd1391f11b5ca5ff0f31f1629e953 aqmoney-0.6.1.ebuild 594
+MD5 f6d1aa6d1729102e1d583636def358b3 aqmoney-0.6.2.ebuild 596
+MD5 57eebaa8759eb476ba192c83e1a60554 files/digest-aqmoney-0.6.1 65
+MD5 250623ae870b88e3cd2b2a5c77cfabc3 files/digest-aqmoney-0.6.2 65
