@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.10 2003/07/08 23:34:13 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.4.1-r2.ebuild,v 1.11 2003/07/08 23:49:22 darkspecter Exp $
 
 IUSE="gtkhtml ssl nls"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-libs/libxml-1.8.15
 	>=media-libs/gdk-pixbuf-0.11.0-r1
-	<libglade-2
+	<gnome-base/libglade-2
 	>=gnome-base/gnome-vfs-1.0.2-r1
 	ssl? ( dev-libs/openssl )
 	gtkhtml? ( >=gnome-extra/gtkhtml-0.14.0-r1 )
