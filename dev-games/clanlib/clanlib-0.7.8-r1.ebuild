@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.1 2004/08/15 08:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.7.8-r1.ebuild,v 1.2 2004/09/24 06:42:49 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="multi-platform game development library"
 HOMEPAGE="http://www.clanlib.org/"
-SRC_URI="http://www.clanlib.org/~sphair/download/ClanLib-${PV}-1.tar.bz2"
+SRC_URI="http://www.clanlib.org/download/files/ClanLib-${PV}-1.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0.7"
 KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="opengl X sdl oggvorbis doc mikmod clanVoice clanJavaScript ipv6"
 
-RDEPEND=">=media-libs/hermes-1.3.2
+DEPEND="virtual/libc
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )
@@ -21,8 +21,6 @@ RDEPEND=">=media-libs/hermes-1.3.2
 	X? ( virtual/x11 )
 	mikmod? ( >=media-libs/libmikmod-3.1.9 )
 	oggvorbis? ( media-libs/libvorbis )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 S="${WORKDIR}/ClanLib-${PV}"
 
