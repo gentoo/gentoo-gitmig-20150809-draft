@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.2 2004/06/11 18:10:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.3 2004/06/17 08:42:05 satya Exp $
+
+inherit eutils
 
 DESCRIPTION="NTLM proxy. Authentication against MS proxy/web server written in python"
 HOMEPAGE="http://ntlmaps.sourceforge.net/"
