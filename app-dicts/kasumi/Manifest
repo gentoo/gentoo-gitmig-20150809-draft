@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f4f70241450154144665f3e7711e361 ChangeLog 1078
+MD5 9a39eb76163ead32fb2e8702b84b529f ChangeLog 1164
 MD5 b599f71649391f751572cfd5be2d38a5 kasumi-0.3.ebuild 752
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 d3b4ac5f0e85bef90521d853f8fe63e9 kasumi-0.7.ebuild 750
+MD5 edce0f6ab0747579e755483c1b00a8b2 kasumi-0.7.ebuild 749
 MD5 a77a0c56713c01515c999bfd29cad704 kasumi-0.6.ebuild 749
 MD5 28482544be7c4f6a1de3920f4a46e3d4 files/digest-kasumi-0.3 62
 MD5 35a0b368feb458c33fb1c0e0d0ba1927 files/digest-kasumi-0.6 62
 MD5 eb5c9efce1c1a4316709875e451c74fc files/digest-kasumi-0.7 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB27KLVWNWqTUmv+0RAkk+AJ4600ihMguvK9QtCRAKmcfMHBJXlwCgszKe
-caeVF1YQ5fIU03/6qY/HfN4=
-=ovsk
+iD8DBQFCPwFbVWNWqTUmv+0RAlEQAJ9mxd5ywwMuIH8HptEtEvAwu2HHTQCgqzZQ
+MXuVU7dcJOpA7IfUx32FXSw=
+=j9ja
 -----END PGP SIGNATURE-----
