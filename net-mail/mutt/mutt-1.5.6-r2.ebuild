@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r2.ebuild,v 1.1 2004/05/26 03:22:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r2.ebuild,v 1.2 2004/05/26 15:04:59 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
-nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
+nntp_patch="patch-${PV}.vvv.nntp-gentoo-r1.bz2"
 mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
 maildir_header_cache_patch="mutt-cvs-maildir-header-cache.16"
 
