@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r7.ebuild,v 1.8 2005/02/16 13:43:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r8.ebuild,v 1.1 2005/02/16 13:47:54 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
