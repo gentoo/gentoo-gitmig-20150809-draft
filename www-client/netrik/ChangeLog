@@ -1,6 +1,6 @@
-# ChangeLog for net-www/netrik
+# ChangeLog for www-client/netrik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.1 2005/03/23 16:46:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.2 2005/03/23 16:51:32 seemant Exp $
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +netrik-1.6.0.ebuild,
   +netrik-1.10.2.ebuild, +netrik-1.15.3.ebuild:
