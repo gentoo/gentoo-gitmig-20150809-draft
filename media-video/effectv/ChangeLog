@@ -1,0 +1,11 @@
+# ChangeLog for media-video/effectv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.1 2005/03/29 22:50:57 chriswhite Exp $
+
+*effectv-0.3.10 (30 Mar 2005)
+
+  30 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +effectv-0.3.10.ebuild:
+  Initial import into the tree. Closes bug #63870. Thanks to Andreas Kobara
+  for the ebuild
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 177e74fd3e0f0c5dcf8dbcc1fef93ede effectv-0.3.10.ebuild 1037
+MD5 7cd1f4a9f91a4f84362d4d5baadabf25 metadata.xml 323
+MD5 f07fbf44913c1c97d05d42c5c00a5a27 ChangeLog 432
+MD5 04e4ca37e7ef9c7138e8b2147dda4d7f files/digest-effectv-0.3.10 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSdQ6FdQwWVoAgN4RAo4aAKCcaq6MljNbmgpEY45yRJ4ZCJ+eawCcCQTz
+kuD5vhsENuHiIuMgKtbrXvI=
+=r5EH
+-----END PGP SIGNATURE-----
