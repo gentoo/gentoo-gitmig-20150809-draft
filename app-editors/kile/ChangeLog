@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.10 2002/12/13 10:56:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.11 2003/01/22 22:41:33 nall Exp $
 
 *kile-1.31 (12 Dec 2002)
 
@@ -16,6 +16,9 @@
   fex. our qt 3.1x.
 
 *kile-1.3 (25 Oct 2002)
+
+  22 Jan 2003; Jon Nall <nall@gentoo.org> kile-1.3.ebuild :
+  added ~ppc
 
   25 Oct 2002; Hannes Mehnert <hannes@gentoo.org> ChangeLog, kile-1.3.ebuild:
   version bump
