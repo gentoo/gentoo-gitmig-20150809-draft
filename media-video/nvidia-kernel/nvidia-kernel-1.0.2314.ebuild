@@ -13,7 +13,7 @@ NV_ARCHIVE="${NV_PACKAGE}.tar.gz"
 SRC_URI="http://205.158.109.140/XFree86_40/1.0-2313/${NV_ARCHIVE}"
 HOMEPAGE="http://www.nvidia.com/"
 
-DEPEND="sys-kernel/linux-sources"
+DEPEND="virtual/linux-sources"
 
 nv_get_kernel_version () {
         # Determine the version of the kernel sources

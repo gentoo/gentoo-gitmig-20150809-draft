@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880.ebuild,v 1.1 2002/04/07 05:43:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880.ebuild,v 1.2 2002/04/25 06:56:22 drobbins Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
@@ -11,7 +11,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz
 	http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
 HOMEPAGE="http://www.nvidia.com/"
 
-DEPEND="sys-kernel/linux-sources"
+DEPEND="virtual/linux-sources"
 
 # Make sure Portage does _NOT_ strip symbols.  Need both lines for
 # Portage 1.8.9+

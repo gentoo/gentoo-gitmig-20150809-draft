@@ -9,9 +9,9 @@ DESCRIPTION="Matrox Marvel G200/G400/Rainbow Runner G-series V4L I and II driver
 HOMEPAGE="http://marvel.sourceforge.net"
 
 DEPEND="virtual/glibc
-	virtual/kernel"
+	virtual/linux-sources"
 
-RDEPEND="virtual/kernel"
+RDEPEND="virtual/linux-sources"
 
 src_unpack() {
 	unpack ${A}

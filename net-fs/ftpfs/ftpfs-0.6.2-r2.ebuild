@@ -10,7 +10,7 @@ SRC_URI="http://ftp1.sourceforge.net/ftpfs/${A}"
 HOMEPAGE="http://ftpfs.sourceforge.net"
 
 DEPEND="virtual/glibc
-        virtual/kernel"
+        virtual/linux-sources"
 
 src_compile() {
 	cd ftpfs

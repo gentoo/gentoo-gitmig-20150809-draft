@@ -13,7 +13,7 @@ RESTRICT="nostrip"
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
 
-DEPEND="sys-kernel/linux-sources"
+DEPEND="virtual/linux-sources"
 
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
 SRC_URI="http://205.158.109.140/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"

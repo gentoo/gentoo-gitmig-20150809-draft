@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.1 2002/04/24 06:02:31 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-6.0.ebuild,v 1.2 2002/04/25 06:56:22 drobbins Exp $
 
 S=${WORKDIR}
 
@@ -16,12 +16,12 @@ SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
 
 HOMEPAGE="http://www.intel.com/software/products/compilers/c60l/"
 
-DEPEND=">=sys-kernel/linux-sources-2.4
+DEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.2
 		sys-apps/cpio
 		app-arch/rpm"
 
-RDEPEND=">=sys-kernel/linux-sources-2.4
+RDEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.2"
 
 src_compile() {
