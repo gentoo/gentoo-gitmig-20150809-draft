@@ -1,21 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r5.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r6.ebuild,v 1.1 2004/06/02 13:26:00 plasmaroo Exp $
 
 IUSE="build"
-
-# OKV=original kernel version, KV=patched kernel version.  
-
 ETYPE="sources"
 
 inherit kernel eutils
 
 # PACV=Bernhard Rosenkraenzer's release version
 PACV=pac1
-# KV=patched kernel version
+
+# OKV=original kernel version, KV=patched kernel version.  
 KV="${PV/_/-}-${PACV}"
 NKV="${PV/_/-}-pac${PR/r/}"
-# OKV=original kernel version as provided by ebuild
 OKV="`echo ${KV} | cut -d- -f1`"
 # OKVLAST=(working) last digit of OKV
 OKVLAST="`echo ${OKV} | cut -d. -f3`"
@@ -61,8 +58,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
-	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0075.patch || die "Failed to add the CAN-2004-0075 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to add the CAN-2004-0109 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0133.patch || die "Failed to add the CAN-2004-0133 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	kernel_universal_unpack
 }
