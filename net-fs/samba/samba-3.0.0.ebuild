@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0.ebuild,v 1.1 2003/09/25 10:39:51 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0.ebuild,v 1.2 2003/09/25 19:08:26 mholzer Exp $
 
 inherit eutils
 
@@ -15,10 +15,9 @@ VSCAN_VER=0.3.4
 VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap} #kapersky
 # To build the "kapersky" plugin, the kapersky lib must be installed.
 
-_CVS="-${PV/_/}"
-S=${WORKDIR}/${PN}${_CVS}
+S=${WORKDIR}/${P}
 
-SRC_URI="mirror://samba/rc/${PN}${_CVS}.tar.bz2
+SRC_URI="mirror://samba/${P}.tar.bz2
 	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2"
 #	oav? http://www.openantivirus.org/snapshots/${PN}-vscan-${VSCAN_VER}.tar.gz"
 
@@ -42,13 +41,9 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
-	# Clean up CVS
-	#find . -name .cvsignore | xargs rm -f
-	#find . -name CVS | xargs rm -rf
-
 	# Add patch(es)
 	#Next one is from eger@cc.gatech.edu :)
-	patch -p1 <${FILESDIR}/samba-3.0.0-python-setup.patch || die
+	epatch ${FILESDIR}/samba-3.0.0-python-setup.patch || die
 	#Fix for bug #27858
 	if [ "${ARCH}" = "sparc" ]
 	then

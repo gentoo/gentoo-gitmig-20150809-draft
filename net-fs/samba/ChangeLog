@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.46 2003/09/25 10:39:51 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.47 2003/09/25 19:08:26 mholzer Exp $
+
+  26 Sep 2003; Martin Holzer <mholzer@gentoo.org> samba-3.0.0.ebuild:
+  minor ebuild fixes.
 
 *samba-3.0.0 (25 Sep 2003)
 
