@@ -1,0 +1,15 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting accounting"
+	touch /var/account/pacct
+	chmod 600 /var/account/pacct
+	/usr/sbin/accton /var/account/pacct
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping accounting"
+	/usr/sbin/accton
+	eend $?
+}
