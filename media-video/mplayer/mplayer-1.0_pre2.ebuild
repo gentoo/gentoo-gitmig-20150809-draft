@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.8 2003/10/13 19:15:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre2.ebuild,v 1.9 2003/10/18 23:00:12 mholzer Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska"
 
 inherit eutils
 
@@ -49,6 +49,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	encode? ( media-sound/lame
 	          >=media-libs/libdv-0.9.5 )
 	xmms? ( media-sound/xmms )
+	matroska? ( >=media-libs/libmatroska-0.5.0 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
 	oggvorbis? ( media-libs/libvorbis )
@@ -237,6 +238,10 @@ src_compile() {
 	use lirc \
 		&& myconf="${myconf} --enable-lirc" \
 		|| myconf="${myconf} --disable-lirc"
+
+	use matroska \
+		&& myconf="${myconf} --enable-matroska" \
+		|| myconf="${myconf} --disable-matroska"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
