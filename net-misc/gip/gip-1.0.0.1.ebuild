@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.0.0.1.ebuild,v 1.1 2004/06/25 02:15:51 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.0.0.1.ebuild,v 1.2 2004/06/26 13:10:29 jmglov Exp $
 
 MY_PV=`echo ${PV} | sed -e 's/.\([0-9]\+\)$/-\1/' 2>/dev/null`
 MY_P="${PN}-${MY_PV}"
@@ -18,6 +18,11 @@ DEPEND="dev-cpp/gtkmm
 #RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e s/"*matches\["/"*matches\[1+"/g ${S}/src/lib_ipv4.c
+}
 
 src_compile() {
 	./build.sh --prefix ${D}/usr || die "./build failed"
