@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.3 2003/04/22 10:25:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.4 2003/06/21 07:27:05 kutsuya Exp $
+
+*plone-1.0.2 (21 Jun 2003)
+
+  21 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> plone-1.0.2.ebuild:
+  Version bump. Masked all archs to unstable.
+
+  21 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> plone-1.0.1-r1.ebuild:
+  ~ppc -> ppc. Give a warning about not using this with >cmf-1.3.1.
 
 *plone-1.0.1-r1 (18 Feb 2003)
 

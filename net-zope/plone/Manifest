@@ -1,3 +1,5 @@
-MD5 4545185477b57812e86ad5ff2bc773b4 ChangeLog 898
-MD5 12becff27e7f5bdcd0d77c6546524d3d plone-1.0.1-r1.ebuild 801
+MD5 ac052676fc11f8aefd0a212f34194ab2 ChangeLog 1190
+MD5 15aed0a84b7ad85936f8b8dfd9e7e12f plone-1.0.1-r1.ebuild 923
+MD5 419feeaf3b424fb6a0d4a0e4f06dcd90 plone-1.0.2.ebuild 924
+MD5 a93ab09844123b1b9aa583b0bba7ce36 files/digest-plone-1.0.2 66
 MD5 cb0fadbf886586f65cb25fd924c7d8a6 files/digest-plone-1.0.1-r1 66
