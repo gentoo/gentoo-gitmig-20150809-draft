@@ -1,4 +1,4 @@
-MD5 4dea998f43e88fbc00a0e9a86e8b8a6b wvstreams-3.70-r2.ebuild 846
+MD5 579701a83363285927f97576bbb3fea2 wvstreams-3.70-r2.ebuild 862
 MD5 dab468062cf36e0e81e72fb2a59299e0 files/3.70-gcc3.patch 3171
 MD5 5d649f23e7b31fb9224bace4c35bcf3e files/3.70-openssl.patch 470
 MD5 f2058097f693e07dadf248b1a3319db3 files/digest-wvstreams-3.70-r2 66
