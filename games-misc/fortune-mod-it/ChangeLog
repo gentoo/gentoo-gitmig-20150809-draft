@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/fortune-mod-it
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/ChangeLog,v 1.1 2004/09/25 11:23:58 mr_bones_ Exp $
+
+*fortune-mod-it-1.51 (25 Sep 2004)
+
+  25 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +fortune-mod-it-1.51.ebuild:
+  initial commit - bug #64874
+
