@@ -1,6 +1,6 @@
-# ChangeLog for app-games/prboom
+# ChangeLog for games-fps/prboom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.2 2003/09/10 16:06:39 vapier Exp $
 
   08 Sep 2003; Michael Sterrett <msterret@gentoo.org> prboom-2.2.3.ebuild:
   massage the DEPEND lines around; add media-libs/smpeg which config checks for.
