@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.18 2003/06/20 01:09:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.19 2003/06/25 21:55:28 mholzer Exp $
+
+*whois-4.6.6 (25 Jun 2003)
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> whois-4.6.6.ebuild:
+  Version bumped.
 
   24 May 2003; Christian Birchinger <joker@gentoo.org> whois-4.6.5.ebuild:
   Added sparc stable keyword
