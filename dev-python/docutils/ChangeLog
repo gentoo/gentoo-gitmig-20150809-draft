@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.17 2004/11/02 02:46:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.18 2004/11/12 15:31:39 g2boojum Exp $
+
+  12 Nov 2004; Grant Goodyear <g2boojum@gentoo.org> docutils-0.3.5.ebuild:
+  Fixing my glep booboo (bug # 69882).
 
   01 Nov 2004; Jason Wever <weeve@gentoo.org> docutils-0.3.3-r1.ebuild:
   Added ~sparc keyword.
