@@ -3,3 +3,4 @@ move x11-themes/sylpheed-theme x11-themes/sylpheed-iconset
 move net-misc/atftp net-ftp/atftp
 move x11-misc/alltraxclock x11-plugins/gkrellm-alltraxclock
 move media-sound/hayes media-plugins/hayes
+move media-sound/alsa-xmms media-plugins/alsa-xmms
