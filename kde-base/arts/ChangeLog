@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.43 2003/04/28 05:51:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.44 2003/05/19 12:50:37 danarmak Exp $
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> arts-1.1.2.ebuild:
+  Use correct version number in the name of the env.d file.
+
+*arts-1.1.2 (19 May 2003)
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> arts-1.1.2.ebuild:
+  New version that comes with kde 3.1.2.
 
 *arts-1.0.5b (08 Apr 2003)
 

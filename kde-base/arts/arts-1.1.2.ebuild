@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.2.ebuild,v 1.4 2003/05/19 12:32:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.2.ebuild,v 1.5 2003/05/19 12:50:37 danarmak Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid" # mad has no use flag (yet?)
@@ -55,9 +55,9 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdepaths-3.1.1 # number goes down with version upgrade
+CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdepaths-3.1.2 # number goes down with version upgrade
 
-	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-3.1.1 # number goes up with version upgrade
+	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-3.1.2 # number goes up with version upgrade
 	
 	# used for realtime priority, but off by default as it is a security hazard
 	use artswrappersuid && chmod +s ${D}/${PREFIX}/bin/artswrapper
