@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.73 2004/06/03 15:25:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.74 2004/06/03 16:07:31 lv Exp $
+
+  03 Jun 2004; Travis Tilley <lv@gentoo.org> linux-headers-2.6.6.ebuild:
+  added ~amd64 to keywords
 
 *linux-headers-2.6.6 (03 Jun 2004)
 
