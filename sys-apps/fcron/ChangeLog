@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/fcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.6 2002/07/14 19:20:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/ChangeLog,v 1.7 2002/07/21 19:02:40 gerk Exp $
 
   31 May 2002; Thilo Bangert <bangert@gentoo.org> fcron-2.0.0-r1.ebuild :
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> fcron-2.0.0-r1.ebuild :
   Added KEYWORDS.
