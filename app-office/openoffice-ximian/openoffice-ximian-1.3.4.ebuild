@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.2.ebuild,v 1.4 2004/09/03 01:03:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.4.ebuild,v 1.1 2004/09/09 06:38:19 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -28,7 +28,7 @@
 
 inherit flag-o-matic eutils gcc
 
-IUSE="gnome kde ooo-kde"
+IUSE="gnome kde java"
 
 OO_VER=1.1.2
 PATCHLEVEL=OOO_1_1_2
@@ -43,59 +43,67 @@ SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.gz
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://ooo.ximian.com/packages/libwpd-snap-20040823.tar.gz
 	mirror://gentoo/OOo-gentoo-splash-1.1.tar.bz2
-	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )
-	!ooo-kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )"
+	gnome? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )
+	!kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )
+	kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )"
 
 HOMEPAGE="http://ooo.ximian.com"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc"
 
-RDEPEND="virtual/libc
+RDEPEND="!app-office/openoffice-ximian-bin
+	virtual/x11
+	virtual/libc
+	virtual/lpr
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
-	!ooo-kde? ( >=x11-libs/gtk+-2.0
-		>=gnome-base/libgnome-2.2
+	gnome? ( >=x11-libs/gtk+-2.0
 		>=gnome-base/gnome-vfs-2.0
-		>=net-print/libgnomecups-0.1.4
-		>=net-print/gnome-cups-manager-0.16
 		>=dev-libs/libxml2-2.0 )
+	kde? ( kde-base/kdelibs )
 	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
-	media-fonts/ttf-bitstream-vera
+	>=media-libs/freetype-2.1.4
 	media-libs/fontconfig
+	media-fonts/ttf-bitstream-vera
 	media-gfx/imagemagick
 	media-libs/libpng
 	sys-devel/flex
 	sys-devel/bison
-	virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	virtual/lpr
-	!app-office/openoffice-ximian-bin
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2.1 )
-	>=media-libs/freetype-2.1.4
-	ooo-kde? ( kde-base/kdelibs )"
+	>=sys-devel/gcc-3.2.1 )"
 
 DEPEND="${RDEPEND}
-	app-shells/tcsh
 	>=sys-apps/findutils-4.1.20-r1
-	dev-libs/libxslt
+	app-shells/tcsh
 	net-misc/curl
 	sys-libs/pam
+	dev-util/intltool
 	!dev-util/dmake
-	dev-util/intltool"
+	java? ( >=virtual/jdk-1.4.1 )
+	!java? ( dev-libs/libxslt )"
 
 pkg_setup() {
 
+	if use java
+	then
+		if [ -z "${JDK_HOME}" ] || [ ! -d "${JDK_HOME}" ]
+		then
+			eerror "In order to compile java sources you have to set the"
+			eerror "\$JDK_HOME environment properly."
+			eerror ""
+			eerror "You can achieve this by using the java-config tool:"
+			eerror "  emerge java-config"
+			die "Couldn't find a valid JDK home"
+		fi
+	fi
+
 	ewarn "****************************************************************"
-	ewarn " This ebuild now also includes optional support for kde "
-	ewarn " integration. If you want to use it you will have to put "
-	ewarn " 'ooo-kde' into your USE FLAGS. "
-	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
@@ -234,61 +242,49 @@ src_unpack() {
 
 	#Still needed: The STLport patch
 	cd ${S}
-	rm stlport/STLport-4.5.3.patch
+	rm stlport/STLport-4.5.3.patch || die
 	epatch ${FILESDIR}/${OO_VER}/newstlportfix.patch
 
 	#Add our own splash screen
 	epatch ${FILESDIR}/${OO_VER}/gentoo-splash.diff
 
-	if use ooo-kde; then
-		DISTRO=GentooKDE
-		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
-		WIDGETSET=kde
-	else
-		DISTRO=Gentoo
-		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
-		WIDGETSET=gtk
+	#Detect which look and patchset we are using
+	export DISTRO="Gentoo"
+	export MYCONF=""
+	export ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
+
+	if use gnome; then
+		export DISTRO="GentooGNOME"
+		export MYCONF="--enable-gtk"
 	fi
 
+	if use kde; then
+		export MYCONF="${MYCONF} --enable-kde"
+		if use !gnome; then
+			export DISTRO="GentooKDE"
+			export MYCONF="--enable-kde"
+			export ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
+		fi
+	fi
+
+	#Finally apply the patches
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
 	einfo "Installing / Scaling Icons"
-	${PATCHDIR}/bin/scale-icons ${S}
-	cp -af ${ICONDIR}/* ${S}
+	${PATCHDIR}/bin/scale-icons ${S} || die
+	cp -af ${ICONDIR}/* ${S} || die
 
 	einfo "Copying splash screens in place"
-	cp -af ${WORKDIR}/gentoo-splash/open*.bmp ${S}/offmgr/res/
+	cp -af ${WORKDIR}/gentoo-splash/open*.bmp ${S}/offmgr/res/ || die
 
 	einfo "Copying libpwd tarball in build dir"
-	mkdir -p ${S}/libwpd/download/
-	cp -af ${DISTDIR}/libwpd-snap-20040823.tar.gz ${S}/libwpd/download/
+	mkdir -p ${S}/libwpd/download/ || die
+	cp -af ${DISTDIR}/libwpd-snap-20040823.tar.gz ${S}/libwpd/download/ || die
 
 	einfo "Munging font mappings ..."
-	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu
+	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu || die
 	echo "done munging fonts."
-
-	# Compile problems with these ...
-	filter-flags "-funroll-loops"
-	filter-flags "-fomit-frame-pointer"
-	filter-flags "-fprefetch-loop-arrays"
-	filter-flags "-fno-default-inline"
-	filter-flags "-fstack-protector"
-	append-flags "-fno-strict-aliasing"
-	replace-flags "-O3" "-O2"
-	replace-flags "-Os" "-O2"
-
-	if [ "$(gcc-version)" == "3.2" ]; then
-		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
-		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
-	fi
-
-	# Now for our optimization flags ...
-	export CXXFLAGS="${CXXFLAGS} -fno-for-scope -fpermissive -fno-rtti"
-	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
-		${S}/solenv/inc/unxlngi4.mk
-	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
-		${S}/solenv/inc/unxlngi4.mk
 }
 
 get_EnvSet() {
@@ -314,16 +310,22 @@ src_compile() {
 	cd ${S}/dmake
 	autoconf || die
 
+	#Check if we use java
+	if use java
+	then
+		MYCONF="${MYCONF} --with-jdk-home=${JAVA_HOME}"
+	else
+		MYCONF="${MYCONF} --disable-java"
+	fi
+
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
-	einfo "Using Native widgest set for ${WIDGETSET}"
 	cd ${S}/config_office
-	rm -f config.cache
-	autoconf
-	local myconf
-	myconf="--enable-libart \
+	rm -f config.cache || die
+	autoconf || die
+	MYCONF="${MYCONF} --enable-libart \
 		--enable-libsn \
 		--enable-crashdump=no \
 		--with-lang=ENUS,${LANGNAME} \
@@ -334,10 +336,9 @@ src_compile() {
 		--with-system-freetype \
 		--with-system-curl \
 		--with-system-xrender \
-		--disable-java \
-		--disable-mozilla \
-		--enable-${WIDGETSET}"
-	./configure ${myconf} || die
+		--disable-mozilla"
+
+	./configure ${MYCONF} || die
 
 	cd ${S}
 	get_EnvSet
@@ -352,12 +353,31 @@ src_compile() {
 	[ -z "${ECPUS}" ] && export ECPUS="1"
 
 	# Should the build use multiprocessing?
+
 	if [ "${ECPUS}" -gt 1 ]
 	then
 		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full strip=true --dlv_switch link"
 	else
 		buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
 	fi
+
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	filter-flags "-fstack-protector"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+	replace-flags "-Os" "-O2"
+
+	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
+
+	# Now for our optimization flags ...	
+	export ARCH_FLAGS="${CFLAGS}"
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
@@ -370,7 +390,7 @@ src_compile() {
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
 	# Bootstrap ...
-	./bootstrap
+	./bootstrap || die
 
 	einfo "Building OpenOffice.org..."
 	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd}" > build.sh
@@ -426,7 +446,7 @@ src_install() {
 
 	# Fixing install location in response file
 	sed -e "s|<destdir>|${D}${INSTDIR}|" \
-		${T}/rsfile-global > ${T}/autoresponse
+		${T}/rsfile-global > ${T}/autoresponse || die
 
 	einfo "Installing Ximian-OpenOffice.org into build root..."
 	dodir ${INSTDIR}
@@ -434,12 +454,12 @@ src_install() {
 	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
 	#Fix for parallel install
-	sed -i -e s/sversionrc/xversionrc/g ${D}${INSTDIR}/program/bootstraprc ${D}${INSTDIR}/program/instdb.ins
+	sed -i -e s/sversionrc/xversionrc/g ${D}${INSTDIR}/program/bootstraprc ${D}${INSTDIR}/program/instdb.ins || die
 
 	echo
 	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
-	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh}
+	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh} || die
 	# Remove build root from registry and co
 	egrep -rl "${D}" ${D}${INSTDIR}/* | \
 		xargs -i perl -pi -e "s|${D}||g" {} || :
@@ -468,16 +488,16 @@ src_install() {
 		dosym xooffice /usr/bin/xoo${app}
 	done
 
-	# Install ximian icons
+	# Install icons and menu shortcuts
 	cd ${PATCHDIR}/desktop/
 	insinto /usr/share/pixmaps
 	doins *.png
+
+	einfo "Installing menu shortcuts"
 	for menu in drawing presentation spreadsheet textdoc; do
 		intltool-merge -d ../po ${menu}.desktop.in xoo-${menu}.desktop;
 	done
 	sed -i -e s/'=oo'/'=xoo'/g *.desktop
-
-	einfo "Installing menu shortcuts"
 	insinto /usr/share/applications
 	doins *.desktop
 
@@ -501,7 +521,7 @@ src_install() {
 	doins ${PATCHDIR}/fonts/*.ttf
 
 	# Remove unneeded stuff
-	rm -rf ${D}${INSTDIR}/share/cde
+	rm -rf ${D}${INSTDIR}/share/cde || die
 
 	# Fix instdb.ins, to *not* install local copies of these
 	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
