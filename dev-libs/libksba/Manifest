@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7e38680ceedc55002f8df2a5161018f5 ChangeLog 2011
-MD5 5963ee8d80c88af1c101827c66123a53 libksba-0.9.6.ebuild 692
 MD5 8e11483aa5005a3b1ae2fe567811045e libksba-0.4.7.ebuild 625
 MD5 25a57bf1fa6bec68e58ce31f60b8697e libksba-0.9.4.ebuild 613
+MD5 318d0d5c12de5b0c14869c6eb4d8cd2e libksba-0.9.6.ebuild 697
 MD5 0ca81451d154f07a8bbe97cd4e5fe682 libksba-0.9.8.ebuild 716
-MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
-MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65
 MD5 44a8afc7a67100712f5470493320f04c files/digest-libksba-0.4.7 128
 MD5 adf848577fff31bd050eb974660789f3 files/digest-libksba-0.9.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBHst3HTu7gpaalycRAkzyAKD2gyIbb2jmb/UfBQ/Rfilx1xricgCg4BpG
-XCJfberS8OBlO8WhcmBWUXQ=
-=VBkk
------END PGP SIGNATURE-----
+MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
+MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65

@@ -3,8 +3,8 @@ MD5 68815aaab27ee507ef94a25e59d09f71 libxslt-1.1.6.ebuild 1021
 MD5 a9e39803fce8598bbd5a96f845ed663b libxslt-1.0.33.ebuild 896
 MD5 3ab22fa6163d94e4133814a5a1d1e227 libxslt-1.1.8.ebuild 724
 MD5 fc2230cb8994e98ee4ad3c6592cdc6e4 libxslt-1.1.3.ebuild 980
-MD5 ea477842a2b55373d6e6f7a7f3e51bd6 libxslt-1.1.8-r1.ebuild 823
-MD5 880c3afc9456b17d50065847b547c3b2 ChangeLog 9001
+MD5 db452ec2f1dbaf09f9cd8fbd8d8cd2f8 libxslt-1.1.8-r1.ebuild 823
+MD5 ff18fcf7b446d9e9cb88d50626cea8c2 ChangeLog 9110
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0ce8eead3660b25b1eea94f24fe2450a files/digest-libxslt-1.1.8-r1 67
 MD5 acd43c53c783addb328c53f5232cc2c3 files/digest-libxslt-1.1.3 67
