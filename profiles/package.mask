@@ -165,7 +165,6 @@ x11-themes/gnome-icon-theme
 >=dev-libs/atk-1.1
 >=dev-libs/libxml2-2.4.26
 >=dev-libs/libxslt-1.0.22
->=dev-util/pkgconfig-0.13
 >=app-editors/gedit-2.1
 >=gnome-extra/yelp-2.1
 gnome-extra/system-tray-applet
