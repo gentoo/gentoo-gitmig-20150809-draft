@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.310 2005/02/27 12:25:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.311 2005/02/28 22:23:22 blubb Exp $
+
+  28 Feb 2005; Simon Stelling <blubb@gentoo.org> gaim-1.1.4.ebuild:
+  marking stable on ppc for hansmi wrt bug 83253
 
   27 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> gaim-1.1.4.ebuild:
   Stable on alpha, bug 83253.
