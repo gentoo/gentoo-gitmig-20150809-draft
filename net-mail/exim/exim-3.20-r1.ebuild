@@ -43,10 +43,12 @@ src_install () {
     insinto /usr/sbin
     doins exim
 
+    dodir /usr/bin /usr/sbin /usr/lib
+    dosym /usr/sbin/exim /usr/bin/mailq
+    dosym /usr/sbin/exim /usr/bin/newaliases
+    dosym /usr/sbin/exim /usr/bin/mail
+    dosym /usr/sbin/exim /usr/lib/sendmail
     dosym /usr/sbin/exim /usr/sbin/sendmail
-    dosym /usr/sbin/exim /usr/sbin/mailq
-    dosym /usr/sbin/exim /usr/sbin/newaliases
-    dosym /usr/sbin/exim /usr/sbin/mail
 
     insopts -o root -g root -m 755
     insinto /usr/sbin
