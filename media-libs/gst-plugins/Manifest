@@ -1,22 +1,32 @@
-MD5 14b0ade63541ab342b03cfb8521b0b5c ChangeLog 12845
-MD5 4d7330ab641498e301c9b0697bc9c8bf gst-plugins-0.8.1.ebuild 2253
-MD5 b0df605d5bba6c16eb7c94ad9859630c gst-plugins-0.8.2.ebuild 1871
-MD5 bbf4bf0940a3b7d74fa238421a3ee35b gst-plugins-0.6.4.ebuild 2924
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 3e6a724afd82f75a69f551d4b976303b gst-plugins-0.8.3.ebuild 1869
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc26e45cd840601105c37359fc434a8c gst-plugins-0.8.5-r1.ebuild 2020
-MD5 9de1aa6c80a91d488bb17bf385ffb9c8 gst-plugins-0.8.7.ebuild 2014
+MD5 b0df605d5bba6c16eb7c94ad9859630c gst-plugins-0.8.2.ebuild 1871
+MD5 bb055f5e94aefd24868ce6f5f350da97 ChangeLog 12946
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 4d7330ab641498e301c9b0697bc9c8bf gst-plugins-0.8.1.ebuild 2253
+MD5 22554568ee50980f4f1b2b4930beef8a gst-plugins-0.8.7.ebuild 2013
 MD5 80b128c4278bc78083af3fa5cb348137 gst-plugins-0.8.8.ebuild 1941
+MD5 bbf4bf0940a3b7d74fa238421a3ee35b gst-plugins-0.6.4.ebuild 2924
+MD5 3e6a724afd82f75a69f551d4b976303b gst-plugins-0.8.3.ebuild 1869
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-0.8.1 71
-MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
+MD5 a440c49c40c858da65d86ca58adc280d files/gst-plugins-0.8.7-gcc2.patch 1565
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-0.8.3 71
-MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-0.6.4 71
-MD5 09dbea60bc673a49aadc1a6369d724d7 files/gst-plugins-0.6.4-gcc2_fix.patch 692
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-0.8.7 71
+MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
+MD5 187dd1210be84f747699a2d2bd11fd0b files/gst-plugins-0.8.5-tcp.patch 1059
 MD5 f7aac3ba492d4e54ae14ebeabc3299d4 files/libmpeg2.patch 878
 MD5 04bb0cdc1431b53db92b658a3c9fa6dd files/noppcasm.patch 1431
-MD5 c6e69d419de61401529c6e3000271e1b files/gst-plugins-0.8.0-audioconvert_stereo.patch 4437
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-0.8.5-r1 71
-MD5 187dd1210be84f747699a2d2bd11fd0b files/gst-plugins-0.8.5-tcp.patch 1059
-MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-0.8.7 71
+MD5 c6e69d419de61401529c6e3000271e1b files/gst-plugins-0.8.0-audioconvert_stereo.patch 4437
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
-MD5 a440c49c40c858da65d86ca58adc280d files/gst-plugins-0.8.7-gcc2.patch 1565
+MD5 09dbea60bc673a49aadc1a6369d724d7 files/gst-plugins-0.6.4-gcc2_fix.patch 692
+MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-0.6.4 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCPcG0ugEuf3OQ0akRAhC7AJ95Uo1Ml1RYycSQr3gXIqZRMtmjXACfRK84
+Qhhm2GIdVV/5gZvaWo6xl9I=
+=P15r
+-----END PGP SIGNATURE-----
