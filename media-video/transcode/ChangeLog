@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.10 2002/08/11 20:02:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.11 2002/08/13 07:11:46 azarah Exp $
+
+  12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.0 :
+
+  Add support for MPlayer's libpostproc.a.
 
 *transcode-0.6.0 (11 Aug 2002)
 
