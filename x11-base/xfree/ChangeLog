@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.73 2002/12/21 22:24:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.74 2002/12/23 04:52:09 azarah Exp $
+
+*xfree-4.2.99.3-r1 (23 Dec 2002)
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.99.3-r1.ebuild :
+
+  Some form fixes.  Added some patches back in, although I should verify some
+  of the left out ones.  Fix to not build Xft2.0 and fontconfig .. we rather
+  depend on fontconfig and PDEPEND on x11-libs/xft.  Get it to depend on
+  fixed ttmkfdir.  Fix permissons on modules and drivers.  Some other things
+  I forgot.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
 

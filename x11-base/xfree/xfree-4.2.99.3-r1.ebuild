@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.8 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.1 2002/12/23 04:52:09 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -30,34 +30,35 @@ filter-flags "-funroll-loops"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-PATCH_VER="1.2"
-FT2_VER="2.1.2"
-FC2_VER="2.1"
-SISDRV_VER="271102-1"
-SAVDRV_VER="1.1.25t"
+# Are we using a snapshot ?
+USE_SNAPSHOT="yes"
 
-BASE_PV="4.2.0"
+PATCH_VER="1.0"
+FT2_VER="2.1.3"
+SISDRV_VER="141202-1"
+SAVDRV_VER="1.1.26t"
+
+BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
-S_XFT2="${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xft"
 DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
+# If we are using CVS snapshots made by Seemant ...
+SRC_PATH_SS="http://www.ibiblio.org/gentoo/gentoo-sources"
 HOMEPAGE="http://www.xfree.org"
 
-X_PATCHES="http://ftp.xfree86.org/pub/XFree86/${PV}/patches/${BASE_PV}-${PV}.diff.gz
-	mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
-	http://www.gentoo.org/~azarah/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
-# Need to get this thing up for testing, but ibiblio havent synced in a few
-# hours ...
+# Misc patches we may need to fetch ..
+X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+	http://cvs.gentoo.org/~azarah/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.tgz
-	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz
-	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
-# Updated Wacom driver at http://people.mandrakesoft.com/~flepied/projects/wacom/
-# Latest Savaga drivers at http://www.probo.com/timr/savage40.html
-# Latest SIS drivers at http://www.webit.at/~twinny/linuxsis630.shtml
+	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz"
+#	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
+# Updated Wacom driver:  http://people.mandrakesoft.com/~flepied/projects/wacom/
+# Latest Savaga drivers:  http://www.probo.com/timr/savage40.html
+# Latest SIS drivers:  http://www.webit.at/~twinny/linuxsis630.shtml
 # Glide headers for compiling the tdfx modules
 
 # For the MS Core fonts ..
@@ -71,45 +72,53 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 # Need windows license to use this one
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
-SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
-	${SRC_PATH0}/X${MY_SV}src-2.tgz
-	${SRC_PATH0}/X${MY_SV}src-3.tgz
-	${SRC_PATH1}/X${MY_SV}src-1.tgz
-	${SRC_PATH1}/X${MY_SV}src-2.tgz
-	${SRC_PATH1}/X${MY_SV}src-3.tgz
-	http://fontconfig.org/release/fcpackage.${FC2_VER/\./_}.tar.gz
+if [ "${USE_SNAPSHOT}" = "yes" ]
+then
+	SRC_URI="${SRC_PATH_SS}/X${BASE_PV}-1.tar.bz2
+		${SRC_PATH_SS}/X${BASE_PV}-2.tar.bz2
+		${SRC_PATH_SS}/X${BASE_PV}-3.tar.bz2
+		${SRC_PATH_SS}/X${BASE_PV}-4.tar.bz2"
+else
+	SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
+		${SRC_PATH0}/X${MY_SV}src-2.tgz
+		${SRC_PATH0}/X${MY_SV}src-3.tgz
+		${SRC_PATH1}/X${MY_SV}src-1.tgz
+		${SRC_PATH1}/X${MY_SV}src-2.tgz
+		${SRC_PATH1}/X${MY_SV}src-3.tgz"
+fi
+SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
 	truetype? ( ${MS_FONT_URLS} )"
-#	mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
-	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
-	sys-devel/libtool
+	>=dev-libs/expat-1.95.3
 	sys-devel/perl
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=x11-base/opengl-update-1.4
-	truetype? ( >=x11-misc/ttmkfdir-2.0
-		 app-arch/cabextract )"
+	>=x11-misc/ttmkfdir-2.0-r1
+	pam? ( >=sys-libs/pam-0.75 )
+	truetype? ( app-arch/cabextract )"
 	
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
-	>=sys-libs/pam-0.75
 	>=sys-libs/zlib-1.1.3-r2
+	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-${FT2_VER}-r2
 	>=media-libs/fontconfig-2.1
 	>=x11-base/opengl-update-1.4
-	truetype? ( >=x11-misc/ttmkfdir-2.0 )"
-# Above fontconfig is just to make sure user have a fixed version installed.
+	>=x11-misc/ttmkfdir-2.0-r1
+	pam? ( >=sys-libs/pam-0.75 )"
 
-PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
+PDEPEND=">=x11-libs/xft-2.0.1
+	3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -117,48 +126,25 @@ PROVIDE="virtual/x11
 
 src_unpack() {
 
-	unpack X${MY_SV}src-{1,2,3}.tgz \
-		fcpackage.${FC2_VER/\./_}.tar.gz \
-		XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
-#		freetype-${FT2_VER}.tar.bz2
-
-	# Fix permissions
-	chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
-
-	# Deploy our custom freetype2.  We want it static for stability,
-	# and because some things in Gentoo depends the freetype2 that
-	# is distributed with XFree86.
-#	ebegin "Updating Freetype2"
-#	rm -rf ${S}/extras/freetype2
-#	mv ${WORKDIR}/freetype-${FT2_VER} ${S}/extras/freetype2 || die
-#	eend 0
+	if [ "${USE_SNAPSHOT}" = "yes" ]
+	then
+		unpack X${BASE_PV}-{1,2,3,4}.tar.bz2
+	else
+		unpack X${MY_SV}src-{1,2,3}.tgz
+	fi
+	
+	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Install the glide3 headers for compiling the tdfx driver
-	if [ -n "`use 3dfx`" ]
-	then
-		ebegin "Installing tempory glide3 headers"
-		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
-		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
-		sed -e 's:$(GLIDE3INCDIR):$(WORKDIR)/glide3:g' \
-			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
-		eend 0
-	fi
-
-	# Update to XFree86-4.2.1 tree
-	cd ${S};
-	EPATCH_SINGLE_MSG="Updating ${BASE_PV} sources to ${PV}..." \
-	epatch ${DISTDIR}/${BASE_PV}-${PV}.diff.gz
-	eend 0
-
-	ebegin "Updating Xrender"
-	cd ${S}; rm -rf ${S}/lib/Xrender
-	mv ${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xrender ${S}/lib/Xrender || die
-	# Get Xrender to also install its extension headers, as they need to
-	# be updated.
-	cp ${S}/lib/Xrender/Imakefile ${S}/lib/Xrender/Imakefile.orig
-	sed -e '2i NONSTANDARD_HEADERS = extutil.h region.h render.h renderproto.h' \
-		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
-	eend 0
+#	if [ -n "`use 3dfx`" ]
+#	then
+#		ebegin "Installing tempory glide3 headers"
+#		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
+#		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
+#		sed -e 's:$(GLIDE3INCDIR):$(WORKDIR)/glide3:g' \
+#			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
+#		eend 0
+#	fi
 
 	if [ "`gcc-version`" = "2.95" ]
 	then
@@ -169,11 +155,6 @@ src_unpack() {
 	# Various Patches from all over
 	epatch ${WORKDIR}/patch/
 	unset EPATCH_EXCLUDE
-
-	# Fix bison parse errors with bison-1.50 and up, bug #11595
-	#
-	#   http://www.jg555.com/cvs/cvsweb.cgi/~checkout~/patches/xfree/xfree-4.2.x.-bison.fixes.patch
-	epatch ${FILESDIR}/xfree-4.2.x.-bison.fixes.patch
 
 	# Update the Savage Driver
 	ebegin "Updating Savage driver"
@@ -246,6 +227,16 @@ src_unpack() {
 		echo "#define GccWarningOptions -Wno-return-type -w" >> config/cf/host.def
 	fi
 
+	if [ -n "`use pam`" ]
+	then
+		# If you want to have optional pam support, do it properly ...
+		echo "#define HasPam YES" >> config/cf/host.def
+		echo "#define HasPamMisc YES" >> config/cf/host.def
+	else
+		echo "#define HasPam NO" >> config/cf/host.def
+		echo "#define HasPamMisc NO" >> config/cf/host.def
+	fi
+
 	if [ "${ARCH}" = "x86" ]
 	then
 		# optimize Mesa for architecture
@@ -294,11 +285,6 @@ src_unpack() {
 			rm -f ${x}.orig
 		fi
 	done
-
-	# Apply Xft quality patch from http://www.cs.mcgill.ca/~dchest/xfthack/
-#	einfo "Applying Xft quality hack..."
-#	cd ${S}/lib/Xft
-#	cat ${FILESDIR}/${PVR}/xft-quality.diff | patch -p1 > /dev/null || die
 }
 
 src_compile() {
@@ -321,6 +307,10 @@ src_compile() {
 
 src_install() {
 
+	# Since we do not build fontconfig internally, we need to add
+	# this, or things breaks.
+	ln -s /usr/bin/fc-cache ${S}/exports/bin/fc-cache
+
 	einfo "Installing XFree86..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
@@ -334,6 +324,17 @@ src_install() {
 		make install DESTDIR=${D} || die
 	fi
 
+	# These could cause problems, so remove them ...
+	rm -f ${D}/usr/X11R6/bin/xft-config
+	rm -f ${D}/usr/X11R6/lib/libXft.{a,so}
+	rm -rf ${D}/usr/X11R6/include/X11/Xft
+
+	# This one needs to be in /usr/lib
+	insinto /usr/lib/pkgconfig
+	doins ${D}/usr/X11R6/lib/pkgconfig/xcursor.pc
+	# Now remove the invalid xft.pc, and co ...
+	rm -rf ${D}/usr/X11R6/lib/pkgconfig
+
 	einfo "Installing man pages..."
 	make install.man DESTDIR=${D} || die
 	einfo "Compressing man pages..."
@@ -345,12 +346,12 @@ src_install() {
 		make DESTDIR=${D} install || die
 	fi
 
-	# Make sure user running xterm can only write to utmp.
+	# Make sure the user running xterm can only write to utmp.
 	fowners root.utmp /usr/X11R6/bin/xterm
 	fperms 2755 /usr/X11R6/bin/xterm
 
 	# Fix permissions on locale/common/*.so
-	for x in ${D}/usr/X11R6/lib/X11/locale/common/*.so*
+	for x in ${D}/usr/X11R6/lib/X11/locale/lib/common/*.so*
 	do
 		if [ -f ${x} ]
 		then
@@ -358,7 +359,17 @@ src_install() {
 		fi
 	done
 
-	# we zap the our CFLAGS in the host.def file, as hardcoded CFLAGS can
+	# Fix permissions on modules ...
+	for x in $(find ${D}/usr/X11R6/lib/modules -name '*.o') \
+	         $(find ${D}/usr/X11R6/lib/modules -name '*.so')
+	do
+		if [ -f ${x} ]
+		then
+			fperms 0755 `echo ${x} | sed -e "s|${D}||"`
+		fi
+	done
+
+	# We zap our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
 	ebegin "Fixing lib/X11/config/host.def"
 	cp ${D}/usr/X11R6/lib/X11/config/host.def ${T}
@@ -370,10 +381,11 @@ src_install() {
 	eend 0
 
 	insinto /etc/X11
-	# We use fontconfig now ...
+	# We still use freetype for now ...
 	doins ${FILESDIR}/${PVR}/XftConfig
 	newins ${FILESDIR}/${PVR}/XftConfig XftConfig.new
-	#newins ${S}/lib/Xft/XftConfig-OBSOLETE XftConfig
+	# This is if we are using Fontconfig only ...
+	#newins ${S}/lib/Xft1/XftConfig-OBSOLETE XftConfig
 	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
 
 	# Install example config file
@@ -414,23 +426,6 @@ src_install() {
 	insinto /usr/X11R6/lib
 	doins ${FILESDIR}/${PVR}/lib/*.la
 
-	# Some Xft2.0 checks to ease things a bit
-	if [ -L ${ROOT}/usr/X11R6/lib/libXft.so ]
-	then
-		local libxft_link="`readlink ${ROOT}/usr/X11R6/lib/libXft.so`"
-		
-		if [ "${libxft_link##*/}" = "libXft.so.2.0" ] && \
-		   [ -f ${ROOT}/usr/lib/libXft.so.2.0 ]
-		then
-			# Do not overwrite /usr/X11R6/lib/libXft.so if we have
-			# Xft2.0 installed ...
-			rm -f ${D}/usr/X11R6/lib/libXft.so
-
-			# Move Xft1.1 headers to not overwrite Xft2.0 headers ...
-			mv -f ${D}/usr/X11R6/include/X11/Xft ${D}/usr/X11R6/include/X11/Xft1
-		fi
-	fi
-
 	# Remove libz.a, as it causes problems (bug #4777)
 	rm -f ${D}/usr/X11R6/lib/libz.a
 	# And do not forget the includes (bug #9470)
@@ -450,7 +445,7 @@ src_install() {
 				fi
 				;;
 			ja*|ko*|zh*)
-				if [ -r "${x}/Compose" ]
+				if [ -r ${x}/Compose ]
 				then
 					rm -f ${x}/Compose
 				fi
@@ -464,7 +459,10 @@ src_install() {
 	# new display manager script
 	doexe ${FILESDIR}/${PVR}/startDM.sh
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/${PVR}/Sessions/*
+	for x in ${FILESDIR}/${PVR}/Sessions/*
+	do
+		[ -f ${x} ] && doexe ${x}
+	done
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/10xfree
 	insinto /etc/X11/xinit
@@ -473,10 +471,13 @@ src_install() {
 	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
 	insinto /etc/X11/fs
 	newins ${FILESDIR}/${PVR}/xfs.config config
-	insinto /etc/pam.d
-	newins ${FILESDIR}/${PVR}/xdm.pamd xdm
-	# Need to fix console permissions first
-	newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+	if [ -n "`use pam`" ]
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/${PVR}/xdm.pamd xdm
+		# Need to fix console permissions first
+		newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+	fi
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/${PVR}/xdm.start xdm
 	newexe ${FILESDIR}/${PVR}/xfs.start xfs
@@ -671,7 +672,7 @@ pkg_postinst() {
 				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
-				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
+				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
 					${ROOT}/usr/X11R6/bin/ttmkfdir \
 						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
@@ -706,9 +707,8 @@ pkg_postinst() {
 
 			# Only generate XftCache files if there are truetype
 			# fonts present ...
-			if [ "${x/encodings}" = "${x}" ] && \
-			   [ -n "$(find ${x} -iname '*.tt[cf]' -print)" -o \
-			     -n "$(find ${x} -iname '*.pf[ab]' -print)" ]
+			if [ "${x/encodings}" = "${x}" -a \
+			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 				${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
@@ -743,6 +743,9 @@ pkg_postinst() {
 
 	# Update /etc/X11/XftConfig if its the one from Xft1.2, as its
 	# invalid for Xft1.1 ....
+	# NOTE:  This should not be needed for xfree-4.2.99 or later,
+	#        but lets not take chances with people that may downgrade
+	#        at a later stage ....
 	update_XftConfig
 
 	# These need to be owned by root and the correct permissions
