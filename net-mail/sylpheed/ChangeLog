@@ -1,8 +1,9 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.54 2004/04/06 18:06:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.55 2004/04/06 18:58:53 agriffis Exp $
 
-  06 Apr 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.10.ebuild:
+  06 Apr 2004; Aron Griffis <agriffis@gentoo.org> sylpheed-0.9.9.ebuild,
+  sylpheed-0.9.10.ebuild:
   Add keywords which were dropped when the version was bumped
 
 *sylpheed-0.9.9-r1 (06 Apr 2004)

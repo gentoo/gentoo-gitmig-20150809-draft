@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.9-r1.ebuild,v 1.1 2004/04/05 23:06:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.9.9-r1.ebuild,v 1.2 2004/04/06 18:58:53 agriffis Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda gtk2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://sylpheed.good-day.net/${PN}/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 
 PROVIDE="virtual/sylpheed"
 
