@@ -1,6 +1,6 @@
 virtual/lpr			net-print/cups
 virtual/python			dev-lang/python
-virtual/mta			net-mail/exim
+virtual/mta			mail-mta/exim
 virtual/alsa			sys-kernel/linux
 virtual/bash			app-shells/bash
 virtual/kernel			sys-kernel/linux

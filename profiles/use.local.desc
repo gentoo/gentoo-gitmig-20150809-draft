@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.397 2004/05/30 02:29:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.398 2004/05/30 06:18:43 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -164,6 +164,11 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
+mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
+mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
+mail-mta/exim:exiscan-acl - Patch providing support for content scanning
+mail-mta/exim:lmtp - Adds support for lmtp
+mail-mta/exim:wildlsearch - Adds support for Wildcarded Linear searches
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
@@ -262,11 +267,6 @@ net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap server
 net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
-net-mail/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
-net-mail/exim:exiscan - Patch providing support for content scanning backward-compatibility
-net-mail/exim:exiscan-acl - Patch providing support for content scanning
-net-mail/exim:lmtp - Adds support for lmtp
-net-mail/exim:wildlsearch - Adds support for Wildcarded Linear searches
 net-mail/mutt:nntp - Adds support for nntp via patch
 net-mail/mutt:vanilla - Refrain from patching additional functionality into mutt
 net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
