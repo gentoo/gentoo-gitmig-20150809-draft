@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.8.ebuild,v 1.1 2003/09/30 19:38:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.8.ebuild,v 1.2 2003/09/30 23:30:30 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 DEPEND=">=media-libs/libsdl-1.2"
 
-filter-flags "-O?" "-O2"
+replace-flags "-O?" "-O2"
 
 src_compile() {
 	local myconf

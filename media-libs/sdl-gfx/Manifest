@@ -1,5 +1,5 @@
-MD5 e652e671b39a801574ffc0796c1921e9 ChangeLog 1228
+MD5 c79b20a17d5b69a8134a35d42f344572 ChangeLog 1455
 MD5 093f1c4a6eaa83bccfdcb891d879df2f sdl-gfx-2.0.3.ebuild 821
-MD5 58dc3fb1a4ba077e4af7dccac89e524e sdl-gfx-2.0.8.ebuild 885
+MD5 f27e76dc9a54ce7dddc23de9aab34745 sdl-gfx-2.0.8.ebuild 886
 MD5 7a00e26bd01466e910de637d68c59d75 files/digest-sdl-gfx-2.0.3 65
 MD5 b7037798311af68421f018850c1bcbd0 files/digest-sdl-gfx-2.0.8 65
