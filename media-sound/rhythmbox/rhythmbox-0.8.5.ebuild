@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.5.ebuild,v 1.2 2004/07/14 16:57:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.5.ebuild,v 1.3 2004/08/19 18:13:58 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
 #-sparc: 0.8.5: Fails with "Illegal Instruction" when you try playing a file.
-KEYWORDS="~x86 ~ppc ~amd64 -sparc"
+KEYWORDS="x86 ~ppc ~amd64 -sparc"
 #IUSE="oggvorbis xine flac faad mad pda"
 IUSE="oggvorbis flac faad mad pda"
 SLOT="0"
@@ -70,7 +70,7 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 
 export GST_INSPECT=/bin/true
 
-src_unpack( ) {
+src_unpack() {
 
 	unpack ${A}
 
