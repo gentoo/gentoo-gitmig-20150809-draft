@@ -1,6 +1,6 @@
-# ChangeLog for net-mail/clamav
+# ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.1 2004/05/30 00:27:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.2 2004/05/30 00:53:00 robbat2 Exp $
 
 *clamav-0.71 (29 May 2004)
 
