@@ -1,7 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.2 2002/05/11 22:31:37 spider Exp $
 
+*libpcap-0.7.1 (11 May 2002)
+  11 May 2002; Spider <spider@gentoo.org> libpcap-0.7.1.ebuild :
+  version bump for the new tcpdump
+  
 *libpcap-0.6.2-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
