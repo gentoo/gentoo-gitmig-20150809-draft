@@ -1,0 +1,12 @@
+diff -Naur sword-1.5.7.vanilla/src/mgr/installmgr.cpp sword-1.5.7/src/mgr/installmgr.cpp
+--- sword-1.5.7.vanilla/src/mgr/installmgr.cpp	2003-11-25 13:11:13.000000000 -0600
++++ sword-1.5.7/src/mgr/installmgr.cpp	2004-04-08 15:51:34.933586760 -0500
+@@ -150,7 +150,7 @@
+ 		curl_easy_setopt(curl, CURLOPT_FILE, &ftpfile);
+ 
+ 		/* Switch on full protocol/debug output */
+-		curl_easy_setopt(curl, CURLOPT_VERBOSE, TRUE);
++		curl_easy_setopt(curl, CURLOPT_VERBOSE);
+ 
+ 		res = curl_easy_perform(curl);
+ 

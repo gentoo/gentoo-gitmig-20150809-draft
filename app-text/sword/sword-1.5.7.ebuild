@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.1 2004/04/06 02:45:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.2 2004/04/08 20:01:48 squinky86 Exp $
 
 DESCRIPTION="library for bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -16,9 +16,14 @@ DEPEND="virtual/glibc
 	curl? ( >=net-misc/curl-7.9 )
 	icu? ( dev-libs/icu )"
 
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.patch
+}
+
 src_compile() {
 	econf --without-clucene --without-lucene `use_with icu` `use_with curl` || die "configure failed"
-	emake || die "compile failed failed"
+	emake || die "compile failed"
 }
 
 src_install() {
@@ -31,9 +36,11 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "Check out http://www.crosswire.org/sword/modules/"
-	einfo "to download modules that you would like to enhance"
-	einfo "the library with.  Follow module installation"
+	einfo "To install modules for SWORD, you can emerge:"
+	einfo "  app-text/sword-modules"
+	einfo "or check out http://www.crosswire.org/sword/modules/"
+	einfo "to download modules manually that you would like to"
+	einfo "use the library with.  Follow module installation"
 	einfo "instructions found on the web or in INSTALL.gz found"
 	einfo "in /usr/share/doc/${PF}"
 	einfo ""

@@ -1,9 +1,14 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.10 2004/04/06 02:45:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.11 2004/04/08 20:01:48 squinky86 Exp $
 
 
 *sword-1.5.7 (05 Apr 2004)
+
+  08 Apr 2004; Jon Hood <squinky86@gentoo.org>:
+  added patch for building with curl (closes bug #47088) thanks
+  to stamm@flashmail.com,
+  changed post_install information
 
   05 Apr 2004; Jon Hood <squinky86@gentoo.org> sword-1.5.7.ebuild:
   version bump. Thanks to Timothy Stotts for this ebuild in bug
