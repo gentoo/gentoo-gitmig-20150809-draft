@@ -16,7 +16,7 @@
      {
        rle->outstream->put ((unsigned char)(rle->oblen));
 -      rle->outstream->write (&(rle->oblock[0]), rle->oblen);
-+      rle->outstream->write (&(const char)(rle->oblock[0]), rle->oblen);
++      rle->outstream->write ((const char*)(&rle->oblock[0]), rle->oblen);
      }
  #endif  
  
