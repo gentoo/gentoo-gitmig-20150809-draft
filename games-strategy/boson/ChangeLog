@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/boson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.6 2004/06/24 23:26:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.7 2004/07/03 20:01:47 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> boson-0.10.ebuild,
+  boson-0.9.1.ebuild:
+  QA: need-kde after R/DEPEND
 
 *boson-0.10 (10 May 2004)
 

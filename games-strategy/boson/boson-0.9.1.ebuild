@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.9.1.ebuild,v 1.4 2004/06/24 23:26:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.9.1.ebuild,v 1.5 2004/07/03 20:01:47 carlo Exp $
 
 inherit kde
-need-kde 3
 
 DESCRIPTION="real-time strategy game, with the feeling of Command&Conquer(tm) (needs at least 2 ppl to play)"
 HOMEPAGE="http://boson.sourceforge.net/"
@@ -18,6 +17,7 @@ DEPEND=">=kde-base/kdegames-3.0
 	>=kde-base/kdemultimedia-3.0
 	media-libs/lib3ds
 	opengl? ( virtual/opengl )"
+need-kde 3
 
 S=${WORKDIR}/${PN}-all-${PV}
 
