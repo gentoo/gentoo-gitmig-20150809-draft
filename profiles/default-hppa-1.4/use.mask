@@ -1,3 +1,7 @@
+# 13 Apr 2003 Guy Martin <gmsift@gentoo.org>
+# Selinux patches not tested on hppa and no kernel sources are emergeables with this patch.
+selinux
+
 # 07 Apr 2003 Guy Martin <gmsoft@gentoo.org>
 # I don't have the hardware to test usb support. So, this is disabled for now.
 usb
@@ -16,14 +20,11 @@ acl
 postgres
 
 # 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
-# SVGA lib is not yet tested
-svga
-
-# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # USE flags not related to hppa
 3dnow
 acpi
 apm
+afs
 ev6
 icc
 icc-pgo
@@ -32,5 +33,6 @@ nocardbus
 pcmcia
 pda
 sse
+svga
 trusted
 wavelan
