@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.22 2004/03/11 21:02:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.23 2004/03/18 05:10:47 zx Exp $
+
+  18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> java-sdk-docs-1.4.1.ebuild:
+  Updated to reflect that the doc is on EOL now. Closes #42104
 
   11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> java-sdk-docs-1.3.1.ebuild,
   java-sdk-docs-1.4.2.ebuild:
