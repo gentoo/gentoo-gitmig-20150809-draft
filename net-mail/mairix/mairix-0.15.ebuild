@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.15.ebuild,v 1.1 2004/09/01 15:23:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/mairix-0.15.ebuild,v 1.2 2004/09/04 18:03:59 squinky86 Exp $
 
 DESCRIPTION="Indexes and searches Maildir/MH folders"
 HOMEPAGE="http://www.rpcurnow.force9.co.uk/mairix/"
@@ -9,9 +9,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/texinfo-4.2"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	./configure \

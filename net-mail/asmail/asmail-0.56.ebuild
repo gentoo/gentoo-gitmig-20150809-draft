@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-0.56.ebuild,v 1.1 2004/09/03 09:19:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-0.56.ebuild,v 1.2 2004/09/04 18:03:29 squinky86 Exp $
 
 DESCRIPTION="Afterstep mail-checker like xbiff"
 HOMEPAGE="http://asmail.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X jpeg"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	X? ( virtual/x11 )
 	jpeg? ( media-libs/jpeg )"
 
