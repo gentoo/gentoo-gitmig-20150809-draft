@@ -948,8 +948,6 @@ dev-lang/tcl-tk
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
 # dependencies for theese arent fixed yet:
-gnome-extra/libgnomecanvasmm
-gnome-extra/gconfmm
 gnome-extra/libgnomemm
 gnome-extra/libgnomeuimm
 gnome-extra/libglademm
