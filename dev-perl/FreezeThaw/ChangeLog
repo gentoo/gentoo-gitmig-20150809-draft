@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/FreezeThaw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.7 2003/02/13 07:43:05 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.8 2003/04/03 23:13:13 gmsoft Exp $
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> FreezeThaw-0.43-r1.ebuild FreezeThaw-0.43.ebuild :
   set ppc in keywords
@@ -8,15 +8,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/FreezeThaw
 
 *FreezeThaw-0.43 (25 Oct 2002)
 

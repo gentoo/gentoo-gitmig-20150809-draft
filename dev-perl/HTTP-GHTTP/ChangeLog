@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/HTTP-GHTTP
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.9 2003/02/28 11:15:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.10 2003/04/03 23:18:09 gmsoft Exp $
 
 *HTTP-GHTTP-1.07-r1 (28 fév 2003)
 
@@ -11,23 +11,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/HTTP-GHTTP
 
 *HTTP-GHTTP-1.07 (5 May 2002)
 

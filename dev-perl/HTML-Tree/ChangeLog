@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.9 2003/03/25 04:53:49 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.10 2003/04/03 23:17:17 gmsoft Exp $
 
 *HTML-Tree-3.17 (24 Mar 2003)
 
@@ -17,21 +17,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/HTML-Tree
 
 *HTML-Tree-3.11 (14 May 2002)
 

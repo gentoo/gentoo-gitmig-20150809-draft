@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/HTML-Tagset
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.9 2003/02/28 15:34:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.10 2003/04/03 23:15:36 gmsoft Exp $
 
   28 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -8,17 +8,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/HTML-Tagset
 
 *HTML-Tagset-3.03-r1 (5 May 2002)
   
