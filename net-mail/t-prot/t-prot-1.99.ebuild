@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-1.98.ebuild,v 1.1 2005/03/06 23:25:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-1.99.ebuild,v 1.1 2005/03/25 02:10:10 tove Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 		epatch ${S}/contrib/t-prot-r1.*-mutt157.diff
 	fi
 
-	if has_version '~app-crypt/gnupg-1.2.6' ; then
+	if has_version '<=app-crypt/gnupg-1.2.6' ; then
 		epatch ${S}/contrib/t-prot-r1.*-gpg126.diff
 	fi
 }
