@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/bootsplash
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.56 2004/10/19 10:25:27 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.57 2005/01/12 00:06:53 spock Exp $
+
+  12 Jan 2005; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6.1-r6.ebuild, bootsplash-0.6.1-r7.ebuild:
+  Marked stable on x86.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   bootsplash-0.6.1-r4.ebuild:

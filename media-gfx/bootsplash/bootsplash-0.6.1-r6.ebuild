@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r6.ebuild,v 1.1 2004/08/21 23:13:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r6.ebuild,v 1.2 2005/01/12 00:06:53 spock Exp $
 
 IUSE=""
 S=${WORKDIR}
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${PN}-core-0.6.1-r6.tar.bz2
 	mirror://gentoo/${PN}-kernel-0.6.1-r6.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 DEPEND=">=media-libs/freetype-2
 	media-libs/libmng
