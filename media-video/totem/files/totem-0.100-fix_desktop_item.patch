@@ -1,0 +1,14 @@
+--- totem-0.100/data/Makefile.am	2005-01-03 17:10:26.000000000 +0100
++++ totem-0.100.patched/data/Makefile.am	2005-01-09 14:42:29.000000000 +0100
+@@ -34,9 +34,9 @@
+ desktop_in_in_files_all = totem.desktop.in.in.in vanity.desktop.in.in
+ desktop_in_files_all = totem.desktop.in.in vanity.desktop.in
+ if TOTEM_VANITY
+-desktop_in_files = totem.desktop.in.in vanity.desktop.in
++desktop_in_files = totem.desktop.in vanity.desktop.in
+ else
+-desktop_in_files = totem.desktop.in.in
++desktop_in_files = totem.desktop.in
+ endif
+ 
+ desktopdir = $(datadir)/applications/

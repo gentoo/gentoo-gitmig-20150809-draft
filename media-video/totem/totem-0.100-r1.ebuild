@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100.ebuild,v 1.1 2005/01/08 23:31:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r1.ebuild,v 1.1 2005/01/09 22:24:35 foser Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils linux-info
 
 DESCRIPTION="Media player for GNOME"
 HOMEPAGE="http://www.hadess.net/totem.php3"
@@ -34,7 +34,8 @@ RDEPEND=">=dev-libs/glib-2.2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
-	>=dev-util/pkgconfig-0.12.0"
+	>=dev-util/pkgconfig-0.12.0
+	sys-devel/automake"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
@@ -61,9 +62,12 @@ src_unpack() {
 	# violations, see bug #48800 <obz@gentoo.org>
 	gnome2_omf_fix
 
-#might be needed for #68087
-#	kernel_is 2 4 && \
-#		sed -i "s:#include <netinet/in.h>::" somefile
+	epatch ${FILESDIR}/${P}-fix_desktop_item.patch
+
+	WANT_AUTOMAKE=1.4 automake
+
+	# should solve #68087
+	kernel_is 2 4 && CFLAGS="${CFLAGS} -D_NETINET_IN_H"
 
 }
 
