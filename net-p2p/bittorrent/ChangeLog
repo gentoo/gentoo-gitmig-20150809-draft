@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.7 2003/05/07 05:46:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.8 2003/05/08 07:26:29 phosphan Exp $
+
+*bittorrent-3.2.1b-r2 (08 May 2003)
+
+  08 May 2003; Patrick Kursawe <phosphan@gentoo.org> 
+  bittorrent-3.2.1b-r2.ebuild :
+  X support now optional as proposed in bug 20608 by Wayne Davison <gentoo@blorf.net>
+  and removed unnecessary patch
 
 *bittorrent-3.2.1b-r1 (07 May 2003)
 
