@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.39 2004/12/09 15:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.40 2004/12/11 21:28:13 eradicator Exp $
+
+  11 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/linux26-headers-2.6.8.1-sparc-glibcsafe.patch,
+  linux26-headers-2.6.8.1-r1.ebuild:
+  Added support for sparc64-multilib and updated sparc patch to what has been
+  included upstream.
 
   09 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   linux26-headers-2.6.8.1-r1.ebuild:

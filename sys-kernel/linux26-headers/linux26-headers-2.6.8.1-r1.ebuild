@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.17 2004/12/09 15:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.18 2004/12/11 21:28:13 eradicator Exp $
 
 # What's in this kernel?
 
@@ -108,7 +108,7 @@ src_install() {
 	kernel_src_install
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
-	if [ "${PROFILE_ARCH}" = "sparc64" ] ; then
+	if [ "${PROFILE_ARCH}" = "sparc64" -o "${PROFILE_ARCH}" = "sparc64-multilib" ] ; then
 		# We don't need the asm dir, generate-asm-sparc will take care of this
 		rm -Rf ${D}/${LINUX_INCDIR}/asm
 
