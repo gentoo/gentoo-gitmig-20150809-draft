@@ -175,10 +175,6 @@ net-www/zope
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
 
-# Incompatible with gdm
-=media-libs/imlib-1.9.11
-=media-libs/imlib-1.9.11-r1
-
 # Mask until the new Sessions scheme is tested
 =gnome-base/gdm-2.2.5.4-r3
 
@@ -655,3 +651,10 @@ app-cdr/cddump
 # mkennedy@gentoo.org 7 May 2002
 # needs more testing, not quite complete
 =app-editors/xemacs-gamma-21.4.7.ebuild
+
+# spider@gentoo.org 9 May 2002
+# Security update see:
+# http://online.securityfocus.com/bid/4339
+# http://online.securityfocus.com/bid/4336
+<media-libs/imlib-1.9.13
+
