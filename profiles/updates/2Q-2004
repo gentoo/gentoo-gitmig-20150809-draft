@@ -1,3 +1,4 @@
+move dev-java/jrockit dev-java/jrockit-jdk-bin
 move dev-java/jaf dev-java/sun-jaf-bin
 move dev-java/javamail dev-java/sun-javamail-bin
 move dev-libs/libextractor media-libs/libextractor
