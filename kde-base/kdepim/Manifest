@@ -3,8 +3,9 @@ MD5 c459f9f78b0d6b1018568ad4534ddd77 kdepim-3.1.2.ebuild 748
 MD5 b226533211bc7dcc66b16fd0448480be kdepim-3.2.0_beta1.ebuild 695
 MD5 49d046366b4923264510510dd72a3429 kdepim-3.1.4.ebuild 852
 MD5 0ddec5d7dec99cac69d3e13bb3b4ebc4 kdepim-3.1.2-r1.ebuild 1009
-MD5 a794d1fc63ec2ab595683ad37545e17c ChangeLog 7649
+MD5 dd936ddc62a4441809fdf621e06bc044 ChangeLog 7774
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 14fa2a632cfa46ea7ca28c998df50e6c kdepim-3.2.0_beta2.ebuild 695
 MD5 7eefe33e5fa8de798421ee125378d399 kdepim-3.0.5b.ebuild 577
 MD5 ce5fa57255f8b647438149e6fc6c0cd0 files/digest-kdepim-3.0.4 66
 MD5 d870663d465fa52954057d4e4edca9ba files/digest-kdepim-3.1.2 66
@@ -13,3 +14,4 @@ MD5 d833726815dce86df6d79630ceeecfdc files/digest-kdepim-3.0.5b 67
 MD5 c13bf6597f7d7edba5e3cdc29efcae2a files/kdepim-3.1.2-libmal-support.diff 1134
 MD5 d870663d465fa52954057d4e4edca9ba files/digest-kdepim-3.1.2-r1 66
 MD5 e0c4b94e884c9b2001e8d04b81715401 files/digest-kdepim-3.2.0_beta1 67
+MD5 56b76edd00dee2ba6b0820cea00f893c files/digest-kdepim-3.2.0_beta2 67
