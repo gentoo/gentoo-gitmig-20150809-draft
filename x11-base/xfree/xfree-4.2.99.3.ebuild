@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.9 2002/12/20 19:29:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.10 2002/12/20 19:30:29 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -43,7 +43,7 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 	./webdin32.exe"
 MS_FONT_URL="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
-SRC_URI="://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
+SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-2.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-3.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-4.tar.bz2
