@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.3.ebuild,v 1.1 2004/10/23 19:52:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.3.ebuild,v 1.2 2004/10/23 20:01:36 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,6 +30,10 @@ DEPEND="virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
+
+	# Patch that should go into rc-scripts-1.6.4
+	cd ${S}
+	epatch ${FILESDIR}/rc-scripts-1.4.16-livecd.patch
 
 	# Fix Sparc specific stuff
 	if [[ ${ARCH} == sparc ]]; then
