@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Karl Trygve Kalleberg
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/files/sun-jdk-1.4.2.03,v 1.2 2004/02/13 19:30:08 vapier Exp $
 
 VERSION="Sun JDK @PV@"
 JAVA_HOME=/opt/@P@

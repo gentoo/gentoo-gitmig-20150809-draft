@@ -1,8 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Karl Trygve Kalleberg
-# Maintainer: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/files/blackdown-jdk-1.4.2_rc1,v 1.1 2003/12/23 19:02:27 brad_mssw Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/files/blackdown-jdk-1.4.2_rc1,v 1.2 2004/02/13 19:30:08 vapier Exp $
 
 VERSION="Blackdown JDK @PV@"
 JAVA_HOME=/opt/@P@
