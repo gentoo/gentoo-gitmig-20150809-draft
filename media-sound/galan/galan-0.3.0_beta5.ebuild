@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta5.ebuild,v 1.1 2004/03/10 10:00:23 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta5.ebuild,v 1.2 2004/03/10 23:05:16 dholm Exp $
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://galan.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="oggvorbis alsa opengl esd"
 
