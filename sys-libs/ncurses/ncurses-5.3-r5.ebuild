@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.15 2004/07/02 08:49:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r5.ebuild,v 1.16 2004/07/28 18:47:25 avenj Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 filter-flags -fno-exceptions
@@ -54,6 +54,7 @@ src_compile() {
 		--with-shared \
 		--with-rcs-ids \
 		--without-ada \
+		--enable-symlinks \
 		${myconf} || die "configure failed"
 
 	# do not work with -j2 on P4 - <azarah@gentoo.org> (23 Oct 2002)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r1.ebuild,v 1.20 2004/07/28 18:47:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r3.ebuild,v 1.1 2004/07/28 18:47:25 avenj Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="5"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="debug"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+IUSE="build bootstrap debug uclibc"
 
 DEPEND="virtual/libc"
 # This doesn't fix the problem. bootstrap builds ncurses again with
@@ -48,7 +48,7 @@ src_compile() {
 	# building it.  We will rebuild ncurses after gcc's second
 	# build in bootstrap.sh.
 	# <azarah@gentoo.org> (23 Oct 2002)
-	( use build || use bootstrap ) \
+	( use build || use bootstrap || use uclibc ) \
 		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
 	# see note about DEPEND above -- avenj@gentoo.org  2 Apr 04
@@ -92,7 +92,9 @@ src_install() {
 
 	# We need the basic terminfo files in /etc, bug #37026
 	einfo "Installing basic terminfo files in /etc..."
-	for x in dumb linux rxvt screen sun vt{52,100,102,220} xterm
+	# added some for uclibc
+	#for x in dumb linux rxvt screen sun vt{52,100,102,220} xterm
+	for x in ansi console dumb linux rxvt screen sun vt{52,100,102,200,220} xterm xterm-color xterm-xfree86
 	do
 		local termfile="$(find "${D}/usr/share/terminfo/" -name "${x}" 2>/dev/null)"
 		local basedir="$(basename $(dirname "${termfile}"))"
@@ -127,11 +129,23 @@ src_install() {
 		# this breaks the "build a new build image" system.  We now
 		# need to remove libncurses.a from the build image manually.
 		# cd ${D}/usr/lib; rm *.a
+		# remove extraneous ncurses libraries
+		cd ${D}/usr/lib; rm -f lib{form,menu,panel}*
+		cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h
 	else
+		if ( use bootstrap || use uclibc ) ; then
+			cd ${D}/usr/lib; rm -f lib{form,menu,panel,ncurses++}*
+			cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h cursesapp.h curses?.h cursslk.h etip.h
+		fi
 		# Install xterm-debian terminfo entry to satisfy bug #18486
 		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/lib:${D}/lib \
 			TERMINFO=${D}/usr/share/terminfo \
 			${D}/usr/bin/tic ${FILESDIR}/xterm-debian.ti
+
+		if use uclibc ; then
+			cp ${D}/usr/share/terminfo/x/xterm-debian ${D}/etc/terminfo/x/
+			rm -rf ${D}/usr/share/terminfo/*
+		fi
 
 		cd ${S}
 		dodoc ANNOUNCE MANIFEST NEWS README* TO-DO

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r2.ebuild,v 1.3 2004/07/02 08:49:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r2.ebuild,v 1.4 2004/07/28 18:47:25 avenj Exp $
 
 inherit eutils flag-o-matic 64-bit gnuconfig
 
@@ -64,6 +64,7 @@ src_compile() {
 		--with-shared \
 		--with-rcs-ids \
 		--without-ada \
+		--enable-symlinks \
 		${myconf} \
 		|| die "configure failed"
 
