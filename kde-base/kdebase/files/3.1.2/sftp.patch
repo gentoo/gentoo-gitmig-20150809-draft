@@ -1,0 +1,11 @@
+--- ksshprocess.cpp	2003-05-12 14:35:49.000000000 -0500
++++ ksshprocess.cpp	2003-05-12 14:32:00.000000000 -0500
+@@ -98,7 +98,7 @@
+ };
+ 
+ const char * const KSshProcess::authSuccessMsg[] = {
+-    "ssh-userauth2 successful",
++    "Authentication succeeded",
+     "Received SSH_CROSS_AUTHENTICATED packet"
+ };
+ 
