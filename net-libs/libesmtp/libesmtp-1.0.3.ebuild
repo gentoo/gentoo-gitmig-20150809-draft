@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.3.ebuild,v 1.3 2005/01/17 18:43:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.3.ebuild,v 1.4 2005/01/22 19:52:31 kloeri Exp $
 
 inherit gcc eutils gnuconfig libtool
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 
 IUSE="ssl"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
+KEYWORDS="x86 sparc ~ppc alpha ~amd64"
 
 S="${WORKDIR}/${MY_P}"
 
