@@ -1,9 +1,9 @@
 # ChangeLog for app-misc/gtktalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.4 2002/04/06 13:23:19 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.5 2002/04/13 08:27:35 spider Exp $
 
 *gtktalog-0.99.19 (06 Apr 2002)
-  06 Apr 2002; Spider <spider@gentoo.org>
+  06 Apr 2002; Spider <spider@gentoo.org> gtktalog-0.99.19.ebuild :
   site for download and homepage moved to fsf
   update to .19 version
   add ogginfo support 
