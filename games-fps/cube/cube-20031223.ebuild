@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.4 2004/03/16 06:41:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20031223.ebuild,v 1.5 2004/05/27 02:25:34 vapier Exp $
 
 inherit eutils games
 
 MY_P="cube_2003_12_23"
-DESCRIPTION="Landscape-style engine that pretends to be an indoor first person shooter engine"
-HOMEPAGE="http://wouter.fov120.com/cube/"
+DESCRIPTION="open source multiplayer and singleplayer first person shooter game"
+HOMEPAGE="http://www.cubeengine.com/"
 SRC_URI="mirror://sourceforge/cube/${MY_P}.zip"
 
 LICENSE="ZLIB"
