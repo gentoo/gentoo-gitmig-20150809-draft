@@ -1,6 +1,6 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.2 2002/09/01 15:25:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.3 2002/09/01 15:26:43 seemant Exp $
 
 *selectwm-0.3-r1 selectwm-0.4 (01 Sep 2002)
 
@@ -8,7 +8,8 @@
   selectwm-0.4.ebuild :
 
   USE dependednt NLS checking and ebuild cleanup.  Also, added new version
-  for GTK2 and SLOTified.
+  for GTK2 and SLOTified.  Thanks to: christian-neumair@web.de (Christian -
+  Manny Calavera - Neumair) in bug #5638.
 
 *selectwm-0.3 (08 Jul 2002)
 
