@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/calcoo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/calcoo/ChangeLog,v 1.6 2004/06/24 21:54:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/calcoo/ChangeLog,v 1.7 2004/10/31 00:11:56 slarti Exp $
+
+  31 Oct 2004; Tom Martin <slarti@gentoo.org> calcoo-1.3.15.ebuild:
+  Marked ~amd64 for bug 69353.
 
 *calcoo-1.3.15 (08 Aug 2003)
 
