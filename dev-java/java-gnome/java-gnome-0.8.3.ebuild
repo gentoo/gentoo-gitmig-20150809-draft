@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.3 2004/03/18 06:53:40 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-0.8.3.ebuild,v 1.4 2004/04/11 20:01:53 zx Exp $
 
 inherit eutils
 
@@ -19,8 +19,6 @@ LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-S=${WORKDIR}/${P}
-
 src_compile() {
 	epatch ${FILESDIR}/java-gnome-${PV}-gentoo.diff
 
@@ -29,8 +27,8 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
+		--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME} || die "./configure failed"
-
 	make || die
 }
 
