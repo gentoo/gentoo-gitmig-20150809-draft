@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.20 2004/06/24 22:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.21 2004/07/15 03:08:13 agriffis Exp $
 
 # OLD14 = 1.4
 # OLD15 = 1.5
@@ -38,7 +38,6 @@ OLD15_PV=1.5
 OLD15_P=${PN}-${OLD15_PV}
 OLD14_PV=1.4-p5
 OLD14_P=${PN}-${OLD14_PV}
-S=${WORKDIR}/${P}
 OLD15_S=${WORKDIR}/${OLD15_P}
 OLD14_S=${WORKDIR}/${OLD14_P}
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
@@ -48,6 +47,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha "
+IUSE=""
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.53-r1"
@@ -318,4 +318,3 @@ pkg_postinst() {
 		fi
 	done
 }
-

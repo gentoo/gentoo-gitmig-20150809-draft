@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5.ebuild,v 1.2 2004/06/24 22:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5.ebuild,v 1.3 2004/07/15 03:08:13 agriffis Exp $
 
 inherit eutils
 
@@ -48,7 +48,6 @@ OLD15_PV="1.5"
 OLD15_P="${PN}-${OLD15_PV}"
 OLD14_PV="1.4-p6"
 OLD14_P="${PN}-${OLD14_PV}"
-S="${WORKDIR}/${P}"
 OLD17_S="${WORKDIR}/${OLD17_P}"
 OLD16_S="${WORKDIR}/${OLD16_P}"
 OLD15_S="${WORKDIR}/${OLD15_P}"
@@ -496,4 +495,3 @@ pkg_postinst() {
 	einfo "For instance:  WANT_AUTOMAKE=1.6"
 	echo
 }
-

@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/cc-config-1.2.8.ebuild,v 1.4 2004/07/02 08:37:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/cc-config-1.2.8.ebuild,v 1.5 2004/07/15 03:11:33 agriffis Exp $
 
 DISABLE_GEN_GCC_WRAPPERS="yes"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Utility to change the gcc compiler being used."
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
 
 KEYWORDS="x86 ppc sparc alpha mips"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -70,4 +70,3 @@ pkg_postinst() {
 		fi
 	fi
 }
-

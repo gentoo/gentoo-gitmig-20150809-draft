@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.3.ebuild,v 1.15 2004/06/24 22:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.3.ebuild,v 1.16 2004/07/15 03:08:13 agriffis Exp $
 
 IUSE=""
 
@@ -42,7 +42,6 @@ OLD15_PV="1.5"
 OLD15_P="${PN}-${OLD15_PV}"
 OLD14_PV="1.4-p5"
 OLD14_P="${PN}-${OLD14_PV}"
-S="${WORKDIR}/${P}"
 OLD15_S="${WORKDIR}/${OLD15_P}"
 OLD14_S="${WORKDIR}/${OLD14_P}"
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
@@ -338,4 +337,3 @@ pkg_postinst() {
 		fi
 	done
 }
-
