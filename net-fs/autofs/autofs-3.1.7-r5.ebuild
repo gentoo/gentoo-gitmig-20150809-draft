@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r5.ebuild,v 1.15 2005/01/07 11:54:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r5.ebuild,v 1.16 2005/03/23 01:09:02 agriffis Exp $
 
 IUSE="ldap"
 
@@ -12,7 +12,7 @@ DEPEND="ldap? ( >=net-nds/openldap-1.2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha ppc sparc ia64"
+KEYWORDS="alpha ia64 ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}
