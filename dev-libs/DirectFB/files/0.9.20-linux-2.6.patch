@@ -8,3 +8,14 @@
  
  #include <stdio.h>
  #include <stdlib.h>
+--- gfxdrivers/matrox/matrox_maven.c.orig	2004-03-04 06:59:43.268677032 -0500
++++ gfxdrivers/matrox/matrox_maven.c	2004-03-04 06:59:48.089944088 -0500
+@@ -29,7 +29,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+-#include <linux/i2c-dev.h>
++#include <linux/i2c.h>
+ 
+ #include <misc/memcpy.h>
+ #include <misc/util.h>
