@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.1 2001/01/27 02:00:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.2 2001/01/27 18:21:48 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -26,6 +26,8 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.namesys.com
 	  http://www.sistina.com/lvm/
 	  http://www.alsa-project.org"
+
+RDEPEND=">=sys-apps/reiserfs-utils-3.6.25-r1"
 
 src_unpack() {
 
