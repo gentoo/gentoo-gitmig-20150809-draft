@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6c.ebuild,v 1.1 2005/01/02 22:48:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6c.ebuild,v 1.2 2005/02/21 03:15:45 dragonheart Exp $
 
 inherit eutils webapp
 
@@ -17,7 +17,7 @@ DEPEND=""
 # TODO: RDEPEND Not just apache... but there's no virtual/webserver (yet)
 
 RDEPEND="net-www/apache
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
 	dev-db/mysql
 	virtual/cron
