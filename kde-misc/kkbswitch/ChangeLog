@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kkbswitch
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkbswitch/ChangeLog,v 1.1 2005/01/28 20:29:07 motaboy Exp $
+
+*kkbswitch-1.4.3 (28 Jan 2005)
+
+  28 Jan 2005; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +kkbswitch-1.4.3.ebuild:
+  New ebuild. Closes bug #32993.
+
