@@ -18,20 +18,7 @@
 		session_unregister( 'dbpassword' );
 		unset( $uid, $dbusername, $dbpassword );
 	} elseif ( $action == 'grab_todo' && $uid ) {
-		$public = mysql_query( "select owner,public from todos where tid=$tid" );
-		list( $todo_uid, $todo_public ) = mysql_fetch_row( $public );
-		if ( $public == 0 ) {
-			print '<p style="color:red;">That todo, if it even exists, isn\'t public.</p>';
-		} else {
-			if ( $uid == $todo_uid ) {
-				// it's already theirs! let's just make it private
-				$result = mysql_query( "update todos set public=0 where tid=$tid" );
-			} else {
-				// it's someone elses, let's move it over and make it private
-				$result = mysql_query( "update todos set public=0 where tid=$tid" );
-				$result = mysql_query( "update todos set owner=$uid where tid=$tid" );
-			}
-		}
+		grabtodo( $tid );
 	}
 
 	#if ( !isset($show_privates) ) $show_privates = 1;    // default
@@ -67,29 +54,29 @@
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'index.php?action=grab_todo&tid='.$todo['tid'] );
 		}
 	} elseif ( $list == 'by_date' ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by date desc,priority desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'index.php?action=grab_todo&tid='.$todo['tid'] );
 		}
 	} elseif ( $list == 'by_developer' && !$uid ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by developer/priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0$query_where order by owner,priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'index.php?action=grab_todo&tid='.$todo['tid'] );
 		}
 	} elseif ( $list == 'by_developer' && $uid ) {
 		print "<p style=\"font-size:medium;font-weight:bold;\">Sorted by developer/priority/date$disptxt</p>";
 		$result = mysql_query( "select * from todos where priority!=0 and owner=$uid$query_where order by priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'index.php?action=grab_todo&tid='.$todo['tid'] );
 		}
 		$result = mysql_query( "select * from todos where owner!=$uid and priority!=0$query_where order by owner,priority desc,date desc" );
 		while ( $todo = mysql_fetch_array($result) ) {
-			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+			print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'index.php?action=grab_todo&tid='.$todo['tid'] );
 		}
 	}
 	main_footer();

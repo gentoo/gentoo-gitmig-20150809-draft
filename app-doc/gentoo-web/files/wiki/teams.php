@@ -166,7 +166,7 @@
 <p><b>Team Members</b></p>
 <ul>
 <?php
-	$result = mysql_query( "select username,title,email,realname,location from users where team=$team_num" );
+	$result = mysql_query( "select username,title,email,realname,location from users where team like '%$team_num%'" );
 	while ( $dude = mysql_fetch_array($result) ) {
 ?>
 	<li> <a href="mailto:<?=$dude['email'];?>"><?=$dude['realname'];?></a> (aka <?=$dude['username'];?>) - <?=$dude['title'];?> from <?=$dude['location'];?>

@@ -175,7 +175,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 </html>
 <?php } #main_footer ?>
 
-<?php function print_todo( $title, $tid, $owner, $date, $public, $priority, $longdesc, $team, $branch ) {
+<?php function print_todo( $title, $tid, $owner, $date, $public, $priority, $longdesc, $team, $branch, $illdoitlink ) {
 	// all args should be passed hot off the database
 	global $list, $uid, $allow_tags;
 
@@ -237,7 +237,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 		</td>
 	</tr>
 	<tr>
-		<td bgcolor="#e0e0e0"><p><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
+		<td bgcolor="#e0e0e0"><p><?php if ($uid && $public == 1) { print '<a href="'.$illdoitlink."\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
 		<td bgcolor="#e0e0e0" align="right"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> (team: <?=$team.$branch;?>)</p></td>
 	</tr>
 	</table>
@@ -287,3 +287,22 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	// we found nothing; we should never get here.
 	return 0;
 } ?>
+
+<?php function grabtodo ( $tid ) {
+	global $uid;
+	$public = mysql_query( "select owner,public from todos where tid=$tid" );
+	list( $todo_uid, $todo_public ) = mysql_fetch_row( $public );
+	if ( $public == 0 ) {
+		print '<p style="color:red;">That todo, if it even exists, isn\'t public.</p>';
+	} else {
+		if ( $uid == $todo_uid ) {
+			// it's already theirs! let's just make it private
+			$result = mysql_query( "update todos set public=0 where tid=$tid" );
+		} else {
+			// it's someone elses, let's move it over and make it private
+			$result = mysql_query( "update todos set public=0 where tid=$tid" );
+			$result = mysql_query( "update todos set owner=$uid where tid=$tid" );
+		}
+	}
+} ?>
+

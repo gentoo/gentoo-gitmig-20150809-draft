@@ -9,7 +9,11 @@ if ( !$q || !$team ) {
 	print '<p style="font-color:red;">You must access this page from a teams page.</p>';
 	main_footer();
 	exit;
-} elseif ( $team == 6 ) {
+}
+
+if ( $action == 'grab_todo' && $tid ) { grabtodo( $tid ); }
+
+if ( $team == 6 ) {
 	if ( $q == 'u' ) {
 		$result = mysql_query( "select * from todos where public=1 and team=$team" );
 		?><p style="font-size:medium;font-weight:bold;">Unassigned Tasks for <?=$teamname;?> Team</p><?php
@@ -49,7 +53,7 @@ if ( !$q || !$team ) {
 
 
 while ( $todo = mysql_fetch_array($result) ) {
-	print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'] );
+	print_todo( $todo['title'], $todo['tid'], $todo['owner'], $todo['date'], $todo['public'], $todo['priority'], $todo['longdesc'], $todo['team'], $todo['branch'], 'teamtasks.php?action=grab_todo&tid='.$todo['tid']."&team=$team&q=$q" );
 }
 	main_footer();
 ?>
