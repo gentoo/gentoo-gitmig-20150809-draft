@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/poedit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.4 2004/08/13 18:42:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.5 2004/08/14 19:23:08 pythonhead Exp $
+
+  14 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> poedit-1.2.5.ebuild:
+  Changed epatch for compliance with bug# 60345
 
   13 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> poedit-1.2.3.ebuild,
   poedit-1.2.4.ebuild, poedit-1.2.5.ebuild:
