@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.51 2003/10/04 22:39:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.52 2003/11/02 15:04:24 caleb Exp $
+
+*kdeadmin-3.2.0_beta1 (02 Nov 2003)
+
+  02 Nov 2003; root <root@gentoo.org> kdeadmin-3.2.0_beta1.ebuild:
+  New beta version
 
   04 Oct 2003; Brad House <brad_mssw@gentoo.org> kdeadmin-3.1.4.ebuild:
   add ~amd64 flag
