@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.8.3.ebuild,v 1.2 2005/01/24 11:45:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.8.5.ebuild,v 1.1 2005/01/24 11:45:58 dragonheart Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/xapian-core-${PV}.tar.gz"
 HOMEPAGE="http://www.xapian.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/libc
 	sys-apps/gawk
@@ -22,10 +22,6 @@ DEPEND="virtual/libc
 
 RDEPEND="virtual/libc"
 
-src_compile() {
-	econf || die "./configure failed"
-	emake || die
-}
 
 src_install () {
 	emake DESTDIR=${D} install || die
