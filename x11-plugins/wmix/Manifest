@@ -1,6 +1,4 @@
 MD5 4d5b70d6d037ac85414b30c3495b0118 wmix-3.1.ebuild 746
-MD5 ba3a40317222c42c7dd0ba883418529f wmix-3.0-r1.ebuild 753
-MD5 7c4965031bdf14333b691cb3f2f64cdf ChangeLog 1211
+MD5 8199d234a46622677f132c3a041844b4 ChangeLog 1340
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 ad16349941063942ee420bd1937e8ad0 files/digest-wmix-3.1 59
-MD5 33d09dd5a94a0caf06b2176afccf4f25 files/digest-wmix-3.0-r1 59
