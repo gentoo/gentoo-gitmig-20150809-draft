@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10.ebuild,v 1.2 2003/06/08 21:33:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10.ebuild,v 1.3 2003/06/08 22:43:38 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -61,7 +61,7 @@ pkg_postinst() {
 	einfo ""
 	einfo " ettercap -w"
 	einfo ""
-	einfo "and then following the instructions."
+	einfo "and then follow the instructions."
 }
 
 pkg_preinst() {
