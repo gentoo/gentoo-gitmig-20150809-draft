@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.5 2003/02/28 05:22:59 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.6 2003/04/09 15:31:34 lostlogic Exp $
+
+*ck-sources-2.4.20-r5 (09 Apr 2003)
+
+  09 Apr 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r5.ebuild,
+  manifest:
+  Bump from the legendary Con
 
 *ck-sources-2.4.20-r4 (27 Feb 2003)
 
