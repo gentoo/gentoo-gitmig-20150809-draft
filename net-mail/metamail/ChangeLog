@@ -1,0 +1,13 @@
+# ChangeLog for net-mail/metamail
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.1 2002/07/23 16:19:29 raker Exp $
+
+*metamail-2.7.45 (22 Jul 2002)
+
+  22 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  metamail-2.7.45.ebuild, files/digest-metamail-2.7.45 :
+
+  Initial checkin of this package.  
+  Ebuild originally created by Alexander Holler <holler@ahsoftware.de>
+
