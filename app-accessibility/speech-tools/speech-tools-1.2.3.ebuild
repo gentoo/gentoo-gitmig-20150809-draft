@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.3 2004/03/24 17:26:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3.ebuild,v 1.4 2004/03/25 17:25:30 gustavoz Exp $
 
 inherit eutils fixheadtails
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cstr.ed.ac.uk/download/festival/1.4.3/${MY_P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc amd64"
+KEYWORDS="x86 ~ppc ~sparc amd64"
 
 RDEPEND="virtual/glibc"
 IUSE=""
@@ -28,6 +28,9 @@ src_unpack() {
 	ht_fix_file config.guess
 	sed -i 's:-O3:$(CFLAGS):' base_class/Makefile
 	sed -i 's/-fno-implicit-templates //' config/compilers/gcc_defaults.mak
+
+	# Compile fix for #41329.
+	[ `use sparc` ] && sed -i 's/-fpic/-fPIC/' config/compilers/gcc_defaults.mak
 }
 
 src_install() {
