@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.20 2004/06/28 17:35:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.21 2004/07/15 00:45:54 agriffis Exp $
 
 inherit gnome2 gnuconfig
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 
 src_compile() {
 
-	use mips && gnuconfig_update
+	gnuconfig_update
 	econf || die
 	emake || die
 
