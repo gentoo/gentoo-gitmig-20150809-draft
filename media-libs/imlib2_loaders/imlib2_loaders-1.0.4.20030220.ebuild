@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.0.4.20030220.ebuild,v 1.2 2003/02/22 08:20:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.0.4.20030220.ebuild,v 1.3 2003/03/13 22:06:50 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="image loader plugins for Imlib 2"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
@@ -9,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="X pic"
 
 DEPEND=">=media-libs/imlib2-1.0.6.2003*
@@ -24,6 +26,8 @@ src_compile() {
 	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
 	env WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
 	cd libltdl && env WANT_AUTOCONF_2_5=1 autoconf && cd ..
+
+	use alpha && append-flags '-fPIC'
 
 	econf \
 		`use_with pic` \
