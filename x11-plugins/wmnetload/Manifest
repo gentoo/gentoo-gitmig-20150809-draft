@@ -1,6 +1,6 @@
 MD5 c3fd73a65c5ca17069ab0809f375cc95 wmnetload-1.3-r1.ebuild 824
 MD5 b60a4c944b37e9df8dfd9fe341e34613 wmnetload-1.3.ebuild 689
-MD5 b986037c584700ff9a6b75d2a3165a4a ChangeLog 2195
+MD5 f1c02b75931da06e1eb75c06b128a450 ChangeLog 2227
 MD5 a4e6b8fede98f4471909cda8b29bc02d metadata.xml 600
 MD5 8287f37c009e97ceef426da1acdc9965 files/digest-wmnetload-1.3-r1 65
 MD5 91c8ced226a5e46438cc17ca8e0eaa19 files/add_support_for_libdockapp_0.5.patch 2028
