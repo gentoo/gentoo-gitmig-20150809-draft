@@ -1,8 +1,18 @@
-MD5 1aaaa7ec380086c466b48b245f5ef039 ChangeLog 1531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 430872a3731118818709d198f62e211a modplugxmms-2.03.ebuild 881
+MD5 bd1ffe95d35fff5c45fdd84916276529 ChangeLog 1692
 MD5 2344aebc207cb88f72a1c29021c9e82d modplugxmms-2.04.ebuild 1222
-MD5 f6708258d3e7af56cfb32b7cc55d695a files/digest-modplugxmms-2.03 68
+MD5 9ee7fe18ce7c5da4a2d3e2cc38cad609 modplugxmms-2.05.ebuild 1207
 MD5 d7165423584038258ba8ea95f016b073 files/digest-modplugxmms-2.04 68
 MD5 b10f6248932b7fd4ce0df1a025df6e8a files/modplugxmms-2.04-amd64.patch 1550
 MD5 347455313bf5f53d8e4266e15aa5e626 files/modplugxmms-2.04.patch 1493
+MD5 dd277f071db5bc05773e0811a3dfb887 files/digest-modplugxmms-2.05 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBk+cjArHZZzCEUG0RAhiZAJ9FScIKtX0vujv3o7GdsMYwjCvJBACeNx3J
+Tg+xiRouJDfchCxuzCprQNw=
+=tsVl
+-----END PGP SIGNATURE-----
