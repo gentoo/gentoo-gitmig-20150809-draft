@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9fa81b43763c85306c4b445b872d049 fop-0.20.5.ebuild 1104
-MD5 c72726051ed0adf4c92afc880db05dd6 ChangeLog 783
+MD5 44e9ea94278a5e3e6588ce97c83dffab ChangeLog 877
+MD5 742e25b02457a9dbbfbaf54ac0d10f87 fop-0.20.5.ebuild 1107
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBTaZQ/rLF9B432nYRAv95AKCS/5AWoKNe1YSskbr4DdMQ/eJu4ACgzDKR
-IAnJ6kr8vh9MTbzuZC05QRY=
-=SMem
------END PGP SIGNATURE-----
