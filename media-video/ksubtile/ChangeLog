@@ -1,0 +1,8 @@
+# ChangeLog for media-video/ksubtile
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ksubtile/ChangeLog,v 1.1 2005/02/01 15:19:15 greg_g Exp $
+
+  01 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> :
+  Initial import (#30907, #69906). Ebuild suggested by Thomas Ferencz
+  <strangedr@gentoo.org> and Rodrigo Severo <rodrigo.lists@fabricadeideias.com>.
+
