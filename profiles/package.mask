@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2861 2004/05/17 00:34:27 george Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2862 2004/05/18 03:01:48 dragonheart Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -771,10 +771,6 @@ x11-terms/powershell
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
 x11-libs/qt-embedded
-
-# Chad Huneycutt <chadh@gentoo.org> (31 Jul 2002)
-# new package. needs testing
-app-office/ical
 
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
