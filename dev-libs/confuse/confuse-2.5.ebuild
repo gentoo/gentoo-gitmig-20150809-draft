@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.1 2004/12/05 03:09:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.2 2005/02/20 00:52:59 vapier Exp $
 
 inherit eutils
 
@@ -21,21 +21,25 @@ RDEPEND="virtual/libc"
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ${FILESDIR}/${P}-maketest.patch
+
+	# keep this otherwise libraries will not have .so extensions
+	libtoolize --copy --force
 }
 
 src_compile() {
 	local myconf
 
-	# keep this otherwise libraries will not have .so extensions
-	libtoolize --force
-
 	use debug \
 		&& myconf="${myconf} --enable-debug=all" \
 		|| myconf="${myconf} --disable-debug"
 
-	econf `use_enable doc build-docs` `use_enable nls` ${myconf} || die
+	econf \
+		--enable-shared \
+		$(use_enable doc build-docs) \
+		$(use_enable nls) \
+		${myconf} || die
 	emake || die
 }
 
@@ -45,10 +49,10 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	dodoc AUTHORS NEWS README || die
-	if use doc; then
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS NEWS README
+	if use doc ; then
 		dohtml doc/html/*.html || die
 	fi
-	rmdir ${D}/usr/bin
+	rmdir "${D}"/usr/bin
 }
