@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.5 2004/09/15 14:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.6 2004/09/15 14:37:54 aliz Exp $
 
 inherit myth flag-o-matic
 
@@ -153,6 +153,7 @@ src_compile() {
 	sed -i -e "s:OPTFLAGS=.*:OPTFLAGS=${CFLAGS}:g" config.mak
 
 	qmake -o "Makefile" "mythtv.pro"
+	make qmake || die
 	emake -C libs/libavcodec || die
 	emake -C libs/libavformat || die
 	emake -C libs/libmyth || die
