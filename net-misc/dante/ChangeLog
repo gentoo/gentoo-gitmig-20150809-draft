@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.25 2004/04/27 21:28:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.26 2004/06/07 06:56:52 kloeri Exp $
+
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> dante-1.1.14-r2.ebuild:
+  Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> dante-1.1.14-r1.ebuild,
   dante-1.1.14-r2.ebuild:
