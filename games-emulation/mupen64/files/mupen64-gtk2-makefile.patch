@@ -1,6 +1,6 @@
---- emu64/Makefile.orig	2004-11-26 17:04:12.407300864 +0000
-+++ emu64/Makefile	2004-11-26 17:10:14.568244032 +0000
-@@ -92,46 +92,49 @@
+--- emu64/Makefile	2005-03-21 19:24:41.000000000 +0100
++++ emu64/Makefile	2005-03-21 19:21:52.000000000 +0100
+@@ -87,46 +87,49 @@
  PREFIX		=$(shell grep WITH_HOME config.h | cut -d '"' -f 2)
  SHARE		="$(PREFIX)share/mupen64/"
  
@@ -62,7 +62,7 @@
  
  main/vcr_compress.o:		main/vcr_compress.cpp
  				$(CXX) $(CXXFLAGS) -c -o $@ $< `avifile-config --cflags`
-@@ -143,13 +146,13 @@
+@@ -138,13 +141,13 @@
  ifneq ("$(shell grep VCR config.h)","\#define VCR_SUPPORT 1")
  
  mupen64:	$(OBJ) $(OBJ_X86) $(OBJ_GTK_GUI)
@@ -77,4 +77,51 @@
 +		$(CXX) $^ $(CFLAGS) $(LIB) -Wl,-export-dynamic $(GTK_LIBS) `avifile-config --libs` -L/usr/X11R6/lib -lSDL -lGL -lpthread -ldl -o $@
  		strip --strip-all $@
  endif
+ 
+diff -ru work/hack_azi_rsp_hle/Makefile work.new/hack_azi_rsp_hle/Makefile
+--- hack_azi_rsp_hle/Makefile	2005-03-21 19:25:04.000000000 +0100
++++ hack_azi_rsp_hle/Makefile	2005-03-21 19:28:01.000000000 +0100
+@@ -1,7 +1,7 @@
+ CC = gcc
+-CFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
++CFLAGS = -DUSE_GTK `pkg-config gtk+-2.0 --cflags` -fPIC
+ CXX = g++
+-CXXFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
++CXXFLAGS = -DUSE_GTK `pkg-config gtk+-2.0 --cflags` -fPIC
+ LD = g++
+ LDFLAGS =
+ 
+@@ -11,7 +11,7 @@
+ all:	$(TARGET) instruction
+ 
+ $(TARGET): $(OBJECTS)
+-	$(LD) -shared -Wl,-Bsymbolic `gtk-config --libs` $(LDFLAGS) -o $@ $(OBJECTS)
++	$(LD) -shared -Wl,-Bsymbolic `pkg-config gtk+-2.0 --libs` $(LDFLAGS) -o $@ $(OBJECTS)
+ 	strip --strip-all $@
+ 
+ instruction:
+diff -ru work/mupen64_input/Makefile work.new/mupen64_input/Makefile
+--- mupen64_input/Makefile	2005-03-21 19:24:41.000000000 +0100
++++ mupen64_input/Makefile	2005-03-21 19:28:25.000000000 +0100
+@@ -8,7 +8,7 @@
+ 
+ 
+ mupen64_input.so:	$(OBJ)
+-			$(CC) $(OBJ) -Wl,-Bsymbolic -shared -lSDL `gtk-config --cflags --libs` -o $@
++			$(CC) $(OBJ) -Wl,-Bsymbolic -shared -lSDL `pkg-config gtk+-2.0 --cflags --libs` -o $@
+ 			strip --strip-all $@
+ 
+ instruction:
+diff -ru work/mupen64_sound/Makefile work.new/mupen64_sound/Makefile
+--- mupen64_sound/Makefile	2005-03-21 19:25:04.000000000 +0100
++++ mupen64_sound/Makefile	2005-03-21 19:28:58.000000000 +0100
+@@ -1,7 +1,7 @@
+ CC = gcc
+-CFLAGS = `gtk-config --cflags` -DUSE_GTK
++CFLAGS = `pkg-config gtk+-2.0 --cflags` -DUSE_GTK
+ LD = gcc
+-LDFLAGS = -shared -Wl,-Bsymbolic `gtk-config --libs` -lpthread
++LDFLAGS = -shared -Wl,-Bsymbolic `pkg-config gtk+-2.0 --libs` -lpthread
+ 
+ OBJECTS	=	main.o
  
