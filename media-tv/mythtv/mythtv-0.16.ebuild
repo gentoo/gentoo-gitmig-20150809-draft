@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.2 2004/09/10 16:54:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.3 2004/09/10 17:34:25 aliz Exp $
 
-inherit myth flag-o-matic eutils
+inherit myth flag-o-matic
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
@@ -51,10 +51,6 @@ pkg_setup() {
 }
 
 setup_pro() {
-	sed -i settings.pro \
-		-e "4s:.*:PREFIX = /usr:" \
-		-e "17s:.*:QMAKE_CXXFLAGS_RELEASE = ${CXXFLAGS}:"
-
 	if [ "${ARCH}" == "amd64" ] || ! use mmx; then
 		sed -i settings.pro \
 			-e "s:DEFINES += MMX:DEFINES -= MMX:"
