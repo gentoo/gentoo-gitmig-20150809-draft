@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.11 2003/03/03 10:52:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.12 2003/03/06 20:57:49 azarah Exp $
+
+  06 Mar 2003; Martin Schlemmer <azarah@gentoo.org> eject-2.0.12-r1.ebuild :
+  Get eject to build with kernel-2.5.x.
 
   03 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   This update should not be classified as a security update. The advisory says that eject is only
