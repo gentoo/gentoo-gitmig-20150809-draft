@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2.ebuild,v 1.6 2003/09/20 06:36:03 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2.ebuild,v 1.7 2003/09/20 07:03:44 obz Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -32,9 +32,11 @@ RDEPEND="${DEPEND}
 	dev-tex/chktex"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
-	patch -p0 < $FILESDIR/$P-configure.diff
+	epatch ${FILESDIR}/${P}-nomktex.patch
+
 }
 
 src_compile() {
