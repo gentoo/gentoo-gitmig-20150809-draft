@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.19 2004/07/13 23:41:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.20 2004/07/22 10:19:32 usata Exp $
+
+  22 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> libid3tag-0.15.1b.ebuild:
+  Added to macos. See bug #57448
 
   14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libid3tag-0.15.1b.ebuild:
   Stable on alpha.
