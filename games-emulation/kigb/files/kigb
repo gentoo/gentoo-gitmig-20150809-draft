@@ -1,14 +1,16 @@
 #!/bin/bash
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/files/kigb,v 1.2 2004/05/30 00:54:33 mr_bones_ Exp $
 
-if [ ! -d ${HOME}/.kigb ] ; then
-	mkdir -p ${HOME}/.kigb
-	cd ${HOME}/.kigb
+kigb_dir="${HOME}/.kigb"
 
-	ln -s /opt/kigb/doc doc
+if [ ! -d "${kigb_dir}" ] ; then
+	mkdir -p "${kigb_dir}"
+	cd "${kigb_dir}"
+	mkdir cfg inp rom save snap state
 	ln -s /opt/kigb/kigb kigb
 fi
 
-cd ${HOME}/.kigb
-mkdir -p cfg inp rom save snap state
-
+cd "${kigb_dir}"
 exec ./kigb "$@"
