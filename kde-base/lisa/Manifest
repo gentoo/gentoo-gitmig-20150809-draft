@@ -1,6 +1,4 @@
-MD5 eaf2facc8397a948de4514de2b6f1a75 lisa-3.4.0_beta2.ebuild 991
 MD5 5bc8c307b63a8e2407b34439ec768765 lisa-3.4.0.ebuild 992
-MD5 ee98b8f378a0ac3229666c6c22123c8f lisa-3.4.0_beta1.ebuild 991
 MD5 8a63ad4bda9e0bab7bbcdaec90d5dc65 lisa-3.4.0_rc1.ebuild 993
 MD5 3806c2a393569088eeeb0f5103f52f3d ChangeLog 1180
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
@@ -9,6 +7,4 @@ MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-lisa-3.4.0_rc1 389
 MD5 18120584a2975ce21312780ef0eaf12b files/reslisa 556
 MD5 01dd2bacee59738f96d17c77774a5102 files/reslisa.conf 450
 MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
-MD5 4af013c3a73d9988c67cfbfcc7fff890 files/digest-lisa-3.4.0_beta1 223
-MD5 270151d2baae235bbae8bba311f76072 files/digest-lisa-3.4.0_beta2 303
 MD5 622d3497792334fa87e483e249da693d files/digest-lisa-3.4.0 70

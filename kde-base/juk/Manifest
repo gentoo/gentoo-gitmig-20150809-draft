@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd403ce5883f84001d679b1819077713 juk-3.4.0_beta2.ebuild 801
-MD5 3c91c399860f762867177864b6e0f1a8 juk-3.4.0_beta1.ebuild 712
 MD5 fa366be2aae24c9f3f2e6d273f523176 juk-3.4.0_rc1.ebuild 801
 MD5 4f2e9563ff7f9e44ddfe22f447598f8f juk-3.4.0.ebuild 801
 MD5 3256dfcd583198b2d16fea64b00428fb ChangeLog 1377
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-juk-3.4.0_beta1 231
-MD5 c43e1f638e3c583d4d696aad7f994232 files/digest-juk-3.4.0_beta2 314
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-juk-3.4.0 73
 MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-juk-3.4.0_rc1 403
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNa3nntT9W3vfTuoRAo02AJ0dloeglWaLQaKFL1oM5v838/DvKgCfUSAq
-LZlpIt3o5Fm6ndyGGdR3q2o=
-=aZ7z
------END PGP SIGNATURE-----

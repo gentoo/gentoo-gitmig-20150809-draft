@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3c11116ed712efce1d9bb9c635581890 akode-3.4.0.ebuild 1112
-MD5 9e3cd79092157756d51bfa495c17028a akode-3.4.0_beta1.ebuild 760
 MD5 1e671b3b0fc0dd2ca24a781580e539e2 akode-3.4.0_rc1.ebuild 1110
-MD5 19529bd77e22c1f958ef23d4b800a38f akode-3.4.0_beta2.ebuild 1179
 MD5 d0fbcfa6e16d318ef10dbc0897b1f018 ChangeLog 1254
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-akode-3.4.0_beta1 231
-MD5 c43e1f638e3c583d4d696aad7f994232 files/digest-akode-3.4.0_beta2 314
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-akode-3.4.0 73
 MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-akode-3.4.0_rc1 403
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNa+0ntT9W3vfTuoRAqnvAJ9XF/5L+eeb1kAZAXKIkSGai/eTZQCfRDkr
-vkopQSEIMKscRx56Zg1k+hE=
-=nYPV
------END PGP SIGNATURE-----

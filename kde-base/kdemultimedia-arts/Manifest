@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c71946404e8e758223f50c4c97d84575 kdemultimedia-arts-3.4.0_rc1.ebuild 722
-MD5 f9ee625150507afdfd95d2c55f12e5e3 kdemultimedia-arts-3.4.0_beta2.ebuild 724
 MD5 6c83104a8b5b3249e820df18657ad1f1 kdemultimedia-arts-3.4.0.ebuild 722
 MD5 e88428030f6c2adac88675fef989cbb8 ChangeLog 1273
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 dbc2ca676dece02773c25ea0181dcaaa kdemultimedia-arts-3.4.0_beta1.ebuild 724
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-kdemultimedia-arts-3.4.0 73
-MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-kdemultimedia-arts-3.4.0_beta1 231
-MD5 c43e1f638e3c583d4d696aad7f994232 files/digest-kdemultimedia-arts-3.4.0_beta2 314
 MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-kdemultimedia-arts-3.4.0_rc1 403
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNauYntT9W3vfTuoRAtrEAJ9bGb8DmDi6X3Z6rSrFfQe+Dvyh7wCeKBbC
-UaSXq3l0BtIfsKcWYXIRJWY=
-=hbrT
------END PGP SIGNATURE-----
