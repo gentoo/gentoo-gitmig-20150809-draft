@@ -1,6 +1,26 @@
+diff -ruN MPlayer-1.0pre5.orig/libvo/vo_x11.c MPlayer-1.0pre5/libvo/vo_x11.c
+--- MPlayer-1.0pre5.orig/libvo/vo_x11.c	2004-10-05 20:33:25.882255632 +0200
++++ MPlayer-1.0pre5/libvo/vo_x11.c	2004-10-05 20:33:48.286849616 +0200
+@@ -39,7 +39,6 @@
+ #include "sub.h"
+ 
+ #include "../postproc/swscale.h"
+-#include "../postproc/swscale_internal.h"       //FIXME
+ #include "../postproc/rgb2rgb.h"
+ #include "../libmpcodecs/vf_scale.h"
+ 
+@@ -49,6 +48,7 @@
+ #include "../Gui/interface.h"
+ #include "../mplayer.h"
+ #endif
++#include "../postproc/swscale_internal.h"       //FIXME
+ 
+ static vo_info_t info = {
+     "X11 ( XImage/Shm )",
+Files MPlayer-1.0pre5.orig/postproc/.yuv2rgb_altivec.c.swp and MPlayer-1.0pre5/postproc/.yuv2rgb_altivec.c.swp differ
 diff -ruN MPlayer-1.0pre5.orig/postproc/swscale.c MPlayer-1.0pre5/postproc/swscale.c
---- MPlayer-1.0pre5.orig/postproc/swscale.c	2004-10-03 22:05:57.921244408 +0200
-+++ MPlayer-1.0pre5/postproc/swscale.c	2004-10-03 22:07:01.582566416 +0200
+--- MPlayer-1.0pre5.orig/postproc/swscale.c	2004-10-05 20:33:25.075378296 +0200
++++ MPlayer-1.0pre5/postproc/swscale.c	2004-10-05 20:33:48.276851136 +0200
 @@ -1728,7 +1728,7 @@
  	//FIXME factorize
  
@@ -11,27 +31,24 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/swscale.c MPlayer-1.0pre5/postproc/swsca
  	return 0;
  }
 diff -ruN MPlayer-1.0pre5.orig/postproc/swscale_internal.h MPlayer-1.0pre5/postproc/swscale_internal.h
---- MPlayer-1.0pre5.orig/postproc/swscale_internal.h	2004-10-03 22:05:57.921244408 +0200
-+++ MPlayer-1.0pre5/postproc/swscale_internal.h	2004-10-03 22:07:54.155574104 +0200
-@@ -20,6 +20,15 @@
+--- MPlayer-1.0pre5.orig/postproc/swscale_internal.h	2004-10-05 20:33:25.075378296 +0200
++++ MPlayer-1.0pre5/postproc/swscale_internal.h	2004-10-05 20:33:48.277850984 +0200
+@@ -19,6 +19,12 @@
+ #ifndef SWSCALE_INTERNAL_H
  #define SWSCALE_INTERNAL_H
  
- #include "../mp_msg.h"
-+#ifdef HAVE_ALTIVEC_H
-+#include <altivec.h>
-+#endif
-+
 +#ifdef CONFIG_DARWIN
 +#define AVV(x...) (x)
 +#else
 +#define AVV(x...) {x}
 +#endif
++
+ #include "../mp_msg.h"
  
  #define MSG_WARN(args...) mp_msg(MSGT_SWS,MSGL_WARN, ##args )
- #define MSG_FATAL(args...) mp_msg(MSGT_SWS,MSGL_FATAL, ##args )
 diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c
---- MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c	2004-10-03 22:05:57.919244712 +0200
-+++ MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c	2004-10-03 22:09:11.512814016 +0200
+--- MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c	2004-10-05 20:33:25.073378600 +0200
++++ MPlayer-1.0pre5/postproc/yuv2rgb_altivec.c	2004-10-05 20:36:21.247596048 +0200
 @@ -64,6 +64,7 @@
  */
  #include <stdio.h>
@@ -162,7 +179,8 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postpr
 +#define out_rgba(a,b,c,ptr)  vec_mstrgb32(typeof(a),a,b,c,((typeof (a))AVV(0)),ptr)
 +#define out_argb(a,b,c,ptr)  vec_mstrgb32(typeof(a),((typeof (a))AVV(0)),a,b,c,ptr)
  #define out_rgb24(a,b,c,ptr) vec_mstrgb24(a,b,c,ptr)
- #define out_bgr24(a,b,c,ptr) vec_mstrgb24(c,b,a,ptr)
+-#define out_bgr24(a,b,c,ptr) vec_mstrgb24(c,b,a,ptr)
++#define out_bgr24(a,b,c,ptr) vec_mstbgr24(c,b,a,ptr)
  
  DEFCSP420_CVT (yuv2_abgr32, out_abgr)
 +#if 1
@@ -390,17 +408,11 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postpr
      default: return NULL;
      }
      break;
-@@ -565,102 +722,45 @@
+@@ -565,102 +722,38 @@
    return NULL;
  }
  
-+static uint16_t roundToInt16(int64_t f){
-+	int r= (f + (1<<15))>>16;
-+	     if(r<-0x7FFF) return 0x8000;
-+	else if(r> 0x7FFF) return 0x7FFF;
-+	else               return r;
-+}
- 
+-
 -int yuv2rgb_altivec_init_tables (SwsContext *c, const int inv_table[4])
 +void yuv2rgb_altivec_init_tables (SwsContext *c, const int inv_table[4],int brightness,int contrast, int saturation)
  {
@@ -528,7 +540,7 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postpr
  }
  
  
-@@ -672,15 +772,16 @@
+@@ -672,15 +765,16 @@
  {
    int i,j;
    short tmp __attribute__((aligned (16)));
@@ -548,28 +560,9 @@ diff -ruN MPlayer-1.0pre5.orig/postproc/yuv2rgb_altivec.c MPlayer-1.0pre5/postpr
    unsigned long scratch[16] __attribute__ ((aligned (16)));
  
    vector signed short *vYCoeffsBank, *vCCoeffsBank;
-@@ -832,5 +933,3 @@
+@@ -832,5 +926,3 @@
    if (vCCoeffsBank) free (vCCoeffsBank);
  
  }
 -
 -
-diff -ruN MPlayer-1.0pre5.orig/libvo/vo_x11.c MPlayer-1.0pre5/libvo/vo_x11.c
---- MPlayer-1.0pre5.orig/libvo/vo_x11.c	2004-10-03 22:58:23.946975800 +0200
-+++ MPlayer-1.0pre5/libvo/vo_x11.c	2004-10-03 22:59:45.485580048 +0200
-@@ -39,7 +39,6 @@
- #include "sub.h"
- 
- #include "../postproc/swscale.h"
--#include "../postproc/swscale_internal.h"       //FIXME
- #include "../postproc/rgb2rgb.h"
- #include "../libmpcodecs/vf_scale.h"
- 
-@@ -49,6 +48,7 @@
- #include "../Gui/interface.h"
- #include "../mplayer.h"
- #endif
-+#include "../postproc/swscale_internal.h"       //FIXME
- 
- static vo_info_t info = {
-     "X11 ( XImage/Shm )",
