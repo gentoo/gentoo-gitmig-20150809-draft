@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r1.ebuild,v 1.5 2004/03/25 15:41:17 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r2.ebuild,v 1.1 2004/03/25 15:41:17 jhuebel Exp $
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="-* ~amd64"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
@@ -123,6 +123,8 @@ src_install() {
 		dosym /usr/lib/libpt_linux_ppc_r.so.${PV} /usr/lib/libpt.so
 	elif [ ${ARCH} = "sparc" ] ; then
 		dosym /usr/lib/libpt_linux_sparc_r.so.${PV} /usr/lib/libpt.so
+	elif [ ${ARCH} = "amd64" ] ; then
+		dosym /usr/lib/libpt_linux_x86_64_r.so.${PV} /usr/lib/libpt.so
 	else
 		dosym /usr/lib/libpt_linux_x86_r.so.${PV} /usr/lib/libpt.so
 	fi
