@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.37 2003/08/18 05:06:22 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.38 2003/08/19 00:16:31 g2boojum Exp $
+
+*exim-4.22 (18 Aug 2003)
+
+  18 Aug 2003; Nick Hadaway <raker@gentoo.org> exim-4.22.ebuild:
+  Upstream bug fixes for ipv6 and a compile warning among others.
+  No ebuild changes.
 
 *exim-4.21 (17 Aug 2003)
 
