@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <strider@gentoo.org> (09 Dec 2002)
-# java-config bugfixes #9045
-=dev-java/java-config-0.2.7
-
 # <danarmak@gentoo.org> (08 Dec 2002)
 # kde 3.1 rc5: masked permanently
 ~kde-base/arts-1.1.0_rc5
