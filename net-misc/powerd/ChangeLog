@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/powerd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/powerd/ChangeLog,v 1.1 2003/08/02 20:34:45 iggy Exp $
+
+*powerd-2.0.2 (02 Aug 2003)
+
+  02 Aug 2003; <iggy@gentoo.org> metadata.xml, powerd-2.0.2.ebuild,
+  files/powerd-init:
+  new package, same functionality as nut, thanks to Tiemo Kieft 
+  <blubber@timesdesign.nl>
+
