@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.2.ebuild,v 1.1 2002/02/01 19:25:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.2.ebuild,v 1.2 2002/02/01 21:41:19 g2boojum Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -34,6 +34,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.11
 	>=sys-devel/libtool-1.4.1-r1
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	
+	cd ${S}
+	patch -p0 < ${FILESDIR}/filter-crash.patch
+}
 
 src_compile() {
 
