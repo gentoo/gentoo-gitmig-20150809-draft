@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.18 2005/01/23 10:31:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.19 2005/01/30 08:56:10 cardoe Exp $
+
+*ndiswrapper-1.0 (30 Jan 2005)
+
+  30 Jan 2005; Doug Goldstein <cardoe@gentoo.org> +ndiswrapper-1.0.ebuild:
+  revision bump, smp & amd64 should work now, update chipset URL
 
 *ndiswrapper-1.0_rc4 (23 Jan 2005)
 

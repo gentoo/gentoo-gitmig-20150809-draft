@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.12-r3.ebuild,v 1.2 2005/01/15 21:11:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-0.12-r3.ebuild,v 1.3 2005/01/30 08:56:10 cardoe Exp $
 
 CONFIG_CHECK="!4KSTACKS"
 
@@ -96,7 +96,7 @@ pkg_postinst() {
 	einfo "As of release 0.9, you no longer have to call 'loadndiswrapper'"
 	einfo "explicitly.  The module will handle it automatically."
 	einfo
-	einfo "check http://ndiswrapper.sf.net/supported_chipsets.html for drivers"
+	einfo "check http://ndiswrapper.sf.net/phpwiki/index.php/List for drivers"
 	I=`lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4`
 	einfo "Look for the following on that page for your driver:"
 	einfo ${I}
