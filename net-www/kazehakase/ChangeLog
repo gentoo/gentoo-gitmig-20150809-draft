@@ -1,6 +1,9 @@
 # ChangeLog for net-www/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.31 2005/02/09 04:06:43 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.32 2005/02/09 23:01:09 matsuu Exp $
+
+  10 Feb 2005; MATSUU Takuto <matsuu@gentoo.org> kazehakase-0.2.5.ebuild:
+  Fixed depends. kazehakase-0.2.5 does not support mozilla-1.6.
 
 *kazehakase-0.2.5 (09 Feb 2005)
 
