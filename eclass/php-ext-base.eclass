@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.8 2003/09/09 08:22:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.9 2003/11/07 23:12:06 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -36,8 +36,11 @@ EXT_DIR="`php-config --extension-dir`"
 
 DEPEND="${DEPEND}
 		virtual/php
-		=sys-devel/m4-1.4
+		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
+
+RDEPEND="${RDEPEND}
+		virtual/php"
 
 php-ext-base_buildinilist () {
 	# work out the list of .ini files to edit/add to

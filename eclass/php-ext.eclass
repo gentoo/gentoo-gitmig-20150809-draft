@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.3 2003/07/12 16:27:31 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.4 2003/11/07 23:12:06 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -29,8 +29,11 @@ EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 
 DEPEND="${DEPEND}
 		virtual/php
-		=sys-devel/m4-1.4
+		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
+
+RDEPEND="${RDEPEND} 
+		 virtual/php"
 
 php-ext_buildinilist () {
 	# work out the list of .ini files to edit/add to

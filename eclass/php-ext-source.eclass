@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.5 2003/07/26 15:30:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source.eclass,v 1.6 2003/11/07 23:12:06 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -29,8 +29,11 @@ EXPORT_FUNCTIONS src_compile src_install
 
 DEPEND="${DEPEND}
 		virtual/php
-		=sys-devel/m4-1.4
+		>=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
+
+RDEPEND="${RDEPEND}
+		virtual/php"
 
 php-ext-source_src_compile() {
 	#phpize creates configure out of config.m4
