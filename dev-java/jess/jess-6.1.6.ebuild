@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.6.ebuild,v 1.2 2004/03/24 23:29:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.6.ebuild,v 1.3 2004/06/02 22:28:05 agriffis Exp $
 
 inherit java-pkg
 
@@ -31,7 +31,7 @@ src_install() {
 
 	dodoc README
 
-	if [ `use doc` ]; then
+	if use doc; then
 		einfo "Installing documentation..."
 		dohtml -r docs/*
 		insinto /usr/share/doc/${P}/examples/

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.1 2004/02/14 19:44:30 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.1.ebuild,v 1.2 2004/06/02 22:27:27 agriffis Exp $
 
 inherit java-pkg
 
@@ -31,5 +31,5 @@ src_install() {
 	dobin jaclsh
 	dodoc README ChangeLog known_issues.txt new_features.txt
 
-	[ `use doc` ] && dohtml -r docs/*
+	use doc && dohtml -r docs/*
 }
