@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.12 2002/08/18 23:54:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.13 2002/08/19 16:56:49 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -117,7 +117,7 @@ DIR=$DIR"
 	# we make sure a CVS/ dir exists in our module subdir with the right
 	# Root and Repository entries in it and cvs update.
 	
-	newserver=":pserver:anonymous@${ECVS_SERVER}"
+	newserver=":pserver:${ECVS_USER}@${ECVS_SERVER}"
 	
 	# CVS/Repository files can't (I think) contain two concatenated slashes
 	if [ -n "$ECVS_SUBDIR" ]; then
