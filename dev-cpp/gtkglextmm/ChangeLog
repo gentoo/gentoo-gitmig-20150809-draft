@@ -1,0 +1,27 @@
+# ChangeLog for dev-cpp/gtkglextmm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.1 2003/09/21 13:41:09 liquidx Exp $
+
+  21 Sep 2003; Alastair Tse <liquidx@gentoo.org> gtkglextmm-0.7.1.ebuild,
+  gtkglextmm-1.0.0.ebuild, metadata.xml:
+  moving from x11-libs/gtkglextmm to dev-cpp/gtkglextmm
+
+  13 Jul 2003; Martin Holzer <mholzer@gentoo.org> gtkglextmm-0.7.1.ebuild,
+  gtkglextmm-0.99.1.ebuild, gtkglextmm-1.0.0.ebuild:
+  update x11-libs/gtkmm to dev-cpp/gtkmm
+
+*gtkglextmm-1.0.0 (22 May 2003)
+
+  22 May 2003; Alastair Tse <liquidx@gentoo.org> gtkglextmm-1.0.0.ebuild:
+  version bump.
+
+*gtkglextmm-0.99.1 (05 May 2003)
+
+  05 May 2003; Alastair Tse <liquidx@gentoo.org> gtkglextmm-0.99.1.ebuild:
+  version bump
+
+*gtkglextmm-0.7.1 (26 Apr 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> gtkglextmm-0.7.1.ebuild:
+  initial ebuild
+
