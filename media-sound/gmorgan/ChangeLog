@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.1 2003/08/15 02:50:33 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.2 2003/09/20 12:13:52 jje Exp $
+
+*gmorgan-0.16 (20 Sep 2003)
+
+  20 Sep 2003; jje <jje@gentoo.org> gmorgan-0.16.ebuild:
+  Version bump (log over due...) Closes #26886.
+  
+  Submitted by: Josep Andreu <holborn@telefonica.net>
 
 *gmorgan-0.12 (14 Aug 2003)
 
