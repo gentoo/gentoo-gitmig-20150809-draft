@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.176 2005/02/02 11:16:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.177 2005/02/07 20:00:13 greg_g Exp $
+
+*kdebase-3.3.2-r2 (07 Feb 2005)
+
+  07 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kdebase-3.3.2-r2.ebuild:
+  Remove KDEDIR from the environment (#33079). Depend on kdebase-pam as a
+  provider for files in /etc/pam.d (#16022). Set proper permissions on
+  agent-startup.sh and agent-shutdown.sh (#76719, #76720). Make kdm use
+  /usr/share/xsessions to list available sessions.
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> kdebase-3.4.0_beta1.ebuild:
   mark ~amd64
