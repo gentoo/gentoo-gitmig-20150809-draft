@@ -164,7 +164,7 @@ sys-kernel/ac-sources
 
 # <brad@gentoo.org> (20 Nov 2003)
 # Mask the experimental Mozilla's
->net-www/mozilla-1.5-r1
+>net-www/mozilla-1.6
 
 # <tad@gentoo.org> (11 Nov 2003)
 # 1.0 is final release, previous versions were snapshots.
