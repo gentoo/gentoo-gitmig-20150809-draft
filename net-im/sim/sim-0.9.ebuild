@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.7 2003/11/04 07:57:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.ebuild,v 1.1 2003/11/04 07:57:17 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz"
 HOMEPAGE="http://sim-icq.sourceforge.net"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc -amd64"
 SLOT="0"
 IUSE="ssl kde"
 
@@ -24,7 +24,9 @@ DEPEND="$DEPEND sys-devel/flex"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-nostl.diff
+	sed -i "s:head -\([0-9]\):head -n \1:g" acinclude.m4 aclocal.m4 configure
+	sed -i "s:\.\/Makefile:Makefile:g" configure
+	sed -i 's:rm -rf $(sim_plugindir)/.*::g' plugins/*/Makefile.in
 }
 
 src_compile() {
@@ -41,15 +43,10 @@ src_compile() {
 		need-qt 3
 	fi
 
-	need-automake 1.6
-	need-autoconf 2.5
-
-	make -f admin/Makefile.common
-
 	use kde && kde_src_compile myconf
 
 	econf $myconf --without-gkrellm || die
-	make || die
+	emake || die
 }
 
 src_install() {
