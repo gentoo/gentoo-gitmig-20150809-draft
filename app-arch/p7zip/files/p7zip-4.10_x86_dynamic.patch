@@ -1,0 +1,11 @@
+--- makefile.machine.orig 2004-11-11 20:22:14.157486824 +0100
++++ makefile.machine      2004-11-11 20:22:20.596507944 +0100
+@@ -7,7 +7,5 @@
+ CXX=g++ $(ALLFLAGS)
+ CC=gcc $(ALLFLAGS)
+
+-#LOCAL_LIBS=-lpthread
+-# static linkage
+-LOCAL_LIBS=-static -lpthread
++LOCAL_LIBS=-lpthread
+
