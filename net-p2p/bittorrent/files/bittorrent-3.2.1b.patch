@@ -1,0 +1,146 @@
+--- btdownloadgui.py	2003-05-06 12:44:32.000000000 +0200
++++ /usr/bin/btdownloadgui.py	2003-05-06 10:31:18.000000000 +0200
+@@ -21,7 +21,7 @@
+         return '<unknown>'
+     if n == 0:
+         return 'complete!'
+-    n = int(n)
++    n = int(long(n))
+     h, r = divmod(n, 60 * 60)
+     m, sec = divmod(r, 60)
+     if h > 1000000:
+@@ -128,8 +128,8 @@
+ 
+     def onUpdateStatus(self, fractionDone, timeEst, downRate, upRate, activity):
+         if fractionDone is not None and not self.fin:
+-            self.gauge.SetValue(int(fractionDone * 1000))
+-            self.frame.SetTitle('%d%% %s - BitTorrent %s' % (int(fractionDone*100), self.filename, version))
++            self.gauge.SetValue(int(long(fractionDone * 1000)))
++            self.frame.SetTitle('%d%% %s - BitTorrent %s' % (int(long(fractionDone*100)), self.filename, version))
+         if timeEst is not None:
+             self.timeEstText.SetLabel(hours(timeEst))
+         if activity is not None and not self.fin:
+--- btdownloadheadless.py	2003-03-17 20:26:39.000000000 +0100
++++ /usr/bin/btdownloadheadless.py	2003-05-06 10:32:01.000000000 +0200
+@@ -58,7 +59,7 @@
+     def display(self, fractionDone = None, timeEst = None, 
+             downRate = None, upRate = None, activity = None):
+         if fractionDone is not None:
+-            self.percentDone = str(float(int(fractionDone * 1000)) / 10)
++            self.percentDone = str(float(long(fractionDone * 1000)) / 10)
+         if timeEst is not None:
+             self.timeEst = hours(timeEst)
+         if activity is not None and not self.done:
+--- BitTorrent/Choker.py	2003-03-25 09:32:18.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/Choker.py	2003-05-06 10:33:58.000000000 +0200
+@@ -59,7 +59,7 @@
+ 
+     def connection_made(self, connection, p = None):
+         if p is None:
+-            p = randrange(-2, len(self.connections) + 1)
++            p = randrange(-2, len(self.connections) + 1, int=long)
+         self.connections.insert(max(p, 0), connection)
+         self._rechoke()
+ 
+--- BitTorrent/track.py	2003-03-28 03:10:45.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/track.py	2003-05-06 10:34:24.000000000 +0200
+@@ -230,7 +230,7 @@
+                 if not value.get('nat'):
+                     cache.append({'peer id': key, 'ip': value['ip'], 
+                         'port': value['port']})
+-            shuffle(cache)
++            shuffle(cache, int=long)
+         data['peers'] = cache[-rsize:]
+         del cache[-rsize:]
+         connection.answer((200, 'OK', {'Content-Type': 'text/plain', 'Pragma': 'no-cache'}, bencode(data)))
+--- BitTorrent/EndgameDownloader.py	2002-12-27 11:06:55.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/EndgameDownloader.py	2003-05-06 10:35:59.000000000 +0200
+@@ -27,7 +27,7 @@
+             self.interested = old.interested
+             self.measure = old.measure
+             self.last = old.last
+-            shuffle(downloader.requests)
++            shuffle(downloader.requests, int=long)
+             for h in self.have:
+                 if h:
+                     self.unhave -= 1
+@@ -47,7 +47,7 @@
+     def got_unchoke(self):
+         if not self.choked or not self.interested:
+             return
+-        shuffle(self.downloader.requests)
++        shuffle(self.downloader.requests, int=long)
+         for (index, begin, length) in self.downloader.requests:
+             if self.have[index]:
+                 self.connection.send_request(index, begin, length)
+@@ -89,7 +89,7 @@
+                 self.downloader.requests.append((index, a, b))
+             for d in self.downloader.downloads:
+                 if not d.choked and d.have[index]:
+-                    shuffle(n)
++                    shuffle(n, int=long)
+                     for (a, b) in n:
+                         if a != begin or d is self:
+                             d.send_request(index, a, b)
+@@ -121,7 +121,7 @@
+         self.unhave -= 1
+         if self.downloader.storage.do_I_have(index):
+             return
+-        shuffle(self.downloader.requests)
++        shuffle(self.downloader.requests, int=long)
+         for i, begin, length in self.downloader.requests:
+             if i == index:
+                 self.send_request(i, begin, length)
+@@ -133,7 +133,7 @@
+         for h in self.have:
+             if h:
+                 self.unhave -= 1
+-        shuffle(self.downloader.requests)
++        shuffle(self.downloader.requests, int=long)
+         for i, begin, length in self.downloader.requests:
+             if self.have[i]:
+                 self.send_request(i, begin, length)
+--- BitTorrent/PiecePicker.py	2003-02-02 06:47:20.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/PiecePicker.py	2003-05-06 10:42:13.000000000 +0200
+@@ -27,7 +27,7 @@
+                 break
+         self.num_done += 1
+         y = len(interests) - self.num_done
+-        x = randrange(y + 1)
++        x = randrange(int(y + 1), int=long)
+         last = interests[x]
+         interests[x] = interests[y]
+         interests[y] = last
+@@ -49,7 +49,7 @@
+             self.l = []
+             for x in self.picker.interests[1:]:
+                 self.l.extend(x)
+-            shuffle(self.l)
++            shuffle(self.l, int=long)
+         if not self.l:
+             raise StopIteration
+         return self.l.pop()
+--- BitTorrent/RawServer.py	2003-03-27 04:47:04.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/RawServer.py	2003-05-06 10:43:41.000000000 +0200
+@@ -187,7 +187,8 @@
+                         period = self.funcs[0][0] - time()
+                     if period < 0:
+                         period = 0
+-                    events = self.poll.poll(period * timemult)
++                    permult = period * timemult
++		    events = self.poll.poll(int(long(permult)))
+                     if self.doneflag.isSet():
+                         return
+                     while len(self.funcs) > 0 and self.funcs[0][0] <= time():
+--- BitTorrent/StorageWrapper.py	2003-03-21 07:15:09.000000000 +0100
++++ /usr/lib/python2.2/site-packages/BitTorrent/StorageWrapper.py	2003-05-06 10:44:52.000000000 +0200
+@@ -46,7 +46,8 @@
+                 self._check_single(i)
+                 if flag.isSet():
+                     return
+-                statusfunc(fractionDone = float(i+1)/len(hashes))
++                fractionDone = float(i+1)/len(hashes)
++		statusfunc(fractionDone)
+         else:
+             for i in xrange(len(hashes)):
+                 self._check_single(i, false)
