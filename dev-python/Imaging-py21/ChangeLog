@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/Imaging-py21
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/ChangeLog,v 1.1 2003/03/08 10:57:57 kutsuya Exp $
+
+*Imaging-py21-1.1.3-r1 (08 Mar 2003)
+
+  08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org>
+  Imaging-py21-1.1.3-r1.ebuild: Inital import. Basically a fork of the 
+  non-py21 ebuild, but installs in python2.1.
+
