@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.35 2003/10/09 12:18:49 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.36 2003/10/11 20:37:24 pappy Exp $
+
+  11 Oct 2003; Alexander Gabert <pappy@gentoo.org> ntp-4.1.2.ebuild:
+  added hardened-gcc configure check flags and removal later for proper etdyn
+  build
 
   09 Oct 2003; <tuxus@gentoo.org> ntp-4.1.2.ebuild:
   stable on mips
