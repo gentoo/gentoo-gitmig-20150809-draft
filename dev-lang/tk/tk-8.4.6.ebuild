@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.3 2004/04/20 09:49:31 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.4.6.ebuild,v 1.4 2004/04/24 19:00:40 port001 Exp $
 
 inherit eutils
+
+IUSE="threads"
 
 DESCRIPTION="Tk Widget Set"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
@@ -20,6 +22,21 @@ DEPEND=">=sys-apps/sed-4.0.5
 
 S=${WORKDIR}/${PN}${PV}
 
+pkg_setup() {
+
+	if [ "`use threads`" ]
+	then
+		ewarn ""
+		ewarn "PLEASE NOTE: You are compiling ${P} with"
+		ewarn "threading enabled."
+		ewarn "Threading is not supported by all applications"
+		ewarn "that compile against tcl. You use threading at"
+		ewarn "your own discretion."
+		ewarn ""
+		sleep 5
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}/library
@@ -28,9 +45,18 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/unix
+
+	local local_config_use=""
+
+	if [ "`use threads`" ]
+	then
+		local_config_use="--enable-threads"
+	fi
+
 	econf \
 		--with-tcl=/usr/lib \
-		--enable-threads || die
+		${local_config_use} || die
+
 	emake CFLAGS="${CFLAGS}" || die
 }
 
