@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.20 2003/10/20 10:37:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.21 2003/10/21 14:08:22 max Exp $
+
+  21 Oct 2003; Max Kalika <max@gentoo.org> files/upsd.rc6:
+  Fix pid path.
 
 *nut-1.5.6-r1 (20 Oct 2003)
 *nut-1.4.0-r2 (20 Oct 2003)
