@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/ChangeLog,v 1.1 2005/01/26 11:26:53 uberlord Exp $
+
+*web-apps/net2ftp-0.81 (26 Jan 2005)
+
+  26 Jan 2005; Roy Marples <uberlord@gentoo.org> +net2ftp-0.81.ebuild:
+  Initial import.
