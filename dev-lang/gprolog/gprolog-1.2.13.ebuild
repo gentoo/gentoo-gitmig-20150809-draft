@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.13.ebuild,v 1.1 2002/10/27 09:20:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.13.ebuild,v 1.2 2003/01/08 05:24:36 george Exp $
+
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -34,5 +36,5 @@ src_install() {
 		HTML_DIR=${D}/usr/share/doc/${P}/html \
 		EXAMPLES_DIR=${D}/usr/share/${P}/examples install || die "install failed"
 	cd ${S}/..
-	dodoc ChangeLog COPYING INSTALL NEWS PROBLEMS README VERSION  
+	dodoc ChangeLog COPYING INSTALL NEWS PROBLEMS README VERSION 
 }
