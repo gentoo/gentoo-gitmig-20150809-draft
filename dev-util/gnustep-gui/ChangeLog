@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gnustep-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.7 2003/02/15 00:58:42 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.8 2003/06/26 22:49:14 raker Exp $
+
+*gnustep-gui-0.8.5 (26 Jun 2003)
+
+  26 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.5.ebuild:
+  Version bump.  Marked stable for x86.
 
 *gnustep-gui-0.8.3 (04 Feb 2003)
 
