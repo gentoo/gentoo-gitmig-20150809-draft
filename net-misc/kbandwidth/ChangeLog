@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/kbandwidth
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kbandwidth/ChangeLog,v 1.1 2004/12/19 12:46:14 centic Exp $
+
+*kbandwidth-1.0.2 (19 Dec 2004)
+
+  19 Dec 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kbandwidth-1.0.2.ebuild:
+  New ebuild, see Bug 74778
+
