@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.6 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.3.ebuild,v 1.7 2003/10/15 16:57:39 mholzer Exp $
 
 S="${WORKDIR}/Trommler"
 DESCRIPTION="This is a gtk+ based drum machine"
@@ -15,6 +15,7 @@ IUSE=""
 DEPEND=">=x11-libs/gtk+-2.0.6-r1"
 
 src_compile() {
+	sed -i 's:CFLAGS = -Wall -Werror -O9:CFLAGS = -Wall -O9:' Makefile || die
 	emake || die
 }
 
