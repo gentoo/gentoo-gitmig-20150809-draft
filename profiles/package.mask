@@ -21,6 +21,27 @@
 ##   End example
 ##
 
+
+# <hannes@gentoo.org> (12 Nov 2002)
+# kde 3.1 rc3: masked permanently
+~kde-base/arts-1.1.0.3
+~kde-base/kde-3.1_rc3
+~kde-base/kdeaddons-3.1_rc3
+~kde-base/kdeadmin-3.1_rc3
+~kde-base/kdeartwork-3.1_rc3
+~kde-base/kdebase-3.1_rc3
+~kde-base/kdebindings-3.1_rc3
+~kde-base/kdeedu-3.1_rc3
+~kde-base/kdegames-3.1_rc3
+~kde-base/kdegraphics-3.1_rc3
+~kde-base/kdelibs-3.1_rc3
+~kde-base/kdemultimedia-3.1_rc3
+~kde-base/kdenetwork-3.1_rc3
+~kde-base/kdepim-3.1_rc3
+~kde-base/kdesdk-3.1_rc3
+~kde-base/kdetoys-3.1_rc3
+~kde-base/kdeutils-3.1_rc3
+
 # <seemant@gentoo.org> (11 Nov 2002)
 # Masked because we're not sure how legal this is yet.
 media-video/realone
