@@ -1,6 +1,11 @@
 # ChangeLog for media-video/streamdvd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.1 2004/02/25 00:13:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.2 2004/03/28 11:20:26 mholzer Exp $
+
+*streamdvd-0.4 (28 Mar 2004)
+
+  28 Mar 2004; Martin Holzer <mholzer@gentoo.org> streamdvd-0.4.ebuild:
+  Version bumped. Closes 45557
 
 *streamdvd-0.3 (24 Feb 2004)
 
