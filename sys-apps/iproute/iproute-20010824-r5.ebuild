@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.1 2004/04/06 15:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.2 2004/04/06 17:19:32 vapier Exp $
 
 inherit eutils
 
@@ -36,8 +36,13 @@ src_unpack() {
 	epatch ${DISTDIR}/${DEBIANPATCH}
 
 	# Enable HFSC scheduler #45274
-	epatch ${FILESDIR}/${PV}-hfsc.patch
-	epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
+	if [ ! -z "`grep tc_service_curve ${ROOT}/usr/include/linux/pkt_sched.h`" ] ; then
+		epatch ${FILESDIR}/${PV}-hfsc.patch
+		epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
+	else
+		ewarn "Your linux-headers in /usr/include/linux are too old to"
+		ewarn "support the HFSC scheduler.  It has been disabled."
+	fi
 	rm include/linux/pkt_sched.h
 
 	# Fix local DoS exploit #34294
