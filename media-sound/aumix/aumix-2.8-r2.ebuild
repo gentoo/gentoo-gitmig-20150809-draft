@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.2 2004/07/22 09:05:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.3 2004/07/23 21:25:26 seemant Exp $
 
 IUSE="gtk gtk2 gpm nls"
 
@@ -49,7 +49,9 @@ src_compile() {
 		myconf="${myconf} --without-gpm"
 	fi
 
-	econf ${myconf} || die
+	econf \
+		`use_enable nls` \
+		${myconf} || die
 	emake || die "make failed"
 }
 

@@ -1,15 +1,25 @@
-MD5 1eccd8ea1ff03f0ecd2257c19dad1c77 ChangeLog 4104
-MD5 3ec2efd4f2b55d249cb17b10597bb454 aumix-2.7-r4.ebuild 1257
-MD5 1da36b17ad3de7a3dd66325a008acafd aumix-2.8-r1.ebuild 1534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38cd9c05d169095321629e9583d8d7c2 aumix-2.8.ebuild 1384
+MD5 1da36b17ad3de7a3dd66325a008acafd aumix-2.8-r1.ebuild 1534
+MD5 3ec2efd4f2b55d249cb17b10597bb454 aumix-2.7-r4.ebuild 1257
+MD5 f6a3ebae100d0b8df3b44f11d6e8c7cc aumix-2.8-r2.ebuild 1744
+MD5 81cd4544db635840ada3fd404d63cb33 ChangeLog 4252
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a6c2dbeb50acaaa48282e725b9badbdf aumix-2.8-r2.ebuild 1722
+MD5 221509621be1606c1a61dfc8fcd4991e files/aumix-2.8-save_load.patch 1331
+MD5 00da88dc336799f1385f518dd005dd5a files/aumix-2.8-close-dialogs.patch 613
+MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8 62
 MD5 f39abfbf49ff4a33e109eeb14a4325c2 files/aumix.desktop 124
 MD5 f8120ed45b32400a44eb86a710c2b900 files/aumix.rc6 1122
+MD5 6c8d691beb495257d8309e58c127acd2 files/aumix-2.8-nohome.patch 529
 MD5 e4d29edb4b7c339ca310738a7e9dd174 files/digest-aumix-2.7-r4 61
-MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8 62
 MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8-r1 62
 MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8-r2 62
-MD5 6c8d691beb495257d8309e58c127acd2 files/aumix-2.8-nohome.patch 529
-MD5 00da88dc336799f1385f518dd005dd5a files/aumix-2.8-close-dialogs.patch 613
-MD5 221509621be1606c1a61dfc8fcd4991e files/aumix-2.8-save_load.patch 1331
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAYJn7aJl2DRYeA4RAtV+AJ49JttBPrYaDwcPWbLHKHWnN8YlhQCfcRMy
+OSwTEDBXC2ydoGgLNH8GUOU=
+=iSEY
+-----END PGP SIGNATURE-----
