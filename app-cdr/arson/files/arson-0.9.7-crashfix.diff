@@ -1,0 +1,14 @@
+--- src/docwidget.cpp	26 Oct 2002 19:06:47 -0000	1.9
++++ src/docwidget.cpp	21 Nov 2002 17:46:07 -0000
+@@ -516,8 +516,10 @@ ArsonLvPos::ArsonLvPos (ArsonListDoc *pd
+ ArsonListDoc::ArsonListDoc (QWidget *parent, const char *name)
+ 	: ArsonDocWidget(parent, name),
+ 	m_renameCol(-1),
+-	m_editableList(true)
++	m_editableList(true),
++	m_pList(NULL)
+ {
++	//	Nothing...
+ }
+ 
+ ArsonListDoc::~ArsonListDoc (void)
