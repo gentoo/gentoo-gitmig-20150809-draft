@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9-r1.ebuild,v 1.1 2001/12/02 03:25:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.3.ebuild,v 1.1 2002/01/25 16:08:39 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Client that groks URLs"
-SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
+SRC_URI="http://curl.haxx.se/download/${P}.tar.gz"
 HOMEPAGE="http://curl.haxx.se"
 
 DEPEND=">=sys-libs/glibc-2.1.3 >=sys-libs/pam-0.75 ssl? ( >=dev-libs/openssl-0.9.6a )"
