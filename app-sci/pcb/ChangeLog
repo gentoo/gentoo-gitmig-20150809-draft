@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/pcb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.10 2004/07/14 17:46:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/ChangeLog,v 1.11 2004/07/17 16:20:44 kugelfang Exp $
+
+  17 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> pcb-20040530.ebuild:
+  Marked ~amd64.
 
   15 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
   pcb-20031113.ebuild, pcb-20031113-r1.ebuild: Removed.
