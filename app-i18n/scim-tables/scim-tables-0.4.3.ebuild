@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.4.3.ebuild,v 1.3 2004/09/27 02:14:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.4.3.ebuild,v 1.4 2004/12/31 05:15:52 weeve Exp $
 
 DESCRIPTION="Smart Common Input Method (SCIM) Generic Table Input Method Server"
 HOMEPAGE="http://freedesktop.org/~suzhe/"
@@ -8,7 +8,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc ~amd64"
+KEYWORDS="x86 alpha ppc ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 )"
