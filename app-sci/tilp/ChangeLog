@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tilp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.12 2004/12/02 08:47:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/ChangeLog,v 1.13 2004/12/02 10:16:31 pylon Exp $
+
+  02 Dec 2004; Lars Weiler <pylon@gentoo.org> tilp-6.76.ebuild:
+  Stable on ppc.  See bug #68712.
 
 *tilp-6.76 (02 Dec 2004)
 

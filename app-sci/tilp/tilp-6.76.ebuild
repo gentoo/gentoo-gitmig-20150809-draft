@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.76.ebuild,v 1.1 2004/12/02 08:47:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.76.ebuild,v 1.2 2004/12/02 10:16:31 pylon Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tilp/${P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND=">=dev-libs/libticables-3.8.6
