@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/libdsp
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/libdsp/ChangeLog,v 1.1 2004/07/29 06:08:02 chriswhite Exp $
+
+*libdsp-4.9.2 (29 Jul 2004)
+
+  29 Jul 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/Makefile.patch, +libdsp-4.9.2.ebuild:
+  Initial commit. Thanks to Ed Wildgoose <gentoo@wildgooses.com> for the bug
+  report (Bug #58587). Added myself as maintainer.
+
