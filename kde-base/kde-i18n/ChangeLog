@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.64 2005/03/21 13:53:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.65 2005/04/03 16:26:17 greg_g Exp $
+
+  03 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kde-i18n-de-3.4.0-next.patch, kde-i18n-3.4.0.ebuild:
+  Add patch to fix bug #86050.
 
   21 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kde-i18n-3.3.2.ebuild,
   kde-i18n-3.4.0.ebuild:

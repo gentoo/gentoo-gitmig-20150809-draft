@@ -1,0 +1,12 @@
+diff -Nur kde-i18n-de-3.4.0.orig/messages/kdelibs/kdelibs.po kde-i18n-de-3.4.0/messages/kdelibs/kdelibs.po
+--- kde-i18n-de-3.4.0.orig/messages/kdelibs/kdelibs.po	2005-03-04 11:46:24.000000000 +0100
++++ kde-i18n-de-3.4.0/messages/kdelibs/kdelibs.po	2005-04-03 17:44:03.000000000 +0200
+@@ -6381,7 +6381,7 @@
+ msgid ""
+ "_: Opposite to Back\n"
+ "&Next"
+-msgstr "&Zurück"
++msgstr "&Weiter"
+ 
+ #: kdeui/khelpmenu.cpp:125 kdeui/kstdaction_p.h:90
+ msgid "%1 &Handbook"
