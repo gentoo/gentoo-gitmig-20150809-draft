@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/getdate
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.2 2003/12/12 00:30:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.3 2004/01/03 13:59:21 mholzer Exp $
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> getdate-1.2.ebuild:
+  fixing homepage closes 37093
 
   11 Dec 2003; Chuck Short <zul@gentoo.org> getdate-1.2.ebuild:
   Added -DHAVE_ADJTIME closes #35597.
