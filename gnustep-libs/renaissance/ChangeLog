@@ -1,6 +1,6 @@
-# ChangeLog for app-gnustep/renaissance
+# ChangeLog for gnustep-libs/renaissance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/ChangeLog,v 1.2 2004/07/23 15:01:54 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/renaissance/ChangeLog,v 1.3 2004/07/27 17:23:22 aliz Exp $
 
   23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
   renaissance-0.7.0.ebuild:
