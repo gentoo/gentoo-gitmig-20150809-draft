@@ -1,11 +1,18 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.20 2002/06/05 01:37:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.21 2002/06/05 02:45:30 lostlogic Exp $
 
 *gentoolkit-0.1.11 (04 Jun 2002)
 
+  04 Jun 2002: Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg
+
+  Fixed better, now -c does check for mis-cased md5s, and our time is
+  a nice compromise between everything.  To accomplish this, I used tr
+  instead of awk to do the case change, and only check IF the first md5
+  check fails.
+
   04 Jun 2002: Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.11.ebuild
-						  qpkg
+						  files/scripts/qpkg
   Made qpkg root:wheel 0750 users really shouldn't have more than emerge -s
   permissions with this kind of stuff.
 

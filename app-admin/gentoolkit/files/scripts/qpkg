@@ -5,8 +5,8 @@
 # Copiright (c) Vitaly Kushneriuk <vitaly_kushneriuk@yahoo.com>
 # This program is distributed under the terms of GPL version 2.
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.4 2002/06/05 01:13:36 lostlogic Exp $
-ID='$Id: qpkg,v 1.4 2002/06/05 01:13:36 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.5 2002/06/05 02:45:33 lostlogic Exp $
+ID='$Id: qpkg,v 1.5 2002/06/05 02:45:33 lostlogic Exp $'
 VERSION=0.`echo $ID | cut -d\  -f3`
 
 PROG=`basename $0`
@@ -345,7 +345,7 @@ for p in $ipak $upak -;do
 					[ "$tcheck" ] && _mtime=`date -r $name +%s`
 
 					[ "$mcheck" ] && md5=${line[2]}
-					[ "$mcheck" ] && md5=${line[2]}
+					[ "$mcheck" ] && _md5=`md5sum $name|cut -f1 -d" "`
 				}
 
 				name=$BR$name$NO
@@ -363,14 +363,13 @@ for p in $ipak $upak -;do
 				name="$name $RD!not exist!$NO"
 			fi
 			if [ "$md5" != "$_md5" ]; then
-				#I was going to put the awking toupper here but it didn't
-				#save any time... I'm taking it out, kill me later.
-				#md5=`echo "$md5"| awk '{print toupper($1)}'`
-				#_md5=`echo "$_md5"|awk '{print toupper($1)}'`
-				#if [ "$md5" != "$_md5" ]; then
-				err=1
-				name="$name $RD!md5!$NO"
-				#fi
+				#If the md5 fails the first time check it with
+				#everything changed to lowercase :-D
+				md5=`echo "$md5"|tr A-Z a-z`
+				if [ "$md5" != "$_md5" ]; then
+					err=1
+					name="$name $RD!md5!$NO"
+				fi
 			fi
 			if [ "$mtime" != "$_mtime" ]; then
 				err=1
@@ -378,6 +377,7 @@ for p in $ipak $upak -;do
 			fi
 
 			[ $verb -gt 1 ] && echo -e $name
+			[[ $verb -eq 1 ]] && [[ $err -eq 1 ]] && echo -e $name
 
 			fe=$((fe + err))
 		done
