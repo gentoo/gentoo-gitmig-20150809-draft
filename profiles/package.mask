@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2707 2004/02/17 22:45:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2708 2004/02/18 15:56:40 rizzo Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -752,3 +752,6 @@ dev-util/arch
 # mask libsqlora8 until I can find an oracle 8i install
 dev-libs/libsqlora8
 
+# rizzo@gentoo.org 18 Feb 2004
+# Masking gaim-0.75-r9 until I can test
+=net-im/gaim-0.75-r9
