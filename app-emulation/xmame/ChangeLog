@@ -1,8 +1,13 @@
 # ChangeLog for app-games/xmame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.11 2002/10/31 21:44:22 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.12 2002/12/27 18:40:12 rphillips Exp $
 
-*xmame-0.60.1_pre1 (31 Oct 2002)
+*xmame-0.62.1_rc2 (27 Dec 2002)
+
+  27 Dec 2002; Ryan Phillips <rphillips@gentoo.org> xmame-0.62.1_rc2.ebuild :
+  version bump. Submitted by Kfir Ozer. Fixes #11927
+
+*xmame-0.61.1_pre1 (31 Oct 2002)
 
   31 Oct 2002; Ryan Phillips <rphillips@gentoo.org> xmame-0.61.1_pre1.ebuild :
 
