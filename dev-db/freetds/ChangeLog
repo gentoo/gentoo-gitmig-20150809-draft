@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.12 2004/01/08 09:23:07 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.13 2004/01/10 16:32:54 agriffis Exp $
+
+  10 Jan 2004; Aron Griffis <agriffis@gentoo.org> freetds-0.61-r1.ebuild:
+  stable on alpha and ia64
 
   08 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> freetds-0.61-r1.ebuild:
   bump to ppc stable
