@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.14 2002/12/11 21:15:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.15 2002/12/14 15:55:42 azarah Exp $
+
+  14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4191.ebuild:
+  As it seems this version need MTRR support for most chipsets, die if its not
+  detected with a suited message ...  This should close bug #12015.
 
   11 Dec 2002; Martin Schlemmer <azarah@gentoo.org>:
   Just move $FILESDIR/nvidia-$PV to nvidia-1.1 for easier maintaining.

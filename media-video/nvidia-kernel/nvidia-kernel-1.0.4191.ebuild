@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.3 2002/12/11 21:15:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191.ebuild,v 1.4 2002/12/14 15:55:42 azarah Exp $
 
 inherit eutils
 
@@ -25,6 +25,19 @@ KEYWORDS="~x86 -ppc -sparc -alpha"
 DEPEND="virtual/linux-sources
 	>=sys-apps/portage-1.9.10"
 
+
+pkg_setup() {
+	if [ ! -f /proc/mtrr ]
+	then
+		eerror "This version needs MTRR support for most chisets!"
+		eerror "Please enable MTRR support in your kernel config, found at:"
+		eerror
+		eerror "  Processor type and features -> [*] MTRR (Memory Type Range Register) support"
+		eerror
+		eerror "and recompile your kernel ..."
+		die "MTRR support not detected!"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
