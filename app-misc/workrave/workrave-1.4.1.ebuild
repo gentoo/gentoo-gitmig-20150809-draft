@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.1.ebuild,v 1.1 2003/11/06 20:01:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.1.ebuild,v 1.2 2004/01/06 20:11:13 weeve Exp $
 
 IUSE="debug gnome nls xml2"
 # Internal USE flags
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
