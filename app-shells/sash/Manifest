@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3730768e4af7333d98268a0b2ed5869 ChangeLog 3789
 MD5 3b21afef4759a8477260dc345b99525c sash-3.6.ebuild 1079
-MD5 6625419ad41a9bd986f97db23d27c715 sash-3.7.ebuild 1246
+MD5 f19c46c9903d1a421070208d8fb47538 sash-3.7.ebuild 1279
 MD5 d38ab7c3e9697a320856b2a1727d9be8 files/sash-3.6-2.6-includes.patch 291
 MD5 c0a4b54f51097cb6d1e76b0f0df2d938 files/digest-sash-3.6 59
 MD5 570237f86f81b58c68835104a03da8dc files/sash-3.4-gentoo.diff 7087
@@ -9,3 +12,10 @@ MD5 d33602f9d3d89db4b3ea2adad619fdf2 files/sash-3.6-readline.patch 7507
 MD5 ed10e67a2e293993478c999f67c612b8 files/digest-sash-3.7 59
 MD5 d38ab7c3e9697a320856b2a1727d9be8 files/sash-3.6-ppc64-includes.patch 291
 MD5 0fa262804299a7ba80c5266f578722eb files/sash-3.7-builtin.patch 465
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtlRNroRuSHgZdywRApbFAJwMZMJwvZKnxpE6upv/5V515QQq5ACffqO0
+N20JIpsKPe0jhBYyhnzge6A=
+=g97v
+-----END PGP SIGNATURE-----
