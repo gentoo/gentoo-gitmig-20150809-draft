@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asclock
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.8 2004/07/08 07:07:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.9 2004/09/06 07:25:16 hardave Exp $
+
+  06 Sep 2004; Hardave Riar <hardave@gentoo.org> asclock-2.0.12.ebuild:
+  Stable on mips
 
   08 Jul 2004; Hardave Riar <hardave@gentoo.org> asclock-2.0.12.ebuild:
   Added ~mips KEYWORD
