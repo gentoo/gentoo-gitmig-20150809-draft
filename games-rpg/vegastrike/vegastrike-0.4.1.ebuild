@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.9 2004/04/26 20:08:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vegastrike/vegastrike-0.4.1.ebuild,v 1.10 2004/05/08 21:31:32 dholm Exp $
 
 inherit games eutils flag-o-matic
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="sdl"
 
 RDEPEND="virtual/glu
@@ -39,6 +39,7 @@ src_unpack() {
 		# save space :)
 		rm ${tar}
 	done
+	epatch ${FILESDIR}/${PV}-endianess.patch
 
 	# Clean up data dir
 	find data -name CVS -type d -exec rm -rf '{}' \; >&/dev/null
