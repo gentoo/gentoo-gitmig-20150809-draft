@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.ebuild,v 1.1 2003/10/11 15:56:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.7.ebuild,v 1.2 2003/12/13 22:56:30 port001 Exp $
 
 IUSE="xosd"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lineak/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="x11-base/xfree
 	xosd? ( x11-libs/xosd )"
