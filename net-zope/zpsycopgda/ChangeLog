@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/zpsycopgda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.1 2003/03/09 00:26:49 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.2 2003/04/06 03:52:48 kutsuya Exp $
 
 *zpsycopgda-1.1.2 (08 Mar 2003)
+
+  05 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> zpsycopgda-1.1.2.ebuild:
+  ~x86 -> x86 and added ~ppc. Renamed DEPEND variable to RDEPEND
 
   08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> zpsycopgda-1.1.2.ebuild:
   Initial import.
