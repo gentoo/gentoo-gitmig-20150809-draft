@@ -1,0 +1,9 @@
+# ChangeLog for app-text/gpdf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.1 2003/06/13 15:02:01 agriffis Exp $
+
+*gpdf-0.102 (13 Jun 2003)
+
+  13 Jun 2003; Aron Griffis <agriffis@gentoo.org> gpdf-0.102.ebuild:
+  Initial import.  Ebuild submitted by Don Seiler in bug 20055
+
