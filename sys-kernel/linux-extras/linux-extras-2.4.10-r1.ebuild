@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.10.ebuild,v 1.1 2001/09/28 05:48:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.10-r1.ebuild,v 1.1 2001/10/06 04:40:59 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -30,7 +30,7 @@ fi
 # PCMCIA-CS            N         pcmcia            Need to move this to its own ebuild
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
-LVMV=1.0.1-rc2
+LVMV=1.0.1-rc4
 
 #[ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
 [ "${PN}" = "linux-sources" ] && DESCRIPTION="Linux kernel version ${KV} - full sources"
@@ -41,8 +41,7 @@ LVMV=1.0.1-rc2
 [ ! "${PN}" = "linux-extras" ] && SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.ibiblio.org/gentoo/distfiles/lvm-${LVMV}-${KV}.patch.bz2
 ftp://ftp.sistina.com/pub/LVM/1.0/lvm_${LVMV}.tar.gz
-http://www.tech9.net/rml/linux/patch-rml-2.4.10-preempt-kernel-1
-http://www.tech9.net/rml/linux/patch-rml-2.4.10-preempt-ptrace-and-jobs-fix-2
+http://www.tech9.net/rml/linux/preempt-kernel-rml-2.4.10-7.patch
 http://lameter.com/kernel/ext3-2.4.10.gz"
 	
 [ "$PN" != "linux-extras" ] && PROVIDE="virtual/kernel"
