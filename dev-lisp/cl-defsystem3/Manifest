@@ -1,16 +1,26 @@
-MD5 bce608c0319cd1128f61712a29fcbc52 ChangeLog 1950
-MD5 4d6b30c5cd4c236ffae6a9c8abdd0461 cl-defsystem3-3.3i.ebuild 923
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 60a261dd1a33ed69cb95db2224437779 cl-defsystem3-3.3i-r1.ebuild 908
-MD5 240df6395dc24058a61f348efa6a75c6 cl-defsystem3-3.3i-r2.ebuild 908
-MD5 146833cb32a2c03e8e4ba634530b0dee cl-defsystem3-3.3i-r3.ebuild 928
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d43ce7c11d8a306d5b39d2eb6d72ee89 cl-defsystem3-3.3i-r4.ebuild 1033
-MD5 a52f1b5c746d5bcab91ebfc7fde608da cl-defsystem3-3.3i-r5.ebuild 969
+MD5 60a261dd1a33ed69cb95db2224437779 cl-defsystem3-3.3i-r1.ebuild 908
+MD5 4d6b30c5cd4c236ffae6a9c8abdd0461 cl-defsystem3-3.3i.ebuild 923
+MD5 146833cb32a2c03e8e4ba634530b0dee cl-defsystem3-3.3i-r3.ebuild 928
+MD5 e7fa67ccd9517c32dea27dd669a27adc cl-defsystem3-3.3i-r5.ebuild 975
+MD5 240df6395dc24058a61f348efa6a75c6 cl-defsystem3-3.3i-r2.ebuild 908
+MD5 b9eec5045388e94d913163935ad46c7e ChangeLog 2059
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 53c613bb49037b519c71049e0655df9c files/digest-cl-defsystem3-3.3i 84
+MD5 41f9e7aab596cd5ca1b336090640531d files/defsystem.asd 148
+MD5 73d13eb4a02a4fb0e43cb0f50bd87389 files/3.3i-gentoo.patch 1345
 MD5 53c613bb49037b519c71049e0655df9c files/digest-cl-defsystem3-3.3i-r1 84
 MD5 059962e8c6f40b8caf0806702c7859d0 files/digest-cl-defsystem3-3.3i-r2 84
 MD5 689eaa339ce6a65c712c37a0820348b9 files/digest-cl-defsystem3-3.3i-r3 84
 MD5 1a092042e94dabe0a663721d28155155 files/digest-cl-defsystem3-3.3i-r4 86
-MD5 73d13eb4a02a4fb0e43cb0f50bd87389 files/3.3i-gentoo.patch 1345
-MD5 41f9e7aab596cd5ca1b336090640531d files/defsystem.asd 148
 MD5 1a092042e94dabe0a663721d28155155 files/digest-cl-defsystem3-3.3i-r5 86
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCOq9dI1lqEGTUzyQRAjuYAKDa8GqRYnEDJ/0Tlw+P2xN0X59WBQCgri3Y
+zmA75Yii6CGpwXeZgBztKAI=
+=B5YP
+-----END PGP SIGNATURE-----
