@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3.ebuild,v 1.1 2003/07/16 20:42:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3.ebuild,v 1.2 2003/07/18 17:15:50 rizzo Exp $
 
 
 HOSTNAME=`hostname`
@@ -40,13 +40,15 @@ pkg_postinst() {
 	einfo "on your own before starting setup.  You will also need"
 	einfo "to run:"
 	einfo
-	einfo "${HTTPD_ROOT}/phpwebsite/setup/secure_setup.sh setup"
+	einfo "cd ${HTTPD_ROOT}/phpwebsite/setup"
+	einfo "./secure_setup.sh setup"
 	einfo
 	einfo "Once you have a database ready proceed to"
 	einfo "http://$HOSTNAME/phpwebsite to continue installation."
 	einfo
 	einfo "Once you are done with installation you need to run"
 	einfo
-	einfo "${HTTPD_ROOT}/phpwebsite/setup/secure_phpws.sh run apache users"
+	einfo "cd ${HTTPD_ROOT}/phpwebsite/setup"
+	einfo "./secure_phpws.sh run apache users"
 	einfo
 }
