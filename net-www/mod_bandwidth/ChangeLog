@@ -1,0 +1,10 @@
+# ChangeLog for net-www/mod_bandwidth
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/ChangeLog,v 1.1 2003/07/14 02:52:57 woodchip Exp $
+
+*mod_bandwidth-2.0.4 (13 Jul 2003)
+
+  13 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_bandwidth-2.0.4.ebuild,
+  files/mod_bandwidth-2.0.4-register.patch, files/mod_bandwidth.conf:
+  Initial package comes from CJ Kucera <gentoo@apocalyptech.com> in #22778.
+  I added several fixes and the little ap_add_version_component patch :-)
