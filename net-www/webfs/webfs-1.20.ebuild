@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.20.ebuild,v 1.1 2003/09/30 10:57:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.20.ebuild,v 1.2 2003/11/04 10:53:16 taviso Exp $
 
 IUSE="ssl"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Lightweight HTTP server for static content"
 SRC_URI="http://bytesex.org/misc/webfs_${PV}.tar.gz"
 HOMEPAGE="http://bytesex.org/webfs.html"
 
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
