@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.6 2004/08/02 15:48:31 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.7 2004/08/05 15:40:51 slarti Exp $
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org> desktop-file-utils-0.7.ebuild:
+  Marked ~amd64. Thanks to Gabriel Ebner <ge@gabrielebner.at> for reporting in
+  bug 59515.
 
 *desktop-file-utils-0.7 (02 Aug 2004)
 
