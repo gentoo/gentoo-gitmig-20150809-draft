@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.15 2003/02/12 05:24:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.16 2003/03/14 01:38:51 liquidx Exp $
+
+*gnome-spell-1.0.1 (14 Mar 2003)
+
+  14 Mar 2003; Alastair Tse <liquidx@gentoo.org> gnome-spell-1.0.1.ebuild:
+  Version Bumped and SLOTted. This is the new Gnome2 version of gnome-spell.
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gnome-spell-0.5.ebuild :
   Do not install with evo 1.0.
