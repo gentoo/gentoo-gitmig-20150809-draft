@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.1 2003/07/03 20:36:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r1.ebuild,v 1.2 2003/07/13 01:47:46 liquidx Exp $
 
-IUSE="readline tcltk berkdb bootstrap"
+IUSE="readline tcltk berkdb bootstrap build doc"
 
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
@@ -17,6 +17,7 @@ LICENSE="PSF-2.2"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
+	doc? ( =dev-python/python-docs-${PV}* )
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )
