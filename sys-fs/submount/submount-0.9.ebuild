@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.7 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9.ebuild,v 1.8 2004/09/27 19:48:24 dsd Exp $
 
 inherit kmod
 
@@ -19,14 +19,15 @@ KEYWORDS="x86 ~alpha ppc ~sparc ~amd64"
 
 if [ "${KV_MINOR}" == "4" ]
 then
-	EXTRA_V=-2.4
+	EXTRA_V="-2.4"
 else
 	EXTRA_V=""
 	RESTRICT=nouserpriv
 fi
 
-KMOD_SOURCES="${P}.tar.gz"
-
+MY_P="${PN}${EXTRA_V}-${PV}"
+S="${WORKDIR}/${MY_P}"
+KMOD_SOURCES="${MY_P}.tar.gz"
 
 SRC_URI="mirror://sourceforge/${PN}/${KMOD_SOURCES}"
 
