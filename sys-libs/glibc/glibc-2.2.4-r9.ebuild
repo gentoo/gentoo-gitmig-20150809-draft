@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r9.ebuild,v 1.1 2001/12/31 05:41:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r9.ebuild,v 1.2 2002/02/01 01:26:08 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -109,14 +109,17 @@ src_install() {
 	rm ${D}/lib/ld-linux.so.2
 	rm ${D}/lib/libc.so.6
 	rm ${D}/lib/libpthread.so.0
-	#is this next line actually needed or does the makefile get it right.  It previously has 0755 perms which was
-	#killing things.
+	#is this next line actually needed or does the makefile get it right.
+	#It previously has 0755 perms which was killing things.
 	chmod 4755 ${D}/usr/lib/misc/pt_chown
 	rm -f ${D}/etc/ld.so.cache
 
 	#prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	#creation of the "factory" symlink in pkg_postinst().
 	rm -f ${D}/etc/localtime
+
+	#some things want this, notably ash.
+	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 }
 
 pkg_postinst()
