@@ -35,7 +35,7 @@ append-flags () {
 
 replace-flags () {
 
-	CFLAGS="${CFLAGS/${1}/${2}"
-	CXXFLAGS="${CXXFLAGS/${1}/${2}"
+	CFLAGS="${CFLAGS/${1}/${2}}"
+	CXXFLAGS="${CXXFLAGS/${1}/${2}}"
 
 }
