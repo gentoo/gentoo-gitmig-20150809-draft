@@ -1,10 +1,20 @@
-MD5 b6f49b00f4f3a40d9ba9a84f19311274 ChangeLog 1389
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f6b803490695ad4fd43ace45d41b444 ChangeLog 1490
 MD5 5b4fb705da1491cddec91727e7c3c2a0 zile-1.7_alpha6.ebuild 947
-MD5 c9767b2f14dc0dfbe4cd6774c7dd7b17 zile-1.7_beta3-r1.ebuild 1221
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 09e9aec4f0a01ad7d90e7b85d7520879 zile-1.7_beta3-r1.ebuild 1215
 MD5 a486b71f34cf6c20f3931d2b4189ebd6 zile-1.7_beta3.ebuild 1045
 MD5 abb36c8d8b9b3c413987848d7b6f5e36 files/digest-zile-1.7_alpha6 63
 MD5 96247485c8135442065a10deb1e4319f files/digest-zile-1.7_beta3 63
 MD5 96247485c8135442065a10deb1e4319f files/digest-zile-1.7_beta3-r1 63
 MD5 564cc7bc684ea0ad2a54b8975b608580 files/zile-1.7_beta3-compilefix.diff 415
 MD5 db6d103db1c787941c8abb4f21a1db33 files/zile-1.7_beta3-norefcardps.diff 424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBejACVWNWqTUmv+0RAgblAKCcAR7Doia3ELcHZO4rkJzJI3VAnQCcCq+G
+59Y9TEcKXA4ZVRwJ57sEVR0=
+=V07F
+-----END PGP SIGNATURE-----
