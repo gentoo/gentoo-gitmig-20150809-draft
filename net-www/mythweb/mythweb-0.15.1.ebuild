@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.14-r1.ebuild,v 1.3 2004/06/02 21:01:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.15.1.ebuild,v 1.1 2004/06/02 21:01:20 aliz Exp $
 
 inherit webapp-apache
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 RDEPEND=">=dev-php/mod_php-4.2"
 
@@ -25,12 +25,13 @@ pkg_setup() {
 src_install() {
 	webapp-mkdirs
 
+	dodoc README TODO ; rm -f README TODO
+
 	dodir "${HTTPD_ROOT}"
 	cp -R "${S}" "${D}${HTTPD_ROOT}/${PN}"
 
 	keepdir "${HTTPD_ROOT}/${PN}/"{php_sessions,image_cache}
 	fowners "${HTTPD_USER}:${HTTPD_GROUP}" "${HTTPD_ROOT}/${PN}/"{php_sessions,image_cache}
-	dodoc README
 
 	# protect configfiles
 	echo "CONFIG_PROTECT=${HTTPD_ROOT}/${PN}/config" > ${T}/27mythweb
