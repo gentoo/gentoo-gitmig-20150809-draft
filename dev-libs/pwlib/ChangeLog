@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.78 2005/02/18 21:46:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.79 2005/02/19 20:08:13 dholm Exp $
+
+  19 Feb 2005; David Holm <dholm@gentoo.org> pwlib-1.6.6-r2.ebuild:
+  Stable on ppc
 
   18 Feb 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3-r1.ebuild:
   Added support for v4l2 use-flag (bug #84239, thx to jcn@xtra.co.nz).
@@ -11,7 +14,7 @@
   +pwlib-1.6.6-r2.ebuild, +pwlib-1.8.3-r1.ebuild:
   Small cleanups and important fixes for amd64.
 
-  14 Jan 2005; <avatar@gentoo.org> pwlib-1.8.3.ebuild:
+  14 Jan 2005; <dholm@gentoo.org> pwlib-1.8.3.ebuild:
   Added to ~ppc.
 
   12 Jan 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3.ebuild:
@@ -52,7 +55,7 @@
   backported patch makes it possible to use gnomemeeting (and other apps)
   to use alsa+dmix for sound output, thx to Benoit Chesneau <bchesneau@gmail.com>
 
-  09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.6.ebuild:
+  09 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> pwlib-1.6.6.ebuild:
   ~alpha keyword.
 
   31 Oct 2004; Joseph Jezak <josejx@gentoo.org> pwlib-1.6.6.ebuild:
@@ -61,10 +64,10 @@
   23 Oct 2004; Jason Wever <weeve@gentoo.org> pwlib-1.6.6.ebuild:
   Added ~sparc keyword.
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
+  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
   Stable on alpha.
 
-  14 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
+  14 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
   Add ~alpha keyword.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> pwlib-1.6.3-r2.ebuild:
@@ -92,7 +95,7 @@
   14 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> pwlib-1.6.6.ebuild:
   Marked ~amd64.
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.5.2-r3.ebuild:
+  07 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> pwlib-1.5.2-r3.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> pwlib-1.4.11.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6-r2.ebuild,v 1.1 2005/02/03 19:57:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6-r2.ebuild,v 1.2 2005/02/19 20:08:13 dholm Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
+KEYWORDS="~x86 ppc ~amd64 ~sparc ~alpha"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
