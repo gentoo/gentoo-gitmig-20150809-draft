@@ -1,0 +1,24 @@
+diff -uNr mod_auth_ldap-2.4.2.orig/mod_auth_ldap.c mod_auth_ldap-2.4.2/mod_auth_ldap.c
+--- mod_auth_ldap-2.4.2.orig/mod_auth_ldap.c	2003-06-08 01:10:33.000000000 -0400
++++ mod_auth_ldap-2.4.2/mod_auth_ldap.c	2003-07-12 23:00:18.000000000 -0400
+@@ -1249,6 +1249,11 @@
+     return (DECLINED);
+ }
+ 
++void ldap_module_init(void)
++{
++    ap_add_version_component("mod_auth_ldap/" MOD_AUTH_LDAP_VERSION_S);
++}
++
+ /*--------------------------------------------------------------------------*/
+ /* Finally, the list of callback routines and data structures that          */
+ /* provide the hooks into our module from the other parts of the server.    */
+@@ -1256,7 +1261,7 @@
+ module ldap_auth_module =
+ {
+     STANDARD_MODULE_STUFF,
+-    NULL,                         /* module initializer */
++    ldap_module_init,             /* module initializer */
+     create_ldap_auth_dir_config,  /* per-directory config creator */
+     NULL,                         /* dir config merger */
+     NULL,                         /* server config creator */
