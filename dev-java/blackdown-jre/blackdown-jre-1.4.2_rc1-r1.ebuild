@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1-r1.ebuild,v 1.5 2004/09/29 20:59:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1-r1.ebuild,v 1.6 2004/10/03 02:12:31 lv Exp $
 
 inherit java
 
@@ -99,11 +99,13 @@ src_install () {
 	# Install mozilla plugin
 	if use mozilla; then
 		case ${ARCH} in
-			amd64|x86) platform="i386" ;;
+			x86) platform="i386" ;;
 			ppc) platform="ppc" ;;
 			sparc*) platform="sparc" ;;
 		esac
-		install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
+		# news flash: amd64 doesnt have ANY plugin in the jre. and trying to
+		# install a plugin that doesnt exist makes the ebuild fail to install.
+		use !amd64 && install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	fi
 
 	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties

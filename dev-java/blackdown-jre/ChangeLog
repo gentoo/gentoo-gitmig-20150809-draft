@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.43 2004/09/29 20:59:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.44 2004/10/03 02:12:31 lv Exp $
+
+  02 Oct 2004; Travis Tilley <lv@gentoo.org>
+  blackdown-jre-1.4.2_rc1-r1.ebuild:
+  made the ebuild stop trying to install a plugin on amd64, we dont have one in
+  the jre. this should make blackdown-jre installable on amd64 again.
 
   29 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
   blackdown-jre-1.3.1-r9.ebuild, blackdown-jre-1.4.1.ebuild,
