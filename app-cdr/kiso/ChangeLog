@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/kiso
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.7 2004/10/05 11:22:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.8 2004/11/11 23:15:02 motaboy Exp $
+
+*kiso-0.7b (12 Nov 2004)
+
+  12 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kiso-0.7b-dirops.h.patch, +kiso-0.7b.ebuild:
+  Version Bump. Closes bug #63929
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> kiso-0.4.2.ebuild:
   Masked kiso-0.4.2.ebuild stable for ppc

@@ -1,0 +1,12 @@
+diff -ur kiso-0.7.orig/src/dirops.h kiso-0.7/src/dirops.h
+--- kiso-0.7.orig/src/dirops.h	2004-11-08 11:38:58.825942632 +0000
++++ kiso-0.7/src/dirops.h	2004-11-08 11:39:12.253901272 +0000
+@@ -5,7 +5,7 @@
+ #define DIROPS_H
+ 
+ #include <inttypes.h>
+-#include <icc34.h>
++//#include <icc34.h>
+ 
+ #include <qdir.h>
+ #include <qpixmap.h>
