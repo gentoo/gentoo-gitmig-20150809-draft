@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2768 2004/03/23 20:47:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2769 2004/03/24 01:32:02 foser Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -33,6 +33,10 @@
 
 # <foser@gentoo.org> (18 Mar 2004)
 # The big gnome 2.6 mask
+#
+# Note : The gnome.org servers have been compromized with unknown impact
+# at this point. Take this into consideration when using these packages.
+# http://mail.gnome.org/archives/gnome-announce-list/2004-March/msg00113.html
 >=gnome-base/gnome-2.5
 >=gnome-base/gconf-2.5
 >=gnome-base/ORBit2-2.10
@@ -70,8 +74,6 @@ gnome-base/gnome-keyring
 >=gnome-extra/gnome-system-monitor-2.5
 >=gnome-extra/gucharmap-1.3
 >=gnome-extra/gcalctool-4.3.50
->=media-libs/gstreamer-0.8
->=media-libs/gst-plugins-0.8
 >=media-gfx/eog-2.5
 >=net-www/epiphany-1.2
 net-analyzer/gnome-netstatus
@@ -86,6 +88,23 @@ net-analyzer/gnome-netstatus
 >=x11-libs/gtksourceview-0.9
 >=x11-libs/libwnck-2.5
 >=x11-wm/metacity-2.7
+# gst
+>=media-libs/gstreamer-0.8
+>=media-libs/gst-plugins-0.8
+>=media-plugins/gst-plugins-oss-0.8
+>=media-plugins/gst-plugins-gnomevfs-0.8
+>=media-plugins/gst-plugins-mad-0.8
+>=media-plugins/gst-plugins-ogg-0.8
+>=media-plugins/gst-plugins-vorbis-0.8
+>=media-plugins/gst-plugins-esd-0.8
+>=media-plugins/gst-plugins-alsa-0.8
+>=media-plugins/gst-plugins-ffmpeg-0.8
+>=media-plugins/gst-plugins-mpeg2dec-0.8
+>=media-plugins/gst-plugins-flac-0.8
+>=media-plugins/gst-plugins-png-0.8
+>=media-plugins/gst-plugins-xvideo-0.8
+>=media-plugins/gst-plugins-a52dec-0.8
+>=media-plugins/gst-plugins-cdparanoia-0.8
 # A11Y
 >=gnome-base/gail-1.5
 #>app-accessibility/gnopernicus-0.8
