@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.5 2005/03/14 13:57:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r11.ebuild,v 1.6 2005/03/21 21:50:34 eradicator Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -23,11 +23,6 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 SLOT="2.1"
-
-pkg_setup() {
-	# multilib includes don't work right in this package...
-	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
-}
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"
@@ -69,9 +64,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.1.30-imake-ansi.patch
 	epatch ${FILESDIR}/${PN}-2.1.30-uil-bad_grammar_fix.diff
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2.1.30-darwin-netbsd.diff
+
+	if use amd64 && has_multilib_profile && [[ ${ABI} == "amd64" ]] ; then
+		sed -i 's:__i386__:__x86_64__:g' ${S}/config/cf/*.cf ${S}/config/imake/* ${S}/config/makedepend/*
+	fi
 }
 
 src_compile() {
+	# multilib includes don't work right in this package...
+	has_multilib_profile && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
+
 	# glibc-2.3.2-r1/gcc-3.2.3 /w `-mcpu=athlon-xp -O2', right-clicking
 	# in nedit triggers DPMS monitor standby instead of popping up the 
 	# context menu.  this doesn't happen on my `stable' test partition 

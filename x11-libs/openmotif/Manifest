@@ -1,52 +1,52 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d97af874221917fcce29fff3a1a63e48 openmotif-2.2.3-r3.ebuild 3238
-MD5 18a738af27482c9abb5153e4227db96d openmotif-2.1.30-r6.ebuild 3861
-MD5 b75e3641e3d294eb0c899d4d6eb82bf8 openmotif-2.2.3-r5.ebuild 3870
-MD5 b959697b866695063a013130bf3cc769 openmotif-2.1.30-r11.ebuild 5072
-MD5 adfb21d30974061a3fa839be7831ea77 openmotif-2.2.3.ebuild 3190
-MD5 459687380ba71bba6e17cd677c6f9d60 openmotif-2.1.30-r7.ebuild 3986
-MD5 3820af1e394e3d2ac4f07056ee6dc474 ChangeLog 15338
+MD5 e59816ea0db96cd1902cb6eecc939136 ChangeLog 15449
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 b75e3641e3d294eb0c899d4d6eb82bf8 openmotif-2.2.3-r5.ebuild 3870
+MD5 459687380ba71bba6e17cd677c6f9d60 openmotif-2.1.30-r7.ebuild 3986
+MD5 18a738af27482c9abb5153e4227db96d openmotif-2.1.30-r6.ebuild 3861
+MD5 adfb21d30974061a3fa839be7831ea77 openmotif-2.2.3.ebuild 3190
+MD5 557a7b68d6a0d7bdc01ba3b9fd64f3f6 openmotif-2.1.30-r11.ebuild 5242
 MD5 37febd986e265643fcd22394f41d92ac openmotif-2.1.30-r9.ebuild 3987
-MD5 ee3a092a933a6393bf14d5d7e6231934 files/openmotif-2.1.30-xpm2.diff 47085
-MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3-r3 68
+MD5 d97af874221917fcce29fff3a1a63e48 openmotif-2.2.3-r3.ebuild 3238
 MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3-r5 68
-MD5 61fb956ff4bc34bc503cdb2226fd037b files/openmotif-2.1.30-darwin-netbsd.diff 16799
-MD5 339b1b38271b9dfdd8c476429b55787e files/openmotif-2.2.3-pixel_length.patch 450
-MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3 68
 MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r6 79
-MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r7 79
-MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r9 79
-MD5 6e392c40eacd6da7718bc94d55914d32 files/openmotif-2.1.30-CAN-2004-0914.patch.bz2 11702
-MD5 e408518ff6768e58a409938c473d23ce files/openmotif-2.2.3-CAN-2004-0687-0688.patch.bz2 3362
-MD5 8aaa33844cae66b12fcdce6b58bfe6df files/openmotif-2.1.30-xpm.diff 13134
-MD5 5f3081ba56f381a6c667c4677258d1c0 files/openmotif-2.2.3-XmResizeHashTable.patch 183
-MD5 b38be118160b49f6b0f9e31d26f01594 files/CAN-2005-0605.patch 1118
-MD5 7284e10e14cac30429821b824dd2f722 files/site.def 2062
+MD5 61fb956ff4bc34bc503cdb2226fd037b files/openmotif-2.1.30-darwin-netbsd.diff 16799
 MD5 ed2738dd3cbdc87b0800fe9710092d18 files/openmotif-2.1.30-imake-ansi.patch 6554
+MD5 28350d5dab901ef8cd0dc92e578e3f45 files/openmotif-2.1.30-imake-tmpdir.patch 1083
+MD5 f586e24ce0a2b3eeea25a82c8ec1d3c4 files/openmotif-2.1.30-uil-bad_grammar_fix.diff 832
+MD5 8aaa33844cae66b12fcdce6b58bfe6df files/openmotif-2.1.30-xpm.diff 13134
+MD5 7284e10e14cac30429821b824dd2f722 files/site.def 2062
+MD5 7284e10e14cac30429821b824dd2f722 files/site.def.1 2062
+MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r7 79
+MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3 68
+MD5 e408518ff6768e58a409938c473d23ce files/openmotif-2.2.3-CAN-2004-0687-0688.patch.bz2 3362
+MD5 81bc342197a88eb207901ec3ea8927c7 files/openmotif-2.2.3-CAN-2004-0914.patch.bz2 11770
+MD5 db318d4fb05541d70e7e451d46987bd1 files/openmotif-2.2.3-CAN-2004-0914_sec8.patch 491
+MD5 aaf04376f7011a2f68b7961100f611fb files/openmotif-2.2.3-Mwm.defaults 536
+MD5 5f3081ba56f381a6c667c4677258d1c0 files/openmotif-2.2.3-XmResizeHashTable.patch 183
+MD5 644560d15450d90e787bf12ac8e77638 files/openmotif-2.2.3-char_not_supported.patch 1014
+MD5 216193f922fae0747195fd851696b580 files/openmotif-2.2.3-mwm-configdir.patch 1549
+MD5 ae018b1d050619b521ce52cf1a822ef9 files/openmotif-2.2.3-no_demos.patch 3803
+MD5 339b1b38271b9dfdd8c476429b55787e files/openmotif-2.2.3-pixel_length.patch 450
+MD5 f89741373660d1834cb1063c06dda8fd files/openmotif-2.2.3-popup_timeout.patch 359
+MD5 214cd8f46dc88caf500e6307658abfbf files/openmotif-2.2.3-utf8.patch 2979
 MD5 d5f7bbd57d8951fec70fac481f00a83e files/openmotif-2.2.3-automake.patch 275
 MD5 76aa44266e6ebef00c664b2f24822ce9 files/openmotif-2.1.30-CAN-2004-0687-0688.patch.bz2 3274
-MD5 f586e24ce0a2b3eeea25a82c8ec1d3c4 files/openmotif-2.1.30-uil-bad_grammar_fix.diff 832
-MD5 ae018b1d050619b521ce52cf1a822ef9 files/openmotif-2.2.3-no_demos.patch 3803
-MD5 a6ffd504c7b34b3c24a2e9f45e864bbe files/openmotif-2.2.3-CAN-2004-0914-newer.patch.bz2 11986
-MD5 f89741373660d1834cb1063c06dda8fd files/openmotif-2.2.3-popup_timeout.patch 359
-MD5 62870f12ebc148c6319223ec659c290f files/openmotif-2.1.30-CAN-2004-0914_sec8.patch 471
-MD5 644560d15450d90e787bf12ac8e77638 files/openmotif-2.2.3-char_not_supported.patch 1014
-MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r11 79
-MD5 28350d5dab901ef8cd0dc92e578e3f45 files/openmotif-2.1.30-imake-tmpdir.patch 1083
 MD5 5c49a886f108baeda96fc41f32647cf6 files/openmotif-2.1.30-CAN-2004-0914-newer.patch.bz2 12300
-MD5 7284e10e14cac30429821b824dd2f722 files/site.def.1 2062
-MD5 81bc342197a88eb207901ec3ea8927c7 files/openmotif-2.2.3-CAN-2004-0914.patch.bz2 11770
-MD5 aaf04376f7011a2f68b7961100f611fb files/openmotif-2.2.3-Mwm.defaults 536
-MD5 db318d4fb05541d70e7e451d46987bd1 files/openmotif-2.2.3-CAN-2004-0914_sec8.patch 491
-MD5 214cd8f46dc88caf500e6307658abfbf files/openmotif-2.2.3-utf8.patch 2979
-MD5 216193f922fae0747195fd851696b580 files/openmotif-2.2.3-mwm-configdir.patch 1549
+MD5 6e392c40eacd6da7718bc94d55914d32 files/openmotif-2.1.30-CAN-2004-0914.patch.bz2 11702
+MD5 62870f12ebc148c6319223ec659c290f files/openmotif-2.1.30-CAN-2004-0914_sec8.patch 471
+MD5 ee3a092a933a6393bf14d5d7e6231934 files/openmotif-2.1.30-xpm2.diff 47085
+MD5 a6ffd504c7b34b3c24a2e9f45e864bbe files/openmotif-2.2.3-CAN-2004-0914-newer.patch.bz2 11986
+MD5 b38be118160b49f6b0f9e31d26f01594 files/CAN-2005-0605.patch 1118
+MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r11 79
+MD5 818d2d673fe5ee323f93b5a66fb1baca files/digest-openmotif-2.1.30-r9 79
+MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3-r3 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNZhdevY57Fted3ERAvV2AJ9o27QxCqtq1xmudZbE0qKiJzmP3ACgjsLm
-XHidrv881vJyhxnACcHeueE=
-=y+Tr
+iD8DBQFCP0JxArHZZzCEUG0RAlL6AJ9kjSLO1FeSR+DVz5u8c+Ye3i0vAgCeJ2pV
+Re66cHCrryfdCT8xuof2jfY=
+=rS19
 -----END PGP SIGNATURE-----
