@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.1 2004/08/04 13:32:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.2 2004/08/04 21:29:04 liquidx Exp $
 
 inherit eutils
 
@@ -16,16 +16,13 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~mips ~alpha ~ppc64"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
-	crypt? ( >=app-crypt/opencdk-0.5.3 )
+	crypt? ( >=app-crypt/opencdk-0.5.5 )
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc"
 
 # Need masking on ~amd64 ~sparc ~ppc ~mips ~alpha
 #	>=dev-libs/libtasn1-0.2
 #	>=dev-libs/lzo-1.0"
-
-# should be crypt? ( >=app-crypt/opencdk-0.5.5 ) however I did see the source for it
-# ^^ this is what configure expects.
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
