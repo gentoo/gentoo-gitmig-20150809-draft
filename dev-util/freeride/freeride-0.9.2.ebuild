@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.6.0.ebuild,v 1.5 2005/02/07 21:42:00 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.2.ebuild,v 1.1 2005/02/07 21:42:00 citizen428 Exp $
 
 inherit ruby eutils
 
 DESCRIPTION="FreeRIDE is a pure Ruby Integrated Development Environment."
 HOMEPAGE="http://freeride.rubyforge.org/"
-SRC_URI="http://rubyforge.org/frs/download.php/256/${P}.tgz"
+SRC_URI="http://rubyforge.org/frs/download.php/2185/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
@@ -14,19 +14,19 @@ KEYWORDS="~x86"
 IUSE=""
 
 USE_RUBY="any"
-DEPEND="virtual/ruby
-	>=x11-libs/fox-1.0.27
-	>=dev-ruby/fxruby-1.0.18
-	>=x11-libs/fxscintilla-1.49"
-#RDEPEND=""
+
+RDEPEND="virtual/ruby
+	>=x11-libs/fox-1.2
+	>=dev-ruby/fxruby-1.2
+	>=x11-libs/fxscintilla-1.61"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd ${S}/plugins/rubyide_fox_gui
 
-	# This patch fixes a bug which causes FR to use installdir/config
-	# instead of ~/.freeride for the config-files.
-	epatch ${FILESDIR}/${P}-gentoo-properties.diff
+	# A little patch I've created from FR CVS. Probably won't be 
+	# needed in future versions.
+	epatch ${FILESDIR}/${P}-gentoo-appframe.patch
 }
 
 src_install() {
