@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0.ebuild,v 1.1 2004/03/03 11:40:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.0.ebuild,v 1.2 2004/03/03 23:07:41 dholm Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 IUSE="encode flac mad oggvorbis"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
