@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre4.ebuild,v 1.1 2005/01/27 01:49:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre4.ebuild,v 1.2 2005/02/03 05:49:18 eradicator Exp $
 
 inherit multilib toolchain-funcs
 
@@ -33,7 +33,7 @@ pkg_preinst() {
 	[ -f "${ROOT}/etc/env.d/09opengl" ] && mv ${ROOT}/etc/env.d/09opengl ${ROOT}/etc/env.d/03opengl
 
 	OABI="${ABI}"
-	for ABI in $(get_abi_order); do
+	for ABI in $(get_install_abis); do
 		if [ -e "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so" ]; then
 			einfo "Removing libMesaGL.so from xorg-x11 profile.  See bug #47598."
 			rm -f ${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so
@@ -54,7 +54,7 @@ src_install() {
 	local MLTEST=$(type dyn_unpack)
 	if has_multilib_profile && [ "${MLTEST/set_abi}" = "${MLTEST}" ]; then
 		OABI="${ABI}"
-		for ABI in $(get_abi_order); do
+		for ABI in $(get_install_abis); do
 			# Install default glext.h
 			insinto /usr/$(get_libdir)/opengl/global/include
 			doins ${WORKDIR}/glext.h || die
