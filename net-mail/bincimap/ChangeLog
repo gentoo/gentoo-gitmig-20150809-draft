@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.12 2004/04/19 00:44:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.13 2004/04/24 13:00:16 nakano Exp $
+
+  24 Apr 2004; Masatomo Nakano <nakano@gentoo.org>
+  files/bincimap-1.2.7-gentoo.diff, -bincimap-1.2.7.ebuild:
+  Fixed log dir path. (/var/lib/log -> /var/log)
 
   19 Apr 2004; Masatomo Nakano <nakano@gentoo.org> bincimap-1.2.7.ebuild:
   Added PROVIDE="virtual/imapd".
