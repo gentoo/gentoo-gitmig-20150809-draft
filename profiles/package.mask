@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3434 2004/12/30 16:58:36 stuart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3435 2004/12/31 01:08:43 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <swegener@gentoo.org> (31 Dec 2004)
+# pending removal, bug #75873
+net-irc/irssi-recode
 
 # <stuart@gentoo.org> (30 Dec 2004)
 # asp2php masked per security bug #74698
