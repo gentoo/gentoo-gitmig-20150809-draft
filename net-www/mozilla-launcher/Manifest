@@ -1,4 +1,6 @@
+MD5 460055c3ba41c05baae0d20d61b1788e mozilla-launcher-1.2.ebuild 508
 MD5 387b714448d2ec5e45aaf4240327164a mozilla-launcher-1.1.ebuild 508
-MD5 af09d9451d86bb55feb4335a4902af1f ChangeLog 429
+MD5 23b9cbf3d775eb1ada3184a45adff5eb ChangeLog 653
 MD5 687acc9510df1671d359ab3d3ce731e9 metadata.xml 205
 MD5 c9c9aee058b2f308eff916719ae225cc files/digest-mozilla-launcher-1.1 67
+MD5 6429df283a10123bbb4cd8ecbd8dee3f files/digest-mozilla-launcher-1.2 67

@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.1 2004/03/24 02:11:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.2 2004/03/28 04:47:48 agriffis Exp $
+
+*mozilla-launcher-1.2 (27 Mar 2004)
+
+  27 Mar 2004; Aron Griffis <agriffis@gentoo.org> mozilla-launcher-1.2.ebuild:
+  Don't use detection or fake_user for remote displays because it takes too long
+  (4 minutes in one test)
 
 *mozilla-launcher-1.1 (23 Mar 2004)
 
