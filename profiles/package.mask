@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3555 2005/02/03 15:01:16 ka0ttic Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3556 2005/02/04 17:40:04 bcowan Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Brad Cowan <bcowan@gentoo.org> (04 Feb 2005)
+# masking until upstream fixes .so problem
+>dev-libs/dbh-1.0.20
 
 # Matthew Kennedy <mkennedy@gentoo.org> (2 Feb 2005)
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
@@ -890,58 +894,6 @@ sys-kernel/config-kernel
 # <cardoe@gentoo.org> (09 Oct 2004)
 # No idea if it works, no one has hardware to test, just trying to make users happy
 =net-wireless/linux-wlan-ng-0.2.1_pre22
-
-# Brad Cowan <bcowan@gentoo.org> (31 Oct 2004)
-# masking until out of beta
-# unmasking RC2 (14 Dec 2004)
-# masking >4.1.99.3 until eclass is tested (6 Jan 2005)
-# unmasking 4.2 :)
-#>xfce-extra/xfce4-mixer-4.1.99.3
-#>xfce-base/xfce-mcs-manager-4.1.99.3
-#>xfce-base/xfce4-4.1.99.3
-#>xfce-base/xfce4-base-4.1.99.3
-#>xfce-base/libxfce4util-4.1.99.3
-#>xfce-base/libxfcegui4-4.1.99.3
-#>xfce-base/libxfce4mcs-4.1.99.3
-#>xfce-base/xfce-mcs-plugins-4.1.99.3
-#>xfce-base/xfce4-panel-4.1.99.3
-#>xfce-base/xfwm4-4.1.99.3
-#>xfce-base/xfce-utils-4.1.99.3
-#>xfce-base/xfdesktop-4.1.99.3
-#>xfce-base/xfce4-session-4.1.99.3
-#>xfce-base/xfprint-4.1.99.3
-#>xfce-extra/xfce4-iconbox-4.1.99.3
-#>xfce-extra/xfce4-systray-4.1.99.3
-#>xfce-extra/xfce4-toys-4.1.99.3
-#>xfce-extra/xfce4-trigger-launcher-4.1.99.3
-#>xfce-extra/xfwm4-themes-4.1.99.3
-#>xfce-extra/xfcalendar-4.1.99.3
-#>xfce-extra/xfce4-appfinder-4.1.99.3
-#>xfce-extra/xfce4-icon-theme-4.1.99.3
-#>xfce-base/xffm-4.1.99.3
-#>xfce-base/xfce4-extras-4.1.91
-#>xfce-extra/xfce4-showdesktop-0.4.0
-#>xfce-extra/xfce4-battery-0.2.0
-#>xfce-extra/xfce4-systemload-0.3.4
-#>xfce-extra/xfce4-minicmd-0.3.0
-#>xfce-extra/xfce4-netload-0.2.3
-#>xfce-extra/xfce4-artwork-0.0.4
-#>xfce-extra/xfce4-clipman-0.4.1
-#>xfce-extra/xfce4-cpugraph-0.2.2
-#>xfce-extra/xfce4-notes-0.9.7
-#>xfce-extra/xfce4-taskbar-0.2.2
-#>xfce-extra/xfce4-windowlist-0.1.0
-#>xfce-extra/xfce4-datetime-0.3.1
-#>xfce-extra/xfce4-xmms-0.1.1
-#>xfce-extra/xfce4-xkb-0.3.2
-#>xfce-extra/xfce4-weather-0.3.9.1
-#>xfce-extra/xfce4-wavelan-0.4.1
-#>xfce-extra/xfce4-diskperf-1.5
-#>xfce-extra/xfce4-fsguard-0.2.0
-#>xfce-extra/xfce4-genmon-1.0
-#>xfce-extra/xfmedia-0.6.0
-#>xfce-extra/exo-0.2.0
-#>xfce-extra/terminal-0.2.2
 
 # <axxo@gentoo.org> (07 Oct 2004)
 # work in progress
