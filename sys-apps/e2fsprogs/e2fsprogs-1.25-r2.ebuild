@@ -1,15 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r2.ebuild,v 1.1 2001/12/17 11:37:58 azarah Exp $
+# Maintainer: Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r2.ebuild,v 1.2 2001/12/19 02:22:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
 SRC_URI="http://prdownloads.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext ) sys-apps/texinfo"
+#debianutils is for 'readlink'
+DEPEND="virtual/glibc nls? ( sys-devel/gettext ) sys-apps/debianutils"
 RDEPEND="virtual/glibc"
 
 src_compile() {
@@ -20,50 +20,45 @@ src_compile() {
 	else
 		myconf="--disable-nls"
 	fi
-	./configure --host=${CHOST} \
-		--prefix=/ \
-		--includedir=/usr/include \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--enable-elf-shlibs \
-		${myconf} || die
-		
+	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-elf-shlibs ${myconf} || die
 	# Parallel make sometimes fails
 	make || die
 }
 
 src_install() {
-	local myopts
-	myopts="${myopts} includedir=/usr/include mandir=/usr/share/man infodir=/usr/share/info"
-
-	make DESTDIR=${D} ${myopts} install || die
-	make DESTDIR=${D} ${myopts} install-libs || die
-
+	make DESTDIR=${D} libdir=zapme install || die
+	#evil e2fsprogs makefile -- I'll get you!
+	rm -rf ${D}/zapme
+	make DESTDIR=${D} install-libs || die
 	if [ "`use nls`" ]
 	then
 		( cd po; make DESTDIR=${D} install || die )
 	fi
-	
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
-
-	dodir /usr/bin /usr/sbin
-	cd ${D}/bin
+	dodir /lib /bin /sbin
+	cd ${D}/usr/lib
+	mv * ../../lib
+	cd ${D}/lib
+	mv *.a ../usr/lib
+	local mylib
+	local x
+	#normalize evil symlinks
+	cd ${D}/lib
+	for x in *
+	do
+		[ ! -L $x ]&& continue
+		mylib=`readlink $x`
+		mylib=`basename $mylib`
+		ln -sf $mylib $x
+	done
+	mv ${D}/usr/bin/* ${D}/bin
+	mv ${D}/usr/sbin/* ${D}/sbin
+	cd ${D}/usr/bin
 	mv lsattr chattr uuidgen ../usr/bin
 	cd ${D}/sbin
 	mv mklost+found ../usr/sbin
 	
-	local i
-	for i in e2p et ext2fs ss uuid
-	do
-		docinto lib/${i}
-		dodoc lib/${i}/ChangeLog
-	done
-	docinto misc
-	dodoc misc/ChangeLog
-	docinto resize
-	dodoc resize/ChangeLog
-	docinto util
-	dodoc util/ChangeLog
+	rm -rf ${D}/usr/share/et ${D}/usr/share/ss
 }
