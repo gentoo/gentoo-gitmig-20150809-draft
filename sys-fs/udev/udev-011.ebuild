@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-011.ebuild,v 1.2 2003/12/27 11:24:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-011.ebuild,v 1.3 2003/12/29 00:52:46 azarah Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -75,7 +75,7 @@ src_unpack() {
 	# we create a symlink, else it will fail.
 	epatch ${FILESDIR}/${P}-unlink-before-symlink.patch
 
-	# Fix gcc-2.95.4 compat, bug #36556
+	# Fix gcc-2.95.3 compat, bug #36556
 	epatch ${FILESDIR}/${P}-namedev_c-gcc295-compat.patch
 }
 
