@@ -1,8 +1,11 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.26 2002/12/13 06:49:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.27 2002/12/13 22:39:46 lostlogic Exp $
 
 *avifile-0.7.22.20021129 (13 Dec 2002)
+
+  13 Dec 2002; Brandon Low <lostlogic@gentoo.org> avifile-0.7.22.20021129.ebuild,
+  Fix sandbox error
 
   13 Dec 2002; Nick Hadaway <raker@gentoo.org> avifile-0.7.22.20021129.ebuild,
   files/digest-avifile-0.7.22.20021129 :
