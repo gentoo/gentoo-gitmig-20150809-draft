@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2709 2004/02/18 16:18:47 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2710 2004/02/18 23:08:35 wolf31o2 Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <wolf31o2@gentoo.org> (18 Feb 2004)
+# Needs more testing
+=media-libs/openal-20040218
 
 # <lu_zero@gentoo.org> (17 Feb 2004)
 # gcloop support, to be tested a bit
