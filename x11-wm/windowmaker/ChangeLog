@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.20 2004/10/29 00:26:50 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.21 2004/10/29 19:58:05 fafhrd Exp $
+
+  29 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> :
+  Added depend for media-libs/fontconfig to 0.90.0
 
   28 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org>
   windowmaker-0.90.0.ebuild:
