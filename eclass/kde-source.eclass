@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.16 2003/07/13 09:08:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.17 2003/07/13 13:04:04 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -33,7 +33,7 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ECVS_SERVER" ] && ECVS_SERVER="anoncvs.kde.org:/home/kde"
 [ -z "$ECVS_AUTH" ] && ECVS_AUTH="pserver"
 
-# for apps living inside modules like kdenonbeta - see beginning of our _src_unpack
+# for apps living inside modules like kdenonbeta - see also beginning of our _src_unpack
 # KCVS_SUBDIR=...
 
 # If a tag is specified as ECVS_BRANCH, it will be used for the kde-common module
@@ -64,20 +64,31 @@ DESCRIPTION="$DESCRIPTION (cvs) "
 # inheriting kde_source.
 SRC_URI=""
 
+# this is here because it needs to be in the main section of the eclass,
+# even though the code setting ECVS_MODULE from KCVS_MODULE is all inside
+# kde-source_src_unpack
+if [ -n "$KCVS_SUBDIR" -o -n "$KCVS_MODULE" ]; then
+    S="$WORKDIR/$KCVS_MODULE"
+else
+    # default for kde-base ebuilds
+    S="$WORKDIR/$ECVS_MODULE"
+fi
+
+
 kde-source_src_unpack() {
 
 	debug-print-function $FUNCNAME $*
 
+	# decide what the main module is that we're fetching and call cvs_src_unpack
+	# the other things are fetched later
+	# (kde-common/admin, <module>/doc/*, <module>/<files>)
 	if [ -n "$KCVS_SUBDIR" ]; then
 	    ECVS_MODULE="$KCVS_MODULE/$KCVS_SUBDIR"
-	    S="$WORKDIR/$KCVS_MODULE"
 	elif [ -n "$KCVS_MODULE" ]; then
 	    ECVS_MODULE="$KCVS_MODULE"
-	    S="$WORKDIR/$KCVS_MODULE"
 	else
 	    # default for kde-base ebuilds
 	    ECVS_MODULE="$PN"
-	    S="$WORKDIR/$ECVS_MODULE"
 	fi
 
         cvs_src_unpack
