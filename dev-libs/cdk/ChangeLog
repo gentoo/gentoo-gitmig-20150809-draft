@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.15 2004/08/28 20:29:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.16 2004/08/29 08:02:09 mr_bones_ Exp $
+
+  29 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  cdk-4.9.11.20031210.ebuild:
+  header fix; add IUSE; tidy
 
 *cdk-4.9.11.20031210 (24 Aug 2004)
 
