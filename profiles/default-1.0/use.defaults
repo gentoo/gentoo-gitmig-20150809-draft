@@ -47,6 +47,7 @@ readline	sys-libs/readline
 ruby		dev-lang/ruby
 sdl		media-libs/libsdl
 slang		sys-libs/slang
+snmp		net-analyzer/ucd-snmp
 ssl		dev-libs/openssl
 svga		media-libs/svgalib
 tcltk		dev-lang/tcl dev-lang/tk

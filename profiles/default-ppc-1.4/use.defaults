@@ -52,3 +52,4 @@ motif		x11-libs/openmotif
 opengl		virtual/opengl
 mozilla		net-www/mozilla
 ldap		net-nds/openldap
+snmp		net-analyzer/ucd-snmp

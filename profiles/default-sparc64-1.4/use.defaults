@@ -52,3 +52,4 @@ opengl		virtual/opengl
 mozilla		net-www/mozilla
 gphoto2		media-gfx/gphoto2
 ldap		net-nds/openldap
+snmp		net-analyzer/ucd-snmp
