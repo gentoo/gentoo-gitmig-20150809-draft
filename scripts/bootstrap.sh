@@ -15,6 +15,8 @@ echo "Using GETTEXT $myGETTEXT"
 echo "Using GLIBC $myGLIBC"
 
 export USE="build"
+export CONFIG_PROTECT=""
+#above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE || exit
 emerge $myGETTEXT || exit
