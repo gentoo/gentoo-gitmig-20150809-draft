@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.8 2002/11/12 22:12:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.9 2003/02/07 02:49:22 seemant Exp $
+
+inherit eutils
 
 IUSE="X"
 
@@ -37,7 +39,7 @@ src_unpack() {
 	fi
 
 	#This closes bug #1472: fixes compilation with recent 2.4 kernels
-	cat ${FILESDIR}/apmsleep.c.diff | patch -p0 -l || die
+	epatch ${FILESDIR}/apmsleep.c.diff
 }
 
 src_compile() {
@@ -56,5 +58,10 @@ src_install() {
 
 	if [ `use X` ] ; then
 		make DESTDIR=${D} xinstall || die "xinstall failed"
+	fi
+
+	if [ ! `use nls` ]
+	then
+		rm -rf ${D}/usr/share/man/fr
 	fi
 }
