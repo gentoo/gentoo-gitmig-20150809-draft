@@ -1,5 +1,5 @@
---- /usr/sbin/tiobench.pl	2005-02-23 00:21:33.000000000 +0100
-+++ /home/evil/trash/tiobench_debian	2005-03-15 18:11:19.000000000 +0100
+--- tiobench.pl	2005-02-23 00:21:33.000000000 +0100
++++ tiobench.pl	2005-03-15 18:11:19.000000000 +0100
 @@ -168,6 +168,8 @@
                    $stat_data{$identifier}{$thread}{$size}{$block}{$field}{'stime'} ) / 
                    $stat_data{$identifier}{$thread}{$size}{$block}{$field}{'time'};
