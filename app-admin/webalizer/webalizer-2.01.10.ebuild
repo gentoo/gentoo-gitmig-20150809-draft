@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.06-r2.ebuild,v 1.1 2002/04/18 06:33:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10.ebuild,v 1.1 2002/04/19 17:21:51 woodchip Exp $
 
-MY_P=${P/.06/-06}
+MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Webalizer"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2"
@@ -39,7 +39,7 @@ pkg_postinst() {
 	install -d -o root -g root -m0755 ${ROOT}/home/httpd/htdocs/webalizer
 
 	einfo
-	einfo "Execute: 'ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config'"
+	einfo "Execute: \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
 	einfo "to have your apache.conf auto-updated for use with webalizer."
 	einfo
 }
