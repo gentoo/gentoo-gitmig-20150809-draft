@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 944da433a4bbd0ce7bdb0b466347cf95 soya-0.6.1.ebuild 1018
-MD5 c64a71104340b8e747cfff2340e1f79f soya-0.5.ebuild 1013
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 753fa9a4ae4d1f5d109a69f45930dad5 ChangeLog 977
 MD5 9829e1d22806f29c6f2ad909062400e6 soya-0.8.1.ebuild 1098
-MD5 e5c794de8240a040bc21bc9fefd7b329 ChangeLog 860
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c64a71104340b8e747cfff2340e1f79f soya-0.5.ebuild 1013
+MD5 944da433a4bbd0ce7bdb0b466347cf95 soya-0.6.1.ebuild 1018
+MD5 bf59af2928f86fb19b43875ec55b6cde soya-0.8.2.ebuild 1098
 MD5 f6a8ffec3774a1bfd51bb3e523015822 files/digest-soya-0.6.1 63
+MD5 39ef3091efc650da7a713f3c5e4721e0 files/digest-soya-0.8.2 63
 MD5 719757ddba69ff0b5f6d65734309b5a0 files/digest-soya-0.5 60
 MD5 629845171e4e41082f8696099a009cbf files/digest-soya-0.8.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcSNFugEuf3OQ0akRAopGAJ9pxTCAP///yhzSNqnBlazintDOZgCeMrea
-hkNLS7/2QOdEWMpxRiVrTqM=
-=e0On
+iD8DBQFBh2jougEuf3OQ0akRArQUAJ0UfC3Qjomb523R1s1EdiDBWgU1KgCfTtZU
+z3GOIdFDi44bOQz9sW+evOY=
+=Zn7/
 -----END PGP SIGNATURE-----

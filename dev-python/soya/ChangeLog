@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.6 2004/10/16 13:33:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.7 2004/11/02 11:00:44 kloeri Exp $
+
+*soya-0.8.2 (02 Nov 2004)
+
+  02 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> +soya-0.8.2.ebuild:
+  Version bump.
 
 *soya-0.8.1 (16 Oct 2004)
 
