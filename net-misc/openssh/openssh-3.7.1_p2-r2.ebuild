@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.5 2004/02/20 19:36:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.6 2004/02/21 20:48:08 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -27,7 +27,7 @@ IUSE="ipv6 static pam tcpd kerberos skey selinux X509 chroot"
 RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73
 		>=sys-apps/shadow-4.0.2-r2 )
-	!mips? ( kerberos? ( app-crypt/mit-krb5 ) )
+	!mips? ( kerberos? ( virtual/krb5 ) )
 	selinux? ( sys-libs/libselinux )
 	!ppc64? ( skey? ( >=app-admin/skey-1.1.5-r1 ) )
 	>=dev-libs/openssl-0.9.6d
@@ -41,6 +41,8 @@ PROVIDE="virtual/ssh"
 
 src_unpack() {
 	unpack ${PARCH}.tar.gz ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-kerberos.patch
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
@@ -62,8 +64,9 @@ src_unpack() {
 }
 
 src_compile() {
-	use kerberos && append-flags -I/usr/include/gssapi
 	use ldap && filter-flags -funroll-loops
+
+	autoconf
 
 	local myconf
 
