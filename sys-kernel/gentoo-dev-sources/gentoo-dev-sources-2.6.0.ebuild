@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0.ebuild,v 1.1 2003/12/18 05:07:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0.ebuild,v 1.2 2003/12/18 16:32:28 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -56,7 +56,8 @@ src_unpack() {
 
 	# Our EXTRAVERSION needs to be appended to the end for the Makefile
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-	-e "s:EXTRAVERSION = \(.\+\):EXTRAVERSION = \1${EXTRAVERSION}:" Makefile > Makefile.new
+        -e "s:EXTRAVERSION \(=.*\):EXTRAVERSION \1${EXTRAVERSION}:" Makefile > Makefile.new
+
 #	rm -f Makefile
 #	mv Makefile.new Makefile
 
