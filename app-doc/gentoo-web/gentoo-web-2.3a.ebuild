@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.12 2002/08/18 04:26:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.13 2002/08/18 04:37:44 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -142,7 +142,6 @@ src_install() {
 	
 	ROOT=${OLDROOT}
 	
-	xsltproc $TEMPLATE ${S}/xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	
 	#install XSL for later use
 	dodir ${WEBROOT}/xsl
@@ -187,9 +186,9 @@ pkg_preinst() {
 	fi
 
 	#do some python goodness outside of the firewall
-		cd ${S}
-	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
 	#This can only be done in ${T} since ${S} may be a live CVS tree
+	python ${S}/python/gendevlistxml.py ${S}/txt/devlist.txt ${T}/main-devlist.xml || die
+	xsltproc $TEMPLATE ${T}/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	cd ${T}
 	mkdir -p xml/packages
 	dodir ${WEBROOT}/packages/
