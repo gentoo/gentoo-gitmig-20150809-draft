@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.118 2004/10/13 14:33:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.119 2004/10/14 22:44:18 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -545,6 +545,8 @@ get_number_of_jobs() {
 #
 # Takes just 1 optional parameter (the directory to create tmpfile in)
 emktemp() {
+	local exe="touch"
+	[ "$1" == "-d" ] && exe="mkdir" && shift
 	local topdir="$1"
 
 	if [ -z "${topdir}" ]
@@ -560,10 +562,13 @@ emktemp() {
 		while [ -e "${tmp}" ] ; do
 			tmp="${topdir}/tmp.${RANDOM}.${RANDOM}.${RANDOM}"
 		done
-		touch "${tmp}"
+		${exe} "${tmp}"
 		echo "${tmp}"
 	else
-		mktemp -p "${topdir}"
+		[ "${exe}" == "touch" ] \
+			&& exe="-p" \
+			|| exe="-d"
+		mktemp ${exe} "${topdir}"
 	fi
 }
 
