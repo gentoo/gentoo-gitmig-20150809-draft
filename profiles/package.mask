@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3452 2005/01/07 01:20:58 bcowan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3453 2005/01/07 05:28:38 battousai Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <battousai@gentoo.org> (06 Jan 2005)
+# Needs testing before release.
+=x11-base/x11-drm-20050104
 
 # <pythonhead@gentoo.org> (04 Jan 2005)
 # Masked for testing.
