@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 38a9b7d34e53c799f7f1b5494acc21d2 java-sdk-docs-1.4.2.ebuild 868
+MD5 ec7eaf49de3f4954061ec9c81678c8a3 java-sdk-docs-1.4.2.ebuild 864
 MD5 efb0debfaaf4fe917ef8d0418f736ede java-sdk-docs-1.5.0.ebuild 939
 MD5 fe71f8d6074876e259b4adafd91172fb java-sdk-docs-1.3.1.ebuild 840
 MD5 08191c83cc1cfd86c702e61c9ed66443 java-sdk-docs-1.4.1.ebuild 875
-MD5 bff171864baabfae7b2f54b431b0cecc ChangeLog 4949
+MD5 23fc1d168a8b8d65aed01dbc685801f7 ChangeLog 5027
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
 MD5 d6dd3e737a5469ac2717553c95bfc023 files/digest-java-sdk-docs-1.2.2.006 71
@@ -16,7 +16,7 @@ MD5 b8ce8e1af0f32a08098988c3df744f7c files/digest-java-sdk-docs-1.5.0 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbD+Y/rLF9B432nYRAlCWAJwJotti/XxPGjjO/ifVkebVEzZhJQCcDWmh
-RLW9ZSgFKAdInc/03k40H7c=
-=5BTk
+iD8DBQFBfSJS/rLF9B432nYRAgtkAJ9eh+UpWDEwA40gTupauImRnVUVqACgs63N
+i4c7CU+Xm3zwIB74E0SBqPY=
+=AeTT
 -----END PGP SIGNATURE-----
