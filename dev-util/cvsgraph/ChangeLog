@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvsgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.6 2004/08/05 22:12:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.7 2004/09/10 08:55:07 tigger Exp $
+
+*cvsgraph-1.4.1 (10 Sep 2004)
+
+  10 Sep 2004; Rob Holland <tigger@gentoo.org> +cvsgraph-1.4.1.ebuild:
+  version bump, closes #59430. also installs sample wrapper scripts now
 
   05 Aug 2004; Aron Griffis <agriffis@gentoo.org> cvsgraph-1.4.0.ebuild:
   Explicitly disable on 64-bit arches because there are assumptions in the app
