@@ -1,0 +1,11 @@
+# ChangeLog for media-video/dvd-slideshow
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.1 2005/01/28 19:53:47 luckyduck Exp $
+
+*dvd-slideshow-0.6.0 (28 Jan 2005)
+
+  28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +dvd-slideshow-0.6.0.ebuild:
+  Initial import, ebuild contributed by Stefan Briesenick <sbriesen@gmx.de>.
+  fixes #54829
+
