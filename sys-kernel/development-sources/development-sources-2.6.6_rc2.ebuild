@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.6_rc2.ebuild,v 1.3 2004/06/13 07:24:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.6_rc2.ebuild,v 1.4 2004/06/20 13:27:05 spock Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -14,14 +14,3 @@ SRC_URI="${KERNEL_URI} ${ARCH_URI}"
 UNIPATCH_LIST="${ARCH_PATCH}"
 
 KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~ppc ~amd64"
-
-pkg_postinst() {
-	postinst_sources
-
-	ewarn "IMPORTANT:"
-	ewarn "ptyfs support has now been dropped from devfs and as a"
-	ewarn "result you are now required to compile this support into"
-	ewarn "the kernel. You can do so by enabling the following option:"
-	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
-	echo
-}

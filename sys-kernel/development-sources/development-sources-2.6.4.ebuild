@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.4.ebuild,v 1.5 2004/04/27 12:41:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.4.ebuild,v 1.6 2004/06/20 13:27:05 spock Exp $
 
 IUSE="ultra1"
 
@@ -22,13 +22,6 @@ KEYWORDS="x86 ~amd64 ~sparc ppc"
 
 pkg_postinst() {
 	postinst_sources
-
-	ewarn "IMPORTANT:"
-	ewarn "ptyfs support has now been dropped from devfs and as a"
-	ewarn "result you are now required to compile this support into"
-	ewarn "the kernel. You can do so by enabling the following option:"
-	ewarn "    Device Drivers -> Character devices -> Legacy (BSD) PTY Support."
-	echo
 
 	if [ "${ARCH}" = "sparc" ]; then
 		if [ x"`cat /proc/openprom/name 2>/dev/null`" \
