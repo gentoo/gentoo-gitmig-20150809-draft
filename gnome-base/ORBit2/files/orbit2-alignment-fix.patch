@@ -1,0 +1,11 @@
+diff -Naur ORBit2-2.10.0/src/orb/orb-core/allocators.c ORBit2-2.10.0.1-cbl/src/orb/orb-core/allocators.c
+--- ORBit2-2.10.0/src/orb/orb-core/allocators.c	2003-07-07 13:11:31.000000000 +0000
++++ ORBit2-2.10.0.1-cbl/src/orb/orb-core/allocators.c	2004-06-16 04:11:27.642691407 +0000
+@@ -59,6 +59,7 @@
+ 	}
+ 	case CORBA_tk_except:
+ 	case CORBA_tk_struct:
++		mem = ALIGN_ADDRESS (mem, tc->c_align);
+ 		for (i = 0; i < tc->sub_parts; i++) {
+ 			subtc = tc->subtypes [i];
+ 			mem = ALIGN_ADDRESS (mem, subtc->c_align);
