@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.2.0.1.ebuild,v 1.1 2003/02/04 13:33:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.2.0.1.ebuild,v 1.2 2003/02/09 15:09:20 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A text editor for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=gnome-base/libglade-2
 	>=gnome-base/eel-2.2
