@@ -1,12 +1,14 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.9 2002/12/13 10:59:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.10 2003/02/10 21:54:49 latexer Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 
 *tcpdump-3.7.1 (9 May 2002)
+
+  10 Feb 2003; Peter Johanson <latexer@gentoo.org> tcpdump-3.7.1.ebuild :
+  Added ~alpha to KEYWORDS in tcpdump-3.7.1.ebuild.
 
   17 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> tcpdump-3.7.1.ebuild :
   Moved binary from /usr/bin to /usr/sbin as suggested in #6518.
