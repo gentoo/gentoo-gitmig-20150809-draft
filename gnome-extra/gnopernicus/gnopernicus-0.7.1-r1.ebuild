@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnopernicus/gnopernicus-0.7.1-r1.ebuild,v 1.3 2004/01/18 14:55:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnopernicus/gnopernicus-0.7.1-r1.ebuild,v 1.4 2004/01/29 03:08:36 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 
 IUSE="ipv6"
 SLOT="0"
-KEYWORDS="x86 sparc hppa"
+KEYWORDS="x86 sparc hppa alpha ia64"
 LICENSE="LGPL-2"
 
 # libgail-gnome is only required during runtime

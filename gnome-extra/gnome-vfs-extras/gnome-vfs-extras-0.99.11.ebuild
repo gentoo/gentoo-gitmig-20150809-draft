@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/gnome-vfs-extras-0.99.11.ebuild,v 1.6 2004/01/26 00:26:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-vfs-extras/gnome-vfs-extras-0.99.11.ebuild,v 1.7 2004/01/29 03:09:42 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~amd64 hppa"
+KEYWORDS="x86 sparc ~ppc ~amd64 hppa alpha ia64"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.1.5
 	net-fs/samba"

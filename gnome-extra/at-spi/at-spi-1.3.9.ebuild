@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.3.9.ebuild,v 1.5 2004/01/18 14:06:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.3.9.ebuild,v 1.6 2004/01/29 03:06:39 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~alpha amd64 sparc hppa"
+KEYWORDS="x86 ~ppc alpha amd64 sparc hppa ia64"
 IUSE="doc"
 
 RDEPEND=">=gnome-base/gail-1.3
