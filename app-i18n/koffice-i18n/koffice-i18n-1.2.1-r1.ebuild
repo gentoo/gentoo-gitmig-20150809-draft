@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.7 2004/06/24 21:49:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.8 2004/06/28 04:09:18 agriffis Exp $
 
 inherit kde
 need-kde 3
@@ -39,7 +39,7 @@ if [ -z "${LINGUAS}" ]; then
 else
 	for pkg in $LANGS
 	do
-		if [ `use ${pkg}` ] ; then
+		if useq ${pkg}; then
 			SRC_URI="$SRC_URI $BASEDIR/koffice-i18n-${pkg}-${MY_PV}.tar.bz2"
 			echo "using package ${pkg}"
 		fi
