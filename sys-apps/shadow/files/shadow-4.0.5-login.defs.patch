@@ -7,7 +7,7 @@ diff -u -B -U0 -r1.14 login.defs.linux
 +++ etc/login.defs.linux	29 Oct 2004 02:02:48 -0000
 @@ -46 +46 @@
 -MAIL_CHECK_ENAB		yes
-+#MAIL_CHECK_ENAB		no
++MAIL_CHECK_ENAB		no
 @@ -93 +93 @@
 -#ISSUE_FILE	/etc/issue
 +ISSUE_FILE	/etc/issue
