@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/exmh
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/ChangeLog,v 1.5 2003/07/31 19:08:15 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/ChangeLog,v 1.6 2004/02/22 16:15:50 agriffis Exp $
+
+  22 Feb 2004; Aron Griffis <agriffis@gentoo.org> exmh-2.5.ebuild,
+  exmh-2.6.3.ebuild:
+  Remove arm keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
