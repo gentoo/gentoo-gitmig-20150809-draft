@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.0.1.ebuild,v 1.1 2002/07/15 16:10:09 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.0.1-r1.ebuild,v 1.1 2002/07/16 12:20:41 stroke Exp $
 
 inherit gnome2
 
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/pango-1.0.3
 	>=gnome-base/gconf-1.1.11
 	>=gnome-base/libglade-2.0.0
 	>=gnome-base/gnome-vfs-2.0.0
+	>=gnome-base/eel-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
 	>=gnome-base/libbonoboui-2.0.0
 	>=gnome-base/ORBit2-2.4.0
