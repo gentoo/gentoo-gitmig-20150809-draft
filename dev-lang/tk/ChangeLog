@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.47 2004/10/06 01:16:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.48 2004/11/09 23:35:08 josejx Exp $
+
+  10 Nov 2004; Joseph Jezak <josejx@gentoo.org> tk-8.4.6-r1.ebuild:
+  Marked ppc stable.
 
   06 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> tk-8.4.6-r1.ebuild:
   Stable on alpha.
