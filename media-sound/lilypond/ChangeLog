@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.34 2004/12/27 22:01:37 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.35 2005/02/21 04:24:45 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> lilypond-2.5.2.ebuild:
+  Depend on guile-1.6.5 so that lilypond works on ~amd64 #72811
 
   27 Dec 2004; Jason Wever <weeve@gentoo.org> lilypond-2.5.2.ebuild:
   Added ~sparc keyword.
