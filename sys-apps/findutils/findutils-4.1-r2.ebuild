@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r1.ebuild,v 1.5 2000/11/30 23:14:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1-r2.ebuild,v 1.1 2000/12/05 23:53:29 drobbins Exp $
 
 P=findutils-4.1      
 A=${P}.tar.gz
@@ -43,7 +43,6 @@ src_unpack() {
 
 src_install() {                               
     cd ${S}
-    dodir /var/state/locatedb
     try make prefix=${D}/usr libexecdir=${D}/usr/libexec/find \
 	LOCATE_DB=${D}/var/state/locatedb install
     dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
