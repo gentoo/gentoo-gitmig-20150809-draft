@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.5 2004/03/11 19:01:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.6 2004/03/11 22:08:09 wolf31o2 Exp $
 
 inherit games
 
@@ -48,8 +48,4 @@ src_install() {
 		|| die "doexe game${ARCH}.so"
 	games_make_wrapper ufo-ai ./ufo ${GAMES_DATADIR}/${PN}
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
 }
