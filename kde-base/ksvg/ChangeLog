@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksvg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.2 2005/02/11 17:56:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.3 2005/02/13 14:59:11 greg_g Exp $
+
+  13 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> ksvg-3.4.0_beta2-r1.ebuild:
+  Added dependency on fribidi (#81852).
 
   11 Feb 2005; Dan Armak <danarmak@gentoo.org> ksvg-3.4.0_beta2-r1.ebuild:
   I realized I was wrong to add both blocking deps and a move instruction.
