@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/braa
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.5 2004/07/08 23:14:34 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.6 2004/10/05 23:19:57 malc Exp $
+
+  05 Oct 2004; Malcolm Lashley <malc@gentoo.org> braa-0.8.ebuild:
+  ~amd64 bug #66090
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> braa-0.8.ebuild:
   marked x86 stable

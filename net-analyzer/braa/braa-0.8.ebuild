@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/braa-0.8.ebuild,v 1.5 2004/07/08 23:14:34 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/braa-0.8.ebuild,v 1.6 2004/10/05 23:19:57 malc Exp $
 
 DESCRIPTION="Quick and dirty mass SNMP scanner"
 
@@ -9,7 +9,7 @@ SRC_URI="http://s-tech.elsat.net.pl/braa/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
