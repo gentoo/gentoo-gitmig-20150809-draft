@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/icewoed-1.4.ebuild,v 1.2 2003/04/24 14:12:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewoed/icewoed-1.4.ebuild,v 1.3 2003/05/19 14:11:29 phosphan Exp $
 
 DESCRIPTION="IceWM winoptions editor."
-SRC_URI="http://tsa.dyndns.org/mirror/xvadim/${P}.tar.bz2"
-HOMEPAGE="http://tsa.dyndns.org/mirror/xvadim/"
+SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
+HOMEPAGE="http://icecc.sourceforge.net/"
 
 DEPEND=">=qt-3.0.0"
 
