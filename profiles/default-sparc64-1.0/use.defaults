@@ -1,9 +1,9 @@
-#3dnow
+3dnow
 #fbcon		
 #ldap
 #libg++
 #mitshm
-#mmx
+mmx
 #objprelink
 #odbc
 #oss
