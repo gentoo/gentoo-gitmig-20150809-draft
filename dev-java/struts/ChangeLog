@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/struts
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.1 2004/03/18 05:03:12 zx Exp $
+
+*struts-1.1 (18 Mar 2004)
+
+  18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml,
+  struts-1.1.ebuild:
+  Initial Import. Thanks to Pavel <hlobil@sympatico.ca> for input. Closes
+  #43253, #14382, #21930
+
