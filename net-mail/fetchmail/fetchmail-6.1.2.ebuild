@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.1.2.ebuild,v 1.1 2002/11/01 22:52:20 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.1.2.ebuild,v 1.2 2002/11/14 20:56:22 raker Exp $
 
 IUSE="ssl nls"
 
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 
@@ -51,7 +51,7 @@ src_install() {
 	dodoc FAQ FEATURES ABOUT-NLS NEWS NOTES README \
 		README.NTLM README.SSL TODO COPYING MANIFEST
 	
-	doman /usr/share/man/*.1
+	doman ${D}/usr/share/man/*.1
 	rm -f ${D}/usr/share/man/*.1
 	
 	exeinto /etc/init.d
