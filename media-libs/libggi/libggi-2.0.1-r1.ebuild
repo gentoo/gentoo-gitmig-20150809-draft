@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.7 2004/02/17 21:32:32 agriffis Exp $
 
 IUSE="X aalib svga fbcon directfb"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.ggi-project.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa amd64 ia64"
 
 DEPEND=">=media-libs/libgii-0.8.1
 	X? ( virtual/x11 )
