@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.19 2004/01/16 17:43:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.20 2004/01/16 18:57:29 azarah Exp $
+
+*udev-013-r1 (16 Jan 2004)
+
+  16 Jan 2004; Martin Schlemmer <azarah@gentoo.org> udev-013-r1.ebuild,
+  files/udev.rules.post_012:
+  Add sound/OSS and input devfs rules from Christophe Saout <christophe@saout.de>.
+  Bump revision to make sure previous and ide-devfs.sh changes gets in.
 
   16 Jan 2004; Martin Schlemmer <azarah@gentoo.org> files/udev.rules.post_012:
   Fix calling of ide-devfs.sh.
