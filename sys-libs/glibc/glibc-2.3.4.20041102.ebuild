@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.11 2004/12/05 20:47:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.12 2004/12/07 00:25:13 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -42,7 +42,9 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 	http://dev.gentoo.org/~lv/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 
 LICENSE="LGPL-2"
-SLOT="2.2"
+[[ ${CTARGET} != ${CHOST} ]] \
+	&& SLOT="${CTARGET}-2.2" \
+	|| SLOT="2.2"
 KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
