@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.3.11.ebuild,v 1.3 2005/01/17 10:26:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4_beta1.ebuild,v 1.1 2005/01/17 10:26:13 st_lim Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${PN}-${PV}
+MY_PV=${PV/_beta1/.beta.1}
+S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
-SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${PV}.tar.gz
+SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${MY_PV}.tar.gz
 	http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
@@ -22,7 +23,7 @@ DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		"
 RDEPEND="sys-apps/cronbase
 		app-admin/logrotate"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc ~alpha ~ia64"
 SLOT="0"
 
 # some FHS-like structure
