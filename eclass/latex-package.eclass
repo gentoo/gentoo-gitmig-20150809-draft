@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.21 2004/11/12 00:33:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.22 2005/02/18 14:12:48 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -121,7 +121,7 @@ latex-package_src_doinstall() {
 				latex-package_src_doinstall tex dtx dvi ps pdf
 				;;
 			"fonts")
-				latex-package_src_doinstall tfm vg afm pfb ttf
+				latex-package_src_doinstall tfm vf afm pfb ttf
 				;;
 			"bin")
 				latex-package_src_doinstall sh
