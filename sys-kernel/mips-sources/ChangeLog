@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.53 2004/08/11 09:48:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.54 2004/08/15 03:59:02 kumba Exp $
+
+*mips-sources-2.6.8.1 (14 Aug 2004)
+
+  14 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/misc-2.6-compat_alloc_user_space.patch, +mips-sources-2.4.27.ebuild,
+  -mips-sources-2.6.7-r5.ebuild, +mips-sources-2.6.7-r6.ebuild,
+  +mips-sources-2.6.8.1.ebuild:
+  Fun fun updates. New ebuilds for 2.4.27 and 2.6.8.1, pulled from linux-mips
+  CVS on 18 Aug 2004. Also included a patch from lmo cvs for 2.6.7 that should
+  fix the ifconfig problem.
 
 *mips-sources-2.6.6-r8 (11 Aug 2004)
 

@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r5.ebuild,v 1.1 2004/08/11 09:48:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.8.1.ebuild,v 1.1 2004/08/15 03:59:03 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040621"
-COBALTPATCHVER="1.5"
+CVSDATE="20040814"
+COBALTPATCHVER="1.6"
 SECPATCHVER="1.2"
 IP32DIFFDATE="20040402"
-EXTRAVERSION="-mipscvs-${CVSDATE}"
+EXTRAVERSION=".$(echo ${OKV} | cut -d. -f4)-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
 # Miscellaneous stuff
@@ -22,12 +22,11 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 21 Jun 2004
+# 2) linux-mips.org CVS snapshot diff from 14 Aug 2004
 # 3) Patch to fix an O2 compile-time error
 # 4) Iluxa's minimal O2 Patchset
 # 5) Security fixes
-# 6) patch to fix iptables build failures
-# 7) Patches for Cobalt support
+# 6) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -76,9 +75,6 @@ src_unpack() {
 	# set to 0x98000000, not 0xa8000000.
 	epatch ${FILESDIR}/mipscvs-2.6.x-ip32-kern_entry-arcboot.patch
 
-	# Misc Fixes
-	epatch ${FILESDIR}/misc-2.6-iptables_headers.patch
-
 	# Force detection of PS/2 mice on SGI Systems
 	epatch ${FILESDIR}/misc-2.6-force_mouse_detection.patch
 
@@ -91,11 +87,6 @@ src_unpack() {
 	# Security Fixes
 	echo -e ""
 	ebegin ">>> Applying Security Fixes"
-		epatch ${WORKDIR}/security/CAN-2004-0415-2.6.7-file_offset_pointers.patch
-		epatch ${WORKDIR}/security/CAN-2004-0497-attr_gid.patch
-		epatch ${WORKDIR}/security/CAN-2004-0596-2.6-eql.patch
-		epatch ${WORKDIR}/security/CAN-2004-0626-death_packet.patch
-		epatch ${WORKDIR}/security/security-2.6-attr_check.patch
 		epatch ${WORKDIR}/security/security-2.6-proc_race.patch
 	eend
 
