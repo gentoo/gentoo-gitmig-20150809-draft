@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gst-plugins-ffmpeg
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.1 2004/03/28 19:24:46 foser Exp $
+
+*gst-plugins-ffmpeg-0.8.0 (28 Mar 2004)
+
+  28 Mar 2004; foser <foser@gentoo.org> gst-plugins-ffmpeg-0.8.0.ebuild, ChangeLog, metadata.xml :
+  Initial commit
+  ffmpeg based plugin for gstreamer
+  offers a wide variety of audio/videa plug-ins
+  added to the gnome herd
