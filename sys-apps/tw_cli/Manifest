@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6b9997a11d55f5a93757787e459c7c21 tw_cli-7.7.1.ebuild 1776
+MD5 37752e57572b0cd268f7ed63e592a09a ChangeLog 421
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 a3c1d1101d70383a7e5ec69ea246314d files/digest-tw_cli-7.7.1 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCCev2PpIsIjIzwiwRAgo5AKC4PPb+ovFX6fffCW70ceHXmJ9RuQCgtHjX
+GOzSokjmhzziUzeKcHsMo4o=
+=/x2K
+-----END PGP SIGNATURE-----
