@@ -1,8 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.22 2002/11/20 20:58:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.23 2002/12/07 06:53:37 jmorgan Exp $
 
 *samba-2.2.7 (Nov 20 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> samba-2.2.5-r1.ebuild, 
+  samba-2.2.6-r2.ebuild, samba-2.2.7.ebuild :
+  Changed sparc64 to sparc keyword samba-2.2.5-r1.ebuild
+  Changed ~sparc64 to ~sparc keyword samba-2.2.6-r2.ebuild, samba-2.2.7.ebuild
 
   20 Nov 2002; Donny Davies <woodchip@gentoo.org> : Chase latest.  This release
   fixes a security problem.  --with-lockdir is changed to /var/cache/samba;

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.2 2002/11/20 20:58:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6-r2.ebuild,v 1.3 2002/12/07 06:53:37 jmorgan Exp $
 
 IUSE="pam acl cups ldap ssl tcpd vscan"
 
@@ -22,7 +22,7 @@ DEPEND="pam? >=sys-libs/pam-0.72
 	ssl? >=dev-libs/openssl-0.9.6
 	tcpd? >=sys-apps/tcp-wrappers-7.6
 	vscan? >=dev-libs/popt-1.6.3"
-KEYWORDS="~x86 ~ppc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 

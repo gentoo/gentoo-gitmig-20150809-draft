@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5-r1.ebuild,v 1.4 2002/10/21 02:56:13 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5-r1.ebuild,v 1.5 2002/12/07 06:53:37 jmorgan Exp $
 
 IUSE="tcpd ldap cups ssl acl"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
