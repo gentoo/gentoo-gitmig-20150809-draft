@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.3 2003/10/03 03:39:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.4 2003/12/26 12:26:38 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> physfs-0.1.9.ebuild:
+  Added ~sparc keyword.
 
 *physfs-0.1.9 (02 Oct 2003)
 
