@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.5 2003/06/01 14:36:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.ebuild,v 1.6 2003/06/16 19:46:58 msterret Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -8,8 +8,8 @@ inherit gcc libtool flag-o-matic base
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools for MJPEG video"
-SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz
-	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
+	 quicktime? ( mirror://sourceforge/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 
 LICENSE="as-is"
@@ -36,10 +36,9 @@ DEPEND="${RDEPEND}
 	media-libs/libdv
 	arts? ( kde-base/arts )"
 
-
 src_unpack() {
 	base_src_unpack
-	
+
 	if [ ! -z "`use quicktime`" ]
 	then
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
@@ -66,22 +65,22 @@ src_compile() {
 
 	use gtk	\
 		&& myconf="${myconf} --with-gtk-prefix=/usr"
-	
+
 	use X	\
 		&& myconf="${myconf} --with-x"	\
 		|| myconf="${myconf} --without-x"
-	
+
 	use mmx	\
 		&& myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx --enable-mmx-accel"
-	
+
 	use avi	\
 		|| myconf="${myconf} --without-aviplay"
-	
+
 	if [ ! -z "`use quicktime`" ]
 	then
 		einfo "Building quicktime4linux"
 		myconf="${myconf} --with-quicktime=${WORKDIR}/quicktime4linux-1.4-patch"
-		
+
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
 		./configure || die
 		make || die
@@ -99,4 +98,3 @@ src_install() {
 
 	dodoc mjpeg_howto.txt
 }
-
