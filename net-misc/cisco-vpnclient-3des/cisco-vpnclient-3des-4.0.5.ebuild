@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5.ebuild,v 1.1 2004/08/11 16:03:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.5.ebuild,v 1.2 2004/08/24 23:38:21 vapier Exp $
 
 inherit eutils kmod
 
@@ -12,8 +12,8 @@ SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
 LICENSE="cisco-vpn-client"
 SLOT="${KV}"
 KEYWORDS="-* ~x86"
-RESTRICT="fetch"
 IUSE=""
+RESTRICT="fetch"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
@@ -24,11 +24,9 @@ S=${WORKDIR}/vpnclient
 VPNDIR="/etc/CiscoSystemsVPNClient"
 
 pkg_nofetch() {
-	eerror "Please goto:"
-	eerror " ${HOMEPAGE}"
-	eerror "and download"
-	eerror " ${A}"
-	eerror "to ${DISTDIR}"
+	einfo "Please visit:"
+	einfo " ${HOMEPAGE}"
+	einfo "and download ${A} to ${DISTDIR}"
 }
 
 src_unpack() {
@@ -46,7 +44,7 @@ src_compile () {
 		unset ARCH
 	fi
 	sh ./driver_build.sh /lib/modules/${KV}/build
-	[ [ ! -f ./cisco_ipsec ] || [ ! -f ./cisco_ipsec.ko ] ] \
+	[ ! -f ./cisco_ipsec -o ! -f ./cisco_ipsec.ko ] \
 		&& die "Failed to make module 'cisco_ipsec'"
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient_init
 	sed -i "s#@VPNBINDIR@#/usr/bin#" vpnclient.ini.in

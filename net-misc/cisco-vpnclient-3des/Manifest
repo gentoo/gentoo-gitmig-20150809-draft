@@ -1,13 +1,23 @@
-MD5 1eb3cee2a3ee22cc4944d29b02cc57d2 cisco-vpnclient-3des-4.0.5.ebuild 1963
-MD5 ae95fc7e09cd212607b833d565556473 cisco-vpnclient-3des-4.0.3b-r4.ebuild 2152
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5a9df4c6285f4c166f507105ccc2b79 ChangeLog 3760
 MD5 6599d9a77e743f14728d01b4c67c5b14 cisco-vpnclient-3des-4.0.1a-r1.ebuild 1770
 MD5 ceed2261b61bf3fd7ae45aed33117100 metadata.xml 460
-MD5 0181d77c1dd8b6929b7dd81fb2db45f1 files/atheros.patch 478
+MD5 ae95fc7e09cd212607b833d565556473 cisco-vpnclient-3des-4.0.3b-r4.ebuild 2152
+MD5 1acace3acac33727806aa7daa82b9367 cisco-vpnclient-3des-4.0.5.ebuild 1930
 MD5 968b0edd0fc5b128c1c78f03d0b49336 files/4.0.1a-linux26-gentoo.patch 686
-MD5 49c26fcaba6aec15a8116f8868e39d88 files/register_netdevice.patch 1233
-MD5 43220e6569806f24251abfbb44742532 files/digest-cisco-vpnclient-3des-4.0.5 81
 MD5 71958f1bfd76d8fc63b6c5c1a3069b0b files/digest-cisco-vpnclient-3des-4.0.1a-r1 79
-MD5 33ae35139cf3bc489e1454c3cb550659 files/digest-cisco-vpnclient-3des-4.0.3b-r4 79
 MD5 31a30abbad4557ac43d335e049d7c2ac files/vpnclient.rc 2497
+MD5 0181d77c1dd8b6929b7dd81fb2db45f1 files/atheros.patch 478
 MD5 fffa4fdd9a7bd0eeae2d4832895ce99f files/driver_build_CC.patch 547
+MD5 33ae35139cf3bc489e1454c3cb550659 files/digest-cisco-vpnclient-3des-4.0.3b-r4 79
+MD5 43220e6569806f24251abfbb44742532 files/digest-cisco-vpnclient-3des-4.0.5 81
+MD5 49c26fcaba6aec15a8116f8868e39d88 files/register_netdevice.patch 1233
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBK9F3HTu7gpaalycRAt23AJ4hnN/kolC0rywmcHJQ7QZfeQmdzQCeOeH6
+/IOrQ7LvgQUv1oOEA+qxYcM=
+=+hIT
+-----END PGP SIGNATURE-----
