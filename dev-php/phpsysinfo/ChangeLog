@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.11 2004/03/28 22:36:40 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.12 2004/03/29 12:29:46 bazik Exp $
+
+  29 Mar 2004; Sven Blumenstein <bazik@gentoo.org> phpsysinfo-2.1-r2.ebuild:
+  Stable on sparc and applied fix from bug #46081. Will fix CPU info for sparc
+  later.
 
 *phpsysinfo-2.1-r2 (28 Mar 2004)
 
