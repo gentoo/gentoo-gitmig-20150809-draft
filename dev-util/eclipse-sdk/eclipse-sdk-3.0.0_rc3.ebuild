@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_rc3.ebuild,v 1.3 2004/06/25 02:30:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_rc3.ebuild,v 1.4 2004/06/29 13:25:56 karltk Exp $
 
 inherit eutils
 
@@ -49,6 +49,10 @@ pkg_setup() {
 		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
 	else
 		die "Detected JDK (${version}) is too old to compile Eclipse, need at least 1.4.2!"
+	fi
+
+	if ! ( use gtk || use motif ) ; then
+		die "You need to select either gtk or motif as your frontend, with a USE flag"
 	fi
 }
 
