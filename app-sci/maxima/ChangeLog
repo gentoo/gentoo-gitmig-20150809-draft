@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/maxima
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.5 2003/10/05 23:33:48 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/ChangeLog,v 1.6 2004/04/19 11:37:58 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> maxima-5.9.0-r1.ebuild,
+  maxima-5.9.0-r2.ebuild, maxima-5.9.0.ebuild:
+  Depend on gcl/cmucl only for x86. Added IUSE. Cleanup.
 
 *maxima-5.9.0-r2 (05 Oct 2003)
 
