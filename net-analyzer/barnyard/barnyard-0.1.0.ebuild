@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.6 2004/07/01 17:16:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.7 2004/07/09 13:05:20 eldad Exp $
 
 IUSE="mysql"
 
@@ -21,18 +21,14 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	local myconf
+	myconf="${myconf} $(use_enable mysql)"
 
-	use mysql && myconf="${myconf} --enable-mysql" \
-		|| myconf="${myconf} --disable-mysql"
+	if use mysql; then
+		sed -i '/AC_CHECK_LIB(mysqlclient, mysql_connect, FOUND=yes, FOUND=no)/s/mysql_connect/mysql_real_connect/' \
+		configure.in
+	fi
 
-#	./configure \
-#		--prefix=/usr \
-#		--sysconfdir=/etc/snort \    	
-#		--localstatedir=/var \
-#		--mandir=/usr/share/man \
-#		--host=${CHOST} ${myconf} || die "bad ./configure"
-
-	econf --sysconfdir=/etc/snort ${myconf} || die "bad ./configure"
+	econf --sysconfdir=/etc/snort ${myconf} || die "econf failed"
 	emake || die "compile problem"
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/barnyard
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.7 2004/07/01 17:16:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.8 2004/07/09 13:05:20 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> barnyard-0.1.0.ebuild,
+  barnyard-0.2.0.ebuild, -barnyard-0.2.0_rc1.ebuild:
+  Purged 0.2.0_rc1, 0.2.0 marked x86 stable
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> barnyard-0.1.0.ebuild:
+  Tidy up, fixed mysql issue (#47026). Thanks to Ryu
+  <jasmine.chua@internationalsos.com> and Devon <gentoo@noved.org>
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> barnyard-0.1.0.ebuild,
   barnyard-0.2.0.ebuild, barnyard-0.2.0_rc1.ebuild:
