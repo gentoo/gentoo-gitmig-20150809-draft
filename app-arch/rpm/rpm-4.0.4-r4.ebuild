@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r4.ebuild,v 1.6 2002/12/15 10:44:09 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r4.ebuild,v 1.7 2003/01/13 03:44:56 seemant Exp $
+
+inherit flag-o-matic
 
 # note to self: check for java deps
 DESCRIPTION="Red Hat Package Management Utils"
@@ -16,8 +18,11 @@ RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/popt-1.6.3"
+
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
+
+filter-flags -fPIC
 
 src_unpack() {
 	export WANT_AUTOCONF_2_1=1

@@ -1,11 +1,15 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.11 2002/12/13 10:55:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.12 2003/01/13 03:44:56 seemant Exp $
+
+*rpm-4.0.4-r4 (12 Oct 2002)
+
+  12 Jan 2003; Seemant Kulleen <seemant@gentoo.org> rpm-4.0.4-r4.ebuild :
+
+  Filtered out -fPIC from user's CFLAGS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*rpm-4.0.4-r4 (12 Oct 2002)
-
   12 Oct 2002; Bruce A. Locke <blocke@shivan.org> rpm-4.0.4-r4.ebuild:
   Remove dead symlink (bug #8578) and ebuild no longer blindly creates
   a database if one already exists.
