@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xvkbd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.1 2003/08/24 15:19:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.2 2003/09/27 02:43:38 mr_bones_ Exp $
+
+  26 Sep 2003; Michael Sterrett <msterret@gentoo.org> xvkbd-2.5a.ebuild:
+  x11-libs/xaw -> x11-libs/Xaw3d; more error messages; tidy
 
 *xvkbd-2.5a (25 Aug 2003)
 
