@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mozilla-thunderbird-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.8 2004/07/04 05:51:46 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.9 2004/07/04 06:05:18 brad Exp $
+
+*mozilla-thunderbird-bin-0.7.1 (04 Jul 2004)
+
+  04 Jul 2004; Brad Laue <brad@gentoo.org>
+  files/icon/mozillathunderbird-bin.desktop,
+  +mozilla-thunderbird-bin-0.7.1.ebuild:
+  Update to 0.7.1, fix menu icon.
 
   04 Jul 2004; Brad Laue <brad@gentoo.org>
   +files/icon/mozillathunderbird-bin-icon.png,
