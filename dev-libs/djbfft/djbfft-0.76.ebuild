@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.9 2004/10/26 13:44:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/djbfft-0.76.ebuild,v 1.10 2004/11/02 15:05:50 phosphan Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -41,7 +41,7 @@ src_unpack() {
 	else
 		echo "$(tc-getCC) $MY_CFLAGS -fPIC -DPIC" > "conf-cc"
 	fi
-	echo "$(tc-getLD) $LDFLAGS" > "conf-ld"
+	echo "$(tc-getCC) $LDFLAGS" > "conf-ld"
 	echo "${MY_D}" > "conf-home"
 	einfo "conf-cc: $(<conf-cc)"
 }

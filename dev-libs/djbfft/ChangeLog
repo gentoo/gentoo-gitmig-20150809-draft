@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/djbfft
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.7 2004/10/22 10:04:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djbfft/ChangeLog,v 1.8 2004/11/02 15:05:50 phosphan Exp $
+
+  02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> djbfft-0.76.ebuild:
+  Fixing latest fix by vapier (26 Oct 2004) which replaced one occurance of
+  ${CC} by $(tc-getLD).
 
   22 Oct 2004; Guy Martin <gmsoft@gentoo.org> djbfft-0.76.ebuild:
   Added ~hppa.
