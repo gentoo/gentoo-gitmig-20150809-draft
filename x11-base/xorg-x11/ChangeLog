@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.342 2005/02/26 23:55:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.343 2005/03/03 21:51:51 lu_zero Exp $
+
+  02 Mar 2005; Luca Barbato <lu_zero@gentoo.org> xorg-x11-6.8.2.ebuild:
+  Different switch_opengl_implem logic, should fix bug #83645
 
   26 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.1.901-r1.ebuild:

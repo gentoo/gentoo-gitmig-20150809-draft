@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.11 2005/02/26 00:50:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.12 2005/03/03 21:51:51 lu_zero Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1901,10 +1901,11 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		if [ "$(${ROOT}/usr/sbin/opengl-update --get-implementation)" = "xfree" ]; then
+		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
+		if [ "${opengl_implem}" = "xfree" -o -z "${opengl_implem}" ]; then
 			${ROOT}/usr/sbin/opengl-update ${PN}
 		else
-			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+			${ROOT}/usr/sbin/opengl-update ${opengl_implem}
 		fi
 }
 
