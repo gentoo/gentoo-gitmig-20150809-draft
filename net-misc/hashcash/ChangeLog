@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.6 2004/08/30 12:59:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.7 2004/10/02 11:13:59 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> hashcash-1.02.ebuild:
+  Move binary to /usr/bin and bump to stable.
 
   30 Aug 2004; David Holm <dholm@gentoo.org> hashcash-1.02.ebuild:
   Added to ~ppc.
