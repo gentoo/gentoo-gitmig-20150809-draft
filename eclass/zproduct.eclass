@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.13 2004/09/18 16:01:22 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.14 2004/09/25 22:45:15 radek Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -99,8 +99,8 @@ zproduct_pkg_postinst()
     # the target directory
     
     chown -R root:root ${ZP_DIR}/${PF}
-    # make shure there is nothing writable in the new dir
-    chmod -R go-w ${ZP_DIR}/${PF}
+    # make shure there is nothing writable in the new dir, and all is readable
+    chmod -R go-w,a+rX ${ZP_DIR}/${PF}
 	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance..."
 	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
 }
