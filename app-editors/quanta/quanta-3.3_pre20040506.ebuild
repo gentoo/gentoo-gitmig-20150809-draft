@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.3_pre20040506.ebuild,v 1.3 2005/01/01 13:33:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.3_pre20040506.ebuild,v 1.4 2005/01/14 23:22:59 danarmak Exp $
 
 inherit kde
-DEPEND="doc? ( app-doc/quanta-docs )"
+DEPEND="doc? ( app-doc/quanta-docs ) !kde-base/quanta !>=kde-base/kdewebdev-3.4.0_alpha1"
 need-kde 3.2
 
 PKG=kdewebdev-3.3-be2

@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.37 2005/01/01 13:33:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.38 2005/01/14 23:22:59 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> quanta-3.0.ebuild,
+  quanta-3.1.4.ebuild, quanta-3.2.2.ebuild, quanta-3.2.3.ebuild,
+  quanta-3.3_pre20040506.ebuild:
+  Added blocking dep on new version in kde-base, which is the split package
+  from KDE 3.4, and on its mother package, kdewebdev. Eventually there'll be a
+  move instruction from this package to that.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   quanta-3.1.4.ebuild, quanta-3.2.2.ebuild, quanta-3.2.3.ebuild:
