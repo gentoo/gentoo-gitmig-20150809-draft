@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.4 2002/10/04 06:34:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.5 2002/10/05 05:39:26 drobbins Exp $
+
+IUSE="nls static build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard tool to compile source trees"

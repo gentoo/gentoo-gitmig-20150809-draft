@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.ebuild,v 1.1 2002/05/17 15:42:30 prez Exp
 
+IUSE="static nls bootstrap java build"
+
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
 #

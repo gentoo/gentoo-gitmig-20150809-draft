@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r8.ebuild,v 1.7 2002/10/04 06:35:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r8.ebuild,v 1.8 2002/10/05 05:39:26 drobbins Exp $
+
+IUSE="readline bootcd"
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
