@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/migemo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/migemo/ChangeLog,v 1.1 2003/07/28 22:17:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/migemo/ChangeLog,v 1.2 2003/08/15 11:35:31 usata Exp $
 
 *migemo-0.40 (29 Jul 2003)
+
+  15 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> migemo-0.40.ebuild:
+  Marked x86, alpha and ppc stable
 
   29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org>
   migemo-0.40.ebuild, files/50migemo-gentoo.el:
